@@ -1,184 +1,184 @@
 export const id = 103;
 export const ids = [103];
 export const modules = {
-  4598: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => GU,
-      g: () => cU,
-      j: () => jU
+  4718: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => ru,
+      c: () => Vu,
+      d: () => Bu
     });
-    gU(4604);
-    var tU = gU(1181),
-      pU = gU(1037),
-      EU = gU.n(pU),
-      PU = gU(1344),
-      TU = (gU(56), gU(4040)),
-      qU = gU(1049),
-      KU = gU(1090);
+    yu(4725);
+    var Eu = yu(1170),
+      Ku = yu(1035),
+      Qu = yu.n(Ku),
+      mu = yu(1325),
+      Ju = (yu(64), yu(4139)),
+      Nu = yu(1043),
+      Xu = yu(1079);
 
-    function cU(UU) {
+    function Vu(uu) {
       let {
-        children: RU,
-        label: gU,
-        className: pU,
-        circleInfoText: TU,
-        disabled: cU,
-        onLabelClick: GU
-      } = UU;
+        children: Ru,
+        label: yu,
+        className: Ku,
+        circleInfoText: Ju,
+        disabled: Vu,
+        onLabelClick: ru
+      } = uu;
       const {
-        t: jU
-      } = (0, tU.B)(), uU = (0, KU.jsxs)("div", {
-        className: EU()("Label", {
-          ClickableLabel: void 0 !== GU
+        t: Bu
+      } = (0, Eu.E)(), xu = (0, Xu.jsxs)("div", {
+        className: Qu()("Label", {
+          ClickableLabel: void 0 !== ru
         }),
-        onClick: GU,
-        children: [jU(gU), TU && (0, KU.jsx)(qU.c, {
+        onClick: ru,
+        children: [Bu(yu), Ju && (0, Xu.jsx)(Nu.c, {
           name: "circle-info"
         })]
       });
-      return (0, KU.jsxs)("div", {
-        className: EU()("LabeledInput", {
-          [pU]: pU,
-          DisabledLabelInput: cU
+      return (0, Xu.jsxs)("div", {
+        className: Qu()("LabeledInput", {
+          [Ku]: Ku,
+          DisabledLabelInput: Vu
         }),
-        children: [TU && (0, KU.jsx)(PU.g, {
-          tooltipInner: (0, KU.jsx)("div", {
+        children: [Ju && (0, Xu.jsx)(mu.i, {
+          tooltipInner: (0, Xu.jsx)("div", {
             className: "LabeledInputTooltip",
-            children: jU(TU)
+            children: Bu(Ju)
           }),
-          children: uU
-        }), !TU && uU, RU]
+          children: xu
+        }), !Ju && xu, Ru]
       })
     }
 
-    function GU(UU) {
+    function ru(uu) {
       let {
-        checked: RU,
-        setChecked: gU
-      } = UU;
-      return (0, KU.jsx)("div", {
+        checked: Ru,
+        setChecked: yu
+      } = uu;
+      return (0, Xu.jsx)("div", {
         className: "OtherInput ClickableOtherInput",
         "data-pad-focusable": !0,
-        onClick: UU => {
-          gU(!RU)
+        onClick: uu => {
+          yu(!Ru)
         },
-        children: (0, KU.jsx)(TU.d, {
-          checked: RU,
-          onChange: UU => {
-            gU(UU.target.checked)
+        children: (0, Xu.jsx)(Ju.b, {
+          checked: Ru,
+          onChange: uu => {
+            yu(uu.target.checked)
           },
           disabled: !1
         })
       })
     }
 
-    function jU(UU) {
+    function Bu(uu) {
       let {
-        checked: RU,
-        setChecked: gU,
-        disabled: tU
-      } = UU;
-      return (0, KU.jsx)("div", {
-        className: EU()("SwitchContainer", {
-          SwitchContainerDisabled: tU
+        checked: Ru,
+        setChecked: yu,
+        disabled: Eu
+      } = uu;
+      return (0, Xu.jsx)("div", {
+        className: Qu()("SwitchContainer", {
+          SwitchContainerDisabled: Eu
         }),
         onClick: () => {
-          tU || gU(!RU)
+          Eu || yu(!Ru)
         },
-        children: (0, KU.jsx)(TU.d, {
+        children: (0, Xu.jsx)(Ju.b, {
           className: "SwitchCheckbox",
-          checked: RU,
-          onChange: UU => {
-            gU(UU.target.checked)
+          checked: Ru,
+          onChange: uu => {
+            yu(uu.target.checked)
           },
-          disabled: !!tU
+          disabled: !!Eu
         })
       })
     }
   },
-  4608: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => KU
+  4728: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Xu
     });
-    var tU = gU(1037),
-      pU = gU.n(tU),
-      EU = gU(4293),
-      PU = gU(1181),
-      TU = gU(1090);
-    const qU = [...EU.i, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+    var Eu = yu(1035),
+      Ku = yu.n(Eu),
+      Qu = yu(4409),
+      mu = yu(1170),
+      Ju = yu(1079);
+    const Nu = [...Qu.n, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
 
-    function KU(UU) {
+    function Xu(uu) {
       const {
-        disabled: RU,
-        hideWrapper: gU
-      } = UU, {
-        t: tU
-      } = (0, PU.B)(), KU = UU.advancedMode ? qU.map((RU => [RU, UU.callbacks[RU]])) : EU.i.map((RU => [RU, UU.callbacks[RU]])), GU = (0, TU.jsx)("div", {
-        className: pU()("PluginsGrid", {
-          SectionBody: !gU
+        disabled: Ru,
+        hideWrapper: yu
+      } = uu, {
+        t: Eu
+      } = (0, mu.E)(), Xu = uu.advancedMode ? Nu.map((Ru => [Ru, uu.callbacks[Ru]])) : Qu.n.map((Ru => [Ru, uu.callbacks[Ru]])), ru = (0, Ju.jsx)("div", {
+        className: Ku()("PluginsGrid", {
+          SectionBody: !yu
         }),
-        children: KU.map((UU => {
-          let [gU, tU] = UU;
-          return (0, TU.jsx)(cU, {
-            plugin: gU,
-            callbacks: tU,
-            disabled: RU
-          }, gU)
+        children: Xu.map((uu => {
+          let [yu, Eu] = uu;
+          return (0, Ju.jsx)(Vu, {
+            plugin: yu,
+            callbacks: Eu,
+            disabled: Ru
+          }, yu)
         }))
       });
-      return gU ? GU : (0, TU.jsxs)("div", {
+      return yu ? ru : (0, Ju.jsxs)("div", {
         className: "BloxdForm",
-        children: [(0, TU.jsx)("div", {
+        children: [(0, Ju.jsx)("div", {
           className: "SectionTitle",
-          children: tU("worldBuilder:pluginsSection")
-        }), GU]
+          children: Eu("worldBuilder:pluginsSection")
+        }), ru]
       })
     }
 
-    function cU(UU) {
+    function Vu(uu) {
       let {
-        plugin: RU,
+        plugin: Ru,
         callbacks: {
-          isEnabled: gU,
-          GJ: tU
+          isEnabled: yu,
+          tC: Eu
         },
-        disabled: EU
-      } = UU;
+        disabled: Qu
+      } = uu;
       const {
-        t: qU
-      } = (0, PU.B)(), KU = gU();
-      return (0, TU.jsxs)("div", {
-        className: pU()("PluginCard", {
-          PluginCardEnabled: KU,
-          PluginCardDisabledForm: EU
+        t: Nu
+      } = (0, mu.E)(), Xu = yu();
+      return (0, Ju.jsxs)("div", {
+        className: Ku()("PluginCard", {
+          PluginCardEnabled: Xu,
+          PluginCardDisabledForm: Qu
         }),
         "data-pad-focusable": !0,
-        "aria-disabled": EU || void 0,
+        "aria-disabled": Qu || void 0,
         onClick: () => {
-          EU || tU(!KU)
+          Qu || Eu(!Xu)
         },
-        children: [(0, TU.jsx)("div", {
+        children: [(0, Ju.jsx)("div", {
           className: "PluginCardIcon",
-          children: (0, TU.jsx)("img", {
-            src: `/textures/games/classic/customGames/${RU}.png`,
-            alt: RU
+          children: (0, Ju.jsx)("img", {
+            src: `/textures/games/classic/customGames/${Ru}.png`,
+            alt: Ru
           })
-        }), (0, TU.jsxs)("div", {
+        }), (0, Ju.jsxs)("div", {
           className: "PluginCardBody",
-          children: [(0, TU.jsx)("div", {
+          children: [(0, Ju.jsx)("div", {
             className: "PluginCardTitle",
-            children: qU(GU[RU])
-          }), (0, TU.jsx)("div", {
+            children: Nu(ru[Ru])
+          }), (0, Ju.jsx)("div", {
             className: "PluginCardDescription",
-            children: qU(jU[RU])
+            children: Nu(Bu[Ru])
           })]
-        }), (0, TU.jsx)("span", {
+        }), (0, Ju.jsx)("span", {
           className: "PluginCardToggleLabel",
-          children: qU(KU ? "general:on" : "general:off")
+          children: Nu(Xu ? "general:on" : "general:off")
         })]
       })
     }
-    const GU = {
+    const ru = {
         fallDamage: "classic:enableFallDamage",
         tpRequests: "classic:enableTpRequests",
         spawnProtection: "classic:enableSpawnProtection",
@@ -187,7 +187,7 @@ export const modules = {
         survivalGuns: "classic:enableSurvivalGuns",
         dayNight: "classic:enableDayNight"
       },
-      jU = {
+      Bu = {
         fallDamage: "classic:enableFallDamageDescription",
         tpRequests: "classic:enableTpRequestsDescription",
         spawnProtection: "classic:enableSpawnProtectionDescription",
@@ -197,656 +197,656 @@ export const modules = {
         dayNight: "classic:enableDayNightDescription"
       }
   },
-  4593: (UU, RU, gU) => {
-    gU.d(RU, {
-      f: () => pR,
-      c: () => tR,
-      d: () => gR,
-      h: () => ER
+  4709: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      g: () => KR,
+      c: () => ER,
+      e: () => yR,
+      h: () => QR
     });
-    var tU = gU(56),
-      pU = gU(1333),
-      EU = gU(1412),
-      PU = gU(1602),
-      TU = gU(1181),
-      qU = gU(1326),
-      KU = gU(1344),
-      cU = gU(1049),
-      GU = gU(1217),
-      jU = gU(1037),
-      uU = gU.n(jU),
-      CU = gU(299),
-      hU = gU(4293),
-      QU = gU(1238),
-      eU = gU(4598),
-      WU = gU(2825),
-      fU = gU(4608),
-      xU = gU(1090);
+    var Eu = yu(64),
+      Ku = yu(1311),
+      Qu = yu(1408),
+      mu = yu(1617),
+      Ju = yu(1170),
+      Nu = yu(1300),
+      Xu = yu(1325),
+      Vu = yu(1043),
+      ru = yu(1199),
+      Bu = yu(1035),
+      xu = yu.n(Bu),
+      Su = yu(330),
+      pu = yu(4409),
+      Tu = yu(1215),
+      Wu = yu(4718),
+      ju = yu(2916),
+      Hu = yu(4728),
+      du = yu(1079);
 
-    function mU(UU) {
+    function bu(uu) {
       let {
-        icon: RU,
-        title: gU,
-        disabled: tU,
-        children: pU
-      } = UU;
-      return (0, xU.jsxs)("div", {
-        className: uU()("ManageCard", {
-          ManageCardDisabled: tU
+        icon: Ru,
+        title: yu,
+        disabled: Eu,
+        children: Ku
+      } = uu;
+      return (0, du.jsxs)("div", {
+        className: xu()("ManageCard", {
+          ManageCardDisabled: Eu
         }),
-        children: [(0, xU.jsxs)("div", {
+        children: [(0, du.jsxs)("div", {
           className: "ManageCardHead",
-          children: [(0, xU.jsx)("div", {
+          children: [(0, du.jsx)("div", {
             className: "ManageCardIcon",
-            children: (0, xU.jsx)(cU.c, {
-              name: RU
+            children: (0, du.jsx)(Vu.c, {
+              name: Ru
             })
-          }), (0, xU.jsx)("div", {
-            children: (0, xU.jsx)("h2", {
+          }), (0, du.jsx)("div", {
+            children: (0, du.jsx)("h2", {
               className: "ManageCardTitle",
-              children: gU
+              children: yu
             })
           })]
-        }), (0, xU.jsxs)("div", {
+        }), (0, du.jsxs)("div", {
           className: "ManageCardBody",
-          children: [pU, tU && (0, xU.jsx)("div", {
+          children: [Ku, Eu && (0, du.jsx)("div", {
             className: "ManageCardDisabledOverlay"
           })]
         })]
       })
     }
 
-    function IU(UU) {
+    function Cu(uu) {
       let {
-        label: RU,
-        caption: gU,
-        children: tU
-      } = UU;
-      return (0, xU.jsxs)("div", {
+        label: Ru,
+        caption: yu,
+        children: Eu
+      } = uu;
+      return (0, du.jsxs)("div", {
         className: "ManageStackedField",
-        children: [(0, xU.jsx)("div", {
+        children: [(0, du.jsx)("div", {
           className: "ManageStackedFieldLabel",
-          children: RU
-        }), tU, gU && (0, xU.jsx)("div", {
+          children: Ru
+        }), Eu, yu && (0, du.jsx)("div", {
           className: "ManageStackedFieldCaption",
-          children: gU
+          children: yu
         })]
       })
     }
 
-    function JU(UU) {
+    function ku(uu) {
       let {
-        label: RU,
-        caption: gU,
-        disabled: tU,
-        children: pU
-      } = UU;
-      return (0, xU.jsxs)("div", {
-        className: uU()("ManageField", {
-          ManageFieldDisabled: tU
+        label: Ru,
+        caption: yu,
+        disabled: Eu,
+        children: Ku
+      } = uu;
+      return (0, du.jsxs)("div", {
+        className: xu()("ManageField", {
+          ManageFieldDisabled: Eu
         }),
-        children: [(0, xU.jsxs)("div", {
+        children: [(0, du.jsxs)("div", {
           className: "ManageFieldText",
-          children: [(0, xU.jsx)("div", {
+          children: [(0, du.jsx)("div", {
             className: "ManageFieldLabel",
-            children: RU
-          }), (0, xU.jsx)("div", {
+            children: Ru
+          }), (0, du.jsx)("div", {
             className: "ManageFieldCaption",
-            children: gU
+            children: yu
           })]
-        }), (0, xU.jsx)("div", {
+        }), (0, du.jsx)("div", {
           className: "ManageFieldControl",
-          children: pU
+          children: Ku
         })]
       })
     }
 
-    function wU(UU) {
-      var RU, gU;
+    function eu(uu) {
+      var Ru, yu;
       let {
-        schematicData: tU,
-        updateSchematicData: pU,
-        publishFormEnabled: EU,
-        formEnabled: PU
-      } = UU;
+        schematicData: Eu,
+        updateSchematicData: Ku,
+        publishFormEnabled: Qu,
+        formEnabled: mu
+      } = uu;
       const {
-        t: qU
-      } = (0, TU.B)(), KU = !EU, cU = {
+        t: Nu
+      } = (0, Ju.E)(), Xu = !Qu, Vu = {
         tpRequests: {
-          isEnabled: () => !tU.disableTpRequests,
-          GJ: UU => pU("disableTpRequests", !UU)
+          isEnabled: () => !Eu.disableTpRequests,
+          tC: uu => Ku("disableTpRequests", !uu)
         },
         spawnProtection: {
-          isEnabled: () => !tU.disableSpawnProtection,
-          GJ: UU => pU("disableSpawnProtection", !UU)
+          isEnabled: () => !Eu.disableSpawnProtection,
+          tC: uu => Ku("disableSpawnProtection", !uu)
         },
         spawnReset: {
-          isEnabled: () => !!tU.enableSpawnReset,
-          GJ: UU => pU("enableSpawnReset", UU)
+          isEnabled: () => !!Eu.enableSpawnReset,
+          tC: uu => Ku("enableSpawnReset", uu)
         },
         smpMarketplace: {
-          isEnabled: () => !!tU.enableSmpMarketplace,
-          GJ: UU => pU("enableSmpMarketplace", UU)
+          isEnabled: () => !!Eu.enableSmpMarketplace,
+          tC: uu => Ku("enableSmpMarketplace", uu)
         },
         survivalGuns: {
-          isEnabled: () => !!tU.enableSurvivalGuns,
-          GJ: UU => pU("enableSurvivalGuns", UU)
+          isEnabled: () => !!Eu.enableSurvivalGuns,
+          tC: uu => Ku("enableSurvivalGuns", uu)
         },
         fallDamage: {
-          isEnabled: () => !tU.disableFallDamage,
-          GJ: UU => pU("disableFallDamage", !UU)
+          isEnabled: () => !Eu.disableFallDamage,
+          tC: uu => Ku("disableFallDamage", !uu)
         },
         dayNight: {
-          isEnabled: () => !!tU.enableDayNight,
-          GJ: UU => pU("enableDayNight", UU)
+          isEnabled: () => !!Eu.enableDayNight,
+          tC: uu => Ku("enableDayNight", uu)
         }
       };
-      return (0, xU.jsxs)(xU.Fragment, {
-        children: [!1 === tU.schematicContainsSpawnBlock && (0, xU.jsx)("div", {
+      return (0, du.jsxs)(du.Fragment, {
+        children: [!1 === Eu.schematicContainsSpawnBlock && (0, du.jsx)("div", {
           className: "ManageWarningBanner",
-          children: qU("worldBuilder:mustContainSpawnBlock")
-        }), (0, xU.jsxs)("div", {
+          children: Nu("worldBuilder:mustContainSpawnBlock")
+        }), (0, du.jsxs)("div", {
           className: "ManageSettingsGrid",
-          children: [(0, xU.jsxs)(mU, {
+          children: [(0, du.jsxs)(bu, {
             icon: "globe",
-            title: qU("worldBuilder:worldRulesSection"),
-            disabled: !PU,
-            children: [(0, xU.jsx)(JU, {
-              label: qU("classic:defaultGamemode"),
-              caption: qU("classic:defaultGamemodeDescription"),
-              disabled: KU,
-              children: (0, xU.jsx)(WU.c, {
+            title: Nu("worldBuilder:worldRulesSection"),
+            disabled: !mu,
+            children: [(0, du.jsx)(ku, {
+              label: Nu("classic:defaultGamemode"),
+              caption: Nu("classic:defaultGamemodeDescription"),
+              disabled: Xu,
+              children: (0, du.jsx)(ju.d, {
                 controlClassName: "ManageDropdown",
-                options: hU.C.map((UU => ({
-                  value: UU,
-                  label: CU.r[UU]
+                options: pu.E.map((uu => ({
+                  value: uu,
+                  label: Su.v[uu]
                 }))),
-                value: tU.defaultGamemode,
-                onChange: UU => pU("defaultGamemode", UU.value)
+                value: Eu.defaultGamemode,
+                onChange: uu => Ku("defaultGamemode", uu.value)
               })
-            }), (0, xU.jsx)(JU, {
-              label: qU("classic:voidDeathHeight"),
-              caption: qU("classic:voidDeathHeightDescription"),
-              disabled: KU,
-              children: (0, xU.jsxs)("div", {
+            }), (0, du.jsx)(ku, {
+              label: Nu("classic:voidDeathHeight"),
+              caption: Nu("classic:voidDeathHeightDescription"),
+              disabled: Xu,
+              children: (0, du.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, xU.jsx)("input", {
+                children: [(0, du.jsx)("input", {
                   type: "number",
-                  max: QU.C,
-                  value: null !== (RU = tU.voidDeathHeight) && void 0 !== RU ? RU : "",
-                  onChange: UU => {
-                    const RU = parseInt(UU.target.value);
-                    pU("voidDeathHeight", RU)
+                  max: Tu.G,
+                  value: null !== (Ru = Eu.voidDeathHeight) && void 0 !== Ru ? Ru : "",
+                  onChange: uu => {
+                    const Ru = parseInt(uu.target.value);
+                    Ku("voidDeathHeight", Ru)
                   }
-                }), (0, xU.jsx)("span", {
+                }), (0, du.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: qU("worldBuilder:blocksUnit")
+                  children: Nu("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, xU.jsx)(JU, {
-              label: qU("classic:worldBorder"),
-              caption: qU("classic:worldBorderDescription"),
-              disabled: KU,
-              children: (0, xU.jsxs)("div", {
+            }), (0, du.jsx)(ku, {
+              label: Nu("classic:worldBorder"),
+              caption: Nu("classic:worldBorderDescription"),
+              disabled: Xu,
+              children: (0, du.jsxs)("div", {
                 className: "ManageNumberField",
-                children: [(0, xU.jsx)("input", {
+                children: [(0, du.jsx)("input", {
                   type: "number",
-                  min: QU.M,
-                  max: QU.G,
-                  placeholder: qU("worldBuilder:noWorldBorderLimit"),
-                  value: null !== (gU = tU.worldBorder) && void 0 !== gU ? gU : "",
-                  onChange: UU => {
-                    const RU = parseInt(UU.target.value);
-                    pU("worldBorder", isNaN(RU) ? null : RU)
+                  min: Tu.L,
+                  max: Tu.H,
+                  placeholder: Nu("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (yu = Eu.worldBorder) && void 0 !== yu ? yu : "",
+                  onChange: uu => {
+                    const Ru = parseInt(uu.target.value);
+                    Ku("worldBorder", isNaN(Ru) ? null : Ru)
                   }
-                }), (0, xU.jsx)("span", {
+                }), (0, du.jsx)("span", {
                   className: "ManageFieldUnit",
-                  children: qU("worldBuilder:blocksUnit")
+                  children: Nu("worldBuilder:blocksUnit")
                 })]
               })
-            }), (0, xU.jsx)(JU, {
-              label: qU("classic:disableMobs"),
-              caption: qU("classic:disableMobsDescription"),
-              disabled: KU,
-              children: (0, xU.jsx)(eU.j, {
-                checked: tU.disableMobs,
-                setChecked: UU => pU("disableMobs", UU),
-                disabled: KU
+            }), (0, du.jsx)(ku, {
+              label: Nu("classic:disableMobs"),
+              caption: Nu("classic:disableMobsDescription"),
+              disabled: Xu,
+              children: (0, du.jsx)(Wu.d, {
+                checked: Eu.disableMobs,
+                setChecked: uu => Ku("disableMobs", uu),
+                disabled: Xu
               })
             })]
-          }), (0, xU.jsxs)(mU, {
+          }), (0, du.jsxs)(bu, {
             icon: "user-group",
-            title: qU("worldBuilder:playerAndLobbySection"),
-            disabled: !PU,
-            children: [(0, xU.jsx)(JU, {
-              label: qU("classic:disableKeepInventory"),
-              caption: qU("classic:disableKeepInventoryDescription"),
-              disabled: KU,
-              children: (0, xU.jsx)(eU.j, {
-                checked: tU.disableKeepInventory,
-                setChecked: UU => pU("disableKeepInventory", UU),
-                disabled: KU
+            title: Nu("worldBuilder:playerAndLobbySection"),
+            disabled: !mu,
+            children: [(0, du.jsx)(ku, {
+              label: Nu("classic:disableKeepInventory"),
+              caption: Nu("classic:disableKeepInventoryDescription"),
+              disabled: Xu,
+              children: (0, du.jsx)(Wu.d, {
+                checked: Eu.disableKeepInventory,
+                setChecked: uu => Ku("disableKeepInventory", uu),
+                disabled: Xu
               })
-            }), (0, xU.jsx)(JU, {
-              label: qU("classic:persistInventory"),
-              caption: qU("classic:persistInventoryDescription"),
-              disabled: KU,
-              children: (0, xU.jsx)(WU.c, {
+            }), (0, du.jsx)(ku, {
+              label: Nu("classic:persistInventory"),
+              caption: Nu("classic:persistInventoryDescription"),
+              disabled: Xu,
+              children: (0, du.jsx)(ju.d, {
                 controlClassName: "ManageDropdown",
-                options: hU.k.map((UU => ({
-                  value: UU,
-                  label: CU.i[UU]
+                options: pu.q.map((uu => ({
+                  value: uu,
+                  label: Su.k[uu]
                 }))),
-                value: tU.persistInventory,
-                onChange: UU => pU("persistInventory", UU.value)
+                value: Eu.persistInventory,
+                onChange: uu => Ku("persistInventory", uu.value)
               })
-            }), (0, xU.jsx)(JU, {
-              label: qU("classic:persistWorld"),
-              caption: qU("classic:persistWorldDescription"),
-              disabled: KU,
-              children: (0, xU.jsx)(eU.j, {
-                checked: tU.persistWorld,
-                setChecked: UU => pU("persistWorld", UU),
-                disabled: KU
+            }), (0, du.jsx)(ku, {
+              label: Nu("classic:persistWorld"),
+              caption: Nu("classic:persistWorldDescription"),
+              disabled: Xu,
+              children: (0, du.jsx)(Wu.d, {
+                checked: Eu.persistWorld,
+                setChecked: uu => Ku("persistWorld", uu),
+                disabled: Xu
               })
-            }), (0, xU.jsx)(JU, {
-              label: qU("classic:disableLobbySpawn"),
-              caption: qU("classic:disableLobbySpawnDescription"),
-              disabled: KU,
-              children: (0, xU.jsx)(eU.j, {
-                checked: tU.disableLobbySpawn,
-                setChecked: UU => pU("disableLobbySpawn", UU),
-                disabled: KU
+            }), (0, du.jsx)(ku, {
+              label: Nu("classic:disableLobbySpawn"),
+              caption: Nu("classic:disableLobbySpawnDescription"),
+              disabled: Xu,
+              children: (0, du.jsx)(Wu.d, {
+                checked: Eu.disableLobbySpawn,
+                setChecked: uu => Ku("disableLobbySpawn", uu),
+                disabled: Xu
               })
-            }), (0, xU.jsx)(JU, {
-              label: qU("classic:hideLobbyCode"),
-              caption: qU("classic:hideLobbyCodeDescription"),
-              disabled: KU,
-              children: (0, xU.jsx)(eU.j, {
-                checked: tU.hideLobbyCode,
-                setChecked: UU => pU("hideLobbyCode", UU),
-                disabled: KU
+            }), (0, du.jsx)(ku, {
+              label: Nu("classic:hideLobbyCode"),
+              caption: Nu("classic:hideLobbyCodeDescription"),
+              disabled: Xu,
+              children: (0, du.jsx)(Wu.d, {
+                checked: Eu.hideLobbyCode,
+                setChecked: uu => Ku("hideLobbyCode", uu),
+                disabled: Xu
               })
             })]
           })]
-        }), (0, xU.jsx)(mU, {
+        }), (0, du.jsx)(bu, {
           icon: "layer-group",
-          title: qU("worldBuilder:pluginsSection"),
-          disabled: !PU,
-          children: (0, xU.jsx)(fU.c, {
-            callbacks: cU,
-            disabled: KU,
+          title: Nu("worldBuilder:pluginsSection"),
+          disabled: !mu,
+          children: (0, du.jsx)(Hu.e, {
+            callbacks: Vu,
+            disabled: Xu,
             advancedMode: !0,
             hideWrapper: !0
           })
         })]
       })
     }
-    var nU = gU(4614),
-      bU = gU(4040),
-      oU = gU(1461),
-      ZU = gU(3182),
-      aU = gU(1112),
-      YU = gU(4569),
-      BU = gU(4623),
-      VU = gU(1420);
-    const rU = 50,
-      XU = .3;
-    async function vU(UU) {
-      const RU = await
-      function(UU) {
-        return new Promise(((RU, gU) => {
-          const tU = new FileReader;
-          tU.onload = () => RU(tU.result), tU.onerror = gU, tU.readAsDataURL(UU)
+    var Au = yu(4737),
+      Du = yu(4139),
+      Mu = yu(1447),
+      Iu = yu(3307),
+      Gu = yu(1107),
+      Uu = yu(4686),
+      nu = yu(4740),
+      su = yu(1410);
+    const tu = 50,
+      lu = .3;
+    async function gu(uu) {
+      const Ru = await
+      function(uu) {
+        return new Promise(((Ru, yu) => {
+          const Eu = new FileReader;
+          Eu.onload = () => Ru(Eu.result), Eu.onerror = yu, Eu.readAsDataURL(uu)
         }))
-      }(UU), gU = await
-      function(UU) {
-        return new Promise(((RU, gU) => {
-          const tU = new Image;
-          tU.onload = () => RU(tU), tU.onerror = () => gU(new Error("Failed to load image")), tU.src = UU
+      }(uu), yu = await
+      function(uu) {
+        return new Promise(((Ru, yu) => {
+          const Eu = new Image;
+          Eu.onload = () => Ru(Eu), Eu.onerror = () => yu(new Error("Failed to load image")), Eu.src = uu
         }))
-      }(RU);
-      if (gU.naturalHeight > gU.naturalWidth) throw new dU;
-      const tU = 1024 * rU,
+      }(Ru);
+      if (yu.naturalHeight > yu.naturalWidth) throw new cu;
+      const Eu = 1024 * tu,
         {
-          dataUrl: pU,
-          finalQuality: EU
-        } = function(UU, RU) {
-          const gU = document.createElement("canvas");
-          gU.width = UU.naturalWidth, gU.height = UU.naturalHeight, gU.getContext("2d").drawImage(UU, 0, 0);
-          let tU = .92,
-            pU = gU.toDataURL("image/jpeg", tU);
-          for (; .75 * pU.length > RU && tU > .05;) tU -= .05, pU = gU.toDataURL("image/jpeg", tU);
+          dataUrl: Ku,
+          finalQuality: Qu
+        } = function(uu, Ru) {
+          const yu = document.createElement("canvas");
+          yu.width = uu.naturalWidth, yu.height = uu.naturalHeight, yu.getContext("2d").drawImage(uu, 0, 0);
+          let Eu = .92,
+            Ku = yu.toDataURL("image/jpeg", Eu);
+          for (; .75 * Ku.length > Ru && Eu > .05;) Eu -= .05, Ku = yu.toDataURL("image/jpeg", Eu);
           return {
-            dataUrl: pU,
-            finalQuality: tU
+            dataUrl: Ku,
+            finalQuality: Eu
           }
-        }(gU, tU);
-      if (Math.ceil(.75 * pU.length) > tU) throw new HU;
+        }(yu, Eu);
+      if (Math.ceil(.75 * Ku.length) > Eu) throw new Lu;
       return {
-        base64Jpg: pU,
-        heavilyCompressed: EU < XU
+        base64Jpg: Ku,
+        heavilyCompressed: Qu < lu
       }
     }
-    class dU extends Error {}
-    class HU extends Error {}
-    var SU = function(UU) {
-      return UU[UU.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", UU[UU.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", UU
-    }(SU || {});
+    class cu extends Error {}
+    class Lu extends Error {}
+    var zu = function(uu) {
+      return uu[uu.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", uu[uu.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", uu
+    }(zu || {});
 
-    function sU(UU) {
-      var RU;
+    function Fu(uu) {
+      var Ru;
       let {
-        schematicId: gU,
-        hasReadUploadPolicy: pU,
-        onPolicyValidationError: qU,
-        onThumbnailReady: KU
-      } = UU;
+        schematicId: yu,
+        hasReadUploadPolicy: Ku,
+        onPolicyValidationError: Nu,
+        onThumbnailReady: Xu
+      } = uu;
       const {
-        t: jU
-      } = (0, TU.B)(), [CU, hU] = (0, tU.useState)(null), [QU, eU] = (0, tU.useState)(""), [WU, fU] = (0, tU.useState)(""), [mU, IU] = (0, tU.useState)(!0), [JU, wU] = (0, tU.useState)(!1), nU = (0, tU.useRef)(!1), [bU, oU] = (0, tU.useState)(null), [ZU, aU] = (0, tU.useState)(!1), [YU, VU] = (0, tU.useState)(!1), rU = (0, tU.useRef)(0), {
-        getRootProps: XU,
-        getInputProps: SU,
-        isDragActive: sU
-      } = (0, BU.e)({
+        t: Bu
+      } = (0, Ju.E)(), [Su, pu] = (0, Eu.useState)(null), [Tu, Wu] = (0, Eu.useState)(""), [ju, Hu] = (0, Eu.useState)(""), [bu, Cu] = (0, Eu.useState)(!0), [ku, eu] = (0, Eu.useState)(!1), Au = (0, Eu.useRef)(!1), [Du, Mu] = (0, Eu.useState)(null), [Iu, Gu] = (0, Eu.useState)(!1), [Uu, su] = (0, Eu.useState)(!1), tu = (0, Eu.useRef)(0), {
+        getRootProps: lu,
+        getInputProps: zu,
+        isDragActive: Fu
+      } = (0, nu.d)({
         accept: {
           "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
         },
         multiple: !1,
-        onDrop: async UU => {
-          if (0 === UU.length) return;
-          const RU = UU[0],
-            gU = ++rU.current;
-          oU(null), aU(!1), hU(null), eU(RU.name);
+        onDrop: async uu => {
+          if (0 === uu.length) return;
+          const Ru = uu[0],
+            yu = ++tu.current;
+          Mu(null), Gu(!1), pu(null), Wu(Ru.name);
           try {
-            const UU = await vU(RU);
-            if (gU !== rU.current) return;
-            hU(UU), aU(UU.heavilyCompressed)
-          } catch (tU) {
-            if (gU !== rU.current) return;
-            oU(jU(tU instanceof dU ? "thumbnail:portraitImagesNotAllowed" : tU instanceof HU ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+            const uu = await gu(Ru);
+            if (yu !== tu.current) return;
+            pu(uu), Gu(uu.heavilyCompressed)
+          } catch (Eu) {
+            if (yu !== tu.current) return;
+            Mu(Bu(Eu instanceof cu ? "thumbnail:portraitImagesNotAllowed" : Eu instanceof Lu ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
           }
         },
         useFsAccessApi: !1
-      }), yU = QU.length <= 30 ? QU : `${QU.slice(0,27)}...`, kU = null !== (RU = null === CU || void 0 === CU ? void 0 : CU.base64Jpg) && void 0 !== RU ? RU : null, FU = WU.trim(), iU = FU.length >= GU.n && FU.length <= GU.l, AU = YU && !CU && !bU, zU = YU && !iU;
-      return (0, xU.jsxs)("div", {
+      }), wu = Tu.length <= 30 ? Tu : `${Tu.slice(0,27)}...`, Zu = null !== (Ru = null === Su || void 0 === Su ? void 0 : Su.base64Jpg) && void 0 !== Ru ? Ru : null, hu = ju.trim(), Pu = hu.length >= ru.k && hu.length <= ru.j, iu = Uu && !Su && !Du, Yu = Uu && !Pu;
+      return (0, du.jsxs)("div", {
         className: "ThumbnailUploadContainer",
-        children: [(0, xU.jsxs)("div", {
-          ...XU({
-            className: uU()("ThumbnailUploadDropzone", {
-              ActiveDrag: sU,
-              ValidationError: AU
+        children: [(0, du.jsxs)("div", {
+          ...lu({
+            className: xu()("ThumbnailUploadDropzone", {
+              ActiveDrag: Fu,
+              ValidationError: iu
             })
           }),
-          children: [(0, xU.jsx)("input", {
-            ...SU()
-          }), !sU && kU ? (0, xU.jsxs)(xU.Fragment, {
-            children: [(0, xU.jsxs)("div", {
+          children: [(0, du.jsx)("input", {
+            ...zu()
+          }), !Fu && Zu ? (0, du.jsxs)(du.Fragment, {
+            children: [(0, du.jsxs)("div", {
               className: "ThumbnailAspectPreviews",
-              children: [(0, xU.jsxs)("div", {
+              children: [(0, du.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, xU.jsx)("div", {
+                children: [(0, du.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "1:1"
-                }), (0, xU.jsx)("div", {
+                }), (0, du.jsx)("div", {
                   className: "ThumbnailAspectFrame Square",
-                  children: (0, xU.jsx)("img", {
-                    src: kU,
+                  children: (0, du.jsx)("img", {
+                    src: Zu,
                     alt: "1:1 preview"
                   })
                 })]
-              }), (0, xU.jsxs)("div", {
+              }), (0, du.jsxs)("div", {
                 className: "ThumbnailAspectPreview",
-                children: [(0, xU.jsx)("div", {
+                children: [(0, du.jsx)("div", {
                   className: "ThumbnailAspectLabel",
                   children: "16:9"
-                }), (0, xU.jsx)("div", {
+                }), (0, du.jsx)("div", {
                   className: "ThumbnailAspectFrame Wide",
-                  children: (0, xU.jsx)("img", {
-                    src: kU,
+                  children: (0, du.jsx)("img", {
+                    src: Zu,
                     alt: "16:9 preview"
                   })
                 })]
               })]
-            }), (0, xU.jsxs)("div", {
-              children: [(0, xU.jsx)("div", {
+            }), (0, du.jsxs)("div", {
+              children: [(0, du.jsx)("div", {
                 className: "ThumbnailUploadInstructions Active",
-                children: yU
-              }), (0, xU.jsx)("div", {
+                children: wu
+              }), (0, du.jsx)("div", {
                 className: "ThumbnailUploadInstructions Preview",
-                children: jU("thumbnail:preview")
+                children: Bu("thumbnail:preview")
               })]
             })]
-          }) : (0, xU.jsxs)(xU.Fragment, {
-            children: [(0, xU.jsx)("div", {
+          }) : (0, du.jsxs)(du.Fragment, {
+            children: [(0, du.jsx)("div", {
               className: "ThumbnailUploadIcon",
-              children: (0, xU.jsx)(cU.c, {
+              children: (0, du.jsx)(Vu.c, {
                 name: "image"
               })
-            }), (0, xU.jsx)("div", {
+            }), (0, du.jsx)("div", {
               className: "ThumbnailUploadInstructions",
-              children: jU("thumbnail:dragImageHere")
+              children: Bu("thumbnail:dragImageHere")
             })]
           })]
-        }), AU && (0, xU.jsx)("div", {
+        }), iu && (0, du.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: jU("thumbnail:imageRequired")
-        }), (0, xU.jsx)(PU.d, {
-          className: uU()("ThumbnailUploadNameInput", {
-            ValidationError: zU
+          children: Bu("thumbnail:imageRequired")
+        }), (0, du.jsx)(mu.b, {
+          className: xu()("ThumbnailUploadNameInput", {
+            ValidationError: Yu
           }),
-          placeholderText: jU("thumbnail:thumbnailName"),
-          defaultValue: WU,
-          onValueChange: UU => {
-            fU(UU)
+          placeholderText: Bu("thumbnail:thumbnailName"),
+          defaultValue: ju,
+          onValueChange: uu => {
+            Hu(uu)
           },
-          maxLength: GU.l
-        }), zU && (0, xU.jsx)("div", {
+          maxLength: ru.j
+        }), Yu && (0, du.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: jU("thumbnail:nameRequired", {
-            min: GU.n,
-            max: GU.l
+          children: Bu("thumbnail:nameRequired", {
+            min: ru.k,
+            max: ru.j
           })
-        }), (0, xU.jsxs)("label", {
+        }), (0, du.jsxs)("label", {
           className: "ThumbnailUploadCheckbox",
-          children: [(0, xU.jsx)("input", {
+          children: [(0, du.jsx)("input", {
             type: "checkbox",
-            checked: mU,
-            onChange: UU => {
-              IU(UU.target.checked)
+            checked: bu,
+            onChange: uu => {
+              Cu(uu.target.checked)
             }
-          }), jU("thumbnail:setAsThumbnailOnceApproved")]
-        }), ZU && (0, xU.jsx)("div", {
+          }), Bu("thumbnail:setAsThumbnailOnceApproved")]
+        }), Iu && (0, du.jsx)("div", {
           className: "ThumbnailUploadWarning",
-          children: jU("thumbnail:heavyCompressionWarning")
-        }), bU && (0, xU.jsx)("div", {
+          children: Bu("thumbnail:heavyCompressionWarning")
+        }), Du && (0, du.jsx)("div", {
           className: "ThumbnailUploadError",
-          children: bU
-        }), (0, xU.jsx)(EU.j, {
-          disabled: JU,
+          children: Du
+        }), (0, du.jsx)(Qu.l, {
+          disabled: ku,
           className: "ThumbnailUploadButton",
           onClick: async () => {
-            if (VU(!0), !nU.current && CU && iU && pU) {
-              nU.current = !0, wU(!0), oU(null);
+            if (su(!0), !Au.current && Su && Pu && Ku) {
+              Au.current = !0, eu(!0), Mu(null);
               try {
-                await KU(CU.base64Jpg, FU, mU ? gU : null)
-              } catch (UU) {
-                oU(UU.errorMessageForUser ? jU(UU.errorMessageForUser, UU.errorMessageTranslationParams) : jU("thumbnail:failedToUploadImage"))
+                await Xu(Su.base64Jpg, hu, bu ? yu : null)
+              } catch (uu) {
+                Mu(uu.errorMessageForUser ? Bu(uu.errorMessageForUser, uu.errorMessageTranslationParams) : Bu("thumbnail:failedToUploadImage"))
               } finally {
-                nU.current = !1, wU(!1)
+                Au.current = !1, eu(!1)
               }
-            } else pU || qU()
+            } else Ku || Nu()
           },
-          children: jU(JU ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+          children: Bu(ku ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
         })]
       })
     }
-    const yU = 2e3;
+    const wu = 2e3;
 
-    function kU(UU) {
+    function Zu(uu) {
       let {
-        schematicId: RU,
-        ownedThumbnailCount: gU,
-        onClose: pU,
-        onThumbnailReady: EU
-      } = UU;
+        schematicId: Ru,
+        ownedThumbnailCount: yu,
+        onClose: Ku,
+        onThumbnailReady: Qu
+      } = uu;
       const {
-        t: PU
-      } = (0, TU.B)(), {
-        userContext: qU
-      } = (0, aU.e)(), [KU, jU] = (0, tU.useState)(!1), [CU, hU] = (0, tU.useState)(!1), [QU, eU] = (0, tU.useState)(!1), WU = (0, tU.useRef)();
-      (0, tU.useEffect)((() => () => {
-        clearTimeout(WU.current)
+        t: mu
+      } = (0, Ju.E)(), {
+        userContext: Nu
+      } = (0, Gu.d)(), [Xu, Bu] = (0, Eu.useState)(!1), [Su, pu] = (0, Eu.useState)(!1), [Tu, Wu] = (0, Eu.useState)(!1), ju = (0, Eu.useRef)();
+      (0, Eu.useEffect)((() => () => {
+        clearTimeout(ju.current)
       }), []);
-      const fU = function(UU, RU) {
-        const gU = [];
-        return UU.isLoggedIn() || gU.push(SU.NOT_LOGGED_IN), RU >= GU.V && gU.push(SU.THUMBNAIL_LIMIT_REACHED), gU
-      }(qU, gU);
-      if (fU.length > 0) {
-        const UU = {
-          [SU.NOT_LOGGED_IN]: {
+      const Hu = function(uu, Ru) {
+        const yu = [];
+        return uu.isLoggedIn() || yu.push(zu.NOT_LOGGED_IN), Ru >= ru.T && yu.push(zu.THUMBNAIL_LIMIT_REACHED), yu
+      }(Nu, yu);
+      if (Hu.length > 0) {
+        const uu = {
+          [zu.NOT_LOGGED_IN]: {
             key: "thumbnail:mustBeLoggedInToUpload"
           },
-          [SU.THUMBNAIL_LIMIT_REACHED]: {
+          [zu.THUMBNAIL_LIMIT_REACHED]: {
             key: "thumbnail:thumbnailLimitReachedPleaseDelete",
             params: {
-              max: GU.V
+              max: ru.T
             }
           }
         };
-        return (0, xU.jsxs)("div", {
+        return (0, du.jsxs)("div", {
           className: "ThumbnailUploaderInner",
-          children: [(0, xU.jsx)("h1", {
+          children: [(0, du.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: PU("thumbnail:cannotUploadThumbnail")
-          }), fU.map(((RU, gU) => {
-            const tU = UU[RU];
-            return (0, xU.jsxs)("div", {
+            children: mu("thumbnail:cannotUploadThumbnail")
+          }), Hu.map(((Ru, yu) => {
+            const Eu = uu[Ru];
+            return (0, du.jsxs)("div", {
               className: "CannotUploadThumbnailItem",
-              children: [(0, xU.jsx)(cU.c, {
+              children: [(0, du.jsx)(Vu.c, {
                 name: "triangle-exclamation"
-              }), (0, xU.jsx)("span", {
-                children: PU(tU.key, tU.params)
+              }), (0, du.jsx)("span", {
+                children: mu(Eu.key, Eu.params)
               })]
-            }, gU)
+            }, yu)
           }))]
         })
       }
-      return (0, xU.jsxs)("div", {
-        className: uU()("ThumbnailUploaderInner", {
-          ThumbnailUploaderSuccess: KU
+      return (0, du.jsxs)("div", {
+        className: xu()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: Xu
         }),
-        children: [KU && (0, xU.jsxs)("div", {
+        children: [Xu && (0, du.jsxs)("div", {
           className: "ThumbnailUploadSuccessOverlay",
-          children: [(0, xU.jsxs)("div", {
+          children: [(0, du.jsxs)("div", {
             className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
-            children: [(0, xU.jsx)(cU.c, {
+            children: [(0, du.jsx)(Vu.c, {
               name: "check"
-            }), (0, xU.jsx)(VU.c, {})]
-          }), (0, xU.jsx)("div", {
+            }), (0, du.jsx)(su.e, {})]
+          }), (0, du.jsx)("div", {
             className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
-            children: PU("thumbnail:thumbnailUploaded")
+            children: mu("thumbnail:thumbnailUploaded")
           })]
-        }), (0, xU.jsx)("h1", {
+        }), (0, du.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: PU("thumbnail:uploadThumbnail")
-        }), (0, xU.jsxs)("div", {
+          children: mu("thumbnail:uploadThumbnail")
+        }), (0, du.jsxs)("div", {
           className: "ThumbnailUploaderBody",
-          children: [(0, xU.jsxs)("div", {
+          children: [(0, du.jsxs)("div", {
             className: "ThumbnailUploaderLeft",
-            children: [(0, xU.jsx)("h3", {
+            children: [(0, du.jsx)("h3", {
               className: "SchematicPopupSubtitle",
-              children: PU("thumbnail:chooseImage", {
-                maxSizeKb: rU
+              children: mu("thumbnail:chooseImage", {
+                maxSizeKb: tu
               })
-            }), (0, xU.jsx)(sU, {
-              schematicId: RU,
-              hasReadUploadPolicy: CU,
+            }), (0, du.jsx)(Fu, {
+              schematicId: Ru,
+              hasReadUploadPolicy: Su,
               onPolicyValidationError: () => {
-                eU(!0)
+                Wu(!0)
               },
-              onThumbnailReady: async (UU, RU, gU) => {
-                await EU(UU, RU, gU), jU(!0), WU.current = setTimeout(pU, yU)
+              onThumbnailReady: async (uu, Ru, yu) => {
+                await Qu(uu, Ru, yu), Bu(!0), ju.current = setTimeout(Ku, wu)
               }
             })]
-          }), (0, xU.jsxs)("div", {
+          }), (0, du.jsxs)("div", {
             className: "ThumbnailUploadPolicy",
-            children: [(0, xU.jsx)("h3", {
+            children: [(0, du.jsx)("h3", {
               className: "ThumbnailUploadPolicyTitle",
-              children: PU("thumbnail:uploadPolicy")
-            }), (0, xU.jsxs)("ul", {
+              children: mu("thumbnail:uploadPolicy")
+            }), (0, du.jsxs)("ul", {
               className: "ThumbnailUploadPolicyList",
-              children: [(0, xU.jsxs)("li", {
+              children: [(0, du.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, xU.jsx)(cU.c, {
+                children: [(0, du.jsx)(Vu.c, {
                   name: "check"
-                }), (0, xU.jsx)("span", {
-                  children: PU("thumbnail:policyFollowGuidelines")
+                }), (0, du.jsx)("span", {
+                  children: mu("thumbnail:policyFollowGuidelines")
                 })]
-              }), (0, xU.jsxs)("li", {
+              }), (0, du.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, xU.jsx)(cU.c, {
+                children: [(0, du.jsx)(Vu.c, {
                   name: "check"
-                }), (0, xU.jsx)("span", {
-                  children: PU("thumbnail:policyInGameAssets")
+                }), (0, du.jsx)("span", {
+                  children: mu("thumbnail:policyInGameAssets")
                 })]
-              }), (0, xU.jsxs)("li", {
+              }), (0, du.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem Allowed",
-                children: [(0, xU.jsx)(cU.c, {
+                children: [(0, du.jsx)(Vu.c, {
                   name: "check"
-                }), (0, xU.jsx)("span", {
-                  children: PU("thumbnail:policyLimitText")
+                }), (0, du.jsx)("span", {
+                  children: mu("thumbnail:policyLimitText")
                 })]
-              }), (0, xU.jsxs)("li", {
+              }), (0, du.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, xU.jsx)(cU.c, {
+                children: [(0, du.jsx)(Vu.c, {
                   name: "x"
-                }), (0, xU.jsx)("span", {
-                  children: PU("thumbnail:policyCopyrightContent")
+                }), (0, du.jsx)("span", {
+                  children: mu("thumbnail:policyCopyrightContent")
                 })]
-              }), (0, xU.jsxs)("li", {
+              }), (0, du.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, xU.jsx)(cU.c, {
+                children: [(0, du.jsx)(Vu.c, {
                   name: "x"
-                }), (0, xU.jsx)("span", {
-                  children: PU("thumbnail:policyOutOfGameAssets")
+                }), (0, du.jsx)("span", {
+                  children: mu("thumbnail:policyOutOfGameAssets")
                 })]
-              }), (0, xU.jsxs)("li", {
+              }), (0, du.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, xU.jsx)(cU.c, {
+                children: [(0, du.jsx)(Vu.c, {
                   name: "x"
-                }), (0, xU.jsx)("span", {
-                  children: PU("thumbnail:policyBloxdTags")
+                }), (0, du.jsx)("span", {
+                  children: mu("thumbnail:policyBloxdTags")
                 })]
-              }), (0, xU.jsxs)("li", {
+              }), (0, du.jsxs)("li", {
                 className: "ThumbnailUploadPolicyItem NotAllowed",
-                children: [(0, xU.jsx)(cU.c, {
+                children: [(0, du.jsx)(Vu.c, {
                   name: "x"
-                }), (0, xU.jsx)("span", {
-                  children: PU("thumbnail:policyMustReflectGame")
+                }), (0, du.jsx)("span", {
+                  children: mu("thumbnail:policyMustReflectGame")
                 })]
               })]
-            }), (0, xU.jsxs)("label", {
-              className: uU()("ThumbnailUploadCheckbox Policy", {
-                ValidationError: QU && !CU
+            }), (0, du.jsxs)("label", {
+              className: xu()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: Tu && !Su
               }),
-              children: [(0, xU.jsx)("input", {
+              children: [(0, du.jsx)("input", {
                 type: "checkbox",
-                checked: CU,
-                onChange: UU => {
-                  hU(UU.target.checked)
+                checked: Su,
+                onChange: uu => {
+                  pu(uu.target.checked)
                 }
-              }), PU("thumbnail:agreeToUploadPolicy")]
-            }), QU && !CU && (0, xU.jsx)("div", {
+              }), mu("thumbnail:agreeToUploadPolicy")]
+            }), Tu && !Su && (0, du.jsx)("div", {
               className: "ThumbnailPolicyError",
-              children: PU("thumbnail:policyRequired")
+              children: mu("thumbnail:policyRequired")
             })]
           })]
         })]
       })
     }
-    var FU = gU(1196);
-    const iU = {
+    var hu = yu(1176);
+    const Pu = {
       "custom-game-bad-thumbnail": {
         reason: "thumbnail:rejectionInappropriate",
         tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
@@ -877,207 +877,207 @@ export const modules = {
       }
     };
 
-    function AU(UU) {
-      var RU, gU;
+    function iu(uu) {
+      var Ru, yu;
       let {
-        schematicData: PU,
-        updateSchematicData: KU,
-        publishFormEnabled: GU,
-        onClose: jU
-      } = UU;
+        schematicData: mu,
+        updateSchematicData: Xu,
+        publishFormEnabled: ru,
+        onClose: Bu
+      } = uu;
       const {
-        t: CU
-      } = (0, TU.B)(), {
-        userContext: hU,
-        isUserContextUpdating: QU
-      } = (0, aU.e)(), eU = (0, ZU.b)(), [WU, fU] = (0, tU.useState)([]), [mU, IU] = (0, tU.useState)([]), [JU, wU] = (0, tU.useState)(!0), [nU, bU] = (0, tU.useState)(null !== (RU = PU.customThumbnailId) && void 0 !== RU ? RU : null), [BU, VU] = (0, tU.useState)(null), rU = (0, tU.useRef)(null !== (gU = PU.customThumbnailId) && void 0 !== gU ? gU : null), XU = (0, tU.useRef)(0), vU = (0, tU.useRef)(null), dU = (0, tU.useRef)(null), HU = (0, tU.useRef)(null), SU = (0, tU.useRef)(!1);
+        t: Su
+      } = (0, Ju.E)(), {
+        userContext: pu,
+        isUserContextUpdating: Tu
+      } = (0, Gu.d)(), Wu = (0, Iu.b)(), [ju, Hu] = (0, Eu.useState)([]), [bu, Cu] = (0, Eu.useState)([]), [ku, eu] = (0, Eu.useState)(!0), [Au, Du] = (0, Eu.useState)(null !== (Ru = mu.customThumbnailId) && void 0 !== Ru ? Ru : null), [nu, su] = (0, Eu.useState)(null), tu = (0, Eu.useRef)(null !== (yu = mu.customThumbnailId) && void 0 !== yu ? yu : null), lu = (0, Eu.useRef)(0), gu = (0, Eu.useRef)(null), cu = (0, Eu.useRef)(null), Lu = (0, Eu.useRef)(null), zu = (0, Eu.useRef)(!1);
 
-      function sU(UU, RU) {
-        HU.current && (clearTimeout(HU.current), HU.current = null), VU(UU), null !== UU && RU && (HU.current = setTimeout((() => {
-          VU(null), HU.current = null
+      function Fu(uu, Ru) {
+        Lu.current && (clearTimeout(Lu.current), Lu.current = null), su(uu), null !== uu && Ru && (Lu.current = setTimeout((() => {
+          su(null), Lu.current = null
         }), 5e3))
-      }(0, tU.useEffect)((() => () => {
-        clearTimeout(dU.current), clearTimeout(HU.current)
+      }(0, Eu.useEffect)((() => () => {
+        clearTimeout(cu.current), clearTimeout(Lu.current)
       }), []);
-      const yU = (0, tU.useCallback)((() => {
-        wU(!0), oU.c.getOwnedThumbnails(hU).then((UU => {
-          const RU = [],
-            gU = [];
-          for (const tU of UU.thumbnails) tU.rejectionPolicyId ? RU.push(tU) : gU.push(tU);
-          RU.sort(((UU, RU) => UU.lastUpdatedAt - RU.lastUpdatedAt)), gU.sort(((UU, RU) => {
-            const gU = UU.approved ? 1 : 0,
-              tU = (RU.approved ? 1 : 0) - gU;
-            return 0 !== tU ? tU : RU.lastUpdatedAt - UU.lastUpdatedAt
-          })), IU(RU), fU(gU)
-        })).catch((UU => {
-          console.error("Failed to fetch thumbnails:", UU)
+      const wu = (0, Eu.useCallback)((() => {
+        eu(!0), Mu.e.getOwnedThumbnails(pu).then((uu => {
+          const Ru = [],
+            yu = [];
+          for (const Eu of uu.thumbnails) Eu.rejectionPolicyId ? Ru.push(Eu) : yu.push(Eu);
+          Ru.sort(((uu, Ru) => uu.lastUpdatedAt - Ru.lastUpdatedAt)), yu.sort(((uu, Ru) => {
+            const yu = uu.approved ? 1 : 0,
+              Eu = (Ru.approved ? 1 : 0) - yu;
+            return 0 !== Eu ? Eu : Ru.lastUpdatedAt - uu.lastUpdatedAt
+          })), Cu(Ru), Hu(yu)
+        })).catch((uu => {
+          console.error("Failed to fetch thumbnails:", uu)
         })).finally((() => {
-          wU(!1)
+          eu(!1)
         }))
-      }), [hU]);
-      async function iU(UU, RU, gU) {
-        return oU.c.uploadSchematicThumbnail(hU, UU, RU, gU).then((() => {
-          sU({
-            text: CU("thumbnail:uploadedAwaitingModeration"),
+      }), [pu]);
+      async function Pu(uu, Ru, yu) {
+        return Mu.e.uploadSchematicThumbnail(pu, uu, Ru, yu).then((() => {
+          Fu({
+            text: Su("thumbnail:uploadedAwaitingModeration"),
             type: "success"
-          }, !0), yU()
+          }, !0), wu()
         }))
       }
 
-      function AU() {
-        XU.current = Date.now(), dU.current = null;
-        const UU = vU.current;
-        vU.current = null, sU({
-          text: CU("thumbnail:settingThumbnail"),
+      function iu() {
+        lu.current = Date.now(), cu.current = null;
+        const uu = gu.current;
+        gu.current = null, Fu({
+          text: Su("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), oU.c.setSchematicThumbnail(hU, PU.schematicId, UU).then((() => {
-          eU.current && (sU({
-            text: CU("thumbnail:thumbnailUpdated"),
+        }, !1), Mu.e.setSchematicThumbnail(pu, mu.schematicId, uu).then((() => {
+          Wu.current && (Fu({
+            text: Su("thumbnail:thumbnailUpdated"),
             type: "success"
-          }, !0), rU.current = UU, KU("customThumbnailId", UU), KU("customThumbnailBlurhash", void 0), KU("customThumbnailVariants", void 0))
-        })).catch((UU => {
-          eU.current && (sU({
-            text: UU.errorMessageForUser ? CU(UU.errorMessageForUser, UU.errorMessageTranslationParams) : CU("thumbnail:failedToSetThumbnail"),
+          }, !0), tu.current = uu, Xu("customThumbnailId", uu), Xu("customThumbnailBlurhash", void 0), Xu("customThumbnailVariants", void 0))
+        })).catch((uu => {
+          Wu.current && (Fu({
+            text: uu.errorMessageForUser ? Su(uu.errorMessageForUser, uu.errorMessageTranslationParams) : Su("thumbnail:failedToSetThumbnail"),
             type: "error"
-          }, !0), bU(rU.current))
+          }, !0), Du(tu.current))
         }))
       }
 
-      function DU(UU) {
-        bU(UU), vU.current = UU;
-        const RU = Date.now() - XU.current;
-        RU >= 1e3 ? AU() : (sU({
-          text: CU("thumbnail:settingThumbnail"),
+      function qu(uu) {
+        Du(uu), gu.current = uu;
+        const Ru = Date.now() - lu.current;
+        Ru >= 1e3 ? iu() : (Fu({
+          text: Su("thumbnail:settingThumbnail"),
           type: "info"
-        }, !1), dU.current || (dU.current = setTimeout((() => {
-          AU()
-        }), 1e3 - RU)))
+        }, !1), cu.current || (cu.current = setTimeout((() => {
+          iu()
+        }), 1e3 - Ru)))
       }
-      return (0, tU.useEffect)((() => {
-        !1 === QU && yU()
-      }), [QU, yU]), mU.length > 0 ? (0, xU.jsx)(zU, {
-        rejectedThumbnails: mU,
-        userContext: hU,
-        isMountedRef: eU,
-        onAcknowledged: yU
-      }) : (0, xU.jsxs)("div", {
+      return (0, Eu.useEffect)((() => {
+        !1 === Tu && wu()
+      }), [Tu, wu]), bu.length > 0 ? (0, du.jsx)(Yu, {
+        rejectedThumbnails: bu,
+        userContext: pu,
+        isMountedRef: Wu,
+        onAcknowledged: wu
+      }) : (0, du.jsxs)("div", {
         className: "BloxdForm ThumbnailSection",
-        children: [(0, xU.jsxs)("div", {
+        children: [(0, du.jsxs)("div", {
           className: "SectionTitle",
-          children: [CU("thumbnail:gameThumbnail"), BU && (0, xU.jsx)("span", {
-            className: uU()("ThumbnailActionMsg", `ThumbnailActionMsg--${BU.type}`),
-            children: BU.text
+          children: [Su("thumbnail:gameThumbnail"), nu && (0, du.jsx)("span", {
+            className: xu()("ThumbnailActionMsg", `ThumbnailActionMsg--${nu.type}`),
+            children: nu.text
           })]
-        }), (0, xU.jsx)("div", {
+        }), (0, du.jsx)("div", {
           className: "SectionBody",
-          children: (0, xU.jsxs)("div", {
+          children: (0, du.jsxs)("div", {
             className: "ThumbnailGrid",
-            children: [(0, xU.jsxs)("div", {
-              className: uU()("ThumbnailGridItem ThumbnailGridItemDefault", {
-                ThumbnailGridItemSelected: null === nU
+            children: [(0, du.jsxs)("div", {
+              className: xu()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === Au
               }),
-              onClick: () => DU(null),
-              children: [(0, xU.jsx)(YU.c, {
+              onClick: () => qu(null),
+              children: [(0, du.jsx)(Uu.e, {
                 game: {
-                  schematicId: PU.schematicId,
-                  imageBlurhash: PU.imageBlurhash
+                  schematicId: mu.schematicId,
+                  imageBlurhash: mu.imageBlurhash
                 }
-              }), (0, xU.jsx)("div", {
+              }), (0, du.jsx)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
-                children: CU("general:default")
+                children: Su("general:default")
               })]
-            }), JU && (0, xU.jsx)(qU.d, {}), WU.map(((UU, RU) => (0, xU.jsxs)("div", {
-              className: uU()("ThumbnailGridItem", {
-                ThumbnailGridItemSelected: nU === UU.id,
-                ThumbnailGridItemPending: !UU.approved
+            }), ku && (0, du.jsx)(Nu.b, {}), ju.map(((uu, Ru) => (0, du.jsxs)("div", {
+              className: xu()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: Au === uu.id,
+                ThumbnailGridItemPending: !uu.approved
               }),
               onClick: () => {
-                UU.approved && DU(UU.id)
+                uu.approved && qu(uu.id)
               },
-              children: [UU.approved && (0, xU.jsx)("img", {
-                src: `${FU.clientSideServerUrls.s3Url}/customThumbnails/${UU.id}.jpg`,
+              children: [uu.approved && (0, du.jsx)("img", {
+                src: `${hu.clientSideServerUrls.s3Url}/customThumbnails/${uu.id}.jpg`,
                 alt: "Thumbnail"
-              }), UU.approved && (0, xU.jsx)("div", {
+              }), uu.approved && (0, du.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: UU.name
-              }), UU.id && (0, xU.jsx)(EU.E, {
+                children: uu.name
+              }), uu.id && (0, du.jsx)(Qu.F, {
                 className: "ThumbnailDeleteButton",
-                onClick: RU => async function(UU, RU, gU) {
-                  UU.stopPropagation();
-                  const tU = await pU.NotificationProvider.showCustomPopup({
-                      body: UU => (0, xU.jsx)(MU, {
-                        thumbnailId: RU,
-                        thumbnailName: gU,
-                        onClose: RU => {
-                          RU && (SU.current = !0), UU()
+                onClick: Ru => async function(uu, Ru, yu) {
+                  uu.stopPropagation();
+                  const Eu = await Ku.NotificationProvider.showCustomPopup({
+                      body: uu => (0, du.jsx)(ou, {
+                        thumbnailId: Ru,
+                        thumbnailName: yu,
+                        onClose: Ru => {
+                          Ru && (zu.current = !0), uu()
                         }
                       }),
                       middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
-                      onClose: jU
+                      onClose: Bu
                     }).getResult(),
-                    EU = SU.current;
-                  SU.current = !1, EU && !0 === tU && (eU.current && sU({
-                    text: CU("thumbnail:deletingThumbnail"),
+                    Qu = zu.current;
+                  zu.current = !1, Qu && !0 === Eu && (Wu.current && Fu({
+                    text: Su("thumbnail:deletingThumbnail"),
                     type: "info"
-                  }, !1), oU.c.deleteSchematicThumbnail(hU, RU).then((() => {
-                    eU.current && (sU({
-                      text: CU("thumbnail:thumbnailDeleted"),
+                  }, !1), Mu.e.deleteSchematicThumbnail(pu, Ru).then((() => {
+                    Wu.current && (Fu({
+                      text: Su("thumbnail:thumbnailDeleted"),
                       type: "success"
-                    }, !0), rU.current === RU && DU(null), yU())
-                  })).catch((UU => {
-                    eU.current && sU({
-                      text: UU.errorMessageForUser ? CU(UU.errorMessageForUser, UU.errorMessageTranslationParams) : CU("thumbnail:failedToDeleteThumbnail"),
+                    }, !0), tu.current === Ru && qu(null), wu())
+                  })).catch((uu => {
+                    Wu.current && Fu({
+                      text: uu.errorMessageForUser ? Su(uu.errorMessageForUser, uu.errorMessageTranslationParams) : Su("thumbnail:failedToDeleteThumbnail"),
                       type: "error"
                     }, !0)
                   })))
-                }(RU, UU.id, UU.name),
-                children: (0, xU.jsx)(cU.c, {
+                }(Ru, uu.id, uu.name),
+                children: (0, du.jsx)(Vu.c, {
                   name: "trash-can"
                 })
-              }), !UU.approved && (0, xU.jsx)("div", {
+              }), !uu.approved && (0, du.jsx)("div", {
                 className: "ThumbnailUnapprovedIcon",
-                children: (0, xU.jsx)(cU.c, {
+                children: (0, du.jsx)(Vu.c, {
                   name: "hourglass-clock"
                 })
-              }), !UU.approved && (0, xU.jsxs)("div", {
+              }), !uu.approved && (0, du.jsxs)("div", {
                 className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
-                children: [UU.name, (0, xU.jsx)("br", {}), CU("thumbnail:pendingApproval")]
+                children: [uu.name, (0, du.jsx)("br", {}), Su("thumbnail:pendingApproval")]
               })]
-            }, RU))), (0, xU.jsxs)("div", {
-              className: uU()("ThumbnailGridItem ThumbnailUploadTile", {
-                ThumbnailUploadTileDisabled: !GU
+            }, Ru))), (0, du.jsxs)("div", {
+              className: xu()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !ru
               }),
               onClick: () => {
-                GU && function(UU) {
+                ru && function(uu) {
                   let {
-                    schematicId: RU,
-                    ownedThumbnailCount: gU,
-                    onThumbnailReady: tU,
-                    onClose: EU
-                  } = UU;
-                  pU.NotificationProvider.showCustomPopup({
-                    body: UU => (0, xU.jsx)(kU, {
-                      schematicId: RU,
-                      ownedThumbnailCount: gU,
-                      onClose: UU,
-                      onThumbnailReady: tU
+                    schematicId: Ru,
+                    ownedThumbnailCount: yu,
+                    onThumbnailReady: Eu,
+                    onClose: Qu
+                  } = uu;
+                  Ku.NotificationProvider.showCustomPopup({
+                    body: uu => (0, du.jsx)(Zu, {
+                      schematicId: Ru,
+                      ownedThumbnailCount: yu,
+                      onClose: uu,
+                      onThumbnailReady: Eu
                     }),
                     middleScreenPopupClassName: "SchematicThumbnailPopup",
-                    onClose: EU,
+                    onClose: Qu,
                     unlockPointerKey: "schematicThumbnailUploaderPopup"
                   })
                 }({
-                  schematicId: PU.schematicId,
-                  ownedThumbnailCount: WU.length,
-                  onThumbnailReady: iU,
-                  onClose: jU
+                  schematicId: mu.schematicId,
+                  ownedThumbnailCount: ju.length,
+                  onThumbnailReady: Pu,
+                  onClose: Bu
                 })
               },
-              children: [(0, xU.jsx)(cU.c, {
+              children: [(0, du.jsx)(Vu.c, {
                 name: "plus"
-              }), (0, xU.jsx)("div", {
+              }), (0, du.jsx)("div", {
                 className: "ThumbnailGridItemLabel",
-                children: CU("thumbnail:uploadThumbnail")
+                children: Su("thumbnail:uploadThumbnail")
               })]
             })]
           })
@@ -1085,640 +1085,640 @@ export const modules = {
       })
     }
 
-    function zU(UU) {
+    function Yu(uu) {
       let {
-        rejectedThumbnails: RU,
-        userContext: gU,
-        isMountedRef: pU,
-        onAcknowledged: PU
-      } = UU;
+        rejectedThumbnails: Ru,
+        userContext: yu,
+        isMountedRef: Ku,
+        onAcknowledged: mu
+      } = uu;
       const {
-        t: KU
-      } = (0, TU.B)(), [GU, jU] = (0, tU.useState)(!1), [uU, CU] = (0, tU.useState)(!1), hU = function(UU) {
-        const RU = new Map;
-        for (const gU of UU) {
-          const UU = gU.rejectionPolicyId,
-            tU = RU.get(UU);
-          tU ? tU.push(gU) : RU.set(UU, [gU])
+        t: Xu
+      } = (0, Ju.E)(), [ru, Bu] = (0, Eu.useState)(!1), [xu, Su] = (0, Eu.useState)(!1), pu = function(uu) {
+        const Ru = new Map;
+        for (const yu of uu) {
+          const uu = yu.rejectionPolicyId,
+            Eu = Ru.get(uu);
+          Eu ? Eu.push(yu) : Ru.set(uu, [yu])
         }
-        return RU
-      }(RU);
-      return (0, xU.jsxs)("div", {
+        return Ru
+      }(Ru);
+      return (0, du.jsxs)("div", {
         className: "ThumbnailRejectionNotice",
-        children: [(0, xU.jsxs)("div", {
+        children: [(0, du.jsxs)("div", {
           className: "ThumbnailRejectionNoticeTitle",
-          children: [(0, xU.jsx)(cU.c, {
+          children: [(0, du.jsx)(Vu.c, {
             name: "triangle-exclamation"
-          }), " ", KU("thumbnail:thumbnailsRejected"), " ", (0, xU.jsx)(cU.c, {
+          }), " ", Xu("thumbnail:thumbnailsRejected"), " ", (0, du.jsx)(Vu.c, {
             name: "triangle-exclamation"
           })]
-        }), (0, xU.jsx)("div", {
+        }), (0, du.jsx)("div", {
           className: "ThumbnailRejectionNoticeSubtitle",
-          children: KU("thumbnail:thumbnailsRejectedDescription")
-        }), (0, xU.jsx)("div", {
+          children: Xu("thumbnail:thumbnailsRejectedDescription")
+        }), (0, du.jsx)("div", {
           className: "ThumbnailRejectionNoticeList",
-          children: [...hU.entries()].map((UU => {
-            let [RU, gU] = UU;
-            const tU = iU[RU];
-            return (0, xU.jsxs)("div", {
+          children: [...pu.entries()].map((uu => {
+            let [Ru, yu] = uu;
+            const Eu = Pu[Ru];
+            return (0, du.jsxs)("div", {
               className: "ThumbnailRejectionNoticeGroup",
-              children: [(0, xU.jsx)("div", {
+              children: [(0, du.jsx)("div", {
                 className: "ThumbnailRejectionNoticeItems",
-                children: gU.map((UU => (0, xU.jsxs)("div", {
+                children: yu.map((uu => (0, du.jsxs)("div", {
                   className: "ThumbnailRejectionNoticeItem",
-                  children: [(0, xU.jsx)("div", {
+                  children: [(0, du.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemIcon",
-                    children: (0, xU.jsx)(cU.c, {
+                    children: (0, du.jsx)(Vu.c, {
                       name: "image-slash"
                     })
-                  }), (0, xU.jsx)("div", {
+                  }), (0, du.jsx)("div", {
                     className: "ThumbnailRejectionNoticeItemDetails",
-                    children: (0, xU.jsx)("div", {
+                    children: (0, du.jsx)("div", {
                       className: "ThumbnailRejectionNoticeItemName",
-                      children: UU.name
+                      children: uu.name
                     })
                   })]
-                }, UU.id)))
-              }), (0, xU.jsxs)("div", {
+                }, uu.id)))
+              }), (0, du.jsxs)("div", {
                 className: "ThumbnailRejectionNoticeGroupReason",
-                children: [KU("thumbnail:rejectionReason"), " ", tU ? KU(tU.reason) : RU]
-              }), tU && (0, xU.jsx)("ul", {
+                children: [Xu("thumbnail:rejectionReason"), " ", Eu ? Xu(Eu.reason) : Ru]
+              }), Eu && (0, du.jsx)("ul", {
                 className: "ThumbnailRejectionNoticeGroupTips",
-                children: tU.tips.map((UU => (0, xU.jsx)("li", {
-                  children: KU(UU)
-                }, UU)))
+                children: Eu.tips.map((uu => (0, du.jsx)("li", {
+                  children: Xu(uu)
+                }, uu)))
               })]
-            }, RU)
+            }, Ru)
           }))
-        }), (0, xU.jsxs)("label", {
+        }), (0, du.jsxs)("label", {
           className: "ThumbnailRejectionNoticeCheckbox",
-          children: [(0, xU.jsx)(bU.d, {
-            checked: GU,
-            onChange: UU => jU(UU.target.checked),
-            disabled: uU
-          }), (0, xU.jsx)("span", {
-            children: KU("thumbnail:haveReadRejectionReasons")
+          children: [(0, du.jsx)(Du.b, {
+            checked: ru,
+            onChange: uu => Bu(uu.target.checked),
+            disabled: xu
+          }), (0, du.jsx)("span", {
+            children: Xu("thumbnail:haveReadRejectionReasons")
           })]
-        }), (0, xU.jsx)(EU.j, {
+        }), (0, du.jsx)(Qu.l, {
           onClick: async function() {
-            CU(!0);
-            const UU = await Promise.allSettled(RU.map((UU => oU.c.deleteSchematicThumbnail(gU, UU.id))));
-            if (!pU.current) return;
-            const tU = UU.filter((UU => "rejected" === UU.status));
-            tU.length > 0 && console.error("Some rejected thumbnails failed to delete:", tU), PU()
+            Su(!0);
+            const uu = await Promise.allSettled(Ru.map((uu => Mu.e.deleteSchematicThumbnail(yu, uu.id))));
+            if (!Ku.current) return;
+            const Eu = uu.filter((uu => "rejected" === uu.status));
+            Eu.length > 0 && console.error("Some rejected thumbnails failed to delete:", Eu), mu()
           },
-          disabled: !GU || uU,
+          disabled: !ru || xu,
           className: "ThumbnailRejectionNoticeAcceptButton",
-          children: uU ? (0, xU.jsx)(qU.d, {}) : KU("general:accept")
+          children: xu ? (0, du.jsx)(Nu.b, {}) : Xu("general:accept")
         })]
       })
     }
 
-    function MU(UU) {
+    function ou(uu) {
       let {
-        thumbnailId: RU,
-        thumbnailName: gU,
-        onClose: tU
-      } = UU;
+        thumbnailId: Ru,
+        thumbnailName: yu,
+        onClose: Eu
+      } = uu;
       const {
-        t: pU
-      } = (0, TU.B)();
-      return (0, xU.jsxs)("div", {
+        t: Ku
+      } = (0, Ju.E)();
+      return (0, du.jsxs)("div", {
         className: "ThumbnailDeleteConfirm",
-        children: [(0, xU.jsx)("div", {
+        children: [(0, du.jsx)("div", {
           className: "ThumbnailDeleteConfirmTitle",
-          children: pU("thumbnail:deleteThumbnail")
-        }), (0, xU.jsxs)("div", {
+          children: Ku("thumbnail:deleteThumbnail")
+        }), (0, du.jsxs)("div", {
           className: "ThumbnailDeleteConfirmImageContainer",
-          children: [(0, xU.jsx)("img", {
+          children: [(0, du.jsx)("img", {
             className: "ThumbnailDeleteConfirmImage",
-            src: `${FU.clientSideServerUrls.s3Url}/customThumbnails/${RU}.jpg`,
+            src: `${hu.clientSideServerUrls.s3Url}/customThumbnails/${Ru}.jpg`,
             alt: "Thumbnail to delete"
-          }), (0, xU.jsx)("div", {
+          }), (0, du.jsx)("div", {
             className: "ThumbnailGridItemLabel",
-            children: gU
+            children: yu
           })]
-        }), (0, xU.jsx)("div", {
+        }), (0, du.jsx)("div", {
           className: "ThumbnailDeleteConfirmSubtitle",
-          children: pU("thumbnail:deleteThumbnailConfirmation")
-        }), (0, xU.jsxs)("div", {
+          children: Ku("thumbnail:deleteThumbnailConfirmation")
+        }), (0, du.jsxs)("div", {
           className: "ThumbnailDeleteConfirmButtons",
-          children: [(0, xU.jsxs)(EU.E, {
+          children: [(0, du.jsxs)(Qu.F, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => tU(!0),
-            children: [(0, xU.jsx)(cU.c, {
+            onClick: () => Eu(!0),
+            children: [(0, du.jsx)(Vu.c, {
               name: "trash-can"
-            }), " ", pU("general:delete")]
-          }), (0, xU.jsx)(EU.g, {
+            }), " ", Ku("general:delete")]
+          }), (0, du.jsx)(Qu.f, {
             className: "ThumbnailDeleteConfirmButton",
-            onClick: () => tU(!1),
-            children: pU("general:cancel")
+            onClick: () => Eu(!1),
+            children: Ku("general:cancel")
           })]
         })]
       })
     }
-    var DU = gU(2850),
-      LU = gU(4657),
-      NU = gU(4663),
-      lU = gU(4706);
+    var qu = yu(2950),
+      Ou = yu(4771),
+      vu = yu(4780),
+      au = yu(4823);
 
-    function OU(UU) {
+    function fu(uu) {
       let {
-        schematicData: RU,
-        setTexturePack: gU,
-        initializeTexturePack: pU,
-        publishFormEnabled: EU
-      } = UU;
+        schematicData: Ru,
+        setTexturePack: yu,
+        initializeTexturePack: Ku,
+        publishFormEnabled: Qu
+      } = uu;
       const {
-        t: PU
-      } = (0, TU.B)(), [qU, KU] = (0, tU.useState)(null), [cU, GU] = (0, tU.useState)(null), [jU, CU] = (0, tU.useState)(!1), hU = (0, ZU.b)(), QU = EU && !jU, eU = RU.customTexturePackKey;
+        t: mu
+      } = (0, Ju.E)(), [Nu, Xu] = (0, Eu.useState)(null), [Vu, ru] = (0, Eu.useState)(null), [Bu, Su] = (0, Eu.useState)(!1), pu = (0, Iu.b)(), Tu = Qu && !Bu, Wu = Ru.customTexturePackKey;
 
-      function WU(UU) {
-        var RU;
-        KU(UU.metaData.id), GU(null !== (RU = UU.metaData.fromFolderName) && void 0 !== RU ? RU : null), (UU.metaData.id !== DU.s.CUSTOM || UU.metaData.fromFolderName) && gU(UU)
+      function ju(uu) {
+        var Ru;
+        Xu(uu.metaData.id), ru(null !== (Ru = uu.metaData.fromFolderName) && void 0 !== Ru ? Ru : null), (uu.metaData.id !== qu.r.CUSTOM || uu.metaData.fromFolderName) && yu(uu)
       }
-      return (0, tU.useEffect)((() => {
-        eU && (CU(!0), (0, LU.c)(eU).then((UU => {
-          var RU;
-          hU.current && (UU ? (KU(UU.metaData.id), GU(null !== (RU = UU.metaData.fromFolderName) && void 0 !== RU ? RU : null), pU(UU)) : console.error(`No texture pack at ${eU}`))
-        })).catch((UU => {
-          console.error("Error fetching texture pack: ", UU)
+      return (0, Eu.useEffect)((() => {
+        Wu && (Su(!0), (0, Ou.d)(Wu).then((uu => {
+          var Ru;
+          pu.current && (uu ? (Xu(uu.metaData.id), ru(null !== (Ru = uu.metaData.fromFolderName) && void 0 !== Ru ? Ru : null), Ku(uu)) : console.error(`No texture pack at ${Wu}`))
+        })).catch((uu => {
+          console.error("Error fetching texture pack: ", uu)
         })).finally((() => {
-          CU(!1)
+          Su(!1)
         })))
-      }), [eU, pU, hU]), (0, xU.jsxs)("div", {
+      }), [Wu, Ku, pu]), (0, du.jsxs)("div", {
         className: "BloxdForm TexturePackSection",
-        children: [(0, xU.jsx)("div", {
+        children: [(0, du.jsx)("div", {
           className: "SectionTitle",
-          children: PU("customTexturePack:customTexturePack")
-        }), (0, xU.jsxs)("div", {
+          children: mu("customTexturePack:customTexturePack")
+        }), (0, du.jsxs)("div", {
           className: "TexturePackList",
-          children: [(0, xU.jsx)("div", {
-            className: uU()("TexturePack", {
-              Selected: null === qU && !jU,
-              Disabled: !QU
+          children: [(0, du.jsx)("div", {
+            className: xu()("TexturePack", {
+              Selected: null === Nu && !Bu,
+              Disabled: !Tu
             }),
             onClick: () => {
-              QU && (KU(null), gU(null), GU(null))
+              Tu && (Xu(null), yu(null), ru(null))
             },
-            children: (0, xU.jsx)("div", {
+            children: (0, du.jsx)("div", {
               className: "TexturePackName",
               children: "No Override"
             })
-          }), Object.values(DU.s).map((UU => (0, xU.jsx)(NU.h, {
-            id: UU,
-            isSelected: UU === qU,
-            setSelected: WU,
-            disabled: !QU
-          }, UU)))]
-        }), qU === DU.s.CUSTOM && (0, xU.jsx)(lU.d, {
-          folderName: cU,
-          onTexturePackUpdated: WU,
-          disabled: !QU,
+          }), Object.values(qu.r).map((uu => (0, du.jsx)(vu.e, {
+            id: uu,
+            isSelected: uu === Nu,
+            setSelected: ju,
+            disabled: !Tu
+          }, uu)))]
+        }), Nu === qu.r.CUSTOM && (0, du.jsx)(au.d, {
+          folderName: Vu,
+          onTexturePackUpdated: ju,
+          disabled: !Tu,
           maxFileSizeMb: 25,
           packOwner: "customGame"
         })]
       })
     }
-    var UR = gU(4722);
+    var uR = yu(4841);
 
-    function RR(UU) {
-      var RU;
+    function RR(uu) {
+      var Ru;
       let {
-        gameCategory: gU,
-        setGameCategory: tU,
-        disabled: pU
-      } = UU;
-      const PU = null !== (RU = (0, CU.jb)(gU)) && void 0 !== RU ? RU : "other";
-      return (0, xU.jsxs)("div", {
+        gameCategory: yu,
+        setGameCategory: Eu,
+        disabled: Ku
+      } = uu;
+      const mu = null !== (Ru = (0, Su.ib)(yu)) && void 0 !== Ru ? Ru : "other";
+      return (0, du.jsxs)("div", {
         className: "GameCategoryPicker",
-        children: [(0, xU.jsx)(eU.g, {
+        children: [(0, du.jsx)(Wu.c, {
           label: "worldBuilder:gameCategoryGroup",
           className: "GameCategoryGroup",
-          disabled: pU,
-          children: (0, xU.jsx)(WU.c, {
-            options: CU.bb.map((UU => ({
-              value: UU,
-              label: CU.Z[UU]
+          disabled: Ku,
+          children: (0, du.jsx)(ju.d, {
+            options: Su._.map((uu => ({
+              value: uu,
+              label: Su.Y[uu]
             }))),
-            value: PU,
-            onChange: UU => {
-              UU.value !== PU && tU(CU.W[UU.value][0])
+            value: mu,
+            onChange: uu => {
+              uu.value !== mu && Eu(Su.R[uu.value][0])
             }
           })
-        }), (0, xU.jsx)(eU.g, {
+        }), (0, du.jsx)(Wu.c, {
           label: "worldBuilder:gameCategory",
           className: "GameCategory",
-          disabled: pU,
-          children: (0, xU.jsx)("div", {
+          disabled: Ku,
+          children: (0, du.jsx)("div", {
             className: "GameCategoryOptions",
-            children: CU.W[PU].map((UU => (0, xU.jsx)(EU.M, {
-              active: UU === gU,
+            children: Su.R[mu].map((uu => (0, du.jsx)(Qu.P, {
+              active: uu === yu,
               onClick: () => {
-                tU(UU)
+                Eu(uu)
               },
-              children: (0, CU.ib)(UU)
-            }, UU)))
+              children: (0, Su.hb)(uu)
+            }, uu)))
           })
         })]
       })
     }
 
-    function gR(UU) {
+    function yR(uu) {
       let {
-        editor: RU,
-        onClose: gU
-      } = UU;
+        editor: Ru,
+        onClose: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, TU.B)(), {
-        schematicData: pU,
-        updateSchematicData: EU,
-        publishFormEnabled: qU,
-        formEnabled: KU
-      } = RU;
-      return (0, xU.jsxs)(xU.Fragment, {
-        children: [(0, xU.jsxs)(mU, {
+        t: Eu
+      } = (0, Ju.E)(), {
+        schematicData: Ku,
+        updateSchematicData: Qu,
+        publishFormEnabled: Nu,
+        formEnabled: Xu
+      } = Ru;
+      return (0, du.jsxs)(du.Fragment, {
+        children: [(0, du.jsxs)(bu, {
           icon: "pen-to-square",
-          title: tU("worldBuilder:basicsSection"),
-          disabled: !KU,
-          children: [(0, xU.jsx)(IU, {
-            label: tU("general:name"),
-            caption: tU("worldBuilder:schematicNameTagsHint"),
-            children: (0, xU.jsx)(PU.d, {
+          title: Eu("worldBuilder:basicsSection"),
+          disabled: !Xu,
+          children: [(0, du.jsx)(Cu, {
+            label: Eu("general:name"),
+            caption: Eu("worldBuilder:schematicNameTagsHint"),
+            children: (0, du.jsx)(mu.b, {
               className: "SchematicPageName",
-              defaultValue: pU.name,
-              onValueChange: UU => EU("name", UU),
-              placeholderText: tU("worldBuilder:schematicNamePlaceholder"),
-              maxLength: GU.qb
+              defaultValue: Ku.name,
+              onValueChange: uu => Qu("name", uu),
+              placeholderText: Eu("worldBuilder:schematicNamePlaceholder"),
+              maxLength: ru.pb
             })
-          }), (0, xU.jsx)(IU, {
-            label: tU("general:description"),
-            children: (0, xU.jsx)(PU.d, {
+          }), (0, du.jsx)(Cu, {
+            label: Eu("general:description"),
+            children: (0, du.jsx)(mu.b, {
               className: "SchematicPageDescription",
               useTextarea: !0,
-              defaultValue: pU.description,
-              onValueChange: UU => EU("description", UU),
-              placeholderText: tU("worldBuilder:schematicDescriptionPlaceholder"),
-              maxLength: GU.mb
+              defaultValue: Ku.description,
+              onValueChange: uu => Qu("description", uu),
+              placeholderText: Eu("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: ru.nb
             })
-          }), (0, xU.jsx)(RR, {
-            gameCategory: pU.gameCategory,
-            setGameCategory: UU => EU("gameCategory", UU),
-            disabled: !qU
-          }), !0 === pU.gamePublished && (0, xU.jsx)(AU, {
-            schematicData: pU,
-            updateSchematicData: EU,
-            publishFormEnabled: qU,
+          }), (0, du.jsx)(RR, {
+            gameCategory: Ku.gameCategory,
+            setGameCategory: uu => Qu("gameCategory", uu),
+            disabled: !Nu
+          }), !0 === Ku.gamePublished && (0, du.jsx)(iu, {
+            schematicData: Ku,
+            updateSchematicData: Qu,
+            publishFormEnabled: Nu,
             onClose: function() {
-              null === gU || void 0 === gU || gU()
+              null === yu || void 0 === yu || yu()
             }
           })]
-        }), (0, xU.jsx)(wU, {
-          schematicData: pU,
-          updateSchematicData: EU,
-          publishFormEnabled: qU,
-          formEnabled: KU
-        }), !0 === pU.gamePublished && (0, xU.jsx)(mU, {
+        }), (0, du.jsx)(eu, {
+          schematicData: Ku,
+          updateSchematicData: Qu,
+          publishFormEnabled: Nu,
+          formEnabled: Xu
+        }), !0 === Ku.gamePublished && (0, du.jsx)(bu, {
           icon: "palette",
-          title: tU("worldBuilder:texturePackSection"),
-          disabled: !KU,
-          children: (0, xU.jsx)(OU, {
-            schematicData: pU,
-            setTexturePack: RU.setTexturePack,
-            initializeTexturePack: RU.initializeTexturePack,
-            publishFormEnabled: qU
+          title: Eu("worldBuilder:texturePackSection"),
+          disabled: !Xu,
+          children: (0, du.jsx)(fu, {
+            schematicData: Ku,
+            setTexturePack: Ru.setTexturePack,
+            initializeTexturePack: Ru.initializeTexturePack,
+            publishFormEnabled: Nu
           })
         })]
       })
     }
 
-    function tR(UU) {
+    function ER(uu) {
       let {
-        editor: RU
-      } = UU;
+        editor: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, TU.B)(), {
-        schematicData: tU,
-        formEnabled: pU,
-        hasUnsavedChanges: PU
-      } = RU, GU = pU && PU;
-      return (0, xU.jsxs)("footer", {
+        t: yu
+      } = (0, Ju.E)(), {
+        schematicData: Eu,
+        formEnabled: Ku,
+        hasUnsavedChanges: mu
+      } = Ru, ru = Ku && mu;
+      return (0, du.jsxs)("footer", {
         className: "SchematicPageFooter",
-        children: [pU && PU && (0, xU.jsxs)("div", {
+        children: [Ku && mu && (0, du.jsxs)("div", {
           className: "SchematicPageFooterStatus",
-          children: [(0, xU.jsx)("span", {
+          children: [(0, du.jsx)("span", {
             className: "SchematicPageFooterStatusDot"
-          }), gU("worldBuilder:unsavedChanges")]
-        }), (0, xU.jsx)(KU.g, {
-          tooltipInner: (0, xU.jsx)("div", {
+          }), yu("worldBuilder:unsavedChanges")]
+        }), (0, du.jsx)(Xu.i, {
+          tooltipInner: (0, du.jsx)("div", {
             className: "SaveButtonTooltip",
-            children: gU(pU && !PU ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+            children: yu(Ku && !mu ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
           }),
-          children: (0, xU.jsxs)(EU.e, {
+          children: (0, du.jsxs)(Qu.e, {
             className: "SaveChangesButton",
-            onClick: () => RU.saveSchematic(tU.gamePublished),
-            disabled: !GU,
-            children: [(0, xU.jsxs)("span", {
-              className: pU ? "" : "SaveChangesButtonBodyHidden",
-              children: [(0, xU.jsx)(cU.c, {
+            onClick: () => Ru.saveSchematic(Eu.gamePublished),
+            disabled: !ru,
+            children: [(0, du.jsxs)("span", {
+              className: Ku ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, du.jsx)(Vu.c, {
                 name: "wrench"
-              }), " ", gU("worldBuilder:saveChanges")]
-            }), !pU && (0, xU.jsx)(qU.d, {})]
+              }), " ", yu("worldBuilder:saveChanges")]
+            }), !Ku && (0, du.jsx)(Nu.b, {})]
           })
         })]
       })
     }
 
-    function pR(UU) {
+    function KR(uu) {
       let {
-        schematic: RU,
-        onSchematicUpdate: gU,
-        onClose: pU,
-        inSourceWorld: PU
-      } = UU;
+        schematic: Ru,
+        onSchematicUpdate: yu,
+        onClose: Ku,
+        inSourceWorld: mu
+      } = uu;
       const {
-        t: qU
-      } = (0, TU.B)();
+        t: Nu
+      } = (0, Ju.E)();
 
-      function KU() {
-        null === pU || void 0 === pU || pU()
+      function Xu() {
+        null === Ku || void 0 === Ku || Ku()
       }
-      const cU = (0, UR.c)(RU, {
-        onNavigateAway: KU,
-        inSourceWorld: PU
+      const Vu = (0, uR.b)(Ru, {
+        onNavigateAway: Xu,
+        inSourceWorld: mu
       });
-      return (0, tU.useEffect)((() => {
-        null === gU || void 0 === gU || gU(cU.schematicData)
-      }), [cU.schematicData, gU]), (0, xU.jsxs)("div", {
+      return (0, Eu.useEffect)((() => {
+        null === yu || void 0 === yu || yu(Vu.schematicData)
+      }), [Vu.schematicData, yu]), (0, du.jsxs)("div", {
         className: "SchematicPage SchematicPagePopupVariant",
-        children: [(0, xU.jsxs)("div", {
+        children: [(0, du.jsxs)("div", {
           className: "SchematicPageBody",
-          children: [(0, xU.jsx)(EU.d, {
-            onClick: KU,
-            children: qU("worldBuilder:back")
-          }), (0, xU.jsx)(mU, {
+          children: [(0, du.jsx)(Qu.b, {
+            onClick: Xu,
+            children: Nu("worldBuilder:back")
+          }), (0, du.jsx)(bu, {
             icon: "rocket-launch",
-            title: qU("worldBuilder:actionsSection"),
-            disabled: !cU.formEnabled,
-            children: (0, xU.jsx)(nU.c, {
-              editor: cU
+            title: Nu("worldBuilder:actionsSection"),
+            disabled: !Vu.formEnabled,
+            children: (0, du.jsx)(Au.e, {
+              editor: Vu
             })
-          }), (0, xU.jsx)(gR, {
-            editor: cU,
-            onClose: KU
+          }), (0, du.jsx)(yR, {
+            editor: Vu,
+            onClose: Xu
           })]
-        }), (0, xU.jsx)(tR, {
-          editor: cU
+        }), (0, du.jsx)(ER, {
+          editor: Vu
         })]
       })
     }
 
-    function ER(UU) {
+    function QR(uu) {
       let {
-        schematic: RU,
-        onSchematicUpdate: gU,
-        onClose: tU,
-        inSourceWorld: EU
-      } = UU;
-      pU.NotificationProvider.showCustomPopup({
-        body: UU => (0, xU.jsx)(pR, {
-          schematic: RU,
-          onSchematicUpdate: gU,
-          onClose: UU,
-          inSourceWorld: EU
+        schematic: Ru,
+        onSchematicUpdate: yu,
+        onClose: Eu,
+        inSourceWorld: Qu
+      } = uu;
+      Ku.NotificationProvider.showCustomPopup({
+        body: uu => (0, du.jsx)(KR, {
+          schematic: Ru,
+          onSchematicUpdate: yu,
+          onClose: uu,
+          inSourceWorld: Qu
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: tU,
+        onClose: Eu,
         unlockPointerKey: "schematicPagePopup"
       })
     }
   },
-  4614: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => GU
+  4737: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => ru
     });
-    var tU = gU(1037),
-      pU = gU.n(tU),
-      EU = gU(1181),
-      PU = gU(1049),
-      TU = gU(1412),
-      qU = gU(1344),
-      KU = gU(1326),
-      cU = gU(1090);
+    var Eu = yu(1035),
+      Ku = yu.n(Eu),
+      Qu = yu(1170),
+      mu = yu(1043),
+      Ju = yu(1408),
+      Nu = yu(1325),
+      Xu = yu(1300),
+      Vu = yu(1079);
 
-    function GU(UU) {
+    function ru(uu) {
       let {
-        editor: RU,
-        className: gU
-      } = UU;
+        editor: Ru,
+        className: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, EU.B)(), {
-        schematicData: GU,
-        formEnabled: jU,
-        publishFormEnabled: uU
-      } = RU, CU = !jU || !uU;
-      return (0, cU.jsxs)("div", {
-        className: pU()("PublishButtonContainer", gU),
-        children: [RU.canEditSourceWorld && (0, cU.jsxs)(TU.e, {
-          onClick: RU.editSourceWorld,
-          disabled: CU,
-          children: [(0, cU.jsx)(PU.c, {
+        t: Eu
+      } = (0, Qu.E)(), {
+        schematicData: ru,
+        formEnabled: Bu,
+        publishFormEnabled: xu
+      } = Ru, Su = !Bu || !xu;
+      return (0, Vu.jsxs)("div", {
+        className: Ku()("PublishButtonContainer", yu),
+        children: [Ru.canEditSourceWorld && (0, Vu.jsxs)(Ju.e, {
+          onClick: Ru.editSourceWorld,
+          disabled: Su,
+          children: [(0, Vu.jsx)(mu.c, {
             name: "edit"
-          }), " ", tU("worldBuilder:editSourceWorld")]
-        }), !GU.gamePublished && (0, cU.jsx)(qU.g, {
-          tooltipInner: (0, cU.jsx)("div", {
+          }), " ", Eu("worldBuilder:editSourceWorld")]
+        }), !ru.gamePublished && (0, Vu.jsx)(Nu.i, {
+          tooltipInner: (0, Vu.jsx)("div", {
             className: "PublishButtonTooltip",
-            children: tU("worldBuilder:publishAsGameDescription")
+            children: Eu("worldBuilder:publishAsGameDescription")
           }),
-          children: (0, cU.jsxs)(TU.j, {
-            onClick: () => RU.saveSchematic(!0),
-            disabled: CU,
-            children: [(0, cU.jsx)(PU.c, {
+          children: (0, Vu.jsxs)(Ju.l, {
+            onClick: () => Ru.saveSchematic(!0),
+            disabled: Su,
+            children: [(0, Vu.jsx)(mu.c, {
               name: "rocket-launch"
-            }), " ", tU("worldBuilder:publishAsGame"), " ", (0, cU.jsx)(PU.c, {
+            }), " ", Eu("worldBuilder:publishAsGame"), " ", (0, Vu.jsx)(mu.c, {
               name: "info-circle"
             })]
           })
-        }), !0 === GU.gamePublished && (0, cU.jsxs)(cU.Fragment, {
-          children: [(0, cU.jsx)(qU.g, {
-            tooltipInner: (0, cU.jsx)("div", {
+        }), !0 === ru.gamePublished && (0, Vu.jsxs)(Vu.Fragment, {
+          children: [(0, Vu.jsx)(Nu.i, {
+            tooltipInner: (0, Vu.jsx)("div", {
               className: "PublishButtonTooltip",
-              children: tU("worldBuilder:unpublishAsGameDescription")
+              children: Eu("worldBuilder:unpublishAsGameDescription")
             }),
-            children: (0, cU.jsxs)(TU.E, {
-              onClick: RU.unpublishSchematic,
-              disabled: CU,
-              children: [(0, cU.jsx)(PU.c, {
+            children: (0, Vu.jsxs)(Ju.F, {
+              onClick: Ru.unpublishSchematic,
+              disabled: Su,
+              children: [(0, Vu.jsx)(mu.c, {
                 name: "rocket-launch"
-              }), " ", tU("worldBuilder:unpublishAsGame"), " ", (0, cU.jsx)(PU.c, {
+              }), " ", Eu("worldBuilder:unpublishAsGame"), " ", (0, Vu.jsx)(mu.c, {
                 name: "info-circle"
               })]
             })
-          }), (0, cU.jsxs)(TU.e, {
-            onClick: RU.playGame,
-            disabled: CU,
-            children: [(0, cU.jsx)(PU.c, {
+          }), (0, Vu.jsxs)(Ju.e, {
+            onClick: Ru.playGame,
+            disabled: Su,
+            children: [(0, Vu.jsx)(mu.c, {
               name: "joystick"
-            }), " ", tU("general:playGame")]
+            }), " ", Eu("general:playGame")]
           })]
-        }), !jU && (0, cU.jsx)(KU.d, {
+        }), !Bu && (0, Vu.jsx)(Xu.b, {
           loaderType: "Secondary"
         })]
       })
     }
   },
-  4657: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => pU
+  4771: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Ku
     });
-    var tU = gU(1196);
-    async function pU(UU) {
-      const RU = await fetch(`${tU.clientSideServerUrls.s3Url}/${UU}`, {
+    var Eu = yu(1176);
+    async function Ku(uu) {
+      const Ru = await fetch(`${Eu.clientSideServerUrls.s3Url}/${uu}`, {
         headers: {
           Accept: "application/json"
         }
       });
-      if (404 === RU.status || 403 === RU.status) return null;
-      if (!RU.ok) throw new Error(`Failed to download the texture pack (${RU.status})`);
-      return await RU.json()
+      if (404 === Ru.status || 403 === Ru.status) return null;
+      if (!Ru.ok) throw new Error(`Failed to download the texture pack (${Ru.status})`);
+      return await Ru.json()
     }
   },
-  4722: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => QU
+  4841: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Tu
     });
-    var tU = gU(56),
-      pU = gU(1320),
-      EU = gU(994),
-      PU = gU(165),
-      TU = gU(1501),
-      qU = gU(21),
-      KU = gU(1800),
-      cU = gU(1461),
-      GU = gU(4248),
-      jU = gU(1333),
-      uU = gU(1112),
-      CU = gU(1475);
+    var Eu = yu(64),
+      Ku = yu(1289),
+      Qu = yu(1001),
+      mu = yu(174),
+      Ju = yu(1499),
+      Nu = yu(27),
+      Xu = yu(1855),
+      Vu = yu(1447),
+      ru = yu(4362),
+      Bu = yu(1311),
+      xu = yu(1107),
+      Su = yu(1467);
 
-    function hU(UU, RU) {
+    function pu(uu, Ru) {
       return {
-        schematicId: UU.schematicId,
-        name: UU.name,
-        description: UU.description,
-        gamePublished: RU,
-        gameCategory: UU.gameCategory,
-        defaultGamemode: UU.defaultGamemode,
-        voidDeathHeight: UU.voidDeathHeight,
-        disableKeepInventory: UU.disableKeepInventory,
-        disableTpRequests: UU.disableTpRequests,
-        disableLobbySpawn: UU.disableLobbySpawn,
-        disableMobs: UU.disableMobs,
-        disableSpawnProtection: UU.disableSpawnProtection,
-        disableFallDamage: UU.disableFallDamage,
-        worldBorder: UU.worldBorder,
-        hideLobbyCode: UU.hideLobbyCode,
-        enableSmpMarketplace: UU.enableSmpMarketplace,
-        enableSurvivalGuns: UU.enableSurvivalGuns,
-        enableSpawnReset: UU.enableSpawnReset,
-        enableDayNight: UU.enableDayNight,
-        persistWorld: UU.persistWorld,
-        persistInventory: UU.persistInventory
+        schematicId: uu.schematicId,
+        name: uu.name,
+        description: uu.description,
+        gamePublished: Ru,
+        gameCategory: uu.gameCategory,
+        defaultGamemode: uu.defaultGamemode,
+        voidDeathHeight: uu.voidDeathHeight,
+        disableKeepInventory: uu.disableKeepInventory,
+        disableTpRequests: uu.disableTpRequests,
+        disableLobbySpawn: uu.disableLobbySpawn,
+        disableMobs: uu.disableMobs,
+        disableSpawnProtection: uu.disableSpawnProtection,
+        disableFallDamage: uu.disableFallDamage,
+        worldBorder: uu.worldBorder,
+        hideLobbyCode: uu.hideLobbyCode,
+        enableSmpMarketplace: uu.enableSmpMarketplace,
+        enableSurvivalGuns: uu.enableSurvivalGuns,
+        enableSpawnReset: uu.enableSpawnReset,
+        enableDayNight: uu.enableDayNight,
+        persistWorld: uu.persistWorld,
+        persistInventory: uu.persistInventory
       }
     }
 
-    function QU(UU) {
+    function Tu(uu) {
       let {
-        onNavigateAway: RU,
-        inSourceWorld: gU = !1
+        onNavigateAway: Ru,
+        inSourceWorld: yu = !1
       } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
       const {
-        userContext: QU
-      } = (0, uU.e)(), eU = (0, CU.useNavigatePreserveSearch)(), [WU, fU] = (0, tU.useState)({
-        ...UU
-      }), [xU, mU] = (0, tU.useState)("Enter"), [IU, JU] = (0, tU.useState)(void 0), wU = (0, tU.useRef)(hU(UU, UU.gamePublished)), nU = (0, tU.useRef)(void 0), bU = "Enter" === xU, oU = QU.playerHasRank("developer") || QU.playerHasRank("admin") || "Enter" === xU && !1 !== WU.schematicContainsSpawnBlock, ZU = void 0 !== IU && IU !== nU.current || JSON.stringify(hU(WU, WU.gamePublished)) !== JSON.stringify(wU.current);
+        userContext: Tu
+      } = (0, xu.d)(), Wu = (0, Su.useNavigatePreserveSearch)(), [ju, Hu] = (0, Eu.useState)({
+        ...uu
+      }), [du, bu] = (0, Eu.useState)("Enter"), [Cu, ku] = (0, Eu.useState)(void 0), eu = (0, Eu.useRef)(pu(uu, uu.gamePublished)), Au = (0, Eu.useRef)(void 0), Du = "Enter" === du, Mu = Tu.playerHasRank("developer") || Tu.playerHasRank("admin") || "Enter" === du && !1 !== ju.schematicContainsSpawnBlock, Iu = void 0 !== Cu && Cu !== Au.current || JSON.stringify(pu(ju, ju.gamePublished)) !== JSON.stringify(eu.current);
 
-      function aU(UU, RU) {
-        fU((gU => ({
-          ...gU,
-          [UU]: RU
+      function Gu(uu, Ru) {
+        Hu((yu => ({
+          ...yu,
+          [uu]: Ru
         })))
       }
-      const YU = (0, tU.useCallback)((UU => {
-        nU.current = UU, JU(UU)
+      const Uu = (0, Eu.useCallback)((uu => {
+        Au.current = uu, ku(uu)
       }), []);
 
-      function BU(UU) {
-        mU("Loading");
-        const RU = hU(WU, UU),
-          gU = IU !== nU.current ? IU : void 0;
-        cU.c.updateSchematic(QU, RU, gU).then((gU => {
+      function nu(uu) {
+        bu("Loading");
+        const Ru = pu(ju, uu),
+          yu = Cu !== Au.current ? Cu : void 0;
+        Vu.e.updateSchematic(Tu, Ru, yu).then((yu => {
           let {
-            customTexturePackKey: tU
-          } = gU;
-          mU("Success"), aU("customTexturePackKey", tU), wU.current = RU, nU.current = void 0, JU(void 0), setTimeout((() => {
-            aU("gamePublished", UU), mU("Enter")
+            customTexturePackKey: Eu
+          } = yu;
+          bu("Success"), Gu("customTexturePackKey", Eu), eu.current = Ru, Au.current = void 0, ku(void 0), setTimeout((() => {
+            Gu("gamePublished", uu), bu("Enter")
           }), 1e3)
-        })).catch((UU => {
-          var RU;
-          (console.error("Failed to save schematic:", UU), mU("Error"), UU instanceof PU.e && UU.errorMessageForUser) && jU.NotificationProvider.showAlertPopup({
+        })).catch((uu => {
+          var Ru;
+          (console.error("Failed to save schematic:", uu), bu("Error"), uu instanceof mu.e && uu.errorMessageForUser) && Bu.NotificationProvider.showAlertPopup({
             title: "worldBuilder:changesNotSaved",
-            subtitle: UU.errorMessageForUser,
+            subtitle: uu.errorMessageForUser,
             textOpts: {
-              subtitle: null !== (RU = UU.errorMessageTranslationParams) && void 0 !== RU ? RU : void 0
+              subtitle: null !== (Ru = uu.errorMessageTranslationParams) && void 0 !== Ru ? Ru : void 0
             },
             confirmText: "general:ok"
           });
           setTimeout((() => {
-            mU("Enter")
+            bu("Enter")
           }), 1e3)
         }))
       }
       return {
-        schematicData: WU,
-        updateSchematicData: aU,
-        setTexturePack: JU,
-        initializeTexturePack: YU,
-        updateState: xU,
-        formEnabled: bU,
-        publishFormEnabled: oU,
-        hasUnsavedChanges: ZU,
-        canEditSourceWorld: !gU,
-        saveSchematic: BU,
+        schematicData: ju,
+        updateSchematicData: Gu,
+        setTexturePack: ku,
+        initializeTexturePack: Uu,
+        updateState: du,
+        formEnabled: Du,
+        publishFormEnabled: Mu,
+        hasUnsavedChanges: Iu,
+        canEditSourceWorld: !yu,
+        saveSchematic: nu,
         unpublishSchematic: function() {
-          jU.NotificationProvider.showPromptPopup({
+          Bu.NotificationProvider.showPromptPopup({
             icon: "rocket-launch",
             title: "worldBuilder:unpublishAsGameConfirmTitle",
             subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
             confirmText: "worldBuilder:unpublishAsGame",
             cancelText: "general:cancel",
             unlockPointerKey: "unpublishGamePrompt"
-          }).getResult().then((UU => {
-            !0 === UU && BU(!1)
+          }).getResult().then((uu => {
+            !0 === uu && nu(!1)
           }))
         },
         editSourceWorld: function() {
-          mU("Loading"), GU.e.getSourceWorld(WU.schematicId).then((UU => {
-            KU.gameBridge.send("leaveGame", {
+          bu("Loading"), ru.e.getSourceWorld(ju.schematicId).then((uu => {
+            Xu.gameBridge.send("leaveGame", {
               reloadPath: "/"
-            }), (0, qU.h)("other"), eU((0, pU.e)("classic", UU)), null === RU || void 0 === RU || RU()
-          })).catch((UU => {
-            console.error("Failed to get source world:", UU), mU("Error"), setTimeout((() => {
-              mU("Enter")
+            }), (0, Nu.i)("other"), Wu((0, Ku.b)("classic", uu)), null === Ru || void 0 === Ru || Ru()
+          })).catch((uu => {
+            console.error("Failed to get source world:", uu), bu("Error"), setTimeout((() => {
+              bu("Enter")
             }), 1e3)
           }))
         },
         playGame: function() {
-          KU.gameBridge.send("leaveGame", {
+          Xu.gameBridge.send("leaveGame", {
             reloadPath: "/"
-          }), eU((0, TU.v)((0, EU.x)(WU.schematicId), WU)), null === RU || void 0 === RU || RU()
+          }), Wu((0, Ju.y)((0, Qu.t)(ju.schematicId), ju)), null === Ru || void 0 === Ru || Ru()
         }
       }
     }
   },
-  4604: () => {}
+  4725: () => {}
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

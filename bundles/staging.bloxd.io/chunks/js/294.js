@@ -1,945 +1,945 @@
 export const id = 294;
 export const ids = [294];
 export const modules = {
-  40991: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => EU
+  41183: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Qu
     });
-    var tU = gU(39480),
-      pU = gU(40998);
-    class EU {
-      constructor(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2;
-        this.maxDepth = gU, this.lgU = [], this._maxBlockCapacity = RU || 64, this._selectionContent = new tU.d(1024), this._creationFunc = UU
+    var Eu = yu(39667),
+      Ku = yu(41191);
+    class Qu {
+      constructor(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2;
+        this.maxDepth = yu, this.wEu = [], this._maxBlockCapacity = Ru || 64, this._selectionContent = new Eu.e(1024), this._creationFunc = uu
       }
-      update(UU, RU, gU) {
-        pU.b._CreateBlocks(UU, RU, gU, this._maxBlockCapacity, 0, this.maxDepth, this, this._creationFunc)
+      update(uu, Ru, yu) {
+        Ku.d._CreateBlocks(uu, Ru, yu, this._maxBlockCapacity, 0, this.maxDepth, this, this._creationFunc)
       }
-      HgU(UU) {
-        for (let RU = 0; RU < this.blocks.length; RU++) {
-          this.blocks[RU].addEntry(UU)
+      MEu(uu) {
+        for (let Ru = 0; Ru < this.blocks.length; Ru++) {
+          this.blocks[Ru].addEntry(uu)
         }
       }
-      TY(UU) {
-        for (let RU = 0; RU < this.blocks.length; RU++) {
-          this.blocks[RU].removeEntry(UU)
+      rM(uu) {
+        for (let Ru = 0; Ru < this.blocks.length; Ru++) {
+          this.blocks[Ru].removeEntry(uu)
         }
       }
-      select(UU, RU) {
+      select(uu, Ru) {
         this._selectionContent.reset();
-        for (let gU = 0; gU < this.blocks.length; gU++) {
-          this.blocks[gU].select(UU, this._selectionContent, RU)
+        for (let yu = 0; yu < this.blocks.length; yu++) {
+          this.blocks[yu].select(uu, this._selectionContent, Ru)
         }
-        return RU ? this._selectionContent.concat(this.lgU) : this._selectionContent.concatWithNoDuplicate(this.lgU), this._selectionContent
+        return Ru ? this._selectionContent.concat(this.wEu) : this._selectionContent.concatWithNoDuplicate(this.wEu), this._selectionContent
       }
-      intersects(UU, RU, gU) {
+      intersects(uu, Ru, yu) {
         this._selectionContent.reset();
-        for (let tU = 0; tU < this.blocks.length; tU++) {
-          this.blocks[tU].intersects(UU, RU, this._selectionContent, gU)
+        for (let Eu = 0; Eu < this.blocks.length; Eu++) {
+          this.blocks[Eu].intersects(uu, Ru, this._selectionContent, yu)
         }
-        return gU ? this._selectionContent.concat(this.lgU) : this._selectionContent.concatWithNoDuplicate(this.lgU), this._selectionContent
+        return yu ? this._selectionContent.concat(this.wEu) : this._selectionContent.concatWithNoDuplicate(this.wEu), this._selectionContent
       }
-      intersectsRay(UU) {
+      intersectsRay(uu) {
         this._selectionContent.reset();
-        for (let RU = 0; RU < this.blocks.length; RU++) {
-          this.blocks[RU].intersectsRay(UU, this._selectionContent)
+        for (let Ru = 0; Ru < this.blocks.length; Ru++) {
+          this.blocks[Ru].intersectsRay(uu, this._selectionContent)
         }
-        return this._selectionContent.concatWithNoDuplicate(this.lgU), this._selectionContent
+        return this._selectionContent.concatWithNoDuplicate(this.wEu), this._selectionContent
       }
     }
-    EU.CreationFuncForMeshes = (UU, RU) => {
-      const gU = UU.lY();
-      !UU.isBlocked && gU.boundingBox.intersectsMinMax(RU.FgU, RU.kgU) && RU.entries.push(UU)
-    }, EU.CreationFuncForSubMeshes = (UU, RU) => {
-      UU.lY().boundingBox.intersectsMinMax(RU.FgU, RU.kgU) && RU.entries.push(UU)
+    Qu.CreationFuncForMeshes = (uu, Ru) => {
+      const yu = uu.vI();
+      !uu.isBlocked && yu.boundingBox.intersectsMinMax(Ru.sEu, Ru.nEu) && Ru.entries.push(uu)
+    }, Qu.CreationFuncForSubMeshes = (uu, Ru) => {
+      uu.vI().boundingBox.intersectsMinMax(Ru.sEu, Ru.nEu) && Ru.entries.push(uu)
     }
   },
-  40998: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => EU
+  41191: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Qu
     });
-    var tU = gU(36600),
-      pU = gU(39701);
-    class EU {
-      constructor(UU, RU, gU, tU, pU, EU) {
-        this.entries = [], this.OgU = new Array, this._capacity = gU, this._depth = tU, this._maxDepth = pU, this._creationFunc = EU, this._minPoint = UU, this._maxPoint = RU, this.OgU.push(UU.clone()), this.OgU.push(RU.clone()), this.OgU.push(UU.clone()), this.OgU[2].x = RU.x, this.OgU.push(UU.clone()), this.OgU[3].y = RU.y, this.OgU.push(UU.clone()), this.OgU[4].z = RU.z, this.OgU.push(RU.clone()), this.OgU[5].z = UU.z, this.OgU.push(RU.clone()), this.OgU[6].x = UU.x, this.OgU.push(RU.clone()), this.OgU[7].y = UU.y
+    var Eu = yu(36830),
+      Ku = yu(39886);
+    class Qu {
+      constructor(uu, Ru, yu, Eu, Ku, Qu) {
+        this.entries = [], this.ZEu = new Array, this._capacity = yu, this._depth = Eu, this._maxDepth = Ku, this._creationFunc = Qu, this._minPoint = uu, this._maxPoint = Ru, this.ZEu.push(uu.clone()), this.ZEu.push(Ru.clone()), this.ZEu.push(uu.clone()), this.ZEu[2].x = Ru.x, this.ZEu.push(uu.clone()), this.ZEu[3].y = Ru.y, this.ZEu.push(uu.clone()), this.ZEu[4].z = Ru.z, this.ZEu.push(Ru.clone()), this.ZEu[5].z = uu.z, this.ZEu.push(Ru.clone()), this.ZEu[6].x = uu.x, this.ZEu.push(Ru.clone()), this.ZEu[7].y = uu.y
       }
-      get hG() {
+      get Nr() {
         return this._capacity
       }
-      get FgU() {
+      get sEu() {
         return this._minPoint
       }
-      get kgU() {
+      get nEu() {
         return this._maxPoint
       }
-      addEntry(UU) {
+      addEntry(uu) {
         if (this.blocks)
-          for (let RU = 0; RU < this.blocks.length; RU++) {
-            this.blocks[RU].addEntry(UU)
-          } else this._creationFunc(UU, this), this.entries.length > this.hG && this._depth < this._maxDepth && this.createInnerBlocks()
+          for (let Ru = 0; Ru < this.blocks.length; Ru++) {
+            this.blocks[Ru].addEntry(uu)
+          } else this._creationFunc(uu, this), this.entries.length > this.Nr && this._depth < this._maxDepth && this.createInnerBlocks()
       }
-      removeEntry(UU) {
+      removeEntry(uu) {
         if (this.blocks) {
-          for (let RU = 0; RU < this.blocks.length; RU++) {
-            this.blocks[RU].removeEntry(UU)
+          for (let Ru = 0; Ru < this.blocks.length; Ru++) {
+            this.blocks[Ru].removeEntry(uu)
           }
           return
         }
-        const RU = this.entries.indexOf(UU);
-        RU > -1 && this.entries.splice(RU, 1)
+        const Ru = this.entries.indexOf(uu);
+        Ru > -1 && this.entries.splice(Ru, 1)
       }
-      addEntries(UU) {
-        for (let RU = 0; RU < UU.length; RU++) {
-          const gU = UU[RU];
-          this.addEntry(gU)
+      addEntries(uu) {
+        for (let Ru = 0; Ru < uu.length; Ru++) {
+          const yu = uu[Ru];
+          this.addEntry(yu)
         }
       }
-      select(UU, RU, gU) {
-        if (pU.c.IsInFrustum(this.OgU, UU)) {
+      select(uu, Ru, yu) {
+        if (Ku.e.IsInFrustum(this.ZEu, uu)) {
           if (this.blocks) {
-            for (let tU = 0; tU < this.blocks.length; tU++) {
-              this.blocks[tU].select(UU, RU, gU)
+            for (let Eu = 0; Eu < this.blocks.length; Eu++) {
+              this.blocks[Eu].select(uu, Ru, yu)
             }
             return
           }
-          gU ? RU.concat(this.entries) : RU.concatWithNoDuplicate(this.entries)
+          yu ? Ru.concat(this.entries) : Ru.concatWithNoDuplicate(this.entries)
         }
       }
-      intersects(UU, RU, gU, tU) {
-        if (pU.c.IntersectsSphere(this._minPoint, this._maxPoint, UU, RU)) {
+      intersects(uu, Ru, yu, Eu) {
+        if (Ku.e.IntersectsSphere(this._minPoint, this._maxPoint, uu, Ru)) {
           if (this.blocks) {
-            for (let pU = 0; pU < this.blocks.length; pU++) {
-              this.blocks[pU].intersects(UU, RU, gU, tU)
+            for (let Ku = 0; Ku < this.blocks.length; Ku++) {
+              this.blocks[Ku].intersects(uu, Ru, yu, Eu)
             }
             return
           }
-          tU ? gU.concat(this.entries) : gU.concatWithNoDuplicate(this.entries)
+          Eu ? yu.concat(this.entries) : yu.concatWithNoDuplicate(this.entries)
         }
       }
-      intersectsRay(UU, RU) {
-        if (UU.intersectsBoxMinMax(this._minPoint, this._maxPoint)) {
+      intersectsRay(uu, Ru) {
+        if (uu.intersectsBoxMinMax(this._minPoint, this._maxPoint)) {
           if (this.blocks) {
-            for (let gU = 0; gU < this.blocks.length; gU++) {
-              this.blocks[gU].intersectsRay(UU, RU)
+            for (let yu = 0; yu < this.blocks.length; yu++) {
+              this.blocks[yu].intersectsRay(uu, Ru)
             }
             return
           }
-          RU.concatWithNoDuplicate(this.entries)
+          Ru.concatWithNoDuplicate(this.entries)
         }
       }
       createInnerBlocks() {
-        EU._CreateBlocks(this._minPoint, this._maxPoint, this.entries, this._capacity, this._depth, this._maxDepth, this, this._creationFunc), this.entries.splice(0)
+        Qu._CreateBlocks(this._minPoint, this._maxPoint, this.entries, this._capacity, this._depth, this._maxDepth, this, this._creationFunc), this.entries.splice(0)
       }
-      static _CreateBlocks(UU, RU, gU, pU, PU, TU, qU, KU) {
-        qU.blocks = new Array;
-        const cU = new tU.n((RU.x - UU.x) / 2, (RU.y - UU.y) / 2, (RU.z - UU.z) / 2);
-        for (let tU = 0; tU < 2; tU++)
-          for (let RU = 0; RU < 2; RU++)
-            for (let GU = 0; GU < 2; GU++) {
-              const jU = UU.add(cU.multiplyByFloats(tU, RU, GU)),
-                uU = UU.add(cU.multiplyByFloats(tU + 1, RU + 1, GU + 1)),
-                CU = new EU(jU, uU, pU, PU + 1, TU, KU);
-              CU.addEntries(gU), qU.blocks.push(CU)
+      static _CreateBlocks(uu, Ru, yu, Ku, mu, Ju, Nu, Xu) {
+        Nu.blocks = new Array;
+        const Vu = new Eu.p((Ru.x - uu.x) / 2, (Ru.y - uu.y) / 2, (Ru.z - uu.z) / 2);
+        for (let Eu = 0; Eu < 2; Eu++)
+          for (let Ru = 0; Ru < 2; Ru++)
+            for (let ru = 0; ru < 2; ru++) {
+              const Bu = uu.add(Vu.multiplyByFloats(Eu, Ru, ru)),
+                xu = uu.add(Vu.multiplyByFloats(Eu + 1, Ru + 1, ru + 1)),
+                Su = new Qu(Bu, xu, Ku, mu + 1, Ju, Xu);
+              Su.addEntries(yu), Nu.blocks.push(Su)
             }
       }
     }
   },
-  41005: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => cU
+  41193: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Vu
     });
-    var tU = gU(39468),
-      pU = gU(36600),
-      EU = gU(39817),
-      PU = gU(40941),
-      TU = gU(39547),
-      qU = gU(36622),
-      KU = gU(40991);
-    class cU {
-      constructor(UU) {
-        this.name = TU.d.NAME_OCTREE, this.checksIsEnabled = !0, this._tempRay = new PU.E(pU.n.Zero(), new pU.n(1, 1, 1)), (UU = UU || qU.c.LastCreatedScene) && (this.Zh = UU, this.Zh.getActiveMeshCandidates = () => this.getActiveMeshCandidates(), this.Zh.getActiveSubMeshCandidates = UU => this.getActiveSubMeshCandidates(UU), this.Zh.getCollidingSubMeshCandidates = (UU, RU) => this.getCollidingSubMeshCandidates(UU, RU), this.Zh.getIntersectingSubMeshCandidates = (UU, RU) => this.getIntersectingSubMeshCandidates(UU, RU))
+    var Eu = yu(39647),
+      Ku = yu(36830),
+      Qu = yu(40008),
+      mu = yu(41140),
+      Ju = yu(39736),
+      Nu = yu(36851),
+      Xu = yu(41183);
+    class Vu {
+      constructor(uu) {
+        this.name = Ju.c.NAME_OCTREE, this.checksIsEnabled = !0, this._tempRay = new mu.B(Ku.p.Zero(), new Ku.p(1, 1, 1)), (uu = uu || Nu.b.LastCreatedScene) && (this.cp = uu, this.cp.getActiveMeshCandidates = () => this.getActiveMeshCandidates(), this.cp.getActiveSubMeshCandidates = uu => this.getActiveSubMeshCandidates(uu), this.cp.getCollidingSubMeshCandidates = (uu, Ru) => this.getCollidingSubMeshCandidates(uu, Ru), this.cp.getIntersectingSubMeshCandidates = (uu, Ru) => this.getIntersectingSubMeshCandidates(uu, Ru))
       }
       register() {
-        this.Zh.onMeshRemovedObservable.add((UU => {
-          const RU = this.Zh.selectionOctree;
-          if (void 0 !== RU && null !== RU) {
-            const gU = RU.lgU.indexOf(UU); - 1 !== gU && RU.lgU.splice(gU, 1)
+        this.cp.onMeshRemovedObservable.add((uu => {
+          const Ru = this.cp.selectionOctree;
+          if (void 0 !== Ru && null !== Ru) {
+            const yu = Ru.wEu.indexOf(uu); - 1 !== yu && Ru.wEu.splice(yu, 1)
           }
-        })), this.Zh.onMeshImportedObservable.add((UU => {
-          const RU = this.Zh.selectionOctree;
-          void 0 !== RU && null !== RU && RU.HgU(UU)
+        })), this.cp.onMeshImportedObservable.add((uu => {
+          const Ru = this.cp.selectionOctree;
+          void 0 !== Ru && null !== Ru && Ru.MEu(uu)
         }))
       }
       getActiveMeshCandidates() {
-        return this.Zh.PtU?.select(this.Zh.frustumPlanes) || this.Zh._getDefaultMeshCandidates()
+        return this.cp.OEu?.select(this.cp.frustumPlanes) || this.cp._getDefaultMeshCandidates()
       }
-      getActiveSubMeshCandidates(UU) {
-        if (UU._submeshesOctree && UU.useOctreeForRenderingSelection) {
-          return UU._submeshesOctree.select(this.Zh.frustumPlanes)
+      getActiveSubMeshCandidates(uu) {
+        if (uu._submeshesOctree && uu.useOctreeForRenderingSelection) {
+          return uu._submeshesOctree.select(this.cp.frustumPlanes)
         }
-        return this.Zh._getDefaultSubMeshCandidates(UU)
+        return this.cp._getDefaultSubMeshCandidates(uu)
       }
-      getIntersectingSubMeshCandidates(UU, RU) {
-        if (UU._submeshesOctree && UU.useOctreeForPicking) {
-          PU.E.TransformToRef(RU, UU.getWorldMatrix(), this._tempRay);
-          return UU._submeshesOctree.intersectsRay(this._tempRay)
+      getIntersectingSubMeshCandidates(uu, Ru) {
+        if (uu._submeshesOctree && uu.useOctreeForPicking) {
+          mu.B.TransformToRef(Ru, uu.getWorldMatrix(), this._tempRay);
+          return uu._submeshesOctree.intersectsRay(this._tempRay)
         }
-        return this.Zh._getDefaultSubMeshCandidates(UU)
+        return this.cp._getDefaultSubMeshCandidates(uu)
       }
-      getCollidingSubMeshCandidates(UU, RU) {
-        if (UU._submeshesOctree && UU.useOctreeForCollisions) {
-          const gU = RU._velocityWorldLength + Math.max(RU._radius.x, RU._radius.y, RU._radius.z);
-          return UU._submeshesOctree.intersects(RU._basePointWorld, gU)
+      getCollidingSubMeshCandidates(uu, Ru) {
+        if (uu._submeshesOctree && uu.useOctreeForCollisions) {
+          const yu = Ru._velocityWorldLength + Math.max(Ru._radius.x, Ru._radius.y, Ru._radius.z);
+          return uu._submeshesOctree.intersects(Ru._basePointWorld, yu)
         }
-        return this.Zh._getDefaultSubMeshCandidates(UU)
+        return this.cp._getDefaultSubMeshCandidates(uu)
       }
       rebuild() {}
       dispose() {}
     }
-    let GU = !1;
-    GU || (GU = !0, tU.f.prototype.createOrUpdateSelectionOctree = function() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
-        RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2,
-        gU = this._getComponent(TU.d.NAME_OCTREE);
-      gU || (gU = new cU(this), this.IgU(gU)), this.PtU || (this.PtU = new KU.e(KU.e.CreationFuncForMeshes, UU, RU));
-      const tU = this.getWorldExtends();
-      return this.PtU.update(tU.min, tU.max, this.meshes), this.PtU
-    }, Object.defineProperty(tU.f.prototype, "selectionOctree", {
+    let ru = !1;
+    ru || (ru = !0, Eu.i.prototype.createOrUpdateSelectionOctree = function() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
+        Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2,
+        yu = this._getComponent(Ju.c.NAME_OCTREE);
+      yu || (yu = new Vu(this), this.BEu(yu)), this.OEu || (this.OEu = new Xu.d(Xu.d.CreationFuncForMeshes, uu, Ru));
+      const Eu = this.getWorldExtends();
+      return this.OEu.update(Eu.min, Eu.max, this.meshes), this.OEu
+    }, Object.defineProperty(Eu.i.prototype, "selectionOctree", {
       get: function() {
-        return this.PtU
+        return this.OEu
       },
       enumerable: !0,
       configurable: !0
-    }), EU.d.prototype.createOrUpdateSubmeshesOctree = function() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
-        RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const gU = this.aZ();
-      let tU = gU._getComponent(TU.d.NAME_OCTREE);
-      tU || (tU = new cU(gU), gU.IgU(tU)), this._submeshesOctree || (this._submeshesOctree = new KU.e(KU.e.CreationFuncForSubMeshes, UU, RU)), this.computeWorldMatrix(!0);
-      const pU = this.lY().boundingBox;
-      return this._submeshesOctree.update(pU.minimumWorld, pU.maximumWorld, this.ZI), this._submeshesOctree
+    }), Qu.e.prototype.createOrUpdateSubmeshesOctree = function() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 64,
+        Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+      const yu = this.lD();
+      let Eu = yu._getComponent(Ju.c.NAME_OCTREE);
+      Eu || (Eu = new Vu(yu), yu.BEu(Eu)), this._submeshesOctree || (this._submeshesOctree = new Xu.d(Xu.d.CreationFuncForSubMeshes, uu, Ru)), this.computeWorldMatrix(!0);
+      const Ku = this.vI().boundingBox;
+      return this._submeshesOctree.update(Ku.minimumWorld, Ku.maximumWorld, this.mC), this._submeshesOctree
     })
   },
-  40941: (UU, RU, gU) => {
-    gU.d(RU, {
-      C: () => wU,
-      E: () => GU,
-      c: () => aU,
-      e: () => hU,
-      i: () => CU,
-      m: () => uU,
-      q: () => oU,
-      t: () => bU,
-      w: () => JU,
-      z: () => nU
+  41140: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      B: () => ru,
+      d: () => Gu,
+      e: () => pu,
+      h: () => Su,
+      i: () => xu,
+      k: () => Mu,
+      o: () => Du,
+      r: () => ku,
+      v: () => Au,
+      z: () => eu
     });
-    var tU = gU(36602),
-      pU = gU(36600),
-      EU = gU(36610),
-      PU = gU(39690),
-      TU = gU(39513),
-      qU = gU(36622),
-      KU = gU(39574);
-    const cU = {
+    var Eu = yu(36833),
+      Ku = yu(36830),
+      Qu = yu(36842),
+      mu = yu(39870),
+      Ju = yu(39698),
+      Nu = yu(36851),
+      Xu = yu(39762);
+    const Vu = {
       internalPickerForMesh: void 0
     };
-    class GU {
-      constructor(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Number.MAX_VALUE,
-          pU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : tU.e;
-        this.origin = UU, this.direction = RU, this.length = gU, this.epsilon = pU
+    class ru {
+      constructor(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Number.MAX_VALUE,
+          Ku = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Eu.d;
+        this.origin = uu, this.direction = Ru, this.length = yu, this.epsilon = Ku
       }
       clone() {
-        return new GU(this.origin.clone(), this.direction.clone(), this.length)
+        return new ru(this.origin.clone(), this.direction.clone(), this.length)
       }
-      intersectsBoxMinMax(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        const tU = GU._TmpVector3[0].b_(UU.x - gU, UU.y - gU, UU.z - gU),
-          pU = GU._TmpVector3[1].b_(RU.x + gU, RU.y + gU, RU.z + gU);
-        let EU, PU, TU, qU, KU = 0,
-          cU = Number.MAX_VALUE;
+      intersectsBoxMinMax(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        const Eu = ru._TmpVector3[0].muu(uu.x - yu, uu.y - yu, uu.z - yu),
+          Ku = ru._TmpVector3[1].muu(Ru.x + yu, Ru.y + yu, Ru.z + yu);
+        let Qu, mu, Ju, Nu, Xu = 0,
+          Vu = Number.MAX_VALUE;
         if (Math.abs(this.direction.x) < 1e-7) {
-          if (this.origin.x < tU.x || this.origin.x > pU.x) return !1
-        } else if (EU = 1 / this.direction.x, PU = (tU.x - this.origin.x) * EU, TU = (pU.x - this.origin.x) * EU, TU === -1 / 0 && (TU = 1 / 0), PU > TU && (qU = PU, PU = TU, TU = qU), KU = Math.max(PU, KU), cU = Math.min(TU, cU), KU > cU) return !1;
+          if (this.origin.x < Eu.x || this.origin.x > Ku.x) return !1
+        } else if (Qu = 1 / this.direction.x, mu = (Eu.x - this.origin.x) * Qu, Ju = (Ku.x - this.origin.x) * Qu, Ju === -1 / 0 && (Ju = 1 / 0), mu > Ju && (Nu = mu, mu = Ju, Ju = Nu), Xu = Math.max(mu, Xu), Vu = Math.min(Ju, Vu), Xu > Vu) return !1;
         if (Math.abs(this.direction.y) < 1e-7) {
-          if (this.origin.y < tU.y || this.origin.y > pU.y) return !1
-        } else if (EU = 1 / this.direction.y, PU = (tU.y - this.origin.y) * EU, TU = (pU.y - this.origin.y) * EU, TU === -1 / 0 && (TU = 1 / 0), PU > TU && (qU = PU, PU = TU, TU = qU), KU = Math.max(PU, KU), cU = Math.min(TU, cU), KU > cU) return !1;
+          if (this.origin.y < Eu.y || this.origin.y > Ku.y) return !1
+        } else if (Qu = 1 / this.direction.y, mu = (Eu.y - this.origin.y) * Qu, Ju = (Ku.y - this.origin.y) * Qu, Ju === -1 / 0 && (Ju = 1 / 0), mu > Ju && (Nu = mu, mu = Ju, Ju = Nu), Xu = Math.max(mu, Xu), Vu = Math.min(Ju, Vu), Xu > Vu) return !1;
         if (Math.abs(this.direction.z) < 1e-7) {
-          if (this.origin.z < tU.z || this.origin.z > pU.z) return !1
-        } else if (EU = 1 / this.direction.z, PU = (tU.z - this.origin.z) * EU, TU = (pU.z - this.origin.z) * EU, TU === -1 / 0 && (TU = 1 / 0), PU > TU && (qU = PU, PU = TU, TU = qU), KU = Math.max(PU, KU), cU = Math.min(TU, cU), KU > cU) return !1;
+          if (this.origin.z < Eu.z || this.origin.z > Ku.z) return !1
+        } else if (Qu = 1 / this.direction.z, mu = (Eu.z - this.origin.z) * Qu, Ju = (Ku.z - this.origin.z) * Qu, Ju === -1 / 0 && (Ju = 1 / 0), mu > Ju && (Nu = mu, mu = Ju, Ju = Nu), Xu = Math.max(mu, Xu), Vu = Math.min(Ju, Vu), Xu > Vu) return !1;
         return !0
       }
-      intersectsBox(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.intersectsBoxMinMax(UU.minimum, UU.maximum, RU)
+      intersectsBox(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.intersectsBoxMinMax(uu.minimum, uu.maximum, Ru)
       }
-      intersectsSphere(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const gU = UU.center.x - this.origin.x,
-          tU = UU.center.y - this.origin.y,
-          pU = UU.center.z - this.origin.z,
-          EU = gU * gU + tU * tU + pU * pU,
-          PU = UU.radius + RU,
-          TU = PU * PU;
-        if (EU <= TU) return !0;
-        const qU = gU * this.direction.x + tU * this.direction.y + pU * this.direction.z;
-        if (qU < 0) return !1;
-        return EU - qU * qU <= TU
+      intersectsSphere(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const yu = uu.center.x - this.origin.x,
+          Eu = uu.center.y - this.origin.y,
+          Ku = uu.center.z - this.origin.z,
+          Qu = yu * yu + Eu * Eu + Ku * Ku,
+          mu = uu.radius + Ru,
+          Ju = mu * mu;
+        if (Qu <= Ju) return !0;
+        const Nu = yu * this.direction.x + Eu * this.direction.y + Ku * this.direction.z;
+        if (Nu < 0) return !1;
+        return Qu - Nu * Nu <= Ju
       }
-      intersectsTriangle(UU, RU, gU) {
-        const tU = GU._TmpVector3[0],
-          EU = GU._TmpVector3[1],
-          TU = GU._TmpVector3[2],
-          qU = GU._TmpVector3[3],
-          KU = GU._TmpVector3[4];
-        RU.subtractToRef(UU, tU), gU.subtractToRef(UU, EU), pU.n.CrossToRef(this.direction, EU, TU);
-        const cU = pU.n.Dot(tU, TU);
-        if (0 === cU) return null;
-        const jU = 1 / cU;
-        this.origin.subtractToRef(UU, qU);
-        const uU = pU.n.Dot(qU, TU) * jU;
-        if (uU < -this.epsilon || uU > 1 + this.epsilon) return null;
-        pU.n.CrossToRef(qU, tU, KU);
-        const CU = pU.n.Dot(this.direction, KU) * jU;
-        if (CU < -this.epsilon || uU + CU > 1 + this.epsilon) return null;
-        const hU = pU.n.Dot(EU, KU) * jU;
-        return hU > this.length || hU < 0 ? null : new PU.c(1 - uU - CU, uU, hU)
+      intersectsTriangle(uu, Ru, yu) {
+        const Eu = ru._TmpVector3[0],
+          Qu = ru._TmpVector3[1],
+          Ju = ru._TmpVector3[2],
+          Nu = ru._TmpVector3[3],
+          Xu = ru._TmpVector3[4];
+        Ru.subtractToRef(uu, Eu), yu.subtractToRef(uu, Qu), Ku.p.CrossToRef(this.direction, Qu, Ju);
+        const Vu = Ku.p.Dot(Eu, Ju);
+        if (0 === Vu) return null;
+        const Bu = 1 / Vu;
+        this.origin.subtractToRef(uu, Nu);
+        const xu = Ku.p.Dot(Nu, Ju) * Bu;
+        if (xu < -this.epsilon || xu > 1 + this.epsilon) return null;
+        Ku.p.CrossToRef(Nu, Eu, Xu);
+        const Su = Ku.p.Dot(this.direction, Xu) * Bu;
+        if (Su < -this.epsilon || xu + Su > 1 + this.epsilon) return null;
+        const pu = Ku.p.Dot(Qu, Xu) * Bu;
+        return pu > this.length || pu < 0 ? null : new mu.d(1 - xu - Su, xu, pu)
       }
-      intersectsPlane(UU) {
-        let RU;
-        const gU = pU.n.Dot(UU.normal, this.direction);
-        if (Math.abs(gU) < 9.99999997475243e-7) return null;
+      intersectsPlane(uu) {
+        let Ru;
+        const yu = Ku.p.Dot(uu.normal, this.direction);
+        if (Math.abs(yu) < 9.99999997475243e-7) return null;
         {
-          const tU = pU.n.Dot(UU.normal, this.origin);
-          return RU = (-UU.d - tU) / gU, RU < 0 ? RU < -9.99999997475243e-7 ? null : 0 : RU
+          const Eu = Ku.p.Dot(uu.normal, this.origin);
+          return Ru = (-uu.d - Eu) / yu, Ru < 0 ? Ru < -9.99999997475243e-7 ? null : 0 : Ru
         }
       }
-      intersectsAxis(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        switch (UU) {
+      intersectsAxis(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        switch (uu) {
           case "y": {
-            const UU = (this.origin.y - RU) / this.direction.y;
-            return UU > 0 ? null : new pU.n(this.origin.x + this.direction.x * -UU, RU, this.origin.z + this.direction.z * -UU)
+            const uu = (this.origin.y - Ru) / this.direction.y;
+            return uu > 0 ? null : new Ku.p(this.origin.x + this.direction.x * -uu, Ru, this.origin.z + this.direction.z * -uu)
           }
           case "x": {
-            const UU = (this.origin.x - RU) / this.direction.x;
-            return UU > 0 ? null : new pU.n(RU, this.origin.y + this.direction.y * -UU, this.origin.z + this.direction.z * -UU)
+            const uu = (this.origin.x - Ru) / this.direction.x;
+            return uu > 0 ? null : new Ku.p(Ru, this.origin.y + this.direction.y * -uu, this.origin.z + this.direction.z * -uu)
           }
           case "z": {
-            const UU = (this.origin.z - RU) / this.direction.z;
-            return UU > 0 ? null : new pU.n(this.origin.x + this.direction.x * -UU, this.origin.y + this.direction.y * -UU, RU)
+            const uu = (this.origin.z - Ru) / this.direction.z;
+            return uu > 0 ? null : new Ku.p(this.origin.x + this.direction.x * -uu, this.origin.y + this.direction.y * -uu, Ru)
           }
           default:
             return null
         }
       }
-      JtU(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          EU = arguments.length > 4 ? arguments[4] : void 0,
-          PU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const TU = pU.h.Matrix[0];
-        return UU.getWorldMatrix().invertToRef(TU), this._tmpRay ? GU.TransformToRef(this, TU, this._tmpRay) : this._tmpRay = GU.Transform(this, TU), UU.intersects(this._tmpRay, RU, gU, tU, EU, PU)
+      xKu(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          Qu = arguments.length > 4 ? arguments[4] : void 0,
+          mu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const Ju = Ku.m.Matrix[0];
+        return uu.getWorldMatrix().invertToRef(Ju), this._tmpRay ? ru.TransformToRef(this, Ju, this._tmpRay) : this._tmpRay = ru.Transform(this, Ju), uu.intersects(this._tmpRay, Ru, yu, Eu, Qu, mu)
       }
-      intersectsMeshes(UU, RU, gU) {
-        gU ? gU.length = 0 : gU = [];
-        for (let tU = 0; tU < UU.length; tU++) {
-          const pU = this.JtU(UU[tU], RU);
-          pU.hit && gU.push(pU)
+      intersectsMeshes(uu, Ru, yu) {
+        yu ? yu.length = 0 : yu = [];
+        for (let Eu = 0; Eu < uu.length; Eu++) {
+          const Ku = this.xKu(uu[Eu], Ru);
+          Ku.hit && yu.push(Ku)
         }
-        return gU.sort(this._comparePickingInfo), gU
+        return yu.sort(this._comparePickingInfo), yu
       }
-      _comparePickingInfo(UU, RU) {
-        return UU.distance < RU.distance ? -1 : UU.distance > RU.distance ? 1 : 0
+      _comparePickingInfo(uu, Ru) {
+        return uu.distance < Ru.distance ? -1 : uu.distance > Ru.distance ? 1 : 0
       }
-      intersectionSegment(UU, RU, gU) {
-        const tU = this.origin,
-          EU = pU.h.xC[0],
-          PU = pU.h.xC[1],
-          TU = pU.h.xC[2],
-          qU = pU.h.xC[3];
-        RU.subtractToRef(UU, EU), this.direction.scaleToRef(GU._Rayl, TU), tU.addToRef(TU, PU), UU.subtractToRef(tU, qU);
-        const KU = pU.n.Dot(EU, EU),
-          cU = pU.n.Dot(EU, TU),
-          jU = pU.n.Dot(TU, TU),
-          uU = pU.n.Dot(EU, qU),
-          CU = pU.n.Dot(TU, qU),
-          hU = KU * jU - cU * cU;
-        let QU, eU, WU = hU,
-          fU = hU;
-        hU < GU._Smallnum ? (QU = 0, WU = 1, eU = CU, fU = jU) : (QU = cU * CU - jU * uU, eU = KU * CU - cU * uU, QU < 0 ? (QU = 0, eU = CU, fU = jU) : QU > WU && (QU = WU, eU = CU + cU, fU = jU)), eU < 0 ? (eU = 0, -uU < 0 ? QU = 0 : -uU > KU ? QU = WU : (QU = -uU, WU = KU)) : eU > fU && (eU = fU, -uU + cU < 0 ? QU = 0 : -uU + cU > KU ? QU = WU : (QU = -uU + cU, WU = KU));
-        const xU = Math.abs(QU) < GU._Smallnum ? 0 : QU / WU,
-          mU = Math.abs(eU) < GU._Smallnum ? 0 : eU / fU,
-          IU = pU.h.xC[4];
-        TU.scaleToRef(mU, IU);
-        const JU = pU.h.xC[5];
-        EU.scaleToRef(xU, JU), JU.addInPlace(qU);
-        const wU = pU.h.xC[6];
-        JU.subtractToRef(IU, wU);
-        return mU > 0 && mU <= this.length && wU.lengthSquared() < gU * gU ? JU.length() : -1
+      intersectionSegment(uu, Ru, yu) {
+        const Eu = this.origin,
+          Qu = Ku.m.MS[0],
+          mu = Ku.m.MS[1],
+          Ju = Ku.m.MS[2],
+          Nu = Ku.m.MS[3];
+        Ru.subtractToRef(uu, Qu), this.direction.scaleToRef(ru._Rayl, Ju), Eu.addToRef(Ju, mu), uu.subtractToRef(Eu, Nu);
+        const Xu = Ku.p.Dot(Qu, Qu),
+          Vu = Ku.p.Dot(Qu, Ju),
+          Bu = Ku.p.Dot(Ju, Ju),
+          xu = Ku.p.Dot(Qu, Nu),
+          Su = Ku.p.Dot(Ju, Nu),
+          pu = Xu * Bu - Vu * Vu;
+        let Tu, Wu, ju = pu,
+          Hu = pu;
+        pu < ru._Smallnum ? (Tu = 0, ju = 1, Wu = Su, Hu = Bu) : (Tu = Vu * Su - Bu * xu, Wu = Xu * Su - Vu * xu, Tu < 0 ? (Tu = 0, Wu = Su, Hu = Bu) : Tu > ju && (Tu = ju, Wu = Su + Vu, Hu = Bu)), Wu < 0 ? (Wu = 0, -xu < 0 ? Tu = 0 : -xu > Xu ? Tu = ju : (Tu = -xu, ju = Xu)) : Wu > Hu && (Wu = Hu, -xu + Vu < 0 ? Tu = 0 : -xu + Vu > Xu ? Tu = ju : (Tu = -xu + Vu, ju = Xu));
+        const du = Math.abs(Tu) < ru._Smallnum ? 0 : Tu / ju,
+          bu = Math.abs(Wu) < ru._Smallnum ? 0 : Wu / Hu,
+          Cu = Ku.m.MS[4];
+        Ju.scaleToRef(bu, Cu);
+        const ku = Ku.m.MS[5];
+        Qu.scaleToRef(du, ku), ku.addInPlace(Nu);
+        const eu = Ku.m.MS[6];
+        ku.subtractToRef(Cu, eu);
+        return bu > 0 && bu <= this.length && eu.lengthSquared() < yu * yu ? ku.length() : -1
       }
-      update(UU, RU, gU, tU, EU, PU, TU) {
+      update(uu, Ru, yu, Eu, Qu, mu, Ju) {
         if (arguments.length > 7 && void 0 !== arguments[7] && arguments[7]) {
-          GU._RayDistant || (GU._RayDistant = GU.Zero()), GU._RayDistant.unprojectRayToRef(UU, RU, gU, tU, pU.c.IdentityReadOnly, PU, TU);
-          const qU = pU.h.Matrix[0];
-          EU.invertToRef(qU), GU.TransformToRef(GU._RayDistant, qU, this)
-        } else this.unprojectRayToRef(UU, RU, gU, tU, EU, PU, TU);
+          ru._RayDistant || (ru._RayDistant = ru.Zero()), ru._RayDistant.unprojectRayToRef(uu, Ru, yu, Eu, Ku.d.IdentityReadOnly, mu, Ju);
+          const Nu = Ku.m.Matrix[0];
+          Qu.invertToRef(Nu), ru.TransformToRef(ru._RayDistant, Nu, this)
+        } else this.unprojectRayToRef(uu, Ru, yu, Eu, Qu, mu, Ju);
         return this
       }
       static Zero() {
-        return new GU(pU.n.Zero(), pU.n.Zero())
+        return new ru(Ku.p.Zero(), Ku.p.Zero())
       }
-      static CreateNew(UU, RU, gU, tU, pU, EU, PU) {
-        return GU.Zero().update(UU, RU, gU, tU, pU, EU, PU)
+      static CreateNew(uu, Ru, yu, Eu, Ku, Qu, mu) {
+        return ru.Zero().update(uu, Ru, yu, Eu, Ku, Qu, mu)
       }
-      static CreateNewFromTo(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pU.c.IdentityReadOnly;
-        const tU = new GU(new pU.n(0, 0, 0), new pU.n(0, 0, 0));
-        return GU.CreateFromToToRef(UU, RU, tU, gU)
+      static CreateNewFromTo(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ku.d.IdentityReadOnly;
+        const Eu = new ru(new Ku.p(0, 0, 0), new Ku.p(0, 0, 0));
+        return ru.CreateFromToToRef(uu, Ru, Eu, yu)
       }
-      static CreateFromToToRef(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : pU.c.IdentityReadOnly;
-        gU.origin.PgU(UU);
-        const EU = RU.subtractToRef(UU, gU.direction),
-          PU = Math.sqrt(EU.x * EU.x + EU.y * EU.y + EU.z * EU.z);
-        return gU.length = PU, gU.direction.normalize(), GU.TransformToRef(gU, tU, gU)
+      static CreateFromToToRef(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Ku.d.IdentityReadOnly;
+        yu.origin.Oyu(uu);
+        const Qu = Ru.subtractToRef(uu, yu.direction),
+          mu = Math.sqrt(Qu.x * Qu.x + Qu.y * Qu.y + Qu.z * Qu.z);
+        return yu.length = mu, yu.direction.normalize(), ru.TransformToRef(yu, Eu, yu)
       }
-      static Transform(UU, RU) {
-        const gU = new GU(new pU.n(0, 0, 0), new pU.n(0, 0, 0));
-        return GU.TransformToRef(UU, RU, gU), gU
+      static Transform(uu, Ru) {
+        const yu = new ru(new Ku.p(0, 0, 0), new Ku.p(0, 0, 0));
+        return ru.TransformToRef(uu, Ru, yu), yu
       }
-      static TransformToRef(UU, RU, gU) {
-        pU.n.TransformCoordinatesToRef(UU.origin, RU, gU.origin), pU.n.TransformNormalToRef(UU.direction, RU, gU.direction), gU.length = UU.length, gU.epsilon = UU.epsilon;
-        const tU = gU.direction,
-          EU = tU.length();
-        if (0 !== EU && 1 !== EU) {
-          const UU = 1 / EU;
-          tU.x *= UU, tU.y *= UU, tU.z *= UU, gU.length *= EU
+      static TransformToRef(uu, Ru, yu) {
+        Ku.p.TransformCoordinatesToRef(uu.origin, Ru, yu.origin), Ku.p.TransformNormalToRef(uu.direction, Ru, yu.direction), yu.length = uu.length, yu.epsilon = uu.epsilon;
+        const Eu = yu.direction,
+          Qu = Eu.length();
+        if (0 !== Qu && 1 !== Qu) {
+          const uu = 1 / Qu;
+          Eu.x *= uu, Eu.y *= uu, Eu.z *= uu, yu.length *= Qu
         }
-        return gU
+        return yu
       }
-      unprojectRayToRef(UU, RU, gU, tU, EU, PU, TU) {
-        const KU = pU.h.Matrix[0];
-        EU.multiplyToRef(PU, KU), KU.multiplyToRef(TU, KU), KU.invert();
-        const cU = qU.c.LastCreatedEngine,
-          GU = pU.h.xC[0];
-        GU.x = UU / gU * 2 - 1, GU.y = -(RU / tU * 2 - 1), GU.z = cU?.VgU ? 1 : cU?.isNDCHalfZRange ? 0 : -1;
-        const jU = pU.h.xC[1].b_(GU.x, GU.y, 1 - 1e-8),
-          uU = pU.h.xC[2],
-          CU = pU.h.xC[3];
-        pU.n.TransformCoordinatesToRef(GU, KU, uU), pU.n.TransformCoordinatesToRef(jU, KU, CU), this.origin.PgU(uU), CU.subtractToRef(uU, this.direction), this.direction.normalize()
+      unprojectRayToRef(uu, Ru, yu, Eu, Qu, mu, Ju) {
+        const Xu = Ku.m.Matrix[0];
+        Qu.multiplyToRef(mu, Xu), Xu.multiplyToRef(Ju, Xu), Xu.invert();
+        const Vu = Nu.b.LastCreatedEngine,
+          ru = Ku.m.MS[0];
+        ru.x = uu / yu * 2 - 1, ru.y = -(Ru / Eu * 2 - 1), ru.z = Vu?.CEu ? 1 : Vu?.isNDCHalfZRange ? 0 : -1;
+        const Bu = Ku.m.MS[1].muu(ru.x, ru.y, 1 - 1e-8),
+          xu = Ku.m.MS[2],
+          Su = Ku.m.MS[3];
+        Ku.p.TransformCoordinatesToRef(ru, Xu, xu), Ku.p.TransformCoordinatesToRef(Bu, Xu, Su), this.origin.Oyu(xu), Su.subtractToRef(xu, this.direction), this.direction.normalize()
       }
     }
 
-    function jU(UU, RU, gU, tU, pU) {
-      let EU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      const PU = GU.Zero();
-      return uU(UU, RU, gU, tU, PU, pU, EU), PU
+    function Bu(uu, Ru, yu, Eu, Ku) {
+      let Qu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      const mu = ru.Zero();
+      return xu(uu, Ru, yu, Eu, mu, Ku, Qu), mu
     }
 
-    function uU(UU, RU, gU, tU, EU, PU) {
-      let TU = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-        qU = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
-      const KU = UU.WC();
-      if (!PU && !(PU = UU.activeCamera) && !(PU = UU.cameraToUseForPointers)) return UU;
-      const cU = PU.viewport,
-        GU = KU.getRenderHeight(),
+    function xu(uu, Ru, yu, Eu, Qu, mu) {
+      let Ju = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+        Nu = arguments.length > 7 && void 0 !== arguments[7] && arguments[7];
+      const Xu = uu.eS();
+      if (!mu && !(mu = uu.activeCamera) && !(mu = uu.cameraToUseForPointers)) return uu;
+      const Vu = mu.viewport,
+        ru = Xu.getRenderHeight(),
         {
-          x: jU,
-          y: uU,
-          width: CU,
-          height: hU
-        } = cU.toGlobal(KU.getRenderWidth(), GU),
-        QU = 1 / KU.getHardwareScalingLevel();
-      return RU = RU * QU - jU, gU = gU * QU - (GU - uU - hU), EU.update(RU, gU, CU, hU, tU || pU.c.IdentityReadOnly, TU ? pU.c.IdentityReadOnly : PU.getViewMatrix(), PU.getProjectionMatrix(), qU), UU
+          x: Bu,
+          y: xu,
+          width: Su,
+          height: pu
+        } = Vu.toGlobal(Xu.getRenderWidth(), ru),
+        Tu = 1 / Xu.getHardwareScalingLevel();
+      return Ru = Ru * Tu - Bu, yu = yu * Tu - (ru - xu - pu), Qu.update(Ru, yu, Su, pu, Eu || Ku.d.IdentityReadOnly, Ju ? Ku.d.IdentityReadOnly : mu.getViewMatrix(), mu.getProjectionMatrix(), Nu), uu
     }
 
-    function CU(UU, RU, gU, tU) {
-      const pU = GU.Zero();
-      return hU(UU, RU, gU, pU, tU), pU
+    function Su(uu, Ru, yu, Eu) {
+      const Ku = ru.Zero();
+      return pu(uu, Ru, yu, Ku, Eu), Ku
     }
 
-    function hU(UU, RU, gU, tU, EU) {
-      if (!TU.b) return UU;
-      const PU = UU.WC();
-      if (!EU && !(EU = UU.activeCamera) && !(EU = UU.cameraToUseForPointers)) throw new Error("Active camera not set");
-      const qU = EU.viewport,
-        KU = PU.getRenderHeight(),
+    function pu(uu, Ru, yu, Eu, Qu) {
+      if (!Ju.c) return uu;
+      const mu = uu.eS();
+      if (!Qu && !(Qu = uu.activeCamera) && !(Qu = uu.cameraToUseForPointers)) throw new Error("Active camera not set");
+      const Nu = Qu.viewport,
+        Xu = mu.getRenderHeight(),
         {
-          x: cU,
-          y: GU,
-          width: jU,
-          height: uU
-        } = qU.toGlobal(PU.getRenderWidth(), KU),
-        CU = pU.c.Identity(),
-        hU = 1 / PU.getHardwareScalingLevel();
-      return RU = RU * hU - cU, gU = gU * hU - (KU - GU - uU), tU.update(RU, gU, jU, uU, CU, CU, EU.getProjectionMatrix()), UU
+          x: Vu,
+          y: ru,
+          width: Bu,
+          height: xu
+        } = Nu.toGlobal(mu.getRenderWidth(), Xu),
+        Su = Ku.d.Identity(),
+        pu = 1 / mu.getHardwareScalingLevel();
+      return Ru = Ru * pu - Vu, yu = yu * pu - (Xu - ru - xu), Eu.update(Ru, yu, Bu, xu, Su, Su, Qu.getProjectionMatrix()), uu
     }
 
-    function QU(UU, RU, gU, tU, pU, EU, PU, TU) {
-      return eU(UU, gU, tU, RU(tU, gU.enableDistantPicking), pU, EU, PU, TU)
+    function Tu(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
+      return Wu(uu, yu, Eu, Ru(Eu, yu.enableDistantPicking), Ku, Qu, mu, Ju)
     }
 
-    function eU(UU, RU, gU, tU, pU, EU, PU, TU) {
-      const qU = RU.intersects(tU, pU, PU, EU, gU, TU);
-      return qU && qU.hit ? !pU && null != UU && qU.distance >= UU.distance ? null : qU : null
+    function Wu(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
+      const Nu = Ru.intersects(Eu, Ku, mu, Qu, yu, Ju);
+      return Nu && Nu.hit ? !Ku && null != uu && Nu.distance >= uu.distance ? null : Nu : null
     }
 
-    function WU(UU, RU) {
-      return "InstancedLinesMesh" === UU || "LinesMesh" === UU ? RU.intersectionThreshold : 0
+    function ju(uu, Ru) {
+      return "InstancedLinesMesh" === uu || "LinesMesh" === uu ? Ru.intersectionThreshold : 0
     }
 
-    function fU(UU) {
-      const RU = UU.getClassName();
-      if ("GreasedLineMesh" === RU) return {
+    function Hu(uu) {
+      const Ru = uu.getClassName();
+      if ("GreasedLineMesh" === Ru) return {
         rawBoundingInfo: null,
         intersectionThreshold: 0
       };
-      const gU = UU.rawBoundingInfo;
+      const yu = uu.rawBoundingInfo;
       return {
-        rawBoundingInfo: gU,
-        intersectionThreshold: gU ? WU(RU, UU) : 0
+        rawBoundingInfo: yu,
+        intersectionThreshold: yu ? ju(Ru, uu) : 0
       }
     }
 
-    function xU(UU, RU, gU, tU, pU) {
-      const EU = UU(gU, RU.enableDistantPicking);
-      return EU.intersectsSphere(tU.qtU, pU) && EU.intersectsBox(tU.boundingBox, pU) ? EU : null
+    function du(uu, Ru, yu, Eu, Ku) {
+      const Qu = uu(yu, Ru.enableDistantPicking);
+      return Qu.intersectsSphere(Eu.aEu, Ku) && Qu.intersectsBox(Eu.boundingBox, Ku) ? Qu : null
     }
 
-    function mU(UU, RU, gU, tU, EU, PU) {
-      let qU = null;
-      const KU = !!(UU.activeCameras && UU.activeCameras.length > 1 && UU.cameraToUseForPointers !== UU.activeCamera),
-        GU = UU.cameraToUseForPointers || UU.activeCamera,
-        jU = cU.internalPickerForMesh || QU,
-        uU = jU === QU;
-      for (let TU = 0; TU < UU.meshes.length; TU++) {
-        const cU = UU.meshes[TU];
-        if (gU) {
-          if (!gU(cU, -1)) continue
-        } else if (!cU.isEnabled() || !cU.isVisible || !cU.Yh) continue;
-        const CU = KU && cU.isWorldMatrixCameraDependent(),
-          hU = cU.computeWorldMatrix(CU, GU);
-        if (cU.hasThinInstances && cU.RRU) {
-          const UU = jU(qU, RU, cU, hU, !0, !0, PU);
-          if (UU) {
-            if (EU) return UU;
+    function bu(uu, Ru, yu, Eu, Qu, mu) {
+      let Nu = null;
+      const Xu = !!(uu.activeCameras && uu.activeCameras.length > 1 && uu.cameraToUseForPointers !== uu.activeCamera),
+        ru = uu.cameraToUseForPointers || uu.activeCamera,
+        Bu = Vu.internalPickerForMesh || Tu,
+        xu = Bu === Tu;
+      for (let Ju = 0; Ju < uu.meshes.length; Ju++) {
+        const Vu = uu.meshes[Ju];
+        if (yu) {
+          if (!yu(Vu, -1)) continue
+        } else if (!Vu.isEnabled() || !Vu.isVisible || !Vu.zp) continue;
+        const Su = Xu && Vu.isWorldMatrixCameraDependent(),
+          pu = Vu.computeWorldMatrix(Su, ru);
+        if (Vu.hasThinInstances && Vu.YRu) {
+          const uu = Bu(Nu, Ru, Vu, pu, !0, !0, mu);
+          if (uu) {
+            if (Qu) return uu;
             const {
-              rawBoundingInfo: TU,
-              intersectionThreshold: KU
-            } = fU(cU), GU = cU._thinInstanceDataStorage.matrixData;
-            if (GU) {
-              const UU = pU.h.Matrix[0],
-                CU = pU.h.Matrix[1],
-                QU = Math.min(cU.I6, GU.length >> 4);
-              for (let WU = 0; WU < QU; WU++) {
-                if (gU && !gU(cU, WU)) continue;
-                pU.c.FromArrayToRef(GU, WU << 4, UU), UU.multiplyToRef(hU, CU);
-                const QU = uU && TU ? xU(RU, cU, CU, TU, KU) : null;
-                if (uU && TU && !QU) continue;
-                const fU = uU && QU ? eU(qU, cU, CU, QU, tU, EU, PU, !0) : jU(qU, RU, cU, CU, tU, EU, PU, !0);
-                if (fU && (qU = fU, qU.thinInstanceIndex = WU, tU)) return qU
+              rawBoundingInfo: Ju,
+              intersectionThreshold: Xu
+            } = Hu(Vu), ru = Vu._thinInstanceDataStorage.matrixData;
+            if (ru) {
+              const uu = Ku.m.Matrix[0],
+                Su = Ku.m.Matrix[1],
+                Tu = Math.min(Vu.F_, ru.length >> 4);
+              for (let ju = 0; ju < Tu; ju++) {
+                if (yu && !yu(Vu, ju)) continue;
+                Ku.d.FromArrayToRef(ru, ju << 4, uu), uu.multiplyToRef(pu, Su);
+                const Tu = xu && Ju ? du(Ru, Vu, Su, Ju, Xu) : null;
+                if (xu && Ju && !Tu) continue;
+                const Hu = xu && Tu ? Wu(Nu, Vu, Su, Tu, Eu, Qu, mu, !0) : Bu(Nu, Ru, Vu, Su, Eu, Qu, mu, !0);
+                if (Hu && (Nu = Hu, Nu.thinInstanceIndex = ju, Eu)) return Nu
               }
             }
           }
         } else {
-          const UU = jU(qU, RU, cU, hU, tU, EU, PU);
-          if (UU && (qU = UU, tU)) return qU
+          const uu = Bu(Nu, Ru, Vu, pu, Eu, Qu, mu);
+          if (uu && (Nu = uu, Eu)) return Nu
         }
       }
-      return qU || new TU.b
+      return Nu || new Ju.c
     }
 
-    function IU(UU, RU, gU, tU) {
-      if (!TU.b) return null;
-      const EU = [],
-        PU = !!(UU.activeCameras && UU.activeCameras.length > 1 && UU.cameraToUseForPointers !== UU.activeCamera),
-        qU = UU.cameraToUseForPointers || UU.activeCamera,
-        KU = cU.internalPickerForMesh || QU,
-        GU = KU === QU;
-      for (let TU = 0; TU < UU.meshes.length; TU++) {
-        const cU = UU.meshes[TU];
-        if (gU) {
-          if (!gU(cU, -1)) continue
-        } else if (!cU.isEnabled() || !cU.isVisible || !cU.Yh) continue;
-        const jU = PU && cU.isWorldMatrixCameraDependent(),
-          uU = cU.computeWorldMatrix(jU, qU);
-        if (cU.hasThinInstances && cU.RRU) {
-          if (KU(null, RU, cU, uU, !0, !0, tU)) {
+    function Cu(uu, Ru, yu, Eu) {
+      if (!Ju.c) return null;
+      const Qu = [],
+        mu = !!(uu.activeCameras && uu.activeCameras.length > 1 && uu.cameraToUseForPointers !== uu.activeCamera),
+        Nu = uu.cameraToUseForPointers || uu.activeCamera,
+        Xu = Vu.internalPickerForMesh || Tu,
+        ru = Xu === Tu;
+      for (let Ju = 0; Ju < uu.meshes.length; Ju++) {
+        const Vu = uu.meshes[Ju];
+        if (yu) {
+          if (!yu(Vu, -1)) continue
+        } else if (!Vu.isEnabled() || !Vu.isVisible || !Vu.zp) continue;
+        const Bu = mu && Vu.isWorldMatrixCameraDependent(),
+          xu = Vu.computeWorldMatrix(Bu, Nu);
+        if (Vu.hasThinInstances && Vu.YRu) {
+          if (Xu(null, Ru, Vu, xu, !0, !0, Eu)) {
             const {
-              rawBoundingInfo: UU,
-              intersectionThreshold: PU
-            } = fU(cU), TU = cU._thinInstanceDataStorage.matrixData;
-            if (TU) {
-              const qU = pU.h.Matrix[0],
-                jU = pU.h.Matrix[1],
-                CU = Math.min(cU.I6, TU.length >> 4);
-              for (let hU = 0; hU < CU; hU++) {
-                if (gU && !gU(cU, hU)) continue;
-                pU.c.FromArrayToRef(TU, hU << 4, qU), qU.multiplyToRef(uU, jU);
-                const CU = GU && UU ? xU(RU, cU, jU, UU, PU) : null;
-                if (GU && UU && !CU) continue;
-                const QU = GU && CU ? eU(null, cU, jU, CU, !1, !1, tU, !0) : KU(null, RU, cU, jU, !1, !1, tU, !0);
-                QU && (QU.thinInstanceIndex = hU, EU.push(QU))
+              rawBoundingInfo: uu,
+              intersectionThreshold: mu
+            } = Hu(Vu), Ju = Vu._thinInstanceDataStorage.matrixData;
+            if (Ju) {
+              const Nu = Ku.m.Matrix[0],
+                Bu = Ku.m.Matrix[1],
+                Su = Math.min(Vu.F_, Ju.length >> 4);
+              for (let pu = 0; pu < Su; pu++) {
+                if (yu && !yu(Vu, pu)) continue;
+                Ku.d.FromArrayToRef(Ju, pu << 4, Nu), Nu.multiplyToRef(xu, Bu);
+                const Su = ru && uu ? du(Ru, Vu, Bu, uu, mu) : null;
+                if (ru && uu && !Su) continue;
+                const Tu = ru && Su ? Wu(null, Vu, Bu, Su, !1, !1, Eu, !0) : Xu(null, Ru, Vu, Bu, !1, !1, Eu, !0);
+                Tu && (Tu.thinInstanceIndex = pu, Qu.push(Tu))
               }
             }
           }
         } else {
-          const UU = KU(null, RU, cU, uU, !1, !1, tU);
-          UU && EU.push(UU)
+          const uu = Xu(null, Ru, Vu, xu, !1, !1, Eu);
+          uu && Qu.push(uu)
         }
       }
-      return EU
+      return Qu
     }
 
-    function JU(UU, RU, gU, tU, EU, PU) {
-      if (!TU.b) return null;
-      const qU = mU(UU, (tU => (UU._tempPickingRay || (UU._tempPickingRay = GU.Zero()), uU(UU, RU, gU, tU, UU._tempPickingRay, PU || null), UU._tempPickingRay)), tU, EU, !0);
-      return qU && (qU.ray = jU(UU, RU, gU, pU.c.Identity(), PU || null)), qU
+    function ku(uu, Ru, yu, Eu, Qu, mu) {
+      if (!Ju.c) return null;
+      const Nu = bu(uu, (Eu => (uu._tempPickingRay || (uu._tempPickingRay = ru.Zero()), xu(uu, Ru, yu, Eu, uu._tempPickingRay, mu || null), uu._tempPickingRay)), Eu, Qu, !0);
+      return Nu && (Nu.ray = Bu(uu, Ru, yu, Ku.d.Identity(), mu || null)), Nu
     }
 
-    function wU(UU, RU, gU, tU, EU, PU, TU) {
-      const qU = mU(UU, ((tU, pU) => (UU._tempPickingRay || (UU._tempPickingRay = GU.Zero()), uU(UU, RU, gU, tU, UU._tempPickingRay, PU || null, !1, pU), UU._tempPickingRay)), tU, EU, !1, TU);
-      return qU && (qU.ray = jU(UU, RU, gU, pU.c.Identity(), PU || null)), qU
+    function eu(uu, Ru, yu, Eu, Qu, mu, Ju) {
+      const Nu = bu(uu, ((Eu, Ku) => (uu._tempPickingRay || (uu._tempPickingRay = ru.Zero()), xu(uu, Ru, yu, Eu, uu._tempPickingRay, mu || null, !1, Ku), uu._tempPickingRay)), Eu, Qu, !1, Ju);
+      return Nu && (Nu.ray = Bu(uu, Ru, yu, Ku.d.Identity(), mu || null)), Nu
     }
 
-    function nU(UU, RU, gU, tU, EU) {
-      const PU = mU(UU, (gU => (UU._pickWithRayInverseMatrix || (UU._pickWithRayInverseMatrix = pU.c.Identity()), gU.invertToRef(UU._pickWithRayInverseMatrix), UU._cachedRayForTransform || (UU._cachedRayForTransform = GU.Zero()), GU.TransformToRef(RU, UU._pickWithRayInverseMatrix, UU._cachedRayForTransform), UU._cachedRayForTransform)), gU, tU, !1, EU);
-      return PU && (PU.ray = RU), PU
+    function Au(uu, Ru, yu, Eu, Qu) {
+      const mu = bu(uu, (yu => (uu._pickWithRayInverseMatrix || (uu._pickWithRayInverseMatrix = Ku.d.Identity()), yu.invertToRef(uu._pickWithRayInverseMatrix), uu._cachedRayForTransform || (uu._cachedRayForTransform = ru.Zero()), ru.TransformToRef(Ru, uu._pickWithRayInverseMatrix, uu._cachedRayForTransform), uu._cachedRayForTransform)), yu, Eu, !1, Qu);
+      return mu && (mu.ray = Ru), mu
     }
 
-    function bU(UU, RU, gU, tU, pU, EU) {
-      return IU(UU, (tU => jU(UU, RU, gU, tU, pU || null)), tU, EU)
+    function Du(uu, Ru, yu, Eu, Ku, Qu) {
+      return Cu(uu, (Eu => Bu(uu, Ru, yu, Eu, Ku || null)), Eu, Qu)
     }
 
-    function oU(UU, RU, gU, tU) {
-      return IU(UU, (gU => (UU._pickWithRayInverseMatrix || (UU._pickWithRayInverseMatrix = pU.c.Identity()), gU.invertToRef(UU._pickWithRayInverseMatrix), UU._cachedRayForTransform || (UU._cachedRayForTransform = GU.Zero()), GU.TransformToRef(RU, UU._pickWithRayInverseMatrix, UU._cachedRayForTransform), UU._cachedRayForTransform)), gU, tU)
+    function Mu(uu, Ru, yu, Eu) {
+      return Cu(uu, (yu => (uu._pickWithRayInverseMatrix || (uu._pickWithRayInverseMatrix = Ku.d.Identity()), yu.invertToRef(uu._pickWithRayInverseMatrix), uu._cachedRayForTransform || (uu._cachedRayForTransform = ru.Zero()), ru.TransformToRef(Ru, uu._pickWithRayInverseMatrix, uu._cachedRayForTransform), uu._cachedRayForTransform)), yu, Eu)
     }
 
-    function ZU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100,
-        tU = arguments.length > 3 ? arguments[3] : void 0,
-        EU = arguments.length > 4 ? arguments[4] : void 0;
-      tU || (tU = UU.getWorldMatrix()), RU.length = gU, EU ? RU.origin.PgU(EU) : RU.origin.PgU(UU.position);
-      const PU = pU.h.xC[2];
-      PU.set(0, 0, UU._scene.useRightHandedSystem ? -1 : 1);
-      const TU = pU.h.xC[3];
-      return pU.n.TransformNormalToRef(PU, tU, TU), pU.n.NormalizeToRef(TU, RU.direction), RU
+    function Iu(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100,
+        Eu = arguments.length > 3 ? arguments[3] : void 0,
+        Qu = arguments.length > 4 ? arguments[4] : void 0;
+      Eu || (Eu = uu.getWorldMatrix()), Ru.length = yu, Qu ? Ru.origin.Oyu(Qu) : Ru.origin.Oyu(uu.position);
+      const mu = Ku.m.MS[2];
+      mu.set(0, 0, uu._scene.useRightHandedSystem ? -1 : 1);
+      const Ju = Ku.m.MS[3];
+      return Ku.p.TransformNormalToRef(mu, Eu, Ju), Ku.p.NormalizeToRef(Ju, Ru.direction), Ru
     }
 
-    function aU(UU, RU) {
-      RU && (RU.prototype.getForwardRay = function() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 100,
-          RU = arguments.length > 1 ? arguments[1] : void 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        return ZU(this, new GU(pU.n.Zero(), pU.n.Zero(), UU), UU, RU, gU)
-      }, RU.prototype.getForwardRayToRef = function(UU) {
-        return ZU(this, UU, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100, arguments.length > 2 ? arguments[2] : void 0, arguments.length > 3 ? arguments[3] : void 0)
-      }), UU && (KU.b._IsPickingAvailable = !0, UU.prototype.createPickingRay = function(UU, RU, gU, tU) {
-        return jU(this, UU, RU, gU, tU, arguments.length > 4 && void 0 !== arguments[4] && arguments[4])
+    function Gu(uu, Ru) {
+      Ru && (Ru.prototype.getForwardRay = function() {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 100,
+          Ru = arguments.length > 1 ? arguments[1] : void 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        return Iu(this, new ru(Ku.p.Zero(), Ku.p.Zero(), uu), uu, Ru, yu)
+      }, Ru.prototype.getForwardRayToRef = function(uu) {
+        return Iu(this, uu, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100, arguments.length > 2 ? arguments[2] : void 0, arguments.length > 3 ? arguments[3] : void 0)
+      }), uu && (Xu.b._IsPickingAvailable = !0, uu.prototype.createPickingRay = function(uu, Ru, yu, Eu) {
+        return Bu(this, uu, Ru, yu, Eu, arguments.length > 4 && void 0 !== arguments[4] && arguments[4])
       })
     }
-    GU._TmpVector3 = (0, EU.e)(6, pU.n.Zero), GU._RayDistant = GU.Zero(), GU._Smallnum = 1e-8, GU._Rayl = 1e9
+    ru._TmpVector3 = (0, Qu.b)(6, Ku.p.Zero), ru._RayDistant = ru.Zero(), ru._Smallnum = 1e-8, ru._Rayl = 1e9
   },
-  40934: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => EU.E
+  41135: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Qu.B
     });
-    var tU = gU(39468),
-      pU = gU(39603),
-      EU = gU(40941);
-    let PU = !1;
-    PU || (PU = !0, (0, EU.c)(tU.f, pU.d), tU.f.prototype.createPickingRayToRef = function(UU, RU, gU, tU, pU) {
-      let PU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-        TU = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return (0, EU.m)(this, UU, RU, gU, tU, pU, PU, TU)
-    }, tU.f.prototype.createPickingRayInCameraSpace = function(UU, RU, gU) {
-      return (0, EU.i)(this, UU, RU, gU)
-    }, tU.f.prototype.createPickingRayInCameraSpaceToRef = function(UU, RU, gU, tU) {
-      return (0, EU.e)(this, UU, RU, gU, tU)
-    }, tU.f.prototype.pickWithBoundingInfo = function(UU, RU, gU, tU, pU) {
-      return (0, EU.w)(this, UU, RU, gU, tU, pU)
-    }, tU.f.prototype.Hj = function(UU, RU, gU, tU, pU, PU) {
-      let TU = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-      return (0, EU.C)(this, UU, RU, gU, tU, pU, PU, TU)
-    }, tU.f.prototype.pickWithRay = function(UU, RU, gU, tU) {
-      return (0, EU.z)(this, UU, RU, gU, tU)
-    }, tU.f.prototype.multiPick = function(UU, RU, gU, tU, pU) {
-      return (0, EU.t)(this, UU, RU, gU, tU, pU)
-    }, tU.f.prototype.multiPickWithRay = function(UU, RU, gU) {
-      return (0, EU.q)(this, UU, RU, gU)
+    var Eu = yu(39647),
+      Ku = yu(39774),
+      Qu = yu(41140);
+    let mu = !1;
+    mu || (mu = !0, (0, Qu.d)(Eu.i, Ku.c), Eu.i.prototype.createPickingRayToRef = function(uu, Ru, yu, Eu, Ku) {
+      let mu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+        Ju = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return (0, Qu.i)(this, uu, Ru, yu, Eu, Ku, mu, Ju)
+    }, Eu.i.prototype.createPickingRayInCameraSpace = function(uu, Ru, yu) {
+      return (0, Qu.h)(this, uu, Ru, yu)
+    }, Eu.i.prototype.createPickingRayInCameraSpaceToRef = function(uu, Ru, yu, Eu) {
+      return (0, Qu.e)(this, uu, Ru, yu, Eu)
+    }, Eu.i.prototype.pickWithBoundingInfo = function(uu, Ru, yu, Eu, Ku) {
+      return (0, Qu.r)(this, uu, Ru, yu, Eu, Ku)
+    }, Eu.i.prototype.cB = function(uu, Ru, yu, Eu, Ku, mu) {
+      let Ju = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+      return (0, Qu.z)(this, uu, Ru, yu, Eu, Ku, mu, Ju)
+    }, Eu.i.prototype.pickWithRay = function(uu, Ru, yu, Eu) {
+      return (0, Qu.v)(this, uu, Ru, yu, Eu)
+    }, Eu.i.prototype.multiPick = function(uu, Ru, yu, Eu, Ku) {
+      return (0, Qu.o)(this, uu, Ru, yu, Eu, Ku)
+    }, Eu.i.prototype.multiPickWithRay = function(uu, Ru, yu) {
+      return (0, Qu.k)(this, uu, Ru, yu)
     })
   },
-  40946: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => cU
+  41145: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Vu
     });
-    var tU = gU(39377),
-      pU = gU(39380),
-      EU = gU(36600),
-      PU = gU(39645),
-      TU = gU(40953),
-      qU = gU(39610),
-      KU = gU(36639);
-    let cU = (() => {
-        var UU;
-        let RU, gU, qU, KU, cU, GU, jU, uU, CU = TU.d,
-          hU = [],
-          QU = [],
-          eU = [],
-          WU = [],
-          fU = [],
-          xU = [],
-          mU = [],
-          IU = [],
-          JU = [],
-          wU = [],
-          nU = [],
-          bU = [],
-          oU = [];
-        return UU = class extends CU {
+    var Eu = yu(39560),
+      Ku = yu(39566),
+      Qu = yu(36830),
+      mu = yu(39823),
+      Ju = yu(41151),
+      Nu = yu(39780),
+      Xu = yu(36871);
+    let Vu = (() => {
+        var uu;
+        let Ru, yu, Nu, Xu, Vu, ru, Bu, xu, Su = Ju.e,
+          pu = [],
+          Tu = [],
+          Wu = [],
+          ju = [],
+          Hu = [],
+          du = [],
+          bu = [],
+          Cu = [],
+          ku = [],
+          eu = [],
+          Au = [],
+          Du = [],
+          Mu = [];
+        return uu = class extends Su {
           get shadowFrustumSize() {
             return this._shadowFrustumSize
           }
-          set shadowFrustumSize(UU) {
-            this._shadowFrustumSize = UU, this.forceProjectionMatrixCompute()
+          set shadowFrustumSize(uu) {
+            this._shadowFrustumSize = uu, this.forceProjectionMatrixCompute()
           }
           get shadowOrthoScale() {
             return this._shadowOrthoScale
           }
-          set shadowOrthoScale(UU) {
-            this._shadowOrthoScale = UU, this.forceProjectionMatrixCompute()
+          set shadowOrthoScale(uu) {
+            this._shadowOrthoScale = uu, this.forceProjectionMatrixCompute()
           }
           get orthoLeft() {
             return this._orthoLeft
           }
-          set orthoLeft(UU) {
-            this._orthoLeft = UU
+          set orthoLeft(uu) {
+            this._orthoLeft = uu
           }
           get orthoRight() {
             return this._orthoRight
           }
-          set orthoRight(UU) {
-            this._orthoRight = UU
+          set orthoRight(uu) {
+            this._orthoRight = uu
           }
           get orthoTop() {
             return this._orthoTop
           }
-          set orthoTop(UU) {
-            this._orthoTop = UU
+          set orthoTop(uu) {
+            this._orthoTop = uu
           }
           get orthoBottom() {
             return this._orthoBottom
           }
-          set orthoBottom(UU) {
-            this._orthoBottom = UU
+          set orthoBottom(uu) {
+            this._orthoBottom = uu
           }
-          constructor(UU, RU, gU, pU) {
-            super(UU, gU, pU), this._shadowFrustumSize = ((0, tU.j)(this, hU), 0), this._shadowOrthoScale = .1, this.autoUpdateExtends = (0, tU.j)(this, QU, !0), this.autoCalcShadowZBounds = ((0, tU.j)(this, eU), (0, tU.j)(this, WU, !1)), this._orthoLeft = ((0, tU.j)(this, fU), (0, tU.j)(this, xU, Number.MAX_VALUE)), this._orthoRight = ((0, tU.j)(this, mU), (0, tU.j)(this, IU, Number.MIN_VALUE)), this._orthoTop = ((0, tU.j)(this, JU), (0, tU.j)(this, wU, Number.MIN_VALUE)), this._orthoBottom = ((0, tU.j)(this, nU), (0, tU.j)(this, bU, Number.MAX_VALUE)), (0, tU.j)(this, oU), this.position = RU.scale(-1), this.direction = RU
+          constructor(uu, Ru, yu, Ku) {
+            super(uu, yu, Ku), this._shadowFrustumSize = ((0, Eu.l)(this, pu), 0), this._shadowOrthoScale = .1, this.autoUpdateExtends = (0, Eu.l)(this, Tu, !0), this.autoCalcShadowZBounds = ((0, Eu.l)(this, Wu), (0, Eu.l)(this, ju, !1)), this._orthoLeft = ((0, Eu.l)(this, Hu), (0, Eu.l)(this, du, Number.MAX_VALUE)), this._orthoRight = ((0, Eu.l)(this, bu), (0, Eu.l)(this, Cu, Number.MIN_VALUE)), this._orthoTop = ((0, Eu.l)(this, ku), (0, Eu.l)(this, eu, Number.MIN_VALUE)), this._orthoBottom = ((0, Eu.l)(this, Au), (0, Eu.l)(this, Du, Number.MAX_VALUE)), (0, Eu.l)(this, Mu), this.position = Ru.scale(-1), this.direction = Ru
           }
           getClassName() {
             return "DirectionalLight"
           }
           getTypeID() {
-            return PU.e.LIGHTTYPEID_DIRECTIONALLIGHT
+            return mu.e.LIGHTTYPEID_DIRECTIONALLIGHT
           }
-          _setDefaultShadowProjectionMatrix(UU, RU, gU) {
-            this.shadowFrustumSize > 0 ? this._setDefaultFixedFrustumShadowProjectionMatrix(UU) : this._setDefaultAutoExtendShadowProjectionMatrix(UU, RU, gU)
+          _setDefaultShadowProjectionMatrix(uu, Ru, yu) {
+            this.shadowFrustumSize > 0 ? this._setDefaultFixedFrustumShadowProjectionMatrix(uu) : this._setDefaultAutoExtendShadowProjectionMatrix(uu, Ru, yu)
           }
-          _setDefaultFixedFrustumShadowProjectionMatrix(UU) {
-            const RU = this.aZ().activeCamera;
-            EU.c.OrthoLHToRef(this.shadowFrustumSize, this.shadowFrustumSize, void 0 !== this.shadowMinZ ? this.shadowMinZ : RU ? RU.minZ : 0, void 0 !== this.shadowMaxZ ? this.shadowMaxZ : RU ? RU.maxZ : 1e4, UU, this.aZ().WC().isNDCHalfZRange)
+          _setDefaultFixedFrustumShadowProjectionMatrix(uu) {
+            const Ru = this.lD().activeCamera;
+            Qu.d.OrthoLHToRef(this.shadowFrustumSize, this.shadowFrustumSize, void 0 !== this.shadowMinZ ? this.shadowMinZ : Ru ? Ru.minZ : 0, void 0 !== this.shadowMaxZ ? this.shadowMaxZ : Ru ? Ru.maxZ : 1e4, uu, this.lD().eS().isNDCHalfZRange)
           }
-          _setDefaultAutoExtendShadowProjectionMatrix(UU, RU, gU) {
-            const tU = this.aZ().activeCamera;
+          _setDefaultAutoExtendShadowProjectionMatrix(uu, Ru, yu) {
+            const Eu = this.lD().activeCamera;
             if (this.autoUpdateExtends || this._orthoLeft === Number.MAX_VALUE) {
-              const UU = EU.n.Zero();
+              const uu = Qu.p.Zero();
               this._orthoLeft = Number.MAX_VALUE, this._orthoRight = -Number.MAX_VALUE, this._orthoTop = -Number.MAX_VALUE, this._orthoBottom = Number.MAX_VALUE;
-              let tU = Number.MAX_VALUE,
-                pU = -Number.MAX_VALUE;
-              for (let PU = 0; PU < gU.length; PU++) {
-                const TU = gU[PU];
-                if (!TU) continue;
-                const qU = TU.lY().boundingBox;
-                for (let gU = 0; gU < qU.vectorsWorld.length; gU++) EU.n.TransformCoordinatesToRef(qU.vectorsWorld[gU], RU, UU), UU.x < this._orthoLeft && (this._orthoLeft = UU.x), UU.y < this._orthoBottom && (this._orthoBottom = UU.y), UU.x > this._orthoRight && (this._orthoRight = UU.x), UU.y > this._orthoTop && (this._orthoTop = UU.y), this.autoCalcShadowZBounds && (UU.z < tU && (tU = UU.z), UU.z > pU && (pU = UU.z))
+              let Eu = Number.MAX_VALUE,
+                Ku = -Number.MAX_VALUE;
+              for (let mu = 0; mu < yu.length; mu++) {
+                const Ju = yu[mu];
+                if (!Ju) continue;
+                const Nu = Ju.vI().boundingBox;
+                for (let yu = 0; yu < Nu.vectorsWorld.length; yu++) Qu.p.TransformCoordinatesToRef(Nu.vectorsWorld[yu], Ru, uu), uu.x < this._orthoLeft && (this._orthoLeft = uu.x), uu.y < this._orthoBottom && (this._orthoBottom = uu.y), uu.x > this._orthoRight && (this._orthoRight = uu.x), uu.y > this._orthoTop && (this._orthoTop = uu.y), this.autoCalcShadowZBounds && (uu.z < Eu && (Eu = uu.z), uu.z > Ku && (Ku = uu.z))
               }
-              this.autoCalcShadowZBounds && (this._shadowMinZ = tU, this._shadowMaxZ = pU)
+              this.autoCalcShadowZBounds && (this._shadowMinZ = Eu, this._shadowMaxZ = Ku)
             }
-            const pU = this._orthoRight - this._orthoLeft,
-              PU = this._orthoTop - this._orthoBottom,
-              TU = void 0 !== this.shadowMinZ ? this.shadowMinZ : tU?.minZ || 0,
-              qU = void 0 !== this.shadowMaxZ ? this.shadowMaxZ : tU?.maxZ || 1e4,
-              KU = this.aZ().WC().VgU;
-            EU.c.OrthoOffCenterLHToRef(this._orthoLeft - pU * this.shadowOrthoScale, this._orthoRight + pU * this.shadowOrthoScale, this._orthoBottom - PU * this.shadowOrthoScale, this._orthoTop + PU * this.shadowOrthoScale, KU ? qU : TU, KU ? TU : qU, UU, this.aZ().WC().isNDCHalfZRange)
+            const Ku = this._orthoRight - this._orthoLeft,
+              mu = this._orthoTop - this._orthoBottom,
+              Ju = void 0 !== this.shadowMinZ ? this.shadowMinZ : Eu?.minZ || 0,
+              Nu = void 0 !== this.shadowMaxZ ? this.shadowMaxZ : Eu?.maxZ || 1e4,
+              Xu = this.lD().eS().CEu;
+            Qu.d.OrthoOffCenterLHToRef(this._orthoLeft - Ku * this.shadowOrthoScale, this._orthoRight + Ku * this.shadowOrthoScale, this._orthoBottom - mu * this.shadowOrthoScale, this._orthoTop + mu * this.shadowOrthoScale, Xu ? Nu : Ju, Xu ? Ju : Nu, uu, this.lD().eS().isNDCHalfZRange)
           }
           _buildUniformLayout() {
             this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
           }
-          transferToEffect(UU, RU) {
-            return this.computeTransformedInformation() ? (this._uniformBuffer.updateFloat4("vLightData", this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z, 1, RU), this) : (this._uniformBuffer.updateFloat4("vLightData", this.direction.x, this.direction.y, this.direction.z, 1, RU), this)
+          transferToEffect(uu, Ru) {
+            return this.computeTransformedInformation() ? (this._uniformBuffer.updateFloat4("vLightData", this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z, 1, Ru), this) : (this._uniformBuffer.updateFloat4("vLightData", this.direction.x, this.direction.y, this.direction.z, 1, Ru), this)
           }
-          transferToNodeMaterialEffect(UU, RU) {
-            return this.computeTransformedInformation() ? (UU.setFloat3(RU, this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z), this) : (UU.setFloat3(RU, this.direction.x, this.direction.y, this.direction.z), this)
+          transferToNodeMaterialEffect(uu, Ru) {
+            return this.computeTransformedInformation() ? (uu.setFloat3(Ru, this.transformedDirection.x, this.transformedDirection.y, this.transformedDirection.z), this) : (uu.setFloat3(Ru, this.direction.x, this.direction.y, this.direction.z), this)
           }
-          getDepthMinZ(UU) {
-            const RU = this._scene.WC();
-            return !RU.VgU && RU.isNDCHalfZRange ? 0 : 1
+          getDepthMinZ(uu) {
+            const Ru = this._scene.eS();
+            return !Ru.CEu && Ru.isNDCHalfZRange ? 0 : 1
           }
-          getDepthMaxZ(UU) {
-            const RU = this._scene.WC();
-            return RU.VgU && RU.isNDCHalfZRange ? 0 : 1
+          getDepthMaxZ(uu) {
+            const Ru = this._scene.eS();
+            return Ru.CEu && Ru.isNDCHalfZRange ? 0 : 1
           }
-          prepareLightSpecificDefines(UU, RU) {
-            UU["DIRLIGHT" + RU] = !0
+          prepareLightSpecificDefines(uu, Ru) {
+            uu["DIRLIGHT" + Ru] = !0
           }
         }, (() => {
-          const EU = "function" === typeof Symbol && Symbol.metadata ? Object.create(CU[Symbol.metadata] ?? null) : void 0;
-          RU = [(0, pU.K)()], gU = [(0, pU.K)()], qU = [(0, pU.K)()], KU = [(0, pU.K)()], cU = [(0, pU.K)("orthoLeft")], GU = [(0, pU.K)("orthoRight")], jU = [(0, pU.K)("orthoTop")], uU = [(0, pU.K)("orthoBottom")], (0, tU.i)(UU, null, RU, {
+          const Qu = "function" === typeof Symbol && Symbol.metadata ? Object.create(Su[Symbol.metadata] ?? null) : void 0;
+          Ru = [(0, Ku.K)()], yu = [(0, Ku.K)()], Nu = [(0, Ku.K)()], Xu = [(0, Ku.K)()], Vu = [(0, Ku.K)("orthoLeft")], ru = [(0, Ku.K)("orthoRight")], Bu = [(0, Ku.K)("orthoTop")], xu = [(0, Ku.K)("orthoBottom")], (0, Eu.h)(uu, null, Ru, {
             kind: "getter",
             name: "shadowFrustumSize",
             static: !1,
             private: !1,
             access: {
-              has: UU => "shadowFrustumSize" in UU,
-              get: UU => UU.shadowFrustumSize
+              has: uu => "shadowFrustumSize" in uu,
+              get: uu => uu.shadowFrustumSize
             },
-            metadata: EU
-          }, null, hU), (0, tU.i)(UU, null, gU, {
+            metadata: Qu
+          }, null, pu), (0, Eu.h)(uu, null, yu, {
             kind: "getter",
             name: "shadowOrthoScale",
             static: !1,
             private: !1,
             access: {
-              has: UU => "shadowOrthoScale" in UU,
-              get: UU => UU.shadowOrthoScale
+              has: uu => "shadowOrthoScale" in uu,
+              get: uu => uu.shadowOrthoScale
             },
-            metadata: EU
-          }, null, hU), (0, tU.i)(null, null, qU, {
+            metadata: Qu
+          }, null, pu), (0, Eu.h)(null, null, Nu, {
             kind: "field",
             name: "autoUpdateExtends",
             static: !1,
             private: !1,
             access: {
-              has: UU => "autoUpdateExtends" in UU,
-              get: UU => UU.autoUpdateExtends,
-              set: (UU, RU) => {
-                UU.autoUpdateExtends = RU
+              has: uu => "autoUpdateExtends" in uu,
+              get: uu => uu.autoUpdateExtends,
+              set: (uu, Ru) => {
+                uu.autoUpdateExtends = Ru
               }
             },
-            metadata: EU
-          }, QU, eU), (0, tU.i)(null, null, KU, {
+            metadata: Qu
+          }, Tu, Wu), (0, Eu.h)(null, null, Xu, {
             kind: "field",
             name: "autoCalcShadowZBounds",
             static: !1,
             private: !1,
             access: {
-              has: UU => "autoCalcShadowZBounds" in UU,
-              get: UU => UU.autoCalcShadowZBounds,
-              set: (UU, RU) => {
-                UU.autoCalcShadowZBounds = RU
+              has: uu => "autoCalcShadowZBounds" in uu,
+              get: uu => uu.autoCalcShadowZBounds,
+              set: (uu, Ru) => {
+                uu.autoCalcShadowZBounds = Ru
               }
             },
-            metadata: EU
-          }, WU, fU), (0, tU.i)(null, null, cU, {
+            metadata: Qu
+          }, ju, Hu), (0, Eu.h)(null, null, Vu, {
             kind: "field",
             name: "_orthoLeft",
             static: !1,
             private: !1,
             access: {
-              has: UU => "_orthoLeft" in UU,
-              get: UU => UU._orthoLeft,
-              set: (UU, RU) => {
-                UU._orthoLeft = RU
+              has: uu => "_orthoLeft" in uu,
+              get: uu => uu._orthoLeft,
+              set: (uu, Ru) => {
+                uu._orthoLeft = Ru
               }
             },
-            metadata: EU
-          }, xU, mU), (0, tU.i)(null, null, GU, {
+            metadata: Qu
+          }, du, bu), (0, Eu.h)(null, null, ru, {
             kind: "field",
             name: "_orthoRight",
             static: !1,
             private: !1,
             access: {
-              has: UU => "_orthoRight" in UU,
-              get: UU => UU._orthoRight,
-              set: (UU, RU) => {
-                UU._orthoRight = RU
+              has: uu => "_orthoRight" in uu,
+              get: uu => uu._orthoRight,
+              set: (uu, Ru) => {
+                uu._orthoRight = Ru
               }
             },
-            metadata: EU
-          }, IU, JU), (0, tU.i)(null, null, jU, {
+            metadata: Qu
+          }, Cu, ku), (0, Eu.h)(null, null, Bu, {
             kind: "field",
             name: "_orthoTop",
             static: !1,
             private: !1,
             access: {
-              has: UU => "_orthoTop" in UU,
-              get: UU => UU._orthoTop,
-              set: (UU, RU) => {
-                UU._orthoTop = RU
+              has: uu => "_orthoTop" in uu,
+              get: uu => uu._orthoTop,
+              set: (uu, Ru) => {
+                uu._orthoTop = Ru
               }
             },
-            metadata: EU
-          }, wU, nU), (0, tU.i)(null, null, uU, {
+            metadata: Qu
+          }, eu, Au), (0, Eu.h)(null, null, xu, {
             kind: "field",
             name: "_orthoBottom",
             static: !1,
             private: !1,
             access: {
-              has: UU => "_orthoBottom" in UU,
-              get: UU => UU._orthoBottom,
-              set: (UU, RU) => {
-                UU._orthoBottom = RU
+              has: uu => "_orthoBottom" in uu,
+              get: uu => uu._orthoBottom,
+              set: (uu, Ru) => {
+                uu._orthoBottom = Ru
               }
             },
-            metadata: EU
-          }, bU, oU), EU && Object.defineProperty(UU, Symbol.metadata, {
+            metadata: Qu
+          }, Du, Mu), Qu && Object.defineProperty(uu, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: EU
+            value: Qu
           })
-        })(), UU
+        })(), uu
       })(),
-      GU = !1;
-    GU || (GU = !0, qU.b.AddNodeConstructor("Light_Type_1", ((UU, RU) => () => new cU(UU, EU.n.Zero(), RU))), (0, KU.g)("BABYLON.DirectionalLight", cU))
+      ru = !1;
+    ru || (ru = !0, Nu.e.AddNodeConstructor("Light_Type_1", ((uu, Ru) => () => new Vu(uu, Qu.p.Zero(), Ru))), (0, Xu.c)("BABYLON.DirectionalLight", Vu))
   },
-  40963: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => AR
+  41162: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => iR
     });
-    var tU = gU(38260),
-      pU = gU(36624),
-      EU = gU(36600),
-      PU = gU(39517),
-      TU = gU(40966),
-      qU = gU(36622),
-      KU = gU(39665),
-      cU = gU(36761),
-      GU = gU(38263),
-      jU = gU(38234),
-      uU = gU(36626);
-    class CU {
+    var Eu = yu(38471),
+      Ku = yu(36858),
+      Qu = yu(36830),
+      mu = yu(39706),
+      Ju = yu(41165),
+      Nu = yu(36851),
+      Xu = yu(39845),
+      Vu = yu(36991),
+      ru = yu(38479),
+      Bu = yu(38444),
+      xu = yu(36865);
+    class Su {
       constructor() {
-        this.direction1 = new EU.n(0, 1, 0), this.direction2 = new EU.n(0, 1, 0)
+        this.direction1 = new Qu.p(0, 1, 0), this.direction2 = new Qu.p(0, 1, 0)
       }
-      startDirectionFunction(UU, RU, gU, tU) {
-        const pU = (0, uU.RandomRange)(this.direction1.x, this.direction2.x),
-          PU = (0, uU.RandomRange)(this.direction1.y, this.direction2.y),
-          TU = (0, uU.RandomRange)(this.direction1.z, this.direction2.z);
-        tU ? RU.b_(pU, PU, TU) : EU.n.TransformNormalFromFloatsToRef(pU, PU, TU, UU, RU)
+      startDirectionFunction(uu, Ru, yu, Eu) {
+        const Ku = (0, xu.RandomRange)(this.direction1.x, this.direction2.x),
+          mu = (0, xu.RandomRange)(this.direction1.y, this.direction2.y),
+          Ju = (0, xu.RandomRange)(this.direction1.z, this.direction2.z);
+        Eu ? Ru.muu(Ku, mu, Ju) : Qu.p.TransformNormalFromFloatsToRef(Ku, mu, Ju, uu, Ru)
       }
-      startPositionFunction(UU, RU, gU, tU) {
-        tU ? RU.b_(0, 0, 0) : EU.n.TransformCoordinatesFromFloatsToRef(0, 0, 0, UU, RU)
+      startPositionFunction(uu, Ru, yu, Eu) {
+        Eu ? Ru.muu(0, 0, 0) : Qu.p.TransformCoordinatesFromFloatsToRef(0, 0, 0, uu, Ru)
       }
       clone() {
-        const UU = new CU;
-        return jU.c.DeepCopy(this, UU), UU
+        const uu = new Su;
+        return Bu.e.DeepCopy(this, uu), uu
       }
-      applyToShader(UU) {
-        UU.setVector3("direction1", this.direction1), UU.setVector3("direction2", this.direction2)
+      applyToShader(uu) {
+        uu.setVector3("direction1", this.direction1), uu.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(UU) {
-        UU.addUniform("direction1", 3), UU.addUniform("direction2", 3)
+      buildUniformLayout(uu) {
+        uu.addUniform("direction1", 3), uu.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define POINTEMITTER"
@@ -948,46 +948,46 @@ export const modules = {
         return "PointParticleEmitter"
       }
       serialize() {
-        const UU = {};
-        return UU.type = this.getClassName(), UU.direction1 = this.direction1.vgU(), UU.direction2 = this.direction2.vgU(), UU
+        const uu = {};
+        return uu.type = this.getClassName(), uu.direction1 = this.direction1.AEu(), uu.direction2 = this.direction2.AEu(), uu
       }
-      parse(UU) {
-        EU.n.FromArrayToRef(UU.direction1, 0, this.direction1), EU.n.FromArrayToRef(UU.direction2, 0, this.direction2)
+      parse(uu) {
+        Qu.p.FromArrayToRef(uu.direction1, 0, this.direction1), Qu.p.FromArrayToRef(uu.direction2, 0, this.direction2)
       }
     }
-    class hU {
+    class pu {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.radius = UU, this.radiusRange = RU, this.directionRandomizer = gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.radius = uu, this.radiusRange = Ru, this.directionRandomizer = yu
       }
-      startDirectionFunction(UU, RU, gU, tU) {
-        const pU = gU.position.subtract(UU.getTranslation()).normalize(),
-          PU = (0, uU.RandomRange)(0, this.directionRandomizer),
-          TU = (0, uU.RandomRange)(0, this.directionRandomizer),
-          qU = (0, uU.RandomRange)(0, this.directionRandomizer);
-        pU.x += PU, pU.y += TU, pU.z += qU, pU.normalize(), tU ? RU.PgU(pU) : EU.n.TransformNormalFromFloatsToRef(pU.x, pU.y, pU.z, UU, RU)
+      startDirectionFunction(uu, Ru, yu, Eu) {
+        const Ku = yu.position.subtract(uu.getTranslation()).normalize(),
+          mu = (0, xu.RandomRange)(0, this.directionRandomizer),
+          Ju = (0, xu.RandomRange)(0, this.directionRandomizer),
+          Nu = (0, xu.RandomRange)(0, this.directionRandomizer);
+        Ku.x += mu, Ku.y += Ju, Ku.z += Nu, Ku.normalize(), Eu ? Ru.Oyu(Ku) : Qu.p.TransformNormalFromFloatsToRef(Ku.x, Ku.y, Ku.z, uu, Ru)
       }
-      startPositionFunction(UU, RU, gU, tU) {
-        const pU = this.radius - (0, uU.RandomRange)(0, this.radius * this.radiusRange),
-          PU = (0, uU.RandomRange)(0, 1),
-          TU = (0, uU.RandomRange)(0, 2 * Math.PI),
-          qU = Math.acos(2 * PU - 1),
-          KU = pU * Math.cos(TU) * Math.sin(qU),
-          cU = pU * Math.cos(qU),
-          GU = pU * Math.sin(TU) * Math.sin(qU);
-        tU ? RU.b_(KU, Math.abs(cU), GU) : EU.n.TransformCoordinatesFromFloatsToRef(KU, Math.abs(cU), GU, UU, RU)
+      startPositionFunction(uu, Ru, yu, Eu) {
+        const Ku = this.radius - (0, xu.RandomRange)(0, this.radius * this.radiusRange),
+          mu = (0, xu.RandomRange)(0, 1),
+          Ju = (0, xu.RandomRange)(0, 2 * Math.PI),
+          Nu = Math.acos(2 * mu - 1),
+          Xu = Ku * Math.cos(Ju) * Math.sin(Nu),
+          Vu = Ku * Math.cos(Nu),
+          ru = Ku * Math.sin(Ju) * Math.sin(Nu);
+        Eu ? Ru.muu(Xu, Math.abs(Vu), ru) : Qu.p.TransformCoordinatesFromFloatsToRef(Xu, Math.abs(Vu), ru, uu, Ru)
       }
       clone() {
-        const UU = new hU(this.radius, this.directionRandomizer);
-        return jU.c.DeepCopy(this, UU), UU
+        const uu = new pu(this.radius, this.directionRandomizer);
+        return Bu.e.DeepCopy(this, uu), uu
       }
-      applyToShader(UU) {
-        UU.setFloat("radius", this.radius), UU.setFloat("radiusRange", this.radiusRange), UU.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(uu) {
+        uu.setFloat("radius", this.radius), uu.setFloat("radiusRange", this.radiusRange), uu.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(UU) {
-        UU.addUniform("radius", 1), UU.addUniform("radiusRange", 1), UU.addUniform("directionRandomizer", 1)
+      buildUniformLayout(uu) {
+        uu.addUniform("radius", 1), uu.addUniform("radiusRange", 1), uu.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define HEMISPHERICEMITTER"
@@ -996,46 +996,46 @@ export const modules = {
         return "HemisphericParticleEmitter"
       }
       serialize() {
-        const UU = {};
-        return UU.type = this.getClassName(), UU.radius = this.radius, UU.radiusRange = this.radiusRange, UU.directionRandomizer = this.directionRandomizer, UU
+        const uu = {};
+        return uu.type = this.getClassName(), uu.radius = this.radius, uu.radiusRange = this.radiusRange, uu.directionRandomizer = this.directionRandomizer, uu
       }
-      parse(UU) {
-        this.radius = UU.radius, this.radiusRange = UU.radiusRange, this.directionRandomizer = UU.directionRandomizer
+      parse(uu) {
+        this.radius = uu.radius, this.radiusRange = uu.radiusRange, this.directionRandomizer = uu.directionRandomizer
       }
     }
-    class QU {
+    class Tu {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.radius = UU, this.radiusRange = RU, this.directionRandomizer = gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.radius = uu, this.radiusRange = Ru, this.directionRandomizer = yu
       }
-      startDirectionFunction(UU, RU, gU, tU) {
-        const pU = gU.position.subtract(UU.getTranslation()).normalize(),
-          PU = (0, uU.RandomRange)(0, this.directionRandomizer),
-          TU = (0, uU.RandomRange)(0, this.directionRandomizer),
-          qU = (0, uU.RandomRange)(0, this.directionRandomizer);
-        pU.x += PU, pU.y += TU, pU.z += qU, pU.normalize(), tU ? RU.PgU(pU) : EU.n.TransformNormalFromFloatsToRef(pU.x, pU.y, pU.z, UU, RU)
+      startDirectionFunction(uu, Ru, yu, Eu) {
+        const Ku = yu.position.subtract(uu.getTranslation()).normalize(),
+          mu = (0, xu.RandomRange)(0, this.directionRandomizer),
+          Ju = (0, xu.RandomRange)(0, this.directionRandomizer),
+          Nu = (0, xu.RandomRange)(0, this.directionRandomizer);
+        Ku.x += mu, Ku.y += Ju, Ku.z += Nu, Ku.normalize(), Eu ? Ru.Oyu(Ku) : Qu.p.TransformNormalFromFloatsToRef(Ku.x, Ku.y, Ku.z, uu, Ru)
       }
-      startPositionFunction(UU, RU, gU, tU) {
-        const pU = this.radius - (0, uU.RandomRange)(0, this.radius * this.radiusRange),
-          PU = (0, uU.RandomRange)(0, 1),
-          TU = (0, uU.RandomRange)(0, 2 * Math.PI),
-          qU = Math.acos(2 * PU - 1),
-          KU = pU * Math.cos(TU) * Math.sin(qU),
-          cU = pU * Math.cos(qU),
-          GU = pU * Math.sin(TU) * Math.sin(qU);
-        tU ? RU.b_(KU, cU, GU) : EU.n.TransformCoordinatesFromFloatsToRef(KU, cU, GU, UU, RU)
+      startPositionFunction(uu, Ru, yu, Eu) {
+        const Ku = this.radius - (0, xu.RandomRange)(0, this.radius * this.radiusRange),
+          mu = (0, xu.RandomRange)(0, 1),
+          Ju = (0, xu.RandomRange)(0, 2 * Math.PI),
+          Nu = Math.acos(2 * mu - 1),
+          Xu = Ku * Math.cos(Ju) * Math.sin(Nu),
+          Vu = Ku * Math.cos(Nu),
+          ru = Ku * Math.sin(Ju) * Math.sin(Nu);
+        Eu ? Ru.muu(Xu, Vu, ru) : Qu.p.TransformCoordinatesFromFloatsToRef(Xu, Vu, ru, uu, Ru)
       }
       clone() {
-        const UU = new QU(this.radius, this.directionRandomizer);
-        return jU.c.DeepCopy(this, UU), UU
+        const uu = new Tu(this.radius, this.directionRandomizer);
+        return Bu.e.DeepCopy(this, uu), uu
       }
-      applyToShader(UU) {
-        UU.setFloat("radius", this.radius), UU.setFloat("radiusRange", this.radiusRange), UU.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(uu) {
+        uu.setFloat("radius", this.radius), uu.setFloat("radiusRange", this.radiusRange), uu.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(UU) {
-        UU.addUniform("radius", 1), UU.addUniform("radiusRange", 1), UU.addUniform("directionRandomizer", 1)
+      buildUniformLayout(uu) {
+        uu.addUniform("radius", 1), uu.addUniform("radiusRange", 1), uu.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define SPHEREEMITTER"
@@ -1044,35 +1044,35 @@ export const modules = {
         return "SphereParticleEmitter"
       }
       serialize() {
-        const UU = {};
-        return UU.type = this.getClassName(), UU.radius = this.radius, UU.radiusRange = this.radiusRange, UU.directionRandomizer = this.directionRandomizer, UU
+        const uu = {};
+        return uu.type = this.getClassName(), uu.radius = this.radius, uu.radiusRange = this.radiusRange, uu.directionRandomizer = this.directionRandomizer, uu
       }
-      parse(UU) {
-        this.radius = UU.radius, this.radiusRange = UU.radiusRange, this.directionRandomizer = UU.directionRandomizer
+      parse(uu) {
+        this.radius = uu.radius, this.radiusRange = uu.radiusRange, this.directionRandomizer = uu.directionRandomizer
       }
     }
-    class eU extends QU {
+    class Wu extends Tu {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new EU.n(0, 1, 0),
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new EU.n(0, 1, 0);
-        super(UU), this.direction1 = RU, this.direction2 = gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Qu.p(0, 1, 0),
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Qu.p(0, 1, 0);
+        super(uu), this.direction1 = Ru, this.direction2 = yu
       }
-      startDirectionFunction(UU, RU, gU, tU) {
-        const pU = (0, uU.RandomRange)(this.direction1.x, this.direction2.x),
-          PU = (0, uU.RandomRange)(this.direction1.y, this.direction2.y),
-          TU = (0, uU.RandomRange)(this.direction1.z, this.direction2.z);
-        tU ? RU.b_(pU, PU, TU) : EU.n.TransformNormalFromFloatsToRef(pU, PU, TU, UU, RU)
+      startDirectionFunction(uu, Ru, yu, Eu) {
+        const Ku = (0, xu.RandomRange)(this.direction1.x, this.direction2.x),
+          mu = (0, xu.RandomRange)(this.direction1.y, this.direction2.y),
+          Ju = (0, xu.RandomRange)(this.direction1.z, this.direction2.z);
+        Eu ? Ru.muu(Ku, mu, Ju) : Qu.p.TransformNormalFromFloatsToRef(Ku, mu, Ju, uu, Ru)
       }
       clone() {
-        const UU = new eU(this.radius, this.direction1, this.direction2);
-        return jU.c.DeepCopy(this, UU), UU
+        const uu = new Wu(this.radius, this.direction1, this.direction2);
+        return Bu.e.DeepCopy(this, uu), uu
       }
-      applyToShader(UU) {
-        UU.setFloat("radius", this.radius), UU.setFloat("radiusRange", this.radiusRange), UU.setVector3("direction1", this.direction1), UU.setVector3("direction2", this.direction2)
+      applyToShader(uu) {
+        uu.setFloat("radius", this.radius), uu.setFloat("radiusRange", this.radiusRange), uu.setVector3("direction1", this.direction1), uu.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(UU) {
-        UU.addUniform("radius", 1), UU.addUniform("radiusRange", 1), UU.addUniform("direction1", 3), UU.addUniform("direction2", 3)
+      buildUniformLayout(uu) {
+        uu.addUniform("radius", 1), uu.addUniform("radiusRange", 1), uu.addUniform("direction1", 3), uu.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define SPHEREEMITTER\n#define DIRECTEDSPHEREEMITTER"
@@ -1081,103 +1081,103 @@ export const modules = {
         return "SphereDirectedParticleEmitter"
       }
       serialize() {
-        const UU = super.serialize();
-        return UU.direction1 = this.direction1.vgU(), UU.direction2 = this.direction2.vgU(), UU
+        const uu = super.serialize();
+        return uu.direction1 = this.direction1.AEu(), uu.direction2 = this.direction2.AEu(), uu
       }
-      parse(UU) {
-        super.parse(UU), EU.n.FromArrayToRef(UU.direction1, 0, this.direction1), EU.n.FromArrayToRef(UU.direction2, 0, this.direction2)
+      parse(uu) {
+        super.parse(uu), Qu.p.FromArrayToRef(uu.direction1, 0, this.direction1), Qu.p.FromArrayToRef(uu.direction2, 0, this.direction2)
       }
     }
-    var WU = gU(38226);
-    class fU {
+    var ju = yu(38440);
+    class Hu {
       get radius() {
         return this._radius
       }
-      set radius(UU) {
-        this._radius = UU, this._buildHeight()
+      set radius(uu) {
+        this._radius = uu, this._buildHeight()
       }
       get angle() {
         return this._angle
       }
-      set angle(UU) {
-        this._angle = UU, this._buildHeight()
+      set angle(uu) {
+        this._angle = uu, this._buildHeight()
       }
       _buildHeight() {
         0 !== this._angle ? this._height = this._radius / Math.tan(this._angle / 2) : this._height = 1
       }
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.directionRandomizer = gU, this.radiusRange = 1, this.heightRange = 1, this.emitFromSpawnPointOnly = !1, this.angle = RU, this.radius = UU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.directionRandomizer = yu, this.radiusRange = 1, this.heightRange = 1, this.emitFromSpawnPointOnly = !1, this.angle = Ru, this.radius = uu
       }
-      startDirectionFunction(UU, RU, gU, tU) {
-        const pU = gU.position.subtract(UU.getTranslation()).normalize(),
-          PU = (0, uU.RandomRange)(0, this.directionRandomizer),
-          TU = (0, uU.RandomRange)(0, this.directionRandomizer),
-          qU = (0, uU.RandomRange)(0, this.directionRandomizer);
-        pU.x += PU, pU.y += TU, pU.z += qU, pU.normalize(), tU ? RU.PgU(pU) : EU.n.TransformNormalFromFloatsToRef(pU.x, pU.y, pU.z, UU, RU)
+      startDirectionFunction(uu, Ru, yu, Eu) {
+        const Ku = yu.position.subtract(uu.getTranslation()).normalize(),
+          mu = (0, xu.RandomRange)(0, this.directionRandomizer),
+          Ju = (0, xu.RandomRange)(0, this.directionRandomizer),
+          Nu = (0, xu.RandomRange)(0, this.directionRandomizer);
+        Ku.x += mu, Ku.y += Ju, Ku.z += Nu, Ku.normalize(), Eu ? Ru.Oyu(Ku) : Qu.p.TransformNormalFromFloatsToRef(Ku.x, Ku.y, Ku.z, uu, Ru)
       }
-      startPositionFunction(UU, RU, gU, tU) {
-        const pU = (0, uU.RandomRange)(0, 2 * Math.PI);
-        let PU;
-        this.emitFromSpawnPointOnly ? PU = 1e-4 : (PU = (0, uU.RandomRange)(0, this.heightRange), PU = 1 - PU * PU);
-        let TU = this._radius - (0, uU.RandomRange)(0, this._radius * this.radiusRange);
-        TU *= PU;
-        const qU = TU * Math.sin(pU),
-          KU = TU * Math.cos(pU),
-          cU = PU * this._height;
-        if (tU) return RU.x = qU, RU.y = cU, void(RU.z = KU);
-        EU.n.TransformCoordinatesFromFloatsToRef(qU, cU, KU, UU, RU)
+      startPositionFunction(uu, Ru, yu, Eu) {
+        const Ku = (0, xu.RandomRange)(0, 2 * Math.PI);
+        let mu;
+        this.emitFromSpawnPointOnly ? mu = 1e-4 : (mu = (0, xu.RandomRange)(0, this.heightRange), mu = 1 - mu * mu);
+        let Ju = this._radius - (0, xu.RandomRange)(0, this._radius * this.radiusRange);
+        Ju *= mu;
+        const Nu = Ju * Math.sin(Ku),
+          Xu = Ju * Math.cos(Ku),
+          Vu = mu * this._height;
+        if (Eu) return Ru.x = Nu, Ru.y = Vu, void(Ru.z = Xu);
+        Qu.p.TransformCoordinatesFromFloatsToRef(Nu, Vu, Xu, uu, Ru)
       }
       clone() {
-        const UU = new fU(this._radius, this._angle, this.directionRandomizer);
-        return jU.c.DeepCopy(this, UU), UU
+        const uu = new Hu(this._radius, this._angle, this.directionRandomizer);
+        return Bu.e.DeepCopy(this, uu), uu
       }
-      applyToShader(UU) {
-        UU.setFloat2("radius", this._radius, this.radiusRange), UU.setFloat("coneAngle", this._angle), UU.setFloat2("height", this._height, this.heightRange), UU.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(uu) {
+        uu.setFloat2("radius", this._radius, this.radiusRange), uu.setFloat("coneAngle", this._angle), uu.setFloat2("height", this._height, this.heightRange), uu.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(UU) {
-        UU.addUniform("radius", 2), UU.addUniform("coneAngle", 1), UU.addUniform("height", 2), UU.addUniform("directionRandomizer", 1)
+      buildUniformLayout(uu) {
+        uu.addUniform("radius", 2), uu.addUniform("coneAngle", 1), uu.addUniform("height", 2), uu.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
-        let UU = "#define CONEEMITTER";
-        return this.emitFromSpawnPointOnly && (UU += "\n#define CONEEMITTERSPAWNPOINT"), UU
+        let uu = "#define CONEEMITTER";
+        return this.emitFromSpawnPointOnly && (uu += "\n#define CONEEMITTERSPAWNPOINT"), uu
       }
       getClassName() {
         return "ConeParticleEmitter"
       }
       serialize() {
-        const UU = {};
-        return UU.type = this.getClassName(), UU.radius = this._radius, UU.angle = this._angle, UU.directionRandomizer = this.directionRandomizer, UU.radiusRange = this.radiusRange, UU.heightRange = this.heightRange, UU.emitFromSpawnPointOnly = this.emitFromSpawnPointOnly, UU
+        const uu = {};
+        return uu.type = this.getClassName(), uu.radius = this._radius, uu.angle = this._angle, uu.directionRandomizer = this.directionRandomizer, uu.radiusRange = this.radiusRange, uu.heightRange = this.heightRange, uu.emitFromSpawnPointOnly = this.emitFromSpawnPointOnly, uu
       }
-      parse(UU) {
-        this.radius = UU.radius, this.angle = UU.angle, this.directionRandomizer = UU.directionRandomizer, this.radiusRange = void 0 !== UU.radiusRange ? UU.radiusRange : 1, this.heightRange = void 0 !== UU.heightRange ? UU.heightRange : 1, this.emitFromSpawnPointOnly = void 0 !== UU.emitFromSpawnPointOnly && UU.emitFromSpawnPointOnly
+      parse(uu) {
+        this.radius = uu.radius, this.angle = uu.angle, this.directionRandomizer = uu.directionRandomizer, this.radiusRange = void 0 !== uu.radiusRange ? uu.radiusRange : 1, this.heightRange = void 0 !== uu.heightRange ? uu.heightRange : 1, this.emitFromSpawnPointOnly = void 0 !== uu.emitFromSpawnPointOnly && uu.emitFromSpawnPointOnly
       }
     }
-    class xU extends fU {
+    class du extends Hu {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new EU.n(0, 1, 0),
-          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new EU.n(0, 1, 0);
-        super(UU, RU), this.direction1 = gU, this.direction2 = tU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Qu.p(0, 1, 0),
+          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Qu.p(0, 1, 0);
+        super(uu, Ru), this.direction1 = yu, this.direction2 = Eu
       }
-      startDirectionFunction(UU, RU, gU, tU) {
-        const pU = (0, uU.RandomRange)(this.direction1.x, this.direction2.x),
-          PU = (0, uU.RandomRange)(this.direction1.y, this.direction2.y),
-          TU = (0, uU.RandomRange)(this.direction1.z, this.direction2.z);
-        tU ? RU.b_(pU, PU, TU) : EU.n.TransformNormalFromFloatsToRef(pU, PU, TU, UU, RU)
+      startDirectionFunction(uu, Ru, yu, Eu) {
+        const Ku = (0, xu.RandomRange)(this.direction1.x, this.direction2.x),
+          mu = (0, xu.RandomRange)(this.direction1.y, this.direction2.y),
+          Ju = (0, xu.RandomRange)(this.direction1.z, this.direction2.z);
+        Eu ? Ru.muu(Ku, mu, Ju) : Qu.p.TransformNormalFromFloatsToRef(Ku, mu, Ju, uu, Ru)
       }
       clone() {
-        const UU = new xU(this.radius, this.angle, this.direction1, this.direction2);
-        return jU.c.DeepCopy(this, UU), UU
+        const uu = new du(this.radius, this.angle, this.direction1, this.direction2);
+        return Bu.e.DeepCopy(this, uu), uu
       }
-      applyToShader(UU) {
-        super.applyToShader(UU), UU.setVector3("direction1", this.direction1), UU.setVector3("direction2", this.direction2)
+      applyToShader(uu) {
+        super.applyToShader(uu), uu.setVector3("direction1", this.direction1), uu.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(UU) {
-        super.buildUniformLayout(UU), UU.addUniform("direction1", 3), UU.addUniform("direction2", 3)
+      buildUniformLayout(uu) {
+        super.buildUniformLayout(uu), uu.addUniform("direction1", 3), uu.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CONEEMITTER\n#define DIRECTEDCONEEMITTER"
@@ -1186,55 +1186,55 @@ export const modules = {
         return "ConeDirectedParticleEmitter"
       }
       serialize() {
-        const UU = super.serialize();
-        return UU.direction1 = this.direction1.vgU(), UU.direction2 = this.direction2.vgU(), UU
+        const uu = super.serialize();
+        return uu.direction1 = this.direction1.AEu(), uu.direction2 = this.direction2.AEu(), uu
       }
-      parse(UU) {
-        super.parse(UU), EU.n.FromArrayToRef(UU.direction1, 0, this.direction1), EU.n.FromArrayToRef(UU.direction2, 0, this.direction2)
+      parse(uu) {
+        super.parse(uu), Qu.p.FromArrayToRef(uu.direction1, 0, this.direction1), Qu.p.FromArrayToRef(uu.direction2, 0, this.direction2)
       }
     }
-    class mU {
+    class bu {
       get mesh() {
         return this._mesh
       }
-      set mesh(UU) {
-        this._mesh !== UU && (this._mesh = UU, UU ? (this._indices = UU.dgU(), this._positions = UU.getVerticesData(PU.l.PositionKind), this._normals = UU.getVerticesData(PU.l.NormalKind)) : (this._indices = null, this._positions = null, this._normals = null))
+      set mesh(uu) {
+        this._mesh !== uu && (this._mesh = uu, uu ? (this._indices = uu.DEu(), this._positions = uu.getVerticesData(mu.h.PositionKind), this._normals = uu.getVerticesData(mu.h.NormalKind)) : (this._indices = null, this._positions = null, this._normals = null))
       }
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this._indices = null, this._positions = null, this._normals = null, this._storedNormal = EU.n.Zero(), this._mesh = null, this.direction1 = new EU.n(0, 1, 0), this.direction2 = new EU.n(0, 1, 0), this.useMeshNormalsForDirection = !0, this.mesh = UU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this._indices = null, this._positions = null, this._normals = null, this._storedNormal = Qu.p.Zero(), this._mesh = null, this.direction1 = new Qu.p(0, 1, 0), this.direction2 = new Qu.p(0, 1, 0), this.useMeshNormalsForDirection = !0, this.mesh = uu
       }
-      startDirectionFunction(UU, RU, gU, tU) {
-        if (this.useMeshNormalsForDirection && this._normals) return void EU.n.TransformNormalToRef(this._storedNormal, UU, RU);
-        const pU = (0, uU.RandomRange)(this.direction1.x, this.direction2.x),
-          PU = (0, uU.RandomRange)(this.direction1.y, this.direction2.y),
-          TU = (0, uU.RandomRange)(this.direction1.z, this.direction2.z);
-        tU ? RU.b_(pU, PU, TU) : EU.n.TransformNormalFromFloatsToRef(pU, PU, TU, UU, RU)
+      startDirectionFunction(uu, Ru, yu, Eu) {
+        if (this.useMeshNormalsForDirection && this._normals) return void Qu.p.TransformNormalToRef(this._storedNormal, uu, Ru);
+        const Ku = (0, xu.RandomRange)(this.direction1.x, this.direction2.x),
+          mu = (0, xu.RandomRange)(this.direction1.y, this.direction2.y),
+          Ju = (0, xu.RandomRange)(this.direction1.z, this.direction2.z);
+        Eu ? Ru.muu(Ku, mu, Ju) : Qu.p.TransformNormalFromFloatsToRef(Ku, mu, Ju, uu, Ru)
       }
-      startPositionFunction(UU, RU, gU, tU) {
+      startPositionFunction(uu, Ru, yu, Eu) {
         if (!this._indices || !this._positions) return;
-        const pU = 3 * (Math.random() * (this._indices.length / 3) | 0),
-          PU = Math.random(),
-          TU = Math.random() * (1 - PU),
-          qU = 1 - PU - TU,
-          KU = this._indices[pU],
-          cU = this._indices[pU + 1],
-          GU = this._indices[pU + 2],
-          jU = EU.h.xC[0],
-          uU = EU.h.xC[1],
-          CU = EU.h.xC[2],
-          hU = EU.h.xC[3];
-        EU.n.FromArrayToRef(this._positions, 3 * KU, jU), EU.n.FromArrayToRef(this._positions, 3 * cU, uU), EU.n.FromArrayToRef(this._positions, 3 * GU, CU), hU.x = PU * jU.x + TU * uU.x + qU * CU.x, hU.y = PU * jU.y + TU * uU.y + qU * CU.y, hU.z = PU * jU.z + TU * uU.z + qU * CU.z, tU ? RU.b_(hU.x, hU.y, hU.z) : EU.n.TransformCoordinatesFromFloatsToRef(hU.x, hU.y, hU.z, UU, RU), this.useMeshNormalsForDirection && this._normals && (EU.n.FromArrayToRef(this._normals, 3 * KU, jU), EU.n.FromArrayToRef(this._normals, 3 * cU, uU), EU.n.FromArrayToRef(this._normals, 3 * GU, CU), this._storedNormal.x = PU * jU.x + TU * uU.x + qU * CU.x, this._storedNormal.y = PU * jU.y + TU * uU.y + qU * CU.y, this._storedNormal.z = PU * jU.z + TU * uU.z + qU * CU.z)
+        const Ku = 3 * (Math.random() * (this._indices.length / 3) | 0),
+          mu = Math.random(),
+          Ju = Math.random() * (1 - mu),
+          Nu = 1 - mu - Ju,
+          Xu = this._indices[Ku],
+          Vu = this._indices[Ku + 1],
+          ru = this._indices[Ku + 2],
+          Bu = Qu.m.MS[0],
+          xu = Qu.m.MS[1],
+          Su = Qu.m.MS[2],
+          pu = Qu.m.MS[3];
+        Qu.p.FromArrayToRef(this._positions, 3 * Xu, Bu), Qu.p.FromArrayToRef(this._positions, 3 * Vu, xu), Qu.p.FromArrayToRef(this._positions, 3 * ru, Su), pu.x = mu * Bu.x + Ju * xu.x + Nu * Su.x, pu.y = mu * Bu.y + Ju * xu.y + Nu * Su.y, pu.z = mu * Bu.z + Ju * xu.z + Nu * Su.z, Eu ? Ru.muu(pu.x, pu.y, pu.z) : Qu.p.TransformCoordinatesFromFloatsToRef(pu.x, pu.y, pu.z, uu, Ru), this.useMeshNormalsForDirection && this._normals && (Qu.p.FromArrayToRef(this._normals, 3 * Xu, Bu), Qu.p.FromArrayToRef(this._normals, 3 * Vu, xu), Qu.p.FromArrayToRef(this._normals, 3 * ru, Su), this._storedNormal.x = mu * Bu.x + Ju * xu.x + Nu * Su.x, this._storedNormal.y = mu * Bu.y + Ju * xu.y + Nu * Su.y, this._storedNormal.z = mu * Bu.z + Ju * xu.z + Nu * Su.z)
       }
       clone() {
-        const UU = new mU(this.mesh);
-        return jU.c.DeepCopy(this, UU), UU
+        const uu = new bu(this.mesh);
+        return Bu.e.DeepCopy(this, uu), uu
       }
-      applyToShader(UU) {
-        UU.setVector3("direction1", this.direction1), UU.setVector3("direction2", this.direction2)
+      applyToShader(uu) {
+        uu.setVector3("direction1", this.direction1), uu.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(UU) {
-        UU.addUniform("direction1", 3), UU.addUniform("direction2", 3)
+      buildUniformLayout(uu) {
+        uu.addUniform("direction1", 3), uu.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return ""
@@ -1243,19 +1243,19 @@ export const modules = {
         return "MeshParticleEmitter"
       }
       serialize() {
-        const UU = {};
-        return UU.type = this.getClassName(), UU.direction1 = this.direction1.vgU(), UU.direction2 = this.direction2.vgU(), UU.meshId = this.mesh?.id, UU.useMeshNormalsForDirection = this.useMeshNormalsForDirection, UU
+        const uu = {};
+        return uu.type = this.getClassName(), uu.direction1 = this.direction1.AEu(), uu.direction2 = this.direction2.AEu(), uu.meshId = this.mesh?.id, uu.useMeshNormalsForDirection = this.useMeshNormalsForDirection, uu
       }
-      parse(UU, RU) {
-        EU.n.FromArrayToRef(UU.direction1, 0, this.direction1), EU.n.FromArrayToRef(UU.direction2, 0, this.direction2), UU.meshId && RU && (this.mesh = RU.getLastMeshById(UU.meshId)), this.useMeshNormalsForDirection = UU.useMeshNormalsForDirection
+      parse(uu, Ru) {
+        Qu.p.FromArrayToRef(uu.direction1, 0, this.direction1), Qu.p.FromArrayToRef(uu.direction2, 0, this.direction2), uu.meshId && Ru && (this.mesh = Ru.getLastMeshById(uu.meshId)), this.useMeshNormalsForDirection = uu.useMeshNormalsForDirection
       }
     }
-    class IU {
+    class Cu {
       get targetStopDuration() {
         return this._targetStopDuration
       }
-      set targetStopDuration(UU) {
-        this._targetStopDuration !== UU && (this._targetStopDuration = UU)
+      set targetStopDuration(uu) {
+        this._targetStopDuration !== uu && (this._targetStopDuration = uu)
       }
       get isNodeGenerated() {
         return !1
@@ -1263,62 +1263,62 @@ export const modules = {
       get noiseTexture() {
         return this._noiseTexture
       }
-      set noiseTexture(UU) {
-        this._noiseTexture !== UU && (this._noiseTexture = UU, this._reset())
+      set noiseTexture(uu) {
+        this._noiseTexture !== uu && (this._noiseTexture = uu, this._reset())
       }
       get attractors() {
         return this._attractors.slice(0)
       }
-      addAttractor(UU) {
-        this._attractors.push(UU)
+      addAttractor(uu) {
+        this._attractors.push(uu)
       }
-      removeAttractor(UU) {
-        const RU = this._attractors.indexOf(UU); - 1 !== RU && this._attractors.splice(RU, 1)
+      removeAttractor(uu) {
+        const Ru = this._attractors.indexOf(uu); - 1 !== Ru && this._attractors.splice(Ru, 1)
       }
       get _isAnimationSheetEnabled() {
         return this._animationSheetEnabled
       }
-      set _isAnimationSheetEnabled(UU) {
-        this._animationSheetEnabled !== UU && (this._animationSheetEnabled = UU)
+      set _isAnimationSheetEnabled(uu) {
+        this._animationSheetEnabled !== uu && (this._animationSheetEnabled = uu)
       }
       get isAnimationSheetEnabled() {
         return this._isAnimationSheetEnabled
       }
-      set isAnimationSheetEnabled(UU) {
-        this._isAnimationSheetEnabled != UU && (this._isAnimationSheetEnabled = UU, this._reset())
+      set isAnimationSheetEnabled(uu) {
+        this._isAnimationSheetEnabled != uu && (this._isAnimationSheetEnabled = uu, this._reset())
       }
       get useLogarithmicDepth() {
         return this._useLogarithmicDepth
       }
-      set useLogarithmicDepth(UU) {
-        this._useLogarithmicDepth = UU && this.aZ().WC().getCaps().fragmentDepthSupported
+      set useLogarithmicDepth(uu) {
+        this._useLogarithmicDepth = uu && this.lD().eS().getCaps().fragmentDepthSupported
       }
-      aZ() {
+      lD() {
         return this._scene
       }
       _hasTargetStopDurationDependantGradient() {
         return this._startSizeGradients && this._startSizeGradients.length > 0 || this._emitRateGradients && this._emitRateGradients.length > 0 || this._lifeTimeGradients && this._lifeTimeGradients.length > 0
       }
-      _setEngineBasedOnBlendMode(UU) {
-        switch (UU) {
-          case IU.BLENDMODE_MULTIPLYADD:
+      _setEngineBasedOnBlendMode(uu) {
+        switch (uu) {
+          case Cu.BLENDMODE_MULTIPLYADD:
             return;
-          case IU.BLENDMODE_ADD:
-            UU = 1;
+          case Cu.BLENDMODE_ADD:
+            uu = 1;
             break;
-          case IU.BLENDMODE_ONEONE:
-            UU = 6;
+          case Cu.BLENDMODE_ONEONE:
+            uu = 6;
             break;
-          case IU.BLENDMODE_STANDARD:
-            UU = 2;
+          case Cu.BLENDMODE_STANDARD:
+            uu = 2;
             break;
-          case IU.BLENDMODE_MULTIPLY:
-            UU = 4;
+          case Cu.BLENDMODE_MULTIPLY:
+            uu = 4;
             break;
-          case IU.BLENDMODE_SUBTRACT:
-            UU = 3
+          case Cu.BLENDMODE_SUBTRACT:
+            uu = 3
         }
-        this._engine.setAlphaMode(UU)
+        this._engine.setAlphaMode(uu)
       }
       getDragGradients() {
         return this._dragGradients
@@ -1353,216 +1353,216 @@ export const modules = {
       getEmitRateGradients() {
         return this._emitRateGradients
       }
-      addEmitRateGradient(UU, RU, gU) {
-        return this._emitRateGradients || (this._emitRateGradients = []), this._addFactorGradient(this._emitRateGradients, UU, RU, gU), this
+      addEmitRateGradient(uu, Ru, yu) {
+        return this._emitRateGradients || (this._emitRateGradients = []), this._addFactorGradient(this._emitRateGradients, uu, Ru, yu), this
       }
-      removeEmitRateGradient(UU) {
-        return this._removeFactorGradient(this._emitRateGradients, UU), this
+      removeEmitRateGradient(uu) {
+        return this._removeFactorGradient(this._emitRateGradients, uu), this
       }
       get direction1() {
-        return this.particleEmitterType.direction1 ? this.particleEmitterType.direction1 : EU.n.Zero()
+        return this.particleEmitterType.direction1 ? this.particleEmitterType.direction1 : Qu.p.Zero()
       }
-      set direction1(UU) {
-        this.particleEmitterType.direction1 && (this.particleEmitterType.direction1 = UU)
+      set direction1(uu) {
+        this.particleEmitterType.direction1 && (this.particleEmitterType.direction1 = uu)
       }
       get direction2() {
-        return this.particleEmitterType.direction2 ? this.particleEmitterType.direction2 : EU.n.Zero()
+        return this.particleEmitterType.direction2 ? this.particleEmitterType.direction2 : Qu.p.Zero()
       }
-      set direction2(UU) {
-        this.particleEmitterType.direction2 && (this.particleEmitterType.direction2 = UU)
+      set direction2(uu) {
+        this.particleEmitterType.direction2 && (this.particleEmitterType.direction2 = uu)
       }
       get minEmitBox() {
-        return this.particleEmitterType.minEmitBox ? this.particleEmitterType.minEmitBox : EU.n.Zero()
+        return this.particleEmitterType.minEmitBox ? this.particleEmitterType.minEmitBox : Qu.p.Zero()
       }
-      set minEmitBox(UU) {
-        this.particleEmitterType.minEmitBox && (this.particleEmitterType.minEmitBox = UU)
+      set minEmitBox(uu) {
+        this.particleEmitterType.minEmitBox && (this.particleEmitterType.minEmitBox = uu)
       }
       get maxEmitBox() {
-        return this.particleEmitterType.maxEmitBox ? this.particleEmitterType.maxEmitBox : EU.n.Zero()
+        return this.particleEmitterType.maxEmitBox ? this.particleEmitterType.maxEmitBox : Qu.p.Zero()
       }
-      set maxEmitBox(UU) {
-        this.particleEmitterType.maxEmitBox && (this.particleEmitterType.maxEmitBox = UU)
+      set maxEmitBox(uu) {
+        this.particleEmitterType.maxEmitBox && (this.particleEmitterType.maxEmitBox = uu)
       }
       get billboardMode() {
         return this._billboardMode
       }
-      set billboardMode(UU) {
-        this._billboardMode !== UU && (this._billboardMode = UU, this._reset())
+      set billboardMode(uu) {
+        this._billboardMode !== uu && (this._billboardMode = uu, this._reset())
       }
       get isBillboardBased() {
         return this._isBillboardBased
       }
-      set isBillboardBased(UU) {
-        this._isBillboardBased !== UU && (this._isBillboardBased = UU, this._reset())
+      set isBillboardBased(uu) {
+        this._isBillboardBased !== uu && (this._isBillboardBased = uu, this._reset())
       }
       get imageProcessingConfiguration() {
         return this._imageProcessingConfiguration
       }
-      set imageProcessingConfiguration(UU) {
-        this._attachImageProcessingConfiguration(UU)
+      set imageProcessingConfiguration(uu) {
+        this._attachImageProcessingConfiguration(uu)
       }
-      _attachImageProcessingConfiguration(UU) {
-        UU !== this._imageProcessingConfiguration && (!UU && this._scene ? this._imageProcessingConfiguration = this._scene.imageProcessingConfiguration : this._imageProcessingConfiguration = UU)
+      _attachImageProcessingConfiguration(uu) {
+        uu !== this._imageProcessingConfiguration && (!uu && this._scene ? this._imageProcessingConfiguration = this._scene.imageProcessingConfiguration : this._imageProcessingConfiguration = uu)
       }
       _reset() {}
-      _addFactorGradient(UU, RU, gU, pU) {
-        const EU = new tU.f(RU, gU, pU);
-        UU.push(EU), UU.sort(((UU, RU) => UU.gradient < RU.gradient ? -1 : UU.gradient > RU.gradient ? 1 : 0))
+      _addFactorGradient(uu, Ru, yu, Ku) {
+        const Qu = new Eu.g(Ru, yu, Ku);
+        uu.push(Qu), uu.sort(((uu, Ru) => uu.gradient < Ru.gradient ? -1 : uu.gradient > Ru.gradient ? 1 : 0))
       }
-      _removeFactorGradient(UU, RU) {
-        if (!UU) return;
-        let gU = 0;
-        for (const tU of UU) {
-          if (tU.gradient === RU) {
-            UU.splice(gU, 1);
+      _removeFactorGradient(uu, Ru) {
+        if (!uu) return;
+        let yu = 0;
+        for (const Eu of uu) {
+          if (Eu.gradient === Ru) {
+            uu.splice(yu, 1);
             break
           }
-          gU++
+          yu++
         }
       }
-      _removeGradientAndTexture(UU, RU, gU) {
-        if (!RU) return this;
-        let tU = 0;
-        for (const pU of RU) {
-          if (pU.gradient === UU) {
-            RU.splice(tU, 1);
+      _removeGradientAndTexture(uu, Ru, yu) {
+        if (!Ru) return this;
+        let Eu = 0;
+        for (const Ku of Ru) {
+          if (Ku.gradient === uu) {
+            Ru.splice(Eu, 1);
             break
           }
-          tU++
+          Eu++
         }
-        return gU && gU.dispose(), this
+        return yu && yu.dispose(), this
       }
-      constructor(UU) {
-        this.animations = [], this.renderingGroupId = 0, this.emitter = EU.n.Zero(), this.emitRate = 10, this.manualEmitCount = -1, this.updateSpeed = .01, this._targetStopDuration = 0, this.disposeOnStop = !1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minSize = 1, this.maxSize = 1, this.minScaleX = 1, this.maxScaleX = 1, this.minScaleY = 1, this.maxScaleY = 1, this.minInitialRotation = 0, this.maxInitialRotation = 0, this.minAngularSpeed = 0, this.maxAngularSpeed = 0, this.layerMask = 268435455, this.customShader = null, this.preventAutoStart = !1, this.applyFog = !1, this._wasDispatched = !1, this._rootUrl = "", this.noiseStrength = new EU.n(10, 10, 10), this._attractors = [], this.onAnimationEnd = null, this.blendMode = IU.BLENDMODE_ONEONE, this.forceDepthWrite = !1, this.preWarmCycles = 0, this.preWarmStepOffset = 1, this.spriteCellChangeSpeed = 1, this.startSpriteCellID = 0, this.endSpriteCellID = 0, this.spriteCellWidth = 0, this.spriteCellHeight = 0, this.spriteCellLoop = !0, this.spriteRandomStartCell = !1, this.translationPivot = new EU.l(0, 0), this._animationSheetEnabled = !1, this.beginAnimationOnStart = !1, this.beginAnimationFrom = 0, this.beginAnimationTo = 60, this.beginAnimationLoop = !1, this.worldOffset = new EU.n(0, 0, 0), this._useLogarithmicDepth = !1, this.gravity = EU.n.Zero(), this._colorGradients = null, this._sizeGradients = null, this._lifeTimeGradients = null, this._angularSpeedGradients = null, this._velocityGradients = null, this._limitVelocityGradients = null, this._dragGradients = null, this._emitRateGradients = null, this._startSizeGradients = null, this._rampGradients = null, this._colorRemapGradients = null, this._alphaRemapGradients = null, this.startDelay = 0, this.limitVelocityDamping = .4, this.color1 = new cU.g(1, 1, 1, 1), this.color2 = new cU.g(1, 1, 1, 1), this.colorDead = new cU.g(0, 0, 0, 1), this.textureMask = new cU.g(1, 1, 1, 1), this._isSubEmitter = !1, this._billboardMode = 7, this._isBillboardBased = !0, this._imageProcessingConfigurationDefines = new KU.b, this.id = UU, this.name = UU
+      constructor(uu) {
+        this.animations = [], this.renderingGroupId = 0, this.emitter = Qu.p.Zero(), this.emitRate = 10, this.manualEmitCount = -1, this.updateSpeed = .01, this._targetStopDuration = 0, this.disposeOnStop = !1, this.minEmitPower = 1, this.maxEmitPower = 1, this.minLifeTime = 1, this.maxLifeTime = 1, this.minSize = 1, this.maxSize = 1, this.minScaleX = 1, this.maxScaleX = 1, this.minScaleY = 1, this.maxScaleY = 1, this.minInitialRotation = 0, this.maxInitialRotation = 0, this.minAngularSpeed = 0, this.maxAngularSpeed = 0, this.layerMask = 268435455, this.customShader = null, this.preventAutoStart = !1, this.applyFog = !1, this._wasDispatched = !1, this._rootUrl = "", this.noiseStrength = new Qu.p(10, 10, 10), this._attractors = [], this.onAnimationEnd = null, this.blendMode = Cu.BLENDMODE_ONEONE, this.forceDepthWrite = !1, this.preWarmCycles = 0, this.preWarmStepOffset = 1, this.spriteCellChangeSpeed = 1, this.startSpriteCellID = 0, this.endSpriteCellID = 0, this.spriteCellWidth = 0, this.spriteCellHeight = 0, this.spriteCellLoop = !0, this.spriteRandomStartCell = !1, this.translationPivot = new Qu.n(0, 0), this._animationSheetEnabled = !1, this.beginAnimationOnStart = !1, this.beginAnimationFrom = 0, this.beginAnimationTo = 60, this.beginAnimationLoop = !1, this.worldOffset = new Qu.p(0, 0, 0), this._useLogarithmicDepth = !1, this.gravity = Qu.p.Zero(), this._colorGradients = null, this._sizeGradients = null, this._lifeTimeGradients = null, this._angularSpeedGradients = null, this._velocityGradients = null, this._limitVelocityGradients = null, this._dragGradients = null, this._emitRateGradients = null, this._startSizeGradients = null, this._rampGradients = null, this._colorRemapGradients = null, this._alphaRemapGradients = null, this.startDelay = 0, this.limitVelocityDamping = .4, this.color1 = new Vu.h(1, 1, 1, 1), this.color2 = new Vu.h(1, 1, 1, 1), this.colorDead = new Vu.h(0, 0, 0, 1), this.textureMask = new Vu.h(1, 1, 1, 1), this._isSubEmitter = !1, this._billboardMode = 7, this._isBillboardBased = !0, this._imageProcessingConfigurationDefines = new Xu.b, this.id = uu, this.name = uu
       }
-      createPointEmitter(UU, RU) {
-        const gU = function(UU, RU) {
-          const gU = new CU;
-          return gU.direction1 = UU, gU.direction2 = RU, gU
-        }(UU, RU);
-        return this.particleEmitterType = gU, gU
+      createPointEmitter(uu, Ru) {
+        const yu = function(uu, Ru) {
+          const yu = new Su;
+          return yu.direction1 = uu, yu.direction2 = Ru, yu
+        }(uu, Ru);
+        return this.particleEmitterType = yu, yu
       }
       createHemisphericEmitter() {
-        const UU = function() {
-          return new hU(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
+        const uu = function() {
+          return new pu(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1);
-        return this.particleEmitterType = UU, UU
+        return this.particleEmitterType = uu, uu
       }
       createSphereEmitter() {
-        const UU = function() {
-          return new QU(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
+        const uu = function() {
+          return new Tu(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1);
-        return this.particleEmitterType = UU, UU
+        return this.particleEmitterType = uu, uu
       }
       createDirectedSphereEmitter() {
-        const UU = function() {
-          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new EU.n(0, 1, 0),
-            gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new EU.n(0, 1, 0);
-          return new eU(UU, RU, gU)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new EU.n(0, 1, 0), arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new EU.n(0, 1, 0));
-        return this.particleEmitterType = UU, UU
+        const uu = function() {
+          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Qu.p(0, 1, 0),
+            yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Qu.p(0, 1, 0);
+          return new Wu(uu, Ru, yu)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new Qu.p(0, 1, 0), arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Qu.p(0, 1, 0));
+        return this.particleEmitterType = uu, uu
       }
       createCylinderEmitter() {
-        const UU = function() {
-          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-          return new WU.g(UU, RU, gU, tU)
+        const uu = function() {
+          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+            yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+            Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+          return new ju.h(uu, Ru, yu, Eu)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
-        return this.particleEmitterType = UU, UU
+        return this.particleEmitterType = uu, uu
       }
       createDirectedCylinderEmitter() {
-        const UU = function() {
-          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-            tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new EU.n(0, 1, 0),
-            pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new EU.n(0, 1, 0);
-          return new WU.d(UU, RU, gU, tU, pU)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new EU.n(0, 1, 0), arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new EU.n(0, 1, 0));
-        return this.particleEmitterType = UU, UU
+        const uu = function() {
+          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+            yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+            Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Qu.p(0, 1, 0),
+            Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Qu.p(0, 1, 0);
+          return new ju.d(uu, Ru, yu, Eu, Ku)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Qu.p(0, 1, 0), arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Qu.p(0, 1, 0));
+        return this.particleEmitterType = uu, uu
       }
       createConeEmitter() {
-        const UU = function() {
-          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4;
-          return new fU(UU, RU)
+        const uu = function() {
+          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4;
+          return new Hu(uu, Ru)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4);
-        return this.particleEmitterType = UU, UU
+        return this.particleEmitterType = uu, uu
       }
       createDirectedConeEmitter() {
-        const UU = function() {
-          let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-            RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4,
-            gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new EU.n(0, 1, 0),
-            tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new EU.n(0, 1, 0);
-          return new xU(UU, RU, gU, tU)
-        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new EU.n(0, 1, 0), arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new EU.n(0, 1, 0));
-        return this.particleEmitterType = UU, UU
+        const uu = function() {
+          let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+            Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4,
+            yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Qu.p(0, 1, 0),
+            Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Qu.p(0, 1, 0);
+          return new du(uu, Ru, yu, Eu)
+        }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.PI / 4, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Qu.p(0, 1, 0), arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Qu.p(0, 1, 0));
+        return this.particleEmitterType = uu, uu
       }
-      createBoxEmitter(UU, RU, gU, tU) {
-        const pU = new GU.c;
-        return this.particleEmitterType = pU, this.direction1 = UU, this.direction2 = RU, this.minEmitBox = gU, this.maxEmitBox = tU, pU
+      createBoxEmitter(uu, Ru, yu, Eu) {
+        const Ku = new ru.b;
+        return this.particleEmitterType = Ku, this.direction1 = uu, this.direction2 = Ru, this.minEmitBox = yu, this.maxEmitBox = Eu, Ku
       }
       createMeshEmitter() {
-        const UU = function() {
-          return new mU(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null)
+        const uu = function() {
+          return new bu(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null)
         }(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null);
-        return this.particleEmitterType = UU, UU
+        return this.particleEmitterType = uu, uu
       }
     }
-    IU.BLENDMODE_ONEONE = 0, IU.BLENDMODE_STANDARD = 1, IU.BLENDMODE_ADD = 2, IU.BLENDMODE_MULTIPLY = 3, IU.BLENDMODE_MULTIPLYADD = 4, IU.BLENDMODE_SUBTRACT = -1;
-    class JU {
+    Cu.BLENDMODE_ONEONE = 0, Cu.BLENDMODE_STANDARD = 1, Cu.BLENDMODE_ADD = 2, Cu.BLENDMODE_MULTIPLY = 3, Cu.BLENDMODE_MULTIPLYADD = 4, Cu.BLENDMODE_SUBTRACT = -1;
+    class ku {
       constructor() {
-        this.attachedSubEmitters = null, this.currentColor1 = new cU.g(0, 0, 0, 0), this.currentColor2 = new cU.g(0, 0, 0, 0), this.currentSize1 = 0, this.currentSize2 = 0, this.currentAngularSpeed1 = 0, this.currentAngularSpeed2 = 0, this.currentVelocity1 = 0, this.currentVelocity2 = 0, this.scaledDirection = EU.n.Zero(), this.currentLimitVelocity1 = 0, this.currentLimitVelocity2 = 0, this.currentDrag1 = 0, this.currentDrag2 = 0
+        this.attachedSubEmitters = null, this.currentColor1 = new Vu.h(0, 0, 0, 0), this.currentColor2 = new Vu.h(0, 0, 0, 0), this.currentSize1 = 0, this.currentSize2 = 0, this.currentAngularSpeed1 = 0, this.currentAngularSpeed2 = 0, this.currentVelocity1 = 0, this.currentVelocity2 = 0, this.scaledDirection = Qu.p.Zero(), this.currentLimitVelocity1 = 0, this.currentLimitVelocity2 = 0, this.currentDrag1 = 0, this.currentDrag2 = 0
       }
       reset() {
         this.currentColorGradient = null, this.currentSizeGradient = null, this.currentAngularSpeedGradient = null, this.currentVelocityGradient = null, this.currentLimitVelocityGradient = null, this.currentDragGradient = null, this.randomCellOffset = void 0, this.randomNoiseCoordinates1 = null, this.randomNoiseCoordinates2 = null
       }
     }
-    class wU {
-      constructor(UU) {
-        this.particleSystem = UU, this.position = EU.n.Zero(), this.direction = EU.n.Zero(), this.color = new cU.g(0, 0, 0, 0), this.colorStep = new cU.g(0, 0, 0, 0), this.initialColor = new cU.g(0, 0, 0, 0), this.colorDead = new cU.g(0, 0, 0, 0), this.lifeTime = 1, this.age = 0, this.size = 0, this.scale = new EU.l(1, 1), this.angle = 0, this.angularSpeed = 0, this.cellIndex = 0, this.metadata = null, this._properties = new JU, this.id = wU._Count++, this.particleSystem.isAnimationSheetEnabled && this._updateCellInfoFromSystem()
+    class eu {
+      constructor(uu) {
+        this.particleSystem = uu, this.position = Qu.p.Zero(), this.direction = Qu.p.Zero(), this.color = new Vu.h(0, 0, 0, 0), this.colorStep = new Vu.h(0, 0, 0, 0), this.initialColor = new Vu.h(0, 0, 0, 0), this.colorDead = new Vu.h(0, 0, 0, 0), this.lifeTime = 1, this.age = 0, this.size = 0, this.scale = new Qu.n(1, 1), this.angle = 0, this.angularSpeed = 0, this.cellIndex = 0, this.metadata = null, this._properties = new ku, this.id = eu._Count++, this.particleSystem.isAnimationSheetEnabled && this._updateCellInfoFromSystem()
       }
       _updateCellInfoFromSystem() {
         this.cellIndex = this.particleSystem.startSpriteCellID
       }
       updateCellIndex() {
-        let UU = this.age,
-          RU = this.particleSystem.spriteCellChangeSpeed;
-        this.particleSystem.spriteRandomStartCell && (void 0 === this._properties.randomCellOffset && (this._properties.randomCellOffset = Math.random() * this.lifeTime), 0 === RU ? (RU = 1, UU = this._properties.randomCellOffset) : UU += this._properties.randomCellOffset);
-        const gU = this._properties.initialEndSpriteCellId - this._properties.initialStartSpriteCellId + 1;
-        let tU;
-        tU = this._properties.initialSpriteCellLoop ? (0, uU.Clamp)(UU * RU % this.lifeTime / this.lifeTime) : (0, uU.Clamp)(UU * RU / this.lifeTime), this.cellIndex = this._properties.initialStartSpriteCellId + tU * gU | 0
+        let uu = this.age,
+          Ru = this.particleSystem.spriteCellChangeSpeed;
+        this.particleSystem.spriteRandomStartCell && (void 0 === this._properties.randomCellOffset && (this._properties.randomCellOffset = Math.random() * this.lifeTime), 0 === Ru ? (Ru = 1, uu = this._properties.randomCellOffset) : uu += this._properties.randomCellOffset);
+        const yu = this._properties.initialEndSpriteCellId - this._properties.initialStartSpriteCellId + 1;
+        let Eu;
+        Eu = this._properties.initialSpriteCellLoop ? (0, xu.Clamp)(uu * Ru % this.lifeTime / this.lifeTime) : (0, xu.Clamp)(uu * Ru / this.lifeTime), this.cellIndex = this._properties.initialStartSpriteCellId + Eu * yu | 0
       }
-      _inheritParticleInfoToSubEmitter(UU) {
-        if (UU.particleSystem.emitter.position) {
-          const RU = UU.particleSystem.emitter;
-          if (RU.position.PgU(this.position), UU.inheritDirection) {
-            const UU = EU.h.xC[0];
-            this.direction.normalizeToRef(UU), RU.setDirection(UU, 0, Math.PI / 2)
+      _inheritParticleInfoToSubEmitter(uu) {
+        if (uu.particleSystem.emitter.position) {
+          const Ru = uu.particleSystem.emitter;
+          if (Ru.position.Oyu(this.position), uu.inheritDirection) {
+            const uu = Qu.m.MS[0];
+            this.direction.normalizeToRef(uu), Ru.setDirection(uu, 0, Math.PI / 2)
           }
         } else {
-          UU.particleSystem.emitter.PgU(this.position)
+          uu.particleSystem.emitter.Oyu(this.position)
         }
-        this.direction.scaleToRef(UU.inheritedVelocityAmount / 2, EU.h.xC[0]), UU.particleSystem._inheritedVelocityOffset.PgU(EU.h.xC[0])
+        this.direction.scaleToRef(uu.inheritedVelocityAmount / 2, Qu.m.MS[0]), uu.particleSystem._inheritedVelocityOffset.Oyu(Qu.m.MS[0])
       }
       _inheritParticleInfoToSubEmitters() {
         if (this._properties.attachedSubEmitters && this._properties.attachedSubEmitters.length > 0)
-          for (const UU of this._properties.attachedSubEmitters) this._inheritParticleInfoToSubEmitter(UU)
+          for (const uu of this._properties.attachedSubEmitters) this._inheritParticleInfoToSubEmitter(uu)
       }
       _reset() {
-        this._properties.onReset && this._properties.onReset(), this.age = 0, this.id = wU._Count++, this._properties.reset(), this.metadata = null, this.cellIndex = this.particleSystem.startSpriteCellID
+        this._properties.onReset && this._properties.onReset(), this.age = 0, this.id = eu._Count++, this._properties.reset(), this.metadata = null, this.cellIndex = this.particleSystem.startSpriteCellID
       }
-      copyTo(UU) {
-        UU.position.PgU(this.position), this._properties.initialDirection ? UU._properties.initialDirection ? UU._properties.initialDirection.PgU(this._properties.initialDirection) : UU._properties.initialDirection = this._properties.initialDirection.clone() : UU._properties.initialDirection = null, UU.direction.PgU(this.direction), this._properties.localPosition && (UU._properties.localPosition ? UU._properties.localPosition.PgU(this._properties.localPosition) : UU._properties.localPosition = this._properties.localPosition.clone()), UU.color.PgU(this.color), UU.colorStep.PgU(this.colorStep), UU.initialColor.PgU(this.initialColor), UU.colorDead.PgU(this.colorDead), UU.lifeTime = this.lifeTime, UU.age = this.age, UU._properties.randomCellOffset = this._properties.randomCellOffset, UU.size = this.size, UU.scale.PgU(this.scale), UU.angle = this.angle, UU.angularSpeed = this.angularSpeed, UU.particleSystem = this.particleSystem, UU.cellIndex = this.cellIndex, UU.id = this.id, UU._properties.attachedSubEmitters = this._properties.attachedSubEmitters, this._properties.currentColorGradient && (UU._properties.currentColorGradient = this._properties.currentColorGradient, UU._properties.currentColor1.PgU(this._properties.currentColor1), UU._properties.currentColor2.PgU(this._properties.currentColor2)), this._properties.currentSizeGradient && (UU._properties.currentSizeGradient = this._properties.currentSizeGradient, UU._properties.currentSize1 = this._properties.currentSize1, UU._properties.currentSize2 = this._properties.currentSize2), this._properties.currentAngularSpeedGradient && (UU._properties.currentAngularSpeedGradient = this._properties.currentAngularSpeedGradient, UU._properties.currentAngularSpeed1 = this._properties.currentAngularSpeed1, UU._properties.currentAngularSpeed2 = this._properties.currentAngularSpeed2), this._properties.currentVelocityGradient && (UU._properties.currentVelocityGradient = this._properties.currentVelocityGradient, UU._properties.currentVelocity1 = this._properties.currentVelocity1, UU._properties.currentVelocity2 = this._properties.currentVelocity2), this._properties.currentLimitVelocityGradient && (UU._properties.currentLimitVelocityGradient = this._properties.currentLimitVelocityGradient, UU._properties.currentLimitVelocity1 = this._properties.currentLimitVelocity1, UU._properties.currentLimitVelocity2 = this._properties.currentLimitVelocity2), this._properties.currentDragGradient && (UU._properties.currentDragGradient = this._properties.currentDragGradient, UU._properties.currentDrag1 = this._properties.currentDrag1, UU._properties.currentDrag2 = this._properties.currentDrag2), this.particleSystem.isAnimationSheetEnabled && (UU._properties.initialStartSpriteCellId = this._properties.initialStartSpriteCellId, UU._properties.initialEndSpriteCellId = this._properties.initialEndSpriteCellId, UU._properties.initialSpriteCellLoop = this._properties.initialSpriteCellLoop), this.particleSystem.useRampGradients && (UU.remapData && this.remapData ? UU.remapData.PgU(this.remapData) : UU.remapData = new EU.q(0, 0, 0, 0)), this._properties.randomNoiseCoordinates1 && this._properties.randomNoiseCoordinates2 && (UU._properties.randomNoiseCoordinates1 && UU._properties.randomNoiseCoordinates2 ? (UU._properties.randomNoiseCoordinates1.PgU(this._properties.randomNoiseCoordinates1), UU._properties.randomNoiseCoordinates2.PgU(this._properties.randomNoiseCoordinates2)) : (UU._properties.randomNoiseCoordinates1 = this._properties.randomNoiseCoordinates1.clone(), UU._properties.randomNoiseCoordinates2 = this._properties.randomNoiseCoordinates2.clone())), UU.metadata = this.metadata
+      copyTo(uu) {
+        uu.position.Oyu(this.position), this._properties.initialDirection ? uu._properties.initialDirection ? uu._properties.initialDirection.Oyu(this._properties.initialDirection) : uu._properties.initialDirection = this._properties.initialDirection.clone() : uu._properties.initialDirection = null, uu.direction.Oyu(this.direction), this._properties.localPosition && (uu._properties.localPosition ? uu._properties.localPosition.Oyu(this._properties.localPosition) : uu._properties.localPosition = this._properties.localPosition.clone()), uu.color.Oyu(this.color), uu.colorStep.Oyu(this.colorStep), uu.initialColor.Oyu(this.initialColor), uu.colorDead.Oyu(this.colorDead), uu.lifeTime = this.lifeTime, uu.age = this.age, uu._properties.randomCellOffset = this._properties.randomCellOffset, uu.size = this.size, uu.scale.Oyu(this.scale), uu.angle = this.angle, uu.angularSpeed = this.angularSpeed, uu.particleSystem = this.particleSystem, uu.cellIndex = this.cellIndex, uu.id = this.id, uu._properties.attachedSubEmitters = this._properties.attachedSubEmitters, this._properties.currentColorGradient && (uu._properties.currentColorGradient = this._properties.currentColorGradient, uu._properties.currentColor1.Oyu(this._properties.currentColor1), uu._properties.currentColor2.Oyu(this._properties.currentColor2)), this._properties.currentSizeGradient && (uu._properties.currentSizeGradient = this._properties.currentSizeGradient, uu._properties.currentSize1 = this._properties.currentSize1, uu._properties.currentSize2 = this._properties.currentSize2), this._properties.currentAngularSpeedGradient && (uu._properties.currentAngularSpeedGradient = this._properties.currentAngularSpeedGradient, uu._properties.currentAngularSpeed1 = this._properties.currentAngularSpeed1, uu._properties.currentAngularSpeed2 = this._properties.currentAngularSpeed2), this._properties.currentVelocityGradient && (uu._properties.currentVelocityGradient = this._properties.currentVelocityGradient, uu._properties.currentVelocity1 = this._properties.currentVelocity1, uu._properties.currentVelocity2 = this._properties.currentVelocity2), this._properties.currentLimitVelocityGradient && (uu._properties.currentLimitVelocityGradient = this._properties.currentLimitVelocityGradient, uu._properties.currentLimitVelocity1 = this._properties.currentLimitVelocity1, uu._properties.currentLimitVelocity2 = this._properties.currentLimitVelocity2), this._properties.currentDragGradient && (uu._properties.currentDragGradient = this._properties.currentDragGradient, uu._properties.currentDrag1 = this._properties.currentDrag1, uu._properties.currentDrag2 = this._properties.currentDrag2), this.particleSystem.isAnimationSheetEnabled && (uu._properties.initialStartSpriteCellId = this._properties.initialStartSpriteCellId, uu._properties.initialEndSpriteCellId = this._properties.initialEndSpriteCellId, uu._properties.initialSpriteCellLoop = this._properties.initialSpriteCellLoop), this.particleSystem.useRampGradients && (uu.remapData && this.remapData ? uu.remapData.Oyu(this.remapData) : uu.remapData = new Qu.r(0, 0, 0, 0)), this._properties.randomNoiseCoordinates1 && this._properties.randomNoiseCoordinates2 && (uu._properties.randomNoiseCoordinates1 && uu._properties.randomNoiseCoordinates2 ? (uu._properties.randomNoiseCoordinates1.Oyu(this._properties.randomNoiseCoordinates1), uu._properties.randomNoiseCoordinates2.Oyu(this._properties.randomNoiseCoordinates2)) : (uu._properties.randomNoiseCoordinates1 = this._properties.randomNoiseCoordinates1.clone(), uu._properties.randomNoiseCoordinates2 = this._properties.randomNoiseCoordinates2.clone())), uu.metadata = this.metadata
       }
     }
-    wU._Count = 0;
-    var nU = gU(40477);
-    class bU {
+    eu._Count = 0;
+    var Au = yu(40668);
+    class Du {
       get currentFrame() {
         return this._currentFrame
       }
@@ -1596,247 +1596,247 @@ export const modules = {
       get isAdditive() {
         return this._host && this._host.isAdditive
       }
-      constructor(UU, RU, gU, tU) {
-        if (this._events = new Array, this._currentFrame = 0, this._originalValue = new Array, this._originalBlendValue = null, this._offsetsCache = {}, this._highLimitsCache = {}, this._stopped = !1, this._blendingFactor = 0, this._currentValue = null, this._currentActiveTarget = null, this._directTarget = null, this._targetPath = "", this._weight = 1, this._absoluteFrameOffset = 0, this._previousElapsedTime = 0, this._yoyoDirection = 1, this._previousAbsoluteFrame = 0, this._playbackFrom = 0, this._playbackTo = 0, this._playbackFrames = 0, this._playbackProgress = 0, this._playbackSyncRoot = null, this._playbackJumped = !1, this._playbackSyncMasterPlayed = 0, this._playbackSyncMasterFrame = 0, this._targetIsArray = !1, this._coreRuntimeAnimation = null, this._animation = RU, this.nD = UU, this._scene = gU, this._host = tU, this._activeTargets = [], RU._runtimeAnimations.push(this), this._animationState = {
+      constructor(uu, Ru, yu, Eu) {
+        if (this._events = new Array, this._currentFrame = 0, this._originalValue = new Array, this._originalBlendValue = null, this._offsetsCache = {}, this._highLimitsCache = {}, this._stopped = !1, this._blendingFactor = 0, this._currentValue = null, this._currentActiveTarget = null, this._directTarget = null, this._targetPath = "", this._weight = 1, this._absoluteFrameOffset = 0, this._previousElapsedTime = 0, this._yoyoDirection = 1, this._previousAbsoluteFrame = 0, this._playbackFrom = 0, this._playbackTo = 0, this._playbackFrames = 0, this._playbackProgress = 0, this._playbackSyncRoot = null, this._playbackJumped = !1, this._playbackSyncMasterPlayed = 0, this._playbackSyncMasterFrame = 0, this._targetIsArray = !1, this._coreRuntimeAnimation = null, this._animation = Ru, this.Av = uu, this._scene = yu, this._host = Eu, this._activeTargets = [], Ru._runtimeAnimations.push(this), this._animationState = {
             key: 0,
             repeatCount: 0,
-            mE: this._getCorrectLoopMode()
-          }, this._animation.dataType === nU.e.ANIMATIONTYPE_MATRIX && (this._animationState.workValue = EU.c.Zero()), this._keys = this._animation.getKeys(), this._minFrame = this._keys[0].frame, this._maxFrame = this._keys[this._keys.length - 1].frame, 0 !== this._minFrame) {
-          const UU = {
+            WQ: this._getCorrectLoopMode()
+          }, this._animation.dataType === Au.d.ANIMATIONTYPE_MATRIX && (this._animationState.workValue = Qu.d.Zero()), this._keys = this._animation.getKeys(), this._minFrame = this._keys[0].frame, this._maxFrame = this._keys[this._keys.length - 1].frame, 0 !== this._minFrame) {
+          const uu = {
             frame: 0,
             value: this._keys[0].value
           };
-          this._keys.splice(0, 0, UU)
+          this._keys.splice(0, 0, uu)
         }
-        if (this.nD instanceof Array) {
-          let UU = 0;
-          for (const RU of this.nD) this._preparePath(RU, UU), this._getOriginalValues(UU), UU++;
+        if (this.Av instanceof Array) {
+          let uu = 0;
+          for (const Ru of this.Av) this._preparePath(Ru, uu), this._getOriginalValues(uu), uu++;
           this._targetIsArray = !0
-        } else this._preparePath(this.nD), this._getOriginalValues(), this._targetIsArray = !1, this._directTarget = this._activeTargets[0];
-        const pU = RU.getEvents();
-        if (pU && pU.length > 0)
-          for (const EU of pU) this._events.push(EU._clone());
-        this._enableBlending = UU && UU.animationPropertiesOverride ? UU.animationPropertiesOverride.enableBlending : this._animation.enableBlending
+        } else this._preparePath(this.Av), this._getOriginalValues(), this._targetIsArray = !1, this._directTarget = this._activeTargets[0];
+        const Ku = Ru.getEvents();
+        if (Ku && Ku.length > 0)
+          for (const Qu of Ku) this._events.push(Qu._clone());
+        this._enableBlending = uu && uu.animationPropertiesOverride ? uu.animationPropertiesOverride.enableBlending : this._animation.enableBlending
       }
-      _preparePath(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const gU = this._animation.targetPropertyPath;
-        if (gU.length > 1) {
-          let tU = UU;
-          for (let UU = 0; UU < gU.length - 1; UU++) {
-            const RU = gU[UU];
-            if (tU = tU[RU], void 0 === tU) throw new Error(`Invalid property (${RU}) in property path (${gU.join(".")})`)
+      _preparePath(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const yu = this._animation.targetPropertyPath;
+        if (yu.length > 1) {
+          let Eu = uu;
+          for (let uu = 0; uu < yu.length - 1; uu++) {
+            const Ru = yu[uu];
+            if (Eu = Eu[Ru], void 0 === Eu) throw new Error(`Invalid property (${Ru}) in property path (${yu.join(".")})`)
           }
-          this._targetPath = gU[gU.length - 1], this._activeTargets[RU] = tU
-        } else this._targetPath = gU[0], this._activeTargets[RU] = UU;
-        if (void 0 === this._activeTargets[RU][this._targetPath]) throw new Error(`Invalid property (${this._targetPath}) in property path (${gU.join(".")})`)
+          this._targetPath = yu[yu.length - 1], this._activeTargets[Ru] = Eu
+        } else this._targetPath = yu[0], this._activeTargets[Ru] = uu;
+        if (void 0 === this._activeTargets[Ru][this._targetPath]) throw new Error(`Invalid property (${this._targetPath}) in property path (${yu.join(".")})`)
       }
       get animation() {
         return this._animation
       }
       reset() {
         if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0])
-          if (this.nD instanceof Array) {
-            let UU = 0;
-            for (const RU of this.nD) void 0 !== this._originalValue[UU] && this._setValue(RU, this._activeTargets[UU], this._originalValue[UU], -1, UU), UU++
-          } else void 0 !== this._originalValue[0] && this._setValue(this.nD, this._directTarget, this._originalValue[0], -1, 0);
+          if (this.Av instanceof Array) {
+            let uu = 0;
+            for (const Ru of this.Av) void 0 !== this._originalValue[uu] && this._setValue(Ru, this._activeTargets[uu], this._originalValue[uu], -1, uu), uu++
+          } else void 0 !== this._originalValue[0] && this._setValue(this.Av, this._directTarget, this._originalValue[0], -1, 0);
         this._offsetsCache = {}, this._highLimitsCache = {}, this._currentFrame = 0, this._blendingFactor = 0;
-        for (let UU = 0; UU < this._events.length; UU++) this._events[UU].isDone = !1
+        for (let uu = 0; uu < this._events.length; uu++) this._events[uu].isDone = !1
       }
       isStopped() {
         return this._stopped
       }
       dispose() {
-        const UU = this._animation.runtimeAnimations.indexOf(this);
-        UU > -1 && this._animation.runtimeAnimations.splice(UU, 1)
+        const uu = this._animation.runtimeAnimations.indexOf(this);
+        uu > -1 && this._animation.runtimeAnimations.splice(uu, 1)
       }
-      setValue(UU, RU) {
+      setValue(uu, Ru) {
         if (this._targetIsArray)
-          for (let gU = 0; gU < this.nD.length; gU++) {
-            const tU = this.nD[gU];
-            this._setValue(tU, this._activeTargets[gU], UU, RU, gU)
-          } else this._setValue(this.nD, this._directTarget, UU, RU, 0)
+          for (let yu = 0; yu < this.Av.length; yu++) {
+            const Eu = this.Av[yu];
+            this._setValue(Eu, this._activeTargets[yu], uu, Ru, yu)
+          } else this._setValue(this.Av, this._directTarget, uu, Ru, 0)
       }
       _getOriginalValues() {
-        let UU, RU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        const gU = this._activeTargets[RU];
-        if (nU.e.InheritOriginalValueFromActiveAnimations) {
-          const UU = this._scene._activeAnimatables;
-          for (let tU = 0; tU < UU.length; tU++) {
-            const pU = UU[tU]._runtimeAnimations;
-            for (let UU = 0; UU < pU.length; UU++) {
-              const tU = pU[UU];
-              if (tU !== this && tU._targetPath === this._targetPath)
-                for (let UU = 0; UU < tU._activeTargets.length; UU++)
-                  if (tU._activeTargets[UU] === gU && void 0 !== tU._originalValue[UU]) return void(tU._originalValue[UU] && tU._originalValue[UU].clone ? this._originalValue[RU] = tU._originalValue[UU].clone() : this._originalValue[RU] = tU._originalValue[UU])
+        let uu, Ru = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        const yu = this._activeTargets[Ru];
+        if (Au.d.InheritOriginalValueFromActiveAnimations) {
+          const uu = this._scene._activeAnimatables;
+          for (let Eu = 0; Eu < uu.length; Eu++) {
+            const Ku = uu[Eu]._runtimeAnimations;
+            for (let uu = 0; uu < Ku.length; uu++) {
+              const Eu = Ku[uu];
+              if (Eu !== this && Eu._targetPath === this._targetPath)
+                for (let uu = 0; uu < Eu._activeTargets.length; uu++)
+                  if (Eu._activeTargets[uu] === yu && void 0 !== Eu._originalValue[uu]) return void(Eu._originalValue[uu] && Eu._originalValue[uu].clone ? this._originalValue[Ru] = Eu._originalValue[uu].clone() : this._originalValue[Ru] = Eu._originalValue[uu])
             }
           }
         }
-        UU = gU.getLocalMatrix && "_matrix" === this._targetPath ? gU.getLocalMatrix() : gU[this._targetPath], UU && UU.clone ? this._originalValue[RU] = UU.clone() : this._originalValue[RU] = UU
+        uu = yu.getLocalMatrix && "_matrix" === this._targetPath ? yu.getLocalMatrix() : yu[this._targetPath], uu && uu.clone ? this._originalValue[Ru] = uu.clone() : this._originalValue[Ru] = uu
       }
-      _registerTargetForLateAnimationBinding(UU, RU) {
-        const gU = UU.target;
-        this._scene._registeredForLateAnimationBindings.pushNoDuplicate(gU), gU._lateAnimationHolders || (gU._lateAnimationHolders = {}), gU._lateAnimationHolders[UU.targetPath] || (gU._lateAnimationHolders[UU.targetPath] = {
+      _registerTargetForLateAnimationBinding(uu, Ru) {
+        const yu = uu.target;
+        this._scene._registeredForLateAnimationBindings.pushNoDuplicate(yu), yu._lateAnimationHolders || (yu._lateAnimationHolders = {}), yu._lateAnimationHolders[uu.targetPath] || (yu._lateAnimationHolders[uu.targetPath] = {
           totalWeight: 0,
           totalAdditiveWeight: 0,
           animations: [],
           additiveAnimations: [],
-          originalValue: RU
-        }), UU.isAdditive ? (gU._lateAnimationHolders[UU.targetPath].additiveAnimations.push(UU), gU._lateAnimationHolders[UU.targetPath].totalAdditiveWeight += UU.weight) : (gU._lateAnimationHolders[UU.targetPath].animations.push(UU), gU._lateAnimationHolders[UU.targetPath].totalWeight += UU.weight)
+          originalValue: Ru
+        }), uu.isAdditive ? (yu._lateAnimationHolders[uu.targetPath].additiveAnimations.push(uu), yu._lateAnimationHolders[uu.targetPath].totalAdditiveWeight += uu.weight) : (yu._lateAnimationHolders[uu.targetPath].animations.push(uu), yu._lateAnimationHolders[uu.targetPath].totalWeight += uu.weight)
       }
-      _setValue(UU, RU, gU, tU, pU) {
-        const PU = this._scene._animationWrites,
-          TU = this._scene._animationWriteCount++;
-        let qU = PU[TU];
-        if (qU || (qU = PU[TU] = {
+      _setValue(uu, Ru, yu, Eu, Ku) {
+        const mu = this._scene._animationWrites,
+          Ju = this._scene._animationWriteCount++;
+        let Nu = mu[Ju];
+        if (Nu || (Nu = mu[Ju] = {
             runtimeAnimation: this,
-            target: UU,
-            weight: tU,
+            target: uu,
+            weight: Eu,
             additive: !1,
             blendingFactor: 1,
-            ih: !1
-          }), qU.runtimeAnimation = this, qU.target = UU, qU.weight = tU, qU.additive = this.isAdditive, qU.ih = !1, this._currentActiveTarget = RU, this._weight = tU, this._enableBlending && this._blendingFactor <= 1) {
+            NT: !1
+          }), Nu.runtimeAnimation = this, Nu.target = uu, Nu.weight = Eu, Nu.additive = this.isAdditive, Nu.NT = !1, this._currentActiveTarget = Ru, this._weight = Eu, this._enableBlending && this._blendingFactor <= 1) {
           if (!this._originalBlendValue) {
-            const UU = RU[this._targetPath];
-            UU.clone ? this._originalBlendValue = UU.clone() : this._originalBlendValue = UU
+            const uu = Ru[this._targetPath];
+            uu.clone ? this._originalBlendValue = uu.clone() : this._originalBlendValue = uu
           }
-          this._originalBlendValue.m ? nU.e.AllowMatrixDecomposeForInterpolation ? this._currentValue ? EU.c.DecomposeLerpToRef(this._originalBlendValue, gU, this._blendingFactor, this._currentValue) : this._currentValue = EU.c.DecomposeLerp(this._originalBlendValue, gU, this._blendingFactor) : this._currentValue ? EU.c.LerpToRef(this._originalBlendValue, gU, this._blendingFactor, this._currentValue) : this._currentValue = EU.c.Lerp(this._originalBlendValue, gU, this._blendingFactor) : this._currentValue = nU.e._UniversalLerp(this._originalBlendValue, gU, this._blendingFactor);
-          const tU = UU && UU.animationPropertiesOverride ? UU.animationPropertiesOverride.blendingSpeed : this._animation.blendingSpeed;
-          qU.blendingFactor = this._blendingFactor, this._blendingFactor += tU
-        } else qU.blendingFactor = 1, this._currentValue ? this._currentValue.PgU ? this._currentValue.PgU(gU) : this._currentValue = gU : this._currentValue = gU?.clone ? gU.clone() : gU; - 1 !== tU ? this._registerTargetForLateAnimationBinding(this, this._originalValue[pU]) : this._animationState.mE === nU.e.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT ? this._currentValue.addToRef ? this._currentValue.addToRef(this._originalValue[pU], RU[this._targetPath]) : RU[this._targetPath] = this._originalValue[pU] + this._currentValue : RU[this._targetPath] = this._currentValue, UU.cRU && UU.cRU(this._animation.targetProperty)
+          this._originalBlendValue.m ? Au.d.AllowMatrixDecomposeForInterpolation ? this._currentValue ? Qu.d.DecomposeLerpToRef(this._originalBlendValue, yu, this._blendingFactor, this._currentValue) : this._currentValue = Qu.d.DecomposeLerp(this._originalBlendValue, yu, this._blendingFactor) : this._currentValue ? Qu.d.LerpToRef(this._originalBlendValue, yu, this._blendingFactor, this._currentValue) : this._currentValue = Qu.d.Lerp(this._originalBlendValue, yu, this._blendingFactor) : this._currentValue = Au.d._UniversalLerp(this._originalBlendValue, yu, this._blendingFactor);
+          const Eu = uu && uu.animationPropertiesOverride ? uu.animationPropertiesOverride.blendingSpeed : this._animation.blendingSpeed;
+          Nu.blendingFactor = this._blendingFactor, this._blendingFactor += Eu
+        } else Nu.blendingFactor = 1, this._currentValue ? this._currentValue.Oyu ? this._currentValue.Oyu(yu) : this._currentValue = yu : this._currentValue = yu?.clone ? yu.clone() : yu; - 1 !== Eu ? this._registerTargetForLateAnimationBinding(this, this._originalValue[Ku]) : this._animationState.WQ === Au.d.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT ? this._currentValue.addToRef ? this._currentValue.addToRef(this._originalValue[Ku], Ru[this._targetPath]) : Ru[this._targetPath] = this._originalValue[Ku] + this._currentValue : Ru[this._targetPath] = this._currentValue, uu.Eyu && uu.Eyu(this._animation.targetProperty)
       }
       _getCorrectLoopMode() {
-        if (this.nD && this.nD.animationPropertiesOverride) {
-          return "MorphTarget" === this.nD.getClassName?.() && null == this.nD._animationPropertiesOverride ? this._animation.mE : this.nD.animationPropertiesOverride.mE
+        if (this.Av && this.Av.animationPropertiesOverride) {
+          return "MorphTarget" === this.Av.getClassName?.() && null == this.Av._animationPropertiesOverride ? this._animation.WQ : this.Av.animationPropertiesOverride.WQ
         }
-        return this._animation.mE
+        return this._animation.WQ
       }
-      goToFrame(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        const gU = this._animation.getKeys();
-        UU < gU[0].frame ? UU = gU[0].frame : UU > gU[gU.length - 1].frame && (UU = gU[gU.length - 1].frame);
-        const tU = this._events;
-        if (tU.length)
-          for (let EU = 0; EU < tU.length; EU++) tU[EU].onlyOnce || (tU[EU].isDone = tU[EU].frame < UU);
-        this._currentFrame = UU;
-        const pU = this._animation._interpolate(UU, this._animationState);
-        this.setValue(pU, RU)
+      goToFrame(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        const yu = this._animation.getKeys();
+        uu < yu[0].frame ? uu = yu[0].frame : uu > yu[yu.length - 1].frame && (uu = yu[yu.length - 1].frame);
+        const Eu = this._events;
+        if (Eu.length)
+          for (let Qu = 0; Qu < Eu.length; Qu++) Eu[Qu].onlyOnce || (Eu[Qu].isDone = Eu[Qu].frame < uu);
+        this._currentFrame = uu;
+        const Ku = this._animation._interpolate(uu, this._animationState);
+        this.setValue(Ku, Ru)
       }
-      _prepareForSpeedRatioChange(UU) {
-        const RU = this._previousElapsedTime * (this._animation.framePerSecond * UU) / 1e3;
-        this._absoluteFrameOffset = this._previousAbsoluteFrame - RU
+      _prepareForSpeedRatioChange(uu) {
+        const Ru = this._previousElapsedTime * (this._animation.framePerSecond * uu) / 1e3;
+        this._absoluteFrameOffset = this._previousAbsoluteFrame - Ru
       }
-      animate(UU, RU, gU, tU, pU) {
-        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : -1;
-        const PU = this._animation,
-          TU = PU.targetPropertyPath;
-        if (!TU || TU.length < 1) return this._stopped = !0, !1;
-        let qU, KU = !0;
-        const cU = this._events;
-        let GU;
-        if (this._coreRuntimeAnimation) GU = gU - RU, qU = this._coreRuntimeAnimation.currentFrame, this._currentFrame = qU, this._animationState.repeatCount = this._coreRuntimeAnimation._animationState.repeatCount, this._animationState.highLimitValue = this._coreRuntimeAnimation._animationState.highLimitValue, this._animationState.offsetValue = this._coreRuntimeAnimation._animationState.offsetValue, this._playbackFrom = this._coreRuntimeAnimation._playbackFrom, this._playbackTo = this._coreRuntimeAnimation._playbackTo, this._playbackFrames = this._coreRuntimeAnimation._playbackFrames, this._playbackProgress = this._coreRuntimeAnimation._playbackProgress, this._playbackJumped = this._coreRuntimeAnimation._playbackJumped, this._playbackSyncRoot = this._coreRuntimeAnimation._playbackSyncRoot;
+      animate(uu, Ru, yu, Eu, Ku) {
+        let Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : -1;
+        const mu = this._animation,
+          Ju = mu.targetPropertyPath;
+        if (!Ju || Ju.length < 1) return this._stopped = !0, !1;
+        let Nu, Xu = !0;
+        const Vu = this._events;
+        let ru;
+        if (this._coreRuntimeAnimation) ru = yu - Ru, Nu = this._coreRuntimeAnimation.currentFrame, this._currentFrame = Nu, this._animationState.repeatCount = this._coreRuntimeAnimation._animationState.repeatCount, this._animationState.highLimitValue = this._coreRuntimeAnimation._animationState.highLimitValue, this._animationState.offsetValue = this._coreRuntimeAnimation._animationState.offsetValue, this._playbackFrom = this._coreRuntimeAnimation._playbackFrom, this._playbackTo = this._coreRuntimeAnimation._playbackTo, this._playbackFrames = this._coreRuntimeAnimation._playbackFrames, this._playbackProgress = this._coreRuntimeAnimation._playbackProgress, this._playbackJumped = this._coreRuntimeAnimation._playbackJumped, this._playbackSyncRoot = this._coreRuntimeAnimation._playbackSyncRoot;
         else {
-          let EU;
-          (RU < this._minFrame || RU > this._maxFrame) && (RU = this._minFrame), (gU < this._minFrame || gU > this._maxFrame) && (gU = this._maxFrame), GU = gU - RU;
-          let TU = UU * (PU.framePerSecond * pU) / 1e3 + this._absoluteFrameOffset,
-            jU = 0,
-            uU = !1;
-          const CU = tU && this._animationState.mE === nU.e.ANIMATIONLOOPMODE_YOYO;
-          if (CU) {
-            const UU = (TU - RU) / GU,
-              gU = Math.sin(UU * Math.PI);
-            TU = Math.abs(gU) * GU + RU;
-            const tU = gU >= 0 ? 1 : -1;
-            this._yoyoDirection !== tU && (uU = !0), this._yoyoDirection = tU
+          let Qu;
+          (Ru < this._minFrame || Ru > this._maxFrame) && (Ru = this._minFrame), (yu < this._minFrame || yu > this._maxFrame) && (yu = this._maxFrame), ru = yu - Ru;
+          let Ju = uu * (mu.framePerSecond * Ku) / 1e3 + this._absoluteFrameOffset,
+            Bu = 0,
+            xu = !1;
+          const Su = Eu && this._animationState.WQ === Au.d.ANIMATIONLOOPMODE_YOYO;
+          if (Su) {
+            const uu = (Ju - Ru) / ru,
+              yu = Math.sin(uu * Math.PI);
+            Ju = Math.abs(yu) * ru + Ru;
+            const Eu = yu >= 0 ? 1 : -1;
+            this._yoyoDirection !== Eu && (xu = !0), this._yoyoDirection = Eu
           }
-          if (this._previousElapsedTime = UU, this._previousAbsoluteFrame = TU, !tU && gU >= RU && (TU >= GU && pU > 0 || TU <= 0 && pU < 0)) KU = !1, jU = PU.evaluate(gU);
-          else if (!tU && RU >= gU && (TU <= GU && pU < 0 || TU >= 0 && pU > 0)) KU = !1, jU = PU.evaluate(RU);
-          else if (this._animationState.mE !== nU.e.ANIMATIONLOOPMODE_CYCLE) {
-            const UU = gU.toString() + RU.toString();
-            if (!this._offsetsCache[UU]) {
-              this._animationState.repeatCount = 0, this._animationState.mE = nU.e.ANIMATIONLOOPMODE_CYCLE;
-              const tU = PU._interpolate(RU, this._animationState),
-                pU = PU._interpolate(gU, this._animationState);
-              switch (this._animationState.mE = this._getCorrectLoopMode(), PU.dataType) {
-                case nU.e.ANIMATIONTYPE_FLOAT:
-                  this._offsetsCache[UU] = pU - tU;
+          if (this._previousElapsedTime = uu, this._previousAbsoluteFrame = Ju, !Eu && yu >= Ru && (Ju >= ru && Ku > 0 || Ju <= 0 && Ku < 0)) Xu = !1, Bu = mu.evaluate(yu);
+          else if (!Eu && Ru >= yu && (Ju <= ru && Ku < 0 || Ju >= 0 && Ku > 0)) Xu = !1, Bu = mu.evaluate(Ru);
+          else if (this._animationState.WQ !== Au.d.ANIMATIONLOOPMODE_CYCLE) {
+            const uu = yu.toString() + Ru.toString();
+            if (!this._offsetsCache[uu]) {
+              this._animationState.repeatCount = 0, this._animationState.WQ = Au.d.ANIMATIONLOOPMODE_CYCLE;
+              const Eu = mu._interpolate(Ru, this._animationState),
+                Ku = mu._interpolate(yu, this._animationState);
+              switch (this._animationState.WQ = this._getCorrectLoopMode(), mu.dataType) {
+                case Au.d.ANIMATIONTYPE_FLOAT:
+                  this._offsetsCache[uu] = Ku - Eu;
                   break;
-                case nU.e.ANIMATIONTYPE_QUATERNION:
-                case nU.e.ANIMATIONTYPE_VECTOR3:
-                case nU.e.ANIMATIONTYPE_VECTOR2:
-                case nU.e.ANIMATIONTYPE_SIZE:
-                case nU.e.ANIMATIONTYPE_COLOR3:
-                case nU.e.ANIMATIONTYPE_COLOR4:
-                  this._offsetsCache[UU] = pU.subtract(tU)
+                case Au.d.ANIMATIONTYPE_QUATERNION:
+                case Au.d.ANIMATIONTYPE_VECTOR3:
+                case Au.d.ANIMATIONTYPE_VECTOR2:
+                case Au.d.ANIMATIONTYPE_SIZE:
+                case Au.d.ANIMATIONTYPE_COLOR3:
+                case Au.d.ANIMATIONTYPE_COLOR4:
+                  this._offsetsCache[uu] = Ku.subtract(Eu)
               }
-              this._highLimitsCache[UU] = pU
+              this._highLimitsCache[uu] = Ku
             }
-            jU = this._highLimitsCache[UU], EU = this._offsetsCache[UU]
+            Bu = this._highLimitsCache[uu], Qu = this._offsetsCache[uu]
           }
-          if (void 0 === EU) switch (PU.dataType) {
-            case nU.e.ANIMATIONTYPE_FLOAT:
-              EU = 0;
+          if (void 0 === Qu) switch (mu.dataType) {
+            case Au.d.ANIMATIONTYPE_FLOAT:
+              Qu = 0;
               break;
-            case nU.e.ANIMATIONTYPE_QUATERNION:
-              EU = nU.n;
+            case Au.d.ANIMATIONTYPE_QUATERNION:
+              Qu = Au.k;
               break;
-            case nU.e.ANIMATIONTYPE_VECTOR3:
-              EU = nU.w;
+            case Au.d.ANIMATIONTYPE_VECTOR3:
+              Qu = Au.s;
               break;
-            case nU.e.ANIMATIONTYPE_VECTOR2:
-              EU = nU.u;
+            case Au.d.ANIMATIONTYPE_VECTOR2:
+              Qu = Au.q;
               break;
-            case nU.e.ANIMATIONTYPE_SIZE:
-              EU = nU.r;
+            case Au.d.ANIMATIONTYPE_SIZE:
+              Qu = Au.n;
               break;
-            case nU.e.ANIMATIONTYPE_COLOR3:
-              EU = nU.j;
+            case Au.d.ANIMATIONTYPE_COLOR3:
+              Qu = Au.i;
               break;
-            case nU.e.ANIMATIONTYPE_COLOR4:
-              EU = nU.k
+            case Au.d.ANIMATIONTYPE_COLOR4:
+              Qu = Au.j
           }
-          const hU = this._host ? this._host.syncRoot : null;
-          let QU, eU = this._playbackFrames,
-            WU = !1;
-          if (hU) {
-            const UU = hU.toFrame - hU.fromFrame,
-              gU = hU.masterFrame,
-              tU = (gU - hU.fromFrame) / UU;
-            qU = RU + GU * tU;
-            const pU = hU.getAnimations()[0];
-            if (pU && 0 !== UU) {
-              const UU = GU * tU,
-                RU = pU._playbackTo - pU._playbackFrom;
-              if (0 !== RU && pU._playbackFrom <= hU.fromFrame && pU._playbackTo >= hU.toFrame) {
-                eU = GU * Math.round((pU._playbackFrames - (pU._currentFrame - pU._playbackFrom)) / RU) + UU
-              } else WU = (gU - this._playbackSyncMasterFrame) * (pU._playbackFrames - this._playbackSyncMasterPlayed) < 0, eU = UU;
-              WU = WU || pU._playbackJumped, this._playbackSyncMasterPlayed = pU._playbackFrames, this._playbackSyncMasterFrame = gU
+          const pu = this._host ? this._host.syncRoot : null;
+          let Tu, Wu = this._playbackFrames,
+            ju = !1;
+          if (pu) {
+            const uu = pu.toFrame - pu.fromFrame,
+              yu = pu.masterFrame,
+              Eu = (yu - pu.fromFrame) / uu;
+            Nu = Ru + ru * Eu;
+            const Ku = pu.getAnimations()[0];
+            if (Ku && 0 !== uu) {
+              const uu = ru * Eu,
+                Ru = Ku._playbackTo - Ku._playbackFrom;
+              if (0 !== Ru && Ku._playbackFrom <= pu.fromFrame && Ku._playbackTo >= pu.toFrame) {
+                Wu = ru * Math.round((Ku._playbackFrames - (Ku._currentFrame - Ku._playbackFrom)) / Ru) + uu
+              } else ju = (yu - this._playbackSyncMasterFrame) * (Ku._playbackFrames - this._playbackSyncMasterPlayed) < 0, Wu = uu;
+              ju = ju || Ku._playbackJumped, this._playbackSyncMasterPlayed = Ku._playbackFrames, this._playbackSyncMasterFrame = yu
             }
-          } else qU = TU > 0 && RU > gU || TU < 0 && RU < gU ? KU && 0 !== GU ? gU + TU % GU : RU : KU && 0 !== GU ? RU + TU % GU : gU;
-          if (!CU && (pU > 0 && this.currentFrame > qU || pU < 0 && this.currentFrame < qU) || CU && uU) {
+          } else Nu = Ju > 0 && Ru > yu || Ju < 0 && Ru < yu ? Xu && 0 !== ru ? yu + Ju % ru : Ru : Xu && 0 !== ru ? Ru + Ju % ru : yu;
+          if (!Su && (Ku > 0 && this.currentFrame > Nu || Ku < 0 && this.currentFrame < Nu) || Su && xu) {
             this._onLoop();
-            for (let UU = 0; UU < cU.length; UU++) cU[UU].onlyOnce || (cU[UU].isDone = !1);
-            this._animationState.key = pU > 0 ? 0 : PU.getKeys().length - 1
+            for (let uu = 0; uu < Vu.length; uu++) Vu[uu].onlyOnce || (Vu[uu].isDone = !1);
+            this._animationState.key = Ku > 0 ? 0 : mu.getKeys().length - 1
           }
-          if (this._currentFrame = qU, this._animationState.repeatCount = 0 === GU ? 0 : TU / GU | 0, this._animationState.highLimitValue = jU, this._animationState.offsetValue = EU, this._playbackFrom = RU, this._playbackTo = gU, this._playbackJumped = WU, this._playbackSyncRoot = hU, hU) QU = eU;
-          else if (KU) QU = CU ? qU === RU && TU === gU ? GU : qU - RU : TU;
+          if (this._currentFrame = Nu, this._animationState.repeatCount = 0 === ru ? 0 : Ju / ru | 0, this._animationState.highLimitValue = Bu, this._animationState.offsetValue = Qu, this._playbackFrom = Ru, this._playbackTo = yu, this._playbackJumped = ju, this._playbackSyncRoot = pu, pu) Tu = Wu;
+          else if (Xu) Tu = Su ? Nu === Ru && Ju === yu ? ru : Nu - Ru : Ju;
           else {
-            const UU = 0 !== GU ? Math.floor(this._playbackFrames / GU) : 0;
-            QU = (qU === gU ? UU + 1 : UU) * GU
+            const uu = 0 !== ru ? Math.floor(this._playbackFrames / ru) : 0;
+            Tu = (Nu === yu ? uu + 1 : uu) * ru
           }
-          this._playbackFrames = QU, this._playbackProgress = this._animationState.mE === nU.e.ANIMATIONLOOPMODE_CONSTANT && this._animationState.repeatCount > 0 ? GU : QU
+          this._playbackFrames = Tu, this._playbackProgress = this._animationState.WQ === Au.d.ANIMATIONLOOPMODE_CONSTANT && this._animationState.repeatCount > 0 ? ru : Tu
         }
-        const jU = PU._interpolate(qU, this._animationState);
-        if (this.setValue(jU, EU), cU.length)
-          for (let uU = 0; uU < cU.length; uU++)
-            if (GU >= 0 && qU >= cU[uU].frame && cU[uU].frame >= RU || GU < 0 && qU <= cU[uU].frame && cU[uU].frame <= RU) {
-              const UU = cU[uU];
-              UU.isDone || (UU.onlyOnce && (cU.splice(uU, 1), uU--), UU.isDone = !0, UU.action(qU))
-            } return KU || (this._stopped = !0), KU
+        const Bu = mu._interpolate(Nu, this._animationState);
+        if (this.setValue(Bu, Qu), Vu.length)
+          for (let xu = 0; xu < Vu.length; xu++)
+            if (ru >= 0 && Nu >= Vu[xu].frame && Vu[xu].frame >= Ru || ru < 0 && Nu <= Vu[xu].frame && Vu[xu].frame <= Ru) {
+              const uu = Vu[xu];
+              uu.isDone || (uu.onlyOnce && (Vu.splice(xu, 1), xu--), uu.isDone = !0, uu.action(Nu))
+            } return Xu || (this._stopped = !0), Xu
       }
     }
-    var oU = gU(39280);
-    class ZU {
+    var Mu = yu(39458);
+    class Iu {
       get syncRoot() {
         return this._syncRoot
       }
@@ -1846,412 +1846,412 @@ export const modules = {
       get weight() {
         return this._weight
       }
-      set weight(UU) {
-        this._weight = -1 !== UU ? Math.min(Math.max(UU, 0), 1) : -1
+      set weight(uu) {
+        this._weight = -1 !== uu ? Math.min(Math.max(uu, 0), 1) : -1
       }
       get speedRatio() {
         return this._speedRatio
       }
-      set speedRatio(UU) {
-        for (let RU = 0; RU < this._runtimeAnimations.length; RU++) {
-          this._runtimeAnimations[RU]._prepareForSpeedRatioChange(UU)
+      set speedRatio(uu) {
+        for (let Ru = 0; Ru < this._runtimeAnimations.length; Ru++) {
+          this._runtimeAnimations[Ru]._prepareForSpeedRatioChange(uu)
         }
-        this._speedRatio = UU, null !== this._goToFrame && this.goToFrame(this._goToFrame)
+        this._speedRatio = uu, null !== this._goToFrame && this.goToFrame(this._goToFrame)
       }
       get elapsedTime() {
         return null === this._localDelayOffset ? 0 : this._scene._animationTime - this._localDelayOffset
       }
-      constructor(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 100,
-          EU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          PU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          TU = arguments.length > 6 ? arguments[6] : void 0,
-          qU = arguments.length > 7 ? arguments[7] : void 0,
-          KU = arguments.length > 8 ? arguments[8] : void 0,
-          cU = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
-          GU = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0;
-        this.target = RU, this.fromFrame = gU, this.toFrame = tU, this.loopAnimation = EU, this.onAnimationEnd = TU, this.onAnimationLoop = KU, this.isAdditive = cU, this.playOrder = GU, this._localDelayOffset = null, this._pausedDelay = null, this._manualJumpDelay = null, this._runtimeAnimations = new Array, this.pI = !1, this._speedRatio = 1, this._weight = -1, this._previousWeight = -1, this._syncRoot = null, this._frameToSyncFromJump = null, this._goToFrame = null, this.disposeOnEnd = !0, this.animationStarted = !1, this.onAnimationEndObservable = new pU.b, this.onAnimationLoopObservable = new pU.b, this._scene = UU, qU && this.appendAnimations(RU, qU), this._speedRatio = PU, UU._activeAnimatables.push(this)
+      constructor(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 100,
+          Qu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          mu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          Ju = arguments.length > 6 ? arguments[6] : void 0,
+          Nu = arguments.length > 7 ? arguments[7] : void 0,
+          Xu = arguments.length > 8 ? arguments[8] : void 0,
+          Vu = arguments.length > 9 && void 0 !== arguments[9] && arguments[9],
+          ru = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0;
+        this.target = Ru, this.fromFrame = yu, this.toFrame = Eu, this.loopAnimation = Qu, this.onAnimationEnd = Ju, this.onAnimationLoop = Xu, this.isAdditive = Vu, this.playOrder = ru, this._localDelayOffset = null, this._pausedDelay = null, this._manualJumpDelay = null, this._runtimeAnimations = new Array, this.iH = !1, this._speedRatio = 1, this._weight = -1, this._previousWeight = -1, this._syncRoot = null, this._frameToSyncFromJump = null, this._goToFrame = null, this.disposeOnEnd = !0, this.animationStarted = !1, this.onAnimationEndObservable = new Ku.b, this.onAnimationLoopObservable = new Ku.b, this._scene = uu, Nu && this.appendAnimations(Ru, Nu), this._speedRatio = mu, uu._activeAnimatables.push(this)
       }
-      syncWith(UU) {
-        if (this._syncRoot = UU, UU) {
-          const UU = this._scene._activeAnimatables.indexOf(this);
-          UU > -1 && (this._scene._activeAnimatables.splice(UU, 1), this._scene._activeAnimatables.push(this))
+      syncWith(uu) {
+        if (this._syncRoot = uu, uu) {
+          const uu = this._scene._activeAnimatables.indexOf(this);
+          uu > -1 && (this._scene._activeAnimatables.splice(uu, 1), this._scene._activeAnimatables.push(this))
         }
         return this
       }
       getAnimations() {
         return this._runtimeAnimations
       }
-      appendAnimations(UU, RU) {
-        for (let gU = 0; gU < RU.length; gU++) {
-          const tU = RU[gU],
-            pU = new bU(UU, tU, this._scene, this);
-          pU._onLoop = () => {
+      appendAnimations(uu, Ru) {
+        for (let yu = 0; yu < Ru.length; yu++) {
+          const Eu = Ru[yu],
+            Ku = new Du(uu, Eu, this._scene, this);
+          Ku._onLoop = () => {
             this.onAnimationLoopObservable.notifyObservers(this), this.onAnimationLoop && this.onAnimationLoop()
-          }, this._runtimeAnimations.push(pU)
+          }, this._runtimeAnimations.push(Ku)
         }
       }
-      getAnimationByTargetProperty(UU) {
-        const RU = this._runtimeAnimations;
-        for (let gU = 0; gU < RU.length; gU++)
-          if (RU[gU].animation.targetProperty === UU) return RU[gU].animation;
+      getAnimationByTargetProperty(uu) {
+        const Ru = this._runtimeAnimations;
+        for (let yu = 0; yu < Ru.length; yu++)
+          if (Ru[yu].animation.targetProperty === uu) return Ru[yu].animation;
         return null
       }
-      getRuntimeAnimationByTargetProperty(UU) {
-        const RU = this._runtimeAnimations;
-        for (let gU = 0; gU < RU.length; gU++)
-          if (RU[gU].animation.targetProperty === UU) return RU[gU];
+      getRuntimeAnimationByTargetProperty(uu) {
+        const Ru = this._runtimeAnimations;
+        for (let yu = 0; yu < Ru.length; yu++)
+          if (Ru[yu].animation.targetProperty === uu) return Ru[yu];
         return null
       }
       reset() {
-        const UU = this._runtimeAnimations;
-        for (let RU = 0; RU < UU.length; RU++) UU[RU].reset(!0);
+        const uu = this._runtimeAnimations;
+        for (let Ru = 0; Ru < uu.length; Ru++) uu[Ru].reset(!0);
         this._localDelayOffset = null, this._pausedDelay = null
       }
-      enableBlending(UU) {
-        const RU = this._runtimeAnimations;
-        for (let gU = 0; gU < RU.length; gU++) RU[gU].animation.enableBlending = !0, RU[gU].animation.blendingSpeed = UU
+      enableBlending(uu) {
+        const Ru = this._runtimeAnimations;
+        for (let yu = 0; yu < Ru.length; yu++) Ru[yu].animation.enableBlending = !0, Ru[yu].animation.blendingSpeed = uu
       }
       disableBlending() {
-        const UU = this._runtimeAnimations;
-        for (let RU = 0; RU < UU.length; RU++) UU[RU].animation.enableBlending = !1
+        const uu = this._runtimeAnimations;
+        for (let Ru = 0; Ru < uu.length; Ru++) uu[Ru].animation.enableBlending = !1
       }
-      goToFrame(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const gU = this._runtimeAnimations;
-        if (gU[0]) {
-          const RU = gU[0].animation.framePerSecond;
-          this._frameToSyncFromJump = this._frameToSyncFromJump ?? gU[0].currentFrame;
-          const tU = 0 === this.speedRatio ? 0 : (UU - this._frameToSyncFromJump) / RU * 1e3 / this.speedRatio;
-          this._manualJumpDelay = -tU
+      goToFrame(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const yu = this._runtimeAnimations;
+        if (yu[0]) {
+          const Ru = yu[0].animation.framePerSecond;
+          this._frameToSyncFromJump = this._frameToSyncFromJump ?? yu[0].currentFrame;
+          const Eu = 0 === this.speedRatio ? 0 : (uu - this._frameToSyncFromJump) / Ru * 1e3 / this.speedRatio;
+          this._manualJumpDelay = -Eu
         }
-        for (let tU = 0; tU < gU.length; tU++) gU[tU].goToFrame(UU, RU ? this._weight : -1);
-        this._goToFrame = UU
+        for (let Eu = 0; Eu < yu.length; Eu++) yu[Eu].goToFrame(uu, Ru ? this._weight : -1);
+        this._goToFrame = uu
       }
       get paused() {
-        return this.pI
+        return this.iH
       }
       pause() {
-        this.pI || (this.pI = !0)
+        this.iH || (this.iH = !0)
       }
       restart() {
-        this.pI = !1
+        this.iH = !1
       }
       _raiseOnAnimationEnd() {
         this.onAnimationEnd && this.onAnimationEnd(), this.onAnimationEndObservable.notifyObservers(this)
       }
-      stop(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        if (UU || RU) {
-          const pU = this._scene._activeAnimatables.indexOf(this);
-          if (pU > -1) {
-            const EU = this._runtimeAnimations;
-            for (let gU = EU.length - 1; gU >= 0; gU--) {
-              const tU = EU[gU];
-              UU && tU.animation.name != UU || (RU && !RU(tU.target) || (tU.dispose(), EU.splice(gU, 1)))
+      stop(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        if (uu || Ru) {
+          const Ku = this._scene._activeAnimatables.indexOf(this);
+          if (Ku > -1) {
+            const Qu = this._runtimeAnimations;
+            for (let yu = Qu.length - 1; yu >= 0; yu--) {
+              const Eu = Qu[yu];
+              uu && Eu.animation.name != uu || (Ru && !Ru(Eu.target) || (Eu.dispose(), Qu.splice(yu, 1)))
             }
-            0 == EU.length && (gU || this._scene._activeAnimatables.splice(pU, 1), tU || this._raiseOnAnimationEnd())
+            0 == Qu.length && (yu || this._scene._activeAnimatables.splice(Ku, 1), Eu || this._raiseOnAnimationEnd())
           }
         } else {
-          const UU = this._scene._activeAnimatables.indexOf(this);
-          if (UU > -1) {
-            gU || this._scene._activeAnimatables.splice(UU, 1);
-            const RU = this._runtimeAnimations;
-            for (let UU = 0; UU < RU.length; UU++) RU[UU].dispose();
-            this._runtimeAnimations.length = 0, tU || this._raiseOnAnimationEnd()
+          const uu = this._scene._activeAnimatables.indexOf(this);
+          if (uu > -1) {
+            yu || this._scene._activeAnimatables.splice(uu, 1);
+            const Ru = this._runtimeAnimations;
+            for (let uu = 0; uu < Ru.length; uu++) Ru[uu].dispose();
+            this._runtimeAnimations.length = 0, Eu || this._raiseOnAnimationEnd()
           }
         }
       }
       async waitAsync() {
-        return await new Promise((UU => {
+        return await new Promise((uu => {
           this.onAnimationEndObservable.add((() => {
-            UU(this)
+            uu(this)
           }), void 0, void 0, this, !0)
         }))
       }
-      _animate(UU) {
-        if (this.pI) return this.animationStarted = !1, null === this._pausedDelay && (this._pausedDelay = UU), !0;
-        if (null === this._localDelayOffset ? (this._localDelayOffset = UU, this._pausedDelay = null) : null !== this._pausedDelay && (this._localDelayOffset += UU - this._pausedDelay, this._pausedDelay = null), null !== this._manualJumpDelay && (this._localDelayOffset += this.speedRatio < 0 ? -this._manualJumpDelay : this._manualJumpDelay, this._manualJumpDelay = null, this._frameToSyncFromJump = null), this._goToFrame = null, !ZU.ProcessPausedAnimatables && 0 === this._weight && 0 === this._previousWeight) return !0;
+      _animate(uu) {
+        if (this.iH) return this.animationStarted = !1, null === this._pausedDelay && (this._pausedDelay = uu), !0;
+        if (null === this._localDelayOffset ? (this._localDelayOffset = uu, this._pausedDelay = null) : null !== this._pausedDelay && (this._localDelayOffset += uu - this._pausedDelay, this._pausedDelay = null), null !== this._manualJumpDelay && (this._localDelayOffset += this.speedRatio < 0 ? -this._manualJumpDelay : this._manualJumpDelay, this._manualJumpDelay = null, this._frameToSyncFromJump = null), this._goToFrame = null, !Iu.ProcessPausedAnimatables && 0 === this._weight && 0 === this._previousWeight) return !0;
         this._previousWeight = this._weight;
-        let RU = !1;
-        const gU = this._runtimeAnimations;
-        let tU;
-        for (tU = 0; tU < gU.length; tU++) {
-          const pU = gU[tU].animate(UU - this._localDelayOffset, this.fromFrame, this.toFrame, this.loopAnimation, this._speedRatio, this._weight);
-          RU = RU || pU
+        let Ru = !1;
+        const yu = this._runtimeAnimations;
+        let Eu;
+        for (Eu = 0; Eu < yu.length; Eu++) {
+          const Ku = yu[Eu].animate(uu - this._localDelayOffset, this.fromFrame, this.toFrame, this.loopAnimation, this._speedRatio, this._weight);
+          Ru = Ru || Ku
         }
-        if (this.animationStarted = RU, !RU) {
+        if (this.animationStarted = Ru, !Ru) {
           if (this.disposeOnEnd)
-            for (tU = this._scene._activeAnimatables.indexOf(this), this._scene._activeAnimatables.splice(tU, 1), tU = 0; tU < gU.length; tU++) gU[tU].dispose();
+            for (Eu = this._scene._activeAnimatables.indexOf(this), this._scene._activeAnimatables.splice(Eu, 1), Eu = 0; Eu < yu.length; Eu++) yu[Eu].dispose();
           this._raiseOnAnimationEnd(), this.disposeOnEnd && (this.onAnimationEnd = null, this.onAnimationLoop = null, this.onAnimationLoopObservable.clear(), this.onAnimationEndObservable.clear())
         }
-        return RU
+        return Ru
       }
     }
 
-    function aU(UU) {
-      if (0 === UU.totalWeight && 0 === UU.totalAdditiveWeight) return UU.originalValue;
-      let RU = 1;
-      const gU = EU.h.xC[0],
-        tU = EU.h.xC[1],
-        pU = EU.h.Quaternion[0];
-      let PU = 0;
-      const TU = UU.animations[0],
-        qU = UU.originalValue;
-      let KU, cU = !1;
-      if (UU.totalWeight < 1) KU = 1 - UU.totalWeight, qU.decompose(tU, pU, gU);
+    function Gu(uu) {
+      if (0 === uu.totalWeight && 0 === uu.totalAdditiveWeight) return uu.originalValue;
+      let Ru = 1;
+      const yu = Qu.m.MS[0],
+        Eu = Qu.m.MS[1],
+        Ku = Qu.m.Quaternion[0];
+      let mu = 0;
+      const Ju = uu.animations[0],
+        Nu = uu.originalValue;
+      let Xu, Vu = !1;
+      if (uu.totalWeight < 1) Xu = 1 - uu.totalWeight, Nu.decompose(Eu, Ku, yu);
       else {
-        if (PU = 1, RU = UU.totalWeight, KU = TU.weight / RU, 1 == KU) {
-          if (!UU.totalAdditiveWeight) return TU.currentValue;
-          cU = !0
+        if (mu = 1, Ru = uu.totalWeight, Xu = Ju.weight / Ru, 1 == Xu) {
+          if (!uu.totalAdditiveWeight) return Ju.currentValue;
+          Vu = !0
         }
-        TU.currentValue.decompose(tU, pU, gU)
+        Ju.currentValue.decompose(Eu, Ku, yu)
       }
-      if (!cU) {
-        tU.scaleInPlace(KU), gU.scaleInPlace(KU), pU.scaleInPlace(KU);
-        for (let TU = PU; TU < UU.animations.length; TU++) {
-          const PU = UU.animations[TU];
-          if (0 === PU.weight) continue;
-          KU = PU.weight / RU;
-          const qU = EU.h.xC[2],
-            cU = EU.h.xC[3],
-            GU = EU.h.Quaternion[1];
-          PU.currentValue.decompose(cU, GU, qU), cU.scaleAndAddToRef(KU, tU), GU.scaleAndAddToRef(EU.d.Dot(pU, GU) > 0 ? KU : -KU, pU), qU.scaleAndAddToRef(KU, gU)
+      if (!Vu) {
+        Eu.scaleInPlace(Xu), yu.scaleInPlace(Xu), Ku.scaleInPlace(Xu);
+        for (let Ju = mu; Ju < uu.animations.length; Ju++) {
+          const mu = uu.animations[Ju];
+          if (0 === mu.weight) continue;
+          Xu = mu.weight / Ru;
+          const Nu = Qu.m.MS[2],
+            Vu = Qu.m.MS[3],
+            ru = Qu.m.Quaternion[1];
+          mu.currentValue.decompose(Vu, ru, Nu), Vu.scaleAndAddToRef(Xu, Eu), ru.scaleAndAddToRef(Qu.f.Dot(Ku, ru) > 0 ? Xu : -Xu, Ku), Nu.scaleAndAddToRef(Xu, yu)
         }
-        pU.normalize()
+        Ku.normalize()
       }
-      for (let jU = 0; jU < UU.additiveAnimations.length; jU++) {
-        const RU = UU.additiveAnimations[jU];
-        if (0 === RU.weight) continue;
-        const PU = EU.h.xC[2],
-          TU = EU.h.xC[3],
-          qU = EU.h.Quaternion[1];
-        RU.currentValue.decompose(TU, qU, PU), TU.multiplyToRef(tU, TU), EU.n.LerpToRef(tU, TU, RU.weight, tU), pU.multiplyToRef(qU, qU), EU.d.SlerpToRef(pU, qU, RU.weight, pU), PU.scaleAndAddToRef(RU.weight, gU)
+      for (let Bu = 0; Bu < uu.additiveAnimations.length; Bu++) {
+        const Ru = uu.additiveAnimations[Bu];
+        if (0 === Ru.weight) continue;
+        const mu = Qu.m.MS[2],
+          Ju = Qu.m.MS[3],
+          Nu = Qu.m.Quaternion[1];
+        Ru.currentValue.decompose(Ju, Nu, mu), Ju.multiplyToRef(Eu, Ju), Qu.p.LerpToRef(Eu, Ju, Ru.weight, Eu), Ku.multiplyToRef(Nu, Nu), Qu.f.SlerpToRef(Ku, Nu, Ru.weight, Ku), mu.scaleAndAddToRef(Ru.weight, yu)
       }
-      const GU = TU ? TU._animationState.workValue : EU.h.Matrix[0].clone();
-      return EU.c.ComposeToRef(tU, pU, gU, GU), GU
+      const ru = Ju ? Ju._animationState.workValue : Qu.m.Matrix[0].clone();
+      return Qu.d.ComposeToRef(Eu, Ku, yu, ru), ru
     }
 
-    function YU(UU, RU) {
-      if (0 === UU.totalWeight && 0 === UU.totalAdditiveWeight) return RU;
-      const gU = UU.animations[0],
-        tU = UU.originalValue;
-      let pU = RU;
-      if (0 === UU.totalWeight && UU.totalAdditiveWeight > 0) pU.PgU(tU);
-      else if (1 === UU.animations.length) {
-        if (EU.d.SlerpToRef(tU, gU.currentValue, Math.min(1, UU.totalWeight), pU), 0 === UU.totalAdditiveWeight) return pU
-      } else if (UU.animations.length > 1) {
-        let gU, PU, TU = 1;
-        if (UU.totalWeight < 1) {
-          const RU = 1 - UU.totalWeight;
-          gU = [], PU = [], gU.push(tU), PU.push(RU)
+    function Uu(uu, Ru) {
+      if (0 === uu.totalWeight && 0 === uu.totalAdditiveWeight) return Ru;
+      const yu = uu.animations[0],
+        Eu = uu.originalValue;
+      let Ku = Ru;
+      if (0 === uu.totalWeight && uu.totalAdditiveWeight > 0) Ku.Oyu(Eu);
+      else if (1 === uu.animations.length) {
+        if (Qu.f.SlerpToRef(Eu, yu.currentValue, Math.min(1, uu.totalWeight), Ku), 0 === uu.totalAdditiveWeight) return Ku
+      } else if (uu.animations.length > 1) {
+        let yu, mu, Ju = 1;
+        if (uu.totalWeight < 1) {
+          const Ru = 1 - uu.totalWeight;
+          yu = [], mu = [], yu.push(Eu), mu.push(Ru)
         } else {
-          if (2 === UU.animations.length && (EU.d.SlerpToRef(UU.animations[0].currentValue, UU.animations[1].currentValue, UU.animations[1].weight / UU.totalWeight, RU), 0 === UU.totalAdditiveWeight)) return RU;
-          gU = [], PU = [], TU = UU.totalWeight
+          if (2 === uu.animations.length && (Qu.f.SlerpToRef(uu.animations[0].currentValue, uu.animations[1].currentValue, uu.animations[1].weight / uu.totalWeight, Ru), 0 === uu.totalAdditiveWeight)) return Ru;
+          yu = [], mu = [], Ju = uu.totalWeight
         }
-        for (let RU = 0; RU < UU.animations.length; RU++) {
-          const tU = UU.animations[RU];
-          gU.push(tU.currentValue), PU.push(tU.weight / TU)
+        for (let Ru = 0; Ru < uu.animations.length; Ru++) {
+          const Eu = uu.animations[Ru];
+          yu.push(Eu.currentValue), mu.push(Eu.weight / Ju)
         }
-        let qU = 0;
-        for (let UU = 0; UU < gU.length;) UU ? (qU += PU[UU], EU.d.SlerpToRef(pU, gU[UU], PU[UU] / qU, pU), UU++) : (EU.d.SlerpToRef(gU[UU], gU[UU + 1], PU[UU + 1] / (PU[UU] + PU[UU + 1]), RU), pU = RU, qU = PU[UU] + PU[UU + 1], UU += 2)
+        let Nu = 0;
+        for (let uu = 0; uu < yu.length;) uu ? (Nu += mu[uu], Qu.f.SlerpToRef(Ku, yu[uu], mu[uu] / Nu, Ku), uu++) : (Qu.f.SlerpToRef(yu[uu], yu[uu + 1], mu[uu + 1] / (mu[uu] + mu[uu + 1]), Ru), Ku = Ru, Nu = mu[uu] + mu[uu + 1], uu += 2)
       }
-      for (let PU = 0; PU < UU.additiveAnimations.length; PU++) {
-        const RU = UU.additiveAnimations[PU];
-        0 !== RU.weight && (pU.multiplyToRef(RU.currentValue, EU.h.Quaternion[0]), EU.d.SlerpToRef(pU, EU.h.Quaternion[0], RU.weight, pU))
+      for (let mu = 0; mu < uu.additiveAnimations.length; mu++) {
+        const Ru = uu.additiveAnimations[mu];
+        0 !== Ru.weight && (Ku.multiplyToRef(Ru.currentValue, Qu.m.Quaternion[0]), Qu.f.SlerpToRef(Ku, Qu.m.Quaternion[0], Ru.weight, Ku))
       }
-      return pU
+      return Ku
     }
 
-    function BU(UU, RU) {
-      RU && (RU.prototype.copyAnimationRange = function(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-        0 === this.animations.length && (this.animations.push(new nU.e(this.name, "_matrix", UU.animations[0].framePerSecond, nU.e.ANIMATIONTYPE_MATRIX, 0)), this.animations[0].setKeys([]));
-        const EU = UU.animations[0].getRange(RU);
-        if (!EU) return !1;
-        const PU = EU.from,
-          TU = EU.to,
-          qU = UU.animations[0].getKeys(),
-          KU = UU.length,
-          cU = UU.getParent(),
-          GU = this.getParent(),
-          jU = tU && cU && KU && this.length && KU !== this.length,
-          uU = jU && GU && cU ? GU.length / cU.length : 1,
-          CU = tU && !GU && pU && (1 !== pU.x || 1 !== pU.y || 1 !== pU.z),
-          hU = this.animations[0].getKeys();
-        let QU, eU, WU;
-        for (let fU = 0, xU = qU.length; fU < xU; fU++) QU = qU[fU], QU.frame >= PU && QU.frame <= TU && (tU ? (WU = QU.value.clone(), jU ? (eU = WU.getTranslation(), WU.setTranslation(eU.scaleInPlace(uU))) : CU && pU ? (eU = WU.getTranslation(), WU.setTranslation(eU.multiplyInPlace(pU))) : WU = QU.value) : WU = QU.value, hU.push({
-          frame: QU.frame + gU,
-          value: WU
+    function nu(uu, Ru) {
+      Ru && (Ru.prototype.copyAnimationRange = function(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+        0 === this.animations.length && (this.animations.push(new Au.d(this.name, "_matrix", uu.animations[0].framePerSecond, Au.d.ANIMATIONTYPE_MATRIX, 0)), this.animations[0].setKeys([]));
+        const Qu = uu.animations[0].getRange(Ru);
+        if (!Qu) return !1;
+        const mu = Qu.from,
+          Ju = Qu.to,
+          Nu = uu.animations[0].getKeys(),
+          Xu = uu.length,
+          Vu = uu.getParent(),
+          ru = this.getParent(),
+          Bu = Eu && Vu && Xu && this.length && Xu !== this.length,
+          xu = Bu && ru && Vu ? ru.length / Vu.length : 1,
+          Su = Eu && !ru && Ku && (1 !== Ku.x || 1 !== Ku.y || 1 !== Ku.z),
+          pu = this.animations[0].getKeys();
+        let Tu, Wu, ju;
+        for (let Hu = 0, du = Nu.length; Hu < du; Hu++) Tu = Nu[Hu], Tu.frame >= mu && Tu.frame <= Ju && (Eu ? (ju = Tu.value.clone(), Bu ? (Wu = ju.getTranslation(), ju.setTranslation(Wu.scaleInPlace(xu))) : Su && Ku ? (Wu = ju.getTranslation(), ju.setTranslation(Wu.multiplyInPlace(Ku))) : ju = Tu.value) : ju = Tu.value, pu.push({
+          frame: Tu.frame + yu,
+          value: ju
         }));
-        return this.animations[0].createRange(RU, PU + gU, TU + gU), !0
-      }), UU && (UU.prototype._animate = function(UU) {
-        const RU = this._animationWrites,
-          gU = this._animationWriteCount;
-        let tU = 0;
-        for (let EU = this._animationStepWriteCount; EU < gU; EU++) {
-          const UU = RU[EU];
-          UU.ih && -1 === UU.weight || (UU.ih = !0, RU[EU] = RU[tU], RU[tU] = UU, tU++)
+        return this.animations[0].createRange(Ru, mu + yu, Ju + yu), !0
+      }), uu && (uu.prototype._animate = function(uu) {
+        const Ru = this._animationWrites,
+          yu = this._animationWriteCount;
+        let Eu = 0;
+        for (let Qu = this._animationStepWriteCount; Qu < yu; Qu++) {
+          const uu = Ru[Qu];
+          uu.NT && -1 === uu.weight || (uu.NT = !0, Ru[Qu] = Ru[Eu], Ru[Eu] = uu, Eu++)
         }
-        for (let EU = tU; EU < gU; EU++) {
-          const UU = RU[EU];
-          UU.runtimeAnimation = null, UU.target = null
+        for (let Qu = Eu; Qu < yu; Qu++) {
+          const uu = Ru[Qu];
+          uu.runtimeAnimation = null, uu.target = null
         }
-        if (this._animationWriteCount = tU, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, !this.animationsEnabled) return;
-        const pU = oU.b.Now;
+        if (this._animationWriteCount = Eu, this._animationStepWriteCount = 0, this._animationStepEvaluated = !1, !this.animationsEnabled) return;
+        const Ku = Mu.b.Now;
         if (!this._animationTimeLast) {
           if (this._pendingData.length > 0) return;
-          this._animationTimeLast = pU
+          this._animationTimeLast = Ku
         }
-        this.deltaTime = void 0 !== UU ? UU : this.useConstantAnimationDeltaTime ? 16 : (pU - this._animationTimeLast) * this.animationTimeScale, this._animationTimeLast = pU;
-        const PU = this._activeAnimatables;
-        if (0 === PU.length) return;
+        this.deltaTime = void 0 !== uu ? uu : this.useConstantAnimationDeltaTime ? 16 : (Ku - this._animationTimeLast) * this.animationTimeScale, this._animationTimeLast = Ku;
+        const mu = this._activeAnimatables;
+        if (0 === mu.length) return;
         this._animationTime += this.deltaTime;
-        const TU = this._animationTime;
+        const Ju = this._animationTime;
         this._animationStepEvaluated = !0;
-        for (let EU = 0; EU < PU.length; EU++) {
-          const UU = PU[EU];
-          !UU._animate(TU) && UU.disposeOnEnd && EU--
-        }! function(UU) {
-          if (UU._registeredForLateAnimationBindings.length) {
-            for (let RU = 0; RU < UU._registeredForLateAnimationBindings.length; RU++) {
-              const gU = UU._registeredForLateAnimationBindings.data[RU];
-              for (const UU in gU._lateAnimationHolders) {
-                const RU = gU._lateAnimationHolders[UU],
-                  tU = RU.animations[0],
-                  pU = RU.originalValue;
-                if (void 0 === pU || null === pU) continue;
-                const PU = nU.e.AllowMatrixDecomposeForInterpolation && pU.m;
-                let TU = gU[UU];
-                if (PU) TU = aU(RU);
-                else if (void 0 !== pU.w) TU = YU(RU, TU || EU.d.Identity());
+        for (let Qu = 0; Qu < mu.length; Qu++) {
+          const uu = mu[Qu];
+          !uu._animate(Ju) && uu.disposeOnEnd && Qu--
+        }! function(uu) {
+          if (uu._registeredForLateAnimationBindings.length) {
+            for (let Ru = 0; Ru < uu._registeredForLateAnimationBindings.length; Ru++) {
+              const yu = uu._registeredForLateAnimationBindings.data[Ru];
+              for (const uu in yu._lateAnimationHolders) {
+                const Ru = yu._lateAnimationHolders[uu],
+                  Eu = Ru.animations[0],
+                  Ku = Ru.originalValue;
+                if (void 0 === Ku || null === Ku) continue;
+                const mu = Au.d.AllowMatrixDecomposeForInterpolation && Ku.m;
+                let Ju = yu[uu];
+                if (mu) Ju = Gu(Ru);
+                else if (void 0 !== Ku.w) Ju = Uu(Ru, Ju || Qu.f.Identity());
                 else {
-                  let UU = 0,
-                    gU = 1;
-                  const EU = tU && tU._animationState.mE === nU.e.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT;
-                  if (RU.totalWeight < 1) TU = EU ? pU.clone ? pU.clone() : pU : tU && pU.scale ? pU.scale(1 - RU.totalWeight) : tU ? pU * (1 - RU.totalWeight) : pU.clone ? pU.clone() : pU;
-                  else if (tU) {
-                    gU = RU.totalWeight;
-                    const PU = tU.weight / gU;
-                    TU = 1 !== PU ? tU.currentValue.scale ? tU.currentValue.scale(PU) : tU.currentValue * PU : (RU.animations.length > 1 || RU.additiveAnimations.length > 0) && tU.currentValue.clone ? tU.currentValue.clone() : tU.currentValue, EU && (TU.addToRef ? TU.addToRef(pU, TU) : TU += pU), UU = 1
+                  let uu = 0,
+                    yu = 1;
+                  const Qu = Eu && Eu._animationState.WQ === Au.d.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT;
+                  if (Ru.totalWeight < 1) Ju = Qu ? Ku.clone ? Ku.clone() : Ku : Eu && Ku.scale ? Ku.scale(1 - Ru.totalWeight) : Eu ? Ku * (1 - Ru.totalWeight) : Ku.clone ? Ku.clone() : Ku;
+                  else if (Eu) {
+                    yu = Ru.totalWeight;
+                    const mu = Eu.weight / yu;
+                    Ju = 1 !== mu ? Eu.currentValue.scale ? Eu.currentValue.scale(mu) : Eu.currentValue * mu : (Ru.animations.length > 1 || Ru.additiveAnimations.length > 0) && Eu.currentValue.clone ? Eu.currentValue.clone() : Eu.currentValue, Qu && (Ju.addToRef ? Ju.addToRef(Ku, Ju) : Ju += Ku), uu = 1
                   }
-                  for (let tU = UU; tU < RU.animations.length; tU++) {
-                    const UU = RU.animations[tU],
-                      pU = UU.weight / gU;
-                    pU && (UU.currentValue.scaleAndAddToRef ? UU.currentValue.scaleAndAddToRef(pU, TU) : TU += UU.currentValue * pU)
+                  for (let Eu = uu; Eu < Ru.animations.length; Eu++) {
+                    const uu = Ru.animations[Eu],
+                      Ku = uu.weight / yu;
+                    Ku && (uu.currentValue.scaleAndAddToRef ? uu.currentValue.scaleAndAddToRef(Ku, Ju) : Ju += uu.currentValue * Ku)
                   }
-                  for (let tU = 0; tU < RU.additiveAnimations.length; tU++) {
-                    const UU = RU.additiveAnimations[tU],
-                      gU = UU.weight;
-                    gU && (UU.currentValue.scaleAndAddToRef ? UU.currentValue.scaleAndAddToRef(gU, TU) : TU += UU.currentValue * gU)
+                  for (let Eu = 0; Eu < Ru.additiveAnimations.length; Eu++) {
+                    const uu = Ru.additiveAnimations[Eu],
+                      yu = uu.weight;
+                    yu && (uu.currentValue.scaleAndAddToRef ? uu.currentValue.scaleAndAddToRef(yu, Ju) : Ju += uu.currentValue * yu)
                   }
                 }
-                gU[UU] = TU
+                yu[uu] = Ju
               }
-              gU._lateAnimationHolders = {}
+              yu._lateAnimationHolders = {}
             }
-            UU._registeredForLateAnimationBindings.reset()
+            uu._registeredForLateAnimationBindings.reset()
           }
         }(this), this._animationStepWriteCount = this._animationWriteCount
-      }, UU.prototype.sortActiveAnimatables = function() {
-        this._activeAnimatables.sort(((UU, RU) => UU.playOrder - RU.playOrder))
-      }, UU.prototype.beginWeightedAnimation = function(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
-          pU = arguments.length > 4 ? arguments[4] : void 0,
-          EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          PU = arguments.length > 6 ? arguments[6] : void 0,
-          TU = arguments.length > 7 ? arguments[7] : void 0,
-          qU = arguments.length > 8 ? arguments[8] : void 0,
-          KU = arguments.length > 9 ? arguments[9] : void 0,
-          cU = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        const GU = this.beginAnimation(UU, RU, gU, pU, EU, PU, TU, !1, qU, KU, cU);
-        return GU.weight = tU, GU
-      }, UU.prototype.beginAnimation = function(UU, RU, gU, tU) {
-        let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
-          EU = arguments.length > 5 ? arguments[5] : void 0,
-          PU = arguments.length > 6 ? arguments[6] : void 0,
-          TU = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
-          qU = arguments.length > 8 ? arguments[8] : void 0,
-          KU = arguments.length > 9 ? arguments[9] : void 0,
-          cU = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
-        if (pU < 0) {
-          const UU = RU;
-          RU = gU, gU = UU, pU = -pU
+      }, uu.prototype.sortActiveAnimatables = function() {
+        this._activeAnimatables.sort(((uu, Ru) => uu.playOrder - Ru.playOrder))
+      }, uu.prototype.beginWeightedAnimation = function(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1,
+          Ku = arguments.length > 4 ? arguments[4] : void 0,
+          Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          mu = arguments.length > 6 ? arguments[6] : void 0,
+          Ju = arguments.length > 7 ? arguments[7] : void 0,
+          Nu = arguments.length > 8 ? arguments[8] : void 0,
+          Xu = arguments.length > 9 ? arguments[9] : void 0,
+          Vu = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        const ru = this.beginAnimation(uu, Ru, yu, Ku, Qu, mu, Ju, !1, Nu, Xu, Vu);
+        return ru.weight = Eu, ru
+      }, uu.prototype.beginAnimation = function(uu, Ru, yu, Eu) {
+        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1,
+          Qu = arguments.length > 5 ? arguments[5] : void 0,
+          mu = arguments.length > 6 ? arguments[6] : void 0,
+          Ju = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7],
+          Nu = arguments.length > 8 ? arguments[8] : void 0,
+          Xu = arguments.length > 9 ? arguments[9] : void 0,
+          Vu = arguments.length > 10 && void 0 !== arguments[10] && arguments[10];
+        if (Ku < 0) {
+          const uu = Ru;
+          Ru = yu, yu = uu, Ku = -Ku
         }
-        RU > gU && (pU = -pU), TU && this.stopAnimation(UU, void 0, qU), PU || (PU = new ZU(this, UU, RU, gU, tU, pU, EU, void 0, KU, cU));
-        const GU = !qU || qU(UU);
-        if (UU.animations && GU && PU.appendAnimations(UU, UU.animations), UU.getAnimatables) {
-          const cU = UU.getAnimatables();
-          for (let UU = 0; UU < cU.length; UU++) this.beginAnimation(cU[UU], RU, gU, tU, pU, EU, PU, TU, qU, KU)
+        Ru > yu && (Ku = -Ku), Ju && this.stopAnimation(uu, void 0, Nu), mu || (mu = new Iu(this, uu, Ru, yu, Eu, Ku, Qu, void 0, Xu, Vu));
+        const ru = !Nu || Nu(uu);
+        if (uu.animations && ru && mu.appendAnimations(uu, uu.animations), uu.getAnimatables) {
+          const Vu = uu.getAnimatables();
+          for (let uu = 0; uu < Vu.length; uu++) this.beginAnimation(Vu[uu], Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu)
         }
-        return PU.reset(), PU
-      }, UU.prototype.beginHierarchyAnimation = function(UU, RU, gU, tU, pU) {
-        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
-          PU = arguments.length > 6 ? arguments[6] : void 0,
-          TU = arguments.length > 7 ? arguments[7] : void 0,
-          qU = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-          KU = arguments.length > 9 ? arguments[9] : void 0,
-          cU = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
-        const GU = UU.getDescendants(RU),
-          jU = [];
-        jU.push(this.beginAnimation(UU, gU, tU, pU, EU, PU, TU, qU, KU, void 0, cU));
-        for (const uU of GU) jU.push(this.beginAnimation(uU, gU, tU, pU, EU, PU, TU, qU, KU, void 0, cU));
-        return jU
-      }, UU.prototype.beginDirectAnimation = function(UU, RU, gU, tU, pU) {
-        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1;
-        if (EU < 0) {
-          const UU = gU;
-          gU = tU, tU = UU, EU = -EU
+        return mu.reset(), mu
+      }, uu.prototype.beginHierarchyAnimation = function(uu, Ru, yu, Eu, Ku) {
+        let Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1,
+          mu = arguments.length > 6 ? arguments[6] : void 0,
+          Ju = arguments.length > 7 ? arguments[7] : void 0,
+          Nu = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          Xu = arguments.length > 9 ? arguments[9] : void 0,
+          Vu = arguments.length > 11 && void 0 !== arguments[11] && arguments[11];
+        const ru = uu.getDescendants(Ru),
+          Bu = [];
+        Bu.push(this.beginAnimation(uu, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, void 0, Vu));
+        for (const xu of ru) Bu.push(this.beginAnimation(xu, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, void 0, Vu));
+        return Bu
+      }, uu.prototype.beginDirectAnimation = function(uu, Ru, yu, Eu, Ku) {
+        let Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 1;
+        if (Qu < 0) {
+          const uu = yu;
+          yu = Eu, Eu = uu, Qu = -Qu
         }
-        gU > tU && (EU = -EU);
-        return new ZU(this, UU, gU, tU, pU, EU, arguments.length > 6 ? arguments[6] : void 0, RU, arguments.length > 7 ? arguments[7] : void 0, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
-      }, UU.prototype.beginDirectHierarchyAnimation = function(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
-        let KU = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
-        const cU = UU.getDescendants(RU),
-          GU = [];
-        GU.push(this.beginDirectAnimation(UU, gU, tU, pU, EU, PU, TU, qU, KU));
-        for (const jU of cU) GU.push(this.beginDirectAnimation(jU, gU, tU, pU, EU, PU, TU, qU, KU));
-        return GU
-      }, UU.prototype.getAnimatableByTarget = function(UU) {
-        for (let RU = 0; RU < this._activeAnimatables.length; RU++)
-          if (this._activeAnimatables[RU].target === UU) return this._activeAnimatables[RU];
+        yu > Eu && (Qu = -Qu);
+        return new Iu(this, uu, yu, Eu, Ku, Qu, arguments.length > 6 ? arguments[6] : void 0, Ru, arguments.length > 7 ? arguments[7] : void 0, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      }, uu.prototype.beginDirectHierarchyAnimation = function(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+        let Xu = arguments.length > 9 && void 0 !== arguments[9] && arguments[9];
+        const Vu = uu.getDescendants(Ru),
+          ru = [];
+        ru.push(this.beginDirectAnimation(uu, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu));
+        for (const Bu of Vu) ru.push(this.beginDirectAnimation(Bu, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu));
+        return ru
+      }, uu.prototype.getAnimatableByTarget = function(uu) {
+        for (let Ru = 0; Ru < this._activeAnimatables.length; Ru++)
+          if (this._activeAnimatables[Ru].target === uu) return this._activeAnimatables[Ru];
         return null
-      }, UU.prototype.getAllAnimatablesByTarget = function(UU) {
-        const RU = [];
-        for (let gU = 0; gU < this._activeAnimatables.length; gU++) this._activeAnimatables[gU].target === UU && RU.push(this._activeAnimatables[gU]);
-        return RU
-      }, UU.prototype.stopAnimation = function(UU, RU, gU) {
-        const tU = this.getAllAnimatablesByTarget(UU);
-        for (const pU of tU) pU.stop(RU, gU)
-      }, UU.prototype.stopAllAnimations = function() {
+      }, uu.prototype.getAllAnimatablesByTarget = function(uu) {
+        const Ru = [];
+        for (let yu = 0; yu < this._activeAnimatables.length; yu++) this._activeAnimatables[yu].target === uu && Ru.push(this._activeAnimatables[yu]);
+        return Ru
+      }, uu.prototype.stopAnimation = function(uu, Ru, yu) {
+        const Eu = this.getAllAnimatablesByTarget(uu);
+        for (const Ku of Eu) Ku.stop(Ru, yu)
+      }, uu.prototype.stopAllAnimations = function() {
         if (this._activeAnimatables) {
-          for (let UU = 0; UU < this._activeAnimatables.length; UU++) this._activeAnimatables[UU].stop(void 0, void 0, !0);
+          for (let uu = 0; uu < this._activeAnimatables.length; uu++) this._activeAnimatables[uu].stop(void 0, void 0, !0);
           this._activeAnimatables.length = 0
         }
-        for (const UU of this.animationGroups) UU.stop()
+        for (const uu of this.animationGroups) uu.stop()
       })
     }
-    ZU.ProcessPausedAnimatables = !1;
-    var VU, rU = gU(36610),
-      XU = gU(39610),
-      vU = gU(39256);
-    class dU extends XU.b {
+    Iu.ProcessPausedAnimatables = !1;
+    var su, tu = yu(36842),
+      lu = yu(39780),
+      gu = yu(39430);
+    class cu extends lu.e {
       get _matrix() {
         return this._compose(), this._localMatrix
       }
-      set _matrix(UU) {
-        (UU.updateFlag !== this._localMatrix.updateFlag || this._needToCompose) && (this._needToCompose = !1, this._localMatrix.PgU(UU), this._markAsDirtyAndDecompose())
+      set _matrix(uu) {
+        (uu.updateFlag !== this._localMatrix.updateFlag || this._needToCompose) && (this._needToCompose = !1, this._localMatrix.Oyu(uu), this._markAsDirtyAndDecompose())
       }
-      constructor(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-          PU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-          TU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
-        super(UU, RU.aZ(), !1), this.name = UU, this.children = [], this.animations = [], this._index = null, this._scalingDeterminant = 1, this._needToDecompose = !0, this._needToCompose = !1, this._linkedTransformNode = null, this._waitingTransformNodeId = null, this._waitingTransformNodeUniqueId = null, this._skeleton = RU, this._localMatrix = tU?.clone() ?? EU.c.Identity(), this._restMatrix = pU ?? this._localMatrix.clone(), this._bindMatrix = PU ?? this._localMatrix.clone(), this._index = TU, this._absoluteMatrix = new EU.c, this._absoluteBindMatrix = new EU.c, this._absoluteInverseBindMatrix = new EU.c, this._finalMatrix = new EU.c, RU.bones.push(this), this.setParent(gU, !1), this._updateAbsoluteBindMatrices()
+      constructor(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+          mu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+          Ju = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null;
+        super(uu, Ru.lD(), !1), this.name = uu, this.children = [], this.animations = [], this._index = null, this._scalingDeterminant = 1, this._needToDecompose = !0, this._needToCompose = !1, this._linkedTransformNode = null, this._waitingTransformNodeId = null, this._waitingTransformNodeUniqueId = null, this._skeleton = Ru, this._localMatrix = Eu?.clone() ?? Qu.d.Identity(), this._restMatrix = Ku ?? this._localMatrix.clone(), this._bindMatrix = mu ?? this._localMatrix.clone(), this._index = Ju, this._absoluteMatrix = new Qu.d, this._absoluteBindMatrix = new Qu.d, this._absoluteInverseBindMatrix = new Qu.d, this._finalMatrix = new Qu.d, Ru.bones.push(this), this.setParent(yu, !1), this._updateAbsoluteBindMatrices()
       }
       getClassName() {
         return "Bone"
@@ -2271,16 +2271,16 @@ export const modules = {
       getIndex() {
         return null === this._index ? this.getSkeleton().bones.indexOf(this) : this._index
       }
-      set parent(UU) {
-        this.setParent(UU)
+      set parent(uu) {
+        this.setParent(uu)
       }
-      setParent(UU) {
-        let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (this.parent !== UU) {
+      setParent(uu) {
+        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (this.parent !== uu) {
           if (this.parent) {
-            const UU = this.parent.children.indexOf(this); - 1 !== UU && this.parent.children.splice(UU, 1)
+            const uu = this.parent.children.indexOf(this); - 1 !== uu && this.parent.children.splice(uu, 1)
           }
-          this._parentNode = UU, this.parent && this.parent.children.push(this), RU && this._updateAbsoluteBindMatrices(), this.cRU()
+          this._parentNode = uu, this.parent && this.parent.children.push(this), Ru && this._updateAbsoluteBindMatrices(), this.Eyu()
         }
       }
       getLocalMatrix() {
@@ -2298,20 +2298,20 @@ export const modules = {
       getRestPose() {
         return this.getRestMatrix()
       }
-      setRestMatrix(UU) {
-        this._restMatrix.PgU(UU)
+      setRestMatrix(uu) {
+        this._restMatrix.Oyu(uu)
       }
-      setRestPose(UU) {
-        this.setRestMatrix(UU)
+      setRestPose(uu) {
+        this.setRestMatrix(uu)
       }
       getBindPose() {
         return this.getBindMatrix()
       }
-      setBindMatrix(UU) {
-        this.p_(UU)
+      setBindMatrix(uu) {
+        this.v_(uu)
       }
-      setBindPose(UU) {
-        this.setBindMatrix(UU)
+      setBindPose(uu) {
+        this.setBindMatrix(uu)
       }
       getFinalMatrix() {
         return this._finalMatrix
@@ -2321,10 +2321,10 @@ export const modules = {
       }
       returnToRest() {
         if (this._linkedTransformNode) {
-          const UU = EU.h.xC[0],
-            RU = EU.h.Quaternion[0],
-            gU = EU.h.xC[1];
-          this.getRestMatrix().decompose(UU, RU, gU), this._linkedTransformNode.position.PgU(gU), this._linkedTransformNode.rotationQuaternion = this._linkedTransformNode.rotationQuaternion ?? EU.d.Identity(), this._linkedTransformNode.rotationQuaternion.PgU(RU), this._linkedTransformNode.ep.PgU(UU)
+          const uu = Qu.m.MS[0],
+            Ru = Qu.m.Quaternion[0],
+            yu = Qu.m.MS[1];
+          this.getRestMatrix().decompose(uu, Ru, yu), this._linkedTransformNode.position.Oyu(yu), this._linkedTransformNode.rotationQuaternion = this._linkedTransformNode.rotationQuaternion ?? Qu.f.Identity(), this._linkedTransformNode.rotationQuaternion.Oyu(Ru), this._linkedTransformNode.pp.Oyu(uu)
         } else this._matrix = this._restMatrix
       }
       getAbsoluteInverseBindMatrix() {
@@ -2339,565 +2339,565 @@ export const modules = {
       getAbsoluteTransform() {
         return this.getAbsoluteMatrix()
       }
-      linkTransformNode(UU) {
-        this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode--, this._linkedTransformNode = UU, this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode++
+      linkTransformNode(uu) {
+        this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode--, this._linkedTransformNode = uu, this._linkedTransformNode && this._skeleton._numBonesWithLinkedTransformNode++
       }
       getTransformNode() {
         return this._linkedTransformNode
       }
       get position() {
-        return this._decompose(), this.wUU
+        return this._decompose(), this.pRu
       }
-      set position(UU) {
-        this._decompose(), this.wUU.PgU(UU), this._markAsDirtyAndCompose()
+      set position(uu) {
+        this._decompose(), this.pRu.Oyu(uu), this._markAsDirtyAndCompose()
       }
       get rotation() {
         return this.getRotation()
       }
-      set rotation(UU) {
-        this.setRotation(UU)
+      set rotation(uu) {
+        this.setRotation(uu)
       }
       get rotationQuaternion() {
         return this._decompose(), this._localRotation
       }
-      set rotationQuaternion(UU) {
-        this.setRotationQuaternion(UU)
+      set rotationQuaternion(uu) {
+        this.setRotationQuaternion(uu)
       }
-      get ep() {
+      get pp() {
         return this.getScale()
       }
-      set ep(UU) {
-        this.setScale(UU)
+      set pp(uu) {
+        this.setScale(uu)
       }
       get animationPropertiesOverride() {
         return this._skeleton.animationPropertiesOverride
       }
       _decompose() {
-        this._needToDecompose && (this._needToDecompose = !1, this._localScaling || (this._localScaling = EU.n.Zero(), this._localRotation = EU.d.Zero(), this.wUU = EU.n.Zero()), this._localMatrix.decompose(this._localScaling, this._localRotation, this.wUU))
+        this._needToDecompose && (this._needToDecompose = !1, this._localScaling || (this._localScaling = Qu.p.Zero(), this._localRotation = Qu.f.Zero(), this.pRu = Qu.p.Zero()), this._localMatrix.decompose(this._localScaling, this._localRotation, this.pRu))
       }
       _compose() {
-        this._needToCompose && (this._localScaling ? (this._needToCompose = !1, EU.c.ComposeToRef(this._localScaling, this._localRotation, this.wUU, this._localMatrix)) : this._needToCompose = !1)
+        this._needToCompose && (this._localScaling ? (this._needToCompose = !1, Qu.d.ComposeToRef(this._localScaling, this._localRotation, this.pRu, this._localMatrix)) : this._needToCompose = !1)
       }
-      p_(UU) {
-        let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          gU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this._bindMatrix.PgU(UU), RU && this._updateAbsoluteBindMatrices(), gU ? this._matrix = UU : this.cRU()
+      v_(uu) {
+        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this._bindMatrix.Oyu(uu), Ru && this._updateAbsoluteBindMatrices(), yu ? this._matrix = uu : this.Eyu()
       }
-      _updateAbsoluteBindMatrices(UU) {
-        let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (UU || (UU = this._bindMatrix), this.parent ? UU.multiplyToRef(this.parent._absoluteBindMatrix, this._absoluteBindMatrix) : this._absoluteBindMatrix.PgU(UU), this._absoluteBindMatrix.invertToRef(this._absoluteInverseBindMatrix), RU)
-          for (let gU = 0; gU < this.children.length; gU++) this.children[gU]._updateAbsoluteBindMatrices();
+      _updateAbsoluteBindMatrices(uu) {
+        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (uu || (uu = this._bindMatrix), this.parent ? uu.multiplyToRef(this.parent._absoluteBindMatrix, this._absoluteBindMatrix) : this._absoluteBindMatrix.Oyu(uu), this._absoluteBindMatrix.invertToRef(this._absoluteInverseBindMatrix), Ru)
+          for (let yu = 0; yu < this.children.length; yu++) this.children[yu]._updateAbsoluteBindMatrices();
         this._scalingDeterminant = this._absoluteBindMatrix.determinant() < 0 ? -1 : 1
       }
-      cRU() {
+      Eyu() {
         return this._currentRenderId++, this._childUpdateId++, this._skeleton._markAsDirty(), this
       }
       _markAsDirtyAndCompose() {
-        this.cRU(), this._needToCompose = !0
+        this.Eyu(), this._needToCompose = !0
       }
       _markAsDirtyAndDecompose() {
-        this.cRU(), this._needToDecompose = !0
+        this.Eyu(), this._needToDecompose = !0
       }
-      _updatePosition(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0,
-          tU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const pU = this.getLocalMatrix();
-        if (0 == RU) tU ? (pU.addAtIndex(12, UU.x), pU.addAtIndex(13, UU.y), pU.addAtIndex(14, UU.z)) : pU.setTranslationFromFloats(UU.x, UU.y, UU.z);
+      _updatePosition(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0,
+          Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const Ku = this.getLocalMatrix();
+        if (0 == Ru) Eu ? (Ku.addAtIndex(12, uu.x), Ku.addAtIndex(13, uu.y), Ku.addAtIndex(14, uu.z)) : Ku.setTranslationFromFloats(uu.x, uu.y, uu.z);
         else {
-          const RU = dU._TmpMats[0],
-            PU = dU._TmpVecs[0];
-          this.parent ? (RU.PgU(this.parent.getAbsoluteMatrix()), gU && RU.multiplyToRef(gU.getWorldMatrix(), RU)) : EU.c.IdentityToRef(RU), tU && RU.setTranslationFromFloats(0, 0, 0), RU.invert(), EU.n.TransformCoordinatesToRef(UU, RU, PU), tU ? (pU.addAtIndex(12, PU.x), pU.addAtIndex(13, PU.y), pU.addAtIndex(14, PU.z)) : pU.setTranslationFromFloats(PU.x, PU.y, PU.z)
+          const Ru = cu._TmpMats[0],
+            mu = cu._TmpVecs[0];
+          this.parent ? (Ru.Oyu(this.parent.getAbsoluteMatrix()), yu && Ru.multiplyToRef(yu.getWorldMatrix(), Ru)) : Qu.d.IdentityToRef(Ru), Eu && Ru.setTranslationFromFloats(0, 0, 0), Ru.invert(), Qu.p.TransformCoordinatesToRef(uu, Ru, mu), Eu ? (Ku.addAtIndex(12, mu.x), Ku.addAtIndex(13, mu.y), Ku.addAtIndex(14, mu.z)) : Ku.setTranslationFromFloats(mu.x, mu.y, mu.z)
         }
         this._markAsDirtyAndDecompose()
       }
-      translate(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        this._updatePosition(UU, RU, gU, !0)
+      translate(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        this._updatePosition(uu, Ru, yu, !0)
       }
-      setPosition(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        this._updatePosition(UU, RU, gU, !1)
+      setPosition(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        this._updatePosition(uu, Ru, yu, !1)
       }
-      setAbsolutePosition(UU, RU) {
-        this.setPosition(UU, 1, RU)
+      setAbsolutePosition(uu, Ru) {
+        this.setPosition(uu, 1, Ru)
       }
-      scale(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const pU = this.getLocalMatrix(),
-          PU = dU._TmpMats[0];
-        EU.c.ScalingToRef(UU, RU, gU, PU), PU.multiplyToRef(pU, pU), PU.invert();
-        for (const EU of this.children) {
-          const tU = EU.getLocalMatrix();
-          tU.multiplyToRef(PU, tU), tU.multiplyAtIndex(12, UU), tU.multiplyAtIndex(13, RU), tU.multiplyAtIndex(14, gU), EU._markAsDirtyAndDecompose()
+      scale(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const Ku = this.getLocalMatrix(),
+          mu = cu._TmpMats[0];
+        Qu.d.ScalingToRef(uu, Ru, yu, mu), mu.multiplyToRef(Ku, Ku), mu.invert();
+        for (const Qu of this.children) {
+          const Eu = Qu.getLocalMatrix();
+          Eu.multiplyToRef(mu, Eu), Eu.multiplyAtIndex(12, uu), Eu.multiplyAtIndex(13, Ru), Eu.multiplyAtIndex(14, yu), Qu._markAsDirtyAndDecompose()
         }
-        if (this._markAsDirtyAndDecompose(), tU)
-          for (const EU of this.children) EU.scale(UU, RU, gU, tU)
+        if (this._markAsDirtyAndDecompose(), Eu)
+          for (const Qu of this.children) Qu.scale(uu, Ru, yu, Eu)
       }
-      setScale(UU) {
-        this._decompose(), this._localScaling.PgU(UU), this._markAsDirtyAndCompose()
+      setScale(uu) {
+        this._decompose(), this._localScaling.Oyu(uu), this._markAsDirtyAndCompose()
       }
       getScale() {
         return this._decompose(), this._localScaling
       }
-      getScaleToRef(UU) {
-        this._decompose(), UU.PgU(this._localScaling)
+      getScaleToRef(uu) {
+        this._decompose(), uu.Oyu(this._localScaling)
       }
-      setYawPitchRoll(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          pU = arguments.length > 4 ? arguments[4] : void 0;
-        if (0 === tU) {
-          const PU = dU._TmpQuat;
-          return EU.d.RotationYawPitchRollToRef(UU, RU, gU, PU), void this.setRotationQuaternion(PU, tU, pU)
+      setYawPitchRoll(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Ku = arguments.length > 4 ? arguments[4] : void 0;
+        if (0 === Eu) {
+          const mu = cu._TmpQuat;
+          return Qu.f.RotationYawPitchRollToRef(uu, Ru, yu, mu), void this.setRotationQuaternion(mu, Eu, Ku)
         }
-        const PU = dU._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(PU, pU)) return;
-        const TU = dU._TmpMats[1];
-        EU.c.RotationYawPitchRollToRef(UU, RU, gU, TU), PU.multiplyToRef(TU, TU), this._rotateWithMatrix(TU, tU, pU)
+        const mu = cu._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(mu, Ku)) return;
+        const Ju = cu._TmpMats[1];
+        Qu.d.RotationYawPitchRollToRef(uu, Ru, yu, Ju), mu.multiplyToRef(Ju, Ju), this._rotateWithMatrix(Ju, Eu, Ku)
       }
-      rotate(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          tU = arguments.length > 3 ? arguments[3] : void 0;
-        const pU = dU._TmpMats[0];
-        pU.setTranslationFromFloats(0, 0, 0), EU.c.RotationAxisToRef(UU, RU, pU), this._rotateWithMatrix(pU, gU, tU)
+      rotate(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Eu = arguments.length > 3 ? arguments[3] : void 0;
+        const Ku = cu._TmpMats[0];
+        Ku.setTranslationFromFloats(0, 0, 0), Qu.d.RotationAxisToRef(uu, Ru, Ku), this._rotateWithMatrix(Ku, yu, Eu)
       }
-      setAxisAngle(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          tU = arguments.length > 3 ? arguments[3] : void 0;
-        if (0 === gU) {
-          const pU = dU._TmpQuat;
-          return EU.d.RotationAxisToRef(UU, RU, pU), void this.setRotationQuaternion(pU, gU, tU)
+      setAxisAngle(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Eu = arguments.length > 3 ? arguments[3] : void 0;
+        if (0 === yu) {
+          const Ku = cu._TmpQuat;
+          return Qu.f.RotationAxisToRef(uu, Ru, Ku), void this.setRotationQuaternion(Ku, yu, Eu)
         }
-        const pU = dU._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(pU, tU)) return;
-        const PU = dU._TmpMats[1];
-        EU.c.RotationAxisToRef(UU, RU, PU), pU.multiplyToRef(PU, PU), this._rotateWithMatrix(PU, gU, tU)
+        const Ku = cu._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(Ku, Eu)) return;
+        const mu = cu._TmpMats[1];
+        Qu.d.RotationAxisToRef(uu, Ru, mu), Ku.multiplyToRef(mu, mu), this._rotateWithMatrix(mu, yu, Eu)
       }
-      setRotation(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        this.setYawPitchRoll(UU.y, UU.x, UU.z, RU, gU)
+      setRotation(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        this.setYawPitchRoll(uu.y, uu.x, uu.z, Ru, yu)
       }
-      setRotationQuaternion(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 === RU) return this._decompose(), this._localRotation.PgU(UU), void this._markAsDirtyAndCompose();
-        const tU = dU._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(tU, gU)) return;
-        const pU = dU._TmpMats[1];
-        EU.c.FromQuaternionToRef(UU, pU), tU.multiplyToRef(pU, pU), this._rotateWithMatrix(pU, RU, gU)
+      setRotationQuaternion(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 === Ru) return this._decompose(), this._localRotation.Oyu(uu), void this._markAsDirtyAndCompose();
+        const Eu = cu._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(Eu, yu)) return;
+        const Ku = cu._TmpMats[1];
+        Qu.d.FromQuaternionToRef(uu, Ku), Eu.multiplyToRef(Ku, Ku), this._rotateWithMatrix(Ku, Ru, yu)
       }
-      setRotationMatrix(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 === RU) {
-          const tU = dU._TmpQuat;
-          return EU.d.FromRotationMatrixToRef(UU, tU), void this.setRotationQuaternion(tU, RU, gU)
+      setRotationMatrix(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 === Ru) {
+          const Eu = cu._TmpQuat;
+          return Qu.f.FromRotationMatrixToRef(uu, Eu), void this.setRotationQuaternion(Eu, Ru, yu)
         }
-        const tU = dU._TmpMats[0];
-        if (!this._getAbsoluteInverseMatrixUnscaledToRef(tU, gU)) return;
-        const pU = dU._TmpMats[1];
-        pU.PgU(UU), tU.multiplyToRef(UU, pU), this._rotateWithMatrix(pU, RU, gU)
+        const Eu = cu._TmpMats[0];
+        if (!this._getAbsoluteInverseMatrixUnscaledToRef(Eu, yu)) return;
+        const Ku = cu._TmpMats[1];
+        Ku.Oyu(uu), Eu.multiplyToRef(uu, Ku), this._rotateWithMatrix(Ku, Ru, yu)
       }
-      _rotateWithMatrix(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        const tU = this.getLocalMatrix(),
-          pU = tU.m[12],
-          EU = tU.m[13],
-          PU = tU.m[14],
-          TU = this.getParent(),
-          qU = dU._TmpMats[3],
-          KU = dU._TmpMats[4];
-        TU && 1 == RU ? (gU ? (qU.PgU(gU.getWorldMatrix()), TU.getAbsoluteMatrix().multiplyToRef(qU, qU)) : qU.PgU(TU.getAbsoluteMatrix()), KU.PgU(qU), KU.invert(), tU.multiplyToRef(qU, tU), tU.multiplyToRef(UU, tU), tU.multiplyToRef(KU, tU)) : 1 == RU && gU ? (qU.PgU(gU.getWorldMatrix()), KU.PgU(qU), KU.invert(), tU.multiplyToRef(qU, tU), tU.multiplyToRef(UU, tU), tU.multiplyToRef(KU, tU)) : tU.multiplyToRef(UU, tU), tU.setTranslationFromFloats(pU, EU, PU), this._markAsDirtyAndDecompose()
+      _rotateWithMatrix(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        const Eu = this.getLocalMatrix(),
+          Ku = Eu.m[12],
+          Qu = Eu.m[13],
+          mu = Eu.m[14],
+          Ju = this.getParent(),
+          Nu = cu._TmpMats[3],
+          Xu = cu._TmpMats[4];
+        Ju && 1 == Ru ? (yu ? (Nu.Oyu(yu.getWorldMatrix()), Ju.getAbsoluteMatrix().multiplyToRef(Nu, Nu)) : Nu.Oyu(Ju.getAbsoluteMatrix()), Xu.Oyu(Nu), Xu.invert(), Eu.multiplyToRef(Nu, Eu), Eu.multiplyToRef(uu, Eu), Eu.multiplyToRef(Xu, Eu)) : 1 == Ru && yu ? (Nu.Oyu(yu.getWorldMatrix()), Xu.Oyu(Nu), Xu.invert(), Eu.multiplyToRef(Nu, Eu), Eu.multiplyToRef(uu, Eu), Eu.multiplyToRef(Xu, Eu)) : Eu.multiplyToRef(uu, Eu), Eu.setTranslationFromFloats(Ku, Qu, mu), this._markAsDirtyAndDecompose()
       }
-      _getAbsoluteInverseMatrixUnscaledToRef(UU, RU) {
-        const gU = dU._TmpMats[2];
-        return UU.PgU(this.getAbsoluteMatrix()), RU ? (UU.multiplyToRef(RU.getWorldMatrix(), UU), EU.c.ScalingToRef(RU.ep.x, RU.ep.y, RU.ep.z, gU)) : EU.c.IdentityToRef(gU), UU.invert(), !isNaN(UU.m[0]) && (gU.multiplyAtIndex(0, this._scalingDeterminant), UU.multiplyToRef(gU, UU), !0)
+      _getAbsoluteInverseMatrixUnscaledToRef(uu, Ru) {
+        const yu = cu._TmpMats[2];
+        return uu.Oyu(this.getAbsoluteMatrix()), Ru ? (uu.multiplyToRef(Ru.getWorldMatrix(), uu), Qu.d.ScalingToRef(Ru.pp.x, Ru.pp.y, Ru.pp.z, yu)) : Qu.d.IdentityToRef(yu), uu.invert(), !isNaN(uu.m[0]) && (yu.multiplyAtIndex(0, this._scalingDeterminant), uu.multiplyToRef(yu, uu), !0)
       }
-      Hx() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const gU = EU.n.Zero();
-        return this.getPositionToRef(UU, RU, gU), gU
+      mH() {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const yu = Qu.p.Zero();
+        return this.getPositionToRef(uu, Ru, yu), yu
       }
       getPositionToRef() {
-        let UU = arguments.length > 1 ? arguments[1] : void 0,
-          RU = arguments.length > 2 ? arguments[2] : void 0;
+        let uu = arguments.length > 1 ? arguments[1] : void 0,
+          Ru = arguments.length > 2 ? arguments[2] : void 0;
         if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) {
-          const UU = this.getLocalMatrix();
-          RU.x = UU.m[12], RU.y = UU.m[13], RU.z = UU.m[14]
+          const uu = this.getLocalMatrix();
+          Ru.x = uu.m[12], Ru.y = uu.m[13], Ru.z = uu.m[14]
         } else {
-          const gU = dU._TmpMats[0].PgU(this.getAbsoluteMatrix());
-          UU && gU.multiplyToRef(UU.getWorldMatrix(), gU), RU.x = gU.m[12], RU.y = gU.m[13], RU.z = gU.m[14]
+          const yu = cu._TmpMats[0].Oyu(this.getAbsoluteMatrix());
+          uu && yu.multiplyToRef(uu.getWorldMatrix(), yu), Ru.x = yu.m[12], Ru.y = yu.m[13], Ru.z = yu.m[14]
         }
       }
       getAbsolutePosition() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        const RU = EU.n.Zero();
-        return this.getPositionToRef(1, UU, RU), RU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        const Ru = Qu.p.Zero();
+        return this.getPositionToRef(1, uu, Ru), Ru
       }
-      getAbsolutePositionToRef(UU, RU) {
-        this.getPositionToRef(1, UU, RU)
+      getAbsolutePositionToRef(uu, Ru) {
+        this.getPositionToRef(1, uu, Ru)
       }
       computeAbsoluteMatrices() {
         if (this._compose(), this.parent) this._localMatrix.multiplyToRef(this.parent._absoluteMatrix, this._absoluteMatrix);
         else {
-          this._absoluteMatrix.PgU(this._localMatrix);
-          const UU = this._skeleton.getPoseMatrix();
-          UU && this._absoluteMatrix.multiplyToRef(UU, this._absoluteMatrix)
+          this._absoluteMatrix.Oyu(this._localMatrix);
+          const uu = this._skeleton.getPoseMatrix();
+          uu && this._absoluteMatrix.multiplyToRef(uu, this._absoluteMatrix)
         }
-        const UU = this.children,
-          RU = UU.length;
-        for (let gU = 0; gU < RU; gU++) UU[gU].computeAbsoluteMatrices()
+        const uu = this.children,
+          Ru = uu.length;
+        for (let yu = 0; yu < Ru; yu++) uu[yu].computeAbsoluteMatrices()
       }
       computeAbsoluteTransforms() {
         this.computeAbsoluteMatrices()
       }
-      pM(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const gU = EU.n.Zero();
-        return this.getDirectionToRef(UU, RU, gU), gU
+      Mq(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const yu = Qu.p.Zero();
+        return this.getDirectionToRef(uu, Ru, yu), yu
       }
-      getDirectionToRef(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        const tU = dU._TmpMats[0].PgU(this.getAbsoluteMatrix());
-        RU && tU.multiplyToRef(RU.getWorldMatrix(), tU), EU.n.TransformNormalToRef(UU, tU, gU), gU.normalize()
+      getDirectionToRef(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        const Eu = cu._TmpMats[0].Oyu(this.getAbsoluteMatrix());
+        Ru && Eu.multiplyToRef(Ru.getWorldMatrix(), Eu), Qu.p.TransformNormalToRef(uu, Eu, yu), yu.normalize()
       }
       getRotation() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const gU = EU.n.Zero();
-        return this.getRotationToRef(UU, RU, gU), gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const yu = Qu.p.Zero();
+        return this.getRotationToRef(uu, Ru, yu), yu
       }
       getRotationToRef() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        const tU = dU._TmpQuat;
-        this.getRotationQuaternionToRef(UU, RU, tU), tU.toEulerAnglesToRef(gU)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        const Eu = cu._TmpQuat;
+        this.getRotationQuaternionToRef(uu, Ru, Eu), Eu.toEulerAnglesToRef(yu)
       }
       getRotationQuaternion() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const gU = EU.d.Identity();
-        return this.getRotationQuaternionToRef(UU, RU, gU), gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const yu = Qu.f.Identity();
+        return this.getRotationQuaternionToRef(uu, Ru, yu), yu
       }
       getRotationQuaternionToRef() {
-        let UU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          RU = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this._decompose(), RU.PgU(this._localRotation);
+        let uu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Ru = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this._decompose(), Ru.Oyu(this._localRotation);
         else {
-          const gU = dU._TmpMats[0],
-            tU = this.getAbsoluteMatrix();
-          UU ? tU.multiplyToRef(UU.getWorldMatrix(), gU) : gU.PgU(tU), gU.multiplyAtIndex(0, this._scalingDeterminant), gU.multiplyAtIndex(1, this._scalingDeterminant), gU.multiplyAtIndex(2, this._scalingDeterminant), gU.decompose(void 0, RU, void 0)
+          const yu = cu._TmpMats[0],
+            Eu = this.getAbsoluteMatrix();
+          uu ? Eu.multiplyToRef(uu.getWorldMatrix(), yu) : yu.Oyu(Eu), yu.multiplyAtIndex(0, this._scalingDeterminant), yu.multiplyAtIndex(1, this._scalingDeterminant), yu.multiplyAtIndex(2, this._scalingDeterminant), yu.decompose(void 0, Ru, void 0)
         }
       }
       getRotationMatrix() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 ? arguments[1] : void 0;
-        const gU = EU.c.Identity();
-        return this.getRotationMatrixToRef(UU, RU, gU), gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 ? arguments[1] : void 0;
+        const yu = Qu.d.Identity();
+        return this.getRotationMatrixToRef(uu, Ru, yu), yu
       }
       getRotationMatrixToRef() {
-        let UU = arguments.length > 1 ? arguments[1] : void 0,
-          RU = arguments.length > 2 ? arguments[2] : void 0;
-        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this.getLocalMatrix().getRotationMatrixToRef(RU);
+        let uu = arguments.length > 1 ? arguments[1] : void 0,
+          Ru = arguments.length > 2 ? arguments[2] : void 0;
+        if (0 == (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0)) this.getLocalMatrix().getRotationMatrixToRef(Ru);
         else {
-          const gU = dU._TmpMats[0],
-            tU = this.getAbsoluteMatrix();
-          UU ? tU.multiplyToRef(UU.getWorldMatrix(), gU) : gU.PgU(tU), gU.multiplyAtIndex(0, this._scalingDeterminant), gU.multiplyAtIndex(1, this._scalingDeterminant), gU.multiplyAtIndex(2, this._scalingDeterminant), gU.getRotationMatrixToRef(RU)
+          const yu = cu._TmpMats[0],
+            Eu = this.getAbsoluteMatrix();
+          uu ? Eu.multiplyToRef(uu.getWorldMatrix(), yu) : yu.Oyu(Eu), yu.multiplyAtIndex(0, this._scalingDeterminant), yu.multiplyAtIndex(1, this._scalingDeterminant), yu.multiplyAtIndex(2, this._scalingDeterminant), yu.getRotationMatrixToRef(Ru)
         }
       }
-      getAbsolutePositionFromLocal(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const gU = EU.n.Zero();
-        return this.getAbsolutePositionFromLocalToRef(UU, RU, gU), gU
+      getAbsolutePositionFromLocal(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const yu = Qu.p.Zero();
+        return this.getAbsolutePositionFromLocalToRef(uu, Ru, yu), yu
       }
-      getAbsolutePositionFromLocalToRef(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        const tU = dU._TmpMats[0].PgU(this.getAbsoluteMatrix());
-        RU && tU.multiplyToRef(RU.getWorldMatrix(), tU), EU.n.TransformCoordinatesToRef(UU, tU, gU)
+      getAbsolutePositionFromLocalToRef(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        const Eu = cu._TmpMats[0].Oyu(this.getAbsoluteMatrix());
+        Ru && Eu.multiplyToRef(Ru.getWorldMatrix(), Eu), Qu.p.TransformCoordinatesToRef(uu, Eu, yu)
       }
-      getLocalPositionFromAbsolute(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        const gU = EU.n.Zero();
-        return this.getLocalPositionFromAbsoluteToRef(UU, RU, gU), gU
+      getLocalPositionFromAbsolute(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        const yu = Qu.p.Zero();
+        return this.getLocalPositionFromAbsoluteToRef(uu, Ru, yu), yu
       }
-      getLocalPositionFromAbsoluteToRef(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        const tU = dU._TmpMats[0].PgU(this.getAbsoluteMatrix());
-        RU && tU.multiplyToRef(RU.getWorldMatrix(), tU), tU.invert(), EU.n.TransformCoordinatesToRef(UU, tU, gU)
+      getLocalPositionFromAbsoluteToRef(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        const Eu = cu._TmpMats[0].Oyu(this.getAbsoluteMatrix());
+        Ru && Eu.multiplyToRef(Ru.getWorldMatrix(), Eu), Eu.invert(), Qu.p.TransformCoordinatesToRef(uu, Eu, yu)
       }
       setCurrentPoseAsRest() {
         this.setRestMatrix(this.getLocalMatrix())
       }
       dispose() {
         this._linkedTransformNode = null;
-        const UU = this._skeleton.bones.indexOf(this);
-        if (-1 !== UU && this._skeleton.bones.splice(UU, 1), this._parentNode && this._parentNode.children) {
-          const UU = this._parentNode.children,
-            RU = UU.indexOf(this); - 1 !== RU && UU.splice(RU, 1)
+        const uu = this._skeleton.bones.indexOf(this);
+        if (-1 !== uu && this._skeleton.bones.splice(uu, 1), this._parentNode && this._parentNode.children) {
+          const uu = this._parentNode.children,
+            Ru = uu.indexOf(this); - 1 !== Ru && uu.splice(Ru, 1)
         }
         super.dispose()
       }
     }
-    dU._TmpVecs = (0, rU.e)(2, EU.n.Zero), dU._TmpQuat = EU.d.Identity(), dU._TmpMats = (0, rU.e)(5, EU.c.Identity), (VU = dU.prototype).copyAnimationRange ?? (VU.copyAnimationRange = (0, vU.m)("Bone", "copyAnimationRange"));
-    var HU = gU(39468);
-    let SU = !1;
-    var sU = gU(39350),
-      yU = gU(39714),
-      kU = gU(39720),
-      FU = gU(39716),
-      iU = gU(39495);
+    cu._TmpVecs = (0, tu.b)(2, Qu.p.Zero), cu._TmpQuat = Qu.f.Identity(), cu._TmpMats = (0, tu.b)(5, Qu.d.Identity), (su = cu.prototype).copyAnimationRange ?? (su.copyAnimationRange = (0, gu.i)("Bone", "copyAnimationRange"));
+    var Lu = yu(39647);
+    let zu = !1;
+    var Fu = yu(39526),
+      wu = yu(39899),
+      Zu = yu(39913),
+      hu = yu(39905),
+      Pu = yu(39687);
 
-    function AU(UU, RU) {
-      const gU = (0, uU.RandomRange)(0, 1);
-      cU.g.LerpToRef(RU.color1, RU.color2, gU, UU.color)
+    function iu(uu, Ru) {
+      const yu = (0, xu.RandomRange)(0, 1);
+      Vu.h.LerpToRef(Ru.color1, Ru.color2, yu, uu.color)
     }
 
-    function zU(UU, RU) {
-      RU.colorDead.subtractToRef(UU.color, RU._colorDiff), RU._colorDiff.scaleToRef(1 / UU.lifeTime, UU.colorStep)
+    function Yu(uu, Ru) {
+      Ru.colorDead.subtractToRef(uu.color, Ru._colorDiff), Ru._colorDiff.scaleToRef(1 / uu.lifeTime, uu.colorStep)
     }
 
-    function MU(UU, RU) {
-      UU._properties.currentColorGradient = RU._colorGradients[0], UU._properties.currentColorGradient.getColorToRef(UU.color), UU._properties.currentColor1.PgU(UU.color), RU._colorGradients.length > 1 ? RU._colorGradients[1].getColorToRef(UU._properties.currentColor2) : UU._properties.currentColor2.PgU(UU.color)
+    function ou(uu, Ru) {
+      uu._properties.currentColorGradient = Ru._colorGradients[0], uu._properties.currentColorGradient.getColorToRef(uu.color), uu._properties.currentColor1.Oyu(uu.color), Ru._colorGradients.length > 1 ? Ru._colorGradients[1].getColorToRef(uu._properties.currentColor2) : uu._properties.currentColor2.Oyu(uu.color)
     }
 
-    function DU(UU, RU) {
-      const gU = RU._colorGradients;
-      tU.j.GetCurrentGradient(RU._ratio, gU, ((RU, gU, tU) => {
-        RU !== UU._properties.currentColorGradient && (UU._properties.currentColor1.PgU(UU._properties.currentColor2), gU.getColorToRef(UU._properties.currentColor2), UU._properties.currentColorGradient = RU), cU.g.LerpToRef(UU._properties.currentColor1, UU._properties.currentColor2, tU, UU.color), UU.color.a < 0 && (UU.color.a = 0)
+    function qu(uu, Ru) {
+      const yu = Ru._colorGradients;
+      Eu.i.GetCurrentGradient(Ru._ratio, yu, ((Ru, yu, Eu) => {
+        Ru !== uu._properties.currentColorGradient && (uu._properties.currentColor1.Oyu(uu._properties.currentColor2), yu.getColorToRef(uu._properties.currentColor2), uu._properties.currentColorGradient = Ru), Vu.h.LerpToRef(uu._properties.currentColor1, uu._properties.currentColor2, Eu, uu.color), uu.color.a < 0 && (uu.color.a = 0)
       }))
     }
 
-    function LU(UU, RU) {
-      UU.colorStep.scaleToRef(RU._scaledUpdateSpeed, RU._scaledColorStep), UU.color.addInPlace(RU._scaledColorStep), UU.color.a < 0 && (UU.color.a = 0)
+    function Ou(uu, Ru) {
+      uu.colorStep.scaleToRef(Ru._scaledUpdateSpeed, Ru._scaledColorStep), uu.color.addInPlace(Ru._scaledColorStep), uu.color.a < 0 && (uu.color.a = 0)
     }
 
-    function NU(UU, RU) {
-      tU.j.GetCurrentGradient(RU._ratio, RU._angularSpeedGradients, ((RU, gU, tU) => {
-        RU !== UU._properties.currentAngularSpeedGradient && (UU._properties.currentAngularSpeed1 = UU._properties.currentAngularSpeed2, UU._properties.currentAngularSpeed2 = gU.getFactor(), UU._properties.currentAngularSpeedGradient = RU), UU.angularSpeed = (0, uU.Lerp)(UU._properties.currentAngularSpeed1, UU._properties.currentAngularSpeed2, tU)
+    function vu(uu, Ru) {
+      Eu.i.GetCurrentGradient(Ru._ratio, Ru._angularSpeedGradients, ((Ru, yu, Eu) => {
+        Ru !== uu._properties.currentAngularSpeedGradient && (uu._properties.currentAngularSpeed1 = uu._properties.currentAngularSpeed2, uu._properties.currentAngularSpeed2 = yu.getFactor(), uu._properties.currentAngularSpeedGradient = Ru), uu.angularSpeed = (0, xu.Lerp)(uu._properties.currentAngularSpeed1, uu._properties.currentAngularSpeed2, Eu)
       }))
     }
 
-    function lU(UU, RU) {
-      UU.angle += UU.angularSpeed * RU._scaledUpdateSpeed
+    function au(uu, Ru) {
+      uu.angle += uu.angularSpeed * Ru._scaledUpdateSpeed
     }
 
-    function OU(UU, RU) {
-      RU.particleEmitterType.startDirectionFunction(RU._emitterWorldMatrix, UU.direction, UU, RU.isLocal, RU._emitterInverseWorldMatrix)
+    function fu(uu, Ru) {
+      Ru.particleEmitterType.startDirectionFunction(Ru._emitterWorldMatrix, uu.direction, uu, Ru.isLocal, Ru._emitterInverseWorldMatrix)
     }
 
-    function UR(UU, RU) {
-      RU.startDirectionFunction(RU._emitterWorldMatrix, UU.direction, UU, RU.isLocal)
+    function uR(uu, Ru) {
+      Ru.startDirectionFunction(Ru._emitterWorldMatrix, uu.direction, uu, Ru.isLocal)
     }
 
-    function RR(UU, RU) {
-      UU._properties.currentVelocityGradient = RU._velocityGradients[0], UU._properties.currentVelocity1 = UU._properties.currentVelocityGradient.getFactor(), RU._velocityGradients.length > 1 ? UU._properties.currentVelocity2 = RU._velocityGradients[1].getFactor() : UU._properties.currentVelocity2 = UU._properties.currentVelocity1
+    function RR(uu, Ru) {
+      uu._properties.currentVelocityGradient = Ru._velocityGradients[0], uu._properties.currentVelocity1 = uu._properties.currentVelocityGradient.getFactor(), Ru._velocityGradients.length > 1 ? uu._properties.currentVelocity2 = Ru._velocityGradients[1].getFactor() : uu._properties.currentVelocity2 = uu._properties.currentVelocity1
     }
 
-    function gR(UU, RU) {
-      UU._properties.currentLimitVelocityGradient = RU._limitVelocityGradients[0], UU._properties.currentLimitVelocity1 = UU._properties.currentLimitVelocityGradient.getFactor(), RU._limitVelocityGradients.length > 1 ? UU._properties.currentLimitVelocity2 = RU._limitVelocityGradients[1].getFactor() : UU._properties.currentLimitVelocity2 = UU._properties.currentLimitVelocity1
+    function yR(uu, Ru) {
+      uu._properties.currentLimitVelocityGradient = Ru._limitVelocityGradients[0], uu._properties.currentLimitVelocity1 = uu._properties.currentLimitVelocityGradient.getFactor(), Ru._limitVelocityGradients.length > 1 ? uu._properties.currentLimitVelocity2 = Ru._limitVelocityGradients[1].getFactor() : uu._properties.currentLimitVelocity2 = uu._properties.currentLimitVelocity1
     }
 
-    function tR(UU, RU) {
-      tU.j.GetCurrentGradient(RU._ratio, RU._velocityGradients, ((RU, gU, tU) => {
-        RU !== UU._properties.currentVelocityGradient && (UU._properties.currentVelocity1 = UU._properties.currentVelocity2, UU._properties.currentVelocity2 = gU.getFactor(), UU._properties.currentVelocityGradient = RU), UU._properties.directionScale *= (0, uU.Lerp)(UU._properties.currentVelocity1, UU._properties.currentVelocity2, tU)
+    function ER(uu, Ru) {
+      Eu.i.GetCurrentGradient(Ru._ratio, Ru._velocityGradients, ((Ru, yu, Eu) => {
+        Ru !== uu._properties.currentVelocityGradient && (uu._properties.currentVelocity1 = uu._properties.currentVelocity2, uu._properties.currentVelocity2 = yu.getFactor(), uu._properties.currentVelocityGradient = Ru), uu._properties.directionScale *= (0, xu.Lerp)(uu._properties.currentVelocity1, uu._properties.currentVelocity2, Eu)
       }))
     }
 
-    function pR(UU, RU) {
-      tU.j.GetCurrentGradient(RU._ratio, RU._limitVelocityGradients, ((gU, tU, pU) => {
-        gU !== UU._properties.currentLimitVelocityGradient && (UU._properties.currentLimitVelocity1 = UU._properties.currentLimitVelocity2, UU._properties.currentLimitVelocity2 = tU.getFactor(), UU._properties.currentLimitVelocityGradient = gU);
-        const EU = (0, uU.Lerp)(UU._properties.currentLimitVelocity1, UU._properties.currentLimitVelocity2, pU);
-        UU.direction.length() > EU && UU.direction.scaleInPlace(RU.limitVelocityDamping)
+    function KR(uu, Ru) {
+      Eu.i.GetCurrentGradient(Ru._ratio, Ru._limitVelocityGradients, ((yu, Eu, Ku) => {
+        yu !== uu._properties.currentLimitVelocityGradient && (uu._properties.currentLimitVelocity1 = uu._properties.currentLimitVelocity2, uu._properties.currentLimitVelocity2 = Eu.getFactor(), uu._properties.currentLimitVelocityGradient = yu);
+        const Qu = (0, xu.Lerp)(uu._properties.currentLimitVelocity1, uu._properties.currentLimitVelocity2, Ku);
+        uu.direction.length() > Qu && uu.direction.scaleInPlace(Ru.limitVelocityDamping)
       }))
     }
 
-    function ER(UU) {
-      UU.direction.scaleToRef(UU._properties.directionScale, UU._properties.scaledDirection)
+    function QR(uu) {
+      uu.direction.scaleToRef(uu._properties.directionScale, uu._properties.scaledDirection)
     }
 
-    function PR(UU, RU) {
-      RU.particleEmitterType.startPositionFunction(RU._emitterWorldMatrix, UU.position, UU, RU.isLocal)
+    function mR(uu, Ru) {
+      Ru.particleEmitterType.startPositionFunction(Ru._emitterWorldMatrix, uu.position, uu, Ru.isLocal)
     }
 
-    function TR(UU, RU) {
-      RU.startPositionFunction(RU._emitterWorldMatrix, UU.position, UU, RU.isLocal)
+    function JR(uu, Ru) {
+      Ru.startPositionFunction(Ru._emitterWorldMatrix, uu.position, uu, Ru.isLocal)
     }
 
-    function qR(UU, RU) {
-      UU._properties.localPosition ? UU._properties.localPosition.PgU(UU.position) : UU._properties.localPosition = UU.position.clone(), EU.n.TransformCoordinatesToRef(UU._properties.localPosition, RU._emitterWorldMatrix, UU.position)
+    function NR(uu, Ru) {
+      uu._properties.localPosition ? uu._properties.localPosition.Oyu(uu.position) : uu._properties.localPosition = uu.position.clone(), Qu.p.TransformCoordinatesToRef(uu._properties.localPosition, Ru._emitterWorldMatrix, uu.position)
     }
 
-    function KR(UU, RU) {
-      RU.isLocal && UU._properties.localPosition ? (UU._properties.localPosition.addInPlace(UU._properties.scaledDirection), EU.n.TransformCoordinatesToRef(UU._properties.localPosition, RU._emitterWorldMatrix, UU.position)) : UU.position.addInPlace(UU._properties.scaledDirection)
+    function XR(uu, Ru) {
+      Ru.isLocal && uu._properties.localPosition ? (uu._properties.localPosition.addInPlace(uu._properties.scaledDirection), Qu.p.TransformCoordinatesToRef(uu._properties.localPosition, Ru._emitterWorldMatrix, uu.position)) : uu.position.addInPlace(uu._properties.scaledDirection)
     }
 
-    function cR(UU, RU) {
-      UU._properties.currentDragGradient = RU._dragGradients[0], UU._properties.currentDrag1 = UU._properties.currentDragGradient.getFactor(), RU._dragGradients.length > 1 ? UU._properties.currentDrag2 = RU._dragGradients[1].getFactor() : UU._properties.currentDrag2 = UU._properties.currentDrag1
+    function VR(uu, Ru) {
+      uu._properties.currentDragGradient = Ru._dragGradients[0], uu._properties.currentDrag1 = uu._properties.currentDragGradient.getFactor(), Ru._dragGradients.length > 1 ? uu._properties.currentDrag2 = Ru._dragGradients[1].getFactor() : uu._properties.currentDrag2 = uu._properties.currentDrag1
     }
 
-    function GR(UU, RU) {
-      tU.j.GetCurrentGradient(RU._ratio, RU._dragGradients, ((RU, gU, tU) => {
-        RU !== UU._properties.currentDragGradient && (UU._properties.currentDrag1 = UU._properties.currentDrag2, UU._properties.currentDrag2 = gU.getFactor(), UU._properties.currentDragGradient = RU);
-        const pU = (0, uU.Lerp)(UU._properties.currentDrag1, UU._properties.currentDrag2, tU);
-        UU._properties.scaledDirection.scaleInPlace(1 - pU)
+    function rR(uu, Ru) {
+      Eu.i.GetCurrentGradient(Ru._ratio, Ru._dragGradients, ((Ru, yu, Eu) => {
+        Ru !== uu._properties.currentDragGradient && (uu._properties.currentDrag1 = uu._properties.currentDrag2, uu._properties.currentDrag2 = yu.getFactor(), uu._properties.currentDragGradient = Ru);
+        const Ku = (0, xu.Lerp)(uu._properties.currentDrag1, uu._properties.currentDrag2, Eu);
+        uu._properties.scaledDirection.scaleInPlace(1 - Ku)
       }))
     }
 
-    function jR(UU, RU) {
-      UU._properties.randomNoiseCoordinates1 && UU._properties.randomNoiseCoordinates2 ? (UU._properties.randomNoiseCoordinates1.b_(Math.random(), Math.random(), Math.random()), UU._properties.randomNoiseCoordinates2.b_(Math.random(), Math.random(), Math.random())) : (UU._properties.randomNoiseCoordinates1 = new EU.n(Math.random(), Math.random(), Math.random()), UU._properties.randomNoiseCoordinates2 = new EU.n(Math.random(), Math.random(), Math.random()))
+    function BR(uu, Ru) {
+      uu._properties.randomNoiseCoordinates1 && uu._properties.randomNoiseCoordinates2 ? (uu._properties.randomNoiseCoordinates1.muu(Math.random(), Math.random(), Math.random()), uu._properties.randomNoiseCoordinates2.muu(Math.random(), Math.random(), Math.random())) : (uu._properties.randomNoiseCoordinates1 = new Qu.p(Math.random(), Math.random(), Math.random()), uu._properties.randomNoiseCoordinates2 = new Qu.p(Math.random(), Math.random(), Math.random()))
     }
 
-    function uR(UU, RU) {
-      const gU = RU._noiseTextureData,
-        tU = RU._noiseTextureSize;
-      if (gU && tU && UU._properties.randomNoiseCoordinates1 && UU._properties.randomNoiseCoordinates2) {
-        const pU = RU._fetchR(UU._properties.randomNoiseCoordinates1.x, UU._properties.randomNoiseCoordinates1.y, tU.width, tU.height, gU),
-          PU = RU._fetchR(UU._properties.randomNoiseCoordinates1.z, UU._properties.randomNoiseCoordinates2.x, tU.width, tU.height, gU),
-          TU = RU._fetchR(UU._properties.randomNoiseCoordinates2.y, UU._properties.randomNoiseCoordinates2.z, tU.width, tU.height, gU),
-          qU = EU.h.xC[0],
-          KU = EU.h.xC[1];
-        qU.b_((2 * pU - 1) * RU.noiseStrength.x, (2 * PU - 1) * RU.noiseStrength.y, (2 * TU - 1) * RU.noiseStrength.z), qU.scaleToRef(RU._tempScaledUpdateSpeed, KU), UU.direction.addInPlace(KU)
+    function xR(uu, Ru) {
+      const yu = Ru._noiseTextureData,
+        Eu = Ru._noiseTextureSize;
+      if (yu && Eu && uu._properties.randomNoiseCoordinates1 && uu._properties.randomNoiseCoordinates2) {
+        const Ku = Ru._fetchR(uu._properties.randomNoiseCoordinates1.x, uu._properties.randomNoiseCoordinates1.y, Eu.width, Eu.height, yu),
+          mu = Ru._fetchR(uu._properties.randomNoiseCoordinates1.z, uu._properties.randomNoiseCoordinates2.x, Eu.width, Eu.height, yu),
+          Ju = Ru._fetchR(uu._properties.randomNoiseCoordinates2.y, uu._properties.randomNoiseCoordinates2.z, Eu.width, Eu.height, yu),
+          Nu = Qu.m.MS[0],
+          Xu = Qu.m.MS[1];
+        Nu.muu((2 * Ku - 1) * Ru.noiseStrength.x, (2 * mu - 1) * Ru.noiseStrength.y, (2 * Ju - 1) * Ru.noiseStrength.z), Nu.scaleToRef(Ru._tempScaledUpdateSpeed, Xu), uu.direction.addInPlace(Xu)
       }
     }
 
-    function CR(UU, RU) {
-      RU.gravity.scaleToRef(RU._tempScaledUpdateSpeed, RU._scaledGravity), UU.direction.addInPlace(RU._scaledGravity)
+    function SR(uu, Ru) {
+      Ru.gravity.scaleToRef(Ru._tempScaledUpdateSpeed, Ru._scaledGravity), uu.direction.addInPlace(Ru._scaledGravity)
     }
 
-    function hR(UU, RU) {
-      UU.size = (0, uU.RandomRange)(RU.minSize, RU.maxSize), UU.scale.b_((0, uU.RandomRange)(RU.minScaleX, RU.maxScaleX), (0, uU.RandomRange)(RU.minScaleY, RU.maxScaleY))
+    function pR(uu, Ru) {
+      uu.size = (0, xu.RandomRange)(Ru.minSize, Ru.maxSize), uu.scale.muu((0, xu.RandomRange)(Ru.minScaleX, Ru.maxScaleX), (0, xu.RandomRange)(Ru.minScaleY, Ru.maxScaleY))
     }
 
-    function QR(UU, RU) {
-      UU._properties.currentSizeGradient = RU._sizeGradients[0], UU._properties.currentSize1 = UU._properties.currentSizeGradient.getFactor(), UU.size = UU._properties.currentSize1, RU._sizeGradients.length > 1 ? UU._properties.currentSize2 = RU._sizeGradients[1].getFactor() : UU._properties.currentSize2 = UU._properties.currentSize1, UU.scale.b_((0, uU.RandomRange)(RU.minScaleX, RU.maxScaleX), (0, uU.RandomRange)(RU.minScaleY, RU.maxScaleY))
+    function TR(uu, Ru) {
+      uu._properties.currentSizeGradient = Ru._sizeGradients[0], uu._properties.currentSize1 = uu._properties.currentSizeGradient.getFactor(), uu.size = uu._properties.currentSize1, Ru._sizeGradients.length > 1 ? uu._properties.currentSize2 = Ru._sizeGradients[1].getFactor() : uu._properties.currentSize2 = uu._properties.currentSize1, uu.scale.muu((0, xu.RandomRange)(Ru.minScaleX, Ru.maxScaleX), (0, xu.RandomRange)(Ru.minScaleY, Ru.maxScaleY))
     }
 
-    function eR(UU, RU) {
-      const gU = RU._actualFrame / RU.targetStopDuration;
-      tU.j.GetCurrentGradient(gU, RU._startSizeGradients, ((gU, tU, pU) => {
-        gU !== RU._currentStartSizeGradient && (RU._currentStartSize1 = RU._currentStartSize2, RU._currentStartSize2 = tU.getFactor(), RU._currentStartSizeGradient = gU);
-        const EU = (0, uU.Lerp)(RU._currentStartSize1, RU._currentStartSize2, pU);
-        UU.scale.scaleInPlace(EU)
+    function WR(uu, Ru) {
+      const yu = Ru._actualFrame / Ru.targetStopDuration;
+      Eu.i.GetCurrentGradient(yu, Ru._startSizeGradients, ((yu, Eu, Ku) => {
+        yu !== Ru._currentStartSizeGradient && (Ru._currentStartSize1 = Ru._currentStartSize2, Ru._currentStartSize2 = Eu.getFactor(), Ru._currentStartSizeGradient = yu);
+        const Qu = (0, xu.Lerp)(Ru._currentStartSize1, Ru._currentStartSize2, Ku);
+        uu.scale.scaleInPlace(Qu)
       }))
     }
 
-    function WR(UU, RU) {
-      tU.j.GetCurrentGradient(RU._ratio, RU._sizeGradients, ((RU, gU, tU) => {
-        RU !== UU._properties.currentSizeGradient && (UU._properties.currentSize1 = UU._properties.currentSize2, UU._properties.currentSize2 = gU.getFactor(), UU._properties.currentSizeGradient = RU), UU.size = (0, uU.Lerp)(UU._properties.currentSize1, UU._properties.currentSize2, tU)
+    function jR(uu, Ru) {
+      Eu.i.GetCurrentGradient(Ru._ratio, Ru._sizeGradients, ((Ru, yu, Eu) => {
+        Ru !== uu._properties.currentSizeGradient && (uu._properties.currentSize1 = uu._properties.currentSize2, uu._properties.currentSize2 = yu.getFactor(), uu._properties.currentSizeGradient = Ru), uu.size = (0, xu.Lerp)(uu._properties.currentSize1, uu._properties.currentSize2, Eu)
       }))
     }
 
-    function fR(UU, RU) {
-      UU.remapData = new EU.q(0, 1, 0, 1)
+    function HR(uu, Ru) {
+      uu.remapData = new Qu.r(0, 1, 0, 1)
     }
 
-    function xR(UU, RU) {
-      RU._colorRemapGradients && RU._colorRemapGradients.length > 0 && tU.j.GetCurrentGradient(RU._ratio, RU._colorRemapGradients, ((RU, gU, tU) => {
-        const pU = (0, uU.Lerp)(RU.factor1, gU.factor1, tU),
-          EU = (0, uU.Lerp)(RU.factor2, gU.factor2, tU);
-        UU.remapData.x = pU, UU.remapData.y = EU - pU
-      })), RU._alphaRemapGradients && RU._alphaRemapGradients.length > 0 && tU.j.GetCurrentGradient(RU._ratio, RU._alphaRemapGradients, ((RU, gU, tU) => {
-        const pU = (0, uU.Lerp)(RU.factor1, gU.factor1, tU),
-          EU = (0, uU.Lerp)(RU.factor2, gU.factor2, tU);
-        UU.remapData.z = pU, UU.remapData.w = EU - pU
+    function dR(uu, Ru) {
+      Ru._colorRemapGradients && Ru._colorRemapGradients.length > 0 && Eu.i.GetCurrentGradient(Ru._ratio, Ru._colorRemapGradients, ((Ru, yu, Eu) => {
+        const Ku = (0, xu.Lerp)(Ru.factor1, yu.factor1, Eu),
+          Qu = (0, xu.Lerp)(Ru.factor2, yu.factor2, Eu);
+        uu.remapData.x = Ku, uu.remapData.y = Qu - Ku
+      })), Ru._alphaRemapGradients && Ru._alphaRemapGradients.length > 0 && Eu.i.GetCurrentGradient(Ru._ratio, Ru._alphaRemapGradients, ((Ru, yu, Eu) => {
+        const Ku = (0, xu.Lerp)(Ru.factor1, yu.factor1, Eu),
+          Qu = (0, xu.Lerp)(Ru.factor2, yu.factor2, Eu);
+        uu.remapData.z = Ku, uu.remapData.w = Qu - Ku
       }))
     }
 
-    function mR(UU, RU) {
-      const gU = (0, uU.Clamp)(RU._actualFrame / RU.targetStopDuration);
-      tU.j.GetCurrentGradient(gU, RU._lifeTimeGradients, ((RU, tU) => {
-        const pU = RU,
-          EU = tU,
-          PU = pU.getFactor(),
-          TU = EU.getFactor(),
-          qU = (gU - pU.gradient) / (EU.gradient - pU.gradient);
-        UU.lifeTime = (0, uU.Lerp)(PU, TU, qU)
-      })), RU._emitPower = (0, uU.RandomRange)(RU.minEmitPower, RU.maxEmitPower)
+    function bR(uu, Ru) {
+      const yu = (0, xu.Clamp)(Ru._actualFrame / Ru.targetStopDuration);
+      Eu.i.GetCurrentGradient(yu, Ru._lifeTimeGradients, ((Ru, Eu) => {
+        const Ku = Ru,
+          Qu = Eu,
+          mu = Ku.getFactor(),
+          Ju = Qu.getFactor(),
+          Nu = (yu - Ku.gradient) / (Qu.gradient - Ku.gradient);
+        uu.lifeTime = (0, xu.Lerp)(mu, Ju, Nu)
+      })), Ru._emitPower = (0, xu.RandomRange)(Ru.minEmitPower, Ru.maxEmitPower)
     }
 
-    function IR(UU, RU) {
-      UU.lifeTime = (0, uU.RandomRange)(RU.minLifeTime, RU.maxLifeTime), RU._emitPower = (0, uU.RandomRange)(RU.minEmitPower, RU.maxEmitPower)
+    function CR(uu, Ru) {
+      uu.lifeTime = (0, xu.RandomRange)(Ru.minLifeTime, Ru.maxLifeTime), Ru._emitPower = (0, xu.RandomRange)(Ru.minEmitPower, Ru.maxEmitPower)
     }
 
-    function JR(UU, RU) {
-      0 === RU._emitPower ? (UU._properties.initialDirection ? UU._properties.initialDirection.PgU(UU.direction) : UU._properties.initialDirection = UU.direction.clone(), UU.direction.set(0, 0, 0)) : (UU._properties.initialDirection = null, UU.direction.scaleInPlace(RU._emitPower)), UU.direction.addInPlace(RU._inheritedVelocityOffset)
+    function kR(uu, Ru) {
+      0 === Ru._emitPower ? (uu._properties.initialDirection ? uu._properties.initialDirection.Oyu(uu.direction) : uu._properties.initialDirection = uu.direction.clone(), uu.direction.set(0, 0, 0)) : (uu._properties.initialDirection = null, uu.direction.scaleInPlace(Ru._emitPower)), uu.direction.addInPlace(Ru._inheritedVelocityOffset)
     }
 
-    function wR(UU, RU) {
-      UU.angularSpeed = (0, uU.RandomRange)(RU.minAngularSpeed, RU.maxAngularSpeed), UU.angle = (0, uU.RandomRange)(RU.minInitialRotation, RU.maxInitialRotation)
+    function eR(uu, Ru) {
+      uu.angularSpeed = (0, xu.RandomRange)(Ru.minAngularSpeed, Ru.maxAngularSpeed), uu.angle = (0, xu.RandomRange)(Ru.minInitialRotation, Ru.maxInitialRotation)
     }
 
-    function nR(UU, RU) {
-      UU._properties.currentAngularSpeedGradient = RU._angularSpeedGradients[0], UU.angularSpeed = UU._properties.currentAngularSpeedGradient.getFactor(), UU._properties.currentAngularSpeed1 = UU.angularSpeed, RU._angularSpeedGradients.length > 1 ? UU._properties.currentAngularSpeed2 = RU._angularSpeedGradients[1].getFactor() : UU._properties.currentAngularSpeed2 = UU._properties.currentAngularSpeed1, UU.angle = (0, uU.RandomRange)(RU.minInitialRotation, RU.maxInitialRotation)
+    function AR(uu, Ru) {
+      uu._properties.currentAngularSpeedGradient = Ru._angularSpeedGradients[0], uu.angularSpeed = uu._properties.currentAngularSpeedGradient.getFactor(), uu._properties.currentAngularSpeed1 = uu.angularSpeed, Ru._angularSpeedGradients.length > 1 ? uu._properties.currentAngularSpeed2 = Ru._angularSpeedGradients[1].getFactor() : uu._properties.currentAngularSpeed2 = uu._properties.currentAngularSpeed1, uu.angle = (0, xu.RandomRange)(Ru.minInitialRotation, Ru.maxInitialRotation)
     }
 
-    function bR(UU, RU) {
-      UU._properties.initialStartSpriteCellId = RU.startSpriteCellID, UU._properties.initialEndSpriteCellId = RU.endSpriteCellID, UU._properties.initialSpriteCellLoop = RU.spriteCellLoop
+    function DR(uu, Ru) {
+      uu._properties.initialStartSpriteCellId = Ru.startSpriteCellID, uu._properties.initialEndSpriteCellId = Ru.endSpriteCellID, uu._properties.initialSpriteCellLoop = Ru.spriteCellLoop
     }
 
-    function oR(UU, RU) {
-      UU.previousItem = RU.previousItem, UU.nextItem = RU, RU.previousItem && (RU.previousItem.nextItem = UU), RU.previousItem = UU
+    function MR(uu, Ru) {
+      uu.previousItem = Ru.previousItem, uu.nextItem = Ru, Ru.previousItem && (Ru.previousItem.nextItem = uu), Ru.previousItem = uu
     }
 
-    function ZR(UU, RU) {
-      UU.previousItem = RU, UU.nextItem = RU.nextItem, RU.nextItem && (RU.nextItem.previousItem = UU), RU.nextItem = UU
+    function IR(uu, Ru) {
+      uu.previousItem = Ru, uu.nextItem = Ru.nextItem, Ru.nextItem && (Ru.nextItem.previousItem = uu), Ru.nextItem = uu
     }
 
-    function aR(UU) {
-      UU.previousItem && (UU.previousItem.nextItem = UU.nextItem), UU.nextItem && (UU.nextItem.previousItem = UU.previousItem)
+    function GR(uu) {
+      uu.previousItem && (uu.previousItem.nextItem = uu.nextItem), uu.nextItem && (uu.nextItem.previousItem = uu.previousItem)
     }
-    var YR = gU(39766);
-    class BR extends IU {
+    var UR = yu(39951);
+    class nR extends Cu {
       get startDirectionFunction() {
         return this._startDirectionFunction
       }
-      set startDirectionFunction(UU) {
-        this._startDirectionFunction !== UU && (this._startDirectionFunction = UU, this._directionCreation.process = UU ? UR : OU)
+      set startDirectionFunction(uu) {
+        this._startDirectionFunction !== uu && (this._startDirectionFunction = uu, this._directionCreation.process = uu ? uR : fu)
       }
       get startPositionFunction() {
         return this._startPositionFunction
       }
-      set startPositionFunction(UU) {
-        this._startPositionFunction !== UU && (this._startPositionFunction = UU, this._positionCreation.process = UU ? TR : PR)
+      set startPositionFunction(uu) {
+        this._startPositionFunction !== uu && (this._startPositionFunction = uu, this._positionCreation.process = uu ? JR : mR)
       }
-      set onDispose(UU) {
-        this._onDisposeObserver && this.HZ.remove(this._onDisposeObserver), this._onDisposeObserver = this.HZ.add(UU)
+      set onDispose(uu) {
+        this._onDisposeObserver && this.zD.remove(this._onDisposeObserver), this._onDisposeObserver = this.zD.add(uu)
       }
-      get lRU() {
+      get wyu() {
         return this._isDisposed
       }
       get useRampGradients() {
         return this._useRampGradients
       }
-      set useRampGradients(UU) {
-        this._useRampGradients !== UU && (this._useRampGradients = UU, this._resetEffect(), UU ? (this._rampCreation = {
-          process: fR,
+      set useRampGradients(uu) {
+        this._useRampGradients !== uu && (this._useRampGradients = uu, this._resetEffect(), uu ? (this._rampCreation = {
+          process: HR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._rampCreation, this._colorDeadCreation), this._gravityProcessing && (this._remapGradientProcessing = {
-          process: xR,
+        }, IR(this._rampCreation, this._colorDeadCreation), this._gravityProcessing && (this._remapGradientProcessing = {
+          process: dR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._remapGradientProcessing, this._gravityProcessing))) : (aR(this._rampCreation), aR(this._remapGradientProcessing)))
+        }, IR(this._remapGradientProcessing, this._gravityProcessing))) : (GR(this._rampCreation), GR(this._remapGradientProcessing)))
       }
       get isLocal() {
         return this._isLocal
       }
-      set isLocal(UU) {
-        this._isLocal !== UU && (this._isLocal = UU, UU ? (this._isLocalCreation = {
-          process: qR,
+      set isLocal(uu) {
+        this._isLocal !== uu && (this._isLocal = uu, uu ? (this._isLocalCreation = {
+          process: NR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._isLocalCreation, this._positionCreation)) : aR(this._isLocalCreation))
+        }, IR(this._isLocalCreation, this._positionCreation)) : GR(this._isLocalCreation))
       }
       get particles() {
         return this._particles
@@ -2908,12 +2908,12 @@ export const modules = {
       get _isAnimationSheetEnabled() {
         return this._animationSheetEnabled
       }
-      set _isAnimationSheetEnabled(UU) {
-        this._animationSheetEnabled !== UU && (this._animationSheetEnabled = UU, UU ? (this._sheetCreation = {
-          process: bR,
+      set _isAnimationSheetEnabled(uu) {
+        this._animationSheetEnabled !== uu && (this._animationSheetEnabled = uu, uu ? (this._sheetCreation = {
+          process: DR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._sheetCreation, this._colorDeadCreation)) : aR(this._sheetCreation), this._reset())
+        }, IR(this._sheetCreation, this._colorDeadCreation)) : GR(this._sheetCreation), this._reset())
       }
       getActiveCount() {
         return this._particles.length
@@ -2925,19 +2925,19 @@ export const modules = {
         return this._stopped && this.isAlive()
       }
       getCustomEffect() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._customWrappers[UU]?.effect ?? this._customWrappers[0].effect
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._customWrappers[uu]?.effect ?? this._customWrappers[0].effect
       }
       _getCustomDrawWrapper() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return this._customWrappers[UU] ?? this._customWrappers[0]
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return this._customWrappers[uu] ?? this._customWrappers[0]
       }
-      setCustomEffect(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this._customWrappers[RU] = new yU.c(this._engine), this._customWrappers[RU].effect = UU, this._customWrappers[RU].drawContext && (this._customWrappers[RU].drawContext.useInstancing = this._useInstancing)
+      setCustomEffect(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this._customWrappers[Ru] = new wu.b(this._engine), this._customWrappers[Ru].effect = uu, this._customWrappers[Ru].drawContext && (this._customWrappers[Ru].drawContext.useInstancing = this._useInstancing)
       }
       get onBeforeDrawParticlesObservable() {
-        return this._onBeforeDrawParticlesObservable || (this._onBeforeDrawParticlesObservable = new pU.b), this._onBeforeDrawParticlesObservable
+        return this._onBeforeDrawParticlesObservable || (this._onBeforeDrawParticlesObservable = new Ku.b), this._onBeforeDrawParticlesObservable
       }
       get vertexShaderName() {
         return "particles"
@@ -2951,231 +2951,231 @@ export const modules = {
       get noiseTexture() {
         return this._noiseTexture
       }
-      set noiseTexture(UU) {
-        if (this.noiseTexture !== UU) {
-          if (this._noiseTexture = UU, !UU) return aR(this._noiseCreation), void aR(this._noiseProcessing);
+      set noiseTexture(uu) {
+        if (this.noiseTexture !== uu) {
+          if (this._noiseTexture = uu, !uu) return GR(this._noiseCreation), void GR(this._noiseProcessing);
           this._noiseCreation = {
-            process: jR,
+            process: BR,
             previousItem: null,
             nextItem: null
-          }, ZR(this._noiseCreation, this._colorDeadCreation), this._noiseProcessing = {
-            process: uR,
+          }, IR(this._noiseCreation, this._colorDeadCreation), this._noiseProcessing = {
+            process: xR,
             previousItem: null,
             nextItem: null
-          }, ZR(this._noiseProcessing, this._positionProcessing)
+          }, IR(this._noiseProcessing, this._positionProcessing)
         }
       }
-      constructor(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          PU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          TU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : .01,
-          KU = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        SU || (SU = !0, BU(HU.f, dU)), (0, sU.c)(), super(UU), this._emitterInverseWorldMatrix = EU.c.Identity(), this._startDirectionFunction = null, this._startPositionFunction = null, this._inheritedVelocityOffset = new EU.n, this.HZ = new pU.b, this.onStoppedObservable = new pU.b, this.onStartedObservable = new pU.b, this._noiseTextureSize = null, this._noiseTextureData = null, this._particles = new Array, this._stockParticles = new Array, this._newPartsExcess = 0, this._vertexBuffers = {}, this._renderPassObserver = null, this._scaledColorStep = new cU.g(0, 0, 0, 0), this._colorDiff = new cU.g(0, 0, 0, 0), this._scaledGravity = EU.n.Zero(), this._currentRenderId = -1, this._useInstancing = !1, this._useFixedCapacityForSnapshot = !1, this._fixedCapacityHighWaterMark = 0, this._isDisposed = !1, this._started = !1, this._stopped = !1, this._actualFrame = 0, this._currentEmitRate1 = 0, this._currentEmitRate2 = 0, this._currentStartSize1 = 0, this._currentStartSize2 = 0, this.updateInAnimate = !0, this._rawTextureWidth = 256, this._useRampGradients = !1, this._updateQueueStart = null, this._startSizeCreation = null, this._createQueueStart = null, this._isLocal = !1, this.isGPU = !1, this._shaderLanguage = 0, this._onBeforeDrawParticlesObservable = null, this._emitFromParticle = UU => {}, this.recycleParticle = UU => {
-          const RU = this._particles.pop();
-          RU !== UU && RU.copyTo(UU), RU.metadata = null, this._stockParticles.push(RU)
+      constructor(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          mu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          Ju = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : .01,
+          Xu = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        zu || (zu = !0, nu(Lu.i, cu)), (0, Fu.d)(), super(uu), this._emitterInverseWorldMatrix = Qu.d.Identity(), this._startDirectionFunction = null, this._startPositionFunction = null, this._inheritedVelocityOffset = new Qu.p, this.zD = new Ku.b, this.onStoppedObservable = new Ku.b, this.onStartedObservable = new Ku.b, this._noiseTextureSize = null, this._noiseTextureData = null, this._particles = new Array, this._stockParticles = new Array, this._newPartsExcess = 0, this._vertexBuffers = {}, this._renderPassObserver = null, this._scaledColorStep = new Vu.h(0, 0, 0, 0), this._colorDiff = new Vu.h(0, 0, 0, 0), this._scaledGravity = Qu.p.Zero(), this._currentRenderId = -1, this._useInstancing = !1, this._useFixedCapacityForSnapshot = !1, this._fixedCapacityHighWaterMark = 0, this._isDisposed = !1, this._started = !1, this._stopped = !1, this._actualFrame = 0, this._currentEmitRate1 = 0, this._currentEmitRate2 = 0, this._currentStartSize1 = 0, this._currentStartSize2 = 0, this.updateInAnimate = !0, this._rawTextureWidth = 256, this._useRampGradients = !1, this._updateQueueStart = null, this._startSizeCreation = null, this._createQueueStart = null, this._isLocal = !1, this.isGPU = !1, this._shaderLanguage = 0, this._onBeforeDrawParticlesObservable = null, this._emitFromParticle = uu => {}, this.recycleParticle = uu => {
+          const Ru = this._particles.pop();
+          Ru !== uu && Ru.copyTo(uu), Ru.metadata = null, this._stockParticles.push(Ru)
         }, this._createParticle = () => {
-          let UU;
-          return 0 !== this._stockParticles.length ? (UU = this._stockParticles.pop(), UU._reset()) : UU = new wU(this), this._prepareParticle(UU), UU
-        }, this.paused = !1, this._shadersLoaded = !1, this._capacity = RU, this._epsilon = TU, gU && "Scene" !== gU.getClassName() ? (this._engine = gU, this.defaultProjectionMatrix = EU.c.PerspectiveFovLH(.8, 1, .1, 100, this._engine.isNDCHalfZRange)) : (this._scene = gU || qU.c.LastCreatedScene, this._engine = this._scene.WC(), this.uniqueId = this._scene.getUniqueId(), this.layerMask = this._scene.defaultRenderableLayerMask, this._scene.vI.push(this)), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._initShaderSourceAsync(), this._lifeTimeCreation = {
-          process: IR,
-          previousItem: null,
-          nextItem: null
-        }, this._positionCreation = {
-          process: PR,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._positionCreation, this._lifeTimeCreation), this._directionCreation = {
-          process: OU,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._directionCreation, this._positionCreation), this._emitPowerCreation = {
-          process: JR,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._emitPowerCreation, this._directionCreation), this._sizeCreation = {
-          process: hR,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._sizeCreation, this._emitPowerCreation), this._angleCreation = {
-          process: wR,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._angleCreation, this._sizeCreation), this._colorCreation = {
-          process: AU,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._colorCreation, this._angleCreation), this._colorDeadCreation = {
-          process: zU,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._colorDeadCreation, this._colorCreation), this._createQueueStart = this._lifeTimeCreation, KU || (this._colorProcessing = {
-          process: LU,
-          previousItem: null,
-          nextItem: null
-        }, this._angularSpeedProcessing = {
-          process: lU,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._angularSpeedProcessing, this._colorProcessing), this._directionProcessing = {
-          process: ER,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._directionProcessing, this._angularSpeedProcessing), this._positionProcessing = {
-          process: KR,
-          previousItem: null,
-          nextItem: null
-        }, ZR(this._positionProcessing, this._directionProcessing), this._gravityProcessing = {
+          let uu;
+          return 0 !== this._stockParticles.length ? (uu = this._stockParticles.pop(), uu._reset()) : uu = new eu(this), this._prepareParticle(uu), uu
+        }, this.paused = !1, this._shadersLoaded = !1, this._capacity = Ru, this._epsilon = Ju, yu && "Scene" !== yu.getClassName() ? (this._engine = yu, this.defaultProjectionMatrix = Qu.d.PerspectiveFovLH(.8, 1, .1, 100, this._engine.isNDCHalfZRange)) : (this._scene = yu || Nu.b.LastCreatedScene, this._engine = this._scene.eS(), this.uniqueId = this._scene.getUniqueId(), this.layerMask = this._scene.defaultRenderableLayerMask, this._scene.JC.push(this)), this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._initShaderSourceAsync(), this._lifeTimeCreation = {
           process: CR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._gravityProcessing, this._positionProcessing), this._updateQueueStart = this._colorProcessing), this._isAnimationSheetEnabled = PU, this._attachImageProcessingConfiguration(null), this._customWrappers = {
-          0: new yU.c(this._engine)
-        }, this._customWrappers[0].effect = tU, this._drawWrappers = [], this._useInstancing = this._engine.getCaps().instancedArrays, this._createIndexBuffer(), this._createVertexBuffers(), this.particleEmitterType = new GU.c, this.updateFunction = UU => {
-          this.noiseTexture && (this._noiseTextureSize = this.noiseTexture.getSize(), this.noiseTexture.getContent()?.then((UU => {
-            this._noiseTextureData = UU
+        }, this._positionCreation = {
+          process: mR,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._positionCreation, this._lifeTimeCreation), this._directionCreation = {
+          process: fu,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._directionCreation, this._positionCreation), this._emitPowerCreation = {
+          process: kR,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._emitPowerCreation, this._directionCreation), this._sizeCreation = {
+          process: pR,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._sizeCreation, this._emitPowerCreation), this._angleCreation = {
+          process: eR,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._angleCreation, this._sizeCreation), this._colorCreation = {
+          process: iu,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._colorCreation, this._angleCreation), this._colorDeadCreation = {
+          process: Yu,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._colorDeadCreation, this._colorCreation), this._createQueueStart = this._lifeTimeCreation, Xu || (this._colorProcessing = {
+          process: Ou,
+          previousItem: null,
+          nextItem: null
+        }, this._angularSpeedProcessing = {
+          process: au,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._angularSpeedProcessing, this._colorProcessing), this._directionProcessing = {
+          process: QR,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._directionProcessing, this._angularSpeedProcessing), this._positionProcessing = {
+          process: XR,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._positionProcessing, this._directionProcessing), this._gravityProcessing = {
+          process: SR,
+          previousItem: null,
+          nextItem: null
+        }, IR(this._gravityProcessing, this._positionProcessing), this._updateQueueStart = this._colorProcessing), this._isAnimationSheetEnabled = mu, this._attachImageProcessingConfiguration(null), this._customWrappers = {
+          0: new wu.b(this._engine)
+        }, this._customWrappers[0].effect = Eu, this._drawWrappers = [], this._useInstancing = this._engine.getCaps().instancedArrays, this._createIndexBuffer(), this._createVertexBuffers(), this.particleEmitterType = new ru.b, this.updateFunction = uu => {
+          this.noiseTexture && (this._noiseTextureSize = this.noiseTexture.getSize(), this.noiseTexture.getContent()?.then((uu => {
+            this._noiseTextureData = uu
           })));
-          const RU = UU === this._particles;
-          for (let gU = 0; gU < UU.length; gU++) {
-            const tU = UU[gU];
+          const Ru = uu === this._particles;
+          for (let yu = 0; yu < uu.length; yu++) {
+            const Eu = uu[yu];
             this._tempScaledUpdateSpeed = this._scaledUpdateSpeed;
-            const pU = tU.age;
-            if (tU.age += this._tempScaledUpdateSpeed, tU.age > tU.lifeTime) {
-              const UU = tU.age - pU,
-                RU = tU.lifeTime - pU;
-              this._tempScaledUpdateSpeed = RU * this._tempScaledUpdateSpeed / UU, tU.age = tU.lifeTime
+            const Ku = Eu.age;
+            if (Eu.age += this._tempScaledUpdateSpeed, Eu.age > Eu.lifeTime) {
+              const uu = Eu.age - Ku,
+                Ru = Eu.lifeTime - Ku;
+              this._tempScaledUpdateSpeed = Ru * this._tempScaledUpdateSpeed / uu, Eu.age = Eu.lifeTime
             }
-            this._ratio = tU.age / tU.lifeTime, tU._properties.directionScale = this._tempScaledUpdateSpeed;
-            let EU = this._updateQueueStart;
-            for (; EU;) EU.process(tU, this), EU = EU.nextItem;
-            if (this._isAnimationSheetEnabled && !KU && tU.updateCellIndex(), tU._inheritParticleInfoToSubEmitters(), tU.age >= tU.lifeTime) {
-              if (this._emitFromParticle(tU), tU._properties.attachedSubEmitters) {
-                for (const UU of tU._properties.attachedSubEmitters) UU.particleSystem.disposeOnStop = !0, UU.particleSystem.stop();
-                tU._properties.attachedSubEmitters = null
+            this._ratio = Eu.age / Eu.lifeTime, Eu._properties.directionScale = this._tempScaledUpdateSpeed;
+            let Qu = this._updateQueueStart;
+            for (; Qu;) Qu.process(Eu, this), Qu = Qu.nextItem;
+            if (this._isAnimationSheetEnabled && !Xu && Eu.updateCellIndex(), Eu._inheritParticleInfoToSubEmitters(), Eu.age >= Eu.lifeTime) {
+              if (this._emitFromParticle(Eu), Eu._properties.attachedSubEmitters) {
+                for (const uu of Eu._properties.attachedSubEmitters) uu.particleSystem.disposeOnStop = !0, uu.particleSystem.stop();
+                Eu._properties.attachedSubEmitters = null
               }
-              this.recycleParticle(tU), RU && gU--
+              this.recycleParticle(Eu), Ru && yu--
             } else;
           }
         }
       }
-      serialize(UU) {
+      serialize(uu) {
         throw new Error("Method not implemented.")
       }
-      clone(UU, RU) {
+      clone(uu, Ru) {
         throw new Error("Method not implemented.")
       }
       _syncLifeTimeCreation() {
-        this.targetStopDuration && this._lifeTimeGradients && this._lifeTimeGradients.length > 0 ? this._lifeTimeCreation.process = mR : this._lifeTimeCreation.process = IR
+        this.targetStopDuration && this._lifeTimeGradients && this._lifeTimeGradients.length > 0 ? this._lifeTimeCreation.process = bR : this._lifeTimeCreation.process = CR
       }
       _syncStartSizeCreation() {
         this._startSizeGradients && this._startSizeGradients[0] && this.targetStopDuration ? this._startSizeCreation || (this._startSizeCreation = {
-          process: eR,
+          process: WR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._startSizeCreation, this._sizeCreation)) : this._startSizeCreation && (aR(this._startSizeCreation), this._startSizeCreation = null)
+        }, IR(this._startSizeCreation, this._sizeCreation)) : this._startSizeCreation && (GR(this._startSizeCreation), this._startSizeCreation = null)
       }
       get targetStopDuration() {
         return this._targetStopDuration
       }
-      set targetStopDuration(UU) {
-        this.targetStopDuration !== UU && (this._targetStopDuration = UU, this._syncLifeTimeCreation(), this._syncStartSizeCreation())
+      set targetStopDuration(uu) {
+        this.targetStopDuration !== uu && (this._targetStopDuration = uu, this._syncLifeTimeCreation(), this._syncStartSizeCreation())
       }
-      addLifeTimeGradient(UU, RU, gU) {
-        return this._lifeTimeGradients || (this._lifeTimeGradients = []), this._addFactorGradient(this._lifeTimeGradients, UU, RU, gU), this._syncLifeTimeCreation(), this
+      addLifeTimeGradient(uu, Ru, yu) {
+        return this._lifeTimeGradients || (this._lifeTimeGradients = []), this._addFactorGradient(this._lifeTimeGradients, uu, Ru, yu), this._syncLifeTimeCreation(), this
       }
-      removeLifeTimeGradient(UU) {
-        return this._removeFactorGradient(this._lifeTimeGradients, UU), this._syncLifeTimeCreation(), this
+      removeLifeTimeGradient(uu) {
+        return this._removeFactorGradient(this._lifeTimeGradients, uu), this._syncLifeTimeCreation(), this
       }
-      addSizeGradient(UU, RU, gU) {
-        return this._sizeGradients || (this._sizeGradients = []), 0 === this._sizeGradients.length && (this._sizeCreation.process = QR, this._sizeGradientProcessing = {
-          process: WR,
+      addSizeGradient(uu, Ru, yu) {
+        return this._sizeGradients || (this._sizeGradients = []), 0 === this._sizeGradients.length && (this._sizeCreation.process = TR, this._sizeGradientProcessing = {
+          process: jR,
           previousItem: null,
           nextItem: null
-        }, oR(this._sizeGradientProcessing, this._gravityProcessing)), this._addFactorGradient(this._sizeGradients, UU, RU, gU), this
+        }, MR(this._sizeGradientProcessing, this._gravityProcessing)), this._addFactorGradient(this._sizeGradients, uu, Ru, yu), this
       }
-      removeSizeGradient(UU) {
-        return this._removeFactorGradient(this._sizeGradients, UU), 0 === this._sizeGradients?.length && (aR(this._sizeGradientProcessing), this._sizeCreation.process = hR), this
+      removeSizeGradient(uu) {
+        return this._removeFactorGradient(this._sizeGradients, uu), 0 === this._sizeGradients?.length && (GR(this._sizeGradientProcessing), this._sizeCreation.process = pR), this
       }
-      addColorRemapGradient(UU, RU, gU) {
-        return this._colorRemapGradients || (this._colorRemapGradients = []), this._addFactorGradient(this._colorRemapGradients, UU, RU, gU), this
+      addColorRemapGradient(uu, Ru, yu) {
+        return this._colorRemapGradients || (this._colorRemapGradients = []), this._addFactorGradient(this._colorRemapGradients, uu, Ru, yu), this
       }
-      removeColorRemapGradient(UU) {
-        return this._removeFactorGradient(this._colorRemapGradients, UU), this
+      removeColorRemapGradient(uu) {
+        return this._removeFactorGradient(this._colorRemapGradients, uu), this
       }
-      addAlphaRemapGradient(UU, RU, gU) {
-        return this._alphaRemapGradients || (this._alphaRemapGradients = []), this._addFactorGradient(this._alphaRemapGradients, UU, RU, gU), this
+      addAlphaRemapGradient(uu, Ru, yu) {
+        return this._alphaRemapGradients || (this._alphaRemapGradients = []), this._addFactorGradient(this._alphaRemapGradients, uu, Ru, yu), this
       }
-      removeAlphaRemapGradient(UU) {
-        return this._removeFactorGradient(this._alphaRemapGradients, UU), this
+      removeAlphaRemapGradient(uu) {
+        return this._removeFactorGradient(this._alphaRemapGradients, uu), this
       }
-      addAngularSpeedGradient(UU, RU, gU) {
-        return this._angularSpeedGradients || (this._angularSpeedGradients = []), 0 === this._angularSpeedGradients.length && (this._angleCreation.process = nR, this._angularSpeedGradientProcessing = {
-          process: NU,
+      addAngularSpeedGradient(uu, Ru, yu) {
+        return this._angularSpeedGradients || (this._angularSpeedGradients = []), 0 === this._angularSpeedGradients.length && (this._angleCreation.process = AR, this._angularSpeedGradientProcessing = {
+          process: vu,
           previousItem: null,
           nextItem: null
-        }, oR(this._angularSpeedGradientProcessing, this._angularSpeedProcessing)), this._addFactorGradient(this._angularSpeedGradients, UU, RU, gU), this
+        }, MR(this._angularSpeedGradientProcessing, this._angularSpeedProcessing)), this._addFactorGradient(this._angularSpeedGradients, uu, Ru, yu), this
       }
-      removeAngularSpeedGradient(UU) {
-        return this._removeFactorGradient(this._angularSpeedGradients, UU), 0 === this._angularSpeedGradients?.length && (this._angleCreation.process = wR, aR(this._angularSpeedGradientProcessing)), this
+      removeAngularSpeedGradient(uu) {
+        return this._removeFactorGradient(this._angularSpeedGradients, uu), 0 === this._angularSpeedGradients?.length && (this._angleCreation.process = eR, GR(this._angularSpeedGradientProcessing)), this
       }
-      addVelocityGradient(UU, RU, gU) {
+      addVelocityGradient(uu, Ru, yu) {
         return this._velocityGradients || (this._velocityGradients = []), 0 === this._velocityGradients.length && (this._velocityCreation = {
           process: RR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._velocityCreation, this._angleCreation), this._velocityGradientProcessing = {
-          process: tR,
+        }, IR(this._velocityCreation, this._angleCreation), this._velocityGradientProcessing = {
+          process: ER,
           previousItem: null,
           nextItem: null
-        }, oR(this._velocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._velocityGradients, UU, RU, gU), this
+        }, MR(this._velocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._velocityGradients, uu, Ru, yu), this
       }
-      removeVelocityGradient(UU) {
-        return this._removeFactorGradient(this._velocityGradients, UU), 0 === this._velocityGradients?.length && (aR(this._velocityCreation), aR(this._velocityGradientProcessing)), this
+      removeVelocityGradient(uu) {
+        return this._removeFactorGradient(this._velocityGradients, uu), 0 === this._velocityGradients?.length && (GR(this._velocityCreation), GR(this._velocityGradientProcessing)), this
       }
-      addLimitVelocityGradient(UU, RU, gU) {
+      addLimitVelocityGradient(uu, Ru, yu) {
         return this._limitVelocityGradients || (this._limitVelocityGradients = []), 0 === this._limitVelocityGradients.length && (this._limitVelocityCreation = {
-          process: gR,
+          process: yR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._limitVelocityCreation, this._angleCreation), this._limitVelocityGradientProcessing = {
-          process: pR,
+        }, IR(this._limitVelocityCreation, this._angleCreation), this._limitVelocityGradientProcessing = {
+          process: KR,
           previousItem: null,
           nextItem: null
-        }, ZR(this._limitVelocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._limitVelocityGradients, UU, RU, gU), this
+        }, IR(this._limitVelocityGradientProcessing, this._directionProcessing)), this._addFactorGradient(this._limitVelocityGradients, uu, Ru, yu), this
       }
-      removeLimitVelocityGradient(UU) {
-        return this._removeFactorGradient(this._limitVelocityGradients, UU), 0 === this._limitVelocityGradients?.length && (aR(this._limitVelocityCreation), aR(this._limitVelocityGradientProcessing)), this
+      removeLimitVelocityGradient(uu) {
+        return this._removeFactorGradient(this._limitVelocityGradients, uu), 0 === this._limitVelocityGradients?.length && (GR(this._limitVelocityCreation), GR(this._limitVelocityGradientProcessing)), this
       }
-      addDragGradient(UU, RU, gU) {
+      addDragGradient(uu, Ru, yu) {
         return this._dragGradients || (this._dragGradients = []), 0 === this._dragGradients.length && (this._dragCreation = {
-          process: cR,
+          process: VR,
           previousItem: null,
           nextItem: null
-        }, oR(this._dragCreation, this._colorDeadCreation), this._dragGradientProcessing = {
-          process: GR,
+        }, MR(this._dragCreation, this._colorDeadCreation), this._dragGradientProcessing = {
+          process: rR,
           previousItem: null,
           nextItem: null
-        }, oR(this._dragGradientProcessing, this._positionProcessing)), this._addFactorGradient(this._dragGradients, UU, RU, gU), this
+        }, MR(this._dragGradientProcessing, this._positionProcessing)), this._addFactorGradient(this._dragGradients, uu, Ru, yu), this
       }
-      removeDragGradient(UU) {
-        return this._removeFactorGradient(this._dragGradients, UU), 0 === this._dragGradients?.length && (aR(this._dragCreation), aR(this._dragGradientProcessing)), this
+      removeDragGradient(uu) {
+        return this._removeFactorGradient(this._dragGradients, uu), 0 === this._dragGradients?.length && (GR(this._dragCreation), GR(this._dragGradientProcessing)), this
       }
-      addStartSizeGradient(UU, RU, gU) {
-        return this._startSizeGradients || (this._startSizeGradients = []), this._addFactorGradient(this._startSizeGradients, UU, RU, gU), this._syncStartSizeCreation(), this
+      addStartSizeGradient(uu, Ru, yu) {
+        return this._startSizeGradients || (this._startSizeGradients = []), this._addFactorGradient(this._startSizeGradients, uu, Ru, yu), this._syncStartSizeCreation(), this
       }
-      removeStartSizeGradient(UU) {
-        return this._removeFactorGradient(this._startSizeGradients, UU), this._syncStartSizeCreation(), this
+      removeStartSizeGradient(uu) {
+        return this._removeFactorGradient(this._startSizeGradients, uu), this._syncStartSizeCreation(), this
       }
       _createRampGradientTexture() {
         if (!this._rampGradients || !this._rampGradients.length || this._rampGradientsTexture || !this._scene) return;
-        const UU = new Uint8Array(4 * this._rawTextureWidth),
-          RU = cU.m.Color3[0];
-        for (let gU = 0; gU < this._rawTextureWidth; gU++) {
-          const pU = gU / this._rawTextureWidth;
-          tU.j.GetCurrentGradient(pU, this._rampGradients, ((tU, pU, EU) => {
-            cU.e.LerpToRef(tU.color, pU.color, EU, RU), UU[4 * gU] = 255 * RU.r, UU[4 * gU + 1] = 255 * RU.g, UU[4 * gU + 2] = 255 * RU.b, UU[4 * gU + 3] = 255
+        const uu = new Uint8Array(4 * this._rawTextureWidth),
+          Ru = Vu.m.Color3[0];
+        for (let yu = 0; yu < this._rawTextureWidth; yu++) {
+          const Ku = yu / this._rawTextureWidth;
+          Eu.i.GetCurrentGradient(Ku, this._rampGradients, ((Eu, Ku, Qu) => {
+            Vu.d.LerpToRef(Eu.color, Ku.color, Qu, Ru), uu[4 * yu] = 255 * Ru.r, uu[4 * yu + 1] = 255 * Ru.g, uu[4 * yu + 2] = 255 * Ru.b, uu[4 * yu + 3] = 255
           }))
         }
-        this._rampGradientsTexture = TU.e.CreateRGBATexture(UU, this._rawTextureWidth, 1, this._scene, !1, !1, 1)
+        this._rampGradientsTexture = Ju.d.CreateRGBATexture(uu, this._rawTextureWidth, 1, this._scene, !1, !1, 1)
       }
       getRampGradients() {
         return this._rampGradients
@@ -3184,43 +3184,43 @@ export const modules = {
         this._syncRampGradientTexture()
       }
       _syncRampGradientTexture() {
-        this._rampGradients && (this._rampGradients.sort(((UU, RU) => UU.gradient < RU.gradient ? -1 : UU.gradient > RU.gradient ? 1 : 0)), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._createRampGradientTexture())
+        this._rampGradients && (this._rampGradients.sort(((uu, Ru) => uu.gradient < Ru.gradient ? -1 : uu.gradient > Ru.gradient ? 1 : 0)), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._createRampGradientTexture())
       }
-      addRampGradient(UU, RU) {
+      addRampGradient(uu, Ru) {
         this._rampGradients || (this._rampGradients = []);
-        const gU = new tU.d(UU, RU);
-        return this._rampGradients.push(gU), this._syncRampGradientTexture(), this
+        const yu = new Eu.f(uu, Ru);
+        return this._rampGradients.push(yu), this._syncRampGradientTexture(), this
       }
-      removeRampGradient(UU) {
-        return this._removeGradientAndTexture(UU, this._rampGradients, this._rampGradientsTexture), this._rampGradientsTexture = null, this._rampGradients && this._rampGradients.length > 0 && this._createRampGradientTexture(), this
+      removeRampGradient(uu) {
+        return this._removeGradientAndTexture(uu, this._rampGradients, this._rampGradientsTexture), this._rampGradientsTexture = null, this._rampGradients && this._rampGradients.length > 0 && this._createRampGradientTexture(), this
       }
-      addColorGradient(UU, RU, gU) {
-        this._colorGradients || (this._colorGradients = []), 0 === this._colorGradients.length && (this._colorCreation.process = MU, this._colorProcessing.process = DU);
-        const pU = new tU.b(UU, RU, gU);
-        return this._colorGradients.push(pU), this._colorGradients.sort(((UU, RU) => UU.gradient < RU.gradient ? -1 : UU.gradient > RU.gradient ? 1 : 0)), this
+      addColorGradient(uu, Ru, yu) {
+        this._colorGradients || (this._colorGradients = []), 0 === this._colorGradients.length && (this._colorCreation.process = ou, this._colorProcessing.process = qu);
+        const Ku = new Eu.c(uu, Ru, yu);
+        return this._colorGradients.push(Ku), this._colorGradients.sort(((uu, Ru) => uu.gradient < Ru.gradient ? -1 : uu.gradient > Ru.gradient ? 1 : 0)), this
       }
-      removeColorGradient(UU) {
+      removeColorGradient(uu) {
         if (!this._colorGradients) return this;
-        let RU = 0;
-        for (const gU of this._colorGradients) {
-          if (gU.gradient === UU) {
-            this._colorGradients.splice(RU, 1);
+        let Ru = 0;
+        for (const yu of this._colorGradients) {
+          if (yu.gradient === uu) {
+            this._colorGradients.splice(Ru, 1);
             break
           }
-          RU++
+          Ru++
         }
-        return 0 === this._colorGradients.length && (this._colorCreation.process = AU, this._colorProcessing.process = LU), this
+        return 0 === this._colorGradients.length && (this._colorCreation.process = iu, this._colorProcessing.process = Ou), this
       }
       resetDrawCache() {
         if (this._drawWrappers) {
-          for (const UU of this._drawWrappers)
-            if (UU)
-              for (const RU of UU) RU?.dispose();
+          for (const uu of this._drawWrappers)
+            if (uu)
+              for (const Ru of uu) Ru?.dispose();
           this._drawWrappers = []
         }
       }
-      _fetchR(UU, RU, gU, tU, pU) {
-        return pU[4 * (((UU = .5 * Math.abs(UU) + .5) * gU % gU | 0) + ((RU = .5 * Math.abs(RU) + .5) * tU % tU | 0) * gU)] / 255
+      _fetchR(uu, Ru, yu, Eu, Ku) {
+        return Ku[4 * (((uu = .5 * Math.abs(uu) + .5) * yu % yu | 0) + ((Ru = .5 * Math.abs(Ru) + .5) * Eu % Eu | 0) * yu)] / 255
       }
       _reset() {
         this._resetEffect()
@@ -3230,43 +3230,43 @@ export const modules = {
       }
       _createVertexBuffers() {
         this._vertexBufferSize = this._useInstancing ? 10 : 12, this._isAnimationSheetEnabled && (this._vertexBufferSize += 1), this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexBufferSize += 3), this._useRampGradients && (this._vertexBufferSize += 4);
-        const UU = this._engine,
-          RU = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
-        this._vertexData = new Float32Array(this._capacity * RU), this._vertexBuffer = new PU.e(UU, this._vertexData, !0, RU);
-        let gU = 0;
-        const tU = this._vertexBuffer.createVertexBuffer(PU.l.PositionKind, gU, 3, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers[PU.l.PositionKind] = tU, gU += 3;
-        const pU = this._vertexBuffer.createVertexBuffer(PU.l.ColorKind, gU, 4, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers[PU.l.ColorKind] = pU, gU += 4;
-        const EU = this._vertexBuffer.createVertexBuffer("angle", gU, 1, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers.angle = EU, gU += 1;
-        const TU = this._vertexBuffer.createVertexBuffer("size", gU, 2, this._vertexBufferSize, this._useInstancing);
-        if (this._vertexBuffers.size = TU, gU += 2, this._isAnimationSheetEnabled) {
-          const UU = this._vertexBuffer.createVertexBuffer("cellIndex", gU, 1, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.cellIndex = UU, gU += 1
+        const uu = this._engine,
+          Ru = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
+        this._vertexData = new Float32Array(this._capacity * Ru), this._vertexBuffer = new mu.c(uu, this._vertexData, !0, Ru);
+        let yu = 0;
+        const Eu = this._vertexBuffer.createVertexBuffer(mu.h.PositionKind, yu, 3, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers[mu.h.PositionKind] = Eu, yu += 3;
+        const Ku = this._vertexBuffer.createVertexBuffer(mu.h.ColorKind, yu, 4, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers[mu.h.ColorKind] = Ku, yu += 4;
+        const Qu = this._vertexBuffer.createVertexBuffer("angle", yu, 1, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers.angle = Qu, yu += 1;
+        const Ju = this._vertexBuffer.createVertexBuffer("size", yu, 2, this._vertexBufferSize, this._useInstancing);
+        if (this._vertexBuffers.size = Ju, yu += 2, this._isAnimationSheetEnabled) {
+          const uu = this._vertexBuffer.createVertexBuffer("cellIndex", yu, 1, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.cellIndex = uu, yu += 1
         }
         if (!this._isBillboardBased || 8 === this.billboardMode || 9 === this.billboardMode) {
-          const UU = this._vertexBuffer.createVertexBuffer("direction", gU, 3, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.direction = UU, gU += 3
+          const uu = this._vertexBuffer.createVertexBuffer("direction", yu, 3, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.direction = uu, yu += 3
         }
         if (this._useRampGradients) {
-          const UU = this._vertexBuffer.createVertexBuffer("remapData", gU, 4, this._vertexBufferSize, this._useInstancing);
-          this._vertexBuffers.remapData = UU, gU += 4
+          const uu = this._vertexBuffer.createVertexBuffer("remapData", yu, 4, this._vertexBufferSize, this._useInstancing);
+          this._vertexBuffers.remapData = uu, yu += 4
         }
-        let qU;
+        let Nu;
         if (this._useInstancing) {
-          const RU = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
-          this._spriteBuffer = new PU.e(UU, RU, !1, 2), qU = this._spriteBuffer.createVertexBuffer("offset", 0, 2)
-        } else qU = this._vertexBuffer.createVertexBuffer("offset", gU, 2, this._vertexBufferSize, this._useInstancing);
-        this._vertexBuffers.offset = qU, this.resetDrawCache()
+          const Ru = new Float32Array([0, 0, 1, 0, 0, 1, 1, 1]);
+          this._spriteBuffer = new mu.c(uu, Ru, !1, 2), Nu = this._spriteBuffer.createVertexBuffer("offset", 0, 2)
+        } else Nu = this._vertexBuffer.createVertexBuffer("offset", yu, 2, this._vertexBufferSize, this._useInstancing);
+        this._vertexBuffers.offset = Nu, this.resetDrawCache()
       }
       _createIndexBuffer() {
         if (this._useInstancing) return void(this._linesIndexBufferUseInstancing = this._engine.createIndexBuffer(new Uint32Array([0, 1, 1, 3, 3, 2, 2, 0, 0, 3])));
-        const UU = [],
-          RU = [];
-        let gU = 0;
-        for (let tU = 0; tU < this._capacity; tU++) UU.push(gU), UU.push(gU + 1), UU.push(gU + 2), UU.push(gU), UU.push(gU + 2), UU.push(gU + 3), RU.push(gU, gU + 1, gU + 1, gU + 2, gU + 2, gU + 3, gU + 3, gU, gU, gU + 3), gU += 4;
-        this._indexBuffer = this._engine.createIndexBuffer(UU), this._linesIndexBuffer = this._engine.createIndexBuffer(RU)
+        const uu = [],
+          Ru = [];
+        let yu = 0;
+        for (let Eu = 0; Eu < this._capacity; Eu++) uu.push(yu), uu.push(yu + 1), uu.push(yu + 2), uu.push(yu), uu.push(yu + 2), uu.push(yu + 3), Ru.push(yu, yu + 1, yu + 1, yu + 2, yu + 2, yu + 3, yu + 3, yu, yu, yu + 3), yu += 4;
+        this._indexBuffer = this._engine.createIndexBuffer(uu), this._linesIndexBuffer = this._engine.createIndexBuffer(Ru)
       }
       getCapacity() {
         return this._capacity
@@ -3279,171 +3279,171 @@ export const modules = {
       }
       _preStart() {}
       start() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
         if (!this.targetStopDuration && this._hasTargetStopDurationDependantGradient()) throw "Particle system started with a targetStopDuration dependant gradient (eg. startSizeGradients) but no targetStopDuration set";
-        if (UU) return this.startDelay = UU, void setTimeout((() => {
+        if (uu) return this.startDelay = uu, void setTimeout((() => {
           this.start(0)
-        }), UU);
+        }), uu);
         if (this._started = !0, this._stopped = !1, this._actualFrame = 0, this._preStart(), this._emitRateGradients && (this._emitRateGradients.length > 0 && (this._currentEmitRateGradient = this._emitRateGradients[0], this._currentEmitRate1 = this._currentEmitRateGradient.getFactor(), this._currentEmitRate2 = this._currentEmitRate1), this._emitRateGradients.length > 1 && (this._currentEmitRate2 = this._emitRateGradients[1].getFactor())), this._startSizeGradients && (this._startSizeGradients.length > 0 && (this._currentStartSizeGradient = this._startSizeGradients[0], this._currentStartSize1 = this._currentStartSizeGradient.getFactor(), this._currentStartSize2 = this._currentStartSize1), this._startSizeGradients.length > 1 && (this._currentStartSize2 = this._startSizeGradients[1].getFactor())), this.preWarmCycles) {
           -1 !== this.emitter?.getClassName().indexOf("Mesh") && this.emitter.computeWorldMatrix(!0), this._scene?.updateTransformMatrix();
-          const UU = this.noiseTexture;
-          if (UU && UU.onGeneratedObservable) UU.onGeneratedObservable.addOnce((() => {
+          const uu = this.noiseTexture;
+          if (uu && uu.onGeneratedObservable) uu.onGeneratedObservable.addOnce((() => {
             setTimeout((() => {
-              for (let RU = 0; RU < this.preWarmCycles; RU++) this.animate(!0), UU.render()
+              for (let Ru = 0; Ru < this.preWarmCycles; Ru++) this.animate(!0), uu.render()
             }))
           }));
           else
-            for (let RU = 0; RU < this.preWarmCycles; RU++) this.animate(!0)
+            for (let Ru = 0; Ru < this.preWarmCycles; Ru++) this.animate(!0)
         }
         this.beginAnimationOnStart && this.animations && this.animations.length > 0 && this._scene && this._scene.beginAnimation(this, this.beginAnimationFrom, this.beginAnimationTo, this.beginAnimationLoop), this.onStartedObservable.notifyObservers(this)
       }
       stop() {
-        let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        this._stopped || (this.onStoppedObservable.notifyObservers(this), this._stopped = !0, this._postStop(UU))
+        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        this._stopped || (this.onStoppedObservable.notifyObservers(this), this._stopped = !0, this._postStop(uu))
       }
-      _postStop(UU) {}
+      _postStop(uu) {}
       reset() {
         this._stockParticles.length = 0, this._particles.length = 0
       }
-      _appendParticleVertex(UU, RU, gU, tU) {
-        let pU = UU * this._vertexBufferSize;
-        const PU = EU.h.xC[0].PgU(this._scene?.floatingOriginOffset || EU.n.ZeroReadOnly);
-        if (this._vertexData[pU++] = RU.position.x + this.worldOffset.x - PU.x, this._vertexData[pU++] = RU.position.y + this.worldOffset.y - PU.y, this._vertexData[pU++] = RU.position.z + this.worldOffset.z - PU.z, this._vertexData[pU++] = RU.color.r, this._vertexData[pU++] = RU.color.g, this._vertexData[pU++] = RU.color.b, this._vertexData[pU++] = RU.color.a, this._vertexData[pU++] = RU.angle, this._vertexData[pU++] = RU.scale.x * RU.size, this._vertexData[pU++] = RU.scale.y * RU.size, this._isAnimationSheetEnabled && (this._vertexData[pU++] = RU.cellIndex), this._isBillboardBased) 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexData[pU++] = RU.direction.x, this._vertexData[pU++] = RU.direction.y, this._vertexData[pU++] = RU.direction.z);
-        else if (RU._properties.initialDirection) {
-          let UU = RU._properties.initialDirection;
-          this.isLocal && (EU.n.TransformNormalToRef(UU, this._emitterWorldMatrix, EU.h.xC[0]), UU = EU.h.xC[0]), 0 === UU.x && 0 === UU.z && (UU.x = .001), this._vertexData[pU++] = UU.x, this._vertexData[pU++] = UU.y, this._vertexData[pU++] = UU.z
+      _appendParticleVertex(uu, Ru, yu, Eu) {
+        let Ku = uu * this._vertexBufferSize;
+        const mu = Qu.m.MS[0].Oyu(this._scene?.floatingOriginOffset || Qu.p.ZeroReadOnly);
+        if (this._vertexData[Ku++] = Ru.position.x + this.worldOffset.x - mu.x, this._vertexData[Ku++] = Ru.position.y + this.worldOffset.y - mu.y, this._vertexData[Ku++] = Ru.position.z + this.worldOffset.z - mu.z, this._vertexData[Ku++] = Ru.color.r, this._vertexData[Ku++] = Ru.color.g, this._vertexData[Ku++] = Ru.color.b, this._vertexData[Ku++] = Ru.color.a, this._vertexData[Ku++] = Ru.angle, this._vertexData[Ku++] = Ru.scale.x * Ru.size, this._vertexData[Ku++] = Ru.scale.y * Ru.size, this._isAnimationSheetEnabled && (this._vertexData[Ku++] = Ru.cellIndex), this._isBillboardBased) 8 !== this.billboardMode && 9 !== this.billboardMode || (this._vertexData[Ku++] = Ru.direction.x, this._vertexData[Ku++] = Ru.direction.y, this._vertexData[Ku++] = Ru.direction.z);
+        else if (Ru._properties.initialDirection) {
+          let uu = Ru._properties.initialDirection;
+          this.isLocal && (Qu.p.TransformNormalToRef(uu, this._emitterWorldMatrix, Qu.m.MS[0]), uu = Qu.m.MS[0]), 0 === uu.x && 0 === uu.z && (uu.x = .001), this._vertexData[Ku++] = uu.x, this._vertexData[Ku++] = uu.y, this._vertexData[Ku++] = uu.z
         } else {
-          let UU = RU.direction;
-          this.isLocal && (EU.n.TransformNormalToRef(UU, this._emitterWorldMatrix, EU.h.xC[0]), UU = EU.h.xC[0]), 0 === UU.x && 0 === UU.z && (UU.x = .001), this._vertexData[pU++] = UU.x, this._vertexData[pU++] = UU.y, this._vertexData[pU++] = UU.z
+          let uu = Ru.direction;
+          this.isLocal && (Qu.p.TransformNormalToRef(uu, this._emitterWorldMatrix, Qu.m.MS[0]), uu = Qu.m.MS[0]), 0 === uu.x && 0 === uu.z && (uu.x = .001), this._vertexData[Ku++] = uu.x, this._vertexData[Ku++] = uu.y, this._vertexData[Ku++] = uu.z
         }
-        this._useRampGradients && RU.remapData && (this._vertexData[pU++] = RU.remapData.x, this._vertexData[pU++] = RU.remapData.y, this._vertexData[pU++] = RU.remapData.z, this._vertexData[pU++] = RU.remapData.w), this._useInstancing || (this._isAnimationSheetEnabled && (0 === gU ? gU = this._epsilon : 1 === gU && (gU = 1 - this._epsilon), 0 === tU ? tU = this._epsilon : 1 === tU && (tU = 1 - this._epsilon)), this._vertexData[pU++] = gU, this._vertexData[pU] = tU)
+        this._useRampGradients && Ru.remapData && (this._vertexData[Ku++] = Ru.remapData.x, this._vertexData[Ku++] = Ru.remapData.y, this._vertexData[Ku++] = Ru.remapData.z, this._vertexData[Ku++] = Ru.remapData.w), this._useInstancing || (this._isAnimationSheetEnabled && (0 === yu ? yu = this._epsilon : 1 === yu && (yu = 1 - this._epsilon), 0 === Eu ? Eu = this._epsilon : 1 === Eu && (Eu = 1 - this._epsilon)), this._vertexData[Ku++] = yu, this._vertexData[Ku] = Eu)
       }
-      _prepareParticle(UU) {}
-      _createNewOnes(UU) {
-        let RU;
-        for (let gU = 0; gU < UU && this._particles.length !== this._capacity; gU++) {
-          RU = this._createParticle(), this._particles.push(RU);
-          let UU = this._createQueueStart;
-          for (; UU;) UU.process(RU, this), UU = UU.nextItem;
-          RU._inheritParticleInfoToSubEmitters()
+      _prepareParticle(uu) {}
+      _createNewOnes(uu) {
+        let Ru;
+        for (let yu = 0; yu < uu && this._particles.length !== this._capacity; yu++) {
+          Ru = this._createParticle(), this._particles.push(Ru);
+          let uu = this._createQueueStart;
+          for (; uu;) uu.process(Ru, this), uu = uu.nextItem;
+          Ru._inheritParticleInfoToSubEmitters()
         }
       }
-      _update(UU) {
+      _update(uu) {
         if (this._alive = this._particles.length > 0, this.emitter.position) {
-          const UU = this.emitter;
-          this._emitterWorldMatrix = UU.getWorldMatrix()
+          const uu = this.emitter;
+          this._emitterWorldMatrix = uu.getWorldMatrix()
         } else {
-          const UU = this.emitter;
-          this._emitterWorldMatrix = EU.c.Translation(UU.x, UU.y, UU.z)
+          const uu = this.emitter;
+          this._emitterWorldMatrix = Qu.d.Translation(uu.x, uu.y, uu.z)
         }
-        this._emitterWorldMatrix.invertToRef(this._emitterInverseWorldMatrix), this.updateFunction(this._particles), this._createNewOnes(UU)
+        this._emitterWorldMatrix.invertToRef(this._emitterInverseWorldMatrix), this.updateFunction(this._particles), this._createNewOnes(uu)
       }
       static _GetAttributeNamesOrOptions() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const tU = [PU.l.PositionKind, PU.l.ColorKind, "angle", "offset", "size"];
-        return UU && tU.push("cellIndex"), RU || tU.push("direction"), gU && tU.push("remapData"), tU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Eu = [mu.h.PositionKind, mu.h.ColorKind, "angle", "offset", "size"];
+        return uu && Eu.push("cellIndex"), Ru || Eu.push("direction"), yu && Eu.push("remapData"), Eu
       }
       static _GetEffectCreationOptions() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const tU = ["invView", "view", "projection", "textureMask", "translationPivot", "eyePosition"];
-        return (0, kU.c)(tU), UU && tU.push("particlesInfos"), RU && tU.push("logarithmicDepthConstant"), gU && (tU.push("vFogInfos"), tU.push("vFogColor")), tU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Eu = ["invView", "view", "projection", "textureMask", "translationPivot", "eyePosition"];
+        return (0, Zu.c)(Eu), uu && Eu.push("particlesInfos"), Ru && Eu.push("logarithmicDepthConstant"), yu && (Eu.push("vFogInfos"), Eu.push("vFogColor")), Eu
       }
-      fillDefines(UU, RU) {
-        let gU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        if (this._scene && ((0, kU.h)(this, this._scene, UU), this.applyFog && this._scene.fogEnabled && 0 !== this._scene.fogMode && UU.push("#define FOG")), this._isAnimationSheetEnabled && UU.push("#define ANIMATESHEET"), this.useLogarithmicDepth && UU.push("#define LOGARITHMICDEPTH"), RU === IU.BLENDMODE_MULTIPLY && UU.push("#define BLENDMULTIPLYMODE"), this.isLocal && UU.push("#define LOCAL"), this._useRampGradients && UU.push("#define RAMPGRADIENT"), this._isBillboardBased) switch (UU.push("#define BILLBOARD"), this.billboardMode) {
+      fillDefines(uu, Ru) {
+        let yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        if (this._scene && ((0, Zu.k)(this, this._scene, uu), this.applyFog && this._scene.fogEnabled && 0 !== this._scene.fogMode && uu.push("#define FOG")), this._isAnimationSheetEnabled && uu.push("#define ANIMATESHEET"), this.useLogarithmicDepth && uu.push("#define LOGARITHMICDEPTH"), Ru === Cu.BLENDMODE_MULTIPLY && uu.push("#define BLENDMULTIPLYMODE"), this.isLocal && uu.push("#define LOCAL"), this._useRampGradients && uu.push("#define RAMPGRADIENT"), this._isBillboardBased) switch (uu.push("#define BILLBOARD"), this.billboardMode) {
           case 2:
-            UU.push("#define BILLBOARDY");
+            uu.push("#define BILLBOARDY");
             break;
           case 8:
           case 9:
-            UU.push("#define BILLBOARDSTRETCHED"), 9 === this.billboardMode && UU.push("#define BILLBOARDSTRETCHED_LOCAL");
+            uu.push("#define BILLBOARDSTRETCHED"), 9 === this.billboardMode && uu.push("#define BILLBOARDSTRETCHED_LOCAL");
             break;
           case 7:
-            UU.push("#define BILLBOARDMODE_ALL")
+            uu.push("#define BILLBOARDMODE_ALL")
         }
-        gU && this._imageProcessingConfiguration && (this._imageProcessingConfiguration.prepareDefines(this._imageProcessingConfigurationDefines), UU.push(this._imageProcessingConfigurationDefines.toString()))
+        yu && this._imageProcessingConfiguration && (this._imageProcessingConfiguration.prepareDefines(this._imageProcessingConfigurationDefines), uu.push(this._imageProcessingConfigurationDefines.toString()))
       }
-      fillUniformsAttributesAndSamplerNames(UU, RU, gU) {
-        RU.push(...BR._GetAttributeNamesOrOptions(this._isAnimationSheetEnabled, this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode, this._useRampGradients)), UU.push(...BR._GetEffectCreationOptions(this._isAnimationSheetEnabled, this.useLogarithmicDepth, this.applyFog)), gU.push("diffuseSampler", "rampSampler"), this._imageProcessingConfiguration && ((0, iU.f)(UU, this._imageProcessingConfigurationDefines), (0, iU.c)(gU, this._imageProcessingConfigurationDefines))
+      fillUniformsAttributesAndSamplerNames(uu, Ru, yu) {
+        Ru.push(...nR._GetAttributeNamesOrOptions(this._isAnimationSheetEnabled, this._isBillboardBased && 8 !== this.billboardMode && 9 !== this.billboardMode, this._useRampGradients)), uu.push(...nR._GetEffectCreationOptions(this._isAnimationSheetEnabled, this.useLogarithmicDepth, this.applyFog)), yu.push("diffuseSampler", "rampSampler"), this._imageProcessingConfiguration && ((0, Pu.f)(uu, this._imageProcessingConfigurationDefines), (0, Pu.e)(yu, this._imageProcessingConfigurationDefines))
       }
-      _getWrapper(UU) {
-        var RU;
-        const gU = this._getCustomDrawWrapper(UU);
-        if (gU?.effect) return gU;
-        const tU = [];
-        this.fillDefines(tU, UU);
-        const EU = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
-          PU = YR.e._PrepareStringDefines(EU, tU),
-          TU = PU ? YR.e.GetConfiguration(EU) : void 0;
-        let qU = this._drawWrappers[EU];
-        qU || (qU = this._drawWrappers[EU] = [], 0 === EU || this._renderPassObserver || (this._renderPassObserver = ((RU = this._engine)._onReleaseRenderPassObservable ?? (RU._onReleaseRenderPassObservable = new pU.b)).add((UU => {
-          const RU = this._drawWrappers[UU];
-          if (RU) {
-            for (const UU of RU) UU?.dispose();
-            delete this._drawWrappers[UU]
+      _getWrapper(uu) {
+        var Ru;
+        const yu = this._getCustomDrawWrapper(uu);
+        if (yu?.effect) return yu;
+        const Eu = [];
+        this.fillDefines(Eu, uu);
+        const Qu = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
+          mu = UR.b._PrepareStringDefines(Qu, Eu),
+          Ju = mu ? UR.b.GetConfiguration(Qu) : void 0;
+        let Nu = this._drawWrappers[Qu];
+        Nu || (Nu = this._drawWrappers[Qu] = [], 0 === Qu || this._renderPassObserver || (this._renderPassObserver = ((Ru = this._engine)._onReleaseRenderPassObservable ?? (Ru._onReleaseRenderPassObservable = new Ku.b)).add((uu => {
+          const Ru = this._drawWrappers[uu];
+          if (Ru) {
+            for (const uu of Ru) uu?.dispose();
+            delete this._drawWrappers[uu]
           }
         }))));
-        let KU = qU[UU];
-        KU || (KU = new yU.c(this._engine), KU.drawContext && (KU.drawContext.useInstancing = this._useInstancing), qU[UU] = KU);
-        const cU = tU.join("\n");
-        if (KU.defines !== cU) {
-          const UU = [],
-            RU = [],
-            gU = [];
-          this.fillUniformsAttributesAndSamplerNames(RU, UU, gU), PU && (RU.push("cameraInfo", "objectId", "meshBlendTag", "geometryZeroAlphaDiscard"), this.isLocal && void 0 !== TU?.defines.PREPASS_LOCAL_POSITION_INDEX && RU.push("inverseEmitterWM", "geometryWorldOffset")), KU.setEffect(this._engine.createEffect("particles", {
-            attributes: UU,
-            uniformsNames: RU,
-            samplers: gU,
-            defines: cU,
+        let Xu = Nu[uu];
+        Xu || (Xu = new wu.b(this._engine), Xu.drawContext && (Xu.drawContext.useInstancing = this._useInstancing), Nu[uu] = Xu);
+        const Vu = Eu.join("\n");
+        if (Xu.defines !== Vu) {
+          const uu = [],
+            Ru = [],
+            yu = [];
+          this.fillUniformsAttributesAndSamplerNames(Ru, uu, yu), mu && (Ru.push("cameraInfo", "objectId", "meshBlendTag", "geometryZeroAlphaDiscard"), this.isLocal && void 0 !== Ju?.defines.PREPASS_LOCAL_POSITION_INDEX && Ru.push("inverseEmitterWM", "geometryWorldOffset")), Xu.setEffect(this._engine.createEffect("particles", {
+            attributes: uu,
+            uniformsNames: Ru,
+            samplers: yu,
+            defines: Vu,
             shaderLanguage: this._shaderLanguage,
-            multiTarget: PU,
-            indexParameters: PU ? {
-              buffersCount: TU?._mrtCount ?? 0
+            multiTarget: mu,
+            indexParameters: mu ? {
+              buffersCount: Ju?._mrtCount ?? 0
             } : void 0
-          }, this._engine), cU)
+          }, this._engine), Vu)
         }
-        return KU
+        return Xu
       }
-      _bindGeometryRendering(UU) {
-        const RU = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
-          gU = YR.e.GetConfiguration(RU);
-        if (!gU?._defines) return;
-        UU.setFloat("objectId", 0), UU.setInt("meshBlendTag", 0);
-        const tU = this._scene?.activeCamera;
-        if (UU.setFloat2("cameraInfo", tU?.minZ ?? 0, tU?.maxZ ?? 1), this.isLocal && void 0 !== gU.defines.PREPASS_LOCAL_POSITION_INDEX) {
-          UU.setMatrix("inverseEmitterWM", this._emitterInverseWorldMatrix);
-          const RU = this.worldOffset.subtractToRef(this._scene?.floatingOriginOffset || EU.n.ZeroReadOnly, EU.h.xC[0]);
-          UU.setVector3("geometryWorldOffset", RU)
+      _bindGeometryRendering(uu) {
+        const Ru = this._engine._features.supportRenderPasses ? this._engine.currentRenderPassId : 0,
+          yu = UR.b.GetConfiguration(Ru);
+        if (!yu?._defines) return;
+        uu.setFloat("objectId", 0), uu.setInt("meshBlendTag", 0);
+        const Eu = this._scene?.activeCamera;
+        if (uu.setFloat2("cameraInfo", Eu?.minZ ?? 0, Eu?.maxZ ?? 1), this.isLocal && void 0 !== yu.defines.PREPASS_LOCAL_POSITION_INDEX) {
+          uu.setMatrix("inverseEmitterWM", this._emitterInverseWorldMatrix);
+          const Ru = this.worldOffset.subtractToRef(this._scene?.floatingOriginOffset || Qu.p.ZeroReadOnly, Qu.m.MS[0]);
+          uu.setVector3("geometryWorldOffset", Ru)
         }
       }
       animate() {
-        let UU, RU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        let uu, Ru = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this._started && !this.paused) {
-          if (!RU && this._scene) {
+          if (!Ru && this._scene) {
             if (!this.isReady()) return;
             if (this._currentRenderId === this._scene.getFrameId()) return;
             this._currentRenderId = this._scene.getFrameId()
           }
-          if (this._scaledUpdateSpeed = this.updateSpeed * (RU ? this.preWarmStepOffset : this._scene?.getAnimationRatio() || 1), this.manualEmitCount > -1) UU = this.manualEmitCount, this._newPartsExcess = 0, this.manualEmitCount = 0;
+          if (this._scaledUpdateSpeed = this.updateSpeed * (Ru ? this.preWarmStepOffset : this._scene?.getAnimationRatio() || 1), this.manualEmitCount > -1) uu = this.manualEmitCount, this._newPartsExcess = 0, this.manualEmitCount = 0;
           else {
-            const RU = this._calculateEmitRate();
-            UU = RU * this._scaledUpdateSpeed | 0, this._newPartsExcess += RU * this._scaledUpdateSpeed - UU
+            const Ru = this._calculateEmitRate();
+            uu = Ru * this._scaledUpdateSpeed | 0, this._newPartsExcess += Ru * this._scaledUpdateSpeed - uu
           }
-          if (this._newPartsExcess > 1 && (UU += this._newPartsExcess | 0, this._newPartsExcess -= this._newPartsExcess | 0), this._alive = !1, this._stopped ? UU = 0 : (this._actualFrame += this._scaledUpdateSpeed, this.targetStopDuration && this._actualFrame >= this.targetStopDuration && this.stop()), this._update(UU), this._stopped && (this._alive || (this._started = !1, this.onAnimationEnd && this.onAnimationEnd(), this.disposeOnStop && this._scene && this._scene._toBeDisposed.push(this))), !RU) {
-            let UU = 0;
-            for (let RU = 0; RU < this._particles.length; RU++) {
-              const gU = this._particles[RU];
-              this._appendParticleVertices(UU, gU), UU += this._useInstancing ? 1 : 4
+          if (this._newPartsExcess > 1 && (uu += this._newPartsExcess | 0, this._newPartsExcess -= this._newPartsExcess | 0), this._alive = !1, this._stopped ? uu = 0 : (this._actualFrame += this._scaledUpdateSpeed, this.targetStopDuration && this._actualFrame >= this.targetStopDuration && this.stop()), this._update(uu), this._stopped && (this._alive || (this._started = !1, this.onAnimationEnd && this.onAnimationEnd(), this.disposeOnStop && this._scene && this._scene._toBeDisposed.push(this))), !Ru) {
+            let uu = 0;
+            for (let Ru = 0; Ru < this._particles.length; Ru++) {
+              const yu = this._particles[Ru];
+              this._appendParticleVertices(uu, yu), uu += this._useInstancing ? 1 : 4
             }
             if (this._vertexBuffer)
               if (this._useFixedCapacityForSnapshot) {
-                const UU = this._vertexBufferSize * (this._useInstancing ? 1 : 4),
-                  RU = this._particles.length;
-                RU < this._fixedCapacityHighWaterMark && this._vertexData.fill(0, RU * UU, this._fixedCapacityHighWaterMark * UU), this._fixedCapacityHighWaterMark = RU, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
+                const uu = this._vertexBufferSize * (this._useInstancing ? 1 : 4),
+                  Ru = this._particles.length;
+                Ru < this._fixedCapacityHighWaterMark && this._vertexData.fill(0, Ru * uu, this._fixedCapacityHighWaterMark * uu), this._fixedCapacityHighWaterMark = Ru, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
               } else this._vertexBuffer.updateDirectly(this._vertexData, 0, this._particles.length)
           }
           0 === this.manualEmitCount && this.disposeOnStop && this.stop()
@@ -3454,151 +3454,151 @@ export const modules = {
       }
       _clearFixedCapacitySnapshotData() {
         if (!this._useFixedCapacityForSnapshot || !this._vertexBuffer || 0 === this._fixedCapacityHighWaterMark) return;
-        const UU = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
-        this._vertexData.fill(0, 0, this._fixedCapacityHighWaterMark * UU), this._fixedCapacityHighWaterMark = 0, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
+        const uu = this._vertexBufferSize * (this._useInstancing ? 1 : 4);
+        this._vertexData.fill(0, 0, this._fixedCapacityHighWaterMark * uu), this._fixedCapacityHighWaterMark = 0, this._vertexBuffer.updateDirectly(this._vertexData, 0, this._capacity)
       }
       _calculateEmitRate() {
-        let UU = this.emitRate;
+        let uu = this.emitRate;
         if (this._emitRateGradients && this._emitRateGradients.length > 0 && this.targetStopDuration) {
-          const RU = this._actualFrame / this.targetStopDuration;
-          tU.j.GetCurrentGradient(RU, this._emitRateGradients, ((RU, gU, tU) => {
-            RU !== this._currentEmitRateGradient && (this._currentEmitRate1 = this._currentEmitRate2, this._currentEmitRate2 = gU.getFactor(), this._currentEmitRateGradient = RU), UU = (0, uU.Lerp)(this._currentEmitRate1, this._currentEmitRate2, tU)
+          const Ru = this._actualFrame / this.targetStopDuration;
+          Eu.i.GetCurrentGradient(Ru, this._emitRateGradients, ((Ru, yu, Eu) => {
+            Ru !== this._currentEmitRateGradient && (this._currentEmitRate1 = this._currentEmitRate2, this._currentEmitRate2 = yu.getFactor(), this._currentEmitRateGradient = Ru), uu = (0, xu.Lerp)(this._currentEmitRate1, this._currentEmitRate2, Eu)
           }))
         }
-        return UU
+        return uu
       }
-      _appendParticleVertices(UU, RU) {
-        this._appendParticleVertex(UU++, RU, 0, 0), this._useInstancing || (this._appendParticleVertex(UU++, RU, 1, 0), this._appendParticleVertex(UU++, RU, 1, 1), this._appendParticleVertex(UU, RU, 0, 1))
+      _appendParticleVertices(uu, Ru) {
+        this._appendParticleVertex(uu++, Ru, 0, 0), this._useInstancing || (this._appendParticleVertex(uu++, Ru, 1, 0), this._appendParticleVertex(uu++, Ru, 1, 1), this._appendParticleVertex(uu, Ru, 0, 1))
       }
       rebuild() {
         this._engine.getCaps().vertexArrayObject && (this._vertexArrayObject = null), this._createIndexBuffer(), this._spriteBuffer?._rebuild(), this._createVertexBuffers(), this.resetDrawCache()
       }
       async _initShaderSourceAsync() {
-        this._engine.isWebGPU && !BR.ForceGLSL ? (this._shaderLanguage = 1, await Promise.all([gU.e(336).then((() => gU(60563))), gU.e(330).then((() => gU(60572)))])) : await Promise.all([gU.e(319).then((() => gU(60576))), Promise.all([gU.e(312), gU.e(348)]).then((() => gU(60584)))]), this._shadersLoaded = !0
+        this._engine.isWebGPU && !nR.ForceGLSL ? (this._shaderLanguage = 1, await Promise.all([yu.e(336).then((() => yu(61044))), yu.e(330).then((() => yu(61053)))])) : await Promise.all([yu.e(319).then((() => yu(61058))), Promise.all([yu.e(312), yu.e(348)]).then((() => yu(61060)))]), this._shadersLoaded = !0
       }
       isReady() {
         if (!this._shadersLoaded) return !1;
         if (!this.emitter || this._imageProcessingConfiguration && !this._imageProcessingConfiguration.isReady() || !this.particleTexture || !this.particleTexture.isReady()) return !1;
-        if (this.blendMode !== IU.BLENDMODE_MULTIPLYADD) {
+        if (this.blendMode !== Cu.BLENDMODE_MULTIPLYADD) {
           if (!this._getWrapper(this.blendMode).effect.isReady()) return !1
         } else {
-          if (!this._getWrapper(IU.BLENDMODE_MULTIPLY).effect.isReady()) return !1;
-          if (!this._getWrapper(IU.BLENDMODE_ADD).effect.isReady()) return !1
+          if (!this._getWrapper(Cu.BLENDMODE_MULTIPLY).effect.isReady()) return !1;
+          if (!this._getWrapper(Cu.BLENDMODE_ADD).effect.isReady()) return !1
         }
         return !0
       }
-      _render(UU) {
-        const RU = this._getWrapper(UU),
-          gU = RU.effect,
-          tU = this._engine;
-        tU.enableEffect(RU);
-        const pU = this.defaultViewMatrix ?? this._scene.getViewMatrix();
-        gU.setTexture("diffuseSampler", this.particleTexture), gU.setMatrix("view", pU);
-        const PU = this.defaultProjectionMatrix ?? this._scene.getProjectionMatrix();
-        if (gU.setMatrix("projection", PU), this._isAnimationSheetEnabled && this.particleTexture) {
-          const UU = this.particleTexture.getBaseSize();
-          gU.setFloat3("particlesInfos", this.spriteCellWidth / UU.width, this.spriteCellHeight / UU.height, this.spriteCellWidth / UU.width)
+      _render(uu) {
+        const Ru = this._getWrapper(uu),
+          yu = Ru.effect,
+          Eu = this._engine;
+        Eu.enableEffect(Ru);
+        const Ku = this.defaultViewMatrix ?? this._scene.getViewMatrix();
+        yu.setTexture("diffuseSampler", this.particleTexture), yu.setMatrix("view", Ku);
+        const mu = this.defaultProjectionMatrix ?? this._scene.getProjectionMatrix();
+        if (yu.setMatrix("projection", mu), this._isAnimationSheetEnabled && this.particleTexture) {
+          const uu = this.particleTexture.getBaseSize();
+          yu.setFloat3("particlesInfos", this.spriteCellWidth / uu.width, this.spriteCellHeight / uu.height, this.spriteCellWidth / uu.width)
         }
-        if (gU.setVector2("translationPivot", this.translationPivot), gU.setFloat4("textureMask", this.textureMask.r, this.textureMask.g, this.textureMask.b, this.textureMask.a), this._isBillboardBased && this._scene) {
-          const UU = this._scene.activeCamera;
-          gU.setVector3("eyePosition", UU.globalPosition)
+        if (yu.setVector2("translationPivot", this.translationPivot), yu.setFloat4("textureMask", this.textureMask.r, this.textureMask.g, this.textureMask.b, this.textureMask.a), this._isBillboardBased && this._scene) {
+          const uu = this._scene.activeCamera;
+          yu.setVector3("eyePosition", uu.globalPosition)
         }
-        this._rampGradientsTexture && (this._rampGradients && this._rampGradients.length || (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), gU.setTexture("rampSampler", this._rampGradientsTexture));
-        const TU = gU.defines;
-        this._scene && ((0, kU.f)(gU, this, this._scene), this.applyFog && (0, FU.g)(this._scene, void 0, gU)), TU.indexOf("#define BILLBOARDMODE_ALL") >= 0 && (pU.invertToRef(EU.h.Matrix[0]), gU.setMatrix("invView", EU.h.Matrix[0])), gU._multiTarget && this._bindGeometryRendering(gU), void 0 !== this._vertexArrayObject ? this._scene?.forceWireframe ? tU.bindBuffers(this._vertexBuffers, this._linesIndexBufferUseInstancing, gU) : (this._vertexArrayObject || (this._vertexArrayObject = this._engine.recordVertexArrayObject(this._vertexBuffers, this._indexBuffer, gU)), this._engine.bindVertexArrayObject(this._vertexArrayObject, this._indexBuffer)) : this._indexBuffer ? tU.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBuffer : this._indexBuffer, gU) : tU.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBufferUseInstancing : null, gU), this.useLogarithmicDepth && this._scene && (0, FU.q)(TU, gU, this._scene), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(gU), this._setEngineBasedOnBlendMode(UU), gU._multiTarget && YR.e._BindZeroAlphaDiscard(tU, gU);
-        let qU = !1;
+        this._rampGradientsTexture && (this._rampGradients && this._rampGradients.length || (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), yu.setTexture("rampSampler", this._rampGradientsTexture));
+        const Ju = yu.defines;
+        this._scene && ((0, Zu.f)(yu, this, this._scene), this.applyFog && (0, hu.g)(this._scene, void 0, yu)), Ju.indexOf("#define BILLBOARDMODE_ALL") >= 0 && (Ku.invertToRef(Qu.m.Matrix[0]), yu.setMatrix("invView", Qu.m.Matrix[0])), yu._multiTarget && this._bindGeometryRendering(yu), void 0 !== this._vertexArrayObject ? this._scene?.forceWireframe ? Eu.bindBuffers(this._vertexBuffers, this._linesIndexBufferUseInstancing, yu) : (this._vertexArrayObject || (this._vertexArrayObject = this._engine.recordVertexArrayObject(this._vertexBuffers, this._indexBuffer, yu)), this._engine.bindVertexArrayObject(this._vertexArrayObject, this._indexBuffer)) : this._indexBuffer ? Eu.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBuffer : this._indexBuffer, yu) : Eu.bindBuffers(this._vertexBuffers, this._scene?.forceWireframe ? this._linesIndexBufferUseInstancing : null, yu), this.useLogarithmicDepth && this._scene && (0, hu.u)(Ju, yu, this._scene), this._imageProcessingConfiguration && !this._imageProcessingConfiguration.applyByPostProcess && this._imageProcessingConfiguration.bind(yu), this._setEngineBasedOnBlendMode(uu), yu._multiTarget && UR.b._BindZeroAlphaDiscard(Eu, yu);
+        let Nu = !1;
         try {
-          YR.e._BindAttachmentsForEffect(tU, gU) && (this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.notifyObservers(gU), this._useInstancing ? this._scene?.forceWireframe ? tU.drawElementsType(6, 0, 10, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : tU.drawArraysType(7, 0, 4, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : this._scene?.forceWireframe ? tU.drawElementsType(1, 0, 10 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)) : tU.drawElementsType(0, 0, 6 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)), qU = !0)
+          UR.b._BindAttachmentsForEffect(Eu, yu) && (this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.notifyObservers(yu), this._useInstancing ? this._scene?.forceWireframe ? Eu.drawElementsType(6, 0, 10, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : Eu.drawArraysType(7, 0, 4, this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length) : this._scene?.forceWireframe ? Eu.drawElementsType(1, 0, 10 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)) : Eu.drawElementsType(0, 0, 6 * (this._useFixedCapacityForSnapshot ? this._capacity : this._particles.length)), Nu = !0)
         } finally {
-          YR.e._RestoreAttachments(tU)
+          UR.b._RestoreAttachments(Eu)
         }
-        return qU ? this._particles.length : 0
+        return Nu ? this._particles.length : 0
       }
       render() {
         if (!this.isReady() || !this._particles.length && !this._useFixedCapacityForSnapshot) return 0;
-        const UU = this._engine;
-        let RU;
-        return UU.setState && (UU.setState(!1), this.forceDepthWrite && UU.setDepthWrite(!0)), RU = this.blendMode === IU.BLENDMODE_MULTIPLYADD ? this._render(IU.BLENDMODE_MULTIPLY) + this._render(IU.BLENDMODE_ADD) : this._render(this.blendMode), this._engine.unbindInstanceAttributes(), this._engine.setAlphaMode(0), RU
+        const uu = this._engine;
+        let Ru;
+        return uu.setState && (uu.setState(!1), this.forceDepthWrite && uu.setDepthWrite(!0)), Ru = this.blendMode === Cu.BLENDMODE_MULTIPLYADD ? this._render(Cu.BLENDMODE_MULTIPLY) + this._render(Cu.BLENDMODE_ADD) : this._render(this.blendMode), this._engine.unbindInstanceAttributes(), this._engine.setAlphaMode(0), Ru
       }
       _onDispose() {}
       dispose() {
-        let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-          RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (this._engine._onReleaseRenderPassObservable?.remove(this._renderPassObserver), this._renderPassObserver = null, this.resetDrawCache(), this._vertexBuffer && (this._vertexBuffer.dispose(), this._vertexBuffer = null), this._spriteBuffer && (this._spriteBuffer.dispose(), this._spriteBuffer = null), this._indexBuffer && (this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null), this._linesIndexBuffer && (this._engine._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null), this._linesIndexBufferUseInstancing && (this._engine._releaseBuffer(this._linesIndexBufferUseInstancing), this._linesIndexBufferUseInstancing = null), this._vertexArrayObject && (this._engine.releaseVertexArrayObject(this._vertexArrayObject), this._vertexArrayObject = null), UU && this.particleTexture && (this.particleTexture.dispose(), this.particleTexture = null), UU && this.noiseTexture && (this.noiseTexture.dispose(), this.noiseTexture = null), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._onDispose(RU, gU), this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.clear(), this._scene) {
-          const UU = this._scene.vI.indexOf(this);
-          UU > -1 && this._scene.vI.splice(UU, 1), this._scene._activeParticleSystems.dispose()
+        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+          Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (this._engine._onReleaseRenderPassObservable?.remove(this._renderPassObserver), this._renderPassObserver = null, this.resetDrawCache(), this._vertexBuffer && (this._vertexBuffer.dispose(), this._vertexBuffer = null), this._spriteBuffer && (this._spriteBuffer.dispose(), this._spriteBuffer = null), this._indexBuffer && (this._engine._releaseBuffer(this._indexBuffer), this._indexBuffer = null), this._linesIndexBuffer && (this._engine._releaseBuffer(this._linesIndexBuffer), this._linesIndexBuffer = null), this._linesIndexBufferUseInstancing && (this._engine._releaseBuffer(this._linesIndexBufferUseInstancing), this._linesIndexBufferUseInstancing = null), this._vertexArrayObject && (this._engine.releaseVertexArrayObject(this._vertexArrayObject), this._vertexArrayObject = null), uu && this.particleTexture && (this.particleTexture.dispose(), this.particleTexture = null), uu && this.noiseTexture && (this.noiseTexture.dispose(), this.noiseTexture = null), this._rampGradientsTexture && (this._rampGradientsTexture.dispose(), this._rampGradientsTexture = null), this._onDispose(Ru, yu), this._onBeforeDrawParticlesObservable && this._onBeforeDrawParticlesObservable.clear(), this._scene) {
+          const uu = this._scene.JC.indexOf(this);
+          uu > -1 && this._scene.JC.splice(uu, 1), this._scene._activeParticleSystems.dispose()
         }
-        this.HZ.notifyObservers(this), this.HZ.clear(), this.onStoppedObservable.clear(), this.onStartedObservable.clear(), this.reset(), this._isDisposed = !0
+        this.zD.notifyObservers(this), this.zD.clear(), this.onStoppedObservable.clear(), this.onStartedObservable.clear(), this.reset(), this._isDisposed = !0
       }
     }
-    BR.ForceGLSL = !1;
-    var VR, rR = gU(36639);
-    ! function(UU) {
-      UU[UU.ATTACHED = 0] = "ATTACHED", UU[UU.END = 1] = "END"
-    }(VR || (VR = {}));
-    class XR {
-      constructor(UU) {
-        if (this.particleSystem = UU, this.type = 1, this.inheritDirection = !1, this.inheritedVelocityAmount = 0, !UU.emitter || !UU.emitter.dispose) {
-          const RU = (0, rR.e)("BABYLON.AbstractMesh");
-          UU.emitter = new RU("SubemitterSystemEmitter", UU.aZ()), UU._disposeEmitterOnDispose = !0
+    nR.ForceGLSL = !1;
+    var sR, tR = yu(36871);
+    ! function(uu) {
+      uu[uu.ATTACHED = 0] = "ATTACHED", uu[uu.END = 1] = "END"
+    }(sR || (sR = {}));
+    class lR {
+      constructor(uu) {
+        if (this.particleSystem = uu, this.type = 1, this.inheritDirection = !1, this.inheritedVelocityAmount = 0, !uu.emitter || !uu.emitter.dispose) {
+          const Ru = (0, tR.b)("BABYLON.AbstractMesh");
+          uu.emitter = new Ru("SubemitterSystemEmitter", uu.lD()), uu._disposeEmitterOnDispose = !0
         }
       }
       clone() {
-        let UU = this.particleSystem.emitter;
-        if (UU) {
-          if (UU instanceof EU.n) UU = UU.clone();
-          else if (-1 !== UU.getClassName().indexOf("Mesh")) {
-            UU = new((0, rR.e)("BABYLON.Mesh"))("", UU.aZ()), UU.isVisible = !1
+        let uu = this.particleSystem.emitter;
+        if (uu) {
+          if (uu instanceof Qu.p) uu = uu.clone();
+          else if (-1 !== uu.getClassName().indexOf("Mesh")) {
+            uu = new((0, tR.b)("BABYLON.Mesh"))("", uu.lD()), uu.isVisible = !1
           }
-        } else UU = new EU.n;
-        const RU = new XR(this.particleSystem.clone(this.particleSystem.name, UU));
-        return RU.particleSystem.name += "Clone", RU.type = this.type, RU.inheritDirection = this.inheritDirection, RU.inheritedVelocityAmount = this.inheritedVelocityAmount, RU.particleSystem._disposeEmitterOnDispose = !0, RU.particleSystem.disposeOnStop = !0, RU
+        } else uu = new Qu.p;
+        const Ru = new lR(this.particleSystem.clone(this.particleSystem.name, uu));
+        return Ru.particleSystem.name += "Clone", Ru.type = this.type, Ru.inheritDirection = this.inheritDirection, Ru.inheritedVelocityAmount = this.inheritedVelocityAmount, Ru.particleSystem._disposeEmitterOnDispose = !0, Ru.particleSystem.disposeOnStop = !0, Ru
       }
       serialize() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const RU = {};
-        return RU.type = this.type, RU.inheritDirection = this.inheritDirection, RU.inheritedVelocityAmount = this.inheritedVelocityAmount, RU.particleSystem = this.particleSystem.serialize(UU), RU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Ru = {};
+        return Ru.type = this.type, Ru.inheritDirection = this.inheritDirection, Ru.inheritedVelocityAmount = this.inheritedVelocityAmount, Ru.particleSystem = this.particleSystem.serialize(uu), Ru
       }
-      static _ParseParticleSystem(UU, RU, gU) {
-        throw (0, vU.n)("ParseParticle")
+      static _ParseParticleSystem(uu, Ru, yu) {
+        throw (0, gu.k)("ParseParticle")
       }
-      static Parse(UU, RU, gU) {
-        const tU = UU.particleSystem,
-          pU = new XR(XR._ParseParticleSystem(tU, RU, gU, !0));
-        return pU.type = UU.type, pU.inheritDirection = UU.inheritDirection, pU.inheritedVelocityAmount = UU.inheritedVelocityAmount, pU.particleSystem._isSubEmitter = !0, pU
+      static Parse(uu, Ru, yu) {
+        const Eu = uu.particleSystem,
+          Ku = new lR(lR._ParseParticleSystem(Eu, Ru, yu, !0));
+        return Ku.type = uu.type, Ku.inheritDirection = uu.inheritDirection, Ku.inheritedVelocityAmount = uu.inheritedVelocityAmount, Ku.particleSystem._isSubEmitter = !0, Ku
       }
       dispose() {
         this.particleSystem.dispose()
       }
     }
-    var vR = gU(39272),
-      dR = gU(39395);
-    const HR = () => {};
-    class SR {
+    var gR = yu(39455),
+      cR = yu(39582);
+    const LR = () => {};
+    class zR {
       constructor() {
-        this.particlePositionGenerator = HR, this.particleDestinationGenerator = HR, this.particleDirectionGenerator = HR
+        this.particlePositionGenerator = LR, this.particleDestinationGenerator = LR, this.particleDirectionGenerator = LR
       }
-      startDirectionFunction(UU, RU, gU, tU) {
-        const pU = EU.h.xC[0];
-        if (this.particleDirectionGenerator && this.particleDirectionGenerator !== HR) this.particleDirectionGenerator(-1, gU, pU);
-        else if (this.particleDestinationGenerator && this.particleDestinationGenerator !== HR) {
-          this.particleDestinationGenerator(-1, gU, pU);
-          const UU = EU.h.xC[1];
-          pU.subtractToRef(gU.position, UU), UU.scaleToRef(1 / gU.lifeTime, pU)
-        } else pU.set(0, 0, 0);
-        tU ? RU.PgU(pU) : EU.n.TransformNormalToRef(pU, UU, RU)
+      startDirectionFunction(uu, Ru, yu, Eu) {
+        const Ku = Qu.m.MS[0];
+        if (this.particleDirectionGenerator && this.particleDirectionGenerator !== LR) this.particleDirectionGenerator(-1, yu, Ku);
+        else if (this.particleDestinationGenerator && this.particleDestinationGenerator !== LR) {
+          this.particleDestinationGenerator(-1, yu, Ku);
+          const uu = Qu.m.MS[1];
+          Ku.subtractToRef(yu.position, uu), uu.scaleToRef(1 / yu.lifeTime, Ku)
+        } else Ku.set(0, 0, 0);
+        Eu ? Ru.Oyu(Ku) : Qu.p.TransformNormalToRef(Ku, uu, Ru)
       }
-      startPositionFunction(UU, RU, gU, tU) {
-        const pU = EU.h.xC[0];
-        this.particlePositionGenerator && this.particlePositionGenerator !== HR ? this.particlePositionGenerator(-1, gU, pU) : pU.set(0, 0, 0), tU ? RU.PgU(pU) : EU.n.TransformCoordinatesToRef(pU, UU, RU)
+      startPositionFunction(uu, Ru, yu, Eu) {
+        const Ku = Qu.m.MS[0];
+        this.particlePositionGenerator && this.particlePositionGenerator !== LR ? this.particlePositionGenerator(-1, yu, Ku) : Ku.set(0, 0, 0), Eu ? Ru.Oyu(Ku) : Qu.p.TransformCoordinatesToRef(Ku, uu, Ru)
       }
       clone() {
-        const UU = new SR;
-        return jU.c.DeepCopy(this, UU), UU
+        const uu = new zR;
+        return Bu.e.DeepCopy(this, uu), uu
       }
-      applyToShader(UU) {}
-      buildUniformLayout(UU) {}
+      applyToShader(uu) {}
+      buildUniformLayout(uu) {}
       getEffectDefines() {
         return "#define CUSTOMEMITTER"
       }
@@ -3606,42 +3606,42 @@ export const modules = {
         return "CustomParticleEmitter"
       }
       serialize() {
-        const UU = {};
-        return UU.type = this.getClassName(), UU.particlePositionGenerator = this.particlePositionGenerator, UU.particleDestinationGenerator = this.particleDestinationGenerator, UU
+        const uu = {};
+        return uu.type = this.getClassName(), uu.particlePositionGenerator = this.particlePositionGenerator, uu.particleDestinationGenerator = this.particleDestinationGenerator, uu
       }
-      parse(UU) {
-        UU.particlePositionGenerator && (this.particlePositionGenerator = UU.particlePositionGenerator), UU.particleDestinationGenerator && (this.particleDestinationGenerator = UU.particleDestinationGenerator)
+      parse(uu) {
+        uu.particlePositionGenerator && (this.particlePositionGenerator = uu.particlePositionGenerator), uu.particleDestinationGenerator && (this.particleDestinationGenerator = uu.particleDestinationGenerator)
       }
     }
-    const sR = EU.n.Zero(),
-      yR = EU.n.Zero(),
-      kR = EU.n.Zero();
-    class FR {
+    const FR = Qu.p.Zero(),
+      wR = Qu.p.Zero(),
+      ZR = Qu.p.Zero();
+    class hR {
       constructor() {
-        this.strength = 0, this.position = EU.n.Zero()
+        this.strength = 0, this.position = Qu.p.Zero()
       }
-      _processParticle(UU, RU) {
-        this.position.subtractToRef(UU.position, sR);
-        const gU = sR.lengthSquared() + 1;
-        sR.normalize().scaleToRef(this.strength / gU, yR), yR.scaleToRef(RU._tempScaledUpdateSpeed, kR), UU.direction.addInPlace(kR)
+      _processParticle(uu, Ru) {
+        this.position.subtractToRef(uu.position, FR);
+        const yu = FR.lengthSquared() + 1;
+        FR.normalize().scaleToRef(this.strength / yu, wR), wR.scaleToRef(Ru._tempScaledUpdateSpeed, ZR), uu.direction.addInPlace(ZR)
       }
       serialize() {
         return {
-          position: this.position.vgU(),
+          position: this.position.AEu(),
           strength: this.strength
         }
       }
     }
-    const iR = ["level", "hasAlpha", "getAlphaFromRGB", "gammaSpace", "coordinatesIndex", "coordinatesMode", "wrapU", "wrapV", "wrapR", "anisotropicFilteringLevel", "uOffset", "vOffset", "uScale", "vScale", "uAng", "vAng", "wAng", "uRotationCenter", "vRotationCenter", "wRotationCenter"];
-    class AR extends BR {
+    const PR = ["level", "hasAlpha", "getAlphaFromRGB", "gammaSpace", "coordinatesIndex", "coordinatesMode", "wrapU", "wrapV", "wrapR", "anisotropicFilteringLevel", "uOffset", "vOffset", "uScale", "vScale", "uAng", "vAng", "wAng", "uRotationCenter", "vRotationCenter", "wRotationCenter"];
+    class iR extends nR {
       constructor() {
-        super(...arguments), this._disposeEmitterOnDispose = !1, this.doNotSerialize = !1, this.canStart = () => !0, this._flowMap = null, this._flowMapUpdate = null, this._source = null, this._blockReference = 0, this.flowMapStrength = 1, this._attractorUpdate = null, this.metadata = null, this._emitFromParticle = UU => {
+        super(...arguments), this._disposeEmitterOnDispose = !1, this.doNotSerialize = !1, this.canStart = () => !0, this._flowMap = null, this._flowMapUpdate = null, this._source = null, this._blockReference = 0, this.flowMapStrength = 1, this._attractorUpdate = null, this.metadata = null, this._emitFromParticle = uu => {
           if (!this._subEmitters || 0 === this._subEmitters.length) return;
-          const RU = Math.floor(Math.random() * this._subEmitters.length);
-          for (const gU of this._subEmitters[RU])
-            if (1 === gU.type) {
-              const RU = gU.clone();
-              UU._inheritParticleInfoToSubEmitter(RU), RU.particleSystem._rootParticleSystem = this, this.activeSubSystems.push(RU.particleSystem), RU.particleSystem.start()
+          const Ru = Math.floor(Math.random() * this._subEmitters.length);
+          for (const yu of this._subEmitters[Ru])
+            if (1 === yu.type) {
+              const Ru = yu.clone();
+              uu._inheritParticleInfoToSubEmitter(Ru), Ru.particleSystem._rootParticleSystem = this, this.activeSubSystems.push(Ru.particleSystem), Ru.particleSystem.start()
             }
         }
       }
@@ -3654,465 +3654,465 @@ export const modules = {
       get flowMap() {
         return this._flowMap
       }
-      set flowMap(UU) {
-        this._flowMap !== UU && (this._flowMap = UU, this._flowMapUpdate && (aR(this._flowMapUpdate), this._flowMapUpdate = null), UU && (this._flowMapUpdate = {
-          process: UU => {
-            const RU = this.aZ()?.getTransformMatrix();
-            this._flowMap._processParticle(UU, this.flowMapStrength * this._tempScaledUpdateSpeed, RU)
+      set flowMap(uu) {
+        this._flowMap !== uu && (this._flowMap = uu, this._flowMapUpdate && (GR(this._flowMapUpdate), this._flowMapUpdate = null), uu && (this._flowMapUpdate = {
+          process: uu => {
+            const Ru = this.lD()?.getTransformMatrix();
+            this._flowMap._processParticle(uu, this.flowMapStrength * this._tempScaledUpdateSpeed, Ru)
           },
           previousItem: null,
           nextItem: null
-        }, ZR(this._flowMapUpdate, this._directionProcessing)))
+        }, IR(this._flowMapUpdate, this._directionProcessing)))
       }
-      addAttractor(UU) {
-        super.addAttractor(UU), 1 === this._attractors.length && (this._attractorUpdate = {
-          process: UU => {
-            for (const RU of this._attractors) RU._processParticle(UU, this)
+      addAttractor(uu) {
+        super.addAttractor(uu), 1 === this._attractors.length && (this._attractorUpdate = {
+          process: uu => {
+            for (const Ru of this._attractors) Ru._processParticle(uu, this)
           },
           previousItem: null,
           nextItem: null
-        }, ZR(this._attractorUpdate, this._directionProcessing))
+        }, IR(this._attractorUpdate, this._directionProcessing))
       }
-      removeAttractor(UU) {
-        super.removeAttractor(UU), 0 === this._attractors.length && this._attractorUpdate && aR(this._attractorUpdate)
+      removeAttractor(uu) {
+        super.removeAttractor(uu), 0 === this._attractors.length && this._attractorUpdate && GR(this._attractorUpdate)
       }
       start() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
-        this.canStart() && super.start(UU)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.startDelay;
+        this.canStart() && super.start(uu)
       }
       _prepareSubEmitterInternalArray() {
         if (this._subEmitters = new Array, this.subEmitters)
-          for (const UU of this.subEmitters) UU instanceof AR ? this._subEmitters.push([new XR(UU)]) : UU instanceof XR ? this._subEmitters.push([UU]) : UU instanceof Array && this._subEmitters.push(UU)
+          for (const uu of this.subEmitters) uu instanceof iR ? this._subEmitters.push([new lR(uu)]) : uu instanceof lR ? this._subEmitters.push([uu]) : uu instanceof Array && this._subEmitters.push(uu)
       }
       _stopSubEmitters() {
         if (this.activeSubSystems) {
-          for (const UU of this.activeSubSystems) UU.stop(!0);
+          for (const uu of this.activeSubSystems) uu.stop(!0);
           this.activeSubSystems = []
         }
       }
       _removeFromRoot() {
         if (!this._rootParticleSystem) return;
-        const UU = this._rootParticleSystem.activeSubSystems.indexOf(this); - 1 !== UU && this._rootParticleSystem.activeSubSystems.splice(UU, 1), this._rootParticleSystem = null
+        const uu = this._rootParticleSystem.activeSubSystems.indexOf(this); - 1 !== uu && this._rootParticleSystem.activeSubSystems.splice(uu, 1), this._rootParticleSystem = null
       }
       _preStart() {
         this._prepareSubEmitterInternalArray(), this._subEmitters && 0 != this._subEmitters.length && (this.activeSubSystems = [])
       }
-      _postStop(UU) {
-        UU && this._stopSubEmitters()
+      _postStop(uu) {
+        uu && this._stopSubEmitters()
       }
-      _prepareParticle(UU) {
+      _prepareParticle(uu) {
         if (this._subEmitters && this._subEmitters.length > 0) {
-          const RU = this._subEmitters[Math.floor(Math.random() * this._subEmitters.length)];
-          UU._properties.attachedSubEmitters = [];
-          for (const gU of RU)
-            if (0 === gU.type) {
-              const RU = gU.clone();
-              UU._properties.attachedSubEmitters.push(RU), RU.particleSystem.start()
+          const Ru = this._subEmitters[Math.floor(Math.random() * this._subEmitters.length)];
+          uu._properties.attachedSubEmitters = [];
+          for (const yu of Ru)
+            if (0 === yu.type) {
+              const Ru = yu.clone();
+              uu._properties.attachedSubEmitters.push(Ru), Ru.particleSystem.start()
             }
         }
       }
       _onDispose() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this._removeFromRoot(), this.subEmitters && !this._subEmitters && this._prepareSubEmitterInternalArray(), UU && this.particles)
-          for (const gU of this.particles)
-            if (gU._properties.attachedSubEmitters)
-              for (let UU = gU._properties.attachedSubEmitters.length - 1; UU >= 0; UU -= 1) gU._properties.attachedSubEmitters[UU].dispose();
-        if (RU && this.activeSubSystems)
-          for (let gU = this.activeSubSystems.length - 1; gU >= 0; gU -= 1) this.activeSubSystems[gU].dispose();
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this._removeFromRoot(), this.subEmitters && !this._subEmitters && this._prepareSubEmitterInternalArray(), uu && this.particles)
+          for (const yu of this.particles)
+            if (yu._properties.attachedSubEmitters)
+              for (let uu = yu._properties.attachedSubEmitters.length - 1; uu >= 0; uu -= 1) yu._properties.attachedSubEmitters[uu].dispose();
+        if (Ru && this.activeSubSystems)
+          for (let yu = this.activeSubSystems.length - 1; yu >= 0; yu -= 1) this.activeSubSystems[yu].dispose();
         if (this._subEmitters && this._subEmitters.length) {
-          for (let UU = 0; UU < this._subEmitters.length; UU++)
-            for (const RU of this._subEmitters[UU]) RU.dispose();
+          for (let uu = 0; uu < this._subEmitters.length; uu++)
+            for (const Ru of this._subEmitters[uu]) Ru.dispose();
           this._subEmitters = [], this.subEmitters = []
         }
         this._disposeEmitterOnDispose && this.emitter && this.emitter.dispose && this.emitter.dispose(!0)
       }
-      static _Parse(UU, RU, gU, tU) {
-        let pU;
-        pU = gU instanceof vR.d ? null : gU;
-        const PU = (0, rR.e)("BABYLON.Texture");
-        if (PU && pU)
-          if (UU.texture) RU.particleTexture = PU.Parse(UU.texture, pU, tU);
-          else if (UU.textureName) {
-          const gU = UU.textureSettings;
-          if (RU.particleTexture = new PU(tU + UU.textureName, pU, !1, void 0 === UU.invertY || UU.invertY, gU ? gU.samplingMode : void 0), RU.particleTexture.name = UU.textureName, gU) {
-            const UU = RU.particleTexture;
-            for (const RU of iR) void 0 !== gU[RU] && (UU[RU] = gU[RU])
+      static _Parse(uu, Ru, yu, Eu) {
+        let Ku;
+        Ku = yu instanceof gR.d ? null : yu;
+        const mu = (0, tR.b)("BABYLON.Texture");
+        if (mu && Ku)
+          if (uu.texture) Ru.particleTexture = mu.Parse(uu.texture, Ku, Eu);
+          else if (uu.textureName) {
+          const yu = uu.textureSettings;
+          if (Ru.particleTexture = new mu(Eu + uu.textureName, Ku, !1, void 0 === uu.invertY || uu.invertY, yu ? yu.samplingMode : void 0), Ru.particleTexture.name = uu.textureName, yu) {
+            const uu = Ru.particleTexture;
+            for (const Ru of PR) void 0 !== yu[Ru] && (uu[Ru] = yu[Ru])
           }
         }
-        if (UU.emitterId || 0 === UU.emitterId || void 0 !== UU.emitter ? (UU.emitterId || 0 === UU.emitterId) && pU ? (RU.emitter = pU.getLastMeshById(UU.emitterId), RU.emitter || (RU.emitter = EU.n.Zero())) : RU.emitter = EU.n.FromArray(UU.emitter) : RU.emitter = EU.n.Zero(), RU.isLocal = !!UU.isLocal, void 0 !== UU.renderingGroupId && (RU.renderingGroupId = UU.renderingGroupId), void 0 !== UU.isBillboardBased && (RU.isBillboardBased = UU.isBillboardBased), void 0 !== UU.billboardMode && (RU.billboardMode = UU.billboardMode), void 0 !== UU.useLogarithmicDepth && (RU.useLogarithmicDepth = UU.useLogarithmicDepth), UU.animations) {
-          for (let gU = 0; gU < UU.animations.length; gU++) {
-            const tU = UU.animations[gU],
-              pU = (0, rR.e)("BABYLON.Animation");
-            pU && RU.animations.push(pU.Parse(tU))
+        if (uu.emitterId || 0 === uu.emitterId || void 0 !== uu.emitter ? (uu.emitterId || 0 === uu.emitterId) && Ku ? (Ru.emitter = Ku.getLastMeshById(uu.emitterId), Ru.emitter || (Ru.emitter = Qu.p.Zero())) : Ru.emitter = Qu.p.FromArray(uu.emitter) : Ru.emitter = Qu.p.Zero(), Ru.isLocal = !!uu.isLocal, void 0 !== uu.renderingGroupId && (Ru.renderingGroupId = uu.renderingGroupId), void 0 !== uu.isBillboardBased && (Ru.isBillboardBased = uu.isBillboardBased), void 0 !== uu.billboardMode && (Ru.billboardMode = uu.billboardMode), void 0 !== uu.useLogarithmicDepth && (Ru.useLogarithmicDepth = uu.useLogarithmicDepth), uu.animations) {
+          for (let yu = 0; yu < uu.animations.length; yu++) {
+            const Eu = uu.animations[yu],
+              Ku = (0, tR.b)("BABYLON.Animation");
+            Ku && Ru.animations.push(Ku.Parse(Eu))
           }
-          RU.beginAnimationOnStart = UU.beginAnimationOnStart, RU.beginAnimationFrom = UU.beginAnimationFrom, RU.beginAnimationTo = UU.beginAnimationTo, RU.beginAnimationLoop = UU.beginAnimationLoop
+          Ru.beginAnimationOnStart = uu.beginAnimationOnStart, Ru.beginAnimationFrom = uu.beginAnimationFrom, Ru.beginAnimationTo = uu.beginAnimationTo, Ru.beginAnimationLoop = uu.beginAnimationLoop
         }
-        if (UU.autoAnimate && pU && pU.beginAnimation(RU, UU.autoAnimateFrom, UU.autoAnimateTo, UU.autoAnimateLoop, UU.autoAnimateSpeed || 1), RU.startDelay = 0 | UU.startDelay, RU.minAngularSpeed = UU.minAngularSpeed, RU.maxAngularSpeed = UU.maxAngularSpeed, RU.minSize = UU.minSize, RU.maxSize = UU.maxSize, UU.minScaleX && (RU.minScaleX = UU.minScaleX, RU.maxScaleX = UU.maxScaleX, RU.minScaleY = UU.minScaleY, RU.maxScaleY = UU.maxScaleY), void 0 !== UU.preWarmCycles && (RU.preWarmCycles = UU.preWarmCycles, RU.preWarmStepOffset = UU.preWarmStepOffset), void 0 !== UU.minInitialRotation && (RU.minInitialRotation = UU.minInitialRotation, RU.maxInitialRotation = UU.maxInitialRotation), RU.minLifeTime = UU.minLifeTime, RU.maxLifeTime = UU.maxLifeTime, RU.minEmitPower = UU.minEmitPower, RU.maxEmitPower = UU.maxEmitPower, RU.emitRate = UU.emitRate, RU.gravity = EU.n.FromArray(UU.gravity), UU.noiseStrength && (RU.noiseStrength = EU.n.FromArray(UU.noiseStrength)), RU.color1 = cU.g.FromArray(UU.color1), RU.color2 = cU.g.FromArray(UU.color2), RU.colorDead = cU.g.FromArray(UU.colorDead), RU.updateSpeed = UU.updateSpeed, RU.targetStopDuration = UU.targetStopDuration, RU.blendMode = UU.blendMode, UU.colorGradients)
-          for (const EU of UU.colorGradients) RU.addColorGradient(EU.gradient, cU.g.FromArray(EU.color1), EU.color2 ? cU.g.FromArray(EU.color2) : void 0);
-        if (UU.rampGradients) {
-          for (const gU of UU.rampGradients) RU.addRampGradient(gU.gradient, cU.e.FromArray(gU.color));
-          RU.useRampGradients = UU.useRampGradients
+        if (uu.autoAnimate && Ku && Ku.beginAnimation(Ru, uu.autoAnimateFrom, uu.autoAnimateTo, uu.autoAnimateLoop, uu.autoAnimateSpeed || 1), Ru.startDelay = 0 | uu.startDelay, Ru.minAngularSpeed = uu.minAngularSpeed, Ru.maxAngularSpeed = uu.maxAngularSpeed, Ru.minSize = uu.minSize, Ru.maxSize = uu.maxSize, uu.minScaleX && (Ru.minScaleX = uu.minScaleX, Ru.maxScaleX = uu.maxScaleX, Ru.minScaleY = uu.minScaleY, Ru.maxScaleY = uu.maxScaleY), void 0 !== uu.preWarmCycles && (Ru.preWarmCycles = uu.preWarmCycles, Ru.preWarmStepOffset = uu.preWarmStepOffset), void 0 !== uu.minInitialRotation && (Ru.minInitialRotation = uu.minInitialRotation, Ru.maxInitialRotation = uu.maxInitialRotation), Ru.minLifeTime = uu.minLifeTime, Ru.maxLifeTime = uu.maxLifeTime, Ru.minEmitPower = uu.minEmitPower, Ru.maxEmitPower = uu.maxEmitPower, Ru.emitRate = uu.emitRate, Ru.gravity = Qu.p.FromArray(uu.gravity), uu.noiseStrength && (Ru.noiseStrength = Qu.p.FromArray(uu.noiseStrength)), Ru.color1 = Vu.h.FromArray(uu.color1), Ru.color2 = Vu.h.FromArray(uu.color2), Ru.colorDead = Vu.h.FromArray(uu.colorDead), Ru.updateSpeed = uu.updateSpeed, Ru.targetStopDuration = uu.targetStopDuration, Ru.blendMode = uu.blendMode, uu.colorGradients)
+          for (const Qu of uu.colorGradients) Ru.addColorGradient(Qu.gradient, Vu.h.FromArray(Qu.color1), Qu.color2 ? Vu.h.FromArray(Qu.color2) : void 0);
+        if (uu.rampGradients) {
+          for (const yu of uu.rampGradients) Ru.addRampGradient(yu.gradient, Vu.d.FromArray(yu.color));
+          Ru.useRampGradients = uu.useRampGradients
         }
-        if (UU.colorRemapGradients)
-          for (const EU of UU.colorRemapGradients) RU.addColorRemapGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.alphaRemapGradients)
-          for (const EU of UU.alphaRemapGradients) RU.addAlphaRemapGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.sizeGradients)
-          for (const EU of UU.sizeGradients) RU.addSizeGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.angularSpeedGradients)
-          for (const EU of UU.angularSpeedGradients) RU.addAngularSpeedGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.velocityGradients)
-          for (const EU of UU.velocityGradients) RU.addVelocityGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.dragGradients)
-          for (const EU of UU.dragGradients) RU.addDragGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.emitRateGradients)
-          for (const EU of UU.emitRateGradients) RU.addEmitRateGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.startSizeGradients)
-          for (const EU of UU.startSizeGradients) RU.addStartSizeGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.lifeTimeGradients)
-          for (const EU of UU.lifeTimeGradients) RU.addLifeTimeGradient(EU.gradient, void 0 !== EU.factor1 ? EU.factor1 : EU.factor, EU.factor2);
-        if (UU.limitVelocityGradients) {
-          for (const gU of UU.limitVelocityGradients) RU.addLimitVelocityGradient(gU.gradient, void 0 !== gU.factor1 ? gU.factor1 : gU.factor, gU.factor2);
-          RU.limitVelocityDamping = UU.limitVelocityDamping
+        if (uu.colorRemapGradients)
+          for (const Qu of uu.colorRemapGradients) Ru.addColorRemapGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.alphaRemapGradients)
+          for (const Qu of uu.alphaRemapGradients) Ru.addAlphaRemapGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.sizeGradients)
+          for (const Qu of uu.sizeGradients) Ru.addSizeGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.angularSpeedGradients)
+          for (const Qu of uu.angularSpeedGradients) Ru.addAngularSpeedGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.velocityGradients)
+          for (const Qu of uu.velocityGradients) Ru.addVelocityGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.dragGradients)
+          for (const Qu of uu.dragGradients) Ru.addDragGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.emitRateGradients)
+          for (const Qu of uu.emitRateGradients) Ru.addEmitRateGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.startSizeGradients)
+          for (const Qu of uu.startSizeGradients) Ru.addStartSizeGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.lifeTimeGradients)
+          for (const Qu of uu.lifeTimeGradients) Ru.addLifeTimeGradient(Qu.gradient, void 0 !== Qu.factor1 ? Qu.factor1 : Qu.factor, Qu.factor2);
+        if (uu.limitVelocityGradients) {
+          for (const yu of uu.limitVelocityGradients) Ru.addLimitVelocityGradient(yu.gradient, void 0 !== yu.factor1 ? yu.factor1 : yu.factor, yu.factor2);
+          Ru.limitVelocityDamping = uu.limitVelocityDamping
         }
-        if (UU.noiseTexture && pU) {
-          const gU = (0, rR.e)("BABYLON.ProceduralTexture");
-          RU.noiseTexture = gU.Parse(UU.noiseTexture, pU, tU)
+        if (uu.noiseTexture && Ku) {
+          const yu = (0, tR.b)("BABYLON.ProceduralTexture");
+          Ru.noiseTexture = yu.Parse(uu.noiseTexture, Ku, Eu)
         }
-        let TU;
-        if (UU.particleEmitterType) {
-          switch (UU.particleEmitterType.type) {
+        let Ju;
+        if (uu.particleEmitterType) {
+          switch (uu.particleEmitterType.type) {
             case "SphereParticleEmitter":
-              TU = new QU;
+              Ju = new Tu;
               break;
             case "SphereDirectedParticleEmitter":
-              TU = new eU;
+              Ju = new Wu;
               break;
             case "ConeEmitter":
             case "ConeParticleEmitter":
-              TU = new fU;
+              Ju = new Hu;
               break;
             case "ConeDirectedParticleEmitter":
-              TU = new xU;
+              Ju = new du;
               break;
             case "CylinderParticleEmitter":
-              TU = new WU.g;
+              Ju = new ju.h;
               break;
             case "CylinderDirectedParticleEmitter":
-              TU = new WU.d;
+              Ju = new ju.d;
               break;
             case "HemisphericParticleEmitter":
-              TU = new hU;
+              Ju = new pu;
               break;
             case "PointParticleEmitter":
-              TU = new CU;
+              Ju = new Su;
               break;
             case "MeshParticleEmitter":
-              TU = new mU;
+              Ju = new bu;
               break;
             case "CustomParticleEmitter":
-              TU = new SR;
+              Ju = new zR;
               break;
             default:
-              TU = new GU.c
+              Ju = new ru.b
           }
-          TU.parse(UU.particleEmitterType, pU)
-        } else TU = new GU.c, TU.parse(UU, pU);
-        RU.particleEmitterType = TU, RU.startSpriteCellID = UU.startSpriteCellID, RU.endSpriteCellID = UU.endSpriteCellID, RU.spriteCellLoop = UU.spriteCellLoop ?? !0, RU.spriteCellWidth = UU.spriteCellWidth, RU.spriteCellHeight = UU.spriteCellHeight, RU.spriteCellChangeSpeed = UU.spriteCellChangeSpeed, RU.spriteRandomStartCell = UU.spriteRandomStartCell, RU.disposeOnStop = UU.disposeOnStop ?? !1, RU.manualEmitCount = UU.manualEmitCount ?? -1
+          Ju.parse(uu.particleEmitterType, Ku)
+        } else Ju = new ru.b, Ju.parse(uu, Ku);
+        Ru.particleEmitterType = Ju, Ru.startSpriteCellID = uu.startSpriteCellID, Ru.endSpriteCellID = uu.endSpriteCellID, Ru.spriteCellLoop = uu.spriteCellLoop ?? !0, Ru.spriteCellWidth = uu.spriteCellWidth, Ru.spriteCellHeight = uu.spriteCellHeight, Ru.spriteCellChangeSpeed = uu.spriteCellChangeSpeed, Ru.spriteRandomStartCell = uu.spriteRandomStartCell, Ru.disposeOnStop = uu.disposeOnStop ?? !1, Ru.manualEmitCount = uu.manualEmitCount ?? -1
       }
-      static Parse(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          pU = arguments.length > 4 ? arguments[4] : void 0;
-        const PU = UU.name;
-        let TU, qU, KU = null,
-          GU = null;
-        if (RU instanceof vR.d ? TU = RU : (qU = RU, TU = qU.WC()), UU.customShader && (0, vU.e)(TU.createEffectForParticles)) {
-          GU = UU.customShader;
-          const RU = GU.shaderOptions.defines.length > 0 ? GU.shaderOptions.defines.join("\n") : "";
-          KU = TU.createEffectForParticles(GU.shaderPath.fragmentElement, GU.shaderOptions.uniforms, GU.shaderOptions.samplers, RU)
+      static Parse(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          Ku = arguments.length > 4 ? arguments[4] : void 0;
+        const mu = uu.name;
+        let Ju, Nu, Xu = null,
+          ru = null;
+        if (Ru instanceof gR.d ? Ju = Ru : (Nu = Ru, Ju = Nu.eS()), uu.customShader && (0, gu.c)(Ju.createEffectForParticles)) {
+          ru = uu.customShader;
+          const Ru = ru.shaderOptions.defines.length > 0 ? ru.shaderOptions.defines.join("\n") : "";
+          Xu = Ju.createEffectForParticles(ru.shaderPath.fragmentElement, ru.shaderOptions.uniforms, ru.shaderOptions.samplers, Ru)
         }
-        const jU = new AR(PU, pU || UU.hG, RU, KU, UU.isAnimationSheetEnabled);
-        if (jU.customShader = GU, jU._rootUrl = gU, UU.id && (jU.id = UU.id), UU.subEmitters) {
-          jU.subEmitters = [];
-          for (const tU of UU.subEmitters) {
-            const UU = [];
-            for (const pU of tU) UU.push(XR.Parse(pU, RU, gU));
-            jU.subEmitters.push(UU)
+        const Bu = new iR(mu, Ku || uu.Nr, Ru, Xu, uu.isAnimationSheetEnabled);
+        if (Bu.customShader = ru, Bu._rootUrl = yu, uu.id && (Bu.id = uu.id), uu.subEmitters) {
+          Bu.subEmitters = [];
+          for (const Eu of uu.subEmitters) {
+            const uu = [];
+            for (const Ku of Eu) uu.push(lR.Parse(Ku, Ru, yu));
+            Bu.subEmitters.push(uu)
           }
         }
-        if (UU.attractors)
-          for (const cU of UU.attractors) {
-            const UU = new FR;
-            UU.position = EU.n.FromArray(cU.position), UU.strength = cU.strength, jU.addAttractor(UU)
+        if (uu.attractors)
+          for (const Vu of uu.attractors) {
+            const uu = new hR;
+            uu.position = Qu.p.FromArray(Vu.position), uu.strength = Vu.strength, Bu.addAttractor(uu)
           }
-        return AR._Parse(UU, jU, RU, gU), UU.textureMask && (jU.textureMask = cU.g.FromArray(UU.textureMask)), UU.worldOffset && (jU.worldOffset = EU.n.FromArray(UU.worldOffset)), UU.preventAutoStart && (jU.preventAutoStart = UU.preventAutoStart), UU.metadata && (jU.metadata = UU.metadata), tU || jU.preventAutoStart || jU.start(), jU
+        return iR._Parse(uu, Bu, Ru, yu), uu.textureMask && (Bu.textureMask = Vu.h.FromArray(uu.textureMask)), uu.worldOffset && (Bu.worldOffset = Qu.p.FromArray(uu.worldOffset)), uu.preventAutoStart && (Bu.preventAutoStart = uu.preventAutoStart), uu.metadata && (Bu.metadata = uu.metadata), Eu || Bu.preventAutoStart || Bu.start(), Bu
       }
       serialize() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const RU = {};
-        if (AR._Serialize(RU, this, UU), RU.textureMask = this.textureMask.vgU(), RU.customShader = this.customShader, RU.preventAutoStart = this.preventAutoStart, RU.worldOffset = this.worldOffset.vgU(), this.metadata && (RU.metadata = this.metadata), this.subEmitters) {
-          RU.subEmitters = [], this._subEmitters || this._prepareSubEmitterInternalArray();
-          for (const gU of this._subEmitters) {
-            const tU = [];
-            for (const RU of gU) RU.particleSystem.doNotSerialize || tU.push(RU.serialize(UU));
-            RU.subEmitters.push(tU)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Ru = {};
+        if (iR._Serialize(Ru, this, uu), Ru.textureMask = this.textureMask.AEu(), Ru.customShader = this.customShader, Ru.preventAutoStart = this.preventAutoStart, Ru.worldOffset = this.worldOffset.AEu(), this.metadata && (Ru.metadata = this.metadata), this.subEmitters) {
+          Ru.subEmitters = [], this._subEmitters || this._prepareSubEmitterInternalArray();
+          for (const yu of this._subEmitters) {
+            const Eu = [];
+            for (const Ru of yu) Ru.particleSystem.doNotSerialize || Eu.push(Ru.serialize(uu));
+            Ru.subEmitters.push(Eu)
           }
         }
         if (this._attractors && this._attractors.length) {
-          RU.attractors = [];
-          for (const UU of this._attractors) RU.attractors.push(UU.serialize())
+          Ru.attractors = [];
+          for (const uu of this._attractors) Ru.attractors.push(uu.serialize())
         }
-        return RU
+        return Ru
       }
-      static _Serialize(UU, RU, gU) {
-        if (UU.name = RU.name, UU.id = RU.id, UU.hG = RU.getCapacity(), UU.disposeOnStop = RU.disposeOnStop, UU.manualEmitCount = RU.manualEmitCount, RU.emitter.position) {
-          const gU = RU.emitter;
-          UU.emitterId = gU.id
+      static _Serialize(uu, Ru, yu) {
+        if (uu.name = Ru.name, uu.id = Ru.id, uu.Nr = Ru.getCapacity(), uu.disposeOnStop = Ru.disposeOnStop, uu.manualEmitCount = Ru.manualEmitCount, Ru.emitter.position) {
+          const yu = Ru.emitter;
+          uu.emitterId = yu.id
         } else {
-          const gU = RU.emitter;
-          UU.emitter = gU.vgU()
+          const yu = Ru.emitter;
+          uu.emitter = yu.AEu()
         }
-        if (RU.particleEmitterType && (UU.particleEmitterType = RU.particleEmitterType.serialize()), RU.particleTexture)
-          if (gU) UU.texture = RU.particleTexture.serialize();
+        if (Ru.particleEmitterType && (uu.particleEmitterType = Ru.particleEmitterType.serialize()), Ru.particleTexture)
+          if (yu) uu.texture = Ru.particleTexture.serialize();
           else {
-            const gU = RU.particleTexture;
-            UU.textureName = RU.particleTexture.name, UU.invertY = !!gU._invertY;
-            const tU = {};
-            for (const UU of iR) tU[UU] = gU[UU];
-            tU.samplingMode = gU.samplingMode, UU.textureSettings = tU
-          } UU.isLocal = RU.isLocal, dR.b.AppendSerializedAnimations(RU, UU), UU.beginAnimationOnStart = RU.beginAnimationOnStart, UU.beginAnimationFrom = RU.beginAnimationFrom, UU.beginAnimationTo = RU.beginAnimationTo, UU.beginAnimationLoop = RU.beginAnimationLoop, UU.startDelay = RU.startDelay, UU.renderingGroupId = RU.renderingGroupId, UU.isBillboardBased = RU.isBillboardBased, UU.billboardMode = RU.billboardMode, UU.minAngularSpeed = RU.minAngularSpeed, UU.maxAngularSpeed = RU.maxAngularSpeed, UU.minSize = RU.minSize, UU.maxSize = RU.maxSize, UU.minScaleX = RU.minScaleX, UU.maxScaleX = RU.maxScaleX, UU.minScaleY = RU.minScaleY, UU.maxScaleY = RU.maxScaleY, UU.minEmitPower = RU.minEmitPower, UU.maxEmitPower = RU.maxEmitPower, UU.minLifeTime = RU.minLifeTime, UU.maxLifeTime = RU.maxLifeTime, UU.emitRate = RU.emitRate, UU.gravity = RU.gravity.vgU(), UU.noiseStrength = RU.noiseStrength.vgU(), UU.color1 = RU.color1.vgU(), UU.color2 = RU.color2.vgU(), UU.colorDead = RU.colorDead.vgU(), UU.updateSpeed = RU.updateSpeed, UU.targetStopDuration = RU.targetStopDuration, UU.blendMode = RU.blendMode, UU.preWarmCycles = RU.preWarmCycles, UU.preWarmStepOffset = RU.preWarmStepOffset, UU.minInitialRotation = RU.minInitialRotation, UU.maxInitialRotation = RU.maxInitialRotation, UU.startSpriteCellID = RU.startSpriteCellID, UU.spriteCellLoop = RU.spriteCellLoop, UU.endSpriteCellID = RU.endSpriteCellID, UU.spriteCellChangeSpeed = RU.spriteCellChangeSpeed, UU.spriteCellWidth = RU.spriteCellWidth, UU.spriteCellHeight = RU.spriteCellHeight, UU.spriteRandomStartCell = RU.spriteRandomStartCell, UU.isAnimationSheetEnabled = RU.isAnimationSheetEnabled, UU.useLogarithmicDepth = RU.useLogarithmicDepth;
-        const tU = RU.getColorGradients();
-        if (tU) {
-          UU.colorGradients = [];
-          for (const RU of tU) {
-            const gU = {
-              gradient: RU.gradient,
-              color1: RU.color1.vgU()
+            const yu = Ru.particleTexture;
+            uu.textureName = Ru.particleTexture.name, uu.invertY = !!yu._invertY;
+            const Eu = {};
+            for (const uu of PR) Eu[uu] = yu[uu];
+            Eu.samplingMode = yu.samplingMode, uu.textureSettings = Eu
+          } uu.isLocal = Ru.isLocal, cR.c.AppendSerializedAnimations(Ru, uu), uu.beginAnimationOnStart = Ru.beginAnimationOnStart, uu.beginAnimationFrom = Ru.beginAnimationFrom, uu.beginAnimationTo = Ru.beginAnimationTo, uu.beginAnimationLoop = Ru.beginAnimationLoop, uu.startDelay = Ru.startDelay, uu.renderingGroupId = Ru.renderingGroupId, uu.isBillboardBased = Ru.isBillboardBased, uu.billboardMode = Ru.billboardMode, uu.minAngularSpeed = Ru.minAngularSpeed, uu.maxAngularSpeed = Ru.maxAngularSpeed, uu.minSize = Ru.minSize, uu.maxSize = Ru.maxSize, uu.minScaleX = Ru.minScaleX, uu.maxScaleX = Ru.maxScaleX, uu.minScaleY = Ru.minScaleY, uu.maxScaleY = Ru.maxScaleY, uu.minEmitPower = Ru.minEmitPower, uu.maxEmitPower = Ru.maxEmitPower, uu.minLifeTime = Ru.minLifeTime, uu.maxLifeTime = Ru.maxLifeTime, uu.emitRate = Ru.emitRate, uu.gravity = Ru.gravity.AEu(), uu.noiseStrength = Ru.noiseStrength.AEu(), uu.color1 = Ru.color1.AEu(), uu.color2 = Ru.color2.AEu(), uu.colorDead = Ru.colorDead.AEu(), uu.updateSpeed = Ru.updateSpeed, uu.targetStopDuration = Ru.targetStopDuration, uu.blendMode = Ru.blendMode, uu.preWarmCycles = Ru.preWarmCycles, uu.preWarmStepOffset = Ru.preWarmStepOffset, uu.minInitialRotation = Ru.minInitialRotation, uu.maxInitialRotation = Ru.maxInitialRotation, uu.startSpriteCellID = Ru.startSpriteCellID, uu.spriteCellLoop = Ru.spriteCellLoop, uu.endSpriteCellID = Ru.endSpriteCellID, uu.spriteCellChangeSpeed = Ru.spriteCellChangeSpeed, uu.spriteCellWidth = Ru.spriteCellWidth, uu.spriteCellHeight = Ru.spriteCellHeight, uu.spriteRandomStartCell = Ru.spriteRandomStartCell, uu.isAnimationSheetEnabled = Ru.isAnimationSheetEnabled, uu.useLogarithmicDepth = Ru.useLogarithmicDepth;
+        const Eu = Ru.getColorGradients();
+        if (Eu) {
+          uu.colorGradients = [];
+          for (const Ru of Eu) {
+            const yu = {
+              gradient: Ru.gradient,
+              color1: Ru.color1.AEu()
             };
-            RU.color2 ? gU.color2 = RU.color2.vgU() : gU.color2 = RU.color1.vgU(), UU.colorGradients.push(gU)
+            Ru.color2 ? yu.color2 = Ru.color2.AEu() : yu.color2 = Ru.color1.AEu(), uu.colorGradients.push(yu)
           }
         }
-        const pU = RU.getRampGradients();
-        if (pU) {
-          UU.rampGradients = [];
-          for (const RU of pU) {
-            const gU = {
-              gradient: RU.gradient,
-              color: RU.color.vgU()
+        const Ku = Ru.getRampGradients();
+        if (Ku) {
+          uu.rampGradients = [];
+          for (const Ru of Ku) {
+            const yu = {
+              gradient: Ru.gradient,
+              color: Ru.color.AEu()
             };
-            UU.rampGradients.push(gU)
+            uu.rampGradients.push(yu)
           }
-          UU.useRampGradients = RU.useRampGradients
+          uu.useRampGradients = Ru.useRampGradients
         }
-        const EU = RU.getColorRemapGradients();
-        if (EU) {
-          UU.colorRemapGradients = [];
-          for (const RU of EU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const Qu = Ru.getColorRemapGradients();
+        if (Qu) {
+          uu.colorRemapGradients = [];
+          for (const Ru of Qu) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.colorRemapGradients.push(gU)
-          }
-        }
-        const PU = RU.getAlphaRemapGradients();
-        if (PU) {
-          UU.alphaRemapGradients = [];
-          for (const RU of PU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
-            };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.alphaRemapGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.colorRemapGradients.push(yu)
           }
         }
-        const TU = RU.getSizeGradients();
-        if (TU) {
-          UU.sizeGradients = [];
-          for (const RU of TU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const mu = Ru.getAlphaRemapGradients();
+        if (mu) {
+          uu.alphaRemapGradients = [];
+          for (const Ru of mu) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.sizeGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.alphaRemapGradients.push(yu)
           }
         }
-        const qU = RU.getAngularSpeedGradients();
-        if (qU) {
-          UU.angularSpeedGradients = [];
-          for (const RU of qU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const Ju = Ru.getSizeGradients();
+        if (Ju) {
+          uu.sizeGradients = [];
+          for (const Ru of Ju) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.angularSpeedGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.sizeGradients.push(yu)
           }
         }
-        const KU = RU.getVelocityGradients();
-        if (KU) {
-          UU.velocityGradients = [];
-          for (const RU of KU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const Nu = Ru.getAngularSpeedGradients();
+        if (Nu) {
+          uu.angularSpeedGradients = [];
+          for (const Ru of Nu) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.velocityGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.angularSpeedGradients.push(yu)
           }
         }
-        const cU = RU.getDragGradients();
-        if (cU) {
-          UU.dragGradients = [];
-          for (const RU of cU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const Xu = Ru.getVelocityGradients();
+        if (Xu) {
+          uu.velocityGradients = [];
+          for (const Ru of Xu) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.dragGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.velocityGradients.push(yu)
           }
         }
-        const GU = RU.getEmitRateGradients();
-        if (GU) {
-          UU.emitRateGradients = [];
-          for (const RU of GU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const Vu = Ru.getDragGradients();
+        if (Vu) {
+          uu.dragGradients = [];
+          for (const Ru of Vu) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.emitRateGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.dragGradients.push(yu)
           }
         }
-        const jU = RU.getStartSizeGradients();
-        if (jU) {
-          UU.startSizeGradients = [];
-          for (const RU of jU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const ru = Ru.getEmitRateGradients();
+        if (ru) {
+          uu.emitRateGradients = [];
+          for (const Ru of ru) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.startSizeGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.emitRateGradients.push(yu)
           }
         }
-        const uU = RU.getLifeTimeGradients();
-        if (uU) {
-          UU.lifeTimeGradients = [];
-          for (const RU of uU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const Bu = Ru.getStartSizeGradients();
+        if (Bu) {
+          uu.startSizeGradients = [];
+          for (const Ru of Bu) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.lifeTimeGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.startSizeGradients.push(yu)
           }
         }
-        const CU = RU.getLimitVelocityGradients();
-        if (CU) {
-          UU.limitVelocityGradients = [];
-          for (const RU of CU) {
-            const gU = {
-              gradient: RU.gradient,
-              factor1: RU.factor1
+        const xu = Ru.getLifeTimeGradients();
+        if (xu) {
+          uu.lifeTimeGradients = [];
+          for (const Ru of xu) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
             };
-            void 0 !== RU.factor2 ? gU.factor2 = RU.factor2 : gU.factor2 = RU.factor1, UU.limitVelocityGradients.push(gU)
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.lifeTimeGradients.push(yu)
           }
-          UU.limitVelocityDamping = RU.limitVelocityDamping
         }
-        RU.noiseTexture && (UU.noiseTexture = RU.noiseTexture.serialize())
+        const Su = Ru.getLimitVelocityGradients();
+        if (Su) {
+          uu.limitVelocityGradients = [];
+          for (const Ru of Su) {
+            const yu = {
+              gradient: Ru.gradient,
+              factor1: Ru.factor1
+            };
+            void 0 !== Ru.factor2 ? yu.factor2 = Ru.factor2 : yu.factor2 = Ru.factor1, uu.limitVelocityGradients.push(yu)
+          }
+          uu.limitVelocityDamping = Ru.limitVelocityDamping
+        }
+        Ru.noiseTexture && (uu.noiseTexture = Ru.noiseTexture.serialize())
       }
-      clone(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const tU = {
+      clone(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Eu = {
           ...this._customWrappers
         };
-        let pU = null;
-        const EU = this._engine;
-        if ((0, vU.e)(EU.createEffectForParticles) && null != this.customShader) {
-          pU = this.customShader;
-          const UU = pU.shaderOptions.defines.length > 0 ? pU.shaderOptions.defines.join("\n") : "",
-            RU = EU.createEffectForParticles(pU.shaderPath.fragmentElement, pU.shaderOptions.uniforms, pU.shaderOptions.samplers, UU);
-          tU[0] ? tU[0].effect = RU : this.setCustomEffect(RU, 0)
+        let Ku = null;
+        const Qu = this._engine;
+        if ((0, gu.c)(Qu.createEffectForParticles) && null != this.customShader) {
+          Ku = this.customShader;
+          const uu = Ku.shaderOptions.defines.length > 0 ? Ku.shaderOptions.defines.join("\n") : "",
+            Ru = Qu.createEffectForParticles(Ku.shaderPath.fragmentElement, Ku.shaderOptions.uniforms, Ku.shaderOptions.samplers, uu);
+          Eu[0] ? Eu[0].effect = Ru : this.setCustomEffect(Ru, 0)
         }
-        const PU = this.serialize(gU),
-          TU = !1 === gU && this.particleTexture ? this.particleTexture.clone() : null;
-        TU && (PU.textureName = void 0);
-        const qU = AR.Parse(PU, this._scene || this._engine, this._rootUrl);
-        return qU.name = UU, qU.customShader = pU, qU._customWrappers = tU, TU && (qU.particleTexture = TU), void 0 === RU && (RU = this.emitter), this.noiseTexture && (qU.noiseTexture = this.noiseTexture.clone()), qU.emitter = RU, this.preventAutoStart || qU.start(), qU
+        const mu = this.serialize(yu),
+          Ju = !1 === yu && this.particleTexture ? this.particleTexture.clone() : null;
+        Ju && (mu.textureName = void 0);
+        const Nu = iR.Parse(mu, this._scene || this._engine, this._rootUrl);
+        return Nu.name = uu, Nu.customShader = Ku, Nu._customWrappers = Eu, Ju && (Nu.particleTexture = Ju), void 0 === Ru && (Ru = this.emitter), this.noiseTexture && (Nu.noiseTexture = this.noiseTexture.clone()), Nu.emitter = Ru, this.preventAutoStart || Nu.start(), Nu
       }
     }
-    AR.BILLBOARDMODE_Y = 2, AR.BILLBOARDMODE_ALL = 7, AR.BILLBOARDMODE_STRETCHED = 8, AR.BILLBOARDMODE_STRETCHED_LOCAL = 9;
-    let zR = !1;
-    zR || (zR = !0, XR._ParseParticleSystem = AR.Parse)
+    iR.BILLBOARDMODE_Y = 2, iR.BILLBOARDMODE_ALL = 7, iR.BILLBOARDMODE_STRETCHED = 8, iR.BILLBOARDMODE_STRETCHED_LOCAL = 9;
+    let YR = !1;
+    YR || (YR = !0, lR._ParseParticleSystem = iR.Parse)
   },
-  41014: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      SkyMaterial: () => fU,
-      _MaxColorValueForRenderTarget: () => WU
+  41206: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      SkyMaterial: () => Hu,
+      _MaxColorValueForRenderTarget: () => ju
     });
-    var tU = gU(39377),
-      pU = gU(39380),
-      EU = gU(39395),
-      PU = gU(36593),
-      TU = gU(39669),
-      qU = gU(39732),
-      KU = gU(40975),
-      cU = gU(40533),
-      GU = gU(39460),
-      jU = gU(36639),
-      uU = gU(39759),
-      CU = gU(39740),
-      hU = gU(39720),
-      QU = gU(39716);
-    class eU extends TU.c {
+    var Eu = yu(39560),
+      Ku = yu(39566),
+      Qu = yu(39582),
+      mu = yu(36828),
+      Ju = yu(39854),
+      Nu = yu(39923),
+      Xu = yu(41171),
+      Vu = yu(40732),
+      ru = yu(39643),
+      Bu = yu(36871),
+      xu = yu(39948),
+      Su = yu(39931),
+      pu = yu(39913),
+      Tu = yu(39905);
+    class Wu extends Ju.e {
       constructor() {
         super(), this.CLIPPLANE = !1, this.CLIPPLANE2 = !1, this.CLIPPLANE3 = !1, this.CLIPPLANE4 = !1, this.CLIPPLANE5 = !1, this.CLIPPLANE6 = !1, this.POINTSIZE = !1, this.FOG = !1, this.VERTEXCOLOR = !1, this.VERTEXALPHA = !1, this.IMAGEPROCESSINGPOSTPROCESS = !1, this.SKIPFINALCOLORCLAMP = !1, this.DITHER = !1, this.LOGARITHMICDEPTH = !1, this.SKY_RAW_HDR_OUTPUT = !1, this.rebuild()
       }
     }
 
-    function WU(UU) {
-      switch (UU) {
-        case KU.d.TEXTURETYPE_HALF_FLOAT:
+    function ju(uu) {
+      switch (uu) {
+        case Xu.c.TEXTURETYPE_HALF_FLOAT:
           return 65504;
-        case KU.d.TEXTURETYPE_FLOAT:
+        case Xu.c.TEXTURETYPE_FLOAT:
           return 3e38;
         default:
           return 1
       }
     }
-    let fU = (() => {
-      var UU;
-      let RU, TU, KU, jU, fU, xU, mU, IU, JU, wU, nU, bU, oU, ZU, aU, YU = qU.b,
-        BU = [],
-        VU = [],
-        rU = [],
-        XU = [],
-        vU = [],
-        dU = [],
-        HU = [],
-        SU = [],
-        sU = [],
-        yU = [],
-        kU = [],
-        FU = [],
-        iU = [],
-        AU = [],
-        zU = [],
-        MU = [],
-        DU = [],
-        LU = [],
-        NU = [],
-        lU = [],
-        OU = [],
-        UR = [],
+    let Hu = (() => {
+      var uu;
+      let Ru, Ju, Xu, Bu, Hu, du, bu, Cu, ku, eu, Au, Du, Mu, Iu, Gu, Uu = Nu.e,
+        nu = [],
+        su = [],
+        tu = [],
+        lu = [],
+        gu = [],
+        cu = [],
+        Lu = [],
+        zu = [],
+        Fu = [],
+        wu = [],
+        Zu = [],
+        hu = [],
+        Pu = [],
+        iu = [],
+        Yu = [],
+        ou = [],
+        qu = [],
+        Ou = [],
+        vu = [],
+        au = [],
+        fu = [],
+        uR = [],
         RR = [],
-        gR = [],
-        tR = [],
-        pR = [],
+        yR = [],
         ER = [],
-        PR = [],
-        TR = [],
-        qR = [];
-      return UU = class extends YU {
-        constructor(UU, RU) {
-          super(UU, RU, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.luminance = (0, tU.j)(this, BU, 1), this.turbidity = ((0, tU.j)(this, VU), (0, tU.j)(this, rU, 10)), this.rayleigh = ((0, tU.j)(this, XU), (0, tU.j)(this, vU, 2)), this.mieCoefficient = ((0, tU.j)(this, dU), (0, tU.j)(this, HU, .005)), this.mieDirectionalG = ((0, tU.j)(this, SU), (0, tU.j)(this, sU, .8)), this.distance = ((0, tU.j)(this, yU), (0, tU.j)(this, kU, 500)), this.inclination = ((0, tU.j)(this, FU), (0, tU.j)(this, iU, .49)), this.azimuth = ((0, tU.j)(this, AU), (0, tU.j)(this, zU, .25)), this.sunPosition = ((0, tU.j)(this, MU), (0, tU.j)(this, DU, new PU.xC(0, 100, 0))), this.useSunPosition = ((0, tU.j)(this, LU), (0, tU.j)(this, NU, !1)), this.cameraOffset = ((0, tU.j)(this, lU), (0, tU.j)(this, OU, PU.xC.Zero())), this.up = ((0, tU.j)(this, UR), (0, tU.j)(this, RR, PU.xC.Up())), this.dithering = ((0, tU.j)(this, gR), (0, tU.j)(this, tR, !1)), this.rawHdrOutput = ((0, tU.j)(this, pR), (0, tU.j)(this, ER, !1)), this.cloudiness = ((0, tU.j)(this, PR), (0, tU.j)(this, TR, 0)), this._cameraPosition = ((0, tU.j)(this, qR), PU.xC.Zero()), this._skyOrientation = new PU.Quaternion
+        KR = [],
+        QR = [],
+        mR = [],
+        JR = [],
+        NR = [];
+      return uu = class extends Uu {
+        constructor(uu, Ru) {
+          super(uu, Ru, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.luminance = (0, Eu.l)(this, nu, 1), this.turbidity = ((0, Eu.l)(this, su), (0, Eu.l)(this, tu, 10)), this.rayleigh = ((0, Eu.l)(this, lu), (0, Eu.l)(this, gu, 2)), this.mieCoefficient = ((0, Eu.l)(this, cu), (0, Eu.l)(this, Lu, .005)), this.mieDirectionalG = ((0, Eu.l)(this, zu), (0, Eu.l)(this, Fu, .8)), this.distance = ((0, Eu.l)(this, wu), (0, Eu.l)(this, Zu, 500)), this.inclination = ((0, Eu.l)(this, hu), (0, Eu.l)(this, Pu, .49)), this.azimuth = ((0, Eu.l)(this, iu), (0, Eu.l)(this, Yu, .25)), this.sunPosition = ((0, Eu.l)(this, ou), (0, Eu.l)(this, qu, new mu.MS(0, 100, 0))), this.useSunPosition = ((0, Eu.l)(this, Ou), (0, Eu.l)(this, vu, !1)), this.cameraOffset = ((0, Eu.l)(this, au), (0, Eu.l)(this, fu, mu.MS.Zero())), this.up = ((0, Eu.l)(this, uR), (0, Eu.l)(this, RR, mu.MS.Up())), this.dithering = ((0, Eu.l)(this, yR), (0, Eu.l)(this, ER, !1)), this.rawHdrOutput = ((0, Eu.l)(this, KR), (0, Eu.l)(this, QR, !1)), this.cloudiness = ((0, Eu.l)(this, mR), (0, Eu.l)(this, JR, 0)), this._cameraPosition = ((0, Eu.l)(this, NR), mu.MS.Zero()), this._skyOrientation = new mu.Quaternion
         }
         needAlphaBlending() {
           return this.alpha < 1
@@ -4123,287 +4123,287 @@ export const modules = {
         getAlphaTestTexture() {
           return null
         }
-        isReadyForSubMesh(RU, gU) {
-          const tU = gU._drawWrapper;
-          if (this.isFrozen && tU.effect && tU._wasPreviouslyReady) return !0;
-          gU.materialDefines || (gU.materialDefines = new eU);
-          const pU = gU.materialDefines,
-            EU = this.aZ();
-          if (this._isReadyForSubMesh(gU)) return !0;
-          if ((0, QU.X)(RU, EU, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, !1, pU, void 0, void 0, void 0, this._isVertexOutputInvariant), (0, QU.K)(RU, pU, !0, !1), pU.IMAGEPROCESSINGPOSTPROCESS !== EU.imageProcessingConfiguration.applyByPostProcess && pU.markAsMiscDirty(), pU.DITHER !== this.dithering && pU.markAsMiscDirty(), pU.SKY_RAW_HDR_OUTPUT !== this.rawHdrOutput && pU.markAsMiscDirty(), pU.isDirty) {
-            pU.markAsProcessed(), EU.resetCachedMaterial();
-            const RU = new CU.c;
-            pU.FOG && RU.addFallback(1, "FOG"), pU.IMAGEPROCESSINGPOSTPROCESS = EU.imageProcessingConfiguration.applyByPostProcess, pU.DITHER = this.dithering, pU.SKY_RAW_HDR_OUTPUT = this.rawHdrOutput;
-            const tU = [cU.e.PositionKind];
-            pU.VERTEXCOLOR && tU.push(cU.e.ColorKind);
-            const PU = "sky",
-              TU = ["world", "viewProjection", "view", "vFogInfos", "vFogColor", "logarithmicDepthConstant", "pointSize", "luminance", "turbidity", "rayleigh", "mieCoefficient", "mieDirectionalG", "sunPosition", "cameraPosition", "cameraOffset", "up", "cloudiness", "maxColorValue"];
-            (0, hU.c)(TU);
-            const qU = pU.toString();
-            gU.setEffect(EU.WC().createEffect(PU, {
-              attributes: tU,
-              uniformsNames: TU,
+        isReadyForSubMesh(Ru, yu) {
+          const Eu = yu._drawWrapper;
+          if (this.isFrozen && Eu.effect && Eu._wasPreviouslyReady) return !0;
+          yu.materialDefines || (yu.materialDefines = new Wu);
+          const Ku = yu.materialDefines,
+            Qu = this.lD();
+          if (this._isReadyForSubMesh(yu)) return !0;
+          if ((0, Tu.jb)(Ru, Qu, this._useLogarithmicDepth, this.pointsCloud, this.fogEnabled, !1, Ku, void 0, void 0, void 0, this._isVertexOutputInvariant), (0, Tu.X)(Ru, Ku, !0, !1), Ku.IMAGEPROCESSINGPOSTPROCESS !== Qu.imageProcessingConfiguration.applyByPostProcess && Ku.markAsMiscDirty(), Ku.DITHER !== this.dithering && Ku.markAsMiscDirty(), Ku.SKY_RAW_HDR_OUTPUT !== this.rawHdrOutput && Ku.markAsMiscDirty(), Ku.isDirty) {
+            Ku.markAsProcessed(), Qu.resetCachedMaterial();
+            const Ru = new Su.d;
+            Ku.FOG && Ru.addFallback(1, "FOG"), Ku.IMAGEPROCESSINGPOSTPROCESS = Qu.imageProcessingConfiguration.applyByPostProcess, Ku.DITHER = this.dithering, Ku.SKY_RAW_HDR_OUTPUT = this.rawHdrOutput;
+            const Eu = [Vu.d.PositionKind];
+            Ku.VERTEXCOLOR && Eu.push(Vu.d.ColorKind);
+            const mu = "sky",
+              Ju = ["world", "viewProjection", "view", "vFogInfos", "vFogColor", "logarithmicDepthConstant", "pointSize", "luminance", "turbidity", "rayleigh", "mieCoefficient", "mieDirectionalG", "sunPosition", "cameraPosition", "cameraOffset", "up", "cloudiness", "maxColorValue"];
+            (0, pu.c)(Ju);
+            const Nu = Ku.toString();
+            yu.setEffect(Qu.eS().createEffect(mu, {
+              attributes: Eu,
+              uniformsNames: Ju,
               uniformBuffersNames: [],
               samplers: [],
-              defines: qU,
-              fallbacks: RU,
+              defines: Nu,
+              fallbacks: Ru,
               onCompiled: this.onCompiled,
               onError: this.onError,
               shaderLanguage: this._shaderLanguage,
-              extraInitializationsAsync: UU._ShaderLoader.getLoadCallback(this._shaderLanguage)
-            }, EU.WC()), pU, this._materialContext)
+              extraInitializationsAsync: uu._ShaderLoader.getLoadCallback(this._shaderLanguage)
+            }, Qu.eS()), Ku, this._materialContext)
           }
-          return !(!gU.effect || !gU.effect.isReady()) && (pU._renderId = EU.getRenderId(), tU._wasPreviouslyReady = !0, !0)
+          return !(!yu.effect || !yu.effect.isReady()) && (Ku._renderId = Qu.getRenderId(), Eu._wasPreviouslyReady = !0, !0)
         }
-        bindForSubMesh(UU, RU, gU) {
-          const tU = this.aZ(),
-            pU = gU.materialDefines;
-          if (!pU) return;
-          const EU = gU.effect;
-          if (!EU) return;
-          this._activeEffect = EU, this.bindOnlyWorldMatrix(UU), this._activeEffect.setMatrix("viewProjection", tU.getTransformMatrix()), this._mustRebind(tU, EU, gU) && ((0, hU.f)(EU, this, tU), this.pointsCloud && this._activeEffect.setFloat("pointSize", this.pointSize), this._useLogarithmicDepth && (0, QU.q)(pU, EU, tU)), tU.fogEnabled && RU.applyFog && tU.fogMode !== GU.b.FOGMODE_NONE && this._activeEffect.setMatrix("view", tU.getViewMatrix()), (0, QU.g)(tU, RU, this._activeEffect, this.rawHdrOutput);
-          const TU = tU.activeCamera;
-          if (TU) {
-            const UU = TU.getWorldMatrix();
-            this._cameraPosition.x = UU.m[12], this._cameraPosition.y = UU.m[13], this._cameraPosition.z = UU.m[14], this._activeEffect.setVector3("cameraPosition", PU.TmpVectors.xC[0].PgU(this._cameraPosition).ptU(tU.floatingOriginOffset))
+        bindForSubMesh(uu, Ru, yu) {
+          const Eu = this.lD(),
+            Ku = yu.materialDefines;
+          if (!Ku) return;
+          const Qu = yu.effect;
+          if (!Qu) return;
+          this._activeEffect = Qu, this.bindOnlyWorldMatrix(uu), this._activeEffect.setMatrix("viewProjection", Eu.getTransformMatrix()), this._mustRebind(Eu, Qu, yu) && ((0, pu.f)(Qu, this, Eu), this.pointsCloud && this._activeEffect.setFloat("pointSize", this.pointSize), this._useLogarithmicDepth && (0, Tu.u)(Ku, Qu, Eu)), Eu.fogEnabled && Ru.applyFog && Eu.fogMode !== ru.c.FOGMODE_NONE && this._activeEffect.setMatrix("view", Eu.getViewMatrix()), (0, Tu.g)(Eu, Ru, this._activeEffect, this.rawHdrOutput);
+          const Ju = Eu.activeCamera;
+          if (Ju) {
+            const uu = Ju.getWorldMatrix();
+            this._cameraPosition.x = uu.m[12], this._cameraPosition.y = uu.m[13], this._cameraPosition.z = uu.m[14], this._activeEffect.setVector3("cameraPosition", mu.TmpVectors.MS[0].Oyu(this._cameraPosition).oEu(Eu.floatingOriginOffset))
           }
           if (this._activeEffect.setVector3("cameraOffset", this.cameraOffset), this._activeEffect.setVector3("up", this.up), (this.rawHdrOutput || this.luminance > 0) && this._activeEffect.setFloat("luminance", this.luminance), this._activeEffect.setFloat("turbidity", this.turbidity), this._activeEffect.setFloat("rayleigh", this.rayleigh), this._activeEffect.setFloat("mieCoefficient", this.mieCoefficient), this._activeEffect.setFloat("mieDirectionalG", this.mieDirectionalG), this._activeEffect.setFloat("cloudiness", this.cloudiness), this.rawHdrOutput) {
-            const UU = tU.WC()._currentRenderTarget;
-            this._activeEffect.setFloat("maxColorValue", WU(UU?.texture?.type))
+            const uu = Eu.eS()._currentRenderTarget;
+            this._activeEffect.setFloat("maxColorValue", ju(uu?.texture?.type))
           }
           if (!this.useSunPosition) {
-            const UU = Math.PI * (this.inclination - .5),
-              RU = 2 * Math.PI * (this.azimuth - .5);
-            this.sunPosition.x = this.distance * Math.cos(RU) * Math.cos(UU), this.sunPosition.y = this.distance * Math.sin(-UU), this.sunPosition.z = this.distance * Math.sin(RU) * Math.cos(UU), PU.Quaternion.FromUnitVectorsToRef(PU.xC.UpReadOnly, this.up, this._skyOrientation), this.sunPosition.rotateByQuaternionToRef(this._skyOrientation, this.sunPosition)
+            const uu = Math.PI * (this.inclination - .5),
+              Ru = 2 * Math.PI * (this.azimuth - .5);
+            this.sunPosition.x = this.distance * Math.cos(Ru) * Math.cos(uu), this.sunPosition.y = this.distance * Math.sin(-uu), this.sunPosition.z = this.distance * Math.sin(Ru) * Math.cos(uu), mu.Quaternion.FromUnitVectorsToRef(mu.MS.UpReadOnly, this.up, this._skyOrientation), this.sunPosition.rotateByQuaternionToRef(this._skyOrientation, this.sunPosition)
           }
-          this._activeEffect.setVector3("sunPosition", this.sunPosition), this._afterBind(RU, this._activeEffect, gU)
+          this._activeEffect.setVector3("sunPosition", this.sunPosition), this._afterBind(Ru, this._activeEffect, yu)
         }
         getAnimatables() {
           return []
         }
-        dispose(UU) {
-          super.dispose(UU)
+        dispose(uu) {
+          super.dispose(uu)
         }
-        clone(RU) {
-          return EU.b.Clone((() => new UU(RU, this.aZ())), this)
+        clone(Ru) {
+          return Qu.c.Clone((() => new uu(Ru, this.lD())), this)
         }
         serialize() {
-          const UU = super.serialize();
-          return UU.customType = "BABYLON.SkyMaterial", UU
+          const uu = super.serialize();
+          return uu.customType = "BABYLON.SkyMaterial", uu
         }
         getClassName() {
           return "SkyMaterial"
         }
-        static Parse(RU, gU, tU) {
-          return EU.b.Parse((() => new UU(RU.name, gU)), RU, gU, tU)
+        static Parse(Ru, yu, Eu) {
+          return Qu.c.Parse((() => new uu(Ru.name, yu)), Ru, yu, Eu)
         }
       }, (() => {
-        const gU = "function" === typeof Symbol && Symbol.metadata ? Object.create(YU[Symbol.metadata] ?? null) : void 0;
-        RU = [(0, pU.K)()], TU = [(0, pU.K)()], KU = [(0, pU.K)()], jU = [(0, pU.K)()], fU = [(0, pU.K)()], xU = [(0, pU.K)()], mU = [(0, pU.K)()], IU = [(0, pU.K)()], JU = [(0, pU.I)()], wU = [(0, pU.K)()], nU = [(0, pU.I)()], bU = [(0, pU.I)()], oU = [(0, pU.K)()], ZU = [(0, pU.K)()], aU = [(0, pU.K)()], (0, tU.i)(null, null, RU, {
+        const yu = "function" === typeof Symbol && Symbol.metadata ? Object.create(Uu[Symbol.metadata] ?? null) : void 0;
+        Ru = [(0, Ku.K)()], Ju = [(0, Ku.K)()], Xu = [(0, Ku.K)()], Bu = [(0, Ku.K)()], Hu = [(0, Ku.K)()], du = [(0, Ku.K)()], bu = [(0, Ku.K)()], Cu = [(0, Ku.K)()], ku = [(0, Ku.G)()], eu = [(0, Ku.K)()], Au = [(0, Ku.G)()], Du = [(0, Ku.G)()], Mu = [(0, Ku.K)()], Iu = [(0, Ku.K)()], Gu = [(0, Ku.K)()], (0, Eu.h)(null, null, Ru, {
           kind: "field",
           name: "luminance",
           static: !1,
           private: !1,
           access: {
-            has: UU => "luminance" in UU,
-            get: UU => UU.luminance,
-            set: (UU, RU) => {
-              UU.luminance = RU
+            has: uu => "luminance" in uu,
+            get: uu => uu.luminance,
+            set: (uu, Ru) => {
+              uu.luminance = Ru
             }
           },
-          metadata: gU
-        }, BU, VU), (0, tU.i)(null, null, TU, {
+          metadata: yu
+        }, nu, su), (0, Eu.h)(null, null, Ju, {
           kind: "field",
           name: "turbidity",
           static: !1,
           private: !1,
           access: {
-            has: UU => "turbidity" in UU,
-            get: UU => UU.turbidity,
-            set: (UU, RU) => {
-              UU.turbidity = RU
+            has: uu => "turbidity" in uu,
+            get: uu => uu.turbidity,
+            set: (uu, Ru) => {
+              uu.turbidity = Ru
             }
           },
-          metadata: gU
-        }, rU, XU), (0, tU.i)(null, null, KU, {
+          metadata: yu
+        }, tu, lu), (0, Eu.h)(null, null, Xu, {
           kind: "field",
           name: "rayleigh",
           static: !1,
           private: !1,
           access: {
-            has: UU => "rayleigh" in UU,
-            get: UU => UU.rayleigh,
-            set: (UU, RU) => {
-              UU.rayleigh = RU
+            has: uu => "rayleigh" in uu,
+            get: uu => uu.rayleigh,
+            set: (uu, Ru) => {
+              uu.rayleigh = Ru
             }
           },
-          metadata: gU
-        }, vU, dU), (0, tU.i)(null, null, jU, {
+          metadata: yu
+        }, gu, cu), (0, Eu.h)(null, null, Bu, {
           kind: "field",
           name: "mieCoefficient",
           static: !1,
           private: !1,
           access: {
-            has: UU => "mieCoefficient" in UU,
-            get: UU => UU.mieCoefficient,
-            set: (UU, RU) => {
-              UU.mieCoefficient = RU
+            has: uu => "mieCoefficient" in uu,
+            get: uu => uu.mieCoefficient,
+            set: (uu, Ru) => {
+              uu.mieCoefficient = Ru
             }
           },
-          metadata: gU
-        }, HU, SU), (0, tU.i)(null, null, fU, {
+          metadata: yu
+        }, Lu, zu), (0, Eu.h)(null, null, Hu, {
           kind: "field",
           name: "mieDirectionalG",
           static: !1,
           private: !1,
           access: {
-            has: UU => "mieDirectionalG" in UU,
-            get: UU => UU.mieDirectionalG,
-            set: (UU, RU) => {
-              UU.mieDirectionalG = RU
+            has: uu => "mieDirectionalG" in uu,
+            get: uu => uu.mieDirectionalG,
+            set: (uu, Ru) => {
+              uu.mieDirectionalG = Ru
             }
           },
-          metadata: gU
-        }, sU, yU), (0, tU.i)(null, null, xU, {
+          metadata: yu
+        }, Fu, wu), (0, Eu.h)(null, null, du, {
           kind: "field",
           name: "distance",
           static: !1,
           private: !1,
           access: {
-            has: UU => "distance" in UU,
-            get: UU => UU.distance,
-            set: (UU, RU) => {
-              UU.distance = RU
+            has: uu => "distance" in uu,
+            get: uu => uu.distance,
+            set: (uu, Ru) => {
+              uu.distance = Ru
             }
           },
-          metadata: gU
-        }, kU, FU), (0, tU.i)(null, null, mU, {
+          metadata: yu
+        }, Zu, hu), (0, Eu.h)(null, null, bu, {
           kind: "field",
           name: "inclination",
           static: !1,
           private: !1,
           access: {
-            has: UU => "inclination" in UU,
-            get: UU => UU.inclination,
-            set: (UU, RU) => {
-              UU.inclination = RU
+            has: uu => "inclination" in uu,
+            get: uu => uu.inclination,
+            set: (uu, Ru) => {
+              uu.inclination = Ru
             }
           },
-          metadata: gU
-        }, iU, AU), (0, tU.i)(null, null, IU, {
+          metadata: yu
+        }, Pu, iu), (0, Eu.h)(null, null, Cu, {
           kind: "field",
           name: "azimuth",
           static: !1,
           private: !1,
           access: {
-            has: UU => "azimuth" in UU,
-            get: UU => UU.azimuth,
-            set: (UU, RU) => {
-              UU.azimuth = RU
+            has: uu => "azimuth" in uu,
+            get: uu => uu.azimuth,
+            set: (uu, Ru) => {
+              uu.azimuth = Ru
             }
           },
-          metadata: gU
-        }, zU, MU), (0, tU.i)(null, null, JU, {
+          metadata: yu
+        }, Yu, ou), (0, Eu.h)(null, null, ku, {
           kind: "field",
           name: "sunPosition",
           static: !1,
           private: !1,
           access: {
-            has: UU => "sunPosition" in UU,
-            get: UU => UU.sunPosition,
-            set: (UU, RU) => {
-              UU.sunPosition = RU
+            has: uu => "sunPosition" in uu,
+            get: uu => uu.sunPosition,
+            set: (uu, Ru) => {
+              uu.sunPosition = Ru
             }
           },
-          metadata: gU
-        }, DU, LU), (0, tU.i)(null, null, wU, {
+          metadata: yu
+        }, qu, Ou), (0, Eu.h)(null, null, eu, {
           kind: "field",
           name: "useSunPosition",
           static: !1,
           private: !1,
           access: {
-            has: UU => "useSunPosition" in UU,
-            get: UU => UU.useSunPosition,
-            set: (UU, RU) => {
-              UU.useSunPosition = RU
+            has: uu => "useSunPosition" in uu,
+            get: uu => uu.useSunPosition,
+            set: (uu, Ru) => {
+              uu.useSunPosition = Ru
             }
           },
-          metadata: gU
-        }, NU, lU), (0, tU.i)(null, null, nU, {
+          metadata: yu
+        }, vu, au), (0, Eu.h)(null, null, Au, {
           kind: "field",
           name: "cameraOffset",
           static: !1,
           private: !1,
           access: {
-            has: UU => "cameraOffset" in UU,
-            get: UU => UU.cameraOffset,
-            set: (UU, RU) => {
-              UU.cameraOffset = RU
+            has: uu => "cameraOffset" in uu,
+            get: uu => uu.cameraOffset,
+            set: (uu, Ru) => {
+              uu.cameraOffset = Ru
             }
           },
-          metadata: gU
-        }, OU, UR), (0, tU.i)(null, null, bU, {
+          metadata: yu
+        }, fu, uR), (0, Eu.h)(null, null, Du, {
           kind: "field",
           name: "up",
           static: !1,
           private: !1,
           access: {
-            has: UU => "up" in UU,
-            get: UU => UU.up,
-            set: (UU, RU) => {
-              UU.up = RU
+            has: uu => "up" in uu,
+            get: uu => uu.up,
+            set: (uu, Ru) => {
+              uu.up = Ru
             }
           },
-          metadata: gU
-        }, RR, gR), (0, tU.i)(null, null, oU, {
+          metadata: yu
+        }, RR, yR), (0, Eu.h)(null, null, Mu, {
           kind: "field",
           name: "dithering",
           static: !1,
           private: !1,
           access: {
-            has: UU => "dithering" in UU,
-            get: UU => UU.dithering,
-            set: (UU, RU) => {
-              UU.dithering = RU
+            has: uu => "dithering" in uu,
+            get: uu => uu.dithering,
+            set: (uu, Ru) => {
+              uu.dithering = Ru
             }
           },
-          metadata: gU
-        }, tR, pR), (0, tU.i)(null, null, ZU, {
+          metadata: yu
+        }, ER, KR), (0, Eu.h)(null, null, Iu, {
           kind: "field",
           name: "rawHdrOutput",
           static: !1,
           private: !1,
           access: {
-            has: UU => "rawHdrOutput" in UU,
-            get: UU => UU.rawHdrOutput,
-            set: (UU, RU) => {
-              UU.rawHdrOutput = RU
+            has: uu => "rawHdrOutput" in uu,
+            get: uu => uu.rawHdrOutput,
+            set: (uu, Ru) => {
+              uu.rawHdrOutput = Ru
             }
           },
-          metadata: gU
-        }, ER, PR), (0, tU.i)(null, null, aU, {
+          metadata: yu
+        }, QR, mR), (0, Eu.h)(null, null, Gu, {
           kind: "field",
           name: "cloudiness",
           static: !1,
           private: !1,
           access: {
-            has: UU => "cloudiness" in UU,
-            get: UU => UU.cloudiness,
-            set: (UU, RU) => {
-              UU.cloudiness = RU
+            has: uu => "cloudiness" in uu,
+            get: uu => uu.cloudiness,
+            set: (uu, Ru) => {
+              uu.cloudiness = Ru
             }
           },
-          metadata: gU
-        }, TR, qR), gU && Object.defineProperty(UU, Symbol.metadata, {
+          metadata: yu
+        }, JR, NR), yu && Object.defineProperty(uu, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: gU
+          value: yu
         })
-      })(), UU._ShaderLoader = new uU.c((() => [gU.e(320).then((() => gU(60589))), gU.e(313).then((() => gU(60598)))]), (() => [gU.e(337).then((() => gU(60604))), gU.e(331).then((() => gU(60611)))])), UU
+      })(), uu._ShaderLoader = new xu.d((() => [yu.e(320).then((() => yu(61062))), yu.e(313).then((() => yu(61071)))]), (() => [yu.e(337).then((() => yu(61075))), yu.e(331).then((() => yu(61079)))])), uu
     })();
-    (0, jU.g)("BABYLON.SkyMaterial", fU)
+    (0, Bu.c)("BABYLON.SkyMaterial", Hu)
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,23 +1,23 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  38975: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => pU
+  39164: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => Ku
     });
-    var tU = gU(24);
-    const pU = function(UU, RU, gU) {
-      let pU;
+    var Eu = yu(34);
+    const Ku = function(uu, Ru, yu) {
+      let Ku;
       return {
-        onCreate: UU => {
-          pU = UU
+        onCreate: uu => {
+          Ku = uu
         },
-        onPlayerClick: (UU, RU, gU, EU, PU, TU) => {
-          RU || "Workbench" !== pU.getMetaInfo(TU).rootName || tU.p.yh("toggleMenu", "inventory|Workbench")
+        onPlayerClick: (uu, Ru, yu, Qu, mu, Ju) => {
+          Ru || "Workbench" !== Ku.getMetaInfo(Ju).rootName || Eu.k.Op("toggleMenu", "inventory|Workbench")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

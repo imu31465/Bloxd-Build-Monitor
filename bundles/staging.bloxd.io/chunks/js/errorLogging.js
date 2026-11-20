@@ -1,139 +1,139 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  6373: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      BaseExtension: () => Ug,
-      BaseInstrumentation: () => Rg,
-      BaseTransport: () => Op,
-      CSPInstrumentation: () => bp,
-      ConsoleInstrumentation: () => Bg,
-      ConsoleTransport: () => pE,
-      EVENT_CLICK: () => fR,
-      EVENT_NAVIGATION: () => xR,
-      EVENT_ROUTE_CHANGE: () => bR,
-      EVENT_SESSION_EXTEND: () => wR,
-      EVENT_SESSION_RESUME: () => JR,
-      EVENT_SESSION_START: () => IR,
-      EVENT_VIEW_CHANGED: () => mR,
-      ErrorsInstrumentation: () => rg,
-      FetchTransport: () => IE,
-      InternalLoggerLevel: () => iR,
-      LogLevel: () => fg,
-      MAX_SESSION_PERSISTENCE_TIME: () => qU,
-      NavigationInstrumentation: () => kp,
-      Observable: () => Wg,
-      PerformanceInstrumentation: () => Mt,
-      PersistentSessionsManager: () => dR,
-      SESSION_EXPIRATION_TIME: () => EU,
-      SESSION_INACTIVITY_TIME: () => PU,
-      STORAGE_KEY: () => pU,
-      SessionInstrumentation: () => tg,
-      TransportItemType: () => UE,
-      UserActionInstrumentation: () => np,
-      UserActionState: () => Qp,
-      VERSION: () => gg,
-      ViewInstrumentation: () => vg,
-      VolatileSessionsManager: () => HR,
-      WebVitalsInstrumentation: () => rt,
-      allLogLevels: () => mg,
-      browserMeta: () => Dp,
-      buildStackFrame: () => pg,
-      captureMetas: () => HE,
-      createInternalLogger: () => oE,
-      createPromiseBuffer: () => CE,
-      createSession: () => Np,
-      deepEqual: () => WR,
-      defaultEventDomain: () => tU,
-      defaultExceptionType: () => ng,
-      defaultGlobalObjectKey: () => ZE,
-      defaultInternalLoggerLevel: () => zR,
-      defaultLogLevel: () => xg,
-      faro: () => hU,
-      genShortID: () => eR,
-      getCurrentTimestamp: () => CR,
-      getDataFromSafariExtensions: () => jg,
-      getIgnoreUrls: () => MU,
-      getInternalFaroFromGlobalObject: () => jU,
-      getStackFramesFromError: () => Cg,
-      getTransportBody: () => tE,
-      getUrlFromResource: () => LU,
-      getWebInstrumentations: () => Fp,
-      globalObject: () => cU,
-      initializeFaro: () => OE,
-      internalGlobalObjectKey: () => GU,
-      isArray: () => aU,
-      isBoolean: () => nU,
-      isDomError: () => SU,
-      isDomException: () => sU,
-      isElement: () => kU,
-      isElementDefined: () => yU,
-      Lu: () => zU,
-      isError: () => dU,
-      isErrorDefined: () => vU,
-      isErrorEvent: () => HU,
-      isEvent: () => XU,
-      isEventDefined: () => rU,
-      isFunction: () => ZU,
-      isInstanceOf: () => fU,
-      isInt: () => wU,
-      isInternalFaroOnGlobalObject: () => CU,
-      isMap: () => iU,
-      isMapDefined: () => FU,
-      isNull: () => mU,
-      isNumber: () => JU,
-      isObject: () => oU,
-      isPrimitive: () => VU,
-      isRegExp: () => YU,
-      isString: () => IU,
-      isSymbol: () => bU,
-      isSyntheticEvent: () => AU,
-      isThenable: () => BU,
-      isToString: () => WU,
-      isTypeof: () => eU,
-      isUndefined: () => xU,
-      makeCoreConfig: () => BE,
-      noop: () => FR,
-      osMeta: () => Lp,
-      parseStacktrace: () => hg,
-      sdkMeta: () => lp,
-      setInternalFaroOnGlobalObject: () => uU,
-      transportItemTypeToBodyKey: () => RE,
-      unknownString: () => Xg,
-      userActionDataAttribute: () => Dt,
-      userActionTimeoutDataAttribute: () => Lt
+  6472: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      BaseExtension: () => uy,
+      BaseInstrumentation: () => Ry,
+      BaseTransport: () => vK,
+      CSPInstrumentation: () => eK,
+      ConsoleInstrumentation: () => ny,
+      ConsoleTransport: () => yQ,
+      EVENT_CLICK: () => HR,
+      EVENT_NAVIGATION: () => dR,
+      EVENT_ROUTE_CHANGE: () => DR,
+      EVENT_SESSION_EXTEND: () => eR,
+      EVENT_SESSION_RESUME: () => kR,
+      EVENT_SESSION_START: () => CR,
+      EVENT_VIEW_CHANGED: () => bR,
+      ErrorsInstrumentation: () => ty,
+      FetchTransport: () => dQ,
+      InternalLoggerLevel: () => PR,
+      LogLevel: () => Hy,
+      MAX_SESSION_PERSISTENCE_TIME: () => Nu,
+      NavigationInstrumentation: () => FK,
+      Observable: () => jy,
+      PerformanceInstrumentation: () => YE,
+      PersistentSessionsManager: () => cR,
+      SESSION_EXPIRATION_TIME: () => Qu,
+      SESSION_INACTIVITY_TIME: () => mu,
+      STORAGE_KEY: () => Ku,
+      SessionInstrumentation: () => Ey,
+      TransportItemType: () => aK,
+      UserActionInstrumentation: () => kK,
+      UserActionState: () => SK,
+      VERSION: () => yy,
+      ViewInstrumentation: () => gy,
+      VolatileSessionsManager: () => LR,
+      WebVitalsInstrumentation: () => sE,
+      allLogLevels: () => by,
+      browserMeta: () => YK,
+      buildStackFrame: () => Ky,
+      captureMetas: () => gQ,
+      createInternalLogger: () => AQ,
+      createPromiseBuffer: () => BQ,
+      createSession: () => qK,
+      deepEqual: () => jR,
+      defaultEventDomain: () => Eu,
+      defaultExceptionType: () => Ay,
+      defaultGlobalObjectKey: () => DQ,
+      defaultInternalLoggerLevel: () => YR,
+      defaultLogLevel: () => dy,
+      faro: () => pu,
+      genShortID: () => WR,
+      getCurrentTimestamp: () => SR,
+      getDataFromSafariExtensions: () => By,
+      getIgnoreUrls: () => ou,
+      getInternalFaroFromGlobalObject: () => Bu,
+      getStackFramesFromError: () => Sy,
+      getTransportBody: () => RQ,
+      getUrlFromResource: () => Ou,
+      getWebInstrumentations: () => wK,
+      globalObject: () => Vu,
+      initializeFaro: () => vQ,
+      internalGlobalObjectKey: () => ru,
+      isArray: () => Gu,
+      isBoolean: () => Au,
+      isDomError: () => zu,
+      isDomException: () => Fu,
+      isElement: () => Zu,
+      isElementDefined: () => wu,
+      RS: () => Yu,
+      isError: () => cu,
+      isErrorDefined: () => gu,
+      isErrorEvent: () => Lu,
+      isEvent: () => lu,
+      isEventDefined: () => tu,
+      isFunction: () => Iu,
+      isInstanceOf: () => Hu,
+      isInt: () => eu,
+      isInternalFaroOnGlobalObject: () => Su,
+      isMap: () => Pu,
+      isMapDefined: () => hu,
+      isNull: () => bu,
+      isNumber: () => ku,
+      isObject: () => Mu,
+      isPrimitive: () => su,
+      isRegExp: () => Uu,
+      isString: () => Cu,
+      isSymbol: () => Du,
+      isSyntheticEvent: () => iu,
+      isThenable: () => nu,
+      isToString: () => ju,
+      isTypeof: () => Wu,
+      isUndefined: () => du,
+      makeCoreConfig: () => GQ,
+      noop: () => hR,
+      osMeta: () => oK,
+      parseStacktrace: () => py,
+      sdkMeta: () => OK,
+      setInternalFaroOnGlobalObject: () => xu,
+      transportItemTypeToBodyKey: () => fK,
+      unknownString: () => ly,
+      userActionDataAttribute: () => oE,
+      userActionTimeoutDataAttribute: () => qE
     });
-    const tU = "browser",
-      pU = "com.grafana.faro.session",
-      EU = 144e5,
-      PU = 9e5,
-      TU = 1e3,
-      qU = PU,
-      KU = {
+    const Eu = "browser",
+      Ku = "com.grafana.faro.session",
+      Qu = 144e5,
+      mu = 9e5,
+      Ju = 1e3,
+      Nu = mu,
+      Xu = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: qU
+        maxSessionPersistenceTime: Nu
       };
-    const cU = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof gU.g ? gU.g : "undefined" !== typeof self ? self : void 0;
-    const GU = "_faroInternal";
+    const Vu = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof yu.g ? yu.g : "undefined" !== typeof self ? self : void 0;
+    const ru = "_faroInternal";
 
-    function jU() {
-      return cU[GU]
+    function Bu() {
+      return Vu[ru]
     }
 
-    function uU(UU) {
-      UU.config.isolate ? UU.internalLogger.debug("Skipping registering internal Faro instance on global object") : (UU.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(cU, GU, {
+    function xu(uu) {
+      uu.config.isolate ? uu.internalLogger.debug("Skipping registering internal Faro instance on global object") : (uu.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(Vu, ru, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: UU
+        value: uu
       }))
     }
 
-    function CU() {
-      return GU in cU
+    function Su() {
+      return ru in Vu
     }
-    let hU = {
+    let pu = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function QU(UU, RU, gU, tU, pU, EU, PU) {
-      return RU.debug("Initializing Faro"), hU = {
-          api: EU,
-          config: gU,
-          instrumentations: PU,
-          internalLogger: RU,
-          metas: tU,
-          pause: pU.pause,
-          transports: pU,
-          unpatchedConsole: UU,
-          unpause: pU.unpause
-        }, uU(hU),
-        function(UU) {
-          if (UU.config.preventGlobalExposure) UU.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function Tu(uu, Ru, yu, Eu, Ku, Qu, mu) {
+      return Ru.debug("Initializing Faro"), pu = {
+          api: Qu,
+          config: yu,
+          instrumentations: mu,
+          internalLogger: Ru,
+          metas: Eu,
+          pause: Ku.pause,
+          transports: Ku,
+          unpatchedConsole: uu,
+          unpause: Ku.unpause
+        }, xu(pu),
+        function(uu) {
+          if (uu.config.preventGlobalExposure) uu.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (UU.internalLogger.debug(`Registering public faro reference in the global scope using "${UU.config.globalObjectKey}" key`), UU.config.globalObjectKey in cU) return void UU.internalLogger.warn(`Skipping global registration due to key "${UU.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(cU, UU.config.globalObjectKey, {
+            if (uu.internalLogger.debug(`Registering public faro reference in the global scope using "${uu.config.globalObjectKey}" key`), uu.config.globalObjectKey in Vu) return void uu.internalLogger.warn(`Skipping global registration due to key "${uu.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(Vu, uu.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: UU
+              value: uu
             })
           }
-        }(hU), hU
+        }(pu), pu
     }
 
-    function eU(UU, RU) {
-      return typeof UU === RU
+    function Wu(uu, Ru) {
+      return typeof uu === Ru
     }
 
-    function WU(UU, RU) {
-      return Object.prototype.toString.call(UU) === `[object ${RU}]`
+    function ju(uu, Ru) {
+      return Object.prototype.toString.call(uu) === `[object ${Ru}]`
     }
 
-    function fU(UU, RU) {
+    function Hu(uu, Ru) {
       try {
-        return UU instanceof RU
-      } catch (gU) {
+        return uu instanceof Ru
+      } catch (yu) {
         return !1
       }
     }
-    const xU = UU => eU(UU, "undefined"),
-      mU = UU => eU(UU, "null"),
-      IU = UU => eU(UU, "string"),
-      JU = UU => eU(UU, "number") && !isNaN(UU) || eU(UU, "bigint"),
-      wU = UU => JU(UU) && Number.isInteger(UU),
-      nU = UU => eU(UU, "boolean"),
-      bU = UU => eU(UU, "symbol"),
-      oU = UU => !mU(UU) && eU(UU, "object"),
-      ZU = UU => eU(UU, "function"),
-      aU = UU => WU(UU, "Array"),
-      YU = UU => WU(UU, "RegExp"),
-      BU = UU => ZU(null === UU || void 0 === UU ? void 0 : UU.then),
-      VU = UU => !oU(UU) && !ZU(UU),
-      rU = "undefined" !== typeof Event,
-      XU = UU => rU && fU(UU, Event),
-      vU = "undefined" !== typeof Error,
-      dU = UU => vU && fU(UU, Error),
-      HU = UU => WU(UU, "ErrorEvent"),
-      SU = UU => WU(UU, "DOMError"),
-      sU = UU => WU(UU, "DOMException"),
-      yU = "undefined" !== typeof Element,
-      kU = UU => yU && fU(UU, Element),
-      FU = "undefined" !== typeof Map,
-      iU = UU => FU && fU(UU, Map),
-      AU = UU => oU(UU) && "nativeEvent" in UU && "preventDefault" in UU && "stopPropagation" in UU;
+    const du = uu => Wu(uu, "undefined"),
+      bu = uu => Wu(uu, "null"),
+      Cu = uu => Wu(uu, "string"),
+      ku = uu => Wu(uu, "number") && !isNaN(uu) || Wu(uu, "bigint"),
+      eu = uu => ku(uu) && Number.isInteger(uu),
+      Au = uu => Wu(uu, "boolean"),
+      Du = uu => Wu(uu, "symbol"),
+      Mu = uu => !bu(uu) && Wu(uu, "object"),
+      Iu = uu => Wu(uu, "function"),
+      Gu = uu => ju(uu, "Array"),
+      Uu = uu => ju(uu, "RegExp"),
+      nu = uu => Iu(null === uu || void 0 === uu ? void 0 : uu.then),
+      su = uu => !Mu(uu) && !Iu(uu),
+      tu = "undefined" !== typeof Event,
+      lu = uu => tu && Hu(uu, Event),
+      gu = "undefined" !== typeof Error,
+      cu = uu => gu && Hu(uu, Error),
+      Lu = uu => ju(uu, "ErrorEvent"),
+      zu = uu => ju(uu, "DOMError"),
+      Fu = uu => ju(uu, "DOMException"),
+      wu = "undefined" !== typeof Element,
+      Zu = uu => wu && Hu(uu, Element),
+      hu = "undefined" !== typeof Map,
+      Pu = uu => hu && Hu(uu, Map),
+      iu = uu => Mu(uu) && "nativeEvent" in uu && "preventDefault" in uu && "stopPropagation" in uu;
 
-    function zU(UU) {
-      return null == UU || (aU(UU) || IU(UU) ? 0 === UU.length : !!oU(UU) && 0 === Object.keys(UU).length)
+    function Yu(uu) {
+      return null == uu || (Gu(uu) || Cu(uu) ? 0 === uu.length : !!Mu(uu) && 0 === Object.keys(uu).length)
     }
 
-    function MU() {
-      return hU.transports.transports.flatMap((UU => UU.getIgnoreUrls()))
+    function ou() {
+      return pu.transports.transports.flatMap((uu => uu.getIgnoreUrls()))
     }
 
-    function DU() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return MU().some((RU => UU && null != UU.match(RU)))
+    function qu() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return ou().some((Ru => uu && null != uu.match(Ru)))
     }
 
-    function LU(UU) {
-      return IU(UU) ? UU : UU instanceof URL ? UU.href : !zU(UU) && ZU(null === UU || void 0 === UU ? void 0 : UU.toString) ? UU.toString() : void 0
+    function Ou(uu) {
+      return Cu(uu) ? uu : uu instanceof URL ? uu.href : !Yu(uu) && Iu(null === uu || void 0 === uu ? void 0 : uu.toString) ? uu.toString() : void 0
     }
-    const NU = "sessionStorage",
-      lU = "localStorage";
+    const vu = "sessionStorage",
+      au = "localStorage";
 
-    function OU(UU) {
+    function fu(uu) {
       try {
-        let RU;
-        RU = window[UU];
-        const gU = "__faro_storage_test__";
-        return RU.setItem(gU, gU), RU.removeItem(gU), !0
-      } catch (gU) {
-        var RU;
-        return null === (RU = hU.internalLogger) || void 0 === RU || RU.info(`Web storage of type ${UU} is not available. Reason: ${gU}`), !1
+        let Ru;
+        Ru = window[uu];
+        const yu = "__faro_storage_test__";
+        return Ru.setItem(yu, yu), Ru.removeItem(yu), !0
+      } catch (yu) {
+        var Ru;
+        return null === (Ru = pu.internalLogger) || void 0 === Ru || Ru.info(`Web storage of type ${uu} is not available. Reason: ${yu}`), !1
       }
     }
 
-    function UR(UU, RU) {
-      return ER(RU) ? window[RU].getItem(UU) : null
+    function uR(uu, Ru) {
+      return QR(Ru) ? window[Ru].getItem(uu) : null
     }
 
-    function RR(UU, RU, gU) {
-      if (ER(gU)) try {
-        window[gU].setItem(UU, RU)
-      } catch (tU) {}
+    function RR(uu, Ru, yu) {
+      if (QR(yu)) try {
+        window[yu].setItem(uu, Ru)
+      } catch (Eu) {}
     }
 
-    function gR(UU, RU) {
-      ER(RU) && window[RU].removeItem(UU)
+    function yR(uu, Ru) {
+      QR(Ru) && window[Ru].removeItem(uu)
     }
-    const tR = OU(lU),
-      pR = OU(NU);
+    const ER = fu(au),
+      KR = fu(vu);
 
-    function ER(UU) {
-      return UU === lU ? tR : UU === NU && pR
-    }
-
-    function PR(UU) {
-      return PR = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(UU) {
-        return typeof UU
-      } : function(UU) {
-        return UU && "function" == typeof Symbol && UU.constructor === Symbol && UU !== Symbol.prototype ? "symbol" : typeof UU
-      }, PR(UU)
+    function QR(uu) {
+      return uu === au ? ER : uu === vu && KR
     }
 
-    function TR(UU) {
-      var RU = function(UU, RU) {
-        if ("object" != PR(UU) || !UU) return UU;
-        var gU = UU[Symbol.toPrimitive];
-        if (void 0 !== gU) {
-          var tU = gU.call(UU, RU || "default");
-          if ("object" != PR(tU)) return tU;
+    function mR(uu) {
+      return mR = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(uu) {
+        return typeof uu
+      } : function(uu) {
+        return uu && "function" == typeof Symbol && uu.constructor === Symbol && uu !== Symbol.prototype ? "symbol" : typeof uu
+      }, mR(uu)
+    }
+
+    function JR(uu) {
+      var Ru = function(uu, Ru) {
+        if ("object" != mR(uu) || !uu) return uu;
+        var yu = uu[Symbol.toPrimitive];
+        if (void 0 !== yu) {
+          var Eu = yu.call(uu, Ru || "default");
+          if ("object" != mR(Eu)) return Eu;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === RU ? String : Number)(UU)
-      }(UU, "string");
-      return "symbol" == PR(RU) ? RU : RU + ""
+        return ("string" === Ru ? String : Number)(uu)
+      }(uu, "string");
+      return "symbol" == mR(Ru) ? Ru : Ru + ""
     }
 
-    function qR(UU, RU, gU) {
-      return (RU = TR(RU)) in UU ? Object.defineProperty(UU, RU, {
-        value: gU,
+    function NR(uu, Ru, yu) {
+      return (Ru = JR(Ru)) in uu ? Object.defineProperty(uu, Ru, {
+        value: yu,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : UU[RU] = gU, UU
+      }) : uu[Ru] = yu, uu
     }
 
-    function KR(UU, RU) {
-      var gU = Object.keys(UU);
+    function XR(uu, Ru) {
+      var yu = Object.keys(uu);
       if (Object.getOwnPropertySymbols) {
-        var tU = Object.getOwnPropertySymbols(UU);
-        RU && (tU = tU.filter((function(RU) {
-          return Object.getOwnPropertyDescriptor(UU, RU).enumerable
-        }))), gU.push.apply(gU, tU)
+        var Eu = Object.getOwnPropertySymbols(uu);
+        Ru && (Eu = Eu.filter((function(Ru) {
+          return Object.getOwnPropertyDescriptor(uu, Ru).enumerable
+        }))), yu.push.apply(yu, Eu)
       }
-      return gU
+      return yu
     }
 
-    function cR(UU) {
-      for (var RU = 1; RU < arguments.length; RU++) {
-        var gU = null != arguments[RU] ? arguments[RU] : {};
-        RU % 2 ? KR(Object(gU), !0).forEach((function(RU) {
-          qR(UU, RU, gU[RU])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(UU, Object.getOwnPropertyDescriptors(gU)) : KR(Object(gU)).forEach((function(RU) {
-          Object.defineProperty(UU, RU, Object.getOwnPropertyDescriptor(gU, RU))
+    function VR(uu) {
+      for (var Ru = 1; Ru < arguments.length; Ru++) {
+        var yu = null != arguments[Ru] ? arguments[Ru] : {};
+        Ru % 2 ? XR(Object(yu), !0).forEach((function(Ru) {
+          NR(uu, Ru, yu[Ru])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(uu, Object.getOwnPropertyDescriptors(yu)) : XR(Object(yu)).forEach((function(Ru) {
+          Object.defineProperty(uu, Ru, Object.getOwnPropertyDescriptor(yu, Ru))
         }))
       }
-      return UU
+      return uu
     }
 
-    function GR() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hU;
-      var RU, gU, tU;
-      const pU = UU.config.sessionTracking,
-        EU = null !== (RU = null !== (gU = null === pU || void 0 === pU || null === (tU = pU.sampler) || void 0 === tU ? void 0 : tU.call(pU, {
-          metas: UU.metas.value
-        })) && void 0 !== gU ? gU : null === pU || void 0 === pU ? void 0 : pU.samplingRate) && void 0 !== RU ? RU : 1,
-        PU = "number" === typeof EU ? function(UU) {
-          return Math.min(1, Math.max(0, UU))
-        }(EU) : 0;
-      if (!(PU > 0)) return !1;
-      if (1 === PU) return !0;
+    function rR() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pu;
+      var Ru, yu, Eu;
+      const Ku = uu.config.sessionTracking,
+        Qu = null !== (Ru = null !== (yu = null === Ku || void 0 === Ku || null === (Eu = Ku.sampler) || void 0 === Eu ? void 0 : Eu.call(Ku, {
+          metas: uu.metas.value
+        })) && void 0 !== yu ? yu : null === Ku || void 0 === Ku ? void 0 : Ku.samplingRate) && void 0 !== Ru ? Ru : 1,
+        mu = "number" === typeof Qu ? function(uu) {
+          return Math.min(1, Math.max(0, uu))
+        }(Qu) : 0;
+      if (!(mu > 0)) return !1;
+      if (1 === mu) return !0;
       try {
-        const UU = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === UU || void 0 === UU ? void 0 : UU.getRandomValues)) {
-          const RU = new Uint32Array(1);
-          return UU.getRandomValues(RU), RU[0] / Math.pow(2, 32) < PU
+        const uu = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === uu || void 0 === uu ? void 0 : uu.getRandomValues)) {
+          const Ru = new Uint32Array(1);
+          return uu.getRandomValues(Ru), Ru[0] / Math.pow(2, 32) < mu
         }
-      } catch (TU) {}
-      return Math.random() < PU
+      } catch (Ju) {}
+      return Math.random() < mu
     }
 
-    function jR() {
+    function BR() {
       return Date.now()
     }
 
-    function uR() {
+    function xR() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function CR() {
+    function SR() {
       return (new Date).toISOString()
     }
 
-    function hR(UU) {
-      return new Date(UU).toISOString()
+    function pR(uu) {
+      return new Date(uu).toISOString()
     }
-    const QR = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const TR = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function eR() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const RU = new Uint32Array(UU),
-        gU = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === gU || void 0 === gU ? void 0 : gU.getRandomValues) gU.getRandomValues(RU);
+    function WR() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const Ru = new Uint32Array(uu),
+        yu = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === yu || void 0 === yu ? void 0 : yu.getRandomValues) yu.getRandomValues(Ru);
       else
-        for (let pU = 0; pU < UU; pU++) RU[pU] = Math.floor(4294967296 * Math.random());
-      let tU = "";
-      for (let pU = 0; pU < UU; pU++) tU += QR[RU[pU] % 59];
-      return tU
+        for (let Ku = 0; Ku < uu; Ku++) Ru[Ku] = Math.floor(4294967296 * Math.random());
+      let Eu = "";
+      for (let Ku = 0; Ku < uu; Ku++) Eu += TR[Ru[Ku] % 59];
+      return Eu
     }
 
-    function WR(UU, RU) {
-      if (UU === RU) return !0;
-      if (eU(UU, "number") && isNaN(UU)) return eU(RU, "number") && isNaN(RU);
-      const gU = aU(UU),
-        tU = aU(RU);
-      if (gU !== tU) return !1;
-      if (gU && tU) {
-        const gU = UU.length;
-        if (gU !== RU.length) return !1;
-        for (let tU = gU; 0 !== tU--;)
-          if (!WR(UU[tU], RU[tU])) return !1;
+    function jR(uu, Ru) {
+      if (uu === Ru) return !0;
+      if (Wu(uu, "number") && isNaN(uu)) return Wu(Ru, "number") && isNaN(Ru);
+      const yu = Gu(uu),
+        Eu = Gu(Ru);
+      if (yu !== Eu) return !1;
+      if (yu && Eu) {
+        const yu = uu.length;
+        if (yu !== Ru.length) return !1;
+        for (let Eu = yu; 0 !== Eu--;)
+          if (!jR(uu[Eu], Ru[Eu])) return !1;
         return !0
       }
-      const pU = oU(UU),
-        EU = oU(RU);
-      if (pU !== EU) return !1;
-      if (UU && RU && pU && EU) {
-        const gU = Object.keys(UU),
-          tU = Object.keys(RU);
-        if (gU.length !== tU.length) return !1;
-        for (let UU of gU)
-          if (!tU.includes(UU)) return !1;
-        for (let pU of gU)
-          if (!WR(UU[pU], RU[pU])) return !1;
+      const Ku = Mu(uu),
+        Qu = Mu(Ru);
+      if (Ku !== Qu) return !1;
+      if (uu && Ru && Ku && Qu) {
+        const yu = Object.keys(uu),
+          Eu = Object.keys(Ru);
+        if (yu.length !== Eu.length) return !1;
+        for (let uu of yu)
+          if (!Eu.includes(uu)) return !1;
+        for (let Ku of yu)
+          if (!jR(uu[Ku], Ru[Ku])) return !1;
         return !0
       }
       return !1
     }
-    const fR = "click",
-      xR = "navigation",
-      mR = "view_changed",
-      IR = "session_start",
-      JR = "session_resume",
-      wR = "session_extend",
-      nR = "service_name_override",
-      bR = "route_change";
+    const HR = "click",
+      dR = "navigation",
+      bR = "view_changed",
+      CR = "session_start",
+      kR = "session_resume",
+      eR = "session_extend",
+      AR = "service_name_override",
+      DR = "route_change";
 
-    function oR() {
+    function MR() {
       let {
-        sessionId: UU,
-        started: RU,
-        lastActivity: gU,
-        isSampled: tU = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, pU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hU;
-      var EU;
-      const PU = jR(),
-        TU = null === (EU = pU.config) || void 0 === EU || null === (EU = EU.sessionTracking) || void 0 === EU ? void 0 : EU.generateSessionId;
-      return null == UU && (UU = "function" === typeof TU ? TU() : eR()), {
-        sessionId: UU,
-        lastActivity: null !== gU && void 0 !== gU ? gU : PU,
-        started: null !== RU && void 0 !== RU ? RU : PU,
-        isSampled: tU
+        sessionId: uu,
+        started: Ru,
+        lastActivity: yu,
+        isSampled: Eu = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, Ku = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pu;
+      var Qu;
+      const mu = BR(),
+        Ju = null === (Qu = Ku.config) || void 0 === Qu || null === (Qu = Qu.sessionTracking) || void 0 === Qu ? void 0 : Qu.generateSessionId;
+      return null == uu && (uu = "function" === typeof Ju ? Ju() : WR()), {
+        sessionId: uu,
+        lastActivity: null !== yu && void 0 !== yu ? yu : mu,
+        started: null !== Ru && void 0 !== Ru ? Ru : mu,
+        isSampled: Eu
       }
     }
 
-    function ZR(UU) {
-      if (null == UU) return !1;
-      const RU = jR();
-      return RU - UU.started < 144e5 && RU - UU.lastActivity < PU
+    function IR(uu) {
+      if (null == uu) return !1;
+      const Ru = BR();
+      return Ru - uu.started < 144e5 && Ru - uu.lastActivity < mu
     }
 
-    function aR(UU) {
+    function GR(uu) {
       let {
-        fetchUserSession: RU,
-        storeUserSession: gU,
-        adoptSession: tU,
-        updateInterval: pU = 0
-      } = UU, TU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hU, qU = 0;
+        fetchUserSession: Ru,
+        storeUserSession: yu,
+        adoptSession: Eu,
+        updateInterval: Ku = 0
+      } = uu, Ju = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pu, Nu = 0;
       return function() {
         let {
-          forceSessionExtend: UU = !1,
-          refreshActivity: KU = !0
+          forceSessionExtend: uu = !1,
+          refreshActivity: Xu = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var cU, GU;
-        if (!RU || !gU) return;
-        const jU = jR();
-        if (!UU && jU < qU && qU - jU <= pU) return;
-        const uU = TU.config.sessionTracking,
-          CU = null === uU || void 0 === uU ? void 0 : uU.persistent;
-        if (CU && !tR || !CU && !pR) return;
-        const hU = RU();
-        if (qU = Math.min(jU + pU, (null !== (cU = null === hU || void 0 === hU ? void 0 : hU.started) && void 0 !== cU ? cU : jU) + EU, (null !== (GU = null === hU || void 0 === hU ? void 0 : hU.lastActivity) && void 0 !== GU ? GU : jU) + PU), !1 === UU && ZR(hU)) {
-          var QU;
-          KU && gU(cR(cR({}, hU), {}, {
-            lastActivity: jU
+        var Vu, ru;
+        if (!Ru || !yu) return;
+        const Bu = BR();
+        if (!uu && Bu < Nu && Nu - Bu <= Ku) return;
+        const xu = Ju.config.sessionTracking,
+          Su = null === xu || void 0 === xu ? void 0 : xu.persistent;
+        if (Su && !ER || !Su && !KR) return;
+        const pu = Ru();
+        if (Nu = Math.min(Bu + Ku, (null !== (Vu = null === pu || void 0 === pu ? void 0 : pu.started) && void 0 !== Vu ? Vu : Bu) + Qu, (null !== (ru = null === pu || void 0 === pu ? void 0 : pu.lastActivity) && void 0 !== ru ? ru : Bu) + mu), !1 === uu && IR(pu)) {
+          var Tu;
+          Xu && yu(VR(VR({}, pu), {}, {
+            lastActivity: Bu
           }));
-          const UU = null === (QU = TU.metas.value.session) || void 0 === QU ? void 0 : QU.id;
-          null != tU && null != hU.sessionMeta && hU.sessionId !== UU && tU(hU.sessionMeta)
+          const uu = null === (Tu = Ju.metas.value.session) || void 0 === Tu ? void 0 : Tu.id;
+          null != Eu && null != pu.sessionMeta && pu.sessionId !== uu && Eu(pu.sessionMeta)
         } else {
-          var eU, WU, fU;
-          let UU = BR(oR({
-            isSampled: GR(TU)
-          }, TU), hU, TU);
-          qU = jU + pU, gU(UU), null === (eU = TU.api) || void 0 === eU || eU.setSession(UU.sessionMeta), null === uU || void 0 === uU || null === (WU = uU.onSessionChange) || void 0 === WU || WU.call(uU, null !== (fU = null === hU || void 0 === hU ? void 0 : hU.sessionMeta) && void 0 !== fU ? fU : null, UU.sessionMeta)
+          var Wu, ju, Hu;
+          let uu = nR(MR({
+            isSampled: rR(Ju)
+          }, Ju), pu, Ju);
+          Nu = Bu + Ku, yu(uu), null === (Wu = Ju.api) || void 0 === Wu || Wu.setSession(uu.sessionMeta), null === xu || void 0 === xu || null === (ju = xu.onSessionChange) || void 0 === ju || ju.call(xu, null !== (Hu = null === pu || void 0 === pu ? void 0 : pu.sessionMeta) && void 0 !== Hu ? Hu : null, uu.sessionMeta)
         }
       }
     }
 
-    function YR(UU) {
-      let RU, {
-          fetchUserSession: gU,
-          storeUserSession: tU,
-          updateInterval: pU = 0
-        } = UU,
-        EU = 0;
-      return UU => {
-        const PU = jR();
-        if (UU === RU && PU < EU && EU - PU <= pU) return;
-        RU = UU, EU = PU + pU;
-        const TU = gU();
-        (null === TU || void 0 === TU ? void 0 : TU.sessionId) === UU && ZR(TU) && tU(cR(cR({}, TU), {}, {
-          lastActivity: PU
+    function UR(uu) {
+      let Ru, {
+          fetchUserSession: yu,
+          storeUserSession: Eu,
+          updateInterval: Ku = 0
+        } = uu,
+        Qu = 0;
+      return uu => {
+        const mu = BR();
+        if (uu === Ru && mu < Qu && Qu - mu <= Ku) return;
+        Ru = uu, Qu = mu + Ku;
+        const Ju = yu();
+        (null === Ju || void 0 === Ju ? void 0 : Ju.sessionId) === uu && IR(Ju) && Eu(VR(VR({}, Ju), {}, {
+          lastActivity: mu
         }))
       }
     }
 
-    function BR(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hU;
-      var tU, pU, EU, PU, TU, qU;
-      const KU = cR(cR({}, UU), {}, {
+    function nR(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pu;
+      var Eu, Ku, Qu, mu, Ju, Nu;
+      const Xu = VR(VR({}, uu), {}, {
           sessionMeta: {
-            id: UU.sessionId,
-            attributes: rR(cR(cR(cR({}, null === (tU = gU.config.sessionTracking) || void 0 === tU || null === (tU = tU.session) || void 0 === tU ? void 0 : tU.attributes), null !== (pU = null === (EU = gU.metas.value.session) || void 0 === EU ? void 0 : EU.attributes) && void 0 !== pU ? pU : {}), {}, {
-              isSampled: UU.isSampled.toString()
+            id: uu.sessionId,
+            attributes: tR(VR(VR(VR({}, null === (Eu = yu.config.sessionTracking) || void 0 === Eu || null === (Eu = Eu.session) || void 0 === Eu ? void 0 : Eu.attributes), null !== (Ku = null === (Qu = yu.metas.value.session) || void 0 === Qu ? void 0 : Qu.attributes) && void 0 !== Ku ? Ku : {}), {}, {
+              isSampled: uu.isSampled.toString()
             }))
           }
         }),
-        cU = null !== (PU = null === (TU = gU.metas.value.session) || void 0 === TU ? void 0 : TU.overrides) && void 0 !== PU ? PU : null === RU || void 0 === RU || null === (qU = RU.sessionMeta) || void 0 === qU ? void 0 : qU.overrides;
-      zU(cU) || (KU.sessionMeta.overrides = cU);
-      const GU = null === RU || void 0 === RU ? void 0 : RU.sessionId;
-      return null != GU && (KU.sessionMeta.attributes.previousSession = GU), KU
+        Vu = null !== (mu = null === (Ju = yu.metas.value.session) || void 0 === Ju ? void 0 : Ju.overrides) && void 0 !== mu ? mu : null === Ru || void 0 === Ru || null === (Nu = Ru.sessionMeta) || void 0 === Nu ? void 0 : Nu.overrides;
+      Yu(Vu) || (Xu.sessionMeta.overrides = Vu);
+      const ru = null === Ru || void 0 === Ru ? void 0 : Ru.sessionId;
+      return null != ru && (Xu.sessionMeta.attributes.previousSession = ru), Xu
     }
 
-    function VR(UU) {
+    function sR(uu) {
       let {
-        fetchUserSession: RU,
-        storeUserSession: gU
-      } = UU, tU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hU, pU = !1;
-      return function(UU) {
-        if (pU) return;
-        const EU = UU.session,
-          PU = RU();
-        let TU = null === EU || void 0 === EU ? void 0 : EU.id;
-        const qU = null === EU || void 0 === EU ? void 0 : EU.attributes,
-          KU = null === EU || void 0 === EU ? void 0 : EU.overrides,
-          cU = null === PU || void 0 === PU ? void 0 : PU.sessionMeta,
-          GU = null === cU || void 0 === cU ? void 0 : cU.overrides,
-          jU = !!KU && !WR(KU, GU),
-          uU = !!qU && !WR(qU, null === cU || void 0 === cU ? void 0 : cU.attributes);
-        if (EU && TU !== (null === PU || void 0 === PU ? void 0 : PU.sessionId) || uU || jU) {
-          var CU, hU;
-          const UU = null != PU && TU === PU.sessionId,
-            RU = BR(UU ? PU : oR({
-              sessionId: TU,
-              isSampled: GR(tU)
-            }, tU), PU, tU),
-            EU = null === PU || void 0 === PU || null === (CU = PU.sessionMeta) || void 0 === CU || null === (CU = CU.attributes) || void 0 === CU ? void 0 : CU.previousSession;
-          UU && null != EU && EU !== RU.sessionId && (RU.sessionMeta.attributes.previousSession = EU), (null === (hU = RU.sessionMeta.attributes) || void 0 === hU ? void 0 : hU.previousSession) === RU.sessionId && delete RU.sessionMeta.attributes.previousSession, gU(RU),
-            function(UU, RU) {
-              let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var pU, EU, PU;
-              if (!RU) return;
-              const TU = gU.serviceName,
-                qU = null !== (pU = null !== (EU = tU.serviceName) && void 0 !== EU ? EU : null === (PU = UU.metas.value.app) || void 0 === PU ? void 0 : PU.name) && void 0 !== pU ? pU : "";
-              TU && TU !== qU && UU.api.pushEvent(nR, {
-                serviceName: TU,
-                previousServiceName: qU
+        fetchUserSession: Ru,
+        storeUserSession: yu
+      } = uu, Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pu, Ku = !1;
+      return function(uu) {
+        if (Ku) return;
+        const Qu = uu.session,
+          mu = Ru();
+        let Ju = null === Qu || void 0 === Qu ? void 0 : Qu.id;
+        const Nu = null === Qu || void 0 === Qu ? void 0 : Qu.attributes,
+          Xu = null === Qu || void 0 === Qu ? void 0 : Qu.overrides,
+          Vu = null === mu || void 0 === mu ? void 0 : mu.sessionMeta,
+          ru = null === Vu || void 0 === Vu ? void 0 : Vu.overrides,
+          Bu = !!Xu && !jR(Xu, ru),
+          xu = !!Nu && !jR(Nu, null === Vu || void 0 === Vu ? void 0 : Vu.attributes);
+        if (Qu && Ju !== (null === mu || void 0 === mu ? void 0 : mu.sessionId) || xu || Bu) {
+          var Su, pu;
+          const uu = null != mu && Ju === mu.sessionId,
+            Ru = nR(uu ? mu : MR({
+              sessionId: Ju,
+              isSampled: rR(Eu)
+            }, Eu), mu, Eu),
+            Qu = null === mu || void 0 === mu || null === (Su = mu.sessionMeta) || void 0 === Su || null === (Su = Su.attributes) || void 0 === Su ? void 0 : Su.previousSession;
+          uu && null != Qu && Qu !== Ru.sessionId && (Ru.sessionMeta.attributes.previousSession = Qu), (null === (pu = Ru.sessionMeta.attributes) || void 0 === pu ? void 0 : pu.previousSession) === Ru.sessionId && delete Ru.sessionMeta.attributes.previousSession, yu(Ru),
+            function(uu, Ru) {
+              let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var Ku, Qu, mu;
+              if (!Ru) return;
+              const Ju = yu.serviceName,
+                Nu = null !== (Ku = null !== (Qu = Eu.serviceName) && void 0 !== Qu ? Qu : null === (mu = uu.metas.value.app) || void 0 === mu ? void 0 : mu.name) && void 0 !== Ku ? Ku : "";
+              Ju && Ju !== Nu && uu.api.pushEvent(AR, {
+                serviceName: Ju,
+                previousServiceName: Nu
               })
-            }(tU, jU, KU, GU), pU = !0;
+            }(Eu, Bu, Xu, ru), Ku = !0;
           try {
-            tU.api.setSession(RU.sessionMeta)
+            Eu.api.setSession(Ru.sessionMeta)
           } finally {
-            pU = !1
+            Ku = !1
           }
         }
       }
     }
 
-    function rR(UU) {
-      const RU = {};
-      for (const gU of Object.keys(UU)) {
-        const tU = UU[gU];
-        void 0 !== tU && (RU[gU] = tU)
+    function tR(uu) {
+      const Ru = {};
+      for (const yu of Object.keys(uu)) {
+        const Eu = uu[yu];
+        void 0 !== Eu && (Ru[yu] = Eu)
       }
-      return RU
+      return Ru
     }
 
-    function XR() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== UU && void 0 !== UU ? UU : {}, function() {
-        const UU = new WeakSet;
-        return function(RU, gU) {
-          if (oU(gU) && null !== gU) {
-            if (UU.has(gU)) return null;
-            UU.add(gU)
+    function lR() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== uu && void 0 !== uu ? uu : {}, function() {
+        const uu = new WeakSet;
+        return function(Ru, yu) {
+          if (Mu(yu) && null !== yu) {
+            if (uu.has(yu)) return null;
+            uu.add(yu)
           }
-          return gU
+          return yu
         }
       }())
     }
 
-    function vR() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const RU = {};
-      for (const [gU, tU] of Object.entries(UU)) RU[gU] = oU(tU) && null !== tU ? XR(tU) : String(tU);
-      return RU
+    function gR() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Ru = {};
+      for (const [yu, Eu] of Object.entries(uu)) Ru[yu] = Mu(Eu) && null !== Eu ? lR(Eu) : String(Eu);
+      return Ru
     }
-    var dR = class UU {
+    var cR = class uu {
       constructor() {
-        var RU = this;
-        let gU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hU;
-        this.context = gU, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = UU => {
+        var Ru = this;
+        let yu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pu;
+        this.context = yu, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = uu => {
           this.adopting = !0;
           try {
-            var RU;
-            null === (RU = this.context.api) || void 0 === RU || RU.setSession(UU)
+            var Ru;
+            null === (Ru = this.context.api) || void 0 === Ru || Ru.setSession(uu)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: UU = !0
+            refreshActivity: uu = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return RU.updateUserSession({
-            refreshActivity: UU
+          return Ru.updateUserSession({
+            refreshActivity: uu
           })
-        }, this.recordActivity = YR({
-          fetchUserSession: UU.fetchUserSession,
-          storeUserSession: UU.storeUserSession,
-          updateInterval: TU
-        }), this.updateUserSession = aR({
-          fetchUserSession: UU.fetchUserSession,
-          storeUserSession: UU.storeUserSession,
+        }, this.recordActivity = UR({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession,
+          updateInterval: Ju
+        }), this.updateUserSession = GR({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: TU
-        }, gU), this.init()
+          updateInterval: Ju
+        }, yu), this.init()
       }
       static removeUserSession() {
-        gR(pU, UU.storageTypeLocal)
+        yR(Ku, uu.storageTypeLocal)
       }
-      static storeUserSession(RU) {
-        RR(pU, XR(RU), UU.storageTypeLocal)
+      static storeUserSession(Ru) {
+        RR(Ku, lR(Ru), uu.storageTypeLocal)
       }
       static fetchUserSession() {
-        const RU = UR(pU, UU.storageTypeLocal);
-        return RU ? JSON.parse(RU) : null
+        const Ru = uR(Ku, uu.storageTypeLocal);
+        return Ru ? JSON.parse(Ru) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var UU;
+            var uu;
             this.updateSession({
               refreshActivity: !1
             });
-            const RU = null === (UU = this.context.api) || void 0 === UU || null === (UU = UU.getSession()) || void 0 === UU ? void 0 : UU.id;
-            RU && this.recordActivity(RU)
+            const Ru = null === (uu = this.context.api) || void 0 === uu || null === (uu = uu.getSession()) || void 0 === uu ? void 0 : uu.id;
+            Ru && this.recordActivity(Ru)
           }
-        })), this.context.metas.addListener(VR({
-          fetchUserSession: UU.fetchUserSession,
-          storeUserSession: UU.storeUserSession
+        })), this.context.metas.addListener(sR({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession
         }, this.context))
       }
     };
-    dR.storageTypeLocal = lU;
-    var HR = class UU {
+    cR.storageTypeLocal = au;
+    var LR = class uu {
       constructor() {
-        var RU = this;
-        let gU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : hU;
-        this.context = gU, this.isAdopting = () => !1, this.updateSession = function() {
+        var Ru = this;
+        let yu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : pu;
+        this.context = yu, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: UU = !0
+            refreshActivity: uu = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return RU.updateUserSession({
-            refreshActivity: UU
+          return Ru.updateUserSession({
+            refreshActivity: uu
           })
-        }, this.recordActivity = YR({
-          fetchUserSession: UU.fetchUserSession,
-          storeUserSession: UU.storeUserSession,
-          updateInterval: TU
-        }), this.updateUserSession = aR({
-          fetchUserSession: UU.fetchUserSession,
-          storeUserSession: UU.storeUserSession,
-          updateInterval: TU
-        }, gU), this.init()
+        }, this.recordActivity = UR({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession,
+          updateInterval: Ju
+        }), this.updateUserSession = GR({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession,
+          updateInterval: Ju
+        }, yu), this.init()
       }
       static removeUserSession() {
-        gR(pU, UU.storageTypeSession)
+        yR(Ku, uu.storageTypeSession)
       }
-      static storeUserSession(RU) {
-        RR(pU, XR(RU), UU.storageTypeSession)
+      static storeUserSession(Ru) {
+        RR(Ku, lR(Ru), uu.storageTypeSession)
       }
       static fetchUserSession() {
-        const RU = UR(pU, UU.storageTypeSession);
-        return RU ? JSON.parse(RU) : null
+        const Ru = uR(Ku, uu.storageTypeSession);
+        return Ru ? JSON.parse(Ru) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var UU;
+            var uu;
             this.updateSession({
               refreshActivity: !1
             });
-            const RU = null === (UU = this.context.api) || void 0 === UU || null === (UU = UU.getSession()) || void 0 === UU ? void 0 : UU.id;
-            RU && this.recordActivity(RU)
+            const Ru = null === (uu = this.context.api) || void 0 === uu || null === (uu = uu.getSession()) || void 0 === uu ? void 0 : uu.id;
+            Ru && this.recordActivity(Ru)
           }
-        })), this.context.metas.addListener(VR({
-          fetchUserSession: UU.fetchUserSession,
-          storeUserSession: UU.storeUserSession
+        })), this.context.metas.addListener(sR({
+          fetchUserSession: uu.fetchUserSession,
+          storeUserSession: uu.storeUserSession
         }, this.context))
       }
     };
-    HR.storageTypeSession = NU;
-    const SR = new WeakMap;
+    LR.storageTypeSession = vu;
+    const zR = new WeakMap;
 
-    function sR(UU) {
-      let RU = SR.get(UU);
-      if (!RU) {
-        let gU = [],
-          tU = [];
-        RU = {
-          addSessionUpdateListener: UU => {
-            gU.push(UU)
+    function FR(uu) {
+      let Ru = zR.get(uu);
+      if (!Ru) {
+        let yu = [],
+          Eu = [];
+        Ru = {
+          addSessionUpdateListener: uu => {
+            yu.push(uu)
           },
-          removeSessionUpdateListener: UU => {
-            gU = gU.filter((RU => RU !== UU))
+          removeSessionUpdateListener: uu => {
+            yu = yu.filter((Ru => Ru !== uu))
           },
-          notifySessionUpdate: UU => {
-            gU.forEach((RU => RU(UU)))
+          notifySessionUpdate: uu => {
+            yu.forEach((Ru => Ru(uu)))
           },
-          shouldCapture: () => tU.every((UU => UU())),
-          addCaptureFilter: UU => {
-            tU.push(UU)
+          shouldCapture: () => Eu.every((uu => uu())),
+          addCaptureFilter: uu => {
+            Eu.push(uu)
           },
-          removeCaptureFilter: UU => {
-            tU = tU.filter((RU => RU !== UU))
+          removeCaptureFilter: uu => {
+            Eu = Eu.filter((Ru => Ru !== uu))
           }
-        }, SR.set(UU, RU)
+        }, zR.set(uu, Ru)
       }
-      return RU
+      return Ru
     }
-    var yR = class {
-      constructor(UU, RU, gU) {
-        this.metas = UU, this.transports = RU, this.onActivate = gU, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = UU => {
-          var RU, gU, tU;
-          const pU = this.pending;
-          var EU, PU;
-          if ("overrides" === UU.type) return void(this.pending = {
-            reset: null !== (EU = null === pU || void 0 === pU ? void 0 : pU.reset) && void 0 !== EU && EU,
-            inheritOverrides: null === (PU = null === pU || void 0 === pU ? void 0 : pU.inheritOverrides) || void 0 === PU || PU,
-            session: cR(cR({}, null === pU || void 0 === pU ? void 0 : pU.session), {}, {
-              overrides: cR(cR({}, null === pU || void 0 === pU ? void 0 : pU.session.overrides), UU.overrides)
+    var wR = class {
+      constructor(uu, Ru, yu) {
+        this.metas = uu, this.transports = Ru, this.onActivate = yu, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = uu => {
+          var Ru, yu, Eu;
+          const Ku = this.pending;
+          var Qu, mu;
+          if ("overrides" === uu.type) return void(this.pending = {
+            reset: null !== (Qu = null === Ku || void 0 === Ku ? void 0 : Ku.reset) && void 0 !== Qu && Qu,
+            inheritOverrides: null === (mu = null === Ku || void 0 === Ku ? void 0 : Ku.inheritOverrides) || void 0 === mu || mu,
+            session: VR(VR({}, null === Ku || void 0 === Ku ? void 0 : Ku.session), {}, {
+              overrides: VR(VR({}, null === Ku || void 0 === Ku ? void 0 : Ku.session.overrides), uu.overrides)
             })
           });
-          const TU = UU.session,
-            qU = zU(TU) || null != TU && "id" in TU && !TU.id,
-            KU = null !== (RU = null === TU || void 0 === TU ? void 0 : TU.overrides) && void 0 !== RU ? RU : null === pU || void 0 === pU ? void 0 : pU.session.overrides;
+          const Ju = uu.session,
+            Nu = Yu(Ju) || null != Ju && "id" in Ju && !Ju.id,
+            Xu = null !== (Ru = null === Ju || void 0 === Ju ? void 0 : Ju.overrides) && void 0 !== Ru ? Ru : null === Ku || void 0 === Ku ? void 0 : Ku.session.overrides;
           this.pending = {
-            reset: qU || !(null === TU || void 0 === TU ? void 0 : TU.id) && null !== (gU = null === pU || void 0 === pU ? void 0 : pU.reset) && void 0 !== gU && gU,
-            inheritOverrides: !(!UU.overrides && void 0 !== (null === TU || void 0 === TU ? void 0 : TU.overrides)) && (null === (tU = null === pU || void 0 === pU ? void 0 : pU.inheritOverrides) || void 0 === tU || tU),
+            reset: Nu || !(null === Ju || void 0 === Ju ? void 0 : Ju.id) && null !== (yu = null === Ku || void 0 === Ku ? void 0 : Ku.reset) && void 0 !== yu && yu,
+            inheritOverrides: !(!uu.overrides && void 0 !== (null === Ju || void 0 === Ju ? void 0 : Ju.overrides)) && (null === (Eu = null === Ku || void 0 === Ku ? void 0 : Ku.inheritOverrides) || void 0 === Eu || Eu),
             session: {
-              id: null === TU || void 0 === TU ? void 0 : TU.id,
-              attributes: (null === TU || void 0 === TU ? void 0 : TU.attributes) && cR({}, TU.attributes),
-              overrides: UU.overrides ? cR(cR({}, null === pU || void 0 === pU ? void 0 : pU.session.overrides), UU.overrides) : KU && cR({}, KU)
+              id: null === Ju || void 0 === Ju ? void 0 : Ju.id,
+              attributes: (null === Ju || void 0 === Ju ? void 0 : Ju.attributes) && VR({}, Ju.attributes),
+              overrides: uu.overrides ? VR(VR({}, null === Ku || void 0 === Ku ? void 0 : Ku.session.overrides), uu.overrides) : Xu && VR({}, Xu)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var UU, RU;
-        this.waiting = !0, sR(this.metas).addSessionUpdateListener(this.recordUpdate), sR(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (UU = (RU = this.metas).addCaptureListener) || void 0 === UU || UU.call(RU, this.activate), this.activate()
+        var uu, Ru;
+        this.waiting = !0, FR(this.metas).addSessionUpdateListener(this.recordUpdate), FR(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (uu = (Ru = this.metas).addCaptureListener) || void 0 === uu || uu.call(Ru, this.activate), this.activate()
       }
       destroy() {
-        var UU, RU;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), sR(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (UU = (RU = this.metas).removeCaptureListener) || void 0 === UU || UU.call(RU, this.activate), sR(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var uu, Ru;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), FR(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (uu = (Ru = this.metas).removeCaptureListener) || void 0 === uu || uu.call(Ru, this.activate), FR(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function kR(UU) {
-      return (null === UU || void 0 === UU ? void 0 : UU.persistent) ? dR : HR
+    function ZR(uu) {
+      return (null === uu || void 0 === uu ? void 0 : uu.persistent) ? cR : LR
     }
 
-    function FR() {}
-    let iR = function(UU) {
-      return UU[UU.OFF = 0] = "OFF", UU[UU.ERROR = 1] = "ERROR", UU[UU.WARN = 2] = "WARN", UU[UU.INFO = 3] = "INFO", UU[UU.VERBOSE = 4] = "VERBOSE", UU
+    function hR() {}
+    let PR = function(uu) {
+      return uu[uu.OFF = 0] = "OFF", uu[uu.ERROR = 1] = "ERROR", uu[uu.WARN = 2] = "WARN", uu[uu.INFO = 3] = "INFO", uu[uu.VERBOSE = 4] = "VERBOSE", uu
     }({});
-    const AR = {
-        debug: FR,
-        error: FR,
-        info: FR,
+    const iR = {
+        debug: hR,
+        error: hR,
+        info: hR,
         prefix: "Faro",
-        warn: FR
+        warn: hR
       },
-      zR = 1;
+      YR = 1;
 
-    function MR(UU) {
-      return MR = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(UU) {
-        return typeof UU
-      } : function(UU) {
-        return UU && "function" == typeof Symbol && UU.constructor === Symbol && UU !== Symbol.prototype ? "symbol" : typeof UU
-      }, MR(UU)
+    function oR(uu) {
+      return oR = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(uu) {
+        return typeof uu
+      } : function(uu) {
+        return uu && "function" == typeof Symbol && uu.constructor === Symbol && uu !== Symbol.prototype ? "symbol" : typeof uu
+      }, oR(uu)
     }
 
-    function DR(UU) {
-      var RU = function(UU, RU) {
-        if ("object" != MR(UU) || !UU) return UU;
-        var gU = UU[Symbol.toPrimitive];
-        if (void 0 !== gU) {
-          var tU = gU.call(UU, RU || "default");
-          if ("object" != MR(tU)) return tU;
+    function qR(uu) {
+      var Ru = function(uu, Ru) {
+        if ("object" != oR(uu) || !uu) return uu;
+        var yu = uu[Symbol.toPrimitive];
+        if (void 0 !== yu) {
+          var Eu = yu.call(uu, Ru || "default");
+          if ("object" != oR(Eu)) return Eu;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === RU ? String : Number)(UU)
-      }(UU, "string");
-      return "symbol" == MR(RU) ? RU : RU + ""
+        return ("string" === Ru ? String : Number)(uu)
+      }(uu, "string");
+      return "symbol" == oR(Ru) ? Ru : Ru + ""
     }
 
-    function LR(UU, RU, gU) {
-      return (RU = DR(RU)) in UU ? Object.defineProperty(UU, RU, {
-        value: gU,
+    function OR(uu, Ru, yu) {
+      return (Ru = qR(Ru)) in uu ? Object.defineProperty(uu, Ru, {
+        value: yu,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : UU[RU] = gU, UU
+      }) : uu[Ru] = yu, uu
     }
 
-    function NR(UU, RU) {
-      var gU = Object.keys(UU);
+    function vR(uu, Ru) {
+      var yu = Object.keys(uu);
       if (Object.getOwnPropertySymbols) {
-        var tU = Object.getOwnPropertySymbols(UU);
-        RU && (tU = tU.filter((function(RU) {
-          return Object.getOwnPropertyDescriptor(UU, RU).enumerable
-        }))), gU.push.apply(gU, tU)
+        var Eu = Object.getOwnPropertySymbols(uu);
+        Ru && (Eu = Eu.filter((function(Ru) {
+          return Object.getOwnPropertyDescriptor(uu, Ru).enumerable
+        }))), yu.push.apply(yu, Eu)
       }
-      return gU
+      return yu
     }
 
-    function lR(UU) {
-      for (var RU = 1; RU < arguments.length; RU++) {
-        var gU = null != arguments[RU] ? arguments[RU] : {};
-        RU % 2 ? NR(Object(gU), !0).forEach((function(RU) {
-          LR(UU, RU, gU[RU])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(UU, Object.getOwnPropertyDescriptors(gU)) : NR(Object(gU)).forEach((function(RU) {
-          Object.defineProperty(UU, RU, Object.getOwnPropertyDescriptor(gU, RU))
+    function aR(uu) {
+      for (var Ru = 1; Ru < arguments.length; Ru++) {
+        var yu = null != arguments[Ru] ? arguments[Ru] : {};
+        Ru % 2 ? vR(Object(yu), !0).forEach((function(Ru) {
+          OR(uu, Ru, yu[Ru])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(uu, Object.getOwnPropertyDescriptors(yu)) : vR(Object(yu)).forEach((function(Ru) {
+          Object.defineProperty(uu, Ru, Object.getOwnPropertyDescriptor(yu, Ru))
         }))
       }
-      return UU
+      return uu
     }
-    const OR = lR({}, console);
-    var Ug = class {
+    const fR = aR({}, console);
+    var uy = class {
         constructor() {
-          this.unpatchedConsole = OR, this.internalLogger = AR, this.config = {}, this.metas = {}
+          this.unpatchedConsole = fR, this.internalLogger = iR, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
-          this.internalLogger.debug(`${this.name}\n`, ...RU)
+          for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+          this.internalLogger.debug(`${this.name}\n`, ...Ru)
         }
         logInfo() {
-          for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
-          this.internalLogger.info(`${this.name}\n`, ...RU)
+          for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+          this.internalLogger.info(`${this.name}\n`, ...Ru)
         }
         logWarn() {
-          for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
-          this.internalLogger.warn(`${this.name}\n`, ...RU)
+          for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+          this.internalLogger.warn(`${this.name}\n`, ...Ru)
         }
         logError() {
-          for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
-          this.internalLogger.error(`${this.name}\n`, ...RU)
+          for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+          this.internalLogger.error(`${this.name}\n`, ...Ru)
         }
       },
-      Rg = class extends Ug {
+      Ry = class extends uy {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const gg = "2.12.1";
-    var tg = class extends Rg {
+    const yy = "2.12.1";
+    var Ey = class extends Ry {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = gg, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = yy, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(UU) {
-        var RU;
-        const gU = UU.session;
-        if (gU && gU.id !== (null === (RU = this.notifiedSession) || void 0 === RU ? void 0 : RU.id)) {
-          var tU;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = gU);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (tU = gU.attributes) || void 0 === tU ? void 0 : tU.previousSession)) return this.api.pushEvent(wR, {}, void 0, {
+      sendSessionStartEvent(uu) {
+        var Ru;
+        const yu = uu.session;
+        if (yu && yu.id !== (null === (Ru = this.notifiedSession) || void 0 === Ru ? void 0 : Ru.id)) {
+          var Eu;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = yu);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (Eu = yu.attributes) || void 0 === Eu ? void 0 : Eu.previousSession)) return this.api.pushEvent(eR, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = gU);
-          this.notifiedSession = gU, this.api.pushEvent(IR, {}, void 0, {
+          }), void(this.notifiedSession = yu);
+          this.notifiedSession = yu, this.api.pushEvent(CR, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(UU, RU, gU) {
-        const tU = null === gU || void 0 === gU ? void 0 : gU.session;
-        let pU, EU, PU = UU.fetchUserSession();
-        if (RU.persistent && RU.maxSessionPersistenceTime && PU) {
-          const UU = jR();
-          PU.lastActivity < UU - RU.maxSessionPersistenceTime && (dR.removeUserSession(), PU = null)
+      createInitialSession(uu, Ru, yu) {
+        const Eu = null === yu || void 0 === yu ? void 0 : yu.session;
+        let Ku, Qu, mu = uu.fetchUserSession();
+        if (Ru.persistent && Ru.maxSessionPersistenceTime && mu) {
+          const uu = BR();
+          mu.lastActivity < uu - Ru.maxSessionPersistenceTime && (cR.removeUserSession(), mu = null)
         }
-        const TU = ZR(PU);
-        if ((null === gU || void 0 === gU ? void 0 : gU.reset) || !TU || (null === tU || void 0 === tU ? void 0 : tU.id) && tU.id !== (null === PU || void 0 === PU ? void 0 : PU.sessionId)) {
-          var qU, KU, cU, GU, jU, uU;
-          EU = oR({
-            sessionId: (null === gU || void 0 === gU ? void 0 : gU.reset) ? void 0 : null !== (qU = null === tU || void 0 === tU ? void 0 : tU.id) && void 0 !== qU ? qU : null === (KU = RU.session) || void 0 === KU ? void 0 : KU.id,
-            isSampled: GR(this)
+        const Ju = IR(mu);
+        if ((null === yu || void 0 === yu ? void 0 : yu.reset) || !Ju || (null === Eu || void 0 === Eu ? void 0 : Eu.id) && Eu.id !== (null === mu || void 0 === mu ? void 0 : mu.sessionId)) {
+          var Nu, Xu, Vu, ru, Bu, xu;
+          Qu = MR({
+            sessionId: (null === yu || void 0 === yu ? void 0 : yu.reset) ? void 0 : null !== (Nu = null === Eu || void 0 === Eu ? void 0 : Eu.id) && void 0 !== Nu ? Nu : null === (Xu = Ru.session) || void 0 === Xu ? void 0 : Xu.id,
+            isSampled: rR(this)
           }, this);
-          const UU = EU.sessionId,
-            CU = gU && TU ? null === PU || void 0 === PU || null === (cU = PU.sessionMeta) || void 0 === cU ? void 0 : cU.overrides : void 0,
-            hU = CU ? cR(cR({}, null === (GU = RU.session) || void 0 === GU ? void 0 : GU.overrides), CU) : null === (jU = RU.session) || void 0 === jU ? void 0 : jU.overrides;
-          EU.sessionMeta = cR({
-            id: UU,
-            attributes: cR({
-              isSampled: EU.isSampled.toString()
-            }, null === (uU = RU.session) || void 0 === uU ? void 0 : uU.attributes)
-          }, hU ? {
-            overrides: hU
-          } : {}), pU = IR
+          const uu = Qu.sessionId,
+            Su = yu && Ju ? null === mu || void 0 === mu || null === (Vu = mu.sessionMeta) || void 0 === Vu ? void 0 : Vu.overrides : void 0,
+            pu = Su ? VR(VR({}, null === (ru = Ru.session) || void 0 === ru ? void 0 : ru.overrides), Su) : null === (Bu = Ru.session) || void 0 === Bu ? void 0 : Bu.overrides;
+          Qu.sessionMeta = VR({
+            id: uu,
+            attributes: VR({
+              isSampled: Qu.isSampled.toString()
+            }, null === (xu = Ru.session) || void 0 === xu ? void 0 : xu.attributes)
+          }, pu ? {
+            overrides: pu
+          } : {}), Ku = CR
         } else {
-          var CU, hU;
-          const UU = null === PU || void 0 === PU ? void 0 : PU.sessionId;
-          EU = oR({
-            sessionId: UU,
-            isSampled: PU.isSampled || !1,
-            started: null === PU || void 0 === PU ? void 0 : PU.started
+          var Su, pu;
+          const uu = null === mu || void 0 === mu ? void 0 : mu.sessionId;
+          Qu = MR({
+            sessionId: uu,
+            isSampled: mu.isSampled || !1,
+            started: null === mu || void 0 === mu ? void 0 : mu.started
           }, this);
-          const gU = null === PU || void 0 === PU ? void 0 : PU.sessionMeta,
-            tU = cR(cR({}, null === (CU = RU.session) || void 0 === CU ? void 0 : CU.overrides), null === gU || void 0 === gU ? void 0 : gU.overrides);
-          EU.sessionMeta = cR(cR({}, RU.session), {}, {
-            id: UU,
-            attributes: cR(cR(cR({}, null === (hU = RU.session) || void 0 === hU ? void 0 : hU.attributes), null === gU || void 0 === gU ? void 0 : gU.attributes), {}, {
-              isSampled: EU.isSampled.toString()
+          const yu = null === mu || void 0 === mu ? void 0 : mu.sessionMeta,
+            Eu = VR(VR({}, null === (Su = Ru.session) || void 0 === Su ? void 0 : Su.overrides), null === yu || void 0 === yu ? void 0 : yu.overrides);
+          Qu.sessionMeta = VR(VR({}, Ru.session), {}, {
+            id: uu,
+            attributes: VR(VR(VR({}, null === (pu = Ru.session) || void 0 === pu ? void 0 : pu.attributes), null === yu || void 0 === yu ? void 0 : yu.attributes), {}, {
+              isSampled: Qu.isSampled.toString()
             }),
-            overrides: tU
-          }), pU = JR
+            overrides: Eu
+          }), Ku = kR
         }
-        var QU;
-        if (tU && (EU.sessionMeta = cR(cR({}, EU.sessionMeta), {}, {
-            attributes: cR(cR(cR({}, null === (QU = EU.sessionMeta) || void 0 === QU ? void 0 : QU.attributes), tU.attributes), {}, {
-              isSampled: EU.isSampled.toString()
+        var Tu;
+        if (Eu && (Qu.sessionMeta = VR(VR({}, Qu.sessionMeta), {}, {
+            attributes: VR(VR(VR({}, null === (Tu = Qu.sessionMeta) || void 0 === Tu ? void 0 : Tu.attributes), Eu.attributes), {}, {
+              isSampled: Qu.isSampled.toString()
             })
-          }), tU.overrides)) {
-          const UU = (null === gU || void 0 === gU ? void 0 : gU.inheritOverrides) ? cR(cR({}, EU.sessionMeta.overrides), tU.overrides) : tU.overrides;
-          Object.keys(UU).length > 0 ? EU.sessionMeta.overrides = UU : delete EU.sessionMeta.overrides
+          }), Eu.overrides)) {
+          const uu = (null === yu || void 0 === yu ? void 0 : yu.inheritOverrides) ? VR(VR({}, Qu.sessionMeta.overrides), Eu.overrides) : Eu.overrides;
+          Object.keys(uu).length > 0 ? Qu.sessionMeta.overrides = uu : delete Qu.sessionMeta.overrides
         }
         return {
-          initialSession: EU,
-          lifecycleType: pU
+          initialSession: Qu,
+          lifecycleType: Ku
         }
       }
-      registerBeforeSendHook(UU) {
-        var RU;
-        this.beforeSendHook = RU => {
-          var gU, tU;
-          const pU = null === (gU = RU.meta.session) || void 0 === gU ? void 0 : gU.id;
-          pU && !this.transports.isPaused() && UU(pU);
-          const EU = null === (tU = RU.meta.session) || void 0 === tU ? void 0 : tU.attributes;
-          if (EU && "true" === (null === EU || void 0 === EU ? void 0 : EU.isSampled)) {
-            var PU;
-            let UU = JSON.parse(JSON.stringify(RU));
-            const gU = null === (PU = UU.meta.session) || void 0 === PU ? void 0 : PU.attributes;
-            var TU;
-            if (null === gU || void 0 === gU || delete gU.isSampled, 0 === Object.keys(null !== gU && void 0 !== gU ? gU : {}).length) null === (TU = UU.meta.session) || void 0 === TU || delete TU.attributes;
-            return UU
+      registerBeforeSendHook(uu) {
+        var Ru;
+        this.beforeSendHook = Ru => {
+          var yu, Eu;
+          const Ku = null === (yu = Ru.meta.session) || void 0 === yu ? void 0 : yu.id;
+          Ku && !this.transports.isPaused() && uu(Ku);
+          const Qu = null === (Eu = Ru.meta.session) || void 0 === Eu ? void 0 : Eu.attributes;
+          if (Qu && "true" === (null === Qu || void 0 === Qu ? void 0 : Qu.isSampled)) {
+            var mu;
+            let uu = JSON.parse(JSON.stringify(Ru));
+            const yu = null === (mu = uu.meta.session) || void 0 === mu ? void 0 : mu.attributes;
+            var Ju;
+            if (null === yu || void 0 === yu || delete yu.isSampled, 0 === Object.keys(null !== yu && void 0 !== yu ? yu : {}).length) null === (Ju = uu.meta.session) || void 0 === Ju || delete Ju.attributes;
+            return uu
           }
           return null
-        }, null === (RU = this.transports) || void 0 === RU || RU.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (Ru = this.transports) || void 0 === Ru || Ru.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var UU;
+        var uu;
         this.logDebug("init session instrumentation");
-        const RU = document.prerendering;
-        var gU;
-        if ((null === (UU = this.config.sessionTracking) || void 0 === UU ? void 0 : UU.enabled) && (RU || this.prerenderSession)) return null !== (gU = this.prerenderSession) && void 0 !== gU || (this.prerenderSession = new yR(this.metas, this.transports, (UU => {
-          this.prerenderSession = void 0, this.initializeSession(UU)
+        const Ru = document.prerendering;
+        var yu;
+        if ((null === (uu = this.config.sessionTracking) || void 0 === uu ? void 0 : uu.enabled) && (Ru || this.prerenderSession)) return null !== (yu = this.prerenderSession) && void 0 !== yu || (this.prerenderSession = new wR(this.metas, this.transports, (uu => {
+          this.prerenderSession = void 0, this.initializeSession(uu)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(UU) {
-        const RU = this.config.sessionTracking;
-        if (null === RU || void 0 === RU ? void 0 : RU.enabled) {
-          var gU, tU;
-          const pU = kR(RU),
-            EU = new pU(this);
-          this.isAdoptingSession = EU.isAdopting, this.registerBeforeSendHook(EU.recordActivity);
+      initializeSession(uu) {
+        const Ru = this.config.sessionTracking;
+        if (null === Ru || void 0 === Ru ? void 0 : Ru.enabled) {
+          var yu, Eu;
+          const Ku = ZR(Ru),
+            Qu = new Ku(this);
+          this.isAdoptingSession = Qu.isAdopting, this.registerBeforeSendHook(Qu.recordActivity);
           const {
-            initialSession: PU,
-            lifecycleType: TU
-          } = this.createInitialSession(pU, RU, UU);
-          pU.storeUserSession(PU);
-          const qU = PU.sessionMeta;
-          this.notifiedSession = qU, this.api.setSession(qU), this.captureListener = () => {
-            this.transports.isPaused() || EU.updateSession({
+            initialSession: mu,
+            lifecycleType: Ju
+          } = this.createInitialSession(Ku, Ru, uu);
+          Ku.storeUserSession(mu);
+          const Nu = mu.sessionMeta;
+          this.notifiedSession = Nu, this.api.setSession(Nu), this.captureListener = () => {
+            this.transports.isPaused() || Qu.updateSession({
               refreshActivity: !1
             })
-          }, null === (gU = (tU = this.metas).addCaptureListener) || void 0 === gU || gU.call(tU, this.captureListener), TU === IR && this.api.pushEvent(IR, {}, void 0, {
+          }, null === (yu = (Eu = this.metas).addCaptureListener) || void 0 === yu || yu.call(Eu, this.captureListener), Ju === CR && this.api.pushEvent(CR, {}, void 0, {
             skipDedupe: !0
-          }), TU === JR && this.api.pushEvent(JR, {}, void 0, {
+          }), Ju === kR && this.api.pushEvent(kR, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var UU, RU, gU;
-        (null === (UU = this.prerenderSession) || void 0 === UU || UU.destroy(), this.captureListener) && (null === (RU = (gU = this.metas).removeCaptureListener) || void 0 === RU || RU.call(gU, this.captureListener), this.captureListener = void 0);
+        var uu, Ru, yu;
+        (null === (uu = this.prerenderSession) || void 0 === uu || uu.destroy(), this.captureListener) && (null === (Ru = (yu = this.metas).removeCaptureListener) || void 0 === Ru || Ru.call(yu, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function pg(UU, RU, gU, tU) {
-      const pU = {
-        filename: UU || document.location.href,
-        function: RU || "?"
+    function Ky(uu, Ru, yu, Eu) {
+      const Ku = {
+        filename: uu || document.location.href,
+        function: Ru || "?"
       };
-      return void 0 !== gU && (pU.lineno = gU), void 0 !== tU && (pU.colno = tU), pU
+      return void 0 !== yu && (Ku.lineno = yu), void 0 !== Eu && (Ku.colno = Eu), Ku
     }
-    const Eg = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      Pg = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      Tg = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      qg = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      Kg = "safari-extension",
-      cg = "safari-web-extension",
-      Gg = /Minified React error #\d+;/i;
+    const Qy = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      my = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      Jy = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      Ny = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      Xy = "safari-extension",
+      Vy = "safari-web-extension",
+      ry = /Minified React error #\d+;/i;
 
-    function jg(UU, RU) {
-      const gU = null === UU || void 0 === UU ? void 0 : UU.includes(Kg),
-        tU = !gU && (null === UU || void 0 === UU ? void 0 : UU.includes("safari-web-extension"));
-      return gU || tU ? [(null === UU || void 0 === UU ? void 0 : UU.includes("@")) ? UU.split("@")[0] : UU, gU ? `${Kg}:${RU}` : `${cg}:${RU}`] : [UU, RU]
+    function By(uu, Ru) {
+      const yu = null === uu || void 0 === uu ? void 0 : uu.includes(Xy),
+        Eu = !yu && (null === uu || void 0 === uu ? void 0 : uu.includes("safari-web-extension"));
+      return yu || Eu ? [(null === uu || void 0 === uu ? void 0 : uu.includes("@")) ? uu.split("@")[0] : uu, yu ? `${Xy}:${Ru}` : `${Vy}:${Ru}`] : [uu, Ru]
     }
-    const ug = 1024;
+    const xy = 1024;
 
-    function Cg(UU) {
-      let RU = [];
-      UU.stacktrace ? RU = UU.stacktrace.split("\n").filter(((UU, RU) => RU % 2 === 0)) : UU.stack && (RU = UU.stack.split("\n"));
-      const gU = RU.reduce(((RU, gU, tU) => {
-        if (gU.length > ug) return RU;
-        let pU, EU, PU, TU, qU;
-        if (pU = Eg.exec(gU)) {
-          if (EU = pU[1], PU = pU[2], TU = pU[3], qU = pU[4], null === PU || void 0 === PU ? void 0 : PU.startsWith("eval")) {
-            const UU = Pg.exec(PU);
-            UU && (PU = UU[1], TU = UU[2], qU = UU[3])
+    function Sy(uu) {
+      let Ru = [];
+      uu.stacktrace ? Ru = uu.stacktrace.split("\n").filter(((uu, Ru) => Ru % 2 === 0)) : uu.stack && (Ru = uu.stack.split("\n"));
+      const yu = Ru.reduce(((Ru, yu, Eu) => {
+        if (yu.length > xy) return Ru;
+        let Ku, Qu, mu, Ju, Nu;
+        if (Ku = Qy.exec(yu)) {
+          if (Qu = Ku[1], mu = Ku[2], Ju = Ku[3], Nu = Ku[4], null === mu || void 0 === mu ? void 0 : mu.startsWith("eval")) {
+            const uu = my.exec(mu);
+            uu && (mu = uu[1], Ju = uu[2], Nu = uu[3])
           }
-          PU = (null === PU || void 0 === PU ? void 0 : PU.startsWith("address at ")) ? PU.substring(11) : PU, [EU, PU] = jg(EU, PU)
-        } else if (pU = Tg.exec(gU)) {
-          if (EU = pU[1], PU = pU[3], TU = pU[4], qU = pU[5], PU && PU.includes(" > eval")) {
-            const UU = qg.exec(PU);
-            UU && (EU = EU || "eval", PU = UU[1], TU = UU[2])
-          } else 0 === tU && !qU && JU(UU.columnNumber) && (qU = String(UU.columnNumber + 1));
-          [EU, PU] = jg(EU, PU)
+          mu = (null === mu || void 0 === mu ? void 0 : mu.startsWith("address at ")) ? mu.substring(11) : mu, [Qu, mu] = By(Qu, mu)
+        } else if (Ku = Jy.exec(yu)) {
+          if (Qu = Ku[1], mu = Ku[3], Ju = Ku[4], Nu = Ku[5], mu && mu.includes(" > eval")) {
+            const uu = Ny.exec(mu);
+            uu && (Qu = Qu || "eval", mu = uu[1], Ju = uu[2])
+          } else 0 === Eu && !Nu && ku(uu.columnNumber) && (Nu = String(uu.columnNumber + 1));
+          [Qu, mu] = By(Qu, mu)
         }
-        return (PU || EU) && RU.push(pg(PU, EU, TU ? Number(TU) : void 0, qU ? Number(qU) : void 0)), RU
+        return (mu || Qu) && Ru.push(Ky(mu, Qu, Ju ? Number(Ju) : void 0, Nu ? Number(Nu) : void 0)), Ru
       }), []);
-      return Gg.test(UU.message) ? gU.slice(1) : gU
+      return ry.test(uu.message) ? yu.slice(1) : yu
     }
 
-    function hg(UU) {
+    function py(uu) {
       return {
-        frames: Cg(UU)
+        frames: Sy(uu)
       }
     }
-    const Qg = "http-request-start",
-      eg = "http-request-end";
-    var Wg = class UU {
+    const Ty = "http-request-start",
+      Wy = "http-request-end";
+    var jy = class uu {
       constructor() {
         this.subscribers = []
       }
-      subscribe(UU) {
-        return this.subscribers.push(UU), {
-          unsubscribe: () => this.unsubscribe(UU)
+      subscribe(uu) {
+        return this.subscribers.push(uu), {
+          unsubscribe: () => this.unsubscribe(uu)
         }
       }
-      unsubscribe(UU) {
-        this.subscribers = this.subscribers.filter((RU => RU !== UU))
+      unsubscribe(uu) {
+        this.subscribers = this.subscribers.filter((Ru => Ru !== uu))
       }
-      notify(UU) {
-        this.subscribers.forEach((RU => RU(UU)))
+      notify(uu) {
+        this.subscribers.forEach((Ru => Ru(uu)))
       }
       first() {
-        const RU = new UU,
-          gU = UU => {
-            RU.notify(UU), tU.unsubscribe()
+        const Ru = new uu,
+          yu = uu => {
+            Ru.notify(uu), Eu.unsubscribe()
           },
-          tU = this.subscribe(gU),
-          pU = RU.unsubscribe.bind(RU);
-        return this.withUnsubscribeOverride(RU, pU, gU)
+          Eu = this.subscribe(yu),
+          Ku = Ru.unsubscribe.bind(Ru);
+        return this.withUnsubscribeOverride(Ru, Ku, yu)
       }
-      takeWhile(RU) {
-        const gU = new UU,
-          tU = UU => {
-            RU(UU) ? gU.notify(UU) : gU.unsubscribe(tU)
+      takeWhile(Ru) {
+        const yu = new uu,
+          Eu = uu => {
+            Ru(uu) ? yu.notify(uu) : yu.unsubscribe(Eu)
           };
-        this.subscribe(tU);
-        const pU = gU.unsubscribe.bind(gU);
-        return this.withUnsubscribeOverride(gU, pU, tU)
+        this.subscribe(Eu);
+        const Ku = yu.unsubscribe.bind(yu);
+        return this.withUnsubscribeOverride(yu, Ku, Eu)
       }
-      filter(RU) {
-        const gU = new UU,
-          tU = UU => {
-            RU(UU) && gU.notify(UU)
+      filter(Ru) {
+        const yu = new uu,
+          Eu = uu => {
+            Ru(uu) && yu.notify(uu)
           };
-        this.subscribe(tU);
-        const pU = gU.unsubscribe.bind(gU);
-        return this.withUnsubscribeOverride(gU, pU, tU)
+        this.subscribe(Eu);
+        const Ku = yu.unsubscribe.bind(yu);
+        return this.withUnsubscribeOverride(yu, Ku, Eu)
       }
       merge() {
-        const RU = new UU,
-          gU = [];
-        for (var tU = arguments.length, pU = new Array(tU), EU = 0; EU < tU; EU++) pU[EU] = arguments[EU];
-        pU.forEach((UU => {
-          const tU = UU.subscribe((UU => {
-            RU.notify(UU)
+        const Ru = new uu,
+          yu = [];
+        for (var Eu = arguments.length, Ku = new Array(Eu), Qu = 0; Qu < Eu; Qu++) Ku[Qu] = arguments[Qu];
+        Ku.forEach((uu => {
+          const Eu = uu.subscribe((uu => {
+            Ru.notify(uu)
           }));
-          gU.push(tU)
+          yu.push(Eu)
         }));
-        const PU = RU.unsubscribeAll.bind(RU);
-        return RU.unsubscribe = () => {
-          gU.forEach((UU => UU.unsubscribe())), PU()
-        }, RU
+        const mu = Ru.unsubscribeAll.bind(Ru);
+        return Ru.unsubscribe = () => {
+          yu.forEach((uu => uu.unsubscribe())), mu()
+        }, Ru
       }
-      withUnsubscribeOverride(UU, RU, gU) {
-        return UU.unsubscribe = UU => {
-          RU(UU), this.unsubscribe(gU)
-        }, UU
+      withUnsubscribeOverride(uu, Ru, yu) {
+        return uu.unsubscribe = uu => {
+          Ru(uu), this.unsubscribe(yu)
+        }, uu
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let fg = function(UU) {
-      return UU.TRACE = "trace", UU.DEBUG = "debug", UU.INFO = "info", UU.LOG = "log", UU.WARN = "warn", UU.ERROR = "error", UU
+    let Hy = function(uu) {
+      return uu.TRACE = "trace", uu.DEBUG = "debug", uu.INFO = "info", uu.LOG = "log", uu.WARN = "warn", uu.ERROR = "error", uu
     }({});
-    const xg = "log",
-      mg = ["trace", "debug", "info", "log", "warn", "error"];
-    let Ig, Jg = !1;
-    const wg = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      ng = "Error",
-      bg = UU => UU.map((UU => oU(UU) ? XR(UU) : String(UU))).join(" ");
+    const dy = "log",
+      by = ["trace", "debug", "info", "log", "warn", "error"];
+    let Cy, ky = !1;
+    const ey = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      Ay = "Error",
+      Dy = uu => uu.map((uu => Mu(uu) ? lR(uu) : String(uu))).join(" ");
 
-    function og(UU) {
-      let RU, gU, tU, pU, EU = [];
-      if (HU(UU) && UU.error) RU = UU.error.message, gU = UU.error.name, EU = Cg(UU.error);
-      else if ((tU = SU(UU)) || sU(UU)) {
+    function My(uu) {
+      let Ru, yu, Eu, Ku, Qu = [];
+      if (Lu(uu) && uu.error) Ru = uu.error.message, yu = uu.error.name, Qu = Sy(uu.error);
+      else if ((Eu = zu(uu)) || Fu(uu)) {
         const {
-          name: pU,
-          message: EU
-        } = UU;
-        gU = null !== pU && void 0 !== pU ? pU : tU ? "DOMError" : "DOMException", RU = EU ? `${gU}: ${EU}` : gU
-      } else dU(UU) ? (gU = UU.name, RU = UU.message, EU = Cg(UU)) : (oU(UU) || (pU = XU(UU))) && (gU = pU ? UU.constructor.name : void 0, RU = `Non-Error exception captured with keys: ${Object.keys(UU)}`);
-      return [RU, gU, EU]
+          name: Ku,
+          message: Qu
+        } = uu;
+        yu = null !== Ku && void 0 !== Ku ? Ku : Eu ? "DOMError" : "DOMException", Ru = Qu ? `${yu}: ${Qu}` : yu
+      } else cu(uu) ? (yu = uu.name, Ru = uu.message, Qu = Sy(uu)) : (Mu(uu) || (Ku = lu(uu))) && (yu = Ku ? uu.constructor.name : void 0, Ru = `Non-Error exception captured with keys: ${Object.keys(uu)}`);
+      return [Ru, yu, Qu]
     }
 
-    function Zg(UU) {
-      const [RU, gU, tU, pU, EU] = UU;
-      let PU, TU, qU = [];
-      const KU = IU(RU),
-        cU = pg(gU, "?", tU, pU);
-      return EU || !KU ? ([PU, TU, qU] = og(null !== EU && void 0 !== EU ? EU : RU), 0 === qU.length && (qU = [cU])) : KU && ([PU, TU] = function(UU) {
-        var RU, gU;
-        const tU = UU.match(wg),
-          pU = null !== (RU = null === tU || void 0 === tU ? void 0 : tU[1]) && void 0 !== RU ? RU : ng;
-        return [null !== (gU = null === tU || void 0 === tU ? void 0 : tU[2]) && void 0 !== gU ? gU : UU, pU]
-      }(RU), qU = [cU]), {
-        value: PU,
-        type: TU,
-        stackFrames: qU
+    function Iy(uu) {
+      const [Ru, yu, Eu, Ku, Qu] = uu;
+      let mu, Ju, Nu = [];
+      const Xu = Cu(Ru),
+        Vu = Ky(yu, "?", Eu, Ku);
+      return Qu || !Xu ? ([mu, Ju, Nu] = My(null !== Qu && void 0 !== Qu ? Qu : Ru), 0 === Nu.length && (Nu = [Vu])) : Xu && ([mu, Ju] = function(uu) {
+        var Ru, yu;
+        const Eu = uu.match(ey),
+          Ku = null !== (Ru = null === Eu || void 0 === Eu ? void 0 : Eu[1]) && void 0 !== Ru ? Ru : Ay;
+        return [null !== (yu = null === Eu || void 0 === Eu ? void 0 : Eu[2]) && void 0 !== yu ? yu : uu, Ku]
+      }(Ru), Nu = [Vu]), {
+        value: mu,
+        type: Ju,
+        stackFrames: Nu
       }
     }
 
-    function ag(UU, RU) {
-      return dU(UU[0]) ? Zg(UU) : {
-        value: RU(UU)
+    function Gy(uu, Ru) {
+      return cu(uu[0]) ? Iy(uu) : {
+        value: Ru(uu)
       }
     }
-    const Yg = UU => UU.map((UU => {
+    const Uy = uu => uu.map((uu => {
       try {
-        return String(UU)
-      } catch (RU) {
+        return String(uu)
+      } catch (Ru) {
         return ""
       }
     })).join(" ");
-    var Bg = class UU extends Rg {
+    var ny = class uu extends Ry {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = gg, this.errorSerializer = Yg
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = yy, this.errorSerializer = Uy
       }
       initialize() {
-        var RU, gU;
-        const tU = this.config.consoleInstrumentation,
-          pU = (null === tU || void 0 === tU ? void 0 : tU.serializeErrors) || !!(null === tU || void 0 === tU ? void 0 : tU.errorSerializer);
-        this.errorSerializer = pU ? null !== (RU = null === tU || void 0 === tU ? void 0 : tU.errorSerializer) && void 0 !== RU ? RU : bg : Yg;
-        const EU = null !== (gU = null === tU || void 0 === tU ? void 0 : tU.disabledLevels) && void 0 !== gU ? gU : UU.defaultDisabledLevels,
-          PU = function(UU) {
-            if (Ig || (Ig = new Wg), !Jg) {
-              const RU = null !== UU && void 0 !== UU ? UU : OR;
-              mg.forEach((UU => {
-                console[UU] = function() {
-                  for (var gU, tU = arguments.length, pU = new Array(tU), EU = 0; EU < tU; EU++) pU[EU] = arguments[EU];
-                  Ig.notify({
+        var Ru, yu;
+        const Eu = this.config.consoleInstrumentation,
+          Ku = (null === Eu || void 0 === Eu ? void 0 : Eu.serializeErrors) || !!(null === Eu || void 0 === Eu ? void 0 : Eu.errorSerializer);
+        this.errorSerializer = Ku ? null !== (Ru = null === Eu || void 0 === Eu ? void 0 : Eu.errorSerializer) && void 0 !== Ru ? Ru : Dy : Uy;
+        const Qu = null !== (yu = null === Eu || void 0 === Eu ? void 0 : Eu.disabledLevels) && void 0 !== yu ? yu : uu.defaultDisabledLevels,
+          mu = function(uu) {
+            if (Cy || (Cy = new jy), !ky) {
+              const Ru = null !== uu && void 0 !== uu ? uu : fR;
+              by.forEach((uu => {
+                console[uu] = function() {
+                  for (var yu, Eu = arguments.length, Ku = new Array(Eu), Qu = 0; Qu < Eu; Qu++) Ku[Qu] = arguments[Qu];
+                  Cy.notify({
                     type: "console",
-                    level: UU,
-                    args: pU
-                  }), null === (gU = RU[UU]) || void 0 === gU || gU.apply(console, pU)
+                    level: uu,
+                    args: Ku
+                  }), null === (yu = Ru[uu]) || void 0 === yu || yu.apply(console, Ku)
                 }
-              })), Jg = !0
+              })), ky = !0
             }
-            return Ig
+            return Cy
           }(this.unpatchedConsole);
-        this.subscription = PU.subscribe((RU => {
+        this.subscription = mu.subscribe((Ru => {
           let {
-            level: gU,
-            args: pU
-          } = RU;
-          if (!EU.includes(gU)) try {
-            if (gU !== fg.ERROR || (null === tU || void 0 === tU ? void 0 : tU.consoleErrorAsLog))
-              if (gU === fg.ERROR && (null === tU || void 0 === tU ? void 0 : tU.consoleErrorAsLog)) {
+            level: yu,
+            args: Ku
+          } = Ru;
+          if (!Qu.includes(yu)) try {
+            if (yu !== Hy.ERROR || (null === Eu || void 0 === Eu ? void 0 : Eu.consoleErrorAsLog))
+              if (yu === Hy.ERROR && (null === Eu || void 0 === Eu ? void 0 : Eu.consoleErrorAsLog)) {
                 const {
-                  value: RU,
-                  type: tU,
-                  stackFrames: EU
-                } = ag(pU, this.errorSerializer);
-                this.api.pushLog(RU ? [UU.consoleErrorPrefix + RU] : pU, {
-                  level: gU,
+                  value: Ru,
+                  type: Eu,
+                  stackFrames: Qu
+                } = Gy(Ku, this.errorSerializer);
+                this.api.pushLog(Ru ? [uu.consoleErrorPrefix + Ru] : Ku, {
+                  level: yu,
                   context: {
-                    value: null !== RU && void 0 !== RU ? RU : "",
-                    type: null !== tU && void 0 !== tU ? tU : "",
-                    stackFrames: (null === EU || void 0 === EU ? void 0 : EU.length) ? bg(EU) : ""
+                    value: null !== Ru && void 0 !== Ru ? Ru : "",
+                    type: null !== Eu && void 0 !== Eu ? Eu : "",
+                    stackFrames: (null === Qu || void 0 === Qu ? void 0 : Qu.length) ? Dy(Qu) : ""
                   }
                 })
-              } else this.api.pushLog(pU, {
-                level: gU
+              } else this.api.pushLog(Ku, {
+                level: yu
               });
             else {
               const {
-                value: RU,
-                type: gU,
-                stackFrames: tU
-              } = ag(pU, this.errorSerializer);
-              if (RU && !gU && !tU) return void this.api.pushError(new Error(UU.consoleErrorPrefix + RU));
-              this.api.pushError(new Error(UU.consoleErrorPrefix + RU), {
-                type: gU,
-                stackFrames: tU
+                value: Ru,
+                type: yu,
+                stackFrames: Eu
+              } = Gy(Ku, this.errorSerializer);
+              if (Ru && !yu && !Eu) return void this.api.pushError(new Error(uu.consoleErrorPrefix + Ru));
+              this.api.pushError(new Error(uu.consoleErrorPrefix + Ru), {
+                type: yu,
+                stackFrames: Eu
               })
             }
-          } catch (PU) {
-            this.logError(PU)
+          } catch (mu) {
+            this.logError(mu)
           }
         }))
       }
       destroy() {
-        var UU;
-        null === (UU = this.subscription) || void 0 === UU || UU.unsubscribe(), this.subscription = void 0
+        var uu;
+        null === (uu = this.subscription) || void 0 === uu || uu.unsubscribe(), this.subscription = void 0
       }
     };
-    Bg.defaultDisabledLevels = [fg.DEBUG, fg.TRACE, fg.LOG], Bg.consoleErrorPrefix = "console.error: ";
-    const Vg = [];
-    var rg = class extends Rg {
+    ny.defaultDisabledLevels = [Hy.DEBUG, Hy.TRACE, Hy.LOG], ny.consoleErrorPrefix = "console.error: ";
+    const sy = [];
+    var ty = class extends Ry {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = gg
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = yy
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(UU) {
-            const RU = window.onerror;
+          function(uu) {
+            const Ru = window.onerror;
             window.onerror = function() {
-              for (var gU = arguments.length, tU = new Array(gU), pU = 0; pU < gU; pU++) tU[pU] = arguments[pU];
+              for (var yu = arguments.length, Eu = new Array(yu), Ku = 0; Ku < yu; Ku++) Eu[Ku] = arguments[Ku];
               try {
                 const {
-                  value: RU,
-                  type: gU,
-                  stackFrames: pU
-                } = Zg(tU), EU = tU[4];
-                if (RU) {
-                  const tU = {
-                    type: gU,
-                    stackFrames: pU
+                  value: Ru,
+                  type: yu,
+                  stackFrames: Ku
+                } = Iy(Eu), Qu = Eu[4];
+                if (Ru) {
+                  const Eu = {
+                    type: yu,
+                    stackFrames: Ku
                   };
-                  null != EU && (tU.originalError = EU), UU.pushError(new Error(RU), tU)
+                  null != Qu && (Eu.originalError = Qu), uu.pushError(new Error(Ru), Eu)
                 }
               } finally {
-                null === RU || void 0 === RU || RU.apply(window, tU)
+                null === Ru || void 0 === Ru || Ru.apply(window, Eu)
               }
             }
           }(this.api),
-          function(UU) {
-            const RU = RU => {
-              var gU;
-              let tU, pU, EU = RU;
-              if (EU.reason) EU = RU.reason;
-              else if (null === (gU = RU.detail) || void 0 === gU ? void 0 : gU.reason) {
-                var PU;
-                EU = null === (PU = RU.detail) || void 0 === PU ? void 0 : PU.reason
+          function(uu) {
+            const Ru = Ru => {
+              var yu;
+              let Eu, Ku, Qu = Ru;
+              if (Qu.reason) Qu = Ru.reason;
+              else if (null === (yu = Ru.detail) || void 0 === yu ? void 0 : yu.reason) {
+                var mu;
+                Qu = null === (mu = Ru.detail) || void 0 === mu ? void 0 : mu.reason
               }
-              let TU = [];
-              VU(EU) ? (tU = `Non-Error promise rejection captured with value: ${String(EU)}`, pU = "UnhandledRejection") : [tU, pU, TU] = og(EU), tU && UU.pushError(new Error(tU), {
-                type: pU,
-                stackFrames: TU
+              let Ju = [];
+              su(Qu) ? (Eu = `Non-Error promise rejection captured with value: ${String(Qu)}`, Ku = "UnhandledRejection") : [Eu, Ku, Ju] = My(Qu), Eu && uu.pushError(new Error(Eu), {
+                type: Ku,
+                stackFrames: Ju
               })
             };
-            window.addEventListener("unhandledrejection", RU), Vg.push(RU)
+            window.addEventListener("unhandledrejection", Ru), sy.push(Ru)
           }(this.api)
       }
     };
-    const Xg = "unknown";
-    var vg = class extends Rg {
+    const ly = "unknown";
+    var gy = class extends Ry {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = gg, this.waitingForActivation = !1, this.sendViewChangedEvent = UU => {
-          var RU;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = yy, this.waitingForActivation = !1, this.sendViewChangedEvent = uu => {
+          var Ru;
           if (this.waitingForActivation || document.prerendering) return;
-          const gU = UU.view;
-          if (gU && gU.name !== (null === (RU = this.notifiedView) || void 0 === RU ? void 0 : RU.name)) {
-            var tU, pU, EU;
-            const UU = null !== (tU = null === (pU = this.notifiedView) || void 0 === pU ? void 0 : pU.name) && void 0 !== tU ? tU : Xg;
-            this.notifiedView = gU, this.api.pushEvent(mR, {
-              fromView: UU,
-              toView: null !== (EU = gU.name) && void 0 !== EU ? EU : Xg
+          const yu = uu.view;
+          if (yu && yu.name !== (null === (Ru = this.notifiedView) || void 0 === Ru ? void 0 : Ru.name)) {
+            var Eu, Ku, Qu;
+            const uu = null !== (Eu = null === (Ku = this.notifiedView) || void 0 === Ku ? void 0 : Ku.name) && void 0 !== Eu ? Eu : ly;
+            this.notifiedView = yu, this.api.pushEvent(bR, {
+              fromView: uu,
+              toView: null !== (Qu = yu.name) && void 0 !== Qu ? Qu : ly
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class dg {
+    class cy {
       t;
       o = 0;
       i = [];
-      l(UU) {
-        if (UU.hadRecentInput) return;
-        const RU = this.i[0],
-          gU = this.i.at(-1);
-        this.o && RU && gU && UU.startTime - gU.startTime < 1e3 && UU.startTime - RU.startTime < 5e3 ? (this.o += UU.value, this.i.push(UU)) : (this.o = UU.value, this.i = [UU]), this.t?.(UU)
+      l(uu) {
+        if (uu.hadRecentInput) return;
+        const Ru = this.i[0],
+          yu = this.i.at(-1);
+        this.o && Ru && yu && uu.startTime - yu.startTime < 1e3 && uu.startTime - Ru.startTime < 5e3 ? (this.o += uu.value, this.i.push(uu)) : (this.o = uu.value, this.i = [uu]), this.t?.(uu)
       }
     }
-    const Hg = () => {
-        const UU = performance.getEntriesByType("navigation")[0];
-        if (UU && UU.responseStart > 0 && UU.responseStart < performance.now()) return UU
+    const Ly = () => {
+        const uu = performance.getEntriesByType("navigation")[0];
+        if (uu && uu.responseStart > 0 && uu.responseStart < performance.now()) return uu
       },
-      Sg = UU => {
+      zy = uu => {
         if ("loading" === document.readyState) return "loading";
-        const RU = Hg();
-        if (RU) {
-          if (UU < RU.domInteractive) return "loading";
-          if (0 === RU.domContentLoadedEventStart || UU < RU.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === RU.domComplete || UU < RU.domComplete) return "dom-content-loaded"
+        const Ru = Ly();
+        if (Ru) {
+          if (uu < Ru.domInteractive) return "loading";
+          if (0 === Ru.domContentLoadedEventStart || uu < Ru.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === Ru.domComplete || uu < Ru.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      sg = UU => {
-        const RU = UU.nodeName;
-        return 1 === UU.nodeType ? RU.toLowerCase() : RU.toUpperCase().replace(/^#/, "")
+      Fy = uu => {
+        const Ru = uu.nodeName;
+        return 1 === uu.nodeType ? Ru.toLowerCase() : Ru.toUpperCase().replace(/^#/, "")
       },
-      yg = UU => {
-        let RU = "";
+      wy = uu => {
+        let Ru = "";
         try {
-          for (; 9 !== UU?.nodeType;) {
-            const gU = UU,
-              tU = gU.id ? "#" + gU.id : [sg(gU), ...Array.from(gU.classList ?? []).sort()].join(".");
-            if (RU.length + tU.length > 99) return RU || tU;
-            if (RU = RU ? tU + ">" + RU : tU, gU.id) break;
-            UU = gU.parentNode
+          for (; 9 !== uu?.nodeType;) {
+            const yu = uu,
+              Eu = yu.id ? "#" + yu.id : [Fy(yu), ...Array.from(yu.classList ?? []).sort()].join(".");
+            if (Ru.length + Eu.length > 99) return Ru || Eu;
+            if (Ru = Ru ? Eu + ">" + Ru : Eu, yu.id) break;
+            uu = yu.parentNode
           }
         } catch {}
-        return RU
+        return Ru
       },
-      kg = new WeakMap;
+      Zy = new WeakMap;
 
-    function Fg(UU, RU) {
-      let gU = kg.get(RU);
-      return gU || (gU = new WeakMap, kg.set(RU, gU)), gU.get(UU) || gU.set(UU, new RU), gU.get(UU)
+    function hy(uu, Ru) {
+      let yu = Zy.get(Ru);
+      return yu || (yu = new WeakMap, Zy.set(Ru, yu)), yu.get(uu) || yu.set(uu, new Ru), yu.get(uu)
     }
-    let ig = -1;
-    const Ag = () => ig,
-      zg = UU => {
-        addEventListener("pageshow", (RU => {
-          RU.persisted && (ig = RU.timeStamp, UU(RU))
+    let Py = -1;
+    const iy = () => Py,
+      Yy = uu => {
+        addEventListener("pageshow", (Ru => {
+          Ru.persisted && (Py = Ru.timeStamp, uu(Ru))
         }), !0)
       },
-      Mg = (UU, RU, gU, tU) => {
-        let pU, EU;
-        return PU => {
-          RU.value >= 0 && (PU || tU) && (EU = RU.value - (pU ?? 0), (EU || void 0 === pU) && (pU = RU.value, RU.delta = EU, RU.rating = ((UU, RU) => UU > RU[1] ? "poor" : UU > RU[0] ? "needs-improvement" : "good")(RU.value, gU), UU(RU)))
+      oy = (uu, Ru, yu, Eu) => {
+        let Ku, Qu;
+        return mu => {
+          Ru.value >= 0 && (mu || Eu) && (Qu = Ru.value - (Ku ?? 0), (Qu || void 0 === Ku) && (Ku = Ru.value, Ru.delta = Qu, Ru.rating = ((uu, Ru) => uu > Ru[1] ? "poor" : uu > Ru[0] ? "needs-improvement" : "good")(Ru.value, yu), uu(Ru)))
         }
       },
-      Dg = UU => {
-        requestAnimationFrame((() => requestAnimationFrame((() => UU()))))
+      qy = uu => {
+        requestAnimationFrame((() => requestAnimationFrame((() => uu()))))
       },
-      Lg = () => Hg()?.activationStart ?? 0;
-    let Ng = -1;
-    const lg = new Set,
-      Og = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      Ut = UU => {
+      Oy = () => Ly()?.activationStart ?? 0;
+    let vy = -1;
+    const ay = new Set,
+      fy = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      uE = uu => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === UU.type)
-            for (const UU of lg) UU();
-          isFinite(Ng) || (Ng = "visibilitychange" === UU.type ? UU.timeStamp : 0, removeEventListener("prerenderingchange", Ut, !0))
+          if ("visibilitychange" === uu.type)
+            for (const uu of ay) uu();
+          isFinite(vy) || (vy = "visibilitychange" === uu.type ? uu.timeStamp : 0, removeEventListener("prerenderingchange", uE, !0))
         }
       },
-      Rt = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Ng = 1 / 0), Ng < 0) {
-          const UU = Lg(),
-            RU = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((RU => "hidden" === RU.name && RU.startTime >= UU))?.startTime;
-          Ng = RU ?? Og(), addEventListener("visibilitychange", Ut, !0), addEventListener("prerenderingchange", Ut, !0), zg((() => {
+      RE = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (vy = 1 / 0), vy < 0) {
+          const uu = Oy(),
+            Ru = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((Ru => "hidden" === Ru.name && Ru.startTime >= uu))?.startTime;
+          vy = Ru ?? fy(), addEventListener("visibilitychange", uE, !0), addEventListener("prerenderingchange", uE, !0), Yy((() => {
             setTimeout((() => {
-              Ng = Og()
+              vy = fy()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return Ng
+            return vy
           },
-          onHidden(UU) {
-            lg.add(UU)
+          onHidden(uu) {
+            ay.add(uu)
           }
         }
       },
-      gt = function(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          gU = arguments.length > 2 ? arguments[2] : void 0,
-          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          pU = arguments.length > 4 ? arguments[4] : void 0,
-          EU = arguments.length > 5 ? arguments[5] : void 0,
-          PU = arguments.length > 6 ? arguments[6] : void 0;
-        const TU = Hg(),
-          qU = TU?.navigationId || 0;
-        let KU = "navigate";
-        return gU ? KU = gU : Ag() >= 0 ? KU = "back-forward-cache" : TU && (document.prerendering || Lg() > 0 ? KU = "prerender" : document.wasDiscarded ? KU = "restore" : TU.type && (KU = TU.type.replace(/_/g, "-"))), {
-          name: UU,
-          value: RU,
+      yE = function(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          yu = arguments.length > 2 ? arguments[2] : void 0,
+          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Ku = arguments.length > 4 ? arguments[4] : void 0,
+          Qu = arguments.length > 5 ? arguments[5] : void 0,
+          mu = arguments.length > 6 ? arguments[6] : void 0;
+        const Ju = Ly(),
+          Nu = Ju?.navigationId || 0;
+        let Xu = "navigate";
+        return yu ? Xu = yu : iy() >= 0 ? Xu = "back-forward-cache" : Ju && (document.prerendering || Oy() > 0 ? Xu = "prerender" : document.wasDiscarded ? Xu = "restore" : Ju.type && (Xu = Ju.type.replace(/_/g, "-"))), {
+          name: uu,
+          value: Ru,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: KU,
-          navigationId: tU || qU,
-          navigationInteractionId: pU,
-          navigationURL: EU || TU?.name,
-          navigationStartTime: PU || 0
+          navigationType: Xu,
+          navigationId: Eu || Nu,
+          navigationInteractionId: Ku,
+          navigationURL: Qu || Ju?.name,
+          navigationStartTime: mu || 0
         }
       },
-      tt = function(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      EE = function(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const tU = UU.filter((UU => PerformanceObserver.supportedEntryTypes.includes(UU)));
-          if (tU.length > 0) {
-            const UU = new PerformanceObserver((UU => {
+          const Eu = uu.filter((uu => PerformanceObserver.supportedEntryTypes.includes(uu)));
+          if (Eu.length > 0) {
+            const uu = new PerformanceObserver((uu => {
               queueMicrotask((() => {
-                const gU = UU.getEntries();
-                tU.length > 1 && gU.sort(((UU, RU) => UU.startTime + UU.duration - (RU.startTime + RU.duration))), RU(gU)
+                const yu = uu.getEntries();
+                Eu.length > 1 && yu.sort(((uu, Ru) => uu.startTime + uu.duration - (Ru.startTime + Ru.duration))), Ru(yu)
               }))
             }));
-            for (const RU of tU) UU.observe({
-              type: RU,
+            for (const Ru of Eu) uu.observe({
+              type: Ru,
               buffered: !0,
-              ...gU
+              ...yu
             });
-            return UU
+            return uu
           }
         } catch {}
       },
-      pt = UU => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && UU && UU.reportSoftNavs,
-      Et = (UU, RU) => {
-        if (UU.set(RU.navigationId, RU), UU.size > 2) {
-          const RU = UU.keys().next().value;
-          void 0 !== RU && UU.delete(RU)
+      KE = uu => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && uu && uu.reportSoftNavs,
+      QE = (uu, Ru) => {
+        if (uu.set(Ru.navigationId, Ru), uu.size > 2) {
+          const Ru = uu.keys().next().value;
+          void 0 !== Ru && uu.delete(Ru)
         }
       },
-      Pt = UU => {
-        let RU = !1;
+      mE = uu => {
+        let Ru = !1;
         return () => {
-          RU || (UU(), RU = !0)
+          Ru || (uu(), Ru = !0)
         }
       };
-    class Tt {
+    class JE {
       u
     }
-    const qt = UU => {
-        document.prerendering ? addEventListener("prerenderingchange", UU, !0) : UU()
+    const NE = uu => {
+        document.prerendering ? addEventListener("prerenderingchange", uu, !0) : uu()
       },
-      Kt = [1800, 3e3],
-      ct = function(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const gU = pt(RU);
-        qt((() => {
-          const tU = Fg(RU, Tt),
-            pU = Rt();
-          let EU, PU = gt("FCP");
-          const TU = tt(["paint"], (UU => {
-            for (const RU of UU) "first-contentful-paint" === RU.name && (TU.disconnect(), RU.startTime < pU.firstHiddenTime && (PU.value = Math.max(RU.startTime - Lg(), 0), PU.entries.push(RU), PU.navigationId = RU.navigationId || PU.navigationId, EU(!0)))
+      XE = [1800, 3e3],
+      VE = function(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const yu = KE(Ru);
+        NE((() => {
+          const Eu = hy(Ru, JE),
+            Ku = RE();
+          let Qu, mu = yE("FCP");
+          const Ju = EE(["paint"], (uu => {
+            for (const Ru of uu) "first-contentful-paint" === Ru.name && (Ju.disconnect(), Ru.startTime < Ku.firstHiddenTime && (mu.value = Math.max(Ru.startTime - Oy(), 0), mu.entries.push(Ru), mu.navigationId = Ru.navigationId || mu.navigationId, Qu(!0)))
           }));
-          TU && (EU = Mg(UU, PU, Kt, RU.reportAllChanges), zg((gU => {
-            PU = gt("FCP", -1, "back-forward-cache", PU.navigationId, PU.navigationInteractionId, PU.navigationURL, Ag()), EU = Mg(UU, PU, Kt, RU.reportAllChanges), Dg((() => {
-              PU.value = performance.now() - gU.timeStamp, EU(!0)
+          Ju && (Qu = oy(uu, mu, XE, Ru.reportAllChanges), Yy((yu => {
+            mu = yE("FCP", -1, "back-forward-cache", mu.navigationId, mu.navigationInteractionId, mu.navigationURL, iy()), Qu = oy(uu, mu, XE, Ru.reportAllChanges), qy((() => {
+              mu.value = performance.now() - yu.timeStamp, Qu(!0)
             }))
-          }))), gU && tt(["soft-navigation"], (gU => {
-            gU.forEach((gU => {
-              tU.u && gU.navigationId && Et(tU.u, gU);
-              const pU = Math.max((gU.presentationTime || gU.paintTime || 0) - gU.startTime, 0);
-              PU = gt("FCP", pU, "soft-navigation", gU.navigationId, gU.interactionId, gU.name, gU.startTime), EU = Mg(UU, PU, Kt, RU.reportAllChanges), EU(!0)
+          }))), yu && EE(["soft-navigation"], (yu => {
+            yu.forEach((yu => {
+              Eu.u && yu.navigationId && QE(Eu.u, yu);
+              const Ku = Math.max((yu.presentationTime || yu.paintTime || 0) - yu.startTime, 0);
+              mu = yE("FCP", Ku, "soft-navigation", yu.navigationId, yu.interactionId, yu.name, yu.startTime), Qu = oy(uu, mu, XE, Ru.reportAllChanges), Qu(!0)
             }))
-          }), RU)
+          }), Ru)
         }))
       },
-      Gt = [.1, .25],
-      jt = UU => UU.find((UU => 1 === UU.node?.nodeType)) || UU[0];
-    let ut = 0,
-      Ct = 1 / 0,
-      ht = 0;
-    const Qt = UU => {
-      for (const RU of UU) RU.interactionId && (Ct = Math.min(Ct, RU.interactionId), ht = Math.max(ht, RU.interactionId), ut = ht ? (ht - Ct) / 7 + 1 : 0)
+      rE = [.1, .25],
+      BE = uu => uu.find((uu => 1 === uu.node?.nodeType)) || uu[0];
+    let xE = 0,
+      SE = 1 / 0,
+      pE = 0;
+    const TE = uu => {
+      for (const Ru of uu) Ru.interactionId && (SE = Math.min(SE, Ru.interactionId), pE = Math.max(pE, Ru.interactionId), xE = pE ? (pE - SE) / 7 + 1 : 0)
     };
-    let et;
-    const Wt = () => et ? ut : performance.interactionCount ?? 0;
-    class ft {
+    let WE;
+    const jE = () => WE ? xE : performance.interactionCount ?? 0;
+    class HE {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return Wt() - this.h
+        return jE() - this.h
       }
       D() {
-        this.h = Wt(), this.v.length = 0, this.p.clear()
+        this.h = jE(), this.v.length = 0, this.p.clear()
       }
-      S(UU) {
-        const RU = this.T(),
-          gU = Math.min(this.v.length - 1, Math.floor(RU / 50));
-        return !RU || -1 !== gU || "soft-navigation" !== UU && "back-forward-cache" !== UU ? this.v[gU] : {
+      S(uu) {
+        const Ru = this.T(),
+          yu = Math.min(this.v.length - 1, Math.floor(Ru / 50));
+        return !Ru || -1 !== yu || "soft-navigation" !== uu && "back-forward-cache" !== uu ? this.v[yu] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(UU) {
-        if (this.m?.(UU), !UU.interactionId) return;
-        const RU = this.v.at(-1);
-        let gU = this.p.get(UU.interactionId);
-        if (gU || this.v.length < 10 || UU.duration > RU.k) {
-          if (gU ? UU.duration > gU.k ? (gU.entries = [UU], gU.k = UU.duration) : UU.duration === gU.k && UU.startTime === gU.entries[0].startTime && gU.entries.push(UU) : (gU = {
-              id: UU.interactionId,
-              entries: [UU],
-              k: UU.duration
-            }, this.p.set(gU.id, gU), this.v.push(gU)), this.v.sort(((UU, RU) => RU.k - UU.k)), this.v.length > 10) {
-            const UU = this.v.splice(10);
-            for (const RU of UU) this.p.delete(RU.id)
+      l(uu) {
+        if (this.m?.(uu), !uu.interactionId) return;
+        const Ru = this.v.at(-1);
+        let yu = this.p.get(uu.interactionId);
+        if (yu || this.v.length < 10 || uu.duration > Ru.k) {
+          if (yu ? uu.duration > yu.k ? (yu.entries = [uu], yu.k = uu.duration) : uu.duration === yu.k && uu.startTime === yu.entries[0].startTime && yu.entries.push(uu) : (yu = {
+              id: uu.interactionId,
+              entries: [uu],
+              k: uu.duration
+            }, this.p.set(yu.id, yu), this.v.push(yu)), this.v.sort(((uu, Ru) => Ru.k - uu.k)), this.v.length > 10) {
+            const uu = this.v.splice(10);
+            for (const Ru of uu) this.p.delete(Ru.id)
           }
-          this.M?.(gU)
+          this.M?.(yu)
         }
       }
     }
-    const xt = UU => {
-        const RU = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          gU = globalThis.requestIdleCallback || setTimeout,
-          tU = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) UU();
+    const dE = uu => {
+        const Ru = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          yu = globalThis.requestIdleCallback || setTimeout,
+          Eu = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) uu();
         else {
-          const pU = Pt(UU);
-          let EU = -1;
-          const PU = () => {
-            tU(EU), pU()
+          const Ku = mE(uu);
+          let Qu = -1;
+          const mu = () => {
+            Eu(Qu), Ku()
           };
-          addEventListener("visibilitychange", PU, {
+          addEventListener("visibilitychange", mu, {
             once: !0,
             capture: !0
-          }), EU = gU((() => {
-            removeEventListener("visibilitychange", PU, {
+          }), Qu = yu((() => {
+            removeEventListener("visibilitychange", mu, {
               capture: !0
-            }), pU()
+            }), Ku()
           }), {
-            timeout: RU
+            timeout: Ru
           })
         }
       },
-      mt = [200, 500],
-      It = function(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const gU = Fg(RU = Object.assign({}, RU), ft);
-        let tU = [],
-          pU = [],
-          EU = 0;
-        const PU = new WeakMap,
-          TU = new WeakMap;
-        let qU = !1;
-        const KU = () => {
-            qU || (qU = !0, xt(cU))
+      bE = [200, 500],
+      CE = function(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const yu = hy(Ru = Object.assign({}, Ru), HE);
+        let Eu = [],
+          Ku = [],
+          Qu = 0;
+        const mu = new WeakMap,
+          Ju = new WeakMap;
+        let Nu = !1;
+        const Xu = () => {
+            Nu || (Nu = !0, dE(Vu))
           },
-          cU = () => {
-            const UU = new Set(gU.v.map((UU => PU.get(UU.entries[0])))),
-              RU = pU.length - 10;
-            pU = pU.filter(((gU, tU) => tU >= RU || UU.has(gU)));
-            const TU = new Set;
-            for (const gU of pU) {
-              const UU = GU(gU.startTime, gU.processingEnd);
-              for (const RU of UU) TU.add(RU)
+          Vu = () => {
+            const uu = new Set(yu.v.map((uu => mu.get(uu.entries[0])))),
+              Ru = Ku.length - 10;
+            Ku = Ku.filter(((yu, Eu) => Eu >= Ru || uu.has(yu)));
+            const Ju = new Set;
+            for (const yu of Ku) {
+              const uu = ru(yu.startTime, yu.processingEnd);
+              for (const Ru of uu) Ju.add(Ru)
             }
-            const KU = tU.length - 10;
-            tU = tU.filter(((UU, RU) => TU.has(UU) || RU >= KU && UU.startTime > EU)), qU = !1
+            const Xu = Eu.length - 10;
+            Eu = Eu.filter(((uu, Ru) => Ju.has(uu) || Ru >= Xu && uu.startTime > Qu)), Nu = !1
           };
-        gU.m = UU => {
-          const gU = UU.startTime + UU.duration;
-          let tU;
-          EU = Math.max(EU, UU.processingEnd);
-          for (let EU = pU.length - 1; EU >= 0; EU--) {
-            const PU = pU[EU];
-            if (Math.abs(gU - PU.renderTime) <= 8) {
-              tU = PU, tU.startTime = Math.min(UU.startTime, tU.startTime), tU.processingStart = Math.min(UU.processingStart, tU.processingStart), tU.processingEnd = Math.max(UU.processingEnd, tU.processingEnd), RU.includeProcessedEventEntries && tU.entries.push(UU);
+        yu.m = uu => {
+          const yu = uu.startTime + uu.duration;
+          let Eu;
+          Qu = Math.max(Qu, uu.processingEnd);
+          for (let Qu = Ku.length - 1; Qu >= 0; Qu--) {
+            const mu = Ku[Qu];
+            if (Math.abs(yu - mu.renderTime) <= 8) {
+              Eu = mu, Eu.startTime = Math.min(uu.startTime, Eu.startTime), Eu.processingStart = Math.min(uu.processingStart, Eu.processingStart), Eu.processingEnd = Math.max(uu.processingEnd, Eu.processingEnd), Ru.includeProcessedEventEntries && Eu.entries.push(uu);
               break
             }
           }
-          tU || (tU = {
-            startTime: UU.startTime,
-            processingStart: UU.processingStart,
-            processingEnd: UU.processingEnd,
-            renderTime: gU,
-            entries: RU.includeProcessedEventEntries ? [UU] : []
-          }, pU.push(tU)), UU.interactionId && PU.set(UU, tU), KU()
-        }, gU.M = UU => {
-          if (!TU.get(UU)) {
-            const gU = UU.entries.find((UU => UU.target))?.target;
-            if (gU) {
-              const tU = RU.generateTarget?.(gU) ?? yg(gU);
-              TU.set(UU, tU)
+          Eu || (Eu = {
+            startTime: uu.startTime,
+            processingStart: uu.processingStart,
+            processingEnd: uu.processingEnd,
+            renderTime: yu,
+            entries: Ru.includeProcessedEventEntries ? [uu] : []
+          }, Ku.push(Eu)), uu.interactionId && mu.set(uu, Eu), Xu()
+        }, yu.M = uu => {
+          if (!Ju.get(uu)) {
+            const yu = uu.entries.find((uu => uu.target))?.target;
+            if (yu) {
+              const Eu = Ru.generateTarget?.(yu) ?? wy(yu);
+              Ju.set(uu, Eu)
             } else {
-              const RU = UU.entries.find((UU => UU.targetSelector))?.targetSelector;
-              RU && TU.set(UU, RU)
+              const Ru = uu.entries.find((uu => uu.targetSelector))?.targetSelector;
+              Ru && Ju.set(uu, Ru)
             }
           }
         };
-        const GU = (UU, RU) => {
-          const gU = [];
-          for (const pU of tU)
-            if (!(pU.startTime + pU.duration < UU)) {
-              if (pU.startTime > RU) break;
-              gU.push(pU)
-            } return gU
+        const ru = (uu, Ru) => {
+          const yu = [];
+          for (const Ku of Eu)
+            if (!(Ku.startTime + Ku.duration < uu)) {
+              if (Ku.startTime > Ru) break;
+              yu.push(Ku)
+            } return yu
         };
-        tt(["long-animation-frame"], (UU => {
-            tU = tU.concat(UU), KU()
-          }), RU),
-          function(UU) {
-            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        EE(["long-animation-frame"], (uu => {
+            Eu = Eu.concat(uu), Xu()
+          }), Ru),
+          function(uu) {
+            let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const gU = Rt();
-            qt((() => {
-              "interactionCount" in performance || et || (et = tt(["event"], Qt, {
+            const yu = RE();
+            NE((() => {
+              "interactionCount" in performance || WE || (WE = EE(["event"], TE, {
                 durationThreshold: 0
               }));
-              let tU, pU = gt("INP");
-              const EU = Fg(RU, ft),
-                PU = (gU, PU, TU, qU, KU) => {
-                  EU.D(), pU = gt("INP", -1, gU, PU, TU, qU, KU), tU = Mg(UU, pU, mt, RU.reportAllChanges)
+              let Eu, Ku = yE("INP");
+              const Qu = hy(Ru, HE),
+                mu = (yu, mu, Ju, Nu, Xu) => {
+                  Qu.D(), Ku = yE("INP", -1, yu, mu, Ju, Nu, Xu), Eu = oy(uu, Ku, bE, Ru.reportAllChanges)
                 },
-                TU = () => {
-                  const UU = EU.S(pU.navigationType);
-                  UU && UU.k !== pU.value && (pU.value = UU.k, pU.entries = UU.entries, tU())
+                Ju = () => {
+                  const uu = Qu.S(Ku.navigationType);
+                  uu && uu.k !== Ku.value && (Ku.value = uu.k, Ku.entries = uu.entries, Eu())
                 },
-                qU = UU => {
-                  TU(), tU(!0), PU("soft-navigation", UU.navigationId, UU.interactionId, UU.name, UU.startTime)
+                Nu = uu => {
+                  Ju(), Eu(!0), mu("soft-navigation", uu.navigationId, uu.interactionId, uu.name, uu.startTime)
                 },
-                KU = function(UU) {
-                  let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  xt((() => {
-                    for (const RU of UU) "soft-navigation" !== RU.entryType ? EU.l(RU) : qU(RU);
-                    TU(), RU && tU(!0)
+                Xu = function(uu) {
+                  let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  dE((() => {
+                    for (const Ru of uu) "soft-navigation" !== Ru.entryType ? Qu.l(Ru) : Nu(Ru);
+                    Ju(), Ru && Eu(!0)
                   }))
                 },
-                cU = ["event", "first-input"];
-              pt(RU) && cU.push("soft-navigation");
-              const GU = tt(cU, KU, {
-                ...RU,
-                durationThreshold: RU.durationThreshold ?? 40
+                Vu = ["event", "first-input"];
+              KE(Ru) && Vu.push("soft-navigation");
+              const ru = EE(Vu, Xu, {
+                ...Ru,
+                durationThreshold: Ru.durationThreshold ?? 40
               });
-              tU = Mg(UU, pU, mt, RU.reportAllChanges), GU && (gU.onHidden((() => {
-                KU(GU.takeRecords(), !0)
-              })), zg((() => {
-                PU("back-forward-cache", pU.navigationId, pU.navigationInteractionId, pU.navigationURL, Ag())
+              Eu = oy(uu, Ku, bE, Ru.reportAllChanges), ru && (yu.onHidden((() => {
+                Xu(ru.takeRecords(), !0)
+              })), Yy((() => {
+                mu("back-forward-cache", Ku.navigationId, Ku.navigationInteractionId, Ku.navigationURL, iy())
               })))
             }))
-          }((RU => {
-            UU((UU => {
-              if (0 === UU.entries.length) {
-                const RU = UU.navigationStartTime || 0,
-                  gU = {
+          }((Ru => {
+            uu((uu => {
+              if (0 === uu.entries.length) {
+                const Ru = uu.navigationStartTime || 0,
+                  yu = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: UU.value,
-                    loadState: Sg(RU)
+                    presentationDelay: uu.value,
+                    loadState: zy(Ru)
                   };
-                return Object.assign(UU, {
-                  attribution: gU
+                return Object.assign(uu, {
+                  attribution: yu
                 })
               }
-              const RU = UU.entries[0],
-                tU = PU.get(RU),
-                pU = Math.max(tU.processingStart, RU.startTime),
-                EU = Math.max(RU.startTime + RU.duration, pU),
-                qU = Math.min(tU.processingEnd, EU),
-                KU = tU.entries.sort(((UU, RU) => UU.processingStart - RU.processingStart)),
-                cU = GU(RU.startTime, qU),
-                jU = gU.p.get(RU.interactionId),
-                uU = {
-                  interactionTarget: TU.get(jU),
-                  interactionType: RU.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: RU.startTime,
-                  nextPaintTime: EU,
-                  processedEventEntries: KU,
-                  longAnimationFrameEntries: cU,
-                  inputDelay: pU - RU.startTime,
-                  processingDuration: qU - pU,
-                  presentationDelay: EU - qU,
-                  loadState: Sg(RU.startTime),
+              const Ru = uu.entries[0],
+                Eu = mu.get(Ru),
+                Ku = Math.max(Eu.processingStart, Ru.startTime),
+                Qu = Math.max(Ru.startTime + Ru.duration, Ku),
+                Nu = Math.min(Eu.processingEnd, Qu),
+                Xu = Eu.entries.sort(((uu, Ru) => uu.processingStart - Ru.processingStart)),
+                Vu = ru(Ru.startTime, Nu),
+                Bu = yu.p.get(Ru.interactionId),
+                xu = {
+                  interactionTarget: Ju.get(Bu),
+                  interactionType: Ru.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: Ru.startTime,
+                  nextPaintTime: Qu,
+                  processedEventEntries: Xu,
+                  longAnimationFrameEntries: Vu,
+                  inputDelay: Ku - Ru.startTime,
+                  processingDuration: Nu - Ku,
+                  presentationDelay: Qu - Nu,
+                  loadState: zy(Ru.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (UU => {
-                const RU = UU.interactionTime,
-                  gU = UU.nextPaintTime;
-                if (!UU.longAnimationFrameEntries?.length || !RU || !gU) return;
-                const tU = UU.inputDelay,
-                  pU = UU.processingDuration;
-                let EU, PU, TU = 0,
-                  qU = 0,
-                  KU = 0,
-                  cU = 0;
-                for (const uU of UU.longAnimationFrameEntries) {
-                  qU = qU + uU.startTime + uU.duration - uU.styleAndLayoutStart;
-                  for (const UU of uU.scripts) {
-                    const gU = UU.startTime + UU.duration;
-                    if (gU < RU) continue;
-                    const KU = gU - Math.max(RU, UU.startTime),
-                      GU = UU.duration ? KU / UU.duration * UU.forcedStyleAndLayoutDuration : 0;
-                    TU += KU - GU, qU += GU, KU > cU && (PU = UU.startTime < RU + tU ? "input-delay" : UU.startTime >= RU + tU + pU ? "presentation-delay" : "processing-duration", EU = UU, cU = KU)
+              return (uu => {
+                const Ru = uu.interactionTime,
+                  yu = uu.nextPaintTime;
+                if (!uu.longAnimationFrameEntries?.length || !Ru || !yu) return;
+                const Eu = uu.inputDelay,
+                  Ku = uu.processingDuration;
+                let Qu, mu, Ju = 0,
+                  Nu = 0,
+                  Xu = 0,
+                  Vu = 0;
+                for (const xu of uu.longAnimationFrameEntries) {
+                  Nu = Nu + xu.startTime + xu.duration - xu.styleAndLayoutStart;
+                  for (const uu of xu.scripts) {
+                    const yu = uu.startTime + uu.duration;
+                    if (yu < Ru) continue;
+                    const Xu = yu - Math.max(Ru, uu.startTime),
+                      ru = uu.duration ? Xu / uu.duration * uu.forcedStyleAndLayoutDuration : 0;
+                    Ju += Xu - ru, Nu += ru, Xu > Vu && (mu = uu.startTime < Ru + Eu ? "input-delay" : uu.startTime >= Ru + Eu + Ku ? "presentation-delay" : "processing-duration", Qu = uu, Vu = Xu)
                   }
                 }
-                const GU = UU.longAnimationFrameEntries.at(-1),
-                  jU = GU ? GU.startTime + GU.duration : 0;
-                jU >= RU + tU + pU && (KU = gU - jU), EU && PU && (UU.longestScript = {
-                  entry: EU,
-                  subpart: PU,
-                  intersectingDuration: cU
-                }), UU.totalScriptDuration = TU, UU.totalStyleAndLayoutDuration = qU, UU.totalPaintDuration = KU, UU.totalUnattributedDuration = gU - RU - TU - qU - KU
-              })(uU), Object.assign(UU, {
-                attribution: uU
+                const ru = uu.longAnimationFrameEntries.at(-1),
+                  Bu = ru ? ru.startTime + ru.duration : 0;
+                Bu >= Ru + Eu + Ku && (Xu = yu - Bu), Qu && mu && (uu.longestScript = {
+                  entry: Qu,
+                  subpart: mu,
+                  intersectingDuration: Vu
+                }), uu.totalScriptDuration = Ju, uu.totalStyleAndLayoutDuration = Nu, uu.totalPaintDuration = Xu, uu.totalUnattributedDuration = yu - Ru - Ju - Nu - Xu
+              })(xu), Object.assign(uu, {
+                attribution: xu
               })
-            })(RU))
-          }), RU)
+            })(Ru))
+          }), Ru)
       };
-    class Jt {
+    class kE {
       m;
       u;
-      l(UU) {
-        this.m?.(UU)
+      l(uu) {
+        this.m?.(uu)
       }
     }
-    const wt = [2500, 4e3];
-    let nt = 50;
-    const bt = [];
-    tt(["resource"], (UU => {
-      for (const RU of UU) bt.push(RU), bt.length > nt && bt.shift()
+    const eE = [2500, 4e3];
+    let AE = 50;
+    const DE = [];
+    EE(["resource"], (uu => {
+      for (const Ru of uu) DE.push(Ru), DE.length > AE && DE.shift()
     }));
-    const ot = [800, 1800],
-      Zt = UU => {
-        document.prerendering ? qt((() => Zt(UU))) : "complete" !== document.readyState ? addEventListener("load", (() => Zt(UU)), !0) : setTimeout(UU)
+    const ME = [800, 1800],
+      IE = uu => {
+        document.prerendering ? NE((() => IE(uu))) : "complete" !== document.readyState ? addEventListener("load", (() => IE(uu)), !0) : setTimeout(uu)
       },
-      Yt = "load_state",
-      Bt = "time_to_first_byte";
-    var Vt = class {
-        constructor(UU, RU) {
-          this.corePushMeasurement = UU, this.webVitalConfig = RU
+      GE = "load_state",
+      UE = "time_to_first_byte";
+    var nE = class {
+        constructor(uu, Ru) {
+          this.corePushMeasurement = uu, this.webVitalConfig = Ru
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var UU;
-          ! function(UU) {
-            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const gU = Fg(RU = Object.assign({}, RU), dg),
-              tU = new WeakMap;
-            gU.t = UU => {
-                if (UU?.sources?.length) {
-                  const gU = jt(UU.sources),
-                    pU = gU?.node;
-                  if (pU) {
-                    const UU = RU.generateTarget?.(pU) ?? yg(pU);
-                    tU.set(gU, UU)
+          var uu;
+          ! function(uu) {
+            let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const yu = hy(Ru = Object.assign({}, Ru), cy),
+              Eu = new WeakMap;
+            yu.t = uu => {
+                if (uu?.sources?.length) {
+                  const yu = BE(uu.sources),
+                    Ku = yu?.node;
+                  if (Ku) {
+                    const uu = Ru.generateTarget?.(Ku) ?? wy(Ku);
+                    Eu.set(yu, uu)
                   }
                 }
               },
-              function(UU) {
-                let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const gU = Rt();
-                ct(Pt((() => {
-                  let tU, pU = gt("CLS", 0);
-                  const EU = Fg(RU, dg),
-                    PU = (gU, PU, TU, qU, KU) => {
-                      pU = gt("CLS", 0, gU, PU, TU, qU, KU), EU.o = 0, tU = Mg(UU, pU, Gt, RU.reportAllChanges)
+              function(uu) {
+                let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const yu = RE();
+                VE(mE((() => {
+                  let Eu, Ku = yE("CLS", 0);
+                  const Qu = hy(Ru, cy),
+                    mu = (yu, mu, Ju, Nu, Xu) => {
+                      Ku = yE("CLS", 0, yu, mu, Ju, Nu, Xu), Qu.o = 0, Eu = oy(uu, Ku, rE, Ru.reportAllChanges)
                     },
-                    TU = function() {
-                      let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      EU.o > pU.value && (pU.value = EU.o, pU.entries = EU.i), tU(UU)
+                    Ju = function() {
+                      let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      Qu.o > Ku.value && (Ku.value = Qu.o, Ku.entries = Qu.i), Eu(uu)
                     },
-                    qU = UU => {
-                      TU(!0), PU("soft-navigation", UU.navigationId, UU.interactionId, UU.name, UU.startTime)
+                    Nu = uu => {
+                      Ju(!0), mu("soft-navigation", uu.navigationId, uu.interactionId, uu.name, uu.startTime)
                     },
-                    KU = UU => {
-                      for (const RU of UU) "soft-navigation" !== RU.entryType ? EU.l(RU) : qU(RU);
-                      TU()
+                    Xu = uu => {
+                      for (const Ru of uu) "soft-navigation" !== Ru.entryType ? Qu.l(Ru) : Nu(Ru);
+                      Ju()
                     },
-                    cU = ["layout-shift"];
-                  pt(RU) && cU.push("soft-navigation");
-                  const GU = tt(cU, KU);
-                  GU && (tU = Mg(UU, pU, Gt, RU.reportAllChanges), gU.onHidden((() => {
-                    KU(GU.takeRecords()), tU(!0)
-                  })), zg((() => {
-                    PU("back-forward-cache", pU.navigationId, pU.navigationInteractionId, pU.navigationURL, Ag()), Dg(tU)
-                  })), setTimeout(tU))
+                    Vu = ["layout-shift"];
+                  KE(Ru) && Vu.push("soft-navigation");
+                  const ru = EE(Vu, Xu);
+                  ru && (Eu = oy(uu, Ku, rE, Ru.reportAllChanges), yu.onHidden((() => {
+                    Xu(ru.takeRecords()), Eu(!0)
+                  })), Yy((() => {
+                    mu("back-forward-cache", Ku.navigationId, Ku.navigationInteractionId, Ku.navigationURL, iy()), qy(Eu)
+                  })), setTimeout(Eu))
                 })))
-              }((RU => {
-                UU((UU => {
-                  let RU = {};
-                  if (UU.entries.length) {
-                    const gU = UU.entries.reduce(((UU, RU) => UU.value > RU.value ? UU : RU));
-                    if (gU?.sources?.length) {
-                      const UU = jt(gU.sources);
-                      UU && (RU = {
-                        largestShiftTarget: tU.get(UU),
-                        largestShiftTime: gU.startTime,
-                        largestShiftValue: gU.value,
-                        largestShiftSource: UU,
-                        largestShiftEntry: gU,
-                        loadState: Sg(gU.startTime)
+              }((Ru => {
+                uu((uu => {
+                  let Ru = {};
+                  if (uu.entries.length) {
+                    const yu = uu.entries.reduce(((uu, Ru) => uu.value > Ru.value ? uu : Ru));
+                    if (yu?.sources?.length) {
+                      const uu = BE(yu.sources);
+                      uu && (Ru = {
+                        largestShiftTarget: Eu.get(uu),
+                        largestShiftTime: yu.startTime,
+                        largestShiftValue: yu.value,
+                        largestShiftSource: uu,
+                        largestShiftEntry: yu,
+                        loadState: zy(yu.startTime)
                       })
                     }
                   }
-                  return Object.assign(UU, {
-                    attribution: RU
+                  return Object.assign(uu, {
+                    attribution: Ru
                   })
-                })(RU))
-              }), RU)
-          }((UU => {
+                })(Ru))
+              }), Ru)
+          }((uu => {
             const {
-              loadState: RU,
-              largestShiftValue: gU,
-              largestShiftTime: tU,
-              largestShiftTarget: pU
-            } = UU.attribution, EU = this.buildInitialValues(UU);
-            this.addIfPresent(EU, "largest_shift_value", gU), this.addIfPresent(EU, "largest_shift_time", tU);
-            const PU = this.buildInitialContext(UU);
-            this.addIfPresent(PU, Yt, RU), this.addIfPresent(PU, "largest_shift_target", pU), this.pushMeasurement(EU, PU)
+              loadState: Ru,
+              largestShiftValue: yu,
+              largestShiftTime: Eu,
+              largestShiftTarget: Ku
+            } = uu.attribution, Qu = this.buildInitialValues(uu);
+            this.addIfPresent(Qu, "largest_shift_value", yu), this.addIfPresent(Qu, "largest_shift_time", Eu);
+            const mu = this.buildInitialContext(uu);
+            this.addIfPresent(mu, GE, Ru), this.addIfPresent(mu, "largest_shift_target", Ku), this.pushMeasurement(Qu, mu)
           }), {
-            reportAllChanges: null === (UU = this.webVitalConfig) || void 0 === UU ? void 0 : UU.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
         measureFCP() {
-          var UU;
-          ! function(UU) {
-            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const gU = Fg(RU = Object.assign({}, RU), Tt);
-            pt(RU) && (gU.u = new Map), ct((RU => {
-              UU((UU => {
-                let RU = {
+          var uu;
+          ! function(uu) {
+            let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const yu = hy(Ru = Object.assign({}, Ru), JE);
+            KE(Ru) && (yu.u = new Map), VE((Ru => {
+              uu((uu => {
+                let Ru = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: UU.value,
-                  loadState: Sg(Ag())
+                  firstByteToFCP: uu.value,
+                  loadState: zy(iy())
                 };
-                if ("soft-navigation" !== UU.navigationType) {
-                  if (UU.entries.length) {
-                    const gU = Hg(),
-                      tU = UU.entries.at(-1);
-                    if (gU) {
-                      const pU = gU.responseStart,
-                        EU = gU.activationStart || 0,
-                        PU = Math.max(0, pU - EU);
-                      RU = {
-                        timeToFirstByte: PU,
-                        firstByteToFCP: UU.value - PU,
-                        loadState: Sg(UU.entries[0].startTime),
-                        navigationEntry: gU,
-                        fcpEntry: tU
+                if ("soft-navigation" !== uu.navigationType) {
+                  if (uu.entries.length) {
+                    const yu = Ly(),
+                      Eu = uu.entries.at(-1);
+                    if (yu) {
+                      const Ku = yu.responseStart,
+                        Qu = yu.activationStart || 0,
+                        mu = Math.max(0, Ku - Qu);
+                      Ru = {
+                        timeToFirstByte: mu,
+                        firstByteToFCP: uu.value - mu,
+                        loadState: zy(uu.entries[0].startTime),
+                        navigationEntry: yu,
+                        fcpEntry: Eu
                       }
                     }
                   }
                 } else {
-                  const tU = gU.u?.get(UU.navigationId);
-                  tU && (RU = {
+                  const Eu = yu.u?.get(uu.navigationId);
+                  Eu && (Ru = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: UU.value,
+                    firstByteToFCP: uu.value,
                     loadState: "complete",
-                    navigationEntry: tU
+                    navigationEntry: Eu
                   })
                 }
-                return Object.assign(UU, {
-                  attribution: RU
+                return Object.assign(uu, {
+                  attribution: Ru
                 })
-              })(RU))
-            }), RU)
-          }((UU => {
+              })(Ru))
+            }), Ru)
+          }((uu => {
             const {
-              firstByteToFCP: RU,
-              timeToFirstByte: gU,
-              loadState: tU
-            } = UU.attribution, pU = this.buildInitialValues(UU);
-            this.addIfPresent(pU, "first_byte_to_fcp", RU), this.addIfPresent(pU, Bt, gU);
-            const EU = this.buildInitialContext(UU);
-            this.addIfPresent(EU, Yt, tU), this.pushMeasurement(pU, EU)
+              firstByteToFCP: Ru,
+              timeToFirstByte: yu,
+              loadState: Eu
+            } = uu.attribution, Ku = this.buildInitialValues(uu);
+            this.addIfPresent(Ku, "first_byte_to_fcp", Ru), this.addIfPresent(Ku, UE, yu);
+            const Qu = this.buildInitialContext(uu);
+            this.addIfPresent(Qu, GE, Eu), this.pushMeasurement(Ku, Qu)
           }), {
-            reportAllChanges: null === (UU = this.webVitalConfig) || void 0 === UU ? void 0 : UU.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
         measureINP() {
-          var UU;
-          It((UU => {
-            var RU;
+          var uu;
+          CE((uu => {
+            var Ru;
             const {
-              interactionTime: gU,
-              presentationDelay: tU,
-              inputDelay: pU,
-              processingDuration: EU,
-              nextPaintTime: PU,
-              loadState: TU,
-              interactionTarget: qU,
-              interactionType: KU,
-              totalScriptDuration: cU,
-              totalStyleAndLayoutDuration: GU,
-              totalPaintDuration: jU,
-              totalUnattributedDuration: uU,
-              longestScript: CU
-            } = UU.attribution, hU = this.buildInitialValues(UU);
-            this.addIfPresent(hU, "interaction_time", gU), this.addIfPresent(hU, "presentation_delay", tU), this.addIfPresent(hU, "input_delay", pU), this.addIfPresent(hU, "processing_duration", EU), this.addIfPresent(hU, "next_paint_time", PU), this.addNumberIfDefined(hU, "total_script_duration", cU), this.addNumberIfDefined(hU, "total_style_and_layout_duration", GU), this.addNumberIfDefined(hU, "total_paint_duration", jU), this.addNumberIfDefined(hU, "total_unattributed_duration", uU), this.addNumberIfDefined(hU, "longest_script_intersecting_duration", null === CU || void 0 === CU ? void 0 : CU.intersectingDuration);
-            const QU = this.buildInitialContext(UU);
-            this.addIfPresent(QU, Yt, TU), this.addIfPresent(QU, "interaction_target", qU), this.addIfPresent(QU, "interaction_type", KU), this.addIfPresent(QU, "longest_script_subpart", null === CU || void 0 === CU ? void 0 : CU.subpart), this.addIfPresent(QU, "longest_script_invoker_type", null === CU || void 0 === CU ? void 0 : CU.entry.invokerType), (null === (RU = this.webVitalConfig) || void 0 === RU ? void 0 : RU.trackAttributionSources) && (this.addIfPresent(QU, "longest_script_invoker", null === CU || void 0 === CU ? void 0 : CU.entry.invoker), this.addIfPresent(QU, "longest_script_source_url", null === CU || void 0 === CU ? void 0 : CU.entry.sourceURL), this.addIfPresent(QU, "longest_script_source_function_name", null === CU || void 0 === CU ? void 0 : CU.entry.sourceFunctionName), this.addIfPresent(QU, "longest_script_source_char_position", void 0 !== (null === CU || void 0 === CU ? void 0 : CU.entry.sourceCharPosition) ? String(CU.entry.sourceCharPosition) : void 0)), this.pushMeasurement(hU, QU)
+              interactionTime: yu,
+              presentationDelay: Eu,
+              inputDelay: Ku,
+              processingDuration: Qu,
+              nextPaintTime: mu,
+              loadState: Ju,
+              interactionTarget: Nu,
+              interactionType: Xu,
+              totalScriptDuration: Vu,
+              totalStyleAndLayoutDuration: ru,
+              totalPaintDuration: Bu,
+              totalUnattributedDuration: xu,
+              longestScript: Su
+            } = uu.attribution, pu = this.buildInitialValues(uu);
+            this.addIfPresent(pu, "interaction_time", yu), this.addIfPresent(pu, "presentation_delay", Eu), this.addIfPresent(pu, "input_delay", Ku), this.addIfPresent(pu, "processing_duration", Qu), this.addIfPresent(pu, "next_paint_time", mu), this.addNumberIfDefined(pu, "total_script_duration", Vu), this.addNumberIfDefined(pu, "total_style_and_layout_duration", ru), this.addNumberIfDefined(pu, "total_paint_duration", Bu), this.addNumberIfDefined(pu, "total_unattributed_duration", xu), this.addNumberIfDefined(pu, "longest_script_intersecting_duration", null === Su || void 0 === Su ? void 0 : Su.intersectingDuration);
+            const Tu = this.buildInitialContext(uu);
+            this.addIfPresent(Tu, GE, Ju), this.addIfPresent(Tu, "interaction_target", Nu), this.addIfPresent(Tu, "interaction_type", Xu), this.addIfPresent(Tu, "longest_script_subpart", null === Su || void 0 === Su ? void 0 : Su.subpart), this.addIfPresent(Tu, "longest_script_invoker_type", null === Su || void 0 === Su ? void 0 : Su.entry.invokerType), (null === (Ru = this.webVitalConfig) || void 0 === Ru ? void 0 : Ru.trackAttributionSources) && (this.addIfPresent(Tu, "longest_script_invoker", null === Su || void 0 === Su ? void 0 : Su.entry.invoker), this.addIfPresent(Tu, "longest_script_source_url", null === Su || void 0 === Su ? void 0 : Su.entry.sourceURL), this.addIfPresent(Tu, "longest_script_source_function_name", null === Su || void 0 === Su ? void 0 : Su.entry.sourceFunctionName), this.addIfPresent(Tu, "longest_script_source_char_position", void 0 !== (null === Su || void 0 === Su ? void 0 : Su.entry.sourceCharPosition) ? String(Su.entry.sourceCharPosition) : void 0)), this.pushMeasurement(pu, Tu)
           }), {
-            reportAllChanges: null === (UU = this.webVitalConfig) || void 0 === UU ? void 0 : UU.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
         measureLCP() {
-          var UU;
-          ! function(UU) {
-            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (RU = Object.assign({}, RU)).resourceBufferSize && (nt = RU.resourceBufferSize);
-            const gU = Fg(RU, Jt),
-              tU = new WeakMap;
-            pt(RU) && (gU.u = new Map), gU.m = UU => {
-                const gU = UU.element;
-                if (gU) {
-                  const pU = RU.generateTarget?.(gU) ?? yg(gU);
-                  tU.set(UU, pU)
-                } else UU.id && tU.set(UU, `#${UU.id}`)
+          var uu;
+          ! function(uu) {
+            let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (Ru = Object.assign({}, Ru)).resourceBufferSize && (AE = Ru.resourceBufferSize);
+            const yu = hy(Ru, kE),
+              Eu = new WeakMap;
+            KE(Ru) && (yu.u = new Map), yu.m = uu => {
+                const yu = uu.element;
+                if (yu) {
+                  const Ku = Ru.generateTarget?.(yu) ?? wy(yu);
+                  Eu.set(uu, Ku)
+                } else uu.id && Eu.set(uu, `#${uu.id}`)
               },
-              function(UU) {
-                let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  gU = !1;
-                const tU = pt(RU);
-                qt((() => {
-                  let pU, EU = Rt(),
-                    PU = gt("LCP");
-                  const TU = Fg(RU, Jt),
-                    qU = (tU, TU, qU, KU, cU) => {
-                      PU = gt("LCP", -1, tU, TU, qU, KU, cU), pU = Mg(UU, PU, wt, RU.reportAllChanges), gU = !1, "soft-navigation" === tU && (EU = Rt(!0))
+              function(uu) {
+                let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  yu = !1;
+                const Eu = KE(Ru);
+                NE((() => {
+                  let Ku, Qu = RE(),
+                    mu = yE("LCP");
+                  const Ju = hy(Ru, kE),
+                    Nu = (Eu, Ju, Nu, Xu, Vu) => {
+                      mu = yE("LCP", -1, Eu, Ju, Nu, Xu, Vu), Ku = oy(uu, mu, eE, Ru.reportAllChanges), yu = !1, "soft-navigation" === Eu && (Qu = RE(!0))
                     },
-                    KU = UU => {
-                      TU.u && UU.navigationId && Et(TU.u, UU), gU || pU(!0), qU("soft-navigation", UU.navigationId, UU.interactionId, UU.name, UU.startTime);
-                      const RU = UU.getLargestInteractionContentfulPaint?.();
-                      RU && cU([RU])
+                    Xu = uu => {
+                      Ju.u && uu.navigationId && QE(Ju.u, uu), yu || Ku(!0), Nu("soft-navigation", uu.navigationId, uu.interactionId, uu.name, uu.startTime);
+                      const Ru = uu.getLargestInteractionContentfulPaint?.();
+                      Ru && Vu([Ru])
                     },
-                    cU = UU => {
-                      RU.reportAllChanges || tU || (UU = UU.slice(-1));
-                      for (const RU of UU) {
-                        if (!RU) continue;
-                        if ("soft-navigation" === RU.entryType) {
-                          KU(RU);
+                    Vu = uu => {
+                      Ru.reportAllChanges || Eu || (uu = uu.slice(-1));
+                      for (const Ru of uu) {
+                        if (!Ru) continue;
+                        if ("soft-navigation" === Ru.entryType) {
+                          Xu(Ru);
                           continue
                         }
-                        let UU = 0,
-                          gU = [],
-                          tU = RU.startTime;
-                        if ("largest-contentful-paint" === RU.entryType) UU = Math.max(RU.startTime - Lg(), 0), TU.l(RU), gU = [RU];
-                        else if ("interaction-contentful-paint" === RU.entryType) {
-                          const pU = RU;
-                          if (!PU.navigationId) continue;
-                          if ("interactionId" in pU && pU.interactionId != PU.navigationInteractionId) continue;
-                          tU = pU.largestContentfulPaint?.renderTime || 0, UU = Math.max(tU - RU.startTime, 0), pU.largestContentfulPaint && (TU.l(pU.largestContentfulPaint), gU = [pU.largestContentfulPaint])
+                        let uu = 0,
+                          yu = [],
+                          Eu = Ru.startTime;
+                        if ("largest-contentful-paint" === Ru.entryType) uu = Math.max(Ru.startTime - Oy(), 0), Ju.l(Ru), yu = [Ru];
+                        else if ("interaction-contentful-paint" === Ru.entryType) {
+                          const Ku = Ru;
+                          if (!mu.navigationId) continue;
+                          if ("interactionId" in Ku && Ku.interactionId != mu.navigationInteractionId) continue;
+                          Eu = Ku.largestContentfulPaint?.renderTime || 0, uu = Math.max(Eu - Ru.startTime, 0), Ku.largestContentfulPaint && (Ju.l(Ku.largestContentfulPaint), yu = [Ku.largestContentfulPaint])
                         }
-                        tU < EU.firstHiddenTime && (PU.value = UU, PU.entries = gU, pU())
+                        Eu < Qu.firstHiddenTime && (mu.value = uu, mu.entries = yu, Ku())
                       }
                     },
-                    GU = ["largest-contentful-paint"];
-                  tU && GU.push("interaction-contentful-paint", "soft-navigation");
-                  const jU = tt(GU, cU);
-                  if (jU) {
-                    pU = Mg(UU, PU, wt, RU.reportAllChanges);
-                    const EU = ["keydown", "click", "visibilitychange"],
-                      TU = UU => {
-                        if (UU.isTrusted && !gU) {
-                          const UU = PU.id;
-                          xt((() => {
-                            if (!gU) {
-                              if (!tU) {
-                                jU.disconnect();
-                                for (const UU of EU) removeEventListener(UU, TU, {
+                    ru = ["largest-contentful-paint"];
+                  Eu && ru.push("interaction-contentful-paint", "soft-navigation");
+                  const Bu = EE(ru, Vu);
+                  if (Bu) {
+                    Ku = oy(uu, mu, eE, Ru.reportAllChanges);
+                    const Qu = ["keydown", "click", "visibilitychange"],
+                      Ju = uu => {
+                        if (uu.isTrusted && !yu) {
+                          const uu = mu.id;
+                          dE((() => {
+                            if (!yu) {
+                              if (!Eu) {
+                                Bu.disconnect();
+                                for (const uu of Qu) removeEventListener(uu, Ju, {
                                   capture: !0
                                 })
                               }
-                              UU === PU.id && (gU = !0, pU(!0))
+                              uu === mu.id && (yu = !0, Ku(!0))
                             }
                           }))
                         }
                       };
-                    for (const UU of EU) addEventListener(UU, TU, {
+                    for (const uu of Qu) addEventListener(uu, Ju, {
                       capture: !0
                     });
-                    zg((tU => {
-                      qU("back-forward-cache", PU.navigationId, PU.navigationInteractionId, PU.navigationURL, Ag()), pU = Mg(UU, PU, wt, RU.reportAllChanges), Dg((() => {
-                        PU.value = performance.now() - tU.timeStamp, gU = !0, pU(!0)
+                    Yy((Eu => {
+                      Nu("back-forward-cache", mu.navigationId, mu.navigationInteractionId, mu.navigationURL, iy()), Ku = oy(uu, mu, eE, Ru.reportAllChanges), qy((() => {
+                        mu.value = performance.now() - Eu.timeStamp, yu = !0, Ku(!0)
                       }))
                     }))
                   }
                 }))
-              }((RU => {
-                UU((UU => {
-                  let RU = {
+              }((Ru => {
+                uu((uu => {
+                  let Ru = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: UU.value
+                    elementRenderDelay: uu.value
                   };
-                  if (UU.entries.length) {
-                    const pU = UU.entries.at(-1),
-                      EU = UU => UU.name === pU.url && (UU.requestStart || UU.startTime) <= pU.startTime,
-                      PU = pU.url && (bt.findLast(EU) || performance.getEntriesByType("resource").findLast(EU));
-                    let TU;
-                    RU.target = tU.get(pU), RU.lcpEntry = pU, pU.url && (RU.url = pU.url), PU && (RU.lcpResourceEntry = PU);
-                    let qU = 0,
-                      KU = 0;
-                    if ("soft-navigation" !== UU.navigationType ? (TU = Hg(), qU = TU?.activationStart ?? 0, KU = TU?.responseStart ?? 0) : (qU = UU.navigationStartTime || 0, TU = gU.u?.get(UU.navigationId)), TU) {
-                      const gU = Math.max(0, KU - qU),
-                        tU = Math.max(gU, PU ? (PU.requestStart || PU.startTime) - qU : 0),
-                        pU = Math.min(UU.value, Math.max(tU, PU ? PU.responseEnd - qU : 0));
-                      RU = {
-                        ...RU,
-                        timeToFirstByte: gU,
-                        resourceLoadDelay: tU - gU,
-                        resourceLoadDuration: pU - tU,
-                        elementRenderDelay: UU.value - pU,
-                        navigationEntry: TU
+                  if (uu.entries.length) {
+                    const Ku = uu.entries.at(-1),
+                      Qu = uu => uu.name === Ku.url && (uu.requestStart || uu.startTime) <= Ku.startTime,
+                      mu = Ku.url && (DE.findLast(Qu) || performance.getEntriesByType("resource").findLast(Qu));
+                    let Ju;
+                    Ru.target = Eu.get(Ku), Ru.lcpEntry = Ku, Ku.url && (Ru.url = Ku.url), mu && (Ru.lcpResourceEntry = mu);
+                    let Nu = 0,
+                      Xu = 0;
+                    if ("soft-navigation" !== uu.navigationType ? (Ju = Ly(), Nu = Ju?.activationStart ?? 0, Xu = Ju?.responseStart ?? 0) : (Nu = uu.navigationStartTime || 0, Ju = yu.u?.get(uu.navigationId)), Ju) {
+                      const yu = Math.max(0, Xu - Nu),
+                        Eu = Math.max(yu, mu ? (mu.requestStart || mu.startTime) - Nu : 0),
+                        Ku = Math.min(uu.value, Math.max(Eu, mu ? mu.responseEnd - Nu : 0));
+                      Ru = {
+                        ...Ru,
+                        timeToFirstByte: yu,
+                        resourceLoadDelay: Eu - yu,
+                        resourceLoadDuration: Ku - Eu,
+                        elementRenderDelay: uu.value - Ku,
+                        navigationEntry: Ju
                       }
                     }
                   }
-                  return Object.assign(UU, {
-                    attribution: RU
+                  return Object.assign(uu, {
+                    attribution: Ru
                   })
-                })(RU))
-              }), RU)
-          }((UU => {
-            var RU;
+                })(Ru))
+              }), Ru)
+          }((uu => {
+            var Ru;
             const {
-              elementRenderDelay: gU,
-              resourceLoadDelay: tU,
-              resourceLoadDuration: pU,
-              timeToFirstByte: EU,
-              target: PU,
-              url: TU,
-              lcpResourceEntry: qU
-            } = UU.attribution, KU = this.buildInitialValues(UU);
-            this.addIfPresent(KU, "element_render_delay", gU), this.addIfPresent(KU, "resource_load_delay", tU), this.addIfPresent(KU, "resource_load_duration", pU), this.addIfPresent(KU, Bt, EU);
-            const cU = this.buildInitialContext(UU);
-            this.addIfPresent(cU, "element", PU), (null === (RU = this.webVitalConfig) || void 0 === RU ? void 0 : RU.trackAttributionSources) && (this.addIfPresent(cU, "resource_url", TU), this.addIfPresent(cU, "resource_delivery_type", null === qU || void 0 === qU ? void 0 : qU.deliveryType), this.addIfPresent(cU, "resource_initiator_type", null === qU || void 0 === qU ? void 0 : qU.initiatorType)), this.pushMeasurement(KU, cU)
+              elementRenderDelay: yu,
+              resourceLoadDelay: Eu,
+              resourceLoadDuration: Ku,
+              timeToFirstByte: Qu,
+              target: mu,
+              url: Ju,
+              lcpResourceEntry: Nu
+            } = uu.attribution, Xu = this.buildInitialValues(uu);
+            this.addIfPresent(Xu, "element_render_delay", yu), this.addIfPresent(Xu, "resource_load_delay", Eu), this.addIfPresent(Xu, "resource_load_duration", Ku), this.addIfPresent(Xu, UE, Qu);
+            const Vu = this.buildInitialContext(uu);
+            this.addIfPresent(Vu, "element", mu), (null === (Ru = this.webVitalConfig) || void 0 === Ru ? void 0 : Ru.trackAttributionSources) && (this.addIfPresent(Vu, "resource_url", Ju), this.addIfPresent(Vu, "resource_delivery_type", null === Nu || void 0 === Nu ? void 0 : Nu.deliveryType), this.addIfPresent(Vu, "resource_initiator_type", null === Nu || void 0 === Nu ? void 0 : Nu.initiatorType)), this.pushMeasurement(Xu, Vu)
           }), {
-            reportAllChanges: null === (UU = this.webVitalConfig) || void 0 === UU ? void 0 : UU.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
         measureTTFB() {
-          var UU;
-          ! function(UU) {
-            ! function(UU) {
-              let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const gU = pt(RU);
-              let tU = gt("TTFB"),
-                pU = Mg(UU, tU, ot, RU.reportAllChanges);
-              Zt((() => {
-                const EU = Hg();
-                if (EU) {
-                  const PU = EU.responseStart;
-                  tU.value = Math.max(PU - Lg(), 0), tU.entries = [EU], pU(!0), zg((() => {
-                    tU = gt("TTFB", 0, "back-forward-cache", tU.navigationId, tU.navigationInteractionId, tU.navigationURL, Ag()), pU = Mg(UU, tU, ot, RU.reportAllChanges), pU(!0)
-                  })), gU && tt(["soft-navigation"], (gU => {
-                    gU.forEach((gU => {
-                      gU.navigationId && (tU = gt("TTFB", 0, "soft-navigation", gU.navigationId, gU.interactionId, gU.name, gU.startTime), tU.entries = [gU], pU = Mg(UU, tU, ot, RU.reportAllChanges), pU(!0))
+          var uu;
+          ! function(uu) {
+            ! function(uu) {
+              let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const yu = KE(Ru);
+              let Eu = yE("TTFB"),
+                Ku = oy(uu, Eu, ME, Ru.reportAllChanges);
+              IE((() => {
+                const Qu = Ly();
+                if (Qu) {
+                  const mu = Qu.responseStart;
+                  Eu.value = Math.max(mu - Oy(), 0), Eu.entries = [Qu], Ku(!0), Yy((() => {
+                    Eu = yE("TTFB", 0, "back-forward-cache", Eu.navigationId, Eu.navigationInteractionId, Eu.navigationURL, iy()), Ku = oy(uu, Eu, ME, Ru.reportAllChanges), Ku(!0)
+                  })), yu && EE(["soft-navigation"], (yu => {
+                    yu.forEach((yu => {
+                      yu.navigationId && (Eu = yE("TTFB", 0, "soft-navigation", yu.navigationId, yu.interactionId, yu.name, yu.startTime), Eu.entries = [yu], Ku = oy(uu, Eu, ME, Ru.reportAllChanges), Ku(!0))
                     }))
-                  }), RU)
+                  }), Ru)
                 }
               }))
-            }((RU => {
-              UU((UU => {
-                const RU = UU.entries[0];
-                let gU = {
+            }((Ru => {
+              uu((uu => {
+                const Ru = uu.entries[0];
+                let yu = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: RU
+                  navigationEntry: Ru
                 };
-                if (UU.entries.length && RU instanceof PerformanceNavigationTiming) {
-                  const tU = RU.activationStart || 0,
-                    pU = Math.max((RU.workerStart || RU.fetchStart || 0) - tU, 0),
-                    EU = Math.max(RU.domainLookupStart - tU, 0),
-                    PU = Math.max(RU.connectStart - tU, 0),
-                    TU = Math.max(RU.connectEnd - tU, 0);
-                  gU = {
-                    waitingDuration: pU,
-                    cacheDuration: EU - pU,
-                    dnsDuration: PU - EU,
-                    connectionDuration: TU - PU,
-                    requestDuration: UU.value - TU,
-                    navigationEntry: RU
+                if (uu.entries.length && Ru instanceof PerformanceNavigationTiming) {
+                  const Eu = Ru.activationStart || 0,
+                    Ku = Math.max((Ru.workerStart || Ru.fetchStart || 0) - Eu, 0),
+                    Qu = Math.max(Ru.domainLookupStart - Eu, 0),
+                    mu = Math.max(Ru.connectStart - Eu, 0),
+                    Ju = Math.max(Ru.connectEnd - Eu, 0);
+                  yu = {
+                    waitingDuration: Ku,
+                    cacheDuration: Qu - Ku,
+                    dnsDuration: mu - Qu,
+                    connectionDuration: Ju - mu,
+                    requestDuration: uu.value - Ju,
+                    navigationEntry: Ru
                   }
                 }
-                return Object.assign(UU, {
-                  attribution: gU
+                return Object.assign(uu, {
+                  attribution: yu
                 })
-              })(RU))
+              })(Ru))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((UU => {
+          }((uu => {
             const {
-              dnsDuration: RU,
-              connectionDuration: gU,
-              requestDuration: tU,
-              waitingDuration: pU,
-              cacheDuration: EU
-            } = UU.attribution, PU = this.buildInitialValues(UU);
-            this.addIfPresent(PU, "dns_duration", RU), this.addIfPresent(PU, "connection_duration", gU), this.addIfPresent(PU, "request_duration", tU), this.addIfPresent(PU, "waiting_duration", pU), this.addIfPresent(PU, "cache_duration", EU);
-            const TU = this.buildInitialContext(UU);
-            this.pushMeasurement(PU, TU)
+              dnsDuration: Ru,
+              connectionDuration: yu,
+              requestDuration: Eu,
+              waitingDuration: Ku,
+              cacheDuration: Qu
+            } = uu.attribution, mu = this.buildInitialValues(uu);
+            this.addIfPresent(mu, "dns_duration", Ru), this.addIfPresent(mu, "connection_duration", yu), this.addIfPresent(mu, "request_duration", Eu), this.addIfPresent(mu, "waiting_duration", Ku), this.addIfPresent(mu, "cache_duration", Qu);
+            const Ju = this.buildInitialContext(uu);
+            this.pushMeasurement(mu, Ju)
           }), {
-            reportAllChanges: null === (UU = this.webVitalConfig) || void 0 === UU ? void 0 : UU.reportAllChanges
+            reportAllChanges: null === (uu = this.webVitalConfig) || void 0 === uu ? void 0 : uu.reportAllChanges
           })
         }
-        buildInitialValues(UU) {
+        buildInitialValues(uu) {
           return {
-            [UU.name.toLowerCase()]: UU.value,
-            delta: UU.delta
+            [uu.name.toLowerCase()]: uu.value,
+            delta: uu.delta
           }
         }
-        buildInitialContext(UU) {
-          var RU;
-          const gU = null !== (RU = UR("com.grafana.faro.lastNavigationId", NU)) && void 0 !== RU ? RU : Xg;
+        buildInitialContext(uu) {
+          var Ru;
+          const yu = null !== (Ru = uR("com.grafana.faro.lastNavigationId", vu)) && void 0 !== Ru ? Ru : ly;
           return {
-            id: UU.id,
-            rating: UU.rating,
-            navigation_type: UU.navigationType,
-            navigation_entry_id: gU
+            id: uu.id,
+            rating: uu.rating,
+            navigation_type: uu.navigationType,
+            navigation_entry_id: yu
           }
         }
-        pushMeasurement(UU, RU) {
+        pushMeasurement(uu, Ru) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: UU
+            values: uu
           }, {
-            context: RU
+            context: Ru
           })
         }
-        addIfPresent(UU, RU, gU) {
-          gU && (UU[RU] = gU)
+        addIfPresent(uu, Ru, yu) {
+          yu && (uu[Ru] = yu)
         }
-        addNumberIfDefined(UU, RU, gU) {
-          void 0 !== gU && (UU[RU] = gU)
+        addNumberIfDefined(uu, Ru, yu) {
+          void 0 !== yu && (uu[Ru] = yu)
         }
       },
-      rt = class extends Rg {
+      sE = class extends Ry {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = gg
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = yy
         }
         initialize() {
-          this.logDebug("Initializing"), new Vt(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new nE(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const Xt = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const tE = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function vt() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const RU of UU)
-        if ("traceparent" === RU.name) {
-          if (!Xt.test(RU.description)) continue;
-          const [, UU, gU] = RU.description.split("-");
-          if (null != UU && null != gU) return {
-            traceId: UU,
-            spanId: gU
+    function lE() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const Ru of uu)
+        if ("traceparent" === Ru.name) {
+          if (!tE.test(Ru.description)) continue;
+          const [, uu, yu] = Ru.description.split("-");
+          if (null != uu && null != yu) return {
+            traceId: uu,
+            spanId: yu
           };
           break
         }
     }
 
-    function dt(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function gE(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: gU,
-        monoNow: tU
-      } = RU;
-      return Math.min(gU, gU - (tU - UU))
+        wallNow: yu,
+        monoNow: Eu
+      } = Ru;
+      return Math.min(yu, yu - (Eu - uu))
     }
 
-    function Ht(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [gU, tU] of Object.entries(RU)) {
-        const RU = UU[gU];
-        return null != RU && (aU(tU) ? tU.includes(RU) : RU === tU)
+    function cE(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [yu, Eu] of Object.entries(Ru)) {
+        const Ru = uu[yu];
+        return null != Ru && (Gu(Eu) ? Eu.includes(Ru) : Ru === Eu)
       }
       return !0
     }
 
-    function St(UU) {
+    function LE(uu) {
       const {
-        connectEnd: RU,
-        connectStart: gU,
-        decodedBodySize: tU,
-        domainLookupEnd: pU,
-        domainLookupStart: EU,
-        duration: PU,
-        encodedBodySize: TU,
-        fetchStart: qU,
-        initiatorType: KU,
-        name: cU,
-        nextHopProtocol: GU,
-        redirectEnd: jU,
-        redirectStart: uU,
-        renderBlockingStatus: CU,
-        requestStart: hU,
-        responseEnd: QU,
-        responseStart: eU,
-        responseStatus: WU,
-        secureConnectionStart: fU,
-        transferSize: xU,
-        workerStart: mU
-      } = UU;
+        connectEnd: Ru,
+        connectStart: yu,
+        decodedBodySize: Eu,
+        domainLookupEnd: Ku,
+        domainLookupStart: Qu,
+        duration: mu,
+        encodedBodySize: Ju,
+        fetchStart: Nu,
+        initiatorType: Xu,
+        name: Vu,
+        nextHopProtocol: ru,
+        redirectEnd: Bu,
+        redirectStart: xu,
+        renderBlockingStatus: Su,
+        requestStart: pu,
+        responseEnd: Tu,
+        responseStart: Wu,
+        responseStatus: ju,
+        secureConnectionStart: Hu,
+        transferSize: du,
+        workerStart: bu
+      } = uu;
       return {
-        name: cU,
-        httpHost: yt(cU),
-        duration: kt(PU),
-        tcpHandshakeTime: kt(RU - gU),
-        dnsLookupTime: kt(pU - EU),
-        tlsNegotiationTime: kt(RU - fU),
-        responseStatus: kt(WU),
-        redirectTime: kt(jU - uU),
-        requestTime: kt(eU - hU),
-        responseTime: kt(QU - eU),
-        fetchTime: kt(QU - qU),
-        serviceWorkerTime: kt(mU > 0 ? qU - mU : 0),
-        decodedBodySize: kt(tU),
-        encodedBodySize: kt(TU),
+        name: Vu,
+        httpHost: FE(Vu),
+        duration: wE(mu),
+        tcpHandshakeTime: wE(Ru - yu),
+        dnsLookupTime: wE(Ku - Qu),
+        tlsNegotiationTime: wE(Ru - Hu),
+        responseStatus: wE(ju),
+        redirectTime: wE(Bu - xu),
+        requestTime: wE(Wu - pu),
+        responseTime: wE(Tu - Wu),
+        fetchTime: wE(Tu - Nu),
+        serviceWorkerTime: wE(bu > 0 ? Nu - bu : 0),
+        decodedBodySize: wE(Eu),
+        encodedBodySize: wE(Ju),
         cacheHitStatus: function() {
-          let UU = "fullLoad";
-          0 === xU ? tU > 0 && (UU = "cache") : null != WU ? 304 === WU && (UU = "conditionalFetch") : TU > 0 && xU < TU && (UU = "conditionalFetch");
-          return UU
+          let uu = "fullLoad";
+          0 === du ? Eu > 0 && (uu = "cache") : null != ju ? 304 === ju && (uu = "conditionalFetch") : Ju > 0 && du < Ju && (uu = "conditionalFetch");
+          return uu
         }(),
-        renderBlockingStatus: kt(CU),
-        protocol: GU,
-        initiatorType: KU,
+        renderBlockingStatus: wE(Su),
+        protocol: ru,
+        initiatorType: Xu,
         visibilityState: document.visibilityState,
-        ttfb: kt(eU - hU),
-        transferSize: kt(xU)
+        ttfb: wE(Wu - pu),
+        transferSize: wE(du)
       }
     }
 
-    function st(UU) {
+    function zE(uu) {
       const {
-        activationStart: RU,
-        domComplete: gU,
-        domContentLoadedEventEnd: tU,
-        domContentLoadedEventStart: pU,
-        domInteractive: EU,
-        fetchStart: PU,
-        loadEventEnd: TU,
-        loadEventStart: qU,
-        responseStart: KU,
-        type: cU
-      } = UU, GU = function() {
-        var UU;
-        return null != (null === (UU = performance.timing) || void 0 === UU ? void 0 : UU.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: Ru,
+        domComplete: yu,
+        domContentLoadedEventEnd: Eu,
+        domContentLoadedEventStart: Ku,
+        domInteractive: Qu,
+        fetchStart: mu,
+        loadEventEnd: Ju,
+        loadEventStart: Nu,
+        responseStart: Xu,
+        type: Vu
+      } = uu, ru = function() {
+        var uu;
+        return null != (null === (uu = performance.timing) || void 0 === uu ? void 0 : uu.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return cR(cR({}, St(UU)), {}, {
-        pageLoadTime: kt(gU - PU),
-        documentParsingTime: kt(GU ? EU - GU : null),
-        domProcessingTime: kt(gU - EU),
-        domContentLoadHandlerTime: kt(tU - pU),
-        onLoadTime: kt(TU - qU),
-        ttfb: kt(Math.max(KU - (null !== RU && void 0 !== RU ? RU : 0), 0)),
-        type: cU
+      return VR(VR({}, LE(uu)), {}, {
+        pageLoadTime: wE(yu - mu),
+        documentParsingTime: wE(ru ? Qu - ru : null),
+        domProcessingTime: wE(yu - Qu),
+        domContentLoadHandlerTime: wE(Eu - Ku),
+        onLoadTime: wE(Ju - Nu),
+        ttfb: wE(Math.max(Xu - (null !== Ru && void 0 !== Ru ? Ru : 0), 0)),
+        type: Vu
       })
     }
 
-    function yt(UU) {
+    function FE(uu) {
       try {
-        return new URL(UU).host || Xg
-      } catch (RU) {
-        return Xg
+        return new URL(uu).host || ly
+      } catch (Ru) {
+        return ly
       }
     }
 
-    function kt(UU) {
-      return null == UU ? Xg : "number" === typeof UU ? Math.round(UU > 0 ? UU : 0).toString() : UU.toString()
+    function wE(uu) {
+      return null == uu ? ly : "number" === typeof uu ? Math.round(uu > 0 ? uu : 0).toString() : uu.toString()
     }
-    const Ft = {
+    const ZE = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function it(UU, RU, gU, tU, pU, EU, PU) {
+    function hE(uu, Ru, yu, Eu, Ku, Qu, mu) {
       try {
-        var TU = UU[EU](PU),
-          qU = TU.value
-      } catch (UU) {
-        return void gU(UU)
+        var Ju = uu[Qu](mu),
+          Nu = Ju.value
+      } catch (uu) {
+        return void yu(uu)
       }
-      TU.done ? RU(qU) : Promise.resolve(qU).then(tU, pU)
+      Ju.done ? Ru(Nu) : Promise.resolve(Nu).then(Eu, Ku)
     }
 
-    function At(UU) {
+    function PE(uu) {
       return function() {
-        var RU = this,
-          gU = arguments;
-        return new Promise((function(tU, pU) {
-          var EU = UU.apply(RU, gU);
+        var Ru = this,
+          yu = arguments;
+        return new Promise((function(Eu, Ku) {
+          var Qu = uu.apply(Ru, yu);
 
-          function PU(UU) {
-            it(EU, tU, pU, PU, TU, "next", UU)
+          function mu(uu) {
+            hE(Qu, Eu, Ku, mu, Ju, "next", uu)
           }
 
-          function TU(UU) {
-            it(EU, tU, pU, PU, TU, "throw", UU)
+          function Ju(uu) {
+            hE(Qu, Eu, Ku, mu, Ju, "throw", uu)
           }
-          PU(void 0)
+          mu(void 0)
         }))
       }
     }
-    const zt = new Wg;
-    var Mt = class extends Rg {
+    const iE = new jy;
+    var YE = class extends Ry {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = gg
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = yy
       }
       initialize() {
-        var UU = this;
+        var uu = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let RU = !1;
-        const gU = () => {
-          ! function(UU) {
-            if ("complete" === document.readyState) UU();
+        let Ru = !1;
+        const yu = () => {
+          ! function(uu) {
+            if ("complete" === document.readyState) uu();
             else {
-              const RU = () => {
-                "complete" === document.readyState && (UU(), document.removeEventListener("readystatechange", RU))
+              const Ru = () => {
+                "complete" === document.readyState && (uu(), document.removeEventListener("readystatechange", Ru))
               };
-              document.addEventListener("readystatechange", RU)
+              document.addEventListener("readystatechange", Ru)
             }
-          }(At((function*() {
-            if (RU) return;
-            const gU = UU.api.pushEvent,
+          }(PE((function*() {
+            if (Ru) return;
+            const yu = uu.api.pushEvent,
               {
-                faroNavigationId: tU
-              } = yield function(UU) {
-                let RU;
-                const gU = new Promise((UU => {
-                  RU = UU
+                faroNavigationId: Eu
+              } = yield function(uu) {
+                let Ru;
+                const yu = new Promise((uu => {
+                  Ru = uu
                 }));
-                return new PerformanceObserver((gU => {
-                  var tU;
-                  const [pU] = gU.getEntries();
-                  if (null == pU || DU(pU.name)) return;
-                  const EU = pU.toJSON();
-                  let PU = vt(null === EU || void 0 === EU ? void 0 : EU.serverTiming);
-                  const TU = null !== (tU = UR("com.grafana.faro.lastNavigationId", NU)) && void 0 !== tU ? tU : Xg,
-                    qU = cR(cR({}, st(EU)), {}, {
-                      faroNavigationId: eR(),
-                      faroPreviousNavigationId: TU
+                return new PerformanceObserver((yu => {
+                  var Eu;
+                  const [Ku] = yu.getEntries();
+                  if (null == Ku || qu(Ku.name)) return;
+                  const Qu = Ku.toJSON();
+                  let mu = lE(null === Qu || void 0 === Qu ? void 0 : Qu.serverTiming);
+                  const Ju = null !== (Eu = uR("com.grafana.faro.lastNavigationId", vu)) && void 0 !== Eu ? Eu : ly,
+                    Nu = VR(VR({}, zE(Qu)), {}, {
+                      faroNavigationId: WR(),
+                      faroPreviousNavigationId: Ju
                     });
-                  RR("com.grafana.faro.lastNavigationId", qU.faroNavigationId, NU), UU("faro.performance.navigation", qU, void 0, {
-                    spanContext: PU,
-                    timestampOverwriteMs: dt(EU.startTime)
-                  }), RU(qU)
+                  RR("com.grafana.faro.lastNavigationId", Nu.faroNavigationId, vu), uu("faro.performance.navigation", Nu, void 0, {
+                    spanContext: mu,
+                    timestampOverwriteMs: gE(Qu.startTime)
+                  }), Ru(Nu)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), gU
-              }(gU);
-            RU || null == tU || function(UU, RU, gU, tU) {
-              const pU = tU.trackResources;
-              new PerformanceObserver((tU => {
-                const EU = tU.getEntries(),
-                  PU = {
+                }), yu
+              }(yu);
+            Ru || null == Eu || function(uu, Ru, yu, Eu) {
+              const Ku = Eu.trackResources;
+              new PerformanceObserver((Eu => {
+                const Qu = Eu.getEntries(),
+                  mu = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const TU of EU) {
-                  if (DU(TU.name)) continue;
-                  null === gU || void 0 === gU || gU.notify({
+                for (const Ju of Qu) {
+                  if (qu(Ju.name)) continue;
+                  null === yu || void 0 === yu || yu.notify({
                     type: "resource"
                   });
-                  const tU = TU.toJSON();
-                  let EU = vt(null === tU || void 0 === tU ? void 0 : tU.serverTiming);
-                  (null == pU && Ht(tU, Ft) || pU) && RU("faro.performance.resource", cR(cR({}, St(tU)), {}, {
-                    faroNavigationId: UU,
-                    faroResourceId: eR()
+                  const Eu = Ju.toJSON();
+                  let Qu = lE(null === Eu || void 0 === Eu ? void 0 : Eu.serverTiming);
+                  (null == Ku && cE(Eu, ZE) || Ku) && Ru("faro.performance.resource", VR(VR({}, LE(Eu)), {}, {
+                    faroNavigationId: uu,
+                    faroResourceId: WR()
                   }), void 0, {
-                    spanContext: EU,
-                    timestampOverwriteMs: dt(tU.startTime, PU)
+                    spanContext: Qu,
+                    timestampOverwriteMs: gE(Eu.startTime, mu)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(tU, gU, zt, UU.config)
+            }(Eu, yu, iE, uu.config)
           })))
         };
         this.cancelInitialization = () => {
-          RU = !0, document.removeEventListener("prerenderingchange", gU)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", gU, {
+          Ru = !0, document.removeEventListener("prerenderingchange", yu)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", yu, {
           once: !0
-        }) : gU()
+        }) : yu()
       }
       destroy() {
-        var UU;
-        null === (UU = this.cancelInitialization) || void 0 === UU || UU.call(this), this.cancelInitialization = void 0
+        var uu;
+        null === (uu = this.cancelInitialization) || void 0 === uu || uu.call(this), this.cancelInitialization = void 0
       }
     };
-    const Dt = "data-faro-user-action-name",
-      Lt = Dt.replace(/-name$/, "-timeout"),
-      Nt = 1e3;
+    const oE = "data-faro-user-action-name",
+      qE = oE.replace(/-name$/, "-timeout"),
+      OE = 1e3;
 
-    function lt(UU) {
-      return `data-${(UU.startsWith("data-")?UU.slice(5):UU).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function vE(uu) {
+      return `data-${(uu.startsWith("data-")?uu.slice(5):uu).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function Ot(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : FR;
-      if (void 0 === UU) return RU;
-      let tU = NaN;
+    function aE(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hR;
+      if (void 0 === uu) return Ru;
+      let Eu = NaN;
       try {
-        tU = "string" === typeof UU && "" === UU.trim() ? NaN : Number(UU)
-      } catch (pU) {}
-      return !Number.isFinite(tU) || tU <= 0 ? (gU(`initialActivityTimeout must be a finite number greater than zero; using ${RU} ms`), RU) : tU > 1e3 ? (gU(`initialActivityTimeout cannot exceed ${Nt} ms; clamping to the maximum`), Nt) : tU
+        Eu = "string" === typeof uu && "" === uu.trim() ? NaN : Number(uu)
+      } catch (Ku) {}
+      return !Number.isFinite(Eu) || Eu <= 0 ? (yu(`initialActivityTimeout must be a finite number greater than zero; using ${Ru} ms`), Ru) : Eu > 1e3 ? (yu(`initialActivityTimeout cannot exceed ${OE} ms; clamping to the maximum`), OE) : Eu
     }
 
-    function Up(UU, RU, gU) {
-      return void 0 !== UU && window.clearTimeout(UU), window.setTimeout((() => {
-        RU()
-      }), gU)
+    function fE(uu, Ru, yu) {
+      return void 0 !== uu && window.clearTimeout(uu), window.setTimeout((() => {
+        Ru()
+      }), yu)
     }
 
-    function Rp(UU) {
-      return UU.type === eg
+    function uK(uu) {
+      return uu.type === Wy
     }
-    let gp, tp;
+    let RK, yK;
 
-    function pp() {
-      return gp || (gp = new Wg), tp || (tp = new MutationObserver(((UU, RU) => {
-        gp.notify({
+    function EK() {
+      return RK || (RK = new jy), yK || (yK = new MutationObserver(((uu, Ru) => {
+        RK.notify({
           type: "dom-mutation"
         })
-      })), tp.observe(document, {
+      })), yK.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), gp
+      })), RK
     }
-    const Ep = "fetch",
-      Pp = "xhr";
-    let Tp, qp, Kp, cp, Gp = !1;
+    const KK = "fetch",
+      QK = "xhr";
+    let mK, JK, NK, XK, VK = !1;
 
-    function jp() {
-      if (Tp) return Tp;
+    function rK() {
+      if (mK) return mK;
 
-      function UU(UU) {
-        Tp.notify({
-          type: Qg,
-          request: UU
+      function uu(uu) {
+        mK.notify({
+          type: Ty,
+          request: uu
         })
       }
 
-      function RU(UU) {
-        Tp.notify({
-          type: eg,
-          request: UU
+      function Ru(uu) {
+        mK.notify({
+          type: Wy,
+          request: uu
         })
       }
-      return Tp = new Wg, Gp || (! function(UU) {
+      return mK = new jy, VK || (! function(uu) {
         let {
-          onRequestEnd: RU,
-          onRequestStart: gU
-        } = UU;
-        Kp || (Kp = window.fetch);
+          onRequestEnd: Ru,
+          onRequestStart: yu
+        } = uu;
+        NK || (NK = window.fetch);
         window.fetch = function() {
-          var UU, tU;
-          const pU = null !== (UU = LU(arguments[0])) && void 0 !== UU ? UU : "",
-            EU = DU(pU),
-            PU = (null !== (tU = arguments[1]) && void 0 !== tU ? tU : {}).method,
-            TU = eR();
-          return EU || gU({
-            url: pU,
-            method: PU,
-            requestId: TU,
-            apiType: Ep
-          }), Kp.apply(this, arguments).then((UU => (EU || RU({
-            url: pU,
-            method: PU,
-            requestId: TU,
-            apiType: Ep
-          }), UU))).catch((UU => {
-            throw EU || RU({
-              url: pU,
-              method: PU,
-              requestId: TU,
-              apiType: Ep
-            }), UU
+          var uu, Eu;
+          const Ku = null !== (uu = Ou(arguments[0])) && void 0 !== uu ? uu : "",
+            Qu = qu(Ku),
+            mu = (null !== (Eu = arguments[1]) && void 0 !== Eu ? Eu : {}).method,
+            Ju = WR();
+          return Qu || yu({
+            url: Ku,
+            method: mu,
+            requestId: Ju,
+            apiType: KK
+          }), NK.apply(this, arguments).then((uu => (Qu || Ru({
+            url: Ku,
+            method: mu,
+            requestId: Ju,
+            apiType: KK
+          }), uu))).catch((uu => {
+            throw Qu || Ru({
+              url: Ku,
+              method: mu,
+              requestId: Ju,
+              apiType: KK
+            }), uu
           }))
         }
       }({
-        onRequestStart: UU,
-        onRequestEnd: RU
-      }), function(UU) {
+        onRequestStart: uu,
+        onRequestEnd: Ru
+      }), function(uu) {
         let {
-          onRequestStart: RU,
-          onRequestEnd: gU
-        } = UU;
-        qp || (qp = XMLHttpRequest.prototype.open);
+          onRequestStart: Ru,
+          onRequestEnd: yu
+        } = uu;
+        JK || (JK = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const UU = arguments[1],
-            tU = DU(UU),
-            pU = arguments[0],
-            EU = eR();
+          const uu = arguments[1],
+            Eu = qu(uu),
+            Ku = arguments[0],
+            Qu = WR();
           this.addEventListener("loadstart", (function() {
-            tU || RU({
-              url: UU,
-              method: pU,
-              requestId: EU,
-              apiType: Pp
+            Eu || Ru({
+              url: uu,
+              method: Ku,
+              requestId: Qu,
+              apiType: QK
             })
           })), this.addEventListener("load", (function() {
-            tU || gU({
-              url: UU,
-              method: pU,
-              requestId: EU,
-              apiType: Pp
+            Eu || yu({
+              url: uu,
+              method: Ku,
+              requestId: Qu,
+              apiType: QK
             })
           })), this.addEventListener("error", (function() {
-            tU || gU({
-              url: UU,
-              method: pU,
-              requestId: EU,
-              apiType: Pp
+            Eu || yu({
+              url: uu,
+              method: Ku,
+              requestId: Qu,
+              apiType: QK
             })
           })), this.addEventListener("abort", (function() {
-            tU || gU({
-              url: UU,
-              method: pU,
-              requestId: EU,
-              apiType: Pp
+            Eu || yu({
+              url: uu,
+              method: Ku,
+              requestId: Qu,
+              apiType: QK
             })
-          })), qp.apply(this, arguments)
+          })), JK.apply(this, arguments)
         }
       }({
-        onRequestStart: UU,
-        onRequestEnd: RU
-      }), Gp = !0), Tp
+        onRequestStart: uu,
+        onRequestEnd: Ru
+      }), VK = !0), mK
     }
-    let Cp, hp = !1;
-    let Qp = function(UU) {
-      return UU[UU.Started = 0] = "Started", UU[UU.Halted = 1] = "Halted", UU[UU.Cancelled = 2] = "Cancelled", UU[UU.Ended = 3] = "Ended", UU
+    let BK, xK = !1;
+    let SK = function(uu) {
+      return uu[uu.Started = 0] = "Started", uu[uu.Halted = 1] = "Halted", uu[uu.Cancelled = 2] = "Cancelled", uu[uu.Ended = 3] = "Ended", uu
     }({});
-    var ep = class {
-      constructor(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = UU, this.logDebug = RU, this.initialActivityTimeout = gU, this.http = jp(), this.dom = pp(), this.perf = (cp || (cp = new Wg), hp || (Cp = zt.subscribe((UU => {
-          "resource" === UU.type && cp.notify({
+    var pK = class {
+      constructor(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = uu, this.logDebug = Ru, this.initialActivityTimeout = yu, this.http = rK(), this.dom = EK(), this.perf = (XK || (XK = new jy), xK || (BK = iE.subscribe((uu => {
+          "resource" === uu.type && XK.notify({
             type: "resource-entry"
           })
-        })), hp = !0), cp), this.isValid = !1, this.runningRequests = new Map
+        })), xK = !0), XK), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new Wg).merge(this.http, this.dom, this.perf).takeWhile((() => [Qp.Started, Qp.Halted].includes(this.userAction.getState()))).filter((UU => !!(this.userAction.getState() !== Qp.Halted || Rp(UU) && this.runningRequests.has(UU.request.requestId)))).subscribe((UU => {
-          (function(UU) {
-            return UU.type === Qg
-          })(UU) && this.runningRequests.set(UU.request.requestId, UU.request), Rp(UU) && this.runningRequests.delete(UU.request.requestId), Rp(UU) ? this.userAction.getState() === Qp.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((UU => [Qp.Ended, Qp.Cancelled].includes(UU))).first().subscribe((() => this.cleanup())), this.startupTid = Up(this.startupTid, (() => {
+        this.allMonitorsSub = (new jy).merge(this.http, this.dom, this.perf).takeWhile((() => [SK.Started, SK.Halted].includes(this.userAction.getState()))).filter((uu => !!(this.userAction.getState() !== SK.Halted || uK(uu) && this.runningRequests.has(uu.request.requestId)))).subscribe((uu => {
+          (function(uu) {
+            return uu.type === Ty
+          })(uu) && this.runningRequests.set(uu.request.requestId, uu.request), uK(uu) && this.runningRequests.delete(uu.request.requestId), uK(uu) ? this.userAction.getState() === SK.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((uu => [SK.Ended, SK.Cancelled].includes(uu))).first().subscribe((() => this.cleanup())), this.startupTid = fE(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === Qp.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === SK.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === Qp.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === SK.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = Up(this.haltTid, (() => {
-          this.userAction.getState() === Qp.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = fE(this.haltTid, (() => {
+          this.userAction.getState() === SK.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var UU, RU;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (UU = this.allMonitorsSub) || void 0 === UU || UU.unsubscribe(), null === (RU = this.stateSub) || void 0 === RU || RU.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var uu, Ru;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (uu = this.allMonitorsSub) || void 0 === uu || uu.unsubscribe(), null === (Ru = this.stateSub) || void 0 === Ru || Ru.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(UU) {
-        void 0 !== UU && window.clearTimeout(UU)
+      clearTimer(uu) {
+        void 0 !== uu && window.clearTimeout(uu)
       }
     };
 
-    function Wp(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : FR;
-      var gU;
+    function TK(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hR;
+      var yu;
       const {
-        api: tU,
-        config: pU,
-        internalLogger: EU
-      } = UU, PU = Ot(null === (gU = pU.userActionsInstrumentation) || void 0 === gU ? void 0 : gU.initialActivityTimeout, 100, RU);
+        api: Eu,
+        config: Ku,
+        internalLogger: Qu
+      } = uu, mu = aE(null === (yu = Ku.userActionsInstrumentation) || void 0 === yu ? void 0 : yu.initialActivityTimeout, 100, Ru);
       return {
-        processUserEvent: function(UU) {
-          var RU, gU;
-          const EU = null !== (RU = null === (gU = pU.userActionsInstrumentation) || void 0 === gU ? void 0 : gU.dataAttributeName) && void 0 !== RU ? RU : Dt,
-            PU = UU.target;
-          if (!(PU instanceof Element)) return;
-          const TU = function(UU, RU) {
-              let gU = UU;
-              for (; gU;) {
-                if (gU.hasAttribute(RU)) return gU;
-                gU = gU.parentElement
+        processUserEvent: function(uu) {
+          var Ru, yu;
+          const Qu = null !== (Ru = null === (yu = Ku.userActionsInstrumentation) || void 0 === yu ? void 0 : yu.dataAttributeName) && void 0 !== Ru ? Ru : oE,
+            mu = uu.target;
+          if (!(mu instanceof Element)) return;
+          const Ju = function(uu, Ru) {
+              let yu = uu;
+              for (; yu;) {
+                if (yu.hasAttribute(Ru)) return yu;
+                yu = yu.parentElement
               }
               return null
-            }(PU, lt(EU)),
-            qU = function(UU, RU) {
-              if (!UU) return;
-              const gU = function(UU) {
-                  return lt(UU).slice(5).replace(/-(.)/g, ((UU, RU) => RU.toUpperCase()))
-                }(RU),
-                tU = UU.dataset;
-              for (const pU in tU)
-                if (pU === gU) return tU[pU]
-            }(TU, EU);
-          if (!TU || !qU) return;
-          const KU = function(UU, RU) {
-            const gU = UU.getAttribute(function(UU) {
-              const RU = lt(UU);
-              return RU.endsWith("-name") ? `${RU.slice(0,-5)}-timeout` : `${RU}-timeout`
-            }(RU));
-            return null === gU ? void 0 : Number(gU)
-          }(TU, EU);
-          tU.startUserAction(qU, {}, {
-            triggerName: UU.type,
-            initialActivityTimeout: KU
+            }(mu, vE(Qu)),
+            Nu = function(uu, Ru) {
+              if (!uu) return;
+              const yu = function(uu) {
+                  return vE(uu).slice(5).replace(/-(.)/g, ((uu, Ru) => Ru.toUpperCase()))
+                }(Ru),
+                Eu = uu.dataset;
+              for (const Ku in Eu)
+                if (Ku === yu) return Eu[Ku]
+            }(Ju, Qu);
+          if (!Ju || !Nu) return;
+          const Xu = function(uu, Ru) {
+            const yu = uu.getAttribute(function(uu) {
+              const Ru = vE(uu);
+              return Ru.endsWith("-name") ? `${Ru.slice(0,-5)}-timeout` : `${Ru}-timeout`
+            }(Ru));
+            return null === yu ? void 0 : Number(yu)
+          }(Ju, Qu);
+          Eu.startUserAction(Nu, {}, {
+            triggerName: uu.type,
+            initialActivityTimeout: Xu
           })
         },
-        processUserActionStarted: function(UU, gU) {
-          const tU = UU,
-            pU = Ot(gU, PU, RU);
-          new ep(tU, EU.debug, pU).attach()
+        processUserActionStarted: function(uu, yu) {
+          const Eu = uu,
+            Ku = aE(yu, mu, Ru);
+          new pK(Eu, Qu.debug, Ku).attach()
         }
       }
     }
-    const fp = "user_action_start",
-      xp = {
+    const WK = "user_action_start",
+      jK = {
         Normal: "normal",
         Critical: "critical"
       };
-    var mp = class {
+    var HK = class {
         constructor() {
           this.buffer = []
         }
-        addItem(UU) {
-          this.buffer.push(UU)
+        addItem(uu) {
+          this.buffer.push(uu)
         }
-        flushBuffer(UU) {
-          if (ZU(UU))
-            for (const RU of this.buffer) UU(RU);
+        flushBuffer(uu) {
+          if (Iu(uu))
+            for (const Ru of this.buffer) uu(Ru);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      Ip = class extends Wg {
-        constructor(UU) {
+      dK = class extends jy {
+        constructor(uu) {
           let {
-            name: RU,
-            parentId: gU,
-            trigger: tU,
-            transports: pU,
-            attributes: EU,
-            trackUserActionsExcludeItem: PU,
-            importance: TU = xp.Normal,
-            pushEvent: qU
-          } = UU;
-          super(), this.name = RU, this.attributes = EU, this.id = eR(), this.trigger = tU, this.parentId = null !== gU && void 0 !== gU ? gU : this.id, this.trackUserActionsExcludeItem = PU, this.importance = TU, this._pushEvent = qU, this._itemBuffer = new mp, this._transports = pU, this._state = 0, this._start()
+            name: Ru,
+            parentId: yu,
+            trigger: Eu,
+            transports: Ku,
+            attributes: Qu,
+            trackUserActionsExcludeItem: mu,
+            importance: Ju = jK.Normal,
+            pushEvent: Nu
+          } = uu;
+          super(), this.name = Ru, this.attributes = Qu, this.id = WR(), this.trigger = Eu, this.parentId = null !== yu && void 0 !== yu ? yu : this.id, this.trackUserActionsExcludeItem = mu, this.importance = Ju, this._pushEvent = Nu, this._itemBuffer = new HK, this._transports = Ku, this._state = 0, this._start()
         }
-        addItem(UU) {
-          return 0 === this._state && (this._itemBuffer.addItem(UU), !0)
+        addItem(uu) {
+          return 0 === this._state && (this._itemBuffer.addItem(uu), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = jR(), this._startTimeMono = uR())
+          this._state = 0, 0 === this._state && (this.startTime = BR(), this._startTimeMono = xR())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((UU => {
-            this._transports.execute(UU)
+          0 === this._state && this._itemBuffer.flushBuffer((uu => {
+            this._transports.execute(uu)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const UU = jR(),
-            RU = uR() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((UU => {
-            if (function(UU, RU) {
-                return (null === RU || void 0 === RU ? void 0 : RU(UU)) || "measurement" === UU.type && "web-vitals" === UU.payload.type
-              }(UU, this.trackUserActionsExcludeItem)) return void this._transports.execute(UU);
-            const RU = lR(lR({}, UU), {}, {
-              payload: lR(lR({}, UU.payload), {}, {
+          const uu = BR(),
+            Ru = xR() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((uu => {
+            if (function(uu, Ru) {
+                return (null === Ru || void 0 === Ru ? void 0 : Ru(uu)) || "measurement" === uu.type && "web-vitals" === uu.payload.type
+              }(uu, this.trackUserActionsExcludeItem)) return void this._transports.execute(uu);
+            const Ru = aR(aR({}, uu), {}, {
+              payload: aR(aR({}, uu.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(RU)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", lR({
+            this._transports.execute(Ru)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", aR({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: UU.toString(),
-            userActionDuration: RU.toString(),
+            userActionEndTime: uu.toString(),
+            userActionDuration: Ru.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, vR(this.attributes)), void 0, {
+          }, gR(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: UU => (UU.action = {
+            customPayloadTransformer: uu => (uu.action = {
               id: this.id,
               name: this.name
-            }, UU)
+            }, uu)
           })
         }
         getState() {
           return this._state
         }
       };
-    const Jp = new Wg;
+    const bK = new jy;
 
-    function wp(UU, RU) {
-      return !!UU && (0 === (null === UU || void 0 === UU ? void 0 : UU.getState()) && (UU.addItem(RU), !0))
+    function CK(uu, Ru) {
+      return !!uu && (0 === (null === uu || void 0 === uu ? void 0 : uu.getState()) && (uu.addItem(Ru), !0))
     }
-    var np = class extends Rg {
+    var kK = class extends Ry {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = gg
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = yy
         }
         initialize() {
           const {
-            processUserEvent: UU,
-            processUserActionStarted: RU
-          } = Wp(hU, (UU => this.logWarn(UU)));
-          this._processUserEvent = UU, this._processKeydown = RU => {
-            [" ", "Enter"].includes(RU.key) && UU(RU)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = Jp.subscribe((UU => {
+            processUserEvent: uu,
+            processUserActionStarted: Ru
+          } = TK(pu, (uu => this.logWarn(uu)));
+          this._processUserEvent = uu, this._processKeydown = Ru => {
+            [" ", "Enter"].includes(Ru.key) && uu(Ru)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = bK.subscribe((uu => {
             let {
-              type: gU,
-              userAction: tU,
-              initialActivityTimeout: pU
-            } = UU;
-            "user_action_start" === gU && RU(tU, pU)
+              type: yu,
+              userAction: Eu,
+              initialActivityTimeout: Ku
+            } = uu;
+            "user_action_start" === yu && Ru(Eu, Ku)
           }))
         }
         destroy() {
-          var UU;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (UU = this._userActionSub) || void 0 === UU || UU.unsubscribe()
+          var uu;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (uu = this._userActionSub) || void 0 === uu || uu.unsubscribe()
         }
       },
-      bp = class extends Rg {
+      eK = class extends Ry {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = gg, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = yy, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(UU) {
-          const RU = {
-            blockedURI: UU.blockedURI,
-            columnNumber: UU.columnNumber,
-            disposition: UU.disposition,
-            documentURI: UU.documentURI,
-            effectiveDirective: UU.effectiveDirective,
-            lineNumber: UU.lineNumber,
-            originalPolicy: UU.originalPolicy,
-            referrer: UU.referrer,
-            sample: UU.sample,
-            sourceFile: UU.sourceFile,
-            statusCode: UU.statusCode,
-            violatedDirective: UU.violatedDirective
+        securitypolicyviolationHandler(uu) {
+          const Ru = {
+            blockedURI: uu.blockedURI,
+            columnNumber: uu.columnNumber,
+            disposition: uu.disposition,
+            documentURI: uu.documentURI,
+            effectiveDirective: uu.effectiveDirective,
+            lineNumber: uu.lineNumber,
+            originalPolicy: uu.originalPolicy,
+            referrer: uu.referrer,
+            sample: uu.sample,
+            sourceFile: uu.sourceFile,
+            statusCode: uu.statusCode,
+            violatedDirective: uu.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", vR(RU))
+          this.api.pushEvent("securitypolicyviolation", gR(Ru))
         }
       };
-    var op = class extends Wg {
-      constructor(UU, RU) {
-        var gU, tU, pU, EU;
-        super(), this._tracking = !1, this.eventsObservable = UU, this._options = {
-          inactivityMs: null !== (gU = null === RU || void 0 === RU ? void 0 : RU.inactivityMs) && void 0 !== gU ? gU : 100,
-          drainTimeoutMs: null !== (tU = null === RU || void 0 === RU ? void 0 : RU.drainTimeoutMs) && void 0 !== tU ? tU : 1e4,
-          isOperationStart: null !== (pU = null === RU || void 0 === RU ? void 0 : RU.isOperationStart) && void 0 !== pU ? pU : () => {},
-          isOperationEnd: null !== (EU = null === RU || void 0 === RU ? void 0 : RU.isOperationEnd) && void 0 !== EU ? EU : () => {}
+    var AK = class extends jy {
+      constructor(uu, Ru) {
+        var yu, Eu, Ku, Qu;
+        super(), this._tracking = !1, this.eventsObservable = uu, this._options = {
+          inactivityMs: null !== (yu = null === Ru || void 0 === Ru ? void 0 : Ru.inactivityMs) && void 0 !== yu ? yu : 100,
+          drainTimeoutMs: null !== (Eu = null === Ru || void 0 === Ru ? void 0 : Ru.drainTimeoutMs) && void 0 !== Eu ? Eu : 1e4,
+          isOperationStart: null !== (Ku = null === Ru || void 0 === Ru ? void 0 : Ru.isOperationStart) && void 0 !== Ku ? Ku : () => {},
+          isOperationEnd: null !== (Qu = null === Ru || void 0 === Ru ? void 0 : Ru.isOperationEnd) && void 0 !== Qu ? Qu : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((UU => {
-          var RU;
-          this._lastEventTime = uR(), null === (RU = this._currentEvents) || void 0 === RU || RU.push(UU);
-          const gU = this._options.isOperationStart(UU);
-          var tU;
-          gU && (null === (tU = this._activeOperations) || void 0 === tU || tU.set(gU, !0));
-          const pU = this._options.isOperationEnd(UU);
-          var EU;
-          pU && (null === (EU = this._activeOperations) || void 0 === EU || EU.delete(pU));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((uu => {
+          var Ru;
+          this._lastEventTime = xR(), null === (Ru = this._currentEvents) || void 0 === Ru || Ru.push(uu);
+          const yu = this._options.isOperationStart(uu);
+          var Eu;
+          yu && (null === (Eu = this._activeOperations) || void 0 === Eu || Eu.set(yu, !0));
+          const Ku = this._options.isOperationEnd(uu);
+          var Qu;
+          Ku && (null === (Qu = this._activeOperations) || void 0 === Qu || Qu.delete(Ku));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = uR(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = xR(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let UU;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), UU = this.hasActiveOperations() ? uR() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let uu;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), uu = this.hasActiveOperations() ? xR() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: UU
+          duration: uu
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = Zp(this._inactivityTid, (() => {
+        this._inactivityTid = DK(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = Zp(this._drainTid, (() => {
+        this._drainTid = DK(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(UU) {
-        UU && clearTimeout(UU)
+      _clearTimer(uu) {
+        uu && clearTimeout(uu)
       }
     };
 
-    function Zp(UU, RU, gU) {
-      return UU && clearTimeout(UU), UU = setTimeout((() => {
-        RU()
-      }), gU)
+    function DK(uu, Ru, yu) {
+      return uu && clearTimeout(uu), uu = setTimeout((() => {
+        Ru()
+      }), yu)
     }
-    let ap;
-    const Yp = new Set,
-      Bp = new Map;
-    let Vp, rp, Xp, vp, dp, Hp, Sp, sp, yp = !1;
-    var kp = class extends Rg {
+    let MK;
+    const IK = new Set,
+      GK = new Map;
+    let UK, nK, sK, tK, lK, gK, cK, LK, zK = !1;
+    var FK = class extends Ry {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = gg
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = yy
       }
       initialize() {
-        const UU = jp(),
-          RU = pp(),
-          gU = function() {
-            function UU(UU, RU) {
-              const gU = null !== RU && void 0 !== RU ? RU : location.href;
-              gU !== rp && (Vp.notify({
+        const uu = rK(),
+          Ru = EK(),
+          yu = function() {
+            function uu(uu, Ru) {
+              const yu = null !== Ru && void 0 !== Ru ? Ru : location.href;
+              yu !== nK && (UK.notify({
                 type: "url-change",
-                from: rp,
-                to: gU,
-                trigger: UU
-              }), rp = gU)
+                from: nK,
+                to: yu,
+                trigger: uu
+              }), nK = yu)
             }
-            if (Vp || (Vp = new Wg, rp = location.href), !yp)
+            if (UK || (UK = new jy, nK = location.href), !zK)
               if ("navigation" in window && "NavigateEvent" in window) {
-                Sp = RU => {
+                cK = Ru => {
                   try {
-                    const gU = null === RU || void 0 === RU ? void 0 : RU.destination;
-                    (null === gU || void 0 === gU ? void 0 : gU.sameDocument) && "string" === typeof gU.url && UU("navigate", gU.url)
-                  } catch (gU) {}
-                }, window.navigation.addEventListener("navigate", Sp);
-                const RU = window.NavigateEvent;
-                RU && RU.prototype && "function" === typeof RU.prototype.intercept && (sp || (sp = RU.prototype.intercept), RU.prototype.intercept = function(RU) {
+                    const yu = null === Ru || void 0 === Ru ? void 0 : Ru.destination;
+                    (null === yu || void 0 === yu ? void 0 : yu.sameDocument) && "string" === typeof yu.url && uu("navigate", yu.url)
+                  } catch (yu) {}
+                }, window.navigation.addEventListener("navigate", cK);
+                const Ru = window.NavigateEvent;
+                Ru && Ru.prototype && "function" === typeof Ru.prototype.intercept && (LK || (LK = Ru.prototype.intercept), Ru.prototype.intercept = function(Ru) {
                   try {
-                    const RU = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      gU = null === this || void 0 === this ? void 0 : this.destination;
-                    RU && gU && !1 === gU.sameDocument && "string" === typeof gU.url && UU("navigate-intercept", gU.url)
-                  } catch (gU) {}
-                  return sp.call(this, RU)
-                }), yp = !0
-              } else Xp || (Xp = window.history.pushState), window.history.pushState = function() {
-                for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
-                const pU = Xp.apply(window.history, gU);
-                return UU("pushState"), pU
-              }, vp || (vp = window.history.replaceState), window.history.replaceState = function() {
-                for (var RU = arguments.length, gU = new Array(RU), tU = 0; tU < RU; tU++) gU[tU] = arguments[tU];
-                const pU = vp.apply(window.history, gU);
-                return UU("replaceState"), pU
-              }, dp = () => UU("popstate"), Hp = () => UU("hashchange"), window.addEventListener("popstate", dp), window.addEventListener("hashchange", Hp), yp = !0;
-            return Vp
+                    const Ru = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      yu = null === this || void 0 === this ? void 0 : this.destination;
+                    Ru && yu && !1 === yu.sameDocument && "string" === typeof yu.url && uu("navigate-intercept", yu.url)
+                  } catch (yu) {}
+                  return LK.call(this, Ru)
+                }), zK = !0
+              } else sK || (sK = window.history.pushState), window.history.pushState = function() {
+                for (var Ru = arguments.length, yu = new Array(Ru), Eu = 0; Eu < Ru; Eu++) yu[Eu] = arguments[Eu];
+                const Ku = sK.apply(window.history, yu);
+                return uu("pushState"), Ku
+              }, tK || (tK = window.history.replaceState), window.history.replaceState = function() {
+                for (var Ru = arguments.length, yu = new Array(Ru), Eu = 0; Eu < Ru; Eu++) yu[Eu] = arguments[Eu];
+                const Ku = tK.apply(window.history, yu);
+                return uu("replaceState"), Ku
+              }, lK = () => uu("popstate"), gK = () => uu("hashchange"), window.addEventListener("popstate", lK), window.addEventListener("hashchange", gK), zK = !0;
+            return UK
           }(),
-          tU = (pU = ["pointerdown", "keydown"], ap || (ap = new Wg), pU.forEach((UU => {
-            if (!Yp.has(UU)) {
-              const RU = () => {
-                ap.notify({
+          Eu = (Ku = ["pointerdown", "keydown"], MK || (MK = new jy), Ku.forEach((uu => {
+            if (!IK.has(uu)) {
+              const Ru = () => {
+                MK.notify({
                   type: "interaction",
-                  name: UU
+                  name: uu
                 })
               };
-              window.addEventListener(UU, RU), Yp.add(UU), Bp.set(UU, RU)
+              window.addEventListener(uu, Ru), IK.add(uu), GK.set(uu, Ru)
             }
-          })), ap);
-        var pU;
-        const EU = new op((new Wg).merge(UU, RU, gU), {
+          })), MK);
+        var Ku;
+        const Qu = new AK((new jy).merge(uu, Ru, yu), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: UU => function(UU) {
-            return UU.type === Qg
-          }(UU) ? UU.request.requestId : void 0,
-          isOperationEnd: UU => function(UU) {
-            return UU.type === eg
-          }(UU) ? UU.request.requestId : void 0
+          isOperationStart: uu => function(uu) {
+            return uu.type === Ty
+          }(uu) ? uu.request.requestId : void 0,
+          isOperationEnd: uu => function(uu) {
+            return uu.type === Wy
+          }(uu) ? uu.request.requestId : void 0
         });
-        EU.filter((UU => "tracking-ended" === UU.message)).subscribe((UU => {
-          var RU, gU;
-          if ((null === (RU = UU.events) || void 0 === RU ? void 0 : RU.some((UU => "url-change" === UU.type))) && (null === (gU = UU.events) || void 0 === gU ? void 0 : gU.some((UU => "dom-mutation" === UU.type)))) {
-            var tU;
-            const RU = null === (tU = UU.events) || void 0 === tU ? void 0 : tU.find((UU => "url-change" === UU.type));
-            hU.api.pushEvent("faro.navigation", {
-              fromUrl: null === RU || void 0 === RU ? void 0 : RU.from,
-              toUrl: null === RU || void 0 === RU ? void 0 : RU.to,
+        Qu.filter((uu => "tracking-ended" === uu.message)).subscribe((uu => {
+          var Ru, yu;
+          if ((null === (Ru = uu.events) || void 0 === Ru ? void 0 : Ru.some((uu => "url-change" === uu.type))) && (null === (yu = uu.events) || void 0 === yu ? void 0 : yu.some((uu => "dom-mutation" === uu.type)))) {
+            var Eu;
+            const Ru = null === (Eu = uu.events) || void 0 === Eu ? void 0 : Eu.find((uu => "url-change" === uu.type));
+            pu.api.pushEvent("faro.navigation", {
+              fromUrl: null === Ru || void 0 === Ru ? void 0 : Ru.from,
+              toUrl: null === Ru || void 0 === Ru ? void 0 : Ru.to,
               sameDocument: String(!0),
-              duration: UU.duration
+              duration: uu.duration
             })
           }
-        })), tU.subscribe((() => {
-          EU.startTracking()
+        })), Eu.subscribe((() => {
+          Qu.startTracking()
         }))
       }
     };
 
-    function Fp() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const RU = [new np, new rg, new rt, new tg, new vg, new kp];
-      return !1 !== UU.enablePerformanceInstrumentation && RU.unshift(new Mt), !1 !== UU.enableContentSecurityPolicyInstrumentation && RU.push(new bp), !1 !== UU.captureConsole && RU.push(new Bg), RU
+    function wK() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const Ru = [new kK, new ty, new sE, new Ey, new gy, new FK];
+      return !1 !== uu.enablePerformanceInstrumentation && Ru.unshift(new YE), !1 !== uu.enableContentSecurityPolicyInstrumentation && Ru.push(new eK), !1 !== uu.captureConsole && Ru.push(new ny), Ru
     }
-    var ip = gU(6375);
-    let Ap, zp;
+    var ZK = yu(6480);
+    let hK, PK;
 
-    function Mp() {
-      const UU = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return Ap === UU && zp || (zp = new ip.UAParser(UU).getResult(), Ap = UU), zp
+    function iK() {
+      const uu = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return hK === uu && PK || (PK = new ZK.UAParser(uu).getResult(), hK = uu), PK
     }
-    const Dp = () => {
+    const YK = () => {
         const {
-          browser: UU,
-          os: RU,
-          ua: gU
-        } = Mp(), {
-          name: tU,
-          version: pU
-        } = UU, {
-          name: EU,
-          version: PU
-        } = RU, TU = navigator.language, qU = gU.includes("Mobi"), KU = function() {
-          if (!tU || !pU) return;
+          browser: uu,
+          os: Ru,
+          ua: yu
+        } = iK(), {
+          name: Eu,
+          version: Ku
+        } = uu, {
+          name: Qu,
+          version: mu
+        } = Ru, Ju = navigator.language, Nu = yu.includes("Mobi"), Xu = function() {
+          if (!Eu || !Ku) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== tU && void 0 !== tU ? tU : Xg,
-            version: null !== pU && void 0 !== pU ? pU : Xg,
-            os: `${null!==EU&&void 0!==EU?EU:Xg} ${null!==PU&&void 0!==PU?PU:Xg}`,
-            userAgent: null !== gU && void 0 !== gU ? gU : Xg,
-            language: null !== TU && void 0 !== TU ? TU : Xg,
-            mobile: qU,
-            brands: null !== KU && void 0 !== KU ? KU : Xg,
+            name: null !== Eu && void 0 !== Eu ? Eu : ly,
+            version: null !== Ku && void 0 !== Ku ? Ku : ly,
+            os: `${null!==Qu&&void 0!==Qu?Qu:ly} ${null!==mu&&void 0!==mu?mu:ly}`,
+            userAgent: null !== yu && void 0 !== yu ? yu : ly,
+            language: null !== Ju && void 0 !== Ju ? Ju : ly,
+            mobile: Nu,
+            brands: null !== Xu && void 0 !== Xu ? Xu : ly,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      Lp = () => {
+      oK = () => {
         const {
-          name: UU,
-          version: RU
-        } = Mp().os;
-        if (!UU && !RU) return {};
-        const gU = {};
-        return UU && (gU.name = UU), RU && (gU.version = RU), {
-          os: gU
+          name: uu,
+          version: Ru
+        } = iK().os;
+        if (!uu && !Ru) return {};
+        const yu = {};
+        return uu && (yu.name = uu), Ru && (yu.version = Ru), {
+          os: yu
         }
       };
 
-    function Np(UU) {
-      var RU, gU, tU;
+    function qK(uu) {
+      var Ru, yu, Eu;
       return {
-        id: null !== (RU = null === (gU = hU.config) || void 0 === gU || null === (gU = gU.sessionTracking) || void 0 === gU || null === (tU = gU.generateSessionId) || void 0 === tU ? void 0 : tU.call(gU)) && void 0 !== RU ? RU : eR(),
-        attributes: UU
+        id: null !== (Ru = null === (yu = pu.config) || void 0 === yu || null === (yu = yu.sessionTracking) || void 0 === yu || null === (Eu = yu.generateSessionId) || void 0 === Eu ? void 0 : Eu.call(yu)) && void 0 !== Ru ? Ru : WR(),
+        attributes: uu
       }
     }
-    const lp = () => ({
+    const OK = () => ({
       sdk: {
         name: "faro-web",
-        version: gg
+        version: yy
       }
     });
-    var Op = class extends Ug {
+    var vK = class extends uy {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let UE = function(UU) {
-      return UU.EXCEPTION = "exception", UU.LOG = "log", UU.MEASUREMENT = "measurement", UU.TRACE = "trace", UU.EVENT = "event", UU
+    let aK = function(uu) {
+      return uu.EXCEPTION = "exception", uu.LOG = "log", uu.MEASUREMENT = "measurement", uu.TRACE = "trace", uu.EVENT = "event", uu
     }({});
-    const RE = {
+    const fK = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function gE(UU, RU) {
-      var gU, tU;
-      if (void 0 === RU) return UU;
-      if (void 0 === UU) return {
-        resourceSpans: RU
+    function uQ(uu, Ru) {
+      var yu, Eu;
+      if (void 0 === Ru) return uu;
+      if (void 0 === uu) return {
+        resourceSpans: Ru
       };
-      const pU = null === (gU = UU.resourceSpans) || void 0 === gU ? void 0 : gU[0];
-      if (void 0 === pU) return UU;
-      const EU = (null === pU || void 0 === pU ? void 0 : pU.scopeSpans) || [],
-        PU = (null === RU || void 0 === RU || null === (tU = RU[0]) || void 0 === tU ? void 0 : tU.scopeSpans) || [];
-      return lR(lR({}, UU), {}, {
-        resourceSpans: [lR(lR({}, pU), {}, {
-          scopeSpans: [...EU, ...PU]
+      const Ku = null === (yu = uu.resourceSpans) || void 0 === yu ? void 0 : yu[0];
+      if (void 0 === Ku) return uu;
+      const Qu = (null === Ku || void 0 === Ku ? void 0 : Ku.scopeSpans) || [],
+        mu = (null === Ru || void 0 === Ru || null === (Eu = Ru[0]) || void 0 === Eu ? void 0 : Eu.scopeSpans) || [];
+      return aR(aR({}, uu), {}, {
+        resourceSpans: [aR(aR({}, Ku), {}, {
+          scopeSpans: [...Qu, ...mu]
         })]
       })
     }
 
-    function tE(UU) {
-      let RU = {
+    function RQ(uu) {
+      let Ru = {
         meta: {}
       };
-      return void 0 !== UU[0] && (RU.meta = UU[0].meta), UU.forEach((UU => {
-        switch (UU.type) {
+      return void 0 !== uu[0] && (Ru.meta = uu[0].meta), uu.forEach((uu => {
+        switch (uu.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const gU = RE[UU.type],
-              tU = RU[gU];
-            RU = lR(lR({}, RU), {}, {
-              [gU]: void 0 === tU ? [UU.payload] : [...tU, UU.payload]
+            const yu = fK[uu.type],
+              Eu = Ru[yu];
+            Ru = aR(aR({}, Ru), {}, {
+              [yu]: void 0 === Eu ? [uu.payload] : [...Eu, uu.payload]
             });
             break
           }
           case "trace":
-            RU = lR(lR({}, RU), {}, {
-              traces: gE(RU.traces, UU.payload.resourceSpans)
+            Ru = aR(aR({}, Ru), {}, {
+              traces: uQ(Ru.traces, uu.payload.resourceSpans)
             })
         }
-      })), RU
+      })), Ru
     }
-    var pE = class extends Op {
+    var yQ = class extends vK {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = UU, this.name = "@grafana/faro-web-sdk:transport-console", this.version = gg
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = uu, this.name = "@grafana/faro-web-sdk:transport-console", this.version = yy
       }
-      send(UU) {
-        var RU;
-        return this.unpatchedConsole[null !== (RU = this.options.level) && void 0 !== RU ? RU : fg.DEBUG]("New event", tE([UU]))
+      send(uu) {
+        var Ru;
+        return this.unpatchedConsole[null !== (Ru = this.options.level) && void 0 !== Ru ? Ru : Hy.DEBUG]("New event", RQ([uu]))
       }
     };
-    const EE = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      PE = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      TE = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      qE = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      KE = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      cE = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const EQ = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      KQ = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      QQ = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      mQ = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      JQ = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      NQ = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function GE(UU) {
+    function XQ(uu) {
       let {
-        weekday: RU,
-        day: gU,
-        month: tU,
-        year: pU,
-        hour: EU,
-        minute: PU,
-        second: TU
-      } = UU;
-      if (pU < 1900 || gU < 1 || EU > 23 || PU > 59 || TU > 60) return;
-      const qU = 60 === TU,
-        KU = new Date(0);
-      return KU.setUTCFullYear(pU, tU, gU), KU.setUTCHours(EU, PU, qU ? 59 : TU, 0), KU.getUTCDay() === RU && KU.getUTCDate() === gU && KU.getUTCMonth() === tU && KU.getUTCFullYear() === pU && KU.getUTCHours() === EU && KU.getUTCMinutes() === PU && KU.getUTCSeconds() === (qU ? 59 : TU) ? KU.getTime() + (qU ? 1e3 : 0) : void 0
+        weekday: Ru,
+        day: yu,
+        month: Eu,
+        year: Ku,
+        hour: Qu,
+        minute: mu,
+        second: Ju
+      } = uu;
+      if (Ku < 1900 || yu < 1 || Qu > 23 || mu > 59 || Ju > 60) return;
+      const Nu = 60 === Ju,
+        Xu = new Date(0);
+      return Xu.setUTCFullYear(Ku, Eu, yu), Xu.setUTCHours(Qu, mu, Nu ? 59 : Ju, 0), Xu.getUTCDay() === Ru && Xu.getUTCDate() === yu && Xu.getUTCMonth() === Eu && Xu.getUTCFullYear() === Ku && Xu.getUTCHours() === Qu && Xu.getUTCMinutes() === mu && Xu.getUTCSeconds() === (Nu ? 59 : Ju) ? Xu.getTime() + (Nu ? 1e3 : 0) : void 0
     }
-    var jE = class {
-      constructor(UU) {
-        this.options = UU, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var VQ = class {
+      constructor(uu) {
+        this.options = uu, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var UU = this;
+        var uu = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const RU = this.sequence++;
-        let gU = !1;
+        const Ru = this.sequence++;
+        let yu = !1;
         return {
           deliver: function() {
-            var gU = At((function*(gU) {
-              const tU = UU.options.getNow();
-              let pU, EU = 0;
+            var yu = PE((function*(yu) {
+              const Eu = uu.options.getNow();
+              let Ku, Qu = 0;
               for (;;) {
-                var PU, TU, qU;
-                const KU = UU.options.retry.maxAttempts - EU,
-                  cU = yield UU.runAttempt((() => gU(KU, UU.unloading)), EU > 0);
-                if (EU += cU.attemptsMade, "success" === cU.kind) return {
+                var mu, Ju, Nu;
+                const Xu = uu.options.retry.maxAttempts - Qu,
+                  Vu = yield uu.runAttempt((() => yu(Xu, uu.unloading)), Qu > 0);
+                if (Qu += Vu.attemptsMade, "success" === Vu.kind) return {
                   kind: "success",
-                  attempts: EU,
-                  elapsedTimeMs: UU.options.getNow() - tU
+                  attempts: Qu,
+                  elapsedTimeMs: uu.options.getNow() - Eu
                 };
-                if (pU = cU.failure, "terminal" === cU.kind || UU.unloading) return {
+                if (Ku = Vu.failure, "terminal" === Vu.kind || uu.unloading) return {
                   kind: "terminal",
-                  attempts: EU,
-                  elapsedTimeMs: UU.options.getNow() - tU,
-                  failure: pU
+                  attempts: Qu,
+                  elapsedTimeMs: uu.options.getNow() - Eu,
+                  failure: Ku
                 };
-                if (EU >= UU.options.retry.maxAttempts) return {
+                if (Qu >= uu.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: EU,
-                  elapsedTimeMs: UU.options.getNow() - tU,
-                  failure: pU,
+                  attempts: Qu,
+                  elapsedTimeMs: uu.options.getNow() - Eu,
+                  failure: Ku,
                   reason: "retries-exhausted"
                 };
-                if (null != cU.retryAfterMs && cU.retryAfterMs > UU.options.retry.maxBackoffMs) return {
+                if (null != Vu.retryAfterMs && Vu.retryAfterMs > uu.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: EU,
-                  elapsedTimeMs: UU.options.getNow() - tU,
-                  failure: pU,
+                  attempts: Qu,
+                  elapsedTimeMs: uu.options.getNow() - Eu,
+                  failure: Ku,
                   reason: "retry-after-too-long"
                 };
-                const GU = Math.min(null !== (PU = cU.retryAfterMs) && void 0 !== PU ? PU : UU.options.retry.initialBackoffMs * Math.pow(UU.options.retry.backoffMultiplier, EU - 1), UU.options.retry.maxBackoffMs);
-                if (null === (TU = (qU = UU.options).onRetry) || void 0 === TU || TU.call(qU, GU, EU + 1), yield UU.waitForTurn(RU, GU)) {
-                  const RU = UU.options.retry.maxAttempts - EU,
-                    pU = yield UU.runAttempt((() => gU(RU, !0)));
-                  return EU += pU.attemptsMade, {
-                    kind: "success" === pU.kind ? "success" : "terminal",
-                    attempts: EU,
-                    elapsedTimeMs: UU.options.getNow() - tU,
-                    failure: "success" === pU.kind ? void 0 : pU.failure
+                const ru = Math.min(null !== (mu = Vu.retryAfterMs) && void 0 !== mu ? mu : uu.options.retry.initialBackoffMs * Math.pow(uu.options.retry.backoffMultiplier, Qu - 1), uu.options.retry.maxBackoffMs);
+                if (null === (Ju = (Nu = uu.options).onRetry) || void 0 === Ju || Ju.call(Nu, ru, Qu + 1), yield uu.waitForTurn(Ru, ru)) {
+                  const Ru = uu.options.retry.maxAttempts - Qu,
+                    Ku = yield uu.runAttempt((() => yu(Ru, !0)));
+                  return Qu += Ku.attemptsMade, {
+                    kind: "success" === Ku.kind ? "success" : "terminal",
+                    attempts: Qu,
+                    elapsedTimeMs: uu.options.getNow() - Eu,
+                    failure: "success" === Ku.kind ? void 0 : Ku.failure
                   }
                 }
               }
             }));
-            return function(UU) {
-              return gU.apply(this, arguments)
+            return function(uu) {
+              return yu.apply(this, arguments)
             }
           }(),
           release: () => {
-            gU || (gU = !0, this.admitted--)
+            yu || (yu = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const UU = this.waiting.splice(0);
+        const uu = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const RU of UU) RU.resolve(!0);
+        for (const Ru of uu) Ru.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((gU, tU) => {
+      runAttempt(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((yu, Eu) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const RU = () => {
+              const Ru = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              UU().then((UU => {
-                RU(), gU(UU)
-              }), (UU => {
-                RU(), tU(UU)
+              uu().then((uu => {
+                Ru(), yu(uu)
+              }), (uu => {
+                Ru(), Eu(uu)
               }))
             },
-            isRedelivery: RU
+            isRedelivery: Ru
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const UU = this.options.getNow(),
-            RU = this.attemptQueue.findIndex((RU => {
+          const uu = this.options.getNow(),
+            Ru = this.attemptQueue.findIndex((Ru => {
               let {
-                isRedelivery: gU
-              } = RU;
-              return this.unloading || !gU || UU >= this.nextSendAt
+                isRedelivery: yu
+              } = Ru;
+              return this.unloading || !yu || uu >= this.nextSendAt
             }));
-          if (RU < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (Ru < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - UU)));
-          const [gU] = this.attemptQueue.splice(RU, 1);
-          gU.isRedelivery && !this.unloading && (this.nextSendAt = UU + 1), gU.run()
+          }), Math.max(0, this.nextSendAt - uu)));
+          const [yu] = this.attemptQueue.splice(Ru, 1);
+          yu.isRedelivery && !this.unloading && (this.nextSendAt = uu + 1), yu.run()
         }
       }
-      waitForTurn(UU, RU) {
-        const gU = Math.min(RU * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((RU => {
+      waitForTurn(uu, Ru) {
+        const yu = Math.min(Ru * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((Ru => {
           this.waiting.push({
-            sequence: UU,
-            readyAt: this.options.getNow() + gU,
-            resolve: RU
-          }), this.waiting.sort(((UU, RU) => UU.readyAt === RU.readyAt ? UU.sequence - RU.sequence : UU.readyAt - RU.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: uu,
+            readyAt: this.options.getNow() + yu,
+            resolve: Ru
+          }), this.waiting.sort(((uu, Ru) => uu.readyAt === Ru.readyAt ? uu.sequence - Ru.sequence : uu.readyAt - Ru.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const UU = this.waiting[0],
-          RU = UU.readyAt;
+        const uu = this.waiting[0],
+          Ru = uu.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const RU = this.waiting.indexOf(UU);
-          RU >= 0 && this.waiting.splice(RU, 1), UU.resolve(!1), this.scheduleNext()
-        }), Math.max(0, RU - this.options.getNow()))
+          const Ru = this.waiting.indexOf(uu);
+          Ru >= 0 && this.waiting.splice(Ru, 1), uu.resolve(!1), this.scheduleNext()
+        }), Math.max(0, Ru - this.options.getNow()))
       }
     };
 
-    function uE(UU, RU) {
-      if (null == UU) return {};
-      var gU, tU, pU = function(UU, RU) {
-        if (null == UU) return {};
-        var gU = {};
-        for (var tU in UU)
-          if ({}.hasOwnProperty.call(UU, tU)) {
-            if (RU.includes(tU)) continue;
-            gU[tU] = UU[tU]
-          } return gU
-      }(UU, RU);
+    function rQ(uu, Ru) {
+      if (null == uu) return {};
+      var yu, Eu, Ku = function(uu, Ru) {
+        if (null == uu) return {};
+        var yu = {};
+        for (var Eu in uu)
+          if ({}.hasOwnProperty.call(uu, Eu)) {
+            if (Ru.includes(Eu)) continue;
+            yu[Eu] = uu[Eu]
+          } return yu
+      }(uu, Ru);
       if (Object.getOwnPropertySymbols) {
-        var EU = Object.getOwnPropertySymbols(UU);
-        for (tU = 0; tU < EU.length; tU++) gU = EU[tU], RU.includes(gU) || {}.propertyIsEnumerable.call(UU, gU) && (pU[gU] = UU[gU])
+        var Qu = Object.getOwnPropertySymbols(uu);
+        for (Eu = 0; Eu < Qu.length; Eu++) yu = Qu[Eu], Ru.includes(yu) || {}.propertyIsEnumerable.call(uu, yu) && (Ku[yu] = uu[yu])
       }
-      return pU
+      return Ku
     }
 
-    function CE(UU) {
+    function BQ(uu) {
       const {
-        size: RU,
-        concurrency: gU
-      } = UU, tU = [];
-      let pU = 0;
-      const EU = () => {
-        if (pU < gU && tU.length) {
+        size: Ru,
+        concurrency: yu
+      } = uu, Eu = [];
+      let Ku = 0;
+      const Qu = () => {
+        if (Ku < yu && Eu.length) {
           const {
-            producer: UU,
-            resolve: RU,
-            reject: gU
-          } = tU.shift();
-          pU++, UU().then((UU => {
-            pU--, EU(), RU(UU)
-          }), (UU => {
-            pU--, EU(), gU(UU)
+            producer: uu,
+            resolve: Ru,
+            reject: yu
+          } = Eu.shift();
+          Ku++, uu().then((uu => {
+            Ku--, Qu(), Ru(uu)
+          }), (uu => {
+            Ku--, Qu(), yu(uu)
           }))
         }
       };
       return {
-        add: UU => {
-          if (tU.length + pU >= RU) throw new Error("Task buffer full");
-          return new Promise(((RU, gU) => {
-            tU.push({
-              producer: UU,
-              resolve: RU,
-              reject: gU
-            }), EU()
+        add: uu => {
+          if (Eu.length + Ku >= Ru) throw new Error("Task buffer full");
+          return new Promise(((Ru, yu) => {
+            Eu.push({
+              producer: uu,
+              resolve: Ru,
+              reject: yu
+            }), Qu()
           }))
         }
       }
     }
-    const hE = ["headers"],
-      QE = ["keepalive", "signal"],
-      eE = new Set([408, 425, 429, 500, 502, 503, 504]),
-      WE = new Set([429, 503]);
-    let fE = 0,
-      xE = 0;
-    var mE = class extends Error {};
-    var IE = class extends Op {
-      constructor(UU) {
-        var RU, gU, tU, pU, EU, PU, TU, qU, KU, cU, GU, jU, uU, CU, hU, QU, eU;
-        super(), this.options = UU, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = gg, this.pendingCustomSends = 0, this.getNow = null !== (RU = UU.getNow) && void 0 !== RU ? RU : Date.now, this.requestTimeoutMs = null !== (gU = UU.requestTimeoutMs) && void 0 !== gU ? gU : 1e4, this.compressionEnabled = null !== (tU = UU.requestCompression) && void 0 !== tU && tU && "undefined" !== typeof CompressionStream, UU.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new jE({
-          bufferSize: null !== (pU = UU.bufferSize) && void 0 !== pU ? pU : 30,
-          concurrency: null !== (EU = UU.concurrency) && void 0 !== EU ? EU : 5,
+    const xQ = ["headers"],
+      SQ = ["keepalive", "signal"],
+      pQ = new Set([408, 425, 429, 500, 502, 503, 504]),
+      TQ = new Set([429, 503]);
+    let WQ = 0,
+      jQ = 0;
+    var HQ = class extends Error {};
+    var dQ = class extends vK {
+      constructor(uu) {
+        var Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu, Wu;
+        super(), this.options = uu, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = yy, this.pendingCustomSends = 0, this.getNow = null !== (Ru = uu.getNow) && void 0 !== Ru ? Ru : Date.now, this.requestTimeoutMs = null !== (yu = uu.requestTimeoutMs) && void 0 !== yu ? yu : 1e4, this.compressionEnabled = null !== (Eu = uu.requestCompression) && void 0 !== Eu && Eu && "undefined" !== typeof CompressionStream, uu.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new VQ({
+          bufferSize: null !== (Ku = uu.bufferSize) && void 0 !== Ku ? Ku : 30,
+          concurrency: null !== (Qu = uu.concurrency) && void 0 !== Qu ? Qu : 5,
           retry: {
-            maxAttempts: null !== (PU = null === (TU = UU.retry) || void 0 === TU ? void 0 : TU.maxAttempts) && void 0 !== PU ? PU : 3,
-            initialBackoffMs: null !== (qU = null !== (KU = null === (cU = UU.retry) || void 0 === cU ? void 0 : cU.initialBackoffMs) && void 0 !== KU ? KU : UU.defaultRateLimitBackoffMs) && void 0 !== qU ? qU : 1e3,
-            maxBackoffMs: null !== (GU = null === (jU = UU.retry) || void 0 === jU ? void 0 : jU.maxBackoffMs) && void 0 !== GU ? GU : 3e4,
-            backoffMultiplier: null !== (uU = null === (CU = UU.retry) || void 0 === CU ? void 0 : CU.backoffMultiplier) && void 0 !== uU ? uU : 2
+            maxAttempts: null !== (mu = null === (Ju = uu.retry) || void 0 === Ju ? void 0 : Ju.maxAttempts) && void 0 !== mu ? mu : 3,
+            initialBackoffMs: null !== (Nu = null !== (Xu = null === (Vu = uu.retry) || void 0 === Vu ? void 0 : Vu.initialBackoffMs) && void 0 !== Xu ? Xu : uu.defaultRateLimitBackoffMs) && void 0 !== Nu ? Nu : 1e3,
+            maxBackoffMs: null !== (ru = null === (Bu = uu.retry) || void 0 === Bu ? void 0 : Bu.maxBackoffMs) && void 0 !== ru ? ru : 3e4,
+            backoffMultiplier: null !== (xu = null === (Su = uu.retry) || void 0 === Su ? void 0 : Su.backoffMultiplier) && void 0 !== xu ? xu : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (hU = UU.getRandom) && void 0 !== hU ? hU : Math.random,
-          onRetry: (UU, RU) => {
-            this.logDebug(`Retrying failed request after ${UU}ms. Attempt ${RU}.`)
+          getRandom: null !== (pu = uu.getRandom) && void 0 !== pu ? pu : Math.random,
+          onRetry: (uu, Ru) => {
+            this.logDebug(`Retrying failed request after ${uu}ms. Attempt ${Ru}.`)
           }
-        }), this.customPromiseBuffer = CE({
-          size: null !== (QU = UU.bufferSize) && void 0 !== QU ? QU : 30,
-          concurrency: null !== (eU = UU.concurrency) && void 0 !== eU ? eU : 5
+        }), this.customPromiseBuffer = BQ({
+          size: null !== (Tu = uu.bufferSize) && void 0 !== Tu ? Tu : 30,
+          concurrency: null !== (Wu = uu.concurrency) && void 0 !== Wu ? Wu : 5
         }), this.defaultPromiseBuffer = {
-          add: UU => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(UU);
-            const RU = this.deliveryQueue.reserve();
-            if (!RU) throw new Error("Task buffer full");
-            return this.runBufferedTask(RU, UU)
+          add: uu => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(uu);
+            const Ru = this.deliveryQueue.reserve();
+            if (!Ru) throw new Error("Task buffer full");
+            return this.runBufferedTask(Ru, uu)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (UU => {
-          UU.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (uu => {
+          uu.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(UU) {
-        var RU = this;
-        return At((function*() {
-          const gU = RU.promiseBuffer;
-          if (gU !== RU.defaultPromiseBuffer || gU.add !== RU.defaultBufferAdd) {
-            RU.pendingCustomSends++;
+      send(uu) {
+        var Ru = this;
+        return PE((function*() {
+          const yu = Ru.promiseBuffer;
+          if (yu !== Ru.defaultPromiseBuffer || yu.add !== Ru.defaultBufferAdd) {
+            Ru.pendingCustomSends++;
             try {
-              yield gU.add((() => RU.deliver(UU)))
-            } catch (tU) {
-              RU.logError("Permanent delivery failure", {
-                error: tU,
+              yield yu.add((() => Ru.deliver(uu)))
+            } catch (Eu) {
+              Ru.logError("Permanent delivery failure", {
+                error: Eu,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              RU.pendingCustomSends--
+              Ru.pendingCustomSends--
             }
-          } else yield RU.deliver(UU)
+          } else yield Ru.deliver(uu)
         }))()
       }
-      runBufferedTask(UU, RU) {
-        return At((function*() {
-          let gU;
+      runBufferedTask(uu, Ru) {
+        return PE((function*() {
+          let yu;
           try {
-            return yield UU.deliver(At((function*() {
-              return gU = yield RU(), {
+            return yield uu.deliver(PE((function*() {
+              return yu = yield Ru(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), gU
+            }))), yu
           } finally {
-            UU.release()
+            uu.release()
           }
         }))()
       }
-      deliver(UU) {
-        var RU = this;
-        return At((function*() {
-          const gU = RU.deliveryQueue.reserve();
-          if (gU) try {
-            const tU = yield RU.prepareRequest(UU), pU = yield gU.deliver(((UU, gU) => RU.performAttempt(tU, UU, gU)));
-            "terminal" === pU.kind && RU.logError("retries-exhausted" === pU.reason ? "Delivery retries exhausted" : "Permanent delivery failure", cR(cR({}, pU.failure), {}, {
-              reason: pU.reason,
-              attempts: pU.attempts,
-              elapsedTimeMs: pU.elapsedTimeMs
+      deliver(uu) {
+        var Ru = this;
+        return PE((function*() {
+          const yu = Ru.deliveryQueue.reserve();
+          if (yu) try {
+            const Eu = yield Ru.prepareRequest(uu), Ku = yield yu.deliver(((uu, yu) => Ru.performAttempt(Eu, uu, yu)));
+            "terminal" === Ku.kind && Ru.logError("retries-exhausted" === Ku.reason ? "Delivery retries exhausted" : "Permanent delivery failure", VR(VR({}, Ku.failure), {}, {
+              reason: Ku.reason,
+              attempts: Ku.attempts,
+              elapsedTimeMs: Ku.elapsedTimeMs
             }))
-          } catch (tU) {
-            RU.logError("Permanent delivery failure", {
-              error: tU,
+          } catch (Eu) {
+            Ru.logError("Permanent delivery failure", {
+              error: Eu,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            gU.release()
-          } else RU.logError("Permanent delivery failure", {
+            yu.release()
+          } else Ru.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var UU;
-        return [this.options.url].concat(null !== (UU = this.config.ignoreUrls) && void 0 !== UU ? UU : [])
+        var uu;
+        return [this.options.url].concat(null !== (uu = this.config.ignoreUrls) && void 0 !== uu ? uu : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(UU) {
-        var RU = this;
-        return At((function*() {
-          var gU, tU;
-          const pU = tE(UU),
-            EU = null === (gU = pU.meta.session) || void 0 === gU ? void 0 : gU.id,
-            PU = JSON.stringify(pU),
-            TU = null !== (tU = RU.options.requestOptions) && void 0 !== tU ? tU : {},
+      prepareRequest(uu) {
+        var Ru = this;
+        return PE((function*() {
+          var yu, Eu;
+          const Ku = RQ(uu),
+            Qu = null === (yu = Ku.meta.session) || void 0 === yu ? void 0 : yu.id,
+            mu = JSON.stringify(Ku),
+            Ju = null !== (Eu = Ru.options.requestOptions) && void 0 !== Eu ? Eu : {},
             {
-              headers: qU = {}
-            } = TU,
-            KU = uE(TU, hE),
+              headers: Nu = {}
+            } = Ju,
+            Xu = rQ(Ju, xQ),
             {
-              keepalive: cU,
-              signal: GU
-            } = KU,
-            jU = uE(KU, QE),
-            uU = {};
-          for (const [UU, RU] of Object.entries(qU)) uU[UU] = "function" === typeof RU ? yield RU(): RU;
-          let CU = PU,
-            hU = function(UU) {
-              return "undefined" === typeof TextEncoder ? UU.length : (new TextEncoder).encode(UU).byteLength
-            }(PU);
-          const QU = {};
-          return RU.compressionEnabled && (CU = yield RU.compress(PU), hU = CU.size, QU["Content-Encoding"] = "gzip"), {
-            bodySize: hU,
-            sessionId: EU,
-            requestInit: cR({
+              keepalive: Vu,
+              signal: ru
+            } = Xu,
+            Bu = rQ(Xu, SQ),
+            xu = {};
+          for (const [uu, Ru] of Object.entries(Nu)) xu[uu] = "function" === typeof Ru ? yield Ru(): Ru;
+          let Su = mu,
+            pu = function(uu) {
+              return "undefined" === typeof TextEncoder ? uu.length : (new TextEncoder).encode(uu).byteLength
+            }(mu);
+          const Tu = {};
+          return Ru.compressionEnabled && (Su = yield Ru.compress(mu), pu = Su.size, Tu["Content-Encoding"] = "gzip"), {
+            bodySize: pu,
+            sessionId: Qu,
+            requestInit: VR({
               method: "POST",
-              headers: cR(cR(cR(cR(cR({
+              headers: VR(VR(VR(VR(VR({
                 "Content-Type": "application/json"
-              }, QU), uU), RU.options.apiKey ? {
-                "x-api-key": RU.options.apiKey
-              } : {}), EU ? {
-                "x-faro-session-id": EU
+              }, Tu), xu), Ru.options.apiKey ? {
+                "x-api-key": Ru.options.apiKey
+              } : {}), Qu ? {
+                "x-faro-session-id": Qu
               } : {}), {}, {
-                "Idempotency-Key": eR(20)
+                "Idempotency-Key": WR(20)
               }),
-              body: CU
-            }, jU)
+              body: Su
+            }, Bu)
           }
         }))()
       }
-      performAttempt(UU, RU, gU) {
-        var tU = this;
-        return At((function*() {
-          var pU;
-          const EU = null === (pU = tU.options.requestOptions) || void 0 === pU ? void 0 : pU.signal;
-          if (null === EU || void 0 === EU ? void 0 : EU.aborted) return {
+      performAttempt(uu, Ru, yu) {
+        var Eu = this;
+        return PE((function*() {
+          var Ku;
+          const Qu = null === (Ku = Eu.options.requestOptions) || void 0 === Ku ? void 0 : Ku.signal;
+          if (null === Qu || void 0 === Qu ? void 0 : Qu.aborted) return {
             kind: "terminal",
             failure: {
-              error: EU.reason
+              error: Qu.reason
             },
             attemptsMade: 0
           };
-          let PU = 0;
+          let mu = 0;
           try {
-            var TU;
-            const pU = yield tU.fetchWithKeepaliveFallback(UU.requestInit, UU.bodySize, !!gU || (null === (TU = tU.options.requestOptions) || void 0 === TU ? void 0 : TU.keepalive), RU, (() => PU++));
-            if (tU.handleResponse(pU, UU.sessionId), pU.status >= 200 && pU.status < 300) return {
+            var Ju;
+            const Ku = yield Eu.fetchWithKeepaliveFallback(uu.requestInit, uu.bodySize, !!yu || (null === (Ju = Eu.options.requestOptions) || void 0 === Ju ? void 0 : Ju.keepalive), Ru, (() => mu++));
+            if (Eu.handleResponse(Ku, uu.sessionId), Ku.status >= 200 && Ku.status < 300) return {
               kind: "success",
-              attemptsMade: PU
+              attemptsMade: mu
             };
-            const EU = {
-              status: pU.status
+            const Qu = {
+              status: Ku.status
             };
-            return !eE.has(pU.status) || gU ? {
+            return !pQ.has(Ku.status) || yu ? {
               kind: "terminal",
-              failure: EU,
-              attemptsMade: PU
+              failure: Qu,
+              attemptsMade: mu
             } : {
               kind: "retry",
-              failure: EU,
-              attemptsMade: PU,
-              retryAfterMs: WE.has(pU.status) ? tU.getRetryAfterDelayMs(pU) : void 0
+              failure: Qu,
+              attemptsMade: mu,
+              retryAfterMs: TQ.has(Ku.status) ? Eu.getRetryAfterDelayMs(Ku) : void 0
             }
-          } catch (qU) {
-            const UU = {
-              error: qU
+          } catch (Nu) {
+            const uu = {
+              error: Nu
             };
-            return (null === EU || void 0 === EU ? void 0 : EU.aborted) || !tU.isFetchNetworkError(qU) || gU ? {
+            return (null === Qu || void 0 === Qu ? void 0 : Qu.aborted) || !Eu.isFetchNetworkError(Nu) || yu ? {
               kind: "terminal",
-              failure: UU,
-              attemptsMade: PU
+              failure: uu,
+              attemptsMade: mu
             } : {
               kind: "retry",
-              failure: UU,
-              attemptsMade: PU
+              failure: uu,
+              attemptsMade: mu
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(UU, RU, gU, tU, pU) {
-        var EU = this;
-        return At((function*() {
-          const PU = EU.getNow(),
-            TU = EU.reserveKeepalive(RU, gU);
+      fetchWithKeepaliveFallback(uu, Ru, yu, Eu, Ku) {
+        var Qu = this;
+        return PE((function*() {
+          const mu = Qu.getNow(),
+            Ju = Qu.reserveKeepalive(Ru, yu);
           try {
-            return yield EU.fetchWithTimeout(cR(cR({}, UU), {}, {
-              keepalive: TU.keepalive
-            }), EU.requestTimeoutMs, pU)
-          } catch (KU) {
-            var qU;
-            if (TU.keepalive && tU > 1 && EU.isFetchNetworkError(KU) && !(KU instanceof mE) && !(null === (qU = EU.options.requestOptions) || void 0 === qU || null === (qU = qU.signal) || void 0 === qU ? void 0 : qU.aborted)) {
-              EU.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const RU = EU.requestTimeoutMs - (EU.getNow() - PU);
-              return EU.fetchWithTimeout(cR(cR({}, UU), {}, {
+            return yield Qu.fetchWithTimeout(VR(VR({}, uu), {}, {
+              keepalive: Ju.keepalive
+            }), Qu.requestTimeoutMs, Ku)
+          } catch (Xu) {
+            var Nu;
+            if (Ju.keepalive && Eu > 1 && Qu.isFetchNetworkError(Xu) && !(Xu instanceof HQ) && !(null === (Nu = Qu.options.requestOptions) || void 0 === Nu || null === (Nu = Nu.signal) || void 0 === Nu ? void 0 : Nu.aborted)) {
+              Qu.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const Ru = Qu.requestTimeoutMs - (Qu.getNow() - mu);
+              return Qu.fetchWithTimeout(VR(VR({}, uu), {}, {
                 keepalive: !1
-              }), RU, pU)
+              }), Ru, Ku)
             }
-            throw KU
+            throw Xu
           } finally {
-            TU.release()
+            Ju.release()
           }
         }))()
       }
-      fetchWithTimeout(UU, RU, gU) {
-        var tU = this;
-        return At((function*() {
-          var pU;
-          const EU = null === (pU = tU.options.requestOptions) || void 0 === pU ? void 0 : pU.signal;
-          if (tU.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return gU(), fetch(tU.options.url, cR(cR({}, UU), {}, {
-            signal: EU
+      fetchWithTimeout(uu, Ru, yu) {
+        var Eu = this;
+        return PE((function*() {
+          var Ku;
+          const Qu = null === (Ku = Eu.options.requestOptions) || void 0 === Ku ? void 0 : Ku.signal;
+          if (Eu.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return yu(), fetch(Eu.options.url, VR(VR({}, uu), {}, {
+            signal: Qu
           }));
-          if (RU <= 0) throw new mE("Request timed out");
-          const PU = new AbortController,
-            TU = () => PU.abort(null === EU || void 0 === EU ? void 0 : EU.reason);
-          null === EU || void 0 === EU || EU.addEventListener("abort", TU, {
+          if (Ru <= 0) throw new HQ("Request timed out");
+          const mu = new AbortController,
+            Ju = () => mu.abort(null === Qu || void 0 === Qu ? void 0 : Qu.reason);
+          null === Qu || void 0 === Qu || Qu.addEventListener("abort", Ju, {
             once: !0
           });
-          let qU = !1;
-          const KU = setTimeout((() => {
-            qU = !0, PU.abort()
-          }), RU);
+          let Nu = !1;
+          const Xu = setTimeout((() => {
+            Nu = !0, mu.abort()
+          }), Ru);
           try {
-            return gU(), yield fetch(tU.options.url, cR(cR({}, UU), {}, {
-              signal: PU.signal
+            return yu(), yield fetch(Eu.options.url, VR(VR({}, uu), {}, {
+              signal: mu.signal
             }))
-          } catch (cU) {
-            if (qU && !(null === EU || void 0 === EU ? void 0 : EU.aborted)) throw new mE("Request timed out");
-            throw cU
+          } catch (Vu) {
+            if (Nu && !(null === Qu || void 0 === Qu ? void 0 : Qu.aborted)) throw new HQ("Request timed out");
+            throw Vu
           } finally {
-            clearTimeout(KU), null === EU || void 0 === EU || EU.removeEventListener("abort", TU)
+            clearTimeout(Xu), null === Qu || void 0 === Qu || Qu.removeEventListener("abort", Ju)
           }
         }))()
       }
-      getRetryAfterDelayMs(UU) {
-        const RU = UU.headers.get("Retry-After");
-        if (!RU) return;
-        if (/^\d+$/.test(RU)) {
-          const UU = 1e3 * Number(RU);
-          return Number.isFinite(UU) ? UU : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(uu) {
+        const Ru = uu.headers.get("Retry-After");
+        if (!Ru) return;
+        if (/^\d+$/.test(Ru)) {
+          const uu = 1e3 * Number(Ru);
+          return Number.isFinite(uu) ? uu : Number.POSITIVE_INFINITY
         }
-        const gU = this.getNow(),
-          tU = function(UU, RU) {
-            const gU = EE.exec(UU);
-            if (gU) {
-              const [, UU, RU, tU, pU, EU, PU, TU] = gU;
-              return GE({
-                weekday: qE.indexOf(UU),
-                day: Number(RU),
-                month: cE.indexOf(tU),
-                year: Number(pU),
-                hour: Number(EU),
-                minute: Number(PU),
-                second: Number(TU)
+        const yu = this.getNow(),
+          Eu = function(uu, Ru) {
+            const yu = EQ.exec(uu);
+            if (yu) {
+              const [, uu, Ru, Eu, Ku, Qu, mu, Ju] = yu;
+              return XQ({
+                weekday: mQ.indexOf(uu),
+                day: Number(Ru),
+                month: NQ.indexOf(Eu),
+                year: Number(Ku),
+                hour: Number(Qu),
+                minute: Number(mu),
+                second: Number(Ju)
               })
             }
-            const tU = PE.exec(UU);
-            if (tU) {
-              const [, UU, gU, PU, TU, qU, KU, cU] = tU, GU = new Date(RU);
-              if (Number.isNaN(GU.getTime())) return;
-              const jU = GU.getUTCFullYear();
-              let uU = 100 * Math.floor(jU / 100) + Number(TU);
-              uU < jU && (uU += 100);
-              const CU = cE.indexOf(PU),
-                hU = {
-                  month: CU,
-                  day: Number(gU),
-                  hour: Number(qU),
-                  minute: Number(KU),
-                  second: Number(cU),
+            const Eu = KQ.exec(uu);
+            if (Eu) {
+              const [, uu, yu, mu, Ju, Nu, Xu, Vu] = Eu, ru = new Date(Ru);
+              if (Number.isNaN(ru.getTime())) return;
+              const Bu = ru.getUTCFullYear();
+              let xu = 100 * Math.floor(Bu / 100) + Number(Ju);
+              xu < Bu && (xu += 100);
+              const Su = NQ.indexOf(mu),
+                pu = {
+                  month: Su,
+                  day: Number(yu),
+                  hour: Number(Nu),
+                  minute: Number(Xu),
+                  second: Number(Vu),
                   millisecond: 0
                 },
-                QU = {
-                  month: GU.getUTCMonth(),
-                  day: GU.getUTCDate(),
-                  hour: GU.getUTCHours(),
-                  minute: GU.getUTCMinutes(),
-                  second: GU.getUTCSeconds(),
-                  millisecond: GU.getUTCMilliseconds()
+                Tu = {
+                  month: ru.getUTCMonth(),
+                  day: ru.getUTCDate(),
+                  hour: ru.getUTCHours(),
+                  minute: ru.getUTCMinutes(),
+                  second: ru.getUTCSeconds(),
+                  millisecond: ru.getUTCMilliseconds()
                 };
-              return (uU > jU + 50 || uU === jU + 50 && (EU = QU, ((pU = hU).month - EU.month || pU.day - EU.day || pU.hour - EU.hour || pU.minute - EU.minute || pU.second - EU.second || pU.millisecond - EU.millisecond) > 0)) && (uU -= 100), GE({
-                weekday: KE.indexOf(UU),
-                day: Number(gU),
-                month: CU,
-                year: uU,
-                hour: Number(qU),
-                minute: Number(KU),
-                second: Number(cU)
+              return (xu > Bu + 50 || xu === Bu + 50 && (Qu = Tu, ((Ku = pu).month - Qu.month || Ku.day - Qu.day || Ku.hour - Qu.hour || Ku.minute - Qu.minute || Ku.second - Qu.second || Ku.millisecond - Qu.millisecond) > 0)) && (xu -= 100), XQ({
+                weekday: JQ.indexOf(uu),
+                day: Number(yu),
+                month: Su,
+                year: xu,
+                hour: Number(Nu),
+                minute: Number(Xu),
+                second: Number(Vu)
               })
             }
-            var pU, EU;
-            const PU = TE.exec(UU);
-            if (!PU) return;
-            const [, TU, qU, KU, cU, GU, jU, uU, CU] = PU;
-            return GE({
-              weekday: qE.indexOf(TU),
-              day: Number(null !== KU && void 0 !== KU ? KU : cU),
-              month: cE.indexOf(qU),
-              year: Number(CU),
-              hour: Number(GU),
-              minute: Number(jU),
-              second: Number(uU)
+            var Ku, Qu;
+            const mu = QQ.exec(uu);
+            if (!mu) return;
+            const [, Ju, Nu, Xu, Vu, ru, Bu, xu, Su] = mu;
+            return XQ({
+              weekday: mQ.indexOf(Ju),
+              day: Number(null !== Xu && void 0 !== Xu ? Xu : Vu),
+              month: NQ.indexOf(Nu),
+              year: Number(Su),
+              hour: Number(ru),
+              minute: Number(Bu),
+              second: Number(xu)
             })
-          }(RU, gU);
-        return null == tU ? void 0 : Math.max(0, tU - gU)
+          }(Ru, yu);
+        return null == Eu ? void 0 : Math.max(0, Eu - yu)
       }
-      reserveKeepalive(UU, RU) {
-        if (!1 === RU || UU > 6e4 || fE + UU > 6e4 || xE >= 9) return {
+      reserveKeepalive(uu, Ru) {
+        if (!1 === Ru || uu > 6e4 || WQ + uu > 6e4 || jQ >= 9) return {
           keepalive: !1,
-          release: FR
+          release: hR
         };
-        fE += UU, xE++;
-        let gU = !1;
+        WQ += uu, jQ++;
+        let yu = !1;
         return {
           keepalive: !0,
           release: () => {
-            gU || (gU = !0, fE -= UU, xE--)
+            yu || (yu = !0, WQ -= uu, jQ--)
           }
         }
       }
-      handleResponse(UU, RU) {
-        202 === UU.status && "invalid" === UU.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), RU), UU.text().catch(FR)
+      handleResponse(uu, Ru) {
+        202 === uu.status && "invalid" === uu.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), Ru), uu.text().catch(hR)
       }
-      isFetchNetworkError(UU) {
-        return UU instanceof TypeError || UU instanceof mE || UU instanceof DOMException && "AbortError" === UU.name
+      isFetchNetworkError(uu) {
+        return uu instanceof TypeError || uu instanceof HQ || uu instanceof DOMException && "AbortError" === uu.name
       }
-      compress(UU) {
-        return At((function*() {
-          const RU = [],
-            gU = new ReadableStream({
-              start(RU) {
-                RU.enqueue((new TextEncoder).encode(UU)), RU.close()
+      compress(uu) {
+        return PE((function*() {
+          const Ru = [],
+            yu = new ReadableStream({
+              start(Ru) {
+                Ru.enqueue((new TextEncoder).encode(uu)), Ru.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: UU,
-              value: tU
-            } = yield gU.read();
-            if (UU) return new Blob(RU);
-            RU.push(tU)
+              done: uu,
+              value: Eu
+            } = yield yu.read();
+            if (uu) return new Blob(Ru);
+            Ru.push(Eu)
           }
         }))()
       }
-      extendFaroSession(UU, RU, gU) {
-        var tU, pU;
-        const EU = UU.sessionTracking;
-        if (!(null === EU || void 0 === EU ? void 0 : EU.enabled)) return void RU("Session expired.");
+      extendFaroSession(uu, Ru, yu) {
+        var Eu, Ku;
+        const Qu = uu.sessionTracking;
+        if (!(null === Qu || void 0 === Qu ? void 0 : Qu.enabled)) return void Ru("Session expired.");
         const {
-          fetchUserSession: PU,
-          storeUserSession: TU
-        } = kR(EU), qU = null === (tU = this.metas.value.session) || void 0 === tU ? void 0 : tU.id, KU = null === (pU = PU()) || void 0 === pU ? void 0 : pU.sessionId;
-        gU && gU === qU && gU === KU ? (aR({
-          fetchUserSession: PU,
-          storeUserSession: TU
+          fetchUserSession: mu,
+          storeUserSession: Ju
+        } = ZR(Qu), Nu = null === (Eu = this.metas.value.session) || void 0 === Eu ? void 0 : Eu.id, Xu = null === (Ku = mu()) || void 0 === Ku ? void 0 : Ku.sessionId;
+        yu && yu === Nu && yu === Xu ? (GR({
+          fetchUserSession: mu,
+          storeUserSession: Ju
         })({
           forceSessionExtend: !0
-        }), RU("Session expired; created new session.")) : RU("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), Ru("Session expired; created new session.")) : Ru("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const JE = () => {
-      const UU = window.k6;
+    const bQ = () => {
+      const uu = window.k6;
       return {
-        k6: cR({
+        k6: VR({
           isK6Browser: !0
-        }, (null === UU || void 0 === UU ? void 0 : UU.testRunId) && {
-          testRunId: null === UU || void 0 === UU ? void 0 : UU.testRunId
+        }, (null === uu || void 0 === uu ? void 0 : uu.testRunId) && {
+          testRunId: null === uu || void 0 === uu ? void 0 : uu.testRunId
         })
       }
     };
-    let wE, nE;
+    let CQ, kQ;
 
-    function bE() {
+    function eQ() {
       let {
-        generatePageId: UU,
-        initialPageMeta: RU
+        generatePageId: uu,
+        initialPageMeta: Ru
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const gU = location.href;
-        return ZU(UU) && wE !== gU && (wE = gU, nE = UU(location)), {
-          page: cR(cR({
-            url: gU
-          }, nE ? {
-            id: nE
-          } : {}), RU)
+        const yu = location.href;
+        return Iu(uu) && CQ !== yu && (CQ = yu, kQ = uu(location)), {
+          page: VR(VR({
+            url: yu
+          }, kQ ? {
+            id: kQ
+          } : {}), Ru)
         }
       }
     }
 
-    function oE() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : OR,
-        RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const gU = AR;
-      return RU > 0 && (gU.error = RU >= 1 ? function() {
-        for (var RU = arguments.length, tU = new Array(RU), pU = 0; pU < RU; pU++) tU[pU] = arguments[pU];
-        UU.error(`${gU.prefix}\n`, ...tU)
-      } : FR, gU.warn = RU >= 2 ? function() {
-        for (var RU = arguments.length, tU = new Array(RU), pU = 0; pU < RU; pU++) tU[pU] = arguments[pU];
-        UU.warn(`${gU.prefix}\n`, ...tU)
-      } : FR, gU.info = RU >= 3 ? function() {
-        for (var RU = arguments.length, tU = new Array(RU), pU = 0; pU < RU; pU++) tU[pU] = arguments[pU];
-        UU.info(`${gU.prefix}\n`, ...tU)
-      } : FR, gU.debug = RU >= 4 ? function() {
-        for (var RU = arguments.length, tU = new Array(RU), pU = 0; pU < RU; pU++) tU[pU] = arguments[pU];
-        UU.debug(`${gU.prefix}\n`, ...tU)
-      } : FR), gU
+    function AQ() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fR,
+        Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const yu = iR;
+      return Ru > 0 && (yu.error = Ru >= 1 ? function() {
+        for (var Ru = arguments.length, Eu = new Array(Ru), Ku = 0; Ku < Ru; Ku++) Eu[Ku] = arguments[Ku];
+        uu.error(`${yu.prefix}\n`, ...Eu)
+      } : hR, yu.warn = Ru >= 2 ? function() {
+        for (var Ru = arguments.length, Eu = new Array(Ru), Ku = 0; Ku < Ru; Ku++) Eu[Ku] = arguments[Ku];
+        uu.warn(`${yu.prefix}\n`, ...Eu)
+      } : hR, yu.info = Ru >= 3 ? function() {
+        for (var Ru = arguments.length, Eu = new Array(Ru), Ku = 0; Ku < Ru; Ku++) Eu[Ku] = arguments[Ku];
+        uu.info(`${yu.prefix}\n`, ...Eu)
+      } : hR, yu.debug = Ru >= 4 ? function() {
+        for (var Ru = arguments.length, Eu = new Array(Ru), Ku = 0; Ku < Ru; Ku++) Eu[Ku] = arguments[Ku];
+        uu.debug(`${yu.prefix}\n`, ...Eu)
+      } : hR), yu
     }
-    const ZE = "faro",
-      aE = {
+    const DQ = "faro",
+      MQ = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      YE = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      IQ = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function BE(UU) {
-      var RU, gU, pU, EU, PU, TU;
-      const qU = [],
-        cU = oE(UU.unpatchedConsole, UU.internalLoggerLevel);
-      UU.transports ? ((UU.url || UU.apiKey) && cU.error('if "transports" is defined, "url" and "apiKey" should not be defined'), qU.push(...UU.transports)) : UU.url ? qU.push(new IE({
-        url: UU.url,
-        apiKey: UU.apiKey,
-        requestCompression: UU.requestCompression
-      })) : cU.error('either "url" or "transports" must be defined');
+    function GQ(uu) {
+      var Ru, yu, Ku, Qu, mu, Ju;
+      const Nu = [],
+        Vu = AQ(uu.unpatchedConsole, uu.internalLoggerLevel);
+      uu.transports ? ((uu.url || uu.apiKey) && Vu.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Nu.push(...uu.transports)) : uu.url ? Nu.push(new dQ({
+        url: uu.url,
+        apiKey: uu.apiKey,
+        requestCompression: uu.requestCompression
+      })) : Vu.error('either "url" or "transports" must be defined');
       const {
-        dedupe: GU = !0,
-        eventDomain: jU = tU,
-        globalObjectKey: uU = ZE,
-        instrumentations: CU = Fp(),
-        internalLoggerLevel: hU = zR,
-        isolate: QU = !1,
-        logArgsSerializer: eU = Yg,
-        metas: WU = rE(UU),
-        paused: fU = !1,
-        preventGlobalExposure: xU = !1,
-        unpatchedConsole: mU = OR,
-        url: IU,
-        experimental: JU
-      } = UU, wU = uE(UU, YE), nU = null !== (RU = null === JU || void 0 === JU ? void 0 : JU.trackNavigation) && void 0 !== RU && RU, bU = {
-        dataAttributeName: lt(null !== (gU = null === (pU = UU.userActionsInstrumentation) || void 0 === pU ? void 0 : pU.dataAttributeName) && void 0 !== gU ? gU : Dt),
-        excludeItem: null === (EU = UU.userActionsInstrumentation) || void 0 === EU ? void 0 : EU.excludeItem,
-        initialActivityTimeout: Ot(null === (PU = UU.userActionsInstrumentation) || void 0 === PU ? void 0 : PU.initialActivityTimeout, 100, (UU => cU.warn(UU)))
+        dedupe: ru = !0,
+        eventDomain: Bu = Eu,
+        globalObjectKey: xu = DQ,
+        instrumentations: Su = wK(),
+        internalLoggerLevel: pu = YR,
+        isolate: Tu = !1,
+        logArgsSerializer: Wu = Uy,
+        metas: ju = nQ(uu),
+        paused: Hu = !1,
+        preventGlobalExposure: du = !1,
+        unpatchedConsole: bu = fR,
+        url: Cu,
+        experimental: ku
+      } = uu, eu = rQ(uu, IQ), Au = null !== (Ru = null === ku || void 0 === ku ? void 0 : ku.trackNavigation) && void 0 !== Ru && Ru, Du = {
+        dataAttributeName: vE(null !== (yu = null === (Ku = uu.userActionsInstrumentation) || void 0 === Ku ? void 0 : Ku.dataAttributeName) && void 0 !== yu ? yu : oE),
+        excludeItem: null === (Qu = uu.userActionsInstrumentation) || void 0 === Qu ? void 0 : Qu.excludeItem,
+        initialActivityTimeout: aE(null === (mu = uu.userActionsInstrumentation) || void 0 === mu ? void 0 : mu.initialActivityTimeout, 100, (uu => Vu.warn(uu)))
       };
-      return cR(cR({}, wU), {}, {
-        batching: cR(cR({}, aE), UU.batching),
-        dedupe: GU,
-        globalObjectKey: uU,
-        instrumentations: VE(CU, UU),
-        internalLoggerLevel: hU,
-        isolate: QU,
-        logArgsSerializer: eU,
-        metas: WU,
-        parseStacktrace: hg,
-        paused: fU,
-        preventGlobalExposure: xU,
-        transports: qU,
-        unpatchedConsole: mU,
-        eventDomain: jU,
-        ignoreUrls: [...null !== (TU = UU.ignoreUrls) && void 0 !== TU ? TU : [], ...IU ? [IU] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: cR(cR(cR({}, KU), UU.sessionTracking), XE({
-          trackGeolocation: UU.trackGeolocation,
-          sessionTracking: UU.sessionTracking
+      return VR(VR({}, eu), {}, {
+        batching: VR(VR({}, MQ), uu.batching),
+        dedupe: ru,
+        globalObjectKey: xu,
+        instrumentations: UQ(Su, uu),
+        internalLoggerLevel: pu,
+        isolate: Tu,
+        logArgsSerializer: Wu,
+        metas: ju,
+        parseStacktrace: py,
+        paused: Hu,
+        preventGlobalExposure: du,
+        transports: Nu,
+        unpatchedConsole: bu,
+        eventDomain: Bu,
+        ignoreUrls: [...null !== (Ju = uu.ignoreUrls) && void 0 !== Ju ? Ju : [], ...Cu ? [Cu] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: VR(VR(VR({}, Xu), uu.sessionTracking), sQ({
+          trackGeolocation: uu.trackGeolocation,
+          sessionTracking: uu.sessionTracking
         })),
-        userActionsInstrumentation: bU,
+        userActionsInstrumentation: Du,
         experimental: {
-          trackNavigation: nU
+          trackNavigation: Au
         }
       })
     }
 
-    function VE(UU, RU) {
+    function UQ(uu, Ru) {
       let {
-        experimental: gU
-      } = RU;
-      var tU;
-      const pU = null !== (tU = null === gU || void 0 === gU ? void 0 : gU.trackNavigation) && void 0 !== tU && tU;
-      return UU.filter((UU => !("@grafana/faro-web-sdk:instrumentation-navigation" === UU.name && !pU)))
+        experimental: yu
+      } = Ru;
+      var Eu;
+      const Ku = null !== (Eu = null === yu || void 0 === yu ? void 0 : yu.trackNavigation) && void 0 !== Eu && Eu;
+      return uu.filter((uu => !("@grafana/faro-web-sdk:instrumentation-navigation" === uu.name && !Ku)))
     }
 
-    function rE(UU) {
-      var RU, gU, tU;
+    function nQ(uu) {
+      var Ru, yu, Eu;
       const {
-        page: pU,
-        generatePageId: EU
-      } = null !== (RU = null === UU || void 0 === UU ? void 0 : UU.pageTracking) && void 0 !== RU ? RU : {}, PU = [Dp, Lp, bE({
-        generatePageId: EU,
-        initialPageMeta: pU
-      }), ...null !== (gU = UU.metas) && void 0 !== gU ? gU : [], lp];
-      return oU(null === (tU = window) || void 0 === tU ? void 0 : tU.k6) ? [...PU, JE] : PU
+        page: Ku,
+        generatePageId: Qu
+      } = null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.pageTracking) && void 0 !== Ru ? Ru : {}, mu = [YK, oK, eQ({
+        generatePageId: Qu,
+        initialPageMeta: Ku
+      }), ...null !== (yu = uu.metas) && void 0 !== yu ? yu : [], OK];
+      return Mu(null === (Eu = window) || void 0 === Eu ? void 0 : Eu.k6) ? [...mu, bQ] : mu
     }
 
-    function XE(UU) {
+    function sQ(uu) {
       let {
-        trackGeolocation: RU,
-        sessionTracking: gU
-      } = UU;
-      var tU;
-      const pU = {};
-      return nU(RU) && (pU.geoLocationTrackingEnabled = RU), zU(pU) ? {} : {
-        session: cR(cR({}, null !== (tU = null === gU || void 0 === gU ? void 0 : gU.session) && void 0 !== tU ? tU : {}), {}, {
-          overrides: pU
+        trackGeolocation: Ru,
+        sessionTracking: yu
+      } = uu;
+      var Eu;
+      const Ku = {};
+      return Au(Ru) && (Ku.geoLocationTrackingEnabled = Ru), Yu(Ku) ? {} : {
+        session: VR(VR({}, null !== (Eu = null === yu || void 0 === yu ? void 0 : yu.session) && void 0 !== Eu ? Eu : {}), {}, {
+          overrides: Ku
         })
       }
     }
-    const vE = new WeakSet;
+    const tQ = new WeakSet;
 
-    function dE(UU) {
-      return vE.add(UU), UU
+    function lQ(uu) {
+      return tQ.add(uu), uu
     }
 
-    function HE(UU, RU) {
-      if (UU.capture) return dE(UU.capture(RU));
-      const gU = dE(UU.value);
-      return null === RU || void 0 === RU || RU(), gU
+    function gQ(uu, Ru) {
+      if (uu.capture) return lQ(uu.capture(Ru));
+      const yu = lQ(uu.value);
+      return null === Ru || void 0 === Ru || Ru(), yu
     }
 
-    function SE(UU) {
-      const RU = `__faroBundleId_${UU}`,
-        gU = null === cU || void 0 === cU ? void 0 : cU[RU];
-      if ("string" === typeof gU && "" !== gU) return gU;
-      const tU = "undefined" !== typeof window ? window[RU] : void 0;
-      return "string" === typeof tU && "" !== tU ? tU : void 0
+    function cQ(uu) {
+      const Ru = `__faroBundleId_${uu}`,
+        yu = null === Vu || void 0 === Vu ? void 0 : Vu[Ru];
+      if ("string" === typeof yu && "" !== yu) return yu;
+      const Eu = "undefined" !== typeof window ? window[Ru] : void 0;
+      return "string" === typeof Eu && "" !== Eu ? Eu : void 0
     }
 
-    function sE(UU) {
-      var RU, gU;
-      const tU = UU.config.app.name,
-        pU = tU ? function(UU) {
-          return null === cU || void 0 === cU ? void 0 : cU[`__faroGitHash_${UU}`]
-        }(tU) : void 0,
-        EU = {
+    function LQ(uu) {
+      var Ru, yu;
+      const Eu = uu.config.app.name,
+        Ku = Eu ? function(uu) {
+          return null === Vu || void 0 === Vu ? void 0 : Vu[`__faroGitHash_${uu}`]
+        }(Eu) : void 0,
+        Qu = {
           sdk: {
-            version: gg,
+            version: yy,
             name: "faro"
           },
-          app: lR({
-            bundleId: tU && SE(tU)
-          }, void 0 !== pU ? {
-            gitHash: pU
+          app: aR({
+            bundleId: Eu && cQ(Eu)
+          }, void 0 !== Ku ? {
+            gitHash: Ku
           } : {})
         },
-        PU = null === (RU = UU.config.sessionTracking) || void 0 === RU ? void 0 : RU.session;
-      PU && UU.api.setSession(PU), UU.config.app && (EU.app = lR(lR({}, UU.config.app), EU.app)), UU.config.user && (EU.user = UU.config.user), UU.config.view && (EU.view = UU.config.view), UU.metas.add(EU, ...null !== (gU = UU.config.metas) && void 0 !== gU ? gU : [])
+        mu = null === (Ru = uu.config.sessionTracking) || void 0 === Ru ? void 0 : Ru.session;
+      mu && uu.api.setSession(mu), uu.config.app && (Qu.app = aR(aR({}, uu.config.app), Qu.app)), uu.config.user && (Qu.user = uu.config.user), uu.config.view && (Qu.view = uu.config.view), uu.metas.add(Qu, ...null !== (yu = uu.config.metas) && void 0 !== yu ? yu : [])
     }
-    var yE = class {
-      constructor(UU, RU) {
-        var gU, tU;
-        this.signalBuffer = [], this.itemLimit = null !== (gU = null === RU || void 0 === RU ? void 0 : RU.itemLimit) && void 0 !== gU ? gU : 50, this.sendTimeout = null !== (tU = null === RU || void 0 === RU ? void 0 : RU.sendTimeout) && void 0 !== tU ? tU : 250, this.paused = (null === RU || void 0 === RU ? void 0 : RU.paused) || !1, this.sendFn = UU, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var zQ = class {
+      constructor(uu, Ru) {
+        var yu, Eu;
+        this.signalBuffer = [], this.itemLimit = null !== (yu = null === Ru || void 0 === Ru ? void 0 : Ru.itemLimit) && void 0 !== yu ? yu : 50, this.sendTimeout = null !== (Eu = null === Ru || void 0 === Ru ? void 0 : Ru.sendTimeout) && void 0 !== Eu ? Eu : 250, this.paused = (null === Ru || void 0 === Ru ? void 0 : Ru.paused) || !1, this.sendFn = uu, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(UU) {
-        this.paused || (this.signalBuffer.push(UU), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(uu) {
+        this.paused || (this.signalBuffer.push(uu), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(UU) {
-        const RU = new Map;
-        return UU.forEach((UU => {
-          const gU = JSON.stringify(UU.meta);
-          let tU = RU.get(gU);
-          tU = void 0 === tU ? [UU] : [...tU, UU], RU.set(gU, tU)
-        })), Array.from(RU.values())
+      groupItems(uu) {
+        const Ru = new Map;
+        return uu.forEach((uu => {
+          const yu = JSON.stringify(uu.meta);
+          let Eu = Ru.get(yu);
+          Eu = void 0 === Eu ? [uu] : [...Eu, uu], Ru.set(yu, Eu)
+        })), Array.from(Ru.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const UU = this.signalBuffer;
+        const uu = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(UU).forEach(this.sendFn)
-        } catch (RU) {
-          throw this.signalBuffer = [...UU, ...this.signalBuffer], this.trimBufferToLimit(), RU
+          this.groupItems(uu).forEach(this.sendFn)
+        } catch (Ru) {
+          throw this.signalBuffer = [...uu, ...this.signalBuffer], this.trimBufferToLimit(), Ru
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function kE(UU, RU, gU, tU) {
-      var pU;
-      RU.debug("Initializing transports");
-      const EU = [];
-      let PU = [];
-      const TU = UU => {
-        let RU = UU;
-        for (const tU of PU) {
-          const UU = RU.map(tU).filter(Boolean);
-          if (0 === UU.length) return [];
-          RU = FE(UU, gU)
+    function FQ(uu, Ru, yu, Eu) {
+      var Ku;
+      Ru.debug("Initializing transports");
+      const Qu = [];
+      let mu = [];
+      const Ju = uu => {
+        let Ru = uu;
+        for (const Eu of mu) {
+          const uu = Ru.map(Eu).filter(Boolean);
+          if (0 === uu.length) return [];
+          Ru = wQ(uu, yu)
         }
-        return RU
+        return Ru
       };
-      let qU;
-      (null === (pU = gU.batching) || void 0 === pU ? void 0 : pU.enabled) && (qU = new yE((UU => {
-        const gU = TU(UU);
-        if (0 !== gU.length)
-          for (const tU of EU) RU.debug(`Transporting item using ${tU.name}\n`, gU), tU.isBatched() && tU.send(gU)
+      let Nu;
+      (null === (Ku = yu.batching) || void 0 === Ku ? void 0 : Ku.enabled) && (Nu = new zQ((uu => {
+        const yu = Ju(uu);
+        if (0 !== yu.length)
+          for (const Eu of Qu) Ru.debug(`Transporting item using ${Eu.name}\n`, yu), Eu.isBatched() && Eu.send(yu)
       }), {
-        sendTimeout: gU.batching.sendTimeout,
-        itemLimit: gU.batching.itemLimit,
-        paused: gU.paused
+        sendTimeout: yu.batching.sendTimeout,
+        itemLimit: yu.batching.itemLimit,
+        paused: yu.paused
       }));
       return {
         add: function() {
-          RU.debug("Adding transports");
-          for (var pU = arguments.length, PU = new Array(pU), TU = 0; TU < pU; TU++) PU[TU] = arguments[TU];
-          PU.forEach((pU => {
-            RU.debug(`Adding "${pU.name}" transport`), EU.some((UU => UU === pU)) ? RU.warn(`Transport ${pU.name} is already added`) : (pU.unpatchedConsole = UU, pU.internalLogger = RU, pU.config = gU, pU.metas = tU, EU.push(pU))
+          Ru.debug("Adding transports");
+          for (var Ku = arguments.length, mu = new Array(Ku), Ju = 0; Ju < Ku; Ju++) mu[Ju] = arguments[Ju];
+          mu.forEach((Ku => {
+            Ru.debug(`Adding "${Ku.name}" transport`), Qu.some((uu => uu === Ku)) ? Ru.warn(`Transport ${Ku.name} is already added`) : (Ku.unpatchedConsole = uu, Ku.internalLogger = Ru, Ku.config = yu, Ku.metas = Eu, Qu.push(Ku))
           }))
         },
         addBeforeSendHooks: function() {
-          RU.debug("Adding beforeSendHooks\n", PU);
-          for (var UU = arguments.length, gU = new Array(UU), tU = 0; tU < UU; tU++) gU[tU] = arguments[tU];
-          gU.forEach((UU => {
-            UU && PU.push(UU)
+          Ru.debug("Adding beforeSendHooks\n", mu);
+          for (var uu = arguments.length, yu = new Array(uu), Eu = 0; Eu < uu; Eu++) yu[Eu] = arguments[Eu];
+          yu.forEach((uu => {
+            uu && mu.push(uu)
           }))
         },
-        getBeforeSendHooks: () => [...PU],
-        execute: UU => {
-          var pU;
-          if (!gU.paused && sR(tU).shouldCapture()) {
-            if (GU = UU.meta, !vE.has(GU)) {
-              var PU, KU, cU;
-              const RU = null === (PU = tU.value.session) || void 0 === PU ? void 0 : PU.id,
-                pU = HE(tU);
-              if (gU.paused) return;
-              const EU = lR({}, UU.meta);
-              (null === (KU = EU.session) || void 0 === KU ? void 0 : KU.id) === RU && (null === (cU = pU.session) || void 0 === cU ? void 0 : cU.id) !== RU && (void 0 === pU.session ? delete EU.session : EU.session = pU.session), UU = lR(lR({}, UU), {}, {
-                meta: dE(EU)
+        getBeforeSendHooks: () => [...mu],
+        execute: uu => {
+          var Ku;
+          if (!yu.paused && FR(Eu).shouldCapture()) {
+            if (ru = uu.meta, !tQ.has(ru)) {
+              var mu, Xu, Vu;
+              const Ru = null === (mu = Eu.value.session) || void 0 === mu ? void 0 : mu.id,
+                Ku = gQ(Eu);
+              if (yu.paused) return;
+              const Qu = aR({}, uu.meta);
+              (null === (Xu = Qu.session) || void 0 === Xu ? void 0 : Xu.id) === Ru && (null === (Vu = Ku.session) || void 0 === Vu ? void 0 : Vu.id) !== Ru && (void 0 === Ku.session ? delete Qu.session : Qu.session = Ku.session), uu = aR(aR({}, uu), {}, {
+                meta: lQ(Qu)
               })
             }
-            var GU;
-            (null === (pU = gU.batching) || void 0 === pU ? void 0 : pU.enabled) && (null === qU || void 0 === qU || qU.addItem(UU)), (UU => {
-              var tU;
-              if ((null === (tU = gU.batching) || void 0 === tU ? void 0 : tU.enabled) && EU.every((UU => UU.isBatched()))) return;
-              const [pU] = TU([UU]);
-              if (void 0 !== pU)
-                for (const TU of EU) {
-                  var PU;
-                  RU.debug(`Transporting item using ${TU.name}\n`, pU), TU.isBatched() ? (null === (PU = gU.batching) || void 0 === PU ? void 0 : PU.enabled) || TU.send([pU]) : TU.send(pU)
+            var ru;
+            (null === (Ku = yu.batching) || void 0 === Ku ? void 0 : Ku.enabled) && (null === Nu || void 0 === Nu || Nu.addItem(uu)), (uu => {
+              var Eu;
+              if ((null === (Eu = yu.batching) || void 0 === Eu ? void 0 : Eu.enabled) && Qu.every((uu => uu.isBatched()))) return;
+              const [Ku] = Ju([uu]);
+              if (void 0 !== Ku)
+                for (const Ju of Qu) {
+                  var mu;
+                  Ru.debug(`Transporting item using ${Ju.name}\n`, Ku), Ju.isBatched() ? (null === (mu = yu.batching) || void 0 === mu ? void 0 : mu.enabled) || Ju.send([Ku]) : Ju.send(Ku)
                 }
-            })(UU)
+            })(uu)
           }
         },
-        isPaused: () => gU.paused,
+        isPaused: () => yu.paused,
         pause: () => {
-          RU.debug("Pausing transports"), null === qU || void 0 === qU || qU.pause(), gU.paused = !0
+          Ru.debug("Pausing transports"), null === Nu || void 0 === Nu || Nu.pause(), yu.paused = !0
         },
         remove: function() {
-          RU.debug("Removing transports");
-          for (var UU = arguments.length, gU = new Array(UU), tU = 0; tU < UU; tU++) gU[tU] = arguments[tU];
-          gU.forEach((UU => {
-            RU.debug(`Removing "${UU.name}" transport`);
-            const gU = EU.indexOf(UU); - 1 !== gU ? EU.splice(gU, 1) : RU.warn(`Transport "${UU.name}" is not added`)
+          Ru.debug("Removing transports");
+          for (var uu = arguments.length, yu = new Array(uu), Eu = 0; Eu < uu; Eu++) yu[Eu] = arguments[Eu];
+          yu.forEach((uu => {
+            Ru.debug(`Removing "${uu.name}" transport`);
+            const yu = Qu.indexOf(uu); - 1 !== yu ? Qu.splice(yu, 1) : Ru.warn(`Transport "${uu.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var UU = arguments.length, gU = new Array(UU), tU = 0; tU < UU; tU++) gU[tU] = arguments[tU];
-          RU.debug("Removing beforeSendHooks"), PU = PU.filter((UU => !gU.includes(UU)))
+          for (var uu = arguments.length, yu = new Array(uu), Eu = 0; Eu < uu; Eu++) yu[Eu] = arguments[Eu];
+          Ru.debug("Removing beforeSendHooks"), mu = mu.filter((uu => !yu.includes(uu)))
         },
         get transports() {
-          return [...EU]
+          return [...Qu]
         },
         unpause: () => {
-          RU.debug("Unpausing transports"), null === qU || void 0 === qU || qU.start(), gU.paused = !1
+          Ru.debug("Unpausing transports"), null === Nu || void 0 === Nu || Nu.start(), yu.paused = !1
         }
       }
     }
 
-    function FE(UU, RU) {
-      if (RU.preserveOriginalError)
-        for (const gU of UU) "exception" === gU.type && delete gU.payload.originalError;
-      return UU
+    function wQ(uu, Ru) {
+      if (Ru.preserveOriginalError)
+        for (const yu of uu) "exception" === yu.type && delete yu.payload.originalError;
+      return uu
     }
-    let iE = OR;
+    let ZQ = fR;
 
-    function AE(UU) {
-      var RU;
-      return iE = null !== (RU = UU.unpatchedConsole) && void 0 !== RU ? RU : iE, iE
+    function hQ(uu) {
+      var Ru;
+      return ZQ = null !== (Ru = uu.unpatchedConsole) && void 0 !== Ru ? Ru : ZQ, ZQ
     }
-    let zE, ME = AR;
+    let PQ, iQ = iR;
 
-    function DE(UU, RU) {
-      return ME = oE(UU, RU.internalLoggerLevel), ME
+    function YQ(uu, Ru) {
+      return iQ = AQ(uu, Ru.internalLoggerLevel), iQ
     }
 
-    function LE(UU) {
+    function oQ(uu) {
       let {
-        internalLogger: RU,
-        config: gU,
-        metas: tU,
-        transports: pU,
-        tracesApi: EU,
-        userActionsApi: PU
-      } = UU;
-      var TU;
-      RU.debug("Initializing exceptions API");
-      let qU = null;
-      zE = null !== (TU = gU.parseStacktrace) && void 0 !== TU ? TU : zE;
-      const KU = UU => {
-          RU.debug("Changing stacktrace parser"), zE = null !== UU && void 0 !== UU ? UU : zE
+        internalLogger: Ru,
+        config: yu,
+        metas: Eu,
+        transports: Ku,
+        tracesApi: Qu,
+        userActionsApi: mu
+      } = uu;
+      var Ju;
+      Ru.debug("Initializing exceptions API");
+      let Nu = null;
+      PQ = null !== (Ju = yu.parseStacktrace) && void 0 !== Ju ? Ju : PQ;
+      const Xu = uu => {
+          Ru.debug("Changing stacktrace parser"), PQ = null !== uu && void 0 !== uu ? uu : PQ
         },
         {
-          ignoreErrors: cU = [],
-          preserveOriginalError: GU
-        } = gU;
-      return KU(gU.parseStacktrace), {
-        changeStacktraceParser: KU,
-        getStacktraceParser: () => zE,
-        pushError: function(UU) {
+          ignoreErrors: Vu = [],
+          preserveOriginalError: ru
+        } = yu;
+      return Xu(yu.parseStacktrace), {
+        changeStacktraceParser: Xu,
+        getStacktraceParser: () => PQ,
+        pushError: function(uu) {
           let {
-            skipDedupe: TU,
-            stackFrames: KU,
-            type: jU,
-            context: uU,
-            spanContext: CU,
-            timestampOverwriteMs: hU,
-            originalError: QU,
-            fingerprint: eU,
-            fatal: WU
+            skipDedupe: Ju,
+            stackFrames: Xu,
+            type: Bu,
+            context: xu,
+            spanContext: Su,
+            timestampOverwriteMs: pu,
+            originalError: Tu,
+            fingerprint: Wu,
+            fatal: ju
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(UU, RU) {
+          if (! function(uu, Ru) {
               const {
-                message: gU,
-                name: tU,
-                stack: pU
-              } = RU;
-              return EU = UU, PU = gU + " " + tU + " " + pU, EU.some((UU => IU(UU) ? PU.includes(UU) : !!PU.match(UU)));
-              var EU, PU
-            }(cU, null !== QU && void 0 !== QU ? QU : UU)) try {
-            var fU, xU;
-            if (!sR(tU).shouldCapture()) return;
-            const cU = vR(lR(lR({}, function(UU) {
-                let RU = UU.cause;
-                dU(RU) ? RU = UU.cause.toString() : null !== RU && (oU(UU.cause) || aU(UU.cause)) ? RU = XR(UU.cause) : null != RU && (RU = UU.cause.toString());
-                return null == RU ? {} : {
-                  cause: RU
+                message: yu,
+                name: Eu,
+                stack: Ku
+              } = Ru;
+              return Qu = uu, mu = yu + " " + Eu + " " + Ku, Qu.some((uu => Cu(uu) ? mu.includes(uu) : !!mu.match(uu)));
+              var Qu, mu
+            }(Vu, null !== Tu && void 0 !== Tu ? Tu : uu)) try {
+            var Hu, du;
+            if (!FR(Eu).shouldCapture()) return;
+            const Vu = gR(aR(aR({}, function(uu) {
+                let Ru = uu.cause;
+                cu(Ru) ? Ru = uu.cause.toString() : null !== Ru && (Mu(uu.cause) || Gu(uu.cause)) ? Ru = lR(uu.cause) : null != Ru && (Ru = uu.cause.toString());
+                return null == Ru ? {} : {
+                  cause: Ru
                 }
-              }(null !== QU && void 0 !== QU ? QU : UU)), null !== uU && void 0 !== uU ? uU : {})),
-              IU = lR(lR(lR(lR({
-                type: jU || UU.name || "Error",
-                value: UU.message,
-                timestamp: hU ? hR(hU) : CR(),
-                trace: CU ? {
-                  trace_id: CU.traceId,
-                  span_id: CU.spanId
-                } : EU.getTraceContext()
-              }, zU(cU) ? {} : {
-                context: cU
-              }), GU ? {
-                originalError: QU
-              } : {}), eU ? {
-                fingerprint: eU
-              } : {}), void 0 !== WU ? {
-                fatal: WU
+              }(null !== Tu && void 0 !== Tu ? Tu : uu)), null !== xu && void 0 !== xu ? xu : {})),
+              Cu = aR(aR(aR(aR({
+                type: Bu || uu.name || "Error",
+                value: uu.message,
+                timestamp: pu ? pR(pu) : SR(),
+                trace: Su ? {
+                  trace_id: Su.traceId,
+                  span_id: Su.spanId
+                } : Qu.getTraceContext()
+              }, Yu(Vu) ? {} : {
+                context: Vu
+              }), ru ? {
+                originalError: Tu
+              } : {}), Wu ? {
+                fingerprint: Wu
+              } : {}), void 0 !== ju ? {
+                fatal: ju
               } : {});
-            KU = null !== (fU = KU) && void 0 !== fU ? fU : UU.stack ? null === zE || void 0 === zE ? void 0 : zE(UU).frames : void 0, (null === KU || void 0 === KU ? void 0 : KU.length) && (IU.stacktrace = {
-              frames: KU
+            Xu = null !== (Hu = Xu) && void 0 !== Hu ? Hu : uu.stack ? null === PQ || void 0 === PQ ? void 0 : PQ(uu).frames : void 0, (null === Xu || void 0 === Xu ? void 0 : Xu.length) && (Cu.stacktrace = {
+              frames: Xu
             });
-            const JU = {
-              type: IU.type,
-              value: IU.value,
-              stacktrace: IU.stacktrace,
-              context: IU.context,
-              fingerprint: IU.fingerprint,
-              fatal: null !== (xU = IU.fatal) && void 0 !== xU && xU
+            const ku = {
+              type: Cu.type,
+              value: Cu.value,
+              stacktrace: Cu.stacktrace,
+              context: Cu.context,
+              fingerprint: Cu.fingerprint,
+              fatal: null !== (du = Cu.fatal) && void 0 !== du && du
             };
-            if (!TU && gU.dedupe && !mU(qU) && WR(JU, qU)) return void RU.debug("Skipping error push because it is the same as the last one\n", IU);
-            const wU = qU,
-              nU = HE(tU);
-            if (qU !== wU && !TU && gU.dedupe && WR(JU, qU)) return;
-            qU = JU;
-            const bU = {
-              meta: nU,
-              payload: IU,
+            if (!Ju && yu.dedupe && !bu(Nu) && jR(ku, Nu)) return void Ru.debug("Skipping error push because it is the same as the last one\n", Cu);
+            const eu = Nu,
+              Au = gQ(Eu);
+            if (Nu !== eu && !Ju && yu.dedupe && jR(ku, Nu)) return;
+            Nu = ku;
+            const Du = {
+              meta: Au,
+              payload: Cu,
               type: "exception"
             };
-            RU.debug("Pushing exception\n", bU), wp(PU.getActiveUserAction(), bU) || pU.execute(bU)
-          } catch (JU) {
-            RU.error("Error pushing event", JU)
+            Ru.debug("Pushing exception\n", Du), CK(mu.getActiveUserAction(), Du) || Ku.execute(Du)
+          } catch (ku) {
+            Ru.error("Error pushing event", ku)
           }
         }
       }
     }
 
-    function NE(UU, RU, gU, tU, pU) {
-      RU.debug("Initializing API");
-      let EU = null;
-      const PU = function(UU) {
+    function qQ(uu, Ru, yu, Eu, Ku) {
+      Ru.debug("Initializing API");
+      let Qu = null;
+      const mu = function(uu) {
           let {
-            transports: RU,
-            internalLogger: gU,
-            config: tU,
-            pushEvent: pU
-          } = UU;
-          var EU;
-          const PU = null === (EU = tU.userActionsInstrumentation) || void 0 === EU ? void 0 : EU.excludeItem;
-          let TU;
-          const qU = () => TU;
+            transports: Ru,
+            internalLogger: yu,
+            config: Eu,
+            pushEvent: Ku
+          } = uu;
+          var Qu;
+          const mu = null === (Qu = Eu.userActionsInstrumentation) || void 0 === Qu ? void 0 : Qu.excludeItem;
+          let Ju;
+          const Nu = () => Ju;
           return {
-            startUserAction: (UU, tU, EU) => {
-              if (void 0 === qU()) {
-                const gU = new Ip({
-                  name: UU,
-                  transports: RU,
-                  attributes: tU,
-                  trigger: (null === EU || void 0 === EU ? void 0 : EU.triggerName) || "faroApiCall",
-                  importance: (null === EU || void 0 === EU ? void 0 : EU.importance) || xp.Normal,
-                  trackUserActionsExcludeItem: PU,
-                  pushEvent: pU
+            startUserAction: (uu, Eu, Qu) => {
+              if (void 0 === Nu()) {
+                const yu = new dK({
+                  name: uu,
+                  transports: Ru,
+                  attributes: Eu,
+                  trigger: (null === Qu || void 0 === Qu ? void 0 : Qu.triggerName) || "faroApiCall",
+                  importance: (null === Qu || void 0 === Qu ? void 0 : Qu.importance) || jK.Normal,
+                  trackUserActionsExcludeItem: mu,
+                  pushEvent: Ku
                 });
-                return gU.filter((UU => [3, 2].includes(UU))).first().subscribe((() => {
-                  TU = void 0
-                })), Jp.notify({
-                  type: fp,
-                  userAction: gU,
-                  initialActivityTimeout: null === EU || void 0 === EU ? void 0 : EU.initialActivityTimeout
-                }), TU = gU, TU
+                return yu.filter((uu => [3, 2].includes(uu))).first().subscribe((() => {
+                  Ju = void 0
+                })), bK.notify({
+                  type: WK,
+                  userAction: yu,
+                  initialActivityTimeout: null === Qu || void 0 === Qu ? void 0 : Qu.initialActivityTimeout
+                }), Ju = yu, Ju
               }
-              gU.error("Attempted to create a new user action while one is already running. This is not possible.")
+              yu.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: qU
+            getActiveUserAction: Nu
           }
         }({
-          transports: pU,
-          config: gU,
-          internalLogger: RU,
-          pushEvent: (UU, gU, tU, pU) => {
-            EU ? EU(UU, gU, tU, pU) : RU.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: UU,
-              attributes: gU,
-              domain: tU,
-              options: pU
+          transports: Ku,
+          config: yu,
+          internalLogger: Ru,
+          pushEvent: (uu, yu, Eu, Ku) => {
+            Qu ? Qu(uu, yu, Eu, Ku) : Ru.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: uu,
+              attributes: yu,
+              domain: Eu,
+              options: Ku
             })
           }
         }),
-        TU = function(UU, RU, gU, tU, pU) {
-          let EU;
-          return RU.debug("Initializing traces API"), {
-            getOTEL: () => EU,
+        Ju = function(uu, Ru, yu, Eu, Ku) {
+          let Qu;
+          return Ru.debug("Initializing traces API"), {
+            getOTEL: () => Qu,
             getTraceContext: () => {
-              const UU = null === EU || void 0 === EU ? void 0 : EU.trace.getSpanContext(EU.context.active());
-              return UU ? {
-                trace_id: UU.traceId,
-                span_id: UU.spanId
+              const uu = null === Qu || void 0 === Qu ? void 0 : Qu.trace.getSpanContext(Qu.context.active());
+              return uu ? {
+                trace_id: uu.traceId,
+                span_id: uu.spanId
               } : void 0
             },
-            initOTEL: (UU, gU) => {
-              RU.debug("Initializing OpenTelemetry"), EU = {
-                trace: UU,
-                context: gU
+            initOTEL: (uu, yu) => {
+              Ru.debug("Initializing OpenTelemetry"), Qu = {
+                trace: uu,
+                context: yu
               }
             },
-            isOTELInitialized: () => !!EU,
-            pushTraces: UU => {
+            isOTELInitialized: () => !!Qu,
+            pushTraces: uu => {
               try {
-                if (!sR(tU).shouldCapture()) return;
-                const gU = {
+                if (!FR(Eu).shouldCapture()) return;
+                const yu = {
                   type: "trace",
-                  payload: UU,
-                  meta: HE(tU)
+                  payload: uu,
+                  meta: gQ(Eu)
                 };
-                RU.debug("Pushing trace\n", gU), pU.execute(gU)
-              } catch (gU) {
-                RU.error("Error pushing trace\n", gU)
+                Ru.debug("Pushing trace\n", yu), Ku.execute(yu)
+              } catch (yu) {
+                Ru.error("Error pushing trace\n", yu)
               }
             }
           }
-        }(0, RU, 0, tU, pU),
-        qU = {
-          unpatchedConsole: UU,
-          internalLogger: RU,
-          userActionsApi: PU,
-          config: gU,
-          metas: tU,
-          transports: pU,
-          tracesApi: TU
+        }(0, Ru, 0, Eu, Ku),
+        Nu = {
+          unpatchedConsole: uu,
+          internalLogger: Ru,
+          userActionsApi: mu,
+          config: yu,
+          metas: Eu,
+          transports: Ku,
+          tracesApi: Ju
         },
-        KU = function(UU) {
+        Xu = function(uu) {
           let {
-            internalLogger: RU,
-            config: gU,
-            metas: tU,
-            transports: pU,
-            tracesApi: EU,
-            userActionsApi: PU
-          } = UU, TU = null;
+            internalLogger: Ru,
+            config: yu,
+            metas: Eu,
+            transports: Ku,
+            tracesApi: Qu,
+            userActionsApi: mu
+          } = uu, Ju = null;
           return {
-            pushEvent: function(UU, qU, KU) {
+            pushEvent: function(uu, Nu, Xu) {
               let {
-                skipDedupe: cU,
-                spanContext: GU,
-                timestampOverwriteMs: jU,
-                customPayloadTransformer: uU = UU => UU
+                skipDedupe: Vu,
+                spanContext: ru,
+                timestampOverwriteMs: Bu,
+                customPayloadTransformer: xu = uu => uu
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!sR(tU).shouldCapture()) return;
-                const CU = vR(qU),
-                  hU = uU({
-                    name: UU,
-                    domain: null !== KU && void 0 !== KU ? KU : gU.eventDomain,
-                    attributes: zU(CU) ? void 0 : CU,
-                    timestamp: jU ? hR(jU) : CR(),
-                    trace: GU ? {
-                      trace_id: GU.traceId,
-                      span_id: GU.spanId
-                    } : EU.getTraceContext()
+                if (!FR(Eu).shouldCapture()) return;
+                const Su = gR(Nu),
+                  pu = xu({
+                    name: uu,
+                    domain: null !== Xu && void 0 !== Xu ? Xu : yu.eventDomain,
+                    attributes: Yu(Su) ? void 0 : Su,
+                    timestamp: Bu ? pR(Bu) : SR(),
+                    trace: ru ? {
+                      trace_id: ru.traceId,
+                      span_id: ru.spanId
+                    } : Qu.getTraceContext()
                   }),
-                  QU = {
-                    name: hU.name,
-                    attributes: hU.attributes,
-                    domain: hU.domain
+                  Tu = {
+                    name: pu.name,
+                    attributes: pu.attributes,
+                    domain: pu.domain
                   };
-                if (!cU && gU.dedupe && !mU(TU) && WR(QU, TU)) return void RU.debug("Skipping event push because it is the same as the last one\n", hU);
-                const eU = TU,
-                  WU = HE(tU);
-                if (TU !== eU && !cU && gU.dedupe && WR(QU, TU)) return;
-                TU = QU;
-                const fU = {
-                  meta: WU,
-                  payload: hU,
+                if (!Vu && yu.dedupe && !bu(Ju) && jR(Tu, Ju)) return void Ru.debug("Skipping event push because it is the same as the last one\n", pu);
+                const Wu = Ju,
+                  ju = gQ(Eu);
+                if (Ju !== Wu && !Vu && yu.dedupe && jR(Tu, Ju)) return;
+                Ju = Tu;
+                const Hu = {
+                  meta: ju,
+                  payload: pu,
                   type: "event"
                 };
-                RU.debug("Pushing event\n", fU), wp(PU.getActiveUserAction(), fU) || pU.execute(fU)
-              } catch (CU) {
-                RU.error("Error pushing event", CU)
+                Ru.debug("Pushing event\n", Hu), CK(mu.getActiveUserAction(), Hu) || Ku.execute(Hu)
+              } catch (Su) {
+                Ru.error("Error pushing event", Su)
               }
             }
           }
-        }(qU);
-      return EU = KU.pushEvent, lR(lR(lR(lR(lR(lR(lR({}, TU), LE(qU)), function(UU) {
-        let RU, gU, tU, pU, {
-          internalLogger: EU,
-          metas: PU
-        } = UU;
-        EU.debug("Initializing meta API");
-        const TU = UU => {
-            gU && PU.remove(gU), gU = {
-              user: UU
-            }, PU.add(gU)
+        }(Nu);
+      return Qu = Xu.pushEvent, aR(aR(aR(aR(aR(aR(aR({}, Ju), oQ(Nu)), function(uu) {
+        let Ru, yu, Eu, Ku, {
+          internalLogger: Qu,
+          metas: mu
+        } = uu;
+        Qu.debug("Initializing meta API");
+        const Ju = uu => {
+            yu && mu.remove(yu), yu = {
+              user: uu
+            }, mu.add(yu)
           },
-          qU = (UU, gU) => {
-            var tU;
-            const pU = null === gU || void 0 === gU ? void 0 : gU.overrides,
-              EU = pU ? {
-                overrides: lR(lR({}, null === RU || void 0 === RU || null === (tU = RU.session) || void 0 === tU ? void 0 : tU.overrides), pU)
+          Nu = (uu, yu) => {
+            var Eu;
+            const Ku = null === yu || void 0 === yu ? void 0 : yu.overrides,
+              Qu = Ku ? {
+                overrides: aR(aR({}, null === Ru || void 0 === Ru || null === (Eu = Ru.session) || void 0 === Eu ? void 0 : Eu.overrides), Ku)
               } : {};
-            RU && PU.remove(RU), RU = {
-              session: lR(lR({}, zU(UU) ? void 0 : UU), EU)
-            }, PU.add(RU)
+            Ru && mu.remove(Ru), Ru = {
+              session: aR(aR({}, Yu(uu) ? void 0 : uu), Qu)
+            }, mu.add(Ru)
           },
-          KU = (UU, RU) => {
-            sR(PU).notifySessionUpdate({
+          Xu = (uu, Ru) => {
+            FR(mu).notifySessionUpdate({
               type: "replace",
-              session: UU,
-              overrides: null === RU || void 0 === RU ? void 0 : RU.overrides
-            }), qU(UU, RU)
+              session: uu,
+              overrides: null === Ru || void 0 === Ru ? void 0 : Ru.overrides
+            }), Nu(uu, Ru)
           },
-          cU = () => PU.value.session,
-          GU = () => PU.value.page;
+          Vu = () => mu.value.session,
+          ru = () => mu.value.page;
         return {
-          setUser: TU,
-          resetUser: TU,
-          setSession: KU,
-          resetSession: KU,
-          getSession: cU,
-          setView: (UU, RU) => {
-            var gU;
-            if ((null === RU || void 0 === RU ? void 0 : RU.overrides) && (sR(PU).notifySessionUpdate({
+          setUser: Ju,
+          resetUser: Ju,
+          setSession: Xu,
+          resetSession: Xu,
+          getSession: Vu,
+          setView: (uu, Ru) => {
+            var yu;
+            if ((null === Ru || void 0 === Ru ? void 0 : Ru.overrides) && (FR(mu).notifySessionUpdate({
                 type: "overrides",
-                overrides: RU.overrides
-              }), qU(cU(), {
-                overrides: RU.overrides
-              })), (null === tU || void 0 === tU || null === (gU = tU.view) || void 0 === gU ? void 0 : gU.name) === (null === UU || void 0 === UU ? void 0 : UU.name)) return;
-            const pU = tU;
-            tU = {
-              view: UU
-            }, PU.add(tU), pU && PU.remove(pU)
+                overrides: Ru.overrides
+              }), Nu(Vu(), {
+                overrides: Ru.overrides
+              })), (null === Eu || void 0 === Eu || null === (yu = Eu.view) || void 0 === yu ? void 0 : yu.name) === (null === uu || void 0 === uu ? void 0 : uu.name)) return;
+            const Ku = Eu;
+            Eu = {
+              view: uu
+            }, mu.add(Eu), Ku && mu.remove(Ku)
           },
-          getView: () => PU.value.view,
-          setPage: UU => {
-            var RU;
-            const gU = IU(UU) ? lR(lR({}, null !== (RU = null === pU || void 0 === pU ? void 0 : pU.page) && void 0 !== RU ? RU : GU()), {}, {
-              id: UU
-            }) : UU;
-            pU && PU.remove(pU), pU = {
-              page: gU
-            }, PU.add(pU)
+          getView: () => mu.value.view,
+          setPage: uu => {
+            var Ru;
+            const yu = Cu(uu) ? aR(aR({}, null !== (Ru = null === Ku || void 0 === Ku ? void 0 : Ku.page) && void 0 !== Ru ? Ru : ru()), {}, {
+              id: uu
+            }) : uu;
+            Ku && mu.remove(Ku), Ku = {
+              page: yu
+            }, mu.add(Ku)
           },
-          getPage: GU
+          getPage: ru
         }
-      }(qU)), function(UU) {
+      }(Nu)), function(uu) {
         let {
-          internalLogger: RU,
-          config: gU,
-          metas: tU,
-          transports: pU,
-          tracesApi: EU,
-          userActionsApi: PU
-        } = UU;
-        var TU;
-        RU.debug("Initializing logs API");
-        let qU = null;
-        const KU = null !== (TU = gU.logArgsSerializer) && void 0 !== TU ? TU : Yg;
+          internalLogger: Ru,
+          config: yu,
+          metas: Eu,
+          transports: Ku,
+          tracesApi: Qu,
+          userActionsApi: mu
+        } = uu;
+        var Ju;
+        Ru.debug("Initializing logs API");
+        let Nu = null;
+        const Xu = null !== (Ju = yu.logArgsSerializer) && void 0 !== Ju ? Ju : Uy;
         return {
-          pushLog: function(UU) {
+          pushLog: function(uu) {
             let {
-              context: TU,
-              level: cU,
-              skipDedupe: GU,
-              spanContext: jU,
-              timestampOverwriteMs: uU
+              context: Ju,
+              level: Vu,
+              skipDedupe: ru,
+              spanContext: Bu,
+              timestampOverwriteMs: xu
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!sR(tU).shouldCapture()) return;
-              const CU = vR(TU),
-                hU = {
-                  message: KU(UU),
-                  level: null !== cU && void 0 !== cU ? cU : "log",
-                  context: zU(CU) ? void 0 : CU,
-                  timestamp: uU ? hR(uU) : CR(),
-                  trace: jU ? {
-                    trace_id: jU.traceId,
-                    span_id: jU.spanId
-                  } : EU.getTraceContext()
+              if (!FR(Eu).shouldCapture()) return;
+              const Su = gR(Ju),
+                pu = {
+                  message: Xu(uu),
+                  level: null !== Vu && void 0 !== Vu ? Vu : "log",
+                  context: Yu(Su) ? void 0 : Su,
+                  timestamp: xu ? pR(xu) : SR(),
+                  trace: Bu ? {
+                    trace_id: Bu.traceId,
+                    span_id: Bu.spanId
+                  } : Qu.getTraceContext()
                 },
-                QU = {
-                  message: hU.message,
-                  level: hU.level,
-                  context: hU.context
+                Tu = {
+                  message: pu.message,
+                  level: pu.level,
+                  context: pu.context
                 };
-              if (!GU && gU.dedupe && !mU(qU) && WR(QU, qU)) return void RU.debug("Skipping log push because it is the same as the last one\n", hU);
-              const eU = qU,
-                WU = HE(tU);
-              if (qU !== eU && !GU && gU.dedupe && WR(QU, qU)) return;
-              qU = QU;
-              const fU = {
+              if (!ru && yu.dedupe && !bu(Nu) && jR(Tu, Nu)) return void Ru.debug("Skipping log push because it is the same as the last one\n", pu);
+              const Wu = Nu,
+                ju = gQ(Eu);
+              if (Nu !== Wu && !ru && yu.dedupe && jR(Tu, Nu)) return;
+              Nu = Tu;
+              const Hu = {
                 type: "log",
-                payload: hU,
-                meta: WU
+                payload: pu,
+                meta: ju
               };
-              RU.debug("Pushing log\n", fU), wp(PU.getActiveUserAction(), fU) || pU.execute(fU)
-            } catch (CU) {
-              RU.error("Error pushing log\n", CU)
+              Ru.debug("Pushing log\n", Hu), CK(mu.getActiveUserAction(), Hu) || Ku.execute(Hu)
+            } catch (Su) {
+              Ru.error("Error pushing log\n", Su)
             }
           }
         }
-      }(qU)), function(UU) {
+      }(Nu)), function(uu) {
         let {
-          internalLogger: RU,
-          config: gU,
-          metas: tU,
-          transports: pU,
-          tracesApi: EU,
-          userActionsApi: PU
-        } = UU;
-        RU.debug("Initializing measurements API");
-        let TU = null;
+          internalLogger: Ru,
+          config: yu,
+          metas: Eu,
+          transports: Ku,
+          tracesApi: Qu,
+          userActionsApi: mu
+        } = uu;
+        Ru.debug("Initializing measurements API");
+        let Ju = null;
         return {
-          pushMeasurement: function(UU) {
+          pushMeasurement: function(uu) {
             let {
-              skipDedupe: qU,
-              context: KU,
-              spanContext: cU,
-              timestampOverwriteMs: GU
+              skipDedupe: Nu,
+              context: Xu,
+              spanContext: Vu,
+              timestampOverwriteMs: ru
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!sR(tU).shouldCapture()) return;
-              const jU = vR(KU),
-                uU = lR(lR({}, UU), {}, {
-                  trace: cU ? {
-                    trace_id: cU.traceId,
-                    span_id: cU.spanId
-                  } : EU.getTraceContext(),
-                  timestamp: GU ? hR(GU) : CR(),
-                  context: zU(jU) ? void 0 : jU
+              if (!FR(Eu).shouldCapture()) return;
+              const Bu = gR(Xu),
+                xu = aR(aR({}, uu), {}, {
+                  trace: Vu ? {
+                    trace_id: Vu.traceId,
+                    span_id: Vu.spanId
+                  } : Qu.getTraceContext(),
+                  timestamp: ru ? pR(ru) : SR(),
+                  context: Yu(Bu) ? void 0 : Bu
                 }),
-                CU = {
-                  type: uU.type,
-                  values: uU.values,
-                  context: uU.context
+                Su = {
+                  type: xu.type,
+                  values: xu.values,
+                  context: xu.context
                 };
-              if (!qU && gU.dedupe && !mU(TU) && WR(CU, TU)) return void RU.debug("Skipping measurement push because it is the same as the last one\n", uU);
-              const hU = TU,
-                QU = HE(tU);
-              if (TU !== hU && !qU && gU.dedupe && WR(CU, TU)) return;
-              TU = CU;
-              const eU = {
+              if (!Nu && yu.dedupe && !bu(Ju) && jR(Su, Ju)) return void Ru.debug("Skipping measurement push because it is the same as the last one\n", xu);
+              const pu = Ju,
+                Tu = gQ(Eu);
+              if (Ju !== pu && !Nu && yu.dedupe && jR(Su, Ju)) return;
+              Ju = Su;
+              const Wu = {
                 type: "measurement",
-                payload: uU,
-                meta: QU
+                payload: xu,
+                meta: Tu
               };
-              RU.debug("Pushing measurement\n", eU), wp(PU.getActiveUserAction(), eU) || pU.execute(eU)
-            } catch (jU) {
-              RU.error("Error pushing measurement\n", jU)
+              Ru.debug("Pushing measurement\n", Wu), CK(mu.getActiveUserAction(), Wu) || Ku.execute(Wu)
+            } catch (Bu) {
+              Ru.error("Error pushing measurement\n", Bu)
             }
           }
         }
-      }(qU)), KU), PU)
+      }(Nu)), Xu), mu)
     }
 
-    function lE(UU) {
-      const RU = AE(UU),
-        gU = DE(RU, UU);
-      if (CU() && !UU.isolate) return void gU.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      gU.debug("Initializing");
-      const tU = function(UU, RU) {
-          let gU, tU = [],
-            pU = [],
-            EU = [],
-            PU = 0,
-            TU = 0;
-          const qU = () => tU.reduce(((UU, RU) => Object.assign(UU, ZU(RU) ? RU() : RU)), {}),
-            KU = () => {
-              if (pU.length) {
-                const UU = qU();
-                pU.forEach((RU => RU(UU)))
+    function OQ(uu) {
+      const Ru = hQ(uu),
+        yu = YQ(Ru, uu);
+      if (Su() && !uu.isolate) return void yu.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      yu.debug("Initializing");
+      const Eu = function(uu, Ru) {
+          let yu, Eu = [],
+            Ku = [],
+            Qu = [],
+            mu = 0,
+            Ju = 0;
+          const Nu = () => Eu.reduce(((uu, Ru) => Object.assign(uu, Iu(Ru) ? Ru() : Ru)), {}),
+            Xu = () => {
+              if (Ku.length) {
+                const uu = Nu();
+                Ku.forEach((Ru => Ru(uu)))
               }
             };
           return {
             add: function() {
-              for (var UU = arguments.length, gU = new Array(UU), pU = 0; pU < UU; pU++) gU[pU] = arguments[pU];
-              RU.debug("Adding metas\n", gU), tU.push(...gU), KU()
+              for (var uu = arguments.length, yu = new Array(uu), Ku = 0; Ku < uu; Ku++) yu[Ku] = arguments[Ku];
+              Ru.debug("Adding metas\n", yu), Eu.push(...yu), Xu()
             },
             remove: function() {
-              for (var UU = arguments.length, gU = new Array(UU), pU = 0; pU < UU; pU++) gU[pU] = arguments[pU];
-              RU.debug("Removing metas\n", gU), tU = tU.filter((UU => !gU.includes(UU))), KU()
+              for (var uu = arguments.length, yu = new Array(uu), Ku = 0; Ku < uu; Ku++) yu[Ku] = arguments[Ku];
+              Ru.debug("Removing metas\n", yu), Eu = Eu.filter((uu => !yu.includes(uu))), Xu()
             },
-            addListener: UU => {
-              RU.debug("Adding metas listener\n", UU), pU.push(UU)
+            addListener: uu => {
+              Ru.debug("Adding metas listener\n", uu), Ku.push(uu)
             },
-            removeListener: UU => {
-              RU.debug("Removing metas listener\n", UU), pU = pU.filter((RU => RU !== UU))
+            removeListener: uu => {
+              Ru.debug("Removing metas listener\n", uu), Ku = Ku.filter((Ru => Ru !== uu))
             },
-            capture: UU => {
-              var RU;
-              const tU = void 0 !== gU,
-                pU = null !== (RU = gU) && void 0 !== RU ? RU : EU;
-              tU || (gU = pU, PU = 0, TU = pU.length);
+            capture: uu => {
+              var Ru;
+              const Eu = void 0 !== yu,
+                Ku = null !== (Ru = yu) && void 0 !== Ru ? Ru : Qu;
+              Eu || (yu = Ku, mu = 0, Ju = Ku.length);
               try {
-                for (; PU < TU;) {
-                  const UU = pU[PU++];
-                  null === UU || void 0 === UU || UU()
+                for (; mu < Ju;) {
+                  const uu = Ku[mu++];
+                  null === uu || void 0 === uu || uu()
                 }
-                const RU = dE(qU());
-                return null === UU || void 0 === UU || UU(), RU
+                const Ru = lQ(Nu());
+                return null === uu || void 0 === uu || uu(), Ru
               } finally {
-                tU || (gU = void 0)
+                Eu || (yu = void 0)
               }
             },
-            addCaptureListener: UU => {
-              EU.push(UU)
+            addCaptureListener: uu => {
+              Qu.push(uu)
             },
-            removeCaptureListener: UU => {
-              EU = EU.filter((RU => RU !== UU))
+            removeCaptureListener: uu => {
+              Qu = Qu.filter((Ru => Ru !== uu))
             },
             get value() {
-              return qU()
+              return Nu()
             }
           }
-        }(0, gU),
-        pU = kE(RU, gU, UU, tU),
-        EU = NE(RU, gU, UU, tU, pU),
-        PU = function(UU, RU, gU, tU, pU, EU) {
-          RU.debug("Initializing instrumentations");
-          const PU = [];
+        }(0, yu),
+        Ku = FQ(Ru, yu, uu, Eu),
+        Qu = qQ(Ru, yu, uu, Eu, Ku),
+        mu = function(uu, Ru, yu, Eu, Ku, Qu) {
+          Ru.debug("Initializing instrumentations");
+          const mu = [];
           return {
             add: function() {
-              RU.debug("Adding instrumentations");
-              for (var TU = arguments.length, qU = new Array(TU), KU = 0; KU < TU; KU++) qU[KU] = arguments[KU];
-              qU.forEach((TU => {
-                RU.debug(`Adding "${TU.name}" instrumentation`), PU.some((UU => UU.name === TU.name)) ? RU.warn(`Instrumentation ${TU.name} is already added`) : (TU.unpatchedConsole = UU, TU.internalLogger = RU, TU.config = gU, TU.metas = tU, TU.transports = pU, TU.api = EU, PU.push(TU), TU.initialize())
+              Ru.debug("Adding instrumentations");
+              for (var Ju = arguments.length, Nu = new Array(Ju), Xu = 0; Xu < Ju; Xu++) Nu[Xu] = arguments[Xu];
+              Nu.forEach((Ju => {
+                Ru.debug(`Adding "${Ju.name}" instrumentation`), mu.some((uu => uu.name === Ju.name)) ? Ru.warn(`Instrumentation ${Ju.name} is already added`) : (Ju.unpatchedConsole = uu, Ju.internalLogger = Ru, Ju.config = yu, Ju.metas = Eu, Ju.transports = Ku, Ju.api = Qu, mu.push(Ju), Ju.initialize())
               }))
             },
             get instrumentations() {
-              return [...PU]
+              return [...mu]
             },
             remove: function() {
-              RU.debug("Removing instrumentations");
-              for (var UU = arguments.length, gU = new Array(UU), tU = 0; tU < UU; tU++) gU[tU] = arguments[tU];
-              gU.forEach((UU => {
-                var gU, tU;
-                RU.debug(`Removing "${UU.name}" instrumentation`);
-                const pU = PU.reduce(((RU, gU, tU) => null === RU && gU.name === UU.name ? tU : null), null);
-                null !== pU ? (null === (gU = (tU = PU[pU]).destroy) || void 0 === gU || gU.call(tU), PU.splice(pU, 1)) : RU.warn(`Instrumentation "${UU.name}" is not added`)
+              Ru.debug("Removing instrumentations");
+              for (var uu = arguments.length, yu = new Array(uu), Eu = 0; Eu < uu; Eu++) yu[Eu] = arguments[Eu];
+              yu.forEach((uu => {
+                var yu, Eu;
+                Ru.debug(`Removing "${uu.name}" instrumentation`);
+                const Ku = mu.reduce(((Ru, yu, Eu) => null === Ru && yu.name === uu.name ? Eu : null), null);
+                null !== Ku ? (null === (yu = (Eu = mu[Ku]).destroy) || void 0 === yu || yu.call(Eu), mu.splice(Ku, 1)) : Ru.warn(`Instrumentation "${uu.name}" is not added`)
               }))
             }
           }
-        }(RU, gU, UU, tU, pU, EU),
-        TU = QU(RU, gU, UU, tU, pU, EU, PU);
-      return sE(TU),
-        function(UU) {
-          UU.transports.add(...UU.config.transports), UU.transports.addBeforeSendHooks(UU.config.beforeSend)
-        }(TU),
-        function(UU) {
-          UU.instrumentations.add(...UU.config.instrumentations)
-        }(TU), TU
+        }(Ru, yu, uu, Eu, Ku, Qu),
+        Ju = Tu(Ru, yu, uu, Eu, Ku, Qu, mu);
+      return LQ(Ju),
+        function(uu) {
+          uu.transports.add(...uu.config.transports), uu.transports.addBeforeSendHooks(uu.config.beforeSend)
+        }(Ju),
+        function(uu) {
+          uu.instrumentations.add(...uu.config.instrumentations)
+        }(Ju), Ju
     }
 
-    function OE(UU) {
-      const RU = BE(UU);
-      if (RU) return lE(RU)
+    function vQ(uu) {
+      const Ru = GQ(uu);
+      if (Ru) return OQ(Ru)
     }
   },
-  6375: function(UU, RU, gU) {
-    var tU;
-    ! function(pU, EU) {
-      var PU = "function",
-        TU = "undefined",
-        qU = "object",
-        KU = "string",
-        cU = "major",
-        GU = "model",
-        jU = "name",
-        uU = "type",
-        CU = "vendor",
-        hU = "version",
-        QU = "architecture",
-        eU = "console",
-        WU = "mobile",
-        fU = "tablet",
-        xU = "smarttv",
-        mU = "wearable",
-        IU = "embedded",
-        JU = "Amazon",
-        wU = "Apple",
-        nU = "ASUS",
-        bU = "BlackBerry",
-        oU = "Browser",
-        ZU = "Chrome",
-        aU = "Firefox",
-        YU = "Google",
-        BU = "Honor",
-        VU = "Huawei",
-        rU = "LG",
-        XU = "Microsoft",
-        vU = "Motorola",
-        dU = "Nvidia",
-        HU = "OnePlus",
-        SU = "Opera",
-        sU = "OPPO",
-        yU = "Samsung",
-        kU = "Sharp",
-        FU = "Sony",
-        iU = "Xiaomi",
-        AU = "Zebra",
-        zU = "Facebook",
-        MU = "Chromium OS",
-        DU = "Mac OS",
-        LU = " Browser",
-        NU = function(UU) {
-          for (var RU = {}, gU = 0; gU < UU.length; gU++) RU[UU[gU].toUpperCase()] = UU[gU];
-          return RU
+  6480: function(uu, Ru, yu) {
+    var Eu;
+    ! function(Ku, Qu) {
+      var mu = "function",
+        Ju = "undefined",
+        Nu = "object",
+        Xu = "string",
+        Vu = "major",
+        ru = "model",
+        Bu = "name",
+        xu = "type",
+        Su = "vendor",
+        pu = "version",
+        Tu = "architecture",
+        Wu = "console",
+        ju = "mobile",
+        Hu = "tablet",
+        du = "smarttv",
+        bu = "wearable",
+        Cu = "embedded",
+        ku = "Amazon",
+        eu = "Apple",
+        Au = "ASUS",
+        Du = "BlackBerry",
+        Mu = "Browser",
+        Iu = "Chrome",
+        Gu = "Firefox",
+        Uu = "Google",
+        nu = "Honor",
+        su = "Huawei",
+        tu = "LG",
+        lu = "Microsoft",
+        gu = "Motorola",
+        cu = "Nvidia",
+        Lu = "OnePlus",
+        zu = "Opera",
+        Fu = "OPPO",
+        wu = "Samsung",
+        Zu = "Sharp",
+        hu = "Sony",
+        Pu = "Xiaomi",
+        iu = "Zebra",
+        Yu = "Facebook",
+        ou = "Chromium OS",
+        qu = "Mac OS",
+        Ou = " Browser",
+        vu = function(uu) {
+          for (var Ru = {}, yu = 0; yu < uu.length; yu++) Ru[uu[yu].toUpperCase()] = uu[yu];
+          return Ru
         },
-        lU = function(UU, RU) {
-          return typeof UU === KU && -1 !== OU(RU).indexOf(OU(UU))
+        au = function(uu, Ru) {
+          return typeof uu === Xu && -1 !== fu(Ru).indexOf(fu(uu))
         },
-        OU = function(UU) {
-          return UU.toLowerCase()
+        fu = function(uu) {
+          return uu.toLowerCase()
         },
-        UR = function(UU, RU) {
-          if (typeof UU === KU) return UU = UU.replace(/^\s\s*/, ""), typeof RU === TU ? UU : UU.substring(0, 500)
+        uR = function(uu, Ru) {
+          if (typeof uu === Xu) return uu = uu.replace(/^\s\s*/, ""), typeof Ru === Ju ? uu : uu.substring(0, 500)
         },
-        RR = function(UU, RU) {
-          for (var gU, tU, pU, TU, KU, cU, GU = 0; GU < RU.length && !KU;) {
-            var jU = RU[GU],
-              uU = RU[GU + 1];
-            for (gU = tU = 0; gU < jU.length && !KU && jU[gU];)
-              if (KU = jU[gU++].exec(UU))
-                for (pU = 0; pU < uU.length; pU++) cU = KU[++tU], typeof(TU = uU[pU]) === qU && TU.length > 0 ? 2 === TU.length ? typeof TU[1] == PU ? this[TU[0]] = TU[1].call(this, cU) : this[TU[0]] = TU[1] : 3 === TU.length ? typeof TU[1] !== PU || TU[1].exec && TU[1].test ? this[TU[0]] = cU ? cU.replace(TU[1], TU[2]) : EU : this[TU[0]] = cU ? TU[1].call(this, cU, TU[2]) : EU : 4 === TU.length && (this[TU[0]] = cU ? TU[3].call(this, cU.replace(TU[1], TU[2])) : EU) : this[TU] = cU || EU;
-            GU += 2
+        RR = function(uu, Ru) {
+          for (var yu, Eu, Ku, Ju, Xu, Vu, ru = 0; ru < Ru.length && !Xu;) {
+            var Bu = Ru[ru],
+              xu = Ru[ru + 1];
+            for (yu = Eu = 0; yu < Bu.length && !Xu && Bu[yu];)
+              if (Xu = Bu[yu++].exec(uu))
+                for (Ku = 0; Ku < xu.length; Ku++) Vu = Xu[++Eu], typeof(Ju = xu[Ku]) === Nu && Ju.length > 0 ? 2 === Ju.length ? typeof Ju[1] == mu ? this[Ju[0]] = Ju[1].call(this, Vu) : this[Ju[0]] = Ju[1] : 3 === Ju.length ? typeof Ju[1] !== mu || Ju[1].exec && Ju[1].test ? this[Ju[0]] = Vu ? Vu.replace(Ju[1], Ju[2]) : Qu : this[Ju[0]] = Vu ? Ju[1].call(this, Vu, Ju[2]) : Qu : 4 === Ju.length && (this[Ju[0]] = Vu ? Ju[3].call(this, Vu.replace(Ju[1], Ju[2])) : Qu) : this[Ju] = Vu || Qu;
+            ru += 2
           }
         },
-        gR = function(UU, RU) {
-          for (var gU in RU)
-            if (typeof RU[gU] === qU && RU[gU].length > 0) {
-              for (var tU = 0; tU < RU[gU].length; tU++)
-                if (lU(RU[gU][tU], UU)) return "?" === gU ? EU : gU
-            } else if (lU(RU[gU], UU)) return "?" === gU ? EU : gU;
-          return RU.hasOwnProperty("*") ? RU["*"] : UU
+        yR = function(uu, Ru) {
+          for (var yu in Ru)
+            if (typeof Ru[yu] === Nu && Ru[yu].length > 0) {
+              for (var Eu = 0; Eu < Ru[yu].length; Eu++)
+                if (au(Ru[yu][Eu], uu)) return "?" === yu ? Qu : yu
+            } else if (au(Ru[yu], uu)) return "?" === yu ? Qu : yu;
+          return Ru.hasOwnProperty("*") ? Ru["*"] : uu
         },
-        tR = {
+        ER = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        pR = {
+        KR = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [hU, [jU, "Chrome"]],
+            [pu, [Bu, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [hU, [jU, "Edge"]],
+            [pu, [Bu, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/opios[\/ ]+([\w\.]+)/i],
-            [hU, [jU, SU + " Mini"]],
+            [pu, [Bu, zu + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [hU, [jU, SU + " GX"]],
+            [pu, [Bu, zu + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [hU, [jU, SU]],
+            [pu, [Bu, zu]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [hU, [jU, "Baidu"]],
+            [pu, [Bu, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [hU, [jU, "Maxthon"]],
+            [pu, [Bu, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [hU, [jU, "Quark"]],
+            [pu, [Bu, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [hU, [jU, "DuckDuckGo"]],
+            [pu, [Bu, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [hU, [jU, "UC" + oU]],
+            [pu, [Bu, "UC" + Mu]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [hU, [jU, "WeChat"]],
+            [pu, [Bu, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [hU, [jU, "Konqueror"]],
+            [pu, [Bu, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [hU, [jU, "IE"]],
+            [pu, [Bu, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [hU, [jU, "Yandex"]],
+            [pu, [Bu, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [hU, [jU, "Smart Lenovo " + oU]],
+            [pu, [Bu, "Smart Lenovo " + Mu]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [jU, /(.+)/, "$1 Secure " + oU], hU
+              [Bu, /(.+)/, "$1 Secure " + Mu], pu
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [hU, [jU, aU + " Focus"]],
+            [pu, [Bu, Gu + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [hU, [jU, SU + " Touch"]],
+            [pu, [Bu, zu + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [hU, [jU, "Coc Coc"]],
+            [pu, [Bu, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [hU, [jU, "Dolphin"]],
+            [pu, [Bu, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [hU, [jU, SU + " Coast"]],
+            [pu, [Bu, zu + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [hU, [jU, "MIUI" + LU]],
+            [pu, [Bu, "MIUI" + Ou]],
             [/fxios\/([\w\.-]+)/i],
-            [hU, [jU, aU]],
+            [pu, [Bu, Gu]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [hU, [jU, "360"]],
+            [pu, [Bu, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [jU, /(.+)/, "$1Browser"], hU
+              [Bu, /(.+)/, "$1Browser"], pu
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [jU, /(.+)/, "$1" + LU], hU
+              [Bu, /(.+)/, "$1" + Ou], pu
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [hU, [jU, yU + " Internet"]],
+            [pu, [Bu, wu + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [hU, [jU, "Sogou Explorer"]],
+            [pu, [Bu, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [jU, "Sogou Mobile"], hU
+              [Bu, "Sogou Mobile"], pu
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [jU],
+            [Bu],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [hU, jU],
+            [pu, Bu],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [jU, zU], hU
+              [Bu, Yu], pu
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [hU, [jU, "GSA"]],
+            [pu, [Bu, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [hU, [jU, "TikTok"]],
+            [pu, [Bu, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [hU, [jU, ZU + " Headless"]],
+            [pu, [Bu, Iu + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [jU, ZU + " WebView"], hU
+              [Bu, Iu + " WebView"], pu
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [hU, [jU, "Android " + oU]],
+            [pu, [Bu, "Android " + Mu]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [hU, [jU, "Mobile Safari"]],
+            [pu, [Bu, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [hU, jU],
+            [pu, Bu],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [jU, [hU, gR, {
+            [Bu, [pu, yR, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [jU, "Netscape"], hU
+              [Bu, "Netscape"], pu
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [hU, [jU, aU + " Reality"]],
+            [pu, [Bu, Gu + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [jU, [hU, /_/g, "."]],
+            [Bu, [pu, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [jU, [hU, /master.|lts./, ""]]
+            [Bu, [pu, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [QU, "amd64"]
+              [Tu, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [QU, "ia32"]
+              [Tu, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [QU, "arm64"]
+              [Tu, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [QU, "armhf"]
+              [Tu, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [QU, "arm"]
+              [Tu, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [QU, /ower/, "", OU]
+              [Tu, /ower/, "", fu]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [QU, "sparc"]
+              [Tu, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [QU, OU]
+              [Tu, fu]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [GU, [CU, yU],
-              [uU, fU]
+            [ru, [Su, wu],
+              [xu, Hu]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [GU, [CU, yU],
-              [uU, WU]
+            [ru, [Su, wu],
+              [xu, ju]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [GU, [CU, wU],
-              [uU, WU]
+            [ru, [Su, eu],
+              [xu, ju]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [GU, [CU, wU],
-              [uU, fU]
+            [ru, [Su, eu],
+              [xu, Hu]
             ],
             [/(macintosh);/i],
-            [GU, [CU, wU]],
+            [ru, [Su, eu]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [GU, [CU, kU],
-              [uU, WU]
+            [ru, [Su, Zu],
+              [xu, ju]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [GU, [CU, BU],
-              [uU, fU]
+            [ru, [Su, nu],
+              [xu, Hu]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [GU, [CU, BU],
-              [uU, WU]
+            [ru, [Su, nu],
+              [xu, ju]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [GU, [CU, VU],
-              [uU, fU]
+            [ru, [Su, su],
+              [xu, Hu]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [GU, [CU, VU],
-              [uU, WU]
+            [ru, [Su, su],
+              [xu, ju]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [GU, /_/g, " "],
-              [CU, iU],
-              [uU, fU]
+              [ru, /_/g, " "],
+              [Su, Pu],
+              [xu, Hu]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [GU, /_/g, " "],
-              [CU, iU],
-              [uU, WU]
+              [ru, /_/g, " "],
+              [Su, Pu],
+              [xu, ju]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [GU, [CU, sU],
-              [uU, WU]
+            [ru, [Su, Fu],
+              [xu, ju]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [GU, [CU, gR, {
+            [ru, [Su, yR, {
                 OnePlus: ["304", "403", "203"],
-                "*": sU
+                "*": Fu
               }],
-              [uU, fU]
+              [xu, Hu]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [GU, [CU, "Vivo"],
-              [uU, WU]
+            [ru, [Su, "Vivo"],
+              [xu, ju]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [GU, [CU, "Realme"],
-              [uU, WU]
+            [ru, [Su, "Realme"],
+              [xu, ju]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [GU, [CU, vU],
-              [uU, WU]
+            [ru, [Su, gu],
+              [xu, ju]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [GU, [CU, vU],
-              [uU, fU]
+            [ru, [Su, gu],
+              [xu, Hu]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [GU, [CU, rU],
-              [uU, fU]
+            [ru, [Su, tu],
+              [xu, Hu]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [GU, [CU, rU],
-              [uU, WU]
+            [ru, [Su, tu],
+              [xu, ju]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [GU, [CU, "Lenovo"],
-              [uU, fU]
+            [ru, [Su, "Lenovo"],
+              [xu, Hu]
             ],
             [/(nokia) (t[12][01])/i],
-            [CU, GU, [uU, fU]],
+            [Su, ru, [xu, Hu]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [GU, /_/g, " "],
-              [uU, WU],
-              [CU, "Nokia"]
+              [ru, /_/g, " "],
+              [xu, ju],
+              [Su, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [GU, [CU, YU],
-              [uU, fU]
+            [ru, [Su, Uu],
+              [xu, Hu]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [GU, [CU, YU],
-              [uU, WU]
+            [ru, [Su, Uu],
+              [xu, ju]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [GU, [CU, FU],
-              [uU, WU]
+            [ru, [Su, hu],
+              [xu, ju]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [GU, "Xperia Tablet"],
-              [CU, FU],
-              [uU, fU]
+              [ru, "Xperia Tablet"],
+              [Su, hu],
+              [xu, Hu]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [GU, [CU, HU],
-              [uU, WU]
+            [ru, [Su, Lu],
+              [xu, ju]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [GU, [CU, JU],
-              [uU, fU]
+            [ru, [Su, ku],
+              [xu, Hu]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [GU, /(.+)/g, "Fire Phone $1"],
-              [CU, JU],
-              [uU, WU]
+              [ru, /(.+)/g, "Fire Phone $1"],
+              [Su, ku],
+              [xu, ju]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [GU, CU, [uU, fU]],
+            [ru, Su, [xu, Hu]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [GU, [CU, bU],
-              [uU, WU]
+            [ru, [Su, Du],
+              [xu, ju]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [GU, [CU, nU],
-              [uU, fU]
+            [ru, [Su, Au],
+              [xu, Hu]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [GU, [CU, nU],
-              [uU, WU]
+            [ru, [Su, Au],
+              [xu, ju]
             ],
             [/(nexus 9)/i],
-            [GU, [CU, "HTC"],
-              [uU, fU]
+            [ru, [Su, "HTC"],
+              [xu, Hu]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [CU, [GU, /_/g, " "],
-              [uU, WU]
+            [Su, [ru, /_/g, " "],
+              [xu, ju]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [GU, [CU, "TCL"],
-              [uU, fU]
+            [ru, [Su, "TCL"],
+              [xu, Hu]
             ],
             [/(itel) ((\w+))/i],
             [
-              [CU, OU], GU, [uU, gR, {
+              [Su, fu], ru, [xu, yR, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [GU, [CU, "Acer"],
-              [uU, fU]
+            [ru, [Su, "Acer"],
+              [xu, Hu]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [GU, [CU, "Meizu"],
-              [uU, WU]
+            [ru, [Su, "Meizu"],
+              [xu, ju]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [GU, [CU, "Ulefone"],
-              [uU, WU]
+            [ru, [Su, "Ulefone"],
+              [xu, ju]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [GU, [CU, "Energizer"],
-              [uU, WU]
+            [ru, [Su, "Energizer"],
+              [xu, ju]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [GU, [CU, "Cat"],
-              [uU, WU]
+            [ru, [Su, "Cat"],
+              [xu, ju]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [GU, [CU, "Smartfren"],
-              [uU, WU]
+            [ru, [Su, "Smartfren"],
+              [xu, ju]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [GU, [CU, "Nothing"],
-              [uU, WU]
+            [ru, [Su, "Nothing"],
+              [xu, ju]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [GU, [CU, "Archos"],
-              [uU, fU]
+            [ru, [Su, "Archos"],
+              [xu, Hu]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [GU, [CU, "Archos"],
-              [uU, WU]
+            [ru, [Su, "Archos"],
+              [xu, ju]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [CU, GU, [uU, fU]],
+            [Su, ru, [xu, Hu]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [CU, GU, [uU, WU]],
+            [Su, ru, [xu, ju]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [CU, GU, [uU, fU]],
+            [Su, ru, [xu, Hu]],
             [/(surface duo)/i],
-            [GU, [CU, XU],
-              [uU, fU]
+            [ru, [Su, lu],
+              [xu, Hu]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [GU, [CU, "Fairphone"],
-              [uU, WU]
+            [ru, [Su, "Fairphone"],
+              [xu, ju]
             ],
             [/(u304aa)/i],
-            [GU, [CU, "AT&T"],
-              [uU, WU]
+            [ru, [Su, "AT&T"],
+              [xu, ju]
             ],
             [/\bsie-(\w*)/i],
-            [GU, [CU, "Siemens"],
-              [uU, WU]
+            [ru, [Su, "Siemens"],
+              [xu, ju]
             ],
             [/\b(rct\w+) b/i],
-            [GU, [CU, "RCA"],
-              [uU, fU]
+            [ru, [Su, "RCA"],
+              [xu, Hu]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [GU, [CU, "Dell"],
-              [uU, fU]
+            [ru, [Su, "Dell"],
+              [xu, Hu]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [GU, [CU, "Verizon"],
-              [uU, fU]
+            [ru, [Su, "Verizon"],
+              [xu, Hu]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [GU, [CU, "Barnes & Noble"],
-              [uU, fU]
+            [ru, [Su, "Barnes & Noble"],
+              [xu, Hu]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [GU, [CU, "NuVision"],
-              [uU, fU]
+            [ru, [Su, "NuVision"],
+              [xu, Hu]
             ],
             [/\b(k88) b/i],
-            [GU, [CU, "ZTE"],
-              [uU, fU]
+            [ru, [Su, "ZTE"],
+              [xu, Hu]
             ],
             [/\b(nx\d{3}j) b/i],
-            [GU, [CU, "ZTE"],
-              [uU, WU]
+            [ru, [Su, "ZTE"],
+              [xu, ju]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [GU, [CU, "Swiss"],
-              [uU, WU]
+            [ru, [Su, "Swiss"],
+              [xu, ju]
             ],
             [/\b(zur\d{3}) b/i],
-            [GU, [CU, "Swiss"],
-              [uU, fU]
+            [ru, [Su, "Swiss"],
+              [xu, Hu]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [GU, [CU, "Zeki"],
-              [uU, fU]
+            [ru, [Su, "Zeki"],
+              [xu, Hu]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [CU, "Dragon Touch"], GU, [uU, fU]
+              [Su, "Dragon Touch"], ru, [xu, Hu]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [GU, [CU, "Insignia"],
-              [uU, fU]
+            [ru, [Su, "Insignia"],
+              [xu, Hu]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [GU, [CU, "NextBook"],
-              [uU, fU]
+            [ru, [Su, "NextBook"],
+              [xu, Hu]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [CU, "Voice"], GU, [uU, WU]
+              [Su, "Voice"], ru, [xu, ju]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [CU, "LvTel"], GU, [uU, WU]
+              [Su, "LvTel"], ru, [xu, ju]
             ],
             [/\b(ph-1) /i],
-            [GU, [CU, "Essential"],
-              [uU, WU]
+            [ru, [Su, "Essential"],
+              [xu, ju]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [GU, [CU, "Envizen"],
-              [uU, fU]
+            [ru, [Su, "Envizen"],
+              [xu, Hu]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [GU, [CU, "MachSpeed"],
-              [uU, fU]
+            [ru, [Su, "MachSpeed"],
+              [xu, Hu]
             ],
             [/\btu_(1491) b/i],
-            [GU, [CU, "Rotor"],
-              [uU, fU]
+            [ru, [Su, "Rotor"],
+              [xu, Hu]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [GU, [CU, dU],
-              [uU, fU]
+            [ru, [Su, cu],
+              [xu, Hu]
             ],
             [/(sprint) (\w+)/i],
-            [CU, GU, [uU, WU]],
+            [Su, ru, [xu, ju]],
             [/(kin\.[onetw]{3})/i],
             [
-              [GU, /\./g, " "],
-              [CU, XU],
-              [uU, WU]
+              [ru, /\./g, " "],
+              [Su, lu],
+              [xu, ju]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [GU, [CU, AU],
-              [uU, fU]
+            [ru, [Su, iu],
+              [xu, Hu]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [GU, [CU, AU],
-              [uU, WU]
+            [ru, [Su, iu],
+              [xu, ju]
             ],
             [/smart-tv.+(samsung)/i],
-            [CU, [uU, xU]],
+            [Su, [xu, du]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [GU, /^/, "SmartTV"],
-              [CU, yU],
-              [uU, xU]
+              [ru, /^/, "SmartTV"],
+              [Su, wu],
+              [xu, du]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [CU, rU],
-              [uU, xU]
+              [Su, tu],
+              [xu, du]
             ],
             [/(apple) ?tv/i],
-            [CU, [GU, wU + " TV"],
-              [uU, xU]
+            [Su, [ru, eu + " TV"],
+              [xu, du]
             ],
             [/crkey/i],
             [
-              [GU, ZU + "cast"],
-              [CU, YU],
-              [uU, xU]
+              [ru, Iu + "cast"],
+              [Su, Uu],
+              [xu, du]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [GU, [CU, JU],
-              [uU, xU]
+            [ru, [Su, ku],
+              [xu, du]
             ],
             [/(shield \w+ tv)/i],
-            [GU, [CU, dU],
-              [uU, xU]
+            [ru, [Su, cu],
+              [xu, du]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [GU, [CU, kU],
-              [uU, xU]
+            [ru, [Su, Zu],
+              [xu, du]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [GU, [CU, FU],
-              [uU, xU]
+            [ru, [Su, hu],
+              [xu, du]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [GU, [CU, iU],
-              [uU, xU]
+            [ru, [Su, Pu],
+              [xu, du]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [CU, GU, [uU, xU]],
+            [Su, ru, [xu, du]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [CU, UR],
-              [GU, UR],
-              [uU, xU]
+              [Su, uR],
+              [ru, uR],
+              [xu, du]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [GU, [uU, xU]],
+            [ru, [xu, du]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [uU, xU]
+              [xu, du]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [CU, GU, [uU, eU]],
+            [Su, ru, [xu, Wu]],
             [/droid.+; (shield)( bui|\))/i],
-            [GU, [CU, dU],
-              [uU, eU]
+            [ru, [Su, cu],
+              [xu, Wu]
             ],
             [/(playstation \w+)/i],
-            [GU, [CU, FU],
-              [uU, eU]
+            [ru, [Su, hu],
+              [xu, Wu]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [GU, [CU, XU],
-              [uU, eU]
+            [ru, [Su, lu],
+              [xu, Wu]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [GU, [CU, yU],
-              [uU, mU]
+            [ru, [Su, wu],
+              [xu, bu]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [CU, GU, [uU, mU]],
+            [Su, ru, [xu, bu]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [GU, [CU, sU],
-              [uU, mU]
+            [ru, [Su, Fu],
+              [xu, bu]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [GU, [CU, wU],
-              [uU, mU]
+            [ru, [Su, eu],
+              [xu, bu]
             ],
             [/(opwwe\d{3})/i],
-            [GU, [CU, HU],
-              [uU, mU]
+            [ru, [Su, Lu],
+              [xu, bu]
             ],
             [/(moto 360)/i],
-            [GU, [CU, vU],
-              [uU, mU]
+            [ru, [Su, gu],
+              [xu, bu]
             ],
             [/(smartwatch 3)/i],
-            [GU, [CU, FU],
-              [uU, mU]
+            [ru, [Su, hu],
+              [xu, bu]
             ],
             [/(g watch r)/i],
-            [GU, [CU, rU],
-              [uU, mU]
+            [ru, [Su, tu],
+              [xu, bu]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [GU, [CU, AU],
-              [uU, mU]
+            [ru, [Su, iu],
+              [xu, bu]
             ],
             [/droid.+; (glass) \d/i],
-            [GU, [CU, YU],
-              [uU, mU]
+            [ru, [Su, Uu],
+              [xu, bu]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [CU, GU, [uU, mU]],
+            [Su, ru, [xu, bu]],
             [/; (quest( \d| pro)?)/i],
-            [GU, [CU, zU],
-              [uU, mU]
+            [ru, [Su, Yu],
+              [xu, bu]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [CU, [uU, IU]],
+            [Su, [xu, Cu]],
             [/(aeobc)\b/i],
-            [GU, [CU, JU],
-              [uU, IU]
+            [ru, [Su, ku],
+              [xu, Cu]
             ],
             [/(homepod).+mac os/i],
-            [GU, [CU, wU],
-              [uU, IU]
+            [ru, [Su, eu],
+              [xu, Cu]
             ],
             [/windows iot/i],
             [
-              [uU, IU]
+              [xu, Cu]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [GU, [uU, WU]],
+            [ru, [xu, ju]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [GU, [uU, fU]],
+            [ru, [xu, Hu]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [uU, fU]
+              [xu, Hu]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [uU, WU]
+              [xu, ju]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [GU, [CU, "Generic"]]
+            [ru, [Su, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [hU, [jU, "EdgeHTML"]],
+            [pu, [Bu, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [hU, [jU, "Blink"]],
+            [pu, [Bu, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [jU, hU],
+            [Bu, pu],
             [/ladybird\//i],
             [
-              [jU, "LibWeb"]
+              [Bu, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [hU, jU]
+            [pu, Bu]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [jU, hU],
+            [Bu, pu],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [jU, [hU, gR, tR]],
+            [Bu, [pu, yR, ER]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [hU, gR, tR],
-              [jU, "Windows"]
+              [pu, yR, ER],
+              [Bu, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [hU, /_/g, "."],
-              [jU, "iOS"]
+              [pu, /_/g, "."],
+              [Bu, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [jU, DU],
-              [hU, /_/g, "."]
+              [Bu, qu],
+              [pu, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [hU, jU],
+            [pu, Bu],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [jU, /(.+)/, "$1 Touch"], hU
+              [Bu, /(.+)/, "$1 Touch"], pu
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [jU, hU],
+            [Bu, pu],
             [/\(bb(10);/i],
-            [hU, [jU, bU]],
+            [pu, [Bu, Du]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [hU, [jU, "Symbian"]],
+            [pu, [Bu, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [hU, [jU, aU + " OS"]],
+            [pu, [Bu, Gu + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [hU, [jU, "webOS"]],
+            [pu, [Bu, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [hU, [jU, "watchOS"]],
+            [pu, [Bu, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [hU, [jU, ZU + "cast"]],
+            [pu, [Bu, Iu + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [jU, MU], hU
+              [Bu, ou], pu
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [jU, hU],
+            [Bu, pu],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [jU, "Solaris"], hU
+              [Bu, "Solaris"], pu
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [jU, hU]
+            [Bu, pu]
           ]
         },
-        ER = function(UU, RU) {
-          if (typeof UU === qU && (RU = UU, UU = EU), !(this instanceof ER)) return new ER(UU, RU).getResult();
-          var gU = typeof pU !== TU && pU.navigator ? pU.navigator : EU,
-            tU = UU || (gU && gU.userAgent ? gU.userAgent : ""),
-            eU = gU && gU.userAgentData ? gU.userAgentData : EU,
-            xU = RU ? function(UU, RU) {
-              var gU = {};
-              for (var tU in UU) RU[tU] && RU[tU].length % 2 === 0 ? gU[tU] = RU[tU].concat(UU[tU]) : gU[tU] = UU[tU];
-              return gU
-            }(pR, RU) : pR,
-            mU = gU && gU.userAgent == tU;
+        QR = function(uu, Ru) {
+          if (typeof uu === Nu && (Ru = uu, uu = Qu), !(this instanceof QR)) return new QR(uu, Ru).getResult();
+          var yu = typeof Ku !== Ju && Ku.navigator ? Ku.navigator : Qu,
+            Eu = uu || (yu && yu.userAgent ? yu.userAgent : ""),
+            Wu = yu && yu.userAgentData ? yu.userAgentData : Qu,
+            du = Ru ? function(uu, Ru) {
+              var yu = {};
+              for (var Eu in uu) Ru[Eu] && Ru[Eu].length % 2 === 0 ? yu[Eu] = Ru[Eu].concat(uu[Eu]) : yu[Eu] = uu[Eu];
+              return yu
+            }(KR, Ru) : KR,
+            bu = yu && yu.userAgent == Eu;
           return this.getBrowser = function() {
-            var UU, RU = {};
-            return RU[jU] = EU, RU[hU] = EU, RR.call(RU, tU, xU.browser), RU[cU] = typeof(UU = RU[hU]) === KU ? UU.replace(/[^\d\.]/g, "").split(".")[0] : EU, mU && gU && gU.brave && typeof gU.brave.isBrave == PU && (RU[jU] = "Brave"), RU
+            var uu, Ru = {};
+            return Ru[Bu] = Qu, Ru[pu] = Qu, RR.call(Ru, Eu, du.browser), Ru[Vu] = typeof(uu = Ru[pu]) === Xu ? uu.replace(/[^\d\.]/g, "").split(".")[0] : Qu, bu && yu && yu.brave && typeof yu.brave.isBrave == mu && (Ru[Bu] = "Brave"), Ru
           }, this.getCPU = function() {
-            var UU = {};
-            return UU[QU] = EU, RR.call(UU, tU, xU.cpu), UU
+            var uu = {};
+            return uu[Tu] = Qu, RR.call(uu, Eu, du.cpu), uu
           }, this.getDevice = function() {
-            var UU = {};
-            return UU[CU] = EU, UU[GU] = EU, UU[uU] = EU, RR.call(UU, tU, xU.device), mU && !UU[uU] && eU && eU.mobile && (UU[uU] = WU), mU && "Macintosh" == UU[GU] && gU && typeof gU.standalone !== TU && gU.maxTouchPoints && gU.maxTouchPoints > 2 && (UU[GU] = "iPad", UU[uU] = fU), UU
-          }, this.WC = function() {
-            var UU = {};
-            return UU[jU] = EU, UU[hU] = EU, RR.call(UU, tU, xU.engine), UU
+            var uu = {};
+            return uu[Su] = Qu, uu[ru] = Qu, uu[xu] = Qu, RR.call(uu, Eu, du.device), bu && !uu[xu] && Wu && Wu.mobile && (uu[xu] = ju), bu && "Macintosh" == uu[ru] && yu && typeof yu.standalone !== Ju && yu.maxTouchPoints && yu.maxTouchPoints > 2 && (uu[ru] = "iPad", uu[xu] = Hu), uu
+          }, this.eS = function() {
+            var uu = {};
+            return uu[Bu] = Qu, uu[pu] = Qu, RR.call(uu, Eu, du.engine), uu
           }, this.getOS = function() {
-            var UU = {};
-            return UU[jU] = EU, UU[hU] = EU, RR.call(UU, tU, xU.os), mU && !UU[jU] && eU && eU.platform && "Unknown" != eU.platform && (UU[jU] = eU.platform.replace(/chrome os/i, MU).replace(/macos/i, DU)), UU
+            var uu = {};
+            return uu[Bu] = Qu, uu[pu] = Qu, RR.call(uu, Eu, du.os), bu && !uu[Bu] && Wu && Wu.platform && "Unknown" != Wu.platform && (uu[Bu] = Wu.platform.replace(/chrome os/i, ou).replace(/macos/i, qu)), uu
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.WC(),
+              engine: this.eS(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return tU
-          }, this.setUA = function(UU) {
-            return tU = typeof UU === KU && UU.length > 500 ? UR(UU, 500) : UU, this
-          }, this.setUA(tU), this
+            return Eu
+          }, this.setUA = function(uu) {
+            return Eu = typeof uu === Xu && uu.length > 500 ? uR(uu, 500) : uu, this
+          }, this.setUA(Eu), this
         };
-      ER.VERSION = "1.0.41", ER.BROWSER = NU([jU, hU, cU]), ER.CPU = NU([QU]), ER.DEVICE = NU([GU, CU, uU, eU, WU, xU, fU, mU, IU]), ER.ENGINE = ER.OS = NU([jU, hU]), typeof RU !== TU ? (UU.exports && (RU = UU.exports = ER), RU.UAParser = ER) : gU.amdO ? (tU = function() {
-        return ER
-      }.call(RU, gU, RU, UU)) === EU || (UU.exports = tU) : typeof pU !== TU && (pU.UAParser = ER);
-      var PR = typeof pU !== TU && (pU.jQuery || pU.Zepto);
-      if (PR && !PR.ua) {
-        var TR = new ER;
-        PR.ua = TR.getResult(), PR.ua.get = function() {
-          return TR.getUA()
-        }, PR.ua.set = function(UU) {
-          TR.setUA(UU);
-          var RU = TR.getResult();
-          for (var gU in RU) PR.ua[gU] = RU[gU]
+      QR.VERSION = "1.0.41", QR.BROWSER = vu([Bu, pu, Vu]), QR.CPU = vu([Tu]), QR.DEVICE = vu([ru, Su, xu, Wu, ju, du, Hu, bu, Cu]), QR.ENGINE = QR.OS = vu([Bu, pu]), typeof Ru !== Ju ? (uu.exports && (Ru = uu.exports = QR), Ru.UAParser = QR) : yu.amdO ? (Eu = function() {
+        return QR
+      }.call(Ru, yu, Ru, uu)) === Qu || (uu.exports = Eu) : typeof Ku !== Ju && (Ku.UAParser = QR);
+      var mR = typeof Ku !== Ju && (Ku.jQuery || Ku.Zepto);
+      if (mR && !mR.ua) {
+        var JR = new QR;
+        mR.ua = JR.getResult(), mR.ua.get = function() {
+          return JR.getUA()
+        }, mR.ua.set = function(uu) {
+          JR.setUA(uu);
+          var Ru = JR.getResult();
+          for (var yu in Ru) mR.ua[yu] = Ru[yu]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

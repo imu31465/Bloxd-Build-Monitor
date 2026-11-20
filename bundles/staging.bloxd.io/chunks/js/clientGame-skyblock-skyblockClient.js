@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36187: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => uU,
-      e: () => CU,
-      h: () => jU,
-      l: () => GU
+  36436: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => xu,
+      d: () => Su,
+      g: () => Bu,
+      h: () => ru
     });
-    var tU = gU(8982),
-      pU = gU(36191),
-      EU = gU(36197),
-      PU = gU(8340),
-      TU = gU(1410),
-      qU = gU(56),
-      KU = gU(74),
-      cU = gU(1090);
+    var Eu = yu(9048),
+      Ku = yu(36445),
+      Qu = yu(36449),
+      mu = yu(8447),
+      Ju = yu(1400),
+      Nu = yu(64),
+      Xu = yu(80),
+      Vu = yu(1079);
 
-    function GU() {
-      var UU;
-      return (0, TU.h)(pU.e, (0, pU.t)()), (0, cU.jsx)(cU.Fragment, {
-        children: null === (UU = (0, pU.t)()) || void 0 === UU ? void 0 : UU.content
+    function ru() {
+      var uu;
+      return (0, Ju.h)(Ku.c, (0, Ku.o)()), (0, Vu.jsx)(Vu.Fragment, {
+        children: null === (uu = (0, Ku.o)()) || void 0 === uu ? void 0 : uu.content
       })
     }
 
-    function jU(UU) {
-      var RU;
+    function Bu(uu) {
+      var Ru;
       let {
-        show: gU
-      } = UU;
-      (0, TU.h)(pU.e, (0, pU.t)());
-      const KU = null === (RU = (0, pU.t)()) || void 0 === RU ? void 0 : RU.menu;
-      return (0, qU.useEffect)((() => {
-        var UU;
-        gU || (null === KU || void 0 === KU || null === (UU = KU.onClose) || void 0 === UU || UU.call(KU), (0, EU.q)())
-      }), [gU, KU]), (0, qU.useEffect)((() => gU ? (0, PU.f)(EU.w, EU.e) : void 0), [gU]), (0, cU.jsx)(tU.d, {
-        showing: gU,
+        show: yu
+      } = uu;
+      (0, Ju.h)(Ku.c, (0, Ku.o)());
+      const Xu = null === (Ru = (0, Ku.o)()) || void 0 === Ru ? void 0 : Ru.menu;
+      return (0, Nu.useEffect)((() => {
+        var uu;
+        yu || (null === Xu || void 0 === Xu || null === (uu = Xu.onClose) || void 0 === uu || uu.call(Xu), (0, Qu.p)())
+      }), [yu, Xu]), (0, Nu.useEffect)((() => yu ? (0, mu.g)(Qu.v, Qu.d) : void 0), [yu]), (0, Vu.jsx)(Eu.c, {
+        showing: yu,
         globallyUniqueKey: "clientGameMenu",
-        children: null === KU || void 0 === KU ? void 0 : KU.content
+        children: null === Xu || void 0 === Xu ? void 0 : Xu.content
       })
     }
 
-    function uU(UU) {
+    function xu(uu) {
       let {
-        placement: RU = "bottom"
-      } = UU;
-      return (0, cU.jsx)("div", {
-        id: `clientGameHud-${RU}`,
+        placement: Ru = "bottom"
+      } = uu;
+      return (0, Vu.jsx)("div", {
+        id: `clientGameHud-${Ru}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function CU(UU) {
+    function Su(uu) {
       let {
-        children: RU,
-        placement: gU = "bottom"
-      } = UU;
-      const [tU, pU] = (0, qU.useState)(null);
-      return (0, qU.useEffect)((() => {
-        pU(document.getElementById(`clientGameHud-${gU}`))
-      }), [gU]), tU ? (0, KU.createPortal)(RU, tU) : null
+        children: Ru,
+        placement: yu = "bottom"
+      } = uu;
+      const [Eu, Ku] = (0, Nu.useState)(null);
+      return (0, Nu.useEffect)((() => {
+        Ku(document.getElementById(`clientGameHud-${yu}`))
+      }), [yu]), Eu ? (0, Xu.createPortal)(Ru, Eu) : null
     }
   },
-  4487: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => QU,
-      e: () => eU
+  4598: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Tu,
+      e: () => Wu
     });
-    var tU = gU(1037),
-      pU = gU.n(tU),
-      EU = gU(56),
-      PU = gU(1181),
-      TU = gU(4495),
-      qU = gU(1777),
-      KU = gU(2254),
-      cU = gU(4501),
-      GU = gU(1090);
-    const jU = new WeakMap;
-    let uU = 0;
+    var Eu = yu(1035),
+      Ku = yu.n(Eu),
+      Qu = yu(64),
+      mu = yu(1170),
+      Ju = yu(4604),
+      Nu = yu(1825),
+      Xu = yu(2335),
+      Vu = yu(4611),
+      ru = yu(1079);
+    const Bu = new WeakMap;
+    let xu = 0;
 
-    function CU(UU) {
-      let RU = jU.get(UU);
-      return void 0 === RU && (RU = uU++, jU.set(UU, RU)), RU
+    function Su(uu) {
+      let Ru = Bu.get(uu);
+      return void 0 === Ru && (Ru = xu++, Bu.set(uu, Ru)), Ru
     }
 
-    function hU(UU) {
+    function pu(uu) {
       let {
-        piece: RU
-      } = UU;
-      return "space" === RU.kind ? (0, GU.jsx)(GU.Fragment, {
-        children: RU.text
-      }) : (0, GU.jsx)("span", {
+        piece: Ru
+      } = uu;
+      return "space" === Ru.kind ? (0, ru.jsx)(ru.Fragment, {
+        children: Ru.text
+      }) : (0, ru.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${RU.delayMs}ms`
+          "--word-delay": `${Ru.delayMs}ms`
         },
-        children: (0, GU.jsx)(TU.c, {
-          text: "icon" === RU.kind ? `[[${RU.icon}]]` : RU.text
+        children: (0, ru.jsx)(Ju.c, {
+          text: "icon" === Ru.kind ? `[[${Ru.icon}]]` : Ru.text
         })
       })
     }
 
-    function QU(UU) {
+    function Tu(uu) {
       let {
-        display: RU
-      } = UU;
+        display: Ru
+      } = uu;
       const {
-        selectedLanguage: gU
-      } = (0, PU.B)(), tU = (0, EU.useMemo)((() => (0, cU.b)((0, cU.c)(RU).plan.pieces)), [RU, gU.code]);
-      return (0, GU.jsxs)("div", {
-        className: pU()("Dialogue", {
-          DialogueAnimateIn: !1 !== RU.animateIn
+        selectedLanguage: yu
+      } = (0, mu.E)(), Eu = (0, Qu.useMemo)((() => (0, Vu.d)((0, Vu.g)(Ru).plan.pieces)), [Ru, yu.code]);
+      return (0, ru.jsxs)("div", {
+        className: Ku()("Dialogue", {
+          DialogueAnimateIn: !1 !== Ru.animateIn
         }),
-        children: [RU.speakerName && (0, GU.jsx)(qU.e, {
-          text: RU.speakerName,
+        children: [Ru.speakerName && (0, ru.jsx)(Nu.d, {
+          text: Ru.speakerName,
           className: "DialogueSpeaker"
-        }), (0, GU.jsx)("p", {
+        }), (0, ru.jsx)("p", {
           className: "DialogueLine",
-          children: tU.map(((UU, RU) => 1 === UU.length && "space" === UU[0].kind ? UU[0].text : (0, GU.jsx)("span", {
+          children: Eu.map(((uu, Ru) => 1 === uu.length && "space" === uu[0].kind ? uu[0].text : (0, ru.jsx)("span", {
             className: "DialogueGlue",
-            children: UU.map(((UU, RU) => (0, GU.jsx)(hU, {
-              piece: UU
-            }, RU)))
-          }, RU)))
+            children: uu.map(((uu, Ru) => (0, ru.jsx)(pu, {
+              piece: uu
+            }, Ru)))
+          }, Ru)))
         })]
       })
     }
-    const eU = (0, EU.memo)((function() {
-      const UU = (0, KU.g)("dialogue");
-      return (0, GU.jsx)("div", {
+    const Wu = (0, Qu.memo)((function() {
+      const uu = (0, Xu.g)("dialogue");
+      return (0, ru.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: UU && (0, GU.jsx)(QU, {
-          display: UU
-        }, CU(UU))
+        children: uu && (0, ru.jsx)(Tu, {
+          display: uu
+        }, Su(uu))
       })
     }))
   },
-  4495: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => TU
+  4604: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju
     });
-    var tU = gU(56),
-      pU = gU(299),
-      EU = gU(1790),
-      PU = gU(1090);
+    var Eu = yu(64),
+      Ku = yu(330),
+      Qu = yu(1841),
+      mu = yu(1079);
 
-    function TU(UU) {
+    function Ju(uu) {
       let {
-        text: RU
-      } = UU;
-      const gU = [];
-      let TU = "";
-      return (0, pU.dc)(RU).forEach(((UU, RU) => {
-        if ("string" === typeof UU || !(0, EU.f)(UU.icon)) return void(TU += "string" === typeof UU ? UU : UU.icon);
-        const pU = Math.max(0, TU.trimEnd().search(/\S{1,12}$/));
-        gU.push((0, PU.jsxs)(tU.Fragment, {
-          children: [TU.slice(0, pU), (0, PU.jsxs)("span", {
+        text: Ru
+      } = uu;
+      const yu = [];
+      let Ju = "";
+      return (0, Ku.ic)(Ru).forEach(((uu, Ru) => {
+        if ("string" === typeof uu || !(0, Qu.d)(uu.icon)) return void(Ju += "string" === typeof uu ? uu : uu.icon);
+        const Ku = Math.max(0, Ju.trimEnd().search(/\S{1,12}$/));
+        yu.push((0, mu.jsxs)(Eu.Fragment, {
+          children: [Ju.slice(0, Ku), (0, mu.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [TU.slice(pU), (0, PU.jsx)("span", {
+            children: [Ju.slice(Ku), (0, mu.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": UU.icon,
-              children: (0, PU.jsx)(EU.c, {
-                itemName: UU.icon,
+              "aria-label": uu.icon,
+              children: (0, mu.jsx)(Qu.c, {
+                itemName: uu.icon,
                 amount: 0
               })
             })]
           })]
-        }, RU)), TU = ""
-      })), gU.push(TU), (0, PU.jsx)(PU.Fragment, {
-        children: gU
+        }, Ru)), Ju = ""
+      })), yu.push(Ju), (0, mu.jsx)(mu.Fragment, {
+        children: yu
       })
     }
   },
-  8982: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU
+  9048: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu
     });
-    var tU = gU(4200),
-      pU = gU(4206);
+    var Eu = yu(4307),
+      Ku = yu(4314);
 
-    function EU(UU) {
+    function Qu(uu) {
       let {
-        children: RU,
-        showing: gU,
-        globallyUniqueKey: EU,
-        alwaysMountChildren: PU = !1,
-        doGameplayStartStopOnShow: TU = !0,
-        keepsMovement: qU = !1
-      } = UU;
-      return (0, pU.e)(!0, gU, EU, qU), (0, tU.c)(TU, gU), gU || PU ? RU : null
+        children: Ru,
+        showing: yu,
+        globallyUniqueKey: Qu,
+        alwaysMountChildren: mu = !1,
+        doGameplayStartStopOnShow: Ju = !0,
+        keepsMovement: Nu = !1
+      } = uu;
+      return (0, Ku.c)(!0, yu, Qu, Nu), (0, Eu.e)(Ju, yu), yu || mu ? Ru : null
     }
   },
-  4501: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => rU,
-      c: () => VU
+  4611: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => tu,
+      g: () => su
     });
-    var tU = gU(4503),
-      pU = gU(299);
-    const EU = 120,
-      PU = 260,
-      TU = 1.15,
-      qU = 1.2,
-      KU = 2,
-      cU = 1.08,
-      GU = .8,
-      jU = .95,
-      uU = 8,
-      CU = "[\"')\\]\u300d\u300f\uff09]*",
-      hU = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${CU}$`),
-      QU = new RegExp(`[?\uff1f]${CU}$`),
-      eU = new RegExp(`[!\uff01]${CU}$`),
-      WU = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      fU = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      xU = new RegExp(`[${fU}]`),
-      mU = new RegExp(`[${fU}]|[^${fU}]+`, "g"),
-      IU = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Eu = yu(4617),
+      Ku = yu(330);
+    const Qu = 120,
+      mu = 260,
+      Ju = 1.15,
+      Nu = 1.2,
+      Xu = 2,
+      Vu = 1.08,
+      ru = .8,
+      Bu = .95,
+      xu = 8,
+      Su = "[\"')\\]\u300d\u300f\uff09]*",
+      pu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Su}$`),
+      Tu = new RegExp(`[?\uff1f]${Su}$`),
+      Wu = new RegExp(`[!\uff01]${Su}$`),
+      ju = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Hu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      du = new RegExp(`[${Hu}]`),
+      bu = new RegExp(`[${Hu}]|[^${Hu}]+`, "g"),
+      Cu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function JU(UU) {
-      let RU = 2166136261;
-      for (let gU = 0; gU < UU.length; gU++) RU ^= UU.charCodeAt(gU), RU = Math.imul(RU, 16777619);
-      return (RU >>> 0) / 4294967295 * 2 - 1
+    function ku(uu) {
+      let Ru = 2166136261;
+      for (let yu = 0; yu < uu.length; yu++) Ru ^= uu.charCodeAt(yu), Ru = Math.imul(Ru, 16777619);
+      return (Ru >>> 0) / 4294967295 * 2 - 1
     }
 
-    function wU(UU) {
-      var RU;
-      if (xU.test(UU)) return 1;
-      const gU = UU.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        tU = gU.replace(/[^0-9]/g, "");
-      if (tU.length > 0 && !/\p{L}/u.test(gU)) return Math.min(tU.length, 4);
-      const pU = null !== (RU = gU.match(IU)) && void 0 !== RU ? RU : [];
-      if (0 === pU.length) {
-        var EU, PU;
-        const UU = null !== (EU = null === (PU = gU.match(/\p{L}/gu)) || void 0 === PU ? void 0 : PU.length) && void 0 !== EU ? EU : 0;
-        return 0 === UU ? 0 : Math.min(Math.max(1, Math.round(UU / 2.5)), uU)
+    function eu(uu) {
+      var Ru;
+      if (du.test(uu)) return 1;
+      const yu = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Eu = yu.replace(/[^0-9]/g, "");
+      if (Eu.length > 0 && !/\p{L}/u.test(yu)) return Math.min(Eu.length, 4);
+      const Ku = null !== (Ru = yu.match(Cu)) && void 0 !== Ru ? Ru : [];
+      if (0 === Ku.length) {
+        var Qu, mu;
+        const uu = null !== (Qu = null === (mu = yu.match(/\p{L}/gu)) || void 0 === mu ? void 0 : mu.length) && void 0 !== Qu ? Qu : 0;
+        return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), xu)
       }
-      const TU = gU.replace(/[^\p{L}]/gu, ""),
-        qU = pU.length > 1 && "e" === pU.at(-1) && TU.endsWith("e") && !TU.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(UU.replace(/[^\p{L}]/gu, ""));
-      return Math.min(pU.length - (qU ? 1 : 0), uU)
+      const Ju = yu.replace(/[^\p{L}]/gu, ""),
+        Nu = Ku.length > 1 && "e" === Ku.at(-1) && Ju.endsWith("e") && !Ju.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Ku.length - (Nu ? 1 : 0), xu)
     }
 
-    function nU(UU) {
-      return UU.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Au(uu) {
+      return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function bU(UU) {
-      const RU = UU.replace(/[^\p{L}]/gu, "");
-      return RU.length >= 2 && RU === RU.toUpperCase() && RU !== RU.toLowerCase()
+    function Du(uu) {
+      const Ru = uu.replace(/[^\p{L}]/gu, "");
+      return Ru.length >= 2 && Ru === Ru.toUpperCase() && Ru !== Ru.toLowerCase()
     }
 
-    function oU(UU, RU) {
-      var gU;
-      const uU = RU && (0, tU.k)(RU),
-        CU = null !== (gU = null === uU || void 0 === uU ? void 0 : uU.syllableMs) && void 0 !== gU ? gU : tU.c,
-        fU = function(UU) {
-          const RU = [];
-          for (const tU of (0, pU.dc)(UU))
-            if ("string" === typeof tU)
-              for (const UU of tU.split(/(\s+)/)) {
-                if ("" === UU) continue;
-                if (/^\s+$/.test(UU)) {
-                  RU.push({
+    function Mu(uu, Ru) {
+      var yu;
+      const xu = Ru && (0, Eu.k)(Ru),
+        Su = null !== (yu = null === xu || void 0 === xu ? void 0 : xu.syllableMs) && void 0 !== yu ? yu : Eu.c,
+        Hu = function(uu) {
+          const Ru = [];
+          for (const Eu of (0, Ku.ic)(uu))
+            if ("string" === typeof Eu)
+              for (const uu of Eu.split(/(\s+)/)) {
+                if ("" === uu) continue;
+                if (/^\s+$/.test(uu)) {
+                  Ru.push({
                     kind: "space",
-                    text: UU
+                    text: uu
                   });
                   continue
                 }
-                if (!xU.test(UU)) {
-                  RU.push({
+                if (!du.test(uu)) {
+                  Ru.push({
                     kind: "word",
-                    text: UU,
+                    text: uu,
                     delayMs: 0
                   });
                   continue
                 }
-                let tU = !0;
-                for (const pU of null !== (gU = UU.match(mU)) && void 0 !== gU ? gU : []) {
-                  var gU;
-                  const UU = RU.at(-1);
-                  tU || "word" !== (null === UU || void 0 === UU ? void 0 : UU.kind) || xU.test(pU) || /[\p{L}\p{N}]/u.test(pU) ? (tU || RU.push({
+                let Eu = !0;
+                for (const Ku of null !== (yu = uu.match(bu)) && void 0 !== yu ? yu : []) {
+                  var yu;
+                  const uu = Ru.at(-1);
+                  Eu || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || du.test(Ku) || /[\p{L}\p{N}]/u.test(Ku) ? (Eu || Ru.push({
                     kind: "space",
                     text: "\u200b"
-                  }), RU.push({
+                  }), Ru.push({
                     kind: "word",
-                    text: pU,
+                    text: Ku,
                     delayMs: 0
-                  }), tU = !1) : UU.text += pU
+                  }), Eu = !1) : uu.text += Ku
                 }
-              } else RU.push({
+              } else Ru.push({
                 kind: "icon",
-                text: tU.icon,
+                text: Eu.icon,
                 delayMs: 0
               });
-          return RU
-        }(UU),
-        IU = [];
-      let oU = [];
-      for (const tU of fU) "space" !== tU.kind && (oU.push(tU), hU.test(tU.text) && (IU.push(oU), oU = []));
-      IU.push(oU);
-      const ZU = [];
-      let aU = 0;
-      for (const tU of IU) {
-        var YU, BU;
-        const UU = null !== (YU = null === (BU = tU.at(-1)) || void 0 === BU ? void 0 : BU.text) && void 0 !== YU ? YU : "",
-          RU = QU.test(UU),
-          gU = eU.test(UU),
-          pU = tU.map((UU => "word" === UU.kind ? wU(UU.text) : 1)),
-          fU = pU.findLastIndex((UU => UU > 0));
-        for (const [QU, eU] of tU.entries()) {
-          const UU = "word" === eU.kind,
-            tU = pU[QU];
-          eU.delayMs = aU;
-          for (let pU = 0; uU && pU < tU; pU++) {
+          return Ru
+        }(uu),
+        Cu = [];
+      let Mu = [];
+      for (const Eu of Hu) "space" !== Eu.kind && (Mu.push(Eu), pu.test(Eu.text) && (Cu.push(Mu), Mu = []));
+      Cu.push(Mu);
+      const Iu = [];
+      let Gu = 0;
+      for (const Eu of Cu) {
+        var Uu, nu;
+        const uu = null !== (Uu = null === (nu = Eu.at(-1)) || void 0 === nu ? void 0 : nu.text) && void 0 !== Uu ? Uu : "",
+          Ru = Tu.test(uu),
+          yu = Wu.test(uu),
+          Ku = Eu.map((uu => "word" === uu.kind ? eu(uu.text) : 1)),
+          Hu = Ku.findLastIndex((uu => uu > 0));
+        for (const [Tu, Wu] of Eu.entries()) {
+          const uu = "word" === Wu.kind,
+            Eu = Ku[Tu];
+          Wu.delayMs = Gu;
+          for (let Ku = 0; xu && Ku < Eu; Ku++) {
             const {
-              intonation: EU
-            } = uU;
-            let PU = fU > 0 ? -EU.declineSemitones * (QU / fU) : 0;
-            PU += JU(`${nU(eU.text)}|${pU}`) * EU.variationSemitones;
-            const hU = Math.min(1, EU.variationSemitones);
-            let WU = uU.glideSemitones,
-              xU = 1;
-            gU && (PU += EU.exclaimLiftSemitones, xU *= TU), RU && QU === fU && (PU += EU.questionRiseSemitones * (tU > 1 ? .5 + .5 * pU / (tU - 1) : 1), pU === tU - 1 && (WU = Math.abs(WU) + EU.questionRiseSemitones / 2)), UU && bU(eU.text) && (PU += KU * hU, xU *= qU), tU > 1 && 0 === pU && (PU += GU * hU, xU *= cU), ZU.push({
-              atMs: aU + pU * CU,
-              semitones: PU,
-              glideSemitones: WU,
-              durationMs: pU < tU - 1 ? Math.min(uU.durationMs, CU * jU) : uU.durationMs,
-              level: xU
+              intonation: Qu
+            } = xu;
+            let mu = Hu > 0 ? -Qu.declineSemitones * (Tu / Hu) : 0;
+            mu += ku(`${Au(Wu.text)}|${Ku}`) * Qu.variationSemitones;
+            const pu = Math.min(1, Qu.variationSemitones);
+            let ju = xu.glideSemitones,
+              du = 1;
+            yu && (mu += Qu.exclaimLiftSemitones, du *= Ju), Ru && Tu === Hu && (mu += Qu.questionRiseSemitones * (Eu > 1 ? .5 + .5 * Ku / (Eu - 1) : 1), Ku === Eu - 1 && (ju = Math.abs(ju) + Qu.questionRiseSemitones / 2)), uu && Du(Wu.text) && (mu += Xu * pu, du *= Nu), Eu > 1 && 0 === Ku && (mu += ru * pu, du *= Vu), Iu.push({
+              atMs: Gu + Ku * Su,
+              semitones: mu,
+              glideSemitones: ju,
+              durationMs: Ku < Eu - 1 ? Math.min(xu.durationMs, Su * Bu) : xu.durationMs,
+              level: du
             })
           }
-          aU += tU * CU + (hU.test(eU.text) ? PU : WU.test(eU.text) ? EU : 0)
+          Gu += Eu * Su + (pu.test(Wu.text) ? mu : ju.test(Wu.text) ? Qu : 0)
         }
       }
       return {
-        pieces: fU.map((UU => "space" === UU.kind ? UU : "icon" === UU.kind ? {
+        pieces: Hu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
           kind: "icon",
-          icon: UU.text,
-          delayMs: UU.delayMs
+          icon: uu.text,
+          delayMs: uu.delayMs
         } : {
           kind: "word",
-          text: UU.text,
-          delayMs: UU.delayMs
+          text: uu.text,
+          delayMs: uu.delayMs
         })),
-        blips: ZU
+        blips: Iu
       }
     }
-    var ZU = gU(1181),
-      aU = gU(1249),
-      YU = gU(1802);
+    var Iu = yu(1170),
+      Gu = yu(1224),
+      Uu = yu(1862);
 
-    function BU(UU) {
-      if ("string" === typeof UU) return UU;
-      const RU = aU.g.get().getCurrentLanguageCode();
-      return (0, ZU.s)(RU, UU.translationKey, (0, ZU.r)(UU.params, YU.b.shown))
+    function nu(uu) {
+      if ("string" === typeof uu) return uu;
+      const Ru = Gu.f.get().getCurrentLanguageCode();
+      return (0, Iu.q)(Ru, uu.translationKey, (0, Iu.o)(uu.params, Uu.d.shown))
     }
 
-    function VU(UU) {
-      const RU = void 0 === UU.voice ? null : (0, tU.n)(UU.voice),
-        gU = RU && (0, tU.k)(RU);
+    function su(uu) {
+      const Ru = void 0 === uu.voice ? null : (0, Eu.m)(uu.voice),
+        yu = Ru && (0, Eu.k)(Ru);
       return {
-        plan: oU(BU(UU.line), gU),
-        synth: gU
+        plan: Mu(nu(uu.line), yu),
+        synth: yu
       }
     }
 
-    function rU(UU) {
-      const RU = [];
-      let gU = [];
-      for (const [pU, EU] of UU.entries()) {
-        var tU;
-        "space" === EU.kind && (" " !== EU.text || "icon" !== (null === (tU = UU[pU + 1]) || void 0 === tU ? void 0 : tU.kind)) ? (gU.length > 0 && RU.push(gU), RU.push([EU]), gU = []) : gU.push(EU)
+    function tu(uu) {
+      const Ru = [];
+      let yu = [];
+      for (const [Ku, Qu] of uu.entries()) {
+        var Eu;
+        "space" === Qu.kind && (" " !== Qu.text || "icon" !== (null === (Eu = uu[Ku + 1]) || void 0 === Eu ? void 0 : Eu.kind)) ? (yu.length > 0 && Ru.push(yu), Ru.push([Qu]), yu = []) : yu.push(Qu)
       }
-      return gU.length > 0 && RU.push(gU), RU
+      return yu.length > 0 && Ru.push(yu), Ru
     }
   },
-  8340: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => EU,
-      f: () => pU
+  8447: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      g: () => Ku
     });
-    let tU = null;
-    const pU = function(UU) {
-        const RU = {
-          cycle: UU,
+    let Eu = null;
+    const Ku = function(uu) {
+        const Ru = {
+          cycle: uu,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return tU = RU, () => {
-          tU === RU && (tU = null)
+        return Eu = Ru, () => {
+          Eu === Ru && (Eu = null)
         }
       },
-      EU = () => {
-        var UU;
-        return null !== (UU = tU) && void 0 !== UU && UU.canCycle() ? tU.cycle : null
+      Qu = () => {
+        var uu;
+        return null !== (uu = Eu) && void 0 !== uu && uu.canCycle() ? Eu.cycle : null
       }
   },
-  36197: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU,
-      e: () => hU,
-      g: () => QU,
-      j: () => TU,
-      n: () => jU,
-      q: () => eU,
-      r: () => GU,
-      t: () => fU,
-      w: () => CU,
-      x: () => WU
+  36449: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      d: () => pu,
+      h: () => Tu,
+      k: () => Ju,
+      o: () => Bu,
+      p: () => Wu,
+      q: () => ru,
+      u: () => Hu,
+      v: () => Su,
+      w: () => ju
     });
-    var tU = gU(21),
-      pU = gU(24);
-    const EU = "clientGameInventoryButtonsChanged",
-      PU = new Map;
+    var Eu = yu(27),
+      Ku = yu(34);
+    const Qu = "clientGameInventoryButtonsChanged",
+      mu = new Map;
 
-    function TU() {
-      return [...PU.values()].sort(((UU, RU) => {
-        var gU, tU;
-        return (null !== (gU = UU.order) && void 0 !== gU ? gU : 0) - (null !== (tU = RU.order) && void 0 !== tU ? tU : 0)
+    function Ju() {
+      return [...mu.values()].sort(((uu, Ru) => {
+        var yu, Eu;
+        return (null !== (yu = uu.order) && void 0 !== yu ? yu : 0) - (null !== (Eu = Ru.order) && void 0 !== Eu ? Eu : 0)
       }))
     }
-    let qU = null;
+    let Nu = null;
 
-    function KU(UU) {
-      qU = UU
+    function Xu(uu) {
+      Nu = uu
     }
-    let cU = !1;
+    let Vu = !1;
 
-    function GU(UU) {
-      cU = !0;
+    function ru(uu) {
+      Vu = !0;
       try {
-        UU.onClick()
+        uu.onClick()
       } finally {
-        cU = !1
+        Vu = !1
       }
-      UU.panel && "clientGame" === tU.b.get("openInGameMenuName") && KU(UU.id)
+      uu.panel && "clientGame" === Eu.d.get("openInGameMenuName") && Xu(uu.id)
     }
 
-    function jU() {
-      return cU
+    function Bu() {
+      return Vu
     }
 
-    function uU() {
-      return TU().filter((UU => UU.panel && !UU.disabled))
+    function xu() {
+      return Ju().filter((uu => uu.panel && !uu.disabled))
     }
 
-    function CU(UU) {
-      const RU = uU(),
-        gU = RU.findIndex((UU => UU.id === qU));
-      return !(gU < 0 || RU.length < 2) && (GU(RU[(gU + UU + RU.length) % RU.length]), !0)
+    function Su(uu) {
+      const Ru = xu(),
+        yu = Ru.findIndex((uu => uu.id === Nu));
+      return !(yu < 0 || Ru.length < 2) && (ru(Ru[(yu + uu + Ru.length) % Ru.length]), !0)
     }
 
-    function hU() {
-      return null !== qU && uU().length > 1
+    function pu() {
+      return null !== Nu && xu().length > 1
     }
 
-    function QU() {
-      KU(null)
+    function Tu() {
+      Xu(null)
     }
 
-    function eU() {
-      "inventory" !== tU.b.get("openInGameMenuName") && KU(null)
+    function Wu() {
+      "inventory" !== Eu.d.get("openInGameMenuName") && Xu(null)
     }
 
-    function WU() {
-      const UU = qU;
-      return KU(null), UU
+    function ju() {
+      const uu = Nu;
+      return Xu(null), uu
     }
 
-    function fU(UU) {
-      return PU.set(UU.id, UU), pU.p.yh(EU, TU(), !0), () => {
-        PU.get(UU.id) === UU && (PU.delete(UU.id), pU.p.yh(EU, TU()))
+    function Hu(uu) {
+      return mu.set(uu.id, uu), Ku.k.Op(Qu, Ju(), !0), () => {
+        mu.get(uu.id) === uu && (mu.delete(uu.id), Ku.k.Op(Qu, Ju()))
       }
     }
   },
-  36191: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => TU,
-      h: () => QU,
-      l: () => eU,
-      p: () => jU,
-      t: () => KU,
-      w: () => hU,
-      x: () => uU,
-      y: () => cU
+  36445: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      f: () => Tu,
+      i: () => Wu,
+      m: () => Bu,
+      o: () => Xu,
+      q: () => pu,
+      u: () => xu,
+      w: () => Vu
     });
-    var tU = gU(21),
-      pU = gU(24),
-      EU = gU(1287),
-      PU = gU(36197);
-    const TU = "clientGameUiChanged";
-    let qU = null;
+    var Eu = yu(27),
+      Ku = yu(34),
+      Qu = yu(1250),
+      mu = yu(36449);
+    const Ju = "clientGameUiChanged";
+    let Nu = null;
 
-    function KU() {
-      return qU
+    function Xu() {
+      return Nu
     }
 
-    function cU(UU, RU) {
-      const gU = {
-        content: UU,
-        menu: RU
+    function Vu(uu, Ru) {
+      const yu = {
+        content: uu,
+        menu: Ru
       };
-      return qU = gU, pU.p.yh(TU, qU, !0), () => {
-        qU === gU && (qU = null, CU = !1, QU(), pU.p.yh(TU, null))
+      return Nu = yu, Ku.k.Op(Ju, Nu, !0), () => {
+        Nu === yu && (Nu = null, Su = !1, Tu(), Ku.k.Op(Ju, null))
       }
     }
-    let GU = null;
+    let ru = null;
 
-    function jU() {
-      return GU
+    function Bu() {
+      return ru
     }
 
-    function uU(UU) {
-      return GU = UU, () => {
-        GU === UU && (GU = null)
+    function xu(uu) {
+      return ru = uu, () => {
+        ru === uu && (ru = null)
       }
     }
-    let CU = !1;
+    let Su = !1;
 
-    function hU() {
-      const UU = tU.b.get("openInGameMenuName");
-      "clientGame" !== UU && (CU = "inventory" === UU), (0, PU.n)() || (0, PU.g)(), (0, EU.o)(EU.c), tU.b.set({
+    function pu() {
+      const uu = Eu.d.get("openInGameMenuName");
+      "clientGame" !== uu && (Su = "inventory" === uu), (0, mu.o)() || (0, mu.h)(), (0, Qu.o)(Qu.b), Eu.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function QU() {
-      WU(!1)
+    function Tu() {
+      ju(!1)
     }
 
-    function eU() {
-      WU(CU)
+    function Wu() {
+      ju(Su)
     }
 
-    function WU(UU) {
-      "clientGame" === tU.b.get("openInGameMenuName") && tU.b.set({
-        openInGameMenuName: UU ? "inventory" : null
-      }), UU || (0, PU.g)(), CU = !1
+    function ju(uu) {
+      "clientGame" === Eu.d.get("openInGameMenuName") && Eu.d.set({
+        openInGameMenuName: uu ? "inventory" : null
+      }), uu || (0, mu.h)(), Su = !1
     }
   },
-  38061: (UU, RU, gU) => {
-    function tU(UU, RU, gU) {
-      const tU = new Set,
-        pU = new ResizeObserver(gU),
-        EU = () => {
-          const RU = new Set(document.querySelectorAll(UU));
-          let EU = !1;
-          for (const UU of tU) RU.has(UU) || (pU.unobserve(UU), tU.delete(UU), EU = !0);
-          for (const UU of RU) tU.has(UU) || (pU.observe(UU), PU.observe(UU, {
+  38279: (uu, Ru, yu) => {
+    function Eu(uu, Ru, yu) {
+      const Eu = new Set,
+        Ku = new ResizeObserver(yu),
+        Qu = () => {
+          const Ru = new Set(document.querySelectorAll(uu));
+          let Qu = !1;
+          for (const uu of Eu) Ru.has(uu) || (Ku.unobserve(uu), Eu.delete(uu), Qu = !0);
+          for (const uu of Ru) Eu.has(uu) || (Ku.observe(uu), mu.observe(uu, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), tU.add(UU));
-          EU && gU()
+          }), Eu.add(uu));
+          Qu && yu()
         },
-        PU = new MutationObserver((RU => {
-          RU.some((UU => "attributes" === UU.type)) && gU(), RU.some((RU => function(UU, RU, gU) {
-            if ("childList" !== UU.type) return !1;
-            for (const tU of UU.addedNodes)
-              if (tU instanceof Element && (tU.matches(RU) || tU.querySelector(RU))) return !0;
-            for (const tU of UU.removedNodes)
-              if (tU instanceof Element)
-                for (const UU of gU)
-                  if (tU.contains(UU)) return !0;
+        mu = new MutationObserver((Ru => {
+          Ru.some((uu => "attributes" === uu.type)) && yu(), Ru.some((Ru => function(uu, Ru, yu) {
+            if ("childList" !== uu.type) return !1;
+            for (const Eu of uu.addedNodes)
+              if (Eu instanceof Element && (Eu.matches(Ru) || Eu.querySelector(Ru))) return !0;
+            for (const Eu of uu.removedNodes)
+              if (Eu instanceof Element)
+                for (const uu of yu)
+                  if (Eu.contains(uu)) return !0;
             return !1
-          }(RU, UU, tU))) && EU()
+          }(Ru, uu, Eu))) && Qu()
         }));
-      PU.observe(document.body, {
+      mu.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const TU of RU) pU.observe(TU);
-      return window.addEventListener("resize", gU), EU(), gU(), () => {
-        pU.disconnect(), PU.disconnect(), window.removeEventListener("resize", gU)
+      for (const Ju of Ru) Ku.observe(Ju);
+      return window.addEventListener("resize", yu), Qu(), yu(), () => {
+        Ku.disconnect(), mu.disconnect(), window.removeEventListener("resize", yu)
       }
     }
-    gU.d(RU, {
-      b: () => tU
+    yu.d(Ru, {
+      c: () => Eu
     })
   },
-  8512: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => TU,
-      d: () => qU
+  8631: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      d: () => Nu
     });
-    var tU = gU(21),
-      pU = gU(1316),
-      EU = gU(96);
-    const PU = {
+    var Eu = yu(27),
+      Ku = yu(1280),
+      Qu = yu(106);
+    const mu = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function TU() {
-      return (0, EU.isMobile)() && "function" === typeof navigator.vibrate
+    function Ju() {
+      return (0, Qu.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const qU = new class {
-      constructor(UU) {
-        this.deps = UU, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Nu = new class {
+      constructor(uu) {
+        this.deps = uu, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(UU, RU) {
-        var gU;
+      play(uu, Ru) {
+        var yu;
         if (!this.deps.enabled()) return;
-        const tU = PU[UU],
-          pU = null !== RU && void 0 !== RU ? RU : tU.pattern;
-        if (null === pU) return void console.warn("No vibration pattern for", UU);
-        const EU = this.deps.now();
-        EU - this.lastAnyAt < 40 && tU.priority < this.playingPriority || EU - (null !== (gU = this.lastAt.get(UU)) && void 0 !== gU ? gU : -1 / 0) < tU.minGapMs || EU < this.playingUntil && tU.priority < this.playingPriority || (this.lastAt.set(UU, EU), this.lastAnyAt = EU, this.playingUntil = EU + pU.reduce(((UU, RU) => UU + RU), 0), this.playingPriority = tU.priority, this.deps.vibrate(pU))
+        const Eu = mu[uu],
+          Ku = null !== Ru && void 0 !== Ru ? Ru : Eu.pattern;
+        if (null === Ku) return void console.warn("No vibration pattern for", uu);
+        const Qu = this.deps.now();
+        Qu - this.lastAnyAt < 40 && Eu.priority < this.playingPriority || Qu - (null !== (yu = this.lastAt.get(uu)) && void 0 !== yu ? yu : -1 / 0) < Eu.minGapMs || Qu < this.playingUntil && Eu.priority < this.playingPriority || (this.lastAt.set(uu, Qu), this.lastAnyAt = Qu, this.playingUntil = Qu + Ku.reduce(((uu, Ru) => uu + Ru), 0), this.playingPriority = Eu.priority, this.deps.vibrate(Ku))
       }
     }({
-      vibrate: UU => {
-        navigator.vibrate([...UU])
+      vibrate: uu => {
+        navigator.vibrate([...uu])
       },
       now: () => performance.now(),
-      enabled: () => TU() && tU.b.get("isTouchScreen") && tU.b.get("clientEscMenuOptions").vibration && !(0, pU.h)()
+      enabled: () => Ju() && Eu.d.get("isTouchScreen") && Eu.d.get("clientEscMenuOptions").vibration && !(0, Ku.e)()
     })
   },
-  36664: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => TU,
-      f: () => PU
+  36889: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Ju,
+      e: () => mu
     });
-    var tU = gU(36651),
-      pU = gU(311),
-      EU = gU(1771);
+    var Eu = yu(36882),
+      Ku = yu(343),
+      Qu = yu(1823);
 
-    function PU(UU) {
-      if ("xE" in UU) return IU.createAnimationScript(UU);
-      return new KU(UU).createAnimationScript()
+    function mu(uu) {
+      if ("TQ" in uu) return Cu.createAnimationScript(uu);
+      return new Xu(uu).createAnimationScript()
     }
 
-    function TU(UU, RU, gU, pU) {
-      const EU = UU.xE <= 0 ? 1 : RU + gU * Math.max(0, pU) / UU.xE;
-      return UU.mE === tU.k.LoopOnLastFrame ? EU % 1 : UU.mE === tU.k.NoLoop && EU >= 1 ? null : Math.min(1, EU)
+    function Ju(uu, Ru, yu, Ku) {
+      const Qu = uu.TQ <= 0 ? 1 : Ru + yu * Math.max(0, Ku) / uu.TQ;
+      return uu.WQ === Eu.j.LoopOnLastFrame ? Qu % 1 : uu.WQ === Eu.j.NoLoop && Qu >= 1 ? null : Math.min(1, Qu)
     }
-    class qU {
-      createAnimationScript(UU) {
+    class Nu {
+      createAnimationScript(uu) {
         const {
-          xE: RU,
-          loop: gU,
-          IE: tU
-        } = UU;
+          TQ: Ru,
+          loop: yu,
+          jQ: Eu
+        } = uu;
         return {
-          xE: Math.round(RU),
-          mE: this.createLoopMode(null !== gU && void 0 !== gU && gU),
-          IE: this.createNodeSkeletonAnimationScript(null !== tU && void 0 !== tU ? tU : null)
+          TQ: Math.round(Ru),
+          WQ: this.createLoopMode(null !== yu && void 0 !== yu && yu),
+          jQ: this.createNodeSkeletonAnimationScript(null !== Eu && void 0 !== Eu ? Eu : null)
         }
       }
-      createLoopMode(UU) {
-        switch (UU) {
+      createLoopMode(uu) {
+        switch (uu) {
           case !1:
-            return tU.k.NoLoop;
+            return Eu.j.NoLoop;
           case !0:
-            return tU.k.LoopOnLastFrame;
+            return Eu.j.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return tU.k.HoldOnLastFrame
+            return Eu.j.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${UU}`)
+        throw new Error(`Invalid loop mode schema: ${uu}`)
       }
-      createNodeSkeletonAnimationScript(UU) {
-        if (null === UU) return null;
-        const RU = {};
-        for (const gU in UU) {
-          const tU = UU[gU];
-          RU[gU] = this.createNodeAnimationScript(tU)
+      createNodeSkeletonAnimationScript(uu) {
+        if (null === uu) return null;
+        const Ru = {};
+        for (const yu in uu) {
+          const Eu = uu[yu];
+          Ru[yu] = this.createNodeAnimationScript(Eu)
         }
-        return RU
+        return Ru
       }
-      createNodeAnimationScript(UU) {
+      createNodeAnimationScript(uu) {
         const {
-          timeline: RU
-        } = UU, gU = RU.filter((UU => Number.isFinite(UU.timeFraction)));
-        return gU.sort(((UU, RU) => UU.timeFraction - RU.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(gU, "rotation", jU),
-          position: this.createTimelineFromKeyframes(gU, "position", CU)
+          timeline: Ru
+        } = uu, yu = Ru.filter((uu => Number.isFinite(uu.timeFraction)));
+        return yu.sort(((uu, Ru) => uu.timeFraction - Ru.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(yu, "rotation", Bu),
+          position: this.createTimelineFromKeyframes(yu, "position", Su)
         }
       }
-      createTimelineFromKeyframes(UU, RU, gU) {
-        const tU = [];
-        for (const qU of UU) {
-          const UU = qU[RU];
-          if (UU) {
-            const RU = this.createAnimationFrameWithoutPrecomputes(qU.timeFraction, UU);
-            cU(RU) && tU.push(RU)
+      createTimelineFromKeyframes(uu, Ru, yu) {
+        const Eu = [];
+        for (const Nu of uu) {
+          const uu = Nu[Ru];
+          if (uu) {
+            const Ru = this.createAnimationFrameWithoutPrecomputes(Nu.timeFraction, uu);
+            Vu(Ru) && Eu.push(Ru)
           }
         }
-        const pU = [];
-        for (let qU = 0; qU < tU.length; qU++) {
-          var EU, PU, TU;
-          const UU = tU[qU],
-            RU = null !== (EU = tU[qU - 1]) && void 0 !== EU ? EU : UU,
-            KU = null !== (PU = tU[qU + 1]) && void 0 !== PU ? PU : UU,
-            cU = null !== (TU = tU[qU + 2]) && void 0 !== TU ? TU : KU;
-          pU.push({
-            ...UU,
-            ...gU(RU.post, RU.timeFraction, UU.post, UU.timeFraction, KU.pre, KU.timeFraction, cU.pre, cU.timeFraction)
+        const Ku = [];
+        for (let Nu = 0; Nu < Eu.length; Nu++) {
+          var Qu, mu, Ju;
+          const uu = Eu[Nu],
+            Ru = null !== (Qu = Eu[Nu - 1]) && void 0 !== Qu ? Qu : uu,
+            Xu = null !== (mu = Eu[Nu + 1]) && void 0 !== mu ? mu : uu,
+            Vu = null !== (Ju = Eu[Nu + 2]) && void 0 !== Ju ? Ju : Xu;
+          Ku.push({
+            ...uu,
+            ...yu(Ru.post, Ru.timeFraction, uu.post, uu.timeFraction, Xu.pre, Xu.timeFraction, Vu.pre, Vu.timeFraction)
           })
         }
-        return pU
+        return Ku
       }
-      createAnimationFrameWithoutPrecomputes(UU, RU) {
-        let gU, tU, pU = null;
-        var EU;
-        if ("object" === typeof RU && "point" in RU) pU = null !== (EU = RU.nE) && void 0 !== EU ? EU : null, gU = RU.point, tU = RU.point;
-        else if ("object" === typeof RU && "pre" in RU) {
-          var PU;
-          pU = null !== (PU = RU.nE) && void 0 !== PU ? PU : null, gU = RU.pre, tU = RU.post
-        } else gU = RU, tU = RU;
+      createAnimationFrameWithoutPrecomputes(uu, Ru) {
+        let yu, Eu, Ku = null;
+        var Qu;
+        if ("object" === typeof Ru && "point" in Ru) Ku = null !== (Qu = Ru.bQ) && void 0 !== Qu ? Qu : null, yu = Ru.point, Eu = Ru.point;
+        else if ("object" === typeof Ru && "pre" in Ru) {
+          var mu;
+          Ku = null !== (mu = Ru.bQ) && void 0 !== mu ? mu : null, yu = Ru.pre, Eu = Ru.post
+        } else yu = Ru, Eu = Ru;
         return {
-          timeFraction: UU,
-          nE: this.createLerpMode(pU),
-          pre: gU,
-          post: tU
+          timeFraction: uu,
+          bQ: this.createLerpMode(Ku),
+          pre: yu,
+          post: Eu
         }
       }
-      createLerpMode(UU) {
-        return null === UU ? tU.h.Linear : qU.LERP_MODE_SCHEMA_MAPPING[UU]
+      createLerpMode(uu) {
+        return null === uu ? Eu.g.Linear : Nu.LERP_MODE_SCHEMA_MAPPING[uu]
       }
     }
-    qU.LERP_MODE_SCHEMA_MAPPING = {
-      linear: tU.h.Linear,
-      "catmull-rom-spline": tU.h.CatmullRomSpline
+    Nu.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Eu.g.Linear,
+      "catmull-rom-spline": Eu.g.CatmullRomSpline
     };
-    class KU {
-      constructor(UU) {
-        this.animationSchema = UU
+    class Xu {
+      constructor(uu) {
+        this.animationSchema = uu
       }
       createAnimationScript() {
         const {
-          animation_length: UU,
-          loop: RU,
-          bones: gU
+          animation_length: uu,
+          loop: Ru,
+          bones: yu
         } = this.animationSchema;
         return {
-          xE: Math.round(1e3 * UU),
-          mE: this.createLoopMode(null !== RU && void 0 !== RU && RU),
-          IE: this.createNodeSkeletonAnimationScript(null !== gU && void 0 !== gU ? gU : null)
+          TQ: Math.round(1e3 * uu),
+          WQ: this.createLoopMode(null !== Ru && void 0 !== Ru && Ru),
+          jQ: this.createNodeSkeletonAnimationScript(null !== yu && void 0 !== yu ? yu : null)
         }
       }
-      createLoopMode(UU) {
-        switch (UU) {
+      createLoopMode(uu) {
+        switch (uu) {
           case !1:
-            return tU.k.NoLoop;
+            return Eu.j.NoLoop;
           case !0:
-            return tU.k.LoopOnLastFrame;
+            return Eu.j.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return tU.k.HoldOnLastFrame
+            return Eu.j.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${UU}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${uu}`)
       }
-      createNodeSkeletonAnimationScript(UU) {
-        if (null === UU) return null;
-        const RU = {};
-        for (const gU in UU) {
-          const tU = UU[gU];
-          RU[gU] = this.createNodeAnimationScript(tU)
+      createNodeSkeletonAnimationScript(uu) {
+        if (null === uu) return null;
+        const Ru = {};
+        for (const yu in uu) {
+          const Eu = uu[yu];
+          Ru[yu] = this.createNodeAnimationScript(Eu)
         }
-        return RU
+        return Ru
       }
-      createNodeAnimationScript(UU) {
+      createNodeAnimationScript(uu) {
         const {
-          rotation: RU,
-          position: gU
-        } = UU;
+          rotation: Ru,
+          position: yu
+        } = uu;
         return {
-          rotation: this.createAnimationTimeline(null !== RU && void 0 !== RU ? RU : null, QU, jU, !0),
-          position: this.createAnimationTimeline(null !== gU && void 0 !== gU ? gU : null, WU, CU, !1)
+          rotation: this.createAnimationTimeline(null !== Ru && void 0 !== Ru ? Ru : null, Tu, Bu, !0),
+          position: this.createAnimationTimeline(null !== yu && void 0 !== yu ? yu : null, ju, Su, !1)
         }
       }
-      createAnimationTimeline(UU, RU, gU, tU) {
-        if (null === UU) return [];
-        if (Array.isArray(UU)) {
-          UU = {
-            "0.0": UU
+      createAnimationTimeline(uu, Ru, yu, Eu) {
+        if (null === uu) return [];
+        if (Array.isArray(uu)) {
+          uu = {
+            "0.0": uu
           }
         }
-        const pU = Object.entries(UU).map((UU => {
-          let [gU, tU] = UU;
-          const pU = Number(gU) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(pU, tU, RU)
-        })).filter(cU);
-        pU.sort(((UU, RU) => UU.timeFraction - RU.timeFraction)), tU && function(UU) {
-          for (let RU = 1; RU < UU.length; RU++) {
-            const gU = UU[RU - 1].post,
-              tU = UU[RU],
-              pU = fU(tU.pre),
-              EU = fU(tU.post),
-              PU = mU(gU, tU.pre);
-            mU(gU, pU) < PU && (UU[RU] = {
-              ...tU,
-              pre: pU,
-              post: EU
+        const Ku = Object.entries(uu).map((uu => {
+          let [yu, Eu] = uu;
+          const Ku = Number(yu) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(Ku, Eu, Ru)
+        })).filter(Vu);
+        Ku.sort(((uu, Ru) => uu.timeFraction - Ru.timeFraction)), Eu && function(uu) {
+          for (let Ru = 1; Ru < uu.length; Ru++) {
+            const yu = uu[Ru - 1].post,
+              Eu = uu[Ru],
+              Ku = Hu(Eu.pre),
+              Qu = Hu(Eu.post),
+              mu = bu(yu, Eu.pre);
+            bu(yu, Ku) < mu && (uu[Ru] = {
+              ...Eu,
+              pre: Ku,
+              post: Qu
             })
           }
-        }(pU);
-        const EU = [];
-        for (let KU = 0; KU < pU.length; KU++) {
-          var PU, TU, qU;
-          const UU = pU[KU],
-            RU = null !== (PU = pU[KU - 1]) && void 0 !== PU ? PU : UU,
-            tU = null !== (TU = pU[KU + 1]) && void 0 !== TU ? TU : UU,
-            cU = null !== (qU = pU[KU + 2]) && void 0 !== qU ? qU : tU;
-          EU.push({
-            ...UU,
-            ...gU(RU.post, RU.timeFraction, UU.post, UU.timeFraction, tU.pre, tU.timeFraction, cU.pre, cU.timeFraction)
+        }(Ku);
+        const Qu = [];
+        for (let Xu = 0; Xu < Ku.length; Xu++) {
+          var mu, Ju, Nu;
+          const uu = Ku[Xu],
+            Ru = null !== (mu = Ku[Xu - 1]) && void 0 !== mu ? mu : uu,
+            Eu = null !== (Ju = Ku[Xu + 1]) && void 0 !== Ju ? Ju : uu,
+            Vu = null !== (Nu = Ku[Xu + 2]) && void 0 !== Nu ? Nu : Eu;
+          Qu.push({
+            ...uu,
+            ...yu(Ru.post, Ru.timeFraction, uu.post, uu.timeFraction, Eu.pre, Eu.timeFraction, Vu.pre, Vu.timeFraction)
           })
         }
-        return EU
+        return Qu
       }
-      createAnimationFrameWithoutPrecomputes(UU, RU, gU) {
-        let tU, pU, EU = null;
-        if ("object" === typeof RU && "post" in RU) {
-          var PU;
-          EU = null !== (PU = RU.lerp_mode) && void 0 !== PU ? PU : null, pU = hU(RU.post, gU), tU = RU.pre ? hU(RU.pre, gU) : pU
+      createAnimationFrameWithoutPrecomputes(uu, Ru, yu) {
+        let Eu, Ku, Qu = null;
+        if ("object" === typeof Ru && "post" in Ru) {
+          var mu;
+          Qu = null !== (mu = Ru.lerp_mode) && void 0 !== mu ? mu : null, Ku = pu(Ru.post, yu), Eu = Ru.pre ? pu(Ru.pre, yu) : Ku
         } else {
-          const UU = hU(RU, gU);
-          pU = UU, tU = UU
+          const uu = pu(Ru, yu);
+          Ku = uu, Eu = uu
         }
         return {
-          timeFraction: UU,
-          nE: this.createLerpMode(EU),
-          pre: tU,
-          post: pU
+          timeFraction: uu,
+          bQ: this.createLerpMode(Qu),
+          pre: Eu,
+          post: Ku
         }
       }
-      createLerpMode(UU) {
-        return null === UU ? tU.h.Linear : KU.LERP_MODE_SCHEMA_MAPPING[UU]
+      createLerpMode(uu) {
+        return null === uu ? Eu.g.Linear : Xu.LERP_MODE_SCHEMA_MAPPING[uu]
       }
     }
 
-    function cU(UU) {
-      return Number.isFinite(UU.timeFraction) && GU(UU.pre) && GU(UU.post)
+    function Vu(uu) {
+      return Number.isFinite(uu.timeFraction) && ru(uu.pre) && ru(uu.post)
     }
 
-    function GU(UU) {
-      return Number.isFinite(UU[0]) && Number.isFinite(UU[1]) && Number.isFinite(UU[2])
+    function ru(uu) {
+      return Number.isFinite(uu[0]) && Number.isFinite(uu[1]) && Number.isFinite(uu[2])
     }
 
-    function jU(UU, RU, gU, tU, pU, EU, PU, TU) {
-      const qU = EU - RU,
-        KU = EU - tU,
-        cU = TU - tU,
-        GU = [null, null, null];
-      for (let jU = 0; jU < GU.length; jU++) GU[jU] = uU(UU[jU], gU[jU], pU[jU], PU[jU], qU, cU);
+    function Bu(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
+      const Nu = Qu - Ru,
+        Xu = Qu - Eu,
+        Vu = Ju - Eu,
+        ru = [null, null, null];
+      for (let Bu = 0; Bu < ru.length; Bu++) ru[Bu] = xu(uu[Bu], yu[Bu], Ku[Bu], mu[Bu], Nu, Vu);
       return {
-        bE: KU,
-        oE: GU
+        CQ: Xu,
+        kQ: ru
       }
     }
 
-    function uU(UU, RU, gU, tU, EU, PU) {
+    function xu(uu, Ru, yu, Eu, Qu, mu) {
       return {
-        aE: pU.c.computeShortestRotation(UU, gU) / EU,
-        YE: pU.c.computeShortestRotation(RU, tU) / PU,
-        delta: pU.c.computeShortestRotation(RU, gU)
+        AQ: Ku.c.computeShortestRotation(uu, yu) / Qu,
+        DQ: Ku.c.computeShortestRotation(Ru, Eu) / mu,
+        delta: Ku.c.computeShortestRotation(Ru, yu)
       }
     }
 
-    function CU(UU, RU, gU, tU, pU, EU, PU, TU) {
-      const qU = EU - RU,
-        KU = EU - tU,
-        cU = TU - tU,
-        GU = [null, null, null];
-      for (let jU = 0; jU < GU.length; jU++) GU[jU] = {
-        aE: (pU[jU] - UU[jU]) / qU,
-        YE: (PU[jU] - gU[jU]) / cU,
-        delta: pU[jU] - gU[jU]
+    function Su(uu, Ru, yu, Eu, Ku, Qu, mu, Ju) {
+      const Nu = Qu - Ru,
+        Xu = Qu - Eu,
+        Vu = Ju - Eu,
+        ru = [null, null, null];
+      for (let Bu = 0; Bu < ru.length; Bu++) ru[Bu] = {
+        AQ: (Ku[Bu] - uu[Bu]) / Nu,
+        DQ: (mu[Bu] - yu[Bu]) / Vu,
+        delta: Ku[Bu] - yu[Bu]
       };
       return {
-        bE: KU,
-        oE: GU
+        CQ: Xu,
+        kQ: ru
       }
     }
 
-    function hU(UU, RU) {
-      return null === RU ? UU : RU(UU)
+    function pu(uu, Ru) {
+      return null === Ru ? uu : Ru(uu)
     }
 
-    function QU(UU) {
-      const [RU, gU, tU] = UU, PU = -(0, EU.j)(RU), TU = -(0, EU.j)(gU), qU = (0, EU.j)(tU), KU = pU.c.quaternionFromEulerZYX(PU, TU, qU);
-      return pU.c.eulerYXZFromQuaternion(KU)
+    function Tu(uu) {
+      const [Ru, yu, Eu] = uu, mu = -(0, Qu.i)(Ru), Ju = -(0, Qu.i)(yu), Nu = (0, Qu.i)(Eu), Xu = Ku.c.quaternionFromEulerZYX(mu, Ju, Nu);
+      return Ku.c.eulerYXZFromQuaternion(Xu)
     }
-    KU.LERP_MODE_SCHEMA_MAPPING = {
-      linear: tU.h.Linear,
-      catmullrom: tU.h.CatmullRomSpline
+    Xu.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Eu.g.Linear,
+      catmullrom: Eu.g.CatmullRomSpline
     };
-    const eU = 1 / 16;
+    const Wu = 1 / 16;
 
-    function WU(UU) {
-      return [-UU[0] * eU, UU[1] * eU, UU[2] * eU]
+    function ju(uu) {
+      return [-uu[0] * Wu, uu[1] * Wu, uu[2] * Wu]
     }
 
-    function fU(UU) {
-      const [RU, gU, tU] = UU;
-      return [RU >= 0 ? Math.PI - RU : -Math.PI - RU, xU(gU + Math.PI), xU(tU + Math.PI)]
+    function Hu(uu) {
+      const [Ru, yu, Eu] = uu;
+      return [Ru >= 0 ? Math.PI - Ru : -Math.PI - Ru, du(yu + Math.PI), du(Eu + Math.PI)]
     }
 
-    function xU(UU) {
-      return pU.c.mod(UU + Math.PI, 2 * Math.PI) - Math.PI
+    function du(uu) {
+      return Ku.c.mod(uu + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function mU(UU, RU) {
-      return Math.abs(pU.c.computeShortestRotation(UU[0], RU[0])) + Math.abs(pU.c.computeShortestRotation(UU[1], RU[1])) + Math.abs(pU.c.computeShortestRotation(UU[2], RU[2]))
+    function bu(uu, Ru) {
+      return Math.abs(Ku.c.computeShortestRotation(uu[0], Ru[0])) + Math.abs(Ku.c.computeShortestRotation(uu[1], Ru[1])) + Math.abs(Ku.c.computeShortestRotation(uu[2], Ru[2]))
     }
-    const IU = new qU
+    const Cu = new Nu
   },
-  36651: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => PU,
-      f: () => EU,
-      h: () => tU,
-      k: () => pU
+  36882: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => mu,
+      f: () => Qu,
+      g: () => Eu,
+      j: () => Ku
     });
-    let tU = function(UU) {
-        return UU[UU.Linear = 0] = "Linear", UU[UU.CatmullRomSpline = 1] = "CatmullRomSpline", UU
+    let Eu = function(uu) {
+        return uu[uu.Linear = 0] = "Linear", uu[uu.CatmullRomSpline = 1] = "CatmullRomSpline", uu
       }({}),
-      pU = function(UU) {
-        return UU[UU.NoLoop = 0] = "NoLoop", UU[UU.LoopOnLastFrame = 1] = "LoopOnLastFrame", UU[UU.HoldOnLastFrame = 2] = "HoldOnLastFrame", UU
+      Ku = function(uu) {
+        return uu[uu.NoLoop = 0] = "NoLoop", uu[uu.LoopOnLastFrame = 1] = "LoopOnLastFrame", uu[uu.HoldOnLastFrame = 2] = "HoldOnLastFrame", uu
       }({}),
-      EU = function(UU) {
-        return UU[UU.Movement = 0] = "Movement", UU[UU.Action = 1] = "Action", UU[UU.Emote = 2] = "Emote", UU[UU.Custom = 3] = "Custom", UU
+      Qu = function(uu) {
+        return uu[uu.Movement = 0] = "Movement", uu[uu.Action = 1] = "Action", uu[uu.Emote = 2] = "Emote", uu[uu.Custom = 3] = "Custom", uu
       }({}),
-      PU = function(UU) {
-        return UU[UU.Start = 0] = "Start", UU[UU.Stop = 1] = "Stop", UU
+      mu = function(uu) {
+        return uu[uu.Start = 0] = "Start", uu[uu.Stop = 1] = "Stop", uu
       }({})
   },
-  4503: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => pU,
-      f: () => tU,
-      j: () => EU,
-      k: () => qU,
-      n: () => PU
+  4617: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ku,
+      d: () => Eu,
+      g: () => Qu,
+      k: () => Nu,
+      m: () => mu
     });
-    const tU = ["sine", "triangle", "square", "sawtooth"],
-      pU = 55,
-      EU = {
+    const Eu = ["sine", "triangle", "square", "sawtooth"],
+      Ku = 55,
+      Qu = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function PU(UU) {
-      return "string" !== typeof UU ? UU : Object.hasOwn(EU, UU) ? EU[UU] : null
+    function mu(uu) {
+      return "string" !== typeof uu ? uu : Object.hasOwn(Qu, uu) ? Qu[uu] : null
     }
 
-    function TU(UU, RU, gU) {
-      return Math.min(gU, Math.max(RU, UU))
+    function Ju(uu, Ru, yu) {
+      return Math.min(yu, Math.max(Ru, uu))
     }
 
-    function qU(UU) {
-      const RU = TU(UU.durationMs, 10, 500),
-        gU = TU(UU.attackMs, 0, RU),
+    function Nu(uu) {
+      const Ru = Ju(uu.durationMs, 10, 500),
+        yu = Ju(uu.attackMs, 0, Ru),
         {
-          intonation: pU
-        } = UU;
+          intonation: Ku
+        } = uu;
       return {
-        waveform: tU.includes(UU.waveform) ? UU.waveform : "sine",
-        pitchHz: TU(UU.pitchHz, 20, 4e3),
-        glideSemitones: TU(UU.glideSemitones, -24, 24),
-        durationMs: RU,
-        attackMs: gU,
-        releaseMs: TU(UU.releaseMs, 0, RU - gU),
-        lowpassHz: null === UU.lowpassHz ? null : TU(UU.lowpassHz, 20, 2e4),
-        volume: TU(UU.volume, 0, 2),
+        waveform: Eu.includes(uu.waveform) ? uu.waveform : "sine",
+        pitchHz: Ju(uu.pitchHz, 20, 4e3),
+        glideSemitones: Ju(uu.glideSemitones, -24, 24),
+        durationMs: Ru,
+        attackMs: yu,
+        releaseMs: Ju(uu.releaseMs, 0, Ru - yu),
+        lowpassHz: null === uu.lowpassHz ? null : Ju(uu.lowpassHz, 20, 2e4),
+        volume: Ju(uu.volume, 0, 2),
         intonation: {
-          variationSemitones: TU(pU.variationSemitones, 0, 6),
-          declineSemitones: TU(pU.declineSemitones, 0, 12),
-          questionRiseSemitones: TU(pU.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: TU(pU.exclaimLiftSemitones, 0, 12)
+          variationSemitones: Ju(Ku.variationSemitones, 0, 6),
+          declineSemitones: Ju(Ku.declineSemitones, 0, 12),
+          questionRiseSemitones: Ju(Ku.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: Ju(Ku.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: TU(UU.syllableMs, 25, 200)
+        syllableMs: Ju(uu.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

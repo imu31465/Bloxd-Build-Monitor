@@ -1,82 +1,82 @@
 export const id = 220;
 export const ids = [220];
 export const modules = {
-  39183: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      getBlockFaces: () => jU,
-      getIngameIconUrl: () => hU,
-      getItemIconUrl: () => CU,
-      getItemTextureUrl: () => uU,
-      getParticleTextureUrl: () => QU
+  39357: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      getBlockFaces: () => Bu,
+      getIngameIconUrl: () => pu,
+      getItemIconUrl: () => Su,
+      getItemTextureUrl: () => xu,
+      getParticleTextureUrl: () => Tu
     });
-    var tU = gU(4122),
-      pU = gU(36554),
-      EU = gU(9072),
-      PU = gU(2842);
-    const TU = new Set,
-      qU = new Set;
-    let KU = null;
+    var Eu = yu(4227),
+      Ku = yu(36788),
+      Qu = yu(9154),
+      mu = yu(2943);
+    const Ju = new Set,
+      Nu = new Set;
+    let Xu = null;
 
-    function cU(UU) {
-      TU.has(UU) || (TU.add(UU), qU.add(UU), KU ??= setTimeout((() => {
-        console.warn(`Docs gallery: no default texture for ${qU.size} names`, [...qU]), qU.clear(), KU = null
+    function Vu(uu) {
+      Ju.has(uu) || (Ju.add(uu), Nu.add(uu), Xu ??= setTimeout((() => {
+        console.warn(`Docs gallery: no default texture for ${Nu.size} names`, [...Nu]), Nu.clear(), Xu = null
       }), 1e3))
     }
 
-    function GU(UU, RU) {
+    function ru(uu, Ru) {
       try {
-        return (0, EU.getDefaultTexture)(UU, RU).url
+        return (0, Qu.getDefaultTexture)(uu, Ru).url
       } catch {
-        return cU(UU), null
+        return Vu(uu), null
       }
     }
 
-    function jU(UU) {
-      var RU, gU;
-      const EU = pU.k[UU];
-      if (!EU || EU.itemTexture || !EU.textureInfo) return null;
+    function Bu(uu) {
+      var Ru, yu;
+      const Qu = Ku.n[uu];
+      if (!Qu || Qu.itemTexture || !Qu.textureInfo) return null;
       const {
-        textureInfo: TU,
-        texturePerSide: qU
-      } = EU, KU = UU => {
-        return "string" === typeof(RU = qU && Array.isArray(TU) ? TU[qU[UU]] : TU) ? GU(RU, PU.g.BLOCK) : RU && "object" === typeof RU && "animTextures" in RU ? GU((0, tU.h)(RU), PU.g.BLOCK) : null;
-        var RU
-      }, cU = KU(2);
-      return cU ? {
-        top: cU,
-        left: null !== (RU = KU(4)) && void 0 !== RU ? RU : cU,
-        right: null !== (gU = KU(0)) && void 0 !== gU ? gU : cU
+        textureInfo: Ju,
+        texturePerSide: Nu
+      } = Qu, Xu = uu => {
+        return "string" === typeof(Ru = Nu && Array.isArray(Ju) ? Ju[Nu[uu]] : Ju) ? ru(Ru, mu.l.BLOCK) : Ru && "object" === typeof Ru && "animTextures" in Ru ? ru((0, Eu.j)(Ru), mu.l.BLOCK) : null;
+        var Ru
+      }, Vu = Xu(2);
+      return Vu ? {
+        top: Vu,
+        left: null !== (Ru = Xu(4)) && void 0 !== Ru ? Ru : Vu,
+        right: null !== (yu = Xu(0)) && void 0 !== yu ? yu : Vu
       } : null
     }
 
-    function uU(UU) {
-      var RU;
-      const gU = pU.k[UU];
-      return GU(null !== (RU = null === gU || void 0 === gU ? void 0 : gU.itemTexture) && void 0 !== RU ? RU : "string" === typeof(null === gU || void 0 === gU ? void 0 : gU.textureInfo) ? gU.textureInfo : UU, PU.g.ITEM)
+    function xu(uu) {
+      var Ru;
+      const yu = Ku.n[uu];
+      return ru(null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.itemTexture) && void 0 !== Ru ? Ru : "string" === typeof(null === yu || void 0 === yu ? void 0 : yu.textureInfo) ? yu.textureInfo : uu, mu.l.ITEM)
     }
 
-    function CU(UU) {
-      var RU, gU;
-      return pU.k[UU] ? null !== (RU = null === (gU = jU(UU)) || void 0 === gU ? void 0 : gU.top) && void 0 !== RU ? RU : uU(UU) : null
+    function Su(uu) {
+      var Ru, yu;
+      return Ku.n[uu] ? null !== (Ru = null === (yu = Bu(uu)) || void 0 === yu ? void 0 : yu.top) && void 0 !== Ru ? Ru : xu(uu) : null
     }
 
-    function hU(UU) {
-      return GU(UU, PU.g.ICON)
+    function pu(uu) {
+      return ru(uu, mu.l.ICON)
     }
 
-    function QU(UU) {
+    function Tu(uu) {
       try {
-        return gU(2997)(`./${UU}.png`)
+        return yu(3125)(`./${uu}.png`)
       } catch {
-        return cU(UU), null
+        return Vu(uu), null
       }
     }
   },
-  36573: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => tU
+  36807: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu
     });
-    const tU = {
+    const Eu = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -238,4 +238,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

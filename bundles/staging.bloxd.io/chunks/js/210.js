@@ -1,547 +1,547 @@
 export const id = 210;
 export const ids = [210];
 export const modules = {
-  35944: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => cU,
-      e: () => jU
+  36229: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Vu,
+      f: () => Bu
     });
-    var tU = gU(56),
-      pU = gU(1333),
-      EU = gU(1181),
-      PU = gU(1326),
-      TU = gU(3176),
-      qU = gU(4593),
-      KU = gU(1090);
+    var Eu = yu(64),
+      Ku = yu(1311),
+      Qu = yu(1170),
+      mu = yu(1300),
+      Ju = yu(3296),
+      Nu = yu(4709),
+      Xu = yu(1079);
 
-    function cU(UU) {
+    function Vu(uu) {
       let {
-        loading: RU,
-        schematics: gU,
-        onSchematicPicked: tU,
-        selectedSchematicIdList: pU = [],
-        disableAutoExport: qU
-      } = UU;
+        loading: Ru,
+        schematics: yu,
+        onSchematicPicked: Eu,
+        selectedSchematicIdList: Ku = [],
+        disableAutoExport: Nu
+      } = uu;
       const {
-        t: cU
-      } = (0, EU.B)();
-      return (0, KU.jsxs)("div", {
+        t: Vu
+      } = (0, Qu.E)();
+      return (0, Xu.jsxs)("div", {
         className: "SchematicList",
-        children: [RU && (0, KU.jsx)(PU.d, {}), !RU && 0 === gU.length && (0, KU.jsx)("div", {
+        children: [Ru && (0, Xu.jsx)(mu.b, {}), !Ru && 0 === yu.length && (0, Xu.jsx)("div", {
           className: "NoSchematicsText",
-          children: cU("worldBuilder:noSavedSchematic")
-        }), !RU && gU.map((UU => (0, KU.jsx)(TU.f, {
+          children: Vu("worldBuilder:noSavedSchematic")
+        }), !Ru && yu.map((uu => (0, Xu.jsx)(Ju.e, {
           source: {
             type: "schematic",
-            schematic: UU
+            schematic: uu
           },
           gameWidth: "25%",
           useLongRatio: !0,
           onClick: () => {
-            tU(UU)
+            Eu(uu)
           },
-          isSelected: pU.includes(UU.schematicId),
+          isSelected: Ku.includes(uu.schematicId),
           hideCcu: !0,
           hideFavourites: !0,
           showPublishedChip: !0,
           hideUnpublishedChip: !0,
-          disabled: UU.isAutoExported && qU,
+          disabled: uu.isAutoExported && Nu,
           disabledReason: "worldBuilder:autoExportDisabled"
-        }, UU.schematicId)))]
+        }, uu.schematicId)))]
       })
     }
 
-    function GU(UU) {
+    function ru(uu) {
       let {
-        ownedSchematics: RU,
-        currentWorldSchematicId: gU,
-        onClose: pU
-      } = UU;
+        ownedSchematics: Ru,
+        currentWorldSchematicId: yu,
+        onClose: Ku
+      } = uu;
       const {
-        t: PU
-      } = (0, EU.B)(), [TU, GU] = (0, tU.useState)(null);
-      return (0, KU.jsxs)("div", {
+        t: mu
+      } = (0, Qu.E)(), [Ju, ru] = (0, Eu.useState)(null);
+      return (0, Xu.jsxs)("div", {
         className: "SchematicListWindow",
-        children: [null === TU && (0, KU.jsxs)(KU.Fragment, {
-          children: [(0, KU.jsx)("h1", {
+        children: [null === Ju && (0, Xu.jsxs)(Xu.Fragment, {
+          children: [(0, Xu.jsx)("h1", {
             className: "SchematicPopupTitle",
-            children: PU("worldBuilder:schematicList")
-          }), (0, KU.jsx)("h2", {
+            children: mu("worldBuilder:schematicList")
+          }), (0, Xu.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: PU("worldBuilder:clickSchematicForOptions")
-          }), (0, KU.jsx)("div", {
+            children: mu("worldBuilder:clickSchematicForOptions")
+          }), (0, Xu.jsx)("div", {
             className: "SchematicPopupSchematicListContainer",
-            children: (0, KU.jsx)(cU, {
+            children: (0, Xu.jsx)(Vu, {
               loading: !1,
-              schematics: RU,
-              onSchematicPicked: UU => {
-                GU(UU)
+              schematics: Ru,
+              onSchematicPicked: uu => {
+                ru(uu)
               },
               disableAutoExport: !1
             })
           })]
-        }), null !== TU && (0, KU.jsx)(qU.f, {
-          schematic: TU,
-          inSourceWorld: TU.schematicId === gU,
-          onSchematicUpdate: UU => {
-            GU(UU)
+        }), null !== Ju && (0, Xu.jsx)(Nu.g, {
+          schematic: Ju,
+          inSourceWorld: Ju.schematicId === yu,
+          onSchematicUpdate: uu => {
+            ru(uu)
           },
           onClose: () => {
-            GU(null), pU()
+            ru(null), Ku()
           }
         })]
       })
     }
 
-    function jU(UU) {
+    function Bu(uu) {
       let {
-        ownedSchematics: RU,
-        currentWorldSchematicId: gU,
-        onClose: tU
-      } = UU;
-      pU.NotificationProvider.showCustomPopup({
-        body: UU => (0, KU.jsx)(GU, {
-          ownedSchematics: RU,
-          currentWorldSchematicId: gU,
-          onClose: UU
+        ownedSchematics: Ru,
+        currentWorldSchematicId: yu,
+        onClose: Eu
+      } = uu;
+      Ku.NotificationProvider.showCustomPopup({
+        body: uu => (0, Xu.jsx)(ru, {
+          ownedSchematics: Ru,
+          currentWorldSchematicId: yu,
+          onClose: uu
         }),
         middleScreenPopupClassName: "SchematicPopup",
-        onClose: tU,
+        onClose: Eu,
         unlockPointerKey: "schematicListPopup"
       })
     }
   },
-  41095: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      runClientGameMessage: () => ZU
+  41326: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      runClientGameMessage: () => Iu
     });
-    var tU = gU(3398),
-      pU = gU(3420),
-      EU = gU(1316),
-      PU = gU(35944),
-      TU = gU(4623),
-      qU = gU(1037),
-      KU = gU.n(qU),
-      cU = gU(56),
-      GU = gU(1333),
-      jU = gU(1412),
-      uU = gU(311),
-      CU = gU(1181),
-      hU = gU(1049),
-      QU = gU(1090);
+    var Eu = yu(3548),
+      Ku = yu(3574),
+      Qu = yu(1280),
+      mu = yu(36229),
+      Ju = yu(4740),
+      Nu = yu(1035),
+      Xu = yu.n(Nu),
+      Vu = yu(64),
+      ru = yu(1311),
+      Bu = yu(1408),
+      xu = yu(343),
+      Su = yu(1170),
+      pu = yu(1043),
+      Tu = yu(1079);
 
-    function eU(UU) {
+    function Wu(uu) {
       let {
-        onFilePicked: RU
-      } = UU;
+        onFilePicked: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, CU.B)(), [tU, pU] = (0, cU.useState)(null), {
-        getRootProps: EU,
-        getInputProps: PU,
-        isDragActive: qU
-      } = (0, TU.e)({
-        onDrop: UU => {
-          UU.length > 0 && pU(UU[0])
+        t: yu
+      } = (0, Su.E)(), [Eu, Ku] = (0, Vu.useState)(null), {
+        getRootProps: Qu,
+        getInputProps: mu,
+        isDragActive: Nu
+      } = (0, Ju.d)({
+        onDrop: uu => {
+          uu.length > 0 && Ku(uu[0])
         },
         useFsAccessApi: !1
-      }), GU = tU && tU.size > 1024 * uU.dd;
-      return (0, QU.jsxs)("div", {
+      }), ru = Eu && Eu.size > 1024 * xu.md;
+      return (0, Tu.jsxs)("div", {
         className: "SchematicUploadContainer",
-        children: [(0, QU.jsxs)("div", {
-          ...EU({
-            className: KU()("SchematicUpload", {
-              ActiveDrag: qU
+        children: [(0, Tu.jsxs)("div", {
+          ...Qu({
+            className: Xu()("SchematicUpload", {
+              ActiveDrag: Nu
             })
           }),
-          children: [(0, QU.jsx)("input", {
-            ...PU({
+          children: [(0, Tu.jsx)("input", {
+            ...mu({
               accept: ".bloxdschem"
             })
-          }), !qU && tU ? (0, QU.jsxs)(QU.Fragment, {
-            children: [(0, QU.jsx)("div", {
-              className: KU()("SchematicUploadIcon", "Active", {
-                TooBig: GU
+          }), !Nu && Eu ? (0, Tu.jsxs)(Tu.Fragment, {
+            children: [(0, Tu.jsx)("div", {
+              className: Xu()("SchematicUploadIcon", "Active", {
+                TooBig: ru
               }),
-              children: (0, QU.jsx)(hU.c, {
+              children: (0, Tu.jsx)(pu.c, {
                 name: "file-lines"
               })
-            }), (0, QU.jsx)("div", {
+            }), (0, Tu.jsx)("div", {
               className: "SchematicUploadInstructions Active",
-              children: tU.name
+              children: Eu.name
             })]
-          }) : (0, QU.jsxs)(QU.Fragment, {
-            children: [(0, QU.jsx)("div", {
+          }) : (0, Tu.jsxs)(Tu.Fragment, {
+            children: [(0, Tu.jsx)("div", {
               className: "SchematicUploadIcon",
-              children: (0, QU.jsx)(hU.c, {
+              children: (0, Tu.jsx)(pu.c, {
                 name: "up-from-bracket"
               })
-            }), (0, QU.jsx)("div", {
+            }), (0, Tu.jsx)("div", {
               className: "SchematicUploadInstructions",
-              children: gU("worldBuilder:dragAFileHere")
+              children: yu("worldBuilder:dragAFileHere")
             })]
           })]
-        }), (0, QU.jsx)(jU.j, {
-          disabled: GU || !tU,
+        }), (0, Tu.jsx)(Bu.l, {
+          disabled: ru || !Eu,
           className: "SchematicUploadButton",
           onClick: () => {
-            !GU && tU && RU(tU)
+            !ru && Eu && Ru(Eu)
           },
-          children: GU ? gU("worldBuilder:fileTooBig", {
-            maxSizeKb: uU.dd
-          }) : gU("worldBuilder:upload")
+          children: ru ? yu("worldBuilder:fileTooBig", {
+            maxSizeKb: xu.md
+          }) : yu("worldBuilder:upload")
         })]
       })
     }
 
-    function WU(UU) {
+    function ju(uu) {
       let {
-        ownedSchematics: RU,
-        onClose: gU,
-        onChosenPreset: tU,
-        onChosenFile: pU
-      } = UU;
+        ownedSchematics: Ru,
+        onClose: yu,
+        onChosenPreset: Eu,
+        onChosenFile: Ku
+      } = uu;
       const {
-        t: EU
-      } = (0, CU.B)();
-      return (0, QU.jsxs)(QU.Fragment, {
-        children: [(0, QU.jsx)("h1", {
+        t: Qu
+      } = (0, Su.E)();
+      return (0, Tu.jsxs)(Tu.Fragment, {
+        children: [(0, Tu.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: EU("worldBuilder:loadSchematic")
-        }), (0, QU.jsx)("h2", {
+          children: Qu("worldBuilder:loadSchematic")
+        }), (0, Tu.jsx)("h2", {
           className: "SchematicPopupSubtitle",
-          children: EU("worldBuilder:chooseOneOfYourSchematics")
-        }), (0, QU.jsx)("div", {
+          children: Qu("worldBuilder:chooseOneOfYourSchematics")
+        }), (0, Tu.jsx)("div", {
           className: "SchematicPopupSchematicListContainer",
-          children: (0, QU.jsx)(PU.c, {
-            schematics: RU,
-            onSchematicPicked: UU => {
-              tU(UU.schematicId), gU()
+          children: (0, Tu.jsx)(mu.d, {
+            schematics: Ru,
+            onSchematicPicked: uu => {
+              Eu(uu.schematicId), yu()
             },
             loading: !1,
             disableAutoExport: !0
           })
-        }), (0, QU.jsx)("h2", {
+        }), (0, Tu.jsx)("h2", {
           className: "SchematicPopupSubtitle",
-          children: EU("worldBuilder:uploadNewSchematic")
-        }), (0, QU.jsx)(eU, {
-          onFilePicked: async UU => {
+          children: Qu("worldBuilder:uploadNewSchematic")
+        }), (0, Tu.jsx)(Wu, {
+          onFilePicked: async uu => {
             try {
-              await pU(UU)
-            } catch (RU) {
-              console.warn("Schematic upload failed", RU)
+              await Ku(uu)
+            } catch (Ru) {
+              console.warn("Schematic upload failed", Ru)
             } finally {
-              gU()
+              yu()
             }
           }
         })]
       })
     }
-    var fU = gU(4593),
-      xU = gU(1602),
-      mU = gU(4040),
-      IU = gU(1217);
+    var Hu = yu(4709),
+      du = yu(1617),
+      bu = yu(4139),
+      Cu = yu(1199);
 
-    function JU(UU) {
-      var RU;
+    function ku(uu) {
+      var Ru;
       let {
-        ownedSchematics: gU,
-        onClose: tU,
-        onChosenEdit: pU,
-        onChosenNew: EU,
-        onChosenDownload: TU
-      } = UU;
+        ownedSchematics: yu,
+        onClose: Eu,
+        onChosenEdit: Ku,
+        onChosenNew: Qu,
+        onChosenDownload: Ju
+      } = uu;
       const {
-        t: qU
-      } = (0, CU.B)(), [KU, GU] = (0, cU.useState)("choose"), [uU, hU] = (0, cU.useState)(null), [eU, WU] = (0, cU.useState)(null);
-      return (0, QU.jsxs)(QU.Fragment, {
-        children: [(0, QU.jsx)("h1", {
+        t: Nu
+      } = (0, Su.E)(), [Xu, ru] = (0, Vu.useState)("choose"), [xu, pu] = (0, Vu.useState)(null), [Wu, ju] = (0, Vu.useState)(null);
+      return (0, Tu.jsxs)(Tu.Fragment, {
+        children: [(0, Tu.jsx)("h1", {
           className: "SchematicPopupTitle",
-          children: qU("worldBuilder:saveSchematic")
-        }), "choose" === KU && (0, QU.jsxs)(QU.Fragment, {
-          children: [(0, QU.jsx)("h2", {
+          children: Nu("worldBuilder:saveSchematic")
+        }), "choose" === Xu && (0, Tu.jsxs)(Tu.Fragment, {
+          children: [(0, Tu.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: qU("worldBuilder:overwriteOneOfYourSchematics")
-          }), (0, QU.jsx)("div", {
+            children: Nu("worldBuilder:overwriteOneOfYourSchematics")
+          }), (0, Tu.jsx)("div", {
             className: "SchematicPopupSchematicListContainer",
-            children: (0, QU.jsx)(PU.c, {
-              schematics: gU,
-              onSchematicPicked: UU => {
-                hU(UU.schematicId), WU("existing"), GU("save")
+            children: (0, Tu.jsx)(mu.d, {
+              schematics: yu,
+              onSchematicPicked: uu => {
+                pu(uu.schematicId), ju("existing"), ru("save")
               },
               loading: !1,
               disableAutoExport: !1
             })
-          }), (0, QU.jsx)("h2", {
+          }), (0, Tu.jsx)("h2", {
             className: "SchematicPopupSubtitle",
-            children: qU("general:otherOptions")
-          }), (0, QU.jsxs)("div", {
+            children: Nu("general:otherOptions")
+          }), (0, Tu.jsxs)("div", {
             className: "OtherOptions",
-            children: [(0, QU.jsx)(jU.j, {
+            children: [(0, Tu.jsx)(Bu.l, {
               className: "ChooseUploadSchematicButton",
               onClick: () => {
-                WU("new"), GU("save")
+                ju("new"), ru("save")
               },
-              children: qU("worldBuilder:saveAsNewSchematic")
-            }), (0, QU.jsx)(jU.e, {
+              children: Nu("worldBuilder:saveAsNewSchematic")
+            }), (0, Tu.jsx)(Bu.e, {
               className: "ChooseUploadSchematicButton",
               onClick: () => {
-                WU("file"), GU("save")
+                ju("file"), ru("save")
               },
-              children: qU("worldBuilder:downloadSchematic")
+              children: Nu("worldBuilder:downloadSchematic")
             })]
           })]
-        }), "choose" !== KU && (0, QU.jsx)(wU, {
-          type: eU,
-          ownedSchematics: gU,
-          onSubmit: (UU, RU, gU) => {
-            "file" === eU ? TU(RU, UU) : "new" === eU ? EU(RU, gU, UU) : pU(uU, RU, gU, UU), tU()
+        }), "choose" !== Xu && (0, Tu.jsx)(eu, {
+          type: Wu,
+          ownedSchematics: yu,
+          onSubmit: (uu, Ru, yu) => {
+            "file" === Wu ? Ju(Ru, uu) : "new" === Wu ? Qu(Ru, yu, uu) : Ku(xu, Ru, yu, uu), Eu()
           },
           onBack: () => {
-            GU("choose")
+            ru("choose")
           },
-          prepopName: "existing" === eU ? null === (RU = gU.find((UU => UU.schematicId === uU))) || void 0 === RU ? void 0 : RU.name : null
+          prepopName: "existing" === Wu ? null === (Ru = yu.find((uu => uu.schematicId === xu))) || void 0 === Ru ? void 0 : Ru.name : null
         })]
       })
     }
 
-    function wU(UU) {
+    function eu(uu) {
       let {
-        type: RU,
-        prepopName: gU,
-        ownedSchematics: tU,
-        onSubmit: pU,
-        onBack: EU
-      } = UU;
+        type: Ru,
+        prepopName: yu,
+        ownedSchematics: Eu,
+        onSubmit: Ku,
+        onBack: Qu
+      } = uu;
       const {
-        t: PU
-      } = (0, CU.B)(), [TU, qU] = (0, cU.useState)(""), [GU, uU] = (0, cU.useState)(""), [hU, eU] = (0, cU.useState)(null), [WU, fU] = (0, cU.useState)(!0), JU = UU => {
-        var gU;
-        UU = null !== (gU = UU) && void 0 !== gU ? gU : TU;
-        const pU = "new" === RU ? (0, IU.y)(UU) : null,
-          EU = [...(0, IU.Cb)(UU), ...pU ? [pU] : []];
-        return EU.length > 0 ? (eU(EU.join(", ")), !1) : "new" === RU && tU.find((RU => RU.name === UU)) ? (eU(PU("worldBuilder:schematicAlreadyExists")), !1) : (eU(null), !0)
+        t: mu
+      } = (0, Su.E)(), [Ju, Nu] = (0, Vu.useState)(""), [ru, xu] = (0, Vu.useState)(""), [pu, Wu] = (0, Vu.useState)(null), [ju, Hu] = (0, Vu.useState)(!0), ku = uu => {
+        var yu;
+        uu = null !== (yu = uu) && void 0 !== yu ? yu : Ju;
+        const Ku = "new" === Ru ? (0, Cu.z)(uu) : null,
+          Qu = [...(0, Cu.zb)(uu), ...Ku ? [Ku] : []];
+        return Qu.length > 0 ? (Wu(Qu.join(", ")), !1) : "new" === Ru && Eu.find((Ru => Ru.name === uu)) ? (Wu(mu("worldBuilder:schematicAlreadyExists")), !1) : (Wu(null), !0)
       };
-      return (0, QU.jsxs)("div", {
+      return (0, Tu.jsxs)("div", {
         className: "SaveSchematicWindow",
-        children: [(0, QU.jsx)("h2", {
+        children: [(0, Tu.jsx)("h2", {
           className: "SchematicPopupSubtitle",
-          children: PU("general:name")
-        }), (0, QU.jsx)(xU.d, {
-          className: KU()("SaveSchematicName", {
-            Error: hU
+          children: mu("general:name")
+        }), (0, Tu.jsx)(du.b, {
+          className: Xu()("SaveSchematicName", {
+            Error: pu
           }),
-          forcedText: gU,
-          onValueChange: UU => {
-            qU(UU), JU(UU)
+          forcedText: yu,
+          onValueChange: uu => {
+            Nu(uu), ku(uu)
           },
-          placeholderText: PU("worldBuilder:schematicNamePlaceholder"),
-          maxLength: IU.qb
-        }), (0, QU.jsx)("h2", {
-          className: KU()("SaveSchematicError", {
-            Hidden: !hU
+          placeholderText: mu("worldBuilder:schematicNamePlaceholder"),
+          maxLength: Cu.pb
+        }), (0, Tu.jsx)("h2", {
+          className: Xu()("SaveSchematicError", {
+            Hidden: !pu
           }),
-          children: hU
-        }), (0, QU.jsx)("h2", {
-          className: KU()("SchematicPopupSubtitle", {
-            Hidden: "file" === RU
+          children: pu
+        }), (0, Tu.jsx)("h2", {
+          className: Xu()("SchematicPopupSubtitle", {
+            Hidden: "file" === Ru
           }),
-          children: PU("general:description")
-        }), (0, QU.jsx)(xU.d, {
-          className: KU()("SaveSchematicDescription", {
-            Hidden: "file" === RU
+          children: mu("general:description")
+        }), (0, Tu.jsx)(du.b, {
+          className: Xu()("SaveSchematicDescription", {
+            Hidden: "file" === Ru
           }),
-          onValueChange: uU,
-          placeholderText: PU("worldBuilder:schematicDescriptionPlaceholder"),
-          maxLength: IU.mb,
+          onValueChange: xu,
+          placeholderText: mu("worldBuilder:schematicDescriptionPlaceholder"),
+          maxLength: Cu.nb,
           useTextarea: !0
-        }), (0, QU.jsxs)("div", {
-          className: KU()("SaveSchematicCheckboxContainer", {
-            WarningBorder: "existing" === RU
+        }), (0, Tu.jsxs)("div", {
+          className: Xu()("SaveSchematicCheckboxContainer", {
+            WarningBorder: "existing" === Ru
           }),
-          children: [(0, QU.jsx)(mU.d, {
-            checked: WU,
-            onChange: UU => {
-              fU(UU.target.checked)
+          children: [(0, Tu.jsx)(bu.b, {
+            checked: ju,
+            onChange: uu => {
+              Hu(uu.target.checked)
             },
             disabled: !1,
             className: "SaveSchematicCheckbox"
-          }), (0, QU.jsx)("h1", {
+          }), (0, Tu.jsx)("h1", {
             className: "SchematicPopupSubtitle",
-            children: PU("existing" === RU ? "worldBuilder:overwriteLobbyCode" : "worldBuilder:includeLobbyCode")
+            children: mu("existing" === Ru ? "worldBuilder:overwriteLobbyCode" : "worldBuilder:includeLobbyCode")
           })]
-        }), "existing" === RU && (0, QU.jsx)("div", {
+        }), "existing" === Ru && (0, Tu.jsx)("div", {
           className: "SaveSchematicLobbyCodeWarning",
-          children: PU("worldBuilder:lobbyCodeWarning")
-        }), (0, QU.jsxs)("div", {
+          children: mu("worldBuilder:lobbyCodeWarning")
+        }), (0, Tu.jsxs)("div", {
           className: "SaveSchematicButtons",
-          children: [(0, QU.jsx)(jU.j, {
+          children: [(0, Tu.jsx)(Bu.l, {
             className: "SaveSchematicButton",
             onClick: () => {
-              JU() && pU(WU, TU, GU)
+              ku() && Ku(ju, Ju, ru)
             },
-            children: PU("file" === RU ? "general:download" : "general:save")
-          }), (0, QU.jsx)(jU.E, {
+            children: mu("file" === Ru ? "general:download" : "general:save")
+          }), (0, Tu.jsx)(Bu.F, {
             className: "SaveSchematicButton",
-            onClick: EU,
-            children: PU("general:cancel")
+            onClick: Qu,
+            children: mu("general:cancel")
           })]
         })]
       })
     }
-    var nU = gU(1196),
-      bU = gU(1637),
-      oU = gU(1120);
+    var Au = yu(1176),
+      Du = yu(1661),
+      Mu = yu(1110);
 
-    function ZU(UU, RU) {
-      if ("devDownloadJson" !== UU) ! function(UU, RU) {
-        const gU = nU.clientSideServerUrls.getHttpUrlFromWebSocketUrl((0, EU.d)().websocketUrl);
-        let TU = !1;
-        const qU = async (UU, RU) => {
-          if (TU) return;
-          TU = !0;
+    function Iu(uu, Ru) {
+      if ("devDownloadJson" !== uu) ! function(uu, Ru) {
+        const yu = Au.clientSideServerUrls.getHttpUrlFromWebSocketUrl((0, Qu.c)().websocketUrl);
+        let Ju = !1;
+        const Nu = async (uu, Ru) => {
+          if (Ju) return;
+          Ju = !0;
           const {
-            gameNameWithVariation: tU,
-            lobbyName: PU
-          } = (0, EU.d)(), qU = {
-            gameNameWithVariation: tU,
-            lobbyName: PU
+            gameNameWithVariation: Eu,
+            lobbyName: mu
+          } = (0, Qu.c)(), Nu = {
+            gameNameWithVariation: Eu,
+            lobbyName: mu
           };
-          return await (0, oU.postJsonWithMetricsCookiesAndJsonResponse)(`${gU}/schematic/${UU}`, pU.F[UU].toBuffer({
-            ...qU,
-            ...RU
+          return await (0, Mu.postJsonWithMetricsCookiesAndJsonResponse)(`${yu}/schematic/${uu}`, Ku.A[uu].toBuffer({
+            ...Nu,
+            ...Ru
           }), {
             retries: 1
           })
         };
-        if ("Plugin|WorldBuilder|SaveSchematic" === UU) ! function(UU) {
+        if ("Plugin|WorldBuilder|SaveSchematic" === uu) ! function(uu) {
           let {
-            ownedSchematics: RU,
-            onChosenDownload: gU,
-            onChosenEdit: tU,
-            onChosenNew: pU,
-            onClose: EU
-          } = UU;
-          GU.NotificationProvider.showCustomPopup({
-            body: UU => (0, QU.jsx)(JU, {
-              ownedSchematics: RU,
-              onChosenDownload: gU,
-              onChosenEdit: tU,
-              onChosenNew: pU,
-              onClose: UU
+            ownedSchematics: Ru,
+            onChosenDownload: yu,
+            onChosenEdit: Eu,
+            onChosenNew: Ku,
+            onClose: Qu
+          } = uu;
+          ru.NotificationProvider.showCustomPopup({
+            body: uu => (0, Tu.jsx)(ku, {
+              ownedSchematics: Ru,
+              onChosenDownload: yu,
+              onChosenEdit: Eu,
+              onChosenNew: Ku,
+              onClose: uu
             }),
             middleScreenPopupClassName: "SchematicPopup",
-            onClose: EU,
+            onClose: Qu,
             unlockPointerKey: "schematicSaverPopup"
           })
         }({
-          ownedSchematics: RU,
-          onChosenDownload: (UU, RU) => {
-            qU("download-schematic", {
-              name: UU,
-              includeLobbyCode: RU
-            }).then((RU => {
+          ownedSchematics: Ru,
+          onChosenDownload: (uu, Ru) => {
+            Nu("download-schematic", {
+              name: uu,
+              includeLobbyCode: Ru
+            }).then((Ru => {
               let {
                 buffer: {
-                  data: gU
+                  data: yu
                 }
-              } = RU;
-              const pU = tU.tC.from(gU);
-              (0, bU.downloadBlob)(new Blob([pU], {
+              } = Ru;
+              const Ku = Eu.XS.from(yu);
+              (0, Du.downloadBlob)(new Blob([Ku], {
                 type: "application/octet-stream"
-              }), `${UU}.bloxdschem`)
+              }), `${uu}.bloxdschem`)
             }))
           },
           onClose: () => {
-            qU("cancel", {})
+            Nu("cancel", {})
           },
-          onChosenEdit: (UU, RU, gU, tU) => {
-            qU("save-to-profile", {
-              schematicId: UU,
-              name: RU,
-              description: gU,
-              includeLobbyCode: tU
+          onChosenEdit: (uu, Ru, yu, Eu) => {
+            Nu("save-to-profile", {
+              schematicId: uu,
+              name: Ru,
+              description: yu,
+              includeLobbyCode: Eu
             })
           },
-          onChosenNew: (UU, RU, gU) => {
-            qU("save-to-profile", {
+          onChosenNew: (uu, Ru, yu) => {
+            Nu("save-to-profile", {
               schematicId: null,
-              name: UU,
-              description: RU,
-              includeLobbyCode: gU
+              name: uu,
+              description: Ru,
+              includeLobbyCode: yu
             })
           }
         });
-        else if ("Plugin|WorldBuilder|LoadSchematic" === UU) ! function(UU) {
+        else if ("Plugin|WorldBuilder|LoadSchematic" === uu) ! function(uu) {
           let {
-            ownedSchematics: RU,
-            onChosenFile: gU,
-            onChosenPreset: tU,
-            onClose: pU
-          } = UU;
-          GU.NotificationProvider.showCustomPopup({
-            body: UU => (0, QU.jsx)(WU, {
-              ownedSchematics: RU,
-              onChosenFile: gU,
-              onChosenPreset: tU,
-              onClose: UU
+            ownedSchematics: Ru,
+            onChosenFile: yu,
+            onChosenPreset: Eu,
+            onClose: Ku
+          } = uu;
+          ru.NotificationProvider.showCustomPopup({
+            body: uu => (0, Tu.jsx)(ju, {
+              ownedSchematics: Ru,
+              onChosenFile: yu,
+              onChosenPreset: Eu,
+              onClose: uu
             }),
             middleScreenPopupClassName: "SchematicPopup",
-            onClose: pU,
+            onClose: Ku,
             unlockPointerKey: "schematicLoaderPopup"
           })
         }({
-          ownedSchematics: RU,
-          onChosenFile: async UU => {
-            const RU = tU.tC.from(await UU.arrayBuffer()),
+          ownedSchematics: Ru,
+          onChosenFile: async uu => {
+            const Ru = Eu.XS.from(await uu.arrayBuffer()),
               {
-                gameNameWithVariation: PU,
-                lobbyName: TU
-              } = (0, EU.d)();
-            await (0, oU.postBinaryWithMetricsCookiesAndCustomResponse)(`${gU}/schematic/upload-schematic`, pU.F["upload-schematic"].toBuffer({
-              gameNameWithVariation: PU,
-              lobbyName: TU,
-              schematic: RU
+                gameNameWithVariation: mu,
+                lobbyName: Ju
+              } = (0, Qu.c)();
+            await (0, Mu.postBinaryWithMetricsCookiesAndCustomResponse)(`${yu}/schematic/upload-schematic`, Ku.A["upload-schematic"].toBuffer({
+              gameNameWithVariation: mu,
+              lobbyName: Ju,
+              schematic: Ru
             }), {
               retries: 1
-            }, oU.HttpPayloadType.json)
+            }, Mu.HttpPayloadType.json)
           },
-          onChosenPreset: UU => {
-            qU("load-from-profile", {
-              schematicId: UU
+          onChosenPreset: uu => {
+            Nu("load-from-profile", {
+              schematicId: uu
             })
           },
           onClose: () => {
-            qU("cancel", {})
+            Nu("cancel", {})
           }
         });
-        else if ("Plugin|WorldBuilder|ListSchematics" === UU)(0, PU.e)({
-          ownedSchematics: Array.isArray(RU) ? RU : RU.schematics,
-          currentWorldSchematicId: Array.isArray(RU) ? null : RU.currentWorldSchematicId,
+        else if ("Plugin|WorldBuilder|ListSchematics" === uu)(0, mu.f)({
+          ownedSchematics: Array.isArray(Ru) ? Ru : Ru.schematics,
+          currentWorldSchematicId: Array.isArray(Ru) ? null : Ru.currentWorldSchematicId,
           onClose: () => {
-            qU("cancel", {})
+            Nu("cancel", {})
           }
         });
-        else if ("Plugin|WorldBuilder|ExportWorld" === UU) {
-          var KU;
-          const UU = null !== (KU = RU.schematic) && void 0 !== KU ? KU : RU;
-          (0, fU.h)({
-            schematic: UU,
-            inSourceWorld: UU.schematicId === RU.currentWorldSchematicId,
+        else if ("Plugin|WorldBuilder|ExportWorld" === uu) {
+          var Xu;
+          const uu = null !== (Xu = Ru.schematic) && void 0 !== Xu ? Xu : Ru;
+          (0, Hu.h)({
+            schematic: uu,
+            inSourceWorld: uu.schematicId === Ru.currentWorldSchematicId,
             onClose: () => {
-              qU("cancel", {})
+              Nu("cancel", {})
             }
           })
-        } else console.error(`Unknown plugin message type ${UU}`)
-      }(UU, RU);
+        } else console.error(`Unknown plugin message type ${uu}`)
+      }(uu, Ru);
       else {
-        const UU = JSON.stringify(RU.data, null, 2);
-        (0, bU.downloadBlob)(new Blob([UU], {
+        const uu = JSON.stringify(Ru.data, null, 2);
+        (0, Du.downloadBlob)(new Blob([uu], {
           type: "application/json"
-        }), RU.filename)
+        }), Ru.filename)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,53 +1,53 @@
 export const id = 83;
 export const ids = [83];
 export const modules = {
-  4438: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => xU,
-      d: () => eU
+  4546: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => du,
+      h: () => Wu
     });
-    var tU = gU(1299),
-      pU = gU(24);
-    var EU = gU(311);
-    var PU = gU(581);
-    var TU = gU(2233),
-      qU = gU(4443),
-      KU = gU(4460),
-      cU = gU(4477);
-    class GU {
-      constructor(UU, RU, gU, tU, pU, EU) {
-        this.id = UU, this.type = RU, this.parameters = gU, this.tearDownNotification = tU, this.onDonePromise = pU, this.resolveRequest = EU
+    var Eu = yu(1261),
+      Ku = yu(34);
+    var Qu = yu(343);
+    var mu = yu(610);
+    var Ju = yu(2306),
+      Nu = yu(4549),
+      Xu = yu(4573),
+      Vu = yu(4586);
+    class ru {
+      constructor(uu, Ru, yu, Eu, Ku, Qu) {
+        this.id = uu, this.type = Ru, this.parameters = yu, this.tearDownNotification = Eu, this.onDonePromise = Ku, this.resolveRequest = Qu
       }
     }
-    const jU = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
-    class uU {
-      constructor(UU, RU, gU, tU, pU, EU) {
-        this.id = UU, this.type = RU, this.parameters = gU, this.resolveRequest = tU, this.onDonePromise = pU, this.tearDownNotification = EU, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
-        const PU = eU[RU];
-        if (!PU) throw console.error(`No QTE implementation registered for type: ${RU}`), new Error(`No QTE implementation registered for type: ${RU}`);
-        this.implementation = new PU(gU, (UU => {
-          this.isCompleted = !0, this.resolveRequest(UU)
+    const Bu = new Set(["primary-fire", "alt-fire", "TouchDig", "TouchInteract", "TouchBoost"]);
+    class xu {
+      constructor(uu, Ru, yu, Eu, Ku, Qu) {
+        this.id = uu, this.type = Ru, this.parameters = yu, this.resolveRequest = Eu, this.onDonePromise = Ku, this.tearDownNotification = Qu, this.mouseSub = null, this.stopInputActions = null, this.stopShellTicks = null, this.tickSub = null, this.implementation = void 0, this.isCompleted = !1;
+        const mu = Wu[Ru];
+        if (!mu) throw console.error(`No QTE implementation registered for type: ${Ru}`), new Error(`No QTE implementation registered for type: ${Ru}`);
+        this.implementation = new mu(yu, (uu => {
+          this.isCompleted = !0, this.resolveRequest(uu)
         }), this.tearDownNotification), this.setupInputHandlers()
       }
       setupInputHandlers() {
-        this.mouseSub = pU.p.subscribe("QTEMouseState", (UU => {
+        this.mouseSub = Ku.k.subscribe("QTEMouseState", (uu => {
           let {
-            isDown: RU
-          } = UU;
-          this.isCompleted || this.implementation.handleMouseInput(RU)
-        })), this.stopInputActions = (0, KU.i)((UU => {
-          this.isCompleted || !jU.has(UU.action) && !(0, KU.e)(UU) || this.implementation.handleMouseInput(UU.down)
-        })), this.tickSub = pU.p.subscribe("noaTick", (UU => {
+            isDown: Ru
+          } = uu;
+          this.isCompleted || this.implementation.handleMouseInput(Ru)
+        })), this.stopInputActions = (0, Xu.h)((uu => {
+          this.isCompleted || !Bu.has(uu.action) && !(0, Xu.g)(uu) || this.implementation.handleMouseInput(uu.down)
+        })), this.tickSub = Ku.k.subscribe("noaTick", (uu => {
           if (this.isCompleted) return;
-          const RU = UU / 1e3;
-          this.implementation.handleTick(RU)
-        })), this.stopShellTicks = (0, qU.x)((() => {
-          this.isCompleted || this.implementation.handleTick(TU.u / 1e3)
+          const Ru = uu / 1e3;
+          this.implementation.handleTick(Ru)
+        })), this.stopShellTicks = (0, Nu.y)((() => {
+          this.isCompleted || this.implementation.handleTick(Ju.r / 1e3)
         }))
       }
       cleanup() {
-        var UU, RU;
-        this.mouseSub && (pU.p.unsubscribe(this.mouseSub), this.mouseSub = null), null === (UU = this.stopInputActions) || void 0 === UU || UU.call(this), this.stopInputActions = null, null === (RU = this.stopShellTicks) || void 0 === RU || RU.call(this), this.stopShellTicks = null, this.tickSub && (pU.p.unsubscribe(this.tickSub), this.tickSub = null)
+        var uu, Ru;
+        this.mouseSub && (Ku.k.unsubscribe(this.mouseSub), this.mouseSub = null), null === (uu = this.stopInputActions) || void 0 === uu || uu.call(this), this.stopInputActions = null, null === (Ru = this.stopShellTicks) || void 0 === Ru || Ru.call(this), this.stopShellTicks = null, this.tickSub && (Ku.k.unsubscribe(this.tickSub), this.tickSub = null)
       }
       async waitUntilDone() {
         await this.onDonePromise
@@ -59,28 +59,28 @@ export const modules = {
         this.isCompleted = !0, this.cleanup(), this.implementation.tearDown()
       }
     }
-    const CU = new tU.d,
-      hU = new Map;
-    let QU = null;
-    const eU = {
+    const Su = new Eu.c,
+      pu = new Map;
+    let Tu = null;
+    const Wu = {
       progressBar: class {
-        constructor(UU, RU, gU) {
-          var tU, pU, EU, PU;
-          this.resolveRequest = RU, this.tearDownNotification = gU, this.progress = 0, this.YU = void 0, this.BU = void 0, this.VU = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
-          const TU = UU;
-          this.YU = null !== (tU = TU.YU) && void 0 !== tU ? tU : .075, this.BU = null !== (pU = TU.BU) && void 0 !== pU ? pU : 1, this.progress = null !== (EU = TU.aU) && void 0 !== EU ? EU : 30, this.VU = null !== (PU = TU.VU) && void 0 !== PU && PU, this.parameters = TU
+        constructor(uu, Ru, yu) {
+          var Eu, Ku, Qu, mu;
+          this.resolveRequest = Ru, this.tearDownNotification = yu, this.progress = 0, this.tu = void 0, this.lu = void 0, this.gu = void 0, this.isCompleted = !1, this.clickCount = 0, this.parameters = void 0, this.type = "progressBar";
+          const Ju = uu;
+          this.tu = null !== (Eu = Ju.tu) && void 0 !== Eu ? Eu : .075, this.lu = null !== (Ku = Ju.lu) && void 0 !== Ku ? Ku : 1, this.progress = null !== (Qu = Ju.nu) && void 0 !== Qu ? Qu : 30, this.gu = null !== (mu = Ju.gu) && void 0 !== mu && mu, this.parameters = Ju
         }
-        handleMouseInput(UU) {
-          UU && !this.isCompleted && (this.clickCount++, this.progress += this.BU, this.progress >= 100 && this.complete(!0))
+        handleMouseInput(uu) {
+          uu && !this.isCompleted && (this.clickCount++, this.progress += this.lu, this.progress >= 100 && this.complete(!0))
         }
         handleTick() {
           if (!this.isCompleted)
-            if (this.progress -= this.YU, this.VU && this.progress <= 0) this.complete(!1);
+            if (this.progress -= this.tu, this.gu && this.progress <= 0) this.complete(!1);
             else if (this.progress <= 0) this.progress = 0;
           else if (this.progress >= 100) return void this.complete(!0)
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(uu) {
+          this.isCompleted = !0, this.resolveRequest(uu)
         }
         getState() {
           return {
@@ -98,30 +98,30 @@ export const modules = {
         }
       },
       timedClick: class {
-        constructor(UU, RU, gU) {
-          var tU;
-          this.resolveRequest = RU, this.tearDownNotification = gU, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = UU, this.timeWindowMs = null !== (tU = this.parameters.HU) && void 0 !== tU ? tU : 3e3, this.startTime = Date.now()
+        constructor(uu, Ru, yu) {
+          var Eu;
+          this.resolveRequest = Ru, this.tearDownNotification = yu, this.startTime = void 0, this.timeWindowMs = void 0, this.isCompleted = !1, this.parameters = void 0, this.type = "timedClick", this.parameters = uu, this.timeWindowMs = null !== (Eu = this.parameters.wu) && void 0 !== Eu ? Eu : 3e3, this.startTime = Date.now()
         }
-        handleMouseInput(UU) {
-          if (!UU || this.isCompleted) return;
+        handleMouseInput(uu) {
+          if (!uu || this.isCompleted) return;
           Date.now() - this.startTime <= this.timeWindowMs && this.complete(!0)
         }
         handleTick() {
           if (this.isCompleted) return;
           Date.now() - this.startTime > this.timeWindowMs && this.complete(!1)
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(uu) {
+          this.isCompleted = !0, this.resolveRequest(uu)
         }
         getState() {
-          const UU = Date.now() - this.startTime,
-            RU = Math.max(0, this.timeWindowMs - UU);
+          const uu = Date.now() - this.startTime,
+            Ru = Math.max(0, this.timeWindowMs - uu);
           return {
             type: this.type,
             parameters: this.parameters,
             state: {
-              timeRemaining: RU,
-              HU: this.timeWindowMs
+              timeRemaining: Ru,
+              wu: this.timeWindowMs
             },
             isActive: !0
           }
@@ -131,49 +131,49 @@ export const modules = {
         }
       },
       gravityBar: class {
-        constructor(UU, RU, gU) {
-          var tU;
-          this.resolveRequest = RU, this.tearDownNotification = gU, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
-          const pU = UU;
+        constructor(uu, Ru, yu) {
+          var Eu;
+          this.resolveRequest = Ru, this.tearDownNotification = yu, this.parameters = void 0, this.type = "gravityBar", this.catchZonePosition = .5, this.catchZoneVelocity = 0, this.isMouseDown = !1, this.moverPosition = .5, this.moverTarget = Math.random(), this.ticksUntilDirectionChange = void 0, this.progress = void 0, this.isCompleted = !1;
+          const Ku = uu;
           this.parameters = {
-            ...pU,
-            kU: EU.c.clamp(pU.kU, .05, 1)
-          }, this.progress = null !== (tU = pU.aU) && void 0 !== tU ? tU : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
+            ...Ku,
+            Yu: Qu.c.clamp(Ku.Yu, .05, 1)
+          }, this.progress = null !== (Eu = Ku.nu) && void 0 !== Eu ? Eu : 30, this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
-        handleMouseInput(UU) {
-          this.isMouseDown = UU
+        handleMouseInput(uu) {
+          this.isMouseDown = uu
         }
-        handleTick(UU) {
-          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(UU))
+        handleTick(uu) {
+          this.isCompleted || (this.updateMover(), this.updateCatchZone(), this.updateProgress(uu))
         }
         updateMover() {
           this.ticksUntilDirectionChange--, (this.ticksUntilDirectionChange <= 0 || Math.abs(this.moverPosition - this.moverTarget) < .02) && this.pickNewMoverTarget();
-          const UU = Math.sign(this.moverTarget - this.moverPosition);
-          this.moverPosition += UU * this.parameters.FU * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
+          const uu = Math.sign(this.moverTarget - this.moverPosition);
+          this.moverPosition += uu * this.parameters.ou * .004, this.moverPosition = Math.max(0, Math.min(1, this.moverPosition))
         }
         pickNewMoverTarget() {
           this.moverTarget = Math.random(), this.ticksUntilDirectionChange = this.randomNumTicksUntilDirectionChange()
         }
         randomNumTicksUntilDirectionChange() {
-          const UU = EU.c.clamp(1 - .7 * this.parameters.iU, 0, 1.4);
-          return Math.floor(60 * UU + 40 * Math.random())
+          const uu = Qu.c.clamp(1 - .7 * this.parameters.qu, 0, 1.4);
+          return Math.floor(60 * uu + 40 * Math.random())
         }
         updateCatchZone() {
-          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.AU : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = EU.c.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
-          const UU = this.parameters.kU / 2,
-            RU = UU,
-            gU = 1 - UU;
-          this.catchZonePosition <= RU ? (this.catchZonePosition = RU, this.catchZoneVelocity = 0) : this.catchZonePosition >= gU && (this.catchZonePosition = gU, this.catchZoneVelocity = 0)
+          this.isMouseDown ? this.catchZoneVelocity += .001 * this.parameters.Ou : this.catchZoneVelocity -= .001 * this.parameters.gravity, this.catchZoneVelocity *= .92, this.catchZoneVelocity = Qu.c.clampAbs(this.catchZoneVelocity, .03), this.catchZonePosition += this.catchZoneVelocity;
+          const uu = this.parameters.Yu / 2,
+            Ru = uu,
+            yu = 1 - uu;
+          this.catchZonePosition <= Ru ? (this.catchZonePosition = Ru, this.catchZoneVelocity = 0) : this.catchZonePosition >= yu && (this.catchZonePosition = yu, this.catchZoneVelocity = 0)
         }
         isMoverInCatchZone() {
-          const UU = this.parameters.kU / 2;
-          return this.moverPosition >= this.catchZonePosition - UU && this.moverPosition <= this.catchZonePosition + UU
+          const uu = this.parameters.Yu / 2;
+          return this.moverPosition >= this.catchZonePosition - uu && this.moverPosition <= this.catchZonePosition + uu
         }
-        updateProgress(UU) {
-          this.isMoverInCatchZone() ? this.progress += this.parameters.zU * UU : this.progress -= this.parameters.MU * UU, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.VU && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
+        updateProgress(uu) {
+          this.isMoverInCatchZone() ? this.progress += this.parameters.vu * uu : this.progress -= this.parameters.au * uu, this.progress >= 100 ? (this.progress = 100, this.complete(!0)) : this.parameters.gu && this.progress <= 0 ? (this.progress = 0, this.complete(!1)) : this.progress < 0 && (this.progress = 0)
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(uu) {
+          this.isCompleted = !0, this.resolveRequest(uu)
         }
         getState() {
           return {
@@ -181,7 +181,7 @@ export const modules = {
             parameters: this.parameters,
             state: {
               catchZonePosition: this.catchZonePosition,
-              kU: this.parameters.kU,
+              Yu: this.parameters.Yu,
               moverPosition: this.moverPosition,
               progress: this.progress,
               isCatching: this.isMoverInCatchZone()
@@ -194,38 +194,38 @@ export const modules = {
         }
       },
       precisionBar: class {
-        constructor(UU, RU, gU) {
-          var tU, pU, PU, TU, qU;
-          this.resolveRequest = RU, this.tearDownNotification = gU, this.startTime = void 0, this.speed = void 0, this.LU = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
-          const KU = UU;
+        constructor(uu, Ru, yu) {
+          var Eu, Ku, mu, Ju, Nu;
+          this.resolveRequest = Ru, this.tearDownNotification = yu, this.startTime = void 0, this.speed = void 0, this.uR = void 0, this.isCompleted = !1, this.markerPosition = 0, this.parameters = void 0, this.type = "precisionBar";
+          const Xu = uu;
           this.parameters = {
-            ...KU,
-            speed: null !== (tU = KU.speed) && void 0 !== tU ? tU : .5,
-            LU: EU.c.clamp(KU.LU, .05, 1),
-            label: null !== (pU = KU.label) && void 0 !== pU ? pU : [{
+            ...Xu,
+            speed: null !== (Eu = Xu.speed) && void 0 !== Eu ? Eu : .5,
+            uR: Qu.c.clamp(Xu.uR, .05, 1),
+            label: null !== (Ku = Xu.label) && void 0 !== Ku ? Ku : [{
               str: "Click when the marker is within the green zone."
             }],
-            icon: null !== (PU = KU.icon) && void 0 !== PU ? PU : null,
-            scale: null !== (TU = KU.scale) && void 0 !== TU ? TU : 1,
-            rotation: null !== (qU = KU.rotation) && void 0 !== qU ? qU : 0
-          }, this.speed = this.parameters.speed, this.LU = this.parameters.LU, this.startTime = Date.now()
+            icon: null !== (mu = Xu.icon) && void 0 !== mu ? mu : null,
+            scale: null !== (Ju = Xu.scale) && void 0 !== Ju ? Ju : 1,
+            rotation: null !== (Nu = Xu.rotation) && void 0 !== Nu ? Nu : 0
+          }, this.speed = this.parameters.speed, this.uR = this.parameters.uR, this.startTime = Date.now()
         }
-        handleMouseInput(UU) {
-          if (UU) {
+        handleMouseInput(uu) {
+          if (uu) {
             this.updateMarkerPosition();
-            const UU = Math.abs(this.markerPosition - .5) <= this.LU / 2;
-            this.complete(UU)
+            const uu = Math.abs(this.markerPosition - .5) <= this.uR / 2;
+            this.complete(uu)
           }
         }
         handleTick() {
           this.isCompleted || this.updateMarkerPosition()
         }
         updateMarkerPosition() {
-          const UU = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
-          this.markerPosition = UU <= .5 ? 2 * UU : 2 - 2 * UU
+          const uu = (Date.now() - this.startTime) / 1e3 * this.speed % 1;
+          this.markerPosition = uu <= .5 ? 2 * uu : 2 - 2 * uu
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(uu) {
+          this.isCompleted = !0, this.resolveRequest(uu)
         }
         getState() {
           return this.updateMarkerPosition(), {
@@ -242,29 +242,29 @@ export const modules = {
         }
       },
       rhythmClick: class {
-        constructor(UU, RU, gU) {
-          this.resolveRequest = RU, this.tearDownNotification = gU, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = UU, this.shrinkStartTime = Date.now()
+        constructor(uu, Ru, yu) {
+          this.resolveRequest = Ru, this.tearDownNotification = yu, this.parameters = void 0, this.type = "rhythmClick", this.shrinkStartTime = void 0, this.isCompleted = !1, this.successes = 0, this.misses = 0, this.lastClickResult = null, this.parameters = uu, this.shrinkStartTime = Date.now()
         }
-        handleMouseInput(UU) {
-          if (!UU || this.isCompleted) return;
-          const RU = this.getOuterCircleProgress();
-          if (RU <= this.parameters.UR && RU >= -this.parameters.UR) {
-            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.lU) return void this.complete(!0)
+        handleMouseInput(uu) {
+          if (!uu || this.isCompleted) return;
+          const Ru = this.getOuterCircleProgress();
+          if (Ru <= this.parameters.KR && Ru >= -this.parameters.KR) {
+            if (this.successes++, this.lastClickResult = !0, this.successes >= this.parameters.yR) return void this.complete(!0)
           } else this.handleMiss();
           this.shrinkStartTime = Date.now()
         }
         handleMiss() {
-          this.misses++, this.lastClickResult = !1, !(0, PU.E)(this.parameters.RR) && this.misses > this.parameters.RR ? this.complete(!1) : this.shrinkStartTime = Date.now()
+          this.misses++, this.lastClickResult = !1, !(0, mu.E)(this.parameters.QR) && this.misses > this.parameters.QR ? this.complete(!1) : this.shrinkStartTime = Date.now()
         }
         handleTick() {
           if (this.isCompleted) return;
-          this.getOuterCircleProgress() < -this.parameters.UR && this.handleMiss()
+          this.getOuterCircleProgress() < -this.parameters.KR && this.handleMiss()
         }
         getOuterCircleProgress() {
-          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.OU
+          return 1 - (Date.now() - this.shrinkStartTime) / this.parameters.ER
         }
-        complete(UU) {
-          this.isCompleted = !0, this.resolveRequest(UU)
+        complete(uu) {
+          this.isCompleted = !0, this.resolveRequest(uu)
         }
         getState() {
           return {
@@ -273,7 +273,7 @@ export const modules = {
             state: {
               outerCircleProgress: this.getOuterCircleProgress(),
               successes: this.successes,
-              lU: this.parameters.lU,
+              yR: this.parameters.yR,
               misses: this.misses,
               lastClickResult: this.lastClickResult
             },
@@ -286,61 +286,61 @@ export const modules = {
       }
     };
 
-    function WU() {
-      (0, cU.f)(TU.z.Qte, QU ? TU.z.Qte : 0), QU ? pU.p.yh("qteStateUpdated", QU.getState()) : pU.p.yh("qteStateUpdated", {
+    function ju() {
+      (0, Vu.h)(Ju.t.Qte, Tu ? Ju.t.Qte : 0), Tu ? Ku.k.Op("qteStateUpdated", Tu.getState()) : Ku.k.Op("qteStateUpdated", {
         type: null,
         typeSpecificParameters: null,
         isActive: !1
       })
     }
-    class fU {
-      constructor(UU, RU) {
-        this.resultPromise = UU, this.tearDownQTE = RU
+    class Hu {
+      constructor(uu, Ru) {
+        this.resultPromise = uu, this.tearDownQTE = Ru
       }
-      static create(UU, RU, gU) {
-        const tU = Promise.race([UU, RU]);
-        return new fU(tU, gU)
+      static create(uu, Ru, yu) {
+        const Eu = Promise.race([uu, Ru]);
+        return new Hu(Eu, yu)
       }
       async getResult() {
         return await this.resultPromise
       }
     }
-    class xU {
-      static queueQTE(UU, RU, gU) {
-        let tU, pU;
-        const EU = new Promise((UU => {
-            tU = UU
+    class du {
+      static queueQTE(uu, Ru, yu) {
+        let Eu, Ku;
+        const Qu = new Promise((uu => {
+            Eu = uu
           })),
-          PU = new Promise((UU => {
-            pU = () => {
-              UU("qteTornDown")
+          mu = new Promise((uu => {
+            Ku = () => {
+              uu("qteTornDown")
             }
           })),
-          TU = Promise.race([EU, PU]).then((() => {})),
-          qU = new GU(UU, RU, gU, pU, TU, tU);
-        return hU.set(UU, qU), CU.enqueue(qU), QU || this.processNextQTE(), fU.create(EU, PU, pU)
+          Ju = Promise.race([Qu, mu]).then((() => {})),
+          Nu = new ru(uu, Ru, yu, Ku, Ju, Eu);
+        return pu.set(uu, Nu), Su.enqueue(Nu), Tu || this.processNextQTE(), Hu.create(Qu, mu, Ku)
       }
       static async processNextQTE() {
-        if (QU || CU.Lu()) return void(CU.Lu() && QU && (QU = null, WU()));
-        const UU = await CU.dequeue();
-        if (!hU.has(UU.id)) return void await this.processNextQTE();
-        hU.delete(UU.id);
-        const RU = new uU(UU.id, UU.type, UU.parameters, UU.resolveRequest, UU.onDonePromise, UU.tearDownNotification);
-        QU = RU, WU();
+        if (Tu || Su.RS()) return void(Su.RS() && Tu && (Tu = null, ju()));
+        const uu = await Su.dequeue();
+        if (!pu.has(uu.id)) return void await this.processNextQTE();
+        pu.delete(uu.id);
+        const Ru = new xu(uu.id, uu.type, uu.parameters, uu.resolveRequest, uu.onDonePromise, uu.tearDownNotification);
+        Tu = Ru, ju();
         try {
-          await RU.waitUntilDone()
-        } catch (gU) {
-          console.error("Error while waiting for QTE to resolve:", gU.stack)
+          await Ru.waitUntilDone()
+        } catch (yu) {
+          console.error("Error while waiting for QTE to resolve:", yu.stack)
         }
-        QU === RU && (QU.cleanup(), QU = null, WU()), await this.processNextQTE()
+        Tu === Ru && (Tu.cleanup(), Tu = null, ju()), await this.processNextQTE()
       }
-      static cancelQTE(UU) {
-        if (QU && QU.id === UU) return QU.tearDown(), QU = null, WU(), void this.processNextQTE();
-        const RU = hU.get(UU);
-        RU && (hU.delete(UU), RU.tearDownNotification())
+      static cancelQTE(uu) {
+        if (Tu && Tu.id === uu) return Tu.tearDown(), Tu = null, ju(), void this.processNextQTE();
+        const Ru = pu.get(uu);
+        Ru && (pu.delete(uu), Ru.tearDownNotification())
       }
       static getCurrentState() {
-        return QU ? QU.getState() : {
+        return Tu ? Tu.getState() : {
           type: null,
           parameters: null,
           state: null,
@@ -348,60 +348,60 @@ export const modules = {
         }
       }
       static reset() {
-        QU && (QU.tearDown(), QU = null), hU.forEach(((UU, RU) => {
-          this.cancelQTE(RU)
-        })), CU.emptyQueue(), hU.clear(), WU()
+        Tu && (Tu.tearDown(), Tu = null), pu.forEach(((uu, Ru) => {
+          this.cancelQTE(Ru)
+        })), Su.emptyQueue(), pu.clear(), ju()
       }
     }
   },
-  4456: (UU, RU, gU) => {
-    gU.d(RU, {
-      $: () => oU,
-      A: () => EU,
-      B: () => CU,
-      Db: () => mU,
-      F: () => AU,
-      G: () => KU,
-      Gb: () => YU,
-      Hb: () => HU,
-      J: () => hU,
-      L: () => qU,
-      Lb: () => VU,
-      M: () => jU,
-      N: () => GU,
-      Ob: () => XU,
-      R: () => JU,
-      Rb: () => vU,
-      S: () => nU,
-      Tb: () => fU,
-      V: () => bU,
-      X: () => wU,
-      Xb: () => xU,
-      Zb: () => sU,
-      b: () => FU,
-      bc: () => pU,
-      db: () => SU,
-      dc: () => iU,
-      e: () => kU,
-      g: () => cU,
-      hb: () => dU,
-      j: () => WU,
-      kb: () => rU,
-      n: () => yU,
-      nb: () => ZU,
-      p: () => eU,
-      pb: () => BU,
-      s: () => QU,
-      tb: () => aU,
-      v: () => PU,
-      w: () => TU,
-      wb: () => uU,
-      x: () => tU,
-      zb: () => IU
+  4564: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      $: () => Du,
+      $b: () => Pu,
+      Ab: () => xu,
+      B: () => Eu,
+      Db: () => Cu,
+      E: () => Qu,
+      G: () => Su,
+      H: () => iu,
+      Hb: () => bu,
+      Ib: () => Uu,
+      L: () => Xu,
+      Lb: () => Lu,
+      N: () => pu,
+      Pb: () => su,
+      Q: () => Nu,
+      R: () => Bu,
+      Rb: () => lu,
+      S: () => ru,
+      Sb: () => gu,
+      Tb: () => Hu,
+      Vb: () => du,
+      W: () => ku,
+      X: () => Au,
+      Yb: () => Fu,
+      Zb: () => Ku,
+      c: () => hu,
+      db: () => eu,
+      g: () => Zu,
+      hb: () => Mu,
+      i: () => Vu,
+      j: () => ju,
+      lb: () => zu,
+      m: () => wu,
+      ob: () => cu,
+      p: () => Wu,
+      rb: () => tu,
+      s: () => Tu,
+      ub: () => Iu,
+      w: () => mu,
+      x: () => Ju,
+      xb: () => nu,
+      yb: () => Gu
     });
-    const tU = 32,
-      pU = 33.333333333333336,
-      EU = {
+    const Eu = 32,
+      Ku = 33.333333333333336,
+      Qu = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -435,18 +435,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      PU = {
+      mu = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      TU = {
+      Ju = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      qU = {
+      Nu = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -454,20 +454,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      KU = {
+      Xu = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      cU = {
+      Vu = {
         Look: 0,
         Remesh: 1
       },
-      GU = 8,
-      jU = 1,
-      uU = {
+      ru = 8,
+      Bu = 1,
+      xu = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -476,7 +476,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      CU = {
+      Su = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -504,12 +504,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      hU = {
+      pu = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      QU = {
+      Tu = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -561,7 +561,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      eU = {
+      Wu = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -571,10 +571,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      WU = 4,
-      fU = 4,
-      xU = 65535,
-      mU = {
+      ju = 4,
+      Hu = 4,
+      du = 65535,
+      bu = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -587,7 +587,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      IU = {
+      Cu = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -595,12 +595,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      JU = 88,
-      wU = 0,
-      nU = 24,
-      bU = 48,
-      oU = 80,
-      ZU = {
+      ku = 88,
+      eu = 0,
+      Au = 24,
+      Du = 48,
+      Mu = 80,
+      Iu = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -611,18 +611,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      aU = {
+      Gu = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      YU = {
+      Uu = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      BU = {
+      nu = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -640,34 +640,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      VU = {
+      su = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      rU = 65535,
-      XU = {
+      tu = 65535,
+      lu = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      vU = {
+      gu = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      dU = 2,
-      HU = {
+      cu = 2,
+      Lu = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      SU = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      sU = {
+      zu = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      Fu = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -679,7 +679,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      yU = {
+      wu = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -706,7 +706,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      kU = {
+      Zu = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -864,8 +864,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      FU = 8,
-      iU = {
+      hu = 8,
+      Pu = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -890,289 +890,289 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      AU = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      iu = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4443: (UU, RU, gU) => {
-    gU.d(RU, {
-      B: () => oU,
-      D: () => ZU,
-      F: () => WU,
-      G: () => PU,
-      J: () => TU,
-      L: () => nU,
-      c: () => wU,
-      e: () => xU,
-      i: () => YU,
-      l: () => aU,
-      n: () => eU,
-      o: () => IU,
-      s: () => fU,
-      u: () => mU,
-      x: () => bU
+  4549: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      C: () => Mu,
+      D: () => Iu,
+      E: () => ju,
+      G: () => mu,
+      I: () => Ju,
+      J: () => Au,
+      e: () => eu,
+      g: () => du,
+      i: () => Uu,
+      m: () => Gu,
+      n: () => Wu,
+      o: () => Cu,
+      r: () => Hu,
+      v: () => bu,
+      y: () => Du
     });
-    var tU = gU(4446);
-    const pU = {
+    var Eu = yu(4558);
+    const Ku = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let EU = pU;
+    let Qu = Ku;
 
-    function PU(UU) {
-      EU = null !== UU && void 0 !== UU ? UU : pU
+    function mu(uu) {
+      Qu = null !== uu && void 0 !== uu ? uu : Ku
     }
 
-    function TU() {
-      return EU
+    function Ju() {
+      return Qu
     }
-    const qU = new Set,
-      KU = new Set;
-    let cU = -1;
-    const GU = new Set,
-      jU = new Set;
-    let uU = 0,
-      CU = 0;
-    const hU = new Set,
-      QU = new Set;
+    const Nu = new Set,
+      Xu = new Set;
+    let Vu = -1;
+    const ru = new Set,
+      Bu = new Set;
+    let xu = 0,
+      Su = 0;
+    const pu = new Set,
+      Tu = new Set;
 
-    function eU(UU) {
-      return qU.add(UU), () => {
-        qU.delete(UU)
+    function Wu(uu) {
+      return Nu.add(uu), () => {
+        Nu.delete(uu)
       }
     }
 
-    function WU(UU, RU) {
-      for (const tU of qU) try {
-        tU(UU)
-      } catch (gU) {
-        RU(gU)
+    function ju(uu, Ru) {
+      for (const Eu of Nu) try {
+        Eu(uu)
+      } catch (yu) {
+        Ru(yu)
       }
     }
 
-    function fU(UU) {
-      return KU.add(UU), () => {
-        KU.delete(UU)
+    function Hu(uu) {
+      return Xu.add(uu), () => {
+        Xu.delete(uu)
       }
     }
 
-    function xU(UU, RU) {
-      const gU = cU < 0 ? 0 : UU - cU;
-      cU = UU;
-      for (const pU of KU) try {
-        pU(gU)
-      } catch (tU) {
-        RU(tU)
+    function du(uu, Ru) {
+      const yu = Vu < 0 ? 0 : uu - Vu;
+      Vu = uu;
+      for (const Ku of Xu) try {
+        Ku(yu)
+      } catch (Eu) {
+        Ru(Eu)
       }
     }
 
-    function mU(UU) {
-      return GU.add(UU), () => {
-        GU.delete(UU)
+    function bu(uu) {
+      return ru.add(uu), () => {
+        ru.delete(uu)
       }
     }
 
-    function IU(UU) {
-      return jU.add(UU), () => {
-        jU.delete(UU)
+    function Cu(uu) {
+      return Bu.add(uu), () => {
+        Bu.delete(uu)
       }
     }
-    let JU = 0;
+    let ku = 0;
 
-    function wU(UU) {
-      JU += UU
+    function eu(uu) {
+      ku += uu
     }
 
-    function nU() {
-      const UU = JU;
-      return JU = 0, UU
+    function Au() {
+      const uu = ku;
+      return ku = 0, uu
     }
 
-    function bU(UU) {
-      return hU.add(UU), () => {
-        hU.delete(UU)
-      }
-    }
-
-    function oU(UU) {
-      return QU.add(UU), () => {
-        QU.delete(UU)
+    function Du(uu) {
+      return pu.add(uu), () => {
+        pu.delete(uu)
       }
     }
 
-    function ZU() {
-      uU = 0, CU = 0, cU = -1
+    function Mu(uu) {
+      return Tu.add(uu), () => {
+        Tu.delete(uu)
+      }
     }
 
-    function aU(UU, RU) {
-      if ("paced" === UU) return CU += RU, null;
-      if ("drawn" !== UU && "skipped" !== UU) return null;
-      const gU = RU + CU;
-      return CU = 0, gU
+    function Iu() {
+      xu = 0, Su = 0, Vu = -1
     }
 
-    function YU(UU, RU, gU, pU) {
-      const EU = (0, tU.j)(RU),
-        PU = UU > 0 ? performance.now() : 0;
-      for (let tU = 0; tU < UU; tU++)
-        for (const UU of hU) try {
-          UU()
-        } catch (TU) {
-          pU(TU)
+    function Gu(uu, Ru) {
+      if ("paced" === uu) return Su += Ru, null;
+      if ("drawn" !== uu && "skipped" !== uu) return null;
+      const yu = Ru + Su;
+      return Su = 0, yu
+    }
+
+    function Uu(uu, Ru, yu, Ku) {
+      const Qu = (0, Eu.g)(Ru),
+        mu = uu > 0 ? performance.now() : 0;
+      for (let Eu = 0; Eu < uu; Eu++)
+        for (const uu of pu) try {
+          uu()
+        } catch (Ju) {
+          Ku(Ju)
         }
-      if (UU > 0 && wU(performance.now() - PU), null !== gU) {
-        for (const UU of GU) try {
-          UU(gU)
-        } catch (TU) {
-          pU(TU)
+      if (uu > 0 && eu(performance.now() - mu), null !== yu) {
+        for (const uu of ru) try {
+          uu(yu)
+        } catch (Ju) {
+          Ku(Ju)
         }
-        uU += gU
+        xu += yu
       }
-      if ("drawn" === RU) {
-        const UU = uU;
-        uU = 0;
-        for (const RU of jU) try {
-          RU(UU)
-        } catch (TU) {
-          pU(TU)
+      if ("drawn" === Ru) {
+        const uu = xu;
+        xu = 0;
+        for (const Ru of Bu) try {
+          Ru(uu)
+        } catch (Ju) {
+          Ku(Ju)
         }
       }
-      for (const tU of QU) try {
-        tU(UU, EU)
-      } catch (TU) {
-        pU(TU)
+      for (const Eu of Tu) try {
+        Eu(uu, Qu)
+      } catch (Ju) {
+        Ku(Ju)
       }
     }
   },
-  4449: (UU, RU, gU) => {
-    gU.d(RU, {
-      B: () => BU,
-      Bc: () => tU.V,
-      Bd: () => QU,
-      Cc: () => tU.X,
-      Db: () => LU,
-      Ec: () => tU.$,
-      F: () => jR,
-      Fd: () => TR,
-      Gb: () => OU,
-      Hc: () => tU.kb,
-      Id: () => SU,
-      J: () => NU,
-      Jc: () => uR,
-      Kb: () => RR,
-      L: () => tU.e,
-      Lb: () => pU.d,
-      Ld: () => yU,
-      Mb: () => wU,
-      Nc: () => KR,
-      Ob: () => dU,
-      Oc: () => tR,
-      Od: () => HU,
-      P: () => KU,
-      Pb: () => aU,
-      Pc: () => tU.nb,
-      Pd: () => iU,
-      R: () => tU.g,
-      Rc: () => tU.pb,
-      Sc: () => tU.tb,
-      Tb: () => oU,
-      U: () => tU.j,
-      Uc: () => lU,
-      V: () => DU,
-      Vd: () => kU,
-      Wb: () => tU.J,
-      Wc: () => tU.zb,
-      Xd: () => zU,
-      Z: () => tU.s,
-      Zb: () => YU,
-      Zc: () => tU.Db,
-      _: () => tU.v,
-      _d: () => AU,
-      ab: () => tU.w,
-      ac: () => mU,
-      ae: () => PR,
-      b: () => UR,
-      bd: () => tU.Gb,
-      c: () => hU,
-      cb: () => GU,
-      de: () => CR,
-      ec: () => ER,
-      ee: () => xU,
-      f: () => CU,
-      fb: () => WU,
-      fd: () => tU.Lb,
-      fe: () => MU,
-      g: () => qR,
-      gc: () => fU,
-      hd: () => tU.Ob,
-      ib: () => tU.x,
-      ie: () => XU,
-      j: () => nU,
-      jb: () => tU.A,
-      kb: () => sU,
-      kc: () => cR,
-      kd: () => tU.Rb,
-      ke: () => rU,
-      ld: () => bU,
-      m: () => JU,
-      md: () => tU.Tb,
-      me: () => VU,
-      ob: () => pR,
-      oc: () => pU.i,
-      p: () => tU.b,
-      pe: () => qU,
-      qc: () => eU,
-      qd: () => tU.Xb,
-      s: () => GR,
-      sb: () => cU,
-      te: () => vU,
-      uc: () => gR,
-      ud: () => tU.bc,
-      vb: () => tU.B,
-      w: () => ZU,
-      wc: () => tU.R,
-      we: () => hR,
-      x: () => PU,
-      xd: () => EU,
-      zb: () => FU,
-      zc: () => tU.S,
-      ze: () => uU
+  4562: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      B: () => Iu,
+      Bb: () => hu,
+      Cb: () => Ou,
+      Cc: () => Eu.rb,
+      Db: () => fu,
+      Dd: () => Pu,
+      E: () => mu,
+      F: () => nu,
+      Fb: () => RR,
+      Gc: () => xR,
+      Ib: () => Ku.d,
+      Ic: () => XR,
+      Id: () => Zu,
+      J: () => BR,
+      Jd: () => Yu,
+      K: () => vu,
+      Kb: () => eu,
+      Mb: () => cu,
+      Mc: () => ER,
+      Nc: () => Eu.ub,
+      Nd: () => iu,
+      O: () => Eu.g,
+      Pb: () => Gu,
+      Q: () => Xu,
+      Qc: () => Eu.xb,
+      R: () => Eu.i,
+      Rd: () => mR,
+      Sb: () => Mu,
+      Sc: () => Eu.yb,
+      Tb: () => Eu.N,
+      U: () => Eu.j,
+      Uc: () => au,
+      Ud: () => SR,
+      Vb: () => Uu,
+      Vd: () => du,
+      Wb: () => bu,
+      Wc: () => Eu.Db,
+      Wd: () => ou,
+      Xb: () => QR,
+      Xc: () => Eu.Hb,
+      Y: () => qu,
+      Yc: () => Eu.Ib,
+      Yd: () => lu,
+      Zc: () => Eu.Pb,
+      Zd: () => tu,
+      _b: () => Hu,
+      _c: () => Eu.Rb,
+      ab: () => Eu.s,
+      ac: () => VR,
+      bb: () => Eu.w,
+      bc: () => Ku.h,
+      bd: () => Eu.Sb,
+      be: () => su,
+      cc: () => Wu,
+      d: () => uR,
+      ee: () => Nu,
+      fb: () => Eu.x,
+      fc: () => yR,
+      fd: () => Du,
+      g: () => pu,
+      he: () => gu,
+      jb: () => ru,
+      jc: () => Eu.W,
+      jd: () => Eu.Tb,
+      k: () => Su,
+      ke: () => pR,
+      m: () => NR,
+      mb: () => ju,
+      md: () => Eu.Vb,
+      nb: () => Eu.B,
+      nc: () => Eu.X,
+      nd: () => Eu.Zb,
+      od: () => Qu,
+      oe: () => xu,
+      p: () => Au,
+      qb: () => Eu.E,
+      rc: () => Eu.$,
+      rd: () => Tu,
+      sb: () => Fu,
+      t: () => ku,
+      ub: () => KR,
+      uc: () => Eu.db,
+      ud: () => JR,
+      vb: () => Vu,
+      w: () => Eu.c,
+      xd: () => zu,
+      yb: () => Eu.G,
+      yc: () => Eu.hb,
+      yd: () => wu,
+      z: () => rR,
+      zd: () => Lu
     });
-    var tU = gU(4456),
-      pU = gU(2233);
-    const EU = Math.round(1e3 / tU.bc),
-      PU = 4,
-      TU = 2;
+    var Eu = yu(4564),
+      Ku = yu(2306);
+    const Qu = Math.round(1e3 / Eu.Zb),
+      mu = 4,
+      Ju = 2;
 
-    function qU() {
-      return crypto.getRandomValues(new Uint32Array(TU))
+    function Nu() {
+      return crypto.getRandomValues(new Uint32Array(Ju))
     }
-    const KU = {
+    const Xu = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      cU = 16,
-      GU = {
+      Vu = 16,
+      ru = {
         Draws: 1,
         NetAll: 2
       },
-      jU = {
+      Bu = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function uU(UU) {
-      return (UU.nametagsHidden ? IU.NametagsHidden : 0) | (UU.crouchToggle ? IU.CrouchToggle : 0) | (UU.bhopDisabled ? IU.BhopDisabled : 0) | (UU.disableBobbing ? IU.DisableBobbing : 0) | (UU.ezTowering ? IU.EzTowering : 0) | (UU.ezBridging ? IU.EzBridging : 0) | (UU.showChunkBorders ? IU.ShowChunkBorders : 0)
+    function xu(uu) {
+      return (uu.nametagsHidden ? Cu.NametagsHidden : 0) | (uu.crouchToggle ? Cu.CrouchToggle : 0) | (uu.bhopDisabled ? Cu.BhopDisabled : 0) | (uu.disableBobbing ? Cu.DisableBobbing : 0) | (uu.ezTowering ? Cu.EzTowering : 0) | (uu.ezBridging ? Cu.EzBridging : 0) | (uu.showChunkBorders ? Cu.ShowChunkBorders : 0)
     }
-    const CU = {
+    const Su = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      hU = {
+      pu = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -1180,7 +1180,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      QU = {
+      Tu = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -1189,7 +1189,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      eU = {
+      Wu = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -1198,20 +1198,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      WU = 5,
-      fU = 4294967295;
+      ju = 5,
+      Hu = 4294967295;
 
-    function xU(UU) {
-      return (UU.showFog ? jU.ShowFog : 0) | (UU.lighting ? jU.Lighting : 0) | (UU.chunkFade ? jU.ChunkFade : 0)
+    function du(uu) {
+      return (uu.showFog ? Bu.ShowFog : 0) | (uu.lighting ? Bu.Lighting : 0) | (uu.chunkFade ? Bu.ChunkFade : 0)
     }
-    const mU = {
+    const bu = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      IU = {
+      Cu = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -1221,50 +1221,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      JU = {
+      ku = {
         Release: 1,
         KeepTouches: 2
       },
-      wU = {
+      eu = {
         Point: 1,
         Stamped: 2
       },
-      nU = {
+      Au = {
         Add: 1,
         Clear: 2
       },
-      bU = 1,
-      oU = 8,
-      ZU = 16777215,
-      aU = 4,
-      YU = {
+      Du = 1,
+      Mu = 8,
+      Iu = 16777215,
+      Gu = 4,
+      Uu = {
         Resume: 1
       },
-      BU = {
+      nu = {
         Held: 1
       };
 
-    function VU(UU, RU) {
-      return (UU | RU << 8) >>> 0
+    function su(uu, Ru) {
+      return (uu | Ru << 8) >>> 0
     }
 
-    function rU(UU) {
-      return 255 & UU
+    function tu(uu) {
+      return 255 & uu
     }
 
-    function XU(UU) {
-      return UU >>> 8
+    function lu(uu) {
+      return uu >>> 8
     }
 
-    function vU(UU) {
-      return UU + 3 & -4
+    function gu(uu) {
+      return uu + 3 & -4
     }
-    const dU = 16777216,
-      HU = 20;
-    const SU = 8,
-      sU = 8,
-      yU = 16777216,
-      kU = {
+    const cu = 16777216,
+      Lu = 20;
+    const zu = 8,
+      Fu = 8,
+      wu = 16777216,
+      Zu = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1272,19 +1272,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      FU = {
+      hu = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      iU = 16,
-      AU = {
+      Pu = 16,
+      iu = {
         Lost: 0,
         Gone: 1
       },
-      zU = {
+      Yu = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1292,18 +1292,18 @@ export const modules = {
         Retire: 5
       };
 
-    function MU(UU) {
-      return UU === zU.WorldgenSeed || UU === zU.Generate
+    function ou(uu) {
+      return uu === Yu.WorldgenSeed || uu === Yu.Generate
     }
-    const DU = 4,
-      LU = 99,
-      NU = {
+    const qu = 4,
+      Ou = 99,
+      vu = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      lU = {
+      au = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1311,40 +1311,40 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      OU = 12,
-      UR = 16,
+      fu = 12,
+      uR = 16,
       RR = 4,
-      gR = 12,
-      tR = {
+      yR = 12,
+      ER = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      pR = 4,
-      ER = 8,
-      PR = 8,
-      TR = {
+      KR = 4,
+      QR = 8,
+      mR = 8,
+      JR = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      qR = {
+      NR = {
         Crit: 1,
         HitSelf: 2
       },
-      KR = {
+      XR = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      cR = {
+      VR = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      GR = 12,
-      jR = {
+      rR = 12,
+      BR = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1353,102 +1353,102 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      uR = 67108864;
+      xR = 67108864;
 
-    function CR(UU) {
-      for (const [RU, gU] of Object.entries(tU.e))
-        if (gU === UU) return RU;
-      return `Unknown${UU}`
+    function SR(uu) {
+      for (const [Ru, yu] of Object.entries(Eu.g))
+        if (yu === uu) return Ru;
+      return `Unknown${uu}`
     }
 
-    function hR(UU) {
+    function pR(uu) {
       return {
-        status: UU[tU.A.Status],
-        lastError: UU[tU.A.LastError],
-        lastErrorDetail: UU[tU.A.LastErrorDetail],
-        errorCount: UU[tU.A.ErrorCount],
-        frameIndex: UU[tU.A.FrameIndex],
-        tickIndex: UU[tU.A.TickIndex],
-        renderPending: UU[tU.A.RenderPending],
-        firstView: UU[tU.A.FirstView],
-        chunksCancelled: UU[tU.A.ChunksCancelled]
+        status: uu[Eu.E.Status],
+        lastError: uu[Eu.E.LastError],
+        lastErrorDetail: uu[Eu.E.LastErrorDetail],
+        errorCount: uu[Eu.E.ErrorCount],
+        frameIndex: uu[Eu.E.FrameIndex],
+        tickIndex: uu[Eu.E.TickIndex],
+        renderPending: uu[Eu.E.RenderPending],
+        firstView: uu[Eu.E.FirstView],
+        chunksCancelled: uu[Eu.E.ChunksCancelled]
       }
     }
   },
-  4446: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => PU,
-      f: () => EU,
-      j: () => pU
+  4558: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => mu,
+      d: () => Qu,
+      g: () => Ku
     });
-    var tU = gU(4449);
+    var Eu = yu(4562);
 
-    function pU(UU) {
-      return "none" !== UU
+    function Ku(uu) {
+      return "none" !== uu
     }
 
-    function EU(UU, RU) {
-      if (!UU) return "none";
-      switch (RU) {
-        case tU.ab.Drawn:
+    function Qu(uu, Ru) {
+      if (!uu) return "none";
+      switch (Ru) {
+        case Eu.fb.Drawn:
           return "drawn";
-        case tU.ab.Paced:
+        case Eu.fb.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function PU(UU) {
-      return "drawn" === UU
+    function mu(uu) {
+      return "drawn" === uu
     }
   },
-  4460: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => qU,
-      e: () => EU,
-      i: () => TU
+  4573: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Nu,
+      g: () => Qu,
+      h: () => Ju
     });
-    var tU = gU(2233),
-      pU = gU(4469);
+    var Eu = yu(2306),
+      Ku = yu(4578);
 
-    function EU(UU) {
+    function Qu(uu) {
       let {
-        action: RU,
-        flags: gU
-      } = UU;
-      return "mid-fire" === RU && 0 !== (gU & tU.b.AltLeftClick)
+        action: Ru,
+        flags: yu
+      } = uu;
+      return "mid-fire" === Ru && 0 !== (yu & Eu.b.AltLeftClick)
     }
-    const PU = new Set;
+    const mu = new Set;
 
-    function TU(UU) {
-      return PU.add(UU), () => {
-        PU.delete(UU)
+    function Ju(uu) {
+      return mu.add(uu), () => {
+        mu.delete(uu)
       }
     }
 
-    function qU(UU) {
-      const RU = pU.e[255 & UU];
-      if (void 0 === RU) return;
-      const gU = UU >>> 8 & 255,
-        EU = {
-          action: RU,
-          down: 0 !== (gU & tU.b.Down),
-          flags: gU,
-          press: UU >>> 16
+    function Nu(uu) {
+      const Ru = Ku.b[255 & uu];
+      if (void 0 === Ru) return;
+      const yu = uu >>> 8 & 255,
+        Qu = {
+          action: Ru,
+          down: 0 !== (yu & Eu.b.Down),
+          flags: yu,
+          press: uu >>> 16
         };
-      for (const tU of PU) tU(EU)
+      for (const Eu of mu) Eu(Qu)
     }
   },
-  4469: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => pU,
-      g: () => EU,
-      j: () => PU,
-      n: () => tU,
-      r: () => TU
+  4578: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Ku,
+      e: () => Qu,
+      f: () => mu,
+      j: () => Eu,
+      k: () => Ju
     });
-    const tU = {
+    const Eu = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -1645,8 +1645,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      pU = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      EU = {
+      Ku = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      Qu = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -1709,63 +1709,63 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      PU = {
+      mu = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      TU = [16]
+      Ju = [16]
   },
-  4477: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => TU,
-      e: () => PU,
-      f: () => KU
+  4586: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Ju,
+      f: () => mu,
+      h: () => Xu
     });
-    var tU = gU(2233),
-      pU = gU(2241);
-    const EU = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Eu = yu(2306),
+      Ku = yu(2312);
+    const Qu = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function PU(UU) {
-      return UU instanceof HTMLElement && (!!(UU.isContentEditable || UU instanceof HTMLTextAreaElement || UU instanceof HTMLSelectElement) || UU instanceof HTMLInputElement && !EU.has(UU.type))
+    function mu(uu) {
+      return uu instanceof HTMLElement && (!!(uu.isContentEditable || uu instanceof HTMLTextAreaElement || uu instanceof HTMLSelectElement) || uu instanceof HTMLInputElement && !Qu.has(uu.type))
     }
 
-    function TU(UU) {
-      let RU = null;
-      const gU = gU => {
-          const pU = PU(gU);
-          pU !== RU && (RU = pU, UU(tU.h.UiCapture, tU.z.Keyboard, 0, 0, pU ? tU.z.Keyboard : 0))
+    function Ju(uu) {
+      let Ru = null;
+      const yu = yu => {
+          const Ku = mu(yu);
+          Ku !== Ru && (Ru = Ku, uu(Eu.f.UiCapture, Eu.t.Keyboard, 0, 0, Ku ? Eu.t.Keyboard : 0))
         },
-        pU = UU => {
-          gU(UU.target)
+        Ku = uu => {
+          yu(uu.target)
         },
-        EU = UU => {
-          gU(UU.relatedTarget)
+        Qu = uu => {
+          yu(uu.relatedTarget)
         },
-        TU = () => {
-          gU(document.activeElement)
+        Ju = () => {
+          yu(document.activeElement)
         },
-        qU = {
+        Nu = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", pU, qU), document.addEventListener("focusout", EU, qU), document.addEventListener("keydown", TU, qU), gU(document.activeElement), () => {
-        document.removeEventListener("focusin", pU, qU), document.removeEventListener("focusout", EU, qU), document.removeEventListener("keydown", TU, qU)
+      return document.addEventListener("focusin", Ku, Nu), document.addEventListener("focusout", Qu, Nu), document.addEventListener("keydown", Ju, Nu), yu(document.activeElement), () => {
+        document.removeEventListener("focusin", Ku, Nu), document.removeEventListener("focusout", Qu, Nu), document.removeEventListener("keydown", Ju, Nu)
       }
     }
-    const qU = new Map;
+    const Nu = new Map;
 
-    function KU(UU, RU) {
-      var gU;
-      let tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      qU.set(tU, (null !== (gU = qU.get(tU)) && void 0 !== gU ? gU : 0) & ~UU | RU & UU);
-      let EU = 0;
-      for (const pU of qU.values()) EU |= pU;
-      return (0, pU.H)(UU, EU & UU)
+    function Xu(uu, Ru) {
+      var yu;
+      let Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      Nu.set(Eu, (null !== (yu = Nu.get(Eu)) && void 0 !== yu ? yu : 0) & ~uu | Ru & uu);
+      let Qu = 0;
+      for (const Ku of Nu.values()) Qu |= Ku;
+      return (0, Ku.J)(uu, Qu & uu)
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

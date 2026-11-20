@@ -1,279 +1,279 @@
 export const id = 260;
 export const ids = [260];
 export const modules = {
-  40124: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU,
-      f: () => PU
+  40316: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Qu,
+      h: () => mu
     });
-    var tU = gU(1808);
-    let pU = !1;
+    var Eu = yu(1867);
+    let Ku = !1;
 
-    function EU() {
-      pU = !0
+    function Qu() {
+      Ku = !0
     }
 
-    function PU() {
-      pU && (pU = !1, (0, tU.c)())
+    function mu() {
+      Ku && (Ku = !1, (0, Eu.d)())
     }
   },
-  40140: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => TU,
-      e: () => PU
+  40328: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Ju,
+      f: () => mu
     });
-    var tU = gU(2973);
-    let pU = null,
-      EU = null;
+    var Eu = yu(3101);
+    let Ku = null,
+      Qu = null;
 
-    function PU() {
-      return EU ??= gU.e(208).then((() => gU(35922))).then((UU => {
+    function mu() {
+      return Qu ??= yu.e(208).then((() => yu(36206))).then((uu => {
         let {
-          ITEM_SPRITES: RU,
-          ITEM_SPRITES_WITHOUT_FILE: gU,
-          ITEM_FILES_WITHOUT_SPRITE: EU
-        } = UU;
-        pU = function(UU, RU, gU) {
-          const pU = new Set,
-            EU = (0, tU.s)(RU);
-          let PU = 0;
-          for (const [tU, TU] of UU.entries()) tU === EU[PU] ? PU++ : pU.add(TU);
-          if ("" !== gU)
-            for (const TU of gU.split(tU.q)) pU.add(TU);
-          return pU
-        }(RU.split(tU.q), gU, EU)
-      }), (UU => {
-        throw EU = null, UU
-      })), EU
+          ITEM_SPRITES: Ru,
+          ITEM_SPRITES_WITHOUT_FILE: yu,
+          ITEM_FILES_WITHOUT_SPRITE: Qu
+        } = uu;
+        Ku = function(uu, Ru, yu) {
+          const Ku = new Set,
+            Qu = (0, Eu.w)(Ru);
+          let mu = 0;
+          for (const [Eu, Ju] of uu.entries()) Eu === Qu[mu] ? mu++ : Ku.add(Ju);
+          if ("" !== yu)
+            for (const Ju of yu.split(Eu.s)) Ku.add(Ju);
+          return Ku
+        }(Ru.split(Eu.s), yu, Qu)
+      }), (uu => {
+        throw Qu = null, uu
+      })), Qu
     }
 
-    function TU(UU) {
-      var RU, gU;
-      return null !== (RU = null === (gU = pU) || void 0 === gU ? void 0 : gU.has(UU)) && void 0 !== RU && RU
+    function Ju(uu) {
+      var Ru, yu;
+      return null !== (Ru = null === (yu = Ku) || void 0 === yu ? void 0 : yu.has(uu)) && void 0 !== Ru && Ru
     }
   },
-  40121: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      loadIcons: () => oU,
-      setIconFileOverrides: () => ZU,
-      wasmIconLookups: () => HU,
-      wasmIconQueries: () => dU
+  40313: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      loadIcons: () => Mu,
+      setIconFileOverrides: () => Iu,
+      wasmIconLookups: () => Lu,
+      wasmIconQueries: () => cu
     });
-    var tU = gU(4162),
-      pU = gU(4131),
-      EU = gU(40124),
-      PU = gU(1808),
-      TU = gU(1800),
-      qU = gU(2969),
-      KU = gU(2973);
-    let cU = null,
-      GU = null;
+    var Eu = yu(4254),
+      Ku = yu(4231),
+      Qu = yu(40316),
+      mu = yu(1867),
+      Ju = yu(1855),
+      Nu = yu(3093),
+      Xu = yu(3101);
+    let Vu = null,
+      ru = null;
 
-    function jU(UU) {
-      const RU = UU.startsWith(KU.i),
-        [gU, tU = gU, pU = gU] = (RU ? UU.slice(KU.i.length) : UU).split(KU.f);
+    function Bu(uu) {
+      const Ru = uu.startsWith(Xu.j),
+        [yu, Eu = yu, Ku = yu] = (Ru ? uu.slice(Xu.j.length) : uu).split(Xu.g);
       return {
-        top: gU,
-        left: tU,
-        right: pU,
-        half: RU
+        top: yu,
+        left: Eu,
+        right: Ku,
+        half: Ru
       }
     }
 
-    function uU(UU) {
-      const RU = null === cU ? void 0 : (0, qU.c)(UU),
-        gU = void 0 === RU ? 0 : cU.codes[RU];
-      return 0 === gU ? void 0 : cU.pool[gU - 1]
+    function xu(uu) {
+      const Ru = null === Vu ? void 0 : (0, Nu.b)(uu),
+        yu = void 0 === Ru ? 0 : Vu.codes[Ru];
+      return 0 === yu ? void 0 : Vu.pool[yu - 1]
     }
-    var CU = gU(2966),
-      hU = gU(4120),
-      QU = gU(4153),
-      eU = gU(40133);
-    const WU = "item:";
-    let fU = null,
-      xU = null,
-      mU = null,
-      IU = null,
-      JU = !1,
-      wU = !1,
-      nU = null,
-      bU = 0;
+    var Su = yu(3088),
+      pu = yu(4218),
+      Tu = yu(4247),
+      Wu = yu(40324);
+    const ju = "item:";
+    let Hu = null,
+      du = null,
+      bu = null,
+      Cu = null,
+      ku = !1,
+      eu = !1,
+      Au = null,
+      Du = 0;
 
-    function oU() {
-      return wU || (wU = !0, (0, QU.g)().then((UU => {
-        UU && (0, PU.c)()
-      }))), mU ??= Promise.all([(0, CU.f)(), (GU ??= gU.e(1).then((() => gU(41972))).then((UU => {
+    function Mu() {
+      return eu || (eu = !0, (0, Tu.g)().then((uu => {
+        uu && (0, mu.d)()
+      }))), bu ??= Promise.all([(0, Su.h)(), (ru ??= yu.e(1).then((() => yu(42180))).then((uu => {
         let {
-          BLOCK_FACE_RUNS: RU,
-          BLOCK_FACES: gU,
-          MAX_FACE_ITEM_ID: tU
-        } = UU;
-        cU = {
-          codes: (0, KU.t)(RU, tU + 1),
-          pool: gU.split(KU.q).map(jU)
+          BLOCK_FACE_RUNS: Ru,
+          BLOCK_FACES: yu,
+          MAX_FACE_ITEM_ID: Eu
+        } = uu;
+        Vu = {
+          codes: (0, Xu.A)(Ru, Eu + 1),
+          pool: yu.split(Xu.s).map(Bu)
         }
-      }), (UU => {
-        throw GU = null, UU
-      })), GU), (0, eU.d)(), gU.e(189).then((() => gU(9009)))]).then((UU => {
-        let [, , RU, gU] = UU;
-        RU.followBundledTextures(), fU = RU, xU = gU, (0, PU.c)()
-      }), (UU => {
-        mU = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", UU)
-      })), mU
+      }), (uu => {
+        throw ru = null, uu
+      })), ru), (0, Wu.g)(), yu.e(189).then((() => yu(9079)))]).then((uu => {
+        let [, , Ru, yu] = uu;
+        Ru.followBundledTextures(), Hu = Ru, du = yu, (0, mu.d)()
+      }), (uu => {
+        bu = null, console.warn("[bloxd-wasm-client] the item icon tables did not load, so item icons stay blank", uu)
+      })), bu
     }
 
-    function ZU(UU) {
-      nU = UU, bU++, (0, PU.c)()
+    function Iu(uu) {
+      Au = uu, Du++, (0, mu.d)()
     }
 
-    function aU(UU) {
-      var RU, gU;
-      return null !== (RU = null === (gU = nU) || void 0 === gU ? void 0 : gU.itemSprite(UU)) && void 0 !== RU ? RU : fU.itemSpriteUrl(UU)
+    function Gu(uu) {
+      var Ru, yu;
+      return null !== (Ru = null === (yu = Au) || void 0 === yu ? void 0 : yu.itemSprite(uu)) && void 0 !== Ru ? Ru : Hu.itemSpriteUrl(uu)
     }
 
-    function YU(UU) {
-      var RU, gU;
-      return null !== (RU = null === (gU = nU) || void 0 === gU ? void 0 : gU.blockTexture(UU)) && void 0 !== RU ? RU : fU.blockTextureUrl(UU)
+    function Uu(uu) {
+      var Ru, yu;
+      return null !== (Ru = null === (yu = Au) || void 0 === yu ? void 0 : yu.blockTexture(uu)) && void 0 !== Ru ? Ru : Hu.blockTextureUrl(uu)
     }
 
-    function BU(UU) {
-      var RU;
-      return null !== (RU = (0, CU.c)(UU)) && void 0 !== RU ? RU : UU
+    function nu(uu) {
+      var Ru;
+      return null !== (Ru = (0, Su.e)(uu)) && void 0 !== Ru ? Ru : uu
     }
 
-    function VU(UU, RU) {
-      var gU, tU, pU;
-      return null !== (gU = null !== (tU = null !== (pU = YU(UU)) && void 0 !== pU ? pU : null === RU || void 0 === RU ? void 0 : RU.rotated[UU]) && void 0 !== tU ? tU : null === RU || void 0 === RU ? void 0 : RU.animated[UU]) && void 0 !== gU ? gU : fU.notFoundUrl()
+    function su(uu, Ru) {
+      var yu, Eu, Ku;
+      return null !== (yu = null !== (Eu = null !== (Ku = Uu(uu)) && void 0 !== Ku ? Ku : null === Ru || void 0 === Ru ? void 0 : Ru.rotated[uu]) && void 0 !== Eu ? Eu : null === Ru || void 0 === Ru ? void 0 : Ru.animated[uu]) && void 0 !== yu ? yu : Hu.notFoundUrl()
     }
 
-    function rU(UU) {
-      return void 0 !== (0, qU.c)(UU) ? UU : /^[1-9][0-9]*$/.test(UU) ? (0, qU.f)(Number(UU)) : void 0
+    function tu(uu) {
+      return void 0 !== (0, Nu.b)(uu) ? uu : /^[1-9][0-9]*$/.test(uu) ? (0, Nu.f)(Number(uu)) : void 0
     }
 
-    function XU(UU) {
-      var RU;
-      if (UU.startsWith(WU)) {
-        var gU;
-        const RU = (0, CU.c)(UU.slice(5));
-        return null !== (gU = void 0 === RU ? null : aU(RU)) && void 0 !== gU ? gU : fU.notFoundUrl()
+    function lu(uu) {
+      var Ru;
+      if (uu.startsWith(ju)) {
+        var yu;
+        const Ru = (0, Su.e)(uu.slice(5));
+        return null !== (yu = void 0 === Ru ? null : Gu(Ru)) && void 0 !== yu ? yu : Hu.notFoundUrl()
       }
-      return null !== (RU = fU.particleUrl(UU)) && void 0 !== RU ? RU : fU.notFoundUrl()
+      return null !== (Ru = Hu.particleUrl(uu)) && void 0 !== Ru ? Ru : Hu.notFoundUrl()
     }
 
-    function vU(UU, RU) {
-      return "StairsBlock" === UU ? UU : RU ? "SlabBlock" : "CubeBlock"
+    function gu(uu, Ru) {
+      return "StairsBlock" === uu ? uu : Ru ? "SlabBlock" : "CubeBlock"
     }
-    const dU = {
-        async blockIcon(UU) {
-          var RU;
+    const cu = {
+        async blockIcon(uu) {
+          var Ru;
           let {
-            name: tU,
-            size: pU,
-            lineWidth: EU
-          } = UU;
-          await oU();
-          const TU = null !== (RU = rU(tU)) && void 0 !== RU ? RU : tU,
-            KU = (0, QU.b)(TU, pU, EU);
-          if (null !== KU) return KU;
-          const cU = uU(TU),
-            GU = (0, qU.c)(TU),
-            jU = void 0 === GU || null === xU ? void 0 : xU.itemTypeNameOf(GU);
-          if (null === fU || void 0 === cU) return "";
-          const CU = [cU.top, cU.left, cU.right].some((UU => null === YU(UU))),
-            eU = CU ? await (IU ??= gU.e(201).then((() => gU(33915))).then((UU => (JU && (JU = !1, (0, PU.c)()), {
-              rotated: UU.rotatedBlockTextures,
-              animated: UU.animatedBlockTextures
-            })), (UU => (IU = null, JU = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", UU), null))), IU) : null;
-          if (CU && null === eU) return "";
-          const WU = {
-              top: VU(cU.top, eU),
-              left: VU(cU.left, eU),
-              right: VU(cU.right, eU),
-              itemType: vU(jU, cU.half)
+            name: Eu,
+            size: Ku,
+            lineWidth: Qu
+          } = uu;
+          await Mu();
+          const Ju = null !== (Ru = tu(Eu)) && void 0 !== Ru ? Ru : Eu,
+            Xu = (0, Tu.b)(Ju, Ku, Qu);
+          if (null !== Xu) return Xu;
+          const Vu = xu(Ju),
+            ru = (0, Nu.b)(Ju),
+            Bu = void 0 === ru || null === du ? void 0 : du.itemTypeNameOf(ru);
+          if (null === Hu || void 0 === Vu) return "";
+          const Su = [Vu.top, Vu.left, Vu.right].some((uu => null === Uu(uu))),
+            Wu = Su ? await (Cu ??= yu.e(201).then((() => yu(34131))).then((uu => (ku && (ku = !1, (0, mu.d)()), {
+              rotated: uu.rotatedBlockTextures,
+              animated: uu.animatedBlockTextures
+            })), (uu => (Cu = null, ku = !0, console.warn("[bloxd-wasm-client] the built block atlas did not load, so some block icons stay blank", uu), null))), Cu) : null;
+          if (Su && null === Wu) return "";
+          const ju = {
+              top: su(Vu.top, Wu),
+              left: su(Vu.left, Wu),
+              right: su(Vu.right, Wu),
+              itemType: gu(Bu, Vu.half)
             },
-            mU = 0 === bU ? TU : `${TU}#${bU}`;
-          return (await (0, hU.e)()).drawBlockIconUrl(mU, pU, EU, (() => WU))
+            bu = 0 === Du ? Ju : `${Ju}#${Du}`;
+          return (await (0, pu.d)()).drawBlockIconUrl(bu, Ku, Qu, (() => ju))
         }
       },
-      HU = {
-        itemIcon: function(UU) {
-          var RU, gU;
-          if (null === fU) return oU(), TU.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(UU);
-          if ((0, pU.k)(UU)) return {
+      Lu = {
+        itemIcon: function(uu) {
+          var Ru, yu;
+          if (null === Hu) return Mu(), Ju.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(uu);
+          if ((0, Ku.f)(uu)) return {
             kind: "icon",
-            url: null !== (gU = fU.ingameIconUrl(UU)) && void 0 !== gU ? gU : fU.notFoundUrl()
+            url: null !== (yu = Hu.ingameIconUrl(uu)) && void 0 !== yu ? yu : Hu.notFoundUrl()
           };
-          if (UU.startsWith(pU.e)) return {
+          if (uu.startsWith(Ku.b)) return {
             kind: "icon",
-            url: XU(UU.slice(pU.e.length))
+            url: lu(uu.slice(Ku.b.length))
           };
-          if (0 === (0, qU.g)()) return (0, EU.c)(), TU.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(UU);
-          const PU = null !== (RU = rU(UU)) && void 0 !== RU ? RU : UU,
-            KU = (0, qU.c)(PU),
-            cU = void 0 === KU ? void 0 : xU.itemTypeNameOf(KU);
-          if (void 0 !== uU(PU)) return {
+          if (0 === (0, Nu.g)()) return (0, Qu.e)(), Ju.DEFAULT_CLIENT_PAGE_SOURCES.lookups.itemIcon(uu);
+          const mu = null !== (Ru = tu(uu)) && void 0 !== Ru ? Ru : uu,
+            Xu = (0, Nu.b)(mu),
+            Vu = void 0 === Xu ? void 0 : du.itemTypeNameOf(Xu);
+          if (void 0 !== xu(mu)) return {
             kind: "drawnBlock"
           };
-          const GU = function(UU) {
-            var RU;
-            return null !== (RU = aU(BU(UU))) && void 0 !== RU ? RU : fU.notFoundUrl()
-          }(PU);
-          if ((0, QU.e)(PU) && ! function(UU) {
-              return null !== nU && (null !== nU.itemSprite(BU(UU)) || null !== nU.model(UU))
-            }(PU)) return {
+          const ru = function(uu) {
+            var Ru;
+            return null !== (Ru = Gu(nu(uu))) && void 0 !== Ru ? Ru : Hu.notFoundUrl()
+          }(mu);
+          if ((0, Tu.e)(mu) && ! function(uu) {
+              return null !== Au && (null !== Au.itemSprite(nu(uu)) || null !== Au.model(uu))
+            }(mu)) return {
             kind: "model",
-            url: GU
+            url: ru
           };
-          if ("Gun" === cU) return {
+          if ("Gun" === Vu) return {
             kind: "gun",
-            url: GU
+            url: ru
           };
-          if (void 0 !== KU && "GrayscaleArmour" === xU.itemTypeOf(KU) || Object.hasOwn(tU.d, PU)) {
-            var jU;
-            const RU = null !== (jU = (0, tU.h)(UU)) && void 0 !== jU ? jU : (0, tU.h)(PU);
-            if (RU) return {
+          if (void 0 !== Xu && "GrayscaleArmour" === du.itemTypeOf(Xu) || Object.hasOwn(Eu.d, mu)) {
+            var Bu;
+            const Ru = null !== (Bu = (0, Eu.g)(uu)) && void 0 !== Bu ? Bu : (0, Eu.g)(mu);
+            if (Ru) return {
               kind: "item",
-              url: GU,
-              tint: RU
+              url: ru,
+              tint: Ru
             }
           }
           return {
             kind: "item",
-            url: GU
+            url: ru
           }
         },
-        hasIcon: function(UU) {
-          return void 0 !== rU(UU) || (0, pU.k)(UU) || UU.startsWith(pU.e)
+        hasIcon: function(uu) {
+          return void 0 !== tu(uu) || (0, Ku.f)(uu) || uu.startsWith(Ku.b)
         },
-        isItemName: function(UU) {
-          return void 0 !== rU(UU)
+        isItemName: function(uu) {
+          return void 0 !== tu(uu)
         }
       }
   },
-  40133: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => PU,
-      d: () => TU
+  40324: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => mu,
+      g: () => Ju
     });
-    var tU = gU(40140);
-    let pU = null,
-      EU = null;
+    var Eu = yu(40328);
+    let Ku = null,
+      Qu = null;
 
-    function PU() {
-      return pU ??= gU.e(58).then((() => gU(41979))).catch((UU => {
-        throw pU = null, UU
-      })), pU
+    function mu() {
+      return Ku ??= yu.e(58).then((() => yu(42183))).catch((uu => {
+        throw Ku = null, uu
+      })), Ku
     }
 
-    function TU() {
-      return EU ??= Promise.all([PU(), (0, tU.e)()]).then((UU => {
-        let [RU] = UU;
-        return RU
-      }), (UU => {
-        throw EU = null, UU
-      })), EU
+    function Ju() {
+      return Qu ??= Promise.all([mu(), (0, Eu.f)()]).then((uu => {
+        let [Ru] = uu;
+        return Ru
+      }), (uu => {
+        throw Qu = null, uu
+      })), Qu
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

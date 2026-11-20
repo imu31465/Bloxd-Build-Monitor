@@ -1,54 +1,54 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  4456: (UU, RU, gU) => {
-    gU.d(RU, {
-      $: () => oU,
-      A: () => EU,
-      B: () => CU,
-      Db: () => mU,
-      F: () => AU,
-      G: () => KU,
-      Gb: () => YU,
-      Hb: () => HU,
-      J: () => hU,
-      L: () => qU,
-      Lb: () => VU,
-      M: () => jU,
-      N: () => GU,
-      Ob: () => XU,
-      R: () => JU,
-      Rb: () => vU,
-      S: () => nU,
-      Tb: () => fU,
-      V: () => bU,
-      X: () => wU,
-      Xb: () => xU,
-      Zb: () => sU,
-      b: () => FU,
-      bc: () => pU,
-      db: () => SU,
-      dc: () => iU,
-      e: () => kU,
-      g: () => cU,
-      hb: () => dU,
-      j: () => WU,
-      kb: () => rU,
-      n: () => yU,
-      nb: () => ZU,
-      p: () => eU,
-      pb: () => BU,
-      s: () => QU,
-      tb: () => aU,
-      v: () => PU,
-      w: () => TU,
-      wb: () => uU,
-      x: () => tU,
-      zb: () => IU
+  4564: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      $: () => Du,
+      $b: () => Pu,
+      Ab: () => xu,
+      B: () => Eu,
+      Db: () => Cu,
+      E: () => Qu,
+      G: () => Su,
+      H: () => iu,
+      Hb: () => bu,
+      Ib: () => Uu,
+      L: () => Xu,
+      Lb: () => Lu,
+      N: () => pu,
+      Pb: () => su,
+      Q: () => Nu,
+      R: () => Bu,
+      Rb: () => lu,
+      S: () => ru,
+      Sb: () => gu,
+      Tb: () => Hu,
+      Vb: () => du,
+      W: () => ku,
+      X: () => Au,
+      Yb: () => Fu,
+      Zb: () => Ku,
+      c: () => hu,
+      db: () => eu,
+      g: () => Zu,
+      hb: () => Mu,
+      i: () => Vu,
+      j: () => ju,
+      lb: () => zu,
+      m: () => wu,
+      ob: () => cu,
+      p: () => Wu,
+      rb: () => tu,
+      s: () => Tu,
+      ub: () => Iu,
+      w: () => mu,
+      x: () => Ju,
+      xb: () => nu,
+      yb: () => Gu
     });
-    const tU = 32,
-      pU = 33.333333333333336,
-      EU = {
+    const Eu = 32,
+      Ku = 33.333333333333336,
+      Qu = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -82,18 +82,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      PU = {
+      mu = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      TU = {
+      Ju = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      qU = {
+      Nu = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -101,20 +101,20 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      KU = {
+      Xu = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      cU = {
+      Vu = {
         Look: 0,
         Remesh: 1
       },
-      GU = 8,
-      jU = 1,
-      uU = {
+      ru = 8,
+      Bu = 1,
+      xu = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -123,7 +123,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      CU = {
+      Su = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -151,12 +151,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      hU = {
+      pu = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      QU = {
+      Tu = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -208,7 +208,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      eU = {
+      Wu = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -218,10 +218,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      WU = 4,
-      fU = 4,
-      xU = 65535,
-      mU = {
+      ju = 4,
+      Hu = 4,
+      du = 65535,
+      bu = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -234,7 +234,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      IU = {
+      Cu = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -242,12 +242,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      JU = 88,
-      wU = 0,
-      nU = 24,
-      bU = 48,
-      oU = 80,
-      ZU = {
+      ku = 88,
+      eu = 0,
+      Au = 24,
+      Du = 48,
+      Mu = 80,
+      Iu = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -258,18 +258,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      aU = {
+      Gu = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      YU = {
+      Uu = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      BU = {
+      nu = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -287,34 +287,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      VU = {
+      su = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      rU = 65535,
-      XU = {
+      tu = 65535,
+      lu = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      vU = {
+      gu = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      dU = 2,
-      HU = {
+      cu = 2,
+      Lu = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      SU = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      sU = {
+      zu = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      Fu = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -326,7 +326,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      yU = {
+      wu = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -353,7 +353,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      kU = {
+      Zu = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -511,8 +511,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      FU = 8,
-      iU = {
+      hu = 8,
+      Pu = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -537,147 +537,147 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      AU = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      iu = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  40190: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => TU
+  40381: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju
     });
-    const tU = 1 << 20,
-      pU = 1 << 21,
-      EU = 1024,
-      PU = 2048;
+    const Eu = 1 << 20,
+      Ku = 1 << 21,
+      Qu = 1024,
+      mu = 2048;
 
-    function TU(UU, RU, gU) {
-      const TU = UU + tU,
-        qU = RU + EU,
-        KU = gU + tU;
-      return TU < 0 || TU >= pU || KU < 0 || KU >= pU || qU < 0 || qU >= PU ? -1 : (TU * pU + KU) * PU + qU
+    function Ju(uu, Ru, yu) {
+      const Ju = uu + Eu,
+        Nu = Ru + Qu,
+        Xu = yu + Eu;
+      return Ju < 0 || Ju >= Ku || Xu < 0 || Xu >= Ku || Nu < 0 || Nu >= mu ? -1 : (Ju * Ku + Xu) * mu + Nu
     }
   },
-  40186: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => tU,
-      d: () => PU,
-      e: () => pU,
-      g: () => EU,
-      j: () => cU,
-      m: () => KU,
-      p: () => qU,
-      s: () => TU
+  40374: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Eu,
+      h: () => mu,
+      k: () => Ku,
+      m: () => Qu,
+      n: () => Vu,
+      r: () => Xu,
+      s: () => Nu,
+      v: () => Ju
     });
-    gU(3153);
-    gU(40190);
+    yu(3262);
+    yu(40381);
 
-    function tU(UU) {}
+    function Eu(uu) {}
 
-    function pU(UU) {}
+    function Ku(uu) {}
 
-    function EU(UU) {}
+    function Qu(uu) {}
 
-    function PU(UU) {}
+    function mu(uu) {}
 
-    function TU(UU) {}
+    function Ju(uu) {}
 
-    function qU(UU, RU, gU) {}
+    function Nu(uu, Ru, yu) {}
 
-    function KU(UU) {}
+    function Xu(uu) {}
 
-    function cU(UU) {}
+    function Vu(uu) {}
   },
-  40166: (UU, RU, gU) => {
-    gU.d(RU, {
-      B: () => FU,
-      E: () => UR,
-      I: () => yU,
-      L: () => sU,
-      M: () => zU,
-      O: () => AU,
-      S: () => gR,
-      W: () => LU,
-      X: () => oU,
-      c: () => RR,
-      e: () => PR,
-      f: () => DU,
-      h: () => OU,
-      k: () => iU,
-      o: () => lU,
-      q: () => NU,
-      t: () => ER,
-      w: () => HU,
-      y: () => SU
+  40361: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      A: () => zu,
+      B: () => hu,
+      F: () => uR,
+      I: () => wu,
+      L: () => Fu,
+      N: () => Yu,
+      Q: () => iu,
+      R: () => yR,
+      V: () => Ou,
+      X: () => Mu,
+      d: () => RR,
+      f: () => mR,
+      h: () => qu,
+      j: () => fu,
+      l: () => Pu,
+      o: () => au,
+      q: () => vu,
+      u: () => QR,
+      w: () => Lu
     });
-    var tU = gU(299),
-      pU = gU(260),
-      EU = gU(263),
-      PU = gU(21),
-      TU = gU(2624),
-      qU = gU(641),
-      KU = gU(4183),
-      cU = gU(2577),
-      GU = gU(3151),
-      jU = gU(96),
-      uU = gU(291),
-      CU = gU(34),
-      hU = gU(274),
-      QU = gU(122),
-      eU = gU(594),
-      WU = gU(131),
-      fU = gU(124),
-      xU = gU(4456),
-      mU = gU(40172),
-      IU = gU(1675),
-      JU = gU(40177);
-    const wU = "bloxd-webgpuOffAfterLoss",
-      nU = "context:webgl",
-      bU = "probe:threw";
+    var Eu = yu(330),
+      Ku = yu(288),
+      Qu = yu(293),
+      mu = yu(27),
+      Ju = yu(2707),
+      Nu = yu(654),
+      Xu = yu(4284),
+      Vu = yu(2655),
+      ru = yu(3255),
+      Bu = yu(106),
+      xu = yu(325),
+      Su = yu(47),
+      pu = yu(305),
+      Tu = yu(129),
+      Wu = yu(616),
+      ju = yu(143),
+      Hu = yu(137),
+      du = yu(4564),
+      bu = yu(40366),
+      Cu = yu(1699),
+      ku = yu(40371);
+    const eu = "bloxd-webgpuOffAfterLoss",
+      Au = "context:webgl",
+      Du = "probe:threw";
 
-    function oU(UU) {
-      let RU;
+    function Mu(uu) {
+      let Ru;
       try {
-        RU = UU.getContext("webgl", {
-          powerPreference: WU.c
+        Ru = uu.getContext("webgl", {
+          powerPreference: ju.b
         })
       } catch {
-        RU = null
+        Ru = null
       }
-      if (null === RU) return null;
-      let gU = null;
+      if (null === Ru) return null;
+      let yu = null;
       try {
-        const UU = RU.getParameter(RU.MAX_TEXTURE_SIZE);
-        gU = "number" === typeof UU && UU > 0 ? UU : null
+        const uu = Ru.getParameter(Ru.MAX_TEXTURE_SIZE);
+        yu = "number" === typeof uu && uu > 0 ? uu : null
       } catch {
-        gU = null
+        yu = null
       }
       try {
-        var tU;
-        null === (tU = RU.getExtension("WEBGL_lose_context")) || void 0 === tU || tU.loseContext()
+        var Eu;
+        null === (Eu = Ru.getExtension("WEBGL_lose_context")) || void 0 === Eu || Eu.loseContext()
       } catch {}
-      return gU
+      return yu
     }
-    const ZU = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
-      aU = "mali_valhall",
-      YU = new Set(["nvidia_pre_turing"]);
+    const Iu = new Set(["android_arm", "chromeos_other", "windows_intel_low"]),
+      Gu = "mali_valhall",
+      Uu = new Set(["nvidia_pre_turing"]);
 
-    function BU(UU) {
-      return function(UU) {
+    function nu(uu) {
+      return function(uu) {
         try {
-          return UU()
+          return uu()
         } catch {
           return null
         }
       }((() => {
-        var RU, gU, tU, PU;
-        const TU = null !== (RU = null === (gU = UU.info) || void 0 === gU ? void 0 : gU.vendor) && void 0 !== RU ? RU : "";
-        return "windows" === (0, jU.getOperatingSystem)() && "" !== TU && "intel" !== (0, jU.normaliseGpuVendor)(TU) ? null : ((0, jU.seedGpuVendor)(TU), qU = (0, pU.j)(), KU = (0, EU.g)(TU, null !== (tU = null === (PU = UU.info) || void 0 === PU ? void 0 : PU.architecture) && void 0 !== tU ? tU : ""), ZU.has(qU) ? "android_arm" === qU && KU === aU ? "webgpu_default" : "webgl_default" : null);
-        var qU, KU
+        var Ru, yu, Eu, mu;
+        const Ju = null !== (Ru = null === (yu = uu.info) || void 0 === yu ? void 0 : yu.vendor) && void 0 !== Ru ? Ru : "";
+        return "windows" === (0, Bu.getOperatingSystem)() && "" !== Ju && "intel" !== (0, Bu.normaliseGpuVendor)(Ju) ? null : ((0, Bu.seedGpuVendor)(Ju), Nu = (0, Ku.h)(), Xu = (0, Qu.f)(Ju, null !== (Eu = null === (mu = uu.info) || void 0 === mu ? void 0 : mu.architecture) && void 0 !== Eu ? Eu : ""), Iu.has(Nu) ? "android_arm" === Nu && Xu === Gu ? "webgpu_default" : "webgl_default" : null);
+        var Nu, Xu
       }))
     }
 
-    function VU() {
-      var UU;
+    function su() {
+      var uu;
       return {
-        gpu: null !== (UU = navigator.gpu) && void 0 !== UU ? UU : null,
+        gpu: null !== (uu = navigator.gpu) && void 0 !== uu ? uu : null,
         webgl2: () => {
           try {
             return null !== document.createElement("canvas").getContext("webgl2")
@@ -685,317 +685,317 @@ export const modules = {
             return !1
           }
         },
-        webgl1: () => function(UU) {
-          let RU, gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mU.c;
+        webgl1: () => function(uu) {
+          let Ru, yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bu.b;
           try {
-            RU = UU.getContext("webgl")
+            Ru = uu.getContext("webgl")
           } catch {
-            RU = null
+            Ru = null
           }
-          if (null === RU) return [nU];
-          const tU = [];
+          if (null === Ru) return [Au];
+          const Eu = [];
           try {
-            for (const pU of gU.extensions) null === RU.getExtension(pU) && tU.push(pU);
-            for (const [pU, EU] of Object.entries(gU.limits)) {
-              const UU = RU[pU],
-                gU = "number" === typeof UU ? RU.getParameter(UU) : null;
-              ("number" !== typeof gU || gU < EU) && tU.push(`limit:${pU}`)
+            for (const Ku of yu.extensions) null === Ru.getExtension(Ku) && Eu.push(Ku);
+            for (const [Ku, Qu] of Object.entries(yu.limits)) {
+              const uu = Ru[Ku],
+                yu = "number" === typeof uu ? Ru.getParameter(uu) : null;
+              ("number" !== typeof yu || yu < Qu) && Eu.push(`limit:${Ku}`)
             }
-            const UU = RU.getShaderPrecisionFormat(RU.VERTEX_SHADER, RU.HIGH_FLOAT);
-            (null === UU || UU.precision < gU.vertexHighFloatBits) && tU.push("precision:vertex_high_float")
+            const uu = Ru.getShaderPrecisionFormat(Ru.VERTEX_SHADER, Ru.HIGH_FLOAT);
+            (null === uu || uu.precision < yu.vertexHighFloatBits) && Eu.push("precision:vertex_high_float")
           } catch {
-            tU.push(bU)
+            Eu.push(Du)
           }
           try {
-            var pU;
-            null === (pU = RU.getExtension("WEBGL_lose_context")) || void 0 === pU || pU.loseContext()
+            var Ku;
+            null === (Ku = Ru.getExtension("WEBGL_lose_context")) || void 0 === Ku || Ku.loseContext()
           } catch {}
-          return tU
+          return Eu
         }(document.createElement("canvas")),
-        offAfterLoss: UU => rU((() => UU ? (0, hU.x)() : PU.b.isWebGpuOffAfterLoss())),
-        oldIntelDriver: UU => rU((() => (0, QU.i)(UU))),
-        intelGen9: UU => rU((() => (0, QU.p)(UU))),
-        gpuClassWebGlArm: BU,
-        storeGpuClassVerdict: UU => {
-          CU.k.setItem(QU.F, UU)
+        offAfterLoss: uu => tu((() => uu ? (0, pu.v)() : mu.d.isWebGpuOffAfterLoss())),
+        oldIntelDriver: uu => tu((() => (0, Tu.f)(uu))),
+        intelGen9: uu => tu((() => (0, Tu.p)(uu))),
+        gpuClassWebGlArm: nu,
+        storeGpuClassVerdict: uu => {
+          Su.i.setItem(Tu.F, uu)
         },
-        gpuClassOnWebGl: UU => (0, eU.b)(UU),
+        gpuClassOnWebGl: uu => (0, Wu.c)(uu),
         override: () => function() {
-          if ((0, TU.l)("render") && "webgl1" === (0, TU.j)("renderer")) return "webgl1";
-          const UU = [() => new URLSearchParams(window.location.search).get(cU.e), () => CU.k.getItem(cU.i), () => {
-            const UU = localStorage.getItem(wU);
-            return null !== UU && localStorage.removeItem(wU), "1" === UU ? "webgl2" : null
+          if ((0, Ju.m)("render") && "webgl1" === (0, Ju.k)("renderer")) return "webgl1";
+          const uu = [() => new URLSearchParams(window.location.search).get(Vu.b), () => Su.i.getItem(Vu.f), () => {
+            const uu = localStorage.getItem(eu);
+            return null !== uu && localStorage.removeItem(eu), "1" === uu ? "webgl2" : null
           }];
-          for (const RU of UU) {
-            let UU = null;
+          for (const Ru of uu) {
+            let uu = null;
             try {
-              UU = XU(RU())
+              uu = lu(Ru())
             } catch {}
-            if (null !== UU) return UU
+            if (null !== uu) return uu
           }
           return null
         }(),
-        claimed: () => XU((0, qU.k)()),
+        claimed: () => lu((0, Nu.h)()),
         webGpuSetting: () => {
-          const UU = CU.k.getItem(tU.gc);
-          return "boolean" === typeof UU ? UU : null
+          const uu = Su.i.getItem(Eu.pc);
+          return "boolean" === typeof uu ? uu : null
         },
-        heldBack: () => eU.f,
-        storeHoldbackSpared: UU => {
-          CU.k.setItem(QU.D, UU)
+        heldBack: () => Wu.d,
+        storeHoldbackSpared: uu => {
+          Su.i.setItem(Tu.D, uu)
         },
-        intelGen9OnWebGl: () => eU.i,
-        Fu: () => rU((() => (0, GU.f)(jU.featureFlags.settings.canUseShaderPacks))),
-        windows: () => rU((() => "windows" === (0, jU.getOperatingSystem)()))
+        intelGen9OnWebGl: () => Wu.h,
+        ix: () => tu((() => (0, ru.h)(Bu.featureFlags.settings.canUseShaderPacks))),
+        windows: () => tu((() => "windows" === (0, Bu.getOperatingSystem)()))
       }
     }
 
-    function rU(UU) {
+    function tu(uu) {
       try {
-        return UU()
+        return uu()
       } catch {
         return !1
       }
     }
 
-    function XU(UU) {
-      return "lite" === UU ? "webgpu" : "webgl2" === UU || "babylon" === UU ? "webgl" : null
+    function lu(uu) {
+      return "lite" === uu ? "webgpu" : "webgl2" === uu || "babylon" === uu ? "webgl" : null
     }
-    async function vU() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : VU();
-      const RU = await async function(UU) {
-        const RU = function(UU) {
-            const RU = UU.override(),
-              gU = UU.webGpuSetting(),
-              tU = null === RU && !0 !== gU && UU.Fu(),
-              pU = null !== RU || null !== gU || tU ? null : UU.claimed(),
-              EU = null !== RU ? "override" : !0 === gU ? "setting" : tU ? "pack" : !1 === gU ? "setting" : null !== pU ? "claim" : "default",
-              PU = function(UU) {
-                return "override" === UU || "setting" === UU
-              }(EU);
-            if ("webgl" === RU || "webgl1" === RU || "webgl" === pU || "setting" === EU && !1 === gU) return {
-              source: EU,
-              asked: PU,
+    async function gu() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : su();
+      const Ru = await async function(uu) {
+        const Ru = function(uu) {
+            const Ru = uu.override(),
+              yu = uu.webGpuSetting(),
+              Eu = null === Ru && !0 !== yu && uu.ix(),
+              Ku = null !== Ru || null !== yu || Eu ? null : uu.claimed(),
+              Qu = null !== Ru ? "override" : !0 === yu ? "setting" : Eu ? "pack" : !1 === yu ? "setting" : null !== Ku ? "claim" : "default",
+              mu = function(uu) {
+                return "override" === uu || "setting" === uu
+              }(Qu);
+            if ("webgl" === Ru || "webgl1" === Ru || "webgl" === Ku || "setting" === Qu && !1 === yu) return {
+              source: Qu,
+              asked: mu,
               refused: "not_requested"
             };
-            if (!UU.gpu) return {
-              source: EU,
-              asked: PU,
+            if (!uu.gpu) return {
+              source: Qu,
+              asked: mu,
               refused: "no_webgpu_api"
             };
-            const TU = "default" === EU && UU.heldBack();
-            if (TU && !UU.windows()) return {
-              source: EU,
-              asked: PU,
+            const Ju = "default" === Qu && uu.heldBack();
+            if (Ju && !uu.windows()) return {
+              source: Qu,
+              asked: mu,
               refused: "webgl_holdback"
             };
-            if (!PU && UU.offAfterLoss("pack" === EU)) return {
-              source: EU,
-              asked: PU,
-              refused: TU ? "webgl_holdback" : "off_after_loss"
+            if (!mu && uu.offAfterLoss("pack" === Qu)) return {
+              source: Qu,
+              asked: mu,
+              refused: Ju ? "webgl_holdback" : "off_after_loss"
             };
             return {
-              source: EU,
-              asked: PU,
-              heldBack: TU,
-              gpu: UU.gpu
+              source: Qu,
+              asked: mu,
+              heldBack: Ju,
+              gpu: uu.gpu
             }
-          }(UU),
+          }(uu),
           {
-            source: gU
-          } = RU,
-          tU = !RU.asked,
-          pU = "gpu" in RU && RU.heldBack,
-          PU = function(UU) {
-            return pU && "none" !== UU ? {
+            source: yu
+          } = Ru,
+          Eu = !Ru.asked,
+          Ku = "gpu" in Ru && Ru.heldBack,
+          mu = function(uu) {
+            return Ku && "none" !== uu ? {
               reason: "webgl_holdback",
               adapter: null,
-              source: gU
+              source: yu
             } : {
-              reason: UU,
+              reason: uu,
               adapter: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              source: gU
+              source: yu
             }
           };
-        if (!("gpu" in RU)) return PU(RU.refused);
-        let TU;
+        if (!("gpu" in Ru)) return mu(Ru.refused);
+        let Ju;
         try {
-          TU = await (0, IU.i)((0, fU.j)(RU.gpu), tR, `requestAdapter didn't settle in ${tR/1e3} s`)
+          Ju = await (0, Cu.i)((0, Hu.l)(Ru.gpu), ER, `requestAdapter didn't settle in ${ER/1e3} s`)
         } catch {
-          return PU("adapter_error")
+          return mu("adapter_error")
         }
-        if ("string" === typeof TU) return PU(TU);
-        const qU = (0, fU.d)(TU);
-        if ((0, fU.f)(TU)) return PU("software_adapter", qU);
-        const KU = UU.windows() && function(UU) {
-          return YU.has((0, EU.g)(UU.vendor, UU.architecture))
-        }(qU);
-        if (UU.storeHoldbackSpared(KU), pU && !KU) return PU("webgl_holdback");
-        const cU = UU.intelGen9(TU),
-          GU = cU ? null : UU.gpuClassWebGlArm(TU);
-        if (UU.storeGpuClassVerdict(null !== GU && void 0 !== GU && GU), tU && UU.oldIntelDriver(TU)) return PU("old_intel_driver", qU);
-        if ("default" === gU && UU.intelGen9OnWebGl() && cU) return PU("intel_gen9", qU);
-        if ("default" === gU && null !== GU && UU.gpuClassOnWebGl(GU)) return PU("gpu_class_webgl", qU);
-        return PU("none", qU)
-      }(UU);
-      if ("none" === RU.reason) return {
+        if ("string" === typeof Ju) return mu(Ju);
+        const Nu = (0, Hu.d)(Ju);
+        if ((0, Hu.h)(Ju)) return mu("software_adapter", Nu);
+        const Xu = uu.windows() && function(uu) {
+          return Uu.has((0, Qu.f)(uu.vendor, uu.architecture))
+        }(Nu);
+        if (uu.storeHoldbackSpared(Xu), Ku && !Xu) return mu("webgl_holdback");
+        const Vu = uu.intelGen9(Ju),
+          ru = Vu ? null : uu.gpuClassWebGlArm(Ju);
+        if (uu.storeGpuClassVerdict(null !== ru && void 0 !== ru && ru), Eu && uu.oldIntelDriver(Ju)) return mu("old_intel_driver", Nu);
+        if ("default" === yu && uu.intelGen9OnWebGl() && Vu) return mu("intel_gen9", Nu);
+        if ("default" === yu && null !== ru && uu.gpuClassOnWebGl(ru)) return mu("gpu_class_webgl", Nu);
+        return mu("none", Nu)
+      }(uu);
+      if ("none" === Ru.reason) return {
         backend: "webgpu",
-        ...RU
+        ...Ru
       };
-      if ("webgl1" !== UU.override() && UU.webgl2()) return {
+      if ("webgl1" !== uu.override() && uu.webgl2()) return {
         backend: "webgl",
-        ...RU
+        ...Ru
       };
-      const gU = UU.webgl1();
-      return 0 === gU.length ? {
+      const yu = uu.webgl1();
+      return 0 === yu.length ? {
         backend: "webgl1",
-        ...RU
+        ...Ru
       } : {
-        missing: gU
+        missing: yu
       }
     }
-    let dU = !1;
-    async function HU(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : VU();
-      if (null === UU) return null;
-      const gU = await vU(RU);
-      return dU = !("missing" in gU) && "webgpu" === gU.backend && "claim" === gU.source, "missing" in gU ? gU : {
-        ...gU,
-        load: UU[gU.backend]
+    let cu = !1;
+    async function Lu(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : su();
+      if (null === uu) return null;
+      const yu = await gu(Ru);
+      return cu = !("missing" in yu) && "webgpu" === yu.backend && "claim" === yu.source, "missing" in yu ? yu : {
+        ...yu,
+        load: uu[yu.backend]
       }
     }
-    async function SU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : VU().gpu,
-        tU = arguments.length > 3 ? arguments[3] : void 0;
-      if ("webgpu" !== UU.backend) return !1;
-      const pU = kU(RU, "indirectDraws", "off", "on");
-      if (null !== pU) return pU;
-      if (null !== UU.adapter && (0, QU.q)(UU.adapter, tU)) return !0;
-      if (null === gU) return !1;
+    async function zu(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : su().gpu,
+        Eu = arguments.length > 3 ? arguments[3] : void 0;
+      if ("webgpu" !== uu.backend) return !1;
+      const Ku = Zu(Ru, "indirectDraws", "off", "on");
+      if (null !== Ku) return Ku;
+      if (null !== uu.adapter && (0, Tu.t)(uu.adapter, Eu)) return !0;
+      if (null === yu) return !1;
       try {
-        var EU;
-        const UU = await (0, IU.i)(gU.requestAdapter({
+        var Qu;
+        const uu = await (0, Cu.i)(yu.requestAdapter({
           powerPreference: "low-power"
-        }), tR, `the low-power requestAdapter didn't settle in ${tR/1e3} s`);
-        return (0, QU.q)(null !== (EU = null === UU || void 0 === UU ? void 0 : UU.info) && void 0 !== EU ? EU : {}, tU)
-      } catch (PU) {
-        return PU instanceof IU.f
+        }), ER, `the low-power requestAdapter didn't settle in ${ER/1e3} s`);
+        return (0, Tu.t)(null !== (Qu = null === uu || void 0 === uu ? void 0 : uu.info) && void 0 !== Qu ? Qu : {}, Eu)
+      } catch (mu) {
+        return mu instanceof Cu.d
       }
     }
 
-    function sU(UU, RU, gU) {
-      if ("webgpu" !== UU.backend) return !1;
-      const tU = kU(RU, "terrainFetch", "texture", "storage");
-      return null !== tU ? tU : null !== UU.adapter && (0, QU.l)(UU.adapter, gU)
+    function Fu(uu, Ru, yu) {
+      if ("webgpu" !== uu.backend) return !1;
+      const Eu = Zu(Ru, "terrainFetch", "texture", "storage");
+      return null !== Eu ? Eu : null !== uu.adapter && (0, Tu.i)(uu.adapter, yu)
     }
 
-    function yU(UU, RU, gU) {
-      if ("webgpu" !== UU.backend) return !1;
-      const tU = kU(RU, "sceneDepth", "off", "on");
-      return null !== tU ? tU : null !== UU.adapter && (0, QU.n)(UU.adapter, gU)
+    function wu(uu, Ru, yu) {
+      if ("webgpu" !== uu.backend) return !1;
+      const Eu = Zu(Ru, "sceneDepth", "off", "on");
+      return null !== Eu ? Eu : null !== uu.adapter && (0, Tu.m)(uu.adapter, yu)
     }
 
-    function kU(UU, RU, gU, tU) {
-      const pU = new URLSearchParams(UU).get(RU),
-        EU = null !== pU && void 0 !== pU ? pU : (0, qU.g)(RU);
-      return EU !== gU && EU !== tU ? null : (dU ||= null === pU, EU === gU)
+    function Zu(uu, Ru, yu, Eu) {
+      const Ku = new URLSearchParams(uu).get(Ru),
+        Qu = null !== Ku && void 0 !== Ku ? Ku : (0, Nu.f)(Ru);
+      return Qu !== yu && Qu !== Eu ? null : (cu ||= null === Ku, Qu === yu)
     }
 
-    function FU(UU, RU) {
-      return "webgl" === UU.backend && (0, EU.p)(RU)
+    function hu(uu, Ru) {
+      return "webgl" === uu.backend && (0, Qu.k)(Ru)
     }
 
-    function iU(UU) {
-      return null !== UU && "missing" in UU
+    function Pu(uu) {
+      return null !== uu && "missing" in uu
     }
 
-    function AU(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : PU.b;
+    function iu(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mu.d;
       try {
-        const gU = "start_failed" === UU || "pipeline_failed" === UU,
-          tU = RU.turnOffWebGpuAfterDeviceLoss(gU ? "visible" : (0, hU.g)((0, uU.j)()));
-        return !dU || tU && !RU.isWebGpuOffAfterLoss() || (0, qU.t)("webgpuLoss"), RU.isWebGpuOffAfterLoss() && "webgpu" === XU(CU.k.getItem(cU.i)) && CU.k.removeItem(cU.i), (0, TU.l)("webgpuloss") && (0, KU.b)((RU => {
-          RU.noteWebGpuLoss("wasm", tU ? UU : `${UU}, which storage didn't keep`, null)
-        })), tU
+        const yu = "start_failed" === uu || "pipeline_failed" === uu,
+          Eu = Ru.turnOffWebGpuAfterDeviceLoss(yu ? "visible" : (0, pu.i)((0, xu.h)()));
+        return !cu || Eu && !Ru.isWebGpuOffAfterLoss() || (0, Nu.s)("webgpuLoss"), Ru.isWebGpuOffAfterLoss() && "webgpu" === lu(Su.i.getItem(Vu.f)) && Su.i.removeItem(Vu.f), (0, Ju.m)("webgpuloss") && (0, Xu.d)((Ru => {
+          Ru.noteWebGpuLoss("wasm", Eu ? uu : `${uu}, which storage didn't keep`, null)
+        })), Eu
       } catch {
         return !1
       }
     }
 
-    function zU(UU) {
-      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !LU()) ? AU(UU) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
+    function Yu(uu) {
+      return (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : !Ou()) ? iu(uu) ? null : "storage won't keep WebGPU off" : "the URL asks for WebGPU"
     }
-    const MU = "framePacing";
+    const ou = "framePacing";
 
-    function DU(UU) {
-      const RU = new URLSearchParams(UU).get(MU);
-      return null !== RU && /^\d{1,9}$/.test(RU) ? Number(RU) : void 0
+    function qu(uu) {
+      const Ru = new URLSearchParams(uu).get(ou);
+      return null !== Ru && /^\d{1,9}$/.test(Ru) ? Number(Ru) : void 0
     }
 
-    function LU() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
+    function Ou() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.location.search;
       try {
-        return "webgpu" === XU(new URLSearchParams(UU).get(cU.e))
+        return "webgpu" === lu(new URLSearchParams(uu).get(Vu.b))
       } catch {
         return !1
       }
     }
 
-    function NU(UU) {
-      return !!lU(UU) || UU instanceof Error && !(UU instanceof WebAssembly.RuntimeError) && UU.message.startsWith(`${xU.e.RenderSurfaceUnusable}:`)
+    function vu(uu) {
+      return !!au(uu) || uu instanceof Error && !(uu instanceof WebAssembly.RuntimeError) && uu.message.startsWith(`${du.g.RenderSurfaceUnusable}:`)
     }
 
-    function lU(UU) {
+    function au(uu) {
       const {
-        name: RU,
-        message: gU
-      } = null !== UU && void 0 !== UU ? UU : {};
-      return "InvalidStateError" === RU && "string" === typeof gU && gU.startsWith("GPUDevice.")
+        name: Ru,
+        message: yu
+      } = null !== uu && void 0 !== uu ? uu : {};
+      return "InvalidStateError" === Ru && "string" === typeof yu && yu.startsWith("GPUDevice.")
     }
 
-    function OU(UU) {
-      const RU = UU;
-      return "function" === typeof RU.JgU && "function" === typeof RU.wgU ? RU : null
+    function fu(uu) {
+      const Ru = uu;
+      return "function" === typeof Ru.xEu && "function" === typeof Ru.SEu ? Ru : null
     }
 
-    function UR(UU) {
-      return "function" === typeof UU.BgU ? UU : null
+    function uR(uu) {
+      return "function" === typeof uu.bEu ? uu : null
     }
     const RR = "openRenderer";
 
-    function gR(UU) {
-      const RU = null === UU || void 0 === UU ? void 0 : UU.zpU();
-      return void 0 === RU ? void 0 : new Error(RU)
+    function yR(uu) {
+      const Ru = null === uu || void 0 === uu ? void 0 : uu.sQu();
+      return void 0 === Ru ? void 0 : new Error(Ru)
     }
-    const tR = 5e3,
-      pR = 15e3;
+    const ER = 5e3,
+      KR = 15e3;
 
-    function ER(UU, RU, gU, tU, pU, EU) {
-      return (0, IU.i)(function(UU, RU, gU, tU, pU, EU) {
-        return (0, JU.g)(UU, RU, (() => UU.BgU(gU, tU, pU, EU.indirectHangs, EU.storagePullBreaks, EU.splitPassBreaks, EU.framesAhead, EU.instancedTerrainSlow)))
-      }(UU, RU, gU, tU, pU, EU), pR, `${xU.e.RenderSurfaceUnusable}: the renderer didn't open in ${pR/1e3} s`, TR)
+    function QR(uu, Ru, yu, Eu, Ku, Qu) {
+      return (0, Cu.i)(function(uu, Ru, yu, Eu, Ku, Qu) {
+        return (0, ku.d)(uu, Ru, (() => uu.bEu(yu, Eu, Ku, Qu.indirectHangs, Qu.storagePullBreaks, Qu.splitPassBreaks, Qu.framesAhead, Qu.instancedTerrainSlow)))
+      }(uu, Ru, yu, Eu, Ku, Qu), KR, `${du.g.RenderSurfaceUnusable}: the renderer didn't open in ${KR/1e3} s`, JR)
     }
-    async function PR(UU, RU, gU, tU, pU, EU) {
-      if ("function" !== typeof UU.VEU) throw new Error("this core has no set_renderer");
-      const PU = await ER(RU, RR, gU, pU, tU, EU);
+    async function mR(uu, Ru, yu, Eu, Ku, Qu) {
+      if ("function" !== typeof uu.Hmu) throw new Error("this core has no set_renderer");
+      const mu = await QR(Ru, RR, yu, Ku, Eu, Qu);
       try {
-        UU.VEU(PU)
-      } catch (TU) {
-        throw TR(PU), TU
+        uu.Hmu(mu)
+      } catch (Ju) {
+        throw JR(mu), Ju
       }
     }
 
-    function TR(UU) {
+    function JR(uu) {
       try {
-        UU.free()
+        uu.free()
       } catch {}
     }
   },
-  40172: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => tU
+  40366: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu
     });
-    const tU = {
+    const Eu = {
       extensions: ["ANGLE_instanced_arrays", "OES_vertex_array_object", "OES_element_index_uint", "OES_standard_derivatives"],
       limits: {
         MAX_VERTEX_ATTRIBS: 16,
@@ -1008,361 +1008,361 @@ export const modules = {
       vertexHighFloatBits: 23
     }
   },
-  40193: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => qU,
-      g: () => TU
+  40384: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Nu,
+      e: () => Ju
     });
-    var tU = gU(657),
-      pU = gU(663);
+    var Eu = yu(673),
+      Ku = yu(680);
 
-    function EU(UU, RU) {
-      const gU = null === RU ? void 0 : tU.b.get(RU);
-      return "all" === gU || "webgl" === gU && "webgpu" !== UU.backend ? RU : null
+    function Qu(uu, Ru) {
+      const yu = null === Ru ? void 0 : Eu.b.get(Ru);
+      return "all" === yu || "webgl" === yu && "webgpu" !== uu.backend ? Ru : null
     }
 
-    function PU(UU) {
-      return "software_adapter" === UU.reason ? null : UU.adapter
+    function mu(uu) {
+      return "software_adapter" === uu.reason ? null : uu.adapter
     }
 
-    function TU(UU, RU) {
-      const gU = (0, tU.s)();
-      return null === gU ? null : (0, tU.f)(PU(UU), gU, RU ? tU.l : tU.i)
+    function Ju(uu, Ru) {
+      const yu = (0, Eu.u)();
+      return null === yu ? null : (0, Eu.f)(mu(uu), yu, Ru ? Eu.m : Eu.i)
     }
 
-    function qU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pU.j;
-      const tU = EU(UU, RU);
-      return null !== tU && "webgl" === UU.backend && gU(tU) ? null : tU
+    function Nu(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ku.l;
+      const Eu = Qu(uu, Ru);
+      return null !== Eu && "webgl" === uu.backend && yu(Eu) ? null : Eu
     }
   },
-  40177: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => pU,
-      g: () => cU,
-      j: () => PU,
-      k: () => qU
+  40371: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Ku,
+      d: () => Vu,
+      h: () => mu,
+      i: () => Nu
     });
-    var tU = gU(35889);
-    class pU extends Error {
-      constructor(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        super(`${UU}: the module trapped${gU?" in an earlier call":""}: ${String(RU)}`, {
-          cause: RU
-        }), this.site = UU, this.trap = RU, this.earlier = gU, this.name = "ModuleTrapError", RU instanceof Error && void 0 !== RU.stack && (this.stack = `${this.name}: ${this.message}\n${RU.stack}`)
+    var Eu = yu(36176);
+    class Ku extends Error {
+      constructor(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        super(`${uu}: the module trapped${yu?" in an earlier call":""}: ${String(Ru)}`, {
+          cause: Ru
+        }), this.site = uu, this.trap = Ru, this.earlier = yu, this.name = "ModuleTrapError", Ru instanceof Error && void 0 !== Ru.stack && (this.stack = `${this.name}: ${this.message}\n${Ru.stack}`)
       }
     }
-    const EU = new WeakMap;
+    const Qu = new WeakMap;
 
-    function PU(UU) {
-      return EU.has(UU)
+    function mu(uu) {
+      return Qu.has(uu)
     }
 
-    function TU(UU, RU) {
-      EU.has(UU) || EU.set(UU, RU)
+    function Ju(uu, Ru) {
+      Qu.has(uu) || Qu.set(uu, Ru)
     }
 
-    function qU(UU, RU) {
-      return !!(0, tU.h)(RU) && (TU(UU, RU), !0)
+    function Nu(uu, Ru) {
+      return !!(0, Eu.g)(Ru) && (Ju(uu, Ru), !0)
     }
-    const KU = [
-      ["error", UU => UU.error],
-      ["unhandledrejection", UU => UU.reason]
+    const Xu = [
+      ["error", uu => uu.error],
+      ["unhandledrejection", uu => uu.reason]
     ];
 
-    function cU(UU, RU, gU) {
-      let PU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
-      return EU.has(UU) ? Promise.reject(new pU(RU, EU.get(UU), !0)) : new Promise(((EU, qU) => {
-        const cU = gU => {
-            TU(UU, gU), uU(), qU(new pU(RU, gU))
+    function Vu(uu, Ru, yu) {
+      let mu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "function" === typeof globalThis.addEventListener ? globalThis : null;
+      return Qu.has(uu) ? Promise.reject(new Ku(Ru, Qu.get(uu), !0)) : new Promise(((Qu, Nu) => {
+        const Vu = yu => {
+            Ju(uu, yu), xu(), Nu(new Ku(Ru, yu))
           },
-          GU = UU => {
-            UU instanceof WebAssembly.RuntimeError ? cU(UU) : (uU(), qU(UU))
+          ru = uu => {
+            uu instanceof WebAssembly.RuntimeError ? Vu(uu) : (xu(), Nu(uu))
           },
-          jU = KU.map((UU => {
-            let [RU, gU] = UU;
-            return [RU, UU => {
-              const RU = gU(UU);
-              (0, tU.h)(RU) && cU(RU)
+          Bu = Xu.map((uu => {
+            let [Ru, yu] = uu;
+            return [Ru, uu => {
+              const Ru = yu(uu);
+              (0, Eu.g)(Ru) && Vu(Ru)
             }]
           })),
-          uU = () => {
-            for (const [UU, RU] of jU) null === PU || void 0 === PU || PU.removeEventListener(UU, RU)
+          xu = () => {
+            for (const [uu, Ru] of Bu) null === mu || void 0 === mu || mu.removeEventListener(uu, Ru)
           };
-        for (const [UU, RU] of jU) null === PU || void 0 === PU || PU.addEventListener(UU, RU);
-        let CU;
+        for (const [uu, Ru] of Bu) null === mu || void 0 === mu || mu.addEventListener(uu, Ru);
+        let Su;
         try {
-          CU = gU()
-        } catch (hU) {
-          return void GU(hU)
+          Su = yu()
+        } catch (pu) {
+          return void ru(pu)
         }
-        CU.then((UU => {
-          uU(), EU(UU)
-        }), GU)
+        Su.then((uu => {
+          xu(), Qu(uu)
+        }), ru)
       }))
     }
   },
-  40201: (UU, RU, gU) => {
-    gU.d(RU, {
-      A: () => sU,
-      D: () => SU,
-      H: () => VU,
-      I: () => wU,
-      L: () => YU,
-      P: () => BU,
-      S: () => XU,
-      V: () => aU,
-      b: () => JU,
-      f: () => xU,
-      h: () => vU,
-      j: () => rU,
-      m: () => fU,
-      o: () => IU,
-      r: () => eU,
-      v: () => bU,
-      z: () => ZU
+  40393: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      D: () => zu,
+      E: () => su,
+      F: () => eu,
+      I: () => Uu,
+      L: () => nu,
+      O: () => lu,
+      P: () => Gu,
+      e: () => ku,
+      g: () => du,
+      k: () => gu,
+      m: () => tu,
+      o: () => Hu,
+      r: () => Cu,
+      t: () => Wu,
+      w: () => Du,
+      x: () => Iu,
+      z: () => Fu
     });
-    var tU = gU(201),
-      pU = gU(263),
-      EU = gU(21),
-      PU = gU(291),
-      TU = gU(34),
-      qU = gU(40166),
-      KU = gU(40193),
-      cU = gU(40203),
-      GU = (gU(40186), gU(40207)),
-      jU = gU(40210);
-    const uU = "wasmJoinBuild";
-    let CU = null,
-      hU = null,
-      QU = null;
+    var Eu = yu(228),
+      Ku = yu(293),
+      Qu = yu(27),
+      mu = yu(325),
+      Ju = yu(47),
+      Nu = yu(40361),
+      Xu = yu(40384),
+      Vu = yu(40401),
+      ru = (yu(40374), yu(40403)),
+      Bu = yu(40405);
+    const xu = "wasmJoinBuild";
+    let Su = null,
+      pu = null,
+      Tu = null;
 
-    function eU(UU) {
-      QU = UU
+    function Wu(uu) {
+      Tu = uu
     }
-    let WU = !1;
+    let ju = !1;
 
-    function fU() {
-      WU = !0
-    }
-
-    function xU() {
-      return WU
-    }
-    let mU = !1;
-
-    function IU() {
-      mU = !0
+    function Hu() {
+      ju = !0
     }
 
-    function JU() {
-      return mU
+    function du() {
+      return ju
+    }
+    let bu = !1;
+
+    function Cu() {
+      bu = !0
     }
 
-    function wU() {
-      return QU
-    }
-    let nU = null;
-
-    function bU(UU) {
-      nU = UU, (0, PU.e)(UU)
-    }
-    const oU = "wasmClientRenderLost";
-
-    function ZU() {
-      TU.l.setItem(oU, !0)
+    function ku() {
+      return bu
     }
 
-    function aU() {
-      return !0 === TU.l.getItem(oU)
+    function eu() {
+      return Tu
+    }
+    let Au = null;
+
+    function Du(uu) {
+      Au = uu, (0, mu.e)(uu)
+    }
+    const Mu = "wasmClientRenderLost";
+
+    function Iu() {
+      Ju.j.setItem(Mu, !0)
     }
 
-    function YU() {
-      return nU
+    function Gu() {
+      return !0 === Ju.j.getItem(Mu)
     }
 
-    function BU() {
-      return null === CU && (TU.k.removeItem("wasmLastPick"), TU.k.removeItem("wasmGuessVerdict"), (0, PU.l)(), CU = (0, qU.w)(cU.f).then((UU => (null === UU || (0, qU.k)(UU) || (hU = GU.e[UU.backend], EU.b.followGameGpu("webgpu" === UU.backend ? UU.adapter : null), "webgpu" === UU.backend && (0, jU.g)()), UU)))), CU
+    function Uu() {
+      return Au
     }
 
-    function VU() {
-      return hU
+    function nu() {
+      return null === Su && (Ju.i.removeItem("wasmLastPick"), Ju.i.removeItem("wasmGuessVerdict"), (0, mu.l)(), Su = (0, Nu.w)(Vu.e).then((uu => (null === uu || (0, Nu.l)(uu) || (pu = ru.b[uu.backend], Qu.d.followGameGpu("webgpu" === uu.backend ? uu.adapter : null), "webgpu" === uu.backend && (0, Bu.f)()), uu)))), Su
     }
 
-    function rU(UU) {
-      return UU ? UU.load() : Promise.resolve().then((function() {
-        var UU = new Error("Cannot find module '@bloxd/wasm/client'");
-        throw UU.code = "MODULE_NOT_FOUND", UU
-      })).then((UU => UU.bloxdWasmClient))
+    function su() {
+      return pu
     }
 
-    function XU(UU) {
-      TU.k.setItem(uU, UU)
+    function tu(uu) {
+      return uu ? uu.load() : Promise.resolve().then((function() {
+        var uu = new Error("Cannot find module '@bloxd/wasm/client'");
+        throw uu.code = "MODULE_NOT_FOUND", uu
+      })).then((uu => uu.bloxdWasmClient))
     }
-    async function vU() {
-      if (null === cU.f) return rU(null);
-      const UU = TU.k.getItem(uU);
-      let RU = "none" === UU ? null : "webgl";
-      return null !== UU && "none" !== UU && ("string" === typeof UU && void 0 !== (0, tU.b)(cU.f, UU) ? RU = UU : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(UU)}, is none of this client's: guessing WebGL2's`)), null === RU ? null : cU.f[RU]()
-    }
-    let dU = null,
-      HU = null;
 
-    function SU() {
-      return dU ??= BU().then((async UU => {
-        var RU;
-        const gU = null !== UU && !(0, qU.k)(UU),
-          tU = {
-            indirectHangs: gU && await (0, qU.y)(UU, window.location.search),
-            storagePullBreaks: gU && (0, qU.L)(UU, window.location.search),
-            splitPassBreaks: gU && (0, qU.I)(UU, window.location.search),
-            framesAhead: (0, qU.f)(window.location.search),
-            instancedTerrainSlow: gU && (0, qU.B)(UU, null !== (RU = (0, KU.g)(UU, !1)) && void 0 !== RU ? RU : (0, pU.c)())
+    function lu(uu) {
+      Ju.i.setItem(xu, uu)
+    }
+    async function gu() {
+      if (null === Vu.e) return tu(null);
+      const uu = Ju.i.getItem(xu);
+      let Ru = "none" === uu ? null : "webgl";
+      return null !== uu && "none" !== uu && ("string" === typeof uu && void 0 !== (0, Eu.b)(Vu.e, uu) ? Ru = uu : console.warn(`[bloxd-wasm-client] the last join's build, ${JSON.stringify(uu)}, is none of this client's: guessing WebGL2's`)), null === Ru ? null : Vu.e[Ru]()
+    }
+    let cu = null,
+      Lu = null;
+
+    function zu() {
+      return cu ??= nu().then((async uu => {
+        var Ru;
+        const yu = null !== uu && !(0, Nu.l)(uu),
+          Eu = {
+            indirectHangs: yu && await (0, Nu.A)(uu, window.location.search),
+            storagePullBreaks: yu && (0, Nu.L)(uu, window.location.search),
+            splitPassBreaks: yu && (0, Nu.I)(uu, window.location.search),
+            framesAhead: (0, Nu.h)(window.location.search),
+            instancedTerrainSlow: yu && (0, Nu.B)(uu, null !== (Ru = (0, Xu.e)(uu, !1)) && void 0 !== Ru ? Ru : (0, Ku.c)())
           };
-        return HU = tU.indirectHangs, tU
-      })), dU
+        return Lu = Eu.indirectHangs, Eu
+      })), cu
     }
 
-    function sU() {
-      return HU
+    function Fu() {
+      return Lu
     }
   },
-  40207: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => tU
+  40403: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu
     });
-    const tU = {
+    const Eu = {
       webgpu: "rust_webgpu",
       webgl: "rust_webgl2",
       webgl1: "rust_webgl1"
     }
   },
-  40203: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => pU,
-      f: () => tU
+  40401: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ku,
+      e: () => Eu
     });
-    const tU = {
-        webgpu: async () => (await gU.e(8).then((() => gU(42571)))).bloxdWasmWebgpu,
-        webgl: async () => (await gU.e(6).then((() => gU(42587)))).bloxdWasmWebgl,
-        webgl1: async () => (await gU.e(7).then((() => gU(42592)))).bloxdWasmWebgl1
+    const Eu = {
+        webgpu: async () => (await yu.e(8).then((() => yu(42808)))).bloxdWasmWebgpu,
+        webgl: async () => (await yu.e(6).then((() => yu(42815)))).bloxdWasmWebgl,
+        webgl1: async () => (await yu.e(7).then((() => yu(42827)))).bloxdWasmWebgl1
       },
-      pU = async () => (await gU.e(5).then((() => gU(42606)))).compileAnimationPackInWasm
+      Ku = async () => (await yu.e(5).then((() => yu(42841)))).compileAnimationPackInWasm
   },
-  40218: (UU, RU, gU) => {
-    function tU() {
-      return gU(40226)
+  40410: (uu, Ru, yu) => {
+    function Eu() {
+      return yu(40412)
     }
 
-    function pU() {
-      return gU(40235)
+    function Ku() {
+      return yu(40416)
     }
 
-    function EU(UU) {
-      return ["pl", "ru", "tr", "uk", "vi"].includes(UU)
+    function Qu(uu) {
+      return ["pl", "ru", "tr", "uk", "vi"].includes(uu)
     }
-    gU.d(RU, {
-      e: () => EU,
-      f: () => tU,
-      g: () => pU
+    yu.d(Ru, {
+      c: () => Qu,
+      g: () => Eu,
+      i: () => Ku
     })
   },
-  40210: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => TU,
-      g: () => qU
+  40405: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Ju,
+      f: () => Nu
     });
-    var tU = gU(96);
-    const pU = "webgpuPipeline";
+    var Eu = yu(106);
+    const Ku = "webgpuPipeline";
 
-    function EU(UU) {
-      return UU.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
+    function Qu(uu) {
+      return uu.split(".").slice(0, 2).join("_").replace(/[^0-9_]/g, "")
     }
-    let PU = null;
+    let mu = null;
 
-    function TU() {
-      if (null === PU) try {
-        UU = (0, tU.getBrowserName)(), RU = (0, tU.getBrowserVersion)(), gU = (0, tU.getOperatingSystem)(), pU = (0, tU.getOperatingSystemVersion)(), PU = `${UU.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===RU?"unknown":EU(RU)}-${gU}${void 0===pU?"":`_${EU(pU)}`}`
-      } catch (TU) {
-        console.warn("The user agent couldn't be read for its browser code", TU), PU = "unknown"
+    function Ju() {
+      if (null === mu) try {
+        uu = (0, Eu.getBrowserName)(), Ru = (0, Eu.getBrowserVersion)(), yu = (0, Eu.getOperatingSystem)(), Ku = (0, Eu.getOperatingSystemVersion)(), mu = `${uu.toLowerCase().replace(/[^a-z0-9]/g,"")}_${void 0===Ru?"unknown":Qu(Ru)}-${yu}${void 0===Ku?"":`_${Qu(Ku)}`}`
+      } catch (Ju) {
+        console.warn("The user agent couldn't be read for its browser code", Ju), mu = "unknown"
       }
-      var UU, RU, gU, pU;
-      return PU
+      var uu, Ru, yu, Ku;
+      return mu
     }
 
-    function qU() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
-      const RU = `WGPU-${TU()}`,
-        tU = (UU, tU) => {
+    function Nu() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GPUDevice.prototype;
+      const Ru = `WGPU-${Ju()}`,
+        Eu = (uu, Eu) => {
           const {
-            reason: EU,
-            message: PU
-          } = tU, TU = {
-            pipeline: null !== UU && void 0 !== UU ? UU : "",
-            reason: String(EU),
-            browserMessage: String(PU)
+            reason: Qu,
+            message: mu
+          } = Eu, Ju = {
+            pipeline: null !== uu && void 0 !== uu ? uu : "",
+            reason: String(Qu),
+            browserMessage: String(mu)
           };
-          Promise.all([gU.e(262), gU.e(86)]).then((() => gU(40319))).then((UU => {
+          Promise.all([yu.e(262), yu.e(86)]).then((() => yu(40513))).then((uu => {
             let {
-              reportCrash: gU
-            } = UU;
-            gU({
+              reportCrash: yu
+            } = uu;
+            yu({
               kind: "coreError",
-              code: RU,
-              site: pU,
+              code: Ru,
+              site: Ku,
               fatal: !1,
-              message: `${TU.pipeline} ${TU.reason}: ${TU.browserMessage}`,
-              details: TU,
-              error: tU
+              message: `${Ju.pipeline} ${Ju.reason}: ${Ju.browserMessage}`,
+              details: Ju,
+              error: Eu
             })
-          })).catch((UU => {
-            console.warn("A rejected WebGPU pipeline compile couldn't be reported", UU)
+          })).catch((uu => {
+            console.warn("A rejected WebGPU pipeline compile couldn't be reported", uu)
           }))
         },
-        EU = UU.createRenderPipelineAsync;
-      UU.createRenderPipelineAsync = function(UU) {
-        return EU.call(this, UU).catch((RU => {
-          throw tU(UU.label, RU), RU
+        Qu = uu.createRenderPipelineAsync;
+      uu.createRenderPipelineAsync = function(uu) {
+        return Qu.call(this, uu).catch((Ru => {
+          throw Eu(uu.label, Ru), Ru
         }))
       };
-      const PU = UU.createComputePipelineAsync;
-      UU.createComputePipelineAsync = function(UU) {
-        return PU.call(this, UU).catch((RU => {
-          throw tU(UU.label, RU), RU
+      const mu = uu.createComputePipelineAsync;
+      uu.createComputePipelineAsync = function(uu) {
+        return mu.call(this, uu).catch((Ru => {
+          throw Eu(uu.label, Ru), Ru
         }))
       }
     }
   },
-  40158: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/bloxd_wasm_models_bg.8c4fc469aca40ce98e8d.wasm"
+  40354: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/bloxd_wasm_models_bg.ee72044a657ebe08ec1c.wasm"
   },
-  40153: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/bloxd_wasm_workers_bg.5fef21cdf91bff05701f.wasm"
+  40349: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/bloxd_wasm_workers_bg.16f06191eb66a031fedc.wasm"
   },
-  40226: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
+  40412: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/JetBrainsMonoNL-ExtraBold-latin.68689f5c710b4650e4b8.woff2"
   },
-  40235: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
+  40416: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/JetBrainsMonoNL-ExtraBold-rest.d152b95e9e75f7dca56d.woff2"
   },
-  40150: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => pU,
-      d: () => tU
+  40341: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Ku,
+      e: () => Eu
     });
-    const tU = {
+    const Eu = {
       name: "bloxd_wasm_workers",
       url: function() {
-        return new gU.U(gU(40153))
+        return new yu.U(yu(40349))
       }
     };
-    const pU = {
+    const Ku = {
       name: "bloxd_wasm_models",
       url: function() {
-        return new gU.U(gU(40158))
+        return new yu.U(yu(40354))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

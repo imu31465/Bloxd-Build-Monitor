@@ -1,22 +1,22 @@
 export const id = 207;
 export const ids = [207];
 export const modules = {
-  35883: (UU, RU, gU) => {
-    gU.d(RU, {
-      reportCappedWasmFailure: () => PU,
-      reportWasmFailure: () => EU
+  36163: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      reportCappedWasmFailure: () => mu,
+      reportWasmFailure: () => Qu
     });
-    var tU = gU(2927);
-    const pU = tU.c - 4;
+    var Eu = yu(3032);
+    const Ku = Eu.b - 4;
 
-    function EU(UU, RU, gU) {
-      (0, tU.e)(UU, RU, gU, !1)
+    function Qu(uu, Ru, yu) {
+      (0, Eu.e)(uu, Ru, yu, !1)
     }
 
-    function PU(UU, RU, gU) {
-      (0, tU.e)(UU, RU, gU, !1, pU)
+    function mu(uu, Ru, yu) {
+      (0, Eu.e)(uu, Ru, yu, !1, Ku)
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,757 +1,757 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  6295: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      loadPageShaderPackCompiler: () => jR
+  6395: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      loadPageShaderPackCompiler: () => BR
     });
-    var tU = {};
-    gU.r(tU), gU.d(tU, {
-      HtU: () => pU,
-      i_: () => EU,
-      default: () => iU,
-      StU: () => PU,
-      stU: () => TU,
-      initSync: () => FU,
-      lc: () => qU,
-      mgU: () => KU,
-      ytU: () => cU,
-      ktU: () => GU,
-      wZ: () => jU,
-      FtU: () => uU,
-      xZ: () => CU,
-      itU: () => hU
+    var Eu = {};
+    yu.r(Eu), yu.d(Eu, {
+      AKu: () => Ku,
+      juu: () => Qu,
+      default: () => Pu,
+      DKu: () => mu,
+      MKu: () => Ju,
+      initSync: () => hu,
+      iV: () => Nu,
+      rEu: () => Xu,
+      IKu: () => Vu,
+      GKu: () => ru,
+      bD: () => Bu,
+      UKu: () => xu,
+      dD: () => Su,
+      nKu: () => pu
     });
-    class pU {
-      static __wrap(UU) {
-        const RU = Object.create(pU.prototype);
-        return RU.__wbg_ptr = UU, eU.register(RU, RU.__wbg_ptr, RU), RU
+    class Ku {
+      static __wrap(uu) {
+        const Ru = Object.create(Ku.prototype);
+        return Ru.__wbg_ptr = uu, Wu.register(Ru, Ru.__wbg_ptr, Ru), Ru
       }
       __destroy_into_raw() {
-        const UU = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, eU.unregister(this), UU
+        const uu = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Wu.unregister(this), uu
       }
       free() {
-        const UU = this.__destroy_into_raw();
-        sU.TLg7(UU, 0)
+        const uu = this.__destroy_into_raw();
+        Fu.WkfX(uu, 0)
       }
       get errorsJson() {
-        let UU, RU;
+        let uu, Ru;
         try {
-          const gU = sU.SB7o(this.__wbg_ptr);
-          return UU = gU[0], RU = gU[1], JU(gU[0], gU[1])
+          const yu = Fu.FqHg(this.__wbg_ptr);
+          return uu = yu[0], Ru = yu[1], ku(yu[0], yu[1])
         } finally {
-          sU.bIiB(UU, RU, 1)
+          Fu.pYln(uu, Ru, 1)
         }
       }
       get features() {
-        const UU = sU.xHwp(this.__wbg_ptr);
-        var RU = fU(UU[0], UU[1]);
-        return sU.bIiB(UU[0], 4 * UU[1], 4), RU
+        const uu = Fu.dC0Q(this.__wbg_ptr);
+        var Ru = Hu(uu[0], uu[1]);
+        return Fu.pYln(uu[0], 4 * uu[1], 4), Ru
       }
       get hooks() {
-        const UU = sU.oC5g(this.__wbg_ptr);
-        var RU = xU(UU[0], UU[1]).slice();
-        return sU.bIiB(UU[0], 1 * UU[1], 1), RU
+        const uu = Fu.n1tP(this.__wbg_ptr);
+        var Ru = du(uu[0], uu[1]).slice();
+        return Fu.pYln(uu[0], 1 * uu[1], 1), Ru
       }
-      mapValidationMessage(UU, RU, gU, tU, pU) {
-        let EU, PU;
+      mapValidationMessage(uu, Ru, yu, Eu, Ku) {
+        let Qu, mu;
         try {
-          const KU = sU.Vh5N(this.__wbg_ptr, UU, RU, gU, WU(tU), WU(pU));
-          var TU = KU[0],
-            qU = KU[1];
-          if (KU[3]) throw TU = 0, qU = 0, VU(KU[2]);
-          return EU = TU, PU = qU, JU(TU, qU)
+          const Xu = Fu.bBuO(this.__wbg_ptr, uu, Ru, yu, ju(Eu), ju(Ku));
+          var Ju = Xu[0],
+            Nu = Xu[1];
+          if (Xu[3]) throw Ju = 0, Nu = 0, su(Xu[2]);
+          return Qu = Ju, mu = Nu, ku(Ju, Nu)
         } finally {
-          sU.bIiB(EU, PU, 1)
+          Fu.pYln(Qu, mu, 1)
         }
       }
       get moduleCodes() {
-        const UU = sU.uLAK(this.__wbg_ptr);
-        var RU = fU(UU[0], UU[1]);
-        return sU.bIiB(UU[0], 4 * UU[1], 4), RU
+        const uu = Fu.K3jx(this.__wbg_ptr);
+        var Ru = Hu(uu[0], uu[1]);
+        return Fu.pYln(uu[0], 4 * uu[1], 4), Ru
       }
       get offInStrictJson() {
-        let UU, RU;
+        let uu, Ru;
         try {
-          const gU = sU.YpRJ(this.__wbg_ptr);
-          return UU = gU[0], RU = gU[1], JU(gU[0], gU[1])
+          const yu = Fu.m3JC(this.__wbg_ptr);
+          return uu = yu[0], Ru = yu[1], ku(yu[0], yu[1])
         } finally {
-          sU.bIiB(UU, RU, 1)
+          Fu.pYln(uu, Ru, 1)
         }
       }
       get reads() {
-        const UU = sU.zHYn(this.__wbg_ptr);
-        var RU = fU(UU[0], UU[1]);
-        return sU.bIiB(UU[0], 4 * UU[1], 4), RU
+        const uu = Fu.qtJt(this.__wbg_ptr);
+        var Ru = Hu(uu[0], uu[1]);
+        return Fu.pYln(uu[0], 4 * uu[1], 4), Ru
       }
       get validationModuleCodes() {
-        const UU = sU.pT2e(this.__wbg_ptr);
-        var RU = fU(UU[0], UU[1]);
-        return sU.bIiB(UU[0], 4 * UU[1], 4), RU
+        const uu = Fu.suo0(this.__wbg_ptr);
+        var Ru = Hu(uu[0], uu[1]);
+        return Fu.pYln(uu[0], 4 * uu[1], 4), Ru
       }
       get validationModuleKeys() {
-        const UU = sU.mqMG(this.__wbg_ptr);
-        var RU = xU(UU[0], UU[1]).slice();
-        return sU.bIiB(UU[0], 1 * UU[1], 1), RU
+        const uu = Fu.peYN(this.__wbg_ptr);
+        var Ru = du(uu[0], uu[1]).slice();
+        return Fu.pYln(uu[0], 1 * uu[1], 1), Ru
       }
       get variantFlags() {
-        const UU = sU.ky50(this.__wbg_ptr);
-        var RU = xU(UU[0], UU[1]).slice();
-        return sU.bIiB(UU[0], 1 * UU[1], 1), RU
+        const uu = Fu.XaT1(this.__wbg_ptr);
+        var Ru = du(uu[0], uu[1]).slice();
+        return Fu.pYln(uu[0], 1 * uu[1], 1), Ru
       }
     }
 
-    function EU(UU, RU, gU, tU, EU, PU, TU) {
-      const qU = BU(UU, sU.BK5v),
-        KU = yU,
-        cU = BU(RU, sU.BK5v),
-        GU = yU,
-        jU = BU(gU, sU.BK5v),
-        uU = yU,
-        CU = YU(tU, sU.BK5v),
-        hU = yU,
-        QU = BU(EU, sU.BK5v),
-        eU = yU,
-        WU = BU(PU, sU.BK5v),
-        fU = yU,
-        xU = BU(TU, sU.BK5v),
-        mU = yU,
-        IU = sU.OErR(qU, KU, cU, GU, jU, uU, CU, hU, QU, eU, WU, fU, xU, mU);
-      if (IU[2]) throw VU(IU[1]);
-      return pU.__wrap(IU[0])
+    function Qu(uu, Ru, yu, Eu, Qu, mu, Ju) {
+      const Nu = nu(uu, Fu.waFT),
+        Xu = wu,
+        Vu = nu(Ru, Fu.waFT),
+        ru = wu,
+        Bu = nu(yu, Fu.waFT),
+        xu = wu,
+        Su = Uu(Eu, Fu.waFT),
+        pu = wu,
+        Tu = nu(Qu, Fu.waFT),
+        Wu = wu,
+        ju = nu(mu, Fu.waFT),
+        Hu = wu,
+        du = nu(Ju, Fu.waFT),
+        bu = wu,
+        Cu = Fu.GhxK(Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu, Wu, ju, Hu, du, bu);
+      if (Cu[2]) throw su(Cu[1]);
+      return Ku.__wrap(Cu[0])
     }
 
-    function PU() {
-      const UU = sU.pJ8p();
-      var RU = fU(UU[0], UU[1]);
-      return sU.bIiB(UU[0], 4 * UU[1], 4), RU
+    function mu() {
+      const uu = Fu.wr9H();
+      var Ru = Hu(uu[0], uu[1]);
+      return Fu.pYln(uu[0], 4 * uu[1], 4), Ru
     }
 
-    function TU() {
-      const UU = sU.TIgN();
-      var RU = fU(UU[0], UU[1]);
-      return sU.bIiB(UU[0], 4 * UU[1], 4), RU
+    function Ju() {
+      const uu = Fu.gJvH();
+      var Ru = Hu(uu[0], uu[1]);
+      return Fu.pYln(uu[0], 4 * uu[1], 4), Ru
     }
 
-    function qU() {
-      sU.a0aR()
+    function Nu() {
+      Fu.fWC9()
     }
 
-    function KU(UU, RU, gU, tU, pU) {
-      let EU, PU;
+    function Xu(uu, Ru, yu, Eu, Ku) {
+      let Qu, mu;
       try {
-        const KU = BU(UU, sU.BK5v),
-          cU = yU,
-          GU = YU(RU, sU.BK5v),
-          jU = yU,
-          uU = BU(gU, sU.BK5v),
-          CU = yU,
-          hU = YU(tU, sU.BK5v),
-          QU = yU,
-          eU = function(UU, RU) {
-            const gU = RU(1 * UU.length, 1) >>> 0;
-            return bU().set(UU, gU / 1), yU = UU.length, gU
-          }(pU, sU.BK5v),
-          WU = yU,
-          fU = sU.KroG(KU, cU, GU, jU, uU, CU, hU, QU, eU, WU);
-        var TU = fU[0],
-          qU = fU[1];
-        if (fU[3]) throw TU = 0, qU = 0, VU(fU[2]);
-        return EU = TU, PU = qU, JU(TU, qU)
+        const Xu = nu(uu, Fu.waFT),
+          Vu = wu,
+          ru = Uu(Ru, Fu.waFT),
+          Bu = wu,
+          xu = nu(yu, Fu.waFT),
+          Su = wu,
+          pu = Uu(Eu, Fu.waFT),
+          Tu = wu,
+          Wu = function(uu, Ru) {
+            const yu = Ru(1 * uu.length, 1) >>> 0;
+            return Du().set(uu, yu / 1), wu = uu.length, yu
+          }(Ku, Fu.waFT),
+          ju = wu,
+          Hu = Fu.eyRI(Xu, Vu, ru, Bu, xu, Su, pu, Tu, Wu, ju);
+        var Ju = Hu[0],
+          Nu = Hu[1];
+        if (Hu[3]) throw Ju = 0, Nu = 0, su(Hu[2]);
+        return Qu = Ju, mu = Nu, ku(Ju, Nu)
       } finally {
-        sU.bIiB(EU, PU, 1)
+        Fu.pYln(Qu, mu, 1)
       }
     }
 
-    function cU() {
-      let UU, RU;
+    function Vu() {
+      let uu, Ru;
       try {
-        const gU = sU.fq32();
-        return UU = gU[0], RU = gU[1], JU(gU[0], gU[1])
+        const yu = Fu.QRJB();
+        return uu = yu[0], Ru = yu[1], ku(yu[0], yu[1])
       } finally {
-        sU.bIiB(UU, RU, 1)
+        Fu.pYln(uu, Ru, 1)
       }
     }
 
-    function GU(UU) {
-      let RU, gU;
+    function ru(uu) {
+      let Ru, yu;
       try {
-        const EU = sU.gIUc(UU);
-        var tU = EU[0],
-          pU = EU[1];
-        if (EU[3]) throw tU = 0, pU = 0, VU(EU[2]);
-        return RU = tU, gU = pU, JU(tU, pU)
+        const Qu = Fu.dZle(uu);
+        var Eu = Qu[0],
+          Ku = Qu[1];
+        if (Qu[3]) throw Eu = 0, Ku = 0, su(Qu[2]);
+        return Ru = Eu, yu = Ku, ku(Eu, Ku)
       } finally {
-        sU.bIiB(RU, gU, 1)
+        Fu.pYln(Ru, yu, 1)
       }
     }
 
-    function jU() {
-      return sU.E8qA() >>> 0
+    function Bu() {
+      return Fu.eAnM() >>> 0
     }
 
-    function uU() {
-      let UU, RU;
+    function xu() {
+      let uu, Ru;
       try {
-        const gU = sU.akAO();
-        return UU = gU[0], RU = gU[1], JU(gU[0], gU[1])
+        const yu = Fu.fYNW();
+        return uu = yu[0], Ru = yu[1], ku(yu[0], yu[1])
       } finally {
-        sU.bIiB(UU, RU, 1)
+        Fu.pYln(uu, Ru, 1)
       }
     }
 
-    function CU(UU, RU) {
-      let gU, tU;
+    function Su(uu, Ru) {
+      let yu, Eu;
       try {
-        const PU = BU(UU, sU.BK5v),
-          TU = yU,
-          qU = YU(RU, sU.BK5v),
-          KU = yU,
-          cU = sU.dkFu(PU, TU, qU, KU);
-        var pU = cU[0],
-          EU = cU[1];
-        if (cU[3]) throw pU = 0, EU = 0, VU(cU[2]);
-        return gU = pU, tU = EU, JU(pU, EU)
+        const mu = nu(uu, Fu.waFT),
+          Ju = wu,
+          Nu = Uu(Ru, Fu.waFT),
+          Xu = wu,
+          Vu = Fu.USSo(mu, Ju, Nu, Xu);
+        var Ku = Vu[0],
+          Qu = Vu[1];
+        if (Vu[3]) throw Ku = 0, Qu = 0, su(Vu[2]);
+        return yu = Ku, Eu = Qu, ku(Ku, Qu)
       } finally {
-        sU.bIiB(gU, tU, 1)
+        Fu.pYln(yu, Eu, 1)
       }
     }
 
-    function hU(UU) {
-      let RU, gU;
+    function pu(uu) {
+      let Ru, yu;
       try {
-        const EU = sU.FNSQ(WU(UU));
-        var tU = EU[0],
-          pU = EU[1];
-        if (EU[3]) throw tU = 0, pU = 0, VU(EU[2]);
-        return RU = tU, gU = pU, JU(tU, pU)
+        const Qu = Fu.KmJN(ju(uu));
+        var Eu = Qu[0],
+          Ku = Qu[1];
+        if (Qu[3]) throw Eu = 0, Ku = 0, su(Qu[2]);
+        return Ru = Eu, yu = Ku, ku(Eu, Ku)
       } finally {
-        sU.bIiB(RU, gU, 1)
+        Fu.pYln(Ru, yu, 1)
       }
     }
 
-    function QU() {
+    function Tu() {
       return {
         __proto__: null,
-        hLqz: {
+        bSNY: {
           __proto__: null,
-          C9RC: function(UU, RU) {
-            return WU(Error(JU(UU, RU)))
+          vza3: function(uu, Ru) {
+            return ju(Error(ku(uu, Ru)))
           },
-          abXE: function(UU) {
-            return null === oU(UU)
+          a0kz: function(uu) {
+            return null === Mu(uu)
           },
-          ZTky: function(UU) {
-            return "string" === typeof oU(UU)
+          HAaE: function(uu) {
+            return "string" === typeof Mu(uu)
           },
-          dEd5: function(UU, RU) {
-            const gU = oU(RU),
-              tU = "string" === typeof gU ? gU : void 0;
-            var pU, EU = void 0 === (pU = tU) || null === pU ? 0 : function(UU, RU, gU) {
-                if (void 0 === gU) {
-                  const gU = dU.encode(UU),
-                    tU = RU(gU.length, 1) >>> 0;
-                  return bU().subarray(tU, tU + gU.length).set(gU), yU = gU.length, tU
+          iWQh: function(uu, Ru) {
+            const yu = Mu(Ru),
+              Eu = "string" === typeof yu ? yu : void 0;
+            var Ku, Qu = void 0 === (Ku = Eu) || null === Ku ? 0 : function(uu, Ru, yu) {
+                if (void 0 === yu) {
+                  const yu = cu.encode(uu),
+                    Eu = Ru(yu.length, 1) >>> 0;
+                  return Du().subarray(Eu, Eu + yu.length).set(yu), wu = yu.length, Eu
                 }
-                let tU = UU.length,
-                  pU = RU(tU, 1) >>> 0;
-                const EU = bU();
-                let PU = 0;
-                for (; PU < tU; PU++) {
-                  const RU = UU.charCodeAt(PU);
-                  if (RU > 127) break;
-                  EU[pU + PU] = RU
+                let Eu = uu.length,
+                  Ku = Ru(Eu, 1) >>> 0;
+                const Qu = Du();
+                let mu = 0;
+                for (; mu < Eu; mu++) {
+                  const Ru = uu.charCodeAt(mu);
+                  if (Ru > 127) break;
+                  Qu[Ku + mu] = Ru
                 }
-                if (PU !== tU) {
-                  0 !== PU && (UU = UU.slice(PU)), pU = gU(pU, tU, tU = PU + 3 * UU.length, 1) >>> 0;
-                  const RU = bU().subarray(pU + PU, pU + tU);
-                  PU += dU.encodeInto(UU, RU).written, pU = gU(pU, tU, PU, 1) >>> 0
+                if (mu !== Eu) {
+                  0 !== mu && (uu = uu.slice(mu)), Ku = yu(Ku, Eu, Eu = mu + 3 * uu.length, 1) >>> 0;
+                  const Ru = Du().subarray(Ku + mu, Ku + Eu);
+                  mu += cu.encodeInto(uu, Ru).written, Ku = yu(Ku, Eu, mu, 1) >>> 0
                 }
-                return yU = PU, pU
-              }(tU, sU.BK5v, sU.TWkK),
-              PU = yU;
-            IU().setInt32(UU + 4, PU, !0), IU().setInt32(UU + 0, EU, !0)
+                return wu = mu, Ku
+              }(Eu, Fu.waFT, Fu.No9f),
+              mu = wu;
+            Cu().setInt32(uu + 4, mu, !0), Cu().setInt32(uu + 0, Qu, !0)
           },
-          whrG: function(UU, RU) {
-            throw new Error(JU(UU, RU))
+          Rqtj: function(uu, Ru) {
+            throw new Error(ku(uu, Ru))
           },
-          dj3W: function(UU, RU) {
-            return oU(UU).charCodeAt(RU >>> 0)
+          eXX4: function(uu, Ru) {
+            return Mu(uu).charCodeAt(Ru >>> 0)
           },
-          EMoQ: function(UU, RU) {
-            console.error(JU(UU, RU))
+          ZU8x: function(uu, Ru) {
+            console.error(ku(uu, Ru))
           },
-          x2ha: function(UU) {
-            return oU(UU).length
+          fILd: function(uu) {
+            return Mu(uu).length
           },
-          PgyC: function(UU, RU) {
-            return WU(JU(UU, RU))
+          lP6y: function(uu, Ru) {
+            return ju(ku(uu, Ru))
           },
-          eMdc: function(UU) {
-            VU(UU)
+          umZL: function(uu) {
+            su(uu)
           }
         }
       }
     }
-    Symbol.dispose && (pU.prototype[Symbol.dispose] = pU.prototype.free);
-    const eU = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (Ku.prototype[Symbol.dispose] = Ku.prototype.free);
+    const Wu = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((UU => sU.TLg7(UU, 1)));
+    } : new FinalizationRegistry((uu => Fu.WkfX(uu, 1)));
 
-    function WU(UU) {
-      aU === ZU.length && ZU.push(ZU.length + 1);
-      const RU = aU;
-      return aU = ZU[RU], ZU[RU] = UU, RU
+    function ju(uu) {
+      Gu === Iu.length && Iu.push(Iu.length + 1);
+      const Ru = Gu;
+      return Gu = Iu[Ru], Iu[Ru] = uu, Ru
     }
 
-    function fU(UU, RU) {
-      UU >>>= 0;
-      const gU = IU(),
-        tU = [];
-      for (let pU = UU; pU < UU + 4 * RU; pU += 4) tU.push(VU(gU.getUint32(pU, !0)));
-      return tU
+    function Hu(uu, Ru) {
+      uu >>>= 0;
+      const yu = Cu(),
+        Eu = [];
+      for (let Ku = uu; Ku < uu + 4 * Ru; Ku += 4) Eu.push(su(yu.getUint32(Ku, !0)));
+      return Eu
     }
 
-    function xU(UU, RU) {
-      return UU >>>= 0, bU().subarray(UU / 1, UU / 1 + RU)
+    function du(uu, Ru) {
+      return uu >>>= 0, Du().subarray(uu / 1, uu / 1 + Ru)
     }
-    let mU = null;
+    let bu = null;
 
-    function IU() {
-      return (null === mU || !0 === mU.buffer.detached || void 0 === mU.buffer.detached && mU.buffer !== sU.memory.buffer) && (mU = new DataView(sU.memory.buffer)), mU
+    function Cu() {
+      return (null === bu || !0 === bu.buffer.detached || void 0 === bu.buffer.detached && bu.buffer !== Fu.memory.buffer) && (bu = new DataView(Fu.memory.buffer)), bu
     }
 
-    function JU(UU, RU) {
-      return function(UU, RU) {
-        vU += RU, vU >= XU && (rU = new TextDecoder("utf-8", {
+    function ku(uu, Ru) {
+      return function(uu, Ru) {
+        gu += Ru, gu >= lu && (tu = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), rU.decode(), vU = RU);
-        return rU.decode(bU().subarray(UU, UU + RU))
-      }(UU >>> 0, RU)
+        }), tu.decode(), gu = Ru);
+        return tu.decode(Du().subarray(uu, uu + Ru))
+      }(uu >>> 0, Ru)
     }
-    let wU = null;
-    let nU = null;
+    let eu = null;
+    let Au = null;
 
-    function bU() {
-      return null !== nU && 0 !== nU.byteLength || (nU = new Uint8Array(sU.memory.buffer)), nU
-    }
-
-    function oU(UU) {
-      return ZU[UU]
-    }
-    let ZU = new Array(1024).fill(void 0);
-    ZU.push(void 0, null, !0, !1);
-    let aU = ZU.length;
-
-    function YU(UU, RU) {
-      const gU = RU(4 * UU.length, 4) >>> 0;
-      return (null !== wU && 0 !== wU.byteLength || (wU = new Uint32Array(sU.memory.buffer)), wU).set(UU, gU / 4), yU = UU.length, gU
+    function Du() {
+      return null !== Au && 0 !== Au.byteLength || (Au = new Uint8Array(Fu.memory.buffer)), Au
     }
 
-    function BU(UU, RU) {
-      const gU = RU(4 * UU.length, 4) >>> 0,
-        tU = IU();
-      for (let pU = 0; pU < UU.length; pU++) tU.setUint32(gU + 4 * pU, WU(UU[pU]), !0);
-      return yU = UU.length, gU
+    function Mu(uu) {
+      return Iu[uu]
+    }
+    let Iu = new Array(1024).fill(void 0);
+    Iu.push(void 0, null, !0, !1);
+    let Gu = Iu.length;
+
+    function Uu(uu, Ru) {
+      const yu = Ru(4 * uu.length, 4) >>> 0;
+      return (null !== eu && 0 !== eu.byteLength || (eu = new Uint32Array(Fu.memory.buffer)), eu).set(uu, yu / 4), wu = uu.length, yu
     }
 
-    function VU(UU) {
-      const RU = oU(UU);
-      return function(UU) {
-        UU < 1028 || (ZU[UU] = aU, aU = UU)
-      }(UU), RU
+    function nu(uu, Ru) {
+      const yu = Ru(4 * uu.length, 4) >>> 0,
+        Eu = Cu();
+      for (let Ku = 0; Ku < uu.length; Ku++) Eu.setUint32(yu + 4 * Ku, ju(uu[Ku]), !0);
+      return wu = uu.length, yu
     }
-    let rU = new TextDecoder("utf-8", {
+
+    function su(uu) {
+      const Ru = Mu(uu);
+      return function(uu) {
+        uu < 1028 || (Iu[uu] = Gu, Gu = uu)
+      }(uu), Ru
+    }
+    let tu = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    rU.decode();
-    const XU = 2146435072;
-    let vU = 0;
-    const dU = new TextEncoder;
-    "encodeInto" in dU || (dU.encodeInto = function(UU, RU) {
-      const gU = dU.encode(UU);
-      return RU.set(gU), {
-        read: UU.length,
-        written: gU.length
+    tu.decode();
+    const lu = 2146435072;
+    let gu = 0;
+    const cu = new TextEncoder;
+    "encodeInto" in cu || (cu.encodeInto = function(uu, Ru) {
+      const yu = cu.encode(uu);
+      return Ru.set(yu), {
+        read: uu.length,
+        written: yu.length
       }
     });
-    let HU, SU, sU, yU = 0;
+    let Lu, zu, Fu, wu = 0;
 
-    function kU(UU, RU) {
-      return SU = UU, sU = UU.exports, HU = RU, mU = null, wU = null, nU = null, sU.YjdF(), sU
+    function Zu(uu, Ru) {
+      return zu = uu, Fu = uu.exports, Lu = Ru, bu = null, eu = null, Au = null, Fu.Wi2c(), Fu
     }
 
-    function FU(UU) {
-      if (void 0 !== sU) return sU;
-      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
-        module: UU
-      } = UU) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const RU = QU();
-      UU instanceof WebAssembly.Module || (UU = new WebAssembly.Module(UU));
-      return kU(new WebAssembly.Instance(UU, RU), UU)
+    function hu(uu) {
+      if (void 0 !== Fu) return Fu;
+      void 0 !== uu && (Object.getPrototypeOf(uu) === Object.prototype ? ({
+        module: uu
+      } = uu) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Ru = Tu();
+      uu instanceof WebAssembly.Module || (uu = new WebAssembly.Module(uu));
+      return Zu(new WebAssembly.Instance(uu, Ru), uu)
     }
-    async function iU(UU) {
-      if (void 0 !== sU) return sU;
-      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
-        module_or_path: UU
-      } = UU) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const RU = QU();
-      ("string" === typeof UU || "function" === typeof Request && UU instanceof Request || "function" === typeof URL && UU instanceof URL) && (UU = fetch(UU));
+    async function Pu(uu) {
+      if (void 0 !== Fu) return Fu;
+      void 0 !== uu && (Object.getPrototypeOf(uu) === Object.prototype ? ({
+        module_or_path: uu
+      } = uu) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Ru = Tu();
+      ("string" === typeof uu || "function" === typeof Request && uu instanceof Request || "function" === typeof URL && uu instanceof URL) && (uu = fetch(uu));
       const {
-        instance: gU,
-        module: tU
-      } = await async function(UU, RU) {
-        if ("function" === typeof Response && UU instanceof Response) {
-          if (!UU.ok) throw new Error(`failed to fetch Wasm: ${UU.status} ${UU.statusText} fetching '${UU.url}'`);
+        instance: yu,
+        module: Eu
+      } = await async function(uu, Ru) {
+        if ("function" === typeof Response && uu instanceof Response) {
+          if (!uu.ok) throw new Error(`failed to fetch Wasm: ${uu.status} ${uu.statusText} fetching '${uu.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(UU, RU)
-          } catch (gU) {
-            if (! function(UU) {
-                switch (UU) {
+            return await WebAssembly.instantiateStreaming(uu, Ru)
+          } catch (yu) {
+            if (! function(uu) {
+                switch (uu) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(UU.type) || "application/wasm" === UU.headers.get("Content-Type")) throw gU;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gU)
+              }(uu.type) || "application/wasm" === uu.headers.get("Content-Type")) throw yu;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", yu)
           }
-          const tU = await UU.arrayBuffer();
-          return await WebAssembly.instantiate(tU, RU)
+          const Eu = await uu.arrayBuffer();
+          return await WebAssembly.instantiate(Eu, Ru)
         } {
-          const gU = await WebAssembly.instantiate(UU, RU);
-          return gU instanceof WebAssembly.Instance ? {
-            instance: gU,
-            module: UU
-          } : gU
+          const yu = await WebAssembly.instantiate(uu, Ru);
+          return yu instanceof WebAssembly.Instance ? {
+            instance: yu,
+            module: uu
+          } : yu
         }
-      }(await UU, RU);
-      return kU(gU, tU)
+      }(await uu, Ru);
+      return Zu(yu, Eu)
     }
-    var AU = gU(3377),
-      zU = gU(6297);
-    class MU extends Error {
+    var iu = yu(3514),
+      Yu = yu(6401);
+    class ou extends Error {
       stage;
-      constructor(UU, RU) {
-        super((0, AU.z)(UU, RU), {
-          cause: RU
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = UU
+      constructor(uu, Ru) {
+        super((0, iu.z)(uu, Ru), {
+          cause: Ru
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = uu
       }
     }
-    let DU = null,
-      LU = null;
+    let qu = null,
+      Ou = null;
 
-    function NU() {
-      return DU ? Promise.resolve(DU) : (LU || (LU = async function() {
-        let UU;
+    function vu() {
+      return qu ? Promise.resolve(qu) : (Ou || (Ou = async function() {
+        let uu;
         try {
-          UU = await (0, AU.D)(new gU.U(gU(6302)), (0, zU.b)("bloxd_wasm_shader_pack"))
-        } catch (RU) {
-          throw new MU((0, AU.K)(RU), RU)
+          uu = await (0, iu.D)(new yu.U(yu(6404)), (0, Yu.d)("bloxd_wasm_shader_pack"))
+        } catch (Ru) {
+          throw new ou((0, iu.I)(Ru), Ru)
         }
         try {
-          await iU({
-            module_or_path: UU
+          await Pu({
+            module_or_path: uu
           })
-        } catch (RU) {
-          throw new MU("instantiate", RU)
+        } catch (Ru) {
+          throw new ou("instantiate", Ru)
         }
-        return DU = tU, DU
-      }(), LU.then(void 0, (() => {
-        LU = null
-      }))), LU)
+        return qu = Eu, qu
+      }(), Ou.then(void 0, (() => {
+        Ou = null
+      }))), Ou)
     }
-    var lU = gU(6311);
+    var au = yu(6412);
 
-    function OU(UU) {
-      let [RU, gU, tU, pU] = UU;
-      const EU = {
-        file: RU,
-        line: gU,
-        message: tU
+    function fu(uu) {
+      let [Ru, yu, Eu, Ku] = uu;
+      const Qu = {
+        file: Ru,
+        line: yu,
+        message: Eu
       };
-      return pU && (EU.variants = pU.map(lU.j)), EU
+      return Ku && (Qu.variants = Ku.map(au.o)), Qu
     }
 
-    function UR(UU) {
-      return JSON.parse(UU).map(OU)
+    function uR(uu) {
+      return JSON.parse(uu).map(fu)
     }
 
-    function RR(UU, RU) {
-      if (!Number.isInteger(UU) || UU < 0 || UU > 4294967295) throw new Error(`${RU} ${UU} is not a whole number from 0 to 4294967295`);
-      return UU
+    function RR(uu, Ru) {
+      if (!Number.isInteger(uu) || uu < 0 || uu > 4294967295) throw new Error(`${Ru} ${uu} is not a whole number from 0 to 4294967295`);
+      return uu
     }
 
-    function gR(UU) {
-      return [UU.named.map((UU => UU.name)), Uint32Array.from(UU.named, (UU => RR(UU.id, "Texture ID")))]
+    function yR(uu) {
+      return [uu.named.map((uu => uu.name)), Uint32Array.from(uu.named, (uu => RR(uu.id, "Texture ID")))]
     }
-    const tR = new WeakMap;
-    const pR = new WeakMap,
-      ER = new WeakSet;
+    const ER = new WeakMap;
+    const KR = new WeakMap,
+      QR = new WeakSet;
 
-    function PR(UU, RU) {
-      if (ER.has(UU)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function mR(uu, Ru) {
+      if (QR.has(uu)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return RU()
-      } catch (gU) {
-        throw gU instanceof WebAssembly.RuntimeError && ER.add(UU), gU
+        return Ru()
+      } catch (yu) {
+        throw yu instanceof WebAssembly.RuntimeError && QR.add(uu), yu
       }
     }
 
-    function TR(UU) {
-      let RU = pR.get(UU);
-      if (!RU) {
-        let gU, tU;
-        RU = {
-          i_: (RU, gU) => PR(UU, (() => function(UU, RU, gU) {
-            const tU = UU.i_(RU.map((UU => UU.path)), RU.map((UU => UU.source)), ...gR(gU), gU.aliases.map((UU => UU.name)), gU.aliases.map((UU => UU.texture)), gU.aliases.map((UU => UU.kind)));
-            let pU = !1;
+    function JR(uu) {
+      let Ru = KR.get(uu);
+      if (!Ru) {
+        let yu, Eu;
+        Ru = {
+          juu: (Ru, yu) => mR(uu, (() => function(uu, Ru, yu) {
+            const Eu = uu.juu(Ru.map((uu => uu.path)), Ru.map((uu => uu.source)), ...yR(yu), yu.aliases.map((uu => uu.name)), yu.aliases.map((uu => uu.texture)), yu.aliases.map((uu => uu.kind)));
+            let Ku = !1;
             try {
-              const UU = tU.validationModuleCodes,
-                RU = Array.from(tU.validationModuleKeys, ((RU, gU) => ({
-                  key: (0, lU.j)(RU),
-                  code: UU[gU]
+              const uu = Eu.validationModuleCodes,
+                Ru = Array.from(Eu.validationModuleKeys, ((Ru, yu) => ({
+                  key: (0, au.o)(Ru),
+                  code: uu[yu]
                 }))),
-                gU = {
-                  errors: UR(tU.errorsJson),
-                  offInStrict: UR(tU.offInStrictJson),
-                  variants: (0, lU.f)(tU),
-                  validationModules: RU,
-                  features: tU.features
+                yu = {
+                  errors: uR(Eu.errorsJson),
+                  offInStrict: uR(Eu.offInStrictJson),
+                  variants: (0, au.h)(Eu),
+                  validationModules: Ru,
+                  features: Eu.features
                 };
-              return RU.forEach(((UU, RU) => {
-                tR.set(UU, {
-                  pack: tU,
-                  index: RU
+              return Ru.forEach(((uu, Ru) => {
+                ER.set(uu, {
+                  pack: Eu,
+                  index: Ru
                 })
-              })), pU = RU.length > 0, gU
+              })), Ku = Ru.length > 0, yu
             } finally {
-              pU || tU.free()
+              Ku || Eu.free()
             }
-          }(UU, RU, gU))),
-          mapValidationMessage: (RU, gU) => {
-            const tU = tR.get(RU);
-            if (!tU) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return OU(JSON.parse(PR(UU, (() => tU.pack.mapValidationMessage(tU.index, gU.lineNum, gU.linePos, gU.message, gU.type)))))
+          }(uu, Ru, yu))),
+          mapValidationMessage: (Ru, yu) => {
+            const Eu = ER.get(Ru);
+            if (!Eu) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return fu(JSON.parse(mR(uu, (() => Eu.pack.mapValidationMessage(Eu.index, yu.lineNum, yu.linePos, yu.message, yu.type)))))
           },
-          mgU: RU => PR(UU, (() => function(UU, RU) {
-            const gU = new Int32Array(RU.length),
-              tU = [];
-            return RU.forEach(((UU, RU) => {
-              gU[RU] = UU.variants ? UU.variants.length : -1;
-              for (const gU of UU.variants ?? []) tU.push((0, lU.h)(gU))
-            })), UR(UU.mgU(RU.map((UU => UU.file)), Uint32Array.from(RU, (UU => RR(UU.line, "Diagnostic line"))), RU.map((UU => UU.message)), gU, Uint8Array.from(tU)))
-          }(UU, RU))),
-          xZ: RU => PR(UU, (() => UU.xZ(...gR(RU)))),
+          rEu: Ru => mR(uu, (() => function(uu, Ru) {
+            const yu = new Int32Array(Ru.length),
+              Eu = [];
+            return Ru.forEach(((uu, Ru) => {
+              yu[Ru] = uu.variants ? uu.variants.length : -1;
+              for (const yu of uu.variants ?? []) Eu.push((0, au.l)(yu))
+            })), uR(uu.rEu(Ru.map((uu => uu.file)), Uint32Array.from(Ru, (uu => RR(uu.line, "Diagnostic line"))), Ru.map((uu => uu.message)), yu, Uint8Array.from(Eu)))
+          }(uu, Ru))),
+          dD: Ru => mR(uu, (() => uu.dD(...yR(Ru)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return gU ??= PR(UU, (() => UU.FtU())), gU
+            return yu ??= mR(uu, (() => uu.UKu())), yu
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return tU ??= PR(UU, (() => {
-              const RU = UU.stU();
-              return UU.StU().map(((UU, gU) => ({
-                path: UU,
-                source: RU[gU]
+            return Eu ??= mR(uu, (() => {
+              const Ru = uu.MKu();
+              return uu.DKu().map(((uu, yu) => ({
+                path: uu,
+                source: Ru[yu]
               })))
-            })), tU
+            })), Eu
           },
-          itU: RU => PR(UU, (() => UU.itU(RU))),
-          resolveHeader: RU => PR(UU, (() => UU.ktU((0, lU.h)(RU)))),
-          ytU: () => PR(UU, (() => UU.ytU()))
-        }, pR.set(UU, RU)
+          nKu: Ru => mR(uu, (() => uu.nKu(Ru))),
+          resolveHeader: Ru => mR(uu, (() => uu.GKu((0, au.l)(Ru)))),
+          IKu: () => mR(uu, (() => uu.IKu()))
+        }, KR.set(uu, Ru)
       }
-      return RU
+      return Ru
     }
-    var qR = gU(2923),
-      KR = gU(6306);
-    const cR = "bloxdShaderPackWasmFailureReported";
-    let GR = null;
+    var NR = yu(3029),
+      XR = yu(6407);
+    const VR = "bloxdShaderPackWasmFailureReported";
+    let rR = null;
 
-    function jR() {
-      return GR ??= async function() {
-        if ("undefined" === typeof WebAssembly) return uR("unsupported", "This browser has no WebAssembly"), null;
-        const UU = (0, KR.loadShaderPackTextures)().then((() => !0), (UU => (console.error("Could not load the shader pack textures, so shader packs can't run", UU), !1)));
+    function BR() {
+      return rR ??= async function() {
+        if ("undefined" === typeof WebAssembly) return xR("unsupported", "This browser has no WebAssembly"), null;
+        const uu = (0, XR.loadShaderPackTextures)().then((() => !0), (uu => (console.error("Could not load the shader pack textures, so shader packs can't run", uu), !1)));
         try {
-          const RU = await async function() {
-            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : NU;
-            return TR(await UU())
+          const Ru = await async function() {
+            let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : vu;
+            return JR(await uu())
           }();
-          return await UU ? RU : null
-        } catch (RU) {
-          const UU = RU instanceof Error ? RU.message : String(RU);
-          return uR(qR.d[RU instanceof MU ? RU.stage : "instantiate"], UU), null
+          return await uu ? Ru : null
+        } catch (Ru) {
+          const uu = Ru instanceof Error ? Ru.message : String(Ru);
+          return xR(NR.b[Ru instanceof ou ? Ru.stage : "instantiate"], uu), null
         }
-      }(), GR
+      }(), rR
     }
 
-    function uR(UU, RU) {
-      (0, qR.j)(cR, `Shader pack wasm ${UU}, so shader packs can't run: ${RU}`, RU, `shader_pack_${UU}`)
+    function xR(uu, Ru) {
+      (0, NR.g)(VR, `Shader pack wasm ${uu}, so shader packs can't run: ${Ru}`, Ru, `shader_pack_${uu}`)
     }
   },
-  6302: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/bloxd_wasm_shader_pack_bg.6477ba64672d629480ce.wasm"
+  6404: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/bloxd_wasm_shader_pack_bg.ee23d5c4d4bcf1ec75ea.wasm"
   },
-  6297: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => PU
+  6401: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => mu
     });
-    var tU = gU(3377);
-    const pU = {
-      bloxd_wasm: () => "9aea991b9dfc231682f5590d3cc7b71fdc8d10d57b6fc256a691170448cb241e",
-      bloxd_wasm_client: () => "802e9a6883f55b00b2e9f994d468ef47c157db779d67da12a28169a4064f9ba2",
-      bloxd_wasm_workers: () => "6e68db7fd51b5ae0bb150a4c2fcdf448b467f8cbd8e24efcf974a9654674f1d6",
-      bloxd_wasm_models: () => "f3c8f0349e4b7cd2fe62824f818b019cb1ff9fda7d99058af5539dbe1c36e2ff",
-      bloxd_wasm_webgpu: () => "7b8aba519ce147883d63480e46db11f2a6dd62b2bdebd6ff07895ba08f395e69",
-      bloxd_wasm_webgl: () => "a107c8272b9d653c63376eb1e9164df07a85032e3f7cbbd1d972097394cfca11",
-      bloxd_wasm_webgl1: () => "2c5aabca21f20977da3990bb0cf77633b2f229a640ab72f5a52f39d28d9e0fd9",
-      bloxd_wasm_replay: () => "803e2c90d202bb5830af931fbeaac2469dcc5032d591607636dd72eecf9c8910",
-      bloxd_wasm_recorder: () => "edcf2c59dbceafb4c90033bd8006f0358827a3de806838c1aa9aa5da84f115b3",
-      bloxd_wasm_anim: () => "7a1e82ad213a41556d7866bfc1df7fce0247390479775e811f0b8f916b979482",
-      bloxd_wasm_textures: () => "bc7a7de98d207f079e8f358dc014dee940cff8bd63182b40ac7fd19938da92d8",
-      bloxd_wasm_shader_pack: () => "1e25de668a456adfdd95befe66a4ef213a16bedd08af3aac14531a1b656da9d3"
+    var Eu = yu(3514);
+    const Ku = {
+      bloxd_wasm: () => "3ed1a084322ad3cb30f47a8b06ce739897d64e664873e8362bad69a4e0fce36c",
+      bloxd_wasm_client: () => "a9917e573bede14f22b22d14f5e644f2e71fcc9a6e34c58bf3e57cb4d3b8dd2b",
+      bloxd_wasm_workers: () => "ecdb0c80693ae8280b8bb13b956bc3d05f85f48abcbff37b3a125c9c9aeb9848",
+      bloxd_wasm_models: () => "8616b4260206fb1a456630cc184280886bca0201d0f8f84810c3b788ec25c1df",
+      bloxd_wasm_webgpu: () => "e1a74926aaf9a1691f5a3d8a06cc60f732a0a528f8f9aac762b2a2303d0da591",
+      bloxd_wasm_webgl: () => "ecba4faf3200e609973474a28d49b8ef73a4138f5f8c0d78ca0483605b24a0a2",
+      bloxd_wasm_webgl1: () => "abdfe5d3d9983581a3b06cba824de0a31dd1a1adb24080f819fc74a713dfff02",
+      bloxd_wasm_replay: () => "5f179054ce214c3ba0c750b1416df152f42691008bf442f02c9d21149669f166",
+      bloxd_wasm_recorder: () => "f2da278d1126f2da5d1768d8feca01c3d5ad046842ca42386086ad694791f414",
+      bloxd_wasm_anim: () => "f3d3949e0ee8ede817bb5a787d7fe6321fd96ba9985c07ea9ebdff2066b61798",
+      bloxd_wasm_textures: () => "1cc3b5ae23772c6447fc1490ff3e9e59019a9128a46b8927b277f7cf41150b52",
+      bloxd_wasm_shader_pack: () => "2dacc1cc4dca547291848db95b089e90361aa09148df7a071edd232a8671549d"
     };
-    var EU = gU(4352);
+    var Qu = yu(4470);
 
-    function PU(UU) {
-      const RU = Object.prototype.hasOwnProperty.call(pU, UU) ? pU[UU]() : void 0;
-      if (void 0 !== RU) return {
-        sha256: RU,
-        onMismatch: EU.E
+    function mu(uu) {
+      const Ru = Object.prototype.hasOwnProperty.call(Ku, uu) ? Ku[uu]() : void 0;
+      if (void 0 !== Ru) return {
+        sha256: Ru,
+        onMismatch: Qu.A
       };
-      throw new tU.j(`${UU} has no release digest, so this build refuses it`)
+      throw new Eu.g(`${uu} has no release digest, so this build refuses it`)
     }
   },
-  6311: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => xU,
-      f: () => mU,
-      h: () => WU,
-      j: () => eU
+  6412: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => du,
+      h: () => bu,
+      l: () => ju,
+      o: () => Wu
     });
-    var tU = gU(6316);
-    const pU = 6,
-      EU = 3,
-      PU = 1,
-      TU = 2,
-      qU = 4,
-      KU = 8,
-      cU = 16,
-      GU = 32,
-      jU = 64,
-      uU = 128,
-      CU = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Eu = yu(6418);
+    const Ku = 6,
+      Qu = 3,
+      mu = 1,
+      Ju = 2,
+      Nu = 4,
+      Xu = 8,
+      Vu = 16,
+      ru = 32,
+      Bu = 64,
+      xu = 128,
+      Su = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function hU(UU) {
-      if (!UU) return 0;
-      const RU = CU.indexOf(UU);
-      if (RU <= 0) throw new Error(`"${UU}" is not a shader pack hook function`);
-      return RU
+    function pu(uu) {
+      if (!uu) return 0;
+      const Ru = Su.indexOf(uu);
+      if (Ru <= 0) throw new Error(`"${uu}" is not a shader pack hook function`);
+      return Ru
     }
 
-    function QU(UU) {
-      if (0 === UU) return null;
-      const RU = CU[UU];
-      if (void 0 === RU) throw new Error(`${UU} is not a shader pack hook function id`);
-      return RU
+    function Tu(uu) {
+      if (0 === uu) return null;
+      const Ru = Su[uu];
+      if (void 0 === Ru) throw new Error(`${uu} is not a shader pack hook function id`);
+      return Ru
     }
 
-    function eU(UU) {
-      const RU = tU.b.length;
+    function Wu(uu) {
+      const Ru = Eu.c.length;
       return {
-        strict: UU >= RU,
-        program: tU.b[UU % RU]
+        strict: uu >= Ru,
+        program: Eu.c[uu % Ru]
       }
     }
 
-    function WU(UU) {
-      return Number(UU.strict) * tU.b.length + tU.b.indexOf(UU.program)
+    function ju(uu) {
+      return Number(uu.strict) * Eu.c.length + Eu.c.indexOf(uu.program)
     }
 
-    function fU(UU) {
-      return "" === UU ? [] : UU.split(" ")
+    function Hu(uu) {
+      return "" === uu ? [] : uu.split(" ")
     }
 
-    function xU(UU) {
-      const RU = {
-        variantFlags: new Uint8Array(pU),
-        hooks: new Uint8Array(pU * EU),
-        moduleCodes: Array(pU).fill(""),
-        reads: Array(2 * pU).fill("")
+    function du(uu) {
+      const Ru = {
+        variantFlags: new Uint8Array(Ku),
+        hooks: new Uint8Array(Ku * Qu),
+        moduleCodes: Array(Ku).fill(""),
+        reads: Array(2 * Ku).fill("")
       };
-      for (const gU of UU) {
-        const UU = WU(gU.key),
-          tU = (UU, RU) => null === gU.hooks.surface || gU.reads.fragment.includes(UU) ? 0 : RU;
-        RU.variantFlags[UU] = (gU.sceneDepth ? PU : 0) | (gU.movesVertices ? TU : 0) | (gU.sunShadow ? qU : 0) | (gU.airShadow ? KU : 0) | (gU.discards ? cU : 0) | tU("localPosition", GU) | tU("enchantSpeed", jU) | tU("enchantTier", uU), RU.hooks[UU * EU] = hU(gU.hooks.vertex), RU.hooks[UU * EU + 1] = hU(gU.hooks.surface), RU.hooks[UU * EU + 2] = hU(gU.hooks.light), RU.moduleCodes[UU] = gU.moduleCode, RU.reads[2 * UU] = gU.reads.vertex.join(" "), RU.reads[2 * UU + 1] = gU.reads.fragment.join(" ")
+      for (const yu of uu) {
+        const uu = ju(yu.key),
+          Eu = (uu, Ru) => null === yu.hooks.surface || yu.reads.fragment.includes(uu) ? 0 : Ru;
+        Ru.variantFlags[uu] = (yu.sceneDepth ? mu : 0) | (yu.movesVertices ? Ju : 0) | (yu.sunShadow ? Nu : 0) | (yu.airShadow ? Xu : 0) | (yu.discards ? Vu : 0) | Eu("localPosition", ru) | Eu("enchantSpeed", Bu) | Eu("enchantTier", xu), Ru.hooks[uu * Qu] = pu(yu.hooks.vertex), Ru.hooks[uu * Qu + 1] = pu(yu.hooks.surface), Ru.hooks[uu * Qu + 2] = pu(yu.hooks.light), Ru.moduleCodes[uu] = yu.moduleCode, Ru.reads[2 * uu] = yu.reads.vertex.join(" "), Ru.reads[2 * uu + 1] = yu.reads.fragment.join(" ")
       }
-      return RU
+      return Ru
     }
 
-    function mU(UU) {
+    function bu(uu) {
       const {
-        hooks: RU,
-        moduleCodes: gU,
-        reads: tU
-      } = UU;
-      return Array.from(UU.variantFlags, ((UU, pU) => {
-        const GU = pU * EU;
+        hooks: Ru,
+        moduleCodes: yu,
+        reads: Eu
+      } = uu;
+      return Array.from(uu.variantFlags, ((uu, Ku) => {
+        const ru = Ku * Qu;
         return {
-          key: eU(pU),
+          key: Wu(Ku),
           hooks: {
-            vertex: QU(RU[GU]),
-            surface: QU(RU[GU + 1]),
-            light: QU(RU[GU + 2])
+            vertex: Tu(Ru[ru]),
+            surface: Tu(Ru[ru + 1]),
+            light: Tu(Ru[ru + 2])
           },
-          moduleCode: gU[pU],
-          sceneDepth: 0 !== (UU & PU),
-          sunShadow: 0 !== (UU & qU),
-          airShadow: 0 !== (UU & KU),
-          movesVertices: 0 !== (UU & TU),
-          discards: 0 !== (UU & cU),
+          moduleCode: yu[Ku],
+          sceneDepth: 0 !== (uu & mu),
+          sunShadow: 0 !== (uu & Nu),
+          airShadow: 0 !== (uu & Xu),
+          movesVertices: 0 !== (uu & Ju),
+          discards: 0 !== (uu & Vu),
           reads: {
-            vertex: fU(tU[2 * pU]),
-            fragment: fU(tU[2 * pU + 1])
+            vertex: Hu(Eu[2 * Ku]),
+            fragment: Hu(Eu[2 * Ku + 1])
           }
         }
       }))
     }
   },
-  6316: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => tU,
-      f: () => PU,
-      i: () => TU,
-      j: () => pU,
-      k: () => EU
+  6418: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Eu,
+      g: () => mu,
+      h: () => Ju,
+      i: () => Ku,
+      j: () => Qu
     });
-    const tU = ["terrain", "liquid", "model"];
+    const Eu = ["terrain", "liquid", "model"];
 
-    function pU() {
-      const UU = [];
-      for (const RU of [!1, !0])
-        for (const gU of tU) UU.push({
-          strict: RU,
-          program: gU
+    function Ku() {
+      const uu = [];
+      for (const Ru of [!1, !0])
+        for (const yu of Eu) uu.push({
+          strict: Ru,
+          program: yu
         });
-      return UU
+      return uu
     }
 
-    function EU(UU) {
-      return `${UU.strict?"strict":"allow"}.${UU.program}`
+    function Qu(uu) {
+      return `${uu.strict?"strict":"allow"}.${uu.program}`
     }
 
-    function PU(UU) {
-      return !UU.hooks.vertex && !UU.hooks.surface && !UU.hooks.light
+    function mu(uu) {
+      return !uu.hooks.vertex && !uu.hooks.surface && !uu.hooks.light
     }
 
-    function TU(UU, RU) {
-      return "off" !== RU && (null === UU || UU.some((UU => UU.key.strict === ("strict" === RU) && !PU(UU))))
+    function Ju(uu, Ru) {
+      return "off" !== Ru && (null === uu || uu.some((uu => uu.key.strict === ("strict" === Ru) && !mu(uu))))
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

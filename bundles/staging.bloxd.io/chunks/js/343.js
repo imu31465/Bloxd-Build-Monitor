@@ -1,20 +1,20 @@
 export const id = 343;
 export const ids = [343];
 export const modules = {
-  42641: (UU, RU, gU) => {
-    gU.d(RU, {
-      gamePackSource: () => EU
+  42885: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      gamePackSource: () => Qu
     });
-    var tU = gU(4657),
-      pU = gU(1461);
+    var Eu = yu(4771),
+      Ku = yu(1447);
 
-    function EU(UU) {
+    function Qu(uu) {
       return {
-        packKey: async RU => (await pU.c.getGame(UU, RU, !0)).customTexturePackKey,
-        fetchPack: tU.c
+        packKey: async Ru => (await Ku.e.getGame(uu, Ru, !0)).customTexturePackKey,
+        fetchPack: Eu.d
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

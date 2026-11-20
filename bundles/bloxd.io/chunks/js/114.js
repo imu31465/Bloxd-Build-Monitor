@@ -1,11 +1,11 @@
 export const id = 114;
 export const ids = [114];
 export const modules = {
-  6160: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => tU
+  6271: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Eu
     });
-    const tU = {
+    const Eu = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -158,7 +158,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: gU(1823).e,
+      _shopVersion: yu(1887).b,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,
@@ -167,4 +167,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,19 +1,19 @@
 export const id = 345;
 export const ids = [345];
 export const modules = {
-  60543: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      postprocessVertexShader: () => PU
+  61006: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      postprocessVertexShader: () => mu
     });
-    var tU = gU(39225);
-    const pU = "postprocessVertexShader",
-      EU = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
-    tU.d.ShadersStore[pU] || (tU.d.ShadersStore[pU] = EU);
-    const PU = {
-      name: pU,
-      shader: EU
+    var Eu = yu(39403);
+    const Ku = "postprocessVertexShader",
+      Qu = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Eu.e.ShadersStore[Ku] || (Eu.e.ShadersStore[Ku] = Qu);
+    const mu = {
+      name: Ku,
+      shader: Qu
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

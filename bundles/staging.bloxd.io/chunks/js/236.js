@@ -1,34 +1,34 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  40472: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => PU,
-      f: () => cU,
-      h: () => KU
+  40663: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => mu,
+      g: () => Vu,
+      k: () => Xu
     });
-    var tU, pU = gU(36626),
-      EU = gU(36600);
-    ! function(UU) {
-      UU[UU.CW = 0] = "CW", UU[UU.CCW = 1] = "CCW"
-    }(tU || (tU = {}));
-    class PU {
-      static Interpolate(UU, RU, gU, tU, pU) {
-        if (0 === UU) return 0;
-        const EU = 1 - 3 * tU + 3 * RU,
-          PU = 3 * tU - 6 * RU,
-          TU = 3 * RU;
-        let qU = UU;
-        for (let KU = 0; KU < 5; KU++) {
-          const RU = qU * qU;
-          qU -= (EU * (RU * qU) + PU * RU + TU * qU - UU) * (1 / (3 * EU * RU + 2 * PU * qU + TU)), qU = Math.min(1, Math.max(0, qU))
+    var Eu, Ku = yu(36865),
+      Qu = yu(36830);
+    ! function(uu) {
+      uu[uu.CW = 0] = "CW", uu[uu.CCW = 1] = "CCW"
+    }(Eu || (Eu = {}));
+    class mu {
+      static Interpolate(uu, Ru, yu, Eu, Ku) {
+        if (0 === uu) return 0;
+        const Qu = 1 - 3 * Eu + 3 * Ru,
+          mu = 3 * Eu - 6 * Ru,
+          Ju = 3 * Ru;
+        let Nu = uu;
+        for (let Xu = 0; Xu < 5; Xu++) {
+          const Ru = Nu * Nu;
+          Nu -= (Qu * (Ru * Nu) + mu * Ru + Ju * Nu - uu) * (1 / (3 * Qu * Ru + 2 * mu * Nu + Ju)), Nu = Math.min(1, Math.max(0, Nu))
         }
-        return 3 * Math.pow(1 - qU, 2) * qU * gU + 3 * (1 - qU) * Math.pow(qU, 2) * pU + Math.pow(qU, 3)
+        return 3 * Math.pow(1 - Nu, 2) * Nu * yu + 3 * (1 - Nu) * Math.pow(Nu, 2) * Ku + Math.pow(Nu, 3)
       }
     }
-    class TU {
-      constructor(UU) {
-        this._radians = UU, this._radians < 0 && (this._radians += 2 * Math.PI)
+    class Ju {
+      constructor(uu) {
+        this._radians = uu, this._radians < 0 && (this._radians += 2 * Math.PI)
       }
       degrees() {
         return 180 * this._radians / Math.PI
@@ -36,242 +36,242 @@ export const modules = {
       radians() {
         return this._radians
       }
-      static BetweenTwoPoints(UU, RU) {
-        const gU = RU.subtract(UU),
-          tU = Math.atan2(gU.y, gU.x);
-        return new TU(tU)
+      static BetweenTwoPoints(uu, Ru) {
+        const yu = Ru.subtract(uu),
+          Eu = Math.atan2(yu.y, yu.x);
+        return new Ju(Eu)
       }
-      static BetweenTwoVectors(UU, RU) {
-        let gU = UU.lengthSquared() * RU.lengthSquared();
-        if (0 === gU) return new TU(Math.PI / 2);
-        gU = Math.sqrt(gU);
-        let tU = UU.dot(RU) / gU;
-        tU = (0, pU.Clamp)(tU, -1, 1);
-        const EU = Math.acos(tU);
-        return new TU(EU)
+      static BetweenTwoVectors(uu, Ru) {
+        let yu = uu.lengthSquared() * Ru.lengthSquared();
+        if (0 === yu) return new Ju(Math.PI / 2);
+        yu = Math.sqrt(yu);
+        let Eu = uu.dot(Ru) / yu;
+        Eu = (0, Ku.Clamp)(Eu, -1, 1);
+        const Qu = Math.acos(Eu);
+        return new Ju(Qu)
       }
-      static FromRadians(UU) {
-        return new TU(UU)
+      static FromRadians(uu) {
+        return new Ju(uu)
       }
-      static FromDegrees(UU) {
-        return new TU(UU * Math.PI / 180)
-      }
-    }
-    class qU {
-      constructor(UU, RU, gU) {
-        this.startPoint = UU, this.midPoint = RU, this.endPoint = gU;
-        const tU = Math.pow(RU.x, 2) + Math.pow(RU.y, 2),
-          pU = (Math.pow(UU.x, 2) + Math.pow(UU.y, 2) - tU) / 2,
-          PU = (tU - Math.pow(gU.x, 2) - Math.pow(gU.y, 2)) / 2,
-          qU = (UU.x - RU.x) * (RU.y - gU.y) - (RU.x - gU.x) * (UU.y - RU.y);
-        this.centerPoint = new EU.l((pU * (RU.y - gU.y) - PU * (UU.y - RU.y)) / qU, ((UU.x - RU.x) * PU - (RU.x - gU.x) * pU) / qU), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = TU.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const KU = this.startAngle.degrees();
-        let cU = TU.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          GU = TU.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        cU - KU > 180 && (cU -= 360), cU - KU < -180 && (cU += 360), GU - cU > 180 && (GU -= 360), GU - cU < -180 && (GU += 360), this.orientation = cU - KU < 0 ? 0 : 1, this.angle = TU.FromDegrees(0 === this.orientation ? KU - GU : GU - KU)
+      static FromDegrees(uu) {
+        return new Ju(uu * Math.PI / 180)
       }
     }
-    class KU {
-      constructor(UU, RU) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new EU.l(UU, RU))
+    class Nu {
+      constructor(uu, Ru, yu) {
+        this.startPoint = uu, this.midPoint = Ru, this.endPoint = yu;
+        const Eu = Math.pow(Ru.x, 2) + Math.pow(Ru.y, 2),
+          Ku = (Math.pow(uu.x, 2) + Math.pow(uu.y, 2) - Eu) / 2,
+          mu = (Eu - Math.pow(yu.x, 2) - Math.pow(yu.y, 2)) / 2,
+          Nu = (uu.x - Ru.x) * (Ru.y - yu.y) - (Ru.x - yu.x) * (uu.y - Ru.y);
+        this.centerPoint = new Qu.n((Ku * (Ru.y - yu.y) - mu * (uu.y - Ru.y)) / Nu, ((uu.x - Ru.x) * mu - (Ru.x - yu.x) * Ku) / Nu), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = Ju.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const Xu = this.startAngle.degrees();
+        let Vu = Ju.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          ru = Ju.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        Vu - Xu > 180 && (Vu -= 360), Vu - Xu < -180 && (Vu += 360), ru - Vu > 180 && (ru -= 360), ru - Vu < -180 && (ru += 360), this.orientation = Vu - Xu < 0 ? 0 : 1, this.angle = Ju.FromDegrees(0 === this.orientation ? Xu - ru : ru - Xu)
       }
-      addLineTo(UU, RU) {
-        if (this.closed) return this;
-        const gU = new EU.l(UU, RU),
-          tU = this._points[this._points.length - 1];
-        return this._points.push(gU), this._length += gU.subtract(tU).length(), this
+    }
+    class Xu {
+      constructor(uu, Ru) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new Qu.n(uu, Ru))
       }
-      addArcTo(UU, RU, gU, tU) {
-        let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addLineTo(uu, Ru) {
         if (this.closed) return this;
-        const PU = this._points[this._points.length - 1],
-          TU = new EU.l(UU, RU),
-          KU = new EU.l(gU, tU),
-          cU = new qU(PU, TU, KU);
-        let GU = cU.angle.radians() / pU;
-        0 === cU.orientation && (GU *= -1);
-        let jU = cU.startAngle.radians() + GU;
-        for (let EU = 0; EU < pU; EU++) {
-          const UU = Math.cos(jU) * cU.radius + cU.centerPoint.x,
-            RU = Math.sin(jU) * cU.radius + cU.centerPoint.y;
-          this.addLineTo(UU, RU), jU += GU
+        const yu = new Qu.n(uu, Ru),
+          Eu = this._points[this._points.length - 1];
+        return this._points.push(yu), this._length += yu.subtract(Eu).length(), this
+      }
+      addArcTo(uu, Ru, yu, Eu) {
+        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const mu = this._points[this._points.length - 1],
+          Ju = new Qu.n(uu, Ru),
+          Xu = new Qu.n(yu, Eu),
+          Vu = new Nu(mu, Ju, Xu);
+        let ru = Vu.angle.radians() / Ku;
+        0 === Vu.orientation && (ru *= -1);
+        let Bu = Vu.startAngle.radians() + ru;
+        for (let Qu = 0; Qu < Ku; Qu++) {
+          const uu = Math.cos(Bu) * Vu.radius + Vu.centerPoint.x,
+            Ru = Math.sin(Bu) * Vu.radius + Vu.centerPoint.y;
+          this.addLineTo(uu, Ru), Bu += ru
         }
         return this
       }
-      addQuadraticCurveTo(UU, RU, gU, tU) {
-        let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addQuadraticCurveTo(uu, Ru, yu, Eu) {
+        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
         if (this.closed) return this;
-        const EU = (UU, RU, gU, tU) => (1 - UU) * (1 - UU) * RU + 2 * UU * (1 - UU) * gU + UU * UU * tU,
-          PU = this._points[this._points.length - 1];
-        for (let TU = 0; TU <= pU; TU++) {
-          const qU = TU / pU,
-            KU = EU(qU, PU.x, UU, gU),
-            cU = EU(qU, PU.y, RU, tU);
-          this.addLineTo(KU, cU)
+        const Qu = (uu, Ru, yu, Eu) => (1 - uu) * (1 - uu) * Ru + 2 * uu * (1 - uu) * yu + uu * uu * Eu,
+          mu = this._points[this._points.length - 1];
+        for (let Ju = 0; Ju <= Ku; Ju++) {
+          const Nu = Ju / Ku,
+            Xu = Qu(Nu, mu.x, uu, yu),
+            Vu = Qu(Nu, mu.y, Ru, Eu);
+          this.addLineTo(Xu, Vu)
         }
         return this
       }
-      addBezierCurveTo(UU, RU, gU, tU, pU, EU) {
-        let PU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+      addBezierCurveTo(uu, Ru, yu, Eu, Ku, Qu) {
+        let mu = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
         if (this.closed) return this;
-        const TU = (UU, RU, gU, tU, pU) => (1 - UU) * (1 - UU) * (1 - UU) * RU + 3 * UU * (1 - UU) * (1 - UU) * gU + 3 * UU * UU * (1 - UU) * tU + UU * UU * UU * pU,
-          qU = this._points[this._points.length - 1];
-        for (let KU = 0; KU <= PU; KU++) {
-          const cU = KU / PU,
-            GU = TU(cU, qU.x, UU, gU, pU),
-            jU = TU(cU, qU.y, RU, tU, EU);
-          this.addLineTo(GU, jU)
+        const Ju = (uu, Ru, yu, Eu, Ku) => (1 - uu) * (1 - uu) * (1 - uu) * Ru + 3 * uu * (1 - uu) * (1 - uu) * yu + 3 * uu * uu * (1 - uu) * Eu + uu * uu * uu * Ku,
+          Nu = this._points[this._points.length - 1];
+        for (let Xu = 0; Xu <= mu; Xu++) {
+          const Vu = Xu / mu,
+            ru = Ju(Vu, Nu.x, uu, yu, Ku),
+            Bu = Ju(Vu, Nu.y, Ru, Eu, Qu);
+          this.addLineTo(ru, Bu)
         }
         return this
       }
-      isPointInside(UU) {
-        let RU = !1;
-        const gU = this._points.length;
-        for (let tU = gU - 1, pU = 0; pU < gU; tU = pU++) {
-          let gU = this._points[tU],
-            EU = this._points[pU],
-            PU = EU.x - gU.x,
-            TU = EU.y - gU.y;
-          if (Math.abs(TU) > Number.EPSILON) {
-            if (TU < 0 && (gU = this._points[pU], PU = -PU, EU = this._points[tU], TU = -TU), UU.y < gU.y || UU.y > EU.y) continue;
-            if (UU.y === gU.y && UU.x === gU.x) return !0;
+      isPointInside(uu) {
+        let Ru = !1;
+        const yu = this._points.length;
+        for (let Eu = yu - 1, Ku = 0; Ku < yu; Eu = Ku++) {
+          let yu = this._points[Eu],
+            Qu = this._points[Ku],
+            mu = Qu.x - yu.x,
+            Ju = Qu.y - yu.y;
+          if (Math.abs(Ju) > Number.EPSILON) {
+            if (Ju < 0 && (yu = this._points[Ku], mu = -mu, Qu = this._points[Eu], Ju = -Ju), uu.y < yu.y || uu.y > Qu.y) continue;
+            if (uu.y === yu.y && uu.x === yu.x) return !0;
             {
-              const tU = TU * (UU.x - gU.x) - PU * (UU.y - gU.y);
-              if (0 === tU) return !0;
-              if (tU < 0) continue;
-              RU = !RU
+              const Eu = Ju * (uu.x - yu.x) - mu * (uu.y - yu.y);
+              if (0 === Eu) return !0;
+              if (Eu < 0) continue;
+              Ru = !Ru
             }
           } else {
-            if (UU.y !== gU.y) continue;
-            if (EU.x <= UU.x && UU.x <= gU.x || gU.x <= UU.x && UU.x <= EU.x) return !0
+            if (uu.y !== yu.y) continue;
+            if (Qu.x <= uu.x && uu.x <= yu.x || yu.x <= uu.x && uu.x <= Qu.x) return !0
           }
         }
-        return RU
+        return Ru
       }
       close() {
         return this.closed = !0, this
       }
       length() {
-        let UU = this._length;
+        let uu = this._length;
         if (this.closed) {
-          const RU = this._points[this._points.length - 1];
-          UU += this._points[0].subtract(RU).length()
+          const Ru = this._points[this._points.length - 1];
+          uu += this._points[0].subtract(Ru).length()
         }
-        return UU
+        return uu
       }
       area() {
-        const UU = this._points.length;
-        let RU = 0;
-        for (let gU = UU - 1, tU = 0; tU < UU; gU = tU++) RU += this._points[gU].x * this._points[tU].y - this._points[tU].x * this._points[gU].y;
-        return .5 * RU
+        const uu = this._points.length;
+        let Ru = 0;
+        for (let yu = uu - 1, Eu = 0; Eu < uu; yu = Eu++) Ru += this._points[yu].x * this._points[Eu].y - this._points[Eu].x * this._points[yu].y;
+        return .5 * Ru
       }
       getPoints() {
         return this._points
       }
-      getPointAtLengthPosition(UU) {
-        if (UU < 0 || UU > 1) return EU.l.Zero();
-        const RU = UU * this.length();
-        let gU = 0;
-        for (let tU = 0; tU < this._points.length; tU++) {
-          const UU = (tU + 1) % this._points.length,
-            pU = this._points[tU],
-            PU = this._points[UU].subtract(pU),
-            TU = PU.length() + gU;
-          if (RU >= gU && RU <= TU) {
-            const UU = PU.normalize(),
-              tU = RU - gU;
-            return new EU.l(pU.x + UU.x * tU, pU.y + UU.y * tU)
+      getPointAtLengthPosition(uu) {
+        if (uu < 0 || uu > 1) return Qu.n.Zero();
+        const Ru = uu * this.length();
+        let yu = 0;
+        for (let Eu = 0; Eu < this._points.length; Eu++) {
+          const uu = (Eu + 1) % this._points.length,
+            Ku = this._points[Eu],
+            mu = this._points[uu].subtract(Ku),
+            Ju = mu.length() + yu;
+          if (Ru >= yu && Ru <= Ju) {
+            const uu = mu.normalize(),
+              Eu = Ru - yu;
+            return new Qu.n(Ku.x + uu.x * Eu, Ku.y + uu.y * Eu)
           }
-          gU = TU
+          yu = Ju
         }
-        return EU.l.Zero()
+        return Qu.n.Zero()
       }
-      static StartingAt(UU, RU) {
-        return new KU(UU, RU)
+      static StartingAt(uu, Ru) {
+        return new Xu(uu, Ru)
       }
     }
-    class cU {
-      static CreateQuadraticBezier(UU, RU, gU, tU) {
-        tU = tU > 2 ? tU : 3;
-        const pU = [],
-          PU = (UU, RU, gU, tU) => (1 - UU) * (1 - UU) * RU + 2 * UU * (1 - UU) * gU + UU * UU * tU;
-        for (let TU = 0; TU <= tU; TU++) pU.push(new EU.n(PU(TU / tU, UU.x, RU.x, gU.x), PU(TU / tU, UU.y, RU.y, gU.y), PU(TU / tU, UU.z, RU.z, gU.z)));
-        return new cU(pU)
+    class Vu {
+      static CreateQuadraticBezier(uu, Ru, yu, Eu) {
+        Eu = Eu > 2 ? Eu : 3;
+        const Ku = [],
+          mu = (uu, Ru, yu, Eu) => (1 - uu) * (1 - uu) * Ru + 2 * uu * (1 - uu) * yu + uu * uu * Eu;
+        for (let Ju = 0; Ju <= Eu; Ju++) Ku.push(new Qu.p(mu(Ju / Eu, uu.x, Ru.x, yu.x), mu(Ju / Eu, uu.y, Ru.y, yu.y), mu(Ju / Eu, uu.z, Ru.z, yu.z)));
+        return new Vu(Ku)
       }
-      static CreateCubicBezier(UU, RU, gU, tU, pU) {
-        pU = pU > 3 ? pU : 4;
-        const PU = [],
-          TU = (UU, RU, gU, tU, pU) => (1 - UU) * (1 - UU) * (1 - UU) * RU + 3 * UU * (1 - UU) * (1 - UU) * gU + 3 * UU * UU * (1 - UU) * tU + UU * UU * UU * pU;
-        for (let qU = 0; qU <= pU; qU++) PU.push(new EU.n(TU(qU / pU, UU.x, RU.x, gU.x, tU.x), TU(qU / pU, UU.y, RU.y, gU.y, tU.y), TU(qU / pU, UU.z, RU.z, gU.z, tU.z)));
-        return new cU(PU)
+      static CreateCubicBezier(uu, Ru, yu, Eu, Ku) {
+        Ku = Ku > 3 ? Ku : 4;
+        const mu = [],
+          Ju = (uu, Ru, yu, Eu, Ku) => (1 - uu) * (1 - uu) * (1 - uu) * Ru + 3 * uu * (1 - uu) * (1 - uu) * yu + 3 * uu * uu * (1 - uu) * Eu + uu * uu * uu * Ku;
+        for (let Nu = 0; Nu <= Ku; Nu++) mu.push(new Qu.p(Ju(Nu / Ku, uu.x, Ru.x, yu.x, Eu.x), Ju(Nu / Ku, uu.y, Ru.y, yu.y, Eu.y), Ju(Nu / Ku, uu.z, Ru.z, yu.z, Eu.z)));
+        return new Vu(mu)
       }
-      static CreateHermiteSpline(UU, RU, gU, tU, pU) {
-        const PU = [],
-          TU = 1 / pU;
-        for (let qU = 0; qU <= pU; qU++) PU.push(EU.n.Hermite(UU, RU, gU, tU, qU * TU));
-        return new cU(PU)
+      static CreateHermiteSpline(uu, Ru, yu, Eu, Ku) {
+        const mu = [],
+          Ju = 1 / Ku;
+        for (let Nu = 0; Nu <= Ku; Nu++) mu.push(Qu.p.Hermite(uu, Ru, yu, Eu, Nu * Ju));
+        return new Vu(mu)
       }
-      static CreateCatmullRomSpline(UU, RU, gU) {
-        const tU = [],
-          pU = 1 / RU;
-        let PU = 0;
-        if (gU) {
-          const gU = UU.length;
-          for (let TU = 0; TU < gU; TU++) {
-            PU = 0;
-            for (let qU = 0; qU < RU; qU++) tU.push(EU.n.CatmullRom(UU[TU % gU], UU[(TU + 1) % gU], UU[(TU + 2) % gU], UU[(TU + 3) % gU], PU)), PU += pU
+      static CreateCatmullRomSpline(uu, Ru, yu) {
+        const Eu = [],
+          Ku = 1 / Ru;
+        let mu = 0;
+        if (yu) {
+          const yu = uu.length;
+          for (let Ju = 0; Ju < yu; Ju++) {
+            mu = 0;
+            for (let Nu = 0; Nu < Ru; Nu++) Eu.push(Qu.p.CatmullRom(uu[Ju % yu], uu[(Ju + 1) % yu], uu[(Ju + 2) % yu], uu[(Ju + 3) % yu], mu)), mu += Ku
           }
-          tU.push(tU[0])
+          Eu.push(Eu[0])
         } else {
-          const gU = [];
-          gU.push(UU[0].clone()), gU.push(...UU), gU.push(UU[UU.length - 1].clone());
-          let TU = 0;
-          for (; TU < gU.length - 3; TU++) {
-            PU = 0;
-            for (let UU = 0; UU < RU; UU++) tU.push(EU.n.CatmullRom(gU[TU], gU[TU + 1], gU[TU + 2], gU[TU + 3], PU)), PU += pU
+          const yu = [];
+          yu.push(uu[0].clone()), yu.push(...uu), yu.push(uu[uu.length - 1].clone());
+          let Ju = 0;
+          for (; Ju < yu.length - 3; Ju++) {
+            mu = 0;
+            for (let uu = 0; uu < Ru; uu++) Eu.push(Qu.p.CatmullRom(yu[Ju], yu[Ju + 1], yu[Ju + 2], yu[Ju + 3], mu)), mu += Ku
           }
-          TU--, tU.push(EU.n.CatmullRom(gU[TU], gU[TU + 1], gU[TU + 2], gU[TU + 3], PU))
+          Ju--, Eu.push(Qu.p.CatmullRom(yu[Ju], yu[Ju + 1], yu[Ju + 2], yu[Ju + 3], mu))
         }
-        return new cU(tU)
+        return new Vu(Eu)
       }
-      static ArcThru3Points(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          pU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          PU = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const TU = [],
-          qU = RU.subtract(UU),
-          KU = gU.subtract(RU),
-          GU = UU.subtract(gU),
-          jU = EU.n.Cross(qU, KU),
-          uU = jU.length();
-        if (uU < Math.pow(10, -8)) return new cU(TU);
-        const CU = qU.lengthSquared(),
-          hU = KU.lengthSquared(),
-          QU = GU.lengthSquared(),
-          eU = jU.lengthSquared(),
-          WU = .5 * qU.length() * KU.length() * GU.length() / uU,
-          fU = -.5 * hU * EU.n.Dot(qU, GU) / eU,
-          xU = -.5 * QU * EU.n.Dot(qU, KU) / eU,
-          mU = -.5 * CU * EU.n.Dot(KU, GU) / eU,
-          IU = UU.scale(fU).add(RU.scale(xU)).add(gU.scale(mU)),
-          JU = UU.subtract(IU).normalize(),
-          wU = EU.n.Cross(jU, JU).normalize();
-        if (PU) {
-          const RU = 2 * Math.PI / tU;
-          for (let UU = 0; UU <= 2 * Math.PI; UU += RU) TU.push(IU.add(JU.scale(WU * Math.cos(UU)).add(wU.scale(WU * Math.sin(UU)))));
-          TU.push(UU)
+      static ArcThru3Points(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          Ku = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          mu = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const Ju = [],
+          Nu = Ru.subtract(uu),
+          Xu = yu.subtract(Ru),
+          ru = uu.subtract(yu),
+          Bu = Qu.p.Cross(Nu, Xu),
+          xu = Bu.length();
+        if (xu < Math.pow(10, -8)) return new Vu(Ju);
+        const Su = Nu.lengthSquared(),
+          pu = Xu.lengthSquared(),
+          Tu = ru.lengthSquared(),
+          Wu = Bu.lengthSquared(),
+          ju = .5 * Nu.length() * Xu.length() * ru.length() / xu,
+          Hu = -.5 * pu * Qu.p.Dot(Nu, ru) / Wu,
+          du = -.5 * Tu * Qu.p.Dot(Nu, Xu) / Wu,
+          bu = -.5 * Su * Qu.p.Dot(Xu, ru) / Wu,
+          Cu = uu.scale(Hu).add(Ru.scale(du)).add(yu.scale(bu)),
+          ku = uu.subtract(Cu).normalize(),
+          eu = Qu.p.Cross(Bu, ku).normalize();
+        if (mu) {
+          const Ru = 2 * Math.PI / Eu;
+          for (let uu = 0; uu <= 2 * Math.PI; uu += Ru) Ju.push(Cu.add(ku.scale(ju * Math.cos(uu)).add(eu.scale(ju * Math.sin(uu)))));
+          Ju.push(uu)
         } else {
-          const RU = 1 / tU;
-          let EU, PU = 0;
+          const Ru = 1 / Eu;
+          let Qu, mu = 0;
           do {
-            EU = IU.add(JU.scale(WU * Math.cos(PU)).add(wU.scale(WU * Math.sin(PU)))), TU.push(EU), PU += RU
-          } while (!EU.equalsWithEpsilon(gU, WU * RU * 1.1));
-          TU.push(gU), pU && TU.push(UU)
+            Qu = Cu.add(ku.scale(ju * Math.cos(mu)).add(eu.scale(ju * Math.sin(mu)))), Ju.push(Qu), mu += Ru
+          } while (!Qu.equalsWithEpsilon(yu, ju * Ru * 1.1));
+          Ju.push(yu), Ku && Ju.push(uu)
         }
-        return new cU(TU)
+        return new Vu(Ju)
       }
-      constructor(UU) {
-        this._length = 0, this._points = UU, this._length = this._computeLength(UU)
+      constructor(uu) {
+        this._length = 0, this._points = uu, this._length = this._computeLength(uu)
       }
       getPoints() {
         return this._points
@@ -279,121 +279,121 @@ export const modules = {
       length() {
         return this._length
       }
-      continue (UU) {
-        const RU = this._points[this._points.length - 1],
-          gU = this._points.slice(),
-          tU = UU.getPoints();
-        for (let pU = 1; pU < tU.length; pU++) gU.push(tU[pU].subtract(tU[0]).add(RU));
-        return new cU(gU)
+      continue (uu) {
+        const Ru = this._points[this._points.length - 1],
+          yu = this._points.slice(),
+          Eu = uu.getPoints();
+        for (let Ku = 1; Ku < Eu.length; Ku++) yu.push(Eu[Ku].subtract(Eu[0]).add(Ru));
+        return new Vu(yu)
       }
-      _computeLength(UU) {
-        let RU = 0;
-        for (let gU = 1; gU < UU.length; gU++) RU += UU[gU].subtract(UU[gU - 1]).length();
-        return RU
+      _computeLength(uu) {
+        let Ru = 0;
+        for (let yu = 1; yu < uu.length; yu++) Ru += uu[yu].subtract(uu[yu - 1]).length();
+        return Ru
       }
     }
   },
-  38234: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU
+  38444: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Qu
     });
-    var tU = gU(38236);
-    const pU = (UU, RU, gU) => UU ? UU.getClassName && "Mesh" === UU.getClassName() ? null : !UU.getClassName || "SubMesh" !== UU.getClassName() && "PhysicsBody" !== UU.getClassName() ? UU.clone ? UU.clone() : Array.isArray(UU) ? UU.slice() : gU && "object" === typeof UU ? {
-      ...UU
-    } : null : UU.clone(RU) : null;
-    class EU {
-      static DeepCopy(UU, RU, gU, EU) {
-        let PU = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const TU = function(UU) {
-          const RU = [];
+    var Eu = yu(38448);
+    const Ku = (uu, Ru, yu) => uu ? uu.getClassName && "Mesh" === uu.getClassName() ? null : !uu.getClassName || "SubMesh" !== uu.getClassName() && "PhysicsBody" !== uu.getClassName() ? uu.clone ? uu.clone() : Array.isArray(uu) ? uu.slice() : yu && "object" === typeof uu ? {
+      ...uu
+    } : null : uu.clone(Ru) : null;
+    class Qu {
+      static DeepCopy(uu, Ru, yu, Qu) {
+        let mu = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const Ju = function(uu) {
+          const Ru = [];
           do {
-            const gU = Object.getOwnPropertyNames(UU);
-            for (const UU of gU) - 1 === RU.indexOf(UU) && RU.push(UU)
-          } while (UU = Object.getPrototypeOf(UU));
-          return RU
-        }(UU);
-        for (const KU of TU) {
-          if ("_" === KU[0] && (!EU || -1 === EU.indexOf(KU))) continue;
-          if (KU.endsWith("Observable")) continue;
-          if (gU && -1 !== gU.indexOf(KU)) continue;
-          const TU = UU[KU],
-            cU = typeof TU;
-          if ("function" !== cU) try {
-            if ("object" === cU)
-              if (TU instanceof Uint8Array) RU[KU] = Uint8Array.from(TU);
-              else if (TU instanceof Array) {
-              if (RU[KU] = [], TU.length > 0)
-                if ("object" == typeof TU[0])
-                  for (let UU = 0; UU < TU.length; UU++) {
-                    const gU = pU(TU[UU], RU, PU); - 1 === RU[KU].indexOf(gU) && RU[KU].push(gU)
-                  } else RU[KU] = TU.slice(0)
-            } else RU[KU] = pU(TU, RU, PU);
-            else RU[KU] = TU
-          } catch (qU) {
-            tU.e.Warn(qU.message)
+            const yu = Object.getOwnPropertyNames(uu);
+            for (const uu of yu) - 1 === Ru.indexOf(uu) && Ru.push(uu)
+          } while (uu = Object.getPrototypeOf(uu));
+          return Ru
+        }(uu);
+        for (const Xu of Ju) {
+          if ("_" === Xu[0] && (!Qu || -1 === Qu.indexOf(Xu))) continue;
+          if (Xu.endsWith("Observable")) continue;
+          if (yu && -1 !== yu.indexOf(Xu)) continue;
+          const Ju = uu[Xu],
+            Vu = typeof Ju;
+          if ("function" !== Vu) try {
+            if ("object" === Vu)
+              if (Ju instanceof Uint8Array) Ru[Xu] = Uint8Array.from(Ju);
+              else if (Ju instanceof Array) {
+              if (Ru[Xu] = [], Ju.length > 0)
+                if ("object" == typeof Ju[0])
+                  for (let uu = 0; uu < Ju.length; uu++) {
+                    const yu = Ku(Ju[uu], Ru, mu); - 1 === Ru[Xu].indexOf(yu) && Ru[Xu].push(yu)
+                  } else Ru[Xu] = Ju.slice(0)
+            } else Ru[Xu] = Ku(Ju, Ru, mu);
+            else Ru[Xu] = Ju
+          } catch (Nu) {
+            Eu.e.Warn(Nu.message)
           }
         }
       }
     }
   },
-  38236: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => tU
+  38448: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Eu
     });
-    class tU {
-      static _CheckLimit(UU, RU) {
-        let gU = tU._LogLimitOutputs[UU];
-        return gU ? gU.current++ : (gU = {
-          limit: RU,
+    class Eu {
+      static _CheckLimit(uu, Ru) {
+        let yu = Eu._LogLimitOutputs[uu];
+        return yu ? yu.current++ : (yu = {
+          limit: Ru,
           current: 1
-        }, tU._LogLimitOutputs[UU] = gU), gU.current <= gU.limit
+        }, Eu._LogLimitOutputs[uu] = yu), yu.current <= yu.limit
       }
-      static _GenerateLimitMessage(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const gU = tU._LogLimitOutputs[UU];
-        if (!gU || !tU.MessageLimitReached) return;
-        const pU = this._Levels[RU];
-        gU.current === gU.limit && tU[pU.name](tU.MessageLimitReached.replace(/%LIMIT%/g, "" + gU.limit).replace(/%TYPE%/g, pU.name ?? ""))
+      static _GenerateLimitMessage(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const yu = Eu._LogLimitOutputs[uu];
+        if (!yu || !Eu.MessageLimitReached) return;
+        const Ku = this._Levels[Ru];
+        yu.current === yu.limit && Eu[Ku.name](Eu.MessageLimitReached.replace(/%LIMIT%/g, "" + yu.limit).replace(/%TYPE%/g, Ku.name ?? ""))
       }
-      static _AddLogEntry(UU) {
-        tU._LogCache = UU + tU._LogCache, tU.OnNewCacheEntry && tU.OnNewCacheEntry(UU)
+      static _AddLogEntry(uu) {
+        Eu._LogCache = uu + Eu._LogCache, Eu.OnNewCacheEntry && Eu.OnNewCacheEntry(uu)
       }
-      static _FormatMessage(UU) {
-        const RU = UU => UU < 10 ? "0" + UU : "" + UU,
-          gU = new Date;
-        return "[" + RU(gU.getHours()) + ":" + RU(gU.getMinutes()) + ":" + RU(gU.getSeconds()) + "]: " + UU
+      static _FormatMessage(uu) {
+        const Ru = uu => uu < 10 ? "0" + uu : "" + uu,
+          yu = new Date;
+        return "[" + Ru(yu.getHours()) + ":" + Ru(yu.getMinutes()) + ":" + Ru(yu.getSeconds()) + "]: " + uu
       }
-      static _LogDisabled(UU, RU) {}
+      static _LogDisabled(uu, Ru) {}
       static _LogEnabled() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          RU = arguments.length > 1 ? arguments[1] : void 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        const pU = Array.isArray(RU) ? RU[0] : RU;
-        if (void 0 !== gU && !tU._CheckLimit(pU, gU)) return;
-        const EU = tU._FormatMessage(pU),
-          PU = this._Levels[UU],
-          TU = Array.isArray(RU) ? RU.slice(1) : [];
-        PU.logFunc && PU.logFunc("BJS - " + EU, ...TU);
-        const qU = `<div style='color:${PU.color}'>${EU}</div><br>`;
-        tU._AddLogEntry(qU), tU._GenerateLimitMessage(pU, UU)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Ru = arguments.length > 1 ? arguments[1] : void 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        const Ku = Array.isArray(Ru) ? Ru[0] : Ru;
+        if (void 0 !== yu && !Eu._CheckLimit(Ku, yu)) return;
+        const Qu = Eu._FormatMessage(Ku),
+          mu = this._Levels[uu],
+          Ju = Array.isArray(Ru) ? Ru.slice(1) : [];
+        mu.logFunc && mu.logFunc("BJS - " + Qu, ...Ju);
+        const Nu = `<div style='color:${mu.color}'>${Qu}</div><br>`;
+        Eu._AddLogEntry(Nu), Eu._GenerateLimitMessage(Ku, uu)
       }
       static get LogCache() {
-        return tU._LogCache
+        return Eu._LogCache
       }
       static ClearLogCache() {
-        tU._LogCache = "", tU._LogLimitOutputs = {}, tU.errorsCount = 0
+        Eu._LogCache = "", Eu._LogLimitOutputs = {}, Eu.errorsCount = 0
       }
-      static set LogLevels(UU) {
-        tU.Log = tU._LogDisabled, tU.Warn = tU._LogDisabled, tU.Error = tU._LogDisabled;
-        const RU = [tU.MessageLogLevel, tU.WarningLogLevel, tU.ErrorLogLevel];
-        for (const gU of RU)
-          if ((UU & gU) === gU) {
-            const UU = this._Levels[gU];
-            tU[UU.name] = tU._LogEnabled.bind(tU, gU)
+      static set LogLevels(uu) {
+        Eu.Log = Eu._LogDisabled, Eu.Warn = Eu._LogDisabled, Eu.Error = Eu._LogDisabled;
+        const Ru = [Eu.MessageLogLevel, Eu.WarningLogLevel, Eu.ErrorLogLevel];
+        for (const yu of Ru)
+          if ((uu & yu) === yu) {
+            const uu = this._Levels[yu];
+            Eu[uu.name] = Eu._LogEnabled.bind(Eu, yu)
           }
       }
     }
-    tU.NoneLogLevel = 0, tU.MessageLogLevel = 1, tU.WarningLogLevel = 2, tU.ErrorLogLevel = 4, tU.AllLogLevel = 7, tU.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", tU._LogCache = "", tU._LogLimitOutputs = {}, tU._Levels = [{}, {
+    Eu.NoneLogLevel = 0, Eu.MessageLogLevel = 1, Eu.WarningLogLevel = 2, Eu.ErrorLogLevel = 4, Eu.AllLogLevel = 7, Eu.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Eu._LogCache = "", Eu._LogLimitOutputs = {}, Eu._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +405,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], tU.errorsCount = 0, tU.Log = tU._LogEnabled.bind(tU, tU.MessageLogLevel), tU.Warn = tU._LogEnabled.bind(tU, tU.WarningLogLevel), tU.Error = tU._LogEnabled.bind(tU, tU.ErrorLogLevel)
+    }], Eu.errorsCount = 0, Eu.Log = Eu._LogEnabled.bind(Eu, Eu.MessageLogLevel), Eu.Warn = Eu._LogEnabled.bind(Eu, Eu.WarningLogLevel), Eu.Error = Eu._LogEnabled.bind(Eu, Eu.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

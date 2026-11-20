@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36187: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => uU,
-      e: () => CU,
-      h: () => jU,
-      l: () => GU
+  36436: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => xu,
+      d: () => Su,
+      g: () => Bu,
+      h: () => ru
     });
-    var tU = gU(8982),
-      pU = gU(36191),
-      EU = gU(36197),
-      PU = gU(8340),
-      TU = gU(1410),
-      qU = gU(56),
-      KU = gU(74),
-      cU = gU(1090);
+    var Eu = yu(9048),
+      Ku = yu(36445),
+      Qu = yu(36449),
+      mu = yu(8447),
+      Ju = yu(1400),
+      Nu = yu(64),
+      Xu = yu(80),
+      Vu = yu(1079);
 
-    function GU() {
-      var UU;
-      return (0, TU.h)(pU.e, (0, pU.t)()), (0, cU.jsx)(cU.Fragment, {
-        children: null === (UU = (0, pU.t)()) || void 0 === UU ? void 0 : UU.content
+    function ru() {
+      var uu;
+      return (0, Ju.h)(Ku.c, (0, Ku.o)()), (0, Vu.jsx)(Vu.Fragment, {
+        children: null === (uu = (0, Ku.o)()) || void 0 === uu ? void 0 : uu.content
       })
     }
 
-    function jU(UU) {
-      var RU;
+    function Bu(uu) {
+      var Ru;
       let {
-        show: gU
-      } = UU;
-      (0, TU.h)(pU.e, (0, pU.t)());
-      const KU = null === (RU = (0, pU.t)()) || void 0 === RU ? void 0 : RU.menu;
-      return (0, qU.useEffect)((() => {
-        var UU;
-        gU || (null === KU || void 0 === KU || null === (UU = KU.onClose) || void 0 === UU || UU.call(KU), (0, EU.q)())
-      }), [gU, KU]), (0, qU.useEffect)((() => gU ? (0, PU.f)(EU.w, EU.e) : void 0), [gU]), (0, cU.jsx)(tU.d, {
-        showing: gU,
+        show: yu
+      } = uu;
+      (0, Ju.h)(Ku.c, (0, Ku.o)());
+      const Xu = null === (Ru = (0, Ku.o)()) || void 0 === Ru ? void 0 : Ru.menu;
+      return (0, Nu.useEffect)((() => {
+        var uu;
+        yu || (null === Xu || void 0 === Xu || null === (uu = Xu.onClose) || void 0 === uu || uu.call(Xu), (0, Qu.p)())
+      }), [yu, Xu]), (0, Nu.useEffect)((() => yu ? (0, mu.g)(Qu.v, Qu.d) : void 0), [yu]), (0, Vu.jsx)(Eu.c, {
+        showing: yu,
         globallyUniqueKey: "clientGameMenu",
-        children: null === KU || void 0 === KU ? void 0 : KU.content
+        children: null === Xu || void 0 === Xu ? void 0 : Xu.content
       })
     }
 
-    function uU(UU) {
+    function xu(uu) {
       let {
-        placement: RU = "bottom"
-      } = UU;
-      return (0, cU.jsx)("div", {
-        id: `clientGameHud-${RU}`,
+        placement: Ru = "bottom"
+      } = uu;
+      return (0, Vu.jsx)("div", {
+        id: `clientGameHud-${Ru}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function CU(UU) {
+    function Su(uu) {
       let {
-        children: RU,
-        placement: gU = "bottom"
-      } = UU;
-      const [tU, pU] = (0, qU.useState)(null);
-      return (0, qU.useEffect)((() => {
-        pU(document.getElementById(`clientGameHud-${gU}`))
-      }), [gU]), tU ? (0, KU.createPortal)(RU, tU) : null
+        children: Ru,
+        placement: yu = "bottom"
+      } = uu;
+      const [Eu, Ku] = (0, Nu.useState)(null);
+      return (0, Nu.useEffect)((() => {
+        Ku(document.getElementById(`clientGameHud-${yu}`))
+      }), [yu]), Eu ? (0, Xu.createPortal)(Ru, Eu) : null
     }
   },
-  8982: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU
+  9048: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu
     });
-    var tU = gU(4200),
-      pU = gU(4206);
+    var Eu = yu(4307),
+      Ku = yu(4314);
 
-    function EU(UU) {
+    function Qu(uu) {
       let {
-        children: RU,
-        showing: gU,
-        globallyUniqueKey: EU,
-        alwaysMountChildren: PU = !1,
-        doGameplayStartStopOnShow: TU = !0,
-        keepsMovement: qU = !1
-      } = UU;
-      return (0, pU.e)(!0, gU, EU, qU), (0, tU.c)(TU, gU), gU || PU ? RU : null
+        children: Ru,
+        showing: yu,
+        globallyUniqueKey: Qu,
+        alwaysMountChildren: mu = !1,
+        doGameplayStartStopOnShow: Ju = !0,
+        keepsMovement: Nu = !1
+      } = uu;
+      return (0, Ku.c)(!0, yu, Qu, Nu), (0, Eu.e)(Ju, yu), yu || mu ? Ru : null
     }
   },
-  8340: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => EU,
-      f: () => pU
+  8447: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      g: () => Ku
     });
-    let tU = null;
-    const pU = function(UU) {
-        const RU = {
-          cycle: UU,
+    let Eu = null;
+    const Ku = function(uu) {
+        const Ru = {
+          cycle: uu,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return tU = RU, () => {
-          tU === RU && (tU = null)
+        return Eu = Ru, () => {
+          Eu === Ru && (Eu = null)
         }
       },
-      EU = () => {
-        var UU;
-        return null !== (UU = tU) && void 0 !== UU && UU.canCycle() ? tU.cycle : null
+      Qu = () => {
+        var uu;
+        return null !== (uu = Eu) && void 0 !== uu && uu.canCycle() ? Eu.cycle : null
       }
   },
-  36197: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU,
-      e: () => hU,
-      g: () => QU,
-      j: () => TU,
-      n: () => jU,
-      q: () => eU,
-      r: () => GU,
-      t: () => fU,
-      w: () => CU,
-      x: () => WU
+  36449: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      d: () => pu,
+      h: () => Tu,
+      k: () => Ju,
+      o: () => Bu,
+      p: () => Wu,
+      q: () => ru,
+      u: () => Hu,
+      v: () => Su,
+      w: () => ju
     });
-    var tU = gU(21),
-      pU = gU(24);
-    const EU = "clientGameInventoryButtonsChanged",
-      PU = new Map;
+    var Eu = yu(27),
+      Ku = yu(34);
+    const Qu = "clientGameInventoryButtonsChanged",
+      mu = new Map;
 
-    function TU() {
-      return [...PU.values()].sort(((UU, RU) => {
-        var gU, tU;
-        return (null !== (gU = UU.order) && void 0 !== gU ? gU : 0) - (null !== (tU = RU.order) && void 0 !== tU ? tU : 0)
+    function Ju() {
+      return [...mu.values()].sort(((uu, Ru) => {
+        var yu, Eu;
+        return (null !== (yu = uu.order) && void 0 !== yu ? yu : 0) - (null !== (Eu = Ru.order) && void 0 !== Eu ? Eu : 0)
       }))
     }
-    let qU = null;
+    let Nu = null;
 
-    function KU(UU) {
-      qU = UU
+    function Xu(uu) {
+      Nu = uu
     }
-    let cU = !1;
+    let Vu = !1;
 
-    function GU(UU) {
-      cU = !0;
+    function ru(uu) {
+      Vu = !0;
       try {
-        UU.onClick()
+        uu.onClick()
       } finally {
-        cU = !1
+        Vu = !1
       }
-      UU.panel && "clientGame" === tU.b.get("openInGameMenuName") && KU(UU.id)
+      uu.panel && "clientGame" === Eu.d.get("openInGameMenuName") && Xu(uu.id)
     }
 
-    function jU() {
-      return cU
+    function Bu() {
+      return Vu
     }
 
-    function uU() {
-      return TU().filter((UU => UU.panel && !UU.disabled))
+    function xu() {
+      return Ju().filter((uu => uu.panel && !uu.disabled))
     }
 
-    function CU(UU) {
-      const RU = uU(),
-        gU = RU.findIndex((UU => UU.id === qU));
-      return !(gU < 0 || RU.length < 2) && (GU(RU[(gU + UU + RU.length) % RU.length]), !0)
+    function Su(uu) {
+      const Ru = xu(),
+        yu = Ru.findIndex((uu => uu.id === Nu));
+      return !(yu < 0 || Ru.length < 2) && (ru(Ru[(yu + uu + Ru.length) % Ru.length]), !0)
     }
 
-    function hU() {
-      return null !== qU && uU().length > 1
+    function pu() {
+      return null !== Nu && xu().length > 1
     }
 
-    function QU() {
-      KU(null)
+    function Tu() {
+      Xu(null)
     }
 
-    function eU() {
-      "inventory" !== tU.b.get("openInGameMenuName") && KU(null)
+    function Wu() {
+      "inventory" !== Eu.d.get("openInGameMenuName") && Xu(null)
     }
 
-    function WU() {
-      const UU = qU;
-      return KU(null), UU
+    function ju() {
+      const uu = Nu;
+      return Xu(null), uu
     }
 
-    function fU(UU) {
-      return PU.set(UU.id, UU), pU.p.yh(EU, TU(), !0), () => {
-        PU.get(UU.id) === UU && (PU.delete(UU.id), pU.p.yh(EU, TU()))
+    function Hu(uu) {
+      return mu.set(uu.id, uu), Ku.k.Op(Qu, Ju(), !0), () => {
+        mu.get(uu.id) === uu && (mu.delete(uu.id), Ku.k.Op(Qu, Ju()))
       }
     }
   },
-  36191: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => TU,
-      h: () => QU,
-      l: () => eU,
-      p: () => jU,
-      t: () => KU,
-      w: () => hU,
-      x: () => uU,
-      y: () => cU
+  36445: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      f: () => Tu,
+      i: () => Wu,
+      m: () => Bu,
+      o: () => Xu,
+      q: () => pu,
+      u: () => xu,
+      w: () => Vu
     });
-    var tU = gU(21),
-      pU = gU(24),
-      EU = gU(1287),
-      PU = gU(36197);
-    const TU = "clientGameUiChanged";
-    let qU = null;
+    var Eu = yu(27),
+      Ku = yu(34),
+      Qu = yu(1250),
+      mu = yu(36449);
+    const Ju = "clientGameUiChanged";
+    let Nu = null;
 
-    function KU() {
-      return qU
+    function Xu() {
+      return Nu
     }
 
-    function cU(UU, RU) {
-      const gU = {
-        content: UU,
-        menu: RU
+    function Vu(uu, Ru) {
+      const yu = {
+        content: uu,
+        menu: Ru
       };
-      return qU = gU, pU.p.yh(TU, qU, !0), () => {
-        qU === gU && (qU = null, CU = !1, QU(), pU.p.yh(TU, null))
+      return Nu = yu, Ku.k.Op(Ju, Nu, !0), () => {
+        Nu === yu && (Nu = null, Su = !1, Tu(), Ku.k.Op(Ju, null))
       }
     }
-    let GU = null;
+    let ru = null;
 
-    function jU() {
-      return GU
+    function Bu() {
+      return ru
     }
 
-    function uU(UU) {
-      return GU = UU, () => {
-        GU === UU && (GU = null)
+    function xu(uu) {
+      return ru = uu, () => {
+        ru === uu && (ru = null)
       }
     }
-    let CU = !1;
+    let Su = !1;
 
-    function hU() {
-      const UU = tU.b.get("openInGameMenuName");
-      "clientGame" !== UU && (CU = "inventory" === UU), (0, PU.n)() || (0, PU.g)(), (0, EU.o)(EU.c), tU.b.set({
+    function pu() {
+      const uu = Eu.d.get("openInGameMenuName");
+      "clientGame" !== uu && (Su = "inventory" === uu), (0, mu.o)() || (0, mu.h)(), (0, Qu.o)(Qu.b), Eu.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function QU() {
-      WU(!1)
+    function Tu() {
+      ju(!1)
     }
 
-    function eU() {
-      WU(CU)
+    function Wu() {
+      ju(Su)
     }
 
-    function WU(UU) {
-      "clientGame" === tU.b.get("openInGameMenuName") && tU.b.set({
-        openInGameMenuName: UU ? "inventory" : null
-      }), UU || (0, PU.g)(), CU = !1
+    function ju(uu) {
+      "clientGame" === Eu.d.get("openInGameMenuName") && Eu.d.set({
+        openInGameMenuName: uu ? "inventory" : null
+      }), uu || (0, mu.h)(), Su = !1
     }
   },
-  38969: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => OU
+  39156: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => fu
     });
-    const tU = {
+    const Eu = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var pU = gU(56),
-      EU = gU(37578),
-      PU = gU(311);
-    const TU = ["Basic", "Rare", "Super"];
+    var Ku = yu(64),
+      Qu = yu(37784),
+      mu = yu(343);
+    const Ju = ["Basic", "Rare", "Super"];
 
-    function qU(UU, RU) {
-      return `${"Basic"===RU?"":`${RU} `}${"Simple"===UU?"":`${UU} `}Lucky Block`
+    function Nu(uu, Ru) {
+      return `${"Basic"===Ru?"":`${Ru} `}${"Simple"===uu?"":`${uu} `}Lucky Block`
     }
-    const KU = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((UU => TU.map((RU => [qU(UU, RU), {
-      category: UU,
-      rarity: RU
+    const Xu = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((uu => Ju.map((Ru => [Nu(uu, Ru), {
+      category: uu,
+      rarity: Ru
     }])))));
-    KU.keys();
+    Xu.keys();
 
-    function cU(UU) {
-      return KU.get(UU)
+    function Vu(uu) {
+      return Xu.get(uu)
     }
-    const GU = "Obsidian",
-      jU = ["Cobweb"],
-      uU = [...["Red", "Blue", "Green", "Yellow"].map((UU => `${(0,PU.eb)(UU)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", GU, ...jU];
+    const ru = "Obsidian",
+      Bu = ["Cobweb"],
+      xu = [...["Red", "Blue", "Green", "Yellow"].map((uu => `${(0,mu.$)(uu)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", ru, ...Bu];
 
-    function CU(UU) {
-      return uU.includes(UU)
+    function Su(uu) {
+      return xu.includes(uu)
     }
-    var hU = gU(581);
+    var pu = yu(610);
 
-    function QU(UU, RU) {
-      const gU = cU(UU);
-      if (gU) {
-        const UU = cU(RU);
-        if (!UU) return;
-        const tU = TU.length - 1 - TU.indexOf(UU.rarity);
-        return (UU.category === gU.category ? 0 : 1) * TU.length + tU
+    function Tu(uu, Ru) {
+      const yu = Vu(uu);
+      if (yu) {
+        const uu = Vu(Ru);
+        if (!uu) return;
+        const Eu = Ju.length - 1 - Ju.indexOf(uu.rarity);
+        return (uu.category === yu.category ? 0 : 1) * Ju.length + Eu
       }
-      if (!CU(UU)) return;
-      if (RU === UU) return 0;
-      const tU = UU => CU(UU) && !jU.includes(UU) && UU !== GU;
-      return tU(UU) && tU(RU) ? 1 : void 0
+      if (!Su(uu)) return;
+      if (Ru === uu) return 0;
+      const Eu = uu => Su(uu) && !Bu.includes(uu) && uu !== ru;
+      return Eu(uu) && Eu(Ru) ? 1 : void 0
     }
-    const eU = [...Array.from({
-      length: hU.n - hU.m
-    }, ((UU, RU) => hU.m + RU)), ...Array.from({
-      length: hU.m
-    }, ((UU, RU) => RU))];
-    class WU {
-      constructor(UU) {
-        this.inventory = UU, this.pending = new Map
+    const Wu = [...Array.from({
+      length: pu.q - pu.n
+    }, ((uu, Ru) => pu.n + Ru)), ...Array.from({
+      length: pu.n
+    }, ((uu, Ru) => Ru))];
+    class ju {
+      constructor(uu) {
+        this.inventory = uu, this.pending = new Map
       }
-      onPlace(UU) {
-        var RU;
-        const gU = this.inventory.selectedSlot(),
-          tU = this.inventory.itemAt(gU);
-        (null === tU || void 0 === tU ? void 0 : tU.name) === UU && (null !== (RU = tU.amount) && void 0 !== RU ? RU : 1) <= 1 && fU(UU) && this.pending.set(gU, UU)
+      onPlace(uu) {
+        var Ru;
+        const yu = this.inventory.selectedSlot(),
+          Eu = this.inventory.itemAt(yu);
+        (null === Eu || void 0 === Eu ? void 0 : Eu.name) === uu && (null !== (Ru = Eu.amount) && void 0 !== Ru ? Ru : 1) <= 1 && Hu(uu) && this.pending.set(yu, uu)
       }
-      onDrop(UU, RU) {
-        RU < hU.m && null === this.inventory.itemAt(RU) && fU(UU) && this.refill(RU, UU)
+      onDrop(uu, Ru) {
+        Ru < pu.n && null === this.inventory.itemAt(Ru) && Hu(uu) && this.refill(Ru, uu)
       }
-      HG() {
-        const UU = [...this.pending];
+      sr() {
+        const uu = [...this.pending];
         this.pending.clear();
-        for (const [RU, gU] of UU) null === this.inventory.itemAt(RU) && this.refill(RU, gU)
+        for (const [Ru, yu] of uu) null === this.inventory.itemAt(Ru) && this.refill(Ru, yu)
       }
-      refill(UU, RU) {
-        const gU = function(UU, RU, gU, tU) {
-          let pU, EU = 1 / 0;
-          for (const PU of eU) {
-            if (PU === RU) continue;
-            const TU = tU(PU);
-            if (!TU || PU < hU.m && RU !== gU) continue;
-            const qU = QU(UU, TU.name);
-            void 0 !== qU && qU < EU && (pU = PU, EU = qU)
+      refill(uu, Ru) {
+        const yu = function(uu, Ru, yu, Eu) {
+          let Ku, Qu = 1 / 0;
+          for (const mu of Wu) {
+            if (mu === Ru) continue;
+            const Ju = Eu(mu);
+            if (!Ju || mu < pu.n && Ru !== yu) continue;
+            const Nu = Tu(uu, Ju.name);
+            void 0 !== Nu && Nu < Qu && (Ku = mu, Qu = Nu)
           }
-          return pU
-        }(RU, UU, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== gU && this.inventory.swap(UU, gU)
+          return Ku
+        }(Ru, uu, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== yu && this.inventory.swap(uu, yu)
       }
     }
 
-    function fU(UU) {
-      return !!cU(UU) || CU(UU)
+    function Hu(uu) {
+      return !!Vu(uu) || Su(uu)
     }
-    var xU = gU(36191),
-      mU = gU(74),
-      IU = gU(1037),
-      JU = gU.n(IU);
-    const wU = "Lucky Clover",
-      nU = {
+    var du = yu(36445),
+      bu = yu(80),
+      Cu = yu(1035),
+      ku = yu.n(Cu);
+    const eu = "Lucky Clover",
+      Au = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function bU(UU) {
-      return nU[UU][0]
+    function Du(uu) {
+      return Au[uu][0]
     }
 
-    function oU(UU) {
-      return TU.filter((RU => UU >= bU(RU)))
+    function Mu(uu) {
+      return Ju.filter((Ru => uu >= Du(Ru)))
     }
-    var ZU = gU(299),
-      aU = gU(2254),
-      YU = gU(21),
-      BU = gU(2353),
-      VU = gU(1790),
-      rU = gU(36187),
-      XU = gU(1049);
-    var vU = gU(1090);
-    const dU = {
-      Basic: PU.N.whiteUiText,
-      Rare: PU.N.goldUiText,
-      Super: PU.N.cyanUiText
+    var Iu = yu(330),
+      Gu = yu(2335),
+      Uu = yu(27),
+      nu = yu(2435),
+      su = yu(1841),
+      tu = yu(36436),
+      lu = yu(1043);
+    var gu = yu(1079);
+    const cu = {
+      Basic: mu.L.whiteUiText,
+      Rare: mu.L.goldUiText,
+      Super: mu.L.cyanUiText
     };
-    let HU = 1;
+    let Lu = 1;
 
-    function SU() {
-      const UU = (0, aU.g)("currencyAmounts"),
-        RU = null === UU || void 0 === UU ? void 0 : UU.Clovers;
-      return !RU || RU.hidden ? null : (0, vU.jsx)(rU.e, {
-        children: (0, vU.jsx)(sU, {
-          amount: RU.amount
+    function zu() {
+      const uu = (0, Gu.g)("currencyAmounts"),
+        Ru = null === uu || void 0 === uu ? void 0 : uu.Clovers;
+      return !Ru || Ru.hidden ? null : (0, gu.jsx)(tu.d, {
+        children: (0, gu.jsx)(Fu, {
+          amount: Ru.amount
         })
       })
     }
 
-    function sU(UU) {
-      var RU, gU, tU;
+    function Fu(uu) {
+      var Ru, yu, Eu;
       let {
-        amount: EU
-      } = UU;
+        amount: Qu
+      } = uu;
       const {
-        openEverythingMenuName: qU
-      } = (0, YU.l)(["openEverythingMenuName"]), KU = (0, BU.c)(), [cU, GU] = (0, pU.useState)(EU), [jU, uU] = (0, pU.useState)(null), [CU, hU] = (0, pU.useState)(0), [QU, eU] = (0, pU.useState)([]), WU = (0, pU.useRef)(EU), fU = (0, pU.useRef)(!1), xU = (0, pU.useRef)(null), IU = qU === ZU.n.SHOP;
-      (0, pU.useEffect)((() => {
-        const UU = WU.current;
-        if (WU.current = EU, EU <= UU || IU) return void GU(EU);
-        const RU = KU || QU.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (gU = EU - UU, tU = !fU.current, gU <= 0 || !tU && gU < 40 ? 0 : Math.min(4, Math.ceil(gU / 30)));
-        var gU, tU;
-        if (fU.current = !0, oU(EU).length > oU(UU).length && hU(HU++), RU > 0) {
-          const UU = [];
-          for (let gU = 0; gU < RU; gU++) UU.push({
-            id: HU++,
+        openEverythingMenuName: Nu
+      } = (0, Uu.j)(["openEverythingMenuName"]), Xu = (0, nu.e)(), [Vu, ru] = (0, Ku.useState)(Qu), [Bu, xu] = (0, Ku.useState)(null), [Su, pu] = (0, Ku.useState)(0), [Tu, Wu] = (0, Ku.useState)([]), ju = (0, Ku.useRef)(Qu), Hu = (0, Ku.useRef)(!1), du = (0, Ku.useRef)(null), Cu = Nu === Iu.s.SHOP;
+      (0, Ku.useEffect)((() => {
+        const uu = ju.current;
+        if (ju.current = Qu, Qu <= uu || Cu) return void ru(Qu);
+        const Ru = Xu || Tu.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (yu = Qu - uu, Eu = !Hu.current, yu <= 0 || !Eu && yu < 40 ? 0 : Math.min(4, Math.ceil(yu / 30)));
+        var yu, Eu;
+        if (Hu.current = !0, Mu(Qu).length > Mu(uu).length && pu(Lu++), Ru > 0) {
+          const uu = [];
+          for (let yu = 0; yu < Ru; yu++) uu.push({
+            id: Lu++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * gU
+            delayMs: 70 * yu
           });
-          eU((RU => [...RU, ...UU]))
+          Wu((Ru => [...Ru, ...uu]))
         }
-        const pU = RU > 0 ? 600 : 0;
-        uU({
-          id: HU++,
-          delayMs: pU
+        const Ku = Ru > 0 ? 600 : 0;
+        xu({
+          id: Lu++,
+          delayMs: Ku
         });
-        const TU = performance.now() + pU;
-        let qU = 0;
-        const cU = RU => {
-          const gU = PU.c.clamp((RU - TU) / 600, 0, 1);
-          GU(Math.round(UU + (EU - UU) * gU)), gU < 1 && (qU = requestAnimationFrame(cU))
+        const Ju = performance.now() + Ku;
+        let Nu = 0;
+        const Vu = Ru => {
+          const yu = mu.c.clamp((Ru - Ju) / 600, 0, 1);
+          ru(Math.round(uu + (Qu - uu) * yu)), yu < 1 && (Nu = requestAnimationFrame(Vu))
         };
-        return qU = requestAnimationFrame(cU), () => {
-          cancelAnimationFrame(qU)
+        return Nu = requestAnimationFrame(Vu), () => {
+          cancelAnimationFrame(Nu)
         }
-      }), [EU, IU]);
-      const nU = function(UU) {
-          var RU;
-          const gU = null !== (RU = TU.find((RU => UU < bU(RU)))) && void 0 !== RU ? RU : "Super";
+      }), [Qu, Cu]);
+      const Au = function(uu) {
+          var Ru;
+          const yu = null !== (Ru = Ju.find((Ru => uu < Du(Ru)))) && void 0 !== Ru ? Ru : "Super";
           return {
-            rarity: gU,
-            progress: PU.c.clamp(UU / bU(gU), 0, 1)
+            rarity: yu,
+            progress: mu.c.clamp(uu / Du(yu), 0, 1)
           }
-        }(cU),
-        aU = oU(cU).at(-1);
-      return (0, vU.jsxs)(vU.Fragment, {
-        children: [(0, vU.jsx)("div", {
+        }(Vu),
+        Gu = Mu(Vu).at(-1);
+      return (0, gu.jsxs)(gu.Fragment, {
+        children: [(0, gu.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, vU.jsxs)("div", {
-            className: JU()("LuckyCloverWallet", {
-              Capped: aU && "Basic" !== aU
+          children: (0, gu.jsxs)("div", {
+            className: ku()("LuckyCloverWallet", {
+              Capped: Gu && "Basic" !== Gu
             }),
-            style: aU && {
-              "--luckyTierColour": dU[aU]
+            style: Gu && {
+              "--luckyTierColour": cu[Gu]
             },
-            children: [(0, vU.jsx)("div", {
+            children: [(0, gu.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${nU.progress})`
+                transform: `scaleX(${Au.progress})`
               }
-            }), CU > 0 && (0, vU.jsx)("div", {
+            }), Su > 0 && (0, gu.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(RU=null===jU||void 0===jU?void 0:jU.delayMs)&&void 0!==RU?RU:0}ms`
+                animationDelay: `${null!==(Ru=null===Bu||void 0===Bu?void 0:Bu.delayMs)&&void 0!==Ru?Ru:0}ms`
               }
-            }, CU), (0, vU.jsx)("div", {
-              ref: xU,
-              className: JU()("LuckyCloverWalletIcon", jU && "Bounce"),
+            }, Su), (0, gu.jsx)("div", {
+              ref: du,
+              className: ku()("LuckyCloverWalletIcon", Bu && "Bounce"),
               style: {
-                animationDelay: `${null!==(tU=null===jU||void 0===jU?void 0:jU.delayMs)&&void 0!==tU?tU:0}ms`
+                animationDelay: `${null!==(Eu=null===Bu||void 0===Bu?void 0:Bu.delayMs)&&void 0!==Eu?Eu:0}ms`
               },
-              children: (0, vU.jsx)(VU.c, {
-                itemName: wU,
+              children: (0, gu.jsx)(su.c, {
+                itemName: eu,
                 amount: 0
               })
-            }, null !== (gU = null === jU || void 0 === jU ? void 0 : jU.id) && void 0 !== gU ? gU : 0), (0, vU.jsx)("span", {
+            }, null !== (yu = null === Bu || void 0 === Bu ? void 0 : Bu.id) && void 0 !== yu ? yu : 0), (0, gu.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: cU
-            }), aU && (0, vU.jsx)(XU.c, {
+              children: Vu
+            }), Gu && (0, gu.jsx)(lu.c, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, mU.createPortal)(QU.map((UU => (0, vU.jsx)(yU, {
-          flyer: UU,
-          target: xU,
+        }), (0, bu.createPortal)(Tu.map((uu => (0, gu.jsx)(wu, {
+          flyer: uu,
+          target: du,
           onDone: () => {
-            eU((RU => RU.filter((RU => RU.id !== UU.id))))
+            Wu((Ru => Ru.filter((Ru => Ru.id !== uu.id))))
           }
-        }, UU.id))), document.body)]
+        }, uu.id))), document.body)]
       })
     }
 
-    function yU(UU) {
+    function wu(uu) {
       let {
-        flyer: RU,
-        target: gU,
-        onDone: tU
-      } = UU;
-      const EU = (0, pU.useRef)(null);
-      return (0, pU.useEffect)((() => {
-        var UU;
-        const pU = null === (UU = gU.current) || void 0 === UU ? void 0 : UU.getBoundingClientRect();
-        if (!EU.current || !pU) return void tU();
+        flyer: Ru,
+        target: yu,
+        onDone: Eu
+      } = uu;
+      const Qu = (0, Ku.useRef)(null);
+      return (0, Ku.useEffect)((() => {
+        var uu;
+        const Ku = null === (uu = yu.current) || void 0 === uu ? void 0 : uu.getBoundingClientRect();
+        if (!Qu.current || !Ku) return void Eu();
         const {
-          x: PU,
-          y: TU
-        } = RU, qU = PU + 140 * (Math.random() - .5), KU = TU - 30 - 40 * Math.random(), cU = EU.current.animate([{
-          transform: `translate(${PU}px, ${TU}px) scale(0.3)`,
+          x: mu,
+          y: Ju
+        } = Ru, Nu = mu + 140 * (Math.random() - .5), Xu = Ju - 30 - 40 * Math.random(), Vu = Qu.current.animate([{
+          transform: `translate(${mu}px, ${Ju}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${qU}px, ${KU}px) scale(1.3)`,
+          transform: `translate(${Nu}px, ${Xu}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${pU.left}px, ${pU.top}px) scale(0.8)`,
+          transform: `translate(${Ku.left}px, ${Ku.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: RU.delayMs,
+          delay: Ru.delayMs,
           fill: "backwards"
         });
-        return cU.onfinish = tU, () => {
-          cU.cancel()
+        return Vu.onfinish = Eu, () => {
+          Vu.cancel()
         }
-      }), []), (0, vU.jsx)("div", {
-        ref: EU,
+      }), []), (0, gu.jsx)("div", {
+        ref: Qu,
         className: "LuckyCloverFlying",
-        children: (0, vU.jsx)(VU.c, {
-          itemName: wU,
+        children: (0, gu.jsx)(su.c, {
+          itemName: eu,
           amount: 0
         })
       })
     }
-    var kU = gU(24);
-    const FU = "luckyGearUpgradeView",
-      iU = {
+    var Zu = yu(34);
+    const hu = "luckyGearUpgradeView",
+      Pu = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function AU(UU) {
-      var RU;
-      return null !== (RU = iU[UU.split(" ")[0]]) && void 0 !== RU ? RU : "#e07bff"
+    function iu(uu) {
+      var Ru;
+      return null !== (Ru = Pu[uu.split(" ")[0]]) && void 0 !== Ru ? Ru : "#e07bff"
     }
-    class zU {
-      constructor(UU, RU) {
-        this.selectedSlot = UU, this.itemAt = RU, this.rings = [], this.unseen = new Map, this.view = {
+    class Yu {
+      constructor(uu, Ru) {
+        this.selectedSlot = uu, this.itemAt = Ru, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      qC(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [gU, tU, pU] of UU) this.rings.push({
+      SS(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [yu, Eu, Ku] of uu) this.rings.push({
           id: this.nextId++,
-          slot: gU,
-          colour: AU(pU),
-          until: RU + 1200
-        }), gU !== this.selectedSlot() && this.unseen.set(gU, {
-          from: tU,
-          to: pU
+          slot: yu,
+          colour: iu(Ku),
+          until: Ru + 1200
+        }), yu !== this.selectedSlot() && this.unseen.set(yu, {
+          from: Eu,
+          to: Ku
         });
-        this.yh()
+        this.Op()
       }
-      HG() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      sr() {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const RU = this.rings.filter((RU => RU.until > UU));
-        let gU = RU.length !== this.rings.length;
-        this.rings = RU;
-        for (const [tU, {
-            from: pU,
-            to: EU
+        const Ru = this.rings.filter((Ru => Ru.until > uu));
+        let yu = Ru.length !== this.rings.length;
+        this.rings = Ru;
+        for (const [Eu, {
+            from: Ku,
+            to: Qu
           }] of this.unseen) {
-          const UU = this.itemAt(tU);
-          (tU === this.selectedSlot() || UU !== EU && UU !== pU) && (this.unseen.delete(tU), gU = !0)
+          const uu = this.itemAt(Eu);
+          (Eu === this.selectedSlot() || uu !== Qu && uu !== Ku) && (this.unseen.delete(Eu), yu = !0)
         }
-        gU && this.yh()
+        yu && this.Op()
       }
-      yh() {
+      Op() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, kU.p.yh(FU, this.view)
+        }, Zu.k.Op(hu, this.view)
       }
     }
-    var MU = gU(1410);
+    var ou = yu(1400);
 
-    function DU(UU) {
-      return document.querySelector(`.HotBar [data-inven-idx="${UU}"]`)
+    function qu(uu) {
+      return document.querySelector(`.HotBar [data-inven-idx="${uu}"]`)
     }
 
-    function LU(UU) {
+    function Ou(uu) {
       let {
-        ring: RU
-      } = UU;
-      const [gU, tU] = (0, pU.useState)(null);
-      return (0, pU.useLayoutEffect)((() => {
-        var UU, gU;
-        tU(null !== (UU = null === (gU = DU(RU.slot)) || void 0 === gU ? void 0 : gU.getBoundingClientRect()) && void 0 !== UU ? UU : null)
-      }), [RU]), gU ? (0, vU.jsx)("div", {
+        ring: Ru
+      } = uu;
+      const [yu, Eu] = (0, Ku.useState)(null);
+      return (0, Ku.useLayoutEffect)((() => {
+        var uu, yu;
+        Eu(null !== (uu = null === (yu = qu(Ru.slot)) || void 0 === yu ? void 0 : yu.getBoundingClientRect()) && void 0 !== uu ? uu : null)
+      }), [Ru]), yu ? (0, gu.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: gU.left,
-          top: gU.top,
-          width: gU.width,
-          height: gU.height,
-          "--ringColour": RU.colour,
+          left: yu.left,
+          top: yu.top,
+          width: yu.width,
+          height: yu.height,
+          "--ringColour": Ru.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function NU(UU) {
+    function vu(uu) {
       let {
-        slot: RU
-      } = UU;
-      const [gU, tU] = (0, pU.useState)(null);
-      return (0, pU.useLayoutEffect)((() => {
-        const UU = () => {
-          tU(DU(RU))
+        slot: Ru
+      } = uu;
+      const [yu, Eu] = (0, Ku.useState)(null);
+      return (0, Ku.useLayoutEffect)((() => {
+        const uu = () => {
+          Eu(qu(Ru))
         };
-        UU();
-        const gU = new MutationObserver(UU),
-          pU = document.querySelector(".BottomMiddleElements");
-        return pU && gU.observe(pU, {
+        uu();
+        const yu = new MutationObserver(uu),
+          Ku = document.querySelector(".BottomMiddleElements");
+        return Ku && yu.observe(Ku, {
           childList: !0,
           subtree: !0
         }), () => {
-          gU.disconnect()
+          yu.disconnect()
         }
-      }), [RU]), gU ? (0, mU.createPortal)((0, vU.jsx)("div", {
+      }), [Ru]), yu ? (0, bu.createPortal)((0, gu.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), gU) : null
+      }), yu) : null
     }
 
-    function lU(UU) {
+    function au(uu) {
       let {
-        controller: RU
-      } = UU;
-      const gU = (0, MU.h)(FU, RU.getView());
-      return (0, vU.jsxs)(vU.Fragment, {
-        children: [gU.rings.map((UU => (0, vU.jsx)(LU, {
-          ring: UU
-        }, UU.id))), gU.unseenSlots.map((UU => (0, vU.jsx)(NU, {
-          slot: UU
-        }, UU)))]
+        controller: Ru
+      } = uu;
+      const yu = (0, ou.h)(hu, Ru.getView());
+      return (0, gu.jsxs)(gu.Fragment, {
+        children: [yu.rings.map((uu => (0, gu.jsx)(Ou, {
+          ring: uu
+        }, uu.id))), yu.unseenSlots.map((uu => (0, gu.jsx)(vu, {
+          slot: uu
+        }, uu)))]
       })
     }
-    const OU = function(UU, RU, gU, PU) {
-      let TU, {
-          localPlayerId: qU
-        } = PU,
-        KU = null;
-      const cU = new WU({
-          itemAt: UU => TU.getItemSlot(qU, UU),
-          selectedSlot: () => TU.getSelectedInventorySlotI(qU),
-          swap: (UU, RU) => {
-            TU.swapInventorySlots(UU, RU)
+    const fu = function(uu, Ru, yu, mu) {
+      let Ju, {
+          localPlayerId: Nu
+        } = mu,
+        Xu = null;
+      const Vu = new ju({
+          itemAt: uu => Ju.getItemSlot(Nu, uu),
+          selectedSlot: () => Ju.getSelectedInventorySlotI(Nu),
+          swap: (uu, Ru) => {
+            Ju.swapInventorySlots(uu, Ru)
           }
         }),
-        GU = new zU((() => TU.getSelectedInventorySlotI(qU)), (UU => {
-          var RU;
-          return null === (RU = TU.getItemSlot(qU, UU)) || void 0 === RU ? void 0 : RU.name
+        ru = new Yu((() => Ju.getSelectedInventorySlotI(Nu)), (uu => {
+          var Ru;
+          return null === (Ru = Ju.getItemSlot(Nu, uu)) || void 0 === Ru ? void 0 : Ru.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, EU.d)()
+          placeAgainstBeds: (0, Qu.c)()
         },
-        onCreate: UU => {
-          TU = UU, KU = (0, xU.y)((0, pU.createElement)(pU.Fragment, null, (0, pU.createElement)(SU), (0, pU.createElement)(lU, {
-            controller: GU
+        onCreate: uu => {
+          Ju = uu, Xu = (0, du.w)((0, Ku.createElement)(Ku.Fragment, null, (0, Ku.createElement)(zu), (0, Ku.createElement)(au, {
+            controller: ru
           })))
         },
         onClose: () => {
-          var UU;
-          null === (UU = KU) || void 0 === UU || UU()
+          var uu;
+          null === (uu = Xu) || void 0 === uu || uu()
         },
-        HG: () => {
-          cU.HG(), GU.HG()
+        sr: () => {
+          Vu.sr(), ru.sr()
         },
-        onReceivedMessageFromServer: (UU, RU) => {
-          "luckyGearUpgrade" === UU && GU.qC(RU)
+        onReceivedMessageFromServer: (uu, Ru) => {
+          "luckyGearUpgrade" === uu && ru.SS(Ru)
         },
-        onPlayerChangeBlock: (UU, RU, gU, tU, pU, EU) => {
-          "Air" !== EU && cU.onPlace(EU)
+        onPlayerChangeBlock: (uu, Ru, yu, Eu, Ku, Qu) => {
+          "Air" !== Qu && Vu.onPlace(Qu)
         },
-        onPlayerDropItem: (UU, RU, gU, tU) => {
-          cU.onDrop(RU, tU)
+        onPlayerDropItem: (uu, Ru, yu, Eu) => {
+          Vu.onDrop(Ru, Eu)
         },
-        onPlayerAltAction: (UU, RU, gU, pU, EU, PU) => {
-          if (!PU || "Mesh" !== TU.getEntityType(PU)) return;
-          const qU = TU.getEntityName(PU),
-            KU = Object.values(tU).find((UU => UU.name === qU));
-          KU && TU.openShop(UU, !1, KU.shopTab)
+        onPlayerAltAction: (uu, Ru, yu, Ku, Qu, mu) => {
+          if (!mu || "Mesh" !== Ju.getEntityType(mu)) return;
+          const Nu = Ju.getEntityName(mu),
+            Xu = Object.values(Eu).find((uu => uu.name === Nu));
+          Xu && Ju.openShop(uu, !1, Xu.shopTab)
         }
       }
     }
   },
-  37578: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => TU
+  37784: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju
     });
-    var tU = gU(311),
-      pU = gU(36470),
-      EU = gU(4147);
-    const PU = ["Leaf Bed", "_Leaf Bed Head", ...tU.Gc.flatMap((UU => [`${UU} Bed`, `_${UU} Bed Head`, `${UU} Strongbed`, `_${UU} Strongbed Head`]))];
+    var Eu = yu(343),
+      Ku = yu(36707),
+      Qu = yu(4239);
+    const mu = ["Leaf Bed", "_Leaf Bed Head", ...Eu.Tc.flatMap((uu => [`${uu} Bed`, `_${uu} Bed Head`, `${uu} Strongbed`, `_${uu} Strongbed Head`]))];
 
-    function TU() {
-      let UU;
+    function Ju() {
+      let uu;
       return {
-        onCreate(RU) {
-          UU = RU
+        onCreate(Ru) {
+          uu = Ru
         },
-        altVetoBlocks: PU,
-        onPlayerAttemptAltAction(RU, gU, tU, PU, TU, qU) {
-          var KU;
-          if ((0, pU.d)(UU.getMetaInfo(TU).rootName) && !UU.isEntityInteractable(qU) && (0, EU.d)(null === (KU = UU.QRU(RU)) || void 0 === KU ? void 0 : KU.typeObj.type)) return "preventAction"
+        altVetoBlocks: mu,
+        onPlayerAttemptAltAction(Ru, yu, Eu, mu, Ju, Nu) {
+          var Xu;
+          if ((0, Ku.b)(uu.getMetaInfo(Ju).rootName) && !uu.isEntityInteractable(Nu) && (0, Qu.e)(null === (Xu = uu.Xyu(Ru)) || void 0 === Xu ? void 0 : Xu.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36470: (UU, RU, gU) => {
-    function tU(UU) {
-      return UU.includes("Leaf Bed")
+  36707: (uu, Ru, yu) => {
+    function Eu(uu) {
+      return uu.includes("Leaf Bed")
     }
 
-    function pU(UU) {
-      return / Bed(?: Head)?(?:\||$)/.test(UU) && !tU(UU)
+    function Ku(uu) {
+      return / Bed(?: Head)?(?:\||$)/.test(uu) && !Eu(uu)
     }
 
-    function EU(UU) {
-      return UU.includes(" Strongbed")
+    function Qu(uu) {
+      return uu.includes(" Strongbed")
     }
 
-    function PU(UU) {
-      return tU(UU) || pU(UU) || EU(UU)
+    function mu(uu) {
+      return Eu(uu) || Ku(uu) || Qu(uu)
     }
-    gU.d(RU, {
-      d: () => PU,
-      e: () => tU,
-      i: () => EU,
-      m: () => pU
+    yu.d(Ru, {
+      b: () => mu,
+      d: () => Eu,
+      e: () => Qu,
+      f: () => Ku
     })
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

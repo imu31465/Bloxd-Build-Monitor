@@ -1,162 +1,162 @@
 export const id = 101;
 export const ids = [101];
 export const modules = {
-  4569: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => jU
+  4686: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Bu
     });
-    var tU = gU(1037),
-      pU = gU.n(tU),
-      EU = gU(1049),
-      PU = gU(1326),
-      TU = gU(3194),
-      qU = gU(135),
-      KU = gU(3232),
-      cU = gU(3223),
-      GU = gU(1090);
+    var Eu = yu(1035),
+      Ku = yu.n(Eu),
+      Qu = yu(1043),
+      mu = yu(1300),
+      Ju = yu(3318),
+      Nu = yu(145),
+      Xu = yu(3361),
+      Vu = yu(3347),
+      ru = yu(1079);
 
-    function jU(UU) {
+    function Bu(uu) {
       let {
-        game: RU
-      } = UU;
-      const gU = (0, qU.l)() ? "large" : "small",
-        tU = (0, KU.f)(RU, gU),
-        jU = (0, TU.h)(tU),
-        uU = void 0 !== jU.blurhash;
-      return (0, GU.jsxs)("div", {
+        game: Ru
+      } = uu;
+      const yu = (0, Nu.n)() ? "large" : "small",
+        Eu = (0, Xu.g)(Ru, yu),
+        Bu = (0, Ju.g)(Eu),
+        xu = void 0 !== Bu.blurhash;
+      return (0, ru.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [jU.isLoading && !uU && (0, GU.jsx)(PU.d, {
+        children: [Bu.isLoading && !xu && (0, ru.jsx)(mu.b, {
           loaderType: "Secondary"
-        }), !jU.failed && (null !== jU.src || uU) && (0, GU.jsx)("div", {
-          className: pU()("SchematicImage", cU.h, {
-            SchematicImageFadeIn: jU.fadeIn && !uU
+        }), !Bu.failed && (null !== Bu.src || xu) && (0, ru.jsx)("div", {
+          className: Ku()("SchematicImage", Vu.h, {
+            SchematicImageFadeIn: Bu.fadeIn && !xu
           }),
-          style: (0, cU.e)(jU),
-          children: (0, GU.jsx)(cU.c, {
-            image: jU
+          style: (0, Vu.f)(Bu),
+          children: (0, ru.jsx)(Vu.c, {
+            image: Bu
           })
-        }), jU.failed && (0, GU.jsx)("div", {
+        }), Bu.failed && (0, ru.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, GU.jsx)(EU.c, {
+          children: (0, ru.jsx)(Qu.c, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4706: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => uU
+  4823: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => xu
     });
-    var tU = gU(56),
-      pU = gU(1037),
-      EU = gU.n(pU),
-      PU = gU(4623),
-      TU = gU(1326),
-      qU = gU(1181),
-      KU = gU(2842),
-      cU = gU(2977),
-      GU = gU(1049),
-      jU = gU(1090);
+    var Eu = yu(64),
+      Ku = yu(1035),
+      Qu = yu.n(Ku),
+      mu = yu(4740),
+      Ju = yu(1300),
+      Nu = yu(1170),
+      Xu = yu(2943),
+      Vu = yu(3105),
+      ru = yu(1043),
+      Bu = yu(1079);
 
-    function uU(UU) {
+    function xu(uu) {
       let {
-        folderName: RU,
-        onTexturePackUpdated: pU,
-        disabled: uU = !1,
-        maxFileSizeMb: CU,
-        packOwner: hU
-      } = UU;
+        folderName: Ru,
+        onTexturePackUpdated: Ku,
+        disabled: xu = !1,
+        maxFileSizeMb: Su,
+        packOwner: pu
+      } = uu;
       const {
-        t: QU
-      } = (0, qU.B)(), [eU, WU] = (0, tU.useState)(!1), [fU, xU] = (0, tU.useState)(null), [mU, IU] = (0, tU.useState)(null), JU = (0, tU.useRef)(null);
+        t: Tu
+      } = (0, Nu.E)(), [Wu, ju] = (0, Eu.useState)(!1), [Hu, du] = (0, Eu.useState)(null), [bu, Cu] = (0, Eu.useState)(null), ku = (0, Eu.useRef)(null);
       const {
-        getRootProps: wU,
-        getInputProps: nU,
-        isDragActive: bU
-      } = (0, PU.e)({
-        onDrop: async function(UU) {
-          WU(!0);
+        getRootProps: eu,
+        getInputProps: Au,
+        isDragActive: Du
+      } = (0, mu.d)({
+        onDrop: async function(uu) {
+          ju(!0);
           try {
-            const RU = await (0, KU.p)(UU);
-            if ("customGame" === hU && (0, cU.j)(RU)) return void xU(QU(cU.d));
-            if (void 0 !== CU) {
-              const UU = JSON.stringify(RU).length / 1048576;
-              if (UU > CU) return void xU(`File size is too large. Max size is ${CU}MB. Current size is ${UU}MB.`)
+            const Ru = await (0, Xu.q)(uu);
+            if ("customGame" === pu && (0, Vu.h)(Ru)) return void du(Tu(Vu.d));
+            if (void 0 !== Su) {
+              const uu = JSON.stringify(Ru).length / 1048576;
+              if (uu > Su) return void du(`File size is too large. Max size is ${Su}MB. Current size is ${uu}MB.`)
             }
-            xU(null), IU(null), pU(RU), JU.current = RU,
-              function(UU, RU) {
-                const tU = UU.modelOverrides;
-                tU && Promise.all([gU.e(195), gU.e(194)]).then((() => gU(9057))).then((gU => {
+            du(null), Cu(null), Ku(Ru), ku.current = Ru,
+              function(uu, Ru) {
+                const Eu = uu.modelOverrides;
+                Eu && Promise.all([yu.e(195), yu.e(194)]).then((() => yu(9127))).then((yu => {
                   let {
-                    packDisplayName: pU,
-                    refusedPackModels: EU,
-                    packModelSummary: PU
-                  } = gU;
-                  const TU = pU(UU.metaData);
-                  RU(PU(TU, EU(TU, tU, !1)))
-                })).catch((UU => {
-                  console.error("Checking the texture pack's models failed:", UU)
+                    packDisplayName: Ku,
+                    refusedPackModels: Qu,
+                    packModelSummary: mu
+                  } = yu;
+                  const Ju = Ku(uu.metaData);
+                  Ru(mu(Ju, Qu(Ju, Eu, !1)))
+                })).catch((uu => {
+                  console.error("Checking the texture pack's models failed:", uu)
                 }))
-              }(RU, (UU => {
-                JU.current === RU && IU(UU)
+              }(Ru, (uu => {
+                ku.current === Ru && Cu(uu)
               }))
           } catch {
-            xU("Invalid Texture Pack Folder")
+            du("Invalid Texture Pack Folder")
           } finally {
-            WU(!1)
+            ju(!1)
           }
         },
         useFsAccessApi: !1,
-        disabled: uU
+        disabled: xu
       });
-      return (0, jU.jsxs)("div", {
+      return (0, Bu.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, jU.jsxs)("div", {
+        children: [(0, Bu.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [QU("settingsMenu:customTextureWarning"), ".", (0, jU.jsx)("br", {}), QU("settingsMenu:viewDocumentation"), ":", " ", (0, jU.jsx)("a", {
+          children: [Tu("settingsMenu:customTextureWarning"), ".", (0, Bu.jsx)("br", {}), Tu("settingsMenu:viewDocumentation"), ":", " ", (0, Bu.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), fU && (0, jU.jsxs)("div", {
+        }), Hu && (0, Bu.jsxs)("div", {
           className: "CustomTextureError",
-          children: [QU("general:error"), ": ", fU]
-        }), mU && (0, jU.jsx)("div", {
+          children: [Tu("general:error"), ": ", Hu]
+        }), bu && (0, Bu.jsx)("div", {
           className: "CustomTextureError",
-          children: mU
-        }), (0, jU.jsxs)("div", {
-          ...wU({
-            className: EU()("CustomTextureFolderUpload", {
-              ActiveDrag: bU,
-              Disabled: uU
+          children: bu
+        }), (0, Bu.jsxs)("div", {
+          ...eu({
+            className: Qu()("CustomTextureFolderUpload", {
+              ActiveDrag: Du,
+              Disabled: xu
             })
           }),
-          children: [(0, jU.jsx)("input", {
-            ...nU({
+          children: [(0, Bu.jsx)("input", {
+            ...Au({
               webkitdirectory: "true"
             })
-          }), eU && (0, jU.jsx)("div", {
+          }), Wu && (0, Bu.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, jU.jsx)(TU.d, {})
-          }), !eU && !bU && RU && (0, jU.jsxs)(jU.Fragment, {
-            children: [(0, jU.jsx)("div", {
+            children: (0, Bu.jsx)(Ju.b, {})
+          }), !Wu && !Du && Ru && (0, Bu.jsxs)(Bu.Fragment, {
+            children: [(0, Bu.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, jU.jsx)(GU.c, {
+              children: (0, Bu.jsx)(ru.c, {
                 name: "folder-image"
               })
-            }), (0, jU.jsx)("div", {
+            }), (0, Bu.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: RU
+              children: Ru
             })]
-          }), !eU && (bU || !RU) && (0, jU.jsxs)(jU.Fragment, {
-            children: [(0, jU.jsx)("div", {
+          }), !Wu && (Du || !Ru) && (0, Bu.jsxs)(Bu.Fragment, {
+            children: [(0, Bu.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, jU.jsx)(GU.c, {
+              children: (0, Bu.jsx)(ru.c, {
                 name: "up-from-bracket"
               })
-            }), (0, jU.jsx)("div", {
+            }), (0, Bu.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
               children: "Drag and drop a Texture Pack folder here"
             })]
@@ -165,310 +165,310 @@ export const modules = {
       })
     }
   },
-  4670: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => CU,
-      d: () => fU,
-      h: () => hU,
-      l: () => WU
+  4782: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Su,
+      f: () => Hu,
+      g: () => pu,
+      i: () => ju
     });
-    var tU = gU(56),
-      pU = gU(4679),
-      EU = gU(4040),
-      PU = gU(1344),
-      TU = gU(4693),
-      qU = gU(1037),
-      KU = gU.n(qU),
-      cU = gU(1333),
-      GU = gU(1637),
-      jU = gU(4701),
-      uU = gU(1090);
+    var Eu = yu(64),
+      Ku = yu(4785),
+      Qu = yu(4139),
+      mu = yu(1325),
+      Ju = yu(4811),
+      Nu = yu(1035),
+      Xu = yu.n(Nu),
+      Vu = yu(1311),
+      ru = yu(1661),
+      Bu = yu(4818),
+      xu = yu(1079);
 
-    function CU(UU) {
+    function Su(uu) {
       let {
-        label: RU,
-        onClick: gU,
-        checked: tU,
-        circleInfoText: pU,
-        className: TU,
-        disabled: qU,
-        note: cU
-      } = UU;
-      return (0, uU.jsxs)("div", {
-        "aria-disabled": qU || void 0,
+        label: Ru,
+        onClick: yu,
+        checked: Eu,
+        circleInfoText: Ku,
+        className: Ju,
+        disabled: Nu,
+        note: Vu
+      } = uu;
+      return (0, xu.jsxs)("div", {
+        "aria-disabled": Nu || void 0,
         "data-pad-focusable": !0,
-        className: KU()("SettingBox CheckboxContainer", {
-          [TU]: TU,
-          SettingBoxDisabled: qU
+        className: Xu()("SettingBox CheckboxContainer", {
+          [Ju]: Ju,
+          SettingBoxDisabled: Nu
         }),
         onClick: () => {
-          qU || gU(!tU)
+          Nu || yu(!Eu)
         },
-        children: [(0, uU.jsxs)("div", {
+        children: [(0, xu.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, uU.jsx)("label", {
+          children: [(0, xu.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, uU.jsx)(EU.d, {
+            children: (0, xu.jsx)(Qu.b, {
               className: "SettingsCheckbox",
-              checked: tU,
-              disabled: qU,
+              checked: Eu,
+              disabled: Nu,
               onChange: () => {}
             })
-          }), (0, uU.jsxs)("div", {
+          }), (0, xu.jsxs)("div", {
             className: "CheckboxText",
-            children: [RU, pU && (0, uU.jsx)("span", {
-              onClick: UU => UU.stopPropagation(),
-              children: (0, uU.jsx)(PU.d, {
+            children: [Ru, Ku && (0, xu.jsx)("span", {
+              onClick: uu => uu.stopPropagation(),
+              children: (0, xu.jsx)(mu.e, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: pU
+                hoverInfo: Ku
               })
             })]
           })]
-        }), cU && (0, uU.jsx)("div", {
+        }), Vu && (0, xu.jsx)("div", {
           className: "SettingNote",
-          children: cU
+          children: Vu
         })]
       })
     }
 
-    function hU(UU) {
+    function pu(uu) {
       let {
-        name: RU,
-        onChange: gU,
-        min: pU,
-        max: EU,
-        step: TU,
-        initValue: qU,
-        circleInfoText: cU,
-        format: GU,
-        className: jU,
-        padStep: CU,
-        disabled: hU = !1,
-        selectableMax: QU,
-        cappedNote: WU,
-        onChangeComplete: fU
-      } = UU;
-      const [xU, mU] = (0, tU.useState)(qU), IU = (0, tU.useRef)(qU);
-      (0, tU.useEffect)((() => {
-        IU.current = qU, mU(qU)
-      }), [qU]);
-      const JU = void 0 !== QU && QU < EU,
-        wU = JU ? {
-          "--slider-selectable": (QU - pU) / (EU - pU)
+        name: Ru,
+        onChange: yu,
+        min: Ku,
+        max: Qu,
+        step: Ju,
+        initValue: Nu,
+        circleInfoText: Vu,
+        format: ru,
+        className: Bu,
+        padStep: Su,
+        disabled: pu = !1,
+        selectableMax: Tu,
+        cappedNote: ju,
+        onChangeComplete: Hu
+      } = uu;
+      const [du, bu] = (0, Eu.useState)(Nu), Cu = (0, Eu.useRef)(Nu);
+      (0, Eu.useEffect)((() => {
+        Cu.current = Nu, bu(Nu)
+      }), [Nu]);
+      const ku = void 0 !== Tu && Tu < Qu,
+        eu = ku ? {
+          "--slider-selectable": (Tu - Ku) / (Qu - Ku)
         } : void 0;
-      return (0, uU.jsxs)("div", {
-        className: KU()("SettingBox SettingsSliderDiv", {
-          [jU]: jU,
-          SettingBoxDisabled: hU,
-          SliderCapped: JU
+      return (0, xu.jsxs)("div", {
+        className: Xu()("SettingBox SettingsSliderDiv", {
+          [Bu]: Bu,
+          SettingBoxDisabled: pu,
+          SliderCapped: ku
         }),
-        style: wU,
-        children: [(0, uU.jsxs)("div", {
+        style: eu,
+        children: [(0, xu.jsxs)("div", {
           className: "SliderText",
-          children: [`${RU}: ${GU?GU(xU):xU}`, cU && (0, uU.jsx)(PU.d, {
+          children: [`${Ru}: ${ru?ru(du):du}`, Vu && (0, xu.jsx)(mu.e, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: cU
+            hoverInfo: Vu
           })]
-        }), (0, uU.jsx)("div", {
+        }), (0, xu.jsx)("div", {
           className: "SliderDiv",
-          children: (0, uU.jsx)(eU, {
-            value: xU,
-            min: pU,
-            max: EU,
-            step: TU,
-            onChange: UU => {
-              if (JU && UU >= QU && xU === QU) return;
-              const RU = JU ? Math.min(UU, QU) : UU;
-              IU.current = RU, mU(RU), gU(RU)
+          children: (0, xu.jsx)(Wu, {
+            value: du,
+            min: Ku,
+            max: Qu,
+            step: Ju,
+            onChange: uu => {
+              if (ku && uu >= Tu && du === Tu) return;
+              const Ru = ku ? Math.min(uu, Tu) : uu;
+              Cu.current = Ru, bu(Ru), yu(Ru)
             },
-            onChangeComplete: fU && (() => {
-              fU(IU.current)
+            onChangeComplete: Hu && (() => {
+              Hu(Cu.current)
             }),
-            format: GU,
-            padStep: CU,
-            disabled: hU
+            format: ru,
+            padStep: Su,
+            disabled: pu
           })
-        }), JU && WU && (0, uU.jsx)("div", {
+        }), ku && ju && (0, xu.jsx)("div", {
           className: "SettingNote",
-          children: WU
+          children: ju
         })]
       })
     }
-    const QU = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const Tu = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function eU(UU) {
-      var RU;
+    function Wu(uu) {
+      var Ru;
       let {
-        value: gU,
-        min: EU,
-        max: PU,
-        step: TU,
-        onChange: qU,
-        orientation: KU,
-        reverse: cU,
-        setIsChanging: GU,
-        tooltip: CU,
-        labels: hU,
-        handleLabel: eU,
-        format: WU,
-        onChangeStart: fU,
-        onChangeComplete: xU,
-        padStep: mU,
-        disabled: IU = !1
-      } = UU;
-      const JU = (0, tU.useRef)(null),
-        wU = (0, tU.useRef)(null);
-      (0, tU.useLayoutEffect)((() => {
-        var UU, RU, gU;
-        const tU = null !== (UU = null === (RU = JU.current) || void 0 === RU ? void 0 : RU.querySelector(".rangeslider")) && void 0 !== UU ? UU : null;
-        null === tU || void 0 === tU || tU.setAttribute("data-pad-slider", ""), null === tU || void 0 === tU || tU.setAttribute("data-pad-focusable", ""), null === tU || void 0 === tU || null === (gU = tU.querySelector(".rangeslider__handle")) || void 0 === gU || gU.setAttribute("data-pad-slider-handle", ""), wU.current = tU
-      }), []), (0, tU.useLayoutEffect)((() => {
-        var UU, RU;
-        IU ? null === (UU = wU.current) || void 0 === UU || UU.setAttribute("aria-disabled", "true") : null === (RU = wU.current) || void 0 === RU || RU.removeAttribute("aria-disabled")
-      }), [IU]);
-      const nU = (null !== (RU = String(TU).split(".")[1]) && void 0 !== RU ? RU : "").length,
-        bU = UU => {
-          const RU = Number((Math.round((UU - EU) / TU) * TU + EU).toFixed(nU));
-          return Math.min(PU, Math.max(EU, RU))
+        value: yu,
+        min: Qu,
+        max: mu,
+        step: Ju,
+        onChange: Nu,
+        orientation: Xu,
+        reverse: Vu,
+        setIsChanging: ru,
+        tooltip: Su,
+        labels: pu,
+        handleLabel: Wu,
+        format: ju,
+        onChangeStart: Hu,
+        onChangeComplete: du,
+        padStep: bu,
+        disabled: Cu = !1
+      } = uu;
+      const ku = (0, Eu.useRef)(null),
+        eu = (0, Eu.useRef)(null);
+      (0, Eu.useLayoutEffect)((() => {
+        var uu, Ru, yu;
+        const Eu = null !== (uu = null === (Ru = ku.current) || void 0 === Ru ? void 0 : Ru.querySelector(".rangeslider")) && void 0 !== uu ? uu : null;
+        null === Eu || void 0 === Eu || Eu.setAttribute("data-pad-slider", ""), null === Eu || void 0 === Eu || Eu.setAttribute("data-pad-focusable", ""), null === Eu || void 0 === Eu || null === (yu = Eu.querySelector(".rangeslider__handle")) || void 0 === yu || yu.setAttribute("data-pad-slider-handle", ""), eu.current = Eu
+      }), []), (0, Eu.useLayoutEffect)((() => {
+        var uu, Ru;
+        Cu ? null === (uu = eu.current) || void 0 === uu || uu.setAttribute("aria-disabled", "true") : null === (Ru = eu.current) || void 0 === Ru || Ru.removeAttribute("aria-disabled")
+      }), [Cu]);
+      const Au = (null !== (Ru = String(Ju).split(".")[1]) && void 0 !== Ru ? Ru : "").length,
+        Du = uu => {
+          const Ru = Number((Math.round((uu - Qu) / Ju) * Ju + Qu).toFixed(Au));
+          return Math.min(mu, Math.max(Qu, Ru))
         },
-        oU = (0, tU.useRef)(xU);
-      oU.current = xU, (0, tU.useEffect)((() => {
-        const UU = JU.current;
-        if (!UU) return;
-        const RU = UU => {
-          var RU;
-          QU.has(UU.key) && (null === (RU = oU.current) || void 0 === RU || RU.call(oU))
+        Mu = (0, Eu.useRef)(du);
+      Mu.current = du, (0, Eu.useEffect)((() => {
+        const uu = ku.current;
+        if (!uu) return;
+        const Ru = uu => {
+          var Ru;
+          Tu.has(uu.key) && (null === (Ru = Mu.current) || void 0 === Ru || Ru.call(Mu))
         };
-        return UU.addEventListener("keyup", RU), () => {
-          UU.removeEventListener("keyup", RU)
+        return uu.addEventListener("keyup", Ru), () => {
+          uu.removeEventListener("keyup", Ru)
         }
       }), []);
-      const ZU = (0, tU.useRef)(!1);
-      return (0, jU.e)(wU, {
-        adjust: UU => {
-          if (IU) return;
-          const RU = null !== mU && void 0 !== mU ? mU : Math.max(TU, Math.round((PU - EU) / 20 / TU) * TU),
-            tU = bU(gU + UU * RU * (cU ? -1 : 1));
-          tU !== gU && (null === fU || void 0 === fU || fU(), qU(tU), null === xU || void 0 === xU || xU())
+      const Iu = (0, Eu.useRef)(!1);
+      return (0, Bu.g)(eu, {
+        adjust: uu => {
+          if (Cu) return;
+          const Ru = null !== bu && void 0 !== bu ? bu : Math.max(Ju, Math.round((mu - Qu) / 20 / Ju) * Ju),
+            Eu = Du(yu + uu * Ru * (Vu ? -1 : 1));
+          Eu !== yu && (null === Hu || void 0 === Hu || Hu(), Nu(Eu), null === du || void 0 === du || du())
         },
-        setFraction: UU => {
-          if (IU) return;
-          const RU = bU(EU + (cU ? 1 - UU : UU) * (PU - EU));
-          RU !== gU && (ZU.current || (ZU.current = !0, null === fU || void 0 === fU || fU()), qU(RU))
+        setFraction: uu => {
+          if (Cu) return;
+          const Ru = Du(Qu + (Vu ? 1 - uu : uu) * (mu - Qu));
+          Ru !== yu && (Iu.current || (Iu.current = !0, null === Hu || void 0 === Hu || Hu()), Nu(Ru))
         },
         endDrag: () => {
-          ZU.current && (ZU.current = !1, null === xU || void 0 === xU || xU())
+          Iu.current && (Iu.current = !1, null === du || void 0 === du || du())
         }
-      }), (0, uU.jsx)("div", {
-        ref: JU,
+      }), (0, xu.jsx)("div", {
+        ref: ku,
         style: {
           display: "contents"
         },
-        children: (0, uU.jsx)(pU.d, {
-          value: gU,
-          min: EU,
-          max: PU,
-          step: TU,
-          onChange: qU,
-          orientation: KU,
-          reverse: cU,
-          tooltip: CU,
-          labels: hU,
-          handleLabel: eU,
-          format: WU,
+        children: (0, xu.jsx)(Ku.d, {
+          value: yu,
+          min: Qu,
+          max: mu,
+          step: Ju,
+          onChange: Nu,
+          orientation: Xu,
+          reverse: Vu,
+          tooltip: Su,
+          labels: pu,
+          handleLabel: Wu,
+          format: ju,
           onChangeStart: () => {
-            null === fU || void 0 === fU || fU(), null === GU || void 0 === GU || GU(!0)
+            null === Hu || void 0 === Hu || Hu(), null === ru || void 0 === ru || ru(!0)
           },
           onChangeComplete: () => {
-            null === GU || void 0 === GU || GU(!1), null === xU || void 0 === xU || xU()
+            null === ru || void 0 === ru || ru(!1), null === du || void 0 === du || du()
           }
         })
       })
     }
-    async function WU() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-      const RU = cU.NotificationProvider.showPromptPopup({
+    async function ju() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+      const Ru = Vu.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
         confirmTooltip: "",
         cancelText: "general:cancel",
         cancelTooltip: "",
-        unlockPointerKey: UU
+        unlockPointerKey: uu
       });
-      !0 === await RU.getResult() && (0, GU.reloadBloxd)()
+      !0 === await Ru.getResult() && (0, ru.reloadBloxd)()
     }
 
-    function fU(UU) {
+    function Hu(uu) {
       let {
-        label: RU,
-        options: gU,
-        value: tU,
-        onChange: pU,
-        circleInfoText: EU
-      } = UU;
-      return (0, uU.jsxs)("div", {
+        label: Ru,
+        options: yu,
+        value: Eu,
+        onChange: Ku,
+        circleInfoText: Qu
+      } = uu;
+      return (0, xu.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, uU.jsxs)("div", {
+        children: [(0, xu.jsxs)("div", {
           className: "SliderText",
-          children: [RU, EU && (0, uU.jsx)(PU.d, {
+          children: [Ru, Qu && (0, xu.jsx)(mu.e, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: EU
+            hoverInfo: Qu
           })]
-        }), (0, uU.jsx)(TU.d, {
-          ariaLabel: RU,
-          options: gU,
-          value: tU,
-          onChange: pU
+        }), (0, xu.jsx)(Ju.b, {
+          ariaLabel: Ru,
+          options: yu,
+          value: Eu,
+          onChange: Ku
         })]
       })
     }
   },
-  4663: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => eU,
-      h: () => WU
+  4780: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Wu,
+      e: () => ju
     });
-    var tU = gU(2842),
-      pU = gU(2850),
-      EU = gU(56),
-      PU = gU(1037),
-      TU = gU.n(PU),
-      qU = gU(1326),
-      KU = gU(2840),
-      cU = gU(1333),
-      GU = gU(4670),
-      jU = gU(4706),
-      uU = gU(603),
-      CU = gU(4711),
-      hU = gU(1090);
+    var Eu = yu(2943),
+      Ku = yu(2950),
+      Qu = yu(64),
+      mu = yu(1035),
+      Ju = yu.n(mu),
+      Nu = yu(1300),
+      Xu = yu(2936),
+      Vu = yu(1311),
+      ru = yu(4782),
+      Bu = yu(4823),
+      xu = yu(624),
+      Su = yu(4827),
+      pu = yu(1079);
 
-    function QU() {
-      (0, GU.l)("texturePackPickReload")
+    function Tu() {
+      (0, ru.i)("texturePackPickReload")
     }
 
-    function eU(UU) {
-      var RU;
+    function Wu(uu) {
+      var Ru;
       let {
-        setApplySettingsCallback: gU
-      } = UU;
-      const [, PU] = (0, EU.useReducer)((UU => UU + 1), 0), TU = (0, EU.useRef)(!1), qU = (0, EU.useRef)(null);
+        setApplySettingsCallback: yu
+      } = uu;
+      const [, mu] = (0, Qu.useReducer)((uu => uu + 1), 0), Ju = (0, Qu.useRef)(!1), Nu = (0, Qu.useRef)(null);
 
-      function eU(UU, RU) {
-        KU.e.setFromJson(UU, "player");
-        const tU = KU.e.saveTexturePack();
-        if (uU.u) {
-          const UU = KU.e.toJson();
-          tU.then((RU => {
-            RU && (0, CU.h)(UU, QU)
+      function Wu(uu, Ru) {
+        Xu.c.setFromJson(uu, "player");
+        const Eu = Xu.c.saveTexturePack();
+        if (xu.q) {
+          const uu = Xu.c.toJson();
+          Eu.then((Ru => {
+            Ru && (0, Su.f)(uu, Tu)
           }))
-        } else TU.current ||= RU, qU.current !== KU.e.getId() || KU.e.getId() === pU.s.CUSTOM && TU.current ? gU((() => GU.l)) : gU(null);
-        PU()
+        } else Ju.current ||= Ru, Nu.current !== Xu.c.getId() || Xu.c.getId() === Ku.r.CUSTOM && Ju.current ? yu((() => ru.i)) : yu(null);
+        mu()
       }
-      async function fU(UU) {
-        if (KU.e.getId() !== UU.metaData.id) {
-          if (KU.e.getId() === pU.s.CUSTOM && KU.e.getFromFolderName()) {
-            const UU = cU.NotificationProvider.showPromptPopup({
+      async function Hu(uu) {
+        if (Xu.c.getId() !== uu.metaData.id) {
+          if (Xu.c.getId() === Ku.r.CUSTOM && Xu.c.getFromFolderName()) {
+            const uu = Vu.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -477,29 +477,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await UU.getResult()) return
+            if (!0 !== await uu.getResult()) return
           }
-          eU(UU, !1)
+          Wu(uu, !1)
         }
-      }(0, EU.useEffect)((() => {
-        qU.current = KU.e.getId()
+      }(0, Qu.useEffect)((() => {
+        Nu.current = Xu.c.getId()
       }), []);
-      const xU = tU.d,
-        mU = [xU, ...Object.values(pU.s).filter((UU => UU !== xU))];
-      return (0, hU.jsx)(hU.Fragment, {
-        children: (0, hU.jsxs)("div", {
+      const du = Eu.e,
+        bu = [du, ...Object.values(Ku.r).filter((uu => uu !== du))];
+      return (0, pu.jsx)(pu.Fragment, {
+        children: (0, pu.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, hU.jsx)("div", {
+          children: [(0, pu.jsx)("div", {
             className: "TexturePackList",
-            children: mU.map((UU => (0, hU.jsx)(WU, {
-              id: UU,
-              isSelected: UU === KU.e.getId(),
-              setSelected: fU
-            }, UU)))
-          }), KU.e.getId() === pU.s.CUSTOM && (0, hU.jsx)(jU.d, {
-            folderName: null !== (RU = KU.e.getFromFolderName()) && void 0 !== RU ? RU : null,
-            onTexturePackUpdated: function(UU) {
-              eU(UU, !0)
+            children: bu.map((uu => (0, pu.jsx)(ju, {
+              id: uu,
+              isSelected: uu === Xu.c.getId(),
+              setSelected: Hu
+            }, uu)))
+          }), Xu.c.getId() === Ku.r.CUSTOM && (0, pu.jsx)(Bu.d, {
+            folderName: null !== (Ru = Xu.c.getFromFolderName()) && void 0 !== Ru ? Ru : null,
+            onTexturePackUpdated: function(uu) {
+              Wu(uu, !0)
             },
             packOwner: "player"
           })]
@@ -507,163 +507,163 @@ export const modules = {
       })
     }
 
-    function WU(UU) {
+    function ju(uu) {
       let {
-        id: RU,
-        isSelected: gU,
-        setSelected: PU,
-        disabled: KU = !1
-      } = UU;
-      const [cU, GU] = (0, EU.useState)(!0), [jU, uU] = (0, EU.useState)(""), [CU, QU] = (0, EU.useState)(""), [eU, WU] = (0, EU.useState)(""), fU = (0, EU.useRef)({});
-      return (0, EU.useEffect)((() => {
-        (0, tU.n)(RU).then((UU => {
-          var RU;
-          UU && (fU.current = UU, GU(!1), uU(fU.current.metaData.name), QU(fU.current.metaData.author), WU(null !== (RU = fU.current.metaData.previewImage) && void 0 !== RU ? RU : ""))
-        })).catch((UU => {
-          console.warn(`Failed to fetch texture pack ${RU}`, UU)
+        id: Ru,
+        isSelected: yu,
+        setSelected: mu,
+        disabled: Xu = !1
+      } = uu;
+      const [Vu, ru] = (0, Qu.useState)(!0), [Bu, xu] = (0, Qu.useState)(""), [Su, Tu] = (0, Qu.useState)(""), [Wu, ju] = (0, Qu.useState)(""), Hu = (0, Qu.useRef)({});
+      return (0, Qu.useEffect)((() => {
+        (0, Eu.p)(Ru).then((uu => {
+          var Ru;
+          uu && (Hu.current = uu, ru(!1), xu(Hu.current.metaData.name), Tu(Hu.current.metaData.author), ju(null !== (Ru = Hu.current.metaData.previewImage) && void 0 !== Ru ? Ru : ""))
+        })).catch((uu => {
+          console.warn(`Failed to fetch texture pack ${Ru}`, uu)
         }))
-      }), [RU]), (0, hU.jsxs)("div", {
+      }), [Ru]), (0, pu.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": KU || void 0,
-        className: TU()("TexturePack", {
-          Selected: gU,
-          Custom: RU === pU.s.CUSTOM,
-          Disabled: KU
+        "aria-disabled": Xu || void 0,
+        className: Ju()("TexturePack", {
+          Selected: yu,
+          Custom: Ru === Ku.r.CUSTOM,
+          Disabled: Xu
         }),
         onClick: () => {
-          cU || KU || PU(fU.current)
+          Vu || Xu || mu(Hu.current)
         },
-        children: [(0, hU.jsx)("div", {
+        children: [(0, pu.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: eU ? `url(${eU})` : void 0
+            backgroundImage: Wu ? `url(${Wu})` : void 0
           }
-        }), cU && (0, hU.jsx)("div", {
+        }), Vu && (0, pu.jsx)("div", {
           className: "TexturePackName",
-          children: (0, hU.jsx)(qU.d, {})
-        }), !cU && jU && (0, hU.jsx)("div", {
+          children: (0, pu.jsx)(Nu.b, {})
+        }), !Vu && Bu && (0, pu.jsx)("div", {
           className: "TexturePackName",
-          children: jU
-        }), !cU && CU && (0, hU.jsx)("div", {
+          children: Bu
+        }), !Vu && Su && (0, pu.jsx)("div", {
           className: "TexturePackAuthor",
-          children: CU
+          children: Su
         })]
       })
     }
   },
-  4693: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => PU
+  4811: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => mu
     });
-    var tU = gU(1037),
-      pU = gU.n(tU),
-      EU = gU(1090);
+    var Eu = yu(1035),
+      Ku = yu.n(Eu),
+      Qu = yu(1079);
 
-    function PU(UU) {
+    function mu(uu) {
       let {
-        options: RU,
-        value: gU,
-        onChange: tU,
-        ariaLabel: PU,
-        className: TU,
-        reselectable: qU = !1,
-        keepsFocus: KU = !1
-      } = UU;
-      return (0, EU.jsx)("div", {
-        className: pU()("SegmentedToggle", TU),
+        options: Ru,
+        value: yu,
+        onChange: Eu,
+        ariaLabel: mu,
+        className: Ju,
+        reselectable: Nu = !1,
+        keepsFocus: Xu = !1
+      } = uu;
+      return (0, Qu.jsx)("div", {
+        className: Ku()("SegmentedToggle", Ju),
         role: "group",
-        "aria-label": PU,
-        children: RU.map((UU => {
-          const RU = UU.value === gU;
-          return (0, EU.jsx)("button", {
+        "aria-label": mu,
+        children: Ru.map((uu => {
+          const Ru = uu.value === yu;
+          return (0, Qu.jsx)("button", {
             type: "button",
-            "aria-pressed": RU,
-            "aria-label": UU.ariaLabel,
-            title: UU.ariaLabel,
-            className: pU()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: RU
+            "aria-pressed": Ru,
+            "aria-label": uu.ariaLabel,
+            title: uu.ariaLabel,
+            className: Ku()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: Ru
             }),
-            onMouseDown: KU ? UU => {
-              UU.preventDefault()
+            onMouseDown: Xu ? uu => {
+              uu.preventDefault()
             } : void 0,
             onClick: () => {
-              RU && !qU || tU(UU.value)
+              Ru && !Nu || Eu(uu.value)
             },
-            children: UU.label
-          }, UU.value)
+            children: uu.label
+          }, uu.value)
         }))
       })
     }
   },
-  4701: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => EU,
-      e: () => PU
+  4818: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      g: () => mu
     });
-    var tU = gU(56);
-    const pU = new WeakMap,
-      EU = UU => {
-        var RU;
-        const gU = UU.closest("[data-pad-slider]");
-        return gU && null !== (RU = pU.get(gU)) && void 0 !== RU ? RU : null
+    var Eu = yu(64);
+    const Ku = new WeakMap,
+      Qu = uu => {
+        var Ru;
+        const yu = uu.closest("[data-pad-slider]");
+        return yu && null !== (Ru = Ku.get(yu)) && void 0 !== Ru ? Ru : null
       },
-      PU = (UU, RU) => {
-        const gU = (0, tU.useRef)(RU);
-        gU.current = RU, (0, tU.useEffect)((() => {
-          if (UU.current) return ((UU, RU) => (pU.set(UU, RU), () => {
-            pU.get(UU) === RU && pU.delete(UU)
-          }))(UU.current, {
-            adjust: UU => {
-              gU.current.adjust(UU)
+      mu = (uu, Ru) => {
+        const yu = (0, Eu.useRef)(Ru);
+        yu.current = Ru, (0, Eu.useEffect)((() => {
+          if (uu.current) return ((uu, Ru) => (Ku.set(uu, Ru), () => {
+            Ku.get(uu) === Ru && Ku.delete(uu)
+          }))(uu.current, {
+            adjust: uu => {
+              yu.current.adjust(uu)
             },
-            setFraction: UU => {
-              gU.current.setFraction(UU)
+            setFraction: uu => {
+              yu.current.setFraction(uu)
             },
             endDrag: () => {
-              gU.current.endDrag()
+              yu.current.endDrag()
             }
           })
-        }), [UU])
+        }), [uu])
       }
   },
-  4711: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => TU,
-      h: () => PU
+  4827: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Ju,
+      f: () => mu
     });
-    var tU = gU(2850),
-      pU = gU(4717);
-    let EU = null;
+    var Eu = yu(2950),
+      Ku = yu(4836);
+    let Qu = null;
 
-    function PU(UU, RU) {
-      EU = {
-        pack: UU.metaData.id === tU.d ? null : UU,
-        prompt: RU
+    function mu(uu, Ru) {
+      Qu = {
+        pack: uu.metaData.id === Eu.e ? null : uu,
+        prompt: Ru
       }
     }
 
-    function TU(UU, RU) {
-      const gU = EU;
-      null !== gU && (0, pU.b)(gU.pack, UU) && (EU = null, RU && gU.prompt())
+    function Ju(uu, Ru) {
+      const yu = Qu;
+      null !== yu && (0, Ku.e)(yu.pack, uu) && (Qu = null, Ru && yu.prompt())
     }
   },
-  4717: (UU, RU, gU) => {
-    function tU(UU, RU) {
-      return pU(UU, RU)
+  4836: (uu, Ru, yu) => {
+    function Eu(uu, Ru) {
+      return Ku(uu, Ru)
     }
 
-    function pU(UU, RU) {
-      if (UU === RU) return !0;
-      if ("object" !== typeof UU || "object" !== typeof RU || null === UU || null === RU || Array.isArray(UU) !== Array.isArray(RU)) return !1;
-      const gU = UU,
-        tU = RU,
-        EU = Object.keys(gU);
-      return EU.length === Object.keys(tU).length && EU.every((UU => Object.prototype.hasOwnProperty.call(tU, UU) && pU(gU[UU], tU[UU])))
+    function Ku(uu, Ru) {
+      if (uu === Ru) return !0;
+      if ("object" !== typeof uu || "object" !== typeof Ru || null === uu || null === Ru || Array.isArray(uu) !== Array.isArray(Ru)) return !1;
+      const yu = uu,
+        Eu = Ru,
+        Qu = Object.keys(yu);
+      return Qu.length === Object.keys(Eu).length && Qu.every((uu => Object.prototype.hasOwnProperty.call(Eu, uu) && Ku(yu[uu], Eu[uu])))
     }
-    gU.d(RU, {
-      b: () => tU
+    yu.d(Ru, {
+      e: () => Eu
     })
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

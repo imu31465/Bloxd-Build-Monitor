@@ -1,319 +1,319 @@
 export const id = 216;
 export const ids = [216];
 export const modules = {
-  39171: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => tU,
-      f: () => pU
+  39346: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Eu,
+      e: () => Ku
     });
-    const tU = "The world isn't loaded, so no blocks can be seen.",
-      pU = "The world isn't loaded, so nothing in it can be seen."
+    const Eu = "The world isn't loaded, so no blocks can be seen.",
+      Ku = "The world isn't loaded, so nothing in it can be seen."
   },
-  36345: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU,
-      f: () => pU
+  36584: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Qu,
+      i: () => Ku
     });
-    let tU = () => null;
+    let Eu = () => null;
 
-    function pU(UU) {
-      tU = UU
+    function Ku(uu) {
+      Eu = uu
     }
 
-    function EU(UU, RU) {
-      return tU(UU, RU)
+    function Qu(uu, Ru) {
+      return Eu(uu, Ru)
     }
   },
-  39982: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => hU,
-      h: () => fU,
-      i: () => WU,
-      j: () => QU
+  40185: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => pu,
+      h: () => Hu,
+      k: () => ju,
+      l: () => Tu
     });
-    var tU = gU(24),
-      pU = gU(39984),
-      EU = gU(39971),
-      PU = gU(39991),
-      TU = gU(39974),
-      qU = gU(39994),
-      KU = gU(40016);
+    var Eu = yu(34),
+      Ku = yu(40191),
+      Qu = yu(40173),
+      mu = yu(40197),
+      Ju = yu(40177),
+      Nu = yu(40199),
+      Xu = yu(40217);
 
-    function cU(UU) {
-      var RU, gU;
-      const tU = (0, EU.i)();
-      return tU ? null === (RU = (0, pU.b)(tU.api, UU[0], UU[1], UU[2])) || void 0 === RU || null === (gU = RU.persisted) || void 0 === gU ? void 0 : gU.shared : void 0
+    function Vu(uu) {
+      var Ru, yu;
+      const Eu = (0, Qu.i)();
+      return Eu ? null === (Ru = (0, Ku.b)(Eu.api, uu[0], uu[1], uu[2])) || void 0 === Ru || null === (yu = Ru.persisted) || void 0 === yu ? void 0 : yu.shared : void 0
     }
 
-    function GU(UU) {
-      return `${UU[0]},${UU[1]},${UU[2]}`
+    function ru(uu) {
+      return `${uu[0]},${uu[1]},${uu[2]}`
     }
-    const jU = new Map;
-    let uU = null,
-      CU = 0;
+    const Bu = new Map;
+    let xu = null,
+      Su = 0;
 
-    function hU() {
-      return CU
+    function pu() {
+      return Su
     }
 
-    function QU(UU) {
-      const RU = null !== uU && uU.key === GU(UU.pos) ? uU.type : null;
-      if (null === RU) return UU;
-      let gU = null;
-      if ("Iron" === RU) {
+    function Tu(uu) {
+      const Ru = null !== xu && xu.key === ru(uu.pos) ? xu.type : null;
+      if (null === Ru) return uu;
+      let yu = null;
+      if ("Iron" === Ru) {
         const {
-          cachedPasskey: RU,
-          ...tU
-        } = eU(UU.pos);
-        gU = {
-          CK: null !== RU && void 0 !== RU ? RU : [0, 0, 0, 0],
-          ...tU
+          cachedPasskey: Ru,
+          ...Eu
+        } = Wu(uu.pos);
+        yu = {
+          SX: null !== Ru && void 0 !== Ru ? Ru : [0, 0, 0, 0],
+          ...Eu
         }
       }
       return {
-        ...UU,
-        type: RU,
-        ironChest: gU
+        ...uu,
+        type: Ru,
+        ironChest: yu
       }
     }
 
-    function eU(UU) {
-      const RU = cU(UU),
-        gU = null === RU || void 0 === RU ? void 0 : RU.ownerDbId,
-        tU = function(UU) {
-          var RU;
-          let gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : cU(UU);
-          const tU = GU(UU),
-            pU = jU.get(tU);
-          return pU ? pU.lastOpened < (null !== (RU = null === gU || void 0 === gU ? void 0 : gU.passkeyLastUpdated) && void 0 !== RU ? RU : 0) ? (jU.delete(tU), null) : [...pU.CK] : null
-        }(UU, RU);
-      return void 0 === gU ? {
-        cachedPasskey: tU
+    function Wu(uu) {
+      const Ru = Vu(uu),
+        yu = null === Ru || void 0 === Ru ? void 0 : Ru.ownerDbId,
+        Eu = function(uu) {
+          var Ru;
+          let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Vu(uu);
+          const Eu = ru(uu),
+            Ku = Bu.get(Eu);
+          return Ku ? Ku.lastOpened < (null !== (Ru = null === yu || void 0 === yu ? void 0 : yu.passkeyLastUpdated) && void 0 !== Ru ? Ru : 0) ? (Bu.delete(Eu), null) : [...Ku.SX] : null
+        }(uu, Ru);
+      return void 0 === yu ? {
+        cachedPasskey: Eu
       } : {
-        ownerDbId: gU,
-        cachedPasskey: tU
+        ownerDbId: yu,
+        cachedPasskey: Eu
       }
-    }(0, KU.h)(PU.b, (UU => {
-      const RU = (0, qU.e)(PU.b, UU);
-      if (!(0, qU.c)(RU) || RU.zE) return;
-      if (CU++, !RU.yE || null === RU.iE) return void(uU = null);
-      const gU = GU(RU.iE);
-      uU = {
-        key: gU,
-        type: RU.FE
-      }, null !== RU.AE && jU.set(gU, {
-        CK: [...RU.AE],
+    }(0, Xu.m)(mu.d, (uu => {
+      const Ru = (0, Nu.f)(mu.d, uu);
+      if (!(0, Nu.d)(Ru) || Ru.wQ) return;
+      if (Su++, !Ru.gQ || null === Ru.zQ) return void(xu = null);
+      const yu = ru(Ru.zQ);
+      xu = {
+        key: yu,
+        type: Ru.LQ
+      }, null !== Ru.FQ && Bu.set(yu, {
+        SX: [...Ru.FQ],
         lastOpened: Date.now()
       })
-    })), (0, KU.f)((() => {
-      jU.clear(), uU = null, CU++
-    })), (0, KU.g)((() => {
-      null !== uU && (uU = null, CU++, tU.p.yh("chestToggleFromServer", !1, !0))
+    })), (0, Xu.g)((() => {
+      Bu.clear(), xu = null, Su++
+    })), (0, Xu.i)((() => {
+      null !== xu && (xu = null, Su++, Eu.k.Op("chestToggleFromServer", !1, !0))
     }));
-    const WU = {
+    const ju = {
         boardEditRequested: {
-          watch: UU => (0, tU.t)("EditBoard", (RU => {
+          watch: uu => (0, Eu.n)("EditBoard", (Ru => {
             let {
-              pos: gU
-            } = RU;
-            if (null === gU) return void UU(null);
-            const tU = (0, EU.i)(),
-              pU = (0, EU.q)();
-            tU && pU && UU(pU.readBoardToEdit(tU.api, tU.chunks, gU))
+              pos: yu
+            } = Ru;
+            if (null === yu) return void uu(null);
+            const Eu = (0, Qu.i)(),
+              Ku = (0, Qu.v)();
+            Eu && Ku && uu(Ku.readBoardToEdit(Eu.api, Eu.chunks, yu))
           }))
         },
         ironChestOpenRequested: {
-          watch: UU => (0, tU.t)("OpenIronChest", (RU => {
+          watch: uu => (0, Eu.n)("OpenIronChest", (Ru => {
             let {
-              pos: gU
-            } = RU;
-            UU(function(UU) {
+              pos: yu
+            } = Ru;
+            uu(function(uu) {
               return {
-                pos: UU,
-                ...eU(UU)
+                pos: uu,
+                ...Wu(uu)
               }
-            }(gU))
+            }(yu))
           }))
         }
       },
-      fU = {
-        writeOnBoard(UU) {
-          var RU;
+      Hu = {
+        writeOnBoard(uu) {
+          var Ru;
           let {
-            pos: gU,
-            text: tU,
-            textSize: pU
-          } = UU;
-          null === (RU = (0, EU.i)()) || void 0 === RU || RU.send(TU.e.UpdateBoard, (0, TU.$)({
-            jP: gU,
-            uP: tU,
-            CP: pU
+            pos: yu,
+            text: Eu,
+            textSize: Ku
+          } = uu;
+          null === (Ru = (0, Qu.i)()) || void 0 === Ru || Ru.send(Ju.d.UpdateBoard, (0, Ju.T)({
+            Nm: yu,
+            Xm: Eu,
+            Vm: Ku
           }))
         },
-        writeBook(UU) {
-          var RU;
+        writeBook(uu) {
+          var Ru;
           let {
-            pages: gU,
-            title: tU,
-            published: pU
-          } = UU;
-          null === (RU = (0, EU.i)()) || void 0 === RU || RU.send(TU.e.UpdateBook, (0, TU.db)({
-            CT: gU,
-            hT: tU,
-            QT: pU
+            pages: yu,
+            title: Eu,
+            published: Ku
+          } = uu;
+          null === (Ru = (0, Qu.i)()) || void 0 === Ru || Ru.send(Ju.d.UpdateBook, (0, Ju.U)({
+            SJ: yu,
+            pJ: Eu,
+            TJ: Ku
           }))
         },
-        writeNameTag(UU) {
-          var RU;
-          null === (RU = (0, EU.i)()) || void 0 === RU || RU.send(TU.e.UpdateNameTag, UU)
+        writeNameTag(uu) {
+          var Ru;
+          null === (Ru = (0, Qu.i)()) || void 0 === Ru || Ru.send(Ju.d.UpdateNameTag, uu)
         },
-        setCustomLobbyBlock(UU) {
+        setCustomLobbyBlock(uu) {
           let {
-            pos: RU,
-            blockName: gU
-          } = UU;
-          const tU = (0, EU.q)(),
-            pU = (0, EU.i)();
-          tU && pU && pU.send(TU.e.SetCustomLobbyBlock, (0, TU.Q)({
-            gc: tU.blockIdOf(gU),
-            Rc: RU
+            pos: Ru,
+            blockName: yu
+          } = uu;
+          const Eu = (0, Qu.v)(),
+            Ku = (0, Qu.i)();
+          Eu && Ku && Ku.send(Ju.d.SetCustomLobbyBlock, (0, Ju.E)({
+            yV: Eu.blockIdOf(yu),
+            RV: Ru
           }))
         }
       }
   },
-  40039: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => qU,
-      e: () => PU,
-      f: () => TU
+  40235: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Nu,
+      h: () => mu,
+      l: () => Ju
     });
-    var tU = gU(39955),
-      pU = gU(4443),
-      EU = gU(39971);
+    var Eu = yu(40160),
+      Ku = yu(4549),
+      Qu = yu(40173);
 
-    function PU() {
-      var UU;
-      const RU = null === (UU = (0, EU.i)()) || void 0 === UU ? void 0 : UU.api.localId;
-      return void 0 === RU || RU === tU.dd ? null : String(RU)
+    function mu() {
+      var uu;
+      const Ru = null === (uu = (0, Qu.i)()) || void 0 === uu ? void 0 : uu.api.localId;
+      return void 0 === Ru || Ru === Eu.Zc ? null : String(Ru)
     }
 
-    function TU(UU) {
-      const RU = (0, EU.i)();
-      if (null !== RU) return UU(RU);
-      let gU = null;
-      const tU = (0, pU.u)((() => {
-        const RU = (0, EU.i)();
-        null !== RU && null === gU && (tU(), gU = UU(RU))
+    function Ju(uu) {
+      const Ru = (0, Qu.i)();
+      if (null !== Ru) return uu(Ru);
+      let yu = null;
+      const Eu = (0, Ku.v)((() => {
+        const Ru = (0, Qu.i)();
+        null !== Ru && null === yu && (Eu(), yu = uu(Ru))
       }));
       return () => {
-        var UU;
-        tU(), null === (UU = gU) || void 0 === UU || UU()
+        var uu;
+        Eu(), null === (uu = yu) || void 0 === uu || uu()
       }
     }
 
-    function qU(UU, RU, gU) {
+    function Nu(uu, Ru, yu) {
       return {
         current: () => {
-          const gU = (0, EU.i)();
-          return null === gU ? RU : UU(gU)()
+          const yu = (0, Qu.i)();
+          return null === yu ? Ru : uu(yu)()
         },
-        watch: RU => TU((tU => {
-          const pU = UU(tU);
-          let EU = pU();
-          return RU(EU), gU((() => {
-            const UU = pU();
-            UU !== EU && (EU = UU, RU(UU))
+        watch: Ru => Ju((Eu => {
+          const Ku = uu(Eu);
+          let Qu = Ku();
+          return Ru(Qu), yu((() => {
+            const uu = Ku();
+            uu !== Qu && (Qu = uu, Ru(uu))
           }))
         }))
       }
     }
   },
-  40030: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => KU
+  40232: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Xu
     });
-    var tU = gU(39971),
-      pU = gU(40039),
-      EU = gU(40047);
+    var Eu = yu(40173),
+      Ku = yu(40235),
+      Qu = yu(40241);
 
-    function PU() {
-      var UU, RU;
-      return null !== (UU = null === (RU = (0, tU.i)()) || void 0 === RU ? void 0 : RU.itemBridgeSources) && void 0 !== UU ? UU : EU.b
+    function mu() {
+      var uu, Ru;
+      return null !== (uu = null === (Ru = (0, Eu.i)()) || void 0 === Ru ? void 0 : Ru.itemBridgeSources) && void 0 !== uu ? uu : Qu.b
     }
 
-    function TU(UU) {
+    function Ju(uu) {
       return {
-        current: () => PU().states[UU].current(),
-        watch: RU => (0, pU.f)((gU => {
-          const tU = gU.itemBridgeSources.states[UU];
-          return RU(tU.current()), tU.watch(RU)
+        current: () => mu().states[uu].current(),
+        watch: Ru => (0, Ku.l)((yu => {
+          const Eu = yu.itemBridgeSources.states[uu];
+          return Ru(Eu.current()), Eu.watch(Ru)
         }))
       }
     }
 
-    function qU(UU) {
+    function Nu(uu) {
       return {
-        watch: RU => (0, pU.f)((gU => gU.itemBridgeSources.events[UU].watch(RU)))
+        watch: Ru => (0, Ku.l)((yu => yu.itemBridgeSources.events[uu].watch(Ru)))
       }
     }
-    const KU = {
+    const Xu = {
       states: {
-        inventory: TU("inventory"),
-        hotbar: TU("hotbar"),
-        crafting: TU("crafting"),
-        heldItemAim: TU("heldItemAim")
+        inventory: Ju("inventory"),
+        hotbar: Ju("hotbar"),
+        crafting: Ju("crafting"),
+        heldItemAim: Ju("heldItemAim")
       },
       events: {
-        hotbarSlotRequested: qU("hotbarSlotRequested"),
-        hotbarScrolled: qU("hotbarScrolled"),
-        numberKeyPressed: qU("numberKeyPressed"),
-        inventoryDropRequested: qU("inventoryDropRequested"),
-        chestToggled: qU("chestToggled"),
-        chestRefreshed: qU("chestRefreshed"),
-        inventorySynced: qU("inventorySynced"),
-        enchantingTableOpened: qU("enchantingTableOpened")
+        hotbarSlotRequested: Nu("hotbarSlotRequested"),
+        hotbarScrolled: Nu("hotbarScrolled"),
+        numberKeyPressed: Nu("numberKeyPressed"),
+        inventoryDropRequested: Nu("inventoryDropRequested"),
+        chestToggled: Nu("chestToggled"),
+        chestRefreshed: Nu("chestRefreshed"),
+        inventorySynced: Nu("inventorySynced"),
+        enchantingTableOpened: Nu("enchantingTableOpened")
       },
       commands: {
-        selectHotbarSlot: UU => PU().commands.selectHotbarSlot(UU),
-        removeInventoryItem: UU => PU().commands.removeInventoryItem(UU),
-        swapInventorySlots: UU => PU().commands.swapInventorySlots(UU),
-        moveInventoryItem: UU => PU().commands.moveInventoryItem(UU),
-        quickMoveInventoryItem: UU => PU().commands.quickMoveInventoryItem(UU),
-        closeChest: UU => PU().commands.closeChest(UU),
-        focusCrafting: UU => PU().commands.focusCrafting(UU),
-        craftRecipe: UU => PU().commands.craftRecipe(UU),
-        salvageItem: UU => PU().commands.salvageItem(UU),
-        enchantItem: UU => PU().commands.enchantItem(UU)
+        selectHotbarSlot: uu => mu().commands.selectHotbarSlot(uu),
+        removeInventoryItem: uu => mu().commands.removeInventoryItem(uu),
+        swapInventorySlots: uu => mu().commands.swapInventorySlots(uu),
+        moveInventoryItem: uu => mu().commands.moveInventoryItem(uu),
+        quickMoveInventoryItem: uu => mu().commands.quickMoveInventoryItem(uu),
+        closeChest: uu => mu().commands.closeChest(uu),
+        focusCrafting: uu => mu().commands.focusCrafting(uu),
+        craftRecipe: uu => mu().commands.craftRecipe(uu),
+        salvageItem: uu => mu().commands.salvageItem(uu),
+        enchantItem: uu => mu().commands.enchantItem(uu)
       },
       queries: {
-        enchantingOffer: UU => PU().queries.enchantingOffer(UU)
+        enchantingOffer: uu => mu().queries.enchantingOffer(uu)
       }
     }
   },
-  40047: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => TU
+  40241: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Ju
     });
-    var tU = gU(39171);
+    var Eu = yu(39346);
 
-    function pU(UU) {
+    function Ku(uu) {
       return {
-        current: () => UU,
+        current: () => uu,
         watch: () => () => {}
       }
     }
 
-    function EU() {}
-    const PU = Object.freeze([0, 0, 0]),
-      TU = {
+    function Qu() {}
+    const mu = Object.freeze([0, 0, 0]),
+      Ju = {
         states: {
-          health: pU({
+          health: Ku({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: pU({
+          inventory: Ku({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -321,63 +321,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: pU({
+          hotbar: Ku({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: pU({
+          stationItems: Ku({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: pU({}),
-          creativeVisibility: pU({
+          itemInfo: Ku({}),
+          creativeVisibility: Ku({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: pU(null),
-          heldItemAim: pU({
+          aura: Ku(null),
+          heldItemAim: Ku({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: pU(!1),
-          gliderBoostFuel: pU(0),
-          flight: pU({
+          crouching: Ku(!1),
+          gliderBoostFuel: Ku(0),
+          flight: Ku({
             canFly: !1,
             flying: !1
           }),
-          crafting: pU({
+          crafting: Ku({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: pU({
+          players: Ku({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: pU({}),
-          fullInventory: pU(!1),
-          crosshairTarget: pU({
+          lobbyLeaderboardRows: Ku({}),
+          fullInventory: Ku(!1),
+          crosshairTarget: Ku({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: pU(!0),
-          freeCamera: pU({
+          localPlayerAlive: Ku(!0),
+          freeCamera: Ku({
             allowed: !1,
             movesFly: !1
           }),
-          replay: pU(null),
-          replayEdits: pU(null),
-          replayRecorder: pU({
+          replay: Ku(null),
+          replayEdits: Ku(null),
+          replayRecorder: Ku({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: pU(!1)
+          replayVideoExporting: Ku(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -439,86 +439,86 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: EU,
+          selectHotbarSlot: Qu,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: EU,
-          setInventoryOpen: EU,
-          changeIronChestPasskey: EU,
-          dragReplayCamera: EU,
-          applyTemporaryThirdPerson: EU,
-          holdEmoteWheel: EU,
-          recordFlyingMiddleText: EU,
-          focusCrafting: EU,
+          closeChest: Qu,
+          setInventoryOpen: Qu,
+          changeIronChestPasskey: Qu,
+          dragReplayCamera: Qu,
+          applyTemporaryThirdPerson: Qu,
+          holdEmoteWheel: Qu,
+          recordFlyingMiddleText: Qu,
+          focusCrafting: Qu,
           craftRecipe: () => ({
-            Pc: 0,
-            dc: null,
+            QV: 0,
+            nV: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: EU,
-          setShopOpen: EU,
-          buyShopItem: EU,
-          sendChatMessage: EU,
-          ignorePlayer: EU,
-          reportPlayer: EU,
-          reportWorldCodeChat: EU,
-          requestDiscordReportKey: EU,
-          reportLobbyOrGame: EU,
-          playEmote: EU,
-          updateMyCosmetic: EU,
-          writeOnBoard: EU,
-          writeBook: EU,
-          writeNameTag: EU,
-          setCustomLobbyBlock: EU,
-          openIronChest: EU,
-          sendCodeCollab: EU,
-          clickCodeBlock: EU,
-          bindCustomButtonKeys: EU,
-          pressCustomButton: EU,
-          moveReplayFreecam: EU,
-          holdReplayFreecamVertical: EU,
-          respawn: EU,
-          wakeUp: EU,
-          requestLeaderboard: EU,
-          completeTask: EU,
-          setServerCookie: EU,
-          answerUiRequest: EU,
-          chooseRewardedAd: EU,
-          setCameraZoom: EU,
-          setFreeCameraMovesFly: EU,
-          setBlockHighlight: EU,
-          setCrosshairInteractPrompt: EU,
-          setLookSensitivity: EU,
-          replayAction: EU,
-          setReplayPlaying: EU,
-          seekReplay: EU,
-          setReplayCameraMode: EU,
-          syncReplayCameraMode: EU,
-          setReplayCameraKeyframe: EU,
-          moveReplayCameraKeyframe: EU,
-          deleteReplayCameraKeyframes: EU,
-          setReplayPlaybackMark: EU,
+          enchantItem: Qu,
+          setShopOpen: Qu,
+          buyShopItem: Qu,
+          sendChatMessage: Qu,
+          ignorePlayer: Qu,
+          reportPlayer: Qu,
+          reportWorldCodeChat: Qu,
+          requestDiscordReportKey: Qu,
+          reportLobbyOrGame: Qu,
+          playEmote: Qu,
+          updateMyCosmetic: Qu,
+          writeOnBoard: Qu,
+          writeBook: Qu,
+          writeNameTag: Qu,
+          setCustomLobbyBlock: Qu,
+          openIronChest: Qu,
+          sendCodeCollab: Qu,
+          clickCodeBlock: Qu,
+          bindCustomButtonKeys: Qu,
+          pressCustomButton: Qu,
+          moveReplayFreecam: Qu,
+          holdReplayFreecamVertical: Qu,
+          respawn: Qu,
+          wakeUp: Qu,
+          requestLeaderboard: Qu,
+          completeTask: Qu,
+          setServerCookie: Qu,
+          answerUiRequest: Qu,
+          chooseRewardedAd: Qu,
+          setCameraZoom: Qu,
+          setFreeCameraMovesFly: Qu,
+          setBlockHighlight: Qu,
+          setCrosshairInteractPrompt: Qu,
+          setLookSensitivity: Qu,
+          replayAction: Qu,
+          setReplayPlaying: Qu,
+          seekReplay: Qu,
+          setReplayCameraMode: Qu,
+          syncReplayCameraMode: Qu,
+          setReplayCameraKeyframe: Qu,
+          moveReplayCameraKeyframe: Qu,
+          deleteReplayCameraKeyframes: Qu,
+          setReplayPlaybackMark: Qu,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: EU,
-          exportReplayVideo: EU,
-          toggleRecording: EU,
-          saveClip: EU,
-          setRecorderPrefs: EU,
-          setReplayViewerOpen: EU
+          holdReplayForShaderPackFailure: Qu,
+          exportReplayVideo: Qu,
+          toggleRecording: Qu,
+          saveClip: Qu,
+          setRecorderPrefs: Qu,
+          setReplayViewerOpen: Qu
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => tU.b,
-          worldCodeAiGameState: () => tU.f
+          worldCodeAiChunk: () => Eu.d,
+          worldCodeAiGameState: () => Eu.e
         },
         lookups: {
-          localPos: () => PU,
+          localPos: () => mu,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -536,321 +536,321 @@ export const modules = {
         }
       }
   },
-  39962: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => nU,
-      f: () => wU,
-      j: () => bU,
-      m: () => JU,
-      n: () => mU
+  40166: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Au,
+      f: () => eu,
+      h: () => Du,
+      i: () => ku,
+      k: () => bu
     });
-    var tU = gU(38766),
-      pU = gU(1217),
-      EU = gU(1821),
-      PU = gU(1829),
-      TU = gU(2969),
-      qU = gU(36345),
-      KU = gU(1316),
-      cU = gU(39971),
-      GU = gU(4477),
-      jU = gU(2233),
-      uU = gU(39974),
-      CU = gU(39982),
-      hU = gU(40030);
-    let QU = null;
+    var Eu = yu(38978),
+      Ku = yu(1199),
+      Qu = yu(1878),
+      mu = yu(1895),
+      Ju = yu(3093),
+      Nu = yu(36584),
+      Xu = yu(1280),
+      Vu = yu(40173),
+      ru = yu(4586),
+      Bu = yu(2306),
+      xu = yu(40177),
+      Su = yu(40185),
+      pu = yu(40232);
+    let Tu = null;
 
-    function eU(UU) {
-      const RU = new Map,
-        gU = gU => {
-          if ("string" !== typeof gU) return;
-          let tU = RU.get(gU);
-          return void 0 === tU && (tU = UU(gU), void 0 !== tU && RU.set(gU, tU)), tU
+    function Wu(uu) {
+      const Ru = new Map,
+        yu = yu => {
+          if ("string" !== typeof yu) return;
+          let Eu = Ru.get(yu);
+          return void 0 === Eu && (Eu = uu(yu), void 0 !== Eu && Ru.set(yu, Eu)), Eu
         };
       return new Proxy({}, {
-        get: (UU, RU) => gU(RU),
-        has: (UU, RU) => void 0 !== gU(RU)
+        get: (uu, Ru) => yu(Ru),
+        has: (uu, Ru) => void 0 !== yu(Ru)
       })
     }
 
-    function WU(UU) {
-      const RU = (0, TU.c)(UU);
-      return void 0 !== RU && (0, TU.f)(RU) === UU
+    function ju(uu) {
+      const Ru = (0, Ju.b)(uu);
+      return void 0 !== Ru && (0, Ju.f)(Ru) === uu
     }
 
-    function fU(UU) {
-      var RU;
-      const gU = null === (RU = (0, cU.i)()) || void 0 === RU ? void 0 : RU.tables;
-      if (void 0 === gU || !WU(UU)) return;
-      const tU = {
-          displayName: gU.getDisplayName(UU)
+    function Hu(uu) {
+      var Ru;
+      const yu = null === (Ru = (0, Vu.i)()) || void 0 === Ru ? void 0 : Ru.tables;
+      if (void 0 === yu || !ju(uu)) return;
+      const Eu = {
+          displayName: yu.getDisplayName(uu)
         },
-        pU = gU.getItemStat(UU, "description");
-      void 0 !== pU && null !== pU && (tU.description = pU);
+        Ku = yu.getItemStat(uu, "description");
+      void 0 !== Ku && null !== Ku && (Eu.description = Ku);
       const {
-        rootName: EU
-      } = gU.getMetaInfo(UU);
-      EU !== UU && (tU.rootName = EU);
-      const PU = gU.getItemStat(UU, "armourReduction");
-      return void 0 !== PU && null !== PU && (tU.armourReduction = PU), tU
-    }(0, cU.r)((UU => {
-      QU = UU
+        rootName: Qu
+      } = yu.getMetaInfo(uu);
+      Qu !== uu && (Eu.rootName = Qu);
+      const mu = yu.getItemStat(uu, "armourReduction");
+      return void 0 !== mu && null !== mu && (Eu.armourReduction = mu), Eu
+    }(0, Vu.z)((uu => {
+      Tu = uu
     }));
-    const xU = (0, PU.i)("DisplayName", "Description");
+    const du = (0, mu.h)("DisplayName", "Description");
 
-    function mU() {
-      return Boolean(EU.b.get("useInventory") && EU.b.get("useFullInventory"))
+    function bu() {
+      return Boolean(Qu.b.get("useInventory") && Qu.b.get("useFullInventory"))
     }
-    let IU = null;
-    const JU = {
+    let Cu = null;
+    const ku = {
         inventory: function() {
-          const UU = hU.b.states.inventory;
-          let RU = null;
-          const gU = UU => {
-            var gU;
-            return null === UU.chest ? UU : ((null === (gU = RU) || void 0 === gU ? void 0 : gU.from) === UU && RU.chestVersion === (0, CU.d)() || (RU = {
-              from: UU,
-              chestVersion: (0, CU.d)(),
+          const uu = pu.e.states.inventory;
+          let Ru = null;
+          const yu = uu => {
+            var yu;
+            return null === uu.chest ? uu : ((null === (yu = Ru) || void 0 === yu ? void 0 : yu.from) === uu && Ru.chestVersion === (0, Su.e)() || (Ru = {
+              from: uu,
+              chestVersion: (0, Su.e)(),
               view: {
-                ...UU,
-                chest: (0, CU.j)(UU.chest)
+                ...uu,
+                chest: (0, Su.l)(uu.chest)
               }
-            }), RU.view)
+            }), Ru.view)
           };
           return {
-            current: () => gU(UU.current()),
-            watch: RU => UU.watch((UU => {
-              RU(gU(UU))
+            current: () => yu(uu.current()),
+            watch: Ru => uu.watch((uu => {
+              Ru(yu(uu))
             }))
           }
         }(),
-        crafting: hU.b.states.crafting,
+        crafting: pu.e.states.crafting,
         stationItems: {
           current() {
-            var UU;
-            return (null === (UU = IU) || void 0 === UU ? void 0 : UU.namesVersion) !== (0, TU.g)() && (IU = {
-              namesVersion: (0, TU.g)(),
+            var uu;
+            return (null === (uu = Cu) || void 0 === uu ? void 0 : uu.namesVersion) !== (0, Ju.g)() && (Cu = {
+              namesVersion: (0, Ju.g)(),
               items: {
-                enchantable: eU((UU => {
-                  const RU = (0, TU.c)(UU);
-                  return void 0 !== RU && null !== QU && QU.enchantmentPerksOf(RU).length > 0 || void 0
+                enchantable: Wu((uu => {
+                  const Ru = (0, Ju.b)(uu);
+                  return void 0 !== Ru && null !== Tu && Tu.enchantmentPerksOf(Ru).length > 0 || void 0
                 })),
-                salvageable: eU((UU => !(!WU(UU) || null === (0, qU.c)(UU)) || void 0))
+                salvageable: Wu((uu => !(!ju(uu) || null === (0, Nu.e)(uu)) || void 0))
               }
-            }), IU.items
+            }), Cu.items
           },
           watch: () => () => {}
         },
         itemInfo: function() {
-          let UU = null;
-          const RU = () => {
-            var RU;
-            return (null === (RU = UU) || void 0 === RU ? void 0 : RU.namesVersion) !== (0, TU.g)() && (UU = {
-              namesVersion: (0, TU.g)(),
-              infos: eU(fU)
-            }), UU.infos
+          let uu = null;
+          const Ru = () => {
+            var Ru;
+            return (null === (Ru = uu) || void 0 === Ru ? void 0 : Ru.namesVersion) !== (0, Ju.g)() && (uu = {
+              namesVersion: (0, Ju.g)(),
+              infos: Wu(Hu)
+            }), uu.infos
           };
           return {
-            current: RU,
-            watch: gU => (0, PU.s)((tU => {
-              tU.some(xU) && (UU = null, gU(RU()))
+            current: Ru,
+            watch: yu => (0, mu.s)((Eu => {
+              Eu.some(du) && (uu = null, yu(Ru()))
             }))
           }
         }(),
-        creativeVisibility: (0, PU.n)((function() {
-          const UU = {};
-          for (const pU of null !== (RU = null === (gU = QU) || void 0 === gU ? void 0 : gU.creativeItemIds()) && void 0 !== RU ? RU : []) {
-            var RU, gU, PU, qU;
-            const KU = (0, TU.f)(pU);
-            if (void 0 === KU) continue;
-            const cU = null !== (PU = EU.b.get((0, tU.f)(KU, "showInCreativeInven"))) && void 0 !== PU ? PU : null === (qU = QU) || void 0 === qU ? void 0 : qU.showInCreativeInvenOf(pU);
-            "boolean" === typeof cU && (UU[KU] = cU)
+        creativeVisibility: (0, mu.l)((function() {
+          const uu = {};
+          for (const Ku of null !== (Ru = null === (yu = Tu) || void 0 === yu ? void 0 : yu.creativeItemIds()) && void 0 !== Ru ? Ru : []) {
+            var Ru, yu, mu, Nu;
+            const Xu = (0, Ju.f)(Ku);
+            if (void 0 === Xu) continue;
+            const Vu = null !== (mu = Qu.b.get((0, Eu.f)(Xu, "showInCreativeInven"))) && void 0 !== mu ? mu : null === (Nu = Tu) || void 0 === Nu ? void 0 : Nu.showInCreativeInvenOf(Ku);
+            "boolean" === typeof Vu && (uu[Xu] = Vu)
           }
           return {
-            publicLobby: (0, pU.P)((0, KU.d)().lobbyName),
-            shownInGame: UU
+            publicLobby: (0, Ku.N)((0, Xu.c)().lobbyName),
+            shownInGame: uu
           }
-        }), ["connectedGameChanged"], (0, PU.i)("ShowInCreativeInven")),
-        fullInventory: (0, PU.n)(mU, [], (0, PU.k)("useInventory", "useFullInventory"))
+        }), ["connectedGameChanged"], (0, mu.h)("ShowInCreativeInven")),
+        fullInventory: (0, mu.l)(bu, [], (0, mu.i)("useInventory", "useFullInventory"))
       },
-      wU = {
-        inventoryDropRequested: hU.b.events.inventoryDropRequested,
-        chestToggled: hU.b.events.chestToggled,
-        chestRefreshed: hU.b.events.chestRefreshed,
-        inventorySynced: hU.b.events.inventorySynced,
-        enchantingTableOpened: hU.b.events.enchantingTableOpened
+      eu = {
+        inventoryDropRequested: pu.e.events.inventoryDropRequested,
+        chestToggled: pu.e.events.chestToggled,
+        chestRefreshed: pu.e.events.chestRefreshed,
+        inventorySynced: pu.e.events.inventorySynced,
+        enchantingTableOpened: pu.e.events.enchantingTableOpened
       },
-      nU = {
-        removeInventoryItem: hU.b.commands.removeInventoryItem,
-        swapInventorySlots: hU.b.commands.swapInventorySlots,
-        moveInventoryItem: hU.b.commands.moveInventoryItem,
-        quickMoveInventoryItem: hU.b.commands.quickMoveInventoryItem,
-        closeChest: hU.b.commands.closeChest,
-        setInventoryOpen(UU) {
-          (0, GU.f)(jU.z.InventoryOpen, UU ? jU.z.InventoryOpen : 0)
+      Au = {
+        removeInventoryItem: pu.e.commands.removeInventoryItem,
+        swapInventorySlots: pu.e.commands.swapInventorySlots,
+        moveInventoryItem: pu.e.commands.moveInventoryItem,
+        quickMoveInventoryItem: pu.e.commands.quickMoveInventoryItem,
+        closeChest: pu.e.commands.closeChest,
+        setInventoryOpen(uu) {
+          (0, ru.h)(Bu.t.InventoryOpen, uu ? Bu.t.InventoryOpen : 0)
         },
-        focusCrafting: hU.b.commands.focusCrafting,
-        craftRecipe: hU.b.commands.craftRecipe,
-        salvageItem: hU.b.commands.salvageItem,
-        enchantItem: hU.b.commands.enchantItem,
-        changeIronChestPasskey(UU) {
-          var RU;
+        focusCrafting: pu.e.commands.focusCrafting,
+        craftRecipe: pu.e.commands.craftRecipe,
+        salvageItem: pu.e.commands.salvageItem,
+        enchantItem: pu.e.commands.enchantItem,
+        changeIronChestPasskey(uu) {
+          var Ru;
           let {
-            pos: gU,
-            CK: tU
-          } = UU;
-          null === (RU = (0, cU.i)()) || void 0 === RU || RU.send(uU.e.ChangeIronChestPasskey, (0, uU.h)({
-            iE: gU,
-            CK: tU
+            pos: yu,
+            SX: Eu
+          } = uu;
+          null === (Ru = (0, Vu.i)()) || void 0 === Ru || Ru.send(xu.d.ChangeIronChestPasskey, (0, xu.g)({
+            zQ: yu,
+            SX: Eu
           }))
         },
-        openIronChest(UU) {
-          var RU;
+        openIronChest(uu) {
+          var Ru;
           let {
-            pos: gU,
-            CK: tU
-          } = UU;
-          null === (RU = (0, cU.i)()) || void 0 === RU || RU.send(uU.e.OpenIronChest, (0, uU.H)({
-            iE: gU,
-            CK: tU
+            pos: yu,
+            SX: Eu
+          } = uu;
+          null === (Ru = (0, Vu.i)()) || void 0 === Ru || Ru.send(xu.d.OpenIronChest, (0, xu.x)({
+            zQ: yu,
+            SX: Eu
           }))
         }
       },
-      bU = {
-        enchantingOffer: hU.b.queries.enchantingOffer
+      Du = {
+        enchantingOffer: pu.e.queries.enchantingOffer
       }
   },
-  40022: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => tU,
-      f: () => GU,
-      g: () => TU,
-      h: () => EU,
-      k: () => pU,
-      o: () => qU,
-      r: () => cU
+  40223: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Eu,
+      f: () => ru,
+      g: () => Ju,
+      j: () => Qu,
+      k: () => Ku,
+      m: () => Nu,
+      p: () => Vu
     });
-    class tU extends Error {
+    class Eu extends Error {
       constructor() {
         super(...arguments), this.name = "CoreCorruption"
       }
     }
 
-    function pU(UU) {
-      return UU instanceof RangeError && /call stack/i.test(UU.message) || UU instanceof Error && "InternalError" === UU.name && /recursion/i.test(UU.message)
+    function Ku(uu) {
+      return uu instanceof RangeError && /call stack/i.test(uu.message) || uu instanceof Error && "InternalError" === uu.name && /recursion/i.test(uu.message)
     }
 
-    function EU(UU) {
-      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(UU))
+    function Qu(uu) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(uu))
     }
-    const PU = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+    const mu = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
 
-    function TU(UU) {
-      var RU;
-      return UU instanceof WebAssembly.RuntimeError || UU instanceof tU || pU(UU) && PU.test(null !== (RU = UU.stack) && void 0 !== RU ? RU : "")
-    }
-
-    function qU(UU, RU) {
-      if (TU(UU)) throw UU;
-      console.error(RU, UU)
+    function Ju(uu) {
+      var Ru;
+      return uu instanceof WebAssembly.RuntimeError || uu instanceof Eu || Ku(uu) && mu.test(null !== (Ru = uu.stack) && void 0 !== Ru ? Ru : "")
     }
 
-    function KU(UU, RU, gU, pU, EU) {
-      if (RU % pU !== 0 || RU + gU > UU.byteLength) throw new tU(`${EU}: ${gU} bytes at ${RU}, ${pU}-aligned, outside ${UU.byteLength} bytes of memory`)
+    function Nu(uu, Ru) {
+      if (Ju(uu)) throw uu;
+      console.error(Ru, uu)
     }
 
-    function cU(UU, RU, gU, tU, pU) {
-      return 0 === gU ? null : (KU(RU, gU, tU * UU.BYTES_PER_ELEMENT, UU.BYTES_PER_ELEMENT, pU), new UU(RU, gU, tU))
+    function Xu(uu, Ru, yu, Ku, Qu) {
+      if (Ru % Ku !== 0 || Ru + yu > uu.byteLength) throw new Eu(`${Qu}: ${yu} bytes at ${Ru}, ${Ku}-aligned, outside ${uu.byteLength} bytes of memory`)
     }
 
-    function GU(UU, RU, gU, tU, pU) {
-      return 0 === RU ? null : (KU(UU, RU, gU, tU, pU), new DataView(UU, RU, gU))
+    function Vu(uu, Ru, yu, Eu, Ku) {
+      return 0 === yu ? null : (Xu(Ru, yu, Eu * uu.BYTES_PER_ELEMENT, uu.BYTES_PER_ELEMENT, Ku), new uu(Ru, yu, Eu))
+    }
+
+    function ru(uu, Ru, yu, Eu, Ku) {
+      return 0 === Ru ? null : (Xu(uu, Ru, yu, Eu, Ku), new DataView(uu, Ru, yu))
     }
   },
-  39971: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => tU,
-      e: () => eU,
-      i: () => hU,
-      j: () => QU,
-      m: () => jU,
-      p: () => uU,
-      q: () => cU,
-      r: () => GU,
-      s: () => CU
+  40173: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      B: () => Su,
+      e: () => Eu,
+      g: () => Wu,
+      i: () => pu,
+      m: () => Tu,
+      p: () => Bu,
+      t: () => xu,
+      v: () => Vu,
+      z: () => ru
     });
-    class tU extends Error {
-      constructor(UU) {
-        super(`the join's code did not load: ${UU instanceof Error?UU.message:String(UU)}`, {
-          cause: UU
-        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === UU || void 0 === UU ? void 0 : UU.request
+    class Eu extends Error {
+      constructor(uu) {
+        super(`the join's code did not load: ${uu instanceof Error?uu.message:String(uu)}`, {
+          cause: uu
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === uu || void 0 === uu ? void 0 : uu.request
       }
     }
-    let pU = null,
-      EU = null,
-      PU = null;
-    const TU = [];
-    let qU = null;
+    let Ku = null,
+      Qu = null,
+      mu = null;
+    const Ju = [];
+    let Nu = null;
 
-    function KU(UU, RU) {
+    function Xu(uu, Ru) {
       try {
-        UU(RU)
-      } catch (gU) {
-        console.error("[bloxd-wasm-client] the game chunk's listener failed", gU)
+        uu(Ru)
+      } catch (yu) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", yu)
       }
     }
 
-    function cU() {
-      return qU
+    function Vu() {
+      return Nu
     }
 
-    function GU(UU) {
-      TU.push(UU), null !== qU && KU(UU, qU)
+    function ru(uu) {
+      Ju.push(uu), null !== Nu && Xu(uu, Nu)
     }
 
-    function jU(UU) {
-      return pU ??= Promise.all([gU.e(69), gU.e(94), gU.e(214), gU.e(74), gU.e(215), gU.e(189), gU.e(93), gU.e(259), gU.e(187), gU.e(262), gU.e(199), gU.e(186), gU.e(200), gU.e(136), gU.e(85), gU.e(114), gU.e(237), gU.e(53)]).then((() => gU(41917))).then((RU => {
-        RU.loadAudio(UU), qU = RU;
-        for (const UU of TU) KU(UU, RU);
-        return RU
-      })).catch((UU => {
-        throw pU = null, UU
-      })), pU
+    function Bu(uu) {
+      return Ku ??= Promise.all([yu.e(69), yu.e(94), yu.e(214), yu.e(74), yu.e(215), yu.e(189), yu.e(93), yu.e(259), yu.e(187), yu.e(262), yu.e(199), yu.e(186), yu.e(200), yu.e(136), yu.e(85), yu.e(114), yu.e(237), yu.e(53)]).then((() => yu(42130))).then((Ru => {
+        Ru.loadAudio(uu), Nu = Ru;
+        for (const uu of Ju) Xu(uu, Ru);
+        return Ru
+      })).catch((uu => {
+        throw Ku = null, uu
+      })), Ku
     }
-    async function uU(UU, RU) {
+    async function xu(uu, Ru) {
       try {
-        const gU = await jU(UU);
-        await gU.loadClientGame(RU)
-      } catch (gU) {
-        throw new tU(gU)
+        const yu = await Bu(uu);
+        await yu.loadClientGame(Ru)
+      } catch (yu) {
+        throw new Eu(yu)
       }
     }
 
-    function CU(UU, RU) {
-      EU = {
-        running: UU,
-        shell: RU
+    function Su(uu, Ru) {
+      Qu = {
+        running: uu,
+        shell: Ru
       }
     }
 
-    function hU() {
-      return PU
+    function pu() {
+      return mu
     }
-    async function QU(UU) {
-      const RU = EU;
-      if ((null === RU || void 0 === RU ? void 0 : RU.running) !== UU) throw new Error("the core's session has ended");
-      const gU = await jU(RU.shell.audio).catch((UU => {
-        throw new tU(UU)
+    async function Tu(uu) {
+      const Ru = Qu;
+      if ((null === Ru || void 0 === Ru ? void 0 : Ru.running) !== uu) throw new Error("the core's session has ended");
+      const yu = await Bu(Ru.shell.audio).catch((uu => {
+        throw new Eu(uu)
       }));
-      if (null !== PU) return PU;
-      if (EU !== RU || UU.isStopped) throw new Error("the core stopped while the game code loaded");
-      if (PU = gU.startGameHost(UU, RU.shell), null === PU) throw new Error("the core's shared tables didn't read, so the game can't start");
-      return PU
+      if (null !== mu) return mu;
+      if (Qu !== Ru || uu.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (mu = yu.startGameHost(uu, Ru.shell), null === mu) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return mu
     }
 
-    function eU() {
-      null !== PU && (null !== qU ? qU.endGameHost(PU) : PU.closeGame()), PU = null, EU = null
+    function Wu() {
+      null !== mu && (null !== Nu ? Nu.endGameHost(mu) : mu.closeGame()), mu = null, Qu = null
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,152 +1,152 @@
 export const id = 92;
 export const ids = [91, 92];
 export const modules = {
-  36015: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      countDecodesAs: () => cU,
-      decodedAudio: () => GU
+  36298: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      countDecodesAs: () => Vu,
+      decodedAudio: () => ru
     });
-    var tU = gU(4512);
-    const pU = tU.Howler,
-      EU = new Map;
-    let PU = 0;
-    const TU = {
+    var Eu = yu(4630);
+    const Ku = Eu.Howler,
+      Qu = new Map;
+    let mu = 0;
+    const Ju = {
         song: 0,
         sheet: 0
       },
-      qU = new WeakMap,
-      KU = new WeakSet;
+      Nu = new WeakMap,
+      Xu = new WeakSet;
 
-    function cU(UU, RU) {
-      return qU.set(UU, RU), UU
+    function Vu(uu, Ru) {
+      return Nu.set(uu, Ru), uu
     }
 
-    function GU() {
+    function ru() {
       return {
-        bytes: PU,
-        songsDecoded: TU.song,
-        sheetsDecoded: TU.sheet
+        bytes: mu,
+        songsDecoded: Ju.song,
+        sheetsDecoded: Ju.sheet
       }
     }
 
-    function jU(UU) {
-      if (KU.has(UU)) return;
-      KU.add(UU);
-      const RU = 1 === UU.decodeAudioData.length,
-        gU = UU.decodeAudioData.bind(UU);
-      UU.decodeAudioData = (UU, tU, KU) => {
-        const cU = UU => {
-          const RU = pU._howls.filter((UU => "loaded" !== UU._state));
+    function Bu(uu) {
+      if (Xu.has(uu)) return;
+      Xu.add(uu);
+      const Ru = 1 === uu.decodeAudioData.length,
+        yu = uu.decodeAudioData.bind(uu);
+      uu.decodeAudioData = (uu, Eu, Xu) => {
+        const Vu = uu => {
+          const Ru = Ku._howls.filter((uu => "loaded" !== uu._state));
           try {
-            null === tU || void 0 === tU || tU(UU)
+            null === Eu || void 0 === Eu || Eu(uu)
           } finally {
-            const gU = RU.find((UU => "loaded" === UU._state));
-            void 0 !== gU && "string" === typeof gU._src && function(UU, RU, gU) {
-              var tU;
-              PU += gU - (null !== (tU = EU.get(RU)) && void 0 !== tU ? tU : 0), EU.set(RU, gU);
-              const pU = qU.get(UU);
-              void 0 !== pU && TU[pU]++
-            }(gU, gU._src, UU.length * UU.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const yu = Ru.find((uu => "loaded" === uu._state));
+            void 0 !== yu && "string" === typeof yu._src && function(uu, Ru, yu) {
+              var Eu;
+              mu += yu - (null !== (Eu = Qu.get(Ru)) && void 0 !== Eu ? Eu : 0), Qu.set(Ru, yu);
+              const Ku = Nu.get(uu);
+              void 0 !== Ku && Ju[Ku]++
+            }(yu, yu._src, uu.length * uu.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return UU
+          return uu
         };
-        if (!RU) return gU(UU, cU, KU);
-        const GU = gU(UU).then(cU);
-        return GU.catch((UU => {
-          null === KU || void 0 === KU || KU(UU)
-        })), GU
+        if (!Ru) return yu(uu, Vu, Xu);
+        const ru = yu(uu).then(Vu);
+        return ru.catch((uu => {
+          null === Xu || void 0 === Xu || Xu(uu)
+        })), ru
       }
     }
-    const uU = tU.Howl.prototype,
-      CU = uU.init;
-    uU.init = function(UU) {
-      return tU.Howler.volume(), pU.ctx && jU(pU.ctx), CU.call(this, UU)
+    const xu = Eu.Howl.prototype,
+      Su = xu.init;
+    xu.init = function(uu) {
+      return Eu.Howler.volume(), Ku.ctx && Bu(Ku.ctx), Su.call(this, uu)
     };
-    const hU = uU.unload;
-    uU.unload = function() {
-      const UU = this._src,
-        RU = hU.call(this);
-      if ("string" !== typeof UU) return RU;
-      const gU = EU.get(UU);
-      return void 0 !== gU && function(UU) {
-        return !pU._howls.some((RU => RU._src === UU || "string" === typeof RU._src && UU.indexOf(RU._src) >= 0))
-      }(UU) && (EU.delete(UU), PU -= gU), RU
+    const pu = xu.unload;
+    xu.unload = function() {
+      const uu = this._src,
+        Ru = pu.call(this);
+      if ("string" !== typeof uu) return Ru;
+      const yu = Qu.get(uu);
+      return void 0 !== yu && function(uu) {
+        return !Ku._howls.some((Ru => Ru._src === uu || "string" === typeof Ru._src && uu.indexOf(Ru._src) >= 0))
+      }(uu) && (Qu.delete(uu), mu -= yu), Ru
     }
   },
-  4512: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      Howl: () => pU.Howl,
-      Howler: () => pU.Howler,
-      iosAudio: () => qU,
-      musicOutput: () => QU,
-      readyAudioContext: () => eU
+  4630: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      Howl: () => Ku.Howl,
+      Howler: () => Ku.Howler,
+      iosAudio: () => Nu,
+      musicOutput: () => Tu,
+      readyAudioContext: () => Wu
     });
-    var tU, pU = gU(4518),
-      EU = gU(96);
-    const PU = pU.Howler;
-    let TU;
+    var Eu, Ku = yu(4638),
+      Qu = yu(106);
+    const mu = Ku.Howler;
+    let Ju;
 
-    function qU() {
-      return TU ??= "ios" === (0, EU.getOperatingSystem)(), TU
+    function Nu() {
+      return Ju ??= "ios" === (0, Qu.getOperatingSystem)(), Ju
     }
 
-    function KU() {
-      var UU, RU;
-      if (PU.ctx || !PU.usingWebAudio || "undefined" === typeof AudioContext || !qU()) return;
-      const gU = navigator.audioSession;
-      let tU;
-      "auto" === (null === gU || void 0 === gU ? void 0 : gU.type) && (gU.type = "ambient");
+    function Xu() {
+      var uu, Ru;
+      if (mu.ctx || !mu.usingWebAudio || "undefined" === typeof AudioContext || !Nu()) return;
+      const yu = navigator.audioSession;
+      let Eu;
+      "auto" === (null === yu || void 0 === yu ? void 0 : yu.type) && (yu.type = "ambient");
       try {
-        tU = new AudioContext({
+        Eu = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const pU = tU.createGain();
-      pU.gain.setValueAtTime(PU._muted ? 0 : null !== (UU = PU._volume) && void 0 !== UU ? UU : 1, tU.currentTime), pU.connect(tU.destination), PU.ctx = tU, PU.masterGain = pU, null === (RU = PU._setup) || void 0 === RU || RU.call(PU)
+      const Ku = Eu.createGain();
+      Ku.gain.setValueAtTime(mu._muted ? 0 : null !== (uu = mu._volume) && void 0 !== uu ? uu : 1, Eu.currentTime), Ku.connect(Eu.destination), mu.ctx = Eu, mu.masterGain = Ku, null === (Ru = mu._setup) || void 0 === Ru || Ru.call(mu)
     }
-    PU._mobileUnloaded = !0;
-    const cU = PU.volume.bind(pU.Howler);
-    PU.volume = function() {
-      return KU(), cU(...arguments)
+    mu._mobileUnloaded = !0;
+    const Vu = mu.volume.bind(Ku.Howler);
+    mu.volume = function() {
+      return Xu(), Vu(...arguments)
     };
-    const GU = PU.mute.bind(pU.Howler);
-    PU.mute = UU => (KU(), GU(UU));
-    const jU = pU.Howl.prototype,
-      uU = jU.init;
-    jU.init = function(UU) {
-      return KU(), uU.call(this, UU)
+    const ru = mu.mute.bind(Ku.Howler);
+    mu.mute = uu => (Xu(), ru(uu));
+    const Bu = Ku.Howl.prototype,
+      xu = Bu.init;
+    Bu.init = function(uu) {
+      return Xu(), xu.call(this, uu)
     };
-    let CU = 0;
-    const hU = null === (tU = PU._autoSuspend) || void 0 === tU ? void 0 : tU.bind(pU.Howler);
+    let Su = 0;
+    const pu = null === (Eu = mu._autoSuspend) || void 0 === Eu ? void 0 : Eu.bind(Ku.Howler);
 
-    function QU() {
-      eU();
+    function Tu() {
+      Wu();
       const {
-        ctx: UU,
-        masterGain: RU
-      } = PU;
-      return UU && RU ? {
-        ctx: UU,
-        destination: RU,
-        holdAwake: UU => {
-          var RU, gU;
-          (CU += UU ? 1 : -1, UU) ? null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU): null === (gU = PU._autoSuspend) || void 0 === gU || gU.call(PU)
+        ctx: uu,
+        masterGain: Ru
+      } = mu;
+      return uu && Ru ? {
+        ctx: uu,
+        destination: Ru,
+        holdAwake: uu => {
+          var Ru, yu;
+          (Su += uu ? 1 : -1, uu) ? null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu): null === (yu = mu._autoSuspend) || void 0 === yu || yu.call(mu)
         },
         wake: () => {
-          var RU;
-          "running" !== UU.state && (null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU), UU.resume().catch((() => {})))
+          var Ru;
+          "running" !== uu.state && (null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu), uu.resume().catch((() => {})))
         }
       } : null
     }
 
-    function eU() {
-      var UU;
-      (PU.volume(), PU.ctx && PU.autoUnlock) && (null === (UU = PU._unlockAudio) || void 0 === UU || UU.call(PU))
+    function Wu() {
+      var uu;
+      (mu.volume(), mu.ctx && mu.autoUnlock) && (null === (uu = mu._unlockAudio) || void 0 === uu || uu.call(mu))
     }
-    hU && (PU._autoSuspend = () => CU > 0 ? pU.Howler : hU())
+    pu && (mu._autoSuspend = () => Su > 0 ? Ku.Howler : pu())
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

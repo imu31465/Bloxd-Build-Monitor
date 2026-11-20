@@ -1,97 +1,97 @@
 export const id = 342;
 export const ids = [342, 343];
 export const modules = {
-  42641: (UU, RU, gU) => {
-    gU.d(RU, {
-      gamePackSource: () => EU
+  42885: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      gamePackSource: () => Qu
     });
-    var tU = gU(4657),
-      pU = gU(1461);
+    var Eu = yu(4771),
+      Ku = yu(1447);
 
-    function EU(UU) {
+    function Qu(uu) {
       return {
-        packKey: async RU => (await pU.c.getGame(UU, RU, !0)).customTexturePackKey,
-        fetchPack: tU.c
+        packKey: async Ru => (await Ku.e.getGame(uu, Ru, !0)).customTexturePackKey,
+        fetchPack: Eu.d
       }
     }
   },
-  42637: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      fetchGuestContext: () => jU,
-      guestJoinTarget: () => fU,
-      guestJoinWithPack: () => CU,
-      guestPackForGame: () => uU,
-      invalidateGuestTrafficCode: () => WU
+  42876: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      fetchGuestContext: () => Bu,
+      guestJoinTarget: () => Hu,
+      guestJoinWithPack: () => Su,
+      guestPackForGame: () => xu,
+      invalidateGuestTrafficCode: () => ju
     });
-    var tU = gU(1196),
-      pU = gU(1461),
-      EU = gU(96),
-      PU = gU(36027),
-      TU = gU(1120),
-      qU = gU(40319),
-      KU = gU(42641),
-      cU = gU(40273);
+    var Eu = yu(1176),
+      Ku = yu(1447),
+      Qu = yu(106),
+      mu = yu(36316),
+      Ju = yu(1110),
+      Nu = yu(40513),
+      Xu = yu(42885),
+      Vu = yu(40446);
 
-    function GU() {
-      if (EU.featureFlags.useTurnstile) throw new qU.TurnstilePageError
+    function ru() {
+      if (Qu.featureFlags.useTurnstile) throw new Nu.TurnstilePageError
     }
 
-    function jU() {
-      return (0, TU.fetchAnonymousUserContext)().catch((UU => (console.warn("the guest context didn't load", UU), null)))
+    function Bu() {
+      return (0, Ju.fetchAnonymousUserContext)().catch((uu => (console.warn("the guest context didn't load", uu), null)))
     }
-    async function uU(UU, RU, gU, tU) {
+    async function xu(uu, Ru, yu, Eu) {
       try {
-        const pU = await gU;
-        if (null === pU) return void console.warn(`the texture pack step for ${UU} has no guest context: the pack in play stays`);
-        await RU.packForGame(UU, (0, KU.gamePackSource)(pU), tU)
-      } catch (pU) {
-        console.warn(`the texture pack step for ${UU} failed: the pack in play stays`, pU)
+        const Ku = await yu;
+        if (null === Ku) return void console.warn(`the texture pack step for ${uu} has no guest context: the pack in play stays`);
+        await Ru.packForGame(uu, (0, Xu.gamePackSource)(Ku), Eu)
+      } catch (Ku) {
+        console.warn(`the texture pack step for ${uu} failed: the pack in play stays`, Ku)
       }
     }
-    async function CU(UU, RU, gU, tU) {
-      GU();
-      const pU = jU();
-      return await gU(((RU, gU) => uU(UU, RU, pU, gU))), fU(UU, RU, tU(), await pU)
+    async function Su(uu, Ru, yu, Eu) {
+      ru();
+      const Ku = Bu();
+      return await yu(((Ru, yu) => xu(uu, Ru, Ku, yu))), Hu(uu, Ru, Eu(), await Ku)
     }
-    let hU = null,
-      QU = null;
-    async function eU() {
-      if ((null === hU || hU.hasExpired()) && (QU ??= (0, TU.fetchAnonymousUserContext)().then((UU => {
-          hU = UU
+    let pu = null,
+      Tu = null;
+    async function Wu() {
+      if ((null === pu || pu.hasExpired()) && (Tu ??= (0, Ju.fetchAnonymousUserContext)().then((uu => {
+          pu = uu
         })).finally((() => {
-          QU = null
-        })), await QU), null === hU) throw new Error("no guest context to post as");
-      return hU.getMetricsCookies()
+          Tu = null
+        })), await Tu), null === pu) throw new Error("no guest context to post as");
+      return pu.getMetricsCookies()
     }
-    async function WU() {
-      var UU;
-      await (null === (UU = hU) || void 0 === UU ? void 0 : UU.invalidateTrafficCode())
+    async function ju() {
+      var uu;
+      await (null === (uu = pu) || void 0 === uu ? void 0 : uu.invalidateTrafficCode())
     }
-    async function fU(UU, RU, gU) {
-      let EU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-      GU();
-      const qU = null !== EU && void 0 !== EU ? EU : await (0, TU.fetchAnonymousUserContext)();
-      if (hU = qU, qU.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
-      const KU = await pU.c.matchmakePlayer(qU, RU, UU, (0, PU.b)()),
-        jU = performance.now();
-      if (!("gameServerHost" in KU)) throw new Error(`matchmaking refused: ${KU.failReason}`);
-      const uU = tU.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(KU.gameServerHost);
-      if (uU.isError()) throw new Error(`no socket URL for ${KU.gameServerHost}: ${uU.asError().message}`);
-      const CU = {
-        endpoint: uU.getValue(),
-        gameNameWithVariation: KU.gameNameWithVariation,
-        lobbyName: KU.lobbyName
+    async function Hu(uu, Ru, yu) {
+      let Qu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+      ru();
+      const Nu = null !== Qu && void 0 !== Qu ? Qu : await (0, Ju.fetchAnonymousUserContext)();
+      if (pu = Nu, Nu.isLoggedIn()) throw new Error("the shell's page joins as a guest only");
+      const Xu = await Ku.e.matchmakePlayer(Nu, Ru, uu, (0, mu.b)()),
+        Bu = performance.now();
+      if (!("gameServerHost" in Xu)) throw new Error(`matchmaking refused: ${Xu.failReason}`);
+      const xu = Eu.clientSideServerUrls.getServerWebSocketUrlFromServerUrl(Xu.gameServerHost);
+      if (xu.isError()) throw new Error(`no socket URL for ${Xu.gameServerHost}: ${xu.asError().message}`);
+      const Su = {
+        endpoint: xu.getValue(),
+        gameNameWithVariation: Xu.gameNameWithVariation,
+        lobbyName: Xu.lobbyName
       };
       return {
         target: {
-          ...await (0, cU.h)(qU, CU, gU, !1),
-          postCookies: eU
+          ...await (0, Vu.e)(Nu, Su, yu, !1),
+          postCookies: Wu
         },
-        matchedAt: jU,
-        freshMs: cU.e
+        matchedAt: Bu,
+        freshMs: Vu.b
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,176 +1,176 @@
 export const id = 304;
 export const ids = [304];
 export const modules = {
-  41207: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      _TGATextureLoader: () => TU
+  41438: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      _TGATextureLoader: () => Ju
     });
-    var tU = gU(38236);
+    var Eu = yu(38448);
 
-    function pU(UU) {
-      let RU = 0;
+    function Ku(uu) {
+      let Ru = 0;
       return {
-        id_length: UU[RU++],
-        colormap_type: UU[RU++],
-        image_type: UU[RU++],
-        colormap_index: UU[RU++] | UU[RU++] << 8,
-        colormap_length: UU[RU++] | UU[RU++] << 8,
-        colormap_size: UU[RU++],
-        origin: [UU[RU++] | UU[RU++] << 8, UU[RU++] | UU[RU++] << 8],
-        width: UU[RU++] | UU[RU++] << 8,
-        height: UU[RU++] | UU[RU++] << 8,
-        pixel_size: UU[RU++],
-        flags: UU[17]
+        id_length: uu[Ru++],
+        colormap_type: uu[Ru++],
+        image_type: uu[Ru++],
+        colormap_index: uu[Ru++] | uu[Ru++] << 8,
+        colormap_length: uu[Ru++] | uu[Ru++] << 8,
+        colormap_size: uu[Ru++],
+        origin: [uu[Ru++] | uu[Ru++] << 8, uu[Ru++] | uu[Ru++] << 8],
+        width: uu[Ru++] | uu[Ru++] << 8,
+        height: uu[Ru++] | uu[Ru++] << 8,
+        pixel_size: uu[Ru++],
+        flags: uu[17]
       }
     }
 
-    function EU(UU, RU) {
-      if (RU.length < 19) return void tU.e.Error("Unable to load TGA file - Not enough data to contain header");
-      let gU = 18;
-      const EU = pU(RU);
-      if (EU.id_length + gU > RU.length) return void tU.e.Error("Unable to load TGA file - Not enough data");
-      gU += EU.id_length;
-      let TU, qU = !1,
-        KU = !1,
-        cU = !1;
-      switch (EU.image_type) {
+    function Qu(uu, Ru) {
+      if (Ru.length < 19) return void Eu.e.Error("Unable to load TGA file - Not enough data to contain header");
+      let yu = 18;
+      const Qu = Ku(Ru);
+      if (Qu.id_length + yu > Ru.length) return void Eu.e.Error("Unable to load TGA file - Not enough data");
+      yu += Qu.id_length;
+      let Ju, Nu = !1,
+        Xu = !1,
+        Vu = !1;
+      switch (Qu.image_type) {
         case 9:
-          qU = !0;
+          Nu = !0;
         case 1:
-          KU = !0;
+          Xu = !0;
           break;
         case 10:
-          qU = !0;
+          Nu = !0;
         case 2:
           break;
         case 11:
-          qU = !0;
+          Nu = !0;
         case 3:
-          cU = !0
+          Vu = !0
       }
-      const GU = EU.pixel_size >> 3,
-        jU = EU.width * EU.height * GU;
-      let uU, CU, hU, QU, eU, WU, fU;
-      if (KU && (uU = RU.subarray(gU, gU += EU.colormap_length * (EU.colormap_size >> 3))), qU) {
-        let UU, tU, pU;
-        TU = new Uint8Array(jU);
-        let EU = 0;
-        const PU = new Uint8Array(GU);
-        for (; gU < jU && EU < jU;)
-          if (UU = RU[gU++], tU = 1 + (127 & UU), 128 & UU) {
-            for (pU = 0; pU < GU; ++pU) PU[pU] = RU[gU++];
-            for (pU = 0; pU < tU; ++pU) TU.set(PU, EU + pU * GU);
-            EU += GU * tU
+      const ru = Qu.pixel_size >> 3,
+        Bu = Qu.width * Qu.height * ru;
+      let xu, Su, pu, Tu, Wu, ju, Hu;
+      if (Xu && (xu = Ru.subarray(yu, yu += Qu.colormap_length * (Qu.colormap_size >> 3))), Nu) {
+        let uu, Eu, Ku;
+        Ju = new Uint8Array(Bu);
+        let Qu = 0;
+        const mu = new Uint8Array(ru);
+        for (; yu < Bu && Qu < Bu;)
+          if (uu = Ru[yu++], Eu = 1 + (127 & uu), 128 & uu) {
+            for (Ku = 0; Ku < ru; ++Ku) mu[Ku] = Ru[yu++];
+            for (Ku = 0; Ku < Eu; ++Ku) Ju.set(mu, Qu + Ku * ru);
+            Qu += ru * Eu
           } else {
-            for (tU *= GU, pU = 0; pU < tU; ++pU) TU[EU + pU] = RU[gU++];
-            EU += tU
+            for (Eu *= ru, Ku = 0; Ku < Eu; ++Ku) Ju[Qu + Ku] = Ru[yu++];
+            Qu += Eu
           }
-      } else TU = RU.subarray(gU, gU + (KU ? EU.width * EU.height : jU));
-      switch ((48 & EU.flags) >> 4) {
+      } else Ju = Ru.subarray(yu, yu + (Xu ? Qu.width * Qu.height : Bu));
+      switch ((48 & Qu.flags) >> 4) {
         default:
         case 2:
-          CU = 0, QU = 1, fU = EU.width, hU = 0, eU = 1, WU = EU.height;
+          Su = 0, Tu = 1, Hu = Qu.width, pu = 0, Wu = 1, ju = Qu.height;
           break;
         case 0:
-          CU = 0, QU = 1, fU = EU.width, hU = EU.height - 1, eU = -1, WU = -1;
+          Su = 0, Tu = 1, Hu = Qu.width, pu = Qu.height - 1, Wu = -1, ju = -1;
           break;
         case 3:
-          CU = EU.width - 1, QU = -1, fU = -1, hU = 0, eU = 1, WU = EU.height;
+          Su = Qu.width - 1, Tu = -1, Hu = -1, pu = 0, Wu = 1, ju = Qu.height;
           break;
         case 1:
-          CU = EU.width - 1, QU = -1, fU = -1, hU = EU.height - 1, eU = -1, WU = -1
+          Su = Qu.width - 1, Tu = -1, Hu = -1, pu = Qu.height - 1, Wu = -1, ju = -1
       }
-      const xU = "_getImageData" + (cU ? "Grey" : "") + EU.pixel_size + "bits",
-        mU = PU[xU](EU, uU, TU, hU, eU, WU, CU, QU, fU);
-      UU.WC()._uploadDataToTextureDirectly(UU, mU)
+      const du = "_getImageData" + (Vu ? "Grey" : "") + Qu.pixel_size + "bits",
+        bu = mu[du](Qu, xu, Ju, pu, Wu, ju, Su, Tu, Hu);
+      uu.eS()._uploadDataToTextureDirectly(uu, bu)
     }
-    const PU = {
-      GetTGAHeader: pU,
-      UploadContent: EU,
-      _getImageData8bits: function(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
-        const KU = gU,
-          cU = RU,
-          GU = UU.width,
-          jU = UU.height;
-        let uU, CU, hU, QU = 0;
-        const eU = new Uint8Array(GU * jU * 4);
-        for (hU = tU; hU !== EU; hU += pU)
-          for (CU = PU; CU !== qU; CU += TU, QU++) uU = KU[QU], eU[4 * (CU + GU * hU) + 3] = 255, eU[4 * (CU + GU * hU) + 2] = cU[3 * uU + 0], eU[4 * (CU + GU * hU) + 1] = cU[3 * uU + 1], eU[4 * (CU + GU * hU) + 0] = cU[3 * uU + 2];
-        return eU
+    const mu = {
+      GetTGAHeader: Ku,
+      UploadContent: Qu,
+      _getImageData8bits: function(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+        const Xu = yu,
+          Vu = Ru,
+          ru = uu.width,
+          Bu = uu.height;
+        let xu, Su, pu, Tu = 0;
+        const Wu = new Uint8Array(ru * Bu * 4);
+        for (pu = Eu; pu !== Qu; pu += Ku)
+          for (Su = mu; Su !== Nu; Su += Ju, Tu++) xu = Xu[Tu], Wu[4 * (Su + ru * pu) + 3] = 255, Wu[4 * (Su + ru * pu) + 2] = Vu[3 * xu + 0], Wu[4 * (Su + ru * pu) + 1] = Vu[3 * xu + 1], Wu[4 * (Su + ru * pu) + 0] = Vu[3 * xu + 2];
+        return Wu
       },
-      _getImageData16bits: function(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
-        const KU = gU,
-          cU = UU.width,
-          GU = UU.height;
-        let jU, uU, CU, hU = 0;
-        const QU = new Uint8Array(cU * GU * 4);
-        for (CU = tU; CU !== EU; CU += pU)
-          for (uU = PU; uU !== qU; uU += TU, hU += 2) {
-            jU = KU[hU + 0] + (KU[hU + 1] << 8);
-            const UU = 255 * ((31744 & jU) >> 10) / 31 | 0,
-              RU = 255 * ((992 & jU) >> 5) / 31 | 0,
-              gU = 255 * (31 & jU) / 31 | 0;
-            QU[4 * (uU + cU * CU) + 0] = UU, QU[4 * (uU + cU * CU) + 1] = RU, QU[4 * (uU + cU * CU) + 2] = gU, QU[4 * (uU + cU * CU) + 3] = 32768 & jU ? 0 : 255
+      _getImageData16bits: function(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+        const Xu = yu,
+          Vu = uu.width,
+          ru = uu.height;
+        let Bu, xu, Su, pu = 0;
+        const Tu = new Uint8Array(Vu * ru * 4);
+        for (Su = Eu; Su !== Qu; Su += Ku)
+          for (xu = mu; xu !== Nu; xu += Ju, pu += 2) {
+            Bu = Xu[pu + 0] + (Xu[pu + 1] << 8);
+            const uu = 255 * ((31744 & Bu) >> 10) / 31 | 0,
+              Ru = 255 * ((992 & Bu) >> 5) / 31 | 0,
+              yu = 255 * (31 & Bu) / 31 | 0;
+            Tu[4 * (xu + Vu * Su) + 0] = uu, Tu[4 * (xu + Vu * Su) + 1] = Ru, Tu[4 * (xu + Vu * Su) + 2] = yu, Tu[4 * (xu + Vu * Su) + 3] = 32768 & Bu ? 0 : 255
           }
-        return QU
+        return Tu
       },
-      _getImageData24bits: function(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
-        const KU = gU,
-          cU = UU.width,
-          GU = UU.height;
-        let jU, uU, CU = 0;
-        const hU = new Uint8Array(cU * GU * 4);
-        for (uU = tU; uU !== EU; uU += pU)
-          for (jU = PU; jU !== qU; jU += TU, CU += 3) hU[4 * (jU + cU * uU) + 3] = 255, hU[4 * (jU + cU * uU) + 2] = KU[CU + 0], hU[4 * (jU + cU * uU) + 1] = KU[CU + 1], hU[4 * (jU + cU * uU) + 0] = KU[CU + 2];
-        return hU
+      _getImageData24bits: function(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+        const Xu = yu,
+          Vu = uu.width,
+          ru = uu.height;
+        let Bu, xu, Su = 0;
+        const pu = new Uint8Array(Vu * ru * 4);
+        for (xu = Eu; xu !== Qu; xu += Ku)
+          for (Bu = mu; Bu !== Nu; Bu += Ju, Su += 3) pu[4 * (Bu + Vu * xu) + 3] = 255, pu[4 * (Bu + Vu * xu) + 2] = Xu[Su + 0], pu[4 * (Bu + Vu * xu) + 1] = Xu[Su + 1], pu[4 * (Bu + Vu * xu) + 0] = Xu[Su + 2];
+        return pu
       },
-      _getImageData32bits: function(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
-        const KU = gU,
-          cU = UU.width,
-          GU = UU.height;
-        let jU, uU, CU = 0;
-        const hU = new Uint8Array(cU * GU * 4);
-        for (uU = tU; uU !== EU; uU += pU)
-          for (jU = PU; jU !== qU; jU += TU, CU += 4) hU[4 * (jU + cU * uU) + 2] = KU[CU + 0], hU[4 * (jU + cU * uU) + 1] = KU[CU + 1], hU[4 * (jU + cU * uU) + 0] = KU[CU + 2], hU[4 * (jU + cU * uU) + 3] = KU[CU + 3];
-        return hU
+      _getImageData32bits: function(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+        const Xu = yu,
+          Vu = uu.width,
+          ru = uu.height;
+        let Bu, xu, Su = 0;
+        const pu = new Uint8Array(Vu * ru * 4);
+        for (xu = Eu; xu !== Qu; xu += Ku)
+          for (Bu = mu; Bu !== Nu; Bu += Ju, Su += 4) pu[4 * (Bu + Vu * xu) + 2] = Xu[Su + 0], pu[4 * (Bu + Vu * xu) + 1] = Xu[Su + 1], pu[4 * (Bu + Vu * xu) + 0] = Xu[Su + 2], pu[4 * (Bu + Vu * xu) + 3] = Xu[Su + 3];
+        return pu
       },
-      _getImageDataGrey8bits: function(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
-        const KU = gU,
-          cU = UU.width,
-          GU = UU.height;
-        let jU, uU, CU, hU = 0;
-        const QU = new Uint8Array(cU * GU * 4);
-        for (CU = tU; CU !== EU; CU += pU)
-          for (uU = PU; uU !== qU; uU += TU, hU++) jU = KU[hU], QU[4 * (uU + cU * CU) + 0] = jU, QU[4 * (uU + cU * CU) + 1] = jU, QU[4 * (uU + cU * CU) + 2] = jU, QU[4 * (uU + cU * CU) + 3] = 255;
-        return QU
+      _getImageDataGrey8bits: function(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+        const Xu = yu,
+          Vu = uu.width,
+          ru = uu.height;
+        let Bu, xu, Su, pu = 0;
+        const Tu = new Uint8Array(Vu * ru * 4);
+        for (Su = Eu; Su !== Qu; Su += Ku)
+          for (xu = mu; xu !== Nu; xu += Ju, pu++) Bu = Xu[pu], Tu[4 * (xu + Vu * Su) + 0] = Bu, Tu[4 * (xu + Vu * Su) + 1] = Bu, Tu[4 * (xu + Vu * Su) + 2] = Bu, Tu[4 * (xu + Vu * Su) + 3] = 255;
+        return Tu
       },
-      _getImageDataGrey16bits: function(UU, RU, gU, tU, pU, EU, PU, TU, qU) {
-        const KU = gU,
-          cU = UU.width,
-          GU = UU.height;
-        let jU, uU, CU = 0;
-        const hU = new Uint8Array(cU * GU * 4);
-        for (uU = tU; uU !== EU; uU += pU)
-          for (jU = PU; jU !== qU; jU += TU, CU += 2) hU[4 * (jU + cU * uU) + 0] = KU[CU + 0], hU[4 * (jU + cU * uU) + 1] = KU[CU + 0], hU[4 * (jU + cU * uU) + 2] = KU[CU + 0], hU[4 * (jU + cU * uU) + 3] = KU[CU + 1];
-        return hU
+      _getImageDataGrey16bits: function(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu) {
+        const Xu = yu,
+          Vu = uu.width,
+          ru = uu.height;
+        let Bu, xu, Su = 0;
+        const pu = new Uint8Array(Vu * ru * 4);
+        for (xu = Eu; xu !== Qu; xu += Ku)
+          for (Bu = mu; Bu !== Nu; Bu += Ju, Su += 2) pu[4 * (Bu + Vu * xu) + 0] = Xu[Su + 0], pu[4 * (Bu + Vu * xu) + 1] = Xu[Su + 0], pu[4 * (Bu + Vu * xu) + 2] = Xu[Su + 0], pu[4 * (Bu + Vu * xu) + 3] = Xu[Su + 1];
+        return pu
       }
     };
-    class TU {
+    class Ju {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".env not supported in Cube."
       }
-      loadData(UU, RU, gU) {
-        const tU = new Uint8Array(UU.buffer, UU.byteOffset, UU.byteLength),
-          PU = pU(tU);
-        gU(PU.width, PU.height, RU.generateMipMaps, !1, (() => {
-          EU(RU, tU)
+      loadData(uu, Ru, yu) {
+        const Eu = new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength),
+          mu = Ku(Eu);
+        yu(mu.width, mu.height, Ru.generateMipMaps, !1, (() => {
+          Qu(Ru, Eu)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

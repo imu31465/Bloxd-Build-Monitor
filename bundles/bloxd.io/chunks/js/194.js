@@ -1,161 +1,161 @@
 export const id = 194;
 export const ids = [194];
 export const modules = {
-  9057: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      packDisplayName: () => CU,
-      packModelMessage: () => hU,
-      packModelSummary: () => eU,
-      refusedPackModels: () => QU
+  9127: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      packDisplayName: () => Su,
+      packModelMessage: () => pu,
+      packModelSummary: () => Wu,
+      refusedPackModels: () => Tu
     });
-    var tU = gU(9062),
-      pU = gU(9067);
-    const EU = "DRACO",
-      PU = 0,
-      TU = 1,
-      qU = 0,
-      KU = 1,
-      cU = 32768;
+    var Eu = yu(9135),
+      Ku = yu(9143);
+    const Qu = "DRACO",
+      mu = 0,
+      Ju = 1,
+      Nu = 0,
+      Xu = 1,
+      Vu = 32768;
 
-    function GU(UU) {
-      const RU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength);
-      let gU = 0;
-      const tU = () => {
-          if (gU >= UU.byteLength) throw new RangeError("past the stream");
-          return UU[gU++]
+    function ru(uu) {
+      const Ru = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
+      let yu = 0;
+      const Eu = () => {
+          if (yu >= uu.byteLength) throw new RangeError("past the stream");
+          return uu[yu++]
         },
-        pU = () => {
-          if (gU + 4 > UU.byteLength) throw new RangeError("past the stream");
-          const tU = RU.getUint32(gU, !0);
-          return gU += 4, tU
+        Ku = () => {
+          if (yu + 4 > uu.byteLength) throw new RangeError("past the stream");
+          const Eu = Ru.getUint32(yu, !0);
+          return yu += 4, Eu
         },
-        GU = () => {
-          let UU = 0;
-          for (let RU = 0; RU < 35; RU += 7) {
-            const gU = tU();
-            if (UU += (127 & gU) * 2 ** RU, 0 === (128 & gU)) return UU
+        ru = () => {
+          let uu = 0;
+          for (let Ru = 0; Ru < 35; Ru += 7) {
+            const yu = Eu();
+            if (uu += (127 & yu) * 2 ** Ru, 0 === (128 & yu)) return uu
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let UU = 0; UU < EU.length; UU++)
-          if (tU() !== EU.charCodeAt(UU)) return null;
-        const RU = tU(),
-          jU = tU(),
-          uU = tU(),
-          CU = tU(),
-          hU = tU() | tU() << 8;
-        if (2 !== RU) return null;
-        0 !== (hU & cU) && function(UU, RU, gU) {
-          const tU = () => {
-              RU(gU())
+        for (let uu = 0; uu < Qu.length; uu++)
+          if (Eu() !== Qu.charCodeAt(uu)) return null;
+        const Ru = Eu(),
+          Bu = Eu(),
+          xu = Eu(),
+          Su = Eu(),
+          pu = Eu() | Eu() << 8;
+        if (2 !== Ru) return null;
+        0 !== (pu & Vu) && function(uu, Ru, yu) {
+          const Eu = () => {
+              Ru(yu())
             },
-            pU = () => {
-              let gU = 1,
-                pU = !0;
-              for (; gU > 0;) {
-                gU--, pU || tU(), pU = !1;
-                const EU = UU();
-                for (let gU = 0; gU < EU; gU++) tU(), RU(UU());
-                gU += UU()
+            Ku = () => {
+              let yu = 1,
+                Ku = !0;
+              for (; yu > 0;) {
+                yu--, Ku || Eu(), Ku = !1;
+                const Qu = uu();
+                for (let yu = 0; yu < Qu; yu++) Eu(), Ru(uu());
+                yu += uu()
               }
             },
-            EU = UU();
-          for (let PU = 0; PU < EU; PU++) UU(), pU();
-          pU()
-        }(GU, (RU => {
-          if (gU + RU > UU.byteLength) throw new RangeError("past the stream");
-          gU += RU
-        }), tU);
-        const QU = jU < 2 ? pU : GU;
-        if (uU === PU) return {
+            Qu = uu();
+          for (let mu = 0; mu < Qu; mu++) uu(), Ku();
+          Ku()
+        }(ru, (Ru => {
+          if (yu + Ru > uu.byteLength) throw new RangeError("past the stream");
+          yu += Ru
+        }), Eu);
+        const Tu = Bu < 2 ? Ku : ru;
+        if (xu === mu) return {
           faces: 0,
-          vertices: pU()
+          vertices: Ku()
         };
-        if (uU !== TU) return null;
-        if (CU === qU) {
+        if (xu !== Ju) return null;
+        if (Su === Nu) {
           return {
-            faces: QU(),
-            vertices: QU()
+            faces: Tu(),
+            vertices: Tu()
           }
         }
-        if (CU !== KU) return null;
-        tU(), jU < 2 && GU();
-        const eU = GU();
+        if (Su !== Xu) return null;
+        Eu(), Bu < 2 && ru();
+        const Wu = ru();
         return {
-          faces: GU(),
-          vertices: eU
+          faces: ru(),
+          vertices: Wu
         }
       } catch {
         return null
       }
     }
 
-    function jU(UU, RU, gU) {
-      var tU, pU;
-      if (null === (tU = null === (pU = UU.extensionsUsed) || void 0 === pU ? void 0 : pU.includes("KHR_draco_mesh_compression")) || void 0 === tU || !tU) return null;
-      for (const CU of null !== (EU = UU.meshes) && void 0 !== EU ? EU : []) {
-        var EU;
-        for (const tU of CU.primitives) {
-          var PU, TU, qU, KU, cU, jU;
-          const pU = null === (PU = tU.extensions) || void 0 === PU ? void 0 : PU.KHR_draco_mesh_compression;
-          if ("object" !== typeof pU || null === pU) continue;
-          const EU = null === (TU = UU.bufferViews) || void 0 === TU ? void 0 : TU[pU.bufferView];
-          if (null === RU || void 0 === EU) return uU;
-          const CU = null !== (qU = EU.byteOffset) && void 0 !== qU ? qU : 0,
-            hU = GU(RU.subarray(CU, CU + EU.byteLength));
-          if (null === hU && !gU) continue;
-          const QU = null !== (KU = UU.accessors) && void 0 !== KU ? KU : [],
-            eU = null === (cU = QU[tU.attributes.POSITION]) || void 0 === cU ? void 0 : cU.count,
-            WU = void 0 === tU.indices ? 0 : null === (jU = QU[tU.indices]) || void 0 === jU ? void 0 : jU.count;
-          if (null === hU || void 0 === eU || void 0 === WU || 3 * hU.faces !== WU || hU.vertices > eU) return uU
+    function Bu(uu, Ru, yu) {
+      var Eu, Ku;
+      if (null === (Eu = null === (Ku = uu.extensionsUsed) || void 0 === Ku ? void 0 : Ku.includes("KHR_draco_mesh_compression")) || void 0 === Eu || !Eu) return null;
+      for (const Su of null !== (Qu = uu.meshes) && void 0 !== Qu ? Qu : []) {
+        var Qu;
+        for (const Eu of Su.primitives) {
+          var mu, Ju, Nu, Xu, Vu, Bu;
+          const Ku = null === (mu = Eu.extensions) || void 0 === mu ? void 0 : mu.KHR_draco_mesh_compression;
+          if ("object" !== typeof Ku || null === Ku) continue;
+          const Qu = null === (Ju = uu.bufferViews) || void 0 === Ju ? void 0 : Ju[Ku.bufferView];
+          if (null === Ru || void 0 === Qu) return xu;
+          const Su = null !== (Nu = Qu.byteOffset) && void 0 !== Nu ? Nu : 0,
+            pu = ru(Ru.subarray(Su, Su + Qu.byteLength));
+          if (null === pu && !yu) continue;
+          const Tu = null !== (Xu = uu.accessors) && void 0 !== Xu ? Xu : [],
+            Wu = null === (Vu = Tu[Eu.attributes.POSITION]) || void 0 === Vu ? void 0 : Vu.count,
+            ju = void 0 === Eu.indices ? 0 : null === (Bu = Tu[Eu.indices]) || void 0 === Bu ? void 0 : Bu.count;
+          if (null === pu || void 0 === Wu || void 0 === ju || 3 * pu.faces !== ju || pu.vertices > Wu) return xu
         }
       }
       return null
     }
-    const uU = "has a Draco stream whose counts don't match its accessors";
+    const xu = "has a Draco stream whose counts don't match its accessors";
 
-    function CU(UU) {
-      var RU;
-      return null !== (RU = UU.name) && void 0 !== RU ? RU : UU.fromFolderName || UU.id
+    function Su(uu) {
+      var Ru;
+      return null !== (Ru = uu.name) && void 0 !== Ru ? Ru : uu.fromFolderName || uu.id
     }
 
-    function hU(UU, RU, gU) {
-      return `Texture pack "${UU}": model "${RU}" was not loaded because it ${gU}. The default model is used instead.`
+    function pu(uu, Ru, yu) {
+      return `Texture pack "${uu}": model "${Ru}" was not loaded because it ${yu}. The default model is used instead.`
     }
 
-    function QU(UU, RU, gU) {
+    function Tu(uu, Ru, yu) {
       let {
-        strictDraco: EU = !1
+        strictDraco: Qu = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const PU = {};
-      for (const [TU, qU] of Object.entries(RU)) {
-        let RU;
-        if (qU.startsWith("data:")) try {
-          const UU = new Uint8Array((0, pU.p)(qU));
-          if (RU = (0, tU.b)(UU), null === RU) {
+      const mu = {};
+      for (const [Ju, Nu] of Object.entries(Ru)) {
+        let Ru;
+        if (Nu.startsWith("data:")) try {
+          const uu = new Uint8Array((0, Ku.o)(Nu));
+          if (Ru = (0, Eu.d)(uu), null === Ru) {
             const {
-              json: gU,
-              bin: tU
-            } = (0, pU.u)(UU);
-            RU = jU(gU, tU, EU)
+              json: yu,
+              bin: Eu
+            } = (0, Ku.y)(uu);
+            Ru = Bu(yu, Eu, Qu)
           }
         } catch {
-          RU = "is not a binary glTF 2.0 file"
-        } else RU = "loads data from outside the file";
-        RU && (PU[TU] = RU, gU && console.warn(hU(UU, TU, RU)))
+          Ru = "is not a binary glTF 2.0 file"
+        } else Ru = "loads data from outside the file";
+        Ru && (mu[Ju] = Ru, yu && console.warn(pu(uu, Ju, Ru)))
       }
-      return PU
+      return mu
     }
 
-    function eU(UU, RU) {
-      const gU = Object.keys(RU);
-      if (0 === gU.length) return null;
-      if (1 === gU.length) return hU(UU, gU[0], RU[gU[0]]);
-      const tU = gU.map((UU => `"${UU}" ${RU[UU]}`)).join("; ");
-      return `Texture pack "${UU}": ${gU.length} models were not loaded (${tU}). The default models are used instead.`
+    function Wu(uu, Ru) {
+      const yu = Object.keys(Ru);
+      if (0 === yu.length) return null;
+      if (1 === yu.length) return pu(uu, yu[0], Ru[yu[0]]);
+      const Eu = yu.map((uu => `"${uu}" ${Ru[uu]}`)).join("; ");
+      return `Texture pack "${uu}": ${yu.length} models were not loaded (${Eu}). The default models are used instead.`
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

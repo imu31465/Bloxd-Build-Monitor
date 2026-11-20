@@ -1,397 +1,397 @@
 export const id = 97;
 export const ids = [97, 185];
 export const modules = {
-  8877: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      EverythingMenu: () => gT
+  8940: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      EverythingMenu: () => RJ
     });
-    var tU = gU(56),
-      pU = gU(1037),
-      EU = gU.n(pU),
-      PU = gU(1181),
-      TU = gU(1049),
-      qU = gU(1922),
-      KU = gU(1099),
-      cU = gU(1090);
+    var Eu = yu(64),
+      Ku = yu(1035),
+      Qu = yu.n(Ku),
+      mu = yu(1170),
+      Ju = yu(1043),
+      Nu = yu(1987),
+      Xu = yu(1093),
+      Vu = yu(1079);
 
-    function GU(UU) {
+    function ru(uu) {
       let {
-        items: RU,
-        onClick: gU,
-        selectedItemId: tU,
-        className: pU,
-        padStartsOnTab: GU = !0
-      } = UU;
+        items: Ru,
+        onClick: yu,
+        selectedItemId: Eu,
+        className: Ku,
+        padStartsOnTab: ru = !0
+      } = uu;
       const {
-        t: jU
-      } = (0, PU.B)(), uU = (0, KU.k)(), CU = [];
-      for (const EU of RU) {
-        var hU;
-        const UU = CU[CU.length - 1];
-        var QU;
-        if (UU && UU.title === (null !== (hU = EU.section) && void 0 !== hU ? hU : null)) UU.items.push(EU);
-        else CU.push({
-          title: null !== (QU = EU.section) && void 0 !== QU ? QU : null,
-          items: [EU]
+        t: Bu
+      } = (0, mu.E)(), xu = (0, Xu.k)(), Su = [];
+      for (const Qu of Ru) {
+        var pu;
+        const uu = Su[Su.length - 1];
+        var Tu;
+        if (uu && uu.title === (null !== (pu = Qu.section) && void 0 !== pu ? pu : null)) uu.items.push(Qu);
+        else Su.push({
+          title: null !== (Tu = Qu.section) && void 0 !== Tu ? Tu : null,
+          items: [Qu]
         })
       }
-      return (0, cU.jsx)("div", {
-        className: EU()("MenuSideBarBody", pU),
+      return (0, Vu.jsx)("div", {
+        className: Qu()("MenuSideBarBody", Ku),
         "data-pad-tabs": "2",
-        children: CU.map(((UU, RU) => {
-          var pU;
-          return (0, cU.jsxs)("div", {
+        children: Su.map(((uu, Ru) => {
+          var Ku;
+          return (0, Vu.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [UU.title && (0, cU.jsx)("div", {
+            children: [uu.title && (0, Vu.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: jU(UU.title)
-            }), UU.items.map((UU => {
-              var RU;
-              const pU = !!UU.iconElement || !!UU.faIcon;
-              return (0, cU.jsxs)("div", {
+              children: Bu(uu.title)
+            }), uu.items.map((uu => {
+              var Ru;
+              const Ku = !!uu.iconElement || !!uu.faIcon;
+              return (0, Vu.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": tU === UU.id ? "true" : void 0,
-                "data-pad-default-focus": GU && tU === UU.id || void 0,
-                className: EU()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: tU === UU.id
+                "data-pad-selected": Eu === uu.id ? "true" : void 0,
+                "data-pad-default-focus": ru && Eu === uu.id || void 0,
+                className: Qu()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: Eu === uu.id
                 }),
                 onClick: () => {
-                  gU(UU.id)
+                  yu(uu.id)
                 },
-                children: [pU && (0, cU.jsx)("div", {
+                children: [Ku && (0, Vu.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (RU = UU.iconElement) && void 0 !== RU ? RU : (0, cU.jsx)(TU.c, {
-                    name: UU.faIcon
+                  children: null !== (Ru = uu.iconElement) && void 0 !== Ru ? Ru : (0, Vu.jsx)(Ju.c, {
+                    name: uu.faIcon
                   })
-                }), (!uU || !pU) && (0, cU.jsx)("div", {
-                  children: jU(UU.title)
-                }), UU.redDot && (0, cU.jsx)(qU.e, {
+                }), (!xu || !Ku) && (0, Vu.jsx)("div", {
+                  children: Bu(uu.title)
+                }), uu.redDot && (0, Vu.jsx)(Nu.e, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, UU.id)
+              }, uu.id)
             }))]
-          }, null !== (pU = UU.title) && void 0 !== pU ? pU : RU)
+          }, null !== (Ku = uu.title) && void 0 !== Ku ? Ku : Ru)
         }))
       })
     }
-    var jU = gU(2691),
-      uU = gU(1112),
-      CU = gU(2254),
-      hU = gU(1106),
-      QU = gU(1412),
-      eU = gU(96),
-      WU = gU(1800),
-      fU = gU(2087),
-      xU = gU(2092),
-      mU = gU(1602),
-      IU = gU(1326),
-      JU = gU(4670),
-      wU = gU(21),
-      nU = gU(8880);
+    var Bu = yu(2780),
+      xu = yu(1107),
+      Su = yu(2335),
+      pu = yu(1100),
+      Tu = yu(1408),
+      Wu = yu(106),
+      ju = yu(1855),
+      Hu = yu(2156),
+      du = yu(2160),
+      bu = yu(1617),
+      Cu = yu(1300),
+      ku = yu(4782),
+      eu = yu(27),
+      Au = yu(8946);
 
-    function bU(UU) {
+    function Du(uu) {
       let {
-        setApplySettingsCallback: RU
-      } = UU;
+        setApplySettingsCallback: Ru
+      } = uu;
       const {
-        clientEscMenuOptions: gU
-      } = (0, wU.l)(["clientEscMenuOptions"]), [pU, EU] = (0, tU.useState)(!1), [PU, TU] = (0, tU.useState)(!1), [qU, KU] = (0, tU.useState)(6400), [GU, jU] = (0, tU.useState)(3600), [uU, CU] = (0, tU.useState)(!1), [hU, eU] = (0, tU.useState)(!1);
+        clientEscMenuOptions: yu
+      } = (0, eu.j)(["clientEscMenuOptions"]), [Ku, Qu] = (0, Eu.useState)(!1), [mu, Ju] = (0, Eu.useState)(!1), [Nu, Xu] = (0, Eu.useState)(6400), [ru, Bu] = (0, Eu.useState)(3600), [xu, Su] = (0, Eu.useState)(!1), [pu, Wu] = (0, Eu.useState)(!1);
 
-      function WU(UU) {
-        const RU = "screenshot" === UU ? TU : EU;
-        RU(!0);
-        const gU = uU ? "normals" : hU ? "depth" : null;
-        nU.devTools.downloadScene(UU, {
-          width: qU,
-          height: GU,
-          colouring: gU
-        }).catch((UU => {
-          console.error("Couldn't download the scene", UU)
+      function ju(uu) {
+        const Ru = "screenshot" === uu ? Ju : Qu;
+        Ru(!0);
+        const yu = xu ? "normals" : pu ? "depth" : null;
+        Au.devTools.downloadScene(uu, {
+          width: Nu,
+          height: ru,
+          colouring: yu
+        }).catch((uu => {
+          console.error("Couldn't download the scene", uu)
         })).finally((() => {
-          RU(!1)
+          Ru(!1)
         }))
       }
-      return (0, cU.jsxs)("div", {
+      return (0, Vu.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, cU.jsx)(JU.b, {
+        children: [(0, Vu.jsx)(ku.c, {
           label: "Disable Ambient Occlusion",
-          checked: gU.disableAmbientOcclusion,
-          onClick: UU => {
-            wU.b.setClientEscMenuOptions({
-              disableAmbientOcclusion: UU
-            }), RU((() => JU.l))
+          checked: yu.disableAmbientOcclusion,
+          onClick: uu => {
+            eu.d.setClientEscMenuOptions({
+              disableAmbientOcclusion: uu
+            }), Ru((() => ku.i))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), nU.devTools.supports("ambientLight") && (0, cU.jsx)(JU.h, {
+        }), Au.devTools.supports("ambientLight") && (0, Vu.jsx)(ku.g, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: gU.ambientLightIntensity,
-          onChange: UU => {
-            nU.devTools.setAmbientLightIntensity(UU).then((() => {
-              wU.b.setClientEscMenuOptions({
-                ambientLightIntensity: UU
+          initValue: yu.ambientLightIntensity,
+          onChange: uu => {
+            Au.devTools.setAmbientLightIntensity(uu).then((() => {
+              eu.d.setClientEscMenuOptions({
+                ambientLightIntensity: uu
               })
-            })).catch((UU => {
-              console.error("Couldn't set the ambient light", UU)
+            })).catch((uu => {
+              console.error("Couldn't set the ambient light", uu)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), nU.devTools.supports("weaponRaycasts") && (0, cU.jsx)(JU.b, {
+        }), Au.devTools.supports("weaponRaycasts") && (0, Vu.jsx)(ku.c, {
           label: "Show Weapon Raycasts",
-          checked: gU.showWeaponRaycasts,
-          onClick: UU => {
-            wU.b.setClientEscMenuOptions({
-              showWeaponRaycasts: UU
+          checked: yu.showWeaponRaycasts,
+          onClick: uu => {
+            eu.d.setClientEscMenuOptions({
+              showWeaponRaycasts: uu
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), nU.devTools.supports("sceneDownload") && (0, cU.jsxs)("div", {
+        }), Au.devTools.supports("sceneDownload") && (0, Vu.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, cU.jsx)(JU.b, {
+            children: [(0, Vu.jsx)(ku.c, {
               label: "Apply normal-based coloring",
-              checked: uU,
-              onClick: UU => {
-                CU(UU), UU && eU(!1)
+              checked: xu,
+              onClick: uu => {
+                Su(uu), uu && Wu(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, cU.jsx)(JU.b, {
+            }), (0, Vu.jsx)(ku.c, {
               label: "Apply depth-based coloring",
-              checked: hU,
-              onClick: UU => {
-                eU(UU), UU && CU(!1)
+              checked: pu,
+              onClick: uu => {
+                Wu(uu), uu && Su(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, cU.jsxs)("div", {
+            }), (0, Vu.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, cU.jsx)("div", {
+              children: [(0, Vu.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, cU.jsx)(mU.d, {
+              }), (0, Vu.jsx)(bu.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (UU, RU) => {
-                  const gU = parseInt(UU) || 6400;
-                  KU(gU)
+                onValueChange: (uu, Ru) => {
+                  const yu = parseInt(uu) || 6400;
+                  Xu(yu)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: qU.toString()
-              }), (0, cU.jsx)("span", {
+                defaultValue: Nu.toString()
+              }), (0, Vu.jsx)("span", {
                 children: "X"
-              }), (0, cU.jsx)(mU.d, {
+              }), (0, Vu.jsx)(bu.b, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (UU, RU) => {
-                  const gU = parseInt(UU) || 3600;
-                  jU(gU)
+                onValueChange: (uu, Ru) => {
+                  const yu = parseInt(uu) || 3600;
+                  Bu(yu)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: GU.toString()
+                defaultValue: ru.toString()
               })]
-            }), (0, cU.jsxs)("div", {
+            }), (0, Vu.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, cU.jsxs)(QU.e, {
+              children: [(0, Vu.jsxs)(Tu.e, {
                 onClick: () => {
-                  WU("screenshot")
+                  ju("screenshot")
                 },
-                disabled: PU,
-                children: [PU && (0, cU.jsx)(IU.d, {}), "Download Screenshot"]
-              }), (0, cU.jsxs)(QU.e, {
+                disabled: mu,
+                children: [mu && (0, Vu.jsx)(Cu.b, {}), "Download Screenshot"]
+              }), (0, Vu.jsxs)(Tu.e, {
                 onClick: () => {
-                  WU("glb")
+                  ju("glb")
                 },
-                disabled: pU,
-                children: [pU && (0, cU.jsx)(IU.d, {}), "Download GLB"]
+                disabled: Ku,
+                children: [Ku && (0, Vu.jsx)(Cu.b, {}), "Download GLB"]
               })]
             })]
-          }), (0, cU.jsx)("div", {
+          }), (0, Vu.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var oU = gU(135),
-      ZU = gU(1120),
-      aU = gU(1196),
-      YU = gU(2700),
-      BU = gU(1475),
-      VU = gU(1271),
-      rU = gU(1229),
-      XU = gU(2781),
-      vU = gU(1892),
-      dU = gU(1461),
-      HU = gU(311),
-      SU = gU(2100),
-      sU = gU(2110),
-      yU = gU(2476),
-      kU = gU(1570),
-      FU = gU(2742),
-      iU = gU(2724),
-      AU = gU(2789),
-      zU = gU(201);
+    var Mu = yu(145),
+      Iu = yu(1110),
+      Gu = yu(1176),
+      Uu = yu(2785),
+      nu = yu(1467),
+      su = yu(1240),
+      tu = yu(1213),
+      lu = yu(2861),
+      gu = yu(1965),
+      cu = yu(1447),
+      Lu = yu(343),
+      zu = yu(2162),
+      Fu = yu(2180),
+      wu = yu(2548),
+      Zu = yu(1587),
+      hu = yu(2829),
+      Pu = yu(2812),
+      iu = yu(2869),
+      Yu = yu(228);
 
-    function MU(UU) {
+    function ou(uu) {
       const {
-        t: RU,
-        selectedLanguage: gU
-      } = (0, PU.B)(), {
-        userContext: pU
-      } = (0, uU.e)(), {
-        superRankInfo: EU
-      } = pU, TU = UU && ((0, HU.Bc)(EU) || pU.ranksMayChange) && (0, sU.purchasesAllowed)(), {
-        accountId: qU,
-        data: KU
-      } = (0, yU.j)(FU.d, TU);
-      if ((0, tU.useEffect)((() => {
-          if (TU) return FU.d.watchAccount(), kU.b.addRefetchListener("billing", (UU => {
-            "reconnected" === UU ? FU.d.refreshAfterReconnect() : FU.d.refresh()
+        t: Ru,
+        selectedLanguage: yu
+      } = (0, mu.E)(), {
+        userContext: Ku
+      } = (0, xu.d)(), {
+        superRankInfo: Qu
+      } = Ku, Ju = uu && ((0, Lu.Kc)(Qu) || Ku.ranksMayChange) && (0, Fu.purchasesAllowed)(), {
+        accountId: Nu,
+        data: Xu
+      } = (0, wu.i)(hu.e, Ju);
+      if ((0, Eu.useEffect)((() => {
+          if (Ju) return hu.e.watchAccount(), Zu.c.addRefetchListener("billing", (uu => {
+            "reconnected" === uu ? hu.e.refreshAfterReconnect() : hu.e.refresh()
           }))
-        }), [TU]), !TU || !(0, HU.Bc)(EU) || null === KU || qU !== pU.whamm) return null;
-      const cU = function(UU, RU, gU) {
-        const tU = AU.f[(0, AU.b)(AU.f, RU)],
-          pU = void 0 === tU ? void 0 : (0, zU.b)(UU.entitlements, tU.entitlementId);
-        return void 0 === pU || null === pU.expiresAt || (0, iU.f)(pU) <= gU ? null : pU.willRenew && null === pU.billingIssueDetectedAt ? {
+        }), [Ju]), !Ju || !(0, Lu.Kc)(Qu) || null === Xu || Nu !== Ku.whamm) return null;
+      const Vu = function(uu, Ru, yu) {
+        const Eu = iu.h[(0, iu.c)(iu.h, Ru)],
+          Ku = void 0 === Eu ? void 0 : (0, Yu.b)(uu.entitlements, Eu.entitlementId);
+        return void 0 === Ku || null === Ku.expiresAt || (0, Pu.f)(Ku) <= yu ? null : Ku.willRenew && null === Ku.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(pU.expiresAt, gU)
+          at: Math.max(Ku.expiresAt, yu)
         } : {
           renews: !1,
-          at: (0, iU.f)(pU)
+          at: (0, Pu.f)(Ku)
         }
-      }(KU, EU.tier, Date.now());
-      if (null === cU) return null;
-      const GU = cU.renews ? "store:renewsOn" : "store:endsOn";
-      return RU(GU, {
-        date: new Date(cU.at).toLocaleDateString((0, PU.n)(gU.code, GU), {
+      }(Xu, Qu.tier, Date.now());
+      if (null === Vu) return null;
+      const ru = Vu.renews ? "store:renewsOn" : "store:endsOn";
+      return Ru(ru, {
+        date: new Date(Vu.at).toLocaleDateString((0, mu.n)(yu.code, ru), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var DU = gU(1344),
-      LU = gU(1207),
-      NU = gU(4540),
-      lU = gU(1444),
-      OU = gU(3325),
-      UR = gU(2074);
+    var qu = yu(1325),
+      Ou = yu(1191),
+      vu = yu(4659),
+      au = yu(1422),
+      fu = yu(3473),
+      uR = yu(2146);
 
-    function RR(UU) {
+    function RR(uu) {
       let {
-        showing: RU
-      } = UU;
+        showing: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, PU.B)(), {
-        data: tU,
-        failed: pU
-      } = (0, yU.j)(OU.i, RU);
-      return 0 === (null === tU || void 0 === tU ? void 0 : tU.length) || null === tU && !pU ? null : (0, cU.jsxs)("div", {
+        t: yu
+      } = (0, mu.E)(), {
+        data: Eu,
+        failed: Ku
+      } = (0, wu.i)(fu.f, Ru);
+      return 0 === (null === Eu || void 0 === Eu ? void 0 : Eu.length) || null === Eu && !Ku ? null : (0, Vu.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, cU.jsx)("div", {
+        children: [(0, Vu.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: gU("paymentHistory:title")
-        }), null === tU && pU && (0, cU.jsx)("div", {
+          children: yu("paymentHistory:title")
+        }), null === Eu && Ku && (0, Vu.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: gU("paymentHistory:loadFailed")
-        }), null !== tU && (0, cU.jsx)("ul", {
+          children: yu("paymentHistory:loadFailed")
+        }), null !== Eu && (0, Vu.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: tU.map((UU => (0, cU.jsxs)("li", {
+          children: Eu.map((uu => (0, Vu.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, cU.jsx)(UR.d, {
-              entry: UU
-            }), (0, cU.jsxs)("div", {
+            children: [(0, Vu.jsx)(uR.e, {
+              entry: uu
+            }), (0, Vu.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, cU.jsx)("div", {
-                children: (0, UR.h)(gU, UU)
-              }), (0, cU.jsxs)("div", {
+              children: [(0, Vu.jsx)("div", {
+                children: (0, uR.j)(yu, uu)
+              }), (0, Vu.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(UU.at).toLocaleDateString(), "number" === typeof UU.orderId && ` \xb7 ${gU("paymentHistory:order",{orderId:UU.orderId})}`]
+                children: [new Date(uu.at).toLocaleDateString(), "number" === typeof uu.orderId && ` \xb7 ${yu("paymentHistory:order",{orderId:uu.orderId})}`]
               })]
             })]
-          }, (0, OU.e)(UU))))
+          }, (0, fu.e)(uu))))
         })]
       })
     }
-    var gR = gU(1768),
-      tR = gU(1240),
-      pR = gU(1333),
-      ER = gU(1305),
-      PR = gU(1675),
-      TR = gU(2715);
-    async function qR() {
+    var yR = yu(1814),
+      ER = yu(1217),
+      KR = yu(1311),
+      QR = yu(1269),
+      mR = yu(1699),
+      JR = yu(2801);
+    async function NR() {
       try {
-        return function(UU) {
-          const RU = new Map;
+        return function(uu) {
+          const Ru = new Map;
           for (const {
-              store: gU,
-              status: tU,
-              autoRenewStatus: pU,
-              managementUrl: EU
+              store: yu,
+              status: Eu,
+              autoRenewStatus: Ku,
+              managementUrl: Qu
             }
-            of Object.values(UU.subscriptions)) !(0, iU.j)(gU) || (0, iU.n)(tU) || "willNotRenew" === pU || RU.has(gU) || RU.set(gU, null !== EU && void 0 !== EU ? EU : iU.p[gU]);
-          return Array.from(RU, (UU => {
-            let [RU, gU] = UU;
+            of Object.values(uu.subscriptions)) !(0, Pu.i)(yu) || (0, Pu.l)(Eu) || "willNotRenew" === Ku || Ru.has(yu) || Ru.set(yu, null !== Qu && void 0 !== Qu ? Qu : Pu.o[yu]);
+          return Array.from(Ru, (uu => {
+            let [Ru, yu] = uu;
             return {
-              store: RU,
-              managementUrl: gU
+              store: Ru,
+              managementUrl: yu
             }
           }))
-        }(await (0, PR.i)((0, TR.g)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (UU) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", UU), null
+        }(await (0, mR.i)((0, JR.i)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (uu) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", uu), null
       }
     }
-    var KR = gU(299),
-      cR = gU(2307);
-    const GR = {
+    var XR = yu(330),
+      VR = yu(2386);
+    const rR = {
       appStore: {
         name: "App Store",
-        ...KR.Sb.appStore
+        ...XR._b.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...KR.Sb.googlePlay
+        ...XR._b.googlePlay
       },
       discord: {
         name: "Discord",
-        ...KR.Sb.discord
+        ...XR._b.discord
       }
     };
 
-    function jR(UU) {
+    function BR(uu) {
       let {
-        warning: RU,
-        subscriptions: gU
-      } = UU;
+        warning: Ru,
+        subscriptions: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, PU.B)();
-      return null !== gU && 0 === gU.length ? (0, cU.jsx)(cU.Fragment, {
-        children: tU(RU)
-      }) : (0, cU.jsxs)("div", {
+        t: Eu
+      } = (0, mu.E)();
+      return null !== yu && 0 === yu.length ? (0, Vu.jsx)(Vu.Fragment, {
+        children: Eu(Ru)
+      }) : (0, Vu.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [tU(RU), null === gU && (0, cU.jsx)("div", {
+        children: [Eu(Ru), null === yu && (0, Vu.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: tU("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== gU && (0, cU.jsxs)(cU.Fragment, {
-          children: [(0, cU.jsx)("div", {
+          children: Eu("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== yu && (0, Vu.jsxs)(Vu.Fragment, {
+          children: [(0, Vu.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: tU("auth:deleteAccountStoreSubscriptions")
-          }), (0, cU.jsx)(cR.b, {
+            children: Eu("auth:deleteAccountStoreSubscriptions")
+          }), (0, Vu.jsx)(VR.b, {
             className: "DeleteAccountSubtitleLinks",
-            links: gU.map((UU => {
+            links: yu.map((uu => {
               let {
-                store: RU,
-                managementUrl: gU
-              } = UU;
+                store: Ru,
+                managementUrl: yu
+              } = uu;
               return {
-                ...GR[RU],
-                url: gU
+                ...rR[Ru],
+                url: yu
               }
             }))
           })]
@@ -399,703 +399,703 @@ export const modules = {
       })
     }
 
-    function uR(UU) {
+    function xR(uu) {
       let {
-        showing: RU
-      } = UU;
+        showing: Ru
+      } = uu;
       const {
-        userContext: gU,
-        isUserContextUpdating: pU
-      } = (0, uU.e)(), {
-        t: EU
-      } = (0, PU.B)(), [TU, qU] = (0, tU.useState)(!1), [KU, GU] = (0, tU.useState)(null), jU = (0, tU.useRef)(RU);
-      (0, tU.useEffect)((() => (jU.current = RU, () => {
-        jU.current = !1
-      })), [RU]);
-      const CU = pU || TU;
-      async function hU() {
-        const UU = function(UU) {
-            if ((0, oU.e)()) return "auth:discordActivityDeleteAccountWarning";
-            return UU ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
-          }(gU.isLoggedIn()),
-          RU = (0, gR.d)(gU.availableUserContextTypes) ? await qR() : [];
-        if (!jU.current) return tR.c.ok();
-        if (!0 !== await pR.NotificationProvider.showPromptPopup({
+        userContext: yu,
+        isUserContextUpdating: Ku
+      } = (0, xu.d)(), {
+        t: Qu
+      } = (0, mu.E)(), [Ju, Nu] = (0, Eu.useState)(!1), [Xu, ru] = (0, Eu.useState)(null), Bu = (0, Eu.useRef)(Ru);
+      (0, Eu.useEffect)((() => (Bu.current = Ru, () => {
+        Bu.current = !1
+      })), [Ru]);
+      const Su = Ku || Ju;
+      async function pu() {
+        const uu = function(uu) {
+            if ((0, Mu.c)()) return "auth:discordActivityDeleteAccountWarning";
+            return uu ? "auth:deleteAccountWarning" : "auth:deleteGuestAccountWarning"
+          }(yu.isLoggedIn()),
+          Ru = (0, yR.c)(yu.availableUserContextTypes) ? await NR() : [];
+        if (!Bu.current) return ER.c.ok();
+        if (!0 !== await KR.NotificationProvider.showPromptPopup({
             title: "auth:deleteAccountPopupTitleNamed",
             textOpts: {
               title: {
-                playerName: (0, VU.c)(gU.getPlayerName(), !eU.featureFlags.canSeeRealPlayerNames)
+                playerName: (0, su.e)(yu.getPlayerName(), !Wu.featureFlags.canSeeRealPlayerNames)
               }
             },
-            subtitle: (0, cU.jsx)(jR, {
-              warning: UU,
-              subscriptions: RU
+            subtitle: (0, Vu.jsx)(BR, {
+              warning: uu,
+              subscriptions: Ru
             }),
             confirmText: "auth:deleteAccount",
             destructive: !0,
             confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
             cancelText: "general:cancel",
             cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-          }).getResult()) return tR.c.ok();
-        const tU = await (0, ZU.postJsonWithMetricsCookiesAndJsonResponse)(`${aU.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-          gameState: wU.b.get("gameState")
+          }).getResult()) return ER.c.ok();
+        const Eu = await (0, Iu.postJsonWithMetricsCookiesAndJsonResponse)(`${Gu.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+          gameState: eu.d.get("gameState")
         }, {
           retries: 3
-        }, gU.getMetricsCookies());
-        if (tU.error) return tR.c.error(tU.error);
-        if ((0, oU.e)()) {
-          (await ER.m.discordActivity()).exit("User deleted their account")
+        }, yu.getMetricsCookies());
+        if (Eu.error) return ER.c.error(Eu.error);
+        if ((0, Mu.c)()) {
+          (await QR.p.discordActivity()).exit("User deleted their account")
         }
-        return (0, ZU.forgetStoredGuestAccount)(gU.whamm), (0, ZU.forceGlobalSignOut)(!0), tR.c.ok()
+        return (0, Iu.forgetStoredGuestAccount)(yu.whamm), (0, Iu.forceGlobalSignOut)(!0), ER.c.ok()
       }
-      return (0, cU.jsxs)("div", {
+      return (0, Vu.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, cU.jsxs)(QU.E, {
+        children: [(0, Vu.jsxs)(Tu.F, {
           onClick: async function() {
-            if (!TU) {
-              qU(!0);
+            if (!Ju) {
+              Nu(!0);
               try {
-                const UU = await hU(),
-                  RU = UU.isError() ? UU.asError().message : null;
-                GU(RU)
-              } catch (UU) {
-                console.error("Failed to delete account:", UU), GU(EU("auth:genericDeleteAccountError"))
+                const uu = await pu(),
+                  Ru = uu.isError() ? uu.asError().message : null;
+                ru(Ru)
+              } catch (uu) {
+                console.error("Failed to delete account:", uu), ru(Qu("auth:genericDeleteAccountError"))
               }
-              qU(!1)
+              Nu(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: CU,
-          children: [CU && (0, cU.jsx)("div", {
+          disabled: Su,
+          children: [Su && (0, Vu.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, cU.jsx)(IU.d, {})
-          }), EU("auth:deleteAccount")]
-        }), KU && (0, cU.jsx)("div", {
+            children: (0, Vu.jsx)(Cu.b, {})
+          }), Qu("auth:deleteAccount")]
+        }), Xu && (0, Vu.jsx)("div", {
           className: "DeleteAccountError",
-          children: KU
+          children: Xu
         })]
       })
     }
-    var CR = gU(3271),
-      hR = gU(3286),
-      QR = gU(3280);
+    var SR = yu(3398),
+      pR = yu(3415),
+      TR = yu(3411);
 
-    function eR(UU) {
+    function WR(uu) {
       let {
-        showing: RU
-      } = UU;
+        showing: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, PU.B)(), {
-        data: tU,
-        failed: pU
-      } = (0, yU.j)(CR.d, RU), EU = null === tU ? null : (0, CR.g)(tU);
-      return (0, cU.jsxs)("div", {
+        t: yu
+      } = (0, mu.E)(), {
+        data: Eu,
+        failed: Ku
+      } = (0, wu.i)(SR.d, Ru), Qu = null === Eu ? null : (0, SR.e)(Eu);
+      return (0, Vu.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, cU.jsx)("div", {
+        children: [(0, Vu.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: gU("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === EU && !pU && (0, cU.jsx)(IU.d, {}), null === EU && pU && (0, cU.jsxs)("div", {
+          children: yu("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === Qu && !Ku && (0, Vu.jsx)(Cu.b, {}), null === Qu && Ku && (0, Vu.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [gU("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, cU.jsx)(QU.e, {
+          children: [yu("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, Vu.jsx)(Tu.e, {
             className: "SmallTextLight",
             onClick: () => {
-              CR.d.refresh()
+              SR.d.refresh()
             },
-            children: gU("general:tryAgain")
+            children: yu("general:tryAgain")
           })]
-        }), 0 === (null === EU || void 0 === EU ? void 0 : EU.length) && (0, cU.jsx)("div", {
+        }), 0 === (null === Qu || void 0 === Qu ? void 0 : Qu.length) && (0, Vu.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: gU("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== EU && EU.length > 0 && (0, cU.jsx)("ul", {
+          children: yu("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== Qu && Qu.length > 0 && (0, Vu.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: EU.map((UU => {
+          children: Qu.map((uu => {
             let {
-              name: RU,
-              exclusion: tU
-            } = UU;
-            const pU = QR.e[tU];
-            return (0, cU.jsxs)("li", {
+              name: Ru,
+              exclusion: Eu
+            } = uu;
+            const Ku = TR.e[Eu];
+            return (0, Vu.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, cU.jsx)("div", {
+              children: [(0, Vu.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: RU
-              }), (0, cU.jsx)(QU.g, {
+                children: Ru
+              }), (0, Vu.jsx)(Tu.f, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, hR.i)(pU, RU, {
+                  (0, pR.g)(Ku, Ru, {
                     chatMessage: null
                   })
                 },
-                children: gU(QR.h[pU].text)
+                children: yu(TR.g[Ku].text)
               })]
-            }, RU)
+            }, Ru)
           }))
         })]
       })
     }
-    const WR = (0, tU.memo)((function(UU) {
-      var RU;
+    const jR = (0, Eu.memo)((function(uu) {
+      var Ru;
       let {
-        showing: gU,
-        inGame: pU
-      } = UU;
+        showing: yu,
+        inGame: Ku
+      } = uu;
       const {
-        t: qU,
-        selectedLanguage: KU
-      } = (0, PU.B)(), {
-        hideSocialLocationFrom: GU
-      } = (0, wU.l)(["hideSocialLocationFrom"]), CU = (0, jU.b)(), {
-        userContext: hU,
-        isUserContextUpdating: WU
-      } = (0, uU.e)(), [fU, xU] = (0, tU.useState)(null !== (RU = hU.getPlayerName()) && void 0 !== RU ? RU : ""), [nU, bU] = (0, tU.useState)(null), {
-        purchasing: yU,
-        outcome: kU,
-        purchase: FU
-      } = (0, YU.b)("/super-rank-welcome"), iU = (0, HU.jc)((0, PU.n)(KU.code, "general:timeLeft"), hU.superRankInfo), AU = MU(gU), zU = iU ? qU("general:timeLeft", {
-        time: iU
-      }) : AU, [OU, UR] = (0, tU.useState)(!1), [gR, tR] = (0, tU.useState)(!1), pR = (0, tU.useRef)(null), ER = (0, tU.useRef)(null), PR = (0, vU.g)({
+        t: Nu,
+        selectedLanguage: Xu
+      } = (0, mu.E)(), {
+        hideSocialLocationFrom: ru
+      } = (0, eu.j)(["hideSocialLocationFrom"]), Su = (0, Bu.c)(), {
+        userContext: pu,
+        isUserContextUpdating: ju
+      } = (0, xu.d)(), [Hu, du] = (0, Eu.useState)(null !== (Ru = pu.getPlayerName()) && void 0 !== Ru ? Ru : ""), [Au, Du] = (0, Eu.useState)(null), {
+        purchasing: wu,
+        outcome: Zu,
+        purchase: hu
+      } = (0, Uu.e)("/super-rank-welcome"), Pu = (0, Lu.sc)((0, mu.n)(Xu.code, "general:timeLeft"), pu.superRankInfo), iu = ou(yu), Yu = Pu ? Nu("general:timeLeft", {
+        time: Pu
+      }) : iu, [fu, uR] = (0, Eu.useState)(!1), [yR, ER] = (0, Eu.useState)(!1), KR = (0, Eu.useRef)(null), QR = (0, Eu.useRef)(null), mR = (0, gu.g)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), TR = null === PR, qR = null !== PR && void 0 !== PR ? PR : [], KR = hU !== ZU.NULL_USER_CONTEXT && !hU.isLoggedIn(), cR = KR && 0 !== (null === PR || void 0 === PR ? void 0 : PR.length), [GR, jR] = (0, tU.useState)([]), [CR, hR] = (0, tU.useState)(!1), QR = hU.playerHasRank("youtuber"), WR = (0, tU.useCallback)((() => dU.c.getPlayerProfile(hU, {
-        lowerCaseName: hU.getPlayerName().toLowerCase()
-      }).then((UU => {
-        jR(UU.socialLinks)
-      })).catch((UU => {
-        console.error("Failed to refresh social links", UU)
-      }))), [hU]);
+      }), JR = null === mR, NR = null !== mR && void 0 !== mR ? mR : [], XR = pu !== Iu.NULL_USER_CONTEXT && !pu.isLoggedIn(), VR = XR && 0 !== (null === mR || void 0 === mR ? void 0 : mR.length), [rR, BR] = (0, Eu.useState)([]), [SR, pR] = (0, Eu.useState)(!1), TR = pu.playerHasRank("youtuber"), jR = (0, Eu.useCallback)((() => cu.e.getPlayerProfile(pu, {
+        lowerCaseName: pu.getPlayerName().toLowerCase()
+      }).then((uu => {
+        BR(uu.socialLinks)
+      })).catch((uu => {
+        console.error("Failed to refresh social links", uu)
+      }))), [pu]);
 
-      function xR(UU) {
-        UU !== fU && ((0, VU.m)(UU) ? (UU = (0, VU.q)(UU), bU("Only letters, numbers, and _")) : bU(null), pR.current && (pR.current.value = UU), xU(UU))
+      function dR(uu) {
+        uu !== Hu && ((0, su.p)(uu) ? (uu = (0, su.s)(uu), Du("Only letters, numbers, and _")) : Du(null), KR.current && (KR.current.value = uu), du(uu))
       }
-      return (0, tU.useEffect)((() => (!0 === gU ? (clearInterval(ER.current), ER.current = setInterval(CU, 1e3)) : clearInterval(ER.current), () => {
-        clearInterval(ER.current)
-      })), [gU, CU]), (0, tU.useEffect)((() => {
-        var UU;
-        xU(null !== (UU = hU.getPlayerName()) && void 0 !== UU ? UU : "")
-      }), [hU]), (0, tU.useEffect)((() => {
-        if (!gU || !QR || WU) return;
-        let UU = !1;
-        return hR(!0), jR([]), dU.c.getPlayerProfile(hU, {
-          lowerCaseName: hU.getPlayerName().toLowerCase()
-        }).then((RU => {
-          UU || jR(RU.socialLinks)
-        })).catch((UU => {
-          console.error("Failed to load social links", UU)
+      return (0, Eu.useEffect)((() => (!0 === yu ? (clearInterval(QR.current), QR.current = setInterval(Su, 1e3)) : clearInterval(QR.current), () => {
+        clearInterval(QR.current)
+      })), [yu, Su]), (0, Eu.useEffect)((() => {
+        var uu;
+        du(null !== (uu = pu.getPlayerName()) && void 0 !== uu ? uu : "")
+      }), [pu]), (0, Eu.useEffect)((() => {
+        if (!yu || !TR || ju) return;
+        let uu = !1;
+        return pR(!0), BR([]), cu.e.getPlayerProfile(pu, {
+          lowerCaseName: pu.getPlayerName().toLowerCase()
+        }).then((Ru => {
+          uu || BR(Ru.socialLinks)
+        })).catch((uu => {
+          console.error("Failed to load social links", uu)
         })).finally((() => {
-          UU || hR(!1)
+          uu || pR(!1)
         })), () => {
-          UU = !0
+          uu = !0
         }
-      }), [gU, QR, WU, hU]), (0, cU.jsxs)("div", {
-        className: EU()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: pU
+      }), [yu, TR, ju, pu]), (0, Vu.jsxs)("div", {
+        className: Qu()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: Ku
         }),
-        children: [pU && (0, cU.jsx)("div", {
+        children: [Ku && (0, Vu.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: qU("settingsMenu:accountSettingsInGameWarning")
-        }), (0, cU.jsxs)("div", {
+          children: Nu("settingsMenu:accountSettingsInGameWarning")
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [qU("homePage:discordNamePopupTitle"), (0, cU.jsxs)(BU.LinkPreserveSearch, {
+            children: [Nu("homePage:discordNamePopupTitle"), (0, Vu.jsxs)(nu.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, rU.j)({
-                name: hU.getPlayerName()
+              to: (0, tu.f)({
+                name: pu.getPlayerName()
               }),
               onClick: () => {
-                wU.b.set({
+                eu.d.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, cU.jsx)(TU.c, {
+              children: [(0, Vu.jsx)(Ju.c, {
                 name: "arrow-up-right-from-square"
-              }), " ", qU("profileCard:viewProfile")]
+              }), " ", Nu("profileCard:viewProfile")]
             })]
-          }), (0, cU.jsxs)("div", {
+          }), (0, Vu.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, cU.jsxs)("div", {
+            children: [(0, Vu.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [eU.featureFlags.canChangeName && (0, cU.jsx)(mU.d, {
+              children: [Wu.featureFlags.canChangeName && (0, Vu.jsx)(bu.b, {
                 className: "EnterName",
-                placeholderText: qU("homePage:enterName"),
-                maxLength: VU.h,
-                defaultValue: fU,
-                onValueChange: UU => {
-                  xR(UU)
+                placeholderText: Nu("homePage:enterName"),
+                maxLength: su.k,
+                defaultValue: Hu,
+                onValueChange: uu => {
+                  dR(uu)
                 },
-                forcedText: OU || !eU.featureFlags.canChangeName ? fU : null,
+                forcedText: fu || !Wu.featureFlags.canChangeName ? Hu : null,
                 blurOnEnter: !0,
-                domRef: pR
-              }), (0, cU.jsx)(QU.e, {
+                domRef: KR
+              }), (0, Vu.jsx)(Tu.e, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  xR((0, VU.f)())
+                  dR((0, su.h)())
                 },
-                children: (0, cU.jsx)(TU.c, {
+                children: (0, Vu.jsx)(Ju.c, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !eU.featureFlags.canChangeName && (0, cU.jsx)("div", {
+              }), !Wu.featureFlags.canChangeName && (0, Vu.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, VU.c)(fU, !eU.featureFlags.canSeeRealPlayerNames)
+                children: (0, su.e)(Hu, !Wu.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, cU.jsx)(QU.e, {
+            }), (0, Vu.jsx)(Tu.e, {
               className: "ChooseNameButton",
-              disabled: OU || fU === hU.getPlayerName(),
+              disabled: fu || Hu === pu.getPlayerName(),
               onClick: () => {
-                fU.length < VU.j ? bU(qU("homePage:changeNameMinLengthError", {
-                  length: VU.j
-                })) : fU.length > VU.h ? bU(qU("homePage:changeNameMaxLengthError", {
-                  length: VU.h
-                })) : (UR(!0), bU(null), async function(UU, RU, gU, tU) {
-                  const pU = await (0, ZU.postJsonWithMetricsCookiesAndJsonResponse)(`${aU.clientSideServerUrls.indexUrl}/index/name/update`, {
-                    name: UU
+                Hu.length < su.l ? Du(Nu("homePage:changeNameMinLengthError", {
+                  length: su.l
+                })) : Hu.length > su.k ? Du(Nu("homePage:changeNameMaxLengthError", {
+                  length: su.k
+                })) : (uR(!0), Du(null), async function(uu, Ru, yu, Eu) {
+                  const Ku = await (0, Iu.postJsonWithMetricsCookiesAndJsonResponse)(`${Gu.clientSideServerUrls.indexUrl}/index/name/update`, {
+                    name: uu
                   }, {
                     retries: 3
-                  }, RU.getMetricsCookies()).catch((UU => (console.error("Bad response from the server when trying to update name:", UU), {
+                  }, Ru.getMetricsCookies()).catch((uu => (console.error("Bad response from the server when trying to update name:", uu), {
                     err: "An error occurred trying to change your name! Please report on discord what steps you took to get this error message."
                   })));
-                  pU.err ? (console.error("Error when trying to get with new name from DB", pU.err), tU(pU.err)) : !0 === pU.nameExists ? tU("Name is already taken") : gU(UU)
-                }(fU, hU, (UU => {
-                  hU.setPlayerName(UU), UR(!1)
-                }), (UU => {
-                  bU(UU), UR(!1)
+                  Ku.err ? (console.error("Error when trying to get with new name from DB", Ku.err), Eu(Ku.err)) : !0 === Ku.nameExists ? Eu("Name is already taken") : yu(uu)
+                }(Hu, pu, (uu => {
+                  pu.setPlayerName(uu), uR(!1)
+                }), (uu => {
+                  Du(uu), uR(!1)
                 })))
               },
-              children: qU("general:choose")
+              children: Nu("general:choose")
             })]
-          }), nU && (0, cU.jsx)("div", {
+          }), Au && (0, Vu.jsx)("div", {
             className: "ChooseAccNameError",
-            children: nU
+            children: Au
           })]
-        }), (0, cU.jsx)(JU.b, {
+        }), (0, Vu.jsx)(ku.c, {
           label: (() => {
-            if ((0, LU.q)(GU)) {
-              const UU = (0, PU.n)(KU.code, "general:timeLeft"),
-                RU = (0, HU.kb)(UU, Date.now(), GU + LU.m);
-              return `${qU("settingsMenu:hideSocialLocation")} (${qU("general:timeLeft",{time:RU})})`
+            if ((0, Ou.j)(ru)) {
+              const uu = (0, mu.n)(Xu.code, "general:timeLeft"),
+                Ru = (0, Lu.fb)(uu, Date.now(), ru + Ou.h);
+              return `${Nu("settingsMenu:hideSocialLocation")} (${Nu("general:timeLeft",{time:Ru})})`
             }
-            return qU("settingsMenu:hideSocialLocation")
+            return Nu("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const UU = !(0, LU.q)(GU);
-            (0, lU.reportAnalyticsClick)({
+            const uu = !(0, Ou.j)(ru);
+            (0, au.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: UU ? "on" : "off"
-            }), tR(!0), dU.c.setHideSocialLocation(hU, UU).then((() => {
-              wU.b.set({
-                hideSocialLocationFrom: UU ? Date.now() : null
+              value: uu ? "on" : "off"
+            }), ER(!0), cu.e.setHideSocialLocation(pu, uu).then((() => {
+              eu.d.set({
+                hideSocialLocationFrom: uu ? Date.now() : null
               })
             })).finally((() => {
-              tR(!1)
+              ER(!1)
             }))
           },
-          checked: (0, LU.q)(GU),
-          disabled: gR
-        }), QR && (0, cU.jsxs)("div", {
+          checked: (0, Ou.j)(ru),
+          disabled: yR
+        }), TR && (0, Vu.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, cU.jsx)("div", {
+          children: [(0, Vu.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: qU("settingsMenu:socialLinks")
-          }), CR && (0, cU.jsx)(IU.d, {}), !CR && (0, cU.jsx)(NU.c, {
-            socialLinks: GR,
+            children: Nu("settingsMenu:socialLinks")
+          }), SR && (0, Vu.jsx)(Cu.b, {}), !SR && (0, Vu.jsx)(vu.c, {
+            socialLinks: rR,
             editable: !0,
-            userContext: hU,
-            onLinksUpdated: WR
+            userContext: pu,
+            onLinksUpdated: jR
           })]
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, cU.jsx)("div", {
+          children: [(0, Vu.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: qU(cR ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), TR && (0, cU.jsx)(IU.d, {}), !TR && 0 === qR.length && (0, cU.jsx)("div", {
+            children: Nu(VR ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), JR && (0, Vu.jsx)(Cu.b, {}), !JR && 0 === NR.length && (0, Vu.jsx)("div", {
             className: "NoLoginOptions",
-            children: qU("auth:noLoginOptions")
-          }), !TR && qR.length > 0 && "crazygames" !== oU.t && (0, cU.jsx)("div", {
+            children: Nu("auth:noLoginOptions")
+          }), !JR && NR.length > 0 && "crazygames" !== Mu.v && (0, Vu.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: qR
-          }), !TR && qR.length > 0 && "crazygames" === oU.t && (0, cU.jsxs)("div", {
+            children: NR
+          }), !JR && NR.length > 0 && "crazygames" === Mu.v && (0, Vu.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [qR[0], qR.length > 1 && (0, cU.jsxs)(cU.Fragment, {
-              children: [(0, cU.jsxs)("div", {
+            children: [NR[0], NR.length > 1 && (0, Vu.jsxs)(Vu.Fragment, {
+              children: [(0, Vu.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, cU.jsx)("span", {
+                children: [(0, Vu.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: qU("auth:legacyLoginOptions")
-                }), (0, cU.jsx)(DU.d, {
+                  children: Nu("auth:legacyLoginOptions")
+                }), (0, Vu.jsx)(qu.e, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: qU("auth:legacyLoginOptionsInfo")
+                  hoverInfo: Nu("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, cU.jsx)("div", {
+              }), (0, Vu.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: qR.slice(1)
+                children: NR.slice(1)
               })]
             })]
-          }), eU.featureFlags.useLogin && (null !== hU.loggedInInfo || hU.isLoggedIn()) && (0, cU.jsxs)(cU.Fragment, {
-            children: [(0, cU.jsx)("div", {
+          }), Wu.featureFlags.useLogin && (null !== pu.loggedInInfo || pu.isLoggedIn()) && (0, Vu.jsxs)(Vu.Fragment, {
+            children: [(0, Vu.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, cU.jsxs)(QU.E, {
+            }), (0, Vu.jsxs)(Tu.F, {
               onClick: () => {
-                (0, ZU.forceGlobalSignOut)()
+                (0, Iu.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, cU.jsx)(TU.c, {
+              children: [(0, Vu.jsx)(Ju.c, {
                 name: "right-from-bracket"
-              }), qU("auth:signOut")]
+              }), Nu("auth:signOut")]
             })]
           })]
-        }), !hU.playerHasRank("super") && (0, sU.purchasesAllowed)() && (0, cU.jsxs)("div", {
+        }), !pu.playerHasRank("super") && (0, Fu.purchasesAllowed)() && (0, Vu.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, cU.jsx)(TU.c, {
+            children: [(0, Vu.jsx)(Ju.c, {
               name: "bolt"
-            }), qU("homePage:superRank")]
-          }), (0, cU.jsxs)("div", {
+            }), Nu("homePage:superRank")]
+          }), (0, Vu.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, cU.jsxs)(QU.j, {
+            children: [(0, Vu.jsxs)(Tu.l, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, SU.m)({
+                (0, zu.n)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, cU.jsx)(TU.c, {
+              children: [(0, Vu.jsx)(Ju.c, {
                 name: "bolt"
-              }), qU("homePage:getSuperRank")]
-            }), (0, cU.jsxs)(QU.j, {
+              }), Nu("homePage:getSuperRank")]
+            }), (0, Vu.jsxs)(Tu.l, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, SU.m)({
+                (0, zu.n)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, cU.jsx)(TU.c, {
+              children: [(0, Vu.jsx)(Ju.c, {
                 name: "bolt"
-              }), qU("homePage:giftSuperRank")]
+              }), Nu("homePage:giftSuperRank")]
             })]
           })]
-        }), hU.playerHasRank("super") && (0, cU.jsxs)("div", {
+        }), pu.playerHasRank("super") && (0, Vu.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, cU.jsx)(TU.c, {
+            children: [(0, Vu.jsx)(Ju.c, {
               name: "bolt"
-            }), qU("homePage:superRank"), zU && (0, cU.jsxs)("div", {
+            }), Nu("homePage:superRank"), Yu && (0, Vu.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", zU, ")"]
+              children: ["(", Yu, ")"]
             })]
-          }), (0, sU.purchasesAllowed)() && (0, cU.jsxs)("div", {
+          }), (0, Fu.purchasesAllowed)() && (0, Vu.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, HU.Bc)(hU.superRankInfo) && (0, cU.jsxs)(QU.j, {
+            children: [!(0, Lu.Kc)(pu.superRankInfo) && (0, Vu.jsxs)(Tu.l, {
               className: "AccountSettingsSuperRankProlong",
-              loading: yU,
+              loading: wu,
               onClick: () => {
-                FU(XU.l.id, null)
+                hu(lu.j.id, null)
               },
-              children: [(0, cU.jsx)(TU.c, {
+              children: [(0, Vu.jsx)(Ju.c, {
                 name: "bolt"
-              }), qU("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: XU.l.product.days,
-                price: XU.l.price
+              }), Nu("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: lu.j.product.days,
+                price: lu.j.price
               })]
-            }), (0, cU.jsxs)(QU.j, {
+            }), (0, Vu.jsxs)(Tu.l, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, SU.m)({
+                (0, zu.n)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, cU.jsx)(TU.c, {
+              children: [(0, Vu.jsx)(Ju.c, {
                 name: "bolt"
-              }), qU("homePage:giftSuperRank")]
+              }), Nu("homePage:giftSuperRank")]
             })]
-          }), kU && (0, cU.jsx)("div", {
+          }), Zu && (0, Vu.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: qU(kU.translationKey)
+            children: Nu(Zu.translationKey)
           })]
-        }), (0, cU.jsx)(RR, {
-          showing: gU
-        }), eU.featureFlags.useSocialFeatures && (0, cU.jsx)(eR, {
-          showing: gU
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsx)(RR, {
+          showing: yu
+        }), Wu.featureFlags.useSocialFeatures && (0, Vu.jsx)(WR, {
+          showing: yu
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, cU.jsx)("div", {
+            children: [(0, Vu.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: qU(fR(KR, cR))
-            }), (0, oU.e)() && (0, cU.jsx)("div", {
+              children: Nu(HR(XR, VR))
+            }), (0, Mu.c)() && (0, Vu.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: qU("auth:discordActivityKickWarning")
-            }), (0, cU.jsx)(uR, {
-              showing: gU
+              children: Nu("auth:discordActivityKickWarning")
+            }), (0, Vu.jsx)(xR, {
+              showing: yu
             })]
-          }), (0, cU.jsx)("div", {
+          }), (0, Vu.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: qU("auth:deleteAccountWarning")
+            children: Nu("auth:deleteAccountWarning")
           })]
         })]
       })
     }));
 
-    function fR(UU, RU) {
-      return UU ? RU ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function HR(uu, Ru) {
+      return uu ? Ru ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var xR = gU(8893),
-      mR = gU(2825),
-      IR = gU(1249),
-      JR = gU(1403);
-    const wR = (0, tU.memo)((function(UU) {
+    var dR = yu(8955),
+      bR = yu(2916),
+      CR = yu(1224),
+      kR = yu(1389);
+    const eR = (0, Eu.memo)((function(uu) {
         let {
-          inGame: RU
-        } = UU;
+          inGame: Ru
+        } = uu;
         const {
-          t: gU,
-          selectedLanguage: tU
-        } = (0, PU.B)(), {
-          clientEscMenuOptions: pU,
-          showDebugOverlay: EU
-        } = (0, wU.l)(["clientEscMenuOptions", "showDebugOverlay"]), TU = (0, CU.g)("hideCoordinates");
-        let qU = "settingsMenu:showCoordinates",
-          KU = "settingsMenu:showChunkCoordinates";
+          t: yu,
+          selectedLanguage: Eu
+        } = (0, mu.E)(), {
+          clientEscMenuOptions: Ku,
+          showDebugOverlay: Qu
+        } = (0, eu.j)(["clientEscMenuOptions", "showDebugOverlay"]), Ju = (0, Su.g)("hideCoordinates");
+        let Nu = "settingsMenu:showCoordinates",
+          Xu = "settingsMenu:showChunkCoordinates";
 
-        function GU(UU) {
-          const RU = new Intl.DisplayNames([UU], {
+        function ru(uu) {
+          const Ru = new Intl.DisplayNames([uu], {
             type: "language"
-          }).of(UU);
-          return RU.charAt(0).toUpperCase() + RU.slice(1)
+          }).of(uu);
+          return Ru.charAt(0).toUpperCase() + Ru.slice(1)
         }
-        return TU && (qU = "settingsMenu:showCoordinatesHidden", KU = "settingsMenu:showChunkCoordinatesHidden"), (0, cU.jsxs)("div", {
+        return Ju && (Nu = "settingsMenu:showCoordinatesHidden", Xu = "settingsMenu:showChunkCoordinatesHidden"), (0, Vu.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [RU && eU.featureFlags.canUseInviteLinks && (0, cU.jsxs)("div", {
+          children: [Ru && Wu.featureFlags.canUseInviteLinks && (0, Vu.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, cU.jsx)("div", {
+            children: [(0, Vu.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: gU("settingsMenu:inviteLink")
-            }), (0, cU.jsx)(xR.d, {})]
-          }), (0, cU.jsxs)("div", {
+              children: yu("settingsMenu:inviteLink")
+            }), (0, Vu.jsx)(dR.e, {})]
+          }), (0, Vu.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, cU.jsx)("div", {
+            children: [(0, Vu.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: gU("settingsMenu:language")
-            }), (0, cU.jsx)(mR.c, {
-              options: Object.entries(PU.h).map((UU => {
-                let [RU, gU] = UU;
+              children: yu("settingsMenu:language")
+            }), (0, Vu.jsx)(bR.d, {
+              options: Object.entries(mu.i).map((uu => {
+                let [Ru, yu] = uu;
                 return {
-                  label: (0, cU.jsxs)("div", {
+                  label: (0, Vu.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, cU.jsx)("img", {
-                      src: gU.flagImg,
+                    children: [(0, Vu.jsx)("img", {
+                      src: yu.flagImg,
                       alt: "flag"
-                    }), (0, cU.jsxs)("span", {
-                      children: [GU(RU), " ", (0, cU.jsxs)("span", {
+                    }), (0, Vu.jsxs)("span", {
+                      children: [ru(Ru), " ", (0, Vu.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", RU, ")"]
+                        children: ["(", Ru, ")"]
                       })]
                     })]
                   }),
-                  value: RU
+                  value: Ru
                 }
               })),
-              value: tU.code,
-              onChange: UU => {
-                IR.g.get().setCurrentLanguage(UU.value)
+              value: Eu.code,
+              onChange: uu => {
+                CR.f.get().setCurrentLanguage(uu.value)
               }
             })]
-          }), !(0, eU.isMobileApp)() && (0, JR.f)() && eU.featureFlags.useForceRotateForceFullscreenOverlay && (0, cU.jsx)(JU.b, {
-            label: gU("settingsMenu:disableFullscreenMode"),
-            checked: pU.disableFullscreen,
-            onClick: UU => {
-              wU.b.setClientEscMenuOptions({
-                disableFullscreen: UU
+          }), !(0, Wu.isMobileApp)() && (0, kR.g)() && Wu.featureFlags.useForceRotateForceFullscreenOverlay && (0, Vu.jsx)(ku.c, {
+            label: yu("settingsMenu:disableFullscreenMode"),
+            checked: Ku.disableFullscreen,
+            onClick: uu => {
+              eu.d.setClientEscMenuOptions({
+                disableFullscreen: uu
               })
             }
-          }), (0, cU.jsx)(JU.b, {
-            label: gU(qU),
-            checked: pU.showCoordinates,
-            onClick: UU => {
-              wU.b.setClientEscMenuOptions({
-                showCoordinates: UU
+          }), (0, Vu.jsx)(ku.c, {
+            label: yu(Nu),
+            checked: Ku.showCoordinates,
+            onClick: uu => {
+              eu.d.setClientEscMenuOptions({
+                showCoordinates: uu
               })
             },
-            disabled: TU
-          }), (0, cU.jsx)(JU.b, {
-            label: gU(KU),
-            checked: pU.showChunkCoordinates,
-            onClick: UU => {
-              wU.b.setClientEscMenuOptions({
-                showChunkCoordinates: UU
+            disabled: Ju
+          }), (0, Vu.jsx)(ku.c, {
+            label: yu(Xu),
+            checked: Ku.showChunkCoordinates,
+            onClick: uu => {
+              eu.d.setClientEscMenuOptions({
+                showChunkCoordinates: uu
               })
             },
-            disabled: TU
-          }), (0, cU.jsx)(JU.b, {
-            label: gU("settingsMenu:showFps"),
-            checked: pU.showFPS,
-            onClick: UU => {
-              wU.b.setClientEscMenuOptions({
-                showFPS: UU
+            disabled: Ju
+          }), (0, Vu.jsx)(ku.c, {
+            label: yu("settingsMenu:showFps"),
+            checked: Ku.showFPS,
+            onClick: uu => {
+              eu.d.setClientEscMenuOptions({
+                showFPS: uu
               })
             }
-          }), (0, cU.jsx)(JU.b, {
-            label: gU("settingsMenu:disableBunnyHopping"),
-            checked: pU.disableBunnyHopping,
-            onClick: UU => {
-              wU.b.setClientEscMenuOptions({
-                disableBunnyHopping: UU
+          }), (0, Vu.jsx)(ku.c, {
+            label: yu("settingsMenu:disableBunnyHopping"),
+            checked: Ku.disableBunnyHopping,
+            onClick: uu => {
+              eu.d.setClientEscMenuOptions({
+                disableBunnyHopping: uu
               })
             }
-          }), (0, ER.z)() && (0, cU.jsx)(JU.b, {
-            label: gU("settingsMenu:showChat"),
-            checked: pU.showChat,
-            onClick: UU => {
-              wU.b.setClientEscMenuOptions({
-                showChat: UU
+          }), (0, QR.G)() && (0, Vu.jsx)(ku.c, {
+            label: yu("settingsMenu:showChat"),
+            checked: Ku.showChat,
+            onClick: uu => {
+              eu.d.setClientEscMenuOptions({
+                showChat: uu
               })
             }
-          }), (0, cU.jsx)(JU.b, {
-            label: gU("settingsMenu:showDebugOverlay"),
-            checked: EU,
-            onClick: UU => {
-              wU.b.set({
-                showDebugOverlay: UU
+          }), (0, Vu.jsx)(ku.c, {
+            label: yu("settingsMenu:showDebugOverlay"),
+            checked: Qu,
+            onClick: uu => {
+              eu.d.set({
+                showDebugOverlay: uu
               })
             }
-          }), eU.featureFlags.useSocialFeatures && (0, cU.jsx)(JU.b, {
-            label: gU("settingsMenu:showFriendOnlineToasts"),
-            checked: pU.showFriendOnlineToasts,
-            onClick: UU => {
-              wU.b.setClientEscMenuOptions({
-                showFriendOnlineToasts: UU
+          }), Wu.featureFlags.useSocialFeatures && (0, Vu.jsx)(ku.c, {
+            label: yu("settingsMenu:showFriendOnlineToasts"),
+            checked: Ku.showFriendOnlineToasts,
+            onClick: uu => {
+              eu.d.setClientEscMenuOptions({
+                showFriendOnlineToasts: uu
               })
             }
-          }), (0, cU.jsx)(JU.b, {
-            label: gU("settingsMenu:showNewItemIndicator"),
-            checked: pU.showNewItemIndicator,
-            onClick: UU => {
-              wU.b.setClientEscMenuOptions({
-                showNewItemIndicator: UU
+          }), (0, Vu.jsx)(ku.c, {
+            label: yu("settingsMenu:showNewItemIndicator"),
+            checked: Ku.showNewItemIndicator,
+            onClick: uu => {
+              eu.d.setClientEscMenuOptions({
+                showNewItemIndicator: uu
               })
             }
           })]
         })
       })),
-      nR = (0, tU.memo)((function() {
+      AR = (0, Eu.memo)((function() {
         const {
-          t: UU
-        } = (0, PU.B)(), {
-          soundVolume: RU,
-          musicVolume: gU
-        } = (0, wU.l)(["soundVolume", "musicVolume"]);
-        return (0, cU.jsxs)("div", {
+          t: uu
+        } = (0, mu.E)(), {
+          soundVolume: Ru,
+          musicVolume: yu
+        } = (0, eu.j)(["soundVolume", "musicVolume"]);
+        return (0, Vu.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, cU.jsx)(JU.h, {
-            name: UU("settingsMenu:musicVolume"),
+          children: [(0, Vu.jsx)(ku.g, {
+            name: uu("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: gU,
-            onChange: UU => {
-              wU.b.set({
-                musicVolume: Math.round(100 * UU) / 100
+            initValue: yu,
+            onChange: uu => {
+              eu.d.set({
+                musicVolume: Math.round(100 * uu) / 100
               })
             },
-            format: UU => UU.toFixed(2)
-          }), (0, cU.jsx)(JU.h, {
-            name: UU("settingsMenu:soundEffectsVolume"),
+            format: uu => uu.toFixed(2)
+          }), (0, Vu.jsx)(ku.g, {
+            name: uu("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: RU,
-            onChange: UU => {
-              wU.b.set({
-                soundVolume: Math.round(100 * UU) / 100
+            initValue: Ru,
+            onChange: uu => {
+              eu.d.set({
+                soundVolume: Math.round(100 * uu) / 100
               })
             },
-            format: UU => UU.toFixed(2)
+            format: uu => uu.toFixed(2)
           })]
         })
       }));
-    var bR = gU(682),
-      oR = gU(1410),
-      ZR = gU(3336),
-      aR = gU(8896),
-      YR = gU(3182);
-    const BR = {
+    var DR = yu(697),
+      MR = yu(1400),
+      IR = yu(3479),
+      GR = yu(8960),
+      UR = yu(3307);
+    const nR = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function VR() {
+    function sR() {
       const {
-        t: UU
-      } = (0, PU.B)(), RU = (0, YR.b)(), {
-        mobilePushNotificationsCanAsk: gU
-      } = (0, wU.l)(["mobilePushNotificationsCanAsk"]), [pU, EU] = (0, tU.useState)(null), [TU, qU] = (0, tU.useState)(!1), [KU, GU] = (0, tU.useState)(null), [jU, uU] = (0, tU.useState)(!1), CU = (0, tU.useCallback)((() => {
-        (0, ZR.e)().then((UU => {
-          RU.current && (EU(UU), qU(!1))
-        })).catch((UU => {
-          console.error("Failed to load push notification targets:", UU), RU.current && qU(!0)
+        t: uu
+      } = (0, mu.E)(), Ru = (0, UR.b)(), {
+        mobilePushNotificationsCanAsk: yu
+      } = (0, eu.j)(["mobilePushNotificationsCanAsk"]), [Ku, Qu] = (0, Eu.useState)(null), [Ju, Nu] = (0, Eu.useState)(!1), [Xu, ru] = (0, Eu.useState)(null), [Bu, xu] = (0, Eu.useState)(!1), Su = (0, Eu.useCallback)((() => {
+        (0, IR.b)().then((uu => {
+          Ru.current && (Qu(uu), Nu(!1))
+        })).catch((uu => {
+          console.error("Failed to load push notification targets:", uu), Ru.current && Nu(!0)
         }))
-      }), [RU]), hU = (0, tU.useCallback)((() => {
-        (0, aR.d)().then((UU => {
-          RU.current && GU((() => UU))
+      }), [Ru]), pu = (0, Eu.useCallback)((() => {
+        (0, GR.b)().then((uu => {
+          Ru.current && ru((() => uu))
         }))
-      }), [RU]);
-      (0, tU.useEffect)((() => {
-        CU()
-      }), [CU]), (0, tU.useEffect)((() => {
-        hU()
-      }), [hU, gU]), (0, oR.e)(ZR.m, CU);
-      const eU = null === pU ? [] : Object.keys(BR).filter((UU => pU[UU] > 0));
-      return (0, cU.jsxs)("div", {
+      }), [Ru]);
+      (0, Eu.useEffect)((() => {
+        Su()
+      }), [Su]), (0, Eu.useEffect)((() => {
+        pu()
+      }), [pu, yu]), (0, MR.e)(IR.e, Su);
+      const Wu = null === Ku ? [] : Object.keys(nR).filter((uu => Ku[uu] > 0));
+      return (0, Vu.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, cU.jsx)("div", {
+        children: [(0, Vu.jsx)("div", {
           className: "SliderText",
-          children: UU("notificationSettings:pushNotifications")
-        }), null === pU && TU && (0, cU.jsx)("div", {
+          children: uu("notificationSettings:pushNotifications")
+        }), null === Ku && Ju && (0, Vu.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: UU("notificationSettings:pushTargetsLoadFailed")
-        }), null !== pU && 0 === eU.length && (0, cU.jsx)("div", {
+          children: uu("notificationSettings:pushTargetsLoadFailed")
+        }), null !== Ku && 0 === Wu.length && (0, Vu.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: UU("notificationSettings:pushTargetsNone")
-        }), eU.length > 0 && (0, cU.jsx)("ul", {
+          children: uu("notificationSettings:pushTargetsNone")
+        }), Wu.length > 0 && (0, Vu.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: eU.map((RU => {
-            var gU;
-            return (0, cU.jsx)("li", {
-              children: UU(BR[RU], {
-                count: null !== (gU = null === pU || void 0 === pU ? void 0 : pU[RU]) && void 0 !== gU ? gU : 0
+          children: Wu.map((Ru => {
+            var yu;
+            return (0, Vu.jsx)("li", {
+              children: uu(nR[Ru], {
+                count: null !== (yu = null === Ku || void 0 === Ku ? void 0 : Ku[Ru]) && void 0 !== yu ? yu : 0
               })
-            }, RU)
+            }, Ru)
           }))
-        }), null !== KU && (0, cU.jsx)(QU.e, {
+        }), null !== Xu && (0, Vu.jsx)(Tu.e, {
           className: "PushNotificationSettingsButton",
-          loading: jU,
+          loading: Bu,
           onClick: () => {
-            uU(!0), KU().catch((UU => {
-              console.error("Failed to turn on push notifications:", UU)
+            xu(!0), Xu().catch((uu => {
+              console.error("Failed to turn on push notifications:", uu)
             })).finally((() => {
-              RU.current && (uU(!1), hU())
+              Ru.current && (xu(!1), pu())
             }))
           },
-          children: UU("notificationSettings:pushTurnOn")
+          children: uu("notificationSettings:pushTurnOn")
         })]
       })
     }
-    const rR = {
+    const tR = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1109,337 +1109,337 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      XR = (0, tU.memo)((function() {
+      lR = (0, Eu.memo)((function() {
         const {
-          t: UU
-        } = (0, PU.B)(), {
-          clientEscMenuOptions: RU
-        } = (0, wU.l)(["clientEscMenuOptions"]);
-        return (0, cU.jsxs)("div", {
+          t: uu
+        } = (0, mu.E)(), {
+          clientEscMenuOptions: Ru
+        } = (0, eu.j)(["clientEscMenuOptions"]);
+        return (0, Vu.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, cU.jsx)(JU.d, {
-            label: UU("notificationSettings:friendRequests"),
-            options: bR.e.map((RU => ({
-              value: RU,
-              label: UU(rR[RU].label)
+          children: [(0, Vu.jsx)(ku.f, {
+            label: uu("notificationSettings:friendRequests"),
+            options: DR.d.map((Ru => ({
+              value: Ru,
+              label: uu(tR[Ru].label)
             }))),
-            value: RU.friendRequestNotifications,
-            onChange: UU => {
-              wU.b.setClientEscMenuOptions({
-                friendRequestNotifications: UU
+            value: Ru.friendRequestNotifications,
+            onChange: uu => {
+              eu.d.setClientEscMenuOptions({
+                friendRequestNotifications: uu
               })
             },
-            circleInfoText: (0, cU.jsx)("div", {
+            circleInfoText: (0, Vu.jsx)("div", {
               className: "NotificationSettingLevelsInfo",
-              children: bR.e.map((RU => (0, cU.jsxs)("div", {
-                children: [(0, cU.jsx)("b", {
-                  children: UU(rR[RU].label)
-                }), ": ", UU(rR[RU].info)]
-              }, RU)))
+              children: DR.d.map((Ru => (0, Vu.jsxs)("div", {
+                children: [(0, Vu.jsx)("b", {
+                  children: uu(tR[Ru].label)
+                }), ": ", uu(tR[Ru].info)]
+              }, Ru)))
             })
-          }), (0, cU.jsx)(VR, {})]
+          }), (0, Vu.jsx)(sR, {})]
         })
       }));
-    var vR = gU(4176),
-      dR = gU(189),
-      HR = gU(274),
-      SR = gU(6339),
-      sR = gU(3151),
-      yR = gU(8902),
-      kR = gU(581),
-      FR = gU(24);
-    var iR = gU(603),
-      AR = gU(34),
-      zR = gU(4049);
-    const MR = new Map([
+    var gR = yu(4271),
+      cR = yu(212),
+      LR = yu(305),
+      zR = yu(6436),
+      FR = yu(3255),
+      wR = yu(8965),
+      ZR = yu(610),
+      hR = yu(34);
+    var PR = yu(624),
+      iR = yu(47),
+      YR = yu(4145);
+    const oR = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function DR(UU) {
-      return MR.has(UU) ? WU.gameBridge.lookup("Km", null) : null
+    function qR(uu) {
+      return oR.has(uu) ? ju.gameBridge.lookup("DH", null) : null
     }
 
-    function LR(UU) {
-      if (!(0, kR.E)(wU.b.get("clientEscMenuOptions")[UU])) return wU.b.get("clientEscMenuOptions")[UU];
-      const RU = DR(UU);
-      return null !== RU ? RU[MR.get(UU)] : AR.k.getItem(UU)
+    function OR(uu) {
+      if (!(0, ZR.E)(eu.d.get("clientEscMenuOptions")[uu])) return eu.d.get("clientEscMenuOptions")[uu];
+      const Ru = qR(uu);
+      return null !== Ru ? Ru[oR.get(uu)] : iR.i.getItem(uu)
     }
 
-    function NR(UU, RU) {
-      if ("useTouchControls" === UU) return void(0, zR.e)(RU);
-      UU in wU.b.get("clientEscMenuOptions") && wU.b.setClientEscMenuOptions({
-        [UU]: RU
+    function vR(uu, Ru) {
+      if ("useTouchControls" === uu) return void(0, YR.c)(Ru);
+      uu in eu.d.get("clientEscMenuOptions") && eu.d.setClientEscMenuOptions({
+        [uu]: Ru
       });
-      const gU = DR(UU);
-      null !== gU && WU.gameBridge.send("setChunkAddDistance", {
-        ...gU,
-        [MR.get(UU)]: RU
-      }), AR.k.setItem(UU, RU)
+      const yu = qR(uu);
+      null !== yu && ju.gameBridge.send("setChunkAddDistance", {
+        ...yu,
+        [oR.get(uu)]: Ru
+      }), iR.i.setItem(uu, Ru)
     }
-    var lR = gU(4082),
-      OR = gU(8908),
-      Ug = gU(8910),
-      Rg = gU(4169);
+    var aR = yu(4185),
+      fR = yu(8971),
+      uy = yu(8973),
+      Ry = yu(4263);
 
-    function gg(UU) {
-      var RU, pU, TU, qU;
+    function yy(uu) {
+      var Ru, Ku, Ju, Nu;
       let {
-        minChunkAddDist: KU,
-        getValue: GU,
-        onChange: jU,
-        setApplySettingsCallback: uU
-      } = UU;
+        minChunkAddDist: Xu,
+        getValue: ru,
+        onChange: Bu,
+        setApplySettingsCallback: xu
+      } = uu;
       const {
-        t: hU
-      } = (0, PU.B)(), {
-        clientEscMenuOptions: QU
-      } = (0, wU.l)(["clientEscMenuOptions", "showDistantNametags"]), WU = (0, tU.useRef)(GU("showFog")), fU = (0, tU.useRef)(QU.antiAliasing), xU = (0, tU.useRef)(QU.useWebGpu), [mU, IU] = (0, tU.useState)(null), [bU, oU] = (0, tU.useState)((() => (0, sR.f)(eU.featureFlags.settings.canUseShaderPacks))), [ZU] = (0, tU.useState)((() => wU.b.isWebGpuDefaultOff())), [aU] = (0, tU.useState)(HR.c);
-      (0, tU.useEffect)((() => {
-        let UU = !1;
-        return (0, eU.hasUsableWebGpuAdapter)().then((RU => {
-          UU || IU(RU)
-        })), (0, sR.l)(eU.featureFlags.settings.canUseShaderPacks) && (0, SR.e)().then((async RU => {
-          const tU = null !== RU && await async function(UU) {
+        t: pu
+      } = (0, mu.E)(), {
+        clientEscMenuOptions: Tu
+      } = (0, eu.j)(["clientEscMenuOptions", "showDistantNametags"]), ju = (0, Eu.useRef)(ru("showFog")), Hu = (0, Eu.useRef)(Tu.antiAliasing), du = (0, Eu.useRef)(Tu.useWebGpu), [bu, Cu] = (0, Eu.useState)(null), [Du, Mu] = (0, Eu.useState)((() => (0, FR.h)(Wu.featureFlags.settings.canUseShaderPacks))), [Iu] = (0, Eu.useState)((() => eu.d.isWebGpuDefaultOff())), [Gu] = (0, Eu.useState)(LR.f);
+      (0, Eu.useEffect)((() => {
+        let uu = !1;
+        return (0, Wu.hasUsableWebGpuAdapter)().then((Ru => {
+          uu || Cu(Ru)
+        })), (0, FR.m)(Wu.featureFlags.settings.canUseShaderPacks) && (0, zR.h)().then((async Ru => {
+          const Eu = null !== Ru && await async function(uu) {
             const [{
-              isShaderPackActive: RU
+              isShaderPackActive: Ru
             }, {
-              loadPageShaderPackCompiler: tU
-            }] = await Promise.all([gU.e(127).then((() => gU(6330))), Promise.all([gU.e(74), gU.e(131), gU.e(130)]).then((() => gU(6295)))]);
-            return RU(UU, await tU())
-          }(RU);
-          UU || oU(tU)
+              loadPageShaderPackCompiler: Eu
+            }] = await Promise.all([yu.e(127).then((() => yu(6430))), Promise.all([yu.e(74), yu.e(131), yu.e(130)]).then((() => yu(6395)))]);
+            return Ru(uu, await Eu())
+          }(Ru);
+          uu || Mu(Eu)
         })), () => {
-          UU = !0
+          uu = !0
         }
       }), []);
-      const YU = function(UU, RU, gU, tU, pU) {
-          return (0, yR.c)(gU, tU) && !0 === RU ? {
+      const Uu = function(uu, Ru, yu, Eu, Ku) {
+          return (0, wR.e)(yu, Eu) && !0 === Ru ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== RU ? "settingsMenu:newWebGpu" : pU ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: UU && !1 !== RU,
-            disabled: !0 !== RU
+            translationKey: !1 !== Ru ? "settingsMenu:newWebGpu" : Ku ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: uu && !1 !== Ru,
+            disabled: !0 !== Ru
           }
-        }(QU.useWebGpu, mU, bU, ZU, aU),
-        BU = (QU.useWebGpu || (0, yR.c)(bU, ZU)) && bU && !0 === mU,
-        VU = (0, CU.g)("lightingOverride"),
-        rU = !(0, kR.E)(VU);
-      let XU = "settingsMenu:enableLighting";
-      rU && (XU = VU ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const vU = UU => {
-          var RU, gU, tU;
-          const pU = null !== (RU = UU.showFog) && void 0 !== RU ? RU : GU("showFog"),
-            EU = null !== (gU = UU.antiAliasing) && void 0 !== gU ? gU : QU.antiAliasing,
-            PU = null !== (tU = UU.useWebGpu) && void 0 !== tU ? tU : QU.useWebGpu,
-            TU = !iR.u && pU !== WU.current || EU !== fU.current || PU !== xU.current;
-          uU(TU ? () => JU.l : null)
+        }(Tu.useWebGpu, bu, Du, Iu, Gu),
+        nu = (Tu.useWebGpu || (0, wR.e)(Du, Iu)) && Du && !0 === bu,
+        su = (0, Su.g)("lightingOverride"),
+        tu = !(0, ZR.E)(su);
+      let lu = "settingsMenu:enableLighting";
+      tu && (lu = su ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const gu = uu => {
+          var Ru, yu, Eu;
+          const Ku = null !== (Ru = uu.showFog) && void 0 !== Ru ? Ru : ru("showFog"),
+            Qu = null !== (yu = uu.antiAliasing) && void 0 !== yu ? yu : Tu.antiAliasing,
+            mu = null !== (Eu = uu.useWebGpu) && void 0 !== Eu ? Eu : Tu.useWebGpu,
+            Ju = !PR.q && Ku !== ju.current || Qu !== Hu.current || mu !== du.current;
+          xu(Ju ? () => ku.i : null)
         },
-        dU = (0, CU.g)("fogChunkDistanceOverride"),
-        HU = (0, CU.g)("fogBlockDistanceOverride"),
-        SU = !(0, kR.E)(dU) || !(0, kR.E)(HU),
-        sU = SU ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [yU, kU] = (0, vR.e)(KU),
-        [FU, iU] = (0, Rg.b)(KU),
-        AU = hU("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        zU = FU < yU,
-        MU = Math.min(null !== (RU = GU("chunkHorizAddDist")) && void 0 !== RU ? RU : KU[0], FU),
-        DU = !SU && function(UU, RU) {
-          return !0 === UU.showFog && UU.fogChunkDistance > RU
-        }(QU, MU);
-      return (0, cU.jsxs)("div", {
+        cu = (0, Su.g)("fogChunkDistanceOverride"),
+        Lu = (0, Su.g)("fogBlockDistanceOverride"),
+        zu = !(0, ZR.E)(cu) || !(0, ZR.E)(Lu),
+        Fu = zu ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [wu, Zu] = (0, gR.f)(Xu),
+        [hu, Pu] = (0, Ry.e)(Xu),
+        iu = pu("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        Yu = hu < wu,
+        ou = Math.min(null !== (Ru = ru("chunkHorizAddDist")) && void 0 !== Ru ? Ru : Xu[0], hu),
+        qu = !zu && function(uu, Ru) {
+          return !0 === uu.showFog && uu.fogChunkDistance > Ru
+        }(Tu, ou);
+      return (0, Vu.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, cU.jsx)(JU.h, {
-          name: hU("settingsMenu:horizontalChunkLoadDistance"),
-          min: KU[0],
-          max: yU,
-          selectableMax: FU,
-          cappedNote: AU,
+        children: [(0, Vu.jsx)(ku.g, {
+          name: pu("settingsMenu:horizontalChunkLoadDistance"),
+          min: Xu[0],
+          max: wu,
+          selectableMax: hu,
+          cappedNote: iu,
           step: 1,
-          initValue: MU,
-          onChange: UU => {
-            !0 === GU("showFog") && UU < GU("fogChunkDistance") && jU("fogChunkDistance", UU), jU("chunkHorizAddDist", UU), FR.p.yh("updatedChunkLoadDist")
+          initValue: ou,
+          onChange: uu => {
+            !0 === ru("showFog") && uu < ru("fogChunkDistance") && Bu("fogChunkDistance", uu), Bu("chunkHorizAddDist", uu), hR.k.Op("updatedChunkLoadDist")
           },
-          circleInfoText: hU("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, cU.jsx)(JU.h, {
-          name: hU("settingsMenu:verticalChunkLoadDistance"),
-          min: KU[1],
-          max: kU,
-          selectableMax: iU,
-          cappedNote: zU ? void 0 : AU,
+          circleInfoText: pu("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, Vu.jsx)(ku.g, {
+          name: pu("settingsMenu:verticalChunkLoadDistance"),
+          min: Xu[1],
+          max: Zu,
+          selectableMax: Pu,
+          cappedNote: Yu ? void 0 : iu,
           step: 1,
-          initValue: Math.min(null !== (pU = GU("chunkVertAddDist")) && void 0 !== pU ? pU : KU[1], iU),
-          onChange: UU => {
-            jU("chunkVertAddDist", UU), FR.p.yh("updatedChunkLoadDist")
+          initValue: Math.min(null !== (Ku = ru("chunkVertAddDist")) && void 0 !== Ku ? Ku : Xu[1], Pu),
+          onChange: uu => {
+            Bu("chunkVertAddDist", uu), hR.k.Op("updatedChunkLoadDist")
           },
-          circleInfoText: hU("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: pu("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, cU.jsx)(JU.b, {
-          label: hU("settingsMenu:chunkFadeIn"),
-          checked: QU.chunkFadeIn,
-          onClick: UU => {
-            wU.b.setClientEscMenuOptions({
-              chunkFadeIn: UU
+        }), (0, Vu.jsx)(ku.c, {
+          label: pu("settingsMenu:chunkFadeIn"),
+          checked: Tu.chunkFadeIn,
+          onClick: uu => {
+            eu.d.setClientEscMenuOptions({
+              chunkFadeIn: uu
             })
           },
-          circleInfoText: hU("settingsMenu:chunkFadeInInfo")
-        }), nU.devTools.supports("chunkBorders") && (0, cU.jsx)(JU.b, {
-          label: hU("settingsMenu:showChunkBorders"),
-          checked: QU.showChunkBorders,
-          onClick: UU => {
-            wU.b.setClientEscMenuOptions({
-              showChunkBorders: UU
+          circleInfoText: pu("settingsMenu:chunkFadeInInfo")
+        }), Au.devTools.supports("chunkBorders") && (0, Vu.jsx)(ku.c, {
+          label: pu("settingsMenu:showChunkBorders"),
+          checked: Tu.showChunkBorders,
+          onClick: uu => {
+            eu.d.setClientEscMenuOptions({
+              showChunkBorders: uu
             })
           },
-          circleInfoText: hU("settingsMenu:showChunkBordersInfo")
-        }), (0, cU.jsx)(JU.b, {
-          label: hU(XU),
-          checked: QU.enableLighting,
-          onClick: UU => {
-            wU.b.setClientEscMenuOptions({
-              enableLighting: UU
+          circleInfoText: pu("settingsMenu:showChunkBordersInfo")
+        }), (0, Vu.jsx)(ku.c, {
+          label: pu(lu),
+          checked: Tu.enableLighting,
+          onClick: uu => {
+            eu.d.setClientEscMenuOptions({
+              enableLighting: uu
             })
           },
-          disabled: rU
-        }), (0, cU.jsxs)("div", {
+          disabled: tu
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, cU.jsx)(JU.b, {
-            label: hU(sU),
-            checked: QU.showFog,
-            onClick: UU => {
-              vU({
-                showFog: UU
-              }), wU.b.setClientEscMenuOptions({
-                showFog: UU
+          children: [(0, Vu.jsx)(ku.c, {
+            label: pu(Fu),
+            checked: Tu.showFog,
+            onClick: uu => {
+              gu({
+                showFog: uu
+              }), eu.d.setClientEscMenuOptions({
+                showFog: uu
               })
             },
-            disabled: SU,
-            className: EU()({
-              SettingBoxWarning: DU
+            disabled: zu,
+            className: Qu()({
+              SettingBoxWarning: qu
             })
-          }), (0, cU.jsx)(JU.h, {
-            name: hU("settingsMenu:fogChunkDistance"),
-            min: KU[0],
-            max: dR.e.maxChunkHorizAddDistance,
+          }), (0, Vu.jsx)(ku.g, {
+            name: pu("settingsMenu:fogChunkDistance"),
+            min: Xu[0],
+            max: cR.f.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (TU = QU.fogChunkDistance) && void 0 !== TU ? TU : KU[0],
-            onChange: UU => {
-              wU.b.setClientEscMenuOptions({
-                fogChunkDistance: UU
-              }), FR.p.yh("fogChunkDistanceChanged", UU)
+            initValue: null !== (Ju = Tu.fogChunkDistance) && void 0 !== Ju ? Ju : Xu[0],
+            onChange: uu => {
+              eu.d.setClientEscMenuOptions({
+                fogChunkDistance: uu
+              }), hR.k.Op("fogChunkDistanceChanged", uu)
             },
-            circleInfoText: hU("settingsMenu:fogChunkDistanceInfo"),
-            disabled: SU || !1 === GU("showFog"),
-            className: EU()({
-              SettingBoxWarning: DU
+            circleInfoText: pu("settingsMenu:fogChunkDistanceInfo"),
+            disabled: zu || !1 === ru("showFog"),
+            className: Qu()({
+              SettingBoxWarning: qu
             })
-          }), DU && (0, cU.jsx)("div", {
+          }), qu && (0, Vu.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: hU("settingsMenu:fogChunkDistanceInfo")
+            children: pu("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !iR.u && (0, cU.jsx)(JU.b, {
-          label: hU(BU ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !BU && QU.disableTexAtlas,
-          onClick: UU => {
-            wU.b.setClientEscMenuOptions({
-              disableTexAtlas: UU
+        }), !PR.q && (0, Vu.jsx)(ku.c, {
+          label: pu(nu ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !nu && Tu.disableTexAtlas,
+          onClick: uu => {
+            eu.d.setClientEscMenuOptions({
+              disableTexAtlas: uu
             })
           },
-          circleInfoText: hU("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: BU
-        }), (0, cU.jsx)(JU.h, {
-          name: hU("settingsMenu:fieldOfView"),
+          circleInfoText: pu("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: nu
+        }), (0, Vu.jsx)(ku.g, {
+          name: pu("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: QU.cameraFOV,
-          onChange: UU => {
-            wU.b.setClientEscMenuOptions({
-              cameraFOV: UU
+          initValue: Tu.cameraFOV,
+          onChange: uu => {
+            eu.d.setClientEscMenuOptions({
+              cameraFOV: uu
             })
           }
-        }), (0, cU.jsx)(JU.b, {
-          label: hU("settingsMenu:disableViewBobbing"),
-          checked: QU.disableBobbing,
-          onClick: UU => {
-            wU.b.setClientEscMenuOptions({
-              disableBobbing: UU
+        }), (0, Vu.jsx)(ku.c, {
+          label: pu("settingsMenu:disableViewBobbing"),
+          checked: Tu.disableBobbing,
+          onClick: uu => {
+            eu.d.setClientEscMenuOptions({
+              disableBobbing: uu
             })
           },
-          circleInfoText: hU("settingsMenu:disableViewBobbingInfo")
-        }), (0, cU.jsx)(JU.b, {
-          label: hU("settingsMenu:antiAliasing"),
-          checked: QU.antiAliasing,
-          onClick: UU => {
-            vU({
-              antiAliasing: UU
-            }), (0, lR.d)("antiAliasing"), wU.b.setClientEscMenuOptions({
-              antiAliasing: UU
+          circleInfoText: pu("settingsMenu:disableViewBobbingInfo")
+        }), (0, Vu.jsx)(ku.c, {
+          label: pu("settingsMenu:antiAliasing"),
+          checked: Tu.antiAliasing,
+          onClick: uu => {
+            gu({
+              antiAliasing: uu
+            }), (0, aR.g)("antiAliasing"), eu.d.setClientEscMenuOptions({
+              antiAliasing: uu
             })
           },
-          circleInfoText: hU("settingsMenu:antiAliasingInfo")
-        }), (0, cU.jsx)(JU.h, {
-          name: hU("settingsMenu:pixelScale"),
+          circleInfoText: pu("settingsMenu:antiAliasingInfo")
+        }), (0, Vu.jsx)(ku.g, {
+          name: pu("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (qU = QU.pixelScale) && void 0 !== qU ? qU : 1,
-          onChange: UU => {
-            (UU !== wU.b.get("clientEscMenuOptions").pixelScale || (0, Ug.o)()) && (0, lR.d)("pixelScale"), wU.b.setClientEscMenuOptions({
-              pixelScale: UU
+          initValue: null !== (Nu = Tu.pixelScale) && void 0 !== Nu ? Nu : 1,
+          onChange: uu => {
+            (uu !== eu.d.get("clientEscMenuOptions").pixelScale || (0, uy.s)()) && (0, aR.g)("pixelScale"), eu.d.setClientEscMenuOptions({
+              pixelScale: uu
             })
           },
-          circleInfoText: hU("settingsMenu:pixelScaleInfo"),
-          format: UU => `${UU}x`
-        }), (0, cU.jsx)(JU.b, {
-          label: hU("settingsMenu:pixelSmoothing"),
-          checked: QU.pixelSmoothing,
-          onClick: UU => {
-            wU.b.setClientEscMenuOptions({
-              pixelSmoothing: UU
+          circleInfoText: pu("settingsMenu:pixelScaleInfo"),
+          format: uu => `${uu}x`
+        }), (0, Vu.jsx)(ku.c, {
+          label: pu("settingsMenu:pixelSmoothing"),
+          checked: Tu.pixelSmoothing,
+          onClick: uu => {
+            eu.d.setClientEscMenuOptions({
+              pixelSmoothing: uu
             })
           },
-          circleInfoText: hU("settingsMenu:pixelSmoothingInfo")
-        }), iR.u && (0, cU.jsx)(JU.b, {
-          label: hU("settingsMenu:distantNametags"),
-          checked: (0, OR.c)(),
-          onClick: UU => {
-            wU.b.set({
-              showDistantNametags: UU
+          circleInfoText: pu("settingsMenu:pixelSmoothingInfo")
+        }), PR.q && (0, Vu.jsx)(ku.c, {
+          label: pu("settingsMenu:distantNametags"),
+          checked: (0, fR.e)(),
+          onClick: uu => {
+            eu.d.set({
+              showDistantNametags: uu
             })
           },
-          circleInfoText: hU("settingsMenu:distantNametagsInfo")
-        }), (0, cU.jsx)(JU.b, {
-          label: hU(YU.translationKey),
-          checked: YU.checked,
-          onClick: UU => {
-            vU({
-              useWebGpu: UU
-            }), wU.b.setClientEscMenuOptions({
-              useWebGpu: UU
+          circleInfoText: pu("settingsMenu:distantNametagsInfo")
+        }), (0, Vu.jsx)(ku.c, {
+          label: pu(Uu.translationKey),
+          checked: Uu.checked,
+          onClick: uu => {
+            gu({
+              useWebGpu: uu
+            }), eu.d.setClientEscMenuOptions({
+              useWebGpu: uu
             })
           },
-          circleInfoText: hU("settingsMenu:newWebGpuInfo"),
-          disabled: YU.disabled
+          circleInfoText: pu("settingsMenu:newWebGpuInfo"),
+          disabled: Uu.disabled
         })]
       })
     }
-    var tg = gU(4075),
-      pg = gU(8492),
-      Eg = gU(8925),
-      Pg = gU(8505),
-      Tg = gU(8927);
-    const qg = {
+    var Ey = yu(4179),
+      Ky = yu(8611),
+      Qy = yu(8991),
+      my = yu(8623),
+      Jy = yu(8996);
+    const Ny = {
         color: 16777215,
         name: "white"
       },
-      Kg = {
+      Xy = {
         color: 0,
         name: "black"
       },
-      cg = [qg, {
+      Vy = [Ny, {
         color: 5046092,
         name: "green"
       }, {
@@ -1454,73 +1454,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, Kg],
-      Gg = [Kg, qg];
+      }, Xy],
+      ry = [Xy, Ny];
 
-    function jg(UU) {
-      return `${UU} px`
+    function By(uu) {
+      return `${uu} px`
     }
 
-    function ug(UU) {
-      return `${UU}%`
+    function xy(uu) {
+      return `${uu}%`
     }
 
-    function Cg(UU) {
+    function Sy(uu) {
       let {
-        label: RU,
-        value: gU,
-        swatches: tU,
-        onChange: pU
-      } = UU;
+        label: Ru,
+        value: yu,
+        swatches: Eu,
+        onChange: Ku
+      } = uu;
       const {
-        t: TU
-      } = (0, PU.B)(), qU = !tU.some((UU => UU.color === gU));
-      return (0, cU.jsxs)("div", {
+        t: Ju
+      } = (0, mu.E)(), Nu = !Eu.some((uu => uu.color === yu));
+      return (0, Vu.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, cU.jsx)("div", {
+        children: [(0, Vu.jsx)("div", {
           className: "SliderText",
-          children: RU
-        }), (0, cU.jsxs)("div", {
+          children: Ru
+        }), (0, Vu.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": RU,
-          children: [tU.map((UU => {
+          "aria-label": Ru,
+          children: [Eu.map((uu => {
             let {
-              color: RU,
-              name: tU
-            } = UU;
-            return (0, cU.jsx)("button", {
+              color: Ru,
+              name: Eu
+            } = uu;
+            return (0, Vu.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": RU === gU,
-              "aria-label": TU(`crosshairSettings:color_${tU}`),
+              "aria-checked": Ru === yu,
+              "aria-label": Ju(`crosshairSettings:color_${Eu}`),
               "data-pad-focusable": !0,
-              className: EU()("CrosshairSwatch", {
-                Selected: RU === gU
+              className: Qu()("CrosshairSwatch", {
+                Selected: Ru === yu
               }),
               style: {
-                background: (0, Tg.j)(RU)
+                background: (0, Jy.m)(Ru)
               },
               onClick: () => {
-                pU(RU)
+                Ku(Ru)
               }
-            }, RU)
-          })), (0, cU.jsx)("label", {
-            className: EU()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: qU
+            }, Ru)
+          })), (0, Vu.jsx)("label", {
+            className: Qu()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: Nu
             }),
-            style: qU ? {
-              background: (0, Tg.j)(gU)
+            style: Nu ? {
+              background: (0, Jy.m)(yu)
             } : void 0,
-            title: TU("crosshairSettings:customColor"),
+            title: Ju("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, cU.jsx)("input", {
+            children: (0, Vu.jsx)("input", {
               type: "color",
-              "aria-label": TU("crosshairSettings:customColor"),
-              value: (0, Tg.j)(gU),
-              onChange: UU => {
-                const RU = (0, Tg.n)(UU.target.value);
-                null !== RU && pU(RU)
+              "aria-label": Ju("crosshairSettings:customColor"),
+              value: (0, Jy.m)(yu),
+              onChange: uu => {
+                const Ru = (0, Jy.r)(uu.target.value);
+                null !== Ru && Ku(Ru)
               }
             })
           })]
@@ -1528,119 +1528,119 @@ export const modules = {
       })
     }
 
-    function hg(UU) {
+    function py(uu) {
       let {
-        settings: RU,
-        onChange: gU
-      } = UU;
+        settings: Ru,
+        onChange: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, PU.B)(), pU = (UU, tU) => {
-        gU((0, Tg.s)(RU, UU, tU))
-      }, EU = function(UU, gU) {
-        let tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : jg;
+        t: Eu
+      } = (0, mu.E)(), Ku = (uu, Eu) => {
+        yu((0, Jy.t)(Ru, uu, Eu))
+      }, Qu = function(uu, yu) {
+        let Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : By;
         const {
-          min: EU,
-          max: PU,
-          step: TU
-        } = Tg.c[UU];
-        return (0, cU.jsx)(JU.h, {
-          name: gU,
-          min: EU,
-          max: PU,
-          step: TU,
-          initValue: RU[UU],
-          format: tU,
-          onChange: RU => {
-            pU(UU, RU)
+          min: Qu,
+          max: mu,
+          step: Ju
+        } = Jy.d[uu];
+        return (0, Vu.jsx)(ku.g, {
+          name: yu,
+          min: Qu,
+          max: mu,
+          step: Ju,
+          initValue: Ru[uu],
+          format: Eu,
+          onChange: Ru => {
+            Ku(uu, Ru)
           }
-        }, UU)
-      }, TU = ["lines", "dot", "circle"].filter((UU => RU[UU])), qU = (UU, gU, tU) => (0, cU.jsx)(JU.b, {
-        label: gU,
-        checked: RU[UU],
-        disabled: 1 === TU.length && TU[0] === UU,
-        circleInfoText: tU,
-        onClick: RU => {
-          pU(UU, RU)
+        }, uu)
+      }, Ju = ["lines", "dot", "circle"].filter((uu => Ru[uu])), Nu = (uu, yu, Eu) => (0, Vu.jsx)(ku.c, {
+        label: yu,
+        checked: Ru[uu],
+        disabled: 1 === Ju.length && Ju[0] === uu,
+        circleInfoText: Eu,
+        onClick: Ru => {
+          Ku(uu, Ru)
         }
-      }, UU), KU = "shapes" === RU.style;
-      return (0, cU.jsxs)(cU.Fragment, {
-        children: [(0, cU.jsx)(JU.d, {
-          label: tU("crosshairSettings:style"),
+      }, uu), Xu = "shapes" === Ru.style;
+      return (0, Vu.jsxs)(Vu.Fragment, {
+        children: [(0, Vu.jsx)(ku.f, {
+          label: Eu("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: tU("crosshairSettings:styleClassic")
+            label: Eu("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: tU("crosshairSettings:styleShapes")
+            label: Eu("crosshairSettings:styleShapes")
           }],
-          value: RU.style,
-          onChange: UU => {
-            pU("style", UU)
+          value: Ru.style,
+          onChange: uu => {
+            Ku("style", uu)
           }
-        }), (0, cU.jsx)(Cg, {
-          label: tU("crosshairSettings:color"),
-          value: RU.color,
-          swatches: cg,
-          onChange: UU => {
-            pU("color", UU)
+        }), (0, Vu.jsx)(Sy, {
+          label: Eu("crosshairSettings:color"),
+          value: Ru.color,
+          swatches: Vy,
+          onChange: uu => {
+            Ku("color", uu)
           }
-        }), EU("opacity", tU("crosshairSettings:opacity"), ug), !KU && EU("size", tU("crosshairSettings:size"), ug), KU && (0, cU.jsxs)("div", {
+        }), Qu("opacity", Eu("crosshairSettings:opacity"), xy), !Xu && Qu("size", Eu("crosshairSettings:size"), xy), Xu && (0, Vu.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qU("lines", tU("crosshairSettings:lines")), RU.lines && EU("lineLength", tU("crosshairSettings:lineLength")), RU.lines && EU("lineThickness", tU("crosshairSettings:lineThickness")), RU.lines && EU("gap", tU("crosshairSettings:gap")), RU.lines && qU("tStyle", tU("crosshairSettings:tStyle"))]
-        }), KU && (0, cU.jsxs)("div", {
+          children: [Nu("lines", Eu("crosshairSettings:lines")), Ru.lines && Qu("lineLength", Eu("crosshairSettings:lineLength")), Ru.lines && Qu("lineThickness", Eu("crosshairSettings:lineThickness")), Ru.lines && Qu("gap", Eu("crosshairSettings:gap")), Ru.lines && Nu("tStyle", Eu("crosshairSettings:tStyle"))]
+        }), Xu && (0, Vu.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qU("dot", tU("crosshairSettings:dot")), RU.dot && EU("dotSize", tU("crosshairSettings:dotSize"))]
-        }), KU && (0, cU.jsxs)("div", {
+          children: [Nu("dot", Eu("crosshairSettings:dot")), Ru.dot && Qu("dotSize", Eu("crosshairSettings:dotSize"))]
+        }), Xu && (0, Vu.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qU("circle", tU("crosshairSettings:circle")), RU.circle && EU("circleRadius", tU("crosshairSettings:circleRadius")), RU.circle && EU("circleThickness", tU("crosshairSettings:circleThickness"))]
-        }), (0, cU.jsxs)("div", {
+          children: [Nu("circle", Eu("crosshairSettings:circle")), Ru.circle && Qu("circleRadius", Eu("crosshairSettings:circleRadius")), Ru.circle && Qu("circleThickness", Eu("crosshairSettings:circleThickness"))]
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [EU("outline", tU("crosshairSettings:outline"), (UU => UU > 0 ? jg(UU) : tU("crosshairSettings:off"))), RU.outline > 0 && (0, cU.jsx)(Cg, {
-            label: tU("crosshairSettings:outlineColor"),
-            value: RU.outlineColor,
-            swatches: Gg,
-            onChange: UU => {
-              pU("outlineColor", UU)
+          children: [Qu("outline", Eu("crosshairSettings:outline"), (uu => uu > 0 ? By(uu) : Eu("crosshairSettings:off"))), Ru.outline > 0 && (0, Vu.jsx)(Sy, {
+            label: Eu("crosshairSettings:outlineColor"),
+            value: Ru.outlineColor,
+            swatches: ry,
+            onChange: uu => {
+              Ku("outlineColor", uu)
             }
           })]
-        }), qU("growOnClick", tU("crosshairSettings:growOnClick")), KU && qU("forGuns", tU("crosshairSettings:forGuns"), tU("crosshairSettings:forGunsInfo"))]
+        }), Nu("growOnClick", Eu("crosshairSettings:growOnClick")), Xu && Nu("forGuns", Eu("crosshairSettings:forGuns"), Eu("crosshairSettings:forGunsInfo"))]
       })
     }
-    var Qg = gU(74),
-      eg = gU(1283),
-      Wg = gU(8933),
-      fg = gU(8936),
-      xg = gU(8942),
-      mg = gU(8947);
-    const Ig = ["sky", "grass", "stone", "sand", "snow", "night"],
-      Jg = "4rem";
+    var Ty = yu(80),
+      Wy = yu(1247),
+      jy = yu(8998),
+      Hy = yu(9006),
+      dy = yu(9014),
+      by = yu(9018);
+    const Cy = ["sky", "grass", "stone", "sand", "snow", "night"],
+      ky = "4rem";
 
-    function wg(UU) {
+    function ey(uu) {
       return {
-        backgroundImage: `url(${UU})`,
-        backgroundSize: `${Jg} ${Jg}`,
+        backgroundImage: `url(${uu})`,
+        backgroundSize: `${ky} ${ky}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function ng(UU) {
+    function Ay(uu) {
       return {
         ...(() => {
-          switch (UU) {
+          switch (uu) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return wg(Wg);
+              return ey(jy);
             case "stone":
-              return wg(fg);
+              return ey(Hy);
             case "sand":
-              return wg(xg);
+              return ey(dy);
             case "snow":
-              return wg(mg);
+              return ey(by);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1651,21 +1651,21 @@ export const modules = {
       }
     }
 
-    function bg(UU) {
+    function Dy(uu) {
       return Object.freeze({
-        ...Tg.d,
+        ...Jy.h,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...UU
+        ...uu
       })
     }
-    const og = [{
+    const My = [{
         id: "default",
-        settings: Tg.d
+        settings: Jy.h
       }, {
         id: "cross",
-        settings: bg({
+        settings: Dy({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1674,7 +1674,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: bg({
+        settings: Dy({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1685,13 +1685,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: bg({
+        settings: Dy({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: bg({
+        settings: Dy({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1700,7 +1700,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: bg({
+        settings: Dy({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1710,7 +1710,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: bg({
+        settings: Dy({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1719,7 +1719,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: bg({
+        settings: Dy({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1727,571 +1727,571 @@ export const modules = {
           outline: 1.5
         })
       }],
-      Zg = ["growOnClick", "forGuns"];
-    var ag = gU(8953);
+      Iy = ["growOnClick", "forGuns"];
+    var Gy = yu(9023);
 
-    function Yg(UU) {
+    function Uy(uu) {
       let {
-        label: RU,
-        selected: gU,
-        onClick: tU,
-        className: pU,
-        style: PU,
-        children: TU
-      } = UU;
-      return (0, cU.jsx)("button", {
+        label: Ru,
+        selected: yu,
+        onClick: Eu,
+        className: Ku,
+        style: mu,
+        children: Ju
+      } = uu;
+      return (0, Vu.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": gU,
-        title: RU,
-        "aria-label": RU,
+        "aria-checked": yu,
+        title: Ru,
+        "aria-label": Ru,
         "data-pad-focusable": !0,
-        className: EU()("CrosshairBackdropSwatch", pU, {
-          Selected: gU
+        className: Qu()("CrosshairBackdropSwatch", Ku, {
+          Selected: yu
         }),
-        style: PU,
-        onClick: tU,
-        children: TU
+        style: mu,
+        onClick: Eu,
+        children: Ju
       })
     }
 
-    function Bg(UU) {
+    function ny(uu) {
       let {
-        backdrop: RU,
-        onChange: gU,
-        game: tU
-      } = UU;
+        backdrop: Ru,
+        onChange: yu,
+        game: Eu
+      } = uu;
       const {
-        t: pU
-      } = (0, PU.B)();
-      return (0, cU.jsxs)("div", {
+        t: Ku
+      } = (0, mu.E)();
+      return (0, Vu.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": pU("crosshairSettings:background"),
-        children: [tU && (0, cU.jsx)(Yg, {
-          label: pU("crosshairSettings:bg_game"),
-          selected: tU.selected,
-          onClick: tU.onSelect,
+        "aria-label": Ku("crosshairSettings:background"),
+        children: [Eu && (0, Vu.jsx)(Uy, {
+          label: Ku("crosshairSettings:bg_game"),
+          selected: Eu.selected,
+          onClick: Eu.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, cU.jsx)(TU.c, {
+          children: (0, Vu.jsx)(Ju.c, {
             name: "cube"
           })
-        }), Ig.map((UU => (0, cU.jsx)(Yg, {
-          label: pU(`crosshairSettings:bg_${UU}`),
-          selected: !(null !== tU && void 0 !== tU && tU.selected) && UU === RU,
-          style: ng(UU),
+        }), Cy.map((uu => (0, Vu.jsx)(Uy, {
+          label: Ku(`crosshairSettings:bg_${uu}`),
+          selected: !(null !== Eu && void 0 !== Eu && Eu.selected) && uu === Ru,
+          style: Ay(uu),
           onClick: () => {
-            gU(UU)
+            yu(uu)
           }
-        }, UU)))]
+        }, uu)))]
       })
     }
 
-    function Vg(UU) {
+    function sy(uu) {
       let {
-        settings: RU,
-        touch: gU,
-        backdrop: tU,
-        onChange: pU
-      } = UU;
+        settings: Ru,
+        touch: yu,
+        backdrop: Eu,
+        onChange: Ku
+      } = uu;
       const {
-        t: TU
-      } = (0, PU.B)(), qU = function(UU) {
-        var RU;
-        return null !== (RU = og.find((RU => (0, Tg.r)(RU.settings, UU, Zg)))) && void 0 !== RU ? RU : null
-      }(RU);
-      return (0, cU.jsx)("div", {
+        t: Ju
+      } = (0, mu.E)(), Nu = function(uu) {
+        var Ru;
+        return null !== (Ru = My.find((Ru => (0, Jy.s)(Ru.settings, uu, Iy)))) && void 0 !== Ru ? Ru : null
+      }(Ru);
+      return (0, Vu.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": TU("crosshairSettings:presets"),
-        children: og.map((UU => {
-          const PU = (null === qU || void 0 === qU ? void 0 : qU.id) === UU.id;
-          return (0, cU.jsxs)("button", {
+        "aria-label": Ju("crosshairSettings:presets"),
+        children: My.map((uu => {
+          const mu = (null === Nu || void 0 === Nu ? void 0 : Nu.id) === uu.id;
+          return (0, Vu.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": PU,
+            "aria-checked": mu,
             "data-pad-focusable": !0,
-            className: EU()("CrosshairPreset", {
-              Selected: PU
+            className: Qu()("CrosshairPreset", {
+              Selected: mu
             }),
             onClick: () => {
-              pU(function(UU, RU) {
+              Ku(function(uu, Ru) {
                 return {
-                  ...RU.settings,
-                  growOnClick: UU.growOnClick,
-                  forGuns: UU.forGuns
+                  ...Ru.settings,
+                  growOnClick: uu.growOnClick,
+                  forGuns: uu.forGuns
                 }
-              }(RU, UU))
+              }(Ru, uu))
             },
-            children: [(0, cU.jsx)("div", {
+            children: [(0, Vu.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: ng(tU),
-              children: (0, cU.jsx)(ag.e, {
-                settings: UU.settings,
-                touch: gU,
+              style: Ay(Eu),
+              children: (0, Vu.jsx)(Gy.b, {
+                settings: uu.settings,
+                touch: yu,
                 inPreview: !0
               })
-            }), (0, cU.jsx)("div", {
+            }), (0, Vu.jsx)("div", {
               className: "CrosshairPresetName",
-              children: TU(`crosshairSettings:preset_${UU.id}`)
+              children: Ju(`crosshairSettings:preset_${uu.id}`)
             })]
-          }, UU.id)
+          }, uu.id)
         }))
       })
     }
-    var rg = gU(1598);
+    var ty = yu(1615);
 
-    function Xg(UU, RU) {
-      const [gU, pU] = (0, tU.useState)(!1), EU = () => {
-        pU(!1)
-      }, [PU, TU] = (0, tU.useState)(!1), qU = (0, tU.useRef)({
-        growOnClick: UU.growOnClick,
-        forGuns: UU.forGuns
+    function ly(uu, Ru) {
+      const [yu, Ku] = (0, Eu.useState)(!1), Qu = () => {
+        Ku(!1)
+      }, [mu, Ju] = (0, Eu.useState)(!1), Nu = (0, Eu.useRef)({
+        growOnClick: uu.growOnClick,
+        forGuns: uu.forGuns
       });
-      (0, tU.useEffect)((() => {
-        const RU = qU.current;
-        qU.current = {
-          growOnClick: UU.growOnClick,
-          forGuns: UU.forGuns
-        }, (UU.growOnClick && !RU.growOnClick || UU.forGuns && !RU.forGuns) && TU(!0)
-      }), [UU.growOnClick, UU.forGuns]), (0, tU.useEffect)((() => {
-        if (!PU) return;
-        const UU = setTimeout((() => {
-          TU(!1)
+      (0, Eu.useEffect)((() => {
+        const Ru = Nu.current;
+        Nu.current = {
+          growOnClick: uu.growOnClick,
+          forGuns: uu.forGuns
+        }, (uu.growOnClick && !Ru.growOnClick || uu.forGuns && !Ru.forGuns) && Ju(!0)
+      }), [uu.growOnClick, uu.forGuns]), (0, Eu.useEffect)((() => {
+        if (!mu) return;
+        const uu = setTimeout((() => {
+          Ju(!1)
         }), 600);
         return () => {
-          clearTimeout(UU)
+          clearTimeout(uu)
         }
-      }), [PU]);
-      const KU = gU || PU;
+      }), [mu]);
+      const Xu = yu || mu;
       return {
         view: {
-          pressed: KU,
-          spread: KU && UU.forGuns && !UU.growOnClick ? 6 : 0
+          pressed: Xu,
+          spread: Xu && uu.forGuns && !uu.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: UU => {
-            !UU.target.closest(RU) && (0, rg.e)(UU.currentTarget, UU.pointerId) && pU(!0)
+          onPointerDown: uu => {
+            !uu.target.closest(Ru) && (0, ty.d)(uu.currentTarget, uu.pointerId) && Ku(!0)
           },
-          onPointerUp: EU,
-          onPointerCancel: EU,
-          onLostPointerCapture: EU
+          onPointerUp: Qu,
+          onPointerCancel: Qu,
+          onLostPointerCapture: Qu
         }
       }
     }
 
-    function vg(UU) {
+    function gy(uu) {
       let {
-        settings: RU,
-        touch: gU,
-        backdrop: tU,
-        className: pU,
-        children: PU,
-        label: TU
-      } = UU;
-      const qU = Xg(RU, ".CrosshairStageControls");
-      return (0, cU.jsxs)("div", {
-        className: EU()("CrosshairStage", pU),
-        style: ng(tU),
-        ...qU.handlers,
-        children: [(0, cU.jsx)("div", {
+        settings: Ru,
+        touch: yu,
+        backdrop: Eu,
+        className: Ku,
+        children: mu,
+        label: Ju
+      } = uu;
+      const Nu = ly(Ru, ".CrosshairStageControls");
+      return (0, Vu.jsxs)("div", {
+        className: Qu()("CrosshairStage", Ku),
+        style: Ay(Eu),
+        ...Nu.handlers,
+        children: [(0, Vu.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": TU,
-          children: (0, cU.jsx)(ag.e, {
-            settings: RU,
-            touch: gU,
+          "aria-label": Ju,
+          children: (0, Vu.jsx)(Gy.b, {
+            settings: Ru,
+            touch: yu,
             inPreview: !0,
-            ...qU.view
+            ...Nu.view
           })
-        }), PU]
+        }), mu]
       })
     }
-    const dg = "crosshairFullScreen";
+    const cy = "crosshairFullScreen";
 
-    function Hg(UU) {
+    function Ly(uu) {
       let {
-        settings: RU,
-        touch: gU,
-        backdrop: pU,
-        onBackdrop: qU,
-        inGame: KU,
-        onChange: GU,
-        onClose: jU
-      } = UU;
+        settings: Ru,
+        touch: yu,
+        backdrop: Ku,
+        onBackdrop: Nu,
+        inGame: Xu,
+        onChange: ru,
+        onClose: Bu
+      } = uu;
       const {
-        t: uU
-      } = (0, PU.B)(), CU = (0, tU.useRef)(null);
-      (0, eg.q)("popup", CU, jU),
-      function(UU) {
-        const RU = (0, tU.useRef)(UU);
-        RU.current = UU, (0, tU.useEffect)((() => {
+        t: xu
+      } = (0, mu.E)(), Su = (0, Eu.useRef)(null);
+      (0, Wy.t)("popup", Su, Bu),
+      function(uu) {
+        const Ru = (0, Eu.useRef)(uu);
+        Ru.current = uu, (0, Eu.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [dg]: !0
+            [cy]: !0
           }, "");
-          let UU = !1;
-          const gU = () => {
-            UU = !0, RU.current()
+          let uu = !1;
+          const yu = () => {
+            uu = !0, Ru.current()
           };
-          return window.addEventListener("popstate", gU), () => {
-            var RU;
-            window.removeEventListener("popstate", gU), !UU && null !== (RU = window.history.state) && void 0 !== RU && RU[dg] && window.history.back()
+          return window.addEventListener("popstate", yu), () => {
+            var Ru;
+            window.removeEventListener("popstate", yu), !uu && null !== (Ru = window.history.state) && void 0 !== Ru && Ru[cy] && window.history.back()
           }
         }), [])
-      }(jU);
-      const hU = (0, tU.useRef)(jU);
-      hU.current = jU, (0, tU.useEffect)((() => {
-        function UU(UU) {
-          "Escape" === UU.key && (UU.stopPropagation(), hU.current())
+      }(Bu);
+      const pu = (0, Eu.useRef)(Bu);
+      pu.current = Bu, (0, Eu.useEffect)((() => {
+        function uu(uu) {
+          "Escape" === uu.key && (uu.stopPropagation(), pu.current())
         }
-        return window.addEventListener("keydown", UU, !0), () => {
-          window.removeEventListener("keydown", UU, !0)
+        return window.addEventListener("keydown", uu, !0), () => {
+          window.removeEventListener("keydown", uu, !0)
         }
       }), []);
-      const eU = Xg(RU, ".CrosshairFullScreenPanel"),
-        [WU, fU] = (0, tU.useState)(!0),
-        xU = WU && KU;
-      (0, tU.useEffect)((() => {
-        if (xU) return wU.b.set({
+      const Wu = ly(Ru, ".CrosshairFullScreenPanel"),
+        [ju, Hu] = (0, Eu.useState)(!0),
+        du = ju && Xu;
+      (0, Eu.useEffect)((() => {
+        if (du) return eu.d.set({
           crosshairGameView: !0
         }), () => {
-          wU.b.set({
+          eu.d.set({
             crosshairGameView: !1
           })
         }
-      }), [xU]);
-      const [mU, IU] = (0, tU.useState)(!0);
-      return (0, Qg.createPortal)((0, cU.jsxs)("div", {
-        ref: CU,
+      }), [du]);
+      const [bu, Cu] = (0, Eu.useState)(!0);
+      return (0, Ty.createPortal)((0, Vu.jsxs)("div", {
+        ref: Su,
         className: "CrosshairFullScreen",
-        style: xU ? void 0 : ng(pU),
-        ...eU.handlers,
-        children: [(0, cU.jsx)(ag.e, {
-          settings: RU,
-          touch: gU,
+        style: du ? void 0 : Ay(Ku),
+        ...Wu.handlers,
+        children: [(0, Vu.jsx)(Gy.b, {
+          settings: Ru,
+          touch: yu,
           inEditor: !0,
-          ...eU.view
-        }), (0, cU.jsxs)("div", {
-          className: EU()("CrosshairFullScreenPanel", {
-            Collapsed: !mU
+          ...Wu.view
+        }), (0, Vu.jsxs)("div", {
+          className: Qu()("CrosshairFullScreenPanel", {
+            Collapsed: !bu
           }),
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, cU.jsx)(Bg, {
-              backdrop: pU,
-              onChange: UU => {
-                fU(!1), qU(UU)
+            children: [(0, Vu.jsx)(ny, {
+              backdrop: Ku,
+              onChange: uu => {
+                Hu(!1), Nu(uu)
               },
-              game: KU ? {
-                selected: xU,
+              game: Xu ? {
+                selected: du,
                 onSelect: () => {
-                  fU(!0)
+                  Hu(!0)
                 }
               } : void 0
-            }), (0, cU.jsx)(QU.M, {
+            }), (0, Vu.jsx)(Tu.P, {
               className: "CrosshairPanelToggle",
-              ariaLabel: uU(mU ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: xu(bu ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                IU(!mU)
+                Cu(!bu)
               },
-              children: (0, cU.jsx)(TU.c, {
-                name: mU ? "caret-up" : "pen"
+              children: (0, Vu.jsx)(Ju.c, {
+                name: bu ? "caret-up" : "pen"
               })
-            }), (0, cU.jsx)(QU.e, {
+            }), (0, Vu.jsx)(Tu.e, {
               className: "CrosshairFullScreenDone",
-              onClick: jU,
+              onClick: Bu,
               padDefaultFocus: !0,
-              children: uU("crosshairSettings:done")
+              children: xu("crosshairSettings:done")
             })]
-          }), mU && (0, cU.jsxs)("div", {
+          }), bu && (0, Vu.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, cU.jsx)(Vg, {
-              settings: RU,
-              touch: gU,
-              backdrop: pU,
-              onChange: GU
-            }), (0, cU.jsx)(hg, {
-              settings: RU,
-              onChange: GU
+            children: [(0, Vu.jsx)(sy, {
+              settings: Ru,
+              touch: yu,
+              backdrop: Ku,
+              onChange: ru
+            }), (0, Vu.jsx)(py, {
+              settings: Ru,
+              onChange: ru
             })]
           })]
         })]
       }), document.body)
     }
-    var Sg = gU(2462),
-      sg = gU(8966);
+    var zy = yu(2529),
+      Fy = yu(9030);
 
-    function yg(UU) {
+    function wy(uu) {
       let {
-        settings: RU,
-        onChange: gU
-      } = UU;
+        settings: Ru,
+        onChange: yu
+      } = uu;
       const {
-        t: pU
-      } = (0, PU.B)(), qU = (0, sg.g)(RU), [KU, GU] = (0, Sg.h)(), [jU, uU] = (0, tU.useState)(!1), CU = (0, tU.useRef)(null), [hU, eU] = (0, Sg.h)(), [WU, fU] = (0, tU.useState)(!1);
-      return (0, cU.jsxs)("div", {
+        t: Ku
+      } = (0, mu.E)(), Nu = (0, Fy.i)(Ru), [Xu, ru] = (0, zy.i)(), [Bu, xu] = (0, Eu.useState)(!1), Su = (0, Eu.useRef)(null), [pu, Wu] = (0, zy.i)(), [ju, Hu] = (0, Eu.useState)(!1);
+      return (0, Vu.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, cU.jsxs)("div", {
+        children: [(0, Vu.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, cU.jsxs)(QU.M, {
-            className: EU()("CrosshairCopy", {
-              ActiveSecondaryButton: KU
+          children: [(0, Vu.jsxs)(Tu.P, {
+            className: Qu()("CrosshairCopy", {
+              ActiveSecondaryButton: Xu
             }),
             onClick: () => {
-              (0, Sg.f)(qU, {
+              (0, zy.f)(Nu, {
                 useShareSheet: !1,
-                onOutcome: UU => {
-                  uU("failed" === UU), "copied" === UU && GU()
+                onOutcome: uu => {
+                  xu("failed" === uu), "copied" === uu && ru()
                 }
               })
             },
-            children: [(0, cU.jsx)(TU.c, {
-              name: KU ? "check" : "copy"
-            }), " ", pU(KU ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, cU.jsx)(mU.d, {
+            children: [(0, Vu.jsx)(Ju.c, {
+              name: Xu ? "check" : "copy"
+            }), " ", Ku(Xu ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, Vu.jsx)(bu.b, {
             className: "CrosshairPaste",
-            domRef: CU,
-            ariaLabel: pU("crosshairSettings:paste"),
-            placeholderText: pU("crosshairSettings:paste"),
-            onValueChange: UU => {
-              const RU = (0, sg.d)(UU);
-              fU(!RU && UU.trim().length >= sg.b), RU && (gU(RU), CU.current.value = "", eU())
+            domRef: Su,
+            ariaLabel: Ku("crosshairSettings:paste"),
+            placeholderText: Ku("crosshairSettings:paste"),
+            onValueChange: uu => {
+              const Ru = (0, Fy.e)(uu);
+              Hu(!Ru && uu.trim().length >= Fy.b), Ru && (yu(Ru), Su.current.value = "", Wu())
             }
           })]
-        }), jU && (0, cU.jsx)("input", {
+        }), Bu && (0, Vu.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: qU,
-          "aria-label": pU("crosshairSettings:copy"),
-          onFocus: UU => {
-            UU.currentTarget.select()
+          value: Nu,
+          "aria-label": Ku("crosshairSettings:copy"),
+          onFocus: uu => {
+            uu.currentTarget.select()
           }
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           "aria-live": "polite",
-          children: [WU && (0, cU.jsx)("div", {
+          children: [ju && (0, Vu.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: pU("crosshairSettings:pasteInvalid")
-          }), hU && !WU && (0, cU.jsx)("div", {
+            children: Ku("crosshairSettings:pasteInvalid")
+          }), pu && !ju && (0, Vu.jsx)("div", {
             className: "CrosshairShareNote",
-            children: pU("crosshairSettings:applied")
+            children: Ku("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var kg = gU(8969);
-    let Fg = "sky";
+    var Zy = yu(9039);
+    let hy = "sky";
 
-    function ig(UU) {
+    function Py(uu) {
       let {
-        showing: RU
-      } = UU;
+        showing: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, PU.B)(), {
-        isTouchScreen: pU,
-        gameState: EU,
-        clientEscMenuOptions: qU
-      } = (0, wU.l)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), KU = (0, kg.h)(), [GU, jU] = (0, tU.useState)(Fg), uU = UU => {
-        Fg = UU, jU(UU)
-      }, [CU, hU] = (0, tU.useState)(!1);
-      return (0, tU.useEffect)((() => {
-        RU || hU(!1)
-      }), [RU]), (0, cU.jsxs)("div", {
+        t: yu
+      } = (0, mu.E)(), {
+        isTouchScreen: Ku,
+        gameState: Qu,
+        clientEscMenuOptions: Nu
+      } = (0, eu.j)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Xu = (0, Zy.c)(), [ru, Bu] = (0, Eu.useState)(hy), xu = uu => {
+        hy = uu, Bu(uu)
+      }, [Su, pu] = (0, Eu.useState)(!1);
+      return (0, Eu.useEffect)((() => {
+        Ru || pu(!1)
+      }), [Ru]), (0, Vu.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, cU.jsx)("div", {
+        children: [(0, Vu.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, cU.jsx)(vg, {
+          children: (0, Vu.jsx)(gy, {
             className: "CrosshairPreviewStage",
-            settings: KU,
-            touch: pU,
-            backdrop: GU,
-            label: gU("crosshairSettings:preview"),
-            children: (0, cU.jsxs)("div", {
+            settings: Xu,
+            touch: Ku,
+            backdrop: ru,
+            label: yu("crosshairSettings:preview"),
+            children: (0, Vu.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, cU.jsx)(Bg, {
-                backdrop: GU,
-                onChange: uU
-              }), (0, cU.jsxs)(QU.M, {
+              children: [(0, Vu.jsx)(ny, {
+                backdrop: ru,
+                onChange: xu
+              }), (0, Vu.jsxs)(Tu.P, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  hU(!0)
+                  pu(!0)
                 },
-                children: [(0, cU.jsx)(TU.c, {
+                children: [(0, Vu.jsx)(Ju.c, {
                   name: "expand"
-                }), " ", gU("crosshairSettings:fullScreen")]
+                }), " ", yu("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, cU.jsx)("div", {
+        }), (0, Vu.jsx)("div", {
           className: "SettingBox",
-          children: (0, cU.jsx)(Vg, {
-            settings: KU,
-            touch: pU,
-            backdrop: GU,
-            onChange: kg.d
+          children: (0, Vu.jsx)(sy, {
+            settings: Xu,
+            touch: Ku,
+            backdrop: ru,
+            onChange: Zy.b
           })
-        }), (0, cU.jsx)(yg, {
-          settings: KU,
-          onChange: kg.d
-        }), pU && (0, cU.jsx)(Pg.b, {
-          note: (0, Eg.h)(pU, qU.touchActionButtons) ? gU("crosshairSettings:touchNote") : void 0
-        }), (0, cU.jsx)(hg, {
-          settings: KU,
-          onChange: kg.d
-        }), CU && (0, cU.jsx)(Hg, {
-          settings: KU,
-          touch: pU,
-          backdrop: GU,
-          onBackdrop: uU,
-          inGame: "inGame" === EU,
-          onChange: kg.d,
+        }), (0, Vu.jsx)(wy, {
+          settings: Xu,
+          onChange: Zy.b
+        }), Ku && (0, Vu.jsx)(my.b, {
+          note: (0, Qy.f)(Ku, Nu.touchActionButtons) ? yu("crosshairSettings:touchNote") : void 0
+        }), (0, Vu.jsx)(py, {
+          settings: Xu,
+          onChange: Zy.b
+        }), Su && (0, Vu.jsx)(Ly, {
+          settings: Xu,
+          touch: Ku,
+          backdrop: ru,
+          onBackdrop: xu,
+          inGame: "inGame" === Qu,
+          onChange: Zy.b,
           onClose: () => {
-            hU(!1)
+            pu(!1)
           }
         })]
       })
     }
-    var Ag = gU(8501),
-      zg = gU(1371),
-      Mg = gU(4663),
-      Dg = gU(8978),
-      Lg = gU(1834),
-      Ng = gU(3967),
-      lg = gU(1836),
-      Og = gU(688);
-    const Ut = (0, tU.memo)((function() {
+    var iy = yu(8615),
+      Yy = yu(1357),
+      oy = yu(4780),
+      qy = yu(9045),
+      Oy = yu(1899),
+      vy = yu(4091),
+      ay = yu(1908),
+      fy = yu(705);
+    const uE = (0, Eu.memo)((function() {
       const {
-        clientEscMenuOptions: UU
-      } = (0, wU.l)(["clientEscMenuOptions"]), {
-        recording: RU,
-        clipping: gU,
-        hasClipBuffer: pU
-      } = (0, Lg.k)("replayRecorder"), PU = (0, Lg.h)("connectedGame", (UU => UU.replay)), TU = (0, Ng.i)(), qU = !1 === (0, CU.g)("canRecordReplays");
-      (0, tU.useEffect)((() => {
-        WU.gameBridge.send("setRecorderPrefs", {
-          clipping: UU.enableClipping,
-          clipSeconds: UU.clipDurationSeconds
+        clientEscMenuOptions: uu
+      } = (0, eu.j)(["clientEscMenuOptions"]), {
+        recording: Ru,
+        clipping: yu,
+        hasClipBuffer: Ku
+      } = (0, Oy.i)("replayRecorder"), mu = (0, Oy.h)("connectedGame", (uu => uu.replay)), Ju = (0, vy.i)(), Nu = !1 === (0, Su.g)("canRecordReplays");
+      (0, Eu.useEffect)((() => {
+        ju.gameBridge.send("setRecorderPrefs", {
+          clipping: uu.enableClipping,
+          clipSeconds: uu.clipDurationSeconds
         })
-      }), [UU.enableClipping, UU.clipDurationSeconds]);
-      const KU = TU || PU,
-        GU = !KU && !qU,
-        jU = RU || GU,
-        uU = GU,
-        hU = uU && gU && !RU;
+      }), [uu.enableClipping, uu.clipDurationSeconds]);
+      const Xu = Ju || mu,
+        ru = !Xu && !Nu,
+        Bu = Ru || ru,
+        xu = ru,
+        pu = xu && yu && !Ru;
 
-      function eU() {
-        jU && WU.gameBridge.send("toggleRecording", null)
+      function Wu() {
+        Bu && ju.gameBridge.send("toggleRecording", null)
       }
-      return (0, cU.jsxs)("div", {
+      return (0, Vu.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, cU.jsxs)("div", {
+        children: [(0, Vu.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, cU.jsx)("div", {
+          children: [(0, Vu.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: RU ? (0, cU.jsxs)(cU.Fragment, {
-              children: [(0, cU.jsxs)(QU.E, {
+            children: Ru ? (0, Vu.jsxs)(Vu.Fragment, {
+              children: [(0, Vu.jsxs)(Tu.F, {
                 className: "ReplayViewerCategoryButton",
-                onClick: eU,
-                disabled: !jU,
-                children: [(0, cU.jsx)("span", {
+                onClick: Wu,
+                disabled: !Bu,
+                children: [(0, Vu.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, cU.jsx)(lg.b, {
+                }), (0, Vu.jsx)(ay.b, {
                   noaAction: "recordGame"
                 })]
-              }), (0, cU.jsx)(Dg.c, {
+              }), (0, Vu.jsx)(qy.c, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, cU.jsxs)(QU.e, {
+            }) : (0, Vu.jsxs)(Tu.e, {
               className: "ReplayViewerCategoryButton",
-              onClick: eU,
-              disabled: !jU,
-              children: [(0, cU.jsx)("span", {
+              onClick: Wu,
+              disabled: !Bu,
+              children: [(0, Vu.jsx)("span", {
                 children: "Start Recording"
-              }), (0, cU.jsx)(lg.b, {
+              }), (0, Vu.jsx)(ay.b, {
                 noaAction: "recordGame"
               })]
             })
-          }), qU && (0, cU.jsx)("div", {
+          }), Nu && (0, Vu.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), KU && !RU && (0, cU.jsx)("div", {
+          }), Xu && !Ru && (0, Vu.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, cU.jsx)(JU.b, {
+          children: [(0, Vu.jsx)(ku.c, {
             label: "Enable clipping",
-            checked: UU.enableClipping,
-            disabled: !uU,
-            onClick: function(UU) {
-              uU && wU.b.setClientEscMenuOptions({
-                enableClipping: UU
+            checked: uu.enableClipping,
+            disabled: !xu,
+            onClick: function(uu) {
+              xu && eu.d.setClientEscMenuOptions({
+                enableClipping: uu
               })
             },
-            className: EU()({
-              SettingBoxDisabled: !uU
+            className: Qu()({
+              SettingBoxDisabled: !xu
             })
-          }), (0, cU.jsx)(JU.h, {
+          }), (0, Vu.jsx)(ku.g, {
             name: "Clip duration (seconds)",
-            min: Og.n,
-            max: Og.k,
-            step: Og.d,
-            initValue: UU.clipDurationSeconds,
-            onChange: function(UU) {
-              wU.b.setClientEscMenuOptions({
-                clipDurationSeconds: UU
+            min: fy.h,
+            max: fy.g,
+            step: fy.b,
+            initValue: uu.clipDurationSeconds,
+            onChange: function(uu) {
+              eu.d.setClientEscMenuOptions({
+                clipDurationSeconds: uu
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !uU || !UU.enableClipping
+            disabled: !xu || !uu.enableClipping
           })]
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, cU.jsxs)(QU.e, {
+          children: [(0, Vu.jsxs)(Tu.e, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              hU && WU.gameBridge.send("saveClip", null)
+              pu && ju.gameBridge.send("saveClip", null)
             },
-            disabled: !hU,
-            children: [(0, cU.jsx)("span", {
+            disabled: !pu,
+            children: [(0, Vu.jsx)("span", {
               children: "Record clip"
-            }), (0, cU.jsx)(lg.b, {
+            }), (0, Vu.jsx)(ay.b, {
               noaAction: "recordClip"
             })]
-          }), UU.enableClipping && !pU && uU && !RU && (0, cU.jsx)("div", {
+          }), uu.enableClipping && !Ku && xu && !Ru && (0, Vu.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), RU && (0, cU.jsx)("div", {
+          }), Ru && (0, Vu.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, cU.jsxs)(QU.e, {
+          children: [(0, Vu.jsxs)(Tu.e, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, Ng.f)(!0), wU.b.set({
+              (0, vy.g)(!0), eu.d.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: TU,
-            children: [(0, cU.jsx)("span", {
+            disabled: Ju,
+            children: [(0, Vu.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, cU.jsx)(lg.b, {
+            }), (0, Vu.jsx)(ay.b, {
               noaAction: "replayViewerOpen"
             })]
-          }), TU && (0, cU.jsx)("div", {
+          }), Ju && (0, Vu.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, cU.jsx)("div", {
+          children: [(0, Vu.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, cU.jsx)("iframe", {
+          }), (0, Vu.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2302,8 +2302,8 @@ export const modules = {
         })]
       })
     }));
-    var Rt = gU(1771);
-    const gt = {
+    var RE = yu(1823);
+    const yE = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2325,11 +2325,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, cU.jsx)("svg", {
+        icon: () => (0, Vu.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, cU.jsx)("path", {
+          children: (0, Vu.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2348,7 +2348,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      Fu: {
+      ix: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2374,280 +2374,280 @@ export const modules = {
       }
     };
 
-    function tt() {
-      return Promise.all([gU.e(74), gU.e(131), gU.e(125), gU.e(122)]).then((() => gU(40457))).then((UU => ({
-        default: UU.ShaderPackCategory
-      })), (UU => (console.error("Failed to load the shader pack settings", UU), {
-        default: pt
+    function EE() {
+      return Promise.all([yu.e(74), yu.e(131), yu.e(125), yu.e(122)]).then((() => yu(40642))).then((uu => ({
+        default: uu.ShaderPackCategory
+      })), (uu => (console.error("Failed to load the shader pack settings", uu), {
+        default: KE
       })))
     }
 
-    function pt() {
+    function KE() {
       const {
-        t: UU
-      } = (0, PU.B)();
-      return (0, cU.jsx)("div", {
+        t: uu
+      } = (0, mu.E)();
+      return (0, Vu.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: UU("shaderPack:tabLoadFailed")
+        children: uu("shaderPack:tabLoadFailed")
       })
     }
-    var Et = gU(1362);
-    const Pt = (0, tU.lazy)((() => gU.e(263).then((() => gU(40448))).then((UU => ({
-        default: UU.BloxdInformation
+    var QE = yu(1354);
+    const mE = (0, Eu.lazy)((() => yu.e(263).then((() => yu(40632))).then((uu => ({
+        default: uu.BloxdInformation
       }))))),
-      Tt = (0, tU.lazy)(tt);
+      JE = (0, Eu.lazy)(EE);
 
-    function qt(UU) {
-      return UU ? "general" : "account"
+    function NE(uu) {
+      return uu ? "general" : "account"
     }
-    const Kt = new Map,
-      ct = (0, tU.memo)((function(UU) {
+    const XE = new Map,
+      VE = (0, Eu.memo)((function(uu) {
         let {
-          show: RU,
-          setBeforeResumeCallback: gU
-        } = UU;
-        (0, hU.d)();
+          show: Ru,
+          setBeforeResumeCallback: yu
+        } = uu;
+        (0, pu.d)();
         const {
-          gameState: pU,
-          openSettingsCategory: EU
-        } = (0, wU.l)(["gameState", "openSettingsCategory"]), {
-          userContext: qU
-        } = (0, uU.e)(), {
-          t: KU
-        } = (0, PU.B)(), mU = (0, jU.b)(), IU = (0, CU.g)("minChunkAddDist"), JU = "inGame" === pU, [nU, ZU] = (0, tU.useState)(qt(JU)), [aU, YU] = (0, tU.useState)(null), [BU, VU] = (0, tU.useState)([]), rU = (0, tU.useRef)(function() {
-          const UU = new Date,
-            RU = 6 * (UU.getMonth() + UU.getDate()) % KR.z.length;
-          return [...KR.z, ...KR.z].slice(RU, RU + 6)
-        }()), XU = (0, tU.useRef)(null), vU = (0, oR.h)(zg.k, (0, zg.c)()), dU = Object.keys(gt).filter((UU => {
-          switch (UU) {
+          gameState: Ku,
+          openSettingsCategory: Qu
+        } = (0, eu.j)(["gameState", "openSettingsCategory"]), {
+          userContext: Nu
+        } = (0, xu.d)(), {
+          t: Xu
+        } = (0, mu.E)(), bu = (0, Bu.c)(), Cu = (0, Su.g)("minChunkAddDist"), ku = "inGame" === Ku, [Au, Iu] = (0, Eu.useState)(NE(ku)), [Gu, Uu] = (0, Eu.useState)(null), [nu, su] = (0, Eu.useState)([]), tu = (0, Eu.useRef)(function() {
+          const uu = new Date,
+            Ru = 6 * (uu.getMonth() + uu.getDate()) % XR.x.length;
+          return [...XR.x, ...XR.x].slice(Ru, Ru + 6)
+        }()), lu = (0, Eu.useRef)(null), gu = (0, MR.h)(Yy.k, (0, Yy.d)()), cu = Object.keys(yE).filter((uu => {
+          switch (uu) {
             case "replayViewer":
-              return JU;
+              return ku;
             case "developerTools":
-              return qU.playerHasRank("developer") || !1;
+              return Nu.playerHasRank("developer") || !1;
             case "texturePack":
-              return eU.featureFlags.settings.canChangeTexturePack;
-            case "Fu":
-              return eU.featureFlags.settings.canUseShaderPacks;
+              return Wu.featureFlags.settings.canChangeTexturePack;
+            case "ix":
+              return Wu.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return eU.featureFlags.useSocialFeatures;
+              return Wu.featureFlags.useSocialFeatures;
             case "alternativeDomains":
-              return "crazygames" !== oU.t;
+              return "crazygames" !== Mu.v;
             case "controller":
-              return eU.featureFlags.useControllerSupport && (vU || "controller" === nU);
+              return Wu.featureFlags.useControllerSupport && (gu || "controller" === Au);
             default:
               return !0
           }
         }));
-        (0, oR.e)("toggleFullCoordinateOverlay", (() => {
-          const UU = LR("showCoordinates") && LR("showChunkCoordinates") && LR("showFPS");
-          NR("showCoordinates", !UU), NR("showChunkCoordinates", !UU), NR("showFPS", !UU), mU()
-        })), (0, oR.e)("updatedChunkLoadDist", (() => {
-          mU()
-        })), (0, tU.useEffect)((() => {
-          if (YU(null), null === wU.b.get("openSettingsCategory")) {
-            const UU = (0, Et.g)() ? Kt.get(JU) : void 0;
-            ZU(UU && dU.includes(UU) ? UU : qt(JU))
+        (0, MR.e)("toggleFullCoordinateOverlay", (() => {
+          const uu = OR("showCoordinates") && OR("showChunkCoordinates") && OR("showFPS");
+          vR("showCoordinates", !uu), vR("showChunkCoordinates", !uu), vR("showFPS", !uu), bu()
+        })), (0, MR.e)("updatedChunkLoadDist", (() => {
+          bu()
+        })), (0, Eu.useEffect)((() => {
+          if (Uu(null), null === eu.d.get("openSettingsCategory")) {
+            const uu = (0, QE.g)() ? XE.get(ku) : void 0;
+            Iu(uu && cu.includes(uu) ? uu : NE(ku))
           }
-        }), [RU]), (0, tU.useEffect)((() => {
-          null !== EU && (ZU(EU), Kt.set(JU, EU), wU.b.set({
+        }), [Ru]), (0, Eu.useEffect)((() => {
+          null !== Qu && (Iu(Qu), XE.set(ku, Qu), eu.d.set({
             openSettingsCategory: null
           }))
-        }), [EU, JU]), (0, tU.useLayoutEffect)((() => {
-          XU.current && (XU.current.scrollTop = 0)
-        }), [nU, RU]), (0, tU.useEffect)((() => {
-          "updateLog" === nU && (0, xU.c)().then(VU)
-        }), [nU]), (0, tU.useEffect)((() => {
-          if ((0, kR.E)(IU)) return;
-          const [UU, RU] = (0, tg.e)(), [gU, tU] = (0, vR.e)(IU), pU = (0, Rt.e)(IU[0], UU, gU), EU = (0, Rt.e)(IU[1], RU, tU);
-          WU.gameBridge.send("setChunkAddDistance", {
-            horizontal: pU,
-            vertical: EU
+        }), [Qu, ku]), (0, Eu.useLayoutEffect)((() => {
+          lu.current && (lu.current.scrollTop = 0)
+        }), [Au, Ru]), (0, Eu.useEffect)((() => {
+          "updateLog" === Au && (0, du.d)().then(su)
+        }), [Au]), (0, Eu.useEffect)((() => {
+          if ((0, ZR.E)(Cu)) return;
+          const [uu, Ru] = (0, Ey.c)(), [yu, Eu] = (0, gR.f)(Cu), Ku = (0, RE.e)(Cu[0], uu, yu), Qu = (0, RE.e)(Cu[1], Ru, Eu);
+          ju.gameBridge.send("setChunkAddDistance", {
+            horizontal: Ku,
+            vertical: Qu
           })
-        }), [IU]);
-        const HU = (0, tU.useCallback)((async () => {
-          aU && (await aU(), YU(null))
-        }), [aU]);
+        }), [Cu]);
+        const Lu = (0, Eu.useCallback)((async () => {
+          Gu && (await Gu(), Uu(null))
+        }), [Gu]);
 
-        function SU() {
-          wU.b.set({
+        function zu() {
+          eu.d.set({
             openEverythingMenuName: null
           })
         }
-        return (0, tU.useEffect)((() => {
-          gU((() => HU))
-        }), [HU, gU]), (0, cU.jsxs)("div", {
+        return (0, Eu.useEffect)((() => {
+          yu((() => Lu))
+        }), [Lu, yu]), (0, Vu.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: RU ? {} : {
+          style: Ru ? {} : {
             display: "none"
           },
-          children: [(0, cU.jsx)("div", {
+          children: [(0, Vu.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, cU.jsx)("div", {
+            children: (0, Vu.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, cU.jsx)(GU, {
-                items: dU.map((UU => {
-                  const RU = gt[UU].icon;
+              children: (0, Vu.jsx)(ru, {
+                items: cu.map((uu => {
+                  const Ru = yE[uu].icon;
                   return {
-                    id: UU,
-                    faIcon: "string" === typeof RU ? RU : void 0,
-                    iconElement: "string" === typeof RU ? void 0 : (0, cU.jsx)(RU, {}),
-                    title: KU(gt[UU].displayName),
+                    id: uu,
+                    faIcon: "string" === typeof Ru ? Ru : void 0,
+                    iconElement: "string" === typeof Ru ? void 0 : (0, Vu.jsx)(Ru, {}),
+                    title: Xu(yE[uu].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: nU,
-                onClick: UU => {
-                  !async function(UU) {
-                    await HU(), ZU(UU), Kt.set(JU, UU)
-                  }(UU)
+                selectedItemId: Au,
+                onClick: uu => {
+                  !async function(uu) {
+                    await Lu(), Iu(uu), XE.set(ku, uu)
+                  }(uu)
                 }
               })
             })
-          }), (0, cU.jsxs)("div", {
-            ref: XU,
+          }), (0, Vu.jsxs)("div", {
+            ref: lu,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === nU && (0, cU.jsx)(WR, {
-              showing: RU,
-              inGame: JU
-            }), "general" === nU && (0, cU.jsx)(wR, {
-              inGame: JU
-            }), "audio" === nU && (0, cU.jsx)(nR, {}), "notifications" === nU && (0, cU.jsx)(XR, {}), "graphics" === nU && (0, cU.jsx)(gg, {
-              minChunkAddDist: null !== IU && void 0 !== IU ? IU : [2, 2],
-              getValue: LR,
-              onChange: NR,
-              setApplySettingsCallback: YU
-            }), "controls" === nU && (0, cU.jsx)(pg.e, {}), "crosshair" === nU && (0, cU.jsx)(ig, {
-              showing: RU
-            }), "controller" === nU && eU.featureFlags.useControllerSupport && (0, cU.jsx)(Ag.c, {}), eU.featureFlags.settings.canChangeTexturePack && "texturePack" === nU && (0, cU.jsx)(Mg.e, {
-              setApplySettingsCallback: YU
-            }), eU.featureFlags.settings.canUseShaderPacks && "Fu" === nU && (0, cU.jsx)(tU.Suspense, {
+            children: ["account" === Au && (0, Vu.jsx)(jR, {
+              showing: Ru,
+              inGame: ku
+            }), "general" === Au && (0, Vu.jsx)(eR, {
+              inGame: ku
+            }), "audio" === Au && (0, Vu.jsx)(AR, {}), "notifications" === Au && (0, Vu.jsx)(lR, {}), "graphics" === Au && (0, Vu.jsx)(yy, {
+              minChunkAddDist: null !== Cu && void 0 !== Cu ? Cu : [2, 2],
+              getValue: OR,
+              onChange: vR,
+              setApplySettingsCallback: Uu
+            }), "controls" === Au && (0, Vu.jsx)(Ky.f, {}), "crosshair" === Au && (0, Vu.jsx)(Py, {
+              showing: Ru
+            }), "controller" === Au && Wu.featureFlags.useControllerSupport && (0, Vu.jsx)(iy.e, {}), Wu.featureFlags.settings.canChangeTexturePack && "texturePack" === Au && (0, Vu.jsx)(oy.d, {
+              setApplySettingsCallback: Uu
+            }), Wu.featureFlags.settings.canUseShaderPacks && "ix" === Au && (0, Vu.jsx)(Eu.Suspense, {
               fallback: null,
-              children: (0, cU.jsx)(Tt, {
-                setApplySettingsCallback: YU
+              children: (0, Vu.jsx)(JE, {
+                setApplySettingsCallback: Uu
               })
-            }), "updateLog" === nU && (0, cU.jsx)("div", {
+            }), "updateLog" === Au && (0, Vu.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, cU.jsx)("div", {
+              children: (0, Vu.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: BU.map(((UU, RU) => (0, cU.jsx)(fU.b, {
-                  updateLog: UU,
-                  index: RU,
-                  close: SU
-                }, RU)))
+                children: nu.map(((uu, Ru) => (0, Vu.jsx)(Hu.d, {
+                  updateLog: uu,
+                  index: Ru,
+                  close: zu
+                }, Ru)))
               })
-            }), "information" === nU && (0, cU.jsx)("div", {
+            }), "information" === Au && (0, Vu.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, cU.jsx)(tU.Suspense, {
+              children: (0, Vu.jsx)(Eu.Suspense, {
                 fallback: null,
-                children: (0, cU.jsx)(Pt, {})
+                children: (0, Vu.jsx)(mE, {})
               })
-            }), "alternativeDomains" === nU && (0, cU.jsxs)("div", {
+            }), "alternativeDomains" === Au && (0, Vu.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, cU.jsx)("div", {
+              children: [(0, Vu.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: KU("settingsMenu:unblockedDomainsDescription")
-              }), (0, cU.jsx)("div", {
+                children: Xu("settingsMenu:unblockedDomainsDescription")
+              }), (0, Vu.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: rU.current.map((UU => (0, cU.jsxs)(QU.e, {
+                children: tu.current.map((uu => (0, Vu.jsxs)(Tu.e, {
                   onClick: () => {
-                    window.open(`https://${UU}`)
+                    window.open(`https://${uu}`)
                   },
-                  children: [(0, cU.jsx)(TU.c, {
+                  children: [(0, Vu.jsx)(Ju.c, {
                     name: "arrow-up-right-from-square"
-                  }), " ", UU]
-                }, UU)))
+                  }), " ", uu]
+                }, uu)))
               })]
-            }), "replayViewer" === nU && (0, cU.jsx)(Ut, {}), "developerTools" === nU && (0, cU.jsx)("div", {
+            }), "replayViewer" === Au && (0, Vu.jsx)(uE, {}), "developerTools" === Au && (0, Vu.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, cU.jsx)(bU, {
-                setApplySettingsCallback: YU
+              children: (0, Vu.jsx)(Du, {
+                setApplySettingsCallback: Uu
               })
-            }), null !== aU && (0, cU.jsx)("div", {
+            }), null !== Gu && (0, Vu.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, cU.jsx)(QU.e, {
+              children: (0, Vu.jsx)(Tu.e, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: HU,
-                children: KU("general:apply")
+                onClick: Lu,
+                children: Xu("general:apply")
               })
             })]
           })]
         })
       }));
-    var Gt = gU(2401);
-    const jt = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      ut = (0, tU.lazy)((() => Promise.resolve().then((() => gU(4318))).then((UU => {
-        UU.needGameClientAfterPaint();
-        const RU = UU.matchmakingLibrariesPromise.then((UU => (0, Gt.e)(UU.loadCharacterCustomisationUI(), (UU => UU.CharacterCustomisationUI))));
-        return Promise.all([UU.ensureGameSetup(), RU]).then((UU => {
-          let [, RU] = UU;
-          return RU
+    var rE = yu(2481);
+    const BE = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      xE = (0, Eu.lazy)((() => Promise.resolve().then((() => yu(4436))).then((uu => {
+        uu.needGameClientAfterPaint();
+        const Ru = uu.matchmakingLibrariesPromise.then((uu => (0, rE.d)(uu.loadCharacterCustomisationUI(), (uu => uu.CharacterCustomisationUI))));
+        return Promise.all([uu.ensureGameSetup(), Ru]).then((uu => {
+          let [, Ru] = uu;
+          return Ru
         }))
       }))));
 
-    function Ct(UU) {
+    function SE(uu) {
       let {
-        show: RU
-      } = UU;
+        show: Ru
+      } = uu;
       const {
-        userContext: gU
-      } = (0, uU.e)(), [pU, EU] = (0, tU.useState)("characters");
-      if (!RU) return null;
-      const PU = jt.filter((UU => "cape" !== UU && "nameColour" !== UU || gU.getPlayerRanks().includes("super") || (0, sU.purchasesAllowed)())).map((UU => ({
-        id: UU,
-        faIcon: KR.I[UU],
-        title: KR.M[UU],
+        userContext: yu
+      } = (0, xu.d)(), [Ku, Qu] = (0, Eu.useState)("characters");
+      if (!Ru) return null;
+      const mu = BE.filter((uu => "cape" !== uu && "nameColour" !== uu || yu.getPlayerRanks().includes("super") || (0, Fu.purchasesAllowed)())).map((uu => ({
+        id: uu,
+        faIcon: XR.D[uu],
+        title: XR.G[uu],
         redDot: !1
       })));
-      return (0, cU.jsxs)("div", {
+      return (0, Vu.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, cU.jsx)("div", {
+        children: [(0, Vu.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, cU.jsx)(GU, {
-            items: PU,
-            selectedItemId: pU,
-            onClick: UU => {
-              EU(UU)
+          children: (0, Vu.jsx)(ru, {
+            items: mu,
+            selectedItemId: Ku,
+            onClick: uu => {
+              Qu(uu)
             }
           })
-        }), (0, cU.jsx)("div", {
+        }), (0, Vu.jsx)("div", {
           className: "MenuBody",
-          children: (0, cU.jsx)(tU.Suspense, {
-            fallback: (0, cU.jsx)("div", {
+          children: (0, Vu.jsx)(Eu.Suspense, {
+            fallback: (0, Vu.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, cU.jsx)(IU.d, {})
+              children: (0, Vu.jsx)(Cu.b, {})
             }),
-            children: (0, cU.jsx)(ut, {
-              selectedTab: pU
+            children: (0, Vu.jsx)(xE, {
+              selectedTab: Ku
             })
           })
         })]
       })
     }
-    var ht = gU(1432),
-      Qt = gU(8982),
-      et = gU(4195),
-      Wt = gU(3117),
-      ft = gU(3161),
-      xt = gU(9012),
-      mt = gU(8405),
-      It = gU(8991),
-      Jt = gU(9001),
-      wt = gU(1790),
-      nt = gU(1777),
-      bt = gU(4569),
-      ot = gU(1265),
-      Zt = gU(1217),
-      Yt = gU(1591),
-      Bt = gU(8475);
+    var pE = yu(1417),
+      TE = yu(9048),
+      WE = yu(4301),
+      jE = yu(3217),
+      HE = yu(3269),
+      dE = yu(9087),
+      bE = yu(8502),
+      CE = yu(9057),
+      kE = yu(9072),
+      eE = yu(1841),
+      AE = yu(1825),
+      DE = yu(4686),
+      ME = yu(1232),
+      IE = yu(1199),
+      GE = yu(1611),
+      UE = yu(8585);
 
-    function Vt(UU) {
-      return UU ? Object.keys(UU).sort(((RU, gU) => {
-        var tU, pU, EU, PU;
-        const TU = (null !== (tU = null === (pU = UU[gU]) || void 0 === pU ? void 0 : pU.sortPriority) && void 0 !== tU ? tU : 0) - (null !== (EU = null === (PU = UU[RU]) || void 0 === PU ? void 0 : PU.sortPriority) && void 0 !== EU ? EU : 0);
-        return 0 !== TU ? TU : RU.localeCompare(gU)
+    function nE(uu) {
+      return uu ? Object.keys(uu).sort(((Ru, yu) => {
+        var Eu, Ku, Qu, mu;
+        const Ju = (null !== (Eu = null === (Ku = uu[yu]) || void 0 === Ku ? void 0 : Ku.sortPriority) && void 0 !== Eu ? Eu : 0) - (null !== (Qu = null === (mu = uu[Ru]) || void 0 === mu ? void 0 : mu.sortPriority) && void 0 !== Qu ? Qu : 0);
+        return 0 !== Ju ? Ju : Ru.localeCompare(yu)
       })) : []
     }
-    const rt = [{
+    const sE = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2661,241 +2661,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Xt(UU) {
+    function tE(uu) {
       for (const {
-          threshold: RU,
-          suffix: gU
+          threshold: Ru,
+          suffix: yu
         }
-        of rt)
-        if (UU >= RU) {
-          const tU = UU / RU;
-          return tU >= 100 ? `${Math.floor(tU)}${gU}` : tU >= 10 ? `${tU.toFixed(1).replace(/\.0$/,"")}${gU}` : `${tU.toFixed(2).replace(/\.?0+$/,"")}${gU}`
-        } return String(UU)
+        of sE)
+        if (uu >= Ru) {
+          const Eu = uu / Ru;
+          return Eu >= 100 ? `${Math.floor(Eu)}${yu}` : Eu >= 10 ? `${Eu.toFixed(1).replace(/\.0$/,"")}${yu}` : `${Eu.toFixed(2).replace(/\.?0+$/,"")}${yu}`
+        } return String(uu)
     }
-    var vt = gU(4693);
-    const dt = {
+    var lE = yu(4811);
+    const gE = {
         normal: "0.8em",
         big: "1em"
       },
-      Ht = (0, tU.memo)((function(UU) {
+      cE = (0, Eu.memo)((function(uu) {
         let {
-          item: RU,
-          amount: gU = 0,
-          size: tU = "normal",
-          tier: pU = null
-        } = UU;
-        return (0, cU.jsx)("div", {
-          className: EU()("SmpSlot", `SmpSlot-${tU}`),
-          children: RU && (0, cU.jsx)(wt.c, {
-            itemName: RU,
-            amount: gU > 1 ? gU : 0,
-            amountFontSize: dt[tU],
-            enchantmentTier: pU
+          item: Ru,
+          amount: yu = 0,
+          size: Eu = "normal",
+          tier: Ku = null
+        } = uu;
+        return (0, Vu.jsx)("div", {
+          className: Qu()("SmpSlot", `SmpSlot-${Eu}`),
+          children: Ru && (0, Vu.jsx)(eE.c, {
+            itemName: Ru,
+            amount: yu > 1 ? yu : 0,
+            amountFontSize: gE[Eu],
+            enchantmentTier: Ku
           })
         })
       }));
 
-    function St(UU) {
+    function LE(uu) {
       let {
-        amount: RU,
-        exact: gU = !1,
-        className: tU
-      } = UU;
-      return (0, cU.jsxs)("span", {
-        className: EU()("SmpGold", tU),
-        children: [(0, cU.jsx)("span", {
+        amount: Ru,
+        exact: yu = !1,
+        className: Eu
+      } = uu;
+      return (0, Vu.jsxs)("span", {
+        className: Qu()("SmpGold", Eu),
+        children: [(0, Vu.jsx)("span", {
           className: "SmpCoin",
-          children: (0, cU.jsx)(wt.c, {
+          children: (0, Vu.jsx)(eE.c, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), gU ? RU.toLocaleString("en-US") : Xt(RU)]
+        }), yu ? Ru.toLocaleString("en-US") : tE(Ru)]
       })
     }
 
-    function st(UU) {
+    function zE(uu) {
       let {
-        count: RU = 5,
-        grid: gU = !1
-      } = UU;
-      return (0, cU.jsx)("div", {
-        className: gU ? "SmpCardGrid" : "SmpList",
+        count: Ru = 5,
+        grid: yu = !1
+      } = uu;
+      return (0, Vu.jsx)("div", {
+        className: yu ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: RU
-        }, ((UU, RU) => (0, cU.jsxs)("div", {
-          className: EU()(gU ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, cU.jsx)("div", {
-            className: EU()("SmpSlot", gU ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, cU.jsxs)("div", {
+          length: Ru
+        }, ((uu, Ru) => (0, Vu.jsxs)("div", {
+          className: Qu()(yu ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, Vu.jsx)("div", {
+            className: Qu()("SmpSlot", yu ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, Vu.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, cU.jsx)("b", {}), (0, cU.jsx)("small", {})]
-          }), (0, cU.jsx)("div", {
+            children: [(0, Vu.jsx)("b", {}), (0, Vu.jsx)("small", {})]
+          }), (0, Vu.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, RU)))
+        }, Ru)))
       })
     }
 
-    function yt(UU) {
+    function FE(uu) {
       let {
-        title: RU,
-        children: gU
-      } = UU;
-      return (0, cU.jsxs)("div", {
+        title: Ru,
+        children: yu
+      } = uu;
+      return (0, Vu.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, cU.jsx)("b", {
-          children: RU
-        }), gU && (0, cU.jsx)("small", {
-          children: gU
+        children: [(0, Vu.jsx)("b", {
+          children: Ru
+        }), yu && (0, Vu.jsx)("small", {
+          children: yu
         })]
       })
     }
 
-    function kt(UU) {
+    function wE(uu) {
       let {
-        entry: RU
-      } = UU;
-      return (0, cU.jsx)(yt, {
-        title: (0, cU.jsx)(nt.e, {
-          text: RU.item.customTitle
+        entry: Ru
+      } = uu;
+      return (0, Vu.jsx)(FE, {
+        title: (0, Vu.jsx)(AE.d, {
+          text: Ru.item.customTitle
         }),
-        children: (0, cU.jsx)(nt.e, {
-          text: RU.item.description
+        children: (0, Vu.jsx)(AE.d, {
+          text: Ru.item.description
         })
       })
     }
 
-    function Ft(UU) {
-      return (0, cU.jsx)(vt.d, {
-        ...UU,
-        className: EU()("SmpChoice", UU.className),
+    function ZE(uu) {
+      return (0, Vu.jsx)(lE.b, {
+        ...uu,
+        className: Qu()("SmpChoice", uu.className),
         reselectable: !0
       })
     }
 
-    function it() {
-      return (0, cU.jsx)("span", {
+    function hE() {
+      return (0, Vu.jsx)("span", {
         className: "SmpLoader",
-        children: (0, cU.jsx)(IU.d, {})
+        children: (0, Vu.jsx)(Cu.b, {})
       })
     }
 
-    function At(UU) {
+    function PE(uu) {
       let {
-        value: RU,
-        onChange: gU,
-        min: pU = 1,
-        max: EU,
-        step: PU = 1,
-        label: TU
-      } = UU;
-      const qU = (0, tU.useRef)(null),
-        KU = (0, tU.useRef)(RU);
-      KU.current = RU;
-      const [GU, jU] = (0, tU.useState)(null), uU = UU => Math.max(pU, Math.min(EU, Math.floor(UU))), CU = UU => {
-        const RU = KU.current,
-          tU = "function" === typeof PU ? PU(RU, UU) : PU,
-          pU = uU(RU + tU * UU);
-        KU.current = pU, gU(pU)
+        value: Ru,
+        onChange: yu,
+        min: Ku = 1,
+        max: Qu,
+        step: mu = 1,
+        label: Ju
+      } = uu;
+      const Nu = (0, Eu.useRef)(null),
+        Xu = (0, Eu.useRef)(Ru);
+      Xu.current = Ru;
+      const [ru, Bu] = (0, Eu.useState)(null), xu = uu => Math.max(Ku, Math.min(Qu, Math.floor(uu))), Su = uu => {
+        const Ru = Xu.current,
+          Eu = "function" === typeof mu ? mu(Ru, uu) : mu,
+          Ku = xu(Ru + Eu * uu);
+        Xu.current = Ku, yu(Ku)
       };
-      (0, tU.useEffect)((() => {
-        if (null === GU) return;
-        let UU;
-        const RU = () => {
-            jU(null)
+      (0, Eu.useEffect)((() => {
+        if (null === ru) return;
+        let uu;
+        const Ru = () => {
+            Bu(null)
           },
-          gU = setTimeout((() => {
-            UU = setInterval((() => {
-              CU(GU);
-              const UU = KU.current;
-              (GU > 0 ? UU >= EU : UU <= pU) && RU()
+          yu = setTimeout((() => {
+            uu = setInterval((() => {
+              Su(ru);
+              const uu = Xu.current;
+              (ru > 0 ? uu >= Qu : uu <= Ku) && Ru()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", RU), window.addEventListener("pointercancel", RU), window.addEventListener("blur", RU), () => {
-          clearTimeout(gU), clearInterval(UU), window.removeEventListener("pointerup", RU), window.removeEventListener("pointercancel", RU), window.removeEventListener("blur", RU)
+        return window.addEventListener("pointerup", Ru), window.addEventListener("pointercancel", Ru), window.addEventListener("blur", Ru), () => {
+          clearTimeout(yu), clearInterval(uu), window.removeEventListener("pointerup", Ru), window.removeEventListener("pointercancel", Ru), window.removeEventListener("blur", Ru)
         }
-      }), [GU]), (0, tU.useEffect)((() => {
-        const UU = qU.current;
-        UU && document.activeElement !== UU && UU.value !== String(RU) && (UU.value = String(RU))
-      }), [RU]), (0, tU.useEffect)((() => {
-        const UU = qU.current;
-        if (!UU) return;
-        const RU = () => {
-          UU.value = String(KU.current)
+      }), [ru]), (0, Eu.useEffect)((() => {
+        const uu = Nu.current;
+        uu && document.activeElement !== uu && uu.value !== String(Ru) && (uu.value = String(Ru))
+      }), [Ru]), (0, Eu.useEffect)((() => {
+        const uu = Nu.current;
+        if (!uu) return;
+        const Ru = () => {
+          uu.value = String(Xu.current)
         };
-        return UU.addEventListener("blur", RU), () => {
-          UU.removeEventListener("blur", RU)
+        return uu.addEventListener("blur", Ru), () => {
+          uu.removeEventListener("blur", Ru)
         }
       }), []);
-      const hU = UU => (0, cU.jsx)("button", {
+      const pu = uu => (0, Vu.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${UU>0?"More":"Less"} ${TU}`,
-        disabled: UU > 0 ? RU >= EU : RU <= pU,
-        onPointerDown: RU => {
-          0 === RU.button && (CU(UU), jU(UU))
+        "aria-label": `${uu>0?"More":"Less"} ${Ju}`,
+        disabled: uu > 0 ? Ru >= Qu : Ru <= Ku,
+        onPointerDown: Ru => {
+          0 === Ru.button && (Su(uu), Bu(uu))
         },
-        onKeyDown: RU => {
-          "Enter" !== RU.key && " " !== RU.key || CU(UU)
+        onKeyDown: Ru => {
+          "Enter" !== Ru.key && " " !== Ru.key || Su(uu)
         },
-        onContextMenu: UU => {
-          UU.preventDefault()
+        onContextMenu: uu => {
+          uu.preventDefault()
         },
-        children: UU > 0 ? "+" : "\u2212"
+        children: uu > 0 ? "+" : "\u2212"
       });
-      return (0, cU.jsxs)("div", {
+      return (0, Vu.jsxs)("div", {
         className: "SmpStepper",
-        children: [hU(-1), (0, cU.jsx)(mU.d, {
+        children: [pu(-1), (0, Vu.jsx)(bu.b, {
           className: "SmpStepperInput",
-          domRef: qU,
-          defaultValue: String(RU),
-          ariaLabel: TU,
+          domRef: Nu,
+          defaultValue: String(Ru),
+          ariaLabel: Ju,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: UU => {
-            const RU = UU.replace(/[^\d]/g, "");
-            qU.current && RU !== UU && (qU.current.value = RU), "" !== RU && gU(uU(Number(RU)))
+          onValueChange: uu => {
+            const Ru = uu.replace(/[^\d]/g, "");
+            Nu.current && Ru !== uu && (Nu.current.value = Ru), "" !== Ru && yu(xu(Number(Ru)))
           }
-        }), hU(1)]
+        }), pu(1)]
       })
     }
 
-    function zt(UU) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, UU))) - 1))
+    function iE(uu) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, uu))) - 1))
     }
-    var Mt = gU(9009),
-      Dt = gU(1238);
-    const Lt = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    Dt.t, HU.Gc.length;
+    var YE = yu(9079),
+      oE = yu(1215);
+    const qE = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    oE.A, Lu.Tc.length;
     new Map;
-    var Nt = gU(2969);
+    var OE = yu(3093);
 
-    function lt(UU, RU) {
-      var gU;
-      return RU && (null === (gU = UU[RU]) || void 0 === gU ? void 0 : gU.smp) || null
+    function vE(uu, Ru) {
+      var yu;
+      return Ru && (null === (yu = uu[Ru]) || void 0 === yu ? void 0 : yu.smp) || null
     }
 
-    function Ot(UU, RU) {
-      const gU = [];
-      for (const pU of Vt(UU)) {
-        var tU;
-        const EU = UU[pU];
-        (null === (tU = EU.smp) || void 0 === tU ? void 0 : tU.kind) === RU && gU.push({
-          key: pU,
-          item: EU,
-          meta: EU.smp
+    function aE(uu, Ru) {
+      const yu = [];
+      for (const Ku of nE(uu)) {
+        var Eu;
+        const Qu = uu[Ku];
+        (null === (Eu = Qu.smp) || void 0 === Eu ? void 0 : Eu.kind) === Ru && yu.push({
+          key: Ku,
+          item: Qu,
+          meta: Qu.smp
         })
       }
-      return gU
+      return yu
     }
 
-    function Up(UU, RU) {
-      var gU;
-      return null !== (gU = Ot(UU, RU)[0]) && void 0 !== gU ? gU : null
+    function fE(uu, Ru) {
+      var yu;
+      return null !== (yu = aE(uu, Ru)[0]) && void 0 !== yu ? yu : null
     }
-    const Rp = "50% 0% 50% 0%",
-      gp = [{
+    const uK = "50% 0% 50% 0%",
+      RK = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -2909,746 +2909,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function tp(UU) {
-      const RU = UU - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function yK(uu) {
+      const Ru = uu - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: gU,
-          suffix: tU
+          divisor: yu,
+          suffix: Eu
         }
-        of gp)
-        if (RU >= gU) return `${Math.floor(RU/gU)}${tU}`;
+        of RK)
+        if (Ru >= yu) return `${Math.floor(Ru/yu)}${Eu}`;
       return "<1s"
     }
 
-    function pp(UU) {
-      const RU = UU.map(mt.h),
-        gU = [];
-      return RU.forEach(((UU, tU) => {
-        const pU = function(UU) {
-            const RU = UU.match(/\d+/);
-            return RU ? Number(RU[0]) : 0
-          }(UU),
-          EU = tU === RU.length - 1;
-        (EU || 1 === pU || 10 === pU || 100 === pU) && gU.push({
-          label: UU,
-          quantity: pU,
-          isAll: EU
+    function EK(uu) {
+      const Ru = uu.map(bE.h),
+        yu = [];
+      return Ru.forEach(((uu, Eu) => {
+        const Ku = function(uu) {
+            const Ru = uu.match(/\d+/);
+            return Ru ? Number(Ru[0]) : 0
+          }(uu),
+          Qu = Eu === Ru.length - 1;
+        (Qu || 1 === Ku || 10 === Ku || 100 === Ku) && yu.push({
+          label: uu,
+          quantity: Ku,
+          isAll: Qu
         })
-      })), gU
+      })), yu
     }
-    let Ep = null;
+    let KK = null;
 
-    function Pp(UU, RU) {
-      const gU = RU.trim().toLowerCase();
-      if (!gU) return [];
-      const tU = UU => {
-          if (UU === gU) return 0;
-          if (UU.startsWith(gU)) return 1;
-          const RU = UU.indexOf(gU);
-          return -1 === RU ? -1 : 2 + RU
+    function QK(uu, Ru) {
+      const yu = Ru.trim().toLowerCase();
+      if (!yu) return [];
+      const Eu = uu => {
+          if (uu === yu) return 0;
+          if (uu.startsWith(yu)) return 1;
+          const Ru = uu.indexOf(yu);
+          return -1 === Ru ? -1 : 2 + Ru
         },
-        pU = [];
-      for (const TU of UU) {
-        const UU = [tU(TU.lowerLabel), tU(TU.lowerName)].filter((UU => -1 !== UU));
-        UU.length && pU.push({
-          item: TU,
-          rank: Math.min(...UU)
+        Ku = [];
+      for (const Ju of uu) {
+        const uu = [Eu(Ju.lowerLabel), Eu(Ju.lowerName)].filter((uu => -1 !== uu));
+        uu.length && Ku.push({
+          item: Ju,
+          rank: Math.min(...uu)
         })
       }
-      if (pU.length > 0) return pU.sort(((UU, RU) => UU.rank - RU.rank)).map((UU => UU.item));
-      const EU = [...gU],
-        PU = UU => {
-          let RU = 0;
-          for (const gU of EU) {
-            if (RU = UU.indexOf(gU, RU), -1 === RU) return !1;
-            RU++
+      if (Ku.length > 0) return Ku.sort(((uu, Ru) => uu.rank - Ru.rank)).map((uu => uu.item));
+      const Qu = [...yu],
+        mu = uu => {
+          let Ru = 0;
+          for (const yu of Qu) {
+            if (Ru = uu.indexOf(yu, Ru), -1 === Ru) return !1;
+            Ru++
           }
           return !0
         };
-      return UU.filter((UU => PU(UU.lowerLabel) || PU(UU.lowerName)))
+      return uu.filter((uu => mu(uu.lowerLabel) || mu(uu.lowerName)))
     }
 
-    function Tp(UU, RU) {
-      var gU;
-      return null !== (gU = null === UU || void 0 === UU ? void 0 : UU[RU]) && void 0 !== gU ? gU : RU
+    function mK(uu, Ru) {
+      var yu;
+      return null !== (yu = null === uu || void 0 === uu ? void 0 : uu[Ru]) && void 0 !== yu ? yu : Ru
     }
 
-    function qp(UU, RU) {
-      const gU = UU.userInput;
-      return void 0 !== RU && "dropdown" === (null === gU || void 0 === gU ? void 0 : gU.type) && gU.dropdownOptions.map(mt.h).includes(RU) ? RU : function(UU) {
-        const RU = UU.userInput;
-        if ("dropdown" !== (null === RU || void 0 === RU ? void 0 : RU.type) || 0 === RU.dropdownOptions.length) return null;
-        const gU = RU.dropdownOptions.map(mt.h);
-        return RU.initialValue && gU.includes(RU.initialValue) ? RU.initialValue : gU[gU.length - 1]
-      }(UU)
+    function JK(uu, Ru) {
+      const yu = uu.userInput;
+      return void 0 !== Ru && "dropdown" === (null === yu || void 0 === yu ? void 0 : yu.type) && yu.dropdownOptions.map(bE.h).includes(Ru) ? Ru : function(uu) {
+        const Ru = uu.userInput;
+        if ("dropdown" !== (null === Ru || void 0 === Ru ? void 0 : Ru.type) || 0 === Ru.dropdownOptions.length) return null;
+        const yu = Ru.dropdownOptions.map(bE.h);
+        return Ru.initialValue && yu.includes(Ru.initialValue) ? Ru.initialValue : yu[yu.length - 1]
+      }(uu)
     }
 
-    function Kp(UU) {
-      return void 0 === UU ? "" : JSON.stringify(UU)
+    function NK(uu) {
+      return void 0 === uu ? "" : JSON.stringify(uu)
     }
-    const cp = (0, tU.createContext)(null);
+    const XK = (0, Eu.createContext)(null);
 
-    function Gp() {
-      return (0, tU.useContext)(cp)
+    function VK() {
+      return (0, Eu.useContext)(XK)
     }
-    var jp = gU(2489);
-    const Cp = (0, tU.memo)((function(UU) {
+    var rK = yu(2557);
+    const BK = (0, Eu.memo)((function(uu) {
         let {
-          name: RU,
-          label: gU,
-          onPick: tU
-        } = UU;
-        return (0, cU.jsxs)("button", {
+          name: Ru,
+          label: yu,
+          onPick: Eu
+        } = uu;
+        return (0, Vu.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: gU,
+          title: yu,
           onClick: () => {
-            tU(RU)
+            Eu(Ru)
           },
-          children: [(0, cU.jsx)(Ht, {
-            item: RU,
+          children: [(0, Vu.jsx)(cE, {
+            item: Ru,
             size: "big"
-          }), (0, cU.jsx)("span", {
-            children: gU
+          }), (0, Vu.jsx)("span", {
+            children: yu
           })]
         })
       })),
-      hp = (0, tU.memo)((function(UU) {
+      xK = (0, Eu.memo)((function(uu) {
         let {
-          items: RU,
-          query: gU,
-          onPick: pU
-        } = UU;
+          items: Ru,
+          query: yu,
+          onPick: Ku
+        } = uu;
         const {
-          t: EU
-        } = (0, PU.B)(), [TU, qU] = (0, tU.useState)(new Set), KU = (0, tU.useMemo)((() => function(UU) {
-          const RU = new Map;
-          for (const gU of UU) {
-            let UU = RU.get(gU.category);
-            UU || (UU = [], RU.set(gU.category, UU)), UU.push(gU)
+          t: Qu
+        } = (0, mu.E)(), [Ju, Nu] = (0, Eu.useState)(new Set), Xu = (0, Eu.useMemo)((() => function(uu) {
+          const Ru = new Map;
+          for (const yu of uu) {
+            let uu = Ru.get(yu.category);
+            uu || (uu = [], Ru.set(yu.category, uu)), uu.push(yu)
           }
-          return [...Lt, "other"].filter((UU => RU.has(UU))).map((UU => ({
-            category: UU,
-            items: RU.get(UU)
+          return [...qE, "other"].filter((uu => Ru.has(uu))).map((uu => ({
+            category: uu,
+            items: Ru.get(uu)
           })))
-        }(RU)), [RU]), GU = (0, tU.useMemo)((() => Pp(RU, gU).slice(0, 60)), [RU, gU]);
-        return gU.trim() ? 0 === GU.length ? (0, cU.jsx)(yt, {
-          title: EU("smpShop:noItemsFound", {
-            query: gU.trim()
+        }(Ru)), [Ru]), ru = (0, Eu.useMemo)((() => QK(Ru, yu).slice(0, 60)), [Ru, yu]);
+        return yu.trim() ? 0 === ru.length ? (0, Vu.jsx)(FE, {
+          title: Qu("smpShop:noItemsFound", {
+            query: yu.trim()
           }),
-          children: EU("smpShop:tryShorterName")
-        }) : (0, cU.jsx)(jp.d, {
+          children: Qu("smpShop:tryShorterName")
+        }) : (0, Vu.jsx)(rK.e, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: Rp,
-          observerUpdateDeps: [gU],
-          children: GU.map((UU => (0, cU.jsx)(Cp, {
-            name: UU.name,
-            label: UU.label,
-            onPick: pU
-          }, UU.name)))
-        }) : (0, cU.jsx)(cU.Fragment, {
-          children: KU.map((UU => {
+          rootMargin: uK,
+          observerUpdateDeps: [yu],
+          children: ru.map((uu => (0, Vu.jsx)(BK, {
+            name: uu.name,
+            label: uu.label,
+            onPick: Ku
+          }, uu.name)))
+        }) : (0, Vu.jsx)(Vu.Fragment, {
+          children: Xu.map((uu => {
             let {
-              category: RU,
-              items: gU
-            } = UU;
-            const tU = TU.has(RU) || gU.length <= 48,
-              PU = tU ? gU : gU.slice(0, 48);
-            return (0, cU.jsxs)("section", {
+              category: Ru,
+              items: yu
+            } = uu;
+            const Eu = Ju.has(Ru) || yu.length <= 48,
+              mu = Eu ? yu : yu.slice(0, 48);
+            return (0, Vu.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, cU.jsxs)("h4", {
-                children: [EU("other" === RU ? "smpShop:otherItems" : `creativeInventory:${RU}`), !tU && (0, cU.jsx)("button", {
+              children: [(0, Vu.jsxs)("h4", {
+                children: [Qu("other" === Ru ? "smpShop:otherItems" : `creativeInventory:${Ru}`), !Eu && (0, Vu.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    qU(new Set([...TU, RU]))
+                    Nu(new Set([...Ju, Ru]))
                   },
-                  children: EU("smpShop:showAll", {
-                    count: gU.length
+                  children: Qu("smpShop:showAll", {
+                    count: yu.length
                   })
                 })]
-              }), (0, cU.jsx)(jp.d, {
+              }), (0, Vu.jsx)(rK.e, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: Rp,
-                observerUpdateDeps: [tU],
-                children: PU.map((UU => (0, cU.jsx)(Cp, {
-                  name: UU.name,
-                  label: UU.label,
-                  onPick: pU
-                }, UU.name)))
+                rootMargin: uK,
+                observerUpdateDeps: [Eu],
+                children: mu.map((uu => (0, Vu.jsx)(BK, {
+                  name: uu.name,
+                  label: uu.label,
+                  onPick: Ku
+                }, uu.name)))
               })]
-            }, RU)
+            }, Ru)
           }))
         })
       }));
 
-    function Qp(UU, RU) {
+    function SK(uu, Ru) {
       const {
-        searched: gU,
-        shown: pU,
-        searchFor: EU,
-        loading: PU
-      } = function(UU, RU) {
-        var gU;
-        const pU = Gp(),
-          [EU, PU] = (0, tU.useState)(void 0),
-          TU = (0, tU.useRef)(void 0),
-          qU = (0, tU.useRef)(0),
-          KU = (0, tU.useRef)(void 0),
-          cU = null !== (gU = null === UU || void 0 === UU ? void 0 : UU.meta.item) && void 0 !== gU ? gU : null,
-          GU = !!UU && pU.isPending(UU.key);
-        (0, tU.useEffect)((() => {
-          if (!UU || GU || !RU || void 0 === EU || EU === cU) return;
-          const gU = EU === TU.current && pU.gaveUpAt(UU.key) > qU.current && KU.current !== EU;
-          (EU !== TU.current || gU) && pU.act(UU.key, null !== EU && void 0 !== EU ? EU : "*", gU) && (gU && (KU.current = EU), TU.current = EU, qU.current = Date.now())
-        }), [UU, GU, RU, EU, cU, pU]);
-        const jU = (0, tU.useCallback)((UU => {
-            TU.current = void 0, KU.current = void 0, PU(UU)
+        searched: yu,
+        shown: Ku,
+        searchFor: Qu,
+        loading: mu
+      } = function(uu, Ru) {
+        var yu;
+        const Ku = VK(),
+          [Qu, mu] = (0, Eu.useState)(void 0),
+          Ju = (0, Eu.useRef)(void 0),
+          Nu = (0, Eu.useRef)(0),
+          Xu = (0, Eu.useRef)(void 0),
+          Vu = null !== (yu = null === uu || void 0 === uu ? void 0 : uu.meta.item) && void 0 !== yu ? yu : null,
+          ru = !!uu && Ku.isPending(uu.key);
+        (0, Eu.useEffect)((() => {
+          if (!uu || ru || !Ru || void 0 === Qu || Qu === Vu) return;
+          const yu = Qu === Ju.current && Ku.gaveUpAt(uu.key) > Nu.current && Xu.current !== Qu;
+          (Qu !== Ju.current || yu) && Ku.act(uu.key, null !== Qu && void 0 !== Qu ? Qu : "*", yu) && (yu && (Xu.current = Qu), Ju.current = Qu, Nu.current = Date.now())
+        }), [uu, ru, Ru, Qu, Vu, Ku]);
+        const Bu = (0, Eu.useCallback)((uu => {
+            Ju.current = void 0, Xu.current = void 0, mu(uu)
           }), []),
-          uU = void 0 !== EU && EU !== cU && (GU || TU.current !== EU);
+          xu = void 0 !== Qu && Qu !== Vu && (ru || Ju.current !== Qu);
         return {
-          searched: cU,
-          shown: uU ? EU : cU,
-          searchFor: jU,
-          loading: uU || GU || null !== cU && !RU
+          searched: Vu,
+          shown: xu ? Qu : Vu,
+          searchFor: Bu,
+          loading: xu || ru || null !== Vu && !Ru
         }
-      }(UU, RU), TU = (0, tU.useMemo)((() => function() {
-        var UU;
-        let RU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const pU = `${(0,Nt.g)()}\x1f${RU.join("\x1e")}\x1f${gU.join("\x1e")}\x1f${JSON.stringify(tU)}`;
-        if ((null === (UU = Ep) || void 0 === UU ? void 0 : UU.key) === pU) return Ep.items;
-        const EU = new Set(gU),
-          PU = new Set,
-          TU = [],
-          qU = (UU, RU) => {
-            var gU;
-            if (!UU || PU.has(UU) || EU.has(UU)) return;
-            PU.add(UU);
-            const pU = null !== (gU = tU[UU]) && void 0 !== gU ? gU : UU;
-            TU.push({
-              name: UU,
-              label: pU,
-              lowerLabel: pU.toLowerCase(),
-              lowerName: UU.toLowerCase(),
-              category: RU
+      }(uu, Ru), Ju = (0, Eu.useMemo)((() => function() {
+        var uu;
+        let Ru = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Ku = `${(0,OE.g)()}\x1f${Ru.join("\x1e")}\x1f${yu.join("\x1e")}\x1f${JSON.stringify(Eu)}`;
+        if ((null === (uu = KK) || void 0 === uu ? void 0 : uu.key) === Ku) return KK.items;
+        const Qu = new Set(yu),
+          mu = new Set,
+          Ju = [],
+          Nu = (uu, Ru) => {
+            var yu;
+            if (!uu || mu.has(uu) || Qu.has(uu)) return;
+            mu.add(uu);
+            const Ku = null !== (yu = Eu[uu]) && void 0 !== yu ? yu : uu;
+            Ju.push({
+              name: uu,
+              label: Ku,
+              lowerLabel: Ku.toLowerCase(),
+              lowerName: uu.toLowerCase(),
+              category: Ru
             })
           };
-        for (const cU of (0, Mt.creativeItemIds)()) {
-          var KU;
-          (0, Mt.itemIsDisabled)(cU, !0, !0, !1) || (0, Mt.showOnlyInCreativeSearch)(cU) || qU((0, Nt.f)(cU), null !== (KU = (0, Mt.creativeCategoryOf)(cU)) && void 0 !== KU ? KU : "other")
+        for (const Vu of (0, YE.creativeItemIds)()) {
+          var Xu;
+          (0, YE.itemIsDisabled)(Vu, !0, !0, !1) || (0, YE.showOnlyInCreativeSearch)(Vu) || Nu((0, OE.f)(Vu), null !== (Xu = (0, YE.creativeCategoryOf)(Vu)) && void 0 !== Xu ? Xu : "other")
         }
-        for (const cU of RU) qU(cU, "other");
-        return Ep = {
-          key: pU,
-          items: TU
-        }, TU
-      }(null === UU || void 0 === UU ? void 0 : UU.meta.extra, null === UU || void 0 === UU ? void 0 : UU.meta.excluded, null === UU || void 0 === UU ? void 0 : UU.meta.names)), [null === UU || void 0 === UU ? void 0 : UU.meta.extra, null === UU || void 0 === UU ? void 0 : UU.meta.excluded, null === UU || void 0 === UU ? void 0 : UU.meta.names]), [qU, KU] = (0, tU.useState)(""), [cU, GU] = (0, tU.useState)(0), [jU, uU] = (0, tU.useState)("recent"), CU = (0, tU.useCallback)((UU => {
-        KU(""), GU((UU => UU + 1)), EU(UU)
-      }), [EU]), hU = "browse" === jU || "" !== qU.trim();
+        for (const Vu of Ru) Nu(Vu, "other");
+        return KK = {
+          key: Ku,
+          items: Ju
+        }, Ju
+      }(null === uu || void 0 === uu ? void 0 : uu.meta.extra, null === uu || void 0 === uu ? void 0 : uu.meta.excluded, null === uu || void 0 === uu ? void 0 : uu.meta.names)), [null === uu || void 0 === uu ? void 0 : uu.meta.extra, null === uu || void 0 === uu ? void 0 : uu.meta.excluded, null === uu || void 0 === uu ? void 0 : uu.meta.names]), [Nu, Xu] = (0, Eu.useState)(""), [Vu, ru] = (0, Eu.useState)(0), [Bu, xu] = (0, Eu.useState)("recent"), Su = (0, Eu.useCallback)((uu => {
+        Xu(""), ru((uu => uu + 1)), Qu(uu)
+      }), [Qu]), pu = "browse" === Bu || "" !== Nu.trim();
       return {
-        searched: gU,
-        shown: pU,
-        searchFor: EU,
-        loading: PU,
-        catalogue: TU,
-        names: null === UU || void 0 === UU ? void 0 : UU.meta.names,
-        query: qU,
-        setQuery: KU,
-        searchBoxKey: cU,
-        pickItem: CU,
-        setView: uU,
-        browsing: hU
+        searched: yu,
+        shown: Ku,
+        searchFor: Qu,
+        loading: mu,
+        catalogue: Ju,
+        names: null === uu || void 0 === uu ? void 0 : uu.meta.names,
+        query: Nu,
+        setQuery: Xu,
+        searchBoxKey: Vu,
+        pickItem: Su,
+        setView: xu,
+        browsing: pu
       }
     }
 
-    function ep(UU) {
+    function pK(uu) {
       let {
-        browser: RU,
-        children: gU
-      } = UU;
+        browser: Ru,
+        children: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, PU.B)(), pU = Gp();
-      return (0, cU.jsxs)("div", {
+        t: Eu
+      } = (0, mu.E)(), Ku = VK();
+      return (0, Vu.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, cU.jsx)("div", {
+        children: [(0, Vu.jsx)("div", {
           className: "SmpSearch",
-          children: (0, cU.jsx)(mU.d, {
+          children: (0, Vu.jsx)(bu.b, {
             className: "SmpSearchInput",
-            placeholderText: tU("smpShop:searchPlaceholder"),
-            defaultValue: RU.query,
-            onValueChange: UU => {
-              RU.setQuery(UU), RU.searched && UU.trim() && RU.searchFor(null)
+            placeholderText: Eu("smpShop:searchPlaceholder"),
+            defaultValue: Ru.query,
+            onValueChange: uu => {
+              Ru.setQuery(uu), Ru.searched && uu.trim() && Ru.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const UU = Pp(RU.catalogue, RU.query)[0];
-              UU ? RU.pickItem(UU.name) : RU.query.trim() && pU.notify(tU("smpShop:noItemsFound", {
-                query: RU.query.trim()
+              const uu = QK(Ru.catalogue, Ru.query)[0];
+              uu ? Ru.pickItem(uu.name) : Ru.query.trim() && Ku.notify(Eu("smpShop:noItemsFound", {
+                query: Ru.query.trim()
               }))
             }
-          }, RU.searchBoxKey)
-        }), gU]
+          }, Ru.searchBoxKey)
+        }), yu]
       })
     }
 
-    function Wp(UU) {
+    function TK(uu) {
       let {
-        browser: RU,
-        recentLabel: gU,
-        children: tU
-      } = UU;
+        browser: Ru,
+        recentLabel: yu,
+        children: Eu
+      } = uu;
       const {
-        t: pU
-      } = (0, PU.B)();
-      return (0, cU.jsxs)("div", {
+        t: Ku
+      } = (0, mu.E)();
+      return (0, Vu.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, cU.jsx)(Ft, {
+        children: [(0, Vu.jsx)(ZE, {
           options: [{
             value: "recent",
-            label: gU
+            label: yu
           }, {
             value: "browse",
-            label: pU("smpShop:browseItems")
+            label: Ku("smpShop:browseItems")
           }],
-          value: RU.browsing ? "browse" : "recent",
-          onChange: RU.setView,
-          ariaLabel: pU("smpShop:show")
-        }), !RU.browsing && tU]
+          value: Ru.browsing ? "browse" : "recent",
+          onChange: Ru.setView,
+          ariaLabel: Ku("smpShop:show")
+        }), !Ru.browsing && Eu]
       })
     }
 
-    function fp(UU) {
+    function WK(uu) {
       let {
-        item: RU,
-        names: gU,
-        summary: tU,
-        onBack: pU,
-        children: EU
-      } = UU;
+        item: Ru,
+        names: yu,
+        summary: Eu,
+        onBack: Ku,
+        children: Qu
+      } = uu;
       const {
-        t: TU
-      } = (0, PU.B)();
-      return (0, cU.jsxs)("div", {
+        t: Ju
+      } = (0, mu.E)();
+      return (0, Vu.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, cU.jsx)(QU.d, {
+        children: [(0, Vu.jsx)(Tu.b, {
           className: "SmpBackButton",
-          onClick: pU,
-          children: TU("general:back")
-        }), (0, cU.jsx)(Ht, {
-          item: RU,
+          onClick: Ku,
+          children: Ju("general:back")
+        }), (0, Vu.jsx)(cE, {
+          item: Ru,
           size: "big"
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, cU.jsx)("b", {
-            children: Tp(gU, RU)
-          }), tU && (0, cU.jsx)("small", {
-            children: tU
+          children: [(0, Vu.jsx)("b", {
+            children: mK(yu, Ru)
+          }), Eu && (0, Vu.jsx)("small", {
+            children: Eu
           })]
-        }), EU]
+        }), Qu]
       })
     }
 
-    function xp(UU) {
+    function jK(uu) {
       let {
-        browser: RU,
-        className: gU,
-        action: tU,
-        above: pU,
-        list: PU,
-        summary: TU,
-        recentLabel: qU,
-        listControls: KU,
-        onBack: GU
-      } = UU;
-      return (0, cU.jsxs)("div", {
-        className: EU()("SmpScreen", gU),
-        children: [(0, cU.jsx)(ep, {
-          browser: RU,
-          children: tU
-        }), RU.shown && (0, cU.jsx)(fp, {
-          item: RU.shown,
-          names: RU.names,
-          summary: !RU.loading && TU,
+        browser: Ru,
+        className: yu,
+        action: Eu,
+        above: Ku,
+        list: mu,
+        summary: Ju,
+        recentLabel: Nu,
+        listControls: Xu,
+        onBack: ru
+      } = uu;
+      return (0, Vu.jsxs)("div", {
+        className: Qu()("SmpScreen", yu),
+        children: [(0, Vu.jsx)(pK, {
+          browser: Ru,
+          children: Eu
+        }), Ru.shown && (0, Vu.jsx)(WK, {
+          item: Ru.shown,
+          names: Ru.names,
+          summary: !Ru.loading && Ju,
           onBack: () => {
-            null === GU || void 0 === GU || GU(), RU.searchFor(null)
+            null === ru || void 0 === ru || ru(), Ru.searchFor(null)
           },
-          children: KU
-        }), pU, RU.shown ? PU : (0, cU.jsxs)(cU.Fragment, {
-          children: [(0, cU.jsx)(Wp, {
-            browser: RU,
-            recentLabel: qU,
-            children: KU
-          }), RU.browsing ? (0, cU.jsx)(hp, {
-            items: RU.catalogue,
-            query: RU.query,
-            onPick: RU.pickItem
-          }) : PU]
+          children: Xu
+        }), Ku, Ru.shown ? mu : (0, Vu.jsxs)(Vu.Fragment, {
+          children: [(0, Vu.jsx)(TK, {
+            browser: Ru,
+            recentLabel: Nu,
+            children: Xu
+          }), Ru.browsing ? (0, Vu.jsx)(xK, {
+            items: Ru.catalogue,
+            query: Ru.query,
+            onPick: Ru.pickItem
+          }) : mu]
         })]
       })
     }
 
-    function mp(UU, RU) {
-      const gU = UU.map((UU => {
+    function HK(uu, Ru) {
+      const yu = uu.map((uu => {
         let {
-          meta: RU
-        } = UU;
-        return RU.pricePerItem
+          meta: Ru
+        } = uu;
+        return Ru.pricePerItem
       }));
-      return "min" === RU ? Math.min(...gU) : Math.max(...gU)
+      return "min" === Ru ? Math.min(...yu) : Math.max(...yu)
     }
-    var Ip = gU(6239);
-    const Jp = (0, tU.memo)((function(UU) {
-      var RU;
+    var dK = yu(6336);
+    const bK = (0, Eu.memo)((function(uu) {
+      var Ru;
       const {
-        t: gU
-      } = (0, PU.B)(), tU = null === UU.seller, pU = UU.quantity * UU.pricePerItem;
-      return (0, cU.jsxs)("div", {
-        className: UU.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, cU.jsx)(Ht, {
-          item: UU.item,
-          amount: UU.quantity,
-          size: UU.grid ? "big" : "normal",
-          tier: UU.tier
-        }), (0, cU.jsxs)("div", {
+        t: yu
+      } = (0, mu.E)(), Eu = null === uu.seller, Ku = uu.quantity * uu.pricePerItem;
+      return (0, Vu.jsxs)("div", {
+        className: uu.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, Vu.jsx)(cE, {
+          item: uu.item,
+          amount: uu.quantity,
+          size: uu.grid ? "big" : "normal",
+          tier: uu.tier
+        }), (0, Vu.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, cU.jsx)("b", {
-            children: (0, cU.jsx)(nt.e, {
-              text: null !== (RU = UU.title) && void 0 !== RU ? RU : `${UU.quantity}x ${UU.item}`
+          children: [(0, Vu.jsx)("b", {
+            children: (0, Vu.jsx)(AE.d, {
+              text: null !== (Ru = uu.title) && void 0 !== Ru ? Ru : `${uu.quantity}x ${uu.item}`
             })
-          }), (0, cU.jsxs)("small", {
+          }), (0, Vu.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, cU.jsx)("span", {
-              children: tU ? gU("smpShop:you") : (0, cU.jsx)(nt.e, {
+            children: [(0, Vu.jsx)("span", {
+              children: Eu ? yu("smpShop:you") : (0, Vu.jsx)(AE.d, {
                 text: [{
-                  entityName: UU.seller
+                  entityName: uu.seller
                 }]
               })
-            }), (0, cU.jsx)("span", {
-              children: gU("smpShop:timeLeft", {
-                time: tp(UU.expiresAt)
+            }), (0, Vu.jsx)("span", {
+              children: yu("smpShop:timeLeft", {
+                time: yK(uu.expiresAt)
               })
             })]
           })]
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, cU.jsx)(St, {
-            amount: UU.pricePerItem
-          }), (0, cU.jsx)("small", {
-            children: gU("smpShop:each")
+          children: [(0, Vu.jsx)(LE, {
+            amount: uu.pricePerItem
+          }), (0, Vu.jsx)("small", {
+            children: yu("smpShop:each")
           })]
-        }), (0, cU.jsx)(QU.e, {
+        }), (0, Vu.jsx)(Tu.e, {
           className: "SmpBuyButton",
-          disabled: tU || !UU.canAfford && !UU.busy,
-          loading: UU.busy,
+          disabled: Eu || !uu.canAfford && !uu.busy,
+          loading: uu.busy,
           onClick: () => {
-            UU.onBuy(UU.itemKey)
+            uu.onBuy(uu.itemKey)
           },
-          children: tU ? gU("smpShop:yours") : (0, cU.jsx)(St, {
-            amount: pU
+          children: Eu ? yu("smpShop:yours") : (0, Vu.jsx)(LE, {
+            amount: Ku
           })
         })]
       })
     }));
 
-    function wp(UU) {
+    function CK(uu) {
       let {
-        view: RU,
-        onChange: gU
-      } = UU;
+        view: Ru,
+        onChange: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, PU.B)();
-      return (0, cU.jsx)(vt.d, {
+        t: Eu
+      } = (0, mu.E)();
+      return (0, Vu.jsx)(lE.b, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: tU("smpShop:layout"),
+        ariaLabel: Eu("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, cU.jsx)(TU.c, {
+          label: (0, Vu.jsx)(Ju.c, {
             name: "list"
           }),
-          ariaLabel: tU("smpShop:listView")
+          ariaLabel: Eu("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, cU.jsx)(TU.c, {
+          label: (0, Vu.jsx)(Ju.c, {
             name: "grid-2"
           }),
-          ariaLabel: tU("smpShop:gridView")
+          ariaLabel: Eu("smpShop:gridView")
         }],
-        value: RU,
-        onChange: gU
+        value: Ru,
+        onChange: yu
       })
     }
 
-    function np(UU) {
+    function kK(uu) {
       let {
-        entries: RU,
-        view: gU
-      } = UU;
+        entries: Ru,
+        view: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, PU.B)(), pU = Gp(), EU = "grid" === gU;
-      return (0, cU.jsxs)(cU.Fragment, {
-        children: [!EU && (0, cU.jsxs)("div", {
+        t: Eu
+      } = (0, mu.E)(), Ku = VK(), Qu = "grid" === yu;
+      return (0, Vu.jsxs)(Vu.Fragment, {
+        children: [!Qu && (0, Vu.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, cU.jsx)("span", {}), (0, cU.jsx)("span", {
-            children: tU("smpShop:columnItem")
-          }), (0, cU.jsx)("span", {
-            children: tU("smpShop:columnPriceEach")
-          }), (0, cU.jsx)("span", {
-            children: tU("smpShop:columnTotal")
+          children: [(0, Vu.jsx)("span", {}), (0, Vu.jsx)("span", {
+            children: Eu("smpShop:columnItem")
+          }), (0, Vu.jsx)("span", {
+            children: Eu("smpShop:columnPriceEach")
+          }), (0, Vu.jsx)("span", {
+            children: Eu("smpShop:columnTotal")
           })]
-        }), (0, cU.jsx)(jp.d, {
-          lazyLoadedClassName: EU ? "SmpCardGrid" : "SmpList",
+        }), (0, Vu.jsx)(rK.e, {
+          lazyLoadedClassName: Qu ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: Rp,
-          observerUpdateDeps: [RU.length],
-          children: RU.map((UU => {
-            var RU, gU;
+          rootMargin: uK,
+          observerUpdateDeps: [Ru.length],
+          children: Ru.map((uu => {
+            var Ru, yu;
             let {
-              key: tU,
-              item: PU,
-              meta: TU
-            } = UU;
-            const qU = TU.quantity * TU.pricePerItem;
-            return (0, cU.jsx)(Jp, {
-              itemKey: tU,
-              item: TU.item,
-              title: PU.customTitle,
-              quantity: TU.quantity,
-              pricePerItem: TU.pricePerItem,
-              seller: TU.seller,
-              expiresAt: TU.expiresAt,
-              tier: null !== (RU = null === (gU = PU.enchant) || void 0 === gU ? void 0 : gU.tier) && void 0 !== RU ? RU : null,
-              busy: pU.isPending(tU) || null !== TU.seller && !1 === PU.canBuy,
-              canAfford: pU.canAfford(PU, qU),
-              grid: EU,
-              onBuy: pU.act
-            }, tU)
+              key: Eu,
+              item: mu,
+              meta: Ju
+            } = uu;
+            const Nu = Ju.quantity * Ju.pricePerItem;
+            return (0, Vu.jsx)(bK, {
+              itemKey: Eu,
+              item: Ju.item,
+              title: mu.customTitle,
+              quantity: Ju.quantity,
+              pricePerItem: Ju.pricePerItem,
+              seller: Ju.seller,
+              expiresAt: Ju.expiresAt,
+              tier: null !== (Ru = null === (yu = mu.enchant) || void 0 === yu ? void 0 : yu.tier) && void 0 !== Ru ? Ru : null,
+              busy: Ku.isPending(Eu) || null !== Ju.seller && !1 === mu.canBuy,
+              canAfford: Ku.canAfford(mu, Nu),
+              grid: Qu,
+              onBuy: Ku.act
+            }, Eu)
           }))
-        }, gU)]
+        }, yu)]
       })
     }
-    const bp = [1, 10, 100],
-      op = [1, 10, 100, 999];
+    const eK = [1, 10, 100],
+      AK = [1, 10, 100, 999];
 
-    function Zp(UU) {
-      var RU, gU, pU, qU, KU, GU, jU, uU, CU, hU;
+    function DK(uu) {
+      var Ru, yu, Ku, Nu, Xu, ru, Bu, xu, Su, pu;
       const {
-        t: eU
-      } = (0, PU.B)(), WU = Gp(), {
-        creator: fU,
-        mode: xU
-      } = UU, [IU, JU] = (0, tU.useState)(null !== (RU = null === fU || void 0 === fU ? void 0 : fU.meta.item) && void 0 !== RU ? RU : null), [wU, nU] = (0, tU.useState)(1), [bU, oU] = (0, tU.useState)(0), [ZU, aU] = (0, tU.useState)(""), [YU, BU] = (0, tU.useState)(0), VU = (0, tU.useRef)(IU), rU = (0, tU.useRef)(!1), [XU, vU] = (0, tU.useState)(!1), dU = null !== (gU = null === fU || void 0 === fU ? void 0 : fU.meta.item) && void 0 !== gU ? gU : null, HU = null !== (pU = null === fU || void 0 === fU ? void 0 : fU.meta.WT) && void 0 !== pU ? pU : 0;
-      (0, tU.useEffect)((() => {
-        UU.searching || null === dU || dU === VU.current || (VU.current = dU, rU.current = !1, JU(dU), oU(0), nU("list" === xU ? Math.max(1, HU) : 1))
-      }), [dU, UU.searching]);
-      const SU = !!fU && !!IU && fU.meta.item === IU,
-        sU = SU ? fU.meta.WT : null !== (qU = null === (KU = UU.inventory) || void 0 === KU || null === (GU = KU.find((UU => UU.item === IU))) || void 0 === GU ? void 0 : GU.quantity) && void 0 !== qU ? qU : 0,
-        yU = "list" === xU ? Math.max(1, sU) : 45954,
-        kU = null !== (jU = UU.prices[0]) && void 0 !== jU ? jU : null,
-        FU = UU.prices.length ? Math.round(UU.prices.reduce(((UU, RU) => UU + RU), 0) / UU.prices.length) : null,
-        iU = null === (uU = UU.inventory) || void 0 === uU || null === (CU = uU.find((UU => UU.item === IU))) || void 0 === CU ? void 0 : CU.sellPrice;
-      (0, tU.useEffect)((() => {
-        var UU;
-        SU && (nU((UU => "list" === xU ? Math.min(Math.max(1, UU), Math.max(1, sU)) : UU)), rU.current || oU(null !== (UU = null !== kU && void 0 !== kU ? kU : FU) && void 0 !== UU ? UU : Math.max(1, null !== iU && void 0 !== iU ? iU : 1)))
-      }), [SU, sU, IU, kU, FU]);
-      const AU = UU => {
-          rU.current = !0, oU(UU)
+        t: Wu
+      } = (0, mu.E)(), ju = VK(), {
+        creator: Hu,
+        mode: du
+      } = uu, [Cu, ku] = (0, Eu.useState)(null !== (Ru = null === Hu || void 0 === Hu ? void 0 : Hu.meta.item) && void 0 !== Ru ? Ru : null), [eu, Au] = (0, Eu.useState)(1), [Du, Mu] = (0, Eu.useState)(0), [Iu, Gu] = (0, Eu.useState)(""), [Uu, nu] = (0, Eu.useState)(0), su = (0, Eu.useRef)(Cu), tu = (0, Eu.useRef)(!1), [lu, gu] = (0, Eu.useState)(!1), cu = null !== (yu = null === Hu || void 0 === Hu ? void 0 : Hu.meta.item) && void 0 !== yu ? yu : null, Lu = null !== (Ku = null === Hu || void 0 === Hu ? void 0 : Hu.meta.jJ) && void 0 !== Ku ? Ku : 0;
+      (0, Eu.useEffect)((() => {
+        uu.searching || null === cu || cu === su.current || (su.current = cu, tu.current = !1, ku(cu), Mu(0), Au("list" === du ? Math.max(1, Lu) : 1))
+      }), [cu, uu.searching]);
+      const zu = !!Hu && !!Cu && Hu.meta.item === Cu,
+        Fu = zu ? Hu.meta.jJ : null !== (Nu = null === (Xu = uu.inventory) || void 0 === Xu || null === (ru = Xu.find((uu => uu.item === Cu))) || void 0 === ru ? void 0 : ru.quantity) && void 0 !== Nu ? Nu : 0,
+        wu = "list" === du ? Math.max(1, Fu) : 45954,
+        Zu = null !== (Bu = uu.prices[0]) && void 0 !== Bu ? Bu : null,
+        hu = uu.prices.length ? Math.round(uu.prices.reduce(((uu, Ru) => uu + Ru), 0) / uu.prices.length) : null,
+        Pu = null === (xu = uu.inventory) || void 0 === xu || null === (Su = xu.find((uu => uu.item === Cu))) || void 0 === Su ? void 0 : Su.sellPrice;
+      (0, Eu.useEffect)((() => {
+        var uu;
+        zu && (Au((uu => "list" === du ? Math.min(Math.max(1, uu), Math.max(1, Fu)) : uu)), tu.current || Mu(null !== (uu = null !== Zu && void 0 !== Zu ? Zu : hu) && void 0 !== uu ? uu : Math.max(1, null !== Pu && void 0 !== Pu ? Pu : 1)))
+      }), [zu, Fu, Cu, Zu, hu]);
+      const iu = uu => {
+          tu.current = !0, Mu(uu)
         },
-        zU = RU => {
-          var gU, tU, pU;
-          VU.current = RU, rU.current = !1, vU(!1), aU(""), BU((UU => UU + 1)), JU(RU), oU(0), nU("list" === xU && null !== (gU = null === (tU = UU.inventory) || void 0 === tU || null === (pU = tU.find((UU => UU.item === RU))) || void 0 === pU ? void 0 : pU.quantity) && void 0 !== gU ? gU : 1), (null === fU || void 0 === fU ? void 0 : fU.meta.item) !== RU && UU.onPickItem(RU)
+        Yu = Ru => {
+          var yu, Eu, Ku;
+          su.current = Ru, tu.current = !1, gu(!1), Gu(""), nu((uu => uu + 1)), ku(Ru), Mu(0), Au("list" === du && null !== (yu = null === (Eu = uu.inventory) || void 0 === Eu || null === (Ku = Eu.find((uu => uu.item === Ru))) || void 0 === Ku ? void 0 : Ku.quantity) && void 0 !== yu ? yu : 1), (null === Hu || void 0 === Hu ? void 0 : Hu.meta.item) !== Ru && uu.onPickItem(Ru)
         },
-        MU = wU * bU,
-        DU = "list" === xU && null !== fU && void 0 !== fU && fU.meta.fee ? function(UU, RU) {
-          const gU = Math.max(0, RU - UU.taxFreeAllowance);
-          return Math.ceil(Math.round(gU * UU.rate * 1e6) / 1e6)
-        }(fU.meta.fee, MU) : 0,
-        LU = !!fU && WU.isPending(fU.key),
-        NU = SU && !UU.searching && wU >= 1 && bU >= 1 && ("order" === xU || sU >= wU) && !LU,
-        lU = !!IU && !SU && !UU.searching && wU >= 1 && bU >= 1,
-        OU = () => {
-          NU ? WU.act(fU.key, `${wU}|${bU}`) : lU && (UU.onPickItem(IU), vU(!0))
+        ou = eu * Du,
+        qu = "list" === du && null !== Hu && void 0 !== Hu && Hu.meta.fee ? function(uu, Ru) {
+          const yu = Math.max(0, Ru - uu.taxFreeAllowance);
+          return Math.ceil(Math.round(yu * uu.rate * 1e6) / 1e6)
+        }(Hu.meta.fee, ou) : 0,
+        Ou = !!Hu && ju.isPending(Hu.key),
+        vu = zu && !uu.searching && eu >= 1 && Du >= 1 && ("order" === du || Fu >= eu) && !Ou,
+        au = !!Cu && !zu && !uu.searching && eu >= 1 && Du >= 1,
+        fu = () => {
+          vu ? ju.act(Hu.key, `${eu}|${Du}`) : au && (uu.onPickItem(Cu), gu(!0))
         };
-      (0, tU.useEffect)((() => {
-        XU && SU && !UU.searching && (vU(!1), OU())
-      }), [XU, SU, UU.searching]);
-      const UR = !!IU && !SU && (UU.searching || XU),
-        RR = IU ? Tp(UU.names, IU) : "",
-        gR = (0, tU.useMemo)((() => Pp(UU.catalogue, ZU).slice(0, 8)), [UU.catalogue, ZU]),
-        tR = ("list" === xU ? bp.filter((UU => UU < sU)) : op).map((UU => ({
-          value: UU,
-          label: String(UU)
+      (0, Eu.useEffect)((() => {
+        lu && zu && !uu.searching && (gu(!1), fu())
+      }), [lu, zu, uu.searching]);
+      const uR = !!Cu && !zu && (uu.searching || lu),
+        RR = Cu ? mK(uu.names, Cu) : "",
+        yR = (0, Eu.useMemo)((() => QK(uu.catalogue, Iu).slice(0, 8)), [uu.catalogue, Iu]),
+        ER = ("list" === du ? eK.filter((uu => uu < Fu)) : AK).map((uu => ({
+          value: uu,
+          label: String(uu)
         })));
-      "list" === xU && sU > 0 && tR.push({
-        value: sU,
-        label: eU("smpShop:all", {
-          count: sU
+      "list" === du && Fu > 0 && ER.push({
+        value: Fu,
+        label: Wu("smpShop:all", {
+          count: Fu
         })
       });
-      const pR = [];
-      return null !== kU && (kU > 1 && pR.push({
-        value: kU - 1,
-        label: eU("smpShop:undercut", {
-          price: Xt(kU - 1)
+      const KR = [];
+      return null !== Zu && (Zu > 1 && KR.push({
+        value: Zu - 1,
+        label: Wu("smpShop:undercut", {
+          price: tE(Zu - 1)
         })
-      }), pR.push({
-        value: kU,
-        label: eU("smpShop:lowest", {
-          price: Xt(kU)
+      }), KR.push({
+        value: Zu,
+        label: Wu("smpShop:lowest", {
+          price: tE(Zu)
         })
-      })), null !== FU && FU !== kU && pR.push({
-        value: FU,
-        label: eU("smpShop:average", {
-          price: Xt(FU)
+      })), null !== hu && hu !== Zu && KR.push({
+        value: hu,
+        label: Wu("smpShop:average", {
+          price: tE(hu)
         })
-      }), (0, cU.jsxs)("div", {
+      }), (0, Vu.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, cU.jsxs)("div", {
+        children: [(0, Vu.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, cU.jsx)("b", {
-            children: eU("list" === xU ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, cU.jsx)("button", {
+          children: [(0, Vu.jsx)("b", {
+            children: Wu("list" === du ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, Vu.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": eU("smpShop:close"),
-            onClick: UU.onClose,
-            children: (0, cU.jsx)(TU.c, {
+            "aria-label": Wu("smpShop:close"),
+            onClick: uu.onClose,
+            children: (0, Vu.jsx)(Ju.c, {
               name: "xmark"
             })
           })]
-        }), "list" === xU && (0, cU.jsx)("div", {
+        }), "list" === du && (0, Vu.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (hU = UU.inventory) && void 0 !== hU && hU.length ? UU.inventory.map((UU => {
+          children: null !== (pu = uu.inventory) && void 0 !== pu && pu.length ? uu.inventory.map((uu => {
             let {
-              item: RU,
-              quantity: gU
-            } = UU;
-            return (0, cU.jsx)("button", {
+              item: Ru,
+              quantity: yu
+            } = uu;
+            return (0, Vu.jsx)("button", {
               type: "button",
-              title: RU,
-              className: EU()("SmpPickerSlot", {
-                SmpPickerSlotOn: RU === IU
+              title: Ru,
+              className: Qu()("SmpPickerSlot", {
+                SmpPickerSlotOn: Ru === Cu
               }),
               onClick: () => {
-                zU(RU)
+                Yu(Ru)
               },
-              children: (0, cU.jsx)(Ht, {
-                item: RU,
-                amount: gU
+              children: (0, Vu.jsx)(cE, {
+                item: Ru,
+                amount: yu
               })
-            }, RU)
-          })) : (0, cU.jsx)("span", {
+            }, Ru)
+          })) : (0, Vu.jsx)("span", {
             className: "SmpMuted",
-            children: eU("smpShop:nothingToList")
+            children: Wu("smpShop:nothingToList")
           })
-        }), ("list" === xU || !IU) && (0, cU.jsxs)("div", {
+        }), ("list" === du || !Cu) && (0, Vu.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, cU.jsx)(mU.d, {
+          children: [(0, Vu.jsx)(bu.b, {
             className: "SmpSearchInput",
-            placeholderText: eU("list" === xU ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: ZU,
-            onValueChange: aU,
+            placeholderText: Wu("list" === du ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: Iu,
+            onValueChange: Gu,
             blurOnEnter: !0,
             onEnter: () => {
-              gR[0] && zU(gR[0].name)
+              yR[0] && Yu(yR[0].name)
             }
-          }, YU), gR.length > 0 && (0, cU.jsx)("div", {
+          }, Uu), yR.length > 0 && (0, Vu.jsx)("div", {
             className: "SmpPicker",
-            children: gR.map((UU => {
+            children: yR.map((uu => {
               let {
-                name: RU
-              } = UU;
-              return (0, cU.jsx)("button", {
+                name: Ru
+              } = uu;
+              return (0, Vu.jsx)("button", {
                 type: "button",
-                title: RU,
-                className: EU()("SmpPickerSlot", {
-                  SmpPickerSlotOn: RU === IU
+                title: Ru,
+                className: Qu()("SmpPickerSlot", {
+                  SmpPickerSlotOn: Ru === Cu
                 }),
                 onClick: () => {
-                  zU(RU)
+                  Yu(Ru)
                 },
-                children: (0, cU.jsx)(Ht, {
-                  item: RU
+                children: (0, Vu.jsx)(cE, {
+                  item: Ru
                 })
-              }, RU)
+              }, Ru)
             }))
           })]
-        }), IU && (0, cU.jsxs)(cU.Fragment, {
-          children: [(0, cU.jsxs)("div", {
+        }), Cu && (0, Vu.jsxs)(Vu.Fragment, {
+          children: [(0, Vu.jsxs)("div", {
             className: "SmpPickedName",
-            children: [RR, UR && (0, cU.jsx)(it, {})]
-          }), (0, cU.jsxs)("div", {
+            children: [RR, uR && (0, Vu.jsx)(hE, {})]
+          }), (0, Vu.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, cU.jsxs)("div", {
+            children: [(0, Vu.jsxs)("div", {
               className: "SmpField",
-              children: [(0, cU.jsxs)("span", {
-                children: [eU("smpShop:quantity"), "list" === xU && SU && (0, cU.jsx)("small", {
-                  children: eU("smpShop:youHave", {
-                    count: sU
+              children: [(0, Vu.jsxs)("span", {
+                children: [Wu("smpShop:quantity"), "list" === du && zu && (0, Vu.jsx)("small", {
+                  children: Wu("smpShop:youHave", {
+                    count: Fu
                   })
                 })]
-              }), (0, cU.jsx)(At, {
-                value: wU,
-                onChange: nU,
-                max: yU,
-                label: eU("smpShop:quantity")
-              }), (0, cU.jsx)(Ft, {
-                options: tR,
-                value: wU,
-                onChange: nU,
-                ariaLabel: eU("smpShop:quantity")
+              }), (0, Vu.jsx)(PE, {
+                value: eu,
+                onChange: Au,
+                max: wu,
+                label: Wu("smpShop:quantity")
+              }), (0, Vu.jsx)(ZE, {
+                options: ER,
+                value: eu,
+                onChange: Au,
+                ariaLabel: Wu("smpShop:quantity")
               })]
-            }), (0, cU.jsxs)("div", {
+            }), (0, Vu.jsxs)("div", {
               className: "SmpField",
-              children: [(0, cU.jsx)("span", {
-                children: eU("smpShop:pricePerItem")
-              }), (0, cU.jsx)(At, {
-                value: Math.max(1, bU),
-                onChange: AU,
+              children: [(0, Vu.jsx)("span", {
+                children: Wu("smpShop:pricePerItem")
+              }), (0, Vu.jsx)(PE, {
+                value: Math.max(1, Du),
+                onChange: iu,
                 max: 9999999,
-                step: zt,
-                label: eU("smpShop:pricePerItem")
-              }), (0, cU.jsx)(Ft, {
-                options: pR,
-                value: bU,
-                onChange: AU,
-                ariaLabel: eU("smpShop:pricePerItem")
+                step: iE,
+                label: Wu("smpShop:pricePerItem")
+              }), (0, Vu.jsx)(ZE, {
+                options: KR,
+                value: Du,
+                onChange: iu,
+                ariaLabel: Wu("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === xU && (0, cU.jsxs)("div", {
+          }), "list" === du && (0, Vu.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, cU.jsxs)("span", {
-              children: [eU("smpShop:youGet"), " ", (0, cU.jsx)(St, {
-                amount: Math.max(0, MU - DU),
+            children: [(0, Vu.jsxs)("span", {
+              children: [Wu("smpShop:youGet"), " ", (0, Vu.jsx)(LE, {
+                amount: Math.max(0, ou - qu),
                 exact: !0
               })]
-            }), (0, cU.jsx)("small", {
-              children: DU > 0 ? eU("smpShop:listingFee", {
-                fee: DU.toLocaleString("en-US")
-              }) : eU("smpShop:listingRules")
+            }), (0, Vu.jsx)("small", {
+              children: qu > 0 ? Wu("smpShop:listingFee", {
+                fee: qu.toLocaleString("en-US")
+              }) : Wu("smpShop:listingRules")
             })]
-          }), (0, cU.jsx)(QU.p, {
+          }), (0, Vu.jsx)(Tu.n, {
             className: "SmpSubmit",
-            disabled: !NU && !lU && !LU,
-            loading: LU || UR || SU && UU.searching,
-            onClick: OU,
-            children: "list" === xU ? eU("smpShop:listButton", {
-              count: wU,
+            disabled: !vu && !au && !Ou,
+            loading: Ou || uR || zu && uu.searching,
+            onClick: fu,
+            children: "list" === du ? Wu("smpShop:listButton", {
+              count: eu,
               item: RR
-            }) : (0, cU.jsxs)(cU.Fragment, {
-              children: [eU("smpShop:orderButton", {
-                count: wU,
+            }) : (0, Vu.jsxs)(Vu.Fragment, {
+              children: [Wu("smpShop:orderButton", {
+                count: eu,
                 item: RR
-              }), " ", bU >= 1 && (0, cU.jsx)(St, {
-                amount: MU
+              }), " ", Du >= 1 && (0, Vu.jsx)(LE, {
+                amount: ou
               })]
             })
           })]
@@ -3656,627 +3656,627 @@ export const modules = {
       })
     }
 
-    function ap() {
-      var UU;
+    function MK() {
+      var uu;
       const {
-        t: RU
-      } = (0, PU.B)(), gU = Gp(), pU = null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, EU = Up(pU, "search"), TU = Up(pU, "creator"), qU = Ot(pU, "enchantedCreator"), KU = Ot(pU, "listing"), GU = Up(pU, "empty"), jU = Qp(EU, KU.length > 0 || null !== GU), {
-        searched: uU,
-        shown: CU,
-        loading: hU
-      } = jU, [eU, WU] = (0, tU.useState)(!1), [fU, xU] = function() {
-        const [UU, RU] = (0, Ip.b)("smpMarketView", "list");
-        return ["grid" === UU ? "grid" : "list", RU]
-      }(), mU = "grid" === fU, IU = (0, tU.useMemo)((() => KU.filter((UU => {
+        t: Ru
+      } = (0, mu.E)(), yu = VK(), Ku = null === (uu = yu.shopInfo[yu.categoryKey]) || void 0 === uu ? void 0 : uu.items, Qu = fE(Ku, "search"), Ju = fE(Ku, "creator"), Nu = aE(Ku, "enchantedCreator"), Xu = aE(Ku, "listing"), ru = fE(Ku, "empty"), Bu = SK(Qu, Xu.length > 0 || null !== ru), {
+        searched: xu,
+        shown: Su,
+        loading: pu
+      } = Bu, [Wu, ju] = (0, Eu.useState)(!1), [Hu, du] = function() {
+        const [uu, Ru] = (0, dK.d)("smpMarketView", "list");
+        return ["grid" === uu ? "grid" : "list", Ru]
+      }(), bu = "grid" === Hu, Cu = (0, Eu.useMemo)((() => Xu.filter((uu => {
         let {
-          meta: RU
-        } = UU;
-        return null !== RU.seller && RU.item === uU
-      })).map((UU => {
+          meta: Ru
+        } = uu;
+        return null !== Ru.seller && Ru.item === xu
+      })).map((uu => {
         let {
-          meta: RU
-        } = UU;
-        return RU.pricePerItem
-      })).sort(((UU, RU) => UU - RU))), [KU, uU]), JU = (0, tU.useMemo)((() => {
-        const UU = new Set(jU.catalogue.map((UU => {
+          meta: Ru
+        } = uu;
+        return Ru.pricePerItem
+      })).sort(((uu, Ru) => uu - Ru))), [Xu, xu]), ku = (0, Eu.useMemo)((() => {
+        const uu = new Set(Bu.catalogue.map((uu => {
           let {
-            name: RU
-          } = UU;
-          return RU
+            name: Ru
+          } = uu;
+          return Ru
         })));
-        return function(UU) {
-          for (const RU in UU)
-            if ("sell" === UU[RU].smp) return Ot(UU[RU].items, "sell").filter((UU => {
+        return function(uu) {
+          for (const Ru in uu)
+            if ("sell" === uu[Ru].smp) return aE(uu[Ru].items, "sell").filter((uu => {
               let {
-                item: RU
-              } = UU;
-              return !RU.enchant
-            })).map((UU => {
+                item: Ru
+              } = uu;
+              return !Ru.enchant
+            })).map((uu => {
               let {
-                meta: RU
-              } = UU;
+                meta: Ru
+              } = uu;
               return {
-                item: RU.item,
-                quantity: RU.quantity,
-                sellPrice: RU.pricePerItem
+                item: Ru.item,
+                quantity: Ru.quantity,
+                sellPrice: Ru.pricePerItem
               }
             }));
           return []
-        }(gU.shopInfo).filter((RU => {
+        }(yu.shopInfo).filter((Ru => {
           let {
-            item: gU
-          } = RU;
-          return UU.has(gU)
+            item: yu
+          } = Ru;
+          return uu.has(yu)
         }))
-      }), [gU.shopInfo, jU.catalogue]);
-      return (0, cU.jsx)(xp, {
-        browser: jU,
+      }), [yu.shopInfo, Bu.catalogue]);
+      return (0, Vu.jsx)(jK, {
+        browser: Bu,
         className: "SmpMarketTab",
-        recentLabel: RU("smpShop:recentlyListed"),
-        action: (0, cU.jsx)(QU.p, {
+        recentLabel: Ru("smpShop:recentlyListed"),
+        action: (0, Vu.jsx)(Tu.n, {
           className: "SmpSellButton",
           onClick: () => {
-            WU((UU => !UU))
+            ju((uu => !uu))
           },
-          children: RU("smpShop:sell")
+          children: Ru("smpShop:sell")
         }),
-        above: eU && (0, cU.jsxs)(cU.Fragment, {
-          children: [(0, cU.jsx)(Zp, {
+        above: Wu && (0, Vu.jsxs)(Vu.Fragment, {
+          children: [(0, Vu.jsx)(DK, {
             mode: "list",
-            creator: TU,
-            inventory: JU,
-            catalogue: jU.catalogue,
-            names: jU.names,
-            searching: hU,
-            prices: IU,
-            onPickItem: jU.searchFor,
+            creator: Ju,
+            inventory: ku,
+            catalogue: Bu.catalogue,
+            names: Bu.names,
+            searching: pu,
+            prices: Cu,
+            onPickItem: Bu.searchFor,
             onClose: () => {
-              WU(!1)
+              ju(!1)
             }
-          }), qU.length > 0 && (0, cU.jsx)(Yp, {
-            entries: qU
+          }), Nu.length > 0 && (0, Vu.jsx)(IK, {
+            entries: Nu
           })]
         }),
-        listControls: (0, cU.jsx)(wp, {
-          view: fU,
-          onChange: xU
+        listControls: (0, Vu.jsx)(CK, {
+          view: Hu,
+          onChange: du
         }),
-        summary: CU && (KU.length > 0 ? RU(1 === KU.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: KU.length,
-          price: Xt(mp(KU, "min"))
-        }) : RU("smpShop:noOneSelling", {
-          item: Tp(jU.names, CU)
+        summary: Su && (Xu.length > 0 ? Ru(1 === Xu.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: Xu.length,
+          price: tE(HK(Xu, "min"))
+        }) : Ru("smpShop:noOneSelling", {
+          item: mK(Bu.names, Su)
         })),
-        list: hU ? (0, cU.jsx)(st, {
-          grid: mU
-        }) : KU.length > 0 ? (0, cU.jsx)(np, {
-          entries: KU,
-          view: fU
-        }) : GU ? (0, cU.jsx)(kt, {
-          entry: GU
-        }) : (0, cU.jsx)(st, {
+        list: pu ? (0, Vu.jsx)(zE, {
+          grid: bu
+        }) : Xu.length > 0 ? (0, Vu.jsx)(kK, {
+          entries: Xu,
+          view: Hu
+        }) : ru ? (0, Vu.jsx)(wE, {
+          entry: ru
+        }) : (0, Vu.jsx)(zE, {
           count: 3,
-          grid: mU
+          grid: bu
         })
       })
     }
 
-    function Yp(UU) {
+    function IK(uu) {
       let {
-        entries: RU
-      } = UU;
+        entries: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, PU.B)(), pU = Gp(), [EU, TU] = (0, tU.useState)({});
-      return (0, cU.jsx)("div", {
+        t: yu
+      } = (0, mu.E)(), Ku = VK(), [Qu, Ju] = (0, Eu.useState)({});
+      return (0, Vu.jsx)("div", {
         className: "SmpList",
-        children: RU.map((UU => {
-          var RU, tU, PU;
+        children: Ru.map((uu => {
+          var Ru, Eu, mu;
           let {
-            key: qU,
-            item: KU,
-            meta: GU
-          } = UU;
-          const jU = null !== (RU = EU[qU]) && void 0 !== RU ? RU : 1;
-          return (0, cU.jsxs)("div", {
+            key: Nu,
+            item: Xu,
+            meta: ru
+          } = uu;
+          const Bu = null !== (Ru = Qu[Nu]) && void 0 !== Ru ? Ru : 1;
+          return (0, Vu.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, cU.jsx)(Ht, {
-              item: GU.item,
-              amount: GU.quantity,
-              tier: null !== (tU = null === (PU = KU.enchant) || void 0 === PU ? void 0 : PU.tier) && void 0 !== tU ? tU : null
-            }), (0, cU.jsxs)("div", {
+            children: [(0, Vu.jsx)(cE, {
+              item: ru.item,
+              amount: ru.quantity,
+              tier: null !== (Eu = null === (mu = Xu.enchant) || void 0 === mu ? void 0 : mu.tier) && void 0 !== Eu ? Eu : null
+            }), (0, Vu.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, cU.jsx)("b", {
-                children: (0, cU.jsx)(nt.e, {
-                  text: KU.customTitle
+              children: [(0, Vu.jsx)("b", {
+                children: (0, Vu.jsx)(AE.d, {
+                  text: Xu.customTitle
                 })
-              }), (0, cU.jsx)("small", {
-                children: gU("smpShop:enchantedListing")
+              }), (0, Vu.jsx)("small", {
+                children: yu("smpShop:enchantedListing")
               })]
-            }), (0, cU.jsx)(At, {
-              value: jU,
-              onChange: UU => {
-                TU({
-                  ...EU,
-                  [qU]: UU
+            }), (0, Vu.jsx)(PE, {
+              value: Bu,
+              onChange: uu => {
+                Ju({
+                  ...Qu,
+                  [Nu]: uu
                 })
               },
               max: 9999999,
-              step: zt,
-              label: gU("smpShop:pricePerItem")
-            }), (0, cU.jsxs)(QU.p, {
-              loading: pU.isPending(qU),
+              step: iE,
+              label: yu("smpShop:pricePerItem")
+            }), (0, Vu.jsxs)(Tu.n, {
+              loading: Ku.isPending(Nu),
               onClick: () => {
-                pU.act(qU, String(jU))
+                Ku.act(Nu, String(Bu))
               },
-              children: [gU("smpShop:list"), " ", (0, cU.jsx)(St, {
-                amount: jU
+              children: [yu("smpShop:list"), " ", (0, Vu.jsx)(LE, {
+                amount: Bu
               })]
             })]
-          }, qU)
+          }, Nu)
         }))
       })
     }
-    const Bp = (0, tU.memo)((function(UU) {
+    const GK = (0, Eu.memo)((function(uu) {
       let {
-        itemKey: RU,
-        item: gU,
-        quantity: tU,
-        pricePerItem: pU,
-        tier: PU,
-        selected: TU,
-        onSelect: qU
-      } = UU;
-      return (0, cU.jsxs)("button", {
+        itemKey: Ru,
+        item: yu,
+        quantity: Eu,
+        pricePerItem: Ku,
+        tier: mu,
+        selected: Ju,
+        onSelect: Nu
+      } = uu;
+      return (0, Vu.jsxs)("button", {
         type: "button",
-        className: EU()("SmpInventorySlot", {
-          SmpInventorySlotOn: TU
+        className: Qu()("SmpInventorySlot", {
+          SmpInventorySlotOn: Ju
         }),
-        title: gU,
+        title: yu,
         onClick: () => {
-          qU(RU)
+          Nu(Ru)
         },
-        children: [(0, cU.jsx)(Ht, {
-          item: gU,
-          amount: tU,
-          tier: PU
-        }), (0, cU.jsx)(St, {
-          amount: pU
+        children: [(0, Vu.jsx)(cE, {
+          item: yu,
+          amount: Eu,
+          tier: mu
+        }), (0, Vu.jsx)(LE, {
+          amount: Ku
         })]
       })
     }));
 
-    function Vp() {
-      var UU;
+    function UK() {
+      var uu;
       const {
-        t: RU
-      } = (0, PU.B)(), gU = Gp(), pU = null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, TU = Ot(pU, "sell"), qU = Up(pU, "empty"), [KU, GU] = (0, tU.useState)(null), [jU, uU] = (0, tU.useState)({}), CU = TU.find((UU => {
+        t: Ru
+      } = (0, mu.E)(), yu = VK(), Ku = null === (uu = yu.shopInfo[yu.categoryKey]) || void 0 === uu ? void 0 : uu.items, Ju = aE(Ku, "sell"), Nu = fE(Ku, "empty"), [Xu, ru] = (0, Eu.useState)(null), [Bu, xu] = (0, Eu.useState)({}), Su = Ju.find((uu => {
         let {
-          key: RU
-        } = UU;
-        return RU === KU
+          key: Ru
+        } = uu;
+        return Ru === Xu
       }));
-      return 0 === TU.length ? (0, cU.jsx)("div", {
+      return 0 === Ju.length ? (0, Vu.jsx)("div", {
         className: "SmpScreen",
-        children: (0, cU.jsx)(yt, {
-          title: qU ? (0, cU.jsx)(nt.e, {
-            text: qU.item.customTitle
-          }) : RU("smpShop:nothingToSell"),
-          children: qU && (0, cU.jsx)(nt.e, {
-            text: qU.item.description
+        children: (0, Vu.jsx)(FE, {
+          title: Nu ? (0, Vu.jsx)(AE.d, {
+            text: Nu.item.customTitle
+          }) : Ru("smpShop:nothingToSell"),
+          children: Nu && (0, Vu.jsx)(AE.d, {
+            text: Nu.item.description
           })
         })
-      }) : (0, cU.jsxs)("div", {
+      }) : (0, Vu.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, cU.jsx)("div", {
+        children: [(0, Vu.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: TU.map((UU => {
-            var RU, gU;
+          children: Ju.map((uu => {
+            var Ru, yu;
             let {
-              key: tU,
-              item: pU,
-              meta: EU
-            } = UU;
-            return (0, cU.jsx)(Bp, {
-              itemKey: tU,
-              item: EU.item,
-              quantity: EU.quantity,
-              pricePerItem: EU.pricePerItem,
-              tier: null !== (RU = null === (gU = pU.enchant) || void 0 === gU ? void 0 : gU.tier) && void 0 !== RU ? RU : null,
-              selected: tU === KU,
-              onSelect: GU
-            }, tU)
+              key: Eu,
+              item: Ku,
+              meta: Qu
+            } = uu;
+            return (0, Vu.jsx)(GK, {
+              itemKey: Eu,
+              item: Qu.item,
+              quantity: Qu.quantity,
+              pricePerItem: Qu.pricePerItem,
+              tier: null !== (Ru = null === (yu = Ku.enchant) || void 0 === yu ? void 0 : yu.tier) && void 0 !== Ru ? Ru : null,
+              selected: Eu === Xu,
+              onSelect: ru
+            }, Eu)
           }))
-        }), (0, cU.jsx)("div", {
-          className: EU()("SmpSellBar", {
-            SmpSellBarIdle: !CU
+        }), (0, Vu.jsx)("div", {
+          className: Qu()("SmpSellBar", {
+            SmpSellBarIdle: !Su
           }),
-          children: CU ? (0, cU.jsx)(rp, {
-            entry: CU,
-            choice: qp(CU.item, jU[CU.key]),
-            onChoose: UU => {
-              uU({
-                ...jU,
-                [CU.key]: UU
+          children: Su ? (0, Vu.jsx)(nK, {
+            entry: Su,
+            choice: JK(Su.item, Bu[Su.key]),
+            onChoose: uu => {
+              xu({
+                ...Bu,
+                [Su.key]: uu
               })
             }
-          }) : (0, cU.jsx)("span", {
+          }) : (0, Vu.jsx)("span", {
             className: "SmpMuted",
-            children: RU("smpShop:tapToSell")
+            children: Ru("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function rp(UU) {
-      var RU, gU, tU, pU;
+    function nK(uu) {
+      var Ru, yu, Eu, Ku;
       let {
-        entry: EU,
-        choice: TU,
-        onChoose: qU
-      } = UU;
+        entry: Qu,
+        choice: Ju,
+        onChoose: Nu
+      } = uu;
       const {
-        t: KU
-      } = (0, PU.B)(), GU = Gp(), {
-        key: jU,
-        item: uU,
-        meta: CU
-      } = EU, hU = pp("dropdown" === (null === (RU = uU.userInput) || void 0 === RU ? void 0 : RU.type) ? uU.userInput.dropdownOptions : []), eU = null === TU ? 0 : -(0, mt.e)(uU, TU);
-      return (0, cU.jsxs)(cU.Fragment, {
-        children: [(0, cU.jsx)(Ht, {
-          item: CU.item,
-          amount: CU.quantity,
-          tier: null !== (gU = null === (tU = uU.enchant) || void 0 === tU ? void 0 : tU.tier) && void 0 !== gU ? gU : null
-        }), (0, cU.jsxs)("div", {
+        t: Xu
+      } = (0, mu.E)(), ru = VK(), {
+        key: Bu,
+        item: xu,
+        meta: Su
+      } = Qu, pu = EK("dropdown" === (null === (Ru = xu.userInput) || void 0 === Ru ? void 0 : Ru.type) ? xu.userInput.dropdownOptions : []), Wu = null === Ju ? 0 : -(0, bE.e)(xu, Ju);
+      return (0, Vu.jsxs)(Vu.Fragment, {
+        children: [(0, Vu.jsx)(cE, {
+          item: Su.item,
+          amount: Su.quantity,
+          tier: null !== (yu = null === (Eu = xu.enchant) || void 0 === Eu ? void 0 : Eu.tier) && void 0 !== yu ? yu : null
+        }), (0, Vu.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, cU.jsx)("b", {
-            children: (0, cU.jsx)(nt.e, {
-              text: null !== (pU = uU.customTitle) && void 0 !== pU ? pU : CU.item
+          children: [(0, Vu.jsx)("b", {
+            children: (0, Vu.jsx)(AE.d, {
+              text: null !== (Ku = xu.customTitle) && void 0 !== Ku ? Ku : Su.item
             })
-          }), (0, cU.jsx)("small", {
-            children: KU("smpShop:sellEach", {
-              count: CU.quantity
+          }), (0, Vu.jsx)("small", {
+            children: Xu("smpShop:sellEach", {
+              count: Su.quantity
             })
           })]
-        }), (0, cU.jsx)(Ft, {
-          options: hU.map((UU => {
+        }), (0, Vu.jsx)(ZE, {
+          options: pu.map((uu => {
             let {
-              label: RU,
-              quantity: gU,
-              isAll: tU
-            } = UU;
+              label: Ru,
+              quantity: yu,
+              isAll: Eu
+            } = uu;
             return {
-              value: RU,
-              label: tU ? KU("smpShop:all", {
-                count: gU
-              }) : String(gU)
+              value: Ru,
+              label: Eu ? Xu("smpShop:all", {
+                count: yu
+              }) : String(yu)
             }
           })),
-          value: TU,
-          onChange: qU,
-          ariaLabel: KU("smpShop:quantity")
-        }), (0, cU.jsxs)(QU.p, {
-          loading: GU.isPending(jU),
-          disabled: null === TU,
+          value: Ju,
+          onChange: Nu,
+          ariaLabel: Xu("smpShop:quantity")
+        }), (0, Vu.jsxs)(Tu.n, {
+          loading: ru.isPending(Bu),
+          disabled: null === Ju,
           onClick: () => {
-            GU.act(jU, TU)
+            ru.act(Bu, Ju)
           },
-          children: [KU("smpShop:sellButton"), " ", (0, cU.jsx)(St, {
-            amount: eU
+          children: [Xu("smpShop:sellButton"), " ", (0, Vu.jsx)(LE, {
+            amount: Wu
           })]
         })]
       })
     }
 
-    function Xp() {
-      var UU;
+    function sK() {
+      var uu;
       const {
-        t: RU
-      } = (0, PU.B)(), gU = Gp(), tU = null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, pU = Ot(tU, "collect"), EU = Ot(tU, "myListing"), TU = (UU, RU) => gU.isPending(UU) || !1 === RU.canBuy;
-      return (0, cU.jsxs)("div", {
+        t: Ru
+      } = (0, mu.E)(), yu = VK(), Eu = null === (uu = yu.shopInfo[yu.categoryKey]) || void 0 === uu ? void 0 : uu.items, Ku = aE(Eu, "collect"), Qu = aE(Eu, "myListing"), Ju = (uu, Ru) => yu.isPending(uu) || !1 === Ru.canBuy;
+      return (0, Vu.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, cU.jsx)("h3", {
+        children: [(0, Vu.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: RU("smpShop:readyToCollect")
-        }), pU.length > 0 ? (0, cU.jsx)("div", {
+          children: Ru("smpShop:readyToCollect")
+        }), Ku.length > 0 ? (0, Vu.jsx)("div", {
           className: "SmpList",
-          children: pU.map((UU => {
-            var tU, pU;
+          children: Ku.map((uu => {
+            var Eu, Ku;
             let {
-              key: EU,
-              item: PU,
-              meta: qU
-            } = UU;
-            return (0, cU.jsxs)("div", {
+              key: Qu,
+              item: mu,
+              meta: Nu
+            } = uu;
+            return (0, Vu.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, cU.jsx)(Ht, {
-                item: "sold" === qU.type ? "Gold Coin" : qU.item,
-                amount: "sold" === qU.type ? 0 : qU.quantity,
-                tier: null !== (tU = null === (pU = PU.enchant) || void 0 === pU ? void 0 : pU.tier) && void 0 !== tU ? tU : null
-              }), (0, cU.jsxs)("div", {
+              children: [(0, Vu.jsx)(cE, {
+                item: "sold" === Nu.type ? "Gold Coin" : Nu.item,
+                amount: "sold" === Nu.type ? 0 : Nu.quantity,
+                tier: null !== (Eu = null === (Ku = mu.enchant) || void 0 === Ku ? void 0 : Ku.tier) && void 0 !== Eu ? Eu : null
+              }), (0, Vu.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, cU.jsx)("b", {
-                  children: (0, cU.jsx)(nt.e, {
-                    text: PU.customTitle
+                children: [(0, Vu.jsx)("b", {
+                  children: (0, Vu.jsx)(AE.d, {
+                    text: mu.customTitle
                   })
-                }), (0, cU.jsx)("small", {
-                  children: (0, cU.jsx)(nt.e, {
-                    text: PU.description
+                }), (0, Vu.jsx)("small", {
+                  children: (0, Vu.jsx)(AE.d, {
+                    text: mu.description
                   })
                 })]
-              }), (0, cU.jsx)(QU.j, {
-                loading: TU(EU, PU),
+              }), (0, Vu.jsx)(Tu.l, {
+                loading: Ju(Qu, mu),
                 onClick: () => {
-                  gU.act(EU)
+                  yu.act(Qu)
                 },
-                children: RU("smpShop:collect")
+                children: Ru("smpShop:collect")
               })]
-            }, EU)
+            }, Qu)
           }))
-        }) : (0, cU.jsx)(yt, {
-          title: RU("smpShop:nothingToCollect"),
-          children: RU("smpShop:nothingToCollectHint")
-        }), (0, cU.jsx)("h3", {
+        }) : (0, Vu.jsx)(FE, {
+          title: Ru("smpShop:nothingToCollect"),
+          children: Ru("smpShop:nothingToCollectHint")
+        }), (0, Vu.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: RU("smpShop:activeListings", {
-            count: EU.length
+          children: Ru("smpShop:activeListings", {
+            count: Qu.length
           })
-        }), EU.length > 0 ? (0, cU.jsx)("div", {
+        }), Qu.length > 0 ? (0, Vu.jsx)("div", {
           className: "SmpList",
-          children: EU.map((UU => {
-            var tU, pU;
+          children: Qu.map((uu => {
+            var Eu, Ku;
             let {
-              key: EU,
-              item: PU,
-              meta: qU
-            } = UU;
-            return (0, cU.jsxs)("div", {
+              key: Qu,
+              item: mu,
+              meta: Nu
+            } = uu;
+            return (0, Vu.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, cU.jsx)(Ht, {
-                item: qU.item,
-                amount: qU.quantity,
-                tier: null !== (tU = null === (pU = PU.enchant) || void 0 === pU ? void 0 : pU.tier) && void 0 !== tU ? tU : null
-              }), (0, cU.jsxs)("div", {
+              children: [(0, Vu.jsx)(cE, {
+                item: Nu.item,
+                amount: Nu.quantity,
+                tier: null !== (Eu = null === (Ku = mu.enchant) || void 0 === Ku ? void 0 : Ku.tier) && void 0 !== Eu ? Eu : null
+              }), (0, Vu.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, cU.jsx)("b", {
-                  children: (0, cU.jsx)(nt.e, {
-                    text: PU.customTitle
+                children: [(0, Vu.jsx)("b", {
+                  children: (0, Vu.jsx)(AE.d, {
+                    text: mu.customTitle
                   })
-                }), (0, cU.jsx)("small", {
-                  children: RU("smpShop:timeLeft", {
-                    time: tp(qU.expiresAt)
+                }), (0, Vu.jsx)("small", {
+                  children: Ru("smpShop:timeLeft", {
+                    time: yK(Nu.expiresAt)
                   })
                 })]
-              }), (0, cU.jsxs)("div", {
+              }), (0, Vu.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, cU.jsx)(St, {
-                  amount: qU.pricePerItem
-                }), (0, cU.jsx)("small", {
-                  children: RU("smpShop:each")
+                children: [(0, Vu.jsx)(LE, {
+                  amount: Nu.pricePerItem
+                }), (0, Vu.jsx)("small", {
+                  children: Ru("smpShop:each")
                 })]
-              }), (0, cU.jsx)(QU.E, {
-                loading: TU(EU, PU),
+              }), (0, Vu.jsx)(Tu.F, {
+                loading: Ju(Qu, mu),
                 onClick: () => {
-                  gU.act(EU)
+                  yu.act(Qu)
                 },
-                children: RU("smpShop:cancel")
+                children: Ru("smpShop:cancel")
               })]
-            }, EU)
+            }, Qu)
           }))
-        }) : (0, cU.jsx)(yt, {
-          title: RU("smpShop:noActiveListings"),
-          children: RU("smpShop:noActiveListingsHint")
+        }) : (0, Vu.jsx)(FE, {
+          title: Ru("smpShop:noActiveListings"),
+          children: Ru("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function vp(UU) {
+    function tK(uu) {
       let {
-        done: RU,
-        of: gU
-      } = UU;
-      return (0, cU.jsx)("span", {
+        done: Ru,
+        of: yu
+      } = uu;
+      return (0, Vu.jsx)("span", {
         className: "SmpProgress",
-        children: (0, cU.jsx)("i", {
+        children: (0, Vu.jsx)("i", {
           style: {
-            width: `${Math.min(100,RU/Math.max(1,gU)*100)}%`
+            width: `${Math.min(100,Ru/Math.max(1,yu)*100)}%`
           }
         })
       })
     }
 
-    function dp(UU) {
-      var RU, gU, tU;
+    function lK(uu) {
+      var Ru, yu, Eu;
       let {
-        entry: pU,
-        choice: EU,
-        onChoose: TU
-      } = UU;
+        entry: Ku,
+        choice: Qu,
+        onChoose: Ju
+      } = uu;
       const {
-        t: qU
-      } = (0, PU.B)(), KU = Gp(), {
-        key: GU,
-        item: jU,
-        meta: uU
-      } = pU, CU = "dropdown" === (null === (RU = jU.userInput) || void 0 === RU ? void 0 : RU.type) ? jU.userInput.dropdownOptions : [], hU = !0 === uU.processing, eU = null !== uU.creator && (uU.WT > 0 || hU), WU = eU && uU.WT > 0 ? pp(CU) : [], fU = null === EU ? 0 : null !== (gU = null === (tU = WU.find((UU => UU.label === EU))) || void 0 === tU ? void 0 : tU.quantity) && void 0 !== gU ? gU : 0;
-      return (0, cU.jsxs)("div", {
+        t: Nu
+      } = (0, mu.E)(), Xu = VK(), {
+        key: ru,
+        item: Bu,
+        meta: xu
+      } = Ku, Su = "dropdown" === (null === (Ru = Bu.userInput) || void 0 === Ru ? void 0 : Ru.type) ? Bu.userInput.dropdownOptions : [], pu = !0 === xu.processing, Wu = null !== xu.creator && (xu.jJ > 0 || pu), ju = Wu && xu.jJ > 0 ? EK(Su) : [], Hu = null === Qu ? 0 : null !== (yu = null === (Eu = ju.find((uu => uu.label === Qu))) || void 0 === Eu ? void 0 : Eu.quantity) && void 0 !== yu ? yu : 0;
+      return (0, Vu.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, cU.jsx)(Ht, {
-          item: uU.item
-        }), (0, cU.jsxs)("div", {
+        children: [(0, Vu.jsx)(cE, {
+          item: xu.item
+        }), (0, Vu.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, cU.jsx)("b", {
-            children: (0, cU.jsx)(nt.e, {
-              text: jU.customTitle
+          children: [(0, Vu.jsx)("b", {
+            children: (0, Vu.jsx)(AE.d, {
+              text: Bu.customTitle
             })
-          }), (0, cU.jsxs)("small", {
-            children: [(0, cU.jsx)(St, {
-              amount: uU.pricePerItem
-            }), " ", qU("smpShop:each"), " \xb7", " ", null === uU.creator ? qU("smpShop:you") : (0, cU.jsx)(nt.e, {
+          }), (0, Vu.jsxs)("small", {
+            children: [(0, Vu.jsx)(LE, {
+              amount: xu.pricePerItem
+            }), " ", Nu("smpShop:each"), " \xb7", " ", null === xu.creator ? Nu("smpShop:you") : (0, Vu.jsx)(AE.d, {
               text: [{
-                entityName: uU.creator
+                entityName: xu.creator
               }]
             })]
-          }), (0, cU.jsx)(vp, {
-            done: uU.delivered,
-            of: uU.wanted
+          }), (0, Vu.jsx)(tK, {
+            done: xu.delivered,
+            of: xu.wanted
           })]
-        }), eU ? (0, cU.jsxs)(cU.Fragment, {
-          children: [(0, cU.jsx)(Ft, {
-            options: WU.map((UU => {
+        }), Wu ? (0, Vu.jsxs)(Vu.Fragment, {
+          children: [(0, Vu.jsx)(ZE, {
+            options: ju.map((uu => {
               let {
-                label: RU,
-                quantity: gU,
-                isAll: tU
-              } = UU;
+                label: Ru,
+                quantity: yu,
+                isAll: Eu
+              } = uu;
               return {
-                value: RU,
-                label: tU ? qU("smpShop:max", {
-                  count: gU
-                }) : String(gU)
+                value: Ru,
+                label: Eu ? Nu("smpShop:max", {
+                  count: yu
+                }) : String(yu)
               }
             })),
-            value: EU,
-            onChange: TU,
-            ariaLabel: qU("smpShop:quantity")
-          }), (0, cU.jsxs)(QU.p, {
-            loading: KU.isPending(GU) || hU,
-            disabled: null === EU,
+            value: Qu,
+            onChange: Ju,
+            ariaLabel: Nu("smpShop:quantity")
+          }), (0, Vu.jsxs)(Tu.n, {
+            loading: Xu.isPending(ru) || pu,
+            disabled: null === Qu,
             onClick: () => {
-              KU.act(GU, EU)
+              Xu.act(ru, Qu)
             },
-            children: [qU("smpShop:deliver"), " ", (0, cU.jsx)(St, {
-              amount: fU * uU.pricePerItem
+            children: [Nu("smpShop:deliver"), " ", (0, Vu.jsx)(LE, {
+              amount: Hu * xu.pricePerItem
             })]
           })]
-        }) : (0, cU.jsx)("span", {
+        }) : (0, Vu.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === uU.creator ? qU("smpShop:yourOrder") : qU("smpShop:youHave", {
+          children: null === xu.creator ? Nu("smpShop:yourOrder") : Nu("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function Hp() {
-      var UU;
+    function gK() {
+      var uu;
       const {
-        t: RU
-      } = (0, PU.B)(), gU = Gp(), pU = null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, EU = Up(pU, "search"), TU = Up(pU, "creator"), qU = Ot(pU, "order"), KU = Up(pU, "empty"), GU = Qp(EU, qU.length > 0 || null !== KU), [jU, uU] = (0, tU.useState)(!1), [CU, hU] = (0, tU.useState)({});
-      return (0, cU.jsx)(xp, {
-        browser: GU,
-        recentLabel: RU("smpShop:recentOrders"),
-        action: (0, cU.jsx)(QU.p, {
+        t: Ru
+      } = (0, mu.E)(), yu = VK(), Ku = null === (uu = yu.shopInfo[yu.categoryKey]) || void 0 === uu ? void 0 : uu.items, Qu = fE(Ku, "search"), Ju = fE(Ku, "creator"), Nu = aE(Ku, "order"), Xu = fE(Ku, "empty"), ru = SK(Qu, Nu.length > 0 || null !== Xu), [Bu, xu] = (0, Eu.useState)(!1), [Su, pu] = (0, Eu.useState)({});
+      return (0, Vu.jsx)(jK, {
+        browser: ru,
+        recentLabel: Ru("smpShop:recentOrders"),
+        action: (0, Vu.jsx)(Tu.n, {
           onClick: () => {
-            uU((UU => !UU))
+            xu((uu => !uu))
           },
-          children: RU("smpShop:createOrder")
+          children: Ru("smpShop:createOrder")
         }),
-        above: jU && (0, cU.jsx)(Zp, {
+        above: Bu && (0, Vu.jsx)(DK, {
           mode: "order",
-          creator: TU,
-          catalogue: GU.catalogue,
-          names: GU.names,
-          searching: GU.loading,
+          creator: Ju,
+          catalogue: ru.catalogue,
+          names: ru.names,
+          searching: ru.loading,
           prices: [],
-          onPickItem: GU.searchFor,
+          onPickItem: ru.searchFor,
           onClose: () => {
-            uU(!1)
+            xu(!1)
           }
         }),
         onBack: () => {
-          uU(!1)
+          xu(!1)
         },
-        summary: qU.length > 0 && RU(1 === qU.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: qU.length,
-          price: Xt(mp(qU, "max"))
+        summary: Nu.length > 0 && Ru(1 === Nu.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: Nu.length,
+          price: tE(HK(Nu, "max"))
         }),
-        list: GU.loading ? (0, cU.jsx)(st, {}) : qU.length > 0 ? (0, cU.jsx)(jp.d, {
+        list: ru.loading ? (0, Vu.jsx)(zE, {}) : Nu.length > 0 ? (0, Vu.jsx)(rK.e, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: Rp,
-          observerUpdateDeps: [qU.length],
-          children: qU.map((UU => (0, cU.jsx)(dp, {
-            entry: UU,
-            choice: qp(UU.item, CU[UU.key]),
-            onChoose: RU => {
-              hU({
-                ...CU,
-                [UU.key]: RU
+          rootMargin: uK,
+          observerUpdateDeps: [Nu.length],
+          children: Nu.map((uu => (0, Vu.jsx)(lK, {
+            entry: uu,
+            choice: JK(uu.item, Su[uu.key]),
+            onChoose: Ru => {
+              pu({
+                ...Su,
+                [uu.key]: Ru
               })
             }
-          }, UU.key)))
-        }) : KU ? (0, cU.jsx)(kt, {
-          entry: KU
-        }) : (0, cU.jsx)(st, {
+          }, uu.key)))
+        }) : Xu ? (0, Vu.jsx)(wE, {
+          entry: Xu
+        }) : (0, Vu.jsx)(zE, {
           count: 3
         })
       })
     }
 
-    function Sp() {
-      var UU;
+    function cK() {
+      var uu;
       const {
-        t: RU
-      } = (0, PU.B)(), gU = Gp(), tU = Ot(null === (UU = gU.shopInfo[gU.categoryKey]) || void 0 === UU ? void 0 : UU.items, "myOrder");
-      return 0 === tU.length ? (0, cU.jsx)("div", {
+        t: Ru
+      } = (0, mu.E)(), yu = VK(), Eu = aE(null === (uu = yu.shopInfo[yu.categoryKey]) || void 0 === uu ? void 0 : uu.items, "myOrder");
+      return 0 === Eu.length ? (0, Vu.jsx)("div", {
         className: "SmpScreen",
-        children: (0, cU.jsx)(yt, {
-          title: RU("smpShop:noOrders"),
-          children: RU("smpShop:noOrdersHint")
+        children: (0, Vu.jsx)(FE, {
+          title: Ru("smpShop:noOrders"),
+          children: Ru("smpShop:noOrdersHint")
         })
-      }) : (0, cU.jsx)("div", {
+      }) : (0, Vu.jsx)("div", {
         className: "SmpScreen",
-        children: (0, cU.jsx)("div", {
+        children: (0, Vu.jsx)("div", {
           className: "SmpList",
-          children: tU.map((UU => {
+          children: Eu.map((uu => {
             let {
-              key: tU,
-              item: pU,
-              meta: EU
-            } = UU;
-            const PU = gU.isPending(tU) || !1 === pU.canBuy;
-            return (0, cU.jsxs)("div", {
+              key: Eu,
+              item: Ku,
+              meta: Qu
+            } = uu;
+            const mu = yu.isPending(Eu) || !1 === Ku.canBuy;
+            return (0, Vu.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, cU.jsx)(Ht, {
-                item: EU.item,
-                amount: EU.collectable
-              }), (0, cU.jsxs)("div", {
+              children: [(0, Vu.jsx)(cE, {
+                item: Qu.item,
+                amount: Qu.collectable
+              }), (0, Vu.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, cU.jsx)("b", {
-                  children: (0, cU.jsx)(nt.e, {
-                    text: pU.customTitle
+                children: [(0, Vu.jsx)("b", {
+                  children: (0, Vu.jsx)(AE.d, {
+                    text: Ku.customTitle
                   })
-                }), (0, cU.jsxs)("small", {
-                  children: [(0, cU.jsx)(St, {
-                    amount: EU.pricePerItem
-                  }), " ", RU("smpShop:each"), EU.collectable > 0 && ` \xb7 ${RU("smpShop:readyCount",{count:EU.collectable})}`]
-                }), (0, cU.jsx)(vp, {
-                  done: EU.delivered,
-                  of: EU.wanted
+                }), (0, Vu.jsxs)("small", {
+                  children: [(0, Vu.jsx)(LE, {
+                    amount: Qu.pricePerItem
+                  }), " ", Ru("smpShop:each"), Qu.collectable > 0 && ` \xb7 ${Ru("smpShop:readyCount",{count:Qu.collectable})}`]
+                }), (0, Vu.jsx)(tK, {
+                  done: Qu.delivered,
+                  of: Qu.wanted
                 })]
-              }), EU.collectable > 0 ? (0, cU.jsx)(QU.j, {
-                loading: PU,
+              }), Qu.collectable > 0 ? (0, Vu.jsx)(Tu.l, {
+                loading: mu,
                 onClick: () => {
-                  gU.act(tU)
+                  yu.act(Eu)
                 },
-                children: RU("smpShop:collectCount", {
-                  count: EU.collectable
+                children: Ru("smpShop:collectCount", {
+                  count: Qu.collectable
                 })
-              }) : (0, cU.jsx)(QU.E, {
-                loading: PU,
+              }) : (0, Vu.jsx)(Tu.F, {
+                loading: mu,
                 onClick: () => {
-                  gU.act(tU)
+                  yu.act(Eu)
                 },
-                children: RU("smpShop:cancel")
+                children: Ru("smpShop:cancel")
               })]
-            }, tU)
+            }, Eu)
           }))
         })
       })
     }
-    const sp = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      yp = {
+    const LK = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      zK = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4284,764 +4284,764 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function kp(UU, RU) {
-      let gU = !1;
-      const tU = {};
-      for (const pU in UU) RU(pU, UU[pU]) ? tU[pU] = UU[pU] : gU = !0;
-      return gU ? tU : UU
+    function FK(uu, Ru) {
+      let yu = !1;
+      const Eu = {};
+      for (const Ku in uu) Ru(Ku, uu[Ku]) ? Eu[Ku] = uu[Ku] : yu = !0;
+      return yu ? Eu : uu
     }
 
-    function Fp(UU) {
-      var RU, gU, pU, qU;
+    function wK(uu) {
+      var Ru, yu, Ku, Nu;
       const {
-        show: KU,
-        shopInfo: GU,
-        selectedCategoryKey: jU
-      } = UU, {
-        t: uU
-      } = (0, PU.B)(), CU = null !== jU && void 0 !== jU ? jU : "", hU = lt(GU, CU), QU = null === (RU = GU[CU]) || void 0 === RU ? void 0 : RU.items, eU = null !== hU, [WU, fU] = (0, tU.useState)({}), [xU, mU] = (0, tU.useState)([]), [IU, JU] = (0, tU.useState)(!1), [wU, nU] = (0, tU.useState)(null), [, bU] = (0, tU.useState)(0), oU = (0, tU.useRef)(0), ZU = (0, tU.useRef)({}), aU = (0, tU.useRef)({
-        items: QU,
-        pending: WU,
-        shopInfo: GU,
-        active: eU,
-        canAfford: UU.canAfford,
-        buy: UU.buy
+        show: Xu,
+        shopInfo: ru,
+        selectedCategoryKey: Bu
+      } = uu, {
+        t: xu
+      } = (0, mu.E)(), Su = null !== Bu && void 0 !== Bu ? Bu : "", pu = vE(ru, Su), Tu = null === (Ru = ru[Su]) || void 0 === Ru ? void 0 : Ru.items, Wu = null !== pu, [ju, Hu] = (0, Eu.useState)({}), [du, bu] = (0, Eu.useState)([]), [Cu, ku] = (0, Eu.useState)(!1), [eu, Au] = (0, Eu.useState)(null), [, Du] = (0, Eu.useState)(0), Mu = (0, Eu.useRef)(0), Iu = (0, Eu.useRef)({}), Gu = (0, Eu.useRef)({
+        items: Tu,
+        pending: ju,
+        shopInfo: ru,
+        active: Wu,
+        canAfford: uu.canAfford,
+        buy: uu.buy
       });
-      aU.current = {
-        items: QU,
-        pending: WU,
-        shopInfo: GU,
-        active: eU,
-        canAfford: UU.canAfford,
-        buy: UU.buy
+      Gu.current = {
+        items: Tu,
+        pending: ju,
+        shopInfo: ru,
+        active: Wu,
+        canAfford: uu.canAfford,
+        buy: uu.buy
       };
-      const YU = (0, tU.useCallback)((UU => {
-        oU.current++;
-        const RU = oU.current;
-        mU((gU => [{
-          id: RU,
-          text: UU
-        }, ...gU].slice(0, 8))), nU(RU)
+      const Uu = (0, Eu.useCallback)((uu => {
+        Mu.current++;
+        const Ru = Mu.current;
+        bu((yu => [{
+          id: Ru,
+          text: uu
+        }, ...yu].slice(0, 8))), Au(Ru)
       }), []);
-      (0, tU.useEffect)((() => {
-        if (null === wU) return;
-        const UU = setTimeout((() => {
-          nU(null)
+      (0, Eu.useEffect)((() => {
+        if (null === eu) return;
+        const uu = setTimeout((() => {
+          Au(null)
         }), 3e3);
         return () => {
-          clearTimeout(UU)
+          clearTimeout(uu)
         }
-      }), [wU]), (0, tU.useEffect)((() => {
-        const RU = UU.message;
-        if (!RU) return;
+      }), [eu]), (0, Eu.useEffect)((() => {
+        const Ru = uu.message;
+        if (!Ru) return;
         const {
-          shopInfo: gU,
-          active: tU,
-          items: pU
-        } = aU.current, EU = null !== RU.categoryKey ? null !== lt(gU, RU.categoryKey) : tU;
-        (EU || tU) && YU(RU.text), EU && fU((UU => kp(UU, (UU => {
-          var RU, gU;
-          return !sp.has(null === pU || void 0 === pU || null === (RU = pU[UU]) || void 0 === RU || null === (gU = RU.smp) || void 0 === gU ? void 0 : gU.kind)
+          shopInfo: yu,
+          active: Eu,
+          items: Ku
+        } = Gu.current, Qu = null !== Ru.categoryKey ? null !== vE(yu, Ru.categoryKey) : Eu;
+        (Qu || Eu) && Uu(Ru.text), Qu && Hu((uu => FK(uu, (uu => {
+          var Ru, yu;
+          return !LK.has(null === Ku || void 0 === Ku || null === (Ru = Ku[uu]) || void 0 === Ru || null === (yu = Ru.smp) || void 0 === yu ? void 0 : yu.kind)
         }))))
-      }), [UU.message, YU]), (0, tU.useEffect)((() => {
-        fU((UU => kp(UU, ((UU, RU) => Kp(null === QU || void 0 === QU ? void 0 : QU[UU]) === RU.snapshot))))
-      }), [GU, QU]);
-      const BU = Object.keys(WU).length > 0;
-      (0, tU.useEffect)((() => {
-        if (!BU) return;
-        const UU = setInterval((() => {
-          bU((UU => UU + 1));
-          const UU = Date.now(),
+      }), [uu.message, Uu]), (0, Eu.useEffect)((() => {
+        Hu((uu => FK(uu, ((uu, Ru) => NK(null === Tu || void 0 === Tu ? void 0 : Tu[uu]) === Ru.snapshot))))
+      }), [ru, Tu]);
+      const nu = Object.keys(ju).length > 0;
+      (0, Eu.useEffect)((() => {
+        if (!nu) return;
+        const uu = setInterval((() => {
+          Du((uu => uu + 1));
+          const uu = Date.now(),
             {
-              pending: RU,
-              items: gU
-            } = aU.current,
-            tU = Object.keys(RU).filter((gU => UU - RU[gU].at >= 12e3));
-          if (0 === tU.length) return;
-          const pU = tU.some((UU => {
-            var tU, pU;
-            return "search" !== (null === gU || void 0 === gU || null === (tU = gU[UU]) || void 0 === tU || null === (pU = tU.smp) || void 0 === pU ? void 0 : pU.kind) || RU[UU].resend
+              pending: Ru,
+              items: yu
+            } = Gu.current,
+            Eu = Object.keys(Ru).filter((yu => uu - Ru[yu].at >= 12e3));
+          if (0 === Eu.length) return;
+          const Ku = Eu.some((uu => {
+            var Eu, Ku;
+            return "search" !== (null === yu || void 0 === yu || null === (Eu = yu[uu]) || void 0 === Eu || null === (Ku = Eu.smp) || void 0 === Ku ? void 0 : Ku.kind) || Ru[uu].resend
           }));
-          for (const EU of tU) ZU.current[EU] = UU;
-          fU((UU => kp(UU, (UU => !tU.includes(UU))))), pU && YU(uU("smpShop:noAnswer"))
+          for (const Qu of Eu) Iu.current[Qu] = uu;
+          Hu((uu => FK(uu, (uu => !Eu.includes(uu))))), Ku && Uu(xu("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(UU)
+          clearInterval(uu)
         }
-      }), [BU]), (0, tU.useEffect)((() => {
-        fU({})
-      }), [CU]), (0, tU.useEffect)((() => {
-        KU || JU(!1)
-      }), [KU]);
-      const VU = (0, tU.useCallback)((function(UU, RU) {
-          let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [nu]), (0, Eu.useEffect)((() => {
+        Hu({})
+      }), [Su]), (0, Eu.useEffect)((() => {
+        Xu || ku(!1)
+      }), [Xu]);
+      const su = (0, Eu.useCallback)((function(uu, Ru) {
+          let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: tU,
-            pending: pU,
-            canAfford: EU,
-            buy: PU
-          } = aU.current, TU = null === tU || void 0 === tU ? void 0 : tU[UU];
-          if (!TU || UU in pU || !1 === TU.canBuy) return !1;
-          if (!EU(TU, (0, mt.e)(TU, RU))) return !1;
-          PU(UU, TU, RU);
-          const qU = {
-            snapshot: Kp(TU),
+            items: Eu,
+            pending: Ku,
+            canAfford: Qu,
+            buy: mu
+          } = Gu.current, Ju = null === Eu || void 0 === Eu ? void 0 : Eu[uu];
+          if (!Ju || uu in Ku || !1 === Ju.canBuy) return !1;
+          if (!Qu(Ju, (0, bE.e)(Ju, Ru))) return !1;
+          mu(uu, Ju, Ru);
+          const Nu = {
+            snapshot: NK(Ju),
             at: Date.now(),
-            resend: gU
+            resend: yu
           };
-          return aU.current.pending = {
-            ...aU.current.pending,
-            [UU]: qU
-          }, fU((RU => ({
-            ...RU,
-            [UU]: qU
+          return Gu.current.pending = {
+            ...Gu.current.pending,
+            [uu]: Nu
+          }, Hu((Ru => ({
+            ...Ru,
+            [uu]: Nu
           }))), !0
         }), []),
-        rU = (0, tU.useMemo)((() => ({
-          shopInfo: GU,
-          categoryKey: CU,
-          canAfford: UU.canAfford,
-          isPending: UU => UU in WU,
-          gaveUpAt: UU => {
-            var RU;
-            return null !== (RU = ZU.current[UU]) && void 0 !== RU ? RU : 0
+        tu = (0, Eu.useMemo)((() => ({
+          shopInfo: ru,
+          categoryKey: Su,
+          canAfford: uu.canAfford,
+          isPending: uu => uu in ju,
+          gaveUpAt: uu => {
+            var Ru;
+            return null !== (Ru = Iu.current[uu]) && void 0 !== Ru ? Ru : 0
           },
-          act: VU,
-          notify: YU
-        })), [GU, CU, UU.canAfford, WU, VU, YU]),
-        XU = Math.min(...Object.values(WU).map((UU => UU.at))),
-        vU = BU && Date.now() - XU > 1500,
-        dU = xU.length > 1,
-        HU = null !== (gU = null === (pU = GU[CU]) || void 0 === pU ? void 0 : pU.customTitle) && void 0 !== gU ? gU : CU,
-        SU = null === (qU = GU[CU]) || void 0 === qU ? void 0 : qU.description;
-      let sU = null;
-      return "market" === hU ? sU = (0, cU.jsx)(ap, {}) : "sell" === hU ? sU = (0, cU.jsx)(Vp, {}) : "collect" === hU ? sU = (0, cU.jsx)(Xp, {}) : "orders" === hU ? sU = (0, cU.jsx)(Hp, {}) : "myOrders" === hU && (sU = (0, cU.jsx)(Sp, {})), (0, cU.jsx)(cp.Provider, {
-        value: rU,
-        children: (0, cU.jsx)("div", {
+          act: su,
+          notify: Uu
+        })), [ru, Su, uu.canAfford, ju, su, Uu]),
+        lu = Math.min(...Object.values(ju).map((uu => uu.at))),
+        gu = nu && Date.now() - lu > 1500,
+        cu = du.length > 1,
+        Lu = null !== (yu = null === (Ku = ru[Su]) || void 0 === Ku ? void 0 : Ku.customTitle) && void 0 !== yu ? yu : Su,
+        zu = null === (Nu = ru[Su]) || void 0 === Nu ? void 0 : Nu.description;
+      let Fu = null;
+      return "market" === pu ? Fu = (0, Vu.jsx)(MK, {}) : "sell" === pu ? Fu = (0, Vu.jsx)(UK, {}) : "collect" === pu ? Fu = (0, Vu.jsx)(sK, {}) : "orders" === pu ? Fu = (0, Vu.jsx)(gK, {}) : "myOrders" === pu && (Fu = (0, Vu.jsx)(cK, {})), (0, Vu.jsx)(XK.Provider, {
+        value: tu,
+        children: (0, Vu.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !eU,
-          children: (0, cU.jsxs)("div", {
+          hidden: !Wu,
+          children: (0, Vu.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, cU.jsx)("header", {
+            children: [(0, Vu.jsx)("header", {
               className: "SmpHeader",
-              children: (0, cU.jsxs)("div", {
+              children: (0, Vu.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, cU.jsxs)("h2", {
-                  children: [hU && (0, cU.jsx)(TU.c, {
-                    name: yp[hU]
-                  }), uU(HU)]
-                }), SU && (0, cU.jsx)("p", {
-                  children: (0, cU.jsx)(nt.e, {
-                    text: SU
+                children: [(0, Vu.jsxs)("h2", {
+                  children: [pu && (0, Vu.jsx)(Ju.c, {
+                    name: zK[pu]
+                  }), xu(Lu)]
+                }), zu && (0, Vu.jsx)("p", {
+                  children: (0, Vu.jsx)(AE.d, {
+                    text: zu
                   })
                 })]
               })
-            }), (0, cU.jsx)("main", {
+            }), (0, Vu.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: KU && sU
-            }), (0, cU.jsxs)("button", {
+              children: Xu && Fu
+            }), (0, Vu.jsxs)("button", {
               type: "button",
-              className: EU()("SmpStatus", {
-                SmpStatusWaiting: BU,
-                SmpStatusFresh: !BU && null !== wU,
-                SmpStatusHasHistory: dU
+              className: Qu()("SmpStatus", {
+                SmpStatusWaiting: nu,
+                SmpStatusFresh: !nu && null !== eu,
+                SmpStatusHasHistory: cu
               }),
               "aria-live": "polite",
-              "aria-expanded": dU ? IU : void 0,
+              "aria-expanded": cu ? Cu : void 0,
               onClick: () => {
-                dU && JU((UU => !UU))
+                cu && ku((uu => !uu))
               },
-              children: [BU ? (0, cU.jsxs)("span", {
+              children: [nu ? (0, Vu.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, cU.jsx)(it, {}), uU(vU ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : xU[0] ? (0, cU.jsx)("span", {
+                children: [(0, Vu.jsx)(hE, {}), xu(gu ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : du[0] ? (0, Vu.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, cU.jsx)(nt.e, {
-                  text: xU[0].text
+                children: (0, Vu.jsx)(AE.d, {
+                  text: du[0].text
                 })
-              }, xU[0].id) : (0, cU.jsx)("span", {
+              }, du[0].id) : (0, Vu.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: uU("smpShop:ready")
-              }), dU && (0, cU.jsx)("small", {
-                children: uU("smpShop:recentMessages", {
-                  count: xU.length
+                children: xu("smpShop:ready")
+              }), cu && (0, Vu.jsx)("small", {
+                children: xu("smpShop:recentMessages", {
+                  count: du.length
                 })
               })]
-            }), IU && dU && (0, cU.jsx)("div", {
+            }), Cu && cu && (0, Vu.jsx)("div", {
               className: "SmpStatusHistory",
-              children: xU.map((UU => (0, cU.jsx)("div", {
-                children: (0, cU.jsx)(nt.e, {
-                  text: UU.text
+              children: du.map((uu => (0, Vu.jsx)("div", {
+                children: (0, Vu.jsx)(AE.d, {
+                  text: uu.text
                 })
-              }, UU.id)))
+              }, uu.id)))
             })]
           })
         })
       })
     }
-    class ip {
-      constructor(UU) {
-        this.info = UU
+    class ZK {
+      constructor(uu) {
+        this.info = uu
       }
-      static fromShopInfo(UU) {
-        const RU = {};
-        for (const gU in UU) {
-          const tU = !0 === UU[gU].redDot && !0 !== UU[gU].forceRemoveRedDot;
-          RU[gU] = {
-            redDot: tU,
+      static fromShopInfo(uu) {
+        const Ru = {};
+        for (const yu in uu) {
+          const Eu = !0 === uu[yu].redDot && !0 !== uu[yu].forceRemoveRedDot;
+          Ru[yu] = {
+            redDot: Eu,
             items: {}
           };
-          for (const pU in UU[gU].items) {
-            const tU = UU[gU].items[pU],
-              EU = !0 === tU.redDot && !0 !== tU.forceRemoveRedDot;
-            RU[gU].items[pU] = {
-              redDot: EU
+          for (const Ku in uu[yu].items) {
+            const Eu = uu[yu].items[Ku],
+              Qu = !0 === Eu.redDot && !0 !== Eu.forceRemoveRedDot;
+            Ru[yu].items[Ku] = {
+              redDot: Qu
             }
           }
         }
-        return new ip(RU)
+        return new ZK(Ru)
       }
       anyCategoryHasRedDots() {
-        for (const UU in this.info)
-          if (this.categoryHasRedDot(UU)) return !0;
+        for (const uu in this.info)
+          if (this.categoryHasRedDot(uu)) return !0;
         return !1
       }
-      doesCategoryExist(UU) {
-        return !(0, kR.E)(this.info[UU])
+      doesCategoryExist(uu) {
+        return !(0, ZR.E)(this.info[uu])
       }
-      categoryHasRedDot(UU) {
-        return !0 === this.info[UU].redDot
+      categoryHasRedDot(uu) {
+        return !0 === this.info[uu].redDot
       }
-      updateCategoryRedDot(UU, RU) {
-        this.info[UU].redDot = RU
+      updateCategoryRedDot(uu, Ru) {
+        this.info[uu].redDot = Ru
       }
-      doesItemExist(UU, RU) {
-        return this.doesCategoryExist(UU) && !(0, kR.E)(this.info[UU].items[RU])
+      doesItemExist(uu, Ru) {
+        return this.doesCategoryExist(uu) && !(0, ZR.E)(this.info[uu].items[Ru])
       }
-      itemHasRedDot(UU, RU) {
-        return !0 === this.info[UU].items[RU].redDot
+      itemHasRedDot(uu, Ru) {
+        return !0 === this.info[uu].items[Ru].redDot
       }
-      updateItemRedDot(UU, RU, gU) {
-        this.info[UU].items[RU].redDot = gU
+      updateItemRedDot(uu, Ru, yu) {
+        this.info[uu].items[Ru].redDot = yu
       }
       shallowCopy() {
-        return new ip(this.info)
+        return new ZK(this.info)
       }
     }
 
-    function Ap(UU, RU) {
-      return `${UU}\x1f${RU}`
+    function hK(uu, Ru) {
+      return `${uu}\x1f${Ru}`
     }
 
-    function zp(UU, RU) {
-      return !(0, kR.E)(RU) && !(0, kR.E)(UU) && RU in UU
+    function PK(uu, Ru) {
+      return !(0, ZR.E)(Ru) && !(0, ZR.E)(uu) && Ru in uu
     }
-    const Mp = (0, tU.memo)((function(UU) {
-      var RU, gU;
+    const iK = (0, Eu.memo)((function(uu) {
+      var Ru, yu;
       let {
-        show: pU
-      } = UU;
-      const PU = (0, Lg.h)("players", UE),
-        TU = (0, Lg.h)("players", RE),
-        [KU, jU] = (0, tU.useState)({
+        show: Ku
+      } = uu;
+      const mu = (0, Oy.h)("players", aK),
+        Ju = (0, Oy.h)("players", fK),
+        [Xu, Bu] = (0, Eu.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: ip.fromShopInfo({}),
+          redDotInfo: ZK.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        uU = (0, tU.useRef)(""),
-        hU = (0, tU.useRef)(null),
-        eU = (0, tU.useRef)(null),
-        fU = (0, tU.useRef)(0),
-        xU = (0, tU.useRef)(void 0),
-        mU = (0, tU.useRef)(null),
-        IU = (0, tU.useRef)(KU),
-        JU = KU.redDotInfo.anyCategoryHasRedDots(),
-        [nU, bU] = (0, tU.useState)(null),
-        ZU = (0, tU.useRef)(!1);
-      let aU = !1,
-        YU = 0,
-        BU = 0;
-      if (KU.currencyAmounts) {
-        for (const UU in KU.currencyAmounts) {
-          var VU;
-          const RU = KU.currencyAmounts[UU];
-          RU.hidden || (YU++, (null === (VU = RU.subtext) || void 0 === VU ? void 0 : VU.length) > 0 && BU++)
+        xu = (0, Eu.useRef)(""),
+        pu = (0, Eu.useRef)(null),
+        Wu = (0, Eu.useRef)(null),
+        Hu = (0, Eu.useRef)(0),
+        du = (0, Eu.useRef)(void 0),
+        bu = (0, Eu.useRef)(null),
+        Cu = (0, Eu.useRef)(Xu),
+        ku = Xu.redDotInfo.anyCategoryHasRedDots(),
+        [Au, Du] = (0, Eu.useState)(null),
+        Iu = (0, Eu.useRef)(!1);
+      let Gu = !1,
+        Uu = 0,
+        nu = 0;
+      if (Xu.currencyAmounts) {
+        for (const uu in Xu.currencyAmounts) {
+          var su;
+          const Ru = Xu.currencyAmounts[uu];
+          Ru.hidden || (Uu++, (null === (su = Ru.subtext) || void 0 === su ? void 0 : su.length) > 0 && nu++)
         }
-        aU = YU + BU > 4
-      }(0, tU.useEffect)((() => {
-        FR.p.yh("showShopIconRedDot", JU, !0)
-      }), [JU]), (0, tU.useEffect)((() => {
-        WU.gameBridge.send("setShopOpen", pU), pU || (clearTimeout(xU.current), jU((UU => UU.awaitingPurchase ? {
-          ...UU,
+        Gu = Uu + nu > 4
+      }(0, Eu.useEffect)((() => {
+        hR.k.Op("showShopIconRedDot", ku, !0)
+      }), [ku]), (0, Eu.useEffect)((() => {
+        ju.gameBridge.send("setShopOpen", Ku), Ku || (clearTimeout(du.current), Bu((uu => uu.awaitingPurchase ? {
+          ...uu,
           awaitingPurchase: !1
-        } : UU)))
-      }), [pU]), (0, tU.useEffect)((() => () => {
-        WU.gameBridge.send("setShopOpen", !1), clearTimeout(xU.current)
-      }), []), (0, tU.useEffect)((() => {
-        IU.current = KU
-      }), [KU]), (0, tU.useEffect)((() => {
-        if (null === nU) return;
-        return (0, Yt.e)("pointerdown", (UU => {
-          const RU = UU.target;
-          null !== RU && void 0 !== RU && RU.closest(".ShopItem") || bU(null)
+        } : uu)))
+      }), [Ku]), (0, Eu.useEffect)((() => () => {
+        ju.gameBridge.send("setShopOpen", !1), clearTimeout(du.current)
+      }), []), (0, Eu.useEffect)((() => {
+        Cu.current = Xu
+      }), [Xu]), (0, Eu.useEffect)((() => {
+        if (null === Au) return;
+        return (0, GE.b)("pointerdown", (uu => {
+          const Ru = uu.target;
+          null !== Ru && void 0 !== Ru && Ru.closest(".ShopItem") || Du(null)
         }))
-      }), [nU]);
-      const rU = UU => {
-          jU((RU => ({
-            ...RU,
-            ...UU
+      }), [Au]);
+      const tu = uu => {
+          Bu((Ru => ({
+            ...Ru,
+            ...uu
           })))
         },
-        XU = UU => {
-          var RU;
-          clearTimeout(null === (RU = KU.onBoughtInfo) || void 0 === RU ? void 0 : RU.timeout);
-          const gU = setTimeout((() => {
-            rU({
+        lu = uu => {
+          var Ru;
+          clearTimeout(null === (Ru = Xu.onBoughtInfo) || void 0 === Ru ? void 0 : Ru.timeout);
+          const yu = setTimeout((() => {
+            tu({
               onBoughtInfo: null
             })
           }), 3e3);
-          uU.current = UU, rU({
+          xu.current = uu, tu({
             onBoughtInfo: {
-              text: UU,
-              timeout: gU,
-              categoryKey: hU.current
+              text: uu,
+              timeout: yu,
+              categoryKey: pu.current
             }
           })
         },
-        vU = UU => {
+        gu = uu => {
           const {
-            shopInfo: RU,
-            userInputsPerItem: gU,
-            redDotInfo: tU,
-            autoSelectCategory: EU
-          } = function(UU, RU, gU, tU, pU, EU) {
-            if ((0, kR.E)(UU) || 0 === Object.keys(UU).length) return {
+            shopInfo: Ru,
+            userInputsPerItem: yu,
+            redDotInfo: Eu,
+            autoSelectCategory: Qu
+          } = function(uu, Ru, yu, Eu, Ku, Qu) {
+            if ((0, ZR.E)(uu) || 0 === Object.keys(uu).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: ip.fromShopInfo({}),
+              redDotInfo: ZK.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const PU = oU.p[oU.t].adConfig.showRewardedAds,
-              TU = {};
-            let qU = null;
-            for (const QU in UU) {
-              const RU = UU[QU],
-                gU = {};
-              let tU = !1;
-              for (const UU in RU.items) {
-                const pU = RU.items[UU];
-                (0, mt.l)(pU, PU) && (gU[UU] = pU, tU = !0)
+            const mu = Mu.q[Mu.v].adConfig.showRewardedAds,
+              Ju = {};
+            let Nu = null;
+            for (const Tu in uu) {
+              const Ru = uu[Tu],
+                yu = {};
+              let Eu = !1;
+              for (const uu in Ru.items) {
+                const Ku = Ru.items[uu];
+                (0, bE.l)(Ku, mu) && (yu[uu] = Ku, Eu = !0)
               }
-              tU && (TU[QU] = {
-                ...RU,
-                items: gU
-              }, !0 === RU.autoSelectCategory && (qU = QU))
+              Eu && (Ju[Tu] = {
+                ...Ru,
+                items: yu
+              }, !0 === Ru.autoSelectCategory && (Nu = Tu))
             }
-            const KU = {},
-              cU = (UU, RU, tU, PU) => {
-                var TU, qU;
-                const cU = Ap(UU, RU),
-                  GU = null !== (TU = gU[cU]) && void 0 !== TU ? TU : gU[RU];
-                if (null !== (qU = PU.userInput) && void 0 !== qU && qU.type) switch (PU.userInput.type) {
+            const Xu = {},
+              Vu = (uu, Ru, Eu, mu) => {
+                var Ju, Nu;
+                const Vu = hK(uu, Ru),
+                  ru = null !== (Ju = yu[Vu]) && void 0 !== Ju ? Ju : yu[Ru];
+                if (null !== (Nu = mu.userInput) && void 0 !== Nu && Nu.type) switch (mu.userInput.type) {
                   case "dropdown": {
-                    var jU;
-                    const UU = !GU || !PU.userInput.dropdownOptions.some((UU => (0, mt.h)(UU) === GU)),
-                      RU = PU.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === tU || void 0 === tU || null === (jU = tU.userInput) || void 0 === jU ? void 0 : jU.type) || JSON.stringify(tU.userInput.dropdownOptions) !== JSON.stringify(PU.userInput.dropdownOptions)),
-                      gU = PU.userInput,
-                      pU = !(0, kR.E)(gU.initialValue) && gU.dropdownOptions.some((UU => (0, mt.h)(UU) === gU.initialValue));
-                    var uU;
-                    return void(UU || RU ? pU ? KU[cU] = null !== (uU = PU.userInput.initialValue) && void 0 !== uU ? uU : null : PU.userInput.dropdownOptions.length > 0 ? KU[cU] = (0, mt.h)(PU.userInput.dropdownOptions[0]) : KU[cU] = null : KU[cU] = GU)
+                    var Bu;
+                    const uu = !ru || !mu.userInput.dropdownOptions.some((uu => (0, bE.h)(uu) === ru)),
+                      Ru = mu.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Eu || void 0 === Eu || null === (Bu = Eu.userInput) || void 0 === Bu ? void 0 : Bu.type) || JSON.stringify(Eu.userInput.dropdownOptions) !== JSON.stringify(mu.userInput.dropdownOptions)),
+                      yu = mu.userInput,
+                      Ku = !(0, ZR.E)(yu.initialValue) && yu.dropdownOptions.some((uu => (0, bE.h)(uu) === yu.initialValue));
+                    var xu;
+                    return void(uu || Ru ? Ku ? Xu[Vu] = null !== (xu = mu.userInput.initialValue) && void 0 !== xu ? xu : null : mu.userInput.dropdownOptions.length > 0 ? Xu[Vu] = (0, bE.h)(mu.userInput.dropdownOptions[0]) : Xu[Vu] = null : Xu[Vu] = ru)
                   }
                   case "text":
                   case "number":
-                    var CU, hU, QU;
-                    return void((null === tU || void 0 === tU ? void 0 : tU.userInput) !== PU.userInput ? KU[cU] = null !== (CU = null !== (hU = PU.userInput.initialValue) && void 0 !== hU ? hU : GU) && void 0 !== CU ? CU : "" : KU[cU] = null !== (QU = null !== GU && void 0 !== GU ? GU : PU.userInput.initialValue) && void 0 !== QU ? QU : "");
+                    var Su, pu, Tu;
+                    return void((null === Eu || void 0 === Eu ? void 0 : Eu.userInput) !== mu.userInput ? Xu[Vu] = null !== (Su = null !== (pu = mu.userInput.initialValue) && void 0 !== pu ? pu : ru) && void 0 !== Su ? Su : "" : Xu[Vu] = null !== (Tu = null !== ru && void 0 !== ru ? ru : mu.userInput.initialValue) && void 0 !== Tu ? Tu : "");
                   case "color":
-                    var eU, WU, fU;
-                    return void((null === tU || void 0 === tU ? void 0 : tU.userInput) !== PU.userInput ? KU[cU] = null !== (eU = null !== (WU = PU.userInput.initialValue) && void 0 !== WU ? WU : GU) && void 0 !== eU ? eU : "#000000" : KU[cU] = null !== (fU = null !== GU && void 0 !== GU ? GU : PU.userInput.initialValue) && void 0 !== fU ? fU : "#000000");
+                    var Wu, ju, Hu;
+                    return void((null === Eu || void 0 === Eu ? void 0 : Eu.userInput) !== mu.userInput ? Xu[Vu] = null !== (Wu = null !== (ju = mu.userInput.initialValue) && void 0 !== ju ? ju : ru) && void 0 !== Wu ? Wu : "#000000" : Xu[Vu] = null !== (Hu = null !== ru && void 0 !== ru ? ru : mu.userInput.initialValue) && void 0 !== Hu ? Hu : "#000000");
                   case "player": {
-                    const UU = (0, mt.i)(pU, EU, PU.userInput);
-                    return void(GU && UU.includes(GU) ? KU[cU] = GU : KU[cU] = UU.length > 0 ? UU[0] : null)
+                    const uu = (0, bE.i)(Ku, Qu, mu.userInput);
+                    return void(ru && uu.includes(ru) ? Xu[Vu] = ru : Xu[Vu] = uu.length > 0 ? uu[0] : null)
                   }
                 }
               };
-            for (const QU in TU)
-              for (const UU in TU[QU].items) {
-                var GU;
-                const gU = TU[QU].items[UU];
-                cU(QU, UU, null === (GU = RU[QU]) || void 0 === GU ? void 0 : GU.items[UU], gU)
+            for (const Tu in Ju)
+              for (const uu in Ju[Tu].items) {
+                var ru;
+                const yu = Ju[Tu].items[uu];
+                Vu(Tu, uu, null === (ru = Ru[Tu]) || void 0 === ru ? void 0 : ru.items[uu], yu)
               }
-            const jU = ip.fromShopInfo(TU);
-            for (const QU in TU) {
-              var uU;
-              if (tU.doesCategoryExist(QU)) {
-                (null === (uU = RU[QU]) || void 0 === uU ? void 0 : uU.redDot) === TU[QU].redDot && jU.updateCategoryRedDot(QU, tU.categoryHasRedDot(QU));
-                for (const UU in TU[QU].items) {
-                  var CU, hU;
-                  tU.doesItemExist(QU, UU) && (null === (CU = RU[QU]) || void 0 === CU || null === (hU = CU.items[UU]) || void 0 === hU ? void 0 : hU.redDot) === TU[QU].items[UU].redDot && jU.updateItemRedDot(QU, UU, tU.itemHasRedDot(QU, UU))
+            const Bu = ZK.fromShopInfo(Ju);
+            for (const Tu in Ju) {
+              var xu;
+              if (Eu.doesCategoryExist(Tu)) {
+                (null === (xu = Ru[Tu]) || void 0 === xu ? void 0 : xu.redDot) === Ju[Tu].redDot && Bu.updateCategoryRedDot(Tu, Eu.categoryHasRedDot(Tu));
+                for (const uu in Ju[Tu].items) {
+                  var Su, pu;
+                  Eu.doesItemExist(Tu, uu) && (null === (Su = Ru[Tu]) || void 0 === Su || null === (pu = Su.items[uu]) || void 0 === pu ? void 0 : pu.redDot) === Ju[Tu].items[uu].redDot && Bu.updateItemRedDot(Tu, uu, Eu.itemHasRedDot(Tu, uu))
                 }
               }
             }
             return {
-              shopInfo: TU,
-              userInputsPerItem: KU,
-              redDotInfo: jU,
-              autoSelectCategory: qU
+              shopInfo: Ju,
+              userInputsPerItem: Xu,
+              redDotInfo: Bu,
+              autoSelectCategory: Nu
             }
-          }(UU, KU.shopInfo, KU.userInputsPerItem, KU.redDotInfo, PU, TU), qU = {
-            shopInfo: RU,
-            userInputsPerItem: gU,
-            redDotInfo: tU
+          }(uu, Xu.shopInfo, Xu.userInputsPerItem, Xu.redDotInfo, mu, Ju), Nu = {
+            shopInfo: Ru,
+            userInputsPerItem: yu,
+            redDotInfo: Eu
           };
-          if (null === EU || pU)
-            if (RU[KU.selectedCategoryKey]) qU.selectedCategoryKey = KU.selectedCategoryKey;
+          if (null === Qu || Ku)
+            if (Ru[Xu.selectedCategoryKey]) Nu.selectedCategoryKey = Xu.selectedCategoryKey;
             else {
-              const UU = Vt(RU);
-              qU.selectedCategoryKey = UU.length > 0 ? UU[0] : null
+              const uu = nE(Ru);
+              Nu.selectedCategoryKey = uu.length > 0 ? uu[0] : null
             }
-          else qU.selectedCategoryKey = EU;
-          return 0 === Object.keys(RU).length && pU && wU.b.set({
+          else Nu.selectedCategoryKey = Qu;
+          return 0 === Object.keys(Ru).length && Ku && eu.d.set({
             openEverythingMenuName: null
-          }), qU
+          }), Nu
         },
-        dU = (UU, RU, gU) => {
-          const tU = KU.selectedCategoryKey,
-            pU = Ap(tU, UU),
-            EU = null !== gU && void 0 !== gU ? gU : KU.userInputsPerItem[pU],
-            PU = {
-              categoryKey: tU,
-              itemKey: UU,
-              userInput: EU
+        cu = (uu, Ru, yu) => {
+          const Eu = Xu.selectedCategoryKey,
+            Ku = hK(Eu, uu),
+            Qu = null !== yu && void 0 !== yu ? yu : Xu.userInputsPerItem[Ku],
+            mu = {
+              categoryKey: Eu,
+              itemKey: uu,
+              userInput: Qu
             };
-          if (hU.current = tU, RU.isRewardedAd) {
-            if (Date.now() - fU.current < 5e3) return;
-            (0, ER.fb)((() => {
-              var gU, tU, EU;
+          if (pu.current = Eu, Ru.isRewardedAd) {
+            if (Date.now() - Hu.current < 5e3) return;
+            (0, QR.jb)((() => {
+              var yu, Eu, Qu;
               console.log("bought rewarded ad");
-              const TU = PU.categoryKey ? null === (gU = IU.current.shopInfo[PU.categoryKey]) || void 0 === gU ? void 0 : gU.items[UU] : null;
-              if (!TU || !TU.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (tU = RU.userInput) || void 0 === tU ? void 0 : tU.type) === (null === TU || void 0 === TU || null === (EU = TU.userInput) || void 0 === EU ? void 0 : EU.type) ? (PU.userInput = IU.current.userInputsPerItem[pU], WU.gameBridge.send("buyShopItem", PU), RU.onBoughtMessage && XU(RU.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), fU.current = Date.now()
+              const Ju = mu.categoryKey ? null === (yu = Cu.current.shopInfo[mu.categoryKey]) || void 0 === yu ? void 0 : yu.items[uu] : null;
+              if (!Ju || !Ju.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (Eu = Ru.userInput) || void 0 === Eu ? void 0 : Eu.type) === (null === Ju || void 0 === Ju || null === (Qu = Ju.userInput) || void 0 === Qu ? void 0 : Qu.type) ? (mu.userInput = Cu.current.userInputsPerItem[Ku], ju.gameBridge.send("buyShopItem", mu), Ru.onBoughtMessage && lu(Ru.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), Hu.current = Date.now()
           } else {
-            WU.gameBridge.send("buyShopItem", PU), rU({
+            ju.gameBridge.send("buyShopItem", mu), tu({
               awaitingPurchase: !0
-            }), clearTimeout(xU.current), xU.current = setTimeout((() => {
-              mU.current = null, rU({
+            }), clearTimeout(du.current), du.current = setTimeout((() => {
+              bu.current = null, tu({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const UU = (0, mt.e)(RU, EU);
-            if (mU.current = null, !isNaN(UU) && zp(KU.currencyAmounts, RU.currency)) {
-              0 !== UU && (mU.current = {
-                currency: RU.currency,
-                amountBefore: KU.currencyAmounts[RU.currency].amount
+            const uu = (0, bE.e)(Ru, Qu);
+            if (bu.current = null, !isNaN(uu) && PK(Xu.currencyAmounts, Ru.currency)) {
+              0 !== uu && (bu.current = {
+                currency: Ru.currency,
+                amountBefore: Xu.currencyAmounts[Ru.currency].amount
               });
-              const gU = {
-                ...KU.currencyAmounts
+              const yu = {
+                ...Xu.currencyAmounts
               };
-              gU[RU.currency].amount -= UU, rU({
-                currencyAmounts: gU
+              yu[Ru.currency].amount -= uu, tu({
+                currencyAmounts: yu
               })
             }
-            RU.onBoughtMessage && XU(RU.onBoughtMessage)
+            Ru.onBoughtMessage && lu(Ru.onBoughtMessage)
           }
         },
-        SU = (UU, RU) => {
-          if (null === RU || !UU.shopInfo[RU]) return UU;
-          let gU = UU.redDotInfo;
-          return gU.categoryHasRedDot(RU) && (gU.updateCategoryRedDot(RU, !1), gU = gU.shallowCopy()), {
-            ...UU,
-            selectedCategoryKey: RU,
-            redDotInfo: gU
+        zu = (uu, Ru) => {
+          if (null === Ru || !uu.shopInfo[Ru]) return uu;
+          let yu = uu.redDotInfo;
+          return yu.categoryHasRedDot(Ru) && (yu.updateCategoryRedDot(Ru, !1), yu = yu.shallowCopy()), {
+            ...uu,
+            selectedCategoryKey: Ru,
+            redDotInfo: yu
           }
         },
-        sU = UU => {
-          jU((RU => SU(RU, UU)))
+        Fu = uu => {
+          Bu((Ru => zu(Ru, uu)))
         };
-      (0, oR.e)(Bt.j, (() => {
-        jU((UU => {
-          const RU = (0, Bt.l)(Vt(UU.shopInfo), UU.selectedCategoryKey, (RU => (0, Bt.f)(UU.shopInfo[RU].items)));
-          return RU === UU.selectedCategoryKey ? UU : SU(UU, RU)
+      (0, MR.e)(UE.p, (() => {
+        Bu((uu => {
+          const Ru = (0, UE.t)(nE(uu.shopInfo), uu.selectedCategoryKey, (Ru => (0, UE.l)(uu.shopInfo[Ru].items)));
+          return Ru === uu.selectedCategoryKey ? uu : zu(uu, Ru)
         }))
-      })), (0, oR.e)("showShopFromServer", (UU => {
+      })), (0, MR.e)("showShopFromServer", (uu => {
         let {
-          toggle: RU,
-          KR: gU
-        } = UU;
-        gU && sU(gU), 0 === Object.keys(KU.shopInfo).length || RU && pU ? wU.b.set({
+          toggle: Ru,
+          xR: yu
+        } = uu;
+        yu && Fu(yu), 0 === Object.keys(Xu.shopInfo).length || Ru && Ku ? eu.d.set({
           openEverythingMenuName: null
-        }) : wU.b.set({
-          openEverythingMenuName: KR.n.SHOP
+        }) : eu.d.set({
+          openEverythingMenuName: XR.s.SHOP
         })
-      })), (0, oR.e)("closeShopOnDamaged", (() => {
-        pU && wU.b.set({
+      })), (0, MR.e)("closeShopOnDamaged", (() => {
+        Ku && eu.d.set({
           openEverythingMenuName: null
         })
-      })), (0, oR.e)("overShopInfo", (UU => {
-        XU(UU)
-      })), (0, CU.f)("currencyAmounts", (UU => {
-        var RU;
-        const gU = mU.current;
-        gU && (null === UU || void 0 === UU || null === (RU = UU[gU.currency]) || void 0 === RU ? void 0 : RU.amount) === gU.amountBefore ? rU({
-          currencyAmounts: UU
-        }) : (mU.current = null, rU({
-          currencyAmounts: UU,
+      })), (0, MR.e)("overShopInfo", (uu => {
+        lu(uu)
+      })), (0, Su.e)("currencyAmounts", (uu => {
+        var Ru;
+        const yu = bu.current;
+        yu && (null === uu || void 0 === uu || null === (Ru = uu[yu.currency]) || void 0 === Ru ? void 0 : Ru.amount) === yu.amountBefore ? tu({
+          currencyAmounts: uu
+        }) : (bu.current = null, tu({
+          currencyAmounts: uu,
           awaitingPurchase: !1
         }))
-      })), (0, CU.f)("shopInfo", (UU => {
-        rU({
-          ...vU(UU),
+      })), (0, Su.e)("shopInfo", (uu => {
+        tu({
+          ...gu(uu),
           awaitingPurchase: !1
         })
       }));
-      const yU = (0, tU.useRef)({
-        playerIds: PU,
-        localPlayerId: TU
+      const wu = (0, Eu.useRef)({
+        playerIds: mu,
+        localPlayerId: Ju
       });
-      (0, tU.useEffect)((() => {
-        yU.current.playerIds === PU && yU.current.localPlayerId === TU || (yU.current = {
-          playerIds: PU,
-          localPlayerId: TU
-        }, jU((UU => {
-          const RU = vU(UU.shopInfo);
+      (0, Eu.useEffect)((() => {
+        wu.current.playerIds === mu && wu.current.localPlayerId === Ju || (wu.current = {
+          playerIds: mu,
+          localPlayerId: Ju
+        }, Bu((uu => {
+          const Ru = gu(uu.shopInfo);
           return {
-            ...UU,
-            ...RU
+            ...uu,
+            ...Ru
           }
         })))
-      }), [PU, TU]);
-      const kU = KU.selectedCategoryKey,
-        FU = (UU, RU) => {
-          var gU, tU;
-          return (isNaN(RU) || (0, kR.E)(UU.currency) || zp(KU.currencyAmounts, UU.currency) && RU <= KU.currencyAmounts[UU.currency].amount) && (null === (gU = UU.canBuy) || void 0 === gU || gU) && !(null !== (tU = UU.hidden) && void 0 !== tU && tU)
+      }), [mu, Ju]);
+      const Zu = Xu.selectedCategoryKey,
+        hu = (uu, Ru) => {
+          var yu, Eu;
+          return (isNaN(Ru) || (0, ZR.E)(uu.currency) || PK(Xu.currencyAmounts, uu.currency) && Ru <= Xu.currencyAmounts[uu.currency].amount) && (null === (yu = uu.canBuy) || void 0 === yu || yu) && !(null !== (Eu = uu.hidden) && void 0 !== Eu && Eu)
         },
-        iU = (UU, RU) => {
-          var gU, tU, pU;
-          const PU = Ap(kU, UU),
-            TU = KU.shopInfo[kU].items[UU],
-            GU = KU.userInputsPerItem[PU],
-            jU = (0, mt.e)(TU, GU),
-            uU = FU(TU, jU),
-            CU = TU.enchant,
-            hU = CU ? (0, HU.xb)(null !== (gU = TU.customTitle) && void 0 !== gU ? gU : UU, {
-              colour: HU.sb[CU.tier]
-            }) : null !== (tU = TU.customTitle) && void 0 !== tU ? tU : UU,
-            eU = RU => {
-              const gU = null !== RU && void 0 !== RU ? RU : GU,
-                tU = void 0 !== RU ? (0, mt.e)(TU, RU) : jU;
-              FU(TU, tU) && null !== gU && dU(UU, TU, RU);
-              let pU = KU.redDotInfo;
-              pU.itemHasRedDot(kU, UU) && (pU.updateItemRedDot(kU, UU, !1), pU = pU.shallowCopy()), rU({
-                redDotInfo: pU
+        Pu = (uu, Ru) => {
+          var yu, Eu, Ku;
+          const mu = hK(Zu, uu),
+            Ju = Xu.shopInfo[Zu].items[uu],
+            ru = Xu.userInputsPerItem[mu],
+            Bu = (0, bE.e)(Ju, ru),
+            xu = hu(Ju, Bu),
+            Su = Ju.enchant,
+            pu = Su ? (0, Lu.xb)(null !== (yu = Ju.customTitle) && void 0 !== yu ? yu : uu, {
+              colour: Lu.tb[Su.tier]
+            }) : null !== (Eu = Ju.customTitle) && void 0 !== Eu ? Eu : uu,
+            Wu = Ru => {
+              const yu = null !== Ru && void 0 !== Ru ? Ru : ru,
+                Eu = void 0 !== Ru ? (0, bE.e)(Ju, Ru) : Bu;
+              hu(Ju, Eu) && null !== yu && cu(uu, Ju, Ru);
+              let Ku = Xu.redDotInfo;
+              Ku.itemHasRedDot(Zu, uu) && (Ku.updateItemRedDot(Zu, uu, !1), Ku = Ku.shallowCopy()), tu({
+                redDotInfo: Ku
               })
             };
-          return (0, cU.jsxs)("div", {
-            className: EU()("ShopItem", {
-              ShopItemNoInput: !TU.userInput,
-              ShopItemNoInputCanBuy: !TU.userInput && uU,
-              ShopItemNoInputSelected: TU.isSelected,
-              ShopItemEnchant: !!CU
+          return (0, Vu.jsxs)("div", {
+            className: Qu()("ShopItem", {
+              ShopItemNoInput: !Ju.userInput,
+              ShopItemNoInputCanBuy: !Ju.userInput && xu,
+              ShopItemNoInputSelected: Ju.isSelected,
+              ShopItemEnchant: !!Su
             }),
-            "data-pad-focusable": !TU.userInput || void 0,
-            "data-pad-unavailable": !TU.userInput && !uU || void 0,
-            "data-pad-repeat": null !== (pU = (0, Bt.c)(TU)) && void 0 !== pU ? pU : void 0,
-            "data-pad-repeat-wait": KU.awaitingPurchase || void 0,
+            "data-pad-focusable": !Ju.userInput || void 0,
+            "data-pad-unavailable": !Ju.userInput && !xu || void 0,
+            "data-pad-repeat": null !== (Ku = (0, UE.d)(Ju)) && void 0 !== Ku ? Ku : void 0,
+            "data-pad-repeat-wait": Xu.awaitingPurchase || void 0,
             onClick: () => {
-              if (CU && ZU.current) {
-                if (nU !== PU) return void bU(PU);
-                bU(null)
+              if (Su && Iu.current) {
+                if (Au !== mu) return void Du(mu);
+                Du(null)
               }
-              TU.userInput || eU()
+              Ju.userInput || Wu()
             },
-            onPointerDown: UU => {
-              CU && (ZU.current = (0, Jt.m)(UU))
+            onPointerDown: uu => {
+              Su && (Iu.current = (0, kE.t)(uu))
             },
-            onPointerEnter: UU => {
-              CU && !(0, Jt.m)(UU) && bU(PU)
+            onPointerEnter: uu => {
+              Su && !(0, kE.t)(uu) && Du(mu)
             },
-            onPointerLeave: UU => {
-              CU && !(0, Jt.m)(UU) && bU((UU => UU === PU ? null : UU))
+            onPointerLeave: uu => {
+              Su && !(0, kE.t)(uu) && Du((uu => uu === mu ? null : uu))
             },
             style: {
-              zIndex: Object.keys(KU.shopInfo[kU].items).length - RU
+              zIndex: Object.keys(Xu.shopInfo[Zu].items).length - Ru
             },
-            children: [KU.redDotInfo.itemHasRedDot(kU, UU) && (0, cU.jsx)(qU.e, {
+            children: [Xu.redDotInfo.itemHasRedDot(Zu, uu) && (0, Vu.jsx)(Nu.e, {
               top: "-6px",
               right: "-6px"
-            }), TU.badge && (0, cU.jsx)("div", {
+            }), Ju.badge && (0, Vu.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, cU.jsx)("div", {
-                className: EU()("ShopBadgeMain", TU.badge.type),
-                children: (0, cU.jsx)(nt.e, {
-                  text: TU.badge.text
+              children: (0, Vu.jsx)("div", {
+                className: Qu()("ShopBadgeMain", Ju.badge.type),
+                children: (0, Vu.jsx)(AE.d, {
+                  text: Ju.badge.text
                 })
               })
-            }), (0, cU.jsx)("div", {
+            }), (0, Vu.jsx)("div", {
               className: "ShopItemLeft",
-              children: TU.image && (0, cU.jsx)(Dp, {
-                item: TU,
+              children: Ju.image && (0, Vu.jsx)(YK, {
+                item: Ju,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, cU.jsxs)("div", {
+            }), (0, Vu.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, cU.jsxs)("div", {
+              children: [(0, Vu.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, cU.jsx)("div", {
+                children: [(0, Vu.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, cU.jsx)(nt.e, {
-                    text: hU
+                  children: (0, Vu.jsx)(AE.d, {
+                    text: pu
                   })
-                }), (0, cU.jsx)("div", {
+                }), (0, Vu.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, cU.jsx)(nt.e, {
-                    text: TU.description
+                  children: (0, Vu.jsx)(AE.d, {
+                    text: Ju.description
                   })
                 })]
-              }), TU.userInput && (0, cU.jsxs)("div", {
+              }), Ju.userInput && (0, Vu.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: UU => {
-                  UU.stopPropagation()
+                onClick: uu => {
+                  uu.stopPropagation()
                 },
-                children: [(0, cU.jsx)(lp, {
-                  item: TU,
-                  currInput: GU,
-                  updateInput: RU => {
-                    ((UU, RU, gU) => {
-                      const tU = Ap(UU, RU),
-                        pU = {
-                          ...KU.userInputsPerItem
+                children: [(0, Vu.jsx)(OK, {
+                  item: Ju,
+                  currInput: ru,
+                  updateInput: Ru => {
+                    ((uu, Ru, yu) => {
+                      const Eu = hK(uu, Ru),
+                        Ku = {
+                          ...Xu.userInputsPerItem
                         };
-                      pU[tU] = gU, rU({
-                        userInputsPerItem: pU
+                      Ku[Eu] = yu, tu({
+                        userInputsPerItem: Ku
                       })
-                    })(kU, UU, RU)
+                    })(Zu, uu, Ru)
                   },
-                  onSubmit: UU => {
-                    eU(UU)
+                  onSubmit: uu => {
+                    Wu(uu)
                   }
-                }), ("dropdown" !== TU.userInput.type || !TU.userInput.autoSubmit) && (0, cU.jsx)(QU.e, {
+                }), ("dropdown" !== Ju.userInput.type || !Ju.userInput.autoSubmit) && (0, Vu.jsx)(Tu.e, {
                   className: "ItemCostButton",
-                  disabled: !uU && null !== GU,
+                  disabled: !xu && null !== ru,
                   onClick: () => {
-                    eU()
+                    Wu()
                   },
-                  children: (0, cU.jsx)(Np, {
-                    item: TU,
-                    cost: jU,
-                    currencyAmounts: KU.currencyAmounts
+                  children: (0, Vu.jsx)(qK, {
+                    item: Ju,
+                    cost: Bu,
+                    currencyAmounts: Xu.currencyAmounts
                   })
                 })]
               })]
-            }), !TU.userInput && (0, cU.jsx)("div", {
+            }), !Ju.userInput && (0, Vu.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, cU.jsx)(Np, {
-                item: TU,
-                cost: jU,
-                currencyAmounts: KU.currencyAmounts
+              children: (0, Vu.jsx)(qK, {
+                item: Ju,
+                cost: Bu,
+                currencyAmounts: Xu.currencyAmounts
               })
-            }), CU && nU === PU && (0, cU.jsxs)("div", {
+            }), Su && Au === mu && (0, Vu.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, cU.jsx)(nt.e, {
-                text: hU
-              }), (0, cU.jsx)("div", {
+              children: [(0, Vu.jsx)(AE.d, {
+                text: pu
+              }), (0, Vu.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, cU.jsx)(nt.e, {
-                  text: (0, It.e)("", CU.enchantments, CU.enchantmentData)
+                children: (0, Vu.jsx)(AE.d, {
+                  text: (0, CE.d)("", Su.enchantments, Su.enchantmentData)
                 })
               })]
             })]
-          }, PU)
+          }, mu)
         },
-        AU = function(UU) {
-          for (const RU in UU)
-            if (UU[RU].smp) return !0;
+        iu = function(uu) {
+          for (const Ru in uu)
+            if (uu[Ru].smp) return !0;
           return !1
-        }(KU.shopInfo),
-        zU = lt(KU.shopInfo, kU);
-      return (0, cU.jsx)(Wt.c, {
+        }(Xu.shopInfo),
+        Yu = vE(Xu.shopInfo, Zu);
+      return (0, Vu.jsx)(jE.c, {
         className: "Menu ShopBody",
-        show: pU,
-        children: 0 !== Object.keys(KU.shopInfo).length && (0, cU.jsxs)(cU.Fragment, {
-          children: [(0, cU.jsxs)("div", {
+        show: Ku,
+        children: 0 !== Object.keys(Xu.shopInfo).length && (0, Vu.jsxs)(Vu.Fragment, {
+          children: [(0, Vu.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, cU.jsx)(GU, {
-              items: Vt(KU.shopInfo).map((UU => {
-                var RU;
+            children: [(0, Vu.jsx)(ru, {
+              items: nE(Xu.shopInfo).map((uu => {
+                var Ru;
                 return {
-                  id: UU,
-                  title: null !== (RU = KU.shopInfo[UU].customTitle) && void 0 !== RU ? RU : UU,
-                  redDot: KU.redDotInfo.categoryHasRedDot(UU)
+                  id: uu,
+                  title: null !== (Ru = Xu.shopInfo[uu].customTitle) && void 0 !== Ru ? Ru : uu,
+                  redDot: Xu.redDotInfo.categoryHasRedDot(uu)
                 }
               })),
-              selectedItemId: kU,
-              onClick: sU,
-              padStartsOnTab: (0, Bt.e)(kU)
-            }), (0, cU.jsx)("div", {
+              selectedItemId: Zu,
+              onClick: Fu,
+              padStartsOnTab: (0, UE.h)(Zu)
+            }), (0, Vu.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: KU.currencyAmounts && Object.keys(KU.currencyAmounts).map((UU => {
-                var RU;
-                const gU = KU.currencyAmounts[UU];
-                return gU.hidden ? null : (0, cU.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (aU ? "SmallText" : ""),
-                  children: [(0, cU.jsxs)("div", {
+              children: Xu.currencyAmounts && Object.keys(Xu.currencyAmounts).map((uu => {
+                var Ru;
+                const yu = Xu.currencyAmounts[uu];
+                return yu.hidden ? null : (0, Vu.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (Gu ? "SmallText" : ""),
+                  children: [(0, Vu.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, cU.jsx)("div", {
+                    children: [(0, Vu.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: gU.iconColour
+                        color: yu.iconColour
                       },
-                      children: (0, cU.jsx)(gE, {
-                        iconName: gU.icon
+                      children: (0, Vu.jsx)(uQ, {
+                        iconName: yu.icon
                       })
-                    }), "\xa0", (0, xt.c)(gU.amount, 6)]
-                  }), (null === (RU = gU.subtext) || void 0 === RU ? void 0 : RU.length) > 0 && (0, cU.jsx)("div", {
+                    }), "\xa0", (0, dE.d)(yu.amount, 6)]
+                  }), (null === (Ru = yu.subtext) || void 0 === Ru ? void 0 : Ru.length) > 0 && (0, Vu.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, cU.jsx)(nt.e, {
-                      text: gU.subtext
+                    children: (0, Vu.jsx)(AE.d, {
+                      text: yu.subtext
                     })
                   })]
-                }, UU)
+                }, uu)
               }))
             })]
-          }), (0, cU.jsxs)("div", {
+          }), (0, Vu.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [AU && (0, cU.jsx)(Fp, {
-              show: pU,
-              shopInfo: KU.shopInfo,
-              selectedCategoryKey: kU,
-              buy: (UU, RU, gU) => {
-                dU(UU, RU, gU)
+            children: [iu && (0, Vu.jsx)(wK, {
+              show: Ku,
+              shopInfo: Xu.shopInfo,
+              selectedCategoryKey: Zu,
+              buy: (uu, Ru, yu) => {
+                cu(uu, Ru, yu)
               },
-              canAfford: FU,
-              message: KU.onBoughtInfo
-            }), null === zU && (0, cU.jsxs)(cU.Fragment, {
-              children: [(0, cU.jsx)("div", {
-                className: EU()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== KU.onBoughtInfo
+              canAfford: hu,
+              message: Xu.onBoughtInfo
+            }), null === Yu && (0, Vu.jsxs)(Vu.Fragment, {
+              children: [(0, Vu.jsx)("div", {
+                className: Qu()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== Xu.onBoughtInfo
                 }),
-                children: (0, cU.jsx)(nt.e, {
-                  text: uU.current
+                children: (0, Vu.jsx)(AE.d, {
+                  text: xu.current
                 })
-              }), (0, cU.jsx)("div", {
+              }), (0, Vu.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, cU.jsxs)("div", {
+                children: (0, Vu.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (RU = KU.shopInfo[kU]) || void 0 === RU ? void 0 : RU.description) && (0, cU.jsx)("div", {
+                  children: [(null === (Ru = Xu.shopInfo[Zu]) || void 0 === Ru ? void 0 : Ru.description) && (0, Vu.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, cU.jsx)(nt.e, {
-                      text: KU.shopInfo[kU].description
+                    children: (0, Vu.jsx)(AE.d, {
+                      text: Xu.shopInfo[Zu].description
                     })
-                  }), pU && (0, cU.jsx)("div", {
+                  }), Ku && (0, Vu.jsx)("div", {
                     className: "ShopItems",
-                    ref: eU,
+                    ref: Wu,
                     "data-pad-initial-area": !0,
-                    children: Vt(null === (gU = KU.shopInfo[kU]) || void 0 === gU ? void 0 : gU.items).map(((UU, RU) => iU(UU, RU)))
+                    children: nE(null === (yu = Xu.shopInfo[Zu]) || void 0 === yu ? void 0 : yu.items).map(((uu, Ru) => Pu(uu, Ru)))
                   })]
                 })
               })]
@@ -5051,777 +5051,777 @@ export const modules = {
       })
     }));
 
-    function Dp(UU) {
+    function YK(uu) {
       let {
-        item: RU,
-        minWidth: gU,
-        minHeight: tU
-      } = UU;
+        item: Ru,
+        minWidth: yu,
+        minHeight: Eu
+      } = uu;
       const {
-        image: pU,
-        schematicId: EU,
-        imageColour: PU
-      } = RU;
-      if (EU) return (0, cU.jsx)("div", {
+        image: Ku,
+        schematicId: Qu,
+        imageColour: mu
+      } = Ru;
+      if (Qu) return (0, Vu.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${gU}rem`,
-          height: `${tU}rem`
+          width: `${yu}rem`,
+          height: `${Eu}rem`
         },
-        children: (0, cU.jsx)(bt.c, {
+        children: (0, Vu.jsx)(DE.e, {
           game: {
-            schematicId: EU
+            schematicId: Qu
           }
         })
       });
-      var qU, KU;
-      if ((0, wt.f)(pU)) return (0, cU.jsx)("div", {
+      var Nu, Xu;
+      if ((0, eE.d)(Ku)) return (0, Vu.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${gU}rem`,
+          minWidth: `${yu}rem`,
           height: "0",
-          minHeight: `${tU}rem`
+          minHeight: `${Eu}rem`
         },
-        children: (0, cU.jsx)(wt.c, {
-          itemName: pU,
-          amount: null !== (qU = RU.amount) && void 0 !== qU ? qU : 0,
-          amountFontSize: tU / 4 + "rem",
-          enchantmentTier: null === (KU = RU.enchant) || void 0 === KU ? void 0 : KU.tier
+        children: (0, Vu.jsx)(eE.c, {
+          itemName: Ku,
+          amount: null !== (Nu = Ru.amount) && void 0 !== Nu ? Nu : 0,
+          amountFontSize: Eu / 4 + "rem",
+          enchantmentTier: null === (Xu = Ru.enchant) || void 0 === Xu ? void 0 : Xu.tier
         })
       });
-      const GU = pU.slice(-4);
-      return ".jpg" === GU || ".png" === GU ? (0, cU.jsx)(Lp, {
-        image: pU,
-        minWidth: gU
-      }) : (0, cU.jsx)(TU.c, {
-        name: pU,
+      const ru = Ku.slice(-4);
+      return ".jpg" === ru || ".png" === ru ? (0, Vu.jsx)(oK, {
+        image: Ku,
+        minWidth: yu
+      }) : (0, Vu.jsx)(Ju.c, {
+        name: Ku,
         className: "SelectedItemImage",
         style: {
-          color: PU
+          color: mu
         }
       })
     }
 
-    function Lp(UU) {
+    function oK(uu) {
       let {
-        image: RU,
-        minWidth: gU
-      } = UU;
+        image: Ru,
+        minWidth: yu
+      } = uu;
       const {
-        gameNameWithVariation: tU
-      } = (0, Lg.k)("connectedGame"), pU = RU.endsWith(".jpg");
-      return (0, cU.jsx)("img", {
-        className: EU()({
-          ShopPixelImage: !pU
+        gameNameWithVariation: Eu
+      } = (0, Oy.i)("connectedGame"), Ku = Ru.endsWith(".jpg");
+      return (0, Vu.jsx)("img", {
+        className: Qu()({
+          ShopPixelImage: !Ku
         }),
         style: {
-          width: `${pU?1.6*gU:gU}rem`,
+          width: `${Ku?1.6*yu:yu}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,HU.Wb)(tU)}/${RU}`,
-        alt: RU,
+        src: `/textures/games/${(0,Lu.cc)(Eu)}/${Ru}`,
+        alt: Ru,
         draggable: !1
       })
     }
 
-    function Np(UU) {
+    function qK(uu) {
       let {
-        item: RU,
-        cost: gU,
-        currencyAmounts: tU
-      } = UU;
-      const pU = !isNaN(gU) && 0 !== gU && zp(tU, RU.currency);
-      let EU = null;
-      return RU.buyButtonText ? EU = RU.buyButtonText : pU ? (EU = gU, RU.sell && (EU = -1 * gU), EU = EU.toString()) : 0 === gU ? EU = "Free" : RU.isRewardedAd && (EU = "Watch ad"), (0, kR.E)(EU) || " " === EU ? null : (0, cU.jsxs)("div", {
+        item: Ru,
+        cost: yu,
+        currencyAmounts: Eu
+      } = uu;
+      const Ku = !isNaN(yu) && 0 !== yu && PK(Eu, Ru.currency);
+      let Qu = null;
+      return Ru.buyButtonText ? Qu = Ru.buyButtonText : Ku ? (Qu = yu, Ru.sell && (Qu = -1 * yu), Qu = Qu.toString()) : 0 === yu ? Qu = "Free" : Ru.isRewardedAd && (Qu = "Watch ad"), (0, ZR.E)(Qu) || " " === Qu ? null : (0, Vu.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [pU && (0, cU.jsx)("div", {
+        children: [Ku && (0, Vu.jsx)("div", {
           style: {
-            color: tU[RU.currency].iconColour
+            color: Eu[Ru.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, cU.jsx)(gE, {
-            iconName: tU[RU.currency].icon
+          children: (0, Vu.jsx)(uQ, {
+            iconName: Eu[Ru.currency].icon
           })
-        }), (0, cU.jsx)("div", {
+        }), (0, Vu.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, cU.jsx)(nt.e, {
-            text: EU
+          children: (0, Vu.jsx)(AE.d, {
+            text: Qu
           })
         })]
       })
     }
 
-    function lp(UU) {
+    function OK(uu) {
       let {
-        item: RU,
-        currInput: gU,
-        updateInput: pU,
-        onSubmit: EU
-      } = UU;
+        item: Ru,
+        currInput: yu,
+        updateInput: Ku,
+        onSubmit: Qu
+      } = uu;
       const {
-        t: TU
-      } = (0, PU.B)(), qU = (0, tU.useRef)(null);
-      if ((0, tU.useEffect)((() => {
-          const UU = qU.current;
-          UU && UU.value !== gU && document.activeElement !== UU && (UU.value = null !== gU && void 0 !== gU ? gU : "")
-        }), [gU]), !RU.userInput) return null;
-      let KU = RU.userInput;
-      if (eU.featureFlags.sanitizeShopInput && "text" === RU.userInput.type && (KU = {
+        t: Ju
+      } = (0, mu.E)(), Nu = (0, Eu.useRef)(null);
+      if ((0, Eu.useEffect)((() => {
+          const uu = Nu.current;
+          uu && uu.value !== yu && document.activeElement !== uu && (uu.value = null !== yu && void 0 !== yu ? yu : "")
+        }), [yu]), !Ru.userInput) return null;
+      let Xu = Ru.userInput;
+      if (Wu.featureFlags.sanitizeShopInput && "text" === Ru.userInput.type && (Xu = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === KU.type || "number" === KU.type) {
-        var GU, jU;
-        console.assert(void 0 !== gU, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(RU)}`);
-        const UU = "text" === KU.type && KU.wordCharsOnly;
-        return (0, cU.jsx)("div", {
+        }), "text" === Xu.type || "number" === Xu.type) {
+        var ru, Bu;
+        console.assert(void 0 !== yu, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Ru)}`);
+        const uu = "text" === Xu.type && Xu.wordCharsOnly;
+        return (0, Vu.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, cU.jsx)(mU.d, {
+          children: (0, Vu.jsx)(bu.b, {
             className: "ShopItemUserInputText",
-            placeholderText: TU(KU.placeholderText),
-            defaultValue: gU,
-            domRef: qU,
-            onValueChange: (RU, gU) => {
-              !0 === UU && (RU = (0, Zt.gb)(RU)), qU.current.value = RU, pU(RU)
+            placeholderText: Ju(Xu.placeholderText),
+            defaultValue: yu,
+            domRef: Nu,
+            onValueChange: (Ru, yu) => {
+              !0 === uu && (Ru = (0, IE.jb)(Ru)), Nu.current.value = Ru, Ku(Ru)
             },
-            onEnter: EU,
-            type: KU.type
-          }, (null !== (GU = KU.initialValue) && void 0 !== GU ? GU : "") + (null !== (jU = KU.placeholderText) && void 0 !== jU ? jU : ""))
+            onEnter: Qu,
+            type: Xu.type
+          }, (null !== (ru = Xu.initialValue) && void 0 !== ru ? ru : "") + (null !== (Bu = Xu.placeholderText) && void 0 !== Bu ? Bu : ""))
         })
       }
-      if ("dropdown" === KU.type) {
-        console.assert(void 0 !== gU, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(RU)}`);
-        const UU = KU.autoSubmit;
-        return (0, cU.jsx)("div", {
+      if ("dropdown" === Xu.type) {
+        console.assert(void 0 !== yu, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Ru)}`);
+        const uu = Xu.autoSubmit;
+        return (0, Vu.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, cU.jsx)(mR.c, {
-            options: KU.dropdownOptions.map((UU => (0, mt.h)(UU))),
-            value: gU,
-            onChange: RU => {
+          children: (0, Vu.jsx)(bR.d, {
+            options: Xu.dropdownOptions.map((uu => (0, bE.h)(uu))),
+            value: yu,
+            onChange: Ru => {
               let {
-                value: gU
-              } = RU;
-              pU(gU), UU && EU(gU)
+                value: yu
+              } = Ru;
+              Ku(yu), uu && Qu(yu)
             }
           })
         })
       }
-      return "player" === KU.type ? (0, cU.jsx)(Op, {
-        userInput: KU,
-        currInput: gU,
-        updateInput: pU
-      }) : "color" === KU.type ? (0, cU.jsx)("div", {
+      return "player" === Xu.type ? (0, Vu.jsx)(vK, {
+        userInput: Xu,
+        currInput: yu,
+        updateInput: Ku
+      }) : "color" === Xu.type ? (0, Vu.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, cU.jsx)("input", {
+        children: (0, Vu.jsx)("input", {
           type: "color",
-          value: gU,
-          onChange: UU => {
-            pU(UU.target.value)
+          value: yu,
+          onChange: uu => {
+            Ku(uu.target.value)
           }
         })
       }) : null
     }
 
-    function Op(UU) {
+    function vK(uu) {
       let {
-        userInput: RU,
-        currInput: gU,
-        updateInput: tU
-      } = UU;
-      const pU = (0, Lg.k)("players"),
-        EU = (0, Lg.k)("hiddenPlayerNames"),
-        PU = (0, mt.i)(pU.ids, pU.localId, RU);
-      return (0, cU.jsx)("div", {
+        userInput: Ru,
+        currInput: yu,
+        updateInput: Eu
+      } = uu;
+      const Ku = (0, Oy.i)("players"),
+        Qu = (0, Oy.i)("hiddenPlayerNames"),
+        mu = (0, bE.i)(Ku.ids, Ku.localId, Ru);
+      return (0, Vu.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, cU.jsx)(mR.c, {
-          options: PU.map((UU => {
+        children: (0, Vu.jsx)(bR.d, {
+          options: mu.map((uu => {
             const {
-              name: RU
-            } = pU.byId[UU];
+              name: Ru
+            } = Ku.byId[uu];
             return {
-              value: UU,
-              label: null === RU ? "" : (0, ot.e)(RU, EU)
+              value: uu,
+              label: null === Ru ? "" : (0, ME.e)(Ru, Qu)
             }
           })),
-          value: gU,
-          onChange: UU => {
+          value: yu,
+          onChange: uu => {
             let {
-              value: RU
-            } = UU;
-            tU(RU)
+              value: Ru
+            } = uu;
+            Eu(Ru)
           }
         })
       })
     }
 
-    function UE(UU) {
+    function aK(uu) {
       let {
-        ids: RU
-      } = UU;
-      return RU
+        ids: Ru
+      } = uu;
+      return Ru
     }
 
-    function RE(UU) {
+    function fK(uu) {
       let {
-        localId: RU
-      } = UU;
-      return RU
+        localId: Ru
+      } = uu;
+      return Ru
     }
 
-    function gE(UU) {
+    function uQ(uu) {
       let {
-        iconName: RU
-      } = UU;
-      return WU.gameBridge.lookup("isItemName", RU) ? (0, cU.jsx)(wt.c, {
-        itemName: RU,
+        iconName: Ru
+      } = uu;
+      return ju.gameBridge.lookup("isItemName", Ru) ? (0, Vu.jsx)(eE.c, {
+        itemName: Ru,
         amount: 1
-      }) : (0, cU.jsx)(TU.c, {
-        name: RU,
+      }) : (0, Vu.jsx)(Ju.c, {
+        name: Ru,
         className: "2x"
       })
     }
-    var tE = gU(1567);
-    const pE = (0, gU(1376).i)((UU => UU.PadLobbyShortcuts)),
-      EE = (0, tU.lazy)((() => Promise.resolve().then((() => gU(4318))).then((UU => ({
-        default: UU.Lobbyleaderboard
+    var RQ = yu(1583);
+    const yQ = (0, yu(1362).g)((uu => uu.PadLobbyShortcuts)),
+      EQ = (0, Eu.lazy)((() => Promise.resolve().then((() => yu(4436))).then((uu => ({
+        default: uu.Lobbyleaderboard
       })))));
 
-    function PE(UU) {
+    function KQ(uu) {
       let {
-        show: RU
-      } = UU;
-      return RU ? (0, cU.jsxs)(cU.Fragment, {
-        children: [(0, cU.jsx)(pE, {}), (0, cU.jsx)(tU.Suspense, {
-          fallback: (0, cU.jsx)("div", {
+        show: Ru
+      } = uu;
+      return Ru ? (0, Vu.jsxs)(Vu.Fragment, {
+        children: [(0, Vu.jsx)(yQ, {}), (0, Vu.jsx)(Eu.Suspense, {
+          fallback: (0, Vu.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, cU.jsx)(IU.d, {})
+            children: (0, Vu.jsx)(Cu.b, {})
           }),
-          children: (0, cU.jsx)(EE, {})
+          children: (0, Vu.jsx)(EQ, {})
         })]
       }) : null
     }
-    var TE = gU(1514),
-      qE = gU(2710),
-      KE = gU(1637),
-      cE = gU(2760),
-      GE = gU(2474),
-      jE = gU(1457),
-      uE = gU(1420),
-      CE = gU(2685),
-      hE = gU(2703),
-      QE = gU(2169);
-    const eE = "storeRecentGiftRecipients",
-      WE = new Map;
+    var QQ = yu(1511),
+      mQ = yu(2799),
+      JQ = yu(1661),
+      NQ = yu(2843),
+      XQ = yu(2539),
+      VQ = yu(1442),
+      rQ = yu(1410),
+      BQ = yu(2774),
+      xQ = yu(2793),
+      SQ = yu(2243);
+    const pQ = "storeRecentGiftRecipients",
+      TQ = new Map;
 
-    function fE() {
+    function WQ() {
       try {
-        const UU = AR.k.getItem(eE);
-        return Array.isArray(UU) ? UU.filter((UU => "string" === typeof(null === UU || void 0 === UU ? void 0 : UU.name) && UU.name.length > 0)).map((UU => ({
-          name: UU.name,
-          cosmetics: UU.cosmetics && "object" === typeof UU.cosmetics ? UU.cosmetics : null
+        const uu = iR.i.getItem(pQ);
+        return Array.isArray(uu) ? uu.filter((uu => "string" === typeof(null === uu || void 0 === uu ? void 0 : uu.name) && uu.name.length > 0)).map((uu => ({
+          name: uu.name,
+          cosmetics: uu.cosmetics && "object" === typeof uu.cosmetics ? uu.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function xE(UU) {
-      var RU;
-      const [gU, pU] = (0, tU.useState)(""), [EU, PU] = (0, tU.useState)("search"), [TU, qU] = (0, tU.useState)(null), [KU, cU] = (0, tU.useState)(null), GU = (0, tU.useRef)(null), jU = (0, tU.useRef)(null);
-      (0, tU.useEffect)((() => () => {
-        GU.current && clearTimeout(GU.current)
+    function jQ(uu) {
+      var Ru;
+      const [yu, Ku] = (0, Eu.useState)(""), [Qu, mu] = (0, Eu.useState)("search"), [Ju, Nu] = (0, Eu.useState)(null), [Xu, Vu] = (0, Eu.useState)(null), ru = (0, Eu.useRef)(null), Bu = (0, Eu.useRef)(null);
+      (0, Eu.useEffect)((() => () => {
+        ru.current && clearTimeout(ru.current)
       }), []);
-      const uU = null !== (RU = null === TU || void 0 === TU ? void 0 : TU.name) && void 0 !== RU ? RU : null;
+      const xu = null !== (Ru = null === Ju || void 0 === Ju ? void 0 : Ju.name) && void 0 !== Ru ? Ru : null;
 
-      function CU() {
-        GU.current && (clearTimeout(GU.current), GU.current = null)
-      }(0, tU.useEffect)((() => {
-        if (null === uU || UU === ZU.NULL_USER_CONTEXT) return;
-        const RU = uU.toLowerCase();
-        if (RU === UU.getPlayerName().toLowerCase()) return void cU({
-          name: uU,
+      function Su() {
+        ru.current && (clearTimeout(ru.current), ru.current = null)
+      }(0, Eu.useEffect)((() => {
+        if (null === xu || uu === Iu.NULL_USER_CONTEXT) return;
+        const Ru = xu.toLowerCase();
+        if (Ru === uu.getPlayerName().toLowerCase()) return void Vu({
+          name: xu,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const gU = WE.get(RU);
-        if (gU) return void cU({
-          name: uU,
-          result: gU
+        const yu = TQ.get(Ru);
+        if (yu) return void Vu({
+          name: xu,
+          result: yu
         });
-        let tU = !1;
-        return async function(UU, RU) {
+        let Eu = !1;
+        return async function(uu, Ru) {
           try {
-            const gU = await (0, ZU.postJsonWithMetricsCookiesAndJsonResponse)(`${aU.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: RU
+            const yu = await (0, Iu.postJsonWithMetricsCookiesAndJsonResponse)(`${Gu.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: Ru
             }, {
               retries: 1
-            }, UU.getMetricsCookies());
-            if ("boolean" !== typeof(null === gU || void 0 === gU ? void 0 : gU.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(gU)}`);
-            return gU
-          } catch (gU) {
-            return console.error("Failed to look up gift recipient:", gU), {
+            }, uu.getMetricsCookies());
+            if ("boolean" !== typeof(null === yu || void 0 === yu ? void 0 : yu.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(yu)}`);
+            return yu
+          } catch (yu) {
+            return console.error("Failed to look up gift recipient:", yu), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(UU, uU).catch((UU => (console.error("Gift recipient lookup failed:", UU), {
+        }(uu, xu).catch((uu => (console.error("Gift recipient lookup failed:", uu), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((UU => {
-          !0 !== UU.giftRecipientFound && "store:giftRecipientLookupFailed" === UU.giftRecipientError || WE.set(RU, UU), tU || cU({
-            name: uU,
-            result: UU
+        }))).then((uu => {
+          !0 !== uu.giftRecipientFound && "store:giftRecipientLookupFailed" === uu.giftRecipientError || TQ.set(Ru, uu), Eu || Vu({
+            name: xu,
+            result: uu
           })
         })), () => {
-          tU = !0
+          Eu = !0
         }
-      }), [uU, UU]);
-      const hU = (0, tU.useMemo)((() => {
-        const UU = gU.trim();
-        if (!UU) return {
+      }), [xu, uu]);
+      const pu = (0, Eu.useMemo)((() => {
+        const uu = yu.trim();
+        if (!uu) return {
           status: "none"
         };
-        if (!TU || TU.name !== UU || (null === KU || void 0 === KU ? void 0 : KU.name) !== TU.name) return {
+        if (!Ju || Ju.name !== uu || (null === Xu || void 0 === Xu ? void 0 : Xu.name) !== Ju.name) return {
           status: "pending",
-          name: UU
+          name: uu
         };
-        const RU = KU.result;
-        return !1 === RU.giftRecipientFound ? {
+        const Ru = Xu.result;
+        return !1 === Ru.giftRecipientFound ? {
           status: "error",
-          name: TU.name,
-          error: RU.giftRecipientError
+          name: Ju.name,
+          error: Ru.giftRecipientError
         } : {
           status: "found",
-          name: RU.giftRecipientName,
-          ownedPacks: RU.giftRecipientOwnedPacks,
-          hasSuperRank: RU.giftRecipientHasSuperRank,
-          isSubscriber: RU.giftRecipientIsSubscriber
+          name: Ru.giftRecipientName,
+          ownedPacks: Ru.giftRecipientOwnedPacks,
+          hasSuperRank: Ru.giftRecipientHasSuperRank,
+          isSubscriber: Ru.giftRecipientIsSubscriber
         }
-      }), [gU, TU, KU]);
-      (0, tU.useEffect)((() => {
-        "found" === hU.status && "typed" === (null === TU || void 0 === TU ? void 0 : TU.source) && jU.current !== hU.name && (jU.current = hU.name, (0, lU.reportAnalyticsClick)({
+      }), [yu, Ju, Xu]);
+      (0, Eu.useEffect)((() => {
+        "found" === pu.status && "typed" === (null === Ju || void 0 === Ju ? void 0 : Ju.source) && Bu.current !== pu.name && (Bu.current = pu.name, (0, au.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [hU, TU]);
-      const QU = (null === KU || void 0 === KU ? void 0 : KU.name) === (null === TU || void 0 === TU ? void 0 : TU.name) ? null === KU || void 0 === KU ? void 0 : KU.result : null,
-        eU = !0 === (null === QU || void 0 === QU ? void 0 : QU.giftRecipientFound) ? QU.giftRecipientCosmetics : null;
+      }), [pu, Ju]);
+      const Tu = (null === Xu || void 0 === Xu ? void 0 : Xu.name) === (null === Ju || void 0 === Ju ? void 0 : Ju.name) ? null === Xu || void 0 === Xu ? void 0 : Xu.result : null,
+        Wu = !0 === (null === Tu || void 0 === Tu ? void 0 : Tu.giftRecipientFound) ? Tu.giftRecipientCosmetics : null;
       return {
-        query: gU,
-        via: EU,
-        recipient: hU,
-        recipientCosmetics: eU,
-        type: function(UU) {
-          pU(UU), PU("search"), CU();
-          const RU = UU.trim();
-          RU ? GU.current = setTimeout((() => {
-            qU({
-              name: RU,
+        query: yu,
+        via: Qu,
+        recipient: pu,
+        recipientCosmetics: Wu,
+        type: function(uu) {
+          Ku(uu), mu("search"), Su();
+          const Ru = uu.trim();
+          Ru ? ru.current = setTimeout((() => {
+            Nu({
+              name: Ru,
               source: "typed"
             })
-          }), 400) : qU(null)
+          }), 400) : Nu(null)
         },
-        choose: function(UU, RU) {
-          CU(), pU(UU), PU("typed" === RU ? "search" : "prefilled" === RU ? "prefilled" : "suggestion"), qU({
-            name: UU,
-            source: RU
-          }), "typed" !== RU && "prefilled" !== RU && (0, lU.reportAnalyticsClick)({
+        choose: function(uu, Ru) {
+          Su(), Ku(uu), mu("typed" === Ru ? "search" : "prefilled" === Ru ? "prefilled" : "suggestion"), Nu({
+            name: uu,
+            source: Ru
+          }), "typed" !== Ru && "prefilled" !== Ru && (0, au.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: RU
+            value: Ru
           })
         },
         clear: function() {
-          CU(), pU(""), PU("search"), qU(null)
+          Su(), Ku(""), mu("search"), Nu(null)
         },
-        recordGift: function(UU, RU) {
-          ! function(UU) {
-            WE.delete(UU.toLowerCase())
-          }(UU), cU((gU => {
-            if (!gU || gU.name.toLowerCase() !== UU.toLowerCase() || !0 !== gU.result.giftRecipientFound || "superRank" === RU) return gU;
-            const tU = gU.result.giftRecipientOwnedPacks;
+        recordGift: function(uu, Ru) {
+          ! function(uu) {
+            TQ.delete(uu.toLowerCase())
+          }(uu), Vu((yu => {
+            if (!yu || yu.name.toLowerCase() !== uu.toLowerCase() || !0 !== yu.result.giftRecipientFound || "superRank" === Ru) return yu;
+            const Eu = yu.result.giftRecipientOwnedPacks;
             return {
-              ...gU,
+              ...yu,
               result: {
-                ...gU.result,
-                giftRecipientOwnedPacks: tU.includes(RU) ? tU : [...tU, RU]
+                ...yu.result,
+                giftRecipientOwnedPacks: Eu.includes(Ru) ? Eu : [...Eu, Ru]
               }
             }
           }))
         }
       }
     }
-    var mE = gU(2167),
-      IE = gU(4320),
-      JE = gU(249),
-      wE = gU(2811);
-    const nE = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var bE = gU(2103),
-      oE = gU(562),
-      ZE = gU(2198),
-      aE = gU(2374);
+    var HQ = yu(2236),
+      dQ = yu(4441),
+      bQ = yu(281),
+      CQ = yu(2896);
+    const kQ = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var eQ = yu(2171),
+      AQ = yu(595),
+      DQ = yu(2278),
+      MQ = yu(2457);
 
-    function YE(UU) {
+    function IQ(uu) {
       let {
-        cosmetics: RU
-      } = UU;
-      return (0, cU.jsx)("span", {
+        cosmetics: Ru
+      } = uu;
+      return (0, Vu.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, cU.jsx)(ZE.d, {
-          cosmetics: RU
+        children: (0, Vu.jsx)(DQ.b, {
+          cosmetics: Ru
         })
       })
     }
 
-    function BE(UU, RU) {
-      var gU, tU;
-      const pU = null !== (gU = UU.friend) && void 0 !== gU ? gU : {
+    function GQ(uu, Ru) {
+      var yu, Eu;
+      const Ku = null !== (yu = uu.friend) && void 0 !== yu ? yu : {
         isError: !1,
-        name: UU.name,
+        name: uu.name,
         ranks: [],
-        cosmetics: null !== (tU = UU.cosmetics) && void 0 !== tU ? tU : {},
-        nameColour: oE.b,
+        cosmetics: null !== (Eu = uu.cosmetics) && void 0 !== Eu ? Eu : {},
+        nameColour: AQ.b,
         location: {
           status: "noGamePlayed"
         }
       };
-      return RU ? {
-        ...pU,
-        cosmetics: RU
-      } : pU
+      return Ru ? {
+        ...Ku,
+        cosmetics: Ru
+      } : Ku
     }
 
-    function VE(UU) {
+    function UQ(uu) {
       let {
-        recipient: RU
-      } = UU;
-      return "pending" === RU.status ? (0, cU.jsx)("span", {
+        recipient: Ru
+      } = uu;
+      return "pending" === Ru.status ? (0, Vu.jsx)("span", {
         className: "StoreRecipientStatus",
-        children: (0, cU.jsx)(IU.d, {})
-      }) : "found" === RU.status ? (0, cU.jsx)(TU.c, {
+        children: (0, Vu.jsx)(Cu.b, {})
+      }) : "found" === Ru.status ? (0, Vu.jsx)(Ju.c, {
         name: "check",
         className: "StoreRecipientStatus StoreRecipientStatusFound"
       }) : null
     }
 
-    function rE(UU) {
-      var RU;
+    function nQ(uu) {
+      var Ru;
       let {
-        selfName: gU,
-        giftRecipient: pU,
-        suggestionsVersion: qU,
-        pulseSignal: KU,
-        disabled: GU
-      } = UU;
+        selfName: yu,
+        giftRecipient: Ku,
+        suggestionsVersion: Nu,
+        pulseSignal: Xu,
+        disabled: ru
+      } = uu;
       const {
-        t: jU
-      } = (0, PU.B)(), uU = (0, kU.g)(), CU = (0, tU.useRef)(null), hU = (0, tU.useRef)(null), {
-        query: WU,
-        via: fU,
-        recipient: xU,
-        recipientCosmetics: IU
-      } = pU, JU = (0, QE.n)(WU), wU = (0, tU.useMemo)((() => {
-        const UU = eU.featureFlags.useSocialFeatures ? uU.friends.filter((UU => !UU.isError)) : [];
-        return (0, QE.j)({
-          onlineFriends: (0, kU.e)(UU),
-          recentRecipients: fE(),
-          friends: UU,
-          selfName: gU,
+        t: Bu
+      } = (0, mu.E)(), xu = (0, Zu.j)(), Su = (0, Eu.useRef)(null), pu = (0, Eu.useRef)(null), {
+        query: ju,
+        via: Hu,
+        recipient: du,
+        recipientCosmetics: Cu
+      } = Ku, ku = (0, SQ.l)(ju), eu = (0, Eu.useMemo)((() => {
+        const uu = Wu.featureFlags.useSocialFeatures ? xu.friends.filter((uu => !uu.isError)) : [];
+        return (0, SQ.h)({
+          onlineFriends: (0, Zu.g)(uu),
+          recentRecipients: WQ(),
+          friends: uu,
+          selfName: yu,
           max: 8
         })
-      }), [uU.friends, gU, qU]), nU = WU.trim().toLowerCase(), bU = "search" !== fU && nU ? wU.find((UU => UU.name.toLowerCase() === nU)) : void 0, oU = bU && "prefilled" === fU ? [bU, ...wU.filter((UU => UU !== bU))] : wU, ZU = "" !== nU && !bU, aU = ZU ? WU : "", YU = oU.length > 0;
-      (0, tU.useEffect)((() => {
-        CU.current && CU.current.value !== aU && (CU.current.value = aU)
-      }), [aU]), (0, tU.useEffect)((() => {
-        CU.current && (CU.current.disabled = GU)
-      }), [GU, KU]);
-      const BU = (0, tU.useRef)(0);
+      }), [xu.friends, yu, Nu]), Au = ju.trim().toLowerCase(), Du = "search" !== Hu && Au ? eu.find((uu => uu.name.toLowerCase() === Au)) : void 0, Mu = Du && "prefilled" === Hu ? [Du, ...eu.filter((uu => uu !== Du))] : eu, Iu = "" !== Au && !Du, Gu = Iu ? ju : "", Uu = Mu.length > 0;
+      (0, Eu.useEffect)((() => {
+        Su.current && Su.current.value !== Gu && (Su.current.value = Gu)
+      }), [Gu]), (0, Eu.useEffect)((() => {
+        Su.current && (Su.current.disabled = ru)
+      }), [ru, Xu]);
+      const nu = (0, Eu.useRef)(0);
 
-      function rU() {
-        "self" !== JU && (0, lU.reportAnalyticsClick)({
+      function tu() {
+        "self" !== ku && (0, au.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), pU.clear()
+        }), Ku.clear()
       }
 
-      function XU(UU) {
-        var RU, gU;
-        if (GU) return;
-        if (" " === UU.key || "Enter" === UU.key) return UU.preventDefault(), void UU.currentTarget.click();
-        const tU = Array.from(null !== (RU = null === (gU = hU.current) || void 0 === gU ? void 0 : gU.querySelectorAll("[role=radio]")) && void 0 !== RU ? RU : []),
-          pU = tU.indexOf(UU.currentTarget);
-        let EU;
-        "ArrowRight" === UU.key || "ArrowDown" === UU.key ? EU = tU[(pU + 1) % tU.length] : "ArrowLeft" === UU.key || "ArrowUp" === UU.key ? EU = tU[(pU - 1 + tU.length) % tU.length] : "Home" === UU.key ? EU = tU[0] : "End" === UU.key && (EU = tU[tU.length - 1]), EU && (UU.preventDefault(), EU.focus(), EU.click())
-      }(0, tU.useEffect)((() => {
-        var UU;
-        KU > BU.current && !GU && (BU.current = KU, null === (UU = CU.current) || void 0 === UU || UU.focus())
-      }), [KU, GU]);
-      const vU = "self" === JU,
-        dU = null !== (RU = null === bU || void 0 === bU ? void 0 : bU.name) && void 0 !== RU ? RU : null,
-        HU = "error" === xU.status ? xU.error : null,
-        SU = "store:giftRecipientLookupFailed" === HU;
-      return (0, cU.jsxs)("div", {
-        className: EU()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: GU,
-          StoreRecipientStripNoChips: !YU
+      function lu(uu) {
+        var Ru, yu;
+        if (ru) return;
+        if (" " === uu.key || "Enter" === uu.key) return uu.preventDefault(), void uu.currentTarget.click();
+        const Eu = Array.from(null !== (Ru = null === (yu = pu.current) || void 0 === yu ? void 0 : yu.querySelectorAll("[role=radio]")) && void 0 !== Ru ? Ru : []),
+          Ku = Eu.indexOf(uu.currentTarget);
+        let Qu;
+        "ArrowRight" === uu.key || "ArrowDown" === uu.key ? Qu = Eu[(Ku + 1) % Eu.length] : "ArrowLeft" === uu.key || "ArrowUp" === uu.key ? Qu = Eu[(Ku - 1 + Eu.length) % Eu.length] : "Home" === uu.key ? Qu = Eu[0] : "End" === uu.key && (Qu = Eu[Eu.length - 1]), Qu && (uu.preventDefault(), Qu.focus(), Qu.click())
+      }(0, Eu.useEffect)((() => {
+        var uu;
+        Xu > nu.current && !ru && (nu.current = Xu, null === (uu = Su.current) || void 0 === uu || uu.focus())
+      }), [Xu, ru]);
+      const gu = "self" === ku,
+        cu = null !== (Ru = null === Du || void 0 === Du ? void 0 : Du.name) && void 0 !== Ru ? Ru : null,
+        Lu = "error" === du.status ? du.error : null,
+        zu = "store:giftRecipientLookupFailed" === Lu;
+      return (0, Vu.jsxs)("div", {
+        className: Qu()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: ru,
+          StoreRecipientStripNoChips: !Uu
         }),
-        children: [(0, cU.jsx)("span", {
+        children: [(0, Vu.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: jU("store:buyingFor")
-        }), (0, cU.jsxs)("div", {
-          ref: hU,
+          children: Bu("store:buyingFor")
+        }), (0, Vu.jsxs)("div", {
+          ref: pu,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": jU("store:whoIsItFor"),
-          children: [(0, cU.jsxs)("div", {
+          "aria-label": Bu("store:whoIsItFor"),
+          children: [(0, Vu.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": vU,
-            tabIndex: GU || !vU && null !== dU ? -1 : 0,
-            className: EU()("StoreRecipientMe", {
-              StoreRecipientChecked: vU
+            "aria-checked": gu,
+            tabIndex: ru || !gu && null !== cu ? -1 : 0,
+            className: Qu()("StoreRecipientMe", {
+              StoreRecipientChecked: gu
             }),
             onClick: () => {
-              GU || rU()
+              ru || tu()
             },
-            onKeyDown: XU,
-            children: [(0, cU.jsx)(TU.c, {
+            onKeyDown: lu,
+            children: [(0, Vu.jsx)(Ju.c, {
               name: "user"
-            }), " ", jU("store:me")]
-          }), YU && (0, cU.jsx)("div", {
+            }), " ", Bu("store:me")]
+          }), Uu && (0, Vu.jsx)("div", {
             className: "StoreRecipientChips",
-            children: oU.map((UU => {
-              const RU = UU === bU;
-              return (0, cU.jsx)("div", {
+            children: Mu.map((uu => {
+              const Ru = uu === Du;
+              return (0, Vu.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": RU,
-                tabIndex: !GU && RU ? 0 : -1,
-                title: UU.name,
-                className: EU()("StoreRecipientChip", {
-                  StoreRecipientChecked: RU
+                "aria-checked": Ru,
+                tabIndex: !ru && Ru ? 0 : -1,
+                title: uu.name,
+                className: Qu()("StoreRecipientChip", {
+                  StoreRecipientChecked: Ru
                 }),
                 onClick: () => {
-                  GU || function(UU) {
-                    "gift" !== JU && (0, lU.reportAnalyticsClick)({
+                  ru || function(uu) {
+                    "gift" !== ku && (0, au.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), pU.choose(UU.name, UU.kind)
-                  }(UU)
+                    }), Ku.choose(uu.name, uu.kind)
+                  }(uu)
                 },
-                onKeyDown: XU,
-                children: (0, cU.jsx)(aE.d, {
-                  playerSocialPreview: BE(UU, RU ? IU : null),
+                onKeyDown: lu,
+                children: (0, Vu.jsx)(MQ.e, {
+                  playerSocialPreview: GQ(uu, Ru ? Cu : null),
                   opensProfileCard: !1,
-                  isFriend: null !== UU.friend,
+                  isFriend: null !== uu.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== UU.friend,
-                  status: null === UU.friend ? null : void 0,
-                  trailing: RU ? (0, cU.jsx)(VE, {
-                    recipient: xU
+                  showLocation: null !== uu.friend,
+                  status: null === uu.friend ? null : void 0,
+                  trailing: Ru ? (0, Vu.jsx)(UQ, {
+                    recipient: du
                   }) : void 0
                 })
-              }, UU.name)
+              }, uu.name)
             }))
           })]
-        }), (0, cU.jsxs)("div", {
-          className: EU()("StoreRecipientSearch", {
-            StoreRecipientChecked: ZU,
-            StoreRecipientSearchPulse: KU > 0 && !ZU,
-            StoreRecipientSearchError: null !== HU && !SU
+        }), (0, Vu.jsxs)("div", {
+          className: Qu()("StoreRecipientSearch", {
+            StoreRecipientChecked: Iu,
+            StoreRecipientSearchPulse: Xu > 0 && !Iu,
+            StoreRecipientSearchError: null !== Lu && !zu
           }),
           onClick: () => {
-            var UU;
-            null === (UU = CU.current) || void 0 === UU || UU.focus()
+            var uu;
+            null === (uu = Su.current) || void 0 === uu || uu.focus()
           },
-          children: [ZU && "found" === xU.status && IU && (0, cU.jsx)(YE, {
-            cosmetics: IU
-          }), !(ZU && "found" === xU.status && IU) && (0, cU.jsx)(TU.c, {
+          children: [Iu && "found" === du.status && Cu && (0, Vu.jsx)(IQ, {
+            cosmetics: Cu
+          }), !(Iu && "found" === du.status && Cu) && (0, Vu.jsx)(Ju.c, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, cU.jsx)(mU.d, {
+          }), (0, Vu.jsx)(bu.b, {
             className: "StoreRecipientSearchInput",
-            domRef: CU,
-            placeholderText: jU("store:searchName"),
-            defaultValue: aU,
-            maxLength: VU.h,
-            onValueChange: function(UU) {
-              "gift" !== JU && UU.trim() && (0, lU.reportAnalyticsClick)({
+            domRef: Su,
+            placeholderText: Bu("store:searchName"),
+            defaultValue: Gu,
+            maxLength: su.k,
+            onValueChange: function(uu) {
+              "gift" !== ku && uu.trim() && (0, au.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), pU.type(UU)
+              }), Ku.type(uu)
             },
             onEnter: () => {
-              var UU;
-              const RU = null === (UU = CU.current) || void 0 === UU ? void 0 : UU.value.trim();
-              RU && pU.choose(RU, "typed")
+              var uu;
+              const Ru = null === (uu = Su.current) || void 0 === uu ? void 0 : uu.value.trim();
+              Ru && Ku.choose(Ru, "typed")
             },
             blurOnEnter: !0
-          }), ZU && (0, cU.jsx)(VE, {
-            recipient: xU
-          }), ZU && (0, cU.jsx)("div", {
-            ...(0, QU.R)({
-              disabled: GU
+          }), Iu && (0, Vu.jsx)(UQ, {
+            recipient: du
+          }), Iu && (0, Vu.jsx)("div", {
+            ...(0, Tu.U)({
+              disabled: ru
             }),
-            "aria-label": jU("store:clearRecipient"),
-            title: jU("store:clearRecipient"),
+            "aria-label": Bu("store:clearRecipient"),
+            title: Bu("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: UU => {
-              UU.stopPropagation(), GU || rU()
+            onClick: uu => {
+              uu.stopPropagation(), ru || tu()
             },
-            children: (0, cU.jsx)(TU.c, {
+            children: (0, Vu.jsx)(Ju.c, {
               name: "xmark"
             })
           })]
-        }, KU), HU && (0, cU.jsx)("div", {
-          className: EU()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: SU
+        }, Xu), Lu && (0, Vu.jsx)("div", {
+          className: Qu()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: zu
           }),
           role: "status",
-          children: jU(HU)
+          children: Bu(Lu)
         })]
       })
     }
-    var XE = gU(2159),
-      vE = gU(2080),
-      dE = gU(3266),
-      HE = gU(2819),
-      SE = gU(2116);
-    const sE = gU.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var sQ = yu(2229),
+      tQ = yu(2153),
+      lQ = yu(3396),
+      gQ = yu(2903),
+      cQ = yu(2184);
+    const LQ = yu.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function yE() {
-      (0, SE.h)(sE, {
+    function zQ() {
+      (0, cQ.k)(LQ, {
         lowPriority: !1
       })
     }
 
-    function kE(UU) {
+    function FQ(uu) {
       let {
-        onBack: RU,
-        cta: gU,
-        recipient: pU,
-        afterCta: EU
-      } = UU;
+        onBack: Ru,
+        cta: yu,
+        recipient: Ku,
+        afterCta: Qu
+      } = uu;
       const {
-        t: qU
-      } = (0, PU.B)(), [KU, GU] = (0, tU.useState)("starting"), jU = (0, tU.useRef)(null), uU = (0, YR.b)(), CU = (0, tU.useRef)(null), hU = (0, tU.useCallback)((() => {
-        const UU = jU.current;
-        null !== UU.error && UU.load();
-        const RU = UU.play();
-        CU.current = RU, RU.catch((UU => {
-          (0, dE.b)("Failed to play Super Rank video", UU), uU.current && CU.current === RU && GU("failed")
+        t: Nu
+      } = (0, mu.E)(), [Xu, ru] = (0, Eu.useState)("starting"), Bu = (0, Eu.useRef)(null), xu = (0, UR.b)(), Su = (0, Eu.useRef)(null), pu = (0, Eu.useCallback)((() => {
+        const uu = Bu.current;
+        null !== uu.error && uu.load();
+        const Ru = uu.play();
+        Su.current = Ru, Ru.catch((uu => {
+          (0, lQ.b)("Failed to play Super Rank video", uu), xu.current && Su.current === Ru && ru("failed")
         }))
-      }), [uU]);
-      return (0, tU.useEffect)((() => {
-        const UU = jU.current;
-        let RU;
+      }), [xu]);
+      return (0, Eu.useEffect)((() => {
+        const uu = Bu.current;
+        let Ru;
 
-        function gU() {
-          clearTimeout(RU), RU = setTimeout(hU, 3e3)
+        function yu() {
+          clearTimeout(Ru), Ru = setTimeout(pu, 3e3)
         }
-        return hU(), UU.addEventListener("ended", gU), () => {
-          clearTimeout(RU), UU.removeEventListener("ended", gU)
+        return pu(), uu.addEventListener("ended", yu), () => {
+          clearTimeout(Ru), uu.removeEventListener("ended", yu)
         }
-      }), [hU]), (0, cU.jsxs)("div", {
+      }), [pu]), (0, Vu.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, cU.jsxs)("div", {
+        children: [(0, Vu.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, cU.jsx)(QU.d, {
+          children: [(0, Vu.jsx)(Tu.b, {
             className: "StoreDetailBackButton",
-            onClick: RU,
+            onClick: Ru,
             padBack: !0,
-            children: qU("general:back")
-          }), (0, cU.jsxs)("div", {
+            children: Nu("general:back")
+          }), (0, Vu.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, cU.jsx)(TU.c, {
+            children: [(0, Vu.jsx)(Ju.c, {
               name: "bolt"
-            }), " ", qU("homePage:superRank")]
-          }), pU]
-        }), (0, cU.jsxs)("div", {
+            }), " ", Nu("homePage:superRank")]
+          }), Ku]
+        }), (0, Vu.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, cU.jsx)("video", {
-              ref: jU,
-              src: `${aU.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: sE,
+            children: [(0, Vu.jsx)("video", {
+              ref: Bu,
+              src: `${Gu.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: LQ,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === KU,
+              controls: "playing" === Xu,
               onPlaying: () => {
-                GU("playing")
+                ru("playing")
               },
               onError: () => {
-                GU("failed")
+                ru("failed")
               }
-            }), ("failed" === KU || "loading" === KU) && (0, cU.jsx)("div", {
+            }), ("failed" === Xu || "loading" === Xu) && (0, Vu.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, cU.jsx)(QU.e, {
-                ariaLabel: qU("general:play"),
-                loading: "loading" === KU,
+              children: (0, Vu.jsx)(Tu.e, {
+                ariaLabel: Nu("general:play"),
+                loading: "loading" === Xu,
                 onClick: () => {
-                  GU("loading"), hU()
+                  ru("loading"), pu()
                 },
                 touchPressOn: "pointerup",
-                children: (0, cU.jsx)(TU.c, {
+                children: (0, Vu.jsx)(Ju.c, {
                   name: "play"
                 })
               })
             })]
-          }), (0, cU.jsxs)("div", {
+          }), (0, Vu.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, cU.jsx)("div", {
+            children: [(0, Vu.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, cU.jsx)(HE.b, {})
-            }), (0, cU.jsxs)("div", {
+              children: (0, Vu.jsx)(gQ.d, {})
+            }), (0, Vu.jsxs)("div", {
               className: "StoreTileActions",
-              children: [gU, EU]
+              children: [yu, Qu]
             })]
           })]
         })]
       })
     }
-    var FE = gU(2393),
-      iE = gU(3229),
-      AE = gU(2800),
-      zE = gU(2806);
-    const ME = [oE.n.yellow, oE.n.green, oE.n.aqua, oE.n.blue, oE.n.purple, oE.n.red];
+    var wQ = yu(2475),
+      ZQ = yu(3356),
+      hQ = yu(2886),
+      PQ = yu(2893);
+    const iQ = [AQ.r.yellow, AQ.r.green, AQ.r.aqua, AQ.r.blue, AQ.r.purple, AQ.r.red];
 
-    function DE(UU) {
-      return "needsRecipient" === UU || "lookingUp" === UU || "gift" === UU || "recipientOwns" === UU || "recipientSharesOwned" === UU || "recipientSubscribed" === UU
+    function YQ(uu) {
+      return "needsRecipient" === uu || "lookingUp" === uu || "gift" === uu || "recipientOwns" === uu || "recipientSharesOwned" === uu || "recipientSubscribed" === uu
     }
 
-    function LE(UU) {
+    function oQ(uu) {
       const {
-        onKeyDown: RU,
-        ...gU
-      } = (0, QU.R)();
+        onKeyDown: Ru,
+        ...yu
+      } = (0, Tu.U)();
       return {
-        ...gU,
-        "aria-label": UU,
-        onKeyDown: UU => {
-          UU.target === UU.currentTarget && (null === RU || void 0 === RU || RU(UU))
+        ...yu,
+        "aria-label": uu,
+        onKeyDown: uu => {
+          uu.target === uu.currentTarget && (null === Ru || void 0 === Ru || Ru(uu))
         }
       }
     }
 
-    function NE(UU) {
+    function qQ(uu) {
       let {
-        text: RU
-      } = UU;
-      return (0, cU.jsx)("span", {
+        text: Ru
+      } = uu;
+      return (0, Vu.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(RU).map(((UU, RU) => (0, cU.jsx)("span", {
+        children: Array.from(Ru).map(((uu, Ru) => (0, Vu.jsx)("span", {
           style: {
-            color: ME[RU % ME.length]
+            color: iQ[Ru % iQ.length]
           },
-          children: UU
-        }, RU)))
+          children: uu
+        }, Ru)))
       })
     }
-    const lE = {
+    const OQ = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5829,67 +5829,67 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function OE(UU) {
+    function vQ(uu) {
       let {
-        state: RU,
-        item: gU,
-        price: tU,
-        busy: pU,
-        highlight: qU = !1,
-        onAct: KU,
-        onNeedRecipient: GU,
-        onLogin: jU
-      } = UU;
+        state: Ru,
+        item: yu,
+        price: Eu,
+        busy: Ku,
+        highlight: Nu = !1,
+        onAct: Xu,
+        onNeedRecipient: ru,
+        onLogin: Bu
+      } = uu;
       const {
-        t: uU
-      } = (0, PU.B)(), CU = "superRank" === gU ? XU.l.product.days : null, hU = UU => null === CU ? uU(UU ? "general:gift" : "general:buy") : uU(UU ? "store:giftDays" : "store:buyDays", {
-        days: CU
-      }), eU = (UU, RU) => (0, cU.jsxs)(cU.Fragment, {
-        children: [RU && (0, cU.jsx)("span", {
+        t: xu
+      } = (0, mu.E)(), Su = "superRank" === yu ? lu.j.product.days : null, pu = uu => null === Su ? xu(uu ? "general:gift" : "general:buy") : xu(uu ? "store:giftDays" : "store:buyDays", {
+        days: Su
+      }), Wu = (uu, Ru) => (0, Vu.jsxs)(Vu.Fragment, {
+        children: [Ru && (0, Vu.jsx)("span", {
           className: "StoreCtaIcon",
-          children: RU
-        }), null === UU && (0, cU.jsx)("span", {
+          children: Ru
+        }), null === uu && (0, Vu.jsx)("span", {
           className: "StoreCtaLabel StoreCtaLabelPending"
-        }), null !== UU && (0, cU.jsx)("span", {
+        }), null !== uu && (0, Vu.jsx)("span", {
           className: "StoreCtaLabel",
-          title: UU,
-          children: UU
-        }), (0, cU.jsxs)("span", {
+          title: uu,
+          children: uu
+        }), (0, Vu.jsxs)("span", {
           className: "StoreCtaPrice",
-          children: ["\xb7", (0, cU.jsx)(vE.d, {
-            amount: tU
+          children: ["\xb7", (0, Vu.jsx)(tQ.b, {
+            amount: Eu
           })]
         })]
       });
-      let WU;
-      switch (RU) {
+      let ju;
+      switch (Ru) {
         case "pending":
-          WU = (0, cU.jsx)(QU.j, {
+          ju = (0, Vu.jsx)(Tu.l, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: eU(null)
+            children: Wu(null)
           });
           break;
         case "login":
-          WU = (0, cU.jsx)(QU.j, {
+          ju = (0, Vu.jsx)(Tu.l, {
             className: "StoreCtaButton",
-            onClick: jU,
-            children: eU(hU(!1))
+            onClick: Bu,
+            children: Wu(pu(!1))
           });
           break;
         case "owned":
-          WU = (0, cU.jsx)(QU.g, {
+          ju = (0, Vu.jsx)(Tu.f, {
             className: "StoreCtaButton",
             onClick: () => {
-              wU.b.set({
-                openEverythingMenuName: KR.n.CUSTOMISATION
+              eu.d.set({
+                openEverythingMenuName: XR.s.CUSTOMISATION
               })
             },
-            children: (0, cU.jsxs)("span", {
+            children: (0, Vu.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, cU.jsx)(TU.c, {
+              children: [(0, Vu.jsx)(Ju.c, {
                 name: "shirt"
-              }), " ", uU("store:equip")]
+              }), " ", xu("store:equip")]
             })
           });
           break;
@@ -5898,205 +5898,205 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          WU = (0, cU.jsx)(QU.j, {
+          ju = (0, Vu.jsx)(Tu.l, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, cU.jsx)("span", {
+            children: (0, Vu.jsx)("span", {
               className: "StoreCtaLabel",
-              children: uU(lE[RU])
+              children: xu(OQ[Ru])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          WU = (0, cU.jsx)(QU.j, {
+          ju = (0, Vu.jsx)(Tu.l, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === RU || null === tU,
-            loading: "lookingUp" === RU || pU,
-            onClick: KU,
+            disabled: "needsRecipient" === Ru || null === Eu,
+            loading: "lookingUp" === Ru || Ku,
+            onClick: Xu,
             analyticsClick: {
               id: "store.gift",
-              value: gU
+              value: yu
             },
-            children: eU(hU(!0), QE.c)
+            children: Wu(pu(!0), SQ.d)
           });
           break;
         case "buy":
         case "recharge":
-          WU = (0, cU.jsx)(QU.j, {
+          ju = (0, Vu.jsx)(Tu.l, {
             className: "StoreCtaButton",
-            loading: pU,
-            disabled: null === tU,
-            onClick: KU,
+            loading: Ku,
+            disabled: null === Eu,
+            onClick: Xu,
             analyticsClick: {
               id: "store.buy",
-              value: gU
+              value: yu
             },
-            children: eU(hU(!1))
+            children: Wu(pu(!1))
           })
       }
-      return (0, cU.jsx)("div", {
-        className: EU()("StoreCta", {
-          StoreCtaHighlight: qU
+      return (0, Vu.jsx)("div", {
+        className: Qu()("StoreCta", {
+          StoreCtaHighlight: Nu
         }),
-        onClick: UU => {
-          UU.stopPropagation(), "needsRecipient" === RU && GU()
+        onClick: uu => {
+          uu.stopPropagation(), "needsRecipient" === Ru && ru()
         },
-        children: WU
+        children: ju
       })
     }
 
-    function UP() {
+    function aQ() {
       const {
-        t: UU
-      } = (0, PU.B)();
-      return (0, cU.jsxs)("ul", {
+        t: uu
+      } = (0, mu.E)();
+      return (0, Vu.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, cU.jsxs)("li", {
-          children: [(0, cU.jsx)(TU.c, {
+        children: [(0, Vu.jsxs)("li", {
+          children: [(0, Vu.jsx)(Ju.c, {
             name: "check"
-          }), (0, cU.jsx)(NE, {
-            text: UU("store:colourfulNames")
+          }), (0, Vu.jsx)(qQ, {
+            text: uu("store:colourfulNames")
           })]
-        }), (0, cU.jsxs)("li", {
-          children: [(0, cU.jsx)(TU.c, {
+        }), (0, Vu.jsxs)("li", {
+          children: [(0, Vu.jsx)(Ju.c, {
             name: "check"
-          }), UU("store:perkCapes")]
-        }), (0, cU.jsxs)("li", {
-          children: [(0, cU.jsx)(TU.c, {
+          }), uu("store:perkCapes")]
+        }), (0, Vu.jsxs)("li", {
+          children: [(0, Vu.jsx)(Ju.c, {
             name: "check"
-          }), UU("store:perkNoAdverts")]
-        }), (0, cU.jsxs)("li", {
-          children: [(0, cU.jsx)(TU.c, {
+          }), uu("store:perkNoAdverts")]
+        }), (0, Vu.jsxs)("li", {
+          children: [(0, Vu.jsx)(Ju.c, {
             name: "check"
-          }), UU("store:perkFriends", {
-            count: (0, LU.e)(["super"])
+          }), uu("store:perkFriends", {
+            count: (0, Ou.c)(["super"])
           })]
         })]
       })
     }
 
-    function RP(UU) {
+    function fQ(uu) {
       let {
-        daysLeft: RU,
-        totalDays: gU,
-        urgent: tU
-      } = UU;
+        daysLeft: Ru,
+        totalDays: yu,
+        urgent: Eu
+      } = uu;
       const {
-        t: pU
-      } = (0, PU.B)(), TU = gU > 0 ? Math.min(1, Math.max(.03, RU / gU)) : 1;
-      return (0, cU.jsxs)("div", {
-        className: EU()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: tU
+        t: Ku
+      } = (0, mu.E)(), Ju = yu > 0 ? Math.min(1, Math.max(.03, Ru / yu)) : 1;
+      return (0, Vu.jsxs)("div", {
+        className: Qu()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: Eu
         }),
-        children: [(0, cU.jsx)("span", {
+        children: [(0, Vu.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === RU ? pU("store:oneDayLeft") : pU("store:daysLeft", {
-            days: RU
+          children: 1 === Ru ? Ku("store:oneDayLeft") : Ku("store:daysLeft", {
+            days: Ru
           })
-        }), (0, cU.jsx)("div", {
+        }), (0, Vu.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, cU.jsx)("i", {
+          children: (0, Vu.jsx)("i", {
             style: {
-              width: 100 * TU + "%"
+              width: 100 * Ju + "%"
             }
           })
         })]
       })
     }
 
-    function gP(UU) {
+    function um(uu) {
       let {
-        state: RU,
-        urgent: gU,
-        daysLeft: tU,
-        totalDays: pU,
-        recipientHasSuperRank: qU,
-        busy: KU,
-        highlight: GU,
-        onOpen: jU,
-        onAct: uU,
-        onNeedRecipient: CU,
-        onLogin: hU
-      } = UU;
+        state: Ru,
+        urgent: yu,
+        daysLeft: Eu,
+        totalDays: Ku,
+        recipientHasSuperRank: Nu,
+        busy: Xu,
+        highlight: ru,
+        onOpen: Bu,
+        onAct: xu,
+        onNeedRecipient: Su,
+        onLogin: pu
+      } = uu;
       const {
-        t: QU
-      } = (0, PU.B)(), eU = DE(RU), {
-        days: WU
-      } = XU.l.product, fU = QU("store:recipientHasSuperRank", {
-        giftDays: WU
-      }), xU = MU("subscribed" === RU);
-      return (0, cU.jsxs)("div", {
-        className: EU()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: eU,
-          StoreSuperRankTileUrgent: "recharge" === RU && gU,
-          StoreSuperRankTileWithChip: qU,
-          StoreSuperRankTileGiftReady: "gift" === RU
+        t: Tu
+      } = (0, mu.E)(), Wu = YQ(Ru), {
+        days: ju
+      } = lu.j.product, Hu = Tu("store:recipientHasSuperRank", {
+        giftDays: ju
+      }), du = ou("subscribed" === Ru);
+      return (0, Vu.jsxs)("div", {
+        className: Qu()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: Wu,
+          StoreSuperRankTileUrgent: "recharge" === Ru && yu,
+          StoreSuperRankTileWithChip: Nu,
+          StoreSuperRankTileGiftReady: "gift" === Ru
         }),
-        ...LE(QU("homePage:superRank")),
+        ...oQ(Tu("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: yE,
-        onFocus: yE,
-        onClick: jU,
-        children: [(0, cU.jsx)("div", {
+        onPointerEnter: zQ,
+        onFocus: zQ,
+        onClick: Bu,
+        children: [(0, Vu.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${bE.e})`
+            backgroundImage: `url(${eQ.h})`
           }
-        }), eU && (0, cU.jsx)("div", {
+        }), Wu && (0, Vu.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "StoreTileContent",
-          children: [qU && (0, cU.jsx)("span", {
+          children: [Nu && (0, Vu.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: fU,
-            children: fU
-          }), (0, cU.jsxs)("div", {
+            title: Hu,
+            children: Hu
+          }), (0, Vu.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, cU.jsx)(TU.c, {
+            children: [(0, Vu.jsx)(Ju.c, {
               name: "bolt"
-            }), " ", QU("homePage:superRank")]
-          }), eU && (0, cU.jsx)("div", {
+            }), " ", Tu("homePage:superRank")]
+          }), Wu && (0, Vu.jsx)("div", {
             className: "StoreTilePitch",
-            children: QU("store:giftPitch", {
-              days: WU
+            children: Tu("store:giftPitch", {
+              days: ju
             })
-          }), "recharge" === RU && (0, cU.jsx)(RP, {
-            daysLeft: tU,
-            totalDays: pU,
-            urgent: gU
-          }), xU && (0, cU.jsx)("div", {
+          }), "recharge" === Ru && (0, Vu.jsx)(fQ, {
+            daysLeft: Eu,
+            totalDays: Ku,
+            urgent: yu
+          }), du && (0, Vu.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, cU.jsx)("span", {
+            children: (0, Vu.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: xU
+              children: du
             })
-          }), (0, cU.jsx)(UP, {}), (0, cU.jsxs)("div", {
+          }), (0, Vu.jsx)(aQ, {}), (0, Vu.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, cU.jsx)(OE, {
-              state: RU,
+            children: [(0, Vu.jsx)(vQ, {
+              state: Ru,
               item: "superRank",
-              price: XU.l.price,
-              busy: KU,
-              highlight: GU,
-              onAct: uU,
-              onNeedRecipient: CU,
-              onLogin: hU
-            }), "needsRecipient" === RU && (0, cU.jsx)("span", {
+              price: lu.j.price,
+              busy: Xu,
+              highlight: ru,
+              onAct: xu,
+              onNeedRecipient: Su,
+              onLogin: pu
+            }), "needsRecipient" === Ru && (0, Vu.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: QU("store:pickRecipientFirst")
-            }), "recharge" === RU && gU && (0, cU.jsx)("span", {
+              children: Tu("store:pickRecipientFirst")
+            }), "recharge" === Ru && yu && (0, Vu.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === tU ? QU("store:endsInOneDay") : QU("store:endsInDays", {
-                days: tU
+              children: 1 === Eu ? Tu("store:endsInOneDay") : Tu("store:endsInDays", {
+                days: Eu
               })
             })]
           })]
         })]
       })
     }
-    const tP = {
+    const Rm = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6104,403 +6104,403 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function pP(UU) {
-      var RU;
+    function ym(uu) {
+      var Ru;
       let {
-        pack: gU,
-        state: pU,
-        busy: qU,
-        onOpen: KU,
-        onAct: GU,
-        onNeedRecipient: jU,
-        onLogin: uU
-      } = UU;
+        pack: yu,
+        state: Ku,
+        busy: Nu,
+        onOpen: Xu,
+        onAct: ru,
+        onNeedRecipient: Bu,
+        onLogin: xu
+      } = uu;
       const {
-        t: CU
-      } = (0, PU.B)(), hU = TE.b[gU], QU = CE.k[gU], eU = (0, bE.l)(gU), WU = (0, tU.useRef)(null);
-      (0, AE.i)(gU, WU);
-      const fU = DE(pU),
-        xU = null !== (RU = hU.displayName) && void 0 !== RU ? RU : gU,
-        mU = (0, iE.d)((() => {
-          (0, FE.f)();
-          const UU = (0, AE.d)(gU);
-          void 0 !== UU && (0, SE.h)((0, AE.c)(UU))
+        t: Su
+      } = (0, mu.E)(), pu = QQ.d[yu], Tu = BQ.l[yu], Wu = (0, eQ.q)(yu), ju = (0, Eu.useRef)(null);
+      (0, hQ.k)(yu, ju);
+      const Hu = YQ(Ku),
+        du = null !== (Ru = pu.displayName) && void 0 !== Ru ? Ru : yu,
+        bu = (0, ZQ.d)((() => {
+          (0, wQ.c)();
+          const uu = (0, hQ.f)(yu);
+          void 0 !== uu && (0, cQ.k)((0, hQ.d)(uu))
         })),
-        [IU] = (0, tU.useState)(wE.j);
-      return (0, cU.jsxs)("div", {
-        className: EU()("StoreTile StorePackTile", tP[hU.tier], {
-          StorePackTileOwned: "owned" === pU,
-          StorePackTileRecipientOwns: "recipientOwns" === pU,
-          StoreTileGift: fU
+        [Cu] = (0, Eu.useState)(CQ.i);
+      return (0, Vu.jsxs)("div", {
+        className: Qu()("StoreTile StorePackTile", Rm[pu.tier], {
+          StorePackTileOwned: "owned" === Ku,
+          StorePackTileRecipientOwns: "recipientOwns" === Ku,
+          StoreTileGift: Hu
         }),
-        ...LE(xU),
-        ref: WU,
-        "data-store-item": gU,
-        onClick: KU,
-        onPointerMove: UU => {
-          "mouse" !== UU.pointerType || 0 === UU.movementX && 0 === UU.movementY || IU || mU.start()
+        ...oQ(du),
+        ref: ju,
+        "data-store-item": yu,
+        onClick: Xu,
+        onPointerMove: uu => {
+          "mouse" !== uu.pointerType || 0 === uu.movementX && 0 === uu.movementY || Cu || bu.start()
         },
-        onPointerLeave: mU.cancel,
-        children: [QU && (0, cU.jsx)(QU, {}), (0, cU.jsx)("div", {
+        onPointerLeave: bu.cancel,
+        children: [Tu && (0, Vu.jsx)(Tu, {}), (0, Vu.jsx)("div", {
           className: "StorePackCharacters",
-          children: eU.map((UU => (0, cU.jsx)("div", {
+          children: Wu.map((uu => (0, Vu.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,bE.h)(UU)})`
+              backgroundImage: `url(${(0,eQ.l)(uu)})`
             }
-          }, UU)))
-        }), (0, cU.jsx)("div", {
+          }, uu)))
+        }), (0, Vu.jsx)("div", {
           className: "StoreTileScrim"
-        }), fU && (0, cU.jsx)("div", {
+        }), Hu && (0, Vu.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, cU.jsxs)("div", {
+        }), (0, Vu.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, cU.jsx)("div", {
+          children: [(0, Vu.jsx)("div", {
             className: "StoreTileTitle",
-            children: xU
-          }), (0, cU.jsxs)("div", {
+            children: du
+          }), (0, Vu.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, cU.jsx)(zE.c, {
-              tier: hU.tier
-            }), " \xb7 ", CU("store:itemCount", {
-              count: (0, XE.i)(gU)
-            }), "owned" === pU && (0, cU.jsxs)("span", {
+            children: [(0, Vu.jsx)(PQ.c, {
+              tier: pu.tier
+            }), " \xb7 ", Su("store:itemCount", {
+              count: (0, sQ.e)(yu)
+            }), "owned" === Ku && (0, Vu.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, cU.jsx)(TU.c, {
+              children: [" \xb7 ", (0, Vu.jsx)(Ju.c, {
                 name: "check"
-              }), " ", CU("general:owned")]
+              }), " ", Su("general:owned")]
             })]
-          }), (0, cU.jsx)(OE, {
-            state: pU,
-            item: gU,
-            price: (0, XU.g)(gU),
-            busy: qU,
-            onAct: GU,
-            onNeedRecipient: jU,
-            onLogin: uU
+          }), (0, Vu.jsx)(vQ, {
+            state: Ku,
+            item: yu,
+            price: (0, lu.f)(yu),
+            busy: Nu,
+            onAct: ru,
+            onNeedRecipient: Bu,
+            onLogin: xu
           })]
         })]
       })
     }
-    var EP = gU(2767),
-      PP = gU(1505),
-      TP = gU(1425),
-      qP = gU(3248);
+    var Em = yu(2850),
+      Km = yu(1506),
+      Qm = yu(1415),
+      mm = yu(3380);
 
-    function KP() {
-      return (0, cU.jsx)("span", {
+    function Jm() {
+      return (0, Vu.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var cP = gU(1328),
-      GP = gU(1517),
-      jP = gU(9027);
+    var Nm = yu(1302),
+      Xm = yu(1517),
+      Vm = yu(9098);
 
-    function uP(UU) {
+    function rm(uu) {
       let {
-        character: RU,
-        drawn: gU,
-        onDrawn: pU
-      } = UU;
-      const PU = (0, tU.useRef)(null),
-        TU = (0, jP.f)(RU);
-      return (0, cU.jsx)("div", {
-        className: EU()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: gU
+        character: Ru,
+        drawn: yu,
+        onDrawn: Ku
+      } = uu;
+      const mu = (0, Eu.useRef)(null),
+        Ju = (0, Vm.f)(Ru);
+      return (0, Vu.jsx)("div", {
+        className: Qu()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: yu
         }),
-        children: (0, cU.jsx)(tU.Suspense, {
+        children: (0, Vu.jsx)(Eu.Suspense, {
           fallback: null,
-          children: (0, cU.jsx)(FE.b, {
-            ref: PU,
+          children: (0, Vu.jsx)(wQ.b, {
+            ref: mu,
             framing: "store",
-            turntableFromYaw: gU ? TU.yaw : null,
+            turntableFromYaw: yu ? Ju.yaw : null,
             onReady: () => {
-              var UU, gU;
-              null === (UU = PU.current) || void 0 === UU || UU.setOrbit(TU), null === (gU = PU.current) || void 0 === gU || gU.setAllCosmetics(GP.d[RU].cosmetics)
+              var uu, yu;
+              null === (uu = mu.current) || void 0 === uu || uu.setOrbit(Ju), null === (yu = mu.current) || void 0 === yu || yu.setAllCosmetics(Xm.b[Ru].cosmetics)
             },
-            onDrawn: pU
+            onDrawn: Ku
           })
         })
       })
     }
-    const CP = {
+    const Bm = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      hP = new Set(["wildSpirits"]);
+      xm = new Set(["wildSpirits"]);
 
-    function QP(UU) {
-      var RU;
+    function Sm(uu) {
+      var Ru;
       let {
-        tile: gU,
-        design: pU,
-        canGoLive: qU,
-        live: KU,
-        busy: GU,
-        highlight: jU,
-        onLiveStart: uU,
-        onLiveEnd: CU,
-        onOpen: hU,
-        onAct: QU,
-        onNeedRecipient: eU,
-        onLogin: WU
-      } = UU;
+        tile: yu,
+        design: Ku,
+        canGoLive: Nu,
+        live: Xu,
+        busy: ru,
+        highlight: Bu,
+        onLiveStart: xu,
+        onLiveEnd: Su,
+        onOpen: pu,
+        onAct: Tu,
+        onNeedRecipient: Wu,
+        onLogin: ju
+      } = uu;
       const {
-        t: fU
-      } = (0, PU.B)(), {
-        pack: xU,
-        state: mU
-      } = gU, IU = TE.b[xU], JU = (0, TE.e)(xU), wU = (0, bE.k)(xU), nU = CE.k[wU], bU = hP.has(wU), {
-        tier: oU
-      } = IU, ZU = "legendary" === oU || "mythic" === oU, aU = (0, tU.useRef)(null);
-      (0, cP.b)(aU, "epic" === oU || ZU || bU);
-      const [YU, VU] = (0, tU.useState)(!1);
-      return !KU && YU && VU(!1), (0, cU.jsxs)("div", {
-        ref: aU,
-        className: EU()("StoreCharacterCard", `StoreCharacterCard${pU}`, CP[oU], {
-          StoreCharacterCardOwned: "owned" === mU || "recipientOwns" === mU,
-          StoreCharacterCardGift: DE(mU),
-          StoreCharacterCardItem: void 0 === JU
+        t: Hu
+      } = (0, mu.E)(), {
+        pack: du,
+        state: bu
+      } = yu, Cu = QQ.d[du], ku = (0, QQ.e)(du), eu = (0, eQ.p)(du), Au = BQ.l[eu], Du = xm.has(eu), {
+        tier: Mu
+      } = Cu, Iu = "legendary" === Mu || "mythic" === Mu, Gu = (0, Eu.useRef)(null);
+      (0, Nm.b)(Gu, "epic" === Mu || Iu || Du);
+      const [Uu, su] = (0, Eu.useState)(!1);
+      return !Xu && Uu && su(!1), (0, Vu.jsxs)("div", {
+        ref: Gu,
+        className: Qu()("StoreCharacterCard", `StoreCharacterCard${Ku}`, Bm[Mu], {
+          StoreCharacterCardOwned: "owned" === bu || "recipientOwns" === bu,
+          StoreCharacterCardGift: YQ(bu),
+          StoreCharacterCardItem: void 0 === ku
         }),
-        onPointerMove: UU => {
-          "mouse" !== UU.pointerType || 0 === UU.movementX && 0 === UU.movementY || !qU || KU || void 0 === JU || uU()
+        onPointerMove: uu => {
+          "mouse" !== uu.pointerType || 0 === uu.movementX && 0 === uu.movementY || !Nu || Xu || void 0 === ku || xu()
         },
-        onPointerLeave: CU,
-        children: [(0, cU.jsx)("div", {
+        onPointerLeave: Su,
+        children: [(0, Vu.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: nU && (0, cU.jsx)(nU, {
+          children: Au && (0, Vu.jsx)(Au, {
             simple: !0
           })
-        }), ZU && (0, cU.jsx)("div", {
+        }), Iu && (0, Vu.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, cU.jsxs)(BU.LinkPreserveSearch, {
+        }), (0, Vu.jsxs)(nu.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, PP.f)({
+          to: (0, Km.e)({
             kind: "pack",
-            pack: xU
+            pack: du
           }),
-          "data-store-item": xU,
-          onClick: UU => {
-            (0, TP.c)(UU) && (UU.preventDefault(), hU())
+          "data-store-item": du,
+          onClick: uu => {
+            (0, Qm.c)(uu) && (uu.preventDefault(), pu())
           },
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, cU.jsx)("div", {
+            children: [(0, Vu.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, cU.jsx)("div", {
-              className: EU()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: YU
+            }), (0, Vu.jsx)("div", {
+              className: Qu()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: Uu
               }),
               style: {
-                backgroundImage: `url(${(0,bE.r)(xU)})`
+                backgroundImage: `url(${(0,eQ.t)(du)})`
               }
-            }), KU && void 0 !== JU && (0, cU.jsx)(uP, {
-              character: JU,
-              drawn: YU,
+            }), Xu && void 0 !== ku && (0, Vu.jsx)(rm, {
+              character: ku,
+              drawn: Uu,
               onDrawn: () => {
-                VU(!0)
+                su(!0)
               }
             })]
-          }), (0, cU.jsx)("div", {
+          }), (0, Vu.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (RU = IU.displayName) && void 0 !== RU ? RU : xU
-          }), (0, cU.jsx)(zE.c, {
-            tier: oU,
+            children: null !== (Ru = Cu.displayName) && void 0 !== Ru ? Ru : du
+          }), (0, Vu.jsx)(PQ.c, {
+            tier: Mu,
             className: "StoreCharacterTier"
           })]
-        }), (0, cU.jsx)("div", {
+        }), (0, Vu.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), bU && (0, cU.jsx)("span", {
+        }), Du && (0, Vu.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, cU.jsx)(KP, {})
-        }), "owned" === mU && (0, cU.jsx)("span", {
+          children: (0, Vu.jsx)(Jm, {})
+        }), "owned" === bu && (0, Vu.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: fU("general:owned"),
-          "aria-label": fU("general:owned"),
-          children: (0, cU.jsx)(TU.c, {
+          title: Hu("general:owned"),
+          "aria-label": Hu("general:owned"),
+          children: (0, Vu.jsx)(Ju.c, {
             name: "check"
           })
-        }), (0, cU.jsx)("div", {
+        }), (0, Vu.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, cU.jsx)(OE, {
-            state: mU,
-            item: xU,
-            price: (0, XU.g)(xU),
-            busy: GU,
-            highlight: jU,
-            onAct: QU,
-            onNeedRecipient: eU,
-            onLogin: WU
+          children: (0, Vu.jsx)(vQ, {
+            state: bu,
+            item: du,
+            price: (0, lu.f)(du),
+            busy: ru,
+            highlight: Bu,
+            onAct: Tu,
+            onNeedRecipient: Wu,
+            onLogin: ju
           })
         })]
       })
     }
 
-    function eP(UU) {
+    function pm(uu) {
       let {
-        tiles: RU,
-        busy: gU,
-        highlightItem: pU,
-        onOpen: EU,
-        onAct: PU,
-        onNeedRecipient: TU,
-        onLogin: qU
-      } = UU;
-      const KU = (0, qP.k)("storeCharacterCardFoil"),
-        GU = (0, qP.k)("storeCharacterCardSpotlight"),
-        jU = KU ? "Foil" : GU ? "Spotlight" : "Showcase",
-        [uU] = (0, tU.useState)(wE.j),
-        [CU, hU] = (0, tU.useState)(null);
-      return (0, cU.jsx)("div", {
+        tiles: Ru,
+        busy: yu,
+        highlightItem: Ku,
+        onOpen: Qu,
+        onAct: mu,
+        onNeedRecipient: Ju,
+        onLogin: Nu
+      } = uu;
+      const Xu = (0, mm.o)("storeCharacterCardFoil"),
+        ru = (0, mm.o)("storeCharacterCardSpotlight"),
+        Bu = Xu ? "Foil" : ru ? "Spotlight" : "Showcase",
+        [xu] = (0, Eu.useState)(CQ.i),
+        [Su, pu] = (0, Eu.useState)(null);
+      return (0, Vu.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: RU.map((UU => (0, cU.jsx)(QP, {
-          tile: UU,
-          design: jU,
-          canGoLive: !uU,
-          live: CU === UU.pack,
-          busy: gU,
-          highlight: pU === UU.pack,
+        children: Ru.map((uu => (0, Vu.jsx)(Sm, {
+          tile: uu,
+          design: Bu,
+          canGoLive: !xu,
+          live: Su === uu.pack,
+          busy: yu,
+          highlight: Ku === uu.pack,
           onLiveStart: () => {
-            hU(UU.pack)
+            pu(uu.pack)
           },
           onLiveEnd: () => {
-            hU((RU => RU === UU.pack ? null : RU))
+            pu((Ru => Ru === uu.pack ? null : Ru))
           },
           onOpen: () => {
-            EU(UU.pack)
+            Qu(uu.pack)
           },
           onAct: () => {
-            PU(UU.pack)
+            mu(uu.pack)
           },
-          onNeedRecipient: TU,
+          onNeedRecipient: Ju,
           onLogin: () => {
-            qU(UU.pack)
+            Nu(uu.pack)
           }
-        }, UU.pack)))
+        }, uu.pack)))
       })
     }
-    var WP = gU(9033);
+    var Tm = yu(9103);
 
-    function fP(UU) {
+    function Wm(uu) {
       let {
-        title: RU
-      } = UU;
-      return (0, cU.jsx)("h2", {
+        title: Ru
+      } = uu;
+      return (0, Vu.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, cU.jsx)("span", {
+        children: (0, Vu.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: RU
+          children: Ru
         })
       })
     }
 
-    function xP(UU) {
+    function jm(uu) {
       let {
-        mountAtOnce: RU,
-        children: gU
-      } = UU;
-      const pU = (0, tU.useRef)(null),
-        [EU, PU] = (0, tU.useState)(RU),
-        TU = (0, WP.d)();
-      return (0, tU.useLayoutEffect)((() => {
-        const UU = pU.current;
-        UU && UU.getBoundingClientRect().top < UU.parentElement.getBoundingClientRect().bottom && PU(!0)
-      }), []), EU || TU ? (0, cU.jsx)(cU.Fragment, {
-        children: gU
-      }) : (0, cU.jsx)("div", {
-        ref: pU
+        mountAtOnce: Ru,
+        children: yu
+      } = uu;
+      const Ku = (0, Eu.useRef)(null),
+        [Qu, mu] = (0, Eu.useState)(Ru),
+        Ju = (0, Tm.e)();
+      return (0, Eu.useLayoutEffect)((() => {
+        const uu = Ku.current;
+        uu && uu.getBoundingClientRect().top < uu.parentElement.getBoundingClientRect().bottom && mu(!0)
+      }), []), Qu || Ju ? (0, Vu.jsx)(Vu.Fragment, {
+        children: yu
+      }) : (0, Vu.jsx)("div", {
+        ref: Ku
       })
     }
 
-    function mP(UU) {
+    function Hm(uu) {
       let {
-        layout: RU,
-        mountAtOnce: gU,
-        bundleGift: tU,
-        superRankTotalDays: pU,
-        busy: EU,
-        highlightItem: TU,
-        onOpen: qU,
-        onAct: KU,
-        onNeedRecipient: GU,
-        onLogin: jU
-      } = UU;
+        layout: Ru,
+        mountAtOnce: yu,
+        bundleGift: Eu,
+        superRankTotalDays: Ku,
+        busy: Qu,
+        highlightItem: Ju,
+        onOpen: Nu,
+        onAct: Xu,
+        onNeedRecipient: ru,
+        onLogin: Bu
+      } = uu;
       const {
-        t: uU
-      } = (0, PU.B)(), CU = RU.packs.filter((UU => void 0 === (0, TE.e)(UU.pack) && !(0, TE.l)(UU.pack))), hU = RU.packs.filter((UU => void 0 !== (0, TE.e)(UU.pack))), QU = RU.packs.filter((UU => (0, TE.l)(UU.pack)));
-      return (0, cU.jsxs)(cU.Fragment, {
-        children: [(0, cU.jsx)(EP.b, {
+        t: xu
+      } = (0, mu.E)(), Su = Ru.packs.filter((uu => void 0 === (0, QQ.e)(uu.pack) && !(0, QQ.k)(uu.pack))), pu = Ru.packs.filter((uu => void 0 !== (0, QQ.e)(uu.pack))), Tu = Ru.packs.filter((uu => (0, QQ.k)(uu.pack)));
+      return (0, Vu.jsxs)(Vu.Fragment, {
+        children: [(0, Vu.jsx)(Em.b, {
           className: "StoreSuperGems",
-          gift: tU,
-          highlightSku: TU
-        }), (0, cU.jsx)(fP, {
-          title: uU("store:rank")
-        }), (0, cU.jsx)(gP, {
-          state: RU.superRank.state,
-          urgent: RU.superRank.urgent,
-          daysLeft: RU.superRankDaysLeft,
-          totalDays: pU,
-          recipientHasSuperRank: RU.recipientHasSuperRank,
-          busy: EU,
-          highlight: "superRank" === TU,
+          gift: Eu,
+          highlightSku: Ju
+        }), (0, Vu.jsx)(Wm, {
+          title: xu("store:rank")
+        }), (0, Vu.jsx)(um, {
+          state: Ru.superRank.state,
+          urgent: Ru.superRank.urgent,
+          daysLeft: Ru.superRankDaysLeft,
+          totalDays: Ku,
+          recipientHasSuperRank: Ru.recipientHasSuperRank,
+          busy: Qu,
+          highlight: "superRank" === Ju,
           onOpen: () => {
-            qU("superRank")
+            Nu("superRank")
           },
           onAct: () => {
-            KU("superRank")
+            Xu("superRank")
           },
-          onNeedRecipient: GU,
+          onNeedRecipient: ru,
           onLogin: () => {
-            jU("superRank")
+            Bu("superRank")
           }
-        }), (0, cU.jsxs)(xP, {
-          mountAtOnce: gU,
-          children: [(0, cU.jsx)(fP, {
-            title: uU("store:bundles")
-          }), (0, cU.jsx)("div", {
+        }), (0, Vu.jsxs)(jm, {
+          mountAtOnce: yu,
+          children: [(0, Vu.jsx)(Wm, {
+            title: xu("store:bundles")
+          }), (0, Vu.jsx)("div", {
             className: "StorePackGrid",
-            children: CU.map((UU => (0, cU.jsx)(pP, {
-              pack: UU.pack,
-              state: UU.state,
-              busy: EU,
+            children: Su.map((uu => (0, Vu.jsx)(ym, {
+              pack: uu.pack,
+              state: uu.state,
+              busy: Qu,
               onOpen: () => {
-                qU(UU.pack)
+                Nu(uu.pack)
               },
               onAct: () => {
-                KU(UU.pack)
+                Xu(uu.pack)
               },
-              onNeedRecipient: GU,
+              onNeedRecipient: ru,
               onLogin: () => {
-                jU(UU.pack)
+                Bu(uu.pack)
               }
-            }, UU.pack)))
-          }), (0, cU.jsxs)(xP, {
-            mountAtOnce: gU,
-            children: [(0, cU.jsx)(fP, {
-              title: uU("store:characters")
-            }), (0, cU.jsx)(eP, {
-              tiles: hU,
-              busy: EU,
-              highlightItem: TU,
-              onOpen: qU,
-              onAct: KU,
-              onNeedRecipient: GU,
-              onLogin: jU
-            }), QU.length > 0 && (0, cU.jsxs)(cU.Fragment, {
-              children: [(0, cU.jsx)(fP, {
-                title: uU("store:premiumItems")
-              }), (0, cU.jsx)(eP, {
-                tiles: QU,
-                busy: EU,
-                highlightItem: TU,
-                onOpen: qU,
-                onAct: KU,
-                onNeedRecipient: GU,
-                onLogin: jU
+            }, uu.pack)))
+          }), (0, Vu.jsxs)(jm, {
+            mountAtOnce: yu,
+            children: [(0, Vu.jsx)(Wm, {
+              title: xu("store:characters")
+            }), (0, Vu.jsx)(pm, {
+              tiles: pu,
+              busy: Qu,
+              highlightItem: Ju,
+              onOpen: Nu,
+              onAct: Xu,
+              onNeedRecipient: ru,
+              onLogin: Bu
+            }), Tu.length > 0 && (0, Vu.jsxs)(Vu.Fragment, {
+              children: [(0, Vu.jsx)(Wm, {
+                title: xu("store:premiumItems")
+              }), (0, Vu.jsx)(pm, {
+                tiles: Tu,
+                busy: Qu,
+                highlightItem: Ju,
+                onOpen: Nu,
+                onAct: Xu,
+                onNeedRecipient: ru,
+                onLogin: Bu
               })]
             })]
           })]
@@ -6508,780 +6508,780 @@ export const modules = {
       })
     }
 
-    function IP(UU) {
+    function dm(uu) {
       let {
-        state: RU,
-        mode: gU,
-        giftName: tU,
-        busy: pU,
-        highlight: EU,
-        purchaseError: TU,
-        onBack: qU,
-        onChooseRecipient: KU,
-        onAct: GU,
-        onLogin: jU
-      } = UU;
+        state: Ru,
+        mode: yu,
+        giftName: Eu,
+        busy: Ku,
+        highlight: Qu,
+        purchaseError: Ju,
+        onBack: Nu,
+        onChooseRecipient: Xu,
+        onAct: ru,
+        onLogin: Bu
+      } = uu;
       const {
-        t: uU
-      } = (0, PU.B)(), CU = MU("gift" !== gU);
-      return (0, cU.jsx)(kE, {
-        onBack: qU,
-        recipient: "gift" === gU && (0, cU.jsxs)(cU.Fragment, {
-          children: [tU && (0, cU.jsxs)("span", {
+        t: xu
+      } = (0, mu.E)(), Su = ou("gift" !== yu);
+      return (0, Vu.jsx)(FQ, {
+        onBack: Nu,
+        recipient: "gift" === yu && (0, Vu.jsxs)(Vu.Fragment, {
+          children: [Eu && (0, Vu.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: uU("store:giftFor", {
-              name: tU
+            title: xu("store:giftFor", {
+              name: Eu
             }),
-            children: [QE.c, " ", uU("store:giftFor", {
-              name: tU
+            children: [SQ.d, " ", xu("store:giftFor", {
+              name: Eu
             })]
-          }), !tU && (0, cU.jsxs)("div", {
-            ...(0, QU.R)(),
+          }), !Eu && (0, Vu.jsxs)("div", {
+            ...(0, Tu.U)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: KU,
-            children: [QE.c, " ", uU("store:chooseRecipient")]
+            onClick: Xu,
+            children: [SQ.d, " ", xu("store:chooseRecipient")]
           })]
         }),
-        cta: (0, cU.jsx)(OE, {
-          state: RU,
+        cta: (0, Vu.jsx)(vQ, {
+          state: Ru,
           item: "superRank",
-          price: XU.l.price,
-          busy: pU,
-          highlight: EU,
-          onAct: GU,
-          onNeedRecipient: KU,
-          onLogin: jU
+          price: lu.j.price,
+          busy: Ku,
+          highlight: Qu,
+          onAct: ru,
+          onNeedRecipient: Xu,
+          onLogin: Bu
         }),
-        afterCta: (0, cU.jsxs)(cU.Fragment, {
-          children: [CU && (0, cU.jsx)("span", {
+        afterCta: (0, Vu.jsxs)(Vu.Fragment, {
+          children: [Su && (0, Vu.jsx)("span", {
             className: "StoreTileNote",
-            children: CU
-          }), TU && (0, cU.jsx)("span", {
+            children: Su
+          }), Ju && (0, Vu.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: uU(TU)
+            children: xu(Ju)
           })]
         })
       })
     }
-    var JP = gU(149);
-    const wP = JP.m("kind", [JP.G({
-      kind: JP.w("refused"),
-      heldTierId: JP.X(),
-      until: JP.D()
-    }), JP.G({
-      kind: JP.w("refund"),
-      tierId: JP.X(),
-      refundedMs: JP.D(),
-      forfeitedMs: JP.D(),
-      premiumCurrency: JP.D()
-    }), JP.G({
-      kind: JP.w("none")
+    var bm = yu(155);
+    const Cm = bm.g("kind", [bm.u({
+      kind: bm.l("refused"),
+      heldTierId: bm.N(),
+      until: bm.s()
+    }), bm.u({
+      kind: bm.l("refund"),
+      tierId: bm.N(),
+      refundedMs: bm.s(),
+      forfeitedMs: bm.s(),
+      premiumCurrency: bm.s()
+    }), bm.u({
+      kind: bm.l("none")
     })]);
-    async function nP(UU) {
-      const RU = await (0, ZU.postJsonWithMetricsCookiesAndJsonResponse)(`${aU.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: UU
+    async function km(uu) {
+      const Ru = await (0, Iu.postJsonWithMetricsCookiesAndJsonResponse)(`${Gu.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: uu
       }, {
         retries: 1
       });
-      return wP.parse(RU)
+      return Cm.parse(Ru)
     }
-    var bP = gU(2730),
-      oP = gU(2772);
+    var em = yu(2816),
+      Am = yu(2852);
 
-    function ZP(UU, RU) {
-      const gU = Math.max(1, Math.round(RU / HU.f));
-      return [1 === gU ? `${UU}OneDay` : UU, {
-        days: gU.toLocaleString()
+    function Dm(uu, Ru) {
+      const yu = Math.max(1, Math.round(Ru / Lu.g));
+      return [1 === yu ? `${uu}OneDay` : uu, {
+        days: yu.toLocaleString()
       }]
     }
 
-    function aP() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, sU.purchasesAllowed)() ? (0, cU.jsx)(YP, {}) : null
+    function Mm() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, Fu.purchasesAllowed)() ? (0, Vu.jsx)(Im, {}) : null
     }
 
-    function YP() {
+    function Im() {
       const {
-        t: UU
-      } = (0, PU.B)(), {
-        userContext: RU
-      } = (0, uU.e)(), {
-        purchaseUnderWay: gU,
-        notice: pU,
-        subscribe: EU
-      } = (0, bP.e)(), [TU, qU] = (0, tU.useState)(null), [KU, GU] = (0, tU.useState)(0), [jU, CU] = (0, tU.useState)(!1), hU = (0, tU.useRef)(!0), eU = RU !== ZU.NULL_USER_CONTEXT, WU = null !== TU && TU.loadedFor === RU ? TU.offer : null, fU = null === pU || void 0 === pU ? void 0 : pU.pendingIntentId, xU = (0, tU.useRef)(fU);
+        t: uu
+      } = (0, mu.E)(), {
+        userContext: Ru
+      } = (0, xu.d)(), {
+        purchaseUnderWay: yu,
+        notice: Ku,
+        subscribe: Qu
+      } = (0, em.c)(), [Ju, Nu] = (0, Eu.useState)(null), [Xu, ru] = (0, Eu.useState)(0), [Bu, Su] = (0, Eu.useState)(!1), pu = (0, Eu.useRef)(!0), Wu = Ru !== Iu.NULL_USER_CONTEXT, ju = null !== Ju && Ju.loadedFor === Ru ? Ju.offer : null, Hu = null === Ku || void 0 === Ku ? void 0 : Ku.pendingIntentId, du = (0, Eu.useRef)(Hu);
 
-      function mU() {
-        GU((UU => UU + 1))
+      function bu() {
+        ru((uu => uu + 1))
       }
-      async function IU(UU) {
-        CU(!1), await EU(UU), hU.current && mU()
+      async function Cu(uu) {
+        Su(!1), await Qu(uu), pu.current && bu()
       }
-      if ((0, tU.useEffect)((() => (hU.current = !0, () => {
-          hU.current = !1
-        })), []), (0, tU.useEffect)((() => {
-          void 0 !== xU.current && void 0 === fU && mU(), xU.current = fU
-        }), [fU]), (0, tU.useEffect)((() => {
-          if (!eU) return;
-          let UU = !1;
-          return CU(!1), async function() {
+      if ((0, Eu.useEffect)((() => (pu.current = !0, () => {
+          pu.current = !1
+        })), []), (0, Eu.useEffect)((() => {
+          void 0 !== du.current && void 0 === Hu && bu(), du.current = Hu
+        }), [Hu]), (0, Eu.useEffect)((() => {
+          if (!Wu) return;
+          let uu = !1;
+          return Su(!1), async function() {
             const {
-              offering: UU
-            } = await (0, TR.g)().getOfferings("superRankPage"), RU = null === UU || void 0 === UU ? void 0 : UU.packages.find((UU => null !== UU.price));
-            return void 0 === RU ? {
+              offering: uu
+            } = await (0, JR.i)().getOfferings("superRankPage"), Ru = null === uu || void 0 === uu ? void 0 : uu.packages.find((uu => null !== uu.price));
+            return void 0 === Ru ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: RU,
-              preview: await nP(RU.productId)
+              pkg: Ru,
+              preview: await km(Ru.productId)
             }
-          }().catch((UU => (console.error("Billing: loading the Super Rank subscription or its preview failed:", UU), {
+          }().catch((uu => (console.error("Billing: loading the Super Rank subscription or its preview failed:", uu), {
             kind: "loadFailed"
-          }))).then((gU => {
-            UU || qU((UU => "loadFailed" === gU.kind && (null === UU || void 0 === UU ? void 0 : UU.loadedFor) === RU ? UU : {
-              loadedFor: RU,
-              offer: gU
+          }))).then((yu => {
+            uu || Nu((uu => "loadFailed" === yu.kind && (null === uu || void 0 === uu ? void 0 : uu.loadedFor) === Ru ? uu : {
+              loadedFor: Ru,
+              offer: yu
             }))
           })), () => {
-            UU = !0
+            uu = !0
           }
-        }), [RU, eU, KU]), null === WU) return null;
-      if ("loaded" !== WU.kind) return (0, cU.jsx)(oP.k, {
+        }), [Ru, Wu, Xu]), null === ju) return null;
+      if ("loaded" !== ju.kind) return (0, Vu.jsx)(Am.i, {
         notice: {
           kind: "error",
-          key: "unavailable" === WU.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === ju.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: JU,
-        preview: wU
-      } = WU;
-      if ("refused" === wU.kind) return (0, cU.jsx)(oP.k, {
+        pkg: ku,
+        preview: eu
+      } = ju;
+      if ("refused" === eu.kind) return (0, Vu.jsx)(Am.i, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(wU.until).toLocaleDateString()
+            date: new Date(eu.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const nU = (0, EP.f)(JU.price);
-      if (jU && "refund" === wU.kind) {
+      const Au = (0, Em.f)(ku.price);
+      if (Bu && "refund" === eu.kind) {
         const {
-          refundedMs: RU,
-          forfeitedMs: tU,
-          premiumCurrency: pU
-        } = wU, EU = tU + (0 === pU ? RU : 0), [PU, TU] = ZP("payments:subscribeRefundsGemRank", RU), [qU, KU] = ZP("payments:subscribeForfeitsGemRank", EU);
-        return (0, cU.jsxs)("div", {
+          refundedMs: Ru,
+          forfeitedMs: Eu,
+          premiumCurrency: Ku
+        } = eu, Qu = Eu + (0 === Ku ? Ru : 0), [mu, Ju] = Dm("payments:subscribeRefundsGemRank", Ru), [Nu, Xu] = Dm("payments:subscribeForfeitsGemRank", Qu);
+        return (0, Vu.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, cU.jsx)("div", {
-            children: UU("payments:subscribeEndsGemRank")
-          }), pU > 0 && (0, cU.jsx)("div", {
-            children: UU(PU, {
-              ...TU,
-              amount: pU.toLocaleString()
+          children: [(0, Vu.jsx)("div", {
+            children: uu("payments:subscribeEndsGemRank")
+          }), Ku > 0 && (0, Vu.jsx)("div", {
+            children: uu(mu, {
+              ...Ju,
+              amount: Ku.toLocaleString()
             })
-          }), EU > 0 && (0, cU.jsx)("div", {
-            children: UU(qU, KU)
-          }), (0, cU.jsxs)("div", {
+          }), Qu > 0 && (0, Vu.jsx)("div", {
+            children: uu(Nu, Xu)
+          }), (0, Vu.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, cU.jsx)(QU.g, {
+            children: [(0, Vu.jsx)(Tu.f, {
               onClick: () => {
-                CU(!1)
+                Su(!1)
               },
-              children: UU("general:cancel")
-            }), (0, cU.jsx)(QU.j, {
+              children: uu("general:cancel")
+            }), (0, Vu.jsx)(Tu.l, {
               onClick: () => {
-                IU(JU)
+                Cu(ku)
               },
-              loading: gU,
-              children: UU("payments:subscribeContinue", {
-                price: nU
+              loading: yu,
+              children: uu("payments:subscribeContinue", {
+                price: Au
               })
             })]
           })]
         })
       }
-      return (0, cU.jsxs)("div", {
+      return (0, Vu.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, cU.jsx)(oP.k, {
-          notice: pU,
+        children: [(0, Vu.jsx)(Am.i, {
+          notice: Ku,
           className: "SmallTextBold"
-        }), (0, cU.jsx)(oP.d, {
+        }), (0, Vu.jsx)(Am.e, {
           className: "SmallTextBold"
-        }), (0, cU.jsx)(QU.j, {
+        }), (0, Vu.jsx)(Tu.l, {
           onClick: () => {
-            "refund" === wU.kind ? CU(!0) : IU(JU)
+            "refund" === eu.kind ? Su(!0) : Cu(ku)
           },
-          disabled: void 0 !== fU,
-          loading: gU,
-          children: UU("payments:subscribeToSuperRank", {
-            price: nU
+          disabled: void 0 !== Hu,
+          loading: yu,
+          children: uu("payments:subscribeToSuperRank", {
+            price: Au
           })
         })]
       })
     }
-    const BP = {
+    const Gm = {
       kind: "board"
     };
-    let VP = !1;
+    let Um = !1;
 
-    function rP(UU) {
-      return "found" === UU.status || "error" === UU.status && "store:giftRecipientLookupFailed" === UU.error ? UU.name : null
-    }(0, SU.t)(qE.prefetchBillingOfferings);
-    const XP = (0, tU.memo)((function(UU) {
-      var RU;
+    function nm(uu) {
+      return "found" === uu.status || "error" === uu.status && "store:giftRecipientLookupFailed" === uu.error ? uu.name : null
+    }(0, zu.w)(mQ.prefetchBillingOfferings);
+    const sm = (0, Eu.memo)((function(uu) {
+      var Ru;
       let {
-        show: pU
-      } = UU;
+        show: Ku
+      } = uu;
       const {
-        t: TU
-      } = (0, PU.B)(), {
-        userContext: qU
-      } = (0, uU.e)(), KU = qU !== ZU.NULL_USER_CONTEXT, GU = xE(qU), [jU, CU] = (0, hU.d)(), {
-        page: QU,
-        urlMode: eU,
-        goTo: WU
-      } = (0, mE.d)(), fU = function(UU) {
-        return "superRank" === UU.kind ? "superRank" : "pack" === UU.kind ? UU.pack : null
-      }(QU), {
-        openEverythingMenuName: xU,
-        gameState: mU
-      } = (0, wU.l)(["openEverythingMenuName", "gameState"]), IU = null !== xU;
-      ! function(UU, RU) {
-        const [pU] = (0, tU.useState)(wE.j), [EU, PU] = (0, tU.useState)(!1);
-        pU && RU && !EU && PU(!0);
-        const TU = (0, Et.o)(),
-          qU = pU && EU && UU && !TU;
-        (0, tU.useEffect)((() => {
-          if (!qU) return;
-          let UU = null,
-            RU = null,
-            tU = null;
-          const pU = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, TR.g)().purchaseUnderWay,
-            EU = () => {
-              var gU;
-              null === (gU = tU) || void 0 === gU || gU(), tU = null, null !== UU && (clearTimeout(UU), UU = null), null !== RU && (clearTimeout(RU), RU = null)
+        t: Ju
+      } = (0, mu.E)(), {
+        userContext: Nu
+      } = (0, xu.d)(), Xu = Nu !== Iu.NULL_USER_CONTEXT, ru = jQ(Nu), [Bu, Su] = (0, pu.d)(), {
+        page: Tu,
+        urlMode: Wu,
+        goTo: ju
+      } = (0, HQ.g)(), Hu = function(uu) {
+        return "superRank" === uu.kind ? "superRank" : "pack" === uu.kind ? uu.pack : null
+      }(Tu), {
+        openEverythingMenuName: du,
+        gameState: bu
+      } = (0, eu.j)(["openEverythingMenuName", "gameState"]), Cu = null !== du;
+      ! function(uu, Ru) {
+        const [Ku] = (0, Eu.useState)(CQ.i), [Qu, mu] = (0, Eu.useState)(!1);
+        Ku && Ru && !Qu && mu(!0);
+        const Ju = (0, QE.n)(),
+          Nu = Ku && Qu && uu && !Ju;
+        (0, Eu.useEffect)((() => {
+          if (!Nu) return;
+          let uu = null,
+            Ru = null,
+            Eu = null;
+          const Ku = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, JR.i)().purchaseUnderWay,
+            Qu = () => {
+              var yu;
+              null === (yu = Eu) || void 0 === yu || yu(), Eu = null, null !== uu && (clearTimeout(uu), uu = null), null !== Ru && (clearTimeout(Ru), Ru = null)
             },
-            PU = () => {
-              (0, IE.n)(!1), (0, IE.m)(!1), EU(), UU = setTimeout((() => {
-                UU = null, tU = (0, JE.e)((() => {
-                  tU = null, pU() ? PU() : ((0, IE.n)(!0), RU = setTimeout((() => {
-                    RU = null, tU = (0, JE.e)((() => {
-                      tU = null, pU() ? PU() : (0, IE.m)(!0)
+            mu = () => {
+              (0, dQ.m)(!1), (0, dQ.l)(!1), Qu(), uu = setTimeout((() => {
+                uu = null, Eu = (0, bQ.c)((() => {
+                  Eu = null, Ku() ? mu() : ((0, dQ.m)(!0), Ru = setTimeout((() => {
+                    Ru = null, Eu = (0, bQ.c)((() => {
+                      Eu = null, Ku() ? mu() : (0, dQ.l)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => gU(4318))).then((UU => {
-                    UU.startBackgroundGameSetup()
-                  }), (UU => {
-                    console.warn("Background game setup: its chunk failed to load", UU)
+                  }), 3e3), Promise.resolve().then((() => yu(4436))).then((uu => {
+                    uu.startBackgroundGameSetup()
+                  }), (uu => {
+                    console.warn("Background game setup: its chunk failed to load", uu)
                   })))
                 }))
               }), 2e3)
             };
-          for (const gU of nE) window.addEventListener(gU, PU, {
+          for (const yu of kQ) window.addEventListener(yu, mu, {
             capture: !0,
             passive: !0
           });
-          return PU(), () => {
-            for (const UU of nE) window.removeEventListener(UU, PU, {
+          return mu(), () => {
+            for (const uu of kQ) window.removeEventListener(uu, mu, {
               capture: !0
             });
-            EU(), (0, IE.n)(!1), (0, IE.m)(!1)
+            Qu(), (0, dQ.m)(!1), (0, dQ.l)(!1)
           }
-        }), [qU])
-      }(pU && IU, "pack" === QU.kind);
-      const JU = "landingPage" === mU;
-      (0, tU.useEffect)((() => {
-        IU && (0, qE.prefetchBillingOfferings)()
-      }), [IU]), (0, tU.useEffect)((() => {
-        IU && !pU && JU && (0, bE.u)()
-      }), [IU, pU, JU]);
-      const [nU, bU] = (0, tU.useState)(0), [oU, aU] = (0, tU.useState)(null), [YU, BU] = (0, tU.useState)(null), [VU, rU] = (0, tU.useState)(null), [vU, dU] = (0, tU.useState)(null), HU = (0, tU.useRef)(null), yU = (0, tU.useRef)(null), kU = (0, tU.useRef)(!1), FU = (0, SU.C)(), iU = (0, tU.useRef)(0), AU = (0, tU.useRef)(!1);
+        }), [Nu])
+      }(Ku && Cu, "pack" === Tu.kind);
+      const ku = "landingPage" === bu;
+      (0, Eu.useEffect)((() => {
+        Cu && (0, mQ.prefetchBillingOfferings)()
+      }), [Cu]), (0, Eu.useEffect)((() => {
+        Cu && !Ku && ku && (0, eQ.v)()
+      }), [Cu, Ku, ku]);
+      const [Au, Du] = (0, Eu.useState)(0), [Mu, Gu] = (0, Eu.useState)(null), [Uu, nu] = (0, Eu.useState)(null), [su, tu] = (0, Eu.useState)(null), [gu, cu] = (0, Eu.useState)(null), Lu = (0, Eu.useRef)(null), wu = (0, Eu.useRef)(null), Zu = (0, Eu.useRef)(!1), hu = (0, zu.C)(), Pu = (0, Eu.useRef)(0), iu = (0, Eu.useRef)(!1);
 
-      function zU() {
-        bU((UU => UU + 1))
-      }(0, tU.useEffect)((() => {
-        if (pU) {
-          if (VP = !0, (0, SU.k)(), FU && FU.seq !== iU.current) {
-            var UU;
-            iU.current = FU.seq, "loginResume" !== FU.source && (0, SU.z)();
-            const RU = (0, SU.d)(FU);
-            eU || WU(RU), dU(null !== (UU = FU.highlight) && void 0 !== UU ? UU : null), BU(null), "gift" === FU.mode && FU.giftRecipientName ? GU.choose(FU.giftRecipientName, "prefilled") : "current" !== FU.mode && GU.clear(), "gift" !== FU.mode || FU.giftRecipientName || zU(), (0, lU.reportAnalyticsClick)({
+      function Yu() {
+        Du((uu => uu + 1))
+      }(0, Eu.useEffect)((() => {
+        if (Ku) {
+          if (Um = !0, (0, zu.j)(), hu && hu.seq !== Pu.current) {
+            var uu;
+            Pu.current = hu.seq, "loginResume" !== hu.source && (0, zu.B)();
+            const Ru = (0, zu.c)(hu);
+            Wu || ju(Ru), cu(null !== (uu = hu.highlight) && void 0 !== uu ? uu : null), nu(null), "gift" === hu.mode && hu.giftRecipientName ? ru.choose(hu.giftRecipientName, "prefilled") : "current" !== hu.mode && ru.clear(), "gift" !== hu.mode || hu.giftRecipientName || Yu(), (0, au.reportAnalyticsClick)({
               id: "store.open",
-              value: FU.source
+              value: hu.source
             })
-          } else AU.current || (0, lU.reportAnalyticsClick)({
+          } else iu.current || (0, au.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          AU.current = !0
-        } else AU.current = !1
-      }), [pU, FU]), (0, tU.useEffect)((() => {
-        if (!vU) return;
-        const UU = setTimeout((() => {
-          dU(null)
+          iu.current = !0
+        } else iu.current = !1
+      }), [Ku, hu]), (0, Eu.useEffect)((() => {
+        if (!gu) return;
+        const uu = setTimeout((() => {
+          cu(null)
         }), 4e3);
         return () => {
-          clearTimeout(UU)
+          clearTimeout(uu)
         }
-      }), [vU]), (0, tU.useEffect)((() => {
-        const UU = HU.current;
-        var RU;
-        if (pU && UU) {
-          if (fU) yU.current = fU, null === (RU = UU.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === RU || RU.focus();
-          else if (yU.current) {
-            var gU;
-            null === (gU = UU.querySelector(`[data-store-item="${yU.current}"]`)) || void 0 === gU || gU.focus(), yU.current = null
+      }), [gu]), (0, Eu.useEffect)((() => {
+        const uu = Lu.current;
+        var Ru;
+        if (Ku && uu) {
+          if (Hu) wu.current = Hu, null === (Ru = uu.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Ru || Ru.focus();
+          else if (wu.current) {
+            var yu;
+            null === (yu = uu.querySelector(`[data-store-item="${wu.current}"]`)) || void 0 === yu || yu.focus(), wu.current = null
           }
-        } else yU.current = null
-      }), [fU, pU]), (0, tU.useEffect)((() => {
-        BU(null)
-      }), [GU.query]), (0, tU.useEffect)((() => {
-        if (!VU) return;
-        const UU = setTimeout((() => {
-          rU(null)
+        } else wu.current = null
+      }), [Hu, Ku]), (0, Eu.useEffect)((() => {
+        nu(null)
+      }), [ru.query]), (0, Eu.useEffect)((() => {
+        if (!su) return;
+        const uu = setTimeout((() => {
+          tu(null)
         }), 8e3);
         return () => {
-          clearTimeout(UU)
+          clearTimeout(uu)
         }
-      }), [VU]);
-      const MU = qU.superRankInfo,
-        DU = qU.isLoggedIn() || (0, sU.guestsMayBuy)(),
-        LU = qU.getOwnedCosmeticPacks(),
-        NU = (0, QE.n)(GU.query),
-        OU = (0, QE.f)({
-          mode: NU,
-          loggedIn: KU ? DU : null,
-          superRankInfo: MU,
+      }), [su]);
+      const ou = Nu.superRankInfo,
+        qu = Nu.isLoggedIn() || (0, Fu.guestsMayBuy)(),
+        Ou = Nu.getOwnedCosmeticPacks(),
+        vu = (0, SQ.l)(ru.query),
+        fu = (0, SQ.g)({
+          mode: vu,
+          loggedIn: Xu ? qu : null,
+          superRankInfo: ou,
           now: Date.now(),
-          ownedPacks: LU,
-          packs: TE.s,
-          recipient: GU.recipient
+          ownedPacks: Ou,
+          packs: QQ.r,
+          recipient: ru.recipient
         });
-      (0, tU.useEffect)((() => {
-        if (!DU || !pU) return;
-        const UU = (0, SU.z)(),
-          RU = UU && (0, QE.m)(UU, TE.s);
-        UU && RU && ((0, lU.reportAnalyticsClick)({
+      (0, Eu.useEffect)((() => {
+        if (!qu || !Ku) return;
+        const uu = (0, zu.B)(),
+          Ru = uu && (0, SQ.k)(uu, QQ.r);
+        uu && Ru && ((0, au.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: UU.item
-        }), (0, SU.m)(RU))
-      }), [DU, pU]);
-      const UR = (0, QE.r)({
-        superRankDaysLeft: OU.superRankDaysLeft,
-        openedThisSession: VP || pU,
-        seenNewItems: (0, SU.g)()
+          value: uu.item
+        }), (0, zu.n)(Ru))
+      }), [qu, Ku]);
+      const uR = (0, SQ.m)({
+        superRankDaysLeft: fu.superRankDaysLeft,
+        openedThisSession: Um || Ku,
+        seenNewItems: (0, zu.h)()
       });
-      if ((0, tU.useEffect)((() => {
-          (0, SU.v)(UR)
-        }), [UR]), !pU || !(0, sU.purchasesAllowed)()) return null;
-      const RR = CU > jU && jU <= 700,
-        gR = !RR && CU <= 420,
-        tR = "gift" === NU ? rP(GU.recipient) : null,
-        pR = null !== oU;
+      if ((0, Eu.useEffect)((() => {
+          (0, zu.x)(uR)
+        }), [uR]), !Ku || !(0, Fu.purchasesAllowed)()) return null;
+      const RR = Su > Bu && Bu <= 700,
+        yR = !RR && Su <= 420,
+        ER = "gift" === vu ? nm(ru.recipient) : null,
+        KR = null !== Mu;
 
-      function ER(UU) {
-        (0, cE.e)(UU, "gift" === NU ? GU.query.trim() : null)
+      function QR(uu) {
+        (0, NQ.e)(uu, "gift" === vu ? ru.query.trim() : null)
       }
 
-      function PR(UU, RU) {
-        (0, lU.reportAnalyticsClick)({
+      function mR(uu, Ru) {
+        (0, au.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${RU?"gift":"self"}:${UU}`
-        }), RU && (GU.recordGift(RU.name, UU), qR(RU))
+          value: `${Ru?"gift":"self"}:${uu}`
+        }), Ru && (ru.recordGift(Ru.name, uu), NR(Ru))
       }
 
-      function qR(UU) {
-        ! function(UU) {
+      function NR(uu) {
+        ! function(uu) {
           try {
-            AR.k.setItem(eE, (0, QE.w)(fE(), UU))
+            iR.i.setItem(pQ, (0, SQ.t)(WQ(), uu))
           } catch {}
         }({
-          name: UU.name,
-          cosmetics: UU.cosmetics
-        }), WU(BP), rU((RU => {
-          var gU;
+          name: uu.name,
+          cosmetics: uu.cosmetics
+        }), ju(Gm), tu((Ru => {
+          var yu;
           return {
-            name: UU.name,
-            seq: (null !== (gU = null === RU || void 0 === RU ? void 0 : RU.seq) && void 0 !== gU ? gU : 0) + 1
+            name: uu.name,
+            seq: (null !== (yu = null === Ru || void 0 === Ru ? void 0 : Ru.seq) && void 0 !== yu ? yu : 0) + 1
           }
         }))
       }
-      async function KR(UU) {
-        var RU, gU;
-        if (kU.current) return;
-        if (!DU) return void ER(UU);
-        BU(null), dU(null);
-        const tU = "gift" === NU ? {
-          name: rP(GU.recipient),
-          cosmetics: GU.recipientCosmetics
+      async function XR(uu) {
+        var Ru, yu;
+        if (Zu.current) return;
+        if (!qu) return void QR(uu);
+        nu(null), cu(null);
+        const Eu = "gift" === vu ? {
+          name: nm(ru.recipient),
+          cosmetics: ru.recipientCosmetics
         } : null;
-        if (tU && !tU.name) return void zU();
-        const pU = "superRank" === UU ? XU.l.id : (0, XU.e)(UU);
-        kU.current = !0;
-        const EU = await (0, hE.d)(pU, null !== (RU = null === tU || void 0 === tU ? void 0 : tU.name) && void 0 !== RU ? RU : null);
-        if (kU.current = !1, !EU) return;
-        aU(UU);
-        const PU = await GE.d.purchase(pU, null !== (gU = null === tU || void 0 === tU ? void 0 : tU.name) && void 0 !== gU ? gU : null);
-        aU(null), PU ? BU(PU) : (PR(UU, tU), tU || (await (0, jE.flushClientAnalyticsEvents)(), (0, KE.refreshWithoutConfirmation)("superRank" === UU ? "/super-rank-welcome" : `/pack-welcome/${UU}`)))
+        if (Eu && !Eu.name) return void Yu();
+        const Ku = "superRank" === uu ? lu.j.id : (0, lu.c)(uu);
+        Zu.current = !0;
+        const Qu = await (0, xQ.b)(Ku, null !== (Ru = null === Eu || void 0 === Eu ? void 0 : Eu.name) && void 0 !== Ru ? Ru : null);
+        if (Zu.current = !1, !Qu) return;
+        Gu(uu);
+        const mu = await XQ.e.purchase(Ku, null !== (yu = null === Eu || void 0 === Eu ? void 0 : Eu.name) && void 0 !== yu ? yu : null);
+        Gu(null), mu ? nu(mu) : (mR(uu, Eu), Eu || (await (0, VQ.flushClientAnalyticsEvents)(), (0, JQ.refreshWithoutConfirmation)("superRank" === uu ? "/super-rank-welcome" : `/pack-welcome/${uu}`)))
       }
-      const cR = EU()("Store", {
-        StoreGift: "gift" === NU,
+      const VR = Qu()("Store", {
+        StoreGift: "gift" === vu,
         StorePortrait: RR,
-        StoreCompact: gR
+        StoreCompact: yR
       });
-      if ("pack" === QU.kind) {
-        const UU = QU.pack,
-          RU = OU.packs.find((RU => RU.pack === UU));
-        return (0, cU.jsx)("div", {
-          ref: HU,
+      if ("pack" === Tu.kind) {
+        const uu = Tu.pack,
+          Ru = fu.packs.find((Ru => Ru.pack === uu));
+        return (0, Vu.jsx)("div", {
+          ref: Lu,
           className: "CosmeticShopContainer",
-          children: (0, cU.jsx)(CE.e, {
-            pack: UU,
+          children: (0, Vu.jsx)(BQ.h, {
+            pack: uu,
             onBack: () => {
-              WU(BP)
+              ju(Gm)
             },
-            onPurchased: RU => {
-              PR(UU, RU ? {
-                name: RU,
+            onPurchased: Ru => {
+              mR(uu, Ru ? {
+                name: Ru,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === NU && tR && RU && (0, cU.jsxs)(cU.Fragment, {
-              children: [(0, cU.jsx)(OE, {
-                state: RU.state,
-                item: UU,
-                price: (GR = UU, "superRank" === GR ? XU.l.price : (0, XU.g)(GR)),
-                busy: pR,
+            giftCta: "gift" === vu && ER && Ru && (0, Vu.jsxs)(Vu.Fragment, {
+              children: [(0, Vu.jsx)(vQ, {
+                state: Ru.state,
+                item: uu,
+                price: (rR = uu, "superRank" === rR ? lu.j.price : (0, lu.f)(rR)),
+                busy: KR,
                 onAct: () => {
-                  KR(UU)
+                  XR(uu)
                 },
                 onNeedRecipient: () => {
-                  WU(BP), zU()
+                  ju(Gm), Yu()
                 },
                 onLogin: () => {
-                  ER(UU)
+                  QR(uu)
                 },
-                highlight: vU === UU
-              }), YU && (0, cU.jsx)("span", {
+                highlight: gu === uu
+              }), Uu && (0, Vu.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: TU(YU)
+                children: Ju(Uu)
               })]
             }),
-            ownedPacks: LU,
-            startAsGift: "gift" === NU,
-            initialGiftRecipient: "gift" === NU ? null !== tR && void 0 !== tR ? tR : GU.query.trim() : "",
-            highlightCta: vU === UU
-          }, UU)
+            ownedPacks: Ou,
+            startAsGift: "gift" === vu,
+            initialGiftRecipient: "gift" === vu ? null !== ER && void 0 !== ER ? ER : ru.query.trim() : "",
+            highlightCta: gu === uu
+          }, uu)
         })
       }
-      var GR;
-      return "superRank" === QU.kind ? (0, cU.jsx)("div", {
-        ref: HU,
-        className: EU()(cR, "StoreDetailView"),
-        children: (0, cU.jsx)(IP, {
-          state: OU.superRank.state,
-          mode: NU,
-          giftName: tR,
-          busy: pR,
-          highlight: "superRank" === vU,
-          purchaseError: YU,
+      var rR;
+      return "superRank" === Tu.kind ? (0, Vu.jsx)("div", {
+        ref: Lu,
+        className: Qu()(VR, "StoreDetailView"),
+        children: (0, Vu.jsx)(dm, {
+          state: fu.superRank.state,
+          mode: vu,
+          giftName: ER,
+          busy: KR,
+          highlight: "superRank" === gu,
+          purchaseError: Uu,
           onBack: () => {
-            WU(BP)
+            ju(Gm)
           },
           onChooseRecipient: () => {
-            WU(BP), zU()
+            ju(Gm), Yu()
           },
           onAct: () => {
-            KR("superRank")
+            XR("superRank")
           },
           onLogin: () => {
-            ER("superRank")
+            QR("superRank")
           }
         })
-      }) : (0, cU.jsxs)("div", {
-        ref: HU,
-        className: cR,
-        children: [(0, cU.jsx)("div", {
+      }) : (0, Vu.jsxs)("div", {
+        ref: Lu,
+        className: VR,
+        children: [(0, Vu.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, cU.jsx)(rE, {
-            selfName: KU ? qU.getPlayerName() : "",
-            giftRecipient: GU,
-            suggestionsVersion: null !== (RU = null === VU || void 0 === VU ? void 0 : VU.seq) && void 0 !== RU ? RU : 0,
-            pulseSignal: nU,
-            disabled: pR || !KU
+          children: (0, Vu.jsx)(nQ, {
+            selfName: Xu ? Nu.getPlayerName() : "",
+            giftRecipient: ru,
+            suggestionsVersion: null !== (Ru = null === su || void 0 === su ? void 0 : su.seq) && void 0 !== Ru ? Ru : 0,
+            pulseSignal: Au,
+            disabled: KR || !Xu
           })
-        }), VU && (0, cU.jsxs)("div", {
+        }), su && (0, Vu.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            rU(null)
+            tu(null)
           },
-          children: [(0, cU.jsx)(uE.c, {
-            showSignal: VU.seq
-          }), QE.c, " ", TU("store:giftSent", {
-            name: VU.name
+          children: [(0, Vu.jsx)(rQ.e, {
+            showSignal: su.seq
+          }), SQ.d, " ", Ju("store:giftSent", {
+            name: su.name
           })]
-        }, VU.seq), !VU && YU && (0, cU.jsx)("div", {
+        }, su.seq), !su && Uu && (0, Vu.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: TU(YU)
-        }), (0, cU.jsx)(mP, {
-          layout: OU,
-          mountAtOnce: null !== yU.current,
-          bundleGift: "gift" === NU ? {
-            recipientName: tR,
-            lookingUp: "pending" === GU.recipient.status,
-            busy: pR,
-            onNeedRecipient: zU,
-            onSent: UU => {
-              (0, lU.reportAnalyticsClick)({
+          children: Ju(Uu)
+        }), (0, Vu.jsx)(Hm, {
+          layout: fu,
+          mountAtOnce: null !== wu.current,
+          bundleGift: "gift" === vu ? {
+            recipientName: ER,
+            lookingUp: "pending" === ru.recipient.status,
+            busy: KR,
+            onNeedRecipient: Yu,
+            onSent: uu => {
+              (0, au.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), qR({
-                name: UU,
-                cosmetics: GU.recipientCosmetics
+              }), NR({
+                name: uu,
+                cosmetics: ru.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, QE.s)(MU),
-          busy: pR,
-          highlightItem: vU,
-          onOpen: function(UU) {
-            (0, lU.reportAnalyticsClick)({
+          superRankTotalDays: (0, SQ.o)(ou),
+          busy: KR,
+          highlightItem: gu,
+          onOpen: function(uu) {
+            (0, au.reportAnalyticsClick)({
               id: "store.item_open",
-              value: UU
-            }), WU((0, SU.f)(UU))
+              value: uu
+            }), ju((0, zu.f)(uu))
           },
-          onAct: KR,
-          onNeedRecipient: zU,
-          onLogin: ER
-        }), "gift" !== NU && (0, cU.jsx)(aP, {})]
+          onAct: XR,
+          onNeedRecipient: Yu,
+          onLogin: QR
+        }), "gift" !== vu && (0, Vu.jsx)(Mm, {})]
       })
     }));
-    var vP = gU(2471),
-      dP = gU(8470),
-      HP = gU(2525),
-      SP = gU(2360),
-      sP = gU(2419),
-      yP = gU(2433),
-      kP = gU(2440),
-      FP = gU(2514),
-      iP = gU(2500),
-      AP = gU(2183),
-      zP = gU(2218),
-      MP = gU(2203),
-      DP = gU(1884),
-      LP = gU(2442),
-      NP = gU(2224);
+    var tm = yu(2533),
+      lm = yu(8582),
+      gm = yu(2608),
+      cm = yu(2441),
+      Lm = yu(2497),
+      zm = yu(2502),
+      Fm = yu(2508),
+      wm = yu(2600),
+      Zm = yu(2575),
+      hm = yu(2258),
+      Pm = yu(2295),
+      im = yu(2285),
+      Ym = yu(1960),
+      om = yu(2513),
+      qm = yu(2298);
 
-    function lP(UU) {
+    function Om(uu) {
       let {
-        show: RU
-      } = UU;
-      return RU ? (0, cU.jsx)(OP, {}) : null
+        show: Ru
+      } = uu;
+      return Ru ? (0, Vu.jsx)(am, {}) : null
     }
 
-    function OP() {
+    function am() {
       const {
-        t: UU
-      } = (0, PU.B)(), {
-        followsLeader: RU
-      } = (0, SP.g)(), {
-        loading: gU,
-        friends: pU,
-        requests: qU,
-        invites: KU
-      } = (0, kU.g)(), {
-        userContext: GU
-      } = (0, uU.e)(), [jU, CU] = (0, tU.useState)(NP.l);
-      (0, tU.useEffect)((() => {
-        (0, NP.d)()
+        t: uu
+      } = (0, mu.E)(), {
+        followsLeader: Ru
+      } = (0, cm.d)(), {
+        loading: yu,
+        friends: Ku,
+        requests: Nu,
+        invites: Xu
+      } = (0, Zu.j)(), {
+        userContext: ru
+      } = (0, xu.d)(), [Bu, Su] = (0, Eu.useState)(qm.j);
+      (0, Eu.useEffect)((() => {
+        (0, qm.d)()
       }), []);
-      const hU = qU.map((UU => UU.name)),
+      const pu = Nu.map((uu => uu.name)),
         {
-          state: eU,
-          recentRequesters: WU
-        } = (0, iP.j)(),
-        fU = new Map([...("loaded" === eU.status ? eU.recentPlayers : []).map((UU => [UU.preview.name, UU])), ...WU.map((UU => [UU.name, UU]))]),
-        xU = (0, tU.useRef)(null),
-        [JU, wU] = (0, tU.useState)(""),
-        [nU, bU] = (0, tU.useState)("Enter"),
-        [oU, ZU] = (0, tU.useState)(null);
+          state: Wu,
+          recentRequesters: ju
+        } = (0, Zm.k)(),
+        Hu = new Map([...("loaded" === Wu.status ? Wu.recentPlayers : []).map((uu => [uu.preview.name, uu])), ...ju.map((uu => [uu.name, uu]))]),
+        du = (0, Eu.useRef)(null),
+        [ku, eu] = (0, Eu.useState)(""),
+        [Au, Du] = (0, Eu.useState)("Enter"),
+        [Mu, Iu] = (0, Eu.useState)(null);
 
-      function aU() {
-        JU && (bU("Loading"), (0, MP.i)(JU, "social_menu").then((UU => {
-          if (xU.current) switch (UU.kind) {
+      function Gu() {
+        ku && (Du("Loading"), (0, im.g)(ku, "social_menu").then((uu => {
+          if (du.current) switch (uu.kind) {
             case "sent":
-              bU("Success");
+              Du("Success");
               break;
             case "becameFriends":
-              bU("BecameFriends");
+              Du("BecameFriends");
               break;
             case "failed":
-              ZU(UU.message), bU("Error")
+              Iu(uu.message), Du("Error")
           }
         })))
       }
-      return (0, tU.useEffect)((() => {
-        if ("Enter" === nU || "Loading" === nU) return;
-        const UU = setTimeout((() => {
-          xU.current.value = "", wU(""), bU("Enter")
-        }), "Success" === nU ? 1e3 : 4e3);
+      return (0, Eu.useEffect)((() => {
+        if ("Enter" === Au || "Loading" === Au) return;
+        const uu = setTimeout((() => {
+          du.current.value = "", eu(""), Du("Enter")
+        }), "Success" === Au ? 1e3 : 4e3);
         return () => {
-          clearTimeout(UU)
+          clearTimeout(uu)
         }
-      }), [nU]), (0, cU.jsx)("div", {
+      }), [Au]), (0, Vu.jsx)("div", {
         className: "SocialMenu",
-        children: (0, cU.jsxs)("div", {
+        children: (0, Vu.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, cU.jsxs)("div", {
+          children: [(0, Vu.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, cU.jsxs)("div", {
+            children: [(0, Vu.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, cU.jsx)(kP.b, {
-                label: UU("socialBar:addFriend")
-              }), (0, cU.jsxs)("div", {
+              children: [(0, Vu.jsx)(Fm.b, {
+                label: uu("socialBar:addFriend")
+              }), (0, Vu.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, cU.jsxs)("div", {
-                  className: EU()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${nU}`]: !0
+                children: [(0, Vu.jsxs)("div", {
+                  className: Qu()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${Au}`]: !0
                   }),
-                  children: ["Loading" === nU && (0, cU.jsx)(IU.d, {}), "Success" === nU && (0, cU.jsx)(TU.c, {
+                  children: ["Loading" === Au && (0, Vu.jsx)(Cu.b, {}), "Success" === Au && (0, Vu.jsx)(Ju.c, {
                     name: "check"
-                  }), "BecameFriends" === nU && (0, cU.jsx)(cU.Fragment, {
-                    children: UU("socialBar:nowFriends", {
-                      playerName: JU
+                  }), "BecameFriends" === Au && (0, Vu.jsx)(Vu.Fragment, {
+                    children: uu("socialBar:nowFriends", {
+                      playerName: ku
                     })
-                  }), "Error" === nU && oU && (0, cU.jsx)(cU.Fragment, {
-                    children: UU(oU.translationKey, oU.params)
+                  }), "Error" === Au && Mu && (0, Vu.jsx)(Vu.Fragment, {
+                    children: uu(Mu.translationKey, Mu.params)
                   })]
-                }), (0, cU.jsxs)("div", {
+                }), (0, Vu.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, cU.jsx)(mU.d, {
+                  children: [(0, Vu.jsx)(bu.b, {
                     className: "PlayerSearchInput",
-                    placeholderText: UU("socialBar:enterPlayerName"),
-                    domRef: xU,
-                    onValueChange: UU => {
-                      wU((0, VU.q)(UU)), xU.current.value = (0, VU.q)(UU)
+                    placeholderText: uu("socialBar:enterPlayerName"),
+                    domRef: du,
+                    onValueChange: uu => {
+                      eu((0, su.s)(uu)), du.current.value = (0, su.s)(uu)
                     },
                     onEnter: () => {
-                      JU && (0, lU.reportAnalyticsClick)({
+                      ku && (0, au.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), aU()
+                      }), Gu()
                     }
-                  }), (0, cU.jsxs)(QU.e, {
+                  }), (0, Vu.jsxs)(Tu.e, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      aU()
+                      Gu()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, cU.jsx)(TU.c, {
+                    children: [(0, Vu.jsx)(Ju.c, {
                       name: "user-plus"
-                    }), " ", UU("socialBar:sendRequest")]
+                    }), " ", uu("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, cU.jsx)(LP.e, {
+              }), (0, Vu.jsx)(om.b, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), KU.length > 0 && (0, cU.jsxs)("div", {
+            }), Xu.length > 0 && (0, Vu.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, cU.jsx)(kP.b, {
-                label: UU("socialBar:invites"),
-                meta: KU.length
-              }), KU.map((RU => (0, cU.jsxs)("div", {
+              children: [(0, Vu.jsx)(Fm.b, {
+                label: uu("socialBar:invites"),
+                meta: Xu.length
+              }), Xu.map((Ru => (0, Vu.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, cU.jsx)("div", {
+                children: [(0, Vu.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, cU.jsx)(AP.b, {
-                    invite: RU
+                  children: (0, Vu.jsx)(hm.e, {
+                    invite: Ru
                   })
-                }), (0, cU.jsx)("div", {
+                }), (0, Vu.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, cU.jsx)(AP.d, {
-                    invite: RU
+                  children: (0, Vu.jsx)(hm.h, {
+                    invite: Ru
                   })
-                }), (0, cU.jsx)(QU.j, {
+                }), (0, Vu.jsx)(Tu.l, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, zP.e)(RU)
+                    (0, Pm.c)(Ru)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${RU.destination.kind}`
+                    value: `social_menu:${Ru.destination.kind}`
                   },
-                  children: UU("general:join")
-                }), (0, cU.jsx)(DU.g, {
-                  tooltipInner: (0, cU.jsx)(cU.Fragment, {
-                    children: UU("general:decline")
+                  children: uu("general:join")
+                }), (0, Vu.jsx)(qu.i, {
+                  tooltipInner: (0, Vu.jsx)(Vu.Fragment, {
+                    children: uu("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, cU.jsx)(QU.g, {
+                  children: (0, Vu.jsx)(Tu.f, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === jU || void 0 === jU ? void 0 : jU.kind) && jU.inviteId === RU.id,
+                    padDefaultFocus: "invite" === (null === Bu || void 0 === Bu ? void 0 : Bu.kind) && Bu.inviteId === Ru.id,
                     onClick: () => {
-                      kU.b.declineInvite(RU.id)
+                      Zu.c.declineInvite(Ru.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${RU.destination.kind}`
+                      value: `social_menu:${Ru.destination.kind}`
                     },
-                    children: (0, cU.jsx)(TU.c, {
+                    children: (0, Vu.jsx)(Ju.c, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, RU.id)))]
-            }), (0, cU.jsxs)("div", {
-              className: EU()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !gU && 0 === qU.length
+              }, Ru.id)))]
+            }), (0, Vu.jsxs)("div", {
+              className: Qu()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !yu && 0 === Nu.length
               }),
-              children: [(0, cU.jsx)(kP.b, {
-                label: (0, cU.jsxs)(cU.Fragment, {
-                  children: [(0, cU.jsx)(TU.c, {
-                    name: DP.f
-                  }), " ", UU("socialBar:requests")]
+              children: [(0, Vu.jsx)(Fm.b, {
+                label: (0, Vu.jsxs)(Vu.Fragment, {
+                  children: [(0, Vu.jsx)(Ju.c, {
+                    name: Ym.f
+                  }), " ", uu("socialBar:requests")]
                 }),
-                meta: (0, cU.jsxs)(cU.Fragment, {
-                  children: [qU.length, qU.length === LU.u && (0, cU.jsx)("span", {
+                meta: (0, Vu.jsxs)(Vu.Fragment, {
+                  children: [Nu.length, Nu.length === Ou.n && (0, Vu.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: UU("socialBar:limitReached")
+                    children: uu("socialBar:limitReached")
                   })]
                 })
-              }), gU && (0, cU.jsx)("div", {
+              }), yu && (0, Vu.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, cU.jsx)(IU.d, {})
-              }), !gU && 0 === qU.length && (0, cU.jsx)("div", {
+                children: (0, Vu.jsx)(Cu.b, {})
+              }), !yu && 0 === Nu.length && (0, Vu.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: UU("socialBar:noFriendRequests")
-              }), !gU && qU.length > 0 && (0, cU.jsx)("div", {
+                children: uu("socialBar:noFriendRequests")
+              }), !yu && Nu.length > 0 && (0, Vu.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, cU.jsx)(jp.d, {
+                children: (0, Vu.jsx)(rK.e, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [qU],
-                  children: qU.map(((RU, gU) => {
-                    const tU = fU.get(RU.name);
-                    return (0, cU.jsxs)(yP.c, {
-                      playerSocialPreview: RU,
-                      zIndex: qU.length - gU,
-                      padDefaultFocus: (0, NP.h)(jU, RU.name, gU),
-                      status: tU && (0, cU.jsx)(FP.d, {
-                        gameNameWithVariation: tU.gameNameWithVariation,
-                        isPrivateLobby: tU.isPrivateLobby
+                  observerUpdateDeps: [Nu],
+                  children: Nu.map(((Ru, yu) => {
+                    const Eu = Hu.get(Ru.name);
+                    return (0, Vu.jsxs)(zm.f, {
+                      playerSocialPreview: Ru,
+                      zIndex: Nu.length - yu,
+                      padDefaultFocus: (0, qm.h)(Bu, Ru.name, yu),
+                      status: Eu && (0, Vu.jsx)(wm.e, {
+                        gameNameWithVariation: Eu.gameNameWithVariation,
+                        isPrivateLobby: Eu.isPrivateLobby
                       }),
-                      children: [(0, cU.jsx)(DU.g, {
-                        tooltipInner: (0, cU.jsx)(cU.Fragment, {
-                          children: UU("general:accept")
+                      children: [(0, Vu.jsx)(qu.i, {
+                        tooltipInner: (0, Vu.jsx)(Vu.Fragment, {
+                          children: uu("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, cU.jsx)(QU.e, {
+                        children: (0, Vu.jsx)(Tu.e, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            CU((0, NP.f)(hU, gU)), (0, MP.h)(RU.name, !0, {
+                            Su((0, qm.g)(pu, yu)), (0, im.d)(Ru.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7290,19 +7290,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, cU.jsx)(TU.c, {
+                          children: (0, Vu.jsx)(Ju.c, {
                             name: "check"
                           })
                         })
-                      }), (0, cU.jsx)(DU.g, {
-                        tooltipInner: (0, cU.jsx)(cU.Fragment, {
-                          children: UU("general:decline")
+                      }), (0, Vu.jsx)(qu.i, {
+                        tooltipInner: (0, Vu.jsx)(Vu.Fragment, {
+                          children: uu("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, cU.jsx)(QU.g, {
+                        children: (0, Vu.jsx)(Tu.f, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            CU((0, NP.f)(hU, gU)), (0, MP.h)(RU.name, !1, {
+                            Su((0, qm.g)(pu, yu)), (0, im.d)(Ru.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7310,62 +7310,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, cU.jsx)(TU.c, {
+                          children: (0, Vu.jsx)(Ju.c, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${RU.name}_${RU.isError}`)
+                    }, `${Ru.name}_${Ru.isError}`)
                   }))
                 })
               })]
-            }), (0, cU.jsx)(FP.k, {})]
-          }), (0, cU.jsxs)("div", {
+            }), (0, Vu.jsx)(wm.h, {})]
+          }), (0, Vu.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, cU.jsxs)("div", {
+            children: [(0, Vu.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, cU.jsx)(kP.b, {
-                label: UU("socialBar:party")
-              }), (0, cU.jsx)(sP.c, {})]
-            }), (0, cU.jsxs)("div", {
+              children: [(0, Vu.jsx)(Fm.b, {
+                label: uu("socialBar:party")
+              }), (0, Vu.jsx)(Lm.d, {})]
+            }), (0, Vu.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, cU.jsx)(kP.b, {
-                label: (0, cU.jsxs)(cU.Fragment, {
-                  children: [(0, cU.jsx)(TU.c, {
-                    name: DP.b
-                  }), " ", UU("socialBar:friends")]
+              children: [(0, Vu.jsx)(Fm.b, {
+                label: (0, Vu.jsxs)(Vu.Fragment, {
+                  children: [(0, Vu.jsx)(Ju.c, {
+                    name: Ym.e
+                  }), " ", uu("socialBar:friends")]
                 }),
-                meta: (0, cU.jsxs)(cU.Fragment, {
-                  children: [pU.length, pU.length >= (0, LU.e)(GU.getPlayerRanks()) && (0, cU.jsx)("span", {
+                meta: (0, Vu.jsxs)(Vu.Fragment, {
+                  children: [Ku.length, Ku.length >= (0, Ou.c)(ru.getPlayerRanks()) && (0, Vu.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: UU("socialBar:limitReached")
+                    children: uu("socialBar:limitReached")
                   })]
                 })
-              }), gU && (0, cU.jsx)("div", {
+              }), yu && (0, Vu.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, cU.jsx)(IU.d, {})
-              }), !gU && 0 === pU.length && (0, cU.jsx)("div", {
+                children: (0, Vu.jsx)(Cu.b, {})
+              }), !yu && 0 === Ku.length && (0, Vu.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: UU("socialBar:noFriends")
-              }), !gU && pU.length > 0 && (0, cU.jsx)("div", {
+                children: uu("socialBar:noFriends")
+              }), !yu && Ku.length > 0 && (0, Vu.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, cU.jsx)(jp.d, {
+                children: (0, Vu.jsx)(rK.e, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [pU],
-                  children: pU.map(((UU, gU) => (0, cU.jsx)(yP.c, {
-                    playerSocialPreview: UU,
+                  observerUpdateDeps: [Ku],
+                  children: Ku.map(((uu, yu) => (0, Vu.jsx)(zm.f, {
+                    playerSocialPreview: uu,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: UU => {
-                      kU.b.removeFriendFromState(UU)
+                    onFriendRemoved: uu => {
+                      Zu.c.removeFriendFromState(uu)
                     },
-                    zIndex: pU.length - gU,
-                    children: (0, cU.jsx)(yP.b, {
-                      friend: UU,
-                      followsLeader: RU,
+                    zIndex: Ku.length - yu,
+                    children: (0, Vu.jsx)(zm.d, {
+                      friend: uu,
+                      followsLeader: Ru,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${UU.name}_${UU.isError}`)))
+                  }, `${uu.name}_${uu.isError}`)))
                 })
               })]
             })]
@@ -7373,231 +7373,231 @@ export const modules = {
         })
       })
     }
-    var UT = gU(2341);
-    const RT = UU => {
+    var fm = yu(2423);
+    const uJ = uu => {
         let {
-          action: RU,
-          padAction: gU
-        } = UU;
+          action: Ru,
+          padAction: yu
+        } = uu;
         const {
-          isTouchScreen: tU
-        } = (0, wU.l)(["isTouchScreen"]), pU = (0, Et.o)();
-        return tU && !pU ? null : (0, cU.jsx)(lg.b, {
+          isTouchScreen: Eu
+        } = (0, eu.j)(["isTouchScreen"]), Ku = (0, QE.n)();
+        return Eu && !Ku ? null : (0, Vu.jsx)(ay.b, {
           className: "EverythingMenuTabKey",
-          noaAction: RU,
+          noaAction: Ru,
           padHidesKey: !0,
-          padMenuShortcut: gU
+          padMenuShortcut: yu
         })
       },
-      gT = (0, tU.memo)((function() {
+      RJ = (0, Eu.memo)((function() {
         const {
-          t: UU
-        } = (0, PU.B)(), {
-          gameState: RU,
-          openEverythingMenuName: gU,
-          initSdkSelectorFinished: pU,
-          crosshairGameView: TU
-        } = (0, wU.l)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: qU
-        } = (0, uU.e)(), KU = (0, sU.purchasesAllowed)(), GU = (0, SU.G)(), jU = (UU, RU) => (0, cU.jsx)(RT, {
-          action: UU,
-          padAction: RU
-        }), [CU, hU] = (0, tU.useState)(null), WU = (0, tU.useRef)(null), fU = {
-          ..."inGame" === RU ? {} : (0, QU.R)({
+          t: uu
+        } = (0, mu.E)(), {
+          gameState: Ru,
+          openEverythingMenuName: yu,
+          initSdkSelectorFinished: Ku,
+          crosshairGameView: Ju
+        } = (0, eu.j)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: Nu
+        } = (0, xu.d)(), Xu = (0, Fu.purchasesAllowed)(), ru = (0, zu.F)(), Bu = (uu, Ru) => (0, Vu.jsx)(uJ, {
+          action: uu,
+          padAction: Ru
+        }), [Su, pu] = (0, Eu.useState)(null), ju = (0, Eu.useRef)(null), Hu = {
+          ..."inGame" === Ru ? {} : (0, Tu.U)({
             focusOnClick: !1
           }),
-          ...ht.h
-        }, xU = null !== gU, mU = gU !== KR.n.COSMETIC_SHOP && !TU;
-        async function IU() {
+          ...pE.h
+        }, du = null !== yu, bu = yu !== XR.s.COSMETIC_SHOP && !Ju;
+        async function Cu() {
           await async function() {
-            if (!CU) return;
-            await CU(), hU(null)
-          }(), wU.b.set({
+            if (!Su) return;
+            await Su(), pu(null)
+          }(), eu.d.set({
             openEverythingMenuName: null
           })
         }
-        const JU = (0, tU.useMemo)((() => "inGame" === RU ? {
-          text: UU("settingsMenu:exitGame"),
+        const ku = (0, Eu.useMemo)((() => "inGame" === Ru ? {
+          text: uu("settingsMenu:exitGame"),
           onClick: () => {
-            (0, dP.e)()
+            (0, lm.b)()
           }
-        } : (0, oU.e)() ? {
-          text: UU("settingsMenu:exitGame"),
+        } : (0, Mu.c)() ? {
+          text: uu("settingsMenu:exitGame"),
           onClick: () => {
-            ER.m.discordActivity().then((UU => {
-              UU.exit("User exited the game")
+            QR.p.discordActivity().then((uu => {
+              uu.exit("User exited the game")
             }))
           }
-        } : null), [RU, UU]);
-        const nU = (0, cU.jsx)("div", {
+        } : null), [Ru, uu]);
+        const Au = (0, Vu.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
           onClick: () => {
-            IU()
+            Cu()
           },
-          children: (0, cU.jsx)(QU.h, {
+          children: (0, Vu.jsx)(Tu.h, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, cU.jsx)(Qt.d, {
-          showing: xU,
+        return (0, Vu.jsx)(TE.c, {
+          showing: du,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: gU === KR.n.SHOP,
-          doGameplayStartStopOnShow: "inGame" === RU,
-          children: (0, cU.jsx)(Wt.c, {
+          keepsMovement: yu === XR.s.SHOP,
+          doGameplayStartStopOnShow: "inGame" === Ru,
+          children: (0, Vu.jsx)(jE.c, {
             className: "EverythingMenuContainer",
-            show: xU && !TU,
-            children: (0, cU.jsx)(et.d, {
+            show: du && !Ju,
+            children: (0, Vu.jsx)(WE.e, {
               close: () => {
-                IU()
+                Cu()
               },
               togglePointerLock: !1,
-              children: (0, cU.jsxs)("div", {
+              children: (0, Vu.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, tE.k)(gU) && (0, cU.jsxs)("div", {
+                children: [!(0, RQ.l)(yu) && (0, Vu.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, cU.jsxs)("div", {
+                  children: [(0, Vu.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [JU && (0, cU.jsx)(QU.d, {
+                    children: [ku && (0, Vu.jsx)(Tu.b, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        JU.onClick()
+                        ku.onClick()
                       },
-                      children: JU.text
-                    }), xU && KU && (0, cU.jsx)("div", {
-                      ...fU,
+                      children: ku.text
+                    }), du && Xu && (0, Vu.jsx)("div", {
+                      ...Hu,
                       className: "EverythingMenuWallet",
-                      title: UU("homePage:getPremiumCurrency"),
+                      title: uu("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, SU.m)({
+                        (0, zu.n)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, cU.jsx)(vP.e, {})
+                      children: (0, Vu.jsx)(tm.h, {})
                     })]
-                  }), (0, cU.jsxs)("div", {
+                  }), (0, Vu.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, cU.jsxs)("div", {
-                      ...fU,
+                    children: [(0, Vu.jsxs)("div", {
+                      ...Hu,
                       "data-pad-tab": !0,
-                      "data-pad-selected": gU === KR.n.SETTINGS ? "true" : void 0,
-                      className: EU()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gU === KR.n.SETTINGS
+                      "data-pad-selected": yu === XR.s.SETTINGS ? "true" : void 0,
+                      className: Qu()("EverythingMenuTab", {
+                        EverythingMenuTabActive: yu === XR.s.SETTINGS
                       }),
                       onClick: () => {
-                        wU.b.set({
-                          openEverythingMenuName: KR.n.SETTINGS
+                        eu.d.set({
+                          openEverythingMenuName: XR.s.SETTINGS
                         })
                       },
-                      children: [UU("general:settings"), jU("OpenSettings", "pause")]
-                    }), (0, cU.jsxs)("div", {
-                      ...fU,
+                      children: [uu("general:settings"), Bu("OpenSettings", "pause")]
+                    }), (0, Vu.jsxs)("div", {
+                      ...Hu,
                       "data-pad-tab": !0,
-                      "data-pad-selected": gU === KR.n.CUSTOMISATION ? "true" : void 0,
-                      className: EU()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gU === KR.n.CUSTOMISATION
+                      "data-pad-selected": yu === XR.s.CUSTOMISATION ? "true" : void 0,
+                      className: Qu()("EverythingMenuTab", {
+                        EverythingMenuTabActive: yu === XR.s.CUSTOMISATION
                       }),
                       onClick: () => {
-                        wU.b.set({
-                          openEverythingMenuName: KR.n.CUSTOMISATION
+                        eu.d.set({
+                          openEverythingMenuName: XR.s.CUSTOMISATION
                         })
                       },
-                      children: [UU("general:player"), jU("OpenCharacterCustomization")]
-                    }), eU.featureFlags.useSocialFeatures && (0, cU.jsxs)("div", {
-                      ...fU,
+                      children: [uu("general:player"), Bu("OpenCharacterCustomization")]
+                    }), Wu.featureFlags.useSocialFeatures && (0, Vu.jsxs)("div", {
+                      ...Hu,
                       "data-pad-tab": !0,
-                      "data-pad-selected": gU === KR.n.SOCIAL ? "true" : void 0,
-                      className: EU()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gU === KR.n.SOCIAL
+                      "data-pad-selected": yu === XR.s.SOCIAL ? "true" : void 0,
+                      className: Qu()("EverythingMenuTab", {
+                        EverythingMenuTabActive: yu === XR.s.SOCIAL
                       }),
-                      ...(0, lU.d)({
+                      ...(0, au.c)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, gU === KR.n.SOCIAL),
+                      }, yu === XR.s.SOCIAL),
                       onClick: () => {
-                        wU.b.set({
-                          openEverythingMenuName: KR.n.SOCIAL
+                        eu.d.set({
+                          openEverythingMenuName: XR.s.SOCIAL
                         })
                       },
-                      children: [UU("socialBar:social"), (0, cU.jsx)(UT.e, {})]
-                    }), KU && (0, cU.jsxs)("div", {
-                      ...fU,
+                      children: [uu("socialBar:social"), (0, Vu.jsx)(fm.d, {})]
+                    }), Xu && (0, Vu.jsxs)("div", {
+                      ...Hu,
                       "data-pad-tab": !0,
-                      "data-pad-selected": gU === KR.n.COSMETIC_SHOP ? "true" : void 0,
-                      className: EU()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: gU === KR.n.COSMETIC_SHOP
+                      "data-pad-selected": yu === XR.s.COSMETIC_SHOP ? "true" : void 0,
+                      className: Qu()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: yu === XR.s.COSMETIC_SHOP
                       }),
                       onClick: () => {
-                        wU.b.set({
-                          openEverythingMenuName: KR.n.COSMETIC_SHOP
+                        eu.d.set({
+                          openEverythingMenuName: XR.s.COSMETIC_SHOP
                         })
                       },
-                      children: [(0, cU.jsx)("span", {
+                      children: [(0, Vu.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: UU("store:title")
-                      }), "new" === GU && (0, cU.jsx)(KP, {}), "dot" === GU && (0, cU.jsx)("span", {
+                        children: uu("store:title")
+                      }), "new" === ru && (0, Vu.jsx)(Jm, {}), "dot" === ru && (0, Vu.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === RU && (0, cU.jsxs)("div", {
-                      ...fU,
+                    }), "inGame" === Ru && (0, Vu.jsxs)("div", {
+                      ...Hu,
                       "data-pad-tab": !0,
-                      "data-pad-selected": gU === KR.n.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: EU()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gU === KR.n.LOBBY_LEADERBOARD
+                      "data-pad-selected": yu === XR.s.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: Qu()("EverythingMenuTab", {
+                        EverythingMenuTabActive: yu === XR.s.LOBBY_LEADERBOARD
                       }),
                       onClick: () => {
-                        wU.b.set({
-                          openEverythingMenuName: KR.n.LOBBY_LEADERBOARD
+                        eu.d.set({
+                          openEverythingMenuName: XR.s.LOBBY_LEADERBOARD
                         })
                       },
-                      children: [UU("general:lobby"), jU("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [uu("general:lobby"), Bu("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, cU.jsx)("div", {
+                  }), (0, Vu.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: nU
+                    children: Au
                   })]
-                }), (0, tE.k)(gU) && nU, (0, cU.jsxs)("div", {
+                }), (0, RQ.l)(yu) && Au, (0, Vu.jsxs)("div", {
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === RU ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === Ru ? "0.85" : "1"
                   },
-                  children: [(0, cU.jsx)(ct, {
-                    show: gU === KR.n.SETTINGS,
-                    setBeforeResumeCallback: hU
-                  }), (0, cU.jsx)(Ct, {
-                    show: gU === KR.n.CUSTOMISATION
-                  }), (0, cU.jsx)(tU.Suspense, {
+                  children: [(0, Vu.jsx)(VE, {
+                    show: yu === XR.s.SETTINGS,
+                    setBeforeResumeCallback: pu
+                  }), (0, Vu.jsx)(SE, {
+                    show: yu === XR.s.CUSTOMISATION
+                  }), (0, Vu.jsx)(Eu.Suspense, {
                     fallback: null,
-                    children: (0, cU.jsx)(Mp, {
-                      show: gU === KR.n.SHOP
+                    children: (0, Vu.jsx)(iK, {
+                      show: yu === XR.s.SHOP
                     })
-                  }), (0, cU.jsx)(PE, {
-                    show: gU === KR.n.LOBBY_LEADERBOARD
-                  }), (0, cU.jsx)(XP, {
-                    show: gU === KR.n.COSMETIC_SHOP
-                  }), (0, cU.jsx)(lP, {
-                    show: gU === KR.n.SOCIAL
+                  }), (0, Vu.jsx)(KQ, {
+                    show: yu === XR.s.LOBBY_LEADERBOARD
+                  }), (0, Vu.jsx)(sm, {
+                    show: yu === XR.s.COSMETIC_SHOP
+                  }), (0, Vu.jsx)(Om, {
+                    show: yu === XR.s.SOCIAL
                   })]
-                }), !(0, eU.isMobileApp)() && (0, ft.h)(qU.getPlayerRanks()) && (0, cU.jsx)(Wt.c, {
-                  ref: WU,
+                }), !(0, Wu.isMobileApp)() && (0, HE.c)(Nu.getPlayerRanks()) && (0, Vu.jsx)(jE.c, {
+                  ref: ju,
                   className: "EverythingMenuBannerDiv",
-                  show: mU,
+                  show: bu,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, cU.jsx)(HP.b, {
+                  children: (0, Vu.jsx)(gm.c, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: WU
+                      parentRef: ju
                     },
-                    showing: xU && mU,
+                    showing: du && bu,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -7609,135 +7609,135 @@ export const modules = {
         })
       }))
   },
-  8991: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => EU
+  9057: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Qu
     });
-    var tU = gU(311),
-      pU = gU(8994);
+    var Eu = yu(343),
+      Ku = yu(9064);
 
-    function EU(UU, RU, gU) {
-      const EU = Object.entries(RU).sort(((UU, RU) => RU[1] - UU[1])),
-        PU = (0, tU.xb)(UU);
-      PU.push(UU ? "\n\n" : "\n");
-      for (const [pU, CU] of EU) {
-        var TU, qU, KU;
-        const UU = null !== (TU = null === gU || void 0 === gU || null === (qU = gU[pU]) || void 0 === qU ? void 0 : qU.icon) && void 0 !== TU ? TU : `${pU} Enchantment`;
-        PU.push({
-          icon: UU,
+    function Qu(uu, Ru, yu) {
+      const Qu = Object.entries(Ru).sort(((uu, Ru) => Ru[1] - uu[1])),
+        mu = (0, Eu.xb)(uu);
+      mu.push(uu ? "\n\n" : "\n");
+      for (const [Ku, Su] of Qu) {
+        var Ju, Nu, Xu;
+        const uu = null !== (Ju = null === yu || void 0 === yu || null === (Nu = yu[Ku]) || void 0 === Nu ? void 0 : Nu.icon) && void 0 !== Ju ? Ju : `${Ku} Enchantment`;
+        mu.push({
+          icon: uu,
           style: {
             fontSize: "1.5rem"
           }
-        }), PU.push({
-          str: `${pU} ${null!==(KU=(0,tU.V)(CU))&&void 0!==KU?KU:CU}\n`
+        }), mu.push({
+          str: `${Ku} ${null!==(Xu=(0,Eu.U)(Su))&&void 0!==Xu?Xu:Su}\n`
         })
       }
-      PU.push({
+      mu.push({
         str: "\n"
       });
-      for (const [tU, CU] of EU) {
-        var cU, GU, jU, uU;
-        const UU = null !== (cU = null === gU || void 0 === gU || null === (GU = gU[tU]) || void 0 === GU ? void 0 : GU.icon) && void 0 !== cU ? cU : `${tU} Enchantment`,
-          RU = null !== (jU = null === gU || void 0 === gU || null === (uU = gU[tU]) || void 0 === uU ? void 0 : uU.description) && void 0 !== jU ? jU : (0, pU.m)(tU);
-        PU.push({
-          icon: UU,
+      for (const [Eu, Su] of Qu) {
+        var Vu, ru, Bu, xu;
+        const uu = null !== (Vu = null === yu || void 0 === yu || null === (ru = yu[Eu]) || void 0 === ru ? void 0 : ru.icon) && void 0 !== Vu ? Vu : `${Eu} Enchantment`,
+          Ru = null !== (Bu = null === yu || void 0 === yu || null === (xu = yu[Eu]) || void 0 === xu ? void 0 : xu.description) && void 0 !== Bu ? Bu : (0, Ku.j)(Eu);
+        mu.push({
+          icon: uu,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), PU.push({
-          str: RU,
+        }), mu.push({
+          str: Ru,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), PU.push({
+        }), mu.push({
           str: "\n"
         })
       }
-      return PU
+      return mu
     }
   },
-  9001: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => KU,
-      d: () => WU,
-      e: () => QU,
-      f: () => qU,
-      i: () => eU,
-      l: () => cU,
-      m: () => jU,
-      q: () => hU,
-      t: () => GU
+  9072: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Xu,
+      e: () => ju,
+      h: () => Tu,
+      k: () => Nu,
+      n: () => Wu,
+      p: () => Vu,
+      t: () => Bu,
+      w: () => pu,
+      y: () => ru
     });
-    var tU = gU(299),
-      pU = gU(581),
-      EU = gU(311),
-      PU = gU(3931),
-      TU = gU(8991);
+    var Eu = yu(330),
+      Ku = yu(610),
+      Qu = yu(343),
+      mu = yu(4042),
+      Ju = yu(9057);
 
-    function qU(UU, RU) {
-      var gU;
+    function Nu(uu, Ru) {
+      var yu;
       let {
-        player: tU,
-        chestOrCreative: pU
-      } = UU;
-      var EU;
-      return RU < tU.length ? null !== (EU = tU[RU]) && void 0 !== EU ? EU : null : null !== (gU = pU[RU - tU.length]) && void 0 !== gU ? gU : null
+        player: Eu,
+        chestOrCreative: Ku
+      } = uu;
+      var Qu;
+      return Ru < Eu.length ? null !== (Qu = Eu[Ru]) && void 0 !== Qu ? Qu : null : null !== (yu = Ku[Ru - Eu.length]) && void 0 !== yu ? yu : null
     }
 
-    function KU(UU) {
-      var RU;
-      return null !== (RU = UU.amount) && void 0 !== RU ? RU : 0
+    function Xu(uu) {
+      var Ru;
+      return null !== (Ru = uu.amount) && void 0 !== Ru ? Ru : 0
     }
 
-    function cU(UU) {
-      return 0 === UU.button || void 0 === UU.button
+    function Vu(uu) {
+      return 0 === uu.button || void 0 === uu.button
     }
 
-    function GU(UU) {
-      return !!UU.shiftKey
+    function ru(uu) {
+      return !!uu.shiftKey
     }
 
-    function jU(UU) {
-      return "touches" in UU || "touch" === UU.pointerType || "pen" === UU.pointerType
+    function Bu(uu) {
+      return "touches" in uu || "touch" === uu.pointerType || "pen" === uu.pointerType
     }
-    const uU = new Set,
-      CU = 50;
+    const xu = new Set,
+      Su = 50;
 
-    function hU(UU, RU) {
-      var gU;
-      const tU = null === (gU = UU[RU]) || void 0 === gU ? void 0 : gU.displayName;
-      return (0, pU.E)(tU) ? "string" !== typeof RU ? "" : (!uU.has(RU) && uU.size < CU && (uU.add(RU), console.warn(`No item called "${RU}", so its hover shows the name as given`)), RU) : tU
+    function pu(uu, Ru) {
+      var yu;
+      const Eu = null === (yu = uu[Ru]) || void 0 === yu ? void 0 : yu.displayName;
+      return (0, Ku.E)(Eu) ? "string" !== typeof Ru ? "" : (!xu.has(Ru) && xu.size < Su && (xu.add(Ru), console.warn(`No item called "${Ru}", so its hover shows the name as given`)), Ru) : Eu
     }
 
-    function QU(UU, RU, gU) {
-      var qU, KU, cU, GU, jU, uU, CU, QU, eU, WU, fU, xU, mU, IU;
-      const JU = UU.attributes,
-        wU = null !== (qU = null === (KU = RU[UU.name]) || void 0 === KU ? void 0 : KU.rootName) && void 0 !== qU ? qU : UU.name,
-        nU = null !== (cU = null !== (GU = JU.customDisplayName) && void 0 !== GU ? GU : null === (jU = RU[UU.name]) || void 0 === jU ? void 0 : jU.displayName) && void 0 !== cU ? cU : hU(RU, wU);
-      let bU = nU;
-      const oU = null === (uU = JU.customAttributes) || void 0 === uU ? void 0 : uU.enchantmentTier;
-      oU && (bU = (0, EU.xb)(nU, {
-        colour: EU.sb[oU]
+    function Tu(uu, Ru, yu) {
+      var Nu, Xu, Vu, ru, Bu, xu, Su, Tu, Wu, ju, Hu, du, bu, Cu;
+      const ku = uu.attributes,
+        eu = null !== (Nu = null === (Xu = Ru[uu.name]) || void 0 === Xu ? void 0 : Xu.rootName) && void 0 !== Nu ? Nu : uu.name,
+        Au = null !== (Vu = null !== (ru = ku.customDisplayName) && void 0 !== ru ? ru : null === (Bu = Ru[uu.name]) || void 0 === Bu ? void 0 : Bu.displayName) && void 0 !== Vu ? Vu : pu(Ru, eu);
+      let Du = Au;
+      const Mu = null === (xu = ku.customAttributes) || void 0 === xu ? void 0 : xu.enchantmentTier;
+      Mu && (Du = (0, Qu.xb)(Au, {
+        colour: Qu.tb[Mu]
       }));
-      const ZU = null !== (CU = null !== (QU = null !== (eU = function(UU, RU) {
-        var gU;
-        if (void 0 === UU || null !== (gU = RU.customAttributes) && void 0 !== gU && gU.author) return UU;
-        const pU = (0, tU.dc)(UU);
-        return pU.every((UU => "string" === typeof UU)) ? UU : pU.map((UU => "string" === typeof UU ? UU : {
-          icon: UU.icon,
+      const Iu = null !== (Su = null !== (Tu = null !== (Wu = function(uu, Ru) {
+        var yu;
+        if (void 0 === uu || null !== (yu = Ru.customAttributes) && void 0 !== yu && yu.author) return uu;
+        const Ku = (0, Eu.ic)(uu);
+        return Ku.every((uu => "string" === typeof uu)) ? uu : Ku.map((uu => "string" === typeof uu ? uu : {
+          icon: uu.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(JU.customDescription, JU)) && void 0 !== eU ? eU : null === (WU = RU[UU.name]) || void 0 === WU ? void 0 : WU.description) && void 0 !== QU ? QU : null === (fU = RU[wU]) || void 0 === fU ? void 0 : fU.description) && void 0 !== CU ? CU : "";
-      let aU = ZU;
-      if (null !== (xU = JU.customAttributes) && void 0 !== xU && xU.enchantments) aU = (0, TU.e)(ZU, JU.customAttributes.enchantments, JU.customAttributes.enchantmentData);
-      else if (gU[wU]) aU = (0, EU.xb)(ZU), aU.push({
+      }(ku.customDescription, ku)) && void 0 !== Wu ? Wu : null === (ju = Ru[uu.name]) || void 0 === ju ? void 0 : ju.description) && void 0 !== Tu ? Tu : null === (Hu = Ru[eu]) || void 0 === Hu ? void 0 : Hu.description) && void 0 !== Su ? Su : "";
+      let Gu = Iu;
+      if (null !== (du = ku.customAttributes) && void 0 !== du && du.enchantments) Gu = (0, Ju.d)(Iu, ku.customAttributes.enchantments, ku.customAttributes.enchantmentData);
+      else if (yu[eu]) Gu = (0, Qu.xb)(Iu), Gu.push({
         str: "\n"
-      }), aU.push({
+      }), Gu.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -7745,373 +7745,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (mU = JU.customAttributes) && void 0 !== mU && mU.mobSettings) {
-        var YU, BU;
-        const UU = JU.customAttributes.mobSettings;
-        var VU, rU;
-        if (aU = [], (0, pU.E)(JU.customAttributes.health) || (aU.push({
+      else if (null !== (bu = ku.customAttributes) && void 0 !== bu && bu.mobSettings) {
+        var Uu, nu;
+        const uu = ku.customAttributes.mobSettings;
+        var su, tu;
+        if (Gu = [], (0, Ku.E)(ku.customAttributes.health) || (Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), aU.push({
+          }), Gu.push({
             str: " "
-          }), aU.push({
-            str: JU.customAttributes.health.toString()
-          }), (0, pU.E)(UU.maxHealth) || (aU.push({
+          }), Gu.push({
+            str: ku.customAttributes.health.toString()
+          }), (0, Ku.E)(uu.maxHealth) || (Gu.push({
             str: "/"
-          }), aU.push({
-            str: UU.maxHealth.toString()
-          }))), !(0, pU.E)(UU.attackDamage) && UU.attackDamage > 0 && (aU.push({
+          }), Gu.push({
+            str: uu.maxHealth.toString()
+          }))), !(0, Ku.E)(uu.attackDamage) && uu.attackDamage > 0 && (Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), aU.push({
+          }), Gu.push({
             str: " "
-          }), aU.push({
-            str: UU.attackDamage.toString()
-          })), !(0, pU.E)(UU.secondaryAttackDamage) && UU.secondaryAttackDamage > 0 && (aU.push({
+          }), Gu.push({
+            str: uu.attackDamage.toString()
+          })), !(0, Ku.E)(uu.secondaryAttackDamage) && uu.secondaryAttackDamage > 0 && (Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), aU.push({
+          }), Gu.push({
             str: " "
-          }), aU.push({
-            str: UU.secondaryAttackDamage.toString()
-          })), (0, pU.E)(UU.baseRunningSpeed) || (aU.push({
+          }), Gu.push({
+            str: uu.secondaryAttackDamage.toString()
+          })), (0, Ku.E)(uu.baseRunningSpeed) || (Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), aU.push({
+          }), Gu.push({
             str: " "
-          }), aU.push({
-            str: UU.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === UU.metaInfo) aU.push({
+          }), Gu.push({
+            str: uu.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === uu.metaInfo) Gu.push({
           str: "\n"
-        }), aU.push({
+        }), Gu.push({
           str: {
             translationKey: "general:has"
           }
-        }), aU.push({
+        }), Gu.push({
           str: " "
-        }), aU.push({
-          icon: null !== (VU = null === (rU = UU.tameInfo) || void 0 === rU ? void 0 : rU.saddleItemName) && void 0 !== VU ? VU : "Saddle",
+        }), Gu.push({
+          icon: null !== (su = null === (tu = uu.tameInfo) || void 0 === tu ? void 0 : tu.saddleItemName) && void 0 !== su ? su : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (aU.push({
+        if (Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             str: "\n"
-          }), UU.petInfo && null !== (YU = UU.tameInfo) && void 0 !== YU && YU.supportsFriendship) {
-          const RU = PU.b.getIconsFromFriendshipPoints(UU.petInfo.friendshipPoints);
-          for (const UU of RU) aU.push({
-            icon: UU,
+          }), uu.petInfo && null !== (Uu = uu.tameInfo) && void 0 !== Uu && Uu.supportsFriendship) {
+          const Ru = mu.b.getIconsFromFriendshipPoints(uu.petInfo.friendshipPoints);
+          for (const uu of Ru) Gu.push({
+            icon: uu,
             style: {
               fontSize: "1.5em"
             }
           });
-          aU.push({
+          Gu.push({
             str: "\n"
           });
-          const gU = PU.b.getMobHungerLevel(UU.petInfo.lastFedAt);
-          for (const UU of PU.b.hungerLevelIcons[gU]) aU.push({
-            icon: UU,
+          const yu = mu.b.getMobHungerLevel(uu.petInfo.lastFedAt);
+          for (const uu of mu.b.hungerLevelIcons[yu]) Gu.push({
+            icon: uu,
             style: {
               fontSize: "1.5em"
             }
           });
-          aU.push({
+          Gu.push({
             str: " "
-          }), aU.push({
-            str: PU.b.hungerLevelTranslations[gU],
+          }), Gu.push({
+            str: mu.b.hungerLevelTranslations[yu],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (UU.tameInfo && null !== (BU = UU.tameInfo) && void 0 !== BU && BU.supportsFriendship) {
-          var XU, vU;
-          let RU = null !== (XU = UU.tameInfo.likedFoods) && void 0 !== XU ? XU : [];
-          aU.push({
+        if (uu.tameInfo && null !== (nu = uu.tameInfo) && void 0 !== nu && nu.supportsFriendship) {
+          var lu, gu;
+          let Ru = null !== (lu = uu.tameInfo.likedFoods) && void 0 !== lu ? lu : [];
+          Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: PU.b.feedTextColours[PU.b.MobFoodType.Superliked]
+              color: mu.b.feedTextColours[mu.b.MobFoodType.Superliked]
             }
-          }), aU.push({
+          }), Gu.push({
             str: " "
-          }), null !== (vU = UU.petInfo) && void 0 !== vU && vU.superlikedFoodKnown ? (aU.push({
-            icon: UU.petInfo.superlikedFood,
+          }), null !== (gu = uu.petInfo) && void 0 !== gu && gu.superlikedFoodKnown ? (Gu.push({
+            icon: uu.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), RU = RU.filter((RU => RU !== UU.petInfo.superlikedFood))) : aU.push({
+          }), Ru = Ru.filter((Ru => Ru !== uu.petInfo.superlikedFood))) : Gu.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), aU.push({
+          }), Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: PU.b.feedTextColours[PU.b.MobFoodType.Liked]
+              color: mu.b.feedTextColours[mu.b.MobFoodType.Liked]
             }
-          }), aU.push({
+          }), Gu.push({
             str: " "
           });
-          for (const UU of RU) aU.push({
-            icon: UU,
+          for (const uu of Ru) Gu.push({
+            icon: uu,
             style: {
               fontSize: "1.5em"
             }
           });
-          aU.push({
+          Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: PU.b.feedTextColours[PU.b.MobFoodType.Neutral]
+              color: mu.b.feedTextColours[mu.b.MobFoodType.Neutral]
             }
-          }), aU.push({
+          }), Gu.push({
             str: " "
           });
-          for (const gU of null !== (dU = UU.tameInfo.neutralFoods) && void 0 !== dU ? dU : []) {
-            var dU;
-            aU.push({
-              icon: gU,
+          for (const yu of null !== (cu = uu.tameInfo.neutralFoods) && void 0 !== cu ? cu : []) {
+            var cu;
+            Gu.push({
+              icon: yu,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          aU.push({
+          Gu.push({
             str: "\n"
-          }), aU.push({
+          }), Gu.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: PU.b.feedTextColours[PU.b.MobFoodType.Disliked]
+              color: mu.b.feedTextColours[mu.b.MobFoodType.Disliked]
             }
-          }), aU.push({
+          }), Gu.push({
             str: " "
           });
-          for (const gU of null !== (HU = UU.tameInfo.dislikedFoods) && void 0 !== HU ? HU : []) {
-            var HU;
-            aU.push({
-              icon: gU,
+          for (const yu of null !== (Lu = uu.tameInfo.dislikedFoods) && void 0 !== Lu ? Lu : []) {
+            var Lu;
+            Gu.push({
+              icon: yu,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        aU.length > 0 ? (aU.shift(), aU.unshift(...(0, EU.xb)(ZU))) : aU = (0, EU.xb)(ZU)
+        Gu.length > 0 ? (Gu.shift(), Gu.unshift(...(0, Qu.xb)(Iu))) : Gu = (0, Qu.xb)(Iu)
       }
       return {
-        name: bU,
-        desc: aU,
-        fontStyle: null !== (IU = JU.customAttributes) && void 0 !== IU && IU.author ? "italic" : "normal"
+        name: Du,
+        desc: Gu,
+        fontStyle: null !== (Cu = ku.customAttributes) && void 0 !== Cu && Cu.author ? "italic" : "normal"
       }
     }
 
-    function eU(UU, RU, gU, tU) {
-      const pU = qU(UU, gU),
-        EU = qU(UU, tU);
-      if (!pU) return !1;
-      const PU = RU[pU.name].armourReduction,
-        TU = RU[EU.name].armourReduction;
-      if (TU === PU) {
-        var KU, cU, GU, jU;
-        const UU = null !== (KU = null === (cU = pU.attributes.customAttributes) || void 0 === cU ? void 0 : cU.enchantmentTier) && void 0 !== KU ? KU : "Tier 0",
-          RU = null !== (GU = null === (jU = EU.attributes.customAttributes) || void 0 === jU ? void 0 : jU.enchantmentTier) && void 0 !== GU ? GU : "Tier 0";
-        return parseInt(UU.replace("Tier ", "")) >= parseInt(RU.replace("Tier ", ""))
+    function Wu(uu, Ru, yu, Eu) {
+      const Ku = Nu(uu, yu),
+        Qu = Nu(uu, Eu);
+      if (!Ku) return !1;
+      const mu = Ru[Ku.name].armourReduction,
+        Ju = Ru[Qu.name].armourReduction;
+      if (Ju === mu) {
+        var Xu, Vu, ru, Bu;
+        const uu = null !== (Xu = null === (Vu = Ku.attributes.customAttributes) || void 0 === Vu ? void 0 : Vu.enchantmentTier) && void 0 !== Xu ? Xu : "Tier 0",
+          Ru = null !== (ru = null === (Bu = Qu.attributes.customAttributes) || void 0 === Bu ? void 0 : Bu.enchantmentTier) && void 0 !== ru ? ru : "Tier 0";
+        return parseInt(uu.replace("Tier ", "")) >= parseInt(Ru.replace("Tier ", ""))
       }
-      return PU > TU
+      return mu > Ju
     }
 
-    function WU(UU) {
-      let RU;
-      if ("number" === typeof UU) {
-        const gU = document.querySelector(`[data-inven-idx="${UU}"]`);
-        if (!gU) return null;
-        RU = gU.getBoundingClientRect()
-      } else RU = UU.getBoundingClientRect();
+    function ju(uu) {
+      let Ru;
+      if ("number" === typeof uu) {
+        const yu = document.querySelector(`[data-inven-idx="${uu}"]`);
+        if (!yu) return null;
+        Ru = yu.getBoundingClientRect()
+      } else Ru = uu.getBoundingClientRect();
       return {
-        x: RU.left + RU.width / 2,
-        y: RU.top + RU.height / 2
+        x: Ru.left + Ru.width / 2,
+        y: Ru.top + Ru.height / 2
       }
     }
   },
-  8893: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => uU,
-      d: () => CU,
-      h: () => hU
+  8955: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => xu,
+      e: () => Su,
+      h: () => pu
     });
-    var tU = gU(1412),
-      pU = gU(56),
-      EU = gU(1305),
-      PU = gU(4195),
-      TU = gU(2185),
-      qU = gU(1181),
-      KU = gU(96),
-      cU = gU(1834),
-      GU = gU(1326),
-      jU = gU(1090);
+    var Eu = yu(1408),
+      Ku = yu(64),
+      Qu = yu(1269),
+      mu = yu(4301),
+      Ju = yu(2266),
+      Nu = yu(1170),
+      Xu = yu(106),
+      Vu = yu(1899),
+      ru = yu(1300),
+      Bu = yu(1079);
 
-    function uU(UU) {
+    function xu(uu) {
       let {
-        show: RU,
-        onClose: gU
-      } = UU;
+        show: Ru,
+        onClose: yu
+      } = uu;
       const {
-        requestedGameNameWithVariation: tU,
-        lobbyName: pU,
-        shownLobbyName: EU
-      } = (0, cU.k)("connectedGame"), qU = (0, TU.d)(tU, pU, !1);
-      return KU.featureFlags.canUseInviteLinks && (0, jU.jsx)(PU.d, {
-        show: RU,
-        close: gU,
+        requestedGameNameWithVariation: Eu,
+        lobbyName: Ku,
+        shownLobbyName: Qu
+      } = (0, Vu.i)("connectedGame"), Nu = (0, Ju.d)(Eu, Ku, !1);
+      return Xu.featureFlags.canUseInviteLinks && (0, Bu.jsx)(mu.e, {
+        show: Ru,
+        close: yu,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, jU.jsxs)("div", {
+        children: (0, Bu.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, jU.jsx)("div", {
+          children: [(0, Bu.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, jU.jsxs)("div", {
+          }), (0, Bu.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, jU.jsx)("div", {
+            children: [(0, Bu.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === qU ? (0, jU.jsx)(GU.d, {}) : qU, (0, jU.jsx)("br", {}), "Lobby Name: ", EU, (0, jU.jsx)("br", {}), (0, jU.jsx)("br", {}), (0, jU.jsx)("br", {}), (0, jU.jsx)("div", {
+            }), "Game: ", null === Nu ? (0, Bu.jsx)(ru.b, {}) : Nu, (0, Bu.jsx)("br", {}), "Lobby Name: ", Qu, (0, Bu.jsx)("br", {}), (0, Bu.jsx)("br", {}), (0, Bu.jsx)("br", {}), (0, Bu.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, jU.jsx)(CU, {})]
+          }), (0, Bu.jsx)(Su, {})]
         })
       })
     }
 
-    function CU() {
-      var UU;
+    function Su() {
+      var uu;
       const {
-        t: RU
-      } = (0, qU.B)(), gU = null !== (UU = hU(KU.featureFlags.canUseInviteLinks)) && void 0 !== UU ? UU : "Loading Link...", [EU, PU] = (0, pU.useState)(0), [TU, cU] = (0, pU.useReducer)((UU => UU + 1), 0);
-      return (0, pU.useEffect)((() => {
-        const UU = setTimeout((() => {
-          cU()
+        t: Ru
+      } = (0, Nu.E)(), yu = null !== (uu = pu(Xu.featureFlags.canUseInviteLinks)) && void 0 !== uu ? uu : "Loading Link...", [Qu, mu] = (0, Ku.useState)(0), [Ju, Vu] = (0, Ku.useReducer)((uu => uu + 1), 0);
+      return (0, Ku.useEffect)((() => {
+        const uu = setTimeout((() => {
+          Vu()
         }), 1100);
         return () => {
-          clearTimeout(UU)
+          clearTimeout(uu)
         }
-      }), [EU]), KU.featureFlags.canUseInviteLinks && (0, jU.jsxs)("div", {
+      }), [Qu]), Xu.featureFlags.canUseInviteLinks && (0, Bu.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, jU.jsx)("div", {
+        children: [(0, Bu.jsx)("div", {
           className: "InviteLinkInner",
-          children: gU
-        }), (0, jU.jsx)(tU.e, {
+          children: yu
+        }), (0, Bu.jsx)(Eu.e, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(gU).catch((UU => {
-              console.error("Failed to copy invite link:", UU)
-            })), PU(Date.now())
+            navigator.clipboard.writeText(yu).catch((uu => {
+              console.error("Failed to copy invite link:", uu)
+            })), mu(Date.now())
           },
-          disabled: Date.now() - EU < 1e3,
-          children: Date.now() - EU < 1e3 ? RU("general:copied") : RU("general:copy")
+          disabled: Date.now() - Qu < 1e3,
+          children: Date.now() - Qu < 1e3 ? Ru("general:copied") : Ru("general:copy")
         })]
       })
     }
 
-    function hU(UU) {
-      const [RU, gU] = (0, pU.useState)(null);
-      return (0, pU.useEffect)((() => {
-        if (!UU) return;
-        let RU = !0;
-        return (0, EU.D)().then((UU => {
-          RU && gU(UU)
-        })).catch((UU => {
-          console.error("Failed to get invite link:", UU)
+    function pu(uu) {
+      const [Ru, yu] = (0, Ku.useState)(null);
+      return (0, Ku.useEffect)((() => {
+        if (!uu) return;
+        let Ru = !0;
+        return (0, Qu.K)().then((uu => {
+          Ru && yu(uu)
+        })).catch((uu => {
+          console.error("Failed to get invite link:", uu)
         })), () => {
-          RU = !1
+          Ru = !1
         }
-      }), [UU]), RU
+      }), [uu]), Ru
     }
   },
-  8978: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => KU
+  9045: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Xu
     });
-    var tU = gU(56),
-      pU = gU(1037),
-      EU = gU.n(pU),
-      PU = gU(1834),
-      TU = gU(1090);
+    var Eu = yu(64),
+      Ku = yu(1035),
+      Qu = yu.n(Ku),
+      mu = yu(1899),
+      Ju = yu(1079);
 
-    function qU(UU) {
-      const RU = Math.floor(UU / 3600),
-        gU = Math.floor(UU % 3600 / 60),
-        tU = Math.floor(UU % 60),
-        pU = `${gU.toString().padStart(2,"0")}:${tU.toString().padStart(2,"0")}`;
-      return RU > 0 ? `${RU}:${pU}` : pU
+    function Nu(uu) {
+      const Ru = Math.floor(uu / 3600),
+        yu = Math.floor(uu % 3600 / 60),
+        Eu = Math.floor(uu % 60),
+        Ku = `${yu.toString().padStart(2,"0")}:${Eu.toString().padStart(2,"0")}`;
+      return Ru > 0 ? `${Ru}:${Ku}` : Ku
     }
-    const KU = (0, tU.memo)((function(UU) {
+    const Xu = (0, Eu.memo)((function(uu) {
       let {
-        className: RU
-      } = UU;
+        className: Ru
+      } = uu;
       const {
-        recording: gU,
-        seconds: tU
-      } = (0, PU.k)("replayRecorder");
-      return gU ? (0, TU.jsxs)("div", {
-        className: EU()("RecordingIndicator", RU),
-        children: [(0, TU.jsx)("span", {
+        recording: yu,
+        seconds: Eu
+      } = (0, mu.i)("replayRecorder");
+      return yu ? (0, Ju.jsxs)("div", {
+        className: Qu()("RecordingIndicator", Ru),
+        children: [(0, Ju.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, TU.jsx)("span", {
+        }), (0, Ju.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, TU.jsx)("span", {
+        }), (0, Ju.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: qU(tU)
+          children: Nu(Eu)
         })]
       }) : null
     }))
   },
-  4540: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => QU
+  4659: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Tu
     });
-    var tU = gU(1037),
-      pU = gU.n(tU),
-      EU = gU(4307),
-      PU = gU(1181),
-      TU = gU(1049),
-      qU = gU(1412),
-      KU = gU(1461),
-      cU = gU(1333),
-      GU = gU(2309),
-      jU = gU(1090);
-    const uU = {
+    var Eu = yu(1035),
+      Ku = yu.n(Eu),
+      Qu = yu(4425),
+      mu = yu(1170),
+      Ju = yu(1043),
+      Nu = yu(1408),
+      Xu = yu(1447),
+      Vu = yu(1311),
+      ru = yu(2393),
+      Bu = yu(1079);
+    const xu = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8139,354 +8139,354 @@ export const modules = {
       }
     };
 
-    function CU(UU) {
+    function Su(uu) {
       let {
-        platform: RU
-      } = UU;
-      const gU = "youtube" === RU;
-      return (0, jU.jsxs)("span", {
-        className: pU()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: gU
+        platform: Ru
+      } = uu;
+      const yu = "youtube" === Ru;
+      return (0, Bu.jsxs)("span", {
+        className: Ku()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: yu
         }),
-        children: [gU && (0, jU.jsx)(GU.b, {
+        children: [yu && (0, Bu.jsx)(ru.c, {
           variant: "white"
-        }), !gU && (0, jU.jsx)(TU.c, {
-          name: uU[RU].icon,
+        }), !yu && (0, Bu.jsx)(Ju.c, {
+          name: xu[Ru].icon,
           kit: "brands"
         })]
       })
     }
 
-    function hU(UU) {
+    function pu(uu) {
       let {
-        platform: RU,
-        link: gU,
-        editable: tU,
-        userContext: pU,
-        onLinksUpdated: GU
-      } = UU;
+        platform: Ru,
+        link: yu,
+        editable: Eu,
+        userContext: Ku,
+        onLinksUpdated: ru
+      } = uu;
       const {
-        t: hU
-      } = (0, PU.B)(), QU = uU[RU];
-      if (!gU && !tU) return null;
+        t: pu
+      } = (0, mu.E)(), Tu = xu[Ru];
+      if (!yu && !Eu) return null;
 
-      function eU() {
-        var UU;
-        if (!pU || !GU) return;
-        cU.NotificationProvider.showInputPopup({
+      function Wu() {
+        var uu;
+        if (!Ku || !ru) return;
+        Vu.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: QU.name
+              platform: Tu.name
             }
           },
-          prefixText: EU.y[RU],
+          prefixText: Qu.y[Ru],
           placeholderText: "playBloxd",
-          initialValue: null !== (UU = null === gU || void 0 === gU ? void 0 : gU.handle) && void 0 !== UU ? UU : "",
+          initialValue: null !== (uu = null === yu || void 0 === yu ? void 0 : yu.handle) && void 0 !== uu ? uu : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: gU ? "general:remove" : void 0
-        }).getResult().then((async UU => {
-          if ("notificationTornDown" !== UU && null !== UU) try {
-            "submit" === UU.type ? await KU.c.setSocialLink(pU, RU, UU.value) : await KU.c.clearSocialLink(pU, RU), GU()
-          } catch (gU) {
-            console.error("Failed to update social link", gU), cU.NotificationProvider.showAlertPopup({
-              title: gU.errorMessageForUser,
+          secondaryButtonText: yu ? "general:remove" : void 0
+        }).getResult().then((async uu => {
+          if ("notificationTornDown" !== uu && null !== uu) try {
+            "submit" === uu.type ? await Xu.e.setSocialLink(Ku, Ru, uu.value) : await Xu.e.clearSocialLink(Ku, Ru), ru()
+          } catch (yu) {
+            console.error("Failed to update social link", yu), Vu.NotificationProvider.showAlertPopup({
+              title: yu.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (gU) {
-        const UU = `@${gU.handle}`;
-        return (0, jU.jsxs)("a", {
+      if (yu) {
+        const uu = `@${yu.handle}`;
+        return (0, Bu.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: QU.color
+            background: Tu.color
           },
-          href: gU.profileUrl,
+          href: yu.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, jU.jsxs)("div", {
+          children: [(0, Bu.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, jU.jsx)(CU, {
-              platform: RU
-            }), (0, jU.jsx)("span", {
+            children: [(0, Bu.jsx)(Su, {
+              platform: Ru
+            }), (0, Bu.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, jU.jsx)("span", {
+              children: (0, Bu.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: UU
+                children: uu
               })
             })]
-          }), tU && (0, jU.jsx)("button", {
+          }), Eu && (0, Bu.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, qU.R)({
+            ...(0, Nu.U)({
               stopPropagation: !0
             }),
-            onClick: UU => {
-              UU.stopPropagation(), UU.preventDefault(), eU()
+            onClick: uu => {
+              uu.stopPropagation(), uu.preventDefault(), Wu()
             },
-            children: (0, jU.jsx)(TU.c, {
+            children: (0, Bu.jsx)(Ju.c, {
               name: "pen-to-square"
             })
-          }), !tU && (0, jU.jsx)("span", {
+          }), !Eu && (0, Bu.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, jU.jsx)(TU.c, {
+            children: (0, Bu.jsx)(Ju.c, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, jU.jsxs)("button", {
+      return (0, Bu.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: QU.color
+          background: Tu.color
         },
-        ...(0, qU.R)(),
+        ...(0, Nu.U)(),
         onClick: () => {
-          eU()
+          Wu()
         },
-        children: [(0, jU.jsx)(CU, {
-          platform: RU
-        }), (0, jU.jsxs)("span", {
+        children: [(0, Bu.jsx)(Su, {
+          platform: Ru
+        }), (0, Bu.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, jU.jsx)("span", {
+          children: [(0, Bu.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: QU.name
-          }), (0, jU.jsx)("span", {
+            children: Tu.name
+          }), (0, Bu.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: hU("homePage:profileSocialLinkAdd")
+            children: pu("homePage:profileSocialLinkAdd")
           })]
-        }), (0, jU.jsx)("span", {
+        }), (0, Bu.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, jU.jsx)(TU.c, {
+          children: (0, Bu.jsx)(Ju.c, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function QU(UU) {
+    function Tu(uu) {
       let {
-        socialLinks: RU,
-        editable: gU = !1,
-        userContext: tU,
-        onLinksUpdated: pU
-      } = UU;
-      if (!gU && 0 === RU.length) return null;
-      const PU = new Map(RU.map((UU => [UU.platform, UU]))),
-        TU = gU ? EU.u : RU.map((UU => UU.platform));
-      return (0, jU.jsx)("div", {
+        socialLinks: Ru,
+        editable: yu = !1,
+        userContext: Eu,
+        onLinksUpdated: Ku
+      } = uu;
+      if (!yu && 0 === Ru.length) return null;
+      const mu = new Map(Ru.map((uu => [uu.platform, uu]))),
+        Ju = yu ? Qu.w : Ru.map((uu => uu.platform));
+      return (0, Bu.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, jU.jsx)("div", {
+        children: (0, Bu.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: TU.map((UU => (0, jU.jsx)(hU, {
-            platform: UU,
-            link: PU.get(UU),
-            editable: gU,
-            userContext: tU,
-            onLinksUpdated: pU
-          }, UU)))
+          children: Ju.map((uu => (0, Bu.jsx)(pu, {
+            platform: uu,
+            link: mu.get(uu),
+            editable: yu,
+            userContext: Eu,
+            onLinksUpdated: Ku
+          }, uu)))
         })
       })
     }
   },
-  8982: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU
+  9048: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu
     });
-    var tU = gU(4200),
-      pU = gU(4206);
+    var Eu = yu(4307),
+      Ku = yu(4314);
 
-    function EU(UU) {
+    function Qu(uu) {
       let {
-        children: RU,
-        showing: gU,
-        globallyUniqueKey: EU,
-        alwaysMountChildren: PU = !1,
-        doGameplayStartStopOnShow: TU = !0,
-        keepsMovement: qU = !1
-      } = UU;
-      return (0, pU.e)(!0, gU, EU, qU), (0, tU.c)(TU, gU), gU || PU ? RU : null
+        children: Ru,
+        showing: yu,
+        globallyUniqueKey: Qu,
+        alwaysMountChildren: mu = !1,
+        doGameplayStartStopOnShow: Ju = !0,
+        keepsMovement: Nu = !1
+      } = uu;
+      return (0, Ku.c)(!0, yu, Qu, Nu), (0, Eu.e)(Ju, yu), yu || mu ? Ru : null
     }
   },
-  9033: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU
+  9103: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Qu
     });
-    var tU = gU(56),
-      pU = gU(3262);
+    var Eu = yu(64),
+      Ku = yu(3394);
 
-    function EU() {
-      const [UU, RU] = (0, tU.useState)(!1);
-      return (0, tU.useLayoutEffect)((() => {
-        let UU = !0;
-        return (0, pU.e)().then((() => {
-          UU && RU(!0)
+    function Qu() {
+      const [uu, Ru] = (0, Eu.useState)(!1);
+      return (0, Eu.useLayoutEffect)((() => {
+        let uu = !0;
+        return (0, Ku.b)().then((() => {
+          uu && Ru(!0)
         })), () => {
-          UU = !1
+          uu = !1
         }
-      }), []), UU
+      }), []), uu
     }
   },
-  6239: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => EU
+  6336: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Qu
     });
-    var tU = gU(56),
-      pU = gU(34);
+    var Eu = yu(64),
+      Ku = yu(47);
 
-    function EU(UU, RU) {
-      var gU;
-      const [EU, PU] = (0, tU.useState)(null !== (gU = pU.k.getItem(UU)) && void 0 !== gU ? gU : RU);
-      return [EU, RU => {
-        pU.k.setItem(UU, RU), PU(RU)
+    function Qu(uu, Ru) {
+      var yu;
+      const [Qu, mu] = (0, Eu.useState)(null !== (yu = Ku.i.getItem(uu)) && void 0 !== yu ? yu : Ru);
+      return [Qu, Ru => {
+        Ku.i.setItem(uu, Ru), mu(Ru)
       }]
     }
   },
-  8953: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => jU,
-      i: () => GU
+  9023: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Bu,
+      e: () => ru
     });
-    gU(8962);
-    var tU = gU(1037),
-      pU = gU.n(tU),
-      EU = gU(56),
-      PU = gU(8927);
+    yu(9025);
+    var Eu = yu(1035),
+      Ku = yu.n(Eu),
+      Qu = yu(64),
+      mu = yu(8996);
 
-    function TU(UU, RU) {
-      return Math.max(1, Math.round(UU * RU))
+    function Ju(uu, Ru) {
+      return Math.max(1, Math.round(uu * Ru))
     }
 
-    function qU(UU, RU, gU) {
-      const tU = 2 * gU >= RU - 1;
+    function Nu(uu, Ru, yu) {
+      const Eu = 2 * yu >= Ru - 1;
       return {
-        x: UU,
-        y: UU,
-        size: RU,
-        border: Math.min(gU, Math.floor(RU / 2)),
-        filled: tU
+        x: uu,
+        y: uu,
+        size: Ru,
+        border: Math.min(yu, Math.floor(Ru / 2)),
+        filled: Eu
       }
     }
-    var KU = gU(1090);
-    const cU = 1.4;
+    var Xu = yu(1079);
+    const Vu = 1.4;
 
-    function GU(UU, RU) {
-      return UU && RU ? `scale(${cU})` : "scale(1)"
+    function ru(uu, Ru) {
+      return uu && Ru ? `scale(${Vu})` : "scale(1)"
     }
 
-    function jU(UU) {
-      return "classic" === UU.settings.style ? (0, KU.jsx)(hU, {
-        ...UU
-      }) : (0, KU.jsx)(IU, {
-        ...UU
+    function Bu(uu) {
+      return "classic" === uu.settings.style ? (0, Xu.jsx)(pu, {
+        ...uu
+      }) : (0, Xu.jsx)(Cu, {
+        ...uu
       })
     }
-    const uU = .125;
+    const xu = .125;
 
-    function CU(UU, RU) {
-      const gU = {};
-      if (UU.color !== PU.d.color && (gU.color = (0, PU.j)(UU.color)), UU.opacity !== PU.d.opacity && (gU.opacity = UU.opacity / 100), UU.outline !== PU.d.outline || UU.outlineColor !== PU.d.outlineColor) {
-        const RU = UU.outline,
-          tU = (0, PU.j)(UU.outlineColor);
-        gU.textShadow = RU > 0 ? `-${RU}px 0 ${tU}, 0 ${RU}px ${tU}, ${RU}px 0 ${tU}, 0 -${RU}px ${tU}` : "none"
+    function Su(uu, Ru) {
+      const yu = {};
+      if (uu.color !== mu.h.color && (yu.color = (0, mu.m)(uu.color)), uu.opacity !== mu.h.opacity && (yu.opacity = uu.opacity / 100), uu.outline !== mu.h.outline || uu.outlineColor !== mu.h.outlineColor) {
+        const Ru = uu.outline,
+          Eu = (0, mu.m)(uu.outlineColor);
+        yu.textShadow = Ru > 0 ? `-${Ru}px 0 ${Eu}, 0 ${Ru}px ${Eu}, ${Ru}px 0 ${Eu}, 0 -${Ru}px ${Eu}` : "none"
       }
-      if (UU.size !== PU.d.size) {
-        const tU = UU.size / 100;
-        gU.fontSize = RU ? `calc(max(1.3rem, 18px) * ${tU})` : `calc(1.3rem * ${tU})`, gU.marginTop = `-${uU}em`, gU.transformOrigin = `50% calc(50% + ${uU}em)`
+      if (uu.size !== mu.h.size) {
+        const Eu = uu.size / 100;
+        yu.fontSize = Ru ? `calc(max(1.3rem, 18px) * ${Eu})` : `calc(1.3rem * ${Eu})`, yu.marginTop = `-${xu}em`, yu.transformOrigin = `50% calc(50% + ${xu}em)`
       }
-      return gU
+      return yu
     }
 
-    function hU(UU) {
+    function pu(uu) {
       let {
-        settings: RU,
-        touch: gU,
-        inPreview: tU,
-        inEditor: EU,
-        pressed: PU = !1,
-        pressRef: TU
-      } = UU;
-      return (0, KU.jsx)("div", {
-        className: pU()("Crosshair", {
-          Touch: gU,
-          CrosshairInPreview: tU,
-          CrosshairInEditor: EU || tU
+        settings: Ru,
+        touch: yu,
+        inPreview: Eu,
+        inEditor: Qu,
+        pressed: mu = !1,
+        pressRef: Ju
+      } = uu;
+      return (0, Xu.jsx)("div", {
+        className: Ku()("Crosshair", {
+          Touch: yu,
+          CrosshairInPreview: Eu,
+          CrosshairInEditor: Qu || Eu
         }),
-        ref: TU,
+        ref: Ju,
         style: {
-          transform: GU(PU, RU.growOnClick),
-          ...CU(RU, gU)
+          transform: ru(mu, Ru.growOnClick),
+          ...Su(Ru, yu)
         },
         children: "+"
       })
     }
 
-    function QU(UU, RU) {
-      return UU / RU + "px"
+    function Tu(uu, Ru) {
+      return uu / Ru + "px"
     }
 
-    function eU(UU, RU, gU, tU) {
+    function Wu(uu, Ru, yu, Eu) {
       return {
-        ...xU(UU, RU, gU),
-        width: QU(UU.w, gU),
-        height: QU(UU.h, gU),
-        background: tU
+        ...du(uu, Ru, yu),
+        width: Tu(uu.w, yu),
+        height: Tu(uu.h, yu),
+        background: Eu
       }
     }
 
-    function WU(UU, RU, gU) {
+    function ju(uu, Ru, yu) {
       return {
-        left: QU(UU.x, RU),
-        top: QU(UU.y, RU),
-        width: QU(UU.size, RU),
-        height: QU(UU.size, RU),
-        borderWidth: QU(UU.border, RU),
-        borderColor: gU,
-        background: UU.filled ? gU : void 0
+        left: Tu(uu.x, Ru),
+        top: Tu(uu.y, Ru),
+        width: Tu(uu.size, Ru),
+        height: Tu(uu.size, Ru),
+        borderWidth: Tu(uu.border, Ru),
+        borderColor: yu,
+        background: uu.filled ? yu : void 0
       }
     }
-    const fU = {
+    const Hu = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function xU(UU, RU, gU) {
-      const [tU, pU] = UU.arm ? fU[UU.arm] : [0, 0], EU = Math.round(RU * gU);
+    function du(uu, Ru, yu) {
+      const [Eu, Ku] = uu.arm ? Hu[uu.arm] : [0, 0], Qu = Math.round(Ru * yu);
       return {
-        left: QU(UU.x + tU * EU, gU),
-        top: QU(UU.y + pU * EU, gU)
+        left: Tu(uu.x + Eu * Qu, yu),
+        top: Tu(uu.y + Ku * Qu, yu)
       }
     }
 
-    function mU(UU) {
-      return UU.arm ? {
-        "data-arm": UU.arm,
-        "data-x": UU.x,
-        "data-y": UU.y
+    function bu(uu) {
+      return uu.arm ? {
+        "data-arm": uu.arm,
+        "data-x": uu.x,
+        "data-y": uu.y
       } : {}
     }
 
-    function IU(UU) {
+    function Cu(uu) {
       let {
-        settings: RU,
-        inPreview: gU,
-        inEditor: tU,
-        pressed: GU = !1,
-        spread: jU,
-        spreadRef: uU
-      } = UU;
-      const CU = (0, EU.useRef)(null),
+        settings: Ru,
+        inPreview: yu,
+        inEditor: Eu,
+        pressed: ru = !1,
+        spread: Bu,
+        spreadRef: xu
+      } = uu;
+      const Su = (0, Qu.useRef)(null),
         {
-          box: hU,
-          dpr: QU
-        } = function(UU) {
-          const [RU, gU] = (0, EU.useState)({
+          box: pu,
+          dpr: Tu
+        } = function(uu) {
+          const [Ru, yu] = (0, Qu.useState)({
             box: {
               left: 0,
               top: 0,
@@ -8495,282 +8495,282 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, EU.useLayoutEffect)((() => {
-            const RU = UU.current;
-            if (!RU) return;
-            const tU = () => {
-              const UU = RU.getBoundingClientRect(),
-                tU = window.devicePixelRatio || 1;
-              gU((RU => RU.dpr === tU && RU.box.left === UU.left && RU.box.top === UU.top && RU.box.width === UU.width && RU.box.height === UU.height ? RU : {
+          return (0, Qu.useLayoutEffect)((() => {
+            const Ru = uu.current;
+            if (!Ru) return;
+            const Eu = () => {
+              const uu = Ru.getBoundingClientRect(),
+                Eu = window.devicePixelRatio || 1;
+              yu((Ru => Ru.dpr === Eu && Ru.box.left === uu.left && Ru.box.top === uu.top && Ru.box.width === uu.width && Ru.box.height === uu.height ? Ru : {
                 box: {
-                  left: UU.left,
-                  top: UU.top,
-                  width: UU.width,
-                  height: UU.height
+                  left: uu.left,
+                  top: uu.top,
+                  width: uu.width,
+                  height: uu.height
                 },
-                dpr: tU
+                dpr: Eu
               }))
             };
-            tU();
-            const pU = new ResizeObserver(tU);
-            return pU.observe(RU), window.addEventListener("resize", tU), window.addEventListener("scroll", tU, !0), () => {
-              pU.disconnect(), window.removeEventListener("resize", tU), window.removeEventListener("scroll", tU, !0)
+            Eu();
+            const Ku = new ResizeObserver(Eu);
+            return Ku.observe(Ru), window.addEventListener("resize", Eu), window.addEventListener("scroll", Eu, !0), () => {
+              Ku.disconnect(), window.removeEventListener("resize", Eu), window.removeEventListener("scroll", Eu, !0)
             }
-          }), [UU]), RU
-        }(CU),
-        fU = (0, EU.useRef)(QU);
-      fU.current = QU;
-      const IU = function(UU, RU) {
-          const gU = TU(UU.lineThickness, RU),
-            tU = TU(UU.lineLength, RU),
-            pU = Math.round(UU.gap * RU),
-            EU = TU(UU.dotSize, RU),
-            PU = UU.outline > 0 ? TU(UU.outline, RU) : 0,
-            KU = TU(UU.circleThickness, RU),
-            cU = UU.circle ? Math.round(UU.circleRadius * RU * 2 + KU) : 0,
-            GU = function(UU, RU, gU, tU) {
-              return UU.lines ? RU : UU.dot ? gU : UU.circle && tU % 2 === 0 ? 2 : 1
-            }(UU, gU, EU, cU),
-            jU = [];
-          if (UU.lines && (jU.push({
-              x: GU + pU,
+          }), [uu]), Ru
+        }(Su),
+        Hu = (0, Qu.useRef)(Tu);
+      Hu.current = Tu;
+      const Cu = function(uu, Ru) {
+          const yu = Ju(uu.lineThickness, Ru),
+            Eu = Ju(uu.lineLength, Ru),
+            Ku = Math.round(uu.gap * Ru),
+            Qu = Ju(uu.dotSize, Ru),
+            mu = uu.outline > 0 ? Ju(uu.outline, Ru) : 0,
+            Xu = Ju(uu.circleThickness, Ru),
+            Vu = uu.circle ? Math.round(uu.circleRadius * Ru * 2 + Xu) : 0,
+            ru = function(uu, Ru, yu, Eu) {
+              return uu.lines ? Ru : uu.dot ? yu : uu.circle && Eu % 2 === 0 ? 2 : 1
+            }(uu, yu, Qu, Vu),
+            Bu = [];
+          if (uu.lines && (Bu.push({
+              x: ru + Ku,
               y: 0,
-              w: tU,
-              h: gU,
+              w: Eu,
+              h: yu,
               arm: "right"
-            }), jU.push({
-              x: -pU - tU,
+            }), Bu.push({
+              x: -Ku - Eu,
               y: 0,
-              w: tU,
-              h: gU,
+              w: Eu,
+              h: yu,
               arm: "left"
-            }), jU.push({
+            }), Bu.push({
               x: 0,
-              y: GU + pU,
-              w: gU,
-              h: tU,
+              y: ru + Ku,
+              w: yu,
+              h: Eu,
               arm: "down"
-            }), UU.tStyle || jU.push({
+            }), uu.tStyle || Bu.push({
               x: 0,
-              y: -pU - tU,
-              w: gU,
-              h: tU,
+              y: -Ku - Eu,
+              w: yu,
+              h: Eu,
               arm: "up"
-            }), 0 === pU && jU.push({
+            }), 0 === Ku && Bu.push({
               x: 0,
               y: 0,
-              w: gU,
-              h: gU
-            })), UU.dot) {
-            const UU = Math.floor((GU - EU) / 2);
-            jU.push({
-              x: UU,
-              y: UU,
-              w: EU,
-              h: EU
+              w: yu,
+              h: yu
+            })), uu.dot) {
+            const uu = Math.floor((ru - Qu) / 2);
+            Bu.push({
+              x: uu,
+              y: uu,
+              w: Qu,
+              h: Qu
             })
           }
-          const uU = jU.map((UU => ({
-            ...UU,
-            x: UU.x - PU,
-            y: UU.y - PU,
-            w: UU.w + 2 * PU,
-            h: UU.h + 2 * PU
+          const xu = Bu.map((uu => ({
+            ...uu,
+            x: uu.x - mu,
+            y: uu.y - mu,
+            w: uu.w + 2 * mu,
+            h: uu.h + 2 * mu
           })));
-          let CU = null,
-            hU = null;
-          if (UU.circle) {
-            const UU = cU + ((cU - GU) % 2 === 0 ? 0 : 1),
-              RU = (GU - UU) / 2;
-            CU = qU(RU, UU, KU), PU > 0 && (hU = qU(RU - PU, UU + 2 * PU, KU + 2 * PU))
+          let Su = null,
+            pu = null;
+          if (uu.circle) {
+            const uu = Vu + ((Vu - ru) % 2 === 0 ? 0 : 1),
+              Ru = (ru - uu) / 2;
+            Su = Nu(Ru, uu, Xu), mu > 0 && (pu = Nu(Ru - mu, uu + 2 * mu, Xu + 2 * mu))
           }
           return {
-            cell: GU,
-            fills: jU,
-            outlines: PU > 0 ? uU : [],
-            ring: CU,
-            ringOutline: hU
+            cell: ru,
+            fills: Bu,
+            outlines: mu > 0 ? xu : [],
+            ring: Su,
+            ringOutline: pu
           }
-        }(GU && RU.growOnClick ? function(UU, RU) {
+        }(ru && Ru.growOnClick ? function(uu, Ru) {
           return {
-            ...UU,
-            outline: UU.outline * RU,
-            lineLength: UU.lineLength * RU,
-            lineThickness: UU.lineThickness * RU,
-            gap: UU.gap * RU,
-            dotSize: UU.dotSize * RU,
-            circleRadius: UU.circleRadius * RU,
-            circleThickness: UU.circleThickness * RU
+            ...uu,
+            outline: uu.outline * Ru,
+            lineLength: uu.lineLength * Ru,
+            lineThickness: uu.lineThickness * Ru,
+            gap: uu.gap * Ru,
+            dotSize: uu.dotSize * Ru,
+            circleRadius: uu.circleRadius * Ru,
+            circleThickness: uu.circleThickness * Ru
           }
-        }(RU, cU) : RU, QU),
-        JU = function(UU, RU, gU) {
-          const tU = Math.round((UU.left + UU.width / 2) * gU - RU / 2),
-            pU = Math.round((UU.top + UU.height / 2) * gU - RU / 2);
+        }(Ru, Vu) : Ru, Tu),
+        ku = function(uu, Ru, yu) {
+          const Eu = Math.round((uu.left + uu.width / 2) * yu - Ru / 2),
+            Ku = Math.round((uu.top + uu.height / 2) * yu - Ru / 2);
           return {
-            x: tU / gU - UU.left,
-            y: pU / gU - UU.top
+            x: Eu / yu - uu.left,
+            y: Ku / yu - uu.top
           }
-        }(hU, IU.cell, QU),
-        wU = (0, PU.j)(RU.color),
-        nU = (0, PU.j)(RU.outlineColor),
-        bU = (0, EU.useRef)(0);
-      (0, EU.useLayoutEffect)((() => {
-        if (uU) return uU.current = UU => {
-          var RU;
-          bU.current = UU, null === (RU = CU.current) || void 0 === RU || RU.querySelectorAll("[data-arm]").forEach((RU => {
-            Object.assign(RU.style, xU(function(UU) {
+        }(pu, Cu.cell, Tu),
+        eu = (0, mu.m)(Ru.color),
+        Au = (0, mu.m)(Ru.outlineColor),
+        Du = (0, Qu.useRef)(0);
+      (0, Qu.useLayoutEffect)((() => {
+        if (xu) return xu.current = uu => {
+          var Ru;
+          Du.current = uu, null === (Ru = Su.current) || void 0 === Ru || Ru.querySelectorAll("[data-arm]").forEach((Ru => {
+            Object.assign(Ru.style, du(function(uu) {
               return {
-                x: Number(UU.dataset.x),
-                y: Number(UU.dataset.y),
-                arm: UU.dataset.arm
+                x: Number(uu.dataset.x),
+                y: Number(uu.dataset.y),
+                arm: uu.dataset.arm
               }
-            }(RU), UU, fU.current))
+            }(Ru), uu, Hu.current))
           }))
         }, () => {
-          uU.current = null
+          xu.current = null
         }
-      }), [uU]);
-      const oU = null !== jU && void 0 !== jU ? jU : bU.current;
-      return (0, KU.jsx)("div", {
-        ref: CU,
-        className: pU()("CrosshairShapes", {
-          CrosshairInPreview: gU,
-          CrosshairInEditor: tU || gU,
-          CrosshairSpreads: void 0 !== uU
+      }), [xu]);
+      const Mu = null !== Bu && void 0 !== Bu ? Bu : Du.current;
+      return (0, Xu.jsx)("div", {
+        ref: Su,
+        className: Ku()("CrosshairShapes", {
+          CrosshairInPreview: yu,
+          CrosshairInEditor: Eu || yu,
+          CrosshairSpreads: void 0 !== xu
         }),
-        children: (0, KU.jsx)("div", {
+        children: (0, Xu.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: JU.x,
-            top: JU.y,
-            opacity: RU.opacity / 100
+            left: ku.x,
+            top: ku.y,
+            opacity: Ru.opacity / 100
           },
-          children: (0, KU.jsxs)("div", {
+          children: (0, Xu.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [IU.ringOutline && (0, KU.jsx)("div", {
+            children: [Cu.ringOutline && (0, Xu.jsx)("div", {
               className: "CrosshairRing",
-              style: WU(IU.ringOutline, QU, nU)
-            }), IU.outlines.map(((UU, RU) => (0, KU.jsx)("div", {
+              style: ju(Cu.ringOutline, Tu, Au)
+            }), Cu.outlines.map(((uu, Ru) => (0, Xu.jsx)("div", {
               className: "CrosshairPart",
-              ...mU(UU),
-              style: eU(UU, oU, QU, nU)
-            }, `o${RU}`))), IU.ring && (0, KU.jsx)("div", {
+              ...bu(uu),
+              style: Wu(uu, Mu, Tu, Au)
+            }, `o${Ru}`))), Cu.ring && (0, Xu.jsx)("div", {
               className: "CrosshairRing",
-              style: WU(IU.ring, QU, wU)
-            }), IU.fills.map(((UU, RU) => (0, KU.jsx)("div", {
+              style: ju(Cu.ring, Tu, eu)
+            }), Cu.fills.map(((uu, Ru) => (0, Xu.jsx)("div", {
               className: "CrosshairPart",
-              ...mU(UU),
-              style: eU(UU, oU, QU, wU)
-            }, `f${RU}`)))]
+              ...bu(uu),
+              style: Wu(uu, Mu, Tu, eu)
+            }, `f${Ru}`)))]
           })
         })
       })
     }
   },
-  8966: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => cU,
-      d: () => QU,
-      g: () => hU
+  9030: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Vu,
+      e: () => Tu,
+      i: () => pu
     });
-    var tU = gU(8927);
-    const pU = "XH1-",
-      EU = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      PU = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      TU = ["color", "outlineColor"],
-      qU = 1 + 3 * TU.length + PU.length + 1,
-      KU = Math.ceil(8 * qU / Math.log2(62)),
-      cU = pU.length + KU;
+    var Eu = yu(8996);
+    const Ku = "XH1-",
+      Qu = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      mu = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      Ju = ["color", "outlineColor"],
+      Nu = 1 + 3 * Ju.length + mu.length + 1,
+      Xu = Math.ceil(8 * Nu / Math.log2(62)),
+      Vu = Ku.length + Xu;
 
-    function GU(UU) {
-      let RU = 90;
-      for (const gU of UU) RU = 31 * RU + gU & 255;
-      return RU
+    function ru(uu) {
+      let Ru = 90;
+      for (const yu of uu) Ru = 31 * Ru + yu & 255;
+      return Ru
     }
-    const jU = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      uU = BigInt(jU.length);
+    const Bu = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      xu = BigInt(Bu.length);
 
-    function CU(UU, RU) {
-      let gU = 0n;
-      for (const pU of UU) {
-        const UU = jU.indexOf(pU);
-        if (UU < 0) return null;
-        gU = gU * uU + BigInt(UU)
+    function Su(uu, Ru) {
+      let yu = 0n;
+      for (const Ku of uu) {
+        const uu = Bu.indexOf(Ku);
+        if (uu < 0) return null;
+        yu = yu * xu + BigInt(uu)
       }
-      if (gU >> BigInt(8 * RU) !== 0n) return null;
-      const tU = [];
-      for (let pU = 0; pU < RU; pU++) tU.unshift(Number(0xffn & gU)), gU >>= 8n;
-      return tU
+      if (yu >> BigInt(8 * Ru) !== 0n) return null;
+      const Eu = [];
+      for (let Ku = 0; Ku < Ru; Ku++) Eu.unshift(Number(0xffn & yu)), yu >>= 8n;
+      return Eu
     }
 
-    function hU(UU) {
-      let RU = "shapes" === UU.style ? 1 : 0;
-      EU.forEach(((gU, tU) => {
-        UU[gU] && (RU |= 1 << tU + 1)
+    function pu(uu) {
+      let Ru = "shapes" === uu.style ? 1 : 0;
+      Qu.forEach(((yu, Eu) => {
+        uu[yu] && (Ru |= 1 << Eu + 1)
       }));
-      const gU = [RU];
-      for (const pU of TU) {
-        const RU = (0, tU.g)(pU, UU[pU]);
-        gU.push(RU >> 16 & 255, RU >> 8 & 255, 255 & RU)
+      const yu = [Ru];
+      for (const Ku of Ju) {
+        const Ru = (0, Eu.i)(Ku, uu[Ku]);
+        yu.push(Ru >> 16 & 255, Ru >> 8 & 255, 255 & Ru)
       }
-      for (const pU of PU) {
+      for (const Ku of mu) {
         const {
-          min: RU,
-          step: EU
-        } = tU.c[pU];
-        gU.push(Math.round(((0, tU.g)(pU, UU[pU]) - RU) / EU))
+          min: Ru,
+          step: Qu
+        } = Eu.d[Ku];
+        yu.push(Math.round(((0, Eu.i)(Ku, uu[Ku]) - Ru) / Qu))
       }
-      return gU.push(GU(gU)), pU + function(UU, RU) {
-        let gU = 0n;
-        for (const pU of UU) gU = gU << 8n | BigInt(pU);
-        let tU = "";
-        for (let pU = 0; pU < RU; pU++) tU = jU[Number(gU % uU)] + tU, gU /= uU;
-        return tU
-      }(gU, KU)
+      return yu.push(ru(yu)), Ku + function(uu, Ru) {
+        let yu = 0n;
+        for (const Ku of uu) yu = yu << 8n | BigInt(Ku);
+        let Eu = "";
+        for (let Ku = 0; Ku < Ru; Ku++) Eu = Bu[Number(yu % xu)] + Eu, yu /= xu;
+        return Eu
+      }(yu, Xu)
     }
 
-    function QU(UU) {
-      for (const RU of UU.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${KU}})`, "gi"))) {
-        const UU = eU(CU(RU[1], qU));
-        if (UU) return UU
+    function Tu(uu) {
+      for (const Ru of uu.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${Xu}})`, "gi"))) {
+        const uu = Wu(Su(Ru[1], Nu));
+        if (uu) return uu
       }
       return null
     }
 
-    function eU(UU) {
-      if (!UU || UU.length !== qU || GU(UU.slice(0, -1)) !== UU[UU.length - 1]) return null;
-      const RU = UU[0],
-        gU = {
-          ...tU.d,
-          style: 1 & RU ? "shapes" : "classic"
+    function Wu(uu) {
+      if (!uu || uu.length !== Nu || ru(uu.slice(0, -1)) !== uu[uu.length - 1]) return null;
+      const Ru = uu[0],
+        yu = {
+          ...Eu.h,
+          style: 1 & Ru ? "shapes" : "classic"
         };
-      EU.forEach(((UU, tU) => {
-        gU[UU] = 0 !== (RU & 1 << tU + 1)
+      Qu.forEach(((uu, Eu) => {
+        yu[uu] = 0 !== (Ru & 1 << Eu + 1)
       }));
-      let pU = 1;
-      for (const tU of TU) gU[tU] = UU[pU] << 16 | UU[pU + 1] << 8 | UU[pU + 2], pU += 3;
-      for (const EU of PU) {
+      let Ku = 1;
+      for (const Eu of Ju) yu[Eu] = uu[Ku] << 16 | uu[Ku + 1] << 8 | uu[Ku + 2], Ku += 3;
+      for (const Qu of mu) {
         const {
-          min: RU,
-          step: PU
-        } = tU.c[EU];
-        gU[EU] = (0, tU.g)(EU, RU + UU[pU] * PU), pU++
+          min: Ru,
+          step: mu
+        } = Eu.d[Qu];
+        yu[Qu] = (0, Eu.i)(Qu, Ru + uu[Ku] * mu), Ku++
       }
-      return gU
+      return yu
     }
   },
-  8927: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => tU,
-      d: () => pU,
-      g: () => EU,
-      j: () => KU,
-      k: () => qU,
-      n: () => cU,
-      r: () => TU,
-      s: () => PU
+  8996: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Eu,
+      h: () => Ku,
+      i: () => Qu,
+      m: () => Xu,
+      q: () => Nu,
+      r: () => Vu,
+      s: () => Ju,
+      t: () => mu
     });
-    const tU = {
+    const Eu = {
         opacity: {
           min: 5,
           max: 100,
@@ -8827,7 +8827,7 @@ export const modules = {
           step: 1
         }
       },
-      pU = Object.freeze({
+      Ku = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -8848,271 +8848,271 @@ export const modules = {
         forGuns: !1
       });
 
-    function EU(UU, RU) {
-      var gU;
+    function Qu(uu, Ru) {
+      var yu;
       const {
-        min: EU,
-        max: PU,
-        step: TU
-      } = tU[UU];
-      if (!Number.isFinite(RU)) return pU[UU];
-      const qU = (null !== (gU = String(TU).split(".")[1]) && void 0 !== gU ? gU : "").length,
-        KU = Number((Math.round(RU / TU) * TU).toFixed(qU));
-      return Math.min(PU, Math.max(EU, KU))
+        min: Qu,
+        max: mu,
+        step: Ju
+      } = Eu[uu];
+      if (!Number.isFinite(Ru)) return Ku[uu];
+      const Nu = (null !== (yu = String(Ju).split(".")[1]) && void 0 !== yu ? yu : "").length,
+        Xu = Number((Math.round(Ru / Ju) * Ju).toFixed(Nu));
+      return Math.min(mu, Math.max(Qu, Xu))
     }
 
-    function PU(UU, RU, gU) {
-      const tU = "number" === typeof gU ? EU(RU, gU) : gU;
+    function mu(uu, Ru, yu) {
+      const Eu = "number" === typeof yu ? Qu(Ru, yu) : yu;
       return {
-        ...UU,
-        [RU]: tU
+        ...uu,
+        [Ru]: Eu
       }
     }
 
-    function TU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(pU).every((tU => gU.includes(tU) || UU[tU] === RU[tU]))
+    function Ju(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Ku).every((Eu => yu.includes(Eu) || uu[Eu] === Ru[Eu]))
     }
 
-    function qU(UU) {
-      return TU(UU, pU)
+    function Nu(uu) {
+      return Ju(uu, Ku)
     }
 
-    function KU(UU) {
-      return `#${UU.toString(16).padStart(6,"0")}`
+    function Xu(uu) {
+      return `#${uu.toString(16).padStart(6,"0")}`
     }
 
-    function cU(UU) {
-      const RU = /^#?([0-9a-f]{6})$/i.exec(UU.trim());
-      return RU ? parseInt(RU[1], 16) : null
+    function Vu(uu) {
+      const Ru = /^#?([0-9a-f]{6})$/i.exec(uu.trim());
+      return Ru ? parseInt(Ru[1], 16) : null
     }
   },
-  8969: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => GU,
-      h: () => jU
+  9039: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => ru,
+      c: () => Bu
     });
-    var tU = gU(56),
-      pU = gU(34),
-      EU = gU(8966),
-      PU = gU(8927);
-    const TU = "crosshairCode";
-    let qU = null;
-    const KU = new Set;
+    var Eu = yu(64),
+      Ku = yu(47),
+      Qu = yu(9030),
+      mu = yu(8996);
+    const Ju = "crosshairCode";
+    let Nu = null;
+    const Xu = new Set;
 
-    function cU() {
-      if (null === qU) {
-        var UU;
-        const RU = pU.k.getItem(TU);
-        qU = null !== (UU = "string" === typeof RU ? (0, EU.d)(RU) : null) && void 0 !== UU ? UU : PU.d
+    function Vu() {
+      if (null === Nu) {
+        var uu;
+        const Ru = Ku.i.getItem(Ju);
+        Nu = null !== (uu = "string" === typeof Ru ? (0, Qu.e)(Ru) : null) && void 0 !== uu ? uu : mu.h
       }
-      return qU
+      return Nu
     }
 
-    function GU(UU) {
-      qU = UU, (0, PU.k)(UU) ? pU.k.removeItem(TU) : pU.k.setItem(TU, (0, EU.g)(UU));
-      for (const RU of KU) RU()
+    function ru(uu) {
+      Nu = uu, (0, mu.q)(uu) ? Ku.i.removeItem(Ju) : Ku.i.setItem(Ju, (0, Qu.i)(uu));
+      for (const Ru of Xu) Ru()
     }
 
-    function jU() {
-      const [UU, RU] = (0, tU.useState)(cU);
-      return (0, tU.useEffect)((() => {
-        const UU = () => {
-          RU(cU())
+    function Bu() {
+      const [uu, Ru] = (0, Eu.useState)(Vu);
+      return (0, Eu.useEffect)((() => {
+        const uu = () => {
+          Ru(Vu())
         };
-        return UU(), gU = UU, KU.add(gU), () => {
-          KU.delete(gU)
+        return uu(), yu = uu, Xu.add(yu), () => {
+          Xu.delete(yu)
         };
-        var gU
-      }), []), UU
+        var yu
+      }), []), uu
     }
   },
-  8516: (UU, RU, gU) => {
-    function tU(UU) {
+  8637: (uu, Ru, yu) => {
+    function Eu(uu) {
       return {
-        x: (UU.left + UU.right) / 2,
-        y: (UU.top + UU.bottom) / 2
+        x: (uu.left + uu.right) / 2,
+        y: (uu.top + uu.bottom) / 2
       }
     }
 
-    function pU(UU) {
-      return 0 === UU.length ? null : UU.reduce(((UU, RU) => ({
-        left: Math.min(UU.left, RU.left),
-        top: Math.min(UU.top, RU.top),
-        right: Math.max(UU.right, RU.right),
-        bottom: Math.max(UU.bottom, RU.bottom)
+    function Ku(uu) {
+      return 0 === uu.length ? null : uu.reduce(((uu, Ru) => ({
+        left: Math.min(uu.left, Ru.left),
+        top: Math.min(uu.top, Ru.top),
+        right: Math.max(uu.right, Ru.right),
+        bottom: Math.max(uu.bottom, Ru.bottom)
       })))
     }
 
-    function EU(UU, RU) {
-      const gU = Math.max(0, (RU - (UU.right - UU.left)) / 2),
-        tU = Math.max(0, (RU - (UU.bottom - UU.top)) / 2);
+    function Qu(uu, Ru) {
+      const yu = Math.max(0, (Ru - (uu.right - uu.left)) / 2),
+        Eu = Math.max(0, (Ru - (uu.bottom - uu.top)) / 2);
       return {
-        left: UU.left - gU,
-        top: UU.top - tU,
-        right: UU.right + gU,
-        bottom: UU.bottom + tU
+        left: uu.left - yu,
+        top: uu.top - Eu,
+        right: uu.right + yu,
+        bottom: uu.bottom + Eu
       }
     }
 
-    function PU(UU, RU) {
-      return RU.x >= UU.left && RU.x <= UU.right && RU.y >= UU.top && RU.y <= UU.bottom
+    function mu(uu, Ru) {
+      return Ru.x >= uu.left && Ru.x <= uu.right && Ru.y >= uu.top && Ru.y <= uu.bottom
     }
 
-    function TU(UU, RU, gU) {
-      let pU = null,
-        TU = 1 / 0;
+    function Ju(uu, Ru, yu) {
+      let Ku = null,
+        Ju = 1 / 0;
       for (const {
-          id: tU,
-          box: EU
+          id: Eu,
+          box: Qu
         }
-        of RU) {
-        const RU = (EU.right - EU.left) * (EU.bottom - EU.top);
-        PU(EU, UU) && RU < TU && (TU = RU, pU = tU)
+        of Ru) {
+        const Ru = (Qu.right - Qu.left) * (Qu.bottom - Qu.top);
+        mu(Qu, uu) && Ru < Ju && (Ju = Ru, Ku = Eu)
       }
-      if (null !== pU) return pU;
-      let qU = 1 / 0;
+      if (null !== Ku) return Ku;
+      let Nu = 1 / 0;
       for (const {
-          id: KU,
-          box: cU
+          id: Xu,
+          box: Vu
         }
-        of RU) {
-        if (!PU(EU(cU, gU), UU)) continue;
-        const RU = tU(cU),
-          TU = Math.hypot(UU.x - RU.x, UU.y - RU.y);
-        TU < qU && (qU = TU, pU = KU)
+        of Ru) {
+        if (!mu(Qu(Vu, yu), uu)) continue;
+        const Ru = Eu(Vu),
+          Ju = Math.hypot(uu.x - Ru.x, uu.y - Ru.y);
+        Ju < Nu && (Nu = Ju, Ku = Xu)
       }
-      return pU
+      return Ku
     }
 
-    function qU(UU, RU, gU) {
+    function Nu(uu, Ru, yu) {
       return {
-        left: gU.left,
-        top: gU.top,
-        right: UU - gU.right,
-        bottom: RU - gU.bottom
+        left: yu.left,
+        top: yu.top,
+        right: uu - yu.right,
+        bottom: Ru - yu.bottom
       }
     }
 
-    function KU(UU, RU, gU, tU) {
-      const pU = (UU, RU, gU) => Math.max(Math.min(RU, 0), Math.min(Math.max(gU, 0), UU));
+    function Xu(uu, Ru, yu, Eu) {
+      const Ku = (uu, Ru, yu) => Math.max(Math.min(Ru, 0), Math.min(Math.max(yu, 0), uu));
       return {
-        x: pU(RU, tU.left - UU.left, tU.right - UU.right),
-        y: pU(gU, tU.top - UU.top, tU.bottom - UU.bottom)
+        x: Ku(Ru, Eu.left - uu.left, Eu.right - uu.right),
+        y: Ku(yu, Eu.top - uu.top, Eu.bottom - uu.bottom)
       }
     }
 
-    function cU(UU, RU, gU, tU, pU) {
-      const EU = UU.dx * tU + RU,
-        PU = UU.dy * pU + gU,
-        TU = UU => Math.max(-1, Math.min(1, UU));
+    function Vu(uu, Ru, yu, Eu, Ku) {
+      const Qu = uu.dx * Eu + Ru,
+        mu = uu.dy * Ku + yu,
+        Ju = uu => Math.max(-1, Math.min(1, uu));
       return {
-        dx: TU(EU / tU),
-        dy: TU(PU / pU)
+        dx: Ju(Qu / Eu),
+        dy: Ju(mu / Ku)
       }
     }
 
-    function GU(UU, RU, gU, tU) {
-      return RU <= 0 || gU <= 0 ? 1 : Math.max(.05, Math.min(1, UU / RU, tU / gU))
+    function ru(uu, Ru, yu, Eu) {
+      return Ru <= 0 || yu <= 0 ? 1 : Math.max(.05, Math.min(1, uu / Ru, Eu / yu))
     }
 
-    function jU(UU, RU, gU) {
-      return Math.min(UU.right, RU.right) - Math.max(UU.left, RU.left) > gU && Math.min(UU.bottom, RU.bottom) - Math.max(UU.top, RU.top) > gU
+    function Bu(uu, Ru, yu) {
+      return Math.min(uu.right, Ru.right) - Math.max(uu.left, Ru.left) > yu && Math.min(uu.bottom, Ru.bottom) - Math.max(uu.top, Ru.top) > yu
     }
 
-    function uU(UU, RU) {
-      const gU = (UU, RU, gU, tU) => RU - UU > tU - gU ? gU - UU > RU - tU ? tU - RU : gU - UU : UU < gU ? gU - UU : RU > tU ? tU - RU : 0;
+    function xu(uu, Ru) {
+      const yu = (uu, Ru, yu, Eu) => Ru - uu > Eu - yu ? yu - uu > Ru - Eu ? Eu - Ru : yu - uu : uu < yu ? yu - uu : Ru > Eu ? Eu - Ru : 0;
       return {
-        x: gU(UU.left, UU.right, RU.left, RU.right),
-        y: gU(UU.top, UU.bottom, RU.top, RU.bottom)
+        x: yu(uu.left, uu.right, Ru.left, Ru.right),
+        y: yu(uu.top, uu.bottom, Ru.top, Ru.bottom)
       }
     }
 
-    function CU(UU, RU) {
+    function Su(uu, Ru) {
       let {
-        avoid: gU = null,
-        bounds: tU = null
-      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, pU = 0, EU = 1 / 0;
-      return UU.forEach(((UU, PU) => {
-        const TU = RU.filter((RU => jU(UU, RU, 0))).length,
-          qU = null !== tU && (UU.left < tU.left || UU.top < tU.top || UU.right > tU.right || UU.bottom > tU.bottom),
-          KU = TU + (gU && jU(UU, gU, 0) ? 1e3 : 0) + (qU ? 1e6 : 0);
-        KU < EU && (pU = PU, EU = KU)
-      })), pU
+        avoid: yu = null,
+        bounds: Eu = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, Ku = 0, Qu = 1 / 0;
+      return uu.forEach(((uu, mu) => {
+        const Ju = Ru.filter((Ru => Bu(uu, Ru, 0))).length,
+          Nu = null !== Eu && (uu.left < Eu.left || uu.top < Eu.top || uu.right > Eu.right || uu.bottom > Eu.bottom),
+          Xu = Ju + (yu && Bu(uu, yu, 0) ? 1e3 : 0) + (Nu ? 1e6 : 0);
+        Xu < Qu && (Ku = mu, Qu = Xu)
+      })), Ku
     }
-    gU.d(RU, {
-      A: () => uU,
-      D: () => pU,
-      e: () => tU,
-      f: () => PU,
-      i: () => jU,
-      j: () => KU,
-      n: () => EU,
-      r: () => CU,
-      s: () => cU,
-      t: () => TU,
-      u: () => GU,
-      w: () => qU
+    yu.d(Ru, {
+      A: () => Nu,
+      B: () => xu,
+      F: () => Ku,
+      b: () => Eu,
+      e: () => mu,
+      f: () => Bu,
+      h: () => Xu,
+      l: () => Qu,
+      p: () => Su,
+      t: () => Vu,
+      w: () => Ju,
+      z: () => ru
     })
   },
-  8925: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU,
-      h: () => pU
+  8991: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Qu,
+      f: () => Ku
     });
-    var tU = gU(21);
+    var Eu = yu(27);
 
-    function pU(UU, RU) {
-      return UU && !RU
+    function Ku(uu, Ru) {
+      return uu && !Ru
     }
 
-    function EU() {
-      return pU(tU.b.get("isTouchScreen"), tU.b.get("clientEscMenuOptions").touchActionButtons)
+    function Qu() {
+      return Ku(Eu.d.get("isTouchScreen"), Eu.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  8887: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => tU
+  8949: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Eu
     });
-    const tU = new Set(["chunkBorders"])
+    const Eu = new Set(["chunkBorders"])
   },
-  8880: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      ALL_DEV_TOOLS: () => PU,
-      coreDevTools: () => KU,
-      devTools: () => qU
+  8946: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      ALL_DEV_TOOLS: () => mu,
+      coreDevTools: () => Xu,
+      devTools: () => Nu
     });
-    var tU = gU(603),
-      pU = gU(1293),
-      EU = gU(8887);
-    const PU = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function TU() {
+    var Eu = yu(624),
+      Ku = yu(1257),
+      Qu = yu(8949);
+    const mu = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Ju() {
       const {
-        noaDevTools: UU
-      } = await gU.e(230).then((() => gU(40455)));
-      return UU
+        noaDevTools: uu
+      } = await yu.e(230).then((() => yu(40636)));
+      return uu
     }
-    const qU = new class {
+    const Nu = new class {
         constructor() {
-          this.loadHost = TU, this.tools = PU
+          this.loadHost = Ju, this.tools = mu
         }
-        setHost(UU) {
-          this.tools = null === UU ? PU : UU.tools, this.loadHost = null === UU ? TU : async () => UU
+        setHost(uu) {
+          this.tools = null === uu ? mu : uu.tools, this.loadHost = null === uu ? Ju : async () => uu
         }
-        supports(UU) {
-          return this.tools.has(UU)
+        supports(uu) {
+          return this.tools.has(uu)
         }
-        async downloadScene(UU, RU) {
-          const gU = await this.loadHost();
-          await gU.downloadScene(UU, RU)
+        async downloadScene(uu, Ru) {
+          const yu = await this.loadHost();
+          await yu.downloadScene(uu, Ru)
         }
-        async setAmbientLightIntensity(UU) {
-          const RU = await this.loadHost();
-          await RU.setAmbientLightIntensity(UU)
+        async setAmbientLightIntensity(uu) {
+          const Ru = await this.loadHost();
+          await Ru.setAmbientLightIntensity(uu)
         }
       },
-      KU = {
-        tools: EU.b,
+      Xu = {
+        tools: Qu.d,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9120,121 +9120,121 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    tU.u && qU.setHost(KU), (0, pU.x)((() => {
-      qU.setHost(KU)
+    Eu.q && Nu.setHost(Xu), (0, Ku.t)((() => {
+      Nu.setHost(Xu)
     }))
   },
-  9030: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => PU,
-      h: () => pU,
-      i: () => cU
+  9100: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => mu,
+      c: () => Ku,
+      e: () => Vu
     });
-    var tU = gU(1517);
+    var Eu = yu(1517);
 
-    function pU(UU) {
-      var RU;
+    function Ku(uu) {
+      var Ru;
       return {
-        ...PU.store,
-        yaw: PU.store.yaw + (null !== (RU = tU.d[UU].previewYaw) && void 0 !== RU ? RU : 0)
+        ...mu.store,
+        yaw: mu.store.yaw + (null !== (Ru = Eu.b[uu].previewYaw) && void 0 !== Ru ? Ru : 0)
       }
     }
-    const EU = {
+    const Qu = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      PU = {
-        player: EU,
+      mu = {
+        player: Qu,
         store: {
-          ...EU,
+          ...Qu,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function TU(UU, RU) {
-      UU instanceof Promise ? UU.then(RU).catch((UU => {
-        console.error("Couldn't open the preview", UU)
-      })) : RU(UU)
+    function Ju(uu, Ru) {
+      uu instanceof Promise ? uu.then(Ru).catch((uu => {
+        console.error("Couldn't open the preview", uu)
+      })) : Ru(uu)
     }
-    class qU {
-      constructor(UU) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, TU(UU, (UU => {
-          this.closed ? UU.close() : (this.opened = UU, null !== this.size && UU.resize(this.size.width, this.size.height), null !== this.view && UU.show(this.view))
+    class Nu {
+      constructor(uu) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, Ju(uu, (uu => {
+          this.closed ? uu.close() : (this.opened = uu, null !== this.size && uu.resize(this.size.width, this.size.height), null !== this.view && uu.show(this.view))
         }))
       }
-      show(UU) {
-        var RU;
-        this.view = UU, null === (RU = this.opened) || void 0 === RU || RU.show(UU)
+      show(uu) {
+        var Ru;
+        this.view = uu, null === (Ru = this.opened) || void 0 === Ru || Ru.show(uu)
       }
-      resize(UU, RU) {
-        var gU;
+      resize(uu, Ru) {
+        var yu;
         this.size = {
-          width: UU,
-          height: RU
-        }, null === (gU = this.opened) || void 0 === gU || gU.resize(UU, RU)
+          width: uu,
+          height: Ru
+        }, null === (yu = this.opened) || void 0 === yu || yu.resize(uu, Ru)
       }
       close() {
-        var UU;
-        this.closed = !0, null === (UU = this.opened) || void 0 === UU || UU.close(), this.opened = null
+        var uu;
+        this.closed = !0, null === (uu = this.opened) || void 0 === uu || uu.close(), this.opened = null
       }
     }
-    class KU {
-      constructor(UU) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(UU).then((UU => UU.ready)), TU(UU, (UU => {
-          this.closed ? UU.close() : (this.opened = UU, null !== this.size && UU.resize(this.size.width, this.size.height))
+    class Xu {
+      constructor(uu) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(uu).then((uu => uu.ready)), Ju(uu, (uu => {
+          this.closed ? uu.close() : (this.opened = uu, null !== this.size && uu.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var UU, RU;
-        return null !== (UU = null === (RU = this.opened) || void 0 === RU ? void 0 : RU.isReady()) && void 0 !== UU && UU
+        var uu, Ru;
+        return null !== (uu = null === (Ru = this.opened) || void 0 === Ru ? void 0 : Ru.isReady()) && void 0 !== uu && uu
       }
-      setCosmetic(UU, RU) {
-        var gU;
-        null === (gU = this.opened) || void 0 === gU || gU.setCosmetic(UU, RU)
+      setCosmetic(uu, Ru) {
+        var yu;
+        null === (yu = this.opened) || void 0 === yu || yu.setCosmetic(uu, Ru)
       }
-      playEmote(UU) {
-        var RU;
-        null === (RU = this.opened) || void 0 === RU || RU.playEmote(UU)
+      playEmote(uu) {
+        var Ru;
+        null === (Ru = this.opened) || void 0 === Ru || Ru.playEmote(uu)
       }
-      setOrbit(UU) {
-        var RU;
-        null === (RU = this.opened) || void 0 === RU || RU.setOrbit(UU)
+      setOrbit(uu) {
+        var Ru;
+        null === (Ru = this.opened) || void 0 === Ru || Ru.setOrbit(uu)
       }
       resetCamera() {
-        var UU;
-        null === (UU = this.opened) || void 0 === UU || UU.resetCamera()
+        var uu;
+        null === (uu = this.opened) || void 0 === uu || uu.resetCamera()
       }
-      async untilDrawn(UU) {
-        var RU;
-        await this.ready, await (null === (RU = this.opened) || void 0 === RU ? void 0 : RU.untilDrawn(UU))
+      async untilDrawn(uu) {
+        var Ru;
+        await this.ready, await (null === (Ru = this.opened) || void 0 === Ru ? void 0 : Ru.untilDrawn(uu))
       }
-      resize(UU, RU) {
-        var gU;
+      resize(uu, Ru) {
+        var yu;
         this.size = {
-          width: UU,
-          height: RU
-        }, null === (gU = this.opened) || void 0 === gU || gU.resize(UU, RU)
+          width: uu,
+          height: Ru
+        }, null === (yu = this.opened) || void 0 === yu || yu.resize(uu, Ru)
       }
       close() {
-        var UU;
-        this.closed = !0, null === (UU = this.opened) || void 0 === UU || UU.close(), this.opened = null
+        var uu;
+        this.closed = !0, null === (uu = this.opened) || void 0 === uu || uu.close(), this.opened = null
       }
     }
-    const cU = new class {
+    const Vu = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(UU) {
-        this.host = UU
+      setHost(uu) {
+        this.host = uu
       }
-      setDefaultHost(UU) {
-        this.makeDefault = UU
+      setDefaultHost(uu) {
+        this.makeDefault = uu
       }
       current() {
         if (null === this.host) {
@@ -9243,99 +9243,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(UU) {
-        return new qU(this.current().openMob(UU))
+      openMob(uu) {
+        return new Nu(this.current().openMob(uu))
       }
-      openPet(UU) {
-        return new qU(this.current().openPet(UU))
+      openPet(uu) {
+        return new Nu(this.current().openPet(uu))
       }
-      openMobLineup(UU) {
-        return new qU(this.current().openMobLineup(UU))
+      openMobLineup(uu) {
+        return new Nu(this.current().openMobLineup(uu))
       }
-      openCharacter(UU, RU) {
-        return new KU(this.current().openCharacter(UU, RU))
+      openCharacter(uu, Ru) {
+        return new Xu(this.current().openCharacter(uu, Ru))
       }
     }
   },
-  9027: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => tU.e,
-      f: () => tU.h,
-      g: () => tU.i
+  9098: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu.b,
+      f: () => Eu.c,
+      g: () => Eu.e
     });
-    var tU = gU(9030);
-    class pU {
-      constructor(UU) {
-        this.load = UU, this.loaded = null, this.loading = null
+    var Eu = yu(9100);
+    class Ku {
+      constructor(uu) {
+        this.load = uu, this.loaded = null, this.loading = null
       }
-      run(UU) {
-        return null !== this.loaded ? UU(this.loaded) : (this.loading ??= this.load().then((UU => (this.loaded = UU, UU)), (UU => {
-          throw this.loading = null, UU
-        })), this.loading.then(UU))
+      run(uu) {
+        return null !== this.loaded ? uu(this.loaded) : (this.loading ??= this.load().then((uu => (this.loaded = uu, uu)), (uu => {
+          throw this.loading = null, uu
+        })), this.loading.then(uu))
       }
     }
-    class EU {
+    class Qu {
       constructor() {
-        this.mobScene = new pU((() => Promise.all([gU.e(69), gU.e(226), gU.e(225), gU.e(244), gU.e(94), gU.e(245), gU.e(72), gU.e(71), gU.e(242), gU.e(70), gU.e(252), gU.e(246), gU.e(251), gU.e(249), gU.e(241), gU.e(218), gU.e(264), gU.e(222), gU.e(236), gU.e(247), gU.e(250), gU.e(74), gU.e(196), gU.e(215), gU.e(219), gU.e(93), gU.e(113), gU.e(234), gU.e(73), gU.e(112), gU.e(153)]).then((() => gU(40461))))), this.characterScene = new pU((() => Promise.all([gU.e(69), gU.e(226), gU.e(225), gU.e(244), gU.e(94), gU.e(245), gU.e(72), gU.e(71), gU.e(242), gU.e(70), gU.e(252), gU.e(246), gU.e(251), gU.e(249), gU.e(241), gU.e(218), gU.e(264), gU.e(222), gU.e(236), gU.e(247), gU.e(250), gU.e(74), gU.e(196), gU.e(215), gU.e(219), gU.e(93), gU.e(113), gU.e(234), gU.e(73), gU.e(112), gU.e(152)]).then((() => gU(40554)))))
+        this.mobScene = new Ku((() => Promise.all([yu.e(69), yu.e(226), yu.e(225), yu.e(244), yu.e(94), yu.e(245), yu.e(72), yu.e(71), yu.e(242), yu.e(70), yu.e(252), yu.e(246), yu.e(251), yu.e(249), yu.e(241), yu.e(218), yu.e(264), yu.e(222), yu.e(236), yu.e(247), yu.e(250), yu.e(74), yu.e(196), yu.e(215), yu.e(219), yu.e(93), yu.e(113), yu.e(234), yu.e(73), yu.e(112), yu.e(153)]).then((() => yu(40647))))), this.characterScene = new Ku((() => Promise.all([yu.e(69), yu.e(226), yu.e(225), yu.e(244), yu.e(94), yu.e(245), yu.e(72), yu.e(71), yu.e(242), yu.e(70), yu.e(252), yu.e(246), yu.e(251), yu.e(249), yu.e(241), yu.e(218), yu.e(264), yu.e(222), yu.e(236), yu.e(247), yu.e(250), yu.e(74), yu.e(196), yu.e(215), yu.e(219), yu.e(93), yu.e(113), yu.e(234), yu.e(73), yu.e(112), yu.e(152)]).then((() => yu(40755)))))
       }
-      openMob(UU) {
-        return this.mobScene.run((RU => RU.openMobPreview(UU)))
+      openMob(uu) {
+        return this.mobScene.run((Ru => Ru.openMobPreview(uu)))
       }
-      openPet(UU) {
-        return this.mobScene.run((RU => RU.openPetPreview(UU)))
+      openPet(uu) {
+        return this.mobScene.run((Ru => Ru.openPetPreview(uu)))
       }
-      openMobLineup(UU) {
-        return this.mobScene.run((RU => RU.openMobLineupPreview(UU)))
+      openMobLineup(uu) {
+        return this.mobScene.run((Ru => Ru.openMobLineupPreview(uu)))
       }
-      openCharacter(UU, RU) {
-        return this.characterScene.run((gU => gU.openCharacterPreview(UU, RU)))
+      openCharacter(uu, Ru) {
+        return this.characterScene.run((yu => yu.openCharacterPreview(uu, Ru)))
       }
     }
-    tU.i.setDefaultHost((() => new EU))
+    Eu.e.setDefaultHost((() => new Qu))
   },
-  6339: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => pU,
-      e: () => EU
+  6436: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Ku,
+      h: () => Qu
     });
-    var tU = gU(34);
-    const pU = "shaderPack";
-    async function EU() {
-      var UU;
-      let RU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (UU = await tU.g.getItem(pU, RU)) && void 0 !== UU ? UU : null
+    var Eu = yu(47);
+    const Ku = "shaderPack";
+    async function Qu() {
+      var uu;
+      let Ru = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (uu = await Eu.f.getItem(Ku, Ru)) && void 0 !== uu ? uu : null
     }
   },
-  8902: (UU, RU, gU) => {
-    function tU(UU, RU) {
-      return UU && !RU
+  8965: (uu, Ru, yu) => {
+    function Eu(uu, Ru) {
+      return uu && !Ru
     }
-    gU.d(RU, {
-      c: () => tU
+    yu.d(Ru, {
+      e: () => Eu
     })
   },
-  8919: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU
+  8984: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Qu
     });
-    var tU = gU(1064);
+    var Eu = yu(1056);
 
-    function pU() {
-      var UU, RU;
-      return null !== (UU = null === (RU = screen.orientation) || void 0 === RU ? void 0 : RU.type) && void 0 !== UU ? UU : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Ku() {
+      var uu, Ru;
+      return null !== (uu = null === (Ru = screen.orientation) || void 0 === Ru ? void 0 : Ru.type) && void 0 !== uu ? uu : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const EU = new class {
+    const Qu = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && pU() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Ku() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = pU(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, tU.Kh)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Ku(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Eu.jp)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9343,34 +9343,34 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const UU of this.resizers) UU()
+            for (const uu of this.resizers) uu()
           }
         }), 1e3)
       }
-      heldSizer(UU) {
-        let RU = !1;
+      heldSizer(uu) {
+        let Ru = !1;
         return () => {
-          if (RU && this.isHeld()) return null;
-          const gU = UU();
-          return RU ||= null !== gU, gU
+          if (Ru && this.isHeld()) return null;
+          const yu = uu();
+          return Ru ||= null !== yu, yu
         }
       }
-      onRelease(UU) {
-        return this.resizers.add(UU), () => {
-          this.resizers.delete(UU)
+      onRelease(uu) {
+        return this.resizers.add(uu), () => {
+          this.resizers.delete(uu)
         }
       }
     }
   },
-  8512: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => TU,
-      d: () => qU
+  8631: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      d: () => Nu
     });
-    var tU = gU(21),
-      pU = gU(1316),
-      EU = gU(96);
-    const PU = {
+    var Eu = yu(27),
+      Ku = yu(1280),
+      Qu = yu(106);
+    const mu = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -9413,111 +9413,111 @@ export const modules = {
       }
     };
 
-    function TU() {
-      return (0, EU.isMobile)() && "function" === typeof navigator.vibrate
+    function Ju() {
+      return (0, Qu.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const qU = new class {
-      constructor(UU) {
-        this.deps = UU, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Nu = new class {
+      constructor(uu) {
+        this.deps = uu, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(UU, RU) {
-        var gU;
+      play(uu, Ru) {
+        var yu;
         if (!this.deps.enabled()) return;
-        const tU = PU[UU],
-          pU = null !== RU && void 0 !== RU ? RU : tU.pattern;
-        if (null === pU) return void console.warn("No vibration pattern for", UU);
-        const EU = this.deps.now();
-        EU - this.lastAnyAt < 40 && tU.priority < this.playingPriority || EU - (null !== (gU = this.lastAt.get(UU)) && void 0 !== gU ? gU : -1 / 0) < tU.minGapMs || EU < this.playingUntil && tU.priority < this.playingPriority || (this.lastAt.set(UU, EU), this.lastAnyAt = EU, this.playingUntil = EU + pU.reduce(((UU, RU) => UU + RU), 0), this.playingPriority = tU.priority, this.deps.vibrate(pU))
+        const Eu = mu[uu],
+          Ku = null !== Ru && void 0 !== Ru ? Ru : Eu.pattern;
+        if (null === Ku) return void console.warn("No vibration pattern for", uu);
+        const Qu = this.deps.now();
+        Qu - this.lastAnyAt < 40 && Eu.priority < this.playingPriority || Qu - (null !== (yu = this.lastAt.get(uu)) && void 0 !== yu ? yu : -1 / 0) < Eu.minGapMs || Qu < this.playingUntil && Eu.priority < this.playingPriority || (this.lastAt.set(uu, Qu), this.lastAnyAt = Qu, this.playingUntil = Qu + Ku.reduce(((uu, Ru) => uu + Ru), 0), this.playingPriority = Eu.priority, this.deps.vibrate(Ku))
       }
     }({
-      vibrate: UU => {
-        navigator.vibrate([...UU])
+      vibrate: uu => {
+        navigator.vibrate([...uu])
       },
       now: () => performance.now(),
-      enabled: () => TU() && tU.b.get("isTouchScreen") && tU.b.get("clientEscMenuOptions").vibration && !(0, pU.h)()
+      enabled: () => Ju() && Eu.d.get("isTouchScreen") && Eu.d.get("clientEscMenuOptions").vibration && !(0, Ku.e)()
     })
   },
-  8896: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => uU,
-      h: () => jU
+  8960: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => xu,
+      d: () => Bu
     });
-    var tU = gU(21),
-      pU = gU(1614),
-      EU = gU(34),
-      PU = gU(1333),
-      TU = gU(3329),
-      qU = gU(1444),
-      KU = gU(1362);
-    const cU = 2592e5,
-      GU = "notificationOptInLastPromptedAt";
-    async function jU() {
-      var UU;
-      const RU = await uU();
-      if (null === RU) return;
-      const gU = null !== (UU = EU.k.getItem(GU)) && void 0 !== UU ? UU : 0;
-      if (Date.now() - gU < cU) return;
-      if ((0, KU.g)()) return;
-      const tU = await PU.NotificationProvider.showPromptPopup({
+    var Eu = yu(27),
+      Ku = yu(1626),
+      Qu = yu(47),
+      mu = yu(1311),
+      Ju = yu(3475),
+      Nu = yu(1422),
+      Xu = yu(1354);
+    const Vu = 2592e5,
+      ru = "notificationOptInLastPromptedAt";
+    async function Bu() {
+      var uu;
+      const Ru = await xu();
+      if (null === Ru) return;
+      const yu = null !== (uu = Qu.i.getItem(ru)) && void 0 !== uu ? uu : 0;
+      if (Date.now() - yu < Vu) return;
+      if ((0, Xu.g)()) return;
+      const Eu = await mu.NotificationProvider.showPromptPopup({
         icon: "bell",
         title: "mobilePushNotifications:optInTitle",
-        subtitle: pU.b.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
+        subtitle: Ku.d.supports("notifications") ? "mobilePushNotifications:optInSubtitle" : "mobilePushNotifications:optInSubtitleBrowser",
         confirmText: "mobilePushNotifications:optInConfirm",
         cancelText: "mobilePushNotifications:optInCancel",
         padStartsOn: "cancel"
       }).getResult();
-      "notificationTornDown" !== tU && (EU.k.setItem(GU, Date.now()), (0, qU.reportAnalyticsClick)({
-        id: !0 === tU ? "push.allow" : "push.deny",
-        value: pU.b.supports("notifications") ? "app" : "browser"
-      }), !0 === tU && RU().catch((UU => {
-        console.error("Failed to ask for push notifications:", UU)
+      "notificationTornDown" !== Eu && (Qu.i.setItem(ru, Date.now()), (0, Nu.reportAnalyticsClick)({
+        id: !0 === Eu ? "push.allow" : "push.deny",
+        value: Ku.d.supports("notifications") ? "app" : "browser"
+      }), !0 === Eu && Ru().catch((uu => {
+        console.error("Failed to ask for push notifications:", uu)
       })))
     }
-    async function uU() {
-      return await pU.b.ready, pU.b.supports("notifications") ? tU.b.get("mobilePushNotificationsCanAsk") ? async () => {
-        pU.b.request("notifications.requestPermission", {}).then((UU => {
+    async function xu() {
+      return await Ku.d.ready, Ku.d.supports("notifications") ? Eu.d.get("mobilePushNotificationsCanAsk") ? async () => {
+        Ku.d.request("notifications.requestPermission", {}).then((uu => {
           let {
-            canAsk: RU
-          } = UU;
-          tU.b.set({
-            mobilePushNotificationsCanAsk: RU
+            canAsk: Ru
+          } = uu;
+          Eu.d.set({
+            mobilePushNotificationsCanAsk: Ru
           })
-        }), (UU => {
-          console.error("The app couldn't ask for push notifications:", UU)
+        }), (uu => {
+          console.error("The app couldn't ask for push notifications:", uu)
         }))
-      }: null: await TU.b.canAsk() ? () => TU.b.requestPermission() : null
+      }: null: await Ju.b.canAsk() ? () => Ju.b.requestPermission() : null
     }
   },
-  8908: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => TU,
-      f: () => qU
+  8971: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Ju,
+      f: () => Nu
     });
-    var tU = gU(21);
-    const pU = 24,
-      EU = "farNametags",
-      PU = 1e5;
+    var Eu = yu(27);
+    const Ku = 24,
+      Qu = "farNametags",
+      mu = 1e5;
 
-    function TU() {
-      var UU;
-      return null === (UU = tU.b.get("showDistantNametags")) || void 0 === UU || UU
+    function Ju() {
+      var uu;
+      return null === (uu = Eu.d.get("showDistantNametags")) || void 0 === uu || uu
     }
 
-    function qU() {
-      var UU;
-      return null !== (UU = function() {
-        const UU = new URLSearchParams(window.location.search).get(EU),
-          RU = null === UU || "" === UU ? NaN : Number(UU);
-        return Number.isFinite(RU) && RU >= 0 ? Math.min(RU, PU) : null
-      }()) && void 0 !== UU ? UU : TU() ? 0 : pU
+    function Nu() {
+      var uu;
+      return null !== (uu = function() {
+        const uu = new URLSearchParams(window.location.search).get(Qu),
+          Ru = null === uu || "" === uu ? NaN : Number(uu);
+        return Number.isFinite(Ru) && Ru >= 0 ? Math.min(Ru, mu) : null
+      }()) && void 0 !== uu ? uu : Ju() ? 0 : Ku
     }
   },
-  9012: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => pU,
-      d: () => PU
+  9087: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Ku,
+      g: () => mu
     });
-    const tU = [{
+    const Eu = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -9699,79 +9699,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function pU(UU) {
-      let RU, gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof UU) {
-        if (!Number.isFinite(UU)) return "0";
-        if (Math.abs(UU) < 100) {
-          const RU = UU < 0 ? "-" : "",
-            gU = Math.abs(UU);
-          return gU >= 10 ? `${RU}${gU.toFixed(1).replace(/\.0$/,"")}` : `${RU}${gU.toFixed(2).replace(/\.?0+$/,"")}`
+    function Ku(uu) {
+      let Ru, yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof uu) {
+        if (!Number.isFinite(uu)) return "0";
+        if (Math.abs(uu) < 100) {
+          const Ru = uu < 0 ? "-" : "",
+            yu = Math.abs(uu);
+          return yu >= 10 ? `${Ru}${yu.toFixed(1).replace(/\.0$/,"")}` : `${Ru}${yu.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        RU = BigInt(Math.floor(UU))
-      } else RU = UU;
-      const pU = RU < 0n ? -RU : RU,
-        EU = RU < 0n ? "-" : "",
-        PU = pU.toString();
-      if (PU.length <= gU) return `${EU}${PU}`;
-      const TU = 3 * Math.floor((PU.length - 1) / 3);
-      if (TU < 3) return `${EU}${PU}`;
-      if (TU > 3 * tU.length) {
-        const UU = PU[0],
-          RU = PU.slice(1, 3).replace(/0+$/, "");
-        return `${EU}${RU?`${UU}.${RU}`:UU}e${PU.length-1}`
+        Ru = BigInt(Math.floor(uu))
+      } else Ru = uu;
+      const Ku = Ru < 0n ? -Ru : Ru,
+        Qu = Ru < 0n ? "-" : "",
+        mu = Ku.toString();
+      if (mu.length <= yu) return `${Qu}${mu}`;
+      const Ju = 3 * Math.floor((mu.length - 1) / 3);
+      if (Ju < 3) return `${Qu}${mu}`;
+      if (Ju > 3 * Eu.length) {
+        const uu = mu[0],
+          Ru = mu.slice(1, 3).replace(/0+$/, "");
+        return `${Qu}${Ru?`${uu}.${Ru}`:uu}e${mu.length-1}`
       }
       const {
-        threshold: qU,
-        suffix: KU
-      } = tU[tU.length - TU / 3], cU = pU / qU, GU = Number(1000n * (pU % qU) / qU), jU = Number(cU) + GU / 1e3;
-      let uU;
-      return uU = jU >= 100 ? Math.floor(jU).toString() : jU >= 10 ? jU.toFixed(1).replace(/\.0$/, "") : jU.toFixed(2).replace(/\.?0+$/, ""), `${EU}${uU}${KU}`
+        threshold: Nu,
+        suffix: Xu
+      } = Eu[Eu.length - Ju / 3], Vu = Ku / Nu, ru = Number(1000n * (Ku % Nu) / Nu), Bu = Number(Vu) + ru / 1e3;
+      let xu;
+      return xu = Bu >= 100 ? Math.floor(Bu).toString() : Bu >= 10 ? Bu.toFixed(1).replace(/\.0$/, "") : Bu.toFixed(2).replace(/\.?0+$/, ""), `${Qu}${xu}${Xu}`
     }
-    const EU = tU.map((UU => {
+    const Qu = Eu.map((uu => {
       let {
-        threshold: RU,
-        suffix: gU
-      } = UU;
+        threshold: Ru,
+        suffix: yu
+      } = uu;
       return {
-        threshold: Number(RU),
-        suffix: gU
+        threshold: Number(Ru),
+        suffix: yu
       }
-    })).filter((UU => {
+    })).filter((uu => {
       let {
-        threshold: RU
-      } = UU;
-      return Number.isFinite(RU)
+        threshold: Ru
+      } = uu;
+      return Number.isFinite(Ru)
     }));
 
-    function PU(UU) {
-      const RU = Math.abs(UU),
-        gU = UU < 0 ? "-" : "";
+    function mu(uu) {
+      const Ru = Math.abs(uu),
+        yu = uu < 0 ? "-" : "";
       for (const {
-          threshold: tU,
-          suffix: pU
+          threshold: Eu,
+          suffix: Ku
         }
-        of EU)
-        if (RU >= tU) {
-          const UU = RU / tU;
-          if (UU >= 1e3) return `${gU}${RU.toExponential(2).replace("e+","e")}`;
-          let EU;
-          return EU = UU >= 100 ? Math.floor(UU).toString() : UU >= 10 ? UU.toFixed(1).replace(/\.0$/, "") : UU.toFixed(2).replace(/\.?0+$/, ""), `${gU}${EU}${pU}`
-        } return `${gU}${RU}`
+        of Qu)
+        if (Ru >= Eu) {
+          const uu = Ru / Eu;
+          if (uu >= 1e3) return `${yu}${Ru.toExponential(2).replace("e+","e")}`;
+          let Qu;
+          return Qu = uu >= 100 ? Math.floor(uu).toString() : uu >= 10 ? uu.toFixed(1).replace(/\.0$/, "") : uu.toFixed(2).replace(/\.?0+$/, ""), `${yu}${Qu}${Ku}`
+        } return `${yu}${Ru}`
     }
   },
-  8994: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => cU,
-      f: () => jU,
-      i: () => GU,
-      m: () => PU,
-      q: () => KU,
-      u: () => qU
+  9064: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Vu,
+      f: () => Bu,
+      i: () => ru,
+      j: () => mu,
+      m: () => Xu,
+      n: () => Nu
     });
-    var tU = gU(311);
-    const pU = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      EU = {
+    var Eu = yu(343);
+    const Ku = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      Qu = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -9846,13 +9846,13 @@ export const modules = {
         }
       };
 
-    function PU(UU) {
-      var RU;
-      return null !== (RU = EU[UU]) && void 0 !== RU ? RU : {
+    function mu(uu) {
+      var Ru;
+      return null !== (Ru = Qu[uu]) && void 0 !== Ru ? Ru : {
         translationKey: ""
       }
     }
-    const TU = {
+    const Ju = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -9905,107 +9905,107 @@ export const modules = {
       }]
     };
 
-    function qU(UU) {
-      return pU.includes(UU)
+    function Nu(uu) {
+      return Ku.includes(uu)
     }
 
-    function KU(UU) {
-      var RU;
-      return !0 === (null === UU || void 0 === UU || null === (RU = UU.customAttributes) || void 0 === RU ? void 0 : RU.cannotEnchant)
+    function Xu(uu) {
+      var Ru;
+      return !0 === (null === uu || void 0 === uu || null === (Ru = uu.customAttributes) || void 0 === Ru ? void 0 : Ru.cannotEnchant)
     }
 
-    function cU(UU, RU) {
+    function Vu(uu, Ru) {
       const {
-        max: gU
-      } = TU[UU].at(-1);
-      return RU <= gU
+        max: yu
+      } = Ju[uu].at(-1);
+      return Ru <= yu
     }
 
-    function GU(UU) {
-      const RU = Math.sin(UU / 80),
-        gU = UU => {
-          if (UU <= 0) return 0;
-          if (UU > 1) return 1;
-          let RU = 0;
-          const gU = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let tU = 0; tU < gU.length; tU++) {
-            RU += (tU % 2 === 0 ? 1 : -1) * gU[tU] * Math.pow(UU, 2 + tU) / (2 + tU)
+    function ru(uu) {
+      const Ru = Math.sin(uu / 80),
+        yu = uu => {
+          if (uu <= 0) return 0;
+          if (uu > 1) return 1;
+          let Ru = 0;
+          const yu = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let Eu = 0; Eu < yu.length; Eu++) {
+            Ru += (Eu % 2 === 0 ? 1 : -1) * yu[Eu] * Math.pow(uu, 2 + Eu) / (2 + Eu)
           }
-          return 72 * RU
+          return 72 * Ru
         },
-        tU = .3 - .78 * RU,
-        pU = .5 - .78 * RU,
-        EU = .6 - .7 * RU,
-        PU = .8 - .6 * RU;
-      let TU = gU(tU),
-        qU = gU(pU) - TU,
-        KU = gU(EU) - qU - TU,
-        cU = gU(PU) - KU - qU - TU;
-      tU < .041 && (qU /= 1 - TU, KU /= 1 - TU, cU /= 1 - TU, TU = 0), pU < .041 && (TU /= 1 - qU, KU /= 1 - qU, cU /= 1 - qU, qU = 0), EU < .041 && (TU /= 1 - KU, qU /= 1 - KU, cU /= 1 - KU, KU = 0), PU < .041 && (TU /= 1 - cU, qU /= 1 - cU, KU /= 1 - cU, cU = 0);
+        Eu = .3 - .78 * Ru,
+        Ku = .5 - .78 * Ru,
+        Qu = .6 - .7 * Ru,
+        mu = .8 - .6 * Ru;
+      let Ju = yu(Eu),
+        Nu = yu(Ku) - Ju,
+        Xu = yu(Qu) - Nu - Ju,
+        Vu = yu(mu) - Xu - Nu - Ju;
+      Eu < .041 && (Nu /= 1 - Ju, Xu /= 1 - Ju, Vu /= 1 - Ju, Ju = 0), Ku < .041 && (Ju /= 1 - Nu, Xu /= 1 - Nu, Vu /= 1 - Nu, Nu = 0), Qu < .041 && (Ju /= 1 - Xu, Nu /= 1 - Xu, Vu /= 1 - Xu, Xu = 0), mu < .041 && (Ju /= 1 - Vu, Nu /= 1 - Vu, Xu /= 1 - Vu, Vu = 0);
       return {
-        commonProb: TU,
-        uncommonProb: qU,
-        rareProb: KU,
-        epicProb: cU,
-        legendaryProb: 1 - (cU + KU + qU + TU)
+        commonProb: Ju,
+        uncommonProb: Nu,
+        rareProb: Xu,
+        epicProb: Vu,
+        legendaryProb: 1 - (Vu + Xu + Nu + Ju)
       }
     }
 
-    function jU(UU, RU) {
+    function Bu(uu, Ru) {
       const {
-        min: gU,
-        max: pU
-      } = TU[UU][RU], EU = tU.c.sampleUniformIntDistribution(gU, pU, "includeMax");
+        min: yu,
+        max: Ku
+      } = Ju[uu][Ru], Qu = Eu.c.sampleUniformIntDistribution(yu, Ku, "includeMax");
       return {
-        ...GU(EU),
-        level: EU
+        ...ru(Qu),
+        level: Qu
       }
     }
   },
-  8405: (UU, RU, gU) => {
-    function tU(UU, RU) {
-      return !UU.hidden && (RU || !UU.isRewardedAd)
+  8502: (uu, Ru, yu) => {
+    function Eu(uu, Ru) {
+      return !uu.hidden && (Ru || !uu.isRewardedAd)
     }
 
-    function pU(UU) {
-      return "object" === typeof UU ? UU.option : UU
+    function Ku(uu) {
+      return "object" === typeof uu ? uu.option : uu
     }
 
-    function EU(UU, RU) {
-      var gU;
-      if ("dropdown" === (null === (gU = UU.userInput) || void 0 === gU ? void 0 : gU.type) && "object" === typeof UU.userInput.dropdownOptions[0]) {
-        for (const gU of UU.userInput.dropdownOptions)
-          if (pU(gU) === RU) return "object" === typeof gU ? gU.cost : UU.cost;
-        console.error("Didn't find matching option for dropdown item. Item:", UU, "input:", RU)
+    function Qu(uu, Ru) {
+      var yu;
+      if ("dropdown" === (null === (yu = uu.userInput) || void 0 === yu ? void 0 : yu.type) && "object" === typeof uu.userInput.dropdownOptions[0]) {
+        for (const yu of uu.userInput.dropdownOptions)
+          if (Ku(yu) === Ru) return "object" === typeof yu ? yu.cost : uu.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", uu, "input:", Ru)
       }
-      return UU.cost
+      return uu.cost
     }
 
-    function PU(UU, RU, gU) {
-      var tU;
-      const pU = null !== (tU = gU.excludedPlayers) && void 0 !== tU ? tU : [RU];
-      return UU.filter((UU => !pU.includes(UU)))
+    function mu(uu, Ru, yu) {
+      var Eu;
+      const Ku = null !== (Eu = yu.excludedPlayers) && void 0 !== Eu ? Eu : [Ru];
+      return uu.filter((uu => !Ku.includes(uu)))
     }
-    gU.d(RU, {
-      e: () => EU,
-      h: () => pU,
-      i: () => PU,
-      l: () => tU
+    yu.d(Ru, {
+      e: () => Qu,
+      h: () => Ku,
+      i: () => mu,
+      l: () => Eu
     })
   },
-  8962: () => {},
-  8933: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  9025: () => {},
+  8998: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  8936: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  9006: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  8942: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  9014: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  8947: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  9018: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,16 +1,16 @@
 export const id = 137;
 export const ids = [137];
 export const modules = {
-  7724: (UU, RU, gU) => {
-    gU.d(RU, {
-      encodeBinaryMessageWithMetricsCookies: () => pU
+  7827: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      encodeBinaryMessageWithMetricsCookies: () => Ku
     });
-    var tU = gU(3420);
+    var Eu = yu(3574);
 
-    function pU(UU) {
-      return tU.l.toBuffer(UU)
+    function Ku(uu) {
+      return Eu.j.toBuffer(uu)
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

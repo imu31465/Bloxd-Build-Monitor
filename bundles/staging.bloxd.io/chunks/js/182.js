@@ -1,2445 +1,2445 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  8833: (UU, RU) => {
-    RU.discordURLBuilder = function(UU) {
-      var RU;
-      const gU = (null === (RU = null === window || void 0 === window ? void 0 : window.location) || void 0 === RU ? void 0 : RU.hostname) || "localhost",
-        tU = UU.hostname.split("."),
-        pU = !UU.hostname.includes("trycloudflare.com") && !UU.hostname.includes("discordsays.com") && tU.length > 2 ? `/${tU[0]}` : "";
-      return UU.pathname.startsWith("/.proxy") ? `${UU.protocol}//${gU}${pU}${UU.pathname}${UU.search}` : `${UU.protocol}//${gU}/.proxy/colyseus${pU}${UU.pathname}${UU.search}`
+  8909: (uu, Ru) => {
+    Ru.discordURLBuilder = function(uu) {
+      var Ru;
+      const yu = (null === (Ru = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ru ? void 0 : Ru.hostname) || "localhost",
+        Eu = uu.hostname.split("."),
+        Ku = !uu.hostname.includes("trycloudflare.com") && !uu.hostname.includes("discordsays.com") && Eu.length > 2 ? `/${Eu[0]}` : "";
+      return uu.pathname.startsWith("/.proxy") ? `${uu.protocol}//${yu}${Ku}${uu.pathname}${uu.search}` : `${uu.protocol}//${yu}/.proxy/colyseus${Ku}${uu.pathname}${uu.search}`
     }
   },
-  8819: (UU, RU, gU) => {
-    var tU, pU, EU, PU, TU = gU(8714),
-      qU = gU(8827),
-      KU = gU(8779);
-    tU = new WeakMap, pU = new WeakMap, EU = new WeakMap, PU = new WeakMap, RU.Auth = class {
-      constructor(UU) {
-        this.http = UU, this.settings = {
+  8898: (uu, Ru, yu) => {
+    var Eu, Ku, Qu, mu, Ju = yu(8832),
+      Nu = yu(8903),
+      Xu = yu(8874);
+    Eu = new WeakMap, Ku = new WeakMap, Qu = new WeakMap, mu = new WeakMap, Ru.Auth = class {
+      constructor(uu) {
+        this.http = uu, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, tU.set(this, !1), pU.set(this, void 0), EU.set(this, void 0), PU.set(this, KU.createNanoEvents()), qU.getItem(this.settings.key, (UU => this.token = UU))
+        }, Eu.set(this, !1), Ku.set(this, void 0), Qu.set(this, void 0), mu.set(this, Xu.createNanoEvents()), Nu.getItem(this.settings.key, (uu => this.token = uu))
       }
-      set token(UU) {
-        this.http.authToken = UU
+      set token(uu) {
+        this.http.authToken = uu
       }
       get token() {
         return this.http.authToken
       }
-      onChange(UU) {
-        const RU = TU.__classPrivateFieldGet(this, PU, "f").on("change", UU);
-        return TU.__classPrivateFieldGet(this, tU, "f") || TU.__classPrivateFieldSet(this, pU, new Promise(((UU, RU) => {
-          this.getUserData().then((UU => {
-            this.emitChange(Object.assign(Object.assign({}, UU), {
+      onChange(uu) {
+        const Ru = Ju.__classPrivateFieldGet(this, mu, "f").on("change", uu);
+        return Ju.__classPrivateFieldGet(this, Eu, "f") || Ju.__classPrivateFieldSet(this, Ku, new Promise(((uu, Ru) => {
+          this.getUserData().then((uu => {
+            this.emitChange(Object.assign(Object.assign({}, uu), {
               token: this.token
             }))
-          })).catch((UU => {
+          })).catch((uu => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            UU()
+            uu()
           }))
-        })), "f"), TU.__classPrivateFieldSet(this, tU, !0, "f"), RU
+        })), "f"), Ju.__classPrivateFieldSet(this, Eu, !0, "f"), Ru
       }
       getUserData() {
-        return TU.__awaiter(this, void 0, void 0, (function*() {
+        return Ju.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(UU, RU, gU) {
-        return TU.__awaiter(this, void 0, void 0, (function*() {
-          const tU = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(uu, Ru, yu) {
+        return Ju.__awaiter(this, void 0, void 0, (function*() {
+          const Eu = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: UU,
-              password: RU,
-              options: gU
+              email: uu,
+              password: Ru,
+              options: yu
             }
           })).data;
-          return this.emitChange(tU), tU
+          return this.emitChange(Eu), Eu
         }))
       }
-      signInWithEmailAndPassword(UU, RU) {
-        return TU.__awaiter(this, void 0, void 0, (function*() {
-          const gU = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(uu, Ru) {
+        return Ju.__awaiter(this, void 0, void 0, (function*() {
+          const yu = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: UU,
-              password: RU
+              email: uu,
+              password: Ru
             }
           })).data;
-          return this.emitChange(gU), gU
+          return this.emitChange(yu), yu
         }))
       }
-      signInAnonymously(UU) {
-        return TU.__awaiter(this, void 0, void 0, (function*() {
-          const RU = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(uu) {
+        return Ju.__awaiter(this, void 0, void 0, (function*() {
+          const Ru = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: UU
+              options: uu
             }
           })).data;
-          return this.emitChange(RU), RU
+          return this.emitChange(Ru), Ru
         }))
       }
-      sendPasswordResetEmail(UU) {
-        return TU.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(uu) {
+        return Ju.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: UU
+              email: uu
             }
           })).data
         }))
       }
-      signInWithProvider(UU) {
-        return TU.__awaiter(this, arguments, void 0, (function*(UU) {
-          let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((gU, tU) => {
-            const pU = RU.width || 480,
-              PU = RU.height || 768,
-              qU = this.token ? `?token=${this.token}` : "",
-              KU = `Login with ${UU[0].toUpperCase()+UU.substring(1)}`,
-              cU = this.http.client.getHttpEndpoint(`${RU.prefix||`${this.settings.path}/provider`}/${UU}${qU}`),
-              GU = screen.width / 2 - pU / 2,
-              jU = screen.height / 2 - PU / 2;
-            TU.__classPrivateFieldSet(this, EU, window.open(cU, KU, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + pU + ", height=" + PU + ", top=" + jU + ", left=" + GU), "f");
-            const uU = UU => {
-                void 0 === UU.data.user && void 0 === UU.data.token || (clearInterval(CU), TU.__classPrivateFieldGet(this, EU, "f").close(), TU.__classPrivateFieldSet(this, EU, void 0, "f"), window.removeEventListener("message", uU), void 0 !== UU.data.error ? tU(UU.data.error) : (gU(UU.data), this.emitChange(UU.data)))
+      signInWithProvider(uu) {
+        return Ju.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((yu, Eu) => {
+            const Ku = Ru.width || 480,
+              mu = Ru.height || 768,
+              Nu = this.token ? `?token=${this.token}` : "",
+              Xu = `Login with ${uu[0].toUpperCase()+uu.substring(1)}`,
+              Vu = this.http.client.getHttpEndpoint(`${Ru.prefix||`${this.settings.path}/provider`}/${uu}${Nu}`),
+              ru = screen.width / 2 - Ku / 2,
+              Bu = screen.height / 2 - mu / 2;
+            Ju.__classPrivateFieldSet(this, Qu, window.open(Vu, Xu, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Ku + ", height=" + mu + ", top=" + Bu + ", left=" + ru), "f");
+            const xu = uu => {
+                void 0 === uu.data.user && void 0 === uu.data.token || (clearInterval(Su), Ju.__classPrivateFieldGet(this, Qu, "f").close(), Ju.__classPrivateFieldSet(this, Qu, void 0, "f"), window.removeEventListener("message", xu), void 0 !== uu.data.error ? Eu(uu.data.error) : (yu(uu.data), this.emitChange(uu.data)))
               },
-              CU = setInterval((() => {
-                TU.__classPrivateFieldGet(this, EU, "f") && !TU.__classPrivateFieldGet(this, EU, "f").closed || (TU.__classPrivateFieldSet(this, EU, void 0, "f"), tU("cg"), window.removeEventListener("message", uU))
+              Su = setInterval((() => {
+                Ju.__classPrivateFieldGet(this, Qu, "f") && !Ju.__classPrivateFieldGet(this, Qu, "f").closed || (Ju.__classPrivateFieldSet(this, Qu, void 0, "f"), Eu("Ty"), window.removeEventListener("message", xu))
               }), 200);
-            window.addEventListener("message", uU)
+            window.addEventListener("message", xu)
           }))
         }))
       }
       signOut() {
-        return TU.__awaiter(this, void 0, void 0, (function*() {
+        return Ju.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(UU) {
-        void 0 !== UU.token && (this.token = UU.token, null === UU.token ? qU.removeItem(this.settings.key) : qU.setItem(this.settings.key, UU.token)), TU.__classPrivateFieldGet(this, PU, "f").emit("change", UU)
+      emitChange(uu) {
+        void 0 !== uu.token && (this.token = uu.token, null === uu.token ? Nu.removeItem(this.settings.key) : Nu.setItem(this.settings.key, uu.token)), Ju.__classPrivateFieldGet(this, mu, "f").emit("change", uu)
       }
     }
   },
-  8710: (UU, RU, gU) => {
-    var tU, pU = gU(8714),
-      EU = gU(8723),
-      PU = gU(8729),
-      TU = gU(8802),
-      qU = gU(8819),
-      KU = gU(8833);
-    class cU extends Error {
-      constructor(UU, RU) {
-        super(UU), this.code = RU, this.name = "MatchMakeError", Object.setPrototypeOf(this, cU.prototype)
+  8824: (uu, Ru, yu) => {
+    var Eu, Ku = yu(8832),
+      Qu = yu(8836),
+      mu = yu(8839),
+      Ju = yu(8889),
+      Nu = yu(8898),
+      Xu = yu(8909);
+    class Vu extends Error {
+      constructor(uu, Ru) {
+        super(uu), this.code = Ru, this.name = "MatchMakeError", Object.setPrototypeOf(this, Vu.prototype)
       }
     }
-    const GU = "undefined" !== typeof window && "undefined" !== typeof(null === (tU = null === window || void 0 === window ? void 0 : window.location) || void 0 === tU ? void 0 : tU.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class jU {
+    const ru = "undefined" !== typeof window && "undefined" !== typeof(null === (Eu = null === window || void 0 === window ? void 0 : window.location) || void 0 === Eu ? void 0 : Eu.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class Bu {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GU,
-          RU = arguments.length > 1 ? arguments[1] : void 0;
-        var gU, tU;
-        if ("string" === typeof UU) {
-          const RU = UU.startsWith("/") ? new URL(UU, GU) : new URL(UU),
-            gU = "https:" === RU.protocol || "wss:" === RU.protocol,
-            tU = Number(RU.port || (gU ? 443 : 80));
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ru,
+          Ru = arguments.length > 1 ? arguments[1] : void 0;
+        var yu, Eu;
+        if ("string" === typeof uu) {
+          const Ru = uu.startsWith("/") ? new URL(uu, ru) : new URL(uu),
+            yu = "https:" === Ru.protocol || "wss:" === Ru.protocol,
+            Eu = Number(Ru.port || (yu ? 443 : 80));
           this.settings = {
-            hostname: RU.hostname,
-            pathname: RU.pathname,
-            port: tU,
-            secure: gU,
-            searchParams: RU.searchParams.toString() || void 0
+            hostname: Ru.hostname,
+            pathname: Ru.pathname,
+            port: Eu,
+            secure: yu,
+            searchParams: Ru.searchParams.toString() || void 0
           }
-        } else void 0 === UU.port && (UU.port = UU.secure ? 443 : 80), void 0 === UU.pathname && (UU.pathname = ""), this.settings = UU;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new TU.HTTP(this, (null === RU || void 0 === RU ? void 0 : RU.headers) || {}), this.auth = new qU.Auth(this.http), this.urlBuilder = null === RU || void 0 === RU ? void 0 : RU.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (tU = null === (gU = null === window || void 0 === window ? void 0 : window.location) || void 0 === gU ? void 0 : gU.hostname) || void 0 === tU ? void 0 : tU.includes("discordsays.com")) && (this.urlBuilder = KU.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === uu.port && (uu.port = uu.secure ? 443 : 80), void 0 === uu.pathname && (uu.pathname = ""), this.settings = uu;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new Ju.HTTP(this, (null === Ru || void 0 === Ru ? void 0 : Ru.headers) || {}), this.auth = new Nu.Auth(this.http), this.urlBuilder = null === Ru || void 0 === Ru ? void 0 : Ru.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Eu = null === (yu = null === window || void 0 === window ? void 0 : window.location) || void 0 === yu ? void 0 : yu.hostname) || void 0 === Eu ? void 0 : Eu.includes("discordsays.com")) && (this.urlBuilder = Xu.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(UU) {
-        return pU.__awaiter(this, arguments, void 0, (function*(UU) {
-          let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            gU = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", UU, RU, gU)
+      joinOrCreate(uu) {
+        return Ku.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            yu = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", uu, Ru, yu)
         }))
       }
-      create(UU) {
-        return pU.__awaiter(this, arguments, void 0, (function*(UU) {
-          let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            gU = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", UU, RU, gU)
+      create(uu) {
+        return Ku.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            yu = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", uu, Ru, yu)
         }))
       }
-      join(UU) {
-        return pU.__awaiter(this, arguments, void 0, (function*(UU) {
-          let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            gU = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", UU, RU, gU)
+      join(uu) {
+        return Ku.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            yu = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", uu, Ru, yu)
         }))
       }
-      joinById(UU) {
-        return pU.__awaiter(this, arguments, void 0, (function*(UU) {
-          let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            gU = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", UU, RU, gU)
+      joinById(uu) {
+        return Ku.__awaiter(this, arguments, void 0, (function*(uu) {
+          let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            yu = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", uu, Ru, yu)
         }))
       }
-      reconnect(UU, RU) {
-        return pU.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof UU && "string" === typeof RU) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [gU, tU] = UU.split(":");
-          if (!gU || !tU) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", gU, {
-            reconnectionToken: tU
-          }, RU)
+      reconnect(uu, Ru) {
+        return Ku.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof uu && "string" === typeof Ru) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [yu, Eu] = uu.split(":");
+          if (!yu || !Eu) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", yu, {
+            reconnectionToken: Eu
+          }, Ru)
         }))
       }
-      consumeSeatReservation(UU, RU, gU) {
-        return pU.__awaiter(this, void 0, void 0, (function*() {
-          const tU = this.createRoom(UU.room.name, RU);
-          tU.roomId = UU.room.roomId, tU.sessionId = UU.sessionId;
-          const PU = {
-            sessionId: tU.sessionId
+      consumeSeatReservation(uu, Ru, yu) {
+        return Ku.__awaiter(this, void 0, void 0, (function*() {
+          const Eu = this.createRoom(uu.room.name, Ru);
+          Eu.roomId = uu.room.roomId, Eu.sessionId = uu.sessionId;
+          const mu = {
+            sessionId: Eu.sessionId
           };
-          UU.reconnectionToken && (PU.reconnectionToken = UU.reconnectionToken);
-          const TU = gU || tU;
-          return tU.connect(this.buildEndpoint(UU.room, PU, UU.protocol), UU.devMode && (() => pU.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${tU.roomId}'...`);
-            let gU = 0;
-            const EU = () => pU.__awaiter(this, void 0, void 0, (function*() {
-              gU++;
+          uu.reconnectionToken && (mu.reconnectionToken = uu.reconnectionToken);
+          const Ju = yu || Eu;
+          return Eu.connect(this.buildEndpoint(uu.room, mu, uu.protocol), uu.devMode && (() => Ku.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Eu.roomId}'...`);
+            let yu = 0;
+            const Qu = () => Ku.__awaiter(this, void 0, void 0, (function*() {
+              yu++;
               try {
-                yield this.consumeSeatReservation(UU, RU, TU), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${tU.roomId}'`)
-              } catch (pU) {
-                gU < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${gU} out of 8)`), setTimeout(EU, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(uu, Ru, Ju), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Eu.roomId}'`)
+              } catch (Ku) {
+                yu < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${yu} out of 8)`), setTimeout(Qu, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(EU, 2e3)
-          }))), TU, UU, this.http.headers), new Promise(((UU, RU) => {
-            const gU = (UU, gU) => RU(new EU.ServerError(UU, gU));
-            TU.onError.once(gU), TU.onJoin.once((() => {
-              TU.onError.remove(gU), setTimeout((() => {
+            setTimeout(Qu, 2e3)
+          }))), Ju, uu, this.http.headers), new Promise(((uu, Ru) => {
+            const yu = (uu, yu) => Ru(new Qu.ServerError(uu, yu));
+            Ju.onError.once(yu), Ju.onJoin.once((() => {
+              Ju.onError.remove(yu), setTimeout((() => {
                 try {
-                  const UU = [141, 56, 86, 101, 253, 220, 201, 166, 141, 79, 179, 74, 197, 208, 102, 129, 163, 98, 16, 23];
-                  UU && TU.aJ(128, new Uint8Array(UU))
+                  const uu = [141, 56, 86, 101, 253, 220, 201, 166, 141, 79, 179, 74, 197, 208, 102, 129, 163, 98, 16, 23];
+                  uu && Ju.Rk(128, new Uint8Array(uu))
                 } catch {}
-              }), 3e3), UU(TU)
+              }), 3e3), uu(Ju)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(UU, RU) {
-        return pU.__awaiter(this, arguments, void 0, (function*(UU, RU) {
-          let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            tU = arguments.length > 3 ? arguments[3] : void 0,
-            pU = arguments.length > 4 ? arguments[4] : void 0;
-          const EU = (yield this.http.post(`matchmake/${UU}/${RU}`, {
+      createMatchMakeRequest(uu, Ru) {
+        return Ku.__awaiter(this, arguments, void 0, (function*(uu, Ru) {
+          let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            Eu = arguments.length > 3 ? arguments[3] : void 0,
+            Ku = arguments.length > 4 ? arguments[4] : void 0;
+          const Qu = (yield this.http.post(`matchmake/${uu}/${Ru}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(gU)
+            body: JSON.stringify(yu)
           })).data;
-          if (EU.error) throw new cU(EU.error, EU.code);
-          return "reconnect" === UU && (EU.reconnectionToken = gU.reconnectionToken), yield this.consumeSeatReservation(EU, tU, pU)
+          if (Qu.error) throw new Vu(Qu.error, Qu.code);
+          return "reconnect" === uu && (Qu.reconnectionToken = yu.reconnectionToken), yield this.consumeSeatReservation(Qu, Eu, Ku)
         }))
       }
-      createRoom(UU, RU) {
-        return new PU.VG(UU, RU)
+      createRoom(uu, Ru) {
+        return new mu.Mr(uu, Ru)
       }
-      buildEndpoint(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          tU = this.settings.searchParams || "";
-        this.http.authToken && (RU._authToken = this.http.authToken);
-        for (const PU in RU) RU.hasOwnProperty(PU) && (tU += (tU ? "&" : "") + `${PU}=${RU[PU]}`);
-        "h3" === gU && (gU = "http");
-        let pU = this.settings.secure ? `${gU}s://` : `${gU}://`;
-        UU.publicAddress ? pU += `${UU.publicAddress}` : pU += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const EU = `${pU}/${UU.processId}/${UU.roomId}?${tU}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(EU)) : EU
+      buildEndpoint(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          Eu = this.settings.searchParams || "";
+        this.http.authToken && (Ru._authToken = this.http.authToken);
+        for (const mu in Ru) Ru.hasOwnProperty(mu) && (Eu += (Eu ? "&" : "") + `${mu}=${Ru[mu]}`);
+        "h3" === yu && (yu = "http");
+        let Ku = this.settings.secure ? `${yu}s://` : `${yu}://`;
+        uu.publicAddress ? Ku += `${uu.publicAddress}` : Ku += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const Qu = `${Ku}/${uu.processId}/${uu.roomId}?${Eu}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(Qu)) : Qu
       }
       getHttpEndpoint() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const RU = UU.startsWith("/") ? UU : `/${UU}`;
-        let gU = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${RU}`;
-        return this.settings.searchParams && (gU += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(gU)) : gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const Ru = uu.startsWith("/") ? uu : `/${uu}`;
+        let yu = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Ru}`;
+        return this.settings.searchParams && (yu += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(yu)) : yu
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    jU.VERSION = "0.16.22", RU.Client = jU, RU.MatchMakeError = cU
+    Bu.VERSION = "0.16.22", Ru.Client = Bu, Ru.MatchMakeError = Vu
   },
-  8733: (UU, RU, gU) => {
-    var tU = gU(8735),
-      pU = gU(8748);
-    RU.Connection = class {
-      constructor(UU) {
-        if (this.events = {}, "h3" === UU) this.transport = new tU.H3TransportTransport(this.events);
-        else this.transport = new pU.WebSocketTransport(this.events)
+  8843: (uu, Ru, yu) => {
+    var Eu = yu(8845),
+      Ku = yu(8853);
+    Ru.Connection = class {
+      constructor(uu) {
+        if (this.events = {}, "h3" === uu) this.transport = new Eu.H3TransportTransport(this.events);
+        else this.transport = new Ku.WebSocketTransport(this.events)
       }
-      connect(UU, RU) {
-        this.transport.connect.call(this.transport, UU, RU)
+      connect(uu, Ru) {
+        this.transport.connect.call(this.transport, uu, Ru)
       }
-      send(UU) {
-        this.transport.send(UU)
+      send(uu) {
+        this.transport.send(uu)
       }
-      sendUnreliable(UU) {
-        this.transport.sendUnreliable(UU)
+      sendUnreliable(uu) {
+        this.transport.sendUnreliable(uu)
       }
-      close(UU, RU) {
-        this.transport.close(UU, RU)
+      close(uu, Ru) {
+        this.transport.close(uu, Ru)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  8802: (UU, RU, gU) => {
-    var tU = gU(8723);
+  8889: (uu, Ru, yu) => {
+    var Eu = yu(8836);
 
-    function pU(UU) {
-      var RU = Object.create(null);
-      return UU && Object.keys(UU).forEach((function(gU) {
-        if ("default" !== gU) {
-          var tU = Object.getOwnPropertyDescriptor(UU, gU);
-          Object.defineProperty(RU, gU, tU.get ? tU : {
+    function Ku(uu) {
+      var Ru = Object.create(null);
+      return uu && Object.keys(uu).forEach((function(yu) {
+        if ("default" !== yu) {
+          var Eu = Object.getOwnPropertyDescriptor(uu, yu);
+          Object.defineProperty(Ru, yu, Eu.get ? Eu : {
             enumerable: !0,
             get: function() {
-              return UU[gU]
+              return uu[yu]
             }
           })
         }
-      })), RU.default = UU, Object.freeze(RU)
+      })), Ru.default = uu, Object.freeze(Ru)
     }
-    var EU = pU(gU(8811));
-    RU.HTTP = class {
-      constructor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = UU, this.headers = RU
+    var Qu = Ku(yu(8891));
+    Ru.HTTP = class {
+      constructor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = uu, this.headers = Ru
       }
-      get(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", UU, RU)
+      get(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", uu, Ru)
       }
-      post(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", UU, RU)
+      post(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", uu, Ru)
       }
-      del(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", UU, RU)
+      del(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", uu, Ru)
       }
-      put(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", UU, RU)
+      put(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", uu, Ru)
       }
-      request(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return EU[UU](this.client.getHttpEndpoint(RU), this.getOptions(gU)).catch((UU => {
-          var RU;
-          if (UU.aborted) throw new tU.AbortError("Request aborted");
-          const gU = UU.statusCode,
-            pU = (null === (RU = UU.data) || void 0 === RU ? void 0 : RU.error) || UU.statusMessage || UU.message;
-          if (!gU && !pU) throw UU;
-          throw new tU.ServerError(gU, pU)
+      request(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return Qu[uu](this.client.getHttpEndpoint(Ru), this.getOptions(yu)).catch((uu => {
+          var Ru;
+          if (uu.aborted) throw new Eu.AbortError("Request aborted");
+          const yu = uu.statusCode,
+            Ku = (null === (Ru = uu.data) || void 0 === Ru ? void 0 : Ru.error) || uu.statusMessage || uu.message;
+          if (!yu && !Ku) throw uu;
+          throw new Eu.ServerError(yu, Ku)
         }))
       }
-      getOptions(UU) {
-        return UU.headers = Object.assign({}, this.headers, UU.headers), this.authToken && (UU.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (UU.withCredentials = !0), UU
+      getOptions(uu) {
+        return uu.headers = Object.assign({}, this.headers, uu.headers), this.authToken && (uu.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (uu.withCredentials = !0), uu
       }
     }
   },
-  8761: (UU, RU) => {
-    var gU, tU;
-    RU.Protocol = void 0, (gU = RU.Protocol || (RU.Protocol = {}))[gU.HANDSHAKE = 9] = "HANDSHAKE", gU[gU.JOIN_ROOM = 10] = "JOIN_ROOM", gU[gU.ERROR = 11] = "ERROR", gU[gU.LEAVE_ROOM = 12] = "LEAVE_ROOM", gU[gU.ROOM_DATA = 13] = "ROOM_DATA", gU[gU.ROOM_STATE = 14] = "ROOM_STATE", gU[gU.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", gU[gU.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", gU[gU.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", RU.ErrorCode = void 0, (tU = RU.ErrorCode || (RU.ErrorCode = {}))[tU.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", tU[tU.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", tU[tU.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", tU[tU.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", tU[tU.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", tU[tU.AUTH_FAILED = 4215] = "AUTH_FAILED", tU[tU.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  8864: (uu, Ru) => {
+    var yu, Eu;
+    Ru.Protocol = void 0, (yu = Ru.Protocol || (Ru.Protocol = {}))[yu.HANDSHAKE = 9] = "HANDSHAKE", yu[yu.JOIN_ROOM = 10] = "JOIN_ROOM", yu[yu.ERROR = 11] = "ERROR", yu[yu.LEAVE_ROOM = 12] = "LEAVE_ROOM", yu[yu.ROOM_DATA = 13] = "ROOM_DATA", yu[yu.ROOM_STATE = 14] = "ROOM_STATE", yu[yu.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", yu[yu.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", yu[yu.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Ru.ErrorCode = void 0, (Eu = Ru.ErrorCode || (Ru.ErrorCode = {}))[Eu.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Eu[Eu.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Eu[Eu.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Eu[Eu.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Eu[Eu.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Eu[Eu.AUTH_FAILED = 4215] = "AUTH_FAILED", Eu[Eu.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  8729: (UU, RU, gU) => {
-    var tU = gU(8733),
-      pU = gU(8761),
-      EU = gU(8770),
-      PU = gU(8779),
-      TU = gU(8783),
-      qU = gU(8742),
-      KU = gU(8792),
-      cU = gU(8723),
-      GU = gU(8794);
-    class jU {
-      constructor(UU, RU) {
-        this.onStateChange = TU.createSignal(), this.onError = TU.createSignal(), this.qm = TU.createSignal(), this.onJoin = TU.createSignal(), this.hasJoined = !1, this.onMessageHandlers = PU.createNanoEvents(), this.roomId = null, this.name = UU, this.packr = new GU.Packr, this.packr.encode(void 0), RU && (this.oW = new(EU.getSerializer("schema")), this.rootSchema = RU, this.oW.state = new RU), this.onError(((UU, RU) => {
-          var gU;
-          return null === (gU = console.warn) || void 0 === gU ? void 0 : gU.call(console, `colyseus.js - onError => (${UU}) ${RU}`)
-        })), this.qm((() => this.fW()))
+  8839: (uu, Ru, yu) => {
+    var Eu = yu(8843),
+      Ku = yu(8864),
+      Qu = yu(8871),
+      mu = yu(8874),
+      Ju = yu(8876),
+      Nu = yu(8851),
+      Xu = yu(8884),
+      Vu = yu(8836),
+      ru = yu(8887);
+    class Bu {
+      constructor(uu, Ru) {
+        this.onStateChange = Ju.createSignal(), this.onError = Ju.createSignal(), this.jH = Ju.createSignal(), this.onJoin = Ju.createSignal(), this.hasJoined = !1, this.onMessageHandlers = mu.createNanoEvents(), this.roomId = null, this.name = uu, this.packr = new ru.Packr, this.packr.encode(void 0), Ru && (this.pW = new(Qu.getSerializer("schema")), this.rootSchema = Ru, this.pW.state = new Ru), this.onError(((uu, Ru) => {
+          var yu;
+          return null === (yu = console.warn) || void 0 === yu ? void 0 : yu.call(console, `colyseus.js - onError => (${uu}) ${Ru}`)
+        })), this.jH((() => this.rW()))
       }
-      connect(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          pU = arguments.length > 3 ? arguments[3] : void 0,
-          EU = arguments.length > 4 ? arguments[4] : void 0;
-        const PU = new tU.Connection(pU.protocol);
-        if (gU.connection = PU, PU.events.onmessage = jU.prototype.onMessageCallback.bind(gU), PU.events.onclose = function(UU) {
-            var tU;
-            if (!gU.hasJoined) return null === (tU = console.warn) || void 0 === tU || tU.call(console, `Room connection was closed unexpectedly (${UU.code}): ${UU.reason}`), void gU.onError.invoke(UU.code, UU.reason);
-            UU.code === cU.CloseCode.DEVMODE_RESTART && RU ? RU() : (gU.qm.invoke(UU.code, UU.reason), gU.destroy())
-          }, PU.events.onerror = function(UU) {
-            var RU;
-            null === (RU = console.warn) || void 0 === RU || RU.call(console, `Room, onError (${UU.code}): ${UU.reason}`), gU.onError.invoke(UU.code, UU.reason)
-          }, "h3" === pU.protocol) {
-          const RU = new URL(UU);
-          PU.connect(RU.origin, pU)
-        } else PU.connect(UU, EU)
+      connect(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Ku = arguments.length > 3 ? arguments[3] : void 0,
+          Qu = arguments.length > 4 ? arguments[4] : void 0;
+        const mu = new Eu.Connection(Ku.protocol);
+        if (yu.connection = mu, mu.events.onmessage = Bu.prototype.onMessageCallback.bind(yu), mu.events.onclose = function(uu) {
+            var Eu;
+            if (!yu.hasJoined) return null === (Eu = console.warn) || void 0 === Eu || Eu.call(console, `Room connection was closed unexpectedly (${uu.code}): ${uu.reason}`), void yu.onError.invoke(uu.code, uu.reason);
+            uu.code === Vu.CloseCode.DEVMODE_RESTART && Ru ? Ru() : (yu.jH.invoke(uu.code, uu.reason), yu.destroy())
+          }, mu.events.onerror = function(uu) {
+            var Ru;
+            null === (Ru = console.warn) || void 0 === Ru || Ru.call(console, `Room, onError (${uu.code}): ${uu.reason}`), yu.onError.invoke(uu.code, uu.reason)
+          }, "h3" === Ku.protocol) {
+          const Ru = new URL(uu);
+          mu.connect(Ru.origin, Ku)
+        } else mu.connect(uu, Qu)
       }
       leave() {
-        let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((RU => {
-          this.qm((UU => RU(UU))), this.connection ? UU ? (this.packr.buffer[0] = pU.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.qm.invoke(cU.CloseCode.CONSENTED)
+        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((Ru => {
+          this.jH((uu => Ru(uu))), this.connection ? uu ? (this.packr.buffer[0] = Ku.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.jH.invoke(Vu.CloseCode.CONSENTED)
         }))
       }
-      Tm(UU, RU) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(UU), RU)
+      WH(uu, Ru) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(uu), Ru)
       }
-      send(UU, RU) {
-        const gU = {
+      send(uu, Ru) {
+        const yu = {
           offset: 1
         };
-        this.packr.buffer[0] = pU.Protocol.ROOM_DATA, "string" === typeof UU ? qU.encode.string(this.packr.buffer, UU, gU) : qU.encode.number(this.packr.buffer, UU, gU), this.packr.position = 0;
-        const tU = void 0 !== RU ? this.packr.pack(RU, 2048 + gU.offset) : this.packr.buffer.subarray(0, gU.offset);
-        this.connection.send(tU)
+        this.packr.buffer[0] = Ku.Protocol.ROOM_DATA, "string" === typeof uu ? Nu.encode.string(this.packr.buffer, uu, yu) : Nu.encode.number(this.packr.buffer, uu, yu), this.packr.position = 0;
+        const Eu = void 0 !== Ru ? this.packr.pack(Ru, 2048 + yu.offset) : this.packr.buffer.subarray(0, yu.offset);
+        this.connection.send(Eu)
       }
-      sendUnreliable(UU, RU) {
-        const gU = {
+      sendUnreliable(uu, Ru) {
+        const yu = {
           offset: 1
         };
-        this.packr.buffer[0] = pU.Protocol.ROOM_DATA, "string" === typeof UU ? qU.encode.string(this.packr.buffer, UU, gU) : qU.encode.number(this.packr.buffer, UU, gU), this.packr.position = 0;
-        const tU = void 0 !== RU ? this.packr.pack(RU, 2048 + gU.offset) : this.packr.buffer.subarray(0, gU.offset);
-        this.connection.sendUnreliable(tU)
+        this.packr.buffer[0] = Ku.Protocol.ROOM_DATA, "string" === typeof uu ? Nu.encode.string(this.packr.buffer, uu, yu) : Nu.encode.number(this.packr.buffer, uu, yu), this.packr.position = 0;
+        const Eu = void 0 !== Ru ? this.packr.pack(Ru, 2048 + yu.offset) : this.packr.buffer.subarray(0, yu.offset);
+        this.connection.sendUnreliable(Eu)
       }
-      aJ(UU, RU) {
-        const gU = {
+      Rk(uu, Ru) {
+        const yu = {
           offset: 1
         };
-        if (this.packr.buffer[0] = pU.Protocol.ROOM_DATA_BYTES, "string" === typeof UU ? qU.encode.string(this.packr.buffer, UU, gU) : qU.encode.number(this.packr.buffer, UU, gU), RU.byteLength + gU.offset > this.packr.buffer.byteLength) {
-          const UU = new Uint8Array(gU.offset + RU.byteLength);
-          UU.set(this.packr.buffer), this.packr.useBuffer(UU)
+        if (this.packr.buffer[0] = Ku.Protocol.ROOM_DATA_BYTES, "string" === typeof uu ? Nu.encode.string(this.packr.buffer, uu, yu) : Nu.encode.number(this.packr.buffer, uu, yu), Ru.byteLength + yu.offset > this.packr.buffer.byteLength) {
+          const uu = new Uint8Array(yu.offset + Ru.byteLength);
+          uu.set(this.packr.buffer), this.packr.useBuffer(uu)
         }
-        this.packr.buffer.set(RU, gU.offset), this.connection.send(this.packr.buffer.subarray(0, gU.offset + RU.byteLength))
+        this.packr.buffer.set(Ru, yu.offset), this.connection.send(this.packr.buffer.subarray(0, yu.offset + Ru.byteLength))
       }
       get state() {
-        return this.oW.getState()
+        return this.pW.getState()
       }
-      fW() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.qm.clear(), this.onMessageHandlers.events = {}, this.oW instanceof KU.RZ && (this.oW.zu.root.callbacks = {})
+      rW() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.jH.clear(), this.onMessageHandlers.events = {}, this.pW instanceof Xu.rD && (this.pW.Ox.root.callbacks = {})
       }
-      onMessageCallback(UU) {
-        const RU = new Uint8Array(UU.data),
-          gU = {
+      onMessageCallback(uu) {
+        const Ru = new Uint8Array(uu.data),
+          yu = {
             offset: 1
           },
-          tU = RU[0];
-        if (tU === pU.Protocol.JOIN_ROOM) {
-          const UU = qU.decode.utf8Read(RU, gU, RU[gU.offset++]);
-          if (this.serializerId = qU.decode.utf8Read(RU, gU, RU[gU.offset++]), !this.oW) {
-            const UU = EU.getSerializer(this.serializerId);
-            this.oW = new UU
+          Eu = Ru[0];
+        if (Eu === Ku.Protocol.JOIN_ROOM) {
+          const uu = Nu.decode.utf8Read(Ru, yu, Ru[yu.offset++]);
+          if (this.serializerId = Nu.decode.utf8Read(Ru, yu, Ru[yu.offset++]), !this.pW) {
+            const uu = Qu.getSerializer(this.serializerId);
+            this.pW = new uu
           }
-          RU.byteLength > gU.offset && this.oW.handshake && this.oW.handshake(RU, gU), this.reconnectionToken = `${this.roomId}:${UU}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = pU.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (tU === pU.Protocol.ERROR) {
-          const UU = qU.decode.number(RU, gU),
-            tU = qU.decode.string(RU, gU);
-          this.onError.invoke(UU, tU)
-        } else if (tU === pU.Protocol.LEAVE_ROOM) this.leave();
-        else if (tU === pU.Protocol.ROOM_STATE) this.oW.setState(RU, gU), this.onStateChange.invoke(this.oW.getState());
-        else if (tU === pU.Protocol.ROOM_STATE_PATCH) this.oW.patch(RU, gU), this.onStateChange.invoke(this.oW.getState());
-        else if (tU === pU.Protocol.ROOM_DATA) {
-          const UU = qU.decode.stringCheck(RU, gU) ? qU.decode.string(RU, gU) : qU.decode.number(RU, gU),
-            tU = RU.byteLength > gU.offset ? GU.unpack(RU, {
-              start: gU.offset
+          Ru.byteLength > yu.offset && this.pW.handshake && this.pW.handshake(Ru, yu), this.reconnectionToken = `${this.roomId}:${uu}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Ku.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (Eu === Ku.Protocol.ERROR) {
+          const uu = Nu.decode.number(Ru, yu),
+            Eu = Nu.decode.string(Ru, yu);
+          this.onError.invoke(uu, Eu)
+        } else if (Eu === Ku.Protocol.LEAVE_ROOM) this.leave();
+        else if (Eu === Ku.Protocol.ROOM_STATE) this.pW.setState(Ru, yu), this.onStateChange.invoke(this.pW.getState());
+        else if (Eu === Ku.Protocol.ROOM_STATE_PATCH) this.pW.patch(Ru, yu), this.onStateChange.invoke(this.pW.getState());
+        else if (Eu === Ku.Protocol.ROOM_DATA) {
+          const uu = Nu.decode.stringCheck(Ru, yu) ? Nu.decode.string(Ru, yu) : Nu.decode.number(Ru, yu),
+            Eu = Ru.byteLength > yu.offset ? ru.unpack(Ru, {
+              start: yu.offset
             }) : void 0;
-          this.dispatchMessage(UU, tU)
-        } else if (tU === pU.Protocol.ROOM_DATA_BYTES) {
-          const UU = qU.decode.stringCheck(RU, gU) ? qU.decode.string(RU, gU) : qU.decode.number(RU, gU);
-          this.dispatchMessage(UU, RU.subarray(gU.offset))
+          this.dispatchMessage(uu, Eu)
+        } else if (Eu === Ku.Protocol.ROOM_DATA_BYTES) {
+          const uu = Nu.decode.stringCheck(Ru, yu) ? Nu.decode.string(Ru, yu) : Nu.decode.number(Ru, yu);
+          this.dispatchMessage(uu, Ru.subarray(yu.offset))
         }
       }
-      dispatchMessage(UU, RU) {
-        var gU;
-        const tU = this.getMessageHandlerKey(UU);
-        this.onMessageHandlers.events[tU] ? this.onMessageHandlers.emit(tU, RU) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", UU, RU) : null === (gU = console.warn) || void 0 === gU || gU.call(console, `colyseus.js: onMessage() not registered for type '${UU}'.`)
+      dispatchMessage(uu, Ru) {
+        var yu;
+        const Eu = this.getMessageHandlerKey(uu);
+        this.onMessageHandlers.events[Eu] ? this.onMessageHandlers.emit(Eu, Ru) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", uu, Ru) : null === (yu = console.warn) || void 0 === yu || yu.call(console, `colyseus.js: onMessage() not registered for type '${uu}'.`)
       }
       destroy() {
-        this.oW && this.oW.teardown()
+        this.pW && this.pW.teardown()
       }
-      getMessageHandlerKey(UU) {
-        switch (typeof UU) {
+      getMessageHandlerKey(uu) {
+        switch (typeof uu) {
           case "string":
-            return UU;
+            return uu;
           case "number":
-            return `i${UU}`;
+            return `i${uu}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    RU.VG = jU
+    Ru.Mr = Bu
   },
-  8827: (UU, RU, gU) => {
-    var tU = gU(8714);
-    let pU;
+  8903: (uu, Ru, yu) => {
+    var Eu = yu(8832);
+    let Ku;
 
-    function EU() {
-      if (!pU) try {
-        pU = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (UU) {}
-      return pU || "undefined" === typeof globalThis.indexedDB || (pU = new PU), pU || (pU = {
+    function Qu() {
+      if (!Ku) try {
+        Ku = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (uu) {}
+      return Ku || "undefined" === typeof globalThis.indexedDB || (Ku = new mu), Ku || (Ku = {
         cache: {},
-        setItem: function(UU, RU) {
-          this.cache[UU] = RU
+        setItem: function(uu, Ru) {
+          this.cache[uu] = Ru
         },
-        getItem: function(UU) {
-          this.cache[UU]
+        getItem: function(uu) {
+          this.cache[uu]
         },
-        removeItem: function(UU) {
-          delete this.cache[UU]
+        removeItem: function(uu) {
+          delete this.cache[uu]
         }
-      }), pU
+      }), Ku
     }
-    class PU {
+    class mu {
       constructor() {
-        this.dbPromise = new Promise((UU => {
-          const RU = indexedDB.open("_colyseus_storage", 1);
-          RU.onupgradeneeded = () => RU.result.createObjectStore("store"), RU.onsuccess = () => UU(RU.result)
+        this.dbPromise = new Promise((uu => {
+          const Ru = indexedDB.open("_colyseus_storage", 1);
+          Ru.onupgradeneeded = () => Ru.result.createObjectStore("store"), Ru.onsuccess = () => uu(Ru.result)
         }))
       }
-      tx(UU, RU) {
-        return tU.__awaiter(this, void 0, void 0, (function*() {
-          const gU = (yield this.dbPromise).transaction("store", UU).objectStore("store");
-          return RU(gU)
+      tx(uu, Ru) {
+        return Eu.__awaiter(this, void 0, void 0, (function*() {
+          const yu = (yield this.dbPromise).transaction("store", uu).objectStore("store");
+          return Ru(yu)
         }))
       }
-      setItem(UU, RU) {
-        return this.tx("readwrite", (gU => gU.put(RU, UU))).then()
+      setItem(uu, Ru) {
+        return this.tx("readwrite", (yu => yu.put(Ru, uu))).then()
       }
-      getItem(UU) {
-        return tU.__awaiter(this, void 0, void 0, (function*() {
-          const RU = yield this.tx("readonly", (RU => RU.get(UU)));
-          return new Promise((UU => {
-            RU.onsuccess = () => UU(RU.result)
+      getItem(uu) {
+        return Eu.__awaiter(this, void 0, void 0, (function*() {
+          const Ru = yield this.tx("readonly", (Ru => Ru.get(uu)));
+          return new Promise((uu => {
+            Ru.onsuccess = () => uu(Ru.result)
           }))
         }))
       }
-      removeItem(UU) {
-        return this.tx("readwrite", (RU => RU.delete(UU))).then()
+      removeItem(uu) {
+        return this.tx("readwrite", (Ru => Ru.delete(uu))).then()
       }
     }
-    RU.getItem = function(UU, RU) {
-      const gU = EU().getItem(UU);
-      "undefined" !== typeof Promise && gU instanceof Promise ? gU.then((UU => RU(UU))) : RU(gU)
-    }, RU.removeItem = function(UU) {
-      EU().removeItem(UU)
-    }, RU.setItem = function(UU, RU) {
-      EU().setItem(UU, RU)
+    Ru.getItem = function(uu, Ru) {
+      const yu = Qu().getItem(uu);
+      "undefined" !== typeof Promise && yu instanceof Promise ? yu.then((uu => Ru(uu))) : Ru(yu)
+    }, Ru.removeItem = function(uu) {
+      Qu().removeItem(uu)
+    }, Ru.setItem = function(uu, Ru) {
+      Qu().setItem(uu, Ru)
     }
   },
-  8779: (UU, RU) => {
-    RU.createNanoEvents = () => ({
-      emit(UU) {
-        let RU = this.events[UU] || [];
-        for (var gU = arguments.length, tU = new Array(gU > 1 ? gU - 1 : 0), pU = 1; pU < gU; pU++) tU[pU - 1] = arguments[pU];
-        for (let EU = 0, PU = RU.length; EU < PU; EU++) RU[EU](...tU)
+  8874: (uu, Ru) => {
+    Ru.createNanoEvents = () => ({
+      emit(uu) {
+        let Ru = this.events[uu] || [];
+        for (var yu = arguments.length, Eu = new Array(yu > 1 ? yu - 1 : 0), Ku = 1; Ku < yu; Ku++) Eu[Ku - 1] = arguments[Ku];
+        for (let Qu = 0, mu = Ru.length; Qu < mu; Qu++) Ru[Qu](...Eu)
       },
       events: {},
-      on(UU, RU) {
-        var gU;
-        return (null === (gU = this.events[UU]) || void 0 === gU ? void 0 : gU.push(RU)) || (this.events[UU] = [RU]), () => {
-          var gU;
-          this.events[UU] = null === (gU = this.events[UU]) || void 0 === gU ? void 0 : gU.filter((UU => RU !== UU))
+      on(uu, Ru) {
+        var yu;
+        return (null === (yu = this.events[uu]) || void 0 === yu ? void 0 : yu.push(Ru)) || (this.events[uu] = [Ru]), () => {
+          var yu;
+          this.events[uu] = null === (yu = this.events[uu]) || void 0 === yu ? void 0 : yu.filter((uu => Ru !== uu))
         }
       }
     })
   },
-  8783: (UU, RU) => {
-    class gU {
+  8876: (uu, Ru) => {
+    class yu {
       constructor() {
         this.handlers = []
       }
-      register(UU) {
-        return this.handlers.push(UU), this
+      register(uu) {
+        return this.handlers.push(uu), this
       }
       invoke() {
-        for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
-        this.handlers.forEach((UU => UU.apply(this, RU)))
+        for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+        this.handlers.forEach((uu => uu.apply(this, Ru)))
       }
       invokeAsync() {
-        for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
-        return Promise.all(this.handlers.map((UU => UU.apply(this, RU))))
+        for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+        return Promise.all(this.handlers.map((uu => uu.apply(this, Ru))))
       }
-      remove(UU) {
-        const RU = this.handlers.indexOf(UU);
-        this.handlers[RU] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(uu) {
+        const Ru = this.handlers.indexOf(uu);
+        this.handlers[Ru] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    RU.EventEmitter = gU, RU.createSignal = function() {
-      const UU = new gU;
+    Ru.EventEmitter = yu, Ru.createSignal = function() {
+      const uu = new yu;
 
-      function RU(RU) {
-        return UU.register(RU, null === this)
+      function Ru(Ru) {
+        return uu.register(Ru, null === this)
       }
-      return RU.once = RU => {
-        const gU = function() {
-          for (var tU = arguments.length, pU = new Array(tU), EU = 0; EU < tU; EU++) pU[EU] = arguments[EU];
-          RU.apply(this, pU), UU.remove(gU)
+      return Ru.once = Ru => {
+        const yu = function() {
+          for (var Eu = arguments.length, Ku = new Array(Eu), Qu = 0; Qu < Eu; Qu++) Ku[Qu] = arguments[Qu];
+          Ru.apply(this, Ku), uu.remove(yu)
         };
-        UU.register(gU)
-      }, RU.remove = RU => UU.remove(RU), RU.invoke = function() {
-        return UU.invoke(...arguments)
-      }, RU.invokeAsync = function() {
-        return UU.invokeAsync(...arguments)
-      }, RU.clear = () => UU.clear(), RU
+        uu.register(yu)
+      }, Ru.remove = Ru => uu.remove(Ru), Ru.invoke = function() {
+        return uu.invoke(...arguments)
+      }, Ru.invokeAsync = function() {
+        return uu.invokeAsync(...arguments)
+      }, Ru.clear = () => uu.clear(), Ru
     }
   },
-  8723: (UU, RU) => {
-    var gU;
-    RU.CloseCode = void 0, (gU = RU.CloseCode || (RU.CloseCode = {}))[gU.CONSENTED = 4e3] = "CONSENTED", gU[gU.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class tU extends Error {
-      constructor(UU, RU) {
-        super(RU), this.name = "ServerError", this.code = UU
+  8836: (uu, Ru) => {
+    var yu;
+    Ru.CloseCode = void 0, (yu = Ru.CloseCode || (Ru.CloseCode = {}))[yu.CONSENTED = 4e3] = "CONSENTED", yu[yu.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class Eu extends Error {
+      constructor(uu, Ru) {
+        super(Ru), this.name = "ServerError", this.code = uu
       }
     }
-    class pU extends Error {
-      constructor(UU) {
-        super(UU), this.name = "AbortError"
+    class Ku extends Error {
+      constructor(uu) {
+        super(uu), this.name = "AbortError"
       }
     }
-    RU.AbortError = pU, RU.ServerError = tU
+    Ru.AbortError = Ku, Ru.ServerError = Eu
   },
-  8696: (UU, RU, gU) => {
-    gU(8702);
-    var tU = gU(8710),
-      pU = gU(8761),
-      EU = gU(8729),
-      PU = gU(8819),
-      TU = gU(8723),
-      qU = gU(8792),
-      KU = gU(8838),
-      cU = gU(8770);
-    cU.registerSerializer("schema", qU.RZ), cU.registerSerializer("none", KU.NoneSerializer), RU.Client = tU.Client, RU.MatchMakeError = tU.MatchMakeError, Object.defineProperty(RU, "ErrorCode", {
+  8811: (uu, Ru, yu) => {
+    yu(8815);
+    var Eu = yu(8824),
+      Ku = yu(8864),
+      Qu = yu(8839),
+      mu = yu(8898),
+      Ju = yu(8836),
+      Nu = yu(8884),
+      Xu = yu(8912),
+      Vu = yu(8871);
+    Vu.registerSerializer("schema", Nu.rD), Vu.registerSerializer("none", Xu.NoneSerializer), Ru.Client = Eu.Client, Ru.MatchMakeError = Eu.MatchMakeError, Object.defineProperty(Ru, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return pU.ErrorCode
+        return Ku.ErrorCode
       }
-    }), Object.defineProperty(RU, "Protocol", {
+    }), Object.defineProperty(Ru, "Protocol", {
       enumerable: !0,
       get: function() {
-        return pU.Protocol
+        return Ku.Protocol
       }
-    }), RU.VG = EU.VG, RU.Auth = PU.Auth, RU.ServerError = TU.ServerError, RU.RZ = qU.RZ, RU.getStateCallbacks = qU.getStateCallbacks, RU.registerSerializer = cU.registerSerializer
+    }), Ru.Mr = Qu.Mr, Ru.Auth = mu.Auth, Ru.ServerError = Ju.ServerError, Ru.rD = Nu.rD, Ru.getStateCallbacks = Nu.getStateCallbacks, Ru.registerSerializer = Vu.registerSerializer
   },
-  8702: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = UU => null !== UU && "object" === typeof UU && UU.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  8815: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = uu => null !== uu && "object" === typeof uu && uu.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  8838: (UU, RU) => {
-    RU.NoneSerializer = class {
-      setState(UU) {}
+  8912: (uu, Ru) => {
+    Ru.NoneSerializer = class {
+      setState(uu) {}
       getState() {
         return null
       }
-      patch(UU) {}
+      patch(uu) {}
       teardown() {}
-      handshake(UU) {}
+      handshake(uu) {}
     }
   },
-  8792: (UU, RU, gU) => {
-    var tU = gU(8742);
-    RU.RZ = class {
-      setState(UU, RU) {
-        this.zu.decode(UU, RU)
+  8884: (uu, Ru, yu) => {
+    var Eu = yu(8851);
+    Ru.rD = class {
+      setState(uu, Ru) {
+        this.Ox.decode(uu, Ru)
       }
       getState() {
         return this.state
       }
-      patch(UU, RU) {
-        return this.zu.decode(UU, RU)
+      patch(uu, Ru) {
+        return this.Ox.decode(uu, Ru)
       }
       teardown() {
-        this.zu.root.clearRefs()
+        this.Ox.root.clearRefs()
       }
-      handshake(UU, RU) {
-        this.state ? (tU.Reflection.decode(UU, RU), this.zu = new tU.Decoder(this.state)) : (this.zu = tU.Reflection.decode(UU, RU), this.state = this.zu.state)
+      handshake(uu, Ru) {
+        this.state ? (Eu.Reflection.decode(uu, Ru), this.Ox = new Eu.Decoder(this.state)) : (this.Ox = Eu.Reflection.decode(uu, Ru), this.state = this.Ox.state)
       }
-    }, RU.getStateCallbacks = function(UU) {
+    }, Ru.getStateCallbacks = function(uu) {
       try {
-        return tU.getDecoderStateCallbacks(UU.oW.zu)
-      } catch (RU) {
+        return Eu.getDecoderStateCallbacks(uu.pW.Ox)
+      } catch (Ru) {
         return
       }
     }
   },
-  8770: (UU, RU) => {
-    const gU = {};
-    RU.getSerializer = function(UU) {
-      const RU = gU[UU];
-      if (!RU) throw new Error("missing serializer: " + UU);
-      return RU
-    }, RU.registerSerializer = function(UU, RU) {
-      gU[UU] = RU
+  8871: (uu, Ru) => {
+    const yu = {};
+    Ru.getSerializer = function(uu) {
+      const Ru = yu[uu];
+      if (!Ru) throw new Error("missing serializer: " + uu);
+      return Ru
+    }, Ru.registerSerializer = function(uu, Ru) {
+      yu[uu] = Ru
     }
   },
-  8735: (UU, RU, gU) => {
-    var tU = gU(8714),
-      pU = gU(8742);
-    RU.H3TransportTransport = class {
-      constructor(UU) {
-        this.events = UU, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  8845: (uu, Ru, yu) => {
+    var Eu = yu(8832),
+      Ku = yu(8851);
+    Ru.H3TransportTransport = class {
+      constructor(uu) {
+        this.events = uu, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const gU = RU.fingerprint && {
+      connect(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const yu = Ru.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(RU.fingerprint).buffer
+            value: new Uint8Array(Ru.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(UU, gU), this.wt.ready.then((UU => {
-          console.log("WebTransport ready!", UU), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((UU => {
-            this.reader = UU.value.readable.getReader(), this.writer = UU.value.writable.getWriter(), this.sendSeatReservation(RU.room.roomId, RU.sessionId, RU.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((UU => {
-            console.error("failed to read incoming stream", UU), console.error("TODO: close the connection")
+        this.wt = new WebTransport(uu, yu), this.wt.ready.then((uu => {
+          console.log("WebTransport ready!", uu), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((uu => {
+            this.reader = uu.value.readable.getReader(), this.writer = uu.value.writable.getWriter(), this.sendSeatReservation(Ru.room.roomId, Ru.sessionId, Ru.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((uu => {
+            console.error("failed to read incoming stream", uu), console.error("TODO: close the connection")
           }))
-        })).catch((UU => {
-          console.log("WebTransport not ready!", UU), this._close()
-        })), this.wt.closed.then((UU => {
-          console.log("WebTransport closed w/ success", UU), this.events.onclose({
-            code: UU.closeCode,
-            reason: UU.reason
+        })).catch((uu => {
+          console.log("WebTransport not ready!", uu), this._close()
+        })), this.wt.closed.then((uu => {
+          console.log("WebTransport closed w/ success", uu), this.events.onclose({
+            code: uu.closeCode,
+            reason: uu.reason
           })
-        })).catch((UU => {
-          console.log("WebTransport closed w/ error", UU), this.events.onerror(UU), this.events.onclose({
-            code: UU.closeCode,
-            reason: UU.reason
+        })).catch((uu => {
+          console.log("WebTransport closed w/ error", uu), this.events.onerror(uu), this.events.onclose({
+            code: uu.closeCode,
+            reason: uu.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(UU) {
-        const RU = pU.encode.number(this.lengthPrefixBuffer, UU.length, {
+      send(uu) {
+        const Ru = Ku.encode.number(this.lengthPrefixBuffer, uu.length, {
             offset: 0
           }),
-          gU = new Uint8Array(RU + UU.length);
-        gU.set(this.lengthPrefixBuffer.subarray(0, RU), 0), gU.set(UU, RU), this.writer.write(gU)
+          yu = new Uint8Array(Ru + uu.length);
+        yu.set(this.lengthPrefixBuffer.subarray(0, Ru), 0), yu.set(uu, Ru), this.writer.write(yu)
       }
-      sendUnreliable(UU) {
-        const RU = pU.encode.number(this.lengthPrefixBuffer, UU.length, {
+      sendUnreliable(uu) {
+        const Ru = Ku.encode.number(this.lengthPrefixBuffer, uu.length, {
             offset: 0
           }),
-          gU = new Uint8Array(RU + UU.length);
-        gU.set(this.lengthPrefixBuffer.subarray(0, RU), 0), gU.set(UU, RU), this.unreliableWriter.write(gU)
+          yu = new Uint8Array(Ru + uu.length);
+        yu.set(this.lengthPrefixBuffer.subarray(0, Ru), 0), yu.set(uu, Ru), this.unreliableWriter.write(yu)
       }
-      close(UU, RU) {
+      close(uu, Ru) {
         try {
           this.wt.close({
-            closeCode: UU,
-            reason: RU
+            closeCode: uu,
+            reason: Ru
           })
-        } catch (gU) {
-          console.error(gU)
+        } catch (yu) {
+          console.error(yu)
         }
       }
       readIncomingData() {
-        return tU.__awaiter(this, void 0, void 0, (function*() {
-          let UU;
+        return Eu.__awaiter(this, void 0, void 0, (function*() {
+          let uu;
           for (; this.isOpen;) {
             try {
-              UU = yield this.reader.read();
-              const RU = UU.value,
-                gU = {
+              uu = yield this.reader.read();
+              const Ru = uu.value,
+                yu = {
                   offset: 0
                 };
               do {
-                const UU = pU.decode.number(RU, gU);
+                const uu = Ku.decode.number(Ru, yu);
                 this.events.onmessage({
-                  data: RU.subarray(gU.offset, gU.offset + UU)
-                }), gU.offset += UU
-              } while (gU.offset < RU.length)
-            } catch (RU) {
-              -1 === RU.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", RU);
+                  data: Ru.subarray(yu.offset, yu.offset + uu)
+                }), yu.offset += uu
+              } while (yu.offset < Ru.length)
+            } catch (Ru) {
+              -1 === Ru.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Ru);
               break
             }
-            if (UU.done) break
+            if (uu.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return tU.__awaiter(this, void 0, void 0, (function*() {
-          let UU;
+        return Eu.__awaiter(this, void 0, void 0, (function*() {
+          let uu;
           for (; this.isOpen;) {
             try {
-              UU = yield this.unreliableReader.read();
-              const RU = UU.value,
-                gU = {
+              uu = yield this.unreliableReader.read();
+              const Ru = uu.value,
+                yu = {
                   offset: 0
                 };
               do {
-                const UU = pU.decode.number(RU, gU);
+                const uu = Ku.decode.number(Ru, yu);
                 this.events.onmessage({
-                  data: RU.subarray(gU.offset, gU.offset + UU)
-                }), gU.offset += UU
-              } while (gU.offset < RU.length)
-            } catch (RU) {
-              -1 === RU.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", RU);
+                  data: Ru.subarray(yu.offset, yu.offset + uu)
+                }), yu.offset += uu
+              } while (yu.offset < Ru.length)
+            } catch (Ru) {
+              -1 === Ru.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Ru);
               break
             }
-            if (UU.done) break
+            if (uu.done) break
           }
         }))
       }
-      sendSeatReservation(UU, RU, gU) {
-        const tU = {
+      sendSeatReservation(uu, Ru, yu) {
+        const Eu = {
             offset: 0
           },
-          EU = [];
-        pU.encode.string(EU, UU, tU), pU.encode.string(EU, RU, tU), gU && pU.encode.string(EU, gU, tU), this.writer.write(new Uint8Array(EU).buffer)
+          Qu = [];
+        Ku.encode.string(Qu, uu, Eu), Ku.encode.string(Qu, Ru, Eu), yu && Ku.encode.string(Qu, yu, Eu), this.writer.write(new Uint8Array(Qu).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  8748: (UU, RU, gU) => {
-    var tU = gU(8756);
-    const pU = globalThis.WebSocket || tU;
-    RU.WebSocketTransport = class {
-      constructor(UU) {
-        this.events = UU
+  8853: (uu, Ru, yu) => {
+    var Eu = yu(8860);
+    const Ku = globalThis.WebSocket || Eu;
+    Ru.WebSocketTransport = class {
+      constructor(uu) {
+        this.events = uu
       }
-      send(UU) {
-        this.ws.send(UU)
+      send(uu) {
+        this.ws.send(uu)
       }
-      sendUnreliable(UU) {
+      sendUnreliable(uu) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(UU, RU) {
+      connect(uu, Ru) {
         try {
-          this.ws = new pU(UU, {
-            headers: RU,
+          this.ws = new Ku(uu, {
+            headers: Ru,
             protocols: this.protocols
           })
-        } catch (gU) {
-          this.ws = new pU(UU, this.protocols)
+        } catch (yu) {
+          this.ws = new Ku(uu, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(UU, RU) {
-        this.ws.close(UU, RU)
+      close(uu, Ru) {
+        this.ws.close(uu, Ru)
       }
       get isOpen() {
-        return this.ws.readyState === pU.OPEN
+        return this.ws.readyState === Ku.OPEN
       }
     }
   },
-  8756: UU => {
-    UU.exports = function() {
+  8860: uu => {
+    uu.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  8811: (UU, RU, gU) => {
-    function tU(UU, RU) {
-      RU.headers = UU.headers || {}, RU.statusMessage = UU.statusText, RU.statusCode = UU.status, RU.data = UU.response
+  8891: (uu, Ru, yu) => {
+    function Eu(uu, Ru) {
+      Ru.headers = uu.headers || {}, Ru.statusMessage = uu.statusText, Ru.statusCode = uu.status, Ru.data = uu.response
     }
 
-    function pU(UU, RU, gU) {
-      return new Promise((function(pU, EU) {
-        gU = gU || {};
-        var PU, TU, qU, KU = new XMLHttpRequest,
-          cU = gU.body,
-          GU = gU.headers || {};
-        for (PU in gU.timeout && (KU.timeout = gU.timeout), KU.ontimeout = KU.onerror = function(UU) {
-            UU.timeout = "timeout" == UU.type, EU(UU)
-          }, KU.onabort = function(UU) {
-            UU.aborted = !0, EU(UU)
-          }, KU.open(UU, RU.href || RU), KU.onload = function() {
-            for (qU = KU.getAllResponseHeaders().trim().split(/[\r\n]+/), tU(KU, KU); TU = qU.shift();) TU = TU.split(": "), KU.headers[TU.shift().toLowerCase()] = TU.join(": ");
-            if ((TU = KU.headers["content-type"]) && ~TU.indexOf("application/json")) try {
-              KU.data = JSON.parse(KU.data, gU.reviver)
-            } catch (UU) {
-              return tU(KU, UU), EU(UU)
-            }(KU.status >= 400 ? EU : pU)(KU)
-          }, typeof FormData < "u" && cU instanceof FormData || cU && "object" == typeof cU && (GU["content-type"] = "application/json", cU = JSON.stringify(cU)), KU.withCredentials = !!gU.withCredentials, GU) KU.setRequestHeader(PU, GU[PU]);
-        KU.send(cU), gU.signal && gU.signal.addEventListener("abort", (function() {
-          KU.abort()
+    function Ku(uu, Ru, yu) {
+      return new Promise((function(Ku, Qu) {
+        yu = yu || {};
+        var mu, Ju, Nu, Xu = new XMLHttpRequest,
+          Vu = yu.body,
+          ru = yu.headers || {};
+        for (mu in yu.timeout && (Xu.timeout = yu.timeout), Xu.ontimeout = Xu.onerror = function(uu) {
+            uu.timeout = "timeout" == uu.type, Qu(uu)
+          }, Xu.onabort = function(uu) {
+            uu.aborted = !0, Qu(uu)
+          }, Xu.open(uu, Ru.href || Ru), Xu.onload = function() {
+            for (Nu = Xu.getAllResponseHeaders().trim().split(/[\r\n]+/), Eu(Xu, Xu); Ju = Nu.shift();) Ju = Ju.split(": "), Xu.headers[Ju.shift().toLowerCase()] = Ju.join(": ");
+            if ((Ju = Xu.headers["content-type"]) && ~Ju.indexOf("application/json")) try {
+              Xu.data = JSON.parse(Xu.data, yu.reviver)
+            } catch (uu) {
+              return Eu(Xu, uu), Qu(uu)
+            }(Xu.status >= 400 ? Qu : Ku)(Xu)
+          }, typeof FormData < "u" && Vu instanceof FormData || Vu && "object" == typeof Vu && (ru["content-type"] = "application/json", Vu = JSON.stringify(Vu)), Xu.withCredentials = !!yu.withCredentials, ru) Xu.setRequestHeader(mu, ru[mu]);
+        Xu.send(Vu), yu.signal && yu.signal.addEventListener("abort", (function() {
+          Xu.abort()
         }))
       }))
     }
-    gU.r(RU), gU.d(RU, {
-      del: () => qU,
-      get: () => EU,
-      patch: () => TU,
-      post: () => PU,
-      put: () => KU,
-      send: () => pU
+    yu.r(Ru), yu.d(Ru, {
+      del: () => Nu,
+      get: () => Qu,
+      patch: () => Ju,
+      post: () => mu,
+      put: () => Xu,
+      send: () => Ku
     });
-    var EU = pU.bind(pU, "GET"),
-      PU = pU.bind(pU, "POST"),
-      TU = pU.bind(pU, "PATCH"),
-      qU = pU.bind(pU, "DELETE"),
-      KU = pU.bind(pU, "PUT")
+    var Qu = Ku.bind(Ku, "GET"),
+      mu = Ku.bind(Ku, "POST"),
+      Ju = Ku.bind(Ku, "PATCH"),
+      Nu = Ku.bind(Ku, "DELETE"),
+      Xu = Ku.bind(Ku, "PUT")
   },
-  8794: (UU, RU, gU) => {
-    var tU, pU, EU;
-    gU.r(RU), gU.d(RU, {
-      ALWAYS: () => zR,
-      C1: () => mU,
-      DECIMAL_FIT: () => DR,
-      DECIMAL_ROUND: () => MR,
-      Decoder: () => qR,
-      Encoder: () => iR,
-      FLOAT32_OPTIONS: () => uR,
-      NEVER: () => AR,
-      Packr: () => rR,
-      RESERVE_START_SPACE: () => lR,
-      RESET_BUFFER_MODE: () => NR,
-      REUSE_BUFFER_MODE: () => LR,
-      Unpackr: () => oU,
-      addExtension: () => SR,
-      clearSource: () => PR,
-      decode: () => jR,
-      decodeIter: () => OR,
-      encode: () => FR,
-      encodeIter: () => Ug,
-      isNativeAccelerationEnabled: () => sU,
-      mapsAsObjects: () => gg,
-      pack: () => kR,
-      roundFloat32: () => fR,
-      unpack: () => cR,
-      unpackMultiple: () => GR,
-      useRecords: () => Rg
+  8887: (uu, Ru, yu) => {
+    var Eu, Ku, Qu;
+    yu.r(Ru), yu.d(Ru, {
+      ALWAYS: () => YR,
+      C1: () => bu,
+      DECIMAL_FIT: () => qR,
+      DECIMAL_ROUND: () => oR,
+      Decoder: () => NR,
+      Encoder: () => PR,
+      FLOAT32_OPTIONS: () => xR,
+      NEVER: () => iR,
+      Packr: () => tR,
+      RESERVE_START_SPACE: () => aR,
+      RESET_BUFFER_MODE: () => vR,
+      REUSE_BUFFER_MODE: () => OR,
+      Unpackr: () => Mu,
+      addExtension: () => zR,
+      clearSource: () => mR,
+      decode: () => BR,
+      decodeIter: () => fR,
+      encode: () => hR,
+      encodeIter: () => uy,
+      isNativeAccelerationEnabled: () => Fu,
+      mapsAsObjects: () => yy,
+      pack: () => ZR,
+      roundFloat32: () => HR,
+      unpack: () => VR,
+      unpackMultiple: () => rR,
+      useRecords: () => Ry
     });
     try {
-      tU = new TextDecoder
-    } catch (tg) {}
-    var PU = 0;
-    const TU = [];
-    var qU, KU, cU, GU, jU, uU = TU,
-      CU = 0,
-      hU = {},
-      QU = 0,
-      eU = 0,
-      WU = [],
-      fU = {
+      Eu = new TextDecoder
+    } catch (Ey) {}
+    var mu = 0;
+    const Ju = [];
+    var Nu, Xu, Vu, ru, Bu, xu = Ju,
+      Su = 0,
+      pu = {},
+      Tu = 0,
+      Wu = 0,
+      ju = [],
+      Hu = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class xU {}
-    const mU = new xU;
-    mU.name = "MessagePack 0xC1";
-    var IU, JU, wU, nU = !1,
-      bU = 2;
+    class du {}
+    const bu = new du;
+    bu.name = "MessagePack 0xC1";
+    var Cu, ku, eu, Au = !1,
+      Du = 2;
     try {
       new Function("")
-    } catch (tg) {
-      bU = 1 / 0
+    } catch (Ey) {
+      Du = 1 / 0
     }
-    class oU {
-      constructor(UU) {
-        UU && (!1 === UU.useRecords && void 0 === UU.mapsAsObjects && (UU.mapsAsObjects = !0), UU.sequential && !1 !== UU.trusted && (UU.trusted = !0, UU.structures || 0 == UU.useRecords || (UU.structures = [], UU.maxSharedStructures || (UU.maxSharedStructures = 0))), UU.structures ? UU.structures.sharedLength = UU.structures.length : UU.getStructures && ((UU.structures = []).uninitialized = !0, UU.structures.sharedLength = 0), UU.int64AsNumber && (UU.int64AsType = "number")), Object.assign(this, UU)
+    class Mu {
+      constructor(uu) {
+        uu && (!1 === uu.useRecords && void 0 === uu.mapsAsObjects && (uu.mapsAsObjects = !0), uu.sequential && !1 !== uu.trusted && (uu.trusted = !0, uu.structures || 0 == uu.useRecords || (uu.structures = [], uu.maxSharedStructures || (uu.maxSharedStructures = 0))), uu.structures ? uu.structures.sharedLength = uu.structures.length : uu.getStructures && ((uu.structures = []).uninitialized = !0, uu.structures.sharedLength = 0), uu.int64AsNumber && (uu.int64AsType = "number")), Object.assign(this, uu)
       }
-      unpack(UU, RU) {
-        if (pU) return ER((() => (PR(), this ? this.unpack(UU, RU) : oU.prototype.unpack.call(fU, UU, RU))));
-        UU.buffer || UU.constructor !== ArrayBuffer || (UU = "undefined" !== typeof Buffer ? Buffer.from(UU) : new Uint8Array(UU)), "object" === typeof RU ? (EU = RU.end || UU.length, PU = RU.start || 0) : (PU = 0, EU = RU > -1 ? RU : UU.length), CU = 0, eU = 0, KU = null, uU = TU, cU = null, pU = UU;
+      unpack(uu, Ru) {
+        if (Ku) return QR((() => (mR(), this ? this.unpack(uu, Ru) : Mu.prototype.unpack.call(Hu, uu, Ru))));
+        uu.buffer || uu.constructor !== ArrayBuffer || (uu = "undefined" !== typeof Buffer ? Buffer.from(uu) : new Uint8Array(uu)), "object" === typeof Ru ? (Qu = Ru.end || uu.length, mu = Ru.start || 0) : (mu = 0, Qu = Ru > -1 ? Ru : uu.length), Su = 0, Wu = 0, Xu = null, xu = Ju, Vu = null, Ku = uu;
         try {
-          jU = UU.dataView || (UU.dataView = new DataView(UU.buffer, UU.byteOffset, UU.byteLength))
-        } catch (tg) {
-          if (pU = null, UU instanceof Uint8Array) throw tg;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (UU && "object" == typeof UU ? UU.constructor.name : typeof UU))
+          Bu = uu.dataView || (uu.dataView = new DataView(uu.buffer, uu.byteOffset, uu.byteLength))
+        } catch (Ey) {
+          if (Ku = null, uu instanceof Uint8Array) throw Ey;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (uu && "object" == typeof uu ? uu.constructor.name : typeof uu))
         }
-        if (this instanceof oU) {
-          if (hU = this, this.structures) return qU = this.structures, ZU(RU);
-          (!qU || qU.length > 0) && (qU = [])
-        } else hU = fU, (!qU || qU.length > 0) && (qU = []);
-        return ZU(RU)
+        if (this instanceof Mu) {
+          if (pu = this, this.structures) return Nu = this.structures, Iu(Ru);
+          (!Nu || Nu.length > 0) && (Nu = [])
+        } else pu = Hu, (!Nu || Nu.length > 0) && (Nu = []);
+        return Iu(Ru)
       }
-      unpackMultiple(UU, RU) {
-        let gU, tU = 0;
+      unpackMultiple(uu, Ru) {
+        let yu, Eu = 0;
         try {
-          nU = !0;
-          let pU = UU.length,
-            EU = this ? this.unpack(UU, pU) : KR.unpack(UU, pU);
-          if (!RU) {
-            for (gU = [EU]; PU < pU;) tU = PU, gU.push(ZU());
-            return gU
+          Au = !0;
+          let Ku = uu.length,
+            Qu = this ? this.unpack(uu, Ku) : XR.unpack(uu, Ku);
+          if (!Ru) {
+            for (yu = [Qu]; mu < Ku;) Eu = mu, yu.push(Iu());
+            return yu
           }
-          if (!1 === RU(EU, tU, PU)) return;
-          for (; PU < pU;)
-            if (tU = PU, !1 === RU(ZU(), tU, PU)) return
-        } catch (tg) {
-          throw tg.lastPosition = tU, tg.values = gU, tg
+          if (!1 === Ru(Qu, Eu, mu)) return;
+          for (; mu < Ku;)
+            if (Eu = mu, !1 === Ru(Iu(), Eu, mu)) return
+        } catch (Ey) {
+          throw Ey.lastPosition = Eu, Ey.values = yu, Ey
         } finally {
-          nU = !1, PR()
+          Au = !1, mR()
         }
       }
-      _mergeStructures(UU, RU) {
-        JU && (UU = JU.call(this, UU)), UU = UU || [], Object.isFrozen(UU) && (UU = UU.map((UU => UU.slice(0))));
-        for (let gU = 0, tU = UU.length; gU < tU; gU++) {
-          let RU = UU[gU];
-          RU && (RU.isShared = !0, gU >= 32 && (RU.highByte = gU - 32 >> 5))
+      _mergeStructures(uu, Ru) {
+        ku && (uu = ku.call(this, uu)), uu = uu || [], Object.isFrozen(uu) && (uu = uu.map((uu => uu.slice(0))));
+        for (let yu = 0, Eu = uu.length; yu < Eu; yu++) {
+          let Ru = uu[yu];
+          Ru && (Ru.isShared = !0, yu >= 32 && (Ru.highByte = yu - 32 >> 5))
         }
-        UU.sharedLength = UU.length;
-        for (let gU in RU || [])
-          if (gU >= 0) {
-            let tU = UU[gU],
-              pU = RU[gU];
-            pU && (tU && ((UU.restoreStructures || (UU.restoreStructures = []))[gU] = tU), UU[gU] = pU)
-          } return this.structures = UU
+        uu.sharedLength = uu.length;
+        for (let yu in Ru || [])
+          if (yu >= 0) {
+            let Eu = uu[yu],
+              Ku = Ru[yu];
+            Ku && (Eu && ((uu.restoreStructures || (uu.restoreStructures = []))[yu] = Eu), uu[yu] = Ku)
+          } return this.structures = uu
       }
-      decode(UU, RU) {
-        return this.unpack(UU, RU)
+      decode(uu, Ru) {
+        return this.unpack(uu, Ru)
       }
     }
 
-    function ZU(UU) {
+    function Iu(uu) {
       try {
-        if (!hU.trusted && !nU) {
-          let UU = qU.sharedLength || 0;
-          UU < qU.length && (qU.length = UU)
+        if (!pu.trusted && !Au) {
+          let uu = Nu.sharedLength || 0;
+          uu < Nu.length && (Nu.length = uu)
         }
-        let RU;
-        if (hU.randomAccessStructure && pU[PU] < 64 && pU[PU] >= 32 && IU ? (RU = IU(pU, PU, EU, hU), pU = null, UU && UU.lazy || !RU || (RU = RU.toJSON()), PU = EU) : RU = YU(), cU && (PU = cU.postBundlePosition, cU = null), nU && (qU.restoreStructures = null), PU == EU) qU && qU.restoreStructures && aU(), qU = null, pU = null, GU && (GU = null);
+        let Ru;
+        if (pu.randomAccessStructure && Ku[mu] < 64 && Ku[mu] >= 32 && Cu ? (Ru = Cu(Ku, mu, Qu, pu), Ku = null, uu && uu.lazy || !Ru || (Ru = Ru.toJSON()), mu = Qu) : Ru = Uu(), Vu && (mu = Vu.postBundlePosition, Vu = null), Au && (Nu.restoreStructures = null), mu == Qu) Nu && Nu.restoreStructures && Gu(), Nu = null, Ku = null, ru && (ru = null);
         else {
-          if (PU > EU) throw new Error("Unexpected end of MessagePack data");
-          if (!nU) {
-            let UU;
+          if (mu > Qu) throw new Error("Unexpected end of MessagePack data");
+          if (!Au) {
+            let uu;
             try {
-              UU = JSON.stringify(RU, ((UU, RU) => "bigint" === typeof RU ? `${RU}n` : RU)).slice(0, 100)
-            } catch (tg) {
-              UU = "(JSON view not available " + tg + ")"
+              uu = JSON.stringify(Ru, ((uu, Ru) => "bigint" === typeof Ru ? `${Ru}n` : Ru)).slice(0, 100)
+            } catch (Ey) {
+              uu = "(JSON view not available " + Ey + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + UU)
+            throw new Error("Data read, but end of buffer not reached " + uu)
           }
         }
-        return RU
-      } catch (tg) {
-        throw qU && qU.restoreStructures && aU(), PR(), (tg instanceof RangeError || tg.message.startsWith("Unexpected end of buffer") || PU > EU) && (tg.incomplete = !0), tg
+        return Ru
+      } catch (Ey) {
+        throw Nu && Nu.restoreStructures && Gu(), mR(), (Ey instanceof RangeError || Ey.message.startsWith("Unexpected end of buffer") || mu > Qu) && (Ey.incomplete = !0), Ey
       }
     }
 
-    function aU() {
-      for (let UU in qU.restoreStructures) qU[UU] = qU.restoreStructures[UU];
-      qU.restoreStructures = null
+    function Gu() {
+      for (let uu in Nu.restoreStructures) Nu[uu] = Nu.restoreStructures[uu];
+      Nu.restoreStructures = null
     }
 
-    function YU() {
-      let UU = pU[PU++];
-      if (UU < 160) {
-        if (UU < 128) {
-          if (UU < 64) return UU;
+    function Uu() {
+      let uu = Ku[mu++];
+      if (uu < 160) {
+        if (uu < 128) {
+          if (uu < 64) return uu;
           {
-            let RU = qU[63 & UU] || hU.getStructures && XU()[63 & UU];
-            return RU ? (RU.read || (RU.read = VU(RU, 63 & UU)), RU.read()) : UU
+            let Ru = Nu[63 & uu] || pu.getStructures && lu()[63 & uu];
+            return Ru ? (Ru.read || (Ru.read = su(Ru, 63 & uu)), Ru.read()) : uu
           }
         }
-        if (UU < 144) {
-          if (UU -= 128, hU.mapsAsObjects) {
-            let RU = {};
-            for (let gU = 0; gU < UU; gU++) {
-              let UU = lU();
-              "__proto__" === UU && (UU = "__proto_"), RU[UU] = YU()
+        if (uu < 144) {
+          if (uu -= 128, pu.mapsAsObjects) {
+            let Ru = {};
+            for (let yu = 0; yu < uu; yu++) {
+              let uu = au();
+              "__proto__" === uu && (uu = "__proto_"), Ru[uu] = Uu()
             }
-            return RU
+            return Ru
           } {
-            let RU = new Map;
-            for (let gU = 0; gU < UU; gU++) RU.set(YU(), YU());
-            return RU
+            let Ru = new Map;
+            for (let yu = 0; yu < uu; yu++) Ru.set(Uu(), Uu());
+            return Ru
           }
         } {
-          UU -= 144;
-          let RU = new Array(UU);
-          for (let gU = 0; gU < UU; gU++) RU[gU] = YU();
-          return hU.freezeData ? Object.freeze(RU) : RU
+          uu -= 144;
+          let Ru = new Array(uu);
+          for (let yu = 0; yu < uu; yu++) Ru[yu] = Uu();
+          return pu.freezeData ? Object.freeze(Ru) : Ru
         }
       }
-      if (UU < 192) {
-        let RU = UU - 160;
-        if (eU >= PU) return KU.slice(PU - QU, (PU += RU) - QU);
-        if (0 == eU && EU < 140) {
-          let UU = RU < 16 ? zU(RU) : AU(RU);
-          if (null != UU) return UU
+      if (uu < 192) {
+        let Ru = uu - 160;
+        if (Wu >= mu) return Xu.slice(mu - Tu, (mu += Ru) - Tu);
+        if (0 == Wu && Qu < 140) {
+          let uu = Ru < 16 ? Yu(Ru) : iu(Ru);
+          if (null != uu) return uu
         }
-        return vU(RU)
+        return gu(Ru)
       } {
-        let RU;
-        switch (UU) {
+        let Ru;
+        switch (uu) {
           case 192:
             return null;
           case 193:
-            return cU ? (RU = YU(), RU > 0 ? cU[1].slice(cU.position1, cU.position1 += RU) : cU[0].slice(cU.position0, cU.position0 -= RU)) : mU;
+            return Vu ? (Ru = Uu(), Ru > 0 ? Vu[1].slice(Vu.position1, Vu.position1 += Ru) : Vu[0].slice(Vu.position0, Vu.position0 -= Ru)) : bu;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (RU = pU[PU++], void 0 === RU) throw new Error("Unexpected end of buffer");
-            return DU(RU);
+            if (Ru = Ku[mu++], void 0 === Ru) throw new Error("Unexpected end of buffer");
+            return qu(Ru);
           case 197:
-            return RU = jU.getUint16(PU), PU += 2, DU(RU);
+            return Ru = Bu.getUint16(mu), mu += 2, qu(Ru);
           case 198:
-            return RU = jU.getUint32(PU), PU += 4, DU(RU);
+            return Ru = Bu.getUint32(mu), mu += 4, qu(Ru);
           case 199:
-            return LU(pU[PU++]);
+            return Ou(Ku[mu++]);
           case 200:
-            return RU = jU.getUint16(PU), PU += 2, LU(RU);
+            return Ru = Bu.getUint16(mu), mu += 2, Ou(Ru);
           case 201:
-            return RU = jU.getUint32(PU), PU += 4, LU(RU);
+            return Ru = Bu.getUint32(mu), mu += 4, Ou(Ru);
           case 202:
-            if (RU = jU.getFloat32(PU), hU.useFloat32 > 2) {
-              let UU = TR[(127 & pU[PU]) << 1 | pU[PU + 1] >> 7];
-              return PU += 4, (UU * RU + (RU > 0 ? .5 : -.5) | 0) / UU
+            if (Ru = Bu.getFloat32(mu), pu.useFloat32 > 2) {
+              let uu = JR[(127 & Ku[mu]) << 1 | Ku[mu + 1] >> 7];
+              return mu += 4, (uu * Ru + (Ru > 0 ? .5 : -.5) | 0) / uu
             }
-            return PU += 4, RU;
+            return mu += 4, Ru;
           case 203:
-            return RU = jU.getFloat64(PU), PU += 8, RU;
+            return Ru = Bu.getFloat64(mu), mu += 8, Ru;
           case 204:
-            return pU[PU++];
+            return Ku[mu++];
           case 205:
-            return RU = jU.getUint16(PU), PU += 2, RU;
+            return Ru = Bu.getUint16(mu), mu += 2, Ru;
           case 206:
-            return RU = jU.getUint32(PU), PU += 4, RU;
+            return Ru = Bu.getUint32(mu), mu += 4, Ru;
           case 207:
-            return "number" === hU.int64AsType ? (RU = 4294967296 * jU.getUint32(PU), RU += jU.getUint32(PU + 4)) : "string" === hU.int64AsType ? RU = jU.getBigUint64(PU).toString() : "auto" === hU.int64AsType ? (RU = jU.getBigUint64(PU), RU <= BigInt(2) << BigInt(52) && (RU = Number(RU))) : RU = jU.getBigUint64(PU), PU += 8, RU;
+            return "number" === pu.int64AsType ? (Ru = 4294967296 * Bu.getUint32(mu), Ru += Bu.getUint32(mu + 4)) : "string" === pu.int64AsType ? Ru = Bu.getBigUint64(mu).toString() : "auto" === pu.int64AsType ? (Ru = Bu.getBigUint64(mu), Ru <= BigInt(2) << BigInt(52) && (Ru = Number(Ru))) : Ru = Bu.getBigUint64(mu), mu += 8, Ru;
           case 208:
-            return jU.getInt8(PU++);
+            return Bu.getInt8(mu++);
           case 209:
-            return RU = jU.getInt16(PU), PU += 2, RU;
+            return Ru = Bu.getInt16(mu), mu += 2, Ru;
           case 210:
-            return RU = jU.getInt32(PU), PU += 4, RU;
+            return Ru = Bu.getInt32(mu), mu += 4, Ru;
           case 211:
-            return "number" === hU.int64AsType ? (RU = 4294967296 * jU.getInt32(PU), RU += jU.getUint32(PU + 4)) : "string" === hU.int64AsType ? RU = jU.getBigInt64(PU).toString() : "auto" === hU.int64AsType ? (RU = jU.getBigInt64(PU), RU >= BigInt(-2) << BigInt(52) && RU <= BigInt(2) << BigInt(52) && (RU = Number(RU))) : RU = jU.getBigInt64(PU), PU += 8, RU;
+            return "number" === pu.int64AsType ? (Ru = 4294967296 * Bu.getInt32(mu), Ru += Bu.getUint32(mu + 4)) : "string" === pu.int64AsType ? Ru = Bu.getBigInt64(mu).toString() : "auto" === pu.int64AsType ? (Ru = Bu.getBigInt64(mu), Ru >= BigInt(-2) << BigInt(52) && Ru <= BigInt(2) << BigInt(52) && (Ru = Number(Ru))) : Ru = Bu.getBigInt64(mu), mu += 8, Ru;
           case 212:
-            if (RU = pU[PU++], 114 == RU) return UR(63 & pU[PU++]);
+            if (Ru = Ku[mu++], 114 == Ru) return uR(63 & Ku[mu++]);
             {
-              let UU = WU[RU];
-              if (UU) return UU.read ? (PU++, UU.read(YU())) : UU.noBuffer ? (PU++, UU()) : UU(pU.subarray(PU, ++PU));
-              throw new Error("Unknown extension " + RU)
+              let uu = ju[Ru];
+              if (uu) return uu.read ? (mu++, uu.read(Uu())) : uu.noBuffer ? (mu++, uu()) : uu(Ku.subarray(mu, ++mu));
+              throw new Error("Unknown extension " + Ru)
             }
           case 213:
-            return RU = pU[PU], 114 == RU ? (PU++, UR(63 & pU[PU++], pU[PU++])) : LU(2);
+            return Ru = Ku[mu], 114 == Ru ? (mu++, uR(63 & Ku[mu++], Ku[mu++])) : Ou(2);
           case 214:
-            return LU(4);
+            return Ou(4);
           case 215:
-            return LU(8);
+            return Ou(8);
           case 216:
-            return LU(16);
+            return Ou(16);
           case 217:
-            return RU = pU[PU++], eU >= PU ? KU.slice(PU - QU, (PU += RU) - QU) : dU(RU);
+            return Ru = Ku[mu++], Wu >= mu ? Xu.slice(mu - Tu, (mu += Ru) - Tu) : cu(Ru);
           case 218:
-            return RU = jU.getUint16(PU), eU >= (PU += 2) ? KU.slice(PU - QU, (PU += RU) - QU) : HU(RU);
+            return Ru = Bu.getUint16(mu), Wu >= (mu += 2) ? Xu.slice(mu - Tu, (mu += Ru) - Tu) : Lu(Ru);
           case 219:
-            return RU = jU.getUint32(PU), eU >= (PU += 4) ? KU.slice(PU - QU, (PU += RU) - QU) : SU(RU);
+            return Ru = Bu.getUint32(mu), Wu >= (mu += 4) ? Xu.slice(mu - Tu, (mu += Ru) - Tu) : zu(Ru);
           case 220:
-            return RU = jU.getUint16(PU), PU += 2, kU(RU);
+            return Ru = Bu.getUint16(mu), mu += 2, Zu(Ru);
           case 221:
-            return RU = jU.getUint32(PU), PU += 4, kU(RU);
+            return Ru = Bu.getUint32(mu), mu += 4, Zu(Ru);
           case 222:
-            return RU = jU.getUint16(PU), PU += 2, FU(RU);
+            return Ru = Bu.getUint16(mu), mu += 2, hu(Ru);
           case 223:
-            return RU = jU.getUint32(PU), PU += 4, FU(RU);
+            return Ru = Bu.getUint32(mu), mu += 4, hu(Ru);
           default:
-            if (UU >= 224) return UU - 256;
-            if (void 0 === UU) {
-              let UU = new Error("Unexpected end of MessagePack data");
-              throw UU.incomplete = !0, UU
+            if (uu >= 224) return uu - 256;
+            if (void 0 === uu) {
+              let uu = new Error("Unexpected end of MessagePack data");
+              throw uu.incomplete = !0, uu
             }
-            throw new Error("Unknown MessagePack token " + UU)
+            throw new Error("Unknown MessagePack token " + uu)
         }
       }
     }
-    const BU = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const nu = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function VU(UU, RU) {
-      function gU() {
-        if (gU.count++ > bU) {
-          let gU = UU.read = new Function("r", "return function(){return " + (hU.freezeData ? "Object.freeze" : "") + "({" + UU.map((UU => "__proto__" === UU ? "__proto_:r()" : BU.test(UU) ? UU + ":r()" : "[" + JSON.stringify(UU) + "]:r()")).join(",") + "})}")(YU);
-          return 0 === UU.highByte && (UU.read = rU(RU, UU.read)), gU()
+    function su(uu, Ru) {
+      function yu() {
+        if (yu.count++ > Du) {
+          let yu = uu.read = new Function("r", "return function(){return " + (pu.freezeData ? "Object.freeze" : "") + "({" + uu.map((uu => "__proto__" === uu ? "__proto_:r()" : nu.test(uu) ? uu + ":r()" : "[" + JSON.stringify(uu) + "]:r()")).join(",") + "})}")(Uu);
+          return 0 === uu.highByte && (uu.read = tu(Ru, uu.read)), yu()
         }
-        let tU = {};
-        for (let RU = 0, gU = UU.length; RU < gU; RU++) {
-          let gU = UU[RU];
-          "__proto__" === gU && (gU = "__proto_"), tU[gU] = YU()
+        let Eu = {};
+        for (let Ru = 0, yu = uu.length; Ru < yu; Ru++) {
+          let yu = uu[Ru];
+          "__proto__" === yu && (yu = "__proto_"), Eu[yu] = Uu()
         }
-        return hU.freezeData ? Object.freeze(tU) : tU
+        return pu.freezeData ? Object.freeze(Eu) : Eu
       }
-      return gU.count = 0, 0 === UU.highByte ? rU(RU, gU) : gU
+      return yu.count = 0, 0 === uu.highByte ? tu(Ru, yu) : yu
     }
-    const rU = (UU, RU) => function() {
-      let gU = pU[PU++];
-      if (0 === gU) return RU();
-      let tU = UU < 32 ? -(UU + (gU << 5)) : UU + (gU << 5),
-        EU = qU[tU] || XU()[tU];
-      if (!EU) throw new Error("Record id is not defined for " + tU);
-      return EU.read || (EU.read = VU(EU, UU)), EU.read()
+    const tu = (uu, Ru) => function() {
+      let yu = Ku[mu++];
+      if (0 === yu) return Ru();
+      let Eu = uu < 32 ? -(uu + (yu << 5)) : uu + (yu << 5),
+        Qu = Nu[Eu] || lu()[Eu];
+      if (!Qu) throw new Error("Record id is not defined for " + Eu);
+      return Qu.read || (Qu.read = su(Qu, uu)), Qu.read()
     };
 
-    function XU() {
-      let UU = ER((() => (pU = null, hU.getStructures())));
-      return qU = hU._mergeStructures(UU, qU)
+    function lu() {
+      let uu = QR((() => (Ku = null, pu.getStructures())));
+      return Nu = pu._mergeStructures(uu, Nu)
     }
-    var vU = yU,
-      dU = yU,
-      HU = yU,
-      SU = yU;
-    let sU = !1;
+    var gu = wu,
+      cu = wu,
+      Lu = wu,
+      zu = wu;
+    let Fu = !1;
 
-    function yU(UU) {
-      let RU;
-      if (UU < 16 && (RU = zU(UU))) return RU;
-      if (UU > 64 && tU) return tU.decode(pU.subarray(PU, PU += UU));
-      const gU = PU + UU,
-        EU = [];
-      for (RU = ""; PU < gU;) {
-        const UU = pU[PU++];
-        if (0 === (128 & UU)) EU.push(UU);
-        else if (192 === (224 & UU)) {
-          const RU = 63 & pU[PU++];
-          EU.push((31 & UU) << 6 | RU)
-        } else if (224 === (240 & UU)) {
-          const RU = 63 & pU[PU++],
-            gU = 63 & pU[PU++];
-          EU.push((31 & UU) << 12 | RU << 6 | gU)
-        } else if (240 === (248 & UU)) {
-          let RU = (7 & UU) << 18 | (63 & pU[PU++]) << 12 | (63 & pU[PU++]) << 6 | 63 & pU[PU++];
-          RU > 65535 && (RU -= 65536, EU.push(RU >>> 10 & 1023 | 55296), RU = 56320 | 1023 & RU), EU.push(RU)
-        } else EU.push(UU);
-        EU.length >= 4096 && (RU += iU.apply(String, EU), EU.length = 0)
+    function wu(uu) {
+      let Ru;
+      if (uu < 16 && (Ru = Yu(uu))) return Ru;
+      if (uu > 64 && Eu) return Eu.decode(Ku.subarray(mu, mu += uu));
+      const yu = mu + uu,
+        Qu = [];
+      for (Ru = ""; mu < yu;) {
+        const uu = Ku[mu++];
+        if (0 === (128 & uu)) Qu.push(uu);
+        else if (192 === (224 & uu)) {
+          const Ru = 63 & Ku[mu++];
+          Qu.push((31 & uu) << 6 | Ru)
+        } else if (224 === (240 & uu)) {
+          const Ru = 63 & Ku[mu++],
+            yu = 63 & Ku[mu++];
+          Qu.push((31 & uu) << 12 | Ru << 6 | yu)
+        } else if (240 === (248 & uu)) {
+          let Ru = (7 & uu) << 18 | (63 & Ku[mu++]) << 12 | (63 & Ku[mu++]) << 6 | 63 & Ku[mu++];
+          Ru > 65535 && (Ru -= 65536, Qu.push(Ru >>> 10 & 1023 | 55296), Ru = 56320 | 1023 & Ru), Qu.push(Ru)
+        } else Qu.push(uu);
+        Qu.length >= 4096 && (Ru += Pu.apply(String, Qu), Qu.length = 0)
       }
-      return EU.length > 0 && (RU += iU.apply(String, EU)), RU
+      return Qu.length > 0 && (Ru += Pu.apply(String, Qu)), Ru
     }
 
-    function kU(UU) {
-      let RU = new Array(UU);
-      for (let gU = 0; gU < UU; gU++) RU[gU] = YU();
-      return hU.freezeData ? Object.freeze(RU) : RU
+    function Zu(uu) {
+      let Ru = new Array(uu);
+      for (let yu = 0; yu < uu; yu++) Ru[yu] = Uu();
+      return pu.freezeData ? Object.freeze(Ru) : Ru
     }
 
-    function FU(UU) {
-      if (hU.mapsAsObjects) {
-        let RU = {};
-        for (let gU = 0; gU < UU; gU++) {
-          let UU = lU();
-          "__proto__" === UU && (UU = "__proto_"), RU[UU] = YU()
+    function hu(uu) {
+      if (pu.mapsAsObjects) {
+        let Ru = {};
+        for (let yu = 0; yu < uu; yu++) {
+          let uu = au();
+          "__proto__" === uu && (uu = "__proto_"), Ru[uu] = Uu()
         }
-        return RU
+        return Ru
       } {
-        let RU = new Map;
-        for (let gU = 0; gU < UU; gU++) RU.set(YU(), YU());
-        return RU
+        let Ru = new Map;
+        for (let yu = 0; yu < uu; yu++) Ru.set(Uu(), Uu());
+        return Ru
       }
     }
-    var iU = String.fromCharCode;
+    var Pu = String.fromCharCode;
 
-    function AU(UU) {
-      let RU = PU,
-        gU = new Array(UU);
-      for (let tU = 0; tU < UU; tU++) {
-        const UU = pU[PU++];
-        if ((128 & UU) > 0) return void(PU = RU);
-        gU[tU] = UU
+    function iu(uu) {
+      let Ru = mu,
+        yu = new Array(uu);
+      for (let Eu = 0; Eu < uu; Eu++) {
+        const uu = Ku[mu++];
+        if ((128 & uu) > 0) return void(mu = Ru);
+        yu[Eu] = uu
       }
-      return iU.apply(String, gU)
+      return Pu.apply(String, yu)
     }
 
-    function zU(UU) {
-      if (UU < 4) {
-        if (UU < 2) {
-          if (0 === UU) return "";
+    function Yu(uu) {
+      if (uu < 4) {
+        if (uu < 2) {
+          if (0 === uu) return "";
           {
-            let UU = pU[PU++];
-            return (128 & UU) > 1 ? void(PU -= 1) : iU(UU)
+            let uu = Ku[mu++];
+            return (128 & uu) > 1 ? void(mu -= 1) : Pu(uu)
           }
         } {
-          let RU = pU[PU++],
-            gU = pU[PU++];
-          if ((128 & RU) > 0 || (128 & gU) > 0) return void(PU -= 2);
-          if (UU < 3) return iU(RU, gU);
-          let tU = pU[PU++];
-          return (128 & tU) > 0 ? void(PU -= 3) : iU(RU, gU, tU)
+          let Ru = Ku[mu++],
+            yu = Ku[mu++];
+          if ((128 & Ru) > 0 || (128 & yu) > 0) return void(mu -= 2);
+          if (uu < 3) return Pu(Ru, yu);
+          let Eu = Ku[mu++];
+          return (128 & Eu) > 0 ? void(mu -= 3) : Pu(Ru, yu, Eu)
         }
       } {
-        let RU = pU[PU++],
-          gU = pU[PU++],
-          tU = pU[PU++],
-          EU = pU[PU++];
-        if ((128 & RU) > 0 || (128 & gU) > 0 || (128 & tU) > 0 || (128 & EU) > 0) return void(PU -= 4);
-        if (UU < 6) {
-          if (4 === UU) return iU(RU, gU, tU, EU);
+        let Ru = Ku[mu++],
+          yu = Ku[mu++],
+          Eu = Ku[mu++],
+          Qu = Ku[mu++];
+        if ((128 & Ru) > 0 || (128 & yu) > 0 || (128 & Eu) > 0 || (128 & Qu) > 0) return void(mu -= 4);
+        if (uu < 6) {
+          if (4 === uu) return Pu(Ru, yu, Eu, Qu);
           {
-            let UU = pU[PU++];
-            return (128 & UU) > 0 ? void(PU -= 5) : iU(RU, gU, tU, EU, UU)
+            let uu = Ku[mu++];
+            return (128 & uu) > 0 ? void(mu -= 5) : Pu(Ru, yu, Eu, Qu, uu)
           }
         }
-        if (UU < 8) {
-          let TU = pU[PU++],
-            qU = pU[PU++];
-          if ((128 & TU) > 0 || (128 & qU) > 0) return void(PU -= 6);
-          if (UU < 7) return iU(RU, gU, tU, EU, TU, qU);
-          let KU = pU[PU++];
-          return (128 & KU) > 0 ? void(PU -= 7) : iU(RU, gU, tU, EU, TU, qU, KU)
+        if (uu < 8) {
+          let Ju = Ku[mu++],
+            Nu = Ku[mu++];
+          if ((128 & Ju) > 0 || (128 & Nu) > 0) return void(mu -= 6);
+          if (uu < 7) return Pu(Ru, yu, Eu, Qu, Ju, Nu);
+          let Xu = Ku[mu++];
+          return (128 & Xu) > 0 ? void(mu -= 7) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu)
         } {
-          let TU = pU[PU++],
-            qU = pU[PU++],
-            KU = pU[PU++],
-            cU = pU[PU++];
-          if ((128 & TU) > 0 || (128 & qU) > 0 || (128 & KU) > 0 || (128 & cU) > 0) return void(PU -= 8);
-          if (UU < 10) {
-            if (8 === UU) return iU(RU, gU, tU, EU, TU, qU, KU, cU);
+          let Ju = Ku[mu++],
+            Nu = Ku[mu++],
+            Xu = Ku[mu++],
+            Vu = Ku[mu++];
+          if ((128 & Ju) > 0 || (128 & Nu) > 0 || (128 & Xu) > 0 || (128 & Vu) > 0) return void(mu -= 8);
+          if (uu < 10) {
+            if (8 === uu) return Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu);
             {
-              let UU = pU[PU++];
-              return (128 & UU) > 0 ? void(PU -= 9) : iU(RU, gU, tU, EU, TU, qU, KU, cU, UU)
+              let uu = Ku[mu++];
+              return (128 & uu) > 0 ? void(mu -= 9) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, uu)
             }
           }
-          if (UU < 12) {
-            let GU = pU[PU++],
-              jU = pU[PU++];
-            if ((128 & GU) > 0 || (128 & jU) > 0) return void(PU -= 10);
-            if (UU < 11) return iU(RU, gU, tU, EU, TU, qU, KU, cU, GU, jU);
-            let uU = pU[PU++];
-            return (128 & uU) > 0 ? void(PU -= 11) : iU(RU, gU, tU, EU, TU, qU, KU, cU, GU, jU, uU)
+          if (uu < 12) {
+            let ru = Ku[mu++],
+              Bu = Ku[mu++];
+            if ((128 & ru) > 0 || (128 & Bu) > 0) return void(mu -= 10);
+            if (uu < 11) return Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu);
+            let xu = Ku[mu++];
+            return (128 & xu) > 0 ? void(mu -= 11) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu)
           } {
-            let GU = pU[PU++],
-              jU = pU[PU++],
-              uU = pU[PU++],
-              CU = pU[PU++];
-            if ((128 & GU) > 0 || (128 & jU) > 0 || (128 & uU) > 0 || (128 & CU) > 0) return void(PU -= 12);
-            if (UU < 14) {
-              if (12 === UU) return iU(RU, gU, tU, EU, TU, qU, KU, cU, GU, jU, uU, CU);
+            let ru = Ku[mu++],
+              Bu = Ku[mu++],
+              xu = Ku[mu++],
+              Su = Ku[mu++];
+            if ((128 & ru) > 0 || (128 & Bu) > 0 || (128 & xu) > 0 || (128 & Su) > 0) return void(mu -= 12);
+            if (uu < 14) {
+              if (12 === uu) return Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su);
               {
-                let UU = pU[PU++];
-                return (128 & UU) > 0 ? void(PU -= 13) : iU(RU, gU, tU, EU, TU, qU, KU, cU, GU, jU, uU, CU, UU)
+                let uu = Ku[mu++];
+                return (128 & uu) > 0 ? void(mu -= 13) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, uu)
               }
             } {
-              let hU = pU[PU++],
-                QU = pU[PU++];
-              if ((128 & hU) > 0 || (128 & QU) > 0) return void(PU -= 14);
-              if (UU < 15) return iU(RU, gU, tU, EU, TU, qU, KU, cU, GU, jU, uU, CU, hU, QU);
-              let eU = pU[PU++];
-              return (128 & eU) > 0 ? void(PU -= 15) : iU(RU, gU, tU, EU, TU, qU, KU, cU, GU, jU, uU, CU, hU, QU, eU)
+              let pu = Ku[mu++],
+                Tu = Ku[mu++];
+              if ((128 & pu) > 0 || (128 & Tu) > 0) return void(mu -= 14);
+              if (uu < 15) return Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu);
+              let Wu = Ku[mu++];
+              return (128 & Wu) > 0 ? void(mu -= 15) : Pu(Ru, yu, Eu, Qu, Ju, Nu, Xu, Vu, ru, Bu, xu, Su, pu, Tu, Wu)
             }
           }
         }
       }
     }
 
-    function MU() {
-      let UU, RU = pU[PU++];
-      if (RU < 192) UU = RU - 160;
-      else switch (RU) {
+    function ou() {
+      let uu, Ru = Ku[mu++];
+      if (Ru < 192) uu = Ru - 160;
+      else switch (Ru) {
         case 217:
-          UU = pU[PU++];
+          uu = Ku[mu++];
           break;
         case 218:
-          UU = jU.getUint16(PU), PU += 2;
+          uu = Bu.getUint16(mu), mu += 2;
           break;
         case 219:
-          UU = jU.getUint32(PU), PU += 4;
+          uu = Bu.getUint32(mu), mu += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return yU(UU)
+      return wu(uu)
     }
 
-    function DU(UU) {
-      return hU.copyBuffers ? Uint8Array.prototype.slice.call(pU, PU, PU += UU) : pU.subarray(PU, PU += UU)
+    function qu(uu) {
+      return pu.copyBuffers ? Uint8Array.prototype.slice.call(Ku, mu, mu += uu) : Ku.subarray(mu, mu += uu)
     }
 
-    function LU(UU) {
-      let RU = pU[PU++];
-      if (WU[RU]) {
-        let gU;
-        return WU[RU](pU.subarray(PU, gU = PU += UU), (UU => {
-          PU = UU;
+    function Ou(uu) {
+      let Ru = Ku[mu++];
+      if (ju[Ru]) {
+        let yu;
+        return ju[Ru](Ku.subarray(mu, yu = mu += uu), (uu => {
+          mu = uu;
           try {
-            return YU()
+            return Uu()
           } finally {
-            PU = gU
+            mu = yu
           }
         }))
       }
-      throw new Error("Unknown extension type " + RU)
+      throw new Error("Unknown extension type " + Ru)
     }
-    var NU = new Array(4096);
+    var vu = new Array(4096);
 
-    function lU() {
-      let UU = pU[PU++];
-      if (!(UU >= 160 && UU < 192)) return PU--, OU(YU());
-      if (UU -= 160, eU >= PU) return KU.slice(PU - QU, (PU += UU) - QU);
-      if (!(0 == eU && EU < 180)) return vU(UU);
-      let RU, gU = 4095 & (UU << 5 ^ (UU > 1 ? jU.getUint16(PU) : UU > 0 ? pU[PU] : 0)),
-        tU = NU[gU],
-        TU = PU,
-        qU = PU + UU - 3,
-        cU = 0;
-      if (tU && tU.bytes == UU) {
-        for (; TU < qU;) {
-          if (RU = jU.getUint32(TU), RU != tU[cU++]) {
-            TU = 1879048192;
+    function au() {
+      let uu = Ku[mu++];
+      if (!(uu >= 160 && uu < 192)) return mu--, fu(Uu());
+      if (uu -= 160, Wu >= mu) return Xu.slice(mu - Tu, (mu += uu) - Tu);
+      if (!(0 == Wu && Qu < 180)) return gu(uu);
+      let Ru, yu = 4095 & (uu << 5 ^ (uu > 1 ? Bu.getUint16(mu) : uu > 0 ? Ku[mu] : 0)),
+        Eu = vu[yu],
+        Ju = mu,
+        Nu = mu + uu - 3,
+        Vu = 0;
+      if (Eu && Eu.bytes == uu) {
+        for (; Ju < Nu;) {
+          if (Ru = Bu.getUint32(Ju), Ru != Eu[Vu++]) {
+            Ju = 1879048192;
             break
           }
-          TU += 4
+          Ju += 4
         }
-        for (qU += 3; TU < qU;)
-          if (RU = pU[TU++], RU != tU[cU++]) {
-            TU = 1879048192;
+        for (Nu += 3; Ju < Nu;)
+          if (Ru = Ku[Ju++], Ru != Eu[Vu++]) {
+            Ju = 1879048192;
             break
-          } if (TU === qU) return PU = TU, tU.string;
-        qU -= 3, TU = PU
+          } if (Ju === Nu) return mu = Ju, Eu.string;
+        Nu -= 3, Ju = mu
       }
-      for (tU = [], NU[gU] = tU, tU.bytes = UU; TU < qU;) RU = jU.getUint32(TU), tU.push(RU), TU += 4;
-      for (qU += 3; TU < qU;) RU = pU[TU++], tU.push(RU);
-      let GU = UU < 16 ? zU(UU) : AU(UU);
-      return tU.string = null != GU ? GU : vU(UU)
+      for (Eu = [], vu[yu] = Eu, Eu.bytes = uu; Ju < Nu;) Ru = Bu.getUint32(Ju), Eu.push(Ru), Ju += 4;
+      for (Nu += 3; Ju < Nu;) Ru = Ku[Ju++], Eu.push(Ru);
+      let ru = uu < 16 ? Yu(uu) : iu(uu);
+      return Eu.string = null != ru ? ru : gu(uu)
     }
 
-    function OU(UU) {
-      if ("string" === typeof UU) return UU;
-      if ("number" === typeof UU || "boolean" === typeof UU || "bigint" === typeof UU) return UU.toString();
-      if (null == UU) return UU + "";
-      if (hU.allowArraysInMapKeys && Array.isArray(UU) && UU.flat().every((UU => ["string", "number", "boolean", "bigint"].includes(typeof UU)))) return UU.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof UU)
+    function fu(uu) {
+      if ("string" === typeof uu) return uu;
+      if ("number" === typeof uu || "boolean" === typeof uu || "bigint" === typeof uu) return uu.toString();
+      if (null == uu) return uu + "";
+      if (pu.allowArraysInMapKeys && Array.isArray(uu) && uu.flat().every((uu => ["string", "number", "boolean", "bigint"].includes(typeof uu)))) return uu.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof uu)
     }
-    const UR = (UU, RU) => {
-      let gU = YU().map(OU),
-        tU = UU;
-      void 0 !== RU && (UU = UU < 32 ? -((RU << 5) + UU) : (RU << 5) + UU, gU.highByte = RU);
-      let pU = qU[UU];
-      return pU && (pU.isShared || nU) && ((qU.restoreStructures || (qU.restoreStructures = []))[UU] = pU), qU[UU] = gU, gU.read = VU(gU, tU), gU.read()
+    const uR = (uu, Ru) => {
+      let yu = Uu().map(fu),
+        Eu = uu;
+      void 0 !== Ru && (uu = uu < 32 ? -((Ru << 5) + uu) : (Ru << 5) + uu, yu.highByte = Ru);
+      let Ku = Nu[uu];
+      return Ku && (Ku.isShared || Au) && ((Nu.restoreStructures || (Nu.restoreStructures = []))[uu] = Ku), Nu[uu] = yu, yu.read = su(yu, Eu), yu.read()
     };
-    WU[0] = () => {}, WU[0].noBuffer = !0, WU[66] = UU => {
-      let RU = UU.length,
-        gU = BigInt(128 & UU[0] ? UU[0] - 256 : UU[0]);
-      for (let tU = 1; tU < RU; tU++) gU <<= BigInt(8), gU += BigInt(UU[tU]);
-      return gU
+    ju[0] = () => {}, ju[0].noBuffer = !0, ju[66] = uu => {
+      let Ru = uu.length,
+        yu = BigInt(128 & uu[0] ? uu[0] - 256 : uu[0]);
+      for (let Eu = 1; Eu < Ru; Eu++) yu <<= BigInt(8), yu += BigInt(uu[Eu]);
+      return yu
     };
     let RR = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    WU[101] = () => {
-      let UU = YU();
-      return (RR[UU[0]] || Error)(UU[1], {
-        cause: UU[2]
+    ju[101] = () => {
+      let uu = Uu();
+      return (RR[uu[0]] || Error)(uu[1], {
+        cause: uu[2]
       })
-    }, WU[105] = UU => {
-      if (!1 === hU.structuredClone) throw new Error("Structured clone extension is disabled");
-      let RU = jU.getUint32(PU - 4);
-      GU || (GU = new Map);
-      let gU, tU = pU[PU];
-      gU = tU >= 144 && tU < 160 || 220 == tU || 221 == tU ? [] : {};
-      let EU = {
-        target: gU
+    }, ju[105] = uu => {
+      if (!1 === pu.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Ru = Bu.getUint32(mu - 4);
+      ru || (ru = new Map);
+      let yu, Eu = Ku[mu];
+      yu = Eu >= 144 && Eu < 160 || 220 == Eu || 221 == Eu ? [] : {};
+      let Qu = {
+        target: yu
       };
-      GU.set(RU, EU);
-      let TU = YU();
-      return EU.used ? Object.assign(gU, TU) : (EU.target = TU, TU)
-    }, WU[112] = UU => {
-      if (!1 === hU.structuredClone) throw new Error("Structured clone extension is disabled");
-      let RU = jU.getUint32(PU - 4),
-        gU = GU.get(RU);
-      return gU.used = !0, gU.target
-    }, WU[115] = () => new Set(YU());
-    const gR = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((UU => UU + "Array"));
-    let tR = "object" === typeof globalThis ? globalThis : window;
-    WU[116] = UU => {
-      let RU = UU[0],
-        gU = gR[RU];
-      if (!gU) {
-        if (16 === RU) {
-          let RU = new ArrayBuffer(UU.length - 1);
-          return new Uint8Array(RU).set(UU.subarray(1)), RU
+      ru.set(Ru, Qu);
+      let Ju = Uu();
+      return Qu.used ? Object.assign(yu, Ju) : (Qu.target = Ju, Ju)
+    }, ju[112] = uu => {
+      if (!1 === pu.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Ru = Bu.getUint32(mu - 4),
+        yu = ru.get(Ru);
+      return yu.used = !0, yu.target
+    }, ju[115] = () => new Set(Uu());
+    const yR = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((uu => uu + "Array"));
+    let ER = "object" === typeof globalThis ? globalThis : window;
+    ju[116] = uu => {
+      let Ru = uu[0],
+        yu = yR[Ru];
+      if (!yu) {
+        if (16 === Ru) {
+          let Ru = new ArrayBuffer(uu.length - 1);
+          return new Uint8Array(Ru).set(uu.subarray(1)), Ru
         }
-        throw new Error("Could not find typed array for code " + RU)
+        throw new Error("Could not find typed array for code " + Ru)
       }
-      return new tR[gU](Uint8Array.prototype.slice.call(UU, 1).buffer)
-    }, WU[120] = () => {
-      let UU = YU();
-      return new RegExp(UU[0], UU[1])
+      return new ER[yu](Uint8Array.prototype.slice.call(uu, 1).buffer)
+    }, ju[120] = () => {
+      let uu = Uu();
+      return new RegExp(uu[0], uu[1])
     };
-    const pR = [];
+    const KR = [];
 
-    function ER(UU) {
-      wU && wU();
-      let RU = EU,
-        gU = PU,
-        tU = CU,
-        TU = QU,
-        WU = eU,
-        fU = KU,
-        xU = uU,
-        mU = GU,
-        IU = cU,
-        JU = new Uint8Array(pU.slice(0, EU)),
-        bU = qU,
-        oU = qU.slice(0, qU.length),
-        ZU = hU,
-        aU = nU,
-        YU = UU();
-      return EU = RU, PU = gU, CU = tU, QU = TU, eU = WU, KU = fU, uU = xU, GU = mU, cU = IU, pU = JU, nU = aU, (qU = bU).splice(0, qU.length, ...oU), hU = ZU, jU = new DataView(pU.buffer, pU.byteOffset, pU.byteLength), YU
+    function QR(uu) {
+      eu && eu();
+      let Ru = Qu,
+        yu = mu,
+        Eu = Su,
+        Ju = Tu,
+        ju = Wu,
+        Hu = Xu,
+        du = xu,
+        bu = ru,
+        Cu = Vu,
+        ku = new Uint8Array(Ku.slice(0, Qu)),
+        Du = Nu,
+        Mu = Nu.slice(0, Nu.length),
+        Iu = pu,
+        Gu = Au,
+        Uu = uu();
+      return Qu = Ru, mu = yu, Su = Eu, Tu = Ju, Wu = ju, Xu = Hu, xu = du, ru = bu, Vu = Cu, Ku = ku, Au = Gu, (Nu = Du).splice(0, Nu.length, ...Mu), pu = Iu, Bu = new DataView(Ku.buffer, Ku.byteOffset, Ku.byteLength), Uu
     }
 
-    function PR() {
-      pU = null, GU = null, qU = null
+    function mR() {
+      Ku = null, ru = null, Nu = null
     }
-    WU[98] = UU => {
-      let RU = (UU[0] << 24) + (UU[1] << 16) + (UU[2] << 8) + UU[3],
-        gU = PU;
-      return PU += RU - UU.length, cU = pR, (cU = [MU(), MU()]).position0 = 0, cU.position1 = 0, cU.postBundlePosition = PU, PU = gU, YU()
-    }, WU[255] = UU => 4 == UU.length ? new Date(1e3 * (16777216 * UU[0] + (UU[1] << 16) + (UU[2] << 8) + UU[3])) : 8 == UU.length ? new Date(((UU[0] << 22) + (UU[1] << 14) + (UU[2] << 6) + (UU[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & UU[3]) + 16777216 * UU[4] + (UU[5] << 16) + (UU[6] << 8) + UU[7])) : 12 == UU.length ? new Date(((UU[0] << 24) + (UU[1] << 16) + (UU[2] << 8) + UU[3]) / 1e6 + 1e3 * ((128 & UU[4] ? -281474976710656 : 0) + 1099511627776 * UU[6] + 4294967296 * UU[7] + 16777216 * UU[8] + (UU[9] << 16) + (UU[10] << 8) + UU[11])) : new Date("invalid");
-    const TR = new Array(147);
-    for (let pg = 0; pg < 256; pg++) TR[pg] = +("1e" + Math.floor(45.15 - .30103 * pg));
-    const qR = oU;
-    var KR = new oU({
+    ju[98] = uu => {
+      let Ru = (uu[0] << 24) + (uu[1] << 16) + (uu[2] << 8) + uu[3],
+        yu = mu;
+      return mu += Ru - uu.length, Vu = KR, (Vu = [ou(), ou()]).position0 = 0, Vu.position1 = 0, Vu.postBundlePosition = mu, mu = yu, Uu()
+    }, ju[255] = uu => 4 == uu.length ? new Date(1e3 * (16777216 * uu[0] + (uu[1] << 16) + (uu[2] << 8) + uu[3])) : 8 == uu.length ? new Date(((uu[0] << 22) + (uu[1] << 14) + (uu[2] << 6) + (uu[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & uu[3]) + 16777216 * uu[4] + (uu[5] << 16) + (uu[6] << 8) + uu[7])) : 12 == uu.length ? new Date(((uu[0] << 24) + (uu[1] << 16) + (uu[2] << 8) + uu[3]) / 1e6 + 1e3 * ((128 & uu[4] ? -281474976710656 : 0) + 1099511627776 * uu[6] + 4294967296 * uu[7] + 16777216 * uu[8] + (uu[9] << 16) + (uu[10] << 8) + uu[11])) : new Date("invalid");
+    const JR = new Array(147);
+    for (let Ky = 0; Ky < 256; Ky++) JR[Ky] = +("1e" + Math.floor(45.15 - .30103 * Ky));
+    const NR = Mu;
+    var XR = new Mu({
       useRecords: !1
     });
-    const cR = KR.unpack,
-      GR = KR.unpackMultiple,
-      jR = KR.unpack,
-      uR = {
+    const VR = XR.unpack,
+      rR = XR.unpackMultiple,
+      BR = XR.unpack,
+      xR = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let CR, hR, QR, eR = new Float32Array(1),
-      WR = new Uint8Array(eR.buffer, 0, 4);
+    let SR, pR, TR, WR = new Float32Array(1),
+      jR = new Uint8Array(WR.buffer, 0, 4);
 
-    function fR(UU) {
-      eR[0] = UU;
-      let RU = TR[(127 & WR[3]) << 1 | WR[2] >> 7];
-      return (RU * UU + (UU > 0 ? .5 : -.5) | 0) / RU
+    function HR(uu) {
+      WR[0] = uu;
+      let Ru = JR[(127 & jR[3]) << 1 | jR[2] >> 7];
+      return (Ru * uu + (uu > 0 ? .5 : -.5) | 0) / Ru
     }
     try {
-      CR = new TextEncoder
-    } catch (tg) {}
-    const xR = "undefined" !== typeof Buffer,
-      mR = xR ? function(UU) {
-        return Buffer.allocUnsafeSlow(UU)
+      SR = new TextEncoder
+    } catch (Ey) {}
+    const dR = "undefined" !== typeof Buffer,
+      bR = dR ? function(uu) {
+        return Buffer.allocUnsafeSlow(uu)
       } : Uint8Array,
-      IR = xR ? Buffer : Uint8Array,
-      JR = xR ? 4294967296 : 2144337920;
-    let wR, nR, bR, oR, ZR, aR = 0,
-      YR = null;
-    const BR = /[\u0080-\uFFFF]/,
-      VR = Symbol("record-id");
-    class rR extends oU {
-      constructor(UU) {
-        let RU, gU, tU, pU;
-        super(UU), this.offset = 0;
-        let EU = IR.prototype.utf8Write ? function(UU, RU) {
-            return wR.utf8Write(UU, RU, wR.byteLength - RU)
-          } : !(!CR || !CR.encodeInto) && function(UU, RU) {
-            return CR.encodeInto(UU, wR.subarray(RU)).written
+      CR = dR ? Buffer : Uint8Array,
+      kR = dR ? 4294967296 : 2144337920;
+    let eR, AR, DR, MR, IR, GR = 0,
+      UR = null;
+    const nR = /[\u0080-\uFFFF]/,
+      sR = Symbol("record-id");
+    class tR extends Mu {
+      constructor(uu) {
+        let Ru, yu, Eu, Ku;
+        super(uu), this.offset = 0;
+        let Qu = CR.prototype.utf8Write ? function(uu, Ru) {
+            return eR.utf8Write(uu, Ru, eR.byteLength - Ru)
+          } : !(!SR || !SR.encodeInto) && function(uu, Ru) {
+            return SR.encodeInto(uu, eR.subarray(Ru)).written
           },
-          PU = this;
-        UU || (UU = {});
-        let TU = UU && UU.sequential,
-          qU = UU.structures || UU.saveStructures,
-          KU = UU.maxSharedStructures;
-        if (null == KU && (KU = qU ? 32 : 0), KU > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        UU.structuredClone && void 0 == UU.moreTypes && (this.moreTypes = !0);
-        let cU = UU.maxOwnStructures;
-        null == cU && (cU = qU ? 32 : 64), this.structures || 0 == UU.useRecords || (this.structures = []);
-        let GU = KU > 32 || cU + KU > 64,
-          jU = KU + 64,
-          uU = KU + cU + 64;
-        if (uU > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let CU = [],
-          hU = 0,
-          QU = 0;
-        this.pack = this.encode = function(UU, EU) {
-          if (wR || (wR = new mR(8192), bR = wR.dataView || (wR.dataView = new DataView(wR.buffer, 0, 8192)), aR = 0), oR = wR.length - 10, oR - aR < 2048 ? (wR = new mR(wR.length), bR = wR.dataView || (wR.dataView = new DataView(wR.buffer, 0, wR.length)), oR = wR.length - 10, aR = 0) : aR = aR + 7 & 2147483640, RU = aR, EU & lR && (aR += 255 & EU), pU = PU.structuredClone ? new Map : null, PU.bundleStrings && "string" !== typeof UU ? (YR = [], YR.size = 1 / 0) : YR = null, tU = PU.structures, tU) {
-            tU.uninitialized && (tU = PU._mergeStructures(PU.getStructures()));
-            let UU = tU.sharedLength || 0;
-            if (UU > KU) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + tU.sharedLength);
-            if (!tU.transitions) {
-              tU.transitions = Object.create(null);
-              for (let RU = 0; RU < UU; RU++) {
-                let UU = tU[RU];
-                if (!UU) continue;
-                let gU, pU = tU.transitions;
-                for (let RU = 0, tU = UU.length; RU < tU; RU++) {
-                  let tU = UU[RU];
-                  gU = pU[tU], gU || (gU = pU[tU] = Object.create(null)), pU = gU
+          mu = this;
+        uu || (uu = {});
+        let Ju = uu && uu.sequential,
+          Nu = uu.structures || uu.saveStructures,
+          Xu = uu.maxSharedStructures;
+        if (null == Xu && (Xu = Nu ? 32 : 0), Xu > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        uu.structuredClone && void 0 == uu.moreTypes && (this.moreTypes = !0);
+        let Vu = uu.maxOwnStructures;
+        null == Vu && (Vu = Nu ? 32 : 64), this.structures || 0 == uu.useRecords || (this.structures = []);
+        let ru = Xu > 32 || Vu + Xu > 64,
+          Bu = Xu + 64,
+          xu = Xu + Vu + 64;
+        if (xu > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let Su = [],
+          pu = 0,
+          Tu = 0;
+        this.pack = this.encode = function(uu, Qu) {
+          if (eR || (eR = new bR(8192), DR = eR.dataView || (eR.dataView = new DataView(eR.buffer, 0, 8192)), GR = 0), MR = eR.length - 10, MR - GR < 2048 ? (eR = new bR(eR.length), DR = eR.dataView || (eR.dataView = new DataView(eR.buffer, 0, eR.length)), MR = eR.length - 10, GR = 0) : GR = GR + 7 & 2147483640, Ru = GR, Qu & aR && (GR += 255 & Qu), Ku = mu.structuredClone ? new Map : null, mu.bundleStrings && "string" !== typeof uu ? (UR = [], UR.size = 1 / 0) : UR = null, Eu = mu.structures, Eu) {
+            Eu.uninitialized && (Eu = mu._mergeStructures(mu.getStructures()));
+            let uu = Eu.sharedLength || 0;
+            if (uu > Xu) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Eu.sharedLength);
+            if (!Eu.transitions) {
+              Eu.transitions = Object.create(null);
+              for (let Ru = 0; Ru < uu; Ru++) {
+                let uu = Eu[Ru];
+                if (!uu) continue;
+                let yu, Ku = Eu.transitions;
+                for (let Ru = 0, Eu = uu.length; Ru < Eu; Ru++) {
+                  let Eu = uu[Ru];
+                  yu = Ku[Eu], yu || (yu = Ku[Eu] = Object.create(null)), Ku = yu
                 }
-                pU[VR] = RU + 64
+                Ku[sR] = Ru + 64
               }
-              this.lastNamedStructuresLength = UU
+              this.lastNamedStructuresLength = uu
             }
-            TU || (tU.nextId = UU + 64)
+            Ju || (Eu.nextId = uu + 64)
           }
-          let qU;
-          gU && (gU = !1);
+          let Nu;
+          yu && (yu = !1);
           try {
-            PU.randomAccessStructure && UU && UU.constructor && UU.constructor === Object ? oU(UU) : fU(UU);
-            let gU = YR;
-            if (YR && HR(RU, fU, 0), pU && pU.idsToInsert) {
-              let UU = pU.idsToInsert.sort(((UU, RU) => UU.offset > RU.offset ? 1 : -1)),
-                tU = UU.length,
-                EU = -1;
-              for (; gU && tU > 0;) {
-                let pU = UU[--tU].offset + RU;
-                pU < gU.stringsPosition + RU && -1 === EU && (EU = 0), pU > gU.position + RU ? EU >= 0 && (EU += 6) : (EU >= 0 && (bR.setUint32(gU.position + RU, bR.getUint32(gU.position + RU) + EU), EU = -1), gU = gU.previous, tU++)
+            mu.randomAccessStructure && uu && uu.constructor && uu.constructor === Object ? Mu(uu) : Hu(uu);
+            let yu = UR;
+            if (UR && LR(Ru, Hu, 0), Ku && Ku.idsToInsert) {
+              let uu = Ku.idsToInsert.sort(((uu, Ru) => uu.offset > Ru.offset ? 1 : -1)),
+                Eu = uu.length,
+                Qu = -1;
+              for (; yu && Eu > 0;) {
+                let Ku = uu[--Eu].offset + Ru;
+                Ku < yu.stringsPosition + Ru && -1 === Qu && (Qu = 0), Ku > yu.position + Ru ? Qu >= 0 && (Qu += 6) : (Qu >= 0 && (DR.setUint32(yu.position + Ru, DR.getUint32(yu.position + Ru) + Qu), Qu = -1), yu = yu.previous, Eu++)
               }
-              EU >= 0 && gU && bR.setUint32(gU.position + RU, bR.getUint32(gU.position + RU) + EU), aR += 6 * UU.length, aR > oR && wU(aR), PU.offset = aR;
-              let TU = function(UU, RU) {
-                let gU, tU = 6 * RU.length,
-                  pU = UU.length - tU;
-                for (; gU = RU.pop();) {
-                  let RU = gU.offset,
-                    EU = gU.id;
-                  UU.copyWithin(RU + tU, RU, pU), tU -= 6;
-                  let PU = RU + tU;
-                  UU[PU++] = 214, UU[PU++] = 105, UU[PU++] = EU >> 24, UU[PU++] = EU >> 16 & 255, UU[PU++] = EU >> 8 & 255, UU[PU++] = 255 & EU, pU = RU
+              Qu >= 0 && yu && DR.setUint32(yu.position + Ru, DR.getUint32(yu.position + Ru) + Qu), GR += 6 * uu.length, GR > MR && eu(GR), mu.offset = GR;
+              let Ju = function(uu, Ru) {
+                let yu, Eu = 6 * Ru.length,
+                  Ku = uu.length - Eu;
+                for (; yu = Ru.pop();) {
+                  let Ru = yu.offset,
+                    Qu = yu.id;
+                  uu.copyWithin(Ru + Eu, Ru, Ku), Eu -= 6;
+                  let mu = Ru + Eu;
+                  uu[mu++] = 214, uu[mu++] = 105, uu[mu++] = Qu >> 24, uu[mu++] = Qu >> 16 & 255, uu[mu++] = Qu >> 8 & 255, uu[mu++] = 255 & Qu, Ku = Ru
                 }
-                return UU
-              }(wR.subarray(RU, aR), UU);
-              return pU = null, TU
+                return uu
+              }(eR.subarray(Ru, GR), uu);
+              return Ku = null, Ju
             }
-            return PU.offset = aR, EU & LR ? (wR.start = RU, wR.end = aR, wR) : wR.subarray(RU, aR)
-          } catch (tg) {
-            throw qU = tg, tg
+            return mu.offset = GR, Qu & OR ? (eR.start = Ru, eR.end = GR, eR) : eR.subarray(Ru, GR)
+          } catch (Ey) {
+            throw Nu = Ey, Ey
           } finally {
-            if (tU && (eU(), gU && PU.saveStructures)) {
-              let gU = tU.sharedLength || 0,
-                pU = wR.subarray(RU, aR),
-                TU = sR(tU, PU);
-              if (!qU) return !1 === PU.saveStructures(TU, TU.isCompatible) ? PU.pack(UU, EU) : (PU.lastNamedStructuresLength = gU, wR.length > 1073741824 && (wR = null), pU)
+            if (Eu && (Wu(), yu && mu.saveStructures)) {
+              let yu = Eu.sharedLength || 0,
+                Ku = eR.subarray(Ru, GR),
+                Ju = FR(Eu, mu);
+              if (!Nu) return !1 === mu.saveStructures(Ju, Ju.isCompatible) ? mu.pack(uu, Qu) : (mu.lastNamedStructuresLength = yu, eR.length > 1073741824 && (eR = null), Ku)
             }
-            wR.length > 1073741824 && (wR = null), EU & NR && (aR = RU)
+            eR.length > 1073741824 && (eR = null), Qu & vR && (GR = Ru)
           }
         };
-        const eU = () => {
-            QU < 10 && QU++;
-            let UU = tU.sharedLength || 0;
-            if (tU.length > UU && !TU && (tU.length = UU), hU > 1e4) tU.transitions = null, QU = 0, hU = 0, CU.length > 0 && (CU = []);
-            else if (CU.length > 0 && !TU) {
-              for (let UU = 0, RU = CU.length; UU < RU; UU++) CU[UU][VR] = 0;
-              CU = []
+        const Wu = () => {
+            Tu < 10 && Tu++;
+            let uu = Eu.sharedLength || 0;
+            if (Eu.length > uu && !Ju && (Eu.length = uu), pu > 1e4) Eu.transitions = null, Tu = 0, pu = 0, Su.length > 0 && (Su = []);
+            else if (Su.length > 0 && !Ju) {
+              for (let uu = 0, Ru = Su.length; uu < Ru; uu++) Su[uu][sR] = 0;
+              Su = []
             }
           },
-          WU = UU => {
-            var RU = UU.length;
-            RU < 16 ? wR[aR++] = 144 | RU : RU < 65536 ? (wR[aR++] = 220, wR[aR++] = RU >> 8, wR[aR++] = 255 & RU) : (wR[aR++] = 221, bR.setUint32(aR, RU), aR += 4);
-            for (let gU = 0; gU < RU; gU++) fU(UU[gU])
+          ju = uu => {
+            var Ru = uu.length;
+            Ru < 16 ? eR[GR++] = 144 | Ru : Ru < 65536 ? (eR[GR++] = 220, eR[GR++] = Ru >> 8, eR[GR++] = 255 & Ru) : (eR[GR++] = 221, DR.setUint32(GR, Ru), GR += 4);
+            for (let yu = 0; yu < Ru; yu++) Hu(uu[yu])
           },
-          fU = UU => {
-            aR > oR && (wR = wU(aR));
-            var gU, tU = typeof UU;
-            if ("string" === tU) {
-              let tU, pU = UU.length;
-              if (YR && pU >= 4 && pU < 4096) {
-                if ((YR.size += pU) > 21760) {
-                  let UU, gU, tU = (YR[0] ? 3 * YR[0].length + YR[1].length : 0) + 10;
-                  aR + tU > oR && (wR = wU(aR + tU)), YR.position ? (gU = YR, wR[aR] = 200, aR += 3, wR[aR++] = 98, UU = aR - RU, aR += 4, HR(RU, fU, 0), bR.setUint16(UU + RU - 3, aR - RU - UU)) : (wR[aR++] = 214, wR[aR++] = 98, UU = aR - RU, aR += 4), YR = ["", ""], YR.previous = gU, YR.size = 0, YR.position = UU
+          Hu = uu => {
+            GR > MR && (eR = eu(GR));
+            var yu, Eu = typeof uu;
+            if ("string" === Eu) {
+              let Eu, Ku = uu.length;
+              if (UR && Ku >= 4 && Ku < 4096) {
+                if ((UR.size += Ku) > 21760) {
+                  let uu, yu, Eu = (UR[0] ? 3 * UR[0].length + UR[1].length : 0) + 10;
+                  GR + Eu > MR && (eR = eu(GR + Eu)), UR.position ? (yu = UR, eR[GR] = 200, GR += 3, eR[GR++] = 98, uu = GR - Ru, GR += 4, LR(Ru, Hu, 0), DR.setUint16(uu + Ru - 3, GR - Ru - uu)) : (eR[GR++] = 214, eR[GR++] = 98, uu = GR - Ru, GR += 4), UR = ["", ""], UR.previous = yu, UR.size = 0, UR.position = uu
                 }
-                let gU = BR.test(UU);
-                return YR[gU ? 0 : 1] += UU, wR[aR++] = 193, void fU(gU ? -pU : pU)
+                let yu = nR.test(uu);
+                return UR[yu ? 0 : 1] += uu, eR[GR++] = 193, void Hu(yu ? -Ku : Ku)
               }
-              tU = pU < 32 ? 1 : pU < 256 ? 2 : pU < 65536 ? 3 : 5;
-              let PU = 3 * pU;
-              if (aR + PU > oR && (wR = wU(aR + PU)), pU < 64 || !EU) {
-                let RU, EU, PU, TU = aR + tU;
-                for (RU = 0; RU < pU; RU++) EU = UU.charCodeAt(RU), EU < 128 ? wR[TU++] = EU : EU < 2048 ? (wR[TU++] = EU >> 6 | 192, wR[TU++] = 63 & EU | 128) : 55296 === (64512 & EU) && 56320 === (64512 & (PU = UU.charCodeAt(RU + 1))) ? (EU = 65536 + ((1023 & EU) << 10) + (1023 & PU), RU++, wR[TU++] = EU >> 18 | 240, wR[TU++] = EU >> 12 & 63 | 128, wR[TU++] = EU >> 6 & 63 | 128, wR[TU++] = 63 & EU | 128) : (wR[TU++] = EU >> 12 | 224, wR[TU++] = EU >> 6 & 63 | 128, wR[TU++] = 63 & EU | 128);
-                gU = TU - aR - tU
-              } else gU = EU(UU, aR + tU);
-              gU < 32 ? wR[aR++] = 160 | gU : gU < 256 ? (tU < 2 && wR.copyWithin(aR + 2, aR + 1, aR + 1 + gU), wR[aR++] = 217, wR[aR++] = gU) : gU < 65536 ? (tU < 3 && wR.copyWithin(aR + 3, aR + 2, aR + 2 + gU), wR[aR++] = 218, wR[aR++] = gU >> 8, wR[aR++] = 255 & gU) : (tU < 5 && wR.copyWithin(aR + 5, aR + 3, aR + 3 + gU), wR[aR++] = 219, bR.setUint32(aR, gU), aR += 4), aR += gU
-            } else if ("number" === tU)
-              if (UU >>> 0 === UU) UU < 32 || UU < 128 && !1 === this.useRecords || UU < 64 && !this.randomAccessStructure ? wR[aR++] = UU : UU < 256 ? (wR[aR++] = 204, wR[aR++] = UU) : UU < 65536 ? (wR[aR++] = 205, wR[aR++] = UU >> 8, wR[aR++] = 255 & UU) : (wR[aR++] = 206, bR.setUint32(aR, UU), aR += 4);
-              else if ((UU | 0) === UU) UU >= -32 ? wR[aR++] = 256 + UU : UU >= -128 ? (wR[aR++] = 208, wR[aR++] = UU + 256) : UU >= -32768 ? (wR[aR++] = 209, bR.setInt16(aR, UU), aR += 2) : (wR[aR++] = 210, bR.setInt32(aR, UU), aR += 4);
+              Eu = Ku < 32 ? 1 : Ku < 256 ? 2 : Ku < 65536 ? 3 : 5;
+              let mu = 3 * Ku;
+              if (GR + mu > MR && (eR = eu(GR + mu)), Ku < 64 || !Qu) {
+                let Ru, Qu, mu, Ju = GR + Eu;
+                for (Ru = 0; Ru < Ku; Ru++) Qu = uu.charCodeAt(Ru), Qu < 128 ? eR[Ju++] = Qu : Qu < 2048 ? (eR[Ju++] = Qu >> 6 | 192, eR[Ju++] = 63 & Qu | 128) : 55296 === (64512 & Qu) && 56320 === (64512 & (mu = uu.charCodeAt(Ru + 1))) ? (Qu = 65536 + ((1023 & Qu) << 10) + (1023 & mu), Ru++, eR[Ju++] = Qu >> 18 | 240, eR[Ju++] = Qu >> 12 & 63 | 128, eR[Ju++] = Qu >> 6 & 63 | 128, eR[Ju++] = 63 & Qu | 128) : (eR[Ju++] = Qu >> 12 | 224, eR[Ju++] = Qu >> 6 & 63 | 128, eR[Ju++] = 63 & Qu | 128);
+                yu = Ju - GR - Eu
+              } else yu = Qu(uu, GR + Eu);
+              yu < 32 ? eR[GR++] = 160 | yu : yu < 256 ? (Eu < 2 && eR.copyWithin(GR + 2, GR + 1, GR + 1 + yu), eR[GR++] = 217, eR[GR++] = yu) : yu < 65536 ? (Eu < 3 && eR.copyWithin(GR + 3, GR + 2, GR + 2 + yu), eR[GR++] = 218, eR[GR++] = yu >> 8, eR[GR++] = 255 & yu) : (Eu < 5 && eR.copyWithin(GR + 5, GR + 3, GR + 3 + yu), eR[GR++] = 219, DR.setUint32(GR, yu), GR += 4), GR += yu
+            } else if ("number" === Eu)
+              if (uu >>> 0 === uu) uu < 32 || uu < 128 && !1 === this.useRecords || uu < 64 && !this.randomAccessStructure ? eR[GR++] = uu : uu < 256 ? (eR[GR++] = 204, eR[GR++] = uu) : uu < 65536 ? (eR[GR++] = 205, eR[GR++] = uu >> 8, eR[GR++] = 255 & uu) : (eR[GR++] = 206, DR.setUint32(GR, uu), GR += 4);
+              else if ((uu | 0) === uu) uu >= -32 ? eR[GR++] = 256 + uu : uu >= -128 ? (eR[GR++] = 208, eR[GR++] = uu + 256) : uu >= -32768 ? (eR[GR++] = 209, DR.setInt16(GR, uu), GR += 2) : (eR[GR++] = 210, DR.setInt32(GR, uu), GR += 4);
             else {
-              let RU;
-              if ((RU = this.useFloat32) > 0 && UU < 4294967296 && UU >= -2147483648) {
-                let gU;
-                if (wR[aR++] = 202, bR.setFloat32(aR, UU), RU < 4 || ((gU = UU * TR[(127 & wR[aR]) << 1 | wR[aR + 1] >> 7]) | 0) === gU) return void(aR += 4);
-                aR--
+              let Ru;
+              if ((Ru = this.useFloat32) > 0 && uu < 4294967296 && uu >= -2147483648) {
+                let yu;
+                if (eR[GR++] = 202, DR.setFloat32(GR, uu), Ru < 4 || ((yu = uu * JR[(127 & eR[GR]) << 1 | eR[GR + 1] >> 7]) | 0) === yu) return void(GR += 4);
+                GR--
               }
-              wR[aR++] = 203, bR.setFloat64(aR, UU), aR += 8
-            } else if ("object" === tU || "function" === tU)
-              if (UU) {
-                if (pU) {
-                  let gU = pU.get(UU);
-                  if (gU) {
-                    if (!gU.id) {
-                      let UU = pU.idsToInsert || (pU.idsToInsert = []);
-                      gU.id = UU.push(gU)
+              eR[GR++] = 203, DR.setFloat64(GR, uu), GR += 8
+            } else if ("object" === Eu || "function" === Eu)
+              if (uu) {
+                if (Ku) {
+                  let yu = Ku.get(uu);
+                  if (yu) {
+                    if (!yu.id) {
+                      let uu = Ku.idsToInsert || (Ku.idsToInsert = []);
+                      yu.id = uu.push(yu)
                     }
-                    return wR[aR++] = 214, wR[aR++] = 112, bR.setUint32(aR, gU.id), void(aR += 4)
+                    return eR[GR++] = 214, eR[GR++] = 112, DR.setUint32(GR, yu.id), void(GR += 4)
                   }
-                  pU.set(UU, {
-                    offset: aR - RU
+                  Ku.set(uu, {
+                    offset: GR - Ru
                   })
                 }
-                let EU = UU.constructor;
-                if (EU === Object) JU(UU);
-                else if (EU === Array) WU(UU);
-                else if (EU === Map)
-                  if (this.mapAsEmptyObject) wR[aR++] = 128;
+                let Qu = uu.constructor;
+                if (Qu === Object) ku(uu);
+                else if (Qu === Array) ju(uu);
+                else if (Qu === Map)
+                  if (this.mapAsEmptyObject) eR[GR++] = 128;
                   else {
-                    (gU = UU.size) < 16 ? wR[aR++] = 128 | gU : gU < 65536 ? (wR[aR++] = 222, wR[aR++] = gU >> 8, wR[aR++] = 255 & gU) : (wR[aR++] = 223, bR.setUint32(aR, gU), aR += 4);
-                    for (let [RU, gU] of UU) fU(RU), fU(gU)
+                    (yu = uu.size) < 16 ? eR[GR++] = 128 | yu : yu < 65536 ? (eR[GR++] = 222, eR[GR++] = yu >> 8, eR[GR++] = 255 & yu) : (eR[GR++] = 223, DR.setUint32(GR, yu), GR += 4);
+                    for (let [Ru, yu] of uu) Hu(Ru), Hu(yu)
                   }
                 else {
-                  for (let RU = 0, gU = hR.length; RU < gU; RU++) {
-                    if (UU instanceof QR[RU]) {
-                      let gU = hR[RU];
-                      if (gU.write) {
-                        gU.type && (wR[aR++] = 212, wR[aR++] = gU.type, wR[aR++] = 0);
-                        let RU = gU.write.call(this, UU);
-                        return void(RU === UU ? Array.isArray(UU) ? WU(UU) : JU(UU) : fU(RU))
+                  for (let Ru = 0, yu = pR.length; Ru < yu; Ru++) {
+                    if (uu instanceof TR[Ru]) {
+                      let yu = pR[Ru];
+                      if (yu.write) {
+                        yu.type && (eR[GR++] = 212, eR[GR++] = yu.type, eR[GR++] = 0);
+                        let Ru = yu.write.call(this, uu);
+                        return void(Ru === uu ? Array.isArray(uu) ? ju(uu) : ku(uu) : Hu(Ru))
                       }
-                      let tU, pU = wR,
-                        EU = bR,
-                        PU = aR;
-                      wR = null;
+                      let Eu, Ku = eR,
+                        Qu = DR,
+                        mu = GR;
+                      eR = null;
                       try {
-                        tU = gU.pack.call(this, UU, (UU => (wR = pU, pU = null, aR += UU, aR > oR && wU(aR), {
-                          target: wR,
-                          targetView: bR,
-                          position: aR - UU
-                        })), fU)
+                        Eu = yu.pack.call(this, uu, (uu => (eR = Ku, Ku = null, GR += uu, GR > MR && eu(GR), {
+                          target: eR,
+                          targetView: DR,
+                          position: GR - uu
+                        })), Hu)
                       } finally {
-                        pU && (wR = pU, bR = EU, aR = PU, oR = wR.length - 10)
+                        Ku && (eR = Ku, DR = Qu, GR = mu, MR = eR.length - 10)
                       }
-                      return void(tU && (tU.length + aR > oR && wU(tU.length + aR), aR = dR(tU, wR, aR, gU.type)))
+                      return void(Eu && (Eu.length + GR > MR && eu(Eu.length + GR), GR = cR(Eu, eR, GR, yu.type)))
                     }
                   }
-                  if (Array.isArray(UU)) WU(UU);
+                  if (Array.isArray(uu)) ju(uu);
                   else {
-                    if (UU.toJSON) {
-                      const RU = UU.toJSON();
-                      if (RU !== UU) return fU(RU)
+                    if (uu.toJSON) {
+                      const Ru = uu.toJSON();
+                      if (Ru !== uu) return Hu(Ru)
                     }
-                    if ("function" === tU) return fU(this.writeFunction && this.writeFunction(UU));
-                    JU(UU)
+                    if ("function" === Eu) return Hu(this.writeFunction && this.writeFunction(uu));
+                    ku(uu)
                   }
                 }
-              } else wR[aR++] = 192;
-            else if ("boolean" === tU) wR[aR++] = UU ? 195 : 194;
-            else if ("bigint" === tU) {
-              if (UU < BigInt(1) << BigInt(63) && UU >= -(BigInt(1) << BigInt(63))) wR[aR++] = 211, bR.setBigInt64(aR, UU);
-              else if (UU < BigInt(1) << BigInt(64) && UU > 0) wR[aR++] = 207, bR.setBigUint64(aR, UU);
+              } else eR[GR++] = 192;
+            else if ("boolean" === Eu) eR[GR++] = uu ? 195 : 194;
+            else if ("bigint" === Eu) {
+              if (uu < BigInt(1) << BigInt(63) && uu >= -(BigInt(1) << BigInt(63))) eR[GR++] = 211, DR.setBigInt64(GR, uu);
+              else if (uu < BigInt(1) << BigInt(64) && uu > 0) eR[GR++] = 207, DR.setBigUint64(GR, uu);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return fU(UU.toString());
-                  if (this.useBigIntExtension && UU < BigInt(2) ** BigInt(1023) && UU > -(BigInt(2) ** BigInt(1023))) {
-                    wR[aR++] = 199, aR++, wR[aR++] = 66;
-                    let RU, gU = [];
+                  if (this.largeBigIntToString) return Hu(uu.toString());
+                  if (this.useBigIntExtension && uu < BigInt(2) ** BigInt(1023) && uu > -(BigInt(2) ** BigInt(1023))) {
+                    eR[GR++] = 199, GR++, eR[GR++] = 66;
+                    let Ru, yu = [];
                     do {
-                      let tU = UU & BigInt(255);
-                      RU = (tU & BigInt(128)) === (UU < BigInt(0) ? BigInt(128) : BigInt(0)), gU.push(tU), UU >>= BigInt(8)
-                    } while (UU !== BigInt(0) && UU !== BigInt(-1) || !RU);
-                    wR[aR - 2] = gU.length;
-                    for (let UU = gU.length; UU > 0;) wR[aR++] = Number(gU[--UU]);
+                      let Eu = uu & BigInt(255);
+                      Ru = (Eu & BigInt(128)) === (uu < BigInt(0) ? BigInt(128) : BigInt(0)), yu.push(Eu), uu >>= BigInt(8)
+                    } while (uu !== BigInt(0) && uu !== BigInt(-1) || !Ru);
+                    eR[GR - 2] = yu.length;
+                    for (let uu = yu.length; uu > 0;) eR[GR++] = Number(yu[--uu]);
                     return
                   }
-                  throw new RangeError(UU + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(uu + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                wR[aR++] = 203, bR.setFloat64(aR, Number(UU))
+                eR[GR++] = 203, DR.setFloat64(GR, Number(uu))
               }
-              aR += 8
+              GR += 8
             } else {
-              if ("undefined" !== tU) throw new Error("Unknown type: " + tU);
-              this.encodeUndefinedAsNil ? wR[aR++] = 192 : (wR[aR++] = 212, wR[aR++] = 0, wR[aR++] = 0)
+              if ("undefined" !== Eu) throw new Error("Unknown type: " + Eu);
+              this.encodeUndefinedAsNil ? eR[GR++] = 192 : (eR[GR++] = 212, eR[GR++] = 0, eR[GR++] = 0)
             }
           },
-          xU = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? UU => {
-            let RU;
+          du = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? uu => {
+            let Ru;
             if (this.skipValues) {
-              RU = [];
-              for (let gU in UU) "function" === typeof UU.hasOwnProperty && !UU.hasOwnProperty(gU) || this.skipValues.includes(UU[gU]) || RU.push(gU)
-            } else RU = Object.keys(UU);
-            let gU, tU = RU.length;
-            if (tU < 16 ? wR[aR++] = 128 | tU : tU < 65536 ? (wR[aR++] = 222, wR[aR++] = tU >> 8, wR[aR++] = 255 & tU) : (wR[aR++] = 223, bR.setUint32(aR, tU), aR += 4), this.coercibleKeyAsNumber)
-              for (let pU = 0; pU < tU; pU++) {
-                gU = RU[pU];
-                let tU = Number(gU);
-                fU(isNaN(tU) ? gU : tU), fU(UU[gU])
+              Ru = [];
+              for (let yu in uu) "function" === typeof uu.hasOwnProperty && !uu.hasOwnProperty(yu) || this.skipValues.includes(uu[yu]) || Ru.push(yu)
+            } else Ru = Object.keys(uu);
+            let yu, Eu = Ru.length;
+            if (Eu < 16 ? eR[GR++] = 128 | Eu : Eu < 65536 ? (eR[GR++] = 222, eR[GR++] = Eu >> 8, eR[GR++] = 255 & Eu) : (eR[GR++] = 223, DR.setUint32(GR, Eu), GR += 4), this.coercibleKeyAsNumber)
+              for (let Ku = 0; Ku < Eu; Ku++) {
+                yu = Ru[Ku];
+                let Eu = Number(yu);
+                Hu(isNaN(Eu) ? yu : Eu), Hu(uu[yu])
               } else
-                for (let pU = 0; pU < tU; pU++) fU(gU = RU[pU]), fU(UU[gU])
-          } : UU => {
-            wR[aR++] = 222;
-            let gU = aR - RU;
-            aR += 2;
-            let tU = 0;
-            for (let RU in UU)("function" !== typeof UU.hasOwnProperty || UU.hasOwnProperty(RU)) && (fU(RU), fU(UU[RU]), tU++);
-            if (tU > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            wR[gU++ + RU] = tU >> 8, wR[gU + RU] = 255 & tU
+                for (let Ku = 0; Ku < Eu; Ku++) Hu(yu = Ru[Ku]), Hu(uu[yu])
+          } : uu => {
+            eR[GR++] = 222;
+            let yu = GR - Ru;
+            GR += 2;
+            let Eu = 0;
+            for (let Ru in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Ru)) && (Hu(Ru), Hu(uu[Ru]), Eu++);
+            if (Eu > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            eR[yu++ + Ru] = Eu >> 8, eR[yu + Ru] = 255 & Eu
           },
-          mU = !1 === this.useRecords ? xU : UU.progressiveRecords && !GU ? UU => {
-            let gU, pU, EU = tU.transitions || (tU.transitions = Object.create(null)),
-              PU = aR++ - RU;
-            for (let TU in UU)
-              if ("function" !== typeof UU.hasOwnProperty || UU.hasOwnProperty(TU)) {
-                if (gU = EU[TU], gU) EU = gU;
+          bu = !1 === this.useRecords ? du : uu.progressiveRecords && !ru ? uu => {
+            let yu, Ku, Qu = Eu.transitions || (Eu.transitions = Object.create(null)),
+              mu = GR++ - Ru;
+            for (let Ju in uu)
+              if ("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Ju)) {
+                if (yu = Qu[Ju], yu) Qu = yu;
                 else {
-                  let qU = Object.keys(UU),
-                    KU = EU;
-                  EU = tU.transitions;
-                  let cU = 0;
-                  for (let UU = 0, RU = qU.length; UU < RU; UU++) {
-                    let RU = qU[UU];
-                    gU = EU[RU], gU || (gU = EU[RU] = Object.create(null), cU++), EU = gU
+                  let Nu = Object.keys(uu),
+                    Xu = Qu;
+                  Qu = Eu.transitions;
+                  let Vu = 0;
+                  for (let uu = 0, Ru = Nu.length; uu < Ru; uu++) {
+                    let Ru = Nu[uu];
+                    yu = Qu[Ru], yu || (yu = Qu[Ru] = Object.create(null), Vu++), Qu = yu
                   }
-                  PU + RU + 1 == aR ? (aR--, nU(EU, qU, cU)) : bU(EU, qU, PU, cU), pU = !0, EU = KU[TU]
+                  mu + Ru + 1 == GR ? (GR--, Au(Qu, Nu, Vu)) : Du(Qu, Nu, mu, Vu), Ku = !0, Qu = Xu[Ju]
                 }
-                fU(UU[TU])
-              } if (!pU) {
-              let gU = EU[VR];
-              gU ? wR[PU + RU] = gU : bU(EU, Object.keys(UU), PU, 0)
+                Hu(uu[Ju])
+              } if (!Ku) {
+              let yu = Qu[sR];
+              yu ? eR[mu + Ru] = yu : Du(Qu, Object.keys(uu), mu, 0)
             }
-          } : UU => {
-            let RU, gU = tU.transitions || (tU.transitions = Object.create(null)),
-              pU = 0;
-            for (let tU in UU)("function" !== typeof UU.hasOwnProperty || UU.hasOwnProperty(tU)) && (RU = gU[tU], RU || (RU = gU[tU] = Object.create(null), pU++), gU = RU);
-            let EU = gU[VR];
-            EU ? EU >= 96 && GU ? (wR[aR++] = 96 + (31 & (EU -= 96)), wR[aR++] = EU >> 5) : wR[aR++] = EU : nU(gU, gU.__keys__ || Object.keys(UU), pU);
-            for (let tU in UU)("function" !== typeof UU.hasOwnProperty || UU.hasOwnProperty(tU)) && fU(UU[tU])
+          } : uu => {
+            let Ru, yu = Eu.transitions || (Eu.transitions = Object.create(null)),
+              Ku = 0;
+            for (let Eu in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Eu)) && (Ru = yu[Eu], Ru || (Ru = yu[Eu] = Object.create(null), Ku++), yu = Ru);
+            let Qu = yu[sR];
+            Qu ? Qu >= 96 && ru ? (eR[GR++] = 96 + (31 & (Qu -= 96)), eR[GR++] = Qu >> 5) : eR[GR++] = Qu : Au(yu, yu.__keys__ || Object.keys(uu), Ku);
+            for (let Eu in uu)("function" !== typeof uu.hasOwnProperty || uu.hasOwnProperty(Eu)) && Hu(uu[Eu])
           },
-          IU = "function" == typeof this.useRecords && this.useRecords,
-          JU = IU ? UU => {
-            IU(UU) ? mU(UU) : xU(UU)
-          } : mU,
-          wU = UU => {
-            let gU;
-            if (UU > 16777216) {
-              if (UU - RU > JR) throw new Error("Packed buffer would be larger than maximum buffer size");
-              gU = Math.min(JR, 4096 * Math.round(Math.max((UU - RU) * (UU > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else gU = 1 + (Math.max(UU - RU << 2, wR.length - 1) >> 12) << 12;
-            let tU = new mR(gU);
-            return bR = tU.dataView || (tU.dataView = new DataView(tU.buffer, 0, gU)), UU = Math.min(UU, wR.length), wR.copy ? wR.copy(tU, 0, RU, UU) : tU.set(wR.slice(RU, UU)), aR -= RU, RU = 0, oR = tU.length - 10, wR = tU
+          Cu = "function" == typeof this.useRecords && this.useRecords,
+          ku = Cu ? uu => {
+            Cu(uu) ? bu(uu) : du(uu)
+          } : bu,
+          eu = uu => {
+            let yu;
+            if (uu > 16777216) {
+              if (uu - Ru > kR) throw new Error("Packed buffer would be larger than maximum buffer size");
+              yu = Math.min(kR, 4096 * Math.round(Math.max((uu - Ru) * (uu > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else yu = 1 + (Math.max(uu - Ru << 2, eR.length - 1) >> 12) << 12;
+            let Eu = new bR(yu);
+            return DR = Eu.dataView || (Eu.dataView = new DataView(Eu.buffer, 0, yu)), uu = Math.min(uu, eR.length), eR.copy ? eR.copy(Eu, 0, Ru, uu) : Eu.set(eR.slice(Ru, uu)), GR -= Ru, Ru = 0, MR = Eu.length - 10, eR = Eu
           },
-          nU = (UU, RU, pU) => {
-            let EU = tU.nextId;
-            EU || (EU = 64), EU < jU && this.shouldShareStructure && !this.shouldShareStructure(RU) ? (EU = tU.nextOwnId, EU < uU || (EU = jU), tU.nextOwnId = EU + 1) : (EU >= uU && (EU = jU), tU.nextId = EU + 1);
-            let PU = RU.highByte = EU >= 96 && GU ? EU - 96 >> 5 : -1;
-            UU[VR] = EU, UU.__keys__ = RU, tU[EU - 64] = RU, EU < jU ? (RU.isShared = !0, tU.sharedLength = EU - 63, gU = !0, PU >= 0 ? (wR[aR++] = 96 + (31 & EU), wR[aR++] = PU) : wR[aR++] = EU) : (PU >= 0 ? (wR[aR++] = 213, wR[aR++] = 114, wR[aR++] = 96 + (31 & EU), wR[aR++] = PU) : (wR[aR++] = 212, wR[aR++] = 114, wR[aR++] = EU), pU && (hU += QU * pU), CU.length >= cU && (CU.shift()[VR] = 0), CU.push(UU), fU(RU))
+          Au = (uu, Ru, Ku) => {
+            let Qu = Eu.nextId;
+            Qu || (Qu = 64), Qu < Bu && this.shouldShareStructure && !this.shouldShareStructure(Ru) ? (Qu = Eu.nextOwnId, Qu < xu || (Qu = Bu), Eu.nextOwnId = Qu + 1) : (Qu >= xu && (Qu = Bu), Eu.nextId = Qu + 1);
+            let mu = Ru.highByte = Qu >= 96 && ru ? Qu - 96 >> 5 : -1;
+            uu[sR] = Qu, uu.__keys__ = Ru, Eu[Qu - 64] = Ru, Qu < Bu ? (Ru.isShared = !0, Eu.sharedLength = Qu - 63, yu = !0, mu >= 0 ? (eR[GR++] = 96 + (31 & Qu), eR[GR++] = mu) : eR[GR++] = Qu) : (mu >= 0 ? (eR[GR++] = 213, eR[GR++] = 114, eR[GR++] = 96 + (31 & Qu), eR[GR++] = mu) : (eR[GR++] = 212, eR[GR++] = 114, eR[GR++] = Qu), Ku && (pu += Tu * Ku), Su.length >= Vu && (Su.shift()[sR] = 0), Su.push(uu), Hu(Ru))
           },
-          bU = (UU, gU, tU, pU) => {
-            let EU = wR,
-              PU = aR,
-              TU = oR,
-              qU = RU;
-            wR = nR, aR = 0, RU = 0, wR || (nR = wR = new mR(8192)), oR = wR.length - 10, nU(UU, gU, pU), nR = wR;
-            let KU = aR;
-            if (wR = EU, aR = PU, oR = TU, RU = qU, KU > 1) {
-              let UU = aR + KU - 1;
-              UU > oR && wU(UU);
-              let gU = tU + RU;
-              wR.copyWithin(gU + KU, gU + 1, aR), wR.set(nR.slice(0, KU), gU), aR = UU
-            } else wR[tU + RU] = nR[0]
+          Du = (uu, yu, Eu, Ku) => {
+            let Qu = eR,
+              mu = GR,
+              Ju = MR,
+              Nu = Ru;
+            eR = AR, GR = 0, Ru = 0, eR || (AR = eR = new bR(8192)), MR = eR.length - 10, Au(uu, yu, Ku), AR = eR;
+            let Xu = GR;
+            if (eR = Qu, GR = mu, MR = Ju, Ru = Nu, Xu > 1) {
+              let uu = GR + Xu - 1;
+              uu > MR && eu(uu);
+              let yu = Eu + Ru;
+              eR.copyWithin(yu + Xu, yu + 1, GR), eR.set(AR.slice(0, Xu), yu), GR = uu
+            } else eR[Eu + Ru] = AR[0]
           },
-          oU = UU => {
-            let pU = ZR(UU, wR, RU, aR, tU, wU, ((UU, RU, tU) => {
-              if (tU) return gU = !0;
-              aR = RU;
-              let pU = wR;
-              return fU(UU), eU(), pU !== wR ? {
-                position: aR,
-                targetView: bR,
-                target: wR
-              } : aR
+          Mu = uu => {
+            let Ku = IR(uu, eR, Ru, GR, Eu, eu, ((uu, Ru, Eu) => {
+              if (Eu) return yu = !0;
+              GR = Ru;
+              let Ku = eR;
+              return Hu(uu), Wu(), Ku !== eR ? {
+                position: GR,
+                targetView: DR,
+                target: eR
+              } : GR
             }), this);
-            if (0 === pU) return JU(UU);
-            aR = pU
+            if (0 === Ku) return ku(uu);
+            GR = Ku
           }
       }
-      useBuffer(UU) {
-        wR = UU, bR = wR.dataView || (wR.dataView = new DataView(wR.buffer, wR.byteOffset, wR.byteLength)), aR = 0
+      useBuffer(uu) {
+        eR = uu, DR = eR.dataView || (eR.dataView = new DataView(eR.buffer, eR.byteOffset, eR.byteLength)), GR = 0
       }
-      set position(UU) {
-        aR = UU
+      set position(uu) {
+        GR = uu
       }
       get position() {
-        return aR
+        return GR
       }
-      set buffer(UU) {
-        wR = UU
+      set buffer(uu) {
+        eR = uu
       }
       get buffer() {
-        return wR
+        return eR
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function XR(UU, RU, gU, tU) {
-      let pU = UU.byteLength;
-      if (pU + 1 < 256) {
+    function lR(uu, Ru, yu, Eu) {
+      let Ku = uu.byteLength;
+      if (Ku + 1 < 256) {
         var {
-          target: EU,
-          position: PU
-        } = gU(4 + pU);
-        EU[PU++] = 199, EU[PU++] = pU + 1
-      } else if (pU + 1 < 65536) {
+          target: Qu,
+          position: mu
+        } = yu(4 + Ku);
+        Qu[mu++] = 199, Qu[mu++] = Ku + 1
+      } else if (Ku + 1 < 65536) {
         var {
-          target: EU,
-          position: PU
-        } = gU(5 + pU);
-        EU[PU++] = 200, EU[PU++] = pU + 1 >> 8, EU[PU++] = pU + 1 & 255
+          target: Qu,
+          position: mu
+        } = yu(5 + Ku);
+        Qu[mu++] = 200, Qu[mu++] = Ku + 1 >> 8, Qu[mu++] = Ku + 1 & 255
       } else {
         var {
-          target: EU,
-          position: PU,
-          targetView: TU
-        } = gU(7 + pU);
-        EU[PU++] = 201, TU.setUint32(PU, pU + 1), PU += 4
+          target: Qu,
+          position: mu,
+          targetView: Ju
+        } = yu(7 + Ku);
+        Qu[mu++] = 201, Ju.setUint32(mu, Ku + 1), mu += 4
       }
-      EU[PU++] = 116, EU[PU++] = RU, UU.buffer || (UU = new Uint8Array(UU)), EU.set(new Uint8Array(UU.buffer, UU.byteOffset, UU.byteLength), PU)
+      Qu[mu++] = 116, Qu[mu++] = Ru, uu.buffer || (uu = new Uint8Array(uu)), Qu.set(new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength), mu)
     }
 
-    function vR(UU, RU) {
-      let gU = UU.byteLength;
-      var tU, pU;
-      if (gU < 256) {
+    function gR(uu, Ru) {
+      let yu = uu.byteLength;
+      var Eu, Ku;
+      if (yu < 256) {
         var {
-          target: tU,
-          position: pU
-        } = RU(gU + 2);
-        tU[pU++] = 196, tU[pU++] = gU
-      } else if (gU < 65536) {
+          target: Eu,
+          position: Ku
+        } = Ru(yu + 2);
+        Eu[Ku++] = 196, Eu[Ku++] = yu
+      } else if (yu < 65536) {
         var {
-          target: tU,
-          position: pU
-        } = RU(gU + 3);
-        tU[pU++] = 197, tU[pU++] = gU >> 8, tU[pU++] = 255 & gU
+          target: Eu,
+          position: Ku
+        } = Ru(yu + 3);
+        Eu[Ku++] = 197, Eu[Ku++] = yu >> 8, Eu[Ku++] = 255 & yu
       } else {
         var {
-          target: tU,
-          position: pU,
-          targetView: EU
-        } = RU(gU + 5);
-        tU[pU++] = 198, EU.setUint32(pU, gU), pU += 4
+          target: Eu,
+          position: Ku,
+          targetView: Qu
+        } = Ru(yu + 5);
+        Eu[Ku++] = 198, Qu.setUint32(Ku, yu), Ku += 4
       }
-      tU.set(UU, pU)
+      Eu.set(uu, Ku)
     }
 
-    function dR(UU, RU, gU, tU) {
-      let pU = UU.length;
-      switch (pU) {
+    function cR(uu, Ru, yu, Eu) {
+      let Ku = uu.length;
+      switch (Ku) {
         case 1:
-          RU[gU++] = 212;
+          Ru[yu++] = 212;
           break;
         case 2:
-          RU[gU++] = 213;
+          Ru[yu++] = 213;
           break;
         case 4:
-          RU[gU++] = 214;
+          Ru[yu++] = 214;
           break;
         case 8:
-          RU[gU++] = 215;
+          Ru[yu++] = 215;
           break;
         case 16:
-          RU[gU++] = 216;
+          Ru[yu++] = 216;
           break;
         default:
-          pU < 256 ? (RU[gU++] = 199, RU[gU++] = pU) : pU < 65536 ? (RU[gU++] = 200, RU[gU++] = pU >> 8, RU[gU++] = 255 & pU) : (RU[gU++] = 201, RU[gU++] = pU >> 24, RU[gU++] = pU >> 16 & 255, RU[gU++] = pU >> 8 & 255, RU[gU++] = 255 & pU)
+          Ku < 256 ? (Ru[yu++] = 199, Ru[yu++] = Ku) : Ku < 65536 ? (Ru[yu++] = 200, Ru[yu++] = Ku >> 8, Ru[yu++] = 255 & Ku) : (Ru[yu++] = 201, Ru[yu++] = Ku >> 24, Ru[yu++] = Ku >> 16 & 255, Ru[yu++] = Ku >> 8 & 255, Ru[yu++] = 255 & Ku)
       }
-      return RU[gU++] = tU, RU.set(UU, gU), gU += pU
+      return Ru[yu++] = Eu, Ru.set(uu, yu), yu += Ku
     }
 
-    function HR(UU, RU, gU) {
-      if (YR.length > 0) {
-        bR.setUint32(YR.position + UU, aR + gU - YR.position - UU), YR.stringsPosition = aR - UU;
-        let tU = YR;
-        YR = null, RU(tU[0]), RU(tU[1])
+    function LR(uu, Ru, yu) {
+      if (UR.length > 0) {
+        DR.setUint32(UR.position + uu, GR + yu - UR.position - uu), UR.stringsPosition = GR - uu;
+        let Eu = UR;
+        UR = null, Ru(Eu[0]), Ru(Eu[1])
       }
     }
 
-    function SR(UU) {
-      if (UU.Class) {
-        if (!UU.pack && !UU.write) throw new Error("Extension has no pack or write function");
-        if (UU.pack && !UU.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        QR.unshift(UU.Class), hR.unshift(UU)
-      }! function(UU) {
-        UU.unpack ? WU[UU.type] = UU.unpack : WU[UU.type] = UU
-      }(UU)
+    function zR(uu) {
+      if (uu.Class) {
+        if (!uu.pack && !uu.write) throw new Error("Extension has no pack or write function");
+        if (uu.pack && !uu.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        TR.unshift(uu.Class), pR.unshift(uu)
+      }! function(uu) {
+        uu.unpack ? ju[uu.type] = uu.unpack : ju[uu.type] = uu
+      }(uu)
     }
 
-    function sR(UU, RU) {
-      return UU.isCompatible = UU => {
-        let gU = !UU || (RU.lastNamedStructuresLength || 0) === UU.length;
-        return gU || RU._mergeStructures(UU), gU
-      }, UU
+    function FR(uu, Ru) {
+      return uu.isCompatible = uu => {
+        let yu = !uu || (Ru.lastNamedStructuresLength || 0) === uu.length;
+        return yu || Ru._mergeStructures(uu), yu
+      }, uu
     }
-    QR = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, xU], hR = [{
-      pack(UU, RU, gU) {
-        let tU = UU.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === UU.getMilliseconds()) && tU >= 0 && tU < 4294967296) {
+    TR = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, du], pR = [{
+      pack(uu, Ru, yu) {
+        let Eu = uu.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === uu.getMilliseconds()) && Eu >= 0 && Eu < 4294967296) {
           let {
-            target: UU,
-            targetView: gU,
-            position: pU
-          } = RU(6);
-          UU[pU++] = 214, UU[pU++] = 255, gU.setUint32(pU, tU)
-        } else if (tU > 0 && tU < 4294967296) {
+            target: uu,
+            targetView: yu,
+            position: Ku
+          } = Ru(6);
+          uu[Ku++] = 214, uu[Ku++] = 255, yu.setUint32(Ku, Eu)
+        } else if (Eu > 0 && Eu < 4294967296) {
           let {
-            target: gU,
-            targetView: pU,
-            position: EU
-          } = RU(10);
-          gU[EU++] = 215, gU[EU++] = 255, pU.setUint32(EU, 4e6 * UU.getMilliseconds() + (tU / 1e3 / 4294967296 | 0)), pU.setUint32(EU + 4, tU)
-        } else if (isNaN(tU)) {
-          if (this.onInvalidDate) return RU(0), gU(this.onInvalidDate());
+            target: yu,
+            targetView: Ku,
+            position: Qu
+          } = Ru(10);
+          yu[Qu++] = 215, yu[Qu++] = 255, Ku.setUint32(Qu, 4e6 * uu.getMilliseconds() + (Eu / 1e3 / 4294967296 | 0)), Ku.setUint32(Qu + 4, Eu)
+        } else if (isNaN(Eu)) {
+          if (this.onInvalidDate) return Ru(0), yu(this.onInvalidDate());
           let {
-            target: UU,
-            targetView: tU,
-            position: pU
-          } = RU(3);
-          UU[pU++] = 212, UU[pU++] = 255, UU[pU++] = 255
+            target: uu,
+            targetView: Eu,
+            position: Ku
+          } = Ru(3);
+          uu[Ku++] = 212, uu[Ku++] = 255, uu[Ku++] = 255
         } else {
           let {
-            target: gU,
-            targetView: pU,
-            position: EU
-          } = RU(15);
-          gU[EU++] = 199, gU[EU++] = 12, gU[EU++] = 255, pU.setUint32(EU, 1e6 * UU.getMilliseconds()), pU.setBigInt64(EU + 4, BigInt(Math.floor(tU)))
+            target: yu,
+            targetView: Ku,
+            position: Qu
+          } = Ru(15);
+          yu[Qu++] = 199, yu[Qu++] = 12, yu[Qu++] = 255, Ku.setUint32(Qu, 1e6 * uu.getMilliseconds()), Ku.setBigInt64(Qu + 4, BigInt(Math.floor(Eu)))
         }
       }
     }, {
-      pack(UU, RU, gU) {
-        if (this.setAsEmptyObject) return RU(0), gU({});
-        let tU = Array.from(UU),
+      pack(uu, Ru, yu) {
+        if (this.setAsEmptyObject) return Ru(0), yu({});
+        let Eu = Array.from(uu),
           {
-            target: pU,
-            position: EU
-          } = RU(this.moreTypes ? 3 : 0);
-        this.moreTypes && (pU[EU++] = 212, pU[EU++] = 115, pU[EU++] = 0), gU(tU)
+            target: Ku,
+            position: Qu
+          } = Ru(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Ku[Qu++] = 212, Ku[Qu++] = 115, Ku[Qu++] = 0), yu(Eu)
       }
     }, {
-      pack(UU, RU, gU) {
+      pack(uu, Ru, yu) {
         let {
-          target: tU,
-          position: pU
-        } = RU(this.moreTypes ? 3 : 0);
-        this.moreTypes && (tU[pU++] = 212, tU[pU++] = 101, tU[pU++] = 0), gU([UU.name, UU.message, UU.cause])
+          target: Eu,
+          position: Ku
+        } = Ru(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Eu[Ku++] = 212, Eu[Ku++] = 101, Eu[Ku++] = 0), yu([uu.name, uu.message, uu.cause])
       }
     }, {
-      pack(UU, RU, gU) {
+      pack(uu, Ru, yu) {
         let {
-          target: tU,
-          position: pU
-        } = RU(this.moreTypes ? 3 : 0);
-        this.moreTypes && (tU[pU++] = 212, tU[pU++] = 120, tU[pU++] = 0), gU([UU.source, UU.flags])
+          target: Eu,
+          position: Ku
+        } = Ru(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Eu[Ku++] = 212, Eu[Ku++] = 120, Eu[Ku++] = 0), yu([uu.source, uu.flags])
       }
     }, {
-      pack(UU, RU) {
-        this.moreTypes ? XR(UU, 16, RU) : vR(xR ? Buffer.from(UU) : new Uint8Array(UU), RU)
+      pack(uu, Ru) {
+        this.moreTypes ? lR(uu, 16, Ru) : gR(dR ? Buffer.from(uu) : new Uint8Array(uu), Ru)
       }
     }, {
-      pack(UU, RU) {
-        let gU = UU.constructor;
-        gU !== IR && this.moreTypes ? XR(UU, gR.indexOf(gU.name), RU) : vR(UU, RU)
+      pack(uu, Ru) {
+        let yu = uu.constructor;
+        yu !== CR && this.moreTypes ? lR(uu, yR.indexOf(yu.name), Ru) : gR(uu, Ru)
       }
     }, {
-      pack(UU, RU) {
+      pack(uu, Ru) {
         let {
-          target: gU,
-          position: tU
-        } = RU(1);
-        gU[tU] = 193
+          target: yu,
+          position: Eu
+        } = Ru(1);
+        yu[Eu] = 193
       }
     }];
-    let yR = new rR({
+    let wR = new tR({
       useRecords: !1
     });
-    const kR = yR.pack,
-      FR = yR.pack,
-      iR = rR,
+    const ZR = wR.pack,
+      hR = wR.pack,
+      PR = tR,
       {
-        NEVER: AR,
-        ALWAYS: zR,
-        DECIMAL_ROUND: MR,
-        DECIMAL_FIT: DR
-      } = uR,
-      LR = 512,
-      NR = 1024,
-      lR = 2048;
-    const OR = function(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!UU || "object" !== typeof UU) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const gU = new oU(RU);
-        let tU;
-        const pU = UU => {
-          let RU;
-          tU && (UU = Buffer.concat([tU, UU]), tU = void 0);
+        NEVER: iR,
+        ALWAYS: YR,
+        DECIMAL_ROUND: oR,
+        DECIMAL_FIT: qR
+      } = xR,
+      OR = 512,
+      vR = 1024,
+      aR = 2048;
+    const fR = function(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!uu || "object" !== typeof uu) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const yu = new Mu(Ru);
+        let Eu;
+        const Ku = uu => {
+          let Ru;
+          Eu && (uu = Buffer.concat([Eu, uu]), Eu = void 0);
           try {
-            RU = gU.unpackMultiple(UU)
-          } catch (pU) {
-            if (!pU.incomplete) throw pU;
-            tU = UU.slice(pU.lastPosition), RU = pU.values
+            Ru = yu.unpackMultiple(uu)
+          } catch (Ku) {
+            if (!Ku.incomplete) throw Ku;
+            Eu = uu.slice(Ku.lastPosition), Ru = Ku.values
           }
-          return RU
+          return Ru
         };
-        return "function" === typeof UU[Symbol.iterator] ? function*() {
-          for (const RU of UU) yield* pU(RU)
-        }() : "function" === typeof UU[Symbol.asyncIterator] ? async function*() {
-          for await (const RU of UU) yield* pU(RU)
+        return "function" === typeof uu[Symbol.iterator] ? function*() {
+          for (const Ru of uu) yield* Ku(Ru)
+        }() : "function" === typeof uu[Symbol.asyncIterator] ? async function*() {
+          for await (const Ru of uu) yield* Ku(Ru)
         }(): void 0
       },
-      Ug = function(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (UU && "object" === typeof UU) {
-          if ("function" === typeof UU[Symbol.iterator]) return function*(UU, RU) {
-            const gU = new rR(RU);
-            for (const tU of UU) yield gU.pack(tU)
-          }(UU, RU);
-          if ("function" === typeof UU.then || "function" === typeof UU[Symbol.asyncIterator]) return async function*(UU, RU) {
-            const gU = new rR(RU);
-            for await (const tU of UU) yield gU.pack(tU)
-          }(UU, RU);
+      uy = function(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (uu && "object" === typeof uu) {
+          if ("function" === typeof uu[Symbol.iterator]) return function*(uu, Ru) {
+            const yu = new tR(Ru);
+            for (const Eu of uu) yield yu.pack(Eu)
+          }(uu, Ru);
+          if ("function" === typeof uu.then || "function" === typeof uu[Symbol.asyncIterator]) return async function*(uu, Ru) {
+            const yu = new tR(Ru);
+            for await (const Eu of uu) yield yu.pack(Eu)
+          }(uu, Ru);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      Rg = !1,
-      gg = !0
+      Ry = !1,
+      yy = !0
   },
-  8742: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      $changes: () => hU,
-      $childType: () => QU,
-      $decoder: () => cU,
-      $deleteByIndex: () => uU,
-      $encoder: () => KU,
-      $filter: () => GU,
-      $getByIndex: () => jU,
-      $numFields: () => bU,
-      $refId: () => TU,
-      $track: () => qU,
-      $values: () => mU,
-      ArraySchema: () => gt,
-      Callbacks: () => tp,
-      ChangeTree: () => ag,
-      CollectionSchema: () => Et,
-      Decoder: () => Dt,
-      Encoder: () => it,
-      FieldBuilder: () => qt,
-      MapSchema: () => pt,
-      Metadata: () => MR,
-      OPERATION: () => pU,
-      Reflection: () => Ot,
-      ReflectionField: () => Nt,
-      ReflectionType: () => lt,
-      Root: () => Bt,
-      Schema: () => Zt,
-      SetSchema: () => Pt,
-      StateCallbackStrategy: () => gp,
-      StateView: () => dt,
-      StreamSchema: () => Tt,
-      TypeContext: () => sR,
-      createPool: () => Ep,
-      decode: () => fR,
-      decodeKeyValueOperation: () => Lg,
-      decodeSchemaOperation: () => Dg,
-      defineCustomTypes: () => JR,
-      defineTypes: () => nt,
-      deprecated: () => Jt,
-      dumpChanges: () => ot,
+  8851: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      $changes: () => pu,
+      $childType: () => Tu,
+      $decoder: () => Vu,
+      $deleteByIndex: () => xu,
+      $encoder: () => Xu,
+      $filter: () => ru,
+      $getByIndex: () => Bu,
+      $numFields: () => Du,
+      $refId: () => Ju,
+      $track: () => Nu,
+      $values: () => bu,
+      ArraySchema: () => yE,
+      Callbacks: () => yK,
+      ChangeTree: () => Gy,
+      CollectionSchema: () => QE,
+      Decoder: () => oE,
+      Encoder: () => hE,
+      FieldBuilder: () => NE,
+      MapSchema: () => KE,
+      Metadata: () => oR,
+      OPERATION: () => Ku,
+      Reflection: () => aE,
+      ReflectionField: () => OE,
+      ReflectionType: () => vE,
+      Root: () => UE,
+      Schema: () => IE,
+      SetSchema: () => mE,
+      StateCallbackStrategy: () => RK,
+      StateView: () => gE,
+      StreamSchema: () => JE,
+      TypeContext: () => FR,
+      createPool: () => KK,
+      decode: () => HR,
+      decodeKeyValueOperation: () => Oy,
+      decodeSchemaOperation: () => qy,
+      defineCustomTypes: () => kR,
+      defineTypes: () => AE,
+      deprecated: () => kE,
+      dumpChanges: () => ME,
       encode: () => RR,
-      encodeArray: () => Hg,
-      encodeIndexedEntry: () => vg,
-      encodeKeyValueOperation: () => dg,
-      encodeMapEntry: () => Xg,
-      encodeSchemaOperation: () => rg,
-      Nu: () => ht,
-      fullStateOnly: () => ft,
-      getDecoderStateCallbacks: () => Up,
-      getEncodeDescriptor: () => Ug,
-      getRawChangesCallback: () => Rp,
-      isBuilder: () => Kt,
-      patchOnly: () => Wt,
-      registerType: () => IR,
-      schema: () => bt,
-      t: () => ut,
-      type: () => xt,
-      unreliable: () => et,
-      view: () => Qt
+      encodeArray: () => Ly,
+      encodeIndexedEntry: () => gy,
+      encodeKeyValueOperation: () => cy,
+      encodeMapEntry: () => ly,
+      encodeSchemaOperation: () => ty,
+      yS: () => pE,
+      fullStateOnly: () => HE,
+      getDecoderStateCallbacks: () => fE,
+      getEncodeDescriptor: () => uy,
+      getRawChangesCallback: () => uK,
+      isBuilder: () => XE,
+      patchOnly: () => jE,
+      registerType: () => CR,
+      schema: () => DE,
+      t: () => xE,
+      type: () => dE,
+      unreliable: () => WE,
+      view: () => TE
     });
-    const tU = 255;
-    var pU;
+    const Eu = 255;
+    var Ku;
 
-    function EU(UU) {
-      Object.defineProperty(UU, Symbol.metadata, {
+    function Qu(uu) {
+      Object.defineProperty(uu, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(UU) {
-      UU[UU.ADD = 128] = "ADD", UU[UU.REPLACE = 0] = "REPLACE", UU[UU.DELETE = 64] = "DELETE", UU[UU.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", UU[UU.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", UU[UU.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", UU[UU.CLEAR = 10] = "CLEAR", UU[UU.REVERSE = 15] = "REVERSE", UU[UU.MOVE = 32] = "MOVE", UU[UU.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", UU[UU.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(pU || (pU = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const PU = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(uu) {
+      uu[uu.ADD = 128] = "ADD", uu[uu.REPLACE = 0] = "REPLACE", uu[uu.DELETE = 64] = "DELETE", uu[uu.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", uu[uu.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", uu[uu.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", uu[uu.CLEAR = 10] = "CLEAR", uu[uu.REVERSE = 15] = "REVERSE", uu[uu.MOVE = 32] = "MOVE", uu[uu.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", uu[uu.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(Ku || (Ku = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const mu = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const UU = "colyseus.symbolRegistry",
-        RU = PU[UU] || (PU[UU] = Object.create(null));
-      Symbol.for = function(UU) {
-        return RU[UU] || (RU[UU] = Symbol(UU))
-      }, Symbol.keyFor = function(UU) {
-        for (const gU in RU)
-          if (RU[gU] === UU) return gU
+      const uu = "colyseus.symbolRegistry",
+        Ru = mu[uu] || (mu[uu] = Object.create(null));
+      Symbol.for = function(uu) {
+        return Ru[uu] || (Ru[uu] = Symbol(uu))
+      }, Symbol.keyFor = function(uu) {
+        for (const yu in Ru)
+          if (Ru[yu] === uu) return yu
       }
     }
-    const TU = Symbol.for("$refId"),
-      qU = "~track",
-      KU = "~encoder",
-      cU = "~decoder",
-      GU = "~filter",
-      jU = "~getByIndex",
-      uU = "~deleteByIndex",
-      CU = "~resyncPrune",
-      hU = Symbol.for("$changes"),
-      QU = Symbol.for("$childType"),
-      eU = Symbol.for("$proxyTarget"),
-      WU = "~onEncodeEnd",
-      fU = "~reset",
-      xU = "~onDecodeEnd",
-      mU = Symbol.for("$values"),
-      IU = "~builder",
-      JU = "~descriptors",
-      wU = "~__encodeDescriptor",
-      nU = "~encoders",
-      bU = "~__numFields",
-      oU = "~__refTypeFieldIndexes",
-      ZU = "~__viewFieldIndexes",
-      aU = "$__fieldIndexesByViewTag",
-      YU = "~__unreliableFieldIndexes",
-      BU = "~__patchOnlyFieldIndexes",
-      VU = "~__fullSyncSkipIndexes",
-      rU = "~__fullStateOnlyFieldIndexes",
-      XU = "~__streamFieldIndexes",
-      vU = "~__streamPriorities";
-    let dU;
+    const Ju = Symbol.for("$refId"),
+      Nu = "~track",
+      Xu = "~encoder",
+      Vu = "~decoder",
+      ru = "~filter",
+      Bu = "~getByIndex",
+      xu = "~deleteByIndex",
+      Su = "~resyncPrune",
+      pu = Symbol.for("$changes"),
+      Tu = Symbol.for("$childType"),
+      Wu = Symbol.for("$proxyTarget"),
+      ju = "~onEncodeEnd",
+      Hu = "~reset",
+      du = "~onDecodeEnd",
+      bu = Symbol.for("$values"),
+      Cu = "~builder",
+      ku = "~descriptors",
+      eu = "~__encodeDescriptor",
+      Au = "~encoders",
+      Du = "~__numFields",
+      Mu = "~__refTypeFieldIndexes",
+      Iu = "~__viewFieldIndexes",
+      Gu = "$__fieldIndexesByViewTag",
+      Uu = "~__unreliableFieldIndexes",
+      nu = "~__patchOnlyFieldIndexes",
+      su = "~__fullSyncSkipIndexes",
+      tu = "~__fullStateOnlyFieldIndexes",
+      lu = "~__streamFieldIndexes",
+      gu = "~__streamPriorities";
+    let cu;
     try {
-      dU = new TextEncoder
-    } catch (Pp) {}
-    const HU = new ArrayBuffer(8),
-      SU = new Int32Array(HU),
-      sU = new Float32Array(HU),
-      yU = new Float64Array(HU),
-      kU = new BigInt64Array(HU),
-      FU = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(UU, RU) {
-        for (var gU = 0, tU = 0, pU = 0, EU = UU.length; pU < EU; pU++)(gU = UU.charCodeAt(pU)) < 128 ? tU += 1 : gU < 2048 ? tU += 2 : gU < 55296 || gU >= 57344 ? tU += 3 : (pU++, tU += 4);
-        return tU
+      cu = new TextEncoder
+    } catch (QK) {}
+    const Lu = new ArrayBuffer(8),
+      zu = new Int32Array(Lu),
+      Fu = new Float32Array(Lu),
+      wu = new Float64Array(Lu),
+      Zu = new BigInt64Array(Lu),
+      hu = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(uu, Ru) {
+        for (var yu = 0, Eu = 0, Ku = 0, Qu = uu.length; Ku < Qu; Ku++)(yu = uu.charCodeAt(Ku)) < 128 ? Eu += 1 : yu < 2048 ? Eu += 2 : yu < 55296 || yu >= 57344 ? Eu += 3 : (Ku++, Eu += 4);
+        return Eu
       };
 
-    function iU(UU, RU, gU) {
-      for (var tU = 0, pU = 0, EU = RU.length; pU < EU; pU++)(tU = RU.charCodeAt(pU)) < 128 ? UU[gU.offset++] = tU : tU < 2048 ? (UU[gU.offset] = 192 | tU >> 6, UU[gU.offset + 1] = 128 | 63 & tU, gU.offset += 2) : tU < 55296 || tU >= 57344 ? (UU[gU.offset] = 224 | tU >> 12, UU[gU.offset + 1] = 128 | tU >> 6 & 63, UU[gU.offset + 2] = 128 | 63 & tU, gU.offset += 3) : (pU++, tU = 65536 + ((1023 & tU) << 10 | 1023 & RU.charCodeAt(pU)), UU[gU.offset] = 240 | tU >> 18, UU[gU.offset + 1] = 128 | tU >> 12 & 63, UU[gU.offset + 2] = 128 | tU >> 6 & 63, UU[gU.offset + 3] = 128 | 63 & tU, gU.offset += 4)
+    function Pu(uu, Ru, yu) {
+      for (var Eu = 0, Ku = 0, Qu = Ru.length; Ku < Qu; Ku++)(Eu = Ru.charCodeAt(Ku)) < 128 ? uu[yu.offset++] = Eu : Eu < 2048 ? (uu[yu.offset] = 192 | Eu >> 6, uu[yu.offset + 1] = 128 | 63 & Eu, yu.offset += 2) : Eu < 55296 || Eu >= 57344 ? (uu[yu.offset] = 224 | Eu >> 12, uu[yu.offset + 1] = 128 | Eu >> 6 & 63, uu[yu.offset + 2] = 128 | 63 & Eu, yu.offset += 3) : (Ku++, Eu = 65536 + ((1023 & Eu) << 10 | 1023 & Ru.charCodeAt(Ku)), uu[yu.offset] = 240 | Eu >> 18, uu[yu.offset + 1] = 128 | Eu >> 12 & 63, uu[yu.offset + 2] = 128 | Eu >> 6 & 63, uu[yu.offset + 3] = 128 | 63 & Eu, yu.offset += 4)
     }
 
-    function AU(UU, RU, gU) {
-      UU[gU.offset++] = 255 & RU
+    function iu(uu, Ru, yu) {
+      uu[yu.offset++] = 255 & Ru
     }
 
-    function zU(UU, RU, gU) {
-      UU[gU.offset++] = 255 & RU, UU[gU.offset++] = RU >> 8 & 255
+    function Yu(uu, Ru, yu) {
+      uu[yu.offset++] = 255 & Ru, uu[yu.offset++] = Ru >> 8 & 255
     }
 
-    function MU(UU, RU, gU) {
-      UU[gU.offset++] = 255 & RU, UU[gU.offset++] = RU >> 8 & 255
+    function ou(uu, Ru, yu) {
+      uu[yu.offset++] = 255 & Ru, uu[yu.offset++] = Ru >> 8 & 255
     }
 
-    function DU(UU, RU, gU) {
-      UU[gU.offset++] = 255 & RU, UU[gU.offset++] = RU >> 8 & 255, UU[gU.offset++] = RU >> 16 & 255, UU[gU.offset++] = RU >> 24 & 255
+    function qu(uu, Ru, yu) {
+      uu[yu.offset++] = 255 & Ru, uu[yu.offset++] = Ru >> 8 & 255, uu[yu.offset++] = Ru >> 16 & 255, uu[yu.offset++] = Ru >> 24 & 255
     }
 
-    function LU(UU, RU, gU) {
-      const tU = RU >> 24,
-        pU = RU >> 16,
-        EU = RU >> 8,
-        PU = RU;
-      UU[gU.offset++] = 255 & PU, UU[gU.offset++] = 255 & EU, UU[gU.offset++] = 255 & pU, UU[gU.offset++] = 255 & tU
+    function Ou(uu, Ru, yu) {
+      const Eu = Ru >> 24,
+        Ku = Ru >> 16,
+        Qu = Ru >> 8,
+        mu = Ru;
+      uu[yu.offset++] = 255 & mu, uu[yu.offset++] = 255 & Qu, uu[yu.offset++] = 255 & Ku, uu[yu.offset++] = 255 & Eu
     }
 
-    function NU(UU, RU, gU) {
-      const tU = Math.floor(RU / Math.pow(2, 32));
-      LU(UU, RU >>> 0, gU), LU(UU, tU, gU)
+    function vu(uu, Ru, yu) {
+      const Eu = Math.floor(Ru / Math.pow(2, 32));
+      Ou(uu, Ru >>> 0, yu), Ou(uu, Eu, yu)
     }
 
-    function lU(UU, RU, gU) {
-      const tU = RU / Math.pow(2, 32) | 0;
-      LU(UU, RU >>> 0, gU), LU(UU, tU, gU)
+    function au(uu, Ru, yu) {
+      const Eu = Ru / Math.pow(2, 32) | 0;
+      Ou(uu, Ru >>> 0, yu), Ou(uu, Eu, yu)
     }
 
-    function OU(UU, RU, gU) {
-      sU[0] = RU, DU(UU, SU[0], gU)
+    function fu(uu, Ru, yu) {
+      Fu[0] = Ru, qu(uu, zu[0], yu)
     }
 
-    function UR(UU, RU, gU) {
-      yU[0] = RU, DU(UU, SU[0], gU), DU(UU, SU[1], gU)
+    function uR(uu, Ru, yu) {
+      wu[0] = Ru, qu(uu, zu[0], yu), qu(uu, zu[1], yu)
     }
     const RR = {
-        int8: AU,
-        uint8: function(UU, RU, gU) {
-          UU[gU.offset++] = 255 & RU
+        int8: iu,
+        uint8: function(uu, Ru, yu) {
+          uu[yu.offset++] = 255 & Ru
         },
-        int16: zU,
-        uint16: MU,
-        int32: DU,
-        uint32: LU,
-        int64: NU,
-        uint64: lU,
-        bigint64: function(UU, RU, gU) {
-          kU[0] = BigInt.asIntN(64, RU), DU(UU, SU[0], gU), DU(UU, SU[1], gU)
+        int16: Yu,
+        uint16: ou,
+        int32: qu,
+        uint32: Ou,
+        int64: vu,
+        uint64: au,
+        bigint64: function(uu, Ru, yu) {
+          Zu[0] = BigInt.asIntN(64, Ru), qu(uu, zu[0], yu), qu(uu, zu[1], yu)
         },
-        biguint64: function(UU, RU, gU) {
-          kU[0] = BigInt.asIntN(64, RU), DU(UU, SU[0], gU), DU(UU, SU[1], gU)
+        biguint64: function(uu, Ru, yu) {
+          Zu[0] = BigInt.asIntN(64, Ru), qu(uu, zu[0], yu), qu(uu, zu[1], yu)
         },
-        float32: OU,
-        float64: UR,
-        boolean: function(UU, RU, gU) {
-          UU[gU.offset++] = RU ? 1 : 0
+        float32: fu,
+        float64: uR,
+        boolean: function(uu, Ru, yu) {
+          uu[yu.offset++] = Ru ? 1 : 0
         },
-        string: function(UU, RU, gU) {
-          RU || (RU = "");
-          let tU = FU(RU, "utf8"),
-            pU = 0;
-          if (tU < 32) UU[gU.offset++] = 160 | tU, pU = 1;
-          else if (tU < 256) UU[gU.offset++] = 217, UU[gU.offset++] = tU, pU = 2;
-          else if (tU < 65536) UU[gU.offset++] = 218, MU(UU, tU, gU), pU = 3;
+        string: function(uu, Ru, yu) {
+          Ru || (Ru = "");
+          let Eu = hu(Ru, "utf8"),
+            Ku = 0;
+          if (Eu < 32) uu[yu.offset++] = 160 | Eu, Ku = 1;
+          else if (Eu < 256) uu[yu.offset++] = 217, uu[yu.offset++] = Eu, Ku = 2;
+          else if (Eu < 65536) uu[yu.offset++] = 218, ou(uu, Eu, yu), Ku = 3;
           else {
-            if (!(tU < 4294967296)) throw new Error("String too long");
-            UU[gU.offset++] = 219, LU(UU, tU, gU), pU = 5
+            if (!(Eu < 4294967296)) throw new Error("String too long");
+            uu[yu.offset++] = 219, Ou(uu, Eu, yu), Ku = 5
           }
-          return iU(UU, RU, gU), pU + tU
+          return Pu(uu, Ru, yu), Ku + Eu
         },
-        number: function UU(RU, gU, tU) {
-          return isNaN(gU) ? UU(RU, 0, tU) : isFinite(gU) ? gU !== (0 | gU) ? Math.abs(gU) <= 34028235e31 && (sU[0] = gU, Math.abs(Math.abs(sU[0]) - Math.abs(gU)) < 1e-4) ? (RU[tU.offset++] = 202, OU(RU, gU, tU), 5) : (RU[tU.offset++] = 203, UR(RU, gU, tU), 9) : gU >= 0 ? gU < 128 ? (RU[tU.offset++] = 255 & gU, 1) : gU < 256 ? (RU[tU.offset++] = 204, RU[tU.offset++] = 255 & gU, 2) : gU < 65536 ? (RU[tU.offset++] = 205, MU(RU, gU, tU), 3) : gU < 4294967296 ? (RU[tU.offset++] = 206, LU(RU, gU, tU), 5) : (RU[tU.offset++] = 207, lU(RU, gU, tU), 9) : gU >= -32 ? (RU[tU.offset++] = 224 | gU + 32, 1) : gU >= -128 ? (RU[tU.offset++] = 208, AU(RU, gU, tU), 2) : gU >= -32768 ? (RU[tU.offset++] = 209, zU(RU, gU, tU), 3) : gU >= -2147483648 ? (RU[tU.offset++] = 210, DU(RU, gU, tU), 5) : (RU[tU.offset++] = 211, NU(RU, gU, tU), 9) : UU(RU, gU > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, tU)
+        number: function uu(Ru, yu, Eu) {
+          return isNaN(yu) ? uu(Ru, 0, Eu) : isFinite(yu) ? yu !== (0 | yu) ? Math.abs(yu) <= 34028235e31 && (Fu[0] = yu, Math.abs(Math.abs(Fu[0]) - Math.abs(yu)) < 1e-4) ? (Ru[Eu.offset++] = 202, fu(Ru, yu, Eu), 5) : (Ru[Eu.offset++] = 203, uR(Ru, yu, Eu), 9) : yu >= 0 ? yu < 128 ? (Ru[Eu.offset++] = 255 & yu, 1) : yu < 256 ? (Ru[Eu.offset++] = 204, Ru[Eu.offset++] = 255 & yu, 2) : yu < 65536 ? (Ru[Eu.offset++] = 205, ou(Ru, yu, Eu), 3) : yu < 4294967296 ? (Ru[Eu.offset++] = 206, Ou(Ru, yu, Eu), 5) : (Ru[Eu.offset++] = 207, au(Ru, yu, Eu), 9) : yu >= -32 ? (Ru[Eu.offset++] = 224 | yu + 32, 1) : yu >= -128 ? (Ru[Eu.offset++] = 208, iu(Ru, yu, Eu), 2) : yu >= -32768 ? (Ru[Eu.offset++] = 209, Yu(Ru, yu, Eu), 3) : yu >= -2147483648 ? (Ru[Eu.offset++] = 210, qu(Ru, yu, Eu), 5) : (Ru[Eu.offset++] = 211, vu(Ru, yu, Eu), 9) : uu(Ru, yu > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Eu)
         },
-        utf8Write: iU,
-        utf8Length: FU
+        utf8Write: Pu,
+        utf8Length: hu
       },
-      gR = new ArrayBuffer(8),
-      tR = new Int32Array(gR),
-      pR = new Float32Array(gR),
-      ER = new Float64Array(gR),
-      PR = new BigUint64Array(gR),
-      TR = new BigInt64Array(gR);
+      yR = new ArrayBuffer(8),
+      ER = new Int32Array(yR),
+      KR = new Float32Array(yR),
+      QR = new Float64Array(yR),
+      mR = new BigUint64Array(yR),
+      JR = new BigInt64Array(yR);
 
-    function qR(UU, RU, gU) {
-      gU > UU.length - RU.offset && (gU = UU.length - RU.offset);
-      for (var tU = "", pU = 0, EU = RU.offset, PU = RU.offset + gU; EU < PU; EU++) {
-        var TU = UU[EU];
-        if (0 !== (128 & TU))
-          if (192 !== (224 & TU))
-            if (224 !== (240 & TU)) {
-              if (240 !== (248 & TU)) {
-                console.error("decode.utf8Read(): Invalid byte " + TU + " at offset " + EU + ". Skip to end of string: " + (RU.offset + gU));
+    function NR(uu, Ru, yu) {
+      yu > uu.length - Ru.offset && (yu = uu.length - Ru.offset);
+      for (var Eu = "", Ku = 0, Qu = Ru.offset, mu = Ru.offset + yu; Qu < mu; Qu++) {
+        var Ju = uu[Qu];
+        if (0 !== (128 & Ju))
+          if (192 !== (224 & Ju))
+            if (224 !== (240 & Ju)) {
+              if (240 !== (248 & Ju)) {
+                console.error("decode.utf8Read(): Invalid byte " + Ju + " at offset " + Qu + ". Skip to end of string: " + (Ru.offset + yu));
                 break
-              }(pU = (7 & TU) << 18 | (63 & UU[++EU]) << 12 | (63 & UU[++EU]) << 6 | 63 & UU[++EU]) >= 65536 ? (pU -= 65536, tU += String.fromCharCode(55296 + (pU >>> 10), 56320 + (1023 & pU))) : tU += String.fromCharCode(pU)
-            } else tU += String.fromCharCode((15 & TU) << 12 | (63 & UU[++EU]) << 6 | 63 & UU[++EU]);
-        else tU += String.fromCharCode((31 & TU) << 6 | 63 & UU[++EU]);
-        else tU += String.fromCharCode(TU)
+              }(Ku = (7 & Ju) << 18 | (63 & uu[++Qu]) << 12 | (63 & uu[++Qu]) << 6 | 63 & uu[++Qu]) >= 65536 ? (Ku -= 65536, Eu += String.fromCharCode(55296 + (Ku >>> 10), 56320 + (1023 & Ku))) : Eu += String.fromCharCode(Ku)
+            } else Eu += String.fromCharCode((15 & Ju) << 12 | (63 & uu[++Qu]) << 6 | 63 & uu[++Qu]);
+        else Eu += String.fromCharCode((31 & Ju) << 6 | 63 & uu[++Qu]);
+        else Eu += String.fromCharCode(Ju)
       }
-      return RU.offset += gU, tU
+      return Ru.offset += yu, Eu
     }
 
-    function KR(UU, RU) {
-      return cR(UU, RU) << 24 >> 24
+    function XR(uu, Ru) {
+      return VR(uu, Ru) << 24 >> 24
     }
 
-    function cR(UU, RU) {
-      return UU[RU.offset++]
+    function VR(uu, Ru) {
+      return uu[Ru.offset++]
     }
 
-    function GR(UU, RU) {
-      return jR(UU, RU) << 16 >> 16
+    function rR(uu, Ru) {
+      return BR(uu, Ru) << 16 >> 16
     }
 
-    function jR(UU, RU) {
-      return UU[RU.offset++] | UU[RU.offset++] << 8
+    function BR(uu, Ru) {
+      return uu[Ru.offset++] | uu[Ru.offset++] << 8
     }
 
-    function uR(UU, RU) {
-      return UU[RU.offset++] | UU[RU.offset++] << 8 | UU[RU.offset++] << 16 | UU[RU.offset++] << 24
+    function xR(uu, Ru) {
+      return uu[Ru.offset++] | uu[Ru.offset++] << 8 | uu[Ru.offset++] << 16 | uu[Ru.offset++] << 24
     }
 
-    function CR(UU, RU) {
-      return uR(UU, RU) >>> 0
+    function SR(uu, Ru) {
+      return xR(uu, Ru) >>> 0
     }
 
-    function hR(UU, RU) {
-      return tR[0] = uR(UU, RU), pR[0]
+    function pR(uu, Ru) {
+      return ER[0] = xR(uu, Ru), KR[0]
     }
 
-    function QR(UU, RU) {
-      return tR[0] = uR(UU, RU), tR[1] = uR(UU, RU), ER[0]
+    function TR(uu, Ru) {
+      return ER[0] = xR(uu, Ru), ER[1] = xR(uu, Ru), QR[0]
     }
 
-    function eR(UU, RU) {
-      const gU = CR(UU, RU);
-      return uR(UU, RU) * Math.pow(2, 32) + gU
+    function WR(uu, Ru) {
+      const yu = SR(uu, Ru);
+      return xR(uu, Ru) * Math.pow(2, 32) + yu
     }
 
-    function WR(UU, RU) {
-      const gU = CR(UU, RU);
-      return CR(UU, RU) * Math.pow(2, 32) + gU
+    function jR(uu, Ru) {
+      const yu = SR(uu, Ru);
+      return SR(uu, Ru) * Math.pow(2, 32) + yu
     }
-    const fR = {
-        utf8Read: qR,
-        int8: KR,
-        uint8: cR,
-        int16: GR,
-        uint16: jR,
-        int32: uR,
-        uint32: CR,
-        float32: hR,
-        float64: QR,
-        int64: eR,
-        uint64: WR,
-        bigint64: function(UU, RU) {
-          return tR[0] = uR(UU, RU), tR[1] = uR(UU, RU), TR[0]
+    const HR = {
+        utf8Read: NR,
+        int8: XR,
+        uint8: VR,
+        int16: rR,
+        uint16: BR,
+        int32: xR,
+        uint32: SR,
+        float32: pR,
+        float64: TR,
+        int64: WR,
+        uint64: jR,
+        bigint64: function(uu, Ru) {
+          return ER[0] = xR(uu, Ru), ER[1] = xR(uu, Ru), JR[0]
         },
-        biguint64: function(UU, RU) {
-          return tR[0] = uR(UU, RU), tR[1] = uR(UU, RU), PR[0]
+        biguint64: function(uu, Ru) {
+          return ER[0] = xR(uu, Ru), ER[1] = xR(uu, Ru), mR[0]
         },
-        boolean: function(UU, RU) {
-          return cR(UU, RU) > 0
+        boolean: function(uu, Ru) {
+          return VR(uu, Ru) > 0
         },
-        string: function(UU, RU) {
-          const gU = UU[RU.offset++];
-          let tU;
-          return gU < 192 ? tU = 31 & gU : 217 === gU ? tU = cR(UU, RU) : 218 === gU ? tU = jR(UU, RU) : 219 === gU && (tU = CR(UU, RU)), qR(UU, RU, tU)
+        string: function(uu, Ru) {
+          const yu = uu[Ru.offset++];
+          let Eu;
+          return yu < 192 ? Eu = 31 & yu : 217 === yu ? Eu = VR(uu, Ru) : 218 === yu ? Eu = BR(uu, Ru) : 219 === yu && (Eu = SR(uu, Ru)), NR(uu, Ru, Eu)
         },
-        number: function(UU, RU) {
-          const gU = UU[RU.offset++];
-          return gU < 128 ? gU : 202 === gU ? hR(UU, RU) : 203 === gU ? QR(UU, RU) : 204 === gU ? cR(UU, RU) : 205 === gU ? jR(UU, RU) : 206 === gU ? CR(UU, RU) : 207 === gU ? WR(UU, RU) : 208 === gU ? KR(UU, RU) : 209 === gU ? GR(UU, RU) : 210 === gU ? uR(UU, RU) : 211 === gU ? eR(UU, RU) : gU > 223 ? -1 * (255 - gU + 1) : void 0
+        number: function(uu, Ru) {
+          const yu = uu[Ru.offset++];
+          return yu < 128 ? yu : 202 === yu ? pR(uu, Ru) : 203 === yu ? TR(uu, Ru) : 204 === yu ? VR(uu, Ru) : 205 === yu ? BR(uu, Ru) : 206 === yu ? SR(uu, Ru) : 207 === yu ? jR(uu, Ru) : 208 === yu ? XR(uu, Ru) : 209 === yu ? rR(uu, Ru) : 210 === yu ? xR(uu, Ru) : 211 === yu ? WR(uu, Ru) : yu > 223 ? -1 * (255 - yu + 1) : void 0
         },
-        stringCheck: function(UU, RU) {
-          const gU = UU[RU.offset];
-          return gU < 192 && gU > 160 || 217 === gU || 218 === gU || 219 === gU
+        stringCheck: function(uu, Ru) {
+          const yu = uu[Ru.offset];
+          return yu < 192 && yu > 160 || 217 === yu || 218 === yu || 219 === yu
         }
       },
-      xR = {},
-      mR = new Map;
+      dR = {},
+      bR = new Map;
 
-    function IR(UU, RU) {
-      RU.constructor && (Object.prototype.hasOwnProperty.call(RU, "constructor") && null == RU.constructor[Symbol.metadata] && EU(RU.constructor), mR.set(RU.constructor, UU), xR[UU] = RU), RU.encode && (RR[UU] = RU.encode), RU.decode && (fR[UU] = RU.decode)
+    function CR(uu, Ru) {
+      Ru.constructor && (Object.prototype.hasOwnProperty.call(Ru, "constructor") && null == Ru.constructor[Symbol.metadata] && Qu(Ru.constructor), bR.set(Ru.constructor, uu), dR[uu] = Ru), Ru.encode && (RR[uu] = Ru.encode), Ru.decode && (HR[uu] = Ru.decode)
     }
 
-    function JR(UU) {
-      for (const RU in UU) IR(RU, UU[RU]);
-      return UU => xt(UU)
+    function kR(uu) {
+      for (const Ru in uu) CR(Ru, uu[Ru]);
+      return uu => dE(uu)
     }
-    const wR = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const eR = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function nR() {
+    function AR() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function bR(UU) {
-      return UU._stream ??= nR()
+    function DR(uu) {
+      return uu._stream ??= AR()
     }
 
-    function oR(UU, RU, gU) {
-      0 === RU.activeViews.size && bR(UU).broadcastPending.add(gU)
+    function MR(uu, Ru, yu) {
+      0 === Ru.activeViews.size && DR(uu).broadcastPending.add(yu)
     }
 
-    function ZR(UU, RU, gU, tU) {
-      const EU = UU._stream;
-      if (void 0 === EU) return !0;
-      let PU = !1;
-      return EU.broadcastPending.delete(tU) ? PU = !0 : EU.sentBroadcast.delete(tU) && EU.broadcastDeletes.add(tU), RU.forEachActiveView((UU => {
-        const RU = EU.pendingByView.get(UU.id);
-        if (RU?.has(tU)) return RU.delete(tU), void(PU = !0);
-        const TU = EU.sentByView.get(UU.id);
-        if (TU?.has(tU)) {
-          TU.delete(tU);
-          let RU = UU.changes.get(gU);
-          void 0 === RU && (RU = new Map, UU.changes.set(gU, RU)), RU.set(tU, pU.DELETE)
+    function IR(uu, Ru, yu, Eu) {
+      const Qu = uu._stream;
+      if (void 0 === Qu) return !0;
+      let mu = !1;
+      return Qu.broadcastPending.delete(Eu) ? mu = !0 : Qu.sentBroadcast.delete(Eu) && Qu.broadcastDeletes.add(Eu), Ru.forEachActiveView((uu => {
+        const Ru = Qu.pendingByView.get(uu.id);
+        if (Ru?.has(Eu)) return Ru.delete(Eu), void(mu = !0);
+        const Ju = Qu.sentByView.get(uu.id);
+        if (Ju?.has(Eu)) {
+          Ju.delete(Eu);
+          let Ru = uu.changes.get(yu);
+          void 0 === Ru && (Ru = new Map, uu.changes.set(yu, Ru)), Ru.set(Eu, Ku.DELETE)
         }
-      })), PU
+      })), mu
     }
 
-    function aR(UU, RU) {
-      const gU = UU._stream?.pendingByView;
-      if (void 0 === gU) return !1;
-      for (const [tU, pU] of gU)
-        if (pU.size > 0 && void 0 !== RU.activeViews.get(tU)?.deref()) return !0;
+    function GR(uu, Ru) {
+      const yu = uu._stream?.pendingByView;
+      if (void 0 === yu) return !1;
+      for (const [Eu, Ku] of yu)
+        if (Ku.size > 0 && void 0 !== Ru.activeViews.get(Eu)?.deref()) return !0;
       return !1
     }
 
-    function YR(UU) {
-      const RU = UU._stream;
-      return void 0 !== RU && (RU.broadcastPending.size > 0 || RU.broadcastDeletes.size > 0)
+    function UR(uu) {
+      const Ru = uu._stream;
+      return void 0 !== Ru && (Ru.broadcastPending.size > 0 || Ru.broadcastDeletes.size > 0)
     }
 
-    function BR(UU, RU, gU) {
-      const tU = bR(UU);
-      let pU = tU.pendingByView.get(RU);
-      void 0 === pU && (pU = new Set, tU.pendingByView.set(RU, pU)), pU.add(gU)
+    function nR(uu, Ru, yu) {
+      const Eu = DR(uu);
+      let Ku = Eu.pendingByView.get(Ru);
+      void 0 === Ku && (Ku = new Set, Eu.pendingByView.set(Ru, Ku)), Ku.add(yu)
     }
 
-    function VR(UU, RU) {
-      const gU = UU._stream;
-      void 0 !== gU && (gU.pendingByView.delete(RU), gU.sentByView.delete(RU), gU.priorityByView?.delete(RU))
+    function sR(uu, Ru) {
+      const yu = uu._stream;
+      void 0 !== yu && (yu.pendingByView.delete(Ru), yu.sentByView.delete(Ru), yu.priorityByView?.delete(Ru))
     }
-    const rR = {
+    const tR = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function XR(UU) {
-      if (null == UU || "object" !== typeof UU) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function lR(uu) {
+      if (null == uu || "object" !== typeof uu) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: RU,
-        max: gU
-      } = UU;
-      if ("number" !== typeof RU || "number" !== typeof gU || !(gU > RU) || !Number.isFinite(RU) || !Number.isFinite(gU)) throw new Error(`t.quantized(): require finite min < max (got min=${RU}, max=${gU}).`);
-      const tU = UU.bits ?? 16;
-      if (8 !== tU && 16 !== tU && 32 !== tU) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${tU}).`);
-      const pU = UU.mode ?? "clamp";
-      if ("clamp" !== pU && "wrap" !== pU) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(pU)}).`);
-      const EU = "wrap" === pU,
-        PU = Math.pow(2, tU);
+        min: Ru,
+        max: yu
+      } = uu;
+      if ("number" !== typeof Ru || "number" !== typeof yu || !(yu > Ru) || !Number.isFinite(Ru) || !Number.isFinite(yu)) throw new Error(`t.quantized(): require finite min < max (got min=${Ru}, max=${yu}).`);
+      const Eu = uu.bits ?? 16;
+      if (8 !== Eu && 16 !== Eu && 32 !== Eu) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Eu}).`);
+      const Ku = uu.mode ?? "clamp";
+      if ("clamp" !== Ku && "wrap" !== Ku) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Ku)}).`);
+      const Qu = "wrap" === Ku,
+        mu = Math.pow(2, Eu);
       return {
-        min: RU,
-        max: gU,
-        bits: tU,
-        wrap: EU,
-        wire: rR[tU],
-        range: gU - RU,
-        span: EU ? PU : RU === -gU ? PU - 2 : PU - 1
+        min: Ru,
+        max: yu,
+        bits: Eu,
+        wrap: Qu,
+        wire: tR[Eu],
+        range: yu - Ru,
+        span: Qu ? mu : Ru === -yu ? mu - 2 : mu - 1
       }
     }
 
-    function vR(UU) {
-      return null !== UU && "object" === typeof UU && void 0 !== UU.quantized
+    function gR(uu) {
+      return null !== uu && "object" === typeof uu && void 0 !== uu.quantized
     }
 
-    function dR(UU, RU) {
-      if (UU.wrap) {
-        if (!Number.isFinite(RU)) return 0;
-        const gU = UU.range;
-        let tU = (RU - UU.min) % gU;
-        tU < 0 && (tU += gU);
-        const pU = UU.span;
-        return Math.floor(tU / gU * pU + .5) % pU
+    function cR(uu, Ru) {
+      if (uu.wrap) {
+        if (!Number.isFinite(Ru)) return 0;
+        const yu = uu.range;
+        let Eu = (Ru - uu.min) % yu;
+        Eu < 0 && (Eu += yu);
+        const Ku = uu.span;
+        return Math.floor(Eu / yu * Ku + .5) % Ku
       }
-      if (RU !== RU) return 0;
-      const gU = RU < UU.min ? UU.min : RU > UU.max ? UU.max : RU;
-      return Math.floor((gU - UU.min) / UU.range * UU.span + .5)
+      if (Ru !== Ru) return 0;
+      const yu = Ru < uu.min ? uu.min : Ru > uu.max ? uu.max : Ru;
+      return Math.floor((yu - uu.min) / uu.range * uu.span + .5)
     }
 
-    function HR(UU, RU) {
-      return UU.min + RU / UU.span * UU.range
+    function LR(uu, Ru) {
+      return uu.min + Ru / uu.span * uu.range
     }
 
-    function SR(UU) {
-      const RU = RR[UU.wire];
-      return (gU, tU, pU) => RU(gU, dR(UU, tU), pU)
+    function zR(uu) {
+      const Ru = RR[uu.wire];
+      return (yu, Eu, Ku) => Ru(yu, cR(uu, Eu), Ku)
     }
-    class sR {
+    class FR {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(UU) {
-        const RU = Object.getPrototypeOf(UU);
-        if (RU !== Zt) {
-          let gU = sR.inheritedTypes.get(RU);
-          gU || (gU = new Set, sR.inheritedTypes.set(RU, gU)), gU.add(UU)
+      static register(uu) {
+        const Ru = Object.getPrototypeOf(uu);
+        if (Ru !== IE) {
+          let yu = FR.inheritedTypes.get(Ru);
+          yu || (yu = new Set, FR.inheritedTypes.set(Ru, yu)), yu.add(uu)
         }
       }
-      static cache(UU) {
-        let RU = sR.cachedContexts.get(UU);
-        return RU || (RU = new sR(UU), sR.cachedContexts.set(UU, RU)), RU
+      static cache(uu) {
+        let Ru = FR.cachedContexts.get(uu);
+        return Ru || (Ru = new FR(uu), FR.cachedContexts.set(uu, Ru)), Ru
       }
-      constructor(UU) {
-        UU && this.discoverTypes(UU)
+      constructor(uu) {
+        uu && this.discoverTypes(uu)
       }
-      has(UU) {
-        return this.schemas.has(UU)
+      has(uu) {
+        return this.schemas.has(uu)
       }
-      get(UU) {
-        return this.types[UU]
+      get(uu) {
+        return this.types[uu]
       }
-      add(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(UU) && (this.types[RU] = UU, null == UU[Symbol.metadata] && MR.initialize(UU), this.schemas.set(UU, RU), !0)
+      add(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(uu) && (this.types[Ru] = uu, null == uu[Symbol.metadata] && oR.initialize(uu), this.schemas.set(uu, Ru), !0)
       }
-      getTypeId(UU) {
-        return this.schemas.get(UU)
+      getTypeId(uu) {
+        return this.schemas.get(uu)
       }
-      discoverTypes(UU) {
-        if (!this.add(UU)) return;
-        sR.inheritedTypes.get(UU)?.forEach((UU => {
-          this.discoverTypes(UU)
+      discoverTypes(uu) {
+        if (!this.add(uu)) return;
+        FR.inheritedTypes.get(uu)?.forEach((uu => {
+          this.discoverTypes(uu)
         }));
-        let RU = UU;
+        let Ru = uu;
         for (;
-          (RU = Object.getPrototypeOf(RU)) && RU !== Zt && RU !== Function.prototype;) this.discoverTypes(RU);
-        const gU = UU[Symbol.metadata];
-        (gU[ZU] || gU[XU]) && (this.hasFilters = !0);
-        for (const tU in gU) {
-          const UU = gU[tU].type;
-          if ("string" !== typeof UU && !vR(UU))
-            if ("function" === typeof UU) this.discoverTypes(UU);
+          (Ru = Object.getPrototypeOf(Ru)) && Ru !== IE && Ru !== Function.prototype;) this.discoverTypes(Ru);
+        const yu = uu[Symbol.metadata];
+        (yu[Iu] || yu[lu]) && (this.hasFilters = !0);
+        for (const Eu in yu) {
+          const uu = yu[Eu].type;
+          if ("string" !== typeof uu && !gR(uu))
+            if ("function" === typeof uu) this.discoverTypes(uu);
             else {
-              const RU = Object.values(UU)[0];
-              if ("string" === typeof RU) continue;
-              this.discoverTypes(RU)
+              const Ru = Object.values(uu)[0];
+              if ("string" === typeof Ru) continue;
+              this.discoverTypes(Ru)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function yR(UU) {
-      const RU = FR(UU);
-      return RU ? {
-        complexTypeKlass: xR[RU],
-        childType: UU[RU]
+    function wR(uu) {
+      const Ru = hR(uu);
+      return Ru ? {
+        complexTypeKlass: dR[Ru],
+        childType: uu[Ru]
       } : {
         complexTypeKlass: !1,
-        childType: UU
+        childType: uu
       }
     }
 
-    function kR(UU, RU) {
-      const gU = iR(UU),
-        tU = FR(gU),
-        pU = tU && FR(gU[tU]);
-      if (pU) throw new Error(`${RU?`${RU}: `:""}@colyseus/schema: nested collections are not supported ("${tU}" of "${pU}"). Collections can only hold primitive types or Schema classes, wrap the inner ${pU} in a Schema class.`);
-      return gU
+    function ZR(uu, Ru) {
+      const yu = PR(uu),
+        Eu = hR(yu),
+        Ku = Eu && hR(yu[Eu]);
+      if (Ku) throw new Error(`${Ru?`${Ru}: `:""}@colyseus/schema: nested collections are not supported ("${Eu}" of "${Ku}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Ku} in a Schema class.`);
+      return yu
     }
 
-    function FR(UU) {
-      return "object" === typeof UU && null !== UU ? Object.keys(UU).find((UU => void 0 !== xR[UU])) : void 0
+    function hR(uu) {
+      return "object" === typeof uu && null !== uu ? Object.keys(uu).find((uu => void 0 !== dR[uu])) : void 0
     }
 
-    function iR(UU) {
-      if ("object" !== typeof UU || null === UU) return UU;
-      if (Array.isArray(UU)) return {
-        array: iR(UU[0])
+    function PR(uu) {
+      if ("object" !== typeof uu || null === uu) return uu;
+      if (Array.isArray(uu)) return {
+        array: PR(uu[0])
       };
-      const RU = function(UU) {
-        const RU = Object.keys(UU),
-          gU = RU.filter((UU => /\d+/.test(UU)));
-        if (gU.length > 0 && gU.length === RU.length / 2 && UU[UU[gU[0]]] == gU[0]) return "number";
-        if (RU.length > 0 && RU.every((RU => UU[RU] === RU))) return "string"
-      }(UU);
-      if (RU) return RU;
-      if (vR(UU)) return "string" === typeof UU.quantized.wire ? UU : {
-        quantized: XR(UU.quantized)
+      const Ru = function(uu) {
+        const Ru = Object.keys(uu),
+          yu = Ru.filter((uu => /\d+/.test(uu)));
+        if (yu.length > 0 && yu.length === Ru.length / 2 && uu[uu[yu[0]]] == yu[0]) return "number";
+        if (Ru.length > 0 && Ru.every((Ru => uu[Ru] === Ru))) return "string"
+      }(uu);
+      if (Ru) return Ru;
+      if (gR(uu)) return "string" === typeof uu.quantized.wire ? uu : {
+        quantized: lR(uu.quantized)
       };
-      if (void 0 !== UU.type) return iR(UU.type);
-      const gU = FR(UU);
-      return gU && (UU[gU] = iR(UU[gU])), UU
+      if (void 0 !== uu.type) return PR(uu.type);
+      const yu = hR(uu);
+      return yu && (uu[yu] = PR(uu[yu])), uu
     }
-    const AR = [oU, YU, BU, VU, rU, XU, nU];
+    const iR = [Mu, Uu, nu, su, tu, lu, Au];
 
-    function zR(UU, RU, gU) {
-      UU[RU] || Object.defineProperty(UU, RU, {
+    function YR(uu, Ru, yu) {
+      uu[Ru] || Object.defineProperty(uu, Ru, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), UU[RU].push(gU)
+      }), uu[Ru].push(yu)
     }
-    const MR = {
-        addField(UU, RU, gU, tU, pU) {
-          if (RU >= 63) throw new Error(`Can't define field '${gU}'.\nSchema instances may only have up to 63 fields.`);
-          UU[RU] = Object.assign(UU[RU] || {}, {
-            type: tU,
-            index: RU,
-            name: gU
-          }), Object.defineProperty(UU, JU, {
-            value: UU[JU] || {},
+    const oR = {
+        addField(uu, Ru, yu, Eu, Ku) {
+          if (Ru >= 63) throw new Error(`Can't define field '${yu}'.\nSchema instances may only have up to 63 fields.`);
+          uu[Ru] = Object.assign(uu[Ru] || {}, {
+            type: Eu,
+            index: Ru,
+            name: yu
+          }), Object.defineProperty(uu, ku, {
+            value: uu[ku] || {},
             enumerable: !1,
             configurable: !0
-          }), UU[JU][gU] = pU || {
+          }), uu[ku][yu] = Ku || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(UU, bU, {
-            value: RU,
+          }, Object.defineProperty(uu, Du, {
+            value: Ru,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(UU, gU, {
-            value: RU,
+          }), Object.defineProperty(uu, yu, {
+            value: Ru,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof UU[RU].type || vR(UU[RU].type) || (void 0 === UU[oU] && Object.defineProperty(UU, oU, {
+          }), "string" === typeof uu[Ru].type || gR(uu[Ru].type) || (void 0 === uu[Mu] && Object.defineProperty(uu, Mu, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), UU[oU].push(RU));
-          const EU = UU[RU].type;
-          if (EU && "object" === typeof EU && void 0 !== EU.stream) {
-            if (void 0 !== EU.array) throw new Error(wR);
-            UU[RU].stream = !0, UU[XU] || Object.defineProperty(UU, XU, {
+          }), uu[Mu].push(Ru));
+          const Qu = uu[Ru].type;
+          if (Qu && "object" === typeof Qu && void 0 !== Qu.stream) {
+            if (void 0 !== Qu.array) throw new Error(eR);
+            uu[Ru].stream = !0, uu[lu] || Object.defineProperty(uu, lu, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), UU[XU].includes(RU) || UU[XU].push(RU);
-            const pU = tU?.priority;
-            "function" === typeof pU && MR.setStreamPriority(UU, gU, pU)
+            }), uu[lu].includes(Ru) || uu[lu].push(Ru);
+            const Ku = Eu?.priority;
+            "function" === typeof Ku && oR.setStreamPriority(uu, yu, Ku)
           }
         },
-        setTag(UU, RU, gU) {
-          const tU = UU[RU];
-          if (UU[tU].tag = gU, UU[ZU] || (Object.defineProperty(UU, ZU, {
+        setTag(uu, Ru, yu) {
+          const Eu = uu[Ru];
+          if (uu[Eu].tag = yu, uu[Iu] || (Object.defineProperty(uu, Iu, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(UU, aU, {
+            }), Object.defineProperty(uu, Gu, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), UU[ZU].push(tU), gU < 0) UU[aU][gU] || (UU[aU][gU] = []), UU[aU][gU].push(tU);
+            })), uu[Iu].push(Eu), yu < 0) uu[Gu][yu] || (uu[Gu][yu] = []), uu[Gu][yu].push(Eu);
           else
-            for (let pU = gU; pU > 0; pU &= pU - 1) {
-              const RU = pU & -pU;
-              UU[aU][RU] || (UU[aU][RU] = []), UU[aU][RU].push(tU)
+            for (let Ku = yu; Ku > 0; Ku &= Ku - 1) {
+              const Ru = Ku & -Ku;
+              uu[Gu][Ru] || (uu[Gu][Ru] = []), uu[Gu][Ru].push(Eu)
             }
         },
-        setUnreliable(UU, RU) {
-          const gU = UU[RU];
-          if ("string" !== typeof UU[gU].type) throw new Error(`@unreliable cannot be applied to ref-type field "${RU}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          UU[gU].unreliable = !0, UU[YU] || Object.defineProperty(UU, YU, {
+        setUnreliable(uu, Ru) {
+          const yu = uu[Ru];
+          if ("string" !== typeof uu[yu].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Ru}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          uu[yu].unreliable = !0, uu[Uu] || Object.defineProperty(uu, Uu, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), UU[YU].push(gU)
+          }), uu[Uu].push(yu)
         },
-        setPatchOnly(UU, RU) {
-          const gU = UU[RU];
-          if (UU[gU].fullStateOnly) throw new Error(`field "${RU}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          UU[gU].patchOnly = !0, zR(UU, BU, gU), zR(UU, VU, gU)
+        setPatchOnly(uu, Ru) {
+          const yu = uu[Ru];
+          if (uu[yu].fullStateOnly) throw new Error(`field "${Ru}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          uu[yu].patchOnly = !0, YR(uu, nu, yu), YR(uu, su, yu)
         },
-        setDeprecated(UU, RU) {
-          const gU = UU[RU];
-          UU[gU].deprecated = !0, zR(UU, VU, gU), Object.defineProperty(UU, gU, {
-            value: UU[gU],
+        setDeprecated(uu, Ru) {
+          const yu = uu[Ru];
+          uu[yu].deprecated = !0, YR(uu, su, yu), Object.defineProperty(uu, yu, {
+            value: uu[yu],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(UU, RU) {
-          const gU = UU[RU];
-          if (UU[gU].patchOnly) throw new Error(`field "${RU}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          UU[gU].fullStateOnly = !0, zR(UU, rU, gU)
+        setFullStateOnly(uu, Ru) {
+          const yu = uu[Ru];
+          if (uu[yu].patchOnly) throw new Error(`field "${Ru}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          uu[yu].fullStateOnly = !0, YR(uu, tu, yu)
         },
-        setStream(UU, RU) {
-          const gU = UU[RU];
-          UU[gU].stream = !0, UU[XU] || Object.defineProperty(UU, XU, {
+        setStream(uu, Ru) {
+          const yu = uu[Ru];
+          uu[yu].stream = !0, uu[lu] || Object.defineProperty(uu, lu, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), UU[XU].push(gU)
+          }), uu[lu].push(yu)
         },
-        setStreamPriority(UU, RU, gU) {
-          const tU = UU[RU];
-          UU[vU] || Object.defineProperty(UU, vU, {
+        setStreamPriority(uu, Ru, yu) {
+          const Eu = uu[Ru];
+          uu[gu] || Object.defineProperty(uu, gu, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), UU[vU][tU] = gU
+          }), uu[gu][Eu] = yu
         },
-        getStreamPriority: (UU, RU) => UU?.[vU]?.[RU],
-        defineField(UU, RU, gU, tU, pU) {
-          const EU = kR(pU, `${UU.name}.${tU}`),
+        getStreamPriority: (uu, Ru) => uu?.[gu]?.[Ru],
+        defineField(uu, Ru, yu, Eu, Ku) {
+          const Qu = ZR(Ku, `${uu.name}.${Eu}`),
             {
-              complexTypeKlass: PU,
-              childType: TU
-            } = yR(EU);
-          MR.addField(RU, gU, tU, EU, It(tU, gU, TU, PU)), RU[JU][tU] && Object.defineProperty(UU.prototype, tU, RU[JU][tU]), ("string" === typeof EU || vR(EU)) && (RU[nU] || Object.defineProperty(RU, nU, {
+              complexTypeKlass: mu,
+              childType: Ju
+            } = wR(Qu);
+          oR.addField(Ru, yu, Eu, Qu, CE(Eu, yu, Ju, mu)), Ru[ku][Eu] && Object.defineProperty(uu.prototype, Eu, Ru[ku][Eu]), ("string" === typeof Qu || gR(Qu)) && (Ru[Au] || Object.defineProperty(Ru, Au, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), RU[nU][gU] = "string" === typeof EU ? RR[EU] : SR(EU.quantized))
+          }), Ru[Au][yu] = "string" === typeof Qu ? RR[Qu] : zR(Qu.quantized))
         },
-        setFields(UU, RU) {
-          const gU = UU.prototype.constructor;
-          sR.register(gU);
-          const tU = Object.getPrototypeOf(gU),
-            pU = tU && tU[Symbol.metadata],
-            EU = MR.initialize(gU);
-          gU[qU] || (gU[qU] = Zt[qU]), gU[KU] || (gU[KU] = Zt[KU]), gU[cU] || (gU[cU] = Zt[cU]), gU.prototype.toJSON || (gU.prototype.toJSON = Zt.prototype.toJSON);
-          let PU = EU[bU] ?? (pU && pU[bU]) ?? -1;
-          PU++, EU[nU] || Object.defineProperty(EU, nU, {
-            value: pU?.[nU] ? [...pU[nU]] : [],
+        setFields(uu, Ru) {
+          const yu = uu.prototype.constructor;
+          FR.register(yu);
+          const Eu = Object.getPrototypeOf(yu),
+            Ku = Eu && Eu[Symbol.metadata],
+            Qu = oR.initialize(yu);
+          yu[Nu] || (yu[Nu] = IE[Nu]), yu[Xu] || (yu[Xu] = IE[Xu]), yu[Vu] || (yu[Vu] = IE[Vu]), yu.prototype.toJSON || (yu.prototype.toJSON = IE.prototype.toJSON);
+          let mu = Qu[Du] ?? (Ku && Ku[Du]) ?? -1;
+          mu++, Qu[Au] || Object.defineProperty(Qu, Au, {
+            value: Ku?.[Au] ? [...Ku[Au]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const TU in RU) {
-            if (void 0 !== EU[TU]) throw new Error(`@colyseus/schema: Duplicate '${TU}' definition on '${gU.name||"(anonymous)"}'.`);
-            MR.defineField(gU, EU, PU, TU, RU[TU]), PU++
+          for (const Ju in Ru) {
+            if (void 0 !== Qu[Ju]) throw new Error(`@colyseus/schema: Duplicate '${Ju}' definition on '${yu.name||"(anonymous)"}'.`);
+            oR.defineField(yu, Qu, mu, Ju, Ru[Ju]), mu++
           }
-          return UU
+          return uu
         },
-        isDeprecated: (UU, RU) => !0 === UU[RU].deprecated,
-        initialize(UU) {
-          const RU = Object.getPrototypeOf(UU),
-            gU = RU[Symbol.metadata];
-          let tU = UU[Symbol.metadata] ?? Object.create(null);
-          if (RU !== Zt && tU === gU && (tU = Object.create(null), gU)) {
-            Object.setPrototypeOf(tU, gU), Object.defineProperty(tU, bU, {
-              value: gU[bU],
+        isDeprecated: (uu, Ru) => !0 === uu[Ru].deprecated,
+        initialize(uu) {
+          const Ru = Object.getPrototypeOf(uu),
+            yu = Ru[Symbol.metadata];
+          let Eu = uu[Symbol.metadata] ?? Object.create(null);
+          if (Ru !== IE && Eu === yu && (Eu = Object.create(null), yu)) {
+            Object.setPrototypeOf(Eu, yu), Object.defineProperty(Eu, Du, {
+              value: yu[Du],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== gU[ZU] && (Object.defineProperty(tU, ZU, {
-              value: [...gU[ZU]],
+            }), void 0 !== yu[Iu] && (Object.defineProperty(Eu, Iu, {
+              value: [...yu[Iu]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(tU, aU, {
+            }), Object.defineProperty(Eu, Gu, {
               value: {
-                ...gU[aU]
+                ...yu[Gu]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const UU of AR) {
-              const RU = gU[UU];
-              void 0 !== RU && Object.defineProperty(tU, UU, {
-                value: [...RU],
+            for (const uu of iR) {
+              const Ru = yu[uu];
+              void 0 !== Ru && Object.defineProperty(Eu, uu, {
+                value: [...Ru],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(tU, JU, {
+            Object.defineProperty(Eu, ku, {
               value: {
-                ...gU[JU]
+                ...yu[ku]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(UU, Symbol.metadata, {
-            value: tU,
+          return Object.defineProperty(uu, Symbol.metadata, {
+            value: Eu,
             writable: !1,
             configurable: !0
-          }), tU
+          }), Eu
         },
-        isValidInstance: UU => UU.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(UU.constructor[Symbol.metadata], bU),
-        getFields(UU) {
-          const RU = UU[Symbol.metadata],
-            gU = {};
-          for (let tU = 0; tU <= RU[bU]; tU++) gU[RU[tU].name] = RU[tU].type;
-          return gU
+        isValidInstance: uu => uu.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(uu.constructor[Symbol.metadata], Du),
+        getFields(uu) {
+          const Ru = uu[Symbol.metadata],
+            yu = {};
+          for (let Eu = 0; Eu <= Ru[Du]; Eu++) yu[Ru[Eu].name] = Ru[Eu].type;
+          return yu
         },
-        hasViewTagAtIndex: (UU, RU) => UU?.[ZU]?.includes(RU),
-        hasUnreliableAtIndex: (UU, RU) => UU?.[YU]?.includes(RU),
-        hasPatchOnlyAtIndex: (UU, RU) => UU?.[BU]?.includes(RU),
-        hasFullStateOnlyAtIndex: (UU, RU) => UU?.[rU]?.includes(RU),
-        hasStreamAtIndex: (UU, RU) => UU?.[XU]?.includes(RU)
+        hasViewTagAtIndex: (uu, Ru) => uu?.[Iu]?.includes(Ru),
+        hasUnreliableAtIndex: (uu, Ru) => uu?.[Uu]?.includes(Ru),
+        hasPatchOnlyAtIndex: (uu, Ru) => uu?.[nu]?.includes(Ru),
+        hasFullStateOnlyAtIndex: (uu, Ru) => uu?.[tu]?.includes(Ru),
+        hasStreamAtIndex: (uu, Ru) => uu?.[lu]?.includes(Ru)
       },
-      DR = (UU, RU, gU) => UU(RU, gU);
-    class LR {
+      qR = (uu, Ru, yu) => uu(Ru, yu);
+    class OR {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(UU) {
-        this.ops = new Uint8Array(Math.max(UU + 1, 1))
+      constructor(uu) {
+        this.ops = new Uint8Array(Math.max(uu + 1, 1))
       }
-      record(UU, RU) {
-        const gU = this.ops[UU];
-        0 === gU ? this.ops[UU] = RU : (gU === pU.DELETE || gU === pU.ADD && RU === pU.DELETE_AND_ADD) && (this.ops[UU] = pU.DELETE_AND_ADD), UU < 32 ? this.dirtyLow |= 1 << UU : this.dirtyHigh |= 1 << UU - 32
+      record(uu, Ru) {
+        const yu = this.ops[uu];
+        0 === yu ? this.ops[uu] = Ru : (yu === Ku.DELETE || yu === Ku.ADD && Ru === Ku.DELETE_AND_ADD) && (this.ops[uu] = Ku.DELETE_AND_ADD), uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
       }
-      recordDelete(UU, RU) {
-        this.ops[UU] = RU, UU < 32 ? this.dirtyLow |= 1 << UU : this.dirtyHigh |= 1 << UU - 32
+      recordDelete(uu, Ru) {
+        this.ops[uu] = Ru, uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
       }
-      recordRaw(UU, RU) {
-        this.record(UU, RU)
+      recordRaw(uu, Ru) {
+        this.record(uu, Ru)
       }
-      operationAt(UU) {
-        const RU = this.ops[UU];
-        return 0 === RU ? void 0 : RU
+      operationAt(uu) {
+        const Ru = this.ops[uu];
+        return 0 === Ru ? void 0 : Ru
       }
-      setOperationAt(UU, RU) {
-        this.ops[UU] = RU
+      setOperationAt(uu, Ru) {
+        this.ops[uu] = Ru
       }
-      forEach(UU) {
-        this.forEachWithCtx(UU, DR)
+      forEach(uu) {
+        this.forEachWithCtx(uu, qR)
       }
-      forEachWithCtx(UU, RU) {
-        let gU = this.dirtyLow,
-          tU = this.dirtyHigh;
-        const pU = this.ops;
-        for (; 0 !== gU;) {
-          const tU = gU & -gU,
-            EU = 31 - Math.clz32(tU);
-          gU ^= tU, RU(UU, EU, pU[EU])
+      forEachWithCtx(uu, Ru) {
+        let yu = this.dirtyLow,
+          Eu = this.dirtyHigh;
+        const Ku = this.ops;
+        for (; 0 !== yu;) {
+          const Eu = yu & -yu,
+            Qu = 31 - Math.clz32(Eu);
+          yu ^= Eu, Ru(uu, Qu, Ku[Qu])
         }
-        for (; 0 !== tU;) {
-          const gU = tU & -tU,
-            EU = 31 - Math.clz32(gU) + 32;
-          tU ^= gU, RU(UU, EU, pU[EU])
+        for (; 0 !== Eu;) {
+          const yu = Eu & -Eu,
+            Qu = 31 - Math.clz32(yu) + 32;
+          Eu ^= yu, Ru(uu, Qu, Ku[Qu])
         }
       }
       size() {
-        return lR(this.dirtyLow) + lR(this.dirtyHigh)
+        return aR(this.dirtyLow) + aR(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class NR {
-      nC = new Map;
+    class vR {
+      tS = new Map;
       pureOps = [];
-      record(UU, RU) {
-        const gU = this.nC.get(UU);
-        void 0 === gU ? this.nC.set(UU, RU) : (gU === pU.DELETE || gU === pU.ADD && RU === pU.DELETE_AND_ADD) && this.nC.set(UU, pU.DELETE_AND_ADD)
+      record(uu, Ru) {
+        const yu = this.tS.get(uu);
+        void 0 === yu ? this.tS.set(uu, Ru) : (yu === Ku.DELETE || yu === Ku.ADD && Ru === Ku.DELETE_AND_ADD) && this.tS.set(uu, Ku.DELETE_AND_ADD)
       }
-      recordDelete(UU, RU) {
-        this.nC.set(UU, RU)
+      recordDelete(uu, Ru) {
+        this.tS.set(uu, Ru)
       }
-      recordRaw(UU, RU) {
-        this.nC.set(UU, RU)
+      recordRaw(uu, Ru) {
+        this.tS.set(uu, Ru)
       }
-      recordPure(UU) {
-        this.pureOps.push([this.nC.size, UU])
+      recordPure(uu) {
+        this.pureOps.push([this.tS.size, uu])
       }
-      operationAt(UU) {
-        return this.nC.get(UU)
+      operationAt(uu) {
+        return this.tS.get(uu)
       }
-      setOperationAt(UU, RU) {
-        this.nC.has(UU) && this.nC.set(UU, RU)
+      setOperationAt(uu, Ru) {
+        this.tS.has(uu) && this.tS.set(uu, Ru)
       }
-      forEach(UU) {
-        this.forEachWithCtx(UU, DR)
+      forEach(uu) {
+        this.forEachWithCtx(uu, qR)
       }
-      forEachWithCtx(UU, RU) {
-        const gU = this.pureOps;
-        if (gU.length > 0) {
-          let tU = 0,
-            pU = 0;
-          for (const [EU, PU] of this.nC) {
-            for (; tU < gU.length && gU[tU][0] <= pU;) {
-              const pU = gU[tU++][1];
-              RU(UU, -pU, pU)
+      forEachWithCtx(uu, Ru) {
+        const yu = this.pureOps;
+        if (yu.length > 0) {
+          let Eu = 0,
+            Ku = 0;
+          for (const [Qu, mu] of this.tS) {
+            for (; Eu < yu.length && yu[Eu][0] <= Ku;) {
+              const Ku = yu[Eu++][1];
+              Ru(uu, -Ku, Ku)
             }
-            RU(UU, EU, PU), pU++
+            Ru(uu, Qu, mu), Ku++
           }
-          for (; tU < gU.length;) {
-            const pU = gU[tU++][1];
-            RU(UU, -pU, pU)
+          for (; Eu < yu.length;) {
+            const Ku = yu[Eu++][1];
+            Ru(uu, -Ku, Ku)
           }
         } else
-          for (const [tU, pU] of this.nC) RU(UU, tU, pU)
+          for (const [Eu, Ku] of this.tS) Ru(uu, Eu, Ku)
       }
       size() {
-        return this.nC.size + this.pureOps.length
+        return this.tS.size + this.pureOps.length
       }
       has() {
-        return this.nC.size > 0 || this.pureOps.length > 0
+        return this.tS.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.nC.clear(), this.pureOps.length = 0
+        this.tS.clear(), this.pureOps.length = 0
       }
-      shift(UU) {
-        const RU = new Map;
-        for (const [gU, tU] of this.nC) RU.set(gU + UU, tU);
-        this.nC = RU
+      shift(uu) {
+        const Ru = new Map;
+        for (const [yu, Eu] of this.tS) Ru.set(yu + uu, Eu);
+        this.tS = Ru
       }
     }
 
-    function lR(UU) {
-      return 16843009 * ((UU = (858993459 & (UU -= UU >>> 1 & 1431655765)) + (UU >>> 2 & 858993459)) + (UU >>> 4) & 252645135) >>> 24
+    function aR(uu) {
+      return 16843009 * ((uu = (858993459 & (uu -= uu >>> 1 & 1431655765)) + (uu >>> 2 & 858993459)) + (uu >>> 4) & 252645135) >>> 24
     }
 
-    function OR(UU) {
-      if (void 0 === UU) return 0;
-      let RU = 0;
-      for (let gU = 0, tU = UU.length; gU < tU; gU++) {
-        const tU = UU[gU];
-        tU < 32 && (RU |= 1 << tU)
+    function fR(uu) {
+      if (void 0 === uu) return 0;
+      let Ru = 0;
+      for (let yu = 0, Eu = uu.length; yu < Eu; yu++) {
+        const Eu = uu[yu];
+        Eu < 32 && (Ru |= 1 << Eu)
       }
-      return RU
+      return Ru
     }
 
-    function Ug(UU) {
-      const RU = UU.constructor;
-      if (Object.prototype.hasOwnProperty.call(RU, wU)) return RU[wU];
-      const gU = RU[Symbol.metadata],
-        tU = MR.isValidInstance(UU),
-        pU = (gU?.[ZU]?.length ?? 0) > 0,
-        EU = function(UU) {
-          const RU = [],
-            gU = [],
-            tU = [],
-            pU = [],
-            EU = UU?.[bU];
-          if (void 0 === EU) return {
-            names: RU,
-            types: gU,
-            tags: tU,
-            encoders: pU
+    function uy(uu) {
+      const Ru = uu.constructor;
+      if (Object.prototype.hasOwnProperty.call(Ru, eu)) return Ru[eu];
+      const yu = Ru[Symbol.metadata],
+        Eu = oR.isValidInstance(uu),
+        Ku = (yu?.[Iu]?.length ?? 0) > 0,
+        Qu = function(uu) {
+          const Ru = [],
+            yu = [],
+            Eu = [],
+            Ku = [],
+            Qu = uu?.[Du];
+          if (void 0 === Qu) return {
+            names: Ru,
+            types: yu,
+            tags: Eu,
+            encoders: Ku
           };
-          const PU = UU[nU];
-          for (let TU = 0; TU <= EU; TU++) {
-            const EU = UU[TU];
-            void 0 !== EU ? (RU[TU] = EU.name, gU[TU] = EU.type, tU[TU] = EU.tag, pU[TU] = PU?.[TU]) : (RU[TU] = void 0, gU[TU] = void 0, tU[TU] = void 0, pU[TU] = void 0)
+          const mu = uu[Au];
+          for (let Ju = 0; Ju <= Qu; Ju++) {
+            const Qu = uu[Ju];
+            void 0 !== Qu ? (Ru[Ju] = Qu.name, yu[Ju] = Qu.type, Eu[Ju] = Qu.tag, Ku[Ju] = mu?.[Ju]) : (Ru[Ju] = void 0, yu[Ju] = void 0, Eu[Ju] = void 0, Ku[Ju] = void 0)
           }
           return {
-            names: RU,
-            types: gU,
-            tags: tU,
-            encoders: pU
+            names: Ru,
+            types: yu,
+            tags: Eu,
+            encoders: Ku
           }
-        }(gU),
-        PU = tU && !pU ? void 0 : RU[GU],
-        TU = {
-          encoder: RU[KU],
-          filter: PU,
-          metadata: gU,
-          isSchema: tU,
-          filterBitmask: tU ? OR(gU?.[ZU]) : 0,
-          hasAnyFullStateOnly: (gU?.[rU]?.length ?? 0) > 0,
-          hasAnyUnreliable: (gU?.[YU]?.length ?? 0) > 0,
-          hasAnyStream: (gU?.[XU]?.length ?? 0) > 0,
-          hasAnyView: pU,
-          fullStateOnlyBitmask: OR(gU?.[rU]),
-          unreliableBitmask: OR(gU?.[YU]),
-          streamBitmask: OR(gU?.[XU]),
-          names: EU.names,
-          types: EU.types,
-          tags: EU.tags,
-          encoders: EU.encoders
+        }(yu),
+        mu = Eu && !Ku ? void 0 : Ru[ru],
+        Ju = {
+          encoder: Ru[Xu],
+          filter: mu,
+          metadata: yu,
+          isSchema: Eu,
+          filterBitmask: Eu ? fR(yu?.[Iu]) : 0,
+          hasAnyFullStateOnly: (yu?.[tu]?.length ?? 0) > 0,
+          hasAnyUnreliable: (yu?.[Uu]?.length ?? 0) > 0,
+          hasAnyStream: (yu?.[lu]?.length ?? 0) > 0,
+          hasAnyView: Ku,
+          fullStateOnlyBitmask: fR(yu?.[tu]),
+          unreliableBitmask: fR(yu?.[Uu]),
+          streamBitmask: fR(yu?.[lu]),
+          names: Qu.names,
+          types: Qu.types,
+          tags: Qu.tags,
+          encoders: Qu.encoders
         };
-      return Object.defineProperty(RU, wU, {
-        value: TU,
+      return Object.defineProperty(Ru, eu, {
+        value: Ju,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), TU
+      }), Ju
     }
 
-    function Rg(UU, RU) {
-      if (void 0 !== UU.parentRef && RU(UU.parentRef, UU._parentIndex)) return !0;
-      for (let gU = UU.extraParents; void 0 !== gU; gU = gU.next)
-        if (RU(gU.ref, gU.index)) return !0;
+    function Ry(uu, Ru) {
+      if (void 0 !== uu.parentRef && Ru(uu.parentRef, uu._parentIndex)) return !0;
+      for (let yu = uu.extraParents; void 0 !== yu; yu = yu.next)
+        if (Ru(yu.ref, yu.index)) return !0;
       return !1
     }
-    const gg = (UU, RU) => {
-        UU.isFieldUnreliable(RU) ? UU.ensureUnreliableRecorder().record(RU, pU.ADD) : UU.record(RU, pU.ADD)
+    const yy = (uu, Ru) => {
+        uu.isFieldUnreliable(Ru) ? uu.ensureUnreliableRecorder().record(Ru, Ku.ADD) : uu.record(Ru, Ku.ADD)
       },
-      tg = (UU, RU) => UU(RU);
+      Ey = (uu, Ru) => uu(Ru);
 
-    function pg(UU, RU, gU) {
-      const tU = UU.refTarget;
-      if (void 0 !== tU[QU]) {
-        if (UU.isPatchOnly) return;
-        if (Array.isArray(tU.items)) {
-          const UU = tU.items;
-          for (let tU = 0, pU = UU.length; tU < pU; tU++) void 0 !== UU[tU] && gU(RU, tU)
-        } else if (void 0 !== tU.journal)
-          for (const [UU, pU] of tU.journal.keyByIndex) tU.$items.has(pU) && gU(RU, UU);
-        else if (void 0 !== tU.$items)
-          for (const UU of tU.$items.keys()) gU(RU, UU)
+    function Ky(uu, Ru, yu) {
+      const Eu = uu.refTarget;
+      if (void 0 !== Eu[Tu]) {
+        if (uu.isPatchOnly) return;
+        if (Array.isArray(Eu.items)) {
+          const uu = Eu.items;
+          for (let Eu = 0, Ku = uu.length; Eu < Ku; Eu++) void 0 !== uu[Eu] && yu(Ru, Eu)
+        } else if (void 0 !== Eu.journal)
+          for (const [uu, Ku] of Eu.journal.keyByIndex) Eu.$items.has(Ku) && yu(Ru, uu);
+        else if (void 0 !== Eu.$items)
+          for (const uu of Eu.$items.keys()) yu(Ru, uu)
       } else {
-        const pU = UU.metadata;
-        if (!pU) return;
-        const EU = pU[bU] ?? -1,
-          PU = pU[VU],
-          TU = UU.encDescriptor.names;
-        for (let UU = 0; UU <= EU; UU++) {
-          const pU = TU[UU];
-          if (void 0 === pU) continue;
-          if (PU && PU.includes(UU)) continue;
-          const EU = tU[pU];
-          void 0 !== EU && null !== EU && gU(RU, UU)
+        const Ku = uu.metadata;
+        if (!Ku) return;
+        const Qu = Ku[Du] ?? -1,
+          mu = Ku[su],
+          Ju = uu.encDescriptor.names;
+        for (let uu = 0; uu <= Qu; uu++) {
+          const Ku = Ju[uu];
+          if (void 0 === Ku) continue;
+          if (mu && mu.includes(uu)) continue;
+          const Qu = Eu[Ku];
+          void 0 !== Qu && null !== Qu && yu(Ru, uu)
         }
       }
     }
 
-    function Eg(UU, RU, gU, tU) {
-      ! function(UU, RU, gU) {
-        if (!RU) return;
-        const tU = RU[hU],
-          pU = !tU._isSchema;
-        let EU;
-        pU ? (RU = tU.parent, gU = tU.parentIndex, EU = RU?.[hU].metadata) : EU = tU.metadata;
-        const PU = (EU?.[BU]?.includes(gU) ? wg : 0) | (EU?.[rU]?.includes(gU) ? ng : 0),
-          TU = tU.flags & Zg | PU,
-          qU = UU.flags;
-        UU.flags = qU | TU;
-        TU & ~qU & ng && (UU.reset(), UU.unreliableRecorder?.reset());
-        const KU = UU.root?.types;
-        if (!KU?.hasFilters) return;
-        const cU = EU?.[ZU]?.includes(gU) ?? !1,
-          GU = EU?.[XU]?.includes(gU) ?? !1,
-          jU = tU.isFiltered || cU || GU;
-        if (UU.isFiltered = jU, GU && !pU) {
-          UU.isStreamCollection = !0;
-          const RU = bR(UU.ref);
-          if (void 0 === RU.priority) {
-            const UU = MR.getStreamPriority(EU, gU);
-            void 0 !== UU && (RU.priority = UU)
+    function Qy(uu, Ru, yu, Eu) {
+      ! function(uu, Ru, yu) {
+        if (!Ru) return;
+        const Eu = Ru[pu],
+          Ku = !Eu._isSchema;
+        let Qu;
+        Ku ? (Ru = Eu.parent, yu = Eu.parentIndex, Qu = Ru?.[pu].metadata) : Qu = Eu.metadata;
+        const mu = (Qu?.[nu]?.includes(yu) ? ey : 0) | (Qu?.[tu]?.includes(yu) ? Ay : 0),
+          Ju = Eu.flags & Iy | mu,
+          Nu = uu.flags;
+        uu.flags = Nu | Ju;
+        Ju & ~Nu & Ay && (uu.reset(), uu.unreliableRecorder?.reset());
+        const Xu = uu.root?.types;
+        if (!Xu?.hasFilters) return;
+        const Vu = Qu?.[Iu]?.includes(yu) ?? !1,
+          ru = Qu?.[lu]?.includes(yu) ?? !1,
+          Bu = Eu.isFiltered || Vu || ru;
+        if (uu.isFiltered = Bu, ru && !Ku) {
+          uu.isStreamCollection = !0;
+          const Ru = DR(uu.ref);
+          if (void 0 === Ru.priority) {
+            const uu = oR.getStreamPriority(Qu, yu);
+            void 0 !== uu && (Ru.priority = uu)
           }
-          UU.root?.registerStream(UU.ref)
+          uu.root?.registerStream(uu.ref)
         }
-        if (jU) {
-          const RU = Tg(UU);
-          UU.isVisibilitySharedWithParent = tU.isFiltered && RU && !GU && (!cU || pU && EU[gU].tag !== Ct)
+        if (Bu) {
+          const Ru = Jy(uu);
+          uu.isVisibilitySharedWithParent = Eu.isFiltered && Ru && !ru && (!Vu || Ku && Qu[yu].tag !== SE)
         }
-      }(UU, RU, gU), UU.isFullStateOnly || (UU.has() && UU.root?.enqueueChangeTree(UU), UU.unreliableRecorder?.has() && UU.root?.enqueueUnreliable(UU), UU.has() || UU.unreliableRecorder?.has() || UU.root?.enqueueChangeTree(UU))
+      }(uu, Ru, yu), uu.isFullStateOnly || (uu.has() && uu.root?.enqueueChangeTree(uu), uu.unreliableRecorder?.has() && uu.root?.enqueueUnreliable(uu), uu.has() || uu.unreliableRecorder?.has() || uu.root?.enqueueChangeTree(uu))
     }
 
-    function Pg(UU) {
-      const RU = UU.pendingFilterRefresh;
-      for (let gU = 0; gU < RU.length; gU++) {
-        const UU = RU[gU];
-        0 !== (UU.flags & og) && qg(UU)
+    function my(uu) {
+      const Ru = uu.pendingFilterRefresh;
+      for (let yu = 0; yu < Ru.length; yu++) {
+        const uu = Ru[yu];
+        0 !== (uu.flags & My) && Ny(uu)
       }
-      RU.length = 0
+      Ru.length = 0
     }
 
-    function Tg(UU) {
-      return UU._isSchema || "string" !== typeof UU.refTarget[QU]
+    function Jy(uu) {
+      return uu._isSchema || "string" !== typeof uu.refTarget[Tu]
     }
 
-    function qg(UU) {
-      UU.flags &= ~og;
-      const RU = UU.root;
-      if (void 0 === RU || void 0 === UU.parentRef) return;
-      const gU = Tg(UU);
-      let tU = ug(UU, UU.parentRef, UU._parentIndex, gU);
-      for (let EU = UU.extraParents; void 0 !== EU && tU !== jg; EU = EU.next) tU |= ug(UU, EU.ref, EU.index, gU);
-      if (0 === tU) return;
-      UU.isVisibilitySharedWithParent = 0 !== (tU & Gg);
-      const pU = 0 === (tU & cg);
-      pU !== UU.isFiltered && (UU.isFiltered = pU, pU || UU.isFullStateOnly || (UU.forEachLiveWithCtx(UU, gg), UU.has() && RU.enqueueChangeTree(UU), UU.unreliableRecorder?.has() && RU.enqueueUnreliable(UU)), UU.forEachChildWithCtx(UU, Cg))
+    function Ny(uu) {
+      uu.flags &= ~My;
+      const Ru = uu.root;
+      if (void 0 === Ru || void 0 === uu.parentRef) return;
+      const yu = Jy(uu);
+      let Eu = xy(uu, uu.parentRef, uu._parentIndex, yu);
+      for (let Qu = uu.extraParents; void 0 !== Qu && Eu !== By; Qu = Qu.next) Eu |= xy(uu, Qu.ref, Qu.index, yu);
+      if (0 === Eu) return;
+      uu.isVisibilitySharedWithParent = 0 !== (Eu & ry);
+      const Ku = 0 === (Eu & Vy);
+      Ku !== uu.isFiltered && (uu.isFiltered = Ku, Ku || uu.isFullStateOnly || (uu.forEachLiveWithCtx(uu, yy), uu.has() && Ru.enqueueChangeTree(uu), uu.unreliableRecorder?.has() && Ru.enqueueUnreliable(uu)), uu.forEachChildWithCtx(uu, Sy))
     }
-    const Kg = 1,
-      cg = 2,
-      Gg = 4,
-      jg = Kg | cg | Gg;
+    const Xy = 1,
+      Vy = 2,
+      ry = 4,
+      By = Xy | Vy | ry;
 
-    function ug(UU, RU, gU, tU) {
-      const pU = RU[hU];
-      if (pU.root !== UU.root || ! function(UU, RU, gU) {
-          const tU = RU.refTarget;
-          if (RU.isArray) {
-            const RU = tU.items,
-              pU = RU[gU];
-            if (void 0 !== pU && pU[hU] === UU) return !0;
-            for (let gU = 0, tU = RU.length; gU < tU; gU++) {
-              const tU = RU[gU];
-              if (void 0 !== tU && tU[hU] === UU) return !0
+    function xy(uu, Ru, yu, Eu) {
+      const Ku = Ru[pu];
+      if (Ku.root !== uu.root || ! function(uu, Ru, yu) {
+          const Eu = Ru.refTarget;
+          if (Ru.isArray) {
+            const Ru = Eu.items,
+              Ku = Ru[yu];
+            if (void 0 !== Ku && Ku[pu] === uu) return !0;
+            for (let yu = 0, Eu = Ru.length; yu < Eu; yu++) {
+              const Eu = Ru[yu];
+              if (void 0 !== Eu && Eu[pu] === uu) return !0
             }
             return !1
           }
-          const pU = RU.getValue(gU);
-          return void 0 !== pU && pU[hU] === UU
-        }(UU, pU, gU)) return 0;
-      pU.flags & og && qg(pU);
-      let EU = Kg;
-      if (pU._isSchema) {
-        void 0 !== pU.encDescriptor.tags[gU] || pU.isFieldStream(gU) || (pU.isFiltered ? tU && (EU |= Gg) : EU |= cg)
-      } else if (pU.isFiltered) {
-        if (tU && !pU.isStreamCollection) {
-          const UU = pU.parent?.[hU];
-          (UU?._isSchema ? UU.encDescriptor.tags[pU.parentIndex] : void 0) !== Ct && (EU |= Gg)
+          const Ku = Ru.getValue(yu);
+          return void 0 !== Ku && Ku[pu] === uu
+        }(uu, Ku, yu)) return 0;
+      Ku.flags & My && Ny(Ku);
+      let Qu = Xy;
+      if (Ku._isSchema) {
+        void 0 !== Ku.encDescriptor.tags[yu] || Ku.isFieldStream(yu) || (Ku.isFiltered ? Eu && (Qu |= ry) : Qu |= Vy)
+      } else if (Ku.isFiltered) {
+        if (Eu && !Ku.isStreamCollection) {
+          const uu = Ku.parent?.[pu];
+          (uu?._isSchema ? uu.encDescriptor.tags[Ku.parentIndex] : void 0) !== SE && (Qu |= ry)
         }
-      } else EU |= cg;
-      return EU
+      } else Qu |= Vy;
+      return Qu
     }
-    const Cg = (UU, RU, gU) => {
-      qg(RU)
+    const Sy = (uu, Ru, yu) => {
+      Ny(Ru)
     };
 
-    function hg(UU, RU, gU, tU) {
-      if (UU.addParent(RU, tU), !gU) return;
-      const pU = gU.add(UU);
-      gU !== UU.root && (UU.root = gU, Eg(UU, RU, tU));
-      const EU = RU?.[hU];
-      if (void 0 !== EU && void 0 !== EU.subscribedViews && void 0 !== RU[QU] && function(UU, RU, gU, tU) {
-          const pU = UU.subscribedViews;
-          if (void 0 === pU) return;
-          const EU = UU.isStreamCollection,
-            PU = EU ? UU.ref : void 0,
-            TU = EU ? void 0 : gU[hU];
-          for (let qU = 0, KU = pU.length; qU < KU; qU++) {
-            let UU = pU[qU];
-            for (; 0 !== UU;) {
-              const gU = UU & -UU;
-              UU ^= gU;
-              const KU = 32 * qU + (31 - Math.clz32(gU)),
-                cU = tU.activeViews.get(KU),
-                GU = cU?.deref();
-              void 0 !== GU ? EU ? BR(PU, KU, RU) : void 0 !== TU && GU.markVisible(TU) : pU[qU] &= ~gU
+    function py(uu, Ru, yu, Eu) {
+      if (uu.addParent(Ru, Eu), !yu) return;
+      const Ku = yu.add(uu);
+      yu !== uu.root && (uu.root = yu, Qy(uu, Ru, Eu));
+      const Qu = Ru?.[pu];
+      if (void 0 !== Qu && void 0 !== Qu.subscribedViews && void 0 !== Ru[Tu] && function(uu, Ru, yu, Eu) {
+          const Ku = uu.subscribedViews;
+          if (void 0 === Ku) return;
+          const Qu = uu.isStreamCollection,
+            mu = Qu ? uu.ref : void 0,
+            Ju = Qu ? void 0 : yu[pu];
+          for (let Nu = 0, Xu = Ku.length; Nu < Xu; Nu++) {
+            let uu = Ku[Nu];
+            for (; 0 !== uu;) {
+              const yu = uu & -uu;
+              uu ^= yu;
+              const Xu = 32 * Nu + (31 - Math.clz32(yu)),
+                Vu = Eu.activeViews.get(Xu),
+                ru = Vu?.deref();
+              void 0 !== ru ? Qu ? nR(mu, Xu, Ru) : void 0 !== Ju && ru.markVisible(Ju) : Ku[Nu] &= ~yu
             }
           }
-        }(EU, tU, UU.ref, gU), pU) {
-        let RU = fg[xg];
-        void 0 === RU && (RU = {
+        }(Qu, Eu, uu.ref, yu), Ku) {
+        let Ru = Hy[dy];
+        void 0 === Ru && (Ru = {
           parentRef: void 0,
           root: void 0
-        }, fg[xg] = RU), RU.parentRef = UU.ref, RU.root = gU, xg++, eg(UU, RU, mg), xg--
+        }, Hy[dy] = Ru), Ru.parentRef = uu.ref, Ru.root = yu, dy++, Wy(uu, Ru, by), dy--
       }
     }
 
-    function Qg(UU, RU, gU) {
-      UU(RU, gU)
+    function Ty(uu, Ru, yu) {
+      uu(Ru, yu)
     }
 
-    function eg(UU, RU, gU) {
-      const tU = UU.refTarget;
-      if (tU[QU]) {
-        if ("string" !== typeof tU[QU]) {
-          const UU = tU.items;
-          if (void 0 !== UU)
-            for (let tU = 0, pU = UU.length; tU < pU; tU++) {
-              const pU = UU[tU];
-              pU && gU(RU, pU[hU], tU)
+    function Wy(uu, Ru, yu) {
+      const Eu = uu.refTarget;
+      if (Eu[Tu]) {
+        if ("string" !== typeof Eu[Tu]) {
+          const uu = Eu.items;
+          if (void 0 !== uu)
+            for (let Eu = 0, Ku = uu.length; Eu < Ku; Eu++) {
+              const Ku = uu[Eu];
+              Ku && yu(Ru, Ku[pu], Eu)
             } else {
-              const UU = tU.$items,
-                pU = tU._collectionIndexes;
-              for (const tU of UU.keys()) {
-                const EU = UU.get(tU);
-                EU && gU(RU, EU[hU], pU?.[tU] ?? tU)
+              const uu = Eu.$items,
+                Ku = Eu._collectionIndexes;
+              for (const Eu of uu.keys()) {
+                const Qu = uu.get(Eu);
+                Qu && yu(Ru, Qu[pu], Ku?.[Eu] ?? Eu)
               }
             }
         }
       } else {
-        const pU = UU.metadata,
-          EU = pU?.[oU];
-        if (!EU) return;
-        const PU = UU.encDescriptor.names;
-        for (let UU = 0, TU = EU.length; UU < TU; UU++) {
-          const pU = EU[UU],
-            TU = tU[PU[pU]];
-          TU && gU(RU, TU[hU], pU)
+        const Ku = uu.metadata,
+          Qu = Ku?.[Mu];
+        if (!Qu) return;
+        const mu = uu.encDescriptor.names;
+        for (let uu = 0, Ju = Qu.length; uu < Ju; uu++) {
+          const Ku = Qu[uu],
+            Ju = Eu[mu[Ku]];
+          Ju && yu(Ru, Ju[pu], Ku)
         }
       }
     }
 
-    function Wg(UU, RU, gU) {
-      RU.root !== UU ? RU.setRoot(UU) : UU.add(RU)
+    function jy(uu, Ru, yu) {
+      Ru.root !== uu ? Ru.setRoot(uu) : uu.add(Ru)
     }
-    const fg = [];
-    let xg = 0;
+    const Hy = [];
+    let dy = 0;
 
-    function mg(UU, RU, gU) {
-      if (RU.root === UU.root) return UU.root.add(RU), void UU.root.moveNextToParent(RU);
-      RU.setParent(UU.parentRef, UU.root, gU)
+    function by(uu, Ru, yu) {
+      if (Ru.root === uu.root) return uu.root.add(Ru), void uu.root.moveNextToParent(Ru);
+      Ru.setParent(uu.parentRef, uu.root, yu)
     }
 
-    function Ig(UU, RU, gU) {
-      const tU = (3 & gU) << 3;
-      return gU < 4 ? UU >>> tU & 255 : RU >>> tU & 255
+    function Cy(uu, Ru, yu) {
+      const Eu = (3 & yu) << 3;
+      return yu < 4 ? uu >>> Eu & 255 : Ru >>> Eu & 255
     }
-    const Jg = (UU, RU, gU) => UU(RU, gU);
-    const wg = 16,
-      ng = 32,
-      bg = 128,
-      og = 256,
-      Zg = wg | ng;
-    class ag {
+    const ky = (uu, Ru, yu) => uu(Ru, yu);
+    const ey = 16,
+      Ay = 32,
+      Dy = 128,
+      My = 256,
+      Iy = ey | Ay;
+    class Gy {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(UU) {
-        this.flags = UU ? 1 | this.flags : -2 & this.flags
+      set isFiltered(uu) {
+        this.flags = uu ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(UU) {
-        this.flags = UU ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(uu) {
+        this.flags = uu ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(UU) {
-        this.flags = UU ? 4 | this.flags : -5 & this.flags
+      set isNew(uu) {
+        this.flags = uu ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(UU) {
-        this.flags = UU ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(uu) {
+        this.flags = uu ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & wg)
+        return 0 !== (this.flags & ey)
       }
-      set isPatchOnly(UU) {
-        this.flags = UU ? this.flags | wg : this.flags & ~wg
+      set isPatchOnly(uu) {
+        this.flags = uu ? this.flags | ey : this.flags & ~ey
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & ng)
+        return 0 !== (this.flags & Ay)
       }
-      set isFullStateOnly(UU) {
-        this.flags = UU ? this.flags | ng : this.flags & ~ng
+      set isFullStateOnly(uu) {
+        this.flags = uu ? this.flags | Ay : this.flags & ~Ay
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(UU) {
-        this.flags = UU ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(uu) {
+        this.flags = uu ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & bg)
+        return 0 !== (this.flags & Dy)
       }
-      set needsRestage(UU) {
-        this.flags = UU ? this.flags | bg : -129 & this.flags
+      set needsRestage(uu) {
+        this.flags = uu ? this.flags | Dy : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new LR(this.metadata?.[bU] ?? 0) : new NR), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new OR(this.metadata?.[Du] ?? 0) : new vR), this.unreliableRecorder
       }
-      isFieldUnreliable(UU) {
-        const RU = this.encDescriptor;
-        return !!RU.hasAnyUnreliable && (UU < 32 ? 0 !== (RU.unreliableBitmask & 1 << UU) : MR.hasUnreliableAtIndex(this.metadata, UU))
+      isFieldUnreliable(uu) {
+        const Ru = this.encDescriptor;
+        return !!Ru.hasAnyUnreliable && (uu < 32 ? 0 !== (Ru.unreliableBitmask & 1 << uu) : oR.hasUnreliableAtIndex(this.metadata, uu))
       }
-      isFieldFullStateOnly(UU) {
+      isFieldFullStateOnly(uu) {
         if (this.isFullStateOnly) return !0;
-        const RU = this.encDescriptor;
-        return !!RU.hasAnyFullStateOnly && (UU < 32 ? 0 !== (RU.fullStateOnlyBitmask & 1 << UU) : MR.hasFullStateOnlyAtIndex(this.metadata, UU))
+        const Ru = this.encDescriptor;
+        return !!Ru.hasAnyFullStateOnly && (uu < 32 ? 0 !== (Ru.fullStateOnlyBitmask & 1 << uu) : oR.hasFullStateOnlyAtIndex(this.metadata, uu))
       }
-      isFieldStream(UU) {
-        const RU = this.encDescriptor;
-        return !!RU.hasAnyStream && (UU < 32 ? 0 !== (RU.streamBitmask & 1 << UU) : MR.hasStreamAtIndex(this.metadata, UU))
+      isFieldStream(uu) {
+        const Ru = this.encDescriptor;
+        return !!Ru.hasAnyStream && (uu < 32 ? 0 !== (Ru.streamBitmask & 1 << uu) : oR.hasStreamAtIndex(this.metadata, uu))
       }
-      constructor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU;
-        this.ref = UU, this.refTarget = RU;
-        const gU = Ug(UU);
-        this.encDescriptor = gU, this.metadata = gU.metadata;
-        const tU = gU.isSchema;
-        if (this._isSchema = tU, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, tU) {
-          const UU = this.metadata?.[bU] ?? 0;
-          UU > 7 && (this.ops = new Uint8Array(UU + 1))
+      constructor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
+        this.ref = uu, this.refTarget = Ru;
+        const yu = uy(uu);
+        this.encDescriptor = yu, this.metadata = yu.metadata;
+        const Eu = yu.isSchema;
+        if (this._isSchema = Eu, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Eu) {
+          const uu = this.metadata?.[Du] ?? 0;
+          uu > 7 && (this.ops = new Uint8Array(uu + 1))
         } else this.collDirty = new Map
       }
-      _opAt(UU) {
-        const RU = this.ops;
-        if (void 0 !== RU) return RU[UU];
-        const gU = (3 & UU) << 3;
-        return UU < 4 ? this.opsLow >>> gU & 255 : this.opsHigh >>> gU & 255
+      _opAt(uu) {
+        const Ru = this.ops;
+        if (void 0 !== Ru) return Ru[uu];
+        const yu = (3 & uu) << 3;
+        return uu < 4 ? this.opsLow >>> yu & 255 : this.opsHigh >>> yu & 255
       }
-      _opPut(UU, RU) {
-        const gU = this.ops;
-        if (void 0 !== gU) return void(gU[UU] = RU);
-        const tU = (3 & UU) << 3,
-          pU = ~(255 << tU);
-        UU < 4 ? this.opsLow = this.opsLow & pU | RU << tU : this.opsHigh = this.opsHigh & pU | RU << tU
+      _opPut(uu, Ru) {
+        const yu = this.ops;
+        if (void 0 !== yu) return void(yu[uu] = Ru);
+        const Eu = (3 & uu) << 3,
+          Ku = ~(255 << Eu);
+        uu < 4 ? this.opsLow = this.opsLow & Ku | Ru << Eu : this.opsHigh = this.opsHigh & Ku | Ru << Eu
       }
-      _markDirty(UU) {
-        UU < 32 ? this.dirtyLow |= 1 << UU : this.dirtyHigh |= 1 << UU - 32
+      _markDirty(uu) {
+        uu < 32 ? this.dirtyLow |= 1 << uu : this.dirtyHigh |= 1 << uu - 32
       }
-      record(UU, RU) {
+      record(uu, Ru) {
         if (this._isSchema) {
-          const gU = this._opAt(UU);
-          0 === gU ? this._opPut(UU, RU) : (gU === pU.DELETE || gU === pU.ADD && RU === pU.DELETE_AND_ADD) && this._opPut(UU, pU.DELETE_AND_ADD), this._markDirty(UU)
+          const yu = this._opAt(uu);
+          0 === yu ? this._opPut(uu, Ru) : (yu === Ku.DELETE || yu === Ku.ADD && Ru === Ku.DELETE_AND_ADD) && this._opPut(uu, Ku.DELETE_AND_ADD), this._markDirty(uu)
         } else {
-          const gU = this.collDirty,
-            tU = gU.get(UU);
-          let EU;
-          EU = void 0 === tU ? RU : tU === pU.DELETE || tU === pU.ADD && RU === pU.DELETE_AND_ADD ? pU.DELETE_AND_ADD : tU, gU.set(UU, EU)
+          const yu = this.collDirty,
+            Eu = yu.get(uu);
+          let Qu;
+          Qu = void 0 === Eu ? Ru : Eu === Ku.DELETE || Eu === Ku.ADD && Ru === Ku.DELETE_AND_ADD ? Ku.DELETE_AND_ADD : Eu, yu.set(uu, Qu)
         }
       }
-      recordDelete(UU, RU) {
-        this._isSchema ? (this._opPut(UU, RU), this._markDirty(UU)) : this.collDirty.set(UU, RU)
+      recordDelete(uu, Ru) {
+        this._isSchema ? (this._opPut(uu, Ru), this._markDirty(uu)) : this.collDirty.set(uu, Ru)
       }
-      recordRaw(UU, RU) {
-        this._isSchema ? (this._opPut(UU, RU), this._markDirty(UU)) : this.collDirty.set(UU, RU)
+      recordRaw(uu, Ru) {
+        this._isSchema ? (this._opPut(uu, Ru), this._markDirty(uu)) : this.collDirty.set(uu, Ru)
       }
-      recordPure(UU) {
+      recordPure(uu) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, UU])
+        (this.collPureOps ??= []).push([this.collDirty.size, uu])
       }
-      operationAt(UU) {
+      operationAt(uu) {
         if (this._isSchema) {
-          const RU = this._opAt(UU);
-          return 0 === RU ? void 0 : RU
+          const Ru = this._opAt(uu);
+          return 0 === Ru ? void 0 : Ru
         }
-        return this.collDirty.get(UU)
+        return this.collDirty.get(uu)
       }
-      setOperationAt(UU, RU) {
-        if (this._isSchema) this._opPut(UU, RU);
+      setOperationAt(uu, Ru) {
+        if (this._isSchema) this._opPut(uu, Ru);
         else {
-          const gU = this.collDirty;
-          gU.has(UU) && gU.set(UU, RU)
+          const yu = this.collDirty;
+          yu.has(uu) && yu.set(uu, Ru)
         }
       }
-      forEach(UU) {
-        this.forEachWithCtx(UU, Jg)
+      forEach(uu) {
+        this.forEachWithCtx(uu, ky)
       }
-      forEachWithCtx(UU, RU) {
+      forEachWithCtx(uu, Ru) {
         if (this._isSchema) {
-          let gU = this.dirtyLow,
-            tU = this.dirtyHigh;
-          const pU = this.ops;
-          if (void 0 !== pU) {
-            for (; 0 !== gU;) {
-              const tU = gU & -gU,
-                EU = 31 - Math.clz32(tU);
-              gU ^= tU, RU(UU, EU, pU[EU])
+          let yu = this.dirtyLow,
+            Eu = this.dirtyHigh;
+          const Ku = this.ops;
+          if (void 0 !== Ku) {
+            for (; 0 !== yu;) {
+              const Eu = yu & -yu,
+                Qu = 31 - Math.clz32(Eu);
+              yu ^= Eu, Ru(uu, Qu, Ku[Qu])
             }
-            for (; 0 !== tU;) {
-              const gU = tU & -tU,
-                EU = 31 - Math.clz32(gU) + 32;
-              tU ^= gU, RU(UU, EU, pU[EU])
+            for (; 0 !== Eu;) {
+              const yu = Eu & -Eu,
+                Qu = 31 - Math.clz32(yu) + 32;
+              Eu ^= yu, Ru(uu, Qu, Ku[Qu])
             }
           } else {
-            const tU = this.opsLow,
-              pU = this.opsHigh;
-            for (; 0 !== gU;) {
-              const EU = gU & -gU,
-                PU = 31 - Math.clz32(EU);
-              gU ^= EU, RU(UU, PU, Ig(tU, pU, PU))
+            const Eu = this.opsLow,
+              Ku = this.opsHigh;
+            for (; 0 !== yu;) {
+              const Qu = yu & -yu,
+                mu = 31 - Math.clz32(Qu);
+              yu ^= Qu, Ru(uu, mu, Cy(Eu, Ku, mu))
             }
           }
           return
         }
-        const gU = this.collDirty,
-          tU = this.collPureOps;
-        if (void 0 !== tU && tU.length > 0) {
-          let pU = 0,
-            EU = 0;
-          for (const [PU, TU] of gU) {
-            for (; pU < tU.length && tU[pU][0] <= EU;) {
-              const gU = tU[pU++][1];
-              RU(UU, -gU, gU)
+        const yu = this.collDirty,
+          Eu = this.collPureOps;
+        if (void 0 !== Eu && Eu.length > 0) {
+          let Ku = 0,
+            Qu = 0;
+          for (const [mu, Ju] of yu) {
+            for (; Ku < Eu.length && Eu[Ku][0] <= Qu;) {
+              const yu = Eu[Ku++][1];
+              Ru(uu, -yu, yu)
             }
-            RU(UU, PU, TU), EU++
+            Ru(uu, mu, Ju), Qu++
           }
-          for (; pU < tU.length;) {
-            const gU = tU[pU++][1];
-            RU(UU, -gU, gU)
+          for (; Ku < Eu.length;) {
+            const yu = Eu[Ku++][1];
+            Ru(uu, -yu, yu)
           }
         } else
-          for (const [pU, EU] of gU) RU(UU, pU, EU)
+          for (const [Ku, Qu] of yu) Ru(uu, Ku, Qu)
       }
       size() {
-        return this._isSchema ? lR(this.dirtyLow) + lR(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? aR(this.dirtyLow) + aR(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(UU, RU) {
+      insertAt(uu, Ru) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const gU = this.collDirty,
-          tU = new Map,
-          EU = !this.paused && !this.isFullStateOnly;
-        if (UU > 0)
-          for (const [pU, PU] of gU) pU < UU && tU.set(pU, PU);
-        if (EU)
-          for (let PU = 0; PU < RU; PU++) tU.set(UU + PU, pU.ADD);
-        for (const [pU, PU] of gU) pU >= UU && tU.set(pU + RU, PU);
-        this.collDirty = tU, EU && this.root?.enqueueChangeTree(this)
+        const yu = this.collDirty,
+          Eu = new Map,
+          Qu = !this.paused && !this.isFullStateOnly;
+        if (uu > 0)
+          for (const [Ku, mu] of yu) Ku < uu && Eu.set(Ku, mu);
+        if (Qu)
+          for (let mu = 0; mu < Ru; mu++) Eu.set(uu + mu, Ku.ADD);
+        for (const [Ku, mu] of yu) Ku >= uu && Eu.set(Ku + Ru, mu);
+        this.collDirty = Eu, Qu && this.root?.enqueueChangeTree(this)
       }
-      removeAt(UU, RU) {
+      removeAt(uu, Ru) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const gU = this.collDirty,
-          tU = UU + RU;
-        let pU = !1;
-        for (const PU of gU.keys())
-          if (PU >= tU) {
-            pU = !0;
+        const yu = this.collDirty,
+          Eu = uu + Ru;
+        let Ku = !1;
+        for (const mu of yu.keys())
+          if (mu >= Eu) {
+            Ku = !0;
             break
-          } if (!pU) {
-          for (let RU = UU; RU < tU; RU++) gU.delete(RU);
+          } if (!Ku) {
+          for (let Ru = uu; Ru < Eu; Ru++) yu.delete(Ru);
           return
         }
-        const EU = new Map;
-        for (const [PU, TU] of gU) PU < UU ? EU.set(PU, TU) : PU >= tU && EU.set(PU - RU, TU);
-        this.collDirty = EU
+        const Qu = new Map;
+        for (const [mu, Ju] of yu) mu < uu ? Qu.set(mu, Ju) : mu >= Eu && Qu.set(mu - Ru, Ju);
+        this.collDirty = Qu
       }
-      unshift(UU) {
-        this.insertAt(0, UU)
+      unshift(uu) {
+        this.insertAt(0, uu)
       }
-      setRoot(UU) {
-        ! function(UU, RU) {
-          UU.root = RU;
-          const gU = RU.add(UU);
-          Eg(UU, UU.parent, UU.parentIndex), gU && eg(UU, RU, Wg)
-        }(this, UU)
+      setRoot(uu) {
+        ! function(uu, Ru) {
+          uu.root = Ru;
+          const yu = Ru.add(uu);
+          Qy(uu, uu.parent, uu.parentIndex), yu && Wy(uu, Ru, jy)
+        }(this, uu)
       }
-      setParent(UU, RU, gU) {
-        hg(this, UU, RU, gU)
+      setParent(uu, Ru, yu) {
+        py(this, uu, Ru, yu)
       }
-      forEachChild(UU) {
-        eg(this, UU, Qg)
+      forEachChild(uu) {
+        Wy(this, uu, Ty)
       }
-      forEachChildWithCtx(UU, RU) {
-        eg(this, UU, RU)
+      forEachChildWithCtx(uu, Ru) {
+        Wy(this, uu, Ru)
       }
-      forEachLive(UU) {
-        pg(this, UU, tg)
+      forEachLive(uu) {
+        Ky(this, uu, Ey)
       }
-      forEachLiveWithCtx(UU, RU) {
-        pg(this, UU, RU)
+      forEachLiveWithCtx(uu, Ru) {
+        Ky(this, uu, Ru)
       }
-      operation(UU) {
-        this.paused || this.isFullStateOnly || (this.recordPure(UU), this.root?.enqueueChangeTree(this))
+      operation(uu) {
+        this.paused || this.isFullStateOnly || (this.recordPure(uu), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(UU, RU, gU) {
-        if (!this.paused && !this.isFieldFullStateOnly(UU)) {
-          if (this.isFieldUnreliable(UU) && !this.isNew) {
-            const tU = this.ensureUnreliableRecorder();
-            return gU ? tU.recordRaw(UU, RU) : tU.record(UU, RU), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(uu, Ru, yu) {
+        if (!this.paused && !this.isFieldFullStateOnly(uu)) {
+          if (this.isFieldUnreliable(uu) && !this.isNew) {
+            const Eu = this.ensureUnreliableRecorder();
+            return yu ? Eu.recordRaw(uu, Ru) : Eu.record(uu, Ru), void this.root?.enqueueUnreliable(this)
           }
-          gU ? this.recordRaw(UU, RU) : this.record(UU, RU), this.root?.enqueueChangeTree(this)
+          yu ? this.recordRaw(uu, Ru) : this.record(uu, Ru), this.root?.enqueueChangeTree(this)
         }
       }
-      change(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pU.ADD;
-        this._routeAndRecord(UU, RU, !1)
+      change(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ku.ADD;
+        this._routeAndRecord(uu, Ru, !1)
       }
-      indexedOperation(UU, RU) {
-        this._routeAndRecord(UU, RU, !0)
+      indexedOperation(uu, Ru) {
+        this._routeAndRecord(uu, Ru, !0)
       }
-      getChange(UU) {
-        return this.operationAt(UU)
+      getChange(uu) {
+        return this.operationAt(uu)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(UU) {
-        const RU = this.paused;
+      untracked(uu) {
+        const Ru = this.paused;
         this.paused = !0;
         try {
-          return UU()
+          return uu()
         } finally {
-          this.paused = RU
+          this.paused = Ru
         }
       }
-      markDirty(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pU.ADD;
-        const gU = this.paused;
+      markDirty(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ku.ADD;
+        const yu = this.paused;
         this.paused = !1;
         try {
-          this.change(UU, RU)
+          this.change(uu, Ru)
         } finally {
-          this.paused = gU
+          this.paused = yu
         }
       }
-      getValue(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[jU](UU, RU)
+      getValue(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[Bu](uu, Ru)
       }
-      delete(UU, RU) {
-        if (void 0 === UU) {
+      delete(uu, Ru) {
+        if (void 0 === uu) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${UU}'`)
-          } catch (Pp) {
-            console.warn(Pp)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${uu}'`)
+          } catch (QK) {
+            console.warn(QK)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(UU)) return this.getValue(UU);
-        const gU = this.isFieldUnreliable(UU) && !this.isNew;
-        gU ? this.ensureUnreliableRecorder().recordDelete(UU, RU ?? pU.DELETE) : this.recordDelete(UU, RU ?? pU.DELETE);
-        const tU = this.getValue(UU);
-        return tU && tU[hU] && this.root?.remove(tU[hU]), gU ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), tU
+        if (this.paused || this.isFieldFullStateOnly(uu)) return this.getValue(uu);
+        const yu = this.isFieldUnreliable(uu) && !this.isNew;
+        yu ? this.ensureUnreliableRecorder().recordDelete(uu, Ru ?? Ku.DELETE) : this.recordDelete(uu, Ru ?? Ku.DELETE);
+        const Eu = this.getValue(uu);
+        return Eu && Eu[pu] && this.root?.remove(Eu[pu]), yu ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Eu
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[WU]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[ju]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[WU]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[ju]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[WU]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[ju]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const UU = UU => {
-          if (UU < 0) return;
-          const RU = this.getValue(UU);
-          RU && RU[hU] && RU[hU].discardAll()
+        const uu = uu => {
+          if (uu < 0) return;
+          const Ru = this.getValue(uu);
+          Ru && Ru[pu] && Ru[pu].discardAll()
         };
-        this.forEach(UU), this.unreliableRecorder?.forEach(UU), this.discard()
+        this.forEach(uu), this.unreliableRecorder?.forEach(uu), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(UU, RU) {
-        ! function(UU, RU, gU) {
-          if (UU.parentRef) {
-            if (UU.parentRef[hU] === RU[hU]) return void(UU._parentIndex = gU);
-            if (Rg(UU, ((UU, gU) => UU[hU] === RU[hU]))) return void(UU._parentIndex = gU)
+      addParent(uu, Ru) {
+        ! function(uu, Ru, yu) {
+          if (uu.parentRef) {
+            if (uu.parentRef[pu] === Ru[pu]) return void(uu._parentIndex = yu);
+            if (Ry(uu, ((uu, yu) => uu[pu] === Ru[pu]))) return void(uu._parentIndex = yu)
           }
-          void 0 === UU.parentRef ? (UU.parentRef = RU, UU._parentIndex = gU) : (UU.extraParents = {
-            ref: UU.parentRef,
-            index: UU._parentIndex,
-            next: UU.extraParents
-          }, UU.parentRef = RU, UU._parentIndex = gU)
-        }(this, UU, RU)
+          void 0 === uu.parentRef ? (uu.parentRef = Ru, uu._parentIndex = yu) : (uu.extraParents = {
+            ref: uu.parentRef,
+            index: uu._parentIndex,
+            next: uu.extraParents
+          }, uu.parentRef = Ru, uu._parentIndex = yu)
+        }(this, uu, Ru)
       }
-      setParentIndex(UU, RU) {
-        ! function(UU, RU, gU) {
-          if (void 0 !== UU.extraParents)
-            if (UU.parentRef[hU] !== RU[hU]) {
-              for (let tU = UU.extraParents; void 0 !== tU; tU = tU.next)
-                if (tU.ref[hU] === RU[hU]) return void(tU.index = gU)
-            } else UU._parentIndex = gU;
-          else UU._parentIndex = gU
-        }(this, UU, RU)
+      setParentIndex(uu, Ru) {
+        ! function(uu, Ru, yu) {
+          if (void 0 !== uu.extraParents)
+            if (uu.parentRef[pu] !== Ru[pu]) {
+              for (let Eu = uu.extraParents; void 0 !== Eu; Eu = Eu.next)
+                if (Eu.ref[pu] === Ru[pu]) return void(Eu.index = yu)
+            } else uu._parentIndex = yu;
+          else uu._parentIndex = yu
+        }(this, uu, Ru)
       }
       removeParent() {
-        return function(UU, RU) {
-          if (UU.parentRef && UU.parentRef[hU] === RU[hU]) return UU.extraParents ? (UU.parentRef = UU.extraParents.ref, UU._parentIndex = UU.extraParents.index, UU.extraParents = UU.extraParents.next) : (UU.parentRef = void 0, UU._parentIndex = void 0), !0;
-          let gU = UU.extraParents,
-            tU = null;
-          for (; gU;) {
-            if (gU.ref[hU] === RU[hU]) return tU ? tU.next = gU.next : UU.extraParents = gU.next, !0;
-            tU = gU, gU = gU.next
+        return function(uu, Ru) {
+          if (uu.parentRef && uu.parentRef[pu] === Ru[pu]) return uu.extraParents ? (uu.parentRef = uu.extraParents.ref, uu._parentIndex = uu.extraParents.index, uu.extraParents = uu.extraParents.next) : (uu.parentRef = void 0, uu._parentIndex = void 0), !0;
+          let yu = uu.extraParents,
+            Eu = null;
+          for (; yu;) {
+            if (yu.ref[pu] === Ru[pu]) return Eu ? Eu.next = yu.next : uu.extraParents = yu.next, !0;
+            Eu = yu, yu = yu.next
           }
-          return void 0 === UU.parentRef
+          return void 0 === uu.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(UU) {
-        return function(UU, RU) {
-          if (void 0 !== UU.parentRef && RU(UU.parentRef, UU._parentIndex)) return {
-            ref: UU.parentRef,
-            index: UU._parentIndex
+      findParent(uu) {
+        return function(uu, Ru) {
+          if (void 0 !== uu.parentRef && Ru(uu.parentRef, uu._parentIndex)) return {
+            ref: uu.parentRef,
+            index: uu._parentIndex
           };
-          for (let gU = UU.extraParents; void 0 !== gU; gU = gU.next)
-            if (RU(gU.ref, gU.index)) return {
-              ref: gU.ref,
-              index: gU.index
+          for (let yu = uu.extraParents; void 0 !== yu; yu = yu.next)
+            if (Ru(yu.ref, yu.index)) return {
+              ref: yu.ref,
+              index: yu.index
             }
-        }(this, UU)
+        }(this, uu)
       }
-      hasParent(UU) {
-        return Rg(this, UU)
+      hasParent(uu) {
+        return Ry(this, uu)
       }
-      indexInParent(UU) {
-        return function(UU, RU) {
-          if (UU.parentRef && UU.parentRef[hU] === RU[hU]) return UU._parentIndex;
-          for (let gU = UU.extraParents; void 0 !== gU; gU = gU.next)
-            if (gU.ref[hU] === RU[hU]) return gU.index
-        }(this, UU)
+      indexInParent(uu) {
+        return function(uu, Ru) {
+          if (uu.parentRef && uu.parentRef[pu] === Ru[pu]) return uu._parentIndex;
+          for (let yu = uu.extraParents; void 0 !== yu; yu = yu.next)
+            if (yu.ref[pu] === Ru[pu]) return yu.index
+        }(this, uu)
       }
       getAllParents() {
-        return function(UU) {
-          const RU = [];
-          UU.parentRef && RU.push({
-            ref: UU.parentRef,
-            index: UU._parentIndex
+        return function(uu) {
+          const Ru = [];
+          uu.parentRef && Ru.push({
+            ref: uu.parentRef,
+            index: uu._parentIndex
           });
-          let gU = UU.extraParents;
-          for (; gU;) RU.push({
-            ref: gU.ref,
-            index: gU.index
-          }), gU = gU.next;
-          return RU
+          let yu = uu.extraParents;
+          for (; yu;) Ru.push({
+            ref: yu.ref,
+            index: yu.index
+          }), yu = yu.next;
+          return Ru
         }(this)
       }
     }
-    class Yg {
+    class Uy {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(UU) {
-        this.ref = UU
+      constructor(uu) {
+        this.ref = uu
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(UU) {
-        return UU()
+      untracked(uu) {
+        return uu()
       }
       markDirty() {}
-      forEachChild(UU) {
-        const RU = this.ref;
-        if (RU[QU]) {
-          if ("string" !== typeof RU[QU])
-            for (const [gU, tU] of RU.entries()) tU && UU(tU[hU], RU._collectionIndexes?.[gU] ?? gU);
+      forEachChild(uu) {
+        const Ru = this.ref;
+        if (Ru[Tu]) {
+          if ("string" !== typeof Ru[Tu])
+            for (const [yu, Eu] of Ru.entries()) Eu && uu(Eu[pu], Ru._collectionIndexes?.[yu] ?? yu);
           return
         }
-        const gU = RU.constructor,
-          tU = gU?.[Symbol.metadata];
-        if (!tU) return;
-        const pU = tU[oU] ?? [];
-        for (let EU = 0; EU < pU.length; EU++) {
-          const gU = pU[EU],
-            PU = RU[tU[gU].name];
-          PU && UU(PU[hU], gU)
+        const yu = Ru.constructor,
+          Eu = yu?.[Symbol.metadata];
+        if (!Eu) return;
+        const Ku = Eu[Mu] ?? [];
+        for (let Qu = 0; Qu < Ku.length; Qu++) {
+          const yu = Ku[Qu],
+            mu = Ru[Eu[yu].name];
+          mu && uu(mu[pu], yu)
         }
       }
-      forEachChildWithCtx(UU, RU) {
-        this.forEachChild(((gU, tU) => RU(UU, gU, tU)))
+      forEachChildWithCtx(uu, Ru) {
+        this.forEachChild(((yu, Eu) => Ru(uu, yu, Eu)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function Bg(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU;
-      var gU;
-      Object.defineProperty(UU, hU, {
-        value: (gU = RU, new Yg(gU)),
+    function ny(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
+      var yu;
+      Object.defineProperty(uu, pu, {
+        value: (yu = Ru, new Uy(yu)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function Vg(UU, RU, gU, tU, EU, PU, qU) {
-      void 0 !== qU ? qU(RU, tU, PU) : "string" === typeof gU ? RR[gU]?.(RU, tU, PU) : null != gU[Symbol.metadata] ? (RR.number(RU, tU[TU], PU), (EU & pU.ADD) === pU.ADD && UU.tryEncodeTypeId(RU, gU, tU.constructor, PU)) : RR.number(RU, tU[TU], PU)
+    function sy(uu, Ru, yu, Eu, Qu, mu, Nu) {
+      void 0 !== Nu ? Nu(Ru, Eu, mu) : "string" === typeof yu ? RR[yu]?.(Ru, Eu, mu) : null != yu[Symbol.metadata] ? (RR.number(Ru, Eu[Ju], mu), (Qu & Ku.ADD) === Ku.ADD && uu.tryEncodeTypeId(Ru, yu, Eu.constructor, mu)) : RR.number(Ru, Eu[Ju], mu)
     }
-    const rg = function(UU, RU, gU, tU, EU, PU, TU, qU) {
-        if (RU[PU.offset++] = 255 & (tU | EU), EU === pU.DELETE) return;
-        const KU = gU.encDescriptor,
-          cU = gU.ref,
-          GU = cU[mU][tU] ?? cU[KU.names[tU]];
-        Vg(UU, RU, KU.types[tU], GU, EU, PU, KU.encoders[tU])
+    const ty = function(uu, Ru, yu, Eu, Qu, mu, Ju, Nu) {
+        if (Ru[mu.offset++] = 255 & (Eu | Qu), Qu === Ku.DELETE) return;
+        const Xu = yu.encDescriptor,
+          Vu = yu.ref,
+          ru = Vu[bu][Eu] ?? Vu[Xu.names[Eu]];
+        sy(uu, Ru, Xu.types[Eu], ru, Qu, mu, Xu.encoders[Eu])
       },
-      Xg = function(UU, RU, gU, tU, EU, PU) {
-        if (RU[PU.offset++] = 255 & EU, RR.number(RU, tU, PU), EU === pU.DELETE) return;
-        const TU = gU.ref;
-        if ((EU & pU.ADD) === pU.ADD) {
-          const UU = TU.$indexes.get(tU);
-          RR.string(RU, UU, PU)
+      ly = function(uu, Ru, yu, Eu, Qu, mu) {
+        if (Ru[mu.offset++] = 255 & Qu, RR.number(Ru, Eu, mu), Qu === Ku.DELETE) return;
+        const Ju = yu.ref;
+        if ((Qu & Ku.ADD) === Ku.ADD) {
+          const uu = Ju.$indexes.get(Eu);
+          RR.string(Ru, uu, mu)
         }
-        Vg(UU, RU, TU[QU], TU[jU](tU), EU, PU)
+        sy(uu, Ru, Ju[Tu], Ju[Bu](Eu), Qu, mu)
       },
-      vg = function(UU, RU, gU, tU, EU, PU) {
-        if (RU[PU.offset++] = 255 & EU, RR.number(RU, tU, PU), EU === pU.DELETE) return;
-        const TU = gU.ref;
-        Vg(UU, RU, TU[QU], TU[jU](tU), EU, PU)
+      gy = function(uu, Ru, yu, Eu, Qu, mu) {
+        if (Ru[mu.offset++] = 255 & Qu, RR.number(Ru, Eu, mu), Qu === Ku.DELETE) return;
+        const Ju = yu.ref;
+        sy(uu, Ru, Ju[Tu], Ju[Bu](Eu), Qu, mu)
       },
-      dg = function(UU, RU, gU, tU, EU, PU) {
-        const TU = gU.ref;
-        (EU & pU.ADD) === pU.ADD && "function" === typeof TU.set ? Xg(UU, RU, gU, tU, EU, PU) : vg(UU, RU, gU, tU, EU, PU)
+      cy = function(uu, Ru, yu, Eu, Qu, mu) {
+        const Ju = yu.ref;
+        (Qu & Ku.ADD) === Ku.ADD && "function" === typeof Ju.set ? ly(uu, Ru, yu, Eu, Qu, mu) : gy(uu, Ru, yu, Eu, Qu, mu)
       },
-      Hg = function(UU, RU, gU, tU, EU, PU, qU, KU) {
-        const cU = gU.refTarget,
-          GU = cU[QU],
-          uU = "string" !== typeof GU;
-        let CU;
-        if (KU && gU.isFiltered && uU) {
-          const UU = cU.tmpItems[tU];
-          if (!UU) return;
-          if (CU = UU[TU], EU === pU.DELETE) EU = pU.DELETE_BY_REFID;
-          else if ((EU & pU.ADD) === pU.ADD) EU = pU.ADD_BY_REFID;
-          else if ((EU & pU.MOVE) === pU.MOVE) return
-        } else if (EU === pU.DELETE && uU) {
-          const UU = cU.tmpItems[tU];
-          if (!UU) return;
-          CU = UU[TU], EU = pU.DELETE_BY_REFID
-        } else CU = tU;
-        if (RU[PU.offset++] = 255 & EU, RR.number(RU, CU, PU), EU === pU.DELETE || EU === pU.DELETE_BY_REFID) return;
-        Vg(UU, RU, GU, cU[jU](tU, qU), EU, PU)
+      Ly = function(uu, Ru, yu, Eu, Qu, mu, Nu, Xu) {
+        const Vu = yu.refTarget,
+          ru = Vu[Tu],
+          xu = "string" !== typeof ru;
+        let Su;
+        if (Xu && yu.isFiltered && xu) {
+          const uu = Vu.tmpItems[Eu];
+          if (!uu) return;
+          if (Su = uu[Ju], Qu === Ku.DELETE) Qu = Ku.DELETE_BY_REFID;
+          else if ((Qu & Ku.ADD) === Ku.ADD) Qu = Ku.ADD_BY_REFID;
+          else if ((Qu & Ku.MOVE) === Ku.MOVE) return
+        } else if (Qu === Ku.DELETE && xu) {
+          const uu = Vu.tmpItems[Eu];
+          if (!uu) return;
+          Su = uu[Ju], Qu = Ku.DELETE_BY_REFID
+        } else Su = Eu;
+        if (Ru[mu.offset++] = 255 & Qu, RR.number(Ru, Su, mu), Qu === Ku.DELETE || Qu === Ku.DELETE_BY_REFID) return;
+        sy(uu, Ru, ru, Vu[Bu](Eu, Nu), Qu, mu)
       };
 
-    function Sg(UU, RU, gU, tU, EU, PU, qU) {
-      const KU = UU.resyncVisited;
-      let cU = KU.get(UU.currentRefId);
-      if (void 0 === cU && KU.set(UU.currentRefId, cU = new Set), cU.add(tU), void 0 !== EU && gU === pU.ADD && EU !== PU) {
-        const gU = EU[TU];
-        void 0 !== gU && (UU.root.removeRef(gU), qU?.push({
-          ref: RU,
-          refId: UU.currentRefId,
-          op: pU.DELETE,
-          dynamicIndex: tU,
+    function zy(uu, Ru, yu, Eu, Qu, mu, Nu) {
+      const Xu = uu.resyncVisited;
+      let Vu = Xu.get(uu.currentRefId);
+      if (void 0 === Vu && Xu.set(uu.currentRefId, Vu = new Set), Vu.add(Eu), void 0 !== Qu && yu === Ku.ADD && Qu !== mu) {
+        const yu = Qu[Ju];
+        void 0 !== yu && (uu.root.removeRef(yu), Nu?.push({
+          ref: Ru,
+          refId: uu.currentRefId,
+          op: Ku.DELETE,
+          dynamicIndex: Eu,
           value: void 0,
-          previousValue: EU
+          previousValue: Qu
         }))
       }
     }
 
-    function sg(UU, RU, gU, tU) {
-      const pU = RU[TU];
-      if (void 0 === pU || gU.has(pU)) return;
-      gU.add(pU);
-      const EU = RU.constructor[Symbol.metadata],
-        PU = EU?.[oU];
-      if (void 0 === PU) return;
-      const qU = EU[BU];
-      for (let TU = 0; TU < PU.length; TU++) {
-        const pU = PU[TU];
-        if (void 0 !== qU && qU.includes(pU)) continue;
-        const KU = EU[pU],
-          cU = RU[KU.name];
-        cU && (Zt.is(KU.type) ? sg(UU, cU, gU, tU) : yg(UU, cU, gU, tU))
+    function Fy(uu, Ru, yu, Eu) {
+      const Ku = Ru[Ju];
+      if (void 0 === Ku || yu.has(Ku)) return;
+      yu.add(Ku);
+      const Qu = Ru.constructor[Symbol.metadata],
+        mu = Qu?.[Mu];
+      if (void 0 === mu) return;
+      const Nu = Qu[nu];
+      for (let Ju = 0; Ju < mu.length; Ju++) {
+        const Ku = mu[Ju];
+        if (void 0 !== Nu && Nu.includes(Ku)) continue;
+        const Xu = Qu[Ku],
+          Vu = Ru[Xu.name];
+        Vu && (IE.is(Xu.type) ? Fy(uu, Vu, yu, Eu) : wy(uu, Vu, yu, Eu))
       }
     }
 
-    function yg(UU, RU, gU, tU) {
-      const EU = RU[eU] ?? RU,
-        PU = EU[TU];
-      if (void 0 === PU || gU.has(PU)) return;
-      gU.add(PU);
-      const qU = UU.resyncVisited.get(PU);
-      if (void 0 === qU) return;
-      const KU = UU.root;
-      EU[CU](qU, ((UU, gU) => {
-        tU?.push({
-          ref: RU,
-          refId: PU,
-          op: pU.DELETE,
-          dynamicIndex: gU,
+    function wy(uu, Ru, yu, Eu) {
+      const Qu = Ru[Wu] ?? Ru,
+        mu = Qu[Ju];
+      if (void 0 === mu || yu.has(mu)) return;
+      yu.add(mu);
+      const Nu = uu.resyncVisited.get(mu);
+      if (void 0 === Nu) return;
+      const Xu = uu.root;
+      Qu[Su](Nu, ((uu, yu) => {
+        Eu?.push({
+          ref: Ru,
+          refId: mu,
+          op: Ku.DELETE,
+          dynamicIndex: yu,
           value: void 0,
-          previousValue: UU
+          previousValue: uu
         });
-        const EU = UU?.[TU];
-        void 0 !== EU && KU.removeRef(EU)
-      }), (RU => {
-        Zt.isSchema(RU) && sg(UU, RU, gU, tU)
+        const Qu = uu?.[Ju];
+        void 0 !== Qu && Xu.removeRef(Qu)
+      }), (Ru => {
+        IE.isSchema(Ru) && Fy(uu, Ru, yu, Eu)
       }))
     }
-    const kg = 1,
-      Fg = 2,
-      ig = 3,
-      Ag = 4,
-      zg = 5;
+    const Zy = 1,
+      hy = 2,
+      Py = 3,
+      iy = 4,
+      Yy = 5;
 
-    function Mg(UU, RU, gU, tU, EU, PU, qU, KU, cU) {
-      const GU = UU.root;
-      let jU;
-      if ((RU & pU.DELETE) === pU.DELETE) {
-        const UU = EU?.[TU];
-        void 0 !== UU && GU.removeRef(UU), RU !== pU.DELETE_AND_ADD && gU[uU](tU), jU = void 0
+    function oy(uu, Ru, yu, Eu, Qu, mu, Nu, Xu, Vu) {
+      const ru = uu.root;
+      let Bu;
+      if ((Ru & Ku.DELETE) === Ku.DELETE) {
+        const uu = Qu?.[Ju];
+        void 0 !== uu && ru.removeRef(uu), Ru !== Ku.DELETE_AND_ADD && yu[xu](Eu), Bu = void 0
       }
-      if (RU === pU.DELETE);
-      else if ("string" === typeof PU) jU = fR[PU](qU, KU);
-      else if (vR(PU)) jU = function(UU, RU, gU) {
-        return HR(UU, (0, fR[UU.wire])(RU, gU))
-      }(PU.quantized, qU, KU);
-      else if (Zt.is(PU)) {
-        const gU = fR.number(qU, KU);
-        if (jU = GU.refs.get(gU), (RU & pU.ADD) === pU.ADD) {
-          const tU = UU.getInstanceType(qU, KU, PU);
-          jU || (jU = UU.createInstanceOfType(tU)), GU.addRef(gU, jU, jU !== EU || RU === pU.DELETE_AND_ADD && jU === EU)
+      if (Ru === Ku.DELETE);
+      else if ("string" === typeof mu) Bu = HR[mu](Nu, Xu);
+      else if (gR(mu)) Bu = function(uu, Ru, yu) {
+        return LR(uu, (0, HR[uu.wire])(Ru, yu))
+      }(mu.quantized, Nu, Xu);
+      else if (IE.is(mu)) {
+        const yu = HR.number(Nu, Xu);
+        if (Bu = ru.refs.get(yu), (Ru & Ku.ADD) === Ku.ADD) {
+          const Eu = uu.getInstanceType(Nu, Xu, mu);
+          Bu || (Bu = uu.createInstanceOfType(Eu)), ru.addRef(yu, Bu, Bu !== Qu || Ru === Ku.DELETE_AND_ADD && Bu === Qu)
         }
       } else {
-        const gU = (CU = Object.keys(PU)[0], xR[CU]),
-          tU = fR.number(qU, KU);
-        null !== UU.resyncVisited && function(UU, RU) {
-          const gU = UU.resyncVisited;
-          gU.has(RU) || gU.set(RU, new Set)
-        }(UU, tU);
-        const uU = GU.refs.has(tU) ? EU || GU.refs.get(tU) : gU.constructor.initializeForDecoder();
-        if (jU = uU.clone(!0), jU[QU] = Object.values(PU)[0], EU) {
-          let UU = EU[TU];
-          if (void 0 !== UU && tU !== UU) {
-            (RU & pU.DELETE) !== pU.DELETE && GU.removeRef(UU);
-            const gU = EU.entries();
-            let tU;
+        const yu = (Su = Object.keys(mu)[0], dR[Su]),
+          Eu = HR.number(Nu, Xu);
+        null !== uu.resyncVisited && function(uu, Ru) {
+          const yu = uu.resyncVisited;
+          yu.has(Ru) || yu.set(Ru, new Set)
+        }(uu, Eu);
+        const xu = ru.refs.has(Eu) ? Qu || ru.refs.get(Eu) : yu.constructor.initializeForDecoder();
+        if (Bu = xu.clone(!0), Bu[Tu] = Object.values(mu)[0], Qu) {
+          let uu = Qu[Ju];
+          if (void 0 !== uu && Eu !== uu) {
+            (Ru & Ku.DELETE) !== Ku.DELETE && ru.removeRef(uu);
+            const yu = Qu.entries();
+            let Eu;
             for (;
-              (tU = gU.next()) && !tU.done;) {
-              const [RU, gU] = tU.value;
-              "object" === typeof gU && (UU = gU[TU]), cU?.push({
-                ref: EU,
-                refId: UU,
-                op: pU.DELETE,
-                field: RU,
+              (Eu = yu.next()) && !Eu.done;) {
+              const [Ru, yu] = Eu.value;
+              "object" === typeof yu && (uu = yu[Ju]), Vu?.push({
+                ref: Qu,
+                refId: uu,
+                op: Ku.DELETE,
+                field: Ru,
                 value: void 0,
-                previousValue: gU
+                previousValue: yu
               })
             }
           }
         }
-        GU.addRef(tU, jU, uU !== EU || RU === pU.DELETE_AND_ADD && uU === EU)
+        ru.addRef(Eu, Bu, xu !== Qu || Ru === Ku.DELETE_AND_ADD && xu === Qu)
       }
-      var CU;
-      return jU
+      var Su;
+      return Bu
     }
-    const Dg = function(UU, RU, gU, tU, pU) {
-        const EU = RU[gU.offset++],
-          PU = tU.constructor[Symbol.metadata],
-          TU = EU >> 6 << 6,
-          qU = EU % (TU || 255),
-          KU = PU[qU];
-        if (void 0 === KU) return console.warn("@colyseus/schema: field not defined at", {
-          index: qU,
-          ref: tU.constructor.name,
-          metadata: PU
+    const qy = function(uu, Ru, yu, Eu, Ku) {
+        const Qu = Ru[yu.offset++],
+          mu = Eu.constructor[Symbol.metadata],
+          Ju = Qu >> 6 << 6,
+          Nu = Qu % (Ju || 255),
+          Xu = mu[Nu];
+        if (void 0 === Xu) return console.warn("@colyseus/schema: field not defined at", {
+          index: Nu,
+          ref: Eu.constructor.name,
+          metadata: mu
         }), -1;
-        const cU = !0 === KU.deprecated,
-          GU = cU ? void 0 : tU[jU](qU),
-          uU = Mg(UU, TU, tU, qU, GU, KU.type, RU, gU, pU);
-        cU || (null !== uU && void 0 !== uU && (tU[KU.name] = uU), GU !== uU && pU?.push({
-          ref: tU,
-          refId: UU.currentRefId,
-          op: TU,
-          field: KU.name,
-          value: uU,
-          previousValue: GU
+        const Vu = !0 === Xu.deprecated,
+          ru = Vu ? void 0 : Eu[Bu](Nu),
+          xu = oy(uu, Ju, Eu, Nu, ru, Xu.type, Ru, yu, Ku);
+        Vu || (null !== xu && void 0 !== xu && (Eu[Xu.name] = xu), ru !== xu && Ku?.push({
+          ref: Eu,
+          refId: uu.currentRefId,
+          op: Ju,
+          field: Xu.name,
+          value: xu,
+          previousValue: ru
         }))
       },
-      Lg = function(UU, RU, gU, tU, EU) {
-        const PU = tU[eU] ?? tU,
-          TU = RU[gU.offset++];
-        if (TU === pU.CLEAR) return UU.removeChildRefs(PU, EU), void PU.clear();
-        const qU = fR.number(RU, gU),
-          KU = PU[QU],
-          cU = PU.constructor.COLLECTION_KIND;
-        let GU;
-        (TU & pU.ADD) === pU.ADD ? cU === kg ? (GU = fR.string(RU, gU), PU.setIndex(qU, GU)) : GU = qU : GU = PU.getIndex(qU);
-        const uU = PU[jU](qU),
-          CU = Mg(UU, TU, tU, qU, uU, KU, RU, gU, EU);
-        if (null !== UU.resyncVisited && Sg(UU, tU, TU, GU, uU, CU, EU), null !== CU && void 0 !== CU) switch (cU) {
-          case kg:
-            PU.$items.set(GU, CU);
+      Oy = function(uu, Ru, yu, Eu, Qu) {
+        const mu = Eu[Wu] ?? Eu,
+          Ju = Ru[yu.offset++];
+        if (Ju === Ku.CLEAR) return uu.removeChildRefs(mu, Qu), void mu.clear();
+        const Nu = HR.number(Ru, yu),
+          Xu = mu[Tu],
+          Vu = mu.constructor.COLLECTION_KIND;
+        let ru;
+        (Ju & Ku.ADD) === Ku.ADD ? Vu === Zy ? (ru = HR.string(Ru, yu), mu.setIndex(Nu, ru)) : ru = Nu : ru = mu.getIndex(Nu);
+        const xu = mu[Bu](Nu),
+          Su = oy(uu, Ju, Eu, Nu, xu, Xu, Ru, yu, Qu);
+        if (null !== uu.resyncVisited && zy(uu, Eu, Ju, ru, xu, Su, Qu), null !== Su && void 0 !== Su) switch (Vu) {
+          case Zy:
+            mu.$items.set(ru, Su);
             break;
-          case Fg:
-            PU.$setAt(qU, CU, null !== UU.resyncVisited && TU === pU.ADD ? pU.REPLACE : TU);
+          case hy:
+            mu.$setAt(Nu, Su, null !== uu.resyncVisited && Ju === Ku.ADD ? Ku.REPLACE : Ju);
             break;
-          case ig:
-          case Ag:
-          case zg:
-            PU.$items.has(qU) || (PU.$items.set(qU, CU), "number" === typeof PU.$refId && qU >= PU.$refId && (PU.$refId = qU + 1));
+          case Py:
+          case iy:
+          case Yy:
+            mu.$items.has(Nu) || (mu.$items.set(Nu, Su), "number" === typeof mu.$refId && Nu >= mu.$refId && (mu.$refId = Nu + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${PU.constructor?.name} \u2014 item at index ${qU} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${mu.constructor?.name} \u2014 item at index ${Nu} was not stored.`)
         }
-        uU !== CU && EU?.push({
-          ref: tU,
-          refId: UU.currentRefId,
-          op: TU,
-          dynamicIndex: GU,
-          value: CU,
-          previousValue: uU
+        xu !== Su && Qu?.push({
+          ref: Eu,
+          refId: uu.currentRefId,
+          op: Ju,
+          dynamicIndex: ru,
+          value: Su,
+          previousValue: xu
         })
       },
-      Ng = function(UU, RU, gU, tU, EU) {
-        const PU = tU[eU] ?? tU;
-        let TU, qU = RU[gU.offset++];
-        if (qU === pU.CLEAR) return UU.removeChildRefs(PU, EU), void PU.clear();
-        if (qU === pU.REVERSE) return void PU.items.reverse();
-        if (qU === pU.DELETE_BY_REFID) {
-          const qU = fR.number(RU, gU),
-            KU = UU.root.refs.get(qU);
-          if (void 0 === KU) return;
-          if (UU.root.removeRef(qU), TU = PU.findIndex((UU => UU === KU)), -1 === TU) return;
-          return PU[uU](TU), void EU?.push({
-            ref: tU,
-            refId: UU.currentRefId,
-            op: pU.DELETE,
-            dynamicIndex: TU,
+      vy = function(uu, Ru, yu, Eu, Qu) {
+        const mu = Eu[Wu] ?? Eu;
+        let Ju, Nu = Ru[yu.offset++];
+        if (Nu === Ku.CLEAR) return uu.removeChildRefs(mu, Qu), void mu.clear();
+        if (Nu === Ku.REVERSE) return void mu.items.reverse();
+        if (Nu === Ku.DELETE_BY_REFID) {
+          const Nu = HR.number(Ru, yu),
+            Xu = uu.root.refs.get(Nu);
+          if (void 0 === Xu) return;
+          if (uu.root.removeRef(Nu), Ju = mu.findIndex((uu => uu === Xu)), -1 === Ju) return;
+          return mu[xu](Ju), void Qu?.push({
+            ref: Eu,
+            refId: uu.currentRefId,
+            op: Ku.DELETE,
+            dynamicIndex: Ju,
             value: void 0,
-            previousValue: KU
+            previousValue: Xu
           })
         }
-        if (qU === pU.ADD_BY_REFID) {
-          const tU = fR.number(RU, gU),
-            pU = UU.root.refs.get(tU);
-          pU && (TU = PU.findIndex((UU => UU === pU))), -1 !== TU && void 0 !== TU || (TU = PU.length)
-        } else TU = fR.number(RU, gU);
-        const KU = PU[QU];
-        let cU = TU;
-        const GU = PU.items[TU],
-          jU = Mg(UU, qU, tU, TU, GU, KU, RU, gU, EU);
-        null !== UU.resyncVisited && Sg(UU, tU, qU, TU, GU, jU, EU), null !== jU && void 0 !== jU && jU !== GU && PU.$setAt(TU, jU, null !== UU.resyncVisited && qU === pU.ADD ? pU.REPLACE : qU), GU !== jU && EU?.push({
-          ref: tU,
-          refId: UU.currentRefId,
-          op: qU,
-          dynamicIndex: cU,
-          value: jU,
-          previousValue: GU
+        if (Nu === Ku.ADD_BY_REFID) {
+          const Eu = HR.number(Ru, yu),
+            Ku = uu.root.refs.get(Eu);
+          Ku && (Ju = mu.findIndex((uu => uu === Ku))), -1 !== Ju && void 0 !== Ju || (Ju = mu.length)
+        } else Ju = HR.number(Ru, yu);
+        const Xu = mu[Tu];
+        let Vu = Ju;
+        const ru = mu.items[Ju],
+          Bu = oy(uu, Nu, Eu, Ju, ru, Xu, Ru, yu, Qu);
+        null !== uu.resyncVisited && zy(uu, Eu, Nu, Ju, ru, Bu, Qu), null !== Bu && void 0 !== Bu && Bu !== ru && mu.$setAt(Ju, Bu, null !== uu.resyncVisited && Nu === Ku.ADD ? Ku.REPLACE : Nu), ru !== Bu && Qu?.push({
+          ref: Eu,
+          refId: uu.currentRefId,
+          op: Nu,
+          dynamicIndex: Vu,
+          value: Bu,
+          previousValue: ru
         })
       };
-    class lg extends Error {}
+    class ay extends Error {}
 
-    function Og(UU, RU, gU, tU) {
-      if (!(UU instanceof RU)) throw new lg(`a '${RU.name}' was expected, but '${UU&&UU.constructor.name}' was provided in ${gU.constructor.name}#${tU}`)
+    function fy(uu, Ru, yu, Eu) {
+      if (!(uu instanceof Ru)) throw new ay(`a '${Ru.name}' was expected, but '${uu&&uu.constructor.name}' was provided in ${yu.constructor.name}#${Eu}`)
     }
-    const Ut = (UU, RU) => {
-        const gU = UU.toString(),
-          tU = RU.toString();
-        return gU < tU ? -1 : gU > tU ? 1 : 0
+    const uE = (uu, Ru) => {
+        const yu = uu.toString(),
+          Eu = Ru.toString();
+        return yu < Eu ? -1 : yu > Eu ? 1 : 0
       },
-      Rt = {
-        get: (UU, RU) => "symbol" === typeof RU || isNaN(RU) ? Reflect.get(UU, RU) : UU.items[RU],
-        set: (UU, RU, gU) => {
-          if ("symbol" !== typeof RU && !isNaN(RU)) {
-            if (void 0 === gU || null === gU) UU.$deleteAt(RU);
+      RE = {
+        get: (uu, Ru) => "symbol" === typeof Ru || isNaN(Ru) ? Reflect.get(uu, Ru) : uu.items[Ru],
+        set: (uu, Ru, yu) => {
+          if ("symbol" !== typeof Ru && !isNaN(Ru)) {
+            if (void 0 === yu || null === yu) uu.$deleteAt(Ru);
             else {
-              let tU;
-              if (gU[hU]) {
-                Og(gU, UU[QU], UU, RU);
-                const EU = UU.items[RU];
-                UU.isMovingItems ? (tU = UU.$wireIndex(Number(RU)), void 0 !== EU ? gU[hU].isNew ? UU[hU].indexedOperation(tU, pU.MOVE_AND_ADD) : (UU[hU].getChange(tU) & pU.DELETE) === pU.DELETE ? UU[hU].indexedOperation(tU, pU.DELETE_AND_MOVE) : UU[hU].indexedOperation(tU, pU.MOVE) : gU[hU].isNew && UU[hU].indexedOperation(tU, pU.ADD), gU[hU].setParent(UU, UU[hU].root, tU)) : tU = UU.$changeAt(Number(RU), gU), void 0 !== EU && EU[hU].root?.remove(EU[hU])
-              } else tU = UU.$changeAt(Number(RU), gU);
-              UU.items[RU] = gU, void 0 !== tU && (UU.tmpItems[tU] = gU)
+              let Eu;
+              if (yu[pu]) {
+                fy(yu, uu[Tu], uu, Ru);
+                const Qu = uu.items[Ru];
+                uu.isMovingItems ? (Eu = uu.$wireIndex(Number(Ru)), void 0 !== Qu ? yu[pu].isNew ? uu[pu].indexedOperation(Eu, Ku.MOVE_AND_ADD) : (uu[pu].getChange(Eu) & Ku.DELETE) === Ku.DELETE ? uu[pu].indexedOperation(Eu, Ku.DELETE_AND_MOVE) : uu[pu].indexedOperation(Eu, Ku.MOVE) : yu[pu].isNew && uu[pu].indexedOperation(Eu, Ku.ADD), yu[pu].setParent(uu, uu[pu].root, Eu)) : Eu = uu.$changeAt(Number(Ru), yu), void 0 !== Qu && Qu[pu].root?.remove(Qu[pu])
+              } else Eu = uu.$changeAt(Number(Ru), yu);
+              uu.items[Ru] = yu, void 0 !== Eu && (uu.tmpItems[Eu] = yu)
             }
             return !0
           }
-          return Reflect.set(UU, RU, gU)
+          return Reflect.set(uu, Ru, yu)
         },
-        deleteProperty: (UU, RU) => ("number" === typeof RU ? UU.$deleteAt(RU) : delete UU[RU], !0),
-        has: (UU, RU) => "symbol" === typeof RU || isNaN(Number(RU)) ? Reflect.has(UU, RU) : Reflect.has(UU.items, RU)
+        deleteProperty: (uu, Ru) => ("number" === typeof Ru ? uu.$deleteAt(Ru) : delete uu[Ru], !0),
+        has: (uu, Ru) => "symbol" === typeof Ru || isNaN(Number(Ru)) ? Reflect.has(uu, Ru) : Reflect.has(uu.items, Ru)
       };
-    class gt {
-      [hU];
-      [TU];
-      [eU];
-      [QU];
+    class yE {
+      [pu];
+      [Ju];
+      [Wu];
+      [Tu];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[KU] = Hg;
-      static[cU] = Ng;
-      static COLLECTION_KIND = Fg;
-      static[GU](UU, RU, gU) {
-        if (!gU) return !0;
-        const tU = UU[eU] ?? UU;
-        return "string" === typeof tU[QU] || gU.isChangeTreeVisible(tU.tmpItems[RU]?.[hU])
+      static[Xu] = Ly;
+      static[Vu] = vy;
+      static COLLECTION_KIND = hy;
+      static[ru](uu, Ru, yu) {
+        if (!yu) return !0;
+        const Eu = uu[Wu] ?? uu;
+        return "string" === typeof Eu[Tu] || yu.isChangeTreeVisible(Eu.tmpItems[Ru]?.[pu])
       }
-      static is(UU) {
-        return Array.isArray(UU) || void 0 !== UU.array
+      static is(uu) {
+        return Array.isArray(uu) || void 0 !== uu.array
       }
-      static from(UU) {
-        return new gt(...Array.from(UU))
+      static from(uu) {
+        return new yE(...Array.from(uu))
       }
       constructor() {
-        this[QU] = void 0, this[eU] = this;
-        const UU = new Proxy(this, Rt);
-        return Object.defineProperty(this, hU, {
-          value: new ag(UU, this),
+        this[Tu] = void 0, this[Wu] = this;
+        const uu = new Proxy(this, RE);
+        return Object.defineProperty(this, pu, {
+          value: new Gy(uu, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), UU
+        }), arguments.length > 0 && this.push(...arguments), uu
       }
       static initializeForDecoder() {
-        const UU = Object.create(gt.prototype);
-        UU.items = [], UU.isMovingItems = !1, UU._needsCompaction = !1, UU[QU] = void 0, UU[eU] = UU;
-        const RU = new Proxy(UU, Rt);
-        return Bg(UU, RU), RU
+        const uu = Object.create(yE.prototype);
+        uu.items = [], uu.isMovingItems = !1, uu._needsCompaction = !1, uu[Tu] = void 0, uu[Wu] = uu;
+        const Ru = new Proxy(uu, RE);
+        return ny(uu, Ru), Ru
       }
-      set length(UU) {
-        0 === UU ? this.clear() : UU < this.items.length ? this.splice(UU, this.length - UU) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(uu) {
+        0 === uu ? this.clear() : uu < this.items.length ? this.splice(uu, this.length - uu) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[hU].pause()
+        this[pu].pause()
       }
       resumeTracking() {
-        this[hU].resume()
+        this[pu].resume()
       }
-      untracked(UU) {
-        return this[hU].untracked(UU)
+      untracked(uu) {
+        return this[pu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[hU].paused
+        return this[pu].paused
       }
       push() {
-        const UU = this[eU],
-          RU = UU.items,
-          gU = UU.tmpItems,
-          tU = UU[hU],
-          EU = UU[QU];
-        let PU = gU.length;
-        for (let TU = 0, qU = arguments.length; TU < qU; TU++, PU++) {
-          const qU = TU < 0 || arguments.length <= TU ? void 0 : arguments[TU];
-          if (void 0 === qU || null === qU) return;
-          "object" === typeof qU && EU && Og(qU, EU, UU, TU), tU.indexedOperation(PU, pU.ADD), RU.push(qU), gU.push(qU), qU[hU]?.setParent(this, tU.root, PU)
+        const uu = this[Wu],
+          Ru = uu.items,
+          yu = uu.tmpItems,
+          Eu = uu[pu],
+          Qu = uu[Tu];
+        let mu = yu.length;
+        for (let Ju = 0, Nu = arguments.length; Ju < Nu; Ju++, mu++) {
+          const Nu = Ju < 0 || arguments.length <= Ju ? void 0 : arguments[Ju];
+          if (void 0 === Nu || null === Nu) return;
+          "object" === typeof Nu && Qu && fy(Nu, Qu, uu, Ju), Eu.indexedOperation(mu, Ku.ADD), Ru.push(Nu), yu.push(Nu), Nu[pu]?.setParent(this, Eu.root, mu)
         }
-        return PU
+        return mu
       }
       pop() {
-        const UU = this[eU],
-          RU = UU.tmpItems,
-          gU = UU.deletedIndexes;
-        let tU = -1;
-        for (let EU = RU.length - 1; EU >= 0; EU--)
-          if (!0 !== gU[EU]) {
-            tU = EU;
+        const uu = this[Wu],
+          Ru = uu.tmpItems,
+          yu = uu.deletedIndexes;
+        let Eu = -1;
+        for (let Qu = Ru.length - 1; Qu >= 0; Qu--)
+          if (!0 !== yu[Qu]) {
+            Eu = Qu;
             break
-          } if (tU < 0) return;
-        const pU = UU.$isUnsentAdd(tU);
-        return UU[hU].delete(tU), pU ? UU.$cancelAdd(tU) : gU[tU] = !0, UU.items.pop()
+          } if (Eu < 0) return;
+        const Ku = uu.$isUnsentAdd(Eu);
+        return uu[pu].delete(Eu), Ku ? uu.$cancelAdd(Eu) : yu[Eu] = !0, uu.items.pop()
       }
-      at(UU) {
-        return UU < 0 && (UU += this.length), this.items[UU]
+      at(uu) {
+        return uu < 0 && (uu += this.length), this.items[uu]
       }
-      $wireIndex(UU) {
-        const RU = this.deletedIndexes;
-        if (0 === RU.length) return UU;
-        const gU = this.tmpItems;
-        let tU = 0;
-        for (let pU = 0; pU < gU.length; pU++)
-          if (!0 !== RU[pU]) {
-            if (tU === UU) return pU;
-            tU++
-          } return gU.length + (UU - tU)
+      $wireIndex(uu) {
+        const Ru = this.deletedIndexes;
+        if (0 === Ru.length) return uu;
+        const yu = this.tmpItems;
+        let Eu = 0;
+        for (let Ku = 0; Ku < yu.length; Ku++)
+          if (!0 !== Ru[Ku]) {
+            if (Eu === uu) return Ku;
+            Eu++
+          } return yu.length + (uu - Eu)
       }
-      $isUnsentAdd(UU) {
-        const RU = this[hU];
-        return 0 === (576 & RU.flags) && !RU.paused && "string" !== typeof this[QU] && RU.operationAt(UU) === pU.ADD
+      $isUnsentAdd(uu) {
+        const Ru = this[pu];
+        return 0 === (576 & Ru.flags) && !Ru.paused && "string" !== typeof this[Tu] && Ru.operationAt(uu) === Ku.ADD
       }
-      $cancelAdd(UU) {
-        let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const gU = this[hU],
-          tU = this.tmpItems[UU];
-        this.tmpItems.splice(UU, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(UU, 1), gU.removeAt(UU, 1);
-        const pU = tU?.[hU];
-        void 0 !== pU && void 0 === pU.root && pU.removeParent(this), RU && this.$reindexChildren(UU)
+      $cancelAdd(uu) {
+        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const yu = this[pu],
+          Eu = this.tmpItems[uu];
+        this.tmpItems.splice(uu, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(uu, 1), yu.removeAt(uu, 1);
+        const Ku = Eu?.[pu];
+        void 0 !== Ku && void 0 === Ku.root && Ku.removeParent(this), Ru && this.$reindexChildren(uu)
       }
-      $reindexChildren(UU, RU) {
-        if (!this[hU].hasFilteredFields) return;
-        if ("string" === typeof this[QU]) return;
-        const gU = this.tmpItems,
-          tU = gU.length;
-        if (void 0 !== RU)
-          for (; UU < tU && gU[UU] === RU[UU];) UU++;
-        for (let pU = UU; pU < tU; pU++) gU[pU]?.[hU]?.setParentIndex(this, pU)
+      $reindexChildren(uu, Ru) {
+        if (!this[pu].hasFilteredFields) return;
+        if ("string" === typeof this[Tu]) return;
+        const yu = this.tmpItems,
+          Eu = yu.length;
+        if (void 0 !== Ru)
+          for (; uu < Eu && yu[uu] === Ru[uu];) uu++;
+        for (let Ku = uu; Ku < Eu; Ku++) yu[Ku]?.[pu]?.setParentIndex(this, Ku)
       }
-      $changeAt(UU, RU) {
-        if (void 0 === RU || null === RU) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[UU] === RU) return;
-        const gU = void 0 !== this.items[UU] ? "object" === typeof RU ? pU.DELETE_AND_ADD : pU.REPLACE : pU.ADD,
-          tU = this.$wireIndex(UU),
-          EU = this[hU];
-        return EU.change(tU, gU), RU[hU]?.setParent(this, EU.root, tU), tU
+      $changeAt(uu, Ru) {
+        if (void 0 === Ru || null === Ru) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[uu] === Ru) return;
+        const yu = void 0 !== this.items[uu] ? "object" === typeof Ru ? Ku.DELETE_AND_ADD : Ku.REPLACE : Ku.ADD,
+          Eu = this.$wireIndex(uu),
+          Qu = this[pu];
+        return Qu.change(Eu, yu), Ru[pu]?.setParent(this, Qu.root, Eu), Eu
       }
-      $deleteAt(UU, RU) {
-        this[hU].delete(this.$wireIndex(UU), RU)
+      $deleteAt(uu, Ru) {
+        this[pu].delete(this.$wireIndex(uu), Ru)
       }
-      $setAt(UU, RU, gU) {
-        gU === pU.ADD && void 0 !== this.items[UU] ? this.items.splice(UU, 0, RU) : gU === pU.DELETE_AND_MOVE ? (this.items.splice(UU, 1), this.items[UU] = RU) : (UU > this.items.length && (this._needsCompaction = !0), this.items[UU] = RU)
+      $setAt(uu, Ru, yu) {
+        yu === Ku.ADD && void 0 !== this.items[uu] ? this.items.splice(uu, 0, Ru) : yu === Ku.DELETE_AND_MOVE ? (this.items.splice(uu, 1), this.items[uu] = Ru) : (uu > this.items.length && (this._needsCompaction = !0), this.items[uu] = Ru)
       }
       clear() {
-        const UU = this[eU];
-        if (0 === UU.items.length) return;
-        const RU = UU[hU];
-        RU.forEachChild(((UU, gU) => {
-          RU.root?.remove(UU)
-        })), RU.discard(), RU.operation(pU.CLEAR), UU.items.length = 0, UU.tmpItems.length = 0
-      } [fU]() {
-        const UU = this[eU] ?? this,
-          RU = UU[hU];
-        if (RU.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const gU = UU.items;
-        for (let tU = 0; tU < gU.length; tU++) gU[tU]?.[fU]?.();
-        UU.items.length = 0, UU.tmpItems.length = 0, UU.deletedIndexes.length = 0, RU.recycle(), UU[TU] = void 0
+        const uu = this[Wu];
+        if (0 === uu.items.length) return;
+        const Ru = uu[pu];
+        Ru.forEachChild(((uu, yu) => {
+          Ru.root?.remove(uu)
+        })), Ru.discard(), Ru.operation(Ku.CLEAR), uu.items.length = 0, uu.tmpItems.length = 0
+      } [Hu]() {
+        const uu = this[Wu] ?? this,
+          Ru = uu[pu];
+        if (Ru.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const yu = uu.items;
+        for (let Eu = 0; Eu < yu.length; Eu++) yu[Eu]?.[Hu]?.();
+        uu.items.length = 0, uu.tmpItems.length = 0, uu.deletedIndexes.length = 0, Ru.recycle(), uu[Ju] = void 0
       }
       concat() {
-        return new gt(...this.items.concat(...arguments))
+        return new yE(...this.items.concat(...arguments))
       }
-      join(UU) {
-        return this.items.join(UU)
+      join(uu) {
+        return this.items.join(uu)
       }
       reverse() {
-        const UU = this[eU],
-          RU = UU[hU];
-        if (RU.has() || UU.deletedIndexes.length > 0) {
-          const RU = UU.items.slice().reverse();
-          return this.clear(), this.push(...RU), this
+        const uu = this[Wu],
+          Ru = uu[pu];
+        if (Ru.has() || uu.deletedIndexes.length > 0) {
+          const Ru = uu.items.slice().reverse();
+          return this.clear(), this.push(...Ru), this
         }
-        return RU.operation(pU.REVERSE), UU.items.reverse(), UU.tmpItems.reverse(), UU.$reindexChildren(0), this
+        return Ru.operation(Ku.REVERSE), uu.items.reverse(), uu.tmpItems.reverse(), uu.$reindexChildren(0), this
       }
       shift() {
-        const UU = this[eU],
-          RU = UU.items;
-        if (0 === RU.length) return;
-        const gU = UU[hU],
-          tU = UU.deletedIndexes;
-        let EU = 0;
-        for (; !0 === tU[EU];) EU++;
-        const PU = UU.$isUnsentAdd(EU);
-        return gU.delete(EU, pU.DELETE), PU ? UU.$cancelAdd(EU) : tU[EU] = !0, RU.shift()
+        const uu = this[Wu],
+          Ru = uu.items;
+        if (0 === Ru.length) return;
+        const yu = uu[pu],
+          Eu = uu.deletedIndexes;
+        let Qu = 0;
+        for (; !0 === Eu[Qu];) Qu++;
+        const mu = uu.$isUnsentAdd(Qu);
+        return yu.delete(Qu, Ku.DELETE), mu ? uu.$cancelAdd(Qu) : Eu[Qu] = !0, Ru.shift()
       }
-      slice(UU, RU) {
-        const gU = new gt;
-        return gU.push(...this.items.slice(UU, RU)), gU
+      slice(uu, Ru) {
+        const yu = new yE;
+        return yu.push(...this.items.slice(uu, Ru)), yu
       }
       sort() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ut;
-        const RU = this[eU];
-        RU.isMovingItems = !0;
-        const gU = RU[hU];
-        return RU.items.sort(UU).forEach(((UU, RU) => gU.change(RU, pU.REPLACE))), RU.tmpItems.sort(UU), RU.$reindexChildren(0), RU.isMovingItems = !1, this
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : uE;
+        const Ru = this[Wu];
+        Ru.isMovingItems = !0;
+        const yu = Ru[pu];
+        return Ru.items.sort(uu).forEach(((uu, Ru) => yu.change(Ru, Ku.REPLACE))), Ru.tmpItems.sort(uu), Ru.$reindexChildren(0), Ru.isMovingItems = !1, this
       }
-      splice(UU, RU) {
-        const gU = this[eU],
-          tU = gU[hU],
-          EU = gU.items,
-          PU = gU.tmpItems,
-          TU = gU.deletedIndexes,
-          qU = EU.length,
-          KU = PU.length;
-        for (var cU = arguments.length, GU = new Array(cU > 2 ? cU - 2 : 0), jU = 2; jU < cU; jU++) GU[jU - 2] = arguments[jU];
-        const uU = GU.length,
-          CU = [];
-        for (let pU = 0; pU < KU; pU++) !0 !== TU[pU] && CU.push(pU);
-        let QU;
-        if (qU > UU) {
-          void 0 === RU && (RU = qU - UU);
-          for (let EU = UU; EU < UU + RU; EU++) {
-            const UU = CU[EU],
-              RU = gU.$isUnsentAdd(UU);
-            tU.delete(UU, pU.DELETE), RU ? (QU ??= []).push(UU) : TU[UU] = !0
+      splice(uu, Ru) {
+        const yu = this[Wu],
+          Eu = yu[pu],
+          Qu = yu.items,
+          mu = yu.tmpItems,
+          Ju = yu.deletedIndexes,
+          Nu = Qu.length,
+          Xu = mu.length;
+        for (var Vu = arguments.length, ru = new Array(Vu > 2 ? Vu - 2 : 0), Bu = 2; Bu < Vu; Bu++) ru[Bu - 2] = arguments[Bu];
+        const xu = ru.length,
+          Su = [];
+        for (let Ku = 0; Ku < Xu; Ku++) !0 !== Ju[Ku] && Su.push(Ku);
+        let Tu;
+        if (Nu > uu) {
+          void 0 === Ru && (Ru = Nu - uu);
+          for (let Qu = uu; Qu < uu + Ru; Qu++) {
+            const uu = Su[Qu],
+              Ru = yu.$isUnsentAdd(uu);
+            Eu.delete(uu, Ku.DELETE), Ru ? (Tu ??= []).push(uu) : Ju[uu] = !0
           }
-        } else RU = 0;
-        if (uU > 0) {
-          const EU = CU[UU] ?? qU,
-            KU = Math.min(uU, RU);
-          for (let UU = 0; UU < KU; UU++) {
-            const RU = EU + UU;
-            let gU;
-            const qU = void 0 !== QU ? QU.indexOf(RU) : -1; - 1 !== qU ? (QU.splice(qU, 1), gU = pU.ADD) : gU = TU[RU] ? pU.DELETE_AND_ADD : pU.ADD, tU.indexedOperation(RU, gU), PU[RU] = GU[UU], TU[RU] = !1, GU[UU][hU]?.setParent(this, tU.root, RU)
+        } else Ru = 0;
+        if (xu > 0) {
+          const Qu = Su[uu] ?? Nu,
+            Xu = Math.min(xu, Ru);
+          for (let uu = 0; uu < Xu; uu++) {
+            const Ru = Qu + uu;
+            let yu;
+            const Nu = void 0 !== Tu ? Tu.indexOf(Ru) : -1; - 1 !== Nu ? (Tu.splice(Nu, 1), yu = Ku.ADD) : yu = Ju[Ru] ? Ku.DELETE_AND_ADD : Ku.ADD, Eu.indexedOperation(Ru, yu), mu[Ru] = ru[uu], Ju[Ru] = !1, ru[uu][pu]?.setParent(this, Eu.root, Ru)
           }
-          const cU = uU - KU;
-          if (cU > 0) {
-            const UU = EU + KU;
-            tU.insertAt(UU, cU);
-            for (let RU = 0; RU < cU; RU++) GU[KU + RU][hU]?.setParent(this, tU.root, UU + RU);
-            TU.length > 0 && TU.splice(UU, 0, ...new Array(cU).fill(!1)), PU.splice(UU, 0, ...GU.slice(KU)), gU.$reindexChildren(UU + cU)
+          const Vu = xu - Xu;
+          if (Vu > 0) {
+            const uu = Qu + Xu;
+            Eu.insertAt(uu, Vu);
+            for (let Ru = 0; Ru < Vu; Ru++) ru[Xu + Ru][pu]?.setParent(this, Eu.root, uu + Ru);
+            Ju.length > 0 && Ju.splice(uu, 0, ...new Array(Vu).fill(!1)), mu.splice(uu, 0, ...ru.slice(Xu)), yu.$reindexChildren(uu + Vu)
           }
         }
-        if (void 0 !== QU && QU.length > 0) {
-          for (let UU = QU.length - 1; UU >= 0; UU--) gU.$cancelAdd(QU[UU], !1);
-          gU.$reindexChildren(QU[0])
+        if (void 0 !== Tu && Tu.length > 0) {
+          for (let uu = Tu.length - 1; uu >= 0; uu--) yu.$cancelAdd(Tu[uu], !1);
+          yu.$reindexChildren(Tu[0])
         }
-        return tU.root?.enqueueChangeTree(tU), EU.splice(UU, RU, ...GU)
+        return Eu.root?.enqueueChangeTree(Eu), Qu.splice(uu, Ru, ...ru)
       }
       unshift() {
-        const UU = this[eU],
-          RU = UU[hU];
-        RU.unshift(arguments.length);
-        for (let tU = 0; tU < arguments.length; tU++)(tU < 0 || arguments.length <= tU ? void 0 : arguments[tU])?.[hU]?.setParent(this, RU.root, tU);
-        const gU = UU.deletedIndexes;
-        return gU.length > 0 && gU.unshift(...new Array(arguments.length).fill(!1)), UU.tmpItems.unshift(...arguments), UU.$reindexChildren(arguments.length), UU.items.unshift(...arguments)
+        const uu = this[Wu],
+          Ru = uu[pu];
+        Ru.unshift(arguments.length);
+        for (let Eu = 0; Eu < arguments.length; Eu++)(Eu < 0 || arguments.length <= Eu ? void 0 : arguments[Eu])?.[pu]?.setParent(this, Ru.root, Eu);
+        const yu = uu.deletedIndexes;
+        return yu.length > 0 && yu.unshift(...new Array(arguments.length).fill(!1)), uu.tmpItems.unshift(...arguments), uu.$reindexChildren(arguments.length), uu.items.unshift(...arguments)
       }
-      indexOf(UU, RU) {
-        return this.items.indexOf(UU, RU)
+      indexOf(uu, Ru) {
+        return this.items.indexOf(uu, Ru)
       }
-      lastIndexOf(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(UU, RU)
+      lastIndexOf(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(uu, Ru)
       }
-      every(UU, RU) {
-        return this.items.every(UU, RU)
+      every(uu, Ru) {
+        return this.items.every(uu, Ru)
       }
-      some(UU, RU) {
-        return this.items.some(UU, RU)
+      some(uu, Ru) {
+        return this.items.some(uu, Ru)
       }
-      forEach(UU, RU) {
-        return this.items.forEach(UU, RU)
+      forEach(uu, Ru) {
+        return this.items.forEach(uu, Ru)
       }
-      map(UU, RU) {
-        return this.items.map(UU, RU)
+      map(uu, Ru) {
+        return this.items.map(uu, Ru)
       }
-      filter(UU, RU) {
-        return this.items.filter(UU, RU)
+      filter(uu, Ru) {
+        return this.items.filter(uu, Ru)
       }
-      reduce(UU, RU) {
+      reduce(uu, Ru) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(UU, RU) {
+      reduceRight(uu, Ru) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(UU, RU) {
-        return this.items.find(UU, RU)
+      find(uu, Ru) {
+        return this.items.find(uu, Ru)
       }
-      findIndex(UU, RU) {
-        return this.items.findIndex(UU, RU)
+      findIndex(uu, Ru) {
+        return this.items.findIndex(uu, Ru)
       }
-      fill(UU, RU, gU) {
+      fill(uu, Ru, yu) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(UU, RU, gU) {
+      copyWithin(uu, Ru, yu) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return gt
+        return yE
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(UU, RU) {
-        return this.items.includes(UU, RU)
+      includes(uu, Ru) {
+        return this.items.includes(uu, Ru)
       }
-      flatMap(UU, RU) {
+      flatMap(uu, Ru) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(UU) {
+      flat(uu) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
+        for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(UU, RU) {
-        const gU = this.items.slice();
-        return UU < 0 && (UU += this.length), gU[UU] = RU, new gt(...gU)
+      with(uu, Ru) {
+        const yu = this.items.slice();
+        return uu < 0 && (uu += this.length), yu[uu] = Ru, new yE(...yu)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(UU) {
-        return this.items.slice().sort(UU)
+      toSorted(uu) {
+        return this.items.slice().sort(uu)
       }
-      toSpliced(UU, RU) {
-        for (var gU = arguments.length, tU = new Array(gU > 2 ? gU - 2 : 0), pU = 2; pU < gU; pU++) tU[pU - 2] = arguments[pU];
-        const EU = this.items.slice();
-        return EU.splice.apply(EU, arguments), EU
+      toSpliced(uu, Ru) {
+        for (var yu = arguments.length, Eu = new Array(yu > 2 ? yu - 2 : 0), Ku = 2; Ku < yu; Ku++) Eu[Ku - 2] = arguments[Ku];
+        const Qu = this.items.slice();
+        return Qu.splice.apply(Qu, arguments), Qu
       }
       shuffle() {
-        return this.move((UU => {
-          let RU = this.items.length;
-          for (; 0 != RU;) {
-            let UU = Math.floor(Math.random() * RU);
-            RU--, [this[RU], this[UU]] = [this[UU], this[RU]]
+        return this.move((uu => {
+          let Ru = this.items.length;
+          for (; 0 != Ru;) {
+            let uu = Math.floor(Math.random() * Ru);
+            Ru--, [this[Ru], this[uu]] = [this[uu], this[Ru]]
           }
         }))
       }
-      move(UU) {
-        return this.isMovingItems = !0, UU(this), this.isMovingItems = !1, this
-      } [jU](UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const gU = this[eU] ?? this;
-        return RU || gU.deletedIndexes[UU] ? gU.items[UU] : gU.tmpItems[UU] || gU.items[UU]
-      } [uU](UU) {
-        const RU = this[eU] ?? this;
-        RU.items[UU] = void 0, RU._needsCompaction = !0
-      } [WU]() {
-        const UU = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, UU), this.deletedIndexes.length = 0)
-      } [xU]() {
-        const UU = this[eU] ?? this;
-        UU._needsCompaction && (UU._needsCompaction = !1, UU.items = UU.items.filter((UU => void 0 !== UU)))
-      } [CU](UU, RU, gU) {
-        const tU = this[eU] ?? this,
-          pU = tU.items;
-        let EU = !1;
-        for (let PU = 0; PU < pU.length; PU++) {
-          const TU = pU[PU];
-          UU.has(PU) ? gU(TU) : (EU = !0, RU(TU, PU), tU[uU](PU))
+      move(uu) {
+        return this.isMovingItems = !0, uu(this), this.isMovingItems = !1, this
+      } [Bu](uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const yu = this[Wu] ?? this;
+        return Ru || yu.deletedIndexes[uu] ? yu.items[uu] : yu.tmpItems[uu] || yu.items[uu]
+      } [xu](uu) {
+        const Ru = this[Wu] ?? this;
+        Ru.items[uu] = void 0, Ru._needsCompaction = !0
+      } [ju]() {
+        const uu = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, uu), this.deletedIndexes.length = 0)
+      } [du]() {
+        const uu = this[Wu] ?? this;
+        uu._needsCompaction && (uu._needsCompaction = !1, uu.items = uu.items.filter((uu => void 0 !== uu)))
+      } [Su](uu, Ru, yu) {
+        const Eu = this[Wu] ?? this,
+          Ku = Eu.items;
+        let Qu = !1;
+        for (let mu = 0; mu < Ku.length; mu++) {
+          const Ju = Ku[mu];
+          uu.has(mu) ? yu(Ju) : (Qu = !0, Ru(Ju, mu), Eu[xu](mu))
         }
-        EU && tU[xU]()
+        Qu && Eu[du]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((UU => "function" === typeof UU.toJSON ? UU.toJSON() : UU))
+        return this.toArray().map((uu => "function" === typeof uu.toJSON ? uu.toJSON() : uu))
       }
-      clone(UU) {
-        let RU;
-        return UU ? (RU = new gt, RU.push(...this.items)) : RU = new gt(...this.map((UU => UU[hU] ? UU.clone() : UU))), RU
+      clone(uu) {
+        let Ru;
+        return uu ? (Ru = new yE, Ru.push(...this.items)) : Ru = new yE(...this.map((uu => uu[pu] ? uu.clone() : uu))), Ru
       }
     }
-    IR("array", {
-      constructor: gt
+    CR("array", {
+      constructor: yE
     });
-    class tt {
+    class EE {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(UU) {
-        const RU = this.indexByKey[UU];
-        return void 0 === RU ? void 0 : RU
+      indexOf(uu) {
+        const Ru = this.indexByKey[uu];
+        return void 0 === Ru ? void 0 : Ru
       }
-      assign(UU) {
-        const RU = this.nextIndex++;
-        return this.indexByKey[UU] = RU, this.keyByIndex.set(RU, UU), RU
+      assign(uu) {
+        const Ru = this.nextIndex++;
+        return this.indexByKey[uu] = Ru, this.keyByIndex.set(Ru, uu), Ru
       }
-      snapshot(UU, RU) {
-        (this.snapshots ??= new Map).set(UU, RU)
+      snapshot(uu, Ru) {
+        (this.snapshots ??= new Map).set(uu, Ru)
       }
-      forgetSnapshot(UU) {
-        this.snapshots?.delete(UU)
+      forgetSnapshot(uu) {
+        this.snapshots?.delete(uu)
       }
-      snapshotAt(UU) {
-        return this.snapshots?.get(UU)
+      snapshotAt(uu) {
+        return this.snapshots?.get(uu)
       }
-      setIndex(UU, RU) {
-        this.keyByIndex.set(UU, RU), this.indexByKey[RU] = UU
+      setIndex(uu, Ru) {
+        this.keyByIndex.set(uu, Ru), this.indexByKey[Ru] = uu
       }
-      keyOf(UU) {
-        return this.keyByIndex.get(UU)
+      keyOf(uu) {
+        return this.keyByIndex.get(uu)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [UU] of this.snapshots) {
-            const RU = this.keyByIndex.get(UU);
-            void 0 !== RU && (delete this.indexByKey[RU], this.keyByIndex.delete(UU))
+          for (const [uu] of this.snapshots) {
+            const Ru = this.keyByIndex.get(uu);
+            void 0 !== Ru && (delete this.indexByKey[Ru], this.keyByIndex.delete(uu))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class pt {
-      [hU];
-      [TU];
+    class KE {
+      [pu];
+      [Ju];
       childType;
-      [QU];
+      [Tu];
       $items = new Map;
-      journal = new tt;
+      journal = new EE;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(UU) {
-        (this._stream ??= nR()).maxPerTick = UU
+      set maxPerTick(uu) {
+        (this._stream ??= AR()).maxPerTick = uu
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(UU) {
-        (this._stream ??= nR()).priority = UU
+      set priority(uu) {
+        (this._stream ??= AR()).priority = uu
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[KU] = Xg;
-      static[cU] = Lg;
-      static COLLECTION_KIND = kg;
-      static[GU](UU, RU, gU) {
-        if (!gU || "string" === typeof UU[QU]) return !0;
-        const tU = UU[jU](RU) ?? UU.journal.snapshotAt(RU);
-        return gU.isChangeTreeVisible(tU[hU])
+      static[Xu] = ly;
+      static[Vu] = Oy;
+      static COLLECTION_KIND = Zy;
+      static[ru](uu, Ru, yu) {
+        if (!yu || "string" === typeof uu[Tu]) return !0;
+        const Eu = uu[Bu](Ru) ?? uu.journal.snapshotAt(Ru);
+        return yu.isChangeTreeVisible(Eu[pu])
       }
-      static is(UU) {
-        return void 0 !== UU.map
+      static is(uu) {
+        return void 0 !== uu.map
       }
-      constructor(UU) {
-        if (Object.defineProperty(this, hU, {
-            value: new ag(this),
+      constructor(uu) {
+        if (Object.defineProperty(this, pu, {
+            value: new Gy(this),
             enumerable: !1,
             writable: !0
-          }), this[QU] = void 0, UU)
-          if (UU instanceof Map || UU instanceof pt) UU.forEach(((UU, RU) => this.set(RU, UU)));
+          }), this[Tu] = void 0, uu)
+          if (uu instanceof Map || uu instanceof KE) uu.forEach(((uu, Ru) => this.set(Ru, uu)));
           else
-            for (const RU in UU) this.set(RU, UU[RU])
+            for (const Ru in uu) this.set(Ru, uu[Ru])
       }
       static initializeForDecoder() {
-        const UU = Object.create(pt.prototype);
-        return UU.$items = new Map, UU.journal = new tt, UU[QU] = void 0, Bg(UU), UU
+        const uu = Object.create(KE.prototype);
+        return uu.$items = new Map, uu.journal = new EE, uu[Tu] = void 0, ny(uu), uu
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return pt
+        return KE
       }
-      set(UU, RU) {
-        if (void 0 === RU || null === RU) throw new Error(`MapSchema#set('${UU}', ${RU}): trying to set ${RU} value on '${UU}'.`);
-        "object" === typeof RU && this[QU] && Og(RU, this[QU], this, UU), UU = UU.toString();
-        const gU = this[hU],
-          tU = void 0 !== RU[hU],
-          EU = this.journal;
-        let PU, TU = EU.indexOf(UU);
-        if (void 0 !== TU) {
-          PU = pU.REPLACE;
-          const gU = this.$items.get(UU);
-          if (gU === RU) return;
-          tU && (PU = pU.DELETE_AND_ADD, void 0 !== gU && gU[hU].root?.remove(gU[hU])), void 0 !== EU.snapshotAt(TU) && EU.forgetSnapshot(TU)
-        } else TU = EU.assign(UU), PU = pU.ADD;
-        return this.$items.set(UU, RU), PU === pU.ADD && gU.isStreamCollection ? void 0 !== gU.root && oR(this, gU.root, TU) : gU.change(TU, PU), tU && RU[hU].setParent(this, gU.root, TU), this
+      set(uu, Ru) {
+        if (void 0 === Ru || null === Ru) throw new Error(`MapSchema#set('${uu}', ${Ru}): trying to set ${Ru} value on '${uu}'.`);
+        "object" === typeof Ru && this[Tu] && fy(Ru, this[Tu], this, uu), uu = uu.toString();
+        const yu = this[pu],
+          Eu = void 0 !== Ru[pu],
+          Qu = this.journal;
+        let mu, Ju = Qu.indexOf(uu);
+        if (void 0 !== Ju) {
+          mu = Ku.REPLACE;
+          const yu = this.$items.get(uu);
+          if (yu === Ru) return;
+          Eu && (mu = Ku.DELETE_AND_ADD, void 0 !== yu && yu[pu].root?.remove(yu[pu])), void 0 !== Qu.snapshotAt(Ju) && Qu.forgetSnapshot(Ju)
+        } else Ju = Qu.assign(uu), mu = Ku.ADD;
+        return this.$items.set(uu, Ru), mu === Ku.ADD && yu.isStreamCollection ? void 0 !== yu.root && MR(this, yu.root, Ju) : yu.change(Ju, mu), Eu && Ru[pu].setParent(this, yu.root, Ju), this
       }
-      get(UU) {
-        return this.$items.get(UU)
+      get(uu) {
+        return this.$items.get(uu)
       }
-      getOrInsert(UU, RU) {
-        return this.$items.has(UU) ? this.$items.get(UU) : (this.set(UU, RU), RU)
+      getOrInsert(uu, Ru) {
+        return this.$items.has(uu) ? this.$items.get(uu) : (this.set(uu, Ru), Ru)
       }
-      getOrInsertComputed(UU, RU) {
-        if (this.$items.has(UU)) return this.$items.get(UU);
-        const gU = RU(UU);
-        return this.set(UU, gU), gU
+      getOrInsertComputed(uu, Ru) {
+        if (this.$items.has(uu)) return this.$items.get(uu);
+        const yu = Ru(uu);
+        return this.set(uu, yu), yu
       }
-      delete(UU) {
-        if (!this.$items.has(UU)) return !1;
-        const RU = this.journal.indexOf(UU),
-          gU = this.$items.get(UU),
-          tU = this[hU];
-        if (tU.isStreamCollection) {
-          const pU = tU.root;
-          let EU = !1;
-          return void 0 !== pU && (EU = ZR(this, pU, this[TU], RU)), void 0 !== gU?.[hU] && pU?.remove(gU[hU]), this.$items.delete(UU), EU || this.journal.snapshot(RU, gU), !0
+      delete(uu) {
+        if (!this.$items.has(uu)) return !1;
+        const Ru = this.journal.indexOf(uu),
+          yu = this.$items.get(uu),
+          Eu = this[pu];
+        if (Eu.isStreamCollection) {
+          const Ku = Eu.root;
+          let Qu = !1;
+          return void 0 !== Ku && (Qu = IR(this, Ku, this[Ju], Ru)), void 0 !== yu?.[pu] && Ku?.remove(yu[pu]), this.$items.delete(uu), Qu || this.journal.snapshot(Ru, yu), !0
         }
-        return this.journal.snapshot(RU, gU), tU.delete(RU), this.$items.delete(UU)
+        return this.journal.snapshot(Ru, yu), Eu.delete(Ru), this.$items.delete(uu)
       }
       clear() {
-        const UU = this[hU];
-        UU.discard(), UU.forEachChild(((RU, gU) => {
-          UU.root?.remove(RU)
-        })), this.journal.reset(), this.$items.clear(), UU.operation(pU.CLEAR)
-      } [fU]() {
-        const UU = this[hU];
-        if (UU.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((UU => UU?.[fU]?.())), this.$items.clear(), this.journal.reset(), UU.recycle(), this[TU] = void 0
+        const uu = this[pu];
+        uu.discard(), uu.forEachChild(((Ru, yu) => {
+          uu.root?.remove(Ru)
+        })), this.journal.reset(), this.$items.clear(), uu.operation(Ku.CLEAR)
+      } [Hu]() {
+        const uu = this[pu];
+        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((uu => uu?.[Hu]?.())), this.$items.clear(), this.journal.reset(), uu.recycle(), this[Ju] = void 0
       }
-      has(UU) {
-        return this.$items.has(UU)
+      has(uu) {
+        return this.$items.has(uu)
       }
-      forEach(UU) {
-        this.$items.forEach(UU)
+      forEach(uu) {
+        this.$items.forEach(uu)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[hU].pause()
+        this[pu].pause()
       }
       resumeTracking() {
-        this[hU].resume()
+        this[pu].resume()
       }
-      untracked(UU) {
-        return this[hU].untracked(UU)
+      untracked(uu) {
+        return this[pu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[hU].paused
+        return this[pu].paused
       }
-      setIndex(UU, RU) {
-        this.journal.setIndex(UU, RU)
+      setIndex(uu, Ru) {
+        this.journal.setIndex(uu, Ru)
       }
-      getIndex(UU) {
-        return this.journal.keyOf(UU)
-      } [jU](UU) {
-        const RU = this.journal.keyOf(UU);
-        return void 0 !== RU ? this.$items.get(RU) : void 0
-      } [uU](UU) {
-        const RU = this.journal.keyOf(UU);
-        void 0 !== RU && (this.$items.delete(RU), this.journal.keyByIndex.delete(UU))
-      } [CU](UU, RU, gU) {
-        let tU = null;
-        if (this.$items.forEach(((pU, EU) => {
-            UU.has(EU) ? gU(pU) : ((tU ??= new Set).add(EU), RU(pU, EU))
-          })), null !== tU) {
-          tU.forEach((UU => {
-            this.$items.delete(UU), delete this.journal.indexByKey[UU]
+      getIndex(uu) {
+        return this.journal.keyOf(uu)
+      } [Bu](uu) {
+        const Ru = this.journal.keyOf(uu);
+        return void 0 !== Ru ? this.$items.get(Ru) : void 0
+      } [xu](uu) {
+        const Ru = this.journal.keyOf(uu);
+        void 0 !== Ru && (this.$items.delete(Ru), this.journal.keyByIndex.delete(uu))
+      } [Su](uu, Ru, yu) {
+        let Eu = null;
+        if (this.$items.forEach(((Ku, Qu) => {
+            uu.has(Qu) ? yu(Ku) : ((Eu ??= new Set).add(Qu), Ru(Ku, Qu))
+          })), null !== Eu) {
+          Eu.forEach((uu => {
+            this.$items.delete(uu), delete this.journal.indexByKey[uu]
           }));
-          const UU = [];
-          this.journal.keyByIndex.forEach(((RU, gU) => {
-            tU.has(RU) && UU.push(gU)
+          const uu = [];
+          this.journal.keyByIndex.forEach(((Ru, yu) => {
+            Eu.has(Ru) && uu.push(yu)
           }));
-          for (let RU = 0; RU < UU.length; RU++) this.journal.keyByIndex.delete(UU[RU])
+          for (let Ru = 0; Ru < uu.length; Ru++) this.journal.keyByIndex.delete(uu[Ru])
         }
-      } [WU]() {
+      } [ju]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(UU) {
-        VR(this, UU)
+      _dropView(uu) {
+        sR(this, uu)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (UU => {
-          let [RU, gU] = UU;
-          return [RU, "function" === typeof gU.toJSON ? gU.toJSON() : gU]
+        return Object.fromEntries(Array.from(this, (uu => {
+          let [Ru, yu] = uu;
+          return [Ru, "function" === typeof yu.toJSON ? yu.toJSON() : yu]
         })))
       }
-      clone(UU) {
-        let RU;
-        return UU ? RU = Object.assign(new pt, this) : (RU = new pt, this.forEach(((UU, gU) => {
-          UU[hU] ? RU.set(gU, UU.clone()) : RU.set(gU, UU)
-        }))), RU
+      clone(uu) {
+        let Ru;
+        return uu ? Ru = Object.assign(new KE, this) : (Ru = new KE, this.forEach(((uu, yu) => {
+          uu[pu] ? Ru.set(yu, uu.clone()) : Ru.set(yu, uu)
+        }))), Ru
       }
     }
-    IR("map", {
-      constructor: pt
+    CR("map", {
+      constructor: KE
     });
-    class Et {
-      [hU];
-      [TU];
-      [QU];
+    class QE {
+      [pu];
+      [Ju];
+      [Tu];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(UU) {
-        (this._stream ??= nR()).maxPerTick = UU
+      set maxPerTick(uu) {
+        (this._stream ??= AR()).maxPerTick = uu
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(UU) {
-        (this._stream ??= nR()).priority = UU
+      set priority(uu) {
+        (this._stream ??= AR()).priority = uu
       }
-      static[KU] = vg;
-      static[cU] = Lg;
-      static COLLECTION_KIND = Ag;
-      static[GU](UU, RU, gU) {
-        return !gU || "string" === typeof UU[QU] || gU.isChangeTreeVisible((UU[jU](RU) ?? UU.deletedItems[RU])[hU])
+      static[Xu] = gy;
+      static[Vu] = Oy;
+      static COLLECTION_KIND = iy;
+      static[ru](uu, Ru, yu) {
+        return !yu || "string" === typeof uu[Tu] || yu.isChangeTreeVisible((uu[Bu](Ru) ?? uu.deletedItems[Ru])[pu])
       }
-      static is(UU) {
-        return void 0 !== UU.collection
+      static is(uu) {
+        return void 0 !== uu.collection
       }
-      constructor(UU) {
-        Object.defineProperty(this, hU, {
-          value: new ag(this),
+      constructor(uu) {
+        Object.defineProperty(this, pu, {
+          value: new Gy(this),
           enumerable: !1,
           writable: !0
-        }), this[QU] = void 0, UU && UU.forEach((UU => this.add(UU)))
+        }), this[Tu] = void 0, uu && uu.forEach((uu => this.add(uu)))
       }
       static initializeForDecoder() {
-        const UU = Object.create(Et.prototype);
-        return UU.$items = new Map, UU.deletedItems = {}, UU.$refId = 0, UU[QU] = void 0, Bg(UU), UU
+        const uu = Object.create(QE.prototype);
+        return uu.$items = new Map, uu.deletedItems = {}, uu.$refId = 0, uu[Tu] = void 0, ny(uu), uu
       }
-      add(UU) {
-        const RU = this.$refId++,
-          gU = this[hU];
-        return this.$items.set(RU, UU), gU.isStreamCollection ? void 0 !== gU.root && oR(this, gU.root, RU) : gU.change(RU), void 0 !== UU[hU] && UU[hU].setParent(this, gU.root, RU), RU
+      add(uu) {
+        const Ru = this.$refId++,
+          yu = this[pu];
+        return this.$items.set(Ru, uu), yu.isStreamCollection ? void 0 !== yu.root && MR(this, yu.root, Ru) : yu.change(Ru), void 0 !== uu[pu] && uu[pu].setParent(this, yu.root, Ru), Ru
       }
-      at(UU) {
-        const RU = Array.from(this.$items.keys())[UU];
-        return this.$items.get(RU)
+      at(uu) {
+        const Ru = Array.from(this.$items.keys())[uu];
+        return this.$items.get(Ru)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(UU) {
-        const RU = this.$items.entries();
-        let gU, tU;
+      delete(uu) {
+        const Ru = this.$items.entries();
+        let yu, Eu;
         for (;
-          (tU = RU.next()) && !tU.done;)
-          if (UU === tU.value[1]) {
-            gU = tU.value[0];
+          (Eu = Ru.next()) && !Eu.done;)
+          if (uu === Eu.value[1]) {
+            yu = Eu.value[0];
             break
-          } if (void 0 === gU) return !1;
-        const pU = this[hU];
-        if (pU.isStreamCollection) {
-          const UU = pU.root,
-            RU = this.$items.get(gU);
-          return void 0 !== UU && ZR(this, UU, this[TU], gU), void 0 !== RU?.[hU] && UU?.remove(RU[hU]), this.deletedItems[gU] = RU, this.$items.delete(gU)
+          } if (void 0 === yu) return !1;
+        const Ku = this[pu];
+        if (Ku.isStreamCollection) {
+          const uu = Ku.root,
+            Ru = this.$items.get(yu);
+          return void 0 !== uu && IR(this, uu, this[Ju], yu), void 0 !== Ru?.[pu] && uu?.remove(Ru[pu]), this.deletedItems[yu] = Ru, this.$items.delete(yu)
         }
-        return this.deletedItems[gU] = pU.delete(gU), this.$items.delete(gU)
+        return this.deletedItems[yu] = Ku.delete(yu), this.$items.delete(yu)
       }
       clear() {
-        const UU = this[hU];
-        UU.discard(), UU.forEachChild(((RU, gU) => {
-          UU.root?.remove(RU)
-        })), this.$items.clear(), UU.operation(pU.CLEAR)
-      } [fU]() {
-        const UU = this[hU];
-        if (UU.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((UU => UU?.[fU]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, UU.recycle(), this[TU] = void 0
+        const uu = this[pu];
+        uu.discard(), uu.forEachChild(((Ru, yu) => {
+          uu.root?.remove(Ru)
+        })), this.$items.clear(), uu.operation(Ku.CLEAR)
+      } [Hu]() {
+        const uu = this[pu];
+        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((uu => uu?.[Hu]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, uu.recycle(), this[Ju] = void 0
       }
-      has(UU) {
-        return Array.from(this.$items.values()).some((RU => RU === UU))
+      has(uu) {
+        return Array.from(this.$items.values()).some((Ru => Ru === uu))
       }
-      forEach(UU) {
-        this.$items.forEach(((RU, gU, tU) => UU(RU, gU, this)))
+      forEach(uu) {
+        this.$items.forEach(((Ru, yu, Eu) => uu(Ru, yu, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[hU].pause()
+        this[pu].pause()
       }
       resumeTracking() {
-        this[hU].resume()
+        this[pu].resume()
       }
-      untracked(UU) {
-        return this[hU].untracked(UU)
+      untracked(uu) {
+        return this[pu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[hU].paused
+        return this[pu].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(UU, RU) {}
-      getIndex(UU) {
-        return UU
-      } [jU](UU) {
-        return this.$items.get(UU)
-      } [uU](UU) {
-        this.$items.delete(UU)
-      } [CU](UU, RU, gU) {
-        let tU = null;
-        if (this.$items.forEach(((pU, EU) => {
-            UU.has(EU) ? gU(pU) : ((tU ??= []).push(EU), RU(pU, EU))
-          })), null !== tU)
-          for (let pU = 0; pU < tU.length; pU++) this[uU](tU[pU])
-      } [WU]() {
-        for (const UU in this.deletedItems) delete this.deletedItems[UU]
+      setIndex(uu, Ru) {}
+      getIndex(uu) {
+        return uu
+      } [Bu](uu) {
+        return this.$items.get(uu)
+      } [xu](uu) {
+        this.$items.delete(uu)
+      } [Su](uu, Ru, yu) {
+        let Eu = null;
+        if (this.$items.forEach(((Ku, Qu) => {
+            uu.has(Qu) ? yu(Ku) : ((Eu ??= []).push(Qu), Ru(Ku, Qu))
+          })), null !== Eu)
+          for (let Ku = 0; Ku < Eu.length; Ku++) this[xu](Eu[Ku])
+      } [ju]() {
+        for (const uu in this.deletedItems) delete this.deletedItems[uu]
       }
-      _dropView(UU) {
-        VR(this, UU)
+      _dropView(uu) {
+        sR(this, uu)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const UU = [];
-        return this.forEach(((RU, gU) => {
-          UU.push("function" === typeof RU.toJSON ? RU.toJSON() : RU)
-        })), UU
+        const uu = [];
+        return this.forEach(((Ru, yu) => {
+          uu.push("function" === typeof Ru.toJSON ? Ru.toJSON() : Ru)
+        })), uu
       }
-      clone(UU) {
-        let RU;
-        return UU ? RU = Object.assign(new Et, this) : (RU = new Et, this.forEach((UU => {
-          UU[hU] ? RU.add(UU.clone()) : RU.add(UU)
-        }))), RU
+      clone(uu) {
+        let Ru;
+        return uu ? Ru = Object.assign(new QE, this) : (Ru = new QE, this.forEach((uu => {
+          uu[pu] ? Ru.add(uu.clone()) : Ru.add(uu)
+        }))), Ru
       }
     }
-    IR("collection", {
-      constructor: Et
+    CR("collection", {
+      constructor: QE
     });
-    class Pt {
-      [hU];
-      [TU];
-      [QU];
+    class mE {
+      [pu];
+      [Ju];
+      [Tu];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(UU) {
-        (this._stream ??= nR()).maxPerTick = UU
+      set maxPerTick(uu) {
+        (this._stream ??= AR()).maxPerTick = uu
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(UU) {
-        (this._stream ??= nR()).priority = UU
+      set priority(uu) {
+        (this._stream ??= AR()).priority = uu
       }
-      static[KU] = vg;
-      static[cU] = Lg;
-      static COLLECTION_KIND = ig;
-      static[GU](UU, RU, gU) {
-        return !gU || "string" === typeof UU[QU] || gU.isVisible((UU[jU](RU) ?? UU.deletedItems[RU])[hU])
+      static[Xu] = gy;
+      static[Vu] = Oy;
+      static COLLECTION_KIND = Py;
+      static[ru](uu, Ru, yu) {
+        return !yu || "string" === typeof uu[Tu] || yu.isVisible((uu[Bu](Ru) ?? uu.deletedItems[Ru])[pu])
       }
-      static is(UU) {
-        return void 0 !== UU.set
+      static is(uu) {
+        return void 0 !== uu.set
       }
-      constructor(UU) {
-        Object.defineProperty(this, hU, {
-          value: new ag(this),
+      constructor(uu) {
+        Object.defineProperty(this, pu, {
+          value: new Gy(this),
           enumerable: !1,
           writable: !0
-        }), this[QU] = void 0, UU && UU.forEach((UU => this.add(UU)))
+        }), this[Tu] = void 0, uu && uu.forEach((uu => this.add(uu)))
       }
       static initializeForDecoder() {
-        const UU = Object.create(Pt.prototype);
-        return UU.$items = new Map, UU.deletedItems = {}, UU.$refId = 0, UU[QU] = void 0, Bg(UU), UU
+        const uu = Object.create(mE.prototype);
+        return uu.$items = new Map, uu.deletedItems = {}, uu.$refId = 0, uu[Tu] = void 0, ny(uu), uu
       }
-      add(UU) {
-        if (this.has(UU)) return !1;
-        const RU = this.$refId++,
-          gU = this[hU];
-        return this.$items.set(RU, UU), gU.isStreamCollection ? void 0 !== gU.root && oR(this, gU.root, RU) : gU.change(RU, pU.ADD), void 0 !== UU[hU] && UU[hU].setParent(this, gU.root, RU), RU
+      add(uu) {
+        if (this.has(uu)) return !1;
+        const Ru = this.$refId++,
+          yu = this[pu];
+        return this.$items.set(Ru, uu), yu.isStreamCollection ? void 0 !== yu.root && MR(this, yu.root, Ru) : yu.change(Ru, Ku.ADD), void 0 !== uu[pu] && uu[pu].setParent(this, yu.root, Ru), Ru
       }
       entries() {
         return this.$items.entries()
       }
-      delete(UU) {
-        const RU = this.$items.entries();
-        let gU, tU;
+      delete(uu) {
+        const Ru = this.$items.entries();
+        let yu, Eu;
         for (;
-          (tU = RU.next()) && !tU.done;)
-          if (UU === tU.value[1]) {
-            gU = tU.value[0];
+          (Eu = Ru.next()) && !Eu.done;)
+          if (uu === Eu.value[1]) {
+            yu = Eu.value[0];
             break
-          } if (void 0 === gU) return !1;
-        const pU = this[hU];
-        if (pU.isStreamCollection) {
-          const UU = pU.root,
-            RU = this.$items.get(gU);
-          return void 0 !== UU && ZR(this, UU, this[TU], gU), void 0 !== RU?.[hU] && UU?.remove(RU[hU]), this.deletedItems[gU] = RU, this.$items.delete(gU)
+          } if (void 0 === yu) return !1;
+        const Ku = this[pu];
+        if (Ku.isStreamCollection) {
+          const uu = Ku.root,
+            Ru = this.$items.get(yu);
+          return void 0 !== uu && IR(this, uu, this[Ju], yu), void 0 !== Ru?.[pu] && uu?.remove(Ru[pu]), this.deletedItems[yu] = Ru, this.$items.delete(yu)
         }
-        return this.deletedItems[gU] = pU.delete(gU), this.$items.delete(gU)
+        return this.deletedItems[yu] = Ku.delete(yu), this.$items.delete(yu)
       }
       clear() {
-        const UU = this[hU];
-        UU.discard(), this.$items.clear(), UU.operation(pU.CLEAR)
-      } [fU]() {
-        const UU = this[hU];
-        if (UU.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((UU => UU?.[fU]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, UU.recycle(), this[TU] = void 0
+        const uu = this[pu];
+        uu.discard(), this.$items.clear(), uu.operation(Ku.CLEAR)
+      } [Hu]() {
+        const uu = this[pu];
+        if (uu.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((uu => uu?.[Hu]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, uu.recycle(), this[Ju] = void 0
       }
-      has(UU) {
-        const RU = this.$items.values();
-        let gU, tU = !1;
+      has(uu) {
+        const Ru = this.$items.values();
+        let yu, Eu = !1;
         for (;
-          (gU = RU.next()) && !gU.done;)
-          if (UU === gU.value) {
-            tU = !0;
+          (yu = Ru.next()) && !yu.done;)
+          if (uu === yu.value) {
+            Eu = !0;
             break
-          } return tU
+          } return Eu
       }
-      forEach(UU) {
-        this.$items.forEach(((RU, gU, tU) => UU(RU, gU, this)))
+      forEach(uu) {
+        this.$items.forEach(((Ru, yu, Eu) => uu(Ru, yu, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[hU].pause()
+        this[pu].pause()
       }
       resumeTracking() {
-        this[hU].resume()
+        this[pu].resume()
       }
-      untracked(UU) {
-        return this[hU].untracked(UU)
+      untracked(uu) {
+        return this[pu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[hU].paused
+        return this[pu].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(UU, RU) {}
-      getIndex(UU) {
-        return UU
-      } [jU](UU) {
-        return this.$items.get(UU)
-      } [uU](UU) {
-        this.$items.delete(UU)
-      } [CU](UU, RU, gU) {
-        let tU = null;
-        if (this.$items.forEach(((pU, EU) => {
-            UU.has(EU) ? gU(pU) : ((tU ??= []).push(EU), RU(pU, EU))
-          })), null !== tU)
-          for (let pU = 0; pU < tU.length; pU++) this[uU](tU[pU])
-      } [WU]() {
-        for (const UU in this.deletedItems) delete this.deletedItems[UU]
+      setIndex(uu, Ru) {}
+      getIndex(uu) {
+        return uu
+      } [Bu](uu) {
+        return this.$items.get(uu)
+      } [xu](uu) {
+        this.$items.delete(uu)
+      } [Su](uu, Ru, yu) {
+        let Eu = null;
+        if (this.$items.forEach(((Ku, Qu) => {
+            uu.has(Qu) ? yu(Ku) : ((Eu ??= []).push(Qu), Ru(Ku, Qu))
+          })), null !== Eu)
+          for (let Ku = 0; Ku < Eu.length; Ku++) this[xu](Eu[Ku])
+      } [ju]() {
+        for (const uu in this.deletedItems) delete this.deletedItems[uu]
       }
-      _dropView(UU) {
-        VR(this, UU)
+      _dropView(uu) {
+        sR(this, uu)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const UU = [];
-        return this.forEach(((RU, gU) => {
-          UU.push("function" === typeof RU.toJSON ? RU.toJSON() : RU)
-        })), UU
+        const uu = [];
+        return this.forEach(((Ru, yu) => {
+          uu.push("function" === typeof Ru.toJSON ? Ru.toJSON() : Ru)
+        })), uu
       }
-      clone(UU) {
-        let RU;
-        return UU ? RU = Object.assign(new Pt, this) : (RU = new Pt, this.forEach((UU => {
-          UU[hU] ? RU.add(UU.clone()) : RU.add(UU)
-        }))), RU
+      clone(uu) {
+        let Ru;
+        return uu ? Ru = Object.assign(new mE, this) : (Ru = new mE, this.forEach((uu => {
+          uu[pu] ? Ru.add(uu.clone()) : Ru.add(uu)
+        }))), Ru
       }
     }
-    IR("set", {
-      constructor: Pt
+    CR("set", {
+      constructor: mE
     });
-    class Tt {
-      [hU];
-      [TU];
-      [QU];
+    class JE {
+      [pu];
+      [Ju];
+      [Tu];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(UU) {
-        (this._stream ??= nR()).maxPerTick = UU
+      set maxPerTick(uu) {
+        (this._stream ??= AR()).maxPerTick = uu
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(UU) {
-        (this._stream ??= nR()).priority = UU
+      set priority(uu) {
+        (this._stream ??= AR()).priority = uu
       }
       static $isStream = !0;
-      static[KU] = vg;
-      static[cU] = Lg;
-      static COLLECTION_KIND = zg;
-      static[GU](UU, RU, gU) {
-        if (!gU) return !0;
-        const tU = UU[jU](RU);
-        return void 0 !== tU && gU.isVisible(tU[hU])
+      static[Xu] = gy;
+      static[Vu] = Oy;
+      static COLLECTION_KIND = Yy;
+      static[ru](uu, Ru, yu) {
+        if (!yu) return !0;
+        const Eu = uu[Bu](Ru);
+        return void 0 !== Eu && yu.isVisible(Eu[pu])
       }
-      static is(UU) {
-        return UU && void 0 !== UU.stream
+      static is(uu) {
+        return uu && void 0 !== uu.stream
       }
       constructor() {
-        Object.defineProperty(this, hU, {
-          value: new ag(this),
+        Object.defineProperty(this, pu, {
+          value: new Gy(this),
           enumerable: !1,
           writable: !0
-        }), this[QU] = void 0
+        }), this[Tu] = void 0
       }
       static initializeForDecoder() {
-        const UU = Object.create(Tt.prototype);
-        return UU.$items = new Map, UU.$nextPosition = 0, UU._itemIndex = new Map, UU[QU] = void 0, Bg(UU), UU
+        const uu = Object.create(JE.prototype);
+        return uu.$items = new Map, uu.$nextPosition = 0, uu._itemIndex = new Map, uu[Tu] = void 0, ny(uu), uu
       }
-      add(UU) {
-        if (this._itemIndex.has(UU)) return -1;
-        const RU = this.$nextPosition++;
-        this.$items.set(RU, UU), this._itemIndex.set(UU, RU);
-        const gU = this[hU].root;
-        return void 0 !== UU[hU] && UU[hU].setParent(this, gU, RU), void 0 !== gU && oR(this, gU, RU), RU
+      add(uu) {
+        if (this._itemIndex.has(uu)) return -1;
+        const Ru = this.$nextPosition++;
+        this.$items.set(Ru, uu), this._itemIndex.set(uu, Ru);
+        const yu = this[pu].root;
+        return void 0 !== uu[pu] && uu[pu].setParent(this, yu, Ru), void 0 !== yu && MR(this, yu, Ru), Ru
       }
-      remove(UU) {
-        const RU = this._itemIndex.get(UU);
-        if (void 0 === RU) return !1;
-        this._itemIndex.delete(UU), this.$items.delete(RU);
-        const gU = this[hU].root;
-        return void 0 !== gU && (ZR(this, gU, this[TU], RU), void 0 !== UU[hU] && gU.remove(UU[hU])), !0
+      remove(uu) {
+        const Ru = this._itemIndex.get(uu);
+        if (void 0 === Ru) return !1;
+        this._itemIndex.delete(uu), this.$items.delete(Ru);
+        const yu = this[pu].root;
+        return void 0 !== yu && (IR(this, yu, this[Ju], Ru), void 0 !== uu[pu] && yu.remove(uu[pu])), !0
       }
-      has(UU) {
-        return this._itemIndex.has(UU)
+      has(uu) {
+        return this._itemIndex.has(uu)
       }
       clear() {
-        const UU = this[hU].root;
-        if (void 0 !== UU) {
-          ! function(UU, RU, gU) {
-            const tU = UU._stream;
-            if (void 0 !== tU) {
-              tU.broadcastPending.clear();
-              for (const UU of tU.sentBroadcast) tU.broadcastDeletes.add(UU);
-              tU.sentBroadcast.clear(), RU.forEachActiveView((UU => {
-                tU.pendingByView.get(UU.id)?.clear();
-                const RU = tU.sentByView.get(UU.id);
-                if (void 0 !== RU && RU.size > 0) {
-                  let tU = UU.changes.get(gU);
-                  void 0 === tU && (tU = new Map, UU.changes.set(gU, tU));
-                  for (const UU of RU) tU.set(UU, pU.DELETE);
-                  RU.clear()
+        const uu = this[pu].root;
+        if (void 0 !== uu) {
+          ! function(uu, Ru, yu) {
+            const Eu = uu._stream;
+            if (void 0 !== Eu) {
+              Eu.broadcastPending.clear();
+              for (const uu of Eu.sentBroadcast) Eu.broadcastDeletes.add(uu);
+              Eu.sentBroadcast.clear(), Ru.forEachActiveView((uu => {
+                Eu.pendingByView.get(uu.id)?.clear();
+                const Ru = Eu.sentByView.get(uu.id);
+                if (void 0 !== Ru && Ru.size > 0) {
+                  let Eu = uu.changes.get(yu);
+                  void 0 === Eu && (Eu = new Map, uu.changes.set(yu, Eu));
+                  for (const uu of Ru) Eu.set(uu, Ku.DELETE);
+                  Ru.clear()
                 }
               }))
             }
-          }(this, UU, this[TU]);
-          for (const RU of this.$items.values()) void 0 !== RU[hU] && UU.remove(RU[hU])
+          }(this, uu, this[Ju]);
+          for (const Ru of this.$items.values()) void 0 !== Ru[pu] && uu.remove(Ru[pu])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(UU) {
-        for (const [RU, gU] of this.$items) UU(gU, RU, this)
+      forEach(uu) {
+        for (const [Ru, yu] of this.$items) uu(yu, Ru, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(UU, RU) {}
-      getIndex(UU) {
-        return UU
-      } [jU](UU) {
-        return this.$items.get(UU)
-      } [uU](UU) {
-        const RU = this.$items.get(UU);
-        void 0 !== RU && (this._itemIndex.delete(RU), this.$items.delete(UU))
-      } [CU]() {} [WU]() {}
+      setIndex(uu, Ru) {}
+      getIndex(uu) {
+        return uu
+      } [Bu](uu) {
+        return this.$items.get(uu)
+      } [xu](uu) {
+        const Ru = this.$items.get(uu);
+        void 0 !== Ru && (this._itemIndex.delete(Ru), this.$items.delete(uu))
+      } [Su]() {} [ju]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const UU = [];
-        return this.forEach((RU => {
-          UU.push("function" === typeof RU?.toJSON ? RU.toJSON() : RU)
-        })), UU
+        const uu = [];
+        return this.forEach((Ru => {
+          uu.push("function" === typeof Ru?.toJSON ? Ru.toJSON() : Ru)
+        })), uu
       }
-      clone(UU) {
-        if (UU) {
-          return Object.assign(new Tt, this)
+      clone(uu) {
+        if (uu) {
+          return Object.assign(new JE, this)
         }
-        const RU = new Tt;
-        return RU.maxPerTick = this.maxPerTick, this.forEach((UU => {
-          RU.add("function" === typeof UU?.clone ? UU.clone() : UU)
-        })), RU
+        const Ru = new JE;
+        return Ru.maxPerTick = this.maxPerTick, this.forEach((uu => {
+          Ru.add("function" === typeof uu?.clone ? uu.clone() : uu)
+        })), Ru
       }
-      _dropView(UU) {
-        VR(this, UU)
+      _dropView(uu) {
+        sR(this, uu)
       }
       _unregister() {}
     }
-    IR("stream", {
-      constructor: Tt
+    CR("stream", {
+      constructor: JE
     });
-    class qt {
-      [IU] = !0;
+    class NE {
+      [Cu] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(UU) {
-        this._type = UU
+      constructor(uu) {
+        this._type = uu
       }
-      default (UU) {
-        return this._default = UU, this._hasDefault = !0, this
+      default (uu) {
+        return this._default = uu, this._hasDefault = !0, this
       }
-      view(UU) {
-        return this._view = UU ?? -1, this
+      view(uu) {
+        return this._view = uu ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const UU = this._type;
-        if (UU && "object" === typeof UU && void 0 !== UU.array) throw new Error(wR);
+        const uu = this._type;
+        if (uu && "object" === typeof uu && void 0 !== uu.array) throw new Error(eR);
         return this._stream = !0, this
       }
-      priority(UU) {
-        return this._streamPriority = UU, this
+      priority(uu) {
+        return this._streamPriority = uu, this
       }
       deprecated() {
-        let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = UU, this
+        let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = uu, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function Kt(UU) {
-      return null != UU && !0 === UU[IU]
+    function XE(uu) {
+      return null != uu && !0 === uu[Cu]
     }
 
-    function ct(UU) {
-      return () => new qt(UU)
+    function VE(uu) {
+      return () => new NE(uu)
     }
 
-    function Gt(UU) {
-      if (Kt(UU)) {
-        const RU = UU._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof RU?`use the type name instead: t.array("${RU}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function rE(uu) {
+      if (XE(uu)) {
+        const Ru = uu._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Ru?`use the type name instead: t.array("${Ru}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return UU
+      return uu
     }
 
-    function jt(UU) {
-      return new qt({
-        quantized: XR(UU)
+    function BE(uu) {
+      return new NE({
+        quantized: lR(uu)
       })
     }
-    const ut = Object.freeze({
-        string: ct("string"),
-        number: ct("number"),
-        boolean: ct("boolean"),
-        int8: ct("int8"),
-        uint8: ct("uint8"),
-        int16: ct("int16"),
-        uint16: ct("uint16"),
-        int32: ct("int32"),
-        uint32: ct("uint32"),
-        int64: ct("int64"),
-        uint64: ct("uint64"),
-        float32: ct("float32"),
-        float64: ct("float64"),
-        bigint64: ct("bigint64"),
-        biguint64: ct("biguint64"),
-        ref: UU => new qt(UU),
-        array: UU => new qt({
-          array: Gt(UU)
+    const xE = Object.freeze({
+        string: VE("string"),
+        number: VE("number"),
+        boolean: VE("boolean"),
+        int8: VE("int8"),
+        uint8: VE("uint8"),
+        int16: VE("int16"),
+        uint16: VE("uint16"),
+        int32: VE("int32"),
+        uint32: VE("uint32"),
+        int64: VE("int64"),
+        uint64: VE("uint64"),
+        float32: VE("float32"),
+        float64: VE("float64"),
+        bigint64: VE("bigint64"),
+        biguint64: VE("biguint64"),
+        ref: uu => new NE(uu),
+        array: uu => new NE({
+          array: rE(uu)
         }),
-        map: UU => new qt({
-          map: Gt(UU)
+        map: uu => new NE({
+          map: rE(uu)
         }),
-        set: UU => new qt({
-          set: Gt(UU)
+        set: uu => new NE({
+          set: rE(uu)
         }),
-        collection: UU => new qt({
-          collection: Gt(UU)
+        collection: uu => new NE({
+          collection: rE(uu)
         }),
-        stream: UU => {
-          const RU = new qt({
-            stream: Gt(UU)
+        stream: uu => {
+          const Ru = new NE({
+            stream: rE(uu)
           });
-          return RU._stream = !0, RU
+          return Ru._stream = !0, Ru
         },
-        quantized: jt,
-        angle: UU => jt({
+        quantized: BE,
+        angle: uu => BE({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: UU?.bits ?? 16
+          bits: uu?.bits ?? 16
         })
       }),
-      Ct = -1;
+      SE = -1;
 
-    function ht(UU) {
-      return sR.register(UU), UU
+    function pE(uu) {
+      return FR.register(uu), uu
     }
 
-    function Qt() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Ct;
-      return function(RU, gU) {
-        const tU = MR.initialize(RU.constructor);
-        MR.setTag(tU, gU, UU)
+    function TE() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : SE;
+      return function(Ru, yu) {
+        const Eu = oR.initialize(Ru.constructor);
+        oR.setTag(Eu, yu, uu)
       }
     }
 
-    function et(UU, RU) {
-      const gU = MR.initialize(UU.constructor);
-      MR.setUnreliable(gU, RU)
+    function WE(uu, Ru) {
+      const yu = oR.initialize(uu.constructor);
+      oR.setUnreliable(yu, Ru)
     }
 
-    function Wt(UU, RU) {
-      const gU = MR.initialize(UU.constructor);
-      MR.setPatchOnly(gU, RU)
+    function jE(uu, Ru) {
+      const yu = oR.initialize(uu.constructor);
+      oR.setPatchOnly(yu, Ru)
     }
 
-    function ft(UU, RU) {
-      const gU = MR.initialize(UU.constructor);
-      MR.setFullStateOnly(gU, RU)
+    function HE(uu, Ru) {
+      const yu = oR.initialize(uu.constructor);
+      oR.setFullStateOnly(yu, Ru)
     }
 
-    function xt(UU, RU) {
-      return function(gU, tU) {
-        const pU = gU.constructor;
-        if (!UU) throw new Error(`${pU.name}: @type() reference provided for "${tU}" is undefined. Make sure you don't have any circular dependencies.`);
-        UU = kR(UU, `${pU.name}.${tU}`), sR.register(pU);
-        const EU = Object.getPrototypeOf(pU)[Symbol.metadata],
-          PU = MR.initialize(pU);
-        let TU = PU[tU];
-        if (void 0 !== PU[TU]) {
-          if (PU[TU].deprecated) return;
-          if (void 0 !== PU[TU].type) {
-            const UU = new Error(`@colyseus/schema: Duplicate '${tU}' definition on '${pU.name}'.\nCheck @type() annotation`);
-            throw new Error(`${UU.message} ${UU.stack.split("\n")[4].trim()}`)
+    function dE(uu, Ru) {
+      return function(yu, Eu) {
+        const Ku = yu.constructor;
+        if (!uu) throw new Error(`${Ku.name}: @type() reference provided for "${Eu}" is undefined. Make sure you don't have any circular dependencies.`);
+        uu = ZR(uu, `${Ku.name}.${Eu}`), FR.register(Ku);
+        const Qu = Object.getPrototypeOf(Ku)[Symbol.metadata],
+          mu = oR.initialize(Ku);
+        let Ju = mu[Eu];
+        if (void 0 !== mu[Ju]) {
+          if (mu[Ju].deprecated) return;
+          if (void 0 !== mu[Ju].type) {
+            const uu = new Error(`@colyseus/schema: Duplicate '${Eu}' definition on '${Ku.name}'.\nCheck @type() annotation`);
+            throw new Error(`${uu.message} ${uu.stack.split("\n")[4].trim()}`)
           }
-        } else TU = PU[bU] ?? (EU && EU[bU]) ?? -1, TU++;
-        if (RU && RU.manual) MR.addField(PU, TU, tU, UU, {
+        } else Ju = mu[Du] ?? (Qu && Qu[Du]) ?? -1, Ju++;
+        if (Ru && Ru.manual) oR.addField(mu, Ju, Eu, uu, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: RU,
-            childType: gU
-          } = yR(UU);
-          MR.addField(PU, TU, tU, UU, It(tU, TU, gU, RU))
+            complexTypeKlass: Ru,
+            childType: yu
+          } = wR(uu);
+          oR.addField(mu, Ju, Eu, uu, CE(Eu, Ju, yu, Ru))
         }
-        PU[JU][tU] && Object.defineProperty(gU, tU, PU[JU][tU]), ("string" === typeof UU || vR(UU)) && (PU[nU] || Object.defineProperty(PU, nU, {
+        mu[ku][Eu] && Object.defineProperty(yu, Eu, mu[ku][Eu]), ("string" === typeof uu || gR(uu)) && (mu[Au] || Object.defineProperty(mu, Au, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), PU[nU][TU] = "string" === typeof UU ? RR[UU] : SR(UU.quantized))
+        }), mu[Au][Ju] = "string" === typeof uu ? RR[uu] : zR(uu.quantized))
       }
     }
-    const mt = {
+    const bE = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function It(UU, RU, gU, tU) {
-      let EU;
-      return EU = tU ? function(UU, RU, gU, tU) {
-        const EU = tU.constructor === gt,
-          PU = tU.constructor === pt;
-        return function(UU) {
-          const tU = this[mU],
-            TU = tU[RU];
-          if (UU !== TU) {
-            if (void 0 !== UU && null !== UU) {
-              if (!EU || UU instanceof gt)
-                if (!PU || UU instanceof pt) UU[QU] = gU;
+    function CE(uu, Ru, yu, Eu) {
+      let Qu;
+      return Qu = Eu ? function(uu, Ru, yu, Eu) {
+        const Qu = Eu.constructor === yE,
+          mu = Eu.constructor === KE;
+        return function(uu) {
+          const Eu = this[bu],
+            Ju = Eu[Ru];
+          if (uu !== Ju) {
+            if (void 0 !== uu && null !== uu) {
+              if (!Qu || uu instanceof yE)
+                if (!mu || uu instanceof KE) uu[Tu] = yu;
                 else {
-                  const RU = new pt;
-                  if (RU[QU] = gU, UU instanceof Map) UU.forEach(((UU, gU) => RU.set(gU, UU)));
+                  const Ru = new KE;
+                  if (Ru[Tu] = yu, uu instanceof Map) uu.forEach(((uu, yu) => Ru.set(yu, uu)));
                   else
-                    for (const gU in UU) RU.set(gU, UU[gU]);
-                  UU = RU
+                    for (const yu in uu) Ru.set(yu, uu[yu]);
+                  uu = Ru
                 }
               else {
-                const RU = new gt;
-                RU[QU] = gU, RU.push(...UU), UU = RU
+                const Ru = new yE;
+                Ru[Tu] = yu, Ru.push(...uu), uu = Ru
               }
-              const tU = this[hU],
-                KU = this.constructor;
-              void 0 !== TU && null !== TU && TU[hU] ? (tU.root?.remove(TU[hU]), KU[qU](tU, RU, pU.DELETE_AND_ADD)) : KU[qU](tU, RU, pU.ADD), UU[hU]?.setParent(this, tU.root, RU)
-            } else void 0 !== TU && null !== TU && this[hU].delete(RU);
-            tU[RU] = UU
+              const Eu = this[pu],
+                Xu = this.constructor;
+              void 0 !== Ju && null !== Ju && Ju[pu] ? (Eu.root?.remove(Ju[pu]), Xu[Nu](Eu, Ru, Ku.DELETE_AND_ADD)) : Xu[Nu](Eu, Ru, Ku.ADD), uu[pu]?.setParent(this, Eu.root, Ru)
+            } else void 0 !== Ju && null !== Ju && this[pu].delete(Ru);
+            Eu[Ru] = uu
           }
         }
-      }(0, RU, gU, tU) : "string" === typeof gU ? function(UU, RU, gU) {
-        const tU = mt[gU],
-          EU = "string" === gU,
-          PU = "boolean" === gU;
-        return function(gU) {
-          const TU = this[mU],
-            KU = TU[RU];
-          if (gU !== KU) {
-            if (void 0 !== gU && null !== gU) {
-              if (!PU && void 0 !== tU && typeof gU !== tU && (!EU || null !== gU)) {
-                const RU = gU && gU.constructor ? ` (${gU.constructor.name})` : "";
-                throw new lg(`a '${tU}' was expected, but '${JSON.stringify(gU)}'${RU} was provided in ${this.constructor.name}#${UU}`)
+      }(0, Ru, yu, Eu) : "string" === typeof yu ? function(uu, Ru, yu) {
+        const Eu = bE[yu],
+          Qu = "string" === yu,
+          mu = "boolean" === yu;
+        return function(yu) {
+          const Ju = this[bu],
+            Xu = Ju[Ru];
+          if (yu !== Xu) {
+            if (void 0 !== yu && null !== yu) {
+              if (!mu && void 0 !== Eu && typeof yu !== Eu && (!Qu || null !== yu)) {
+                const Ru = yu && yu.constructor ? ` (${yu.constructor.name})` : "";
+                throw new ay(`a '${Eu}' was expected, but '${JSON.stringify(yu)}'${Ru} was provided in ${this.constructor.name}#${uu}`)
               }
-              this.constructor[qU](this[hU], RU, pU.ADD)
-            } else void 0 !== KU && null !== KU && this[hU].delete(RU);
-            TU[RU] = gU
+              this.constructor[Nu](this[pu], Ru, Ku.ADD)
+            } else void 0 !== Xu && null !== Xu && this[pu].delete(Ru);
+            Ju[Ru] = yu
           }
         }
-      }(UU, RU, gU) : vR(gU) ? function(UU, RU, gU) {
-        return function(tU) {
-          const EU = this[mU],
-            PU = EU[RU];
-          if (void 0 !== tU && null !== tU) {
-            if ("number" !== typeof tU) throw new lg(`a 'number' was expected, but '${JSON.stringify(tU)}' was provided in ${this.constructor.name}#${UU}`);
-            if ((tU = HR(gU, dR(gU, tU))) === PU) return;
-            this.constructor[qU](this[hU], RU, pU.ADD)
+      }(uu, Ru, yu) : gR(yu) ? function(uu, Ru, yu) {
+        return function(Eu) {
+          const Qu = this[bu],
+            mu = Qu[Ru];
+          if (void 0 !== Eu && null !== Eu) {
+            if ("number" !== typeof Eu) throw new ay(`a 'number' was expected, but '${JSON.stringify(Eu)}' was provided in ${this.constructor.name}#${uu}`);
+            if ((Eu = LR(yu, cR(yu, Eu))) === mu) return;
+            this.constructor[Nu](this[pu], Ru, Ku.ADD)
           } else {
-            if (tU === PU) return;
-            void 0 !== PU && null !== PU && this[hU].delete(RU)
+            if (Eu === mu) return;
+            void 0 !== mu && null !== mu && this[pu].delete(Ru)
           }
-          EU[RU] = tU
+          Qu[Ru] = Eu
         }
-      }(UU, RU, gU.quantized) : function(UU, RU, gU) {
-        return function(tU) {
-          const EU = this[mU],
-            PU = EU[RU];
-          if (tU !== PU) {
-            if (void 0 !== tU && null !== tU) {
-              Og(tU, gU, this, UU);
-              const EU = this[hU],
-                TU = this.constructor;
-              void 0 !== PU && null !== PU && PU[hU] ? (EU.root?.remove(PU[hU]), TU[qU](EU, RU, pU.DELETE_AND_ADD)) : TU[qU](EU, RU, pU.ADD), tU[hU]?.setParent(this, EU.root, RU)
-            } else void 0 !== PU && null !== PU && this[hU].delete(RU);
-            EU[RU] = tU
+      }(uu, Ru, yu.quantized) : function(uu, Ru, yu) {
+        return function(Eu) {
+          const Qu = this[bu],
+            mu = Qu[Ru];
+          if (Eu !== mu) {
+            if (void 0 !== Eu && null !== Eu) {
+              fy(Eu, yu, this, uu);
+              const Qu = this[pu],
+                Ju = this.constructor;
+              void 0 !== mu && null !== mu && mu[pu] ? (Qu.root?.remove(mu[pu]), Ju[Nu](Qu, Ru, Ku.DELETE_AND_ADD)) : Ju[Nu](Qu, Ru, Ku.ADD), Eu[pu]?.setParent(this, Qu.root, Ru)
+            } else void 0 !== mu && null !== mu && this[pu].delete(Ru);
+            Qu[Ru] = Eu
           }
         }
-      }(UU, RU, gU), {
+      }(uu, Ru, yu), {
         get: function() {
-          return this[mU][RU]
+          return this[bu][Ru]
         },
-        set: EU,
+        set: Qu,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function Jt() {
-      let UU = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(RU, gU) {
-        const tU = MR.initialize(RU.constructor);
-        MR.setDeprecated(tU, gU), UU && (tU[JU] ??= {}, tU[JU][gU] = {
+    function kE() {
+      let uu = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(Ru, yu) {
+        const Eu = oR.initialize(Ru.constructor);
+        oR.setDeprecated(Eu, yu), uu && (Eu[ku] ??= {}, Eu[ku][yu] = {
           get: function() {
-            throw new Error(`${gU} is deprecated.`)
+            throw new Error(`${yu} is deprecated.`)
           },
-          set: function(UU) {},
+          set: function(uu) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(RU, gU, tU[JU][gU]))
+        }, Object.defineProperty(Ru, yu, Eu[ku][yu]))
       }
     }
-    let wt = !1;
+    let eE = !1;
 
-    function nt(UU, RU, gU) {
-      wt || (wt = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let tU in RU) xt(RU[tU], gU)(UU.prototype, tU);
-      return UU
+    function AE(uu, Ru, yu) {
+      eE || (eE = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let Eu in Ru) dE(Ru[Eu], yu)(uu.prototype, Eu);
+      return uu
     }
 
-    function bt(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Zt;
-      if (null == UU || "object" !== typeof UU) throw new Error(`schema(): first argument must be a fields object (got ${typeof UU}).`);
-      const tU = {},
-        pU = {},
-        EU = {},
-        PU = {},
-        TU = (UU, RU) => {
-          if (RU.hasDefault)((UU, RU) => {
-            "function" === typeof RU ? PU[UU] = RU : RU && "function" === typeof RU.clone ? PU[UU] = () => RU.clone() : EU[UU] = RU
-          })(UU, RU.default);
-          else if (!RU.optional) {
-            const gU = function(UU) {
-              if (UU && "object" === typeof UU) {
-                if (void 0 !== UU.array) return () => new gt;
-                if (void 0 !== UU.map) return () => new pt;
-                if (void 0 !== UU.set) return () => new Pt;
-                if (void 0 !== UU.collection) return () => new Et;
-                if (void 0 !== UU.stream) return () => new Tt
-              } else if ("function" === typeof UU && Zt.is(UU) && (!UU.prototype.initialize || 0 === UU.prototype.initialize.length)) return () => new UU
-            }(RU.type);
-            gU && (PU[UU] = gU)
+    function DE(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : IE;
+      if (null == uu || "object" !== typeof uu) throw new Error(`schema(): first argument must be a fields object (got ${typeof uu}).`);
+      const Eu = {},
+        Ku = {},
+        Qu = {},
+        mu = {},
+        Ju = (uu, Ru) => {
+          if (Ru.hasDefault)((uu, Ru) => {
+            "function" === typeof Ru ? mu[uu] = Ru : Ru && "function" === typeof Ru.clone ? mu[uu] = () => Ru.clone() : Qu[uu] = Ru
+          })(uu, Ru.default);
+          else if (!Ru.optional) {
+            const yu = function(uu) {
+              if (uu && "object" === typeof uu) {
+                if (void 0 !== uu.array) return () => new yE;
+                if (void 0 !== uu.map) return () => new KE;
+                if (void 0 !== uu.set) return () => new mE;
+                if (void 0 !== uu.collection) return () => new QE;
+                if (void 0 !== uu.stream) return () => new JE
+              } else if ("function" === typeof uu && IE.is(uu) && (!uu.prototype.initialize || 0 === uu.prototype.initialize.length)) return () => new uu
+            }(Ru.type);
+            yu && (mu[uu] = yu)
           }
         },
-        qU = {},
-        KU = [],
-        cU = [],
-        GU = {},
-        jU = [],
-        uU = [],
-        CU = {},
-        hU = [];
-      for (const mU in UU) {
-        const gU = UU[mU],
-          EU = `schema(${RU?`'${RU}'`:""}): field '${mU}'`;
-        if (Kt(gU)) {
-          const UU = gU.toDefinition();
-          if (UU.noSync) {
-            if (void 0 !== UU.view || UU.unreliable || UU.patchOnly || UU.fullStateOnly || UU.stream) throw new Error(`${EU} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            TU(mU, UU);
+        Nu = {},
+        Xu = [],
+        Vu = [],
+        ru = {},
+        Bu = [],
+        xu = [],
+        Su = {},
+        pu = [];
+      for (const bu in uu) {
+        const yu = uu[bu],
+          Qu = `schema(${Ru?`'${Ru}'`:""}): field '${bu}'`;
+        if (XE(yu)) {
+          const uu = yu.toDefinition();
+          if (uu.noSync) {
+            if (void 0 !== uu.view || uu.unreliable || uu.patchOnly || uu.fullStateOnly || uu.stream) throw new Error(`${Qu} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            Ju(bu, uu);
             continue
           }
-          if (UU.patchOnly && UU.fullStateOnly) throw new Error(`${EU} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const RU = kR(UU.type, EU);
-          if ("function" === typeof RU && !Zt.is(RU)) throw new Error(`${EU} is a synced ref to non-Schema class '${RU.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          tU[mU] = RU, void 0 !== UU.view && (qU[mU] = UU.view), UU.unreliable && KU.push(mU), UU.patchOnly && cU.push(mU), UU.deprecated && (GU[mU] = UU.deprecatedThrows), UU.fullStateOnly && jU.push(mU), UU.stream && uU.push(mU), void 0 !== UU.streamPriority && (CU[mU] = UU.streamPriority), UU.optional && hU.push(mU), TU(mU, UU)
+          if (uu.patchOnly && uu.fullStateOnly) throw new Error(`${Qu} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const Ru = ZR(uu.type, Qu);
+          if ("function" === typeof Ru && !IE.is(Ru)) throw new Error(`${Qu} is a synced ref to non-Schema class '${Ru.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          Eu[bu] = Ru, void 0 !== uu.view && (Nu[bu] = uu.view), uu.unreliable && Xu.push(bu), uu.patchOnly && Vu.push(bu), uu.deprecated && (ru[bu] = uu.deprecatedThrows), uu.fullStateOnly && Bu.push(bu), uu.stream && xu.push(bu), void 0 !== uu.streamPriority && (Su[bu] = uu.streamPriority), uu.optional && pu.push(bu), Ju(bu, uu)
         } else {
-          if ("function" !== typeof gU) throw new Error(`${EU} must be a t.* builder, Schema subclass, or method (got ${typeof gU}).`);
-          Zt.is(gU) ? (tU[mU] = gU, gU.prototype.initialize && 0 !== gU.prototype.initialize.length || (PU[mU] = () => new gU)) : pU[mU] = gU
+          if ("function" !== typeof yu) throw new Error(`${Qu} must be a t.* builder, Schema subclass, or method (got ${typeof yu}).`);
+          IE.is(yu) ? (Eu[bu] = yu, yu.prototype.initialize && 0 !== yu.prototype.initialize.length || (mu[bu] = () => new yu)) : Ku[bu] = yu
         }
       }
-      const QU = UU => {
-          for (const RU in EU) UU[RU] = EU[RU];
-          for (const RU in PU) UU[RU] = PU[RU]()
+      const Tu = uu => {
+          for (const Ru in Qu) uu[Ru] = Qu[Ru];
+          for (const Ru in mu) uu[Ru] = mu[Ru]()
         },
-        eU = () => {
-          const UU = {};
-          return QU(UU), UU
+        Wu = () => {
+          const uu = {};
+          return Tu(uu), uu
         },
-        WU = "function" === typeof pU.initialize,
-        fU = pU.initialize ?? gU._initialize,
-        xU = class extends gU {
+        ju = "function" === typeof Ku.initialize,
+        Hu = Ku.initialize ?? yu._initialize,
+        du = class extends yu {
           constructor() {
-            for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
-            const pU = RU[0];
-            void 0 === pU ? (super(), QU(this)) : super(Object.assign(eU(), WU ? (UU => {
-              const RU = Object.keys(tU),
-                gU = {};
-              for (const tU in UU) RU.includes(tU) || (gU[tU] = UU[tU]);
-              return gU
-            })(pU) : pU)), fU && new.target === xU && fU.apply(this, RU)
+            for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+            const Ku = Ru[0];
+            void 0 === Ku ? (super(), Tu(this)) : super(Object.assign(Wu(), ju ? (uu => {
+              const Ru = Object.keys(Eu),
+                yu = {};
+              for (const Eu in uu) Ru.includes(Eu) || (yu[Eu] = uu[Eu]);
+              return yu
+            })(Ku) : Ku)), Hu && new.target === du && Hu.apply(this, Ru)
           }
         };
-      RU && Object.defineProperty(xU, "name", {
-        value: RU
-      }), MR.setFields(xU, tU), xU._getDefaultValues = eU, xU._initialize = fU, Object.assign(xU.prototype, pU);
-      for (const mU in qU) Qt(qU[mU])(xU.prototype, mU);
-      for (const mU of KU) et(xU.prototype, mU);
-      for (const mU of cU) Wt(xU.prototype, mU);
-      for (const mU in GU) Jt(GU[mU])(xU.prototype, mU);
-      if (jU.length > 0 || uU.length > 0) {
-        const UU = xU[Symbol.metadata];
-        for (const RU of jU) MR.setFullStateOnly(UU, RU);
-        for (const RU of uU) MR.setStream(UU, RU);
-        for (const RU in CU) MR.setStreamPriority(UU, RU, CU[RU])
+      Ru && Object.defineProperty(du, "name", {
+        value: Ru
+      }), oR.setFields(du, Eu), du._getDefaultValues = Wu, du._initialize = Hu, Object.assign(du.prototype, Ku);
+      for (const bu in Nu) TE(Nu[bu])(du.prototype, bu);
+      for (const bu of Xu) WE(du.prototype, bu);
+      for (const bu of Vu) jE(du.prototype, bu);
+      for (const bu in ru) kE(ru[bu])(du.prototype, bu);
+      if (Bu.length > 0 || xu.length > 0) {
+        const uu = du[Symbol.metadata];
+        for (const Ru of Bu) oR.setFullStateOnly(uu, Ru);
+        for (const Ru of xu) oR.setStream(uu, Ru);
+        for (const Ru in Su) oR.setStreamPriority(uu, Ru, Su[Ru])
       }
-      if (hU.length > 0) {
-        const UU = xU[Symbol.metadata];
-        for (const RU of hU) UU[UU[RU]].optional = !0
+      if (pu.length > 0) {
+        const uu = du[Symbol.metadata];
+        for (const Ru of pu) uu[uu[Ru]].optional = !0
       }
-      return xU.extend = (UU, RU) => bt(UU, RU, xU), xU
+      return du.extend = (uu, Ru) => DE(uu, Ru, du), du
     }
 
-    function ot(UU) {
-      const RU = UU[hU].root,
-        gU = {
+    function ME(uu) {
+      const Ru = uu[pu].root,
+        yu = {
           ops: {},
           refs: []
         };
-      let tU = RU.changes.next;
-      for (; tU;) {
-        const UU = tU.changeTree;
-        void 0 !== UU ? (gU.refs.push(`refId#${UU.ref[TU]}`), UU.forEach(((UU, RU) => {
-          if (UU < 0 || !RU) return;
-          const tU = pU[RU];
-          gU.ops[tU] || (gU.ops[tU] = 0), gU.ops[tU]++
-        })), tU = tU.next) : tU = tU.next
+      let Eu = Ru.changes.next;
+      for (; Eu;) {
+        const uu = Eu.changeTree;
+        void 0 !== uu ? (yu.refs.push(`refId#${uu.ref[Ju]}`), uu.forEach(((uu, Ru) => {
+          if (uu < 0 || !Ru) return;
+          const Eu = Ku[Ru];
+          yu.ops[Eu] || (yu.ops[Eu] = 0), yu.ops[Eu]++
+        })), Eu = Eu.next) : Eu = Eu.next
       }
-      return gU
+      return yu
     }
-    class Zt {
-      static[KU] = rg;
-      static[cU] = Dg;
-      [TU];
-      [mU];
-      static initialize(UU) {
-        Object.defineProperty(UU, hU, {
-          value: new ag(UU),
+    class IE {
+      static[Xu] = ty;
+      static[Vu] = qy;
+      [Ju];
+      [bu];
+      static initialize(uu) {
+        Object.defineProperty(uu, pu, {
+          value: new Gy(uu),
           enumerable: !1,
           writable: !0
-        }), UU[mU] = []
+        }), uu[bu] = []
       }
       static initializeForDecoder() {
-        const UU = Object.create(this.prototype);
-        return Bg(UU), UU[mU] = [], UU
+        const uu = Object.create(this.prototype);
+        return ny(uu), uu[bu] = [], uu
       }
-      static reset(UU) {
-        const RU = UU?.[hU];
-        if (void 0 === RU || "function" !== typeof RU.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== RU.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${UU.constructor.name}) with multiple parents.`);
-        UU[fU]()
-      } [fU]() {
-        const UU = this.constructor[Symbol.metadata],
-          RU = UU?.[oU] ?? [],
-          gU = this[mU];
-        for (let tU = 0; tU < RU.length; tU++) {
-          const UU = gU[RU[tU]];
-          UU?.[fU]?.()
+      static reset(uu) {
+        const Ru = uu?.[pu];
+        if (void 0 === Ru || "function" !== typeof Ru.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== Ru.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${uu.constructor.name}) with multiple parents.`);
+        uu[Hu]()
+      } [Hu]() {
+        const uu = this.constructor[Symbol.metadata],
+          Ru = uu?.[Mu] ?? [],
+          yu = this[bu];
+        for (let Eu = 0; Eu < Ru.length; Eu++) {
+          const uu = yu[Ru[Eu]];
+          uu?.[Hu]?.()
         }
-        this[hU].recycle(), this[TU] = void 0
+        this[pu].recycle(), this[Ju] = void 0
       }
-      static is(UU) {
-        const RU = UU[Symbol.metadata];
-        return "object" === typeof RU && null !== RU
+      static is(uu) {
+        const Ru = uu[Symbol.metadata];
+        return "object" === typeof Ru && null !== Ru
       }
-      static isSchema(UU) {
-        return "function" === typeof UU?.assign
+      static isSchema(uu) {
+        return "function" === typeof uu?.assign
       }
-      static[qU](UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pU.ADD;
-        UU.change(RU, gU)
+      static[Nu](uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Ku.ADD;
+        uu.change(Ru, yu)
       }
-      static[GU](UU, RU, gU) {
-        const tU = UU.constructor[Symbol.metadata],
-          pU = tU[RU]?.tag;
-        return void 0 === gU ? void 0 === pU : void 0 === pU || (pU === Ct ? gU.isChangeTreeVisible(UU[hU]) : gU.hasTagOnTree(UU[hU], pU))
+      static[ru](uu, Ru, yu) {
+        const Eu = uu.constructor[Symbol.metadata],
+          Ku = Eu[Ru]?.tag;
+        return void 0 === yu ? void 0 === Ku : void 0 === Ku || (Ku === SE ? yu.isChangeTreeVisible(uu[pu]) : yu.hasTagOnTree(uu[pu], Ku))
       }
-      constructor(UU) {
-        Zt.initialize(this), UU && Zt.assignProps(this, UU)
+      constructor(uu) {
+        IE.initialize(this), uu && IE.assignProps(this, uu)
       }
-      assign(UU) {
-        return Zt.assignProps(this, UU), this
+      assign(uu) {
+        return IE.assignProps(this, uu), this
       }
-      static assignProps(UU, RU) {
-        const gU = UU.constructor[Symbol.metadata];
-        if (gU && void 0 !== gU[bU])
-          for (let pU = 0; pU <= gU[bU]; pU++) {
-            const tU = gU[pU];
-            if (!tU) continue;
-            const EU = RU[tU.name];
-            void 0 !== EU && (UU[tU.name] = EU)
+      static assignProps(uu, Ru) {
+        const yu = uu.constructor[Symbol.metadata];
+        if (yu && void 0 !== yu[Du])
+          for (let Ku = 0; Ku <= yu[Du]; Ku++) {
+            const Eu = yu[Ku];
+            if (!Eu) continue;
+            const Qu = Ru[Eu.name];
+            void 0 !== Qu && (uu[Eu.name] = Qu)
           }
-        const tU = Object.keys(RU);
-        for (let pU = 0; pU < tU.length; pU++) {
-          const EU = tU[pU];
-          gU && void 0 !== gU[EU] || (UU[EU] = RU[EU])
+        const Eu = Object.keys(Ru);
+        for (let Ku = 0; Ku < Eu.length; Ku++) {
+          const Qu = Eu[Ku];
+          yu && void 0 !== yu[Qu] || (uu[Qu] = Ru[Qu])
         }
       }
-      restore(UU) {
-        const RU = this.constructor[Symbol.metadata];
-        for (const gU in RU) {
-          const tU = RU[gU],
-            pU = tU.name,
-            EU = tU.type,
-            PU = UU[pU];
-          if (void 0 !== PU && null !== PU)
-            if ("string" === typeof EU) this[pU] = PU;
-            else if (Zt.is(EU)) {
-            const UU = new EU;
-            UU.restore(PU), this[pU] = UU
-          } else if ("object" === typeof EU) {
-            const UU = Object.keys(EU)[0],
-              RU = EU[UU];
-            if ("map" === UU) {
-              const UU = this[pU];
-              for (const gU in PU)
-                if (Zt.is(RU)) {
-                  const tU = new RU;
-                  tU.restore(PU[gU]), UU.set(gU, tU)
-                } else UU.set(gU, PU[gU])
-            } else if ("array" === UU) {
-              const UU = this[pU];
-              for (let gU = 0; gU < PU.length; gU++)
-                if (Zt.is(RU)) {
-                  const tU = new RU;
-                  tU.restore(PU[gU]), UU.push(tU)
-                } else UU.push(PU[gU])
+      restore(uu) {
+        const Ru = this.constructor[Symbol.metadata];
+        for (const yu in Ru) {
+          const Eu = Ru[yu],
+            Ku = Eu.name,
+            Qu = Eu.type,
+            mu = uu[Ku];
+          if (void 0 !== mu && null !== mu)
+            if ("string" === typeof Qu) this[Ku] = mu;
+            else if (IE.is(Qu)) {
+            const uu = new Qu;
+            uu.restore(mu), this[Ku] = uu
+          } else if ("object" === typeof Qu) {
+            const uu = Object.keys(Qu)[0],
+              Ru = Qu[uu];
+            if ("map" === uu) {
+              const uu = this[Ku];
+              for (const yu in mu)
+                if (IE.is(Ru)) {
+                  const Eu = new Ru;
+                  Eu.restore(mu[yu]), uu.set(yu, Eu)
+                } else uu.set(yu, mu[yu])
+            } else if ("array" === uu) {
+              const uu = this[Ku];
+              for (let yu = 0; yu < mu.length; yu++)
+                if (IE.is(Ru)) {
+                  const Eu = new Ru;
+                  Eu.restore(mu[yu]), uu.push(Eu)
+                } else uu.push(mu[yu])
             }
           }
         }
         return this
       }
-      setDirty(UU, RU) {
-        const gU = this.constructor[Symbol.metadata];
-        this[hU].change(gU[gU[UU]].index, RU)
+      setDirty(uu, Ru) {
+        const yu = this.constructor[Symbol.metadata];
+        this[pu].change(yu[yu[uu]].index, Ru)
       }
       pauseTracking() {
-        this[hU].pause()
+        this[pu].pause()
       }
       resumeTracking() {
-        this[hU].resume()
+        this[pu].resume()
       }
-      untracked(UU) {
-        return this[hU].untracked(UU)
+      untracked(uu) {
+        return this[pu].untracked(uu)
       }
       get isTrackingPaused() {
-        return this[hU].paused
+        return this[pu].paused
       }
       clone() {
-        const UU = Object.create(this.constructor.prototype);
-        Zt.initialize(UU);
-        const RU = this.constructor[Symbol.metadata];
-        for (const gU in RU) {
-          const tU = RU[gU].name;
-          "object" === typeof this[tU] && "function" === typeof this[tU]?.clone ? UU[tU] = this[tU].clone() : UU[tU] = this[tU]
+        const uu = Object.create(this.constructor.prototype);
+        IE.initialize(uu);
+        const Ru = this.constructor[Symbol.metadata];
+        for (const yu in Ru) {
+          const Eu = Ru[yu].name;
+          "object" === typeof this[Eu] && "function" === typeof this[Eu]?.clone ? uu[Eu] = this[Eu].clone() : uu[Eu] = this[Eu]
         }
-        return UU
+        return uu
       }
       toJSON() {
-        const UU = {},
-          RU = this.constructor[Symbol.metadata];
-        for (const gU in RU) {
-          const tU = RU[gU],
-            pU = tU.name;
-          tU.deprecated || null === this[pU] || "undefined" === typeof this[pU] || (UU[pU] = "function" === typeof this[pU].toJSON ? this[pU].toJSON() : this[pU])
+        const uu = {},
+          Ru = this.constructor[Symbol.metadata];
+        for (const yu in Ru) {
+          const Eu = Ru[yu],
+            Ku = Eu.name;
+          Eu.deprecated || null === this[Ku] || "undefined" === typeof this[Ku] || (uu[Ku] = "function" === typeof this[Ku].toJSON ? this[Ku].toJSON() : this[Ku])
         }
-        return UU
+        return uu
       }
       discardAllChanges() {
-        this[hU].discardAll()
-      } [jU](UU) {
-        return this[this.constructor[Symbol.metadata][UU].name]
-      } [uU](UU) {
-        this[this.constructor[Symbol.metadata][UU].name] = void 0
+        this[pu].discardAll()
+      } [Bu](uu) {
+        return this[this.constructor[Symbol.metadata][uu].name]
+      } [xu](uu) {
+        this[this.constructor[Symbol.metadata][uu].name] = void 0
       }
-      static debugRefIds(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          tU = arguments.length > 3 ? arguments[3] : void 0,
-          pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const EU = RU ? ` - ${JSON.stringify(UU.toJSON())}` : "",
-          PU = UU[hU],
-          qU = UU[TU],
-          KU = tU ? tU.root.refCount[qU] : PU.refCount,
-          cU = KU > 1 ? ` [\xd7${KU}]` : "";
-        let GU = `${function(UU){return new Array(UU).fill(0).map(((RU,gU)=>gU===UU-1?"\u2514\u2500 ":"   ")).join("")}(gU)}${pU}${UU.constructor.name} (refId: ${qU})${cU}${EU}\n`;
-        return PU.forEachChild(((pU, EU) => {
-          let PU = EU;
-          "number" === typeof EU && UU.$indexes && (PU = UU.$indexes.get(EU) ?? EU);
-          const TU = void 0 !== UU.forEach && void 0 !== PU ? `["${PU}"]: ` : "";
-          GU += this.debugRefIds(pU.ref, RU, gU + 1, tU, TU)
-        })), GU
+      static debugRefIds(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Eu = arguments.length > 3 ? arguments[3] : void 0,
+          Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const Qu = Ru ? ` - ${JSON.stringify(uu.toJSON())}` : "",
+          mu = uu[pu],
+          Nu = uu[Ju],
+          Xu = Eu ? Eu.root.refCount[Nu] : mu.refCount,
+          Vu = Xu > 1 ? ` [\xd7${Xu}]` : "";
+        let ru = `${function(uu){return new Array(uu).fill(0).map(((Ru,yu)=>yu===uu-1?"\u2514\u2500 ":"   ")).join("")}(yu)}${Ku}${uu.constructor.name} (refId: ${Nu})${Vu}${Qu}\n`;
+        return mu.forEachChild(((Ku, Qu) => {
+          let mu = Qu;
+          "number" === typeof Qu && uu.$indexes && (mu = uu.$indexes.get(Qu) ?? Qu);
+          const Ju = void 0 !== uu.forEach && void 0 !== mu ? `["${mu}"]: ` : "";
+          ru += this.debugRefIds(Ku.ref, Ru, yu + 1, Eu, Ju)
+        })), ru
       }
-      static debugRefIdEncodingOrder(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const gU = [],
-          tU = UU[hU];
-        if ("changes" === RU) {
-          let UU = tU.root.changes?.next;
-          for (; UU;) UU.changeTree && gU.push(UU.changeTree.ref[TU]), UU = UU.next;
-          return gU
+      static debugRefIdEncodingOrder(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const yu = [],
+          Eu = uu[pu];
+        if ("changes" === Ru) {
+          let uu = Eu.root.changes?.next;
+          for (; uu;) uu.changeTree && yu.push(uu.changeTree.ref[Ju]), uu = uu.next;
+          return yu
         }
-        const pU = "allFilteredChanges" === RU,
-          EU = new Set,
-          PU = UU => {
-            EU.has(UU) || (EU.add(UU), UU.isFiltered === pU && gU.push(UU.ref[TU]), UU.forEachChild(((UU, RU) => PU(UU))))
+        const Ku = "allFilteredChanges" === Ru,
+          Qu = new Set,
+          mu = uu => {
+            Qu.has(uu) || (Qu.add(uu), uu.isFiltered === Ku && yu.push(uu.ref[Ju]), uu.forEachChild(((uu, Ru) => mu(uu))))
           };
-        return PU(tU), gU
+        return mu(Eu), yu
       }
-      static debugRefIdsFromDecoder(UU) {
-        return this.debugRefIds(UU.state, !1, 0, UU)
+      static debugRefIdsFromDecoder(uu) {
+        return this.debugRefIds(uu.state, !1, 0, uu)
       }
-      static debugChanges(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const gU = UU[hU],
-          tU = RU ? "allChanges" : "changes";
-        let EU = `${UU.constructor.name} (${UU[TU]}) -> .${tU}:\n`;
-        return RU ? gU.forEachLive((UU => {
-          EU += `- [${UU}]: ADD (${JSON.stringify(gU.getValue(Number(UU),!0))})\n`
-        })) : gU.forEach(((UU, RU) => {
-          UU < 0 || !RU || (EU += `- [${UU}]: ${pU[RU]} (${JSON.stringify(gU.getValue(Number(UU),!1))})\n`)
-        })), EU
+      static debugChanges(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const yu = uu[pu],
+          Eu = Ru ? "allChanges" : "changes";
+        let Qu = `${uu.constructor.name} (${uu[Ju]}) -> .${Eu}:\n`;
+        return Ru ? yu.forEachLive((uu => {
+          Qu += `- [${uu}]: ADD (${JSON.stringify(yu.getValue(Number(uu),!0))})\n`
+        })) : yu.forEach(((uu, Ru) => {
+          uu < 0 || !Ru || (Qu += `- [${uu}]: ${Ku[Ru]} (${JSON.stringify(yu.getValue(Number(uu),!1))})\n`)
+        })), Qu
       }
     }
-    EU(Zt);
-    const Yt = {
+    Qu(IE);
+    const GE = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Bt {
+    class UE {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const UU = {};
-        for (const RU in this.changeTrees) UU[RU] = this.changeTrees[RU].refCount;
-        return UU
+        const uu = {};
+        for (const Ru in this.changeTrees) uu[Ru] = this.changeTrees[Ru].refCount;
+        return uu
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(UU) {
-        this.types.hasFilters && (UU.flags & og || (UU.flags |= og, this.pendingFilterRefresh.push(UU)))
+      enqueueFilterRefresh(uu) {
+        this.types.hasFilters && (uu.flags & My || (uu.flags |= My, this.pendingFilterRefresh.push(uu)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(UU) {
-        this._freeViewIds.push(UU)
+      releaseViewId(uu) {
+        this._freeViewIds.push(uu)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(UU) {
-        this.activeViews.set(UU.id, new WeakRef(UU))
+      registerView(uu) {
+        this.activeViews.set(uu.id, new WeakRef(uu))
       }
-      unregisterView(UU) {
-        this.activeViews.delete(UU.id);
-        const RU = UU.id;
-        for (const gU of this.streamTrees) gU._dropView(RU)
+      unregisterView(uu) {
+        this.activeViews.delete(uu.id);
+        const Ru = uu.id;
+        for (const yu of this.streamTrees) yu._dropView(Ru)
       }
-      forEachActiveView(UU) {
-        for (const [RU, gU] of this.activeViews) {
-          const tU = gU.deref();
-          if (void 0 !== tU) UU(tU);
+      forEachActiveView(uu) {
+        for (const [Ru, yu] of this.activeViews) {
+          const Eu = yu.deref();
+          if (void 0 !== Eu) uu(Eu);
           else {
-            this.activeViews.delete(RU);
-            for (const UU of this.streamTrees) UU._dropView(RU)
+            this.activeViews.delete(Ru);
+            for (const uu of this.streamTrees) uu._dropView(Ru)
           }
         }
       }
-      registerStream(UU) {
-        this.streamTrees.add(UU)
+      registerStream(uu) {
+        this.streamTrees.add(uu)
       }
-      unregisterStream(UU) {
-        this.streamTrees.delete(UU)
+      unregisterStream(uu) {
+        this.streamTrees.delete(uu)
       }
-      constructor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = UU, this.nextUniqueId = RU
+      constructor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = uu, this.nextUniqueId = Ru
       }
-      add(UU) {
-        const RU = UU.ref;
-        void 0 === RU[TU] && (Yt.value = this.nextUniqueId++, Object.defineProperty(RU, TU, Yt));
-        const gU = RU[TU],
-          tU = void 0 === this.changeTrees[gU];
-        tU && (this.changeTrees[gU] = UU), UU.needsRestage && (UU.needsRestage = !1, UU.forEachLiveWithCtx(UU, gg));
-        const pU = tU ? 0 : UU.refCount;
-        return UU.refCount = pU + 1, pU > 0 && this.enqueueFilterRefresh(UU), tU
+      add(uu) {
+        const Ru = uu.ref;
+        void 0 === Ru[Ju] && (GE.value = this.nextUniqueId++, Object.defineProperty(Ru, Ju, GE));
+        const yu = Ru[Ju],
+          Eu = void 0 === this.changeTrees[yu];
+        Eu && (this.changeTrees[yu] = uu), uu.needsRestage && (uu.needsRestage = !1, uu.forEachLiveWithCtx(uu, yy));
+        const Ku = Eu ? 0 : uu.refCount;
+        return uu.refCount = Ku + 1, Ku > 0 && this.enqueueFilterRefresh(uu), Eu
       }
-      remove(UU) {
-        const RU = UU.refCount - 1;
-        if (RU <= 0) {
-          if (UU.root = void 0, delete this.changeTrees[UU.ref[TU]], UU.isStreamCollection) {
-            const RU = UU.ref;
-            RU._unregister?.(), this.unregisterStream(RU)
+      remove(uu) {
+        const Ru = uu.refCount - 1;
+        if (Ru <= 0) {
+          if (uu.root = void 0, delete this.changeTrees[uu.ref[Ju]], uu.isStreamCollection) {
+            const Ru = uu.ref;
+            Ru._unregister?.(), this.unregisterStream(Ru)
           }
-          this.removeFromQueue(UU), this.removeFromUnreliableQueue(UU), UU.refCount = 0, UU.needsRestage = !0, UU.forEachChild(((RU, gU) => {
-            RU.removeParent(UU.ref) && (void 0 === RU.parentRef || RU.refCount > 0 ? this.remove(RU) : this.moveNextToParent(RU))
+          this.removeFromQueue(uu), this.removeFromUnreliableQueue(uu), uu.refCount = 0, uu.needsRestage = !0, uu.forEachChild(((Ru, yu) => {
+            Ru.removeParent(uu.ref) && (void 0 === Ru.parentRef || Ru.refCount > 0 ? this.remove(Ru) : this.moveNextToParent(Ru))
           }))
-        } else UU.refCount = RU, this.enqueueFilterRefresh(UU), this.recursivelyMoveNextToParent(UU);
-        return RU
+        } else uu.refCount = Ru, this.enqueueFilterRefresh(uu), this.recursivelyMoveNextToParent(uu);
+        return Ru
       }
-      recursivelyMoveNextToParent(UU) {
-        this.moveNextToParent(UU), UU.forEachChild(((UU, RU) => this.recursivelyMoveNextToParent(UU)))
+      recursivelyMoveNextToParent(uu) {
+        this.moveNextToParent(uu), uu.forEachChild(((uu, Ru) => this.recursivelyMoveNextToParent(uu)))
       }
-      moveNextToParent(UU) {
-        UU.changesNode && this._moveNextToParentInList(this.changes, UU, UU.changesNode, "changesNode"), UU.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, UU, UU.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(uu) {
+        uu.changesNode && this._moveNextToParentInList(this.changes, uu, uu.changesNode, "changesNode"), uu.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, uu, uu.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(UU, RU, gU, tU) {
-        const pU = RU.parent;
-        if (!pU || !pU[hU]) return;
-        const EU = pU[hU][tU];
-        EU && EU !== gU && (gU.position > EU.position || (gU.prev ? gU.prev.next = gU.next : UU.next = gU.next, gU.next ? gU.next.prev = gU.prev : UU.tail = gU.prev, gU.prev = UU.tail, gU.next = void 0, UU.tail.next = gU, UU.tail = gU, gU.position = UU.nextPosition++))
+      _moveNextToParentInList(uu, Ru, yu, Eu) {
+        const Ku = Ru.parent;
+        if (!Ku || !Ku[pu]) return;
+        const Qu = Ku[pu][Eu];
+        Qu && Qu !== yu && (yu.position > Qu.position || (yu.prev ? yu.prev.next = yu.next : uu.next = yu.next, yu.next ? yu.next.prev = yu.prev : uu.tail = yu.prev, yu.prev = uu.tail, yu.next = void 0, uu.tail.next = yu, uu.tail = yu, yu.position = uu.nextPosition++))
       }
-      enqueueChangeTree(UU) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU.changesNode) || (UU.changesNode = this._appendToList(this.changes, UU))
+      enqueueChangeTree(uu) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.changesNode) || (uu.changesNode = this._appendToList(this.changes, uu))
       }
-      enqueueUnreliable(UU) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU.unreliableChangesNode) || (UU.unreliableChangesNode = this._appendToList(this.unreliableChanges, UU))
+      enqueueUnreliable(uu) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.unreliableChangesNode) || (uu.unreliableChangesNode = this._appendToList(this.unreliableChanges, uu))
       }
-      _appendToList(UU, RU) {
-        const gU = this._nodePool;
-        let tU;
-        return gU.length > 0 ? (tU = gU.pop(), tU.changeTree = RU, tU.next = void 0, tU.prev = void 0) : tU = {
-          changeTree: RU,
+      _appendToList(uu, Ru) {
+        const yu = this._nodePool;
+        let Eu;
+        return yu.length > 0 ? (Eu = yu.pop(), Eu.changeTree = Ru, Eu.next = void 0, Eu.prev = void 0) : Eu = {
+          changeTree: Ru,
           next: void 0,
           prev: void 0,
           position: 0
-        }, UU.next ? (tU.prev = UU.tail, UU.tail.next = tU, UU.tail = tU) : (UU.nextPosition = 0, UU.next = tU, UU.tail = tU), tU.position = UU.nextPosition++, tU
+        }, uu.next ? (Eu.prev = uu.tail, uu.tail.next = Eu, uu.tail = Eu) : (uu.nextPosition = 0, uu.next = Eu, uu.tail = Eu), Eu.position = uu.nextPosition++, Eu
       }
-      releaseNode(UU) {
-        UU.changeTree = void 0, UU.prev = void 0, UU.next = void 0, this._nodePool.push(UU)
+      releaseNode(uu) {
+        uu.changeTree = void 0, uu.prev = void 0, uu.next = void 0, this._nodePool.push(uu)
       }
-      removeFromQueue(UU) {
-        return this._removeNode(this.changes, UU, UU.changesNode, "changesNode")
+      removeFromQueue(uu) {
+        return this._removeNode(this.changes, uu, uu.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(UU) {
-        return this._removeNode(this.unreliableChanges, UU, UU.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(uu) {
+        return this._removeNode(this.unreliableChanges, uu, uu.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(UU, RU, gU, tU) {
-        return !(!gU || gU.changeTree !== RU) && (gU.prev ? gU.prev.next = gU.next : UU.next = gU.next, gU.next ? gU.next.prev = gU.prev : UU.tail = gU.prev, RU[tU] = void 0, this.releaseNode(gU), !0)
+      _removeNode(uu, Ru, yu, Eu) {
+        return !(!yu || yu.changeTree !== Ru) && (yu.prev ? yu.prev.next = yu.next : uu.next = yu.next, yu.next ? yu.next.prev = yu.prev : uu.tail = yu.prev, Ru[Eu] = void 0, this.releaseNode(yu), !0)
       }
     }
 
-    function Vt(UU, RU) {
-      if (-1 === RU || RU >= UU.length) return !1;
-      const gU = UU.length - 1;
-      for (let tU = RU; tU < gU; tU++) UU[tU] = UU[tU + 1];
-      return UU.length = gU, !0
+    function nE(uu, Ru) {
+      if (-1 === Ru || Ru >= uu.length) return !1;
+      const yu = uu.length - 1;
+      for (let Eu = Ru; Eu < yu; Eu++) uu[Eu] = uu[Eu + 1];
+      return uu.length = yu, !0
     }
 
-    function rt(UU, RU, gU) {
-      const tU = ~gU,
-        pU = UU.changeTrees;
-      for (const EU in pU) {
-        const UU = pU[EU],
-          gU = UU.visibleViews;
-        void 0 !== gU && RU < gU.length && (gU[RU] &= tU);
-        const PU = UU.subscribedViews;
-        void 0 !== PU && RU < PU.length && (PU[RU] &= tU);
-        const TU = UU.tagViews;
-        void 0 !== TU && TU.forEach((UU => {
-          RU < UU.length && (UU[RU] &= tU)
+    function sE(uu, Ru, yu) {
+      const Eu = ~yu,
+        Ku = uu.changeTrees;
+      for (const Qu in Ku) {
+        const uu = Ku[Qu],
+          yu = uu.visibleViews;
+        void 0 !== yu && Ru < yu.length && (yu[Ru] &= Eu);
+        const mu = uu.subscribedViews;
+        void 0 !== mu && Ru < mu.length && (mu[Ru] &= Eu);
+        const Ju = uu.tagViews;
+        void 0 !== Ju && Ju.forEach((uu => {
+          Ru < uu.length && (uu[Ru] &= Eu)
         }))
       }
     }
-    const Xt = new FinalizationRegistry((UU => {
+    const tE = new FinalizationRegistry((uu => {
       let {
-        root: RU,
-        id: gU,
-        slot: tU,
-        bit: pU
-      } = UU;
-      rt(RU, tU, pU), RU.activeViews.delete(gU);
-      for (const EU of RU.streamTrees) EU._dropView(gU);
-      RU.releaseViewId(gU)
+        root: Ru,
+        id: yu,
+        slot: Eu,
+        bit: Ku
+      } = uu;
+      sE(Ru, Eu, Ku), Ru.activeViews.delete(yu);
+      for (const Qu of Ru.streamTrees) Qu._dropView(yu);
+      Ru.releaseViewId(yu)
     }));
 
-    function vt(UU) {
-      if (void 0 === UU) return "undefined";
-      if (null === UU) return "null";
-      const RU = typeof UU;
-      return "string" === RU ? JSON.stringify(UU.length > 30 ? `${UU.slice(0,30)}\u2026` : UU) : "object" !== RU && "function" !== RU ? `${RU} ${String(UU)}` : Array.isArray(UU) ? `Array(${UU.length})` : UU.constructor?.name ?? "Object"
+    function lE(uu) {
+      if (void 0 === uu) return "undefined";
+      if (null === uu) return "null";
+      const Ru = typeof uu;
+      return "string" === Ru ? JSON.stringify(uu.length > 30 ? `${uu.slice(0,30)}\u2026` : uu) : "object" !== Ru && "function" !== Ru ? `${Ru} ${String(uu)}` : Array.isArray(uu) ? `Array(${uu.length})` : uu.constructor?.name ?? "Object"
     }
-    class dt {
+    class gE {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = UU, UU && (this.items = [])
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = uu, uu && (this.items = [])
       }
-      _bindRoot(UU) {
-        void 0 === this._root && (this._root = UU, this.id = UU.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), UU.registerView(this), Xt.register(this, {
-          root: UU,
+      _bindRoot(uu) {
+        void 0 === this._root && (this._root = uu, this.id = uu.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), uu.registerView(this), tE.register(this, {
+          root: uu,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), rt(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), Xt.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), sE(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), tE.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(UU) {
-        const RU = UU.visibleViews,
-          gU = this._slot;
-        return void 0 !== RU && gU < RU.length && 0 !== (RU[gU] & this._bit)
+      isVisible(uu) {
+        const Ru = uu.visibleViews,
+          yu = this._slot;
+        return void 0 !== Ru && yu < Ru.length && 0 !== (Ru[yu] & this._bit)
       }
-      markVisible(UU) {
-        const RU = this._slot;
-        let gU = UU.visibleViews;
-        for (void 0 === gU && (gU = UU.visibleViews = []); gU.length <= RU;) gU.push(0);
-        gU[RU] |= this._bit
+      markVisible(uu) {
+        const Ru = this._slot;
+        let yu = uu.visibleViews;
+        for (void 0 === yu && (yu = uu.visibleViews = []); yu.length <= Ru;) yu.push(0);
+        yu[Ru] |= this._bit
       }
-      unmarkVisible(UU) {
-        const RU = UU.visibleViews;
-        if (void 0 === RU) return;
-        const gU = this._slot;
-        gU < RU.length && (RU[gU] &= ~this._bit)
+      unmarkVisible(uu) {
+        const Ru = uu.visibleViews;
+        if (void 0 === Ru) return;
+        const yu = this._slot;
+        yu < Ru.length && (Ru[yu] &= ~this._bit)
       }
-      isSubscribed(UU) {
-        const RU = UU.subscribedViews,
-          gU = this._slot;
-        return void 0 !== RU && gU < RU.length && 0 !== (RU[gU] & this._bit)
+      isSubscribed(uu) {
+        const Ru = uu.subscribedViews,
+          yu = this._slot;
+        return void 0 !== Ru && yu < Ru.length && 0 !== (Ru[yu] & this._bit)
       }
-      _setSubscribed(UU) {
-        const RU = this._slot;
-        let gU = UU.subscribedViews;
-        for (void 0 === gU && (gU = UU.subscribedViews = []); gU.length <= RU;) gU.push(0);
-        gU[RU] |= this._bit
+      _setSubscribed(uu) {
+        const Ru = this._slot;
+        let yu = uu.subscribedViews;
+        for (void 0 === yu && (yu = uu.subscribedViews = []); yu.length <= Ru;) yu.push(0);
+        yu[Ru] |= this._bit
       }
-      _clearSubscribed(UU) {
-        const RU = UU.subscribedViews;
-        if (void 0 === RU) return;
-        const gU = this._slot;
-        gU < RU.length && (RU[gU] &= ~this._bit)
+      _clearSubscribed(uu) {
+        const Ru = uu.subscribedViews;
+        if (void 0 === Ru) return;
+        const yu = this._slot;
+        yu < Ru.length && (Ru[yu] &= ~this._bit)
       }
-      hasTagOnTree(UU, RU) {
-        const gU = UU.tagViews;
-        if (void 0 === gU) return !1;
-        const tU = this._slot,
-          pU = this._bit;
-        for (let EU = RU; 0 !== EU; EU &= EU - 1) {
-          const UU = gU.get(EU & -EU);
-          if (void 0 !== UU && tU < UU.length && 0 !== (UU[tU] & pU)) return !0
+      hasTagOnTree(uu, Ru) {
+        const yu = uu.tagViews;
+        if (void 0 === yu) return !1;
+        const Eu = this._slot,
+          Ku = this._bit;
+        for (let Qu = Ru; 0 !== Qu; Qu &= Qu - 1) {
+          const uu = yu.get(Qu & -Qu);
+          if (void 0 !== uu && Eu < uu.length && 0 !== (uu[Eu] & Ku)) return !0
         }
         return !1
       }
-      addTag(UU, RU) {
-        if (RU === Ct) return;
-        let gU = UU.tagViews;
-        void 0 === gU && (gU = UU.tagViews = new Map);
-        const tU = this._slot,
-          pU = this._bit;
-        for (let EU = RU; EU > 0; EU &= EU - 1) {
-          const UU = EU & -EU;
-          let RU = gU.get(UU);
-          for (void 0 === RU && (RU = [], gU.set(UU, RU)); RU.length <= tU;) RU.push(0);
-          RU[tU] |= pU
+      addTag(uu, Ru) {
+        if (Ru === SE) return;
+        let yu = uu.tagViews;
+        void 0 === yu && (yu = uu.tagViews = new Map);
+        const Eu = this._slot,
+          Ku = this._bit;
+        for (let Qu = Ru; Qu > 0; Qu &= Qu - 1) {
+          const uu = Qu & -Qu;
+          let Ru = yu.get(uu);
+          for (void 0 === Ru && (Ru = [], yu.set(uu, Ru)); Ru.length <= Eu;) Ru.push(0);
+          Ru[Eu] |= Ku
         }
       }
-      removeTag(UU, RU) {
-        if (RU === Ct) return;
-        const gU = UU.tagViews;
-        if (void 0 === gU) return;
-        const tU = this._slot,
-          pU = ~this._bit;
-        for (let EU = RU; EU > 0; EU &= EU - 1) {
-          const UU = gU.get(EU & -EU);
-          void 0 !== UU && tU < UU.length && (UU[tU] &= pU)
+      removeTag(uu, Ru) {
+        if (Ru === SE) return;
+        const yu = uu.tagViews;
+        if (void 0 === yu) return;
+        const Eu = this._slot,
+          Ku = ~this._bit;
+        for (let Qu = Ru; Qu > 0; Qu &= Qu - 1) {
+          const uu = yu.get(Qu & -Qu);
+          void 0 !== uu && Eu < uu.length && (uu[Eu] &= Ku)
         }
       }
-      removeAllTagsOnTree(UU) {
-        const RU = UU.tagViews;
-        if (void 0 === RU) return;
-        const gU = this._slot,
-          tU = ~this._bit;
-        RU.forEach((UU => {
-          gU < UU.length && (UU[gU] &= tU)
+      removeAllTagsOnTree(uu) {
+        const Ru = uu.tagViews;
+        if (void 0 === Ru) return;
+        const yu = this._slot,
+          Eu = ~this._bit;
+        Ru.forEach((uu => {
+          yu < uu.length && (uu[yu] &= Eu)
         }))
       }
-      add(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ct,
-          gU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(UU, RU, gU, !1)
+      add(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SE,
+          yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(uu, Ru, yu, !1)
       }
-      _addImmediate(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ct;
-        this._add(UU, RU, !0, !0)
+      _addImmediate(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SE;
+        this._add(uu, Ru, !0, !0)
       }
-      _add(UU, RU, gU, tU) {
-        const EU = UU?.[hU];
-        if (!EU) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${vt(UU)}`), !1;
-        const PU = EU.parent;
-        if (!PU && 0 !== UU[TU]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${EU.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== EU.root && this._bindRoot(EU.root);
-        const qU = PU?.[hU];
-        if (!tU && qU?.isStreamCollection) return BR(PU, this.id, EU.parentIndex), !0;
-        const KU = UU.constructor[Symbol.metadata],
-          cU = this.isVisible(EU);
-        if (!this.iterable || !gU || cU && -1 !== this.items.indexOf(UU) || this.items.push(UU), this.markVisible(EU), gU && PU && this.addParentOf(EU, RU), !tU && EU.isStreamCollection) return !0;
-        if (RU === Ct && EU.isNew) return this._markSubtreeVisible(EU, RU), !1;
-        let GU = this.changes.get(UU[TU]);
-        void 0 === GU && (GU = new Map, this.changes.set(UU[TU], GU));
-        let jU = !1;
-        const uU = EU.encDescriptor.tags;
-        if (EU.forEachChild(((UU, gU) => {
-            const tU = uU[gU];
-            if (void 0 !== tU) {
-              if (!(tU === Ct || RU !== Ct && 0 !== (tU & RU))) return
+      _add(uu, Ru, yu, Eu) {
+        const Qu = uu?.[pu];
+        if (!Qu) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${lE(uu)}`), !1;
+        const mu = Qu.parent;
+        if (!mu && 0 !== uu[Ju]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Qu.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== Qu.root && this._bindRoot(Qu.root);
+        const Nu = mu?.[pu];
+        if (!Eu && Nu?.isStreamCollection) return nR(mu, this.id, Qu.parentIndex), !0;
+        const Xu = uu.constructor[Symbol.metadata],
+          Vu = this.isVisible(Qu);
+        if (!this.iterable || !yu || Vu && -1 !== this.items.indexOf(uu) || this.items.push(uu), this.markVisible(Qu), yu && mu && this.addParentOf(Qu, Ru), !Eu && Qu.isStreamCollection) return !0;
+        if (Ru === SE && Qu.isNew) return this._markSubtreeVisible(Qu, Ru), !1;
+        let ru = this.changes.get(uu[Ju]);
+        void 0 === ru && (ru = new Map, this.changes.set(uu[Ju], ru));
+        let Bu = !1;
+        const xu = Qu.encDescriptor.tags;
+        if (Qu.forEachChild(((uu, yu) => {
+            const Eu = xu[yu];
+            if (void 0 !== Eu) {
+              if (!(Eu === SE || Ru !== SE && 0 !== (Eu & Ru))) return
             }
-            this.add(UU.ref, RU, !1) && (jU = !0)
-          })), RU !== Ct) {
-          this.addTag(EU, RU);
-          const UU = KU?.[aU];
-          if (void 0 !== UU)
-            for (let gU = RU; gU > 0; gU &= gU - 1) UU[gU & -gU]?.forEach((UU => {
-              EU.getChange(UU) !== pU.DELETE && GU.set(UU, pU.ADD)
+            this.add(uu.ref, Ru, !1) && (Bu = !0)
+          })), Ru !== SE) {
+          this.addTag(Qu, Ru);
+          const uu = Xu?.[Gu];
+          if (void 0 !== uu)
+            for (let yu = Ru; yu > 0; yu &= yu - 1) uu[yu & -yu]?.forEach((uu => {
+              Qu.getChange(uu) !== Ku.DELETE && ru.set(uu, Ku.ADD)
             }))
         }
-        if ((RU === Ct || !cU) && (!EU.isNew || jU))
-          if (EU.isArray && "string" !== typeof EU.refTarget[QU]) EU.refTarget.items.length > 0 && (GU.set(-1, pU.ADD), jU = !0);
+        if ((Ru === SE || !Vu) && (!Qu.isNew || Bu))
+          if (Qu.isArray && "string" !== typeof Qu.refTarget[Tu]) Qu.refTarget.items.length > 0 && (ru.set(-1, Ku.ADD), Bu = !0);
           else {
-            const UU = EU.encDescriptor.tags;
-            EU.forEachLive((gU => {
-              const tU = UU[gU];
-              (void 0 === tU || tU === Ct || RU !== Ct && 0 !== (tU & RU)) && (GU.set(gU, pU.ADD), jU = !0)
+            const uu = Qu.encDescriptor.tags;
+            Qu.forEachLive((yu => {
+              const Eu = uu[yu];
+              (void 0 === Eu || Eu === SE || Ru !== SE && 0 !== (Eu & Ru)) && (ru.set(yu, Ku.ADD), Bu = !0)
             }))
-          } return jU
+          } return Bu
       }
-      _markSubtreeVisible(UU, RU) {
-        const gU = UU.encDescriptor.tags;
-        UU.forEachChild(((UU, tU) => {
-          const pU = gU[tU];
-          if (void 0 !== pU) {
-            if (!(pU === Ct || RU !== Ct && 0 !== (pU & RU))) return
+      _markSubtreeVisible(uu, Ru) {
+        const yu = uu.encDescriptor.tags;
+        uu.forEachChild(((uu, Eu) => {
+          const Ku = yu[Eu];
+          if (void 0 !== Ku) {
+            if (!(Ku === SE || Ru !== SE && 0 !== (Ku & Ru))) return
           }
-          UU.isNew ? (this.markVisible(UU), this._markSubtreeVisible(UU, RU)) : this._add(UU.ref, RU, !1, !1)
+          uu.isNew ? (this.markVisible(uu), this._markSubtreeVisible(uu, Ru)) : this._add(uu.ref, Ru, !1, !1)
         }))
       }
-      addParentOf(UU, RU) {
-        const gU = UU.parent[hU],
-          tU = UU.parentIndex;
-        this.isVisible(gU) || this.markVisible(gU);
-        const EU = gU.parent?.[hU];
-        if (EU && this.addParentOf(gU, RU), gU.hasFilteredFields && gU.getChange(tU) !== pU.DELETE) {
-          let EU = this.changes.get(gU.ref[TU]);
-          void 0 === EU && (EU = new Map, this.changes.set(gU.ref[TU], EU));
-          const PU = gU.encDescriptor.tags[tU];
-          void 0 !== PU && PU !== Ct && 0 !== (PU & RU) && this.addTag(gU, RU), EU.set(gU.isArray ? UU : tU, pU.ADD)
+      addParentOf(uu, Ru) {
+        const yu = uu.parent[pu],
+          Eu = uu.parentIndex;
+        this.isVisible(yu) || this.markVisible(yu);
+        const Qu = yu.parent?.[pu];
+        if (Qu && this.addParentOf(yu, Ru), yu.hasFilteredFields && yu.getChange(Eu) !== Ku.DELETE) {
+          let Qu = this.changes.get(yu.ref[Ju]);
+          void 0 === Qu && (Qu = new Map, this.changes.set(yu.ref[Ju], Qu));
+          const mu = yu.encDescriptor.tags[Eu];
+          void 0 !== mu && mu !== SE && 0 !== (mu & Ru) && this.addTag(yu, Ru), Qu.set(yu.isArray ? uu : Eu, Ku.ADD)
         }
       }
-      _touchAncestorsOf(UU) {
-        let RU = UU.parent?.[hU];
-        if (void 0 === RU) return;
-        const gU = [];
-        for (; void 0 !== RU;) {
-          if (RU.hasFilteredFields) {
-            const UU = RU.ref[TU];
-            if (this.changes.has(UU)) break;
-            gU.push(RU)
+      _touchAncestorsOf(uu) {
+        let Ru = uu.parent?.[pu];
+        if (void 0 === Ru) return;
+        const yu = [];
+        for (; void 0 !== Ru;) {
+          if (Ru.hasFilteredFields) {
+            const uu = Ru.ref[Ju];
+            if (this.changes.has(uu)) break;
+            yu.push(Ru)
           }
-          RU = RU.parent?.[hU]
+          Ru = Ru.parent?.[pu]
         }
-        for (let tU = gU.length - 1; tU >= 0; tU--) this.changes.set(gU[tU].ref[TU], new Map)
+        for (let Eu = yu.length - 1; Eu >= 0; Eu--) this.changes.set(yu[Eu].ref[Ju], new Map)
       }
-      remove(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ct,
-          gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const tU = UU?.[hU];
-        if (!tU) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${vt(UU)}`), this;
-        const EU = tU.parent?.[hU];
-        if (EU?.isStreamCollection) return this.unmarkVisible(tU), this.iterable && !gU && Vt(this.items, this.items.indexOf(UU)),
-          function(UU, RU, gU, tU, EU) {
-            const PU = UU._stream;
-            if (void 0 === PU) return !1;
-            const TU = PU.pendingByView.get(RU);
-            if (TU?.has(tU)) return TU.delete(tU), !1;
-            const qU = PU.sentByView.get(RU);
-            if (qU?.has(tU)) {
-              qU.delete(tU);
-              let UU = EU.get(gU);
-              return void 0 === UU && (UU = new Map, EU.set(gU, UU)), UU.set(tU, pU.DELETE), !0
+      remove(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SE,
+          yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Eu = uu?.[pu];
+        if (!Eu) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${lE(uu)}`), this;
+        const Qu = Eu.parent?.[pu];
+        if (Qu?.isStreamCollection) return this.unmarkVisible(Eu), this.iterable && !yu && nE(this.items, this.items.indexOf(uu)),
+          function(uu, Ru, yu, Eu, Qu) {
+            const mu = uu._stream;
+            if (void 0 === mu) return !1;
+            const Ju = mu.pendingByView.get(Ru);
+            if (Ju?.has(Eu)) return Ju.delete(Eu), !1;
+            const Nu = mu.sentByView.get(Ru);
+            if (Nu?.has(Eu)) {
+              Nu.delete(Eu);
+              let uu = Qu.get(yu);
+              return void 0 === uu && (uu = new Map, Qu.set(yu, uu)), uu.set(Eu, Ku.DELETE), !0
             }
-          }(tU.parent, this.id, tU.parent[TU], tU.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(tU), this;
-        if (tU.isStreamCollection) {
-          this.unmarkVisible(tU), this.iterable && !gU && Vt(this.items, this.items.indexOf(UU));
-          const RU = tU.ref,
-            EU = RU._stream;
-          if (void 0 !== EU) {
-            EU.pendingByView.get(this.id)?.clear();
-            const UU = EU.sentByView.get(this.id);
-            if (void 0 !== UU && UU.size > 0) {
-              const gU = RU[TU];
-              let tU = this.changes.get(gU);
-              void 0 === tU && (tU = new Map, this.changes.set(gU, tU));
-              for (const RU of UU) tU.set(RU, pU.DELETE);
-              UU.clear()
+          }(Eu.parent, this.id, Eu.parent[Ju], Eu.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Eu), this;
+        if (Eu.isStreamCollection) {
+          this.unmarkVisible(Eu), this.iterable && !yu && nE(this.items, this.items.indexOf(uu));
+          const Ru = Eu.ref,
+            Qu = Ru._stream;
+          if (void 0 !== Qu) {
+            Qu.pendingByView.get(this.id)?.clear();
+            const uu = Qu.sentByView.get(this.id);
+            if (void 0 !== uu && uu.size > 0) {
+              const yu = Ru[Ju];
+              let Eu = this.changes.get(yu);
+              void 0 === Eu && (Eu = new Map, this.changes.set(yu, Eu));
+              for (const Ru of uu) Eu.set(Ru, Ku.DELETE);
+              uu.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(tU), this.iterable && !gU && Vt(this.items, this.items.indexOf(UU));
-        const PU = tU.ref,
-          qU = PU.constructor[Symbol.metadata],
-          KU = PU[TU];
-        this._touchAncestorsOf(tU);
-        let cU = this.changes.get(KU);
-        if (void 0 === cU && (cU = new Map, this.changes.set(KU, cU)), RU === Ct) {
-          const UU = tU.parent;
-          if (UU && !MR.isValidInstance(UU) && tU.isFiltered) {
-            const RU = EU.isArray ? tU : tU.parentIndex,
-              gU = UU[TU];
-            let PU = this.changes.get(gU);
-            void 0 === PU ? (PU = new Map, this.changes.set(gU, PU)) : PU.get(RU) === pU.ADD && this._dropPendingEntries(tU), PU.set(RU, pU.DELETE), this._recursiveDeleteVisibleChangeTree(tU)
-          } else qU?.[ZU]?.forEach((UU => this._removeViewField(tU, cU, UU)))
+        this.unmarkVisible(Eu), this.iterable && !yu && nE(this.items, this.items.indexOf(uu));
+        const mu = Eu.ref,
+          Nu = mu.constructor[Symbol.metadata],
+          Xu = mu[Ju];
+        this._touchAncestorsOf(Eu);
+        let Vu = this.changes.get(Xu);
+        if (void 0 === Vu && (Vu = new Map, this.changes.set(Xu, Vu)), Ru === SE) {
+          const uu = Eu.parent;
+          if (uu && !oR.isValidInstance(uu) && Eu.isFiltered) {
+            const Ru = Qu.isArray ? Eu : Eu.parentIndex,
+              yu = uu[Ju];
+            let mu = this.changes.get(yu);
+            void 0 === mu ? (mu = new Map, this.changes.set(yu, mu)) : mu.get(Ru) === Ku.ADD && this._dropPendingEntries(Eu), mu.set(Ru, Ku.DELETE), this._recursiveDeleteVisibleChangeTree(Eu)
+          } else Nu?.[Iu]?.forEach((uu => this._removeViewField(Eu, Vu, uu)))
         } else {
-          const UU = qU?.[aU];
-          if (void 0 !== UU)
-            for (let gU = RU; gU > 0; gU &= gU - 1) UU[gU & -gU]?.forEach((UU => this._removeViewField(tU, cU, UU)))
+          const uu = Nu?.[Gu];
+          if (void 0 !== uu)
+            for (let yu = Ru; yu > 0; yu &= yu - 1) uu[yu & -yu]?.forEach((uu => this._removeViewField(Eu, Vu, uu)))
         }
-        return void 0 === RU ? this.removeAllTagsOnTree(tU) : this.removeTag(tU, RU), this
+        return void 0 === Ru ? this.removeAllTagsOnTree(Eu) : this.removeTag(Eu, Ru), this
       }
-      has(UU) {
-        return this.isVisible(UU[hU])
+      has(uu) {
+        return this.isVisible(uu[pu])
       }
-      hasTag(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ct;
-        return this.hasTagOnTree(UU[hU], RU)
+      hasTag(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SE;
+        return this.hasTagOnTree(uu[pu], Ru)
       }
-      subscribe(UU, RU) {
-        const gU = UU?.[hU];
-        if (!gU) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${vt(UU)}`), this;
-        if (void 0 === this._root && void 0 !== gU.root && this._bindRoot(gU.root), void 0 !== RU)
-          if (gU.isStreamCollection) {
-            const gU = bR(UU);
-            null === RU ? gU.priorityByView?.delete(this.id) : (gU.priorityByView ??= new Map).set(this.id, RU)
+      subscribe(uu, Ru) {
+        const yu = uu?.[pu];
+        if (!yu) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${lE(uu)}`), this;
+        if (void 0 === this._root && void 0 !== yu.root && this._bindRoot(yu.root), void 0 !== Ru)
+          if (yu.isStreamCollection) {
+            const yu = DR(uu);
+            null === Ru ? yu.priorityByView?.delete(this.id) : (yu.priorityByView ??= new Map).set(this.id, Ru)
           } else {
-            const RU = UU?.constructor?.name ?? "collection",
-              tU = gU.parent;
-            if (void 0 === tU) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${RU} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const Ru = uu?.constructor?.name ?? "collection",
+              Eu = yu.parent;
+            if (void 0 === Eu) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Ru} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const UU = tU?.constructor?.[Symbol.metadata]?.[gU.parentIndex]?.name,
-                pU = UU ? `${tU.constructor.name}#${UU}` : RU;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${pU} is a ${RU}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const uu = Eu?.constructor?.[Symbol.metadata]?.[yu.parentIndex]?.name,
+                Ku = uu ? `${Eu.constructor.name}#${uu}` : Ru;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Ku} is a ${Ru}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(gU)) return this;
-        const tU = void 0 !== gU.parent && !this.isVisible(gU);
-        if (tU ? (this.addParentOf(gU, Ct), this._add(UU, Ct, !1, !1)) : this.markVisible(gU), this._setSubscribed(gU), gU.isStreamCollection) {
-          const RU = UU;
-          gU.forEachChild(((UU, gU) => {
-            BR(RU, this.id, gU)
+          } if (this.isSubscribed(yu)) return this;
+        const Eu = void 0 !== yu.parent && !this.isVisible(yu);
+        if (Eu ? (this.addParentOf(yu, SE), this._add(uu, SE, !1, !1)) : this.markVisible(yu), this._setSubscribed(yu), yu.isStreamCollection) {
+          const Ru = uu;
+          yu.forEachChild(((uu, yu) => {
+            nR(Ru, this.id, yu)
           }))
-        } else tU || gU.forEachChild((UU => {
-          this.markVisible(UU)
+        } else Eu || yu.forEachChild((uu => {
+          this.markVisible(uu)
         }));
         return this
       }
-      unsubscribe(UU) {
-        const RU = UU?.[hU];
-        if (!RU) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${vt(UU)}`), this;
-        if (!this.isSubscribed(RU)) return this;
-        this._clearSubscribed(RU);
-        const gU = RU.ref[TU];
-        if (RU.isStreamCollection) {
-          const RU = UU._stream;
-          if (void 0 !== RU) {
-            RU.pendingByView.get(this.id)?.clear();
-            const UU = RU.sentByView.get(this.id);
-            if (void 0 !== UU && UU.size > 0) {
-              let RU = this.changes.get(gU);
-              void 0 === RU && (RU = new Map, this.changes.set(gU, RU));
-              for (const gU of UU) RU.set(gU, pU.DELETE);
-              UU.clear()
+      unsubscribe(uu) {
+        const Ru = uu?.[pu];
+        if (!Ru) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${lE(uu)}`), this;
+        if (!this.isSubscribed(Ru)) return this;
+        this._clearSubscribed(Ru);
+        const yu = Ru.ref[Ju];
+        if (Ru.isStreamCollection) {
+          const Ru = uu._stream;
+          if (void 0 !== Ru) {
+            Ru.pendingByView.get(this.id)?.clear();
+            const uu = Ru.sentByView.get(this.id);
+            if (void 0 !== uu && uu.size > 0) {
+              let Ru = this.changes.get(yu);
+              void 0 === Ru && (Ru = new Map, this.changes.set(yu, Ru));
+              for (const yu of uu) Ru.set(yu, Ku.DELETE);
+              uu.clear()
             }
           }
         } else {
-          const UU = RU.isArray;
-          let tU = this.changes.get(gU);
-          RU.forEachChild(((RU, EU) => {
-            void 0 === tU && (tU = new Map, this.changes.set(gU, tU)), tU.set(UU ? RU : EU, pU.DELETE), this.unmarkVisible(RU)
+          const uu = Ru.isArray;
+          let Eu = this.changes.get(yu);
+          Ru.forEachChild(((Ru, Qu) => {
+            void 0 === Eu && (Eu = new Map, this.changes.set(yu, Eu)), Eu.set(uu ? Ru : Qu, Ku.DELETE), this.unmarkVisible(Ru)
           }))
         }
-        return this.unmarkVisible(RU), this
+        return this.unmarkVisible(Ru), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let UU = 0, RU = this.items.length; UU < RU; UU++) this.remove(this.items[UU], Ct, !0);
+        for (let uu = 0, Ru = this.items.length; uu < Ru; uu++) this.remove(this.items[uu], SE, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(UU) {
-        let RU = this.isVisible(UU);
-        if (!RU && UU.isVisibilitySharedWithParent)
-          if (this.isVisible(UU.parent[hU])) this.markVisible(UU), RU = !0;
+      isChangeTreeVisible(uu) {
+        let Ru = this.isVisible(uu);
+        if (!Ru && uu.isVisibilitySharedWithParent)
+          if (this.isVisible(uu.parent[pu])) this.markVisible(uu), Ru = !0;
           else
-            for (let gU = UU.extraParents; void 0 !== gU; gU = gU.next) {
-              const tU = gU.ref[hU];
-              if (tU.isFiltered && this.isVisible(tU)) {
-                this.markVisible(UU), RU = !0;
+            for (let yu = uu.extraParents; void 0 !== yu; yu = yu.next) {
+              const Eu = yu.ref[pu];
+              if (Eu.isFiltered && this.isVisible(Eu)) {
+                this.markVisible(uu), Ru = !0;
                 break
               }
             }
-        return RU
+        return Ru
       }
-      _recursiveDeleteVisibleChangeTree(UU) {
-        UU.forEachChild((UU => {
-          this.unmarkVisible(UU), this._recursiveDeleteVisibleChangeTree(UU)
+      _recursiveDeleteVisibleChangeTree(uu) {
+        uu.forEachChild((uu => {
+          this.unmarkVisible(uu), this._recursiveDeleteVisibleChangeTree(uu)
         }))
       }
-      _dropPendingEntries(UU) {
-        this.changes.delete(UU.ref[TU]), UU.forEachChild((UU => this._dropPendingEntries(UU)))
+      _dropPendingEntries(uu) {
+        this.changes.delete(uu.ref[Ju]), uu.forEachChild((uu => this._dropPendingEntries(uu)))
       }
-      _removeViewField(UU, RU, gU) {
-        const tU = RU.get(gU) === pU.ADD;
-        RU.set(gU, pU.DELETE);
-        const EU = UU.ref[UU.encDescriptor.names[gU]],
-          PU = EU?.[hU];
-        PU && (this.unmarkVisible(PU), this._recursiveDeleteVisibleChangeTree(PU), tU && this._dropPendingEntries(PU))
+      _removeViewField(uu, Ru, yu) {
+        const Eu = Ru.get(yu) === Ku.ADD;
+        Ru.set(yu, Ku.DELETE);
+        const Qu = uu.ref[uu.encDescriptor.names[yu]],
+          mu = Qu?.[pu];
+        mu && (this.unmarkVisible(mu), this._recursiveDeleteVisibleChangeTree(mu), Eu && this._dropPendingEntries(mu))
       }
     }
 
-    function Ht(UU) {
-      UU.structSwitchEmitted || (UU.shouldEmitSwitch && (UU.buffer[UU.it.offset++] = 255, RR.number(UU.buffer, UU.ref[TU], UU.it)), UU.structSwitchEmitted = !0)
+    function cE(uu) {
+      uu.structSwitchEmitted || (uu.shouldEmitSwitch && (uu.buffer[uu.it.offset++] = 255, RR.number(uu.buffer, uu.ref[Ju], uu.it)), uu.structSwitchEmitted = !0)
     }
 
-    function St(UU, RU) {
-      kt(UU, RU, pU.ADD)
+    function LE(uu, Ru) {
+      wE(uu, Ru, Ku.ADD)
     }
 
-    function st(UU, RU) {
-      if (RU._fullSyncGen === UU.gen) return;
-      RU._fullSyncGen = UU.gen;
-      if (!UU.hasView || UU.view.isChangeTreeVisible(RU)) {
-        const gU = RU.encDescriptor;
-        UU.changeTree = RU, UU.ref = RU.ref, UU.encoder = gU.encoder, UU.filter = gU.filter, UU.metadata = gU.metadata, UU.treeIsFiltered = RU.isFiltered, UU.isSchema = gU.isSchema, UU.filterBitmask = gU.filterBitmask, UU.tags = gU.tags, UU.structSwitchEmitted = !1, UU.shouldEmitSwitch = UU.hasView || UU.it.offset > UU.initialOffset || RU !== UU.rootChangeTree, RU.isArray && RU.collDirty.size > 0 && (RU.flags |= 512), pg(RU, UU, St)
+    function zE(uu, Ru) {
+      if (Ru._fullSyncGen === uu.gen) return;
+      Ru._fullSyncGen = uu.gen;
+      if (!uu.hasView || uu.view.isChangeTreeVisible(Ru)) {
+        const yu = Ru.encDescriptor;
+        uu.changeTree = Ru, uu.ref = Ru.ref, uu.encoder = yu.encoder, uu.filter = yu.filter, uu.metadata = yu.metadata, uu.treeIsFiltered = Ru.isFiltered, uu.isSchema = yu.isSchema, uu.filterBitmask = yu.filterBitmask, uu.tags = yu.tags, uu.structSwitchEmitted = !1, uu.shouldEmitSwitch = uu.hasView || uu.it.offset > uu.initialOffset || Ru !== uu.rootChangeTree, Ru.isArray && Ru.collDirty.size > 0 && (Ru.flags |= 512), Ky(Ru, uu, LE)
       }
-      eg(RU, UU, yt)
+      Wy(Ru, uu, FE)
     }
 
-    function yt(UU, RU, gU) {
-      st(UU, RU)
+    function FE(uu, Ru, yu) {
+      zE(uu, Ru)
     }
 
-    function kt(UU, RU, gU) {
-      if (RU < 0) {
-        if (UU.treeIsFiltered !== UU.emitFiltered) return;
-        return Ht(UU), void(UU.buffer[UU.it.offset++] = 255 & Math.abs(RU))
+    function wE(uu, Ru, yu) {
+      if (Ru < 0) {
+        if (uu.treeIsFiltered !== uu.emitFiltered) return;
+        return cE(uu), void(uu.buffer[uu.it.offset++] = 255 & Math.abs(Ru))
       }
-      if ((UU.isSchema ? UU.treeIsFiltered || (RU < 32 ? 0 !== (UU.filterBitmask & 1 << RU) : void 0 !== UU.tags[RU]) : UU.treeIsFiltered) !== UU.emitFiltered) return;
-      const tU = UU.isEncodeAll ? pU.ADD : gU;
-      void 0 !== tU && (void 0 === UU.filter || UU.filter(UU.ref, RU, UU.view)) && (Ht(UU), UU.encoder(UU.self, UU.buffer, UU.changeTree, RU, tU, UU.it, UU.isEncodeAll, UU.hasView, UU.metadata))
+      if ((uu.isSchema ? uu.treeIsFiltered || (Ru < 32 ? 0 !== (uu.filterBitmask & 1 << Ru) : void 0 !== uu.tags[Ru]) : uu.treeIsFiltered) !== uu.emitFiltered) return;
+      const Eu = uu.isEncodeAll ? Ku.ADD : yu;
+      void 0 !== Eu && (void 0 === uu.filter || uu.filter(uu.ref, Ru, uu.view)) && (cE(uu), uu.encoder(uu.self, uu.buffer, uu.changeTree, Ru, Eu, uu.it, uu.isEncodeAll, uu.hasView, uu.metadata))
     }
 
-    function Ft(UU, RU) {
-      const gU = new Uint8Array(UU.length + RU.length);
-      return gU.set(UU, 0), gU.set(RU, UU.length), gU
+    function ZE(uu, Ru) {
+      const yu = new Uint8Array(uu.length + Ru.length);
+      return yu.set(uu, 0), yu.set(Ru, uu.length), yu
     }
-    class it {
+    class hE {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(it.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(hE.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(UU, RU) {
-        this.context = sR.cache(UU.constructor), this.root = RU ?? new Bt(this.context), this.setState(UU)
+      constructor(uu, Ru) {
+        this.context = FR.cache(uu.constructor), this.root = Ru ?? new UE(this.context), this.setState(uu)
       }
-      setState(UU) {
-        this.state = UU, this.state[hU].setRoot(this.root)
+      setState(uu) {
+        this.state = uu, this.state[pu].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          RU = arguments.length > 1 ? arguments[1] : void 0,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : UU.offset;
-        return this._encodeChannel(UU, RU, gU, tU, !1)
+          Ru = arguments.length > 1 ? arguments[1] : void 0,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.offset;
+        return this._encodeChannel(uu, Ru, yu, Eu, !1)
       }
       encodeUnreliable() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          RU = arguments.length > 1 ? arguments[1] : void 0,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : UU.offset;
-        return this._encodeChannel(UU, RU, gU, tU, !0)
+          Ru = arguments.length > 1 ? arguments[1] : void 0,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uu.offset;
+        return this._encodeChannel(uu, Ru, yu, Eu, !0)
       }
-      _encodeChannel(UU, RU, gU, tU, pU) {
-        this.root.pendingFilterRefresh.length > 0 && Pg(this.root);
-        const EU = void 0 !== RU,
-          PU = this.state[hU],
-          TU = this._encodeCtx;
-        TU.self = this, TU.buffer = gU, TU.it = UU, TU.view = RU, TU.isEncodeAll = !1, TU.hasView = EU, TU.emitFiltered = EU;
-        let qU = pU ? this.root.unreliableChanges : this.root.changes;
-        for (; qU = qU.next;) {
-          const gU = qU.changeTree;
-          if (EU && !RU.isChangeTreeVisible(gU)) continue;
-          const KU = pU ? gU.unreliableRecorder : gU;
-          if (!KU || !KU.has()) continue;
-          const cU = gU.encDescriptor;
-          TU.changeTree = gU, TU.ref = gU.ref, TU.encoder = cU.encoder, TU.filter = cU.filter, TU.metadata = cU.metadata, TU.treeIsFiltered = gU.isFiltered, TU.isSchema = cU.isSchema, TU.filterBitmask = cU.filterBitmask, TU.tags = cU.tags, TU.structSwitchEmitted = !1, TU.isRootTree = gU === PU, TU.shouldEmitSwitch = EU || UU.offset > tU || !TU.isRootTree, KU.forEachWithCtx(TU, kt)
+      _encodeChannel(uu, Ru, yu, Eu, Ku) {
+        this.root.pendingFilterRefresh.length > 0 && my(this.root);
+        const Qu = void 0 !== Ru,
+          mu = this.state[pu],
+          Ju = this._encodeCtx;
+        Ju.self = this, Ju.buffer = yu, Ju.it = uu, Ju.view = Ru, Ju.isEncodeAll = !1, Ju.hasView = Qu, Ju.emitFiltered = Qu;
+        let Nu = Ku ? this.root.unreliableChanges : this.root.changes;
+        for (; Nu = Nu.next;) {
+          const yu = Nu.changeTree;
+          if (Qu && !Ru.isChangeTreeVisible(yu)) continue;
+          const Xu = Ku ? yu.unreliableRecorder : yu;
+          if (!Xu || !Xu.has()) continue;
+          const Vu = yu.encDescriptor;
+          Ju.changeTree = yu, Ju.ref = yu.ref, Ju.encoder = Vu.encoder, Ju.filter = Vu.filter, Ju.metadata = Vu.metadata, Ju.treeIsFiltered = yu.isFiltered, Ju.isSchema = Vu.isSchema, Ju.filterBitmask = Vu.filterBitmask, Ju.tags = Vu.tags, Ju.structSwitchEmitted = !1, Ju.isRootTree = yu === mu, Ju.shouldEmitSwitch = Qu || uu.offset > Eu || !Ju.isRootTree, Xu.forEachWithCtx(Ju, wE)
         }
-        return pU || EU || !this._isStreamBroadcastMode || this._emitStreamBroadcast(gU, UU), UU.offset > gU.byteLength ? (gU = this._resizeBuffer(gU, UU.offset), UU.offset = tU, this._encodeChannel(UU, RU, gU, tU, pU)) : gU.subarray(0, UU.offset)
+        return Ku || Qu || !this._isStreamBroadcastMode || this._emitStreamBroadcast(yu, uu), uu.offset > yu.byteLength ? (yu = this._resizeBuffer(yu, uu.offset), uu.offset = Eu, this._encodeChannel(uu, Ru, yu, Eu, Ku)) : yu.subarray(0, uu.offset)
       }
-      encodeFullSync(UU, RU, gU, tU) {
-        let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : UU.offset;
-        this.root.pendingFilterRefresh.length > 0 && Pg(this.root);
-        const EU = void 0 !== tU,
-          PU = this.state[hU],
-          TU = this._encodeCtx;
-        return TU.self = this, TU.buffer = RU, TU.it = UU, TU.view = tU, TU.isEncodeAll = !0, TU.hasView = EU, TU.emitFiltered = gU, TU.gen = ++this._fullSyncGen, TU.initialOffset = pU, TU.rootChangeTree = PU, st(TU, PU), UU.offset > RU.byteLength ? (RU = this._resizeBuffer(RU, UU.offset), UU.offset = pU, this.encodeFullSync(UU, RU, gU, tU, pU)) : RU.subarray(0, UU.offset)
+      encodeFullSync(uu, Ru, yu, Eu) {
+        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : uu.offset;
+        this.root.pendingFilterRefresh.length > 0 && my(this.root);
+        const Qu = void 0 !== Eu,
+          mu = this.state[pu],
+          Ju = this._encodeCtx;
+        return Ju.self = this, Ju.buffer = Ru, Ju.it = uu, Ju.view = Eu, Ju.isEncodeAll = !0, Ju.hasView = Qu, Ju.emitFiltered = yu, Ju.gen = ++this._fullSyncGen, Ju.initialOffset = Ku, Ju.rootChangeTree = mu, zE(Ju, mu), uu.offset > Ru.byteLength ? (Ru = this._resizeBuffer(Ru, uu.offset), uu.offset = Ku, this.encodeFullSync(uu, Ru, yu, Eu, Ku)) : Ru.subarray(0, uu.offset)
       }
-      _resizeBuffer(UU, RU) {
-        const gU = Math.ceil(RU / it.BUFFER_SIZE) * it.BUFFER_SIZE,
-          tU = new Uint8Array(gU);
-        return tU.set(UU), UU === this.sharedBuffer && (this.sharedBuffer = tU), tU
+      _resizeBuffer(uu, Ru) {
+        const yu = Math.ceil(Ru / hE.BUFFER_SIZE) * hE.BUFFER_SIZE,
+          Eu = new Uint8Array(yu);
+        return Eu.set(uu), uu === this.sharedBuffer && (this.sharedBuffer = Eu), Eu
       }
       encodeAll() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(UU, RU, !1)
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(uu, Ru, !1)
       }
-      encodeAllView(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const pU = gU.offset;
-        return tU = this.encodeFullSync(gU, tU, !0, UU, pU), Ft(tU.subarray(0, RU), tU.subarray(pU, gU.offset))
+      encodeAllView(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Ku = yu.offset;
+        return Eu = this.encodeFullSync(yu, Eu, !0, uu, Ku), ZE(Eu.subarray(0, Ru), Eu.subarray(Ku, yu.offset))
       }
-      ensureCapacity(UU, RU) {
-        if (RU + it.BUFFER_SIZE <= UU.byteLength) return UU;
-        const gU = Math.ceil((RU + it.BUFFER_SIZE) / it.BUFFER_SIZE) * it.BUFFER_SIZE,
-          tU = new Uint8Array(gU);
-        return tU.set(UU.subarray(0, RU)), UU === this.sharedBuffer && (this.sharedBuffer = tU), tU
+      ensureCapacity(uu, Ru) {
+        if (Ru + hE.BUFFER_SIZE <= uu.byteLength) return uu;
+        const yu = Math.ceil((Ru + hE.BUFFER_SIZE) / hE.BUFFER_SIZE) * hE.BUFFER_SIZE,
+          Eu = new Uint8Array(yu);
+        return Eu.set(uu.subarray(0, Ru)), uu === this.sharedBuffer && (this.sharedBuffer = Eu), Eu
       }
-      encodeView(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          EU = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const PU = gU.offset;
-        this._emitStreamPriority(UU);
-        for (const qU of UU.changes.keys()) {
-          const RU = UU.changes.get(qU),
-            EU = this.root.changeTrees[qU];
-          if (void 0 === EU) {
-            UU.changes.delete(qU);
+      encodeView(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          Qu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const mu = yu.offset;
+        this._emitStreamPriority(uu);
+        for (const Nu of uu.changes.keys()) {
+          const Ru = uu.changes.get(Nu),
+            Qu = this.root.changeTrees[Nu];
+          if (void 0 === Qu) {
+            uu.changes.delete(Nu);
             continue
           }
-          if (0 === RU.size) continue;
-          const PU = EU.encDescriptor,
-            KU = PU.encoder,
-            cU = PU.metadata,
-            GU = EU.ref,
-            uU = EU.refTarget;
-          tU = this.ensureCapacity(tU, gU.offset), tU[gU.offset++] = 255, RR.number(tU, GU[TU], gU);
-          for (const [qU, CU] of RU) {
-            let RU;
-            if (-1 === qU) {
-              const UU = uU.tmpItems,
-                RU = uU.deletedIndexes;
-              for (let PU = 0; PU < UU.length; PU++) void 0 !== UU[PU] && !0 !== RU[PU] && KU(this, tU, EU, PU, pU.ADD, gU, !1, !0, cU);
+          if (0 === Ru.size) continue;
+          const mu = Qu.encDescriptor,
+            Xu = mu.encoder,
+            Vu = mu.metadata,
+            ru = Qu.ref,
+            xu = Qu.refTarget;
+          Eu = this.ensureCapacity(Eu, yu.offset), Eu[yu.offset++] = 255, RR.number(Eu, ru[Ju], yu);
+          for (const [Nu, Su] of Ru) {
+            let Ru;
+            if (-1 === Nu) {
+              const uu = xu.tmpItems,
+                Ru = xu.deletedIndexes;
+              for (let mu = 0; mu < uu.length; mu++) void 0 !== uu[mu] && !0 !== Ru[mu] && Xu(this, Eu, Qu, mu, Ku.ADD, yu, !1, !0, Vu);
               continue
             }
-            if ("number" === typeof qU) RU = qU;
+            if ("number" === typeof Nu) Ru = Nu;
             else {
-              const gU = qU.indexInParent(GU);
-              if (void 0 === gU) continue;
-              if (RU = gU, CU === pU.ADD && EU.getChange(RU) === pU.DELETE) {
-                UU.changes.delete(qU.ref[TU]);
+              const yu = Nu.indexInParent(ru);
+              if (void 0 === yu) continue;
+              if (Ru = yu, Su === Ku.ADD && Qu.getChange(Ru) === Ku.DELETE) {
+                uu.changes.delete(Nu.ref[Ju]);
                 continue
               }
             }
-            KU(this, tU, EU, RU, void 0 !== uU[jU](RU) && CU || pU.DELETE, gU, !1, !0, cU)
+            Xu(this, Eu, Qu, Ru, void 0 !== xu[Bu](Ru) && Su || Ku.DELETE, yu, !1, !0, Vu)
           }
         }
-        return UU.changes.clear(), tU = this.encode(gU, UU, tU), EU ? Ft(tU.subarray(0, RU), tU.subarray(PU, gU.offset)) : tU.subarray(PU, gU.offset)
+        return uu.changes.clear(), Eu = this.encode(yu, uu, Eu), Qu ? ZE(Eu.subarray(0, Ru), Eu.subarray(mu, yu.offset)) : Eu.subarray(mu, yu.offset)
       }
-      encodeUnreliableView(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const pU = gU.offset;
-        return tU = this.encodeUnreliable(gU, UU, tU, pU), Ft(tU.subarray(0, RU), tU.subarray(pU, gU.offset))
+      encodeUnreliableView(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Ku = yu.offset;
+        return Eu = this.encodeUnreliable(yu, uu, Eu, Ku), ZE(Eu.subarray(0, Ru), Eu.subarray(Ku, yu.offset))
       }
-      _emitStreamBroadcast(UU, RU) {
-        const gU = this.root.streamTrees;
-        for (const tU of gU) {
-          const gU = tU,
-            EU = gU[hU],
-            PU = gU[TU];
-          if (void 0 === PU) continue;
-          const qU = gU._stream,
-            KU = qU.broadcastDeletes,
-            cU = qU.broadcastPending,
-            GU = qU.sentBroadcast,
-            uU = KU.size > 0,
-            CU = cU.size > 0,
-            QU = EU.encDescriptor,
-            eU = QU.encoder,
-            WU = QU.metadata;
-          if (uU || CU) {
-            if (UU[RU.offset++] = 255, RR.number(UU, PU, RU), uU) {
-              for (const gU of KU) eU(this, UU, EU, gU, pU.DELETE, RU, !1, !1, WU);
-              KU.clear()
+      _emitStreamBroadcast(uu, Ru) {
+        const yu = this.root.streamTrees;
+        for (const Eu of yu) {
+          const yu = Eu,
+            Qu = yu[pu],
+            mu = yu[Ju];
+          if (void 0 === mu) continue;
+          const Nu = yu._stream,
+            Xu = Nu.broadcastDeletes,
+            Vu = Nu.broadcastPending,
+            ru = Nu.sentBroadcast,
+            xu = Xu.size > 0,
+            Su = Vu.size > 0,
+            Tu = Qu.encDescriptor,
+            Wu = Tu.encoder,
+            ju = Tu.metadata;
+          if (xu || Su) {
+            if (uu[Ru.offset++] = 255, RR.number(uu, mu, Ru), xu) {
+              for (const yu of Xu) Wu(this, uu, Qu, yu, Ku.DELETE, Ru, !1, !1, ju);
+              Xu.clear()
             }
-            const tU = qU.maxPerTick,
-              CU = [];
-            let QU = 0;
-            const fU = [];
-            for (const PU of cU) {
-              if (QU >= tU) break;
-              const TU = gU[jU](PU);
-              void 0 !== TU ? (eU(this, UU, EU, PU, pU.ADD, RU, !1, !1, WU), GU.add(PU), CU.push(TU), fU.push(PU), QU++) : fU.push(PU)
+            const Eu = Nu.maxPerTick,
+              Su = [];
+            let Tu = 0;
+            const Hu = [];
+            for (const mu of Vu) {
+              if (Tu >= Eu) break;
+              const Ju = yu[Bu](mu);
+              void 0 !== Ju ? (Wu(this, uu, Qu, mu, Ku.ADD, Ru, !1, !1, ju), ru.add(mu), Su.push(Ju), Hu.push(mu), Tu++) : Hu.push(mu)
             }
-            for (const UU of fU) cU.delete(UU);
-            for (const gU of CU) {
-              const tU = gU[hU];
-              if (void 0 === tU) continue;
-              const EU = gU[TU];
-              if (void 0 === EU) continue;
-              UU[RU.offset++] = 255, RR.number(UU, EU, RU);
-              const PU = tU.encDescriptor,
-                qU = PU.encoder,
-                KU = PU.metadata;
-              tU.forEachLive((gU => {
-                MR.hasUnreliableAtIndex(KU, gU) || qU(this, UU, tU, gU, pU.ADD, RU, !1, !1, KU)
+            for (const uu of Hu) Vu.delete(uu);
+            for (const yu of Su) {
+              const Eu = yu[pu];
+              if (void 0 === Eu) continue;
+              const Qu = yu[Ju];
+              if (void 0 === Qu) continue;
+              uu[Ru.offset++] = 255, RR.number(uu, Qu, Ru);
+              const mu = Eu.encDescriptor,
+                Nu = mu.encoder,
+                Xu = mu.metadata;
+              Eu.forEachLive((yu => {
+                oR.hasUnreliableAtIndex(Xu, yu) || Nu(this, uu, Eu, yu, Ku.ADD, Ru, !1, !1, Xu)
               }))
             }
           }
-          for (const tU of GU) {
-            const pU = gU[jU](tU);
-            if (void 0 === pU) continue;
-            const EU = pU[hU];
-            if (void 0 === EU || !EU.has()) continue;
-            const PU = pU[TU];
-            if (void 0 === PU) continue;
-            UU[RU.offset++] = 255, RR.number(UU, PU, RU);
-            const qU = EU.encDescriptor,
-              KU = qU.encoder,
-              cU = qU.metadata;
-            EU.forEach(((gU, tU) => {
-              gU < 0 || MR.hasUnreliableAtIndex(cU, gU) || KU(this, UU, EU, gU, tU, RU, !1, !1, cU)
+          for (const Eu of ru) {
+            const Ku = yu[Bu](Eu);
+            if (void 0 === Ku) continue;
+            const Qu = Ku[pu];
+            if (void 0 === Qu || !Qu.has()) continue;
+            const mu = Ku[Ju];
+            if (void 0 === mu) continue;
+            uu[Ru.offset++] = 255, RR.number(uu, mu, Ru);
+            const Nu = Qu.encDescriptor,
+              Xu = Nu.encoder,
+              Vu = Nu.metadata;
+            Qu.forEach(((yu, Eu) => {
+              yu < 0 || oR.hasUnreliableAtIndex(Vu, yu) || Xu(this, uu, Qu, yu, Eu, Ru, !1, !1, Vu)
             }))
           }
         }
       }
-      _emitStreamPriority(UU) {
-        const RU = this.root.streamTrees;
-        if (0 === RU.size) return;
-        const gU = UU.id;
-        for (const tU of RU) {
-          const RU = tU,
-            EU = RU._stream,
-            PU = EU.pendingByView.get(gU);
-          if (void 0 === PU || 0 === PU.size) continue;
-          const qU = EU.priorityByView?.get(gU),
-            KU = void 0 !== qU,
-            cU = EU.priority,
-            GU = EU.maxPerTick,
-            uU = [],
-            CU = [];
-          if (KU || void 0 !== cU) {
-            const gU = [],
-              tU = [];
-            let pU = 0;
-            for (const EU of PU) {
-              const PU = RU[jU](EU);
-              if (void 0 === PU) {
-                CU.push(EU);
+      _emitStreamPriority(uu) {
+        const Ru = this.root.streamTrees;
+        if (0 === Ru.size) return;
+        const yu = uu.id;
+        for (const Eu of Ru) {
+          const Ru = Eu,
+            Qu = Ru._stream,
+            mu = Qu.pendingByView.get(yu);
+          if (void 0 === mu || 0 === mu.size) continue;
+          const Nu = Qu.priorityByView?.get(yu),
+            Xu = void 0 !== Nu,
+            Vu = Qu.priority,
+            ru = Qu.maxPerTick,
+            xu = [],
+            Su = [];
+          if (Xu || void 0 !== Vu) {
+            const yu = [],
+              Eu = [];
+            let Ku = 0;
+            for (const Qu of mu) {
+              const mu = Ru[Bu](Qu);
+              if (void 0 === mu) {
+                Su.push(Qu);
                 continue
               }
-              const TU = KU ? qU(PU) : cU(UU, PU);
-              if (pU < GU) {
-                let UU = pU++;
-                for (; UU > 0 && tU[UU - 1] < TU;) tU[UU] = tU[UU - 1], gU[UU] = gU[UU - 1], UU--;
-                tU[UU] = TU, gU[UU] = EU
-              } else if (TU > tU[GU - 1]) {
-                let UU = GU - 1;
-                for (; UU > 0 && tU[UU - 1] < TU;) tU[UU] = tU[UU - 1], gU[UU] = gU[UU - 1], UU--;
-                tU[UU] = TU, gU[UU] = EU
+              const Ju = Xu ? Nu(mu) : Vu(uu, mu);
+              if (Ku < ru) {
+                let uu = Ku++;
+                for (; uu > 0 && Eu[uu - 1] < Ju;) Eu[uu] = Eu[uu - 1], yu[uu] = yu[uu - 1], uu--;
+                Eu[uu] = Ju, yu[uu] = Qu
+              } else if (Ju > Eu[ru - 1]) {
+                let uu = ru - 1;
+                for (; uu > 0 && Eu[uu - 1] < Ju;) Eu[uu] = Eu[uu - 1], yu[uu] = yu[uu - 1], uu--;
+                Eu[uu] = Ju, yu[uu] = Qu
               }
             }
-            for (let UU = 0; UU < pU; UU++) uU.push(gU[UU])
+            for (let uu = 0; uu < Ku; uu++) xu.push(yu[uu])
           } else
-            for (const UU of PU) {
-              if (uU.length >= GU) break;
-              uU.push(UU)
+            for (const uu of mu) {
+              if (xu.length >= ru) break;
+              xu.push(uu)
             }
-          for (const UU of CU) PU.delete(UU);
-          const QU = uU.length;
-          let eU = EU.sentByView.get(gU);
-          void 0 === eU && (eU = new Set, EU.sentByView.set(gU, eU));
-          for (let gU = 0; gU < QU; gU++) {
-            const tU = uU[gU],
-              EU = RU[jU](tU);
-            if (void 0 === EU) {
-              PU.delete(tU);
+          for (const uu of Su) mu.delete(uu);
+          const Tu = xu.length;
+          let Wu = Qu.sentByView.get(yu);
+          void 0 === Wu && (Wu = new Set, Qu.sentByView.set(yu, Wu));
+          for (let yu = 0; yu < Tu; yu++) {
+            const Eu = xu[yu],
+              Qu = Ru[Bu](Eu);
+            if (void 0 === Qu) {
+              mu.delete(Eu);
               continue
             }
-            UU._addImmediate(EU);
-            const qU = EU[hU];
-            if (void 0 !== qU) {
-              const RU = EU[TU];
-              let gU = UU.changes.get(RU);
-              void 0 === gU && (gU = new Map, UU.changes.set(RU, gU));
-              const tU = qU.metadata;
-              qU.forEachLive((UU => {
-                MR.hasUnreliableAtIndex(tU, UU) || gU.set(UU, pU.ADD)
+            uu._addImmediate(Qu);
+            const Nu = Qu[pu];
+            if (void 0 !== Nu) {
+              const Ru = Qu[Ju];
+              let yu = uu.changes.get(Ru);
+              void 0 === yu && (yu = new Map, uu.changes.set(Ru, yu));
+              const Eu = Nu.metadata;
+              Nu.forEachLive((uu => {
+                oR.hasUnreliableAtIndex(Eu, uu) || yu.set(uu, Ku.ADD)
               }))
             }
-            PU.delete(tU), eU.add(tU)
+            mu.delete(Eu), Wu.add(Eu)
           }
         }
       }
       discardChanges() {
-        const UU = this.root.changes;
-        let RU = UU.next;
-        const gU = this.root;
-        for (; RU;) {
-          const UU = RU.next;
-          RU.changeTree.endEncode(), gU.releaseNode(RU), RU = UU
+        const uu = this.root.changes;
+        let Ru = uu.next;
+        const yu = this.root;
+        for (; Ru;) {
+          const uu = Ru.next;
+          Ru.changeTree.endEncode(), yu.releaseNode(Ru), Ru = uu
         }
-        UU.next = void 0, UU.tail = void 0
+        uu.next = void 0, uu.tail = void 0
       }
       discardUnreliableChanges() {
-        const UU = this.root.unreliableChanges;
-        let RU = UU.next;
-        const gU = this.root;
-        for (; RU;) {
-          const UU = RU.next;
-          RU.changeTree.endEncodeUnreliable(), gU.releaseNode(RU), RU = UU
+        const uu = this.root.unreliableChanges;
+        let Ru = uu.next;
+        const yu = this.root;
+        for (; Ru;) {
+          const uu = Ru.next;
+          Ru.changeTree.endEncodeUnreliable(), yu.releaseNode(Ru), Ru = uu
         }
-        UU.next = void 0, UU.tail = void 0
+        uu.next = void 0, uu.tail = void 0
       }
-      tryEncodeTypeId(UU, RU, gU, tU) {
-        const pU = this.context.getTypeId(RU),
-          EU = this.context.getTypeId(gU);
-        void 0 !== EU ? pU !== EU && (UU[tU.offset++] = 213, RR.number(UU, EU, tU)) : console.warn(`@colyseus/schema WARNING: Class "${gU.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(uu, Ru, yu, Eu) {
+        const Ku = this.context.getTypeId(Ru),
+          Qu = this.context.getTypeId(yu);
+        void 0 !== Qu ? Ku !== Qu && (uu[Eu.offset++] = 213, RR.number(uu, Qu, Eu)) : console.warn(`@colyseus/schema WARNING: Class "${yu.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const UU = this.root;
-        if (0 === UU.streamTrees.size) return !1;
-        const RU = 0 === UU.activeViews.size;
-        for (const gU of UU.streamTrees)
-          if (RU ? YR(gU) : aR(gU, UU)) return !0;
+        const uu = this.root;
+        if (0 === uu.streamTrees.size) return !1;
+        const Ru = 0 === uu.activeViews.size;
+        for (const yu of uu.streamTrees)
+          if (Ru ? UR(yu) : GR(yu, uu)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class At extends Error {
-      constructor(UU) {
-        super(UU), this.name = "DecodingWarning"
+    class PE extends Error {
+      constructor(uu) {
+        super(uu), this.name = "DecodingWarning"
       }
     }
-    const zt = {
+    const iE = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Mt {
+    class YE {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(UU, RU) {
-        let gU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(UU, RU), void 0 === RU[TU] ? (zt.value = UU, Object.defineProperty(RU, TU, zt)) : RU[TU] !== UU && (RU[TU] = UU), gU && (this.refCount[UU] = (this.refCount[UU] || 0) + 1), this.deletedRefs.has(UU) && this.deletedRefs.delete(UU)
+      addRef(uu, Ru) {
+        let yu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(uu, Ru), void 0 === Ru[Ju] ? (iE.value = uu, Object.defineProperty(Ru, Ju, iE)) : Ru[Ju] !== uu && (Ru[Ju] = uu), yu && (this.refCount[uu] = (this.refCount[uu] || 0) + 1), this.deletedRefs.has(uu) && this.deletedRefs.delete(uu)
       }
-      removeRef(UU) {
-        const RU = this.refCount[UU];
-        if (void 0 !== RU)
-          if (0 !== RU)(this.refCount[UU] = RU - 1) <= 0 && this.deletedRefs.add(UU);
+      removeRef(uu) {
+        const Ru = this.refCount[uu];
+        if (void 0 !== Ru)
+          if (0 !== Ru)(this.refCount[uu] = Ru - 1) <= 0 && this.deletedRefs.add(uu);
           else try {
-            const RU = this.refs.get(UU);
-            throw new At(`trying to remove refId '${UU}' with 0 refCount (${RU.constructor.name}: ${JSON.stringify(RU)})`)
-          } catch (Pp) {
-            console.warn(Pp)
+            const Ru = this.refs.get(uu);
+            throw new PE(`trying to remove refId '${uu}' with 0 refCount (${Ru.constructor.name}: ${JSON.stringify(Ru)})`)
+          } catch (QK) {
+            console.warn(QK)
           } else try {
-            throw new At("trying to remove refId that doesn't exist: " + UU)
-          } catch (Pp) {
-            console.warn(Pp)
+            throw new PE("trying to remove refId that doesn't exist: " + uu)
+          } catch (QK) {
+            console.warn(QK)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((UU => {
-          if (this.refCount[UU] > 0) return;
-          const RU = this.refs.get(UU),
-            gU = RU.constructor[Symbol.metadata];
-          if (null != gU)
-            for (const tU in gU) {
-              const UU = RU[gU[tU].name];
-              if ("object" === typeof UU && UU) {
-                const RU = UU[TU];
-                void 0 === RU || this.deletedRefs.has(RU) || this.removeRef(RU)
+        this.deletedRefs.forEach((uu => {
+          if (this.refCount[uu] > 0) return;
+          const Ru = this.refs.get(uu),
+            yu = Ru.constructor[Symbol.metadata];
+          if (null != yu)
+            for (const Eu in yu) {
+              const uu = Ru[yu[Eu].name];
+              if ("object" === typeof uu && uu) {
+                const Ru = uu[Ju];
+                void 0 === Ru || this.deletedRefs.has(Ru) || this.removeRef(Ru)
               }
-            } else "function" === typeof RU[QU] && Array.from(RU.values()).forEach((UU => {
-              const RU = UU[TU];
-              void 0 === RU || this.deletedRefs.has(RU) || this.removeRef(RU)
+            } else "function" === typeof Ru[Tu] && Array.from(Ru.values()).forEach((uu => {
+              const Ru = uu[Ju];
+              void 0 === Ru || this.deletedRefs.has(Ru) || this.removeRef(Ru)
             }));
-          this.refs.delete(UU), delete this.refCount[UU], delete this.callbacks[UU]
+          this.refs.delete(uu), delete this.refCount[uu], delete this.callbacks[uu]
         })), this.deletedRefs.clear()
       }
-      addCallback(UU, RU, gU) {
-        if (void 0 === UU) {
-          const UU = "number" === typeof RU ? pU[RU] : RU;
-          throw new Error(`Can't addCallback on '${UU}' (refId is undefined)`)
+      addCallback(uu, Ru, yu) {
+        if (void 0 === uu) {
+          const uu = "number" === typeof Ru ? Ku[Ru] : Ru;
+          throw new Error(`Can't addCallback on '${uu}' (refId is undefined)`)
         }
-        return this.callbacks[UU] || (this.callbacks[UU] = {}), this.callbacks[UU][RU] || (this.callbacks[UU][RU] = []), this.callbacks[UU][RU].push(gU), () => this.removeCallback(UU, RU, gU)
+        return this.callbacks[uu] || (this.callbacks[uu] = {}), this.callbacks[uu][Ru] || (this.callbacks[uu][Ru] = []), this.callbacks[uu][Ru].push(yu), () => this.removeCallback(uu, Ru, yu)
       }
-      removeCallback(UU, RU, gU) {
-        const tU = this.callbacks?.[UU]?.[RU]?.indexOf(gU);
-        void 0 !== tU && -1 !== tU && Vt(this.callbacks[UU][RU], tU)
+      removeCallback(uu, Ru, yu) {
+        const Eu = this.callbacks?.[uu]?.[Ru]?.indexOf(yu);
+        void 0 !== Eu && -1 !== Eu && nE(this.callbacks[uu][Ru], Eu)
       }
     }
-    class Dt {
+    class oE {
       context;
       state;
       root;
       currentRefId = 0;
-      uZ;
+      pD;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(UU, RU) {
-        this.setState(UU), this.context = RU || new sR(UU.constructor)
+      constructor(uu, Ru) {
+        this.setState(uu), this.context = Ru || new FR(uu.constructor)
       }
-      setState(UU) {
-        this.state = UU, this.root = new Mt, this.root.addRef(0, UU)
+      setState(uu) {
+        this.state = uu, this.root = new YE, this.root.addRef(0, uu)
       }
-      decode(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const pU = void 0 !== this.uZ ? [] : null,
-          EU = this.root,
-          PU = UU.byteLength;
-        let TU = gU.constructor[cU];
-        for (this.currentRefId = 0; RU.offset < PU;) {
-          if (UU[RU.offset] == tU) {
-            RU.offset++, gU[xU]?.();
-            const tU = fR.number(UU, RU),
-              pU = EU.refs.get(tU);
-            pU ? (gU = pU, TU = gU.constructor[cU], this.currentRefId = tU) : (console.error(`"refId" not found: ${tU}`, {
-              previousRef: gU,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Ku = void 0 !== this.pD ? [] : null,
+          Qu = this.root,
+          mu = uu.byteLength;
+        let Ju = yu.constructor[Vu];
+        for (this.currentRefId = 0; Ru.offset < mu;) {
+          if (uu[Ru.offset] == Eu) {
+            Ru.offset++, yu[du]?.();
+            const Eu = HR.number(uu, Ru),
+              Ku = Qu.refs.get(Eu);
+            Ku ? (yu = Ku, Ju = yu.constructor[Vu], this.currentRefId = Eu) : (console.error(`"refId" not found: ${Eu}`, {
+              previousRef: yu,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(UU, RU, PU));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(uu, Ru, mu));
             continue
-          } - 1 !== TU(this, UU, RU, gU, pU) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(UU, RU, PU))
+          } - 1 !== Ju(this, uu, Ru, yu, Ku) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(uu, Ru, mu))
         }
-        return gU[xU]?.(), null !== this.resyncVisited && function(UU, RU) {
-          UU.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : sg(UU, UU.state, new Set, RU)
-        }(this, pU), null !== pU && this.uZ?.(pU), EU.garbageCollectDeletedRefs(), pU
+        return yu[du]?.(), null !== this.resyncVisited && function(uu, Ru) {
+          uu.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Fy(uu, uu.state, new Set, Ru)
+        }(this, Ku), null !== Ku && this.pD?.(Ku), Qu.garbageCollectDeletedRefs(), Ku
       }
-      decodeResync(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(UU, RU)
+          return this.decode(uu, Ru)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(UU, RU, gU) {
+      skipCurrentStructure(uu, Ru, yu) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const pU = {
-          offset: RU.offset
+        const Ku = {
+          offset: Ru.offset
         };
-        for (; RU.offset < gU && (UU[RU.offset] !== tU || (pU.offset = RU.offset + 1, !this.root.refs.has(fR.number(UU, pU))));) RU.offset++
+        for (; Ru.offset < yu && (uu[Ru.offset] !== Eu || (Ku.offset = Ru.offset + 1, !this.root.refs.has(HR.number(uu, Ku))));) Ru.offset++
       }
-      getInstanceType(UU, RU, gU) {
-        let tU;
-        if (213 === UU[RU.offset]) {
-          RU.offset++;
-          const gU = fR.number(UU, RU);
-          tU = this.context.get(gU)
+      getInstanceType(uu, Ru, yu) {
+        let Eu;
+        if (213 === uu[Ru.offset]) {
+          Ru.offset++;
+          const yu = HR.number(uu, Ru);
+          Eu = this.context.get(yu)
         }
-        return tU || gU
+        return Eu || yu
       }
-      createInstanceOfType(UU) {
-        return UU.initializeForDecoder()
+      createInstanceOfType(uu) {
+        return uu.initializeForDecoder()
       }
-      removeChildRefs(UU, RU) {
-        const gU = "string" !== typeof UU[QU],
-          tU = UU[TU];
-        UU.forEach(((EU, PU) => {
-          RU?.push({
-            ref: UU,
-            refId: tU,
-            op: pU.DELETE,
-            field: PU,
+      removeChildRefs(uu, Ru) {
+        const yu = "string" !== typeof uu[Tu],
+          Eu = uu[Ju];
+        uu.forEach(((Qu, mu) => {
+          Ru?.push({
+            ref: uu,
+            refId: Eu,
+            op: Ku.DELETE,
+            field: mu,
             value: void 0,
-            previousValue: EU
-          }), gU && this.root.removeRef(EU[TU])
+            previousValue: Qu
+          }), yu && this.root.removeRef(Qu[Ju])
         }))
       }
     }
-    const Lt = bt({
-        min: ut.float64(),
-        max: ut.float64(),
-        bits: ut.uint8(),
-        mode: ut.uint8()
+    const qE = DE({
+        min: xE.float64(),
+        max: xE.float64(),
+        bits: xE.uint8(),
+        mode: xE.uint8()
       }, "QuantizedDescriptor"),
-      Nt = bt({
-        name: ut.string(),
-        type: ut.string(),
-        referencedType: ut.number(),
-        childPrimitive: ut.string(),
-        quantized: ut.ref(Lt).optional()
+      OE = DE({
+        name: xE.string(),
+        type: xE.string(),
+        referencedType: xE.number(),
+        childPrimitive: xE.string(),
+        quantized: xE.ref(qE).optional()
       }, "ReflectionField"),
-      lt = bt({
-        id: ut.number(),
-        extendsId: ut.number(),
-        fields: ut.array(Nt)
+      vE = DE({
+        id: xE.number(),
+        extendsId: xE.number(),
+        fields: xE.array(OE)
       }, "ReflectionType"),
-      Ot = bt({
-        types: ut.array(lt),
-        rootType: ut.number()
+      aE = DE({
+        types: xE.array(vE),
+        rootType: xE.number()
       }, "Reflection");
 
-    function Up(UU) {
-      const RU = UU.root,
-        gU = RU.callbacks,
-        tU = new WeakMap;
-      let EU;
+    function fE(uu) {
+      const Ru = uu.root,
+        yu = Ru.callbacks,
+        Eu = new WeakMap;
+      let Qu;
 
-      function PU(UU, gU) {
-        let KU = gU.instance?.constructor[Symbol.metadata] || UU,
-          cU = gU.instance && "function" === typeof gU.instance.forEach || UU && !Zt.is(UU);
-        if (KU && !cU) {
-          const UU = function(UU, pU, PU, qU) {
-            return qU && void 0 !== gU.instance[pU] && !tU.has(EU) && PU(gU.instance[pU], void 0), RU.addCallback(UU[TU], pU, PU)
+      function mu(uu, yu) {
+        let Xu = yu.instance?.constructor[Symbol.metadata] || uu,
+          Vu = yu.instance && "function" === typeof yu.instance.forEach || uu && !IE.is(uu);
+        if (Xu && !Vu) {
+          const uu = function(uu, Ku, mu, Nu) {
+            return Nu && void 0 !== yu.instance[Ku] && !Eu.has(Qu) && mu(yu.instance[Ku], void 0), Ru.addCallback(uu[Ju], Ku, mu)
           };
           return new Proxy({
-            listen: function(RU, pU) {
-              let PU = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (gU.instance) return UU(gU.instance, RU, pU, PU);
+            listen: function(Ru, Ku) {
+              let mu = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (yu.instance) return uu(yu.instance, Ru, Ku, mu);
               {
-                let TU = () => {};
-                return gU.onInstanceAvailable(((gU, qU) => {
-                  TU = UU(gU, RU, pU, PU && qU && !tU.has(EU))
-                })), () => TU()
+                let Ju = () => {};
+                return yu.onInstanceAvailable(((yu, Nu) => {
+                  Ju = uu(yu, Ru, Ku, mu && Nu && !Eu.has(Qu))
+                })), () => Ju()
               }
             },
-            onChange: function(UU) {
-              return RU.addCallback(gU.instance[TU], pU.REPLACE, UU)
+            onChange: function(uu) {
+              return Ru.addCallback(yu.instance[Ju], Ku.REPLACE, uu)
             },
-            bindTo: function(UU, tU) {
-              return tU || (tU = Object.keys(KU).map((UU => KU[UU].name))), RU.addCallback(gU.instance[TU], pU.REPLACE, (() => {
-                tU.forEach((RU => UU[RU] = gU.instance[RU]))
+            bindTo: function(uu, Eu) {
+              return Eu || (Eu = Object.keys(Xu).map((uu => Xu[uu].name))), Ru.addCallback(yu.instance[Ju], Ku.REPLACE, (() => {
+                Eu.forEach((Ru => uu[Ru] = yu.instance[Ru]))
               }))
             }
           }, {
-            get(UU, RU) {
-              const tU = KU[KU[RU]];
-              if (tU) {
-                const UU = gU.instance?.[RU],
-                  pU = tU => {
-                    const pU = qU(gU.instance).listen(RU, ((UU, RU) => {
-                      tU(UU, !1), pU?.()
+            get(uu, Ru) {
+              const Eu = Xu[Xu[Ru]];
+              if (Eu) {
+                const uu = yu.instance?.[Ru],
+                  Ku = Eu => {
+                    const Ku = Nu(yu.instance).listen(Ru, ((uu, Ru) => {
+                      Eu(uu, !1), Ku?.()
                     }), !1);
-                    void 0 !== UU?.[TU] && tU(UU, !0)
+                    void 0 !== uu?.[Ju] && Eu(uu, !0)
                   };
-                return PU(tU.type, {
-                  instance: void 0 !== UU?.[TU] && UU,
-                  parentInstance: gU.instance,
-                  onInstanceAvailable: pU
+                return mu(Eu.type, {
+                  instance: void 0 !== uu?.[Ju] && uu,
+                  parentInstance: yu.instance,
+                  onInstanceAvailable: Ku
                 })
               }
-              return UU[RU]
+              return uu[Ru]
             },
-            has: (UU, RU) => void 0 !== KU[RU],
-            set(UU, RU, gU) {
+            has: (uu, Ru) => void 0 !== Xu[Ru],
+            set(uu, Ru, yu) {
               throw new Error("not allowed")
             },
-            deleteProperty(UU, RU) {
+            deleteProperty(uu, Ru) {
               throw new Error("not allowed")
             }
           })
         } {
-          const UU = function(UU, gU, PU) {
-              return PU && UU.forEach(((UU, RU) => gU(UU, RU))), RU.addCallback(UU[TU], pU.ADD, ((UU, RU) => {
-                tU.set(gU, !0), EU = gU, gU(UU, RU), tU.delete(gU), EU = void 0
+          const uu = function(uu, yu, mu) {
+              return mu && uu.forEach(((uu, Ru) => yu(uu, Ru))), Ru.addCallback(uu[Ju], Ku.ADD, ((uu, Ru) => {
+                Eu.set(yu, !0), Qu = yu, yu(uu, Ru), Eu.delete(yu), Qu = void 0
               }))
             },
-            PU = function(UU, gU) {
-              return RU.addCallback(UU[TU], pU.DELETE, gU)
+            mu = function(uu, yu) {
+              return Ru.addCallback(uu[Ju], Ku.DELETE, yu)
             },
-            qU = function(UU, gU) {
-              return RU.addCallback(UU[TU], pU.REPLACE, gU)
+            Nu = function(uu, yu) {
+              return Ru.addCallback(uu[Ju], Ku.REPLACE, yu)
             };
           return new Proxy({
-            Wm: function(RU) {
-              let pU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (gU.instance) return UU(gU.instance, RU, pU && !tU.has(EU));
-              if (gU.onInstanceAvailable) {
-                let PU = () => {};
-                return gU.onInstanceAvailable(((gU, TU) => {
-                  PU = UU(gU, RU, pU && TU && !tU.has(EU))
-                })), () => PU()
+            UH: function(Ru) {
+              let Ku = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (yu.instance) return uu(yu.instance, Ru, Ku && !Eu.has(Qu));
+              if (yu.onInstanceAvailable) {
+                let mu = () => {};
+                return yu.onInstanceAvailable(((yu, Ju) => {
+                  mu = uu(yu, Ru, Ku && Ju && !Eu.has(Qu))
+                })), () => mu()
               }
             },
-            Kw: function(UU) {
-              if (gU.instance) return PU(gU.instance, UU);
-              if (gU.onInstanceAvailable) {
-                let RU = () => {};
-                return gU.onInstanceAvailable((gU => {
-                  RU = PU(gU, UU)
-                })), () => RU()
+            JA: function(uu) {
+              if (yu.instance) return mu(yu.instance, uu);
+              if (yu.onInstanceAvailable) {
+                let Ru = () => {};
+                return yu.onInstanceAvailable((yu => {
+                  Ru = mu(yu, uu)
+                })), () => Ru()
               }
             },
-            onChange: function(UU) {
-              if (gU.instance) return qU(gU.instance, UU);
-              if (gU.onInstanceAvailable) {
-                let RU = () => {};
-                return gU.onInstanceAvailable((gU => {
-                  RU = qU(gU, UU)
-                })), () => RU()
+            onChange: function(uu) {
+              if (yu.instance) return Nu(yu.instance, uu);
+              if (yu.onInstanceAvailable) {
+                let Ru = () => {};
+                return yu.onInstanceAvailable((yu => {
+                  Ru = Nu(yu, uu)
+                })), () => Ru()
               }
             }
           }, {
-            get(UU, RU) {
-              if (!UU[RU]) throw new Error(`Can't access '${RU}' through callback proxy. access the instance directly.`);
-              return UU[RU]
+            get(uu, Ru) {
+              if (!uu[Ru]) throw new Error(`Can't access '${Ru}' through callback proxy. access the instance directly.`);
+              return uu[Ru]
             },
-            has: (UU, RU) => void 0 !== UU[RU],
-            set(UU, RU, gU) {
+            has: (uu, Ru) => void 0 !== uu[Ru],
+            set(uu, Ru, yu) {
               throw new Error("not allowed")
             },
-            deleteProperty(UU, RU) {
+            deleteProperty(uu, Ru) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function qU(UU) {
-        return PU(void 0, {
-          instance: UU
+      function Nu(uu) {
+        return mu(void 0, {
+          instance: uu
         })
       }
-      return UU.uZ = function(UU) {
-        const RU = new Set;
-        for (let tU = 0, EU = UU.length; tU < EU; tU++) {
-          const EU = UU[tU],
-            PU = EU.refId,
-            qU = EU.ref,
-            KU = gU[PU];
-          if (KU) {
-            if ((EU.op & pU.DELETE) === pU.DELETE && Zt.isSchema(EU.previousValue)) {
-              const UU = gU[EU.previousValue[TU]]?.[pU.DELETE];
-              for (let RU = UU?.length - 1; RU >= 0; RU--) UU[RU]()
+      return uu.pD = function(uu) {
+        const Ru = new Set;
+        for (let Eu = 0, Qu = uu.length; Eu < Qu; Eu++) {
+          const Qu = uu[Eu],
+            mu = Qu.refId,
+            Nu = Qu.ref,
+            Xu = yu[mu];
+          if (Xu) {
+            if ((Qu.op & Ku.DELETE) === Ku.DELETE && IE.isSchema(Qu.previousValue)) {
+              const uu = yu[Qu.previousValue[Ju]]?.[Ku.DELETE];
+              for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru]()
             }
-            if (Zt.isSchema(qU)) {
-              if (!RU.has(PU)) {
-                const UU = KU?.[pU.REPLACE];
-                for (let RU = UU?.length - 1; RU >= 0; RU--) UU[RU]()
+            if (IE.isSchema(Nu)) {
+              if (!Ru.has(mu)) {
+                const uu = Xu?.[Ku.REPLACE];
+                for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru]()
               }
-              if (KU.hasOwnProperty(EU.field)) {
-                const UU = KU[EU.field];
-                for (let RU = UU?.length - 1; RU >= 0; RU--) UU[RU](EU.value, EU.previousValue)
+              if (Xu.hasOwnProperty(Qu.field)) {
+                const uu = Xu[Qu.field];
+                for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.value, Qu.previousValue)
               }
             } else {
-              if ((EU.op & pU.DELETE) === pU.DELETE) {
-                if (void 0 !== EU.previousValue) {
-                  const UU = KU[pU.DELETE];
-                  for (let RU = UU?.length - 1; RU >= 0; RU--) UU[RU](EU.previousValue, EU.dynamicIndex ?? EU.field)
+              if ((Qu.op & Ku.DELETE) === Ku.DELETE) {
+                if (void 0 !== Qu.previousValue) {
+                  const uu = Xu[Ku.DELETE];
+                  for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.previousValue, Qu.dynamicIndex ?? Qu.field)
                 }
-                if ((EU.op & pU.ADD) === pU.ADD) {
-                  const UU = KU[pU.ADD];
-                  for (let RU = UU?.length - 1; RU >= 0; RU--) UU[RU](EU.value, EU.dynamicIndex ?? EU.field)
+                if ((Qu.op & Ku.ADD) === Ku.ADD) {
+                  const uu = Xu[Ku.ADD];
+                  for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.value, Qu.dynamicIndex ?? Qu.field)
                 }
-              } else if ((EU.op & pU.ADD) === pU.ADD && EU.previousValue !== EU.value) {
-                const UU = KU[pU.ADD];
-                for (let RU = UU?.length - 1; RU >= 0; RU--) UU[RU](EU.value, EU.dynamicIndex ?? EU.field)
+              } else if ((Qu.op & Ku.ADD) === Ku.ADD && Qu.previousValue !== Qu.value) {
+                const uu = Xu[Ku.ADD];
+                for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.value, Qu.dynamicIndex ?? Qu.field)
               }
-              if (EU.value !== EU.previousValue && (void 0 !== EU.value || void 0 !== EU.previousValue)) {
-                const UU = KU[pU.REPLACE];
-                for (let RU = UU?.length - 1; RU >= 0; RU--) UU[RU](EU.value, EU.dynamicIndex ?? EU.field)
+              if (Qu.value !== Qu.previousValue && (void 0 !== Qu.value || void 0 !== Qu.previousValue)) {
+                const uu = Xu[Ku.REPLACE];
+                for (let Ru = uu?.length - 1; Ru >= 0; Ru--) uu[Ru](Qu.value, Qu.dynamicIndex ?? Qu.field)
               }
             }
-            RU.add(PU)
+            Ru.add(mu)
           }
         }
-      }, qU
+      }, Nu
     }
 
-    function Rp(UU, RU) {
-      UU.uZ = RU
+    function uK(uu, Ru) {
+      uu.pD = Ru
     }
-    Ot.encode = function(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    aE.encode = function(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const gU = UU.context,
-        tU = new Ot,
-        pU = new it(tU),
-        EU = gU.schemas.get(UU.state.constructor);
-      EU > 0 && (tU.rootType = EU);
-      const PU = new Set,
-        TU = {},
-        qU = UU => {
-          if (void 0 === UU.extendsId || PU.has(UU.extendsId)) {
-            PU.add(UU.id), tU.types.push(UU);
-            const RU = TU[UU.id];
-            void 0 !== RU && (delete TU[UU.id], RU.forEach((UU => qU(UU))))
-          } else void 0 === TU[UU.extendsId] && (TU[UU.extendsId] = []), TU[UU.extendsId].push(UU)
+      const yu = uu.context,
+        Eu = new aE,
+        Ku = new hE(Eu),
+        Qu = yu.schemas.get(uu.state.constructor);
+      Qu > 0 && (Eu.rootType = Qu);
+      const mu = new Set,
+        Ju = {},
+        Nu = uu => {
+          if (void 0 === uu.extendsId || mu.has(uu.extendsId)) {
+            mu.add(uu.id), Eu.types.push(uu);
+            const Ru = Ju[uu.id];
+            void 0 !== Ru && (delete Ju[uu.id], Ru.forEach((uu => Nu(uu))))
+          } else void 0 === Ju[uu.extendsId] && (Ju[uu.extendsId] = []), Ju[uu.extendsId].push(uu)
         };
-      gU.schemas.forEach(((UU, RU) => {
-        const tU = new lt;
-        tU.id = Number(UU);
-        const pU = Object.getPrototypeOf(RU);
-        pU !== Zt && (tU.extendsId = gU.schemas.get(pU));
-        const EU = RU[Symbol.metadata];
-        if (EU !== pU[Symbol.metadata]) {
-          const UU = EU[bU] ?? -1;
-          for (let RU = 0; RU <= UU; RU++) {
-            const UU = EU[RU];
-            if (void 0 === UU) continue;
-            const pU = UU.name;
-            if (!Object.prototype.hasOwnProperty.call(EU, pU)) continue;
-            const PU = new Nt;
-            let TU;
-            if (PU.name = pU, "string" === typeof UU.type) TU = UU.type;
-            else if (vR(UU.type)) {
-              const RU = UU.type.quantized;
-              TU = "quantized";
-              const gU = new Lt;
-              gU.min = RU.min, gU.max = RU.max, gU.bits = RU.bits, gU.mode = RU.wrap ? 1 : 0, PU.quantized = gU
+      yu.schemas.forEach(((uu, Ru) => {
+        const Eu = new vE;
+        Eu.id = Number(uu);
+        const Ku = Object.getPrototypeOf(Ru);
+        Ku !== IE && (Eu.extendsId = yu.schemas.get(Ku));
+        const Qu = Ru[Symbol.metadata];
+        if (Qu !== Ku[Symbol.metadata]) {
+          const uu = Qu[Du] ?? -1;
+          for (let Ru = 0; Ru <= uu; Ru++) {
+            const uu = Qu[Ru];
+            if (void 0 === uu) continue;
+            const Ku = uu.name;
+            if (!Object.prototype.hasOwnProperty.call(Qu, Ku)) continue;
+            const mu = new OE;
+            let Ju;
+            if (mu.name = Ku, "string" === typeof uu.type) Ju = uu.type;
+            else if (gR(uu.type)) {
+              const Ru = uu.type.quantized;
+              Ju = "quantized";
+              const yu = new qE;
+              yu.min = Ru.min, yu.max = Ru.max, yu.bits = Ru.bits, yu.mode = Ru.wrap ? 1 : 0, mu.quantized = yu
             } else {
-              let RU;
-              Zt.is(UU.type) ? (TU = "ref", RU = UU.type) : (TU = Object.keys(UU.type)[0], "string" === typeof UU.type[TU] ? PU.childPrimitive = UU.type[TU] : RU = UU.type[TU]), PU.referencedType = RU ? gU.getTypeId(RU) : -1
+              let Ru;
+              IE.is(uu.type) ? (Ju = "ref", Ru = uu.type) : (Ju = Object.keys(uu.type)[0], "string" === typeof uu.type[Ju] ? mu.childPrimitive = uu.type[Ju] : Ru = uu.type[Ju]), mu.referencedType = Ru ? yu.getTypeId(Ru) : -1
             }
-            PU.type = TU, tU.fields.push(PU)
+            mu.type = Ju, Eu.fields.push(mu)
           }
         }
-        qU(tU)
+        Nu(Eu)
       }));
-      for (const KU in TU) TU[KU].forEach((UU => tU.types.push(UU)));
-      return pU.encodeAll(RU).slice(0, RU.offset)
-    }, Ot.decode = function(UU, RU) {
-      const gU = new Ot;
-      new Dt(gU).decode(UU, RU);
-      const tU = new sR;
-      gU.types.forEach((UU => {
-        const RU = tU.get(UU.extendsId) ?? Zt,
-          gU = class extends RU {};
-        sR.register(gU), tU.add(gU, UU.id)
+      for (const Xu in Ju) Ju[Xu].forEach((uu => Eu.types.push(uu)));
+      return Ku.encodeAll(Ru).slice(0, Ru.offset)
+    }, aE.decode = function(uu, Ru) {
+      const yu = new aE;
+      new oE(yu).decode(uu, Ru);
+      const Eu = new FR;
+      yu.types.forEach((uu => {
+        const Ru = Eu.get(uu.extendsId) ?? IE,
+          yu = class extends Ru {};
+        FR.register(yu), Eu.add(yu, uu.id)
       }), {});
-      gU.types.forEach((UU => {
-        const RU = tU.get(UU.id),
-          pU = MR.initialize(RU),
-          EU = [];
-        let PU = UU;
+      yu.types.forEach((uu => {
+        const Ru = Eu.get(uu.id),
+          Ku = oR.initialize(Ru),
+          Qu = [];
+        let mu = uu;
         do {
-          EU.push(PU), PU = gU.types.find((UU => UU.id === PU.extendsId))
-        } while (PU);
-        let TU = 0;
-        EU.reverse().forEach((UU => {
-          ((UU, RU, gU) => {
-            RU.fields.forEach(((RU, pU) => {
-              const EU = gU + pU;
-              if (void 0 !== RU.quantized) {
-                const gU = RU.quantized;
-                MR.addField(UU, EU, RU.name, {
-                  quantized: XR({
-                    min: gU.min,
-                    max: gU.max,
-                    bits: gU.bits,
-                    mode: 1 === gU.mode ? "wrap" : "clamp"
+          Qu.push(mu), mu = yu.types.find((uu => uu.id === mu.extendsId))
+        } while (mu);
+        let Ju = 0;
+        Qu.reverse().forEach((uu => {
+          ((uu, Ru, yu) => {
+            Ru.fields.forEach(((Ru, Ku) => {
+              const Qu = yu + Ku;
+              if (void 0 !== Ru.quantized) {
+                const yu = Ru.quantized;
+                oR.addField(uu, Qu, Ru.name, {
+                  quantized: lR({
+                    min: yu.min,
+                    max: yu.max,
+                    bits: yu.bits,
+                    mode: 1 === yu.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== RU.referencedType) {
-                const gU = RU.type,
-                  pU = tU.get(RU.referencedType) ?? RU.childPrimitive;
-                "ref" === gU ? MR.addField(UU, EU, RU.name, pU) : MR.addField(UU, EU, RU.name, {
-                  [gU]: pU
+              } else if (void 0 !== Ru.referencedType) {
+                const yu = Ru.type,
+                  Ku = Eu.get(Ru.referencedType) ?? Ru.childPrimitive;
+                "ref" === yu ? oR.addField(uu, Qu, Ru.name, Ku) : oR.addField(uu, Qu, Ru.name, {
+                  [yu]: Ku
                 })
-              } else MR.addField(UU, EU, RU.name, RU.type)
+              } else oR.addField(uu, Qu, Ru.name, Ru.type)
             }))
-          })(pU, UU, TU), TU += UU.fields.length
+          })(Ku, uu, Ju), Ju += uu.fields.length
         }))
       }));
-      const pU = new(tU.get(gU.rootType || 0));
-      return new Dt(pU, tU)
-    }, Ot.makeEncodable = function(UU) {
-      const RU = UU[Symbol.metadata];
-      if (!RU) return UU;
-      const gU = RU[bU];
-      if (void 0 === gU) return UU;
-      for (let tU = 0; tU <= gU; tU++) {
-        const gU = RU[tU];
-        gU && MR.defineField(UU, RU, tU, gU.name, gU.type)
+      const Ku = new(Eu.get(yu.rootType || 0));
+      return new oE(Ku, Eu)
+    }, aE.makeEncodable = function(uu) {
+      const Ru = uu[Symbol.metadata];
+      if (!Ru) return uu;
+      const yu = Ru[Du];
+      if (void 0 === yu) return uu;
+      for (let Eu = 0; Eu <= yu; Eu++) {
+        const yu = Ru[Eu];
+        yu && oR.defineField(uu, Ru, Eu, yu.name, yu.type)
       }
-      return Object.prototype.hasOwnProperty.call(UU, wU) && delete UU[wU], UU
+      return Object.prototype.hasOwnProperty.call(uu, eu) && delete uu[eu], uu
     };
-    class gp {
-      zu;
+    class RK {
+      Ox;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(UU) {
-        this.zu = UU, this.zu.uZ = this.uZ.bind(this)
+      constructor(uu) {
+        this.Ox = uu, this.Ox.pD = this.pD.bind(this)
       }
       get callbacks() {
-        return this.zu.root.callbacks
+        return this.Ox.root.callbacks
       }
       get state() {
-        return this.zu.state
+        return this.Ox.state
       }
-      addCallback(UU, RU, gU) {
-        return this.zu.root.addCallback(UU, RU, gU)
+      addCallback(uu, Ru, yu) {
+        return this.Ox.root.addCallback(uu, Ru, yu)
       }
-      addCallbackOrWaitCollectionAvailable(UU, RU, gU, tU) {
-        let EU = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          PU = () => {};
-        const qU = () => PU(),
-          KU = UU[RU];
-        if (KU && void 0 !== KU[TU]) return EU = EU && !1 === this.isTriggering, gU === pU.ADD && EU && KU.forEach(((UU, RU) => {
-          tU(UU, RU)
-        })), this.addCallback(KU[TU], gU, tU);
+      addCallbackOrWaitCollectionAvailable(uu, Ru, yu, Eu) {
+        let Qu = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          mu = () => {};
+        const Nu = () => mu(),
+          Xu = uu[Ru];
+        if (Xu && void 0 !== Xu[Ju]) return Qu = Qu && !1 === this.isTriggering, yu === Ku.ADD && Qu && Xu.forEach(((uu, Ru) => {
+          Eu(uu, Ru)
+        })), this.addCallback(Xu[Ju], yu, Eu);
         {
-          let pU;
-          return pU = this.addCallback(UU[TU], RU, ((UU, RU) => {
-            null !== UU && void 0 !== UU && (pU(), PU = this.addCallback(UU[TU], gU, tU))
-          })), PU = pU, qU
+          let Ku;
+          return Ku = this.addCallback(uu[Ju], Ru, ((uu, Ru) => {
+            null !== uu && void 0 !== uu && (Ku(), mu = this.addCallback(uu[Ju], yu, Eu))
+          })), mu = Ku, Nu
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(UU, RU, gU) {
-        let tU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        tU = tU && !1 === this.isTriggering;
-        const pU = UU[RU];
-        return tU && null !== pU && void 0 !== pU && gU(pU, void 0), this.addCallback(UU[TU], RU, gU)
+      listenInstance(uu, Ru, yu) {
+        let Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        Eu = Eu && !1 === this.isTriggering;
+        const Ku = uu[Ru];
+        return Eu && null !== Ku && void 0 !== Ku && yu(Ku, void 0), this.addCallback(uu[Ju], Ru, yu)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const UU = arguments.length <= 0 ? void 0 : arguments[0],
-            RU = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(UU[TU], pU.REPLACE, RU)
+          const uu = arguments.length <= 0 ? void 0 : arguments[0],
+            Ru = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(uu[Ju], Ku.REPLACE, Ru)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], pU.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], pU.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Ku.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Ku.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      Wm() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], pU.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], pU.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      UH() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Ku.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Ku.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      Kw() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], pU.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], pU.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      JA() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Ku.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Ku.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(UU, RU, gU) {
-        let tU = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const EU = UU.constructor[Symbol.metadata];
-        gU || (gU = Object.keys(EU).filter((UU => !isNaN(Number(UU)))).map((UU => EU[UU].name)));
-        const PU = () => {
-          for (const tU of gU) {
-            const gU = UU[tU];
-            void 0 !== gU && (RU[tU] = gU)
+      bindTo(uu, Ru, yu) {
+        let Eu = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const Qu = uu.constructor[Symbol.metadata];
+        yu || (yu = Object.keys(Qu).filter((uu => !isNaN(Number(uu)))).map((uu => Qu[uu].name)));
+        const mu = () => {
+          for (const Eu of yu) {
+            const yu = uu[Eu];
+            void 0 !== yu && (Ru[Eu] = yu)
           }
         };
-        return tU && PU(), this.addCallback(UU[TU], pU.REPLACE, PU)
+        return Eu && mu(), this.addCallback(uu[Ju], Ku.REPLACE, mu)
       }
-      uZ(UU) {
+      pD(uu) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let RU = 0, gU = UU.length; RU < gU; RU++) {
-          const gU = UU[RU],
-            tU = gU.refId,
-            EU = gU.ref,
-            PU = this.callbacks[tU];
-          if (PU) {
-            if ((gU.op & pU.DELETE) === pU.DELETE && Zt.isSchema(gU.previousValue)) {
-              const UU = gU.previousValue[TU],
-                RU = this.callbacks[UU]?.[pU.DELETE];
-              if (RU)
-                for (let gU = RU.length - 1; gU >= 0; gU--) try {
-                  RU[gU]()
-                } catch (Pp) {
-                  console.error(Pp)
+        for (let Ru = 0, yu = uu.length; Ru < yu; Ru++) {
+          const yu = uu[Ru],
+            Eu = yu.refId,
+            Qu = yu.ref,
+            mu = this.callbacks[Eu];
+          if (mu) {
+            if ((yu.op & Ku.DELETE) === Ku.DELETE && IE.isSchema(yu.previousValue)) {
+              const uu = yu.previousValue[Ju],
+                Ru = this.callbacks[uu]?.[Ku.DELETE];
+              if (Ru)
+                for (let yu = Ru.length - 1; yu >= 0; yu--) try {
+                  Ru[yu]()
+                } catch (QK) {
+                  console.error(QK)
                 }
             }
-            if (Zt.isSchema(EU)) {
-              if (!this.uniqueRefIds.has(tU)) {
-                const UU = PU[pU.REPLACE];
-                if (UU)
-                  for (let RU = UU.length - 1; RU >= 0; RU--) try {
-                    UU[RU]()
-                  } catch (Pp) {
-                    console.error(Pp)
+            if (IE.isSchema(Qu)) {
+              if (!this.uniqueRefIds.has(Eu)) {
+                const uu = mu[Ku.REPLACE];
+                if (uu)
+                  for (let Ru = uu.length - 1; Ru >= 0; Ru--) try {
+                    uu[Ru]()
+                  } catch (QK) {
+                    console.error(QK)
                   }
               }
-              const UU = PU[gU.field];
-              if (UU)
-                for (let RU = UU.length - 1; RU >= 0; RU--) try {
-                  UU[RU](gU.value, gU.previousValue)
-                } catch (Pp) {
-                  console.error(Pp)
+              const uu = mu[yu.field];
+              if (uu)
+                for (let Ru = uu.length - 1; Ru >= 0; Ru--) try {
+                  uu[Ru](yu.value, yu.previousValue)
+                } catch (QK) {
+                  console.error(QK)
                 }
             } else {
-              const UU = gU.dynamicIndex ?? gU.field;
-              if ((gU.op & pU.DELETE) === pU.DELETE) {
-                if (void 0 !== gU.previousValue) {
-                  const RU = PU[pU.DELETE];
-                  if (RU)
-                    for (let tU = RU.length - 1; tU >= 0; tU--) try {
-                      RU[tU](gU.previousValue, UU)
-                    } catch (Pp) {
-                      console.error(Pp)
+              const uu = yu.dynamicIndex ?? yu.field;
+              if ((yu.op & Ku.DELETE) === Ku.DELETE) {
+                if (void 0 !== yu.previousValue) {
+                  const Ru = mu[Ku.DELETE];
+                  if (Ru)
+                    for (let Eu = Ru.length - 1; Eu >= 0; Eu--) try {
+                      Ru[Eu](yu.previousValue, uu)
+                    } catch (QK) {
+                      console.error(QK)
                     }
                 }
-                if ((gU.op & pU.ADD) === pU.ADD) {
-                  const RU = PU[pU.ADD];
-                  if (RU)
-                    for (let tU = RU.length - 1; tU >= 0; tU--) try {
-                      RU[tU](gU.value, UU)
-                    } catch (Pp) {
-                      console.error(Pp)
+                if ((yu.op & Ku.ADD) === Ku.ADD) {
+                  const Ru = mu[Ku.ADD];
+                  if (Ru)
+                    for (let Eu = Ru.length - 1; Eu >= 0; Eu--) try {
+                      Ru[Eu](yu.value, uu)
+                    } catch (QK) {
+                      console.error(QK)
                     }
                 }
-              } else if ((gU.op & pU.ADD) === pU.ADD && gU.previousValue !== gU.value) {
-                const RU = PU[pU.ADD];
-                if (RU)
-                  for (let tU = RU.length - 1; tU >= 0; tU--) try {
-                    RU[tU](gU.value, UU)
-                  } catch (Pp) {
-                    console.error(Pp)
+              } else if ((yu.op & Ku.ADD) === Ku.ADD && yu.previousValue !== yu.value) {
+                const Ru = mu[Ku.ADD];
+                if (Ru)
+                  for (let Eu = Ru.length - 1; Eu >= 0; Eu--) try {
+                    Ru[Eu](yu.value, uu)
+                  } catch (QK) {
+                    console.error(QK)
                   }
               }
-              if (gU.value !== gU.previousValue) {
-                const RU = PU[pU.REPLACE];
-                if (RU)
-                  for (let tU = RU.length - 1; tU >= 0; tU--) try {
-                    RU[tU](UU, gU.value)
-                  } catch (Pp) {
-                    console.error(Pp)
+              if (yu.value !== yu.previousValue) {
+                const Ru = mu[Ku.REPLACE];
+                if (Ru)
+                  for (let Eu = Ru.length - 1; Eu >= 0; Eu--) try {
+                    Ru[Eu](uu, yu.value)
+                  } catch (QK) {
+                    console.error(QK)
                   }
               }
             }
-            this.uniqueRefIds.add(tU)
+            this.uniqueRefIds.add(Eu)
           }
         }
         this.isTriggering = !1
       }
     }
-    const tp = {
-      get(UU) {
-        if (UU instanceof Dt) return new gp(UU);
-        if ("zu" in UU.oW) return new gp(UU.oW.zu);
+    const yK = {
+      get(uu) {
+        if (uu instanceof oE) return new RK(uu);
+        if ("Ox" in uu.pW) return new RK(uu.pW.Ox);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(UU) {
-        if (UU instanceof Dt) return Up(UU);
-        if ("zu" in UU.oW) return Up(UU.oW.zu);
+      getLegacy(uu) {
+        if (uu instanceof oE) return fE(uu);
+        if ("Ox" in uu.pW) return fE(uu.pW.Ox);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (UU, RU) => Rp(UU, RU)
+      getRawChanges: (uu, Ru) => uK(uu, Ru)
     };
-    class pp {
+    class EK {
       _free = [];
       _factory;
       _maxSize;
-      constructor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = UU, this._maxSize = RU.maxSize ?? 1 / 0;
-        const gU = RU.preallocate ?? 0;
-        for (let tU = 0; tU < gU; tU++) this._free.push(UU())
+      constructor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = uu, this._maxSize = Ru.maxSize ?? 1 / 0;
+        const yu = Ru.preallocate ?? 0;
+        for (let Eu = 0; Eu < yu; Eu++) this._free.push(uu())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(UU) {
-        Zt.reset(UU), this._free.length < this._maxSize && this._free.push(UU)
+      release(uu) {
+        IE.reset(uu), this._free.length < this._maxSize && this._free.push(uu)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function Ep(UU) {
-      return new pp((() => new UU), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function KK(uu) {
+      return new EK((() => new uu), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    IR("map", {
-      constructor: pt
-    }), IR("array", {
-      constructor: gt
-    }), IR("set", {
-      constructor: Pt
-    }), IR("collection", {
-      constructor: Et
+    CR("map", {
+      constructor: KE
+    }), CR("array", {
+      constructor: yE
+    }), CR("set", {
+      constructor: mE
+    }), CR("collection", {
+      constructor: QE
     })
   },
-  8714: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      __addDisposableResource: () => vU,
-      __assign: () => EU,
-      __asyncDelegator: () => nU,
-      __asyncGenerator: () => wU,
-      __asyncValues: () => bU,
-      __await: () => JU,
-      __awaiter: () => CU,
-      __classPrivateFieldGet: () => VU,
-      __classPrivateFieldIn: () => XU,
-      __classPrivateFieldSet: () => rU,
-      __createBinding: () => QU,
-      __decorate: () => TU,
-      __disposeResources: () => HU,
-      __esDecorate: () => KU,
-      __exportStar: () => eU,
-      __extends: () => pU,
-      __generator: () => hU,
-      __importDefault: () => BU,
-      __importStar: () => YU,
-      __makeTemplateObject: () => oU,
-      __metadata: () => uU,
-      __param: () => qU,
-      __propKey: () => GU,
-      __read: () => fU,
-      __rest: () => PU,
-      __rewriteRelativeImportExtension: () => SU,
-      __runInitializers: () => cU,
-      __setFunctionName: () => jU,
-      __spread: () => xU,
-      __spreadArray: () => IU,
-      __spreadArrays: () => mU,
-      __values: () => WU,
-      default: () => sU
+  8832: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      __addDisposableResource: () => gu,
+      __assign: () => Qu,
+      __asyncDelegator: () => Au,
+      __asyncGenerator: () => eu,
+      __asyncValues: () => Du,
+      __await: () => ku,
+      __awaiter: () => Su,
+      __classPrivateFieldGet: () => su,
+      __classPrivateFieldIn: () => lu,
+      __classPrivateFieldSet: () => tu,
+      __createBinding: () => Tu,
+      __decorate: () => Ju,
+      __disposeResources: () => Lu,
+      __esDecorate: () => Xu,
+      __exportStar: () => Wu,
+      __extends: () => Ku,
+      __generator: () => pu,
+      __importDefault: () => nu,
+      __importStar: () => Uu,
+      __makeTemplateObject: () => Mu,
+      __metadata: () => xu,
+      __param: () => Nu,
+      __propKey: () => ru,
+      __read: () => Hu,
+      __rest: () => mu,
+      __rewriteRelativeImportExtension: () => zu,
+      __runInitializers: () => Vu,
+      __setFunctionName: () => Bu,
+      __spread: () => du,
+      __spreadArray: () => Cu,
+      __spreadArrays: () => bu,
+      __values: () => ju,
+      default: () => Fu
     });
-    var tU = function(UU, RU) {
-      return tU = Object.setPrototypeOf || {
+    var Eu = function(uu, Ru) {
+      return Eu = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(UU, RU) {
-        UU.__proto__ = RU
-      } || function(UU, RU) {
-        for (var gU in RU) Object.prototype.hasOwnProperty.call(RU, gU) && (UU[gU] = RU[gU])
-      }, tU(UU, RU)
+      instanceof Array && function(uu, Ru) {
+        uu.__proto__ = Ru
+      } || function(uu, Ru) {
+        for (var yu in Ru) Object.prototype.hasOwnProperty.call(Ru, yu) && (uu[yu] = Ru[yu])
+      }, Eu(uu, Ru)
     };
 
-    function pU(UU, RU) {
-      if ("function" !== typeof RU && null !== RU) throw new TypeError("Class extends value " + String(RU) + " is not a constructor or null");
+    function Ku(uu, Ru) {
+      if ("function" !== typeof Ru && null !== Ru) throw new TypeError("Class extends value " + String(Ru) + " is not a constructor or null");
 
-      function gU() {
-        this.constructor = UU
+      function yu() {
+        this.constructor = uu
       }
-      tU(UU, RU), UU.prototype = null === RU ? Object.create(RU) : (gU.prototype = RU.prototype, new gU)
+      Eu(uu, Ru), uu.prototype = null === Ru ? Object.create(Ru) : (yu.prototype = Ru.prototype, new yu)
     }
-    var EU = function() {
-      return EU = Object.assign || function(UU) {
-        for (var RU, gU = 1, tU = arguments.length; gU < tU; gU++)
-          for (var pU in RU = arguments[gU]) Object.prototype.hasOwnProperty.call(RU, pU) && (UU[pU] = RU[pU]);
-        return UU
-      }, EU.apply(this, arguments)
+    var Qu = function() {
+      return Qu = Object.assign || function(uu) {
+        for (var Ru, yu = 1, Eu = arguments.length; yu < Eu; yu++)
+          for (var Ku in Ru = arguments[yu]) Object.prototype.hasOwnProperty.call(Ru, Ku) && (uu[Ku] = Ru[Ku]);
+        return uu
+      }, Qu.apply(this, arguments)
     };
 
-    function PU(UU, RU) {
-      var gU = {};
-      for (var tU in UU) Object.prototype.hasOwnProperty.call(UU, tU) && RU.indexOf(tU) < 0 && (gU[tU] = UU[tU]);
-      if (null != UU && "function" === typeof Object.getOwnPropertySymbols) {
-        var pU = 0;
-        for (tU = Object.getOwnPropertySymbols(UU); pU < tU.length; pU++) RU.indexOf(tU[pU]) < 0 && Object.prototype.propertyIsEnumerable.call(UU, tU[pU]) && (gU[tU[pU]] = UU[tU[pU]])
+    function mu(uu, Ru) {
+      var yu = {};
+      for (var Eu in uu) Object.prototype.hasOwnProperty.call(uu, Eu) && Ru.indexOf(Eu) < 0 && (yu[Eu] = uu[Eu]);
+      if (null != uu && "function" === typeof Object.getOwnPropertySymbols) {
+        var Ku = 0;
+        for (Eu = Object.getOwnPropertySymbols(uu); Ku < Eu.length; Ku++) Ru.indexOf(Eu[Ku]) < 0 && Object.prototype.propertyIsEnumerable.call(uu, Eu[Ku]) && (yu[Eu[Ku]] = uu[Eu[Ku]])
       }
-      return gU
+      return yu
     }
 
-    function TU(UU, RU, gU, tU) {
-      var pU, EU = arguments.length,
-        PU = EU < 3 ? RU : null === tU ? tU = Object.getOwnPropertyDescriptor(RU, gU) : tU;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) PU = Reflect.decorate(UU, RU, gU, tU);
+    function Ju(uu, Ru, yu, Eu) {
+      var Ku, Qu = arguments.length,
+        mu = Qu < 3 ? Ru : null === Eu ? Eu = Object.getOwnPropertyDescriptor(Ru, yu) : Eu;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) mu = Reflect.decorate(uu, Ru, yu, Eu);
       else
-        for (var TU = UU.length - 1; TU >= 0; TU--)(pU = UU[TU]) && (PU = (EU < 3 ? pU(PU) : EU > 3 ? pU(RU, gU, PU) : pU(RU, gU)) || PU);
-      return EU > 3 && PU && Object.defineProperty(RU, gU, PU), PU
+        for (var Ju = uu.length - 1; Ju >= 0; Ju--)(Ku = uu[Ju]) && (mu = (Qu < 3 ? Ku(mu) : Qu > 3 ? Ku(Ru, yu, mu) : Ku(Ru, yu)) || mu);
+      return Qu > 3 && mu && Object.defineProperty(Ru, yu, mu), mu
     }
 
-    function qU(UU, RU) {
-      return function(gU, tU) {
-        RU(gU, tU, UU)
+    function Nu(uu, Ru) {
+      return function(yu, Eu) {
+        Ru(yu, Eu, uu)
       }
     }
 
-    function KU(UU, RU, gU, tU, pU, EU) {
-      function PU(UU) {
-        if (void 0 !== UU && "function" !== typeof UU) throw new TypeError("Function expected");
-        return UU
+    function Xu(uu, Ru, yu, Eu, Ku, Qu) {
+      function mu(uu) {
+        if (void 0 !== uu && "function" !== typeof uu) throw new TypeError("Function expected");
+        return uu
       }
-      for (var TU, qU = tU.kind, KU = "getter" === qU ? "get" : "setter" === qU ? "set" : "value", cU = !RU && UU ? tU.static ? UU : UU.prototype : null, GU = RU || (cU ? Object.getOwnPropertyDescriptor(cU, tU.name) : {}), jU = !1, uU = gU.length - 1; uU >= 0; uU--) {
-        var CU = {};
-        for (var hU in tU) CU[hU] = "access" === hU ? {} : tU[hU];
-        for (var hU in tU.access) CU.access[hU] = tU.access[hU];
-        CU.addInitializer = function(UU) {
-          if (jU) throw new TypeError("Cannot add initializers after decoration has completed");
-          EU.push(PU(UU || null))
+      for (var Ju, Nu = Eu.kind, Xu = "getter" === Nu ? "get" : "setter" === Nu ? "set" : "value", Vu = !Ru && uu ? Eu.static ? uu : uu.prototype : null, ru = Ru || (Vu ? Object.getOwnPropertyDescriptor(Vu, Eu.name) : {}), Bu = !1, xu = yu.length - 1; xu >= 0; xu--) {
+        var Su = {};
+        for (var pu in Eu) Su[pu] = "access" === pu ? {} : Eu[pu];
+        for (var pu in Eu.access) Su.access[pu] = Eu.access[pu];
+        Su.addInitializer = function(uu) {
+          if (Bu) throw new TypeError("Cannot add initializers after decoration has completed");
+          Qu.push(mu(uu || null))
         };
-        var QU = (0, gU[uU])("accessor" === qU ? {
-          get: GU.get,
-          set: GU.set
-        } : GU[KU], CU);
-        if ("accessor" === qU) {
-          if (void 0 === QU) continue;
-          if (null === QU || "object" !== typeof QU) throw new TypeError("Object expected");
-          (TU = PU(QU.get)) && (GU.get = TU), (TU = PU(QU.set)) && (GU.set = TU), (TU = PU(QU.init)) && pU.unshift(TU)
-        } else(TU = PU(QU)) && ("field" === qU ? pU.unshift(TU) : GU[KU] = TU)
+        var Tu = (0, yu[xu])("accessor" === Nu ? {
+          get: ru.get,
+          set: ru.set
+        } : ru[Xu], Su);
+        if ("accessor" === Nu) {
+          if (void 0 === Tu) continue;
+          if (null === Tu || "object" !== typeof Tu) throw new TypeError("Object expected");
+          (Ju = mu(Tu.get)) && (ru.get = Ju), (Ju = mu(Tu.set)) && (ru.set = Ju), (Ju = mu(Tu.init)) && Ku.unshift(Ju)
+        } else(Ju = mu(Tu)) && ("field" === Nu ? Ku.unshift(Ju) : ru[Xu] = Ju)
       }
-      cU && Object.defineProperty(cU, tU.name, GU), jU = !0
+      Vu && Object.defineProperty(Vu, Eu.name, ru), Bu = !0
     }
 
-    function cU(UU, RU, gU) {
-      for (var tU = arguments.length > 2, pU = 0; pU < RU.length; pU++) gU = tU ? RU[pU].call(UU, gU) : RU[pU].call(UU);
-      return tU ? gU : void 0
+    function Vu(uu, Ru, yu) {
+      for (var Eu = arguments.length > 2, Ku = 0; Ku < Ru.length; Ku++) yu = Eu ? Ru[Ku].call(uu, yu) : Ru[Ku].call(uu);
+      return Eu ? yu : void 0
     }
 
-    function GU(UU) {
-      return "symbol" === typeof UU ? UU : "".concat(UU)
+    function ru(uu) {
+      return "symbol" === typeof uu ? uu : "".concat(uu)
     }
 
-    function jU(UU, RU, gU) {
-      return "symbol" === typeof RU && (RU = RU.description ? "[".concat(RU.description, "]") : ""), Object.defineProperty(UU, "name", {
+    function Bu(uu, Ru, yu) {
+      return "symbol" === typeof Ru && (Ru = Ru.description ? "[".concat(Ru.description, "]") : ""), Object.defineProperty(uu, "name", {
         configurable: !0,
-        value: gU ? "".concat(gU, " ", RU) : RU
+        value: yu ? "".concat(yu, " ", Ru) : Ru
       })
     }
 
-    function uU(UU, RU) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(UU, RU)
+    function xu(uu, Ru) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(uu, Ru)
     }
 
-    function CU(UU, RU, gU, tU) {
-      return new(gU || (gU = Promise))((function(pU, EU) {
-        function PU(UU) {
+    function Su(uu, Ru, yu, Eu) {
+      return new(yu || (yu = Promise))((function(Ku, Qu) {
+        function mu(uu) {
           try {
-            qU(tU.next(UU))
-          } catch (RU) {
-            EU(RU)
+            Nu(Eu.next(uu))
+          } catch (Ru) {
+            Qu(Ru)
           }
         }
 
-        function TU(UU) {
+        function Ju(uu) {
           try {
-            qU(tU.throw(UU))
-          } catch (RU) {
-            EU(RU)
+            Nu(Eu.throw(uu))
+          } catch (Ru) {
+            Qu(Ru)
           }
         }
 
-        function qU(UU) {
-          var RU;
-          UU.done ? pU(UU.value) : (RU = UU.value, RU instanceof gU ? RU : new gU((function(UU) {
-            UU(RU)
-          }))).then(PU, TU)
+        function Nu(uu) {
+          var Ru;
+          uu.done ? Ku(uu.value) : (Ru = uu.value, Ru instanceof yu ? Ru : new yu((function(uu) {
+            uu(Ru)
+          }))).then(mu, Ju)
         }
-        qU((tU = tU.apply(UU, RU || [])).next())
+        Nu((Eu = Eu.apply(uu, Ru || [])).next())
       }))
     }
 
-    function hU(UU, RU) {
-      var gU, tU, pU, EU = {
+    function pu(uu, Ru) {
+      var yu, Eu, Ku, Qu = {
           label: 0,
           sent: function() {
-            if (1 & pU[0]) throw pU[1];
-            return pU[1]
+            if (1 & Ku[0]) throw Ku[1];
+            return Ku[1]
           },
           trys: [],
           ops: []
         },
-        PU = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return PU.next = TU(0), PU.throw = TU(1), PU.return = TU(2), "function" === typeof Symbol && (PU[Symbol.iterator] = function() {
+        mu = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return mu.next = Ju(0), mu.throw = Ju(1), mu.return = Ju(2), "function" === typeof Symbol && (mu[Symbol.iterator] = function() {
         return this
-      }), PU;
+      }), mu;
 
-      function TU(TU) {
-        return function(qU) {
-          return function(TU) {
-            if (gU) throw new TypeError("Generator is already executing.");
-            for (; PU && (PU = 0, TU[0] && (EU = 0)), EU;) try {
-              if (gU = 1, tU && (pU = 2 & TU[0] ? tU.return : TU[0] ? tU.throw || ((pU = tU.return) && pU.call(tU), 0) : tU.next) && !(pU = pU.call(tU, TU[1])).done) return pU;
-              switch (tU = 0, pU && (TU = [2 & TU[0], pU.value]), TU[0]) {
+      function Ju(Ju) {
+        return function(Nu) {
+          return function(Ju) {
+            if (yu) throw new TypeError("Generator is already executing.");
+            for (; mu && (mu = 0, Ju[0] && (Qu = 0)), Qu;) try {
+              if (yu = 1, Eu && (Ku = 2 & Ju[0] ? Eu.return : Ju[0] ? Eu.throw || ((Ku = Eu.return) && Ku.call(Eu), 0) : Eu.next) && !(Ku = Ku.call(Eu, Ju[1])).done) return Ku;
+              switch (Eu = 0, Ku && (Ju = [2 & Ju[0], Ku.value]), Ju[0]) {
                 case 0:
                 case 1:
-                  pU = TU;
+                  Ku = Ju;
                   break;
                 case 4:
-                  return EU.label++, {
-                    value: TU[1],
+                  return Qu.label++, {
+                    value: Ju[1],
                     done: !1
                   };
                 case 5:
-                  EU.label++, tU = TU[1], TU = [0];
+                  Qu.label++, Eu = Ju[1], Ju = [0];
                   continue;
                 case 7:
-                  TU = EU.ops.pop(), EU.trys.pop();
+                  Ju = Qu.ops.pop(), Qu.trys.pop();
                   continue;
                 default:
-                  if (!(pU = (pU = EU.trys).length > 0 && pU[pU.length - 1]) && (6 === TU[0] || 2 === TU[0])) {
-                    EU = 0;
+                  if (!(Ku = (Ku = Qu.trys).length > 0 && Ku[Ku.length - 1]) && (6 === Ju[0] || 2 === Ju[0])) {
+                    Qu = 0;
                     continue
                   }
-                  if (3 === TU[0] && (!pU || TU[1] > pU[0] && TU[1] < pU[3])) {
-                    EU.label = TU[1];
+                  if (3 === Ju[0] && (!Ku || Ju[1] > Ku[0] && Ju[1] < Ku[3])) {
+                    Qu.label = Ju[1];
                     break
                   }
-                  if (6 === TU[0] && EU.label < pU[1]) {
-                    EU.label = pU[1], pU = TU;
+                  if (6 === Ju[0] && Qu.label < Ku[1]) {
+                    Qu.label = Ku[1], Ku = Ju;
                     break
                   }
-                  if (pU && EU.label < pU[2]) {
-                    EU.label = pU[2], EU.ops.push(TU);
+                  if (Ku && Qu.label < Ku[2]) {
+                    Qu.label = Ku[2], Qu.ops.push(Ju);
                     break
                   }
-                  pU[2] && EU.ops.pop(), EU.trys.pop();
+                  Ku[2] && Qu.ops.pop(), Qu.trys.pop();
                   continue
               }
-              TU = RU.call(UU, EU)
-            } catch (qU) {
-              TU = [6, qU], tU = 0
+              Ju = Ru.call(uu, Qu)
+            } catch (Nu) {
+              Ju = [6, Nu], Eu = 0
             } finally {
-              gU = pU = 0
+              yu = Ku = 0
             }
-            if (5 & TU[0]) throw TU[1];
+            if (5 & Ju[0]) throw Ju[1];
             return {
-              value: TU[0] ? TU[1] : void 0,
+              value: Ju[0] ? Ju[1] : void 0,
               done: !0
             }
-          }([TU, qU])
+          }([Ju, Nu])
         }
       }
     }
-    var QU = Object.create ? function(UU, RU, gU, tU) {
-      void 0 === tU && (tU = gU);
-      var pU = Object.getOwnPropertyDescriptor(RU, gU);
-      pU && !("get" in pU ? !RU.__esModule : pU.writable || pU.configurable) || (pU = {
+    var Tu = Object.create ? function(uu, Ru, yu, Eu) {
+      void 0 === Eu && (Eu = yu);
+      var Ku = Object.getOwnPropertyDescriptor(Ru, yu);
+      Ku && !("get" in Ku ? !Ru.__esModule : Ku.writable || Ku.configurable) || (Ku = {
         enumerable: !0,
         get: function() {
-          return RU[gU]
+          return Ru[yu]
         }
-      }), Object.defineProperty(UU, tU, pU)
-    } : function(UU, RU, gU, tU) {
-      void 0 === tU && (tU = gU), UU[tU] = RU[gU]
+      }), Object.defineProperty(uu, Eu, Ku)
+    } : function(uu, Ru, yu, Eu) {
+      void 0 === Eu && (Eu = yu), uu[Eu] = Ru[yu]
     };
 
-    function eU(UU, RU) {
-      for (var gU in UU) "default" === gU || Object.prototype.hasOwnProperty.call(RU, gU) || QU(RU, UU, gU)
+    function Wu(uu, Ru) {
+      for (var yu in uu) "default" === yu || Object.prototype.hasOwnProperty.call(Ru, yu) || Tu(Ru, uu, yu)
     }
 
-    function WU(UU) {
-      var RU = "function" === typeof Symbol && Symbol.iterator,
-        gU = RU && UU[RU],
-        tU = 0;
-      if (gU) return gU.call(UU);
-      if (UU && "number" === typeof UU.length) return {
+    function ju(uu) {
+      var Ru = "function" === typeof Symbol && Symbol.iterator,
+        yu = Ru && uu[Ru],
+        Eu = 0;
+      if (yu) return yu.call(uu);
+      if (uu && "number" === typeof uu.length) return {
         next: function() {
-          return UU && tU >= UU.length && (UU = void 0), {
-            value: UU && UU[tU++],
-            done: !UU
+          return uu && Eu >= uu.length && (uu = void 0), {
+            value: uu && uu[Eu++],
+            done: !uu
           }
         }
       };
-      throw new TypeError(RU ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(Ru ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function fU(UU, RU) {
-      var gU = "function" === typeof Symbol && UU[Symbol.iterator];
-      if (!gU) return UU;
-      var tU, pU, EU = gU.call(UU),
-        PU = [];
+    function Hu(uu, Ru) {
+      var yu = "function" === typeof Symbol && uu[Symbol.iterator];
+      if (!yu) return uu;
+      var Eu, Ku, Qu = yu.call(uu),
+        mu = [];
       try {
         for (;
-          (void 0 === RU || RU-- > 0) && !(tU = EU.next()).done;) PU.push(tU.value)
-      } catch (TU) {
-        pU = {
-          error: TU
+          (void 0 === Ru || Ru-- > 0) && !(Eu = Qu.next()).done;) mu.push(Eu.value)
+      } catch (Ju) {
+        Ku = {
+          error: Ju
         }
       } finally {
         try {
-          tU && !tU.done && (gU = EU.return) && gU.call(EU)
+          Eu && !Eu.done && (yu = Qu.return) && yu.call(Qu)
         } finally {
-          if (pU) throw pU.error
+          if (Ku) throw Ku.error
         }
       }
-      return PU
+      return mu
     }
 
-    function xU() {
-      for (var UU = [], RU = 0; RU < arguments.length; RU++) UU = UU.concat(fU(arguments[RU]));
-      return UU
+    function du() {
+      for (var uu = [], Ru = 0; Ru < arguments.length; Ru++) uu = uu.concat(Hu(arguments[Ru]));
+      return uu
     }
 
-    function mU() {
-      for (var UU = 0, RU = 0, gU = arguments.length; RU < gU; RU++) UU += arguments[RU].length;
-      var tU = Array(UU),
-        pU = 0;
-      for (RU = 0; RU < gU; RU++)
-        for (var EU = arguments[RU], PU = 0, TU = EU.length; PU < TU; PU++, pU++) tU[pU] = EU[PU];
-      return tU
+    function bu() {
+      for (var uu = 0, Ru = 0, yu = arguments.length; Ru < yu; Ru++) uu += arguments[Ru].length;
+      var Eu = Array(uu),
+        Ku = 0;
+      for (Ru = 0; Ru < yu; Ru++)
+        for (var Qu = arguments[Ru], mu = 0, Ju = Qu.length; mu < Ju; mu++, Ku++) Eu[Ku] = Qu[mu];
+      return Eu
     }
 
-    function IU(UU, RU, gU) {
-      if (gU || 2 === arguments.length)
-        for (var tU, pU = 0, EU = RU.length; pU < EU; pU++) !tU && pU in RU || (tU || (tU = Array.prototype.slice.call(RU, 0, pU)), tU[pU] = RU[pU]);
-      return UU.concat(tU || Array.prototype.slice.call(RU))
+    function Cu(uu, Ru, yu) {
+      if (yu || 2 === arguments.length)
+        for (var Eu, Ku = 0, Qu = Ru.length; Ku < Qu; Ku++) !Eu && Ku in Ru || (Eu || (Eu = Array.prototype.slice.call(Ru, 0, Ku)), Eu[Ku] = Ru[Ku]);
+      return uu.concat(Eu || Array.prototype.slice.call(Ru))
     }
 
-    function JU(UU) {
-      return this instanceof JU ? (this.v = UU, this) : new JU(UU)
+    function ku(uu) {
+      return this instanceof ku ? (this.v = uu, this) : new ku(uu)
     }
 
-    function wU(UU, RU, gU) {
+    function eu(uu, Ru, yu) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var tU, pU = gU.apply(UU, RU || []),
-        EU = [];
-      return tU = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), PU("next"), PU("throw"), PU("return", (function(UU) {
-        return function(RU) {
-          return Promise.resolve(RU).then(UU, KU)
+      var Eu, Ku = yu.apply(uu, Ru || []),
+        Qu = [];
+      return Eu = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), mu("next"), mu("throw"), mu("return", (function(uu) {
+        return function(Ru) {
+          return Promise.resolve(Ru).then(uu, Xu)
         }
-      })), tU[Symbol.asyncIterator] = function() {
+      })), Eu[Symbol.asyncIterator] = function() {
         return this
-      }, tU;
+      }, Eu;
 
-      function PU(UU, RU) {
-        pU[UU] && (tU[UU] = function(RU) {
-          return new Promise((function(gU, tU) {
-            EU.push([UU, RU, gU, tU]) > 1 || TU(UU, RU)
+      function mu(uu, Ru) {
+        Ku[uu] && (Eu[uu] = function(Ru) {
+          return new Promise((function(yu, Eu) {
+            Qu.push([uu, Ru, yu, Eu]) > 1 || Ju(uu, Ru)
           }))
-        }, RU && (tU[UU] = RU(tU[UU])))
+        }, Ru && (Eu[uu] = Ru(Eu[uu])))
       }
 
-      function TU(UU, RU) {
+      function Ju(uu, Ru) {
         try {
-          (gU = pU[UU](RU)).value instanceof JU ? Promise.resolve(gU.value.v).then(qU, KU) : cU(EU[0][2], gU)
-        } catch (tU) {
-          cU(EU[0][3], tU)
+          (yu = Ku[uu](Ru)).value instanceof ku ? Promise.resolve(yu.value.v).then(Nu, Xu) : Vu(Qu[0][2], yu)
+        } catch (Eu) {
+          Vu(Qu[0][3], Eu)
         }
-        var gU
+        var yu
       }
 
-      function qU(UU) {
-        TU("next", UU)
+      function Nu(uu) {
+        Ju("next", uu)
       }
 
-      function KU(UU) {
-        TU("throw", UU)
+      function Xu(uu) {
+        Ju("throw", uu)
       }
 
-      function cU(UU, RU) {
-        UU(RU), EU.shift(), EU.length && TU(EU[0][0], EU[0][1])
+      function Vu(uu, Ru) {
+        uu(Ru), Qu.shift(), Qu.length && Ju(Qu[0][0], Qu[0][1])
       }
     }
 
-    function nU(UU) {
-      var RU, gU;
-      return RU = {}, tU("next"), tU("throw", (function(UU) {
-        throw UU
-      })), tU("return"), RU[Symbol.iterator] = function() {
+    function Au(uu) {
+      var Ru, yu;
+      return Ru = {}, Eu("next"), Eu("throw", (function(uu) {
+        throw uu
+      })), Eu("return"), Ru[Symbol.iterator] = function() {
         return this
-      }, RU;
+      }, Ru;
 
-      function tU(tU, pU) {
-        RU[tU] = UU[tU] ? function(RU) {
-          return (gU = !gU) ? {
-            value: JU(UU[tU](RU)),
+      function Eu(Eu, Ku) {
+        Ru[Eu] = uu[Eu] ? function(Ru) {
+          return (yu = !yu) ? {
+            value: ku(uu[Eu](Ru)),
             done: !1
-          } : pU ? pU(RU) : RU
-        } : pU
+          } : Ku ? Ku(Ru) : Ru
+        } : Ku
       }
     }
 
-    function bU(UU) {
+    function Du(uu) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var RU, gU = UU[Symbol.asyncIterator];
-      return gU ? gU.call(UU) : (UU = WU(UU), RU = {}, tU("next"), tU("throw"), tU("return"), RU[Symbol.asyncIterator] = function() {
+      var Ru, yu = uu[Symbol.asyncIterator];
+      return yu ? yu.call(uu) : (uu = ju(uu), Ru = {}, Eu("next"), Eu("throw"), Eu("return"), Ru[Symbol.asyncIterator] = function() {
         return this
-      }, RU);
+      }, Ru);
 
-      function tU(gU) {
-        RU[gU] = UU[gU] && function(RU) {
-          return new Promise((function(tU, pU) {
-            (function(UU, RU, gU, tU) {
-              Promise.resolve(tU).then((function(RU) {
-                UU({
-                  value: RU,
-                  done: gU
+      function Eu(yu) {
+        Ru[yu] = uu[yu] && function(Ru) {
+          return new Promise((function(Eu, Ku) {
+            (function(uu, Ru, yu, Eu) {
+              Promise.resolve(Eu).then((function(Ru) {
+                uu({
+                  value: Ru,
+                  done: yu
                 })
-              }), RU)
-            })(tU, pU, (RU = UU[gU](RU)).done, RU.value)
+              }), Ru)
+            })(Eu, Ku, (Ru = uu[yu](Ru)).done, Ru.value)
           }))
         }
       }
     }
 
-    function oU(UU, RU) {
-      return Object.defineProperty ? Object.defineProperty(UU, "raw", {
-        value: RU
-      }) : UU.raw = RU, UU
+    function Mu(uu, Ru) {
+      return Object.defineProperty ? Object.defineProperty(uu, "raw", {
+        value: Ru
+      }) : uu.raw = Ru, uu
     }
-    var ZU = Object.create ? function(UU, RU) {
-        Object.defineProperty(UU, "default", {
+    var Iu = Object.create ? function(uu, Ru) {
+        Object.defineProperty(uu, "default", {
           enumerable: !0,
-          value: RU
+          value: Ru
         })
-      } : function(UU, RU) {
-        UU.default = RU
+      } : function(uu, Ru) {
+        uu.default = Ru
       },
-      aU = function(UU) {
-        return aU = Object.getOwnPropertyNames || function(UU) {
-          var RU = [];
-          for (var gU in UU) Object.prototype.hasOwnProperty.call(UU, gU) && (RU[RU.length] = gU);
-          return RU
-        }, aU(UU)
+      Gu = function(uu) {
+        return Gu = Object.getOwnPropertyNames || function(uu) {
+          var Ru = [];
+          for (var yu in uu) Object.prototype.hasOwnProperty.call(uu, yu) && (Ru[Ru.length] = yu);
+          return Ru
+        }, Gu(uu)
       };
 
-    function YU(UU) {
-      if (UU && UU.__esModule) return UU;
-      var RU = {};
-      if (null != UU)
-        for (var gU = aU(UU), tU = 0; tU < gU.length; tU++) "default" !== gU[tU] && QU(RU, UU, gU[tU]);
-      return ZU(RU, UU), RU
+    function Uu(uu) {
+      if (uu && uu.__esModule) return uu;
+      var Ru = {};
+      if (null != uu)
+        for (var yu = Gu(uu), Eu = 0; Eu < yu.length; Eu++) "default" !== yu[Eu] && Tu(Ru, uu, yu[Eu]);
+      return Iu(Ru, uu), Ru
     }
 
-    function BU(UU) {
-      return UU && UU.__esModule ? UU : {
-        default: UU
+    function nu(uu) {
+      return uu && uu.__esModule ? uu : {
+        default: uu
       }
     }
 
-    function VU(UU, RU, gU, tU) {
-      if ("a" === gU && !tU) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof RU ? UU !== RU || !tU : !RU.has(UU)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === gU ? tU : "a" === gU ? tU.call(UU) : tU ? tU.value : RU.get(UU)
+    function su(uu, Ru, yu, Eu) {
+      if ("a" === yu && !Eu) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof Ru ? uu !== Ru || !Eu : !Ru.has(uu)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === yu ? Eu : "a" === yu ? Eu.call(uu) : Eu ? Eu.value : Ru.get(uu)
     }
 
-    function rU(UU, RU, gU, tU, pU) {
-      if ("m" === tU) throw new TypeError("Private method is not writable");
-      if ("a" === tU && !pU) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof RU ? UU !== RU || !pU : !RU.has(UU)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === tU ? pU.call(UU, gU) : pU ? pU.value = gU : RU.set(UU, gU), gU
+    function tu(uu, Ru, yu, Eu, Ku) {
+      if ("m" === Eu) throw new TypeError("Private method is not writable");
+      if ("a" === Eu && !Ku) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof Ru ? uu !== Ru || !Ku : !Ru.has(uu)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === Eu ? Ku.call(uu, yu) : Ku ? Ku.value = yu : Ru.set(uu, yu), yu
     }
 
-    function XU(UU, RU) {
-      if (null === RU || "object" !== typeof RU && "function" !== typeof RU) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof UU ? RU === UU : UU.has(RU)
+    function lu(uu, Ru) {
+      if (null === Ru || "object" !== typeof Ru && "function" !== typeof Ru) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof uu ? Ru === uu : uu.has(Ru)
     }
 
-    function vU(UU, RU, gU) {
-      if (null !== RU && void 0 !== RU) {
-        if ("object" !== typeof RU && "function" !== typeof RU) throw new TypeError("Object expected.");
-        var tU, pU;
-        if (gU) {
+    function gu(uu, Ru, yu) {
+      if (null !== Ru && void 0 !== Ru) {
+        if ("object" !== typeof Ru && "function" !== typeof Ru) throw new TypeError("Object expected.");
+        var Eu, Ku;
+        if (yu) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          tU = RU[Symbol.asyncDispose]
+          Eu = Ru[Symbol.asyncDispose]
         }
-        if (void 0 === tU) {
+        if (void 0 === Eu) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          tU = RU[Symbol.dispose], gU && (pU = tU)
+          Eu = Ru[Symbol.dispose], yu && (Ku = Eu)
         }
-        if ("function" !== typeof tU) throw new TypeError("Object not disposable.");
-        pU && (tU = function() {
+        if ("function" !== typeof Eu) throw new TypeError("Object not disposable.");
+        Ku && (Eu = function() {
           try {
-            pU.call(this)
-          } catch (UU) {
-            return Promise.reject(UU)
+            Ku.call(this)
+          } catch (uu) {
+            return Promise.reject(uu)
           }
-        }), UU.stack.push({
-          value: RU,
-          dispose: tU,
-          async: gU
+        }), uu.stack.push({
+          value: Ru,
+          dispose: Eu,
+          async: yu
         })
-      } else gU && UU.stack.push({
+      } else yu && uu.stack.push({
         async: !0
       });
-      return RU
+      return Ru
     }
-    var dU = "function" === typeof SuppressedError ? SuppressedError : function(UU, RU, gU) {
-      var tU = new Error(gU);
-      return tU.name = "SuppressedError", tU.error = UU, tU.suppressed = RU, tU
+    var cu = "function" === typeof SuppressedError ? SuppressedError : function(uu, Ru, yu) {
+      var Eu = new Error(yu);
+      return Eu.name = "SuppressedError", Eu.error = uu, Eu.suppressed = Ru, Eu
     };
 
-    function HU(UU) {
-      function RU(RU) {
-        UU.error = UU.hasError ? new dU(RU, UU.error, "An error was suppressed during disposal.") : RU, UU.hasError = !0
+    function Lu(uu) {
+      function Ru(Ru) {
+        uu.error = uu.hasError ? new cu(Ru, uu.error, "An error was suppressed during disposal.") : Ru, uu.hasError = !0
       }
-      var gU, tU = 0;
-      return function pU() {
-        for (; gU = UU.stack.pop();) try {
-          if (!gU.async && 1 === tU) return tU = 0, UU.stack.push(gU), Promise.resolve().then(pU);
-          if (gU.dispose) {
-            var EU = gU.dispose.call(gU.value);
-            if (gU.async) return tU |= 2, Promise.resolve(EU).then(pU, (function(UU) {
-              return RU(UU), pU()
+      var yu, Eu = 0;
+      return function Ku() {
+        for (; yu = uu.stack.pop();) try {
+          if (!yu.async && 1 === Eu) return Eu = 0, uu.stack.push(yu), Promise.resolve().then(Ku);
+          if (yu.dispose) {
+            var Qu = yu.dispose.call(yu.value);
+            if (yu.async) return Eu |= 2, Promise.resolve(Qu).then(Ku, (function(uu) {
+              return Ru(uu), Ku()
             }))
-          } else tU |= 1
-        } catch (PU) {
-          RU(PU)
+          } else Eu |= 1
+        } catch (mu) {
+          Ru(mu)
         }
-        if (1 === tU) return UU.hasError ? Promise.reject(UU.error) : Promise.resolve();
-        if (UU.hasError) throw UU.error
+        if (1 === Eu) return uu.hasError ? Promise.reject(uu.error) : Promise.resolve();
+        if (uu.hasError) throw uu.error
       }()
     }
 
-    function SU(UU, RU) {
-      return "string" === typeof UU && /^\.\.?\//.test(UU) ? UU.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(UU, gU, tU, pU, EU) {
-        return gU ? RU ? ".jsx" : ".js" : !tU || pU && EU ? tU + pU + "." + EU.toLowerCase() + "js" : UU
-      })) : UU
+    function zu(uu, Ru) {
+      return "string" === typeof uu && /^\.\.?\//.test(uu) ? uu.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(uu, yu, Eu, Ku, Qu) {
+        return yu ? Ru ? ".jsx" : ".js" : !Eu || Ku && Qu ? Eu + Ku + "." + Qu.toLowerCase() + "js" : uu
+      })) : uu
     }
-    const sU = {
-      __extends: pU,
-      __assign: EU,
-      __rest: PU,
-      __decorate: TU,
-      __param: qU,
-      __esDecorate: KU,
-      __runInitializers: cU,
-      __propKey: GU,
-      __setFunctionName: jU,
-      __metadata: uU,
-      __awaiter: CU,
-      __generator: hU,
-      __createBinding: QU,
-      __exportStar: eU,
-      __values: WU,
-      __read: fU,
-      __spread: xU,
-      __spreadArrays: mU,
-      __spreadArray: IU,
-      __await: JU,
-      __asyncGenerator: wU,
-      __asyncDelegator: nU,
-      __asyncValues: bU,
-      __makeTemplateObject: oU,
-      __importStar: YU,
-      __importDefault: BU,
-      __classPrivateFieldGet: VU,
-      __classPrivateFieldSet: rU,
-      __classPrivateFieldIn: XU,
-      __addDisposableResource: vU,
-      __disposeResources: HU,
-      __rewriteRelativeImportExtension: SU
+    const Fu = {
+      __extends: Ku,
+      __assign: Qu,
+      __rest: mu,
+      __decorate: Ju,
+      __param: Nu,
+      __esDecorate: Xu,
+      __runInitializers: Vu,
+      __propKey: ru,
+      __setFunctionName: Bu,
+      __metadata: xu,
+      __awaiter: Su,
+      __generator: pu,
+      __createBinding: Tu,
+      __exportStar: Wu,
+      __values: ju,
+      __read: Hu,
+      __spread: du,
+      __spreadArrays: bu,
+      __spreadArray: Cu,
+      __await: ku,
+      __asyncGenerator: eu,
+      __asyncDelegator: Au,
+      __asyncValues: Du,
+      __makeTemplateObject: Mu,
+      __importStar: Uu,
+      __importDefault: nu,
+      __classPrivateFieldGet: su,
+      __classPrivateFieldSet: tu,
+      __classPrivateFieldIn: lu,
+      __addDisposableResource: gu,
+      __disposeResources: Lu,
+      __rewriteRelativeImportExtension: zu
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

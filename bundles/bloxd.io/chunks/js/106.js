@@ -1,173 +1,173 @@
 export const id = 106;
 export const ids = [106];
 export const modules = {
-  4683: (UU, RU, gU) => {
-    function tU(UU) {
-      return tU = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(UU) {
-        return typeof UU
-      } : function(UU) {
-        return UU && "function" == typeof Symbol && UU.constructor === Symbol && UU !== Symbol.prototype ? "symbol" : typeof UU
-      }, tU(UU)
+  4793: (uu, Ru, yu) => {
+    function Eu(uu) {
+      return Eu = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(uu) {
+        return typeof uu
+      } : function(uu) {
+        return uu && "function" == typeof Symbol && uu.constructor === Symbol && uu !== Symbol.prototype ? "symbol" : typeof uu
+      }, Eu(uu)
     }
-    Object.defineProperty(RU, "__esModule", {
+    Object.defineProperty(Ru, "__esModule", {
       value: !0
-    }), RU.default = void 0;
-    var pU = GU(gU(1037)),
-      EU = function(UU, RU) {
-        if (!RU && UU && UU.__esModule) return UU;
-        if (null === UU || "object" !== tU(UU) && "function" !== typeof UU) return {
-          default: UU
+    }), Ru.default = void 0;
+    var Ku = ru(yu(1035)),
+      Qu = function(uu, Ru) {
+        if (!Ru && uu && uu.__esModule) return uu;
+        if (null === uu || "object" !== Eu(uu) && "function" !== typeof uu) return {
+          default: uu
         };
-        var gU = cU(RU);
-        if (gU && gU.has(UU)) return gU.get(UU);
-        var pU = {},
-          EU = Object.defineProperty && Object.getOwnPropertyDescriptor;
-        for (var PU in UU)
-          if ("default" !== PU && Object.prototype.hasOwnProperty.call(UU, PU)) {
-            var TU = EU ? Object.getOwnPropertyDescriptor(UU, PU) : null;
-            TU && (TU.get || TU.set) ? Object.defineProperty(pU, PU, TU) : pU[PU] = UU[PU]
-          } pU.default = UU, gU && gU.set(UU, pU);
-        return pU
-      }(gU(56)),
-      PU = GU(gU(4626)),
-      TU = GU(gU(4688)),
-      qU = gU(4690),
-      KU = gU(1090);
+        var yu = Vu(Ru);
+        if (yu && yu.has(uu)) return yu.get(uu);
+        var Ku = {},
+          Qu = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var mu in uu)
+          if ("default" !== mu && Object.prototype.hasOwnProperty.call(uu, mu)) {
+            var Ju = Qu ? Object.getOwnPropertyDescriptor(uu, mu) : null;
+            Ju && (Ju.get || Ju.set) ? Object.defineProperty(Ku, mu, Ju) : Ku[mu] = uu[mu]
+          } Ku.default = uu, yu && yu.set(uu, Ku);
+        return Ku
+      }(yu(64)),
+      mu = ru(yu(4745)),
+      Ju = ru(yu(4801)),
+      Nu = yu(4804),
+      Xu = yu(1079);
 
-    function cU(UU) {
+    function Vu(uu) {
       if ("function" !== typeof WeakMap) return null;
-      var RU = new WeakMap,
-        gU = new WeakMap;
-      return (cU = function(UU) {
-        return UU ? gU : RU
-      })(UU)
+      var Ru = new WeakMap,
+        yu = new WeakMap;
+      return (Vu = function(uu) {
+        return uu ? yu : Ru
+      })(uu)
     }
 
-    function GU(UU) {
-      return UU && UU.__esModule ? UU : {
-        default: UU
+    function ru(uu) {
+      return uu && uu.__esModule ? uu : {
+        default: uu
       }
     }
 
-    function jU(UU, RU) {
-      var gU = "undefined" !== typeof Symbol && UU[Symbol.iterator] || UU["@@iterator"];
-      if (!gU) {
-        if (Array.isArray(UU) || (gU = function(UU, RU) {
-            if (!UU) return;
-            if ("string" === typeof UU) return uU(UU, RU);
-            var gU = Object.prototype.toString.call(UU).slice(8, -1);
-            "Object" === gU && UU.constructor && (gU = UU.constructor.name);
-            if ("Map" === gU || "Set" === gU) return Array.from(UU);
-            if ("Arguments" === gU || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(gU)) return uU(UU, RU)
-          }(UU)) || RU && UU && "number" === typeof UU.length) {
-          gU && (UU = gU);
-          var tU = 0,
-            pU = function() {};
+    function Bu(uu, Ru) {
+      var yu = "undefined" !== typeof Symbol && uu[Symbol.iterator] || uu["@@iterator"];
+      if (!yu) {
+        if (Array.isArray(uu) || (yu = function(uu, Ru) {
+            if (!uu) return;
+            if ("string" === typeof uu) return xu(uu, Ru);
+            var yu = Object.prototype.toString.call(uu).slice(8, -1);
+            "Object" === yu && uu.constructor && (yu = uu.constructor.name);
+            if ("Map" === yu || "Set" === yu) return Array.from(uu);
+            if ("Arguments" === yu || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(yu)) return xu(uu, Ru)
+          }(uu)) || Ru && uu && "number" === typeof uu.length) {
+          yu && (uu = yu);
+          var Eu = 0,
+            Ku = function() {};
           return {
-            s: pU,
+            s: Ku,
             n: function() {
-              return tU >= UU.length ? {
+              return Eu >= uu.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: UU[tU++]
+                value: uu[Eu++]
               }
             },
-            e: function(UU) {
-              throw UU
+            e: function(uu) {
+              throw uu
             },
-            f: pU
+            f: Ku
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var EU, PU = !0,
-        TU = !1;
+      var Qu, mu = !0,
+        Ju = !1;
       return {
         s: function() {
-          gU = gU.call(UU)
+          yu = yu.call(uu)
         },
         n: function() {
-          var UU = gU.next();
-          return PU = UU.done, UU
+          var uu = yu.next();
+          return mu = uu.done, uu
         },
-        e: function(UU) {
-          TU = !0, EU = UU
+        e: function(uu) {
+          Ju = !0, Qu = uu
         },
         f: function() {
           try {
-            PU || null == gU.return || gU.return()
+            mu || null == yu.return || yu.return()
           } finally {
-            if (TU) throw EU
+            if (Ju) throw Qu
           }
         }
       }
     }
 
-    function uU(UU, RU) {
-      (null == RU || RU > UU.length) && (RU = UU.length);
-      for (var gU = 0, tU = new Array(RU); gU < RU; gU++) tU[gU] = UU[gU];
-      return tU
+    function xu(uu, Ru) {
+      (null == Ru || Ru > uu.length) && (Ru = uu.length);
+      for (var yu = 0, Eu = new Array(Ru); yu < Ru; yu++) Eu[yu] = uu[yu];
+      return Eu
     }
 
-    function CU(UU, RU) {
-      for (var gU = 0; gU < RU.length; gU++) {
-        var tU = RU[gU];
-        tU.enumerable = tU.enumerable || !1, tU.configurable = !0, "value" in tU && (tU.writable = !0), Object.defineProperty(UU, tU.key, tU)
+    function Su(uu, Ru) {
+      for (var yu = 0; yu < Ru.length; yu++) {
+        var Eu = Ru[yu];
+        Eu.enumerable = Eu.enumerable || !1, Eu.configurable = !0, "value" in Eu && (Eu.writable = !0), Object.defineProperty(uu, Eu.key, Eu)
       }
     }
 
-    function hU(UU, RU) {
-      return hU = Object.setPrototypeOf || function(UU, RU) {
-        return UU.__proto__ = RU, UU
-      }, hU(UU, RU)
+    function pu(uu, Ru) {
+      return pu = Object.setPrototypeOf || function(uu, Ru) {
+        return uu.__proto__ = Ru, uu
+      }, pu(uu, Ru)
     }
 
-    function QU(UU) {
-      var RU = function() {
+    function Tu(uu) {
+      var Ru = function() {
         if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
         if (Reflect.construct.sham) return !1;
         if ("function" === typeof Proxy) return !0;
         try {
           return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
-        } catch (UU) {
+        } catch (uu) {
           return !1
         }
       }();
       return function() {
-        var gU, pU = WU(UU);
-        if (RU) {
-          var EU = WU(this).constructor;
-          gU = Reflect.construct(pU, arguments, EU)
-        } else gU = pU.apply(this, arguments);
-        return function(UU, RU) {
-          if (RU && ("object" === tU(RU) || "function" === typeof RU)) return RU;
-          if (void 0 !== RU) throw new TypeError("Derived constructors may only return object or undefined");
-          return eU(UU)
-        }(this, gU)
+        var yu, Ku = ju(uu);
+        if (Ru) {
+          var Qu = ju(this).constructor;
+          yu = Reflect.construct(Ku, arguments, Qu)
+        } else yu = Ku.apply(this, arguments);
+        return function(uu, Ru) {
+          if (Ru && ("object" === Eu(Ru) || "function" === typeof Ru)) return Ru;
+          if (void 0 !== Ru) throw new TypeError("Derived constructors may only return object or undefined");
+          return Wu(uu)
+        }(this, yu)
       }
     }
 
-    function eU(UU) {
-      if (void 0 === UU) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-      return UU
+    function Wu(uu) {
+      if (void 0 === uu) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return uu
     }
 
-    function WU(UU) {
-      return WU = Object.setPrototypeOf ? Object.getPrototypeOf : function(UU) {
-        return UU.__proto__ || Object.getPrototypeOf(UU)
-      }, WU(UU)
+    function ju(uu) {
+      return ju = Object.setPrototypeOf ? Object.getPrototypeOf : function(uu) {
+        return uu.__proto__ || Object.getPrototypeOf(uu)
+      }, ju(uu)
     }
 
-    function fU(UU, RU, gU) {
-      return RU in UU ? Object.defineProperty(UU, RU, {
-        value: gU,
+    function Hu(uu, Ru, yu) {
+      return Ru in uu ? Object.defineProperty(uu, Ru, {
+        value: yu,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : UU[RU] = gU, UU
+      }) : uu[Ru] = yu, uu
     }
-    var xU = {
+    var du = {
         orientation: {
           horizontal: {
             dimension: "width",
@@ -183,258 +183,258 @@ export const modules = {
           }
         }
       },
-      mU = function(UU) {
-        ! function(UU, RU) {
-          if ("function" !== typeof RU && null !== RU) throw new TypeError("Super expression must either be null or a function");
-          Object.defineProperty(UU, "prototype", {
-            value: Object.create(RU && RU.prototype, {
+      bu = function(uu) {
+        ! function(uu, Ru) {
+          if ("function" !== typeof Ru && null !== Ru) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(uu, "prototype", {
+            value: Object.create(Ru && Ru.prototype, {
               constructor: {
-                value: UU,
+                value: uu,
                 writable: !0,
                 configurable: !0
               }
             }),
             writable: !1
-          }), RU && hU(UU, RU)
-        }(PU, UU);
-        var RU, gU, tU, EU = QU(PU);
+          }), Ru && pu(uu, Ru)
+        }(mu, uu);
+        var Ru, yu, Eu, Qu = Tu(mu);
 
-        function PU(UU, RU) {
-          var gU;
-          return function(UU, RU) {
-            if (!(UU instanceof RU)) throw new TypeError("Cannot call a class as a function")
-          }(this, PU), fU(eU(gU = EU.call(this, UU, RU)), "handleFormat", (function(UU) {
-            var RU = gU.props.format;
-            return RU ? RU(UU) : UU
-          })), fU(eU(gU), "handleUpdate", (function() {
-            if (gU.slider) {
-              var UU = gU.props.orientation,
-                RU = (0, qU.capitalize)(xU.orientation[UU].dimension),
-                tU = gU.slider["offset".concat(RU)],
-                pU = gU.handle["offset".concat(RU)];
-              gU.setState({
-                limit: tU - pU,
-                grab: pU / 2
+        function mu(uu, Ru) {
+          var yu;
+          return function(uu, Ru) {
+            if (!(uu instanceof Ru)) throw new TypeError("Cannot call a class as a function")
+          }(this, mu), Hu(Wu(yu = Qu.call(this, uu, Ru)), "handleFormat", (function(uu) {
+            var Ru = yu.props.format;
+            return Ru ? Ru(uu) : uu
+          })), Hu(Wu(yu), "handleUpdate", (function() {
+            if (yu.slider) {
+              var uu = yu.props.orientation,
+                Ru = (0, Nu.capitalize)(du.orientation[uu].dimension),
+                Eu = yu.slider["offset".concat(Ru)],
+                Ku = yu.handle["offset".concat(Ru)];
+              yu.setState({
+                limit: Eu - Ku,
+                grab: Ku / 2
               })
             }
-          })), fU(eU(gU), "handleStart", (function(UU) {
-            var RU = gU.props.onChangeStart;
-            document.addEventListener("mousemove", gU.handleDrag), document.addEventListener("mouseup", gU.handleEnd), gU.setState({
+          })), Hu(Wu(yu), "handleStart", (function(uu) {
+            var Ru = yu.props.onChangeStart;
+            document.addEventListener("mousemove", yu.handleDrag), document.addEventListener("mouseup", yu.handleEnd), yu.setState({
               active: !0
             }, (function() {
-              RU && RU(UU)
+              Ru && Ru(uu)
             }))
-          })), fU(eU(gU), "handleDrag", (function(UU) {
-            UU.stopPropagation();
-            var RU = gU.props.onChange,
-              tU = UU.target,
-              pU = tU.className,
-              EU = tU.classList,
-              PU = tU.dataset;
-            if (RU && "rangeslider__labels" !== pU) {
-              var TU = gU.position(UU);
-              EU && EU.contains("rangeslider__label-item") && PU.value && (TU = parseFloat(PU.value)), RU && RU(TU, UU)
+          })), Hu(Wu(yu), "handleDrag", (function(uu) {
+            uu.stopPropagation();
+            var Ru = yu.props.onChange,
+              Eu = uu.target,
+              Ku = Eu.className,
+              Qu = Eu.classList,
+              mu = Eu.dataset;
+            if (Ru && "rangeslider__labels" !== Ku) {
+              var Ju = yu.position(uu);
+              Qu && Qu.contains("rangeslider__label-item") && mu.value && (Ju = parseFloat(mu.value)), Ru && Ru(Ju, uu)
             }
-          })), fU(eU(gU), "handleEnd", (function(UU) {
-            var RU = gU.props.onChangeComplete;
-            gU.setState({
+          })), Hu(Wu(yu), "handleEnd", (function(uu) {
+            var Ru = yu.props.onChangeComplete;
+            yu.setState({
               active: !1
             }, (function() {
-              RU && RU(UU)
-            })), document.removeEventListener("mousemove", gU.handleDrag), document.removeEventListener("mouseup", gU.handleEnd)
-          })), fU(eU(gU), "handleKeyDown", (function(UU) {
-            UU.preventDefault();
-            var RU, tU = UU.keyCode,
-              pU = gU.props,
-              EU = pU.value,
-              PU = pU.min,
-              TU = pU.max,
-              qU = pU.step,
-              KU = pU.onChange;
-            switch (tU) {
+              Ru && Ru(uu)
+            })), document.removeEventListener("mousemove", yu.handleDrag), document.removeEventListener("mouseup", yu.handleEnd)
+          })), Hu(Wu(yu), "handleKeyDown", (function(uu) {
+            uu.preventDefault();
+            var Ru, Eu = uu.keyCode,
+              Ku = yu.props,
+              Qu = Ku.value,
+              mu = Ku.min,
+              Ju = Ku.max,
+              Nu = Ku.step,
+              Xu = Ku.onChange;
+            switch (Eu) {
               case 38:
               case 39:
-                RU = EU + qU > TU ? TU : EU + qU, KU && KU(RU, UU);
+                Ru = Qu + Nu > Ju ? Ju : Qu + Nu, Xu && Xu(Ru, uu);
                 break;
               case 37:
               case 40:
-                RU = EU - qU < PU ? PU : EU - qU, KU && KU(RU, UU)
+                Ru = Qu - Nu < mu ? mu : Qu - Nu, Xu && Xu(Ru, uu)
             }
-          })), fU(eU(gU), "getPositionFromValue", (function(UU) {
-            var RU = gU.state.limit,
-              tU = gU.props,
-              pU = tU.min,
-              EU = (UU - pU) / (tU.max - pU);
-            return Math.round(EU * RU)
-          })), fU(eU(gU), "getValueFromPosition", (function(UU) {
-            var RU = gU.state.limit,
-              tU = gU.props,
-              pU = tU.orientation,
-              EU = tU.min,
-              PU = tU.max,
-              TU = tU.step,
-              KU = (0, qU.clamp)(UU, 0, RU) / (RU || 1),
-              cU = TU * Math.round(KU * (PU - EU) / TU),
-              GU = "horizontal" === pU ? cU + EU : PU - cU;
-            return (0, qU.clamp)(GU, EU, PU)
-          })), fU(eU(gU), "position", (function(UU) {
-            var RU = gU.state.grab,
-              tU = gU.props,
-              pU = tU.orientation,
-              EU = tU.reverse,
-              PU = gU.slider,
-              TU = xU.orientation[pU].coordinate,
-              KU = EU ? xU.orientation[pU].reverseDirection : xU.orientation[pU].direction,
-              cU = "client".concat((0, qU.capitalize)(TU)),
-              GU = UU.touches ? UU.touches[0][cU] : UU[cU],
-              jU = PU.getBoundingClientRect()[KU],
-              uU = EU ? jU - GU - RU : GU - jU - RU;
-            return gU.getValueFromPosition(uU)
-          })), fU(eU(gU), "coordinates", (function(UU) {
-            var RU = gU.state,
-              tU = RU.limit,
-              pU = RU.grab,
-              EU = gU.props.orientation,
-              PU = gU.getValueFromPosition(UU),
-              TU = gU.getPositionFromValue(PU),
-              qU = "horizontal" === EU ? TU + pU : TU;
+          })), Hu(Wu(yu), "getPositionFromValue", (function(uu) {
+            var Ru = yu.state.limit,
+              Eu = yu.props,
+              Ku = Eu.min,
+              Qu = (uu - Ku) / (Eu.max - Ku);
+            return Math.round(Qu * Ru)
+          })), Hu(Wu(yu), "getValueFromPosition", (function(uu) {
+            var Ru = yu.state.limit,
+              Eu = yu.props,
+              Ku = Eu.orientation,
+              Qu = Eu.min,
+              mu = Eu.max,
+              Ju = Eu.step,
+              Xu = (0, Nu.clamp)(uu, 0, Ru) / (Ru || 1),
+              Vu = Ju * Math.round(Xu * (mu - Qu) / Ju),
+              ru = "horizontal" === Ku ? Vu + Qu : mu - Vu;
+            return (0, Nu.clamp)(ru, Qu, mu)
+          })), Hu(Wu(yu), "position", (function(uu) {
+            var Ru = yu.state.grab,
+              Eu = yu.props,
+              Ku = Eu.orientation,
+              Qu = Eu.reverse,
+              mu = yu.slider,
+              Ju = du.orientation[Ku].coordinate,
+              Xu = Qu ? du.orientation[Ku].reverseDirection : du.orientation[Ku].direction,
+              Vu = "client".concat((0, Nu.capitalize)(Ju)),
+              ru = uu.touches ? uu.touches[0][Vu] : uu[Vu],
+              Bu = mu.getBoundingClientRect()[Xu],
+              xu = Qu ? Bu - ru - Ru : ru - Bu - Ru;
+            return yu.getValueFromPosition(xu)
+          })), Hu(Wu(yu), "coordinates", (function(uu) {
+            var Ru = yu.state,
+              Eu = Ru.limit,
+              Ku = Ru.grab,
+              Qu = yu.props.orientation,
+              mu = yu.getValueFromPosition(uu),
+              Ju = yu.getPositionFromValue(mu),
+              Nu = "horizontal" === Qu ? Ju + Ku : Ju;
             return {
-              fill: "horizontal" === EU ? qU : tU - qU,
-              handle: qU,
-              label: qU
+              fill: "horizontal" === Qu ? Nu : Eu - Nu,
+              handle: Nu,
+              label: Nu
             }
-          })), fU(eU(gU), "renderLabels", (function(UU) {
-            return (0, KU.jsx)("ul", {
-              ref: function(UU) {
-                gU.labels = UU
+          })), Hu(Wu(yu), "renderLabels", (function(uu) {
+            return (0, Xu.jsx)("ul", {
+              ref: function(uu) {
+                yu.labels = uu
               },
-              className: (0, pU.default)("rangeslider__labels"),
-              children: UU
+              className: (0, Ku.default)("rangeslider__labels"),
+              children: uu
             })
-          })), gU.state = {
+          })), yu.state = {
             active: !1,
             limit: 0,
             grab: 0
-          }, gU
+          }, yu
         }
-        return RU = PU, (gU = [{
+        return Ru = mu, (yu = [{
           key: "componentDidMount",
           value: function() {
-            this.handleUpdate(), new TU.default(this.handleUpdate).observe(this.slider)
+            this.handleUpdate(), new Ju.default(this.handleUpdate).observe(this.slider)
           }
         }, {
           key: "render",
           value: function() {
-            var UU = this,
-              RU = this.props,
-              gU = RU.value,
-              tU = RU.orientation,
-              EU = RU.className,
-              PU = RU.tooltip,
-              TU = RU.reverse,
-              qU = RU.labels,
-              cU = RU.min,
-              GU = RU.max,
-              uU = RU.handleLabel,
-              CU = this.state.active,
-              hU = xU.orientation[tU].dimension,
-              QU = TU ? xU.orientation[tU].reverseDirection : xU.orientation[tU].direction,
-              eU = this.getPositionFromValue(gU),
-              WU = this.coordinates(eU),
-              mU = fU({}, hU, "".concat(WU.fill, "px")),
-              IU = fU({}, QU, "".concat(WU.handle, "px")),
-              JU = PU && CU,
-              wU = [],
-              nU = Object.keys(qU);
-            if (nU.length > 0) {
-              var bU, oU = jU(nU = nU.sort((function(UU, RU) {
-                return TU ? UU - RU : RU - UU
+            var uu = this,
+              Ru = this.props,
+              yu = Ru.value,
+              Eu = Ru.orientation,
+              Qu = Ru.className,
+              mu = Ru.tooltip,
+              Ju = Ru.reverse,
+              Nu = Ru.labels,
+              Vu = Ru.min,
+              ru = Ru.max,
+              xu = Ru.handleLabel,
+              Su = this.state.active,
+              pu = du.orientation[Eu].dimension,
+              Tu = Ju ? du.orientation[Eu].reverseDirection : du.orientation[Eu].direction,
+              Wu = this.getPositionFromValue(yu),
+              ju = this.coordinates(Wu),
+              bu = Hu({}, pu, "".concat(ju.fill, "px")),
+              Cu = Hu({}, Tu, "".concat(ju.handle, "px")),
+              ku = mu && Su,
+              eu = [],
+              Au = Object.keys(Nu);
+            if (Au.length > 0) {
+              var Du, Mu = Bu(Au = Au.sort((function(uu, Ru) {
+                return Ju ? uu - Ru : Ru - uu
               })));
               try {
-                for (oU.s(); !(bU = oU.n()).done;) {
-                  var ZU = bU.value,
-                    aU = this.getPositionFromValue(ZU),
-                    YU = this.coordinates(aU),
-                    BU = fU({}, QU, "".concat(YU.label, "px"));
-                  wU.push((0, KU.jsx)("li", {
-                    className: (0, pU.default)("rangeslider__label-item"),
-                    "data-value": ZU,
+                for (Mu.s(); !(Du = Mu.n()).done;) {
+                  var Iu = Du.value,
+                    Gu = this.getPositionFromValue(Iu),
+                    Uu = this.coordinates(Gu),
+                    nu = Hu({}, Tu, "".concat(Uu.label, "px"));
+                  eu.push((0, Xu.jsx)("li", {
+                    className: (0, Ku.default)("rangeslider__label-item"),
+                    "data-value": Iu,
                     onMouseDown: this.handleDrag,
                     onTouchStart: this.handleStart,
                     onTouchEnd: this.handleEnd,
-                    style: BU,
-                    children: this.props.labels[ZU]
-                  }, ZU))
+                    style: nu,
+                    children: this.props.labels[Iu]
+                  }, Iu))
                 }
-              } catch (VU) {
-                oU.e(VU)
+              } catch (su) {
+                Mu.e(su)
               } finally {
-                oU.f()
+                Mu.f()
               }
             }
-            return (0, KU.jsxs)("div", {
-              ref: function(RU) {
-                UU.slider = RU
+            return (0, Xu.jsxs)("div", {
+              ref: function(Ru) {
+                uu.slider = Ru
               },
-              className: (0, pU.default)("rangeslider", "rangeslider-".concat(tU), {
-                "rangeslider-reverse": TU
-              }, EU),
+              className: (0, Ku.default)("rangeslider", "rangeslider-".concat(Eu), {
+                "rangeslider-reverse": Ju
+              }, Qu),
               onMouseDown: this.handleDrag,
               onMouseUp: this.handleEnd,
               onTouchStart: this.handleStart,
               onTouchEnd: this.handleEnd,
-              "aria-valuemin": cU,
-              "aria-valuemax": GU,
-              "aria-valuenow": gU,
-              "aria-orientation": tU,
-              children: [(0, KU.jsx)("div", {
+              "aria-valuemin": Vu,
+              "aria-valuemax": ru,
+              "aria-valuenow": yu,
+              "aria-orientation": Eu,
+              children: [(0, Xu.jsx)("div", {
                 className: "rangeslider__fill",
-                style: mU
-              }), (0, KU.jsxs)("div", {
-                ref: function(RU) {
-                  UU.handle = RU
+                style: bu
+              }), (0, Xu.jsxs)("div", {
+                ref: function(Ru) {
+                  uu.handle = Ru
                 },
                 className: "rangeslider__handle",
                 onMouseDown: this.handleStart,
                 onTouchMove: this.handleDrag,
                 onTouchEnd: this.handleEnd,
                 onKeyDown: this.handleKeyDown,
-                style: IU,
+                style: Cu,
                 tabIndex: 0,
-                children: [JU && (0, KU.jsx)("div", {
-                  ref: function(RU) {
-                    UU.tooltip = RU
+                children: [ku && (0, Xu.jsx)("div", {
+                  ref: function(Ru) {
+                    uu.tooltip = Ru
                   },
                   className: "rangeslider__handle-tooltip",
-                  children: (0, KU.jsx)("span", {
-                    children: this.handleFormat(gU)
+                  children: (0, Xu.jsx)("span", {
+                    children: this.handleFormat(yu)
                   })
-                }), (0, KU.jsx)("div", {
+                }), (0, Xu.jsx)("div", {
                   className: "rangeslider__handle-label",
-                  children: uU
+                  children: xu
                 })]
-              }), qU && this.renderLabels(wU)]
+              }), Nu && this.renderLabels(eu)]
             })
           }
-        }]) && CU(RU.prototype, gU), tU && CU(RU, tU), Object.defineProperty(RU, "prototype", {
+        }]) && Su(Ru.prototype, yu), Eu && Su(Ru, Eu), Object.defineProperty(Ru, "prototype", {
           writable: !1
-        }), PU
-      }(EU.Component);
-    fU(mU, "propTypes", {
-      min: PU.default.number,
-      max: PU.default.number,
-      step: PU.default.number,
-      value: PU.default.number,
-      orientation: PU.default.string,
-      tooltip: PU.default.bool,
-      reverse: PU.default.bool,
-      labels: PU.default.object,
-      handleLabel: PU.default.string,
-      format: PU.default.func,
-      onChangeStart: PU.default.func,
-      onChange: PU.default.func,
-      onChangeComplete: PU.default.func
-    }), fU(mU, "defaultProps", {
+        }), mu
+      }(Qu.Component);
+    Hu(bu, "propTypes", {
+      min: mu.default.number,
+      max: mu.default.number,
+      step: mu.default.number,
+      value: mu.default.number,
+      orientation: mu.default.string,
+      tooltip: mu.default.bool,
+      reverse: mu.default.bool,
+      labels: mu.default.object,
+      handleLabel: mu.default.string,
+      format: mu.default.func,
+      onChangeStart: mu.default.func,
+      onChange: mu.default.func,
+      onChangeComplete: mu.default.func
+    }), Hu(bu, "defaultProps", {
       min: 0,
       max: 100,
       step: 1,
@@ -445,359 +445,359 @@ export const modules = {
       labels: {},
       handleLabel: ""
     });
-    var IU = mU;
-    RU.default = IU
+    var Cu = bu;
+    Ru.default = Cu
   },
-  4679: (UU, RU, gU) => {
-    var tU;
-    RU.d = void 0;
-    var pU = ((tU = gU(4683)) && tU.__esModule ? tU : {
-      default: tU
+  4785: (uu, Ru, yu) => {
+    var Eu;
+    Ru.d = void 0;
+    var Ku = ((Eu = yu(4793)) && Eu.__esModule ? Eu : {
+      default: Eu
     }).default;
-    RU.d = pU
+    Ru.d = Ku
   },
-  4690: (UU, RU) => {
-    Object.defineProperty(RU, "__esModule", {
+  4804: (uu, Ru) => {
+    Object.defineProperty(Ru, "__esModule", {
       value: !0
-    }), RU.capitalize = function(UU) {
-      return UU.charAt(0).toUpperCase() + UU.substr(1)
-    }, RU.clamp = function(UU, RU, gU) {
-      return Math.min(Math.max(UU, RU), gU)
+    }), Ru.capitalize = function(uu) {
+      return uu.charAt(0).toUpperCase() + uu.substr(1)
+    }, Ru.clamp = function(uu, Ru, yu) {
+      return Math.min(Math.max(uu, Ru), yu)
     }
   },
-  4635: (UU, RU, gU) => {
-    var tU = gU(4642);
+  4753: (uu, Ru, yu) => {
+    var Eu = yu(4758);
 
-    function pU() {}
+    function Ku() {}
 
-    function EU() {}
-    EU.resetWarningCache = pU, UU.exports = function() {
-      function UU(UU, RU, gU, pU, EU, PU) {
-        if (PU !== tU) {
-          var TU = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw TU.name = "Invariant Violation", TU
+    function Qu() {}
+    Qu.resetWarningCache = Ku, uu.exports = function() {
+      function uu(uu, Ru, yu, Ku, Qu, mu) {
+        if (mu !== Eu) {
+          var Ju = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw Ju.name = "Invariant Violation", Ju
         }
       }
 
-      function RU() {
-        return UU
+      function Ru() {
+        return uu
       }
-      UU.isRequired = UU;
-      var gU = {
-        array: UU,
-        bigint: UU,
-        bool: UU,
-        func: UU,
-        number: UU,
-        object: UU,
-        string: UU,
-        symbol: UU,
-        any: UU,
-        arrayOf: RU,
-        element: UU,
-        elementType: UU,
-        instanceOf: RU,
-        node: UU,
-        objectOf: RU,
-        oneOf: RU,
-        oneOfType: RU,
-        shape: RU,
-        exact: RU,
-        checkPropTypes: EU,
-        resetWarningCache: pU
+      uu.isRequired = uu;
+      var yu = {
+        array: uu,
+        bigint: uu,
+        bool: uu,
+        func: uu,
+        number: uu,
+        object: uu,
+        string: uu,
+        symbol: uu,
+        any: uu,
+        arrayOf: Ru,
+        element: uu,
+        elementType: uu,
+        instanceOf: Ru,
+        node: uu,
+        objectOf: Ru,
+        oneOf: Ru,
+        oneOfType: Ru,
+        shape: Ru,
+        exact: Ru,
+        checkPropTypes: Qu,
+        resetWarningCache: Ku
       };
-      return gU.PropTypes = gU, gU
+      return yu.PropTypes = yu, yu
     }
   },
-  4626: (UU, RU, gU) => {
-    UU.exports = gU(4635)()
+  4745: (uu, Ru, yu) => {
+    uu.exports = yu(4753)()
   },
-  4642: UU => {
-    UU.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  4758: uu => {
+    uu.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  4688: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => wU
+  4801: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => eu
     });
-    var tU = function() {
+    var Eu = function() {
         if ("undefined" !== typeof Map) return Map;
 
-        function UU(UU, RU) {
-          var gU = -1;
-          return UU.some((function(UU, tU) {
-            return UU[0] === RU && (gU = tU, !0)
-          })), gU
+        function uu(uu, Ru) {
+          var yu = -1;
+          return uu.some((function(uu, Eu) {
+            return uu[0] === Ru && (yu = Eu, !0)
+          })), yu
         }
         return function() {
-          function RU() {
+          function Ru() {
             this.__entries__ = []
           }
-          return Object.defineProperty(RU.prototype, "size", {
+          return Object.defineProperty(Ru.prototype, "size", {
             get: function() {
               return this.__entries__.length
             },
             enumerable: !0,
             configurable: !0
-          }), RU.prototype.get = function(RU) {
-            var gU = UU(this.__entries__, RU),
-              tU = this.__entries__[gU];
-            return tU && tU[1]
-          }, RU.prototype.set = function(RU, gU) {
-            var tU = UU(this.__entries__, RU);
-            ~tU ? this.__entries__[tU][1] = gU : this.__entries__.push([RU, gU])
-          }, RU.prototype.delete = function(RU) {
-            var gU = this.__entries__,
-              tU = UU(gU, RU);
-            ~tU && gU.splice(tU, 1)
-          }, RU.prototype.has = function(RU) {
-            return !!~UU(this.__entries__, RU)
-          }, RU.prototype.clear = function() {
+          }), Ru.prototype.get = function(Ru) {
+            var yu = uu(this.__entries__, Ru),
+              Eu = this.__entries__[yu];
+            return Eu && Eu[1]
+          }, Ru.prototype.set = function(Ru, yu) {
+            var Eu = uu(this.__entries__, Ru);
+            ~Eu ? this.__entries__[Eu][1] = yu : this.__entries__.push([Ru, yu])
+          }, Ru.prototype.delete = function(Ru) {
+            var yu = this.__entries__,
+              Eu = uu(yu, Ru);
+            ~Eu && yu.splice(Eu, 1)
+          }, Ru.prototype.has = function(Ru) {
+            return !!~uu(this.__entries__, Ru)
+          }, Ru.prototype.clear = function() {
             this.__entries__.splice(0)
-          }, RU.prototype.forEach = function(UU, RU) {
-            void 0 === RU && (RU = null);
-            for (var gU = 0, tU = this.__entries__; gU < tU.length; gU++) {
-              var pU = tU[gU];
-              UU.call(RU, pU[1], pU[0])
+          }, Ru.prototype.forEach = function(uu, Ru) {
+            void 0 === Ru && (Ru = null);
+            for (var yu = 0, Eu = this.__entries__; yu < Eu.length; yu++) {
+              var Ku = Eu[yu];
+              uu.call(Ru, Ku[1], Ku[0])
             }
-          }, RU
+          }, Ru
         }()
       }(),
-      pU = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
-      EU = "undefined" !== typeof gU.g && gU.g.Math === Math ? gU.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
-      PU = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(EU) : function(UU) {
+      Ku = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      Qu = "undefined" !== typeof yu.g && yu.g.Math === Math ? yu.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      mu = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(Qu) : function(uu) {
         return setTimeout((function() {
-          return UU(Date.now())
+          return uu(Date.now())
         }), 1e3 / 60)
       };
-    var TU = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
-      qU = "undefined" !== typeof MutationObserver,
-      KU = function() {
-        function UU() {
-          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(UU, RU) {
-            var gU = !1,
-              tU = !1,
-              pU = 0;
+    var Ju = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      Nu = "undefined" !== typeof MutationObserver,
+      Xu = function() {
+        function uu() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(uu, Ru) {
+            var yu = !1,
+              Eu = !1,
+              Ku = 0;
 
-            function EU() {
-              gU && (gU = !1, UU()), tU && qU()
+            function Qu() {
+              yu && (yu = !1, uu()), Eu && Nu()
             }
 
-            function TU() {
-              PU(EU)
+            function Ju() {
+              mu(Qu)
             }
 
-            function qU() {
-              var UU = Date.now();
-              if (gU) {
-                if (UU - pU < 2) return;
-                tU = !0
-              } else gU = !0, tU = !1, setTimeout(TU, RU);
-              pU = UU
+            function Nu() {
+              var uu = Date.now();
+              if (yu) {
+                if (uu - Ku < 2) return;
+                Eu = !0
+              } else yu = !0, Eu = !1, setTimeout(Ju, Ru);
+              Ku = uu
             }
-            return qU
+            return Nu
           }(this.refresh.bind(this), 20)
         }
-        return UU.prototype.addObserver = function(UU) {
-          ~this.observers_.indexOf(UU) || this.observers_.push(UU), this.connected_ || this.connect_()
-        }, UU.prototype.removeObserver = function(UU) {
-          var RU = this.observers_,
-            gU = RU.indexOf(UU);
-          ~gU && RU.splice(gU, 1), !RU.length && this.connected_ && this.disconnect_()
-        }, UU.prototype.refresh = function() {
+        return uu.prototype.addObserver = function(uu) {
+          ~this.observers_.indexOf(uu) || this.observers_.push(uu), this.connected_ || this.connect_()
+        }, uu.prototype.removeObserver = function(uu) {
+          var Ru = this.observers_,
+            yu = Ru.indexOf(uu);
+          ~yu && Ru.splice(yu, 1), !Ru.length && this.connected_ && this.disconnect_()
+        }, uu.prototype.refresh = function() {
           this.updateObservers_() && this.refresh()
-        }, UU.prototype.updateObservers_ = function() {
-          var UU = this.observers_.filter((function(UU) {
-            return UU.gatherActive(), UU.hasActive()
+        }, uu.prototype.updateObservers_ = function() {
+          var uu = this.observers_.filter((function(uu) {
+            return uu.gatherActive(), uu.hasActive()
           }));
-          return UU.forEach((function(UU) {
-            return UU.broadcastActive()
-          })), UU.length > 0
-        }, UU.prototype.connect_ = function() {
-          pU && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), qU ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+          return uu.forEach((function(uu) {
+            return uu.broadcastActive()
+          })), uu.length > 0
+        }, uu.prototype.connect_ = function() {
+          Ku && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), Nu ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
             attributes: !0,
             childList: !0,
             characterData: !0,
             subtree: !0
           })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
-        }, UU.prototype.disconnect_ = function() {
-          pU && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
-        }, UU.prototype.onTransitionEnd_ = function(UU) {
-          var RU = UU.propertyName,
-            gU = void 0 === RU ? "" : RU;
-          TU.some((function(UU) {
-            return !!~gU.indexOf(UU)
+        }, uu.prototype.disconnect_ = function() {
+          Ku && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, uu.prototype.onTransitionEnd_ = function(uu) {
+          var Ru = uu.propertyName,
+            yu = void 0 === Ru ? "" : Ru;
+          Ju.some((function(uu) {
+            return !!~yu.indexOf(uu)
           })) && this.refresh()
-        }, UU.getInstance = function() {
-          return this.instance_ || (this.instance_ = new UU), this.instance_
-        }, UU.instance_ = null, UU
+        }, uu.getInstance = function() {
+          return this.instance_ || (this.instance_ = new uu), this.instance_
+        }, uu.instance_ = null, uu
       }(),
-      cU = function(UU, RU) {
-        for (var gU = 0, tU = Object.keys(RU); gU < tU.length; gU++) {
-          var pU = tU[gU];
-          Object.defineProperty(UU, pU, {
-            value: RU[pU],
+      Vu = function(uu, Ru) {
+        for (var yu = 0, Eu = Object.keys(Ru); yu < Eu.length; yu++) {
+          var Ku = Eu[yu];
+          Object.defineProperty(uu, Ku, {
+            value: Ru[Ku],
             enumerable: !1,
             writable: !1,
             configurable: !0
           })
         }
-        return UU
+        return uu
       },
-      GU = function(UU) {
-        return UU && UU.ownerDocument && UU.ownerDocument.defaultView || EU
+      ru = function(uu) {
+        return uu && uu.ownerDocument && uu.ownerDocument.defaultView || Qu
       },
-      jU = WU(0, 0, 0, 0);
+      Bu = ju(0, 0, 0, 0);
 
-    function uU(UU) {
-      return parseFloat(UU) || 0
+    function xu(uu) {
+      return parseFloat(uu) || 0
     }
 
-    function CU(UU) {
-      for (var RU = [], gU = 1; gU < arguments.length; gU++) RU[gU - 1] = arguments[gU];
-      return RU.reduce((function(RU, gU) {
-        return RU + uU(UU["border-" + gU + "-width"])
+    function Su(uu) {
+      for (var Ru = [], yu = 1; yu < arguments.length; yu++) Ru[yu - 1] = arguments[yu];
+      return Ru.reduce((function(Ru, yu) {
+        return Ru + xu(uu["border-" + yu + "-width"])
       }), 0)
     }
 
-    function hU(UU) {
-      var RU = UU.clientWidth,
-        gU = UU.clientHeight;
-      if (!RU && !gU) return jU;
-      var tU = GU(UU).getComputedStyle(UU),
-        pU = function(UU) {
-          for (var RU = {}, gU = 0, tU = ["top", "right", "bottom", "left"]; gU < tU.length; gU++) {
-            var pU = tU[gU],
-              EU = UU["padding-" + pU];
-            RU[pU] = uU(EU)
+    function pu(uu) {
+      var Ru = uu.clientWidth,
+        yu = uu.clientHeight;
+      if (!Ru && !yu) return Bu;
+      var Eu = ru(uu).getComputedStyle(uu),
+        Ku = function(uu) {
+          for (var Ru = {}, yu = 0, Eu = ["top", "right", "bottom", "left"]; yu < Eu.length; yu++) {
+            var Ku = Eu[yu],
+              Qu = uu["padding-" + Ku];
+            Ru[Ku] = xu(Qu)
           }
-          return RU
-        }(tU),
-        EU = pU.left + pU.right,
-        PU = pU.top + pU.bottom,
-        TU = uU(tU.width),
-        qU = uU(tU.height);
-      if ("border-box" === tU.boxSizing && (Math.round(TU + EU) !== RU && (TU -= CU(tU, "left", "right") + EU), Math.round(qU + PU) !== gU && (qU -= CU(tU, "top", "bottom") + PU)), ! function(UU) {
-          return UU === GU(UU).document.documentElement
-        }(UU)) {
-        var KU = Math.round(TU + EU) - RU,
-          cU = Math.round(qU + PU) - gU;
-        1 !== Math.abs(KU) && (TU -= KU), 1 !== Math.abs(cU) && (qU -= cU)
+          return Ru
+        }(Eu),
+        Qu = Ku.left + Ku.right,
+        mu = Ku.top + Ku.bottom,
+        Ju = xu(Eu.width),
+        Nu = xu(Eu.height);
+      if ("border-box" === Eu.boxSizing && (Math.round(Ju + Qu) !== Ru && (Ju -= Su(Eu, "left", "right") + Qu), Math.round(Nu + mu) !== yu && (Nu -= Su(Eu, "top", "bottom") + mu)), ! function(uu) {
+          return uu === ru(uu).document.documentElement
+        }(uu)) {
+        var Xu = Math.round(Ju + Qu) - Ru,
+          Vu = Math.round(Nu + mu) - yu;
+        1 !== Math.abs(Xu) && (Ju -= Xu), 1 !== Math.abs(Vu) && (Nu -= Vu)
       }
-      return WU(pU.left, pU.top, TU, qU)
+      return ju(Ku.left, Ku.top, Ju, Nu)
     }
-    var QU = "undefined" !== typeof SVGGraphicsElement ? function(UU) {
-      return UU instanceof GU(UU).SVGGraphicsElement
-    } : function(UU) {
-      return UU instanceof GU(UU).SVGElement && "function" === typeof UU.getBBox
+    var Tu = "undefined" !== typeof SVGGraphicsElement ? function(uu) {
+      return uu instanceof ru(uu).SVGGraphicsElement
+    } : function(uu) {
+      return uu instanceof ru(uu).SVGElement && "function" === typeof uu.getBBox
     };
 
-    function eU(UU) {
-      return pU ? QU(UU) ? function(UU) {
-        var RU = UU.getBBox();
-        return WU(0, 0, RU.width, RU.height)
-      }(UU) : hU(UU) : jU
+    function Wu(uu) {
+      return Ku ? Tu(uu) ? function(uu) {
+        var Ru = uu.getBBox();
+        return ju(0, 0, Ru.width, Ru.height)
+      }(uu) : pu(uu) : Bu
     }
 
-    function WU(UU, RU, gU, tU) {
+    function ju(uu, Ru, yu, Eu) {
       return {
-        x: UU,
-        y: RU,
-        width: gU,
-        height: tU
+        x: uu,
+        y: Ru,
+        width: yu,
+        height: Eu
       }
     }
-    var fU = function() {
-        function UU(UU) {
-          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = WU(0, 0, 0, 0), this.target = UU
+    var Hu = function() {
+        function uu(uu) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = ju(0, 0, 0, 0), this.target = uu
         }
-        return UU.prototype.isActive = function() {
-          var UU = eU(this.target);
-          return this.contentRect_ = UU, UU.width !== this.broadcastWidth || UU.height !== this.broadcastHeight
-        }, UU.prototype.broadcastRect = function() {
-          var UU = this.contentRect_;
-          return this.broadcastWidth = UU.width, this.broadcastHeight = UU.height, UU
-        }, UU
+        return uu.prototype.isActive = function() {
+          var uu = Wu(this.target);
+          return this.contentRect_ = uu, uu.width !== this.broadcastWidth || uu.height !== this.broadcastHeight
+        }, uu.prototype.broadcastRect = function() {
+          var uu = this.contentRect_;
+          return this.broadcastWidth = uu.width, this.broadcastHeight = uu.height, uu
+        }, uu
       }(),
-      xU = function(UU, RU) {
-        var gU = function(UU) {
-          var RU = UU.x,
-            gU = UU.y,
-            tU = UU.width,
-            pU = UU.height,
-            EU = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
-            PU = Object.create(EU.prototype);
-          return cU(PU, {
-            x: RU,
-            y: gU,
-            width: tU,
-            height: pU,
-            top: gU,
-            right: RU + tU,
-            bottom: pU + gU,
-            left: RU
-          }), PU
-        }(RU);
-        cU(this, {
-          target: UU,
-          contentRect: gU
+      du = function(uu, Ru) {
+        var yu = function(uu) {
+          var Ru = uu.x,
+            yu = uu.y,
+            Eu = uu.width,
+            Ku = uu.height,
+            Qu = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            mu = Object.create(Qu.prototype);
+          return Vu(mu, {
+            x: Ru,
+            y: yu,
+            width: Eu,
+            height: Ku,
+            top: yu,
+            right: Ru + Eu,
+            bottom: Ku + yu,
+            left: Ru
+          }), mu
+        }(Ru);
+        Vu(this, {
+          target: uu,
+          contentRect: yu
         })
       },
-      mU = function() {
-        function UU(UU, RU, gU) {
-          if (this.activeObservations_ = [], this.observations_ = new tU, "function" !== typeof UU) throw new TypeError("The callback provided as parameter 1 is not a function.");
-          this.callback_ = UU, this.controller_ = RU, this.callbackCtx_ = gU
+      bu = function() {
+        function uu(uu, Ru, yu) {
+          if (this.activeObservations_ = [], this.observations_ = new Eu, "function" !== typeof uu) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = uu, this.controller_ = Ru, this.callbackCtx_ = yu
         }
-        return UU.prototype.observe = function(UU) {
+        return uu.prototype.observe = function(uu) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(UU instanceof GU(UU).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var RU = this.observations_;
-            RU.has(UU) || (RU.set(UU, new fU(UU)), this.controller_.addObserver(this), this.controller_.refresh())
+            if (!(uu instanceof ru(uu).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Ru = this.observations_;
+            Ru.has(uu) || (Ru.set(uu, new Hu(uu)), this.controller_.addObserver(this), this.controller_.refresh())
           }
-        }, UU.prototype.unobserve = function(UU) {
+        }, uu.prototype.unobserve = function(uu) {
           if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
           if ("undefined" !== typeof Element && Element instanceof Object) {
-            if (!(UU instanceof GU(UU).Element)) throw new TypeError('parameter 1 is not of type "Element".');
-            var RU = this.observations_;
-            RU.has(UU) && (RU.delete(UU), RU.size || this.controller_.removeObserver(this))
+            if (!(uu instanceof ru(uu).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var Ru = this.observations_;
+            Ru.has(uu) && (Ru.delete(uu), Ru.size || this.controller_.removeObserver(this))
           }
-        }, UU.prototype.disconnect = function() {
+        }, uu.prototype.disconnect = function() {
           this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
-        }, UU.prototype.gatherActive = function() {
-          var UU = this;
-          this.clearActive(), this.observations_.forEach((function(RU) {
-            RU.isActive() && UU.activeObservations_.push(RU)
+        }, uu.prototype.gatherActive = function() {
+          var uu = this;
+          this.clearActive(), this.observations_.forEach((function(Ru) {
+            Ru.isActive() && uu.activeObservations_.push(Ru)
           }))
-        }, UU.prototype.broadcastActive = function() {
+        }, uu.prototype.broadcastActive = function() {
           if (this.hasActive()) {
-            var UU = this.callbackCtx_,
-              RU = this.activeObservations_.map((function(UU) {
-                return new xU(UU.target, UU.broadcastRect())
+            var uu = this.callbackCtx_,
+              Ru = this.activeObservations_.map((function(uu) {
+                return new du(uu.target, uu.broadcastRect())
               }));
-            this.callback_.call(UU, RU, UU), this.clearActive()
+            this.callback_.call(uu, Ru, uu), this.clearActive()
           }
-        }, UU.prototype.clearActive = function() {
+        }, uu.prototype.clearActive = function() {
           this.activeObservations_.splice(0)
-        }, UU.prototype.hasActive = function() {
+        }, uu.prototype.hasActive = function() {
           return this.activeObservations_.length > 0
-        }, UU
+        }, uu
       }(),
-      IU = "undefined" !== typeof WeakMap ? new WeakMap : new tU,
-      JU = function UU(RU) {
-        if (!(this instanceof UU)) throw new TypeError("Cannot call a class as a function.");
+      Cu = "undefined" !== typeof WeakMap ? new WeakMap : new Eu,
+      ku = function uu(Ru) {
+        if (!(this instanceof uu)) throw new TypeError("Cannot call a class as a function.");
         if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
-        var gU = KU.getInstance(),
-          tU = new mU(RU, gU, this);
-        IU.set(this, tU)
+        var yu = Xu.getInstance(),
+          Eu = new bu(Ru, yu, this);
+        Cu.set(this, Eu)
       };
-    ["observe", "unobserve", "disconnect"].forEach((function(UU) {
-      JU.prototype[UU] = function() {
-        var RU;
-        return (RU = IU.get(this))[UU].apply(RU, arguments)
+    ["observe", "unobserve", "disconnect"].forEach((function(uu) {
+      ku.prototype[uu] = function() {
+        var Ru;
+        return (Ru = Cu.get(this))[uu].apply(Ru, arguments)
       }
     }));
-    const wU = "undefined" !== typeof EU.ResizeObserver ? EU.ResizeObserver : JU
+    const eu = "undefined" !== typeof Qu.ResizeObserver ? Qu.ResizeObserver : ku
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

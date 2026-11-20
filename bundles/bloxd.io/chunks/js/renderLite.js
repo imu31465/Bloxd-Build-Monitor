@@ -1,62 +1,62 @@
 export const id = 48;
 export const ids = [48];
 export const modules = {
-  42650: (UU, RU, gU) => {
-    gU.d(RU, {
-      startRenderLite: () => JU
+  42891: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      startRenderLite: () => ku
     });
-    var tU = gU(3372),
-      pU = gU(603),
-      EU = gU(131),
-      PU = gU(4456),
-      TU = gU(40116),
-      qU = gU(4449),
-      KU = gU(40166),
-      cU = gU(39971),
-      GU = gU(40331),
-      jU = gU(2624),
-      uU = gU(4179);
-    const CU = new Map([
+    var Eu = yu(3510),
+      Ku = yu(624),
+      Qu = yu(143),
+      mu = yu(4564),
+      Ju = yu(40311),
+      Nu = yu(4562),
+      Xu = yu(40361),
+      Vu = yu(40173),
+      ru = yu(40523),
+      Bu = yu(2707),
+      xu = yu(4275);
+    const Su = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class hU {
+    class pu {
       constructor() {
         this.failuresLogged = 0, this.summary = void 0, this.summaries = 0, this.summaryAtMs = -1 / 0
       }
-      failures(UU) {
-        const RU = UU ? UU.split(" ") : [],
-          gU = RU.slice(this.failuresLogged).map((UU => {
-            var RU;
-            const [gU, tU] = UU.split(":"), pU = null !== (RU = CU.get(gU.slice(-1))) && void 0 !== RU ? RU : "";
-            return `gl link failed: program row ${parseInt(gU)}${pU}, read ${tU} ms after issue`
+      failures(uu) {
+        const Ru = uu ? uu.split(" ") : [],
+          yu = Ru.slice(this.failuresLogged).map((uu => {
+            var Ru;
+            const [yu, Eu] = uu.split(":"), Ku = null !== (Ru = Su.get(yu.slice(-1))) && void 0 !== Ru ? Ru : "";
+            return `gl link failed: program row ${parseInt(yu)}${Ku}, read ${Eu} ms after issue`
           }));
-        return this.failuresLogged = RU.length, gU
+        return this.failuresLogged = Ru.length, yu
       }
-      summaryLine(UU, RU) {
-        const gU = this.summaries < 10 ? 6e4 : 6e5;
-        return void 0 === UU || UU === this.summary || RU - this.summaryAtMs < gU ? null : (this.summary = UU, this.summaries++, this.summaryAtMs = RU, `gl links: ${UU}`)
+      summaryLine(uu, Ru) {
+        const yu = this.summaries < 10 ? 6e4 : 6e5;
+        return void 0 === uu || uu === this.summary || Ru - this.summaryAtMs < yu ? null : (this.summary = uu, this.summaries++, this.summaryAtMs = Ru, `gl links: ${uu}`)
       }
     }
-    var QU = gU(4356);
-    class eU {
+    var Tu = yu(4473);
+    class Wu {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(UU, RU, gU) {
-        if ("none" !== RU && (this.frames++, "paced" === RU && this.paced++, "drawn" === RU)) {
-          if (this.drawn++, this.renderUs += gU, this.renderUsMax = Math.max(this.renderUsMax, gU), null !== this.lastDrawnMs) {
-            const RU = UU - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, RU), RU >= 50 && this.longGaps++
+      frame(uu, Ru, yu) {
+        if ("none" !== Ru && (this.frames++, "paced" === Ru && this.paced++, "drawn" === Ru)) {
+          if (this.drawn++, this.renderUs += yu, this.renderUsMax = Math.max(this.renderUsMax, yu), null !== this.lastDrawnMs) {
+            const Ru = uu - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, Ru), Ru >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = UU
+          this.lastDrawnMs = uu
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const UU = {
+        const uu = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -65,228 +65,228 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, UU
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, uu
       }
     }
 
-    function WU(UU) {
-      return (UU / 1048576).toFixed(1)
+    function ju(uu) {
+      return (uu / 1048576).toFixed(1)
     }
-    class fU {
+    class Hu {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(UU) {
-        return this.logged >= 20 || this.seen.has(UU) ? (this.unlogged++, null) : (this.seen.add(UU), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${UU}` : UU)
+      admit(uu) {
+        return this.logged >= 20 || this.seen.has(uu) ? (this.unlogged++, null) : (this.seen.add(uu), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${uu}` : uu)
       }
       takeUnlogged() {
-        const UU = this.unlogged;
-        return this.unlogged = 0, UU
+        const uu = this.unlogged;
+        return this.unlogged = 0, uu
       }
     }
 
-    function xU(UU) {
-      (0, jU.h)("renderlite", function(UU) {
-        let RU = 0,
-          gU = 0,
-          tU = 0;
-        for (const EU of UU) {
-          var pU;
-          const PU = null !== (pU = EU.codePointAt(0)) && void 0 !== pU ? pU : 0;
-          if (RU += PU < 128 ? 1 : PU < 2048 ? 2 : PU < 65536 ? 3 : 4, RU > 375) return `${UU.slice(0,tU)}...`;
-          gU += EU.length, RU <= 372 && (tU = gU)
+    function du(uu) {
+      (0, Bu.i)("renderlite", function(uu) {
+        let Ru = 0,
+          yu = 0,
+          Eu = 0;
+        for (const Qu of uu) {
+          var Ku;
+          const mu = null !== (Ku = Qu.codePointAt(0)) && void 0 !== Ku ? Ku : 0;
+          if (Ru += mu < 128 ? 1 : mu < 2048 ? 2 : mu < 65536 ? 3 : 4, Ru > 375) return `${uu.slice(0,Eu)}...`;
+          yu += Qu.length, Ru <= 372 && (Eu = yu)
         }
-        return UU
-      }(UU))
+        return uu
+      }(uu))
     }
-    class mU {
-      constructor(UU) {
-        this.frames = new eU, this.events = new fU, this.links = new hU, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.visibilityChanged = () => {
+    class bu {
+      constructor(uu) {
+        this.frames = new Wu, this.events = new Hu, this.links = new pu, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.visibilityChanged = () => {
           this.restartWindow(performance.now())
-        }, this.HG = () => {
-          var UU, RU;
-          const gU = this.session,
-            pU = (0, cU.i)(),
-            EU = performance.now();
-          if (this.logLinks(EU), null === gU || gU.isStopped || !0 !== (null === pU || void 0 === pU ? void 0 : pU.isCoreRunning)) return void this.restartWindow(EU);
+        }, this.sr = () => {
+          var uu, Ru;
+          const yu = this.session,
+            Ku = (0, Vu.i)(),
+            Qu = performance.now();
+          if (this.logLinks(Qu), null === yu || yu.isStopped || !0 !== (null === Ku || void 0 === Ku ? void 0 : Ku.isCoreRunning)) return void this.restartWindow(Qu);
           if (document.hidden) return;
-          if (EU - this.windowStart < 2500) return;
-          if (! function(UU) {
-              return UU < 12 || (UU - 12) % 3 === 2
+          if (Qu - this.windowStart < 2500) return;
+          if (! function(uu) {
+              return uu < 12 || (uu - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const qU = gU.headerWord(PU.A.GpuTimed),
-            GU = gU.headerWord(PU.A.GpuFrameUs),
-            jU = this.sampled === gU ? {
-              timed: qU - this.gpuTimed >>> 0,
-              us: GU - this.gpuUs >>> 0
+          const Nu = yu.headerWord(mu.E.GpuTimed),
+            ru = yu.headerWord(mu.E.GpuFrameUs),
+            Bu = this.sampled === yu ? {
+              timed: Nu - this.gpuTimed >>> 0,
+              us: ru - this.gpuUs >>> 0
             } : null;
-          this.sampled = gU, this.gpuTimed = qU, this.gpuUs = GU;
-          const uU = null !== (UU = null === (RU = (0, KU.E)((0, tU.A)())) || void 0 === RU ? void 0 : RU.YgU()) && void 0 !== UU ? UU : 0;
-          xU(function(UU, RU) {
-            const gU = RU.windowMs / 1e3,
-              tU = [`${Math.round(gU)}s: ${UU.drawn} drawn (${(UU.drawn/gU).toFixed(1)}/s), ${UU.paced} paced, ${UU.frames-UU.drawn-UU.paced} skipped`, `gap max ${Math.round(UU.gapMaxMs)} ms, ${UU.longGaps} over 50 ms`, `render cpu ${UU.drawn?(UU.renderUs/UU.drawn/1e3).toFixed(2):"-"} ms mean, ${(UU.renderUsMax/1e3).toFixed(1)} max`];
-            null !== RU.gpu && tU.push(`gpu ${RU.gpu.timed?(RU.gpu.us/RU.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${RU.gpu.timed} timed`);
-            const pU = RU.census;
-            tU.push(null === pU ? "draws none yet" : `draws ${(0,TU.c)(pU)} (terrain ${pU.terrainOpaque}+${pU.terrainTransparent}, pack ${pU.terrainPack}, meshes ${pU.regular+pU.thin+pU.line+pU.text}, sky ${pU.earthSky+pU.skyMeshes}, particles ${pU.particles})`);
-            const EU = null === RU.gpuBytesBefore ? "" : ` (${RU.gpuBytes>=RU.gpuBytesBefore?"+":"-"}${WU(Math.abs(RU.gpuBytes-RU.gpuBytesBefore))})`;
-            return tU.push(`gpu mem ${WU(RU.gpuBytes)} MiB${EU}`), tU.push(`pending ${RU.pending}`, "terrain " + (RU.terrainDrawn ? "drawn" : "not drawn yet")), RU.eventsUnlogged > 0 && tU.push(`${RU.eventsUnlogged} events unlogged`), tU.join("; ")
+          this.sampled = yu, this.gpuTimed = Nu, this.gpuUs = ru;
+          const xu = null !== (uu = null === (Ru = (0, Xu.F)((0, Eu.w)())) || void 0 === Ru ? void 0 : Ru.dEu()) && void 0 !== uu ? uu : 0;
+          du(function(uu, Ru) {
+            const yu = Ru.windowMs / 1e3,
+              Eu = [`${Math.round(yu)}s: ${uu.drawn} drawn (${(uu.drawn/yu).toFixed(1)}/s), ${uu.paced} paced, ${uu.frames-uu.drawn-uu.paced} skipped`, `gap max ${Math.round(uu.gapMaxMs)} ms, ${uu.longGaps} over 50 ms`, `render cpu ${uu.drawn?(uu.renderUs/uu.drawn/1e3).toFixed(2):"-"} ms mean, ${(uu.renderUsMax/1e3).toFixed(1)} max`];
+            null !== Ru.gpu && Eu.push(`gpu ${Ru.gpu.timed?(Ru.gpu.us/Ru.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${Ru.gpu.timed} timed`);
+            const Ku = Ru.census;
+            Eu.push(null === Ku ? "draws none yet" : `draws ${(0,Ju.b)(Ku)} (terrain ${Ku.terrainOpaque}+${Ku.terrainTransparent}, pack ${Ku.terrainPack}, meshes ${Ku.regular+Ku.thin+Ku.line+Ku.text}, sky ${Ku.earthSky+Ku.skyMeshes}, particles ${Ku.particles})`);
+            const Qu = null === Ru.gpuBytesBefore ? "" : ` (${Ru.gpuBytes>=Ru.gpuBytesBefore?"+":"-"}${ju(Math.abs(Ru.gpuBytes-Ru.gpuBytesBefore))})`;
+            return Eu.push(`gpu mem ${ju(Ru.gpuBytes)} MiB${Qu}`), Eu.push(`pending ${Ru.pending}`, "terrain " + (Ru.terrainDrawn ? "drawn" : "not drawn yet")), Ru.eventsUnlogged > 0 && Eu.push(`${Ru.eventsUnlogged} events unlogged`), Eu.join("; ")
           }(this.frames.take(), {
-            windowMs: EU - this.windowStart,
-            gpu: jU,
-            census: (0, TU.f)(pU.api),
-            gpuBytes: uU,
+            windowMs: Qu - this.windowStart,
+            gpu: Bu,
+            census: (0, Ju.d)(Ku.api),
+            gpuBytes: xu,
             gpuBytesBefore: this.gpuBytes,
-            pending: gU.headerWord(PU.A.RenderPending),
-            terrainDrawn: 0 !== (gU.headerWord(PU.A.LoadSteps) & PU.G.TerrainDrawn),
+            pending: yu.headerWord(mu.E.RenderPending),
+            terrainDrawn: 0 !== (yu.headerWord(mu.E.LoadSteps) & mu.L.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = uU, this.windowStart = EU
-        }, xU(`${(0,QU.e)(UU)}; client ${pU.n.client} (${pU.n.reason})`), setInterval(this.HG, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = xu, this.windowStart = Qu
+        }, du(`${(0,Tu.e)(uu)}; client ${Ku.i.client} (${Ku.i.reason})`), setInterval(this.sr, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(UU, RU, gU) {
-        this.session = UU, this.frames.frame(RU, gU, "drawn" === gU ? UU.headerWord(PU.A.RenderUs) : 0)
+      frame(uu, Ru, yu) {
+        this.session = uu, this.frames.frame(Ru, yu, "drawn" === yu ? uu.headerWord(mu.E.RenderUs) : 0)
       }
-      coreErrors(UU) {
+      coreErrors(uu) {
         for (const {
-            code: tU,
-            detail: pU
+            code: Eu,
+            detail: Ku
           }
-          of UU) {
-          var RU, gU;
-          if (tU >= PU.e.RenderDeviceLost && tU <= PU.e.RenderSerialLinks) this.event(`render error ${(0,qU.de)(tU)}${null!==(RU=null===(gU=(0,GU.d)(tU,pU))||void 0===gU?void 0:gU.words)&&void 0!==RU?RU:""} (detail ${pU})`)
+          of uu) {
+          var Ru, yu;
+          if (Eu >= mu.g.RenderDeviceLost && Eu <= mu.g.RenderSerialLinks) this.event(`render error ${(0,Nu.Ud)(Eu)}${null!==(Ru=null===(yu=(0,ru.b)(Eu,Ku))||void 0===yu?void 0:yu.words)&&void 0!==Ru?Ru:""} (detail ${Ku})`)
         }
       }
-      reload(UU, RU, gU, tU) {
-        this.event(`render reload: ${UU?"webgpu":"gl"} ${gU}, losses ${RU}${void 0===tU?"":`: ${tU}`}`)
+      reload(uu, Ru, yu, Eu) {
+        this.event(`render reload: ${uu?"webgpu":"gl"} ${yu}, losses ${Ru}${void 0===Eu?"":`: ${Eu}`}`)
       }
-      crashed(UU) {
+      crashed(uu) {
         let {
-          site: RU,
-          error: gU,
-          header: tU
-        } = UU;
-        const pU = null !== tU && 0 !== tU.lastError ? `, last error ${(0,qU.de)(tU.lastError)} (detail ${tU.lastErrorDetail})` : "",
-          EU = gU instanceof Error ? `${gU.name}: ${gU.message}` : null === gU || void 0 === gU ? "" : String(gU);
-        this.event(`core stopped at ${RU}${pU}${EU&&`: ${EU}`}`)
+          site: Ru,
+          error: yu,
+          header: Eu
+        } = uu;
+        const Ku = null !== Eu && 0 !== Eu.lastError ? `, last error ${(0,Nu.Ud)(Eu.lastError)} (detail ${Eu.lastErrorDetail})` : "",
+          Qu = yu instanceof Error ? `${yu.name}: ${yu.message}` : null === yu || void 0 === yu ? "" : String(yu);
+        this.event(`core stopped at ${Ru}${Ku}${Qu&&`: ${Qu}`}`)
       }
-      event(UU) {
-        const RU = this.events.admit(UU);
-        null !== RU && xU(RU)
+      event(uu) {
+        const Ru = this.events.admit(uu);
+        null !== Ru && du(Ru)
       }
-      restartWindow(UU) {
-        this.frames.restart(), this.windowStart = UU;
-        const RU = this.session;
-        null === RU || RU.isStopped ? this.sampled = null : (this.sampled = RU, this.gpuTimed = RU.headerWord(PU.A.GpuTimed), this.gpuUs = RU.headerWord(PU.A.GpuFrameUs))
+      restartWindow(uu) {
+        this.frames.restart(), this.windowStart = uu;
+        const Ru = this.session;
+        null === Ru || Ru.isStopped ? this.sampled = null : (this.sampled = Ru, this.gpuTimed = Ru.headerWord(mu.E.GpuTimed), this.gpuUs = Ru.headerWord(mu.E.GpuFrameUs))
       }
-      logLinks(UU) {
-        const RU = window.bloxdRenderDebug;
-        for (const tU of this.links.failures(null === RU || void 0 === RU ? void 0 : RU.linkFailures)) this.event(tU);
-        const gU = this.links.summaryLine(null === RU || void 0 === RU ? void 0 : RU.links, UU);
-        null !== gU && xU(gU)
+      logLinks(uu) {
+        const Ru = window.bloxdRenderDebug;
+        for (const Eu of this.links.failures(null === Ru || void 0 === Ru ? void 0 : Ru.linkFailures)) this.event(Eu);
+        const yu = this.links.summaryLine(null === Ru || void 0 === Ru ? void 0 : Ru.links, uu);
+        null !== yu && du(yu)
       }
       logRenderer() {
-        var UU, RU;
+        var uu, Ru;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const gU = window.bloxdRenderDebug,
-          tU = (0, EU.n)(),
-          pU = void 0 === (null === gU || void 0 === gU ? void 0 : gU.parallelCompile) ? "" : `; parallel compile ${gU.parallelCompile}`;
-        xU(`renderer gl ${tU?`${tU.vendor} / ${tU.renderer}`:"(not read)"}; terrain fetch ${null!==(UU=null===gU||void 0===gU?void 0:gU.fetch)&&void 0!==UU?UU:"(not noted)"}${pU}`), xU(`renderer caps ${null!==(RU=null===gU||void 0===gU?void 0:gU.caps)&&void 0!==RU?RU:"(not noted)"}`)
+        const yu = window.bloxdRenderDebug,
+          Eu = (0, Qu.j)(),
+          Ku = void 0 === (null === yu || void 0 === yu ? void 0 : yu.parallelCompile) ? "" : `; parallel compile ${yu.parallelCompile}`;
+        du(`renderer gl ${Eu?`${Eu.vendor} / ${Eu.renderer}`:"(not read)"}; terrain fetch ${null!==(uu=null===yu||void 0===yu?void 0:yu.fetch)&&void 0!==uu?uu:"(not noted)"}${Ku}`), du(`renderer caps ${null!==(Ru=null===yu||void 0===yu?void 0:yu.caps)&&void 0!==Ru?Ru:"(not noted)"}`)
       }
     }
-    let IU = null;
+    let Cu = null;
 
-    function JU(UU) {
-      return (0, uU.g)(), IU ??= new mU(UU), IU
+    function ku(uu) {
+      return (0, xu.f)(), Cu ??= new bu(uu), Cu
     }
   },
-  4356: (UU, RU, gU) => {
-    function tU(UU) {
-      if (null === UU) return "backend: none picked (no renderer build)";
-      const RU = UU.adapter ? `${UU.adapter.vendor}/${UU.adapter.architecture}` : "none";
-      return `backend ${UU.backend}: reason ${UU.reason}, source ${UU.source}, adapter ${RU}`
+  4473: (uu, Ru, yu) => {
+    function Eu(uu) {
+      if (null === uu) return "backend: none picked (no renderer build)";
+      const Ru = uu.adapter ? `${uu.adapter.vendor}/${uu.adapter.architecture}` : "none";
+      return `backend ${uu.backend}: reason ${uu.reason}, source ${uu.source}, adapter ${Ru}`
     }
-    gU.d(RU, {
-      e: () => tU
+    yu.d(Ru, {
+      e: () => Eu
     })
   },
-  40116: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => PU,
-      f: () => EU,
-      g: () => TU
+  40311: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => mu,
+      d: () => Qu,
+      f: () => Ju
     });
-    var tU = gU(39955),
-      pU = gU(39971);
+    var Eu = yu(40160),
+      Ku = yu(40173);
 
-    function EU(UU) {
-      if (UU.queries.drawCensus() < tU.zb.BYTES) return null;
-      const RU = UU.memoryData(UU.scratch(), tU.zb.BYTES, 4, "the draw census");
-      return null === RU ? null : {
-        terrainOpaque: tU.zb.terrainOpaque(RU, 0),
-        terrainTransparent: tU.zb.terrainTransparent(RU, 0),
-        terrainPack: tU.zb.terrainPack(RU, 0),
-        earthSky: tU.zb.earthSky(RU, 0),
-        skyMeshes: tU.zb.skyMeshes(RU, 0),
-        regular: tU.zb.regular(RU, 0),
-        thin: tU.zb.thin(RU, 0),
-        line: tU.zb.line(RU, 0),
-        text: tU.zb.text(RU, 0),
-        particles: tU.zb.particles(RU, 0)
+    function Qu(uu) {
+      if (uu.queries.drawCensus() < Eu.Hb.BYTES) return null;
+      const Ru = uu.memoryData(uu.scratch(), Eu.Hb.BYTES, 4, "the draw census");
+      return null === Ru ? null : {
+        terrainOpaque: Eu.Hb.terrainOpaque(Ru, 0),
+        terrainTransparent: Eu.Hb.terrainTransparent(Ru, 0),
+        terrainPack: Eu.Hb.terrainPack(Ru, 0),
+        earthSky: Eu.Hb.earthSky(Ru, 0),
+        skyMeshes: Eu.Hb.skyMeshes(Ru, 0),
+        regular: Eu.Hb.regular(Ru, 0),
+        thin: Eu.Hb.thin(Ru, 0),
+        line: Eu.Hb.line(Ru, 0),
+        text: Eu.Hb.text(Ru, 0),
+        particles: Eu.Hb.particles(Ru, 0)
       }
     }
 
-    function PU(UU) {
+    function mu(uu) {
       const {
-        terrainOpaque: RU,
-        terrainTransparent: gU,
-        earthSky: tU,
-        skyMeshes: pU,
-        regular: EU,
-        thin: PU,
-        line: TU,
-        text: qU,
-        particles: KU
-      } = UU;
-      return RU + gU + tU + pU + EU + PU + TU + qU + KU
+        terrainOpaque: Ru,
+        terrainTransparent: yu,
+        earthSky: Eu,
+        skyMeshes: Ku,
+        regular: Qu,
+        thin: mu,
+        line: Ju,
+        text: Nu,
+        particles: Xu
+      } = uu;
+      return Ru + yu + Eu + Ku + Qu + mu + Ju + Nu + Xu
     }
 
-    function TU() {
-      const UU = (0, pU.i)();
-      return !0 === (null === UU || void 0 === UU ? void 0 : UU.isCoreRunning) ? function(UU) {
-        const RU = EU(UU);
-        if (null === RU) return [];
+    function Ju() {
+      const uu = (0, Ku.i)();
+      return !0 === (null === uu || void 0 === uu ? void 0 : uu.isCoreRunning) ? function(uu) {
+        const Ru = Qu(uu);
+        if (null === Ru) return [];
         const {
-          terrainOpaque: gU,
-          terrainTransparent: tU,
-          terrainPack: pU,
-          earthSky: TU,
-          skyMeshes: qU,
-          regular: KU,
-          thin: cU,
-          line: GU,
-          text: jU,
-          particles: uU
-        } = RU;
+          terrainOpaque: yu,
+          terrainTransparent: Eu,
+          terrainPack: Ku,
+          earthSky: Ju,
+          skyMeshes: Nu,
+          regular: Xu,
+          thin: Vu,
+          line: ru,
+          text: Bu,
+          particles: xu
+        } = Ru;
         return [{
           label: "Drawn",
-          value: `${PU(RU)}`
+          value: `${mu(Ru)}`
         }, {
           label: "Terrain",
-          value: `${gU} opaque / ${tU} transparent (${pU} shader pack)`
+          value: `${yu} opaque / ${Eu} transparent (${Ku} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${KU} / ${cU}`
+          value: `${Xu} / ${Vu}`
         }, {
           label: "Text / Lines",
-          value: `${jU} / ${GU}`
+          value: `${Bu} / ${ru}`
         }, {
           label: "Sky / Particles",
-          value: `${TU+qU} / ${uU}`
+          value: `${Ju+Nu} / ${xu}`
         }]
-      }(UU.api) : []
+      }(uu.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

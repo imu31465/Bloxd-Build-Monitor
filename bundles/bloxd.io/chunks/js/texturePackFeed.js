@@ -1,30 +1,30 @@
 export const id = 51;
 export const ids = [51];
 export const modules = {
-  42668: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      startPageTexturePackFeed: () => PU
+  42914: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      startPageTexturePackFeed: () => mu
     });
-    var tU = gU(1196),
-      pU = gU(34),
-      EU = gU(42658);
+    var Eu = yu(1176),
+      Ku = yu(47),
+      Qu = yu(42910);
 
-    function PU(UU, RU) {
-      const gU = new EU.d({
-        store: pU.g,
-        warn: UU,
-        oneShot: RU,
-        fetchLatest: async UU => {
-          const RU = await fetch(`${tU.clientSideServerUrls.texturePackUrl}/${UU}.json`, {
+    function mu(uu, Ru) {
+      const yu = new Qu.e({
+        store: Ku.f,
+        warn: uu,
+        oneShot: Ru,
+        fetchLatest: async uu => {
+          const Ru = await fetch(`${Eu.clientSideServerUrls.texturePackUrl}/${uu}.json`, {
             cache: "reload"
           });
-          if (!RU.ok) throw new Error(`fetching texture pack ${UU} answered HTTP ${RU.status}`);
-          return await RU.json()
+          if (!Ru.ok) throw new Error(`fetching texture pack ${uu} answered HTTP ${Ru.status}`);
+          return await Ru.json()
         }
       });
-      return (0, EU.f)(gU), gU
+      return (0, Qu.g)(yu), yu
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

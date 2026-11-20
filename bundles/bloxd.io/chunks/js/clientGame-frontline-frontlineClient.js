@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36187: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => uU,
-      e: () => CU,
-      h: () => jU,
-      l: () => GU
+  36436: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => xu,
+      d: () => Su,
+      g: () => Bu,
+      h: () => ru
     });
-    var tU = gU(8982),
-      pU = gU(36191),
-      EU = gU(36197),
-      PU = gU(8340),
-      TU = gU(1410),
-      qU = gU(56),
-      KU = gU(74),
-      cU = gU(1090);
+    var Eu = yu(9048),
+      Ku = yu(36445),
+      Qu = yu(36449),
+      mu = yu(8447),
+      Ju = yu(1400),
+      Nu = yu(64),
+      Xu = yu(80),
+      Vu = yu(1079);
 
-    function GU() {
-      var UU;
-      return (0, TU.h)(pU.e, (0, pU.t)()), (0, cU.jsx)(cU.Fragment, {
-        children: null === (UU = (0, pU.t)()) || void 0 === UU ? void 0 : UU.content
+    function ru() {
+      var uu;
+      return (0, Ju.h)(Ku.c, (0, Ku.o)()), (0, Vu.jsx)(Vu.Fragment, {
+        children: null === (uu = (0, Ku.o)()) || void 0 === uu ? void 0 : uu.content
       })
     }
 
-    function jU(UU) {
-      var RU;
+    function Bu(uu) {
+      var Ru;
       let {
-        show: gU
-      } = UU;
-      (0, TU.h)(pU.e, (0, pU.t)());
-      const KU = null === (RU = (0, pU.t)()) || void 0 === RU ? void 0 : RU.menu;
-      return (0, qU.useEffect)((() => {
-        var UU;
-        gU || (null === KU || void 0 === KU || null === (UU = KU.onClose) || void 0 === UU || UU.call(KU), (0, EU.q)())
-      }), [gU, KU]), (0, qU.useEffect)((() => gU ? (0, PU.f)(EU.w, EU.e) : void 0), [gU]), (0, cU.jsx)(tU.d, {
-        showing: gU,
+        show: yu
+      } = uu;
+      (0, Ju.h)(Ku.c, (0, Ku.o)());
+      const Xu = null === (Ru = (0, Ku.o)()) || void 0 === Ru ? void 0 : Ru.menu;
+      return (0, Nu.useEffect)((() => {
+        var uu;
+        yu || (null === Xu || void 0 === Xu || null === (uu = Xu.onClose) || void 0 === uu || uu.call(Xu), (0, Qu.p)())
+      }), [yu, Xu]), (0, Nu.useEffect)((() => yu ? (0, mu.g)(Qu.v, Qu.d) : void 0), [yu]), (0, Vu.jsx)(Eu.c, {
+        showing: yu,
         globallyUniqueKey: "clientGameMenu",
-        children: null === KU || void 0 === KU ? void 0 : KU.content
+        children: null === Xu || void 0 === Xu ? void 0 : Xu.content
       })
     }
 
-    function uU(UU) {
+    function xu(uu) {
       let {
-        placement: RU = "bottom"
-      } = UU;
-      return (0, cU.jsx)("div", {
-        id: `clientGameHud-${RU}`,
+        placement: Ru = "bottom"
+      } = uu;
+      return (0, Vu.jsx)("div", {
+        id: `clientGameHud-${Ru}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function CU(UU) {
+    function Su(uu) {
       let {
-        children: RU,
-        placement: gU = "bottom"
-      } = UU;
-      const [tU, pU] = (0, qU.useState)(null);
-      return (0, qU.useEffect)((() => {
-        pU(document.getElementById(`clientGameHud-${gU}`))
-      }), [gU]), tU ? (0, KU.createPortal)(RU, tU) : null
+        children: Ru,
+        placement: yu = "bottom"
+      } = uu;
+      const [Eu, Ku] = (0, Nu.useState)(null);
+      return (0, Nu.useEffect)((() => {
+        Ku(document.getElementById(`clientGameHud-${yu}`))
+      }), [yu]), Eu ? (0, Xu.createPortal)(Ru, Eu) : null
     }
   },
-  8982: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU
+  9048: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu
     });
-    var tU = gU(4200),
-      pU = gU(4206);
+    var Eu = yu(4307),
+      Ku = yu(4314);
 
-    function EU(UU) {
+    function Qu(uu) {
       let {
-        children: RU,
-        showing: gU,
-        globallyUniqueKey: EU,
-        alwaysMountChildren: PU = !1,
-        doGameplayStartStopOnShow: TU = !0,
-        keepsMovement: qU = !1
-      } = UU;
-      return (0, pU.e)(!0, gU, EU, qU), (0, tU.c)(TU, gU), gU || PU ? RU : null
+        children: Ru,
+        showing: yu,
+        globallyUniqueKey: Qu,
+        alwaysMountChildren: mu = !1,
+        doGameplayStartStopOnShow: Ju = !0,
+        keepsMovement: Nu = !1
+      } = uu;
+      return (0, Ku.c)(!0, yu, Qu, Nu), (0, Eu.e)(Ju, yu), yu || mu ? Ru : null
     }
   },
-  36280: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU,
-      f: () => PU,
-      i: () => TU,
-      m: () => qU
+  36532: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Qu,
+      c: () => mu,
+      d: () => Ju,
+      g: () => Nu
     });
-    var tU = gU(56),
-      pU = gU(1106);
-    const EU = 8,
-      PU = "InGameHeaderContainer",
-      TU = "TopRightElements";
+    var Eu = yu(64),
+      Ku = yu(1100);
+    const Qu = 8,
+      mu = "InGameHeaderContainer",
+      Ju = "TopRightElements";
 
-    function qU(UU) {
-      const [RU] = (0, pU.d)(), [gU, qU] = (0, tU.useState)(!1);
-      return (0, tU.useLayoutEffect)((() => {
-        if (!UU) return;
-        const RU = document.querySelector(`.${PU}`),
-          gU = document.querySelector(`.${TU}`),
-          tU = () => {
-            const tU = UU.getBoundingClientRect(),
-              pU = RU ? RU.getBoundingClientRect().right : 0,
-              PU = gU ? gU.getBoundingClientRect().left : window.innerWidth,
-              TU = tU.left < pU + EU,
-              KU = tU.right > PU - EU;
-            qU(TU || KU)
+    function Nu(uu) {
+      const [Ru] = (0, Ku.d)(), [yu, Nu] = (0, Eu.useState)(!1);
+      return (0, Eu.useLayoutEffect)((() => {
+        if (!uu) return;
+        const Ru = document.querySelector(`.${mu}`),
+          yu = document.querySelector(`.${Ju}`),
+          Eu = () => {
+            const Eu = uu.getBoundingClientRect(),
+              Ku = Ru ? Ru.getBoundingClientRect().right : 0,
+              mu = yu ? yu.getBoundingClientRect().left : window.innerWidth,
+              Ju = Eu.left < Ku + Qu,
+              Xu = Eu.right > mu - Qu;
+            Nu(Ju || Xu)
           };
-        tU();
-        const pU = new ResizeObserver(tU);
-        return pU.observe(UU), RU && pU.observe(RU), gU && pU.observe(gU), () => {
-          pU.disconnect()
+        Eu();
+        const Ku = new ResizeObserver(Eu);
+        return Ku.observe(uu), Ru && Ku.observe(Ru), yu && Ku.observe(yu), () => {
+          Ku.disconnect()
         }
-      }), [UU, RU]), gU
+      }), [uu, Ru]), yu
     }
   },
-  36275: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => pU
+  36524: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Ku
     });
-    const tU = [{
+    const Eu = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function pU(UU, RU, gU) {
-      const pU = Math.abs(UU - RU),
-        EU = Date.now() - gU;
-      for (const PU of tU)
-        if (UU < PU.maxDist) return pU >= PU.hardUpdateDist || EU > PU.timeBetweenSoftChecks && pU >= PU.softUpdateDist;
+    function Ku(uu, Ru, yu) {
+      const Ku = Math.abs(uu - Ru),
+        Qu = Date.now() - yu;
+      for (const mu of Eu)
+        if (uu < mu.maxDist) return Ku >= mu.hardUpdateDist || Qu > mu.timeBetweenSoftChecks && Ku >= mu.softUpdateDist;
       return !1
     }
   },
-  8340: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => EU,
-      f: () => pU
+  8447: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      g: () => Ku
     });
-    let tU = null;
-    const pU = function(UU) {
-        const RU = {
-          cycle: UU,
+    let Eu = null;
+    const Ku = function(uu) {
+        const Ru = {
+          cycle: uu,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return tU = RU, () => {
-          tU === RU && (tU = null)
+        return Eu = Ru, () => {
+          Eu === Ru && (Eu = null)
         }
       },
-      EU = () => {
-        var UU;
-        return null !== (UU = tU) && void 0 !== UU && UU.canCycle() ? tU.cycle : null
+      Qu = () => {
+        var uu;
+        return null !== (uu = Eu) && void 0 !== uu && uu.canCycle() ? Eu.cycle : null
       }
   },
-  38083: (UU, RU, gU) => {
-    function tU(UU, RU, gU) {
-      var tU;
+  38303: (uu, Ru, yu) => {
+    function Eu(uu, Ru, yu) {
+      var Eu;
       const {
-        width: pU,
-        height: EU
-      } = gU, PU = null !== (tU = UU.text) && void 0 !== tU ? tU : UU, TU = (PU.x / 100 - .5) * pU, qU = (PU.y / 100 - .5) * EU, KU = pU / 2 - RU.x;
-      if (null !== UU.text && Math.abs(TU) <= KU && qU >= RU.top - EU / 2 && qU <= EU / 2 - RU.bottom) return {
-        x: PU.x,
-        y: PU.y
+        width: Ku,
+        height: Qu
+      } = yu, mu = null !== (Eu = uu.text) && void 0 !== Eu ? Eu : uu, Ju = (mu.x / 100 - .5) * Ku, Nu = (mu.y / 100 - .5) * Qu, Xu = Ku / 2 - Ru.x;
+      if (null !== uu.text && Math.abs(Ju) <= Xu && Nu >= Ru.top - Qu / 2 && Nu <= Qu / 2 - Ru.bottom) return {
+        x: mu.x,
+        y: mu.y
       };
-      const cU = Math.min(0 === TU ? 1 / 0 : KU / Math.abs(TU), qU > 0 ? (EU / 2 - RU.bottom) / qU : qU < 0 ? (RU.top - EU / 2) / qU : 1 / 0);
-      return !Number.isFinite(cU) || cU < 0 ? {
+      const Vu = Math.min(0 === Ju ? 1 / 0 : Xu / Math.abs(Ju), Nu > 0 ? (Qu / 2 - Ru.bottom) / Nu : Nu < 0 ? (Ru.top - Qu / 2) / Nu : 1 / 0);
+      return !Number.isFinite(Vu) || Vu < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + TU * cU / pU * 100,
-        y: 50 + qU * cU / EU * 100
+        x: 50 + Ju * Vu / Ku * 100,
+        y: 50 + Nu * Vu / Qu * 100
       }
     }
-    gU.d(RU, {
-      e: () => tU
+    yu.d(Ru, {
+      d: () => Eu
     })
   },
-  36197: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU,
-      e: () => hU,
-      g: () => QU,
-      j: () => TU,
-      n: () => jU,
-      q: () => eU,
-      r: () => GU,
-      t: () => fU,
-      w: () => CU,
-      x: () => WU
+  36449: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      d: () => pu,
+      h: () => Tu,
+      k: () => Ju,
+      o: () => Bu,
+      p: () => Wu,
+      q: () => ru,
+      u: () => Hu,
+      v: () => Su,
+      w: () => ju
     });
-    var tU = gU(21),
-      pU = gU(24);
-    const EU = "clientGameInventoryButtonsChanged",
-      PU = new Map;
+    var Eu = yu(27),
+      Ku = yu(34);
+    const Qu = "clientGameInventoryButtonsChanged",
+      mu = new Map;
 
-    function TU() {
-      return [...PU.values()].sort(((UU, RU) => {
-        var gU, tU;
-        return (null !== (gU = UU.order) && void 0 !== gU ? gU : 0) - (null !== (tU = RU.order) && void 0 !== tU ? tU : 0)
+    function Ju() {
+      return [...mu.values()].sort(((uu, Ru) => {
+        var yu, Eu;
+        return (null !== (yu = uu.order) && void 0 !== yu ? yu : 0) - (null !== (Eu = Ru.order) && void 0 !== Eu ? Eu : 0)
       }))
     }
-    let qU = null;
+    let Nu = null;
 
-    function KU(UU) {
-      qU = UU
+    function Xu(uu) {
+      Nu = uu
     }
-    let cU = !1;
+    let Vu = !1;
 
-    function GU(UU) {
-      cU = !0;
+    function ru(uu) {
+      Vu = !0;
       try {
-        UU.onClick()
+        uu.onClick()
       } finally {
-        cU = !1
+        Vu = !1
       }
-      UU.panel && "clientGame" === tU.b.get("openInGameMenuName") && KU(UU.id)
+      uu.panel && "clientGame" === Eu.d.get("openInGameMenuName") && Xu(uu.id)
     }
 
-    function jU() {
-      return cU
+    function Bu() {
+      return Vu
     }
 
-    function uU() {
-      return TU().filter((UU => UU.panel && !UU.disabled))
+    function xu() {
+      return Ju().filter((uu => uu.panel && !uu.disabled))
     }
 
-    function CU(UU) {
-      const RU = uU(),
-        gU = RU.findIndex((UU => UU.id === qU));
-      return !(gU < 0 || RU.length < 2) && (GU(RU[(gU + UU + RU.length) % RU.length]), !0)
+    function Su(uu) {
+      const Ru = xu(),
+        yu = Ru.findIndex((uu => uu.id === Nu));
+      return !(yu < 0 || Ru.length < 2) && (ru(Ru[(yu + uu + Ru.length) % Ru.length]), !0)
     }
 
-    function hU() {
-      return null !== qU && uU().length > 1
+    function pu() {
+      return null !== Nu && xu().length > 1
     }
 
-    function QU() {
-      KU(null)
+    function Tu() {
+      Xu(null)
     }
 
-    function eU() {
-      "inventory" !== tU.b.get("openInGameMenuName") && KU(null)
+    function Wu() {
+      "inventory" !== Eu.d.get("openInGameMenuName") && Xu(null)
     }
 
-    function WU() {
-      const UU = qU;
-      return KU(null), UU
+    function ju() {
+      const uu = Nu;
+      return Xu(null), uu
     }
 
-    function fU(UU) {
-      return PU.set(UU.id, UU), pU.p.yh(EU, TU(), !0), () => {
-        PU.get(UU.id) === UU && (PU.delete(UU.id), pU.p.yh(EU, TU()))
+    function Hu(uu) {
+      return mu.set(uu.id, uu), Ku.k.Op(Qu, Ju(), !0), () => {
+        mu.get(uu.id) === uu && (mu.delete(uu.id), Ku.k.Op(Qu, Ju()))
       }
     }
   },
-  36191: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => TU,
-      h: () => QU,
-      l: () => eU,
-      p: () => jU,
-      t: () => KU,
-      w: () => hU,
-      x: () => uU,
-      y: () => cU
+  36445: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      f: () => Tu,
+      i: () => Wu,
+      m: () => Bu,
+      o: () => Xu,
+      q: () => pu,
+      u: () => xu,
+      w: () => Vu
     });
-    var tU = gU(21),
-      pU = gU(24),
-      EU = gU(1287),
-      PU = gU(36197);
-    const TU = "clientGameUiChanged";
-    let qU = null;
+    var Eu = yu(27),
+      Ku = yu(34),
+      Qu = yu(1250),
+      mu = yu(36449);
+    const Ju = "clientGameUiChanged";
+    let Nu = null;
 
-    function KU() {
-      return qU
+    function Xu() {
+      return Nu
     }
 
-    function cU(UU, RU) {
-      const gU = {
-        content: UU,
-        menu: RU
+    function Vu(uu, Ru) {
+      const yu = {
+        content: uu,
+        menu: Ru
       };
-      return qU = gU, pU.p.yh(TU, qU, !0), () => {
-        qU === gU && (qU = null, CU = !1, QU(), pU.p.yh(TU, null))
+      return Nu = yu, Ku.k.Op(Ju, Nu, !0), () => {
+        Nu === yu && (Nu = null, Su = !1, Tu(), Ku.k.Op(Ju, null))
       }
     }
-    let GU = null;
+    let ru = null;
 
-    function jU() {
-      return GU
+    function Bu() {
+      return ru
     }
 
-    function uU(UU) {
-      return GU = UU, () => {
-        GU === UU && (GU = null)
+    function xu(uu) {
+      return ru = uu, () => {
+        ru === uu && (ru = null)
       }
     }
-    let CU = !1;
+    let Su = !1;
 
-    function hU() {
-      const UU = tU.b.get("openInGameMenuName");
-      "clientGame" !== UU && (CU = "inventory" === UU), (0, PU.n)() || (0, PU.g)(), (0, EU.o)(EU.c), tU.b.set({
+    function pu() {
+      const uu = Eu.d.get("openInGameMenuName");
+      "clientGame" !== uu && (Su = "inventory" === uu), (0, mu.o)() || (0, mu.h)(), (0, Qu.o)(Qu.b), Eu.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function QU() {
-      WU(!1)
+    function Tu() {
+      ju(!1)
     }
 
-    function eU() {
-      WU(CU)
+    function Wu() {
+      ju(Su)
     }
 
-    function WU(UU) {
-      "clientGame" === tU.b.get("openInGameMenuName") && tU.b.set({
-        openInGameMenuName: UU ? "inventory" : null
-      }), UU || (0, PU.g)(), CU = !1
+    function ju(uu) {
+      "clientGame" === Eu.d.get("openInGameMenuName") && Eu.d.set({
+        openInGameMenuName: uu ? "inventory" : null
+      }), uu || (0, mu.h)(), Su = !1
     }
   },
-  38955: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => QR
+  39143: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => TR
     });
-    const tU = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var pU = gU(56),
-      EU = gU(36191),
-      PU = gU(36554),
-      TU = gU(36203),
-      qU = gU(1637),
-      KU = gU(24);
-    const cU = {
+    const Eu = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var Ku = yu(64),
+      Qu = yu(36445),
+      mu = yu(36788),
+      Ju = yu(36457),
+      Nu = yu(1661),
+      Xu = yu(34);
+    const Vu = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const GU = 32;
+    const ru = 32;
 
-    function jU(UU, RU, gU, tU) {
+    function Bu(uu, Ru, yu, Eu) {
       return {
         tag: "line",
         attrs: {
-          x1: UU,
-          y1: RU,
-          x2: gU,
-          y2: tU,
+          x1: uu,
+          y1: Ru,
+          x2: yu,
+          y2: Eu,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function uU(UU) {
+    function xu(uu) {
       return {
         tag: "circle",
         attrs: {
-          cx: GU,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GU,
-          r: UU,
+          cx: ru,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ru,
+          r: uu,
           class: "Fill"
         }
       }
     }
 
-    function CU(UU, RU) {
+    function Su(uu, Ru) {
       return {
         tag: "path",
         attrs: {
-          d: UU,
-          "stroke-width": RU
+          d: uu,
+          "stroke-width": Ru
         }
       }
     }
 
-    function hU(UU, RU, gU) {
+    function pu(uu, Ru, yu) {
       return {
         tag: "circle",
         attrs: {
-          cx: GU,
-          cy: GU,
-          r: UU,
-          "stroke-width": RU,
-          class: gU
+          cx: ru,
+          cy: ru,
+          r: uu,
+          "stroke-width": Ru,
+          class: yu
         }
       }
     }
 
-    function QU(UU, RU, gU) {
+    function Tu(uu, Ru, yu) {
       return {
         tag: "text",
         attrs: {
-          x: UU,
-          y: RU,
+          x: uu,
+          y: Ru,
           class: "Fill Label"
         },
-        text: gU
+        text: yu
       }
     }
-    const eU = {
-      pistol: UU => [jU(GU, GU - UU - 5, GU, GU - UU), jU(GU - UU - 5, GU, GU - UU, GU), jU(GU + UU, GU, GU + UU + 5, GU), uU(1.4)],
-      rifle: UU => [jU(GU, GU - UU - 8, GU, GU - UU), jU(GU, GU + UU, GU, GU + UU + 8), jU(GU - UU - 8, GU, GU - UU, GU), jU(GU + UU, GU, GU + UU + 8, GU), uU(1)],
-      smg: UU => {
-        const RU = Math.PI / 2,
-          gU = [];
-        for (let PU = 0; PU < 4; PU++) gU.push((pU = PU * RU + .35, EU = (PU + 1) * RU - .35, CU(`M${GU+(tU=6+UU)*Math.cos(pU)} ${GU+tU*Math.sin(pU)} A${tU} ${tU} 0 0 1 ${GU+tU*Math.cos(EU)} ${GU+tU*Math.sin(EU)}`, 2)));
-        var tU, pU, EU;
-        return [...gU, uU(1.4)]
+    const Wu = {
+      pistol: uu => [Bu(ru, ru - uu - 5, ru, ru - uu), Bu(ru - uu - 5, ru, ru - uu, ru), Bu(ru + uu, ru, ru + uu + 5, ru), xu(1.4)],
+      rifle: uu => [Bu(ru, ru - uu - 8, ru, ru - uu), Bu(ru, ru + uu, ru, ru + uu + 8), Bu(ru - uu - 8, ru, ru - uu, ru), Bu(ru + uu, ru, ru + uu + 8, ru), xu(1)],
+      smg: uu => {
+        const Ru = Math.PI / 2,
+          yu = [];
+        for (let mu = 0; mu < 4; mu++) yu.push((Ku = mu * Ru + .35, Qu = (mu + 1) * Ru - .35, Su(`M${ru+(Eu=6+uu)*Math.cos(Ku)} ${ru+Eu*Math.sin(Ku)} A${Eu} ${Eu} 0 0 1 ${ru+Eu*Math.cos(Qu)} ${ru+Eu*Math.sin(Qu)}`, 2)));
+        var Eu, Ku, Qu;
+        return [...yu, xu(1.4)]
       },
-      shotgun: UU => [hU(UU, 3, "Ring Outline"), hU(UU, 1.5, "Ring")],
-      marksman: UU => [CU(`M${26-UU/2} ${39+UU/2} L32 33 L${38+UU/2} ${39+UU/2}`, 2), jU(14 - UU, GU, 24 - UU, GU, 1.5), jU(40 + UU, GU, 50 + UU, GU, 1.5), jU(14 - UU, 30, 14 - UU, 34, 1.5), jU(50 + UU, 30, 50 + UU, 34, 1.5)],
-      machineGun: UU => {
-        const RU = 10 + UU,
-          gU = [];
-        for (const [tU, pU] of [
+      shotgun: uu => [pu(uu, 3, "Ring Outline"), pu(uu, 1.5, "Ring")],
+      marksman: uu => [Su(`M${26-uu/2} ${39+uu/2} L32 33 L${38+uu/2} ${39+uu/2}`, 2), Bu(14 - uu, ru, 24 - uu, ru, 1.5), Bu(40 + uu, ru, 50 + uu, ru, 1.5), Bu(14 - uu, 30, 14 - uu, 34, 1.5), Bu(50 + uu, 30, 50 + uu, 34, 1.5)],
+      machineGun: uu => {
+        const Ru = 10 + uu,
+          yu = [];
+        for (const [Eu, Ku] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) gU.push(CU(`M${GU+tU*RU} ${GU+pU*(RU-5)} L${GU+tU*RU} ${GU+pU*RU} L${GU+tU*(RU-5)} ${GU+pU*RU}`, 2));
-        return [...gU, jU(GU, 28, GU, 36, 1.5), jU(28, GU, 36, GU, 1.5)]
+          ]) yu.push(Su(`M${ru+Eu*Ru} ${ru+Ku*(Ru-5)} L${ru+Eu*Ru} ${ru+Ku*Ru} L${ru+Eu*(Ru-5)} ${ru+Ku*Ru}`, 2));
+        return [...yu, Bu(ru, 28, ru, 36, 1.5), Bu(28, ru, 36, ru, 1.5)]
       },
-      launcher: () => [jU(14, 30, 50, 30, 1.5), jU(GU, 24, GU, 52, 1.5), jU(28, 38, 36, 38, 1.5), jU(29, 44, 35, 44, 1.5), jU(30, 50, 34, 50, 1.5), QU(38, 40, "100"), QU(37, 46, "200"), uU(1.4, 30)],
-      melee: () => [CU("M32 26 L38 32 L32 38 L26 32 Z", 1.5), uU(1.2)],
-      throwable: () => [uU(1.6)]
+      launcher: () => [Bu(14, 30, 50, 30, 1.5), Bu(ru, 24, ru, 52, 1.5), Bu(28, 38, 36, 38, 1.5), Bu(29, 44, 35, 44, 1.5), Bu(30, 50, 34, 50, 1.5), Tu(38, 40, "100"), Tu(37, 46, "200"), xu(1.4, 30)],
+      melee: () => [Su("M32 26 L38 32 L32 38 L26 32 Z", 1.5), xu(1.2)],
+      throwable: () => [xu(1.6)]
     };
 
-    function WU(UU) {
+    function ju(uu) {
       let {
-        tag: RU,
-        attrs: gU,
-        text: tU
-      } = UU, pU = `<${RU}`;
-      for (const [EU, PU] of Object.entries(gU)) pU += ` ${EU}="${PU}"`;
-      return void 0 === tU ? `${pU}/>` : `${pU}>${tU}</${RU}>`
+        tag: Ru,
+        attrs: yu,
+        text: Eu
+      } = uu, Ku = `<${Ru}`;
+      for (const [Qu, mu] of Object.entries(yu)) Ku += ` ${Qu}="${mu}"`;
+      return void 0 === Eu ? `${Ku}/>` : `${Ku}>${Eu}</${Ru}>`
     }
-    class fU {
-      constructor(UU, RU) {
-        this.api = UU, this.localPlayerId = RU, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = UU => {
-          this.element = UU, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, UU && !this.enabled && (UU.style.display = "none")
+    class Hu {
+      constructor(uu, Ru) {
+        this.api = uu, this.localPlayerId = Ru, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = uu => {
+          this.element = uu, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, uu && !this.enabled && (uu.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, qU.getRemInPx)()))
-        }, this.tokens = [KU.p.subscribe("aimingOverlay", (UU => {
-          this.sniperOverlay = "sniper" === UU
-        })), KU.p.subscribe("mouseState", (UU => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, Nu.getRemInPx)()))
+        }, this.tokens = [Xu.k.subscribe("aimingOverlay", (uu => {
+          this.sniperOverlay = "sniper" === uu
+        })), Xu.k.subscribe("mouseState", (uu => {
           let {
-            isDown: RU
-          } = UU;
-          this.mouseDown = RU
+            isDown: Ru
+          } = uu;
+          this.mouseDown = Ru
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      GJ(UU) {
-        UU !== this.enabled && (this.enabled = UU, this.drawnVisible = null, UU || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      tC(uu) {
+        uu !== this.enabled && (this.enabled = uu, this.drawnVisible = null, uu || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(UU, RU) {
-        var gU, tU;
+      frame(uu, Ru) {
+        var yu, Eu;
         if (!this.enabled) return;
         const {
-          api: pU
-        } = this, EU = pU.isAlive(this.localPlayerId) && null !== (gU = null === (tU = pU.QRU(this.localPlayerId)) || void 0 === tU ? void 0 : tU.name) && void 0 !== gU ? gU : null, PU = (TU = EU) && cU[TU] || null;
-        var TU;
-        if (this.setOwnsCrosshair(null !== PU), !this.element) return;
-        const qU = pU.getHeldGunInaccuracy(),
-          KU = null !== qU,
-          GU = null !== PU && !this.sniperOverlay && pU.isCrosshairShown();
-        if (GU !== this.drawnVisible && (this.drawnVisible = GU, this.element.style.display = GU ? "block" : "none"), !GU) return;
-        const jU = KU ? function(UU) {
-            return "launcher" === UU || "melee" === UU || "throwable" === UU ? "none" : "shotgun" === UU ? "cone" : "offset"
-          }(PU) : "none",
-          uU = null !== qU && void 0 !== qU ? qU : 0;
-        "cone" === jU ? this.drawCone(PU, this.coneRadiusVh(uU, RU) * this.gapPerVh, UU) : (this.coneDrawn = !1, this.draw(PU, "none" === jU ? 2 : this.offsetGap(uU)));
-        const CU = !KU && this.mouseDown;
-        CU !== this.drawnPressed && (this.drawnPressed = CU, this.element.classList.toggle("Pressed", CU))
+          api: Ku
+        } = this, Qu = Ku.isAlive(this.localPlayerId) && null !== (yu = null === (Eu = Ku.Xyu(this.localPlayerId)) || void 0 === Eu ? void 0 : Eu.name) && void 0 !== yu ? yu : null, mu = (Ju = Qu) && Vu[Ju] || null;
+        var Ju;
+        if (this.setOwnsCrosshair(null !== mu), !this.element) return;
+        const Nu = Ku.getHeldGunInaccuracy(),
+          Xu = null !== Nu,
+          ru = null !== mu && !this.sniperOverlay && Ku.isCrosshairShown();
+        if (ru !== this.drawnVisible && (this.drawnVisible = ru, this.element.style.display = ru ? "block" : "none"), !ru) return;
+        const Bu = Xu ? function(uu) {
+            return "launcher" === uu || "melee" === uu || "throwable" === uu ? "none" : "shotgun" === uu ? "cone" : "offset"
+          }(mu) : "none",
+          xu = null !== Nu && void 0 !== Nu ? Nu : 0;
+        "cone" === Bu ? this.drawCone(mu, this.coneRadiusVh(xu, Ru) * this.gapPerVh, uu) : (this.coneDrawn = !1, this.draw(mu, "none" === Bu ? 2 : this.offsetGap(xu)));
+        const Su = !Xu && this.mouseDown;
+        Su !== this.drawnPressed && (this.drawnPressed = Su, this.element.classList.toggle("Pressed", Su))
       }
       dispose() {
-        for (const UU of this.tokens) KU.p.unsubscribe(UU);
+        for (const uu of this.tokens) Xu.k.unsubscribe(uu);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(UU, RU) {
-        var gU, tU;
-        UU !== this.drawnFamily ? (this.drawnFamily = UU, this.drawnGap = RU, this.element.innerHTML = function(UU, RU) {
-          return `<svg viewBox="0 0 64 64">${eU[UU](RU).map(WU).join("")}</svg>`
-        }(UU, RU), this.shapes = Array.from(null !== (gU = null === (tU = this.element.firstElementChild) || void 0 === tU ? void 0 : tU.children) && void 0 !== gU ? gU : [])) : RU !== this.drawnGap && (this.drawnGap = RU, function(UU, RU, gU) {
-          const tU = eU[RU](gU);
-          for (let pU = 0; pU < tU.length; pU++)
-            for (const [RU, gU] of Object.entries(tU[pU].attrs)) {
-              const tU = String(gU);
-              UU[pU].getAttribute(RU) !== tU && UU[pU].setAttribute(RU, tU)
+      draw(uu, Ru) {
+        var yu, Eu;
+        uu !== this.drawnFamily ? (this.drawnFamily = uu, this.drawnGap = Ru, this.element.innerHTML = function(uu, Ru) {
+          return `<svg viewBox="0 0 64 64">${Wu[uu](Ru).map(ju).join("")}</svg>`
+        }(uu, Ru), this.shapes = Array.from(null !== (yu = null === (Eu = this.element.firstElementChild) || void 0 === Eu ? void 0 : Eu.children) && void 0 !== yu ? yu : [])) : Ru !== this.drawnGap && (this.drawnGap = Ru, function(uu, Ru, yu) {
+          const Eu = Wu[Ru](yu);
+          for (let Ku = 0; Ku < Eu.length; Ku++)
+            for (const [Ru, yu] of Object.entries(Eu[Ku].attrs)) {
+              const Eu = String(yu);
+              uu[Ku].getAttribute(Ru) !== Eu && uu[Ku].setAttribute(Ru, Eu)
             }
-        }(this.shapes, UU, RU))
+        }(this.shapes, uu, Ru))
       }
-      drawCone(UU, RU, gU) {
-        UU === this.drawnFamily && this.coneDrawn ? this.shownRadius += (RU - this.shownRadius) * (1 - Math.exp(-gU / 80)) : this.shownRadius = RU, this.coneDrawn = !0, this.draw(UU, Math.round(4 * this.shownRadius) / 4)
+      drawCone(uu, Ru, yu) {
+        uu === this.drawnFamily && this.coneDrawn ? this.shownRadius += (Ru - this.shownRadius) * (1 - Math.exp(-yu / 80)) : this.shownRadius = Ru, this.coneDrawn = !0, this.draw(uu, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(UU, RU) {
-        if (!(RU > 0)) return 1;
-        const gU = UU * PU.h / 2;
-        return Math.max(50 * Math.tan(gU) / RU, 1)
+      coneRadiusVh(uu, Ru) {
+        if (!(Ru > 0)) return 1;
+        const yu = uu * mu.g / 2;
+        return Math.max(50 * Math.tan(yu) / Ru, 1)
       }
-      offsetGap(UU) {
-        const RU = 2 + ((0, TU.d)(UU) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * RU) / 2)
+      offsetGap(uu) {
+        const Ru = 2 + ((0, Ju.e)(uu) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * Ru) / 2)
       }
-      setOwnsCrosshair(UU) {
-        UU !== this.ownsCrosshair && (this.ownsCrosshair = UU, document.body.classList.toggle("FrontlineCustomCrosshair", UU))
+      setOwnsCrosshair(uu) {
+        uu !== this.ownsCrosshair && (this.ownsCrosshair = uu, document.body.classList.toggle("FrontlineCustomCrosshair", uu))
       }
     }
-    const xU = "FrontlineCustomDamage",
-      mU = .45,
-      IU = .2;
-    class JU {
-      constructor(UU, RU) {
-        this.api = UU, this.localPlayerId = RU, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const du = "FrontlineCustomDamage",
+      bu = .45,
+      Cu = .2;
+    class ku {
+      constructor(uu, Ru) {
+        this.api = uu, this.localPlayerId = Ru, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.Zp = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = UU => {
-          var RU, gU;
-          this.clearHits(), this.root = UU, this.lowLayer = null !== (RU = null === UU || void 0 === UU ? void 0 : UU.querySelector(".FrontlineDamageLow")) && void 0 !== RU ? RU : null, this.arcLayer = null !== (gU = null === UU || void 0 === UU ? void 0 : UU.querySelector(".FrontlineDamageArcs")) && void 0 !== gU ? gU : null, this.showRoot(), this.drawLow()
-        }, this.token = KU.p.subscribe("damagedByOtherPlayer", (UU => {
+        }, this.maxHealth = null, this.kK = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = uu => {
+          var Ru, yu;
+          this.clearHits(), this.root = uu, this.lowLayer = null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.querySelector(".FrontlineDamageLow")) && void 0 !== Ru ? Ru : null, this.arcLayer = null !== (yu = null === uu || void 0 === uu ? void 0 : uu.querySelector(".FrontlineDamageArcs")) && void 0 !== yu ? yu : null, this.showRoot(), this.drawLow()
+        }, this.token = Xu.k.subscribe("damagedByOtherPlayer", (uu => {
           let {
-            direction: RU,
-            np: gU
-          } = UU;
-          this.onHurt(RU, gU)
-        })), this.syncHealth(), document.body.classList.add(xU)
+            direction: Ru,
+            bK: yu
+          } = uu;
+          this.onHurt(Ru, yu)
+        })), this.syncHealth(), document.body.classList.add(du)
       }
-      GJ(UU) {
-        UU !== this.enabled && (this.enabled = UU, document.body.classList.toggle(xU, UU), UU || this.clearHits(), this.showRoot())
+      tC(uu) {
+        uu !== this.enabled && (this.enabled = uu, document.body.classList.toggle(du, uu), uu || this.clearHits(), this.showRoot())
       }
-      frame(UU) {
-        this.syncHealth(), this.cameraHeading = UU;
-        for (const RU of this.arcs) this.drawArcAngle(RU)
+      frame(uu) {
+        this.syncHealth(), this.cameraHeading = uu;
+        for (const Ru of this.arcs) this.drawArcAngle(Ru)
       }
       dispose() {
-        KU.p.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(xU)
+        Xu.k.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(du)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const UU = this.api.getClientOption(this.localPlayerId, "_health"),
-          RU = this.api.getClientOption(this.localPlayerId, "_shield"),
-          gU = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(UU, this.readHealth) && Object.is(RU, this.readShield) && Object.is(gU, this.readMaxHealth)) return;
-        if (this.readHealth = UU, this.readShield = RU, this.readMaxHealth = gU, null === UU || void 0 === UU || !gU) return this.lastHealthPool = null, this.maxHealth = null, this.Zp = 1, this.dead = !1, void this.drawLow();
-        const tU = UU + (null !== RU && void 0 !== RU ? RU : 0);
-        if (null !== this.lastHealthPool && tU < this.lastHealthPool) {
-          const UU = performance.now(),
-            RU = (this.lastHealthPool - tU) / gU;
-          this.lastDrop = UU - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + RU,
+        const uu = this.api.getClientOption(this.localPlayerId, "_health"),
+          Ru = this.api.getClientOption(this.localPlayerId, "_shield"),
+          yu = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(uu, this.readHealth) && Object.is(Ru, this.readShield) && Object.is(yu, this.readMaxHealth)) return;
+        if (this.readHealth = uu, this.readShield = Ru, this.readMaxHealth = yu, null === uu || void 0 === uu || !yu) return this.lastHealthPool = null, this.maxHealth = null, this.kK = 1, this.dead = !1, void this.drawLow();
+        const Eu = uu + (null !== Ru && void 0 !== Ru ? Ru : 0);
+        if (null !== this.lastHealthPool && Eu < this.lastHealthPool) {
+          const uu = performance.now(),
+            Ru = (this.lastHealthPool - Eu) / yu;
+          this.lastDrop = uu - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + Ru,
             at: this.lastDrop.at
           } : {
-            frac: RU,
-            at: UU
+            frac: Ru,
+            at: uu
           }
         }
-        this.dead = UU <= 0, this.dead && this.clearHits(), this.lastHealthPool = tU, this.maxHealth = gU, this.Zp = UU > 0 ? UU / gU : 1, this.drawLow()
+        this.dead = uu <= 0, this.dead && this.clearHits(), this.lastHealthPool = Eu, this.maxHealth = yu, this.kK = uu > 0 ? uu / yu : 1, this.drawLow()
       }
-      onHurt(UU, RU) {
+      onHurt(uu, Ru) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const gU = Math.min(1, this.takeDamageFrac(RU) / .3);
-        null !== UU && this.showArc(UU, gU), this.flashEdge(null === UU ? null : UU - this.cameraHeading, .4 + .6 * gU)
+        const yu = Math.min(1, this.takeDamageFrac(Ru) / .3);
+        null !== uu && this.showArc(uu, yu), this.flashEdge(null === uu ? null : uu - this.cameraHeading, .4 + .6 * yu)
       }
-      takeDamageFrac(UU) {
-        if (void 0 !== UU && this.maxHealth) return UU / this.maxHealth;
+      takeDamageFrac(uu) {
+        if (void 0 !== uu && this.maxHealth) return uu / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: RU
+          frac: Ru
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, RU
+        }, Ru
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const UU = nU((mU - this.Zp) / .25),
-          RU = nU((IU - this.Zp) / .15000000000000002),
-          gU = this.Zp < mU;
-        this.lowLayer.classList.toggle("Active", gU), this.lowLayer.classList.toggle("Critical", this.Zp < IU), this.lowLayer.style.opacity = String(gU ? .55 + .3 * UU + .15 * RU : 0)
+        const uu = Au((bu - this.kK) / .25),
+          Ru = Au((Cu - this.kK) / .15000000000000002),
+          yu = this.kK < bu;
+        this.lowLayer.classList.toggle("Active", yu), this.lowLayer.classList.toggle("Critical", this.kK < Cu), this.lowLayer.style.opacity = String(yu ? .55 + .3 * uu + .15 * Ru : 0)
       }
-      showArc(UU, RU) {
-        var gU, tU;
+      showArc(uu, Ru) {
+        var yu, Eu;
         if (!this.arcLayer) return;
-        let pU = this.arcs.find((RU => wU(RU.direction, UU) < .6));
-        if (!pU) {
-          const RU = document.createElement("div");
-          RU.className = "FrontlineDamageArc", RU.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(RU), pU = {
-            element: RU,
-            direction: UU,
+        let Ku = this.arcs.find((Ru => eu(Ru.direction, uu) < .6));
+        if (!Ku) {
+          const Ru = document.createElement("div");
+          Ru.className = "FrontlineDamageArc", Ru.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(Ru), Ku = {
+            element: Ru,
+            direction: uu,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(pU)
+          }, this.arcs.push(Ku)
         }
-        pU.direction = UU, this.drawArcAngle(pU);
-        const EU = pU.fade ? Number(getComputedStyle(pU.element).opacity) : 0;
-        null === (gU = pU.fade) || void 0 === gU || gU.cancel(), null === (tU = pU.pop) || void 0 === tU || tU.cancel(), pU.element.style.opacity = "1";
-        const PU = pU.element.animate([{
-          opacity: EU
+        Ku.direction = uu, this.drawArcAngle(Ku);
+        const Qu = Ku.fade ? Number(getComputedStyle(Ku.element).opacity) : 0;
+        null === (yu = Ku.fade) || void 0 === yu || yu.cancel(), null === (Eu = Ku.pop) || void 0 === Eu || Eu.cancel(), Ku.element.style.opacity = "1";
+        const mu = Ku.element.animate([{
+          opacity: Qu
         }, {
           opacity: 1
         }], 144);
-        pU.fade = PU, pU.pop = pU.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * RU
+        Ku.fade = mu, Ku.pop = Ku.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * Ru
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const TU = pU;
-        PU.onfinish = () => {
-          if (TU.fade !== PU) return;
-          const UU = TU.element.animate([{
+        const Ju = Ku;
+        mu.onfinish = () => {
+          if (Ju.fade !== mu) return;
+          const uu = Ju.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          UU.startTime = PU.startTime, TU.fade = UU, UU.onfinish = () => {
-            TU.fade === UU && (TU.element.remove(), bU(this.arcs, TU))
+          uu.startTime = mu.startTime, Ju.fade = uu, uu.onfinish = () => {
+            Ju.fade === uu && (Ju.element.remove(), Du(this.arcs, Ju))
           }
         }
       }
-      drawArcAngle(UU) {
-        const RU = UU.direction - this.cameraHeading;
-        (null === UU.drawnAngle || Math.abs(RU - UU.drawnAngle) > .005) && (UU.drawnAngle = RU, UU.element.style.rotate = `${RU}rad`)
+      drawArcAngle(uu) {
+        const Ru = uu.direction - this.cameraHeading;
+        (null === uu.drawnAngle || Math.abs(Ru - uu.drawnAngle) > .005) && (uu.drawnAngle = Ru, uu.element.style.rotate = `${Ru}rad`)
       }
-      flashEdge(UU, RU) {
-        var gU, tU, pU;
+      flashEdge(uu, Ru) {
+        var yu, Eu, Ku;
         if (!this.root) return;
-        let EU = this.flashes.find((RU => null === RU.angle || null === UU ? RU.angle === UU : wU(RU.angle, UU) < .5));
-        if (!EU) {
-          const RU = document.createElement("div");
-          RU.className = "FrontlineDamageFlash";
-          const gU = RU.appendChild(document.createElement("div"));
-          gU.className = "FrontlineDamageFlashGlow", this.root.insertBefore(RU, this.arcLayer), EU = {
-            element: RU,
-            glow: gU,
-            angle: UU,
+        let Qu = this.flashes.find((Ru => null === Ru.angle || null === uu ? Ru.angle === uu : eu(Ru.angle, uu) < .5));
+        if (!Qu) {
+          const Ru = document.createElement("div");
+          Ru.className = "FrontlineDamageFlash";
+          const yu = Ru.appendChild(document.createElement("div"));
+          yu.className = "FrontlineDamageFlashGlow", this.root.insertBefore(Ru, this.arcLayer), Qu = {
+            element: Ru,
+            glow: yu,
+            angle: uu,
             level: 0,
             animation: null
-          }, this.flashes.push(EU)
+          }, this.flashes.push(Qu)
         }
-        const PU = null === (gU = EU.animation) || void 0 === gU || null === (tU = gU.effect) || void 0 === tU ? void 0 : tU.getComputedTiming().progress,
-          TU = null === PU || void 0 === PU ? 0 : EU.level * (1 - PU);
-        EU.level = Math.min(1, Math.max(RU, TU + .6 * RU)), EU.angle = UU;
+        const mu = null === (yu = Qu.animation) || void 0 === yu || null === (Eu = yu.effect) || void 0 === Eu ? void 0 : Eu.getComputedTiming().progress,
+          Ju = null === mu || void 0 === mu ? 0 : Qu.level * (1 - mu);
+        Qu.level = Math.min(1, Math.max(Ru, Ju + .6 * Ru)), Qu.angle = uu;
         const {
-          x: qU,
-          y: KU,
-          rx: cU,
-          ry: GU
-        } = function(UU, RU) {
-          const gU = window.innerWidth,
-            tU = window.innerHeight;
-          if (null === UU) return {
-            x: gU / 2,
-            y: tU / 2,
+          x: Nu,
+          y: Xu,
+          rx: Vu,
+          ry: ru
+        } = function(uu, Ru) {
+          const yu = window.innerWidth,
+            Eu = window.innerHeight;
+          if (null === uu) return {
+            x: yu / 2,
+            y: Eu / 2,
             rx: 0,
             ry: 0
           };
-          const pU = Math.sin(UU),
-            EU = -Math.cos(UU),
-            PU = gU / 2 / Math.max(1e-6, Math.abs(pU)),
-            TU = tU / 2 / Math.max(1e-6, Math.abs(EU)),
-            qU = Math.min(PU, TU),
-            KU = Math.round(gU / 2 + pU * qU),
-            cU = Math.round(tU / 2 + EU * qU),
-            GU = tU / 100 * (.85 + .25 * RU),
-            jU = PU <= TU,
-            uU = Math.round((jU ? 30 : 74) * GU),
-            CU = Math.round((jU ? 58 : 26) * GU);
+          const Ku = Math.sin(uu),
+            Qu = -Math.cos(uu),
+            mu = yu / 2 / Math.max(1e-6, Math.abs(Ku)),
+            Ju = Eu / 2 / Math.max(1e-6, Math.abs(Qu)),
+            Nu = Math.min(mu, Ju),
+            Xu = Math.round(yu / 2 + Ku * Nu),
+            Vu = Math.round(Eu / 2 + Qu * Nu),
+            ru = Eu / 100 * (.85 + .25 * Ru),
+            Bu = mu <= Ju,
+            xu = Math.round((Bu ? 30 : 74) * ru),
+            Su = Math.round((Bu ? 58 : 26) * ru);
           return {
-            x: KU,
-            y: cU,
-            rx: uU,
-            ry: CU
+            x: Xu,
+            y: Vu,
+            rx: xu,
+            ry: Su
           }
-        }(UU, EU.level), {
-          style: jU
-        } = EU.glow;
-        EU.glow.classList.toggle("Everywhere", null === UU), jU.setProperty("--glowX", `${qU}px`), jU.setProperty("--glowY", `${KU}px`), jU.setProperty("--glowRx", `${cU}px`), jU.setProperty("--glowRy", `${GU}px`), EU.element.style.transformOrigin = `${qU}px ${KU}px`, null === (pU = EU.animation) || void 0 === pU || pU.cancel();
-        const uU = EU.element.animate([{
+        }(uu, Qu.level), {
+          style: Bu
+        } = Qu.glow;
+        Qu.glow.classList.toggle("Everywhere", null === uu), Bu.setProperty("--glowX", `${Nu}px`), Bu.setProperty("--glowY", `${Xu}px`), Bu.setProperty("--glowRx", `${Vu}px`), Bu.setProperty("--glowRy", `${ru}px`), Qu.element.style.transformOrigin = `${Nu}px ${Xu}px`, null === (Ku = Qu.animation) || void 0 === Ku || Ku.cancel();
+        const xu = Qu.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: EU.level,
+          opacity: Qu.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * EU.level,
+          opacity: .8 * Qu.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * EU.level
+          duration: 520 + 180 * Qu.level
         });
-        EU.animation = uU;
-        const CU = EU;
-        uU.onfinish = () => {
-          CU.animation === uU && (CU.element.remove(), bU(this.flashes, CU))
+        Qu.animation = xu;
+        const Su = Qu;
+        xu.onfinish = () => {
+          Su.animation === xu && (Su.element.remove(), Du(this.flashes, Su))
         }
       }
       clearHits() {
-        for (const tU of this.arcs) {
-          var UU, RU;
-          null === (UU = tU.fade) || void 0 === UU || UU.cancel(), tU.fade = null, null === (RU = tU.pop) || void 0 === RU || RU.cancel(), tU.element.remove()
+        for (const Eu of this.arcs) {
+          var uu, Ru;
+          null === (uu = Eu.fade) || void 0 === uu || uu.cancel(), Eu.fade = null, null === (Ru = Eu.pop) || void 0 === Ru || Ru.cancel(), Eu.element.remove()
         }
         this.arcs.length = 0;
-        for (const tU of this.flashes) {
-          var gU;
-          null === (gU = tU.animation) || void 0 === gU || gU.cancel(), tU.element.remove()
+        for (const Eu of this.flashes) {
+          var yu;
+          null === (yu = Eu.animation) || void 0 === yu || yu.cancel(), Eu.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function wU(UU, RU) {
-      return Math.abs(Math.atan2(Math.sin(UU - RU), Math.cos(UU - RU)))
+    function eu(uu, Ru) {
+      return Math.abs(Math.atan2(Math.sin(uu - Ru), Math.cos(uu - Ru)))
     }
 
-    function nU(UU) {
-      return Math.max(0, Math.min(1, UU))
+    function Au(uu) {
+      return Math.max(0, Math.min(1, uu))
     }
 
-    function bU(UU, RU) {
-      const gU = UU.indexOf(RU); - 1 !== gU && UU.splice(gU, 1)
+    function Du(uu, Ru) {
+      const yu = uu.indexOf(Ru); - 1 !== yu && uu.splice(yu, 1)
     }
-    var oU = gU(1037),
-      ZU = gU.n(oU),
-      aU = gU(36187),
-      YU = gU(36280),
-      BU = gU(1181),
-      VU = gU(1410);
-    const rU = "frontlineHudChanged",
-      XU = "frontlineScoreboardChanged";
-    class vU {
+    var Mu = yu(1035),
+      Iu = yu.n(Mu),
+      Gu = yu(36436),
+      Uu = yu(36532),
+      nu = yu(1170),
+      su = yu(1400);
+    const tu = "frontlineHudChanged",
+      lu = "frontlineScoreboardChanged";
+    class gu {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      qC(UU) {
-        this.wire = UU, KU.p.yh(rU, UU, !0)
+      SS(uu) {
+        this.wire = uu, Xu.k.Op(tu, uu, !0)
       }
-      receiveScoreboard(UU) {
-        let RU = "scoreboard" === UU[0] ? performance.now() + UU[5] : 0;
-        const gU = this.scoreboard.endsAt;
-        0 !== RU && 0 !== gU && Math.abs(RU - gU) < 1e3 && (RU = gU), this.scoreboard = {
-          wire: UU,
-          endsAt: RU
-        }, KU.p.yh(XU, this.scoreboard, !0)
+      receiveScoreboard(uu) {
+        let Ru = "scoreboard" === uu[0] ? performance.now() + uu[5] : 0;
+        const yu = this.scoreboard.endsAt;
+        0 !== Ru && 0 !== yu && Math.abs(Ru - yu) < 1e3 && (Ru = yu), this.scoreboard = {
+          wire: uu,
+          endsAt: Ru
+        }, Xu.k.Op(lu, this.scoreboard, !0)
       }
     }
-    var dU = gU(1090);
-    const HU = {
+    var cu = yu(1079);
+    const Lu = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function SU(UU) {
-      const [RU, gU] = (0, pU.useState)((() => (UU - performance.now()) / 1e3));
-      return (0, pU.useEffect)((() => {
-        if (0 === UU) return;
-        const RU = () => {
-          gU((UU - performance.now()) / 1e3)
+    function zu(uu) {
+      const [Ru, yu] = (0, Ku.useState)((() => (uu - performance.now()) / 1e3));
+      return (0, Ku.useEffect)((() => {
+        if (0 === uu) return;
+        const Ru = () => {
+          yu((uu - performance.now()) / 1e3)
         };
-        RU();
-        const tU = window.setInterval(RU, 250);
+        Ru();
+        const Eu = window.setInterval(Ru, 250);
         return () => {
-          window.clearInterval(tU)
+          window.clearInterval(Eu)
         }
-      }), [UU]), RU
+      }), [uu]), Ru
     }
 
-    function sU(UU) {
+    function Fu(uu) {
       let {
-        className: RU,
-        point: gU
-      } = UU;
-      const [tU, pU, EU, PU, TU, qU] = gU;
-      return (0, dU.jsxs)("div", {
-        className: ZU()(RU, `Owner-${pU||"None"}`, `Leader-${PU||"None"}`, {
-          Contested: TU,
-          Here: qU
+        className: Ru,
+        point: yu
+      } = uu;
+      const [Eu, Ku, Qu, mu, Ju, Nu] = yu;
+      return (0, cu.jsxs)("div", {
+        className: Iu()(Ru, `Owner-${Ku||"None"}`, `Leader-${mu||"None"}`, {
+          Contested: Ju,
+          Here: Nu
         }),
-        children: [(0, dU.jsx)("span", {
+        children: [(0, cu.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: tU
-        }), (0, dU.jsx)("i", {
+          children: Eu
+        }), (0, cu.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${EU}%`
+            width: `${Qu}%`
           }
         })]
       })
     }
-    const yU = (0, pU.memo)((function(UU) {
+    const wu = (0, Ku.memo)((function(uu) {
         let {
-          points: RU,
-          markers: gU
-        } = UU;
+          points: Ru,
+          markers: yu
+        } = uu;
         const {
-          t: tU
-        } = (0, BU.B)();
-        return RU ? (0, dU.jsx)("div", {
+          t: Eu
+        } = (0, nu.E)();
+        return Ru ? (0, cu.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: RU.map((UU => {
-            const [RU, , , , , , , pU] = UU;
-            return (0, dU.jsxs)("div", {
-              ref: gU.bindMarker(RU),
+          children: Ru.map((uu => {
+            const [Ru, , , , , , , Ku] = uu;
+            return (0, cu.jsxs)("div", {
+              ref: yu.bindMarker(Ru),
               className: "FrontlinePointMarker",
-              children: [(0, dU.jsx)(sU, {
+              children: [(0, cu.jsx)(Fu, {
                 className: "FrontlinePointMarkerTile",
-                point: UU
-              }), (0, dU.jsxs)("div", {
+                point: uu
+              }), (0, cu.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [pU && (0, dU.jsx)("span", {
-                  className: ZU()("FrontlinePointMarkerHomeTurf", `Team-${pU}`),
-                  children: tU("frontlineHud:homeTurf", {
-                    team: tU(HU[pU])
+                children: [Ku && (0, cu.jsx)("span", {
+                  className: Iu()("FrontlinePointMarkerHomeTurf", `Team-${Ku}`),
+                  children: Eu("frontlineHud:homeTurf", {
+                    team: Eu(Lu[Ku])
                   })
-                }), (0, dU.jsx)("span", {
+                }), (0, cu.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, RU)
+            }, Ru)
           }))
         }) : null
       })),
-      kU = {
+      Zu = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      FU = {
+      hu = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function iU(UU) {
+    function Pu(uu) {
       let {
-        hud: RU,
-        crosshair: gU,
-        damage: tU,
-        markers: pU
-      } = UU;
-      const EU = (0, VU.h)(rU, RU.getWire()),
-        PU = (0, VU.h)(XU, RU.getScoreboard());
-      return (0, dU.jsxs)(dU.Fragment, {
-        children: [(0, dU.jsx)(AU, {
-          damage: tU
-        }), (0, dU.jsx)(yU, {
-          points: "scoreboard" === PU.wire[0] ? PU.wire[6] : null,
-          markers: pU
-        }), (0, dU.jsx)(MU, {
-          view: PU
-        }), (0, dU.jsx)("div", {
+        hud: Ru,
+        crosshair: yu,
+        damage: Eu,
+        markers: Ku
+      } = uu;
+      const Qu = (0, su.h)(tu, Ru.getWire()),
+        mu = (0, su.h)(lu, Ru.getScoreboard());
+      return (0, cu.jsxs)(cu.Fragment, {
+        children: [(0, cu.jsx)(iu, {
+          damage: Eu
+        }), (0, cu.jsx)(wu, {
+          points: "scoreboard" === mu.wire[0] ? mu.wire[6] : null,
+          markers: Ku
+        }), (0, cu.jsx)(ou, {
+          view: mu
+        }), (0, cu.jsx)("div", {
           className: "FrontlineReticle",
-          ref: gU.bindElement
-        }), (0, dU.jsx)(aU.e, {
-          children: (0, dU.jsx)(zU, {
-            wire: EU
+          ref: yu.bindElement
+        }), (0, cu.jsx)(Gu.d, {
+          children: (0, cu.jsx)(Yu, {
+            wire: Qu
           })
         })]
       })
     }
-    const AU = (0, pU.memo)((function(UU) {
+    const iu = (0, Ku.memo)((function(uu) {
         let {
-          damage: RU
-        } = UU;
-        return (0, dU.jsxs)("div", {
+          damage: Ru
+        } = uu;
+        return (0, cu.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: RU.bindElement,
-          children: [(0, dU.jsx)("div", {
+          ref: Ru.bindElement,
+          children: [(0, cu.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, dU.jsx)("div", {
+            children: (0, cu.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, dU.jsx)("div", {
+          }), (0, cu.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      zU = (0, pU.memo)((function(UU) {
+      Yu = (0, Ku.memo)((function(uu) {
         let {
-          wire: RU
-        } = UU;
+          wire: Ru
+        } = uu;
         const {
-          t: gU
-        } = (0, BU.B)();
-        if ("capture" === RU[0]) {
-          const [, UU, tU, pU, EU, PU, TU] = RU, qU = Math.round(pU / 100 * 24);
-          return (0, dU.jsxs)("div", {
-            className: ZU()("FrontlinePlate", `Status-${tU}`, `Leader-${EU||"None"}`),
-            children: [(0, dU.jsx)(lU, {}), (0, dU.jsxs)("div", {
+          t: yu
+        } = (0, nu.E)();
+        if ("capture" === Ru[0]) {
+          const [, uu, Eu, Ku, Qu, mu, Ju] = Ru, Nu = Math.round(Ku / 100 * 24);
+          return (0, cu.jsxs)("div", {
+            className: Iu()("FrontlinePlate", `Status-${Eu}`, `Leader-${Qu||"None"}`),
+            children: [(0, cu.jsx)(au, {}), (0, cu.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, dU.jsx)("span", {
+              children: [(0, cu.jsx)("span", {
                 className: "FrontlineObjective",
-                children: UU
-              }), (0, dU.jsxs)("div", {
+                children: uu
+              }), (0, cu.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, dU.jsx)("div", {
+                children: [(0, cu.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: gU("frontlineHud:objective", {
-                    point: UU,
-                    friendly: PU,
-                    enemy: TU
+                  children: yu("frontlineHud:objective", {
+                    point: uu,
+                    friendly: mu,
+                    enemy: Ju
                   })
-                }), (0, dU.jsx)("div", {
+                }), (0, cu.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: gU(kU[tU])
+                  children: yu(Zu[Eu])
                 })]
-              }), (0, dU.jsxs)("span", {
+              }), (0, cu.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(pU).padStart(3, "0"), (0, dU.jsx)("small", {
+                children: [String(Ku).padStart(3, "0"), (0, cu.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, dU.jsx)(LU, {
+            }), (0, cu.jsx)(Ou, {
               segments: 24,
-              lit: qU
+              lit: Nu
             })]
           })
         }
-        if ("alert" === RU[0]) {
-          const [, UU, tU, pU] = RU;
-          return (0, dU.jsxs)("div", {
-            className: ZU()("FrontlinePlate", "FrontlineAlert", `Tone-${pU}`),
-            children: [(0, dU.jsx)(lU, {}), (0, dU.jsx)("div", {
+        if ("alert" === Ru[0]) {
+          const [, uu, Eu, Ku] = Ru;
+          return (0, cu.jsxs)("div", {
+            className: Iu()("FrontlinePlate", "FrontlineAlert", `Tone-${Ku}`),
+            children: [(0, cu.jsx)(au, {}), (0, cu.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: gU(FU[UU])
-            }), (0, dU.jsx)("div", {
+              children: yu(hu[uu])
+            }), (0, cu.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: tU
+              children: Eu
             })]
           })
         }
         return null
       })),
-      MU = (0, pU.memo)((function(UU) {
+      ou = (0, Ku.memo)((function(uu) {
         let {
-          view: RU
-        } = UU;
+          view: Ru
+        } = uu;
         const {
-          t: gU
-        } = (0, BU.B)(), tU = (0, pU.useRef)(null), EU = function(UU, RU) {
-          const [gU, tU] = (0, pU.useState)(!1);
-          return (0, pU.useLayoutEffect)((() => {
-            const RU = UU.current;
-            if (!RU) return;
-            const gU = document.querySelector(`.${YU.f}`),
-              pU = document.querySelector(`.${YU.i}`),
-              EU = () => {
-                var UU;
-                const EU = RU.querySelector(".FrontlineTeamTrack"),
-                  PU = (0, qU.getRemInPx)(),
-                  TU = RU.getBoundingClientRect().width - 2 * (null !== (UU = null === EU || void 0 === EU ? void 0 : EU.getBoundingClientRect().width) && void 0 !== UU ? UU : 0),
-                  KU = window.innerWidth / 2,
-                  cU = gU ? gU.getBoundingClientRect().right : 0,
-                  GU = pU ? pU.getBoundingClientRect().left : window.innerWidth,
-                  jU = Math.min(KU - cU, GU - KU) - YU.d - TU / 2,
-                  uU = jU < 6 * PU,
-                  CU = uU ? (window.innerWidth - TU) / 2 - YU.d : jU;
-                RU.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(CU,14*PU)))}px`), tU(uU)
+          t: yu
+        } = (0, nu.E)(), Eu = (0, Ku.useRef)(null), Qu = function(uu, Ru) {
+          const [yu, Eu] = (0, Ku.useState)(!1);
+          return (0, Ku.useLayoutEffect)((() => {
+            const Ru = uu.current;
+            if (!Ru) return;
+            const yu = document.querySelector(`.${Uu.c}`),
+              Ku = document.querySelector(`.${Uu.d}`),
+              Qu = () => {
+                var uu;
+                const Qu = Ru.querySelector(".FrontlineTeamTrack"),
+                  mu = (0, Nu.getRemInPx)(),
+                  Ju = Ru.getBoundingClientRect().width - 2 * (null !== (uu = null === Qu || void 0 === Qu ? void 0 : Qu.getBoundingClientRect().width) && void 0 !== uu ? uu : 0),
+                  Xu = window.innerWidth / 2,
+                  Vu = yu ? yu.getBoundingClientRect().right : 0,
+                  ru = Ku ? Ku.getBoundingClientRect().left : window.innerWidth,
+                  Bu = Math.min(Xu - Vu, ru - Xu) - Uu.b - Ju / 2,
+                  xu = Bu < 6 * mu,
+                  Su = xu ? (window.innerWidth - Ju) / 2 - Uu.b : Bu;
+                Ru.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(Su,14*mu)))}px`), Eu(xu)
               };
-            EU();
-            const PU = new ResizeObserver(EU);
-            for (const UU of [RU, gU, pU]) UU && PU.observe(UU);
-            return window.addEventListener("resize", EU), () => {
-              PU.disconnect(), window.removeEventListener("resize", EU)
+            Qu();
+            const mu = new ResizeObserver(Qu);
+            for (const uu of [Ru, yu, Ku]) uu && mu.observe(uu);
+            return window.addEventListener("resize", Qu), () => {
+              mu.disconnect(), window.removeEventListener("resize", Qu)
             }
-          }), [UU, RU]), gU
-        }(tU, "scoreboard" === RU.wire[0]);
-        if ("scoreboard" !== RU.wire[0]) return null;
-        const [, PU, TU, KU, cU, , GU] = RU.wire, jU = "Red" === PU ? "Blue" : "Red";
-        return (0, dU.jsxs)("div", {
-          className: ZU()("FrontlineScoreboardContainer", {
-            Below: EU
+          }), [uu, Ru]), yu
+        }(Eu, "scoreboard" === Ru.wire[0]);
+        if ("scoreboard" !== Ru.wire[0]) return null;
+        const [, mu, Ju, Xu, Vu, , ru] = Ru.wire, Bu = "Red" === mu ? "Blue" : "Red";
+        return (0, cu.jsxs)("div", {
+          className: Iu()("FrontlineScoreboardContainer", {
+            Below: Qu
           }),
-          children: [(0, dU.jsxs)("div", {
-            ref: tU,
+          children: [(0, cu.jsxs)("div", {
+            ref: Eu,
             className: "FrontlineScoreboard",
-            children: [(0, dU.jsx)(lU, {}), (0, dU.jsx)(DU, {
-              team: PU,
-              tickets: TU,
-              goal: cU,
+            children: [(0, cu.jsx)(au, {}), (0, cu.jsx)(qu, {
+              team: mu,
+              tickets: Ju,
+              goal: Vu,
               side: "Friendly"
-            }), (0, dU.jsx)("div", {
+            }), (0, cu.jsx)("div", {
               className: "FrontlinePoints",
-              children: GU.map((UU => (0, dU.jsx)(sU, {
+              children: ru.map((uu => (0, cu.jsx)(Fu, {
                 className: "FrontlinePoint",
-                point: UU
-              }, UU[0])))
-            }), (0, dU.jsx)(DU, {
-              team: jU,
-              tickets: KU,
-              goal: cU,
+                point: uu
+              }, uu[0])))
+            }), (0, cu.jsx)(qu, {
+              team: Bu,
+              tickets: Xu,
+              goal: Vu,
               side: "Enemy"
             })]
-          }), (0, dU.jsxs)("div", {
+          }), (0, cu.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, dU.jsx)(NU, {
-              endsAt: RU.endsAt
-            }), (0, dU.jsx)("div", {
+            children: [(0, cu.jsx)(vu, {
+              endsAt: Ru.endsAt
+            }), (0, cu.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: gU("frontlineHud:ticketGoal", {
-                goal: cU
+              children: yu("frontlineHud:ticketGoal", {
+                goal: Vu
               })
             })]
           })]
         })
       }));
 
-    function DU(UU) {
+    function qu(uu) {
       let {
-        team: RU,
-        tickets: gU,
-        goal: tU,
-        side: pU
-      } = UU;
+        team: Ru,
+        tickets: yu,
+        goal: Eu,
+        side: Ku
+      } = uu;
       const {
-        t: EU
-      } = (0, BU.B)(), PU = String(gU).padStart(3, "0"), TU = PU.search(/[1-9]/), qU = -1 === TU ? PU : PU.slice(0, TU), KU = Math.min(20, Math.floor(gU / tU * 20));
-      return (0, dU.jsxs)("div", {
-        className: ZU()("FrontlineTeamScore", pU, `Team-${RU}`),
-        children: [(0, dU.jsxs)("div", {
+        t: Qu
+      } = (0, nu.E)(), mu = String(yu).padStart(3, "0"), Ju = mu.search(/[1-9]/), Nu = -1 === Ju ? mu : mu.slice(0, Ju), Xu = Math.min(20, Math.floor(yu / Eu * 20));
+      return (0, cu.jsxs)("div", {
+        className: Iu()("FrontlineTeamScore", Ku, `Team-${Ru}`),
+        children: [(0, cu.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, dU.jsx)("span", {
+          children: [(0, cu.jsx)("span", {
             className: "Lead",
-            children: qU
-          }), -1 !== TU && PU.slice(TU)]
-        }), (0, dU.jsxs)("div", {
+            children: Nu
+          }), -1 !== Ju && mu.slice(Ju)]
+        }), (0, cu.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, dU.jsx)("div", {
+          children: [(0, cu.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: EU(HU[RU])
-          }), (0, dU.jsx)(LU, {
+            children: Qu(Lu[Ru])
+          }), (0, cu.jsx)(Ou, {
             segments: 20,
-            lit: KU
+            lit: Xu
           })]
         })]
       })
     }
 
-    function LU(UU) {
+    function Ou(uu) {
       let {
-        segments: RU,
-        lit: gU
-      } = UU;
-      return (0, dU.jsx)("div", {
+        segments: Ru,
+        lit: yu
+      } = uu;
+      return (0, cu.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: RU
-        }, ((UU, RU) => (0, dU.jsx)("i", {
-          className: ZU()({
-            Lit: RU < gU
+          length: Ru
+        }, ((uu, Ru) => (0, cu.jsx)("i", {
+          className: Iu()({
+            Lit: Ru < yu
           })
-        }, RU)))
+        }, Ru)))
       })
     }
 
-    function NU(UU) {
+    function vu(uu) {
       let {
-        endsAt: RU
-      } = UU;
-      const gU = Math.max(0, Math.ceil(SU(RU)));
-      return (0, dU.jsxs)("div", {
-        className: ZU()("FrontlineClock", {
-          Urgent: gU <= 60
+        endsAt: Ru
+      } = uu;
+      const yu = Math.max(0, Math.ceil(zu(Ru)));
+      return (0, cu.jsxs)("div", {
+        className: Iu()("FrontlineClock", {
+          Urgent: yu <= 60
         }),
-        children: [Math.floor(gU / 60), ":", String(gU % 60).padStart(2, "0")]
+        children: [Math.floor(yu / 60), ":", String(yu % 60).padStart(2, "0")]
       })
     }
 
-    function lU() {
-      return (0, dU.jsxs)(dU.Fragment, {
-        children: [(0, dU.jsx)("i", {
+    function au() {
+      return (0, cu.jsxs)(cu.Fragment, {
+        children: [(0, cu.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, dU.jsx)("i", {
+        }), (0, cu.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var OU = gU(36275),
-      UR = gU(1249),
-      RR = gU(38046),
-      gR = gU(38083);
-    class tR {
-      constructor(UU) {
-        var RU;
-        this.hud = UU, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var fu = yu(36524),
+      uR = yu(1224),
+      RR = yu(38260),
+      yR = yu(38303);
+    class ER {
+      constructor(uu) {
+        var Ru;
+        this.hud = uu, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.pC = !1, this.Xx = () => {
+        }, this.render = null, this.VS = !1, this.fW = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.Xx), null === (RU = window.visualViewport) || void 0 === RU || RU.addEventListener("resize", this.Xx)
+        }, window.addEventListener("resize", this.fW), null === (Ru = window.visualViewport) || void 0 === Ru || Ru.addEventListener("resize", this.fW)
       }
-      bindMarker(UU) {
-        let RU = this.refs.get(UU);
-        return RU || (RU = RU => {
-          var gU;
-          null === (gU = this.markers.get(UU)) || void 0 === gU || gU.stopObserving(), this.markers.delete(UU), RU && !this.pC && this.markers.set(UU, this.mount(RU))
-        }, this.refs.set(UU, RU)), RU
+      bindMarker(uu) {
+        let Ru = this.refs.get(uu);
+        return Ru || (Ru = Ru => {
+          var yu;
+          null === (yu = this.markers.get(uu)) || void 0 === yu || yu.stopObserving(), this.markers.delete(uu), Ru && !this.VS && this.markers.set(uu, this.mount(Ru))
+        }, this.refs.set(uu, Ru)), Ru
       }
-      frame(UU, RU) {
-        this.render = UU;
-        const gU = this.hud.getScoreboard().wire;
-        if ("scoreboard" === gU[0] && 0 !== this.markers.size)
-          for (const [tU, , , , , , pU] of gU[6]) {
-            const UU = this.markers.get(tU);
-            UU && pU && (UU.target ??= [0, 0, 0], UU.target[0] = pU[0], UU.target[1] = pU[1] + 2.5, UU.target[2] = pU[2], this.place(UU), this.pE(UU, RU && Math.hypot(pU[0] - RU[0], pU[1] - RU[1], pU[2] - RU[2])))
+      frame(uu, Ru) {
+        this.render = uu;
+        const yu = this.hud.getScoreboard().wire;
+        if ("scoreboard" === yu[0] && 0 !== this.markers.size)
+          for (const [Eu, , , , , , Ku] of yu[6]) {
+            const uu = this.markers.get(Eu);
+            uu && Ku && (uu.target ??= [0, 0, 0], uu.target[0] = Ku[0], uu.target[1] = Ku[1] + 2.5, uu.target[2] = Ku[2], this.place(uu), this.uQ(uu, Ru && Math.hypot(Ku[0] - Ru[0], Ku[1] - Ru[1], Ku[2] - Ru[2])))
           }
       }
       dispose() {
-        var UU;
-        this.pC = !0, window.removeEventListener("resize", this.Xx), null === (UU = window.visualViewport) || void 0 === UU || UU.removeEventListener("resize", this.Xx);
-        for (const RU of this.markers.values()) RU.stopObserving();
+        var uu;
+        this.VS = !0, window.removeEventListener("resize", this.fW), null === (uu = window.visualViewport) || void 0 === uu || uu.removeEventListener("resize", this.fW);
+        for (const Ru of this.markers.values()) Ru.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(UU) {
+      place(uu) {
         const {
-          render: RU,
-          viewport: gU
+          render: Ru,
+          viewport: yu
         } = this;
-        if (!RU || !UU.target) return;
-        const tU = (50 - RU.screenBandPct.y) / 100 * gU.height,
-          pU = {
-            x: UU.halfSize.width + 8,
-            top: UU.halfSize.height + 8,
-            bottom: UU.halfSize.height + UU.labelsBelow + tU
+        if (!Ru || !uu.target) return;
+        const Eu = (50 - Ru.screenBandPct.y) / 100 * yu.height,
+          Ku = {
+            x: uu.halfSize.width + 8,
+            top: uu.halfSize.height + 8,
+            bottom: uu.halfSize.height + uu.labelsBelow + Eu
           },
-          EU = RU.projectWorldPosToViewport(UU.target),
-          PU = null !== EU && void 0 !== EU ? EU : RU.projectWorldPosToScreenPos(UU.target),
-          TU = (0, gR.e)({
-            x: PU.x,
-            y: PU.y,
-            text: EU
-          }, pU, gU);
-        (0, RR.c)(UU.root, Math.round(100 * TU.x) / 100, Math.round(100 * TU.y) / 100)
+          Qu = Ru.projectWorldPosToViewport(uu.target),
+          mu = null !== Qu && void 0 !== Qu ? Qu : Ru.projectWorldPosToScreenPos(uu.target),
+          Ju = (0, yR.d)({
+            x: mu.x,
+            y: mu.y,
+            text: Qu
+          }, Ku, yu);
+        (0, RR.e)(uu.root, Math.round(100 * Ju.x) / 100, Math.round(100 * Ju.y) / 100)
       }
-      pE(UU, RU) {
-        if (null === RU) return void(null !== UU.metres && (UU.metres = null, UU.distance.textContent = ""));
-        const gU = Date.now();
-        (null === UU.metres || (0, OU.d)(RU, UU.metres, UU.metresShownAt)) && (UU.metres = Math.round(RU), UU.metresShownAt = gU, UU.distance.textContent = (0, BU.x)(UR.g.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(UU.metres)
+      uQ(uu, Ru) {
+        if (null === Ru) return void(null !== uu.metres && (uu.metres = null, uu.distance.textContent = ""));
+        const yu = Date.now();
+        (null === uu.metres || (0, fu.b)(Ru, uu.metres, uu.metresShownAt)) && (uu.metres = Math.round(Ru), uu.metresShownAt = yu, uu.distance.textContent = (0, nu.w)(uR.f.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(uu.metres)
         }))
       }
-      mount(UU) {
-        const RU = {
-            root: UU,
-            distance: UU.querySelector(".FrontlinePointMarkerDistance"),
+      mount(uu) {
+        const Ru = {
+            root: uu,
+            distance: uu.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          gU = UU.querySelector(".FrontlinePointMarkerLabels"),
-          tU = new ResizeObserver((() => {
-            RU.halfSize = {
-              width: Math.max(UU.offsetWidth, gU.offsetWidth) / 2,
-              height: UU.offsetHeight / 2
-            }, RU.labelsBelow = gU.offsetTop + gU.offsetHeight - UU.offsetHeight, this.place(RU)
+          yu = uu.querySelector(".FrontlinePointMarkerLabels"),
+          Eu = new ResizeObserver((() => {
+            Ru.halfSize = {
+              width: Math.max(uu.offsetWidth, yu.offsetWidth) / 2,
+              height: uu.offsetHeight / 2
+            }, Ru.labelsBelow = yu.offsetTop + yu.offsetHeight - uu.offsetHeight, this.place(Ru)
           }));
-        return tU.observe(UU, {
+        return Eu.observe(uu, {
           box: "border-box"
-        }), tU.observe(gU, {
+        }), Eu.observe(yu, {
           box: "border-box"
-        }), RU.stopObserving = () => {
-          tU.disconnect()
-        }, RU
+        }), Ru.stopObserving = () => {
+          Eu.disconnect()
+        }, Ru
       }
     }
-    var pR = gU(6127),
-      ER = gU(2401);
-    const PR = "frontlineRoundEndChanged";
-    class TR {
+    var KR = yu(6234),
+      QR = yu(2481);
+    const mR = "frontlineRoundEndChanged";
+    class JR {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      qC(UU) {
-        const RU = "roundEnd" === UU[0] ? performance.now() + UU[5] : 0;
+      SS(uu) {
+        const Ru = "roundEnd" === uu[0] ? performance.now() + uu[5] : 0;
         this.view = {
-          wire: UU,
+          wire: uu,
           key: this.view.key + 1,
-          endsAt: RU
-        }, KU.p.yh(PR, this.view, !0)
+          endsAt: Ru
+        }, Xu.k.Op(mR, this.view, !0)
       }
     }
-    const qR = (0, pU.lazy)((() => (0, ER.e)(gU.e(191).then((() => gU(41107))), (UU => UU.FrontlineMvpLineup)))),
-      KR = [4800, 4e3, 3200],
-      cR = [1, 0, 2],
-      GR = {
+    const NR = (0, Ku.lazy)((() => (0, QR.d)(yu.e(191).then((() => yu(41334))), (uu => uu.FrontlineMvpLineup)))),
+      XR = [4800, 4e3, 3200],
+      VR = [1, 0, 2],
+      rR = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      jR = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      BR = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function uR(UU) {
+    function xR(uu) {
       let {
-        controller: RU
-      } = UU;
-      const gU = (0, VU.h)(PR, RU.getView()),
-        tU = SU(gU.endsAt);
-      return "roundEnd" !== gU.wire[0] || 1e3 * tU < -2e3 ? null : (0, dU.jsx)(CR, {
-        wire: gU.wire,
-        secondsLeft: Math.max(0, Math.ceil(tU))
-      }, gU.key)
+        controller: Ru
+      } = uu;
+      const yu = (0, su.h)(mR, Ru.getView()),
+        Eu = zu(yu.endsAt);
+      return "roundEnd" !== yu.wire[0] || 1e3 * Eu < -2e3 ? null : (0, cu.jsx)(SR, {
+        wire: yu.wire,
+        secondsLeft: Math.max(0, Math.ceil(Eu))
+      }, yu.key)
     }
-    const CR = (0, pU.memo)((function(UU) {
+    const SR = (0, Ku.memo)((function(uu) {
       let {
-        wire: RU,
-        secondsLeft: gU
-      } = UU;
+        wire: Ru,
+        secondsLeft: yu
+      } = uu;
       const {
-        t: EU
-      } = (0, BU.B)(), [, PU, TU, qU, KU, , cU, GU] = RU, jU = (0, pU.useMemo)((() => cR.filter((UU => UU < GU.length))), [GU]), uU = (0, pU.useMemo)((() => jU.map((UU => {
-        const [, , , , , RU, gU] = GU[UU];
+        t: Qu
+      } = (0, nu.E)(), [, mu, Ju, Nu, Xu, , Vu, ru] = Ru, Bu = (0, Ku.useMemo)((() => VR.filter((uu => uu < ru.length))), [ru]), xu = (0, Ku.useMemo)((() => Bu.map((uu => {
+        const [, , , , , Ru, yu] = ru[uu];
         return {
-          cosmetics: tU.map(((UU, gU) => [UU, RU[gU]])),
-          size: 0 === UU ? 1.15 : .85,
+          cosmetics: Eu.map(((uu, yu) => [uu, Ru[yu]])),
+          size: 0 === uu ? 1.15 : .85,
           heldGun: {
-            name: gU,
-            aimed: 0 === UU
+            name: yu,
+            aimed: 0 === uu
           },
-          showAfterMs: KR[UU]
+          showAfterMs: XR[uu]
         }
-      }))), [GU, jU]);
-      return (0, dU.jsxs)("div", {
-        className: ZU()("FrontlineRoundEnd", `Result-${PU}`),
+      }))), [ru, Bu]);
+      return (0, cu.jsxs)("div", {
+        className: Iu()("FrontlineRoundEnd", `Result-${mu}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, dU.jsx)("div", {
+        children: [(0, cu.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, dU.jsxs)("div", {
+        }), (0, cu.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, dU.jsxs)("div", {
+          children: [(0, cu.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, dU.jsx)("i", {
+            children: [(0, cu.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, dU.jsx)("i", {
+            }), (0, cu.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (CU = EU(GR[PU]), /\p{Script=Arabic}/u.test(CU) ? [CU] : (0, pR.e)(CU)).map(((UU, RU) => (0, dU.jsx)("span", {
+            }), (Su = Qu(rR[mu]), /\p{Script=Arabic}/u.test(Su) ? [Su] : (0, KR.b)(Su)).map(((uu, Ru) => (0, cu.jsx)("span", {
               style: {
-                "--letter": RU
+                "--letter": Ru
               },
-              children: UU
-            }, RU)))]
-          }), (0, dU.jsxs)("div", {
+              children: uu
+            }, Ru)))]
+          }), (0, cu.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [TU && "victory" === PU && (0, dU.jsx)("span", {
+            children: [Ju && "victory" === mu && (0, cu.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: EU("frontlineRoundEnd:comeback")
-            }), (0, dU.jsxs)("span", {
+              children: Qu("frontlineRoundEnd:comeback")
+            }), (0, cu.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, dU.jsx)("b", {
+              children: [(0, cu.jsx)("b", {
                 className: "Friendly",
-                children: qU
-              }), " \u2013 ", (0, dU.jsx)("b", {
+                children: Nu
+              }), " \u2013 ", (0, cu.jsx)("b", {
                 className: "Enemy",
-                children: KU
+                children: Xu
               })]
             })]
           })]
-        }), jU.length > 0 && (0, dU.jsxs)("div", {
+        }), Bu.length > 0 && (0, cu.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": jU.length
+            "--columns": Bu.length
           },
-          children: [(0, dU.jsx)(pU.Suspense, {
+          children: [(0, cu.jsx)(Ku.Suspense, {
             fallback: null,
-            children: (0, dU.jsx)(qR, {
+            children: (0, cu.jsx)(NR, {
               className: "FrontlineRoundEndLineup",
-              players: uU
+              players: xu
             })
-          }), jU.map((UU => (0, dU.jsx)(hR, {
-            mvp: GU[UU],
-            place: UU
-          }, UU)))]
-        }), (0, dU.jsx)("div", {
+          }), Bu.map((uu => (0, cu.jsx)(pR, {
+            mvp: ru[uu],
+            place: uu
+          }, uu)))]
+        }), (0, cu.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: EU("frontlineRoundEnd:nextFront", {
-            map: cU,
-            seconds: String(gU)
+          children: Qu("frontlineRoundEnd:nextFront", {
+            map: Vu,
+            seconds: String(yu)
           })
         })]
       });
-      var CU
+      var Su
     }));
 
-    function hR(UU) {
+    function pR(uu) {
       let {
-        mvp: RU,
-        place: gU
-      } = UU;
+        mvp: Ru,
+        place: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, BU.B)(), [pU, EU, PU, TU, qU] = RU, [KU, cU] = tU(function(UU, RU) {
-        return 1 === RU && "damage" !== UU ? `frontlineRoundEnd:${UU}One` : `frontlineRoundEnd:${UU}`
-      }(PU, TU), {
+        t: Eu
+      } = (0, nu.E)(), [Ku, Qu, mu, Ju, Nu] = Ru, [Xu, Vu] = Eu(function(uu, Ru) {
+        return 1 === Ru && "damage" !== uu ? `frontlineRoundEnd:${uu}One` : `frontlineRoundEnd:${uu}`
+      }(mu, Ju), {
         name: "\0",
-        count: TU.toLocaleString()
+        count: Ju.toLocaleString()
       }).split("\0");
-      return (0, dU.jsxs)("div", {
-        className: ZU()("FrontlineMvpCard", `Place-${gU+1}`, `Team-${EU}`),
+      return (0, cu.jsxs)("div", {
+        className: Iu()("FrontlineMvpCard", `Place-${yu+1}`, `Team-${Qu}`),
         style: {
-          "--revealMs": `${KR[gU]}ms`
+          "--revealMs": `${XR[yu]}ms`
         },
-        children: [(0, dU.jsx)("i", {
+        children: [(0, cu.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, dU.jsx)("i", {
+        }), (0, cu.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, dU.jsx)("div", {
+        }), (0, cu.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: tU(jR[gU])
-        }), (0, dU.jsxs)("div", {
+          children: Eu(BR[yu])
+        }), (0, cu.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [KU, (0, dU.jsx)("span", {
+          children: [Xu, (0, cu.jsx)("span", {
             className: "FrontlineMvpName",
-            children: pU
-          }), cU]
-        }), (0, dU.jsx)("div", {
+            children: Ku
+          }), Vu]
+        }), (0, cu.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: qU
+          children: Nu
         })]
       })
     }
-    const QR = function(UU, RU, gU, tU) {
+    const TR = function(uu, Ru, yu, Eu) {
       let {
-        localPlayerId: PU
-      } = tU;
-      const TU = new vU,
-        qU = new TR;
-      let KU = null,
-        cU = null,
-        GU = null,
-        jU = null,
-        uU = null,
-        CU = [!1, !1];
-      const hU = () => {
-        var UU, RU;
-        const [gU, tU] = CU;
-        null === (UU = cU) || void 0 === UU || UU.GJ(!gU), null === (RU = GU) || void 0 === RU || RU.GJ(!tU)
+        localPlayerId: mu
+      } = Eu;
+      const Ju = new gu,
+        Nu = new JR;
+      let Xu = null,
+        Vu = null,
+        ru = null,
+        Bu = null,
+        xu = null,
+        Su = [!1, !1];
+      const pu = () => {
+        var uu, Ru;
+        const [yu, Eu] = Su;
+        null === (uu = Vu) || void 0 === uu || uu.tC(!yu), null === (Ru = ru) || void 0 === Ru || Ru.tC(!Eu)
       };
       return {
-        onCreate: UU => {
-          KU = UU, cU = new fU(UU, PU), GU = new JU(UU, PU), jU = new tR(TU), hU(), uU = (0, EU.y)((0, pU.createElement)(pU.Fragment, null, (0, pU.createElement)(iU, {
-            hud: TU,
-            crosshair: cU,
-            damage: GU,
-            markers: jU
-          }), (0, pU.createElement)(uR, {
-            controller: qU
+        onCreate: uu => {
+          Xu = uu, Vu = new Hu(uu, mu), ru = new ku(uu, mu), Bu = new ER(Ju), pu(), xu = (0, Qu.w)((0, Ku.createElement)(Ku.Fragment, null, (0, Ku.createElement)(Pu, {
+            hud: Ju,
+            crosshair: Vu,
+            damage: ru,
+            markers: Bu
+          }), (0, Ku.createElement)(xR, {
+            controller: Nu
           })))
         },
         onClose: () => {
-          var UU, RU, gU, tU;
-          null === (UU = uU) || void 0 === UU || UU(), null === (RU = cU) || void 0 === RU || RU.dispose(), cU = null, null === (gU = GU) || void 0 === gU || gU.dispose(), GU = null, null === (tU = jU) || void 0 === tU || tU.dispose(), jU = null, KU = null
+          var uu, Ru, yu, Eu;
+          null === (uu = xu) || void 0 === uu || uu(), null === (Ru = Vu) || void 0 === Ru || Ru.dispose(), Vu = null, null === (yu = ru) || void 0 === yu || yu.dispose(), ru = null, null === (Eu = Bu) || void 0 === Eu || Eu.dispose(), Bu = null, Xu = null
         },
-        onAfterRender: (UU, RU) => {
-          var gU, tU, pU, EU;
-          null === (gU = cU) || void 0 === gU || gU.frame(UU, RU.tanHalfFovY), null === (tU = GU) || void 0 === tU || tU.frame(RU.cameraHeading), null === (pU = jU) || void 0 === pU || pU.frame(RU, null !== (EU = KU) && void 0 !== EU && EU.checkValid(PU) ? KU.Hx(PU) : null)
+        onAfterRender: (uu, Ru) => {
+          var yu, Eu, Ku, Qu;
+          null === (yu = Vu) || void 0 === yu || yu.frame(uu, Ru.tanHalfFovY), null === (Eu = ru) || void 0 === Eu || Eu.frame(Ru.cameraHeading), null === (Ku = Bu) || void 0 === Ku || Ku.frame(Ru, null !== (Qu = Xu) && void 0 !== Qu && Qu.checkValid(mu) ? Xu.mH(mu) : null)
         },
-        onReceivedMessageFromServer: (UU, RU) => {
-          "frontlineHud" === UU ? TU.qC(RU) : "frontlineScoreboard" === UU ? TU.receiveScoreboard(RU) : "frontlineRoundEnd" === UU ? qU.qC(RU) : "frontlinePrefs" === UU && (CU = RU, hU())
+        onReceivedMessageFromServer: (uu, Ru) => {
+          "frontlineHud" === uu ? Ju.SS(Ru) : "frontlineScoreboard" === uu ? Ju.receiveScoreboard(Ru) : "frontlineRoundEnd" === uu ? Nu.SS(Ru) : "frontlinePrefs" === uu && (Su = Ru, pu())
         }
       }
     }
   },
-  6127: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => pU
+  6234: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Ku
     });
-    const tU = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const Eu = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function pU(UU) {
-      return null === tU ? Array.from(UU) : Array.from(tU.segment(UU), (UU => {
+    function Ku(uu) {
+      return null === Eu ? Array.from(uu) : Array.from(Eu.segment(uu), (uu => {
         let {
-          segment: RU
-        } = UU;
-        return RU
+          segment: Ru
+        } = uu;
+        return Ru
       }))
     }
   },
-  38046: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => PU,
-      g: () => EU
+  38260: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => mu,
+      i: () => Qu
     });
-    const tU = new WeakMap;
+    const Eu = new WeakMap;
 
-    function pU(UU) {
-      let RU = tU.get(UU);
-      return RU || (RU = {
-        hidden: UU.hidden,
+    function Ku(uu) {
+      let Ru = Eu.get(uu);
+      return Ru || (Ru = {
+        hidden: uu.hidden,
         x: NaN,
         y: NaN
-      }, tU.set(UU, RU)), RU
+      }, Eu.set(uu, Ru)), Ru
     }
 
-    function EU(UU, RU) {
-      const gU = pU(UU);
-      gU.hidden !== RU && (gU.hidden = RU, UU.hidden = RU)
+    function Qu(uu, Ru) {
+      const yu = Ku(uu);
+      yu.hidden !== Ru && (yu.hidden = Ru, uu.hidden = Ru)
     }
 
-    function PU(UU, RU, gU) {
-      const tU = pU(UU);
-      tU.x === RU && tU.y === gU || (tU.x = RU, tU.y = gU, UU.style.translate = `${RU}vw ${gU}vh`)
+    function mu(uu, Ru, yu) {
+      const Eu = Ku(uu);
+      Eu.x === Ru && Eu.y === yu || (Eu.x = Ru, Eu.y = yu, uu.style.translate = `${Ru}vw ${yu}vh`)
     }
   },
-  36573: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => tU
+  36807: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu
     });
-    const tU = {
+    const Eu = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

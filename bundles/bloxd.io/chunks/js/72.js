@@ -1,18 +1,18 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  36569: (UU, RU, gU) => {
-    if (gU.d(RU, {
-        e: () => qU,
-        f: () => pU,
-        h: () => PU,
-        i: () => EU,
-        j: () => mU,
-        m: () => eU
-      }), 39 == gU.j) var tU = gU(36573);
-    const pU = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      EU = ["Blade", "Guard", "Handle"],
-      PU = {
+  36805: (uu, Ru, yu) => {
+    if (yu.d(Ru, {
+        e: () => Nu,
+        h: () => Ku,
+        k: () => mu,
+        m: () => Qu,
+        q: () => bu,
+        t: () => Wu
+      }), 39 == yu.j) var Eu = yu(36807);
+    const Ku = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      Qu = ["Blade", "Guard", "Handle"],
+      mu = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      TU = 4,
-      qU = "Coal",
-      KU = {
+      Ju = 4,
+      Nu = "Coal",
+      Xu = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      cU = 1.15,
-      GU = 1.35,
-      jU = .06,
-      uU = {
+      Vu = 1.15,
+      ru = 1.35,
+      Bu = .06,
+      xu = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: UU => `${wU(.06*UU)} less damage taken`
+          describe: uu => `${eu(.06*uu)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: UU => `Mobs you slay drop ${Math.round(4*UU)}+ extra coins`
+          describe: uu => `Mobs you slay drop ${Math.round(4*uu)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: UU => `${wU(.12*UU)} chance to strike for +60% damage`
+          describe: uu => `${eu(.12*uu)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: UU => `+${wU(.2*UU)} damage to bosses`
+          describe: uu => `+${eu(.2*uu)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: UU => `${wU(.15*UU)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: uu => `${eu(.15*uu)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: UU => `Heal ${wU(.06*UU)} of the damage you deal`
+          describe: uu => `Heal ${eu(.06*uu)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: UU => `${wU(.1*UU)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: uu => `${eu(.1*uu)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      CU = {
+      Su = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      hU = 39 == gU.j ? tU.d : null,
-      QU = "skyblock:forged:";
+      pu = 39 == yu.j ? Eu.b : null,
+      Tu = "skyblock:forged:";
 
-    function eU(UU, RU) {
-      return `${UU} ${RU}`
+    function Wu(uu, Ru) {
+      return `${uu} ${Ru}`
     }
-    pU.flatMap((UU => EU.map((RU => eU(UU, RU)))));
+    Ku.flatMap((uu => Qu.map((Ru => Wu(uu, Ru)))));
 
-    function WU(UU) {
+    function ju(uu) {
       let {
-        blade: RU,
-        guard: gU,
-        handle: tU
-      } = UU;
-      return `${QU}${RU.toLowerCase()}-${gU.toLowerCase()}-${tU.toLowerCase()}`
+        blade: Ru,
+        guard: yu,
+        handle: Eu
+      } = uu;
+      return `${Tu}${Ru.toLowerCase()}-${yu.toLowerCase()}-${Eu.toLowerCase()}`
     }
 
-    function fU(UU) {
-      if (! function(UU) {
-          return "string" === typeof UU && UU.startsWith(QU)
-        }(UU)) return null;
-      const RU = UU.slice(QU.length).split("-").map((UU => pU.find((RU => RU.toLowerCase() === UU))));
-      return 3 !== RU.length || RU.includes(void 0) ? null : {
-        blade: RU[0],
-        guard: RU[1],
-        handle: RU[2]
+    function Hu(uu) {
+      if (! function(uu) {
+          return "string" === typeof uu && uu.startsWith(Tu)
+        }(uu)) return null;
+      const Ru = uu.slice(Tu.length).split("-").map((uu => Ku.find((Ru => Ru.toLowerCase() === uu))));
+      return 3 !== Ru.length || Ru.includes(void 0) ? null : {
+        blade: Ru[0],
+        guard: Ru[1],
+        handle: Ru[2]
       }
     }
-    const xU = new Map;
+    const du = new Map;
 
-    function mU(UU) {
-      var RU;
-      let gU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hU;
-      const tU = "string" === typeof UU ? fU(UU) : UU;
-      if (null === tU) return null;
-      const pU = WU(tU),
-        qU = gU === hU ? xU.get(pU) : void 0;
-      if (void 0 !== qU) return qU;
-      const QU = function(UU, RU) {
-        var gU, tU, pU, qU, hU, QU, eU, fU, xU;
+    function bu(uu) {
+      var Ru;
+      let yu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pu;
+      const Eu = "string" === typeof uu ? Hu(uu) : uu;
+      if (null === Eu) return null;
+      const Ku = ju(Eu),
+        Nu = yu === pu ? du.get(Ku) : void 0;
+      if (void 0 !== Nu) return Nu;
+      const Tu = function(uu, Ru) {
+        var yu, Eu, Ku, Nu, pu, Tu, Wu, Hu, du;
         const {
-          blade: mU,
-          guard: bU,
-          handle: oU
-        } = UU, ZU = PU, aU = mU === bU && bU === oU, YU = JU((1 + ZU[mU].bladeDamage) * (aU ? 1 + jU : 1)), BU = null !== (gU = RU.damageMultiplier) && void 0 !== gU ? gU : YU, VU = null !== (tU = RU.cooldownMultiplier) && void 0 !== tU ? tU : ZU[oU].handleCooldown, rU = null !== (pU = RU.knockbackMultiplier) && void 0 !== pU ? pU : JU(1 + ZU[oU].handleKnockback), XU = null !== (qU = RU.reachBonus) && void 0 !== qU ? qU : ZU[oU].handleReach, vU = null !== (hU = RU.damageReduction) && void 0 !== hU ? hU : ZU[bU].guardReduction, dU = null !== (QU = RU.traits) && void 0 !== QU ? QU : function(UU) {
-          const RU = {},
-            gU = {};
-          for (const TU of EU) {
-            var tU, pU;
-            const EU = PU[IU(UU, TU)].trait;
-            null !== EU && (RU[EU] = (null !== (tU = RU[EU]) && void 0 !== tU ? tU : 0) + KU[TU], gU[EU] = (null !== (pU = gU[EU]) && void 0 !== pU ? pU : 0) + 1)
+          blade: bu,
+          guard: Du,
+          handle: Mu
+        } = uu, Iu = mu, Gu = bu === Du && Du === Mu, Uu = ku((1 + Iu[bu].bladeDamage) * (Gu ? 1 + Bu : 1)), nu = null !== (yu = Ru.damageMultiplier) && void 0 !== yu ? yu : Uu, su = null !== (Eu = Ru.cooldownMultiplier) && void 0 !== Eu ? Eu : Iu[Mu].handleCooldown, tu = null !== (Ku = Ru.knockbackMultiplier) && void 0 !== Ku ? Ku : ku(1 + Iu[Mu].handleKnockback), lu = null !== (Nu = Ru.reachBonus) && void 0 !== Nu ? Nu : Iu[Mu].handleReach, gu = null !== (pu = Ru.damageReduction) && void 0 !== pu ? pu : Iu[Du].guardReduction, cu = null !== (Tu = Ru.traits) && void 0 !== Tu ? Tu : function(uu) {
+          const Ru = {},
+            yu = {};
+          for (const Ju of Qu) {
+            var Eu, Ku;
+            const Qu = mu[Cu(uu, Ju)].trait;
+            null !== Qu && (Ru[Qu] = (null !== (Eu = Ru[Qu]) && void 0 !== Eu ? Eu : 0) + Xu[Ju], yu[Qu] = (null !== (Ku = yu[Qu]) && void 0 !== Ku ? Ku : 0) + 1)
           }
-          for (const EU of Object.keys(RU)) {
-            const UU = 3 === gU[EU] ? GU : 2 === gU[EU] ? cU : 1;
-            RU[EU] = JU(RU[EU] * UU)
+          for (const Qu of Object.keys(Ru)) {
+            const uu = 3 === yu[Qu] ? ru : 2 === yu[Qu] ? Vu : 1;
+            Ru[Qu] = ku(Ru[Qu] * uu)
           }
-          return RU
-        }(UU), HU = null !== (eU = RU.ability) && void 0 !== eU ? eU : null, SU = void 0 !== RU.name, sU = null !== (fU = RU.name) && void 0 !== fU ? fU : aU ? `Pure ${mU} Sword` : `${ZU[bU].epithet} ${mU} Sword`, yU = null !== (xU = RU.lore) && void 0 !== xU ? xU : `Forged by the Forge Mother from a ${mU.toLowerCase()} blade, ${bU.toLowerCase()} guard and ${oU.toLowerCase()} handle.`, kU = function(UU) {
+          return Ru
+        }(uu), Lu = null !== (Wu = Ru.ability) && void 0 !== Wu ? Wu : null, zu = void 0 !== Ru.name, Fu = null !== (Hu = Ru.name) && void 0 !== Hu ? Hu : Gu ? `Pure ${bu} Sword` : `${Iu[Du].epithet} ${bu} Sword`, wu = null !== (du = Ru.lore) && void 0 !== du ? du : `Forged by the Forge Mother from a ${bu.toLowerCase()} blade, ${Du.toLowerCase()} guard and ${Mu.toLowerCase()} handle.`, Zu = function(uu) {
           let {
-            blade: RU,
-            guard: gU,
-            handle: tU
-          } = UU;
-          const pU = PU;
-          return TU * (pU[RU].value + pU[gU].value + pU[tU].value)
-        }(UU), FU = ZU[mU].value + ZU[bU].value + ZU[oU].value, iU = SU ? "Tier 5" : FU <= 4 ? "Tier 1" : FU <= 8 ? "Tier 2" : FU <= 14 ? "Tier 3" : FU <= 22 ? "Tier 4" : "Tier 5", AU = [];
-        1 !== BU && AU.push(`${nU(BU-1)} damage`);
-        1 !== VU && AU.push(`${wU(1/VU-1)} faster strikes`);
-        1 !== rU && AU.push(`${nU(rU-1)} knockback`);
-        XU > 0 && AU.push(`+${XU} reach`);
-        vU > 0 && AU.push(`${wU(vU)} less damage taken while held`);
-        const zU = [];
-        for (const EU of Object.keys(dU)) zU.push(`${uU[EU].name}: ${uU[EU].describe(dU[EU])}`);
-        null !== HU && zU.push(`${CU[HU].name}: ${CU[HU].description}`);
-        return AU.push(...zU), {
-          id: WU(UU),
-          parts: UU,
-          baseSword: ZU[mU].baseSword,
-          displayName: sU,
-          lore: yU,
-          properties: AU,
-          effects: zU,
-          named: SU,
-          damageMultiplier: BU,
-          cooldownMultiplier: VU,
-          knockbackMultiplier: rU,
-          reachBonus: XU,
-          damageReduction: vU,
-          traits: dU,
-          ability: HU,
-          coalCost: kU,
-          enchantmentTier: iU,
-          powerMultiplier: JU(BU / VU)
+            blade: Ru,
+            guard: yu,
+            handle: Eu
+          } = uu;
+          const Ku = mu;
+          return Ju * (Ku[Ru].value + Ku[yu].value + Ku[Eu].value)
+        }(uu), hu = Iu[bu].value + Iu[Du].value + Iu[Mu].value, Pu = zu ? "Tier 5" : hu <= 4 ? "Tier 1" : hu <= 8 ? "Tier 2" : hu <= 14 ? "Tier 3" : hu <= 22 ? "Tier 4" : "Tier 5", iu = [];
+        1 !== nu && iu.push(`${Au(nu-1)} damage`);
+        1 !== su && iu.push(`${eu(1/su-1)} faster strikes`);
+        1 !== tu && iu.push(`${Au(tu-1)} knockback`);
+        lu > 0 && iu.push(`+${lu} reach`);
+        gu > 0 && iu.push(`${eu(gu)} less damage taken while held`);
+        const Yu = [];
+        for (const Qu of Object.keys(cu)) Yu.push(`${xu[Qu].name}: ${xu[Qu].describe(cu[Qu])}`);
+        null !== Lu && Yu.push(`${Su[Lu].name}: ${Su[Lu].description}`);
+        return iu.push(...Yu), {
+          id: ju(uu),
+          parts: uu,
+          baseSword: Iu[bu].baseSword,
+          displayName: Fu,
+          lore: wu,
+          properties: iu,
+          effects: Yu,
+          named: zu,
+          damageMultiplier: nu,
+          cooldownMultiplier: su,
+          knockbackMultiplier: tu,
+          reachBonus: lu,
+          damageReduction: gu,
+          traits: cu,
+          ability: Lu,
+          coalCost: Zu,
+          enchantmentTier: Pu,
+          powerMultiplier: ku(nu / su)
         }
-      }(tU, null !== (RU = gU[pU]) && void 0 !== RU ? RU : {});
-      return gU === hU && xU.set(pU, QU), QU
+      }(Eu, null !== (Ru = yu[Ku]) && void 0 !== Ru ? Ru : {});
+      return yu === pu && du.set(Ku, Tu), Tu
     }
 
-    function IU(UU, RU) {
-      return "Blade" === RU ? UU.blade : "Guard" === RU ? UU.guard : UU.handle
+    function Cu(uu, Ru) {
+      return "Blade" === Ru ? uu.blade : "Guard" === Ru ? uu.guard : uu.handle
     }
 
-    function JU(UU) {
-      return Math.round(100 * UU) / 100
+    function ku(uu) {
+      return Math.round(100 * uu) / 100
     }
 
-    function wU(UU) {
-      return `${Math.round(100*UU)}%`
+    function eu(uu) {
+      return `${Math.round(100*uu)}%`
     }
 
-    function nU(UU) {
-      return `${UU>=0?"+":""}${wU(UU)}`
+    function Au(uu) {
+      return `${uu>=0?"+":""}${eu(uu)}`
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

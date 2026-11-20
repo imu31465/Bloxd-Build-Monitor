@@ -1,282 +1,282 @@
 export const id = 14;
 export const ids = [14];
 export const modules = {
-  36425: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => wU,
-      d: () => IU,
-      h: () => JU,
-      j: () => CU
+  36650: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => eu,
+      f: () => Cu,
+      h: () => ku,
+      l: () => Su
     });
-    var tU = gU(1037),
-      pU = gU.n(tU),
-      EU = gU(56),
-      PU = gU(74),
-      TU = gU(1347),
-      qU = gU(1412),
-      KU = gU(1344),
-      cU = gU(1283),
-      GU = gU(1181),
-      jU = gU(36427),
-      uU = gU(1090);
+    var Eu = yu(1035),
+      Ku = yu.n(Eu),
+      Qu = yu(64),
+      mu = yu(80),
+      Ju = yu(1328),
+      Nu = yu(1408),
+      Xu = yu(1325),
+      Vu = yu(1247),
+      ru = yu(1170),
+      Bu = yu(36656),
+      xu = yu(1079);
 
-    function CU(UU) {
-      const [RU, gU] = (0, EU.useState)((() => (0, jU.p)(UU)));
-      return (0, EU.useEffect)((() => (gU((0, jU.p)(UU)), (0, jU.N)((() => {
-        gU((0, jU.p)(UU))
-      })))), [UU]), RU
+    function Su(uu) {
+      const [Ru, yu] = (0, Qu.useState)((() => (0, Bu.n)(uu)));
+      return (0, Qu.useEffect)((() => (yu((0, Bu.n)(uu)), (0, Bu.F)((() => {
+        yu((0, Bu.n)(uu))
+      })))), [uu]), Ru
     }
 
-    function hU(UU, RU) {
-      "function" === typeof UU ? UU(RU) : UU && (UU.current = RU)
+    function pu(uu, Ru) {
+      "function" === typeof uu ? uu(Ru) : uu && (uu.current = Ru)
     }
 
-    function QU(UU) {
+    function Tu(uu) {
       let {
-        tutorial: RU,
-        step: gU,
-        enabled: tU = !0
-      } = UU;
-      const pU = CU(RU);
-      return tU && pU === gU
+        tutorial: Ru,
+        step: yu,
+        enabled: Eu = !0
+      } = uu;
+      const Ku = Su(Ru);
+      return Eu && Ku === yu
     }
 
-    function eU(UU, RU) {
-      const gU = (0, jU.t)(UU),
-        tU = gU.indexOf(RU);
-      return !gU.slice(tU + 1).some((RU => (0, jU.C)(UU, RU)))
+    function Wu(uu, Ru) {
+      const yu = (0, Bu.p)(uu),
+        Eu = yu.indexOf(Ru);
+      return !yu.slice(Eu + 1).some((Ru => (0, Bu.t)(uu, Ru)))
     }
 
-    function WU(UU, RU, gU, tU) {
+    function ju(uu, Ru, yu, Eu) {
       let {
-        tutorial: pU,
-        step: EU,
-        waitForClick: PU = !1,
-        onPrevious: TU
-      } = UU;
-      const qU = RU && (0, jU.y)(pU, EU),
-        KU = RU && !eU(pU, EU),
-        GU = PU ? tU : gU;
-      let uU = null;
-      qU ? uU = () => {
-        null === TU || void 0 === TU || TU(), (0, jU.v)(pU, EU)
-      } : KU && (uU = () => {
-        (0, jU.m)(pU)
-      }), (0, cU.q)("popup", null !== GU && void 0 !== GU ? GU : gU, uU, RU && null !== GU, null, qU ? void 0 : "controller:menusSkipTutorial")
+        tutorial: Ku,
+        step: Qu,
+        waitForClick: mu = !1,
+        onPrevious: Ju
+      } = uu;
+      const Nu = Ru && (0, Bu.s)(Ku, Qu),
+        Xu = Ru && !Wu(Ku, Qu),
+        ru = mu ? Eu : yu;
+      let xu = null;
+      Nu ? xu = () => {
+        null === Ju || void 0 === Ju || Ju(), (0, Bu.r)(Ku, Qu)
+      } : Xu && (xu = () => {
+        (0, Bu.j)(Ku)
+      }), (0, Vu.t)("popup", null !== ru && void 0 !== ru ? ru : yu, xu, Ru && null !== ru, null, Nu ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function fU(UU) {
+    function Hu(uu) {
       let {
-        tutorial: RU,
-        step: gU,
-        text: tU,
-        waitForClick: pU = !1,
-        onPrevious: EU
-      } = UU;
+        tutorial: Ru,
+        step: yu,
+        text: Eu,
+        waitForClick: Ku = !1,
+        onPrevious: Qu
+      } = uu;
       const {
-        t: PU
-      } = (0, GU.B)(), TU = eU(RU, gU);
-      return (0, uU.jsxs)(uU.Fragment, {
-        children: [(0, uU.jsx)("div", {
+        t: mu
+      } = (0, ru.E)(), Ju = Wu(Ru, yu);
+      return (0, xu.jsxs)(xu.Fragment, {
+        children: [(0, xu.jsx)("div", {
           className: "TutorialStepText",
-          children: tU
-        }), (0, uU.jsxs)("div", {
+          children: Eu
+        }), (0, xu.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, jU.y)(RU, gU) && (0, uU.jsx)(qU.g, {
+          children: [(0, Bu.s)(Ru, yu) && (0, xu.jsx)(Nu.f, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === EU || void 0 === EU || EU(), (0, jU.v)(RU, gU)
+              null === Qu || void 0 === Qu || Qu(), (0, Bu.r)(Ru, yu)
             },
-            children: PU("tutorial:back")
-          }), !pU && (0, uU.jsx)(qU.e, {
+            children: mu("tutorial:back")
+          }), !Ku && (0, xu.jsx)(Nu.e, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, jU.g)(gU)
+              (0, Bu.e)(yu)
             },
             padDefaultFocus: !0,
-            children: PU(TU ? "tutorial:done" : "tutorial:next")
-          }), !TU && (0, uU.jsx)(qU.g, {
+            children: mu(Ju ? "tutorial:done" : "tutorial:next")
+          }), !Ju && (0, xu.jsx)(Nu.f, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, jU.m)(RU)
+              (0, Bu.j)(Ru)
             },
-            children: PU("tutorial:skip")
+            children: mu("tutorial:skip")
           })]
         })]
       })
     }
-    const xU = 6;
+    const du = 6;
 
-    function mU(UU) {
+    function bu(uu) {
       let {
-        rect: RU,
-        margin: gU
-      } = UU;
-      const tU = Math.max(0, RU.top - gU),
-        pU = RU.bottom + gU,
-        EU = Math.max(0, RU.left - gU),
-        PU = RU.right + gU;
-      return (0, uU.jsxs)(uU.Fragment, {
-        children: [(0, uU.jsx)("div", {
+        rect: Ru,
+        margin: yu
+      } = uu;
+      const Eu = Math.max(0, Ru.top - yu),
+        Ku = Ru.bottom + yu,
+        Qu = Math.max(0, Ru.left - yu),
+        mu = Ru.right + yu;
+      return (0, xu.jsxs)(xu.Fragment, {
+        children: [(0, xu.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: tU
+            height: Eu
           }
-        }), (0, uU.jsx)("div", {
+        }), (0, xu.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: pU,
+            top: Ku,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, uU.jsx)("div", {
+        }), (0, xu.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: tU,
+            top: Eu,
             left: 0,
-            width: EU,
-            height: pU - tU
+            width: Qu,
+            height: Ku - Eu
           }
-        }), (0, uU.jsx)("div", {
+        }), (0, xu.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: tU,
-            left: PU,
+            top: Eu,
+            left: mu,
             right: 0,
-            height: pU - tU
+            height: Ku - Eu
           }
         })]
       })
     }
 
-    function IU(UU) {
+    function Cu(uu) {
       let {
-        target: RU,
-        placement: gU,
-        boxRef: tU,
-        className: qU,
-        spotlightMargin: cU = xU,
-        children: GU
-      } = UU;
+        target: Ru,
+        placement: yu,
+        boxRef: Eu,
+        className: Nu,
+        spotlightMargin: Vu = du,
+        children: ru
+      } = uu;
       const {
-        getArrowProps: jU,
-        getTooltipProps: CU,
-        setTooltipRef: hU,
-        setTriggerRef: QU
-      } = (0, TU.e)({
-        placement: gU,
+        getArrowProps: Bu,
+        getTooltipProps: Su,
+        setTooltipRef: pu,
+        setTriggerRef: Tu
+      } = (0, Ju.c)({
+        placement: yu,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, cU]
+        offset: [0, Vu]
       });
-      (0, EU.useLayoutEffect)((() => {
-        QU(RU)
-      }), [RU, QU]);
-      const eU = function(UU, RU) {
-        const [gU, tU] = (0, EU.useState)(null);
-        return (0, EU.useEffect)((() => {
-          if (!RU || !UU) return void tU(null);
-          let gU = 0,
-            pU = null;
-          const EU = () => {
-            const RU = UU.getBoundingClientRect();
-            pU && RU.left === pU.left && RU.top === pU.top && RU.width === pU.width && RU.height === pU.height || (pU = RU, tU(RU)), gU = requestAnimationFrame(EU)
+      (0, Qu.useLayoutEffect)((() => {
+        Tu(Ru)
+      }), [Ru, Tu]);
+      const Wu = function(uu, Ru) {
+        const [yu, Eu] = (0, Qu.useState)(null);
+        return (0, Qu.useEffect)((() => {
+          if (!Ru || !uu) return void Eu(null);
+          let yu = 0,
+            Ku = null;
+          const Qu = () => {
+            const Ru = uu.getBoundingClientRect();
+            Ku && Ru.left === Ku.left && Ru.top === Ku.top && Ru.width === Ku.width && Ru.height === Ku.height || (Ku = Ru, Eu(Ru)), yu = requestAnimationFrame(Qu)
           };
-          return EU(), () => {
-            cancelAnimationFrame(gU)
+          return Qu(), () => {
+            cancelAnimationFrame(yu)
           }
-        }), [UU, RU]), gU
-      }(RU, !0);
-      (0, EU.useEffect)((() => {
-        null === RU || void 0 === RU || RU.scrollIntoView({
+        }), [uu, Ru]), yu
+      }(Ru, !0);
+      (0, Qu.useEffect)((() => {
+        null === Ru || void 0 === Ru || Ru.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         })
-      }), [RU]);
-      const WU = (0, EU.useCallback)((UU => {
-        hU(UU), tU && (tU.current = UU)
-      }), [hU, tU]);
-      return (0, PU.createPortal)((0, uU.jsxs)(uU.Fragment, {
-        children: [eU && (0, uU.jsx)(mU, {
-          rect: eU,
-          margin: cU
-        }), (0, uU.jsxs)("div", {
-          ref: WU,
-          ...CU({
-            className: pU()("tooltip-container SmallTextLight TutorialStep", qU)
+      }), [Ru]);
+      const ju = (0, Qu.useCallback)((uu => {
+        pu(uu), Eu && (Eu.current = uu)
+      }), [pu, Eu]);
+      return (0, mu.createPortal)((0, xu.jsxs)(xu.Fragment, {
+        children: [Wu && (0, xu.jsx)(bu, {
+          rect: Wu,
+          margin: Vu
+        }), (0, xu.jsxs)("div", {
+          ref: ju,
+          ...Su({
+            className: Ku()("tooltip-container SmallTextLight TutorialStep", Nu)
           }),
-          children: [GU, (0, uU.jsx)("div", {
-            ...jU({
+          children: [ru, (0, xu.jsx)("div", {
+            ...Bu({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, KU.k)())
+      }), (0, Xu.m)())
     }
-    const JU = (0, EU.forwardRef)((function(UU, RU) {
+    const ku = (0, Qu.forwardRef)((function(uu, Ru) {
       let {
-        placement: gU = "right",
-        children: tU,
-        ...pU
-      } = UU;
-      const PU = QU(pU),
-        TU = (0, EU.useRef)(null),
-        qU = (0, EU.useRef)(null);
-      WU(pU, PU, TU, qU);
-      const [KU, cU] = (0, EU.useState)(null), GU = tU.ref, jU = (0, EU.useCallback)((UU => {
-        qU.current = UU, cU(UU), hU(RU, UU), hU(GU, UU)
-      }), [RU, GU]);
-      return (0, uU.jsxs)(uU.Fragment, {
-        children: [(0, EU.cloneElement)(tU, {
-          ref: jU
-        }), PU && (0, uU.jsx)(IU, {
-          target: KU,
-          placement: gU,
-          boxRef: TU,
-          children: (0, uU.jsx)(fU, {
-            ...pU
+        placement: yu = "right",
+        children: Eu,
+        ...Ku
+      } = uu;
+      const mu = Tu(Ku),
+        Ju = (0, Qu.useRef)(null),
+        Nu = (0, Qu.useRef)(null);
+      ju(Ku, mu, Ju, Nu);
+      const [Xu, Vu] = (0, Qu.useState)(null), ru = Eu.ref, Bu = (0, Qu.useCallback)((uu => {
+        Nu.current = uu, Vu(uu), pu(Ru, uu), pu(ru, uu)
+      }), [Ru, ru]);
+      return (0, xu.jsxs)(xu.Fragment, {
+        children: [(0, Qu.cloneElement)(Eu, {
+          ref: Bu
+        }), mu && (0, xu.jsx)(Cu, {
+          target: Xu,
+          placement: yu,
+          boxRef: Ju,
+          children: (0, xu.jsx)(Hu, {
+            ...Ku
           })
         })]
       })
     }));
 
-    function wU(UU) {
-      const RU = QU(UU),
-        gU = (0, EU.useRef)(null);
-      return WU(UU, RU, gU, null), RU ? (0, PU.createPortal)((0, uU.jsx)("div", {
+    function eu(uu) {
+      const Ru = Tu(uu),
+        yu = (0, Qu.useRef)(null);
+      return ju(uu, Ru, yu, null), Ru ? (0, mu.createPortal)((0, xu.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, uU.jsx)("div", {
-          ref: gU,
+        children: (0, xu.jsx)("div", {
+          ref: yu,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, uU.jsx)(fU, {
-            ...UU
+          children: (0, xu.jsx)(Hu, {
+            ...uu
           })
         })
-      }), (0, KU.k)()) : null
+      }), (0, Xu.m)()) : null
     }
   },
-  38092: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => PU
+  38308: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => mu
     });
-    const tU = 4,
-      pU = 12e3,
-      EU = 1e3;
-    class PU {
+    const Eu = 4,
+      Ku = 12e3,
+      Qu = 1e3;
+    class mu {
       constructor() {
         let {
-          limit: UU = tU,
-          windowMs: RU = pU,
-          spacingMs: gU = EU,
-          now: PU = Date.now
+          limit: uu = Eu,
+          windowMs: Ru = Ku,
+          spacingMs: yu = Qu,
+          now: mu = Date.now
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = UU, this.windowMs = RU, this.spacingMs = gU, this.now = PU
+        this.sent = [], this.lastSentAt = -1 / 0, this.timer = null, this.listeners = new Set, this.priority = new Set, this.limit = void 0, this.windowMs = void 0, this.spacingMs = void 0, this.now = void 0, this.limit = uu, this.windowMs = Ru, this.spacingMs = yu, this.now = mu
       }
       isPacing() {
         return !this.canSendPriority() || this.isPriorityWaiting()
@@ -285,139 +285,139 @@ export const modules = {
         return this.prune(), this.sent.length < this.limit && this.now() - this.lastSentAt >= this.spacingMs
       }
       tryStart() {
-        for (const UU of this.priority) UU.flush();
+        for (const uu of this.priority) uu.flush();
         return !this.isPacing() && (this.start(), !0)
       }
       start() {
         this.prune();
-        const UU = this.now();
-        this.sent.push(UU), this.lastSentAt = UU, this.schedule(), this.notify()
+        const uu = this.now();
+        this.sent.push(uu), this.lastSentAt = uu, this.schedule(), this.notify()
       }
-      addPriority(UU) {
-        return this.priority.add(UU), () => {
-          this.priority.delete(UU)
+      addPriority(uu) {
+        return this.priority.add(uu), () => {
+          this.priority.delete(uu)
         }
       }
-      subscribe(UU) {
-        return this.listeners.add(UU), () => {
-          this.listeners.delete(UU)
+      subscribe(uu) {
+        return this.listeners.add(uu), () => {
+          this.listeners.delete(uu)
         }
       }
       dispose() {
         this.clearTimer(), this.sent = [], this.listeners.clear(), this.priority.clear()
       }
       isPriorityWaiting() {
-        for (const UU of this.priority)
-          if (UU.waiting()) return !0;
+        for (const uu of this.priority)
+          if (uu.waiting()) return !0;
         return !1
       }
       prune() {
-        const UU = this.now() - this.windowMs;
-        for (; this.sent.length > 0 && this.sent[0] <= UU;) this.sent.shift()
+        const uu = this.now() - this.windowMs;
+        for (; this.sent.length > 0 && this.sent[0] <= uu;) this.sent.shift()
       }
       schedule() {
         this.clearTimer();
-        const UU = this.now(),
-          RU = this.lastSentAt + this.spacingMs,
-          gU = Math.min(RU > UU ? RU : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
-        gU !== 1 / 0 && (this.timer = setTimeout((() => {
+        const uu = this.now(),
+          Ru = this.lastSentAt + this.spacingMs,
+          yu = Math.min(Ru > uu ? Ru : 1 / 0, this.sent.length > 0 ? this.sent[0] + this.windowMs : 1 / 0);
+        yu !== 1 / 0 && (this.timer = setTimeout((() => {
           this.timer = null, this.prune(), this.schedule(), this.notify()
-        }), Math.max(0, gU - UU)))
+        }), Math.max(0, yu - uu)))
       }
       notify() {
-        for (const UU of this.listeners) UU()
+        for (const uu of this.listeners) uu()
       }
       clearTimer() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null)
       }
     }
   },
-  36197: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU,
-      e: () => hU,
-      g: () => QU,
-      j: () => TU,
-      n: () => jU,
-      q: () => eU,
-      r: () => GU,
-      t: () => fU,
-      w: () => CU,
-      x: () => WU
+  36449: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      d: () => pu,
+      h: () => Tu,
+      k: () => Ju,
+      o: () => Bu,
+      p: () => Wu,
+      q: () => ru,
+      u: () => Hu,
+      v: () => Su,
+      w: () => ju
     });
-    var tU = gU(21),
-      pU = gU(24);
-    const EU = "clientGameInventoryButtonsChanged",
-      PU = new Map;
+    var Eu = yu(27),
+      Ku = yu(34);
+    const Qu = "clientGameInventoryButtonsChanged",
+      mu = new Map;
 
-    function TU() {
-      return [...PU.values()].sort(((UU, RU) => {
-        var gU, tU;
-        return (null !== (gU = UU.order) && void 0 !== gU ? gU : 0) - (null !== (tU = RU.order) && void 0 !== tU ? tU : 0)
+    function Ju() {
+      return [...mu.values()].sort(((uu, Ru) => {
+        var yu, Eu;
+        return (null !== (yu = uu.order) && void 0 !== yu ? yu : 0) - (null !== (Eu = Ru.order) && void 0 !== Eu ? Eu : 0)
       }))
     }
-    let qU = null;
+    let Nu = null;
 
-    function KU(UU) {
-      qU = UU
+    function Xu(uu) {
+      Nu = uu
     }
-    let cU = !1;
+    let Vu = !1;
 
-    function GU(UU) {
-      cU = !0;
+    function ru(uu) {
+      Vu = !0;
       try {
-        UU.onClick()
+        uu.onClick()
       } finally {
-        cU = !1
+        Vu = !1
       }
-      UU.panel && "clientGame" === tU.b.get("openInGameMenuName") && KU(UU.id)
+      uu.panel && "clientGame" === Eu.d.get("openInGameMenuName") && Xu(uu.id)
     }
 
-    function jU() {
-      return cU
+    function Bu() {
+      return Vu
     }
 
-    function uU() {
-      return TU().filter((UU => UU.panel && !UU.disabled))
+    function xu() {
+      return Ju().filter((uu => uu.panel && !uu.disabled))
     }
 
-    function CU(UU) {
-      const RU = uU(),
-        gU = RU.findIndex((UU => UU.id === qU));
-      return !(gU < 0 || RU.length < 2) && (GU(RU[(gU + UU + RU.length) % RU.length]), !0)
+    function Su(uu) {
+      const Ru = xu(),
+        yu = Ru.findIndex((uu => uu.id === Nu));
+      return !(yu < 0 || Ru.length < 2) && (ru(Ru[(yu + uu + Ru.length) % Ru.length]), !0)
     }
 
-    function hU() {
-      return null !== qU && uU().length > 1
+    function pu() {
+      return null !== Nu && xu().length > 1
     }
 
-    function QU() {
-      KU(null)
+    function Tu() {
+      Xu(null)
     }
 
-    function eU() {
-      "inventory" !== tU.b.get("openInGameMenuName") && KU(null)
+    function Wu() {
+      "inventory" !== Eu.d.get("openInGameMenuName") && Xu(null)
     }
 
-    function WU() {
-      const UU = qU;
-      return KU(null), UU
+    function ju() {
+      const uu = Nu;
+      return Xu(null), uu
     }
 
-    function fU(UU) {
-      return PU.set(UU.id, UU), pU.p.yh(EU, TU(), !0), () => {
-        PU.get(UU.id) === UU && (PU.delete(UU.id), pU.p.yh(EU, TU()))
+    function Hu(uu) {
+      return mu.set(uu.id, uu), Ku.k.Op(Qu, Ju(), !0), () => {
+        mu.get(uu.id) === uu && (mu.delete(uu.id), Ku.k.Op(Qu, Ju()))
       }
     }
   },
-  38076: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => tU
+  38299: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu
     });
-    class tU {
-      constructor(UU, RU, gU) {
-        this.yh = UU, this.beforeOpen = RU, this.afterClose = gU, this.open = !1, this.pC = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
-          this.isEnabled() && !this.pC && (this.open = !0, this.beforeOpen(this), this.emit())
+    class Eu {
+      constructor(uu, Ru, yu) {
+        this.Op = uu, this.beforeOpen = Ru, this.afterClose = yu, this.open = !1, this.VS = !1, this.snapshot = void 0, this.getSnapshot = () => this.snapshot, this.show = () => {
+          this.isEnabled() && !this.VS && (this.open = !0, this.beforeOpen(this), this.emit())
         }, this.close = () => {
           this.closePanel(!1)
         }, this.dismiss = () => {
@@ -430,300 +430,300 @@ export const modules = {
       showOrRefresh() {
         this.open ? this.emit() : this.show()
       }
-      closePanel(UU) {
-        this.open = !1, this.onClosed(), this.emit(), this.afterClose(UU)
+      closePanel(uu) {
+        this.open = !1, this.onClosed(), this.emit(), this.afterClose(uu)
       }
       onClosed() {}
       dispose() {
-        this.open = !1, this.emit(), this.pC = !0
+        this.open = !1, this.emit(), this.VS = !0
       }
       isEnabled() {
         return !0
       }
       emit() {
-        this.pC || (this.snapshot = this.buildSnapshot(), this.yh(this.snapshot))
+        this.VS || (this.snapshot = this.buildSnapshot(), this.Op(this.snapshot))
       }
     }
   },
-  36191: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => TU,
-      h: () => QU,
-      l: () => eU,
-      p: () => jU,
-      t: () => KU,
-      w: () => hU,
-      x: () => uU,
-      y: () => cU
+  36445: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      f: () => Tu,
+      i: () => Wu,
+      m: () => Bu,
+      o: () => Xu,
+      q: () => pu,
+      u: () => xu,
+      w: () => Vu
     });
-    var tU = gU(21),
-      pU = gU(24),
-      EU = gU(1287),
-      PU = gU(36197);
-    const TU = "clientGameUiChanged";
-    let qU = null;
+    var Eu = yu(27),
+      Ku = yu(34),
+      Qu = yu(1250),
+      mu = yu(36449);
+    const Ju = "clientGameUiChanged";
+    let Nu = null;
 
-    function KU() {
-      return qU
+    function Xu() {
+      return Nu
     }
 
-    function cU(UU, RU) {
-      const gU = {
-        content: UU,
-        menu: RU
+    function Vu(uu, Ru) {
+      const yu = {
+        content: uu,
+        menu: Ru
       };
-      return qU = gU, pU.p.yh(TU, qU, !0), () => {
-        qU === gU && (qU = null, CU = !1, QU(), pU.p.yh(TU, null))
+      return Nu = yu, Ku.k.Op(Ju, Nu, !0), () => {
+        Nu === yu && (Nu = null, Su = !1, Tu(), Ku.k.Op(Ju, null))
       }
     }
-    let GU = null;
+    let ru = null;
 
-    function jU() {
-      return GU
+    function Bu() {
+      return ru
     }
 
-    function uU(UU) {
-      return GU = UU, () => {
-        GU === UU && (GU = null)
+    function xu(uu) {
+      return ru = uu, () => {
+        ru === uu && (ru = null)
       }
     }
-    let CU = !1;
+    let Su = !1;
 
-    function hU() {
-      const UU = tU.b.get("openInGameMenuName");
-      "clientGame" !== UU && (CU = "inventory" === UU), (0, PU.n)() || (0, PU.g)(), (0, EU.o)(EU.c), tU.b.set({
+    function pu() {
+      const uu = Eu.d.get("openInGameMenuName");
+      "clientGame" !== uu && (Su = "inventory" === uu), (0, mu.o)() || (0, mu.h)(), (0, Qu.o)(Qu.b), Eu.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function QU() {
-      WU(!1)
+    function Tu() {
+      ju(!1)
     }
 
-    function eU() {
-      WU(CU)
+    function Wu() {
+      ju(Su)
     }
 
-    function WU(UU) {
-      "clientGame" === tU.b.get("openInGameMenuName") && tU.b.set({
-        openInGameMenuName: UU ? "inventory" : null
-      }), UU || (0, PU.g)(), CU = !1
+    function ju(uu) {
+      "clientGame" === Eu.d.get("openInGameMenuName") && Eu.d.set({
+        openInGameMenuName: uu ? "inventory" : null
+      }), uu || (0, mu.h)(), Su = !1
     }
   },
-  38824: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => cg
+  39028: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => Vy
     });
-    var tU = gU(56);
-    var pU = gU(21),
-      EU = gU(1786),
-      PU = gU(24),
-      TU = gU(36191),
-      qU = gU(1037),
-      KU = gU.n(qU),
-      cU = gU(1410),
-      GU = gU(1181),
-      jU = gU(4195),
-      uU = gU(1328),
-      CU = gU(1412),
-      hU = gU(1790),
-      QU = gU(1344),
-      eU = gU(1777),
-      WU = gU(1834),
-      fU = gU(201);
-    const xU = gU(38831),
-      mU = Object.fromEntries(xU.keys().map((UU => [UU.replace(/^\.\/(.*)\.webp$/, "$1"), xU(UU)]))),
-      IU = new Set;
+    var Eu = yu(64);
+    var Ku = yu(27),
+      Qu = yu(1836),
+      mu = yu(34),
+      Ju = yu(36445),
+      Nu = yu(1035),
+      Xu = yu.n(Nu),
+      Vu = yu(1400),
+      ru = yu(1170),
+      Bu = yu(4301),
+      xu = yu(1302),
+      Su = yu(1408),
+      pu = yu(1841),
+      Tu = yu(1325),
+      Wu = yu(1825),
+      ju = yu(1899),
+      Hu = yu(228);
+    const du = yu(39031),
+      bu = Object.fromEntries(du.keys().map((uu => [uu.replace(/^\.\/(.*)\.webp$/, "$1"), du(uu)]))),
+      Cu = new Set;
 
-    function JU(UU, RU) {
-      const gU = RU ? UU : `${UU}-uncaught`,
-        tU = (0, fU.b)(mU, gU);
-      return void 0 !== tU || IU.has(gU) || (IU.add(gU), console.warn(`Containment Breach has no mugshot ${gU}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), tU
+    function ku(uu, Ru) {
+      const yu = Ru ? uu : `${uu}-uncaught`,
+        Eu = (0, Hu.b)(bu, yu);
+      return void 0 !== Eu || Cu.has(yu) || (Cu.add(yu), console.warn(`Containment Breach has no mugshot ${yu}: run tools/harnessCutouts/ContainmentMugshotCapture.ts`)), Eu
     }
-    var wU = gU(1090);
-    const nU = "containmentBreach",
-      bU = "Gold Coin";
+    var eu = yu(1079);
+    const Au = "containmentBreach",
+      Du = "Gold Coin";
 
-    function oU(UU) {
+    function Mu(uu) {
       let {
-        open: RU,
-        onDismiss: gU,
-        title: tU,
-        className: pU,
-        decor: EU,
-        headerExtra: PU,
-        status: TU,
-        statusRefused: qU = !1,
-        children: cU
-      } = UU;
-      const GU = `${pU}Title`;
-      return (0, wU.jsx)(jU.d, {
-        show: RU,
-        close: gU,
+        open: Ru,
+        onDismiss: yu,
+        title: Eu,
+        className: Ku,
+        decor: Qu,
+        headerExtra: mu,
+        status: Ju,
+        statusRefused: Nu = !1,
+        children: Vu
+      } = uu;
+      const ru = `${Ku}Title`;
+      return (0, eu.jsx)(Bu.e, {
+        show: Ru,
+        close: yu,
         togglePointerLock: !1,
         className: "ContainmentBoardOverlay",
-        children: (0, wU.jsxs)("section", {
-          className: KU()("ContainmentBoardPanel", pU),
+        children: (0, eu.jsxs)("section", {
+          className: Xu()("ContainmentBoardPanel", Ku),
           role: "dialog",
           "aria-modal": "true",
-          "aria-labelledby": GU,
-          children: [EU && (0, wU.jsx)("div", {
+          "aria-labelledby": ru,
+          children: [Qu && (0, eu.jsx)("div", {
             className: "BoardDecor",
             "aria-hidden": "true",
-            children: EU
-          }), (0, wU.jsxs)("header", {
+            children: Qu
+          }), (0, eu.jsxs)("header", {
             className: "BoardHeader",
-            children: [(0, wU.jsx)("h2", {
-              id: GU,
+            children: [(0, eu.jsx)("h2", {
+              id: ru,
               className: "VisuallyHidden",
-              children: tU
-            }), PU, (0, wU.jsx)(CU.h, {
-              onClick: gU
+              children: Eu
+            }), mu, (0, eu.jsx)(Su.h, {
+              onClick: yu
             })]
-          }), (0, wU.jsx)("div", {
+          }), (0, eu.jsx)("div", {
             className: "BoardBody",
-            children: cU
-          }), void 0 !== TU && (0, wU.jsx)("footer", {
-            className: KU()("BoardStatus", {
-              Refused: qU
+            children: Vu
+          }), void 0 !== Ju && (0, eu.jsx)("footer", {
+            className: Xu()("BoardStatus", {
+              Refused: Nu
             }),
-            children: TU
+            children: Ju
           })]
         })
       })
     }
 
-    function ZU(UU) {
+    function Iu(uu) {
       let {
-        itemName: RU
-      } = UU;
-      return (0, wU.jsx)(hU.c, {
-        itemName: RU,
+        itemName: Ru
+      } = uu;
+      return (0, eu.jsx)(pu.c, {
+        itemName: Ru,
         amount: 0
       })
     }
 
-    function aU(UU) {
+    function Gu(uu) {
       let {
-        anomalyId: RU,
-        caught: gU
-      } = UU;
-      const pU = (0, tU.useRef)(null);
-      return (0, uU.b)(pU, !gU), (0, wU.jsx)("span", {
-        ref: pU,
-        className: KU()("BoardMugshot", {
-          Uncaught: !gU
+        anomalyId: Ru,
+        caught: yu
+      } = uu;
+      const Ku = (0, Eu.useRef)(null);
+      return (0, xu.b)(Ku, !yu), (0, eu.jsx)("span", {
+        ref: Ku,
+        className: Xu()("BoardMugshot", {
+          Uncaught: !yu
         }),
-        children: (0, wU.jsx)("img", {
-          src: JU(RU, gU),
+        children: (0, eu.jsx)("img", {
+          src: ku(Ru, yu),
           alt: "",
           draggable: !1
         })
       })
     }
 
-    function YU(UU) {
+    function Uu(uu) {
       let {
-        itemName: RU,
-        amount: gU,
-        WT: tU,
-        inTile: pU = !1
-      } = UU;
-      return (0, wU.jsx)(QU.g, {
+        itemName: Ru,
+        amount: yu,
+        jJ: Eu,
+        inTile: Ku = !1
+      } = uu;
+      return (0, eu.jsx)(Tu.i, {
         delayShow: 200,
-        hoverOnly: pU,
+        hoverOnly: Ku,
         placement: "top",
         tooltipClassName: "BoardChipTooltipBox",
-        tooltipInner: (0, wU.jsx)(VU, {
-          itemName: RU,
-          amount: gU,
-          WT: tU
+        tooltipInner: (0, eu.jsx)(su, {
+          itemName: Ru,
+          amount: yu,
+          jJ: Eu
         }),
-        children: (0, wU.jsxs)("span", {
-          className: KU()("BoardChip", {
-            Short: void 0 !== tU && tU < gU
+        children: (0, eu.jsxs)("span", {
+          className: Xu()("BoardChip", {
+            Short: void 0 !== Eu && Eu < yu
           }),
-          children: [(0, wU.jsx)("span", {
+          children: [(0, eu.jsx)("span", {
             className: "BoardChipIcon",
-            children: (0, wU.jsx)(ZU, {
-              itemName: RU
+            children: (0, eu.jsx)(Iu, {
+              itemName: Ru
             })
-          }), gU.toLocaleString()]
+          }), yu.toLocaleString()]
         })
       })
     }
-    const BU = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
+    const nu = /^(.*?)\s*Salvaged from (?:an? )?(.+?)\.?$/;
 
-    function VU(UU) {
-      var RU;
+    function su(uu) {
+      var Ru;
       let {
-        itemName: gU,
-        amount: tU,
-        WT: pU
-      } = UU;
+        itemName: yu,
+        amount: Eu,
+        jJ: Ku
+      } = uu;
       const {
-        t: EU
-      } = (0, GU.B)(), PU = (0, WU.h)("itemInfo", (UU => UU[gU])), {
-        lore: TU,
-        droppedBy: qU
-      } = function(UU) {
-        if ("string" !== typeof UU) return {
-          lore: UU,
+        t: Qu
+      } = (0, ru.E)(), mu = (0, ju.h)("itemInfo", (uu => uu[yu])), {
+        lore: Ju,
+        droppedBy: Nu
+      } = function(uu) {
+        if ("string" !== typeof uu) return {
+          lore: uu,
           droppedBy: null
         };
-        const RU = BU.exec(UU);
-        return null === RU ? {
-          lore: UU,
+        const Ru = nu.exec(uu);
+        return null === Ru ? {
+          lore: uu,
           droppedBy: null
         } : {
-          lore: "" === RU[1] ? void 0 : RU[1],
-          droppedBy: RU[2]
+          lore: "" === Ru[1] ? void 0 : Ru[1],
+          droppedBy: Ru[2]
         }
-      }(null === PU || void 0 === PU ? void 0 : PU.description);
-      return (0, wU.jsxs)("div", {
+      }(null === mu || void 0 === mu ? void 0 : mu.description);
+      return (0, eu.jsxs)("div", {
         className: "BoardChipTooltip",
-        children: [(0, wU.jsxs)("div", {
+        children: [(0, eu.jsxs)("div", {
           className: "BoardChipTooltipHeader",
-          children: [(0, wU.jsx)("span", {
+          children: [(0, eu.jsx)("span", {
             className: "BoardChipTooltipIcon",
-            children: (0, wU.jsx)(ZU, {
-              itemName: gU
+            children: (0, eu.jsx)(Iu, {
+              itemName: yu
             })
-          }), (0, wU.jsx)(eU.e, {
-            text: null !== (RU = null === PU || void 0 === PU ? void 0 : PU.displayName) && void 0 !== RU ? RU : gU,
+          }), (0, eu.jsx)(Wu.d, {
+            text: null !== (Ru = null === mu || void 0 === mu ? void 0 : mu.displayName) && void 0 !== Ru ? Ru : yu,
             className: "BoardChipTooltipName"
           })]
-        }), (void 0 !== TU || null !== qU) && (0, wU.jsxs)("div", {
+        }), (void 0 !== Ju || null !== Nu) && (0, eu.jsxs)("div", {
           className: "BoardChipTooltipBody",
-          children: [void 0 !== TU && (0, wU.jsx)(eU.e, {
-            text: TU,
+          children: [void 0 !== Ju && (0, eu.jsx)(Wu.d, {
+            text: Ju,
             className: "BoardChipTooltipDescription"
-          }), null !== qU && (0, wU.jsxs)("span", {
+          }), null !== Nu && (0, eu.jsxs)("span", {
             className: "BoardChipTooltipSource",
-            children: [(0, wU.jsx)("span", {
+            children: [(0, eu.jsx)("span", {
               className: "BoardChipTooltipLabel",
-              children: EU(`${nU}:chipDroppedBy`)
-            }), qU]
+              children: Qu(`${Au}:chipDroppedBy`)
+            }), Nu]
           })]
-        }), void 0 !== pU && (0, wU.jsxs)("div", {
-          className: KU()("BoardChipTooltipHeld", {
-            Short: pU < tU
+        }), void 0 !== Ku && (0, eu.jsxs)("div", {
+          className: Xu()("BoardChipTooltipHeld", {
+            Short: Ku < Eu
           }),
-          children: [(0, wU.jsx)("span", {
+          children: [(0, eu.jsx)("span", {
             className: "BoardChipTooltipLabel",
-            children: EU(`${nU}:chipYouHave`)
-          }), (0, wU.jsxs)("span", {
+            children: Qu(`${Au}:chipYouHave`)
+          }), (0, eu.jsxs)("span", {
             className: "BoardChipTooltipCount",
-            children: [(0, wU.jsx)("span", {
+            children: [(0, eu.jsx)("span", {
               className: "BoardChipTooltipHeldAmount",
-              children: pU.toLocaleString()
-            }), ` / ${tU.toLocaleString()}`]
-          }), (0, wU.jsx)("span", {
+              children: Ku.toLocaleString()
+            }), ` / ${Eu.toLocaleString()}`]
+          }), (0, eu.jsx)("span", {
             className: "BoardChipTooltipMeter",
-            children: (0, wU.jsx)("span", {
+            children: (0, eu.jsx)("span", {
               style: {
-                width: (tU > 0 ? 100 * Math.min(1, pU / tU) : 100) + "%"
+                width: (Eu > 0 ? 100 * Math.min(1, Ku / Eu) : 100) + "%"
               }
             })
           })]
@@ -731,81 +731,81 @@ export const modules = {
       })
     }
 
-    function rU(UU) {
+    function tu(uu) {
       let {
-        icon: RU,
-        name: gU,
-        selected: tU,
-        locked: pU,
-        className: EU,
-        buttonRef: PU,
-        onSelect: TU,
-        children: qU
-      } = UU;
-      return (0, wU.jsxs)("button", {
-        ref: PU,
+        icon: Ru,
+        name: yu,
+        selected: Eu,
+        locked: Ku,
+        className: Qu,
+        buttonRef: mu,
+        onSelect: Ju,
+        children: Nu
+      } = uu;
+      return (0, eu.jsxs)("button", {
+        ref: mu,
         type: "button",
-        className: KU()("BoardTile", EU, {
-          Selected: tU,
-          Locked: pU
+        className: Xu()("BoardTile", Qu, {
+          Selected: Eu,
+          Locked: Ku
         }),
-        onClick: TU,
-        children: [(0, wU.jsx)("span", {
+        onClick: Ju,
+        children: [(0, eu.jsx)("span", {
           className: "BoardTileIcon",
-          children: RU
-        }), (0, wU.jsx)("span", {
+          children: Ru
+        }), (0, eu.jsx)("span", {
           className: "BoardTileName",
-          children: gU
-        }), qU]
+          children: yu
+        }), Nu]
       })
     }
 
-    function XU(UU) {
+    function lu(uu) {
       let {
-        icon: RU,
-        name: gU,
-        children: tU
-      } = UU;
-      return (0, wU.jsxs)("header", {
+        icon: Ru,
+        name: yu,
+        children: Eu
+      } = uu;
+      return (0, eu.jsxs)("header", {
         className: "BoardDetailHeader",
-        children: [(0, wU.jsx)("span", {
+        children: [(0, eu.jsx)("span", {
           className: "BoardDetailIcon",
-          children: RU
-        }), (0, wU.jsxs)("div", {
+          children: Ru
+        }), (0, eu.jsxs)("div", {
           className: "BoardDetailHeading",
-          children: [(0, wU.jsx)("h3", {
-            children: gU
-          }), (0, wU.jsx)("span", {
+          children: [(0, eu.jsx)("h3", {
+            children: yu
+          }), (0, eu.jsx)("span", {
             className: "BoardDetailStatus",
-            children: tU
+            children: Eu
           })]
         })]
       })
     }
 
-    function vU(UU) {
+    function gu(uu) {
       let {
-        coins: RU,
-        children: gU
-      } = UU;
-      return (0, wU.jsxs)("div", {
+        coins: Ru,
+        children: yu
+      } = uu;
+      return (0, eu.jsxs)("div", {
         className: "BoardWallet",
-        children: [(0, wU.jsx)(YU, {
-          itemName: bU,
-          amount: RU
-        }), gU]
+        children: [(0, eu.jsx)(Uu, {
+          itemName: Du,
+          amount: Ru
+        }), yu]
       })
     }
-    var dU = gU(38076);
-    const HU = "containmentCodexView";
-    class SU extends dU.b {
+    var cu = yu(38299);
+    const Lu = "containmentCodexView";
+    class zu extends cu.b {
       constructor() {
-        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = UU => {
-          this.selectedId = UU, this.emit()
+        super(...arguments), this.entries = [], this.selectedId = "", this.snapshot = this.buildSnapshot(), this.select = uu => {
+          this.selectedId = uu, this.emit()
         }
       }
-      qC(UU) {
-        this.entries = UU.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
+      SS(uu) {
+        this.entries = uu.codexEntries, this.selectedId = this.entries[0].codexEntryId, this.showOrRefresh()
       }
       buildSnapshot() {
         return {
@@ -815,55 +815,55 @@ export const modules = {
         }
       }
     }
-    const sU = {
-        codexAnyDifficulty: `${nU}:codexNeedsAny`,
-        codexNormalOnly: `${nU}:codexNeedsNormal`,
-        codexHardOnly: `${nU}:codexNeedsHard`
+    const Fu = {
+        codexAnyDifficulty: `${Au}:codexNeedsAny`,
+        codexNormalOnly: `${Au}:codexNeedsNormal`,
+        codexHardOnly: `${Au}:codexNeedsHard`
       },
-      yU = {
+      wu = {
         codexContained: "Contained",
         codexEncountered: "Sighted",
         codexUnidentified: "Unknown"
       },
-      kU = {
-        codexContained: `${nU}:codexContainedBadge`,
-        codexEncountered: `${nU}:codexEncounteredBadge`,
-        codexUnidentified: `${nU}:codexUnidentifiedBadge`
+      Zu = {
+        codexContained: `${Au}:codexContainedBadge`,
+        codexEncountered: `${Au}:codexEncounteredBadge`,
+        codexUnidentified: `${Au}:codexUnidentifiedBadge`
       },
-      FU = ["94%", "81%", "88%", "46%", "72%"];
+      hu = ["94%", "81%", "88%", "46%", "72%"];
 
-    function iU(UU) {
+    function Pu(uu) {
       let {
-        entry: RU
-      } = UU;
+        entry: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, GU.B)();
-      return (0, wU.jsx)("span", {
-        className: KU()("BoardBadge", yU[RU.codexEntryState]),
-        children: gU(kU[RU.codexEntryState])
+        t: yu
+      } = (0, ru.E)();
+      return (0, eu.jsx)("span", {
+        className: Xu()("BoardBadge", wu[Ru.codexEntryState]),
+        children: yu(Zu[Ru.codexEntryState])
       })
     }
 
-    function AU(UU) {
+    function iu(uu) {
       const {
-        t: RU
-      } = (0, GU.B)();
-      return "codexUnidentified" === UU.codexEntryState ? RU(`${nU}:codexUnidentifiedName`) : UU.codexEntryName
+        t: Ru
+      } = (0, ru.E)();
+      return "codexUnidentified" === uu.codexEntryState ? Ru(`${Au}:codexUnidentifiedName`) : uu.codexEntryName
     }
 
-    function zU(UU) {
+    function Yu(uu) {
       let {
-        entry: RU
-      } = UU;
-      return "codexUnidentified" === RU.codexEntryState ? (0, wU.jsx)(ZU, {
+        entry: Ru
+      } = uu;
+      return "codexUnidentified" === Ru.codexEntryState ? (0, eu.jsx)(Iu, {
         itemName: "Book"
-      }) : (0, wU.jsxs)("span", {
+      }) : (0, eu.jsxs)("span", {
         className: "CodexPhoto",
-        children: [(0, wU.jsx)(aU, {
-          anomalyId: RU.codexEntryId,
-          caught: "codexContained" === RU.codexEntryState
-        }), (0, wU.jsx)("img", {
+        children: [(0, eu.jsx)(Gu, {
+          anomalyId: Ru.codexEntryId,
+          caught: "codexContained" === Ru.codexEntryState
+        }), (0, eu.jsx)("img", {
           className: "CodexPaperclip",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGNggIIXb97/X7V57/+Wvtn/GZDBqs17UQTgClahScBATHrlf5ySeHWimo9NMbokCp9OkmD/oasGCaJLAAC5ZUIBS85GiAAAAABJRU5ErkJggg==",
           alt: "",
@@ -872,27 +872,27 @@ export const modules = {
       })
     }
 
-    function MU(UU) {
+    function ou(uu) {
       let {
-        entry: RU,
-        selected: gU,
-        onSelect: tU
-      } = UU;
-      const pU = "codexUnidentified" === RU.codexEntryState;
-      return (0, wU.jsxs)(rU, {
-        icon: (0, wU.jsx)(zU, {
-          entry: RU
+        entry: Ru,
+        selected: yu,
+        onSelect: Eu
+      } = uu;
+      const Ku = "codexUnidentified" === Ru.codexEntryState;
+      return (0, eu.jsxs)(tu, {
+        icon: (0, eu.jsx)(Yu, {
+          entry: Ru
         }),
-        name: AU(RU),
-        selected: gU,
-        locked: pU,
-        className: KU()("CodexFolder", yU[RU.codexEntryState]),
+        name: iu(Ru),
+        selected: yu,
+        locked: Ku,
+        className: Xu()("CodexFolder", wu[Ru.codexEntryState]),
         onSelect: () => {
-          tU(RU.codexEntryId)
+          Eu(Ru.codexEntryId)
         },
-        children: [!pU && (0, wU.jsx)(iU, {
-          entry: RU
-        }), pU && (0, wU.jsx)("img", {
+        children: [!Ku && (0, eu.jsx)(Pu, {
+          entry: Ru
+        }), Ku && (0, eu.jsx)("img", {
           className: "CodexSeal",
           src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAARElEQVR4nGNggIIGHp7/MAzjw+TAnMf+/mB8RkQEjOGKYZLIgsiK4AqQJZA1gBXAOHgVwCRQJJEdCVOEYj8yQPciTAEAz0hgyamUqskAAAAASUVORK5CYII=",
           alt: "",
@@ -901,176 +901,176 @@ export const modules = {
       })
     }
 
-    function DU(UU) {
+    function qu(uu) {
       let {
-        count: RU
-      } = UU;
-      const gU = [];
-      for (let tU = Math.min(RU, 25); tU > 0; tU -= 5) gU.push(Math.min(tU, 5));
-      return (0, wU.jsx)("span", {
+        count: Ru
+      } = uu;
+      const yu = [];
+      for (let Eu = Math.min(Ru, 25); Eu > 0; Eu -= 5) yu.push(Math.min(Eu, 5));
+      return (0, eu.jsx)("span", {
         className: "CodexTallyMarks",
         "aria-hidden": "true",
-        children: gU.map(((UU, RU) => (0, wU.jsx)("span", {
-          className: KU()("CodexTallyGroup", {
-            Gate: 5 === UU
+        children: yu.map(((uu, Ru) => (0, eu.jsx)("span", {
+          className: Xu()("CodexTallyGroup", {
+            Gate: 5 === uu
           }),
           children: Array.from({
-            length: Math.min(UU, 4)
-          }, ((UU, RU) => (0, wU.jsx)("span", {
+            length: Math.min(uu, 4)
+          }, ((uu, Ru) => (0, eu.jsx)("span", {
             className: "CodexTallyMark"
-          }, RU)))
-        }, RU)))
+          }, Ru)))
+        }, Ru)))
       })
     }
 
-    function LU(UU) {
+    function Ou(uu) {
       let {
-        contained: RU,
-        total: gU
-      } = UU;
+        contained: Ru,
+        total: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, GU.B)();
-      return (0, wU.jsxs)("div", {
+        t: Eu
+      } = (0, ru.E)();
+      return (0, eu.jsxs)("div", {
         className: "CodexProgress",
-        children: [tU(`${nU}:codexProgress`, {
-          contained: String(RU),
-          total: String(gU)
-        }), (0, wU.jsx)("span", {
+        children: [Eu(`${Au}:codexProgress`, {
+          contained: String(Ru),
+          total: String(yu)
+        }), (0, eu.jsx)("span", {
           className: "CodexProgressMeter",
-          children: (0, wU.jsx)("span", {
+          children: (0, eu.jsx)("span", {
             style: {
-              width: RU / gU * 100 + "%"
+              width: Ru / yu * 100 + "%"
             }
           })
         })]
       })
     }
 
-    function NU(UU) {
+    function vu(uu) {
       let {
-        entry: RU,
-        fileNumber: gU
-      } = UU;
+        entry: Ru,
+        fileNumber: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, GU.B)(), pU = "codexContained" === RU.codexEntryState;
-      return (0, wU.jsx)("section", {
+        t: Eu
+      } = (0, ru.E)(), Ku = "codexContained" === Ru.codexEntryState;
+      return (0, eu.jsx)("section", {
         className: "BoardDetail",
-        children: (0, wU.jsxs)("article", {
-          className: KU()("CodexDossier", yU[RU.codexEntryState]),
-          children: [(0, wU.jsx)("span", {
+        children: (0, eu.jsxs)("article", {
+          className: Xu()("CodexDossier", wu[Ru.codexEntryState]),
+          children: [(0, eu.jsx)("span", {
             className: "CodexFileNumber",
-            children: tU(`${nU}:codexFileNumber`, {
-              number: String(gU).padStart(3, "0")
+            children: Eu(`${Au}:codexFileNumber`, {
+              number: String(yu).padStart(3, "0")
             })
-          }), (0, wU.jsx)(XU, {
-            icon: (0, wU.jsx)(zU, {
-              entry: RU
+          }), (0, eu.jsx)(lu, {
+            icon: (0, eu.jsx)(Yu, {
+              entry: Ru
             }),
-            name: AU(RU),
-            children: (0, wU.jsx)(iU, {
-              entry: RU
+            name: iu(Ru),
+            children: (0, eu.jsx)(Pu, {
+              entry: Ru
             })
-          }), pU && (0, wU.jsxs)(wU.Fragment, {
-            children: [(0, wU.jsx)("p", {
+          }), Ku && (0, eu.jsxs)(eu.Fragment, {
+            children: [(0, eu.jsx)("p", {
               className: "BoardDescription",
-              children: RU.codexEntryLore
-            }), (0, wU.jsxs)("p", {
+              children: Ru.codexEntryLore
+            }), (0, eu.jsxs)("p", {
               className: "CodexTally",
-              children: [tU(`${nU}:codexContainments`, {
-                count: String(RU.codexEntryContainedCount)
-              }), (0, wU.jsx)(DU, {
-                count: RU.codexEntryContainedCount
+              children: [Eu(`${Au}:codexContainments`, {
+                count: String(Ru.codexEntryContainedCount)
+              }), (0, eu.jsx)(qu, {
+                count: Ru.codexEntryContainedCount
               })]
-            }), (0, wU.jsx)("span", {
+            }), (0, eu.jsx)("span", {
               className: "CodexClosedStamp",
               "aria-hidden": "true",
-              children: tU(`${nU}:codexContainedBadge`)
+              children: Eu(`${Au}:codexContainedBadge`)
             })]
-          }), !pU && (0, wU.jsxs)(wU.Fragment, {
-            children: [(0, wU.jsxs)("div", {
+          }), !Ku && (0, eu.jsxs)(eu.Fragment, {
+            children: [(0, eu.jsxs)("div", {
               className: "CodexRedaction",
-              children: [FU.map((UU => (0, wU.jsx)("span", {
+              children: [hu.map((uu => (0, eu.jsx)("span", {
                 className: "CodexRedactedLine",
                 style: {
-                  width: UU
+                  width: uu
                 }
-              }, UU))), (0, wU.jsx)("p", {
+              }, uu))), (0, eu.jsx)("p", {
                 className: "CodexRedacted",
-                children: tU(`${nU}:codexRedacted`)
+                children: Eu(`${Au}:codexRedacted`)
               })]
-            }), "" !== RU.codexEntryHint && (0, wU.jsxs)("aside", {
+            }), "" !== Ru.codexEntryHint && (0, eu.jsxs)("aside", {
               className: "CodexNote",
-              children: [(0, wU.jsx)("h4", {
-                children: tU(`${nU}:codexHintLabel`)
-              }), (0, wU.jsx)("p", {
-                children: RU.codexEntryHint
+              children: [(0, eu.jsx)("h4", {
+                children: Eu(`${Au}:codexHintLabel`)
+              }), (0, eu.jsx)("p", {
+                children: Ru.codexEntryHint
               })]
-            }), (0, wU.jsx)("p", {
+            }), (0, eu.jsx)("p", {
               className: "CodexClearance",
-              children: tU(sU[RU.codexEntryDifficulty])
+              children: Eu(Fu[Ru.codexEntryDifficulty])
             })]
           })]
         })
       })
     }
 
-    function lU(UU) {
+    function au(uu) {
       let {
-        controller: RU
-      } = UU;
-      const gU = (0, cU.h)(HU, RU.getSnapshot()),
+        controller: Ru
+      } = uu;
+      const yu = (0, Vu.h)(Lu, Ru.getSnapshot()),
         {
-          t: tU
-        } = (0, GU.B)();
-      if (0 === gU.entries.length) return null;
-      const pU = gU.entries.find((UU => UU.codexEntryId === gU.selectedId)),
-        EU = gU.entries.filter((UU => "codexContained" === UU.codexEntryState)).length,
-        PU = gU.entries.map((UU => UU.codexEntryId)).sort().indexOf(pU.codexEntryId) + 1;
-      return (0, wU.jsxs)(oU, {
-        open: gU.open,
-        onDismiss: RU.dismiss,
-        title: tU(`${nU}:codexTitle`),
+          t: Eu
+        } = (0, ru.E)();
+      if (0 === yu.entries.length) return null;
+      const Ku = yu.entries.find((uu => uu.codexEntryId === yu.selectedId)),
+        Qu = yu.entries.filter((uu => "codexContained" === uu.codexEntryState)).length,
+        mu = yu.entries.map((uu => uu.codexEntryId)).sort().indexOf(Ku.codexEntryId) + 1;
+      return (0, eu.jsxs)(Mu, {
+        open: yu.open,
+        onDismiss: Ru.dismiss,
+        title: Eu(`${Au}:codexTitle`),
         className: "ContainmentCodexPanel",
-        headerExtra: (0, wU.jsx)(LU, {
-          contained: EU,
-          total: gU.entries.length
+        headerExtra: (0, eu.jsx)(Ou, {
+          contained: Qu,
+          total: yu.entries.length
         }),
-        children: [(0, wU.jsx)("div", {
+        children: [(0, eu.jsx)("div", {
           className: "BoardTiles",
-          children: gU.entries.map((UU => (0, wU.jsx)(MU, {
-            entry: UU,
-            selected: UU === pU,
-            onSelect: RU.select
-          }, UU.codexEntryId)))
-        }), (0, wU.jsx)(NU, {
-          entry: pU,
-          fileNumber: PU
+          children: yu.entries.map((uu => (0, eu.jsx)(ou, {
+            entry: uu,
+            selected: uu === Ku,
+            onSelect: Ru.select
+          }, uu.codexEntryId)))
+        }), (0, eu.jsx)(vu, {
+          entry: Ku,
+          fileNumber: mu
         })]
       })
     }
-    var OU = gU(311);
-    class UR extends dU.b {
-      constructor(UU, RU, gU, tU, pU, EU) {
-        super(UU, RU, gU), this.pacer = tU, this.command = pU, this.predict = EU, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = UU => {
-          this.selectedId = UU, this.emit()
-        }, this.act = (UU, RU) => {
-          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${UU} ${RU}`, this.rollBack)) return;
-          const gU = this.predict(this.board, UU, RU);
-          null !== gU && (this.board = gU.board, this.notice = gU.notice, this.emit())
+    var fu = yu(343);
+    class uR extends cu.b {
+      constructor(uu, Ru, yu, Eu, Ku, Qu) {
+        super(uu, Ru, yu), this.pacer = Eu, this.command = Ku, this.predict = Qu, this.board = null, this.confirmed = null, this.selectedId = "", this.notice = null, this.unsubscribePacer = void 0, this.select = uu => {
+          this.selectedId = uu, this.emit()
+        }, this.act = (uu, Ru) => {
+          if (!this.open || null === this.board || !this.pacer.send(`${this.command} ${uu} ${Ru}`, this.rollBack)) return;
+          const yu = this.predict(this.board, uu, Ru);
+          null !== yu && (this.board = yu.board, this.notice = yu.notice, this.emit())
         }, this.rollBack = () => {
           this.board !== this.confirmed && (this.board = this.confirmed, this.notice = null)
-        }, this.unsubscribePacer = tU.subscribe((() => {
+        }, this.unsubscribePacer = Eu.subscribe((() => {
           this.emit()
         }))
       }
-      qC(UU) {
-        const RU = this.messageOpens(UU);
-        if (RU && this.open) return this.board === this.confirmed && (this.board = UU), this.confirmed = UU, void this.emit();
-        if (this.board = UU, this.confirmed = UU, this.pacer.onReply(), RU) return this.notice = null, this.selectedId = this.openingSelection(UU), void this.show();
-        const gU = this.messageNotice(UU);
-        null !== gU && (this.notice = gU), this.emit()
+      SS(uu) {
+        const Ru = this.messageOpens(uu);
+        if (Ru && this.open) return this.board === this.confirmed && (this.board = uu), this.confirmed = uu, void this.emit();
+        if (this.board = uu, this.confirmed = uu, this.pacer.onReply(), Ru) return this.notice = null, this.selectedId = this.openingSelection(uu), void this.show();
+        const yu = this.messageNotice(uu);
+        null !== yu && (this.notice = yu), this.emit()
       }
       dispose() {
         this.unsubscribePacer(), super.dispose()
@@ -1080,153 +1080,153 @@ export const modules = {
       }
     }
 
-    function RR(UU, RU) {
-      return UU.loadoutCoins >= RU.loadoutCostCoins && RU.loadoutCostParts.every((RU => function(UU, RU) {
-        return gR(UU, RU).loadoutHeldPartAmount
-      }(UU, RU.loadoutPartCurrency) >= RU.loadoutPartAmount))
+    function RR(uu, Ru) {
+      return uu.loadoutCoins >= Ru.loadoutCostCoins && Ru.loadoutCostParts.every((Ru => function(uu, Ru) {
+        return yR(uu, Ru).loadoutHeldPartAmount
+      }(uu, Ru.loadoutPartCurrency) >= Ru.loadoutPartAmount))
     }
 
-    function gR(UU, RU) {
-      return UU.loadoutHeldParts.find((UU => UU.loadoutHeldPartCurrency === RU))
+    function yR(uu, Ru) {
+      return uu.loadoutHeldParts.find((uu => uu.loadoutHeldPartCurrency === Ru))
     }
 
-    function tR(UU, RU) {
-      return UU.loadoutSlots.find((UU => UU.loadoutSlotKind === RU))
+    function ER(uu, Ru) {
+      return uu.loadoutSlots.find((uu => uu.loadoutSlotKind === Ru))
     }
 
-    function pR(UU) {
-      return UU.loadoutPerks.filter((UU => UU.loadoutPerkEquipped)).length >= UU.loadoutMaxPerks
+    function KR(uu) {
+      return uu.loadoutPerks.filter((uu => uu.loadoutPerkEquipped)).length >= uu.loadoutMaxPerks
     }
 
-    function ER(UU, RU, gU) {
-      for (const pU of UU.loadoutSlots) {
-        const tU = pU.loadoutSlotOptions.find((UU => UU.loadoutOptionId === gU));
-        if (tU) return "loadoutArmour" === pU.loadoutSlotKind ? TR(UU, pU, tU, RU) : PR(UU, pU, tU, RU)
+    function QR(uu, Ru, yu) {
+      for (const Ku of uu.loadoutSlots) {
+        const Eu = Ku.loadoutSlotOptions.find((uu => uu.loadoutOptionId === yu));
+        if (Eu) return "loadoutArmour" === Ku.loadoutSlotKind ? JR(uu, Ku, Eu, Ru) : mR(uu, Ku, Eu, Ru)
       }
-      const tU = UU.loadoutPerks.find((UU => UU.loadoutPerkId === gU));
-      return tU ? function(UU, RU, gU) {
-        const tU = RU.loadoutPerkOwned,
-          pU = RU.loadoutPerkEquipped,
-          EU = RU.loadoutPerkName,
-          PU = pR(UU);
-        if ("loadoutUnlock" === gU) {
-          if (tU || !RR(UU, RU.loadoutPerkCost)) return null;
-          const gU = {
-            ...RU,
+      const Eu = uu.loadoutPerks.find((uu => uu.loadoutPerkId === yu));
+      return Eu ? function(uu, Ru, yu) {
+        const Eu = Ru.loadoutPerkOwned,
+          Ku = Ru.loadoutPerkEquipped,
+          Qu = Ru.loadoutPerkName,
+          mu = KR(uu);
+        if ("loadoutUnlock" === yu) {
+          if (Eu || !RR(uu, Ru.loadoutPerkCost)) return null;
+          const yu = {
+            ...Ru,
             loadoutPerkOwned: !0,
-            loadoutPerkEquipped: !PU
+            loadoutPerkEquipped: !mu
           };
           return {
-            board: KR(cR(UU, RU.loadoutPerkCost), gU),
-            notice: GR(PU ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", EU)
+            board: XR(VR(uu, Ru.loadoutPerkCost), yu),
+            notice: rR(mu ? "loadoutNoticeUnlockedNoRoom" : "loadoutNoticeUnlocked", Qu)
           }
         }
-        if ("loadoutUpgrade" === gU || !tU || "loadoutEquip" === gU === pU || !pU && PU) return null;
+        if ("loadoutUpgrade" === yu || !Eu || "loadoutEquip" === yu === Ku || !Ku && mu) return null;
         return {
-          board: KR(UU, {
-            ...RU,
-            loadoutPerkEquipped: !pU
+          board: XR(uu, {
+            ...Ru,
+            loadoutPerkEquipped: !Ku
           }),
-          notice: GR(pU ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", EU)
+          notice: rR(Ku ? "loadoutNoticeUnequipped" : "loadoutNoticeEquipped", Qu)
         }
-      }(UU, tU, RU) : null
+      }(uu, Eu, Ru) : null
     }
 
-    function PR(UU, RU, gU, tU) {
-      const pU = gU.loadoutOptionOwnedTier,
-        EU = gU.loadoutOptionName;
-      if ("loadoutEquip" === tU) return 0 === pU ? null : {
-        board: qR(UU, RU, gU.loadoutOptionId, null),
-        notice: GR("loadoutNoticeEquipped", EU)
+    function mR(uu, Ru, yu, Eu) {
+      const Ku = yu.loadoutOptionOwnedTier,
+        Qu = yu.loadoutOptionName;
+      if ("loadoutEquip" === Eu) return 0 === Ku ? null : {
+        board: NR(uu, Ru, yu.loadoutOptionId, null),
+        notice: rR("loadoutNoticeEquipped", Qu)
       };
-      const PU = "loadoutUnlock" === tU;
-      if (PU && 0 !== pU || "loadoutUpgrade" === tU && (0 === pU || pU >= gU.loadoutOptionTiers.length) || "loadoutUnequip" === tU) return null;
-      const TU = gU.loadoutOptionTiers[pU].loadoutTierCost;
-      if (!RR(UU, TU)) return null;
-      const qU = {
-          ...gU,
-          loadoutOptionOwnedTier: pU + 1
+      const mu = "loadoutUnlock" === Eu;
+      if (mu && 0 !== Ku || "loadoutUpgrade" === Eu && (0 === Ku || Ku >= yu.loadoutOptionTiers.length) || "loadoutUnequip" === Eu) return null;
+      const Ju = yu.loadoutOptionTiers[Ku].loadoutTierCost;
+      if (!RR(uu, Ju)) return null;
+      const Nu = {
+          ...yu,
+          loadoutOptionOwnedTier: Ku + 1
         },
-        KU = PU ? gU.loadoutOptionId : RU.loadoutSlotEquippedId;
+        Xu = mu ? yu.loadoutOptionId : Ru.loadoutSlotEquippedId;
       return {
-        board: qR(cR(UU, TU), RU, KU, qU),
-        notice: PU ? GR("loadoutNoticeUnlocked", EU) : GR("loadoutNoticeUpgraded", EU, pU + 1)
+        board: NR(VR(uu, Ju), Ru, Xu, Nu),
+        notice: mu ? rR("loadoutNoticeUnlocked", Qu) : rR("loadoutNoticeUpgraded", Qu, Ku + 1)
       }
     }
 
-    function TR(UU, RU, gU, tU) {
-      const pU = gU.loadoutOptionOwnedTier > 0,
-        EU = gU.loadoutOptionName;
-      if ("loadoutEquip" === tU && pU) return {
-        board: qR(UU, RU, gU.loadoutOptionId, null),
-        notice: GR("loadoutNoticeEquipped", EU)
+    function JR(uu, Ru, yu, Eu) {
+      const Ku = yu.loadoutOptionOwnedTier > 0,
+        Qu = yu.loadoutOptionName;
+      if ("loadoutEquip" === Eu && Ku) return {
+        board: NR(uu, Ru, yu.loadoutOptionId, null),
+        notice: rR("loadoutNoticeEquipped", Qu)
       };
-      const PU = gU.loadoutOptionTiers[0].loadoutTierCost;
-      return "loadoutUnlock" !== tU || pU || !RR(UU, PU) ? null : {
-        board: qR(cR(UU, PU), RU, gU.loadoutOptionId, {
-          ...gU,
+      const mu = yu.loadoutOptionTiers[0].loadoutTierCost;
+      return "loadoutUnlock" !== Eu || Ku || !RR(uu, mu) ? null : {
+        board: NR(VR(uu, mu), Ru, yu.loadoutOptionId, {
+          ...yu,
           loadoutOptionOwnedTier: 1
         }),
-        notice: GR("loadoutNoticeUnlocked", EU)
+        notice: rR("loadoutNoticeUnlocked", Qu)
       }
     }
 
-    function qR(UU, RU, gU, tU) {
-      const pU = {
-        ...RU,
-        loadoutSlotEquippedId: gU,
-        loadoutSlotOptions: RU.loadoutSlotOptions.map((UU => null !== tU && UU.loadoutOptionId === tU.loadoutOptionId ? tU : UU))
+    function NR(uu, Ru, yu, Eu) {
+      const Ku = {
+        ...Ru,
+        loadoutSlotEquippedId: yu,
+        loadoutSlotOptions: Ru.loadoutSlotOptions.map((uu => null !== Eu && uu.loadoutOptionId === Eu.loadoutOptionId ? Eu : uu))
       };
       return {
-        ...UU,
-        loadoutSlots: UU.loadoutSlots.map((UU => UU === RU ? pU : UU))
+        ...uu,
+        loadoutSlots: uu.loadoutSlots.map((uu => uu === Ru ? Ku : uu))
       }
     }
 
-    function KR(UU, RU) {
+    function XR(uu, Ru) {
       return {
-        ...UU,
-        loadoutPerks: UU.loadoutPerks.map((UU => UU.loadoutPerkId === RU.loadoutPerkId ? RU : UU))
+        ...uu,
+        loadoutPerks: uu.loadoutPerks.map((uu => uu.loadoutPerkId === Ru.loadoutPerkId ? Ru : uu))
       }
     }
 
-    function cR(UU, RU) {
+    function VR(uu, Ru) {
       return {
-        ...UU,
-        loadoutCoins: UU.loadoutCoins - RU.loadoutCostCoins,
-        loadoutHeldParts: UU.loadoutHeldParts.map((UU => {
-          const gU = RU.loadoutCostParts.find((RU => RU.loadoutPartCurrency === UU.loadoutHeldPartCurrency));
-          return gU ? {
-            ...UU,
-            loadoutHeldPartAmount: UU.loadoutHeldPartAmount - gU.loadoutPartAmount
-          } : UU
+        ...uu,
+        loadoutCoins: uu.loadoutCoins - Ru.loadoutCostCoins,
+        loadoutHeldParts: uu.loadoutHeldParts.map((uu => {
+          const yu = Ru.loadoutCostParts.find((Ru => Ru.loadoutPartCurrency === uu.loadoutHeldPartCurrency));
+          return yu ? {
+            ...uu,
+            loadoutHeldPartAmount: uu.loadoutHeldPartAmount - yu.loadoutPartAmount
+          } : uu
         }))
       }
     }
 
-    function GR(UU, RU) {
+    function rR(uu, Ru) {
       return {
-        loadoutNoticeKey: UU,
+        loadoutNoticeKey: uu,
         loadoutNoticeRefused: !1,
-        loadoutNoticeName: RU,
+        loadoutNoticeName: Ru,
         loadoutNoticeTier: arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0
       }
     }
-    const jR = "containmentLoadoutView";
-    class uR extends UR {
-      constructor(UU, RU, gU, tU) {
-        super(UU, RU, gU, tU, "loadout", ER), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = UU => {
-          this.slot = UU, this.selectedId = CR(this.board, UU), this.emit()
+    const BR = "containmentLoadoutView";
+    class xR extends uR {
+      constructor(uu, Ru, yu, Eu) {
+        super(uu, Ru, yu, Eu, "loadout", QR), this.slot = "loadoutPrimary", this.snapshot = this.buildSnapshot(), this.selectSlot = uu => {
+          this.slot = uu, this.selectedId = SR(this.board, uu), this.emit()
         }
       }
-      messageOpens(UU) {
-        return UU.loadoutMessageOpens
+      messageOpens(uu) {
+        return uu.loadoutMessageOpens
       }
-      messageNotice(UU) {
-        return UU.loadoutNotice
+      messageNotice(uu) {
+        return uu.loadoutNotice
       }
-      openingSelection(UU) {
-        return CR(UU, this.slot)
+      openingSelection(uu) {
+        return SR(uu, this.slot)
       }
       buildSnapshot() {
         return {
@@ -1240,765 +1240,765 @@ export const modules = {
       }
     }
 
-    function CR(UU, RU) {
-      if ("loadoutPerks" === RU) {
-        var gU;
-        const RU = UU.loadoutPerks;
-        return (null !== (gU = RU.find((UU => UU.loadoutPerkEquipped))) && void 0 !== gU ? gU : RU[0]).loadoutPerkId
+    function SR(uu, Ru) {
+      if ("loadoutPerks" === Ru) {
+        var yu;
+        const Ru = uu.loadoutPerks;
+        return (null !== (yu = Ru.find((uu => uu.loadoutPerkEquipped))) && void 0 !== yu ? yu : Ru[0]).loadoutPerkId
       }
-      return tR(UU, RU).loadoutSlotEquippedId
+      return ER(uu, Ru).loadoutSlotEquippedId
     }
-    const hR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
-    var QR = gU(36425),
-      eR = gU(1283);
-    const WR = {
-        loadoutPrimary: `${nU}:loadoutSlotPrimary`,
-        loadoutSecondary: `${nU}:loadoutSlotSecondary`,
-        loadoutOffensive: `${nU}:loadoutSlotOffensive`,
-        loadoutSelfHelp: `${nU}:loadoutSlotSelfHelp`,
-        loadoutArmour: `${nU}:loadoutSlotArmour`,
-        loadoutPerks: `${nU}:loadoutSlotPerks`
+    const pR = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAY0lEQVR4nGNgIAP8x4FRwP/sFt3/EYU6YBqGIwp1MBSDBUH4/3nW//83csD5DOgKfeKNsWIMhV+///qvbOT7/87cMjCG8TEUgiSLqlpRMEgMQ+HJvgy4aTAMEsPqc2KChyAAAFxNbnylK5O6AAAAAElFTkSuQmCC";
+    var TR = yu(36650),
+      WR = yu(1247);
+    const jR = {
+        loadoutPrimary: `${Au}:loadoutSlotPrimary`,
+        loadoutSecondary: `${Au}:loadoutSlotSecondary`,
+        loadoutOffensive: `${Au}:loadoutSlotOffensive`,
+        loadoutSelfHelp: `${Au}:loadoutSlotSelfHelp`,
+        loadoutArmour: `${Au}:loadoutSlotArmour`,
+        loadoutPerks: `${Au}:loadoutSlotPerks`
       },
-      fR = {
+      HR = {
         section: "right",
-        Hj: "bottom",
+        cB: "bottom",
         act: "top"
       },
-      xR = (0, tU.createContext)({
+      dR = (0, Eu.createContext)({
         step: null,
         targetRef: () => {}
       });
 
-    function mR() {
+    function bR() {
       const {
-        step: UU,
-        targetRef: RU
-      } = (0, tU.useContext)(xR);
-      return (gU, tU) => (null === UU || void 0 === UU ? void 0 : UU.kind) === gU && UU.id === tU ? RU : void 0
+        step: uu,
+        targetRef: Ru
+      } = (0, Eu.useContext)(dR);
+      return (yu, Eu) => (null === uu || void 0 === uu ? void 0 : uu.kind) === yu && uu.id === Eu ? Ru : void 0
     }
 
-    function IR(UU, RU) {
-      const gU = RU.loadoutTargetId;
-      if ("loadoutPerks" === RU.loadoutTargetSection) {
-        const RU = UU.loadoutPerks.find((UU => UU.loadoutPerkId === gU));
+    function CR(uu, Ru) {
+      const yu = Ru.loadoutTargetId;
+      if ("loadoutPerks" === Ru.loadoutTargetSection) {
+        const Ru = uu.loadoutPerks.find((uu => uu.loadoutPerkId === yu));
         return {
-          name: RU.loadoutPerkName,
-          owned: RU.loadoutPerkOwned,
-          equipped: RU.loadoutPerkEquipped
+          name: Ru.loadoutPerkName,
+          owned: Ru.loadoutPerkOwned,
+          equipped: Ru.loadoutPerkEquipped
         }
       }
-      const tU = tR(UU, RU.loadoutTargetSection),
-        pU = tU.loadoutSlotOptions.find((UU => UU.loadoutOptionId === gU));
+      const Eu = ER(uu, Ru.loadoutTargetSection),
+        Ku = Eu.loadoutSlotOptions.find((uu => uu.loadoutOptionId === yu));
       return {
-        name: pU.loadoutOptionName,
-        owned: pU.loadoutOptionOwnedTier > 0,
-        equipped: tU.loadoutSlotEquippedId === gU
+        name: Ku.loadoutOptionName,
+        owned: Ku.loadoutOptionOwnedTier > 0,
+        equipped: Eu.loadoutSlotEquippedId === yu
       }
     }
 
-    function JR(UU, RU, gU, tU) {
-      const [pU, EU] = UU(`${nU}:${RU}`, {
-        [gU]: "\x01"
+    function kR(uu, Ru, yu, Eu) {
+      const [Ku, Qu] = uu(`${Au}:${Ru}`, {
+        [yu]: "\x01"
       }).split("\x01");
-      return (0, wU.jsxs)(wU.Fragment, {
-        children: [pU, (0, wU.jsx)("span", {
+      return (0, eu.jsxs)(eu.Fragment, {
+        children: [Ku, (0, eu.jsx)("span", {
           className: "LoadoutWalkthroughName",
-          children: tU
-        }), EU]
+          children: Eu
+        }), Qu]
       })
     }
 
-    function wR(UU) {
+    function eR(uu) {
       let {
-        view: RU,
-        onDismiss: gU,
-        children: pU
-      } = UU;
+        view: Ru,
+        onDismiss: yu,
+        children: Ku
+      } = uu;
       const {
-        t: EU
-      } = (0, GU.B)(), PU = RU.loadout, TU = RU.open ? PU.loadoutWalkthrough.map((UU => ({
-        target: UU,
-        info: IR(PU, UU)
-      }))).find((UU => {
+        t: Qu
+      } = (0, ru.E)(), mu = Ru.loadout, Ju = Ru.open ? mu.loadoutWalkthrough.map((uu => ({
+        target: uu,
+        info: CR(mu, uu)
+      }))).find((uu => {
         let {
-          info: RU
-        } = UU;
-        return !RU.equipped
+          info: Ru
+        } = uu;
+        return !Ru.equipped
       })) : void 0;
-      let qU = null,
-        KU = null;
-      if (void 0 !== TU) {
+      let Nu = null,
+        Xu = null;
+      if (void 0 !== Ju) {
         const {
-          target: UU,
-          info: gU
-        } = TU;
-        RU.slot !== UU.loadoutTargetSection ? (qU = {
+          target: uu,
+          info: yu
+        } = Ju;
+        Ru.slot !== uu.loadoutTargetSection ? (Nu = {
           kind: "section",
-          id: UU.loadoutTargetSection
-        }, KU = JR(EU, "loadoutWalkthroughSection", "section", EU(WR[UU.loadoutTargetSection]))) : RU.selectedId !== UU.loadoutTargetId ? (qU = {
-          kind: "Hj",
-          id: UU.loadoutTargetId
-        }, KU = JR(EU, "loadoutWalkthroughPick", "name", gU.name)) : (qU = {
+          id: uu.loadoutTargetSection
+        }, Xu = kR(Qu, "loadoutWalkthroughSection", "section", Qu(jR[uu.loadoutTargetSection]))) : Ru.selectedId !== uu.loadoutTargetId ? (Nu = {
+          kind: "cB",
+          id: uu.loadoutTargetId
+        }, Xu = kR(Qu, "loadoutWalkthroughPick", "name", yu.name)) : (Nu = {
           kind: "act",
-          id: UU.loadoutTargetId
-        }, KU = JR(EU, gU.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", gU.name))
+          id: uu.loadoutTargetId
+        }, Xu = kR(Qu, yu.owned ? "loadoutWalkthroughEquip" : "loadoutWalkthroughUnlock", "name", yu.name))
       }
-      const cU = null === qU ? null : function(UU) {
-          return `${UU.kind}:${UU.id}`
-        }(qU),
-        [jU, uU] = (0, tU.useState)(null),
-        CU = (0, tU.useCallback)((UU => {
-          uU((RU => null !== UU ? {
-            key: cU,
-            node: UU
-          } : (null === RU || void 0 === RU ? void 0 : RU.key) === cU ? null : RU))
-        }), [cU]),
-        hU = null !== cU && (null === jU || void 0 === jU ? void 0 : jU.key) === cU ? jU.node : null;
-      return (0, wU.jsxs)(xR.Provider, {
+      const Vu = null === Nu ? null : function(uu) {
+          return `${uu.kind}:${uu.id}`
+        }(Nu),
+        [Bu, xu] = (0, Eu.useState)(null),
+        Su = (0, Eu.useCallback)((uu => {
+          xu((Ru => null !== uu ? {
+            key: Vu,
+            node: uu
+          } : (null === Ru || void 0 === Ru ? void 0 : Ru.key) === Vu ? null : Ru))
+        }), [Vu]),
+        pu = null !== Vu && (null === Bu || void 0 === Bu ? void 0 : Bu.key) === Vu ? Bu.node : null;
+      return (0, eu.jsxs)(dR.Provider, {
         value: {
-          step: qU,
-          targetRef: CU
+          step: Nu,
+          targetRef: Su
         },
-        children: [pU, null !== qU && null !== hU && (0, wU.jsx)(nR, {
-          target: hU,
-          placement: fR[qU.kind],
-          onDismiss: gU,
-          children: KU
-        }, cU)]
+        children: [Ku, null !== Nu && null !== pu && (0, eu.jsx)(AR, {
+          target: pu,
+          placement: HR[Nu.kind],
+          onDismiss: yu,
+          children: Xu
+        }, Vu)]
       })
     }
 
-    function nR(UU) {
+    function AR(uu) {
       let {
-        target: RU,
-        placement: gU,
-        onDismiss: pU,
-        children: EU
-      } = UU;
+        target: Ru,
+        placement: yu,
+        onDismiss: Ku,
+        children: Qu
+      } = uu;
       const {
-        t: PU
-      } = (0, GU.B)(), TU = (0, tU.useRef)(RU);
-      return TU.current = RU, (0, eR.q)("popup", TU, pU), (0, wU.jsxs)(QR.d, {
-        target: RU,
-        placement: gU,
+        t: mu
+      } = (0, ru.E)(), Ju = (0, Eu.useRef)(Ru);
+      return Ju.current = Ru, (0, WR.t)("popup", Ju, Ku), (0, eu.jsxs)(TR.f, {
+        target: Ru,
+        placement: yu,
         className: "LoadoutWalkthroughStep",
         spotlightMargin: 10,
-        children: [(0, wU.jsxs)("div", {
+        children: [(0, eu.jsxs)("div", {
           className: "LoadoutWalkthroughHeader",
-          children: [(0, wU.jsx)("img", {
+          children: [(0, eu.jsx)("img", {
             className: "LoadoutWalkthroughPortrait",
-            src: hR,
+            src: pR,
             alt: "",
             draggable: !1
-          }), (0, wU.jsx)("span", {
+          }), (0, eu.jsx)("span", {
             className: "LoadoutWalkthroughSpeaker",
-            children: PU(`${nU}:operatorName`)
-          }), (0, wU.jsx)(CU.h, {
-            onClick: pU,
-            ariaLabel: PU(`${nU}:loadoutWalkthroughClose`),
+            children: mu(`${Au}:operatorName`)
+          }), (0, eu.jsx)(Su.h, {
+            onClick: Ku,
+            ariaLabel: mu(`${Au}:loadoutWalkthroughClose`),
             padIgnore: !0
           })]
-        }), (0, wU.jsx)("p", {
+        }), (0, eu.jsx)("p", {
           className: "LoadoutWalkthroughText",
-          children: EU
+          children: Qu
         })]
       })
     }
-    const bR = new Set(["loadoutStatReload", "loadoutStatResupply"]);
+    const DR = new Set(["loadoutStatReload", "loadoutStatResupply"]);
 
-    function oR(UU) {
+    function MR(uu) {
       let {
-        cost: RU,
-        loadout: gU
-      } = UU;
+        cost: Ru,
+        loadout: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, GU.B)();
-      return RU.loadoutCostCoins <= 0 && 0 === RU.loadoutCostParts.length ? (0, wU.jsx)("span", {
+        t: Eu
+      } = (0, ru.E)();
+      return Ru.loadoutCostCoins <= 0 && 0 === Ru.loadoutCostParts.length ? (0, eu.jsx)("span", {
         className: "LoadoutCost",
-        children: tU(`${nU}:loadoutFree`)
-      }) : (0, wU.jsxs)("span", {
+        children: Eu(`${Au}:loadoutFree`)
+      }) : (0, eu.jsxs)("span", {
         className: "LoadoutCost",
-        children: [RU.loadoutCostCoins > 0 && (0, wU.jsx)(YU, {
-          itemName: bU,
-          amount: RU.loadoutCostCoins,
-          WT: gU.loadoutCoins
-        }), RU.loadoutCostParts.map((UU => {
-          const RU = gR(gU, UU.loadoutPartCurrency);
-          return (0, wU.jsx)(YU, {
-            itemName: RU.loadoutHeldPartItem,
-            amount: UU.loadoutPartAmount,
-            WT: RU.loadoutHeldPartAmount
-          }, UU.loadoutPartCurrency)
+        children: [Ru.loadoutCostCoins > 0 && (0, eu.jsx)(Uu, {
+          itemName: Du,
+          amount: Ru.loadoutCostCoins,
+          jJ: yu.loadoutCoins
+        }), Ru.loadoutCostParts.map((uu => {
+          const Ru = yR(yu, uu.loadoutPartCurrency);
+          return (0, eu.jsx)(Uu, {
+            itemName: Ru.loadoutHeldPartItem,
+            amount: uu.loadoutPartAmount,
+            jJ: Ru.loadoutHeldPartAmount
+          }, uu.loadoutPartCurrency)
         }))]
       })
     }
-    const ZR = {
-      loadoutStatFireRate: `${nU}:loadoutUnitPerMinute`,
-      loadoutStatReload: `${nU}:loadoutUnitSeconds`,
-      loadoutStatResupply: `${nU}:loadoutUnitSeconds`
+    const IR = {
+      loadoutStatFireRate: `${Au}:loadoutUnitPerMinute`,
+      loadoutStatReload: `${Au}:loadoutUnitSeconds`,
+      loadoutStatResupply: `${Au}:loadoutUnitSeconds`
     };
 
-    function aR(UU) {
-      return "loadoutStatPotency" === UU.loadoutStatKind ? (0, OU.V)(UU.loadoutStatValue) : String(UU.loadoutStatValue)
+    function GR(uu) {
+      return "loadoutStatPotency" === uu.loadoutStatKind ? (0, fu.U)(uu.loadoutStatValue) : String(uu.loadoutStatValue)
     }
 
-    function YR(UU) {
-      var RU;
+    function UR(uu) {
+      var Ru;
       let {
-        option: gU
-      } = UU;
+        option: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, GU.B)(), pU = gU.loadoutOptionTiers, EU = null === (RU = pU[0]) || void 0 === RU ? void 0 : RU.loadoutTierStats.map((UU => UU.loadoutStatKind));
-      if (!EU || 0 === EU.length) return null;
-      const PU = gU.loadoutOptionOwnedTier,
-        TU = (UU, RU) => {
-          var gU;
-          return null === (gU = pU[UU]) || void 0 === gU ? void 0 : gU.loadoutTierStats.find((UU => UU.loadoutStatKind === RU))
+        t: Eu
+      } = (0, ru.E)(), Ku = yu.loadoutOptionTiers, Qu = null === (Ru = Ku[0]) || void 0 === Ru ? void 0 : Ru.loadoutTierStats.map((uu => uu.loadoutStatKind));
+      if (!Qu || 0 === Qu.length) return null;
+      const mu = yu.loadoutOptionOwnedTier,
+        Ju = (uu, Ru) => {
+          var yu;
+          return null === (yu = Ku[uu]) || void 0 === yu ? void 0 : yu.loadoutTierStats.find((uu => uu.loadoutStatKind === Ru))
         };
-      return (0, wU.jsxs)("table", {
+      return (0, eu.jsxs)("table", {
         className: "LoadoutTierTable",
-        children: [(0, wU.jsx)("thead", {
-          children: (0, wU.jsxs)("tr", {
-            children: [(0, wU.jsx)("th", {}), pU.map(((UU, RU) => (0, wU.jsx)("th", {
-              className: KU()({
-                Current: RU + 1 === PU,
-                Next: RU === PU
+        children: [(0, eu.jsx)("thead", {
+          children: (0, eu.jsxs)("tr", {
+            children: [(0, eu.jsx)("th", {}), Ku.map(((uu, Ru) => (0, eu.jsx)("th", {
+              className: Xu()({
+                Current: Ru + 1 === mu,
+                Next: Ru === mu
               }),
-              children: tU(`${nU}:loadoutTier`, {
-                tier: (0, OU.V)(RU + 1)
+              children: Eu(`${Au}:loadoutTier`, {
+                tier: (0, fu.U)(Ru + 1)
               })
-            }, RU)))]
+            }, Ru)))]
           })
-        }), (0, wU.jsx)("tbody", {
-          children: EU.map((UU => {
-            const RU = ZR[UU];
-            return (0, wU.jsxs)("tr", {
-              children: [(0, wU.jsxs)("th", {
+        }), (0, eu.jsx)("tbody", {
+          children: Qu.map((uu => {
+            const Ru = IR[uu];
+            return (0, eu.jsxs)("tr", {
+              children: [(0, eu.jsxs)("th", {
                 scope: "row",
-                children: [tU(`${nU}:${UU}`), RU && (0, wU.jsx)("span", {
+                children: [Eu(`${Au}:${uu}`), Ru && (0, eu.jsx)("span", {
                   className: "LoadoutStatUnit",
-                  children: tU(RU)
+                  children: Eu(Ru)
                 })]
-              }), pU.map(((RU, gU) => {
-                const tU = TU(gU, UU),
-                  pU = gU > 0 ? TU(gU - 1, UU) : void 0,
-                  EU = tU && pU ? tU.loadoutStatValue - pU.loadoutStatValue : 0,
-                  qU = bR.has(UU) ? EU < 0 : EU > 0,
-                  cU = gU === PU;
-                return (0, wU.jsxs)("td", {
-                  className: KU()({
-                    Current: gU + 1 === PU,
-                    Next: cU,
-                    Gain: qU,
-                    Owned: gU < PU
+              }), Ku.map(((Ru, yu) => {
+                const Eu = Ju(yu, uu),
+                  Ku = yu > 0 ? Ju(yu - 1, uu) : void 0,
+                  Qu = Eu && Ku ? Eu.loadoutStatValue - Ku.loadoutStatValue : 0,
+                  Nu = DR.has(uu) ? Qu < 0 : Qu > 0,
+                  Vu = yu === mu;
+                return (0, eu.jsxs)("td", {
+                  className: Xu()({
+                    Current: yu + 1 === mu,
+                    Next: Vu,
+                    Gain: Nu,
+                    Owned: yu < mu
                   }),
-                  children: [cU && qU && (0, wU.jsx)("span", {
+                  children: [Vu && Nu && (0, eu.jsx)("span", {
                     className: "LoadoutGainArrow",
                     "aria-hidden": "true",
-                    children: EU < 0 ? "\u25bc" : "\u25b2"
-                  }), tU ? aR(tU) : "-"]
-                }, gU)
+                    children: Qu < 0 ? "\u25bc" : "\u25b2"
+                  }), Eu ? GR(Eu) : "-"]
+                }, yu)
               }))]
-            }, UU)
+            }, uu)
           }))
         })]
       })
     }
 
-    function BR(UU) {
+    function nR(uu) {
       let {
-        view: RU,
-        controller: gU,
-        slot: tU,
-        option: pU
-      } = UU;
+        view: Ru,
+        controller: yu,
+        slot: Eu,
+        option: Ku
+      } = uu;
       const {
-        t: EU
-      } = (0, GU.B)(), PU = RU.loadout, TU = pU.loadoutOptionOwnedTier, qU = pU.loadoutOptionTiers.length, KU = tU.loadoutSlotEquippedId === pU.loadoutOptionId, cU = TU < qU ? pU.loadoutOptionTiers[TU].loadoutTierCost : null, jU = null !== cU && RR(PU, cU), uU = pU.loadoutOptionId, hU = mR();
-      return (0, wU.jsxs)(wU.Fragment, {
-        children: [(0, wU.jsx)(rR, {
-          icon: pU.loadoutOptionIcon,
-          name: pU.loadoutOptionName,
-          status: 0 === TU ? EU(`${nU}:loadoutLocked`) : qU > 1 ? EU(`${nU}:loadoutTier`, {
-            tier: (0, OU.V)(TU)
+        t: Qu
+      } = (0, ru.E)(), mu = Ru.loadout, Ju = Ku.loadoutOptionOwnedTier, Nu = Ku.loadoutOptionTiers.length, Xu = Eu.loadoutSlotEquippedId === Ku.loadoutOptionId, Vu = Ju < Nu ? Ku.loadoutOptionTiers[Ju].loadoutTierCost : null, Bu = null !== Vu && RR(mu, Vu), xu = Ku.loadoutOptionId, pu = bR();
+      return (0, eu.jsxs)(eu.Fragment, {
+        children: [(0, eu.jsx)(tR, {
+          icon: Ku.loadoutOptionIcon,
+          name: Ku.loadoutOptionName,
+          status: 0 === Ju ? Qu(`${Au}:loadoutLocked`) : Nu > 1 ? Qu(`${Au}:loadoutTier`, {
+            tier: (0, fu.U)(Ju)
           }) : null,
-          locked: 0 === TU,
-          equipped: KU
-        }), (0, wU.jsx)("p", {
+          locked: 0 === Ju,
+          equipped: Xu
+        }), (0, eu.jsx)("p", {
           className: "BoardDescription",
-          children: pU.loadoutOptionDescription
-        }), (0, wU.jsx)(YR, {
-          option: pU
-        }), (0, wU.jsxs)("div", {
-          ref: hU("act", uU),
+          children: Ku.loadoutOptionDescription
+        }), (0, eu.jsx)(UR, {
+          option: Ku
+        }), (0, eu.jsxs)("div", {
+          ref: pu("act", xu),
           className: "BoardActions",
-          children: [null !== cU && (0, wU.jsxs)("div", {
+          children: [null !== Vu && (0, eu.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, wU.jsx)(oR, {
-              cost: cU,
-              loadout: PU
-            }), (0, wU.jsx)(CU.j, {
-              disabled: !jU || RU.pending,
+            children: [(0, eu.jsx)(MR, {
+              cost: Vu,
+              loadout: mu
+            }), (0, eu.jsx)(Su.l, {
+              disabled: !Bu || Ru.pending,
               onClick: () => {
-                gU.act(0 === TU ? "loadoutUnlock" : "loadoutUpgrade", uU)
+                yu.act(0 === Ju ? "loadoutUnlock" : "loadoutUpgrade", xu)
               },
-              children: 0 === TU ? EU(`${nU}:loadoutUnlock`) : EU(`${nU}:loadoutUpgrade`, {
-                tier: (0, OU.V)(TU + 1)
+              children: 0 === Ju ? Qu(`${Au}:loadoutUnlock`) : Qu(`${Au}:loadoutUpgrade`, {
+                tier: (0, fu.U)(Ju + 1)
               })
             })]
-          }), null === cU && qU > 1 && (0, wU.jsx)("span", {
+          }), null === Vu && Nu > 1 && (0, eu.jsx)("span", {
             className: "BoardHint",
-            children: EU(`${nU}:loadoutMaxed`)
-          }), TU > 0 && !KU && (0, wU.jsx)(CU.e, {
-            disabled: RU.pending,
+            children: Qu(`${Au}:loadoutMaxed`)
+          }), Ju > 0 && !Xu && (0, eu.jsx)(Su.e, {
+            disabled: Ru.pending,
             onClick: () => {
-              gU.act("loadoutEquip", uU)
+              yu.act("loadoutEquip", xu)
             },
-            children: EU(`${nU}:loadoutEquip`)
+            children: Qu(`${Au}:loadoutEquip`)
           })]
         })]
       })
     }
 
-    function VR(UU) {
+    function sR(uu) {
       let {
-        view: RU,
-        controller: gU,
-        perk: tU
-      } = UU;
+        view: Ru,
+        controller: yu,
+        perk: Eu
+      } = uu;
       const {
-        t: pU
-      } = (0, GU.B)(), EU = RU.loadout, PU = pR(EU), TU = tU.loadoutPerkId, qU = mR();
-      return (0, wU.jsxs)(wU.Fragment, {
-        children: [(0, wU.jsx)(rR, {
-          icon: tU.loadoutPerkIcon,
-          name: tU.loadoutPerkName,
-          status: tU.loadoutPerkOwned ? null : pU(`${nU}:loadoutLocked`),
-          locked: !tU.loadoutPerkOwned,
-          equipped: tU.loadoutPerkEquipped
-        }), (0, wU.jsx)("p", {
+        t: Ku
+      } = (0, ru.E)(), Qu = Ru.loadout, mu = KR(Qu), Ju = Eu.loadoutPerkId, Nu = bR();
+      return (0, eu.jsxs)(eu.Fragment, {
+        children: [(0, eu.jsx)(tR, {
+          icon: Eu.loadoutPerkIcon,
+          name: Eu.loadoutPerkName,
+          status: Eu.loadoutPerkOwned ? null : Ku(`${Au}:loadoutLocked`),
+          locked: !Eu.loadoutPerkOwned,
+          equipped: Eu.loadoutPerkEquipped
+        }), (0, eu.jsx)("p", {
           className: "BoardDescription",
-          children: tU.loadoutPerkDescription
-        }), (0, wU.jsxs)("div", {
-          ref: qU("act", TU),
+          children: Eu.loadoutPerkDescription
+        }), (0, eu.jsxs)("div", {
+          ref: Nu("act", Ju),
           className: "BoardActions",
-          children: [!tU.loadoutPerkOwned && (0, wU.jsxs)("div", {
+          children: [!Eu.loadoutPerkOwned && (0, eu.jsxs)("div", {
             className: "LoadoutBuy",
-            children: [(0, wU.jsx)(oR, {
-              cost: tU.loadoutPerkCost,
-              loadout: EU
-            }), (0, wU.jsx)(CU.j, {
-              disabled: !RR(EU, tU.loadoutPerkCost) || RU.pending,
+            children: [(0, eu.jsx)(MR, {
+              cost: Eu.loadoutPerkCost,
+              loadout: Qu
+            }), (0, eu.jsx)(Su.l, {
+              disabled: !RR(Qu, Eu.loadoutPerkCost) || Ru.pending,
               onClick: () => {
-                gU.act("loadoutUnlock", TU)
+                yu.act("loadoutUnlock", Ju)
               },
-              children: pU(`${nU}:loadoutUnlock`)
+              children: Ku(`${Au}:loadoutUnlock`)
             })]
-          }), tU.loadoutPerkOwned && !tU.loadoutPerkEquipped && (0, wU.jsx)(CU.e, {
-            disabled: PU || RU.pending,
+          }), Eu.loadoutPerkOwned && !Eu.loadoutPerkEquipped && (0, eu.jsx)(Su.e, {
+            disabled: mu || Ru.pending,
             onClick: () => {
-              gU.act("loadoutEquip", TU)
+              yu.act("loadoutEquip", Ju)
             },
-            children: pU(`${nU}:loadoutEquip`)
-          }), tU.loadoutPerkOwned && !tU.loadoutPerkEquipped && PU && (0, wU.jsx)("span", {
+            children: Ku(`${Au}:loadoutEquip`)
+          }), Eu.loadoutPerkOwned && !Eu.loadoutPerkEquipped && mu && (0, eu.jsx)("span", {
             className: "BoardHint",
-            children: pU(`${nU}:loadoutSocketsFullHint`)
-          }), tU.loadoutPerkEquipped && (0, wU.jsx)(CU.M, {
-            disabled: RU.pending,
+            children: Ku(`${Au}:loadoutSocketsFullHint`)
+          }), Eu.loadoutPerkEquipped && (0, eu.jsx)(Su.P, {
+            disabled: Ru.pending,
             onClick: () => {
-              gU.act("loadoutUnequip", TU)
+              yu.act("loadoutUnequip", Ju)
             },
-            children: pU(`${nU}:loadoutUnequip`)
+            children: Ku(`${Au}:loadoutUnequip`)
           })]
         })]
       })
     }
 
-    function rR(UU) {
+    function tR(uu) {
       let {
-        icon: RU,
-        name: gU,
-        status: tU,
-        locked: pU,
-        equipped: EU
-      } = UU;
+        icon: Ru,
+        name: yu,
+        status: Eu,
+        locked: Ku,
+        equipped: Qu
+      } = uu;
       const {
-        t: PU
-      } = (0, GU.B)();
-      return (0, wU.jsxs)(XU, {
-        icon: (0, wU.jsx)(ZU, {
-          itemName: RU
+        t: mu
+      } = (0, ru.E)();
+      return (0, eu.jsxs)(lu, {
+        icon: (0, eu.jsx)(Iu, {
+          itemName: Ru
         }),
-        name: gU,
-        children: [null !== tU && (0, wU.jsx)("span", {
-          className: KU()("LoadoutStatusText", {
-            Locked: pU
+        name: yu,
+        children: [null !== Eu && (0, eu.jsx)("span", {
+          className: Xu()("LoadoutStatusText", {
+            Locked: Ku
           }),
-          children: tU
-        }), EU && (0, wU.jsx)("span", {
+          children: Eu
+        }), Qu && (0, eu.jsx)("span", {
           className: "BoardBadge",
-          children: PU(`${nU}:loadoutEquippedBadge`)
+          children: mu(`${Au}:loadoutEquippedBadge`)
         })]
       })
     }
 
-    function XR(UU) {
+    function lR(uu) {
       let {
-        view: RU,
-        controller: gU
-      } = UU;
-      const tU = RU.loadout;
-      if ("loadoutPerks" === RU.slot) {
-        const UU = tU.loadoutPerks.find((UU => UU.loadoutPerkId === RU.selectedId));
-        return (0, wU.jsx)("section", {
+        view: Ru,
+        controller: yu
+      } = uu;
+      const Eu = Ru.loadout;
+      if ("loadoutPerks" === Ru.slot) {
+        const uu = Eu.loadoutPerks.find((uu => uu.loadoutPerkId === Ru.selectedId));
+        return (0, eu.jsx)("section", {
           className: "BoardDetail",
-          children: UU && (0, wU.jsx)(VR, {
-            view: RU,
-            controller: gU,
-            perk: UU
+          children: uu && (0, eu.jsx)(sR, {
+            view: Ru,
+            controller: yu,
+            perk: uu
           })
         })
       }
-      const pU = tR(tU, RU.slot),
-        EU = pU.loadoutSlotOptions.find((UU => UU.loadoutOptionId === RU.selectedId));
-      return (0, wU.jsx)("section", {
+      const Ku = ER(Eu, Ru.slot),
+        Qu = Ku.loadoutSlotOptions.find((uu => uu.loadoutOptionId === Ru.selectedId));
+      return (0, eu.jsx)("section", {
         className: "BoardDetail",
-        children: EU && (0, wU.jsx)(BR, {
-          view: RU,
-          controller: gU,
-          slot: pU,
-          option: EU
+        children: Qu && (0, eu.jsx)(nR, {
+          view: Ru,
+          controller: yu,
+          slot: Ku,
+          option: Qu
         })
       })
     }
 
-    function vR(UU) {
+    function gR(uu) {
       let {
-        owned: RU,
-        total: gU
-      } = UU;
-      return gU <= 1 ? null : (0, wU.jsx)("span", {
+        owned: Ru,
+        total: yu
+      } = uu;
+      return yu <= 1 ? null : (0, eu.jsx)("span", {
         className: "LoadoutPips",
         children: Array.from({
-          length: gU
-        }, ((UU, gU) => (0, wU.jsx)("span", {
-          className: KU()("LoadoutPip", {
-            Filled: gU < RU
+          length: yu
+        }, ((uu, yu) => (0, eu.jsx)("span", {
+          className: Xu()("LoadoutPip", {
+            Filled: yu < Ru
           })
-        }, gU)))
+        }, yu)))
       })
     }
 
-    function dR(UU) {
+    function cR(uu) {
       let {
-        view: RU,
-        controller: gU
-      } = UU;
+        view: Ru,
+        controller: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, GU.B)(), pU = RU.loadout, EU = mR();
-      return (0, wU.jsxs)("nav", {
+        t: Eu
+      } = (0, ru.E)(), Ku = Ru.loadout, Qu = bR();
+      return (0, eu.jsxs)("nav", {
         className: "LoadoutKit",
-        "aria-label": tU(`${nU}:loadoutKit`),
-        children: [pU.loadoutSlots.map((UU => {
-          const pU = UU.loadoutSlotOptions.find((RU => RU.loadoutOptionId === UU.loadoutSlotEquippedId));
-          return (0, wU.jsxs)("button", {
-            ref: EU("section", UU.loadoutSlotKind),
+        "aria-label": Eu(`${Au}:loadoutKit`),
+        children: [Ku.loadoutSlots.map((uu => {
+          const Ku = uu.loadoutSlotOptions.find((Ru => Ru.loadoutOptionId === uu.loadoutSlotEquippedId));
+          return (0, eu.jsxs)("button", {
+            ref: Qu("section", uu.loadoutSlotKind),
             type: "button",
-            className: KU()("LoadoutKitSlot", {
-              Selected: RU.slot === UU.loadoutSlotKind
+            className: Xu()("LoadoutKitSlot", {
+              Selected: Ru.slot === uu.loadoutSlotKind
             }),
             onClick: () => {
-              gU.selectSlot(UU.loadoutSlotKind)
+              yu.selectSlot(uu.loadoutSlotKind)
             },
-            children: [(0, wU.jsx)("span", {
+            children: [(0, eu.jsx)("span", {
               className: "LoadoutKitIcon",
-              children: pU && (0, wU.jsx)(ZU, {
-                itemName: pU.loadoutOptionIcon
+              children: Ku && (0, eu.jsx)(Iu, {
+                itemName: Ku.loadoutOptionIcon
               })
-            }), (0, wU.jsxs)("span", {
+            }), (0, eu.jsxs)("span", {
               className: "LoadoutKitText",
-              children: [(0, wU.jsxs)("span", {
+              children: [(0, eu.jsxs)("span", {
                 className: "LoadoutKitTop",
-                children: [(0, wU.jsx)("span", {
+                children: [(0, eu.jsx)("span", {
                   className: "LoadoutKitLabel",
-                  children: tU(WR[UU.loadoutSlotKind])
-                }), pU && (0, wU.jsx)(vR, {
-                  owned: pU.loadoutOptionOwnedTier,
-                  total: pU.loadoutOptionTiers.length
+                  children: Eu(jR[uu.loadoutSlotKind])
+                }), Ku && (0, eu.jsx)(gR, {
+                  owned: Ku.loadoutOptionOwnedTier,
+                  total: Ku.loadoutOptionTiers.length
                 })]
-              }), (0, wU.jsx)("span", {
+              }), (0, eu.jsx)("span", {
                 className: "LoadoutKitName",
-                children: null === pU || void 0 === pU ? void 0 : pU.loadoutOptionName
+                children: null === Ku || void 0 === Ku ? void 0 : Ku.loadoutOptionName
               })]
             })]
-          }, UU.loadoutSlotKind)
-        })), (0, wU.jsx)(HR, {
-          view: RU,
-          controller: gU
+          }, uu.loadoutSlotKind)
+        })), (0, eu.jsx)(LR, {
+          view: Ru,
+          controller: yu
         })]
       })
     }
 
-    function HR(UU) {
+    function LR(uu) {
       let {
-        view: RU,
-        controller: gU
-      } = UU;
+        view: Ru,
+        controller: yu
+      } = uu;
       const {
-        t: tU
-      } = (0, GU.B)(), pU = RU.loadout, EU = pU.loadoutPerks.filter((UU => UU.loadoutPerkEquipped)), PU = mR();
-      return (0, wU.jsxs)("button", {
-        ref: PU("section", "loadoutPerks"),
+        t: Eu
+      } = (0, ru.E)(), Ku = Ru.loadout, Qu = Ku.loadoutPerks.filter((uu => uu.loadoutPerkEquipped)), mu = bR();
+      return (0, eu.jsxs)("button", {
+        ref: mu("section", "loadoutPerks"),
         type: "button",
-        className: KU()("LoadoutKitSlot", "LoadoutPerks", {
-          Selected: "loadoutPerks" === RU.slot
+        className: Xu()("LoadoutKitSlot", "LoadoutPerks", {
+          Selected: "loadoutPerks" === Ru.slot
         }),
         onClick: () => {
-          gU.selectSlot("loadoutPerks")
+          yu.selectSlot("loadoutPerks")
         },
-        children: [(0, wU.jsxs)("span", {
+        children: [(0, eu.jsxs)("span", {
           className: "LoadoutKitTop",
-          children: [(0, wU.jsx)("span", {
+          children: [(0, eu.jsx)("span", {
             className: "LoadoutKitLabel",
-            children: tU(WR.loadoutPerks)
-          }), (0, wU.jsx)("span", {
+            children: Eu(jR.loadoutPerks)
+          }), (0, eu.jsx)("span", {
             className: "LoadoutPerkCount",
-            children: tU(`${nU}:loadoutPerkCount`, {
-              equipped: String(EU.length),
-              max: String(pU.loadoutMaxPerks)
+            children: Eu(`${Au}:loadoutPerkCount`, {
+              equipped: String(Qu.length),
+              max: String(Ku.loadoutMaxPerks)
             })
           })]
-        }), (0, wU.jsx)("span", {
+        }), (0, eu.jsx)("span", {
           className: "LoadoutSockets",
           children: Array.from({
-            length: pU.loadoutMaxPerks
-          }, ((UU, RU) => {
-            const gU = EU[RU];
-            return (0, wU.jsxs)("span", {
-              className: KU()("LoadoutSocket", {
-                Filled: gU,
-                Empty: !gU
+            length: Ku.loadoutMaxPerks
+          }, ((uu, Ru) => {
+            const yu = Qu[Ru];
+            return (0, eu.jsxs)("span", {
+              className: Xu()("LoadoutSocket", {
+                Filled: yu,
+                Empty: !yu
               }),
-              children: [(0, wU.jsx)("span", {
+              children: [(0, eu.jsx)("span", {
                 className: "LoadoutSocketWell",
-                children: gU && (0, wU.jsx)(ZU, {
-                  itemName: gU.loadoutPerkIcon
+                children: yu && (0, eu.jsx)(Iu, {
+                  itemName: yu.loadoutPerkIcon
                 })
-              }), (0, wU.jsx)("span", {
+              }), (0, eu.jsx)("span", {
                 className: "LoadoutSocketName",
-                children: gU ? gU.loadoutPerkName : tU(`${nU}:loadoutPerkSocketEmpty`)
+                children: yu ? yu.loadoutPerkName : Eu(`${Au}:loadoutPerkSocketEmpty`)
               })]
-            }, RU)
+            }, Ru)
           }))
         })]
       })
     }
 
-    function SR(UU) {
+    function zR(uu) {
       let {
-        icon: RU,
-        name: gU,
-        selected: tU,
-        equipped: pU,
-        locked: EU,
-        ownedTier: PU,
-        tiers: TU,
-        buttonRef: qU,
-        onSelect: KU
-      } = UU;
+        icon: Ru,
+        name: yu,
+        selected: Eu,
+        equipped: Ku,
+        locked: Qu,
+        ownedTier: mu,
+        tiers: Ju,
+        buttonRef: Nu,
+        onSelect: Xu
+      } = uu;
       const {
-        t: cU
-      } = (0, GU.B)();
-      return (0, wU.jsxs)(rU, {
-        icon: (0, wU.jsx)(ZU, {
-          itemName: RU
+        t: Vu
+      } = (0, ru.E)();
+      return (0, eu.jsxs)(tu, {
+        icon: (0, eu.jsx)(Iu, {
+          itemName: Ru
         }),
-        name: gU,
-        selected: tU,
-        locked: EU,
-        buttonRef: qU,
-        onSelect: KU,
-        children: [pU && (0, wU.jsx)("span", {
+        name: yu,
+        selected: Eu,
+        locked: Qu,
+        buttonRef: Nu,
+        onSelect: Xu,
+        children: [Ku && (0, eu.jsx)("span", {
           className: "BoardBadge",
-          children: cU(`${nU}:loadoutEquippedBadge`)
-        }), EU && (0, wU.jsx)("span", {
+          children: Vu(`${Au}:loadoutEquippedBadge`)
+        }), Qu && (0, eu.jsx)("span", {
           className: "BoardBadge Muted",
-          children: cU(`${nU}:loadoutLocked`)
-        }), !EU && (0, wU.jsx)(vR, {
-          owned: PU,
-          total: TU
+          children: Vu(`${Au}:loadoutLocked`)
+        }), !Qu && (0, eu.jsx)(gR, {
+          owned: mu,
+          total: Ju
         })]
       })
     }
 
-    function sR(UU) {
+    function FR(uu) {
       let {
-        view: RU,
-        controller: gU
-      } = UU;
-      const tU = RU.loadout,
-        pU = mR();
-      if ("loadoutPerks" === RU.slot) return (0, wU.jsx)("div", {
+        view: Ru,
+        controller: yu
+      } = uu;
+      const Eu = Ru.loadout,
+        Ku = bR();
+      if ("loadoutPerks" === Ru.slot) return (0, eu.jsx)("div", {
         className: "BoardTiles",
-        children: tU.loadoutPerks.map((UU => (0, wU.jsx)(SR, {
-          icon: UU.loadoutPerkIcon,
-          name: UU.loadoutPerkName,
-          selected: RU.selectedId === UU.loadoutPerkId,
-          equipped: UU.loadoutPerkEquipped,
-          locked: !UU.loadoutPerkOwned,
+        children: Eu.loadoutPerks.map((uu => (0, eu.jsx)(zR, {
+          icon: uu.loadoutPerkIcon,
+          name: uu.loadoutPerkName,
+          selected: Ru.selectedId === uu.loadoutPerkId,
+          equipped: uu.loadoutPerkEquipped,
+          locked: !uu.loadoutPerkOwned,
           ownedTier: 0,
           tiers: 0,
-          buttonRef: pU("Hj", UU.loadoutPerkId),
+          buttonRef: Ku("cB", uu.loadoutPerkId),
           onSelect: () => {
-            gU.select(UU.loadoutPerkId)
+            yu.select(uu.loadoutPerkId)
           }
-        }, UU.loadoutPerkId)))
+        }, uu.loadoutPerkId)))
       });
-      const EU = tR(tU, RU.slot);
-      return (0, wU.jsx)("div", {
+      const Qu = ER(Eu, Ru.slot);
+      return (0, eu.jsx)("div", {
         className: "BoardTiles",
-        children: EU.loadoutSlotOptions.map((UU => (0, wU.jsx)(SR, {
-          icon: UU.loadoutOptionIcon,
-          name: UU.loadoutOptionName,
-          selected: RU.selectedId === UU.loadoutOptionId,
-          equipped: EU.loadoutSlotEquippedId === UU.loadoutOptionId,
-          locked: 0 === UU.loadoutOptionOwnedTier,
-          ownedTier: UU.loadoutOptionOwnedTier,
-          tiers: UU.loadoutOptionTiers.length,
-          buttonRef: pU("Hj", UU.loadoutOptionId),
+        children: Qu.loadoutSlotOptions.map((uu => (0, eu.jsx)(zR, {
+          icon: uu.loadoutOptionIcon,
+          name: uu.loadoutOptionName,
+          selected: Ru.selectedId === uu.loadoutOptionId,
+          equipped: Qu.loadoutSlotEquippedId === uu.loadoutOptionId,
+          locked: 0 === uu.loadoutOptionOwnedTier,
+          ownedTier: uu.loadoutOptionOwnedTier,
+          tiers: uu.loadoutOptionTiers.length,
+          buttonRef: Ku("cB", uu.loadoutOptionId),
           onSelect: () => {
-            gU.select(UU.loadoutOptionId)
+            yu.select(uu.loadoutOptionId)
           }
-        }, UU.loadoutOptionId)))
+        }, uu.loadoutOptionId)))
       })
     }
 
-    function yR(UU) {
+    function wR(uu) {
       let {
-        loadout: RU
-      } = UU;
-      return (0, wU.jsx)(vU, {
-        coins: RU.loadoutCoins,
-        children: RU.loadoutHeldParts.filter((UU => UU.loadoutHeldPartAmount > 0)).map((UU => (0, wU.jsx)(YU, {
-          itemName: UU.loadoutHeldPartItem,
-          amount: UU.loadoutHeldPartAmount
-        }, UU.loadoutHeldPartCurrency)))
+        loadout: Ru
+      } = uu;
+      return (0, eu.jsx)(gu, {
+        coins: Ru.loadoutCoins,
+        children: Ru.loadoutHeldParts.filter((uu => uu.loadoutHeldPartAmount > 0)).map((uu => (0, eu.jsx)(Uu, {
+          itemName: uu.loadoutHeldPartItem,
+          amount: uu.loadoutHeldPartAmount
+        }, uu.loadoutHeldPartCurrency)))
       })
     }
 
-    function kR(UU) {
+    function ZR(uu) {
       let {
-        controller: RU
-      } = UU;
-      const gU = (0, cU.h)(jR, RU.getSnapshot()),
+        controller: Ru
+      } = uu;
+      const yu = (0, Vu.h)(BR, Ru.getSnapshot()),
         {
-          t: tU
-        } = (0, GU.B)();
-      if (null === gU.loadout) return null;
-      const pU = gU.notice;
-      return (0, wU.jsx)(wR, {
-        view: gU,
-        onDismiss: RU.dismiss,
-        children: (0, wU.jsxs)(oU, {
-          open: gU.open,
-          onDismiss: RU.dismiss,
-          title: tU(`${nU}:loadoutTitle`),
+          t: Eu
+        } = (0, ru.E)();
+      if (null === yu.loadout) return null;
+      const Ku = yu.notice;
+      return (0, eu.jsx)(eR, {
+        view: yu,
+        onDismiss: Ru.dismiss,
+        children: (0, eu.jsxs)(Mu, {
+          open: yu.open,
+          onDismiss: Ru.dismiss,
+          title: Eu(`${Au}:loadoutTitle`),
           className: "ContainmentLoadoutPanel",
-          headerExtra: (0, wU.jsx)(yR, {
-            loadout: gU.loadout
+          headerExtra: (0, eu.jsx)(wR, {
+            loadout: yu.loadout
           }),
-          statusRefused: null === pU || void 0 === pU ? void 0 : pU.loadoutNoticeRefused,
-          status: (0, wU.jsxs)(wU.Fragment, {
-            children: [(0, wU.jsx)("span", {
+          statusRefused: null === Ku || void 0 === Ku ? void 0 : Ku.loadoutNoticeRefused,
+          status: (0, eu.jsxs)(eu.Fragment, {
+            children: [(0, eu.jsx)("span", {
               className: "LoadoutRadioBadge",
-              children: tU(`${nU}:loadoutRadioBadge`)
-            }), null !== pU && tU(`${nU}:${pU.loadoutNoticeKey}`, {
-              name: pU.loadoutNoticeName,
-              tier: (0, OU.V)(pU.loadoutNoticeTier),
-              max: String(gU.loadout.loadoutMaxPerks)
+              children: Eu(`${Au}:loadoutRadioBadge`)
+            }), null !== Ku && Eu(`${Au}:${Ku.loadoutNoticeKey}`, {
+              name: Ku.loadoutNoticeName,
+              tier: (0, fu.U)(Ku.loadoutNoticeTier),
+              max: String(yu.loadout.loadoutMaxPerks)
             })]
           }),
-          children: [(0, wU.jsx)(dR, {
-            view: gU,
-            controller: RU
-          }), (0, wU.jsx)(sR, {
-            view: gU,
-            controller: RU
-          }), (0, wU.jsx)(XR, {
-            view: gU,
-            controller: RU
+          children: [(0, eu.jsx)(cR, {
+            view: yu,
+            controller: Ru
+          }), (0, eu.jsx)(FR, {
+            view: yu,
+            controller: Ru
+          }), (0, eu.jsx)(lR, {
+            view: yu,
+            controller: Ru
           })]
         })
       })
     }
 
-    function FR(UU, RU, gU) {
-      const tU = UU.locatorEntries.find((UU => UU.locatorEntryId === gU));
-      if (!tU) return null;
-      const pU = tU.locatorEntryName;
-      if ("locatorDisarm" === RU) return tU.locatorEntryArmed ? {
-        board: iR(UU, null),
-        notice: AR("locatorNoticeDisarmed", pU)
+    function hR(uu, Ru, yu) {
+      const Eu = uu.locatorEntries.find((uu => uu.locatorEntryId === yu));
+      if (!Eu) return null;
+      const Ku = Eu.locatorEntryName;
+      if ("locatorDisarm" === Ru) return Eu.locatorEntryArmed ? {
+        board: PR(uu, null),
+        notice: iR("locatorNoticeDisarmed", Ku)
       } : null;
-      if ("locatorArm" === RU) return tU.locatorEntryOwned && !tU.locatorEntryArmed ? {
-        board: iR(UU, gU),
-        notice: AR("locatorNoticeArmed", pU)
+      if ("locatorArm" === Ru) return Eu.locatorEntryOwned && !Eu.locatorEntryArmed ? {
+        board: PR(uu, yu),
+        notice: iR("locatorNoticeArmed", Ku)
       } : null;
-      if (tU.locatorEntryOwned || UU.locatorCoins < tU.locatorEntryPrice) return null;
-      const EU = iR({
-        ...UU,
-        locatorCoins: UU.locatorCoins - tU.locatorEntryPrice
-      }, gU);
+      if (Eu.locatorEntryOwned || uu.locatorCoins < Eu.locatorEntryPrice) return null;
+      const Qu = PR({
+        ...uu,
+        locatorCoins: uu.locatorCoins - Eu.locatorEntryPrice
+      }, yu);
       return {
         board: {
-          ...EU,
-          locatorEntries: EU.locatorEntries.map((UU => UU.locatorEntryId === gU ? {
-            ...UU,
+          ...Qu,
+          locatorEntries: Qu.locatorEntries.map((uu => uu.locatorEntryId === yu ? {
+            ...uu,
             locatorEntryOwned: !0
-          } : UU))
+          } : uu))
         },
-        notice: AR("locatorNoticeBought", pU)
+        notice: iR("locatorNoticeBought", Ku)
       }
     }
 
-    function iR(UU, RU) {
+    function PR(uu, Ru) {
       return {
-        ...UU,
-        locatorEntries: UU.locatorEntries.map((UU => {
-          const gU = UU.locatorEntryId === RU;
-          return UU.locatorEntryArmed === gU ? UU : {
-            ...UU,
-            locatorEntryArmed: gU
+        ...uu,
+        locatorEntries: uu.locatorEntries.map((uu => {
+          const yu = uu.locatorEntryId === Ru;
+          return uu.locatorEntryArmed === yu ? uu : {
+            ...uu,
+            locatorEntryArmed: yu
           }
         }))
       }
     }
 
-    function AR(UU, RU) {
+    function iR(uu, Ru) {
       return {
-        locatorNoticeKey: UU,
+        locatorNoticeKey: uu,
         locatorNoticeRefused: !1,
-        locatorNoticeName: RU
+        locatorNoticeName: Ru
       }
     }
-    const zR = "containmentLocatorView";
-    class MR extends UR {
-      constructor(UU, RU, gU, tU) {
-        super(UU, RU, gU, tU, "locator", FR), this.snapshot = this.buildSnapshot()
+    const YR = "containmentLocatorView";
+    class oR extends uR {
+      constructor(uu, Ru, yu, Eu) {
+        super(uu, Ru, yu, Eu, "locator", hR), this.snapshot = this.buildSnapshot()
       }
-      messageOpens(UU) {
-        return UU.locatorMessageOpens
+      messageOpens(uu) {
+        return uu.locatorMessageOpens
       }
-      messageNotice(UU) {
-        return UU.locatorNotice
+      messageNotice(uu) {
+        return uu.locatorNotice
       }
-      openingSelection(UU) {
-        var RU;
-        const gU = UU.locatorEntries;
-        return (null !== (RU = gU.find((UU => UU.locatorEntryArmed))) && void 0 !== RU ? RU : gU[0]).locatorEntryId
+      openingSelection(uu) {
+        var Ru;
+        const yu = uu.locatorEntries;
+        return (null !== (Ru = yu.find((uu => uu.locatorEntryArmed))) && void 0 !== Ru ? Ru : yu[0]).locatorEntryId
       }
       buildSnapshot() {
         return {
@@ -2010,245 +2010,245 @@ export const modules = {
         }
       }
     }
-    const DR = {
-        locatorContained: `${nU}:locatorFlavourContained`,
-        locatorEncountered: `${nU}:locatorFlavourEncountered`,
-        locatorUnseen: `${nU}:locatorFlavourUnseen`
+    const qR = {
+        locatorContained: `${Au}:locatorFlavourContained`,
+        locatorEncountered: `${Au}:locatorFlavourEncountered`,
+        locatorUnseen: `${Au}:locatorFlavourUnseen`
       },
-      LR = {
+      OR = {
         codexAnyDifficulty: null,
-        codexNormalOnly: `${nU}:locatorAttunedNormal`,
-        codexHardOnly: `${nU}:locatorAttunedHard`
+        codexNormalOnly: `${Au}:locatorAttunedNormal`,
+        codexHardOnly: `${Au}:locatorAttunedHard`
       };
 
-    function NR() {
-      return (0, wU.jsx)(wU.Fragment, {
+    function vR() {
+      return (0, eu.jsx)(eu.Fragment, {
         children: Array.from({
           length: 5
-        }, ((UU, RU) => (0, wU.jsx)("span", {
+        }, ((uu, Ru) => (0, eu.jsx)("span", {
           className: "LocatorFly",
-          children: (0, wU.jsx)("img", {
+          children: (0, eu.jsx)("img", {
             src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAYElEQVR4nGNgoBboMlb5LyUjD8YgNtHyJ6/d+Q/CILa1lz9YAbo4DCDLYxjQv3gt3AYQG90AdHkUQ/qhkjAb0BURkgcDmAQMo7sSXR7deyiGoIvDvIOsGasB+ACyBmTNACS0go3ibhumAAAAAElFTkSuQmCC",
             alt: "",
             draggable: !1
           })
-        }, RU)))
+        }, Ru)))
       })
     }
 
-    function lR(UU) {
+    function aR(uu) {
       let {
-        entry: RU
-      } = UU;
+        entry: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, GU.B)();
-      return RU.locatorEntryArmed ? (0, wU.jsx)("span", {
+        t: yu
+      } = (0, ru.E)();
+      return Ru.locatorEntryArmed ? (0, eu.jsx)("span", {
         className: "BoardBadge Armed",
-        children: gU(`${nU}:locatorArmedBadge`)
-      }) : RU.locatorEntryOwned ? (0, wU.jsx)("span", {
+        children: yu(`${Au}:locatorArmedBadge`)
+      }) : Ru.locatorEntryOwned ? (0, eu.jsx)("span", {
         className: "BoardBadge",
-        children: gU(`${nU}:locatorOwnedBadge`)
+        children: yu(`${Au}:locatorOwnedBadge`)
       }) : null
     }
 
-    function OR(UU) {
+    function fR(uu) {
       let {
-        entry: RU,
-        coins: gU,
-        inTile: tU = !1
-      } = UU;
-      return (0, wU.jsx)(YU, {
-        itemName: bU,
-        amount: RU.locatorEntryPrice,
-        WT: gU,
-        inTile: tU
+        entry: Ru,
+        coins: yu,
+        inTile: Eu = !1
+      } = uu;
+      return (0, eu.jsx)(Uu, {
+        itemName: Du,
+        amount: Ru.locatorEntryPrice,
+        jJ: yu,
+        inTile: Eu
       })
     }
 
-    function Ug(UU) {
+    function uy(uu) {
       let {
-        view: RU,
-        controller: gU,
-        entry: tU
-      } = UU;
+        view: Ru,
+        controller: yu,
+        entry: Eu
+      } = uu;
       const {
-        t: pU
-      } = (0, GU.B)(), EU = tU.locatorEntryId, PU = RU.locators.locatorEntries.find((UU => UU.locatorEntryArmed && UU !== tU));
-      return (0, wU.jsxs)("div", {
+        t: Ku
+      } = (0, ru.E)(), Qu = Eu.locatorEntryId, mu = Ru.locators.locatorEntries.find((uu => uu.locatorEntryArmed && uu !== Eu));
+      return (0, eu.jsxs)("div", {
         className: "BoardActions",
-        children: [tU.locatorEntryArmed && (0, wU.jsx)(CU.M, {
-          disabled: RU.pending,
+        children: [Eu.locatorEntryArmed && (0, eu.jsx)(Su.P, {
+          disabled: Ru.pending,
           onClick: () => {
-            gU.act("locatorDisarm", EU)
+            yu.act("locatorDisarm", Qu)
           },
-          children: pU(`${nU}:locatorDisarm`)
-        }), tU.locatorEntryOwned && !tU.locatorEntryArmed && (0, wU.jsx)(CU.e, {
-          disabled: RU.pending,
+          children: Ku(`${Au}:locatorDisarm`)
+        }), Eu.locatorEntryOwned && !Eu.locatorEntryArmed && (0, eu.jsx)(Su.e, {
+          disabled: Ru.pending,
           onClick: () => {
-            gU.act("locatorArm", EU)
+            yu.act("locatorArm", Qu)
           },
-          children: pU(`${nU}:locatorArm`)
-        }), !tU.locatorEntryOwned && (0, wU.jsxs)("div", {
+          children: Ku(`${Au}:locatorArm`)
+        }), !Eu.locatorEntryOwned && (0, eu.jsxs)("div", {
           className: "LocatorBuy",
-          children: [(0, wU.jsx)(OR, {
-            entry: tU,
-            coins: RU.locators.locatorCoins
-          }), (0, wU.jsx)(CU.j, {
-            disabled: RU.locators.locatorCoins < tU.locatorEntryPrice || RU.pending,
+          children: [(0, eu.jsx)(fR, {
+            entry: Eu,
+            coins: Ru.locators.locatorCoins
+          }), (0, eu.jsx)(Su.l, {
+            disabled: Ru.locators.locatorCoins < Eu.locatorEntryPrice || Ru.pending,
             onClick: () => {
-              gU.act("locatorBuy", EU)
+              yu.act("locatorBuy", Qu)
             },
-            children: pU(`${nU}:locatorBuy`)
+            children: Ku(`${Au}:locatorBuy`)
           })]
-        }), PU && !tU.locatorEntryArmed && (0, wU.jsx)("span", {
+        }), mu && !Eu.locatorEntryArmed && (0, eu.jsx)("span", {
           className: "BoardHint",
-          children: pU(`${nU}:locatorReplacesHint`, {
-            name: PU.locatorEntryName
+          children: Ku(`${Au}:locatorReplacesHint`, {
+            name: mu.locatorEntryName
           })
         })]
       })
     }
 
-    function Rg(UU) {
+    function Ry(uu) {
       let {
-        entry: RU
-      } = UU;
-      return "locatorUnseen" === RU.locatorEntryStanding ? (0, wU.jsx)(ZU, {
+        entry: Ru
+      } = uu;
+      return "locatorUnseen" === Ru.locatorEntryStanding ? (0, eu.jsx)(Iu, {
         itemName: "Compass"
-      }) : (0, wU.jsx)(aU, {
-        anomalyId: RU.locatorEntryId,
-        caught: "locatorContained" === RU.locatorEntryStanding
+      }) : (0, eu.jsx)(Gu, {
+        anomalyId: Ru.locatorEntryId,
+        caught: "locatorContained" === Ru.locatorEntryStanding
       })
     }
 
-    function gg(UU) {
+    function yy(uu) {
       let {
-        view: RU,
-        controller: gU,
-        entry: tU
-      } = UU;
+        view: Ru,
+        controller: yu,
+        entry: Eu
+      } = uu;
       const {
-        t: pU
-      } = (0, GU.B)(), EU = LR[tU.locatorEntryDifficulty];
-      return (0, wU.jsxs)("section", {
+        t: Ku
+      } = (0, ru.E)(), Qu = OR[Eu.locatorEntryDifficulty];
+      return (0, eu.jsxs)("section", {
         className: "BoardDetail",
-        children: [(0, wU.jsxs)("div", {
-          className: KU()("LocatorLabel", {
-            Armed: tU.locatorEntryArmed
+        children: [(0, eu.jsxs)("div", {
+          className: Xu()("LocatorLabel", {
+            Armed: Eu.locatorEntryArmed
           }),
-          children: [(0, wU.jsx)(XU, {
-            icon: (0, wU.jsx)(Rg, {
-              entry: tU
+          children: [(0, eu.jsx)(lu, {
+            icon: (0, eu.jsx)(Ry, {
+              entry: Eu
             }),
-            name: pU(`${nU}:locatorName`, {
-              name: tU.locatorEntryName
+            name: Ku(`${Au}:locatorName`, {
+              name: Eu.locatorEntryName
             }),
-            children: (0, wU.jsx)(lR, {
-              entry: tU
+            children: (0, eu.jsx)(aR, {
+              entry: Eu
             })
-          }), (0, wU.jsx)("p", {
+          }), (0, eu.jsx)("p", {
             className: "BoardDescription",
-            children: pU(tU.locatorEntryArmed ? `${nU}:locatorFlavourArmed` : DR[tU.locatorEntryStanding])
-          }), null !== EU && (0, wU.jsx)("p", {
+            children: Ku(Eu.locatorEntryArmed ? `${Au}:locatorFlavourArmed` : qR[Eu.locatorEntryStanding])
+          }), null !== Qu && (0, eu.jsx)("p", {
             className: "LocatorAttuned",
-            children: pU(EU)
-          }), (0, wU.jsx)("p", {
+            children: Ku(Qu)
+          }), (0, eu.jsx)("p", {
             className: "BoardDescription LocatorUsage",
-            children: pU(`${nU}:locatorUsage`)
+            children: Ku(`${Au}:locatorUsage`)
           })]
-        }), (0, wU.jsx)(Ug, {
-          view: RU,
-          controller: gU,
-          entry: tU
+        }), (0, eu.jsx)(uy, {
+          view: Ru,
+          controller: yu,
+          entry: Eu
         })]
       })
     }
 
-    function tg(UU) {
+    function Ey(uu) {
       let {
-        controller: RU
-      } = UU;
-      const gU = (0, cU.h)(zR, RU.getSnapshot()),
+        controller: Ru
+      } = uu;
+      const yu = (0, Vu.h)(YR, Ru.getSnapshot()),
         {
-          t: tU
-        } = (0, GU.B)(),
-        pU = gU.locators;
-      if (null === pU) return null;
-      const EU = pU.locatorEntries.find((UU => UU.locatorEntryId === gU.selectedId)),
-        PU = gU.notice;
-      return (0, wU.jsxs)(oU, {
-        open: gU.open,
-        onDismiss: RU.dismiss,
-        title: tU(`${nU}:locatorTitle`),
+          t: Eu
+        } = (0, ru.E)(),
+        Ku = yu.locators;
+      if (null === Ku) return null;
+      const Qu = Ku.locatorEntries.find((uu => uu.locatorEntryId === yu.selectedId)),
+        mu = yu.notice;
+      return (0, eu.jsxs)(Mu, {
+        open: yu.open,
+        onDismiss: Ru.dismiss,
+        title: Eu(`${Au}:locatorTitle`),
         className: "ContainmentLocatorPanel",
-        decor: (0, wU.jsx)(NR, {}),
-        headerExtra: (0, wU.jsx)(vU, {
-          coins: pU.locatorCoins
+        decor: (0, eu.jsx)(vR, {}),
+        headerExtra: (0, eu.jsx)(gu, {
+          coins: Ku.locatorCoins
         }),
-        statusRefused: null === PU || void 0 === PU ? void 0 : PU.locatorNoticeRefused,
-        status: (0, wU.jsxs)(wU.Fragment, {
-          children: [(0, wU.jsx)("span", {
+        statusRefused: null === mu || void 0 === mu ? void 0 : mu.locatorNoticeRefused,
+        status: (0, eu.jsxs)(eu.Fragment, {
+          children: [(0, eu.jsx)("span", {
             className: "LocatorKeeperBadge",
-            children: tU(`${nU}:locatorKeeperName`)
-          }), null !== PU && tU(`${nU}:${PU.locatorNoticeKey}`, {
-            name: PU.locatorNoticeName
+            children: Eu(`${Au}:locatorKeeperName`)
+          }), null !== mu && Eu(`${Au}:${mu.locatorNoticeKey}`, {
+            name: mu.locatorNoticeName
           })]
         }),
-        children: [(0, wU.jsx)("div", {
+        children: [(0, eu.jsx)("div", {
           className: "BoardTiles",
-          children: pU.locatorEntries.map((UU => (0, wU.jsxs)(rU, {
-            icon: (0, wU.jsx)(Rg, {
-              entry: UU
+          children: Ku.locatorEntries.map((uu => (0, eu.jsxs)(tu, {
+            icon: (0, eu.jsx)(Ry, {
+              entry: uu
             }),
-            name: UU.locatorEntryName,
-            selected: UU === EU,
+            name: uu.locatorEntryName,
+            selected: uu === Qu,
             locked: !1,
-            className: KU()("LocatorTag", {
-              Armed: UU.locatorEntryArmed
+            className: Xu()("LocatorTag", {
+              Armed: uu.locatorEntryArmed
             }),
             onSelect: () => {
-              RU.select(UU.locatorEntryId)
+              Ru.select(uu.locatorEntryId)
             },
-            children: [(0, wU.jsx)(lR, {
-              entry: UU
-            }), !UU.locatorEntryOwned && (0, wU.jsx)(OR, {
-              entry: UU,
-              coins: pU.locatorCoins,
+            children: [(0, eu.jsx)(aR, {
+              entry: uu
+            }), !uu.locatorEntryOwned && (0, eu.jsx)(fR, {
+              entry: uu,
+              coins: Ku.locatorCoins,
               inTile: !0
             })]
-          }, UU.locatorEntryId)))
-        }), (0, wU.jsx)(gg, {
-          view: gU,
-          controller: RU,
-          entry: EU
+          }, uu.locatorEntryId)))
+        }), (0, eu.jsx)(yy, {
+          view: yu,
+          controller: Ru,
+          entry: Qu
         })]
       })
     }
 
-    function pg(UU) {
+    function Ky(uu) {
       let {
-        loadout: RU,
-        codex: gU,
-        locator: tU
-      } = UU;
-      return (0, wU.jsxs)(wU.Fragment, {
-        children: [(0, wU.jsx)(kR, {
-          controller: RU
-        }), (0, wU.jsx)(lU, {
-          controller: gU
-        }), (0, wU.jsx)(tg, {
-          controller: tU
+        loadout: Ru,
+        codex: yu,
+        locator: Eu
+      } = uu;
+      return (0, eu.jsxs)(eu.Fragment, {
+        children: [(0, eu.jsx)(ZR, {
+          controller: Ru
+        }), (0, eu.jsx)(au, {
+          controller: yu
+        }), (0, eu.jsx)(Ey, {
+          controller: Eu
         })]
       })
     }
-    var Eg = gU(38092);
-    class Pg {
-      constructor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.sendCommand = UU, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new Eg.d({
+    var Qy = yu(38308);
+    class my {
+      constructor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.sendCommand = uu, this.budget = void 0, this.awaitingReply = !1, this.replyTimer = null, this.listeners = new Set, this.budget = new Qy.b({
           spacingMs: 0,
-          now: RU
+          now: Ru
         }), this.budget.subscribe((() => {
           this.notify()
         }))
@@ -2256,17 +2256,17 @@ export const modules = {
       isPending() {
         return this.awaitingReply || this.budget.isPacing()
       }
-      send(UU, RU) {
+      send(uu, Ru) {
         return !this.isPending() && (this.awaitingReply = !0, this.replyTimer = setTimeout((() => {
-          this.replyTimer = null, this.awaitingReply = !1, RU(), this.notify()
-        }), 8e3), this.budget.start(), this.sendCommand(UU), !0)
+          this.replyTimer = null, this.awaitingReply = !1, Ru(), this.notify()
+        }), 8e3), this.budget.start(), this.sendCommand(uu), !0)
       }
       onReply() {
         this.awaitingReply = !1, this.clearReplyTimer()
       }
-      subscribe(UU) {
-        return this.listeners.add(UU), () => {
-          this.listeners.delete(UU)
+      subscribe(uu) {
+        return this.listeners.add(uu), () => {
+          this.listeners.delete(uu)
         }
       }
       dispose() {
@@ -2276,340 +2276,340 @@ export const modules = {
         null !== this.replyTimer && (clearTimeout(this.replyTimer), this.replyTimer = null)
       }
       notify() {
-        for (const UU of this.listeners) UU()
+        for (const uu of this.listeners) uu()
       }
     }
-    var Tg = gU(38090);
-    const qg = new Map([
-      ["npc_general", hR],
-      ["npc_tentacle_guy", Tg]
+    var Jy = yu(38306);
+    const Ny = new Map([
+      ["npc_general", pR],
+      ["npc_tentacle_guy", Jy]
     ]);
 
-    function Kg(UU) {
-      const RU = qg.get(UU);
-      if (void 0 === RU) return null;
-      const gU = document.createElement("img");
-      return gU.src = RU, gU.alt = "", gU.draggable = !1, gU.style.imageRendering = "pixelated", gU
+    function Xy(uu) {
+      const Ru = Ny.get(uu);
+      if (void 0 === Ru) return null;
+      const yu = document.createElement("img");
+      return yu.src = Ru, yu.alt = "", yu.draggable = !1, yu.style.imageRendering = "pixelated", yu
     }
-    const cg = function() {
-      let UU, RU = !1,
-        gU = null,
-        qU = null;
-      const KU = [],
-        cU = UU => {
-          for (const RU of KU) RU !== UU && RU.close();
-          (0, TU.w)()
+    const Vy = function() {
+      let uu, Ru = !1,
+        yu = null,
+        Nu = null;
+      const Xu = [],
+        Vu = uu => {
+          for (const Ru of Xu) Ru !== uu && Ru.close();
+          (0, Ju.q)()
         },
-        GU = UU => {
-          UU && (0, TU.l)()
+        ru = uu => {
+          uu && (0, Ju.i)()
         },
-        jU = new Pg((RU => {
-          UU.sendCommand(RU)
+        Bu = new my((Ru => {
+          uu.sendCommand(Ru)
         })),
-        uU = new uR((UU => {
-          PU.p.yh(jR, UU, !0)
-        }), cU, GU, jU),
-        CU = new SU((UU => {
-          PU.p.yh(HU, UU, !0)
-        }), cU, GU),
-        hU = new MR((UU => {
-          PU.p.yh(zR, UU, !0)
-        }), cU, GU, jU);
-      KU.push(uU, CU, hU);
+        xu = new xR((uu => {
+          mu.k.Op(BR, uu, !0)
+        }), Vu, ru, Bu),
+        Su = new zu((uu => {
+          mu.k.Op(Lu, uu, !0)
+        }), Vu, ru),
+        pu = new oR((uu => {
+          mu.k.Op(YR, uu, !0)
+        }), Vu, ru, Bu);
+      Xu.push(xu, Su, pu);
       return {
-        onCreate: RU => {
-          UU = RU, gU = (0, TU.y)(null, {
-            content: (0, tU.createElement)(pg, {
-              loadout: uU,
-              codex: CU,
-              locator: hU
+        onCreate: Ru => {
+          uu = Ru, yu = (0, Ju.w)(null, {
+            content: (0, Eu.createElement)(Ky, {
+              loadout: xu,
+              codex: Su,
+              locator: pu
             }),
             onClose: () => {
-              for (const UU of KU) UU.close()
+              for (const uu of Xu) uu.close()
             }
-          }), qU = (0, EU.h)(Kg)
+          }), Nu = (0, Qu.f)(Xy)
         },
-        onReceivedMessageFromServer: (UU, RU) => {
-          "containmentLoadout" === UU ? uU.qC(RU) : "containmentLoadoutClose" === UU ? uU.isOpen() && (uU.close(), (0, TU.h)()) : "containmentCodex" === UU ? CU.qC(RU) : "containmentLocator" === UU && hU.qC(RU)
+        onReceivedMessageFromServer: (uu, Ru) => {
+          "containmentLoadout" === uu ? xu.SS(Ru) : "containmentLoadoutClose" === uu ? xu.isOpen() && (xu.close(), (0, Ju.f)()) : "containmentCodex" === uu ? Su.SS(Ru) : "containmentLocator" === uu && pu.SS(Ru)
         },
-        HG: () => {
-          RU || pU.b.get("loadingOverlayVisible") || (RU = !0, UU.sendCommand("containmentEntered"))
+        sr: () => {
+          Ru || Ku.d.get("loadingOverlayVisible") || (Ru = !0, uu.sendCommand("containmentEntered"))
         },
         onClose: () => {
-          var UU, RU;
-          null === (UU = gU) || void 0 === UU || UU(), gU = null, null === (RU = qU) || void 0 === RU || RU(), qU = null;
-          for (const gU of KU) gU.dispose();
-          jU.dispose()
+          var uu, Ru;
+          null === (uu = yu) || void 0 === uu || uu(), yu = null, null === (Ru = Nu) || void 0 === Ru || Ru(), Nu = null;
+          for (const yu of Xu) yu.dispose();
+          Bu.dispose()
         }
       }
     }
   },
-  36427: (UU, RU, gU) => {
-    gU.d(RU, {
-      C: () => nU,
-      D: () => XU,
-      F: () => vU,
-      H: () => dU,
-      K: () => rU,
-      N: () => HU,
-      e: () => qU,
-      g: () => ZU,
-      k: () => TU,
-      m: () => VU,
-      p: () => bU,
-      t: () => IU,
-      v: () => BU,
-      y: () => YU
+  36656: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      A: () => cu,
+      D: () => tu,
+      F: () => Lu,
+      d: () => Nu,
+      e: () => Iu,
+      g: () => Ju,
+      j: () => su,
+      n: () => Du,
+      p: () => Cu,
+      r: () => nu,
+      s: () => Uu,
+      t: () => Au,
+      w: () => lu,
+      y: () => gu
     });
-    var tU = gU(34);
-    const pU = {
+    var Eu = yu(47);
+    const Ku = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      EU = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      PU = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      TU = EU.filter((UU => "docsButton" !== UU)),
-      qU = PU.filter((UU => "aiHelperButton" !== UU)),
-      KU = "codeEditorTutorials",
-      cU = {
+      Qu = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      mu = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      Ju = Qu.filter((uu => "docsButton" !== uu)),
+      Nu = mu.filter((uu => "aiHelperButton" !== uu)),
+      Xu = "codeEditorTutorials",
+      Vu = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      GU = {
+      ru = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let jU = null,
-      uU = null;
-    const CU = new Set,
-      hU = new Set;
-    let QU = null;
-    const eU = new Set,
-      WU = new Set;
+    let Bu = null,
+      xu = null;
+    const Su = new Set,
+      pu = new Set;
+    let Tu = null;
+    const Wu = new Set,
+      ju = new Set;
 
-    function fU() {
-      WU.forEach((UU => {
-        UU()
+    function Hu() {
+      ju.forEach((uu => {
+        uu()
       }))
     }
 
-    function xU() {
-      if (!jU) {
-        const UU = tU.k.getItem(KU);
-        jU = {
+    function du() {
+      if (!Bu) {
+        const uu = Eu.i.getItem(Xu);
+        Bu = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof UU && null !== UU ? UU : {}
+          ..."object" === typeof uu && null !== uu ? uu : {}
         }
       }
-      return jU
+      return Bu
     }
 
-    function mU(UU) {
-      const RU = xU();
-      RU[UU] || (jU = {
-        ...RU,
-        [UU]: !0
-      }, tU.k.setItem(KU, jU))
+    function bu(uu) {
+      const Ru = du();
+      Ru[uu] || (Bu = {
+        ...Ru,
+        [uu]: !0
+      }, Eu.i.setItem(Xu, Bu))
     }
 
-    function IU(UU) {
-      return "docsOverview" === UU ? EU : "aiHelperOverview" === UU ? PU : uU ? pU[uU] : []
+    function Cu(uu) {
+      return "docsOverview" === uu ? Qu : "aiHelperOverview" === uu ? mu : xu ? Ku[xu] : []
     }
 
-    function JU(UU) {
-      return ("worldCodeButton" !== UU || !xU().worldCodeIntroShown) && !eU.has(UU)
+    function ku(uu) {
+      return ("worldCodeButton" !== uu || !du().worldCodeIntroShown) && !Wu.has(uu)
     }
 
-    function wU(UU) {
-      var RU;
-      return (null === (RU = QU) || void 0 === RU ? void 0 : RU.name) === UU ? QU.stepsDone : CU
+    function eu(uu) {
+      var Ru;
+      return (null === (Ru = Tu) || void 0 === Ru ? void 0 : Ru.name) === uu ? Tu.stepsDone : Su
     }
 
-    function nU(UU, RU) {
-      if (! function(UU) {
-          return QU ? QU.name === UU : "welcome" === UU
-        }(UU) || !JU(RU) || wU(UU).has(RU)) return !1;
-      if (QU) return !0;
-      const gU = cU[RU];
-      return gU ? !xU()[gU] || hU.has(RU) : !xU()[GU[UU]]
+    function Au(uu, Ru) {
+      if (! function(uu) {
+          return Tu ? Tu.name === uu : "welcome" === uu
+        }(uu) || !ku(Ru) || eu(uu).has(Ru)) return !1;
+      if (Tu) return !0;
+      const yu = Vu[Ru];
+      return yu ? !du()[yu] || pu.has(Ru) : !du()[ru[uu]]
     }
 
-    function bU(UU) {
-      var RU;
-      return null !== (RU = IU(UU).find((RU => nU(UU, RU)))) && void 0 !== RU ? RU : null
+    function Du(uu) {
+      var Ru;
+      return null !== (Ru = Cu(uu).find((Ru => Au(uu, Ru)))) && void 0 !== Ru ? Ru : null
     }
 
-    function oU(UU) {
-      var RU;
-      mU(GU[UU]), (null === (RU = QU) || void 0 === RU ? void 0 : RU.name) === UU && (QU = null)
+    function Mu(uu) {
+      var Ru;
+      bu(ru[uu]), (null === (Ru = Tu) || void 0 === Ru ? void 0 : Ru.name) === uu && (Tu = null)
     }
 
-    function ZU(UU) {
-      const RU = (QU ? [QU.name] : ["welcome", "docsOverview"]).find((RU => bU(RU) === UU));
-      if (!RU) return;
-      wU(RU).add(UU);
-      const gU = cU[UU];
-      gU && (mU(gU), QU || hU.add(UU)), null === bU(RU) && oU(RU), fU()
+    function Iu(uu) {
+      const Ru = (Tu ? [Tu.name] : ["welcome", "docsOverview"]).find((Ru => Du(Ru) === uu));
+      if (!Ru) return;
+      eu(Ru).add(uu);
+      const yu = Vu[uu];
+      yu && (bu(yu), Tu || pu.add(uu)), null === Du(Ru) && Mu(Ru), Hu()
     }
 
-    function aU(UU, RU) {
-      const gU = IU(UU),
-        tU = wU(UU);
-      for (let pU = gU.indexOf(RU) - 1; pU >= 0; pU--)
-        if (tU.has(gU[pU]) && JU(gU[pU])) return gU[pU];
+    function Gu(uu, Ru) {
+      const yu = Cu(uu),
+        Eu = eu(uu);
+      for (let Ku = yu.indexOf(Ru) - 1; Ku >= 0; Ku--)
+        if (Eu.has(yu[Ku]) && ku(yu[Ku])) return yu[Ku];
       return null
     }
 
-    function YU(UU, RU) {
-      return null !== aU(UU, RU)
+    function Uu(uu, Ru) {
+      return null !== Gu(uu, Ru)
     }
 
-    function BU(UU, RU) {
-      const gU = aU(UU, RU);
-      gU && (wU(UU).delete(gU), fU())
+    function nu(uu, Ru) {
+      const yu = Gu(uu, Ru);
+      yu && (eu(uu).delete(yu), Hu())
     }
 
-    function VU(UU) {
-      oU(UU), "welcome" === UU && IU("welcome").forEach((UU => {
-        const RU = cU[UU];
-        RU && mU(RU)
-      })), fU()
+    function su(uu) {
+      Mu(uu), "welcome" === uu && Cu("welcome").forEach((uu => {
+        const Ru = Vu[uu];
+        Ru && bu(Ru)
+      })), Hu()
     }
 
-    function rU(UU) {
-      QU = {
-        name: UU,
+    function tu(uu) {
+      Tu = {
+        name: uu,
         stepsDone: new Set
-      }, fU()
+      }, Hu()
     }
 
-    function XU() {
-      (QU || 0 !== CU.size || 0 !== hU.size) && (QU = null, CU.clear(), hU.clear(), fU())
+    function lu() {
+      (Tu || 0 !== Su.size || 0 !== pu.size) && (Tu = null, Su.clear(), pu.clear(), Hu())
     }
 
-    function vU(UU, RU) {
-      const gU = RU ? UU : uU === UU ? null : uU;
-      gU !== uU && (uU = gU, fU())
+    function gu(uu, Ru) {
+      const yu = Ru ? uu : xu === uu ? null : xu;
+      yu !== xu && (xu = yu, Hu())
     }
 
-    function dU(UU, RU) {
-      eU.has(UU) === RU && (RU ? eU.delete(UU) : eU.add(UU), fU())
+    function cu(uu, Ru) {
+      Wu.has(uu) === Ru && (Ru ? Wu.delete(uu) : Wu.add(uu), Hu())
     }
 
-    function HU(UU) {
-      return WU.add(UU), () => {
-        WU.delete(UU)
+    function Lu(uu) {
+      return ju.add(uu), () => {
+        ju.delete(uu)
       }
     }
   },
-  38831: (UU, RU, gU) => {
-    var tU = {
-      "./breach-zero-uncaught.webp": 38835,
-      "./breach-zero.webp": 38840,
-      "./brood-father-uncaught.webp": 38847,
-      "./brood-father.webp": 38852,
-      "./carousel-uncaught.webp": 38860,
-      "./carousel.webp": 38865,
-      "./deadlock-uncaught.webp": 38867,
-      "./deadlock.webp": 38874,
-      "./frost-revenant-uncaught.webp": 38877,
-      "./frost-revenant.webp": 38886,
-      "./hollow-choir-uncaught.webp": 38892,
-      "./hollow-choir.webp": 38897,
-      "./magma-warden-uncaught.webp": 38903,
-      "./magma-warden.webp": 38907,
-      "./patient-zero-uncaught.webp": 38916,
-      "./patient-zero.webp": 38922,
-      "./siege-engine-uncaught.webp": 38924,
-      "./siege-engine.webp": 38929,
-      "./warp-stalker-uncaught.webp": 38933,
-      "./warp-stalker.webp": 38939
+  39031: (uu, Ru, yu) => {
+    var Eu = {
+      "./breach-zero-uncaught.webp": 39035,
+      "./breach-zero.webp": 39038,
+      "./brood-father-uncaught.webp": 39041,
+      "./brood-father.webp": 39048,
+      "./carousel-uncaught.webp": 39051,
+      "./carousel.webp": 39053,
+      "./deadlock-uncaught.webp": 39062,
+      "./deadlock.webp": 39070,
+      "./frost-revenant-uncaught.webp": 39078,
+      "./frost-revenant.webp": 39083,
+      "./hollow-choir-uncaught.webp": 39087,
+      "./hollow-choir.webp": 39093,
+      "./magma-warden-uncaught.webp": 39101,
+      "./magma-warden.webp": 39108,
+      "./patient-zero-uncaught.webp": 39113,
+      "./patient-zero.webp": 39115,
+      "./siege-engine-uncaught.webp": 39119,
+      "./siege-engine.webp": 39127,
+      "./warp-stalker-uncaught.webp": 39131,
+      "./warp-stalker.webp": 39133
     };
 
-    function pU(UU) {
-      var RU = EU(UU);
-      return gU(RU)
+    function Ku(uu) {
+      var Ru = Qu(uu);
+      return yu(Ru)
     }
 
-    function EU(UU) {
-      if (!gU.o(tU, UU)) {
-        var RU = new Error("Cannot find module '" + UU + "'");
-        throw RU.code = "MODULE_NOT_FOUND", RU
+    function Qu(uu) {
+      if (!yu.o(Eu, uu)) {
+        var Ru = new Error("Cannot find module '" + uu + "'");
+        throw Ru.code = "MODULE_NOT_FOUND", Ru
       }
-      return tU[UU]
+      return Eu[uu]
     }
-    pU.keys = function() {
-      return Object.keys(tU)
-    }, pU.resolve = EU, UU.exports = pU, pU.id = 38831
+    Ku.keys = function() {
+      return Object.keys(Eu)
+    }, Ku.resolve = Qu, uu.exports = Ku, Ku.id = 39031
   },
-  38835: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
+  39035: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/breach-zero-uncaught.c7d4410f99269ac1ee2f.webp"
   },
-  38840: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
+  39038: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/breach-zero.ef5aacecf502228cd20b.webp"
   },
-  38847: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
+  39041: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/brood-father-uncaught.ee678432c71b7061fae1.webp"
   },
-  38852: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/brood-father.e48391955a574c1155fa.webp"
+  39048: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/brood-father.e48391955a574c1155fa.webp"
   },
-  38860: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
+  39051: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/carousel-uncaught.a92757620f569f31d7d2.webp"
   },
-  38865: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
+  39053: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/carousel.5fc13db7958067d6e1a3.webp"
   },
-  38867: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
+  39062: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/deadlock-uncaught.feadbdbbf2d040dce5c0.webp"
   },
-  38874: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
+  39070: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/deadlock.2bcaeaa57376fd78ddcb.webp"
   },
-  38877: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
+  39078: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/frost-revenant-uncaught.c0271636eeae988b1a40.webp"
   },
-  38886: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
+  39083: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/frost-revenant.fed6021646d7f0f81876.webp"
   },
-  38892: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
+  39087: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/hollow-choir-uncaught.7eaab76a15f82bd79558.webp"
   },
-  38897: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
+  39093: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/hollow-choir.05f9c51994aecece852a.webp"
   },
-  38903: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
+  39101: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/magma-warden-uncaught.5308736fbb8a503cdfc7.webp"
   },
-  38907: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
+  39108: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/magma-warden.cc4302a49a39ae962a31.webp"
   },
-  38916: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
+  39113: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/patient-zero-uncaught.1f9ec012a14c4dbdcc8f.webp"
   },
-  38922: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
+  39115: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/patient-zero.cc76984bb20e9f9ace76.webp"
   },
-  38924: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
+  39119: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/siege-engine-uncaught.88e0ad7fec37ba2b4a2e.webp"
   },
-  38929: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
+  39127: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/siege-engine.b2e2382e415f4ae470ac.webp"
   },
-  38933: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
+  39131: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/warp-stalker-uncaught.c3b1b82ecb18446b71b0.webp"
   },
-  38939: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
+  39133: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/warp-stalker.851972c629601b668aa7.webp"
   },
-  38090: UU => {
-    UU.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
+  38306: uu => {
+    uu.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAYElEQVR4nGNgIBIwovH/45JnRFaUGN+Comr+whq4GiZ0RVycnGAMAlAxsC0sMN2fvn9DodEBzEQGdUV5hvNnV4JpGJuPkwtTIQh4umZhZWMonDqjGCsbHcCCBkQjs0kDAPeaHpfX1eroAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

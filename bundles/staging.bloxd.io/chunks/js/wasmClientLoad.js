@@ -1,126 +1,126 @@
 export const id = 55;
 export const ids = [55];
 export const modules = {
-  40145: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      prefetchWasmClient: () => IU,
-      startJoinLoad: () => WU,
-      startLoadAheadOfJoin: () => xU
+  40334: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      prefetchWasmClient: () => Cu,
+      startJoinLoad: () => ju,
+      startLoadAheadOfJoin: () => du
     });
-    var tU = gU(3372),
-      pU = gU(35912),
-      EU = gU(40150),
-      PU = gU(1064),
-      TU = gU(603),
-      qU = gU(40166),
-      KU = (gU(40186), gU(40193)),
-      cU = gU(40201),
-      GU = gU(40218);
-    const jU = "[bloxd-wasm-client]";
-    let uU = null,
-      CU = null,
-      hU = null,
-      QU = null,
-      eU = null;
+    var Eu = yu(3510),
+      Ku = yu(36199),
+      Qu = yu(40341),
+      mu = yu(1056),
+      Ju = yu(624),
+      Nu = yu(40361),
+      Xu = (yu(40374), yu(40384)),
+      Vu = yu(40393),
+      ru = yu(40410);
+    const Bu = "[bloxd-wasm-client]";
+    let xu = null,
+      Su = null,
+      pu = null,
+      Tu = null,
+      Wu = null;
 
-    function WU() {
-      return QU ??= (async () => {
+    function ju() {
+      return Tu ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const UU = await (0, cU.P)();
-        if (null === UU) return;
-        if ((0, qU.k)(UU)) return (0, cU.S)("none"), void fU("none");
-        if ("wasm" !== (0, TU.h)(window.location.search) && null !== (0, KU.c)(UU, (0, KU.g)(UU, !0))) return (0, cU.S)("none"), void fU("none");
-        (0, cU.S)(UU.backend);
-        const RU = await UU.load();
-        fU(RU.name), "unloaded" === (0, tU.y)() && (0, cU.m)(), await (0, pU.f)(RU, EU.d) || console.warn(`${jU} the join's early wasm load failed: the boot loads the client itself`)
-      })().catch((UU => {
-        console.warn(`${jU} the join's early wasm load did not start: the boot loads the client itself`, UU)
-      })), QU
+        const uu = await (0, Vu.L)();
+        if (null === uu) return;
+        if ((0, Nu.l)(uu)) return (0, Vu.O)("none"), void Hu("none");
+        if ("wasm" !== (0, Ju.e)(window.location.search) && null !== (0, Xu.b)(uu, (0, Xu.e)(uu, !0))) return (0, Vu.O)("none"), void Hu("none");
+        (0, Vu.O)(uu.backend);
+        const Ru = await uu.load();
+        Hu(Ru.name), "unloaded" === (0, Eu.u)() && (0, Vu.o)(), await (0, Ku.h)(Ru, Qu.e) || console.warn(`${Bu} the join's early wasm load failed: the boot loads the client itself`)
+      })().catch((uu => {
+        console.warn(`${Bu} the join's early wasm load did not start: the boot loads the client itself`, uu)
+      })), Tu
     }
 
-    function fU(UU) {
-      null !== eU && (0, PU.logClientMeasurement)("wasm_compile_ahead", {
-        hit: eU === UU ? 1 : 0
+    function Hu(uu) {
+      null !== Wu && (0, mu.logClientMeasurement)("wasm_compile_ahead", {
+        hit: Wu === uu ? 1 : 0
       }, {
-        guessed: eU,
-        loaded: UU
+        guessed: Wu,
+        loaded: uu
       })
     }
 
-    function xU() {
-      let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === hU) {
-        var RU;
-        const gU = null !== (RU = UU.joinStarted) && void 0 !== RU ? RU : () => !1;
-        hU = Promise.all([IU(UU), mU(gU)]).then((() => {}))
+    function du() {
+      let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === pu) {
+        var Ru;
+        const yu = null !== (Ru = uu.joinStarted) && void 0 !== Ru ? Ru : () => !1;
+        pu = Promise.all([Cu(uu), bu(yu)]).then((() => {}))
       }
-      return hU
+      return pu
     }
 
-    function mU(UU) {
-      return CU ??= (async () => {
+    function bu(uu) {
+      return Su ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const RU = await (0, cU.h)();
-        null === RU || UU() || "unloaded" !== (0, tU.y)() || (eU = RU.name, await (0, pU.b)([RU, EU.d], "low"))
-      })().catch((UU => {
-        console.warn(`${jU} the compile ahead of the join did not start: the join loads the client itself`, UU)
-      })), CU
+        const Ru = await (0, Vu.k)();
+        null === Ru || uu() || "unloaded" !== (0, Eu.u)() || (Wu = Ru.name, await (0, Ku.d)([Ru, Qu.e], "low"))
+      })().catch((uu => {
+        console.warn(`${Bu} the compile ahead of the join did not start: the join loads the client itself`, uu)
+      })), Su
     }
 
-    function IU() {
+    function Cu() {
       let {
-        joinStarted: UU = () => !1,
-        language: RU = ""
+        joinStarted: uu = () => !1,
+        language: Ru = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return uU ??= async function(UU, RU) {
-        if (!await async function(UU) {
-            if (UU()) return !1;
-            let RU;
+      return xu ??= async function(uu, Ru) {
+        if (!await async function(uu) {
+            if (uu()) return !1;
+            let Ru;
             try {
-              var tU;
-              const UU = await fetch(`${gU.p}static/js/eulrrq.wasmJoinFiles.json`, {
+              var Eu;
+              const uu = await fetch(`${yu.p}static/js/q3ynmh.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
-              if (!UU.ok) throw new Error(`HTTP ${UU.status}`);
-              if (/\bno-store\b/.test(null !== (tU = UU.headers.get("Cache-Control")) && void 0 !== tU ? tU : "")) return !1;
-              const pU = await UU.json();
-              if (!Array.isArray(pU)) throw new Error("not a list");
-              RU = pU
-            } catch (EU) {
-              return console.warn(`${jU} the join's chunk list did not load: the join downloads its chunks itself`, EU), !UU()
+              if (!uu.ok) throw new Error(`HTTP ${uu.status}`);
+              if (/\bno-store\b/.test(null !== (Eu = uu.headers.get("Cache-Control")) && void 0 !== Eu ? Eu : "")) return !1;
+              const Ku = await uu.json();
+              if (!Array.isArray(Ku)) throw new Error("not a list");
+              Ru = Ku
+            } catch (Qu) {
+              return console.warn(`${Bu} the join's chunk list did not load: the join downloads its chunks itself`, Qu), !uu()
             }
-            if (UU()) return !1;
-            const pU = document.createElement("link").relList.supports("prefetch");
-            for (const PU of RU) {
-              const UU = `${gU.p}${PU}`;
-              pU ? JU(UU) : wU(UU).catch((RU => {
-                console.warn(`${jU} prefetching ${UU} failed`, RU)
+            if (uu()) return !1;
+            const Ku = document.createElement("link").relList.supports("prefetch");
+            for (const mu of Ru) {
+              const uu = `${yu.p}${mu}`;
+              Ku ? ku(uu) : eu(uu).catch((Ru => {
+                console.warn(`${Bu} prefetching ${uu} failed`, Ru)
               }))
             }
             return !0
-          }(UU)) return;
-        const tU = [wU((0, GU.f)())];
-        (0, GU.e)(RU) && tU.push(wU((0, GU.g)()));
-        await Promise.all(tU)
-      }(UU, RU).catch((UU => {
-        console.warn(`${jU} the prefetch failed: the join downloads the client itself`, UU)
-      })), uU
+          }(uu)) return;
+        const Eu = [eu((0, ru.g)())];
+        (0, ru.c)(Ru) && Eu.push(eu((0, ru.i)()));
+        await Promise.all(Eu)
+      }(uu, Ru).catch((uu => {
+        console.warn(`${Bu} the prefetch failed: the join downloads the client itself`, uu)
+      })), xu
     }
 
-    function JU(UU) {
-      const RU = document.createElement("link");
-      RU.rel = "prefetch", RU.href = UU, UU.endsWith(".js") && (RU.crossOrigin = "anonymous"), document.head.appendChild(RU)
+    function ku(uu) {
+      const Ru = document.createElement("link");
+      Ru.rel = "prefetch", Ru.href = uu, uu.endsWith(".js") && (Ru.crossOrigin = "anonymous"), document.head.appendChild(Ru)
     }
-    async function wU(UU) {
-      const RU = await fetch(UU, {
+    async function eu(uu) {
+      const Ru = await fetch(uu, {
         priority: "low"
       });
-      if (!RU.ok) throw new Error(`Fetching ${UU} failed: HTTP ${RU.status}`);
-      const gU = RU.body.getReader();
-      for (; !(await gU.read()).done;);
+      if (!Ru.ok) throw new Error(`Fetching ${uu} failed: HTTP ${Ru.status}`);
+      const yu = Ru.body.getReader();
+      for (; !(await yu.read()).done;);
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

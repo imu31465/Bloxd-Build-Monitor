@@ -1,22 +1,22 @@
 export const id = 13;
 export const ids = [13];
 export const modules = {
-  38816: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => tU
+  39020: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => Eu
     });
-    const tU = function(UU, RU, gU) {
-      let tU;
+    const Eu = function(uu, Ru, yu) {
+      let Eu;
       return {
-        onCreate: UU => {
-          tU = UU
+        onCreate: uu => {
+          Eu = uu
         },
-        onPlayerAltAction: (UU, RU, gU, pU, EU, PU) => {
-          PU && "Mesh" === tU.getEntityType(PU) && "Quartermaster" === tU.getEntityName(PU) && tU.openShop(UU, !1, "Armoury")
+        onPlayerAltAction: (uu, Ru, yu, Ku, Qu, mu) => {
+          mu && "Mesh" === Eu.getEntityType(mu) && "Quartermaster" === Eu.getEntityName(mu) && Eu.openShop(uu, !1, "Armoury")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,14 +1,14 @@
 export const id = 195;
 export const ids = [195];
 export const modules = {
-  9062: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => BU,
-      f: () => YU,
-      i: () => aU
+  9135: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => nu,
+      h: () => Uu,
+      j: () => Gu
     });
-    var tU = gU(9067);
-    const pU = {
+    var Eu = yu(9143);
+    const Ku = {
         fileBytes: 4194304,
         vertices: 65535,
         indices: 196608,
@@ -20,7 +20,7 @@ export const modules = {
         images: 8,
         imageSide: 1024
       },
-      EU = {
+      Qu = {
         items: 1024,
         perFile: 1024,
         surfaces: 256,
@@ -28,453 +28,453 @@ export const modules = {
         bounds: 16,
         attributeMembers: 32
       },
-      PU = 1048576,
-      TU = "is not a binary glTF 2.0 file",
-      qU = "loads data from outside the file",
-      KU = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
-      cU = {
+      mu = 1048576,
+      Ju = "is not a binary glTF 2.0 file",
+      Nu = "loads data from outside the file",
+      Xu = new Set(["KHR_draco_mesh_compression", "KHR_materials_unlit", "KHR_texture_transform", "KHR_materials_specular", "KHR_materials_ior", "KHR_materials_anisotropy"]),
+      Vu = {
         POSITION: "VEC3",
         NORMAL: "VEC3",
         TEXCOORD_0: "VEC2",
         COLOR_0: "VEC4"
       },
-      GU = {
+      ru = {
         type: "VEC2",
         componentTypes: [5126, 5121, 5123]
       },
-      jU = {
+      Bu = {
         TANGENT: {
           type: "VEC4",
           componentTypes: [5126]
         },
-        TEXCOORD_1: GU,
-        TEXCOORD_2: GU,
-        TEXCOORD_3: GU,
-        TEXCOORD_4: GU,
-        TEXCOORD_5: GU
+        TEXCOORD_1: ru,
+        TEXCOORD_2: ru,
+        TEXCOORD_3: ru,
+        TEXCOORD_4: ru,
+        TEXCOORD_5: ru
       },
-      uU = new Set(tU.i.map((UU => {
-        let [RU] = UU;
-        return RU
+      xu = new Set(Eu.h.map((uu => {
+        let [Ru] = uu;
+        return Ru
       }))),
-      CU = {
+      Su = {
         1: "line",
         2: "line loop",
         3: "line strip",
         5: "triangle strip",
         6: "triangle fan"
       },
-      hU = 5126;
+      pu = 5126;
 
-    function QU(UU) {
-      return UU.toLocaleString("en-US")
+    function Tu(uu) {
+      return uu.toLocaleString("en-US")
     }
 
-    function eU(UU, RU, gU) {
-      return UU > RU ? `has ${QU(UU)} ${gU} (the limit is ${QU(RU)})` : null
+    function Wu(uu, Ru, yu) {
+      return uu > Ru ? `has ${Tu(uu)} ${yu} (the limit is ${Tu(Ru)})` : null
     }
 
-    function WU(UU, RU) {
-      return Number.isInteger(UU) && UU >= 0 && UU < (null !== RU && void 0 !== RU ? RU : 0)
+    function ju(uu, Ru) {
+      return Number.isInteger(uu) && uu >= 0 && uu < (null !== Ru && void 0 !== Ru ? Ru : 0)
     }
 
-    function fU(UU) {
-      return Number.isInteger(UU) && UU >= 0
+    function Hu(uu) {
+      return Number.isInteger(uu) && uu >= 0
     }
 
-    function xU(UU, RU) {
-      return void 0 !== UU && (!Array.isArray(UU) || UU.length > RU)
+    function du(uu, Ru) {
+      return void 0 !== uu && (!Array.isArray(uu) || uu.length > Ru)
     }
 
-    function mU(UU, RU) {
-      return "object" === typeof UU && null !== UU && Object.keys(UU).length > RU
+    function bu(uu, Ru) {
+      return "object" === typeof uu && null !== uu && Object.keys(uu).length > Ru
     }
 
-    function IU(UU) {
-      var RU;
-      return `${UU.normalized?"normalized ":""}${null!==(RU=tU.h[UU.componentType])&&void 0!==RU?RU:UU.componentType} ${UU.type}`
+    function Cu(uu) {
+      var Ru;
+      return `${uu.normalized?"normalized ":""}${null!==(Ru=Eu.e[uu.componentType])&&void 0!==Ru?Ru:uu.componentType} ${uu.type}`
     }
 
-    function JU(UU) {
-      const RU = RU => {
-        var gU;
-        return null !== (gU = UU[RU]) && void 0 !== gU ? gU : -1
+    function ku(uu) {
+      const Ru = Ru => {
+        var yu;
+        return null !== (yu = uu[Ru]) && void 0 !== yu ? yu : -1
       };
-      return 255 === RU(0) && 216 === RU(1) ? "JPEG" : 82 === RU(0) && 73 === RU(1) && 87 === RU(8) && 69 === RU(9) ? "WebP" : 171 === RU(0) && 75 === RU(1) && 84 === RU(2) && 88 === RU(3) ? "KTX2" : "non-PNG"
+      return 255 === Ru(0) && 216 === Ru(1) ? "JPEG" : 82 === Ru(0) && 73 === Ru(1) && 87 === Ru(8) && 69 === Ru(9) ? "WebP" : 171 === Ru(0) && 75 === Ru(1) && 84 === Ru(2) && 88 === Ru(3) ? "KTX2" : "non-PNG"
     }
 
-    function wU(UU) {
-      return UU.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((RU, gU) => UU[gU] === RU)) && 73 === UU[12] && 72 === UU[13] && 68 === UU[14] && 82 === UU[15]
+    function eu(uu) {
+      return uu.length >= 24 && [137, 80, 78, 71, 13, 10, 26, 10].every(((Ru, yu) => uu[yu] === Ru)) && 73 === uu[12] && 72 === uu[13] && 68 === uu[14] && 82 === uu[15]
     }
 
-    function nU(UU) {
-      return /^[aeiou]/i.test(UU) ? `an ${UU}` : `a ${UU}`
+    function Au(uu) {
+      return /^[aeiou]/i.test(uu) ? `an ${uu}` : `a ${uu}`
     }
 
-    function bU(UU) {
-      const RU = UU.byteStride;
-      return void 0 === RU || Number.isInteger(RU) && RU >= 4 && RU <= 252 && RU % 4 === 0
+    function Du(uu) {
+      const Ru = uu.byteStride;
+      return void 0 === Ru || Number.isInteger(Ru) && Ru >= 4 && Ru <= 252 && Ru % 4 === 0
     }
 
-    function oU(UU, RU, gU) {
-      var tU, pU;
-      const EU = null === (tU = UU.bufferViews) || void 0 === tU ? void 0 : tU[gU];
-      if (!EU || !RU || 0 !== EU.buffer) return null;
-      const PU = null !== (pU = EU.byteOffset) && void 0 !== pU ? pU : 0;
-      return !fU(PU) || !fU(EU.byteLength) || PU + EU.byteLength > RU.byteLength ? null : RU.subarray(PU, PU + EU.byteLength)
+    function Mu(uu, Ru, yu) {
+      var Eu, Ku;
+      const Qu = null === (Eu = uu.bufferViews) || void 0 === Eu ? void 0 : Eu[yu];
+      if (!Qu || !Ru || 0 !== Qu.buffer) return null;
+      const mu = null !== (Ku = Qu.byteOffset) && void 0 !== Ku ? Ku : 0;
+      return !Hu(mu) || !Hu(Qu.byteLength) || mu + Qu.byteLength > Ru.byteLength ? null : Ru.subarray(mu, mu + Qu.byteLength)
     }
 
-    function ZU(UU, RU) {
-      var gU, pU, EU;
-      const PU = tU.o[RU.type],
-        TU = tU.e[RU.componentType];
-      if (!PU || !TU || !Number.isInteger(RU.count) || RU.count < 0) return !1;
-      if (void 0 === RU.bufferView) return !0;
-      const qU = null === (gU = UU.bufferViews) || void 0 === gU ? void 0 : gU[RU.bufferView],
-        KU = null !== (pU = RU.byteOffset) && void 0 !== pU ? pU : 0;
-      if (!qU || !fU(KU) || KU % TU !== 0) return !1;
-      const cU = PU * TU,
-        GU = null !== (EU = qU.byteStride) && void 0 !== EU ? EU : cU;
-      if (GU < cU) return !1;
-      return (0 === RU.count ? 0 : KU + GU * (RU.count - 1) + cU) <= qU.byteLength
+    function Iu(uu, Ru) {
+      var yu, Ku, Qu;
+      const mu = Eu.m[Ru.type],
+        Ju = Eu.b[Ru.componentType];
+      if (!mu || !Ju || !Number.isInteger(Ru.count) || Ru.count < 0) return !1;
+      if (void 0 === Ru.bufferView) return !0;
+      const Nu = null === (yu = uu.bufferViews) || void 0 === yu ? void 0 : yu[Ru.bufferView],
+        Xu = null !== (Ku = Ru.byteOffset) && void 0 !== Ku ? Ku : 0;
+      if (!Nu || !Hu(Xu) || Xu % Ju !== 0) return !1;
+      const Vu = mu * Ju,
+        ru = null !== (Qu = Nu.byteStride) && void 0 !== Qu ? Qu : Vu;
+      if (ru < Vu) return !1;
+      return (0 === Ru.count ? 0 : Xu + ru * (Ru.count - 1) + Vu) <= Nu.byteLength
     }
 
-    function aU(UU) {
-      return UU > pU.fileBytes ? `is ${(UU/PU).toFixed(1)} MiB (the limit is ${pU.fileBytes/PU} MiB)` : null
+    function Gu(uu) {
+      return uu > Ku.fileBytes ? `is ${(uu/mu).toFixed(1)} MiB (the limit is ${Ku.fileBytes/mu} MiB)` : null
     }
 
-    function YU(UU, RU) {
+    function Uu(uu, Ru) {
       try {
-        return function(UU, RU) {
-          var gU, PU, GU, QU, fU, aU, YU, BU, VU, rU, XU, vU, dU, HU, SU, sU, yU;
-          const kU = Array.isArray(UU.extensionsUsed) && UU.extensionsUsed.includes("KHR_draco_mesh_compression");
-          if (function(UU, RU) {
-              var gU, tU;
+        return function(uu, Ru) {
+          var yu, mu, ru, Tu, Hu, Gu, Uu, nu, su, tu, lu, gu, cu, Lu, zu, Fu, wu;
+          const Zu = Array.isArray(uu.extensionsUsed) && uu.extensionsUsed.includes("KHR_draco_mesh_compression");
+          if (function(uu, Ru) {
+              var yu, Eu;
               const {
-                items: pU,
-                perFile: PU,
-                surfaces: TU,
-                few: qU,
-                bounds: KU,
-                attributeMembers: cU
-              } = EU;
-              if (xU(UU.extensionsRequired, qU) || xU(UU.animations, 1 / 0) || xU(UU.skins, 1 / 0)) return !0;
-              if (null !== (gU = UU.animations) && void 0 !== gU && gU.length || null !== (tU = UU.skins) && void 0 !== tU && tU.length) return !1;
+                items: Ku,
+                perFile: mu,
+                surfaces: Ju,
+                few: Nu,
+                bounds: Xu,
+                attributeMembers: Vu
+              } = Qu;
+              if (du(uu.extensionsRequired, Nu) || du(uu.animations, 1 / 0) || du(uu.skins, 1 / 0)) return !0;
+              if (null !== (yu = uu.animations) && void 0 !== yu && yu.length || null !== (Eu = uu.skins) && void 0 !== Eu && Eu.length) return !1;
               if ([
-                  [UU.buffers, qU],
-                  [UU.scenes, qU],
-                  [UU.bufferViews, pU],
-                  [UU.accessors, pU],
-                  [UU.nodes, pU],
-                  [UU.meshes, pU],
-                  [UU.materials, TU],
-                  [UU.textures, TU],
-                  [UU.samplers, TU],
-                  [UU.images, TU]
-                ].some((UU => {
-                  let [RU, gU] = UU;
-                  return xU(RU, gU)
+                  [uu.buffers, Nu],
+                  [uu.scenes, Nu],
+                  [uu.bufferViews, Ku],
+                  [uu.accessors, Ku],
+                  [uu.nodes, Ku],
+                  [uu.meshes, Ku],
+                  [uu.materials, Ju],
+                  [uu.textures, Ju],
+                  [uu.samplers, Ju],
+                  [uu.images, Ju]
+                ].some((uu => {
+                  let [Ru, yu] = uu;
+                  return du(Ru, yu)
                 }))) return !0;
-              for (const EU of null !== (GU = UU.accessors) && void 0 !== GU ? GU : []) {
-                var GU, jU, uU;
-                if (Number.isInteger(EU.count) && (!Number.isSafeInteger(EU.count) || Object.is(EU.count, -0)) || xU(null !== (jU = EU.min) && void 0 !== jU ? jU : void 0, KU) || xU(null !== (uU = EU.max) && void 0 !== uU ? uU : void 0, KU)) return !0
+              for (const Qu of null !== (ru = uu.accessors) && void 0 !== ru ? ru : []) {
+                var ru, Bu, xu;
+                if (Number.isInteger(Qu.count) && (!Number.isSafeInteger(Qu.count) || Object.is(Qu.count, -0)) || du(null !== (Bu = Qu.min) && void 0 !== Bu ? Bu : void 0, Xu) || du(null !== (xu = Qu.max) && void 0 !== xu ? xu : void 0, Xu)) return !0
               }
-              for (const EU of null !== (CU = UU.scenes) && void 0 !== CU ? CU : []) {
-                var CU;
-                if (xU(EU.nodes, pU)) return !0
+              for (const Qu of null !== (Su = uu.scenes) && void 0 !== Su ? Su : []) {
+                var Su;
+                if (du(Qu.nodes, Ku)) return !0
               }
-              let hU = 0;
-              for (const EU of null !== (QU = UU.nodes) && void 0 !== QU ? QU : []) {
-                var QU, eU, WU;
-                if (xU(EU.children, PU)) return !0;
-                hU += null !== (eU = null === (WU = EU.children) || void 0 === WU ? void 0 : WU.length) && void 0 !== eU ? eU : 0
+              let pu = 0;
+              for (const Qu of null !== (Tu = uu.nodes) && void 0 !== Tu ? Tu : []) {
+                var Tu, Wu, ju;
+                if (du(Qu.children, mu)) return !0;
+                pu += null !== (Wu = null === (ju = Qu.children) || void 0 === ju ? void 0 : ju.length) && void 0 !== Wu ? Wu : 0
               }
-              if (hU > PU) return !0;
-              let fU = 0;
-              for (const EU of null !== (IU = UU.meshes) && void 0 !== IU ? IU : []) {
-                var IU;
-                if (!Array.isArray(EU.primitives)) return !0;
-                if (fU += EU.primitives.length, fU > PU) return !0;
-                for (const UU of EU.primitives) {
-                  var JU;
-                  const gU = RU ? null === (JU = UU.extensions) || void 0 === JU ? void 0 : JU.KHR_draco_mesh_compression : void 0;
-                  if (mU(UU.attributes, cU) || mU(null === gU || void 0 === gU ? void 0 : gU.attributes, cU)) return !0
+              if (pu > mu) return !0;
+              let Hu = 0;
+              for (const Qu of null !== (Cu = uu.meshes) && void 0 !== Cu ? Cu : []) {
+                var Cu;
+                if (!Array.isArray(Qu.primitives)) return !0;
+                if (Hu += Qu.primitives.length, Hu > mu) return !0;
+                for (const uu of Qu.primitives) {
+                  var ku;
+                  const yu = Ru ? null === (ku = uu.extensions) || void 0 === ku ? void 0 : ku.KHR_draco_mesh_compression : void 0;
+                  if (bu(uu.attributes, Vu) || bu(null === yu || void 0 === yu ? void 0 : yu.attributes, Vu)) return !0
                 }
               }
               return !1
-            }(UU, kU)) return TU;
-          const FU = null === (gU = UU.asset) || void 0 === gU ? void 0 : gU.version;
-          if ("string" !== typeof FU || !/^2\.\d+/.test(FU)) return `uses glTF version ${null!==FU&&void 0!==FU?FU:"(none)"}`;
-          const iU = null === (PU = UU.asset) || void 0 === PU ? void 0 : PU.minVersion;
-          if (void 0 !== iU && "2.0" !== iU) return `uses glTF version ${iU}`;
-          for (const tU of null !== (AU = UU.extensionsRequired) && void 0 !== AU ? AU : []) {
-            var AU;
-            if (!KU.has(tU)) return `requires the glTF extension ${tU}`
+            }(uu, Zu)) return Ju;
+          const hu = null === (yu = uu.asset) || void 0 === yu ? void 0 : yu.version;
+          if ("string" !== typeof hu || !/^2\.\d+/.test(hu)) return `uses glTF version ${null!==hu&&void 0!==hu?hu:"(none)"}`;
+          const Pu = null === (mu = uu.asset) || void 0 === mu ? void 0 : mu.minVersion;
+          if (void 0 !== Pu && "2.0" !== Pu) return `uses glTF version ${Pu}`;
+          for (const Eu of null !== (iu = uu.extensionsRequired) && void 0 !== iu ? iu : []) {
+            var iu;
+            if (!Xu.has(Eu)) return `requires the glTF extension ${Eu}`
           }
-          if (null !== (GU = UU.animations) && void 0 !== GU && GU.length) return "has animations";
-          if (null !== (QU = UU.skins) && void 0 !== QU && QU.length) return "uses skins";
-          const zU = null !== (fU = UU.buffers) && void 0 !== fU ? fU : [];
-          for (const [tU, pU] of zU.entries()) {
-            if (void 0 !== pU.uri) return qU;
-            if (tU > 0 || !RU) return TU
+          if (null !== (ru = uu.animations) && void 0 !== ru && ru.length) return "has animations";
+          if (null !== (Tu = uu.skins) && void 0 !== Tu && Tu.length) return "uses skins";
+          const Yu = null !== (Hu = uu.buffers) && void 0 !== Hu ? Hu : [];
+          for (const [Eu, Ku] of Yu.entries()) {
+            if (void 0 !== Ku.uri) return Nu;
+            if (Eu > 0 || !Ru) return Ju
           }
-          for (const [tU, pU] of(null !== (MU = UU.bufferViews) && void 0 !== MU ? MU : []).entries()) {
-            var MU;
-            if (!oU(UU, RU, tU) || !bU(pU)) return TU
+          for (const [Eu, Ku] of(null !== (ou = uu.bufferViews) && void 0 !== ou ? ou : []).entries()) {
+            var ou;
+            if (!Mu(uu, Ru, Eu) || !Du(Ku)) return Ju
           }
-          const DU = null !== (aU = UU.accessors) && void 0 !== aU ? aU : [];
-          for (const tU of DU) {
-            if (void 0 !== tU.sparse) return "uses sparse accessors";
-            const RU = Number.isInteger(tU.count) ? eU(tU.count, pU.accessorElements, "elements in an accessor") : null;
-            if (RU) return RU;
-            if (!ZU(UU, tU)) return TU
+          const qu = null !== (Gu = uu.accessors) && void 0 !== Gu ? Gu : [];
+          for (const Eu of qu) {
+            if (void 0 !== Eu.sparse) return "uses sparse accessors";
+            const Ru = Number.isInteger(Eu.count) ? Wu(Eu.count, Ku.accessorElements, "elements in an accessor") : null;
+            if (Ru) return Ru;
+            if (!Iu(uu, Eu)) return Ju
           }
-          const LU = null !== (YU = UU.scenes) && void 0 !== YU ? YU : [];
-          if (1 !== LU.length) return `has ${LU.length} scenes`;
-          const NU = (0, tU.s)(UU);
-          if (void 0 !== NU && 0 !== NU) return TU;
-          const lU = null !== (BU = UU.nodes) && void 0 !== BU ? BU : [],
-            OU = null !== (VU = UU.meshes) && void 0 !== VU ? VU : [],
-            UR = null !== (rU = UU.materials) && void 0 !== rU ? rU : [],
-            RR = null !== (XU = UU.textures) && void 0 !== XU ? XU : [],
-            gR = null !== (vU = UU.images) && void 0 !== vU ? vU : [],
-            tR = null !== (dU = null !== (HU = null !== (SU = eU(lU.length, pU.nodes, "nodes")) && void 0 !== SU ? SU : eU(OU.length, pU.meshes, "meshes")) && void 0 !== HU ? HU : eU(UR.length, pU.materials, "materials")) && void 0 !== dU ? dU : eU(gR.length, pU.images, "images");
-          if (tR) return tR;
-          const pR = new Set;
-          for (const tU of lU)
-            for (const UU of null !== (ER = tU.children) && void 0 !== ER ? ER : []) {
-              var ER;
-              if (!WU(UU, lU.length) || pR.has(UU)) return TU;
-              pR.add(UU)
+          const Ou = null !== (Uu = uu.scenes) && void 0 !== Uu ? Uu : [];
+          if (1 !== Ou.length) return `has ${Ou.length} scenes`;
+          const vu = (0, Eu.v)(uu);
+          if (void 0 !== vu && 0 !== vu) return Ju;
+          const au = null !== (nu = uu.nodes) && void 0 !== nu ? nu : [],
+            fu = null !== (su = uu.meshes) && void 0 !== su ? su : [],
+            uR = null !== (tu = uu.materials) && void 0 !== tu ? tu : [],
+            RR = null !== (lu = uu.textures) && void 0 !== lu ? lu : [],
+            yR = null !== (gu = uu.images) && void 0 !== gu ? gu : [],
+            ER = null !== (cu = null !== (Lu = null !== (zu = Wu(au.length, Ku.nodes, "nodes")) && void 0 !== zu ? zu : Wu(fu.length, Ku.meshes, "meshes")) && void 0 !== Lu ? Lu : Wu(uR.length, Ku.materials, "materials")) && void 0 !== cu ? cu : Wu(yR.length, Ku.images, "images");
+          if (ER) return ER;
+          const KR = new Set;
+          for (const Eu of au)
+            for (const uu of null !== (QR = Eu.children) && void 0 !== QR ? QR : []) {
+              var QR;
+              if (!ju(uu, au.length) || KR.has(uu)) return Ju;
+              KR.add(uu)
             }
-          const PR = new Set,
-            TR = UU => {
-              var RU;
-              return !PR.has(UU) && (PR.add(UU), (null !== (RU = lU[UU].children) && void 0 !== RU ? RU : []).every(TR))
+          const mR = new Set,
+            JR = uu => {
+              var Ru;
+              return !mR.has(uu) && (mR.add(uu), (null !== (Ru = au[uu].children) && void 0 !== Ru ? Ru : []).every(JR))
             };
-          for (const tU of null !== (qR = LU[0].nodes) && void 0 !== qR ? qR : []) {
-            var qR;
-            if (!WU(tU, lU.length) || pR.has(tU) || !TR(tU)) return TU
+          for (const Eu of null !== (NR = Ou[0].nodes) && void 0 !== NR ? NR : []) {
+            var NR;
+            if (!ju(Eu, au.length) || KR.has(Eu) || !JR(Eu)) return Ju
           }
-          for (const tU of lU) {
-            if (void 0 !== tU.matrix) return "uses node matrices";
-            if (void 0 !== tU.skin) return "uses skins";
-            if (void 0 !== tU.weights) return "uses morph targets";
-            if (void 0 !== tU.mesh && !WU(tU.mesh, OU.length)) return TU;
-            const UU = [
-              [tU.translation, 3],
-              [tU.rotation, 4],
-              [tU.scale, 3]
+          for (const Eu of au) {
+            if (void 0 !== Eu.matrix) return "uses node matrices";
+            if (void 0 !== Eu.skin) return "uses skins";
+            if (void 0 !== Eu.weights) return "uses morph targets";
+            if (void 0 !== Eu.mesh && !ju(Eu.mesh, fu.length)) return Ju;
+            const uu = [
+              [Eu.translation, 3],
+              [Eu.rotation, 4],
+              [Eu.scale, 3]
             ];
-            for (const [RU, gU] of UU)
-              if (void 0 !== RU && (!Array.isArray(RU) || RU.length !== gU || !RU.every((UU => Number.isFinite(UU))))) return TU
+            for (const [Ru, yu] of uu)
+              if (void 0 !== Ru && (!Array.isArray(Ru) || Ru.length !== yu || !Ru.every((uu => Number.isFinite(uu))))) return Ju
           }
-          let KR = -1,
-            cR = 0,
-            GR = 0,
-            jR = null;
-          for (const pU of OU) {
-            if (void 0 !== pU.weights) return "uses morph targets";
-            if (0 === pU.primitives.length) return TU;
-            for (const gU of pU.primitives) {
-              var uR, CR;
-              const pU = null !== (uR = gU.mode) && void 0 !== uR ? uR : 4;
-              var hR;
-              if (4 !== pU && 0 !== pU) return `uses ${null!==(hR=CU[pU])&&void 0!==hR?hR:`mode ${pU}`} primitives`;
-              if (void 0 !== gU.targets) return "uses morph targets";
-              if (void 0 !== gU.material && !WU(gU.material, UR.length)) return TU;
-              const EU = kU ? null === (CR = gU.extensions) || void 0 === CR ? void 0 : CR.KHR_draco_mesh_compression : void 0;
-              if (EU) {
-                if (4 !== pU) return "uses Draco-compressed points";
-                if (!oU(UU, RU, EU.bufferView) || "object" !== typeof EU.attributes) return TU
+          let XR = -1,
+            VR = 0,
+            rR = 0,
+            BR = null;
+          for (const Ku of fu) {
+            if (void 0 !== Ku.weights) return "uses morph targets";
+            if (0 === Ku.primitives.length) return Ju;
+            for (const yu of Ku.primitives) {
+              var xR, SR;
+              const Ku = null !== (xR = yu.mode) && void 0 !== xR ? xR : 4;
+              var pR;
+              if (4 !== Ku && 0 !== Ku) return `uses ${null!==(pR=Su[Ku])&&void 0!==pR?pR:`mode ${Ku}`} primitives`;
+              if (void 0 !== yu.targets) return "uses morph targets";
+              if (void 0 !== yu.material && !ju(yu.material, uR.length)) return Ju;
+              const Qu = Zu ? null === (SR = yu.extensions) || void 0 === SR ? void 0 : SR.KHR_draco_mesh_compression : void 0;
+              if (Qu) {
+                if (4 !== Ku) return "uses Draco-compressed points";
+                if (!Mu(uu, Ru, Qu.bufferView) || "object" !== typeof Qu.attributes) return Ju
               }
-              const PU = gU.attributes;
-              if ("object" !== typeof PU || null === PU) return TU;
-              if (void 0 === PU.POSITION) return "has a primitive with no positions";
-              if (!WU(PU.POSITION, DU.length)) return TU;
-              const qU = DU[PU.POSITION].count;
-              for (const [UU, RU] of Object.entries(PU)) {
-                if (!WU(RU, DU.length)) return TU;
-                if (/^(JOINTS|WEIGHTS)_\d+$/.test(UU)) return "uses skins";
-                const gU = DU[RU],
-                  tU = cU[UU];
-                if (tU && (gU.componentType !== hU || gU.normalized || gU.type !== tU)) return `stores ${UU} as ${IU(gU)}`;
-                const pU = jU[UU];
-                if (pU && (gU.type !== pU.type || !pU.componentTypes.includes(gU.componentType) || gU.componentType === hU === !!gU.normalized)) return `stores ${UU} as ${IU(gU)}`;
-                if (uU.has(UU) && gU.count !== qU) return "has vertex attributes of different lengths"
+              const mu = yu.attributes;
+              if ("object" !== typeof mu || null === mu) return Ju;
+              if (void 0 === mu.POSITION) return "has a primitive with no positions";
+              if (!ju(mu.POSITION, qu.length)) return Ju;
+              const Nu = qu[mu.POSITION].count;
+              for (const [uu, Ru] of Object.entries(mu)) {
+                if (!ju(Ru, qu.length)) return Ju;
+                if (/^(JOINTS|WEIGHTS)_\d+$/.test(uu)) return "uses skins";
+                const yu = qu[Ru],
+                  Eu = Vu[uu];
+                if (Eu && (yu.componentType !== pu || yu.normalized || yu.type !== Eu)) return `stores ${uu} as ${Cu(yu)}`;
+                const Ku = Bu[uu];
+                if (Ku && (yu.type !== Ku.type || !Ku.componentTypes.includes(yu.componentType) || yu.componentType === pu === !!yu.normalized)) return `stores ${uu} as ${Cu(yu)}`;
+                if (xu.has(uu) && yu.count !== Nu) return "has vertex attributes of different lengths"
               }
-              if (EU) {
-                if (void 0 === gU.indices) return TU;
-                for (const RU in EU.attributes)
-                  if (uU.has(RU) && void 0 === PU[RU]) return TU;
-                if (void 0 === EU.attributes.POSITION) return TU;
-                const UU = WU(gU.indices, DU.length) ? DU[gU.indices].count : -1;
-                if (0 === UU) return TU;
-                if (-1 === KR) KR = EU.bufferView, cR = qU, GR = UU;
+              if (Qu) {
+                if (void 0 === yu.indices) return Ju;
+                for (const Ru in Qu.attributes)
+                  if (xu.has(Ru) && void 0 === mu[Ru]) return Ju;
+                if (void 0 === Qu.attributes.POSITION) return Ju;
+                const uu = ju(yu.indices, qu.length) ? qu[yu.indices].count : -1;
+                if (0 === uu) return Ju;
+                if (-1 === XR) XR = Qu.bufferView, VR = Nu, rR = uu;
                 else {
-                  jR ??= new Map([
-                    [KR, [cR, GR]]
+                  BR ??= new Map([
+                    [XR, [VR, rR]]
                   ]);
-                  const RU = jR.get(EU.bufferView);
-                  if (RU && (RU[0] !== qU || RU[1] !== UU)) return TU;
-                  jR.set(EU.bufferView, null !== RU && void 0 !== RU ? RU : [qU, UU])
+                  const Ru = BR.get(Qu.bufferView);
+                  if (Ru && (Ru[0] !== Nu || Ru[1] !== uu)) return Ju;
+                  BR.set(Qu.bufferView, null !== Ru && void 0 !== Ru ? Ru : [Nu, uu])
                 }
               }
-              let KU = qU;
-              if (void 0 !== gU.indices) {
-                if (!WU(gU.indices, DU.length)) return TU;
-                const UU = DU[gU.indices];
-                if ("SCALAR" !== UU.type) return TU;
-                if (5121 === UU.componentType) return "uses 8-bit indices";
-                var QR;
-                if (5123 !== UU.componentType && 5125 !== UU.componentType) return `stores indices as ${null!==(QR=tU.h[UU.componentType])&&void 0!==QR?QR:UU.componentType}`;
-                if (!EU && void 0 === UU.bufferView) return TU;
-                KU = UU.count
+              let Xu = Nu;
+              if (void 0 !== yu.indices) {
+                if (!ju(yu.indices, qu.length)) return Ju;
+                const uu = qu[yu.indices];
+                if ("SCALAR" !== uu.type) return Ju;
+                if (5121 === uu.componentType) return "uses 8-bit indices";
+                var TR;
+                if (5123 !== uu.componentType && 5125 !== uu.componentType) return `stores indices as ${null!==(TR=Eu.e[uu.componentType])&&void 0!==TR?TR:uu.componentType}`;
+                if (!Qu && void 0 === uu.bufferView) return Ju;
+                Xu = uu.count
               }
-              if (4 === pU && KU % 3 !== 0) return TU
+              if (4 === Ku && Xu % 3 !== 0) return Ju
             }
           }
-          let eR = 0,
-            WR = 0,
-            fR = 0;
-          for (let tU = 0; tU < lU.length; tU++) {
-            const UU = lU[tU].mesh;
-            if (void 0 !== UU && PR.has(tU))
-              for (const RU of OU[UU].primitives) fR++, eR += DU[RU.attributes.POSITION].count, void 0 !== RU.indices && (WR += DU[RU.indices].count)
+          let WR = 0,
+            jR = 0,
+            HR = 0;
+          for (let Eu = 0; Eu < au.length; Eu++) {
+            const uu = au[Eu].mesh;
+            if (void 0 !== uu && mR.has(Eu))
+              for (const Ru of fu[uu].primitives) HR++, WR += qu[Ru.attributes.POSITION].count, void 0 !== Ru.indices && (jR += qu[Ru.indices].count)
           }
-          const xR = null !== (sU = null !== (yU = eU(eR, pU.vertices, "vertices")) && void 0 !== yU ? yU : eU(WR, pU.indices, "indices")) && void 0 !== sU ? sU : eU(fR, pU.primitives, "primitives");
-          if (xR) return xR;
-          for (const tU of UR) {
-            var mR, IR;
-            if (void 0 !== tU.emissiveTexture) return "uses an emissive texture";
-            const RU = null !== (mR = tU.alphaMode) && void 0 !== mR ? mR : "OPAQUE";
-            if ("OPAQUE" !== RU && "MASK" !== RU && "BLEND" !== RU) return TU;
-            const gU = null === (IR = tU.pbrMetallicRoughness) || void 0 === IR ? void 0 : IR.baseColorTexture;
-            if (gU) {
-              var JR, wR, nR, bR, oR;
-              const RU = null !== (JR = UU.extensionsUsed) && void 0 !== JR && JR.includes("KHR_texture_transform") ? null === (wR = gU.extensions) || void 0 === wR ? void 0 : wR.KHR_texture_transform : void 0;
-              if (0 !== (null !== (nR = gU.texCoord) && void 0 !== nR ? nR : 0) || 0 !== (null !== (bR = null === RU || void 0 === RU ? void 0 : RU.texCoord) && void 0 !== bR ? bR : 0)) return "uses a second UV set";
-              const tU = RR[gU.index];
-              if (!tU || !WU(tU.source, gR.length) || void 0 !== tU.sampler && !WU(tU.sampler, null === (oR = UU.samplers) || void 0 === oR ? void 0 : oR.length)) return TU
+          const dR = null !== (Fu = null !== (wu = Wu(WR, Ku.vertices, "vertices")) && void 0 !== wu ? wu : Wu(jR, Ku.indices, "indices")) && void 0 !== Fu ? Fu : Wu(HR, Ku.primitives, "primitives");
+          if (dR) return dR;
+          for (const Eu of uR) {
+            var bR, CR;
+            if (void 0 !== Eu.emissiveTexture) return "uses an emissive texture";
+            const Ru = null !== (bR = Eu.alphaMode) && void 0 !== bR ? bR : "OPAQUE";
+            if ("OPAQUE" !== Ru && "MASK" !== Ru && "BLEND" !== Ru) return Ju;
+            const yu = null === (CR = Eu.pbrMetallicRoughness) || void 0 === CR ? void 0 : CR.baseColorTexture;
+            if (yu) {
+              var kR, eR, AR, DR, MR;
+              const Ru = null !== (kR = uu.extensionsUsed) && void 0 !== kR && kR.includes("KHR_texture_transform") ? null === (eR = yu.extensions) || void 0 === eR ? void 0 : eR.KHR_texture_transform : void 0;
+              if (0 !== (null !== (AR = yu.texCoord) && void 0 !== AR ? AR : 0) || 0 !== (null !== (DR = null === Ru || void 0 === Ru ? void 0 : Ru.texCoord) && void 0 !== DR ? DR : 0)) return "uses a second UV set";
+              const Eu = RR[yu.index];
+              if (!Eu || !ju(Eu.source, yR.length) || void 0 !== Eu.sampler && !ju(Eu.sampler, null === (MR = uu.samplers) || void 0 === MR ? void 0 : MR.length)) return Ju
             }
           }
-          for (const tU of gR) {
-            if (void 0 !== tU.uri) return qU;
-            if (void 0 === tU.bufferView) return TU;
-            const gU = oU(UU, RU, tU.bufferView);
-            if (!gU) return TU;
-            if ("image/png" !== tU.mimeType) {
-              var ZR, aR, YR;
-              return `has ${nU(null!==(ZR=null!==(aR={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(YR=tU.mimeType)&&void 0!==YR?YR:""])&&void 0!==aR?aR:tU.mimeType)&&void 0!==ZR?ZR:"untyped")} image`
+          for (const Eu of yR) {
+            if (void 0 !== Eu.uri) return Nu;
+            if (void 0 === Eu.bufferView) return Ju;
+            const yu = Mu(uu, Ru, Eu.bufferView);
+            if (!yu) return Ju;
+            if ("image/png" !== Eu.mimeType) {
+              var IR, GR, UR;
+              return `has ${Au(null!==(IR=null!==(GR={"image/jpeg":"JPEG","image/webp":"WebP","image/ktx2":"KTX2"}[null!==(UR=Eu.mimeType)&&void 0!==UR?UR:""])&&void 0!==GR?GR:Eu.mimeType)&&void 0!==IR?IR:"untyped")} image`
             }
-            if (!wU(gU)) return `has ${nU(JU(gU))} image`;
-            const EU = new DataView(gU.buffer, gU.byteOffset, gU.byteLength),
-              PU = EU.getUint32(16),
-              KU = EU.getUint32(20);
-            if (PU > pU.imageSide || KU > pU.imageSide) return `has a ${PU} \xd7 ${KU} image (the limit is ${pU.imageSide})`
+            if (!eu(yu)) return `has ${Au(ku(yu))} image`;
+            const Qu = new DataView(yu.buffer, yu.byteOffset, yu.byteLength),
+              mu = Qu.getUint32(16),
+              Xu = Qu.getUint32(20);
+            if (mu > Ku.imageSide || Xu > Ku.imageSide) return `has a ${mu} \xd7 ${Xu} image (the limit is ${Ku.imageSide})`
           }
           return null
-        }(UU, RU)
+        }(uu, Ru)
       } catch {
-        return TU
+        return Ju
       }
     }
 
-    function BU(UU) {
-      const RU = aU(UU.byteLength);
-      if (RU) return RU;
+    function nu(uu) {
+      const Ru = Gu(uu.byteLength);
+      if (Ru) return Ru;
       try {
         const {
-          json: RU,
-          bin: gU
-        } = (0, tU.u)(UU);
-        return YU(RU, gU)
-      } catch (gU) {
-        if (gU instanceof tU.n) return gU.reason;
-        throw gU
+          json: Ru,
+          bin: yu
+        } = (0, Eu.y)(uu);
+        return Uu(Ru, yu)
+      } catch (yu) {
+        if (yu instanceof Eu.k) return yu.reason;
+        throw yu
       }
     }
   },
-  9067: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => uU,
-      h: () => jU,
-      i: () => hU,
-      m: () => EU,
-      n: () => pU,
-      o: () => CU,
-      p: () => cU,
-      q: () => GU,
-      s: () => PU,
-      u: () => KU
+  9143: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => xu,
+      e: () => Bu,
+      h: () => pu,
+      i: () => Qu,
+      k: () => Ku,
+      m: () => Su,
+      o: () => Vu,
+      s: () => ru,
+      v: () => mu,
+      y: () => Xu
     });
-    var tU = gU(9069);
-    class pU extends Error {
-      constructor(UU) {
-        super(`GLB refused: it ${UU}`), this.reason = UU, this.name = "GlbRefused"
+    var Eu = yu(9148);
+    class Ku extends Error {
+      constructor(uu) {
+        super(`GLB refused: it ${uu}`), this.reason = uu, this.name = "GlbRefused"
       }
     }
-    class EU extends Error {
-      constructor(UU) {
-        super(UU), this.name = "GlbError"
+    class Qu extends Error {
+      constructor(uu) {
+        super(uu), this.name = "GlbError"
       }
     }
 
-    function PU(UU) {
-      return Reflect.get(UU, "scene")
+    function mu(uu) {
+      return Reflect.get(uu, "scene")
     }
-    const TU = 5130562,
-      qU = "is not a binary glTF 2.0 file";
+    const Ju = 5130562,
+      Nu = "is not a binary glTF 2.0 file";
 
-    function KU(UU) {
-      var RU;
-      const gU = UU instanceof Uint8Array ? UU : new Uint8Array(UU),
-        EU = (0, tU.e)(gU);
-      if (null === EU) throw new pU(qU);
-      const PU = EU.json,
+    function Xu(uu) {
+      var Ru;
+      const yu = uu instanceof Uint8Array ? uu : new Uint8Array(uu),
+        Qu = (0, Eu.g)(yu);
+      if (null === Qu) throw new Ku(Nu);
+      const mu = Qu.json,
         {
-          jsonEnd: KU,
-          length: cU
-        } = EU,
-        GU = new DataView(gU.buffer, gU.byteOffset, gU.byteLength);
-      let jU = -1,
-        uU = 0;
-      for (let QU = KU; QU < cU;) {
-        if (QU + 8 > cU) throw new pU(qU);
-        const UU = GU.getUint32(QU, !0),
-          RU = GU.getUint32(QU + 4, !0);
-        if (QU + 8 + UU > cU || RU === tU.b || RU === TU && -1 !== jU) throw new pU(qU);
-        RU === TU && (jU = QU + 8, uU = UU), QU += 8 + UU
+          jsonEnd: Xu,
+          length: Vu
+        } = Qu,
+        ru = new DataView(yu.buffer, yu.byteOffset, yu.byteLength);
+      let Bu = -1,
+        xu = 0;
+      for (let Tu = Xu; Tu < Vu;) {
+        if (Tu + 8 > Vu) throw new Ku(Nu);
+        const uu = ru.getUint32(Tu, !0),
+          Ru = ru.getUint32(Tu + 4, !0);
+        if (Tu + 8 + uu > Vu || Ru === Eu.c || Ru === Ju && -1 !== Bu) throw new Ku(Nu);
+        Ru === Ju && (Bu = Tu + 8, xu = uu), Tu += 8 + uu
       }
-      let CU = null;
-      const hU = null === (RU = PU.buffers) || void 0 === RU ? void 0 : RU[0];
-      if (-1 !== jU && hU && void 0 === hU.uri) {
-        if (!(hU.byteLength >= 0) || hU.byteLength > uU) throw new pU(qU);
-        CU = new Uint8Array(gU.buffer, gU.byteOffset + jU, hU.byteLength)
+      let Su = null;
+      const pu = null === (Ru = mu.buffers) || void 0 === Ru ? void 0 : Ru[0];
+      if (-1 !== Bu && pu && void 0 === pu.uri) {
+        if (!(pu.byteLength >= 0) || pu.byteLength > xu) throw new Ku(Nu);
+        Su = new Uint8Array(yu.buffer, yu.byteOffset + Bu, pu.byteLength)
       }
       return {
-        json: PU,
-        bin: CU,
-        fileBytes: gU.byteLength
+        json: mu,
+        bin: Su,
+        fileBytes: yu.byteLength
       }
     }
 
-    function cU(UU) {
-      const RU = UU.slice(UU.indexOf(",") + 1),
-        gU = Uint8Array.fromBase64;
-      if (gU) return gU(RU).buffer;
-      const tU = atob(RU),
-        pU = new Uint8Array(tU.length);
-      for (let EU = 0; EU < tU.length; EU++) pU[EU] = tU.charCodeAt(EU);
-      return pU.buffer
+    function Vu(uu) {
+      const Ru = uu.slice(uu.indexOf(",") + 1),
+        yu = Uint8Array.fromBase64;
+      if (yu) return yu(Ru).buffer;
+      const Eu = atob(Ru),
+        Ku = new Uint8Array(Eu.length);
+      for (let Qu = 0; Qu < Eu.length; Qu++) Ku[Qu] = Eu.charCodeAt(Qu);
+      return Ku.buffer
     }
-    async function GU(UU) {
-      if (UU.startsWith("data:")) return cU(UU);
-      const RU = await fetch(UU);
-      if (!RU.ok) throw new EU(`fetching ${UU} failed: ${RU.status} ${RU.statusText}`);
-      return await RU.arrayBuffer()
+    async function ru(uu) {
+      if (uu.startsWith("data:")) return Vu(uu);
+      const Ru = await fetch(uu);
+      if (!Ru.ok) throw new Qu(`fetching ${uu} failed: ${Ru.status} ${Ru.statusText}`);
+      return await Ru.arrayBuffer()
     }
-    const jU = {
+    const Bu = {
         5120: "i8",
         5121: "u8",
         5122: "i16",
@@ -482,7 +482,7 @@ export const modules = {
         5125: "u32",
         5126: "f32"
       },
-      uU = {
+      xu = {
         5120: 1,
         5121: 1,
         5122: 2,
@@ -490,7 +490,7 @@ export const modules = {
         5125: 4,
         5126: 4
       },
-      CU = {
+      Su = {
         SCALAR: 1,
         VEC2: 2,
         VEC3: 3,
@@ -499,7 +499,7 @@ export const modules = {
         MAT3: 9,
         MAT4: 16
       },
-      hU = [
+      pu = [
         ["POSITION", "position"],
         ["NORMAL", "normal"],
         ["TANGENT", "tangent"],
@@ -512,48 +512,48 @@ export const modules = {
         ["COLOR_0", "color"]
       ]
   },
-  9069: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => pU,
-      e: () => EU,
-      h: () => PU
+  9148: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ku,
+      g: () => Qu,
+      j: () => mu
     });
-    const tU = 1179937895,
-      pU = 1313821514;
+    const Eu = 1179937895,
+      Ku = 1313821514;
 
-    function EU(UU) {
-      const RU = new DataView(UU.buffer, UU.byteOffset, UU.byteLength);
-      if (UU.byteLength < 20 || RU.getUint32(0, !0) !== tU || 2 !== RU.getUint32(4, !0)) return null;
-      const gU = Math.min(RU.getUint32(8, !0), UU.byteLength),
-        EU = RU.getUint32(12, !0);
-      if (RU.getUint32(16, !0) !== pU || 20 + EU > gU) return null;
-      let PU;
+    function Qu(uu) {
+      const Ru = new DataView(uu.buffer, uu.byteOffset, uu.byteLength);
+      if (uu.byteLength < 20 || Ru.getUint32(0, !0) !== Eu || 2 !== Ru.getUint32(4, !0)) return null;
+      const yu = Math.min(Ru.getUint32(8, !0), uu.byteLength),
+        Qu = Ru.getUint32(12, !0);
+      if (Ru.getUint32(16, !0) !== Ku || 20 + Qu > yu) return null;
+      let mu;
       try {
-        PU = JSON.parse((new TextDecoder).decode(UU.subarray(20, 20 + EU)))
+        mu = JSON.parse((new TextDecoder).decode(uu.subarray(20, 20 + Qu)))
       } catch {
         return null
       }
-      return "object" === typeof PU && null !== PU ? {
-        json: PU,
-        jsonEnd: 20 + EU,
-        length: gU
+      return "object" === typeof mu && null !== mu ? {
+        json: mu,
+        jsonEnd: 20 + Qu,
+        length: yu
       } : null
     }
 
-    function PU(UU) {
-      var RU;
-      const gU = null === (RU = EU(UU)) || void 0 === RU ? void 0 : RU.json;
-      if (void 0 === gU || !Array.isArray(gU.extensionsUsed) || !gU.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
-      const tU = gU.meshes;
-      return Array.isArray(tU) && tU.some((UU => {
-        const RU = null === UU || void 0 === UU ? void 0 : UU.primitives;
-        return Array.isArray(RU) && RU.some((UU => {
-          const RU = null === UU || void 0 === UU ? void 0 : UU.extensions;
-          return null != (null === RU || void 0 === RU ? void 0 : RU.KHR_draco_mesh_compression)
+    function mu(uu) {
+      var Ru;
+      const yu = null === (Ru = Qu(uu)) || void 0 === Ru ? void 0 : Ru.json;
+      if (void 0 === yu || !Array.isArray(yu.extensionsUsed) || !yu.extensionsUsed.includes("KHR_draco_mesh_compression")) return !1;
+      const Eu = yu.meshes;
+      return Array.isArray(Eu) && Eu.some((uu => {
+        const Ru = null === uu || void 0 === uu ? void 0 : uu.primitives;
+        return Array.isArray(Ru) && Ru.some((uu => {
+          const Ru = null === uu || void 0 === uu ? void 0 : uu.extensions;
+          return null != (null === Ru || void 0 === Ru ? void 0 : Ru.KHR_draco_mesh_compression)
         }))
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

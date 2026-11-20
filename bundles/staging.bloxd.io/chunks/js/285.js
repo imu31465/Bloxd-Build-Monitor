@@ -1,181 +1,181 @@
 export const id = 285;
 export const ids = [285];
 export const modules = {
-  40700: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => WR,
-      e: () => BU,
-      ChangeSet: () => VU,
-      g: () => aR,
-      k: () => yU,
-      n: () => rR,
-      p: () => iU,
-      q: () => YU,
-      s: () => pR,
-      v: () => yR,
-      t: () => kR,
-      x: () => vR,
-      A: () => mR,
-      C: () => lU,
-      E: () => hU,
-      G: () => IR,
-      J: () => bU,
-      M: () => ZU,
-      N: () => XR,
-      R: () => Ug,
-      V: () => nU,
-      Z: () => Rg,
-      bb: () => oU
+  40909: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => jR,
+      h: () => nu,
+      ChangeSet: () => su,
+      l: () => GR,
+      n: () => wu,
+      o: () => tR,
+      q: () => Pu,
+      s: () => Uu,
+      t: () => KR,
+      x: () => wR,
+      w: () => ZR,
+      A: () => gR,
+      B: () => bR,
+      E: () => au,
+      F: () => pu,
+      J: () => CR,
+      K: () => Du,
+      N: () => Iu,
+      P: () => lR,
+      R: () => uy,
+      S: () => Au,
+      V: () => Ry,
+      X: () => Mu
     });
-    let tU = [],
-      pU = [];
+    let Eu = [],
+      Ku = [];
 
-    function EU(UU) {
-      if (UU < 768) return !1;
-      for (let RU = 0, gU = tU.length;;) {
-        let EU = RU + gU >> 1;
-        if (UU < tU[EU]) gU = EU;
+    function Qu(uu) {
+      if (uu < 768) return !1;
+      for (let Ru = 0, yu = Eu.length;;) {
+        let Qu = Ru + yu >> 1;
+        if (uu < Eu[Qu]) yu = Qu;
         else {
-          if (!(UU >= pU[EU])) return !0;
-          RU = EU + 1
+          if (!(uu >= Ku[Qu])) return !0;
+          Ru = Qu + 1
         }
-        if (RU == gU) return !1
+        if (Ru == yu) return !1
       }
     }
 
-    function PU(UU) {
-      return UU >= 127462 && UU <= 127487
+    function mu(uu) {
+      return uu >= 127462 && uu <= 127487
     }(() => {
-      let UU = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((UU => UU ? parseInt(UU, 36) : 1));
-      for (let RU = 0, gU = 0; RU < UU.length; RU++)(RU % 2 ? pU : tU).push(gU += UU[RU])
+      let uu = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((uu => uu ? parseInt(uu, 36) : 1));
+      for (let Ru = 0, yu = 0; Ru < uu.length; Ru++)(Ru % 2 ? Ku : Eu).push(yu += uu[Ru])
     })();
-    const TU = 8205;
+    const Ju = 8205;
 
-    function qU(UU, RU) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? KU : cU)(UU, RU, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function Nu(uu, Ru) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Xu : Vu)(uu, Ru, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function KU(UU, RU, gU) {
-      if (RU == UU.length) return RU;
-      RU && jU(UU.charCodeAt(RU)) && uU(UU.charCodeAt(RU - 1)) && RU--;
-      let tU = GU(UU, RU);
-      for (RU += CU(tU); RU < UU.length;) {
-        let pU = GU(UU, RU);
-        if (tU == TU || pU == TU || gU && EU(pU)) RU += CU(pU), tU = pU;
+    function Xu(uu, Ru, yu) {
+      if (Ru == uu.length) return Ru;
+      Ru && Bu(uu.charCodeAt(Ru)) && xu(uu.charCodeAt(Ru - 1)) && Ru--;
+      let Eu = ru(uu, Ru);
+      for (Ru += Su(Eu); Ru < uu.length;) {
+        let Ku = ru(uu, Ru);
+        if (Eu == Ju || Ku == Ju || yu && Qu(Ku)) Ru += Su(Ku), Eu = Ku;
         else {
-          if (!PU(pU)) break;
+          if (!mu(Ku)) break;
           {
-            let gU = 0,
-              tU = RU - 2;
-            for (; tU >= 0 && PU(GU(UU, tU));) gU++, tU -= 2;
-            if (gU % 2 == 0) break;
-            RU += 2
+            let yu = 0,
+              Eu = Ru - 2;
+            for (; Eu >= 0 && mu(ru(uu, Eu));) yu++, Eu -= 2;
+            if (yu % 2 == 0) break;
+            Ru += 2
           }
         }
       }
-      return RU
+      return Ru
     }
 
-    function cU(UU, RU, gU) {
-      for (; RU > 0;) {
-        let tU = KU(UU, RU - 2, gU);
-        if (tU < RU) return tU;
-        RU--
+    function Vu(uu, Ru, yu) {
+      for (; Ru > 0;) {
+        let Eu = Xu(uu, Ru - 2, yu);
+        if (Eu < Ru) return Eu;
+        Ru--
       }
       return 0
     }
 
-    function GU(UU, RU) {
-      let gU = UU.charCodeAt(RU);
-      if (!uU(gU) || RU + 1 == UU.length) return gU;
-      let tU = UU.charCodeAt(RU + 1);
-      return jU(tU) ? tU - 56320 + (gU - 55296 << 10) + 65536 : gU
+    function ru(uu, Ru) {
+      let yu = uu.charCodeAt(Ru);
+      if (!xu(yu) || Ru + 1 == uu.length) return yu;
+      let Eu = uu.charCodeAt(Ru + 1);
+      return Bu(Eu) ? Eu - 56320 + (yu - 55296 << 10) + 65536 : yu
     }
 
-    function jU(UU) {
-      return UU >= 56320 && UU < 57344
+    function Bu(uu) {
+      return uu >= 56320 && uu < 57344
     }
 
-    function uU(UU) {
-      return UU >= 55296 && UU < 56320
+    function xu(uu) {
+      return uu >= 55296 && uu < 56320
     }
 
-    function CU(UU) {
-      return UU < 65536 ? 1 : 2
+    function Su(uu) {
+      return uu < 65536 ? 1 : 2
     }
-    class hU {
-      lineAt(UU) {
-        if (UU < 0 || UU > this.length) throw new RangeError(`Invalid position ${UU} in document of length ${this.length}`);
-        return this.lineInner(UU, !1, 1, 0)
+    class pu {
+      lineAt(uu) {
+        if (uu < 0 || uu > this.length) throw new RangeError(`Invalid position ${uu} in document of length ${this.length}`);
+        return this.lineInner(uu, !1, 1, 0)
       }
-      line(UU) {
-        if (UU < 1 || UU > this.lines) throw new RangeError(`Invalid line number ${UU} in ${this.lines}-line document`);
-        return this.lineInner(UU, !0, 1, 0)
+      line(uu) {
+        if (uu < 1 || uu > this.lines) throw new RangeError(`Invalid line number ${uu} in ${this.lines}-line document`);
+        return this.lineInner(uu, !0, 1, 0)
       }
-      replace(UU, RU, gU) {
-        [UU, RU] = wU(this, UU, RU);
-        let tU = [];
-        return this.decompose(0, UU, tU, 2), gU.length && gU.decompose(0, gU.length, tU, 3), this.decompose(RU, this.length, tU, 1), eU.from(tU, this.length - (RU - UU) + gU.length)
+      replace(uu, Ru, yu) {
+        [uu, Ru] = eu(this, uu, Ru);
+        let Eu = [];
+        return this.decompose(0, uu, Eu, 2), yu.length && yu.decompose(0, yu.length, Eu, 3), this.decompose(Ru, this.length, Eu, 1), Wu.from(Eu, this.length - (Ru - uu) + yu.length)
       }
-      append(UU) {
-        return this.replace(this.length, this.length, UU)
+      append(uu) {
+        return this.replace(this.length, this.length, uu)
       }
-      slice(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [UU, RU] = wU(this, UU, RU);
-        let gU = [];
-        return this.decompose(UU, RU, gU, 0), eU.from(gU, RU - UU)
+      slice(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [uu, Ru] = eu(this, uu, Ru);
+        let yu = [];
+        return this.decompose(uu, Ru, yu, 0), Wu.from(yu, Ru - uu)
       }
-      eq(UU) {
-        if (UU == this) return !0;
-        if (UU.length != this.length || UU.lines != this.lines) return !1;
-        let RU = this.scanIdentical(UU, 1),
-          gU = this.length - this.scanIdentical(UU, -1),
-          tU = new xU(this),
-          pU = new xU(UU);
-        for (let EU = RU, PU = RU;;) {
-          if (tU.next(EU), pU.next(EU), EU = 0, tU.lineBreak != pU.lineBreak || tU.done != pU.done || tU.value != pU.value) return !1;
-          if (PU += tU.value.length, tU.done || PU >= gU) return !0
+      eq(uu) {
+        if (uu == this) return !0;
+        if (uu.length != this.length || uu.lines != this.lines) return !1;
+        let Ru = this.scanIdentical(uu, 1),
+          yu = this.length - this.scanIdentical(uu, -1),
+          Eu = new du(this),
+          Ku = new du(uu);
+        for (let Qu = Ru, mu = Ru;;) {
+          if (Eu.next(Qu), Ku.next(Qu), Qu = 0, Eu.lineBreak != Ku.lineBreak || Eu.done != Ku.done || Eu.value != Ku.value) return !1;
+          if (mu += Eu.value.length, Eu.done || mu >= yu) return !0
         }
       }
       iter() {
-        return new xU(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new du(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new mU(this, UU, RU)
+      iterRange(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new bu(this, uu, Ru)
       }
-      iterLines(UU, RU) {
-        let gU;
-        if (null == UU) gU = this.iter();
+      iterLines(uu, Ru) {
+        let yu;
+        if (null == uu) yu = this.iter();
         else {
-          null == RU && (RU = this.lines + 1);
-          let tU = this.line(UU).from;
-          gU = this.iterRange(tU, Math.max(tU, RU == this.lines + 1 ? this.length : RU <= 1 ? 0 : this.line(RU - 1).to))
+          null == Ru && (Ru = this.lines + 1);
+          let Eu = this.line(uu).from;
+          yu = this.iterRange(Eu, Math.max(Eu, Ru == this.lines + 1 ? this.length : Ru <= 1 ? 0 : this.line(Ru - 1).to))
         }
-        return new IU(gU)
+        return new Cu(yu)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let UU = [];
-        return this.flatten(UU), UU
+        let uu = [];
+        return this.flatten(uu), uu
       }
       constructor() {}
-      static of (UU) {
-        if (0 == UU.length) throw new RangeError("A document must have at least one line");
-        return 1 != UU.length || UU[0] ? UU.length <= 32 ? new QU(UU) : eU.from(QU.split(UU, [])) : hU.empty
+      static of (uu) {
+        if (0 == uu.length) throw new RangeError("A document must have at least one line");
+        return 1 != uu.length || uu[0] ? uu.length <= 32 ? new Tu(uu) : Wu.from(Tu.split(uu, [])) : pu.empty
       }
     }
-    class QU extends hU {
-      constructor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(UU) {
-          let RU = -1;
-          for (let gU of UU) RU += gU.length + 1;
-          return RU
-        }(UU);
-        super(), this.text = UU, this.length = RU
+    class Tu extends pu {
+      constructor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(uu) {
+          let Ru = -1;
+          for (let yu of uu) Ru += yu.length + 1;
+          return Ru
+        }(uu);
+        super(), this.text = uu, this.length = Ru
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(UU, RU, gU, tU) {
-        for (let pU = 0;; pU++) {
-          let EU = this.text[pU],
-            PU = tU + EU.length;
-          if ((RU ? gU : PU) >= UU) return new JU(tU, PU, gU, EU);
-          tU = PU + 1, gU++
+      lineInner(uu, Ru, yu, Eu) {
+        for (let Ku = 0;; Ku++) {
+          let Qu = this.text[Ku],
+            mu = Eu + Qu.length;
+          if ((Ru ? yu : mu) >= uu) return new ku(Eu, mu, yu, Qu);
+          Eu = mu + 1, yu++
         }
       }
-      decompose(UU, RU, gU, tU) {
-        let pU = UU <= 0 && RU >= this.length ? this : new QU(fU(this.text, UU, RU), Math.min(RU, this.length) - Math.max(0, UU));
-        if (1 & tU) {
-          let UU = gU.pop(),
-            RU = WU(pU.text, UU.text.slice(), 0, pU.length);
-          if (RU.length <= 32) gU.push(new QU(RU, UU.length + pU.length));
+      decompose(uu, Ru, yu, Eu) {
+        let Ku = uu <= 0 && Ru >= this.length ? this : new Tu(Hu(this.text, uu, Ru), Math.min(Ru, this.length) - Math.max(0, uu));
+        if (1 & Eu) {
+          let uu = yu.pop(),
+            Ru = ju(Ku.text, uu.text.slice(), 0, Ku.length);
+          if (Ru.length <= 32) yu.push(new Tu(Ru, uu.length + Ku.length));
           else {
-            let UU = RU.length >> 1;
-            gU.push(new QU(RU.slice(0, UU)), new QU(RU.slice(UU)))
+            let uu = Ru.length >> 1;
+            yu.push(new Tu(Ru.slice(0, uu)), new Tu(Ru.slice(uu)))
           }
-        } else gU.push(pU)
+        } else yu.push(Ku)
       }
-      replace(UU, RU, gU) {
-        if (!(gU instanceof QU)) return super.replace(UU, RU, gU);
-        [UU, RU] = wU(this, UU, RU);
-        let tU = WU(this.text, WU(gU.text, fU(this.text, 0, UU)), RU),
-          pU = this.length + gU.length - (RU - UU);
-        return tU.length <= 32 ? new QU(tU, pU) : eU.from(QU.split(tU, []), pU)
+      replace(uu, Ru, yu) {
+        if (!(yu instanceof Tu)) return super.replace(uu, Ru, yu);
+        [uu, Ru] = eu(this, uu, Ru);
+        let Eu = ju(this.text, ju(yu.text, Hu(this.text, 0, uu)), Ru),
+          Ku = this.length + yu.length - (Ru - uu);
+        return Eu.length <= 32 ? new Tu(Eu, Ku) : Wu.from(Tu.split(Eu, []), Ku)
       }
-      sliceString(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [UU, RU] = wU(this, UU, RU);
-        let tU = "";
-        for (let pU = 0, EU = 0; pU <= RU && EU < this.text.length; EU++) {
-          let PU = this.text[EU],
-            TU = pU + PU.length;
-          pU > UU && EU && (tU += gU), UU < TU && RU > pU && (tU += PU.slice(Math.max(0, UU - pU), RU - pU)), pU = TU + 1
+      sliceString(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [uu, Ru] = eu(this, uu, Ru);
+        let Eu = "";
+        for (let Ku = 0, Qu = 0; Ku <= Ru && Qu < this.text.length; Qu++) {
+          let mu = this.text[Qu],
+            Ju = Ku + mu.length;
+          Ku > uu && Qu && (Eu += yu), uu < Ju && Ru > Ku && (Eu += mu.slice(Math.max(0, uu - Ku), Ru - Ku)), Ku = Ju + 1
         }
-        return tU
+        return Eu
       }
-      flatten(UU) {
-        for (let RU of this.text) UU.push(RU)
+      flatten(uu) {
+        for (let Ru of this.text) uu.push(Ru)
       }
       scanIdentical() {
         return 0
       }
-      static split(UU, RU) {
-        let gU = [],
-          tU = -1;
-        for (let pU of UU) gU.push(pU), tU += pU.length + 1, 32 == gU.length && (RU.push(new QU(gU, tU)), gU = [], tU = -1);
-        return tU > -1 && RU.push(new QU(gU, tU)), RU
+      static split(uu, Ru) {
+        let yu = [],
+          Eu = -1;
+        for (let Ku of uu) yu.push(Ku), Eu += Ku.length + 1, 32 == yu.length && (Ru.push(new Tu(yu, Eu)), yu = [], Eu = -1);
+        return Eu > -1 && Ru.push(new Tu(yu, Eu)), Ru
       }
     }
-    class eU extends hU {
-      constructor(UU, RU) {
-        super(), this.children = UU, this.length = RU, this.lines = 0;
-        for (let gU of UU) this.lines += gU.lines
+    class Wu extends pu {
+      constructor(uu, Ru) {
+        super(), this.children = uu, this.length = Ru, this.lines = 0;
+        for (let yu of uu) this.lines += yu.lines
       }
-      lineInner(UU, RU, gU, tU) {
-        for (let pU = 0;; pU++) {
-          let EU = this.children[pU],
-            PU = tU + EU.length,
-            TU = gU + EU.lines - 1;
-          if ((RU ? TU : PU) >= UU) return EU.lineInner(UU, RU, gU, tU);
-          tU = PU + 1, gU = TU + 1
+      lineInner(uu, Ru, yu, Eu) {
+        for (let Ku = 0;; Ku++) {
+          let Qu = this.children[Ku],
+            mu = Eu + Qu.length,
+            Ju = yu + Qu.lines - 1;
+          if ((Ru ? Ju : mu) >= uu) return Qu.lineInner(uu, Ru, yu, Eu);
+          Eu = mu + 1, yu = Ju + 1
         }
       }
-      decompose(UU, RU, gU, tU) {
-        for (let pU = 0, EU = 0; EU <= RU && pU < this.children.length; pU++) {
-          let PU = this.children[pU],
-            TU = EU + PU.length;
-          if (UU <= TU && RU >= EU) {
-            let pU = tU & ((EU <= UU ? 1 : 0) | (TU >= RU ? 2 : 0));
-            EU >= UU && TU <= RU && !pU ? gU.push(PU) : PU.decompose(UU - EU, RU - EU, gU, pU)
+      decompose(uu, Ru, yu, Eu) {
+        for (let Ku = 0, Qu = 0; Qu <= Ru && Ku < this.children.length; Ku++) {
+          let mu = this.children[Ku],
+            Ju = Qu + mu.length;
+          if (uu <= Ju && Ru >= Qu) {
+            let Ku = Eu & ((Qu <= uu ? 1 : 0) | (Ju >= Ru ? 2 : 0));
+            Qu >= uu && Ju <= Ru && !Ku ? yu.push(mu) : mu.decompose(uu - Qu, Ru - Qu, yu, Ku)
           }
-          EU = TU + 1
+          Qu = Ju + 1
         }
       }
-      replace(UU, RU, gU) {
-        if ([UU, RU] = wU(this, UU, RU), gU.lines < this.lines)
-          for (let tU = 0, pU = 0; tU < this.children.length; tU++) {
-            let EU = this.children[tU],
-              PU = pU + EU.length;
-            if (UU >= pU && RU <= PU) {
-              let TU = EU.replace(UU - pU, RU - pU, gU),
-                qU = this.lines - EU.lines + TU.lines;
-              if (TU.lines < qU >> 4 && TU.lines > qU >> 6) {
-                let pU = this.children.slice();
-                return pU[tU] = TU, new eU(pU, this.length - (RU - UU) + gU.length)
+      replace(uu, Ru, yu) {
+        if ([uu, Ru] = eu(this, uu, Ru), yu.lines < this.lines)
+          for (let Eu = 0, Ku = 0; Eu < this.children.length; Eu++) {
+            let Qu = this.children[Eu],
+              mu = Ku + Qu.length;
+            if (uu >= Ku && Ru <= mu) {
+              let Ju = Qu.replace(uu - Ku, Ru - Ku, yu),
+                Nu = this.lines - Qu.lines + Ju.lines;
+              if (Ju.lines < Nu >> 4 && Ju.lines > Nu >> 6) {
+                let Ku = this.children.slice();
+                return Ku[Eu] = Ju, new Wu(Ku, this.length - (Ru - uu) + yu.length)
               }
-              return super.replace(pU, PU, TU)
+              return super.replace(Ku, mu, Ju)
             }
-            pU = PU + 1
+            Ku = mu + 1
           }
-        return super.replace(UU, RU, gU)
+        return super.replace(uu, Ru, yu)
       }
-      sliceString(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [UU, RU] = wU(this, UU, RU);
-        let tU = "";
-        for (let pU = 0, EU = 0; pU < this.children.length && EU <= RU; pU++) {
-          let PU = this.children[pU],
-            TU = EU + PU.length;
-          EU > UU && pU && (tU += gU), UU < TU && RU > EU && (tU += PU.sliceString(UU - EU, RU - EU, gU)), EU = TU + 1
+      sliceString(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [uu, Ru] = eu(this, uu, Ru);
+        let Eu = "";
+        for (let Ku = 0, Qu = 0; Ku < this.children.length && Qu <= Ru; Ku++) {
+          let mu = this.children[Ku],
+            Ju = Qu + mu.length;
+          Qu > uu && Ku && (Eu += yu), uu < Ju && Ru > Qu && (Eu += mu.sliceString(uu - Qu, Ru - Qu, yu)), Qu = Ju + 1
         }
-        return tU
+        return Eu
       }
-      flatten(UU) {
-        for (let RU of this.children) RU.flatten(UU)
+      flatten(uu) {
+        for (let Ru of this.children) Ru.flatten(uu)
       }
-      scanIdentical(UU, RU) {
-        if (!(UU instanceof eU)) return 0;
-        let gU = 0,
-          [tU, pU, EU, PU] = RU > 0 ? [0, 0, this.children.length, UU.children.length] : [this.children.length - 1, UU.children.length - 1, -1, -1];
-        for (;; tU += RU, pU += RU) {
-          if (tU == EU || pU == PU) return gU;
-          let TU = this.children[tU],
-            qU = UU.children[pU];
-          if (TU != qU) return gU + TU.scanIdentical(qU, RU);
-          gU += TU.length + 1
+      scanIdentical(uu, Ru) {
+        if (!(uu instanceof Wu)) return 0;
+        let yu = 0,
+          [Eu, Ku, Qu, mu] = Ru > 0 ? [0, 0, this.children.length, uu.children.length] : [this.children.length - 1, uu.children.length - 1, -1, -1];
+        for (;; Eu += Ru, Ku += Ru) {
+          if (Eu == Qu || Ku == mu) return yu;
+          let Ju = this.children[Eu],
+            Nu = uu.children[Ku];
+          if (Ju != Nu) return yu + Ju.scanIdentical(Nu, Ru);
+          yu += Ju.length + 1
         }
       }
-      static from(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU.reduce(((UU, RU) => UU + RU.length + 1), -1),
-          gU = 0;
-        for (let jU of UU) gU += jU.lines;
-        if (gU < 32) {
-          let gU = [];
-          for (let RU of UU) RU.flatten(gU);
-          return new QU(gU, RU)
+      static from(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu.reduce(((uu, Ru) => uu + Ru.length + 1), -1),
+          yu = 0;
+        for (let Bu of uu) yu += Bu.lines;
+        if (yu < 32) {
+          let yu = [];
+          for (let Ru of uu) Ru.flatten(yu);
+          return new Tu(yu, Ru)
         }
-        let tU = Math.max(32, gU >> 5),
-          pU = tU << 1,
-          EU = tU >> 1,
-          PU = [],
-          TU = 0,
-          qU = -1,
-          KU = [];
+        let Eu = Math.max(32, yu >> 5),
+          Ku = Eu << 1,
+          Qu = Eu >> 1,
+          mu = [],
+          Ju = 0,
+          Nu = -1,
+          Xu = [];
 
-        function cU(UU) {
-          let RU;
-          if (UU.lines > pU && UU instanceof eU)
-            for (let gU of UU.children) cU(gU);
-          else UU.lines > EU && (TU > EU || !TU) ? (GU(), PU.push(UU)) : UU instanceof QU && TU && (RU = KU[KU.length - 1]) instanceof QU && UU.lines + RU.lines <= 32 ? (TU += UU.lines, qU += UU.length + 1, KU[KU.length - 1] = new QU(RU.text.concat(UU.text), RU.length + 1 + UU.length)) : (TU + UU.lines > tU && GU(), TU += UU.lines, qU += UU.length + 1, KU.push(UU))
+        function Vu(uu) {
+          let Ru;
+          if (uu.lines > Ku && uu instanceof Wu)
+            for (let yu of uu.children) Vu(yu);
+          else uu.lines > Qu && (Ju > Qu || !Ju) ? (ru(), mu.push(uu)) : uu instanceof Tu && Ju && (Ru = Xu[Xu.length - 1]) instanceof Tu && uu.lines + Ru.lines <= 32 ? (Ju += uu.lines, Nu += uu.length + 1, Xu[Xu.length - 1] = new Tu(Ru.text.concat(uu.text), Ru.length + 1 + uu.length)) : (Ju + uu.lines > Eu && ru(), Ju += uu.lines, Nu += uu.length + 1, Xu.push(uu))
         }
 
-        function GU() {
-          0 != TU && (PU.push(1 == KU.length ? KU[0] : eU.from(KU, qU)), qU = -1, TU = KU.length = 0)
+        function ru() {
+          0 != Ju && (mu.push(1 == Xu.length ? Xu[0] : Wu.from(Xu, Nu)), Nu = -1, Ju = Xu.length = 0)
         }
-        for (let jU of UU) cU(jU);
-        return GU(), 1 == PU.length ? PU[0] : new eU(PU, RU)
+        for (let Bu of uu) Vu(Bu);
+        return ru(), 1 == mu.length ? mu[0] : new Wu(mu, Ru)
       }
     }
 
-    function WU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let pU = 0, EU = 0, PU = !0; EU < UU.length && pU <= tU; EU++) {
-        let TU = UU[EU],
-          qU = pU + TU.length;
-        qU >= gU && (qU > tU && (TU = TU.slice(0, tU - pU)), pU < gU && (TU = TU.slice(gU - pU)), PU ? (RU[RU.length - 1] += TU, PU = !1) : RU.push(TU)), pU = qU + 1
+    function ju(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let Ku = 0, Qu = 0, mu = !0; Qu < uu.length && Ku <= Eu; Qu++) {
+        let Ju = uu[Qu],
+          Nu = Ku + Ju.length;
+        Nu >= yu && (Nu > Eu && (Ju = Ju.slice(0, Eu - Ku)), Ku < yu && (Ju = Ju.slice(yu - Ku)), mu ? (Ru[Ru.length - 1] += Ju, mu = !1) : Ru.push(Ju)), Ku = Nu + 1
       }
-      return RU
+      return Ru
     }
 
-    function fU(UU, RU, gU) {
-      return WU(UU, [""], RU, gU)
+    function Hu(uu, Ru, yu) {
+      return ju(uu, [""], Ru, yu)
     }
-    hU.empty = new QU([""], 0);
-    class xU {
-      constructor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = RU, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [UU], this.offsets = [RU > 0 ? 1 : (UU instanceof QU ? UU.text.length : UU.children.length) << 1]
+    pu.empty = new Tu([""], 0);
+    class du {
+      constructor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = Ru, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [uu], this.offsets = [Ru > 0 ? 1 : (uu instanceof Tu ? uu.text.length : uu.children.length) << 1]
       }
-      nextInner(UU, RU) {
+      nextInner(uu, Ru) {
         for (this.done = this.lineBreak = !1;;) {
-          let gU = this.nodes.length - 1,
-            tU = this.nodes[gU],
-            pU = this.offsets[gU],
-            EU = pU >> 1,
-            PU = tU instanceof QU ? tU.text.length : tU.children.length;
-          if (EU == (RU > 0 ? PU : 0)) {
-            if (0 == gU) return this.done = !0, this.value = "", this;
-            RU > 0 && this.offsets[gU - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & pU) == (RU > 0 ? 0 : 1)) {
-            if (this.offsets[gU] += RU, 0 == UU) return this.lineBreak = !0, this.value = "\n", this;
-            UU--
-          } else if (tU instanceof QU) {
-            let pU = tU.text[EU + (RU < 0 ? -1 : 0)];
-            if (this.offsets[gU] += RU, pU.length > Math.max(0, UU)) return this.value = 0 == UU ? pU : RU > 0 ? pU.slice(UU) : pU.slice(0, pU.length - UU), this;
-            UU -= pU.length
+          let yu = this.nodes.length - 1,
+            Eu = this.nodes[yu],
+            Ku = this.offsets[yu],
+            Qu = Ku >> 1,
+            mu = Eu instanceof Tu ? Eu.text.length : Eu.children.length;
+          if (Qu == (Ru > 0 ? mu : 0)) {
+            if (0 == yu) return this.done = !0, this.value = "", this;
+            Ru > 0 && this.offsets[yu - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & Ku) == (Ru > 0 ? 0 : 1)) {
+            if (this.offsets[yu] += Ru, 0 == uu) return this.lineBreak = !0, this.value = "\n", this;
+            uu--
+          } else if (Eu instanceof Tu) {
+            let Ku = Eu.text[Qu + (Ru < 0 ? -1 : 0)];
+            if (this.offsets[yu] += Ru, Ku.length > Math.max(0, uu)) return this.value = 0 == uu ? Ku : Ru > 0 ? Ku.slice(uu) : Ku.slice(0, Ku.length - uu), this;
+            uu -= Ku.length
           } else {
-            let pU = tU.children[EU + (RU < 0 ? -1 : 0)];
-            UU > pU.length ? (UU -= pU.length, this.offsets[gU] += RU) : (RU < 0 && this.offsets[gU]--, this.nodes.push(pU), this.offsets.push(RU > 0 ? 1 : (pU instanceof QU ? pU.text.length : pU.children.length) << 1))
+            let Ku = Eu.children[Qu + (Ru < 0 ? -1 : 0)];
+            uu > Ku.length ? (uu -= Ku.length, this.offsets[yu] += Ru) : (Ru < 0 && this.offsets[yu]--, this.nodes.push(Ku), this.offsets.push(Ru > 0 ? 1 : (Ku instanceof Tu ? Ku.text.length : Ku.children.length) << 1))
           }
         }
       }
       next() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return UU < 0 && (this.nextInner(-UU, -this.dir), UU = this.value.length), this.nextInner(UU, this.dir)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return uu < 0 && (this.nextInner(-uu, -this.dir), uu = this.value.length), this.nextInner(uu, this.dir)
       }
     }
-    class mU {
-      constructor(UU, RU, gU) {
-        this.value = "", this.done = !1, this.cursor = new xU(UU, RU > gU ? -1 : 1), this.pos = RU > gU ? UU.length : 0, this.from = Math.min(RU, gU), this.to = Math.max(RU, gU)
+    class bu {
+      constructor(uu, Ru, yu) {
+        this.value = "", this.done = !1, this.cursor = new du(uu, Ru > yu ? -1 : 1), this.pos = Ru > yu ? uu.length : 0, this.from = Math.min(Ru, yu), this.to = Math.max(Ru, yu)
       }
-      nextInner(UU, RU) {
-        if (RU < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        UU += Math.max(0, RU < 0 ? this.pos - this.to : this.from - this.pos);
-        let gU = RU < 0 ? this.pos - this.from : this.to - this.pos;
-        UU > gU && (UU = gU), gU -= UU;
+      nextInner(uu, Ru) {
+        if (Ru < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        uu += Math.max(0, Ru < 0 ? this.pos - this.to : this.from - this.pos);
+        let yu = Ru < 0 ? this.pos - this.from : this.to - this.pos;
+        uu > yu && (uu = yu), yu -= uu;
         let {
-          value: tU
-        } = this.cursor.next(UU);
-        return this.pos += (tU.length + UU) * RU, this.value = tU.length <= gU ? tU : RU < 0 ? tU.slice(tU.length - gU) : tU.slice(0, gU), this.done = !this.value, this
+          value: Eu
+        } = this.cursor.next(uu);
+        return this.pos += (Eu.length + uu) * Ru, this.value = Eu.length <= yu ? Eu : Ru < 0 ? Eu.slice(Eu.length - yu) : Eu.slice(0, yu), this.done = !this.value, this
       }
       next() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return UU < 0 ? UU = Math.max(UU, this.from - this.pos) : UU > 0 && (UU = Math.min(UU, this.to - this.pos)), this.nextInner(UU, this.cursor.dir)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return uu < 0 ? uu = Math.max(uu, this.from - this.pos) : uu > 0 && (uu = Math.min(uu, this.to - this.pos)), this.nextInner(uu, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class IU {
-      constructor(UU) {
-        this.inner = UU, this.afterBreak = !0, this.value = "", this.done = !1
+    class Cu {
+      constructor(uu) {
+        this.inner = uu, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: RU,
-            lineBreak: gU,
-            value: tU
-          } = this.inner.next(UU);
-        return RU && this.afterBreak ? (this.value = "", this.afterBreak = !1) : RU ? (this.done = !0, this.value = "") : gU ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = tU, this.afterBreak = !1), this
+            done: Ru,
+            lineBreak: yu,
+            value: Eu
+          } = this.inner.next(uu);
+        return Ru && this.afterBreak ? (this.value = "", this.afterBreak = !1) : Ru ? (this.done = !0, this.value = "") : yu ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = Eu, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (hU.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (pu.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, xU.prototype[Symbol.iterator] = mU.prototype[Symbol.iterator] = IU.prototype[Symbol.iterator] = function() {
+    }, du.prototype[Symbol.iterator] = bu.prototype[Symbol.iterator] = Cu.prototype[Symbol.iterator] = function() {
       return this
     });
-    class JU {
-      constructor(UU, RU, gU, tU) {
-        this.from = UU, this.to = RU, this.number = gU, this.text = tU
+    class ku {
+      constructor(uu, Ru, yu, Eu) {
+        this.from = uu, this.to = Ru, this.number = yu, this.text = Eu
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function wU(UU, RU, gU) {
-      return [RU = Math.max(0, Math.min(UU.length, RU)), Math.max(RU, Math.min(UU.length, gU))]
+    function eu(uu, Ru, yu) {
+      return [Ru = Math.max(0, Math.min(uu.length, Ru)), Math.max(Ru, Math.min(uu.length, yu))]
     }
 
-    function nU(UU, RU) {
-      return qU(UU, RU, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function Au(uu, Ru) {
+      return Nu(uu, Ru, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function bU(UU, RU) {
-      let gU = UU.charCodeAt(RU);
-      if (!((tU = gU) >= 55296 && tU < 56320) || RU + 1 == UU.length) return gU;
-      var tU;
-      let pU = UU.charCodeAt(RU + 1);
-      return function(UU) {
-        return UU >= 56320 && UU < 57344
-      }(pU) ? pU - 56320 + (gU - 55296 << 10) + 65536 : gU
+    function Du(uu, Ru) {
+      let yu = uu.charCodeAt(Ru);
+      if (!((Eu = yu) >= 55296 && Eu < 56320) || Ru + 1 == uu.length) return yu;
+      var Eu;
+      let Ku = uu.charCodeAt(Ru + 1);
+      return function(uu) {
+        return uu >= 56320 && uu < 57344
+      }(Ku) ? Ku - 56320 + (yu - 55296 << 10) + 65536 : yu
     }
 
-    function oU(UU) {
-      return UU <= 65535 ? String.fromCharCode(UU) : (UU -= 65536, String.fromCharCode(55296 + (UU >> 10), 56320 + (1023 & UU)))
+    function Mu(uu) {
+      return uu <= 65535 ? String.fromCharCode(uu) : (uu -= 65536, String.fromCharCode(55296 + (uu >> 10), 56320 + (1023 & uu)))
     }
 
-    function ZU(UU) {
-      return UU < 65536 ? 1 : 2
+    function Iu(uu) {
+      return uu < 65536 ? 1 : 2
     }
-    const aU = /\r\n?|\n/;
-    var YU = function(UU) {
-      return UU[UU.Simple = 0] = "Simple", UU[UU.TrackDel = 1] = "TrackDel", UU[UU.TrackBefore = 2] = "TrackBefore", UU[UU.TrackAfter = 3] = "TrackAfter", UU
-    }(YU || (YU = {}));
-    class BU {
-      constructor(UU) {
-        this.sections = UU
+    const Gu = /\r\n?|\n/;
+    var Uu = function(uu) {
+      return uu[uu.Simple = 0] = "Simple", uu[uu.TrackDel = 1] = "TrackDel", uu[uu.TrackBefore = 2] = "TrackBefore", uu[uu.TrackAfter = 3] = "TrackAfter", uu
+    }(Uu || (Uu = {}));
+    class nu {
+      constructor(uu) {
+        this.sections = uu
       }
       get length() {
-        let UU = 0;
-        for (let RU = 0; RU < this.sections.length; RU += 2) UU += this.sections[RU];
-        return UU
+        let uu = 0;
+        for (let Ru = 0; Ru < this.sections.length; Ru += 2) uu += this.sections[Ru];
+        return uu
       }
       get newLength() {
-        let UU = 0;
-        for (let RU = 0; RU < this.sections.length; RU += 2) {
-          let gU = this.sections[RU + 1];
-          UU += gU < 0 ? this.sections[RU] : gU
+        let uu = 0;
+        for (let Ru = 0; Ru < this.sections.length; Ru += 2) {
+          let yu = this.sections[Ru + 1];
+          uu += yu < 0 ? this.sections[Ru] : yu
         }
-        return UU
+        return uu
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(UU) {
-        for (let RU = 0, gU = 0, tU = 0; RU < this.sections.length;) {
-          let pU = this.sections[RU++],
-            EU = this.sections[RU++];
-          EU < 0 ? (UU(gU, tU, pU), tU += pU) : tU += EU, gU += pU
+      iterGaps(uu) {
+        for (let Ru = 0, yu = 0, Eu = 0; Ru < this.sections.length;) {
+          let Ku = this.sections[Ru++],
+            Qu = this.sections[Ru++];
+          Qu < 0 ? (uu(yu, Eu, Ku), Eu += Ku) : Eu += Qu, yu += Ku
         }
       }
-      iterChangedRanges(UU) {
-        vU(this, UU, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(uu) {
+        gu(this, uu, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let UU = [];
-        for (let RU = 0; RU < this.sections.length;) {
-          let gU = this.sections[RU++],
-            tU = this.sections[RU++];
-          tU < 0 ? UU.push(gU, tU) : UU.push(tU, gU)
+        let uu = [];
+        for (let Ru = 0; Ru < this.sections.length;) {
+          let yu = this.sections[Ru++],
+            Eu = this.sections[Ru++];
+          Eu < 0 ? uu.push(yu, Eu) : uu.push(Eu, yu)
         }
-        return new BU(UU)
+        return new nu(uu)
       }
-      composeDesc(UU) {
-        return this.empty ? UU : UU.empty ? this : HU(this, UU)
+      composeDesc(uu) {
+        return this.empty ? uu : uu.empty ? this : Lu(this, uu)
       }
-      mapDesc(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return UU.empty ? this : dU(this, UU, RU)
+      mapDesc(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return uu.empty ? this : cu(this, uu, Ru)
       }
-      mapPos(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : YU.Simple,
-          tU = 0,
-          pU = 0;
-        for (let EU = 0; EU < this.sections.length;) {
-          let PU = this.sections[EU++],
-            TU = this.sections[EU++],
-            qU = tU + PU;
-          if (TU < 0) {
-            if (qU > UU) return pU + (UU - tU);
-            pU += PU
+      mapPos(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Uu.Simple,
+          Eu = 0,
+          Ku = 0;
+        for (let Qu = 0; Qu < this.sections.length;) {
+          let mu = this.sections[Qu++],
+            Ju = this.sections[Qu++],
+            Nu = Eu + mu;
+          if (Ju < 0) {
+            if (Nu > uu) return Ku + (uu - Eu);
+            Ku += mu
           } else {
-            if (gU != YU.Simple && qU >= UU && (gU == YU.TrackDel && tU < UU && qU > UU || gU == YU.TrackBefore && tU < UU || gU == YU.TrackAfter && qU > UU)) return null;
-            if (qU > UU || qU == UU && RU < 0 && !PU) return UU == tU || RU < 0 ? pU : pU + TU;
-            pU += TU
+            if (yu != Uu.Simple && Nu >= uu && (yu == Uu.TrackDel && Eu < uu && Nu > uu || yu == Uu.TrackBefore && Eu < uu || yu == Uu.TrackAfter && Nu > uu)) return null;
+            if (Nu > uu || Nu == uu && Ru < 0 && !mu) return uu == Eu || Ru < 0 ? Ku : Ku + Ju;
+            Ku += Ju
           }
-          tU = qU
+          Eu = Nu
         }
-        if (UU > tU) throw new RangeError(`Position ${UU} is out of range for changeset of length ${tU}`);
-        return pU
+        if (uu > Eu) throw new RangeError(`Position ${uu} is out of range for changeset of length ${Eu}`);
+        return Ku
       }
-      touchesRange(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU;
-        for (let gU = 0, tU = 0; gU < this.sections.length && tU <= RU;) {
-          let pU = tU + this.sections[gU++];
-          if (this.sections[gU++] >= 0 && tU <= RU && pU >= UU) return !(tU < UU && pU > RU) || "cover";
-          tU = pU
+      touchesRange(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
+        for (let yu = 0, Eu = 0; yu < this.sections.length && Eu <= Ru;) {
+          let Ku = Eu + this.sections[yu++];
+          if (this.sections[yu++] >= 0 && Eu <= Ru && Ku >= uu) return !(Eu < uu && Ku > Ru) || "cover";
+          Eu = Ku
         }
         return !1
       }
       toString() {
-        let UU = "";
-        for (let RU = 0; RU < this.sections.length;) {
-          let gU = this.sections[RU++],
-            tU = this.sections[RU++];
-          UU += (UU ? " " : "") + gU + (tU >= 0 ? ":" + tU : "")
+        let uu = "";
+        for (let Ru = 0; Ru < this.sections.length;) {
+          let yu = this.sections[Ru++],
+            Eu = this.sections[Ru++];
+          uu += (uu ? " " : "") + yu + (Eu >= 0 ? ":" + Eu : "")
         }
-        return UU
+        return uu
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(UU) {
-        if (!Array.isArray(UU) || UU.length % 2 || UU.some((UU => "number" != typeof UU))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new BU(UU)
+      static fromJSON(uu) {
+        if (!Array.isArray(uu) || uu.length % 2 || uu.some((uu => "number" != typeof uu))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new nu(uu)
       }
-      static create(UU) {
-        return new BU(UU)
+      static create(uu) {
+        return new nu(uu)
       }
     }
-    class VU extends BU {
-      constructor(UU, RU) {
-        super(UU), this.inserted = RU
+    class su extends nu {
+      constructor(uu, Ru) {
+        super(uu), this.inserted = Ru
       }
-      apply(UU) {
-        if (this.length != UU.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return vU(this, ((RU, gU, tU, pU, EU) => UU = UU.replace(tU, tU + (gU - RU), EU)), !1), UU
+      apply(uu) {
+        if (this.length != uu.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return gu(this, ((Ru, yu, Eu, Ku, Qu) => uu = uu.replace(Eu, Eu + (yu - Ru), Qu)), !1), uu
       }
-      mapDesc(UU) {
-        return dU(this, UU, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(uu) {
+        return cu(this, uu, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(UU) {
-        let RU = this.sections.slice(),
-          gU = [];
-        for (let tU = 0, pU = 0; tU < RU.length; tU += 2) {
-          let EU = RU[tU],
-            PU = RU[tU + 1];
-          if (PU >= 0) {
-            RU[tU] = PU, RU[tU + 1] = EU;
-            let TU = tU >> 1;
-            for (; gU.length < TU;) gU.push(hU.empty);
-            gU.push(EU ? UU.slice(pU, pU + EU) : hU.empty)
+      invert(uu) {
+        let Ru = this.sections.slice(),
+          yu = [];
+        for (let Eu = 0, Ku = 0; Eu < Ru.length; Eu += 2) {
+          let Qu = Ru[Eu],
+            mu = Ru[Eu + 1];
+          if (mu >= 0) {
+            Ru[Eu] = mu, Ru[Eu + 1] = Qu;
+            let Ju = Eu >> 1;
+            for (; yu.length < Ju;) yu.push(pu.empty);
+            yu.push(Qu ? uu.slice(Ku, Ku + Qu) : pu.empty)
           }
-          pU += EU
+          Ku += Qu
         }
-        return new VU(RU, gU)
+        return new su(Ru, yu)
       }
-      compose(UU) {
-        return this.empty ? UU : UU.empty ? this : HU(this, UU, !0)
+      compose(uu) {
+        return this.empty ? uu : uu.empty ? this : Lu(this, uu, !0)
       }
-      map(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return UU.empty ? this : dU(this, UU, RU, !0)
+      map(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return uu.empty ? this : cu(this, uu, Ru, !0)
       }
-      iterChanges(UU) {
-        vU(this, UU, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(uu) {
+        gu(this, uu, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return BU.create(this.sections)
+        return nu.create(this.sections)
       }
-      filter(UU) {
-        let RU = [],
-          gU = [],
-          tU = [],
-          pU = new SU(this);
-        UU: for (let EU = 0, PU = 0;;) {
-          let TU = EU == UU.length ? 1e9 : UU[EU++];
-          for (; PU < TU || PU == TU && 0 == pU.len;) {
-            if (pU.done) break UU;
-            let UU = Math.min(pU.len, TU - PU);
-            rU(tU, UU, -1);
-            let EU = -1 == pU.ins ? -1 : 0 == pU.off ? pU.ins : 0;
-            rU(RU, UU, EU), EU > 0 && XU(gU, RU, pU.text), pU.forward(UU), PU += UU
+      filter(uu) {
+        let Ru = [],
+          yu = [],
+          Eu = [],
+          Ku = new zu(this);
+        uu: for (let Qu = 0, mu = 0;;) {
+          let Ju = Qu == uu.length ? 1e9 : uu[Qu++];
+          for (; mu < Ju || mu == Ju && 0 == Ku.len;) {
+            if (Ku.done) break uu;
+            let uu = Math.min(Ku.len, Ju - mu);
+            tu(Eu, uu, -1);
+            let Qu = -1 == Ku.ins ? -1 : 0 == Ku.off ? Ku.ins : 0;
+            tu(Ru, uu, Qu), Qu > 0 && lu(yu, Ru, Ku.text), Ku.forward(uu), mu += uu
           }
-          let qU = UU[EU++];
-          for (; PU < qU;) {
-            if (pU.done) break UU;
-            let UU = Math.min(pU.len, qU - PU);
-            rU(RU, UU, -1), rU(tU, UU, -1 == pU.ins ? -1 : 0 == pU.off ? pU.ins : 0), pU.forward(UU), PU += UU
+          let Nu = uu[Qu++];
+          for (; mu < Nu;) {
+            if (Ku.done) break uu;
+            let uu = Math.min(Ku.len, Nu - mu);
+            tu(Ru, uu, -1), tu(Eu, uu, -1 == Ku.ins ? -1 : 0 == Ku.off ? Ku.ins : 0), Ku.forward(uu), mu += uu
           }
         }
         return {
-          changes: new VU(RU, gU),
-          filtered: BU.create(tU)
+          changes: new su(Ru, yu),
+          filtered: nu.create(Eu)
         }
       }
       toJSON() {
-        let UU = [];
-        for (let RU = 0; RU < this.sections.length; RU += 2) {
-          let gU = this.sections[RU],
-            tU = this.sections[RU + 1];
-          tU < 0 ? UU.push(gU) : 0 == tU ? UU.push([gU]) : UU.push([gU].concat(this.inserted[RU >> 1].toJSON()))
+        let uu = [];
+        for (let Ru = 0; Ru < this.sections.length; Ru += 2) {
+          let yu = this.sections[Ru],
+            Eu = this.sections[Ru + 1];
+          Eu < 0 ? uu.push(yu) : 0 == Eu ? uu.push([yu]) : uu.push([yu].concat(this.inserted[Ru >> 1].toJSON()))
         }
-        return UU
+        return uu
       }
-      static of (UU, RU, gU) {
-        let tU = [],
-          pU = [],
-          EU = 0,
-          PU = null;
+      static of (uu, Ru, yu) {
+        let Eu = [],
+          Ku = [],
+          Qu = 0,
+          mu = null;
 
-        function TU() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !tU.length) return;
-          EU < RU && rU(tU, RU - EU, -1);
-          let UU = new VU(tU, pU);
-          PU = PU ? PU.compose(UU.map(PU)) : UU, tU = [], pU = [], EU = 0
+        function Ju() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !Eu.length) return;
+          Qu < Ru && tu(Eu, Ru - Qu, -1);
+          let uu = new su(Eu, Ku);
+          mu = mu ? mu.compose(uu.map(mu)) : uu, Eu = [], Ku = [], Qu = 0
         }
-        return function UU(qU) {
-          if (Array.isArray(qU))
-            for (let RU of qU) UU(RU);
-          else if (qU instanceof VU) {
-            if (qU.length != RU) throw new RangeError(`Mismatched change set length (got ${qU.length}, expected ${RU})`);
-            TU(), PU = PU ? PU.compose(qU.map(PU)) : qU
+        return function uu(Nu) {
+          if (Array.isArray(Nu))
+            for (let Ru of Nu) uu(Ru);
+          else if (Nu instanceof su) {
+            if (Nu.length != Ru) throw new RangeError(`Mismatched change set length (got ${Nu.length}, expected ${Ru})`);
+            Ju(), mu = mu ? mu.compose(Nu.map(mu)) : Nu
           } else {
             let {
-              from: UU,
-              to: PU = UU,
-              insert: KU
-            } = qU;
-            if (UU > PU || UU < 0 || PU > RU) throw new RangeError(`Invalid change range ${UU} to ${PU} (in doc of length ${RU})`);
-            let cU = KU ? "string" == typeof KU ? hU.of(KU.split(gU || aU)) : KU : hU.empty,
-              GU = cU.length;
-            if (UU == PU && 0 == GU) return;
-            UU < EU && TU(), UU > EU && rU(tU, UU - EU, -1), rU(tU, PU - UU, GU), XU(pU, tU, cU), EU = PU
+              from: uu,
+              to: mu = uu,
+              insert: Xu
+            } = Nu;
+            if (uu > mu || uu < 0 || mu > Ru) throw new RangeError(`Invalid change range ${uu} to ${mu} (in doc of length ${Ru})`);
+            let Vu = Xu ? "string" == typeof Xu ? pu.of(Xu.split(yu || Gu)) : Xu : pu.empty,
+              ru = Vu.length;
+            if (uu == mu && 0 == ru) return;
+            uu < Qu && Ju(), uu > Qu && tu(Eu, uu - Qu, -1), tu(Eu, mu - uu, ru), lu(Ku, Eu, Vu), Qu = mu
           }
-        }(UU), TU(!PU), PU
+        }(uu), Ju(!mu), mu
       }
-      static empty(UU) {
-        return new VU(UU ? [UU, -1] : [], [])
+      static empty(uu) {
+        return new su(uu ? [uu, -1] : [], [])
       }
-      static fromJSON(UU) {
-        if (!Array.isArray(UU)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let RU = [],
-          gU = [];
-        for (let tU = 0; tU < UU.length; tU++) {
-          let pU = UU[tU];
-          if ("number" == typeof pU) RU.push(pU, -1);
+      static fromJSON(uu) {
+        if (!Array.isArray(uu)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let Ru = [],
+          yu = [];
+        for (let Eu = 0; Eu < uu.length; Eu++) {
+          let Ku = uu[Eu];
+          if ("number" == typeof Ku) Ru.push(Ku, -1);
           else {
-            if (!Array.isArray(pU) || "number" != typeof pU[0] || pU.some(((UU, RU) => RU && "string" != typeof UU))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == pU.length) RU.push(pU[0], 0);
+            if (!Array.isArray(Ku) || "number" != typeof Ku[0] || Ku.some(((uu, Ru) => Ru && "string" != typeof uu))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == Ku.length) Ru.push(Ku[0], 0);
             else {
-              for (; gU.length < tU;) gU.push(hU.empty);
-              gU[tU] = hU.of(pU.slice(1)), RU.push(pU[0], gU[tU].length)
+              for (; yu.length < Eu;) yu.push(pu.empty);
+              yu[Eu] = pu.of(Ku.slice(1)), Ru.push(Ku[0], yu[Eu].length)
             }
           }
         }
-        return new VU(RU, gU)
+        return new su(Ru, yu)
       }
-      static createSet(UU, RU) {
-        return new VU(UU, RU)
+      static createSet(uu, Ru) {
+        return new su(uu, Ru)
       }
     }
 
-    function rU(UU, RU, gU) {
-      let tU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == RU && gU <= 0) return;
-      let pU = UU.length - 2;
-      pU >= 0 && gU <= 0 && gU == UU[pU + 1] ? UU[pU] += RU : pU >= 0 && 0 == RU && 0 == UU[pU] ? UU[pU + 1] += gU : tU ? (UU[pU] += RU, UU[pU + 1] += gU) : UU.push(RU, gU)
+    function tu(uu, Ru, yu) {
+      let Eu = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == Ru && yu <= 0) return;
+      let Ku = uu.length - 2;
+      Ku >= 0 && yu <= 0 && yu == uu[Ku + 1] ? uu[Ku] += Ru : Ku >= 0 && 0 == Ru && 0 == uu[Ku] ? uu[Ku + 1] += yu : Eu ? (uu[Ku] += Ru, uu[Ku + 1] += yu) : uu.push(Ru, yu)
     }
 
-    function XU(UU, RU, gU) {
-      if (0 == gU.length) return;
-      let tU = RU.length - 2 >> 1;
-      if (tU < UU.length) UU[UU.length - 1] = UU[UU.length - 1].append(gU);
+    function lu(uu, Ru, yu) {
+      if (0 == yu.length) return;
+      let Eu = Ru.length - 2 >> 1;
+      if (Eu < uu.length) uu[uu.length - 1] = uu[uu.length - 1].append(yu);
       else {
-        for (; UU.length < tU;) UU.push(hU.empty);
-        UU.push(gU)
+        for (; uu.length < Eu;) uu.push(pu.empty);
+        uu.push(yu)
       }
     }
 
-    function vU(UU, RU, gU) {
-      let tU = UU.inserted;
-      for (let pU = 0, EU = 0, PU = 0; PU < UU.sections.length;) {
-        let TU = UU.sections[PU++],
-          qU = UU.sections[PU++];
-        if (qU < 0) pU += TU, EU += TU;
+    function gu(uu, Ru, yu) {
+      let Eu = uu.inserted;
+      for (let Ku = 0, Qu = 0, mu = 0; mu < uu.sections.length;) {
+        let Ju = uu.sections[mu++],
+          Nu = uu.sections[mu++];
+        if (Nu < 0) Ku += Ju, Qu += Ju;
         else {
-          let KU = pU,
-            cU = EU,
-            GU = hU.empty;
-          for (; KU += TU, cU += qU, qU && tU && (GU = GU.append(tU[PU - 2 >> 1])), !(gU || PU == UU.sections.length || UU.sections[PU + 1] < 0);) TU = UU.sections[PU++], qU = UU.sections[PU++];
-          RU(pU, KU, EU, cU, GU), pU = KU, EU = cU
+          let Xu = Ku,
+            Vu = Qu,
+            ru = pu.empty;
+          for (; Xu += Ju, Vu += Nu, Nu && Eu && (ru = ru.append(Eu[mu - 2 >> 1])), !(yu || mu == uu.sections.length || uu.sections[mu + 1] < 0);) Ju = uu.sections[mu++], Nu = uu.sections[mu++];
+          Ru(Ku, Xu, Qu, Vu, ru), Ku = Xu, Qu = Vu
         }
       }
     }
 
-    function dU(UU, RU, gU) {
-      let tU = [],
-        pU = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        EU = new SU(UU),
-        PU = new SU(RU),
-        TU = 0;
-      for (let qU = -1;;) {
-        if (++TU > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (EU.done && PU.len || PU.done && EU.len) throw new Error("Mismatched change set lengths");
-        if (-1 == EU.ins && -1 == PU.ins) {
-          let UU = Math.min(EU.len, PU.len);
-          rU(tU, UU, -1), EU.forward(UU), PU.forward(UU)
-        } else if (PU.ins >= 0 && (EU.ins < 0 || qU == EU.i || 0 == EU.off && (PU.len < EU.len || PU.len == EU.len && !gU))) {
-          let UU = PU.len;
-          for (rU(tU, PU.ins, -1); UU;) {
-            if (++TU > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let RU = Math.min(EU.len, UU);
-            EU.ins >= 0 && qU < EU.i && EU.len <= RU && (rU(tU, 0, EU.ins), pU && XU(pU, tU, EU.text), qU = EU.i), EU.forward(RU), UU -= RU
+    function cu(uu, Ru, yu) {
+      let Eu = [],
+        Ku = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        Qu = new zu(uu),
+        mu = new zu(Ru),
+        Ju = 0;
+      for (let Nu = -1;;) {
+        if (++Ju > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (Qu.done && mu.len || mu.done && Qu.len) throw new Error("Mismatched change set lengths");
+        if (-1 == Qu.ins && -1 == mu.ins) {
+          let uu = Math.min(Qu.len, mu.len);
+          tu(Eu, uu, -1), Qu.forward(uu), mu.forward(uu)
+        } else if (mu.ins >= 0 && (Qu.ins < 0 || Nu == Qu.i || 0 == Qu.off && (mu.len < Qu.len || mu.len == Qu.len && !yu))) {
+          let uu = mu.len;
+          for (tu(Eu, mu.ins, -1); uu;) {
+            if (++Ju > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let Ru = Math.min(Qu.len, uu);
+            Qu.ins >= 0 && Nu < Qu.i && Qu.len <= Ru && (tu(Eu, 0, Qu.ins), Ku && lu(Ku, Eu, Qu.text), Nu = Qu.i), Qu.forward(Ru), uu -= Ru
           }
-          PU.next()
+          mu.next()
         } else {
-          if (!(EU.ins >= 0)) {
-            if (EU.done && PU.done) return pU ? VU.createSet(tU, pU) : BU.create(tU);
+          if (!(Qu.ins >= 0)) {
+            if (Qu.done && mu.done) return Ku ? su.createSet(Eu, Ku) : nu.create(Eu);
             throw new Error("Mismatched change set lengths")
           } {
-            let UU = 0,
-              RU = EU.len;
-            for (; RU;) {
-              if (++TU > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == PU.ins) {
-                let gU = Math.min(RU, PU.len);
-                UU += gU, RU -= gU, PU.forward(gU)
+            let uu = 0,
+              Ru = Qu.len;
+            for (; Ru;) {
+              if (++Ju > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == mu.ins) {
+                let yu = Math.min(Ru, mu.len);
+                uu += yu, Ru -= yu, mu.forward(yu)
               } else {
-                if (!(0 == PU.ins && PU.len < RU)) break;
-                RU -= PU.len, PU.next()
+                if (!(0 == mu.ins && mu.len < Ru)) break;
+                Ru -= mu.len, mu.next()
               }
             }
-            rU(tU, UU, qU < EU.i ? EU.ins : 0), pU && qU < EU.i && XU(pU, tU, EU.text), qU = EU.i, EU.forward(EU.len - RU)
+            tu(Eu, uu, Nu < Qu.i ? Qu.ins : 0), Ku && Nu < Qu.i && lu(Ku, Eu, Qu.text), Nu = Qu.i, Qu.forward(Qu.len - Ru)
           }
         }
       }
     }
 
-    function HU(UU, RU) {
-      let gU = [],
-        tU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        pU = new SU(UU),
-        EU = new SU(RU),
-        PU = 0;
-      for (let TU = !1;;) {
-        if (++PU > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (pU.done && EU.done) return tU ? VU.createSet(gU, tU) : BU.create(gU);
-        if (0 == pU.ins) rU(gU, pU.len, 0, TU), pU.next();
-        else if (0 != EU.len || EU.done) {
-          if (pU.done || EU.done) throw new Error("Mismatched change set lengths");
+    function Lu(uu, Ru) {
+      let yu = [],
+        Eu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        Ku = new zu(uu),
+        Qu = new zu(Ru),
+        mu = 0;
+      for (let Ju = !1;;) {
+        if (++mu > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (Ku.done && Qu.done) return Eu ? su.createSet(yu, Eu) : nu.create(yu);
+        if (0 == Ku.ins) tu(yu, Ku.len, 0, Ju), Ku.next();
+        else if (0 != Qu.len || Qu.done) {
+          if (Ku.done || Qu.done) throw new Error("Mismatched change set lengths");
           {
-            let UU = Math.min(pU.len2, EU.len),
-              RU = gU.length;
-            if (-1 == pU.ins) {
-              let RU = -1 == EU.ins ? -1 : EU.off ? 0 : EU.ins;
-              rU(gU, UU, RU, TU), tU && RU && XU(tU, gU, EU.text)
-            } else - 1 == EU.ins ? (rU(gU, pU.off ? 0 : pU.len, UU, TU), tU && XU(tU, gU, pU.textBit(UU))) : (rU(gU, pU.off ? 0 : pU.len, EU.off ? 0 : EU.ins, TU), tU && !EU.off && XU(tU, gU, EU.text));
-            TU = (pU.ins > UU || EU.ins >= 0 && EU.len > UU) && (TU || gU.length > RU), pU.forward2(UU), EU.forward(UU)
+            let uu = Math.min(Ku.len2, Qu.len),
+              Ru = yu.length;
+            if (-1 == Ku.ins) {
+              let Ru = -1 == Qu.ins ? -1 : Qu.off ? 0 : Qu.ins;
+              tu(yu, uu, Ru, Ju), Eu && Ru && lu(Eu, yu, Qu.text)
+            } else - 1 == Qu.ins ? (tu(yu, Ku.off ? 0 : Ku.len, uu, Ju), Eu && lu(Eu, yu, Ku.textBit(uu))) : (tu(yu, Ku.off ? 0 : Ku.len, Qu.off ? 0 : Qu.ins, Ju), Eu && !Qu.off && lu(Eu, yu, Qu.text));
+            Ju = (Ku.ins > uu || Qu.ins >= 0 && Qu.len > uu) && (Ju || yu.length > Ru), Ku.forward2(uu), Qu.forward(uu)
           }
-        } else rU(gU, 0, EU.ins, TU), tU && XU(tU, gU, EU.text), EU.next()
+        } else tu(yu, 0, Qu.ins, Ju), Eu && lu(Eu, yu, Qu.text), Qu.next()
       }
     }
-    class SU {
-      constructor(UU) {
-        this.set = UU, this.i = 0, this.next()
+    class zu {
+      constructor(uu) {
+        this.set = uu, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: UU
+          sections: uu
         } = this.set;
-        this.i < UU.length ? (this.len = UU[this.i++], this.ins = UU[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < uu.length ? (this.len = uu[this.i++], this.ins = uu[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: UU
-        } = this.set, RU = this.i - 2 >> 1;
-        return RU >= UU.length ? hU.empty : UU[RU]
+          inserted: uu
+        } = this.set, Ru = this.i - 2 >> 1;
+        return Ru >= uu.length ? pu.empty : uu[Ru]
       }
-      textBit(UU) {
+      textBit(uu) {
         let {
-          inserted: RU
-        } = this.set, gU = this.i - 2 >> 1;
-        return gU >= RU.length && !UU ? hU.empty : RU[gU].slice(this.off, null == UU ? void 0 : this.off + UU)
+          inserted: Ru
+        } = this.set, yu = this.i - 2 >> 1;
+        return yu >= Ru.length && !uu ? pu.empty : Ru[yu].slice(this.off, null == uu ? void 0 : this.off + uu)
       }
-      forward(UU) {
-        UU == this.len ? this.next() : (this.len -= UU, this.off += UU)
+      forward(uu) {
+        uu == this.len ? this.next() : (this.len -= uu, this.off += uu)
       }
-      forward2(UU) {
-        -1 == this.ins ? this.forward(UU) : UU == this.ins ? this.next() : (this.ins -= UU, this.off += UU)
+      forward2(uu) {
+        -1 == this.ins ? this.forward(uu) : uu == this.ins ? this.next() : (this.ins -= uu, this.off += uu)
       }
     }
-    class sU {
-      constructor(UU, RU, gU) {
-        this.from = UU, this.to = RU, this.flags = gU
+    class Fu {
+      constructor(uu, Ru, yu) {
+        this.from = uu, this.to = Ru, this.flags = yu
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let UU = 7 & this.flags;
-        return 7 == UU ? null : UU
+        let uu = 7 & this.flags;
+        return 7 == uu ? null : uu
       }
       get goalColumn() {
-        let UU = this.flags >> 6;
-        return 16777215 == UU ? void 0 : UU
+        let uu = this.flags >> 6;
+        return 16777215 == uu ? void 0 : uu
       }
-      map(UU) {
-        let RU, gU, tU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? RU = gU = UU.mapPos(this.from, tU) : (RU = UU.mapPos(this.from, 1), gU = UU.mapPos(this.to, -1)), RU == this.from && gU == this.to ? this : new sU(RU, gU, this.flags)
+      map(uu) {
+        let Ru, yu, Eu = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? Ru = yu = uu.mapPos(this.from, Eu) : (Ru = uu.mapPos(this.from, 1), yu = uu.mapPos(this.to, -1)), Ru == this.from && yu == this.to ? this : new Fu(Ru, yu, this.flags)
       }
-      extend(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (UU <= this.anchor && RU >= this.anchor) return yU.range(UU, RU, void 0, void 0, gU);
-        let tU = Math.abs(UU - this.anchor) > Math.abs(RU - this.anchor) ? UU : RU;
-        return yU.range(this.anchor, tU, void 0, void 0, gU)
+      extend(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (uu <= this.anchor && Ru >= this.anchor) return wu.range(uu, Ru, void 0, void 0, yu);
+        let Eu = Math.abs(uu - this.anchor) > Math.abs(Ru - this.anchor) ? uu : Ru;
+        return wu.range(this.anchor, Eu, void 0, void 0, yu)
       }
-      eq(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == UU.anchor && this.head == UU.head && this.goalColumn == UU.goalColumn && (!RU || !this.empty || this.assoc == UU.assoc)
+      eq(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == uu.anchor && this.head == uu.head && this.goalColumn == uu.goalColumn && (!Ru || !this.empty || this.assoc == uu.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(UU) {
-        if (!UU || "number" != typeof UU.anchor || "number" != typeof UU.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return yU.range(UU.anchor, UU.head)
+      static fromJSON(uu) {
+        if (!uu || "number" != typeof uu.anchor || "number" != typeof uu.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return wu.range(uu.anchor, uu.head)
       }
-      static create(UU, RU, gU) {
-        return new sU(UU, RU, gU)
+      static create(uu, Ru, yu) {
+        return new Fu(uu, Ru, yu)
       }
     }
-    class yU {
-      constructor(UU, RU) {
-        this.hu = UU, this.mainIndex = RU
+    class wu {
+      constructor(uu, Ru) {
+        this.yT = uu, this.mainIndex = Ru
       }
-      map(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return UU.empty ? this : yU.create(this.hu.map((gU => gU.map(UU, RU))), this.mainIndex)
+      map(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return uu.empty ? this : wu.create(this.yT.map((yu => yu.map(uu, Ru))), this.mainIndex)
       }
-      eq(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.hu.length != UU.hu.length || this.mainIndex != UU.mainIndex) return !1;
-        for (let gU = 0; gU < this.hu.length; gU++)
-          if (!this.hu[gU].eq(UU.hu[gU], RU)) return !1;
+      eq(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.yT.length != uu.yT.length || this.mainIndex != uu.mainIndex) return !1;
+        for (let yu = 0; yu < this.yT.length; yu++)
+          if (!this.yT[yu].eq(uu.yT[yu], Ru)) return !1;
         return !0
       }
       get main() {
-        return this.hu[this.mainIndex]
+        return this.yT[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.hu.length ? this : new yU([this.main], 0)
+        return 1 == this.yT.length ? this : new wu([this.main], 0)
       }
-      addRange(UU) {
-        let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return yU.create([UU].concat(this.hu), RU ? 0 : this.mainIndex + 1)
+      addRange(uu) {
+        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return wu.create([uu].concat(this.yT), Ru ? 0 : this.mainIndex + 1)
       }
-      replaceRange(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          gU = this.hu.slice();
-        return gU[RU] = UU, yU.create(gU, this.mainIndex)
+      replaceRange(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          yu = this.yT.slice();
+        return yu[Ru] = uu, wu.create(yu, this.mainIndex)
       }
       toJSON() {
         return {
-          hu: this.hu.map((UU => UU.toJSON())),
+          yT: this.yT.map((uu => uu.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(UU) {
-        if (!UU || !Array.isArray(UU.hu) || "number" != typeof UU.main || UU.main >= UU.hu.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new yU(UU.hu.map((UU => sU.fromJSON(UU))), UU.main)
+      static fromJSON(uu) {
+        if (!uu || !Array.isArray(uu.yT) || "number" != typeof uu.main || uu.main >= uu.yT.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new wu(uu.yT.map((uu => Fu.fromJSON(uu))), uu.main)
       }
-      static single(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU;
-        return new yU([yU.range(UU, RU)], 0)
+      static single(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
+        return new wu([wu.range(uu, Ru)], 0)
       }
-      static create(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == UU.length) throw new RangeError("A selection needs at least one range");
-        for (let gU = 0, tU = 0; tU < UU.length; tU++) {
-          let pU = UU[tU];
-          if (pU.empty ? pU.from <= gU : pU.from < gU) return yU.normalized(UU.slice(), RU);
-          gU = pU.to
+      static create(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == uu.length) throw new RangeError("A selection needs at least one range");
+        for (let yu = 0, Eu = 0; Eu < uu.length; Eu++) {
+          let Ku = uu[Eu];
+          if (Ku.empty ? Ku.from <= yu : Ku.from < yu) return wu.normalized(uu.slice(), Ru);
+          yu = Ku.to
         }
-        return new yU(UU, RU)
+        return new wu(uu, Ru)
       }
-      static cursor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0,
-          tU = arguments.length > 3 ? arguments[3] : void 0;
-        return sU.create(UU, UU, (0 == RU ? 0 : RU < 0 ? 8 : 16) | (null == gU ? 7 : Math.min(6, gU)) | (null !== tU && void 0 !== tU ? tU : 16777215) << 6)
+      static cursor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0,
+          Eu = arguments.length > 3 ? arguments[3] : void 0;
+        return Fu.create(uu, uu, (0 == Ru ? 0 : Ru < 0 ? 8 : 16) | (null == yu ? 7 : Math.min(6, yu)) | (null !== Eu && void 0 !== Eu ? Eu : 16777215) << 6)
       }
-      static range(UU, RU, gU, tU, pU) {
-        let EU = (null !== gU && void 0 !== gU ? gU : 16777215) << 6 | (null == tU ? 7 : Math.min(6, tU));
-        return pU || UU == RU || (pU = RU < UU ? 1 : -1), RU < UU ? sU.create(RU, UU, 48 | EU) : sU.create(UU, RU, (pU ? pU < 0 ? 8 : 16 : 0) | EU)
+      static range(uu, Ru, yu, Eu, Ku) {
+        let Qu = (null !== yu && void 0 !== yu ? yu : 16777215) << 6 | (null == Eu ? 7 : Math.min(6, Eu));
+        return Ku || uu == Ru || (Ku = Ru < uu ? 1 : -1), Ru < uu ? Fu.create(Ru, uu, 48 | Qu) : Fu.create(uu, Ru, (Ku ? Ku < 0 ? 8 : 16 : 0) | Qu)
       }
-      static normalized(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = UU[RU];
-        UU.sort(((UU, RU) => UU.from - RU.from)), RU = UU.indexOf(gU);
-        for (let tU = 1; tU < UU.length; tU++) {
-          let gU = UU[tU],
-            pU = UU[tU - 1];
-          if (gU.empty ? gU.from <= pU.to : gU.from < pU.to) {
-            let EU = pU.from,
-              PU = Math.max(gU.to, pU.to);
-            tU <= RU && RU--, UU.splice(--tU, 2, gU.anchor > gU.head ? yU.range(PU, EU) : yU.range(EU, PU))
+      static normalized(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = uu[Ru];
+        uu.sort(((uu, Ru) => uu.from - Ru.from)), Ru = uu.indexOf(yu);
+        for (let Eu = 1; Eu < uu.length; Eu++) {
+          let yu = uu[Eu],
+            Ku = uu[Eu - 1];
+          if (yu.empty ? yu.from <= Ku.to : yu.from < Ku.to) {
+            let Qu = Ku.from,
+              mu = Math.max(yu.to, Ku.to);
+            Eu <= Ru && Ru--, uu.splice(--Eu, 2, yu.anchor > yu.head ? wu.range(mu, Qu) : wu.range(Qu, mu))
           }
         }
-        return new yU(UU, RU)
+        return new wu(uu, Ru)
       }
     }
 
-    function kU(UU, RU) {
-      for (let gU of UU.hu)
-        if (gU.to > RU) throw new RangeError("Selection points outside of document")
+    function Zu(uu, Ru) {
+      for (let yu of uu.yT)
+        if (yu.to > Ru) throw new RangeError("Selection points outside of document")
     }
-    let FU = 0;
-    class iU {
-      constructor(UU, RU, gU, tU, pU) {
-        this.combine = UU, this.compareInput = RU, this.compare = gU, this.isStatic = tU, this.id = FU++, this.default = UU([]), this.extensions = "function" == typeof pU ? pU(this) : pU
+    let hu = 0;
+    class Pu {
+      constructor(uu, Ru, yu, Eu, Ku) {
+        this.combine = uu, this.compareInput = Ru, this.compare = yu, this.isStatic = Eu, this.id = hu++, this.default = uu([]), this.extensions = "function" == typeof Ku ? Ku(this) : Ku
       }
       get reader() {
         return this
       }
       static define() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new iU(UU.combine || (UU => UU), UU.compareInput || ((UU, RU) => UU === RU), UU.compare || (UU.combine ? (UU, RU) => UU === RU : AU), !!UU.static, UU.enables)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new Pu(uu.combine || (uu => uu), uu.compareInput || ((uu, Ru) => uu === Ru), uu.compare || (uu.combine ? (uu, Ru) => uu === Ru : iu), !!uu.static, uu.enables)
       }
-      of(UU) {
-        return new zU([], this, 0, UU)
+      of(uu) {
+        return new Yu([], this, 0, uu)
       }
-      compute(UU, RU) {
+      compute(uu, Ru) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new zU(UU, this, 1, RU)
+        return new Yu(uu, this, 1, Ru)
       }
-      computeN(UU, RU) {
+      computeN(uu, Ru) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new zU(UU, this, 2, RU)
+        return new Yu(uu, this, 2, Ru)
       }
-      from(UU, RU) {
-        return RU || (RU = UU => UU), this.compute([UU], (gU => RU(gU.field(UU))))
+      from(uu, Ru) {
+        return Ru || (Ru = uu => uu), this.compute([uu], (yu => Ru(yu.field(uu))))
       }
     }
 
-    function AU(UU, RU) {
-      return UU == RU || UU.length == RU.length && UU.every(((UU, gU) => UU === RU[gU]))
+    function iu(uu, Ru) {
+      return uu == Ru || uu.length == Ru.length && uu.every(((uu, yu) => uu === Ru[yu]))
     }
-    class zU {
-      constructor(UU, RU, gU, tU) {
-        this.dependencies = UU, this.facet = RU, this.type = gU, this.value = tU, this.id = FU++
+    class Yu {
+      constructor(uu, Ru, yu, Eu) {
+        this.dependencies = uu, this.facet = Ru, this.type = yu, this.value = Eu, this.id = hu++
       }
-      dynamicSlot(UU) {
-        var RU;
-        let gU = this.value,
-          tU = this.facet.compareInput,
-          pU = this.id,
-          EU = UU[pU] >> 1,
-          PU = 2 == this.type,
-          TU = !1,
-          qU = !1,
-          KU = [];
-        for (let cU of this.dependencies) "doc" == cU ? TU = !0 : "selection" == cU ? qU = !0 : 0 == (1 & (null !== (RU = UU[cU.id]) && void 0 !== RU ? RU : 1)) && KU.push(UU[cU.id]);
+      dynamicSlot(uu) {
+        var Ru;
+        let yu = this.value,
+          Eu = this.facet.compareInput,
+          Ku = this.id,
+          Qu = uu[Ku] >> 1,
+          mu = 2 == this.type,
+          Ju = !1,
+          Nu = !1,
+          Xu = [];
+        for (let Vu of this.dependencies) "doc" == Vu ? Ju = !0 : "selection" == Vu ? Nu = !0 : 0 == (1 & (null !== (Ru = uu[Vu.id]) && void 0 !== Ru ? Ru : 1)) && Xu.push(uu[Vu.id]);
         return {
-          create: UU => (UU.values[EU] = gU(UU), 1),
-          update(UU, RU) {
-            if (TU && RU.docChanged || qU && (RU.docChanged || RU.selection) || DU(UU, KU)) {
-              let RU = gU(UU);
-              if (PU ? !MU(RU, UU.values[EU], tU) : !tU(RU, UU.values[EU])) return UU.values[EU] = RU, 1
+          create: uu => (uu.values[Qu] = yu(uu), 1),
+          update(uu, Ru) {
+            if (Ju && Ru.docChanged || Nu && (Ru.docChanged || Ru.selection) || qu(uu, Xu)) {
+              let Ru = yu(uu);
+              if (mu ? !ou(Ru, uu.values[Qu], Eu) : !Eu(Ru, uu.values[Qu])) return uu.values[Qu] = Ru, 1
             }
             return 0
           },
-          reconfigure: (UU, RU) => {
-            let TU, qU = RU.config.address[pU];
-            if (null != qU) {
-              let pU = cR(RU, qU);
-              if (this.dependencies.every((gU => gU instanceof iU ? RU.facet(gU) === UU.facet(gU) : !(gU instanceof lU) || RU.field(gU, !1) == UU.field(gU, !1))) || (PU ? MU(TU = gU(UU), pU, tU) : tU(TU = gU(UU), pU))) return UU.values[EU] = pU, 0
-            } else TU = gU(UU);
-            return UU.values[EU] = TU, 1
+          reconfigure: (uu, Ru) => {
+            let Ju, Nu = Ru.config.address[Ku];
+            if (null != Nu) {
+              let Ku = VR(Ru, Nu);
+              if (this.dependencies.every((yu => yu instanceof Pu ? Ru.facet(yu) === uu.facet(yu) : !(yu instanceof au) || Ru.field(yu, !1) == uu.field(yu, !1))) || (mu ? ou(Ju = yu(uu), Ku, Eu) : Eu(Ju = yu(uu), Ku))) return uu.values[Qu] = Ku, 0
+            } else Ju = yu(uu);
+            return uu.values[Qu] = Ju, 1
           }
         }
       }
     }
 
-    function MU(UU, RU, gU) {
-      if (UU.length != RU.length) return !1;
-      for (let tU = 0; tU < UU.length; tU++)
-        if (!gU(UU[tU], RU[tU])) return !1;
+    function ou(uu, Ru, yu) {
+      if (uu.length != Ru.length) return !1;
+      for (let Eu = 0; Eu < uu.length; Eu++)
+        if (!yu(uu[Eu], Ru[Eu])) return !1;
       return !0
     }
 
-    function DU(UU, RU) {
-      let gU = !1;
-      for (let tU of RU) 1 & KR(UU, tU) && (gU = !0);
-      return gU
+    function qu(uu, Ru) {
+      let yu = !1;
+      for (let Eu of Ru) 1 & XR(uu, Eu) && (yu = !0);
+      return yu
     }
 
-    function LU(UU, RU, gU) {
-      let tU = gU.map((RU => UU[RU.id])),
-        pU = gU.map((UU => UU.type)),
-        EU = tU.filter((UU => !(1 & UU))),
-        PU = UU[RU.id] >> 1;
+    function Ou(uu, Ru, yu) {
+      let Eu = yu.map((Ru => uu[Ru.id])),
+        Ku = yu.map((uu => uu.type)),
+        Qu = Eu.filter((uu => !(1 & uu))),
+        mu = uu[Ru.id] >> 1;
 
-      function TU(UU) {
-        let gU = [];
-        for (let RU = 0; RU < tU.length; RU++) {
-          let EU = cR(UU, tU[RU]);
-          if (2 == pU[RU])
-            for (let UU of EU) gU.push(UU);
-          else gU.push(EU)
+      function Ju(uu) {
+        let yu = [];
+        for (let Ru = 0; Ru < Eu.length; Ru++) {
+          let Qu = VR(uu, Eu[Ru]);
+          if (2 == Ku[Ru])
+            for (let uu of Qu) yu.push(uu);
+          else yu.push(Qu)
         }
-        return RU.combine(gU)
+        return Ru.combine(yu)
       }
       return {
-        create(UU) {
-          for (let RU of tU) KR(UU, RU);
-          return UU.values[PU] = TU(UU), 1
+        create(uu) {
+          for (let Ru of Eu) XR(uu, Ru);
+          return uu.values[mu] = Ju(uu), 1
         },
-        update(UU, gU) {
-          if (!DU(UU, EU)) return 0;
-          let tU = TU(UU);
-          return RU.compare(tU, UU.values[PU]) ? 0 : (UU.values[PU] = tU, 1)
+        update(uu, yu) {
+          if (!qu(uu, Qu)) return 0;
+          let Eu = Ju(uu);
+          return Ru.compare(Eu, uu.values[mu]) ? 0 : (uu.values[mu] = Eu, 1)
         },
-        reconfigure(UU, pU) {
-          let EU = DU(UU, tU),
-            qU = pU.config.facets[RU.id],
-            KU = pU.facet(RU);
-          if (qU && !EU && AU(gU, qU)) return UU.values[PU] = KU, 0;
-          let cU = TU(UU);
-          return RU.compare(cU, KU) ? (UU.values[PU] = KU, 0) : (UU.values[PU] = cU, 1)
+        reconfigure(uu, Ku) {
+          let Qu = qu(uu, Eu),
+            Nu = Ku.config.facets[Ru.id],
+            Xu = Ku.facet(Ru);
+          if (Nu && !Qu && iu(yu, Nu)) return uu.values[mu] = Xu, 0;
+          let Vu = Ju(uu);
+          return Ru.compare(Vu, Xu) ? (uu.values[mu] = Xu, 0) : (uu.values[mu] = Vu, 1)
         }
       }
     }
-    const NU = iU.define({
+    const vu = Pu.define({
       static: !0
     });
-    class lU {
-      constructor(UU, RU, gU, tU, pU) {
-        this.id = UU, this.createF = RU, this.updateF = gU, this.compareF = tU, this.spec = pU, this.provides = void 0
+    class au {
+      constructor(uu, Ru, yu, Eu, Ku) {
+        this.id = uu, this.createF = Ru, this.updateF = yu, this.compareF = Eu, this.spec = Ku, this.provides = void 0
       }
-      static define(UU) {
-        let RU = new lU(FU++, UU.create, UU.update, UU.compare || ((UU, RU) => UU === RU), UU);
-        return UU.provide && (RU.provides = UU.provide(RU)), RU
+      static define(uu) {
+        let Ru = new au(hu++, uu.create, uu.update, uu.compare || ((uu, Ru) => uu === Ru), uu);
+        return uu.provide && (Ru.provides = uu.provide(Ru)), Ru
       }
-      create(UU) {
-        let RU = UU.facet(NU).find((UU => UU.field == this));
-        return ((null === RU || void 0 === RU ? void 0 : RU.create) || this.createF)(UU)
+      create(uu) {
+        let Ru = uu.facet(vu).find((uu => uu.field == this));
+        return ((null === Ru || void 0 === Ru ? void 0 : Ru.create) || this.createF)(uu)
       }
-      slot(UU) {
-        let RU = UU[this.id] >> 1;
+      slot(uu) {
+        let Ru = uu[this.id] >> 1;
         return {
-          create: UU => (UU.values[RU] = this.create(UU), 1),
-          update: (UU, gU) => {
-            let tU = UU.values[RU],
-              pU = this.updateF(tU, gU);
-            return this.compareF(tU, pU) ? 0 : (UU.values[RU] = pU, 1)
+          create: uu => (uu.values[Ru] = this.create(uu), 1),
+          update: (uu, yu) => {
+            let Eu = uu.values[Ru],
+              Ku = this.updateF(Eu, yu);
+            return this.compareF(Eu, Ku) ? 0 : (uu.values[Ru] = Ku, 1)
           },
-          reconfigure: (UU, gU) => {
-            let tU, pU = UU.facet(NU),
-              EU = gU.facet(NU);
-            return (tU = pU.find((UU => UU.field == this))) && tU != EU.find((UU => UU.field == this)) ? (UU.values[RU] = tU.create(UU), 1) : null != gU.config.address[this.id] ? (UU.values[RU] = gU.field(this), 0) : (UU.values[RU] = this.create(UU), 1)
+          reconfigure: (uu, yu) => {
+            let Eu, Ku = uu.facet(vu),
+              Qu = yu.facet(vu);
+            return (Eu = Ku.find((uu => uu.field == this))) && Eu != Qu.find((uu => uu.field == this)) ? (uu.values[Ru] = Eu.create(uu), 1) : null != yu.config.address[this.id] ? (uu.values[Ru] = yu.field(this), 0) : (uu.values[Ru] = this.create(uu), 1)
           }
         }
       }
-      init(UU) {
-        return [this, NU.of({
+      init(uu) {
+        return [this, vu.of({
           field: this,
-          create: UU
+          create: uu
         })]
       }
       get extension() {
         return this
       }
     }
-    const OU = 4,
-      UR = 3,
+    const fu = 4,
+      uR = 3,
       RR = 2,
-      gR = 1;
+      yR = 1;
 
-    function tR(UU) {
-      return RU => new ER(RU, UU)
+    function ER(uu) {
+      return Ru => new QR(Ru, uu)
     }
-    const pR = {
-      highest: tR(0),
-      high: tR(gR),
-      default: tR(RR),
-      low: tR(UR),
-      lowest: tR(OU)
+    const KR = {
+      highest: ER(0),
+      high: ER(yR),
+      default: ER(RR),
+      low: ER(uR),
+      lowest: ER(fu)
     };
-    class ER {
-      constructor(UU, RU) {
-        this.inner = UU, this.prec = RU
+    class QR {
+      constructor(uu, Ru) {
+        this.inner = uu, this.prec = Ru
       }
     }
-    class PR {
-      of(UU) {
-        return new TR(this, UU)
+    class mR {
+      of(uu) {
+        return new JR(this, uu)
       }
-      reconfigure(UU) {
-        return PR.reconfigure.of({
+      reconfigure(uu) {
+        return mR.reconfigure.of({
           compartment: this,
-          extension: UU
+          extension: uu
         })
       }
-      get(UU) {
-        return UU.config.compartments.get(this)
+      get(uu) {
+        return uu.config.compartments.get(this)
       }
     }
-    class TR {
-      constructor(UU, RU) {
-        this.compartment = UU, this.inner = RU
+    class JR {
+      constructor(uu, Ru) {
+        this.compartment = uu, this.inner = Ru
       }
     }
-    class qR {
-      constructor(UU, RU, gU, tU, pU, EU) {
-        for (this.base = UU, this.compartments = RU, this.dynamicSlots = gU, this.address = tU, this.staticValues = pU, this.facets = EU, this.statusTemplate = []; this.statusTemplate.length < gU.length;) this.statusTemplate.push(0)
+    class NR {
+      constructor(uu, Ru, yu, Eu, Ku, Qu) {
+        for (this.base = uu, this.compartments = Ru, this.dynamicSlots = yu, this.address = Eu, this.staticValues = Ku, this.facets = Qu, this.statusTemplate = []; this.statusTemplate.length < yu.length;) this.statusTemplate.push(0)
       }
-      staticFacet(UU) {
-        let RU = this.address[UU.id];
-        return null == RU ? UU.default : this.staticValues[RU >> 1]
+      staticFacet(uu) {
+        let Ru = this.address[uu.id];
+        return null == Ru ? uu.default : this.staticValues[Ru >> 1]
       }
-      static resolve(UU, RU, gU) {
-        let tU = [],
-          pU = Object.create(null),
-          EU = new Map;
-        for (let GU of function(UU, RU, gU) {
-            let tU = [
+      static resolve(uu, Ru, yu) {
+        let Eu = [],
+          Ku = Object.create(null),
+          Qu = new Map;
+        for (let ru of function(uu, Ru, yu) {
+            let Eu = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              pU = new Map;
+              Ku = new Map;
 
-            function EU(UU, PU) {
-              let TU = pU.get(UU);
-              if (null != TU) {
-                if (TU <= PU) return;
-                let RU = tU[TU].indexOf(UU);
-                RU > -1 && tU[TU].splice(RU, 1), UU instanceof TR && gU.delete(UU.compartment)
+            function Qu(uu, mu) {
+              let Ju = Ku.get(uu);
+              if (null != Ju) {
+                if (Ju <= mu) return;
+                let Ru = Eu[Ju].indexOf(uu);
+                Ru > -1 && Eu[Ju].splice(Ru, 1), uu instanceof JR && yu.delete(uu.compartment)
               }
-              if (pU.set(UU, PU), Array.isArray(UU))
-                for (let RU of UU) EU(RU, PU);
-              else if (UU instanceof TR) {
-                if (gU.has(UU.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let tU = RU.get(UU.compartment) || UU.inner;
-                gU.set(UU.compartment, tU), EU(tU, PU)
-              } else if (UU instanceof ER) EU(UU.inner, UU.prec);
-              else if (UU instanceof lU) tU[PU].push(UU), UU.provides && EU(UU.provides, PU);
-              else if (UU instanceof zU) tU[PU].push(UU), UU.facet.extensions && EU(UU.facet.extensions, RR);
+              if (Ku.set(uu, mu), Array.isArray(uu))
+                for (let Ru of uu) Qu(Ru, mu);
+              else if (uu instanceof JR) {
+                if (yu.has(uu.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let Eu = Ru.get(uu.compartment) || uu.inner;
+                yu.set(uu.compartment, Eu), Qu(Eu, mu)
+              } else if (uu instanceof QR) Qu(uu.inner, uu.prec);
+              else if (uu instanceof au) Eu[mu].push(uu), uu.provides && Qu(uu.provides, mu);
+              else if (uu instanceof Yu) Eu[mu].push(uu), uu.facet.extensions && Qu(uu.facet.extensions, RR);
               else {
-                let RU = UU.extension;
-                if (!RU) throw new Error(`Unrecognized extension value in extension set (${UU}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                EU(RU, PU)
+                let Ru = uu.extension;
+                if (!Ru) throw new Error(`Unrecognized extension value in extension set (${uu}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                Qu(Ru, mu)
               }
             }
-            return EU(UU, RR), tU.reduce(((UU, RU) => UU.concat(RU)))
-          }(UU, RU, EU)) GU instanceof lU ? tU.push(GU) : (pU[GU.facet.id] || (pU[GU.facet.id] = [])).push(GU);
-        let PU = Object.create(null),
-          TU = [],
-          qU = [];
-        for (let GU of tU) PU[GU.id] = qU.length << 1, qU.push((UU => GU.slot(UU)));
-        let KU = null === gU || void 0 === gU ? void 0 : gU.config.facets;
-        for (let GU in pU) {
-          let UU = pU[GU],
-            RU = UU[0].facet,
-            tU = KU && KU[GU] || [];
-          if (UU.every((UU => 0 == UU.type)))
-            if (PU[RU.id] = TU.length << 1 | 1, AU(tU, UU)) TU.push(gU.facet(RU));
+            return Qu(uu, RR), Eu.reduce(((uu, Ru) => uu.concat(Ru)))
+          }(uu, Ru, Qu)) ru instanceof au ? Eu.push(ru) : (Ku[ru.facet.id] || (Ku[ru.facet.id] = [])).push(ru);
+        let mu = Object.create(null),
+          Ju = [],
+          Nu = [];
+        for (let ru of Eu) mu[ru.id] = Nu.length << 1, Nu.push((uu => ru.slot(uu)));
+        let Xu = null === yu || void 0 === yu ? void 0 : yu.config.facets;
+        for (let ru in Ku) {
+          let uu = Ku[ru],
+            Ru = uu[0].facet,
+            Eu = Xu && Xu[ru] || [];
+          if (uu.every((uu => 0 == uu.type)))
+            if (mu[Ru.id] = Ju.length << 1 | 1, iu(Eu, uu)) Ju.push(yu.facet(Ru));
             else {
-              let tU = RU.combine(UU.map((UU => UU.value)));
-              TU.push(gU && RU.compare(tU, gU.facet(RU)) ? gU.facet(RU) : tU)
+              let Eu = Ru.combine(uu.map((uu => uu.value)));
+              Ju.push(yu && Ru.compare(Eu, yu.facet(Ru)) ? yu.facet(Ru) : Eu)
             }
           else {
-            for (let RU of UU) 0 == RU.type ? (PU[RU.id] = TU.length << 1 | 1, TU.push(RU.value)) : (PU[RU.id] = qU.length << 1, qU.push((UU => RU.dynamicSlot(UU))));
-            PU[RU.id] = qU.length << 1, qU.push((gU => LU(gU, RU, UU)))
+            for (let Ru of uu) 0 == Ru.type ? (mu[Ru.id] = Ju.length << 1 | 1, Ju.push(Ru.value)) : (mu[Ru.id] = Nu.length << 1, Nu.push((uu => Ru.dynamicSlot(uu))));
+            mu[Ru.id] = Nu.length << 1, Nu.push((yu => Ou(yu, Ru, uu)))
           }
         }
-        let cU = qU.map((UU => UU(PU)));
-        return new qR(UU, EU, cU, PU, TU, pU)
+        let Vu = Nu.map((uu => uu(mu)));
+        return new NR(uu, Qu, Vu, mu, Ju, Ku)
       }
     }
 
-    function KR(UU, RU) {
-      if (1 & RU) return 2;
-      let gU = RU >> 1,
-        tU = UU.status[gU];
-      if (4 == tU) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & tU) return tU;
-      UU.status[gU] = 4;
-      let pU = UU.computeSlot(UU, UU.config.dynamicSlots[gU]);
-      return UU.status[gU] = 2 | pU
+    function XR(uu, Ru) {
+      if (1 & Ru) return 2;
+      let yu = Ru >> 1,
+        Eu = uu.status[yu];
+      if (4 == Eu) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & Eu) return Eu;
+      uu.status[yu] = 4;
+      let Ku = uu.computeSlot(uu, uu.config.dynamicSlots[yu]);
+      return uu.status[yu] = 2 | Ku
     }
 
-    function cR(UU, RU) {
-      return 1 & RU ? UU.config.staticValues[RU >> 1] : UU.values[RU >> 1]
+    function VR(uu, Ru) {
+      return 1 & Ru ? uu.config.staticValues[Ru >> 1] : uu.values[Ru >> 1]
     }
-    const GR = iU.define(),
-      jR = iU.define({
-        combine: UU => UU.some((UU => UU)),
+    const rR = Pu.define(),
+      BR = Pu.define({
+        combine: uu => uu.some((uu => uu)),
         static: !0
       }),
-      uR = iU.define({
-        combine: UU => UU.length ? UU[0] : void 0,
+      xR = Pu.define({
+        combine: uu => uu.length ? uu[0] : void 0,
         static: !0
       }),
-      CR = iU.define(),
-      hR = iU.define(),
-      QR = iU.define(),
-      eR = iU.define({
-        combine: UU => !!UU.length && UU[0]
+      SR = Pu.define(),
+      pR = Pu.define(),
+      TR = Pu.define(),
+      WR = Pu.define({
+        combine: uu => !!uu.length && uu[0]
       });
-    class WR {
-      constructor(UU, RU) {
-        this.type = UU, this.value = RU
+    class jR {
+      constructor(uu, Ru) {
+        this.type = uu, this.value = Ru
       }
       static define() {
-        return new fR
+        return new HR
       }
     }
-    class fR {
-      of(UU) {
-        return new WR(this, UU)
+    class HR {
+      of(uu) {
+        return new jR(this, uu)
       }
     }
-    class xR {
-      constructor(UU) {
-        this.map = UU
+    class dR {
+      constructor(uu) {
+        this.map = uu
       }
-      of(UU) {
-        return new mR(this, UU)
+      of(uu) {
+        return new bR(this, uu)
       }
     }
-    class mR {
-      constructor(UU, RU) {
-        this.type = UU, this.value = RU
+    class bR {
+      constructor(uu, Ru) {
+        this.type = uu, this.value = Ru
       }
-      map(UU) {
-        let RU = this.type.map(this.value, UU);
-        return void 0 === RU ? void 0 : RU == this.value ? this : new mR(this.type, RU)
+      map(uu) {
+        let Ru = this.type.map(this.value, uu);
+        return void 0 === Ru ? void 0 : Ru == this.value ? this : new bR(this.type, Ru)
       }
-      is(UU) {
-        return this.type == UU
+      is(uu) {
+        return this.type == uu
       }
       static define() {
-        return new xR((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (UU => UU))
+        return new dR((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (uu => uu))
       }
-      static mapEffects(UU, RU) {
-        if (!UU.length) return UU;
-        let gU = [];
-        for (let tU of UU) {
-          let UU = tU.map(RU);
-          UU && gU.push(UU)
+      static mapEffects(uu, Ru) {
+        if (!uu.length) return uu;
+        let yu = [];
+        for (let Eu of uu) {
+          let uu = Eu.map(Ru);
+          uu && yu.push(uu)
         }
-        return gU
+        return yu
       }
     }
-    mR.reconfigure = mR.define(), mR.appendConfig = mR.define();
-    class IR {
-      constructor(UU, RU, gU, tU, pU, EU) {
-        this.startState = UU, this.changes = RU, this.selection = gU, this.effects = tU, this.annotations = pU, this.scrollIntoView = EU, this._doc = null, this._state = null, gU && kU(gU, RU.newLength), pU.some((UU => UU.type == IR.time)) || (this.annotations = pU.concat(IR.time.of(Date.now())))
+    bR.reconfigure = bR.define(), bR.appendConfig = bR.define();
+    class CR {
+      constructor(uu, Ru, yu, Eu, Ku, Qu) {
+        this.startState = uu, this.changes = Ru, this.selection = yu, this.effects = Eu, this.annotations = Ku, this.scrollIntoView = Qu, this._doc = null, this._state = null, yu && Zu(yu, Ru.newLength), Ku.some((uu => uu.type == CR.time)) || (this.annotations = Ku.concat(CR.time.of(Date.now())))
       }
-      static create(UU, RU, gU, tU, pU, EU) {
-        return new IR(UU, RU, gU, tU, pU, EU)
+      static create(uu, Ru, yu, Eu, Ku, Qu) {
+        return new CR(uu, Ru, yu, Eu, Ku, Qu)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(UU) {
-        for (let RU of this.annotations)
-          if (RU.type == UU) return RU.value
+      annotation(uu) {
+        for (let Ru of this.annotations)
+          if (Ru.type == uu) return Ru.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(UU) {
-        let RU = this.annotation(IR.userEvent);
-        return !(!RU || !(RU == UU || RU.length > UU.length && RU.slice(0, UU.length) == UU && "." == RU[UU.length]))
+      isUserEvent(uu) {
+        let Ru = this.annotation(CR.userEvent);
+        return !(!Ru || !(Ru == uu || Ru.length > uu.length && Ru.slice(0, uu.length) == uu && "." == Ru[uu.length]))
       }
     }
 
-    function JR(UU, RU) {
-      let gU = [];
-      for (let tU = 0, pU = 0;;) {
-        let EU, PU;
-        if (tU < UU.length && (pU == RU.length || RU[pU] >= UU[tU])) EU = UU[tU++], PU = UU[tU++];
+    function kR(uu, Ru) {
+      let yu = [];
+      for (let Eu = 0, Ku = 0;;) {
+        let Qu, mu;
+        if (Eu < uu.length && (Ku == Ru.length || Ru[Ku] >= uu[Eu])) Qu = uu[Eu++], mu = uu[Eu++];
         else {
-          if (!(pU < RU.length)) return gU;
-          EU = RU[pU++], PU = RU[pU++]
-        }!gU.length || gU[gU.length - 1] < EU ? gU.push(EU, PU) : gU[gU.length - 1] < PU && (gU[gU.length - 1] = PU)
+          if (!(Ku < Ru.length)) return yu;
+          Qu = Ru[Ku++], mu = Ru[Ku++]
+        }!yu.length || yu[yu.length - 1] < Qu ? yu.push(Qu, mu) : yu[yu.length - 1] < mu && (yu[yu.length - 1] = mu)
       }
     }
 
-    function wR(UU, RU, gU) {
-      var tU;
-      let pU, EU, PU;
-      return gU ? (pU = RU.changes, EU = VU.empty(RU.changes.length), PU = UU.changes.compose(RU.changes)) : (pU = RU.changes.map(UU.changes), EU = UU.changes.mapDesc(RU.changes, !0), PU = UU.changes.compose(pU)), {
-        changes: PU,
-        selection: RU.selection ? RU.selection.map(EU) : null === (tU = UU.selection) || void 0 === tU ? void 0 : tU.map(pU),
-        effects: mR.mapEffects(UU.effects, pU).concat(mR.mapEffects(RU.effects, EU)),
-        annotations: UU.annotations.length ? UU.annotations.concat(RU.annotations) : RU.annotations,
-        scrollIntoView: UU.scrollIntoView || RU.scrollIntoView
+    function eR(uu, Ru, yu) {
+      var Eu;
+      let Ku, Qu, mu;
+      return yu ? (Ku = Ru.changes, Qu = su.empty(Ru.changes.length), mu = uu.changes.compose(Ru.changes)) : (Ku = Ru.changes.map(uu.changes), Qu = uu.changes.mapDesc(Ru.changes, !0), mu = uu.changes.compose(Ku)), {
+        changes: mu,
+        selection: Ru.selection ? Ru.selection.map(Qu) : null === (Eu = uu.selection) || void 0 === Eu ? void 0 : Eu.map(Ku),
+        effects: bR.mapEffects(uu.effects, Ku).concat(bR.mapEffects(Ru.effects, Qu)),
+        annotations: uu.annotations.length ? uu.annotations.concat(Ru.annotations) : Ru.annotations,
+        scrollIntoView: uu.scrollIntoView || Ru.scrollIntoView
       }
     }
 
-    function nR(UU, RU, gU) {
-      let tU = RU.selection,
-        pU = ZR(RU.annotations);
-      return RU.userEvent && (pU = pU.concat(IR.userEvent.of(RU.userEvent))), {
-        changes: RU.changes instanceof VU ? RU.changes : VU.of(RU.changes || [], gU, UU.facet(uR)),
-        selection: tU && (tU instanceof yU ? tU : yU.single(tU.anchor, tU.head)),
-        effects: ZR(RU.effects),
-        annotations: pU,
-        scrollIntoView: !!RU.scrollIntoView
+    function AR(uu, Ru, yu) {
+      let Eu = Ru.selection,
+        Ku = IR(Ru.annotations);
+      return Ru.userEvent && (Ku = Ku.concat(CR.userEvent.of(Ru.userEvent))), {
+        changes: Ru.changes instanceof su ? Ru.changes : su.of(Ru.changes || [], yu, uu.facet(xR)),
+        selection: Eu && (Eu instanceof wu ? Eu : wu.single(Eu.anchor, Eu.head)),
+        effects: IR(Ru.effects),
+        annotations: Ku,
+        scrollIntoView: !!Ru.scrollIntoView
       }
     }
 
-    function bR(UU, RU, gU) {
-      let tU = nR(UU, RU.length ? RU[0] : {}, UU.doc.length);
-      RU.length && !1 === RU[0].filter && (gU = !1);
-      for (let EU = 1; EU < RU.length; EU++) {
-        !1 === RU[EU].filter && (gU = !1);
-        let pU = !!RU[EU].sequential;
-        tU = wR(tU, nR(UU, RU[EU], pU ? tU.changes.newLength : UU.doc.length), pU)
+    function DR(uu, Ru, yu) {
+      let Eu = AR(uu, Ru.length ? Ru[0] : {}, uu.doc.length);
+      Ru.length && !1 === Ru[0].filter && (yu = !1);
+      for (let Qu = 1; Qu < Ru.length; Qu++) {
+        !1 === Ru[Qu].filter && (yu = !1);
+        let Ku = !!Ru[Qu].sequential;
+        Eu = eR(Eu, AR(uu, Ru[Qu], Ku ? Eu.changes.newLength : uu.doc.length), Ku)
       }
-      let pU = IR.create(UU, tU.changes, tU.selection, tU.effects, tU.annotations, tU.scrollIntoView);
-      return function(UU) {
-        let RU = UU.startState,
-          gU = RU.facet(QR),
-          tU = UU;
-        for (let pU = gU.length - 1; pU >= 0; pU--) {
-          let EU = gU[pU](UU);
-          EU && Object.keys(EU).length && (tU = wR(tU, nR(RU, EU, UU.changes.newLength), !0))
+      let Ku = CR.create(uu, Eu.changes, Eu.selection, Eu.effects, Eu.annotations, Eu.scrollIntoView);
+      return function(uu) {
+        let Ru = uu.startState,
+          yu = Ru.facet(TR),
+          Eu = uu;
+        for (let Ku = yu.length - 1; Ku >= 0; Ku--) {
+          let Qu = yu[Ku](uu);
+          Qu && Object.keys(Qu).length && (Eu = eR(Eu, AR(Ru, Qu, uu.changes.newLength), !0))
         }
-        return tU == UU ? UU : IR.create(RU, UU.changes, UU.selection, tU.effects, tU.annotations, tU.scrollIntoView)
-      }(gU ? function(UU) {
-        let RU = UU.startState,
-          gU = !0;
-        for (let pU of RU.facet(CR)) {
-          let RU = pU(UU);
-          if (!1 === RU) {
-            gU = !1;
+        return Eu == uu ? uu : CR.create(Ru, uu.changes, uu.selection, Eu.effects, Eu.annotations, Eu.scrollIntoView)
+      }(yu ? function(uu) {
+        let Ru = uu.startState,
+          yu = !0;
+        for (let Ku of Ru.facet(SR)) {
+          let Ru = Ku(uu);
+          if (!1 === Ru) {
+            yu = !1;
             break
           }
-          Array.isArray(RU) && (gU = !0 === gU ? RU : JR(gU, RU))
+          Array.isArray(Ru) && (yu = !0 === yu ? Ru : kR(yu, Ru))
         }
-        if (!0 !== gU) {
-          let tU, pU;
-          if (!1 === gU) pU = UU.changes.invertedDesc, tU = VU.empty(RU.doc.length);
+        if (!0 !== yu) {
+          let Eu, Ku;
+          if (!1 === yu) Ku = uu.changes.invertedDesc, Eu = su.empty(Ru.doc.length);
           else {
-            let RU = UU.changes.filter(gU);
-            tU = RU.changes, pU = RU.filtered.mapDesc(RU.changes).invertedDesc
+            let Ru = uu.changes.filter(yu);
+            Eu = Ru.changes, Ku = Ru.filtered.mapDesc(Ru.changes).invertedDesc
           }
-          UU = IR.create(RU, tU, UU.selection && UU.selection.map(pU), mR.mapEffects(UU.effects, pU), UU.annotations, UU.scrollIntoView)
+          uu = CR.create(Ru, Eu, uu.selection && uu.selection.map(Ku), bR.mapEffects(uu.effects, Ku), uu.annotations, uu.scrollIntoView)
         }
-        let tU = RU.facet(hR);
-        for (let pU = tU.length - 1; pU >= 0; pU--) {
-          let gU = tU[pU](UU);
-          UU = gU instanceof IR ? gU : Array.isArray(gU) && 1 == gU.length && gU[0] instanceof IR ? gU[0] : bR(RU, ZR(gU), !1)
+        let Eu = Ru.facet(pR);
+        for (let Ku = Eu.length - 1; Ku >= 0; Ku--) {
+          let yu = Eu[Ku](uu);
+          uu = yu instanceof CR ? yu : Array.isArray(yu) && 1 == yu.length && yu[0] instanceof CR ? yu[0] : DR(Ru, IR(yu), !1)
         }
-        return UU
-      }(pU) : pU)
+        return uu
+      }(Ku) : Ku)
     }
-    IR.time = WR.define(), IR.userEvent = WR.define(), IR.addToHistory = WR.define(), IR.remote = WR.define();
-    const oR = [];
+    CR.time = jR.define(), CR.userEvent = jR.define(), CR.addToHistory = jR.define(), CR.remote = jR.define();
+    const MR = [];
 
-    function ZR(UU) {
-      return null == UU ? oR : Array.isArray(UU) ? UU : [UU]
+    function IR(uu) {
+      return null == uu ? MR : Array.isArray(uu) ? uu : [uu]
     }
-    var aR = function(UU) {
-      return UU[UU.Word = 0] = "Word", UU[UU.Space = 1] = "Space", UU[UU.Other = 2] = "Other", UU
-    }(aR || (aR = {}));
-    const YR = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let BR;
+    var GR = function(uu) {
+      return uu[uu.Word = 0] = "Word", uu[uu.Space = 1] = "Space", uu[uu.Other = 2] = "Other", uu
+    }(GR || (GR = {}));
+    const UR = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let nR;
     try {
-      BR = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (gg) {}
+      nR = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (yy) {}
 
-    function VR(UU) {
-      return RU => {
-        if (!/\S/.test(RU)) return aR.Space;
-        if (function(UU) {
-            if (BR) return BR.test(UU);
-            for (let RU = 0; RU < UU.length; RU++) {
-              let gU = UU[RU];
-              if (/\w/.test(gU) || gU > "\x80" && (gU.toUpperCase() != gU.toLowerCase() || YR.test(gU))) return !0
+    function sR(uu) {
+      return Ru => {
+        if (!/\S/.test(Ru)) return GR.Space;
+        if (function(uu) {
+            if (nR) return nR.test(uu);
+            for (let Ru = 0; Ru < uu.length; Ru++) {
+              let yu = uu[Ru];
+              if (/\w/.test(yu) || yu > "\x80" && (yu.toUpperCase() != yu.toLowerCase() || UR.test(yu))) return !0
             }
             return !1
-          }(RU)) return aR.Word;
-        for (let gU = 0; gU < UU.length; gU++)
-          if (RU.indexOf(UU[gU]) > -1) return aR.Word;
-        return aR.Other
+          }(Ru)) return GR.Word;
+        for (let yu = 0; yu < uu.length; yu++)
+          if (Ru.indexOf(uu[yu]) > -1) return GR.Word;
+        return GR.Other
       }
     }
-    class rR {
-      constructor(UU, RU, gU, tU, pU, EU) {
-        this.config = UU, this.doc = RU, this.selection = gU, this.values = tU, this.status = UU.statusTemplate.slice(), this.computeSlot = pU, EU && (EU._state = this);
-        for (let PU = 0; PU < this.config.dynamicSlots.length; PU++) KR(this, PU << 1);
+    class tR {
+      constructor(uu, Ru, yu, Eu, Ku, Qu) {
+        this.config = uu, this.doc = Ru, this.selection = yu, this.values = Eu, this.status = uu.statusTemplate.slice(), this.computeSlot = Ku, Qu && (Qu._state = this);
+        for (let mu = 0; mu < this.config.dynamicSlots.length; mu++) XR(this, mu << 1);
         this.computeSlot = null
       }
-      field(UU) {
-        let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          gU = this.config.address[UU.id];
-        if (null != gU) return KR(this, gU), cR(this, gU);
-        if (RU) throw new RangeError("Field is not present in this state")
+      field(uu) {
+        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          yu = this.config.address[uu.id];
+        if (null != yu) return XR(this, yu), VR(this, yu);
+        if (Ru) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var UU = arguments.length, RU = new Array(UU), gU = 0; gU < UU; gU++) RU[gU] = arguments[gU];
-        return bR(this, RU, !0)
+        for (var uu = arguments.length, Ru = new Array(uu), yu = 0; yu < uu; yu++) Ru[yu] = arguments[yu];
+        return DR(this, Ru, !0)
       }
-      applyTransaction(UU) {
-        let RU, gU = this.config,
+      applyTransaction(uu) {
+        let Ru, yu = this.config,
           {
-            base: tU,
-            compartments: pU
-          } = gU;
-        for (let PU of UU.effects) PU.is(PR.reconfigure) ? (gU && (pU = new Map, gU.compartments.forEach(((UU, RU) => pU.set(RU, UU))), gU = null), pU.set(PU.value.compartment, PU.value.extension)) : PU.is(mR.reconfigure) ? (gU = null, tU = PU.value) : PU.is(mR.appendConfig) && (gU = null, tU = ZR(tU).concat(PU.value));
-        if (gU) RU = UU.startState.values.slice();
+            base: Eu,
+            compartments: Ku
+          } = yu;
+        for (let mu of uu.effects) mu.is(mR.reconfigure) ? (yu && (Ku = new Map, yu.compartments.forEach(((uu, Ru) => Ku.set(Ru, uu))), yu = null), Ku.set(mu.value.compartment, mu.value.extension)) : mu.is(bR.reconfigure) ? (yu = null, Eu = mu.value) : mu.is(bR.appendConfig) && (yu = null, Eu = IR(Eu).concat(mu.value));
+        if (yu) Ru = uu.startState.values.slice();
         else {
-          gU = qR.resolve(tU, pU, this), RU = new rR(gU, this.doc, this.selection, gU.dynamicSlots.map((() => null)), ((UU, RU) => RU.reconfigure(UU, this)), null).values
+          yu = NR.resolve(Eu, Ku, this), Ru = new tR(yu, this.doc, this.selection, yu.dynamicSlots.map((() => null)), ((uu, Ru) => Ru.reconfigure(uu, this)), null).values
         }
-        let EU = UU.startState.facet(jR) ? UU.newSelection : UU.newSelection.asSingle();
-        new rR(gU, UU.newDoc, EU, RU, ((RU, gU) => gU.update(RU, UU)), UU)
+        let Qu = uu.startState.facet(BR) ? uu.newSelection : uu.newSelection.asSingle();
+        new tR(yu, uu.newDoc, Qu, Ru, ((Ru, yu) => yu.update(Ru, uu)), uu)
       }
-      replaceSelection(UU) {
-        return "string" == typeof UU && (UU = this.toText(UU)), this.changeByRange((RU => ({
+      replaceSelection(uu) {
+        return "string" == typeof uu && (uu = this.toText(uu)), this.changeByRange((Ru => ({
           changes: {
-            from: RU.from,
-            to: RU.to,
-            insert: UU
+            from: Ru.from,
+            to: Ru.to,
+            insert: uu
           },
-          range: yU.cursor(RU.from + UU.length)
+          range: wu.cursor(Ru.from + uu.length)
         })))
       }
-      changeByRange(UU) {
-        let RU = this.selection,
-          gU = UU(RU.hu[0]),
-          tU = this.changes(gU.changes),
-          pU = [gU.range],
-          EU = ZR(gU.effects);
-        for (let PU = 1; PU < RU.hu.length; PU++) {
-          let gU = UU(RU.hu[PU]),
-            TU = this.changes(gU.changes),
-            qU = TU.map(tU);
-          for (let UU = 0; UU < PU; UU++) pU[UU] = pU[UU].map(qU);
-          let KU = tU.mapDesc(TU, !0);
-          pU.push(gU.range.map(KU)), tU = tU.compose(qU), EU = mR.mapEffects(EU, qU).concat(mR.mapEffects(ZR(gU.effects), KU))
+      changeByRange(uu) {
+        let Ru = this.selection,
+          yu = uu(Ru.yT[0]),
+          Eu = this.changes(yu.changes),
+          Ku = [yu.range],
+          Qu = IR(yu.effects);
+        for (let mu = 1; mu < Ru.yT.length; mu++) {
+          let yu = uu(Ru.yT[mu]),
+            Ju = this.changes(yu.changes),
+            Nu = Ju.map(Eu);
+          for (let uu = 0; uu < mu; uu++) Ku[uu] = Ku[uu].map(Nu);
+          let Xu = Eu.mapDesc(Ju, !0);
+          Ku.push(yu.range.map(Xu)), Eu = Eu.compose(Nu), Qu = bR.mapEffects(Qu, Nu).concat(bR.mapEffects(IR(yu.effects), Xu))
         }
         return {
-          changes: tU,
-          selection: yU.create(pU, RU.mainIndex),
-          effects: EU
+          changes: Eu,
+          selection: wu.create(Ku, Ru.mainIndex),
+          effects: Qu
         }
       }
       changes() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return UU instanceof VU ? UU : VU.of(UU, this.doc.length, this.facet(rR.lineSeparator))
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return uu instanceof su ? uu : su.of(uu, this.doc.length, this.facet(tR.lineSeparator))
       }
-      toText(UU) {
-        return hU.of(UU.split(this.facet(rR.lineSeparator) || aU))
+      toText(uu) {
+        return pu.of(uu.split(this.facet(tR.lineSeparator) || Gu))
       }
       sliceDoc() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(UU, RU, this.lineBreak)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(uu, Ru, this.lineBreak)
       }
-      facet(UU) {
-        let RU = this.config.address[UU.id];
-        return null == RU ? UU.default : (KR(this, RU), cR(this, RU))
+      facet(uu) {
+        let Ru = this.config.address[uu.id];
+        return null == Ru ? uu.default : (XR(this, Ru), VR(this, Ru))
       }
-      toJSON(UU) {
-        let RU = {
+      toJSON(uu) {
+        let Ru = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (UU)
-          for (let gU in UU) {
-            let tU = UU[gU];
-            tU instanceof lU && null != this.config.address[tU.id] && (RU[gU] = tU.spec.toJSON(this.field(UU[gU]), this))
+        if (uu)
+          for (let yu in uu) {
+            let Eu = uu[yu];
+            Eu instanceof au && null != this.config.address[Eu.id] && (Ru[yu] = Eu.spec.toJSON(this.field(uu[yu]), this))
           }
-        return RU
+        return Ru
       }
-      static fromJSON(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        if (!UU || "string" != typeof UU.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let tU = [];
-        if (gU)
-          for (let pU in gU)
-            if (Object.prototype.hasOwnProperty.call(UU, pU)) {
-              let RU = gU[pU],
-                EU = UU[pU];
-              tU.push(RU.init((UU => RU.spec.fromJSON(EU, UU))))
-            } return rR.create({
-          doc: UU.doc,
-          selection: yU.fromJSON(UU.selection),
-          extensions: RU.extensions ? tU.concat([RU.extensions]) : tU
+      static fromJSON(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        if (!uu || "string" != typeof uu.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let Eu = [];
+        if (yu)
+          for (let Ku in yu)
+            if (Object.prototype.hasOwnProperty.call(uu, Ku)) {
+              let Ru = yu[Ku],
+                Qu = uu[Ku];
+              Eu.push(Ru.init((uu => Ru.spec.fromJSON(Qu, uu))))
+            } return tR.create({
+          doc: uu.doc,
+          selection: wu.fromJSON(uu.selection),
+          extensions: Ru.extensions ? Eu.concat([Ru.extensions]) : Eu
         })
       }
       static create() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          RU = qR.resolve(UU.extensions || [], new Map),
-          gU = UU.doc instanceof hU ? UU.doc : hU.of((UU.doc || "").split(RU.staticFacet(rR.lineSeparator) || aU)),
-          tU = UU.selection ? UU.selection instanceof yU ? UU.selection : yU.single(UU.selection.anchor, UU.selection.head) : yU.single(0);
-        return kU(tU, gU.length), RU.staticFacet(jR) || (tU = tU.asSingle()), new rR(RU, gU, tU, RU.dynamicSlots.map((() => null)), ((UU, RU) => RU.create(UU)), null)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          Ru = NR.resolve(uu.extensions || [], new Map),
+          yu = uu.doc instanceof pu ? uu.doc : pu.of((uu.doc || "").split(Ru.staticFacet(tR.lineSeparator) || Gu)),
+          Eu = uu.selection ? uu.selection instanceof wu ? uu.selection : wu.single(uu.selection.anchor, uu.selection.head) : wu.single(0);
+        return Zu(Eu, yu.length), Ru.staticFacet(BR) || (Eu = Eu.asSingle()), new tR(Ru, yu, Eu, Ru.dynamicSlots.map((() => null)), ((uu, Ru) => Ru.create(uu)), null)
       }
       get tabSize() {
-        return this.facet(rR.tabSize)
+        return this.facet(tR.tabSize)
       }
       get lineBreak() {
-        return this.facet(rR.lineSeparator) || "\n"
+        return this.facet(tR.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(eR)
+        return this.facet(WR)
       }
-      phrase(UU) {
-        for (var RU = arguments.length, gU = new Array(RU > 1 ? RU - 1 : 0), tU = 1; tU < RU; tU++) gU[tU - 1] = arguments[tU];
-        for (let pU of this.facet(rR.phrases))
-          if (Object.prototype.hasOwnProperty.call(pU, UU)) {
-            UU = pU[UU];
+      phrase(uu) {
+        for (var Ru = arguments.length, yu = new Array(Ru > 1 ? Ru - 1 : 0), Eu = 1; Eu < Ru; Eu++) yu[Eu - 1] = arguments[Eu];
+        for (let Ku of this.facet(tR.phrases))
+          if (Object.prototype.hasOwnProperty.call(Ku, uu)) {
+            uu = Ku[uu];
             break
-          } return gU.length && (UU = UU.replace(/\$(\$|\d*)/g, ((UU, RU) => {
-          if ("$" == RU) return "$";
-          let tU = +(RU || 1);
-          return !tU || tU > gU.length ? UU : gU[tU - 1]
-        }))), UU
+          } return yu.length && (uu = uu.replace(/\$(\$|\d*)/g, ((uu, Ru) => {
+          if ("$" == Ru) return "$";
+          let Eu = +(Ru || 1);
+          return !Eu || Eu > yu.length ? uu : yu[Eu - 1]
+        }))), uu
       }
-      languageDataAt(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          tU = [];
-        for (let pU of this.facet(GR))
-          for (let EU of pU(this, RU, gU)) Object.prototype.hasOwnProperty.call(EU, UU) && tU.push(EU[UU]);
-        return tU
+      languageDataAt(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          Eu = [];
+        for (let Ku of this.facet(rR))
+          for (let Qu of Ku(this, Ru, yu)) Object.prototype.hasOwnProperty.call(Qu, uu) && Eu.push(Qu[uu]);
+        return Eu
       }
-      charCategorizer(UU) {
-        let RU = this.languageDataAt("wordChars", UU);
-        return VR(RU.length ? RU[0] : "")
+      charCategorizer(uu) {
+        let Ru = this.languageDataAt("wordChars", uu);
+        return sR(Ru.length ? Ru[0] : "")
       }
-      wordAt(UU) {
+      wordAt(uu) {
         let {
-          text: RU,
-          from: gU,
-          length: tU
-        } = this.doc.lineAt(UU), pU = this.charCategorizer(UU), EU = UU - gU, PU = UU - gU;
-        for (; EU > 0;) {
-          let UU = nU(RU, EU, !1);
-          if (pU(RU.slice(UU, EU)) != aR.Word) break;
-          EU = UU
+          text: Ru,
+          from: yu,
+          length: Eu
+        } = this.doc.lineAt(uu), Ku = this.charCategorizer(uu), Qu = uu - yu, mu = uu - yu;
+        for (; Qu > 0;) {
+          let uu = Au(Ru, Qu, !1);
+          if (Ku(Ru.slice(uu, Qu)) != GR.Word) break;
+          Qu = uu
         }
-        for (; PU < tU;) {
-          let UU = nU(RU, PU);
-          if (pU(RU.slice(PU, UU)) != aR.Word) break;
-          PU = UU
+        for (; mu < Eu;) {
+          let uu = Au(Ru, mu);
+          if (Ku(Ru.slice(mu, uu)) != GR.Word) break;
+          mu = uu
         }
-        return EU == PU ? null : yU.range(EU + gU, PU + gU)
+        return Qu == mu ? null : wu.range(Qu + yu, mu + yu)
       }
     }
 
-    function XR(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        tU = {};
-      for (let pU of UU)
-        for (let UU of Object.keys(pU)) {
-          let RU = pU[UU],
-            EU = tU[UU];
-          if (void 0 === EU) tU[UU] = RU;
-          else if (EU === RU || void 0 === RU);
+    function lR(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        Eu = {};
+      for (let Ku of uu)
+        for (let uu of Object.keys(Ku)) {
+          let Ru = Ku[uu],
+            Qu = Eu[uu];
+          if (void 0 === Qu) Eu[uu] = Ru;
+          else if (Qu === Ru || void 0 === Ru);
           else {
-            if (!Object.hasOwnProperty.call(gU, UU)) throw new Error("Config merge conflict for field " + UU);
-            tU[UU] = gU[UU](EU, RU)
+            if (!Object.hasOwnProperty.call(yu, uu)) throw new Error("Config merge conflict for field " + uu);
+            Eu[uu] = yu[uu](Qu, Ru)
           }
         }
-      for (let pU in RU) void 0 === tU[pU] && (tU[pU] = RU[pU]);
-      return tU
+      for (let Ku in Ru) void 0 === Eu[Ku] && (Eu[Ku] = Ru[Ku]);
+      return Eu
     }
-    rR.allowMultipleSelections = jR, rR.tabSize = iU.define({
-      combine: UU => UU.length ? UU[0] : 4
-    }), rR.lineSeparator = uR, rR.readOnly = eR, rR.phrases = iU.define({
-      compare(UU, RU) {
-        let gU = Object.keys(UU),
-          tU = Object.keys(RU);
-        return gU.length == tU.length && gU.every((gU => UU[gU] == RU[gU]))
+    tR.allowMultipleSelections = BR, tR.tabSize = Pu.define({
+      combine: uu => uu.length ? uu[0] : 4
+    }), tR.lineSeparator = xR, tR.readOnly = WR, tR.phrases = Pu.define({
+      compare(uu, Ru) {
+        let yu = Object.keys(uu),
+          Eu = Object.keys(Ru);
+        return yu.length == Eu.length && yu.every((yu => uu[yu] == Ru[yu]))
       }
-    }), rR.languageData = GR, rR.changeFilter = CR, rR.transactionFilter = hR, rR.transactionExtender = QR, PR.reconfigure = mR.define();
-    class vR {
-      eq(UU) {
-        return this == UU
+    }), tR.languageData = rR, tR.changeFilter = SR, tR.transactionFilter = pR, tR.transactionExtender = TR, mR.reconfigure = bR.define();
+    class gR {
+      eq(uu) {
+        return this == uu
       }
-      range(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : UU;
-        return HR.create(UU, RU, this)
-      }
-    }
-
-    function dR(UU, RU) {
-      return UU == RU || UU.constructor == RU.constructor && UU.eq(RU)
-    }
-    vR.prototype.startSide = vR.prototype.endSide = 0, vR.prototype.point = !1, vR.prototype.mapMode = YU.TrackDel;
-    class HR {
-      constructor(UU, RU, gU) {
-        this.from = UU, this.to = RU, this.value = gU
-      }
-      static create(UU, RU, gU) {
-        return new HR(UU, RU, gU)
+      range(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : uu;
+        return LR.create(uu, Ru, this)
       }
     }
 
-    function SR(UU, RU) {
-      return UU.from - RU.from || UU.value.startSide - RU.value.startSide
+    function cR(uu, Ru) {
+      return uu == Ru || uu.constructor == Ru.constructor && uu.eq(Ru)
     }
-    class sR {
-      constructor(UU, RU, gU, tU) {
-        this.from = UU, this.to = RU, this.value = gU, this.kgU = tU
+    gR.prototype.startSide = gR.prototype.endSide = 0, gR.prototype.point = !1, gR.prototype.mapMode = Uu.TrackDel;
+    class LR {
+      constructor(uu, Ru, yu) {
+        this.from = uu, this.to = Ru, this.value = yu
+      }
+      static create(uu, Ru, yu) {
+        return new LR(uu, Ru, yu)
+      }
+    }
+
+    function zR(uu, Ru) {
+      return uu.from - Ru.from || uu.value.startSide - Ru.value.startSide
+    }
+    class FR {
+      constructor(uu, Ru, yu, Eu) {
+        this.from = uu, this.to = Ru, this.value = yu, this.nEu = Eu
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          pU = gU ? this.to : this.from;
-        for (let EU = tU, PU = pU.length;;) {
-          if (EU == PU) return EU;
-          let tU = EU + PU >> 1,
-            TU = pU[tU] - UU || (gU ? this.value[tU].endSide : this.value[tU].startSide) - RU;
-          if (tU == EU) return TU >= 0 ? EU : PU;
-          TU >= 0 ? PU = tU : EU = tU + 1
+      findIndex(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Ku = yu ? this.to : this.from;
+        for (let Qu = Eu, mu = Ku.length;;) {
+          if (Qu == mu) return Qu;
+          let Eu = Qu + mu >> 1,
+            Ju = Ku[Eu] - uu || (yu ? this.value[Eu].endSide : this.value[Eu].startSide) - Ru;
+          if (Eu == Qu) return Ju >= 0 ? Qu : mu;
+          Ju >= 0 ? mu = Eu : Qu = Eu + 1
         }
       }
-      between(UU, RU, gU, tU) {
-        for (let pU = this.findIndex(RU, -1e9, !0), EU = this.findIndex(gU, 1e9, !1, pU); pU < EU; pU++)
-          if (!1 === tU(this.from[pU] + UU, this.to[pU] + UU, this.value[pU])) return !1
+      between(uu, Ru, yu, Eu) {
+        for (let Ku = this.findIndex(Ru, -1e9, !0), Qu = this.findIndex(yu, 1e9, !1, Ku); Ku < Qu; Ku++)
+          if (!1 === Eu(this.from[Ku] + uu, this.to[Ku] + uu, this.value[Ku])) return !1
       }
-      map(UU, RU) {
-        let gU = [],
-          tU = [],
-          pU = [],
-          EU = -1,
-          PU = -1;
-        for (let TU = 0; TU < this.value.length; TU++) {
-          let qU, KU, cU = this.value[TU],
-            GU = this.from[TU] + UU,
-            jU = this.to[TU] + UU;
-          if (GU == jU) {
-            let UU = RU.mapPos(GU, cU.startSide, cU.mapMode);
-            if (null == UU) continue;
-            if (qU = KU = UU, cU.startSide != cU.endSide && (KU = RU.mapPos(GU, cU.endSide), KU < qU)) continue
-          } else if (qU = RU.mapPos(GU, cU.startSide), KU = RU.mapPos(jU, cU.endSide), qU > KU || qU == KU && cU.startSide > 0 && cU.endSide <= 0) continue;
-          (KU - qU || cU.endSide - cU.startSide) < 0 || (EU < 0 && (EU = qU), cU.point && (PU = Math.max(PU, KU - qU)), gU.push(cU), tU.push(qU - EU), pU.push(KU - EU))
+      map(uu, Ru) {
+        let yu = [],
+          Eu = [],
+          Ku = [],
+          Qu = -1,
+          mu = -1;
+        for (let Ju = 0; Ju < this.value.length; Ju++) {
+          let Nu, Xu, Vu = this.value[Ju],
+            ru = this.from[Ju] + uu,
+            Bu = this.to[Ju] + uu;
+          if (ru == Bu) {
+            let uu = Ru.mapPos(ru, Vu.startSide, Vu.mapMode);
+            if (null == uu) continue;
+            if (Nu = Xu = uu, Vu.startSide != Vu.endSide && (Xu = Ru.mapPos(ru, Vu.endSide), Xu < Nu)) continue
+          } else if (Nu = Ru.mapPos(ru, Vu.startSide), Xu = Ru.mapPos(Bu, Vu.endSide), Nu > Xu || Nu == Xu && Vu.startSide > 0 && Vu.endSide <= 0) continue;
+          (Xu - Nu || Vu.endSide - Vu.startSide) < 0 || (Qu < 0 && (Qu = Nu), Vu.point && (mu = Math.max(mu, Xu - Nu)), yu.push(Vu), Eu.push(Nu - Qu), Ku.push(Xu - Qu))
         }
         return {
-          mapped: gU.length ? new sR(tU, pU, gU, PU) : null,
-          pos: EU
+          mapped: yu.length ? new FR(Eu, Ku, yu, mu) : null,
+          pos: Qu
         }
       }
     }
-    class yR {
-      constructor(UU, RU, gU, tU) {
-        this.chunkPos = UU, this.chunk = RU, this.nextLayer = gU, this.kgU = tU
+    class wR {
+      constructor(uu, Ru, yu, Eu) {
+        this.chunkPos = uu, this.chunk = Ru, this.nextLayer = yu, this.nEu = Eu
       }
-      static create(UU, RU, gU, tU) {
-        return new yR(UU, RU, gU, tU)
+      static create(uu, Ru, yu, Eu) {
+        return new wR(uu, Ru, yu, Eu)
       }
       get length() {
-        let UU = this.chunk.length - 1;
-        return UU < 0 ? 0 : Math.max(this.chunkEnd(UU), this.nextLayer.length)
+        let uu = this.chunk.length - 1;
+        return uu < 0 ? 0 : Math.max(this.chunkEnd(uu), this.nextLayer.length)
       }
       get size() {
-        if (this.Lu) return 0;
-        let UU = this.nextLayer.size;
-        for (let RU of this.chunk) UU += RU.value.length;
-        return UU
+        if (this.RS) return 0;
+        let uu = this.nextLayer.size;
+        for (let Ru of this.chunk) uu += Ru.value.length;
+        return uu
       }
-      chunkEnd(UU) {
-        return this.chunkPos[UU] + this.chunk[UU].length
+      chunkEnd(uu) {
+        return this.chunkPos[uu] + this.chunk[uu].length
       }
-      update(UU) {
+      update(uu) {
         let {
-          add: RU = [],
-          sort: gU = !1,
-          filterFrom: tU = 0,
-          filterTo: pU = this.length
-        } = UU, EU = UU.filter;
-        if (0 == RU.length && !EU) return this;
-        if (gU && (RU = RU.slice().sort(SR)), this.Lu) return RU.length ? yR.of(RU) : this;
-        let PU = new iR(this, null, -1).goto(0),
-          TU = 0,
-          qU = [],
-          KU = new kR;
-        for (; PU.value || TU < RU.length;)
-          if (TU < RU.length && (PU.from - RU[TU].from || PU.startSide - RU[TU].value.startSide) >= 0) {
-            let UU = RU[TU++];
-            KU.addInner(UU.from, UU.to, UU.value) || qU.push(UU)
-          } else 1 == PU.rangeIndex && PU.chunkIndex < this.chunk.length && (TU == RU.length || this.chunkEnd(PU.chunkIndex) < RU[TU].from) && (!EU || tU > this.chunkEnd(PU.chunkIndex) || pU < this.chunkPos[PU.chunkIndex]) && KU.addChunk(this.chunkPos[PU.chunkIndex], this.chunk[PU.chunkIndex]) ? PU.nextChunk() : ((!EU || tU > PU.to || pU < PU.from || EU(PU.from, PU.to, PU.value)) && (KU.addInner(PU.from, PU.to, PU.value) || qU.push(HR.create(PU.from, PU.to, PU.value))), PU.next());
-        return KU.finishInner(this.nextLayer.Lu && !qU.length ? yR.empty : this.nextLayer.update({
-          add: qU,
-          filter: EU,
-          filterFrom: tU,
-          filterTo: pU
+          add: Ru = [],
+          sort: yu = !1,
+          filterFrom: Eu = 0,
+          filterTo: Ku = this.length
+        } = uu, Qu = uu.filter;
+        if (0 == Ru.length && !Qu) return this;
+        if (yu && (Ru = Ru.slice().sort(zR)), this.RS) return Ru.length ? wR.of(Ru) : this;
+        let mu = new PR(this, null, -1).goto(0),
+          Ju = 0,
+          Nu = [],
+          Xu = new ZR;
+        for (; mu.value || Ju < Ru.length;)
+          if (Ju < Ru.length && (mu.from - Ru[Ju].from || mu.startSide - Ru[Ju].value.startSide) >= 0) {
+            let uu = Ru[Ju++];
+            Xu.addInner(uu.from, uu.to, uu.value) || Nu.push(uu)
+          } else 1 == mu.rangeIndex && mu.chunkIndex < this.chunk.length && (Ju == Ru.length || this.chunkEnd(mu.chunkIndex) < Ru[Ju].from) && (!Qu || Eu > this.chunkEnd(mu.chunkIndex) || Ku < this.chunkPos[mu.chunkIndex]) && Xu.addChunk(this.chunkPos[mu.chunkIndex], this.chunk[mu.chunkIndex]) ? mu.nextChunk() : ((!Qu || Eu > mu.to || Ku < mu.from || Qu(mu.from, mu.to, mu.value)) && (Xu.addInner(mu.from, mu.to, mu.value) || Nu.push(LR.create(mu.from, mu.to, mu.value))), mu.next());
+        return Xu.finishInner(this.nextLayer.RS && !Nu.length ? wR.empty : this.nextLayer.update({
+          add: Nu,
+          filter: Qu,
+          filterFrom: Eu,
+          filterTo: Ku
         }))
       }
-      map(UU) {
-        if (UU.empty || this.Lu) return this;
-        let RU = [],
-          gU = [],
-          tU = -1;
-        for (let EU = 0; EU < this.chunk.length; EU++) {
-          let pU = this.chunkPos[EU],
-            PU = this.chunk[EU],
-            TU = UU.touchesRange(pU, pU + PU.length);
-          if (!1 === TU) tU = Math.max(tU, PU.kgU), RU.push(PU), gU.push(UU.mapPos(pU));
-          else if (!0 === TU) {
+      map(uu) {
+        if (uu.empty || this.RS) return this;
+        let Ru = [],
+          yu = [],
+          Eu = -1;
+        for (let Qu = 0; Qu < this.chunk.length; Qu++) {
+          let Ku = this.chunkPos[Qu],
+            mu = this.chunk[Qu],
+            Ju = uu.touchesRange(Ku, Ku + mu.length);
+          if (!1 === Ju) Eu = Math.max(Eu, mu.nEu), Ru.push(mu), yu.push(uu.mapPos(Ku));
+          else if (!0 === Ju) {
             let {
-              mapped: EU,
-              pos: TU
-            } = PU.map(pU, UU);
-            EU && (tU = Math.max(tU, EU.kgU), RU.push(EU), gU.push(TU))
+              mapped: Qu,
+              pos: Ju
+            } = mu.map(Ku, uu);
+            Qu && (Eu = Math.max(Eu, Qu.nEu), Ru.push(Qu), yu.push(Ju))
           }
         }
-        let pU = this.nextLayer.map(UU);
-        return 0 == RU.length ? pU : new yR(gU, RU, pU || yR.empty, tU)
+        let Ku = this.nextLayer.map(uu);
+        return 0 == Ru.length ? Ku : new wR(yu, Ru, Ku || wR.empty, Eu)
       }
-      between(UU, RU, gU) {
-        if (!this.Lu) {
-          for (let tU = 0; tU < this.chunk.length; tU++) {
-            let pU = this.chunkPos[tU],
-              EU = this.chunk[tU];
-            if (RU >= pU && UU <= pU + EU.length && !1 === EU.between(pU, UU - pU, RU - pU, gU)) return
+      between(uu, Ru, yu) {
+        if (!this.RS) {
+          for (let Eu = 0; Eu < this.chunk.length; Eu++) {
+            let Ku = this.chunkPos[Eu],
+              Qu = this.chunk[Eu];
+            if (Ru >= Ku && uu <= Ku + Qu.length && !1 === Qu.between(Ku, uu - Ku, Ru - Ku, yu)) return
           }
-          this.nextLayer.between(UU, RU, gU)
+          this.nextLayer.between(uu, Ru, yu)
         }
       }
       iter() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return AR.from([this]).goto(UU)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return iR.from([this]).goto(uu)
       }
-      get Lu() {
+      get RS() {
         return this.nextLayer == this
       }
-      static iter(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return AR.from(UU).goto(RU)
+      static iter(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return iR.from(uu).goto(Ru)
       }
-      static compare(UU, RU, gU, tU) {
-        let pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          EU = UU.filter((UU => UU.kgU > 0 || !UU.Lu && UU.kgU >= pU)),
-          PU = RU.filter((UU => UU.kgU > 0 || !UU.Lu && UU.kgU >= pU)),
-          TU = FR(EU, PU, gU),
-          qU = new MR(EU, TU, pU),
-          KU = new MR(PU, TU, pU);
-        gU.iterGaps(((UU, RU, gU) => DR(qU, UU, KU, RU, gU, tU))), gU.empty && 0 == gU.length && DR(qU, 0, KU, 0, 0, tU)
+      static compare(uu, Ru, yu, Eu) {
+        let Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          Qu = uu.filter((uu => uu.nEu > 0 || !uu.RS && uu.nEu >= Ku)),
+          mu = Ru.filter((uu => uu.nEu > 0 || !uu.RS && uu.nEu >= Ku)),
+          Ju = hR(Qu, mu, yu),
+          Nu = new oR(Qu, Ju, Ku),
+          Xu = new oR(mu, Ju, Ku);
+        yu.iterGaps(((uu, Ru, yu) => qR(Nu, uu, Xu, Ru, yu, Eu))), yu.empty && 0 == yu.length && qR(Nu, 0, Xu, 0, 0, Eu)
       }
-      static eq(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          tU = arguments.length > 3 ? arguments[3] : void 0;
-        null == tU && (tU = 999999999);
-        let pU = UU.filter((UU => !UU.Lu && RU.indexOf(UU) < 0)),
-          EU = RU.filter((RU => !RU.Lu && UU.indexOf(RU) < 0));
-        if (pU.length != EU.length) return !1;
-        if (!pU.length) return !0;
-        let PU = FR(pU, EU),
-          TU = new MR(pU, PU, 0).goto(gU),
-          qU = new MR(EU, PU, 0).goto(gU);
+      static eq(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Eu = arguments.length > 3 ? arguments[3] : void 0;
+        null == Eu && (Eu = 999999999);
+        let Ku = uu.filter((uu => !uu.RS && Ru.indexOf(uu) < 0)),
+          Qu = Ru.filter((Ru => !Ru.RS && uu.indexOf(Ru) < 0));
+        if (Ku.length != Qu.length) return !1;
+        if (!Ku.length) return !0;
+        let mu = hR(Ku, Qu),
+          Ju = new oR(Ku, mu, 0).goto(yu),
+          Nu = new oR(Qu, mu, 0).goto(yu);
         for (;;) {
-          if (TU.to != qU.to || !LR(TU.active, qU.active) || TU.point && (!qU.point || !dR(TU.point, qU.point))) return !1;
-          if (TU.to > tU) return !0;
-          TU.next(), qU.next()
+          if (Ju.to != Nu.to || !OR(Ju.active, Nu.active) || Ju.point && (!Nu.point || !cR(Ju.point, Nu.point))) return !1;
+          if (Ju.to > Eu) return !0;
+          Ju.next(), Nu.next()
         }
       }
-      static spans(UU, RU, gU, tU) {
-        let pU = new MR(UU, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(RU),
-          EU = RU,
-          PU = pU.openStart;
+      static spans(uu, Ru, yu, Eu) {
+        let Ku = new oR(uu, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(Ru),
+          Qu = Ru,
+          mu = Ku.openStart;
         for (;;) {
-          let UU = Math.min(pU.to, gU);
-          if (pU.point) {
-            let gU = pU.activeForPoint(pU.to),
-              TU = pU.pointFrom < RU ? gU.length + 1 : pU.point.startSide < 0 ? gU.length : Math.min(gU.length, PU);
-            tU.point(EU, UU, pU.point, gU, TU, pU.pointRank), PU = Math.min(pU.openEnd(UU), gU.length)
-          } else UU > EU && (tU.span(EU, UU, pU.active, PU), PU = pU.openEnd(UU));
-          if (pU.to > gU) return PU + (pU.point && pU.to > gU ? 1 : 0);
-          EU = pU.to, pU.next()
+          let uu = Math.min(Ku.to, yu);
+          if (Ku.point) {
+            let yu = Ku.activeForPoint(Ku.to),
+              Ju = Ku.pointFrom < Ru ? yu.length + 1 : Ku.point.startSide < 0 ? yu.length : Math.min(yu.length, mu);
+            Eu.point(Qu, uu, Ku.point, yu, Ju, Ku.pointRank), mu = Math.min(Ku.openEnd(uu), yu.length)
+          } else uu > Qu && (Eu.span(Qu, uu, Ku.active, mu), mu = Ku.openEnd(uu));
+          if (Ku.to > yu) return mu + (Ku.point && Ku.to > yu ? 1 : 0);
+          Qu = Ku.to, Ku.next()
         }
       }
-      static of (UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gU = new kR;
-        for (let tU of UU instanceof HR ? [UU] : RU ? function(UU) {
-            if (UU.length > 1)
-              for (let RU = UU[0], gU = 1; gU < UU.length; gU++) {
-                let tU = UU[gU];
-                if (SR(RU, tU) > 0) return UU.slice().sort(SR);
-                RU = tU
+      static of (uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          yu = new ZR;
+        for (let Eu of uu instanceof LR ? [uu] : Ru ? function(uu) {
+            if (uu.length > 1)
+              for (let Ru = uu[0], yu = 1; yu < uu.length; yu++) {
+                let Eu = uu[yu];
+                if (zR(Ru, Eu) > 0) return uu.slice().sort(zR);
+                Ru = Eu
               }
-            return UU
-          }(UU) : UU) gU.add(tU.from, tU.to, tU.value);
-        return gU.finish()
+            return uu
+          }(uu) : uu) yu.add(Eu.from, Eu.to, Eu.value);
+        return yu.finish()
       }
-      static join(UU) {
-        if (!UU.length) return yR.empty;
-        let RU = UU[UU.length - 1];
-        for (let gU = UU.length - 2; gU >= 0; gU--)
-          for (let tU = UU[gU]; tU != yR.empty; tU = tU.nextLayer) RU = new yR(tU.chunkPos, tU.chunk, RU, Math.max(tU.kgU, RU.kgU));
-        return RU
+      static join(uu) {
+        if (!uu.length) return wR.empty;
+        let Ru = uu[uu.length - 1];
+        for (let yu = uu.length - 2; yu >= 0; yu--)
+          for (let Eu = uu[yu]; Eu != wR.empty; Eu = Eu.nextLayer) Ru = new wR(Eu.chunkPos, Eu.chunk, Ru, Math.max(Eu.nEu, Ru.nEu));
+        return Ru
       }
     }
-    yR.empty = new yR([], [], null, -1), yR.empty.nextLayer = yR.empty;
-    class kR {
-      finishChunk(UU) {
-        this.chunks.push(new sR(this.from, this.to, this.value, this.kgU)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.kgU), this.kgU = -1, UU && (this.from = [], this.to = [], this.value = [])
+    wR.empty = new wR([], [], null, -1), wR.empty.nextLayer = wR.empty;
+    class ZR {
+      finishChunk(uu) {
+        this.chunks.push(new FR(this.from, this.to, this.value, this.nEu)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.nEu), this.nEu = -1, uu && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.kgU = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.nEu = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(UU, RU, gU) {
-        this.addInner(UU, RU, gU) || (this.nextLayer || (this.nextLayer = new kR)).add(UU, RU, gU)
+      add(uu, Ru, yu) {
+        this.addInner(uu, Ru, yu) || (this.nextLayer || (this.nextLayer = new ZR)).add(uu, Ru, yu)
       }
-      addInner(UU, RU, gU) {
-        let tU = UU - this.lastTo || gU.startSide - this.last.endSide;
-        if (tU <= 0 && (UU - this.lastFrom || gU.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(tU < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = UU), this.from.push(UU - this.chunkStart), this.to.push(RU - this.chunkStart), this.last = gU, this.lastFrom = UU, this.lastTo = RU, this.value.push(gU), gU.point && (this.kgU = Math.max(this.kgU, RU - UU)), !0)
+      addInner(uu, Ru, yu) {
+        let Eu = uu - this.lastTo || yu.startSide - this.last.endSide;
+        if (Eu <= 0 && (uu - this.lastFrom || yu.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(Eu < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = uu), this.from.push(uu - this.chunkStart), this.to.push(Ru - this.chunkStart), this.last = yu, this.lastFrom = uu, this.lastTo = Ru, this.value.push(yu), yu.point && (this.nEu = Math.max(this.nEu, Ru - uu)), !0)
       }
-      addChunk(UU, RU) {
-        if ((UU - this.lastTo || RU.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, RU.kgU), this.chunks.push(RU), this.chunkPos.push(UU);
-        let gU = RU.value.length - 1;
-        return this.last = RU.value[gU], this.lastFrom = RU.from[gU] + UU, this.lastTo = RU.to[gU] + UU, !0
+      addChunk(uu, Ru) {
+        if ((uu - this.lastTo || Ru.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, Ru.nEu), this.chunks.push(Ru), this.chunkPos.push(uu);
+        let yu = Ru.value.length - 1;
+        return this.last = Ru.value[yu], this.lastFrom = Ru.from[yu] + uu, this.lastTo = Ru.to[yu] + uu, !0
       }
       finish() {
-        return this.finishInner(yR.empty)
+        return this.finishInner(wR.empty)
       }
-      finishInner(UU) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return UU;
-        let RU = yR.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(UU) : UU, this.setMaxPoint);
-        return this.from = null, RU
+      finishInner(uu) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return uu;
+        let Ru = wR.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(uu) : uu, this.setMaxPoint);
+        return this.from = null, Ru
       }
     }
 
-    function FR(UU, RU, gU) {
-      let tU = new Map;
-      for (let EU of UU)
-        for (let UU = 0; UU < EU.chunk.length; UU++) EU.chunk[UU].kgU <= 0 && tU.set(EU.chunk[UU], EU.chunkPos[UU]);
-      let pU = new Set;
-      for (let EU of RU)
-        for (let UU = 0; UU < EU.chunk.length; UU++) {
-          let RU = tU.get(EU.chunk[UU]);
-          null == RU || (gU ? gU.mapPos(RU) : RU) != EU.chunkPos[UU] || (null === gU || void 0 === gU ? void 0 : gU.touchesRange(RU, RU + EU.chunk[UU].length)) || pU.add(EU.chunk[UU])
+    function hR(uu, Ru, yu) {
+      let Eu = new Map;
+      for (let Qu of uu)
+        for (let uu = 0; uu < Qu.chunk.length; uu++) Qu.chunk[uu].nEu <= 0 && Eu.set(Qu.chunk[uu], Qu.chunkPos[uu]);
+      let Ku = new Set;
+      for (let Qu of Ru)
+        for (let uu = 0; uu < Qu.chunk.length; uu++) {
+          let Ru = Eu.get(Qu.chunk[uu]);
+          null == Ru || (yu ? yu.mapPos(Ru) : Ru) != Qu.chunkPos[uu] || (null === yu || void 0 === yu ? void 0 : yu.touchesRange(Ru, Ru + Qu.chunk[uu].length)) || Ku.add(Qu.chunk[uu])
         }
-      return pU
+      return Ku
     }
-    class iR {
-      constructor(UU, RU, gU) {
-        let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = UU, this.skip = RU, this.FgU = gU, this.rank = tU
+    class PR {
+      constructor(uu, Ru, yu) {
+        let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = uu, this.skip = Ru, this.sEu = yu, this.rank = Eu
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(UU, RU, !1), this
+      goto(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(uu, Ru, !1), this
       }
-      gotoInner(UU, RU, gU) {
+      gotoInner(uu, Ru, yu) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let RU = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(RU) || this.layer.chunkEnd(this.chunkIndex) < UU || RU.kgU < this.FgU)) break;
-          this.chunkIndex++, gU = !1
+          let Ru = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(Ru) || this.layer.chunkEnd(this.chunkIndex) < uu || Ru.nEu < this.sEu)) break;
+          this.chunkIndex++, yu = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let tU = this.layer.chunk[this.chunkIndex].findIndex(UU - this.layer.chunkPos[this.chunkIndex], RU, !0);
-          (!gU || this.rangeIndex < tU) && this.setRangeIndex(tU)
+          let Eu = this.layer.chunk[this.chunkIndex].findIndex(uu - this.layer.chunkPos[this.chunkIndex], Ru, !0);
+          (!yu || this.rangeIndex < Eu) && this.setRangeIndex(Eu)
         }
         this.next()
       }
-      forward(UU, RU) {
-        (this.to - UU || this.endSide - RU) < 0 && this.gotoInner(UU, RU, !0)
+      forward(uu, Ru) {
+        (this.to - uu || this.endSide - Ru) < 0 && this.gotoInner(uu, Ru, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let UU = this.layer.chunkPos[this.chunkIndex],
-              RU = this.layer.chunk[this.chunkIndex],
-              gU = UU + RU.from[this.rangeIndex];
-            if (this.from = gU, this.to = UU + RU.to[this.rangeIndex], this.value = RU.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.FgU < 0 || this.value.point && this.to - this.from >= this.FgU) break
+            let uu = this.layer.chunkPos[this.chunkIndex],
+              Ru = this.layer.chunk[this.chunkIndex],
+              yu = uu + Ru.from[this.rangeIndex];
+            if (this.from = yu, this.to = uu + Ru.to[this.rangeIndex], this.value = Ru.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.sEu < 0 || this.value.point && this.to - this.from >= this.sEu) break
           }
         }
       }
-      setRangeIndex(UU) {
-        if (UU == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(uu) {
+        if (uu == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = UU
+        } else this.rangeIndex = uu
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(UU) {
-        return this.from - UU.from || this.startSide - UU.startSide || this.rank - UU.rank || this.to - UU.to || this.endSide - UU.endSide
+      compare(uu) {
+        return this.from - uu.from || this.startSide - uu.startSide || this.rank - uu.rank || this.to - uu.to || this.endSide - uu.endSide
       }
     }
-    class AR {
-      constructor(UU) {
-        this.heap = UU
+    class iR {
+      constructor(uu) {
+        this.heap = uu
       }
-      static from(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          tU = [];
-        for (let pU = 0; pU < UU.length; pU++)
-          for (let EU = UU[pU]; !EU.Lu; EU = EU.nextLayer) EU.kgU >= gU && tU.push(new iR(EU, RU, gU, pU));
-        return 1 == tU.length ? tU[0] : new AR(tU)
+      static from(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          Eu = [];
+        for (let Ku = 0; Ku < uu.length; Ku++)
+          for (let Qu = uu[Ku]; !Qu.RS; Qu = Qu.nextLayer) Qu.nEu >= yu && Eu.push(new PR(Qu, Ru, yu, Ku));
+        return 1 == Eu.length ? Eu[0] : new iR(Eu)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let gU of this.heap) gU.goto(UU, RU);
-        for (let gU = this.heap.length >> 1; gU >= 0; gU--) zR(this.heap, gU);
+      goto(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let yu of this.heap) yu.goto(uu, Ru);
+        for (let yu = this.heap.length >> 1; yu >= 0; yu--) YR(this.heap, yu);
         return this.next(), this
       }
-      forward(UU, RU) {
-        for (let gU of this.heap) gU.forward(UU, RU);
-        for (let gU = this.heap.length >> 1; gU >= 0; gU--) zR(this.heap, gU);
-        (this.to - UU || this.value.endSide - RU) < 0 && this.next()
+      forward(uu, Ru) {
+        for (let yu of this.heap) yu.forward(uu, Ru);
+        for (let yu = this.heap.length >> 1; yu >= 0; yu--) YR(this.heap, yu);
+        (this.to - uu || this.value.endSide - Ru) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let UU = this.heap[0];
-          this.from = UU.from, this.to = UU.to, this.value = UU.value, this.rank = UU.rank, UU.value && UU.next(), zR(this.heap, 0)
+          let uu = this.heap[0];
+          this.from = uu.from, this.to = uu.to, this.value = uu.value, this.rank = uu.rank, uu.value && uu.next(), YR(this.heap, 0)
         }
       }
     }
 
-    function zR(UU, RU) {
-      for (let gU = UU[RU];;) {
-        let tU = 1 + (RU << 1);
-        if (tU >= UU.length) break;
-        let pU = UU[tU];
-        if (tU + 1 < UU.length && pU.compare(UU[tU + 1]) >= 0 && (pU = UU[tU + 1], tU++), gU.compare(pU) < 0) break;
-        UU[tU] = gU, UU[RU] = pU, RU = tU
+    function YR(uu, Ru) {
+      for (let yu = uu[Ru];;) {
+        let Eu = 1 + (Ru << 1);
+        if (Eu >= uu.length) break;
+        let Ku = uu[Eu];
+        if (Eu + 1 < uu.length && Ku.compare(uu[Eu + 1]) >= 0 && (Ku = uu[Eu + 1], Eu++), yu.compare(Ku) < 0) break;
+        uu[Eu] = yu, uu[Ru] = Ku, Ru = Eu
       }
     }
-    class MR {
-      constructor(UU, RU, gU) {
-        this.FgU = gU, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = AR.from(UU, RU, gU)
+    class oR {
+      constructor(uu, Ru, yu) {
+        this.sEu = yu, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = iR.from(uu, Ru, yu)
       }
-      goto(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(UU, RU), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = UU, this.endSide = RU, this.openStart = -1, this.next(), this
+      goto(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(uu, Ru), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = uu, this.endSide = Ru, this.openStart = -1, this.next(), this
       }
-      forward(UU, RU) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - UU || this.active[this.minActive].endSide - RU) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(UU, RU)
+      forward(uu, Ru) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - uu || this.active[this.minActive].endSide - Ru) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(uu, Ru)
       }
-      removeActive(UU) {
-        NR(this.active, UU), NR(this.activeTo, UU), NR(this.activeRank, UU), this.minActive = OR(this.active, this.activeTo)
+      removeActive(uu) {
+        vR(this.active, uu), vR(this.activeTo, uu), vR(this.activeRank, uu), this.minActive = fR(this.active, this.activeTo)
       }
-      addActive(UU) {
-        let RU = 0,
+      addActive(uu) {
+        let Ru = 0,
           {
-            value: gU,
-            to: tU,
-            rank: pU
+            value: yu,
+            to: Eu,
+            rank: Ku
           } = this.cursor;
-        for (; RU < this.activeRank.length && (pU - this.activeRank[RU] || tU - this.activeTo[RU]) > 0;) RU++;
-        lR(this.active, RU, gU), lR(this.activeTo, RU, tU), lR(this.activeRank, RU, pU), UU && lR(UU, RU, this.cursor.from), this.minActive = OR(this.active, this.activeTo)
+        for (; Ru < this.activeRank.length && (Ku - this.activeRank[Ru] || Eu - this.activeTo[Ru]) > 0;) Ru++;
+        aR(this.active, Ru, yu), aR(this.activeTo, Ru, Eu), aR(this.activeRank, Ru, Ku), uu && aR(uu, Ru, this.cursor.from), this.minActive = fR(this.active, this.activeTo)
       }
       next() {
-        let UU = this.to,
-          RU = this.point;
+        let uu = this.to,
+          Ru = this.point;
         this.point = null;
-        let gU = this.openStart < 0 ? [] : null;
+        let yu = this.openStart < 0 ? [] : null;
         for (;;) {
-          let tU = this.minActive;
-          if (tU > -1 && (this.activeTo[tU] - this.cursor.from || this.active[tU].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[tU] > UU) {
-              this.to = this.activeTo[tU], this.endSide = this.active[tU].endSide;
+          let Eu = this.minActive;
+          if (Eu > -1 && (this.activeTo[Eu] - this.cursor.from || this.active[Eu].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[Eu] > uu) {
+              this.to = this.activeTo[Eu], this.endSide = this.active[Eu].endSide;
               break
             }
-            this.removeActive(tU), gU && NR(gU, tU)
+            this.removeActive(Eu), yu && vR(yu, Eu)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > UU) {
+            if (this.cursor.from > uu) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let UU = this.cursor.value;
-              if (UU.point) {
-                if (!(RU && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = UU, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = UU.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let uu = this.cursor.value;
+              if (uu.point) {
+                if (!(Ru && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = uu, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = uu.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(gU), this.cursor.next()
+              } else this.addActive(yu), this.cursor.next()
             }
           }
         }
-        if (gU) {
+        if (yu) {
           this.openStart = 0;
-          for (let RU = gU.length - 1; RU >= 0 && gU[RU] < UU; RU--) this.openStart++
+          for (let Ru = yu.length - 1; Ru >= 0 && yu[Ru] < uu; Ru--) this.openStart++
         }
       }
-      activeForPoint(UU) {
+      activeForPoint(uu) {
         if (!this.active.length) return this.active;
-        let RU = [];
-        for (let gU = this.active.length - 1; gU >= 0 && !(this.activeRank[gU] < this.pointRank); gU--)(this.activeTo[gU] > UU || this.activeTo[gU] == UU && this.active[gU].endSide >= this.point.endSide) && RU.push(this.active[gU]);
-        return RU.reverse()
+        let Ru = [];
+        for (let yu = this.active.length - 1; yu >= 0 && !(this.activeRank[yu] < this.pointRank); yu--)(this.activeTo[yu] > uu || this.activeTo[yu] == uu && this.active[yu].endSide >= this.point.endSide) && Ru.push(this.active[yu]);
+        return Ru.reverse()
       }
-      openEnd(UU) {
-        let RU = 0;
-        for (let gU = this.activeTo.length - 1; gU >= 0 && this.activeTo[gU] > UU; gU--) RU++;
-        return RU
-      }
-    }
-
-    function DR(UU, RU, gU, tU, pU, EU) {
-      UU.goto(RU), gU.goto(tU);
-      let PU = tU + pU,
-        TU = tU,
-        qU = tU - RU,
-        KU = !!EU.boundChange;
-      for (let cU = !1;;) {
-        let RU = UU.to + qU - gU.to,
-          tU = RU || UU.endSide - gU.endSide,
-          pU = tU < 0 ? UU.to + qU : gU.to,
-          GU = Math.min(pU, PU);
-        if (UU.point || gU.point ? (UU.point && gU.point && dR(UU.point, gU.point) && LR(UU.activeForPoint(UU.to), gU.activeForPoint(gU.to)) || EU.comparePoint(TU, GU, UU.point, gU.point), cU = !1) : (cU && EU.boundChange(TU), GU > TU && !LR(UU.active, gU.active) && EU.compareRange(TU, GU, UU.active, gU.active), KU && GU < PU && (RU || UU.openEnd(pU) != gU.openEnd(pU)) && (cU = !0)), pU > PU) break;
-        TU = pU, tU <= 0 && UU.next(), tU >= 0 && gU.next()
+      openEnd(uu) {
+        let Ru = 0;
+        for (let yu = this.activeTo.length - 1; yu >= 0 && this.activeTo[yu] > uu; yu--) Ru++;
+        return Ru
       }
     }
 
-    function LR(UU, RU) {
-      if (UU.length != RU.length) return !1;
-      for (let gU = 0; gU < UU.length; gU++)
-        if (UU[gU] != RU[gU] && !dR(UU[gU], RU[gU])) return !1;
+    function qR(uu, Ru, yu, Eu, Ku, Qu) {
+      uu.goto(Ru), yu.goto(Eu);
+      let mu = Eu + Ku,
+        Ju = Eu,
+        Nu = Eu - Ru,
+        Xu = !!Qu.boundChange;
+      for (let Vu = !1;;) {
+        let Ru = uu.to + Nu - yu.to,
+          Eu = Ru || uu.endSide - yu.endSide,
+          Ku = Eu < 0 ? uu.to + Nu : yu.to,
+          ru = Math.min(Ku, mu);
+        if (uu.point || yu.point ? (uu.point && yu.point && cR(uu.point, yu.point) && OR(uu.activeForPoint(uu.to), yu.activeForPoint(yu.to)) || Qu.comparePoint(Ju, ru, uu.point, yu.point), Vu = !1) : (Vu && Qu.boundChange(Ju), ru > Ju && !OR(uu.active, yu.active) && Qu.compareRange(Ju, ru, uu.active, yu.active), Xu && ru < mu && (Ru || uu.openEnd(Ku) != yu.openEnd(Ku)) && (Vu = !0)), Ku > mu) break;
+        Ju = Ku, Eu <= 0 && uu.next(), Eu >= 0 && yu.next()
+      }
+    }
+
+    function OR(uu, Ru) {
+      if (uu.length != Ru.length) return !1;
+      for (let yu = 0; yu < uu.length; yu++)
+        if (uu[yu] != Ru[yu] && !cR(uu[yu], Ru[yu])) return !1;
       return !0
     }
 
-    function NR(UU, RU) {
-      for (let gU = RU, tU = UU.length - 1; gU < tU; gU++) UU[gU] = UU[gU + 1];
-      UU.pop()
+    function vR(uu, Ru) {
+      for (let yu = Ru, Eu = uu.length - 1; yu < Eu; yu++) uu[yu] = uu[yu + 1];
+      uu.pop()
     }
 
-    function lR(UU, RU, gU) {
-      for (let tU = UU.length - 1; tU >= RU; tU--) UU[tU + 1] = UU[tU];
-      UU[RU] = gU
+    function aR(uu, Ru, yu) {
+      for (let Eu = uu.length - 1; Eu >= Ru; Eu--) uu[Eu + 1] = uu[Eu];
+      uu[Ru] = yu
     }
 
-    function OR(UU, RU) {
-      let gU = -1,
-        tU = 1e9;
-      for (let pU = 0; pU < RU.length; pU++)(RU[pU] - tU || UU[pU].endSide - UU[gU].endSide) < 0 && (gU = pU, tU = RU[pU]);
-      return gU
+    function fR(uu, Ru) {
+      let yu = -1,
+        Eu = 1e9;
+      for (let Ku = 0; Ku < Ru.length; Ku++)(Ru[Ku] - Eu || uu[Ku].endSide - uu[yu].endSide) < 0 && (yu = Ku, Eu = Ru[Ku]);
+      return yu
     }
 
-    function Ug(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : UU.length,
-        tU = 0;
-      for (let pU = 0; pU < gU && pU < UU.length;) 9 == UU.charCodeAt(pU) ? (tU += RU - tU % RU, pU++) : (tU++, pU = nU(UU, pU));
-      return tU
+    function uy(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uu.length,
+        Eu = 0;
+      for (let Ku = 0; Ku < yu && Ku < uu.length;) 9 == uu.charCodeAt(Ku) ? (Eu += Ru - Eu % Ru, Ku++) : (Eu++, Ku = Au(uu, Ku));
+      return Eu
     }
 
-    function Rg(UU, RU, gU, tU) {
-      for (let pU = 0, EU = 0;;) {
-        if (EU >= RU) return pU;
-        if (pU == UU.length) break;
-        EU += 9 == UU.charCodeAt(pU) ? gU - EU % gU : 1, pU = nU(UU, pU)
+    function Ry(uu, Ru, yu, Eu) {
+      for (let Ku = 0, Qu = 0;;) {
+        if (Qu >= Ru) return Ku;
+        if (Ku == uu.length) break;
+        Qu += 9 == uu.charCodeAt(Ku) ? yu - Qu % yu : 1, Ku = Au(uu, Ku)
       }
-      return !0 === tU ? -1 : UU.length
+      return !0 === Eu ? -1 : uu.length
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

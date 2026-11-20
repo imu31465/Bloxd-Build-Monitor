@@ -1,272 +1,272 @@
 export const id = 75;
 export const ids = [75, 91];
 export const modules = {
-    4487: (UU, RU, gU) => {
-      gU.d(RU, {
-        d: () => QU,
-        e: () => eU
+    4598: (uu, Ru, yu) => {
+      yu.d(Ru, {
+        b: () => Tu,
+        e: () => Wu
       });
-      var tU = gU(1037),
-        pU = gU.n(tU),
-        EU = gU(56),
-        PU = gU(1181),
-        TU = gU(4495),
-        qU = gU(1777),
-        KU = gU(2254),
-        cU = gU(4501),
-        GU = gU(1090);
-      const jU = new WeakMap;
-      let uU = 0;
+      var Eu = yu(1035),
+        Ku = yu.n(Eu),
+        Qu = yu(64),
+        mu = yu(1170),
+        Ju = yu(4604),
+        Nu = yu(1825),
+        Xu = yu(2335),
+        Vu = yu(4611),
+        ru = yu(1079);
+      const Bu = new WeakMap;
+      let xu = 0;
 
-      function CU(UU) {
-        let RU = jU.get(UU);
-        return void 0 === RU && (RU = uU++, jU.set(UU, RU)), RU
+      function Su(uu) {
+        let Ru = Bu.get(uu);
+        return void 0 === Ru && (Ru = xu++, Bu.set(uu, Ru)), Ru
       }
 
-      function hU(UU) {
+      function pu(uu) {
         let {
-          piece: RU
-        } = UU;
-        return "space" === RU.kind ? (0, GU.jsx)(GU.Fragment, {
-          children: RU.text
-        }) : (0, GU.jsx)("span", {
+          piece: Ru
+        } = uu;
+        return "space" === Ru.kind ? (0, ru.jsx)(ru.Fragment, {
+          children: Ru.text
+        }) : (0, ru.jsx)("span", {
           className: "DialogueWord",
           style: {
-            "--word-delay": `${RU.delayMs}ms`
+            "--word-delay": `${Ru.delayMs}ms`
           },
-          children: (0, GU.jsx)(TU.c, {
-            text: "icon" === RU.kind ? `[[${RU.icon}]]` : RU.text
+          children: (0, ru.jsx)(Ju.c, {
+            text: "icon" === Ru.kind ? `[[${Ru.icon}]]` : Ru.text
           })
         })
       }
 
-      function QU(UU) {
+      function Tu(uu) {
         let {
-          display: RU
-        } = UU;
+          display: Ru
+        } = uu;
         const {
-          selectedLanguage: gU
-        } = (0, PU.B)(), tU = (0, EU.useMemo)((() => (0, cU.b)((0, cU.c)(RU).plan.pieces)), [RU, gU.code]);
-        return (0, GU.jsxs)("div", {
-          className: pU()("Dialogue", {
-            DialogueAnimateIn: !1 !== RU.animateIn
+          selectedLanguage: yu
+        } = (0, mu.E)(), Eu = (0, Qu.useMemo)((() => (0, Vu.d)((0, Vu.g)(Ru).plan.pieces)), [Ru, yu.code]);
+        return (0, ru.jsxs)("div", {
+          className: Ku()("Dialogue", {
+            DialogueAnimateIn: !1 !== Ru.animateIn
           }),
-          children: [RU.speakerName && (0, GU.jsx)(qU.e, {
-            text: RU.speakerName,
+          children: [Ru.speakerName && (0, ru.jsx)(Nu.d, {
+            text: Ru.speakerName,
             className: "DialogueSpeaker"
-          }), (0, GU.jsx)("p", {
+          }), (0, ru.jsx)("p", {
             className: "DialogueLine",
-            children: tU.map(((UU, RU) => 1 === UU.length && "space" === UU[0].kind ? UU[0].text : (0, GU.jsx)("span", {
+            children: Eu.map(((uu, Ru) => 1 === uu.length && "space" === uu[0].kind ? uu[0].text : (0, ru.jsx)("span", {
               className: "DialogueGlue",
-              children: UU.map(((UU, RU) => (0, GU.jsx)(hU, {
-                piece: UU
-              }, RU)))
-            }, RU)))
+              children: uu.map(((uu, Ru) => (0, ru.jsx)(pu, {
+                piece: uu
+              }, Ru)))
+            }, Ru)))
           })]
         })
       }
-      const eU = (0, EU.memo)((function() {
-        const UU = (0, KU.g)("dialogue");
-        return (0, GU.jsx)("div", {
+      const Wu = (0, Qu.memo)((function() {
+        const uu = (0, Xu.g)("dialogue");
+        return (0, ru.jsx)("div", {
           className: "DialogueAnchor",
           "data-camera-keeper": "",
           role: "status",
           "aria-live": "polite",
           "aria-atomic": "true",
-          children: UU && (0, GU.jsx)(QU, {
-            display: UU
-          }, CU(UU))
+          children: uu && (0, ru.jsx)(Tu, {
+            display: uu
+          }, Su(uu))
         })
       }))
     },
-    4360: (UU, RU, gU) => {
-        gU.r(RU), gU.d(RU, {
-          default: () => UP
+    4475: (uu, Ru, yu) => {
+        yu.r(Ru), yu.d(Ru, {
+          default: () => aQ
         });
-        var tU = gU(56),
-          pU = gU(1037),
-          EU = gU.n(pU),
-          PU = gU(1479),
-          TU = gU(1481),
-          qU = gU(21),
-          KU = gU(74),
-          cU = gU(4365),
-          GU = gU(4378),
-          jU = gU(4387),
-          uU = gU(4037),
-          CU = gU(1090);
-        const hU = "/textures/docs/icons";
+        var Eu = yu(64),
+          Ku = yu(1035),
+          Qu = yu.n(Ku),
+          mu = yu(1476),
+          Ju = yu(1483),
+          Nu = yu(27),
+          Xu = yu(80),
+          Vu = yu(4484),
+          ru = yu(4499),
+          Bu = yu(4507),
+          xu = yu(4134),
+          Su = yu(1079);
+        const pu = "/textures/docs/icons";
 
-        function QU(UU) {
+        function Tu(uu) {
           let {
-            name: RU,
-            isTinted: gU,
-            className: tU,
-            style: pU
-          } = UU;
-          const PU = `${hU}/${RU}.png`;
-          return gU ? (0, CU.jsxs)("span", {
-            className: EU()("DocsPixelIcon", "Tinted", tU),
+            name: Ru,
+            isTinted: yu,
+            className: Eu,
+            style: Ku
+          } = uu;
+          const mu = `${pu}/${Ru}.png`;
+          return yu ? (0, Su.jsxs)("span", {
+            className: Qu()("DocsPixelIcon", "Tinted", Eu),
             "aria-hidden": "true",
-            style: pU,
-            children: [(0, CU.jsx)("span", {
+            style: Ku,
+            children: [(0, Su.jsx)("span", {
               className: "DocsPixelIconTint",
               style: {
-                maskImage: `url("${PU}")`,
-                WebkitMaskImage: `url("${PU}")`
+                maskImage: `url("${mu}")`,
+                WebkitMaskImage: `url("${mu}")`
               }
-            }), (0, CU.jsx)("img", {
-              src: PU,
+            }), (0, Su.jsx)("img", {
+              src: mu,
               alt: ""
             })]
-          }) : (0, CU.jsx)("img", {
-            className: EU()("DocsPixelIcon", tU),
-            src: PU,
+          }) : (0, Su.jsx)("img", {
+            className: Qu()("DocsPixelIcon", Eu),
+            src: mu,
             alt: "",
             "aria-hidden": "true",
-            style: pU
+            style: Ku
           })
         }
-        const eU = 1500;
+        const Wu = 1500;
 
-        function WU() {
-          const [UU, RU] = (0, tU.useState)(null);
-          (0, tU.useEffect)((() => {
-            if (null === UU) return;
-            const gU = setTimeout((() => {
-              RU(null)
-            }), eU);
+        function ju() {
+          const [uu, Ru] = (0, Eu.useState)(null);
+          (0, Eu.useEffect)((() => {
+            if (null === uu) return;
+            const yu = setTimeout((() => {
+              Ru(null)
+            }), Wu);
             return () => {
-              clearTimeout(gU)
+              clearTimeout(yu)
             }
-          }), [UU]);
-          return [UU, UU => {
-            (0, uU.e)(UU).then((() => {
-              RU({
-                text: UU,
+          }), [uu]);
+          return [uu, uu => {
+            (0, xu.c)(uu).then((() => {
+              Ru({
+                text: uu,
                 failed: !1
               })
-            }), (gU => {
-              console.error("Could not copy to the clipboard", gU), RU({
-                text: UU,
+            }), (yu => {
+              console.error("Could not copy to the clipboard", yu), Ru({
+                text: uu,
                 failed: !0
               })
             }))
           }]
         }
 
-        function fU(UU) {
+        function Hu(uu) {
           let {
-            text: RU,
-            label: gU,
-            className: tU
-          } = UU;
-          const [pU, PU] = WU(), TU = !1 === (null === pU || void 0 === pU ? void 0 : pU.failed);
-          return (0, CU.jsxs)("button", {
+            text: Ru,
+            label: yu,
+            className: Eu
+          } = uu;
+          const [Ku, mu] = ju(), Ju = !1 === (null === Ku || void 0 === Ku ? void 0 : Ku.failed);
+          return (0, Su.jsxs)("button", {
             type: "button",
-            className: EU()("DocsCopyButton", tU, {
-              Copied: TU
+            className: Qu()("DocsCopyButton", Eu, {
+              Copied: Ju
             }),
-            title: `Copy ${RU.length>40?"to clipboard":RU}`,
-            "aria-label": gU ? void 0 : `Copy ${RU}`,
-            onClick: UU => {
-              UU.stopPropagation(), PU(RU)
+            title: `Copy ${Ru.length>40?"to clipboard":Ru}`,
+            "aria-label": yu ? void 0 : `Copy ${Ru}`,
+            onClick: uu => {
+              uu.stopPropagation(), mu(Ru)
             },
-            children: [(0, CU.jsx)(QU, {
-              name: TU ? "check" : "copy"
-            }), gU && (0, CU.jsx)("span", {
-              children: TU ? "Copied" : null !== pU && void 0 !== pU && pU.failed ? "Copy failed" : gU
+            children: [(0, Su.jsx)(Tu, {
+              name: Ju ? "check" : "copy"
+            }), yu && (0, Su.jsx)("span", {
+              children: Ju ? "Copied" : null !== Ku && void 0 !== Ku && Ku.failed ? "Copy failed" : yu
             })]
           })
         }
-        cU.d.registerLanguage("javascript", GU.b), cU.d.registerLanguage("typescript", jU.c);
-        const xU = {
+        Vu.c.registerLanguage("javascript", ru.b), Vu.c.registerLanguage("typescript", Bu.c);
+        const du = {
             js: "javascript",
             ts: "typescript",
             javascript: "javascript",
             typescript: "typescript"
           },
-          mU = {
+          bu = {
             javascript: "JavaScript",
             typescript: "TypeScript"
           },
-          IU = 24;
+          Cu = 24;
 
-        function JU(UU) {
+        function ku(uu) {
           let {
-            code: RU,
-            lang: gU,
-            compact: pU = !1
-          } = UU;
-          const PU = (0, tU.useMemo)((() => function(UU, RU) {
-              const gU = xU[RU];
-              return gU ? cU.d.highlight(UU, {
-                language: gU
-              }).value : UU.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-            }(RU, gU)), [RU, gU]),
-            TU = RU.split("\n").length,
-            qU = !pU && TU > IU + 6,
-            [KU, GU] = (0, tU.useState)(!1),
-            jU = xU[gU];
-          return (0, CU.jsxs)("div", {
-            className: EU()("DocsCodeBlock", {
-              Compact: pU,
-              Collapsed: qU && !KU
+            code: Ru,
+            lang: yu,
+            compact: Ku = !1
+          } = uu;
+          const mu = (0, Eu.useMemo)((() => function(uu, Ru) {
+              const yu = du[Ru];
+              return yu ? Vu.c.highlight(uu, {
+                language: yu
+              }).value : uu.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+            }(Ru, yu)), [Ru, yu]),
+            Ju = Ru.split("\n").length,
+            Nu = !Ku && Ju > Cu + 6,
+            [Xu, ru] = (0, Eu.useState)(!1),
+            Bu = du[yu];
+          return (0, Su.jsxs)("div", {
+            className: Qu()("DocsCodeBlock", {
+              Compact: Ku,
+              Collapsed: Nu && !Xu
             }),
-            children: [!pU && (0, CU.jsxs)("div", {
+            children: [!Ku && (0, Su.jsxs)("div", {
               className: "DocsCodeBlockHeader",
-              children: [(0, CU.jsx)("span", {
+              children: [(0, Su.jsx)("span", {
                 className: "DocsCodeBlockLanguage",
-                children: jU ? mU[jU] : "Text"
-              }), (0, CU.jsx)(fU, {
-                text: RU,
+                children: Bu ? bu[Bu] : "Text"
+              }), (0, Su.jsx)(Hu, {
+                text: Ru,
                 label: "Copy"
               })]
-            }), (0, CU.jsx)("pre", {
-              children: (0, CU.jsx)("code", {
+            }), (0, Su.jsx)("pre", {
+              children: (0, Su.jsx)("code", {
                 className: "hljs",
                 dangerouslySetInnerHTML: {
-                  __html: PU
+                  __html: mu
                 }
               })
-            }), qU && (0, CU.jsxs)("button", {
+            }), Nu && (0, Su.jsxs)("button", {
               type: "button",
               className: "DocsCodeBlockExpand",
-              "aria-expanded": KU,
+              "aria-expanded": Xu,
               onClick: () => {
-                GU(!KU)
+                ru(!Xu)
               },
-              children: [(0, CU.jsx)(QU, {
-                name: KU ? "chevron-up" : "chevron-down"
-              }), KU ? "Show less" : `Show all ${TU} lines`]
+              children: [(0, Su.jsx)(Tu, {
+                name: Xu ? "chevron-up" : "chevron-down"
+              }), Xu ? "Show less" : `Show all ${Ju} lines`]
             })]
           })
         }
-        var wU = gU(4396);
-        var nU = gU(4405);
-        const bU = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
+        var eu = yu(4511);
+        var Au = yu(4513);
+        const Du = /^(?:export\s+)?(?:declare\s+)?(?:type|interface|enum|const enum)\s+([A-Za-z_$][\w$]*)/;
 
-        function oU(UU) {
-          const RU = new Map;
-          let gU, tU = [],
-            pU = !1;
-          const EU = () => {
-            gU && RU.set(gU.name, gU.lines.join("\n").trimEnd())
+        function Mu(uu) {
+          const Ru = new Map;
+          let yu, Eu = [],
+            Ku = !1;
+          const Qu = () => {
+            yu && Ru.set(yu.name, yu.lines.join("\n").trimEnd())
           };
-          for (const PU of UU.split("\n")) {
-            const UU = PU.match(bU);
-            pU || PU.startsWith("/*") ? (pU || (EU(), gU = void 0), tU.push(PU), pU = !PU.includes("*/")) : UU ? (EU(), gU = {
-              name: UU[1],
-              lines: [...tU, PU]
-            }, tU = []) : gU && (PU.startsWith(" ") || PU.startsWith("\t") || /^[}\])|]/.test(PU)) ? gU.lines.push(PU) : gU && "" !== PU.trim() && (EU(), gU = void 0)
+          for (const mu of uu.split("\n")) {
+            const uu = mu.match(Du);
+            Ku || mu.startsWith("/*") ? (Ku || (Qu(), yu = void 0), Eu.push(mu), Ku = !mu.includes("*/")) : uu ? (Qu(), yu = {
+              name: uu[1],
+              lines: [...Eu, mu]
+            }, Eu = []) : yu && (mu.startsWith(" ") || mu.startsWith("\t") || /^[}\])|]/.test(mu)) ? yu.lines.push(mu) : yu && "" !== mu.trim() && (Qu(), yu = void 0)
           }
-          return EU(), RU
+          return Qu(), Ru
         }
 
-        function ZU(UU) {
-          return "methods" === UU || "callbacks" === UU || "settings" === UU
+        function Iu(uu) {
+          return "methods" === uu || "callbacks" === uu || "settings" === uu
         }
-        const aU = {
+        const Gu = {
             readme: {
               icon: "code-block",
               summary: "Code blocks, boards and World Code, and the globals your code can use.",
@@ -302,25 +302,25 @@ export const modules = {
               icon: "player",
               summary: "Per-player options such as speed, health and camera.",
               layout: "settings",
-              setterSnippet: (UU, RU) => `api.setClientOption(playerId, "${UU}", ${RU})`
+              setterSnippet: (uu, Ru) => `api.setClientOption(playerId, "${uu}", ${Ru})`
             },
             entitySettings: {
               icon: "eye",
               summary: "How one player sees and interacts with another entity.",
               layout: "settings",
-              setterSnippet: (UU, RU) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${UU}", ${RU})`
+              setterSnippet: (uu, Ru) => `api.setOtherEntitySetting(playerId, targetedEntityId, "${uu}", ${Ru})`
             },
             mobSettings: {
               icon: "mob",
               summary: "Health, movement, combat and AI settings for mobs.",
               layout: "settings",
-              setterSnippet: (UU, RU) => `api.setMobSetting(mobId, "${UU}", ${RU})`
+              setterSnippet: (uu, Ru) => `api.setMobSetting(mobId, "${uu}", ${Ru})`
             },
             vehicleSettings: {
               icon: "car",
               summary: "Movement, physics and camera settings for vehicles.",
               layout: "settings",
-              setterSnippet: (UU, RU) => `api.setVehicleSetting(vehicleId, "${UU}", ${RU})`
+              setterSnippet: (uu, Ru) => `api.setVehicleSetting(vehicleId, "${uu}", ${Ru})`
             },
             meshEntities: {
               icon: "mesh",
@@ -377,7 +377,7 @@ export const modules = {
               gallery: "items"
             }
           },
-          YU = {
+          Uu = {
             Variations: {
               icon: "layers",
               summary: "Alternate versions of a custom game, and matchmaking players between them."
@@ -404,20 +404,20 @@ export const modules = {
             }
           };
 
-        function BU(UU) {
-          return UU.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
+        function nu(uu) {
+          return uu.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "")
         }
 
-        function VU(UU) {
-          let RU = !1;
-          return UU.split("\n").map((UU => (UU.startsWith("```") && (RU = !RU), !RU && /^#{3,} /.test(UU) ? UU.slice(1) : UU))).join("\n")
+        function su(uu) {
+          let Ru = !1;
+          return uu.split("\n").map((uu => (uu.startsWith("```") && (Ru = !Ru), !Ru && /^#{3,} /.test(uu) ? uu.slice(1) : uu))).join("\n")
         }
 
-        function rU(UU) {
-          return "readme" === UU ? "getting-started" : BU(UU)
+        function tu(uu) {
+          return "readme" === uu ? "getting-started" : nu(uu)
         }
-        const XU = "## Glossary of Referenced Types";
-        const vU = [{
+        const lu = "## Glossary of Referenced Types";
+        const gu = [{
             id: "welcome",
             slug: "",
             title: "Welcome",
@@ -425,28 +425,28 @@ export const modules = {
             summary: "Run JavaScript in Bloxd, from a single block to a whole custom game.",
             layout: "article",
             markdown: "# Welcome to the Bloxd Code API\n\nWrite JavaScript that runs inside Bloxd: make a block launch players into the sky, give your world its own shop, or build a whole custom game with rounds, teams and a winner.\n\n## New to coding in Bloxd?\n\nStart with [Getting started](#readme), which explains code blocks, boards and World Code, and where each one runs. Then copy something from [Snippets](#snippets) into a code block and change it to see what happens.\n\n## Building a game\n\n[Callbacks](#callbacks) let your World Code react to players joining, chatting, breaking blocks and more. The [How-Tos](#howTo) walk through bigger features step by step, from plugins to a complete team game.\n\n## Looking something up\n\nThe [API Reference](#apiReference) lists every method on `api`. Settings for players, entities, mobs and vehicles each have their own page, and the Assets pages list every block, item, sound, particle, icon and skin name you can use. Press Ctrl K, or \u2318 K on a Mac, to search all of it.\n\n## What's new\n\nThe [Changelog](#changelog) lists what has changed in the Code API, newest first.\n\n## Get help\n\nAsk questions, report problems and suggest features on [our Discord](https://discord.gg/playbloxd)."
-          }, ...nU.e.flatMap((UU => {
-            const RU = {
-              id: UU.id,
-              slug: rU(UU.id),
-              title: UU.title,
-              markdown: UU.content,
-              ...aU[UU.id]
+          }, ...Au.c.flatMap((uu => {
+            const Ru = {
+              id: uu.id,
+              slug: tu(uu.id),
+              title: uu.title,
+              markdown: uu.content,
+              ...Gu[uu.id]
             };
-            if ("readme" === UU.id) return function(UU) {
-              const RU = UU.markdown.indexOf(XU),
-                gU = UU.markdown.indexOf("\n```", RU),
-                tU = UU.markdown.indexOf("\n```", gU + 1);
-              if (-1 === RU || -1 === gU || -1 === tU) throw new Error(`Getting started has no "${XU}" section with a code block`);
-              const pU = UU.markdown.slice(RU + 31, gU).trim(),
-                EU = [...oU(UU.markdown.slice(UU.markdown.indexOf("\n", gU + 1) + 1, tU))].map((UU => {
-                  let [RU, gU] = UU;
-                  return `## ${RU}\n\n\`\`\`ts\n${gU}\n\`\`\`\n`
+            if ("readme" === uu.id) return function(uu) {
+              const Ru = uu.markdown.indexOf(lu),
+                yu = uu.markdown.indexOf("\n```", Ru),
+                Eu = uu.markdown.indexOf("\n```", yu + 1);
+              if (-1 === Ru || -1 === yu || -1 === Eu) throw new Error(`Getting started has no "${lu}" section with a code block`);
+              const Ku = uu.markdown.slice(Ru + 31, yu).trim(),
+                Qu = [...Mu(uu.markdown.slice(uu.markdown.indexOf("\n", yu + 1) + 1, Eu))].map((uu => {
+                  let [Ru, yu] = uu;
+                  return `## ${Ru}\n\n\`\`\`ts\n${yu}\n\`\`\`\n`
                 })),
-                PU = UU.markdown.slice(UU.markdown.indexOf("\n", tU + 1) + 1);
+                mu = uu.markdown.slice(uu.markdown.indexOf("\n", Eu + 1) + 1);
               return [{
-                ...UU,
-                markdown: `${UU.markdown.slice(0,RU)}${PU}`
+                ...uu,
+                markdown: `${uu.markdown.slice(0,Ru)}${mu}`
               }, {
                 id: "types",
                 slug: "types",
@@ -454,57 +454,57 @@ export const modules = {
                 icon: "tag",
                 summary: "The types the API Reference's parameters and return values refer to.",
                 layout: "article",
-                markdown: `# Types\n\n${pU}\n\n${EU.join("\n")}`
+                markdown: `# Types\n\n${Ku}\n\n${Qu.join("\n")}`
               }]
-            }(RU);
-            if ("howTo" === UU.id) {
+            }(Ru);
+            if ("howTo" === uu.id) {
               const {
-                parent: UU,
-                guides: gU
-              } = function(UU) {
-                const [RU, ...gU] = UU.markdown.split(/^(?=## )/m), tU = [RU], pU = [];
-                for (const PU of gU) {
-                  var EU;
-                  const RU = PU.indexOf("\n"),
-                    gU = PU.slice(3, RU).trim(),
-                    TU = PU.slice(RU + 1);
-                  if (!TU.includes("```")) {
-                    tU.push(PU);
+                parent: uu,
+                guides: yu
+              } = function(uu) {
+                const [Ru, ...yu] = uu.markdown.split(/^(?=## )/m), Eu = [Ru], Ku = [];
+                for (const mu of yu) {
+                  var Qu;
+                  const Ru = mu.indexOf("\n"),
+                    yu = mu.slice(3, Ru).trim(),
+                    Ju = mu.slice(Ru + 1);
+                  if (!Ju.includes("```")) {
+                    Eu.push(mu);
                     continue
                   }
-                  const qU = null !== (EU = YU[gU]) && void 0 !== EU ? EU : {
+                  const Nu = null !== (Qu = Uu[yu]) && void 0 !== Qu ? Qu : {
                     icon: "lightbulb",
-                    summary: `How to use ${gU.toLowerCase()} in World Code.`
+                    summary: `How to use ${yu.toLowerCase()} in World Code.`
                   };
-                  pU.push({
-                    id: `${UU.id}${gU.split(/[^A-Za-z0-9]+/).map((UU=>UU.charAt(0).toUpperCase()+UU.slice(1))).join("")}`,
-                    slug: `${UU.slug}-${BU(gU)}`,
-                    title: gU,
+                  Ku.push({
+                    id: `${uu.id}${yu.split(/[^A-Za-z0-9]+/).map((uu=>uu.charAt(0).toUpperCase()+uu.slice(1))).join("")}`,
+                    slug: `${uu.slug}-${nu(yu)}`,
+                    title: yu,
                     layout: "article",
-                    sourceAnchor: (0, wU.n)(gU),
-                    markdown: `# ${gU}\n\n${VU(TU)}`,
-                    ...qU
+                    sourceAnchor: (0, eu.l)(yu),
+                    markdown: `# ${yu}\n\n${su(Ju)}`,
+                    ...Nu
                   })
                 }
                 return {
                   parent: {
-                    ...UU,
-                    markdown: tU.join(""),
-                    childPageIds: pU.map((UU => UU.id))
+                    ...uu,
+                    markdown: Eu.join(""),
+                    childPageIds: Ku.map((uu => uu.id))
                   },
-                  guides: pU
+                  guides: Ku
                 }
-              }(RU);
-              return [UU, ...gU]
+              }(Ru);
+              return [uu, ...yu]
             }
-            return [RU]
+            return [Ru]
           }))],
-          dU = [{
+          cu = [{
             title: "Get started",
             pageIds: ["welcome", "readme", "snippets", "changelog"]
           }, {
             title: "How-Tos",
-            pageIds: ["howTo", ...vU.filter((UU => void 0 !== UU.sourceAnchor)).map((UU => UU.id))]
+            pageIds: ["howTo", ...gu.filter((uu => void 0 !== uu.sourceAnchor)).map((uu => uu.id))]
           }, {
             title: "Reference",
             pageIds: ["apiReference", "callbacks", "clientOptions", "types"]
@@ -519,42 +519,42 @@ export const modules = {
             pageIds: ["particles", "sounds", "icons", "skins", "blockNames", "itemNames"]
           }];
 
-        function HU(UU) {
-          return vU.find((RU => RU.id === UU))
+        function Lu(uu) {
+          return gu.find((Ru => Ru.id === uu))
         }
-        const SU = new Map;
+        const zu = new Map;
 
-        function sU(UU) {
-          let RU = SU.get(UU.id);
-          return RU || (RU = (0, wU.q)(UU.markdown, "changelog" === UU.layout ? 3 : 2), SU.set(UU.id, RU)), RU
-        }
-
-        function yU(UU, RU) {
-          return sU(UU).sections.some((UU => UU.heading.anchor === RU || UU.blocks.some((UU => "heading" === UU.kind && UU.anchor === RU))))
+        function Fu(uu) {
+          let Ru = zu.get(uu.id);
+          return Ru || (Ru = (0, eu.s)(uu.markdown, "changelog" === uu.layout ? 3 : 2), zu.set(uu.id, Ru)), Ru
         }
 
-        function kU(UU) {
-          const [RU, ...gU] = UU.replace(/^#/, "").split("-"), tU = vU.find((UU => UU.id === RU));
-          if (!tU) return null;
-          const pU = gU.length > 0 ? (0, wU.n)(gU.join("-")) : "";
-          for (const PU of null !== (EU = tU.childPageIds) && void 0 !== EU ? EU : []) {
-            var EU;
-            const UU = HU(PU);
-            if (UU.sourceAnchor === pU) return {
-              page: UU,
+        function wu(uu, Ru) {
+          return Fu(uu).sections.some((uu => uu.heading.anchor === Ru || uu.blocks.some((uu => "heading" === uu.kind && uu.anchor === Ru))))
+        }
+
+        function Zu(uu) {
+          const [Ru, ...yu] = uu.replace(/^#/, "").split("-"), Eu = gu.find((uu => uu.id === Ru));
+          if (!Eu) return null;
+          const Ku = yu.length > 0 ? (0, eu.l)(yu.join("-")) : "";
+          for (const mu of null !== (Qu = Eu.childPageIds) && void 0 !== Qu ? Qu : []) {
+            var Qu;
+            const uu = Lu(mu);
+            if (uu.sourceAnchor === Ku) return {
+              page: uu,
               anchor: ""
             };
-            if (yU(UU, pU)) return {
-              page: UU,
-              anchor: pU
+            if (wu(uu, Ku)) return {
+              page: uu,
+              anchor: Ku
             }
           }
           return {
-            page: tU,
-            anchor: pU
+            page: Eu,
+            anchor: Ku
           }
         }
-        const FU = {
+        const hu = {
           Examples: {
             pageId: "snippets",
             anchor: ""
@@ -569,182 +569,182 @@ export const modules = {
           }
         };
 
-        function iU(UU, RU) {
-          let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const tU = RU.slug ? `${UU}/${RU.slug}` : UU;
-          return gU ? `${tU}#${gU}` : tU
+        function Pu(uu, Ru) {
+          let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const Eu = Ru.slug ? `${uu}/${Ru.slug}` : uu;
+          return yu ? `${Eu}#${yu}` : Eu
         }
-        var AU = gU(4417);
-        const zU = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
-          MU = new Set(["GameApi", "Console", "_TypeOf"]),
-          DU = 4;
+        var iu = yu(4532);
+        const Yu = /^export\s+(?:declare\s+)?(?:type|interface|enum|const enum|class)\s+([A-Za-z_$][\w$]*)/,
+          ou = new Set(["GameApi", "Console", "_TypeOf"]),
+          qu = 4;
 
-        function LU(UU) {
-          let RU = UU.length;
-          for (; RU > 0 && "" === UU[RU - 1].trim();) RU--;
-          return UU.slice(0, RU)
+        function Ou(uu) {
+          let Ru = uu.length;
+          for (; Ru > 0 && "" === uu[Ru - 1].trim();) Ru--;
+          return uu.slice(0, Ru)
         }
 
-        function NU(UU) {
-          var RU;
-          const gU = LU(UU);
-          if (null === (RU = gU.at(-1)) || void 0 === RU || !RU.trimEnd().endsWith("*/")) return {
-            lines: gU,
+        function vu(uu) {
+          var Ru;
+          const yu = Ou(uu);
+          if (null === (Ru = yu.at(-1)) || void 0 === Ru || !Ru.trimEnd().endsWith("*/")) return {
+            lines: yu,
             doc: ""
           };
-          const tU = gU.findLastIndex((UU => UU.startsWith("/**")));
-          return -1 === tU ? {
-            lines: gU,
+          const Eu = yu.findLastIndex((uu => uu.startsWith("/**")));
+          return -1 === Eu ? {
+            lines: yu,
             doc: ""
           } : {
-            lines: LU(gU.slice(0, tU)),
-            doc: gU.slice(tU).join("\n")
+            lines: Ou(yu.slice(0, Eu)),
+            doc: yu.slice(Eu).join("\n")
           }
         }
 
-        function lU(UU) {
-          var RU;
-          const gU = UU.split("\n"),
-            tU = gU.flatMap(((UU, RU) => zU.test(UU) ? [RU] : []));
-          let pU = NU(gU.slice(0, null !== (RU = tU[0]) && void 0 !== RU ? RU : gU.length)).doc;
-          return tU.map(((UU, RU) => {
-            var EU;
-            const PU = NU(gU.slice(UU, null !== (EU = tU[RU + 1]) && void 0 !== EU ? EU : gU.length)),
-              TU = {
-                name: gU[UU].match(zU)[1],
-                doc: pU,
-                lines: PU.lines
+        function au(uu) {
+          var Ru;
+          const yu = uu.split("\n"),
+            Eu = yu.flatMap(((uu, Ru) => Yu.test(uu) ? [Ru] : []));
+          let Ku = vu(yu.slice(0, null !== (Ru = Eu[0]) && void 0 !== Ru ? Ru : yu.length)).doc;
+          return Eu.map(((uu, Ru) => {
+            var Qu;
+            const mu = vu(yu.slice(uu, null !== (Qu = Eu[Ru + 1]) && void 0 !== Qu ? Qu : yu.length)),
+              Ju = {
+                name: yu[uu].match(Yu)[1],
+                doc: Ku,
+                lines: mu.lines
               };
-            return pU = PU.doc, TU
+            return Ku = mu.doc, Ju
           }))
         }
 
-        function OU(UU) {
-          var RU;
-          const gU = UU.match(/^readonly \[([\s\S]*)\]$/);
-          return gU ? null !== (RU = gU[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== RU ? RU : [] : null
+        function fu(uu) {
+          var Ru;
+          const yu = uu.match(/^readonly \[([\s\S]*)\]$/);
+          return yu ? null !== (Ru = yu[1].match(/"(?:[^"\\]|\\.)*"/g)) && void 0 !== Ru ? Ru : [] : null
         }
 
-        function UR(UU) {
-          if (!UU.startsWith("{") || !UU.endsWith("}")) return null;
-          const RU = {
+        function uR(uu) {
+          if (!uu.startsWith("{") || !uu.endsWith("}")) return null;
+          const Ru = {
               keys: [],
               values: []
             },
-            gU = UU => {
-              const gU = UU.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
-              gU && (RU.keys.push(gU[1].startsWith('"') ? gU[1] : `"${gU[1]}"`), RU.values.push(gU[2].trim()))
+            yu = uu => {
+              const yu = uu.trim().match(/^(?:readonly\s+)?("[^"]*"|[\w$]+)\??:\s*([\s\S]*)$/);
+              yu && (Ru.keys.push(yu[1].startsWith('"') ? yu[1] : `"${yu[1]}"`), Ru.values.push(yu[2].trim()))
             };
-          let tU = 0,
-            pU = "";
-          for (const EU of UU.slice(1, -1)) "{[(".includes(EU) ? tU++ : "}])".includes(EU) && tU--, ";" === EU && 0 === tU ? (gU(pU), pU = "") : pU += EU;
-          return gU(pU), RU
+          let Eu = 0,
+            Ku = "";
+          for (const Qu of uu.slice(1, -1)) "{[(".includes(Qu) ? Eu++ : "}])".includes(Qu) && Eu--, ";" === Qu && 0 === Eu ? (yu(Ku), Ku = "") : Ku += Qu;
+          return yu(Ku), Ru
         }
 
-        function RR(UU) {
-          return UU.length > DU ? `\n\t| ${UU.join("\n\t| ")}` : UU.join(" | ")
+        function RR(uu) {
+          return uu.length > qu ? `\n\t| ${uu.join("\n\t| ")}` : uu.join(" | ")
         }
 
-        function gR(UU, RU) {
-          const gU = function(UU, RU) {
-            return UU.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((UU, gU) => {
-              var tU;
-              const pU = null === (tU = RU.get(gU)) || void 0 === tU ? void 0 : tU.object;
-              return pU ? RR(pU.values) : UU
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((UU, gU) => {
-              var tU, pU;
-              const EU = null === (tU = RU.get(gU)) || void 0 === tU || null === (pU = tU.object) || void 0 === pU ? void 0 : pU.values.map(OU);
-              return null !== EU && void 0 !== EU && EU.every((UU => null !== UU)) ? RR([...new Set(EU.flat())]) : UU
-            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((UU, gU) => {
-              var tU;
-              const pU = null === (tU = RU.get(gU)) || void 0 === tU ? void 0 : tU.members;
-              return pU ? RR(pU) : UU
-            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((UU, gU) => {
-              var tU;
-              const pU = null === (tU = RU.get(gU)) || void 0 === tU ? void 0 : tU.object;
-              return pU ? RR(pU.keys) : UU
-            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((UU, gU) => {
-              var tU, pU;
-              return null !== (tU = null === (pU = RU.get(gU)) || void 0 === pU ? void 0 : pU.text) && void 0 !== tU ? tU : UU
+        function yR(uu, Ru) {
+          const yu = function(uu, Ru) {
+            return uu.replace(/\(_TypeOf\["([\w$]+)"\]\)\[keyof _TypeOf\["\1"\]\]/g, ((uu, yu) => {
+              var Eu;
+              const Ku = null === (Eu = Ru.get(yu)) || void 0 === Eu ? void 0 : Eu.object;
+              return Ku ? RR(Ku.values) : uu
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[[A-Za-z_$][\w$]*\]\[number\]/g, ((uu, yu) => {
+              var Eu, Ku;
+              const Qu = null === (Eu = Ru.get(yu)) || void 0 === Eu || null === (Ku = Eu.object) || void 0 === Ku ? void 0 : Ku.values.map(fu);
+              return null !== Qu && void 0 !== Qu && Qu.every((uu => null !== uu)) ? RR([...new Set(Qu.flat())]) : uu
+            })).replace(/\(_TypeOf\["([\w$]+)"\]\)\[number\]/g, ((uu, yu) => {
+              var Eu;
+              const Ku = null === (Eu = Ru.get(yu)) || void 0 === Eu ? void 0 : Eu.members;
+              return Ku ? RR(Ku) : uu
+            })).replace(/keyof _TypeOf\["([\w$]+)"\]/g, ((uu, yu) => {
+              var Eu;
+              const Ku = null === (Eu = Ru.get(yu)) || void 0 === Eu ? void 0 : Eu.object;
+              return Ku ? RR(Ku.keys) : uu
+            })).replace(/_TypeOf\["([\w$]+)"\]/g, ((uu, yu) => {
+              var Eu, Ku;
+              return null !== (Eu = null === (Ku = Ru.get(yu)) || void 0 === Ku ? void 0 : Ku.text) && void 0 !== Eu ? Eu : uu
             }))
-          }(UU.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), RU);
-          return [UU.doc, gU].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
+          }(uu.lines.join("\n").replace(/^export\s+(?:declare\s+)?/, ""), Ru);
+          return [uu.doc, yu].filter(Boolean).join("\n").replace(/\\(`|\$\{)/g, "$1").replace(/ +\n/g, "\n")
         }
 
-        function tR(UU) {
-          const RU = lU(UU),
-            gU = function(UU) {
-              const RU = new Map,
-                gU = UU.find((UU => "_TypeOf" === UU.name));
-              let tU = null;
-              const pU = () => {
-                if (tU) {
-                  const UU = tU.lines.join("\n");
-                  RU.set(tU.name, {
-                    text: UU,
-                    members: OU(UU),
-                    object: UR(UU)
+        function ER(uu) {
+          const Ru = au(uu),
+            yu = function(uu) {
+              const Ru = new Map,
+                yu = uu.find((uu => "_TypeOf" === uu.name));
+              let Eu = null;
+              const Ku = () => {
+                if (Eu) {
+                  const uu = Eu.lines.join("\n");
+                  Ru.set(Eu.name, {
+                    text: uu,
+                    members: fu(uu),
+                    object: uR(uu)
                   })
                 }
               };
-              for (const EU of gU.lines.slice(1, -1)) {
-                const UU = EU.match(/^\t([\w$]+): (.+)$/);
-                UU ? (pU(), tU = {
-                  name: UU[1],
-                  lines: [UU[2]]
-                }) : tU && tU.lines.push(EU.replace(/^\t/, ""))
+              for (const Qu of yu.lines.slice(1, -1)) {
+                const uu = Qu.match(/^\t([\w$]+): (.+)$/);
+                uu ? (Ku(), Eu = {
+                  name: uu[1],
+                  lines: [uu[2]]
+                }) : Eu && Eu.lines.push(Qu.replace(/^\t/, ""))
               }
-              return pU(), RU
-            }(RU),
-            tU = new Map;
-          for (const pU of RU) MU.has(pU.name) || tU.has(pU.name) || tU.set(pU.name, gR(pU, gU));
-          return tU
+              return Ku(), Ru
+            }(Ru),
+            Eu = new Map;
+          for (const Ku of Ru) ou.has(Ku.name) || Eu.has(Ku.name) || Eu.set(Ku.name, yR(Ku, yu));
+          return Eu
         }
-        let pR, ER, PR;
+        let KR, QR, mR;
 
-        function TR() {
-          return ER ??= function(UU) {
-            const RU = lU(UU).find((UU => "GameApi" === UU.name)),
-              gU = new Map,
-              tU = RU.lines;
-            for (let EU = 0; EU < tU.length; EU++) {
-              var pU;
-              if (!tU[EU].trimStart().startsWith("/**")) continue;
-              const UU = EU;
-              for (; EU < tU.length && !tU[EU].includes("*/");) EU++;
-              const RU = null === (pU = tU[EU + 1]) || void 0 === pU ? void 0 : pU.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
-              if (!RU) continue;
-              let PU = null;
-              const TU = [];
-              let qU = "description",
-                KU = !1;
-              for (const gU of tU.slice(UU, EU + 1).join("\n").split("\n").map((UU => UU.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
-                const UU = gU.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
-                UU ? (PU = UU[1].trim(), qU = "deprecation") : gU.startsWith("@") ? (qU = "otherTag", KU = !0) : "" === gU.trim() ? KU || (qU = "description", TU.push(gU)) : "deprecation" !== qU || /^[A-Z]/.test(gU.trim()) ? "otherTag" !== qU && (qU = "description", TU.push(gU)) : PU = `${PU} ${gU.trim()}`.trim()
+        function JR() {
+          return QR ??= function(uu) {
+            const Ru = au(uu).find((uu => "GameApi" === uu.name)),
+              yu = new Map,
+              Eu = Ru.lines;
+            for (let Qu = 0; Qu < Eu.length; Qu++) {
+              var Ku;
+              if (!Eu[Qu].trimStart().startsWith("/**")) continue;
+              const uu = Qu;
+              for (; Qu < Eu.length && !Eu[Qu].includes("*/");) Qu++;
+              const Ru = null === (Ku = Eu[Qu + 1]) || void 0 === Ku ? void 0 : Ku.match(/^\s*([A-Za-z_$][\w$]*)\s*[<(]/);
+              if (!Ru) continue;
+              let mu = null;
+              const Ju = [];
+              let Nu = "description",
+                Xu = !1;
+              for (const yu of Eu.slice(uu, Qu + 1).join("\n").split("\n").map((uu => uu.replace(/^\s*\/\*\*\s?/, "").replace(/\s*\*\/\s*$/, "").replace(/^\s*\*\s?/, "").replace(/\\(`|\$\{)/g, "$1")))) {
+                const uu = yu.match(/^@deprecated\s*(?:-\s*)?(.*)$/);
+                uu ? (mu = uu[1].trim(), Nu = "deprecation") : yu.startsWith("@") ? (Nu = "otherTag", Xu = !0) : "" === yu.trim() ? Xu || (Nu = "description", Ju.push(yu)) : "deprecation" !== Nu || /^[A-Z]/.test(yu.trim()) ? "otherTag" !== Nu && (Nu = "description", Ju.push(yu)) : mu = `${mu} ${yu.trim()}`.trim()
               }
-              gU.set(RU[1], {
-                deprecation: PU,
-                description: TU.join("\n").trim()
+              yu.set(Ru[1], {
+                deprecation: mu,
+                description: Ju.join("\n").trim()
               })
             }
-            return gU
-          }(AU.default), ER
+            return yu
+          }(iu.default), QR
         }
 
-        function qR() {
-          if (!PR) {
-            PR = new Map;
-            for (const UU of vU) {
-              const RU = (0, wU.o)(sU(UU)).flatMap((UU => UU.blocks));
-              for (const UU of (0, wU.k)(RU))
-                if ("ts" === UU.lang || "typescript" === UU.lang)
-                  for (const [RU, gU] of oU(UU.code)) PR.set(RU, gU)
+        function NR() {
+          if (!mR) {
+            mR = new Map;
+            for (const uu of gu) {
+              const Ru = (0, eu.p)(Fu(uu)).flatMap((uu => uu.blocks));
+              for (const uu of (0, eu.e)(Ru))
+                if ("ts" === uu.lang || "typescript" === uu.lang)
+                  for (const [Ru, yu] of Mu(uu.code)) mR.set(Ru, yu)
             }
-            for (const [UU, RU] of(pR ??= tR(AU.default), pR)) PR.has(UU) || PR.set(UU, RU)
+            for (const [uu, Ru] of(KR ??= ER(iu.default), KR)) mR.has(uu) || mR.set(uu, Ru)
           }
-          return PR
+          return mR
         }
-        const KR = {
+        const XR = {
           BlockName: "blockNames",
           BlockNameOrId: "blockNames",
           ItemName: "itemNames",
@@ -761,332 +761,332 @@ export const modules = {
           VehicleSetting: "vehicleSettings",
           SettableVehicleSetting: "vehicleSettings"
         };
-        let cR;
+        let VR;
 
-        function GR() {
-          if (!cR) {
-            cR = new Map;
-            for (const UU of vU)
-              if (ZU(UU.layout))
-                for (const RU of sU(UU).sections) cR.has(RU.heading.text) || cR.set(RU.heading.text, {
-                  pageId: UU.id,
-                  anchor: RU.heading.anchor
+        function rR() {
+          if (!VR) {
+            VR = new Map;
+            for (const uu of gu)
+              if (Iu(uu.layout))
+                for (const Ru of Fu(uu).sections) VR.has(Ru.heading.text) || VR.set(Ru.heading.text, {
+                  pageId: uu.id,
+                  anchor: Ru.heading.anchor
                 })
           }
-          return cR
+          return VR
         }
 
-        function jR(UU) {
-          const RU = UU.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
-          return RU ? GR().get(RU[1]) : void 0
+        function BR(uu) {
+          const Ru = uu.trim().match(/^(?:api\.)?([A-Za-z_$][\w$]*)(?:\(.*\))?$/);
+          return Ru ? rR().get(Ru[1]) : void 0
         }
-        const uR = (0, tU.createContext)("/docs"),
-          CR = (0, tU.createContext)(null),
-          hR = (0, tU.createContext)(!1),
-          QR = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
+        const xR = (0, Eu.createContext)("/docs"),
+          SR = (0, Eu.createContext)(null),
+          pR = (0, Eu.createContext)(!1),
+          TR = /#(?=\d*[a-fA-F])[0-9a-fA-F]{6}\b/g;
 
-        function eR(UU) {
-          const RU = UU.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
-          return RU ? RU[1] : null
+        function WR(uu) {
+          const Ru = uu.match(/^["']?(#[0-9a-fA-F]{6})["']?$/);
+          return Ru ? Ru[1] : null
         }
 
-        function WR(UU) {
+        function jR(uu) {
           let {
-            colour: RU
-          } = UU;
-          return (0, CU.jsx)("span", {
+            colour: Ru
+          } = uu;
+          return (0, Su.jsx)("span", {
             className: "DocsColourSwatch",
             style: {
-              background: RU
+              background: Ru
             },
             "aria-hidden": "true"
           })
         }
 
-        function fR(UU) {
-          const RU = [];
-          let gU = 0;
-          for (const tU of UU.matchAll(QR)) RU.push(UU.slice(gU, tU.index), (0, CU.jsx)(WR, {
-            colour: tU[0]
-          }), tU[0]), gU = tU.index + tU[0].length;
-          return RU.push(UU.slice(gU)), RU
+        function HR(uu) {
+          const Ru = [];
+          let yu = 0;
+          for (const Eu of uu.matchAll(TR)) Ru.push(uu.slice(yu, Eu.index), (0, Su.jsx)(jR, {
+            colour: Eu[0]
+          }), Eu[0]), yu = Eu.index + Eu[0].length;
+          return Ru.push(uu.slice(yu)), Ru
         }
 
-        function xR(UU) {
+        function dR(uu) {
           let {
-            href: RU,
-            children: gU
-          } = UU;
-          const pU = (0, tU.useContext)(uR);
-          if (RU.startsWith("#")) {
-            const UU = kU(RU);
-            if (UU) return (0, CU.jsx)(PU.c, {
-              to: iU(pU, UU.page, UU.anchor),
-              children: (0, CU.jsx)(hR.Provider, {
+            href: Ru,
+            children: yu
+          } = uu;
+          const Ku = (0, Eu.useContext)(xR);
+          if (Ru.startsWith("#")) {
+            const uu = Zu(Ru);
+            if (uu) return (0, Su.jsx)(mu.c, {
+              to: Pu(Ku, uu.page, uu.anchor),
+              children: (0, Su.jsx)(pR.Provider, {
                 value: !0,
-                children: gU
+                children: yu
               })
             })
           }
-          return (0, CU.jsx)("a", {
-            href: RU,
+          return (0, Su.jsx)("a", {
+            href: Ru,
             target: "_blank",
             rel: "noopener noreferrer",
-            children: (0, CU.jsx)(hR.Provider, {
+            children: (0, Su.jsx)(pR.Provider, {
               value: !0,
-              children: gU
+              children: yu
             })
           })
         }
 
-        function mR(UU) {
+        function bR(uu) {
           let {
-            code: RU
-          } = UU;
-          const gU = (0, tU.useContext)(uR);
-          if ((0, tU.useContext)(hR)) return (0, CU.jsx)("code", {
+            code: Ru
+          } = uu;
+          const yu = (0, Eu.useContext)(xR);
+          if ((0, Eu.useContext)(pR)) return (0, Su.jsx)("code", {
             className: "DocsInlineCode",
-            children: RU
+            children: Ru
           });
-          if (qR().has(RU)) return (0, CU.jsx)(nR, {
-            type: RU
+          if (NR().has(Ru)) return (0, Su.jsx)(AR, {
+            type: Ru
           });
-          const pU = jR(RU);
-          if (pU) return (0, CU.jsx)(PU.c, {
+          const Ku = BR(Ru);
+          if (Ku) return (0, Su.jsx)(mu.c, {
             className: "DocsInlineCode DocsSymbolLink",
-            to: iU(gU, HU(pU.pageId), pU.anchor),
-            children: RU
+            to: Pu(yu, Lu(Ku.pageId), Ku.anchor),
+            children: Ru
           });
-          const EU = eR(RU);
-          return (0, CU.jsxs)("code", {
+          const Qu = WR(Ru);
+          return (0, Su.jsxs)("code", {
             className: "DocsInlineCode",
-            children: [EU && (0, CU.jsx)(WR, {
-              colour: EU
-            }), RU]
+            children: [Qu && (0, Su.jsx)(jR, {
+              colour: Qu
+            }), Ru]
           })
         }
 
-        function IR(UU) {
+        function CR(uu) {
           let {
-            text: RU
-          } = UU;
-          const gU = [];
-          let pU = 0;
-          for (const tU of RU.matchAll(wU.g)) {
-            tU.index > pU && gU.push(...fR(RU.slice(pU, tU.index)));
-            const [, UU, EU, PU, TU, qU] = tU;
-            UU ? gU.push((0, CU.jsx)(mR, {
-              code: (0, wU.l)(UU, EU)
-            })) : PU ? gU.push((0, CU.jsx)("strong", {
-              children: (0, CU.jsx)(IR, {
-                text: PU
+            text: Ru
+          } = uu;
+          const yu = [];
+          let Ku = 0;
+          for (const Eu of Ru.matchAll(eu.c)) {
+            Eu.index > Ku && yu.push(...HR(Ru.slice(Ku, Eu.index)));
+            const [, uu, Qu, mu, Ju, Nu] = Eu;
+            uu ? yu.push((0, Su.jsx)(bR, {
+              code: (0, eu.h)(uu, Qu)
+            })) : mu ? yu.push((0, Su.jsx)("strong", {
+              children: (0, Su.jsx)(CR, {
+                text: mu
               })
-            })) : gU.push((0, CU.jsx)(xR, {
-              href: qU,
-              children: (0, CU.jsx)(IR, {
-                text: TU
+            })) : yu.push((0, Su.jsx)(dR, {
+              href: Nu,
+              children: (0, Su.jsx)(CR, {
+                text: Ju
               })
-            })), pU = tU.index + tU[0].length
+            })), Ku = Eu.index + Eu[0].length
           }
-          return pU < RU.length && gU.push(...fR(RU.slice(pU))), (0, CU.jsx)(CU.Fragment, {
-            children: gU.map(((UU, RU) => (0, CU.jsx)(tU.Fragment, {
-              children: UU
-            }, RU)))
+          return Ku < Ru.length && yu.push(...HR(Ru.slice(Ku))), (0, Su.jsx)(Su.Fragment, {
+            children: yu.map(((uu, Ru) => (0, Su.jsx)(Eu.Fragment, {
+              children: uu
+            }, Ru)))
           })
         }
-        const JR = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
-          wR = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
+        const kR = /("[^"]*"|'[^']*'|`[^`]*`)|([A-Za-z_$][\w$]*)|(\d+(?:\.\d+)?)|(\s+)|([^\w\s"'`$]+)/g,
+          eR = new Set(["string", "number", "boolean", "null", "undefined", "void", "any", "unknown", "never", "object", "true", "false", "keyof", "typeof", "in", "extends", "readonly"]);
 
-        function nR(UU) {
+        function AR(uu) {
           let {
-            type: RU
-          } = UU;
-          const gU = qR(),
-            pU = [];
-          for (const tU of RU.trim().matchAll(JR)) {
-            const [UU, RU, EU, PU, TU] = tU;
-            RU ? pU.push((0, CU.jsx)("span", {
+            type: Ru
+          } = uu;
+          const yu = NR(),
+            Ku = [];
+          for (const Eu of Ru.trim().matchAll(kR)) {
+            const [uu, Ru, Qu, mu, Ju] = Eu;
+            Ru ? Ku.push((0, Su.jsx)("span", {
               className: "DocsTypeString",
-              children: UU
-            })) : EU && gU.has(EU) ? pU.push((0, CU.jsx)(YR, {
-              name: EU,
-              definition: gU.get(EU)
-            })) : EU ? pU.push((0, CU.jsx)("span", {
-              className: wR.has(EU) ? "DocsTypeKeyword" : "DocsTypeName",
-              children: UU
-            })) : PU ? pU.push((0, CU.jsx)("span", {
+              children: uu
+            })) : Qu && yu.has(Qu) ? Ku.push((0, Su.jsx)(UR, {
+              name: Qu,
+              definition: yu.get(Qu)
+            })) : Qu ? Ku.push((0, Su.jsx)("span", {
+              className: eR.has(Qu) ? "DocsTypeKeyword" : "DocsTypeName",
+              children: uu
+            })) : mu ? Ku.push((0, Su.jsx)("span", {
               className: "DocsTypeNumber",
-              children: UU
-            })) : TU ? pU.push(" ") : pU.push((0, CU.jsx)("span", {
+              children: uu
+            })) : Ju ? Ku.push(" ") : Ku.push((0, Su.jsx)("span", {
               className: "DocsTypePunctuation",
-              children: UU
+              children: uu
             }))
           }
-          return (0, CU.jsx)("code", {
+          return (0, Su.jsx)("code", {
             className: "DocsInlineCode DocsTypeText",
-            children: pU.map(((UU, RU) => (0, CU.jsx)(tU.Fragment, {
-              children: UU
-            }, RU)))
+            children: Ku.map(((uu, Ru) => (0, Su.jsx)(Eu.Fragment, {
+              children: uu
+            }, Ru)))
           })
         }
-        const bR = 480,
-          oR = 6,
-          ZR = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
-        let aR = 0;
+        const DR = 480,
+          MR = 6,
+          IR = "a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])";
+        let GR = 0;
 
-        function YR(UU) {
+        function UR(uu) {
           let {
-            name: RU,
-            definition: gU
-          } = UU;
-          const pU = (0, tU.useContext)(uR),
-            EU = KR[RU],
-            TU = (0, tU.useRef)(null),
-            qU = (0, tU.useRef)(null),
-            cU = (0, tU.useRef)(null),
-            [GU, jU] = (0, tU.useState)(!1),
-            [uU, hU] = (0, tU.useState)(null),
-            eU = (0, tU.useRef)(),
-            WU = (0, tU.useContext)(CR),
-            [fU] = (0, tU.useState)((() => "DocsTypePopover-" + aR++)),
-            xU = () => {
-              clearTimeout(eU.current), jU(!0)
+            name: Ru,
+            definition: yu
+          } = uu;
+          const Ku = (0, Eu.useContext)(xR),
+            Qu = XR[Ru],
+            Ju = (0, Eu.useRef)(null),
+            Nu = (0, Eu.useRef)(null),
+            Vu = (0, Eu.useRef)(null),
+            [ru, Bu] = (0, Eu.useState)(!1),
+            [xu, pu] = (0, Eu.useState)(null),
+            Wu = (0, Eu.useRef)(),
+            ju = (0, Eu.useContext)(SR),
+            [Hu] = (0, Eu.useState)((() => "DocsTypePopover-" + GR++)),
+            du = () => {
+              clearTimeout(Wu.current), Bu(!0)
             },
-            mU = () => {
-              clearTimeout(eU.current), eU.current = setTimeout((() => {
-                jU(!1)
+            bu = () => {
+              clearTimeout(Wu.current), Wu.current = setTimeout((() => {
+                Bu(!1)
               }), 120)
             };
-          return (0, tU.useEffect)((() => {
-            if (!GU) return;
-            const UU = UU => {
-              if ("Escape" === UU.key) {
-                var RU, gU;
-                if (null !== (RU = qU.current) && void 0 !== RU && RU.contains(document.activeElement)) null === (gU = TU.current) || void 0 === gU || gU.focus();
-                jU(!1)
+          return (0, Eu.useEffect)((() => {
+            if (!ru) return;
+            const uu = uu => {
+              if ("Escape" === uu.key) {
+                var Ru, yu;
+                if (null !== (Ru = Nu.current) && void 0 !== Ru && Ru.contains(document.activeElement)) null === (yu = Ju.current) || void 0 === yu || yu.focus();
+                Bu(!1)
               }
             };
-            return document.addEventListener("keydown", UU), () => {
-              document.removeEventListener("keydown", UU)
+            return document.addEventListener("keydown", uu), () => {
+              document.removeEventListener("keydown", uu)
             }
-          }), [GU]), (0, tU.useEffect)((() => () => {
-            clearTimeout(eU.current)
-          }), []), (0, tU.useLayoutEffect)((() => {
-            if (!GU || !TU.current || !qU.current) return void hU(null);
-            const UU = TU.current.getBoundingClientRect(),
-              RU = qU.current.offsetHeight,
-              gU = Math.min(bR, window.innerWidth - 32),
-              tU = Math.min(Math.max(16, UU.left), window.innerWidth - gU - 16),
-              pU = UU.bottom + oR + RU < window.innerHeight;
-            hU({
-              left: tU,
-              top: pU ? UU.bottom + oR : Math.max(16, UU.top - oR - RU)
+          }), [ru]), (0, Eu.useEffect)((() => () => {
+            clearTimeout(Wu.current)
+          }), []), (0, Eu.useLayoutEffect)((() => {
+            if (!ru || !Ju.current || !Nu.current) return void pu(null);
+            const uu = Ju.current.getBoundingClientRect(),
+              Ru = Nu.current.offsetHeight,
+              yu = Math.min(DR, window.innerWidth - 32),
+              Eu = Math.min(Math.max(16, uu.left), window.innerWidth - yu - 16),
+              Ku = uu.bottom + MR + Ru < window.innerHeight;
+            pu({
+              left: Eu,
+              top: Ku ? uu.bottom + MR : Math.max(16, uu.top - MR - Ru)
             })
-          }), [GU]), (0, CU.jsxs)(CU.Fragment, {
-            children: [(0, CU.jsx)("button", {
+          }), [ru]), (0, Su.jsxs)(Su.Fragment, {
+            children: [(0, Su.jsx)("button", {
               type: "button",
-              ref: TU,
+              ref: Ju,
               className: "DocsTypeLink",
-              "aria-expanded": GU,
-              "aria-describedby": GU ? fU : void 0,
-              onMouseEnter: xU,
-              onMouseLeave: mU,
-              onFocus: xU,
-              onBlur: mU,
-              onKeyDown: UU => {
-                "Tab" === UU.key && !UU.shiftKey && cU.current && (UU.preventDefault(), cU.current.focus())
+              "aria-expanded": ru,
+              "aria-describedby": ru ? Hu : void 0,
+              onMouseEnter: du,
+              onMouseLeave: bu,
+              onFocus: du,
+              onBlur: bu,
+              onKeyDown: uu => {
+                "Tab" === uu.key && !uu.shiftKey && Vu.current && (uu.preventDefault(), Vu.current.focus())
               },
-              onClick: xU,
-              children: RU
-            }), GU && (0, KU.createPortal)((0, CU.jsxs)("span", {
-              ref: qU,
-              id: fU,
+              onClick: du,
+              children: Ru
+            }), ru && (0, Xu.createPortal)((0, Su.jsxs)("span", {
+              ref: Nu,
+              id: Hu,
               className: "DocsTypePopover",
               role: "tooltip",
-              style: uU ? {
-                left: uU.left,
-                top: uU.top,
-                maxWidth: bR
+              style: xu ? {
+                left: xu.left,
+                top: xu.top,
+                maxWidth: DR
               } : {
                 visibility: "hidden"
               },
-              onMouseEnter: xU,
-              onMouseLeave: mU,
-              onFocus: xU,
-              onBlur: mU,
-              children: [(0, CU.jsxs)("span", {
+              onMouseEnter: du,
+              onMouseLeave: bu,
+              onFocus: du,
+              onBlur: bu,
+              children: [(0, Su.jsxs)("span", {
                 className: "DocsTypePopoverHeader",
-                children: [(0, CU.jsx)("span", {
+                children: [(0, Su.jsx)("span", {
                   className: "DocsTypePopoverTitle",
-                  children: RU
-                }), EU && (0, CU.jsxs)(PU.c, {
-                  ref: cU,
+                  children: Ru
+                }), Qu && (0, Su.jsxs)(mu.c, {
+                  ref: Vu,
                   className: "DocsTypePopoverLink",
-                  to: iU(pU, HU(EU)),
+                  to: Pu(Ku, Lu(Qu)),
                   onClick: () => {
-                    jU(!1)
+                    Bu(!1)
                   },
-                  onKeyDown: UU => {
-                    if ("Tab" === UU.key) {
-                      var RU;
-                      if (UU.preventDefault(), UU.shiftKey || !TU.current || ! function(UU, RU) {
-                          const gU = [...document.querySelectorAll(ZR)],
-                            tU = gU.slice(gU.indexOf(UU) + 1).find((UU => UU.getClientRects().length > 0 && !(null !== RU && void 0 !== RU && RU.contains(UU))));
-                          return null === tU || void 0 === tU || tU.focus(), void 0 !== tU
-                        }(TU.current, qU.current)) null === (RU = TU.current) || void 0 === RU || RU.focus();
-                      UU.shiftKey || jU(!1)
+                  onKeyDown: uu => {
+                    if ("Tab" === uu.key) {
+                      var Ru;
+                      if (uu.preventDefault(), uu.shiftKey || !Ju.current || ! function(uu, Ru) {
+                          const yu = [...document.querySelectorAll(IR)],
+                            Eu = yu.slice(yu.indexOf(uu) + 1).find((uu => uu.getClientRects().length > 0 && !(null !== Ru && void 0 !== Ru && Ru.contains(uu))));
+                          return null === Eu || void 0 === Eu || Eu.focus(), void 0 !== Eu
+                        }(Ju.current, Nu.current)) null === (Ru = Ju.current) || void 0 === Ru || Ru.focus();
+                      uu.shiftKey || Bu(!1)
                     }
                   },
-                  children: [HU(EU).title, (0, CU.jsx)(QU, {
+                  children: [Lu(Qu).title, (0, Su.jsx)(Tu, {
                     name: "arrow-right"
                   })]
                 })]
-              }), (0, CU.jsx)(JU, {
+              }), (0, Su.jsx)(ku, {
                 lang: "ts",
-                code: gU,
+                code: yu,
                 compact: !0
               })]
-            }), null !== WU && void 0 !== WU ? WU : document.body)]
+            }), null !== ju && void 0 !== ju ? ju : document.body)]
           })
         }
-        var BR = gU(189),
-          VR = gU(4422),
-          rR = gU(4430),
-          XR = gU(4438);
-        const vR = {
+        var nR = yu(212),
+          sR = yu(4540),
+          tR = yu(4544),
+          lR = yu(4546);
+        const gR = {
           progressBar: {
-            aU: 30,
-            YU: .075,
-            BU: 5,
-            VU: !1,
+            nu: 30,
+            tu: .075,
+            lu: 5,
+            gu: !1,
             description: [{
               str: "Click repeatedly to complete!"
             }],
-            vU: "fa-solid fa-computer-mouse",
+            zu: "fa-solid fa-computer-mouse",
             scale: 3,
             rotation: 15
           },
           timedClick: {
-            HU: 3e3,
+            wu: 3e3,
             icon: "fa-solid fa-computer-mouse",
             label: [{
               str: "Click to complete the QTE!"
             }],
-            SU: !0,
+            Zu: !0,
             scale: 3,
             rotation: 15,
-            sU: !1
+            Pu: !1
           },
           gravityBar: {
-            aU: 30,
-            kU: .25,
-            FU: 3,
-            iU: .8,
+            nu: 30,
+            Yu: .25,
+            ou: 3,
+            qu: .8,
             gravity: 1,
-            AU: 1.5,
-            zU: 8,
-            MU: 4,
-            VU: !1,
+            Ou: 1.5,
+            vu: 8,
+            au: 4,
+            gu: !1,
             description: [{
               str: "Hold to catch!"
             }],
@@ -1094,7 +1094,7 @@ export const modules = {
           },
           precisionBar: {
             speed: .5,
-            LU: .15,
+            uR: .15,
             label: [{
               str: "Click when the marker is within the green zone."
             }],
@@ -1103,30 +1103,30 @@ export const modules = {
             rotation: 0
           },
           rhythmClick: {
-            lU: 5,
-            OU: 1200,
-            UR: .15,
-            RR: 3,
+            yR: 5,
+            ER: 1200,
+            KR: .15,
+            QR: 3,
             label: [{
               str: "Click when the circles align!"
             }],
             icon: ""
           }
         };
-        var dR = gU(299),
-          HR = gU(1849);
+        var cR = yu(330),
+          LR = yu(1923);
 
-        function SR(UU) {
-          return UU.startsWith("fa-")
+        function zR(uu) {
+          return uu.startsWith("fa-")
         }
-        const sR = {
+        const FR = {
             text: "Text",
             icon: "Icon",
             progressBar: "Progress bar",
             keyBinding: "Key binding",
             other: "Other"
           },
-          yR = {
+          wR = {
             text: "Text",
             icon: {
               icon: "Pixelated Heart"
@@ -1141,10 +1141,10 @@ export const modules = {
             }
           };
 
-        function kR(UU) {
-          return "string" === typeof UU ? "text" : "entityName" in UU || "translationKey" in UU ? "other" : (0, dR.vb)(UU) ? "progressBar" : (0, dR.ub)(UU) ? "keyBinding" : "icon" in UU ? "icon" : "str" in UU && "string" === typeof UU.str ? "text" : "other"
+        function ZR(uu) {
+          return "string" === typeof uu ? "text" : "entityName" in uu || "translationKey" in uu ? "other" : (0, cR.wb)(uu) ? "progressBar" : (0, cR.tb)(uu) ? "keyBinding" : "icon" in uu ? "icon" : "str" in uu && "string" === typeof uu.str ? "text" : "other"
         }
-        const FR = [{
+        const hR = [{
             path: ["style", "color"],
             label: "Colour",
             field: {
@@ -1182,7 +1182,7 @@ export const modules = {
             },
             defaultText: "1"
           }],
-          iR = {
+          PR = {
             text: [{
               path: ["str"],
               label: "Text",
@@ -1191,7 +1191,7 @@ export const modules = {
                 multiline: !0
               },
               isRequired: !0
-            }, ...FR],
+            }, ...hR],
             icon: [{
               path: ["icon"],
               label: "Icon",
@@ -1262,360 +1262,360 @@ export const modules = {
               label: "Action",
               field: {
                 kind: "choice",
-                options: HR.k
+                options: LR.h
               },
               isRequired: !0
-            }, ...FR],
+            }, ...hR],
             other: []
           };
 
-        function AR(UU) {
-          return "string" === typeof UU ? {
-            str: UU
-          } : UU
+        function iR(uu) {
+          return "string" === typeof uu ? {
+            str: uu
+          } : uu
         }
 
-        function zR(UU, RU) {
-          let gU = AR(UU);
-          for (const tU of RU) gU = gU && "object" === typeof gU ? gU[tU] : void 0;
-          return gU
+        function YR(uu, Ru) {
+          let yu = iR(uu);
+          for (const Eu of Ru) yu = yu && "object" === typeof yu ? yu[Eu] : void 0;
+          return yu
         }
 
-        function MR(UU, RU, gU) {
-          const tU = (UU, pU) => {
-            var EU;
-            const PU = RU[pU],
-              TU = {
-                ...UU
+        function oR(uu, Ru, yu) {
+          const Eu = (uu, Ku) => {
+            var Qu;
+            const mu = Ru[Ku],
+              Ju = {
+                ...uu
               };
-            if (pU === RU.length - 1) return void 0 === gU ? delete TU[PU] : TU[PU] = gU, TU;
-            const qU = tU(null !== (EU = UU[PU]) && void 0 !== EU ? EU : {}, pU + 1);
-            return 0 === Object.keys(qU).length ? delete TU[PU] : TU[PU] = qU, TU
+            if (Ku === Ru.length - 1) return void 0 === yu ? delete Ju[mu] : Ju[mu] = yu, Ju;
+            const Nu = Eu(null !== (Qu = uu[mu]) && void 0 !== Qu ? Qu : {}, Ku + 1);
+            return 0 === Object.keys(Nu).length ? delete Ju[mu] : Ju[mu] = Nu, Ju
           };
-          return function(UU) {
-            const RU = Object.keys(UU);
-            return "string" === typeof UU.str && 1 === RU.length ? UU.str : UU
-          }(tU(AR(UU), 0))
+          return function(uu) {
+            const Ru = Object.keys(uu);
+            return "string" === typeof uu.str && 1 === Ru.length ? uu.str : uu
+          }(Eu(iR(uu), 0))
         }
 
-        function DR(UU, RU) {
-          const gU = kR(UU),
-            tU = iR[gU].find((UU => UU.path.join(".") === RU.join("."))),
-            pU = null !== tU && void 0 !== tU && tU.isRequired && "other" !== gU ? zR(yR[gU], RU) : void 0;
-          return MR(UU, RU, pU)
+        function qR(uu, Ru) {
+          const yu = ZR(uu),
+            Eu = PR[yu].find((uu => uu.path.join(".") === Ru.join("."))),
+            Ku = null !== Eu && void 0 !== Eu && Eu.isRequired && "other" !== yu ? YR(wR[yu], Ru) : void 0;
+          return oR(uu, Ru, Ku)
         }
 
-        function LR(UU) {
-          switch (kR(UU)) {
+        function OR(uu) {
+          switch (ZR(uu)) {
             case "text":
-              return String(zR(UU, ["str"]));
+              return String(YR(uu, ["str"]));
             case "icon":
-              return String(zR(UU, ["icon"]));
+              return String(YR(uu, ["icon"]));
             case "progressBar":
-              return `${Math.round(100*Number(zR(UU,["progress"])))}%`;
+              return `${Math.round(100*Number(YR(uu,["progress"])))}%`;
             case "keyBinding":
-              return String(zR(UU, ["action"]));
+              return String(YR(uu, ["action"]));
             case "other":
-              return JSON.stringify(UU)
+              return JSON.stringify(uu)
           }
         }
-        const NR = /^[A-Za-z_$][\w$]*$/;
+        const vR = /^[A-Za-z_$][\w$]*$/;
 
-        function lR(UU) {
-          if (Array.isArray(UU)) return `[${UU.map(lR).join(", ")}]`;
-          if (UU && "object" === typeof UU) {
-            const RU = Object.entries(UU).map((UU => {
-              let [RU, gU] = UU;
-              return `${NR.test(RU)?RU:JSON.stringify(RU)}: ${lR(gU)}`
+        function aR(uu) {
+          if (Array.isArray(uu)) return `[${uu.map(aR).join(", ")}]`;
+          if (uu && "object" === typeof uu) {
+            const Ru = Object.entries(uu).map((uu => {
+              let [Ru, yu] = uu;
+              return `${vR.test(Ru)?Ru:JSON.stringify(Ru)}: ${aR(yu)}`
             }));
-            return 0 === RU.length ? "{}" : `{ ${RU.join(", ")} }`
+            return 0 === Ru.length ? "{}" : `{ ${Ru.join(", ")} }`
           }
-          return JSON.stringify(UU)
+          return JSON.stringify(uu)
         }
 
-        function OR(UU) {
-          const RU = UU.map(lR),
-            gU = `[${RU.join(", ")}]`;
-          return gU.length <= 60 ? gU : `[\n${RU.map((UU=>`    ${UU},`)).join("\n")}\n]`
+        function fR(uu) {
+          const Ru = uu.map(aR),
+            yu = `[${Ru.join(", ")}]`;
+          return yu.length <= 60 ? yu : `[\n${Ru.map((uu=>`    ${uu},`)).join("\n")}\n]`
         }
-        const Ug = {
+        const uy = {
           "\n": "\\n",
           "\r": "\\r",
           "\t": "\\t"
         };
 
-        function Rg(UU) {
-          let RU = "";
-          for (let pU = 0; pU < UU.length; pU++) {
-            const EU = UU[pU];
-            if ("\\" === EU) {
-              var gU;
-              const tU = null !== (gU = UU[pU + 1]) && void 0 !== gU ? gU : "";
-              RU += "'" === tU ? "'" : EU + tU, pU++
-            } else if ('"' === EU) RU += '\\"';
+        function Ry(uu) {
+          let Ru = "";
+          for (let Ku = 0; Ku < uu.length; Ku++) {
+            const Qu = uu[Ku];
+            if ("\\" === Qu) {
+              var yu;
+              const Eu = null !== (yu = uu[Ku + 1]) && void 0 !== yu ? yu : "";
+              Ru += "'" === Eu ? "'" : Qu + Eu, Ku++
+            } else if ('"' === Qu) Ru += '\\"';
             else {
-              var tU;
-              RU += null !== (tU = Ug[EU]) && void 0 !== tU ? tU : EU
+              var Eu;
+              Ru += null !== (Eu = uy[Qu]) && void 0 !== Eu ? Eu : Qu
             }
           }
-          return `"${RU}"`
+          return `"${Ru}"`
         }
 
-        function gg(UU) {
-          if ("string" === typeof UU) return !0;
-          if (!UU || "object" !== typeof UU || Array.isArray(UU)) return !1;
-          const RU = UU;
-          return "ProgressBar" === RU.type ? "number" === typeof RU.progress : "StyledKeyBinding" === RU.type ? HR.k.includes(RU.action) : "string" === typeof RU.icon || "string" === typeof RU.str || "string" === typeof RU.entityName || "string" === typeof RU.translationKey
+        function yy(uu) {
+          if ("string" === typeof uu) return !0;
+          if (!uu || "object" !== typeof uu || Array.isArray(uu)) return !1;
+          const Ru = uu;
+          return "ProgressBar" === Ru.type ? "number" === typeof Ru.progress : "StyledKeyBinding" === Ru.type ? LR.h.includes(Ru.action) : "string" === typeof Ru.icon || "string" === typeof Ru.str || "string" === typeof Ru.entityName || "string" === typeof Ru.translationKey
         }
 
-        function tg(UU) {
-          let RU;
+        function Ey(uu) {
+          let Ru;
           try {
-            RU = function(UU) {
-              let RU = "",
-                gU = "",
-                tU = 0;
-              const pU = () => {
-                RU += gU.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), gU = ""
+            Ru = function(uu) {
+              let Ru = "",
+                yu = "",
+                Eu = 0;
+              const Ku = () => {
+                Ru += yu.replace(/([A-Za-z_$][\w$]*)\s*:/g, '"$1":').replace(/,(\s*[\]}])/g, "$1"), yu = ""
               };
-              for (; tU < UU.length;) {
-                const EU = UU.slice(tU).search(/["'`]|\/\//);
-                if (-1 === EU) {
-                  gU += UU.slice(tU);
+              for (; Eu < uu.length;) {
+                const Qu = uu.slice(Eu).search(/["'`]|\/\//);
+                if (-1 === Qu) {
+                  yu += uu.slice(Eu);
                   break
                 }
-                gU += UU.slice(tU, tU + EU);
-                const PU = tU + EU,
-                  TU = UU[PU];
-                if ("/" === TU) {
-                  const RU = UU.indexOf("\n", PU);
-                  tU = -1 === RU ? UU.length : RU;
+                yu += uu.slice(Eu, Eu + Qu);
+                const mu = Eu + Qu,
+                  Ju = uu[mu];
+                if ("/" === Ju) {
+                  const Ru = uu.indexOf("\n", mu);
+                  Eu = -1 === Ru ? uu.length : Ru;
                   continue
                 }
-                if (pU(), "`" === TU) throw new Error("Use quotes rather than template strings.");
-                let qU = PU + 1;
-                for (; qU < UU.length && UU[qU] !== TU;) qU += "\\" === UU[qU] ? 2 : 1;
-                if (qU >= UU.length) throw new Error("A string is missing its closing quote.");
-                const KU = UU.slice(PU + 1, qU);
-                RU += Rg(KU), tU = qU + 1
+                if (Ku(), "`" === Ju) throw new Error("Use quotes rather than template strings.");
+                let Nu = mu + 1;
+                for (; Nu < uu.length && uu[Nu] !== Ju;) Nu += "\\" === uu[Nu] ? 2 : 1;
+                if (Nu >= uu.length) throw new Error("A string is missing its closing quote.");
+                const Xu = uu.slice(mu + 1, Nu);
+                Ru += Ry(Xu), Eu = Nu + 1
               }
-              return pU(), JSON.parse(RU)
-            }(UU.trim())
-          } catch (tU) {
+              return Ku(), JSON.parse(Ru)
+            }(uu.trim())
+          } catch (Eu) {
             return {
               parts: null,
-              error: tU instanceof SyntaxError ? "This isn't a valid array yet." : tU.message
+              error: Eu instanceof SyntaxError ? "This isn't a valid array yet." : Eu.message
             }
           }
-          if (!Array.isArray(RU)) return {
+          if (!Array.isArray(Ru)) return {
             parts: null,
             error: 'Styled text is an array, e.g. ["Hello ", { str: "world" }]'
           };
-          const gU = RU.findIndex((UU => !gg(UU)));
-          return -1 !== gU ? {
+          const yu = Ru.findIndex((uu => !yy(uu)));
+          return -1 !== yu ? {
             parts: null,
-            error: `Part ${gU+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
+            error: `Part ${yu+1} isn't one Bloxd draws: use a string, { str }, { icon }, a ProgressBar or a StyledKeyBinding.`
           } : {
-            parts: RU,
+            parts: Ru,
             error: null
           }
         }
-        const pg = 1 / BR.e.clientTicksPerSecond,
-          Eg = 700,
-          Pg = {
+        const Ky = 1 / nR.f.clientTicksPerSecond,
+          Qy = 700,
+          my = {
             type: null,
             parameters: null,
             state: null,
             isActive: !1
           },
-          Tg = {
-            progressBar: vR.progressBar.vU,
-            timedClick: vR.timedClick.icon,
-            gravityBar: vR.gravityBar.icon,
-            precisionBar: vR.precisionBar.icon,
-            rhythmClick: vR.rhythmClick.icon
+          Jy = {
+            progressBar: gR.progressBar.zu,
+            timedClick: gR.timedClick.icon,
+            gravityBar: gR.gravityBar.icon,
+            precisionBar: gR.precisionBar.icon,
+            rhythmClick: gR.rhythmClick.icon
           };
 
-        function qg(UU) {
+        function Ny(uu) {
           let {
-            type: RU
-          } = UU;
-          const [gU, pU] = (0, tU.useState)("ready"), [PU, TU] = (0, tU.useState)(1), [qU, KU] = (0, tU.useState)(!0), cU = (0, tU.useRef)(null), GU = (0, tU.useRef)(null), jU = (0, tU.useRef)(null), uU = (0, tU.useRef)(new Set), hU = (0, tU.useRef)(!1), eU = Tg[RU], WU = (0, tU.useMemo)((() => ({
+            type: Ru
+          } = uu;
+          const [yu, Ku] = (0, Eu.useState)("ready"), [mu, Ju] = (0, Eu.useState)(1), [Nu, Xu] = (0, Eu.useState)(!0), Vu = (0, Eu.useRef)(null), ru = (0, Eu.useRef)(null), Bu = (0, Eu.useRef)(null), xu = (0, Eu.useRef)(new Set), pu = (0, Eu.useRef)(!1), Wu = Jy[Ru], ju = (0, Eu.useMemo)((() => ({
             getState: () => {
-              var UU, RU;
-              return null !== (UU = null === (RU = jU.current) || void 0 === RU ? void 0 : RU.getState()) && void 0 !== UU ? UU : Pg
+              var uu, Ru;
+              return null !== (uu = null === (Ru = Bu.current) || void 0 === Ru ? void 0 : Ru.getState()) && void 0 !== uu ? uu : my
             },
-            onFrame: UU => (uU.current.add(UU), () => {
-              uU.current.delete(UU)
+            onFrame: uu => (xu.current.add(uu), () => {
+              xu.current.delete(uu)
             })
           })), []);
-          (0, tU.useEffect)((() => {
-            const UU = cU.current,
-              RU = GU.current;
-            if (!UU || !RU) return;
-            const gU = new ResizeObserver((() => {
-              TU(UU.clientWidth / Math.max(1, RU.offsetWidth))
+          (0, Eu.useEffect)((() => {
+            const uu = Vu.current,
+              Ru = ru.current;
+            if (!uu || !Ru) return;
+            const yu = new ResizeObserver((() => {
+              Ju(uu.clientWidth / Math.max(1, Ru.offsetWidth))
             }));
-            return gU.observe(UU), () => {
-              gU.disconnect()
+            return yu.observe(uu), () => {
+              yu.disconnect()
             }
-          }), []), (0, tU.useEffect)((() => {
-            var UU;
-            if ("playing" !== gU) return;
-            let tU = !1;
-            const EU = new XR.d[RU](vR[RU], (UU => {
-              tU = !0, KU(!1), pU(UU ? "succeeded" : "failed")
+          }), []), (0, Eu.useEffect)((() => {
+            var uu;
+            if ("playing" !== yu) return;
+            let Eu = !1;
+            const Qu = new lR.h[Ru](gR[Ru], (uu => {
+              Eu = !0, Xu(!1), Ku(uu ? "succeeded" : "failed")
             }), (() => {}));
-            jU.current = EU;
-            let PU = 0,
-              TU = performance.now(),
-              qU = requestAnimationFrame((function UU(RU) {
-                for (PU += Math.min(.25, (RU - TU) / 1e3), TU = RU; PU >= pg && !tU;) PU -= pg, EU.handleTick(pg);
-                for (const gU of uU.current) gU();
-                tU || (qU = requestAnimationFrame(UU))
+            Bu.current = Qu;
+            let mu = 0,
+              Ju = performance.now(),
+              Nu = requestAnimationFrame((function uu(Ru) {
+                for (mu += Math.min(.25, (Ru - Ju) / 1e3), Ju = Ru; mu >= Ky && !Eu;) mu -= Ky, Qu.handleTick(Ky);
+                for (const yu of xu.current) yu();
+                Eu || (Nu = requestAnimationFrame(uu))
               }));
-            return null === (UU = cU.current) || void 0 === UU || UU.focus({
+            return null === (uu = Vu.current) || void 0 === uu || uu.focus({
               preventScroll: !0
             }), () => {
-              cancelAnimationFrame(qU), EU.tearDown(), jU.current = null, hU.current = !1
+              cancelAnimationFrame(Nu), Qu.tearDown(), Bu.current = null, pu.current = !1
             }
-          }), [gU, RU]), (0, tU.useEffect)((() => {
-            if (qU) return;
-            const UU = setTimeout((() => {
-              KU(!0)
-            }), Eg);
+          }), [yu, Ru]), (0, Eu.useEffect)((() => {
+            if (Nu) return;
+            const uu = setTimeout((() => {
+              Xu(!0)
+            }), Qy);
             return () => {
-              clearTimeout(UU)
+              clearTimeout(uu)
             }
-          }), [qU]);
-          const fU = UU => {
-            var RU;
-            "playing" === gU && hU.current !== UU && (hU.current = UU, null === (RU = jU.current) || void 0 === RU || RU.handleMouseInput(UU))
+          }), [Nu]);
+          const Hu = uu => {
+            var Ru;
+            "playing" === yu && pu.current !== uu && (pu.current = uu, null === (Ru = Bu.current) || void 0 === Ru || Ru.handleMouseInput(uu))
           };
-          return (0, CU.jsxs)("div", {
+          return (0, Su.jsxs)("div", {
             className: "DocsQteDemo",
-            children: [(0, CU.jsxs)("div", {
-              ref: cU,
-              className: EU()("DocsQteStage", {
-                Playing: "playing" === gU
+            children: [(0, Su.jsxs)("div", {
+              ref: Vu,
+              className: Qu()("DocsQteStage", {
+                Playing: "playing" === yu
               }),
-              tabIndex: "playing" === gU ? 0 : -1,
-              role: "playing" === gU ? "button" : void 0,
-              "aria-label": "playing" === gU ? `${RU} quick time event: click or press Space` : void 0,
-              onPointerDown: UU => {
-                0 === UU.button && fU(!0)
+              tabIndex: "playing" === yu ? 0 : -1,
+              role: "playing" === yu ? "button" : void 0,
+              "aria-label": "playing" === yu ? `${Ru} quick time event: click or press Space` : void 0,
+              onPointerDown: uu => {
+                0 === uu.button && Hu(!0)
               },
               onPointerUp: () => {
-                fU(!1)
+                Hu(!1)
               },
               onPointerLeave: () => {
-                fU(!1)
+                Hu(!1)
               },
               onPointerCancel: () => {
-                fU(!1)
+                Hu(!1)
               },
-              onKeyDown: UU => {
-                "playing" !== gU || " " !== UU.key && "Enter" !== UU.key || (UU.preventDefault(), fU(!0))
+              onKeyDown: uu => {
+                "playing" !== yu || " " !== uu.key && "Enter" !== uu.key || (uu.preventDefault(), Hu(!0))
               },
-              onKeyUp: UU => {
-                "playing" !== gU || " " !== UU.key && "Enter" !== UU.key || fU(!1)
+              onKeyUp: uu => {
+                "playing" !== yu || " " !== uu.key && "Enter" !== uu.key || Hu(!1)
               },
-              children: [(0, CU.jsx)("div", {
-                ref: GU,
+              children: [(0, Su.jsx)("div", {
+                ref: ru,
                 className: "DocsQteScreen",
                 style: {
-                  transform: `scale(${PU})`
+                  transform: `scale(${mu})`
                 },
-                children: "playing" === gU && (0, CU.jsx)(rR.e.Provider, {
-                  value: WU,
-                  children: (0, CU.jsx)(VR.b, {
+                children: "playing" === yu && (0, Su.jsx)(tR.b.Provider, {
+                  value: ju,
+                  children: (0, Su.jsx)(sR.b, {
                     qte: {
-                      type: RU,
-                      parameters: vR[RU]
+                      type: Ru,
+                      parameters: gR[Ru]
                     }
                   })
                 })
-              }), "playing" !== gU && (0, CU.jsxs)("div", {
+              }), "playing" !== yu && (0, Su.jsxs)("div", {
                 className: "DocsQteOverlay",
-                children: ["ready" !== gU && (0, CU.jsxs)("div", {
-                  className: EU()("DocsQteResult", "succeeded" === gU ? "Succeeded" : "Failed"),
-                  children: [(0, CU.jsx)(QU, {
-                    name: "succeeded" === gU ? "check" : "cross",
+                children: ["ready" !== yu && (0, Su.jsxs)("div", {
+                  className: Qu()("DocsQteResult", "succeeded" === yu ? "Succeeded" : "Failed"),
+                  children: [(0, Su.jsx)(Tu, {
+                    name: "succeeded" === yu ? "check" : "cross",
                     isTinted: !0
-                  }), (0, CU.jsx)("span", {
-                    children: "succeeded" === gU ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
+                  }), (0, Su.jsx)("span", {
+                    children: "succeeded" === yu ? "Succeeded: onPlayerFinishQTE gets true" : "Failed: onPlayerFinishQTE gets false"
                   })]
-                }), (0, CU.jsxs)("button", {
+                }), (0, Su.jsxs)("button", {
                   type: "button",
                   className: "DocsQtePlay",
-                  disabled: !qU,
+                  disabled: !Nu,
                   onClick: () => {
-                    pU("playing")
+                    Ku("playing")
                   },
-                  children: [(0, CU.jsx)(QU, {
-                    name: "ready" === gU ? "play" : "replay"
-                  }), (0, CU.jsx)("span", {
-                    children: "ready" === gU ? `Try ${RU}` : "Play again"
+                  children: [(0, Su.jsx)(Tu, {
+                    name: "ready" === yu ? "play" : "replay"
+                  }), (0, Su.jsx)("span", {
+                    children: "ready" === yu ? `Try ${Ru}` : "Play again"
                   })]
                 })]
               })]
-            }), eU && !SR(eU) && (0, CU.jsxs)("p", {
+            }), Wu && !zR(Wu) && (0, Su.jsxs)("p", {
               className: "DocsQteCaption",
-              children: ["The ", (0, CU.jsx)("code", {
-                children: eU
+              children: ["The ", (0, Su.jsx)("code", {
+                children: Wu
               }), " icon is a Bloxd item, so it shows in game only."]
             })]
           })
         }
 
-        function Kg(UU) {
+        function Xy(uu) {
           let {
-            level: RU,
-            text: gU,
-            anchor: tU,
-            className: pU
-          } = UU;
-          const PU = `h${Math.min(RU,6)}`;
-          return (0, CU.jsxs)(PU, {
-                id: tU,
-                className: EU()("DocsHeading", pU),
-                children: [(0, CU.jsx)(IR, {
-                      text: gU
-                    }), (0, CU.jsx)("a", {
+            level: Ru,
+            text: yu,
+            anchor: Eu,
+            className: Ku
+          } = uu;
+          const mu = `h${Math.min(Ru,6)}`;
+          return (0, Su.jsxs)(mu, {
+                id: Eu,
+                className: Qu()("DocsHeading", Ku),
+                children: [(0, Su.jsx)(CR, {
+                      text: yu
+                    }), (0, Su.jsx)("a", {
                         className: "DocsHeadingAnchor",
-                        href: `#${tU}`,
-                        "aria-label": `Link to ${gU.replace(/`/g,"")}`,children:"#"})]})}function cg(UU){let{items:RU,ordered:gU}=UU;const tU=gU?"ol":"ul";return(0,CU.jsx)(tU,{className:"DocsList",children:RU.map(((UU,RU)=>(0,CU.jsxs)("li",{children:[(0,CU.jsx)(IR,{text:UU.text}),UU.children.length>0&&(0,CU.jsx)(cg,{items:UU.children,ordered:gU})]},RU)))})}function Gg(UU){const RU=UU[0],gU="paragraph"===(null===RU||void 0===RU?void 0:RU.kind)?RU.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(gU)?"warning":/^\*\*(tip|prefer)/.test(gU)?"tip":"note"}function jg(UU){let{block:RU}=UU;switch(RU.kind){case"heading":return(0,CU.jsx)(Kg,{level:RU.level,text:RU.text,anchor:RU.anchor});case"paragraph":return(0,CU.jsx)("p",{children:(0,CU.jsx)(IR,{text:RU.text})});case"code":{const UU="ts"===RU.lang?function(UU){const RU=UU.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return RU&&Object.hasOwn(vR,RU[1])?RU[1]:null}(RU.code):null;return(0,CU.jsxs)(CU.Fragment,{children:[(0,CU.jsx)(JU,{code:RU.code,lang:RU.lang}),UU&&(0,CU.jsx)(qg,{type:UU})]})}case"table":return(0,CU.jsx)("div",{className:"DocsTableScroll",children:(0,CU.jsxs)("table",{className:"DocsTable",children:[(0,CU.jsx)("thead",{children:(0,CU.jsx)("tr",{children:RU.header.map(((UU,RU)=>(0,CU.jsx)("th",{children:(0,CU.jsx)(IR,{text:UU})},RU)))})}),(0,CU.jsx)("tbody",{children:RU.rows.map(((UU,RU)=>(0,CU.jsx)("tr",{children:UU.map(((UU,RU)=>(0,CU.jsx)("td",{children:(0,CU.jsx)(IR,{text:UU})},RU)))},RU)))})]})});case"list":return(0,CU.jsx)(cg,{items:RU.items,ordered:RU.ordered});case"quote":return(0,CU.jsx)("aside",{className:EU()("DocsCallout",Gg(RU.blocks)),children:(0,CU.jsx)(ug,{blocks:RU.blocks})});case"rule":return(0,CU.jsx)("hr",{className:"DocsRule"})}}function ug(UU){let{blocks:RU}=UU;return(0,CU.jsx)(CU.Fragment,{children:RU.map(((UU,RU)=>(0,CU.jsx)(jg,{block:UU},RU)))})}var Cg=gU(4408),hg=gU(4412);function Qg(UU){return"blocks"===UU||"items"===UU}const eg=new Map;function Wg(UU){let RU=eg.get(UU);return RU||(RU=function(UU){const RU={entries:[],legend:[],notes:[],examples:[]};let gU=!1;for(const EU of UU.split(/\r?\n/).slice(1)){if(EU.startsWith("#")){const UU=EU.replace(/^# ?/,""),tU=UU.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);tU?RU.legend.push({code:tU[1],meaning:tU[2],usage:tU[3].trim()}):/^Examples:/.test(UU.trim())?gU=!0:gU&&UU.trim()?RU.examples.push(UU.trim()):UU.trim()&&!/^\s/.test(UU)&&RU.notes.push(UU.trim());continue}const UU=EU.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var tU,pU;UU&&RU.entries.push({name:UU[1],variants:null!==(tU=null===(pU=UU[2])||void 0===pU?void 0:pU.split(","))&&void 0!==tU?tU:[]})}return RU}("blocks"===UU?Cg:hg),eg.set(UU,RU)),RU}function fg(UU){let{className:RU,value:gU,placeholder:tU,label:pU,onChange:EU,count:PU,children:TU}=UU;return(0,CU.jsxs)("div",{className:RU,children:[(0,CU.jsx)(QU,{name:"magnifying-glass"}),(0,CU.jsx)("input",{type:"search",value:gU,placeholder:tU,"aria-label":pU,onChange:UU=>{EU(UU.target.value)}}),TU,PU&&(0,CU.jsxs)("span",{className:"DocsFilterCount",children:[PU.visible," of ",PU.total]})]})}var xg=gU(1049);function mg(UU){const RU=UU.trim().match(/^(` {
+                        href: `#${Eu}`,
+                        "aria-label": `Link to ${yu.replace(/`/g,"")}`,children:"#"})]})}function Vy(uu){let{items:Ru,ordered:yu}=uu;const Eu=yu?"ol":"ul";return(0,Su.jsx)(Eu,{className:"DocsList",children:Ru.map(((uu,Ru)=>(0,Su.jsxs)("li",{children:[(0,Su.jsx)(CR,{text:uu.text}),uu.children.length>0&&(0,Su.jsx)(Vy,{items:uu.children,ordered:yu})]},Ru)))})}function ry(uu){const Ru=uu[0],yu="paragraph"===(null===Ru||void 0===Ru?void 0:Ru.kind)?Ru.text.toLowerCase():"";return/^\*\*(warning|important|caution)/.test(yu)?"warning":/^\*\*(tip|prefer)/.test(yu)?"tip":"note"}function By(uu){let{block:Ru}=uu;switch(Ru.kind){case"heading":return(0,Su.jsx)(Xy,{level:Ru.level,text:Ru.text,anchor:Ru.anchor});case"paragraph":return(0,Su.jsx)("p",{children:(0,Su.jsx)(CR,{text:Ru.text})});case"code":{const uu="ts"===Ru.lang?function(uu){const Ru=uu.match(/^api\.addQTE\(playerId, \{\s*type: "(\w+)"/);return Ru&&Object.hasOwn(gR,Ru[1])?Ru[1]:null}(Ru.code):null;return(0,Su.jsxs)(Su.Fragment,{children:[(0,Su.jsx)(ku,{code:Ru.code,lang:Ru.lang}),uu&&(0,Su.jsx)(Ny,{type:uu})]})}case"table":return(0,Su.jsx)("div",{className:"DocsTableScroll",children:(0,Su.jsxs)("table",{className:"DocsTable",children:[(0,Su.jsx)("thead",{children:(0,Su.jsx)("tr",{children:Ru.header.map(((uu,Ru)=>(0,Su.jsx)("th",{children:(0,Su.jsx)(CR,{text:uu})},Ru)))})}),(0,Su.jsx)("tbody",{children:Ru.rows.map(((uu,Ru)=>(0,Su.jsx)("tr",{children:uu.map(((uu,Ru)=>(0,Su.jsx)("td",{children:(0,Su.jsx)(CR,{text:uu})},Ru)))},Ru)))})]})});case"list":return(0,Su.jsx)(Vy,{items:Ru.items,ordered:Ru.ordered});case"quote":return(0,Su.jsx)("aside",{className:Qu()("DocsCallout",ry(Ru.blocks)),children:(0,Su.jsx)(xy,{blocks:Ru.blocks})});case"rule":return(0,Su.jsx)("hr",{className:"DocsRule"})}}function xy(uu){let{blocks:Ru}=uu;return(0,Su.jsx)(Su.Fragment,{children:Ru.map(((uu,Ru)=>(0,Su.jsx)(By,{block:uu},Ru)))})}var Sy=yu(4518),py=yu(4523);function Ty(uu){return"blocks"===uu||"items"===uu}const Wy=new Map;function jy(uu){let Ru=Wy.get(uu);return Ru||(Ru=function(uu){const Ru={entries:[],legend:[],notes:[],examples:[]};let yu=!1;for(const Qu of uu.split(/\r?\n/).slice(1)){if(Qu.startsWith("#")){const uu=Qu.replace(/^# ?/,""),Eu=uu.match(/^\s+([A-Z]+)\s+=\s+(\w+)\s+->\s+(.+)$/);Eu?Ru.legend.push({code:Eu[1],meaning:Eu[2],usage:Eu[3].trim()}):/^Examples:/.test(uu.trim())?yu=!0:yu&&uu.trim()?Ru.examples.push(uu.trim()):uu.trim()&&!/^\s/.test(uu)&&Ru.notes.push(uu.trim());continue}const uu=Qu.trim().match(/^(.+?)(?:\s+\[([A-Z,]+)\])?$/);var Eu,Ku;uu&&Ru.entries.push({name:uu[1],variants:null!==(Eu=null===(Ku=uu[2])||void 0===Ku?void 0:Ku.split(","))&&void 0!==Eu?Eu:[]})}return Ru}("blocks"===uu?Sy:py),Wy.set(uu,Ru)),Ru}function Hy(uu){let{className:Ru,value:yu,placeholder:Eu,label:Ku,onChange:Qu,count:mu,children:Ju}=uu;return(0,Su.jsxs)("div",{className:Ru,children:[(0,Su.jsx)(Tu,{name:"magnifying-glass"}),(0,Su.jsx)("input",{type:"search",value:yu,placeholder:Eu,"aria-label":Ku,onChange:uu=>{Qu(uu.target.value)}}),Ju,mu&&(0,Su.jsxs)("span",{className:"DocsFilterCount",children:[mu.visible," of ",mu.total]})]})}var dy=yu(1043);function by(uu){const Ru=uu.trim().match(/^(` {
                           1,
                           2
-                        })\ s * ([ ^ `]+?)\s*\1$/);return RU?RU[2]:null}function Ig(UU){return"paragraph"===UU.kind&&""===UU.text.trim()}function Jg(UU){const RU={name:UU.heading.text,description:[],params:[],returns:null};let gU="description";for(const pU of UU.blocks)if(!Ig(pU))if("heading"===pU.kind&&/^Parameters:?$/.test(pU.text))gU="params";else if("heading"===pU.kind&&/^Returns:?$/.test(pU.text))gU="returns",RU.returns={type:"",description:[]};else if("params"!==gU||"table"!==pU.kind){if("returns"===gU&&"paragraph"===pU.kind&&""===RU.returns.type){const UU=mg(pU.text);if(null!==UU){RU.returns.type=UU.replaceAll("\\|","|");continue}}"returns"===gU?RU.returns.description.push(pU):RU.description.push(pU)}else for(const[UU,gU,EU]of pU.rows){var tU;RU.params.push({name:UU,type:null!==(tU=mg(gU))&&void 0!==tU?tU:gU,description:null!==EU&&void 0!==EU?EU:""})}return RU}const wg=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function ng(UU){return UU.filter((UU=>!Ig(UU)))}const bg=/^[\w][\w .'&!:()-]*$/,og=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Zg(UU){var RU;if("code"===UU.kind&&"text"===UU.lang){const RU=UU.code.split("\n").map((UU=>UU.trim())).filter(Boolean);return RU.length>0&&RU.every((UU=>bg.test(UU)))?RU.map((UU=>({name:UU}))):null}return"paragraph"===UU.kind&&og.test(UU.text.trim())?[...UU.text.matchAll(/`([ ^ `]+)` / g)].flatMap((UU => UU[1].split(/,\s*/).map((UU => ({
-                              name: UU.trim()
-                            }))))): "table" === UU.kind && null !== (RU = UU.header[0]) && void 0 !== RU && RU.startsWith("Song") ? UU.rows.map((UU => {
-                              let [RU, gU] = UU;
+                        })\ s * ([ ^ `]+?)\s*\1$/);return Ru?Ru[2]:null}function Cy(uu){return"paragraph"===uu.kind&&""===uu.text.trim()}function ky(uu){const Ru={name:uu.heading.text,description:[],params:[],returns:null};let yu="description";for(const Ku of uu.blocks)if(!Cy(Ku))if("heading"===Ku.kind&&/^Parameters:?$/.test(Ku.text))yu="params";else if("heading"===Ku.kind&&/^Returns:?$/.test(Ku.text))yu="returns",Ru.returns={type:"",description:[]};else if("params"!==yu||"table"!==Ku.kind){if("returns"===yu&&"paragraph"===Ku.kind&&""===Ru.returns.type){const uu=by(Ku.text);if(null!==uu){Ru.returns.type=uu.replaceAll("\\|","|");continue}}"returns"===yu?Ru.returns.description.push(Ku):Ru.description.push(Ku)}else for(const[uu,yu,Qu]of Ku.rows){var Eu;Ru.params.push({name:uu,type:null!==(Eu=by(yu))&&void 0!==Eu?Eu:yu,description:null!==Qu&&void 0!==Qu?Qu:""})}return Ru}const ey=/^\*\*(Type|Default|Example):\*\*\s*(.*)$/;function Ay(uu){return uu.filter((uu=>!Cy(uu)))}const Dy=/^[\w][\w .'&!:()-]*$/,My=/^` [ ^ `]+`( ? : [\s, ] * `[^`] + `)*$/;function Iy(uu){var Ru;if("code"===uu.kind&&"text"===uu.lang){const Ru=uu.code.split("\n").map((uu=>uu.trim())).filter(Boolean);return Ru.length>0&&Ru.every((uu=>Dy.test(uu)))?Ru.map((uu=>({name:uu}))):null}return"paragraph"===uu.kind&&My.test(uu.text.trim())?[...uu.text.matchAll(/`([ ^ `]+)` / g)].flatMap((uu => uu[1].split(/,\s*/).map((uu => ({
+                              name: uu.trim()
+                            }))))): "table" === uu.kind && null !== (Ru = uu.header[0]) && void 0 !== Ru && Ru.startsWith("Song") ? uu.rows.map((uu => {
+                              let [Ru, yu] = uu;
                               return {
-                                name: RU.replace(/`/g, ""),
-                                caption: gU
+                                name: Ru.replace(/`/g, ""),
+                                caption: yu
                               }
                             })) : null
                           }
 
-                          function ag(UU) {
-                            const RU = [];
-                            for (const gU of UU) {
-                              const UU = Zg(gU),
-                                tU = RU.at(-1),
-                                pU = "table" === gU.kind;
-                              UU ? "names" === (null === tU || void 0 === tU ? void 0 : tU.kind) && tU.isSongs === pU ? tU.names.push(...UU) : RU.push({
+                          function Gy(uu) {
+                            const Ru = [];
+                            for (const yu of uu) {
+                              const uu = Iy(yu),
+                                Eu = Ru.at(-1),
+                                Ku = "table" === yu.kind;
+                              uu ? "names" === (null === Eu || void 0 === Eu ? void 0 : Eu.kind) && Eu.isSongs === Ku ? Eu.names.push(...uu) : Ru.push({
                                 kind: "names",
-                                names: UU,
-                                isSongs: pU
-                              }) : RU.push({
+                                names: uu,
+                                isSongs: Ku
+                              }) : Ru.push({
                                 kind: "block",
-                                block: gU
+                                block: yu
                               })
                             }
-                            return RU
+                            return Ru
                           }
-                          const Yg = {
+                          const Uy = {
                             icons: "icon",
                             particles: "particle",
                             sounds: "sound",
@@ -1624,58 +1624,58 @@ export const modules = {
                             items: "item"
                           };
 
-                          function Bg(UU, RU) {
-                            return `${Yg[UU]}-${(0,wU.n)(RU)}`
+                          function ny(uu, Ru) {
+                            return `${Uy[uu]}-${(0,eu.l)(Ru)}`
                           }
-                          const Vg = new WeakMap;
+                          const sy = new WeakMap;
 
-                          function rg(UU, RU, gU) {
-                            let tU = Vg.get(RU);
-                            if (!tU) {
-                              tU = new Map;
-                              const gU = new Set;
-                              for (const pU of (0, wU.o)(RU)) {
-                                const RU = ag(ng(pU.blocks)).map((RU => {
-                                  if ("block" === RU.kind) return RU;
+                          function ty(uu, Ru, yu) {
+                            let Eu = sy.get(Ru);
+                            if (!Eu) {
+                              Eu = new Map;
+                              const yu = new Set;
+                              for (const Ku of (0, eu.p)(Ru)) {
+                                const Ru = Gy(Ay(Ku.blocks)).map((Ru => {
+                                  if ("block" === Ru.kind) return Ru;
                                   return {
                                     kind: "names",
-                                    names: RU.names.map((RU => {
-                                      var tU, EU;
-                                      const PU = Bg(UU, RU.name);
-                                      let TU = PU;
-                                      for (let UU = 2; gU.has(TU); UU++) TU = `${PU}-${UU}`;
-                                      return gU.add(TU), {
-                                        ...RU,
-                                        anchor: TU,
-                                        heading: null !== (tU = null === (EU = pU.heading) || void 0 === EU ? void 0 : EU.text) && void 0 !== tU ? tU : ""
+                                    names: Ru.names.map((Ru => {
+                                      var Eu, Qu;
+                                      const mu = ny(uu, Ru.name);
+                                      let Ju = mu;
+                                      for (let uu = 2; yu.has(Ju); uu++) Ju = `${mu}-${uu}`;
+                                      return yu.add(Ju), {
+                                        ...Ru,
+                                        anchor: Ju,
+                                        heading: null !== (Eu = null === (Qu = Ku.heading) || void 0 === Qu ? void 0 : Qu.text) && void 0 !== Eu ? Eu : ""
                                       }
                                     })),
-                                    isSongs: RU.isSongs
+                                    isSongs: Ru.isSongs
                                   }
                                 }));
-                                tU.set(pU.blocks, RU)
+                                Eu.set(Ku.blocks, Ru)
                               }
-                              Vg.set(RU, tU)
+                              sy.set(Ru, Eu)
                             }
-                            const pU = tU.get(gU);
-                            if (!pU) throw new Error("Gallery blocks must be the page's intro or one of its sections");
-                            return pU
+                            const Ku = Eu.get(yu);
+                            if (!Ku) throw new Error("Gallery blocks must be the page's intro or one of its sections");
+                            return Ku
                           }
-                          const Xg = "/textures/docs/skinPreviews",
-                            vg = [{
+                          const ly = "/textures/docs/skinPreviews",
+                            gy = [{
                               heading: "NPC Skins",
                               prefix: "npc"
                             }, {
                               heading: "Poses",
                               prefix: "pose"
                             }];
-                          var dg = gU(3924),
-                            Hg = gU(3937);
+                          var cy = yu(4037),
+                            Ly = yu(4053);
 
-                          function Sg(UU) {
-                            return Object.hasOwn(dg.g, UU) ? dg.g[UU] : null
+                          function zy(uu) {
+                            return Object.hasOwn(cy.d, uu) ? cy.d[uu] : null
                           }
-                          const sg = {
+                          const Fy = {
                             dir1: [-1, -1, -1],
                             dir2: [1, 1, 1],
                             texture: "bubble",
@@ -1697,453 +1697,453 @@ export const modules = {
                               factor: 1,
                               factor2: 1
                             }],
-                            blendMode: Hg.g.Standard
+                            blendMode: Ly.g.Standard
                           };
 
-                          function yg(UU, RU, gU) {
-                            return RU + (gU - RU) * UU()
+                          function wy(uu, Ru, yu) {
+                            return Ru + (yu - Ru) * uu()
                           }
 
-                          function kg(UU, RU, gU) {
-                            return UU + (RU - UU) * gU
+                          function Zy(uu, Ru, yu) {
+                            return uu + (Ru - uu) * yu
                           }
 
-                          function Fg(UU) {
-                            return UU.length > 0 && "timeFraction" in UU[0]
+                          function hy(uu) {
+                            return uu.length > 0 && "timeFraction" in uu[0]
                           }
 
-                          function ig(UU, RU) {
-                            if (0 === UU.colorGradients.length) return [{
+                          function Py(uu, Ru) {
+                            if (0 === uu.colorGradients.length) return [{
                               at: 0,
                               colour: [1, 1, 1, 1]
                             }];
-                            if (!Fg(UU.colorGradients)) {
-                              const gU = UU.colorGradients,
+                            if (!hy(uu.colorGradients)) {
+                              const yu = uu.colorGradients,
                                 {
-                                  color: tU
-                                } = gU[Math.floor(RU() * gU.length) % gU.length];
+                                  color: Eu
+                                } = yu[Math.floor(Ru() * yu.length) % yu.length];
                               return [{
                                 at: 0,
-                                colour: [tU[0] / 255, tU[1] / 255, tU[2] / 255, 1]
+                                colour: [Eu[0] / 255, Eu[1] / 255, Eu[2] / 255, 1]
                               }]
                             }
-                            return [...UU.colorGradients].sort(((UU, RU) => UU.timeFraction - RU.timeFraction)).map((UU => {
-                              var gU, tU, pU;
-                              const EU = UU.minColor,
-                                PU = null !== (gU = UU.maxColor) && void 0 !== gU ? gU : EU,
-                                TU = RU(),
-                                qU = [kg(EU[0], PU[0], TU) / 255, kg(EU[1], PU[1], TU) / 255, kg(EU[2], PU[2], TU) / 255, kg(null !== (tU = EU[3]) && void 0 !== tU ? tU : 1, null !== (pU = PU[3]) && void 0 !== pU ? pU : 1, TU)];
+                            return [...uu.colorGradients].sort(((uu, Ru) => uu.timeFraction - Ru.timeFraction)).map((uu => {
+                              var yu, Eu, Ku;
+                              const Qu = uu.minColor,
+                                mu = null !== (yu = uu.maxColor) && void 0 !== yu ? yu : Qu,
+                                Ju = Ru(),
+                                Nu = [Zy(Qu[0], mu[0], Ju) / 255, Zy(Qu[1], mu[1], Ju) / 255, Zy(Qu[2], mu[2], Ju) / 255, Zy(null !== (Eu = Qu[3]) && void 0 !== Eu ? Eu : 1, null !== (Ku = mu[3]) && void 0 !== Ku ? Ku : 1, Ju)];
                               return {
-                                at: UU.timeFraction,
-                                colour: qU
+                                at: uu.timeFraction,
+                                colour: Nu
                               }
                             }))
                           }
 
-                          function Ag(UU, RU, gU, tU) {
-                            const pU = yg(tU, UU.minEmitPower, UU.maxEmitPower),
-                              EU = RU => yg(tU, Math.min(UU.dir1[RU], UU.dir2[RU]), Math.max(UU.dir1[RU], UU.dir2[RU])) * pU,
-                              PU = [...UU.velocityGradients].sort(((UU, RU) => UU.timeFraction - RU.timeFraction)).map((UU => ({
-                                at: UU.timeFraction,
-                                factor: yg(tU, UU.factor, UU.factor2)
+                          function iy(uu, Ru, yu, Eu) {
+                            const Ku = wy(Eu, uu.minEmitPower, uu.maxEmitPower),
+                              Qu = Ru => wy(Eu, Math.min(uu.dir1[Ru], uu.dir2[Ru]), Math.max(uu.dir1[Ru], uu.dir2[Ru])) * Ku,
+                              mu = [...uu.velocityGradients].sort(((uu, Ru) => uu.timeFraction - Ru.timeFraction)).map((uu => ({
+                                at: uu.timeFraction,
+                                factor: wy(Eu, uu.factor, uu.factor2)
                               })));
                             return {
-                              pos: [yg(tU, RU[0], gU[0]), yg(tU, RU[1], gU[1]), yg(tU, RU[2], gU[2])],
-                              dir: [EU(0), EU(1), EU(2)],
+                              pos: [wy(Eu, Ru[0], yu[0]), wy(Eu, Ru[1], yu[1]), wy(Eu, Ru[2], yu[2])],
+                              dir: [Qu(0), Qu(1), Qu(2)],
                               age: 0,
-                              life: yg(tU, UU.minLifeTime, UU.maxLifeTime),
-                              size: yg(tU, UU.minSize, UU.maxSize),
-                              colours: ig(UU, tU),
-                              velocityFactors: PU
+                              life: wy(Eu, uu.minLifeTime, uu.maxLifeTime),
+                              size: wy(Eu, uu.minSize, uu.maxSize),
+                              colours: Py(uu, Eu),
+                              velocityFactors: mu
                             }
                           }
 
-                          function zg(UU, RU, gU, tU) {
-                            if (RU < UU[0].at) return gU(Math.min(1, UU.length - 1));
-                            for (let pU = 0; pU < UU.length - 1; pU++)
-                              if (RU <= UU[pU + 1].at) {
-                                const EU = UU[pU + 1].at - UU[pU].at;
-                                return tU(gU(pU), gU(pU + 1), EU > 0 ? (RU - UU[pU].at) / EU : 1)
-                              } return gU(UU.length - 1)
+                          function Yy(uu, Ru, yu, Eu) {
+                            if (Ru < uu[0].at) return yu(Math.min(1, uu.length - 1));
+                            for (let Ku = 0; Ku < uu.length - 1; Ku++)
+                              if (Ru <= uu[Ku + 1].at) {
+                                const Qu = uu[Ku + 1].at - uu[Ku].at;
+                                return Eu(yu(Ku), yu(Ku + 1), Qu > 0 ? (Ru - uu[Ku].at) / Qu : 1)
+                              } return yu(uu.length - 1)
                           }
 
-                          function Mg(UU) {
-                            return zg(UU.colours, UU.age / UU.life, (RU => UU.colours[RU].colour), ((UU, RU, gU) => [kg(UU[0], RU[0], gU), kg(UU[1], RU[1], gU), kg(UU[2], RU[2], gU), kg(UU[3], RU[3], gU)]))
+                          function oy(uu) {
+                            return Yy(uu.colours, uu.age / uu.life, (Ru => uu.colours[Ru].colour), ((uu, Ru, yu) => [Zy(uu[0], Ru[0], yu), Zy(uu[1], Ru[1], yu), Zy(uu[2], Ru[2], yu), Zy(uu[3], Ru[3], yu)]))
                           }
 
-                          function Dg(UU, RU, gU) {
-                            if (UU.age += gU, UU.age >= UU.life) return !1;
-                            const tU = function(UU) {
-                              return 0 === UU.velocityFactors.length ? 1 : zg(UU.velocityFactors, UU.age / UU.life, (RU => UU.velocityFactors[RU].factor), kg)
-                            }(UU) * gU;
-                            for (let EU = 0; EU < 3; EU++) {
-                              var pU;
-                              UU.pos[EU] += UU.dir[EU] * tU, UU.dir[EU] += (null !== (pU = RU[EU]) && void 0 !== pU ? pU : 0) * gU
+                          function qy(uu, Ru, yu) {
+                            if (uu.age += yu, uu.age >= uu.life) return !1;
+                            const Eu = function(uu) {
+                              return 0 === uu.velocityFactors.length ? 1 : Yy(uu.velocityFactors, uu.age / uu.life, (Ru => uu.velocityFactors[Ru].factor), Zy)
+                            }(uu) * yu;
+                            for (let Qu = 0; Qu < 3; Qu++) {
+                              var Ku;
+                              uu.pos[Qu] += uu.dir[Qu] * Eu, uu.dir[Qu] += (null !== (Ku = Ru[Qu]) && void 0 !== Ku ? Ku : 0) * yu
                             }
                             return !0
                           }
 
-                          function Lg(UU) {
-                            return String(Math.round(1e6 * UU) / 1e6)
+                          function Oy(uu) {
+                            return String(Math.round(1e6 * uu) / 1e6)
                           }
 
-                          function Ng(UU) {
-                            return `[${UU.map(Lg).join(", ")}]`
+                          function vy(uu) {
+                            return `[${uu.map(Oy).join(", ")}]`
                           }
 
-                          function lg(UU, RU) {
-                            const gU = `${RU}    `;
-                            return `[\n${(Fg(UU)?UU.map((UU=>{const RU=[`${gU}    timeFraction: ${Lg(UU.timeFraction)},`,`${gU}    minColor: ${Ng(UU.minColor)},`];return UU.maxColor&&RU.push(`${gU}    maxColor: ${Ng(UU.maxColor)},`),`${gU}{\n${RU.join("\n")}\n${gU}},`})):UU.map((UU=>`
+                          function ay(uu, Ru) {
+                            const yu = `${Ru}    `;
+                            return `[\n${(hy(uu)?uu.map((uu=>{const Ru=[`${yu}    timeFraction: ${Oy(uu.timeFraction)},`,`${yu}    minColor: ${vy(uu.minColor)},`];return uu.maxColor&&Ru.push(`${yu}    maxColor: ${vy(uu.maxColor)},`),`${yu}{\n${Ru.join("\n")}\n${yu}},`})):uu.map((uu=>`
                             $ {
-                              gU
+                              yu
                             } {
                               color: $ {
-                                Ng(UU.color)
+                                vy(uu.color)
                               }
-                            }, `))).join("\n")}\n${RU}]`
+                            }, `))).join("\n")}\n${Ru}]`
                           }
-                          const Og = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
-                            Ut = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
-                          const Rt = .6;
+                          const fy = "let [x, y, z] = thisPos\ny += 1\napi.playParticleEffect({\n",
+                            uE = "    pos1: [x, y, z],\n    pos2: [x + 1, y + 1, z + 1],";
+                          const RE = .6;
 
-                          function gt(UU, RU) {
-                            return `${RU?"song":"sound"}:${UU}`
+                          function yE(uu, Ru) {
+                            return `${Ru?"song":"sound"}:${uu}`
                           }
-                          let tt = {
+                          let EE = {
                               track: null,
-                              volume: Rt
+                              volume: RE
                             },
-                            pt = null,
-                            Et = 0,
-                            Pt = 0;
-                          const Tt = new Set;
+                            KE = null,
+                            QE = 0,
+                            mE = 0;
+                          const JE = new Set;
 
-                          function qt(UU) {
-                            tt = {
-                              ...tt,
-                              ...UU
-                            }, Tt.forEach((UU => {
-                              UU()
+                          function NE(uu) {
+                            EE = {
+                              ...EE,
+                              ...uu
+                            }, JE.forEach((uu => {
+                              uu()
                             }))
                           }
 
-                          function Kt(UU) {
-                            tt.track && qt({
+                          function XE(uu) {
+                            EE.track && NE({
                               track: {
-                                ...tt.track,
-                                ...UU
+                                ...EE.track,
+                                ...uu
                               }
                             })
                           }
 
-                          function ct(UU) {
-                            const [RU, gU] = (0, tU.useState)((() => UU(tt))), pU = (0, tU.useRef)(UU);
-                            return pU.current = UU, (0, tU.useEffect)((() => {
-                              const UU = () => {
-                                gU((() => pU.current(tt)))
+                          function VE(uu) {
+                            const [Ru, yu] = (0, Eu.useState)((() => uu(EE))), Ku = (0, Eu.useRef)(uu);
+                            return Ku.current = uu, (0, Eu.useEffect)((() => {
+                              const uu = () => {
+                                yu((() => Ku.current(EE)))
                               };
-                              return Tt.add(UU), UU(), () => {
-                                Tt.delete(UU)
+                              return JE.add(uu), uu(), () => {
+                                JE.delete(uu)
                               }
-                            }), []), RU
+                            }), []), Ru
                           }
 
-                          function Gt() {
-                            Et++;
-                            const UU = pt;
-                            pt = null, null === UU || void 0 === UU || UU.stop()
+                          function rE() {
+                            QE++;
+                            const uu = KE;
+                            KE = null, null === uu || void 0 === uu || uu.stop()
                           }
 
-                          function jt(UU, RU) {
-                            let tU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-                            Gt();
-                            const pU = Et,
+                          function BE(uu, Ru) {
+                            let Eu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+                            rE();
+                            const Ku = QE,
                               {
-                                track: EU
-                              } = tt,
-                              PU = EU && EU.name === UU && EU.isSong === RU ? EU.duration : 0;
-                            Pt = tU, qt({
+                                track: Qu
+                              } = EE,
+                              mu = Qu && Qu.name === uu && Qu.isSong === Ru ? Qu.duration : 0;
+                            mE = Eu, NE({
                               track: {
-                                name: UU,
-                                isSong: RU,
+                                name: uu,
+                                isSong: Ru,
                                 status: "loading",
-                                duration: PU
+                                duration: mu
                               }
-                            }), Promise.all([gU.e(215), gU.e(239)]).then((() => gU(39188))).then((gU => {
+                            }), Promise.all([yu.e(215), yu.e(239)]).then((() => yu(39361))).then((yu => {
                               let {
-                                playDocsSound: EU
-                              } = gU;
-                              pU === Et && (pt = EU(UU, RU, tt.volume, tU, {
-                                onPlay: UU => {
-                                  pU === Et && Kt({
+                                playDocsSound: Qu
+                              } = yu;
+                              Ku === QE && (KE = Qu(uu, Ru, EE.volume, Eu, {
+                                onPlay: uu => {
+                                  Ku === QE && XE({
                                     status: "playing",
-                                    duration: UU
+                                    duration: uu
                                   })
                                 },
-                                onEnd: UU => {
-                                  var RU, gU;
-                                  pU === Et && (pt = null, UU ? qt({
+                                onEnd: uu => {
+                                  var Ru, yu;
+                                  Ku === QE && (KE = null, uu ? NE({
                                     track: null
-                                  }) : (Pt = null !== (RU = null === (gU = tt.track) || void 0 === gU ? void 0 : gU.duration) && void 0 !== RU ? RU : 0, Kt({
+                                  }) : (mE = null !== (Ru = null === (yu = EE.track) || void 0 === yu ? void 0 : yu.duration) && void 0 !== Ru ? Ru : 0, XE({
                                     status: "paused"
                                   })))
                                 }
                               }))
-                            })).catch((RU => {
-                              console.error(`Could not play docs sound ${UU}`, RU), pU === Et && qt({
+                            })).catch((Ru => {
+                              console.error(`Could not play docs sound ${uu}`, Ru), Ku === QE && NE({
                                 track: null
                               })
                             }))
                           }
 
-                          function ut() {
+                          function xE() {
                             const {
-                              track: UU
-                            } = tt;
-                            if (!UU) return;
-                            if ("playing" === UU.status && pt) return Pt = pt.Hx(), pt.pause(), void Kt({
+                              track: uu
+                            } = EE;
+                            if (!uu) return;
+                            if ("playing" === uu.status && KE) return mE = KE.mH(), KE.pause(), void XE({
                               status: "paused"
                             });
-                            if ("loading" === UU.status) return Gt(), void Kt({
+                            if ("loading" === uu.status) return rE(), void XE({
                               status: "paused"
                             });
-                            if (pt) return void pt.resume();
-                            const RU = UU.duration > 0 && Pt >= UU.duration - .05;
-                            jt(UU.name, UU.isSong, RU ? 0 : Pt)
+                            if (KE) return void KE.resume();
+                            const Ru = uu.duration > 0 && mE >= uu.duration - .05;
+                            BE(uu.name, uu.isSong, Ru ? 0 : mE)
                           }
 
-                          function Ct() {
-                            var UU;
-                            return pt && "playing" === (null === (UU = tt.track) || void 0 === UU ? void 0 : UU.status) ? pt.Hx() : Pt
+                          function SE() {
+                            var uu;
+                            return KE && "playing" === (null === (uu = EE.track) || void 0 === uu ? void 0 : uu.status) ? KE.mH() : mE
                           }
 
-                          function ht(UU) {
-                            var RU;
-                            null === (RU = pt) || void 0 === RU || RU.setVolume(UU), qt({
-                              volume: UU
+                          function pE(uu) {
+                            var Ru;
+                            null === (Ru = KE) || void 0 === Ru || Ru.setVolume(uu), NE({
+                              volume: uu
                             })
                           }
 
-                          function Qt() {
-                            Gt(), Pt = 0, qt({
+                          function TE() {
+                            rE(), mE = 0, NE({
                               track: null
                             })
                           }
-                          const et = (0, tU.createContext)(null);
-                          let Wt = null;
+                          const WE = (0, Eu.createContext)(null);
+                          let jE = null;
 
-                          function ft() {
-                            const [UU, RU] = (0, tU.useState)(null);
-                            return (0, tU.useEffect)((() => {
-                              let UU = !1;
-                              return Wt ??= Promise.all([gU.e(69), gU.e(72), gU.e(71), gU.e(70), gU.e(196), gU.e(96), gU.e(220)]).then((() => gU(39183))), Wt.then((gU => {
-                                UU || RU(gU)
-                              }), (UU => {
-                                console.error("Could not load the docs gallery's textures", UU), Wt = null
+                          function HE() {
+                            const [uu, Ru] = (0, Eu.useState)(null);
+                            return (0, Eu.useEffect)((() => {
+                              let uu = !1;
+                              return jE ??= Promise.all([yu.e(69), yu.e(72), yu.e(71), yu.e(70), yu.e(196), yu.e(96), yu.e(220)]).then((() => yu(39357))), jE.then((yu => {
+                                uu || Ru(yu)
+                              }), (uu => {
+                                console.error("Could not load the docs gallery's textures", uu), jE = null
                               })), () => {
-                                UU = !0
+                                uu = !0
                               }
-                            }), []), UU
+                            }), []), uu
                           }
-                          const xt = 24,
-                            mt = /^[a-z]+_(\d+(_\d+)?|none)$/;
+                          const dE = 24,
+                            bE = /^[a-z]+_(\d+(_\d+)?|none)$/;
 
-                          function It(UU, RU) {
-                            const gU = "skins" === UU ? function(UU, RU) {
-                              const gU = vg.find((RU => UU.startsWith(RU.heading)));
-                              return gU ? function(UU, RU) {
-                                return `${UU}-${RU}`
-                              }(gU.prefix, RU) : null
-                            }(RU.heading, RU.name) : null;
-                            return null === gU ? null : `${Xg}/${gU}.webp`
+                          function CE(uu, Ru) {
+                            const yu = "skins" === uu ? function(uu, Ru) {
+                              const yu = gy.find((Ru => uu.startsWith(Ru.heading)));
+                              return yu ? function(uu, Ru) {
+                                return `${uu}-${Ru}`
+                              }(yu.prefix, Ru) : null
+                            }(Ru.heading, Ru.name) : null;
+                            return null === yu ? null : `${ly}/${yu}.webp`
                           }
 
-                          function Jt(UU) {
+                          function kE(uu) {
                             let {
-                              kind: RU,
-                              entry: gU,
-                              assets: pU,
-                              renderedUrl: PU
-                            } = UU;
+                              kind: Ru,
+                              entry: yu,
+                              assets: Ku,
+                              renderedUrl: mu
+                            } = uu;
                             const {
-                              name: TU
-                            } = gU, [qU, KU] = (0, tU.useState)(!1);
-                            if ("icons" === RU && SR(TU)) return (0, CU.jsx)(xg.c, {
+                              name: Ju
+                            } = yu, [Nu, Xu] = (0, Eu.useState)(!1);
+                            if ("icons" === Ru && zR(Ju)) return (0, Su.jsx)(dy.c, {
                               className: "DocsTileIcon",
-                              name: TU
+                              name: Ju
                             });
-                            let cU = null;
-                            var GU;
-                            if ("icons" === RU) cU = null !== (GU = null === pU || void 0 === pU ? void 0 : pU.getIngameIconUrl(TU)) && void 0 !== GU ? GU : null;
-                            else if ("particles" === RU) {
-                              var jU, uU, hU;
-                              cU = null !== (jU = null === pU || void 0 === pU ? void 0 : pU.getParticleTextureUrl(null !== (uU = null === (hU = Sg(TU)) || void 0 === hU ? void 0 : hU.texture) && void 0 !== uU ? uU : TU)) && void 0 !== jU ? jU : null
-                            } else "skins" === RU && (cU = null !== PU && void 0 !== PU ? PU : mt.test(TU) ? `/textures/charSkins/previews/${TU}_preview.png` : null);
-                            return !cU || qU ? (0, CU.jsx)(QU, {
+                            let Vu = null;
+                            var ru;
+                            if ("icons" === Ru) Vu = null !== (ru = null === Ku || void 0 === Ku ? void 0 : Ku.getIngameIconUrl(Ju)) && void 0 !== ru ? ru : null;
+                            else if ("particles" === Ru) {
+                              var Bu, xu, pu;
+                              Vu = null !== (Bu = null === Ku || void 0 === Ku ? void 0 : Ku.getParticleTextureUrl(null !== (xu = null === (pu = zy(Ju)) || void 0 === pu ? void 0 : pu.texture) && void 0 !== xu ? xu : Ju)) && void 0 !== Bu ? Bu : null
+                            } else "skins" === Ru && (Vu = null !== mu && void 0 !== mu ? mu : bE.test(Ju) ? `/textures/charSkins/previews/${Ju}_preview.png` : null);
+                            return !Vu || Nu ? (0, Su.jsx)(Tu, {
                               className: "DocsTileIcon Placeholder",
-                              name: "skins" === RU ? "person" : "image"
-                            }) : (0, CU.jsx)("img", {
-                              className: EU()("DocsTileImage", {
-                                Pixelated: "skins" !== RU
+                              name: "skins" === Ru ? "person" : "image"
+                            }) : (0, Su.jsx)("img", {
+                              className: Qu()("DocsTileImage", {
+                                Pixelated: "skins" !== Ru
                               }),
-                              src: cU,
-                              srcSet: cU === PU ? `${cU} 2x` : void 0,
+                              src: Vu,
+                              srcSet: Vu === mu ? `${Vu} 2x` : void 0,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs gallery: could not load ${cU}`), KU(!0)
+                                console.warn(`Docs gallery: could not load ${Vu}`), Xu(!0)
                               }
                             })
                           }
 
-                          function wt(UU) {
+                          function eE(uu) {
                             let {
-                              entry: RU,
-                              isSong: gU
-                            } = UU;
-                            const tU = ct((UU => {
+                              entry: Ru,
+                              isSong: yu
+                            } = uu;
+                            const Eu = VE((uu => {
                                 let {
-                                  track: tU
-                                } = UU;
-                                return (null === tU || void 0 === tU ? void 0 : tU.name) === RU.name && tU.isSong === gU ? tU.status : null
+                                  track: Eu
+                                } = uu;
+                                return (null === Eu || void 0 === Eu ? void 0 : Eu.name) === Ru.name && Eu.isSong === yu ? Eu.status : null
                               })),
-                              pU = null !== tU && "paused" !== tU;
-                            return (0, CU.jsxs)("button", {
+                              Ku = null !== Eu && "paused" !== Eu;
+                            return (0, Su.jsxs)("button", {
                               type: "button",
-                              id: RU.anchor,
-                              className: EU()("DocsSoundTile", {
-                                Playing: pU
+                              id: Ru.anchor,
+                              className: Qu()("DocsSoundTile", {
+                                Playing: Ku
                               }),
-                              "data-docs-track": gt(RU.name, gU),
-                              "aria-label": pU ? `Pause ${RU.name}` : `Play ${RU.name}`,
+                              "data-docs-track": yE(Ru.name, yu),
+                              "aria-label": Ku ? `Pause ${Ru.name}` : `Play ${Ru.name}`,
                               onClick: () => {
-                                null !== tU ? ut() : jt(RU.name, gU)
+                                null !== Eu ? xE() : BE(Ru.name, yu)
                               },
-                              children: [(0, CU.jsx)("span", {
+                              children: [(0, Su.jsx)("span", {
                                 className: "DocsSoundPlay",
-                                children: (0, CU.jsx)(QU, {
-                                  name: pU ? "pause" : "play"
+                                children: (0, Su.jsx)(Tu, {
+                                  name: Ku ? "pause" : "play"
                                 })
-                              }), (0, CU.jsx)("code", {
+                              }), (0, Su.jsx)("code", {
                                 className: "DocsSoundName",
-                                children: RU.name
-                              }), RU.caption && (0, CU.jsx)("span", {
+                                children: Ru.name
+                              }), Ru.caption && (0, Su.jsx)("span", {
                                 className: "DocsSoundCaption",
-                                children: RU.caption
+                                children: Ru.caption
                               })]
                             })
                           }
 
-                          function nt(UU) {
+                          function AE(uu) {
                             let {
-                              kind: RU,
-                              names: gU,
-                              isSongs: pU
-                            } = UU;
-                            const PU = ft(),
-                              [TU, qU] = WU(),
-                              KU = !1 === (null === TU || void 0 === TU ? void 0 : TU.failed) ? TU.text : null,
-                              cU = (0, tU.useContext)(et),
-                              [GU, jU] = (0, tU.useState)(""),
-                              uU = GU.trim().toLowerCase(),
-                              hU = uU ? gU.filter((UU => UU.name.toLowerCase().includes(uU))) : gU;
-                            return (0, CU.jsxs)("div", {
+                              kind: Ru,
+                              names: yu,
+                              isSongs: Ku
+                            } = uu;
+                            const mu = HE(),
+                              [Ju, Nu] = ju(),
+                              Xu = !1 === (null === Ju || void 0 === Ju ? void 0 : Ju.failed) ? Ju.text : null,
+                              Vu = (0, Eu.useContext)(WE),
+                              [ru, Bu] = (0, Eu.useState)(""),
+                              xu = ru.trim().toLowerCase(),
+                              pu = xu ? yu.filter((uu => uu.name.toLowerCase().includes(xu))) : yu;
+                            return (0, Su.jsxs)("div", {
                               className: "DocsGallery",
-                              children: [gU.length > xt && (0, CU.jsx)(fg, {
+                              children: [yu.length > dE && (0, Su.jsx)(Hy, {
                                 className: "DocsGalleryFilter",
-                                value: GU,
-                                placeholder: `Filter ${gU.length} names\u2026`,
+                                value: ru,
+                                placeholder: `Filter ${yu.length} names\u2026`,
                                 label: "Filter names",
-                                onChange: jU,
-                                count: uU ? {
-                                  visible: hU.length,
-                                  total: gU.length
+                                onChange: Bu,
+                                count: xu ? {
+                                  visible: pu.length,
+                                  total: yu.length
                                 } : null
-                              }), (0, CU.jsx)("div", {
-                                className: EU()("DocsGalleryGrid", `Kind-${RU}`, {
-                                  Songs: pU
+                              }), (0, Su.jsx)("div", {
+                                className: Qu()("DocsGalleryGrid", `Kind-${Ru}`, {
+                                  Songs: Ku
                                 }),
-                                children: hU.map((UU => {
-                                  if ("sounds" === RU) return (0, CU.jsx)(wt, {
-                                    entry: UU,
-                                    isSong: pU
-                                  }, UU.anchor);
-                                  if (cU && "particles" === RU && Sg(UU.name)) return (0, CU.jsxs)("button", {
+                                children: pu.map((uu => {
+                                  if ("sounds" === Ru) return (0, Su.jsx)(eE, {
+                                    entry: uu,
+                                    isSong: Ku
+                                  }, uu.anchor);
+                                  if (Vu && "particles" === Ru && zy(uu.name)) return (0, Su.jsxs)("button", {
                                     type: "button",
-                                    id: UU.anchor,
-                                    className: EU()("DocsTile Previewable", {
-                                      Copied: KU === UU.name
+                                    id: uu.anchor,
+                                    className: Qu()("DocsTile Previewable", {
+                                      Copied: Xu === uu.name
                                     }),
-                                    title: `Play "${UU.name}" in the playground and copy its name`,
+                                    title: `Play "${uu.name}" in the playground and copy its name`,
                                     onClick: () => {
-                                      cU(UU.name), qU(UU.name)
+                                      Vu(uu.name), Nu(uu.name)
                                     },
-                                    children: [(0, CU.jsxs)("span", {
+                                    children: [(0, Su.jsxs)("span", {
                                       className: "DocsTilePreview",
-                                      children: [(0, CU.jsx)(Jt, {
-                                        kind: RU,
-                                        entry: UU,
-                                        assets: PU,
+                                      children: [(0, Su.jsx)(kE, {
+                                        kind: Ru,
+                                        entry: uu,
+                                        assets: mu,
                                         renderedUrl: null
-                                      }), (0, CU.jsx)("span", {
+                                      }), (0, Su.jsx)("span", {
                                         className: "DocsTilePlayBadge",
-                                        children: (0, CU.jsx)(QU, {
+                                        children: (0, Su.jsx)(Tu, {
                                           name: "play"
                                         })
                                       })]
-                                    }), (0, CU.jsx)("span", {
+                                    }), (0, Su.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: KU === UU.name ? "Copied!" : UU.name
+                                      children: Xu === uu.name ? "Copied!" : uu.name
                                     })]
-                                  }, UU.anchor);
-                                  const gU = It(RU, UU);
-                                  return (0, CU.jsxs)("button", {
+                                  }, uu.anchor);
+                                  const yu = CE(Ru, uu);
+                                  return (0, Su.jsxs)("button", {
                                     type: "button",
-                                    id: UU.anchor,
-                                    className: EU()("DocsTile", {
-                                      Copied: KU === UU.name
+                                    id: uu.anchor,
+                                    className: Qu()("DocsTile", {
+                                      Copied: Xu === uu.name
                                     }),
-                                    title: `Copy "${UU.name}"`,
+                                    title: `Copy "${uu.name}"`,
                                     onClick: () => {
-                                      qU(UU.name)
+                                      Nu(uu.name)
                                     },
-                                    children: [(0, CU.jsx)("span", {
-                                      className: EU()("DocsTilePreview", {
-                                        Rendered: null !== gU
+                                    children: [(0, Su.jsx)("span", {
+                                      className: Qu()("DocsTilePreview", {
+                                        Rendered: null !== yu
                                       }),
-                                      children: (0, CU.jsx)(Jt, {
-                                        kind: RU,
-                                        entry: UU,
-                                        assets: PU,
-                                        renderedUrl: gU
+                                      children: (0, Su.jsx)(kE, {
+                                        kind: Ru,
+                                        entry: uu,
+                                        assets: mu,
+                                        renderedUrl: yu
                                       })
-                                    }), (0, CU.jsx)("span", {
+                                    }), (0, Su.jsx)("span", {
                                       className: "DocsTileName",
-                                      children: KU === UU.name ? "Copied!" : UU.name
+                                      children: Xu === uu.name ? "Copied!" : uu.name
                                     })]
-                                  }, UU.anchor)
+                                  }, uu.anchor)
                                 }))
                               })]
                             })
                           }
 
-                          function bt(UU) {
+                          function DE(uu) {
                             let {
-                              kind: RU,
-                              content: gU,
-                              blocks: tU
-                            } = UU;
-                            return (0, CU.jsx)(CU.Fragment, {
-                              children: rg(RU, gU, tU).map(((UU, gU) => "block" === UU.kind ? (0, CU.jsx)(jg, {
-                                block: UU.block
-                              }, gU) : (0, CU.jsx)(nt, {
-                                kind: RU,
-                                names: UU.names,
-                                isSongs: UU.isSongs
-                              }, gU)))
+                              kind: Ru,
+                              content: yu,
+                              blocks: Eu
+                            } = uu;
+                            return (0, Su.jsx)(Su.Fragment, {
+                              children: ty(Ru, yu, Eu).map(((uu, yu) => "block" === uu.kind ? (0, Su.jsx)(By, {
+                                block: uu.block
+                              }, yu) : (0, Su.jsx)(AE, {
+                                kind: Ru,
+                                names: uu.names,
+                                isSongs: uu.isSongs
+                              }, yu)))
                             })
                           }
-                          const ot = [{
+                          const ME = [{
                             pageId: "readme"
                           }, {
                             pageId: "snippets",
@@ -2161,420 +2161,420 @@ export const modules = {
                             countNoun: "options"
                           }];
 
-                          function Zt(UU) {
+                          function IE(uu) {
                             let {
-                              cards: RU = ot,
-                              label: gU = "Start here"
-                            } = UU;
-                            const pU = (0, tU.useContext)(uR);
-                            return (0, CU.jsx)("nav", {
+                              cards: Ru = ME,
+                              label: yu = "Start here"
+                            } = uu;
+                            const Ku = (0, Eu.useContext)(xR);
+                            return (0, Su.jsx)("nav", {
                               className: "DocsLandingCards",
-                              "aria-label": gU,
-                              children: RU.map((UU => {
+                              "aria-label": yu,
+                              children: Ru.map((uu => {
                                 let {
-                                  pageId: RU,
-                                  countNoun: gU
-                                } = UU;
-                                const tU = HU(RU);
-                                return (0, CU.jsxs)(PU.c, {
-                                  to: iU(pU, tU),
+                                  pageId: Ru,
+                                  countNoun: yu
+                                } = uu;
+                                const Eu = Lu(Ru);
+                                return (0, Su.jsxs)(mu.c, {
+                                  to: Pu(Ku, Eu),
                                   className: "DocsLandingCard",
-                                  children: [(0, CU.jsx)("span", {
+                                  children: [(0, Su.jsx)("span", {
                                     className: "DocsLandingCardIcon",
-                                    children: (0, CU.jsx)(QU, {
-                                      name: tU.icon
+                                    children: (0, Su.jsx)(Tu, {
+                                      name: Eu.icon
                                     })
-                                  }), (0, CU.jsx)("span", {
+                                  }), (0, Su.jsx)("span", {
                                     className: "DocsLandingCardTitle",
-                                    children: tU.title
-                                  }), (0, CU.jsx)("span", {
+                                    children: Eu.title
+                                  }), (0, Su.jsx)("span", {
                                     className: "DocsLandingCardSummary",
-                                    children: tU.summary
-                                  }), gU && (0, CU.jsxs)("span", {
+                                    children: Eu.summary
+                                  }), yu && (0, Su.jsxs)("span", {
                                     className: "DocsLandingCardCount",
-                                    children: [sU(tU).sections.length, " ", gU]
+                                    children: [Fu(Eu).sections.length, " ", yu]
                                   })]
-                                }, RU)
+                                }, Ru)
                               }))
                             })
                           }
-                          const Yt = 240;
+                          const GE = 240;
 
-                          function Bt(UU) {
+                          function UE(uu) {
                             let {
-                              faces: RU
-                            } = UU;
-                            return (0, CU.jsxs)("span", {
+                              faces: Ru
+                            } = uu;
+                            return (0, Su.jsxs)("span", {
                               className: "DocsCube",
                               "aria-hidden": "true",
-                              children: [(0, CU.jsx)("span", {
+                              children: [(0, Su.jsx)("span", {
                                 className: "DocsCubeFace Top",
                                 style: {
-                                  backgroundImage: `url("${RU.top}")`
+                                  backgroundImage: `url("${Ru.top}")`
                                 }
-                              }), (0, CU.jsx)("span", {
+                              }), (0, Su.jsx)("span", {
                                 className: "DocsCubeFace Left",
                                 style: {
-                                  backgroundImage: `url("${RU.left}")`
+                                  backgroundImage: `url("${Ru.left}")`
                                 }
-                              }), (0, CU.jsx)("span", {
+                              }), (0, Su.jsx)("span", {
                                 className: "DocsCubeFace Right",
                                 style: {
-                                  backgroundImage: `url("${RU.right}")`
+                                  backgroundImage: `url("${Ru.right}")`
                                 }
                               })]
                             })
                           }
 
-                          function Vt(UU) {
+                          function nE(uu) {
                             let {
-                              src: RU
-                            } = UU;
-                            const [gU, pU] = (0, tU.useState)(!1);
-                            return gU ? null : (0, CU.jsx)("img", {
-                              src: RU,
+                              src: Ru
+                            } = uu;
+                            const [yu, Ku] = (0, Eu.useState)(!1);
+                            return yu ? null : (0, Su.jsx)("img", {
+                              src: Ru,
                               alt: "",
                               loading: "lazy",
                               onError: () => {
-                                console.warn(`Docs catalogue: could not load ${RU}`), pU(!0)
+                                console.warn(`Docs catalogue: could not load ${Ru}`), Ku(!0)
                               }
                             })
                           }
 
-                          function rt(UU) {
+                          function sE(uu) {
                             let {
-                              kind: RU
-                            } = UU;
-                            const gU = Wg(RU),
-                              pU = ft(),
-                              PU = (0, TU.s)(),
-                              [qU, KU] = (0, tU.useState)(""),
-                              [cU, GU] = (0, tU.useState)(null),
-                              [jU, uU] = (0, tU.useState)(Yt),
-                              [hU, eU] = (0, tU.useState)(null),
-                              WU = (0, tU.useRef)(null),
-                              xU = qU.trim().toLowerCase();
-                            (0, tU.useEffect)((() => {
-                              const UU = (0, wU.m)(PU.hash),
-                                tU = gU.entries.find((gU => Bg(RU, gU.name) === UU));
-                              if (tU) WU.current = tU.name, KU(tU.name), GU(null), eU(tU.name);
-                              else if (null !== WU.current) {
-                                const UU = WU.current;
-                                WU.current = null, KU((RU => RU === UU ? "" : RU)), eU(null)
+                              kind: Ru
+                            } = uu;
+                            const yu = jy(Ru),
+                              Ku = HE(),
+                              mu = (0, Ju.s)(),
+                              [Nu, Xu] = (0, Eu.useState)(""),
+                              [Vu, ru] = (0, Eu.useState)(null),
+                              [Bu, xu] = (0, Eu.useState)(GE),
+                              [pu, Wu] = (0, Eu.useState)(null),
+                              ju = (0, Eu.useRef)(null),
+                              du = Nu.trim().toLowerCase();
+                            (0, Eu.useEffect)((() => {
+                              const uu = (0, eu.i)(mu.hash),
+                                Eu = yu.entries.find((yu => ny(Ru, yu.name) === uu));
+                              if (Eu) ju.current = Eu.name, Xu(Eu.name), ru(null), Wu(Eu.name);
+                              else if (null !== ju.current) {
+                                const uu = ju.current;
+                                ju.current = null, Xu((Ru => Ru === uu ? "" : Ru)), Wu(null)
                               }
-                            }), [gU, RU, PU.hash, PU.key]), (0, tU.useEffect)((() => {
-                              var UU;
-                              null !== hU && (null === (UU = document.getElementById(Bg(RU, hU))) || void 0 === UU || UU.scrollIntoView({
+                            }), [yu, Ru, mu.hash, mu.key]), (0, Eu.useEffect)((() => {
+                              var uu;
+                              null !== pu && (null === (uu = document.getElementById(ny(Ru, pu))) || void 0 === uu || uu.scrollIntoView({
                                 block: "center"
                               }))
-                            }), [RU, hU]);
-                            const mU = gU.entries.filter((UU => (!xU || UU.name.toLowerCase().includes(xU)) && (!cU || UU.variants.includes(cU))));
-                            return (0, CU.jsxs)("div", {
+                            }), [Ru, pu]);
+                            const bu = yu.entries.filter((uu => (!du || uu.name.toLowerCase().includes(du)) && (!Vu || uu.variants.includes(Vu))));
+                            return (0, Su.jsxs)("div", {
                               className: "DocsCatalogue",
-                              children: [gU.notes.length > 0 && (0, CU.jsx)("div", {
+                              children: [yu.notes.length > 0 && (0, Su.jsx)("div", {
                                 className: "DocsProse",
-                                children: gU.notes.map((UU => (0, CU.jsx)("p", {
-                                  children: UU
-                                }, UU)))
-                              }), gU.legend.length > 0 && (0, CU.jsx)("div", {
+                                children: yu.notes.map((uu => (0, Su.jsx)("p", {
+                                  children: uu
+                                }, uu)))
+                              }), yu.legend.length > 0 && (0, Su.jsx)("div", {
                                 className: "DocsTableScroll",
-                                children: (0, CU.jsxs)("table", {
+                                children: (0, Su.jsxs)("table", {
                                   className: "DocsTable DocsVariantLegend",
-                                  children: [(0, CU.jsx)("thead", {
-                                    children: (0, CU.jsxs)("tr", {
-                                      children: [(0, CU.jsx)("th", {
+                                  children: [(0, Su.jsx)("thead", {
+                                    children: (0, Su.jsxs)("tr", {
+                                      children: [(0, Su.jsx)("th", {
                                         children: "Code"
-                                      }), (0, CU.jsx)("th", {
+                                      }), (0, Su.jsx)("th", {
                                         children: "Variant"
-                                      }), (0, CU.jsx)("th", {
+                                      }), (0, Su.jsx)("th", {
                                         children: "Name to use"
                                       })]
                                     })
-                                  }), (0, CU.jsx)("tbody", {
-                                    children: gU.legend.map((UU => (0, CU.jsxs)("tr", {
-                                      children: [(0, CU.jsx)("td", {
-                                        children: (0, CU.jsx)("button", {
+                                  }), (0, Su.jsx)("tbody", {
+                                    children: yu.legend.map((uu => (0, Su.jsxs)("tr", {
+                                      children: [(0, Su.jsx)("td", {
+                                        children: (0, Su.jsx)("button", {
                                           type: "button",
-                                          className: EU()("DocsVariantChip", {
-                                            Active: cU === UU.code
+                                          className: Qu()("DocsVariantChip", {
+                                            Active: Vu === uu.code
                                           }),
-                                          "aria-pressed": cU === UU.code,
-                                          title: `Show only ${RU} with ${UU.meaning} variants`,
+                                          "aria-pressed": Vu === uu.code,
+                                          title: `Show only ${Ru} with ${uu.meaning} variants`,
                                           onClick: () => {
-                                            GU(cU === UU.code ? null : UU.code)
+                                            ru(Vu === uu.code ? null : uu.code)
                                           },
-                                          children: UU.code
+                                          children: uu.code
                                         })
-                                      }), (0, CU.jsx)("td", {
-                                        children: UU.meaning
-                                      }), (0, CU.jsx)("td", {
-                                        children: (0, CU.jsx)("code", {
+                                      }), (0, Su.jsx)("td", {
+                                        children: uu.meaning
+                                      }), (0, Su.jsx)("td", {
+                                        children: (0, Su.jsx)("code", {
                                           className: "DocsInlineCode",
-                                          children: UU.usage
+                                          children: uu.usage
                                         })
                                       })]
-                                    }, UU.code)))
+                                    }, uu.code)))
                                   })]
                                 })
-                              }), gU.examples.length > 0 && (0, CU.jsx)(JU, {
+                              }), yu.examples.length > 0 && (0, Su.jsx)(ku, {
                                 lang: "text",
-                                code: gU.examples.join("\n")
-                              }), (0, CU.jsx)(fg, {
+                                code: yu.examples.join("\n")
+                              }), (0, Su.jsx)(Hy, {
                                 className: "DocsFilterBar",
-                                value: qU,
-                                placeholder: `Search ${gU.entries.length} ${RU}\u2026`,
-                                label: `Search ${RU}`,
-                                onChange: UU => {
-                                  KU(UU), uU(Yt)
+                                value: Nu,
+                                placeholder: `Search ${yu.entries.length} ${Ru}\u2026`,
+                                label: `Search ${Ru}`,
+                                onChange: uu => {
+                                  Xu(uu), xu(GE)
                                 },
-                                count: xU || cU ? {
-                                  visible: mU.length,
-                                  total: gU.entries.length
+                                count: du || Vu ? {
+                                  visible: bu.length,
+                                  total: yu.entries.length
                                 } : null,
-                                children: cU && (0, CU.jsxs)("button", {
+                                children: Vu && (0, Su.jsxs)("button", {
                                   type: "button",
                                   className: "DocsVariantChip Active",
                                   onClick: () => {
-                                    GU(null)
+                                    ru(null)
                                   },
-                                  children: [cU, " ", (0, CU.jsx)(QU, {
+                                  children: [Vu, " ", (0, Su.jsx)(Tu, {
                                     name: "cross"
                                   })]
                                 })
-                              }), (0, CU.jsx)("div", {
+                              }), (0, Su.jsx)("div", {
                                 className: "DocsCatalogueGrid",
-                                children: mU.slice(0, jU).map((UU => {
-                                  const gU = "blocks" === RU ? null === pU || void 0 === pU ? void 0 : pU.getBlockFaces(UU.name) : null,
-                                    tU = pU && !gU ? pU.getItemTextureUrl(UU.name) : null;
-                                  return (0, CU.jsxs)("div", {
-                                    id: Bg(RU, UU.name),
-                                    className: EU()("DocsCatalogueTile", {
-                                      Linked: UU.name === hU
+                                children: bu.slice(0, Bu).map((uu => {
+                                  const yu = "blocks" === Ru ? null === Ku || void 0 === Ku ? void 0 : Ku.getBlockFaces(uu.name) : null,
+                                    Eu = Ku && !yu ? Ku.getItemTextureUrl(uu.name) : null;
+                                  return (0, Su.jsxs)("div", {
+                                    id: ny(Ru, uu.name),
+                                    className: Qu()("DocsCatalogueTile", {
+                                      Linked: uu.name === pu
                                     }),
-                                    children: [(0, CU.jsxs)("span", {
+                                    children: [(0, Su.jsxs)("span", {
                                       className: "DocsCatalogueTexture",
-                                      children: [gU && (0, CU.jsx)(Bt, {
-                                        faces: gU
-                                      }), tU && (0, CU.jsx)(Vt, {
-                                        src: tU
+                                      children: [yu && (0, Su.jsx)(UE, {
+                                        faces: yu
+                                      }), Eu && (0, Su.jsx)(nE, {
+                                        src: Eu
                                       })]
-                                    }), (0, CU.jsx)("span", {
+                                    }), (0, Su.jsx)("span", {
                                       className: "DocsCatalogueName",
-                                      children: UU.name
-                                    }), UU.variants.length > 0 && (0, CU.jsx)("span", {
+                                      children: uu.name
+                                    }), uu.variants.length > 0 && (0, Su.jsx)("span", {
                                       className: "DocsCatalogueVariants",
-                                      children: UU.variants.map((UU => (0, CU.jsx)("span", {
-                                        children: UU
-                                      }, UU)))
-                                    }), (0, CU.jsx)(fU, {
-                                      text: UU.name,
+                                      children: uu.variants.map((uu => (0, Su.jsx)("span", {
+                                        children: uu
+                                      }, uu)))
+                                    }), (0, Su.jsx)(Hu, {
+                                      text: uu.name,
                                       className: "DocsCatalogueCopy"
                                     })]
-                                  }, UU.name)
+                                  }, uu.name)
                                 }))
-                              }), mU.length > jU && (0, CU.jsxs)("button", {
+                              }), bu.length > Bu && (0, Su.jsxs)("button", {
                                 type: "button",
                                 className: "DocsShowMore",
                                 onClick: () => {
-                                  uU(mU.length)
+                                  xu(bu.length)
                                 },
-                                children: ["Show all ", mU.length]
-                              }), 0 === mU.length && (0, CU.jsxs)("p", {
+                                children: ["Show all ", bu.length]
+                              }), 0 === bu.length && (0, Su.jsxs)("p", {
                                 className: "DocsEmpty",
-                                children: ["No ", RU, " match."]
+                                children: ["No ", Ru, " match."]
                               })]
                             })
                           }
-                          var Xt = gU(4480),
-                            vt = gU(1535);
-                          const dt = .95 * Xt.e;
+                          var tE = yu(4593),
+                            lE = yu(1542);
+                          const gE = .95 * tE.b;
 
-                          function Ht(UU) {
-                            return /^\s*```/.test(UU)
+                          function cE(uu) {
+                            return /^\s*```/.test(uu)
                           }
 
-                          function St(UU, RU) {
-                            const gU = [
+                          function LE(uu, Ru) {
+                            const yu = [
                               []
                             ];
-                            let tU = !1;
-                            for (const pU of UU.split("\n")) !tU && RU(pU) && gU.at(-1).length > 0 && gU.push([]), Ht(pU) && (tU = !tU), gU.at(-1).push(pU);
-                            return gU.map((UU => UU.join("\n").trim())).filter(Boolean)
+                            let Eu = !1;
+                            for (const Ku of uu.split("\n")) !Eu && Ru(Ku) && yu.at(-1).length > 0 && yu.push([]), cE(Ku) && (Eu = !Eu), yu.at(-1).push(Ku);
+                            return yu.map((uu => uu.join("\n").trim())).filter(Boolean)
                           }
 
-                          function st(UU, RU) {
-                            const gU = `${"#".repeat(RU)} `,
-                              tU = [];
-                            let pU = !1;
-                            for (const EU of UU.split("\n")) Ht(EU) ? pU = !pU : !pU && EU.startsWith(gU) && tU.push(EU.slice(gU.length).trim());
-                            return tU
+                          function zE(uu, Ru) {
+                            const yu = `${"#".repeat(Ru)} `,
+                              Eu = [];
+                            let Ku = !1;
+                            for (const Qu of uu.split("\n")) cE(Qu) ? Ku = !Ku : !Ku && Qu.startsWith(yu) && Eu.push(Qu.slice(yu.length).trim());
+                            return Eu
                           }
 
-                          function yt(UU) {
-                            return UU.markdown.replace(/^\s*# .*\n/, "").trim()
+                          function FE(uu) {
+                            return uu.markdown.replace(/^\s*# .*\n/, "").trim()
                           }
-                          class kt {
-                            constructor(UU, RU) {
-                              this.origin = RU, this.pages = void 0, this.partPaths = new Map;
-                              const gU = UU.map((UU => {
-                                const RU = RU => this.resolveLinks(UU, RU).length,
-                                  gU = function(UU, RU) {
-                                    const gU = UU.map((UU => RU(UU.markdown) + 2)),
-                                      tU = gU.reduce(((UU, RU) => UU + RU), 0),
-                                      pU = tU / Math.ceil(tU / dt),
-                                      EU = [];
-                                    let PU = 0;
-                                    return UU.forEach(((UU, RU) => {
-                                      const tU = gU[RU];
-                                      (0 === EU.length || PU + tU > dt || PU + tU / 2 > pU) && (EU.push([]), PU = 0), EU.at(-1).push(UU), PU += tU
-                                    })), EU
-                                  }(function(UU, RU) {
-                                    return St(UU, (UU => UU.startsWith("## "))).flatMap((UU => {
-                                      var gU;
-                                      const tU = null !== (gU = st(UU, 2)[0]) && void 0 !== gU ? gU : "";
-                                      if (RU(UU) <= dt) return [{
-                                        markdown: UU,
-                                        section: tU
+                          class wE {
+                            constructor(uu, Ru) {
+                              this.origin = Ru, this.pages = void 0, this.partPaths = new Map;
+                              const yu = uu.map((uu => {
+                                const Ru = Ru => this.resolveLinks(uu, Ru).length,
+                                  yu = function(uu, Ru) {
+                                    const yu = uu.map((uu => Ru(uu.markdown) + 2)),
+                                      Eu = yu.reduce(((uu, Ru) => uu + Ru), 0),
+                                      Ku = Eu / Math.ceil(Eu / gE),
+                                      Qu = [];
+                                    let mu = 0;
+                                    return uu.forEach(((uu, Ru) => {
+                                      const Eu = yu[Ru];
+                                      (0 === Qu.length || mu + Eu > gE || mu + Eu / 2 > Ku) && (Qu.push([]), mu = 0), Qu.at(-1).push(uu), mu += Eu
+                                    })), Qu
+                                  }(function(uu, Ru) {
+                                    return LE(uu, (uu => uu.startsWith("## "))).flatMap((uu => {
+                                      var yu;
+                                      const Eu = null !== (yu = zE(uu, 2)[0]) && void 0 !== yu ? yu : "";
+                                      if (Ru(uu) <= gE) return [{
+                                        markdown: uu,
+                                        section: Eu
                                       }];
-                                      let pU = !1,
-                                        EU = "";
-                                      return St(UU, (UU => {
-                                        const RU = pU && "" !== UU.trim();
-                                        return pU = "" === UU.trim(), RU
-                                      })).map((UU => {
-                                        var RU;
-                                        const gU = st(UU, 3),
-                                          pU = UU.startsWith("### ") ? gU[0] : EU;
-                                        return EU = null !== (RU = gU.at(-1)) && void 0 !== RU ? RU : EU, {
-                                          markdown: UU,
-                                          section: tU || pU
+                                      let Ku = !1,
+                                        Qu = "";
+                                      return LE(uu, (uu => {
+                                        const Ru = Ku && "" !== uu.trim();
+                                        return Ku = "" === uu.trim(), Ru
+                                      })).map((uu => {
+                                        var Ru;
+                                        const yu = zE(uu, 3),
+                                          Ku = uu.startsWith("### ") ? yu[0] : Qu;
+                                        return Qu = null !== (Ru = yu.at(-1)) && void 0 !== Ru ? Ru : Qu, {
+                                          markdown: uu,
+                                          section: Eu || Ku
                                         }
                                       }))
                                     }))
-                                  }(yt(UU), RU), RU);
+                                  }(FE(uu), Ru), Ru);
                                 return {
-                                  page: UU,
-                                  groups: gU.length > 1 ? gU : []
+                                  page: uu,
+                                  groups: yu.length > 1 ? yu : []
                                 }
                               }));
                               for (const {
-                                  page: tU,
-                                  groups: pU
+                                  page: Eu,
+                                  groups: Ku
                                 }
-                                of gU) pU.forEach(((UU, RU) => {
-                                const gU = (0, Xt.s)(tU.slug, RU);
-                                for (const pU of UU.flatMap((UU => [...st(UU.markdown, 2), ...st(UU.markdown, 3)]))) {
-                                  const UU = `${tU.id}#${(0,wU.n)(pU)}`;
-                                  this.partPaths.has(UU) || this.partPaths.set(UU, gU)
+                                of yu) Ku.forEach(((uu, Ru) => {
+                                const yu = (0, tE.w)(Eu.slug, Ru);
+                                for (const Ku of uu.flatMap((uu => [...zE(uu.markdown, 2), ...zE(uu.markdown, 3)]))) {
+                                  const uu = `${Eu.id}#${(0,eu.l)(Ku)}`;
+                                  this.partPaths.has(uu) || this.partPaths.set(uu, yu)
                                 }
                               }));
-                              this.pages = gU.map((UU => {
+                              this.pages = yu.map((uu => {
                                 let {
-                                  page: RU,
-                                  groups: gU
-                                } = UU;
+                                  page: Ru,
+                                  groups: yu
+                                } = uu;
                                 return {
-                                  page: RU,
-                                  path: (0, Xt.q)(RU.slug),
-                                  markdown: `# ${RU.title}\n\n${this.resolveLinks(RU,yt(RU))}\n`,
-                                  parts: gU.map(((UU, tU) => this.renderPart(RU, UU, tU, gU.length)))
+                                  page: Ru,
+                                  path: (0, tE.u)(Ru.slug),
+                                  markdown: `# ${Ru.title}\n\n${this.resolveLinks(Ru,FE(Ru))}\n`,
+                                  parts: yu.map(((uu, Eu) => this.renderPart(Ru, uu, Eu, yu.length)))
                                 }
                               }))
                             }
-                            url(UU) {
-                              return `${this.origin}${UU}`
+                            url(uu) {
+                              return `${this.origin}${uu}`
                             }
-                            getPage(UU) {
-                              return this.pages.find((RU => RU.page.id === UU))
+                            getPage(uu) {
+                              return this.pages.find((Ru => Ru.page.id === uu))
                             }
                             oversizedFiles() {
-                              return this.pages.flatMap((UU => (UU.parts.length > 0 ? UU.parts : [{
-                                path: UU.path,
+                              return this.pages.flatMap((uu => (uu.parts.length > 0 ? uu.parts : [{
+                                path: uu.path,
                                 label: "",
-                                markdown: UU.markdown
-                              }]).filter((UU => UU.markdown.length > Xt.e))))
+                                markdown: uu.markdown
+                              }]).filter((uu => uu.markdown.length > tE.b))))
                             }
-                            markdownUrl(UU, RU) {
-                              const gU = RU && this.partPaths.get(`${UU.id}#${RU}`) || (0, Xt.q)(UU.slug);
-                              return this.url(RU ? `${gU}#${RU}` : gU)
+                            markdownUrl(uu, Ru) {
+                              const yu = Ru && this.partPaths.get(`${uu.id}#${Ru}`) || (0, tE.u)(uu.slug);
+                              return this.url(Ru ? `${yu}#${Ru}` : yu)
                             }
-                            resolveLinks(UU, RU) {
-                              return RU.replace(/\]\((#[^)]+)\)/g, ((RU, gU) => {
-                                var tU;
-                                const pU = null !== (tU = kU(gU)) && void 0 !== tU ? tU : this.samePageTarget(UU, gU);
-                                return pU ? `](${this.markdownUrl(pU.page,pU.anchor)})` : RU
+                            resolveLinks(uu, Ru) {
+                              return Ru.replace(/\]\((#[^)]+)\)/g, ((Ru, yu) => {
+                                var Eu;
+                                const Ku = null !== (Eu = Zu(yu)) && void 0 !== Eu ? Eu : this.samePageTarget(uu, yu);
+                                return Ku ? `](${this.markdownUrl(Ku.page,Ku.anchor)})` : Ru
                               }))
                             }
-                            samePageTarget(UU, RU) {
-                              const gU = (0, wU.n)(RU.slice(1));
-                              return yU(UU, gU) ? {
-                                page: UU,
-                                anchor: gU
+                            samePageTarget(uu, Ru) {
+                              const yu = (0, eu.l)(Ru.slice(1));
+                              return wu(uu, yu) ? {
+                                page: uu,
+                                anchor: yu
                               } : null
                             }
-                            renderPart(UU, RU, gU, tU) {
-                              const pU = function(UU) {
-                                  const RU = UU.map((UU => UU.section)).filter(Boolean);
-                                  if (0 === RU.length) return "";
-                                  const gU = RU[0],
-                                    tU = RU.at(-1);
-                                  return gU === tU ? gU : `${gU} to ${tU}`
-                                }(RU),
-                                EU = RU.map((UU => UU.markdown)).join("\n\n"),
-                                PU = pU ? `It covers ${pU}. ` : "",
-                                TU = `Part ${gU+1} of ${tU} of [${UU.title}](${this.url((0,Xt.q)(UU.slug))}). ${PU}[llms.txt](${this.url(Xt.j)}) lists every part.`;
+                            renderPart(uu, Ru, yu, Eu) {
+                              const Ku = function(uu) {
+                                  const Ru = uu.map((uu => uu.section)).filter(Boolean);
+                                  if (0 === Ru.length) return "";
+                                  const yu = Ru[0],
+                                    Eu = Ru.at(-1);
+                                  return yu === Eu ? yu : `${yu} to ${Eu}`
+                                }(Ru),
+                                Qu = Ru.map((uu => uu.markdown)).join("\n\n"),
+                                mu = Ku ? `It covers ${Ku}. ` : "",
+                                Ju = `Part ${yu+1} of ${Eu} of [${uu.title}](${this.url((0,tE.u)(uu.slug))}). ${mu}[llms.txt](${this.url(tE.h)}) lists every part.`;
                               return {
-                                path: (0, Xt.s)(UU.slug, gU),
-                                label: pU,
-                                markdown: `# ${UU.title}, part ${gU+1} of ${tU}\n\n${TU}\n\n${this.resolveLinks(UU,EU)}\n`
+                                path: (0, tE.w)(uu.slug, yu),
+                                label: Ku,
+                                markdown: `# ${uu.title}, part ${yu+1} of ${Eu}\n\n${Ju}\n\n${this.resolveLinks(uu,Qu)}\n`
                               }
                             }
-                            llmsTxt(UU) {
-                              const RU = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${Ft(Xt.e)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
-                              for (const gU of dU) {
-                                RU.push("", `## ${gU.title}`, "");
-                                for (const UU of gU.pageIds) {
-                                  const gU = this.getPage(UU),
+                            llmsTxt(uu) {
+                              const Ru = ["# Bloxd Code API", "", "> JavaScript that runs inside Bloxd, in code blocks, boards and World Code: from a block that launches players into the sky to a whole custom game. Code calls methods on the `api` object and defines callbacks that react to game events.", "", `Each link is a page of the docs as Markdown. A page longer than about ${ZE(tE.b)} tokens is also split into parts, listed under it, so that each fits a small context window. People read the same docs at ${this.url("/docs")}.`];
+                              for (const yu of cu) {
+                                Ru.push("", `## ${yu.title}`, "");
+                                for (const uu of yu.pageIds) {
+                                  const yu = this.getPage(uu),
                                     {
-                                      page: tU,
-                                      parts: pU
-                                    } = gU,
-                                    EU = `About ${Ft(gU.markdown.length)} tokens${pU.length>0?`, in ${pU.length} parts:`:"."}`;
-                                  RU.push(`- [${tU.title}](${this.url(gU.path)}): ${tU.summary} ${EU}`), pU.forEach(((UU, gU) => {
-                                    RU.push(`  - [Part ${gU+1}${UU.label?`: ${UU.label}`:""}](${this.url(UU.path)})`)
+                                      page: Eu,
+                                      parts: Ku
+                                    } = yu,
+                                    Qu = `About ${ZE(yu.markdown.length)} tokens${Ku.length>0?`, in ${Ku.length} parts:`:"."}`;
+                                  Ru.push(`- [${Eu.title}](${this.url(yu.path)}): ${Eu.summary} ${Qu}`), Ku.forEach(((uu, yu) => {
+                                    Ru.push(`  - [Part ${yu+1}${uu.label?`: ${uu.label}`:""}](${this.url(uu.path)})`)
                                   }))
                                 }
                               }
-                              return RU.push("", "## Optional", "", `- [Every page in one file](${this.url(Xt.h)}): About ${Ft(UU.length)} tokens, for a model with a large context window.`, ""), RU.join("\n")
+                              return Ru.push("", "## Optional", "", `- [Every page in one file](${this.url(tE.e)}): About ${ZE(uu.length)} tokens, for a model with a large context window.`, ""), Ru.join("\n")
                             }
                             llmsFullTxt() {
-                              return dU.flatMap((UU => UU.pageIds.map((UU => this.getPage(UU).markdown)))).join("\n---\n\n")
+                              return cu.flatMap((uu => uu.pageIds.map((uu => this.getPage(uu).markdown)))).join("\n---\n\n")
                             }
                             files() {
-                              const UU = this.llmsFullTxt(),
-                                RU = this.llmsTxt(UU),
-                                gU = new Map([
-                                  [Xt.n, RU],
-                                  [Xt.j, RU],
-                                  [Xt.h, UU]
+                              const uu = this.llmsFullTxt(),
+                                Ru = this.llmsTxt(uu),
+                                yu = new Map([
+                                  [tE.m, Ru],
+                                  [tE.h, Ru],
+                                  [tE.e, uu]
                                 ]);
-                              for (const tU of this.pages) {
-                                gU.set(tU.path, tU.markdown);
-                                for (const UU of tU.parts) gU.set(UU.path, UU.markdown)
+                              for (const Eu of this.pages) {
+                                yu.set(Eu.path, Eu.markdown);
+                                for (const uu of Eu.parts) yu.set(uu.path, uu.markdown)
                               }
-                              return gU
+                              return yu
                             }
                           }
 
-                          function Ft(UU) {
-                            return `${Math.max(1,Math.round(UU/4e3))}K`
+                          function ZE(uu) {
+                            return `${Math.max(1,Math.round(uu/4e3))}K`
                           }
-                          let it = null;
+                          let hE = null;
 
-                          function At() {
-                            return it ??= new kt(vU, vt.b), it
+                          function PE() {
+                            return hE ??= new wE(gu, lE.c), hE
                           }
-                          const zt = [{
+                          const iE = [{
                             name: "ChatGPT",
                             url: "https://chatgpt.com/?hints=search&q="
                           }, {
@@ -2582,373 +2582,373 @@ export const modules = {
                             url: "https://claude.ai/new?q="
                           }];
 
-                          function Mt(UU) {
-                            return At().getPage(UU.id).parts.length > 0 ? `Read ${Xt.m}, then the parts of the Bloxd Code API's ${UU.title} page it lists, so I can ask questions about it.` : `Read ${vt.b}${(0,Xt.q)(UU.slug)} so I can ask questions about it. ${Xt.m} lists every page of the Bloxd Code API docs.`
+                          function YE(uu) {
+                            return PE().getPage(uu.id).parts.length > 0 ? `Read ${tE.j}, then the parts of the Bloxd Code API's ${uu.title} page it lists, so I can ask questions about it.` : `Read ${lE.c}${(0,tE.u)(uu.slug)} so I can ask questions about it. ${tE.j} lists every page of the Bloxd Code API docs.`
                           }
 
-                          function Dt(UU) {
+                          function oE(uu) {
                             let {
-                              page: RU
-                            } = UU;
-                            const [gU, tU] = WU();
-                            return (0, CU.jsxs)("div", {
+                              page: Ru
+                            } = uu;
+                            const [yu, Eu] = ju();
+                            return (0, Su.jsxs)("div", {
                               className: "DocsPageAgentActions",
-                              children: [(0, CU.jsxs)("button", {
+                              children: [(0, Su.jsxs)("button", {
                                 type: "button",
                                 className: "DocsPageAgentAction",
                                 onClick: () => {
-                                  tU(At().getPage(RU.id).markdown)
+                                  Eu(PE().getPage(Ru.id).markdown)
                                 },
-                                children: [(0, CU.jsx)(QU, {
-                                  name: !1 === (null === gU || void 0 === gU ? void 0 : gU.failed) ? "check" : "copy"
-                                }), (0, CU.jsx)("span", {
-                                  children: gU ? gU.failed ? "Copy failed" : "Copied" : "Copy page"
+                                children: [(0, Su.jsx)(Tu, {
+                                  name: !1 === (null === yu || void 0 === yu ? void 0 : yu.failed) ? "check" : "copy"
+                                }), (0, Su.jsx)("span", {
+                                  children: yu ? yu.failed ? "Copy failed" : "Copied" : "Copy page"
                                 })]
-                              }), zt.map((UU => (0, CU.jsxs)("a", {
+                              }), iE.map((uu => (0, Su.jsxs)("a", {
                                 className: "DocsPageAgentAction",
-                                href: `${UU.url}${encodeURIComponent(Mt(RU))}`,
+                                href: `${uu.url}${encodeURIComponent(YE(Ru))}`,
                                 target: "_blank",
                                 rel: "noreferrer",
-                                children: [(0, CU.jsx)(QU, {
+                                children: [(0, Su.jsx)(Tu, {
                                   name: "external-link"
-                                }), (0, CU.jsxs)("span", {
-                                  children: ["Open in ", UU.name]
+                                }), (0, Su.jsxs)("span", {
+                                  children: ["Open in ", uu.name]
                                 })]
-                              }, UU.name)))]
+                              }, uu.name)))]
                             })
                           }
 
-                          function Lt(UU) {
-                            return `#${[0,1,2].map((RU=>Math.round(Math.min(255,Math.max(0,UU[RU]))).toString(16).padStart(2,"0"))).join("")}`
+                          function qE(uu) {
+                            return `#${[0,1,2].map((Ru=>Math.round(Math.min(255,Math.max(0,uu[Ru]))).toString(16).padStart(2,"0"))).join("")}`
                           }
 
-                          function Nt(UU) {
-                            return [parseInt(UU.slice(1, 3), 16), parseInt(UU.slice(3, 5), 16), parseInt(UU.slice(5, 7), 16)]
+                          function OE(uu) {
+                            return [parseInt(uu.slice(1, 3), 16), parseInt(uu.slice(3, 5), 16), parseInt(uu.slice(5, 7), 16)]
                           }
 
-                          function lt(UU) {
+                          function vE(uu) {
                             let {
-                              label: RU,
-                              min: gU,
-                              max: tU,
-                              step: pU,
-                              low: EU,
-                              high: PU,
-                              onChange: TU
-                            } = UU;
-                            return (0, CU.jsxs)("div", {
+                              label: Ru,
+                              min: yu,
+                              max: Eu,
+                              step: Ku,
+                              low: Qu,
+                              high: mu,
+                              onChange: Ju
+                            } = uu;
+                            return (0, Su.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, CU.jsxs)("div", {
+                              children: [(0, Su.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, CU.jsx)("span", {
-                                  children: RU
-                                }), (0, CU.jsx)("span", {
+                                children: [(0, Su.jsx)("span", {
+                                  children: Ru
+                                }), (0, Su.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: EU === PU ? EU : `${EU}\u2013${PU}`
+                                  children: Qu === mu ? Qu : `${Qu}\u2013${mu}`
                                 })]
-                              }), (0, CU.jsxs)("div", {
+                              }), (0, Su.jsxs)("div", {
                                 className: "DocsParticleRange",
-                                children: [(0, CU.jsx)("input", {
+                                children: [(0, Su.jsx)("input", {
                                   type: "range",
-                                  min: gU,
-                                  max: tU,
-                                  step: pU,
-                                  value: Math.min(tU, EU),
-                                  "aria-label": `Minimum ${RU.toLowerCase()}`,
-                                  onChange: UU => {
-                                    const RU = Number(UU.target.value);
-                                    TU(RU, Math.max(RU, PU))
+                                  min: yu,
+                                  max: Eu,
+                                  step: Ku,
+                                  value: Math.min(Eu, Qu),
+                                  "aria-label": `Minimum ${Ru.toLowerCase()}`,
+                                  onChange: uu => {
+                                    const Ru = Number(uu.target.value);
+                                    Ju(Ru, Math.max(Ru, mu))
                                   }
-                                }), (0, CU.jsx)("input", {
+                                }), (0, Su.jsx)("input", {
                                   type: "range",
-                                  min: gU,
-                                  max: tU,
-                                  step: pU,
-                                  value: Math.min(tU, PU),
-                                  "aria-label": `Maximum ${RU.toLowerCase()}`,
-                                  onChange: UU => {
-                                    const RU = Number(UU.target.value);
-                                    TU(Math.min(RU, EU), RU)
+                                  min: yu,
+                                  max: Eu,
+                                  step: Ku,
+                                  value: Math.min(Eu, mu),
+                                  "aria-label": `Maximum ${Ru.toLowerCase()}`,
+                                  onChange: uu => {
+                                    const Ru = Number(uu.target.value);
+                                    Ju(Math.min(Ru, Qu), Ru)
                                   }
                                 })]
                               })]
                             })
                           }
 
-                          function Ot(UU) {
+                          function aE(uu) {
                             let {
-                              label: RU,
-                              min: gU,
-                              max: tU,
-                              step: pU,
-                              value: EU,
-                              onChange: PU,
-                              format: TU = String
-                            } = UU;
-                            return (0, CU.jsxs)("div", {
+                              label: Ru,
+                              min: yu,
+                              max: Eu,
+                              step: Ku,
+                              value: Qu,
+                              onChange: mu,
+                              format: Ju = String
+                            } = uu;
+                            return (0, Su.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, CU.jsxs)("div", {
+                              children: [(0, Su.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, CU.jsx)("span", {
-                                  children: RU
-                                }), (0, CU.jsx)("span", {
+                                children: [(0, Su.jsx)("span", {
+                                  children: Ru
+                                }), (0, Su.jsx)("span", {
                                   className: "DocsControlValue",
-                                  children: TU(EU)
+                                  children: Ju(Qu)
                                 })]
-                              }), (0, CU.jsx)("input", {
+                              }), (0, Su.jsx)("input", {
                                 type: "range",
-                                min: gU,
-                                max: tU,
-                                step: pU,
-                                value: Math.min(tU, Math.max(gU, EU)),
-                                "aria-label": RU,
-                                onChange: UU => {
-                                  PU(Number(UU.target.value))
+                                min: yu,
+                                max: Eu,
+                                step: Ku,
+                                value: Math.min(Eu, Math.max(yu, Qu)),
+                                "aria-label": Ru,
+                                onChange: uu => {
+                                  mu(Number(uu.target.value))
                                 }
                               })]
                             })
                           }
 
-                          function Up(UU) {
+                          function fE(uu) {
                             let {
-                              opts: RU,
-                              onChange: gU
-                            } = UU;
-                            const tU = RU.colorGradients;
-                            if (!Fg(tU)) return (0, CU.jsxs)("div", {
+                              opts: Ru,
+                              onChange: yu
+                            } = uu;
+                            const Eu = Ru.colorGradients;
+                            if (!hy(Eu)) return (0, Su.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, CU.jsx)("div", {
+                              children: [(0, Su.jsx)("div", {
                                 className: "DocsControlLabel",
-                                children: (0, CU.jsx)("span", {
+                                children: (0, Su.jsx)("span", {
                                   children: "Colours, one per particle"
                                 })
-                              }), (0, CU.jsx)("div", {
+                              }), (0, Su.jsx)("div", {
                                 className: "DocsParticleSwatches",
-                                children: tU.map(((UU, RU) => (0, CU.jsx)("input", {
+                                children: Eu.map(((uu, Ru) => (0, Su.jsx)("input", {
                                   type: "color",
-                                  value: Lt(UU.color),
-                                  "aria-label": `Colour ${RU+1}`,
-                                  onChange: UU => {
-                                    const pU = [...tU];
-                                    pU[RU] = {
-                                      color: Nt(UU.target.value)
-                                    }, gU(pU)
+                                  value: qE(uu.color),
+                                  "aria-label": `Colour ${Ru+1}`,
+                                  onChange: uu => {
+                                    const Ku = [...Eu];
+                                    Ku[Ru] = {
+                                      color: OE(uu.target.value)
+                                    }, yu(Ku)
                                   }
-                                }, RU)))
+                                }, Ru)))
                               })]
                             });
-                            const pU = (UU, RU) => {
-                              const pU = [...tU];
-                              pU[UU] = RU, gU(pU)
+                            const Ku = (uu, Ru) => {
+                              const Ku = [...Eu];
+                              Ku[uu] = Ru, yu(Ku)
                             };
-                            return (0, CU.jsxs)("div", {
+                            return (0, Su.jsxs)("div", {
                               className: "DocsControl",
-                              children: [(0, CU.jsxs)("div", {
+                              children: [(0, Su.jsxs)("div", {
                                 className: "DocsControlLabel",
-                                children: [(0, CU.jsx)("span", {
+                                children: [(0, Su.jsx)("span", {
                                   children: "Colour over lifetime"
-                                }), (0, CU.jsx)("span", {
+                                }), (0, Su.jsx)("span", {
                                   className: "DocsControlValue",
                                   children: "min \xb7 max"
                                 })]
-                              }), tU.map(((UU, RU) => {
-                                var gU;
-                                const tU = null !== (gU = UU.maxColor) && void 0 !== gU ? gU : UU.minColor;
-                                return (0, CU.jsxs)("div", {
+                              }), Eu.map(((uu, Ru) => {
+                                var yu;
+                                const Eu = null !== (yu = uu.maxColor) && void 0 !== yu ? yu : uu.minColor;
+                                return (0, Su.jsxs)("div", {
                                   className: "DocsParticleStop",
-                                  children: [(0, CU.jsxs)("span", {
+                                  children: [(0, Su.jsxs)("span", {
                                     className: "DocsParticleStopTime",
-                                    children: [Math.round(100 * UU.timeFraction), "%"]
-                                  }), (0, CU.jsx)("span", {
+                                    children: [Math.round(100 * uu.timeFraction), "%"]
+                                  }), (0, Su.jsx)("span", {
                                     className: "DocsParticleStopBar",
                                     style: {
-                                      background: `linear-gradient(90deg, ${Lt(UU.minColor)}, ${Lt(tU)})`
+                                      background: `linear-gradient(90deg, ${qE(uu.minColor)}, ${qE(Eu)})`
                                     }
-                                  }), (0, CU.jsx)("input", {
+                                  }), (0, Su.jsx)("input", {
                                     type: "color",
-                                    value: Lt(UU.minColor),
-                                    "aria-label": `Minimum colour at ${Math.round(100*UU.timeFraction)}%`,
-                                    onChange: gU => {
-                                      pU(RU, {
-                                        ...UU,
-                                        minColor: [...Nt(gU.target.value), UU.minColor[3]]
+                                    value: qE(uu.minColor),
+                                    "aria-label": `Minimum colour at ${Math.round(100*uu.timeFraction)}%`,
+                                    onChange: yu => {
+                                      Ku(Ru, {
+                                        ...uu,
+                                        minColor: [...OE(yu.target.value), uu.minColor[3]]
                                       })
                                     }
-                                  }), (0, CU.jsx)("input", {
+                                  }), (0, Su.jsx)("input", {
                                     type: "color",
-                                    value: Lt(tU),
-                                    "aria-label": `Maximum colour at ${Math.round(100*UU.timeFraction)}%`,
-                                    onChange: gU => {
-                                      pU(RU, {
-                                        ...UU,
-                                        maxColor: [...Nt(gU.target.value), tU[3]]
+                                    value: qE(Eu),
+                                    "aria-label": `Maximum colour at ${Math.round(100*uu.timeFraction)}%`,
+                                    onChange: yu => {
+                                      Ku(Ru, {
+                                        ...uu,
+                                        maxColor: [...OE(yu.target.value), Eu[3]]
                                       })
                                     }
                                   })]
-                                }, RU)
+                                }, Ru)
                               }))]
                             })
                           }
-                          const Rp = [-.5, -.5, -.5],
-                            gp = [.5, .5, .5],
-                            tp = [0, 1, 2, 3, 4, 5, 6, 7].map((UU => [1 & UU ? gp[0] : Rp[0], 2 & UU ? gp[1] : Rp[1], 4 & UU ? gp[2] : Rp[2]]));class pp {
+                          const uK = [-.5, -.5, -.5],
+                            RK = [.5, .5, .5],
+                            yK = [0, 1, 2, 3, 4, 5, 6, 7].map((uu => [1 & uu ? RK[0] : uK[0], 2 & uu ? RK[1] : uK[1], 4 & uu ? RK[2] : uK[2]]));class EK {
                             constructor() {
                               this.tints = new WeakMap
                             }
-                            get(UU, RU, gU, tU) {
-                              const pU = Math.round(31 * RU),
-                                EU = Math.round(31 * gU),
-                                PU = Math.round(31 * tU),
-                                TU = `${pU}|${EU}|${PU}`;
-                              let qU = this.tints.get(UU);
-                              (!qU || qU.size > 2e3) && (qU = new Map, this.tints.set(UU, qU));
-                              let KU = qU.get(TU);
-                              if (KU) return KU;
-                              KU = document.createElement("canvas"), KU.width = UU.naturalWidth || 16, KU.height = UU.naturalHeight || 16;
-                              const cU = KU.getContext("2d");
-                              return cU ? (cU.imageSmoothingEnabled = !1, cU.drawImage(UU, 0, 0, KU.width, KU.height), cU.globalCompositeOperation = "multiply", cU.fillStyle = `rgb(${pU/31*255}, ${EU/31*255}, ${PU/31*255})`, cU.fillRect(0, 0, KU.width, KU.height), cU.globalCompositeOperation = "destination-in", cU.drawImage(UU, 0, 0, KU.width, KU.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), qU.set(TU, KU), KU
+                            get(uu, Ru, yu, Eu) {
+                              const Ku = Math.round(31 * Ru),
+                                Qu = Math.round(31 * yu),
+                                mu = Math.round(31 * Eu),
+                                Ju = `${Ku}|${Qu}|${mu}`;
+                              let Nu = this.tints.get(uu);
+                              (!Nu || Nu.size > 2e3) && (Nu = new Map, this.tints.set(uu, Nu));
+                              let Xu = Nu.get(Ju);
+                              if (Xu) return Xu;
+                              Xu = document.createElement("canvas"), Xu.width = uu.naturalWidth || 16, Xu.height = uu.naturalHeight || 16;
+                              const Vu = Xu.getContext("2d");
+                              return Vu ? (Vu.imageSmoothingEnabled = !1, Vu.drawImage(uu, 0, 0, Xu.width, Xu.height), Vu.globalCompositeOperation = "multiply", Vu.fillStyle = `rgb(${Ku/31*255}, ${Qu/31*255}, ${mu/31*255})`, Vu.fillRect(0, 0, Xu.width, Xu.height), Vu.globalCompositeOperation = "destination-in", Vu.drawImage(uu, 0, 0, Xu.width, Xu.height)) : console.warn("Particle preview: no 2D canvas context to tint a texture with"), Nu.set(Ju, Xu), Xu
                             }
                           }
 
-                          function Ep(UU) {
+                          function KK(uu) {
                             let {
-                              opts: RU,
-                              textureUrl: gU,
-                              burst: pU,
-                              paused: EU
-                            } = UU;
-                            const PU = (0, tU.useRef)(null),
-                              TU = (0, tU.useRef)(RU);
-                            TU.current = RU;
-                            const qU = (0, tU.useRef)(EU);
-                            qU.current = EU;
-                            const KU = (0, tU.useRef)(null),
-                              cU = (0, tU.useRef)(null),
-                              GU = (0, tU.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(UU) {
-                                let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
-                                const gU = [-.5, -.5, -.5],
-                                  tU = [.5, .5, .5];
-                                let pU = .5;
-                                for (let EU = 0; EU < 40; EU++) {
-                                  const EU = Ag(UU, gU, tU, RU),
-                                    PU = Math.max(EU.life / 30, .001);
-                                  for (; Dg(EU, UU.gravity, PU);) pU = Math.max(pU, Math.hypot(EU.pos[0], EU.pos[1], EU.pos[2]) + EU.size / 2)
+                              opts: Ru,
+                              textureUrl: yu,
+                              burst: Ku,
+                              paused: Qu
+                            } = uu;
+                            const mu = (0, Eu.useRef)(null),
+                              Ju = (0, Eu.useRef)(Ru);
+                            Ju.current = Ru;
+                            const Nu = (0, Eu.useRef)(Qu);
+                            Nu.current = Qu;
+                            const Xu = (0, Eu.useRef)(null),
+                              Vu = (0, Eu.useRef)(null),
+                              ru = (0, Eu.useMemo)((() => Math.min(16, Math.max(1.6, 1.05 * function(uu) {
+                                let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Math.random;
+                                const yu = [-.5, -.5, -.5],
+                                  Eu = [.5, .5, .5];
+                                let Ku = .5;
+                                for (let Qu = 0; Qu < 40; Qu++) {
+                                  const Qu = iy(uu, yu, Eu, Ru),
+                                    mu = Math.max(Qu.life / 30, .001);
+                                  for (; qy(Qu, uu.gravity, mu);) Ku = Math.max(Ku, Math.hypot(Qu.pos[0], Qu.pos[1], Qu.pos[2]) + Qu.size / 2)
                                 }
-                                return pU
-                              }(RU)))), [RU]),
-                              jU = (0, tU.useRef)(GU);
-                            return jU.current = GU, (0, tU.useEffect)((() => {
-                              if (KU.current = null, !gU) return;
-                              const UU = new Image;
-                              let RU = !1;
-                              return UU.onload = () => {
-                                RU || (KU.current = UU)
-                              }, UU.onerror = () => {
-                                console.warn(`Particle preview: could not load the texture ${gU}`)
-                              }, UU.src = gU, () => {
-                                RU = !0
+                                return Ku
+                              }(Ru)))), [Ru]),
+                              Bu = (0, Eu.useRef)(ru);
+                            return Bu.current = ru, (0, Eu.useEffect)((() => {
+                              if (Xu.current = null, !yu) return;
+                              const uu = new Image;
+                              let Ru = !1;
+                              return uu.onload = () => {
+                                Ru || (Xu.current = uu)
+                              }, uu.onerror = () => {
+                                console.warn(`Particle preview: could not load the texture ${yu}`)
+                              }, uu.src = yu, () => {
+                                Ru = !0
                               }
-                            }), [gU]), (0, tU.useEffect)((() => {
-                              var UU;
-                              null === (UU = cU.current) || void 0 === UU || UU.call(cU)
-                            }), [RU, pU]), (0, tU.useEffect)((() => {
-                              const UU = PU.current,
-                                RU = null === UU || void 0 === UU ? void 0 : UU.getContext("2d");
-                              if (!UU || !RU) return void console.warn("Particle preview: no 2D canvas context to draw on");
-                              const gU = new pp;
-                              let tU = [],
-                                pU = 0,
-                                EU = -.7,
-                                GU = jU.current,
-                                uU = performance.now(),
-                                CU = 0,
-                                hU = !0,
-                                QU = null;
-                              const eU = () => {
-                                const UU = TU.current,
-                                  RU = Math.min(400, Math.max(0, Math.ceil(UU.manualEmitCount)));
-                                tU = [];
-                                for (let gU = 0; gU < RU; gU++) tU.push(Ag(UU, Rp, gp, Math.random));
-                                pU = 0
+                            }), [yu]), (0, Eu.useEffect)((() => {
+                              var uu;
+                              null === (uu = Vu.current) || void 0 === uu || uu.call(Vu)
+                            }), [Ru, Ku]), (0, Eu.useEffect)((() => {
+                              const uu = mu.current,
+                                Ru = null === uu || void 0 === uu ? void 0 : uu.getContext("2d");
+                              if (!uu || !Ru) return void console.warn("Particle preview: no 2D canvas context to draw on");
+                              const yu = new EK;
+                              let Eu = [],
+                                Ku = 0,
+                                Qu = -.7,
+                                ru = Bu.current,
+                                xu = performance.now(),
+                                Su = 0,
+                                pu = !0,
+                                Tu = null;
+                              const Wu = () => {
+                                const uu = Ju.current,
+                                  Ru = Math.min(400, Math.max(0, Math.ceil(uu.manualEmitCount)));
+                                Eu = [];
+                                for (let yu = 0; yu < Ru; yu++) Eu.push(iy(uu, uK, RK, Math.random));
+                                Ku = 0
                               };
-                              cU.current = eU, eU();
-                              const WU = PU => {
-                                CU = requestAnimationFrame(WU);
-                                const cU = Math.min(.05, (PU - uU) / 1e3);
-                                if (uU = PU, !hU) return;
-                                const fU = window.devicePixelRatio || 1,
-                                  xU = Math.round(UU.clientWidth * fU),
-                                  mU = Math.round(UU.clientHeight * fU);
-                                if (0 === xU || 0 === mU) return;
-                                UU.width === xU && UU.height === mU || (UU.width = xU, UU.height = mU);
-                                const IU = TU.current;
-                                null === QU && (EU += .18 * cU), GU += (jU.current - GU) * Math.min(1, 4 * cU);
-                                const JU = .6 * cU;
-                                tU = tU.filter((UU => Dg(UU, IU.gravity, JU))), 0 !== tU.length || qU.current || (pU += cU, pU > .6 && eU());
-                                const wU = function(UU, RU, gU, tU) {
-                                  const pU = 3.2 * tU,
-                                    EU = .44 * Math.min(UU, RU) * pU / tU,
-                                    PU = Math.cos(gU),
-                                    TU = Math.sin(gU),
-                                    qU = Math.cos(.42),
-                                    KU = Math.sin(.42);
-                                  return (gU, tU, cU) => {
-                                    const GU = gU * TU + cU * PU,
-                                      jU = pU - (tU * KU + GU * qU);
-                                    if (jU < .05) return null;
-                                    const uU = EU / jU;
+                              Vu.current = Wu, Wu();
+                              const ju = mu => {
+                                Su = requestAnimationFrame(ju);
+                                const Vu = Math.min(.05, (mu - xu) / 1e3);
+                                if (xu = mu, !pu) return;
+                                const Hu = window.devicePixelRatio || 1,
+                                  du = Math.round(uu.clientWidth * Hu),
+                                  bu = Math.round(uu.clientHeight * Hu);
+                                if (0 === du || 0 === bu) return;
+                                uu.width === du && uu.height === bu || (uu.width = du, uu.height = bu);
+                                const Cu = Ju.current;
+                                null === Tu && (Qu += .18 * Vu), ru += (Bu.current - ru) * Math.min(1, 4 * Vu);
+                                const ku = .6 * Vu;
+                                Eu = Eu.filter((uu => qy(uu, Cu.gravity, ku))), 0 !== Eu.length || Nu.current || (Ku += Vu, Ku > .6 && Wu());
+                                const eu = function(uu, Ru, yu, Eu) {
+                                  const Ku = 3.2 * Eu,
+                                    Qu = .44 * Math.min(uu, Ru) * Ku / Eu,
+                                    mu = Math.cos(yu),
+                                    Ju = Math.sin(yu),
+                                    Nu = Math.cos(.42),
+                                    Xu = Math.sin(.42);
+                                  return (yu, Eu, Vu) => {
+                                    const ru = yu * Ju + Vu * mu,
+                                      Bu = Ku - (Eu * Xu + ru * Nu);
+                                    if (Bu < .05) return null;
+                                    const xu = Qu / Bu;
                                     return {
-                                      x: UU / 2 + (gU * PU - cU * TU) * uU,
-                                      y: RU / 2 - (tU * qU - GU * KU) * uU,
-                                      scale: uU,
-                                      depth: jU
+                                      x: uu / 2 + (yu * mu - Vu * Ju) * xu,
+                                      y: Ru / 2 - (Eu * Nu - ru * Xu) * xu,
+                                      scale: xu,
+                                      depth: Bu
                                     }
                                   }
-                                }(xU, mU, EU, GU);
-                                ! function(UU, RU, gU, tU, pU) {
-                                  const EU = UU.createLinearGradient(0, 0, 0, gU);
-                                  EU.addColorStop(0, "#23262d"), EU.addColorStop(1, "#16181c"), UU.globalCompositeOperation = "source-over", UU.globalAlpha = 1, UU.fillStyle = EU, UU.fillRect(0, 0, RU, gU);
-                                  const PU = (RU, gU) => {
-                                      const pU = tU(RU[0], RU[1], RU[2]),
-                                        EU = tU(gU[0], gU[1], gU[2]);
-                                      pU && EU && (UU.beginPath(), UU.moveTo(pU.x, pU.y), UU.lineTo(EU.x, EU.y), UU.stroke())
+                                }(du, bu, Qu, ru);
+                                ! function(uu, Ru, yu, Eu, Ku) {
+                                  const Qu = uu.createLinearGradient(0, 0, 0, yu);
+                                  Qu.addColorStop(0, "#23262d"), Qu.addColorStop(1, "#16181c"), uu.globalCompositeOperation = "source-over", uu.globalAlpha = 1, uu.fillStyle = Qu, uu.fillRect(0, 0, Ru, yu);
+                                  const mu = (Ru, yu) => {
+                                      const Ku = Eu(Ru[0], Ru[1], Ru[2]),
+                                        Qu = Eu(yu[0], yu[1], yu[2]);
+                                      Ku && Qu && (uu.beginPath(), uu.moveTo(Ku.x, Ku.y), uu.lineTo(Qu.x, Qu.y), uu.stroke())
                                     },
-                                    TU = Math.ceil(pU) + 1,
-                                    qU = Rp[1];
-                                  UU.lineWidth = 1, UU.strokeStyle = "rgba(255, 255, 255, 0.07)";
-                                  for (let KU = -TU; KU <= TU; KU++) PU([KU + .5, qU, .5 - TU], [KU + .5, qU, TU + .5]), PU([.5 - TU, qU, KU + .5], [TU + .5, qU, KU + .5]);
-                                  UU.strokeStyle = "rgba(255, 255, 255, 0.28)", UU.setLineDash([4, 4]);
-                                  for (const KU of tp)
-                                    for (const UU of tp) {
-                                      const RU = [0, 1, 2].filter((RU => KU[RU] !== UU[RU]));
-                                      1 === RU.length && KU[RU[0]] < UU[RU[0]] && PU(KU, UU)
+                                    Ju = Math.ceil(Ku) + 1,
+                                    Nu = uK[1];
+                                  uu.lineWidth = 1, uu.strokeStyle = "rgba(255, 255, 255, 0.07)";
+                                  for (let Xu = -Ju; Xu <= Ju; Xu++) mu([Xu + .5, Nu, .5 - Ju], [Xu + .5, Nu, Ju + .5]), mu([.5 - Ju, Nu, Xu + .5], [Ju + .5, Nu, Xu + .5]);
+                                  uu.strokeStyle = "rgba(255, 255, 255, 0.28)", uu.setLineDash([4, 4]);
+                                  for (const Xu of yK)
+                                    for (const uu of yK) {
+                                      const Ru = [0, 1, 2].filter((Ru => Xu[Ru] !== uu[Ru]));
+                                      1 === Ru.length && Xu[Ru[0]] < uu[Ru[0]] && mu(Xu, uu)
                                     }
-                                  UU.setLineDash([])
-                                }(RU, xU, mU, wU, GU);
-                                const nU = KU.current,
-                                  bU = tU.map((UU => ({
-                                    particle: UU,
-                                    at: wU(UU.pos[0], UU.pos[1], UU.pos[2])
-                                  }))).filter((UU => null !== UU.at)).sort(((UU, RU) => RU.at.depth - UU.at.depth));
-                                RU.imageSmoothingEnabled = !1;
-                                for (const UU of function(UU) {
-                                    switch (UU) {
-                                      case Hg.g.OneOne:
+                                  uu.setLineDash([])
+                                }(Ru, du, bu, eu, ru);
+                                const Au = Xu.current,
+                                  Du = Eu.map((uu => ({
+                                    particle: uu,
+                                    at: eu(uu.pos[0], uu.pos[1], uu.pos[2])
+                                  }))).filter((uu => null !== uu.at)).sort(((uu, Ru) => Ru.at.depth - uu.at.depth));
+                                Ru.imageSmoothingEnabled = !1;
+                                for (const uu of function(uu) {
+                                    switch (uu) {
+                                      case Ly.g.OneOne:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !1
                                         }];
-                                      case Hg.g.Add:
+                                      case Ly.g.Add:
                                         return [{
                                           operation: "lighter",
                                           usesAlpha: !0
                                         }];
-                                      case Hg.g.Multiply:
+                                      case Ly.g.Multiply:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
                                         }];
-                                      case Hg.g.MultiplyAdd:
+                                      case Ly.g.MultiplyAdd:
                                         return [{
                                           operation: "multiply",
                                           usesAlpha: !0
@@ -2962,665 +2962,665 @@ export const modules = {
                                           usesAlpha: !0
                                         }]
                                     }
-                                  }(IU.blendMode)) {
-                                  RU.globalCompositeOperation = UU.operation;
+                                  }(Cu.blendMode)) {
+                                  Ru.globalCompositeOperation = uu.operation;
                                   for (const {
-                                      particle: tU,
-                                      at: pU
+                                      particle: Eu,
+                                      at: Ku
                                     }
-                                    of bU) {
-                                    const [EU, PU, TU, qU] = Mg(tU), KU = Math.max(1, tU.size * pU.scale);
-                                    RU.globalAlpha = UU.usesAlpha ? Math.min(1, Math.max(0, qU)) : 1, nU ? RU.drawImage(gU.get(nU, EU, PU, TU), pU.x - KU / 2, pU.y - KU / 2, KU, KU) : (RU.fillStyle = `rgb(${255*EU}, ${255*PU}, ${255*TU})`, RU.fillRect(pU.x - KU / 2, pU.y - KU / 2, KU, KU))
+                                    of Du) {
+                                    const [Qu, mu, Ju, Nu] = oy(Eu), Xu = Math.max(1, Eu.size * Ku.scale);
+                                    Ru.globalAlpha = uu.usesAlpha ? Math.min(1, Math.max(0, Nu)) : 1, Au ? Ru.drawImage(yu.get(Au, Qu, mu, Ju), Ku.x - Xu / 2, Ku.y - Xu / 2, Xu, Xu) : (Ru.fillStyle = `rgb(${255*Qu}, ${255*mu}, ${255*Ju})`, Ru.fillRect(Ku.x - Xu / 2, Ku.y - Xu / 2, Xu, Xu))
                                   }
                                 }
-                                RU.globalCompositeOperation = "source-over", RU.globalAlpha = 1
+                                Ru.globalCompositeOperation = "source-over", Ru.globalAlpha = 1
                               };
-                              CU = requestAnimationFrame(WU);
-                              const fU = new IntersectionObserver((UU => {
-                                let [RU] = UU;
-                                hU = RU.isIntersecting
+                              Su = requestAnimationFrame(ju);
+                              const Hu = new IntersectionObserver((uu => {
+                                let [Ru] = uu;
+                                pu = Ru.isIntersecting
                               }));
-                              fU.observe(UU);
-                              const xU = RU => {
-                                  QU = RU.clientX, UU.setPointerCapture(RU.pointerId)
+                              Hu.observe(uu);
+                              const du = Ru => {
+                                  Tu = Ru.clientX, uu.setPointerCapture(Ru.pointerId)
                                 },
-                                mU = UU => {
-                                  null !== QU && (EU += .01 * (UU.clientX - QU), QU = UU.clientX)
+                                bu = uu => {
+                                  null !== Tu && (Qu += .01 * (uu.clientX - Tu), Tu = uu.clientX)
                                 },
-                                IU = () => {
-                                  QU = null
+                                Cu = () => {
+                                  Tu = null
                                 };
-                              return UU.addEventListener("pointerdown", xU), UU.addEventListener("pointermove", mU), UU.addEventListener("pointerup", IU), UU.addEventListener("pointercancel", IU), () => {
-                                cancelAnimationFrame(CU), fU.disconnect(), cU.current = null, UU.removeEventListener("pointerdown", xU), UU.removeEventListener("pointermove", mU), UU.removeEventListener("pointerup", IU), UU.removeEventListener("pointercancel", IU)
+                              return uu.addEventListener("pointerdown", du), uu.addEventListener("pointermove", bu), uu.addEventListener("pointerup", Cu), uu.addEventListener("pointercancel", Cu), () => {
+                                cancelAnimationFrame(Su), Hu.disconnect(), Vu.current = null, uu.removeEventListener("pointerdown", du), uu.removeEventListener("pointermove", bu), uu.removeEventListener("pointerup", Cu), uu.removeEventListener("pointercancel", Cu)
                               }
-                            }), []), (0, CU.jsx)("canvas", {
-                              ref: PU,
+                            }), []), (0, Su.jsx)("canvas", {
+                              ref: mu,
                               className: "DocsParticleCanvas",
                               role: "img",
-                              "aria-label": `Preview of a ${RU.texture} particle effect. Drag to turn the view.`
+                              "aria-label": `Preview of a ${Ru.texture} particle effect. Drag to turn the view.`
                             })
                           }
-                          const Pp = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
-                            Tp = [{
-                              mode: Hg.g.OneOne,
+                          const QK = ["aura", "stomp", "brainRot", "mobTameSuccess", "mango", "redFirecrackerLarge"],
+                            mK = [{
+                              mode: Ly.g.OneOne,
                               label: "0 \xb7 OneOne (glow)"
                             }, {
-                              mode: Hg.g.Standard,
+                              mode: Ly.g.Standard,
                               label: "1 \xb7 Standard"
                             }, {
-                              mode: Hg.g.Add,
+                              mode: Ly.g.Add,
                               label: "2 \xb7 Add"
                             }, {
-                              mode: Hg.g.Multiply,
+                              mode: Ly.g.Multiply,
                               label: "3 \xb7 Multiply"
                             }, {
-                              mode: Hg.g.MultiplyAdd,
+                              mode: Ly.g.MultiplyAdd,
                               label: "4 \xb7 MultiplyAdd"
                             }],
-                            qp = (0, tU.forwardRef)((function(UU, RU) {
-                              var gU, pU;
+                            JK = (0, Eu.forwardRef)((function(uu, Ru) {
+                              var yu, Ku;
                               let {
-                                textures: PU
-                              } = UU;
-                              const TU = ft(),
-                                qU = (0, tU.useRef)(null),
-                                [KU, cU] = (0, tU.useState)(sg),
-                                [GU, jU] = (0, tU.useState)("example"),
-                                [uU, hU] = (0, tU.useState)(0),
-                                [eU, WU] = (0, tU.useState)(!1),
-                                xU = UU => {
-                                  const RU = "example" === UU ? sg : Sg(UU);
-                                  RU && (cU(RU), jU(UU))
+                                textures: mu
+                              } = uu;
+                              const Ju = HE(),
+                                Nu = (0, Eu.useRef)(null),
+                                [Xu, Vu] = (0, Eu.useState)(Fy),
+                                [ru, Bu] = (0, Eu.useState)("example"),
+                                [xu, pu] = (0, Eu.useState)(0),
+                                [Wu, ju] = (0, Eu.useState)(!1),
+                                du = uu => {
+                                  const Ru = "example" === uu ? Fy : zy(uu);
+                                  Ru && (Vu(Ru), Bu(uu))
                                 };
-                              (0, tU.useImperativeHandle)(RU, (() => ({
-                                preview: UU => {
-                                  var RU;
-                                  xU(UU), null === (RU = qU.current) || void 0 === RU || RU.scrollIntoView({
+                              (0, Eu.useImperativeHandle)(Ru, (() => ({
+                                preview: uu => {
+                                  var Ru;
+                                  du(uu), null === (Ru = Nu.current) || void 0 === Ru || Ru.scrollIntoView({
                                     behavior: "smooth",
                                     block: "start"
                                   })
                                 }
                               })));
-                              const mU = UU => {
-                                  cU({
-                                    ...KU,
-                                    ...UU
-                                  }), jU(null)
+                              const bu = uu => {
+                                  Vu({
+                                    ...Xu,
+                                    ...uu
+                                  }), Bu(null)
                                 },
-                                IU = function(UU, RU) {
-                                  if (null !== RU) return `${Og}    presetId: "${RU}",\n${Ut}\n})`;
-                                  const gU = UU.velocityGradients.map((UU => `        {\n            timeFraction: ${Lg(UU.timeFraction)},\n            factor: ${Lg(UU.factor)},\n            factor2: ${Lg(UU.factor2)},\n        },`)),
-                                    tU = [`    dir1: ${Ng(UU.dir1)},`, `    dir2: ${Ng(UU.dir2)},`, Ut, `    texture: "${UU.texture}",`, `    minLifeTime: ${Lg(UU.minLifeTime)},`, `    maxLifeTime: ${Lg(UU.maxLifeTime)},`, `    minEmitPower: ${Lg(UU.minEmitPower)},`, `    maxEmitPower: ${Lg(UU.maxEmitPower)},`, `    minSize: ${Lg(UU.minSize)},`, `    maxSize: ${Lg(UU.maxSize)},`, `    manualEmitCount: ${Lg(UU.manualEmitCount)},`, `    gravity: ${Ng(UU.gravity)},`, `    colorGradients: ${lg(UU.colorGradients,"    ")},`, `    velocityGradients: ${gU.length>0?`[\n${gU.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Lg(UU.blendMode)},`];
-                                  return void 0 !== UU.hideDist && tU.push(`    hideDist: ${Lg(UU.hideDist)},`), `${Og}${tU.join("\n")}\n})`
-                                }(KU, null === GU || "example" === GU ? null : GU),
-                                wU = PU.includes(KU.texture) ? PU : [...PU, KU.texture];
-                              return (0, CU.jsxs)("section", {
-                                ref: qU,
+                                Cu = function(uu, Ru) {
+                                  if (null !== Ru) return `${fy}    presetId: "${Ru}",\n${uE}\n})`;
+                                  const yu = uu.velocityGradients.map((uu => `        {\n            timeFraction: ${Oy(uu.timeFraction)},\n            factor: ${Oy(uu.factor)},\n            factor2: ${Oy(uu.factor2)},\n        },`)),
+                                    Eu = [`    dir1: ${vy(uu.dir1)},`, `    dir2: ${vy(uu.dir2)},`, uE, `    texture: "${uu.texture}",`, `    minLifeTime: ${Oy(uu.minLifeTime)},`, `    maxLifeTime: ${Oy(uu.maxLifeTime)},`, `    minEmitPower: ${Oy(uu.minEmitPower)},`, `    maxEmitPower: ${Oy(uu.maxEmitPower)},`, `    minSize: ${Oy(uu.minSize)},`, `    maxSize: ${Oy(uu.maxSize)},`, `    manualEmitCount: ${Oy(uu.manualEmitCount)},`, `    gravity: ${vy(uu.gravity)},`, `    colorGradients: ${ay(uu.colorGradients,"    ")},`, `    velocityGradients: ${yu.length>0?`[\n${yu.join("\n")}\n    ]`:"[]"},`, `    blendMode: ${Oy(uu.blendMode)},`];
+                                  return void 0 !== uu.hideDist && Eu.push(`    hideDist: ${Oy(uu.hideDist)},`), `${fy}${Eu.join("\n")}\n})`
+                                }(Xu, null === ru || "example" === ru ? null : ru),
+                                eu = mu.includes(Xu.texture) ? mu : [...mu, Xu.texture];
+                              return (0, Su.jsxs)("section", {
+                                ref: Nu,
                                 className: "DocsPlayground DocsParticlePlayground",
                                 "aria-label": "Particle effect playground",
-                                children: [(0, CU.jsxs)("header", {
+                                children: [(0, Su.jsxs)("header", {
                                   className: "DocsPlaygroundHeader",
-                                  children: [(0, CU.jsxs)("div", {
-                                    children: [(0, CU.jsx)("div", {
+                                  children: [(0, Su.jsxs)("div", {
+                                    children: [(0, Su.jsx)("div", {
                                       className: "DocsPlaygroundTitle",
                                       children: "Try it: particle effects"
-                                    }), (0, CU.jsx)("div", {
+                                    }), (0, Su.jsx)("div", {
                                       className: "DocsPlaygroundHint",
                                       children: "Pick a preset or change the settings, and the burst replays. Drag the preview to turn it."
                                     })]
-                                  }), (0, CU.jsx)(fU, {
-                                    text: IU,
+                                  }), (0, Su.jsx)(Hu, {
+                                    text: Cu,
                                     label: "Copy code"
                                   })]
-                                }), (0, CU.jsxs)("div", {
+                                }), (0, Su.jsxs)("div", {
                                   className: "DocsPlaygroundPresets",
-                                  children: [(0, CU.jsx)("button", {
+                                  children: [(0, Su.jsx)("button", {
                                     type: "button",
-                                    className: EU()("DocsVariantChip", {
-                                      Active: "example" === GU
+                                    className: Qu()("DocsVariantChip", {
+                                      Active: "example" === ru
                                     }),
                                     onClick: () => {
-                                      xU("example")
+                                      du("example")
                                     },
                                     children: "Example"
-                                  }), Pp.filter((UU => null !== Sg(UU))).map((UU => (0, CU.jsx)("button", {
+                                  }), QK.filter((uu => null !== zy(uu))).map((uu => (0, Su.jsx)("button", {
                                     type: "button",
-                                    className: EU()("DocsVariantChip", {
-                                      Active: GU === UU
+                                    className: Qu()("DocsVariantChip", {
+                                      Active: ru === uu
                                     }),
                                     onClick: () => {
-                                      xU(UU)
+                                      du(uu)
                                     },
-                                    children: UU
-                                  }, UU))), (0, CU.jsxs)("select", {
+                                    children: uu
+                                  }, uu))), (0, Su.jsxs)("select", {
                                     className: "DocsParticleSelect",
-                                    value: null !== GU && void 0 !== GU ? GU : "custom",
+                                    value: null !== ru && void 0 !== ru ? ru : "custom",
                                     "aria-label": "Preset",
-                                    onChange: UU => {
-                                      xU(UU.target.value)
+                                    onChange: uu => {
+                                      du(uu.target.value)
                                     },
-                                    children: [(0, CU.jsx)("option", {
+                                    children: [(0, Su.jsx)("option", {
                                       value: "example",
                                       children: "Example effect"
-                                    }), null === GU && (0, CU.jsx)("option", {
+                                    }), null === ru && (0, Su.jsx)("option", {
                                       value: "custom",
                                       children: "Custom"
-                                    }), dg.d.map((UU => (0, CU.jsx)("option", {
-                                      value: UU,
-                                      children: UU
-                                    }, UU)))]
+                                    }), cy.c.map((uu => (0, Su.jsx)("option", {
+                                      value: uu,
+                                      children: uu
+                                    }, uu)))]
                                   })]
-                                }), (0, CU.jsxs)("div", {
+                                }), (0, Su.jsxs)("div", {
                                   className: "DocsParticleBody",
-                                  children: [(0, CU.jsxs)("div", {
+                                  children: [(0, Su.jsxs)("div", {
                                     className: "DocsParticleStageWrap",
-                                    children: [(0, CU.jsx)(Ep, {
-                                      opts: KU,
-                                      textureUrl: null !== (gU = null === TU || void 0 === TU ? void 0 : TU.getParticleTextureUrl(KU.texture)) && void 0 !== gU ? gU : null,
-                                      burst: uU,
-                                      paused: eU
-                                    }), (0, CU.jsxs)("div", {
+                                    children: [(0, Su.jsx)(KK, {
+                                      opts: Xu,
+                                      textureUrl: null !== (yu = null === Ju || void 0 === Ju ? void 0 : Ju.getParticleTextureUrl(Xu.texture)) && void 0 !== yu ? yu : null,
+                                      burst: xu,
+                                      paused: Wu
+                                    }), (0, Su.jsxs)("div", {
                                       className: "DocsParticleStageButtons",
-                                      children: [(0, CU.jsxs)("button", {
+                                      children: [(0, Su.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
                                         onClick: () => {
-                                          hU(uU + 1)
+                                          pu(xu + 1)
                                         },
-                                        children: [(0, CU.jsx)(QU, {
+                                        children: [(0, Su.jsx)(Tu, {
                                           name: "replay"
-                                        }), (0, CU.jsx)("span", {
+                                        }), (0, Su.jsx)("span", {
                                           children: "Replay"
                                         })]
-                                      }), (0, CU.jsxs)("button", {
+                                      }), (0, Su.jsxs)("button", {
                                         type: "button",
                                         className: "DocsParticleStageButton",
-                                        "aria-pressed": eU,
+                                        "aria-pressed": Wu,
                                         onClick: () => {
-                                          WU(!eU)
+                                          ju(!Wu)
                                         },
-                                        children: [(0, CU.jsx)(QU, {
-                                          name: eU ? "play" : "pause"
-                                        }), (0, CU.jsx)("span", {
-                                          children: eU ? "Loop" : "Stop looping"
+                                        children: [(0, Su.jsx)(Tu, {
+                                          name: Wu ? "play" : "pause"
+                                        }), (0, Su.jsx)("span", {
+                                          children: Wu ? "Loop" : "Stop looping"
                                         })]
                                       })]
                                     })]
-                                  }), (0, CU.jsxs)("div", {
+                                  }), (0, Su.jsxs)("div", {
                                     className: "DocsParticleControls",
-                                    children: [(0, CU.jsxs)("div", {
+                                    children: [(0, Su.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, CU.jsxs)("div", {
+                                      children: [(0, Su.jsxs)("div", {
                                         className: "DocsControlLabel",
-                                        children: [(0, CU.jsx)("span", {
+                                        children: [(0, Su.jsx)("span", {
                                           children: "Texture"
-                                        }), (0, CU.jsx)("code", {
+                                        }), (0, Su.jsx)("code", {
                                           className: "DocsControlValue",
-                                          children: KU.texture
+                                          children: Xu.texture
                                         })]
-                                      }), (0, CU.jsx)("div", {
+                                      }), (0, Su.jsx)("div", {
                                         className: "DocsParticleTextures",
-                                        children: wU.map((UU => {
-                                          var RU;
-                                          const gU = null !== (RU = null === TU || void 0 === TU ? void 0 : TU.getParticleTextureUrl(UU)) && void 0 !== RU ? RU : null;
-                                          return (0, CU.jsx)("button", {
+                                        children: eu.map((uu => {
+                                          var Ru;
+                                          const yu = null !== (Ru = null === Ju || void 0 === Ju ? void 0 : Ju.getParticleTextureUrl(uu)) && void 0 !== Ru ? Ru : null;
+                                          return (0, Su.jsx)("button", {
                                             type: "button",
-                                            className: EU()("DocsParticleTexture", {
-                                              Active: KU.texture === UU
+                                            className: Qu()("DocsParticleTexture", {
+                                              Active: Xu.texture === uu
                                             }),
-                                            title: UU,
-                                            "aria-label": UU,
-                                            "aria-pressed": KU.texture === UU,
+                                            title: uu,
+                                            "aria-label": uu,
+                                            "aria-pressed": Xu.texture === uu,
                                             onClick: () => {
-                                              mU({
-                                                texture: UU
+                                              bu({
+                                                texture: uu
                                               })
                                             },
-                                            children: gU ? (0, CU.jsx)("img", {
-                                              src: gU,
+                                            children: yu ? (0, Su.jsx)("img", {
+                                              src: yu,
                                               alt: ""
-                                            }) : (0, CU.jsx)(QU, {
+                                            }) : (0, Su.jsx)(Tu, {
                                               name: "image"
                                             })
-                                          }, UU)
+                                          }, uu)
                                         }))
                                       })]
-                                    }), (0, CU.jsx)(Ot, {
+                                    }), (0, Su.jsx)(aE, {
                                       label: "Particles",
                                       min: 1,
                                       max: 400,
                                       step: 1,
-                                      value: KU.manualEmitCount,
-                                      onChange: UU => {
-                                        mU({
-                                          manualEmitCount: UU
+                                      value: Xu.manualEmitCount,
+                                      onChange: uu => {
+                                        bu({
+                                          manualEmitCount: uu
                                         })
                                       }
-                                    }), (0, CU.jsx)(lt, {
+                                    }), (0, Su.jsx)(vE, {
                                       label: "Lifetime",
                                       min: .05,
                                       max: 3,
                                       step: .05,
-                                      low: KU.minLifeTime,
-                                      high: KU.maxLifeTime,
-                                      onChange: (UU, RU) => {
-                                        mU({
-                                          minLifeTime: UU,
-                                          maxLifeTime: RU
+                                      low: Xu.minLifeTime,
+                                      high: Xu.maxLifeTime,
+                                      onChange: (uu, Ru) => {
+                                        bu({
+                                          minLifeTime: uu,
+                                          maxLifeTime: Ru
                                         })
                                       }
-                                    }), (0, CU.jsx)(lt, {
+                                    }), (0, Su.jsx)(vE, {
                                       label: "Emit power",
                                       min: 0,
                                       max: 40,
                                       step: .5,
-                                      low: KU.minEmitPower,
-                                      high: KU.maxEmitPower,
-                                      onChange: (UU, RU) => {
-                                        mU({
-                                          minEmitPower: UU,
-                                          maxEmitPower: RU
+                                      low: Xu.minEmitPower,
+                                      high: Xu.maxEmitPower,
+                                      onChange: (uu, Ru) => {
+                                        bu({
+                                          minEmitPower: uu,
+                                          maxEmitPower: Ru
                                         })
                                       }
-                                    }), (0, CU.jsx)(lt, {
+                                    }), (0, Su.jsx)(vE, {
                                       label: "Size",
                                       min: .05,
                                       max: 2,
                                       step: .05,
-                                      low: KU.minSize,
-                                      high: KU.maxSize,
-                                      onChange: (UU, RU) => {
-                                        mU({
-                                          minSize: UU,
-                                          maxSize: RU
+                                      low: Xu.minSize,
+                                      high: Xu.maxSize,
+                                      onChange: (uu, Ru) => {
+                                        bu({
+                                          minSize: uu,
+                                          maxSize: Ru
                                         })
                                       }
-                                    }), (0, CU.jsx)(Ot, {
+                                    }), (0, Su.jsx)(aE, {
                                       label: "Gravity (up)",
                                       min: -40,
                                       max: 40,
                                       step: 1,
-                                      value: null !== (pU = KU.gravity[1]) && void 0 !== pU ? pU : 0,
-                                      onChange: UU => {
-                                        var RU, gU;
-                                        mU({
-                                          gravity: [null !== (RU = KU.gravity[0]) && void 0 !== RU ? RU : 0, UU, null !== (gU = KU.gravity[2]) && void 0 !== gU ? gU : 0]
+                                      value: null !== (Ku = Xu.gravity[1]) && void 0 !== Ku ? Ku : 0,
+                                      onChange: uu => {
+                                        var Ru, yu;
+                                        bu({
+                                          gravity: [null !== (Ru = Xu.gravity[0]) && void 0 !== Ru ? Ru : 0, uu, null !== (yu = Xu.gravity[2]) && void 0 !== yu ? yu : 0]
                                         })
                                       }
-                                    }), (0, CU.jsxs)("div", {
+                                    }), (0, Su.jsxs)("div", {
                                       className: "DocsControl",
-                                      children: [(0, CU.jsx)("div", {
+                                      children: [(0, Su.jsx)("div", {
                                         className: "DocsControlLabel",
-                                        children: (0, CU.jsx)("span", {
+                                        children: (0, Su.jsx)("span", {
                                           children: "Blend mode"
                                         })
-                                      }), (0, CU.jsx)("select", {
+                                      }), (0, Su.jsx)("select", {
                                         className: "DocsParticleSelect",
-                                        value: KU.blendMode,
+                                        value: Xu.blendMode,
                                         "aria-label": "Blend mode",
-                                        onChange: UU => {
-                                          mU({
-                                            blendMode: Number(UU.target.value)
+                                        onChange: uu => {
+                                          bu({
+                                            blendMode: Number(uu.target.value)
                                           })
                                         },
-                                        children: Tp.map((UU => {
+                                        children: mK.map((uu => {
                                           let {
-                                            mode: RU,
-                                            label: gU
-                                          } = UU;
-                                          return (0, CU.jsx)("option", {
-                                            value: RU,
-                                            children: gU
-                                          }, RU)
+                                            mode: Ru,
+                                            label: yu
+                                          } = uu;
+                                          return (0, Su.jsx)("option", {
+                                            value: Ru,
+                                            children: yu
+                                          }, Ru)
                                         }))
                                       })]
-                                    }), (0, CU.jsx)(Up, {
-                                      opts: KU,
-                                      onChange: UU => {
-                                        mU({
-                                          colorGradients: UU
+                                    }), (0, Su.jsx)(fE, {
+                                      opts: Xu,
+                                      onChange: uu => {
+                                        bu({
+                                          colorGradients: uu
                                         })
                                       }
                                     })]
                                   })]
-                                }), (0, CU.jsx)(JU, {
-                                  code: IU,
+                                }), (0, Su.jsx)(ku, {
+                                  code: Cu,
                                   lang: "ts"
                                 })]
                               })
                             }));
-                          var Kp = gU(4139),
-                            cp = gU(1777);
+                          var NK = yu(4237),
+                            XK = yu(1825);
 
-                          function Gp(UU, RU) {
-                            return UU ? Kp.e.includes(RU) ? UU.getIngameIconUrl(RU) : UU.getItemIconUrl(RU) : null
+                          function VK(uu, Ru) {
+                            return uu ? NK.c.includes(Ru) ? uu.getIngameIconUrl(Ru) : uu.getItemIconUrl(Ru) : null
                           }
 
-                          function jp(UU) {
-                            var RU, gU, tU;
+                          function rK(uu) {
+                            var Ru, yu, Eu;
                             let {
-                              part: pU,
-                              assets: PU
-                            } = UU;
-                            const TU = Gp(PU, pU.icon),
-                              qU = null !== (RU = null === (gU = pU.style) || void 0 === gU ? void 0 : gU.fontSize) && void 0 !== RU ? RU : "1.8em",
-                              KU = (0, dR.Wb)(pU.style);
-                            return (0, CU.jsxs)("span", {
-                              className: EU()("DocsBloxdTextIcon", {
-                                Missing: !TU
+                              part: Ku,
+                              assets: mu
+                            } = uu;
+                            const Ju = VK(mu, Ku.icon),
+                              Nu = null !== (Ru = null === (yu = Ku.style) || void 0 === yu ? void 0 : yu.fontSize) && void 0 !== Ru ? Ru : "1.8em",
+                              Xu = (0, cR.$b)(Ku.style);
+                            return (0, Su.jsxs)("span", {
+                              className: Qu()("DocsBloxdTextIcon", {
+                                Missing: !Ju
                               }),
                               style: {
-                                width: qU,
-                                height: qU,
-                                opacity: null === (tU = pU.style) || void 0 === tU ? void 0 : tU.opacity
+                                width: Nu,
+                                height: Nu,
+                                opacity: null === (Eu = Ku.style) || void 0 === Eu ? void 0 : Eu.opacity
                               },
-                              title: TU ? void 0 : `No Bloxd icon, item or block is called "${pU.icon}"`,
-                              children: [TU && KU && (0, CU.jsx)("span", {
+                              title: Ju ? void 0 : `No Bloxd icon, item or block is called "${Ku.icon}"`,
+                              children: [Ju && Xu && (0, Su.jsx)("span", {
                                 className: "DocsBloxdTextIconTint",
                                 style: {
-                                  background: KU,
-                                  maskImage: `url("${TU}")`,
-                                  WebkitMaskImage: `url("${TU}")`
+                                  background: Xu,
+                                  maskImage: `url("${Ju}")`,
+                                  WebkitMaskImage: `url("${Ju}")`
                                 }
-                              }), TU ? (0, CU.jsx)("img", {
-                                src: TU,
+                              }), Ju ? (0, Su.jsx)("img", {
+                                src: Ju,
                                 alt: "",
-                                className: EU()({
-                                  Tinted: KU
+                                className: Qu()({
+                                  Tinted: Xu
                                 })
-                              }) : (0, CU.jsx)(QU, {
+                              }) : (0, Su.jsx)(Tu, {
                                 name: "image"
                               })]
                             })
                           }
 
-                          function Cp(UU) {
+                          function BK(uu) {
                             let {
-                              parts: RU,
-                              className: gU
-                            } = UU;
-                            const tU = ft(),
-                              pU = [];
-                            let PU = [];
-                            const TU = UU => {
-                              PU.length > 0 && (pU.push((0, CU.jsx)(cp.e, {
-                                text: PU
-                              }, `run-${UU}`)), PU = [])
+                              parts: Ru,
+                              className: yu
+                            } = uu;
+                            const Eu = HE(),
+                              Ku = [];
+                            let mu = [];
+                            const Ju = uu => {
+                              mu.length > 0 && (Ku.push((0, Su.jsx)(XK.d, {
+                                text: mu
+                              }, `run-${uu}`)), mu = [])
                             };
-                            return RU.forEach(((UU, RU) => {
-                              "icon" !== kR(UU) || SR(UU.icon) ? PU.push(UU) : (TU(RU), pU.push((0, CU.jsx)(jp, {
-                                part: UU,
-                                assets: tU
-                              }, `icon-${RU}`)))
-                            })), TU(RU.length), (0, CU.jsx)("div", {
-                              className: EU()("DocsStyledTextPreview", gU),
-                              children: pU
+                            return Ru.forEach(((uu, Ru) => {
+                              "icon" !== ZR(uu) || zR(uu.icon) ? mu.push(uu) : (Ju(Ru), Ku.push((0, Su.jsx)(rK, {
+                                part: uu,
+                                assets: Eu
+                              }, `icon-${Ru}`)))
+                            })), Ju(Ru.length), (0, Su.jsx)("div", {
+                              className: Qu()("DocsStyledTextPreview", yu),
+                              children: Ku
                             })
                           }
-                          const hp = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
-                          let Qp = null;
+                          const xK = ["0.75em", "1em", "1.25em", "1.5em", "2em", "3em"];
+                          let SK = null;
 
-                          function ep(UU) {
-                            if (Qp ??= document.createElement("canvas").getContext("2d"), !Qp) return "#000000";
-                            Qp.fillStyle = "#000000", Qp.fillStyle = UU;
-                            const RU = Qp.fillStyle;
-                            return RU.startsWith("#") ? RU : "#000000"
+                          function pK(uu) {
+                            if (SK ??= document.createElement("canvas").getContext("2d"), !SK) return "#000000";
+                            SK.fillStyle = "#000000", SK.fillStyle = uu;
+                            const Ru = SK.fillStyle;
+                            return Ru.startsWith("#") ? Ru : "#000000"
                           }
 
-                          function Wp(UU) {
+                          function TK(uu) {
                             let {
-                              value: RU,
-                              label: gU,
-                              onChange: tU
-                            } = UU;
-                            return (0, CU.jsxs)("span", {
+                              value: Ru,
+                              label: yu,
+                              onChange: Eu
+                            } = uu;
+                            return (0, Su.jsxs)("span", {
                               className: "DocsColourInput",
-                              children: [(0, CU.jsx)("input", {
+                              children: [(0, Su.jsx)("input", {
                                 type: "color",
-                                value: ep(RU),
-                                "aria-label": `${gU} picker`,
-                                onChange: UU => {
-                                  tU(UU.target.value)
+                                value: pK(Ru),
+                                "aria-label": `${yu} picker`,
+                                onChange: uu => {
+                                  Eu(uu.target.value)
                                 }
-                              }), (0, CU.jsx)("input", {
+                              }), (0, Su.jsx)("input", {
                                 type: "text",
-                                value: RU,
+                                value: Ru,
                                 placeholder: "#ffb914 or gold",
-                                "aria-label": gU,
+                                "aria-label": yu,
                                 spellCheck: !1,
-                                onChange: UU => {
-                                  tU(UU.target.value)
+                                onChange: uu => {
+                                  Eu(uu.target.value)
                                 }
                               })]
                             })
                           }
 
-                          function fp(UU) {
+                          function WK(uu) {
                             let {
-                              value: RU,
-                              fontAwesomeIcons: gU,
-                              onChange: pU
-                            } = UU;
-                            const PU = ft(),
-                              [TU, qU] = (0, tU.useState)(SR(RU) ? "fontAwesome" : "bloxd"),
-                              [KU, cU] = (0, tU.useState)(""),
-                              GU = KU.trim().toLowerCase(),
-                              jU = "bloxd" === TU ? Kp.e : gU,
-                              uU = GU ? jU.filter((UU => UU.toLowerCase().includes(GU))) : jU;
-                            return (0, CU.jsxs)("div", {
+                              value: Ru,
+                              fontAwesomeIcons: yu,
+                              onChange: Ku
+                            } = uu;
+                            const mu = HE(),
+                              [Ju, Nu] = (0, Eu.useState)(zR(Ru) ? "fontAwesome" : "bloxd"),
+                              [Xu, Vu] = (0, Eu.useState)(""),
+                              ru = Xu.trim().toLowerCase(),
+                              Bu = "bloxd" === Ju ? NK.c : yu,
+                              xu = ru ? Bu.filter((uu => uu.toLowerCase().includes(ru))) : Bu;
+                            return (0, Su.jsxs)("div", {
                               className: "DocsIconPicker",
-                              children: [(0, CU.jsx)("input", {
+                              children: [(0, Su.jsx)("input", {
                                 type: "text",
-                                value: RU,
+                                value: Ru,
                                 "aria-label": "Icon name",
                                 spellCheck: !1,
-                                onChange: UU => {
-                                  pU(UU.target.value)
+                                onChange: uu => {
+                                  Ku(uu.target.value)
                                 }
-                              }), (0, CU.jsx)("p", {
+                              }), (0, Su.jsx)("p", {
                                 className: "DocsTextFieldHint",
                                 children: "Pick one below, or type any item or block name."
-                              }), (0, CU.jsxs)("div", {
+                              }), (0, Su.jsxs)("div", {
                                 className: "DocsIconPickerTabs",
                                 role: "tablist",
                                 children: [
-                                  ["bloxd", "fontAwesome"].map((UU => (0, CU.jsx)("button", {
+                                  ["bloxd", "fontAwesome"].map((uu => (0, Su.jsx)("button", {
                                     type: "button",
                                     role: "tab",
-                                    "aria-selected": TU === UU,
-                                    className: EU()("DocsVariantChip", {
-                                      Active: TU === UU
+                                    "aria-selected": Ju === uu,
+                                    className: Qu()("DocsVariantChip", {
+                                      Active: Ju === uu
                                     }),
                                     onClick: () => {
-                                      qU(UU)
+                                      Nu(uu)
                                     },
-                                    children: "bloxd" === UU ? `Bloxd icons (${Kp.e.length})` : `Font Awesome (${gU.length})`
-                                  }, UU))), (0, CU.jsx)("input", {
+                                    children: "bloxd" === uu ? `Bloxd icons (${NK.c.length})` : `Font Awesome (${yu.length})`
+                                  }, uu))), (0, Su.jsx)("input", {
                                     type: "search",
-                                    value: KU,
+                                    value: Xu,
                                     placeholder: "Filter\u2026",
                                     "aria-label": "Filter icons",
-                                    onChange: UU => {
-                                      cU(UU.target.value)
+                                    onChange: uu => {
+                                      Vu(uu.target.value)
                                     }
                                   })
                                 ]
-                              }), (0, CU.jsxs)("div", {
+                              }), (0, Su.jsxs)("div", {
                                 className: "DocsIconPickerGrid",
                                 role: "tabpanel",
-                                children: [uU.map((UU => {
-                                  const gU = "bloxd" === TU ? Gp(PU, UU) : null;
-                                  return (0, CU.jsx)("button", {
+                                children: [xu.map((uu => {
+                                  const yu = "bloxd" === Ju ? VK(mu, uu) : null;
+                                  return (0, Su.jsx)("button", {
                                     type: "button",
-                                    title: UU,
-                                    "aria-label": UU,
-                                    "aria-pressed": UU === RU,
-                                    className: EU()("DocsIconPickerOption", {
-                                      Active: UU === RU
+                                    title: uu,
+                                    "aria-label": uu,
+                                    "aria-pressed": uu === Ru,
+                                    className: Qu()("DocsIconPickerOption", {
+                                      Active: uu === Ru
                                     }),
                                     onClick: () => {
-                                      pU(UU)
+                                      Ku(uu)
                                     },
-                                    children: "fontAwesome" === TU ? (0, CU.jsx)(xg.c, {
-                                      name: UU
-                                    }) : gU ? (0, CU.jsx)("img", {
-                                      src: gU,
+                                    children: "fontAwesome" === Ju ? (0, Su.jsx)(dy.c, {
+                                      name: uu
+                                    }) : yu ? (0, Su.jsx)("img", {
+                                      src: yu,
                                       alt: ""
-                                    }) : (0, CU.jsx)(QU, {
+                                    }) : (0, Su.jsx)(Tu, {
                                       name: "image"
                                     })
-                                  }, UU)
-                                })), 0 === uU.length && (0, CU.jsxs)("p", {
+                                  }, uu)
+                                })), 0 === xu.length && (0, Su.jsxs)("p", {
                                   className: "DocsTextFieldHint",
-                                  children: ["No icons match \u201c", KU, "\u201d."]
+                                  children: ["No icons match \u201c", Xu, "\u201d."]
                                 })]
                               })]
                             })
                           }
 
-                          function xp(UU) {
+                          function jK(uu) {
                             let {
-                              property: RU,
-                              value: gU,
-                              fontAwesomeIcons: tU,
-                              onChange: pU
-                            } = UU;
+                              property: Ru,
+                              value: yu,
+                              fontAwesomeIcons: Eu,
+                              onChange: Ku
+                            } = uu;
                             const {
-                              field: EU,
-                              label: PU
-                            } = RU, TU = UU => "" !== UU || RU.isRequired ? UU : void 0;
-                            switch (EU.kind) {
+                              field: Qu,
+                              label: mu
+                            } = Ru, Ju = uu => "" !== uu || Ru.isRequired ? uu : void 0;
+                            switch (Qu.kind) {
                               case "text":
-                                return EU.multiline ? (0, CU.jsx)("textarea", {
-                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
+                                return Qu.multiline ? (0, Su.jsx)("textarea", {
+                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
                                   rows: 2,
-                                  "aria-label": PU,
-                                  onChange: UU => {
-                                    pU(UU.target.value)
+                                  "aria-label": mu,
+                                  onChange: uu => {
+                                    Ku(uu.target.value)
                                   }
-                                }) : (0, CU.jsx)("input", {
+                                }) : (0, Su.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
-                                  "aria-label": PU,
-                                  onChange: UU => {
-                                    pU(TU(UU.target.value))
+                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
+                                  "aria-label": mu,
+                                  onChange: uu => {
+                                    Ku(Ju(uu.target.value))
                                   }
                                 });
                               case "size":
-                                return (0, CU.jsx)("input", {
+                                return (0, Su.jsx)("input", {
                                   type: "text",
-                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
-                                  placeholder: RU.defaultText,
+                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
+                                  placeholder: Ru.defaultText,
                                   list: "DocsTextSizeSuggestions",
-                                  "aria-label": PU,
+                                  "aria-label": mu,
                                   spellCheck: !1,
-                                  onChange: UU => {
-                                    pU(TU(UU.target.value.trim()))
+                                  onChange: uu => {
+                                    Ku(Ju(uu.target.value.trim()))
                                   }
                                 });
                               case "colour":
-                                return (0, CU.jsx)(Wp, {
-                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
-                                  label: PU,
-                                  onChange: UU => {
-                                    pU(TU(UU))
+                                return (0, Su.jsx)(TK, {
+                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
+                                  label: mu,
+                                  onChange: uu => {
+                                    Ku(Ju(uu))
                                   }
                                 });
                               case "colours": {
-                                const UU = Array.isArray(gU) ? gU : [],
-                                  RU = UU => {
-                                    pU(UU.length > 0 ? UU : void 0)
+                                const uu = Array.isArray(yu) ? yu : [],
+                                  Ru = uu => {
+                                    Ku(uu.length > 0 ? uu : void 0)
                                   };
-                                return (0, CU.jsxs)("div", {
+                                return (0, Su.jsxs)("div", {
                                   className: "DocsColourList",
-                                  children: [UU.map(((gU, tU) => (0, CU.jsxs)("span", {
+                                  children: [uu.map(((yu, Eu) => (0, Su.jsxs)("span", {
                                     className: "DocsColourListRow",
-                                    children: [(0, CU.jsx)(Wp, {
-                                      value: gU,
-                                      label: `${PU} ${tU+1}`,
-                                      onChange: gU => {
-                                        RU(UU.map(((UU, RU) => RU === tU ? gU : UU)))
+                                    children: [(0, Su.jsx)(TK, {
+                                      value: yu,
+                                      label: `${mu} ${Eu+1}`,
+                                      onChange: yu => {
+                                        Ru(uu.map(((uu, Ru) => Ru === Eu ? yu : uu)))
                                       }
-                                    }), (0, CU.jsx)("button", {
+                                    }), (0, Su.jsx)("button", {
                                       type: "button",
                                       className: "DocsTextIconButton",
-                                      "aria-label": `Remove colour ${tU+1}`,
+                                      "aria-label": `Remove colour ${Eu+1}`,
                                       onClick: () => {
-                                        RU(UU.filter(((UU, RU) => RU !== tU)))
+                                        Ru(uu.filter(((uu, Ru) => Ru !== Eu)))
                                       },
-                                      children: (0, CU.jsx)(QU, {
+                                      children: (0, Su.jsx)(Tu, {
                                         name: "cross"
                                       })
                                     })]
-                                  }, tU))), (0, CU.jsxs)("button", {
+                                  }, Eu))), (0, Su.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextAddButton",
                                     onClick: () => {
-                                      var gU;
-                                      RU([...UU, null !== (gU = UU.at(-1)) && void 0 !== gU ? gU : "#ffffff"])
+                                      var yu;
+                                      Ru([...uu, null !== (yu = uu.at(-1)) && void 0 !== yu ? yu : "#ffffff"])
                                     },
-                                    children: [(0, CU.jsx)(QU, {
+                                    children: [(0, Su.jsx)(Tu, {
                                       name: "plus"
-                                    }), 0 === UU.length ? "Add a colour" : "Add a colour to the gradient"]
+                                    }), 0 === uu.length ? "Add a colour" : "Add a colour to the gradient"]
                                   })]
                                 })
                               }
                               case "fraction": {
-                                var qU;
-                                const UU = "number" === typeof gU ? gU : Number(null !== (qU = RU.defaultText) && void 0 !== qU ? qU : 0);
-                                return (0, CU.jsxs)("span", {
+                                var Nu;
+                                const uu = "number" === typeof yu ? yu : Number(null !== (Nu = Ru.defaultText) && void 0 !== Nu ? Nu : 0);
+                                return (0, Su.jsxs)("span", {
                                   className: "DocsFractionInput",
-                                  children: [(0, CU.jsx)("input", {
+                                  children: [(0, Su.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: UU,
-                                    "aria-label": PU,
-                                    onChange: UU => {
-                                      pU(Number(UU.target.value))
+                                    value: uu,
+                                    "aria-label": mu,
+                                    onChange: uu => {
+                                      Ku(Number(uu.target.value))
                                     }
-                                  }), (0, CU.jsx)("output", {
-                                    children: UU.toFixed(2)
+                                  }), (0, Su.jsx)("output", {
+                                    children: uu.toFixed(2)
                                   })]
                                 })
                               }
                               case "choice":
-                                return (0, CU.jsxs)("select", {
-                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
-                                  "aria-label": PU,
-                                  onChange: UU => {
-                                    pU(TU(UU.target.value))
+                                return (0, Su.jsxs)("select", {
+                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
+                                  "aria-label": mu,
+                                  onChange: uu => {
+                                    Ku(Ju(uu.target.value))
                                   },
-                                  children: [!RU.isRequired && (0, CU.jsxs)("option", {
+                                  children: [!Ru.isRequired && (0, Su.jsxs)("option", {
                                     value: "",
-                                    children: ["Default (", RU.defaultText, ")"]
-                                  }), EU.options.map((UU => (0, CU.jsx)("option", {
-                                    value: UU,
-                                    children: UU
-                                  }, UU)))]
+                                    children: ["Default (", Ru.defaultText, ")"]
+                                  }), Qu.options.map((uu => (0, Su.jsx)("option", {
+                                    value: uu,
+                                    children: uu
+                                  }, uu)))]
                                 });
                               case "icon":
-                                return (0, CU.jsx)(fp, {
-                                  value: String(null !== gU && void 0 !== gU ? gU : ""),
-                                  fontAwesomeIcons: tU,
-                                  onChange: pU
+                                return (0, Su.jsx)(WK, {
+                                  value: String(null !== yu && void 0 !== yu ? yu : ""),
+                                  fontAwesomeIcons: Eu,
+                                  onChange: Ku
                                 })
                             }
                           }
 
-                          function mp(UU) {
-                            let RU;
+                          function HK(uu) {
+                            let Ru;
                             try {
-                              RU = JSON.parse(UU)
-                            } catch (gU) {
+                              Ru = JSON.parse(uu)
+                            } catch (yu) {
                               return {
                                 part: null,
-                                error: `Not valid JSON yet: ${gU.message}`
+                                error: `Not valid JSON yet: ${yu.message}`
                               }
                             }
-                            return gg(RU) ? {
-                              part: RU,
+                            return yy(Ru) ? {
+                              part: Ru,
                               error: null
                             } : {
                               part: null,
@@ -3628,150 +3628,150 @@ export const modules = {
                             }
                           }
 
-                          function Ip(UU) {
+                          function dK(uu) {
                             let {
-                              parts: RU,
-                              index: gU,
-                              fontAwesomeIcons: pU,
-                              onChange: EU,
-                              Kw: PU,
-                              onClose: TU
-                            } = UU;
-                            const qU = (0, tU.useContext)(CR),
-                              cU = (0, tU.useRef)(null),
-                              GU = RU[gU],
-                              jU = kR(GU),
-                              [uU, hU] = (0, tU.useState)((() => JSON.stringify(GU, null, 2))),
-                              eU = (0, tU.useMemo)((() => "other" === jU ? mp(uU).error : null), [jU, uU]);
-                            (0, tU.useEffect)((() => {
-                              var UU;
-                              null === (UU = cU.current) || void 0 === UU || UU.focus()
+                              parts: Ru,
+                              index: yu,
+                              fontAwesomeIcons: Ku,
+                              onChange: Qu,
+                              JA: mu,
+                              onClose: Ju
+                            } = uu;
+                            const Nu = (0, Eu.useContext)(SR),
+                              Vu = (0, Eu.useRef)(null),
+                              ru = Ru[yu],
+                              Bu = ZR(ru),
+                              [xu, pu] = (0, Eu.useState)((() => JSON.stringify(ru, null, 2))),
+                              Wu = (0, Eu.useMemo)((() => "other" === Bu ? HK(xu).error : null), [Bu, xu]);
+                            (0, Eu.useEffect)((() => {
+                              var uu;
+                              null === (uu = Vu.current) || void 0 === uu || uu.focus()
                             }), []);
-                            const WU = (0, CU.jsx)("div", {
+                            const ju = (0, Su.jsx)("div", {
                               className: "DocsTextDialogOverlay",
-                              onMouseDown: UU => {
-                                UU.target === UU.currentTarget && TU()
+                              onMouseDown: uu => {
+                                uu.target === uu.currentTarget && Ju()
                               },
-                              children: (0, CU.jsxs)("div", {
-                                ref: cU,
+                              children: (0, Su.jsxs)("div", {
+                                ref: Vu,
                                 className: "DocsTextDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
-                                "aria-label": `Edit part ${gU+1}: ${sR[jU]}`,
+                                "aria-label": `Edit part ${yu+1}: ${FR[Bu]}`,
                                 tabIndex: -1,
-                                onKeyDown: UU => {
-                                  "Escape" === UU.key ? (UU.stopPropagation(), TU()) : "Tab" === UU.key && cU.current && function(UU, RU) {
-                                    const gU = Array.from(UU.querySelectorAll(ZR)),
-                                      tU = gU[0],
-                                      pU = gU.at(-1);
-                                    if (!tU || !pU) return;
-                                    const EU = document.activeElement;
-                                    !RU.shiftKey || EU !== tU && EU !== UU ? RU.shiftKey || EU !== pU || (RU.preventDefault(), tU.focus()) : (RU.preventDefault(), pU.focus())
-                                  }(cU.current, UU)
+                                onKeyDown: uu => {
+                                  "Escape" === uu.key ? (uu.stopPropagation(), Ju()) : "Tab" === uu.key && Vu.current && function(uu, Ru) {
+                                    const yu = Array.from(uu.querySelectorAll(IR)),
+                                      Eu = yu[0],
+                                      Ku = yu.at(-1);
+                                    if (!Eu || !Ku) return;
+                                    const Qu = document.activeElement;
+                                    !Ru.shiftKey || Qu !== Eu && Qu !== uu ? Ru.shiftKey || Qu !== Ku || (Ru.preventDefault(), Eu.focus()) : (Ru.preventDefault(), Ku.focus())
+                                  }(Vu.current, uu)
                                 },
-                                children: [(0, CU.jsxs)("header", {
+                                children: [(0, Su.jsxs)("header", {
                                   className: "DocsTextDialogHeader",
-                                  children: [(0, CU.jsxs)("div", {
-                                    children: [(0, CU.jsxs)("div", {
+                                  children: [(0, Su.jsxs)("div", {
+                                    children: [(0, Su.jsxs)("div", {
                                       className: "DocsTextDialogKind",
-                                      children: ["Part ", gU + 1]
-                                    }), (0, CU.jsx)("div", {
+                                      children: ["Part ", yu + 1]
+                                    }), (0, Su.jsx)("div", {
                                       className: "DocsTextDialogTitle",
-                                      children: sR[jU]
+                                      children: FR[Bu]
                                     })]
-                                  }), (0, CU.jsx)("button", {
+                                  }), (0, Su.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextIconButton",
                                     "aria-label": "Close",
-                                    onClick: TU,
-                                    children: (0, CU.jsx)(QU, {
+                                    onClick: Ju,
+                                    children: (0, Su.jsx)(Tu, {
                                       name: "cross"
                                     })
                                   })]
-                                }), (0, CU.jsx)(Cp, {
-                                  parts: RU,
+                                }), (0, Su.jsx)(BK, {
+                                  parts: Ru,
                                   className: "DocsTextDialogPreview"
-                                }), (0, CU.jsx)("div", {
+                                }), (0, Su.jsx)("div", {
                                   className: "DocsTextDialogFields",
-                                  children: "other" === jU ? (0, CU.jsxs)("label", {
+                                  children: "other" === Bu ? (0, Su.jsxs)("label", {
                                     className: "DocsTextField",
-                                    children: [(0, CU.jsx)("span", {
+                                    children: [(0, Su.jsx)("span", {
                                       className: "DocsTextFieldLabel",
                                       children: "JSON"
-                                    }), (0, CU.jsx)("textarea", {
+                                    }), (0, Su.jsx)("textarea", {
                                       className: "DocsTextJson",
-                                      value: uU,
+                                      value: xu,
                                       rows: 6,
                                       spellCheck: !1,
-                                      onChange: UU => {
-                                        hU(UU.target.value);
-                                        const RU = mp(UU.target.value);
-                                        null !== RU.part && EU(RU.part)
+                                      onChange: uu => {
+                                        pu(uu.target.value);
+                                        const Ru = HK(uu.target.value);
+                                        null !== Ru.part && Qu(Ru.part)
                                       }
-                                    }), eU && (0, CU.jsx)("span", {
+                                    }), Wu && (0, Su.jsx)("span", {
                                       className: "DocsTextFieldError",
-                                      children: eU
+                                      children: Wu
                                     })]
-                                  }) : iR[jU].map((UU => {
-                                    const RU = zR(GU, UU.path),
-                                      gU = UU.isRequired ? JSON.stringify(DR(GU, UU.path)) === JSON.stringify(GU) : void 0 === RU;
-                                    return (0, CU.jsxs)("div", {
+                                  }) : PR[Bu].map((uu => {
+                                    const Ru = YR(ru, uu.path),
+                                      yu = uu.isRequired ? JSON.stringify(qR(ru, uu.path)) === JSON.stringify(ru) : void 0 === Ru;
+                                    return (0, Su.jsxs)("div", {
                                       className: "DocsTextField",
-                                      children: [(0, CU.jsxs)("div", {
+                                      children: [(0, Su.jsxs)("div", {
                                         className: "DocsTextFieldLabel",
-                                        children: [(0, CU.jsx)("span", {
-                                          children: UU.label
-                                        }), (0, CU.jsxs)("button", {
+                                        children: [(0, Su.jsx)("span", {
+                                          children: uu.label
+                                        }), (0, Su.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextResetButton",
-                                          disabled: gU,
-                                          "aria-label": `Reset ${UU.label.toLowerCase()} to default`,
+                                          disabled: yu,
+                                          "aria-label": `Reset ${uu.label.toLowerCase()} to default`,
                                           onClick: () => {
-                                            EU(DR(GU, UU.path))
+                                            Qu(qR(ru, uu.path))
                                           },
-                                          children: [(0, CU.jsx)(QU, {
+                                          children: [(0, Su.jsx)(Tu, {
                                             name: "replay"
                                           }), "Reset"]
                                         })]
-                                      }), (0, CU.jsx)(xp, {
-                                        property: UU,
-                                        value: RU,
-                                        fontAwesomeIcons: pU,
-                                        onChange: RU => {
-                                          EU(MR(GU, UU.path, RU))
+                                      }), (0, Su.jsx)(jK, {
+                                        property: uu,
+                                        value: Ru,
+                                        fontAwesomeIcons: Ku,
+                                        onChange: Ru => {
+                                          Qu(oR(ru, uu.path, Ru))
                                         }
-                                      }), !UU.isRequired && (0, CU.jsxs)("span", {
+                                      }), !uu.isRequired && (0, Su.jsxs)("span", {
                                         className: "DocsTextFieldHint",
-                                        children: ["Default: ", UU.defaultText]
+                                        children: ["Default: ", uu.defaultText]
                                       })]
-                                    }, UU.path.join("."))
+                                    }, uu.path.join("."))
                                   }))
-                                }), (0, CU.jsxs)("footer", {
+                                }), (0, Su.jsxs)("footer", {
                                   className: "DocsTextDialogFooter",
-                                  children: [(0, CU.jsxs)("button", {
+                                  children: [(0, Su.jsxs)("button", {
                                     type: "button",
                                     className: "DocsTextRemoveButton",
-                                    onClick: PU,
-                                    children: [(0, CU.jsx)(QU, {
+                                    onClick: mu,
+                                    children: [(0, Su.jsx)(Tu, {
                                       name: "trash"
                                     }), "Remove part"]
-                                  }), (0, CU.jsx)("button", {
+                                  }), (0, Su.jsx)("button", {
                                     type: "button",
                                     className: "DocsTextDoneButton",
-                                    onClick: TU,
+                                    onClick: Ju,
                                     children: "Done"
                                   })]
-                                }), (0, CU.jsx)("datalist", {
+                                }), (0, Su.jsx)("datalist", {
                                   id: "DocsTextSizeSuggestions",
-                                  children: hp.map((UU => (0, CU.jsx)("option", {
-                                    value: UU
-                                  }, UU)))
+                                  children: xK.map((uu => (0, Su.jsx)("option", {
+                                    value: uu
+                                  }, uu)))
                                 })]
                               })
                             });
-                            return qU ? (0, KU.createPortal)(WU, qU) : WU
+                            return Nu ? (0, Xu.createPortal)(ju, Nu) : ju
                           }
-                          const Jp = [{
+                          const bK = [{
                               label: "Icon and text",
                               parts: [{
                                 icon: "Pixelated Heart"
@@ -3815,265 +3815,265 @@ export const modules = {
                                 action: "jump"
                               }]
                             }],
-                            wp = Object.keys(yR);
+                            CK = Object.keys(wR);
 
-                          function np(UU) {
+                          function kK(uu) {
                             let {
-                              fontAwesomeIcons: RU
-                            } = UU;
-                            const [gU, pU] = (0, tU.useState)(Jp[0].parts), [PU, TU] = (0, tU.useState)((() => OR(Jp[0].parts))), [qU, KU] = (0, tU.useState)(null), [cU, GU] = (0, tU.useState)(!1), [jU, uU] = (0, tU.useState)(null), [hU, eU] = (0, tU.useState)(!1), [WU, fU] = (0, tU.useState)(null), xU = (0, tU.useRef)(null), mU = OR(gU);
-                            (0, tU.useLayoutEffect)((() => {
-                              var UU;
-                              if (!WU) return;
-                              const RU = UU => {
-                                  var RU;
-                                  return null === (RU = xU.current) || void 0 === RU ? void 0 : RU.querySelector(`[data-focus-key="${UU}"]`)
+                              fontAwesomeIcons: Ru
+                            } = uu;
+                            const [yu, Ku] = (0, Eu.useState)(bK[0].parts), [mu, Ju] = (0, Eu.useState)((() => fR(bK[0].parts))), [Nu, Xu] = (0, Eu.useState)(null), [Vu, ru] = (0, Eu.useState)(!1), [Bu, xu] = (0, Eu.useState)(null), [pu, Wu] = (0, Eu.useState)(!1), [ju, Hu] = (0, Eu.useState)(null), du = (0, Eu.useRef)(null), bu = fR(yu);
+                            (0, Eu.useLayoutEffect)((() => {
+                              var uu;
+                              if (!ju) return;
+                              const Ru = uu => {
+                                  var Ru;
+                                  return null === (Ru = du.current) || void 0 === Ru ? void 0 : Ru.querySelector(`[data-focus-key="${uu}"]`)
                                 },
-                                gU = RU(WU.key);
-                              null === (UU = gU && !gU.disabled ? gU : RU(WU.fallback)) || void 0 === UU || UU.focus(), fU(null)
-                            }), [WU]);
-                            const IU = UU => {
-                                pU(UU), TU(OR(UU)), KU(null)
+                                yu = Ru(ju.key);
+                              null === (uu = yu && !yu.disabled ? yu : Ru(ju.fallback)) || void 0 === uu || uu.focus(), Hu(null)
+                            }), [ju]);
+                            const Cu = uu => {
+                                Ku(uu), Ju(fR(uu)), Xu(null)
                               },
-                              wU = UU => {
-                                IU(gU.filter(((RU, gU) => gU !== UU))), fU({
-                                  key: `edit-${Math.min(UU,gU.length-2)}`,
+                              eu = uu => {
+                                Cu(yu.filter(((Ru, yu) => yu !== uu))), Hu({
+                                  key: `edit-${Math.min(uu,yu.length-2)}`,
                                   fallback: "add"
                                 })
                               },
-                              nU = (UU, RU) => {
-                                const tU = [...gU],
-                                  [pU] = tU.splice(UU, 1);
-                                tU.splice(UU + RU, 0, pU), IU(tU);
-                                fU({
-                                  key: `${RU<0?"up":"down"}-${UU+RU}`,
-                                  fallback: `edit-${UU+RU}`
+                              Au = (uu, Ru) => {
+                                const Eu = [...yu],
+                                  [Ku] = Eu.splice(uu, 1);
+                                Eu.splice(uu + Ru, 0, Ku), Cu(Eu);
+                                Hu({
+                                  key: `${Ru<0?"up":"down"}-${uu+Ru}`,
+                                  fallback: `edit-${uu+Ru}`
                                 })
                               };
-                            return (0, CU.jsxs)("section", {
-                              ref: xU,
+                            return (0, Su.jsxs)("section", {
+                              ref: du,
                               className: "DocsPlayground DocsTextEditor",
                               "aria-label": "Styled text editor",
-                              children: [(0, CU.jsx)("header", {
+                              children: [(0, Su.jsx)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: (0, CU.jsxs)("div", {
-                                  children: [(0, CU.jsx)("div", {
+                                children: (0, Su.jsxs)("div", {
+                                  children: [(0, Su.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Styled text editor"
-                                  }), (0, CU.jsx)("div", {
+                                  }), (0, Su.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Add parts, click one to style it, and copy the code. The preview draws it as the game does."
                                   })]
                                 })
-                              }), (0, CU.jsx)("div", {
+                              }), (0, Su.jsx)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: Jp.map((UU => (0, CU.jsx)("button", {
+                                children: bK.map((uu => (0, Su.jsx)("button", {
                                   type: "button",
-                                  className: EU()("DocsVariantChip", {
-                                    Active: mU === OR(UU.parts)
+                                  className: Qu()("DocsVariantChip", {
+                                    Active: bu === fR(uu.parts)
                                   }),
                                   onClick: () => {
-                                    IU(UU.parts)
+                                    Cu(uu.parts)
                                   },
-                                  children: UU.label
-                                }, UU.label)))
-                              }), (0, CU.jsx)(Cp, {
-                                parts: gU,
+                                  children: uu.label
+                                }, uu.label)))
+                              }), (0, Su.jsx)(BK, {
+                                parts: yu,
                                 className: "DocsTextEditorPreview"
-                              }), (0, CU.jsxs)("div", {
+                              }), (0, Su.jsxs)("div", {
                                 className: "DocsTextEditorBody",
-                                children: [(0, CU.jsxs)("div", {
+                                children: [(0, Su.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, CU.jsx)("div", {
+                                  children: [(0, Su.jsx)("div", {
                                     className: "DocsTextEditorPanelTitle",
                                     children: "Parts"
-                                  }), (0, CU.jsxs)("ol", {
+                                  }), (0, Su.jsxs)("ol", {
                                     className: "DocsTextParts",
-                                    children: [gU.map(((UU, RU) => {
-                                      const tU = kR(UU);
-                                      return (0, CU.jsxs)("li", {
+                                    children: [yu.map(((uu, Ru) => {
+                                      const Eu = ZR(uu);
+                                      return (0, Su.jsxs)("li", {
                                         className: "DocsTextPart",
-                                        children: [(0, CU.jsxs)("button", {
+                                        children: [(0, Su.jsxs)("button", {
                                           type: "button",
                                           className: "DocsTextPartMain",
-                                          "data-focus-key": `edit-${RU}`,
-                                          "aria-label": `Edit part ${RU+1}, ${sR[tU]}`,
+                                          "data-focus-key": `edit-${Ru}`,
+                                          "aria-label": `Edit part ${Ru+1}, ${FR[Eu]}`,
                                           onClick: () => {
-                                            uU(RU)
+                                            xu(Ru)
                                           },
-                                          children: [(0, CU.jsx)("span", {
+                                          children: [(0, Su.jsx)("span", {
                                             className: "DocsTextPartKind",
-                                            children: sR[tU]
-                                          }), (0, CU.jsx)(Cp, {
-                                            parts: [UU],
+                                            children: FR[Eu]
+                                          }), (0, Su.jsx)(BK, {
+                                            parts: [uu],
                                             className: "DocsTextPartPreview"
-                                          }), "text" !== tU && (0, CU.jsx)("code", {
+                                          }), "text" !== Eu && (0, Su.jsx)("code", {
                                             className: "DocsTextPartName",
-                                            children: LR(UU)
+                                            children: OR(uu)
                                           })]
-                                        }), (0, CU.jsxs)("span", {
+                                        }), (0, Su.jsxs)("span", {
                                           className: "DocsTextPartActions",
-                                          children: [(0, CU.jsx)("button", {
+                                          children: [(0, Su.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${RU+1} up`,
-                                            "data-focus-key": `up-${RU}`,
-                                            disabled: 0 === RU,
+                                            "aria-label": `Move part ${Ru+1} up`,
+                                            "data-focus-key": `up-${Ru}`,
+                                            disabled: 0 === Ru,
                                             onClick: () => {
-                                              nU(RU, -1)
+                                              Au(Ru, -1)
                                             },
-                                            children: (0, CU.jsx)(QU, {
+                                            children: (0, Su.jsx)(Tu, {
                                               name: "chevron-up"
                                             })
-                                          }), (0, CU.jsx)("button", {
+                                          }), (0, Su.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Move part ${RU+1} down`,
-                                            "data-focus-key": `down-${RU}`,
-                                            disabled: RU === gU.length - 1,
+                                            "aria-label": `Move part ${Ru+1} down`,
+                                            "data-focus-key": `down-${Ru}`,
+                                            disabled: Ru === yu.length - 1,
                                             onClick: () => {
-                                              nU(RU, 1)
+                                              Au(Ru, 1)
                                             },
-                                            children: (0, CU.jsx)(QU, {
+                                            children: (0, Su.jsx)(Tu, {
                                               name: "chevron-down"
                                             })
-                                          }), (0, CU.jsx)("button", {
+                                          }), (0, Su.jsx)("button", {
                                             type: "button",
                                             className: "DocsTextIconButton",
-                                            "aria-label": `Remove part ${RU+1}`,
+                                            "aria-label": `Remove part ${Ru+1}`,
                                             onClick: () => {
-                                              wU(RU)
+                                              eu(Ru)
                                             },
-                                            children: (0, CU.jsx)(QU, {
+                                            children: (0, Su.jsx)(Tu, {
                                               name: "cross"
                                             })
                                           })]
                                         })]
-                                      }, RU)
-                                    })), 0 === gU.length && (0, CU.jsx)("li", {
+                                      }, Ru)
+                                    })), 0 === yu.length && (0, Su.jsx)("li", {
                                       className: "DocsTextPartsEmpty",
                                       children: "No parts yet. Add one below."
                                     })]
-                                  }), (0, CU.jsxs)("div", {
+                                  }), (0, Su.jsxs)("div", {
                                     className: "DocsTextAddPart",
-                                    onKeyDown: UU => {
-                                      "Escape" === UU.key && hU && (UU.stopPropagation(), eU(!1), fU({
+                                    onKeyDown: uu => {
+                                      "Escape" === uu.key && pu && (uu.stopPropagation(), Wu(!1), Hu({
                                         key: "add",
                                         fallback: "add"
                                       }))
                                     },
-                                    children: [(0, CU.jsxs)("button", {
+                                    children: [(0, Su.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextAddPartButton",
                                       "data-focus-key": "add",
-                                      "aria-expanded": hU,
+                                      "aria-expanded": pu,
                                       "aria-controls": "DocsTextAddPartMenu",
                                       onClick: () => {
-                                        eU(!hU)
+                                        Wu(!pu)
                                       },
-                                      children: [(0, CU.jsx)(QU, {
+                                      children: [(0, Su.jsx)(Tu, {
                                         name: "plus"
-                                      }), "Add a part", (0, CU.jsx)(QU, {
-                                        name: hU ? "chevron-up" : "chevron-down"
+                                      }), "Add a part", (0, Su.jsx)(Tu, {
+                                        name: pu ? "chevron-up" : "chevron-down"
                                       })]
-                                    }), hU && (0, CU.jsx)("ul", {
+                                    }), pu && (0, Su.jsx)("ul", {
                                       id: "DocsTextAddPartMenu",
                                       className: "DocsTextAddPartMenu",
-                                      children: wp.map((UU => (0, CU.jsx)("li", {
-                                        children: (0, CU.jsx)("button", {
+                                      children: CK.map((uu => (0, Su.jsx)("li", {
+                                        children: (0, Su.jsx)("button", {
                                           type: "button",
                                           onClick: () => {
-                                            (UU => {
-                                              IU([...gU, yR[UU]]), eU(!1), uU(gU.length)
-                                            })(UU)
+                                            (uu => {
+                                              Cu([...yu, wR[uu]]), Wu(!1), xu(yu.length)
+                                            })(uu)
                                           },
-                                          children: sR[UU]
+                                          children: FR[uu]
                                         })
-                                      }, UU)))
+                                      }, uu)))
                                     })]
                                   })]
-                                }), (0, CU.jsxs)("div", {
+                                }), (0, Su.jsxs)("div", {
                                   className: "DocsTextEditorPanel",
-                                  children: [(0, CU.jsxs)("div", {
+                                  children: [(0, Su.jsxs)("div", {
                                     className: "DocsTextEditorPanelTitle",
-                                    children: ["Code", (0, CU.jsxs)("button", {
+                                    children: ["Code", (0, Su.jsxs)("button", {
                                       type: "button",
                                       className: "DocsTextEditCodeButton",
-                                      "aria-pressed": cU,
+                                      "aria-pressed": Vu,
                                       onClick: () => {
-                                        GU(!cU)
+                                        ru(!Vu)
                                       },
-                                      children: [(0, CU.jsx)(QU, {
-                                        name: cU ? "check" : "pencil"
-                                      }), cU ? "Done" : "Edit"]
+                                      children: [(0, Su.jsx)(Tu, {
+                                        name: Vu ? "check" : "pencil"
+                                      }), Vu ? "Done" : "Edit"]
                                     })]
-                                  }), cU ? (0, CU.jsxs)(CU.Fragment, {
-                                    children: [(0, CU.jsx)("textarea", {
+                                  }), Vu ? (0, Su.jsxs)(Su.Fragment, {
+                                    children: [(0, Su.jsx)("textarea", {
                                       className: "DocsPlaygroundInput",
-                                      value: PU,
+                                      value: mu,
                                       spellCheck: !1,
                                       "aria-label": "Styled text as code",
-                                      onChange: UU => {
-                                        TU(UU.target.value);
-                                        const RU = tg(UU.target.value);
-                                        KU(RU.error), RU.parts && pU(RU.parts)
+                                      onChange: uu => {
+                                        Ju(uu.target.value);
+                                        const Ru = Ey(uu.target.value);
+                                        Xu(Ru.error), Ru.parts && Ku(Ru.parts)
                                       }
-                                    }), qU && (0, CU.jsx)("p", {
+                                    }), Nu && (0, Su.jsx)("p", {
                                       className: "DocsPlaygroundError",
-                                      children: qU
+                                      children: Nu
                                     })]
-                                  }) : (0, CU.jsx)(JU, {
+                                  }) : (0, Su.jsx)(ku, {
                                     lang: "js",
-                                    code: `api.sendMessage(playerId, ${mU})`
+                                    code: `api.sendMessage(playerId, ${bu})`
                                   })]
                                 })]
-                              }), null !== jU && jU < gU.length && (0, CU.jsx)(Ip, {
-                                parts: gU,
-                                index: jU,
-                                fontAwesomeIcons: RU,
-                                onChange: UU => {
-                                  ((UU, RU) => {
-                                    IU(gU.map(((gU, tU) => tU === UU ? RU : gU)))
-                                  })(jU, UU)
+                              }), null !== Bu && Bu < yu.length && (0, Su.jsx)(dK, {
+                                parts: yu,
+                                index: Bu,
+                                fontAwesomeIcons: Ru,
+                                onChange: uu => {
+                                  ((uu, Ru) => {
+                                    Cu(yu.map(((yu, Eu) => Eu === uu ? Ru : yu)))
+                                  })(Bu, uu)
                                 },
-                                Kw: () => {
-                                  wU(jU), uU(null)
+                                JA: () => {
+                                  eu(Bu), xu(null)
                                 },
                                 onClose: () => {
-                                  uU(null), fU({
-                                    key: `edit-${jU}`,
+                                  xu(null), Hu({
+                                    key: `edit-${Bu}`,
                                     fallback: "add"
                                   })
                                 }
                               })]
                             })
                           }
-                          var bp = gU(4503),
-                            op = gU(4487),
-                            Zp = gU(4501),
-                            ap = gU(4508);
-                          const Yp = 40,
-                            Bp = 800,
-                            Vp = 150,
-                            rp = 8e3,
-                            Xp = 2e3;
+                          var eK = yu(4617),
+                            AK = yu(4598),
+                            DK = yu(4611),
+                            MK = yu(4626);
+                          const IK = 40,
+                            GK = 800,
+                            UK = 150,
+                            nK = 8e3,
+                            sK = 2e3;
 
-                          function vp(UU, RU) {
-                            return 12 * Math.log2(RU / UU)
+                          function tK(uu, Ru) {
+                            return 12 * Math.log2(Ru / uu)
                           }
 
-                          function dp(UU, RU) {
-                            return Math.round(UU * 2 ** (RU / 12) * 10) / 10
+                          function lK(uu, Ru) {
+                            return Math.round(uu * 2 ** (Ru / 12) * 10) / 10
                           }
 
-                          function Hp(UU) {
-                            return `${UU} ms`
+                          function gK(uu) {
+                            return `${uu} ms`
                           }
 
-                          function Sp(UU) {
-                            return `${UU} st`
+                          function cK(uu) {
+                            return `${uu} st`
                           }
-                          const sp = [{
+                          const LK = [{
                             key: "variationSemitones",
                             label: "Word variation",
                             max: 6
@@ -4091,769 +4091,769 @@ export const modules = {
                             max: 12
                           }];
 
-                          function yp(UU) {
+                          function zK(uu) {
                             let {
-                              synth: RU,
-                              onChange: gU
-                            } = UU;
-                            const tU = (0, bp.k)(RU);
-                            return (0, CU.jsxs)("div", {
+                              synth: Ru,
+                              onChange: yu
+                            } = uu;
+                            const Eu = (0, eK.k)(Ru);
+                            return (0, Su.jsxs)("div", {
                               className: "DocsVoiceControls",
-                              children: [(0, CU.jsxs)("div", {
+                              children: [(0, Su.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, CU.jsx)("div", {
+                                children: [(0, Su.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Voice"
-                                }), (0, CU.jsxs)("div", {
+                                }), (0, Su.jsxs)("div", {
                                   className: "DocsControl",
-                                  children: [(0, CU.jsx)("div", {
+                                  children: [(0, Su.jsx)("div", {
                                     className: "DocsControlLabel",
-                                    children: (0, CU.jsx)("span", {
+                                    children: (0, Su.jsx)("span", {
                                       children: "Tone"
                                     })
-                                  }), (0, CU.jsx)("div", {
+                                  }), (0, Su.jsx)("div", {
                                     className: "DocsVoiceWaveforms",
-                                    children: bp.f.map((UU => (0, CU.jsx)("button", {
+                                    children: eK.d.map((uu => (0, Su.jsx)("button", {
                                       type: "button",
-                                      className: EU()("DocsVariantChip", {
-                                        Active: RU.waveform === UU
+                                      className: Qu()("DocsVariantChip", {
+                                        Active: Ru.waveform === uu
                                       }),
-                                      "aria-pressed": RU.waveform === UU,
+                                      "aria-pressed": Ru.waveform === uu,
                                       onClick: () => {
-                                        gU({
-                                          waveform: UU
+                                        yu({
+                                          waveform: uu
                                         })
                                       },
-                                      children: UU
-                                    }, UU)))
+                                      children: uu
+                                    }, uu)))
                                   })]
-                                }), (0, CU.jsx)(Ot, {
+                                }), (0, Su.jsx)(aE, {
                                   label: "Pitch",
                                   min: 0,
-                                  max: vp(Yp, Bp),
+                                  max: tK(IK, GK),
                                   step: .1,
-                                  value: vp(Yp, RU.pitchHz),
-                                  format: () => `${RU.pitchHz} Hz`,
-                                  onChange: UU => {
-                                    gU({
-                                      pitchHz: dp(Yp, UU)
+                                  value: tK(IK, Ru.pitchHz),
+                                  format: () => `${Ru.pitchHz} Hz`,
+                                  onChange: uu => {
+                                    yu({
+                                      pitchHz: lK(IK, uu)
                                     })
                                   }
-                                }), (0, CU.jsx)(Ot, {
+                                }), (0, Su.jsx)(aE, {
                                   label: "Time per syllable",
                                   min: 25,
                                   max: 200,
                                   step: 1,
-                                  value: RU.syllableMs,
-                                  format: Hp,
-                                  onChange: UU => {
-                                    gU({
-                                      syllableMs: UU
+                                  value: Ru.syllableMs,
+                                  format: gK,
+                                  onChange: uu => {
+                                    yu({
+                                      syllableMs: uu
                                     })
                                   }
-                                }), (0, CU.jsx)(Ot, {
+                                }), (0, Su.jsx)(aE, {
                                   label: "Volume",
                                   min: 0,
                                   max: 2,
                                   step: .05,
-                                  value: RU.volume,
-                                  onChange: UU => {
-                                    gU({
-                                      volume: UU
+                                  value: Ru.volume,
+                                  onChange: uu => {
+                                    yu({
+                                      volume: uu
                                     })
                                   }
                                 })]
-                              }), (0, CU.jsxs)("div", {
+                              }), (0, Su.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, CU.jsx)("div", {
+                                children: [(0, Su.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Each blip"
-                                }), (0, CU.jsx)(Ot, {
+                                }), (0, Su.jsx)(aE, {
                                   label: "Length",
                                   min: 10,
                                   max: 300,
                                   step: 1,
-                                  value: RU.durationMs,
-                                  format: Hp,
-                                  onChange: UU => {
-                                    gU({
-                                      durationMs: UU
+                                  value: Ru.durationMs,
+                                  format: gK,
+                                  onChange: uu => {
+                                    yu({
+                                      durationMs: uu
                                     })
                                   }
-                                }), (0, CU.jsx)(Ot, {
+                                }), (0, Su.jsx)(aE, {
                                   label: "Fade in",
                                   min: 0,
-                                  max: tU.durationMs,
+                                  max: Eu.durationMs,
                                   step: 1,
-                                  value: tU.attackMs,
-                                  format: Hp,
-                                  onChange: UU => {
-                                    gU({
-                                      attackMs: UU
+                                  value: Eu.attackMs,
+                                  format: gK,
+                                  onChange: uu => {
+                                    yu({
+                                      attackMs: uu
                                     })
                                   }
-                                }), (0, CU.jsx)(Ot, {
+                                }), (0, Su.jsx)(aE, {
                                   label: "Fade out",
                                   min: 0,
-                                  max: tU.durationMs - tU.attackMs,
+                                  max: Eu.durationMs - Eu.attackMs,
                                   step: 1,
-                                  value: tU.releaseMs,
-                                  format: Hp,
-                                  onChange: UU => {
-                                    gU({
-                                      releaseMs: UU
+                                  value: Eu.releaseMs,
+                                  format: gK,
+                                  onChange: uu => {
+                                    yu({
+                                      releaseMs: uu
                                     })
                                   }
-                                }), (0, CU.jsx)(Ot, {
+                                }), (0, Su.jsx)(aE, {
                                   label: "Glide",
                                   min: -12,
                                   max: 12,
                                   step: .1,
-                                  value: RU.glideSemitones,
-                                  format: Sp,
-                                  onChange: UU => {
-                                    gU({
-                                      glideSemitones: UU
+                                  value: Ru.glideSemitones,
+                                  format: cK,
+                                  onChange: uu => {
+                                    yu({
+                                      glideSemitones: uu
                                     })
                                   }
-                                }), (0, CU.jsxs)("label", {
+                                }), (0, Su.jsxs)("label", {
                                   className: "DocsVoiceToggle",
-                                  children: [(0, CU.jsx)("input", {
+                                  children: [(0, Su.jsx)("input", {
                                     type: "checkbox",
-                                    checked: null !== RU.lowpassHz,
-                                    onChange: UU => {
-                                      gU({
-                                        lowpassHz: UU.target.checked ? Xp : null
+                                    checked: null !== Ru.lowpassHz,
+                                    onChange: uu => {
+                                      yu({
+                                        lowpassHz: uu.target.checked ? sK : null
                                       })
                                     }
-                                  }), (0, CU.jsx)("span", {
+                                  }), (0, Su.jsx)("span", {
                                     children: "Muffle with a filter"
                                   })]
-                                }), null !== RU.lowpassHz && (0, CU.jsx)(Ot, {
+                                }), null !== Ru.lowpassHz && (0, Su.jsx)(aE, {
                                   label: "Filter",
                                   min: 0,
-                                  max: vp(Vp, rp),
+                                  max: tK(UK, nK),
                                   step: .1,
-                                  value: vp(Vp, RU.lowpassHz),
-                                  format: () => `${RU.lowpassHz} Hz`,
-                                  onChange: UU => {
-                                    gU({
-                                      lowpassHz: dp(Vp, UU)
+                                  value: tK(UK, Ru.lowpassHz),
+                                  format: () => `${Ru.lowpassHz} Hz`,
+                                  onChange: uu => {
+                                    yu({
+                                      lowpassHz: lK(UK, uu)
                                     })
                                   }
                                 })]
-                              }), (0, CU.jsxs)("div", {
+                              }), (0, Su.jsxs)("div", {
                                 className: "DocsVoiceGroup",
-                                children: [(0, CU.jsx)("div", {
+                                children: [(0, Su.jsx)("div", {
                                   className: "DocsVoiceGroupTitle",
                                   children: "Intonation"
-                                }), sp.map((UU => {
+                                }), LK.map((uu => {
                                   let {
-                                    key: tU,
-                                    label: pU,
-                                    max: EU
-                                  } = UU;
-                                  return (0, CU.jsx)(Ot, {
-                                    label: pU,
+                                    key: Eu,
+                                    label: Ku,
+                                    max: Qu
+                                  } = uu;
+                                  return (0, Su.jsx)(aE, {
+                                    label: Ku,
                                     min: 0,
-                                    max: EU,
+                                    max: Qu,
                                     step: .1,
-                                    value: RU.intonation[tU],
-                                    format: Sp,
-                                    onChange: UU => {
-                                      gU({
+                                    value: Ru.intonation[Eu],
+                                    format: cK,
+                                    onChange: uu => {
+                                      yu({
                                         intonation: {
-                                          ...RU.intonation,
-                                          [tU]: UU
+                                          ...Ru.intonation,
+                                          [Eu]: uu
                                         }
                                       })
                                     }
-                                  }, tU)
+                                  }, Eu)
                                 }))]
                               })]
                             })
                           }
-                          const kp = Object.keys(bp.j),
-                            Fp = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
+                          const FK = Object.keys(eK.g),
+                            wK = ["Welcome, traveller. The road ahead is long.", "Have you seen my lost sheep anywhere?", "Watch out, the bridge is about to collapse!"];
 
-                          function ip(UU) {
-                            var RU;
-                            const gU = JSON.stringify((0, bp.k)(UU));
-                            return null !== (RU = kp.find((UU => JSON.stringify((0, bp.k)(bp.j[UU])) === gU))) && void 0 !== RU ? RU : null
+                          function ZK(uu) {
+                            var Ru;
+                            const yu = JSON.stringify((0, eK.k)(uu));
+                            return null !== (Ru = FK.find((uu => JSON.stringify((0, eK.k)(eK.g[uu])) === yu))) && void 0 !== Ru ? Ru : null
                           }
 
-                          function Ap(UU) {
-                            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-                            if ("object" !== typeof UU || null === UU) return JSON.stringify(UU);
-                            return `{\n${Object.entries(UU).map((UU=>{let[gU,tU]=UU;return`${RU}    ${gU}: ${Ap(tU,`${RU}    `)},`})).join("\n")}\n${RU}}`
+                          function hK(uu) {
+                            let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+                            if ("object" !== typeof uu || null === uu) return JSON.stringify(uu);
+                            return `{\n${Object.entries(uu).map((uu=>{let[yu,Eu]=uu;return`${Ru}    ${yu}: ${hK(Eu,`${Ru}    `)},`})).join("\n")}\n${Ru}}`
                           }
 
-                          function zp(UU, RU, gU) {
-                            const tU = ip(UU),
-                              pU = [`    line: ${JSON.stringify(RU)},`];
-                            return gU && pU.push(`    speakerName: ${JSON.stringify(gU)},`), pU.push("    voice,"), `const voice = ${tU?JSON.stringify(tU):Ap((0,bp.k)(UU))}\n\napi.setClientOption(playerId, "dialogue", {\n${pU.join("\n")}\n})`
+                          function PK(uu, Ru, yu) {
+                            const Eu = ZK(uu),
+                              Ku = [`    line: ${JSON.stringify(Ru)},`];
+                            return yu && Ku.push(`    speakerName: ${JSON.stringify(yu)},`), Ku.push("    voice,"), `const voice = ${Eu?JSON.stringify(Eu):hK((0,eK.k)(uu))}\n\napi.setClientOption(playerId, "dialogue", {\n${Ku.join("\n")}\n})`
                           }
-                          const Mp = 400,
-                            Dp = 90;
-                          let Lp = null;
+                          const iK = 400,
+                            YK = 90;
+                          let oK = null;
 
-                          function Np(UU, RU, gU) {
-                            return Lp ??= new AudioContext, Lp.resume(), (0, ap.d)(Lp, Lp.destination, UU, RU, gU, (() => {}))
+                          function qK(uu, Ru, yu) {
+                            return oK ??= new AudioContext, oK.resume(), (0, MK.e)(oK, oK.destination, uu, Ru, yu, (() => {}))
                           }
 
-                          function lp() {
-                            const [UU, RU] = (0, tU.useState)(bp.j.regular), [gU, pU] = (0, tU.useState)(Fp[0]), [PU, TU] = (0, tU.useState)("Innkeeper"), [qU, KU] = (0, tU.useState)(0), cU = ct((UU => UU.volume)), GU = (0, tU.useRef)(null), jU = (0, tU.useRef)(0), uU = (0, tU.useRef)(0), hU = () => {
-                              var UU;
-                              null === (UU = GU.current) || void 0 === UU || UU.call(GU), GU.current = null
+                          function OK() {
+                            const [uu, Ru] = (0, Eu.useState)(eK.g.regular), [yu, Ku] = (0, Eu.useState)(wK[0]), [mu, Ju] = (0, Eu.useState)("Innkeeper"), [Nu, Xu] = (0, Eu.useState)(0), Vu = VE((uu => uu.volume)), ru = (0, Eu.useRef)(null), Bu = (0, Eu.useRef)(0), xu = (0, Eu.useRef)(0), pu = () => {
+                              var uu;
+                              null === (uu = ru.current) || void 0 === uu || uu.call(ru), ru.current = null
                             };
-                            (0, tU.useEffect)((() => () => {
-                              var UU;
-                              null === (UU = GU.current) || void 0 === UU || UU.call(GU), window.clearTimeout(jU.current)
+                            (0, Eu.useEffect)((() => () => {
+                              var uu;
+                              null === (uu = ru.current) || void 0 === uu || uu.call(ru), window.clearTimeout(Bu.current)
                             }), []);
-                            const eU = (0, tU.useMemo)((() => ({
-                                line: gU,
-                                speakerName: PU || void 0,
-                                voice: UU
-                              })), [gU, PU, UU]),
-                              WU = (0, tU.useRef)(eU);
-                            WU.current = eU;
-                            const xU = ip(UU),
-                              mU = UU => {
-                                window.clearTimeout(jU.current), hU();
+                            const Wu = (0, Eu.useMemo)((() => ({
+                                line: yu,
+                                speakerName: mu || void 0,
+                                voice: uu
+                              })), [yu, mu, uu]),
+                              ju = (0, Eu.useRef)(Wu);
+                            ju.current = Wu;
+                            const du = ZK(uu),
+                              bu = uu => {
+                                window.clearTimeout(Bu.current), pu();
                                 const {
-                                  plan: RU,
-                                  synth: gU
-                                } = (0, Zp.c)(UU);
-                                gU && (GU.current = Np(gU, RU.blips, cU)), KU((UU => UU + 1))
+                                  plan: Ru,
+                                  synth: yu
+                                } = (0, DK.g)(uu);
+                                yu && (ru.current = qK(yu, Ru.blips, Vu)), Xu((uu => uu + 1))
                               },
-                              IU = zp(UU, gU, PU);
-                            return (0, CU.jsxs)("section", {
+                              Cu = PK(uu, yu, mu);
+                            return (0, Su.jsxs)("section", {
                               className: "DocsPlayground DocsVoicePlayground",
                               "aria-label": "Voice playground",
-                              children: [(0, CU.jsxs)("header", {
+                              children: [(0, Su.jsxs)("header", {
                                 className: "DocsPlaygroundHeader",
-                                children: [(0, CU.jsxs)("div", {
-                                  children: [(0, CU.jsx)("div", {
+                                children: [(0, Su.jsxs)("div", {
+                                  children: [(0, Su.jsx)("div", {
                                     className: "DocsPlaygroundTitle",
                                     children: "Try it: voices"
-                                  }), (0, CU.jsx)("div", {
+                                  }), (0, Su.jsx)("div", {
                                     className: "DocsPlaygroundHint",
                                     children: "Start from a preset and change it to suit your character. The line replays as you go."
                                   })]
-                                }), (0, CU.jsx)(fU, {
-                                  text: IU,
+                                }), (0, Su.jsx)(Hu, {
+                                  text: Cu,
                                   label: "Copy code"
                                 })]
-                              }), (0, CU.jsxs)("div", {
+                              }), (0, Su.jsxs)("div", {
                                 className: "DocsPlaygroundPresets",
-                                children: [kp.map((UU => (0, CU.jsx)("button", {
+                                children: [FK.map((uu => (0, Su.jsx)("button", {
                                   type: "button",
-                                  className: EU()("DocsVariantChip", {
-                                    Active: xU === UU
+                                  className: Qu()("DocsVariantChip", {
+                                    Active: du === uu
                                   }),
-                                  "aria-pressed": xU === UU,
+                                  "aria-pressed": du === uu,
                                   onClick: () => {
-                                    (UU => {
-                                      const gU = bp.j[UU];
-                                      RU(gU), mU({
-                                        ...eU,
-                                        voice: gU
+                                    (uu => {
+                                      const yu = eK.g[uu];
+                                      Ru(yu), bu({
+                                        ...Wu,
+                                        voice: yu
                                       })
-                                    })(UU)
+                                    })(uu)
                                   },
-                                  children: UU
-                                }, UU))), !xU && (0, CU.jsx)("span", {
+                                  children: uu
+                                }, uu))), !du && (0, Su.jsx)("span", {
                                   className: "DocsVariantChip Active DocsVoiceCustomChip",
                                   children: "custom"
                                 })]
-                              }), (0, CU.jsxs)("div", {
+                              }), (0, Su.jsxs)("div", {
                                 className: "DocsVoiceBody",
-                                children: [(0, CU.jsxs)("div", {
+                                children: [(0, Su.jsxs)("div", {
                                   className: "DocsVoiceScene",
-                                  children: [(0, CU.jsx)("div", {
+                                  children: [(0, Su.jsx)("div", {
                                     className: "DocsVoiceStage",
-                                    children: (0, CU.jsx)(op.d, {
-                                      display: eU
-                                    }, qU)
-                                  }), (0, CU.jsxs)("form", {
+                                    children: (0, Su.jsx)(AK.b, {
+                                      display: Wu
+                                    }, Nu)
+                                  }), (0, Su.jsxs)("form", {
                                     className: "DocsVoiceLineRow",
-                                    onSubmit: UU => {
-                                      UU.preventDefault(), mU(eU)
+                                    onSubmit: uu => {
+                                      uu.preventDefault(), bu(Wu)
                                     },
-                                    children: [(0, CU.jsx)("input", {
-                                      value: gU,
+                                    children: [(0, Su.jsx)("input", {
+                                      value: yu,
                                       "aria-label": "Line",
                                       placeholder: "Type a line to hear it",
-                                      onChange: UU => {
-                                        pU(UU.target.value)
+                                      onChange: uu => {
+                                        Ku(uu.target.value)
                                       }
-                                    }), (0, CU.jsxs)("button", {
+                                    }), (0, Su.jsxs)("button", {
                                       type: "submit",
                                       className: "DocsVoiceSpeakButton",
-                                      children: [(0, CU.jsx)(QU, {
+                                      children: [(0, Su.jsx)(Tu, {
                                         name: "play"
-                                      }), (0, CU.jsx)("span", {
+                                      }), (0, Su.jsx)("span", {
                                         children: "Speak"
                                       })]
                                     })]
-                                  }), (0, CU.jsx)("div", {
+                                  }), (0, Su.jsx)("div", {
                                     className: "DocsVoiceSamples",
-                                    children: Fp.map((UU => (0, CU.jsx)("button", {
+                                    children: wK.map((uu => (0, Su.jsx)("button", {
                                       type: "button",
-                                      className: EU()("DocsVariantChip", {
-                                        Active: gU === UU
+                                      className: Qu()("DocsVariantChip", {
+                                        Active: yu === uu
                                       }),
                                       onClick: () => {
-                                        var RU;
-                                        pU(RU = UU), mU({
-                                          ...eU,
-                                          line: RU
+                                        var Ru;
+                                        Ku(Ru = uu), bu({
+                                          ...Wu,
+                                          line: Ru
                                         })
                                       },
-                                      children: UU
-                                    }, UU)))
-                                  }), (0, CU.jsxs)("label", {
+                                      children: uu
+                                    }, uu)))
+                                  }), (0, Su.jsxs)("label", {
                                     className: "DocsVoiceSpeaker",
-                                    children: [(0, CU.jsx)("span", {
+                                    children: [(0, Su.jsx)("span", {
                                       children: "Speaker"
-                                    }), (0, CU.jsx)("input", {
-                                      value: PU,
+                                    }), (0, Su.jsx)("input", {
+                                      value: mu,
                                       placeholder: "No name",
-                                      onChange: UU => {
-                                        TU(UU.target.value)
+                                      onChange: uu => {
+                                        Ju(uu.target.value)
                                       }
                                     })]
                                   })]
-                                }), (0, CU.jsx)(yp, {
-                                  synth: UU,
-                                  onChange: gU => {
-                                    const tU = {
-                                      ...UU,
-                                      ...gU
+                                }), (0, Su.jsx)(zK, {
+                                  synth: uu,
+                                  onChange: yu => {
+                                    const Eu = {
+                                      ...uu,
+                                      ...yu
                                     };
-                                    RU(tU);
-                                    const pU = {
-                                        ...eU,
-                                        voice: tU
+                                    Ru(Eu);
+                                    const Ku = {
+                                        ...Wu,
+                                        voice: Eu
                                       },
-                                      EU = performance.now();
-                                    if (EU - uU.current >= Dp) {
-                                      uU.current = EU, hU();
-                                      const UU = (0, Zp.c)(pU).plan.blips[0];
-                                      UU && (GU.current = Np((0, bp.k)(tU), [{
-                                        ...UU,
+                                      Qu = performance.now();
+                                    if (Qu - xu.current >= YK) {
+                                      xu.current = Qu, pu();
+                                      const uu = (0, DK.g)(Ku).plan.blips[0];
+                                      uu && (ru.current = qK((0, eK.k)(Eu), [{
+                                        ...uu,
                                         atMs: 0
-                                      }], cU))
+                                      }], Vu))
                                     }
-                                    window.clearTimeout(jU.current), jU.current = window.setTimeout((() => {
-                                      mU(WU.current)
-                                    }), Mp)
+                                    window.clearTimeout(Bu.current), Bu.current = window.setTimeout((() => {
+                                      bu(ju.current)
+                                    }), iK)
                                   }
                                 })]
-                              }), (0, CU.jsx)(JU, {
-                                code: IU,
+                              }), (0, Su.jsx)(ku, {
+                                code: Cu,
                                 lang: "ts"
                               })]
                             })
                           }
-                          var Op = gU(4525);
-                          const UE = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
-                            RE = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
-                            gE = [
-                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${RE}`, "g"), Op.h],
+                          var vK = yu(4640);
+                          const aK = /(`{1,2})\s*(.+?)\s*\1(?!`)/g,
+                            fK = String.raw`(?:async\s+)?(?:function\b|\(|[A-Za-z_$][\w$]*\s*=>)`,
+                            uQ = [
+                              [new RegExp(String.raw`([A-Za-z_$][\w$]*)\s*(?:=(?![=>])|:)\s*${fK}`, "g"), vK.o],
                               [/\bfunction\s+([A-Za-z_$][\w$]*)\s*\(/g],
-                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, Op.h]
+                              [/([A-Za-z_$][\w$]*)\s*\([^()]*\)\s*\{/g, vK.o]
                             ];
 
-                          function tE(UU) {
-                            return `${UU.pageId}#${UU.anchor}`
+                          function RQ(uu) {
+                            return `${uu.pageId}#${uu.anchor}`
                           }
-                          let pE, EE, PE;
+                          let yQ, EQ, KQ;
 
-                          function TE(UU) {
-                            const RU = (0, wU.h)(UU),
-                              gU = new Set;
-                            for (const [, , tU] of RU.matchAll(wU.e)) {
-                              const UU = tU.startsWith("#") ? kU(tU) : null,
-                                RU = UU ? tE({
-                                  pageId: UU.page.id,
-                                  anchor: UU.anchor
+                          function QQ(uu) {
+                            const Ru = (0, eu.d)(uu),
+                              yu = new Set;
+                            for (const [, , Eu] of Ru.matchAll(eu.b)) {
+                              const uu = Eu.startsWith("#") ? Zu(Eu) : null,
+                                Ru = uu ? RQ({
+                                  pageId: uu.page.id,
+                                  anchor: uu.anchor
                                 }) : null;
-                              null !== RU && (pE || (pE = new Set(vU.flatMap((UU => ZU(UU.layout) ? sU(UU).sections.map((RU => tE({
-                                pageId: UU.id,
-                                anchor: RU.heading.anchor
-                              }))) : [])))), pE).has(RU) && gU.add(RU)
+                              null !== Ru && (yQ || (yQ = new Set(gu.flatMap((uu => Iu(uu.layout) ? Fu(uu).sections.map((Ru => RQ({
+                                pageId: uu.id,
+                                anchor: Ru.heading.anchor
+                              }))) : [])))), yQ).has(Ru) && yu.add(Ru)
                             }
-                            for (const [, , tU] of RU.matchAll(UE)) {
-                              const UU = jR(tU);
-                              UU && gU.add(tE(UU))
+                            for (const [, , Eu] of Ru.matchAll(aK)) {
+                              const uu = BR(Eu);
+                              uu && yu.add(RQ(uu))
                             }
-                            return gU
+                            return yu
                           }
 
-                          function qE(UU, RU) {
-                            const gU = new Set,
-                              tU = function(UU) {
-                                return UU.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
-                              }(UU);
-                            for (const [, pU] of tU.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) gU.add(pU);
-                            for (const [pU, EU] of gE)
-                              for (const [, UU] of(0, Op.c)(tU, pU, EU)) RU.has(UU) && gU.add(UU);
-                            return gU
+                          function mQ(uu, Ru) {
+                            const yu = new Set,
+                              Eu = function(uu) {
+                                return uu.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "").replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, '""')
+                              }(uu);
+                            for (const [, Ku] of Eu.matchAll(/\bapi\.([A-Za-z_$][\w$]*)/g)) yu.add(Ku);
+                            for (const [Ku, Qu] of uQ)
+                              for (const [, uu] of(0, vK.i)(Eu, Ku, Qu)) Ru.has(uu) && yu.add(uu);
+                            return yu
                           }
 
-                          function KE(UU, RU, gU, tU) {
-                            const pU = UU.get(RU);
-                            pU ? !tU && pU.some((UU => UU.pageId === gU.pageId)) || pU.push(gU) : UU.set(RU, [gU])
+                          function JQ(uu, Ru, yu, Eu) {
+                            const Ku = uu.get(Ru);
+                            Ku ? !Eu && Ku.some((uu => uu.pageId === yu.pageId)) || Ku.push(yu) : uu.set(Ru, [yu])
                           }
-                          const cE = /^[A-Za-z_$][\w$]*$/;
+                          const NQ = /^[A-Za-z_$][\w$]*$/;
 
-                          function GE(UU) {
-                            return cE.test(UU.name) ? UU.name : "options"
-                          }
-
-                          function jE(UU, RU) {
-                            const gU = UU.params.map(GE).join(", ");
-                            return RU ? `${UU.name} = (${gU}) => {\n\t\n}` : `api.${UU.name}(${gU})`
+                          function XQ(uu) {
+                            return NQ.test(uu.name) ? uu.name : "options"
                           }
 
-                          function uE(UU) {
+                          function VQ(uu, Ru) {
+                            const yu = uu.params.map(XQ).join(", ");
+                            return Ru ? `${uu.name} = (${yu}) => {\n\t\n}` : `api.${uu.name}(${yu})`
+                          }
+
+                          function rQ(uu) {
                             let {
-                              method: RU,
-                              isCallback: gU
-                            } = UU;
-                            return (0, CU.jsxs)("div", {
+                              method: Ru,
+                              isCallback: yu
+                            } = uu;
+                            return (0, Su.jsxs)("div", {
                               className: "DocsSignature",
-                              children: [(0, CU.jsxs)("span", {
+                              children: [(0, Su.jsxs)("span", {
                                 className: "DocsSignatureCode",
-                                children: [gU ? (0, CU.jsxs)(CU.Fragment, {
-                                  children: [(0, CU.jsx)("span", {
+                                children: [yu ? (0, Su.jsxs)(Su.Fragment, {
+                                  children: [(0, Su.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: RU.name
-                                  }), (0, CU.jsx)("span", {
+                                    children: Ru.name
+                                  }), (0, Su.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: " = ("
                                   })]
-                                }) : (0, CU.jsxs)(CU.Fragment, {
-                                  children: [(0, CU.jsx)("span", {
+                                }) : (0, Su.jsxs)(Su.Fragment, {
+                                  children: [(0, Su.jsx)("span", {
                                     className: "DocsSignatureObject",
                                     children: "api."
-                                  }), (0, CU.jsx)("span", {
+                                  }), (0, Su.jsx)("span", {
                                     className: "DocsSignatureName",
-                                    children: RU.name
-                                  }), (0, CU.jsx)("span", {
+                                    children: Ru.name
+                                  }), (0, Su.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: "("
                                   })]
-                                }), RU.params.map(((UU, gU) => (0, CU.jsxs)(tU.Fragment, {
-                                  children: [gU > 0 && (0, CU.jsx)("span", {
+                                }), Ru.params.map(((uu, yu) => (0, Su.jsxs)(Eu.Fragment, {
+                                  children: [yu > 0 && (0, Su.jsx)("span", {
                                     className: "DocsTypePunctuation",
                                     children: ", "
-                                  }), (0, CU.jsx)("a", {
+                                  }), (0, Su.jsx)("a", {
                                     className: "DocsSignatureParam",
-                                    href: `#${RU.name}-${GE(UU)}`,
-                                    children: UU.name
+                                    href: `#${Ru.name}-${XQ(uu)}`,
+                                    children: uu.name
                                   })]
-                                }, UU.name))), (0, CU.jsx)("span", {
+                                }, uu.name))), (0, Su.jsx)("span", {
                                   className: "DocsTypePunctuation",
-                                  children: gU ? ") => " : ")"
-                                }), gU && !RU.returns && (0, CU.jsx)("span", {
+                                  children: yu ? ") => " : ")"
+                                }), yu && !Ru.returns && (0, Su.jsx)("span", {
                                   className: "DocsTypeKeyword",
                                   children: "void"
                                 })]
-                              }), RU.returns && RU.returns.type && (0, CU.jsxs)("span", {
+                              }), Ru.returns && Ru.returns.type && (0, Su.jsxs)("span", {
                                 className: "DocsSignatureReturns",
-                                children: [!gU && (0, CU.jsx)("span", {
+                                children: [!yu && (0, Su.jsx)("span", {
                                   className: "DocsSignatureArrow",
                                   children: "\u2192"
-                                }), (0, CU.jsx)(nR, {
-                                  type: RU.returns.type
+                                }), (0, Su.jsx)(AR, {
+                                  type: Ru.returns.type
                                 })]
                               })]
                             })
                           }
 
-                          function CE(UU) {
+                          function BQ(uu) {
                             let {
-                              title: RU,
-                              references: gU
-                            } = UU;
-                            const pU = (0, tU.useContext)(uR);
-                            return (0, CU.jsxs)("div", {
+                              title: Ru,
+                              references: yu
+                            } = uu;
+                            const Ku = (0, Eu.useContext)(xR);
+                            return (0, Su.jsxs)("div", {
                               className: "DocsCardReferences",
-                              children: [(0, CU.jsx)("span", {
+                              children: [(0, Su.jsx)("span", {
                                 className: "DocsCardReferencesTitle",
-                                children: RU
-                              }), gU.map((UU => (0, CU.jsx)(PU.c, {
-                                to: iU(pU, HU(UU.pageId), UU.anchor),
-                                children: UU.label
-                              }, `${UU.pageId}#${UU.anchor}`)))]
+                                children: Ru
+                              }), yu.map((uu => (0, Su.jsx)(mu.c, {
+                                to: Pu(Ku, Lu(uu.pageId), uu.anchor),
+                                children: uu.label
+                              }, `${uu.pageId}#${uu.anchor}`)))]
                             })
                           }
 
-                          function hE(UU) {
-                            var RU, gU;
+                          function xQ(uu) {
+                            var Ru, yu;
                             let {
-                              pageId: tU,
-                              anchor: pU
-                            } = UU;
-                            const EU = tE({
-                                pageId: tU,
-                                anchor: pU
+                              pageId: Eu,
+                              anchor: Ku
+                            } = uu;
+                            const Qu = RQ({
+                                pageId: Eu,
+                                anchor: Ku
                               }),
-                              PU = null !== (RU = function() {
-                                if (!PE) {
-                                  PE = new Map;
-                                  const tU = new Set(vU.filter((UU => "callbacks" === UU.layout)).flatMap((UU => sU(UU).sections.map((UU => UU.heading.text)))));
-                                  for (const pU of vU)
-                                    if ("article" === pU.layout || "snippets" === pU.layout)
-                                      for (const EU of (0, wU.o)(sU(pU)))
+                              mu = null !== (Ru = function() {
+                                if (!KQ) {
+                                  KQ = new Map;
+                                  const Eu = new Set(gu.filter((uu => "callbacks" === uu.layout)).flatMap((uu => Fu(uu).sections.map((uu => uu.heading.text)))));
+                                  for (const Ku of gu)
+                                    if ("article" === Ku.layout || "snippets" === Ku.layout)
+                                      for (const Qu of (0, eu.p)(Fu(Ku)))
                                         for (const {
-                                            code: PU
+                                            code: mu
                                           }
-                                          of(0, wU.k)(EU.blocks))
-                                          for (const TU of qE(PU, tU)) {
-                                            const tU = GR().get(TU);
-                                            if (tU) {
-                                              var UU, RU, gU;
-                                              const PU = {
-                                                pageId: pU.id,
-                                                anchor: null !== (UU = null === (RU = EU.heading) || void 0 === RU ? void 0 : RU.anchor) && void 0 !== UU ? UU : "",
-                                                label: null !== (gU = pU.navTitle) && void 0 !== gU ? gU : pU.title
+                                          of(0, eu.e)(Qu.blocks))
+                                          for (const Ju of mQ(mu, Eu)) {
+                                            const Eu = rR().get(Ju);
+                                            if (Eu) {
+                                              var uu, Ru, yu;
+                                              const mu = {
+                                                pageId: Ku.id,
+                                                anchor: null !== (uu = null === (Ru = Qu.heading) || void 0 === Ru ? void 0 : Ru.anchor) && void 0 !== uu ? uu : "",
+                                                label: null !== (yu = Ku.navTitle) && void 0 !== yu ? yu : Ku.title
                                               };
-                                              KE(PE, tE(tU), PU, !1)
+                                              JQ(KQ, RQ(Eu), mu, !1)
                                             }
                                           }
                                 }
-                                return PE
-                              }().get(EU)) && void 0 !== RU ? RU : [],
-                              TU = null !== (gU = function() {
-                                if (!EE) {
-                                  EE = new Map;
-                                  const UU = HU("changelog");
-                                  for (const RU of sU(UU).sections) {
-                                    const gU = new Set(RU.blocks.flatMap((UU => [...TE(UU)])));
-                                    for (const tU of gU) {
-                                      const gU = {
-                                        pageId: UU.id,
-                                        anchor: RU.heading.anchor,
-                                        label: RU.heading.text
+                                return KQ
+                              }().get(Qu)) && void 0 !== Ru ? Ru : [],
+                              Ju = null !== (yu = function() {
+                                if (!EQ) {
+                                  EQ = new Map;
+                                  const uu = Lu("changelog");
+                                  for (const Ru of Fu(uu).sections) {
+                                    const yu = new Set(Ru.blocks.flatMap((uu => [...QQ(uu)])));
+                                    for (const Eu of yu) {
+                                      const yu = {
+                                        pageId: uu.id,
+                                        anchor: Ru.heading.anchor,
+                                        label: Ru.heading.text
                                       };
-                                      KE(EE, tU, gU, !0)
+                                      JQ(EQ, Eu, yu, !0)
                                     }
                                   }
                                 }
-                                return EE
-                              }().get(EU)) && void 0 !== gU ? gU : [];
-                            return 0 === PU.length && 0 === TU.length ? null : (0, CU.jsxs)("footer", {
+                                return EQ
+                              }().get(Qu)) && void 0 !== yu ? yu : [];
+                            return 0 === mu.length && 0 === Ju.length ? null : (0, Su.jsxs)("footer", {
                               className: "DocsCardFooter",
-                              children: [PU.length > 0 && (0, CU.jsx)(CE, {
+                              children: [mu.length > 0 && (0, Su.jsx)(BQ, {
                                 title: "Used in",
-                                references: PU
-                              }), TU.length > 0 && (0, CU.jsx)(CE, {
+                                references: mu
+                              }), Ju.length > 0 && (0, Su.jsx)(BQ, {
                                 title: "Changelog",
-                                references: TU
+                                references: Ju
                               })]
                             })
                           }
 
-                          function QE(UU) {
+                          function SQ(uu) {
                             let {
-                              method: RU,
-                              pageId: gU,
-                              anchor: tU,
-                              isCallback: pU
-                            } = UU;
-                            const EU = pU ? void 0 : TR().get(RU.name),
-                              PU = RU.description.length > 0 || null === EU || void 0 === EU || !EU.description ? RU.description : (0, wU.u)(EU.description);
-                            return (0, CU.jsxs)("article", {
+                              method: Ru,
+                              pageId: yu,
+                              anchor: Eu,
+                              isCallback: Ku
+                            } = uu;
+                            const Qu = Ku ? void 0 : JR().get(Ru.name),
+                              mu = Ru.description.length > 0 || null === Qu || void 0 === Qu || !Qu.description ? Ru.description : (0, eu.v)(Qu.description);
+                            return (0, Su.jsxs)("article", {
                               className: "DocsCard DocsMethodCard",
-                              children: [(0, CU.jsxs)("header", {
+                              children: [(0, Su.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, CU.jsx)(Kg, {
+                                children: [(0, Su.jsx)(Xy, {
                                   level: 2,
-                                  text: RU.name,
-                                  anchor: tU,
+                                  text: Ru.name,
+                                  anchor: Eu,
                                   className: "DocsCardTitle"
-                                }), (0, CU.jsx)(fU, {
-                                  text: jE(RU, pU),
-                                  label: pU ? "Copy handler" : "Copy call",
+                                }), (0, Su.jsx)(Hu, {
+                                  text: VQ(Ru, Ku),
+                                  label: Ku ? "Copy handler" : "Copy call",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, CU.jsx)(uE, {
-                                method: RU,
-                                isCallback: pU
-                              }), EU && null !== EU.deprecation && (0, CU.jsxs)("aside", {
+                              }), (0, Su.jsx)(rQ, {
+                                method: Ru,
+                                isCallback: Ku
+                              }), Qu && null !== Qu.deprecation && (0, Su.jsxs)("aside", {
                                 className: "DocsCallout warning DocsDeprecation",
-                                children: [(0, CU.jsx)("strong", {
+                                children: [(0, Su.jsx)("strong", {
                                   children: "Deprecated"
-                                }), EU.deprecation && (0, CU.jsxs)(CU.Fragment, {
-                                  children: [": ", (0, CU.jsx)(IR, {
-                                    text: (TU = EU.deprecation, (0, Op.o)(TU, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, Op.f)("`\\w"), (UU => {
-                                      let [RU] = UU;
-                                      return GR().has(RU) ? `\`${RU}\`` : RU
+                                }), Qu.deprecation && (0, Su.jsxs)(Su.Fragment, {
+                                  children: [": ", (0, Su.jsx)(CR, {
+                                    text: (Ju = Qu.deprecation, (0, vK.u)(Ju, /[a-z][\w$]*[A-Z][\w$]*\b/g, (0, vK.l)("`\\w"), (uu => {
+                                      let [Ru] = uu;
+                                      return rR().has(Ru) ? `\`${Ru}\`` : Ru
                                     })))
                                   })]
                                 })]
-                              }), PU.length > 0 && (0, CU.jsx)("div", {
+                              }), mu.length > 0 && (0, Su.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, CU.jsx)(ug, {
-                                  blocks: PU
+                                children: (0, Su.jsx)(xy, {
+                                  blocks: mu
                                 })
-                              }), RU.params.length > 0 && (0, CU.jsxs)("section", {
+                              }), Ru.params.length > 0 && (0, Su.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, CU.jsx)("h3", {
+                                children: [(0, Su.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Parameters"
-                                }), (0, CU.jsx)("dl", {
+                                }), (0, Su.jsx)("dl", {
                                   className: "DocsParamList",
-                                  children: RU.params.map((UU => (0, CU.jsxs)("div", {
-                                    id: `${RU.name}-${GE(UU)}`,
+                                  children: Ru.params.map((uu => (0, Su.jsxs)("div", {
+                                    id: `${Ru.name}-${XQ(uu)}`,
                                     className: "DocsParam",
-                                    children: [(0, CU.jsxs)("dt", {
-                                      children: [(0, CU.jsx)("code", {
+                                    children: [(0, Su.jsxs)("dt", {
+                                      children: [(0, Su.jsx)("code", {
                                         className: "DocsParamName",
-                                        children: UU.name
-                                      }), (0, CU.jsx)(nR, {
-                                        type: UU.type
+                                        children: uu.name
+                                      }), (0, Su.jsx)(AR, {
+                                        type: uu.type
                                       })]
-                                    }), UU.description && (0, CU.jsx)("dd", {
-                                      children: (0, CU.jsx)(IR, {
-                                        text: UU.description
+                                    }), uu.description && (0, Su.jsx)("dd", {
+                                      children: (0, Su.jsx)(CR, {
+                                        text: uu.description
                                       })
                                     })]
-                                  }, UU.name)))
+                                  }, uu.name)))
                                 })]
-                              }), RU.returns && (RU.returns.type || RU.returns.description.length > 0) && (0, CU.jsxs)("section", {
+                              }), Ru.returns && (Ru.returns.type || Ru.returns.description.length > 0) && (0, Su.jsxs)("section", {
                                 className: "DocsCardPart",
-                                children: [(0, CU.jsx)("h3", {
+                                children: [(0, Su.jsx)("h3", {
                                   className: "DocsCardPartTitle",
                                   children: "Returns"
-                                }), (0, CU.jsxs)("div", {
+                                }), (0, Su.jsxs)("div", {
                                   className: "DocsReturns",
-                                  children: [RU.returns.type && (0, CU.jsx)(nR, {
-                                    type: RU.returns.type
-                                  }), RU.returns.description.length > 0 && (0, CU.jsx)("div", {
+                                  children: [Ru.returns.type && (0, Su.jsx)(AR, {
+                                    type: Ru.returns.type
+                                  }), Ru.returns.description.length > 0 && (0, Su.jsx)("div", {
                                     className: "DocsProse",
-                                    children: (0, CU.jsx)(ug, {
-                                      blocks: RU.returns.description
+                                    children: (0, Su.jsx)(xy, {
+                                      blocks: Ru.returns.description
                                     })
                                   })]
                                 })]
-                              }), (0, CU.jsx)(hE, {
-                                pageId: gU,
-                                anchor: tU
+                              }), (0, Su.jsx)(xQ, {
+                                pageId: yu,
+                                anchor: Eu
                               })]
                             });
-                            var TU
+                            var Ju
                           }
 
-                          function eE(UU) {
-                            var RU;
-                            return null !== UU.defaultValue && "undefined" !== UU.defaultValue ? UU.defaultValue : null !== (RU = UU.example) && void 0 !== RU ? RU : "value"
+                          function pQ(uu) {
+                            var Ru;
+                            return null !== uu.defaultValue && "undefined" !== uu.defaultValue ? uu.defaultValue : null !== (Ru = uu.example) && void 0 !== Ru ? Ru : "value"
                           }
 
-                          function WE(UU) {
+                          function TQ(uu) {
                             let {
-                              setting: RU,
-                              pageId: gU,
-                              anchor: tU,
-                              setterSnippet: pU
-                            } = UU;
-                            const EU = null === RU.defaultValue ? null : eR(RU.defaultValue);
-                            return (0, CU.jsxs)("article", {
+                              setting: Ru,
+                              pageId: yu,
+                              anchor: Eu,
+                              setterSnippet: Ku
+                            } = uu;
+                            const Qu = null === Ru.defaultValue ? null : WR(Ru.defaultValue);
+                            return (0, Su.jsxs)("article", {
                               className: "DocsCard DocsSettingCard",
-                              children: [(0, CU.jsxs)("header", {
+                              children: [(0, Su.jsxs)("header", {
                                 className: "DocsCardHeader",
-                                children: [(0, CU.jsx)(Kg, {
+                                children: [(0, Su.jsx)(Xy, {
                                   level: 2,
-                                  text: RU.name,
-                                  anchor: tU,
+                                  text: Ru.name,
+                                  anchor: Eu,
                                   className: "DocsCardTitle"
-                                }), (0, CU.jsx)(fU, {
-                                  text: pU(RU.name, eE(RU)),
+                                }), (0, Su.jsx)(Hu, {
+                                  text: Ku(Ru.name, pQ(Ru)),
                                   label: "Copy setter",
                                   className: "DocsCardCopy"
                                 })]
-                              }), (0, CU.jsxs)("dl", {
+                              }), (0, Su.jsxs)("dl", {
                                 className: "DocsSettingFacts",
-                                children: [(0, CU.jsxs)("div", {
-                                  children: [(0, CU.jsx)("dt", {
+                                children: [(0, Su.jsxs)("div", {
+                                  children: [(0, Su.jsx)("dt", {
                                     children: "Type"
-                                  }), (0, CU.jsx)("dd", {
-                                    children: (0, CU.jsx)(nR, {
-                                      type: RU.type
+                                  }), (0, Su.jsx)("dd", {
+                                    children: (0, Su.jsx)(AR, {
+                                      type: Ru.type
                                     })
                                   })]
-                                }), null !== RU.defaultValue && (0, CU.jsxs)("div", {
-                                  children: [(0, CU.jsx)("dt", {
+                                }), null !== Ru.defaultValue && (0, Su.jsxs)("div", {
+                                  children: [(0, Su.jsx)("dt", {
                                     children: "Default"
-                                  }), (0, CU.jsx)("dd", {
-                                    children: (0, CU.jsxs)("code", {
+                                  }), (0, Su.jsx)("dd", {
+                                    children: (0, Su.jsxs)("code", {
                                       className: "DocsInlineCode DocsDefaultValue",
-                                      children: [EU && (0, CU.jsx)(WR, {
-                                        colour: EU
-                                      }), RU.defaultValue]
+                                      children: [Qu && (0, Su.jsx)(jR, {
+                                        colour: Qu
+                                      }), Ru.defaultValue]
                                     })
                                   })]
-                                }), null !== RU.example && (0, CU.jsxs)("div", {
-                                  children: [(0, CU.jsx)("dt", {
+                                }), null !== Ru.example && (0, Su.jsxs)("div", {
+                                  children: [(0, Su.jsx)("dt", {
                                     children: "Example"
-                                  }), (0, CU.jsx)("dd", {
-                                    children: (0, CU.jsx)("code", {
+                                  }), (0, Su.jsx)("dd", {
+                                    children: (0, Su.jsx)("code", {
                                       className: "DocsInlineCode",
-                                      children: RU.example
+                                      children: Ru.example
                                     })
                                   })]
                                 })]
-                              }), RU.description.length > 0 && (0, CU.jsx)("div", {
+                              }), Ru.description.length > 0 && (0, Su.jsx)("div", {
                                 className: "DocsProse DocsCardBody",
-                                children: (0, CU.jsx)(ug, {
-                                  blocks: RU.description
+                                children: (0, Su.jsx)(xy, {
+                                  blocks: Ru.description
                                 })
-                              }), (0, CU.jsx)(hE, {
-                                pageId: gU,
-                                anchor: tU
+                              }), (0, Su.jsx)(xQ, {
+                                pageId: yu,
+                                anchor: Eu
                               })]
                             })
                           }
 
-                          function fE(UU) {
+                          function WQ(uu) {
                             let {
-                              section: RU
-                            } = UU;
-                            return (0, CU.jsxs)("article", {
+                              section: Ru
+                            } = uu;
+                            return (0, Su.jsxs)("article", {
                               className: "DocsCard DocsSnippetCard",
-                              children: [(0, CU.jsx)(Kg, {
+                              children: [(0, Su.jsx)(Xy, {
                                 level: 2,
-                                text: RU.heading.text,
-                                anchor: RU.heading.anchor,
+                                text: Ru.heading.text,
+                                anchor: Ru.heading.anchor,
                                 className: "DocsCardTitle"
-                              }), (0, CU.jsx)("div", {
+                              }), (0, Su.jsx)("div", {
                                 className: "DocsProse",
-                                children: (0, CU.jsx)(ug, {
-                                  blocks: RU.blocks
+                                children: (0, Su.jsx)(xy, {
+                                  blocks: Ru.blocks
                                 })
                               })]
                             })
                           }
 
-                          function xE(UU) {
+                          function jQ(uu) {
                             let {
-                              section: RU
-                            } = UU;
-                            return (0, CU.jsxs)("section", {
+                              section: Ru
+                            } = uu;
+                            return (0, Su.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, CU.jsx)(Kg, {
-                                level: RU.heading.level,
-                                text: RU.heading.text,
-                                anchor: RU.heading.anchor
-                              }), (0, CU.jsx)(ug, {
-                                blocks: RU.blocks
+                              children: [(0, Su.jsx)(Xy, {
+                                level: Ru.heading.level,
+                                text: Ru.heading.text,
+                                anchor: Ru.heading.anchor
+                              }), (0, Su.jsx)(xy, {
+                                blocks: Ru.blocks
                               })]
                             })
                           }
-                          const mE = {
+                          const HQ = {
                             methods: "methods",
                             callbacks: "callbacks",
                             settings: "settings",
@@ -4862,337 +4862,337 @@ export const modules = {
                             article: "sections"
                           };
 
-                          function IE(UU) {
+                          function dQ(uu) {
                             let {
-                              page: RU,
-                              section: gU
-                            } = UU;
-                            if ("methods" === RU.layout || "callbacks" === RU.layout) return (0, CU.jsx)(QE, {
-                              method: Jg(gU),
-                              pageId: RU.id,
-                              anchor: gU.heading.anchor,
-                              isCallback: "callbacks" === RU.layout
+                              page: Ru,
+                              section: yu
+                            } = uu;
+                            if ("methods" === Ru.layout || "callbacks" === Ru.layout) return (0, Su.jsx)(SQ, {
+                              method: ky(yu),
+                              pageId: Ru.id,
+                              anchor: yu.heading.anchor,
+                              isCallback: "callbacks" === Ru.layout
                             });
-                            if ("settings" === RU.layout) {
-                              const UU = function(UU) {
-                                const RU = {
-                                  name: UU.heading.text,
+                            if ("settings" === Ru.layout) {
+                              const uu = function(uu) {
+                                const Ru = {
+                                  name: uu.heading.text,
                                   type: "",
                                   defaultValue: null,
                                   example: null,
                                   description: []
                                 };
-                                for (const tU of UU.blocks) {
-                                  var gU;
-                                  if (Ig(tU)) continue;
-                                  const UU = "paragraph" === tU.kind ? tU.text.match(wg) : null;
-                                  if (!UU) {
-                                    RU.description.push(tU);
+                                for (const Eu of uu.blocks) {
+                                  var yu;
+                                  if (Cy(Eu)) continue;
+                                  const uu = "paragraph" === Eu.kind ? Eu.text.match(ey) : null;
+                                  if (!uu) {
+                                    Ru.description.push(Eu);
                                     continue
                                   }
-                                  const pU = null !== (gU = mg(UU[2])) && void 0 !== gU ? gU : UU[2];
-                                  "Type" === UU[1] ? RU.type = pU : "Default" === UU[1] ? RU.defaultValue = pU : "" !== pU && (RU.example = pU)
+                                  const Ku = null !== (yu = by(uu[2])) && void 0 !== yu ? yu : uu[2];
+                                  "Type" === uu[1] ? Ru.type = Ku : "Default" === uu[1] ? Ru.defaultValue = Ku : "" !== Ku && (Ru.example = Ku)
                                 }
-                                return RU.type ? RU : null
-                              }(gU);
-                              if (UU) return (0, CU.jsx)(WE, {
-                                setting: UU,
-                                pageId: RU.id,
-                                anchor: gU.heading.anchor,
-                                setterSnippet: RU.setterSnippet
+                                return Ru.type ? Ru : null
+                              }(yu);
+                              if (uu) return (0, Su.jsx)(TQ, {
+                                setting: uu,
+                                pageId: Ru.id,
+                                anchor: yu.heading.anchor,
+                                setterSnippet: Ru.setterSnippet
                               })
                             }
-                            return "snippets" === RU.layout ? (0, CU.jsx)(fE, {
-                              section: gU
-                            }) : "changelog" === RU.layout ? (0, CU.jsxs)("section", {
+                            return "snippets" === Ru.layout ? (0, Su.jsx)(WQ, {
+                              section: yu
+                            }) : "changelog" === Ru.layout ? (0, Su.jsxs)("section", {
                               className: "DocsChangelogEntry",
-                              children: [(0, CU.jsx)("div", {
+                              children: [(0, Su.jsx)("div", {
                                 className: "DocsChangelogDate",
-                                children: (0, CU.jsx)(Kg, {
+                                children: (0, Su.jsx)(Xy, {
                                   level: 2,
-                                  text: gU.heading.text,
-                                  anchor: gU.heading.anchor
+                                  text: yu.heading.text,
+                                  anchor: yu.heading.anchor
                                 })
-                              }), (0, CU.jsx)("div", {
+                              }), (0, Su.jsx)("div", {
                                 className: "DocsProse DocsChangelogBody",
-                                children: (0, CU.jsx)(ug, {
-                                  blocks: ng(gU.blocks)
+                                children: (0, Su.jsx)(xy, {
+                                  blocks: Ay(yu.blocks)
                                 })
                               })]
-                            }) : RU.gallery ? (0, CU.jsxs)("section", {
+                            }) : Ru.gallery ? (0, Su.jsxs)("section", {
                               className: "DocsProse DocsArticleSection",
-                              children: [(0, CU.jsx)(Kg, {
-                                level: gU.heading.level,
-                                text: gU.heading.text,
-                                anchor: gU.heading.anchor
-                              }), (0, CU.jsx)(bt, {
-                                kind: RU.gallery,
-                                content: sU(RU),
-                                blocks: gU.blocks
+                              children: [(0, Su.jsx)(Xy, {
+                                level: yu.heading.level,
+                                text: yu.heading.text,
+                                anchor: yu.heading.anchor
+                              }), (0, Su.jsx)(DE, {
+                                kind: Ru.gallery,
+                                content: Fu(Ru),
+                                blocks: yu.blocks
                               })]
-                            }) : (0, CU.jsx)(xE, {
-                              section: gU
+                            }) : (0, Su.jsx)(jQ, {
+                              section: yu
                             })
                           }
 
-                          function JE(UU) {
+                          function bQ(uu) {
                             let {
-                              page: RU,
-                              onTocChange: gU
-                            } = UU;
-                            const pU = sU(RU),
-                              [EU, PU] = (0, tU.useState)(""),
-                              TU = "article" !== RU.layout,
-                              qU = Qg(RU.gallery) ? RU.gallery : null,
-                              KU = null !== qU,
-                              cU = EU.trim().toLowerCase(),
-                              GU = (0, tU.useRef)(null),
-                              jU = (0, tU.useCallback)((UU => {
-                                var RU;
-                                null === (RU = GU.current) || void 0 === RU || RU.preview(UU)
+                              page: Ru,
+                              onTocChange: yu
+                            } = uu;
+                            const Ku = Fu(Ru),
+                              [Qu, mu] = (0, Eu.useState)(""),
+                              Ju = "article" !== Ru.layout,
+                              Nu = Ty(Ru.gallery) ? Ru.gallery : null,
+                              Xu = null !== Nu,
+                              Vu = Qu.trim().toLowerCase(),
+                              ru = (0, Eu.useRef)(null),
+                              Bu = (0, Eu.useCallback)((uu => {
+                                var Ru;
+                                null === (Ru = ru.current) || void 0 === Ru || Ru.preview(uu)
                               }), []),
-                              uU = (0, tU.useMemo)((() => {
-                                if (!RU.hasParticlePlayground) return [];
-                                const UU = ag(pU.intro).find((UU => "names" === UU.kind && !UU.names.some((UU => null !== Sg(UU.name)))));
-                                return "names" === (null === UU || void 0 === UU ? void 0 : UU.kind) ? UU.names.map((UU => UU.name)) : []
-                              }), [RU, pU]),
-                              hU = (0, tU.useMemo)((() => {
-                                if (!RU.hasTextPlayground) return [];
-                                const UU = pU.sections.flatMap((UU => UU.blocks.flatMap((UU => {
-                                  var RU;
-                                  return (null !== (RU = Zg(UU)) && void 0 !== RU ? RU : []).flatMap((UU => SR(UU.name) ? [UU.name] : []))
+                              xu = (0, Eu.useMemo)((() => {
+                                if (!Ru.hasParticlePlayground) return [];
+                                const uu = Gy(Ku.intro).find((uu => "names" === uu.kind && !uu.names.some((uu => null !== zy(uu.name)))));
+                                return "names" === (null === uu || void 0 === uu ? void 0 : uu.kind) ? uu.names.map((uu => uu.name)) : []
+                              }), [Ru, Ku]),
+                              pu = (0, Eu.useMemo)((() => {
+                                if (!Ru.hasTextPlayground) return [];
+                                const uu = Ku.sections.flatMap((uu => uu.blocks.flatMap((uu => {
+                                  var Ru;
+                                  return (null !== (Ru = Iy(uu)) && void 0 !== Ru ? Ru : []).flatMap((uu => zR(uu.name) ? [uu.name] : []))
                                 }))));
-                                return [...new Set(UU)]
-                              }), [RU, pU]),
-                              QU = (0, tU.useMemo)((() => cU ? pU.sections.filter((UU => function(UU, RU) {
-                                return !!UU.heading.text.toLowerCase().includes(RU) || UU.blocks.some((UU => (0, wU.h)(UU).toLowerCase().includes(RU)))
-                              }(UU, cU))) : pU.sections), [pU, cU]),
-                              eU = (0, tU.useMemo)((() => function(UU, RU) {
-                                return "article" !== UU.layout ? RU.map((UU => ({
-                                  anchor: UU.heading.anchor,
-                                  text: UU.heading.text,
+                                return [...new Set(uu)]
+                              }), [Ru, Ku]),
+                              Tu = (0, Eu.useMemo)((() => Vu ? Ku.sections.filter((uu => function(uu, Ru) {
+                                return !!uu.heading.text.toLowerCase().includes(Ru) || uu.blocks.some((uu => (0, eu.d)(uu).toLowerCase().includes(Ru)))
+                              }(uu, Vu))) : Ku.sections), [Ku, Vu]),
+                              Wu = (0, Eu.useMemo)((() => function(uu, Ru) {
+                                return "article" !== uu.layout ? Ru.map((uu => ({
+                                  anchor: uu.heading.anchor,
+                                  text: uu.heading.text,
                                   level: 2
-                                }))) : RU.flatMap((UU => {
-                                  const RU = UU.blocks.flatMap((UU => "heading" === UU.kind && 3 === UU.level ? [{
-                                    anchor: UU.anchor,
-                                    text: UU.text,
+                                }))) : Ru.flatMap((uu => {
+                                  const Ru = uu.blocks.flatMap((uu => "heading" === uu.kind && 3 === uu.level ? [{
+                                    anchor: uu.anchor,
+                                    text: uu.text,
                                     level: 3
                                   }] : []));
                                   return [{
-                                    anchor: UU.heading.anchor,
-                                    text: UU.heading.text,
+                                    anchor: uu.heading.anchor,
+                                    text: uu.heading.text,
                                     level: 2
-                                  }, ...RU]
+                                  }, ...Ru]
                                 }))
-                              }(RU, QU)), [RU, QU]);
-                            return (0, tU.useEffect)((() => {
-                              gU(eU)
-                            }), [eU, gU]), (0, CU.jsxs)("article", {
+                              }(Ru, Tu)), [Ru, Tu]);
+                            return (0, Eu.useEffect)((() => {
+                              yu(Wu)
+                            }), [Wu, yu]), (0, Su.jsxs)("article", {
                               className: "DocsPage",
-                              children: [(0, CU.jsxs)("header", {
+                              children: [(0, Su.jsxs)("header", {
                                 className: "DocsPageHeader",
-                                children: [(0, CU.jsx)("h1", {
+                                children: [(0, Su.jsx)("h1", {
                                   className: "DocsPageTitle",
-                                  children: pU.title || RU.title
-                                }), (0, CU.jsx)("p", {
+                                  children: Ku.title || Ru.title
+                                }), (0, Su.jsx)("p", {
                                   className: "DocsPageSummary",
-                                  children: RU.summary
-                                }), (0, CU.jsx)(Dt, {
-                                  page: RU
-                                }), TU && (0, CU.jsx)("div", {
+                                  children: Ru.summary
+                                }), (0, Su.jsx)(oE, {
+                                  page: Ru
+                                }), Ju && (0, Su.jsx)("div", {
                                   className: "DocsPageStats",
-                                  children: (0, CU.jsxs)("span", {
-                                    children: [(0, CU.jsx)("strong", {
-                                      children: pU.sections.length
-                                    }), " ", mE[RU.layout]]
+                                  children: (0, Su.jsxs)("span", {
+                                    children: [(0, Su.jsx)("strong", {
+                                      children: Ku.sections.length
+                                    }), " ", HQ[Ru.layout]]
                                   })
                                 })]
-                              }), "" === RU.slug && (0, CU.jsx)(Zt, {}), qU && (0, CU.jsx)(rt, {
-                                kind: qU
-                              }, qU), RU.hasParticlePlayground && (0, CU.jsx)(qp, {
-                                ref: GU,
-                                textures: uU
-                              }), !KU && pU.intro.length > 0 && (0, CU.jsx)("div", {
+                              }), "" === Ru.slug && (0, Su.jsx)(IE, {}), Nu && (0, Su.jsx)(sE, {
+                                kind: Nu
+                              }, Nu), Ru.hasParticlePlayground && (0, Su.jsx)(JK, {
+                                ref: ru,
+                                textures: xu
+                              }), !Xu && Ku.intro.length > 0 && (0, Su.jsx)("div", {
                                 className: "DocsProse DocsPageIntro",
-                                children: RU.gallery ? (0, CU.jsx)(et.Provider, {
-                                  value: RU.hasParticlePlayground ? jU : null,
-                                  children: (0, CU.jsx)(bt, {
-                                    kind: RU.gallery,
-                                    content: pU,
-                                    blocks: pU.intro
+                                children: Ru.gallery ? (0, Su.jsx)(WE.Provider, {
+                                  value: Ru.hasParticlePlayground ? Bu : null,
+                                  children: (0, Su.jsx)(DE, {
+                                    kind: Ru.gallery,
+                                    content: Ku,
+                                    blocks: Ku.intro
                                   })
-                                }) : (0, CU.jsx)(ug, {
-                                  blocks: ng(pU.intro)
+                                }) : (0, Su.jsx)(xy, {
+                                  blocks: Ay(Ku.intro)
                                 })
-                              }), RU.hasTextPlayground && (0, CU.jsx)(np, {
-                                fontAwesomeIcons: hU
-                              }), RU.hasVoicePlayground && (0, CU.jsx)(lp, {}), RU.childPageIds && (0, CU.jsx)(Zt, {
-                                cards: RU.childPageIds.map((UU => ({
-                                  pageId: UU
+                              }), Ru.hasTextPlayground && (0, Su.jsx)(kK, {
+                                fontAwesomeIcons: pu
+                              }), Ru.hasVoicePlayground && (0, Su.jsx)(OK, {}), Ru.childPageIds && (0, Su.jsx)(IE, {
+                                cards: Ru.childPageIds.map((uu => ({
+                                  pageId: uu
                                 }))),
-                                label: RU.title
-                              }), TU && (0, CU.jsx)(fg, {
+                                label: Ru.title
+                              }), Ju && (0, Su.jsx)(Hy, {
                                 className: "DocsFilterBar",
-                                value: EU,
-                                placeholder: `Filter ${pU.sections.length} ${mE[RU.layout]}\u2026`,
-                                label: `Filter ${mE[RU.layout]}`,
-                                onChange: PU,
-                                count: cU ? {
-                                  visible: QU.length,
-                                  total: pU.sections.length
+                                value: Qu,
+                                placeholder: `Filter ${Ku.sections.length} ${HQ[Ru.layout]}\u2026`,
+                                label: `Filter ${HQ[Ru.layout]}`,
+                                onChange: mu,
+                                count: Vu ? {
+                                  visible: Tu.length,
+                                  total: Ku.sections.length
                                 } : null
-                              }), !KU && (0, CU.jsxs)("div", {
-                                className: `DocsSections Layout-${RU.layout}`,
-                                children: [QU.map((UU => (0, CU.jsx)(IE, {
-                                  page: RU,
-                                  section: UU
-                                }, UU.heading.anchor))), 0 === QU.length && (0, CU.jsxs)("p", {
+                              }), !Xu && (0, Su.jsxs)("div", {
+                                className: `DocsSections Layout-${Ru.layout}`,
+                                children: [Tu.map((uu => (0, Su.jsx)(dQ, {
+                                  page: Ru,
+                                  section: uu
+                                }, uu.heading.anchor))), 0 === Tu.length && (0, Su.jsxs)("p", {
                                   className: "DocsEmpty",
-                                  children: ["No ", mE[RU.layout], " match \u201c", EU, "\u201d."]
+                                  children: ["No ", HQ[Ru.layout], " match \u201c", Qu, "\u201d."]
                                 })]
                               })]
                             })
                           }
-                          const wE = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
+                          const CQ = /^(\d+)(?:st|nd|rd|th)?\s+([A-Za-z]+)\s+(\d{4})$/;
 
-                          function nE(UU) {
+                          function kQ(uu) {
                             let {
-                              entry: RU,
-                              isActive: gU,
-                              onNavigate: tU,
-                              label: pU,
-                              children: PU
-                            } = UU;
-                            return (0, CU.jsx)("a", {
-                              href: `#${RU.anchor}`,
-                              "aria-label": pU,
-                              className: EU()(`Level${RU.level}`, {
-                                Active: gU
+                              entry: Ru,
+                              isActive: yu,
+                              onNavigate: Eu,
+                              label: Ku,
+                              children: mu
+                            } = uu;
+                            return (0, Su.jsx)("a", {
+                              href: `#${Ru.anchor}`,
+                              "aria-label": Ku,
+                              className: Qu()(`Level${Ru.level}`, {
+                                Active: yu
                               }),
-                              "aria-current": gU ? "location" : void 0,
-                              onClick: UU => {
-                                UU.preventDefault(), tU(RU.anchor)
+                              "aria-current": yu ? "location" : void 0,
+                              onClick: uu => {
+                                uu.preventDefault(), Eu(Ru.anchor)
                               },
-                              children: PU
+                              children: mu
                             })
                           }
 
-                          function bE(UU) {
+                          function eQ(uu) {
                             let {
-                              toc: RU,
-                              activeAnchor: gU,
-                              onNavigate: pU
-                            } = UU;
-                            const PU = Math.max(0, RU.findIndex((UU => UU.anchor === gU))),
-                              TU = (0, tU.useRef)(null),
-                              qU = (0, tU.useRef)(!1);
-                            (0, tU.useEffect)((() => {
-                              var UU, gU;
-                              const tU = null === (UU = TU.current) || void 0 === UU ? void 0 : UU.closest(".DocsToc"),
-                                pU = null === (gU = TU.current) || void 0 === gU ? void 0 : gU.querySelector(".DocsTimelineNotch.Active");
-                              if (!tU || !pU) return;
-                              let EU = 0;
-                              if (PU === RU.length - 1) EU = tU.scrollHeight;
-                              else if (PU > 0) {
-                                const UU = tU.getBoundingClientRect(),
-                                  RU = pU.getBoundingClientRect();
-                                EU = tU.scrollTop + RU.top + RU.height / 2 - (UU.top + tU.clientHeight / 2)
+                              toc: Ru,
+                              activeAnchor: yu,
+                              onNavigate: Ku
+                            } = uu;
+                            const mu = Math.max(0, Ru.findIndex((uu => uu.anchor === yu))),
+                              Ju = (0, Eu.useRef)(null),
+                              Nu = (0, Eu.useRef)(!1);
+                            (0, Eu.useEffect)((() => {
+                              var uu, yu;
+                              const Eu = null === (uu = Ju.current) || void 0 === uu ? void 0 : uu.closest(".DocsToc"),
+                                Ku = null === (yu = Ju.current) || void 0 === yu ? void 0 : yu.querySelector(".DocsTimelineNotch.Active");
+                              if (!Eu || !Ku) return;
+                              let Qu = 0;
+                              if (mu === Ru.length - 1) Qu = Eu.scrollHeight;
+                              else if (mu > 0) {
+                                const uu = Eu.getBoundingClientRect(),
+                                  Ru = Ku.getBoundingClientRect();
+                                Qu = Eu.scrollTop + Ru.top + Ru.height / 2 - (uu.top + Eu.clientHeight / 2)
                               }
-                              tU.scrollTo({
-                                top: EU,
-                                behavior: qU.current ? "smooth" : "auto"
-                              }), qU.current = !0
-                            }), [PU, RU.length]);
-                            const KU = [];
-                            return RU.forEach(((UU, RU) => {
-                              var gU, tU, pU;
-                              const EU = function(UU) {
-                                  const RU = UU.trim().match(wE);
-                                  return RU ? {
-                                    day: RU[1],
-                                    month: `${RU[2]} ${RU[3]}`
+                              Eu.scrollTo({
+                                top: Qu,
+                                behavior: Nu.current ? "smooth" : "auto"
+                              }), Nu.current = !0
+                            }), [mu, Ru.length]);
+                            const Xu = [];
+                            return Ru.forEach(((uu, Ru) => {
+                              var yu, Eu, Ku;
+                              const Qu = function(uu) {
+                                  const Ru = uu.trim().match(CQ);
+                                  return Ru ? {
+                                    day: Ru[1],
+                                    month: `${Ru[2]} ${Ru[3]}`
                                   } : null
-                                }(UU.text),
-                                PU = null !== (gU = null === EU || void 0 === EU ? void 0 : EU.month) && void 0 !== gU ? gU : null;
-                              null !== PU && (null === (tU = KU.at(-1)) || void 0 === tU ? void 0 : tU.month) === PU || KU.push({
-                                month: PU,
+                                }(uu.text),
+                                mu = null !== (yu = null === Qu || void 0 === Qu ? void 0 : Qu.month) && void 0 !== yu ? yu : null;
+                              null !== mu && (null === (Eu = Xu.at(-1)) || void 0 === Eu ? void 0 : Eu.month) === mu || Xu.push({
+                                month: mu,
                                 entries: []
-                              }), KU.at(-1).entries.push({
-                                entry: UU,
-                                day: null !== (pU = null === EU || void 0 === EU ? void 0 : EU.day) && void 0 !== pU ? pU : null,
-                                index: RU
+                              }), Xu.at(-1).entries.push({
+                                entry: uu,
+                                day: null !== (Ku = null === Qu || void 0 === Qu ? void 0 : Qu.day) && void 0 !== Ku ? Ku : null,
+                                index: Ru
                               })
-                            })), (0, CU.jsx)("ol", {
-                              ref: TU,
+                            })), (0, Su.jsx)("ol", {
+                              ref: Ju,
                               className: "DocsTimeline",
-                              children: KU.map((UU => {
+                              children: Xu.map((uu => {
                                 let {
-                                  month: RU,
-                                  entries: gU
-                                } = UU;
-                                return (0, CU.jsxs)("li", {
+                                  month: Ru,
+                                  entries: yu
+                                } = uu;
+                                return (0, Su.jsxs)("li", {
                                   className: "DocsTimelineMonth",
-                                  children: [RU && (0, CU.jsx)("span", {
+                                  children: [Ru && (0, Su.jsx)("span", {
                                     className: "DocsTimelineMonthName",
-                                    children: RU
-                                  }), (0, CU.jsx)("ol", {
-                                    children: gU.map((UU => {
+                                    children: Ru
+                                  }), (0, Su.jsx)("ol", {
+                                    children: yu.map((uu => {
                                       let {
-                                        entry: RU,
-                                        day: gU,
-                                        index: tU
-                                      } = UU;
-                                      return (0, CU.jsx)("li", {
-                                        className: EU()("DocsTimelineNotch", {
-                                          Passed: tU < PU,
-                                          Active: tU === PU
+                                        entry: Ru,
+                                        day: yu,
+                                        index: Eu
+                                      } = uu;
+                                      return (0, Su.jsx)("li", {
+                                        className: Qu()("DocsTimelineNotch", {
+                                          Passed: Eu < mu,
+                                          Active: Eu === mu
                                         }),
-                                        children: (0, CU.jsx)(nE, {
-                                          entry: RU,
-                                          isActive: tU === PU,
-                                          onNavigate: pU,
-                                          label: RU.text,
-                                          children: (0, CU.jsx)("span", {
+                                        children: (0, Su.jsx)(kQ, {
+                                          entry: Ru,
+                                          isActive: Eu === mu,
+                                          onNavigate: Ku,
+                                          label: Ru.text,
+                                          children: (0, Su.jsx)("span", {
                                             className: "DocsTimelineDay",
-                                            children: null !== gU && void 0 !== gU ? gU : RU.text
+                                            children: null !== yu && void 0 !== yu ? yu : Ru.text
                                           })
                                         })
-                                      }, RU.anchor)
+                                      }, Ru.anchor)
                                     }))
                                   })]
-                                }, gU[0].entry.anchor)
+                                }, yu[0].entry.anchor)
                               }))
                             })
                           }
 
-                          function oE(UU) {
+                          function AQ(uu) {
                             let {
-                              isChangelog: RU,
-                              toc: gU,
-                              activeAnchor: tU,
-                              onNavigate: pU
-                            } = UU;
-                            return 0 === gU.length ? null : (0, CU.jsxs)(CU.Fragment, {
-                              children: [(0, CU.jsx)("div", {
+                              isChangelog: Ru,
+                              toc: yu,
+                              activeAnchor: Eu,
+                              onNavigate: Ku
+                            } = uu;
+                            return 0 === yu.length ? null : (0, Su.jsxs)(Su.Fragment, {
+                              children: [(0, Su.jsx)("div", {
                                 className: "DocsTocTitle",
-                                children: RU ? "Updates" : "On this page"
-                              }), RU ? (0, CU.jsx)(bE, {
-                                toc: gU,
-                                activeAnchor: tU,
-                                onNavigate: pU
-                              }) : (0, CU.jsx)("ul", {
-                                children: gU.map((UU => (0, CU.jsx)("li", {
-                                  children: (0, CU.jsx)(nE, {
-                                    entry: UU,
-                                    isActive: UU.anchor === tU,
-                                    onNavigate: pU,
-                                    children: UU.text.replace(/`/g, "")
+                                children: Ru ? "Updates" : "On this page"
+                              }), Ru ? (0, Su.jsx)(eQ, {
+                                toc: yu,
+                                activeAnchor: Eu,
+                                onNavigate: Ku
+                              }) : (0, Su.jsx)("ul", {
+                                children: yu.map((uu => (0, Su.jsx)("li", {
+                                  children: (0, Su.jsx)(kQ, {
+                                    entry: uu,
+                                    isActive: uu.anchor === Eu,
+                                    onNavigate: Ku,
+                                    children: uu.text.replace(/`/g, "")
                                   })
-                                }, UU.anchor)))
+                                }, uu.anchor)))
                               })]
                             })
                           }
-                          const ZE = {
+                          const DQ = {
                               methods: "Method",
                               callbacks: "Callback",
                               settings: "Setting",
@@ -5200,7 +5200,7 @@ export const modules = {
                               snippets: "Snippet",
                               article: "Section"
                             },
-                            aE = {
+                            MQ = {
                               icons: "Icon",
                               particles: "Particle",
                               sounds: "Sound",
@@ -5208,1086 +5208,1086 @@ export const modules = {
                               blocks: "Block",
                               items: "Item"
                             },
-                            YE = 20,
-                            BE = 10,
-                            VE = 40,
-                            rE = 120;
-                          let XE;
+                            IQ = 20,
+                            GQ = 10,
+                            UQ = 40,
+                            nQ = 120;
+                          let sQ;
 
-                          function vE(UU) {
-                            const RU = UU.gallery;
-                            if (!RU) return [];
-                            if (Qg(RU)) return function(UU) {
-                              return Wg(UU).entries.map((UU => UU.name))
-                            }(RU).map((gU => ({
-                              page: UU,
-                              anchor: Bg(RU, gU),
-                              title: gU,
-                              kind: aE[RU],
+                          function tQ(uu) {
+                            const Ru = uu.gallery;
+                            if (!Ru) return [];
+                            if (Ty(Ru)) return function(uu) {
+                              return jy(uu).entries.map((uu => uu.name))
+                            }(Ru).map((yu => ({
+                              page: uu,
+                              anchor: ny(Ru, yu),
+                              title: yu,
+                              kind: MQ[Ru],
                               text: "",
-                              listedUnder: UU.title
+                              listedUnder: uu.title
                             })));
-                            const gU = sU(UU);
-                            return (0, wU.o)(gU).flatMap((tU => {
-                              const pU = tU.heading ? `${UU.title} \u203a ${tU.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : UU.title;
-                              return rg(RU, gU, tU.blocks).flatMap((gU => "names" !== gU.kind ? [] : gU.names.map((tU => {
-                                const EU = gU.isSongs ? "Song" : aE[RU];
+                            const yu = Fu(uu);
+                            return (0, eu.p)(yu).flatMap((Eu => {
+                              const Ku = Eu.heading ? `${uu.title} \u203a ${Eu.heading.text.replace(/\s*\(\d+[^)]*\)$/,"")}` : uu.title;
+                              return ty(Ru, yu, Eu.blocks).flatMap((yu => "names" !== yu.kind ? [] : yu.names.map((Eu => {
+                                const Qu = yu.isSongs ? "Song" : MQ[Ru];
                                 return {
-                                  page: UU,
-                                  anchor: tU.anchor,
-                                  title: tU.name,
-                                  kind: EU,
+                                  page: uu,
+                                  anchor: Eu.anchor,
+                                  title: Eu.name,
+                                  kind: Qu,
                                   text: "",
-                                  listedUnder: pU
+                                  listedUnder: Ku
                                 }
                               }))))
                             }))
                           }
 
-                          function dE(UU, RU, gU) {
-                            const tU = UU.title.toLowerCase();
-                            let pU = 0;
-                            if (tU === RU) pU = 100;
-                            else if (tU.startsWith(RU)) pU = 80;
-                            else if (tU.includes(RU)) pU = 60;
-                            else if (gU.every((UU => tU.includes(UU)))) pU = 45;
+                          function lQ(uu, Ru, yu) {
+                            const Eu = uu.title.toLowerCase();
+                            let Ku = 0;
+                            if (Eu === Ru) Ku = 100;
+                            else if (Eu.startsWith(Ru)) Ku = 80;
+                            else if (Eu.includes(Ru)) Ku = 60;
+                            else if (yu.every((uu => Eu.includes(uu)))) Ku = 45;
                             else {
-                              if (!UU.text.toLowerCase().includes(RU)) return 0;
-                              pU = 20
+                              if (!uu.text.toLowerCase().includes(Ru)) return 0;
+                              Ku = 20
                             }
-                            return pU - Math.min(tU.length / 10, 9) + ("Page" === UU.kind ? 8 : "Method" === UU.kind ? 3 : 0) - (UU.listedUnder ? YE : 0)
+                            return Ku - Math.min(Eu.length / 10, 9) + ("Page" === uu.kind ? 8 : "Method" === uu.kind ? 3 : 0) - (uu.listedUnder ? IQ : 0)
                           }
 
-                          function HE(UU, RU) {
-                            const gU = UU.toLowerCase().indexOf(RU),
-                              tU = Math.max(0, gU - rE / 3);
-                            return `${tU>0?"\u2026":""}${UU.slice(tU,tU+rE)}${tU+rE<UU.length?"\u2026":""}`
+                          function gQ(uu, Ru) {
+                            const yu = uu.toLowerCase().indexOf(Ru),
+                              Eu = Math.max(0, yu - nQ / 3);
+                            return `${Eu>0?"\u2026":""}${uu.slice(Eu,Eu+nQ)}${Eu+nQ<uu.length?"\u2026":""}`
                           }
 
-                          function SE(UU) {
+                          function cQ(uu) {
                             let {
-                              text: RU,
-                              query: gU
-                            } = UU;
-                            const tU = gU ? RU.toLowerCase().indexOf(gU) : -1;
-                            return -1 === tU ? (0, CU.jsx)(CU.Fragment, {
-                              children: RU
-                            }) : (0, CU.jsxs)(CU.Fragment, {
-                              children: [RU.slice(0, tU), (0, CU.jsx)("mark", {
-                                children: RU.slice(tU, tU + gU.length)
-                              }), RU.slice(tU + gU.length)]
+                              text: Ru,
+                              query: yu
+                            } = uu;
+                            const Eu = yu ? Ru.toLowerCase().indexOf(yu) : -1;
+                            return -1 === Eu ? (0, Su.jsx)(Su.Fragment, {
+                              children: Ru
+                            }) : (0, Su.jsxs)(Su.Fragment, {
+                              children: [Ru.slice(0, Eu), (0, Su.jsx)("mark", {
+                                children: Ru.slice(Eu, Eu + yu.length)
+                              }), Ru.slice(Eu + yu.length)]
                             })
                           }
 
-                          function sE(UU) {
+                          function LQ(uu) {
                             let {
-                              basePath: RU,
-                              onClose: gU
-                            } = UU;
-                            const pU = (0, TU.u)(),
-                              [PU, qU] = (0, tU.useState)(""),
-                              [KU, cU] = (0, tU.useState)(0),
-                              GU = (0, tU.useRef)(null),
-                              jU = (0, tU.useRef)(null),
-                              uU = PU.trim().toLowerCase(),
-                              hU = (0, tU.useMemo)((() => {
-                                const UU = (XE || (XE = vU.flatMap((UU => {
-                                  const RU = sU(UU);
+                              basePath: Ru,
+                              onClose: yu
+                            } = uu;
+                            const Ku = (0, Ju.t)(),
+                              [mu, Nu] = (0, Eu.useState)(""),
+                              [Xu, Vu] = (0, Eu.useState)(0),
+                              ru = (0, Eu.useRef)(null),
+                              Bu = (0, Eu.useRef)(null),
+                              xu = mu.trim().toLowerCase(),
+                              pu = (0, Eu.useMemo)((() => {
+                                const uu = (sQ || (sQ = gu.flatMap((uu => {
+                                  const Ru = Fu(uu);
                                   return [{
-                                    page: UU,
+                                    page: uu,
                                     anchor: "",
-                                    title: UU.title,
+                                    title: uu.title,
                                     kind: "Page",
-                                    text: UU.summary
-                                  }, ...RU.sections.flatMap((RU => {
-                                    const gU = RU.blocks.filter((UU => "paragraph" === UU.kind)).map(wU.h).join(" ").replace(/[`*]/g, ""),
-                                      tU = {
-                                        page: UU,
-                                        anchor: RU.heading.anchor,
-                                        title: RU.heading.text.replace(/`/g, ""),
-                                        kind: ZE[UU.layout],
-                                        text: gU
+                                    text: uu.summary
+                                  }, ...Ru.sections.flatMap((Ru => {
+                                    const yu = Ru.blocks.filter((uu => "paragraph" === uu.kind)).map(eu.d).join(" ").replace(/[`*]/g, ""),
+                                      Eu = {
+                                        page: uu,
+                                        anchor: Ru.heading.anchor,
+                                        title: Ru.heading.text.replace(/`/g, ""),
+                                        kind: DQ[uu.layout],
+                                        text: yu
                                       },
-                                      pU = RU.blocks.flatMap((RU => "article" === UU.layout && "heading" === RU.kind && 3 === RU.level ? [{
-                                        page: UU,
-                                        anchor: RU.anchor,
-                                        title: RU.text.replace(/`/g, ""),
+                                      Ku = Ru.blocks.flatMap((Ru => "article" === uu.layout && "heading" === Ru.kind && 3 === Ru.level ? [{
+                                        page: uu,
+                                        anchor: Ru.anchor,
+                                        title: Ru.text.replace(/`/g, ""),
                                         kind: "Section",
-                                        text: tU.title
+                                        text: Eu.title
                                       }] : []));
-                                    return [tU, ...pU]
-                                  })), ...vE(UU)]
-                                }))), XE);
-                                if (!uU) return UU.filter((UU => "Page" === UU.kind));
-                                const RU = uU.split(/\s+/);
-                                let gU = 0;
-                                return UU.map((UU => ({
-                                  entry: UU,
-                                  score: dE(UU, uU, RU)
-                                }))).filter((UU => UU.score > 0)).sort(((UU, RU) => RU.score - UU.score)).filter((UU => !UU.entry.listedUnder || (gU++, gU <= BE))).slice(0, VE).map((UU => UU.entry))
-                              }), [uU]);
-                            (0, tU.useEffect)((() => {
-                              cU(0)
-                            }), [uU]), (0, tU.useEffect)((() => {
-                              const UU = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+                                    return [Eu, ...Ku]
+                                  })), ...tQ(uu)]
+                                }))), sQ);
+                                if (!xu) return uu.filter((uu => "Page" === uu.kind));
+                                const Ru = xu.split(/\s+/);
+                                let yu = 0;
+                                return uu.map((uu => ({
+                                  entry: uu,
+                                  score: lQ(uu, xu, Ru)
+                                }))).filter((uu => uu.score > 0)).sort(((uu, Ru) => Ru.score - uu.score)).filter((uu => !uu.entry.listedUnder || (yu++, yu <= GQ))).slice(0, UQ).map((uu => uu.entry))
+                              }), [xu]);
+                            (0, Eu.useEffect)((() => {
+                              Vu(0)
+                            }), [xu]), (0, Eu.useEffect)((() => {
+                              const uu = document.activeElement instanceof HTMLElement ? document.activeElement : null;
                               return () => {
-                                null === UU || void 0 === UU || UU.focus()
+                                null === uu || void 0 === uu || uu.focus()
                               }
-                            }), []), (0, tU.useEffect)((() => {
-                              var UU, RU;
-                              null === (UU = GU.current) || void 0 === UU || null === (RU = UU.querySelector(".Active")) || void 0 === RU || RU.scrollIntoView({
+                            }), []), (0, Eu.useEffect)((() => {
+                              var uu, Ru;
+                              null === (uu = ru.current) || void 0 === uu || null === (Ru = uu.querySelector(".Active")) || void 0 === Ru || Ru.scrollIntoView({
                                 block: "nearest"
                               })
-                            }), [KU]);
-                            const eU = UU => {
-                              pU(iU(RU, UU.page, UU.anchor)), gU()
+                            }), [Xu]);
+                            const Wu = uu => {
+                              Ku(Pu(Ru, uu.page, uu.anchor)), yu()
                             };
-                            return (0, CU.jsx)("div", {
+                            return (0, Su.jsx)("div", {
                               className: "DocsSearchOverlay",
-                              onMouseDown: UU => {
-                                UU.target === UU.currentTarget && gU()
+                              onMouseDown: uu => {
+                                uu.target === uu.currentTarget && yu()
                               },
-                              children: (0, CU.jsxs)("div", {
+                              children: (0, Su.jsxs)("div", {
                                 className: "DocsSearchDialog",
                                 role: "dialog",
                                 "aria-modal": "true",
                                 "aria-label": "Search the docs",
-                                onMouseDown: UU => {
-                                  UU.target !== jU.current && UU.preventDefault()
+                                onMouseDown: uu => {
+                                  uu.target !== Bu.current && uu.preventDefault()
                                 },
-                                onKeyDown: UU => {
-                                  if ("Escape" === UU.key) gU();
-                                  else if ("Tab" === UU.key) {
-                                    var RU;
-                                    UU.preventDefault(), null === (RU = jU.current) || void 0 === RU || RU.focus()
+                                onKeyDown: uu => {
+                                  if ("Escape" === uu.key) yu();
+                                  else if ("Tab" === uu.key) {
+                                    var Ru;
+                                    uu.preventDefault(), null === (Ru = Bu.current) || void 0 === Ru || Ru.focus()
                                   }
                                 },
-                                children: [(0, CU.jsxs)("div", {
+                                children: [(0, Su.jsxs)("div", {
                                   className: "DocsSearchInputRow",
-                                  children: [(0, CU.jsx)(QU, {
+                                  children: [(0, Su.jsx)(Tu, {
                                     name: "magnifying-glass"
-                                  }), (0, CU.jsx)("input", {
-                                    ref: jU,
+                                  }), (0, Su.jsx)("input", {
+                                    ref: Bu,
                                     autoFocus: !0,
-                                    value: PU,
+                                    value: mu,
                                     placeholder: "Search methods, callbacks, settings and guides\u2026",
                                     "aria-label": "Search the docs",
                                     "aria-controls": "DocsSearchResults",
-                                    "aria-activedescendant": hU.length > 0 ? `DocsSearchResult-${KU}` : void 0,
-                                    onChange: UU => {
-                                      qU(UU.target.value)
+                                    "aria-activedescendant": pu.length > 0 ? `DocsSearchResult-${Xu}` : void 0,
+                                    onChange: uu => {
+                                      Nu(uu.target.value)
                                     },
-                                    onKeyDown: UU => {
-                                      if ("ArrowDown" === UU.key || "ArrowUp" === UU.key) {
-                                        UU.preventDefault();
-                                        const RU = "ArrowDown" === UU.key ? 1 : -1;
-                                        cU((KU + RU + hU.length) % Math.max(hU.length, 1))
-                                      } else "Enter" === UU.key && hU[KU] && eU(hU[KU])
+                                    onKeyDown: uu => {
+                                      if ("ArrowDown" === uu.key || "ArrowUp" === uu.key) {
+                                        uu.preventDefault();
+                                        const Ru = "ArrowDown" === uu.key ? 1 : -1;
+                                        Vu((Xu + Ru + pu.length) % Math.max(pu.length, 1))
+                                      } else "Enter" === uu.key && pu[Xu] && Wu(pu[Xu])
                                     }
-                                  }), (0, CU.jsx)("kbd", {
+                                  }), (0, Su.jsx)("kbd", {
                                     children: "Esc"
                                   })]
-                                }), (0, CU.jsxs)("ul", {
+                                }), (0, Su.jsxs)("ul", {
                                   id: "DocsSearchResults",
-                                  ref: GU,
+                                  ref: ru,
                                   className: "DocsSearchResults",
                                   role: "listbox",
-                                  children: [!uU && (0, CU.jsx)("li", {
+                                  children: [!xu && (0, Su.jsx)("li", {
                                     className: "DocsSearchHint",
                                     children: "Jump to a page"
-                                  }), hU.map(((UU, RU) => {
-                                    var gU;
-                                    return (0, CU.jsxs)("li", {
-                                      id: `DocsSearchResult-${RU}`,
+                                  }), pu.map(((uu, Ru) => {
+                                    var yu;
+                                    return (0, Su.jsxs)("li", {
+                                      id: `DocsSearchResult-${Ru}`,
                                       role: "option",
-                                      "aria-selected": RU === KU,
-                                      className: EU()("DocsSearchResult", {
-                                        Active: RU === KU
+                                      "aria-selected": Ru === Xu,
+                                      className: Qu()("DocsSearchResult", {
+                                        Active: Ru === Xu
                                       }),
                                       onMouseMove: () => {
-                                        cU(RU)
+                                        Vu(Ru)
                                       },
                                       onClick: () => {
-                                        eU(UU)
+                                        Wu(uu)
                                       },
-                                      children: [(0, CU.jsx)(QU, {
-                                        name: UU.page.icon
-                                      }), (0, CU.jsxs)("div", {
+                                      children: [(0, Su.jsx)(Tu, {
+                                        name: uu.page.icon
+                                      }), (0, Su.jsxs)("div", {
                                         className: "DocsSearchResultText",
-                                        children: [(0, CU.jsx)("div", {
+                                        children: [(0, Su.jsx)("div", {
                                           className: "DocsSearchResultTitle",
-                                          children: (0, CU.jsx)(SE, {
-                                            text: UU.title,
-                                            query: uU
+                                          children: (0, Su.jsx)(cQ, {
+                                            text: uu.title,
+                                            query: xu
                                           })
-                                        }), UU.text && (0, CU.jsx)("div", {
+                                        }), uu.text && (0, Su.jsx)("div", {
                                           className: "DocsSearchResultSnippet",
-                                          children: (0, CU.jsx)(SE, {
-                                            text: HE(UU.text, uU),
-                                            query: uU
+                                          children: (0, Su.jsx)(cQ, {
+                                            text: gQ(uu.text, xu),
+                                            query: xu
                                           })
                                         })]
-                                      }), (0, CU.jsx)("span", {
+                                      }), (0, Su.jsx)("span", {
                                         className: "DocsSearchResultMeta",
-                                        children: "Page" === UU.kind ? "Page" : null !== (gU = UU.listedUnder) && void 0 !== gU ? gU : `${UU.kind} \xb7 ${UU.page.title}`
+                                        children: "Page" === uu.kind ? "Page" : null !== (yu = uu.listedUnder) && void 0 !== yu ? yu : `${uu.kind} \xb7 ${uu.page.title}`
                                       })]
-                                    }, `${UU.page.id}#${UU.anchor}`)
-                                  })), uU && 0 === hU.length && (0, CU.jsxs)("li", {
+                                    }, `${uu.page.id}#${uu.anchor}`)
+                                  })), xu && 0 === pu.length && (0, Su.jsxs)("li", {
                                     className: "DocsSearchHint",
-                                    children: ["Nothing matches \u201c", PU, "\u201d."]
+                                    children: ["Nothing matches \u201c", mu, "\u201d."]
                                   })]
                                 })]
                               })
                             })
                           }
 
-                          function yE(UU, RU) {
-                            if (RU < 10) return `${UU.toFixed(1)}s`;
-                            const gU = Math.floor(UU);
-                            return `${Math.floor(gU/60)}:${String(gU%60).padStart(2,"0")}`
+                          function zQ(uu, Ru) {
+                            if (Ru < 10) return `${uu.toFixed(1)}s`;
+                            const yu = Math.floor(uu);
+                            return `${Math.floor(yu/60)}:${String(yu%60).padStart(2,"0")}`
                           }
 
-                          function kE() {
-                            const UU = ct((UU => UU.track)),
-                              RU = ct((UU => UU.volume)),
-                              [gU, pU] = (0, tU.useState)(0),
-                              PU = (0, tU.useRef)(Rt);
-                            if ((0, tU.useEffect)((() => {
-                                if (!UU) return;
-                                if (pU(Ct()), "playing" !== UU.status) return;
-                                let RU = 0;
-                                const gU = () => {
-                                  pU(Ct()), RU = requestAnimationFrame(gU)
+                          function FQ() {
+                            const uu = VE((uu => uu.track)),
+                              Ru = VE((uu => uu.volume)),
+                              [yu, Ku] = (0, Eu.useState)(0),
+                              mu = (0, Eu.useRef)(RE);
+                            if ((0, Eu.useEffect)((() => {
+                                if (!uu) return;
+                                if (Ku(SE()), "playing" !== uu.status) return;
+                                let Ru = 0;
+                                const yu = () => {
+                                  Ku(SE()), Ru = requestAnimationFrame(yu)
                                 };
-                                return RU = requestAnimationFrame(gU), () => {
-                                  cancelAnimationFrame(RU)
+                                return Ru = requestAnimationFrame(yu), () => {
+                                  cancelAnimationFrame(Ru)
                                 }
-                              }), [UU]), !UU) return null;
-                            const TU = "paused" !== UU.status,
-                              qU = Math.min(gU, UU.duration);
-                            return (0, CU.jsx)("div", {
+                              }), [uu]), !uu) return null;
+                            const Ju = "paused" !== uu.status,
+                              Nu = Math.min(yu, uu.duration);
+                            return (0, Su.jsx)("div", {
                               className: "DocsSoundPlayerDock",
-                              children: (0, CU.jsxs)("section", {
+                              children: (0, Su.jsxs)("section", {
                                 className: "DocsSoundPlayer",
                                 "aria-label": "Sound player",
-                                children: [(0, CU.jsx)("button", {
+                                children: [(0, Su.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerToggle",
-                                  "aria-label": TU ? `Pause ${UU.name}` : `Play ${UU.name}`,
-                                  onClick: ut,
-                                  children: (0, CU.jsx)(QU, {
-                                    name: TU ? "pause" : "play"
+                                  "aria-label": Ju ? `Pause ${uu.name}` : `Play ${uu.name}`,
+                                  onClick: xE,
+                                  children: (0, Su.jsx)(Tu, {
+                                    name: Ju ? "pause" : "play"
                                   })
-                                }), (0, CU.jsxs)("div", {
+                                }), (0, Su.jsxs)("div", {
                                   className: "DocsSoundPlayerTrack",
-                                  children: [(0, CU.jsxs)("div", {
+                                  children: [(0, Su.jsxs)("div", {
                                     className: "DocsSoundPlayerTitle",
-                                    children: [(0, CU.jsx)("code", {
-                                      children: UU.name
-                                    }), (0, CU.jsx)("span", {
-                                      children: UU.isSong ? "Song" : "Sound"
+                                    children: [(0, Su.jsx)("code", {
+                                      children: uu.name
+                                    }), (0, Su.jsx)("span", {
+                                      children: uu.isSong ? "Song" : "Sound"
                                     })]
-                                  }), (0, CU.jsxs)("div", {
+                                  }), (0, Su.jsxs)("div", {
                                     className: "DocsSoundPlayerScrubber",
-                                    children: [(0, CU.jsx)("span", {
-                                      children: yE(qU, UU.duration)
-                                    }), (0, CU.jsx)("input", {
+                                    children: [(0, Su.jsx)("span", {
+                                      children: zQ(Nu, uu.duration)
+                                    }), (0, Su.jsx)("input", {
                                       type: "range",
                                       min: 0,
-                                      max: UU.duration || 1,
+                                      max: uu.duration || 1,
                                       step: .01,
-                                      value: qU,
-                                      disabled: 0 === UU.duration,
+                                      value: Nu,
+                                      disabled: 0 === uu.duration,
                                       "aria-label": "Position",
-                                      "aria-valuetext": `${yE(qU,UU.duration)} of ${yE(UU.duration,UU.duration)}`,
-                                      onChange: UU => {
-                                        const RU = Number(UU.target.value);
-                                        ! function(UU) {
-                                          var RU;
-                                          Pt = UU, null === (RU = pt) || void 0 === RU || RU.seek(UU)
-                                        }(RU), pU(RU)
+                                      "aria-valuetext": `${zQ(Nu,uu.duration)} of ${zQ(uu.duration,uu.duration)}`,
+                                      onChange: uu => {
+                                        const Ru = Number(uu.target.value);
+                                        ! function(uu) {
+                                          var Ru;
+                                          mE = uu, null === (Ru = KE) || void 0 === Ru || Ru.seek(uu)
+                                        }(Ru), Ku(Ru)
                                       }
-                                    }), (0, CU.jsx)("span", {
-                                      children: UU.duration > 0 ? yE(UU.duration, UU.duration) : "\u2013"
+                                    }), (0, Su.jsx)("span", {
+                                      children: uu.duration > 0 ? zQ(uu.duration, uu.duration) : "\u2013"
                                     })]
                                   })]
-                                }), (0, CU.jsxs)("div", {
+                                }), (0, Su.jsxs)("div", {
                                   className: "DocsSoundPlayerVolume",
-                                  children: [(0, CU.jsx)("button", {
+                                  children: [(0, Su.jsx)("button", {
                                     type: "button",
-                                    "aria-label": 0 === RU ? "Unmute" : "Mute",
+                                    "aria-label": 0 === Ru ? "Unmute" : "Mute",
                                     onClick: () => {
-                                      0 === RU ? ht(PU.current) : (PU.current = RU, ht(0))
+                                      0 === Ru ? pE(mu.current) : (mu.current = Ru, pE(0))
                                     },
-                                    children: (0, CU.jsx)(QU, {
+                                    children: (0, Su.jsx)(Tu, {
                                       name: "volume",
-                                      className: EU()({
-                                        Muted: 0 === RU
+                                      className: Qu()({
+                                        Muted: 0 === Ru
                                       })
                                     })
-                                  }), (0, CU.jsx)("input", {
+                                  }), (0, Su.jsx)("input", {
                                     type: "range",
                                     min: 0,
                                     max: 1,
                                     step: .01,
-                                    value: RU,
+                                    value: Ru,
                                     "aria-label": "Volume",
-                                    onChange: UU => {
-                                      ht(Number(UU.target.value))
+                                    onChange: uu => {
+                                      pE(Number(uu.target.value))
                                     }
                                   })]
-                                }), (0, CU.jsx)("button", {
+                                }), (0, Su.jsx)("button", {
                                   type: "button",
                                   className: "DocsSoundPlayerClose",
                                   "aria-label": "Close the player",
                                   onClick: () => {
-                                    var RU;
-                                    null === (RU = document.querySelector(`[data-docs-track="${CSS.escape(gt(UU.name,UU.isSong))}"]`)) || void 0 === RU || RU.focus(), Qt()
+                                    var Ru;
+                                    null === (Ru = document.querySelector(`[data-docs-track="${CSS.escape(yE(uu.name,uu.isSong))}"]`)) || void 0 === Ru || Ru.focus(), TE()
                                   },
-                                  children: (0, CU.jsx)(QU, {
+                                  children: (0, Su.jsx)(Tu, {
                                     name: "cross"
                                   })
                                 })]
                               })
                             })
                           }
-                          var FE = gU(34);
-                          const iE = "docsTheme",
-                            AE = window.matchMedia("(prefers-color-scheme: light)");
+                          var wQ = yu(47);
+                          const ZQ = "docsTheme",
+                            hQ = window.matchMedia("(prefers-color-scheme: light)");
 
-                          function zE(UU) {
+                          function PQ(uu) {
                             let {
-                              theme: RU,
-                              onChange: gU
-                            } = UU;
-                            const tU = "dark" === RU ? "light" : "dark";
-                            return (0, CU.jsx)("button", {
+                              theme: Ru,
+                              onChange: yu
+                            } = uu;
+                            const Eu = "dark" === Ru ? "light" : "dark";
+                            return (0, Su.jsx)("button", {
                               type: "button",
                               className: "DocsIconButton DocsThemeToggle",
-                              "aria-label": `Switch to ${tU} theme`,
-                              title: `Switch to ${tU} theme`,
+                              "aria-label": `Switch to ${Eu} theme`,
+                              title: `Switch to ${Eu} theme`,
                               onClick: () => {
-                                gU(tU)
+                                yu(Eu)
                               },
-                              children: (0, CU.jsx)(QU, {
-                                name: "dark" === RU ? "moon" : "sun"
+                              children: (0, Su.jsx)(Tu, {
+                                name: "dark" === Ru ? "moon" : "sun"
                               })
                             })
                           }
-                          const ME = "https://github.com/Bloxdy/code-api",
-                            DE = "https://discord.gg/playbloxd",
-                            LE = 180,
-                            NE = /Mac|iPhone|iPad/.test(navigator.userAgent);
+                          const iQ = "https://github.com/Bloxdy/code-api",
+                            YQ = "https://discord.gg/playbloxd",
+                            oQ = 180,
+                            qQ = /Mac|iPhone|iPad/.test(navigator.userAgent);
 
-                          function lE(UU) {
+                          function OQ(uu) {
                             let {
-                              basePath: RU,
-                              activePageId: gU,
-                              onNavigate: tU
-                            } = UU;
-                            return (0, CU.jsx)("nav", {
+                              basePath: Ru,
+                              activePageId: yu,
+                              onNavigate: Eu
+                            } = uu;
+                            return (0, Su.jsx)("nav", {
                               className: "DocsNav",
                               "aria-label": "Documentation",
-                              children: dU.map((UU => (0, CU.jsxs)("div", {
+                              children: cu.map((uu => (0, Su.jsxs)("div", {
                                 className: "DocsNavGroup",
-                                children: [(0, CU.jsx)("div", {
+                                children: [(0, Su.jsx)("div", {
                                   className: "DocsNavGroupTitle",
-                                  children: UU.title
-                                }), UU.pageIds.map((UU => {
-                                  var pU;
-                                  const TU = HU(UU);
-                                  return (0, CU.jsxs)(PU.c, {
-                                    to: iU(RU, TU),
-                                    className: EU()("DocsNavLink", {
-                                      Active: TU.id === gU
+                                  children: uu.title
+                                }), uu.pageIds.map((uu => {
+                                  var Ku;
+                                  const Ju = Lu(uu);
+                                  return (0, Su.jsxs)(mu.c, {
+                                    to: Pu(Ru, Ju),
+                                    className: Qu()("DocsNavLink", {
+                                      Active: Ju.id === yu
                                     }),
-                                    "aria-current": TU.id === gU ? "page" : void 0,
-                                    onClick: tU,
-                                    children: [(0, CU.jsx)(QU, {
-                                      name: TU.icon
-                                    }), (0, CU.jsx)("span", {
-                                      children: null !== (pU = TU.navTitle) && void 0 !== pU ? pU : TU.title
+                                    "aria-current": Ju.id === yu ? "page" : void 0,
+                                    onClick: Eu,
+                                    children: [(0, Su.jsx)(Tu, {
+                                      name: Ju.icon
+                                    }), (0, Su.jsx)("span", {
+                                      children: null !== (Ku = Ju.navTitle) && void 0 !== Ku ? Ku : Ju.title
                                     })]
-                                  }, TU.id)
+                                  }, Ju.id)
                                 }))]
-                              }, UU.title)))
+                              }, uu.title)))
                             })
                           }
 
-                          function OE(UU) {
+                          function vQ(uu) {
                             let {
-                              basePath: RU,
-                              pageId: gU
-                            } = UU;
-                            const tU = dU.flatMap((UU => UU.pageIds)),
-                              pU = tU.indexOf(gU),
-                              EU = pU > 0 ? HU(tU[pU - 1]) : null,
-                              TU = pU < tU.length - 1 ? HU(tU[pU + 1]) : null;
-                            return (0, CU.jsxs)("nav", {
+                              basePath: Ru,
+                              pageId: yu
+                            } = uu;
+                            const Eu = cu.flatMap((uu => uu.pageIds)),
+                              Ku = Eu.indexOf(yu),
+                              Qu = Ku > 0 ? Lu(Eu[Ku - 1]) : null,
+                              Ju = Ku < Eu.length - 1 ? Lu(Eu[Ku + 1]) : null;
+                            return (0, Su.jsxs)("nav", {
                               className: "DocsPager",
                               "aria-label": "Pages",
-                              children: [EU ? (0, CU.jsxs)(PU.c, {
+                              children: [Qu ? (0, Su.jsxs)(mu.c, {
                                 className: "DocsPagerLink Previous",
-                                to: iU(RU, EU),
-                                children: [(0, CU.jsx)("span", {
+                                to: Pu(Ru, Qu),
+                                children: [(0, Su.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Previous"
-                                }), (0, CU.jsx)("span", {
+                                }), (0, Su.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: EU.title
+                                  children: Qu.title
                                 })]
-                              }) : (0, CU.jsx)("span", {}), TU && (0, CU.jsxs)(PU.c, {
+                              }) : (0, Su.jsx)("span", {}), Ju && (0, Su.jsxs)(mu.c, {
                                 className: "DocsPagerLink Next",
-                                to: iU(RU, TU),
-                                children: [(0, CU.jsx)("span", {
+                                to: Pu(Ru, Ju),
+                                children: [(0, Su.jsx)("span", {
                                   className: "DocsPagerLabel",
                                   children: "Next"
-                                }), (0, CU.jsx)("span", {
+                                }), (0, Su.jsx)("span", {
                                   className: "DocsPagerTitle",
-                                  children: TU.title
+                                  children: Ju.title
                                 })]
                               })]
                             })
                           }
 
-                          function UP(UU) {
+                          function aQ(uu) {
                             let {
-                              basePath: RU,
-                              embedded: gU = !1
-                            } = UU;
+                              basePath: Ru,
+                              embedded: yu = !1
+                            } = uu;
                             const {
-                              pageSlug: pU = ""
-                            } = (0, TU.y)(), KU = (0, TU.s)(), cU = (0, TU.u)(), GU = (jU = pU, vU.find((UU => UU.slug === jU)));
-                            var jU;
-                            const [uU, hU] = function() {
-                              const [UU, RU] = (0, tU.useState)((() => {
-                                const UU = FE.k.getItem(iE);
-                                return "dark" === UU || "light" === UU ? UU : null
-                              })), [gU, pU] = (0, tU.useState)(AE.matches ? "light" : "dark");
-                              return (0, tU.useEffect)((() => {
-                                const UU = () => {
-                                  pU(AE.matches ? "light" : "dark")
+                              pageSlug: Ku = ""
+                            } = (0, Ju.A)(), Xu = (0, Ju.s)(), Vu = (0, Ju.t)(), ru = (Bu = Ku, gu.find((uu => uu.slug === Bu)));
+                            var Bu;
+                            const [xu, pu] = function() {
+                              const [uu, Ru] = (0, Eu.useState)((() => {
+                                const uu = wQ.i.getItem(ZQ);
+                                return "dark" === uu || "light" === uu ? uu : null
+                              })), [yu, Ku] = (0, Eu.useState)(hQ.matches ? "light" : "dark");
+                              return (0, Eu.useEffect)((() => {
+                                const uu = () => {
+                                  Ku(hQ.matches ? "light" : "dark")
                                 };
-                                return AE.addEventListener("change", UU), () => {
-                                  AE.removeEventListener("change", UU)
+                                return hQ.addEventListener("change", uu), () => {
+                                  hQ.removeEventListener("change", uu)
                                 }
-                              }), []), [null !== UU && void 0 !== UU ? UU : gU, UU => {
-                                FE.k.setItem(iE, UU), RU(UU)
+                              }), []), [null !== uu && void 0 !== uu ? uu : yu, uu => {
+                                wQ.i.setItem(ZQ, uu), Ru(uu)
                               }]
-                            }(), [eU, WU] = (0, tU.useState)(null), [fU, xU] = (0, tU.useState)(!1), [mU, IU] = (0, tU.useState)(!1), [JU, nU] = (0, tU.useState)([]), bU = function(UU, RU) {
-                              const [gU, pU] = (0, tU.useState)("");
-                              return (0, tU.useEffect)((() => {
-                                if (!RU) return;
-                                let gU = 0;
-                                const tU = () => {
-                                    var tU, EU;
-                                    gU = 0;
-                                    const PU = RU.getBoundingClientRect().top + LE;
-                                    let TU = null !== (tU = null === (EU = UU[0]) || void 0 === EU ? void 0 : EU.anchor) && void 0 !== tU ? tU : "";
-                                    for (const RU of UU) {
-                                      const UU = document.getElementById(RU.anchor);
-                                      UU && UU.getBoundingClientRect().top <= PU && (TU = RU.anchor)
+                            }(), [Wu, ju] = (0, Eu.useState)(null), [Hu, du] = (0, Eu.useState)(!1), [bu, Cu] = (0, Eu.useState)(!1), [ku, Au] = (0, Eu.useState)([]), Du = function(uu, Ru) {
+                              const [yu, Ku] = (0, Eu.useState)("");
+                              return (0, Eu.useEffect)((() => {
+                                if (!Ru) return;
+                                let yu = 0;
+                                const Eu = () => {
+                                    var Eu, Qu;
+                                    yu = 0;
+                                    const mu = Ru.getBoundingClientRect().top + oQ;
+                                    let Ju = null !== (Eu = null === (Qu = uu[0]) || void 0 === Qu ? void 0 : Qu.anchor) && void 0 !== Eu ? Eu : "";
+                                    for (const Ru of uu) {
+                                      const uu = document.getElementById(Ru.anchor);
+                                      uu && uu.getBoundingClientRect().top <= mu && (Ju = Ru.anchor)
                                     }
-                                    RU.scrollTop + RU.clientHeight >= RU.scrollHeight - 2 && RU.scrollTop > 0 && UU.length > 0 && (TU = UU[UU.length - 1].anchor), pU(TU)
+                                    Ru.scrollTop + Ru.clientHeight >= Ru.scrollHeight - 2 && Ru.scrollTop > 0 && uu.length > 0 && (Ju = uu[uu.length - 1].anchor), Ku(Ju)
                                   },
-                                  EU = () => {
-                                    gU || (gU = requestAnimationFrame(tU))
+                                  Qu = () => {
+                                    yu || (yu = requestAnimationFrame(Eu))
                                   };
-                                return tU(), RU.addEventListener("scroll", EU, {
+                                return Eu(), Ru.addEventListener("scroll", Qu, {
                                   passive: !0
                                 }), () => {
-                                  cancelAnimationFrame(gU), RU.removeEventListener("scroll", EU)
+                                  cancelAnimationFrame(yu), Ru.removeEventListener("scroll", Qu)
                                 }
-                              }), [UU, RU]), gU
-                            }(JU, eU), oU = "" === pU && KU.hash ? function(UU) {
-                              const RU = (0, wU.m)(UU);
-                              if (yU(HU("welcome"), RU)) return null;
-                              const gU = Object.hasOwn(FU, RU) ? FU[RU] : null;
-                              if (gU) return {
-                                page: HU(gU.pageId),
-                                anchor: gU.anchor
+                              }), [uu, Ru]), yu
+                            }(ku, Wu), Mu = "" === Ku && Xu.hash ? function(uu) {
+                              const Ru = (0, eu.i)(uu);
+                              if (wu(Lu("welcome"), Ru)) return null;
+                              const yu = Object.hasOwn(hu, Ru) ? hu[Ru] : null;
+                              if (yu) return {
+                                page: Lu(yu.pageId),
+                                anchor: yu.anchor
                               };
-                              const tU = HU("readme");
-                              return yU(tU, RU) ? {
-                                page: tU,
-                                anchor: RU
-                              } : kU(`#${RU}`)
-                            }(KU.hash) : null;
-                            (0, tU.useEffect)((() => (qU.b.set({
+                              const Eu = Lu("readme");
+                              return wu(Eu, Ru) ? {
+                                page: Eu,
+                                anchor: Ru
+                              } : Zu(`#${Ru}`)
+                            }(Xu.hash) : null;
+                            (0, Eu.useEffect)((() => (Nu.d.set({
                               musicOnFromPage: !1
                             }), () => {
-                              qU.b.set({
+                              Nu.d.set({
                                 musicOnFromPage: !0
-                              }), Qt()
-                            })), []), (0, tU.useEffect)((() => {
-                              const UU = UU => {
-                                const RU = UU.target;
-                                if (RU.closest(".DocsTextDialog")) return;
-                                const gU = RU.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(RU.tagName);
-                                "k" === UU.key && (UU.metaKey || UU.ctrlKey) || "/" === UU.key && !gU ? (UU.preventDefault(), IU(!0)) : "Escape" === UU.key && xU(!1)
+                              }), TE()
+                            })), []), (0, Eu.useEffect)((() => {
+                              const uu = uu => {
+                                const Ru = uu.target;
+                                if (Ru.closest(".DocsTextDialog")) return;
+                                const yu = Ru.isContentEditable || ["INPUT", "TEXTAREA", "SELECT"].includes(Ru.tagName);
+                                "k" === uu.key && (uu.metaKey || uu.ctrlKey) || "/" === uu.key && !yu ? (uu.preventDefault(), Cu(!0)) : "Escape" === uu.key && du(!1)
                               };
-                              return window.addEventListener("keydown", UU), () => {
-                                window.removeEventListener("keydown", UU)
+                              return window.addEventListener("keydown", uu), () => {
+                                window.removeEventListener("keydown", uu)
                               }
                             }), []);
-                            const ZU = (0, tU.useRef)(null);
-                            (0, tU.useLayoutEffect)((() => {
-                              var UU, RU;
-                              if (!eU) return;
-                              const gU = ZU.current === KU.pathname;
-                              ZU.current = KU.pathname;
-                              const tU = (0, wU.m)(KU.hash),
-                                pU = tU ? document.getElementById(tU) : null;
-                              if (null === (UU = eU.querySelector(".DocsTargeted")) || void 0 === UU || UU.classList.remove("DocsTargeted"), null === pU || void 0 === pU || null === (RU = pU.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === RU || RU.classList.add("DocsTargeted"), pU) {
-                                var EU;
-                                const UU = pU.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
-                                (null !== (EU = pU.closest(".DocsChangelogEntry")) && void 0 !== EU ? EU : pU).scrollIntoView({
-                                  block: UU ? "center" : "start",
-                                  behavior: gU ? "smooth" : "auto"
+                            const Iu = (0, Eu.useRef)(null);
+                            (0, Eu.useLayoutEffect)((() => {
+                              var uu, Ru;
+                              if (!Wu) return;
+                              const yu = Iu.current === Xu.pathname;
+                              Iu.current = Xu.pathname;
+                              const Eu = (0, eu.i)(Xu.hash),
+                                Ku = Eu ? document.getElementById(Eu) : null;
+                              if (null === (uu = Wu.querySelector(".DocsTargeted")) || void 0 === uu || uu.classList.remove("DocsTargeted"), null === Ku || void 0 === Ku || null === (Ru = Ku.closest(".DocsCard, .DocsParam, .DocsTile, .DocsSoundTile")) || void 0 === Ru || Ru.classList.add("DocsTargeted"), Ku) {
+                                var Qu;
+                                const uu = Ku.matches(".DocsTile, .DocsSoundTile, .DocsCatalogueTile");
+                                (null !== (Qu = Ku.closest(".DocsChangelogEntry")) && void 0 !== Qu ? Qu : Ku).scrollIntoView({
+                                  block: uu ? "center" : "start",
+                                  behavior: yu ? "smooth" : "auto"
                                 })
-                              } else gU || eU.scrollTo({
+                              } else yu || Wu.scrollTo({
                                 top: 0
                               })
-                            }), [eU, KU.pathname, KU.hash, KU.key]);
-                            const aU = (0, tU.useCallback)((() => {
-                                xU(!1)
+                            }), [Wu, Xu.pathname, Xu.hash, Xu.key]);
+                            const Gu = (0, Eu.useCallback)((() => {
+                                du(!1)
                               }), []),
-                              YU = (0, tU.useCallback)((UU => {
-                                cU({
-                                  hash: UU
+                              Uu = (0, Eu.useCallback)((uu => {
+                                Vu({
+                                  hash: uu
                                 })
-                              }), [cU]);
-                            if (oU) return (0, CU.jsx)(TU.d, {
+                              }), [Vu]);
+                            if (Mu) return (0, Su.jsx)(Ju.d, {
                               replace: !0,
-                              to: iU(RU, oU.page, oU.anchor)
+                              to: Pu(Ru, Mu.page, Mu.anchor)
                             });
-                            if (!GU) return (0, CU.jsx)(TU.d, {
+                            if (!ru) return (0, Su.jsx)(Ju.d, {
                               replace: !0,
-                              to: RU
+                              to: Ru
                             });
-                            const BU = gU ? "div" : "main";
-                            return (0, CU.jsx)(uR.Provider, {
-                              value: RU,
-                              children: (0, CU.jsx)(CR.Provider, {
-                                value: eU,
-                                children: (0, CU.jsxs)("div", {
-                                  ref: WU,
-                                  className: EU()("DocsSite", {
-                                    Embedded: gU,
-                                    NavOpen: fU
+                            const nu = yu ? "div" : "main";
+                            return (0, Su.jsx)(xR.Provider, {
+                              value: Ru,
+                              children: (0, Su.jsx)(SR.Provider, {
+                                value: Wu,
+                                children: (0, Su.jsxs)("div", {
+                                  ref: ju,
+                                  className: Qu()("DocsSite", {
+                                    Embedded: yu,
+                                    NavOpen: Hu
                                   }),
-                                  "data-theme": uU,
-                                  children: [(0, CU.jsxs)("header", {
+                                  "data-theme": xu,
+                                  children: [(0, Su.jsxs)("header", {
                                     className: "DocsTopBar",
-                                    children: [(0, CU.jsx)("button", {
+                                    children: [(0, Su.jsx)("button", {
                                       type: "button",
                                       className: "DocsIconButton DocsMenuButton",
-                                      "aria-label": fU ? "Close menu" : "Open menu",
-                                      "aria-expanded": fU,
+                                      "aria-label": Hu ? "Close menu" : "Open menu",
+                                      "aria-expanded": Hu,
                                       onClick: () => {
-                                        xU(!fU)
+                                        du(!Hu)
                                       },
-                                      children: (0, CU.jsx)(QU, {
-                                        name: fU ? "cross" : "menu"
+                                      children: (0, Su.jsx)(Tu, {
+                                        name: Hu ? "cross" : "menu"
                                       })
-                                    }), (0, CU.jsxs)(PU.c, {
-                                      to: RU,
+                                    }), (0, Su.jsxs)(mu.c, {
+                                      to: Ru,
                                       className: "DocsBrand",
-                                      children: [(0, CU.jsx)("img", {
+                                      children: [(0, Su.jsx)("img", {
                                         src: "/favicon.svg",
                                         alt: "",
                                         width: 28,
                                         height: 28
-                                      }), (0, CU.jsx)("span", {
+                                      }), (0, Su.jsx)("span", {
                                         className: "DocsBrandName",
                                         children: "Bloxd"
-                                      }), (0, CU.jsx)("span", {
+                                      }), (0, Su.jsx)("span", {
                                         className: "DocsBrandTag",
                                         children: "Code API"
                                       })]
-                                    }), (0, CU.jsxs)("button", {
+                                    }), (0, Su.jsxs)("button", {
                                       type: "button",
                                       className: "DocsSearchTrigger",
                                       onClick: () => {
-                                        IU(!0)
+                                        Cu(!0)
                                       },
-                                      children: [(0, CU.jsx)(QU, {
+                                      children: [(0, Su.jsx)(Tu, {
                                         name: "magnifying-glass"
-                                      }), (0, CU.jsx)("span", {
+                                      }), (0, Su.jsx)("span", {
                                         className: "DocsSearchTriggerLabel",
                                         children: "Search docs"
-                                      }), (0, CU.jsxs)("kbd", {
-                                        children: [NE ? "\u2318" : "Ctrl", " K"]
+                                      }), (0, Su.jsxs)("kbd", {
+                                        children: [qQ ? "\u2318" : "Ctrl", " K"]
                                       })]
-                                    }), (0, CU.jsxs)("div", {
+                                    }), (0, Su.jsxs)("div", {
                                       className: "DocsTopBarLinks",
-                                      children: [(0, CU.jsxs)("a", {
-                                        href: DE,
+                                      children: [(0, Su.jsxs)("a", {
+                                        href: YQ,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, CU.jsx)(QU, {
+                                        children: [(0, Su.jsx)(Tu, {
                                           name: "discord"
-                                        }), (0, CU.jsx)("span", {
+                                        }), (0, Su.jsx)("span", {
                                           children: "Discord"
                                         })]
-                                      }), (0, CU.jsxs)("a", {
-                                        href: ME,
+                                      }), (0, Su.jsxs)("a", {
+                                        href: iQ,
                                         target: "_blank",
                                         rel: "noopener noreferrer",
                                         className: "DocsTopBarLink",
-                                        children: [(0, CU.jsx)(QU, {
+                                        children: [(0, Su.jsx)(Tu, {
                                           name: "external-link"
-                                        }), (0, CU.jsx)("span", {
+                                        }), (0, Su.jsx)("span", {
                                           children: "GitHub"
                                         })]
-                                      }), !gU && (0, CU.jsxs)(PU.c, {
+                                      }), !yu && (0, Su.jsxs)(mu.c, {
                                         to: "/",
                                         className: "DocsTopBarLink DocsPlayLink",
-                                        children: [(0, CU.jsx)(QU, {
+                                        children: [(0, Su.jsx)(Tu, {
                                           name: "play"
-                                        }), (0, CU.jsx)("span", {
+                                        }), (0, Su.jsx)("span", {
                                           children: "Play Bloxd"
                                         })]
-                                      }), (0, CU.jsx)(zE, {
-                                        theme: uU,
-                                        onChange: hU
+                                      }), (0, Su.jsx)(PQ, {
+                                        theme: xu,
+                                        onChange: pu
                                       })]
                                     })]
-                                  }), (0, CU.jsxs)("div", {
+                                  }), (0, Su.jsxs)("div", {
                                     className: "DocsSiteBody",
-                                    children: [(0, CU.jsx)("aside", {
+                                    children: [(0, Su.jsx)("aside", {
                                       className: "DocsSidebar",
-                                      children: (0, CU.jsx)(lE, {
-                                        basePath: RU,
-                                        activePageId: GU.id,
-                                        onNavigate: aU
+                                      children: (0, Su.jsx)(OQ, {
+                                        basePath: Ru,
+                                        activePageId: ru.id,
+                                        onNavigate: Gu
                                       })
-                                    }), (0, CU.jsx)("div", {
+                                    }), (0, Su.jsx)("div", {
                                       className: "DocsNavScrim",
-                                      onClick: aU
-                                    }), (0, CU.jsxs)(BU, {
+                                      onClick: Gu
+                                    }), (0, Su.jsxs)(nu, {
                                       className: "DocsMain",
-                                      children: [(0, CU.jsx)(JE, {
-                                        page: GU,
-                                        onTocChange: nU
-                                      }, GU.id), (0, CU.jsx)(OE, {
-                                        basePath: RU,
-                                        pageId: GU.id
+                                      children: [(0, Su.jsx)(bQ, {
+                                        page: ru,
+                                        onTocChange: Au
+                                      }, ru.id), (0, Su.jsx)(vQ, {
+                                        basePath: Ru,
+                                        pageId: ru.id
                                       })]
-                                    }), (0, CU.jsx)("aside", {
-                                      className: EU()("DocsToc", {
-                                        Timeline: "changelog" === GU.layout
+                                    }), (0, Su.jsx)("aside", {
+                                      className: Qu()("DocsToc", {
+                                        Timeline: "changelog" === ru.layout
                                       }),
                                       "aria-label": "On this page",
-                                      children: (0, CU.jsx)(oE, {
-                                        isChangelog: "changelog" === GU.layout,
-                                        toc: JU,
-                                        activeAnchor: bU,
-                                        onNavigate: YU
+                                      children: (0, Su.jsx)(AQ, {
+                                        isChangelog: "changelog" === ru.layout,
+                                        toc: ku,
+                                        activeAnchor: Du,
+                                        onNavigate: Uu
                                       })
                                     })]
-                                  }), (0, CU.jsx)(kE, {}), mU && (0, CU.jsx)(sE, {
-                                    basePath: RU,
+                                  }), (0, Su.jsx)(FQ, {}), bu && (0, Su.jsx)(LQ, {
+                                    basePath: Ru,
                                     onClose: () => {
-                                      IU(!1)
+                                      Cu(!1)
                                     }
                                   })]
                                 })
                               })
                             })
                           }
-                        }, 4396: (UU, RU, gU) => {
-                          gU.d(RU, {
-                            e: () => tU,
-                            g: () => PU,
-                            h: () => QU,
-                            k: () => hU,
-                            l: () => TU,
-                            m: () => pU,
-                            n: () => EU,
-                            o: () => CU,
-                            q: () => uU,
-                            u: () => jU
+                        }, 4511: (uu, Ru, yu) => {
+                          yu.d(Ru, {
+                            b: () => Eu,
+                            c: () => mu,
+                            d: () => Tu,
+                            e: () => pu,
+                            h: () => Ju,
+                            i: () => Ku,
+                            l: () => Qu,
+                            p: () => Su,
+                            s: () => xu,
+                            v: () => Bu
                           });
-                          const tU = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
+                          const Eu = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
 
-                          function pU(UU) {
+                          function Ku(uu) {
                             try {
-                              return decodeURIComponent(UU.slice(1))
+                              return decodeURIComponent(uu.slice(1))
                             } catch {
-                              return UU.slice(1)
+                              return uu.slice(1)
                             }
                           }
 
-                          function EU(UU) {
-                            return UU.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
+                          function Qu(uu) {
+                            return uu.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
                           }
-                          const PU = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${tU.source}`, "g");
+                          const mu = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${Eu.source}`, "g");
 
-                          function TU(UU, RU) {
-                            return 2 === UU.length ? RU.replace(/^ (.*) $/, "$1") : RU
-                          }
-
-                          function qU(UU) {
-                            return "" === UU.trim()
+                          function Ju(uu, Ru) {
+                            return 2 === uu.length ? Ru.replace(/^ (.*) $/, "$1") : Ru
                           }
 
-                          function KU(UU) {
-                            const RU = [];
-                            for (const gU of UU.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) RU.length > 0 && RU[RU.length - 1].endsWith("\\") ? RU[RU.length - 1] += `|${gU}` : RU.push(gU);
-                            return RU.map((UU => UU.trim().replaceAll("\\|", "|")))
+                          function Nu(uu) {
+                            return "" === uu.trim()
                           }
-                          const cU = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
 
-                          function GU(UU) {
-                            const RU = [],
-                              gU = [{
+                          function Xu(uu) {
+                            const Ru = [];
+                            for (const yu of uu.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) Ru.length > 0 && Ru[Ru.length - 1].endsWith("\\") ? Ru[Ru.length - 1] += `|${yu}` : Ru.push(yu);
+                            return Ru.map((uu => uu.trim().replaceAll("\\|", "|")))
+                          }
+                          const Vu = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
+
+                          function ru(uu) {
+                            const Ru = [],
+                              yu = [{
                                 indent: -1,
-                                items: RU
+                                items: Ru
                               }];
-                            let tU = null;
-                            for (const pU of UU) {
-                              const UU = pU.match(cU);
-                              if (!UU) {
-                                tU && (tU.text += ` ${pU.trim()}`);
+                            let Eu = null;
+                            for (const Ku of uu) {
+                              const uu = Ku.match(Vu);
+                              if (!uu) {
+                                Eu && (Eu.text += ` ${Ku.trim()}`);
                                 continue
                               }
-                              const RU = UU[1].replace(/\t/g, "  ").length;
-                              for (; RU <= gU[gU.length - 1].indent;) gU.pop();
-                              tU = {
-                                text: UU[3].trim(),
+                              const Ru = uu[1].replace(/\t/g, "  ").length;
+                              for (; Ru <= yu[yu.length - 1].indent;) yu.pop();
+                              Eu = {
+                                text: uu[3].trim(),
                                 children: []
-                              }, gU[gU.length - 1].items.push(tU), gU.push({
-                                indent: RU,
-                                items: tU.children
+                              }, yu[yu.length - 1].items.push(Eu), yu.push({
+                                indent: Ru,
+                                items: Eu.children
                               })
                             }
-                            return RU
+                            return Ru
                           }
 
-                          function jU(UU) {
-                            const RU = UU.replace(/\r\n/g, "\n").split("\n"),
-                              gU = [];
-                            let tU = 0;
-                            for (; tU < RU.length;) {
-                              const UU = RU[tU];
-                              if (qU(UU)) {
-                                tU++;
+                          function Bu(uu) {
+                            const Ru = uu.replace(/\r\n/g, "\n").split("\n"),
+                              yu = [];
+                            let Eu = 0;
+                            for (; Eu < Ru.length;) {
+                              const uu = Ru[Eu];
+                              if (Nu(uu)) {
+                                Eu++;
                                 continue
                               }
-                              const pU = UU.match(/^\s*```\s*(\w*)\s*$/);
-                              if (pU) {
-                                const UU = [];
-                                for (tU++; tU < RU.length && !/^\s*```\s*$/.test(RU[tU]);) UU.push(RU[tU]), tU++;
-                                tU++, gU.push({
+                              const Ku = uu.match(/^\s*```\s*(\w*)\s*$/);
+                              if (Ku) {
+                                const uu = [];
+                                for (Eu++; Eu < Ru.length && !/^\s*```\s*$/.test(Ru[Eu]);) uu.push(Ru[Eu]), Eu++;
+                                Eu++, yu.push({
                                   kind: "code",
-                                  lang: pU[1] || "text",
-                                  code: UU.join("\n").replace(/\s+$/, "")
+                                  lang: Ku[1] || "text",
+                                  code: uu.join("\n").replace(/\s+$/, "")
                                 });
                                 continue
                               }
-                              const PU = UU.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-                              if (PU) {
-                                const UU = PU[2].trim();
-                                gU.push({
+                              const mu = uu.match(/^(#{1,6})\s+(.+?)\s*#*$/);
+                              if (mu) {
+                                const uu = mu[2].trim();
+                                yu.push({
                                   kind: "heading",
-                                  level: PU[1].length,
-                                  text: UU,
-                                  anchor: EU(UU)
-                                }), tU++;
+                                  level: mu[1].length,
+                                  text: uu,
+                                  anchor: Qu(uu)
+                                }), Eu++;
                                 continue
                               }
-                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(UU)) {
-                                gU.push({
+                              if (/^\s*(-{3,}|\*{3,})\s*$/.test(uu)) {
+                                yu.push({
                                   kind: "rule"
-                                }), tU++;
+                                }), Eu++;
                                 continue
                               }
-                              if (UU.trim().startsWith("|") && tU + 1 < RU.length && /^\s*\|[\s:|-]+\|\s*$/.test(RU[tU + 1])) {
-                                const pU = KU(UU),
-                                  EU = [];
-                                for (tU += 2; tU < RU.length && RU[tU].trim().startsWith("|");) EU.push(KU(RU[tU])), tU++;
-                                gU.push({
+                              if (uu.trim().startsWith("|") && Eu + 1 < Ru.length && /^\s*\|[\s:|-]+\|\s*$/.test(Ru[Eu + 1])) {
+                                const Ku = Xu(uu),
+                                  Qu = [];
+                                for (Eu += 2; Eu < Ru.length && Ru[Eu].trim().startsWith("|");) Qu.push(Xu(Ru[Eu])), Eu++;
+                                yu.push({
                                   kind: "table",
-                                  header: pU,
-                                  rows: EU
+                                  header: Ku,
+                                  rows: Qu
                                 });
                                 continue
                               }
-                              if (UU.startsWith(">")) {
-                                const UU = [];
-                                for (; tU < RU.length && RU[tU].startsWith(">");) UU.push(RU[tU].replace(/^>\s?/, "")), tU++;
-                                gU.push({
+                              if (uu.startsWith(">")) {
+                                const uu = [];
+                                for (; Eu < Ru.length && Ru[Eu].startsWith(">");) uu.push(Ru[Eu].replace(/^>\s?/, "")), Eu++;
+                                yu.push({
                                   kind: "quote",
-                                  blocks: jU(UU.join("\n"))
+                                  blocks: Bu(uu.join("\n"))
                                 });
                                 continue
                               }
-                              if (cU.test(UU)) {
-                                const pU = [],
-                                  EU = /^\s*\d+\./.test(UU);
-                                for (; tU < RU.length && !qU(RU[tU]) && (cU.test(RU[tU]) || /^\s+\S/.test(RU[tU]));) pU.push(RU[tU]), tU++;
-                                gU.push({
+                              if (Vu.test(uu)) {
+                                const Ku = [],
+                                  Qu = /^\s*\d+\./.test(uu);
+                                for (; Eu < Ru.length && !Nu(Ru[Eu]) && (Vu.test(Ru[Eu]) || /^\s+\S/.test(Ru[Eu]));) Ku.push(Ru[Eu]), Eu++;
+                                yu.push({
                                   kind: "list",
-                                  ordered: EU,
-                                  items: GU(pU)
+                                  ordered: Qu,
+                                  items: ru(Ku)
                                 });
                                 continue
                               }
-                              const TU = [];
-                              for (; tU < RU.length && !qU(RU[tU]) && !/^\s*```/.test(RU[tU]) && !/^#{1,6}\s/.test(RU[tU]) && !RU[tU].startsWith(">") && !cU.test(RU[tU]) && (!RU[tU].trim().startsWith("|") || 0 !== TU.length);) TU.push(RU[tU].trim()), tU++;
-                              0 === TU.length && (TU.push(RU[tU].trim()), tU++), gU.push({
+                              const Ju = [];
+                              for (; Eu < Ru.length && !Nu(Ru[Eu]) && !/^\s*```/.test(Ru[Eu]) && !/^#{1,6}\s/.test(Ru[Eu]) && !Ru[Eu].startsWith(">") && !Vu.test(Ru[Eu]) && (!Ru[Eu].trim().startsWith("|") || 0 !== Ju.length);) Ju.push(Ru[Eu].trim()), Eu++;
+                              0 === Ju.length && (Ju.push(Ru[Eu].trim()), Eu++), yu.push({
                                 kind: "paragraph",
-                                text: TU.join(" ")
+                                text: Ju.join(" ")
                               })
                             }
-                            return gU
+                            return yu
                           }
 
-                          function uU(UU) {
-                            let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-                            const gU = jU(UU);
-                            let tU = "";
-                            const pU = [],
-                              EU = [],
-                              PU = new Map;
-                            for (const KU of gU) {
-                              if ("heading" === KU.kind) {
-                                var TU;
-                                const UU = (null !== (TU = PU.get(KU.anchor)) && void 0 !== TU ? TU : 0) + 1;
-                                PU.set(KU.anchor, UU), UU > 1 && (KU.anchor = `${KU.anchor}-${UU}`)
+                          function xu(uu) {
+                            let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+                            const yu = Bu(uu);
+                            let Eu = "";
+                            const Ku = [],
+                              Qu = [],
+                              mu = new Map;
+                            for (const Xu of yu) {
+                              if ("heading" === Xu.kind) {
+                                var Ju;
+                                const uu = (null !== (Ju = mu.get(Xu.anchor)) && void 0 !== Ju ? Ju : 0) + 1;
+                                mu.set(Xu.anchor, uu), uu > 1 && (Xu.anchor = `${Xu.anchor}-${uu}`)
                               }
-                              if ("heading" === KU.kind && 1 === KU.level && !tU) {
-                                tU = KU.text;
+                              if ("heading" === Xu.kind && 1 === Xu.level && !Eu) {
+                                Eu = Xu.text;
                                 continue
                               }
-                              if ("heading" === KU.kind && KU.level <= RU) {
-                                EU.push({
-                                  heading: KU,
+                              if ("heading" === Xu.kind && Xu.level <= Ru) {
+                                Qu.push({
+                                  heading: Xu,
                                   blocks: []
                                 });
                                 continue
                               }
-                              const UU = EU.at(-1);
-                              UU ? UU.blocks.push(KU) : pU.push(KU)
+                              const uu = Qu.at(-1);
+                              uu ? uu.blocks.push(Xu) : Ku.push(Xu)
                             }
-                            const qU = UU => {
+                            const Nu = uu => {
                               for (;
-                                "rule" === (null === (RU = UU.at(-1)) || void 0 === RU ? void 0 : RU.kind);) {
-                                var RU;
-                                UU.pop()
+                                "rule" === (null === (Ru = uu.at(-1)) || void 0 === Ru ? void 0 : Ru.kind);) {
+                                var Ru;
+                                uu.pop()
                               }
                             };
-                            qU(pU);
-                            for (const KU of EU) qU(KU.blocks);
+                            Nu(Ku);
+                            for (const Xu of Qu) Nu(Xu.blocks);
                             return {
-                              title: tU,
-                              intro: pU,
-                              sections: EU
+                              title: Eu,
+                              intro: Ku,
+                              sections: Qu
                             }
                           }
 
-                          function CU(UU) {
+                          function Su(uu) {
                             return [{
                               heading: null,
-                              blocks: UU.intro
-                            }, ...UU.sections.map((UU => ({
-                              heading: UU.heading,
-                              blocks: UU.blocks
+                              blocks: uu.intro
+                            }, ...uu.sections.map((uu => ({
+                              heading: uu.heading,
+                              blocks: uu.blocks
                             })))]
                           }
 
-                          function hU(UU) {
-                            return UU.flatMap((UU => "code" === UU.kind ? [UU] : "quote" === UU.kind ? hU(UU.blocks) : []))
+                          function pu(uu) {
+                            return uu.flatMap((uu => "code" === uu.kind ? [uu] : "quote" === uu.kind ? pu(uu.blocks) : []))
                           }
 
-                          function QU(UU) {
-                            switch (UU.kind) {
+                          function Tu(uu) {
+                            switch (uu.kind) {
                               case "heading":
                               case "paragraph":
-                                return UU.text;
+                                return uu.text;
                               case "code":
-                                return UU.code;
+                                return uu.code;
                               case "table":
-                                return [UU.header, ...UU.rows].map((UU => UU.join(" "))).join(" ");
+                                return [uu.header, ...uu.rows].map((uu => uu.join(" "))).join(" ");
                               case "list": {
-                                const RU = UU => UU.map((UU => `${UU.text} ${RU(UU.children)}`)).join(" ");
-                                return RU(UU.items)
+                                const Ru = uu => uu.map((uu => `${uu.text} ${Ru(uu.children)}`)).join(" ");
+                                return Ru(uu.items)
                               }
                               case "quote":
-                                return UU.blocks.map(QU).join(" ");
+                                return uu.blocks.map(Tu).join(" ");
                               case "rule":
                                 return ""
                             }
                           }
-                        }, 4495: (UU, RU, gU) => {
-                          gU.d(RU, {
-                            c: () => TU
+                        }, 4604: (uu, Ru, yu) => {
+                          yu.d(Ru, {
+                            c: () => Ju
                           });
-                          var tU = gU(56),
-                            pU = gU(299),
-                            EU = gU(1790),
-                            PU = gU(1090);
+                          var Eu = yu(64),
+                            Ku = yu(330),
+                            Qu = yu(1841),
+                            mu = yu(1079);
 
-                          function TU(UU) {
+                          function Ju(uu) {
                             let {
-                              text: RU
-                            } = UU;
-                            const gU = [];
-                            let TU = "";
-                            return (0, pU.dc)(RU).forEach(((UU, RU) => {
-                              if ("string" === typeof UU || !(0, EU.f)(UU.icon)) return void(TU += "string" === typeof UU ? UU : UU.icon);
-                              const pU = Math.max(0, TU.trimEnd().search(/\S{1,12}$/));
-                              gU.push((0, PU.jsxs)(tU.Fragment, {
-                                children: [TU.slice(0, pU), (0, PU.jsxs)("span", {
+                              text: Ru
+                            } = uu;
+                            const yu = [];
+                            let Ju = "";
+                            return (0, Ku.ic)(Ru).forEach(((uu, Ru) => {
+                              if ("string" === typeof uu || !(0, Qu.d)(uu.icon)) return void(Ju += "string" === typeof uu ? uu : uu.icon);
+                              const Ku = Math.max(0, Ju.trimEnd().search(/\S{1,12}$/));
+                              yu.push((0, mu.jsxs)(Eu.Fragment, {
+                                children: [Ju.slice(0, Ku), (0, mu.jsxs)("span", {
                                   className: "InlineIconTextGlue",
-                                  children: [TU.slice(pU), (0, PU.jsx)("span", {
+                                  children: [Ju.slice(Ku), (0, mu.jsx)("span", {
                                     className: "InlineIconTextIcon",
                                     role: "img",
-                                    "aria-label": UU.icon,
-                                    children: (0, PU.jsx)(EU.c, {
-                                      itemName: UU.icon,
+                                    "aria-label": uu.icon,
+                                    children: (0, mu.jsx)(Qu.c, {
+                                      itemName: uu.icon,
                                       amount: 0
                                     })
                                   })]
                                 })]
-                              }, RU)), TU = ""
-                            })), gU.push(TU), (0, PU.jsx)(PU.Fragment, {
-                              children: gU
+                              }, Ru)), Ju = ""
+                            })), yu.push(Ju), (0, mu.jsx)(mu.Fragment, {
+                              children: yu
                             })
                           }
-                        }, 4422: (UU, RU, gU) => {
-                          gU.d(RU, {
-                            e: () => WU,
-                            b: () => eU
+                        }, 4540: (uu, Ru, yu) => {
+                          yu.d(Ru, {
+                            c: () => ju,
+                            b: () => Wu
                           });
-                          var tU = gU(56),
-                            pU = gU(1410),
-                            EU = gU(1777),
-                            PU = gU(4430),
-                            TU = gU(1090);
-                          const qU = (0, tU.memo)((function(UU) {
+                          var Eu = yu(64),
+                            Ku = yu(1400),
+                            Qu = yu(1825),
+                            mu = yu(4544),
+                            Ju = yu(1079);
+                          const Nu = (0, Eu.memo)((function(uu) {
                             let {
-                              initialParameters: RU
-                            } = UU;
-                            const gU = (0, tU.useRef)(null),
-                              pU = (0, tU.useRef)(null),
-                              qU = (0, tU.useRef)(0),
-                              KU = (0, tU.useRef)(null),
-                              cU = RU.description,
-                              GU = RU.vU,
+                              initialParameters: Ru
+                            } = uu;
+                            const yu = (0, Eu.useRef)(null),
+                              Ku = (0, Eu.useRef)(null),
+                              Nu = (0, Eu.useRef)(0),
+                              Xu = (0, Eu.useRef)(null),
+                              Vu = Ru.description,
+                              ru = Ru.zu,
                               {
-                                scale: jU,
-                                rotation: uU
-                              } = null !== RU && void 0 !== RU ? RU : {},
-                              CU = (0, PU.f)();
-                            return (0, tU.useEffect)((() => {
-                              const UU = CU.onFrame((() => {
-                                const UU = CU.getState();
-                                if (!UU.isActive || !gU.current || !pU.current) return;
-                                const RU = UU.state;
-                                if (gU.current.value = RU.progress, RU.clickCount > qU.current) {
-                                  qU.current = RU.clickCount;
-                                  const UU = pU.current;
-                                  UU.classList.add("pulse"), KU.current = setTimeout((() => {
-                                    UU.classList.remove("pulse")
+                                scale: Bu,
+                                rotation: xu
+                              } = null !== Ru && void 0 !== Ru ? Ru : {},
+                              Su = (0, mu.f)();
+                            return (0, Eu.useEffect)((() => {
+                              const uu = Su.onFrame((() => {
+                                const uu = Su.getState();
+                                if (!uu.isActive || !yu.current || !Ku.current) return;
+                                const Ru = uu.state;
+                                if (yu.current.value = Ru.progress, Ru.clickCount > Nu.current) {
+                                  Nu.current = Ru.clickCount;
+                                  const uu = Ku.current;
+                                  uu.classList.add("pulse"), Xu.current = setTimeout((() => {
+                                    uu.classList.remove("pulse")
                                   }), 100)
                                 }
                               }));
                               return () => {
-                                clearTimeout(KU.current), UU()
+                                clearTimeout(Xu.current), uu()
                               }
-                            }), [CU]), (0, TU.jsx)(TU.Fragment, {
-                              children: (0, TU.jsxs)("div", {
+                            }), [Su]), (0, Ju.jsx)(Ju.Fragment, {
+                              children: (0, Ju.jsxs)("div", {
                                 className: "QTEProgressBarWrapper",
                                 style: {
-                                  ...null !== jU && {
-                                    "--scale": jU
+                                  ...null !== Bu && {
+                                    "--scale": Bu
                                   },
-                                  ...null !== uU && {
-                                    "--rotation": `${uU}deg`
+                                  ...null !== xu && {
+                                    "--rotation": `${xu}deg`
                                   }
                                 },
-                                children: [(0, TU.jsx)("progress", {
+                                children: [(0, Ju.jsx)("progress", {
                                   id: "catch",
                                   max: 100,
                                   className: "QTEProgressBar",
-                                  ref: gU
-                                }), (0, TU.jsx)("span", {
+                                  ref: yu
+                                }), (0, Ju.jsx)("span", {
                                   className: "QTEProgressBarInteractionIndicator",
-                                  ref: pU,
-                                  children: (0, TU.jsx)(EU.e, {
+                                  ref: Ku,
+                                  children: (0, Ju.jsx)(Qu.d, {
                                     text: [{
-                                      icon: GU
+                                      icon: ru
                                     }]
                                   })
-                                }), (0, TU.jsx)("div", {
+                                }), (0, Ju.jsx)("div", {
                                   className: "QTEProgressBarDescription",
-                                  children: (0, TU.jsx)(EU.e, {
-                                    text: cU
+                                  children: (0, Ju.jsx)(Qu.d, {
+                                    text: Vu
                                   })
                                 })]
                               })
                             })
                           }));
-                          var KU = gU(1037),
-                            cU = gU.n(KU);
-                          const GU = 2 * Math.PI * 90,
-                            jU = (0, tU.memo)((function(UU) {
+                          var Xu = yu(1035),
+                            Vu = yu.n(Xu);
+                          const ru = 2 * Math.PI * 90,
+                            Bu = (0, Eu.memo)((function(uu) {
                               let {
-                                initialParameters: RU
-                              } = UU;
-                              const gU = (0, tU.useRef)(null),
-                                pU = (0, tU.useRef)(null),
-                                qU = (0, tU.useRef)(null),
-                                KU = RU.label,
-                                jU = RU.icon,
-                                uU = RU.SU,
+                                initialParameters: Ru
+                              } = uu;
+                              const yu = (0, Eu.useRef)(null),
+                                Ku = (0, Eu.useRef)(null),
+                                Nu = (0, Eu.useRef)(null),
+                                Xu = Ru.label,
+                                Bu = Ru.icon,
+                                xu = Ru.Zu,
                                 {
-                                  scale: CU,
-                                  rotation: hU,
-                                  sU: QU
-                                } = null !== RU && void 0 !== RU ? RU : {},
-                                eU = (0, PU.f)();
-                              return (0, tU.useEffect)((() => {
-                                const UU = eU.onFrame((() => {
-                                  var UU, RU;
-                                  const tU = eU.getState();
-                                  if (!tU.isActive || !pU.current) return;
-                                  const EU = tU.state,
-                                    PU = null !== (UU = EU.timeRemaining) && void 0 !== UU ? UU : 0,
-                                    TU = null !== (RU = EU.HU) && void 0 !== RU ? RU : 1,
-                                    KU = GU * (1 - PU / TU);
-                                  pU.current.style.strokeDashoffset = `${KU}`, gU.current && (gU.current.style.opacity = PU > 0 ? "1" : "0"), qU.current && uU && (qU.current.textContent = `${(PU/1e3).toFixed(1)}s`)
+                                  scale: Su,
+                                  rotation: pu,
+                                  Pu: Tu
+                                } = null !== Ru && void 0 !== Ru ? Ru : {},
+                                Wu = (0, mu.f)();
+                              return (0, Eu.useEffect)((() => {
+                                const uu = Wu.onFrame((() => {
+                                  var uu, Ru;
+                                  const Eu = Wu.getState();
+                                  if (!Eu.isActive || !Ku.current) return;
+                                  const Qu = Eu.state,
+                                    mu = null !== (uu = Qu.timeRemaining) && void 0 !== uu ? uu : 0,
+                                    Ju = null !== (Ru = Qu.wu) && void 0 !== Ru ? Ru : 1,
+                                    Xu = ru * (1 - mu / Ju);
+                                  Ku.current.style.strokeDashoffset = `${Xu}`, yu.current && (yu.current.style.opacity = mu > 0 ? "1" : "0"), Nu.current && xu && (Nu.current.textContent = `${(mu/1e3).toFixed(1)}s`)
                                 }));
                                 return () => {
-                                  UU()
+                                  uu()
                                 }
-                              }), [eU, uU]), (0, TU.jsxs)("div", {
+                              }), [Wu, xu]), (0, Ju.jsxs)("div", {
                                 className: "QTETimedClick",
-                                ref: gU,
+                                ref: yu,
                                 style: {
-                                  ...null !== CU && {
-                                    "--scale": CU
+                                  ...null !== Su && {
+                                    "--scale": Su
                                   },
-                                  ...null !== hU && {
-                                    "--rotation": `${hU}deg`
+                                  ...null !== pu && {
+                                    "--rotation": `${pu}deg`
                                   }
                                 },
-                                children: [(0, TU.jsxs)("div", {
+                                children: [(0, Ju.jsxs)("div", {
                                   className: "QTETimedClickCircleContainer",
-                                  children: [(0, TU.jsxs)("svg", {
+                                  children: [(0, Ju.jsxs)("svg", {
                                     className: "QTETimedClickCircularProgress",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, TU.jsx)("circle", {
+                                    children: [(0, Ju.jsx)("circle", {
                                       className: "QTETimedClickProgressTrack",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
                                       fill: "none",
                                       strokeWidth: "12"
-                                    }), (0, TU.jsx)("circle", {
+                                    }), (0, Ju.jsx)("circle", {
                                       className: "QTETimedClickProgressArc",
                                       cx: "100",
                                       cy: "100",
@@ -6295,80 +6295,80 @@ export const modules = {
                                       fill: "none",
                                       strokeWidth: "12",
                                       strokeLinecap: "square",
-                                      strokeDasharray: GU,
-                                      ref: pU
+                                      strokeDasharray: ru,
+                                      ref: Ku
                                     })]
-                                  }), (0, TU.jsx)("div", {
+                                  }), (0, Ju.jsx)("div", {
                                     className: "QTETimedClickCenterContent",
-                                    children: (0, TU.jsx)(EU.e, {
+                                    children: (0, Ju.jsx)(Qu.d, {
                                       text: [{
-                                        icon: jU
+                                        icon: Bu
                                       }],
-                                      className: cU()("QTETimedClickInnerText", {
-                                        QTETimedClickBreathe: QU
+                                      className: Vu()("QTETimedClickInnerText", {
+                                        QTETimedClickBreathe: Tu
                                       })
                                     })
                                   })]
-                                }), (0, TU.jsxs)("div", {
+                                }), (0, Ju.jsxs)("div", {
                                   className: "QTETimedClickRightTextContainer",
-                                  children: [(0, TU.jsx)(EU.e, {
-                                    text: KU,
+                                  children: [(0, Ju.jsx)(Qu.d, {
+                                    text: Xu,
                                     className: "QTETimedClickLabelText"
-                                  }), uU && (0, TU.jsx)("span", {
+                                  }), xu && (0, Ju.jsx)("span", {
                                     className: "QTETimedClickTimeText",
-                                    ref: qU
+                                    ref: Nu
                                   })]
                                 })]
                               })
                             })),
-                            uU = (0, tU.memo)((function(UU) {
+                            xu = (0, Eu.memo)((function(uu) {
                               let {
-                                initialParameters: RU
-                              } = UU;
-                              const gU = (0, tU.useRef)(null),
-                                pU = (0, tU.useRef)(null),
-                                qU = (0, tU.useRef)(null),
-                                KU = (0, tU.useRef)(!1),
-                                cU = RU.description,
-                                GU = null === RU || void 0 === RU ? void 0 : RU.icon,
-                                jU = (0, PU.f)();
-                              return (0, tU.useEffect)((() => {
-                                const UU = jU.onFrame((() => {
-                                  const UU = jU.getState();
-                                  if (!UU.isActive) return;
-                                  const RU = UU.state;
-                                  if (gU.current) {
-                                    const UU = 100 * (RU.catchZonePosition - RU.kU / 2);
-                                    gU.current.style.left = `${UU}%`, gU.current.style.width = 100 * RU.kU + "%", RU.isCatching !== KU.current && (KU.current = RU.isCatching, RU.isCatching ? gU.current.classList.add("catching") : gU.current.classList.remove("catching"))
+                                initialParameters: Ru
+                              } = uu;
+                              const yu = (0, Eu.useRef)(null),
+                                Ku = (0, Eu.useRef)(null),
+                                Nu = (0, Eu.useRef)(null),
+                                Xu = (0, Eu.useRef)(!1),
+                                Vu = Ru.description,
+                                ru = null === Ru || void 0 === Ru ? void 0 : Ru.icon,
+                                Bu = (0, mu.f)();
+                              return (0, Eu.useEffect)((() => {
+                                const uu = Bu.onFrame((() => {
+                                  const uu = Bu.getState();
+                                  if (!uu.isActive) return;
+                                  const Ru = uu.state;
+                                  if (yu.current) {
+                                    const uu = 100 * (Ru.catchZonePosition - Ru.Yu / 2);
+                                    yu.current.style.left = `${uu}%`, yu.current.style.width = 100 * Ru.Yu + "%", Ru.isCatching !== Xu.current && (Xu.current = Ru.isCatching, Ru.isCatching ? yu.current.classList.add("catching") : yu.current.classList.remove("catching"))
                                   }
-                                  pU.current && (pU.current.style.left = 100 * RU.moverPosition + "%"), qU.current && (qU.current.value = RU.progress)
+                                  Ku.current && (Ku.current.style.left = 100 * Ru.moverPosition + "%"), Nu.current && (Nu.current.value = Ru.progress)
                                 }));
                                 return () => {
-                                  UU()
+                                  uu()
                                 }
-                              }), [jU]), (0, TU.jsxs)("div", {
+                              }), [Bu]), (0, Ju.jsxs)("div", {
                                 className: "QTEGravityBar",
-                                children: [(0, TU.jsx)("div", {
+                                children: [(0, Ju.jsx)("div", {
                                   className: "QTEGravityBarDescription",
-                                  children: (0, TU.jsx)(EU.e, {
-                                    text: cU
+                                  children: (0, Ju.jsx)(Qu.d, {
+                                    text: Vu
                                   })
-                                }), (0, TU.jsx)("progress", {
+                                }), (0, Ju.jsx)("progress", {
                                   max: 100,
                                   className: "QTEGravityBarProgress",
-                                  ref: qU
-                                }), (0, TU.jsxs)("div", {
+                                  ref: Nu
+                                }), (0, Ju.jsxs)("div", {
                                   className: "QTEGravityBarTrack",
-                                  children: [(0, TU.jsx)("div", {
+                                  children: [(0, Ju.jsx)("div", {
                                     className: "QTEGravityBarCatchZone",
-                                    ref: gU
-                                  }), (0, TU.jsx)("div", {
+                                    ref: yu
+                                  }), (0, Ju.jsx)("div", {
                                     className: "QTEGravityBarMover",
-                                    ref: pU,
-                                    children: (0, TU.jsx)("span", {
-                                      children: GU && (0, TU.jsx)(EU.e, {
+                                    ref: Ku,
+                                    children: (0, Ju.jsx)("span", {
+                                      children: ru && (0, Ju.jsx)(Qu.d, {
                                         text: [{
-                                          icon: GU,
+                                          icon: ru,
                                           style: {
                                             fontSize: "4rem"
                                           }
@@ -6379,703 +6379,703 @@ export const modules = {
                                 })]
                               })
                             }));
-                          var CU = gU(581);
-                          const hU = (0, tU.memo)((function(UU) {
+                          var Su = yu(610);
+                          const pu = (0, Eu.memo)((function(uu) {
                               let {
-                                initialParameters: RU
-                              } = UU;
-                              const gU = (0, tU.useRef)(null),
-                                pU = RU.label,
-                                qU = RU.LU,
+                                initialParameters: Ru
+                              } = uu;
+                              const yu = (0, Eu.useRef)(null),
+                                Ku = Ru.label,
+                                Nu = Ru.uR,
                                 {
-                                  icon: KU,
-                                  scale: cU,
-                                  rotation: GU
-                                } = null !== RU && void 0 !== RU ? RU : {},
-                                jU = 100 * (.5 - qU / 2),
-                                uU = 100 * qU,
-                                hU = (0, PU.f)();
-                              return (0, tU.useEffect)((() => {
-                                const UU = hU.onFrame((() => {
-                                  const UU = hU.getState();
-                                  if (!UU.isActive || !gU.current) return;
-                                  const RU = UU.state;
-                                  gU.current.style.left = 100 * RU.markerPosition + "%"
+                                  icon: Xu,
+                                  scale: Vu,
+                                  rotation: ru
+                                } = null !== Ru && void 0 !== Ru ? Ru : {},
+                                Bu = 100 * (.5 - Nu / 2),
+                                xu = 100 * Nu,
+                                pu = (0, mu.f)();
+                              return (0, Eu.useEffect)((() => {
+                                const uu = pu.onFrame((() => {
+                                  const uu = pu.getState();
+                                  if (!uu.isActive || !yu.current) return;
+                                  const Ru = uu.state;
+                                  yu.current.style.left = 100 * Ru.markerPosition + "%"
                                 }));
                                 return () => {
-                                  UU()
+                                  uu()
                                 }
-                              }), [hU]), (0, TU.jsxs)("div", {
+                              }), [pu]), (0, Ju.jsxs)("div", {
                                 className: "QTEPrecisionBarWrapper",
                                 style: {
-                                  ...!(0, CU.E)(cU) && {
-                                    "--scale": cU
+                                  ...!(0, Su.E)(Vu) && {
+                                    "--scale": Vu
                                   },
-                                  ...!(0, CU.E)(GU) && {
-                                    "--rotation": `${GU}deg`
+                                  ...!(0, Su.E)(ru) && {
+                                    "--rotation": `${ru}deg`
                                   }
                                 },
-                                children: [KU && (0, TU.jsx)(EU.e, {
+                                children: [Xu && (0, Ju.jsx)(Qu.d, {
                                   text: [{
-                                    icon: KU
+                                    icon: Xu
                                   }],
                                   className: "QTEPrecisionBarIcon"
-                                }), (0, TU.jsxs)("div", {
+                                }), (0, Ju.jsxs)("div", {
                                   className: "QTEPrecisionBarTrack",
-                                  children: [(0, TU.jsx)("div", {
+                                  children: [(0, Ju.jsx)("div", {
                                     className: "QTEPrecisionBarSuccessZone",
                                     style: {
-                                      left: `${jU}%`,
-                                      width: `${uU}%`
+                                      left: `${Bu}%`,
+                                      width: `${xu}%`
                                     }
-                                  }), (0, TU.jsx)("div", {
+                                  }), (0, Ju.jsx)("div", {
                                     className: "QTEPrecisionBarMarker",
-                                    ref: gU
+                                    ref: yu
                                   })]
-                                }), (0, TU.jsx)("div", {
+                                }), (0, Ju.jsx)("div", {
                                   className: "QTEPrecisionBarLabel",
-                                  children: (0, TU.jsx)(EU.e, {
-                                    text: pU
+                                  children: (0, Ju.jsx)(Qu.d, {
+                                    text: Ku
                                   })
                                 })]
                               })
                             })),
-                            QU = (0, tU.memo)((function(UU) {
+                            Tu = (0, Eu.memo)((function(uu) {
                               let {
-                                initialParameters: RU
-                              } = UU;
-                              const gU = (0, tU.useRef)(null),
-                                [pU, qU] = (0, tU.useState)((() => new Array(RU.lU).fill("pending"))),
-                                [KU, cU] = (0, tU.useState)((() => {
-                                  const UU = RU.RR;
-                                  return (0, CU.E)(UU) || UU <= 0 ? [] : new Array(UU).fill("pending")
+                                initialParameters: Ru
+                              } = uu;
+                              const yu = (0, Eu.useRef)(null),
+                                [Ku, Nu] = (0, Eu.useState)((() => new Array(Ru.yR).fill("pending"))),
+                                [Xu, Vu] = (0, Eu.useState)((() => {
+                                  const uu = Ru.QR;
+                                  return (0, Su.E)(uu) || uu <= 0 ? [] : new Array(uu).fill("pending")
                                 })),
-                                GU = RU.label,
+                                ru = Ru.label,
                                 {
-                                  icon: jU
-                                } = RU,
-                                uU = (0, tU.useRef)(0),
-                                hU = (0, tU.useRef)(0),
-                                QU = (0, tU.useRef)([]),
-                                eU = (0, PU.f)();
-                              return (0, tU.useEffect)((() => {
-                                const UU = eU.onFrame((() => {
-                                  const UU = eU.getState();
-                                  if (!UU.isActive || !gU.current) return;
-                                  const RU = UU.state,
-                                    tU = 30 + 60 * RU.outerCircleProgress;
-                                  if (gU.current.setAttribute("r", String(tU)), !0 === RU.lastClickResult && RU.successes > uU.current) {
-                                    gU.current.classList.remove("QTERhythmClickOuterCircle--miss"), gU.current.classList.add("QTERhythmClickOuterCircle--hit");
-                                    const UU = setTimeout((() => {
-                                      var UU;
-                                      null === (UU = gU.current) || void 0 === UU || UU.classList.remove("QTERhythmClickOuterCircle--hit")
+                                  icon: Bu
+                                } = Ru,
+                                xu = (0, Eu.useRef)(0),
+                                pu = (0, Eu.useRef)(0),
+                                Tu = (0, Eu.useRef)([]),
+                                Wu = (0, mu.f)();
+                              return (0, Eu.useEffect)((() => {
+                                const uu = Wu.onFrame((() => {
+                                  const uu = Wu.getState();
+                                  if (!uu.isActive || !yu.current) return;
+                                  const Ru = uu.state,
+                                    Eu = 30 + 60 * Ru.outerCircleProgress;
+                                  if (yu.current.setAttribute("r", String(Eu)), !0 === Ru.lastClickResult && Ru.successes > xu.current) {
+                                    yu.current.classList.remove("QTERhythmClickOuterCircle--miss"), yu.current.classList.add("QTERhythmClickOuterCircle--hit");
+                                    const uu = setTimeout((() => {
+                                      var uu;
+                                      null === (uu = yu.current) || void 0 === uu || uu.classList.remove("QTERhythmClickOuterCircle--hit")
                                     }), 200);
-                                    QU.current.push(UU)
-                                  } else if (!1 === RU.lastClickResult && RU.misses > hU.current) {
-                                    gU.current.classList.remove("QTERhythmClickOuterCircle--hit"), gU.current.classList.add("QTERhythmClickOuterCircle--miss");
-                                    const UU = setTimeout((() => {
-                                      var UU;
-                                      null === (UU = gU.current) || void 0 === UU || UU.classList.remove("QTERhythmClickOuterCircle--miss")
+                                    Tu.current.push(uu)
+                                  } else if (!1 === Ru.lastClickResult && Ru.misses > pu.current) {
+                                    yu.current.classList.remove("QTERhythmClickOuterCircle--hit"), yu.current.classList.add("QTERhythmClickOuterCircle--miss");
+                                    const uu = setTimeout((() => {
+                                      var uu;
+                                      null === (uu = yu.current) || void 0 === uu || uu.classList.remove("QTERhythmClickOuterCircle--miss")
                                     }), 200);
-                                    QU.current.push(UU)
+                                    Tu.current.push(uu)
                                   }
-                                  RU.successes === uU.current && RU.misses === hU.current || (uU.current = RU.successes, hU.current = RU.misses, qU((UU => {
-                                    const gU = [...UU];
-                                    for (let tU = 0; tU < RU.lU; tU++) gU[tU] = tU < RU.successes ? "success" : "pending";
-                                    return gU
-                                  })), cU((UU => {
-                                    if (0 === UU.length) return UU;
-                                    const gU = [...UU];
-                                    for (let tU = 0; tU < gU.length; tU++) gU[tU] = tU < RU.misses ? "miss" : "pending";
-                                    return gU
+                                  Ru.successes === xu.current && Ru.misses === pu.current || (xu.current = Ru.successes, pu.current = Ru.misses, Nu((uu => {
+                                    const yu = [...uu];
+                                    for (let Eu = 0; Eu < Ru.yR; Eu++) yu[Eu] = Eu < Ru.successes ? "success" : "pending";
+                                    return yu
+                                  })), Vu((uu => {
+                                    if (0 === uu.length) return uu;
+                                    const yu = [...uu];
+                                    for (let Eu = 0; Eu < yu.length; Eu++) yu[Eu] = Eu < Ru.misses ? "miss" : "pending";
+                                    return yu
                                   })))
                                 }));
                                 return () => {
-                                  UU();
-                                  for (const UU of QU.current) clearTimeout(UU);
-                                  QU.current = []
+                                  uu();
+                                  for (const uu of Tu.current) clearTimeout(uu);
+                                  Tu.current = []
                                 }
-                              }), [eU]), (0, TU.jsxs)("div", {
+                              }), [Wu]), (0, Ju.jsxs)("div", {
                                 className: "QTERhythmClickWrapper",
-                                children: [(0, TU.jsx)("div", {
+                                children: [(0, Ju.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: pU.map(((UU, RU) => (0, TU.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("success" === UU ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
-                                  }, RU)))
-                                }), (0, TU.jsxs)("div", {
+                                  children: Ku.map(((uu, Ru) => (0, Ju.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("success" === uu ? " QTERhythmClickDot--success" : " QTERhythmClickDot--pendingSuccess")
+                                  }, Ru)))
+                                }), (0, Ju.jsxs)("div", {
                                   className: "QTERhythmClickCircleContainer",
-                                  children: [(0, TU.jsxs)("svg", {
+                                  children: [(0, Ju.jsxs)("svg", {
                                     className: "QTERhythmClickSvg",
                                     viewBox: "0 0 200 200",
-                                    children: [(0, TU.jsx)("circle", {
+                                    children: [(0, Ju.jsx)("circle", {
                                       className: "QTERhythmClickInnerCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 30
-                                    }), (0, TU.jsx)("circle", {
+                                    }), (0, Ju.jsx)("circle", {
                                       className: "QTERhythmClickOuterCircle",
                                       cx: "100",
                                       cy: "100",
                                       r: 90,
-                                      ref: gU
+                                      ref: yu
                                     })]
-                                  }), jU && (0, TU.jsx)("div", {
+                                  }), Bu && (0, Ju.jsx)("div", {
                                     className: "QTERhythmClickCenterContent",
-                                    children: (0, TU.jsx)(EU.e, {
+                                    children: (0, Ju.jsx)(Qu.d, {
                                       text: [{
-                                        icon: jU
+                                        icon: Bu
                                       }],
                                       className: "QTERhythmClickIcon"
                                     })
                                   })]
-                                }), KU.length > 0 && (0, TU.jsx)("div", {
+                                }), Xu.length > 0 && (0, Ju.jsx)("div", {
                                   className: "QTERhythmClickProgress",
-                                  children: KU.map(((UU, RU) => (0, TU.jsx)("div", {
-                                    className: "QTERhythmClickDot" + ("miss" === UU ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
-                                  }, RU)))
-                                }), (0, TU.jsx)("div", {
+                                  children: Xu.map(((uu, Ru) => (0, Ju.jsx)("div", {
+                                    className: "QTERhythmClickDot" + ("miss" === uu ? " QTERhythmClickDot--miss" : " QTERhythmClickDot--pendingMiss")
+                                  }, Ru)))
+                                }), (0, Ju.jsx)("div", {
                                   className: "QTERhythmClickLabel",
-                                  children: (0, TU.jsx)(EU.e, {
-                                    text: GU
+                                  children: (0, Ju.jsx)(Qu.d, {
+                                    text: ru
                                   })
                                 })]
                               })
                             }));
 
-                          function eU(UU) {
+                          function Wu(uu) {
                             let {
-                              qte: RU
-                            } = UU;
-                            switch (RU.type) {
+                              qte: Ru
+                            } = uu;
+                            switch (Ru.type) {
                               case "progressBar":
-                                return (0, TU.jsx)(qU, {
-                                  initialParameters: RU.parameters
+                                return (0, Ju.jsx)(Nu, {
+                                  initialParameters: Ru.parameters
                                 });
                               case "timedClick":
-                                return (0, TU.jsx)(jU, {
-                                  initialParameters: RU.parameters
+                                return (0, Ju.jsx)(Bu, {
+                                  initialParameters: Ru.parameters
                                 });
                               case "gravityBar":
-                                return (0, TU.jsx)(uU, {
-                                  initialParameters: RU.parameters
+                                return (0, Ju.jsx)(xu, {
+                                  initialParameters: Ru.parameters
                                 });
                               case "precisionBar":
-                                return (0, TU.jsx)(hU, {
-                                  initialParameters: RU.parameters
+                                return (0, Ju.jsx)(pu, {
+                                  initialParameters: Ru.parameters
                                 });
                               case "rhythmClick":
-                                return (0, TU.jsx)(QU, {
-                                  initialParameters: RU.parameters
+                                return (0, Ju.jsx)(Tu, {
+                                  initialParameters: Ru.parameters
                                 });
                               default:
                                 return console.warn("Unknown QTE type"), null
                             }
                           }
-                          const WU = (0, tU.memo)((function() {
-                            const [UU, RU] = (0, tU.useState)({
+                          const ju = (0, Eu.memo)((function() {
+                            const [uu, Ru] = (0, Eu.useState)({
                               type: null,
                               parameters: null,
                               state: null,
                               isActive: !1
                             });
-                            return (0, pU.e)("qteStateUpdated", (UU => {
-                              RU(UU)
-                            })), UU.isActive && UU.type ? (0, TU.jsx)("div", {
+                            return (0, Ku.e)("qteStateUpdated", (uu => {
+                              Ru(uu)
+                            })), uu.isActive && uu.type ? (0, Ju.jsx)("div", {
                               className: "QTE",
                               "data-camera-keeper": "",
-                              children: (0, TU.jsx)(eU, {
-                                qte: UU
+                              children: (0, Ju.jsx)(Wu, {
+                                qte: uu
                               })
                             }) : null
                           }))
-                        }, 4430: (UU, RU, gU) => {
-                          gU.d(RU, {
-                            e: () => TU,
-                            f: () => qU
+                        }, 4544: (uu, Ru, yu) => {
+                          yu.d(Ru, {
+                            b: () => Ju,
+                            f: () => Nu
                           });
-                          var tU = gU(56),
-                            pU = gU(1293),
-                            EU = gU(4438);
-                          const PU = {
-                              getState: () => EU.c.getCurrentState(),
-                              onFrame: pU.p
+                          var Eu = yu(64),
+                            Ku = yu(1257),
+                            Qu = yu(4546);
+                          const mu = {
+                              getState: () => Qu.d.getCurrentState(),
+                              onFrame: Ku.o
                             },
-                            TU = (0, tU.createContext)(PU);
+                            Ju = (0, Eu.createContext)(mu);
 
-                          function qU() {
-                            return (0, tU.useContext)(TU)
+                          function Nu() {
+                            return (0, Eu.useContext)(Ju)
                           }
-                        }, 4501: (UU, RU, gU) => {
-                          gU.d(RU, {
-                            b: () => rU,
-                            c: () => VU
+                        }, 4611: (uu, Ru, yu) => {
+                          yu.d(Ru, {
+                            d: () => tu,
+                            g: () => su
                           });
-                          var tU = gU(4503),
-                            pU = gU(299);
-                          const EU = 120,
-                            PU = 260,
-                            TU = 1.15,
-                            qU = 1.2,
-                            KU = 2,
-                            cU = 1.08,
-                            GU = .8,
-                            jU = .95,
-                            uU = 8,
-                            CU = "[\"')\\]\u300d\u300f\uff09]*",
-                            hU = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${CU}$`),
-                            QU = new RegExp(`[?\uff1f]${CU}$`),
-                            eU = new RegExp(`[!\uff01]${CU}$`),
-                            WU = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-                            fU = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-                            xU = new RegExp(`[${fU}]`),
-                            mU = new RegExp(`[${fU}]|[^${fU}]+`, "g"),
-                            IU = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+                          var Eu = yu(4617),
+                            Ku = yu(330);
+                          const Qu = 120,
+                            mu = 260,
+                            Ju = 1.15,
+                            Nu = 1.2,
+                            Xu = 2,
+                            Vu = 1.08,
+                            ru = .8,
+                            Bu = .95,
+                            xu = 8,
+                            Su = "[\"')\\]\u300d\u300f\uff09]*",
+                            pu = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Su}$`),
+                            Tu = new RegExp(`[?\uff1f]${Su}$`),
+                            Wu = new RegExp(`[!\uff01]${Su}$`),
+                            ju = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+                            Hu = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+                            du = new RegExp(`[${Hu}]`),
+                            bu = new RegExp(`[${Hu}]|[^${Hu}]+`, "g"),
+                            Cu = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-                          function JU(UU) {
-                            let RU = 2166136261;
-                            for (let gU = 0; gU < UU.length; gU++) RU ^= UU.charCodeAt(gU), RU = Math.imul(RU, 16777619);
-                            return (RU >>> 0) / 4294967295 * 2 - 1
+                          function ku(uu) {
+                            let Ru = 2166136261;
+                            for (let yu = 0; yu < uu.length; yu++) Ru ^= uu.charCodeAt(yu), Ru = Math.imul(Ru, 16777619);
+                            return (Ru >>> 0) / 4294967295 * 2 - 1
                           }
 
-                          function wU(UU) {
-                            var RU;
-                            if (xU.test(UU)) return 1;
-                            const gU = UU.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-                              tU = gU.replace(/[^0-9]/g, "");
-                            if (tU.length > 0 && !/\p{L}/u.test(gU)) return Math.min(tU.length, 4);
-                            const pU = null !== (RU = gU.match(IU)) && void 0 !== RU ? RU : [];
-                            if (0 === pU.length) {
-                              var EU, PU;
-                              const UU = null !== (EU = null === (PU = gU.match(/\p{L}/gu)) || void 0 === PU ? void 0 : PU.length) && void 0 !== EU ? EU : 0;
-                              return 0 === UU ? 0 : Math.min(Math.max(1, Math.round(UU / 2.5)), uU)
+                          function eu(uu) {
+                            var Ru;
+                            if (du.test(uu)) return 1;
+                            const yu = uu.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+                              Eu = yu.replace(/[^0-9]/g, "");
+                            if (Eu.length > 0 && !/\p{L}/u.test(yu)) return Math.min(Eu.length, 4);
+                            const Ku = null !== (Ru = yu.match(Cu)) && void 0 !== Ru ? Ru : [];
+                            if (0 === Ku.length) {
+                              var Qu, mu;
+                              const uu = null !== (Qu = null === (mu = yu.match(/\p{L}/gu)) || void 0 === mu ? void 0 : mu.length) && void 0 !== Qu ? Qu : 0;
+                              return 0 === uu ? 0 : Math.min(Math.max(1, Math.round(uu / 2.5)), xu)
                             }
-                            const TU = gU.replace(/[^\p{L}]/gu, ""),
-                              qU = pU.length > 1 && "e" === pU.at(-1) && TU.endsWith("e") && !TU.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(UU.replace(/[^\p{L}]/gu, ""));
-                            return Math.min(pU.length - (qU ? 1 : 0), uU)
+                            const Ju = yu.replace(/[^\p{L}]/gu, ""),
+                              Nu = Ku.length > 1 && "e" === Ku.at(-1) && Ju.endsWith("e") && !Ju.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(uu.replace(/[^\p{L}]/gu, ""));
+                            return Math.min(Ku.length - (Nu ? 1 : 0), xu)
                           }
 
-                          function nU(UU) {
-                            return UU.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+                          function Au(uu) {
+                            return uu.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
                           }
 
-                          function bU(UU) {
-                            const RU = UU.replace(/[^\p{L}]/gu, "");
-                            return RU.length >= 2 && RU === RU.toUpperCase() && RU !== RU.toLowerCase()
+                          function Du(uu) {
+                            const Ru = uu.replace(/[^\p{L}]/gu, "");
+                            return Ru.length >= 2 && Ru === Ru.toUpperCase() && Ru !== Ru.toLowerCase()
                           }
 
-                          function oU(UU, RU) {
-                            var gU;
-                            const uU = RU && (0, tU.k)(RU),
-                              CU = null !== (gU = null === uU || void 0 === uU ? void 0 : uU.syllableMs) && void 0 !== gU ? gU : tU.c,
-                              fU = function(UU) {
-                                const RU = [];
-                                for (const tU of (0, pU.dc)(UU))
-                                  if ("string" === typeof tU)
-                                    for (const UU of tU.split(/(\s+)/)) {
-                                      if ("" === UU) continue;
-                                      if (/^\s+$/.test(UU)) {
-                                        RU.push({
+                          function Mu(uu, Ru) {
+                            var yu;
+                            const xu = Ru && (0, Eu.k)(Ru),
+                              Su = null !== (yu = null === xu || void 0 === xu ? void 0 : xu.syllableMs) && void 0 !== yu ? yu : Eu.c,
+                              Hu = function(uu) {
+                                const Ru = [];
+                                for (const Eu of (0, Ku.ic)(uu))
+                                  if ("string" === typeof Eu)
+                                    for (const uu of Eu.split(/(\s+)/)) {
+                                      if ("" === uu) continue;
+                                      if (/^\s+$/.test(uu)) {
+                                        Ru.push({
                                           kind: "space",
-                                          text: UU
+                                          text: uu
                                         });
                                         continue
                                       }
-                                      if (!xU.test(UU)) {
-                                        RU.push({
+                                      if (!du.test(uu)) {
+                                        Ru.push({
                                           kind: "word",
-                                          text: UU,
+                                          text: uu,
                                           delayMs: 0
                                         });
                                         continue
                                       }
-                                      let tU = !0;
-                                      for (const pU of null !== (gU = UU.match(mU)) && void 0 !== gU ? gU : []) {
-                                        var gU;
-                                        const UU = RU.at(-1);
-                                        tU || "word" !== (null === UU || void 0 === UU ? void 0 : UU.kind) || xU.test(pU) || /[\p{L}\p{N}]/u.test(pU) ? (tU || RU.push({
+                                      let Eu = !0;
+                                      for (const Ku of null !== (yu = uu.match(bu)) && void 0 !== yu ? yu : []) {
+                                        var yu;
+                                        const uu = Ru.at(-1);
+                                        Eu || "word" !== (null === uu || void 0 === uu ? void 0 : uu.kind) || du.test(Ku) || /[\p{L}\p{N}]/u.test(Ku) ? (Eu || Ru.push({
                                           kind: "space",
                                           text: "\u200b"
-                                        }), RU.push({
+                                        }), Ru.push({
                                           kind: "word",
-                                          text: pU,
+                                          text: Ku,
                                           delayMs: 0
-                                        }), tU = !1) : UU.text += pU
+                                        }), Eu = !1) : uu.text += Ku
                                       }
-                                    } else RU.push({
+                                    } else Ru.push({
                                       kind: "icon",
-                                      text: tU.icon,
+                                      text: Eu.icon,
                                       delayMs: 0
                                     });
-                                return RU
-                              }(UU),
-                              IU = [];
-                            let oU = [];
-                            for (const tU of fU) "space" !== tU.kind && (oU.push(tU), hU.test(tU.text) && (IU.push(oU), oU = []));
-                            IU.push(oU);
-                            const ZU = [];
-                            let aU = 0;
-                            for (const tU of IU) {
-                              var YU, BU;
-                              const UU = null !== (YU = null === (BU = tU.at(-1)) || void 0 === BU ? void 0 : BU.text) && void 0 !== YU ? YU : "",
-                                RU = QU.test(UU),
-                                gU = eU.test(UU),
-                                pU = tU.map((UU => "word" === UU.kind ? wU(UU.text) : 1)),
-                                fU = pU.findLastIndex((UU => UU > 0));
-                              for (const [QU, eU] of tU.entries()) {
-                                const UU = "word" === eU.kind,
-                                  tU = pU[QU];
-                                eU.delayMs = aU;
-                                for (let pU = 0; uU && pU < tU; pU++) {
+                                return Ru
+                              }(uu),
+                              Cu = [];
+                            let Mu = [];
+                            for (const Eu of Hu) "space" !== Eu.kind && (Mu.push(Eu), pu.test(Eu.text) && (Cu.push(Mu), Mu = []));
+                            Cu.push(Mu);
+                            const Iu = [];
+                            let Gu = 0;
+                            for (const Eu of Cu) {
+                              var Uu, nu;
+                              const uu = null !== (Uu = null === (nu = Eu.at(-1)) || void 0 === nu ? void 0 : nu.text) && void 0 !== Uu ? Uu : "",
+                                Ru = Tu.test(uu),
+                                yu = Wu.test(uu),
+                                Ku = Eu.map((uu => "word" === uu.kind ? eu(uu.text) : 1)),
+                                Hu = Ku.findLastIndex((uu => uu > 0));
+                              for (const [Tu, Wu] of Eu.entries()) {
+                                const uu = "word" === Wu.kind,
+                                  Eu = Ku[Tu];
+                                Wu.delayMs = Gu;
+                                for (let Ku = 0; xu && Ku < Eu; Ku++) {
                                   const {
-                                    intonation: EU
-                                  } = uU;
-                                  let PU = fU > 0 ? -EU.declineSemitones * (QU / fU) : 0;
-                                  PU += JU(`${nU(eU.text)}|${pU}`) * EU.variationSemitones;
-                                  const hU = Math.min(1, EU.variationSemitones);
-                                  let WU = uU.glideSemitones,
-                                    xU = 1;
-                                  gU && (PU += EU.exclaimLiftSemitones, xU *= TU), RU && QU === fU && (PU += EU.questionRiseSemitones * (tU > 1 ? .5 + .5 * pU / (tU - 1) : 1), pU === tU - 1 && (WU = Math.abs(WU) + EU.questionRiseSemitones / 2)), UU && bU(eU.text) && (PU += KU * hU, xU *= qU), tU > 1 && 0 === pU && (PU += GU * hU, xU *= cU), ZU.push({
-                                    atMs: aU + pU * CU,
-                                    semitones: PU,
-                                    glideSemitones: WU,
-                                    durationMs: pU < tU - 1 ? Math.min(uU.durationMs, CU * jU) : uU.durationMs,
-                                    level: xU
+                                    intonation: Qu
+                                  } = xu;
+                                  let mu = Hu > 0 ? -Qu.declineSemitones * (Tu / Hu) : 0;
+                                  mu += ku(`${Au(Wu.text)}|${Ku}`) * Qu.variationSemitones;
+                                  const pu = Math.min(1, Qu.variationSemitones);
+                                  let ju = xu.glideSemitones,
+                                    du = 1;
+                                  yu && (mu += Qu.exclaimLiftSemitones, du *= Ju), Ru && Tu === Hu && (mu += Qu.questionRiseSemitones * (Eu > 1 ? .5 + .5 * Ku / (Eu - 1) : 1), Ku === Eu - 1 && (ju = Math.abs(ju) + Qu.questionRiseSemitones / 2)), uu && Du(Wu.text) && (mu += Xu * pu, du *= Nu), Eu > 1 && 0 === Ku && (mu += ru * pu, du *= Vu), Iu.push({
+                                    atMs: Gu + Ku * Su,
+                                    semitones: mu,
+                                    glideSemitones: ju,
+                                    durationMs: Ku < Eu - 1 ? Math.min(xu.durationMs, Su * Bu) : xu.durationMs,
+                                    level: du
                                   })
                                 }
-                                aU += tU * CU + (hU.test(eU.text) ? PU : WU.test(eU.text) ? EU : 0)
+                                Gu += Eu * Su + (pu.test(Wu.text) ? mu : ju.test(Wu.text) ? Qu : 0)
                               }
                             }
                             return {
-                              pieces: fU.map((UU => "space" === UU.kind ? UU : "icon" === UU.kind ? {
+                              pieces: Hu.map((uu => "space" === uu.kind ? uu : "icon" === uu.kind ? {
                                 kind: "icon",
-                                icon: UU.text,
-                                delayMs: UU.delayMs
+                                icon: uu.text,
+                                delayMs: uu.delayMs
                               } : {
                                 kind: "word",
-                                text: UU.text,
-                                delayMs: UU.delayMs
+                                text: uu.text,
+                                delayMs: uu.delayMs
                               })),
-                              blips: ZU
+                              blips: Iu
                             }
                           }
-                          var ZU = gU(1181),
-                            aU = gU(1249),
-                            YU = gU(1802);
+                          var Iu = yu(1170),
+                            Gu = yu(1224),
+                            Uu = yu(1862);
 
-                          function BU(UU) {
-                            if ("string" === typeof UU) return UU;
-                            const RU = aU.g.get().getCurrentLanguageCode();
-                            return (0, ZU.s)(RU, UU.translationKey, (0, ZU.r)(UU.params, YU.b.shown))
+                          function nu(uu) {
+                            if ("string" === typeof uu) return uu;
+                            const Ru = Gu.f.get().getCurrentLanguageCode();
+                            return (0, Iu.q)(Ru, uu.translationKey, (0, Iu.o)(uu.params, Uu.d.shown))
                           }
 
-                          function VU(UU) {
-                            const RU = void 0 === UU.voice ? null : (0, tU.n)(UU.voice),
-                              gU = RU && (0, tU.k)(RU);
+                          function su(uu) {
+                            const Ru = void 0 === uu.voice ? null : (0, Eu.m)(uu.voice),
+                              yu = Ru && (0, Eu.k)(Ru);
                             return {
-                              plan: oU(BU(UU.line), gU),
-                              synth: gU
+                              plan: Mu(nu(uu.line), yu),
+                              synth: yu
                             }
                           }
 
-                          function rU(UU) {
-                            const RU = [];
-                            let gU = [];
-                            for (const [pU, EU] of UU.entries()) {
-                              var tU;
-                              "space" === EU.kind && (" " !== EU.text || "icon" !== (null === (tU = UU[pU + 1]) || void 0 === tU ? void 0 : tU.kind)) ? (gU.length > 0 && RU.push(gU), RU.push([EU]), gU = []) : gU.push(EU)
+                          function tu(uu) {
+                            const Ru = [];
+                            let yu = [];
+                            for (const [Ku, Qu] of uu.entries()) {
+                              var Eu;
+                              "space" === Qu.kind && (" " !== Qu.text || "icon" !== (null === (Eu = uu[Ku + 1]) || void 0 === Eu ? void 0 : Eu.kind)) ? (yu.length > 0 && Ru.push(yu), Ru.push([Qu]), yu = []) : yu.push(Qu)
                             }
-                            return gU.length > 0 && RU.push(gU), RU
+                            return yu.length > 0 && Ru.push(yu), Ru
                           }
-                        }, 4508: (UU, RU, gU) => {
-                          gU.d(RU, {
-                            d: () => cU,
-                            f: () => GU
+                        }, 4626: (uu, Ru, yu) => {
+                          yu.d(Ru, {
+                            e: () => Vu,
+                            h: () => ru
                           });
-                          var tU = gU(4512),
-                            pU = gU(21);
-                          const EU = .25,
-                            PU = .85,
-                            TU = .02,
-                            qU = .01;
+                          var Eu = yu(4630),
+                            Ku = yu(27);
+                          const Qu = .25,
+                            mu = .85,
+                            Ju = .02,
+                            Nu = .01;
 
-                          function KU(UU, RU, gU, tU, pU, EU, TU) {
+                          function Xu(uu, Ru, yu, Eu, Ku, Qu, Ju) {
                             const {
-                              waveform: qU,
-                              pitchHz: KU,
-                              attackMs: cU,
-                              releaseMs: GU,
-                              lowpassHz: jU
-                            } = gU, uU = pU + tU.durationMs / 1e3, CU = KU * 2 ** (tU.semitones / 12), hU = UU.createOscillator();
-                            hU.type = qU, hU.frequency.setValueAtTime(CU, pU), hU.frequency.exponentialRampToValueAtTime(CU * 2 ** (tU.glideSemitones / 12), uU);
-                            const QU = pU + Math.min(cU, tU.durationMs) / 1e3,
-                              eU = UU.createGain();
-                            eU.gain.setValueAtTime(0, pU), eU.gain.linearRampToValueAtTime(EU, QU), eU.gain.linearRampToValueAtTime(EU * PU, Math.max(QU, uU - GU / 1e3)), eU.gain.linearRampToValueAtTime(0, uU);
-                            const WU = [hU];
-                            if (null !== jU) {
-                              const RU = UU.createBiquadFilter();
-                              RU.type = "lowpass", RU.frequency.value = jU, WU.push(RU)
+                              waveform: Nu,
+                              pitchHz: Xu,
+                              attackMs: Vu,
+                              releaseMs: ru,
+                              lowpassHz: Bu
+                            } = yu, xu = Ku + Eu.durationMs / 1e3, Su = Xu * 2 ** (Eu.semitones / 12), pu = uu.createOscillator();
+                            pu.type = Nu, pu.frequency.setValueAtTime(Su, Ku), pu.frequency.exponentialRampToValueAtTime(Su * 2 ** (Eu.glideSemitones / 12), xu);
+                            const Tu = Ku + Math.min(Vu, Eu.durationMs) / 1e3,
+                              Wu = uu.createGain();
+                            Wu.gain.setValueAtTime(0, Ku), Wu.gain.linearRampToValueAtTime(Qu, Tu), Wu.gain.linearRampToValueAtTime(Qu * mu, Math.max(Tu, xu - ru / 1e3)), Wu.gain.linearRampToValueAtTime(0, xu);
+                            const ju = [pu];
+                            if (null !== Bu) {
+                              const Ru = uu.createBiquadFilter();
+                              Ru.type = "lowpass", Ru.frequency.value = Bu, ju.push(Ru)
                             }
-                            WU.push(eU, RU);
-                            for (let PU = 1; PU < WU.length; PU++) WU[PU - 1].connect(WU[PU]);
-                            return hU.onended = () => {
-                              for (const UU of WU.slice(0, -1)) UU.disconnect();
-                              TU()
-                            }, hU.start(pU), hU.stop(uU), hU
+                            ju.push(Wu, Ru);
+                            for (let mu = 1; mu < ju.length; mu++) ju[mu - 1].connect(ju[mu]);
+                            return pu.onended = () => {
+                              for (const uu of ju.slice(0, -1)) uu.disconnect();
+                              Ju()
+                            }, pu.start(Ku), pu.stop(xu), pu
                           }
 
-                          function cU(UU, RU, gU, tU, pU, PU) {
-                            if (0 === tU.length) return PU(), () => {};
-                            const cU = EU * gU.volume * pU,
-                              GU = UU.createGain();
-                            GU.connect(RU);
-                            const jU = UU.currentTime + TU,
-                              uU = new Set;
-                            for (const EU of tU) {
-                              const RU = KU(UU, GU, gU, EU, jU + EU.atMs / 1e3, cU * EU.level, (() => {
-                                uU.delete(RU), 0 === uU.size && (GU.disconnect(), PU())
+                          function Vu(uu, Ru, yu, Eu, Ku, mu) {
+                            if (0 === Eu.length) return mu(), () => {};
+                            const Vu = Qu * yu.volume * Ku,
+                              ru = uu.createGain();
+                            ru.connect(Ru);
+                            const Bu = uu.currentTime + Ju,
+                              xu = new Set;
+                            for (const Qu of Eu) {
+                              const Ru = Xu(uu, ru, yu, Qu, Bu + Qu.atMs / 1e3, Vu * Qu.level, (() => {
+                                xu.delete(Ru), 0 === xu.size && (ru.disconnect(), mu())
                               }));
-                              uU.add(RU)
+                              xu.add(Ru)
                             }
                             return () => {
-                              const RU = UU.currentTime;
-                              GU.gain.setTargetAtTime(0, RU, qU);
-                              for (const UU of uU) try {
-                                UU.stop(RU + 5 * qU)
+                              const Ru = uu.currentTime;
+                              ru.gain.setTargetAtTime(0, Ru, Nu);
+                              for (const uu of xu) try {
+                                uu.stop(Ru + 5 * Nu)
                               } catch {}
                             }
                           }
 
-                          function GU(UU, RU) {
-                            var gU;
-                            const EU = tU.Howler.ctx,
-                              PU = tU.Howler.masterGain;
-                            if (!EU || !PU || !pU.b.get("soundOnFromAd")) return () => {};
-                            const TU = tU.Howler;
-                            return null === (gU = TU._autoResume) || void 0 === gU || gU.call(TU), cU(EU, PU, UU, RU, pU.b.get("soundVolume"), (() => {
-                              var UU;
-                              null === (UU = TU._autoSuspend) || void 0 === UU || UU.call(TU)
+                          function ru(uu, Ru) {
+                            var yu;
+                            const Qu = Eu.Howler.ctx,
+                              mu = Eu.Howler.masterGain;
+                            if (!Qu || !mu || !Ku.d.get("soundOnFromAd")) return () => {};
+                            const Ju = Eu.Howler;
+                            return null === (yu = Ju._autoResume) || void 0 === yu || yu.call(Ju), Vu(Qu, mu, uu, Ru, Ku.d.get("soundVolume"), (() => {
+                              var uu;
+                              null === (uu = Ju._autoSuspend) || void 0 === uu || uu.call(Ju)
                             }))
                           }
-                        }, 4512: (UU, RU, gU) => {
-                          gU.r(RU), gU.d(RU, {
-                            Howl: () => pU.Howl,
-                            Howler: () => pU.Howler,
-                            iosAudio: () => qU,
-                            musicOutput: () => QU,
-                            readyAudioContext: () => eU
+                        }, 4630: (uu, Ru, yu) => {
+                          yu.r(Ru), yu.d(Ru, {
+                            Howl: () => Ku.Howl,
+                            Howler: () => Ku.Howler,
+                            iosAudio: () => Nu,
+                            musicOutput: () => Tu,
+                            readyAudioContext: () => Wu
                           });
-                          var tU, pU = gU(4518),
-                            EU = gU(96);
-                          const PU = pU.Howler;
-                          let TU;
+                          var Eu, Ku = yu(4638),
+                            Qu = yu(106);
+                          const mu = Ku.Howler;
+                          let Ju;
 
-                          function qU() {
-                            return TU ??= "ios" === (0, EU.getOperatingSystem)(), TU
+                          function Nu() {
+                            return Ju ??= "ios" === (0, Qu.getOperatingSystem)(), Ju
                           }
 
-                          function KU() {
-                            var UU, RU;
-                            if (PU.ctx || !PU.usingWebAudio || "undefined" === typeof AudioContext || !qU()) return;
-                            const gU = navigator.audioSession;
-                            let tU;
-                            "auto" === (null === gU || void 0 === gU ? void 0 : gU.type) && (gU.type = "ambient");
+                          function Xu() {
+                            var uu, Ru;
+                            if (mu.ctx || !mu.usingWebAudio || "undefined" === typeof AudioContext || !Nu()) return;
+                            const yu = navigator.audioSession;
+                            let Eu;
+                            "auto" === (null === yu || void 0 === yu ? void 0 : yu.type) && (yu.type = "ambient");
                             try {
-                              tU = new AudioContext({
+                              Eu = new AudioContext({
                                 sampleRate: 44100
                               })
                             } catch {
                               return
                             }
-                            const pU = tU.createGain();
-                            pU.gain.setValueAtTime(PU._muted ? 0 : null !== (UU = PU._volume) && void 0 !== UU ? UU : 1, tU.currentTime), pU.connect(tU.destination), PU.ctx = tU, PU.masterGain = pU, null === (RU = PU._setup) || void 0 === RU || RU.call(PU)
+                            const Ku = Eu.createGain();
+                            Ku.gain.setValueAtTime(mu._muted ? 0 : null !== (uu = mu._volume) && void 0 !== uu ? uu : 1, Eu.currentTime), Ku.connect(Eu.destination), mu.ctx = Eu, mu.masterGain = Ku, null === (Ru = mu._setup) || void 0 === Ru || Ru.call(mu)
                           }
-                          PU._mobileUnloaded = !0;
-                          const cU = PU.volume.bind(pU.Howler);
-                          PU.volume = function() {
-                            return KU(), cU(...arguments)
+                          mu._mobileUnloaded = !0;
+                          const Vu = mu.volume.bind(Ku.Howler);
+                          mu.volume = function() {
+                            return Xu(), Vu(...arguments)
                           };
-                          const GU = PU.mute.bind(pU.Howler);
-                          PU.mute = UU => (KU(), GU(UU));
-                          const jU = pU.Howl.prototype,
-                            uU = jU.init;
-                          jU.init = function(UU) {
-                            return KU(), uU.call(this, UU)
+                          const ru = mu.mute.bind(Ku.Howler);
+                          mu.mute = uu => (Xu(), ru(uu));
+                          const Bu = Ku.Howl.prototype,
+                            xu = Bu.init;
+                          Bu.init = function(uu) {
+                            return Xu(), xu.call(this, uu)
                           };
-                          let CU = 0;
-                          const hU = null === (tU = PU._autoSuspend) || void 0 === tU ? void 0 : tU.bind(pU.Howler);
+                          let Su = 0;
+                          const pu = null === (Eu = mu._autoSuspend) || void 0 === Eu ? void 0 : Eu.bind(Ku.Howler);
 
-                          function QU() {
-                            eU();
+                          function Tu() {
+                            Wu();
                             const {
-                              ctx: UU,
-                              masterGain: RU
-                            } = PU;
-                            return UU && RU ? {
-                              ctx: UU,
-                              destination: RU,
-                              holdAwake: UU => {
-                                var RU, gU;
-                                (CU += UU ? 1 : -1, UU) ? null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU): null === (gU = PU._autoSuspend) || void 0 === gU || gU.call(PU)
+                              ctx: uu,
+                              masterGain: Ru
+                            } = mu;
+                            return uu && Ru ? {
+                              ctx: uu,
+                              destination: Ru,
+                              holdAwake: uu => {
+                                var Ru, yu;
+                                (Su += uu ? 1 : -1, uu) ? null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu): null === (yu = mu._autoSuspend) || void 0 === yu || yu.call(mu)
                               },
                               wake: () => {
-                                var RU;
-                                "running" !== UU.state && (null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU), UU.resume().catch((() => {})))
+                                var Ru;
+                                "running" !== uu.state && (null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu), uu.resume().catch((() => {})))
                               }
                             } : null
                           }
 
-                          function eU() {
-                            var UU;
-                            (PU.volume(), PU.ctx && PU.autoUnlock) && (null === (UU = PU._unlockAudio) || void 0 === UU || UU.call(PU))
+                          function Wu() {
+                            var uu;
+                            (mu.volume(), mu.ctx && mu.autoUnlock) && (null === (uu = mu._unlockAudio) || void 0 === uu || uu.call(mu))
                           }
-                          hU && (PU._autoSuspend = () => CU > 0 ? pU.Howler : hU())
-                        }, 4525: (UU, RU, gU) => {
-                          function tU(UU) {
+                          pu && (mu._autoSuspend = () => Su > 0 ? Ku.Howler : pu())
+                        }, 4640: (uu, Ru, yu) => {
+                          function Eu(uu) {
                             return {
-                              notAfter: UU
+                              notAfter: uu
                             }
                           }
-                          gU.d(RU, {
-                            b: () => qU,
-                            c: () => KU,
-                            e: () => TU,
-                            f: () => tU,
-                            h: () => pU,
-                            k: () => EU,
-                            m: () => PU,
-                            o: () => cU,
-                            p: () => GU
+                          yu.d(Ru, {
+                            e: () => Nu,
+                            i: () => Xu,
+                            j: () => Ju,
+                            l: () => Eu,
+                            o: () => Ku,
+                            p: () => Qu,
+                            r: () => mu,
+                            u: () => Vu,
+                            x: () => ru
                           });
-                          const pU = tU("\\w$."),
-                            EU = tU("\\w.,");
+                          const Ku = Eu("\\w$."),
+                            Qu = Eu("\\w.,");
 
-                          function PU(UU) {
-                            return RU => qU(RU, UU)
+                          function mu(uu) {
+                            return Ru => Nu(Ru, uu)
                           }
 
-                          function TU(UU) {
-                            return RU => !UU.test(RU.input.slice(0, RU.index))
+                          function Ju(uu) {
+                            return Ru => !uu.test(Ru.input.slice(0, Ru.index))
                           }
 
-                          function qU(UU, RU) {
-                            return UU.index > 0 && new RegExp(`[${RU}]`).test(UU.input[UU.index - 1])
+                          function Nu(uu, Ru) {
+                            return uu.index > 0 && new RegExp(`[${Ru}]`).test(uu.input[uu.index - 1])
                           }
 
-                          function KU(UU, RU, gU) {
-                            return function(UU) {
-                              return void 0 !== UU && "function" !== typeof UU
-                            }(gU) ? function(UU, RU, gU) {
-                              const tU = RU.flags.replace(/[gy]/g, ""),
-                                pU = new RegExp(`[^${gU}](?:${RU.source})`, `${tU}g`),
-                                EU = [],
-                                PU = gU => {
-                                  const tU = gU.index + gU[0].length;
-                                  return ("" === gU[0] ? jU(UU, RU, tU) : tU) - 1
+                          function Xu(uu, Ru, yu) {
+                            return function(uu) {
+                              return void 0 !== uu && "function" !== typeof uu
+                            }(yu) ? function(uu, Ru, yu) {
+                              const Eu = Ru.flags.replace(/[gy]/g, ""),
+                                Ku = new RegExp(`[^${yu}](?:${Ru.source})`, `${Eu}g`),
+                                Qu = [],
+                                mu = yu => {
+                                  const Eu = yu.index + yu[0].length;
+                                  return ("" === yu[0] ? Bu(uu, Ru, Eu) : Eu) - 1
                                 },
-                                TU = new RegExp(`(?:${RU.source})`, `${tU}y`).exec(UU);
-                              if (TU) {
-                                if (EU.push(TU), !RU.global) return EU;
-                                pU.lastIndex = PU(TU)
+                                Ju = new RegExp(`(?:${Ru.source})`, `${Eu}y`).exec(uu);
+                              if (Ju) {
+                                if (Qu.push(Ju), !Ru.global) return Qu;
+                                Ku.lastIndex = mu(Ju)
                               }
-                              for (let qU = pU.exec(UU); qU; qU = pU.exec(UU)) {
-                                const gU = jU(UU, RU, qU.index) - qU.index;
-                                if (qU[0] = qU[0].slice(gU), qU.index += gU, EU.push(qU), !RU.global) break;
-                                pU.lastIndex = PU(qU)
+                              for (let Nu = Ku.exec(uu); Nu; Nu = Ku.exec(uu)) {
+                                const yu = Bu(uu, Ru, Nu.index) - Nu.index;
+                                if (Nu[0] = Nu[0].slice(yu), Nu.index += yu, Qu.push(Nu), !Ru.global) break;
+                                Ku.lastIndex = mu(Nu)
                               }
-                              return EU
-                            }(UU, RU, gU.notAfter) : function(UU, RU, gU) {
-                              const tU = new RegExp(RU.source, `${RU.flags.replace(/[gy]/g,"")}g`),
-                                pU = [];
-                              for (let EU = tU.exec(UU); EU; EU = tU.exec(UU))
-                                if (!gU || gU(EU)) {
-                                  if (pU.push(EU), !RU.global) break;
-                                  "" === EU[0] && (tU.lastIndex = jU(UU, RU, tU.lastIndex))
-                                } else tU.lastIndex = jU(UU, RU, EU.index);
-                              return pU
-                            }(UU, RU, gU)
+                              return Qu
+                            }(uu, Ru, yu.notAfter) : function(uu, Ru, yu) {
+                              const Eu = new RegExp(Ru.source, `${Ru.flags.replace(/[gy]/g,"")}g`),
+                                Ku = [];
+                              for (let Qu = Eu.exec(uu); Qu; Qu = Eu.exec(uu))
+                                if (!yu || yu(Qu)) {
+                                  if (Ku.push(Qu), !Ru.global) break;
+                                  "" === Qu[0] && (Eu.lastIndex = Bu(uu, Ru, Eu.lastIndex))
+                                } else Eu.lastIndex = Bu(uu, Ru, Qu.index);
+                              return Ku
+                            }(uu, Ru, yu)
                           }
 
-                          function cU(UU, RU, gU, tU) {
-                            let pU = "",
-                              EU = 0;
-                            for (const PU of KU(UU, RU, gU)) pU += UU.slice(EU, PU.index) + tU(PU), EU = PU.index + PU[0].length;
-                            return pU + UU.slice(EU)
+                          function Vu(uu, Ru, yu, Eu) {
+                            let Ku = "",
+                              Qu = 0;
+                            for (const mu of Xu(uu, Ru, yu)) Ku += uu.slice(Qu, mu.index) + Eu(mu), Qu = mu.index + mu[0].length;
+                            return Ku + uu.slice(Qu)
                           }
 
-                          function GU(UU, RU, gU) {
-                            const tU = [];
-                            let pU = 0;
-                            for (const EU of KU(UU, RU, gU)) tU.push(UU.slice(pU, EU.index)), pU = EU.index + EU[0].length;
-                            return [...tU, UU.slice(pU)]
+                          function ru(uu, Ru, yu) {
+                            const Eu = [];
+                            let Ku = 0;
+                            for (const Qu of Xu(uu, Ru, yu)) Eu.push(uu.slice(Ku, Qu.index)), Ku = Qu.index + Qu[0].length;
+                            return [...Eu, uu.slice(Ku)]
                           }
 
-                          function jU(UU, RU, gU) {
-                            var tU;
-                            return gU + (RU.unicode && (null !== (tU = UU.codePointAt(gU)) && void 0 !== tU ? tU : 0) > 65535 ? 2 : 1)
+                          function Bu(uu, Ru, yu) {
+                            var Eu;
+                            return yu + (Ru.unicode && (null !== (Eu = uu.codePointAt(yu)) && void 0 !== Eu ? Eu : 0) > 65535 ? 2 : 1)
                           }
-                        }, 4480: (UU, RU, gU) => {
-                          gU.d(RU, {
-                            e: () => pU,
-                            h: () => qU,
-                            j: () => EU,
-                            m: () => PU,
-                            n: () => TU,
-                            p: () => QU,
-                            q: () => cU,
-                            s: () => GU,
-                            u: () => hU,
-                            v: () => uU
+                        }, 4593: (uu, Ru, yu) => {
+                          yu.d(Ru, {
+                            A: () => xu,
+                            b: () => Ku,
+                            e: () => Nu,
+                            h: () => Qu,
+                            j: () => mu,
+                            m: () => Ju,
+                            q: () => Tu,
+                            u: () => Vu,
+                            w: () => ru,
+                            y: () => pu
                           });
-                          var tU = gU(1535);
-                          const pU = 24e3,
-                            EU = "/docs/llms.txt",
-                            PU = `${tU.b}${EU}`,
-                            TU = "/llms.txt",
-                            qU = "/docs/llms-full.txt";
+                          var Eu = yu(1542);
+                          const Ku = 24e3,
+                            Qu = "/docs/llms.txt",
+                            mu = `${Eu.c}${Qu}`,
+                            Ju = "/llms.txt",
+                            Nu = "/docs/llms-full.txt";
 
-                          function KU(UU) {
-                            return UU || "index"
+                          function Xu(uu) {
+                            return uu || "index"
                           }
 
-                          function cU(UU) {
-                            return `/docs/${KU(UU)}.md`
+                          function Vu(uu) {
+                            return `/docs/${Xu(uu)}.md`
                           }
 
-                          function GU(UU, RU) {
-                            return `/docs/${KU(UU)}/${RU+1}.md`
+                          function ru(uu, Ru) {
+                            return `/docs/${Xu(uu)}/${Ru+1}.md`
                           }
-                          const jU = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
+                          const Bu = /^\/docs\/([a-z0-9-]+)(?:\/(\d+))?\.md$/;
 
-                          function uU(UU) {
-                            const RU = jU.exec(UU);
-                            return null === RU ? null : {
-                              name: RU[1],
-                              part: void 0 === RU[2] ? null : Number(RU[2])
+                          function xu(uu) {
+                            const Ru = Bu.exec(uu);
+                            return null === Ru ? null : {
+                              name: Ru[1],
+                              part: void 0 === Ru[2] ? null : Number(Ru[2])
                             }
                           }
-                          const CU = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
+                          const Su = /^(?:\/studio)?\/docs(?:\/([a-z0-9-]+)(?:\/(\d+))?)?\/?$/;
 
-                          function hU(UU) {
-                            const RU = CU.exec(UU);
-                            if (null === RU) return null;
-                            const [, gU = "", tU] = RU;
-                            return void 0 === tU ? cU(gU) : GU(gU, Number(tU) - 1)
+                          function pu(uu) {
+                            const Ru = Su.exec(uu);
+                            if (null === Ru) return null;
+                            const [, yu = "", Eu] = Ru;
+                            return void 0 === Eu ? Vu(yu) : ru(yu, Number(Eu) - 1)
                           }
 
-                          function QU(UU) {
-                            return `/docsHtml/${KU(UU)}.html`
+                          function Tu(uu) {
+                            return `/docsHtml/${Xu(uu)}.html`
                           }
-                        }, 4503: (UU, RU, gU) => {
-                          gU.d(RU, {
-                            c: () => pU,
-                            f: () => tU,
-                            j: () => EU,
-                            k: () => qU,
-                            n: () => PU
+                        }, 4617: (uu, Ru, yu) => {
+                          yu.d(Ru, {
+                            c: () => Ku,
+                            d: () => Eu,
+                            g: () => Qu,
+                            k: () => Nu,
+                            m: () => mu
                           });
-                          const tU = ["sine", "triangle", "square", "sawtooth"],
-                            pU = 55,
-                            EU = {
+                          const Eu = ["sine", "triangle", "square", "sawtooth"],
+                            Ku = 55,
+                            Qu = {
                               soft: {
                                 waveform: "sine",
                                 pitchHz: 300,
@@ -7214,38 +7214,38 @@ export const modules = {
                               }
                             };
 
-                          function PU(UU) {
-                            return "string" !== typeof UU ? UU : Object.hasOwn(EU, UU) ? EU[UU] : null
+                          function mu(uu) {
+                            return "string" !== typeof uu ? uu : Object.hasOwn(Qu, uu) ? Qu[uu] : null
                           }
 
-                          function TU(UU, RU, gU) {
-                            return Math.min(gU, Math.max(RU, UU))
+                          function Ju(uu, Ru, yu) {
+                            return Math.min(yu, Math.max(Ru, uu))
                           }
 
-                          function qU(UU) {
-                            const RU = TU(UU.durationMs, 10, 500),
-                              gU = TU(UU.attackMs, 0, RU),
+                          function Nu(uu) {
+                            const Ru = Ju(uu.durationMs, 10, 500),
+                              yu = Ju(uu.attackMs, 0, Ru),
                               {
-                                intonation: pU
-                              } = UU;
+                                intonation: Ku
+                              } = uu;
                             return {
-                              waveform: tU.includes(UU.waveform) ? UU.waveform : "sine",
-                              pitchHz: TU(UU.pitchHz, 20, 4e3),
-                              glideSemitones: TU(UU.glideSemitones, -24, 24),
-                              durationMs: RU,
-                              attackMs: gU,
-                              releaseMs: TU(UU.releaseMs, 0, RU - gU),
-                              lowpassHz: null === UU.lowpassHz ? null : TU(UU.lowpassHz, 20, 2e4),
-                              volume: TU(UU.volume, 0, 2),
+                              waveform: Eu.includes(uu.waveform) ? uu.waveform : "sine",
+                              pitchHz: Ju(uu.pitchHz, 20, 4e3),
+                              glideSemitones: Ju(uu.glideSemitones, -24, 24),
+                              durationMs: Ru,
+                              attackMs: yu,
+                              releaseMs: Ju(uu.releaseMs, 0, Ru - yu),
+                              lowpassHz: null === uu.lowpassHz ? null : Ju(uu.lowpassHz, 20, 2e4),
+                              volume: Ju(uu.volume, 0, 2),
                               intonation: {
-                                variationSemitones: TU(pU.variationSemitones, 0, 6),
-                                declineSemitones: TU(pU.declineSemitones, 0, 12),
-                                questionRiseSemitones: TU(pU.questionRiseSemitones, 0, 12),
-                                exclaimLiftSemitones: TU(pU.exclaimLiftSemitones, 0, 12)
+                                variationSemitones: Ju(Ku.variationSemitones, 0, 6),
+                                declineSemitones: Ju(Ku.declineSemitones, 0, 12),
+                                questionRiseSemitones: Ju(Ku.questionRiseSemitones, 0, 12),
+                                exclaimLiftSemitones: Ju(Ku.exclaimLiftSemitones, 0, 12)
                               },
-                              syllableMs: TU(UU.syllableMs, 25, 200)
+                              syllableMs: Ju(uu.syllableMs, 25, 200)
                             }
                           }
                         }
                       }; Object.freeze(modules);
-                      for (const UU in modules) Object.freeze(modules[UU]);
+                      for (const uu in modules) Object.freeze(modules[uu]);

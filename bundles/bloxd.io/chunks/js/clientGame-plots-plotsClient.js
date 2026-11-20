@@ -1,387 +1,387 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  36187: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => uU,
-      e: () => CU,
-      h: () => jU,
-      l: () => GU
+  36436: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => xu,
+      d: () => Su,
+      g: () => Bu,
+      h: () => ru
     });
-    var tU = gU(8982),
-      pU = gU(36191),
-      EU = gU(36197),
-      PU = gU(8340),
-      TU = gU(1410),
-      qU = gU(56),
-      KU = gU(74),
-      cU = gU(1090);
+    var Eu = yu(9048),
+      Ku = yu(36445),
+      Qu = yu(36449),
+      mu = yu(8447),
+      Ju = yu(1400),
+      Nu = yu(64),
+      Xu = yu(80),
+      Vu = yu(1079);
 
-    function GU() {
-      var UU;
-      return (0, TU.h)(pU.e, (0, pU.t)()), (0, cU.jsx)(cU.Fragment, {
-        children: null === (UU = (0, pU.t)()) || void 0 === UU ? void 0 : UU.content
+    function ru() {
+      var uu;
+      return (0, Ju.h)(Ku.c, (0, Ku.o)()), (0, Vu.jsx)(Vu.Fragment, {
+        children: null === (uu = (0, Ku.o)()) || void 0 === uu ? void 0 : uu.content
       })
     }
 
-    function jU(UU) {
-      var RU;
+    function Bu(uu) {
+      var Ru;
       let {
-        show: gU
-      } = UU;
-      (0, TU.h)(pU.e, (0, pU.t)());
-      const KU = null === (RU = (0, pU.t)()) || void 0 === RU ? void 0 : RU.menu;
-      return (0, qU.useEffect)((() => {
-        var UU;
-        gU || (null === KU || void 0 === KU || null === (UU = KU.onClose) || void 0 === UU || UU.call(KU), (0, EU.q)())
-      }), [gU, KU]), (0, qU.useEffect)((() => gU ? (0, PU.f)(EU.w, EU.e) : void 0), [gU]), (0, cU.jsx)(tU.d, {
-        showing: gU,
+        show: yu
+      } = uu;
+      (0, Ju.h)(Ku.c, (0, Ku.o)());
+      const Xu = null === (Ru = (0, Ku.o)()) || void 0 === Ru ? void 0 : Ru.menu;
+      return (0, Nu.useEffect)((() => {
+        var uu;
+        yu || (null === Xu || void 0 === Xu || null === (uu = Xu.onClose) || void 0 === uu || uu.call(Xu), (0, Qu.p)())
+      }), [yu, Xu]), (0, Nu.useEffect)((() => yu ? (0, mu.g)(Qu.v, Qu.d) : void 0), [yu]), (0, Vu.jsx)(Eu.c, {
+        showing: yu,
         globallyUniqueKey: "clientGameMenu",
-        children: null === KU || void 0 === KU ? void 0 : KU.content
+        children: null === Xu || void 0 === Xu ? void 0 : Xu.content
       })
     }
 
-    function uU(UU) {
+    function xu(uu) {
       let {
-        placement: RU = "bottom"
-      } = UU;
-      return (0, cU.jsx)("div", {
-        id: `clientGameHud-${RU}`,
+        placement: Ru = "bottom"
+      } = uu;
+      return (0, Vu.jsx)("div", {
+        id: `clientGameHud-${Ru}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function CU(UU) {
+    function Su(uu) {
       let {
-        children: RU,
-        placement: gU = "bottom"
-      } = UU;
-      const [tU, pU] = (0, qU.useState)(null);
-      return (0, qU.useEffect)((() => {
-        pU(document.getElementById(`clientGameHud-${gU}`))
-      }), [gU]), tU ? (0, KU.createPortal)(RU, tU) : null
+        children: Ru,
+        placement: yu = "bottom"
+      } = uu;
+      const [Eu, Ku] = (0, Nu.useState)(null);
+      return (0, Nu.useEffect)((() => {
+        Ku(document.getElementById(`clientGameHud-${yu}`))
+      }), [yu]), Eu ? (0, Xu.createPortal)(Ru, Eu) : null
     }
   },
-  8982: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU
+  9048: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu
     });
-    var tU = gU(4200),
-      pU = gU(4206);
+    var Eu = yu(4307),
+      Ku = yu(4314);
 
-    function EU(UU) {
+    function Qu(uu) {
       let {
-        children: RU,
-        showing: gU,
-        globallyUniqueKey: EU,
-        alwaysMountChildren: PU = !1,
-        doGameplayStartStopOnShow: TU = !0,
-        keepsMovement: qU = !1
-      } = UU;
-      return (0, pU.e)(!0, gU, EU, qU), (0, tU.c)(TU, gU), gU || PU ? RU : null
+        children: Ru,
+        showing: yu,
+        globallyUniqueKey: Qu,
+        alwaysMountChildren: mu = !1,
+        doGameplayStartStopOnShow: Ju = !0,
+        keepsMovement: Nu = !1
+      } = uu;
+      return (0, Ku.c)(!0, yu, Qu, Nu), (0, Eu.e)(Ju, yu), yu || mu ? Ru : null
     }
   },
-  36280: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => EU,
-      f: () => PU,
-      i: () => TU,
-      m: () => qU
+  36532: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Qu,
+      c: () => mu,
+      d: () => Ju,
+      g: () => Nu
     });
-    var tU = gU(56),
-      pU = gU(1106);
-    const EU = 8,
-      PU = "InGameHeaderContainer",
-      TU = "TopRightElements";
+    var Eu = yu(64),
+      Ku = yu(1100);
+    const Qu = 8,
+      mu = "InGameHeaderContainer",
+      Ju = "TopRightElements";
 
-    function qU(UU) {
-      const [RU] = (0, pU.d)(), [gU, qU] = (0, tU.useState)(!1);
-      return (0, tU.useLayoutEffect)((() => {
-        if (!UU) return;
-        const RU = document.querySelector(`.${PU}`),
-          gU = document.querySelector(`.${TU}`),
-          tU = () => {
-            const tU = UU.getBoundingClientRect(),
-              pU = RU ? RU.getBoundingClientRect().right : 0,
-              PU = gU ? gU.getBoundingClientRect().left : window.innerWidth,
-              TU = tU.left < pU + EU,
-              KU = tU.right > PU - EU;
-            qU(TU || KU)
+    function Nu(uu) {
+      const [Ru] = (0, Ku.d)(), [yu, Nu] = (0, Eu.useState)(!1);
+      return (0, Eu.useLayoutEffect)((() => {
+        if (!uu) return;
+        const Ru = document.querySelector(`.${mu}`),
+          yu = document.querySelector(`.${Ju}`),
+          Eu = () => {
+            const Eu = uu.getBoundingClientRect(),
+              Ku = Ru ? Ru.getBoundingClientRect().right : 0,
+              mu = yu ? yu.getBoundingClientRect().left : window.innerWidth,
+              Ju = Eu.left < Ku + Qu,
+              Xu = Eu.right > mu - Qu;
+            Nu(Ju || Xu)
           };
-        tU();
-        const pU = new ResizeObserver(tU);
-        return pU.observe(UU), RU && pU.observe(RU), gU && pU.observe(gU), () => {
-          pU.disconnect()
+        Eu();
+        const Ku = new ResizeObserver(Eu);
+        return Ku.observe(uu), Ru && Ku.observe(Ru), yu && Ku.observe(yu), () => {
+          Ku.disconnect()
         }
-      }), [UU, RU]), gU
+      }), [uu, Ru]), yu
     }
   },
-  8340: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => EU,
-      f: () => pU
+  8447: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      g: () => Ku
     });
-    let tU = null;
-    const pU = function(UU) {
-        const RU = {
-          cycle: UU,
+    let Eu = null;
+    const Ku = function(uu) {
+        const Ru = {
+          cycle: uu,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return tU = RU, () => {
-          tU === RU && (tU = null)
+        return Eu = Ru, () => {
+          Eu === Ru && (Eu = null)
         }
       },
-      EU = () => {
-        var UU;
-        return null !== (UU = tU) && void 0 !== UU && UU.canCycle() ? tU.cycle : null
+      Qu = () => {
+        var uu;
+        return null !== (uu = Eu) && void 0 !== uu && uu.canCycle() ? Eu.cycle : null
       }
   },
-  36197: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => EU,
-      e: () => hU,
-      g: () => QU,
-      j: () => TU,
-      n: () => jU,
-      q: () => eU,
-      r: () => GU,
-      t: () => fU,
-      w: () => CU,
-      x: () => WU
+  36449: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      d: () => pu,
+      h: () => Tu,
+      k: () => Ju,
+      o: () => Bu,
+      p: () => Wu,
+      q: () => ru,
+      u: () => Hu,
+      v: () => Su,
+      w: () => ju
     });
-    var tU = gU(21),
-      pU = gU(24);
-    const EU = "clientGameInventoryButtonsChanged",
-      PU = new Map;
+    var Eu = yu(27),
+      Ku = yu(34);
+    const Qu = "clientGameInventoryButtonsChanged",
+      mu = new Map;
 
-    function TU() {
-      return [...PU.values()].sort(((UU, RU) => {
-        var gU, tU;
-        return (null !== (gU = UU.order) && void 0 !== gU ? gU : 0) - (null !== (tU = RU.order) && void 0 !== tU ? tU : 0)
+    function Ju() {
+      return [...mu.values()].sort(((uu, Ru) => {
+        var yu, Eu;
+        return (null !== (yu = uu.order) && void 0 !== yu ? yu : 0) - (null !== (Eu = Ru.order) && void 0 !== Eu ? Eu : 0)
       }))
     }
-    let qU = null;
+    let Nu = null;
 
-    function KU(UU) {
-      qU = UU
+    function Xu(uu) {
+      Nu = uu
     }
-    let cU = !1;
+    let Vu = !1;
 
-    function GU(UU) {
-      cU = !0;
+    function ru(uu) {
+      Vu = !0;
       try {
-        UU.onClick()
+        uu.onClick()
       } finally {
-        cU = !1
+        Vu = !1
       }
-      UU.panel && "clientGame" === tU.b.get("openInGameMenuName") && KU(UU.id)
+      uu.panel && "clientGame" === Eu.d.get("openInGameMenuName") && Xu(uu.id)
     }
 
-    function jU() {
-      return cU
+    function Bu() {
+      return Vu
     }
 
-    function uU() {
-      return TU().filter((UU => UU.panel && !UU.disabled))
+    function xu() {
+      return Ju().filter((uu => uu.panel && !uu.disabled))
     }
 
-    function CU(UU) {
-      const RU = uU(),
-        gU = RU.findIndex((UU => UU.id === qU));
-      return !(gU < 0 || RU.length < 2) && (GU(RU[(gU + UU + RU.length) % RU.length]), !0)
+    function Su(uu) {
+      const Ru = xu(),
+        yu = Ru.findIndex((uu => uu.id === Nu));
+      return !(yu < 0 || Ru.length < 2) && (ru(Ru[(yu + uu + Ru.length) % Ru.length]), !0)
     }
 
-    function hU() {
-      return null !== qU && uU().length > 1
+    function pu() {
+      return null !== Nu && xu().length > 1
     }
 
-    function QU() {
-      KU(null)
+    function Tu() {
+      Xu(null)
     }
 
-    function eU() {
-      "inventory" !== tU.b.get("openInGameMenuName") && KU(null)
+    function Wu() {
+      "inventory" !== Eu.d.get("openInGameMenuName") && Xu(null)
     }
 
-    function WU() {
-      const UU = qU;
-      return KU(null), UU
+    function ju() {
+      const uu = Nu;
+      return Xu(null), uu
     }
 
-    function fU(UU) {
-      return PU.set(UU.id, UU), pU.p.yh(EU, TU(), !0), () => {
-        PU.get(UU.id) === UU && (PU.delete(UU.id), pU.p.yh(EU, TU()))
+    function Hu(uu) {
+      return mu.set(uu.id, uu), Ku.k.Op(Qu, Ju(), !0), () => {
+        mu.get(uu.id) === uu && (mu.delete(uu.id), Ku.k.Op(Qu, Ju()))
       }
     }
   },
-  36191: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => TU,
-      h: () => QU,
-      l: () => eU,
-      p: () => jU,
-      t: () => KU,
-      w: () => hU,
-      x: () => uU,
-      y: () => cU
+  36445: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      f: () => Tu,
+      i: () => Wu,
+      m: () => Bu,
+      o: () => Xu,
+      q: () => pu,
+      u: () => xu,
+      w: () => Vu
     });
-    var tU = gU(21),
-      pU = gU(24),
-      EU = gU(1287),
-      PU = gU(36197);
-    const TU = "clientGameUiChanged";
-    let qU = null;
+    var Eu = yu(27),
+      Ku = yu(34),
+      Qu = yu(1250),
+      mu = yu(36449);
+    const Ju = "clientGameUiChanged";
+    let Nu = null;
 
-    function KU() {
-      return qU
+    function Xu() {
+      return Nu
     }
 
-    function cU(UU, RU) {
-      const gU = {
-        content: UU,
-        menu: RU
+    function Vu(uu, Ru) {
+      const yu = {
+        content: uu,
+        menu: Ru
       };
-      return qU = gU, pU.p.yh(TU, qU, !0), () => {
-        qU === gU && (qU = null, CU = !1, QU(), pU.p.yh(TU, null))
+      return Nu = yu, Ku.k.Op(Ju, Nu, !0), () => {
+        Nu === yu && (Nu = null, Su = !1, Tu(), Ku.k.Op(Ju, null))
       }
     }
-    let GU = null;
+    let ru = null;
 
-    function jU() {
-      return GU
+    function Bu() {
+      return ru
     }
 
-    function uU(UU) {
-      return GU = UU, () => {
-        GU === UU && (GU = null)
+    function xu(uu) {
+      return ru = uu, () => {
+        ru === uu && (ru = null)
       }
     }
-    let CU = !1;
+    let Su = !1;
 
-    function hU() {
-      const UU = tU.b.get("openInGameMenuName");
-      "clientGame" !== UU && (CU = "inventory" === UU), (0, PU.n)() || (0, PU.g)(), (0, EU.o)(EU.c), tU.b.set({
+    function pu() {
+      const uu = Eu.d.get("openInGameMenuName");
+      "clientGame" !== uu && (Su = "inventory" === uu), (0, mu.o)() || (0, mu.h)(), (0, Qu.o)(Qu.b), Eu.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function QU() {
-      WU(!1)
+    function Tu() {
+      ju(!1)
     }
 
-    function eU() {
-      WU(CU)
+    function Wu() {
+      ju(Su)
     }
 
-    function WU(UU) {
-      "clientGame" === tU.b.get("openInGameMenuName") && tU.b.set({
-        openInGameMenuName: UU ? "inventory" : null
-      }), UU || (0, PU.g)(), CU = !1
+    function ju(uu) {
+      "clientGame" === Eu.d.get("openInGameMenuName") && Eu.d.set({
+        openInGameMenuName: uu ? "inventory" : null
+      }), uu || (0, mu.h)(), Su = !1
     }
   },
-  38069: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => PU,
-      f: () => TU,
-      j: () => qU
+  38281: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => mu,
+      i: () => Ju,
+      l: () => Nu
     });
-    const tU = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      pU = [0, 1, 2, 0, 2, 3],
-      EU = [4, 5];
+    const Eu = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      Ku = [0, 1, 2, 0, 2, 3],
+      Qu = [4, 5];
 
-    function PU(UU, RU, gU, tU, pU) {
-      for (let PU = 0; PU < 6; PU++) EU.includes(PU) === pU && KU(UU, RU, gU, tU, PU)
+    function mu(uu, Ru, yu, Eu, Ku) {
+      for (let mu = 0; mu < 6; mu++) Qu.includes(mu) === Ku && Xu(uu, Ru, yu, Eu, mu)
     }
 
-    function TU(UU, RU, gU, tU) {
-      for (let pU = 0; pU < 6; pU++) KU(UU, RU, gU, tU, pU)
+    function Ju(uu, Ru, yu, Eu) {
+      for (let Ku = 0; Ku < 6; Ku++) Xu(uu, Ru, yu, Eu, Ku)
     }
 
-    function qU(UU, RU, gU, EU, PU) {
-      for (let TU = 0; TU < 6; TU++)
-        for (const qU of [0, 1]) {
-          const [KU, cU, GU] = [qU + 2, qU + 1, (qU + 3) % 4], jU = UU.length / 3;
-          for (const [RU, pU] of [
-              [qU, cU],
-              [KU, cU],
-              [KU, GU],
-              [qU, GU]
+    function Nu(uu, Ru, yu, Qu, mu) {
+      for (let Ju = 0; Ju < 6; Ju++)
+        for (const Nu of [0, 1]) {
+          const [Xu, Vu, ru] = [Nu + 2, Nu + 1, (Nu + 3) % 4], Bu = uu.length / 3;
+          for (const [Ru, Ku] of [
+              [Nu, Vu],
+              [Xu, Vu],
+              [Xu, ru],
+              [Nu, ru]
             ])
-            for (let qU = 0; qU < 3; qU++) {
-              const KU = tU[3 * (4 * TU + RU) + qU],
-                cU = tU[3 * (4 * TU + pU) + qU];
-              UU.push((KU + (cU - KU) * PU) * EU / 2 + gU[qU])
+            for (let Nu = 0; Nu < 3; Nu++) {
+              const Xu = Eu[3 * (4 * Ju + Ru) + Nu],
+                Vu = Eu[3 * (4 * Ju + Ku) + Nu];
+              uu.push((Xu + (Vu - Xu) * mu) * Qu / 2 + yu[Nu])
             }
-          for (const UU of pU) RU.push(jU + UU)
+          for (const uu of Ku) Ru.push(Bu + uu)
         }
     }
 
-    function KU(UU, RU, gU, EU, PU) {
-      let [TU, qU, KU] = gU, [cU, GU, jU] = EU;
-      const uU = UU.length / 3;
-      for (let pU = 4 * PU; pU < 4 * PU + 4; pU++) UU.push(tU[3 * pU] * cU / 2 + TU, tU[3 * pU + 1] * GU / 2 + qU, tU[3 * pU + 2] * jU / 2 + KU);
-      for (const tU of pU) RU.push(uU + tU)
+    function Xu(uu, Ru, yu, Qu, mu) {
+      let [Ju, Nu, Xu] = yu, [Vu, ru, Bu] = Qu;
+      const xu = uu.length / 3;
+      for (let Ku = 4 * mu; Ku < 4 * mu + 4; Ku++) uu.push(Eu[3 * Ku] * Vu / 2 + Ju, Eu[3 * Ku + 1] * ru / 2 + Nu, Eu[3 * Ku + 2] * Bu / 2 + Xu);
+      for (const Eu of Ku) Ru.push(xu + Eu)
     }
   },
-  36437: (UU, RU, gU) => {
-    function tU(UU, RU) {
-      return null === UU || null === RU ? UU === RU : UU[0] === RU[0] && UU[1] === RU[1] && UU[2] === RU[2]
+  36670: (uu, Ru, yu) => {
+    function Eu(uu, Ru) {
+      return null === uu || null === Ru ? uu === Ru : uu[0] === Ru[0] && uu[1] === Ru[1] && uu[2] === Ru[2]
     }
 
-    function pU(UU) {
-      return [UU[0] + .5, UU[1] + .5, UU[2] + .5]
+    function Ku(uu) {
+      return [uu[0] + .5, uu[1] + .5, uu[2] + .5]
     }
-    gU.d(RU, {
-      b: () => pU,
-      c: () => tU
+    yu.d(Ru, {
+      b: () => Ku,
+      f: () => Eu
     })
   },
-  36470: (UU, RU, gU) => {
-    function tU(UU) {
-      return UU.includes("Leaf Bed")
+  36707: (uu, Ru, yu) => {
+    function Eu(uu) {
+      return uu.includes("Leaf Bed")
     }
 
-    function pU(UU) {
-      return / Bed(?: Head)?(?:\||$)/.test(UU) && !tU(UU)
+    function Ku(uu) {
+      return / Bed(?: Head)?(?:\||$)/.test(uu) && !Eu(uu)
     }
 
-    function EU(UU) {
-      return UU.includes(" Strongbed")
+    function Qu(uu) {
+      return uu.includes(" Strongbed")
     }
 
-    function PU(UU) {
-      return tU(UU) || pU(UU) || EU(UU)
+    function mu(uu) {
+      return Eu(uu) || Ku(uu) || Qu(uu)
     }
-    gU.d(RU, {
-      d: () => PU,
-      e: () => tU,
-      i: () => EU,
-      m: () => pU
+    yu.d(Ru, {
+      b: () => mu,
+      d: () => Eu,
+      e: () => Qu,
+      f: () => Ku
     })
   },
-  36467: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => KU
+  36702: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Xu
     });
-    var tU = gU(36470),
-      pU = gU(9078);
-    const EU = [],
-      PU = [],
-      TU = [],
-      qU = [];
-    for (const cU of Object.keys(pU.k))(0, tU.e)(cU) ? EU.push(cU) : (0, tU.m)(cU) && PU.push(cU), (0, tU.i)(cU) && TU.push(cU), (cU.includes(" Bed Head") || cU.includes(" Strongbed Head")) && qU.push(cU);
-    const KU = {
-      leafBeds: EU,
-      woolBeds: PU,
-      strongBeds: TU,
-      beds: [...EU, ...PU, ...TU],
-      bedHeads: qU,
+    var Eu = yu(36707),
+      Ku = yu(9158);
+    const Qu = [],
+      mu = [],
+      Ju = [],
+      Nu = [];
+    for (const Vu of Object.keys(Ku.q))(0, Eu.d)(Vu) ? Qu.push(Vu) : (0, Eu.f)(Vu) && mu.push(Vu), (0, Eu.e)(Vu) && Ju.push(Vu), (Vu.includes(" Bed Head") || Vu.includes(" Strongbed Head")) && Nu.push(Vu);
+    const Xu = {
+      leafBeds: Qu,
+      woolBeds: mu,
+      strongBeds: Ju,
+      beds: [...Qu, ...mu, ...Ju],
+      bedHeads: Nu,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

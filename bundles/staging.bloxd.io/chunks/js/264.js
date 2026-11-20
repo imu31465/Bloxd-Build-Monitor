@@ -1,632 +1,632 @@
 export const id = 264;
 export const ids = [264];
 export const modules = {
-  40477: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => fU,
-      h: () => VU,
-      j: () => QU,
-      k: () => eU,
-      n: () => jU,
-      r: () => hU,
-      u: () => CU,
-      w: () => uU
+  40668: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Hu,
+      f: () => su,
+      i: () => Tu,
+      j: () => Wu,
+      k: () => Bu,
+      n: () => pu,
+      q: () => Su,
+      s: () => xu
     });
-    var tU = gU(36600),
-      pU = gU(36761),
-      EU = gU(36626),
-      PU = gU(40483),
-      TU = gU(39610),
-      qU = gU(39387),
-      KU = gU(39427),
-      cU = gU(39395),
-      GU = gU(36639);
-    const jU = Object.freeze(new tU.d(0, 0, 0, 0)),
-      uU = Object.freeze(tU.n.Zero()),
-      CU = Object.freeze(tU.l.Zero()),
-      hU = Object.freeze(qU.b.Zero()),
-      QU = Object.freeze(pU.e.Black()),
-      eU = Object.freeze(new pU.g(0, 0, 0, 0)),
-      WU = {
+    var Eu = yu(36830),
+      Ku = yu(36991),
+      Qu = yu(36865),
+      mu = yu(40676),
+      Ju = yu(39780),
+      Nu = yu(39580),
+      Xu = yu(39611),
+      Vu = yu(39582),
+      ru = yu(36871);
+    const Bu = Object.freeze(new Eu.f(0, 0, 0, 0)),
+      xu = Object.freeze(Eu.p.Zero()),
+      Su = Object.freeze(Eu.n.Zero()),
+      pu = Object.freeze(Nu.c.Zero()),
+      Tu = Object.freeze(Ku.d.Black()),
+      Wu = Object.freeze(new Ku.h(0, 0, 0, 0)),
+      ju = {
         key: 0,
         repeatCount: 0,
-        mE: 2
+        WQ: 2
       };
-    class fU {
-      static _PrepareAnimation(UU, RU, gU, EU, PU, TU, KU, cU) {
-        let GU;
-        if (!isNaN(parseFloat(PU)) && isFinite(PU) ? GU = fU.ANIMATIONTYPE_FLOAT : PU instanceof tU.d ? GU = fU.ANIMATIONTYPE_QUATERNION : PU instanceof tU.n ? GU = fU.ANIMATIONTYPE_VECTOR3 : PU instanceof tU.l ? GU = fU.ANIMATIONTYPE_VECTOR2 : PU instanceof pU.e ? GU = fU.ANIMATIONTYPE_COLOR3 : PU instanceof pU.g ? GU = fU.ANIMATIONTYPE_COLOR4 : PU instanceof qU.b && (GU = fU.ANIMATIONTYPE_SIZE), void 0 == GU) return null;
-        const jU = new fU(UU, RU, gU, GU, KU),
-          uU = [{
+    class Hu {
+      static _PrepareAnimation(uu, Ru, yu, Qu, mu, Ju, Xu, Vu) {
+        let ru;
+        if (!isNaN(parseFloat(mu)) && isFinite(mu) ? ru = Hu.ANIMATIONTYPE_FLOAT : mu instanceof Eu.f ? ru = Hu.ANIMATIONTYPE_QUATERNION : mu instanceof Eu.p ? ru = Hu.ANIMATIONTYPE_VECTOR3 : mu instanceof Eu.n ? ru = Hu.ANIMATIONTYPE_VECTOR2 : mu instanceof Ku.d ? ru = Hu.ANIMATIONTYPE_COLOR3 : mu instanceof Ku.h ? ru = Hu.ANIMATIONTYPE_COLOR4 : mu instanceof Nu.c && (ru = Hu.ANIMATIONTYPE_SIZE), void 0 == ru) return null;
+        const Bu = new Hu(uu, Ru, yu, ru, Xu),
+          xu = [{
             frame: 0,
-            value: PU
+            value: mu
           }, {
-            frame: EU,
-            value: TU
+            frame: Qu,
+            value: Ju
           }];
-        return jU.setKeys(uU), void 0 !== cU && jU.setEasingFunction(cU), jU
+        return Bu.setKeys(xu), void 0 !== Vu && Bu.setEasingFunction(Vu), Bu
       }
       get runtimeAnimations() {
         return this._runtimeAnimations
       }
       get hasRunningRuntimeAnimations() {
-        for (const UU of this._runtimeAnimations)
-          if (!UU.isStopped()) return !0;
+        for (const uu of this._runtimeAnimations)
+          if (!uu.isStopped()) return !0;
         return !1
       }
-      constructor(UU, RU, gU, tU, pU, EU) {
-        this.name = UU, this.targetProperty = RU, this.framePerSecond = gU, this.dataType = tU, this.mE = pU, this.enableBlending = EU, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = RU.split("."), this.dataType = tU, this.mE = void 0 === pU ? fU.ANIMATIONLOOPMODE_CYCLE : pU, this.uniqueId = fU._UniqueIdGenerator++
+      constructor(uu, Ru, yu, Eu, Ku, Qu) {
+        this.name = uu, this.targetProperty = Ru, this.framePerSecond = yu, this.dataType = Eu, this.WQ = Ku, this.enableBlending = Qu, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = Ru.split("."), this.dataType = Eu, this.WQ = void 0 === Ku ? Hu.ANIMATIONLOOPMODE_CYCLE : Ku, this.uniqueId = Hu._UniqueIdGenerator++
       }
-      toString(UU) {
-        let RU = "Name: " + this.name + ", property: " + this.targetProperty;
-        if (RU += ", datatype: " + ["Float", "xC", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], RU += ", nKeys: " + (this._keys ? this._keys.length : "none"), RU += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), UU) {
-          RU += ", Ranges: {";
-          let UU = !0;
-          for (const gU in this._ranges) UU || (RU += ", "), UU = !1, RU += gU;
-          RU += "}"
+      toString(uu) {
+        let Ru = "Name: " + this.name + ", property: " + this.targetProperty;
+        if (Ru += ", datatype: " + ["Float", "MS", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], Ru += ", nKeys: " + (this._keys ? this._keys.length : "none"), Ru += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), uu) {
+          Ru += ", Ranges: {";
+          let uu = !0;
+          for (const yu in this._ranges) uu || (Ru += ", "), uu = !1, Ru += yu;
+          Ru += "}"
         }
-        return RU
+        return Ru
       }
-      addEvent(UU) {
-        this._events.push(UU), this._events.sort(((UU, RU) => UU.frame - RU.frame))
+      addEvent(uu) {
+        this._events.push(uu), this._events.sort(((uu, Ru) => uu.frame - Ru.frame))
       }
-      removeEvents(UU) {
-        for (let RU = 0; RU < this._events.length; RU++) this._events[RU].frame === UU && (this._events.splice(RU, 1), RU--)
+      removeEvents(uu) {
+        for (let Ru = 0; Ru < this._events.length; Ru++) this._events[Ru].frame === uu && (this._events.splice(Ru, 1), Ru--)
       }
       getEvents() {
         return this._events
       }
-      createRange(UU, RU, gU) {
-        this._ranges[UU] || (this._ranges[UU] = new PU.e(UU, RU, gU))
+      createRange(uu, Ru, yu) {
+        this._ranges[uu] || (this._ranges[uu] = new mu.e(uu, Ru, yu))
       }
-      deleteRange(UU) {
-        let RU = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const gU = this._ranges[UU];
-        if (gU) {
-          if (RU) {
-            const UU = gU.from,
-              RU = gU.to;
-            for (let gU = this._keys.length - 1; gU >= 0; gU--) this._keys[gU].frame >= UU && this._keys[gU].frame <= RU && this._keys.splice(gU, 1)
+      deleteRange(uu) {
+        let Ru = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const yu = this._ranges[uu];
+        if (yu) {
+          if (Ru) {
+            const uu = yu.from,
+              Ru = yu.to;
+            for (let yu = this._keys.length - 1; yu >= 0; yu--) this._keys[yu].frame >= uu && this._keys[yu].frame <= Ru && this._keys.splice(yu, 1)
           }
-          this._ranges[UU] = null
+          this._ranges[uu] = null
         }
       }
-      getRange(UU) {
-        return this._ranges[UU]
+      getRange(uu) {
+        return this._ranges[uu]
       }
       getKeys() {
         return this._keys
       }
       getHighestFrame() {
-        let UU = 0;
-        for (let RU = 0, gU = this._keys.length; RU < gU; RU++) UU < this._keys[RU].frame && (UU = this._keys[RU].frame);
-        return UU
+        let uu = 0;
+        for (let Ru = 0, yu = this._keys.length; Ru < yu; Ru++) uu < this._keys[Ru].frame && (uu = this._keys[Ru].frame);
+        return uu
       }
       getEasingFunction() {
         return this._easingFunction
       }
-      setEasingFunction(UU) {
-        this._easingFunction = UU
+      setEasingFunction(uu) {
+        this._easingFunction = uu
       }
-      floatInterpolateFunction(UU, RU, gU) {
-        return (0, EU.Lerp)(UU, RU, gU)
+      floatInterpolateFunction(uu, Ru, yu) {
+        return (0, Qu.Lerp)(uu, Ru, yu)
       }
-      floatInterpolateFunctionWithTangents(UU, RU, gU, tU, pU) {
-        return (0, EU.Hermite)(UU, RU, gU, tU, pU)
+      floatInterpolateFunctionWithTangents(uu, Ru, yu, Eu, Ku) {
+        return (0, Qu.Hermite)(uu, Ru, yu, Eu, Ku)
       }
-      quaternionInterpolateFunction(UU, RU, gU) {
-        return tU.d.Slerp(UU, RU, gU)
+      quaternionInterpolateFunction(uu, Ru, yu) {
+        return Eu.f.Slerp(uu, Ru, yu)
       }
-      quaternionInterpolateFunctionWithTangents(UU, RU, gU, pU, EU) {
-        return tU.d.Hermite(UU, RU, gU, pU, EU).normalize()
+      quaternionInterpolateFunctionWithTangents(uu, Ru, yu, Ku, Qu) {
+        return Eu.f.Hermite(uu, Ru, yu, Ku, Qu).normalize()
       }
-      vector3InterpolateFunction(UU, RU, gU) {
-        return tU.n.Lerp(UU, RU, gU)
+      vector3InterpolateFunction(uu, Ru, yu) {
+        return Eu.p.Lerp(uu, Ru, yu)
       }
-      vector3InterpolateFunctionWithTangents(UU, RU, gU, pU, EU) {
-        return tU.n.Hermite(UU, RU, gU, pU, EU)
+      vector3InterpolateFunctionWithTangents(uu, Ru, yu, Ku, Qu) {
+        return Eu.p.Hermite(uu, Ru, yu, Ku, Qu)
       }
-      vector2InterpolateFunction(UU, RU, gU) {
-        return tU.l.Lerp(UU, RU, gU)
+      vector2InterpolateFunction(uu, Ru, yu) {
+        return Eu.n.Lerp(uu, Ru, yu)
       }
-      vector2InterpolateFunctionWithTangents(UU, RU, gU, pU, EU) {
-        return tU.l.Hermite(UU, RU, gU, pU, EU)
+      vector2InterpolateFunctionWithTangents(uu, Ru, yu, Ku, Qu) {
+        return Eu.n.Hermite(uu, Ru, yu, Ku, Qu)
       }
-      sizeInterpolateFunction(UU, RU, gU) {
-        return qU.b.Lerp(UU, RU, gU)
+      sizeInterpolateFunction(uu, Ru, yu) {
+        return Nu.c.Lerp(uu, Ru, yu)
       }
-      color3InterpolateFunction(UU, RU, gU) {
-        return pU.e.Lerp(UU, RU, gU)
+      color3InterpolateFunction(uu, Ru, yu) {
+        return Ku.d.Lerp(uu, Ru, yu)
       }
-      color3InterpolateFunctionWithTangents(UU, RU, gU, tU, EU) {
-        return pU.e.Hermite(UU, RU, gU, tU, EU)
+      color3InterpolateFunctionWithTangents(uu, Ru, yu, Eu, Qu) {
+        return Ku.d.Hermite(uu, Ru, yu, Eu, Qu)
       }
-      color4InterpolateFunction(UU, RU, gU) {
-        return pU.g.Lerp(UU, RU, gU)
+      color4InterpolateFunction(uu, Ru, yu) {
+        return Ku.h.Lerp(uu, Ru, yu)
       }
-      color4InterpolateFunctionWithTangents(UU, RU, gU, tU, EU) {
-        return pU.g.Hermite(UU, RU, gU, tU, EU)
+      color4InterpolateFunctionWithTangents(uu, Ru, yu, Eu, Qu) {
+        return Ku.h.Hermite(uu, Ru, yu, Eu, Qu)
       }
-      _getKeyValue(UU) {
-        return "function" === typeof UU ? UU() : UU
+      _getKeyValue(uu) {
+        return "function" === typeof uu ? uu() : uu
       }
-      evaluate(UU) {
-        return WU.key = 0, this._interpolate(UU, WU)
+      evaluate(uu) {
+        return ju.key = 0, this._interpolate(uu, ju)
       }
-      _interpolate(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (RU.mE === fU.ANIMATIONLOOPMODE_CONSTANT && RU.repeatCount > 0) return RU.highLimitValue.clone ? RU.highLimitValue.clone() : RU.highLimitValue;
-        const tU = this._keys;
-        let pU;
-        if (this._coreAnimation) pU = this._coreAnimation._key;
+      _interpolate(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (Ru.WQ === Hu.ANIMATIONLOOPMODE_CONSTANT && Ru.repeatCount > 0) return Ru.highLimitValue.clone ? Ru.highLimitValue.clone() : Ru.highLimitValue;
+        const Eu = this._keys;
+        let Ku;
+        if (this._coreAnimation) Ku = this._coreAnimation._key;
         else {
-          const EU = tU.length;
-          for (pU = RU.key; pU >= 0 && UU < tU[pU].frame;) --pU;
-          for (; pU + 1 <= EU - 1 && UU >= tU[pU + 1].frame;) ++pU;
-          if (RU.key = pU, pU < 0) return gU ? void 0 : this._getKeyValue(tU[0].value);
-          if (pU + 1 > EU - 1) return gU ? void 0 : this._getKeyValue(tU[EU - 1].value);
-          this._key = pU
+          const Qu = Eu.length;
+          for (Ku = Ru.key; Ku >= 0 && uu < Eu[Ku].frame;) --Ku;
+          for (; Ku + 1 <= Qu - 1 && uu >= Eu[Ku + 1].frame;) ++Ku;
+          if (Ru.key = Ku, Ku < 0) return yu ? void 0 : this._getKeyValue(Eu[0].value);
+          if (Ku + 1 > Qu - 1) return yu ? void 0 : this._getKeyValue(Eu[Qu - 1].value);
+          this._key = Ku
         }
-        const EU = tU[pU],
-          PU = tU[pU + 1];
-        if (gU && (UU === EU.frame || UU === PU.frame)) return;
-        const TU = this._getKeyValue(EU.value),
-          qU = this._getKeyValue(PU.value);
-        if (1 === EU.interpolation) return PU.frame > UU ? TU : qU;
-        const KU = void 0 !== EU.outTangent && void 0 !== PU.inTangent,
-          cU = PU.frame - EU.frame;
-        let GU = (UU - EU.frame) / cU;
-        const WU = EU.easingFunction || this.getEasingFunction();
-        switch (WU && (GU = WU.ease(GU)), this.dataType) {
-          case fU.ANIMATIONTYPE_FLOAT: {
-            const UU = KU ? this.floatInterpolateFunctionWithTangents(TU, EU.outTangent * cU, qU, PU.inTangent * cU, GU) : this.floatInterpolateFunction(TU, qU, GU);
-            switch (RU.mE) {
-              case fU.ANIMATIONLOOPMODE_CYCLE:
-              case fU.ANIMATIONLOOPMODE_CONSTANT:
-              case fU.ANIMATIONLOOPMODE_YOYO:
-                return UU;
-              case fU.ANIMATIONLOOPMODE_RELATIVE:
-              case fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return (RU.offsetValue ?? 0) * RU.repeatCount + UU
+        const Qu = Eu[Ku],
+          mu = Eu[Ku + 1];
+        if (yu && (uu === Qu.frame || uu === mu.frame)) return;
+        const Ju = this._getKeyValue(Qu.value),
+          Nu = this._getKeyValue(mu.value);
+        if (1 === Qu.interpolation) return mu.frame > uu ? Ju : Nu;
+        const Xu = void 0 !== Qu.outTangent && void 0 !== mu.inTangent,
+          Vu = mu.frame - Qu.frame;
+        let ru = (uu - Qu.frame) / Vu;
+        const ju = Qu.easingFunction || this.getEasingFunction();
+        switch (ju && (ru = ju.ease(ru)), this.dataType) {
+          case Hu.ANIMATIONTYPE_FLOAT: {
+            const uu = Xu ? this.floatInterpolateFunctionWithTangents(Ju, Qu.outTangent * Vu, Nu, mu.inTangent * Vu, ru) : this.floatInterpolateFunction(Ju, Nu, ru);
+            switch (Ru.WQ) {
+              case Hu.ANIMATIONLOOPMODE_CYCLE:
+              case Hu.ANIMATIONLOOPMODE_CONSTANT:
+              case Hu.ANIMATIONLOOPMODE_YOYO:
+                return uu;
+              case Hu.ANIMATIONLOOPMODE_RELATIVE:
+              case Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return (Ru.offsetValue ?? 0) * Ru.repeatCount + uu
             }
             break
           }
-          case fU.ANIMATIONTYPE_QUATERNION: {
-            const UU = KU ? this.quaternionInterpolateFunctionWithTangents(TU, EU.outTangent.scale(cU), qU, PU.inTangent.scale(cU), GU) : this.quaternionInterpolateFunction(TU, qU, GU);
-            switch (RU.mE) {
-              case fU.ANIMATIONLOOPMODE_CYCLE:
-              case fU.ANIMATIONLOOPMODE_CONSTANT:
-              case fU.ANIMATIONLOOPMODE_YOYO:
-                return UU;
-              case fU.ANIMATIONLOOPMODE_RELATIVE:
-              case fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return UU.addInPlace((RU.offsetValue || jU).scale(RU.repeatCount))
+          case Hu.ANIMATIONTYPE_QUATERNION: {
+            const uu = Xu ? this.quaternionInterpolateFunctionWithTangents(Ju, Qu.outTangent.scale(Vu), Nu, mu.inTangent.scale(Vu), ru) : this.quaternionInterpolateFunction(Ju, Nu, ru);
+            switch (Ru.WQ) {
+              case Hu.ANIMATIONLOOPMODE_CYCLE:
+              case Hu.ANIMATIONLOOPMODE_CONSTANT:
+              case Hu.ANIMATIONLOOPMODE_YOYO:
+                return uu;
+              case Hu.ANIMATIONLOOPMODE_RELATIVE:
+              case Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return uu.addInPlace((Ru.offsetValue || Bu).scale(Ru.repeatCount))
             }
-            return UU
+            return uu
           }
-          case fU.ANIMATIONTYPE_VECTOR3: {
-            const UU = KU ? this.vector3InterpolateFunctionWithTangents(TU, EU.outTangent.scale(cU), qU, PU.inTangent.scale(cU), GU) : this.vector3InterpolateFunction(TU, qU, GU);
-            switch (RU.mE) {
-              case fU.ANIMATIONLOOPMODE_CYCLE:
-              case fU.ANIMATIONLOOPMODE_CONSTANT:
-              case fU.ANIMATIONLOOPMODE_YOYO:
-                return UU;
-              case fU.ANIMATIONLOOPMODE_RELATIVE:
-              case fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return UU.add((RU.offsetValue || uU).scale(RU.repeatCount))
-            }
-            break
-          }
-          case fU.ANIMATIONTYPE_VECTOR2: {
-            const UU = KU ? this.vector2InterpolateFunctionWithTangents(TU, EU.outTangent.scale(cU), qU, PU.inTangent.scale(cU), GU) : this.vector2InterpolateFunction(TU, qU, GU);
-            switch (RU.mE) {
-              case fU.ANIMATIONLOOPMODE_CYCLE:
-              case fU.ANIMATIONLOOPMODE_CONSTANT:
-              case fU.ANIMATIONLOOPMODE_YOYO:
-                return UU;
-              case fU.ANIMATIONLOOPMODE_RELATIVE:
-              case fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return UU.add((RU.offsetValue || CU).scale(RU.repeatCount))
+          case Hu.ANIMATIONTYPE_VECTOR3: {
+            const uu = Xu ? this.vector3InterpolateFunctionWithTangents(Ju, Qu.outTangent.scale(Vu), Nu, mu.inTangent.scale(Vu), ru) : this.vector3InterpolateFunction(Ju, Nu, ru);
+            switch (Ru.WQ) {
+              case Hu.ANIMATIONLOOPMODE_CYCLE:
+              case Hu.ANIMATIONLOOPMODE_CONSTANT:
+              case Hu.ANIMATIONLOOPMODE_YOYO:
+                return uu;
+              case Hu.ANIMATIONLOOPMODE_RELATIVE:
+              case Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return uu.add((Ru.offsetValue || xu).scale(Ru.repeatCount))
             }
             break
           }
-          case fU.ANIMATIONTYPE_SIZE:
-            switch (RU.mE) {
-              case fU.ANIMATIONLOOPMODE_CYCLE:
-              case fU.ANIMATIONLOOPMODE_CONSTANT:
-              case fU.ANIMATIONLOOPMODE_YOYO:
-                return this.sizeInterpolateFunction(TU, qU, GU);
-              case fU.ANIMATIONLOOPMODE_RELATIVE:
-              case fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return this.sizeInterpolateFunction(TU, qU, GU).add((RU.offsetValue || hU).scale(RU.repeatCount))
+          case Hu.ANIMATIONTYPE_VECTOR2: {
+            const uu = Xu ? this.vector2InterpolateFunctionWithTangents(Ju, Qu.outTangent.scale(Vu), Nu, mu.inTangent.scale(Vu), ru) : this.vector2InterpolateFunction(Ju, Nu, ru);
+            switch (Ru.WQ) {
+              case Hu.ANIMATIONLOOPMODE_CYCLE:
+              case Hu.ANIMATIONLOOPMODE_CONSTANT:
+              case Hu.ANIMATIONLOOPMODE_YOYO:
+                return uu;
+              case Hu.ANIMATIONLOOPMODE_RELATIVE:
+              case Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return uu.add((Ru.offsetValue || Su).scale(Ru.repeatCount))
+            }
+            break
+          }
+          case Hu.ANIMATIONTYPE_SIZE:
+            switch (Ru.WQ) {
+              case Hu.ANIMATIONLOOPMODE_CYCLE:
+              case Hu.ANIMATIONLOOPMODE_CONSTANT:
+              case Hu.ANIMATIONLOOPMODE_YOYO:
+                return this.sizeInterpolateFunction(Ju, Nu, ru);
+              case Hu.ANIMATIONLOOPMODE_RELATIVE:
+              case Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return this.sizeInterpolateFunction(Ju, Nu, ru).add((Ru.offsetValue || pu).scale(Ru.repeatCount))
             }
             break;
-          case fU.ANIMATIONTYPE_COLOR3: {
-            const UU = KU ? this.color3InterpolateFunctionWithTangents(TU, EU.outTangent.scale(cU), qU, PU.inTangent.scale(cU), GU) : this.color3InterpolateFunction(TU, qU, GU);
-            switch (RU.mE) {
-              case fU.ANIMATIONLOOPMODE_CYCLE:
-              case fU.ANIMATIONLOOPMODE_CONSTANT:
-              case fU.ANIMATIONLOOPMODE_YOYO:
-                return UU;
-              case fU.ANIMATIONLOOPMODE_RELATIVE:
-              case fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return UU.add((RU.offsetValue || QU).scale(RU.repeatCount))
+          case Hu.ANIMATIONTYPE_COLOR3: {
+            const uu = Xu ? this.color3InterpolateFunctionWithTangents(Ju, Qu.outTangent.scale(Vu), Nu, mu.inTangent.scale(Vu), ru) : this.color3InterpolateFunction(Ju, Nu, ru);
+            switch (Ru.WQ) {
+              case Hu.ANIMATIONLOOPMODE_CYCLE:
+              case Hu.ANIMATIONLOOPMODE_CONSTANT:
+              case Hu.ANIMATIONLOOPMODE_YOYO:
+                return uu;
+              case Hu.ANIMATIONLOOPMODE_RELATIVE:
+              case Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return uu.add((Ru.offsetValue || Tu).scale(Ru.repeatCount))
             }
             break
           }
-          case fU.ANIMATIONTYPE_COLOR4: {
-            const UU = KU ? this.color4InterpolateFunctionWithTangents(TU, EU.outTangent.scale(cU), qU, PU.inTangent.scale(cU), GU) : this.color4InterpolateFunction(TU, qU, GU);
-            switch (RU.mE) {
-              case fU.ANIMATIONLOOPMODE_CYCLE:
-              case fU.ANIMATIONLOOPMODE_CONSTANT:
-              case fU.ANIMATIONLOOPMODE_YOYO:
-                return UU;
-              case fU.ANIMATIONLOOPMODE_RELATIVE:
-              case fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return UU.add((RU.offsetValue || eU).scale(RU.repeatCount))
+          case Hu.ANIMATIONTYPE_COLOR4: {
+            const uu = Xu ? this.color4InterpolateFunctionWithTangents(Ju, Qu.outTangent.scale(Vu), Nu, mu.inTangent.scale(Vu), ru) : this.color4InterpolateFunction(Ju, Nu, ru);
+            switch (Ru.WQ) {
+              case Hu.ANIMATIONLOOPMODE_CYCLE:
+              case Hu.ANIMATIONLOOPMODE_CONSTANT:
+              case Hu.ANIMATIONLOOPMODE_YOYO:
+                return uu;
+              case Hu.ANIMATIONLOOPMODE_RELATIVE:
+              case Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return uu.add((Ru.offsetValue || Wu).scale(Ru.repeatCount))
             }
             break
           }
-          case fU.ANIMATIONTYPE_MATRIX:
-            switch (RU.mE) {
-              case fU.ANIMATIONLOOPMODE_CYCLE:
-              case fU.ANIMATIONLOOPMODE_CONSTANT:
-              case fU.ANIMATIONLOOPMODE_YOYO:
-                return fU.AllowMatricesInterpolation ? this.matrixInterpolateFunction(TU, qU, GU, RU.workValue) : TU;
-              case fU.ANIMATIONLOOPMODE_RELATIVE:
-              case fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return TU
+          case Hu.ANIMATIONTYPE_MATRIX:
+            switch (Ru.WQ) {
+              case Hu.ANIMATIONLOOPMODE_CYCLE:
+              case Hu.ANIMATIONLOOPMODE_CONSTANT:
+              case Hu.ANIMATIONLOOPMODE_YOYO:
+                return Hu.AllowMatricesInterpolation ? this.matrixInterpolateFunction(Ju, Nu, ru, Ru.workValue) : Ju;
+              case Hu.ANIMATIONLOOPMODE_RELATIVE:
+              case Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
+                return Ju
             }
         }
         return 0
       }
-      matrixInterpolateFunction(UU, RU, gU, pU) {
-        return fU.AllowMatrixDecomposeForInterpolation ? pU ? (tU.c.DecomposeLerpToRef(UU, RU, gU, pU), pU) : tU.c.DecomposeLerp(UU, RU, gU) : pU ? (tU.c.LerpToRef(UU, RU, gU, pU), pU) : tU.c.Lerp(UU, RU, gU)
+      matrixInterpolateFunction(uu, Ru, yu, Ku) {
+        return Hu.AllowMatrixDecomposeForInterpolation ? Ku ? (Eu.d.DecomposeLerpToRef(uu, Ru, yu, Ku), Ku) : Eu.d.DecomposeLerp(uu, Ru, yu) : Ku ? (Eu.d.LerpToRef(uu, Ru, yu, Ku), Ku) : Eu.d.Lerp(uu, Ru, yu)
       }
       clone() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const RU = new fU(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.mE);
-        if (RU.enableBlending = this.enableBlending, RU.blendingSpeed = this.blendingSpeed, this._keys && RU.setKeys(this._keys, !1, UU), this._ranges) {
-          RU._ranges = {};
-          for (const UU in this._ranges) {
-            const gU = this._ranges[UU];
-            gU && (RU._ranges[UU] = gU.clone())
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Ru = new Hu(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.WQ);
+        if (Ru.enableBlending = this.enableBlending, Ru.blendingSpeed = this.blendingSpeed, this._keys && Ru.setKeys(this._keys, !1, uu), this._ranges) {
+          Ru._ranges = {};
+          for (const uu in this._ranges) {
+            const yu = this._ranges[uu];
+            yu && (Ru._ranges[uu] = yu.clone())
           }
         }
-        return RU
+        return Ru
       }
-      setKeys(UU) {
-        let RU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = UU;
-        else if (this._keys = UU.slice(0), RU)
-          for (let gU = 0; gU < this._keys.length; gU++) {
-            const UU = this._keys[gU];
-            this._keys[gU] = {
-              frame: UU.frame,
-              value: UU.value.clone ? UU.value.clone() : UU.value,
-              inTangent: UU.inTangent && UU.inTangent.clone ? UU.inTangent.clone() : UU.inTangent,
-              outTangent: UU.outTangent && UU.outTangent.clone ? UU.outTangent.clone() : UU.outTangent,
-              interpolation: UU.interpolation,
-              lockedTangent: UU.lockedTangent,
-              easingFunction: UU.easingFunction
+      setKeys(uu) {
+        let Ru = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = uu;
+        else if (this._keys = uu.slice(0), Ru)
+          for (let yu = 0; yu < this._keys.length; yu++) {
+            const uu = this._keys[yu];
+            this._keys[yu] = {
+              frame: uu.frame,
+              value: uu.value.clone ? uu.value.clone() : uu.value,
+              inTangent: uu.inTangent && uu.inTangent.clone ? uu.inTangent.clone() : uu.inTangent,
+              outTangent: uu.outTangent && uu.outTangent.clone ? uu.outTangent.clone() : uu.outTangent,
+              interpolation: uu.interpolation,
+              lockedTangent: uu.lockedTangent,
+              easingFunction: uu.easingFunction
             }
           }
       }
-      createKeyForFrame(UU) {
-        WU.key = 0;
-        const RU = this._interpolate(UU, WU, !0);
-        if (!RU) return this._keys[WU.key].frame === UU ? WU.key : WU.key + 1;
-        const gU = {
-          frame: UU,
-          value: RU.clone ? RU.clone() : RU
+      createKeyForFrame(uu) {
+        ju.key = 0;
+        const Ru = this._interpolate(uu, ju, !0);
+        if (!Ru) return this._keys[ju.key].frame === uu ? ju.key : ju.key + 1;
+        const yu = {
+          frame: uu,
+          value: Ru.clone ? Ru.clone() : Ru
         };
-        return this._keys.splice(WU.key + 1, 0, gU), WU.key + 1
+        return this._keys.splice(ju.key + 1, 0, yu), ju.key + 1
       }
       serialize() {
-        const UU = {};
-        UU.name = this.name, UU.property = this.targetProperty, UU.framePerSecond = this.framePerSecond, UU.dataType = this.dataType, UU.loopBehavior = this.mE, UU.enableBlending = this.enableBlending, UU.blendingSpeed = this.blendingSpeed;
-        const RU = this.dataType;
-        UU.keys = [];
-        const gU = this.getKeys();
-        for (let tU = 0; tU < gU.length; tU++) {
-          const pU = gU[tU],
-            EU = {};
-          switch (EU.frame = pU.frame, RU) {
-            case fU.ANIMATIONTYPE_FLOAT:
-              EU.values = [pU.value], void 0 !== pU.inTangent && EU.values.push(pU.inTangent), void 0 !== pU.outTangent && (void 0 === pU.inTangent && EU.values.push(void 0), EU.values.push(pU.outTangent)), void 0 !== pU.interpolation && (void 0 === pU.inTangent && EU.values.push(void 0), void 0 === pU.outTangent && EU.values.push(void 0), EU.values.push(pU.interpolation));
+        const uu = {};
+        uu.name = this.name, uu.property = this.targetProperty, uu.framePerSecond = this.framePerSecond, uu.dataType = this.dataType, uu.loopBehavior = this.WQ, uu.enableBlending = this.enableBlending, uu.blendingSpeed = this.blendingSpeed;
+        const Ru = this.dataType;
+        uu.keys = [];
+        const yu = this.getKeys();
+        for (let Eu = 0; Eu < yu.length; Eu++) {
+          const Ku = yu[Eu],
+            Qu = {};
+          switch (Qu.frame = Ku.frame, Ru) {
+            case Hu.ANIMATIONTYPE_FLOAT:
+              Qu.values = [Ku.value], void 0 !== Ku.inTangent && Qu.values.push(Ku.inTangent), void 0 !== Ku.outTangent && (void 0 === Ku.inTangent && Qu.values.push(void 0), Qu.values.push(Ku.outTangent)), void 0 !== Ku.interpolation && (void 0 === Ku.inTangent && Qu.values.push(void 0), void 0 === Ku.outTangent && Qu.values.push(void 0), Qu.values.push(Ku.interpolation));
               break;
-            case fU.ANIMATIONTYPE_QUATERNION:
-            case fU.ANIMATIONTYPE_MATRIX:
-            case fU.ANIMATIONTYPE_VECTOR3:
-            case fU.ANIMATIONTYPE_COLOR3:
-            case fU.ANIMATIONTYPE_COLOR4:
-              EU.values = pU.value.vgU(), void 0 != pU.inTangent && EU.values.push(pU.inTangent.vgU()), void 0 != pU.outTangent && (void 0 === pU.inTangent && EU.values.push(void 0), EU.values.push(pU.outTangent.vgU())), void 0 !== pU.interpolation && (void 0 === pU.inTangent && EU.values.push(void 0), void 0 === pU.outTangent && EU.values.push(void 0), EU.values.push(pU.interpolation))
+            case Hu.ANIMATIONTYPE_QUATERNION:
+            case Hu.ANIMATIONTYPE_MATRIX:
+            case Hu.ANIMATIONTYPE_VECTOR3:
+            case Hu.ANIMATIONTYPE_COLOR3:
+            case Hu.ANIMATIONTYPE_COLOR4:
+              Qu.values = Ku.value.AEu(), void 0 != Ku.inTangent && Qu.values.push(Ku.inTangent.AEu()), void 0 != Ku.outTangent && (void 0 === Ku.inTangent && Qu.values.push(void 0), Qu.values.push(Ku.outTangent.AEu())), void 0 !== Ku.interpolation && (void 0 === Ku.inTangent && Qu.values.push(void 0), void 0 === Ku.outTangent && Qu.values.push(void 0), Qu.values.push(Ku.interpolation))
           }
-          UU.keys.push(EU)
+          uu.keys.push(Qu)
         }
-        UU.hu = [];
-        for (const tU in this._ranges) {
-          const RU = this._ranges[tU];
-          if (!RU) continue;
-          const gU = {};
-          gU.name = tU, gU.from = RU.from, gU.to = RU.to, UU.hu.push(gU)
+        uu.yT = [];
+        for (const Eu in this._ranges) {
+          const Ru = this._ranges[Eu];
+          if (!Ru) continue;
+          const yu = {};
+          yu.name = Eu, yu.from = Ru.from, yu.to = Ru.to, uu.yT.push(yu)
         }
-        return UU
+        return uu
       }
-      static _UniversalLerp(UU, RU, gU) {
-        const tU = UU.constructor;
-        return tU.Lerp ? tU.Lerp(UU, RU, gU) : tU.Slerp ? tU.Slerp(UU, RU, gU) : UU.toFixed ? UU * (1 - gU) + gU * RU : RU
+      static _UniversalLerp(uu, Ru, yu) {
+        const Eu = uu.constructor;
+        return Eu.Lerp ? Eu.Lerp(uu, Ru, yu) : Eu.Slerp ? Eu.Slerp(uu, Ru, yu) : uu.toFixed ? uu * (1 - yu) + yu * Ru : Ru
       }
     }
 
-    function xU(UU, RU, gU) {
-      let pU;
-      pU = "object" === typeof RU ? RU : {
-        referenceFrame: RU ?? 0,
-        range: gU,
+    function du(uu, Ru, yu) {
+      let Ku;
+      Ku = "object" === typeof Ru ? Ru : {
+        referenceFrame: Ru ?? 0,
+        range: yu,
         cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
       };
-      let EU = UU;
-      pU.cloneOriginalAnimation && (EU = UU.clone(), EU.name = pU.clonedAnimationName || EU.name);
-      const PU = EU.getKeys();
-      if (!PU.length) return EU;
-      const TU = pU.referenceFrame && pU.referenceFrame >= 0 ? pU.referenceFrame : 0;
-      let qU = 0;
-      const KU = PU[0];
-      let cU = PU.length - 1;
-      const GU = PU[cU],
-        jU = {
-          referenceValue: KU.value,
-          referencePosition: tU.h.xC[0],
-          referenceQuaternion: tU.h.Quaternion[0],
-          referenceScaling: tU.h.xC[1],
-          keyPosition: tU.h.xC[2],
-          keyQuaternion: tU.h.Quaternion[1],
-          keyScaling: tU.h.xC[3]
+      let Qu = uu;
+      Ku.cloneOriginalAnimation && (Qu = uu.clone(), Qu.name = Ku.clonedAnimationName || Qu.name);
+      const mu = Qu.getKeys();
+      if (!mu.length) return Qu;
+      const Ju = Ku.referenceFrame && Ku.referenceFrame >= 0 ? Ku.referenceFrame : 0;
+      let Nu = 0;
+      const Xu = mu[0];
+      let Vu = mu.length - 1;
+      const ru = mu[Vu],
+        Bu = {
+          referenceValue: Xu.value,
+          referencePosition: Eu.m.MS[0],
+          referenceQuaternion: Eu.m.Quaternion[0],
+          referenceScaling: Eu.m.MS[1],
+          keyPosition: Eu.m.MS[2],
+          keyQuaternion: Eu.m.Quaternion[1],
+          keyScaling: Eu.m.MS[3]
         };
-      let uU = KU.frame,
-        CU = GU.frame;
-      if (pU.range) {
-        const UU = EU.getRange(pU.range);
-        UU && (uU = UU.from, CU = UU.to)
-      } else uU = pU.fromFrame ?? uU, CU = pU.toFrame ?? CU;
-      uU !== KU.frame && (qU = EU.createKeyForFrame(uU)), CU !== GU.frame && (cU = EU.createKeyForFrame(CU));
-      const hU = EU.getKeys();
-      if (1 === hU.length) {
-        const UU = EU._getKeyValue(hU[0].value);
-        jU.referenceValue = UU.clone ? UU.clone() : UU
-      } else if (TU <= KU.frame) {
-        const UU = EU._getKeyValue(KU.value);
-        jU.referenceValue = UU.clone ? UU.clone() : UU
-      } else if (TU >= GU.frame) {
-        const UU = EU._getKeyValue(GU.value);
-        jU.referenceValue = UU.clone ? UU.clone() : UU
+      let xu = Xu.frame,
+        Su = ru.frame;
+      if (Ku.range) {
+        const uu = Qu.getRange(Ku.range);
+        uu && (xu = uu.from, Su = uu.to)
+      } else xu = Ku.fromFrame ?? xu, Su = Ku.toFrame ?? Su;
+      xu !== Xu.frame && (Nu = Qu.createKeyForFrame(xu)), Su !== ru.frame && (Vu = Qu.createKeyForFrame(Su));
+      const pu = Qu.getKeys();
+      if (1 === pu.length) {
+        const uu = Qu._getKeyValue(pu[0].value);
+        Bu.referenceValue = uu.clone ? uu.clone() : uu
+      } else if (Ju <= Xu.frame) {
+        const uu = Qu._getKeyValue(Xu.value);
+        Bu.referenceValue = uu.clone ? uu.clone() : uu
+      } else if (Ju >= ru.frame) {
+        const uu = Qu._getKeyValue(ru.value);
+        Bu.referenceValue = uu.clone ? uu.clone() : uu
       } else {
-        WU.key = 0;
-        const UU = EU._interpolate(TU, WU);
-        jU.referenceValue = UU.clone ? UU.clone() : UU
+        ju.key = 0;
+        const uu = Qu._interpolate(Ju, ju);
+        Bu.referenceValue = uu.clone ? uu.clone() : uu
       }
-      EU.dataType === fU.ANIMATIONTYPE_QUATERNION ? jU.referenceValue.normalize().conjugateInPlace() : EU.dataType === fU.ANIMATIONTYPE_MATRIX && (jU.referenceValue.decompose(jU.referenceScaling, jU.referenceQuaternion, jU.referencePosition), jU.referenceQuaternion.normalize().conjugateInPlace());
-      let QU = Number.MAX_VALUE;
-      const eU = pU.clipKeys ? [] : null;
-      for (let WU = qU; WU <= cU; WU++) {
-        let UU = hU[WU];
-        if ((eU || pU.cloneOriginalAnimation) && (UU = {
-            frame: UU.frame,
-            value: UU.value.clone ? UU.value.clone() : UU.value,
-            inTangent: UU.inTangent,
-            outTangent: UU.outTangent,
-            interpolation: UU.interpolation,
-            lockedTangent: UU.lockedTangent,
-            easingFunction: UU.easingFunction
-          }, eU && (QU === Number.MAX_VALUE && (QU = UU.frame), UU.frame -= QU, eU.push(UU))), !WU || EU.dataType === fU.ANIMATIONTYPE_FLOAT || UU.value !== KU.value) switch (EU.dataType) {
-          case fU.ANIMATIONTYPE_MATRIX:
-            UU.value.decompose(jU.keyScaling, jU.keyQuaternion, jU.keyPosition), jU.keyPosition.ptU(jU.referencePosition), jU.keyScaling.divideInPlace(jU.referenceScaling), jU.referenceQuaternion.multiplyToRef(jU.keyQuaternion, jU.keyQuaternion), tU.c.ComposeToRef(jU.keyScaling, jU.keyQuaternion, jU.keyPosition, UU.value);
+      Qu.dataType === Hu.ANIMATIONTYPE_QUATERNION ? Bu.referenceValue.normalize().conjugateInPlace() : Qu.dataType === Hu.ANIMATIONTYPE_MATRIX && (Bu.referenceValue.decompose(Bu.referenceScaling, Bu.referenceQuaternion, Bu.referencePosition), Bu.referenceQuaternion.normalize().conjugateInPlace());
+      let Tu = Number.MAX_VALUE;
+      const Wu = Ku.clipKeys ? [] : null;
+      for (let ju = Nu; ju <= Vu; ju++) {
+        let uu = pu[ju];
+        if ((Wu || Ku.cloneOriginalAnimation) && (uu = {
+            frame: uu.frame,
+            value: uu.value.clone ? uu.value.clone() : uu.value,
+            inTangent: uu.inTangent,
+            outTangent: uu.outTangent,
+            interpolation: uu.interpolation,
+            lockedTangent: uu.lockedTangent,
+            easingFunction: uu.easingFunction
+          }, Wu && (Tu === Number.MAX_VALUE && (Tu = uu.frame), uu.frame -= Tu, Wu.push(uu))), !ju || Qu.dataType === Hu.ANIMATIONTYPE_FLOAT || uu.value !== Xu.value) switch (Qu.dataType) {
+          case Hu.ANIMATIONTYPE_MATRIX:
+            uu.value.decompose(Bu.keyScaling, Bu.keyQuaternion, Bu.keyPosition), Bu.keyPosition.oEu(Bu.referencePosition), Bu.keyScaling.divideInPlace(Bu.referenceScaling), Bu.referenceQuaternion.multiplyToRef(Bu.keyQuaternion, Bu.keyQuaternion), Eu.d.ComposeToRef(Bu.keyScaling, Bu.keyQuaternion, Bu.keyPosition, uu.value);
             break;
-          case fU.ANIMATIONTYPE_QUATERNION:
-            jU.referenceValue.multiplyToRef(UU.value, UU.value);
+          case Hu.ANIMATIONTYPE_QUATERNION:
+            Bu.referenceValue.multiplyToRef(uu.value, uu.value);
             break;
-          case fU.ANIMATIONTYPE_VECTOR2:
-          case fU.ANIMATIONTYPE_VECTOR3:
-          case fU.ANIMATIONTYPE_COLOR3:
-          case fU.ANIMATIONTYPE_COLOR4:
-            UU.value.subtractToRef(jU.referenceValue, UU.value);
+          case Hu.ANIMATIONTYPE_VECTOR2:
+          case Hu.ANIMATIONTYPE_VECTOR3:
+          case Hu.ANIMATIONTYPE_COLOR3:
+          case Hu.ANIMATIONTYPE_COLOR4:
+            uu.value.subtractToRef(Bu.referenceValue, uu.value);
             break;
-          case fU.ANIMATIONTYPE_SIZE:
-            UU.value.width -= jU.referenceValue.width, UU.value.height -= jU.referenceValue.height;
+          case Hu.ANIMATIONTYPE_SIZE:
+            uu.value.width -= Bu.referenceValue.width, uu.value.height -= Bu.referenceValue.height;
             break;
           default:
-            UU.value -= jU.referenceValue
+            uu.value -= Bu.referenceValue
         }
       }
-      return eU && EU.setKeys(eU, !0), EU
+      return Wu && Qu.setKeys(Wu, !0), Qu
     }
 
-    function mU(UU, RU, gU, tU) {
-      const pU = new fU(UU + "Animation", UU, gU, RU, fU.ANIMATIONLOOPMODE_CONSTANT);
-      return pU.setEasingFunction(tU), pU
+    function bu(uu, Ru, yu, Eu) {
+      const Ku = new Hu(uu + "Animation", uu, yu, Ru, Hu.ANIMATIONLOOPMODE_CONSTANT);
+      return Ku.setEasingFunction(Eu), Ku
     }
 
-    function IU(UU, RU, gU, tU, pU, EU, PU, TU, qU, KU, cU) {
-      const GU = fU._PrepareAnimation(UU, gU, tU, pU, EU, PU, TU, qU);
-      return GU ? (RU.aZ && (cU = RU.aZ()), cU ? cU.beginDirectAnimation(RU, [GU], 0, pU, GU.mE !== fU.ANIMATIONLOOPMODE_CONSTANT, 1, KU) : null) : null
+    function Cu(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu) {
+      const ru = Hu._PrepareAnimation(uu, yu, Eu, Ku, Qu, mu, Ju, Nu);
+      return ru ? (Ru.lD && (Vu = Ru.lD()), Vu ? Vu.beginDirectAnimation(Ru, [ru], 0, Ku, ru.WQ !== Hu.ANIMATIONLOOPMODE_CONSTANT, 1, Xu) : null) : null
     }
 
-    function JU(UU, RU, gU, tU, pU, EU, PU, TU, qU, KU, cU) {
-      const GU = fU._PrepareAnimation(UU, tU, pU, EU, PU, TU, qU, KU);
-      if (!GU) return null;
-      return RU.aZ().beginDirectHierarchyAnimation(RU, gU, [GU], 0, EU, 1 === GU.mE, 1, cU)
+    function ku(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu, Vu) {
+      const ru = Hu._PrepareAnimation(uu, Eu, Ku, Qu, mu, Ju, Nu, Xu);
+      if (!ru) return null;
+      return Ru.lD().beginDirectHierarchyAnimation(Ru, yu, [ru], 0, Qu, 1 === ru.WQ, 1, Vu)
     }
 
-    function wU(UU, RU, gU, tU, pU, EU, PU, TU, qU, KU) {
-      const cU = fU._PrepareAnimation(UU, gU, tU, pU, EU, PU, TU, qU);
-      return cU ? (RU.animations.push(cU), RU.aZ().beginAnimation(RU, 0, pU, 1 === cU.mE, 1, KU)) : null
+    function eu(uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu) {
+      const Vu = Hu._PrepareAnimation(uu, yu, Eu, Ku, Qu, mu, Ju, Nu);
+      return Vu ? (Ru.animations.push(Vu), Ru.lD().beginAnimation(Ru, 0, Ku, 1 === Vu.WQ, 1, Xu)) : null
     }
 
-    function nU(UU, RU, gU, tU, pU, EU, PU) {
-      let TU = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        qU = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        KU = arguments.length > 9 ? arguments[9] : void 0;
-      if (PU <= 0) return gU[UU] = RU, TU && TU(), null;
-      const cU = pU * (PU / 1e3);
-      EU.setKeys(KU ?? [{
+    function Au(uu, Ru, yu, Eu, Ku, Qu, mu) {
+      let Ju = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+        Nu = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+        Xu = arguments.length > 9 ? arguments[9] : void 0;
+      if (mu <= 0) return yu[uu] = Ru, Ju && Ju(), null;
+      const Vu = Ku * (mu / 1e3);
+      Qu.setKeys(Xu ?? [{
         frame: 0,
-        value: gU[UU].clone ? gU[UU].clone() : gU[UU]
+        value: yu[uu].clone ? yu[uu].clone() : yu[uu]
       }, {
-        frame: cU,
-        value: RU
-      }]), gU.animations || (gU.animations = []), gU.animations.push(EU);
-      return tU.beginAnimation(gU, 0, cU, !1, 1, TU ?? void 0, void 0, qU)
+        frame: Vu,
+        value: Ru
+      }]), yu.animations || (yu.animations = []), yu.animations.push(Qu);
+      return Eu.beginAnimation(yu, 0, Vu, !1, 1, Ju ?? void 0, void 0, Nu)
     }
 
-    function bU(UU, RU) {
-      cU.b.AppendSerializedAnimations(UU, RU)
+    function Du(uu, Ru) {
+      Vu.c.AppendSerializedAnimations(uu, Ru)
     }
 
-    function oU(UU) {
-      const RU = new fU(UU.name, UU.property, UU.framePerSecond, UU.dataType, UU.loopBehavior),
-        gU = UU.dataType,
-        EU = [];
-      let PU, TU;
-      for (UU.enableBlending && (RU.enableBlending = UU.enableBlending), UU.blendingSpeed && (RU.blendingSpeed = UU.blendingSpeed), TU = 0; TU < UU.keys.length; TU++) {
-        const RU = UU.keys[TU];
-        let qU, KU, cU;
-        switch (gU) {
-          case fU.ANIMATIONTYPE_FLOAT:
-            PU = RU.values[0], RU.values.length >= 2 && (qU = RU.values[1]), RU.values.length >= 3 && (KU = RU.values[2]), RU.values.length >= 4 && (cU = RU.values[3]);
+    function Mu(uu) {
+      const Ru = new Hu(uu.name, uu.property, uu.framePerSecond, uu.dataType, uu.loopBehavior),
+        yu = uu.dataType,
+        Qu = [];
+      let mu, Ju;
+      for (uu.enableBlending && (Ru.enableBlending = uu.enableBlending), uu.blendingSpeed && (Ru.blendingSpeed = uu.blendingSpeed), Ju = 0; Ju < uu.keys.length; Ju++) {
+        const Ru = uu.keys[Ju];
+        let Nu, Xu, Vu;
+        switch (yu) {
+          case Hu.ANIMATIONTYPE_FLOAT:
+            mu = Ru.values[0], Ru.values.length >= 2 && (Nu = Ru.values[1]), Ru.values.length >= 3 && (Xu = Ru.values[2]), Ru.values.length >= 4 && (Vu = Ru.values[3]);
             break;
-          case fU.ANIMATIONTYPE_QUATERNION:
-            if (PU = tU.d.FromArray(RU.values), RU.values.length >= 8) {
-              const UU = tU.d.FromArray(RU.values.slice(4, 8));
-              UU.equals(tU.d.Zero()) || (qU = UU)
+          case Hu.ANIMATIONTYPE_QUATERNION:
+            if (mu = Eu.f.FromArray(Ru.values), Ru.values.length >= 8) {
+              const uu = Eu.f.FromArray(Ru.values.slice(4, 8));
+              uu.equals(Eu.f.Zero()) || (Nu = uu)
             }
-            if (RU.values.length >= 12) {
-              const UU = tU.d.FromArray(RU.values.slice(8, 12));
-              UU.equals(tU.d.Zero()) || (KU = UU)
+            if (Ru.values.length >= 12) {
+              const uu = Eu.f.FromArray(Ru.values.slice(8, 12));
+              uu.equals(Eu.f.Zero()) || (Xu = uu)
             }
-            RU.values.length >= 13 && (cU = RU.values[12]);
+            Ru.values.length >= 13 && (Vu = Ru.values[12]);
             break;
-          case fU.ANIMATIONTYPE_MATRIX:
-            PU = tU.c.FromArray(RU.values), RU.values.length >= 17 && (cU = RU.values[16]);
+          case Hu.ANIMATIONTYPE_MATRIX:
+            mu = Eu.d.FromArray(Ru.values), Ru.values.length >= 17 && (Vu = Ru.values[16]);
             break;
-          case fU.ANIMATIONTYPE_COLOR3:
-            PU = pU.e.FromArray(RU.values), RU.values[3] && (qU = pU.e.FromArray(RU.values[3])), RU.values[4] && (KU = pU.e.FromArray(RU.values[4])), RU.values[5] && (cU = RU.values[5]);
+          case Hu.ANIMATIONTYPE_COLOR3:
+            mu = Ku.d.FromArray(Ru.values), Ru.values[3] && (Nu = Ku.d.FromArray(Ru.values[3])), Ru.values[4] && (Xu = Ku.d.FromArray(Ru.values[4])), Ru.values[5] && (Vu = Ru.values[5]);
             break;
-          case fU.ANIMATIONTYPE_COLOR4:
-            PU = pU.g.FromArray(RU.values), RU.values[4] && (qU = pU.g.FromArray(RU.values[4])), RU.values[5] && (KU = pU.g.FromArray(RU.values[5])), RU.values[6] && (cU = RU.values[6]);
+          case Hu.ANIMATIONTYPE_COLOR4:
+            mu = Ku.h.FromArray(Ru.values), Ru.values[4] && (Nu = Ku.h.FromArray(Ru.values[4])), Ru.values[5] && (Xu = Ku.h.FromArray(Ru.values[5])), Ru.values[6] && (Vu = Ru.values[6]);
             break;
-          case fU.ANIMATIONTYPE_VECTOR3:
+          case Hu.ANIMATIONTYPE_VECTOR3:
           default:
-            PU = tU.n.FromArray(RU.values), RU.values[3] && (qU = tU.n.FromArray(RU.values[3])), RU.values[4] && (KU = tU.n.FromArray(RU.values[4])), RU.values[5] && (cU = RU.values[5])
+            mu = Eu.p.FromArray(Ru.values), Ru.values[3] && (Nu = Eu.p.FromArray(Ru.values[3])), Ru.values[4] && (Xu = Eu.p.FromArray(Ru.values[4])), Ru.values[5] && (Vu = Ru.values[5])
         }
-        const GU = {};
-        GU.frame = RU.frame, GU.value = PU, void 0 != qU && (GU.inTangent = qU), void 0 != KU && (GU.outTangent = KU), void 0 != cU && (GU.interpolation = cU), EU.push(GU)
+        const ru = {};
+        ru.frame = Ru.frame, ru.value = mu, void 0 != Nu && (ru.inTangent = Nu), void 0 != Xu && (ru.outTangent = Xu), void 0 != Vu && (ru.interpolation = Vu), Qu.push(ru)
       }
-      if (RU.setKeys(EU), UU.hu)
-        for (TU = 0; TU < UU.hu.length; TU++) PU = UU.hu[TU], RU.createRange(PU.name, PU.from, PU.to);
-      return RU
+      if (Ru.setKeys(Qu), uu.yT)
+        for (Ju = 0; Ju < uu.yT.length; Ju++) mu = uu.yT[Ju], Ru.createRange(mu.name, mu.from, mu.to);
+      return Ru
     }
-    async function ZU(UU, RU) {
-      return await new Promise(((gU, tU) => {
-        const pU = new KU.e;
-        pU.addEventListener("readystatechange", (() => {
-          if (4 == pU.readyState)
-            if (200 == pU.status) {
-              let RU = JSON.parse(pU.responseText);
-              if (RU.animations && (RU = RU.animations), RU.length) {
-                const UU = [];
-                for (const gU of RU) UU.push(oU(gU));
-                gU(UU)
+    async function Iu(uu, Ru) {
+      return await new Promise(((yu, Eu) => {
+        const Ku = new Xu.e;
+        Ku.addEventListener("readystatechange", (() => {
+          if (4 == Ku.readyState)
+            if (200 == Ku.status) {
+              let Ru = JSON.parse(Ku.responseText);
+              if (Ru.animations && (Ru = Ru.animations), Ru.length) {
+                const uu = [];
+                for (const yu of Ru) uu.push(Mu(yu));
+                yu(uu)
               } else {
-                const tU = oU(RU);
-                UU && (tU.name = UU), gU(tU)
+                const Eu = Mu(Ru);
+                uu && (Eu.name = uu), yu(Eu)
               }
-            } else tU("Unable to load the animation")
-        })), pU.open("GET", RU), pU.send()
+            } else Eu("Unable to load the animation")
+        })), Ku.open("GET", Ru), Ku.send()
       }))
     }
-    async function aU(UU) {
-      const RU = this?.SnippetUrl ?? fU.SnippetUrl;
-      return await new Promise(((gU, tU) => {
-        const pU = new KU.e;
-        pU.addEventListener("readystatechange", (() => {
-          if (4 == pU.readyState)
-            if (200 == pU.status) {
-              const RU = JSON.parse(JSON.parse(pU.responseText).jsonPayload);
-              if (RU.animations) {
-                const tU = JSON.parse(RU.animations),
-                  pU = [];
-                for (const RU of tU.animations) {
-                  const gU = oU(RU);
-                  gU.snippetId = UU, pU.push(gU)
+    async function Gu(uu) {
+      const Ru = this?.SnippetUrl ?? Hu.SnippetUrl;
+      return await new Promise(((yu, Eu) => {
+        const Ku = new Xu.e;
+        Ku.addEventListener("readystatechange", (() => {
+          if (4 == Ku.readyState)
+            if (200 == Ku.status) {
+              const Ru = JSON.parse(JSON.parse(Ku.responseText).jsonPayload);
+              if (Ru.animations) {
+                const Eu = JSON.parse(Ru.animations),
+                  Ku = [];
+                for (const Ru of Eu.animations) {
+                  const yu = Mu(Ru);
+                  yu.snippetId = uu, Ku.push(yu)
                 }
-                gU(pU)
+                yu(Ku)
               } else {
-                const tU = oU(JSON.parse(RU.animation));
-                tU.snippetId = UU, gU(tU)
+                const Eu = Mu(JSON.parse(Ru.animation));
+                Eu.snippetId = uu, yu(Eu)
               }
-            } else tU("Unable to load the snippet " + UU)
-        })), pU.open("GET", RU + "/" + UU.replace(/#/g, "/")), pU.send()
+            } else Eu("Unable to load the snippet " + uu)
+        })), Ku.open("GET", Ru + "/" + uu.replace(/#/g, "/")), Ku.send()
       }))
     }
-    fU._UniqueIdGenerator = 0, fU.AllowMatricesInterpolation = !1, fU.AllowMatrixDecomposeForInterpolation = !0, fU.InheritOriginalValueFromActiveAnimations = !1, fU.SnippetUrl = "https://snippet.babylonjs.com", fU.ANIMATIONTYPE_FLOAT = 0, fU.ANIMATIONTYPE_VECTOR3 = 1, fU.ANIMATIONTYPE_QUATERNION = 2, fU.ANIMATIONTYPE_MATRIX = 3, fU.ANIMATIONTYPE_COLOR3 = 4, fU.ANIMATIONTYPE_COLOR4 = 7, fU.ANIMATIONTYPE_VECTOR2 = 5, fU.ANIMATIONTYPE_SIZE = 6, fU.ANIMATIONLOOPMODE_RELATIVE = 0, fU.ANIMATIONLOOPMODE_CYCLE = 1, fU.ANIMATIONLOOPMODE_CONSTANT = 2, fU.ANIMATIONLOOPMODE_YOYO = 4, fU.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
-    const YU = aU;
-    let BU = !1;
+    Hu._UniqueIdGenerator = 0, Hu.AllowMatricesInterpolation = !1, Hu.AllowMatrixDecomposeForInterpolation = !0, Hu.InheritOriginalValueFromActiveAnimations = !1, Hu.SnippetUrl = "https://snippet.babylonjs.com", Hu.ANIMATIONTYPE_FLOAT = 0, Hu.ANIMATIONTYPE_VECTOR3 = 1, Hu.ANIMATIONTYPE_QUATERNION = 2, Hu.ANIMATIONTYPE_MATRIX = 3, Hu.ANIMATIONTYPE_COLOR3 = 4, Hu.ANIMATIONTYPE_COLOR4 = 7, Hu.ANIMATIONTYPE_VECTOR2 = 5, Hu.ANIMATIONTYPE_SIZE = 6, Hu.ANIMATIONLOOPMODE_RELATIVE = 0, Hu.ANIMATIONLOOPMODE_CYCLE = 1, Hu.ANIMATIONLOOPMODE_CONSTANT = 2, Hu.ANIMATIONLOOPMODE_YOYO = 4, Hu.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
+    const Uu = Gu;
+    let nu = !1;
 
-    function VU() {
-      BU || (BU = !0, fU.Parse = oU, fU.ParseFromFileAsync = ZU, fU.ParseFromSnippetAsync = aU, fU.CreateFromSnippetAsync = YU, fU.CreateAnimation = mU, fU.CreateAndStartAnimation = IU, fU.CreateAndStartHierarchyAnimation = JU, fU.CreateMergeAndStartAnimation = wU, fU.MakeAnimationAdditive = xU, fU.TransitionTo = nU, fU.AppendSerializedAnimations = bU, (0, GU.g)("BABYLON.Animation", fU), TU.b._AnimationRangeFactory = (UU, RU, gU) => new PU.e(UU, RU, gU))
+    function su() {
+      nu || (nu = !0, Hu.Parse = Mu, Hu.ParseFromFileAsync = Iu, Hu.ParseFromSnippetAsync = Gu, Hu.CreateFromSnippetAsync = Uu, Hu.CreateAnimation = bu, Hu.CreateAndStartAnimation = Cu, Hu.CreateAndStartHierarchyAnimation = ku, Hu.CreateMergeAndStartAnimation = eu, Hu.MakeAnimationAdditive = du, Hu.TransitionTo = Au, Hu.AppendSerializedAnimations = Du, (0, ru.c)("BABYLON.Animation", Hu), Ju.e._AnimationRangeFactory = (uu, Ru, yu) => new mu.e(uu, Ru, yu))
     }
   },
-  40483: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => tU
+  40676: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Eu
     });
-    class tU {
-      constructor(UU, RU, gU) {
-        this.name = UU, this.from = RU, this.to = gU
+    class Eu {
+      constructor(uu, Ru, yu) {
+        this.name = uu, this.from = Ru, this.to = yu
       }
       clone() {
-        return new tU(this.name, this.from, this.to)
+        return new Eu(this.name, this.from, this.to)
       }
     }
   },
-  40533: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => tU.e,
-      e: () => tU.l
+  40732: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Eu.c,
+      d: () => Eu.h
     });
-    var tU = gU(39517);
-    (0, tU.h)()
+    var Eu = yu(39706);
+    (0, Eu.d)()
   },
-  40520: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => tU.e
+  40709: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Eu.h
     });
-    var tU = gU(39855);
-    (0, tU.b)()
+    var Eu = yu(40054);
+    (0, Eu.e)()
   },
-  40494: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => tU.c
+  40692: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu.c
     });
-    var tU = gU(39844);
-    (0, tU.f)()
+    var Eu = yu(40038);
+    (0, Eu.e)()
   },
-  40536: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => tU.c
+  40741: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu.e
     });
-    var tU = gU(39782);
-    (0, tU.d)()
+    var Eu = yu(39984);
+    (0, Eu.f)()
   },
-  40488: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => tU.e
+  40683: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Eu.d
     });
-    var tU = gU(39823);
-    (0, tU.b)()
+    var Eu = yu(40017);
+    (0, Eu.c)()
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

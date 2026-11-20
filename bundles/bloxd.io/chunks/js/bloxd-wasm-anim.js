@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  42609: (UU, RU, gU) => {
-    UU.exports = gU.p + "static/media/bloxd_wasm_anim_bg.69aee2517e6a8bb5cb56.wasm"
+  42845: (uu, Ru, yu) => {
+    uu.exports = yu.p + "static/media/bloxd_wasm_anim_bg.aca2f29468801bc01f69.wasm"
   },
-  42606: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      BloxdAnimWasmError: () => XU,
-      compileAnimationPackInWasm: () => SU
+  42841: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      BloxdAnimWasmError: () => lu,
+      compileAnimationPackInWasm: () => zu
     });
-    var tU = {};
+    var Eu = {};
 
-    function pU(UU, RU, gU, tU, pU, EU) {
-      const PU = WU(UU, oU.M6NU),
-        TU = ZU,
-        qU = WU(RU, oU.M6NU),
-        KU = ZU,
-        cU = WU(gU, oU.M6NU),
-        GU = ZU,
-        jU = WU(tU, oU.M6NU),
-        CU = ZU,
-        hU = WU(pU, oU.M6NU),
-        QU = ZU;
-      var fU = eU(EU) ? 0 : function(UU, RU) {
-          const gU = RU(1 * UU.length, 1) >>> 0;
-          return uU().set(UU, gU / 1), ZU = UU.length, gU
-        }(EU, oU.M6NU),
-        mU = ZU;
-      const IU = oU.RO0F(PU, TU, qU, KU, cU, GU, jU, CU, hU, QU, fU, mU);
-      if (IU[3]) throw xU(IU[2]);
-      var JU, wU, nU = (JU = IU[0], wU = IU[1], JU >>>= 0, uU().subarray(JU / 1, JU / 1 + wU)).slice();
-      return oU.igu9(IU[0], 1 * IU[1], 1), nU
+    function Ku(uu, Ru, yu, Eu, Ku, Qu) {
+      const mu = ju(uu, Mu.sWcq),
+        Ju = Iu,
+        Nu = ju(Ru, Mu.sWcq),
+        Xu = Iu,
+        Vu = ju(yu, Mu.sWcq),
+        ru = Iu,
+        Bu = ju(Eu, Mu.sWcq),
+        Su = Iu,
+        pu = ju(Ku, Mu.sWcq),
+        Tu = Iu;
+      var Hu = Wu(Qu) ? 0 : function(uu, Ru) {
+          const yu = Ru(1 * uu.length, 1) >>> 0;
+          return xu().set(uu, yu / 1), Iu = uu.length, yu
+        }(Qu, Mu.sWcq),
+        bu = Iu;
+      const Cu = Mu.d4Bt(mu, Ju, Nu, Xu, Vu, ru, Bu, Su, pu, Tu, Hu, bu);
+      if (Cu[3]) throw du(Cu[2]);
+      var ku, eu, Au = (ku = Cu[0], eu = Cu[1], ku >>>= 0, xu().subarray(ku / 1, ku / 1 + eu)).slice();
+      return Mu.fuSY(Cu[0], 1 * Cu[1], 1), Au
     }
 
-    function EU(UU, RU) {
-      const gU = fU(UU, oU.M6NU, oU.jtdZ),
-        tU = ZU,
-        pU = oU.qNKf(gU, tU, RU);
-      if (pU[1]) throw xU(pU[0])
+    function Qu(uu, Ru) {
+      const yu = Hu(uu, Mu.sWcq, Mu.xET9),
+        Eu = Iu,
+        Ku = Mu.zNQi(yu, Eu, Ru);
+      if (Ku[1]) throw du(Ku[0])
     }
 
-    function PU() {
-      oU.IAHc()
+    function mu() {
+      Mu.BzIO()
     }
 
-    function TU() {
+    function Ju() {
       return {
         __proto__: null,
-        MOVI: {
+        FqUv: {
           __proto__: null,
-          hFCp: function(UU, RU) {
-            return qU(Error(GU(UU, RU)))
+          qKLH: function(uu, Ru) {
+            return Nu(Error(ru(uu, Ru)))
           },
-          b2Dn: function(UU, RU) {
-            const gU = CU(RU),
-              tU = "string" === typeof gU ? gU : void 0;
-            var pU = eU(tU) ? 0 : fU(tU, oU.M6NU, oU.jtdZ),
-              EU = ZU;
-            cU().setInt32(UU + 4, EU, !0), cU().setInt32(UU + 0, pU, !0)
+          aN9V: function(uu, Ru) {
+            const yu = Su(Ru),
+              Eu = "string" === typeof yu ? yu : void 0;
+            var Ku = Wu(Eu) ? 0 : Hu(Eu, Mu.sWcq, Mu.xET9),
+              Qu = Iu;
+            Vu().setInt32(uu + 4, Qu, !0), Vu().setInt32(uu + 0, Ku, !0)
           },
-          aYXF: function(UU, RU) {
-            throw new Error(GU(UU, RU))
+          PQpS: function(uu, Ru) {
+            throw new Error(ru(uu, Ru))
           },
-          MsUi: function(UU, RU) {
-            console.error(GU(UU, RU))
+          vCZq: function(uu, Ru) {
+            console.error(ru(uu, Ru))
           },
-          c4ZH: function(UU) {
-            xU(UU)
+          MsCN: function(uu) {
+            du(uu)
           }
         }
       }
     }
 
-    function qU(UU) {
-      QU === hU.length && hU.push(hU.length + 1);
-      const RU = QU;
-      return QU = hU[RU], hU[RU] = UU, RU
+    function Nu(uu) {
+      Tu === pu.length && pu.push(pu.length + 1);
+      const Ru = Tu;
+      return Tu = pu[Ru], pu[Ru] = uu, Ru
     }
-    gU.r(tU), gU.d(tU, {
-      TPU: () => pU,
-      Nc: () => EU,
-      default: () => BU,
-      initSync: () => YU,
-      lc: () => PU
+    yu.r(Eu), yu.d(Eu, {
+      qmu: () => Ku,
+      PV: () => Qu,
+      default: () => nu,
+      initSync: () => Uu,
+      iV: () => mu
     });
-    let KU = null;
+    let Xu = null;
 
-    function cU() {
-      return (null === KU || !0 === KU.buffer.detached || void 0 === KU.buffer.detached && KU.buffer !== oU.memory.buffer) && (KU = new DataView(oU.memory.buffer)), KU
+    function Vu() {
+      return (null === Xu || !0 === Xu.buffer.detached || void 0 === Xu.buffer.detached && Xu.buffer !== Mu.memory.buffer) && (Xu = new DataView(Mu.memory.buffer)), Xu
     }
 
-    function GU(UU, RU) {
-      return function(UU, RU) {
-        JU += RU, JU >= IU && (mU = new TextDecoder("utf-8", {
+    function ru(uu, Ru) {
+      return function(uu, Ru) {
+        ku += Ru, ku >= Cu && (bu = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), mU.decode(), JU = RU);
-        return mU.decode(uU().subarray(UU, UU + RU))
-      }(UU >>> 0, RU)
+        }), bu.decode(), ku = Ru);
+        return bu.decode(xu().subarray(uu, uu + Ru))
+      }(uu >>> 0, Ru)
     }
-    let jU = null;
+    let Bu = null;
 
-    function uU() {
-      return null !== jU && 0 !== jU.byteLength || (jU = new Uint8Array(oU.memory.buffer)), jU
-    }
-
-    function CU(UU) {
-      return hU[UU]
-    }
-    let hU = new Array(1024).fill(void 0);
-    hU.push(void 0, null, !0, !1);
-    let QU = hU.length;
-
-    function eU(UU) {
-      return void 0 === UU || null === UU
+    function xu() {
+      return null !== Bu && 0 !== Bu.byteLength || (Bu = new Uint8Array(Mu.memory.buffer)), Bu
     }
 
-    function WU(UU, RU) {
-      const gU = RU(4 * UU.length, 4) >>> 0,
-        tU = cU();
-      for (let pU = 0; pU < UU.length; pU++) tU.setUint32(gU + 4 * pU, qU(UU[pU]), !0);
-      return ZU = UU.length, gU
+    function Su(uu) {
+      return pu[uu]
+    }
+    let pu = new Array(1024).fill(void 0);
+    pu.push(void 0, null, !0, !1);
+    let Tu = pu.length;
+
+    function Wu(uu) {
+      return void 0 === uu || null === uu
     }
 
-    function fU(UU, RU, gU) {
-      if (void 0 === gU) {
-        const gU = wU.encode(UU),
-          tU = RU(gU.length, 1) >>> 0;
-        return uU().subarray(tU, tU + gU.length).set(gU), ZU = gU.length, tU
+    function ju(uu, Ru) {
+      const yu = Ru(4 * uu.length, 4) >>> 0,
+        Eu = Vu();
+      for (let Ku = 0; Ku < uu.length; Ku++) Eu.setUint32(yu + 4 * Ku, Nu(uu[Ku]), !0);
+      return Iu = uu.length, yu
+    }
+
+    function Hu(uu, Ru, yu) {
+      if (void 0 === yu) {
+        const yu = eu.encode(uu),
+          Eu = Ru(yu.length, 1) >>> 0;
+        return xu().subarray(Eu, Eu + yu.length).set(yu), Iu = yu.length, Eu
       }
-      let tU = UU.length,
-        pU = RU(tU, 1) >>> 0;
-      const EU = uU();
-      let PU = 0;
-      for (; PU < tU; PU++) {
-        const RU = UU.charCodeAt(PU);
-        if (RU > 127) break;
-        EU[pU + PU] = RU
+      let Eu = uu.length,
+        Ku = Ru(Eu, 1) >>> 0;
+      const Qu = xu();
+      let mu = 0;
+      for (; mu < Eu; mu++) {
+        const Ru = uu.charCodeAt(mu);
+        if (Ru > 127) break;
+        Qu[Ku + mu] = Ru
       }
-      if (PU !== tU) {
-        0 !== PU && (UU = UU.slice(PU)), pU = gU(pU, tU, tU = PU + 3 * UU.length, 1) >>> 0;
-        const RU = uU().subarray(pU + PU, pU + tU);
-        PU += wU.encodeInto(UU, RU).written, pU = gU(pU, tU, PU, 1) >>> 0
+      if (mu !== Eu) {
+        0 !== mu && (uu = uu.slice(mu)), Ku = yu(Ku, Eu, Eu = mu + 3 * uu.length, 1) >>> 0;
+        const Ru = xu().subarray(Ku + mu, Ku + Eu);
+        mu += eu.encodeInto(uu, Ru).written, Ku = yu(Ku, Eu, mu, 1) >>> 0
       }
-      return ZU = PU, pU
+      return Iu = mu, Ku
     }
 
-    function xU(UU) {
-      const RU = CU(UU);
-      return function(UU) {
-        UU < 1028 || (hU[UU] = QU, QU = UU)
-      }(UU), RU
+    function du(uu) {
+      const Ru = Su(uu);
+      return function(uu) {
+        uu < 1028 || (pu[uu] = Tu, Tu = uu)
+      }(uu), Ru
     }
-    let mU = new TextDecoder("utf-8", {
+    let bu = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    mU.decode();
-    const IU = 2146435072;
-    let JU = 0;
-    const wU = new TextEncoder;
-    "encodeInto" in wU || (wU.encodeInto = function(UU, RU) {
-      const gU = wU.encode(UU);
-      return RU.set(gU), {
-        read: UU.length,
-        written: gU.length
+    bu.decode();
+    const Cu = 2146435072;
+    let ku = 0;
+    const eu = new TextEncoder;
+    "encodeInto" in eu || (eu.encodeInto = function(uu, Ru) {
+      const yu = eu.encode(uu);
+      return Ru.set(yu), {
+        read: uu.length,
+        written: yu.length
       }
     });
-    let nU, bU, oU, ZU = 0;
+    let Au, Du, Mu, Iu = 0;
 
-    function aU(UU, RU) {
-      return bU = UU, oU = UU.exports, nU = RU, KU = null, jU = null, oU.WQEf(), oU
+    function Gu(uu, Ru) {
+      return Du = uu, Mu = uu.exports, Au = Ru, Xu = null, Bu = null, Mu.RzFw(), Mu
     }
 
-    function YU(UU) {
-      if (void 0 !== oU) return oU;
-      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
-        module: UU
-      } = UU) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const RU = TU();
-      UU instanceof WebAssembly.Module || (UU = new WebAssembly.Module(UU));
-      return aU(new WebAssembly.Instance(UU, RU), UU)
+    function Uu(uu) {
+      if (void 0 !== Mu) return Mu;
+      void 0 !== uu && (Object.getPrototypeOf(uu) === Object.prototype ? ({
+        module: uu
+      } = uu) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Ru = Ju();
+      uu instanceof WebAssembly.Module || (uu = new WebAssembly.Module(uu));
+      return Gu(new WebAssembly.Instance(uu, Ru), uu)
     }
-    async function BU(UU) {
-      if (void 0 !== oU) return oU;
-      void 0 !== UU && (Object.getPrototypeOf(UU) === Object.prototype ? ({
-        module_or_path: UU
-      } = UU) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const RU = TU();
-      ("string" === typeof UU || "function" === typeof Request && UU instanceof Request || "function" === typeof URL && UU instanceof URL) && (UU = fetch(UU));
+    async function nu(uu) {
+      if (void 0 !== Mu) return Mu;
+      void 0 !== uu && (Object.getPrototypeOf(uu) === Object.prototype ? ({
+        module_or_path: uu
+      } = uu) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Ru = Ju();
+      ("string" === typeof uu || "function" === typeof Request && uu instanceof Request || "function" === typeof URL && uu instanceof URL) && (uu = fetch(uu));
       const {
-        instance: gU,
-        module: tU
-      } = await async function(UU, RU) {
-        if ("function" === typeof Response && UU instanceof Response) {
-          if (!UU.ok) throw new Error(`failed to fetch Wasm: ${UU.status} ${UU.statusText} fetching '${UU.url}'`);
+        instance: yu,
+        module: Eu
+      } = await async function(uu, Ru) {
+        if ("function" === typeof Response && uu instanceof Response) {
+          if (!uu.ok) throw new Error(`failed to fetch Wasm: ${uu.status} ${uu.statusText} fetching '${uu.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(UU, RU)
-          } catch (gU) {
-            if (! function(UU) {
-                switch (UU) {
+            return await WebAssembly.instantiateStreaming(uu, Ru)
+          } catch (yu) {
+            if (! function(uu) {
+                switch (uu) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(UU.type) || "application/wasm" === UU.headers.get("Content-Type")) throw gU;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gU)
+              }(uu.type) || "application/wasm" === uu.headers.get("Content-Type")) throw yu;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", yu)
           }
-          const tU = await UU.arrayBuffer();
-          return await WebAssembly.instantiate(tU, RU)
+          const Eu = await uu.arrayBuffer();
+          return await WebAssembly.instantiate(Eu, Ru)
         } {
-          const gU = await WebAssembly.instantiate(UU, RU);
-          return gU instanceof WebAssembly.Instance ? {
-            instance: gU,
-            module: UU
-          } : gU
+          const yu = await WebAssembly.instantiate(uu, Ru);
+          return yu instanceof WebAssembly.Instance ? {
+            instance: yu,
+            module: uu
+          } : yu
         }
-      }(await UU, RU);
-      return aU(gU, tU)
+      }(await uu, Ru);
+      return Gu(yu, Eu)
     }
-    var VU = gU(3377),
-      rU = gU(6297);
-    class XU extends Error {
+    var su = yu(3514),
+      tu = yu(6401);
+    class lu extends Error {
       stage;
-      constructor(UU, RU) {
-        super((0, VU.z)(UU, RU), {
-          cause: RU
-        }), this.name = "BloxdAnimWasmError", this.stage = UU
+      constructor(uu, Ru) {
+        super((0, su.z)(uu, Ru), {
+          cause: Ru
+        }), this.name = "BloxdAnimWasmError", this.stage = uu
       }
     }
-    let vU = null,
-      dU = null;
+    let gu = null,
+      cu = null;
 
-    function HU() {
-      if (dU) throw dU
+    function Lu() {
+      if (cu) throw cu
     }
-    async function SU(UU, RU, pU) {
-      HU();
-      const EU = await (vU ??= (async () => {
-        let UU;
+    async function zu(uu, Ru, Ku) {
+      Lu();
+      const Qu = await (gu ??= (async () => {
+        let uu;
         try {
-          UU = await (0, VU.D)(new gU.U(gU(42609)), (0, rU.b)("bloxd_wasm_anim"))
-        } catch (RU) {
-          throw new XU((0, VU.K)(RU), RU)
+          uu = await (0, su.D)(new yu.U(yu(42845)), (0, tu.d)("bloxd_wasm_anim"))
+        } catch (Ru) {
+          throw new lu((0, su.I)(Ru), Ru)
         }
         try {
-          await BU({
-            module_or_path: UU
+          await nu({
+            module_or_path: uu
           })
-        } catch (RU) {
-          throw new XU("instantiate", RU)
+        } catch (Ru) {
+          throw new lu("instantiate", Ru)
         }
-        return tU
-      })(), vU.catch((() => {
-        vU = null
-      })), vU);
-      HU();
+        return Eu
+      })(), gu.catch((() => {
+        gu = null
+      })), gu);
+      Lu();
       try {
-        return EU.TPU(Object.entries(UU).flat(), [...RU.mobTypes], [...RU.vehicleTypes], [...RU.mobAiStates], [...RU.playerPoses], "builtIns" in pU ? pU.builtIns : void 0)
-      } catch (PU) {
-        const UU = new XU("call", PU);
-        throw PU instanceof WebAssembly.RuntimeError && (dU = UU), UU
+        return Qu.qmu(Object.entries(uu).flat(), [...Ru.mobTypes], [...Ru.vehicleTypes], [...Ru.mobAiStates], [...Ru.playerPoses], "builtIns" in Ku ? Ku.builtIns : void 0)
+      } catch (mu) {
+        const uu = new lu("call", mu);
+        throw mu instanceof WebAssembly.RuntimeError && (cu = uu), uu
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

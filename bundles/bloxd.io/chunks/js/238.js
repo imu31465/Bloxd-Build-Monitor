@@ -1,25 +1,25 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  38986: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => Og
+  39175: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => fy
     });
-    const tU = [0, 90, 180, 270],
-      pU = "plotsblueprint";
-    var EU = gU(56),
-      PU = gU(36191),
-      TU = gU(21),
-      qU = gU(1567),
-      KU = gU(1637),
-      cU = gU(24);
-    const GU = [
+    const Eu = [0, 90, 180, 270],
+      Ku = "plotsblueprint";
+    var Qu = yu(64),
+      mu = yu(36445),
+      Ju = yu(27),
+      Nu = yu(1583),
+      Xu = yu(1661),
+      Vu = yu(34);
+    const ru = [
         ["farm_hut", "farm_house", "farm_barn"],
         ["rusticHome_tent", "rusticHome_cabin", "rusticHome_house"],
         ["market_stand", "market_stall", "market_shop"],
         ["castle_wall", "castle_gate", "castle_tower"]
       ],
-      jU = {
+      Bu = {
         farm_hut: {
           displayName: {
             translationKey: "plotsGame:blueprintFarmHut"
@@ -93,18 +93,18 @@ export const modules = {
           tier: "large"
         }
       },
-      uU = ["small", "medium", "large"].flatMap((UU => GU.flat().filter((RU => jU[RU].tier === UU))));
+      xu = ["small", "medium", "large"].flatMap((uu => ru.flat().filter((Ru => Bu[Ru].tier === uu))));
 
-    function CU(UU) {
-      return jU[UU]
+    function Su(uu) {
+      return Bu[uu]
     }
-    const hU = new Map(GU.flatMap((UU => UU.slice(1).map(((RU, gU) => [RU, UU[gU]])))));
+    const pu = new Map(ru.flatMap((uu => uu.slice(1).map(((Ru, yu) => [Ru, uu[yu]])))));
 
-    function QU(UU) {
-      var RU;
-      return null !== (RU = hU.get(UU)) && void 0 !== RU ? RU : null
+    function Tu(uu) {
+      var Ru;
+      return null !== (Ru = pu.get(uu)) && void 0 !== Ru ? Ru : null
     }
-    const eU = {
+    const Wu = {
       farm_hut: "plotsGame:journalNoteFarmHut",
       rusticHome_tent: "plotsGame:journalNoteRusticHomeTent",
       castle_tower: "plotsGame:journalNoteCastleTower",
@@ -112,180 +112,180 @@ export const modules = {
       farm_barn: "plotsGame:journalNoteFarmBarn"
     };
 
-    function WU(UU, RU) {
-      const gU = new Set(UU),
-        tU = function(UU) {
-          const RU = new Set(UU);
-          return new Set(uU.filter((UU => {
-            const gU = QU(UU);
-            return null === gU || RU.has(gU)
+    function ju(uu, Ru) {
+      const yu = new Set(uu),
+        Eu = function(uu) {
+          const Ru = new Set(uu);
+          return new Set(xu.filter((uu => {
+            const yu = Tu(uu);
+            return null === yu || Ru.has(yu)
           })))
-        }(gU);
-      return uU.map((UU => {
-        const pU = UU === RU;
-        return gU.has(UU) ? {
-          id: UU,
-          active: pU,
+        }(yu);
+      return xu.map((uu => {
+        const Ku = uu === Ru;
+        return yu.has(uu) ? {
+          id: uu,
+          active: Ku,
           state: "completed",
           unlockedBy: null
-        } : tU.has(UU) ? {
-          id: UU,
-          active: pU,
+        } : Eu.has(uu) ? {
+          id: uu,
+          active: Ku,
           state: "open",
           unlockedBy: null
         } : {
-          id: UU,
-          active: pU,
+          id: uu,
+          active: Ku,
           state: "locked",
-          unlockedBy: QU(UU)
+          unlockedBy: Tu(uu)
         }
       }))
     }
-    const fU = "plotsJournalChanged";
-    class xU {
-      constructor(UU, RU) {
-        this.api = UU, this.placement = RU, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
-          this.placement.stop(), this.ku("journal_opened")
-        }, this.build = UU => {
-          this.ku("placement_started"), this.placement.start(UU), (0, PU.h)()
+    const Hu = "plotsJournalChanged";
+    class du {
+      constructor(uu, Ru) {
+        this.api = uu, this.placement = Ru, this.pages = null, this.openRequested = !1, this.reported = new Set, this.onOpened = () => {
+          this.placement.stop(), this.Px("journal_opened")
+        }, this.build = uu => {
+          this.Px("placement_started"), this.placement.start(uu), (0, mu.f)()
         }, this.putAway = () => {
-          this.api.sendCommand(`${pU} cancel`)
+          this.api.sendCommand(`${Ku} cancel`)
         }
       }
       getPages() {
         return this.pages
       }
-      qC(UU) {
-        let [, RU, gU] = UU;
-        this.pages = WU(RU, gU), cU.p.yh(fU, this.pages, !0)
+      SS(uu) {
+        let [, Ru, yu] = uu;
+        this.pages = ju(Ru, yu), Vu.k.Op(Hu, this.pages, !0)
       }
       openFromServer() {
-        this.openRequested = !0, this.HG()
+        this.openRequested = !0, this.sr()
       }
-      HG() {
-        this.openRequested && !TU.b.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, qU.q)() || (0, KU.isTypingInInput)() || null !== this.placement.getView() || (0, PU.w)())
+      sr() {
+        this.openRequested && !Ju.d.get("loadingOverlayVisible") && (this.openRequested = !1, null === this.pages || (0, Nu.p)() || (0, Xu.isTypingInInput)() || null !== this.placement.getView() || (0, mu.q)())
       }
-      ku(UU) {
-        this.reported.has(UU) || (this.reported.add(UU), this.api.sendCommand(`${pU} report ${UU}`))
+      Px(uu) {
+        this.reported.has(uu) || (this.reported.add(uu), this.api.sendCommand(`${Ku} report ${uu}`))
       }
     }
-    var mU = gU(1037),
-      IU = gU.n(mU),
-      JU = gU(1049),
-      wU = gU(1412),
-      nU = gU(4195),
-      bU = gU(3111),
-      oU = gU(1410),
-      ZU = gU(1943),
-      aU = gU(1181),
-      YU = gU(9078);
-    const BU = [0, 90, 180, 270],
-      VU = /^(meta\|rot\d)\|([lrud]+)$/,
-      rU = "nesw",
-      XU = /^meta\|([nesw]*)\|?(Stacked)?$/,
-      vU = function(UU) {
-        const RU = new WeakMap;
-        return (gU, tU) => {
-          let pU = RU.get(gU);
-          return void 0 === pU && (pU = UU(gU, tU), RU.set(gU, pU)), pU
+    var bu = yu(1035),
+      Cu = yu.n(bu),
+      ku = yu(1043),
+      eu = yu(1408),
+      Au = yu(4301),
+      Du = yu(3214),
+      Mu = yu(1400),
+      Iu = yu(2003),
+      Gu = yu(1170),
+      Uu = yu(9158);
+    const nu = [0, 90, 180, 270],
+      su = /^(meta\|rot\d)\|([lrud]+)$/,
+      tu = "nesw",
+      lu = /^meta\|([nesw]*)\|?(Stacked)?$/,
+      gu = function(uu) {
+        const Ru = new WeakMap;
+        return (yu, Eu) => {
+          let Ku = Ru.get(yu);
+          return void 0 === Ku && (Ku = uu(yu, Eu), Ru.set(yu, Ku)), Ku
         }
-      }((UU => new dU(UU)));
-    class dU {
-      constructor(UU) {
-        this.blockMetadata = UU, this.blockIdMappings = new Map, this.maxBlockId = void 0;
-        const RU = new Set(Object.keys(UU).map((RU => UU[RU].id)));
-        RU.add(0), this.maxBlockId = Math.max(...RU)
+      }((uu => new cu(uu)));
+    class cu {
+      constructor(uu) {
+        this.blockMetadata = uu, this.blockIdMappings = new Map, this.maxBlockId = void 0;
+        const Ru = new Set(Object.keys(uu).map((Ru => uu[Ru].id)));
+        Ru.add(0), this.maxBlockId = Math.max(...Ru)
       }
       static
-      for (UU) {
-        return vU(UU)
+      for (uu) {
+        return gu(uu)
       }
-      getBlockIdMapping(UU, RU) {
-        const gU = this.getBlockIdMappingKey(UU, RU);
-        let tU = this.blockIdMappings.get(gU);
-        return void 0 === tU && BU.includes(UU) && (tU = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, UU, RU), this.blockIdMappings.set(gU, tU)), tU
+      getBlockIdMapping(uu, Ru) {
+        const yu = this.getBlockIdMappingKey(uu, Ru);
+        let Eu = this.blockIdMappings.get(yu);
+        return void 0 === Eu && nu.includes(uu) && (Eu = this.createBlockIdMapping(this.blockMetadata, this.maxBlockId, uu, Ru), this.blockIdMappings.set(yu, Eu)), Eu
       }
-      turnBlockId(UU, RU, gU) {
-        return this.mapBlockId(this.blockMetadata[UU], RU, this.getRotationMapping(RU, gU), gU)
+      turnBlockId(uu, Ru, yu) {
+        return this.mapBlockId(this.blockMetadata[uu], Ru, this.getRotationMapping(Ru, yu), yu)
       }
-      getBlockIdMappingKey(UU, RU) {
-        return `r${UU}|m${Number(RU)}`
+      getBlockIdMappingKey(uu, Ru) {
+        return `r${uu}|m${Number(Ru)}`
       }
-      createBlockIdMapping(UU, RU, gU, tU) {
-        const pU = new Uint16Array(RU + 1),
-          EU = this.getRotationMapping(gU, tU);
-        for (const PU in UU) {
-          const RU = UU[PU];
-          pU[RU.id] = this.mapBlockId(RU, gU, EU, tU)
+      createBlockIdMapping(uu, Ru, yu, Eu) {
+        const Ku = new Uint16Array(Ru + 1),
+          Qu = this.getRotationMapping(yu, Eu);
+        for (const mu in uu) {
+          const Ru = uu[mu];
+          Ku[Ru.id] = this.mapBlockId(Ru, yu, Qu, Eu)
         }
-        return pU
+        return Ku
       }
-      getRotationMapping(UU, RU) {
-        const gU = Math.round(UU / 90),
-          tU = new Uint8Array(4);
-        for (let pU = 0; pU < 4; pU++) tU[pU] = (4 + pU - gU) % 4;
-        if (RU) {
-          let UU = tU[0];
-          tU[0] = tU[1], tU[1] = UU, UU = tU[2], tU[2] = tU[3], tU[3] = UU
+      getRotationMapping(uu, Ru) {
+        const yu = Math.round(uu / 90),
+          Eu = new Uint8Array(4);
+        for (let Ku = 0; Ku < 4; Ku++) Eu[Ku] = (4 + Ku - yu) % 4;
+        if (Ru) {
+          let uu = Eu[0];
+          Eu[0] = Eu[1], Eu[1] = uu, uu = Eu[2], Eu[2] = Eu[3], Eu[3] = uu
         }
-        return tU
+        return Eu
       }
-      mapBlockId(UU, RU, gU, tU) {
-        var pU;
+      mapBlockId(uu, Ru, yu, Eu) {
+        var Ku;
         const {
-          blockMetadata: EU
-        } = this, PU = Math.round(RU / 90), {
-          id: TU,
-          meta: qU
-        } = UU, {
-          rot: KU,
-          rootName: cU,
-          metaStr: GU
-        } = qU;
-        let jU;
-        const [, uU, CU] = null !== (pU = XU.exec(GU)) && void 0 !== pU ? pU : [];
-        if (void 0 !== uU) {
-          var hU, QU;
-          jU = null !== (hU = null === (QU = EU[`${cU}|meta|${[rU.split("").filter(((UU,RU)=>uU.split("").some((UU=>{const gU=rU.indexOf(UU);return((tU?3-gU:gU)+PU)%4===RU})))).join(""),CU].filter(Boolean).join("|")}`]) || void 0 === QU ? void 0 : QU.id) && void 0 !== hU ? hU : TU
-        } else if (null === KU) jU = TU;
+          blockMetadata: Qu
+        } = this, mu = Math.round(Ru / 90), {
+          id: Ju,
+          meta: Nu
+        } = uu, {
+          rot: Xu,
+          rootName: Vu,
+          metaStr: ru
+        } = Nu;
+        let Bu;
+        const [, xu, Su] = null !== (Ku = lu.exec(ru)) && void 0 !== Ku ? Ku : [];
+        if (void 0 !== xu) {
+          var pu, Tu;
+          Bu = null !== (pu = null === (Tu = Qu[`${Vu}|meta|${[tu.split("").filter(((uu,Ru)=>xu.split("").some((uu=>{const yu=tu.indexOf(uu);return((Eu?3-yu:yu)+mu)%4===Ru})))).join(""),Su].filter(Boolean).join("|")}`]) || void 0 === Tu ? void 0 : Tu.id) && void 0 !== pu ? pu : Ju
+        } else if (null === Xu) Bu = Ju;
         else {
-          var eU, WU;
-          const UU = gU[KU - 1] + 1;
-          let RU = GU.replace(`rot${KU}`, `rot${UU}`);
-          tU && qU.stairsCorner && (RU = RU.replace(/(Left|Right)$/, (UU => "Left" === UU ? "Right" : "Left"))), tU && "Chest" === cU && (RU = RU.replace(/\|(left|right)$/, ((UU, RU) => "left" === RU ? "|right" : "|left")));
-          const pU = VU.exec(RU);
-          if (tU && null !== pU) {
-            const UU = "lrud".split("").filter((UU => pU[2].includes("l" === UU ? "r" : "r" === UU ? "l" : UU)));
-            RU = `${pU[1]}|${UU.join("")}`
+          var Wu, ju;
+          const uu = yu[Xu - 1] + 1;
+          let Ru = ru.replace(`rot${Xu}`, `rot${uu}`);
+          Eu && Nu.stairsCorner && (Ru = Ru.replace(/(Left|Right)$/, (uu => "Left" === uu ? "Right" : "Left"))), Eu && "Chest" === Vu && (Ru = Ru.replace(/\|(left|right)$/, ((uu, Ru) => "left" === Ru ? "|right" : "|left")));
+          const Ku = su.exec(Ru);
+          if (Eu && null !== Ku) {
+            const uu = "lrud".split("").filter((uu => Ku[2].includes("l" === uu ? "r" : "r" === uu ? "l" : uu)));
+            Ru = `${Ku[1]}|${uu.join("")}`
           }
-          const PU = `${cU}|${RU}`;
-          if (jU = null !== (eU = null === (WU = EU[PU]) || void 0 === WU ? void 0 : WU.id) && void 0 !== eU ? eU : null, null === jU) {
-            const UU = EU[cU];
-            jU = UU.rootMetaDesc === PU ? UU.id : TU
+          const mu = `${Vu}|${Ru}`;
+          if (Bu = null !== (Wu = null === (ju = Qu[mu]) || void 0 === ju ? void 0 : ju.id) && void 0 !== Wu ? Wu : null, null === Bu) {
+            const uu = Qu[Vu];
+            Bu = uu.rootMetaDesc === mu ? uu.id : Ju
           }
         }
-        return jU
+        return Bu
       }
     }
 
-    function HU(UU, RU, gU) {
+    function Lu(uu, Ru, yu) {
       let {
-        xRotationMappedOrigin: tU,
-        shouldSwapXZ: pU
-      } = gU;
-      const EU = pU ? RU : UU;
-      return null === tU ? EU : tU - EU
+        xRotationMappedOrigin: Eu,
+        shouldSwapXZ: Ku
+      } = yu;
+      const Qu = Ku ? Ru : uu;
+      return null === Eu ? Qu : Eu - Qu
     }
 
-    function SU(UU, RU, gU) {
+    function zu(uu, Ru, yu) {
       let {
-        zRotationMappedOrigin: tU,
-        shouldSwapXZ: pU
-      } = gU;
-      const EU = pU ? UU : RU;
-      return null === tU ? EU : tU - EU
+        zRotationMappedOrigin: Eu,
+        shouldSwapXZ: Ku
+      } = yu;
+      const Qu = Ku ? uu : Ru;
+      return null === Eu ? Qu : Eu - Qu
     }
-    const sU = {
+    const Fu = {
         farm_hut: {
           size: [7, 7, 7],
           palette: ["Aspen Wood Planks", "Messy Stone", "Barkless Aspen Log", "Red Planks", "Glass", "Barkless Pine Log", "Maple Wood Planks", "Smooth Stone"],
@@ -347,493 +347,493 @@ export const modules = {
           layers: ["aaaaaaaaa accccccca accccccca accccccca accccccca accccccca accccccca accccccca aaaaaaaaa", "bbbb.bbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbb.bbba b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b abbbbbbba", "bbbbabbbb b.......b b.......b b.......b b.......b b.......b b.......b b.....f.b bbbbbbbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbb.bbba b.......b b.......b b.......b ......... b.......b b.......b b.....f.b abbb.bbba", "bbbbabbbb b.......b b.......b b.......b a.......a b.......b b.......b b.....f.b bbbbabbbb", "abbbbbbba bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccccb bcccccfcb abbbbbbba", "bbbbbbbbb b.......b b.......b b.......b b...d...b b.......b b.......b b.......b bbbbbbbbb", "ab.bbb.ba b.......b ......... b.......b b...d...b b.......b ......... b.......b ab.bbb.ba", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....d.... ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....deee. ......... ......... ......... .........", "......... ......... ......... ......... ....a.... ......... ......... ......... ........."]
         }
       },
-      yU = new Map;
+      wu = new Map;
 
-    function kU(UU, RU) {
-      const gU = `${UU}|${RU}`;
-      let tU = yU.get(gU);
-      if (void 0 === tU) {
+    function Zu(uu, Ru) {
+      const yu = `${uu}|${Ru}`;
+      let Eu = wu.get(yu);
+      if (void 0 === Eu) {
         const {
-          size: pU,
-          palette: EU,
-          layers: PU
-        } = sU[UU], TU = 90 === RU || 270 === RU, [qU, KU] = TU ? [pU[2], pU[0]] : [pU[0], pU[2]], cU = function(UU, RU, gU) {
-          let tU = null,
-            pU = null,
-            EU = !1;
-          switch (UU) {
+          size: Ku,
+          palette: Qu,
+          layers: mu
+        } = Fu[uu], Ju = 90 === Ru || 270 === Ru, [Nu, Xu] = Ju ? [Ku[2], Ku[0]] : [Ku[0], Ku[2]], Vu = function(uu, Ru, yu) {
+          let Eu = null,
+            Ku = null,
+            Qu = !1;
+          switch (uu) {
             case 0:
               break;
             case 90:
-              tU = RU - 1, EU = !0;
+              Eu = Ru - 1, Qu = !0;
               break;
             case 180:
-              tU = RU - 1, pU = gU - 1;
+              Eu = Ru - 1, Ku = yu - 1;
               break;
             case 270:
-              pU = gU - 1, EU = !0;
+              Ku = yu - 1, Qu = !0;
               break;
             default:
-              throw new Error(`Invalid rotation: ${UU}`)
+              throw new Error(`Invalid rotation: ${uu}`)
           }
           return {
-            xRotationMappedOrigin: tU,
-            zRotationMappedOrigin: pU,
-            shouldSwapXZ: EU
+            xRotationMappedOrigin: Eu,
+            zRotationMappedOrigin: Ku,
+            shouldSwapXZ: Qu
           }
-        }(RU, qU, KU), GU = dU.for(YU.f), jU = EU.map((UU => (0, YU.e)(GU.turnBlockId((0, YU.i)(UU), RU, !1)))), uU = [];
-        PU.forEach(((UU, RU) => {
-          UU.split(" ").forEach(((UU, gU) => {
-            for (let tU = 0; tU < UU.length; tU++)
-              if ("." !== UU[tU]) {
-                const pU = [HU(tU, gU, cU), RU, SU(tU, gU, cU)];
-                uU.push({
-                  offset: pU,
-                  block: jU[UU.charCodeAt(tU) - "a".charCodeAt(0)]
+        }(Ru, Nu, Xu), ru = cu.for(Uu.j), Bu = Qu.map((uu => (0, Uu.g)(ru.turnBlockId((0, Uu.n)(uu), Ru, !1)))), xu = [];
+        mu.forEach(((uu, Ru) => {
+          uu.split(" ").forEach(((uu, yu) => {
+            for (let Eu = 0; Eu < uu.length; Eu++)
+              if ("." !== uu[Eu]) {
+                const Ku = [Lu(Eu, yu, Vu), Ru, zu(Eu, yu, Vu)];
+                xu.push({
+                  offset: Ku,
+                  block: Bu[uu.charCodeAt(Eu) - "a".charCodeAt(0)]
                 })
               }
           }))
-        })), tU = {
-          size: [qU, pU[1], KU],
-          cells: uU
-        }, yU.set(gU, tU)
+        })), Eu = {
+          size: [Nu, Ku[1], Xu],
+          cells: xu
+        }, wu.set(yu, Eu)
       }
-      return tU
+      return Eu
     }
-    const FU = {
-      farm_hut: gU.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
-      farm_house: gU.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
-      farm_barn: gU.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
-      rusticHome_tent: gU.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
-      rusticHome_cabin: gU.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
-      rusticHome_house: gU.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
-      market_stand: gU.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
-      market_stall: gU.p + "static/media/market_stall.9a562807f9dff591618a.webp",
-      market_shop: gU.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
-      castle_wall: gU.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
-      castle_gate: gU.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
-      castle_tower: gU.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
+    const hu = {
+      farm_hut: yu.p + "static/media/farm_hut.6896d8a2c96c4aa7f2fd.webp",
+      farm_house: yu.p + "static/media/farm_house.cec7df65d0fe7e2bda7f.webp",
+      farm_barn: yu.p + "static/media/farm_barn.be0d2b53d8dee46c2a20.webp",
+      rusticHome_tent: yu.p + "static/media/rusticHome_tent.e0c857b94eb15660ffce.webp",
+      rusticHome_cabin: yu.p + "static/media/rusticHome_cabin.d6d2030fc12c0f2f3bdd.webp",
+      rusticHome_house: yu.p + "static/media/rusticHome_house.4e3af79cf97326dfd0f6.webp",
+      market_stand: yu.p + "static/media/market_stand.945ed55a5fced389f3f2.webp",
+      market_stall: yu.p + "static/media/market_stall.9a562807f9dff591618a.webp",
+      market_shop: yu.p + "static/media/market_shop.190d8a0a0ea37a0db19e.webp",
+      castle_wall: yu.p + "static/media/castle_wall.a836dd2c0361ad566caa.webp",
+      castle_gate: yu.p + "static/media/castle_gate.84f01ebbd69b2fa991ce.webp",
+      castle_tower: yu.p + "static/media/castle_tower.f93382e3a0eeb3089817.webp"
     };
-    var iU = gU(1090);
-    const AU = {
+    var Pu = yu(1079);
+    const iu = {
       small: "plotsGame:journalTierSmall",
       medium: "plotsGame:journalTierMedium",
       large: "plotsGame:journalTierLarge"
     };
 
-    function zU(UU) {
+    function Yu(uu) {
       let {
-        page: RU,
-        building: gU,
-        onBuild: tU,
-        onPutAway: pU
-      } = UU;
+        page: Ru,
+        building: yu,
+        onBuild: Eu,
+        onPutAway: Ku
+      } = uu;
       const {
-        t: EU
-      } = (0, aU.B)(), {
-        displayName: PU,
-        tier: TU
-      } = CU(RU.id), qU = kU(RU.id, 0).cells.length, KU = eU[RU.id], cU = "locked" === RU.state, GU = gU ? wU.e : wU.j;
-      return (0, iU.jsxs)("article", {
-        className: IU()("PlotsJournalPage", {
-          Locked: cU
+        t: Qu
+      } = (0, Gu.E)(), {
+        displayName: mu,
+        tier: Ju
+      } = Su(Ru.id), Nu = Zu(Ru.id, 0).cells.length, Xu = Wu[Ru.id], Vu = "locked" === Ru.state, ru = yu ? eu.e : eu.l;
+      return (0, Pu.jsxs)("article", {
+        className: Cu()("PlotsJournalPage", {
+          Locked: Vu
         }),
-        children: [(0, iU.jsx)("h3", {
+        children: [(0, Pu.jsx)("h3", {
           className: "PlotsJournalPageName",
-          children: EU(PU.translationKey)
-        }), (0, iU.jsxs)("div", {
+          children: Qu(mu.translationKey)
+        }), (0, Pu.jsxs)("div", {
           className: "PlotsJournalPageMeta",
-          children: [EU(AU[TU]), " \xb7 ", EU("plotsGame:journalBlocks", {
-            blocks: String(qU)
+          children: [Qu(iu[Ju]), " \xb7 ", Qu("plotsGame:journalBlocks", {
+            blocks: String(Nu)
           })]
-        }), (0, iU.jsxs)("div", {
+        }), (0, Pu.jsxs)("div", {
           className: "PlotsJournalSketch",
-          children: [uU.map((UU => (0, iU.jsx)("img", {
-            className: IU()({
-              Shown: UU === RU.id
+          children: [xu.map((uu => (0, Pu.jsx)("img", {
+            className: Cu()({
+              Shown: uu === Ru.id
             }),
-            src: FU[UU],
+            src: hu[uu],
             alt: "",
             draggable: !1
-          }, UU))), "completed" === RU.state && (0, iU.jsx)("span", {
+          }, uu))), "completed" === Ru.state && (0, Pu.jsx)("span", {
             className: "PlotsJournalStamp",
-            children: EU("plotsGame:journalBuilt")
-          }), cU && (0, iU.jsx)("span", {
+            children: Qu("plotsGame:journalBuilt")
+          }), Vu && (0, Pu.jsx)("span", {
             className: "PlotsJournalLock",
-            children: (0, iU.jsx)(JU.c, {
+            children: (0, Pu.jsx)(ku.c, {
               name: "lock"
             })
           })]
-        }), void 0 !== KU && "completed" !== RU.state && (0, iU.jsx)("p", {
+        }), void 0 !== Xu && "completed" !== Ru.state && (0, Pu.jsx)("p", {
           className: "PlotsJournalNote",
-          children: EU(KU)
-        }), (0, iU.jsxs)("div", {
+          children: Qu(Xu)
+        }), (0, Pu.jsxs)("div", {
           className: "PlotsJournalPageAction",
-          children: ["locked" === RU.state && (0, iU.jsx)("p", {
+          children: ["locked" === Ru.state && (0, Pu.jsx)("p", {
             className: "PlotsJournalHint",
-            children: EU("plotsGame:journalLocked", {
-              name: EU(CU(RU.unlockedBy).displayName.translationKey)
+            children: Qu("plotsGame:journalLocked", {
+              name: Qu(Su(Ru.unlockedBy).displayName.translationKey)
             })
-          }), RU.active && (0, iU.jsxs)(iU.Fragment, {
-            children: [(0, iU.jsx)("p", {
+          }), Ru.active && (0, Pu.jsxs)(Pu.Fragment, {
+            children: [(0, Pu.jsx)("p", {
               className: "PlotsJournalHint Building",
-              children: EU("plotsGame:journalBuilding")
-            }), (0, iU.jsx)(wU.g, {
-              onClick: pU,
-              children: EU("plotsGame:journalPutAway")
+              children: Qu("plotsGame:journalBuilding")
+            }), (0, Pu.jsx)(eu.f, {
+              onClick: Ku,
+              children: Qu("plotsGame:journalPutAway")
             })]
-          }), !cU && !RU.active && (0, iU.jsx)(GU, {
+          }), !Vu && !Ru.active && (0, Pu.jsx)(ru, {
             onClick: () => {
-              tU(RU.id)
+              Eu(Ru.id)
             },
-            children: EU("plotsGame:placementBuild")
+            children: Qu("plotsGame:placementBuild")
           })]
         })]
       })
     }
 
-    function MU(UU) {
+    function ou(uu) {
       let {
-        className: RU,
-        page: gU,
-        hidden: tU,
-        building: pU,
-        journal: EU
-      } = UU;
-      return (0, iU.jsxs)("div", {
-        ref: UU => {
-          null !== UU && (UU.inert = tU)
+        className: Ru,
+        page: yu,
+        hidden: Eu,
+        building: Ku,
+        journal: Qu
+      } = uu;
+      return (0, Pu.jsxs)("div", {
+        ref: uu => {
+          null !== uu && (uu.inert = Eu)
         },
-        className: IU()("PlotsJournalSide", RU),
-        children: [void 0 !== gU && (0, iU.jsx)(zU, {
-          page: gU,
-          building: pU,
-          onBuild: EU.build,
-          onPutAway: EU.putAway
-        }), void 0 === gU && (0, iU.jsx)("div", {
+        className: Cu()("PlotsJournalSide", Ru),
+        children: [void 0 !== yu && (0, Pu.jsx)(Yu, {
+          page: yu,
+          building: Ku,
+          onBuild: Qu.build,
+          onPutAway: Qu.putAway
+        }), void 0 === yu && (0, Pu.jsx)("div", {
           className: "PlotsJournalPage"
         })]
       })
     }
-    var DU = gU(311),
-      LU = gU(1771);
+    var qu = yu(343),
+      Ou = yu(1823);
 
-    function NU(UU) {
-      return Math.cos((0, LU.j)(UU))
+    function vu(uu) {
+      return Math.cos((0, Ou.i)(uu))
     }
 
-    function lU(UU) {
-      return (0, LU.F)(Math.acos(DU.c.clamp(UU, -1, 1)))
+    function au(uu) {
+      return (0, Ou.s)(Math.acos(qu.c.clamp(uu, -1, 1)))
     }
 
-    function OU(UU, RU, gU, tU, pU) {
-      const EU = Math.abs(RU - UU),
-        PU = (0, LU.F)(pU / (gU * Math.abs(Math.sin((0, LU.j)(UU))))),
-        TU = 450 * Math.min(1, EU / tU),
-        qU = PU > 0 ? 3 * EU / PU : 1 / 0;
-      return Math.round(Math.max(120, Math.min(TU, qU)))
+    function fu(uu, Ru, yu, Eu, Ku) {
+      const Qu = Math.abs(Ru - uu),
+        mu = (0, Ou.s)(Ku / (yu * Math.abs(Math.sin((0, Ou.i)(uu))))),
+        Ju = 450 * Math.min(1, Qu / Eu),
+        Nu = mu > 0 ? 3 * Qu / mu : 1 / 0;
+      return Math.round(Math.max(120, Math.min(Ju, Nu)))
     }
-    class UR {
+    class uR {
       constructor() {
         this.samples = []
       }
-      add(UU, RU) {
+      add(uu, Ru) {
         for (this.samples.push({
-            x: UU,
-            at: RU
-          }); RU - this.samples[0].at > 100;) this.samples.shift()
+            x: uu,
+            at: Ru
+          }); Ru - this.samples[0].at > 100;) this.samples.shift()
       }
       get() {
-        const UU = this.samples[0],
-          RU = this.samples[this.samples.length - 1];
-        return RU.at > UU.at ? (RU.x - UU.x) / (RU.at - UU.at) : 0
+        const uu = this.samples[0],
+          Ru = this.samples[this.samples.length - 1];
+        return Ru.at > uu.at ? (Ru.x - uu.x) / (Ru.at - uu.at) : 0
       }
     }
 
-    function RR(UU, RU) {
-      return UU > RU && UU >= 600
+    function RR(uu, Ru) {
+      return uu > Ru && uu >= 600
     }
 
-    function gR(UU) {
-      return lU(new DOMMatrixReadOnly(getComputedStyle(UU).transform).m11)
+    function yR(uu) {
+      return au(new DOMMatrixReadOnly(getComputedStyle(uu).transform).m11)
     }
 
-    function tR(UU, RU) {
-      UU.style.transform = `rotateY(${-RU}deg)`, UU.classList.add("Turning")
+    function ER(uu, Ru) {
+      uu.style.transform = `rotateY(${-Ru}deg)`, uu.classList.add("Turning")
     }
 
-    function pR(UU) {
+    function KR(uu) {
       let {
-        journal: RU
-      } = UU;
+        journal: Ru
+      } = uu;
       const {
-        t: gU
-      } = (0, aU.B)(), tU = (0, oU.h)(fU, RU.getPages()), pU = (0, ZU.e)(RR), [TU, qU] = (0, EU.useState)((() => function(UU) {
-        const RU = UU.findIndex((UU => UU.active));
-        return -1 !== RU ? RU : Math.max(0, UU.findIndex((UU => "open" === UU.state)))
-      }(tU))), cU = (0, EU.useRef)(null), GU = (0, EU.useRef)(null), jU = (0, EU.useRef)({
+        t: yu
+      } = (0, Gu.E)(), Eu = (0, Mu.h)(Hu, Ru.getPages()), Ku = (0, Iu.d)(RR), [Ju, Nu] = (0, Qu.useState)((() => function(uu) {
+        const Ru = uu.findIndex((uu => uu.active));
+        return -1 !== Ru ? Ru : Math.max(0, uu.findIndex((uu => "open" === uu.state)))
+      }(Eu))), Vu = (0, Qu.useRef)(null), ru = (0, Qu.useRef)(null), Bu = (0, Qu.useRef)({
         Forward: null,
         Back: null
-      }), uU = pU ? 2 : 1, CU = pU ? 180 : 90, hU = TU - TU % uU, QU = hU > 0, eU = hU + uU < tU.length, WU = (0, EU.useCallback)((() => {
-        const UU = GU.current;
-        return null === UU ? hU : (GU.current = null, UU.animation.cancel(), (RU = jU.current[UU.direction]).style.transform = "", RU.classList.remove("Turning"), null === UU.next ? hU : (qU(UU.next), UU.next));
-        var RU
-      }), [hU]), xU = (0, EU.useCallback)(((UU, RU, gU, tU) => {
-        const pU = jU.current[UU],
-          EU = gR(pU),
-          PU = RU === ("Forward" === UU) ? CU : 0;
-        tR(pU, PU);
-        const TU = pU.animate([{
-          transform: `rotateY(${-EU}deg)`
+      }), xu = Ku ? 2 : 1, Su = Ku ? 180 : 90, pu = Ju - Ju % xu, Tu = pu > 0, Wu = pu + xu < Eu.length, ju = (0, Qu.useCallback)((() => {
+        const uu = ru.current;
+        return null === uu ? pu : (ru.current = null, uu.animation.cancel(), (Ru = Bu.current[uu.direction]).style.transform = "", Ru.classList.remove("Turning"), null === uu.next ? pu : (Nu(uu.next), uu.next));
+        var Ru
+      }), [pu]), du = (0, Qu.useCallback)(((uu, Ru, yu, Eu) => {
+        const Ku = Bu.current[uu],
+          Qu = yR(Ku),
+          mu = Ru === ("Forward" === uu) ? Su : 0;
+        ER(Ku, mu);
+        const Ju = Ku.animate([{
+          transform: `rotateY(${-Qu}deg)`
         }, {
-          transform: `rotateY(${-PU}deg)`
+          transform: `rotateY(${-mu}deg)`
         }], {
-          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : OU(EU, PU, pU.offsetWidth, CU, PU > EU ? -gU : gU),
+          duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : fu(Qu, mu, Ku.offsetWidth, Su, mu > Qu ? -yu : yu),
           easing: "cubic-bezier(0.25, 0.75, 0.5, 1)"
         });
-        GU.current = {
-          direction: UU,
-          animation: TU,
-          next: RU ? tU + ("Forward" === UU ? uU : -uU) : null
-        }, TU.onfinish = () => {
-          var UU;
-          (null === (UU = GU.current) || void 0 === UU ? void 0 : UU.animation) === TU && WU()
+        ru.current = {
+          direction: uu,
+          animation: Ju,
+          next: Ru ? Eu + ("Forward" === uu ? xu : -xu) : null
+        }, Ju.onfinish = () => {
+          var uu;
+          (null === (uu = ru.current) || void 0 === uu ? void 0 : uu.animation) === Ju && ju()
         }
-      }), [uU, CU, WU]), mU = (0, EU.useCallback)((UU => {
-        if (null !== cU.current) return;
-        const RU = WU();
-        ("Forward" === UU ? RU + uU < tU.length : RU > 0) && xU(UU, !0, 0, RU)
-      }), [WU, xU, uU, tU.length]);
-      (0, EU.useEffect)((() => {
-        RU.onOpened()
-      }), [RU]), (0, EU.useEffect)((() => () => {
-        var UU;
-        null === (UU = GU.current) || void 0 === UU || UU.animation.cancel()
-      }), []), (0, EU.useEffect)((() => {
-        const UU = UU => {
-          var RU;
-          UU.pointerId !== (null === (RU = cU.current) || void 0 === RU ? void 0 : RU.pointerId) || cU.current.following || (cU.current = null)
+      }), [xu, Su, ju]), bu = (0, Qu.useCallback)((uu => {
+        if (null !== Vu.current) return;
+        const Ru = ju();
+        ("Forward" === uu ? Ru + xu < Eu.length : Ru > 0) && du(uu, !0, 0, Ru)
+      }), [ju, du, xu, Eu.length]);
+      (0, Qu.useEffect)((() => {
+        Ru.onOpened()
+      }), [Ru]), (0, Qu.useEffect)((() => () => {
+        var uu;
+        null === (uu = ru.current) || void 0 === uu || uu.animation.cancel()
+      }), []), (0, Qu.useEffect)((() => {
+        const uu = uu => {
+          var Ru;
+          uu.pointerId !== (null === (Ru = Vu.current) || void 0 === Ru ? void 0 : Ru.pointerId) || Vu.current.following || (Vu.current = null)
         };
-        return window.addEventListener("pointerup", UU), () => {
-          window.removeEventListener("pointerup", UU)
+        return window.addEventListener("pointerup", uu), () => {
+          window.removeEventListener("pointerup", uu)
         }
-      }), []), (0, bU.d)((UU => ("ArrowLeft" === UU.code || "ArrowRight" === UU.code) && !(0, KU.isTypingInInput)()), (UU => {
-        UU.stopPropagation(), mU("ArrowLeft" === UU.code ? "Back" : "Forward")
+      }), []), (0, Du.c)((uu => ("ArrowLeft" === uu.code || "ArrowRight" === uu.code) && !(0, Xu.isTypingInInput)()), (uu => {
+        uu.stopPropagation(), bu("ArrowLeft" === uu.code ? "Back" : "Forward")
       }));
-      const JU = (UU, RU, gU) => {
-          const tU = function(UU, RU, gU, tU) {
-            return (UU < 0 ? gU : tU) ? DU.c.clampAbs(UU, RU) : Math.sign(UU) * RU * (1 - 1 / (.55 * Math.abs(UU) / RU + 1))
-          }(UU.base + gU, uU * UU.width, eU, QU);
-          return "Forward" === RU ? Math.min(tU, 0) : Math.max(tU, 0)
+      const ku = (uu, Ru, yu) => {
+          const Eu = function(uu, Ru, yu, Eu) {
+            return (uu < 0 ? yu : Eu) ? qu.c.clampAbs(uu, Ru) : Math.sign(uu) * Ru * (1 - 1 / (.55 * Math.abs(uu) / Ru + 1))
+          }(uu.base + yu, xu * uu.width, Wu, Tu);
+          return "Forward" === Ru ? Math.min(Eu, 0) : Math.max(Eu, 0)
         },
-        YU = (UU, RU) => {
-          const gU = cU.current;
-          if (cU.current = null, null === gU.direction) return;
-          gU.speed.add(UU, RU);
-          const tU = gU.speed.get(),
-            pU = JU(gU, gU.direction, UU - gU.x);
-          xU(gU.direction, null !== function(UU, RU, gU, tU, pU) {
-            if (Math.abs(RU) >= .3 ? Math.sign(RU) !== Math.sign(UU) : Math.abs(UU) < .5 * gU) return null;
-            const EU = UU < 0 ? "Forward" : "Back";
-            return ("Forward" === EU ? tU : pU) ? EU : null
-          }(pU, tU, uU * gU.width, eU, QU), tU, hU)
+        Uu = (uu, Ru) => {
+          const yu = Vu.current;
+          if (Vu.current = null, null === yu.direction) return;
+          yu.speed.add(uu, Ru);
+          const Eu = yu.speed.get(),
+            Ku = ku(yu, yu.direction, uu - yu.x);
+          du(yu.direction, null !== function(uu, Ru, yu, Eu, Ku) {
+            if (Math.abs(Ru) >= .3 ? Math.sign(Ru) !== Math.sign(uu) : Math.abs(uu) < .5 * yu) return null;
+            const Qu = uu < 0 ? "Forward" : "Back";
+            return ("Forward" === Qu ? Eu : Ku) ? Qu : null
+          }(Ku, Eu, xu * yu.width, Wu, Tu), Eu, pu)
         },
-        BU = tU.some((UU => UU.active)),
-        VU = (UU, gU, pU) => (0, iU.jsx)(MU, {
-          className: UU,
-          page: gU >= 0 && gU < tU.length ? tU[gU] : void 0,
-          hidden: pU,
-          building: BU,
-          journal: RU
+        nu = Eu.some((uu => uu.active)),
+        su = (uu, yu, Ku) => (0, Pu.jsx)(ou, {
+          className: uu,
+          page: yu >= 0 && yu < Eu.length ? Eu[yu] : void 0,
+          hidden: Ku,
+          building: nu,
+          journal: Ru
         });
-      return (0, iU.jsx)(nU.d, {
-        close: PU.l,
+      return (0, Pu.jsx)(Au.e, {
+        close: mu.i,
         togglePointerLock: !1,
         className: "PlotsJournalOverlay",
-        children: (0, iU.jsxs)("section", {
-          className: IU()("PlotsJournal", {
-            Spread: pU
+        children: (0, Pu.jsxs)("section", {
+          className: Cu()("PlotsJournal", {
+            Spread: Ku
           }),
           role: "dialog",
           "aria-modal": "true",
-          "aria-label": gU("plotsGame:journalTitle"),
-          children: [(0, iU.jsx)(wU.h, {
+          "aria-label": yu("plotsGame:journalTitle"),
+          children: [(0, Pu.jsx)(eu.h, {
             className: "PlotsJournalClose",
-            onClick: PU.l
-          }), (0, iU.jsx)(ER, {
+            onClick: mu.i
+          }), (0, Pu.jsx)(QR, {
             direction: "Back",
-            disabled: !QU,
-            onTurn: mU
-          }), (0, iU.jsx)("div", {
+            disabled: !Tu,
+            onTurn: bu
+          }), (0, Pu.jsx)("div", {
             className: "PlotsJournalBookPages",
-            onPointerDown: UU => {
-              var RU;
-              if (!UU.isPrimary || 0 !== UU.button || null !== GU.current && null !== UU.target.closest("button")) return;
-              const gU = new UR;
-              gU.add(UU.clientX, UU.timeStamp);
-              const tU = jU.current.Forward.offsetWidth,
-                pU = GU.current;
-              GU.current = null;
-              let EU = 0;
-              if (null !== pU) {
-                const RU = jU.current[pU.direction],
-                  gU = gR(RU);
-                pU.animation.cancel(), tR(RU, gU), EU = function(UU, RU, gU, tU) {
-                  return (UU < 0 ? gU : tU) ? UU : Math.sign(UU) * RU * (1 / (1 - Math.min(Math.abs(UU) / RU, .99)) - 1) / .55
-                }(function(UU, RU, gU, tU) {
-                  return gU * (NU(RU) - NU("Forward" === UU ? 0 : tU))
-                }(pU.direction, gU, tU, CU), uU * tU, eU, QU), UU.currentTarget.setPointerCapture(UU.pointerId)
+            onPointerDown: uu => {
+              var Ru;
+              if (!uu.isPrimary || 0 !== uu.button || null !== ru.current && null !== uu.target.closest("button")) return;
+              const yu = new uR;
+              yu.add(uu.clientX, uu.timeStamp);
+              const Eu = Bu.current.Forward.offsetWidth,
+                Ku = ru.current;
+              ru.current = null;
+              let Qu = 0;
+              if (null !== Ku) {
+                const Ru = Bu.current[Ku.direction],
+                  yu = yR(Ru);
+                Ku.animation.cancel(), ER(Ru, yu), Qu = function(uu, Ru, yu, Eu) {
+                  return (uu < 0 ? yu : Eu) ? uu : Math.sign(uu) * Ru * (1 / (1 - Math.min(Math.abs(uu) / Ru, .99)) - 1) / .55
+                }(function(uu, Ru, yu, Eu) {
+                  return yu * (vu(Ru) - vu("Forward" === uu ? 0 : Eu))
+                }(Ku.direction, yu, Eu, Su), xu * Eu, Wu, Tu), uu.currentTarget.setPointerCapture(uu.pointerId)
               }
-              cU.current = {
-                pointerId: UU.pointerId,
-                x: UU.clientX,
-                y: UU.clientY,
-                base: EU,
-                width: tU,
-                following: null !== pU,
-                direction: null !== (RU = null === pU || void 0 === pU ? void 0 : pU.direction) && void 0 !== RU ? RU : null,
-                speed: gU
+              Vu.current = {
+                pointerId: uu.pointerId,
+                x: uu.clientX,
+                y: uu.clientY,
+                base: Qu,
+                width: Eu,
+                following: null !== Ku,
+                direction: null !== (Ru = null === Ku || void 0 === Ku ? void 0 : Ku.direction) && void 0 !== Ru ? Ru : null,
+                speed: yu
               }
             },
-            onPointerMove: UU => {
-              const RU = cU.current;
-              if (null === RU || UU.pointerId !== RU.pointerId) return;
-              if (0 === UU.buttons) return void YU(UU.clientX, UU.timeStamp);
-              const gU = UU.clientX - RU.x;
-              !RU.following && function(UU, RU) {
-                return Math.abs(UU) > 8 && Math.abs(UU) > Math.abs(RU)
-              }(gU, UU.clientY - RU.y) && (RU.following = !0, RU.direction = gU < 0 ? "Forward" : "Back", UU.currentTarget.setPointerCapture(UU.pointerId)), null !== RU.direction && (RU.speed.add(UU.clientX, UU.timeStamp), tR(jU.current[RU.direction], function(UU, RU, gU, tU) {
-                const pU = gU * NU("Forward" === UU ? 0 : tU) + RU;
-                return DU.c.clamp(lU(pU / gU), 0, tU)
-              }(RU.direction, JU(RU, RU.direction, gU), RU.width, CU)))
+            onPointerMove: uu => {
+              const Ru = Vu.current;
+              if (null === Ru || uu.pointerId !== Ru.pointerId) return;
+              if (0 === uu.buttons) return void Uu(uu.clientX, uu.timeStamp);
+              const yu = uu.clientX - Ru.x;
+              !Ru.following && function(uu, Ru) {
+                return Math.abs(uu) > 8 && Math.abs(uu) > Math.abs(Ru)
+              }(yu, uu.clientY - Ru.y) && (Ru.following = !0, Ru.direction = yu < 0 ? "Forward" : "Back", uu.currentTarget.setPointerCapture(uu.pointerId)), null !== Ru.direction && (Ru.speed.add(uu.clientX, uu.timeStamp), ER(Bu.current[Ru.direction], function(uu, Ru, yu, Eu) {
+                const Ku = yu * vu("Forward" === uu ? 0 : Eu) + Ru;
+                return qu.c.clamp(au(Ku / yu), 0, Eu)
+              }(Ru.direction, ku(Ru, Ru.direction, yu), Ru.width, Su)))
             },
-            onPointerUp: UU => {
-              var RU;
-              UU.pointerId === (null === (RU = cU.current) || void 0 === RU ? void 0 : RU.pointerId) && YU(UU.clientX, UU.timeStamp)
+            onPointerUp: uu => {
+              var Ru;
+              uu.pointerId === (null === (Ru = Vu.current) || void 0 === Ru ? void 0 : Ru.pointerId) && Uu(uu.clientX, uu.timeStamp)
             },
-            onPointerCancel: UU => {
-              const RU = cU.current;
-              UU.pointerId === (null === RU || void 0 === RU ? void 0 : RU.pointerId) && (cU.current = null, null !== RU.direction && xU(RU.direction, !1, 0, hU))
+            onPointerCancel: uu => {
+              const Ru = Vu.current;
+              uu.pointerId === (null === Ru || void 0 === Ru ? void 0 : Ru.pointerId) && (Vu.current = null, null !== Ru.direction && du(Ru.direction, !1, 0, pu))
             },
-            children: (0, iU.jsxs)("div", {
+            children: (0, Pu.jsxs)("div", {
               className: "PlotsJournalSheet",
-              children: [pU && VU("Left", hU - 2, !0), VU("Right", hU + 2 * uU - 1, !0), (0, iU.jsxs)("div", {
-                ref: UU => {
-                  jU.current.Back = UU
+              children: [Ku && su("Left", pu - 2, !0), su("Right", pu + 2 * xu - 1, !0), (0, Pu.jsxs)("div", {
+                ref: uu => {
+                  Bu.current.Back = uu
                 },
                 className: "PlotsJournalLeaf Back",
-                children: [VU("Recto", hU - 1, !0), pU && VU("Verso", hU, !1)]
-              }), (0, iU.jsxs)("div", {
-                ref: UU => {
-                  jU.current.Forward = UU
+                children: [su("Recto", pu - 1, !0), Ku && su("Verso", pu, !1)]
+              }), (0, Pu.jsxs)("div", {
+                ref: uu => {
+                  Bu.current.Forward = uu
                 },
                 className: "PlotsJournalLeaf Forward",
-                children: [VU("Recto", hU + uU - 1, !1), pU && VU("Verso", hU + uU, !0)]
+                children: [su("Recto", pu + xu - 1, !1), Ku && su("Verso", pu + xu, !0)]
               })]
             })
-          }), (0, iU.jsx)(ER, {
+          }), (0, Pu.jsx)(QR, {
             direction: "Forward",
-            disabled: !eU,
-            onTurn: mU
+            disabled: !Wu,
+            onTurn: bu
           })]
         })
       })
     }
 
-    function ER(UU) {
+    function QR(uu) {
       let {
-        direction: RU,
-        disabled: gU,
-        onTurn: tU
-      } = UU;
+        direction: Ru,
+        disabled: yu,
+        onTurn: Eu
+      } = uu;
       const {
-        t: pU
-      } = (0, aU.B)();
-      return (0, iU.jsx)("div", {
-        className: IU()("PlotsJournalArrow", RU),
-        children: (0, iU.jsx)(wU.e, {
-          disabled: gU,
-          ariaLabel: pU("Forward" === RU ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
+        t: Ku
+      } = (0, Gu.E)();
+      return (0, Pu.jsx)("div", {
+        className: Cu()("PlotsJournalArrow", Ru),
+        children: (0, Pu.jsx)(eu.e, {
+          disabled: yu,
+          ariaLabel: Ku("Forward" === Ru ? "plotsGame:journalNextPage" : "plotsGame:journalPreviousPage"),
           onClick: () => {
-            tU(RU)
+            Eu(Ru)
           },
-          children: (0, iU.jsx)(JU.c, {
+          children: (0, Pu.jsx)(ku.c, {
             name: "angle-up"
           })
         })
       })
     }
-    var PR = gU(36187),
-      TR = gU(1790),
-      qR = gU(1836);
-    const KR = "plotsStepChanged",
-      cR = "plotsPlotChanged";
-    class GR {
+    var mR = yu(36436),
+      JR = yu(1841),
+      NR = yu(1908);
+    const XR = "plotsStepChanged",
+      VR = "plotsPlotChanged";
+    class rR {
       constructor() {
         this.step = ["none"], this.plot = ["none"]
       }
       getStep() {
         return this.step
       }
-      receiveStep(UU) {
-        this.step = UU, cU.p.yh(KR, UU, !0)
+      receiveStep(uu) {
+        this.step = uu, Vu.k.Op(XR, uu, !0)
       }
       getPlot() {
         return this.plot
       }
-      receivePlot(UU) {
-        this.plot = UU, cU.p.yh(cR, UU, !0)
+      receivePlot(uu) {
+        this.plot = uu, Vu.k.Op(VR, uu, !0)
       }
     }
-    const jR = "KeyJ";
+    const BR = "KeyJ";
 
-    function uR(UU) {
+    function xR(uu) {
       let {
-        hud: RU,
-        journal: gU
-      } = UU;
-      const tU = (0, oU.h)(fU, gU.getPages()),
-        pU = (0, oU.h)(KR, RU.getStep()),
+        hud: Ru,
+        journal: yu
+      } = uu;
+      const Eu = (0, Mu.h)(Hu, yu.getPages()),
+        Ku = (0, Mu.h)(XR, Ru.getStep()),
         {
-          isTouchScreen: EU
-        } = (0, TU.l)(["isTouchScreen"]),
+          isTouchScreen: Qu
+        } = (0, Ju.j)(["isTouchScreen"]),
         {
-          t: cU
-        } = (0, aU.B)(),
-        GU = null !== tU && "none" === pU[0];
-      return (0, bU.d)((UU => null !== tU && UU.code === jR && !UU.repeat && !(0, KU.isTypingInInput)()), (UU => {
-        (0, qU.A)(UU, GU, PU.w)
-      })), GU ? (0, iU.jsx)(PR.e, {
+          t: Vu
+        } = (0, Gu.E)(),
+        ru = null !== Eu && "none" === Ku[0];
+      return (0, Du.c)((uu => null !== Eu && uu.code === BR && !uu.repeat && !(0, Xu.isTypingInInput)()), (uu => {
+        (0, Nu.B)(uu, ru, mu.q)
+      })), ru ? (0, Pu.jsx)(mR.d, {
         placement: "topRight",
-        children: (0, iU.jsx)("div", {
+        children: (0, Pu.jsx)("div", {
           className: "PlotsJournalButtonContainer",
-          children: (0, iU.jsxs)("button", {
+          children: (0, Pu.jsxs)("button", {
             type: "button",
-            className: IU()("PlotsJournalButton SmallTextBold", {
-              Touch: EU
+            className: Cu()("PlotsJournalButton SmallTextBold", {
+              Touch: Qu
             }),
-            onClick: PU.w,
-            children: [(0, iU.jsx)("span", {
+            onClick: mu.q,
+            children: [(0, Pu.jsx)("span", {
               className: "PlotsJournalButtonIcon",
-              children: (0, iU.jsx)(TR.c, {
+              children: (0, Pu.jsx)(JR.c, {
                 itemName: "Book",
                 amount: 0
               })
-            }), cU("plotsGame:journalButton"), !EU && (0, iU.jsx)(qR.b, {
+            }), Vu("plotsGame:journalButton"), !Qu && (0, Pu.jsx)(NR.b, {
               className: "PlotsJournalButtonKey",
-              keyCode: jR
+              keyCode: BR
             })]
           })
         })
       }) : null
     }
-    var CR = gU(37980),
-      hR = gU(37740),
-      QR = gU(36467),
-      eR = gU(9110),
-      WR = gU(9125),
-      fR = gU(37335);
-    const xR = new Map([
+    var SR = yu(38185),
+      pR = yu(37936),
+      TR = yu(36702),
+      WR = yu(9195),
+      jR = yu(9211),
+      HR = yu(37569);
+    const dR = new Map([
         ["Aspen Wood Planks", [.78, .706, .502]],
         ["Barkless Aspen Log", [.792, .718, .518]],
         ["Barkless Pine Log", [.49, .353, .275]],
@@ -858,791 +858,791 @@ export const modules = {
         ["White Concrete", [.89, .894, .894]],
         ["White Wool", [.98, .98, .98]]
       ]),
-      mR = [...QR.c.blockRemoveActionRoots, ...hR.b, ...eR.i, "Board", "Code Block", "Custom Lobby Block"],
-      IR = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
-    let JR = null;
+      bR = [...TR.d.blockRemoveActionRoots, ...pR.b, ...WR.f, "Board", "Code Block", "Custom Lobby Block"],
+      CR = /^(open|closed|(inner|outer)(Left|Right)|Stacked|books\d+|Roots|\w*GrassRoots|Growing|FreshlyGrown|empty|full)$/;
+    let kR = null;
 
-    function wR() {
-      return JR ??= function() {
-        const UU = nR(),
-          RU = Math.max(...UU.map((UU => YU.f[UU].id))) + 1,
-          gU = new Int32Array(RU),
-          tU = new Int32Array(RU),
-          pU = new Uint8Array(RU).fill(1),
-          EU = new Uint8Array(RU),
-          PU = new Uint8Array(RU),
-          TU = new Array(RU).fill("Air"),
-          qU = new Map,
-          KU = UU => {
-            let RU = qU.get(UU);
-            return void 0 === RU && (RU = qU.size + 1, qU.set(UU, RU)), RU
+    function eR() {
+      return kR ??= function() {
+        const uu = AR(),
+          Ru = Math.max(...uu.map((uu => Uu.j[uu].id))) + 1,
+          yu = new Int32Array(Ru),
+          Eu = new Int32Array(Ru),
+          Ku = new Uint8Array(Ru).fill(1),
+          Qu = new Uint8Array(Ru),
+          mu = new Uint8Array(Ru),
+          Ju = new Array(Ru).fill("Air"),
+          Nu = new Map,
+          Xu = uu => {
+            let Ru = Nu.get(uu);
+            return void 0 === Ru && (Ru = Nu.size + 1, Nu.set(uu, Ru)), Ru
           },
-          cU = new Set(mR);
-        for (const jU of UU) {
-          var GU;
+          Vu = new Set(bR);
+        for (const Bu of uu) {
+          var ru;
           const {
-            id: UU,
-            meta: RU,
-            altActionable: qU,
-            canBePlacedOver: uU
-          } = YU.f[jU];
-          gU[UU] = KU(bR(jU));
-          const CU = RU.stairsCorner;
-          if (null === CU) tU[UU] = gU[UU];
+            id: uu,
+            meta: Ru,
+            altActionable: Nu,
+            canBePlacedOver: xu
+          } = Uu.j[Bu];
+          yu[uu] = Xu(DR(Bu));
+          const Su = Ru.stairsCorner;
+          if (null === Su) Eu[uu] = yu[uu];
           else {
-            const gU = CU.endsWith("Right");
-            tU[UU] = KU(`${RU.rootName}|rot${gU?RU.rot%4+1:RU.rot}|${RU.halfblockPlacement}|${CU.replace("Right","Left")}`)
+            const yu = Su.endsWith("Right");
+            Eu[uu] = Xu(`${Ru.rootName}|rot${yu?Ru.rot%4+1:Ru.rot}|${Ru.halfblockPlacement}|${Su.replace("Right","Left")}`)
           }
-          pU[UU] = uU ? 1 : 0, EU[UU] = qU || null !== RU.open || jU in fR.c || cU.has(RU.rootName) || void 0 !== (0, hR.f)(RU.rootName) ? 1 : 0;
+          Ku[uu] = xu ? 1 : 0, Qu[uu] = Nu || null !== Ru.open || Bu in HR.c || Vu.has(Ru.rootName) || void 0 !== (0, pR.f)(Ru.rootName) ? 1 : 0;
           const {
-            rootName: hU
-          } = RU;
-          PU[UU] = null !== RU.open || hR.b.includes(hU) || hU.includes("Bookshelf") || hU.includes("Mailbox") ? 1 : 0, TU[UU] = null !== (GU = (0, CR.e)(UU)) && void 0 !== GU ? GU : hU
+            rootName: pu
+          } = Ru;
+          mu[uu] = null !== Ru.open || pR.b.includes(pu) || pu.includes("Bookshelf") || pu.includes("Mailbox") ? 1 : 0, Ju[uu] = null !== (ru = (0, SR.g)(uu)) && void 0 !== ru ? ru : pu
         }
         return {
-          kinds: gU,
-          shapes: tU,
-          empty: pU,
-          inUse: EU,
-          ownAltActionMessage: PU,
-          placingItems: TU
+          kinds: yu,
+          shapes: Eu,
+          empty: Ku,
+          inUse: Qu,
+          ownAltActionMessage: mu,
+          placingItems: Ju
         }
-      }(), JR
+      }(), kR
     }
 
-    function nR() {
-      return Object.keys(YU.f).filter((UU => YU.f[UU].name === UU))
+    function AR() {
+      return Object.keys(Uu.j).filter((uu => Uu.j[uu].name === uu))
     }
 
-    function bR(UU) {
-      var RU;
-      const gU = YU.f[UU],
+    function DR(uu) {
+      var Ru;
+      const yu = Uu.j[uu],
         {
-          rootName: tU,
-          rot: pU
-        } = gU.meta,
-        [, ...EU] = (null !== (RU = gU.rootMetaDesc) && void 0 !== RU ? RU : UU).split("|"),
-        PU = EU.filter((UU => !("meta" === UU || IR.test(UU) || (0, WR.A)(gU) && /^[nesw]+$/.test(UU) || eR.i.includes(tU) && /^[lrud]+$/.test(UU) || DU.J.includes(tU) && /^(left|right)$/.test(UU))));
-      return [tU, ...PU].map((UU => "fenceGate" === gU.model && UU === `rot${pU}` ? "rot" + ((pU - 1) % 2 + 1) : UU)).join("|")
+          rootName: Eu,
+          rot: Ku
+        } = yu.meta,
+        [, ...Qu] = (null !== (Ru = yu.rootMetaDesc) && void 0 !== Ru ? Ru : uu).split("|"),
+        mu = Qu.filter((uu => !("meta" === uu || CR.test(uu) || (0, jR.y)(yu) && /^[nesw]+$/.test(uu) || WR.f.includes(Eu) && /^[lrud]+$/.test(uu) || qu.J.includes(Eu) && /^(left|right)$/.test(uu))));
+      return [Eu, ...mu].map((uu => "fenceGate" === yu.model && uu === `rot${Ku}` ? "rot" + ((Ku - 1) % 2 + 1) : uu)).join("|")
     }
 
-    function oR(UU, RU) {
+    function MR(uu, Ru) {
       const {
-        kinds: gU,
-        shapes: tU
-      } = wR();
-      return gU[UU] === gU[RU] || tU[UU] === tU[RU]
+        kinds: yu,
+        shapes: Eu
+      } = eR();
+      return yu[uu] === yu[Ru] || Eu[uu] === Eu[Ru]
     }
 
-    function ZR(UU) {
-      return 1 === wR().empty[UU]
+    function IR(uu) {
+      return 1 === eR().empty[uu]
     }
 
-    function aR(UU) {
-      return wR().placingItems[UU]
+    function GR(uu) {
+      return eR().placingItems[uu]
     }
 
-    function YR(UU) {
-      return xR.get(YU.f[UU].meta.rootName)
+    function UR(uu) {
+      return dR.get(Uu.j[uu].meta.rootName)
     }
-    var BR = gU(9106),
-      VR = gU(9121);
-    const rR = [0, 0, 0, 1, 1, 1],
-      XR = (0, BR.c)([
+    var nR = yu(9189),
+      sR = yu(9205);
+    const tR = [0, 0, 0, 1, 1, 1],
+      lR = (0, nR.c)([
         [2, 0, 2, 6, 6, 6]
       ]),
-      vR = (0, BR.c)([
+      gR = (0, nR.c)([
         [3, 0, 3, 5, 5, 5]
       ]),
-      dR = (0, BR.c)([
+      cR = (0, nR.c)([
         [3, 3, 3, 5, 8, 5]
       ]),
-      HR = [0, 1, 2, 3].map((UU => (0, BR.c)((0, BR.m)([
+      LR = [0, 1, 2, 3].map((uu => (0, nR.c)((0, nR.n)([
         [3, 2, 0, 5, 7, 3]
-      ], UU))));
+      ], uu))));
 
-    function SR(UU) {
+    function zR(uu) {
       const {
-        du: RU,
-        model: gU,
-        blockModel: tU,
-        meta: pU
-      } = YU.f[UU];
-      return void 0 !== RU ? RU : "CentreCross" === gU ? XR : null !== tU && void 0 !== tU && tU.startsWith("torch") ? pU.halfblockPlacement === VR.d.side ? HR[pU.rot - 1] : pU.halfblockPlacement === VR.d.top ? dR : vR : rR
+        KT: Ru,
+        model: yu,
+        blockModel: Eu,
+        meta: Ku
+      } = Uu.j[uu];
+      return void 0 !== Ru ? Ru : "CentreCross" === yu ? lR : null !== Eu && void 0 !== Eu && Eu.startsWith("torch") ? Ku.halfblockPlacement === sR.d.side ? LR[Ku.rot - 1] : Ku.halfblockPlacement === sR.d.top ? cR : gR : tR
     }
-    var sR = gU(36437),
-      yR = gU(189);
+    var FR = yu(36670),
+      wR = yu(212);
 
-    function kR(UU, RU) {
-      const gU = yR.e.dW / 2;
-      return UU[0] < RU[0] + gU && UU[0] + 1 > RU[0] - gU && UU[1] < RU[1] + yR.e.FW && UU[1] + 1 > RU[1] && UU[2] < RU[2] + gU && UU[2] + 1 > RU[2] - gU
+    function ZR(uu, Ru) {
+      const yu = wR.f.DW / 2;
+      return uu[0] < Ru[0] + yu && uu[0] + 1 > Ru[0] - yu && uu[1] < Ru[1] + wR.f.UW && uu[1] + 1 > Ru[1] && uu[2] < Ru[2] + yu && uu[2] + 1 > Ru[2] - yu
     }
 
-    function FR(UU, RU, gU, tU, pU) {
-      const EU = Math.hypot(...RU.dir);
-      if (!Number.isFinite(EU) || 0 === EU) return -1;
+    function hR(uu, Ru, yu, Eu, Ku) {
+      const Qu = Math.hypot(...Ru.dir);
+      if (!Number.isFinite(Qu) || 0 === Qu) return -1;
       const {
-        from: PU,
-        reach: TU,
-        solid: qU
-      } = RU, KU = [RU.dir[0] / EU, RU.dir[1] / EU, RU.dir[2] / EU], cU = null === qU ? TU : Math.min(TU, function(UU, RU, gU) {
-        const tU = iR(UU, RU, gU);
-        if (tU !== 1 / 0) return tU;
-        return (gU[0] + .5 - UU[0]) * RU[0] + (gU[1] + .5 - UU[1]) * RU[1] + (gU[2] + .5 - UU[2]) * RU[2]
-      }(PU, KU, qU) + .75);
-      let GU = -1,
-        jU = 1 / 0,
-        uU = 1 / 0;
-      for (let CU = 0; CU < UU.length; CU += 4) {
-        const RU = [UU[CU], UU[CU + 1], UU[CU + 2]],
-          EU = pU(CU) ? TU : cU;
-        let qU = -1,
-          hU = iR(PU, KU, RU);
-        if (hU > EU) {
-          const UU = [RU[0] + .5 - PU[0], RU[1] + .5 - PU[1], RU[2] + .5 - PU[2]];
-          if (hU = UU[0] * KU[0] + UU[1] * KU[1] + UU[2] * KU[2], hU <= 0 || hU > EU) continue;
-          if (qU = Math.hypot(UU[0] - hU * KU[0], UU[1] - hU * KU[1], UU[2] - hU * KU[2]), qU > .7 || !tU(CU)) continue
-        }(qU < jU || qU === jU && hU < uU) && gU(CU) && (GU = CU, jU = qU, uU = hU)
+        from: mu,
+        reach: Ju,
+        solid: Nu
+      } = Ru, Xu = [Ru.dir[0] / Qu, Ru.dir[1] / Qu, Ru.dir[2] / Qu], Vu = null === Nu ? Ju : Math.min(Ju, function(uu, Ru, yu) {
+        const Eu = PR(uu, Ru, yu);
+        if (Eu !== 1 / 0) return Eu;
+        return (yu[0] + .5 - uu[0]) * Ru[0] + (yu[1] + .5 - uu[1]) * Ru[1] + (yu[2] + .5 - uu[2]) * Ru[2]
+      }(mu, Xu, Nu) + .75);
+      let ru = -1,
+        Bu = 1 / 0,
+        xu = 1 / 0;
+      for (let Su = 0; Su < uu.length; Su += 4) {
+        const Ru = [uu[Su], uu[Su + 1], uu[Su + 2]],
+          Qu = Ku(Su) ? Ju : Vu;
+        let Nu = -1,
+          pu = PR(mu, Xu, Ru);
+        if (pu > Qu) {
+          const uu = [Ru[0] + .5 - mu[0], Ru[1] + .5 - mu[1], Ru[2] + .5 - mu[2]];
+          if (pu = uu[0] * Xu[0] + uu[1] * Xu[1] + uu[2] * Xu[2], pu <= 0 || pu > Qu) continue;
+          if (Nu = Math.hypot(uu[0] - pu * Xu[0], uu[1] - pu * Xu[1], uu[2] - pu * Xu[2]), Nu > .7 || !Eu(Su)) continue
+        }(Nu < Bu || Nu === Bu && pu < xu) && yu(Su) && (ru = Su, Bu = Nu, xu = pu)
       }
-      return GU
+      return ru
     }
 
-    function iR(UU, RU, gU) {
-      let tU = 0,
-        pU = 1 / 0;
-      for (let EU = 0; EU < 3; EU++) {
-        const PU = gU[EU] - UU[EU];
-        if (0 === RU[EU]) {
-          if (PU > 0 || PU + 1 < 0) return 1 / 0;
+    function PR(uu, Ru, yu) {
+      let Eu = 0,
+        Ku = 1 / 0;
+      for (let Qu = 0; Qu < 3; Qu++) {
+        const mu = yu[Qu] - uu[Qu];
+        if (0 === Ru[Qu]) {
+          if (mu > 0 || mu + 1 < 0) return 1 / 0;
           continue
         }
-        const TU = PU / RU[EU],
-          qU = (PU + 1) / RU[EU];
-        tU = Math.max(tU, Math.min(TU, qU)), pU = Math.min(pU, Math.max(TU, qU))
+        const Ju = mu / Ru[Qu],
+          Nu = (mu + 1) / Ru[Qu];
+        Eu = Math.max(Eu, Math.min(Ju, Nu)), Ku = Math.min(Ku, Math.max(Ju, Nu))
       }
-      return tU <= pU ? tU : 1 / 0
+      return Eu <= Ku ? Eu : 1 / 0
     }
-    var AR = gU(37598),
-      zR = gU(38069);
-    const MR = [1, 1, 1];
-    class DR {
-      constructor(UU) {
-        this.api = UU, this.meshes = null, this.shown = null
+    var iR = yu(37812),
+      YR = yu(38281);
+    const oR = [1, 1, 1];
+    class qR {
+      constructor(uu) {
+        this.api = uu, this.meshes = null, this.shown = null
       }
-      show(UU) {
-        if (!(0, sR.c)(UU, this.shown))
-          if (this.shown = null === UU ? null : [UU[0], UU[1], UU[2]], null !== this.meshes)
-            for (const RU of this.meshes) this.api.setGameMesh(RU, null === UU ? {
+      show(uu) {
+        if (!(0, FR.f)(uu, this.shown))
+          if (this.shown = null === uu ? null : [uu[0], uu[1], uu[2]], null !== this.meshes)
+            for (const Ru of this.meshes) this.api.setGameMesh(Ru, null === uu ? {
               visible: !1
             } : {
-              anchor: UU,
+              anchor: uu,
               visible: !0
             });
-          else if (null !== UU) {
-          const RU = [AR.g, AR.g, AR.g, 0, 0, 0];
-          this.meshes = [this.build([RU], AR.i, UU), this.build((0, AR.e)(), AR.m, UU)]
+          else if (null !== uu) {
+          const Ru = [iR.f, iR.f, iR.f, 0, 0, 0];
+          this.meshes = [this.build([Ru], iR.j, uu), this.build((0, iR.b)(), iR.q, uu)]
         }
       }
       dispose() {
-        for (const RU of null !== (UU = this.meshes) && void 0 !== UU ? UU : []) {
-          var UU;
-          this.api.disposeGameMesh(RU)
+        for (const Ru of null !== (uu = this.meshes) && void 0 !== uu ? uu : []) {
+          var uu;
+          this.api.disposeGameMesh(Ru)
         }
         this.meshes = null, this.shown = null
       }
-      build(UU, RU, gU) {
-        const tU = [],
-          pU = [];
-        for (const [EU, PU, TU, qU, KU, cU] of UU)(0, zR.f)(tU, pU, [qU + .5, KU + .5, cU + .5], [EU, PU, TU]);
+      build(uu, Ru, yu) {
+        const Eu = [],
+          Ku = [];
+        for (const [Qu, mu, Ju, Nu, Xu, Vu] of uu)(0, YR.i)(Eu, Ku, [Nu + .5, Xu + .5, Vu + .5], [Qu, mu, Ju]);
         return this.api.createGameMesh({
-          positions: tU,
-          indices: pU
+          positions: Eu,
+          indices: Ku
         }, {
-          rgb: MR,
-          alpha: RU,
+          rgb: oR,
+          alpha: Ru,
           onTop: !0
-        }, gU)
+        }, yu)
       }
     }
-    class LR {
-      constructor(UU) {
-        this.api = UU, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
+    class OR {
+      constructor(uu) {
+        this.api = uu, this.chunks = [], this.versions = [], this.lastCheckMs = -1 / 0
       }
-      watch(UU) {
-        const RU = yR.e.jC;
+      watch(uu) {
+        const Ru = wR.f.jS;
         this.chunks = [];
-        for (let gU = 0; gU < UU.length; gU += 3) {
-          const tU = Math.floor(UU[gU] / RU),
-            pU = Math.floor(UU[gU + 1] / RU),
-            EU = Math.floor(UU[gU + 2] / RU);
-          this.watches(tU, pU, EU) || this.chunks.push(tU, pU, EU)
+        for (let yu = 0; yu < uu.length; yu += 3) {
+          const Eu = Math.floor(uu[yu] / Ru),
+            Ku = Math.floor(uu[yu + 1] / Ru),
+            Qu = Math.floor(uu[yu + 2] / Ru);
+          this.watches(Eu, Ku, Qu) || this.chunks.push(Eu, Ku, Qu)
         }
         this.versions = [], this.lastCheckMs = -1 / 0, this.changed()
       }
       changed() {
-        const UU = performance.now();
-        if (UU - this.lastCheckMs < 100) return !1;
-        this.lastCheckMs = UU;
-        let RU = !1;
-        for (let gU = 0; gU < this.chunks.length; gU += 3) {
-          const UU = this.api.getChunkVersion(this.chunks[gU], this.chunks[gU + 1], this.chunks[gU + 2]);
-          this.versions[gU / 3] !== UU && (this.versions[gU / 3] = UU, RU = !0)
+        const uu = performance.now();
+        if (uu - this.lastCheckMs < 100) return !1;
+        this.lastCheckMs = uu;
+        let Ru = !1;
+        for (let yu = 0; yu < this.chunks.length; yu += 3) {
+          const uu = this.api.getChunkVersion(this.chunks[yu], this.chunks[yu + 1], this.chunks[yu + 2]);
+          this.versions[yu / 3] !== uu && (this.versions[yu / 3] = uu, Ru = !0)
         }
-        return RU
+        return Ru
       }
-      watches(UU, RU, gU) {
-        for (let tU = 0; tU < this.chunks.length; tU += 3)
-          if (this.chunks[tU] === UU && this.chunks[tU + 1] === RU && this.chunks[tU + 2] === gU) return !0;
+      watches(uu, Ru, yu) {
+        for (let Eu = 0; Eu < this.chunks.length; Eu += 3)
+          if (this.chunks[Eu] === uu && this.chunks[Eu + 1] === Ru && this.chunks[Eu + 2] === yu) return !0;
         return !1
       }
     }
-    const NR = .35,
-      lR = {
+    const vR = .35,
+      aR = {
         size: .9,
         alpha: .35,
         crossed: !1
       },
-      OR = {
+      fR = {
         size: 1.04,
         alpha: .45,
         crossed: !0
       },
-      Ug = [.95, .2, .15];
-    class Rg {
+      uy = [.95, .2, .15];
+    class Ry {
       constructor() {
         this.groups = []
       }
-      add(UU, RU, gU, tU, pU) {
-        let EU = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : rR;
-        for (const PU of this.groups)
-          if (pg(PU, tU, pU)) return PU.cells.push(UU, RU, gU), void PU.boxes.push(EU);
+      add(uu, Ru, yu, Eu, Ku) {
+        let Qu = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : tR;
+        for (const mu of this.groups)
+          if (Ky(mu, Eu, Ku)) return mu.cells.push(uu, Ru, yu), void mu.boxes.push(Qu);
         this.groups.push({
-          rgb: tU,
-          look: pU,
-          cells: [UU, RU, gU],
-          boxes: [EU]
+          rgb: Eu,
+          look: Ku,
+          cells: [uu, Ru, yu],
+          boxes: [Qu]
         })
       }
       toArray() {
         return this.groups
       }
     }
-    class gg {
-      constructor(UU) {
-        this.api = UU, this.shown = []
+    class yy {
+      constructor(uu) {
+        this.api = uu, this.shown = []
       }
-      show(UU) {
-        const RU = [];
-        for (const gU of UU) {
-          const UU = this.shown.findIndex((UU => {
+      show(uu) {
+        const Ru = [];
+        for (const yu of uu) {
+          const uu = this.shown.findIndex((uu => {
             let {
-              group: RU
-            } = UU;
-            return pg(RU, gU.rgb, gU.look) && Eg(RU, gU)
-          })); - 1 === UU ? RU.push(this.build(gU)) : (RU.push(this.shown[UU]), this.shown.splice(UU, 1))
+              group: Ru
+            } = uu;
+            return Ky(Ru, yu.rgb, yu.look) && Qy(Ru, yu)
+          })); - 1 === uu ? Ru.push(this.build(yu)) : (Ru.push(this.shown[uu]), this.shown.splice(uu, 1))
         }
-        this.dispose(), this.shown = RU
+        this.dispose(), this.shown = Ru
       }
       dispose() {
         for (const {
-            meshes: UU
+            meshes: uu
           }
           of this.shown)
-          for (const RU of UU) this.api.disposeGameMesh(RU);
+          for (const Ru of uu) this.api.disposeGameMesh(Ru);
         this.shown = []
       }
-      build(UU) {
+      build(uu) {
         const {
-          rgb: RU,
-          look: gU,
-          boxes: tU
-        } = UU, pU = [RU[0] + (1 - RU[0]) * NR, RU[1] + (1 - RU[1]) * NR, RU[2] + (1 - RU[2]) * NR], EU = [this.buildMesh(UU.cells, RU, gU.alpha, ((UU, RU, pU, EU) => {
-          tg(UU, RU, pU, tU[EU], gU.size, !1)
-        })), this.buildMesh(UU.cells, pU, gU.alpha, ((UU, RU, pU, EU) => {
-          tg(UU, RU, pU, tU[EU], gU.size, !0)
+          rgb: Ru,
+          look: yu,
+          boxes: Eu
+        } = uu, Ku = [Ru[0] + (1 - Ru[0]) * vR, Ru[1] + (1 - Ru[1]) * vR, Ru[2] + (1 - Ru[2]) * vR], Qu = [this.buildMesh(uu.cells, Ru, yu.alpha, ((uu, Ru, Ku, Qu) => {
+          Ey(uu, Ru, Ku, Eu[Qu], yu.size, !1)
+        })), this.buildMesh(uu.cells, Ku, yu.alpha, ((uu, Ru, Ku, Qu) => {
+          Ey(uu, Ru, Ku, Eu[Qu], yu.size, !0)
         }))];
-        return gU.crossed && EU.push(this.buildMesh(UU.cells, RU, .9, ((UU, RU, tU) => {
-          (0, zR.j)(UU, RU, tU, gU.size + .01, .12)
+        return yu.crossed && Qu.push(this.buildMesh(uu.cells, Ru, .9, ((uu, Ru, Eu) => {
+          (0, YR.l)(uu, Ru, Eu, yu.size + .01, .12)
         }))), {
-          group: UU,
-          meshes: EU
+          group: uu,
+          meshes: Qu
         }
       }
-      buildMesh(UU, RU, gU, tU) {
-        const pU = [UU[0], UU[1], UU[2]],
-          EU = [],
-          PU = [];
-        for (let TU = 0; TU < UU.length; TU += 3) tU(EU, PU, [UU[TU] - pU[0] + .5, UU[TU + 1] - pU[1] + .5, UU[TU + 2] - pU[2] + .5], TU / 3);
+      buildMesh(uu, Ru, yu, Eu) {
+        const Ku = [uu[0], uu[1], uu[2]],
+          Qu = [],
+          mu = [];
+        for (let Ju = 0; Ju < uu.length; Ju += 3) Eu(Qu, mu, [uu[Ju] - Ku[0] + .5, uu[Ju + 1] - Ku[1] + .5, uu[Ju + 2] - Ku[2] + .5], Ju / 3);
         return this.api.createGameMesh({
-          positions: EU,
-          indices: PU
+          positions: Qu,
+          indices: mu
         }, {
-          rgb: [RU[0], RU[1], RU[2]],
-          alpha: gU
-        }, pU)
+          rgb: [Ru[0], Ru[1], Ru[2]],
+          alpha: yu
+        }, Ku)
       }
     }
 
-    function tg(UU, RU, gU, tU, pU, EU) {
-      for (let PU = 0; PU < tU.length; PU += 6) {
-        const TU = [0, 0, 0],
-          qU = [0, 0, 0];
-        for (let UU = 0; UU < 3; UU++) TU[UU] = gU[UU] + ((tU[PU + UU] + tU[PU + UU + 3]) / 2 - .5) * pU, qU[UU] = (tU[PU + UU + 3] - tU[PU + UU]) * pU;
-        (0, zR.b)(UU, RU, TU, qU, EU)
+    function Ey(uu, Ru, yu, Eu, Ku, Qu) {
+      for (let mu = 0; mu < Eu.length; mu += 6) {
+        const Ju = [0, 0, 0],
+          Nu = [0, 0, 0];
+        for (let uu = 0; uu < 3; uu++) Ju[uu] = yu[uu] + ((Eu[mu + uu] + Eu[mu + uu + 3]) / 2 - .5) * Ku, Nu[uu] = (Eu[mu + uu + 3] - Eu[mu + uu]) * Ku;
+        (0, YR.e)(uu, Ru, Ju, Nu, Qu)
       }
     }
 
-    function pg(UU, RU, gU) {
-      return UU.rgb[0] === RU[0] && UU.rgb[1] === RU[1] && UU.rgb[2] === RU[2] && UU.look === gU
+    function Ky(uu, Ru, yu) {
+      return uu.rgb[0] === Ru[0] && uu.rgb[1] === Ru[1] && uu.rgb[2] === Ru[2] && uu.look === yu
     }
 
-    function Eg(UU, RU) {
-      if (UU.cells.length !== RU.cells.length) return !1;
-      for (let gU = 0; gU < UU.cells.length; gU++)
-        if (UU.cells[gU] !== RU.cells[gU]) return !1;
-      return UU.boxes.every(((UU, gU) => UU === RU.boxes[gU]))
+    function Qy(uu, Ru) {
+      if (uu.cells.length !== Ru.cells.length) return !1;
+      for (let yu = 0; yu < uu.cells.length; yu++)
+        if (uu.cells[yu] !== Ru.cells[yu]) return !1;
+      return uu.boxes.every(((uu, yu) => uu === Ru.boxes[yu]))
     }
 
-    function Pg(UU, RU) {
-      return UU.getClientOption(RU, "blockReach") + 1
+    function my(uu, Ru) {
+      return uu.getClientOption(Ru, "blockReach") + 1
     }
-    class Tg {
-      constructor(UU, RU, gU) {
-        this.api = UU, this.localPlayerId = RU, this.pickNext = gU, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
+    class Jy {
+      constructor(uu, Ru, yu) {
+        this.api = uu, this.localPlayerId = Ru, this.pickNext = yu, this.turning = null, this.pending = null, this.lastFillMs = -1 / 0, this.tap = null, this.heading = [0, 1]
       }
-      look(UU) {
-        const [RU, , gU] = UU.cameraDirection, tU = Math.hypot(RU, gU);
-        tU > .001 && (this.heading = [RU / tU, gU / tU])
+      look(uu) {
+        const [Ru, , yu] = uu.cameraDirection, Eu = Math.hypot(Ru, yu);
+        Eu > .001 && (this.heading = [Ru / Eu, yu / Eu])
       }
-      tapped(UU, RU, gU) {
-        const tU = Pg(this.api, this.localPlayerId),
+      tapped(uu, Ru, yu) {
+        const Eu = my(this.api, this.localPlayerId),
           {
-            origin: pU,
-            direction: EU
+            origin: Ku,
+            direction: Qu
           } = this.api.getActionRay(),
-          PU = [...pU],
-          TU = [
-            [PU, [PU[0] + EU[0] * tU, PU[1] + EU[1] * tU, PU[2] + EU[2] * tU]]
+          mu = [...Ku],
+          Ju = [
+            [mu, [mu[0] + Qu[0] * Eu, mu[1] + Qu[1] * Eu, mu[2] + Qu[2] * Eu]]
           ];
-        null !== UU && TU.push([PU, (0, sR.b)(UU)]), this.tap = {
-          lines: TU,
-          next: RU,
-          ms: gU
+        null !== uu && Ju.push([mu, (0, FR.b)(uu)]), this.tap = {
+          lines: Ju,
+          next: Ru,
+          ms: yu
         }
       }
-      filled(UU, RU) {
-        this.tap = null, this.turnFrom(UU, RU), this.retry(RU)
+      filled(uu, Ru) {
+        this.tap = null, this.turnFrom(uu, Ru), this.retry(Ru)
       }
-      arrived(UU, RU) {
+      arrived(uu, Ru) {
         const {
-          tap: gU
+          tap: yu
         } = this;
-        if (null === gU || RU - gU.ms > 1500) return null;
-        const tU = (0, sR.b)(UU);
-        return (0, sR.c)(gU.next, UU) || gU.lines.some((UU => {
-          let [RU, gU] = UU;
-          return function(UU, RU, gU) {
-            const tU = [gU[0] - RU[0], gU[1] - RU[1], gU[2] - RU[2]],
-              pU = [UU[0] - RU[0], UU[1] - RU[1], UU[2] - RU[2]],
-              EU = tU[0] ** 2 + tU[1] ** 2 + tU[2] ** 2,
-              PU = 0 === EU ? 0 : Math.min(1, Math.max(0, (pU[0] * tU[0] + pU[1] * tU[1] + pU[2] * tU[2]) / EU));
-            return Math.hypot(pU[0] - tU[0] * PU, pU[1] - tU[1] * PU, pU[2] - tU[2] * PU)
-          }(tU, RU, gU) <= .9
-        })) ? (this.tap = null, this.turnFrom(UU, RU), gU.ms) : null
+        if (null === yu || Ru - yu.ms > 1500) return null;
+        const Eu = (0, FR.b)(uu);
+        return (0, FR.f)(yu.next, uu) || yu.lines.some((uu => {
+          let [Ru, yu] = uu;
+          return function(uu, Ru, yu) {
+            const Eu = [yu[0] - Ru[0], yu[1] - Ru[1], yu[2] - Ru[2]],
+              Ku = [uu[0] - Ru[0], uu[1] - Ru[1], uu[2] - Ru[2]],
+              Qu = Eu[0] ** 2 + Eu[1] ** 2 + Eu[2] ** 2,
+              mu = 0 === Qu ? 0 : Math.min(1, Math.max(0, (Ku[0] * Eu[0] + Ku[1] * Eu[1] + Ku[2] * Eu[2]) / Qu));
+            return Math.hypot(Ku[0] - Eu[0] * mu, Ku[1] - Eu[1] * mu, Ku[2] - Eu[2] * mu)
+          }(Eu, Ru, yu) <= .9
+        })) ? (this.tap = null, this.turnFrom(uu, Ru), yu.ms) : null
       }
-      turnFrom(UU, RU) {
+      turnFrom(uu, Ru) {
         this.pending = {
-          from: UU,
-          ms: RU,
-          turnMs: Math.max(50, Math.min(250, RU - this.lastFillMs))
-        }, this.lastFillMs = RU
+          from: uu,
+          ms: Ru,
+          turnMs: Math.max(50, Math.min(250, Ru - this.lastFillMs))
+        }, this.lastFillMs = Ru
       }
-      retry(UU) {
+      retry(uu) {
         const {
-          pending: RU
+          pending: Ru
         } = this;
-        if (null === RU) return;
-        if (UU - RU.ms > 1500) return void(this.pending = null);
-        const gU = this.pickNext((0, sR.b)(RU.from), (UU => (0, sR.c)(UU, RU.from)));
-        if (null === gU) return;
+        if (null === Ru) return;
+        if (uu - Ru.ms > 1500) return void(this.pending = null);
+        const yu = this.pickNext((0, FR.b)(Ru.from), (uu => (0, FR.f)(uu, Ru.from)));
+        if (null === yu) return;
         this.pending = null;
         const {
-          turning: tU
+          turning: Eu
         } = this;
-        if (null !== tU && UU < tU.endMs && (0, sR.c)(tU.to, gU)) return;
-        const pU = this.api.getActionRay().origin,
-          EU = [gU[0] + .5 - pU[0], gU[1] + .5 - pU[1], gU[2] + .5 - pU[2]],
-          PU = Math.hypot(EU[0], EU[2]);
-        if (PU < .3) {
-          const UU = Math.max(PU, .001);
-          EU[0] = this.heading[0] * UU, EU[2] = this.heading[1] * UU
+        if (null !== Eu && uu < Eu.endMs && (0, FR.f)(Eu.to, yu)) return;
+        const Ku = this.api.getActionRay().origin,
+          Qu = [yu[0] + .5 - Ku[0], yu[1] + .5 - Ku[1], yu[2] + .5 - Ku[2]],
+          mu = Math.hypot(Qu[0], Qu[2]);
+        if (mu < .3) {
+          const uu = Math.max(mu, .001);
+          Qu[0] = this.heading[0] * uu, Qu[2] = this.heading[1] * uu
         }
-        this.api.turnCamera(EU, RU.turnMs), this.turning = {
-          to: gU,
-          endMs: UU + RU.turnMs
+        this.api.turnCamera(Qu, Ru.turnMs), this.turning = {
+          to: yu,
+          endMs: uu + Ru.turnMs
         }
       }
     }
-    class qg {
-      constructor(UU, RU, gU) {
-        this.api = UU, this.localPlayerId = RU, this.juice = gU, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new LR(UU), this.meshes = new gg(UU), this.outline = new DR(UU), this.turn = new Tg(UU, RU, ((UU, RU) => this.pickNext(UU, RU)))
+    class Ny {
+      constructor(uu, Ru, yu) {
+        this.api = uu, this.localPlayerId = Ru, this.juice = yu, this.ghostCells = [], this.palette = [], this.blockIds = [], this.occupiedCells = [], this.blueprint = "", this.layerY = 0, this.topLayerY = 0, this.layerCells = new Map, this.open = new Set, this.nextCells = [], this.lastFilled = null, this.lastSeenFilled = null, this.playerCells = [], this.aimed = null, this.altMs = null, this.pressFilled = !1, this.foreseen = new Map, this.turn = void 0, this.nextCell = null, this.chunkWatch = void 0, this.meshes = void 0, this.outline = void 0, this.chunkWatch = new OR(uu), this.meshes = new yy(uu), this.outline = new qR(uu), this.turn = new Jy(uu, Ru, ((uu, Ru) => this.pickNext(uu, Ru)))
       }
-      qC(UU) {
-        const RU = "active" === UU[0] ? `${UU[1]}|${UU[3]}|${UU[4]}|${UU[5]}|${UU[6]}` : "";
-        if ("active" !== UU[0]) "built" === UU[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
+      SS(uu) {
+        const Ru = "active" === uu[0] ? `${uu[1]}|${uu[3]}|${uu[4]}|${uu[5]}|${uu[6]}` : "";
+        if ("active" !== uu[0]) "built" === uu[0] && "" !== this.blueprint && this.finishLayer(1 / 0), this.ghostCells = [], this.palette = [], this.occupiedCells = [];
         else {
-          const [, , , , , , , gU, tU, pU, EU] = UU;
-          RU !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = gU) : gU === this.layerY ? this.burstUnlisted(tU) : gU > this.layerY && this.finishLayer(gU), this.layerY = gU, this.layerCells.has(gU) || this.layerCells.set(gU, tU.filter(cg)), this.ghostCells = tU, this.palette = pU, this.occupiedCells = EU
+          const [, , , , , , , yu, Eu, Ku, Qu] = uu;
+          Ru !== this.blueprint ? (this.layerCells.clear(), this.topLayerY = yu) : yu === this.layerY ? this.burstUnlisted(Eu) : yu > this.layerY && this.finishLayer(yu), this.layerY = yu, this.layerCells.has(yu) || this.layerCells.set(yu, Eu.filter(Vy)), this.ghostCells = Eu, this.palette = Ku, this.occupiedCells = Qu
         }
-        RU !== this.blueprint && (this.blueprint = RU, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((UU => this.api.blockNameToBlockId(UU))), this.chunkWatch.watch([...this.ghostCells.filter(cg), ...this.occupiedCells]), this.refresh()
+        Ru !== this.blueprint && (this.blueprint = Ru, this.open.clear(), this.foreseen.clear(), this.lastFilled = null, this.lastSeenFilled = null), this.blockIds = this.palette.map((uu => this.api.blockNameToBlockId(uu))), this.chunkWatch.watch([...this.ghostCells.filter(Vy), ...this.occupiedCells]), this.refresh()
       }
-      finishLayer(UU) {
-        this.burstUnlisted([]), UU > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = UU)
+      finishLayer(uu) {
+        this.burstUnlisted([]), uu > this.topLayerY && (this.juice.layerDone(this.layerCells.get(this.topLayerY)), this.topLayerY = uu)
       }
-      HG() {
+      sr() {
         if (this.chunkWatch.changed()) return void this.refresh();
-        const UU = performance.now();
-        let RU = !1;
-        for (const [pU, EU] of this.foreseen) {
-          var gU;
-          if (UU - EU > 1e3) this.foreseen.delete(pU), RU = !0, (null === (gU = this.lastFilled) || void 0 === gU ? void 0 : gU.join()) === pU && (this.lastFilled = this.lastSeenFilled)
+        const uu = performance.now();
+        let Ru = !1;
+        for (const [Ku, Qu] of this.foreseen) {
+          var yu;
+          if (uu - Qu > 1e3) this.foreseen.delete(Ku), Ru = !0, (null === (yu = this.lastFilled) || void 0 === yu ? void 0 : yu.join()) === Ku && (this.lastFilled = this.lastSeenFilled)
         }
-        const tU = Kg(this.api.getPositionView(this.localPlayerId));
-        (RU || tU.some(((UU, RU) => UU !== this.playerCells[RU]))) && this.showNext()
+        const Eu = Xy(this.api.getPositionView(this.localPlayerId));
+        (Ru || Eu.some(((uu, Ru) => uu !== this.playerCells[Ru]))) && this.showNext()
       }
       dispose() {
         this.meshes.dispose(), this.outline.dispose()
       }
-      burstUnlisted(UU) {
-        const RU = new Set;
-        for (let pU = 0; pU < UU.length; pU += 4) RU.add(`${UU[pU]},${UU[pU+1]},${UU[pU+2]}`);
-        const gU = [],
+      burstUnlisted(uu) {
+        const Ru = new Set;
+        for (let Ku = 0; Ku < uu.length; Ku += 4) Ru.add(`${uu[Ku]},${uu[Ku+1]},${uu[Ku+2]}`);
+        const yu = [],
           {
-            ghostCells: tU
+            ghostCells: Eu
           } = this;
-        for (let pU = 0; pU < tU.length; pU += 4) {
-          const UU = `${tU[pU]},${tU[pU+1]},${tU[pU+2]}`;
-          !RU.has(UU) && this.open.delete(UU) && gU.push(this.filledCell(pU))
+        for (let Ku = 0; Ku < Eu.length; Ku += 4) {
+          const uu = `${Eu[Ku]},${Eu[Ku+1]},${Eu[Ku+2]}`;
+          !Ru.has(uu) && this.open.delete(uu) && yu.push(this.filledCell(Ku))
         }
-        this.burst(gU)
+        this.burst(yu)
       }
       refresh() {
         const {
-          ghostCells: UU,
-          palette: RU,
-          occupiedCells: gU
-        } = this, tU = new Rg, pU = new Set, EU = [], PU = [];
-        for (let TU = 0; TU < UU.length; TU += 4) {
-          const [gU, qU, KU, cU] = [UU[TU], UU[TU + 1], UU[TU + 2], UU[TU + 3]], GU = this.api.getBlockId(gU, qU, KU), jU = `${gU},${qU},${KU}`, uU = oR(this.blockIds[cU], GU);
-          !uU && ZR(GU) ? tU.add(gU, qU, KU, YR(RU[cU]), lR, SR(RU[cU])) : uU ? this.open.has(jU) && EU.push(this.filledCell(TU)) : tU.add(gU, qU, KU, Ug, OR), !uU && this.api.isBlockInLoadedChunk(gU, qU, KU) && (pU.add(jU), PU.push(gU, qU, KU, ZR(GU) ? 0 : 1))
+          ghostCells: uu,
+          palette: Ru,
+          occupiedCells: yu
+        } = this, Eu = new Ry, Ku = new Set, Qu = [], mu = [];
+        for (let Ju = 0; Ju < uu.length; Ju += 4) {
+          const [yu, Nu, Xu, Vu] = [uu[Ju], uu[Ju + 1], uu[Ju + 2], uu[Ju + 3]], ru = this.api.getBlockId(yu, Nu, Xu), Bu = `${yu},${Nu},${Xu}`, xu = MR(this.blockIds[Vu], ru);
+          !xu && IR(ru) ? Eu.add(yu, Nu, Xu, UR(Ru[Vu]), aR, zR(Ru[Vu])) : xu ? this.open.has(Bu) && Qu.push(this.filledCell(Ju)) : Eu.add(yu, Nu, Xu, uy, fR), !xu && this.api.isBlockInLoadedChunk(yu, Nu, Xu) && (Ku.add(Bu), mu.push(yu, Nu, Xu, IR(ru) ? 0 : 1))
         }
-        this.open = pU, this.nextCells = PU;
-        for (let TU = 0; TU < gU.length; TU += 3) {
-          const [UU, RU, pU] = [gU[TU], gU[TU + 1], gU[TU + 2]];
-          ZR(this.api.getBlockId(UU, RU, pU)) || tU.add(UU, RU, pU, Ug, OR)
+        this.open = Ku, this.nextCells = mu;
+        for (let Ju = 0; Ju < yu.length; Ju += 3) {
+          const [uu, Ru, Ku] = [yu[Ju], yu[Ju + 1], yu[Ju + 2]];
+          IR(this.api.getBlockId(uu, Ru, Ku)) || Eu.add(uu, Ru, Ku, uy, fR)
         }
-        this.meshes.show(tU.toArray()), this.burst(EU), this.showNext(), this.turn.retry(performance.now())
+        this.meshes.show(Eu.toArray()), this.burst(Qu), this.showNext(), this.turn.retry(performance.now())
       }
-      burst(UU) {
-        const RU = performance.now(),
-          gU = [];
-        for (const [pU, EU, PU] of UU) {
-          const UU = [pU, EU, PU];
-          this.lastSeenFilled = UU, this.foreseen.delete(UU.join()) || gU.push(UU)
+      burst(uu) {
+        const Ru = performance.now(),
+          yu = [];
+        for (const [Ku, Qu, mu] of uu) {
+          const uu = [Ku, Qu, mu];
+          this.lastSeenFilled = uu, this.foreseen.delete(uu.join()) || yu.push(uu)
         }
-        const tU = this.isHolding(RU);
-        for (const pU of gU) {
-          if (this.lastFilled = pU, tU && this.pressFilled) {
-            this.turn.filled(pU, RU);
+        const Eu = this.isHolding(Ru);
+        for (const Ku of yu) {
+          if (this.lastFilled = Ku, Eu && this.pressFilled) {
+            this.turn.filled(Ku, Ru);
             continue
           }
-          const UU = this.turn.arrived(pU, RU);
-          if (null !== UU) {
-            this.pressFilled = tU;
-            for (const [RU, gU] of this.foreseen) gU <= UU && this.foreseen.delete(RU)
+          const uu = this.turn.arrived(Ku, Ru);
+          if (null !== uu) {
+            this.pressFilled = Eu;
+            for (const [Ru, yu] of this.foreseen) yu <= uu && this.foreseen.delete(Ru)
           }
         }
-        this.juice.filled(UU)
+        this.juice.filled(uu)
       }
       showNext() {
-        var UU;
-        const RU = this.api.getPositionView(this.localPlayerId);
-        this.playerCells.splice(0, 1 / 0, ...Kg(RU));
-        const gU = this.lastFilled;
-        this.nextCell = this.pickNext(null === gU ? [RU[0], RU[1] + 1, RU[2]] : (0, sR.b)(gU), (() => !1)), this.outline.show(null !== (UU = this.aimed) && void 0 !== UU ? UU : this.nextCell)
+        var uu;
+        const Ru = this.api.getPositionView(this.localPlayerId);
+        this.playerCells.splice(0, 1 / 0, ...Xy(Ru));
+        const yu = this.lastFilled;
+        this.nextCell = this.pickNext(null === yu ? [Ru[0], Ru[1] + 1, Ru[2]] : (0, FR.b)(yu), (() => !1)), this.outline.show(null !== (uu = this.aimed) && void 0 !== uu ? uu : this.nextCell)
       }
-      pickNext(UU, RU) {
-        const gU = this.api.getPositionView(this.localPlayerId),
-          tU = [gU[0], gU[1] + yR.e.FW * yR.e.playerEyeToHeightRatio, gU[2]],
-          pU = Pg(this.api, this.localPlayerId),
+      pickNext(uu, Ru) {
+        const yu = this.api.getPositionView(this.localPlayerId),
+          Eu = [yu[0], yu[1] + wR.f.UW * wR.f.playerEyeToHeightRatio, yu[2]],
+          Ku = my(this.api, this.localPlayerId),
           {
-            nextCells: EU
+            nextCells: Qu
           } = this,
-          PU = UU => [EU[UU], EU[UU + 1], EU[UU + 2]],
-          TU = function(UU, RU, gU, tU, pU, EU) {
-            let PU = -1,
-              TU = -1,
-              qU = 1 / 0;
-            for (let KU = 0; KU < UU.length; KU += RU) {
-              const RU = (EU(KU) ? 2 : 0) + (tU(KU) ? 1 : 0);
-              if (RU < TU || pU(KU)) continue;
-              const cU = (UU[KU] + .5 - gU[0]) ** 2 + (UU[KU + 1] + .5 - gU[1]) ** 2 + (UU[KU + 2] + .5 - gU[2]) ** 2;
-              (RU > TU || cU < qU) && (PU = KU, TU = RU, qU = cU)
+          mu = uu => [Qu[uu], Qu[uu + 1], Qu[uu + 2]],
+          Ju = function(uu, Ru, yu, Eu, Ku, Qu) {
+            let mu = -1,
+              Ju = -1,
+              Nu = 1 / 0;
+            for (let Xu = 0; Xu < uu.length; Xu += Ru) {
+              const Ru = (Qu(Xu) ? 2 : 0) + (Eu(Xu) ? 1 : 0);
+              if (Ru < Ju || Ku(Xu)) continue;
+              const Vu = (uu[Xu] + .5 - yu[0]) ** 2 + (uu[Xu + 1] + .5 - yu[1]) ** 2 + (uu[Xu + 2] + .5 - yu[2]) ** 2;
+              (Ru > Ju || Vu < Nu) && (mu = Xu, Ju = Ru, Nu = Vu)
             }
-            return PU
-          }(EU, 4, UU, (UU => 1 === EU[UU + 3]), (UU => {
-            const tU = PU(UU);
-            return kR(tU, gU) || this.foreseen.has(tU.join()) || RU(tU)
-          }), (UU => function(UU, RU, gU) {
-            return (RU[0] + .5 - UU[0]) ** 2 + (RU[1] + .5 - UU[1]) ** 2 + (RU[2] + .5 - UU[2]) ** 2 <= gU ** 2
-          }(tU, PU(UU), pU)));
-        return -1 === TU ? null : PU(TU)
+            return mu
+          }(Qu, 4, uu, (uu => 1 === Qu[uu + 3]), (uu => {
+            const Eu = mu(uu);
+            return ZR(Eu, yu) || this.foreseen.has(Eu.join()) || Ru(Eu)
+          }), (uu => function(uu, Ru, yu) {
+            return (Ru[0] + .5 - uu[0]) ** 2 + (Ru[1] + .5 - uu[1]) ** 2 + (Ru[2] + .5 - uu[2]) ** 2 <= yu ** 2
+          }(Eu, mu(uu), Ku)));
+        return -1 === Ju ? null : mu(Ju)
       }
-      afterRender(UU) {
-        var RU;
-        this.turn.look(UU);
-        const gU = this.api.getTargetedBlock();
-        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === gU ? null : gU.position), this.outline.show(null !== (RU = this.aimed) && void 0 !== RU ? RU : this.nextCell)
+      afterRender(uu) {
+        var Ru;
+        this.turn.look(uu);
+        const yu = this.api.getTargetedBlock();
+        this.aimed = this.pressFilled && this.isHolding(performance.now()) ? null : this.findAimed(null === yu ? null : yu.position), this.outline.show(null !== (Ru = this.aimed) && void 0 !== Ru ? Ru : this.nextCell)
       }
-      isHolding(UU) {
-        return null !== this.altMs && UU - this.altMs <= 500
+      isHolding(uu) {
+        return null !== this.altMs && uu - this.altMs <= 500
       }
-      attemptAltAction(UU) {
-        const RU = performance.now();
-        if (this.isHolding(RU) || (this.pressFilled = !1), this.altMs = RU, this.pressFilled) return "preventPlacement";
-        const gU = this.findAimed(UU);
-        if (null !== gU) return this.foreseen.set(gU.join(), RU), this.lastFilled = gU, this.aimed = null, this.showNext(), this.turn.filled(gU, RU), this.pressFilled = !0, "preventPlacement";
-        null !== this.nextCell && this.turn.tapped(UU, this.nextCell, RU)
+      attemptAltAction(uu) {
+        const Ru = performance.now();
+        if (this.isHolding(Ru) || (this.pressFilled = !1), this.altMs = Ru, this.pressFilled) return "preventPlacement";
+        const yu = this.findAimed(uu);
+        if (null !== yu) return this.foreseen.set(yu.join(), Ru), this.lastFilled = yu, this.aimed = null, this.showNext(), this.turn.filled(yu, Ru), this.pressFilled = !0, "preventPlacement";
+        null !== this.nextCell && this.turn.tapped(uu, this.nextCell, Ru)
       }
-      findAimed(UU) {
-        return function(UU, RU, gU, tU, pU, EU, PU) {
-          const TU = UU.QRU(RU),
-            qU = null === TU || null === UU.blockNameToBlockId(TU.name, !0) ? null : TU.name,
-            KU = UU.getPositionView(RU),
+      findAimed(uu) {
+        return function(uu, Ru, yu, Eu, Ku, Qu, mu) {
+          const Ju = uu.Xyu(Ru),
+            Nu = null === Ju || null === uu.blockNameToBlockId(Ju.name, !0) ? null : Ju.name,
+            Xu = uu.getPositionView(Ru),
             {
-              origin: cU,
-              direction: GU
-            } = UU.getActionRay(),
-            jU = FR(tU, {
-              from: cU,
-              dir: GU,
-              reach: Pg(UU, RU),
-              solid: gU
-            }, (RU => {
-              const gU = [tU[RU], tU[RU + 1], tU[RU + 2]];
-              return !oR(pU[tU[RU + 3]], UU.getBlockId(...gU)) && !PU.has(gU.join()) && UU.isBlockInLoadedChunk(...gU) && !kR(gU, KU)
-            }), (UU => null === qU || qU === aR(pU[tU[UU + 3]])), (UU => null !== EU && tU[UU] === EU[0] && tU[UU + 1] === EU[1] && tU[UU + 2] === EU[2]));
-          return -1 === jU ? null : [tU[jU], tU[jU + 1], tU[jU + 2]]
-        }(this.api, this.localPlayerId, UU, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
+              origin: Vu,
+              direction: ru
+            } = uu.getActionRay(),
+            Bu = hR(Eu, {
+              from: Vu,
+              dir: ru,
+              reach: my(uu, Ru),
+              solid: yu
+            }, (Ru => {
+              const yu = [Eu[Ru], Eu[Ru + 1], Eu[Ru + 2]];
+              return !MR(Ku[Eu[Ru + 3]], uu.getBlockId(...yu)) && !mu.has(yu.join()) && uu.isBlockInLoadedChunk(...yu) && !ZR(yu, Xu)
+            }), (uu => null === Nu || Nu === GR(Ku[Eu[uu + 3]])), (uu => null !== Qu && Eu[uu] === Qu[0] && Eu[uu + 1] === Qu[1] && Eu[uu + 2] === Qu[2]));
+          return -1 === Bu ? null : [Eu[Bu], Eu[Bu + 1], Eu[Bu + 2]]
+        }(this.api, this.localPlayerId, uu, this.ghostCells, this.blockIds, this.nextCell, this.foreseen)
       }
       endPress() {
         this.altMs = null, this.pressFilled = !1
       }
-      filledCell(UU) {
+      filledCell(uu) {
         const {
-          ghostCells: RU
-        } = this, [gU, tU, pU] = YR(this.palette[RU[UU + 3]]);
-        return [RU[UU], RU[UU + 1], RU[UU + 2], gU, tU, pU]
+          ghostCells: Ru
+        } = this, [yu, Eu, Ku] = UR(this.palette[Ru[uu + 3]]);
+        return [Ru[uu], Ru[uu + 1], Ru[uu + 2], yu, Eu, Ku]
       }
     }
 
-    function Kg(UU) {
-      let [RU, gU, tU] = UU;
-      const pU = yR.e.dW / 2;
-      return [Math.floor(RU), Math.floor(gU), Math.floor(tU), Math.floor(RU - pU), Math.floor(RU + pU), Math.floor(gU + yR.e.FW), Math.floor(tU - pU), Math.floor(tU + pU)]
+    function Xy(uu) {
+      let [Ru, yu, Eu] = uu;
+      const Ku = wR.f.DW / 2;
+      return [Math.floor(Ru), Math.floor(yu), Math.floor(Eu), Math.floor(Ru - Ku), Math.floor(Ru + Ku), Math.floor(yu + wR.f.UW), Math.floor(Eu - Ku), Math.floor(Eu + Ku)]
     }
 
-    function cg(UU, RU) {
-      return RU % 4 !== 3
+    function Vy(uu, Ru) {
+      return Ru % 4 !== 3
     }
 
-    function Gg(UU, RU, gU, tU, pU) {
-      if (!UU.isBlockInLoadedChunk(RU, tU - 6, gU) || !UU.isBlockInLoadedChunk(RU, tU + 6 + pU, gU) || !UU.canModifyBlockAt(RU, tU, gU)) return NaN;
-      let EU = tU - 1;
-      if (0 !== UU.getBlockId(RU, EU, gU)) {
-        for (; EU < tU + 6 && 0 !== UU.getBlockId(RU, EU + 1, gU);) EU++;
-        return EU
+    function ry(uu, Ru, yu, Eu, Ku) {
+      if (!uu.isBlockInLoadedChunk(Ru, Eu - 6, yu) || !uu.isBlockInLoadedChunk(Ru, Eu + 6 + Ku, yu) || !uu.canModifyBlockAt(Ru, Eu, yu)) return NaN;
+      let Qu = Eu - 1;
+      if (0 !== uu.getBlockId(Ru, Qu, yu)) {
+        for (; Qu < Eu + 6 && 0 !== uu.getBlockId(Ru, Qu + 1, yu);) Qu++;
+        return Qu
       }
-      for (; EU > tU - 6;)
-        if (EU--, 0 !== UU.getBlockId(RU, EU, gU)) return EU;
+      for (; Qu > Eu - 6;)
+        if (Qu--, 0 !== uu.getBlockId(Ru, Qu, yu)) return Qu;
       return NaN
     }
 
-    function jg(UU, RU, gU, tU, pU) {
-      let EU = 0;
-      for (let PU = tU + 1; PU <= tU + pU; PU++) 0 !== UU.getBlockId(RU, PU, gU) && EU++;
-      return EU
+    function By(uu, Ru, yu, Eu, Ku) {
+      let Qu = 0;
+      for (let mu = Eu + 1; mu <= Eu + Ku; mu++) 0 !== uu.getBlockId(Ru, mu, yu) && Qu++;
+      return Qu
     }
 
-    function ug(UU) {
-      const RU = new Map;
-      for (const PU of UU) {
-        var gU;
-        if (Number.isNaN(PU)) return null;
-        RU.set(PU, (null !== (gU = RU.get(PU)) && void 0 !== gU ? gU : 0) + 1)
+    function xy(uu) {
+      const Ru = new Map;
+      for (const mu of uu) {
+        var yu;
+        if (Number.isNaN(mu)) return null;
+        Ru.set(mu, (null !== (yu = Ru.get(mu)) && void 0 !== yu ? yu : 0) + 1)
       }
-      let tU = NaN,
-        pU = 0;
-      for (const [PU, TU] of RU)(TU > pU || TU === pU && PU < tU) && (tU = PU, pU = TU);
-      let EU = 0;
-      for (const PU of UU) EU += Math.abs(PU - tU);
-      return EU
+      let Eu = NaN,
+        Ku = 0;
+      for (const [mu, Ju] of Ru)(Ju > Ku || Ju === Ku && mu < Eu) && (Eu = mu, Ku = Ju);
+      let Qu = 0;
+      for (const mu of uu) Qu += Math.abs(mu - Eu);
+      return Qu
     }
 
-    function Cg(UU, RU, gU, tU) {
+    function Sy(uu, Ru, yu, Eu) {
       const {
-        eye: pU,
-        forward: EU,
-        tanHalfFovX: PU,
-        tanHalfFovY: TU
-      } = UU, [qU, KU] = function(UU) {
-        let [RU, gU, tU] = UU;
-        const pU = Math.hypot(RU, tU),
-          [EU, PU] = [tU / pU, -RU / pU];
+        eye: Ku,
+        forward: Qu,
+        tanHalfFovX: mu,
+        tanHalfFovY: Ju
+      } = uu, [Nu, Xu] = function(uu) {
+        let [Ru, yu, Eu] = uu;
+        const Ku = Math.hypot(Ru, Eu),
+          [Qu, mu] = [Eu / Ku, -Ru / Ku];
         return [
-          [EU, 0, PU],
-          [gU * PU, tU * EU - RU * PU, -gU * EU]
+          [Qu, 0, mu],
+          [yu * mu, Eu * Qu - Ru * mu, -yu * Qu]
         ]
-      }(EU), [cU, GU] = [RU * PU, gU * TU], jU = EU[0] + cU * qU[0] + GU * KU[0], uU = EU[1] + GU * KU[1], CU = EU[2] + cU * qU[2] + GU * KU[2], hU = (tU - pU[1]) / uU;
-      return hU > 0 && hU < 1 / 0 ? [pU[0] + hU * jU, pU[2] + hU * CU] : null
+      }(Qu), [Vu, ru] = [Ru * mu, yu * Ju], Bu = Qu[0] + Vu * Nu[0] + ru * Xu[0], xu = Qu[1] + ru * Xu[1], Su = Qu[2] + Vu * Nu[2] + ru * Xu[2], pu = (Eu - Ku[1]) / xu;
+      return pu > 0 && pu < 1 / 0 ? [Ku[0] + pu * Bu, Ku[2] + pu * Su] : null
     }
-    const hg = "plotsBlueprintPlacementChanged",
-      Qg = {
+    const py = "plotsBlueprintPlacementChanged",
+      Ty = {
         size: .9,
         alpha: .2,
         crossed: !1
       };
-    class eg {
-      constructor(UU, RU) {
-        this.api = UU, this.localPlayerId = RU, this.placing = null, this.view = null, this.camera = {
+    class Wy {
+      constructor(uu, Ru) {
+        this.api = uu, this.localPlayerId = Ru, this.placing = null, this.view = null, this.camera = {
           eye: [0, 0, 0],
           forward: [0, 0, 1],
           tanHalfFovX: 1,
           tanHalfFovY: 1
-        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = UU => {
-          var RU, gU, tU, EU;
-          const PU = null !== (RU = null === (gU = this.placing) || void 0 === gU ? void 0 : gU.rotation) && void 0 !== RU ? RU : 0,
+        }, this.chunkWatch = void 0, this.meshes = void 0, this.start = uu => {
+          var Ru, yu, Eu, Qu;
+          const mu = null !== (Ru = null === (yu = this.placing) || void 0 === yu ? void 0 : yu.rotation) && void 0 !== Ru ? Ru : 0,
             {
-              size: TU
-            } = kU(UU, PU),
-            qU = this.api.Hx(this.localPlayerId),
-            [KU, cU] = null !== (tU = null !== (EU = function(UU, RU, gU) {
-              const [tU, pU, EU] = RU, [PU, TU, qU] = [Math.floor(gU[0]), Math.floor(gU[1]), Math.floor(gU[2])], KU = 6 + Math.max(tU, EU) / 2, [cU, GU] = [Math.ceil(KU + tU / 2), Math.ceil(KU + EU / 2)], [jU, uU] = [PU - cU, qU - GU], [CU, hU] = [2 * cU + 1, 2 * GU + 1], QU = new Float64Array(CU * hU), eU = new Uint16Array(CU * hU);
-              for (let mU = 0; mU < CU; mU++)
-                for (let RU = 0; RU < hU; RU++) {
-                  const gU = Gg(UU, jU + mU, uU + RU, TU, pU);
-                  QU[mU * hU + RU] = gU, Number.isNaN(gU) || (eU[mU * hU + RU] = jg(UU, jU + mU, uU + RU, gU, pU))
+              size: Ju
+            } = Zu(uu, mu),
+            Nu = this.api.mH(this.localPlayerId),
+            [Xu, Vu] = null !== (Eu = null !== (Qu = function(uu, Ru, yu) {
+              const [Eu, Ku, Qu] = Ru, [mu, Ju, Nu] = [Math.floor(yu[0]), Math.floor(yu[1]), Math.floor(yu[2])], Xu = 6 + Math.max(Eu, Qu) / 2, [Vu, ru] = [Math.ceil(Xu + Eu / 2), Math.ceil(Xu + Qu / 2)], [Bu, xu] = [mu - Vu, Nu - ru], [Su, pu] = [2 * Vu + 1, 2 * ru + 1], Tu = new Float64Array(Su * pu), Wu = new Uint16Array(Su * pu);
+              for (let bu = 0; bu < Su; bu++)
+                for (let Ru = 0; Ru < pu; Ru++) {
+                  const yu = ry(uu, Bu + bu, xu + Ru, Ju, Ku);
+                  Tu[bu * pu + Ru] = yu, Number.isNaN(yu) || (Wu[bu * pu + Ru] = By(uu, Bu + bu, xu + Ru, yu, Ku))
                 }
-              const WU = [];
-              let fU = null,
-                xU = 1 / 0;
-              for (let mU = 0; mU + tU <= CU; mU++)
-                for (let UU = 0; UU + EU <= hU; UU++) {
-                  const [RU, pU] = [jU + mU, uU + UU], TU = Math.hypot(RU + tU / 2 - gU[0], pU + EU / 2 - gU[2]);
-                  if (TU > KU || PU >= RU - 2 && PU < RU + tU + 2 && qU >= pU - 2 && qU < pU + EU + 2) continue;
-                  WU.length = 0;
-                  let cU = 0;
-                  for (let gU = 0; gU < tU; gU++)
-                    for (let RU = 0; RU < EU; RU++) WU.push(QU[(mU + gU) * hU + UU + RU]), cU += eU[(mU + gU) * hU + UU + RU];
-                  const GU = ug(WU);
-                  if (null === GU) continue;
-                  const CU = TU + 3 * (GU + cU);
-                  CU < xU && (xU = CU, fU = [RU, pU])
+              const ju = [];
+              let Hu = null,
+                du = 1 / 0;
+              for (let bu = 0; bu + Eu <= Su; bu++)
+                for (let uu = 0; uu + Qu <= pu; uu++) {
+                  const [Ru, Ku] = [Bu + bu, xu + uu], Ju = Math.hypot(Ru + Eu / 2 - yu[0], Ku + Qu / 2 - yu[2]);
+                  if (Ju > Xu || mu >= Ru - 2 && mu < Ru + Eu + 2 && Nu >= Ku - 2 && Nu < Ku + Qu + 2) continue;
+                  ju.length = 0;
+                  let Vu = 0;
+                  for (let yu = 0; yu < Eu; yu++)
+                    for (let Ru = 0; Ru < Qu; Ru++) ju.push(Tu[(bu + yu) * pu + uu + Ru]), Vu += Wu[(bu + yu) * pu + uu + Ru];
+                  const ru = xy(ju);
+                  if (null === ru) continue;
+                  const Su = Ju + 3 * (ru + Vu);
+                  Su < du && (du = Su, Hu = [Ru, Ku])
                 }
-              return fU
-            }(this.api, TU, qU)) && void 0 !== EU ? EU : this.cornerOnTarget(TU)) && void 0 !== tU ? tU : [Math.floor(qU[0]) + 2, Math.floor(qU[2])];
+              return Hu
+            }(this.api, Ju, Nu)) && void 0 !== Qu ? Qu : this.cornerOnTarget(Ju)) && void 0 !== Eu ? Eu : [Math.floor(Nu[0]) + 2, Math.floor(Nu[2])];
           this.placing = {
-            id: UU,
-            rotation: PU,
-            corner: [KU, this.playerLevel(), cU],
+            id: uu,
+            rotation: mu,
+            corner: [Xu, this.playerLevel(), Vu],
             sent: null,
             refusals: 0,
             hover: null,
             drag: null
-          }, this.update(), this.api.sendCommand(`${pU} preview`)
+          }, this.update(), this.api.sendCommand(`${Ku} preview`)
         }, this.rotate = () => {
           const {
-            id: UU,
-            rotation: RU,
-            corner: gU
-          } = this.placing, pU = tU[(tU.indexOf(RU) + 1) % tU.length], [EU, , PU] = kU(UU, RU).size, [TU, , qU] = kU(UU, pU).size;
-          this.moveTo(gU[0] + Math.floor(EU / 2) - Math.floor(TU / 2), gU[2] + Math.floor(PU / 2) - Math.floor(qU / 2), pU)
-        }, this.hoverAt = (UU, RU) => {
-          this.placing.hover = [UU, RU], this.moveCentreTo(this.camera, UU, RU)
+            id: uu,
+            rotation: Ru,
+            corner: yu
+          } = this.placing, Ku = Eu[(Eu.indexOf(Ru) + 1) % Eu.length], [Qu, , mu] = Zu(uu, Ru).size, [Ju, , Nu] = Zu(uu, Ku).size;
+          this.moveTo(yu[0] + Math.floor(Qu / 2) - Math.floor(Ju / 2), yu[2] + Math.floor(mu / 2) - Math.floor(Nu / 2), Ku)
+        }, this.hoverAt = (uu, Ru) => {
+          this.placing.hover = [uu, Ru], this.moveCentreTo(this.camera, uu, Ru)
         }, this.endHover = () => {
           this.placing.hover = null
-        }, this.beginDrag = (UU, RU) => {
-          const gU = this.placing,
+        }, this.beginDrag = (uu, Ru) => {
+          const yu = this.placing,
             {
-              eye: tU,
-              forward: pU,
-              tanHalfFovX: EU,
-              tanHalfFovY: PU
+              eye: Eu,
+              forward: Ku,
+              tanHalfFovX: Qu,
+              tanHalfFovY: mu
             } = this.camera,
-            TU = {
-              eye: [tU[0], tU[1], tU[2]],
-              forward: [pU[0], pU[1], pU[2]],
-              tanHalfFovX: EU,
-              tanHalfFovY: PU
+            Ju = {
+              eye: [Eu[0], Eu[1], Eu[2]],
+              forward: [Ku[0], Ku[1], Ku[2]],
+              tanHalfFovX: Qu,
+              tanHalfFovY: mu
             },
-            qU = gU.corner[1],
-            KU = Cg(TU, UU, RU, qU);
-          gU.hover = null, gU.drag = KU && {
-            view: TU,
-            ground: KU,
-            corner: [gU.corner[0], gU.corner[2]],
-            level: qU
+            Nu = yu.corner[1],
+            Xu = Sy(Ju, uu, Ru, Nu);
+          yu.hover = null, yu.drag = Xu && {
+            view: Ju,
+            ground: Xu,
+            corner: [yu.corner[0], yu.corner[2]],
+            level: Nu
           }
-        }, this.dragTo = (UU, RU) => {
-          const gU = this.placing.drag,
-            tU = gU && Cg(gU.view, UU, RU, gU.level);
-          null !== gU && null !== tU && this.moveTo(gU.corner[0] + Math.round(tU[0] - gU.ground[0]), gU.corner[1] + Math.round(tU[1] - gU.ground[1]))
+        }, this.dragTo = (uu, Ru) => {
+          const yu = this.placing.drag,
+            Eu = yu && Sy(yu.view, uu, Ru, yu.level);
+          null !== yu && null !== Eu && this.moveTo(yu.corner[0] + Math.round(Eu[0] - yu.ground[0]), yu.corner[1] + Math.round(Eu[1] - yu.ground[1]))
         }, this.endDrag = () => {
           this.placing.drag = null
         }, this.tap = () => {
-          const UU = this.view;
-          UU.waiting || (UU.blocked ? this.yh({
-            ...UU,
+          const uu = this.view;
+          uu.waiting || (uu.blocked ? this.Op({
+            ...uu,
             refusals: ++this.placing.refusals
           }) : this.build())
         }, this.build = () => {
-          const UU = this.placing,
+          const uu = this.placing,
             {
-              id: RU,
-              rotation: gU,
-              corner: tU
-            } = UU;
-          this.api.sendCommand(`${pU} place ${RU} ${tU.join(" ")} ${gU}`), UU.sent = {
+              id: Ru,
+              rotation: yu,
+              corner: Eu
+            } = uu;
+          this.api.sendCommand(`${Ku} place ${Ru} ${Eu.join(" ")} ${yu}`), uu.sent = {
             atMs: performance.now(),
-            corner: [...tU],
-            rotation: gU,
+            corner: [...Eu],
+            rotation: yu,
             timedOut: !1
           }, this.update()
         }, this.stop = () => {
-          null !== this.placing && (this.close(), this.api.sendCommand(`${pU} preview off`))
-        }, this.chunkWatch = new LR(UU), this.meshes = new gg(UU)
+          null !== this.placing && (this.close(), this.api.sendCommand(`${Ku} preview off`))
+        }, this.chunkWatch = new OR(uu), this.meshes = new yy(uu)
       }
       getView() {
         return this.view
       }
-      HG() {
-        const UU = this.placing;
-        null !== UU && (null !== UU.sent && !UU.sent.timedOut && performance.now() - UU.sent.atMs > 3e3 ? (UU.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(UU) || this.chunkWatch.changed()) && this.update())
+      sr() {
+        const uu = this.placing;
+        null !== uu && (null !== uu.sent && !uu.sent.timedOut && performance.now() - uu.sent.atMs > 3e3 ? (uu.sent.timedOut = !0, this.update()) : (this.followPlayerLevel(uu) || this.chunkWatch.changed()) && this.update())
       }
-      afterRender(UU) {
-        const RU = this.placing;
-        null !== RU && (! function(UU, RU) {
-          for (let gU = 0; gU < 3; gU++) RU.eye[gU] = UU.cameraPosition[gU], RU.forward[gU] = UU.cameraDirection[gU];
-          RU.tanHalfFovX = UU.tanHalfFovX, RU.tanHalfFovY = UU.tanHalfFovY
-        }(UU, this.camera), null !== RU.hover && this.moveCentreTo(this.camera, RU.hover[0], RU.hover[1]))
+      afterRender(uu) {
+        const Ru = this.placing;
+        null !== Ru && (! function(uu, Ru) {
+          for (let yu = 0; yu < 3; yu++) Ru.eye[yu] = uu.cameraPosition[yu], Ru.forward[yu] = uu.cameraDirection[yu];
+          Ru.tanHalfFovX = uu.tanHalfFovX, Ru.tanHalfFovY = uu.tanHalfFovY
+        }(uu, this.camera), null !== Ru.hover && this.moveCentreTo(this.camera, Ru.hover[0], Ru.hover[1]))
       }
-      qC(UU) {
-        const RU = this.placing;
-        if (null === RU || null === RU.sent || "active" !== UU[0]) return;
+      SS(uu) {
+        const Ru = this.placing;
+        if (null === Ru || null === Ru.sent || "active" !== uu[0]) return;
         const {
-          sent: gU
-        } = RU, [, tU, pU, EU, PU, TU, qU] = UU;
-        pU && tU === RU.id && qU === gU.rotation && EU === gU.corner[0] && PU === gU.corner[1] && TU === gU.corner[2] && this.close()
+          sent: yu
+        } = Ru, [, Eu, Ku, Qu, mu, Ju, Nu] = uu;
+        Ku && Eu === Ru.id && Nu === yu.rotation && Qu === yu.corner[0] && mu === yu.corner[1] && Ju === yu.corner[2] && this.close()
       }
       endFromServer() {
         null !== this.placing && this.close()
@@ -1650,142 +1650,142 @@ export const modules = {
       dispose() {
         this.meshes.dispose()
       }
-      cornerOnTarget(UU) {
-        let [RU, , gU] = UU;
-        const tU = this.api.getTargetedBlock();
-        if (null === tU) return null;
-        const [pU, , EU] = tU.position;
-        return [pU - Math.floor(RU / 2), EU - Math.floor(gU / 2)]
+      cornerOnTarget(uu) {
+        let [Ru, , yu] = uu;
+        const Eu = this.api.getTargetedBlock();
+        if (null === Eu) return null;
+        const [Ku, , Qu] = Eu.position;
+        return [Ku - Math.floor(Ru / 2), Qu - Math.floor(yu / 2)]
       }
       playerLevel() {
-        var UU;
-        const [RU, gU, tU] = this.api.Hx(this.localPlayerId);
-        if (null !== (UU = this.api.getLocalPlayerMovement()) && void 0 !== UU && UU.onGround) return Math.ceil(gU - .01);
-        const [pU, EU, PU] = [Math.floor(RU), Math.floor(gU), Math.floor(tU)];
-        for (let TU = EU; TU >= EU - 2; TU--)
-          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(pU, TU, PU))) return TU + 1;
-        return EU
+        var uu;
+        const [Ru, yu, Eu] = this.api.mH(this.localPlayerId);
+        if (null !== (uu = this.api.getLocalPlayerMovement()) && void 0 !== uu && uu.onGround) return Math.ceil(yu - .01);
+        const [Ku, Qu, mu] = [Math.floor(Ru), Math.floor(yu), Math.floor(Eu)];
+        for (let Ju = Qu; Ju >= Qu - 2; Ju--)
+          if (this.api.isSolidToPlayerBlockId(this.api.getBlockId(Ku, Ju, mu))) return Ju + 1;
+        return Qu
       }
-      followPlayerLevel(UU) {
-        if (Wg(UU)) return !1;
-        const RU = this.playerLevel();
-        return RU !== UU.corner[1] && (UU.corner[1] = RU, !0)
+      followPlayerLevel(uu) {
+        if (jy(uu)) return !1;
+        const Ru = this.playerLevel();
+        return Ru !== uu.corner[1] && (uu.corner[1] = Ru, !0)
       }
-      moveCentreTo(UU, RU, gU) {
-        const tU = this.placing,
-          pU = Cg(UU, RU, gU, tU.corner[1]);
-        if (null !== pU) {
-          const [UU, , RU] = kU(tU.id, tU.rotation).size;
-          this.moveTo(Math.round(pU[0] - UU / 2), Math.round(pU[1] - RU / 2))
+      moveCentreTo(uu, Ru, yu) {
+        const Eu = this.placing,
+          Ku = Sy(uu, Ru, yu, Eu.corner[1]);
+        if (null !== Ku) {
+          const [uu, , Ru] = Zu(Eu.id, Eu.rotation).size;
+          this.moveTo(Math.round(Ku[0] - uu / 2), Math.round(Ku[1] - Ru / 2))
         }
       }
-      moveTo(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
-        const tU = this.placing;
-        if (Wg(tU)) return;
-        const [pU, EU, PU] = tU.corner;
-        if (this.centreOnPlot(pU, PU) && !this.centreOnPlot(UU, RU, gU))
-          if (this.centreOnPlot(UU, PU, gU)) RU = PU;
+      moveTo(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+        const Eu = this.placing;
+        if (jy(Eu)) return;
+        const [Ku, Qu, mu] = Eu.corner;
+        if (this.centreOnPlot(Ku, mu) && !this.centreOnPlot(uu, Ru, yu))
+          if (this.centreOnPlot(uu, mu, yu)) Ru = mu;
           else {
-            if (!this.centreOnPlot(pU, RU, gU)) return;
-            UU = pU
-          } UU === pU && RU === PU && gU === tU.rotation || (tU.rotation = gU, tU.corner = [UU, EU, RU], this.update())
+            if (!this.centreOnPlot(Ku, Ru, yu)) return;
+            uu = Ku
+          } uu === Ku && Ru === mu && yu === Eu.rotation || (Eu.rotation = yu, Eu.corner = [uu, Qu, Ru], this.update())
       }
-      centreOnPlot(UU, RU) {
-        let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
+      centreOnPlot(uu, Ru) {
+        let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.placing.rotation;
         const {
-          id: tU,
-          corner: pU
-        } = this.placing, [EU, , PU] = kU(tU, gU).size;
-        return this.api.canModifyBlockAt(UU + Math.floor(EU / 2), pU[1], RU + Math.floor(PU / 2))
+          id: Eu,
+          corner: Ku
+        } = this.placing, [Qu, , mu] = Zu(Eu, yu).size;
+        return this.api.canModifyBlockAt(uu + Math.floor(Qu / 2), Ku[1], Ru + Math.floor(mu / 2))
       }
       close() {
-        this.placing = null, this.meshes.dispose(), this.yh(null)
+        this.placing = null, this.meshes.dispose(), this.Op(null)
       }
       update() {
         const {
-          id: UU,
-          rotation: RU,
-          corner: gU,
-          refusals: tU
-        } = this.placing, pU = new Rg, EU = [];
-        let PU = !1,
-          TU = 0;
+          id: uu,
+          rotation: Ru,
+          corner: yu,
+          refusals: Eu
+        } = this.placing, Ku = new Ry, Qu = [];
+        let mu = !1,
+          Ju = 0;
         for (const {
-            offset: cU,
-            block: GU
+            offset: Vu,
+            block: ru
           }
-          of kU(UU, RU).cells) {
-          const [UU, RU, tU] = [gU[0] + cU[0], gU[1] + cU[1], gU[2] + cU[2]];
-          EU.push(UU, RU, tU);
-          const qU = !this.api.canModifyBlockAt(UU, RU, tU),
-            KU = this.api.getBlockId(UU, RU, tU),
-            jU = !ZR(KU) && !oR(this.api.blockNameToBlockId(GU), KU);
-          PU ||= qU, TU += jU ? 1 : 0, qU || jU ? pU.add(UU, RU, tU, Ug, OR) : pU.add(UU, RU, tU, YR(GU), Qg, SR(GU))
+          of Zu(uu, Ru).cells) {
+          const [uu, Ru, Eu] = [yu[0] + Vu[0], yu[1] + Vu[1], yu[2] + Vu[2]];
+          Qu.push(uu, Ru, Eu);
+          const Nu = !this.api.canModifyBlockAt(uu, Ru, Eu),
+            Xu = this.api.getBlockId(uu, Ru, Eu),
+            Bu = !IR(Xu) && !MR(this.api.blockNameToBlockId(ru), Xu);
+          mu ||= Nu, Ju += Bu ? 1 : 0, Nu || Bu ? Ku.add(uu, Ru, Eu, uy, fR) : Ku.add(uu, Ru, Eu, UR(ru), Ty, zR(ru))
         }
-        this.chunkWatch.watch(EU), this.meshes.show(pU.toArray());
-        const qU = this.view,
-          KU = Wg(this.placing);
-        (null === qU || void 0 === qU ? void 0 : qU.id) === UU && qU.blocked === PU && qU.toClear === TU && qU.waiting === KU && qU.refusals === tU || this.yh({
-          id: UU,
-          blocked: PU,
-          toClear: TU,
-          waiting: KU,
-          refusals: tU
+        this.chunkWatch.watch(Qu), this.meshes.show(Ku.toArray());
+        const Nu = this.view,
+          Xu = jy(this.placing);
+        (null === Nu || void 0 === Nu ? void 0 : Nu.id) === uu && Nu.blocked === mu && Nu.toClear === Ju && Nu.waiting === Xu && Nu.refusals === Eu || this.Op({
+          id: uu,
+          blocked: mu,
+          toClear: Ju,
+          waiting: Xu,
+          refusals: Eu
         })
       }
-      yh(UU) {
-        this.view = UU, cU.p.yh(hg, UU, !0)
+      Op(uu) {
+        this.view = uu, Vu.k.Op(py, uu, !0)
       }
     }
 
-    function Wg(UU) {
+    function jy(uu) {
       let {
-        sent: RU
-      } = UU;
-      return null !== RU && !RU.timedOut
+        sent: Ru
+      } = uu;
+      return null !== Ru && !Ru.timedOut
     }
-    var fg = gU(3937),
-      xg = gU(38696);
+    var Hy = yu(4053),
+      dy = yu(38891);
 
-    function mg(UU, RU, gU) {
-      const tU = [255 * UU, 255 * RU, 255 * gU],
-        [pU, EU, PU] = tU.map((UU => UU + .4 * (255 - UU)));
+    function by(uu, Ru, yu) {
+      const Eu = [255 * uu, 255 * Ru, 255 * yu],
+        [Ku, Qu, mu] = Eu.map((uu => uu + .4 * (255 - uu)));
       return {
         texture: "square_particle",
-        hG: 48,
-        minLifeTime: .3 / xg.e,
-        maxLifeTime: .55 / xg.e,
+        Nr: 48,
+        minLifeTime: .3 / dy.e,
+        maxLifeTime: .55 / dy.e,
         minSize: .07,
         maxSize: .14,
         minEmitPower: 1,
         maxEmitPower: 1,
         emitRate: 0,
-        gravity: [0, -14 * xg.e * xg.e, 0],
+        gravity: [0, -14 * dy.e * dy.e, 0],
         colorGradients: [{
           timeFraction: 0,
-          minColor: [...tU, 1],
-          maxColor: [pU, EU, PU, 1]
+          minColor: [...Eu, 1],
+          maxColor: [Ku, Qu, mu, 1]
         }, {
           timeFraction: 1,
-          minColor: [...tU, 0],
-          maxColor: [pU, EU, PU, 0]
+          minColor: [...Eu, 0],
+          maxColor: [Ku, Qu, mu, 0]
         }],
-        blendMode: fg.g.Standard
+        blendMode: Hy.g.Standard
       }
     }
-    const Ig = {
+    const Cy = {
       texture: "glint",
       mipmaps: !1,
-      hG: 96,
-      minLifeTime: .5 / xg.e,
-      maxLifeTime: .9 / xg.e,
+      Nr: 96,
+      minLifeTime: .5 / dy.e,
+      maxLifeTime: .9 / dy.e,
       minSize: .15,
       maxSize: .3,
       minEmitPower: 1,
       maxEmitPower: 1,
       emitRate: 0,
-      gravity: [0, 2 * xg.e * xg.e, 0],
+      gravity: [0, 2 * dy.e * dy.e, 0],
       colorGradients: [{
         timeFraction: 0,
         minColor: [255, 224, 97, 1],
@@ -1794,601 +1794,601 @@ export const modules = {
         timeFraction: 1,
         minColor: [0, 0, 0, 1]
       }],
-      blendMode: fg.g.OneOne
+      blendMode: Hy.g.OneOne
     };
-    class Jg {
-      constructor(UU, RU) {
-        this.api = UU, this.localPlayerId = RU, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
+    class ky {
+      constructor(uu, Ru) {
+        this.api = uu, this.localPlayerId = Ru, this.chips = new Map, this.sparkles = null, this.points = new Float32Array(384)
       }
-      filled(UU) {
+      filled(uu) {
         if (this.api.particlesEnabled())
-          for (const [RU, gU, tU, pU, EU, PU] of UU.slice(0, 3)) {
-            const UU = `${pU},${EU},${PU}`;
-            let TU = this.chips.get(UU);
-            void 0 === TU && (TU = this.api.createParticles(mg(pU, EU, PU), {
-              pos: [RU + .5, gU + .5, tU + .5]
-            }), this.chips.set(UU, TU));
-            for (let RU = 0; RU < 8; RU++) this.setPoint(RU, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
-            TU.emitPoints([RU + .5, gU + .5, tU + .5], this.points, 8)
+          for (const [Ru, yu, Eu, Ku, Qu, mu] of uu.slice(0, 3)) {
+            const uu = `${Ku},${Qu},${mu}`;
+            let Ju = this.chips.get(uu);
+            void 0 === Ju && (Ju = this.api.createParticles(by(Ku, Qu, mu), {
+              pos: [Ru + .5, yu + .5, Eu + .5]
+            }), this.chips.set(uu, Ju));
+            for (let Ru = 0; Ru < 8; Ru++) this.setPoint(Ru, .9 * (Math.random() - .5), .9 * (Math.random() - .5), .9 * (Math.random() - .5), 1.5 + 1.5 * Math.random());
+            Ju.emitPoints([Ru + .5, yu + .5, Eu + .5], this.points, 8)
           }
       }
-      layerDone(UU) {
+      layerDone(uu) {
         this.api.playSound(this.localPlayerId, "magicAccent2", .7, 1.1);
-        const RU = UU.length / 3;
-        if (0 === RU || !this.api.particlesEnabled()) return;
-        const gU = Math.min(RU, 48),
-          [tU, pU, EU] = [UU[0] + .5, UU[1] + 1, UU[2] + .5];
-        let PU = 0;
-        for (let TU = 0; TU < gU; TU++) {
-          const qU = 3 * Math.floor(TU * RU / gU);
-          for (let RU = 0; RU < 2; RU++) this.setPoint(PU++, UU[qU] + Math.random() - tU, UU[qU + 1] + 1 - pU, UU[qU + 2] + Math.random() - EU, .6 + .8 * Math.random())
+        const Ru = uu.length / 3;
+        if (0 === Ru || !this.api.particlesEnabled()) return;
+        const yu = Math.min(Ru, 48),
+          [Eu, Ku, Qu] = [uu[0] + .5, uu[1] + 1, uu[2] + .5];
+        let mu = 0;
+        for (let Ju = 0; Ju < yu; Ju++) {
+          const Nu = 3 * Math.floor(Ju * Ru / yu);
+          for (let Ru = 0; Ru < 2; Ru++) this.setPoint(mu++, uu[Nu] + Math.random() - Eu, uu[Nu + 1] + 1 - Ku, uu[Nu + 2] + Math.random() - Qu, .6 + .8 * Math.random())
         }
-        this.sparkles ??= this.api.createParticles(Ig, {
-          pos: [tU, pU, EU]
-        }), this.sparkles.emitPoints([tU, pU, EU], this.points, PU)
+        this.sparkles ??= this.api.createParticles(Cy, {
+          pos: [Eu, Ku, Qu]
+        }), this.sparkles.emitPoints([Eu, Ku, Qu], this.points, mu)
       }
       dispose() {
-        var UU;
-        for (const RU of this.chips.values()) RU.stop();
-        this.chips.clear(), null === (UU = this.sparkles) || void 0 === UU || UU.stop(), this.sparkles = null
+        var uu;
+        for (const Ru of this.chips.values()) Ru.stop();
+        this.chips.clear(), null === (uu = this.sparkles) || void 0 === uu || uu.stop(), this.sparkles = null
       }
-      setPoint(UU, RU, gU, tU, pU) {
-        const EU = 4 * UU;
-        this.points[EU] = RU, this.points[EU + 1] = gU, this.points[EU + 2] = tU, this.points[EU + 3] = pU
+      setPoint(uu, Ru, yu, Eu, Ku) {
+        const Qu = 4 * uu;
+        this.points[Qu] = Ru, this.points[Qu + 1] = yu, this.points[Qu + 2] = Eu, this.points[Qu + 3] = Ku
       }
     }
-    var wg = gU(1844);
-    const ng = "SpecialAction1",
-      bg = "KeyY",
-      og = "KeyX";
+    var ey = yu(1915);
+    const Ay = "SpecialAction1",
+      Dy = "KeyY",
+      My = "KeyX";
 
-    function Zg(UU) {
+    function Iy(uu) {
       let {
-        placement: RU
-      } = UU;
-      const gU = (0, oU.h)(hg, RU.getView()),
+        placement: Ru
+      } = uu;
+      const yu = (0, Mu.h)(py, Ru.getView()),
         {
-          t: tU
-        } = (0, aU.B)(),
+          t: Eu
+        } = (0, Gu.E)(),
         {
-          isTouchScreen: pU
-        } = (0, TU.l)(["isTouchScreen"]),
-        EU = null !== gU,
-        PU = EU && !gU.blocked && !gU.waiting;
-      if ((0, bU.d)((UU => EU && !UU.repeat && !(0, KU.isTypingInInput)() && !(0, qU.q)() && !pU), (UU => {
-          const gU = function(UU, RU, gU) {
-            if (UU === og) return RU.stop;
-            if (UU === bg) return gU ? RU.build : Yg;
-            return wg.r[ng].includes(UU) ? RU.rotate : null
-          }(UU.code, RU, PU);
-          null !== gU && (UU.stopPropagation(), gU())
-        })), !EU) return null;
-      let cU = pU ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
-      return gU.blocked ? cU = "plotsGame:placementOffPlot" : gU.toClear > 0 && (cU = "plotsGame:placementClear"), (0, iU.jsx)(PR.e, {
+          isTouchScreen: Ku
+        } = (0, Ju.j)(["isTouchScreen"]),
+        Qu = null !== yu,
+        mu = Qu && !yu.blocked && !yu.waiting;
+      if ((0, Du.c)((uu => Qu && !uu.repeat && !(0, Xu.isTypingInInput)() && !(0, Nu.p)() && !Ku), (uu => {
+          const yu = function(uu, Ru, yu) {
+            if (uu === My) return Ru.stop;
+            if (uu === Dy) return yu ? Ru.build : Uy;
+            return ey.x[Ay].includes(uu) ? Ru.rotate : null
+          }(uu.code, Ru, mu);
+          null !== yu && (uu.stopPropagation(), yu())
+        })), !Qu) return null;
+      let Vu = Ku ? "plotsGame:placementHintTouch" : "plotsGame:placementHint";
+      return yu.blocked ? Vu = "plotsGame:placementOffPlot" : yu.toClear > 0 && (Vu = "plotsGame:placementClear"), (0, Pu.jsx)(mR.d, {
         placement: "bottom",
-        children: (0, iU.jsxs)("div", {
+        children: (0, Pu.jsxs)("div", {
           className: "PlotsPlacementCard",
-          children: [(0, iU.jsx)("div", {
+          children: [(0, Pu.jsx)("div", {
             className: "PlotsPlacementCardTitle SmallTextBold",
-            children: tU(CU(gU.id).displayName.translationKey)
-          }), (0, iU.jsx)("div", {
-            className: IU()("PlotsPlacementCardHint SmallTextLight", {
-              Nudge: gU.refusals > 0
+            children: Eu(Su(yu.id).displayName.translationKey)
+          }), (0, Pu.jsx)("div", {
+            className: Cu()("PlotsPlacementCardHint SmallTextLight", {
+              Nudge: yu.refusals > 0
             }),
-            children: tU(cU)
-          }, gU.refusals), (0, iU.jsxs)("div", {
+            children: Eu(Vu)
+          }, yu.refusals), (0, Pu.jsxs)("div", {
             className: "PlotsPlacementCardButtons",
-            children: [(0, iU.jsxs)(wU.e, {
-              onClick: RU.rotate,
-              children: [(0, iU.jsx)(ag, {
-                noaAction: ng
-              }), tU("plotsGame:placementRotate")]
-            }), (0, iU.jsxs)(wU.E, {
-              onClick: RU.stop,
-              children: [(0, iU.jsx)(ag, {
-                keyCode: og
-              }), tU("general:cancel")]
-            }), (0, iU.jsxs)(wU.j, {
-              disabled: !PU,
-              onClick: RU.build,
-              children: [(0, iU.jsx)(ag, {
-                keyCode: bg
-              }), tU("plotsGame:placementBuild")]
+            children: [(0, Pu.jsxs)(eu.e, {
+              onClick: Ru.rotate,
+              children: [(0, Pu.jsx)(Gy, {
+                noaAction: Ay
+              }), Eu("plotsGame:placementRotate")]
+            }), (0, Pu.jsxs)(eu.F, {
+              onClick: Ru.stop,
+              children: [(0, Pu.jsx)(Gy, {
+                keyCode: My
+              }), Eu("general:cancel")]
+            }), (0, Pu.jsxs)(eu.l, {
+              disabled: !mu,
+              onClick: Ru.build,
+              children: [(0, Pu.jsx)(Gy, {
+                keyCode: Dy
+              }), Eu("plotsGame:placementBuild")]
             })]
           })]
         })
       })
     }
 
-    function ag(UU) {
-      return (0, iU.jsx)(qR.b, {
+    function Gy(uu) {
+      return (0, Pu.jsx)(NR.b, {
         className: "PlotsPlacementKey",
-        ...UU
+        ...uu
       })
     }
 
-    function Yg() {}
-    var Bg = gU(4206);
-    class Vg {
-      constructor(UU) {
-        this.placement = UU, this.press = null
+    function Uy() {}
+    var ny = yu(4314);
+    class sy {
+      constructor(uu) {
+        this.placement = uu, this.press = null
       }
-      down(UU) {
+      down(uu) {
         if (null !== this.press) return !1;
         const {
-          id: RU,
-          mouse: gU,
-          x: tU,
-          y: pU,
-          atMs: EU
-        } = UU;
+          id: Ru,
+          mouse: yu,
+          x: Eu,
+          y: Ku,
+          atMs: Qu
+        } = uu;
         return this.press = {
-          id: RU,
-          mouse: gU,
-          x: tU,
-          y: pU,
-          atMs: EU,
+          id: Ru,
+          mouse: yu,
+          x: Eu,
+          y: Ku,
+          atMs: Qu,
           moved: !1
-        }, gU || this.placement.beginDrag(UU.ndcX, UU.ndcY), !0
+        }, yu || this.placement.beginDrag(uu.ndcX, uu.ndcY), !0
       }
-      move(UU) {
-        const RU = this.press;
-        null !== RU && RU.id === UU.id && (RU.moved ||= Math.hypot(UU.x - RU.x, UU.y - RU.y) > 8), UU.mouse ? this.placement.hoverAt(UU.ndcX, UU.ndcY) : (null === RU || void 0 === RU ? void 0 : RU.id) === UU.id && this.placement.dragTo(UU.ndcX, UU.ndcY)
+      move(uu) {
+        const Ru = this.press;
+        null !== Ru && Ru.id === uu.id && (Ru.moved ||= Math.hypot(uu.x - Ru.x, uu.y - Ru.y) > 8), uu.mouse ? this.placement.hoverAt(uu.ndcX, uu.ndcY) : (null === Ru || void 0 === Ru ? void 0 : Ru.id) === uu.id && this.placement.dragTo(uu.ndcX, uu.ndcY)
       }
-      up(UU) {
-        const RU = this.press;
-        (null === RU || void 0 === RU ? void 0 : RU.id) === UU.id && (this.move(UU), this.end(), !RU.moved && (RU.mouse || UU.atMs - RU.atMs <= 250) && this.placement.tap())
+      up(uu) {
+        const Ru = this.press;
+        (null === Ru || void 0 === Ru ? void 0 : Ru.id) === uu.id && (this.move(uu), this.end(), !Ru.moved && (Ru.mouse || uu.atMs - Ru.atMs <= 250) && this.placement.tap())
       }
-      cancel(UU) {
-        var RU;
-        (null === (RU = this.press) || void 0 === RU ? void 0 : RU.id) === UU && this.end()
+      cancel(uu) {
+        var Ru;
+        (null === (Ru = this.press) || void 0 === Ru ? void 0 : Ru.id) === uu && this.end()
       }
-      leave(UU) {
+      leave(uu) {
         let {
-          id: RU,
-          mouse: gU
-        } = UU;
-        gU && this.placement.endHover(), this.cancel(RU)
+          id: Ru,
+          mouse: yu
+        } = uu;
+        yu && this.placement.endHover(), this.cancel(Ru)
       }
       end() {
         this.press.mouse || this.placement.endDrag(), this.press = null
       }
     }
 
-    function rg(UU) {
+    function ty(uu) {
       let {
-        placement: RU
-      } = UU;
-      return null === (0, oU.h)(hg, RU.getView()) ? null : (0, iU.jsx)(Xg, {
-        placement: RU
+        placement: Ru
+      } = uu;
+      return null === (0, Mu.h)(py, Ru.getView()) ? null : (0, Pu.jsx)(ly, {
+        placement: Ru
       })
     }
 
-    function Xg(UU) {
+    function ly(uu) {
       let {
-        placement: RU
-      } = UU;
-      (0, Bg.e)(!0, !0, "PlotsPlacementLayer");
-      const gU = (0, EU.useMemo)((() => new Vg(RU)), [RU]);
-      return (0, iU.jsx)("div", {
+        placement: Ru
+      } = uu;
+      (0, ny.c)(!0, !0, "PlotsPlacementLayer");
+      const yu = (0, Qu.useMemo)((() => new sy(Ru)), [Ru]);
+      return (0, Pu.jsx)("div", {
         className: "PlotsPlacementLayer",
-        onPointerDown: UU => {
-          "mouse" === UU.pointerType && 0 !== UU.button || !gU.down(vg(UU)) || UU.currentTarget.setPointerCapture(UU.pointerId)
+        onPointerDown: uu => {
+          "mouse" === uu.pointerType && 0 !== uu.button || !yu.down(gy(uu)) || uu.currentTarget.setPointerCapture(uu.pointerId)
         },
-        onPointerMove: UU => {
-          gU.move(vg(UU))
+        onPointerMove: uu => {
+          yu.move(gy(uu))
         },
-        onPointerUp: UU => {
-          gU.up(vg(UU))
+        onPointerUp: uu => {
+          yu.up(gy(uu))
         },
-        onPointerCancel: UU => {
-          gU.cancel(UU.pointerId)
+        onPointerCancel: uu => {
+          yu.cancel(uu.pointerId)
         },
-        onLostPointerCapture: UU => {
-          gU.cancel(UU.pointerId)
+        onLostPointerCapture: uu => {
+          yu.cancel(uu.pointerId)
         },
-        onPointerLeave: UU => {
-          gU.leave(vg(UU))
+        onPointerLeave: uu => {
+          yu.leave(gy(uu))
         },
         "aria-hidden": !0
       })
     }
 
-    function vg(UU) {
+    function gy(uu) {
       const {
-        left: RU,
-        top: gU,
-        width: tU,
-        height: pU
-      } = UU.currentTarget.getBoundingClientRect();
+        left: Ru,
+        top: yu,
+        width: Eu,
+        height: Ku
+      } = uu.currentTarget.getBoundingClientRect();
       return {
-        id: UU.pointerId,
-        mouse: "mouse" === UU.pointerType,
-        x: UU.clientX,
-        y: UU.clientY,
-        ndcX: (UU.clientX - RU) / tU * 2 - 1,
-        ndcY: 1 - (UU.clientY - gU) / pU * 2,
-        atMs: UU.timeStamp
+        id: uu.pointerId,
+        mouse: "mouse" === uu.pointerType,
+        x: uu.clientX,
+        y: uu.clientY,
+        ndcX: (uu.clientX - Ru) / Eu * 2 - 1,
+        ndcY: 1 - (uu.clientY - yu) / Ku * 2,
+        atMs: uu.timeStamp
       }
     }
-    var dg = gU(2198),
-      Hg = gU(36280),
-      Sg = gU(1834),
-      sg = gU(1265);
-    const yg = {
+    var cy = yu(2278),
+      Ly = yu(36532),
+      zy = yu(1899),
+      Fy = yu(1232);
+    const wy = {
       own: "crown",
       shared: "user-group",
       other: "house"
     };
 
-    function kg(UU) {
+    function Zy(uu) {
       let {
-        hud: RU
-      } = UU;
-      const gU = (0, oU.h)(cR, RU.getPlot()),
-        [tU, pU] = (0, EU.useState)(null),
-        PU = (0, Hg.m)(tU);
-      if ("none" === gU[0]) return null;
-      const [, TU, qU, KU, cU, GU] = gU;
-      return (0, iU.jsx)("div", {
-        className: IU()("PlotsPlotBannerContainer", {
-          Below: PU
+        hud: Ru
+      } = uu;
+      const yu = (0, Mu.h)(VR, Ru.getPlot()),
+        [Eu, Ku] = (0, Qu.useState)(null),
+        mu = (0, Ly.g)(Eu);
+      if ("none" === yu[0]) return null;
+      const [, Ju, Nu, Xu, Vu, ru] = yu;
+      return (0, Pu.jsx)("div", {
+        className: Cu()("PlotsPlotBannerContainer", {
+          Below: mu
         }),
-        children: (0, iU.jsx)(Fg, {
-          plotX: TU,
-          plotZ: qU,
-          ownerName: KU,
-          ownerId: cU,
-          relation: GU,
-          plaqueRef: pU
-        }, `${TU},${qU}`)
+        children: (0, Pu.jsx)(hy, {
+          plotX: Ju,
+          plotZ: Nu,
+          ownerName: Xu,
+          ownerId: Vu,
+          relation: ru,
+          plaqueRef: Ku
+        }, `${Ju},${Nu}`)
       })
     }
 
-    function Fg(UU) {
-      var RU, gU;
+    function hy(uu) {
+      var Ru, yu;
       let {
-        plotX: tU,
-        plotZ: pU,
-        ownerName: EU,
-        ownerId: PU,
-        relation: TU,
-        plaqueRef: qU
-      } = UU;
+        plotX: Eu,
+        plotZ: Ku,
+        ownerName: Qu,
+        ownerId: mu,
+        relation: Ju,
+        plaqueRef: Nu
+      } = uu;
       const {
-        t: KU
-      } = (0, aU.B)(), cU = (0, Sg.k)("hiddenPlayerNames"), GU = (0, Sg.k)("players"), jU = null === PU ? null : null !== (RU = null === (gU = GU.byId[PU]) || void 0 === gU ? void 0 : gU.cosmetics) && void 0 !== RU ? RU : null, uU = KU("plotsGame:plotBannerCoords", {
-        x: tU,
-        z: pU
-      }), CU = "own" === TU || null !== EU;
-      return (0, iU.jsxs)("div", {
-        ref: qU,
-        className: IU()("PlotsPlotBanner", {
-          Own: "own" === TU,
-          Shared: "shared" === TU
+        t: Xu
+      } = (0, Gu.E)(), Vu = (0, zy.i)("hiddenPlayerNames"), ru = (0, zy.i)("players"), Bu = null === mu ? null : null !== (Ru = null === (yu = ru.byId[mu]) || void 0 === yu ? void 0 : yu.cosmetics) && void 0 !== Ru ? Ru : null, xu = Xu("plotsGame:plotBannerCoords", {
+        x: Eu,
+        z: Ku
+      }), Su = "own" === Ju || null !== Qu;
+      return (0, Pu.jsxs)("div", {
+        ref: Nu,
+        className: Cu()("PlotsPlotBanner", {
+          Own: "own" === Ju,
+          Shared: "shared" === Ju
         }),
         role: "status",
-        children: [(0, iU.jsxs)("span", {
-          className: IU()("PlotsPlotBannerSeal", {
-            Face: null !== jU
+        children: [(0, Pu.jsxs)("span", {
+          className: Cu()("PlotsPlotBannerSeal", {
+            Face: null !== Bu
           }),
-          children: [null !== jU && (0, iU.jsx)(dg.d, {
-            cosmetics: jU
-          }), null === jU && (0, iU.jsx)(JU.c, {
-            name: yg[TU]
+          children: [null !== Bu && (0, Pu.jsx)(cy.b, {
+            cosmetics: Bu
+          }), null === Bu && (0, Pu.jsx)(ku.c, {
+            name: wy[Ju]
           })]
-        }), (0, iU.jsxs)("div", {
+        }), (0, Pu.jsxs)("div", {
           className: "PlotsPlotBannerText",
-          children: [(0, iU.jsxs)("div", {
+          children: [(0, Pu.jsxs)("div", {
             className: "PlotsPlotBannerTitle SmallTextBold",
-            children: ["own" === TU && KU("plotsGame:plotBannerYours"), "own" !== TU && null !== EU && KU("plotsGame:plotBannerOwner", {
-              name: (0, sg.e)(EU, cU)
-            }), !CU && uU]
-          }), CU && (0, iU.jsxs)("div", {
+            children: ["own" === Ju && Xu("plotsGame:plotBannerYours"), "own" !== Ju && null !== Qu && Xu("plotsGame:plotBannerOwner", {
+              name: (0, Fy.e)(Qu, Vu)
+            }), !Su && xu]
+          }), Su && (0, Pu.jsxs)("div", {
             className: "PlotsPlotBannerCoords SmallTextLight",
-            children: [uU, "shared" === TU && (0, iU.jsx)("span", {
+            children: [xu, "shared" === Ju && (0, Pu.jsx)("span", {
               className: "PlotsPlotBannerBadge",
-              children: KU("plotsGame:plotBannerShared")
+              children: Xu("plotsGame:plotBannerShared")
             })]
           })]
         })]
       })
     }
 
-    function ig(UU) {
+    function Py(uu) {
       let {
-        progress: RU,
-        goal: gU
-      } = UU;
-      const tU = Math.min(RU, gU);
-      return (0, iU.jsxs)("div", {
+        progress: Ru,
+        goal: yu
+      } = uu;
+      const Eu = Math.min(Ru, yu);
+      return (0, Pu.jsxs)("div", {
         className: "PlotsProgress",
-        children: [(0, iU.jsx)("div", {
+        children: [(0, Pu.jsx)("div", {
           className: "PlotsProgressBar",
           role: "progressbar",
           "aria-valuemin": 0,
-          "aria-valuemax": gU,
-          "aria-valuenow": tU,
-          children: (0, iU.jsx)("div", {
+          "aria-valuemax": yu,
+          "aria-valuenow": Eu,
+          children: (0, Pu.jsx)("div", {
             className: "PlotsProgressBarFill",
             style: {
-              transform: `scaleX(${tU/gU})`
+              transform: `scaleX(${Eu/yu})`
             }
           })
-        }), (0, iU.jsxs)("span", {
+        }), (0, Pu.jsxs)("span", {
           className: "PlotsProgressCount",
-          children: [tU, "/", gU]
+          children: [Eu, "/", yu]
         })]
       })
     }
 
-    function Ag(UU) {
+    function iy(uu) {
       return {
-        translationKey: `plotsGame:${UU}`,
+        translationKey: `plotsGame:${uu}`,
         actions: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : []
       }
     }
-    const zg = {
+    const Yy = {
       house: {
         icon: "house",
         titleKey: "plotsGame:starterLotHouseTitle",
-        desktop: Ag("starterLotHouseHint", ["alt-fire"]),
-        touch: Ag("starterLotHouseHint", ["alt-fire"]),
+        desktop: iy("starterLotHouseHint", ["alt-fire"]),
+        touch: iy("starterLotHouseHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotHousePlain"
       },
       garden: {
         icon: "sparkle",
         titleKey: "plotsGame:starterLotGarden",
-        desktop: Ag("starterLotGardenHint", ["alt-fire"]),
-        touch: Ag("starterLotGardenHint", ["alt-fire"]),
+        desktop: iy("starterLotGardenHint", ["alt-fire"]),
+        touch: iy("starterLotGardenHint", ["alt-fire"]),
         plainKey: "plotsGame:starterLotGardenPlain"
       },
       boulder: {
         icon: "hammer",
         titleKey: "plotsGame:starterLotBoulder",
-        desktop: Ag("starterLotBreakHint", ["primary-fire"]),
-        touch: Ag("starterLotBreakHintTouch"),
+        desktop: iy("starterLotBreakHint", ["primary-fire"]),
+        touch: iy("starterLotBreakHintTouch"),
         plainKey: "plotsGame:starterLotBreakPlain"
       },
       fly: {
         icon: "angles-up",
         titleKey: "plotsGame:starterLotFly",
-        desktop: Ag("starterLotFlyHint", ["jump"]),
-        touch: Ag("starterLotFlyHintTouch"),
+        desktop: iy("starterLotFlyHint", ["jump"]),
+        touch: iy("starterLotFlyHintTouch"),
         plainKey: "plotsGame:starterLotFlyPlain"
       },
       backpack: {
         icon: "backpack",
         titleKey: "plotsGame:starterLotBackpack",
-        desktop: Ag("starterLotBackpackHint", ["OpenInventory"]),
-        touch: Ag("starterLotBackpackHintTouch"),
+        desktop: iy("starterLotBackpackHint", ["OpenInventory"]),
+        touch: iy("starterLotBackpackHintTouch"),
         plainKey: "plotsGame:starterLotBackpackPlain"
       },
       neighbour: {
         icon: "person",
         titleKey: "plotsGame:starterLotNeighbour",
-        desktop: Ag("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
-        touch: Ag("starterLotNeighbourHintTouch"),
+        desktop: iy("starterLotNeighbourHint", ["forward", "left", "backward", "right"]),
+        touch: iy("starterLotNeighbourHintTouch"),
         plainKey: "plotsGame:starterLotNeighbourPlain"
       }
     };
 
-    function Mg(UU, RU, gU) {
+    function oy(uu, Ru, yu) {
       const {
-        translationKey: tU,
-        actions: pU
-      } = gU ? RU.touch : RU.desktop;
-      if (0 === pU.length) return UU(tU);
-      const EU = [];
-      for (const PU of pU) {
-        const tU = (0, wg.q)(PU, gU),
-          pU = wg.r[PU][0];
-        if (null === tU && void 0 === pU) return UU(RU.plainKey);
-        EU.push(null === tU ? (0, wg.m)(pU) : UU(tU.translationKey))
+        translationKey: Eu,
+        actions: Ku
+      } = yu ? Ru.touch : Ru.desktop;
+      if (0 === Ku.length) return uu(Eu);
+      const Qu = [];
+      for (const mu of Ku) {
+        const Eu = (0, ey.v)(mu, yu),
+          Ku = ey.x[mu][0];
+        if (null === Eu && void 0 === Ku) return uu(Ru.plainKey);
+        Qu.push(null === Eu ? (0, ey.o)(Ku) : uu(Eu.translationKey))
       }
-      return UU(tU, {
-        key: EU.join("")
+      return uu(Eu, {
+        key: Qu.join("")
       })
     }
 
-    function Dg(UU) {
+    function qy(uu) {
       let {
-        hud: RU
-      } = UU;
-      const gU = (0, oU.h)(KR, RU.getStep()),
+        hud: Ru
+      } = uu;
+      const yu = (0, Mu.h)(XR, Ru.getStep()),
         {
-          t: tU
-        } = (0, aU.B)();
-      return (0, iU.jsxs)(PR.e, {
+          t: Eu
+        } = (0, Gu.E)();
+      return (0, Pu.jsxs)(mR.d, {
         placement: "bottom",
-        children: ["step" === gU[0] && (0, iU.jsx)(Lg, {
-          step: gU[1],
-          progress: gU[2],
-          goal: gU[3]
-        }, gU[1]), "celebrate" === gU[0] && (0, iU.jsx)(Ng, {
-          className: IU()("Celebrate", {
-            Gold: "house" === gU[1]
+        children: ["step" === yu[0] && (0, Pu.jsx)(Oy, {
+          step: yu[1],
+          progress: yu[2],
+          goal: yu[3]
+        }, yu[1]), "celebrate" === yu[0] && (0, Pu.jsx)(vy, {
+          className: Cu()("Celebrate", {
+            Gold: "house" === yu[1]
           }),
           icon: "star",
-          title: tU("house" === gU[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
-        }, `celebrate-${gU[1]}`)]
+          title: Eu("house" === yu[1] ? "plotsGame:starterLotYourPlot" : "plotsGame:starterLotBriefDone")
+        }, `celebrate-${yu[1]}`)]
       })
     }
 
-    function Lg(UU) {
+    function Oy(uu) {
       let {
-        step: RU,
-        progress: gU,
-        goal: tU
-      } = UU;
+        step: Ru,
+        progress: yu,
+        goal: Eu
+      } = uu;
       const {
-        isTouchScreen: pU
-      } = (0, TU.l)(["isTouchScreen"]), {
-        t: EU
-      } = (0, aU.B)(), PU = zg[RU];
-      return (0, iU.jsxs)(Ng, {
-        icon: PU.icon,
-        title: EU(PU.titleKey),
-        children: [(0, iU.jsx)("div", {
+        isTouchScreen: Ku
+      } = (0, Ju.j)(["isTouchScreen"]), {
+        t: Qu
+      } = (0, Gu.E)(), mu = Yy[Ru];
+      return (0, Pu.jsxs)(vy, {
+        icon: mu.icon,
+        title: Qu(mu.titleKey),
+        children: [(0, Pu.jsx)("div", {
           className: "PlotsStepCardHint SmallTextLight",
-          children: Mg(EU, PU, pU)
-        }), tU > 1 && (0, iU.jsx)(ig, {
-          progress: gU,
-          goal: tU
-        }), "backpack" === RU && pU && (0, iU.jsx)(lg, {})]
+          children: oy(Qu, mu, Ku)
+        }), Eu > 1 && (0, Pu.jsx)(Py, {
+          progress: yu,
+          goal: Eu
+        }), "backpack" === Ru && Ku && (0, Pu.jsx)(ay, {})]
       })
     }
 
-    function Ng(UU) {
+    function vy(uu) {
       let {
-        className: RU,
-        icon: gU,
-        title: tU,
-        children: pU
-      } = UU;
-      return (0, iU.jsxs)("div", {
-        className: IU()("PlotsStepCard", RU),
+        className: Ru,
+        icon: yu,
+        title: Eu,
+        children: Ku
+      } = uu;
+      return (0, Pu.jsxs)("div", {
+        className: Cu()("PlotsStepCard", Ru),
         role: "status",
-        children: [(0, iU.jsx)("span", {
+        children: [(0, Pu.jsx)("span", {
           className: "PlotsStepCardIcon",
-          children: (0, iU.jsx)(JU.c, {
-            name: gU
+          children: (0, Pu.jsx)(ku.c, {
+            name: yu
           })
-        }), (0, iU.jsxs)("div", {
+        }), (0, Pu.jsxs)("div", {
           className: "PlotsStepCardBody",
-          children: [(0, iU.jsx)("div", {
+          children: [(0, Pu.jsx)("div", {
             className: "PlotsStepCardTitle SmallTextBold",
-            children: tU
-          }), pU]
+            children: Eu
+          }), Ku]
         })]
       })
     }
 
-    function lg() {
-      return (0, EU.useEffect)((() => (TU.b.set({
+    function ay() {
+      return (0, Qu.useEffect)((() => (Ju.d.set({
         backpackPointerRequested: !0
       }), () => {
-        TU.b.set({
+        Ju.d.set({
           backpackPointerRequested: !1
         })
       })), []), null
     }
-    const Og = function(UU, RU, gU, tU) {
+    const fy = function(uu, Ru, yu, Eu) {
       let {
-        localPlayerId: pU
-      } = tU;
-      const TU = new GR;
-      let qU = null,
-        KU = null,
-        cU = null,
-        GU = null,
-        jU = null;
-      const uU = [];
+        localPlayerId: Ku
+      } = Eu;
+      const Ju = new rR;
+      let Nu = null,
+        Xu = null,
+        Vu = null,
+        ru = null,
+        Bu = null;
+      const xu = [];
       return {
-        onCreate: UU => {
-          qU = new Jg(UU, pU), KU = new qg(UU, pU, qU), cU = new qg(UU, pU, qU), GU = new eg(UU, pU), jU = new xU(UU, GU), uU.push((0, PU.y)((0, EU.createElement)(EU.Fragment, null, (0, EU.createElement)(kg, {
-            hud: TU
-          }), (0, EU.createElement)(Dg, {
-            hud: TU
-          }), (0, EU.createElement)(uR, {
-            hud: TU,
-            journal: jU
-          }), (0, EU.createElement)(rg, {
-            placement: GU
-          }), (0, EU.createElement)(Zg, {
-            placement: GU
+        onCreate: uu => {
+          Nu = new ky(uu, Ku), Xu = new Ny(uu, Ku, Nu), Vu = new Ny(uu, Ku, Nu), ru = new Wy(uu, Ku), Bu = new du(uu, ru), xu.push((0, mu.w)((0, Qu.createElement)(Qu.Fragment, null, (0, Qu.createElement)(Zy, {
+            hud: Ju
+          }), (0, Qu.createElement)(qy, {
+            hud: Ju
+          }), (0, Qu.createElement)(xR, {
+            hud: Ju,
+            journal: Bu
+          }), (0, Qu.createElement)(ty, {
+            placement: ru
+          }), (0, Qu.createElement)(Iy, {
+            placement: ru
           })), {
-            content: (0, EU.createElement)(pR, {
-              journal: jU
+            content: (0, Qu.createElement)(KR, {
+              journal: Bu
             })
           }))
         },
-        HG: () => {
-          KU.HG(), cU.HG(), GU.HG(), jU.HG()
+        sr: () => {
+          Xu.sr(), Vu.sr(), ru.sr(), Bu.sr()
         },
-        onPlayerAttemptAltAction: (UU, RU, gU, tU, pU, EU) => {
-          var PU;
-          if (null !== EU) return;
-          const TU = void 0 === RU ? null : [RU, gU, tU];
-          return null !== (PU = KU.attemptAltAction(TU)) && void 0 !== PU ? PU : cU.attemptAltAction(TU)
+        onPlayerAttemptAltAction: (uu, Ru, yu, Eu, Ku, Qu) => {
+          var mu;
+          if (null !== Qu) return;
+          const Ju = void 0 === Ru ? null : [Ru, yu, Eu];
+          return null !== (mu = Xu.attemptAltAction(Ju)) && void 0 !== mu ? mu : Vu.attemptAltAction(Ju)
         },
         onPlayerClickUp: () => {
-          KU.endPress(), cU.endPress()
+          Xu.endPress(), Vu.endPress()
         },
-        onAfterRender: (UU, RU) => {
-          GU.afterRender(RU), KU.afterRender(RU), cU.afterRender(RU)
+        onAfterRender: (uu, Ru) => {
+          ru.afterRender(Ru), Xu.afterRender(Ru), Vu.afterRender(Ru)
         },
         onClose: () => {
-          for (const UU of uU) UU();
-          qU.dispose(), KU.dispose(), cU.dispose(), GU.dispose(), qU = null, KU = null, cU = null, GU = null, jU = null
+          for (const uu of xu) uu();
+          Nu.dispose(), Xu.dispose(), Vu.dispose(), ru.dispose(), Nu = null, Xu = null, Vu = null, ru = null, Bu = null
         },
-        onReceivedMessageFromServer: (UU, RU) => {
-          if ("plotsStarterLot" === UU) TU.receiveStep(RU);
-          else if ("plotsPlot" === UU) TU.receivePlot(RU);
-          else if ("plotsStarterHouse" === UU) KU.qC(RU);
-          else if ("plotsBlueprint" === UU) {
-            const UU = RU;
-            cU.qC(UU), GU.qC(UU)
-          } else "plotsJournal" === UU ? jU.qC(RU) : "plotsJournalOpen" === UU ? jU.openFromServer() : "plotsPreviewEnd" === UU && GU.endFromServer()
+        onReceivedMessageFromServer: (uu, Ru) => {
+          if ("plotsStarterLot" === uu) Ju.receiveStep(Ru);
+          else if ("plotsPlot" === uu) Ju.receivePlot(Ru);
+          else if ("plotsStarterHouse" === uu) Xu.SS(Ru);
+          else if ("plotsBlueprint" === uu) {
+            const uu = Ru;
+            Vu.SS(uu), ru.SS(uu)
+          } else "plotsJournal" === uu ? Bu.SS(Ru) : "plotsJournalOpen" === uu ? Bu.openFromServer() : "plotsPreviewEnd" === uu && ru.endFromServer()
         }
       }
     }
   },
-  38696: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => tU,
-      g: () => EU
+  38891: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Eu,
+      h: () => Qu
     });
-    const tU = 1 / .6,
-      pU = {
+    const Eu = 1 / .6,
+      Ku = {
         kind: "smokePuff"
       };
-    class EU {
-      constructor(UU, RU, gU) {
-        this.style = UU, this.hG = RU, this.half = gU, this.particles = null, this.lastFrame = -1
+    class Qu {
+      constructor(uu, Ru, yu) {
+        this.style = uu, this.Nr = Ru, this.half = yu, this.particles = null, this.lastFrame = -1
       }
-      emit(UU, RU, gU) {
-        let EU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return gU !== this.lastFrame && (this.lastFrame = gU, this.particles || (this.particles = UU.createParticles(function(UU, RU) {
+      emit(uu, Ru, yu) {
+        let Qu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return yu !== this.lastFrame && (this.lastFrame = yu, this.particles || (this.particles = uu.createParticles(function(uu, Ru) {
           const [
-            [gU, EU, PU],
-            [TU, qU, KU]
-          ] = UU.colours;
+            [yu, Qu, mu],
+            [Ju, Nu, Xu]
+          ] = uu.colours;
           return {
-            texture: UU.soft ? pU : "square_particle",
-            hG: RU,
-            minLifeTime: UU.life[0] / tU,
-            maxLifeTime: UU.life[1] / tU,
-            minEmitPower: UU.power[0] * tU,
-            maxEmitPower: UU.power[1] * tU,
-            minSize: UU.size[0],
-            maxSize: UU.size[1],
+            texture: uu.soft ? Ku : "square_particle",
+            Nr: Ru,
+            minLifeTime: uu.life[0] / Eu,
+            maxLifeTime: uu.life[1] / Eu,
+            minEmitPower: uu.power[0] * Eu,
+            maxEmitPower: uu.power[1] * Eu,
+            minSize: uu.size[0],
+            maxSize: uu.size[1],
             emitRate: 0,
-            gravity: [0, UU.lift * tU * tU, 0],
-            dir1: [-UU.spread, 1, -UU.spread],
-            dir2: [UU.spread, 1, UU.spread],
+            gravity: [0, uu.lift * Eu * Eu, 0],
+            dir1: [-uu.spread, 1, -uu.spread],
+            dir2: [uu.spread, 1, uu.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [gU, EU, PU, UU.alpha],
-              maxColor: [TU, qU, KU, UU.alpha]
+              minColor: [yu, Qu, mu, uu.alpha],
+              maxColor: [Ju, Nu, Xu, uu.alpha]
             }, {
               timeFraction: 1,
-              minColor: [gU, EU, PU, 0],
-              maxColor: [TU, qU, KU, 0]
+              minColor: [yu, Qu, mu, 0],
+              maxColor: [Ju, Nu, Xu, 0]
             }],
-            blendMode: UU.blendMode
+            blendMode: uu.blendMode
           }
-        }(this.style, this.hG), {
-          pos: RU,
+        }(this.style, this.Nr), {
+          pos: Ru,
           half: this.half
-        })), this.particles.moveTo(RU, this.half), this.particles.emit(EU), !0)
+        })), this.particles.moveTo(Ru, this.half), this.particles.emit(Qu), !0)
       }
       dispose() {
-        var UU;
-        null === (UU = this.particles) || void 0 === UU || UU.stop(), this.particles = null
+        var uu;
+        null === (uu = this.particles) || void 0 === uu || uu.stop(), this.particles = null
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

@@ -1,26 +1,26 @@
 export const id = 98;
 export const ids = [98];
 export const modules = {
-  4549: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => xU
+  4667: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => du
     });
-    var tU = gU(1481),
-      pU = gU(56),
-      EU = gU(1181),
-      PU = gU(1112),
-      TU = gU(1099),
-      qU = gU(1935),
-      KU = gU(1475),
-      cU = gU(1326),
-      GU = gU(1094),
-      jU = gU(21),
-      uU = gU(1412),
-      CU = gU(1049),
-      hU = gU(2349),
-      QU = gU(1497),
-      eU = gU(1090);
-    const WU = [{
+    var Eu = yu(1483),
+      Ku = yu(64),
+      Qu = yu(1170),
+      mu = yu(1107),
+      Ju = yu(1093),
+      Nu = yu(2001),
+      Xu = yu(1467),
+      Vu = yu(1300),
+      ru = yu(1090),
+      Bu = yu(27),
+      xu = yu(1408),
+      Su = yu(1043),
+      pu = yu(2430),
+      Tu = yu(1497),
+      Wu = yu(1079);
+    const ju = [{
         id: "myGames",
         icon: "joystick",
         title: "studio:myGames"
@@ -33,79 +33,79 @@ export const modules = {
         icon: "file-lines",
         title: "general:docs"
       }],
-      fU = {
+      Hu = {
         myGames: "/studio",
         leaderboard: "/studio/leaderboard",
         docs: "/studio/docs"
       };
 
-    function xU() {
+    function du() {
       const {
-        t: UU
-      } = (0, EU.B)(), RU = (0, KU.useNavigatePreserveSearch)(), gU = (0, tU.s)(), {
-        isUserContextUpdating: xU
-      } = (0, PU.e)(), mU = (0, qU.e)(), IU = (0, TU.k)(), JU = (wU = gU.pathname).startsWith(QU.p) ? null : wU.startsWith(fU.docs) ? "docs" : wU.startsWith(fU.leaderboard) ? "leaderboard" : "myGames";
-      var wU;
-      const nU = function(UU) {
-        if (!UU.startsWith(QU.p)) return {
+        t: uu
+      } = (0, Qu.E)(), Ru = (0, Xu.useNavigatePreserveSearch)(), yu = (0, Eu.s)(), {
+        isUserContextUpdating: du
+      } = (0, mu.d)(), bu = (0, Nu.b)(), Cu = (0, Ju.k)(), ku = (eu = yu.pathname).startsWith(Tu.l) ? null : eu.startsWith(Hu.docs) ? "docs" : eu.startsWith(Hu.leaderboard) ? "leaderboard" : "myGames";
+      var eu;
+      const Au = function(uu) {
+        if (!uu.startsWith(Tu.l)) return {
           title: "studio:leaveStudio",
           icon: "left-from-bracket",
           to: "/"
         };
-        const RU = (0, KU.getPreviousLocation)();
+        const Ru = (0, Xu.getPreviousLocation)();
         return {
           title: "general:back",
           icon: "arrow-left",
-          to: null !== RU && RU.startsWith(fU.myGames) ? -1 : fU.myGames
+          to: null !== Ru && Ru.startsWith(Hu.myGames) ? -1 : Hu.myGames
         }
-      }(gU.pathname);
-      return (0, pU.useEffect)((() => {
-        jU.b.set({
+      }(yu.pathname);
+      return (0, Ku.useEffect)((() => {
+        Bu.d.set({
           gameState: "studio",
           openEverythingMenuName: null
         })
-      }), []), (0, eU.jsxs)("div", {
+      }), []), (0, Wu.jsxs)("div", {
         className: "StudioLayout AnimFadeIn",
-        children: [mU && (0, eU.jsx)("aside", {
+        children: [bu && (0, Wu.jsx)("aside", {
           className: "StudioLayoutLeft",
-          children: (0, eU.jsx)(hU.e, {})
-        }), (0, eU.jsxs)("div", {
+          children: (0, Wu.jsx)(pu.b, {})
+        }), (0, Wu.jsxs)("div", {
           className: "StudioLayoutRight",
-          children: [(0, eU.jsxs)("div", {
+          children: [(0, Wu.jsxs)("div", {
             className: "StudioTop",
-            children: [(0, eU.jsx)(GU.d, {
+            children: [(0, Wu.jsx)(ru.c, {
               show: !0,
-              socialBarIsDocked: mU
-            }), (0, eU.jsxs)("nav", {
+              socialBarIsDocked: bu
+            }), (0, Wu.jsxs)("nav", {
               className: "StudioNav",
-              children: [(0, eU.jsx)(uU.d, {
-                icon: nU.icon,
+              children: [(0, Wu.jsx)(xu.b, {
+                icon: Au.icon,
                 onClick: () => {
-                  RU(nU.to)
+                  Ru(Au.to)
                 },
-                children: UU(nU.title)
-              }), (0, eU.jsx)("div", {
+                children: uu(Au.title)
+              }), (0, Wu.jsx)("div", {
                 className: "StudioNavTabs",
-                children: WU.map((gU => (0, eU.jsxs)(uU.M, {
-                  active: JU === gU.id,
-                  href: fU[gU.id],
+                children: ju.map((yu => (0, Wu.jsxs)(xu.P, {
+                  active: ku === yu.id,
+                  href: Hu[yu.id],
                   onClick: () => {
-                    RU(fU[gU.id])
+                    Ru(Hu[yu.id])
                   },
-                  children: [(0, eU.jsx)(CU.c, {
-                    name: gU.icon
-                  }), !IU && UU(gU.title)]
-                }, gU.id)))
+                  children: [(0, Wu.jsx)(Su.c, {
+                    name: yu.icon
+                  }), !Cu && uu(yu.title)]
+                }, yu.id)))
               })]
             })]
-          }), (0, eU.jsxs)("main", {
+          }), (0, Wu.jsxs)("main", {
             className: "StudioBottom",
-            children: [xU && (0, eU.jsx)("div", {
+            children: [du && (0, Wu.jsx)("div", {
               className: "StudioCentredMessage",
-              children: (0, eU.jsx)(cU.d, {})
-            }), !xU && (0, eU.jsx)("div", {
+              children: (0, Wu.jsx)(Vu.b, {})
+            }), !du && (0, Wu.jsx)("div", {
               className: "StudioContent",
-              children: (0, eU.jsx)(tU.f, {})
+              children: (0, Wu.jsx)(Eu.g, {})
             })]
           })]
         })]
@@ -114,4 +114,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

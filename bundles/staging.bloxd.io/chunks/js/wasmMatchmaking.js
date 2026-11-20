@@ -1,30 +1,30 @@
-/*! For license information please see eulrrq.wasmMatchmaking.1a3f027d.chunk.js.LICENSE.txt */
+/*! For license information please see q3ynmh.wasmMatchmaking.9182a1c1.chunk.js.LICENSE.txt */
 export const id = 59;
 export const ids = [59, 91];
 export const modules = {
-  36127: (UU, RU) => {
-    function gU(UU) {
-      if (UU && "object" === typeof UU) {
-        var RU = UU.which || UU.keyCode || UU.charCode;
-        RU && (UU = RU)
+  36381: (uu, Ru) => {
+    function yu(uu) {
+      if (uu && "object" === typeof uu) {
+        var Ru = uu.which || uu.keyCode || uu.charCode;
+        Ru && (uu = Ru)
       }
-      if ("number" === typeof UU) return PU[UU];
-      var gU, EU = String(UU);
-      return (gU = tU[EU.toLowerCase()]) ? gU : (gU = pU[EU.toLowerCase()]) || (1 === EU.length ? EU.charCodeAt(0) : void 0)
+      if ("number" === typeof uu) return mu[uu];
+      var yu, Qu = String(uu);
+      return (yu = Eu[Qu.toLowerCase()]) ? yu : (yu = Ku[Qu.toLowerCase()]) || (1 === Qu.length ? Qu.charCodeAt(0) : void 0)
     }
-    gU.isEventKey = function(UU, RU) {
-      if (UU && "object" === typeof UU) {
-        var gU = UU.which || UU.keyCode || UU.charCode;
-        if (null === gU || void 0 === gU) return !1;
-        if ("string" === typeof RU) {
-          var EU;
-          if (EU = tU[RU.toLowerCase()]) return EU === gU;
-          if (EU = pU[RU.toLowerCase()]) return EU === gU
-        } else if ("number" === typeof RU) return RU === gU;
+    yu.isEventKey = function(uu, Ru) {
+      if (uu && "object" === typeof uu) {
+        var yu = uu.which || uu.keyCode || uu.charCode;
+        if (null === yu || void 0 === yu) return !1;
+        if ("string" === typeof Ru) {
+          var Qu;
+          if (Qu = Eu[Ru.toLowerCase()]) return Qu === yu;
+          if (Qu = Ku[Ru.toLowerCase()]) return Qu === yu
+        } else if ("number" === typeof Ru) return Ru === yu;
         return !1
       }
     };
-    var tU = (RU = UU.exports = gU).code = RU.codes = {
+    var Eu = (Ru = uu.exports = yu).code = Ru.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      pU = RU.aliases = {
+      Ku = Ru.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (EU = 97; EU < 123; EU++) tU[String.fromCharCode(EU)] = EU - 32;
-    for (var EU = 48; EU < 58; EU++) tU[EU - 48] = EU;
-    for (EU = 1; EU < 13; EU++) tU["f" + EU] = EU + 111;
-    for (EU = 0; EU < 10; EU++) tU["numpad " + EU] = EU + 96;
-    var PU = RU.names = RU.title = {};
-    for (EU in tU) PU[tU[EU]] = EU;
-    for (var TU in pU) tU[TU] = pU[TU]
+    for (Qu = 97; Qu < 123; Qu++) Eu[String.fromCharCode(Qu)] = Qu - 32;
+    for (var Qu = 48; Qu < 58; Qu++) Eu[Qu - 48] = Qu;
+    for (Qu = 1; Qu < 13; Qu++) Eu["f" + Qu] = Qu + 111;
+    for (Qu = 0; Qu < 10; Qu++) Eu["numpad " + Qu] = Qu + 96;
+    var mu = Ru.names = Ru.title = {};
+    for (Qu in Eu) mu[Eu[Qu]] = Qu;
+    for (var Ju in Ku) Eu[Ju] = Ku[Ju]
   },
-  36292: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => PU
+  36539: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => mu
     });
-    var tU = gU(56);
-    const pU = tU.useLayoutEffect;
-    const EU = function(UU) {
-      var RU = (0, tU.useRef)(UU);
-      return pU((function() {
-        RU.current = UU
-      })), RU
+    var Eu = yu(64);
+    const Ku = Eu.useLayoutEffect;
+    const Qu = function(uu) {
+      var Ru = (0, Eu.useRef)(uu);
+      return Ku((function() {
+        Ru.current = uu
+      })), Ru
     };
-    var PU = function(UU) {
-      var RU = EU(UU);
-      (0, tU.useEffect)((function() {
-        var UU = function(UU) {
-          var gU;
-          if (null != RU.current && (gU = RU.current(UU)), UU.defaultPrevented && (UU.returnValue = ""), "string" === typeof gU) return UU.returnValue = gU, gU
+    var mu = function(uu) {
+      var Ru = Qu(uu);
+      (0, Eu.useEffect)((function() {
+        var uu = function(uu) {
+          var yu;
+          if (null != Ru.current && (yu = Ru.current(uu)), uu.defaultPrevented && (uu.returnValue = ""), "string" === typeof yu) return uu.returnValue = yu, yu
         };
-        return window.addEventListener("beforeunload", UU),
+        return window.addEventListener("beforeunload", uu),
           function() {
-            window.removeEventListener("beforeunload", UU)
+            window.removeEventListener("beforeunload", uu)
           }
       }), [])
     }
   },
-  36174: UU => {
-    var RU, gU = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      tU = /OS X/.test(gU),
-      pU = /Opera/.test(gU),
-      EU = !/like Gecko/.test(gU) && !pU,
-      PU = UU.exports = {
-        0: tU ? "<menu>" : "<UNK>",
+  36422: uu => {
+    var Ru, yu = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Eu = /OS X/.test(yu),
+      Ku = /Opera/.test(yu),
+      Qu = !/like Gecko/.test(yu) && !Ku,
+      mu = uu.exports = {
+        0: Eu ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: tU ? "<meta>" : "<menu>",
+        93: Eu ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: tU && EU ? "-" : "<volume-mute>",
+        173: Eu && Qu ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: pU ? "`" : "<unicode>",
+        231: Ku ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,454 +234,454 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (RU = 58; RU < 65; ++RU) PU[RU] = String.fromCharCode(RU);
-    for (RU = 48; RU < 58; ++RU) PU[RU] = RU - 48 + "";
-    for (RU = 65; RU < 91; ++RU) PU[RU] = String.fromCharCode(RU);
-    for (RU = 96; RU < 106; ++RU) PU[RU] = "<num-" + (RU - 96) + ">";
-    for (RU = 112; RU < 136; ++RU) PU[RU] = "F" + (RU - 111)
+    for (Ru = 58; Ru < 65; ++Ru) mu[Ru] = String.fromCharCode(Ru);
+    for (Ru = 48; Ru < 58; ++Ru) mu[Ru] = Ru - 48 + "";
+    for (Ru = 65; Ru < 91; ++Ru) mu[Ru] = String.fromCharCode(Ru);
+    for (Ru = 96; Ru < 106; ++Ru) mu[Ru] = "<num-" + (Ru - 96) + ">";
+    for (Ru = 112; Ru < 136; ++Ru) mu[Ru] = "F" + (Ru - 111)
   },
-  36203: (UU, RU, gU) => {
-    function tU(UU, RU, gU, tU) {
-      return !(gU && !UU.aimable) && (!RU || UU.gun && "head" !== tU)
+  36457: (uu, Ru, yu) => {
+    function Eu(uu, Ru, yu, Eu) {
+      return !(yu && !uu.aimable) && (!Ru || uu.gun && "head" !== Eu)
     }
 
-    function pU(UU) {
-      return Math.max(.1 * UU, 1)
+    function Ku(uu) {
+      return Math.max(.1 * uu, 1)
     }
 
-    function EU(UU, RU) {
-      return !UU && RU
+    function Qu(uu, Ru) {
+      return !uu && Ru
     }
-    gU.d(RU, {
-      b: () => EU,
-      d: () => pU,
-      e: () => tU
+    yu.d(Ru, {
+      c: () => Qu,
+      e: () => Ku,
+      g: () => Eu
     })
   },
-  36209: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => TU,
-      f: () => PU
+  36459: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      f: () => mu
     });
-    let tU = null;
-    const pU = {
+    let Eu = null;
+    const Ku = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      EU = {
-        crosshairAccuracy: UU => {
-          const RU = pU.crosshairAccuracy.at(-1);
-          RU ? RU.hook(UU) : tU = UU
+      Qu = {
+        crosshairAccuracy: uu => {
+          const Ru = Ku.crosshairAccuracy.at(-1);
+          Ru ? Ru.hook(uu) : Eu = uu
         },
-        turnDamageIndicators: UU => {
-          var RU;
-          null === (RU = pU.turnDamageIndicators.at(-1)) || void 0 === RU || RU.hook(UU)
+        turnDamageIndicators: uu => {
+          var Ru;
+          null === (Ru = Ku.turnDamageIndicators.at(-1)) || void 0 === Ru || Ru.hook(uu)
         }
       };
 
-    function PU(UU, RU) {
-      const gU = {
-          hook: RU
+    function mu(uu, Ru) {
+      const yu = {
+          hook: Ru
         },
-        PU = pU[UU];
-      if (PU.push(gU), "crosshairAccuracy" === UU && null !== tU) {
-        const UU = tU;
-        tU = null, EU.crosshairAccuracy(UU)
+        mu = Ku[uu];
+      if (mu.push(yu), "crosshairAccuracy" === uu && null !== Eu) {
+        const uu = Eu;
+        Eu = null, Qu.crosshairAccuracy(uu)
       }
       return () => {
-        const UU = PU.indexOf(gU); - 1 !== UU && PU.splice(UU, 1)
+        const uu = mu.indexOf(yu); - 1 !== uu && mu.splice(uu, 1)
       }
     }
 
-    function TU() {
-      return EU
+    function Ju() {
+      return Qu
     }
   },
-  6339: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => pU,
-      e: () => EU
+  6436: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Ku,
+      h: () => Qu
     });
-    var tU = gU(34);
-    const pU = "shaderPack";
-    async function EU() {
-      var UU;
-      let RU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (UU = await tU.g.getItem(pU, RU)) && void 0 !== UU ? UU : null
+    var Eu = yu(47);
+    const Ku = "shaderPack";
+    async function Qu() {
+      var uu;
+      let Ru = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (uu = await Eu.f.getItem(Ku, Ru)) && void 0 !== uu ? uu : null
     }
   },
-  8536: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => EU,
-      e: () => pU
+  8663: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Qu,
+      f: () => Ku
     });
-    let tU = !1;
+    let Eu = !1;
 
-    function pU() {
-      tU = !0
+    function Ku() {
+      Eu = !0
     }
 
-    function EU() {
-      return tU
+    function Qu() {
+      return Eu
     }
   },
-  36018: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      InGameUi: () => fU.e,
-      LobbyLeaderboard: () => xU.d,
-      loadCharacterCustomisationUI: () => mU,
-      loadCharacterPreview: () => IU,
-      matchmakeAndPlay: () => bU,
-      setUpGame: () => JU
+  36300: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      InGameUi: () => Hu.c,
+      LobbyLeaderboard: () => du.b,
+      loadCharacterCustomisationUI: () => bu,
+      loadCharacterPreview: () => Cu,
+      matchmakeAndPlay: () => Du,
+      setUpGame: () => ku
     });
-    var tU = gU(1240),
-      pU = gU(165),
-      EU = gU(21),
-      PU = gU(36022),
-      TU = gU(36024),
-      qU = gU(1821),
-      KU = gU(36066);
+    var Eu = yu(1217),
+      Ku = yu(174),
+      Qu = yu(27),
+      mu = yu(36304),
+      Ju = yu(36312),
+      Nu = yu(1878),
+      Xu = yu(36332);
 
-    function cU() {
-      return !1 !== qU.b.get("canCustomiseChar")
+    function Vu() {
+      return !1 !== Nu.b.get("canCustomiseChar")
     }
-    let GU = !1;
-    var jU = gU(1316),
-      uU = gU(1249),
-      CU = gU(668),
-      hU = gU(8536);
-    var QU = gU(8529),
-      eU = gU(3262),
-      WU = gU(1688);
-    var fU = gU(36081),
-      xU = gU(36531);
+    let ru = !1;
+    var Bu = yu(1280),
+      xu = yu(1224),
+      Su = yu(684),
+      pu = yu(8663);
+    var Tu = yu(8654),
+      Wu = yu(3394),
+      ju = yu(1718);
+    var Hu = yu(36344),
+      du = yu(36766);
 
-    function mU() {
-      return Promise.all([gU.e(281), gU.e(387)]).then((() => gU(40669)))
-    }
-
-    function IU() {
-      return gU.e(282).then((() => gU(40675)))
+    function bu() {
+      return Promise.all([yu.e(281), yu.e(387)]).then((() => yu(40877)))
     }
 
-    function JU() {
-      return (0, QU.f)()
+    function Cu() {
+      return yu.e(282).then((() => yu(40884)))
     }
-    GU || (GU = !0, document.addEventListener("keydown", (UU => {
-        (0, KU.b)(UU, cU)
+
+    function ku() {
+      return (0, Tu.e)()
+    }
+    ru || (ru = !0, document.addEventListener("keydown", (uu => {
+        (0, Xu.d)(uu, Vu)
       }))),
-      function(UU) {
-        var RU;
-        return !0 !== (null === UU || void 0 === UU ? void 0 : UU.saveData) && !/2g$/.test(null !== (RU = null === UU || void 0 === UU ? void 0 : UU.effectiveType) && void 0 !== RU ? RU : "")
-      }(navigator.connection) && (0, CU.e)((() => {
-        (0, hU.b)() || Promise.all([gU.e(74), gU.e(132), gU.e(87), gU.e(55)]).then((() => gU(40145))).then((UU => {
-          (0, hU.b)() || UU.startLoadAheadOfJoin({
-            joinStarted: hU.b,
-            language: uU.g.get().getCurrentLanguageCode()
+      function(uu) {
+        var Ru;
+        return !0 !== (null === uu || void 0 === uu ? void 0 : uu.saveData) && !/2g$/.test(null !== (Ru = null === uu || void 0 === uu ? void 0 : uu.effectiveType) && void 0 !== Ru ? Ru : "")
+      }(navigator.connection) && (0, Su.c)((() => {
+        (0, pu.c)() || Promise.all([yu.e(74), yu.e(132), yu.e(87), yu.e(55)]).then((() => yu(40334))).then((uu => {
+          (0, pu.c)() || uu.startLoadAheadOfJoin({
+            joinStarted: pu.c,
+            language: xu.f.get().getCurrentLanguageCode()
           })
-        }), (UU => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", UU)
+        }), (uu => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", uu)
         }))
       }));
-    const wU = EU.b.get("router");
-    null === wU ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function UU(RU) {
-      if ((0, WU.c)(RU.state.location.pathname)) return void(0, QU.d)().catch((() => {}));
-      const gU = RU.subscribe((tU => {
-        (0, WU.c)(tU.location.pathname) && (gU(), (0, eU.e)().then((() => {
-          UU(RU)
+    const eu = Qu.d.get("router");
+    null === eu ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function uu(Ru) {
+      if ((0, ju.c)(Ru.state.location.pathname)) return void(0, Tu.c)().catch((() => {}));
+      const yu = Ru.subscribe((Eu => {
+        (0, ju.c)(Eu.location.pathname) && (yu(), (0, Wu.b)().then((() => {
+          uu(Ru)
         })))
       }))
-    }(wU), (0, PU.c)();
-    const nU = (0, TU.e)((async function(UU, RU) {
+    }(eu), (0, mu.c)();
+    const Au = (0, Ju.e)((async function(uu, Ru) {
       let {
-        place: gU,
-        userContext: EU,
-        direct: PU,
-        rematch: TU
-      } = UU;
-      const qU = PU ? 1 / 0 : performance.now();
-      let KU;
+        place: yu,
+        userContext: Qu,
+        direct: mu,
+        rematch: Ju
+      } = uu;
+      const Nu = mu ? 1 / 0 : performance.now();
+      let Xu;
       try {
-        KU = await (0, QU.d)()
-      } catch (cU) {
-        return console.error("The wasm client did not load:", cU), (0, jU.m)({
+        Xu = await (0, Tu.c)()
+      } catch (Vu) {
+        return console.error("The wasm client did not load:", Vu), (0, Bu.n)({
           websocketUrl: null
-        }), tU.c.errorWithCode(String(cU), pU.l.CONNECT_TO_GAME_SERVER, {
-          error: cU,
-          severity: RU.aborted ? "low" : "medium",
-          cg: RU.aborted
+        }), Eu.c.errorWithCode(String(Vu), Ku.p.CONNECT_TO_GAME_SERVER, {
+          error: Vu,
+          severity: Ru.aborted ? "low" : "medium",
+          Ty: Ru.aborted
         })
       }
-      return KU.playWasmGame({
-        userContext: EU,
-        place: gU,
-        matchedAt: qU,
-        rematch: TU
-      }, RU)
+      return Xu.playWasmGame({
+        userContext: Qu,
+        place: yu,
+        matchedAt: Nu,
+        rematch: Ju
+      }, Ru)
     }));
 
-    function bU() {
-      return (0, QU.d)().catch((() => {})), nU(...arguments)
+    function Du() {
+      return (0, Tu.c)().catch((() => {})), Au(...arguments)
     }
   },
-  8529: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => cU,
-      f: () => GU
+  8654: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Vu,
+      e: () => ru
     });
-    var tU = gU(2840),
-      pU = gU(2116),
-      EU = gU(2886),
-      PU = gU(4310),
-      TU = gU(3194),
-      qU = gU(8536);
-    let KU = null;
+    var Eu = yu(2936),
+      Ku = yu(2184),
+      Qu = yu(2990),
+      mu = yu(4427),
+      Ju = yu(3318),
+      Nu = yu(8663);
+    let Xu = null;
 
-    function cU() {
-      return PU.d.cancelDownloadForJoin(), (0, TU.d)(), (0, pU.g)(), (0, qU.e)(), (0, EU.f)(), Promise.all([gU.e(69), gU.e(72), gU.e(71), gU.e(70), gU.e(83), gU.e(259), gU.e(199), gU.e(216), gU.e(237), gU.e(212), gU.e(46)]).then((() => gU(40061))).catch((() => {})), Promise.all([gU.e(74), gU.e(132), gU.e(87), gU.e(55)]).then((() => gU(40145))).then((UU => {
+    function Vu() {
+      return mu.c.cancelDownloadForJoin(), (0, Ju.c)(), (0, Ku.g)(), (0, Nu.f)(), (0, Qu.i)(), Promise.all([yu.e(69), yu.e(72), yu.e(71), yu.e(70), yu.e(83), yu.e(259), yu.e(199), yu.e(216), yu.e(237), yu.e(212), yu.e(46)]).then((() => yu(40253))).catch((() => {})), Promise.all([yu.e(74), yu.e(132), yu.e(87), yu.e(55)]).then((() => yu(40334))).then((uu => {
         let {
-          startJoinLoad: RU
-        } = UU;
-        RU()
-      }), (() => {})), KU ??= Promise.all([gU.e(71), gU.e(74), gU.e(129), gU.e(73), gU.e(132), gU.e(262), gU.e(186), gU.e(87), gU.e(86), gU.e(85), gU.e(212), gU.e(60)]).then((() => gU(40241))).then((UU => (UU.startWasmPlay(), UU.followPageUiPack((UU => {
-        tU.e.showGamePack(UU)
-      })), UU)), (UU => {
-        throw KU = null, UU
-      })), KU
+          startJoinLoad: Ru
+        } = uu;
+        Ru()
+      }), (() => {})), Xu ??= Promise.all([yu.e(71), yu.e(74), yu.e(129), yu.e(73), yu.e(132), yu.e(262), yu.e(186), yu.e(87), yu.e(86), yu.e(85), yu.e(212), yu.e(60)]).then((() => yu(40418))).then((uu => (uu.startWasmPlay(), uu.followPageUiPack((uu => {
+        Eu.c.showGamePack(uu)
+      })), uu)), (uu => {
+        throw Xu = null, uu
+      })), Xu
     }
 
-    function GU() {
-      return Promise.all([gU.e(71), gU.e(74), gU.e(129), gU.e(73), gU.e(132), gU.e(262), gU.e(186), gU.e(87), gU.e(86), gU.e(85), gU.e(212), gU.e(60)]).then((() => gU(40241))).then((UU => {
-        UU.startWasmPreviews(), UU.prefetchWasmPreviews()
+    function ru() {
+      return Promise.all([yu.e(71), yu.e(74), yu.e(129), yu.e(73), yu.e(132), yu.e(262), yu.e(186), yu.e(87), yu.e(86), yu.e(85), yu.e(212), yu.e(60)]).then((() => yu(40418))).then((uu => {
+        uu.startWasmPreviews(), uu.prefetchWasmPreviews()
       }))
     }
   },
-  4512: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      Howl: () => pU.Howl,
-      Howler: () => pU.Howler,
-      iosAudio: () => qU,
-      musicOutput: () => QU,
-      readyAudioContext: () => eU
+  4630: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      Howl: () => Ku.Howl,
+      Howler: () => Ku.Howler,
+      iosAudio: () => Nu,
+      musicOutput: () => Tu,
+      readyAudioContext: () => Wu
     });
-    var tU, pU = gU(4518),
-      EU = gU(96);
-    const PU = pU.Howler;
-    let TU;
+    var Eu, Ku = yu(4638),
+      Qu = yu(106);
+    const mu = Ku.Howler;
+    let Ju;
 
-    function qU() {
-      return TU ??= "ios" === (0, EU.getOperatingSystem)(), TU
+    function Nu() {
+      return Ju ??= "ios" === (0, Qu.getOperatingSystem)(), Ju
     }
 
-    function KU() {
-      var UU, RU;
-      if (PU.ctx || !PU.usingWebAudio || "undefined" === typeof AudioContext || !qU()) return;
-      const gU = navigator.audioSession;
-      let tU;
-      "auto" === (null === gU || void 0 === gU ? void 0 : gU.type) && (gU.type = "ambient");
+    function Xu() {
+      var uu, Ru;
+      if (mu.ctx || !mu.usingWebAudio || "undefined" === typeof AudioContext || !Nu()) return;
+      const yu = navigator.audioSession;
+      let Eu;
+      "auto" === (null === yu || void 0 === yu ? void 0 : yu.type) && (yu.type = "ambient");
       try {
-        tU = new AudioContext({
+        Eu = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const pU = tU.createGain();
-      pU.gain.setValueAtTime(PU._muted ? 0 : null !== (UU = PU._volume) && void 0 !== UU ? UU : 1, tU.currentTime), pU.connect(tU.destination), PU.ctx = tU, PU.masterGain = pU, null === (RU = PU._setup) || void 0 === RU || RU.call(PU)
+      const Ku = Eu.createGain();
+      Ku.gain.setValueAtTime(mu._muted ? 0 : null !== (uu = mu._volume) && void 0 !== uu ? uu : 1, Eu.currentTime), Ku.connect(Eu.destination), mu.ctx = Eu, mu.masterGain = Ku, null === (Ru = mu._setup) || void 0 === Ru || Ru.call(mu)
     }
-    PU._mobileUnloaded = !0;
-    const cU = PU.volume.bind(pU.Howler);
-    PU.volume = function() {
-      return KU(), cU(...arguments)
+    mu._mobileUnloaded = !0;
+    const Vu = mu.volume.bind(Ku.Howler);
+    mu.volume = function() {
+      return Xu(), Vu(...arguments)
     };
-    const GU = PU.mute.bind(pU.Howler);
-    PU.mute = UU => (KU(), GU(UU));
-    const jU = pU.Howl.prototype,
-      uU = jU.init;
-    jU.init = function(UU) {
-      return KU(), uU.call(this, UU)
+    const ru = mu.mute.bind(Ku.Howler);
+    mu.mute = uu => (Xu(), ru(uu));
+    const Bu = Ku.Howl.prototype,
+      xu = Bu.init;
+    Bu.init = function(uu) {
+      return Xu(), xu.call(this, uu)
     };
-    let CU = 0;
-    const hU = null === (tU = PU._autoSuspend) || void 0 === tU ? void 0 : tU.bind(pU.Howler);
+    let Su = 0;
+    const pu = null === (Eu = mu._autoSuspend) || void 0 === Eu ? void 0 : Eu.bind(Ku.Howler);
 
-    function QU() {
-      eU();
+    function Tu() {
+      Wu();
       const {
-        ctx: UU,
-        masterGain: RU
-      } = PU;
-      return UU && RU ? {
-        ctx: UU,
-        destination: RU,
-        holdAwake: UU => {
-          var RU, gU;
-          (CU += UU ? 1 : -1, UU) ? null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU): null === (gU = PU._autoSuspend) || void 0 === gU || gU.call(PU)
+        ctx: uu,
+        masterGain: Ru
+      } = mu;
+      return uu && Ru ? {
+        ctx: uu,
+        destination: Ru,
+        holdAwake: uu => {
+          var Ru, yu;
+          (Su += uu ? 1 : -1, uu) ? null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu): null === (yu = mu._autoSuspend) || void 0 === yu || yu.call(mu)
         },
         wake: () => {
-          var RU;
-          "running" !== UU.state && (null === (RU = PU._autoResume) || void 0 === RU || RU.call(PU), UU.resume().catch((() => {})))
+          var Ru;
+          "running" !== uu.state && (null === (Ru = mu._autoResume) || void 0 === Ru || Ru.call(mu), uu.resume().catch((() => {})))
         }
       } : null
     }
 
-    function eU() {
-      var UU;
-      (PU.volume(), PU.ctx && PU.autoUnlock) && (null === (UU = PU._unlockAudio) || void 0 === UU || UU.call(PU))
+    function Wu() {
+      var uu;
+      (mu.volume(), mu.ctx && mu.autoUnlock) && (null === (uu = mu._unlockAudio) || void 0 === uu || uu.call(mu))
     }
-    hU && (PU._autoSuspend = () => CU > 0 ? pU.Howler : hU())
+    pu && (mu._autoSuspend = () => Su > 0 ? Ku.Howler : pu())
   },
-  36319: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => PU,
-      f: () => pU,
-      g: () => tU
+  36560: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => mu,
+      d: () => Ku,
+      g: () => Eu
     });
 
-    function tU(UU) {
-      return UU.replace(/[_\-\s]*\d+$/, "") || UU
+    function Eu(uu) {
+      return uu.replace(/[_\-\s]*\d+$/, "") || uu
     }
 
-    function pU(UU, RU, gU) {
-      return gU <= 0 ? 0 : UU * gU / Math.max(RU, gU)
+    function Ku(uu, Ru, yu) {
+      return yu <= 0 ? 0 : uu * yu / Math.max(Ru, yu)
     }
 
-    function EU(UU, RU) {
-      const gU = UU.getDurationMs();
-      return gU > 0 ? UU.loudness * Math.max(0, 1 - (RU - UU.startMs) / gU) : 0
+    function Qu(uu, Ru) {
+      const yu = uu.getDurationMs();
+      return yu > 0 ? uu.loudness * Math.max(0, 1 - (Ru - uu.startMs) / yu) : 0
     }
-    class PU {
+    class mu {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = UU, this.maxPerGroup = RU, this.voices = []
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = uu, this.maxPerGroup = Ru, this.voices = []
       }
-      admit(UU) {
-        if (this.voices = this.voices.filter((UU => UU.isAlive())), null !== UU.group) {
-          const RU = this.voices.filter((RU => RU.group === UU.group));
-          if (RU.length >= this.maxPerGroup && !this.dropLeastWorth(RU, UU)) return !1
+      admit(uu) {
+        if (this.voices = this.voices.filter((uu => uu.isAlive())), null !== uu.group) {
+          const Ru = this.voices.filter((Ru => Ru.group === uu.group));
+          if (Ru.length >= this.maxPerGroup && !this.dropLeastWorth(Ru, uu)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, UU)) && (this.voices.push(UU), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, uu)) && (this.voices.push(uu), !0)
       }
-      dropLeastWorth(UU, RU) {
-        let gU = null,
-          tU = 1 / 0;
-        for (const pU of UU) {
-          if (!pU.canStop()) continue;
-          const UU = EU(pU, RU.startMs);
-          UU < tU && (gU = pU, tU = UU)
+      dropLeastWorth(uu, Ru) {
+        let yu = null,
+          Eu = 1 / 0;
+        for (const Ku of uu) {
+          if (!Ku.canStop()) continue;
+          const uu = Qu(Ku, Ru.startMs);
+          uu < Eu && (yu = Ku, Eu = uu)
         }
-        return !(!gU || RU.loudness < tU) && (this.voices.splice(this.voices.indexOf(gU), 1), gU.stop(), !0)
+        return !(!yu || Ru.loudness < Eu) && (this.voices.splice(this.voices.indexOf(yu), 1), yu.stop(), !0)
       }
     }
   },
-  36329: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => EU,
-      d: () => PU,
-      e: () => tU
+  36571: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Qu,
+      g: () => mu,
+      h: () => Eu
     });
-    class tU {
-      constructor(UU) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = UU
+    class Eu {
+      constructor(uu) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = uu
       }
-      setMultiplierType(UU, RU) {
-        var gU;
-        this.multipliers[UU] = RU, null === (gU = this._onUpdate) || void 0 === gU || gU.call(this)
+      setMultiplierType(uu, Ru) {
+        var yu;
+        this.multipliers[uu] = Ru, null === (yu = this._onUpdate) || void 0 === yu || yu.call(this)
       }
-      removeMultiplier(UU) {
-        var RU;
-        delete this.multipliers[UU], null === (RU = this._onUpdate) || void 0 === RU || RU.call(this)
+      removeMultiplier(uu) {
+        var Ru;
+        delete this.multipliers[uu], null === (Ru = this._onUpdate) || void 0 === Ru || Ru.call(this)
       }
-      getMultiplierType(UU) {
-        return this.multipliers[UU]
+      getMultiplierType(uu) {
+        return this.multipliers[uu]
       }
       getTotalMultipliedVal() {
-        let UU = 1;
-        for (const RU in this.multipliers) UU *= this.multipliers[RU];
-        return UU
+        let uu = 1;
+        for (const Ru in this.multipliers) uu *= this.multipliers[Ru];
+        return uu
       }
     }
-    class pU {
+    class Ku {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = UU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = uu
       }
-      setBooleanType(UU, RU) {
-        const gU = this._getTotalBooleanVal();
-        this.booleans[UU] = !!RU;
-        const tU = this.getTotalBooleanVal();
-        var pU;
-        tU !== gU && (null === (pU = this._onUpdate) || void 0 === pU || pU.call(this, tU, this.booleans));
-        return tU
+      setBooleanType(uu, Ru) {
+        const yu = this._getTotalBooleanVal();
+        this.booleans[uu] = !!Ru;
+        const Eu = this.getTotalBooleanVal();
+        var Ku;
+        Eu !== yu && (null === (Ku = this._onUpdate) || void 0 === Ku || Ku.call(this, Eu, this.booleans));
+        return Eu
       }
-      removeBoolean(UU) {
-        const RU = this._getTotalBooleanVal();
-        delete this.booleans[UU];
-        const gU = this._getTotalBooleanVal();
-        var tU;
-        null !== gU && gU !== RU && (null === (tU = this._onUpdate) || void 0 === tU || tU.call(this, gU, this.booleans));
-        return null !== gU && void 0 !== gU && gU
+      removeBoolean(uu) {
+        const Ru = this._getTotalBooleanVal();
+        delete this.booleans[uu];
+        const yu = this._getTotalBooleanVal();
+        var Eu;
+        null !== yu && yu !== Ru && (null === (Eu = this._onUpdate) || void 0 === Eu || Eu.call(this, yu, this.booleans));
+        return null !== yu && void 0 !== yu && yu
       }
-      getBooleanType(UU) {
-        return this.booleans[UU]
+      getBooleanType(uu) {
+        return this.booleans[uu]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var UU;
-        null === (UU = this._onUpdate) || void 0 === UU || UU.call(this, this.getTotalBooleanVal(), this.booleans)
+        var uu;
+        null === (uu = this._onUpdate) || void 0 === uu || uu.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class EU extends pU {
+    class Qu extends Ku {
       getTotalBooleanVal() {
-        const UU = this._getTotalBooleanVal();
-        if (null === UU) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return UU
+        const uu = this._getTotalBooleanVal();
+        if (null === uu) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return uu
       }
       _getTotalBooleanVal() {
-        let UU = !1,
-          RU = !0;
-        for (const gU in this.booleans) UU = !0, RU &&= this.booleans[gU];
-        return UU ? RU : null
+        let uu = !1,
+          Ru = !0;
+        for (const yu in this.booleans) uu = !0, Ru &&= this.booleans[yu];
+        return uu ? Ru : null
       }
     }
-    class PU extends pU {
+    class mu extends Ku {
       getTotalBooleanVal() {
-        const UU = this._getTotalBooleanVal();
-        if (null === UU) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return UU
+        const uu = this._getTotalBooleanVal();
+        if (null === uu) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return uu
       }
       _getTotalBooleanVal() {
-        let UU = !1,
-          RU = !1;
-        for (const gU in this.booleans) UU = !0, RU ||= this.booleans[gU];
-        return UU ? RU : null
+        let uu = !1,
+          Ru = !1;
+        for (const yu in this.booleans) uu = !0, Ru ||= this.booleans[yu];
+        return uu ? Ru : null
       }
     }
   },
-  9155: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => pU,
-      f: () => EU
+  9247: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Ku,
+      h: () => Qu
     });
-    var tU = gU(9121);
-    const pU = "Air",
-      EU = Object.freeze(new tU.h(pU, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Eu = yu(9205);
+    const Ku = "Air",
+      Qu = Object.freeze(new Eu.e(Ku, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  36324: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => EU,
-      d: () => tU,
-      e: () => pU
+  36565: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Qu,
+      e: () => Eu,
+      h: () => Ku
     });
-    const tU = 15,
-      pU = 3,
-      EU = 30
+    const Eu = 15,
+      Ku = 3,
+      Qu = 30
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

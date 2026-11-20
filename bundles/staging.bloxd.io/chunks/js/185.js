@@ -1,43 +1,43 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  8880: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      ALL_DEV_TOOLS: () => PU,
-      coreDevTools: () => KU,
-      devTools: () => qU
+  8946: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      ALL_DEV_TOOLS: () => mu,
+      coreDevTools: () => Xu,
+      devTools: () => Nu
     });
-    var tU = gU(603),
-      pU = gU(1293),
-      EU = gU(8887);
-    const PU = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function TU() {
+    var Eu = yu(624),
+      Ku = yu(1257),
+      Qu = yu(8949);
+    const mu = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function Ju() {
       const {
-        noaDevTools: UU
-      } = await gU.e(230).then((() => gU(40455)));
-      return UU
+        noaDevTools: uu
+      } = await yu.e(230).then((() => yu(40636)));
+      return uu
     }
-    const qU = new class {
+    const Nu = new class {
         constructor() {
-          this.loadHost = TU, this.tools = PU
+          this.loadHost = Ju, this.tools = mu
         }
-        setHost(UU) {
-          this.tools = null === UU ? PU : UU.tools, this.loadHost = null === UU ? TU : async () => UU
+        setHost(uu) {
+          this.tools = null === uu ? mu : uu.tools, this.loadHost = null === uu ? Ju : async () => uu
         }
-        supports(UU) {
-          return this.tools.has(UU)
+        supports(uu) {
+          return this.tools.has(uu)
         }
-        async downloadScene(UU, RU) {
-          const gU = await this.loadHost();
-          await gU.downloadScene(UU, RU)
+        async downloadScene(uu, Ru) {
+          const yu = await this.loadHost();
+          await yu.downloadScene(uu, Ru)
         }
-        async setAmbientLightIntensity(UU) {
-          const RU = await this.loadHost();
-          await RU.setAmbientLightIntensity(UU)
+        async setAmbientLightIntensity(uu) {
+          const Ru = await this.loadHost();
+          await Ru.setAmbientLightIntensity(uu)
         }
       },
-      KU = {
-        tools: EU.b,
+      Xu = {
+        tools: Qu.d,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -45,10 +45,10 @@ export const modules = {
           throw new Error("This client can't set the ambient light")
         }
       };
-    tU.u && qU.setHost(KU), (0, pU.x)((() => {
-      qU.setHost(KU)
+    Eu.q && Nu.setHost(Xu), (0, Ku.t)((() => {
+      Nu.setHost(Xu)
     }))
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

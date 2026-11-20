@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  38806: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => tU
+  39012: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => Eu
     });
-    const tU = function(UU, RU, gU) {
-      let tU;
+    const Eu = function(uu, Ru, yu) {
+      let Eu;
       return {
-        onCreate: UU => {
-          tU = UU
+        onCreate: uu => {
+          Eu = uu
         },
-        onPlayerAltAction: (UU, RU, gU, pU, EU, PU) => {
-          PU && "Mesh" === tU.getEntityType(PU) && ("Permanent Upgrades" === tU.getEntityName(PU) ? tU.openShop(UU, !1, "Upgrades") : "Items" === tU.getEntityName(PU) ? tU.openShop(UU, !1, "Items") : "Prestige" === tU.getEntityName(PU) && tU.openShop(UU, !1, "Prestige"))
+        onPlayerAltAction: (uu, Ru, yu, Ku, Qu, mu) => {
+          mu && "Mesh" === Eu.getEntityType(mu) && ("Permanent Upgrades" === Eu.getEntityName(mu) ? Eu.openShop(uu, !1, "Upgrades") : "Items" === Eu.getEntityName(mu) ? Eu.openShop(uu, !1, "Items") : "Prestige" === Eu.getEntityName(mu) && Eu.openShop(uu, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

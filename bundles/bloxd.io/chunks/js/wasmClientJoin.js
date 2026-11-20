@@ -1,31 +1,31 @@
 export const id = 54;
 export const ids = [54];
 export const modules = {
-  40003: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => pU,
-      d: () => cU
+  40205: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Ku,
+      g: () => Vu
     });
-    const tU = new TextDecoder;
+    const Eu = new TextDecoder;
 
-    function pU(UU) {
-      const RU = new EU(UU),
-        gU = RU.value();
-      if (RU.at !== UU.length) throw new Error(`msgpack: ${UU.length-RU.at} bytes after the value`);
-      return gU
+    function Ku(uu) {
+      const Ru = new Qu(uu),
+        yu = Ru.value();
+      if (Ru.at !== uu.length) throw new Error(`msgpack: ${uu.length-Ru.at} bytes after the value`);
+      return yu
     }
-    class EU {
-      constructor(UU) {
-        this.bytes = UU, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(UU.buffer, UU.byteOffset, UU.byteLength)
+    class Qu {
+      constructor(uu) {
+        this.bytes = uu, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(uu.buffer, uu.byteOffset, uu.byteLength)
       }
       value() {
-        const UU = this.u8();
-        if (UU <= 127) return UU;
-        if (UU >= 224) return UU - 256;
-        if (UU >= 128 && UU <= 143) return this.map(15 & UU);
-        if (UU >= 144 && UU <= 159) return this.array(15 & UU);
-        if (UU >= 160 && UU <= 191) return this.str(31 & UU);
-        switch (UU) {
+        const uu = this.u8();
+        if (uu <= 127) return uu;
+        if (uu >= 224) return uu - 256;
+        if (uu >= 128 && uu <= 143) return this.map(15 & uu);
+        if (uu >= 144 && uu <= 159) return this.array(15 & uu);
+        if (uu >= 160 && uu <= 191) return this.str(31 & uu);
+        switch (uu) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${UU.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${uu.toString(16)} at ${this.at-1}`)
         }
       }
-      take(UU) {
-        const RU = this.at;
-        if (RU + UU > this.bytes.length) throw new Error(`msgpack: ${UU} bytes past the end at ${RU}`);
-        return this.at = RU + UU, RU
+      take(uu) {
+        const Ru = this.at;
+        if (Ru + uu > this.bytes.length) throw new Error(`msgpack: ${uu} bytes past the end at ${Ru}`);
+        return this.at = Ru + uu, Ru
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,320 +106,320 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(UU) {
-        const RU = this.take(8);
-        return UU ? this.view.getBigInt64(RU, !1) : this.view.getBigUint64(RU, !1)
+      int64(uu) {
+        const Ru = this.take(8);
+        return uu ? this.view.getBigInt64(Ru, !1) : this.view.getBigUint64(Ru, !1)
       }
-      str(UU) {
-        const RU = this.take(UU),
-          gU = this.bytes;
-        if (UU < 16) {
-          let pU = "";
-          for (let EU = RU; EU < RU + UU; EU++) {
-            const PU = gU[EU];
-            if (PU >= 128) return tU.decode(gU.subarray(RU, RU + UU));
-            pU += String.fromCharCode(PU)
+      str(uu) {
+        const Ru = this.take(uu),
+          yu = this.bytes;
+        if (uu < 16) {
+          let Ku = "";
+          for (let Qu = Ru; Qu < Ru + uu; Qu++) {
+            const mu = yu[Qu];
+            if (mu >= 128) return Eu.decode(yu.subarray(Ru, Ru + uu));
+            Ku += String.fromCharCode(mu)
           }
-          return pU
+          return Ku
         }
-        return tU.decode(gU.subarray(RU, RU + UU))
+        return Eu.decode(yu.subarray(Ru, Ru + uu))
       }
-      bin(UU) {
-        const RU = this.take(UU);
-        return this.bytes.subarray(RU, RU + UU)
+      bin(uu) {
+        const Ru = this.take(uu);
+        return this.bytes.subarray(Ru, Ru + uu)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(UU) {
+      array(uu) {
         this.enter();
-        const RU = [];
-        for (let gU = 0; gU < UU; gU++) RU.push(this.value());
-        return this.depth--, RU
+        const Ru = [];
+        for (let yu = 0; yu < uu; yu++) Ru.push(this.value());
+        return this.depth--, Ru
       }
-      map(UU) {
+      map(uu) {
         this.enter();
-        const RU = {};
-        for (let gU = 0; gU < UU; gU++) {
-          const UU = this.value(),
-            gU = this.value();
-          RU["__proto__" === UU ? "__proto_" : String(UU)] = gU
+        const Ru = {};
+        for (let yu = 0; yu < uu; yu++) {
+          const uu = this.value(),
+            yu = this.value();
+          Ru["__proto__" === uu ? "__proto_" : String(uu)] = yu
         }
-        return this.depth--, RU
+        return this.depth--, Ru
       }
-      ext(UU) {
-        const RU = this.view.getInt8(this.take(1)),
-          gU = this.take(UU);
-        if (0 !== RU) {
-          if (-1 === RU) {
-            if (1 === UU) return new Date(NaN);
-            if (4 === UU) return new Date(1e3 * this.view.getUint32(gU, !1));
-            if (8 === UU) {
-              const UU = this.view.getUint32(gU, !1),
-                RU = UU >>> 2,
-                tU = 4294967296 * (3 & UU) + this.view.getUint32(gU + 4, !1);
-              return new Date(1e3 * tU + RU / 1e6)
+      ext(uu) {
+        const Ru = this.view.getInt8(this.take(1)),
+          yu = this.take(uu);
+        if (0 !== Ru) {
+          if (-1 === Ru) {
+            if (1 === uu) return new Date(NaN);
+            if (4 === uu) return new Date(1e3 * this.view.getUint32(yu, !1));
+            if (8 === uu) {
+              const uu = this.view.getUint32(yu, !1),
+                Ru = uu >>> 2,
+                Eu = 4294967296 * (3 & uu) + this.view.getUint32(yu + 4, !1);
+              return new Date(1e3 * Eu + Ru / 1e6)
             }
-            if (12 === UU) {
-              const UU = this.view.getUint32(gU, !1),
-                RU = 4294967296 * this.view.getInt32(gU + 4, !1) + this.view.getUint32(gU + 8, !1);
-              return new Date(1e3 * RU + UU / 1e6)
+            if (12 === uu) {
+              const uu = this.view.getUint32(yu, !1),
+                Ru = 4294967296 * this.view.getInt32(yu + 4, !1) + this.view.getUint32(yu + 8, !1);
+              return new Date(1e3 * Ru + uu / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${RU} of ${UU} bytes`)
+          throw new Error(`msgpack: ext type ${Ru} of ${uu} bytes`)
         }
       }
     }
-    const PU = new TextEncoder,
-      TU = -(2n ** 63n),
-      qU = 2n ** 63n - 1n,
-      KU = 2n ** 64n - 1n;
+    const mu = new TextEncoder,
+      Ju = -(2n ** 63n),
+      Nu = 2n ** 63n - 1n,
+      Xu = 2n ** 64n - 1n;
 
-    function cU(UU) {
-      const RU = new GU;
-      return RU.value(UU, 0), RU.bytes()
+    function Vu(uu) {
+      const Ru = new ru;
+      return Ru.value(uu, 0), Ru.bytes()
     }
-    class GU {
+    class ru {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(UU, RU) {
-        if (RU > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof UU) {
+      value(uu, Ru) {
+        if (Ru > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof uu) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(UU ? 195 : 194);
+            return void this.u8(uu ? 195 : 194);
           case "number":
-            return void this.number(UU);
+            return void this.number(uu);
           case "bigint":
-            return void this.bigint(UU);
+            return void this.bigint(uu);
           case "string":
-            return void this.string(UU);
+            return void this.string(uu);
           case "object":
-            if (null === UU) this.u8(192);
-            else if (UU instanceof Uint8Array) this.head(UU.length, 196, -1, 197, 198), this.room(UU.length), this.buf.set(UU, this.at), this.at += UU.length;
-            else if (Array.isArray(UU)) {
-              this.head(UU.length, 220, 144, 220, 221);
-              for (const gU of UU) this.value(gU, RU + 1)
+            if (null === uu) this.u8(192);
+            else if (uu instanceof Uint8Array) this.head(uu.length, 196, -1, 197, 198), this.room(uu.length), this.buf.set(uu, this.at), this.at += uu.length;
+            else if (Array.isArray(uu)) {
+              this.head(uu.length, 220, 144, 220, 221);
+              for (const yu of uu) this.value(yu, Ru + 1)
             } else {
-              var gU, tU;
-              if (Object.getPrototypeOf(UU) !== Object.prototype && null !== Object.getPrototypeOf(UU)) throw new Error(`msgpack: can't encode a ${null!==(gU=null===(tU=UU.constructor)||void 0===tU?void 0:tU.name)&&void 0!==gU?gU:"object"}`);
+              var yu, Eu;
+              if (Object.getPrototypeOf(uu) !== Object.prototype && null !== Object.getPrototypeOf(uu)) throw new Error(`msgpack: can't encode a ${null!==(yu=null===(Eu=uu.constructor)||void 0===Eu?void 0:Eu.name)&&void 0!==yu?yu:"object"}`);
               {
-                const gU = Object.keys(UU);
-                this.head(gU.length, 222, 128, 222, 223);
-                for (const tU of gU) this.string(tU), this.value(UU[tU], RU + 1)
+                const yu = Object.keys(uu);
+                this.head(yu.length, 222, 128, 222, 223);
+                for (const Eu of yu) this.string(Eu), this.value(uu[Eu], Ru + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof UU)
+            throw new Error("msgpack: can't encode a " + typeof uu)
         }
       }
-      number(UU) {
-        Number.isInteger(UU) && UU >= -2147483648 && UU <= 4294967295 ? UU >= 0 ? UU < 128 ? this.u8(UU) : UU < 256 ? (this.u8(204), this.u8(UU)) : UU < 65536 ? (this.u8(205), this.u16(UU)) : (this.u8(206), this.u32(UU)) : UU >= -32 ? this.u8(UU + 256) : UU >= -128 ? (this.u8(208), this.u8(UU + 256)) : UU >= -32768 ? (this.u8(209), this.u16(UU + 65536)) : (this.u8(210), this.u32(UU >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, UU, !1), this.at += 8)
+      number(uu) {
+        Number.isInteger(uu) && uu >= -2147483648 && uu <= 4294967295 ? uu >= 0 ? uu < 128 ? this.u8(uu) : uu < 256 ? (this.u8(204), this.u8(uu)) : uu < 65536 ? (this.u8(205), this.u16(uu)) : (this.u8(206), this.u32(uu)) : uu >= -32 ? this.u8(uu + 256) : uu >= -128 ? (this.u8(208), this.u8(uu + 256)) : uu >= -32768 ? (this.u8(209), this.u16(uu + 65536)) : (this.u8(210), this.u32(uu >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, uu, !1), this.at += 8)
       }
-      bigint(UU) {
-        const RU = UU >= TU && UU <= qU;
-        if (!RU && (UU < 0n || UU > KU)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(RU ? 211 : 207), this.room(8), RU ? this.view.setBigInt64(this.at, UU, !1) : this.view.setBigUint64(this.at, UU, !1), this.at += 8
+      bigint(uu) {
+        const Ru = uu >= Ju && uu <= Nu;
+        if (!Ru && (uu < 0n || uu > Xu)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(Ru ? 211 : 207), this.room(8), Ru ? this.view.setBigInt64(this.at, uu, !1) : this.view.setBigUint64(this.at, uu, !1), this.at += 8
       }
-      string(UU) {
-        const RU = PU.encode(UU);
-        this.head(RU.length, 217, 160, 218, 219), this.room(RU.length), this.buf.set(RU, this.at), this.at += RU.length
+      string(uu) {
+        const Ru = mu.encode(uu);
+        this.head(Ru.length, 217, 160, 218, 219), this.room(Ru.length), this.buf.set(Ru, this.at), this.at += Ru.length
       }
-      head(UU, RU, gU, tU, pU) {
-        gU >= 0 && UU < (160 === gU ? 32 : 16) ? this.u8(gU | UU) : RU !== tU && UU < 256 ? (this.u8(RU), this.u8(UU)) : UU < 65536 ? (this.u8(tU), this.u16(UU)) : (this.u8(pU), this.u32(UU))
+      head(uu, Ru, yu, Eu, Ku) {
+        yu >= 0 && uu < (160 === yu ? 32 : 16) ? this.u8(yu | uu) : Ru !== Eu && uu < 256 ? (this.u8(Ru), this.u8(uu)) : uu < 65536 ? (this.u8(Eu), this.u16(uu)) : (this.u8(Ku), this.u32(uu))
       }
-      room(UU) {
-        if (this.at + UU <= this.buf.length) return;
-        let RU = 2 * this.buf.length;
-        for (; RU < this.at + UU;) RU *= 2;
-        const gU = new Uint8Array(RU);
-        gU.set(this.buf.subarray(0, this.at)), this.buf = gU, this.view = new DataView(gU.buffer)
+      room(uu) {
+        if (this.at + uu <= this.buf.length) return;
+        let Ru = 2 * this.buf.length;
+        for (; Ru < this.at + uu;) Ru *= 2;
+        const yu = new Uint8Array(Ru);
+        yu.set(this.buf.subarray(0, this.at)), this.buf = yu, this.view = new DataView(yu.buffer)
       }
-      u8(UU) {
-        this.room(1), this.buf[this.at++] = UU
+      u8(uu) {
+        this.room(1), this.buf[this.at++] = uu
       }
-      u16(UU) {
-        this.room(2), this.view.setUint16(this.at, UU, !1), this.at += 2
+      u16(uu) {
+        this.room(2), this.view.setUint16(this.at, uu, !1), this.at += 2
       }
-      u32(UU) {
-        this.room(4), this.view.setUint32(this.at, UU, !1), this.at += 4
+      u32(uu) {
+        this.room(4), this.view.setUint32(this.at, uu, !1), this.at += 4
       }
     }
   },
-  42634: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      joinRoom: () => jU,
-      leaveHeldSeat: () => WU,
-      resumeRoom: () => CU
+  42872: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      joinRoom: () => Bu,
+      leaveHeldSeat: () => ju,
+      resumeRoom: () => Su
     });
-    var tU = gU(165),
-      pU = gU(1704),
-      EU = gU(38621),
-      PU = gU(1675),
-      TU = gU(40003),
-      qU = gU(4449),
-      KU = gU(40253),
-      cU = gU(40316);
-    const GU = Uint8Array.of(13, ...(0, TU.d)(tU.f));
-    async function jU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var Eu = yu(174),
+      Ku = yu(1739),
+      Qu = yu(38818),
+      mu = yu(1699),
+      Ju = yu(40205),
+      Nu = yu(4562),
+      Xu = yu(40433),
+      Vu = yu(40505);
+    const ru = Uint8Array.of(13, ...(0, Ju.g)(Eu.h));
+    async function Bu(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await uU(UU, RU, gU)
-      } catch (pU) {
-        var tU;
-        const EU = await (null === (tU = RU.optionsAfterRefusal) || void 0 === tU ? void 0 : tU.call(RU, pU));
-        if (!EU) throw pU;
-        return uU(UU, {
-          ...RU,
-          joinOptions: EU
+        return await xu(uu, Ru, yu)
+      } catch (Ku) {
+        var Eu;
+        const Qu = await (null === (Eu = Ru.optionsAfterRefusal) || void 0 === Eu ? void 0 : Eu.call(Ru, Ku));
+        if (!Qu) throw Ku;
+        return xu(uu, {
+          ...Ru,
+          joinOptions: Qu
         }, {
-          ...gU,
+          ...yu,
           early: void 0
         })
       }
     }
-    async function uU(UU, RU, gU) {
-      var tU;
+    async function xu(uu, Ru, yu) {
+      var Eu;
       const {
-        signal: EU
-      } = gU, PU = () => (0, cU.h)(RU.endpoint, RU.roomName, RU.joinOptions, gU), {
-        early: TU
-      } = gU, qU = TU ? null !== (tU = await TU.take(EU)) && void 0 !== tU ? tU : await TU.reserveInstead(PU, EU) : await PU();
-      return (0, pU.m)(EU), eU(UU, RU.endpoint, qU, gU, !1)
+        signal: Qu
+      } = yu, mu = () => (0, Vu.j)(Ru.endpoint, Ru.roomName, Ru.joinOptions, yu), {
+        early: Ju
+      } = yu, Nu = Ju ? null !== (Eu = await Ju.take(Qu)) && void 0 !== Eu ? Eu : await Ju.reserveInstead(mu, Qu) : await mu();
+      return (0, Ku.p)(Qu), Wu(uu, Ru.endpoint, Nu, yu, !1)
     }
-    async function CU(UU, RU, gU, tU) {
-      let EU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const PU = await (0, cU.g)(RU, gU, tU, EU);
-      return (0, pU.m)(EU.signal), eU(UU, RU, PU, EU, !0)
-    }
-
-    function hU(UU, RU, gU) {
-      const tU = (0, cU.l)(UU, RU);
-      return gU.createSocket ? gU.createSocket(tU) : new WebSocket(tU)
+    async function Su(uu, Ru, yu, Eu) {
+      let Qu = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const mu = await (0, Vu.i)(Ru, yu, Eu, Qu);
+      return (0, Ku.p)(Qu.signal), Wu(uu, Ru, mu, Qu, !0)
     }
 
-    function QU(UU, RU, gU) {
-      var tU;
-      let pU = !1;
-      return (null !== (tU = UU.setTimer) && void 0 !== tU ? tU : (UU, RU) => {
-        setTimeout(UU, RU)
+    function pu(uu, Ru, yu) {
+      const Eu = (0, Vu.k)(uu, Ru);
+      return yu.createSocket ? yu.createSocket(Eu) : new WebSocket(Eu)
+    }
+
+    function Tu(uu, Ru, yu) {
+      var Eu;
+      let Ku = !1;
+      return (null !== (Eu = uu.setTimer) && void 0 !== Eu ? Eu : (uu, Ru) => {
+        setTimeout(uu, Ru)
       })((() => {
-        pU || RU()
-      }), gU), () => {
-        pU = !0
+        Ku || Ru()
+      }), yu), () => {
+        Ku = !0
       }
     }
-    async function eU(UU, RU, gU, tU, TU) {
+    async function Wu(uu, Ru, yu, Eu, Ju) {
       const {
-        signal: cU
-      } = tU, jU = hU(RU, gU, tU);
-      let uU = null,
-        CU = null;
-      const eU = [];
-      let WU = !1,
-        fU = !1;
-      const xU = UU => {
-        var RU;
-        fU = !0, null === (RU = CU) || void 0 === RU || RU.reject(new KU.b("the room socket closed before the resume", "closed", UU.code))
+        signal: Vu
+      } = Eu, Bu = pu(Ru, yu, Eu);
+      let xu = null,
+        Su = null;
+      const Wu = [];
+      let ju = !1,
+        Hu = !1;
+      const du = uu => {
+        var Ru;
+        Hu = !0, null === (Ru = Su) || void 0 === Ru || Ru.reject(new Xu.b("the room socket closed before the resume", "closed", uu.code))
       };
-      TU && jU.addEventListener("close", xU);
-      const mU = (UU, RU) => {
-          var gU;
-          if (UU === (TU ? qU.F.Resumed : qU.F.Activated)) WU = !0, null === (gU = CU) || void 0 === gU || gU.resolve();
-          else if (!TU || UU !== qU.F.ResumeRefused && UU !== qU.F.Activated)
-            if (UU === qU.F.Error) {
-              var tU;
-              null === (tU = CU) || void 0 === tU || tU.reject(new KU.b(`the room refused the join (code ${RU})`, "roomError", RU))
+      Ju && Bu.addEventListener("close", du);
+      const bu = (uu, Ru) => {
+          var yu;
+          if (uu === (Ju ? Nu.J.Resumed : Nu.J.Activated)) ju = !0, null === (yu = Su) || void 0 === yu || yu.resolve();
+          else if (!Ju || uu !== Nu.J.ResumeRefused && uu !== Nu.J.Activated)
+            if (uu === Nu.J.Error) {
+              var Eu;
+              null === (Eu = Su) || void 0 === Eu || Eu.reject(new Xu.b(`the room refused the join (code ${Ru})`, "roomError", Ru))
             } else {
-              var pU;
-              null === (pU = CU) || void 0 === pU || pU.reject(new KU.b("the room socket closed before the join", "closed", RU))
+              var Ku;
+              null === (Ku = Su) || void 0 === Ku || Ku.reject(new Xu.b("the room socket closed before the join", "closed", Ru))
             }
           else {
-            var EU;
-            null === (EU = CU) || void 0 === EU || EU.reject(new KU.m("the core refused the resume: it held no game"))
+            var Qu;
+            null === (Qu = Su) || void 0 === Qu || Qu.reject(new Xu.n("the core refused the resume: it held no game"))
           }
         },
-        IU = UU.onConnection(((UU, RU, gU) => {
-          null === uU ? eU.push([UU, RU, gU]) : UU === uU && mU(RU, gU)
+        Cu = uu.onConnection(((uu, Ru, yu) => {
+          null === xu ? Wu.push([uu, Ru, yu]) : uu === xu && bu(Ru, yu)
         })),
-        JU = UU.attachSocket(jU);
-      if (null === JU) throw IU(), new KU.b("the core could not take the room socket", "attach");
-      var wU;
-      (uU = JU, TU) && (null === (wU = tU.onAttached) || void 0 === wU || wU.call(tU));
-      const nU = TU ? null : new PU.d(EU.d, (() => {
-        var RU, gU;
-        null === (RU = UU.flushNet) || void 0 === RU || RU.call(UU), null === (gU = CU) || void 0 === gU || gU.reject(new EU.e)
+        ku = uu.attachSocket(Bu);
+      if (null === ku) throw Cu(), new Xu.b("the core could not take the room socket", "attach");
+      var eu;
+      (xu = ku, Ju) && (null === (eu = Eu.onAttached) || void 0 === eu || eu.call(Eu));
+      const Au = Ju ? null : new mu.c(Qu.e, (() => {
+        var Ru, yu;
+        null === (Ru = uu.flushNet) || void 0 === Ru || Ru.call(uu), null === (yu = Su) || void 0 === yu || yu.reject(new Qu.i)
       }));
-      let bU = !1;
-      const oU = () => {
-        if (bU) return;
-        if (bU = !0, IU(), TU && (jU.removeEventListener("close", xU), !WU && !(null !== cU && void 0 !== cU && cU.aborted && (0, pU.g)(cU) instanceof KU.p))) return void(fU || UU.closeSocket(JU));
-        WU && UU.leaveRoom(JU) || UU.sendRaw(JU, KU.f) ? QU(tU, (() => {
-          UU.closeSocket(JU)
-        }), KU.d) : UU.closeSocket(JU)
+      let Du = !1;
+      const Mu = () => {
+        if (Du) return;
+        if (Du = !0, Cu(), Ju && (Bu.removeEventListener("close", du), !ju && !(null !== Vu && void 0 !== Vu && Vu.aborted && (0, Ku.e)(Vu) instanceof Xu.o))) return void(Hu || uu.closeSocket(ku));
+        ju && uu.leaveRoom(ku) || uu.sendRaw(ku, Xu.h) ? Tu(Eu, (() => {
+          uu.closeSocket(ku)
+        }), Xu.c) : uu.closeSocket(ku)
       };
       try {
-        await new Promise(((RU, gU) => {
-          const tU = () => {
-            var RU;
-            TU && (null === (RU = UU.flushNet) || void 0 === RU || RU.call(UU));
-            gU((0, pU.g)(cU))
+        await new Promise(((Ru, yu) => {
+          const Eu = () => {
+            var Ru;
+            Ju && (null === (Ru = uu.flushNet) || void 0 === Ru || Ru.call(uu));
+            yu((0, Ku.e)(Vu))
           };
-          null === cU || void 0 === cU || cU.addEventListener("abort", tU, {
+          null === Vu || void 0 === Vu || Vu.addEventListener("abort", Eu, {
             once: !0
-          }), CU = {
+          }), Su = {
             resolve: () => {
-              null === cU || void 0 === cU || cU.removeEventListener("abort", tU), RU()
+              null === Vu || void 0 === Vu || Vu.removeEventListener("abort", Eu), Ru()
             },
-            reject: UU => {
-              null === cU || void 0 === cU || cU.removeEventListener("abort", tU), gU(UU)
+            reject: uu => {
+              null === Vu || void 0 === Vu || Vu.removeEventListener("abort", Eu), yu(uu)
             }
           };
-          for (const [UU, pU, EU] of eU.splice(0)) UU === uU && mU(pU, EU)
+          for (const [uu, Ku, Qu] of Wu.splice(0)) uu === xu && bu(Ku, Qu)
         }))
-      } catch (ZU) {
-        throw oU(), ZU
+      } catch (Iu) {
+        throw Mu(), Iu
       } finally {
-        null === nU || void 0 === nU || nU.stop()
+        null === Au || void 0 === Au || Au.stop()
       }
-      TU && jU.removeEventListener("close", xU);
+      Ju && Bu.removeEventListener("close", du);
       return {
-        conn: JU,
-        seat: gU,
-        leave: oU,
+        conn: ku,
+        seat: yu,
+        leave: Mu,
         detach: () => {
-          bU = !0, IU()
+          Du = !0, Cu()
         },
         endJoinAd: () => {
-          bU || UU.sendRaw(JU, GU)
+          Du || uu.sendRaw(ku, ru)
         }
       }
     }
-    async function WU(UU, RU, gU) {
-      let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function ju(uu, Ru, yu) {
+      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const pU = hU(UU, await (0, cU.g)(UU, RU, gU, tU), tU);
-        pU.binaryType = "arraybuffer", await new Promise((UU => {
-          const RU = QU(tU, (() => {
-            pU.close(), UU()
-          }), KU.d);
-          pU.addEventListener("open", (() => {
-            pU.send(KU.f)
-          })), pU.addEventListener("close", (() => {
-            RU(), UU()
+        const Ku = pu(uu, await (0, Vu.i)(uu, Ru, yu, Eu), Eu);
+        Ku.binaryType = "arraybuffer", await new Promise((uu => {
+          const Ru = Tu(Eu, (() => {
+            Ku.close(), uu()
+          }), Xu.c);
+          Ku.addEventListener("open", (() => {
+            Ku.send(Xu.h)
+          })), Ku.addEventListener("close", (() => {
+            Ru(), uu()
           }))
         }))
-      } catch (pU) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", pU)
+      } catch (Ku) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", Ku)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

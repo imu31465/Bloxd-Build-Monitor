@@ -1,39 +1,39 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  36761: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => GU,
-      g: () => jU,
-      k: () => hU,
-      m: () => uU
+  36991: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => ru,
+      h: () => Bu,
+      j: () => pu,
+      m: () => xu
     });
-    var tU = gU(36610),
-      pU = gU(36602),
-      EU = gU(36626),
-      PU = gU(36639);
+    var Eu = yu(36842),
+      Ku = yu(36833),
+      Qu = yu(36865),
+      mu = yu(36871);
 
-    function TU(UU) {
-      return Math.pow(UU, pU.k)
+    function Ju(uu) {
+      return Math.pow(uu, Ku.g)
     }
 
-    function qU(UU) {
-      return UU <= .04045 ? .0773993808 * UU : Math.pow(.947867299 * (UU + .055), 2.4)
+    function Nu(uu) {
+      return uu <= .04045 ? .0773993808 * uu : Math.pow(.947867299 * (uu + .055), 2.4)
     }
 
-    function KU(UU) {
-      return Math.pow(UU, pU.h)
+    function Xu(uu) {
+      return Math.pow(uu, Ku.f)
     }
 
-    function cU(UU) {
-      return UU <= .0031308 ? 12.92 * UU : 1.055 * Math.pow(UU, .41666) - .055
+    function Vu(uu) {
+      return uu <= .0031308 ? 12.92 * uu : 1.055 * Math.pow(uu, .41666) - .055
     }
-    class GU {
+    class ru {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this.r = UU, this.g = RU, this.b = gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this.r = uu, this.g = Ru, this.b = yu
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + "}"
@@ -42,416 +42,416 @@ export const modules = {
         return "Color3"
       }
       getHashCode() {
-        let UU = 255 * this.r | 0;
-        return UU = 397 * UU ^ 255 * this.g, UU = 397 * UU ^ 255 * this.b, UU
+        let uu = 255 * this.r | 0;
+        return uu = 397 * uu ^ 255 * this.g, uu = 397 * uu ^ 255 * this.b, uu
       }
-      toArray(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return UU[RU] = this.r, UU[RU + 1] = this.g, UU[RU + 2] = this.b, this
+      toArray(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return uu[Ru] = this.r, uu[Ru + 1] = this.g, uu[Ru + 2] = this.b, this
       }
-      bRU(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return GU.FromArrayToRef(UU, RU, this), this
+      Tyu(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return ru.FromArrayToRef(uu, Ru, this), this
       }
       toColor4() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        return new jU(this.r, this.g, this.b, UU)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+        return new Bu(this.r, this.g, this.b, uu)
       }
-      vgU() {
+      AEu() {
         return [this.r, this.g, this.b]
       }
       toLuminance() {
         return .3 * this.r + .59 * this.g + .11 * this.b
       }
-      multiply(UU) {
-        return new GU(this.r * UU.r, this.g * UU.g, this.b * UU.b)
+      multiply(uu) {
+        return new ru(this.r * uu.r, this.g * uu.g, this.b * uu.b)
       }
-      multiplyToRef(UU, RU) {
-        return RU.r = this.r * UU.r, RU.g = this.g * UU.g, RU.b = this.b * UU.b, RU
+      multiplyToRef(uu, Ru) {
+        return Ru.r = this.r * uu.r, Ru.g = this.g * uu.g, Ru.b = this.b * uu.b, Ru
       }
-      multiplyInPlace(UU) {
-        return this.r *= UU.r, this.g *= UU.g, this.b *= UU.b, this
+      multiplyInPlace(uu) {
+        return this.r *= uu.r, this.g *= uu.g, this.b *= uu.b, this
       }
-      multiplyByFloats(UU, RU, gU) {
-        return new GU(this.r * UU, this.g * RU, this.b * gU)
+      multiplyByFloats(uu, Ru, yu) {
+        return new ru(this.r * uu, this.g * Ru, this.b * yu)
       }
-      divide(UU) {
+      divide(uu) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(UU, RU) {
+      divideToRef(uu, Ru) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(UU) {
+      divideInPlace(uu) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(UU) {
-        return this.minimizeInPlaceFromFloats(UU.r, UU.g, UU.b)
+      minimizeInPlace(uu) {
+        return this.minimizeInPlaceFromFloats(uu.r, uu.g, uu.b)
       }
-      maximizeInPlace(UU) {
-        return this.maximizeInPlaceFromFloats(UU.r, UU.g, UU.b)
+      maximizeInPlace(uu) {
+        return this.maximizeInPlaceFromFloats(uu.r, uu.g, uu.b)
       }
-      minimizeInPlaceFromFloats(UU, RU, gU) {
-        return this.r = Math.min(UU, this.r), this.g = Math.min(RU, this.g), this.b = Math.min(gU, this.b), this
+      minimizeInPlaceFromFloats(uu, Ru, yu) {
+        return this.r = Math.min(uu, this.r), this.g = Math.min(Ru, this.g), this.b = Math.min(yu, this.b), this
       }
-      maximizeInPlaceFromFloats(UU, RU, gU) {
-        return this.r = Math.max(UU, this.r), this.g = Math.max(RU, this.g), this.b = Math.max(gU, this.b), this
+      maximizeInPlaceFromFloats(uu, Ru, yu) {
+        return this.r = Math.max(uu, this.r), this.g = Math.max(Ru, this.g), this.b = Math.max(yu, this.b), this
       }
-      floorToRef(UU) {
+      floorToRef(uu) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(UU) {
+      fractToRef(uu) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      equals(UU) {
-        return UU && this.r === UU.r && this.g === UU.g && this.b === UU.b
+      equals(uu) {
+        return uu && this.r === uu.r && this.g === uu.g && this.b === uu.b
       }
-      equalsFloats(UU, RU, gU) {
-        return this.cPU(UU, RU, gU)
+      equalsFloats(uu, Ru, yu) {
+        return this.amu(uu, Ru, yu)
       }
-      cPU(UU, RU, gU) {
-        return this.r === UU && this.g === RU && this.b === gU
+      amu(uu, Ru, yu) {
+        return this.r === uu && this.g === Ru && this.b === yu
       }
-      equalsWithEpsilon(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pU.e;
-        return (0, EU.WithinEpsilon)(this.r, UU.r, RU) && (0, EU.WithinEpsilon)(this.g, UU.g, RU) && (0, EU.WithinEpsilon)(this.b, UU.b, RU)
+      equalsWithEpsilon(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ku.d;
+        return (0, Qu.WithinEpsilon)(this.r, uu.r, Ru) && (0, Qu.WithinEpsilon)(this.g, uu.g, Ru) && (0, Qu.WithinEpsilon)(this.b, uu.b, Ru)
       }
-      nt() {
+      tm() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(UU) {
+      negateToRef(uu) {
         throw new ReferenceError("Can not negate a color")
       }
-      scale(UU) {
-        return new GU(this.r * UU, this.g * UU, this.b * UU)
+      scale(uu) {
+        return new ru(this.r * uu, this.g * uu, this.b * uu)
       }
-      scaleInPlace(UU) {
-        return this.r *= UU, this.g *= UU, this.b *= UU, this
+      scaleInPlace(uu) {
+        return this.r *= uu, this.g *= uu, this.b *= uu, this
       }
-      scaleToRef(UU, RU) {
-        return RU.r = this.r * UU, RU.g = this.g * UU, RU.b = this.b * UU, RU
+      scaleToRef(uu, Ru) {
+        return Ru.r = this.r * uu, Ru.g = this.g * uu, Ru.b = this.b * uu, Ru
       }
-      scaleAndAddToRef(UU, RU) {
-        return RU.r += this.r * UU, RU.g += this.g * UU, RU.b += this.b * UU, RU
+      scaleAndAddToRef(uu, Ru) {
+        return Ru.r += this.r * uu, Ru.g += this.g * uu, Ru.b += this.b * uu, Ru
       }
       clampToRef() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        return gU.r = (0, EU.Clamp)(this.r, UU, RU), gU.g = (0, EU.Clamp)(this.g, UU, RU), gU.b = (0, EU.Clamp)(this.b, UU, RU), gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        return yu.r = (0, Qu.Clamp)(this.r, uu, Ru), yu.g = (0, Qu.Clamp)(this.g, uu, Ru), yu.b = (0, Qu.Clamp)(this.b, uu, Ru), yu
       }
-      add(UU) {
-        return new GU(this.r + UU.r, this.g + UU.g, this.b + UU.b)
+      add(uu) {
+        return new ru(this.r + uu.r, this.g + uu.g, this.b + uu.b)
       }
-      addInPlace(UU) {
-        return this.r += UU.r, this.g += UU.g, this.b += UU.b, this
+      addInPlace(uu) {
+        return this.r += uu.r, this.g += uu.g, this.b += uu.b, this
       }
-      addInPlaceFromFloats(UU, RU, gU) {
-        return this.r += UU, this.g += RU, this.b += gU, this
+      addInPlaceFromFloats(uu, Ru, yu) {
+        return this.r += uu, this.g += Ru, this.b += yu, this
       }
-      addToRef(UU, RU) {
-        return RU.r = this.r + UU.r, RU.g = this.g + UU.g, RU.b = this.b + UU.b, RU
+      addToRef(uu, Ru) {
+        return Ru.r = this.r + uu.r, Ru.g = this.g + uu.g, Ru.b = this.b + uu.b, Ru
       }
-      subtract(UU) {
-        return new GU(this.r - UU.r, this.g - UU.g, this.b - UU.b)
+      subtract(uu) {
+        return new ru(this.r - uu.r, this.g - uu.g, this.b - uu.b)
       }
-      subtractToRef(UU, RU) {
-        return RU.r = this.r - UU.r, RU.g = this.g - UU.g, RU.b = this.b - UU.b, RU
+      subtractToRef(uu, Ru) {
+        return Ru.r = this.r - uu.r, Ru.g = this.g - uu.g, Ru.b = this.b - uu.b, Ru
       }
-      ptU(UU) {
-        return this.r -= UU.r, this.g -= UU.g, this.b -= UU.b, this
+      oEu(uu) {
+        return this.r -= uu.r, this.g -= uu.g, this.b -= uu.b, this
       }
-      subtractFromFloats(UU, RU, gU) {
-        return new GU(this.r - UU, this.g - RU, this.b - gU)
+      subtractFromFloats(uu, Ru, yu) {
+        return new ru(this.r - uu, this.g - Ru, this.b - yu)
       }
-      subtractFromFloatsToRef(UU, RU, gU, tU) {
-        return tU.r = this.r - UU, tU.g = this.g - RU, tU.b = this.b - gU, tU
+      subtractFromFloatsToRef(uu, Ru, yu, Eu) {
+        return Eu.r = this.r - uu, Eu.g = this.g - Ru, Eu.b = this.b - yu, Eu
       }
       clone() {
-        return new GU(this.r, this.g, this.b)
+        return new ru(this.r, this.g, this.b)
       }
-      PgU(UU) {
-        return this.r = UU.r, this.g = UU.g, this.b = UU.b, this
+      Oyu(uu) {
+        return this.r = uu.r, this.g = uu.g, this.b = uu.b, this
       }
-      b_(UU, RU, gU) {
-        return this.r = UU, this.g = RU, this.b = gU, this
+      muu(uu, Ru, yu) {
+        return this.r = uu, this.g = Ru, this.b = yu, this
       }
-      set(UU, RU, gU) {
-        return this.b_(UU, RU, gU)
+      set(uu, Ru, yu) {
+        return this.muu(uu, Ru, yu)
       }
-      Y5(UU) {
-        return this.r = this.g = this.b = UU, this
+      e_(uu) {
+        return this.r = this.g = this.b = uu, this
       }
       toHexString() {
-        const UU = Math.round(255 * this.r),
-          RU = Math.round(255 * this.g),
-          gU = Math.round(255 * this.b);
-        return "#" + (0, EU.ToHex)(UU) + (0, EU.ToHex)(RU) + (0, EU.ToHex)(gU)
+        const uu = Math.round(255 * this.r),
+          Ru = Math.round(255 * this.g),
+          yu = Math.round(255 * this.b);
+        return "#" + (0, Qu.ToHex)(uu) + (0, Qu.ToHex)(Ru) + (0, Qu.ToHex)(yu)
       }
-      fromHexString(UU) {
-        return "#" !== UU.substring(0, 1) || 7 !== UU.length || (this.r = parseInt(UU.substring(1, 3), 16) / 255, this.g = parseInt(UU.substring(3, 5), 16) / 255, this.b = parseInt(UU.substring(5, 7), 16) / 255), this
+      fromHexString(uu) {
+        return "#" !== uu.substring(0, 1) || 7 !== uu.length || (this.r = parseInt(uu.substring(1, 3), 16) / 255, this.g = parseInt(uu.substring(3, 5), 16) / 255, this.b = parseInt(uu.substring(5, 7), 16) / 255), this
       }
       toHSV() {
-        return this.toHSVToRef(new GU)
+        return this.toHSVToRef(new ru)
       }
-      toHSVToRef(UU) {
-        const RU = this.r,
-          gU = this.g,
-          tU = this.b,
-          pU = Math.max(RU, gU, tU),
-          EU = Math.min(RU, gU, tU);
-        let PU = 0,
-          TU = 0;
-        const qU = pU,
-          KU = pU - EU;
-        return 0 !== pU && (TU = KU / pU), pU != EU && (pU == RU ? (PU = (gU - tU) / KU, gU < tU && (PU += 6)) : pU == gU ? PU = (tU - RU) / KU + 2 : pU == tU && (PU = (RU - gU) / KU + 4), PU *= 60), UU.r = PU, UU.g = TU, UU.b = qU, UU
+      toHSVToRef(uu) {
+        const Ru = this.r,
+          yu = this.g,
+          Eu = this.b,
+          Ku = Math.max(Ru, yu, Eu),
+          Qu = Math.min(Ru, yu, Eu);
+        let mu = 0,
+          Ju = 0;
+        const Nu = Ku,
+          Xu = Ku - Qu;
+        return 0 !== Ku && (Ju = Xu / Ku), Ku != Qu && (Ku == Ru ? (mu = (yu - Eu) / Xu, yu < Eu && (mu += 6)) : Ku == yu ? mu = (Eu - Ru) / Xu + 2 : Ku == Eu && (mu = (Ru - yu) / Xu + 4), mu *= 60), uu.r = mu, uu.g = Ju, uu.b = Nu, uu
       }
       toLinearSpace() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const RU = new GU;
-        return this.toLinearSpaceToRef(RU, UU), RU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Ru = new ru;
+        return this.toLinearSpaceToRef(Ru, uu), Ru
       }
-      toLinearSpaceToRef(UU) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (UU.r = qU(this.r), UU.g = qU(this.g), UU.b = qU(this.b)) : (UU.r = TU(this.r), UU.g = TU(this.g), UU.b = TU(this.b)), this
+      toLinearSpaceToRef(uu) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (uu.r = Nu(this.r), uu.g = Nu(this.g), uu.b = Nu(this.b)) : (uu.r = Ju(this.r), uu.g = Ju(this.g), uu.b = Ju(this.b)), this
       }
       toGammaSpace() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const RU = new GU;
-        return this.toGammaSpaceToRef(RU, UU), RU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Ru = new ru;
+        return this.toGammaSpaceToRef(Ru, uu), Ru
       }
-      toGammaSpaceToRef(UU) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (UU.r = cU(this.r), UU.g = cU(this.g), UU.b = cU(this.b)) : (UU.r = KU(this.r), UU.g = KU(this.g), UU.b = KU(this.b)), this
+      toGammaSpaceToRef(uu) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (uu.r = Vu(this.r), uu.g = Vu(this.g), uu.b = Vu(this.b)) : (uu.r = Xu(this.r), uu.g = Xu(this.g), uu.b = Xu(this.b)), this
       }
-      static HSVtoRGBToRef(UU, RU, gU, tU) {
-        const pU = gU * RU,
-          EU = UU / 60,
-          PU = pU * (1 - Math.abs(EU % 2 - 1));
-        let TU = 0,
-          qU = 0,
-          KU = 0;
-        EU >= 0 && EU <= 1 ? (TU = pU, qU = PU) : EU >= 1 && EU <= 2 ? (TU = PU, qU = pU) : EU >= 2 && EU <= 3 ? (qU = pU, KU = PU) : EU >= 3 && EU <= 4 ? (qU = PU, KU = pU) : EU >= 4 && EU <= 5 ? (TU = PU, KU = pU) : EU >= 5 && EU <= 6 && (TU = pU, KU = PU);
-        const cU = gU - pU;
-        return tU.r = TU + cU, tU.g = qU + cU, tU.b = KU + cU, tU
+      static HSVtoRGBToRef(uu, Ru, yu, Eu) {
+        const Ku = yu * Ru,
+          Qu = uu / 60,
+          mu = Ku * (1 - Math.abs(Qu % 2 - 1));
+        let Ju = 0,
+          Nu = 0,
+          Xu = 0;
+        Qu >= 0 && Qu <= 1 ? (Ju = Ku, Nu = mu) : Qu >= 1 && Qu <= 2 ? (Ju = mu, Nu = Ku) : Qu >= 2 && Qu <= 3 ? (Nu = Ku, Xu = mu) : Qu >= 3 && Qu <= 4 ? (Nu = mu, Xu = Ku) : Qu >= 4 && Qu <= 5 ? (Ju = mu, Xu = Ku) : Qu >= 5 && Qu <= 6 && (Ju = Ku, Xu = mu);
+        const Vu = yu - Ku;
+        return Eu.r = Ju + Vu, Eu.g = Nu + Vu, Eu.b = Xu + Vu, Eu
       }
-      static FromHSV(UU, RU, gU) {
-        const tU = new GU(0, 0, 0);
-        return GU.HSVtoRGBToRef(UU, RU, gU, tU), tU
+      static FromHSV(uu, Ru, yu) {
+        const Eu = new ru(0, 0, 0);
+        return ru.HSVtoRGBToRef(uu, Ru, yu, Eu), Eu
       }
-      static FromHexString(UU) {
-        return new GU(0, 0, 0).fromHexString(UU)
+      static FromHexString(uu) {
+        return new ru(0, 0, 0).fromHexString(uu)
       }
-      static FromArray(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new GU(UU[RU], UU[RU + 1], UU[RU + 2])
+      static FromArray(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new ru(uu[Ru], uu[Ru + 1], uu[Ru + 2])
       }
-      static FromArrayToRef(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        gU.r = UU[RU], gU.g = UU[RU + 1], gU.b = UU[RU + 2]
+      static FromArrayToRef(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        yu.r = uu[Ru], yu.g = uu[Ru + 1], yu.b = uu[Ru + 2]
       }
-      static FromInts(UU, RU, gU) {
-        return new GU(UU / 255, RU / 255, gU / 255)
+      static FromInts(uu, Ru, yu) {
+        return new ru(uu / 255, Ru / 255, yu / 255)
       }
-      static Lerp(UU, RU, gU) {
-        const tU = new GU(0, 0, 0);
-        return GU.LerpToRef(UU, RU, gU, tU), tU
+      static Lerp(uu, Ru, yu) {
+        const Eu = new ru(0, 0, 0);
+        return ru.LerpToRef(uu, Ru, yu, Eu), Eu
       }
-      static LerpToRef(UU, RU, gU, tU) {
-        tU.r = UU.r + (RU.r - UU.r) * gU, tU.g = UU.g + (RU.g - UU.g) * gU, tU.b = UU.b + (RU.b - UU.b) * gU
+      static LerpToRef(uu, Ru, yu, Eu) {
+        Eu.r = uu.r + (Ru.r - uu.r) * yu, Eu.g = uu.g + (Ru.g - uu.g) * yu, Eu.b = uu.b + (Ru.b - uu.b) * yu
       }
-      static Hermite(UU, RU, gU, tU, pU) {
-        const EU = pU * pU,
-          PU = pU * EU,
-          TU = 2 * PU - 3 * EU + 1,
-          qU = -2 * PU + 3 * EU,
-          KU = PU - 2 * EU + pU,
-          cU = PU - EU,
-          jU = UU.r * TU + gU.r * qU + RU.r * KU + tU.r * cU,
-          uU = UU.g * TU + gU.g * qU + RU.g * KU + tU.g * cU,
-          CU = UU.b * TU + gU.b * qU + RU.b * KU + tU.b * cU;
-        return new GU(jU, uU, CU)
+      static Hermite(uu, Ru, yu, Eu, Ku) {
+        const Qu = Ku * Ku,
+          mu = Ku * Qu,
+          Ju = 2 * mu - 3 * Qu + 1,
+          Nu = -2 * mu + 3 * Qu,
+          Xu = mu - 2 * Qu + Ku,
+          Vu = mu - Qu,
+          Bu = uu.r * Ju + yu.r * Nu + Ru.r * Xu + Eu.r * Vu,
+          xu = uu.g * Ju + yu.g * Nu + Ru.g * Xu + Eu.g * Vu,
+          Su = uu.b * Ju + yu.b * Nu + Ru.b * Xu + Eu.b * Vu;
+        return new ru(Bu, xu, Su)
       }
-      static Hermite1stDerivative(UU, RU, gU, tU, pU) {
-        const EU = GU.Black();
-        return this.Hermite1stDerivativeToRef(UU, RU, gU, tU, pU, EU), EU
+      static Hermite1stDerivative(uu, Ru, yu, Eu, Ku) {
+        const Qu = ru.Black();
+        return this.Hermite1stDerivativeToRef(uu, Ru, yu, Eu, Ku, Qu), Qu
       }
-      static Hermite1stDerivativeToRef(UU, RU, gU, tU, pU, EU) {
-        const PU = pU * pU;
-        EU.r = 6 * (PU - pU) * UU.r + (3 * PU - 4 * pU + 1) * RU.r + 6 * (-PU + pU) * gU.r + (3 * PU - 2 * pU) * tU.r, EU.g = 6 * (PU - pU) * UU.g + (3 * PU - 4 * pU + 1) * RU.g + 6 * (-PU + pU) * gU.g + (3 * PU - 2 * pU) * tU.g, EU.b = 6 * (PU - pU) * UU.b + (3 * PU - 4 * pU + 1) * RU.b + 6 * (-PU + pU) * gU.b + (3 * PU - 2 * pU) * tU.b
+      static Hermite1stDerivativeToRef(uu, Ru, yu, Eu, Ku, Qu) {
+        const mu = Ku * Ku;
+        Qu.r = 6 * (mu - Ku) * uu.r + (3 * mu - 4 * Ku + 1) * Ru.r + 6 * (-mu + Ku) * yu.r + (3 * mu - 2 * Ku) * Eu.r, Qu.g = 6 * (mu - Ku) * uu.g + (3 * mu - 4 * Ku + 1) * Ru.g + 6 * (-mu + Ku) * yu.g + (3 * mu - 2 * Ku) * Eu.g, Qu.b = 6 * (mu - Ku) * uu.b + (3 * mu - 4 * Ku + 1) * Ru.b + 6 * (-mu + Ku) * yu.b + (3 * mu - 2 * Ku) * Eu.b
       }
       static Red() {
-        return new GU(1, 0, 0)
+        return new ru(1, 0, 0)
       }
       static Green() {
-        return new GU(0, 1, 0)
+        return new ru(0, 1, 0)
       }
       static Blue() {
-        return new GU(0, 0, 1)
+        return new ru(0, 0, 1)
       }
       static Black() {
-        return new GU(0, 0, 0)
+        return new ru(0, 0, 0)
       }
       static get BlackReadOnly() {
-        return GU._BlackReadOnly
+        return ru._BlackReadOnly
       }
       static White() {
-        return new GU(1, 1, 1)
+        return new ru(1, 1, 1)
       }
       static Purple() {
-        return new GU(.5, 0, .5)
+        return new ru(.5, 0, .5)
       }
       static Magenta() {
-        return new GU(1, 0, 1)
+        return new ru(1, 0, 1)
       }
       static Yellow() {
-        return new GU(1, 1, 0)
+        return new ru(1, 1, 0)
       }
       static Gray() {
-        return new GU(.5, .5, .5)
+        return new ru(.5, .5, .5)
       }
       static Teal() {
-        return new GU(0, 1, 1)
+        return new ru(0, 1, 1)
       }
       static Random() {
-        return new GU(Math.random(), Math.random(), Math.random())
+        return new ru(Math.random(), Math.random(), Math.random())
       }
     }
-    GU._V8PerformanceHack = new GU(.5, .5, .5), GU._BlackReadOnly = GU.Black();
-    class jU {
+    ru._V8PerformanceHack = new ru(.5, .5, .5), ru._BlackReadOnly = ru.Black();
+    class Bu {
       constructor() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this.r = UU, this.g = RU, this.b = gU, this.a = tU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this.r = uu, this.g = Ru, this.b = yu, this.a = Eu
       }
-      vgU() {
+      AEu() {
         return [this.r, this.g, this.b, this.a]
       }
-      toArray(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return UU[RU] = this.r, UU[RU + 1] = this.g, UU[RU + 2] = this.b, UU[RU + 3] = this.a, this
+      toArray(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return uu[Ru] = this.r, uu[Ru + 1] = this.g, uu[Ru + 2] = this.b, uu[Ru + 3] = this.a, this
       }
-      bRU(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return this.r = UU[RU], this.g = UU[RU + 1], this.b = UU[RU + 2], this.a = UU[RU + 3], this
+      Tyu(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return this.r = uu[Ru], this.g = uu[Ru + 1], this.b = uu[Ru + 2], this.a = uu[Ru + 3], this
       }
-      equals(UU) {
-        return UU && this.r === UU.r && this.g === UU.g && this.b === UU.b && this.a === UU.a
+      equals(uu) {
+        return uu && this.r === uu.r && this.g === uu.g && this.b === uu.b && this.a === uu.a
       }
-      add(UU) {
-        return new jU(this.r + UU.r, this.g + UU.g, this.b + UU.b, this.a + UU.a)
+      add(uu) {
+        return new Bu(this.r + uu.r, this.g + uu.g, this.b + uu.b, this.a + uu.a)
       }
-      addToRef(UU, RU) {
-        return RU.r = this.r + UU.r, RU.g = this.g + UU.g, RU.b = this.b + UU.b, RU.a = this.a + UU.a, RU
+      addToRef(uu, Ru) {
+        return Ru.r = this.r + uu.r, Ru.g = this.g + uu.g, Ru.b = this.b + uu.b, Ru.a = this.a + uu.a, Ru
       }
-      addInPlace(UU) {
-        return this.r += UU.r, this.g += UU.g, this.b += UU.b, this.a += UU.a, this
+      addInPlace(uu) {
+        return this.r += uu.r, this.g += uu.g, this.b += uu.b, this.a += uu.a, this
       }
-      addInPlaceFromFloats(UU, RU, gU, tU) {
-        return this.r += UU, this.g += RU, this.b += gU, this.a += tU, this
+      addInPlaceFromFloats(uu, Ru, yu, Eu) {
+        return this.r += uu, this.g += Ru, this.b += yu, this.a += Eu, this
       }
-      subtract(UU) {
-        return new jU(this.r - UU.r, this.g - UU.g, this.b - UU.b, this.a - UU.a)
+      subtract(uu) {
+        return new Bu(this.r - uu.r, this.g - uu.g, this.b - uu.b, this.a - uu.a)
       }
-      subtractToRef(UU, RU) {
-        return RU.r = this.r - UU.r, RU.g = this.g - UU.g, RU.b = this.b - UU.b, RU.a = this.a - UU.a, RU
+      subtractToRef(uu, Ru) {
+        return Ru.r = this.r - uu.r, Ru.g = this.g - uu.g, Ru.b = this.b - uu.b, Ru.a = this.a - uu.a, Ru
       }
-      ptU(UU) {
-        return this.r -= UU.r, this.g -= UU.g, this.b -= UU.b, this.a -= UU.a, this
+      oEu(uu) {
+        return this.r -= uu.r, this.g -= uu.g, this.b -= uu.b, this.a -= uu.a, this
       }
-      subtractFromFloats(UU, RU, gU, tU) {
-        return new jU(this.r - UU, this.g - RU, this.b - gU, this.a - tU)
+      subtractFromFloats(uu, Ru, yu, Eu) {
+        return new Bu(this.r - uu, this.g - Ru, this.b - yu, this.a - Eu)
       }
-      subtractFromFloatsToRef(UU, RU, gU, tU, pU) {
-        return pU.r = this.r - UU, pU.g = this.g - RU, pU.b = this.b - gU, pU.a = this.a - tU, pU
+      subtractFromFloatsToRef(uu, Ru, yu, Eu, Ku) {
+        return Ku.r = this.r - uu, Ku.g = this.g - Ru, Ku.b = this.b - yu, Ku.a = this.a - Eu, Ku
       }
-      scale(UU) {
-        return new jU(this.r * UU, this.g * UU, this.b * UU, this.a * UU)
+      scale(uu) {
+        return new Bu(this.r * uu, this.g * uu, this.b * uu, this.a * uu)
       }
-      scaleInPlace(UU) {
-        return this.r *= UU, this.g *= UU, this.b *= UU, this.a *= UU, this
+      scaleInPlace(uu) {
+        return this.r *= uu, this.g *= uu, this.b *= uu, this.a *= uu, this
       }
-      scaleToRef(UU, RU) {
-        return RU.r = this.r * UU, RU.g = this.g * UU, RU.b = this.b * UU, RU.a = this.a * UU, RU
+      scaleToRef(uu, Ru) {
+        return Ru.r = this.r * uu, Ru.g = this.g * uu, Ru.b = this.b * uu, Ru.a = this.a * uu, Ru
       }
-      scaleAndAddToRef(UU, RU) {
-        return RU.r += this.r * UU, RU.g += this.g * UU, RU.b += this.b * UU, RU.a += this.a * UU, RU
+      scaleAndAddToRef(uu, Ru) {
+        return Ru.r += this.r * uu, Ru.g += this.g * uu, Ru.b += this.b * uu, Ru.a += this.a * uu, Ru
       }
       clampToRef() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        return gU.r = (0, EU.Clamp)(this.r, UU, RU), gU.g = (0, EU.Clamp)(this.g, UU, RU), gU.b = (0, EU.Clamp)(this.b, UU, RU), gU.a = (0, EU.Clamp)(this.a, UU, RU), gU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        return yu.r = (0, Qu.Clamp)(this.r, uu, Ru), yu.g = (0, Qu.Clamp)(this.g, uu, Ru), yu.b = (0, Qu.Clamp)(this.b, uu, Ru), yu.a = (0, Qu.Clamp)(this.a, uu, Ru), yu
       }
-      multiply(UU) {
-        return new jU(this.r * UU.r, this.g * UU.g, this.b * UU.b, this.a * UU.a)
+      multiply(uu) {
+        return new Bu(this.r * uu.r, this.g * uu.g, this.b * uu.b, this.a * uu.a)
       }
-      multiplyToRef(UU, RU) {
-        return RU.r = this.r * UU.r, RU.g = this.g * UU.g, RU.b = this.b * UU.b, RU.a = this.a * UU.a, RU
+      multiplyToRef(uu, Ru) {
+        return Ru.r = this.r * uu.r, Ru.g = this.g * uu.g, Ru.b = this.b * uu.b, Ru.a = this.a * uu.a, Ru
       }
-      multiplyInPlace(UU) {
-        return this.r *= UU.r, this.g *= UU.g, this.b *= UU.b, this.a *= UU.a, this
+      multiplyInPlace(uu) {
+        return this.r *= uu.r, this.g *= uu.g, this.b *= uu.b, this.a *= uu.a, this
       }
-      multiplyByFloats(UU, RU, gU, tU) {
-        return new jU(this.r * UU, this.g * RU, this.b * gU, this.a * tU)
+      multiplyByFloats(uu, Ru, yu, Eu) {
+        return new Bu(this.r * uu, this.g * Ru, this.b * yu, this.a * Eu)
       }
-      divide(UU) {
+      divide(uu) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideToRef(UU, RU) {
+      divideToRef(uu, Ru) {
         throw new ReferenceError("Can not divide a color")
       }
-      divideInPlace(UU) {
+      divideInPlace(uu) {
         throw new ReferenceError("Can not divide a color")
       }
-      minimizeInPlace(UU) {
-        return this.r = Math.min(this.r, UU.r), this.g = Math.min(this.g, UU.g), this.b = Math.min(this.b, UU.b), this.a = Math.min(this.a, UU.a), this
+      minimizeInPlace(uu) {
+        return this.r = Math.min(this.r, uu.r), this.g = Math.min(this.g, uu.g), this.b = Math.min(this.b, uu.b), this.a = Math.min(this.a, uu.a), this
       }
-      maximizeInPlace(UU) {
-        return this.r = Math.max(this.r, UU.r), this.g = Math.max(this.g, UU.g), this.b = Math.max(this.b, UU.b), this.a = Math.max(this.a, UU.a), this
+      maximizeInPlace(uu) {
+        return this.r = Math.max(this.r, uu.r), this.g = Math.max(this.g, uu.g), this.b = Math.max(this.b, uu.b), this.a = Math.max(this.a, uu.a), this
       }
-      minimizeInPlaceFromFloats(UU, RU, gU, tU) {
-        return this.r = Math.min(UU, this.r), this.g = Math.min(RU, this.g), this.b = Math.min(gU, this.b), this.a = Math.min(tU, this.a), this
+      minimizeInPlaceFromFloats(uu, Ru, yu, Eu) {
+        return this.r = Math.min(uu, this.r), this.g = Math.min(Ru, this.g), this.b = Math.min(yu, this.b), this.a = Math.min(Eu, this.a), this
       }
-      maximizeInPlaceFromFloats(UU, RU, gU, tU) {
-        return this.r = Math.max(UU, this.r), this.g = Math.max(RU, this.g), this.b = Math.max(gU, this.b), this.a = Math.max(tU, this.a), this
+      maximizeInPlaceFromFloats(uu, Ru, yu, Eu) {
+        return this.r = Math.max(uu, this.r), this.g = Math.max(Ru, this.g), this.b = Math.max(yu, this.b), this.a = Math.max(Eu, this.a), this
       }
-      floorToRef(UU) {
+      floorToRef(uu) {
         throw new ReferenceError("Can not floor a color")
       }
       floor() {
         throw new ReferenceError("Can not floor a color")
       }
-      fractToRef(UU) {
+      fractToRef(uu) {
         throw new ReferenceError("Can not fract a color")
       }
       fract() {
         throw new ReferenceError("Can not fract a color")
       }
-      nt() {
+      tm() {
         throw new ReferenceError("Can not negate a color")
       }
       negateInPlace() {
         throw new ReferenceError("Can not negate a color")
       }
-      negateToRef(UU) {
+      negateToRef(uu) {
         throw new ReferenceError("Can not negate a color")
       }
-      equalsWithEpsilon(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pU.e;
-        return (0, EU.WithinEpsilon)(this.r, UU.r, RU) && (0, EU.WithinEpsilon)(this.g, UU.g, RU) && (0, EU.WithinEpsilon)(this.b, UU.b, RU) && (0, EU.WithinEpsilon)(this.a, UU.a, RU)
+      equalsWithEpsilon(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ku.d;
+        return (0, Qu.WithinEpsilon)(this.r, uu.r, Ru) && (0, Qu.WithinEpsilon)(this.g, uu.g, Ru) && (0, Qu.WithinEpsilon)(this.b, uu.b, Ru) && (0, Qu.WithinEpsilon)(this.a, uu.a, Ru)
       }
-      cPU(UU, RU, gU, tU) {
-        return this.r === UU && this.g === RU && this.b === gU && this.a === tU
+      amu(uu, Ru, yu, Eu) {
+        return this.r === uu && this.g === Ru && this.b === yu && this.a === Eu
       }
       toString() {
         return "{R: " + this.r + " G:" + this.g + " B:" + this.b + " A:" + this.a + "}"
@@ -460,346 +460,346 @@ export const modules = {
         return "Color4"
       }
       getHashCode() {
-        let UU = 255 * this.r | 0;
-        return UU = 397 * UU ^ 255 * this.g, UU = 397 * UU ^ 255 * this.b, UU = 397 * UU ^ 255 * this.a, UU
+        let uu = 255 * this.r | 0;
+        return uu = 397 * uu ^ 255 * this.g, uu = 397 * uu ^ 255 * this.b, uu = 397 * uu ^ 255 * this.a, uu
       }
       clone() {
-        return (new jU).PgU(this)
+        return (new Bu).Oyu(this)
       }
-      PgU(UU) {
-        return this.r = UU.r, this.g = UU.g, this.b = UU.b, this.a = UU.a, this
+      Oyu(uu) {
+        return this.r = uu.r, this.g = uu.g, this.b = uu.b, this.a = uu.a, this
       }
-      b_(UU, RU, gU, tU) {
-        return this.r = UU, this.g = RU, this.b = gU, this.a = tU, this
+      muu(uu, Ru, yu, Eu) {
+        return this.r = uu, this.g = Ru, this.b = yu, this.a = Eu, this
       }
-      set(UU, RU, gU, tU) {
-        return this.b_(UU, RU, gU, tU)
+      set(uu, Ru, yu, Eu) {
+        return this.muu(uu, Ru, yu, Eu)
       }
-      Y5(UU) {
-        return this.r = this.g = this.b = this.a = UU, this
+      e_(uu) {
+        return this.r = this.g = this.b = this.a = uu, this
       }
       toHexString() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const RU = Math.round(255 * this.r),
-          gU = Math.round(255 * this.g),
-          tU = Math.round(255 * this.b);
-        if (UU) return "#" + (0, EU.ToHex)(RU) + (0, EU.ToHex)(gU) + (0, EU.ToHex)(tU);
-        const pU = Math.round(255 * this.a);
-        return "#" + (0, EU.ToHex)(RU) + (0, EU.ToHex)(gU) + (0, EU.ToHex)(tU) + (0, EU.ToHex)(pU)
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Ru = Math.round(255 * this.r),
+          yu = Math.round(255 * this.g),
+          Eu = Math.round(255 * this.b);
+        if (uu) return "#" + (0, Qu.ToHex)(Ru) + (0, Qu.ToHex)(yu) + (0, Qu.ToHex)(Eu);
+        const Ku = Math.round(255 * this.a);
+        return "#" + (0, Qu.ToHex)(Ru) + (0, Qu.ToHex)(yu) + (0, Qu.ToHex)(Eu) + (0, Qu.ToHex)(Ku)
       }
-      fromHexString(UU) {
-        return "#" !== UU.substring(0, 1) || 9 !== UU.length && 7 !== UU.length || (this.r = parseInt(UU.substring(1, 3), 16) / 255, this.g = parseInt(UU.substring(3, 5), 16) / 255, this.b = parseInt(UU.substring(5, 7), 16) / 255, 9 === UU.length && (this.a = parseInt(UU.substring(7, 9), 16) / 255)), this
+      fromHexString(uu) {
+        return "#" !== uu.substring(0, 1) || 9 !== uu.length && 7 !== uu.length || (this.r = parseInt(uu.substring(1, 3), 16) / 255, this.g = parseInt(uu.substring(3, 5), 16) / 255, this.b = parseInt(uu.substring(5, 7), 16) / 255, 9 === uu.length && (this.a = parseInt(uu.substring(7, 9), 16) / 255)), this
       }
       toLinearSpace() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const RU = new jU;
-        return this.toLinearSpaceToRef(RU, UU), RU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Ru = new Bu;
+        return this.toLinearSpaceToRef(Ru, uu), Ru
       }
-      toLinearSpaceToRef(UU) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (UU.r = qU(this.r), UU.g = qU(this.g), UU.b = qU(this.b)) : (UU.r = TU(this.r), UU.g = TU(this.g), UU.b = TU(this.b)), UU.a = this.a, this
+      toLinearSpaceToRef(uu) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (uu.r = Nu(this.r), uu.g = Nu(this.g), uu.b = Nu(this.b)) : (uu.r = Ju(this.r), uu.g = Ju(this.g), uu.b = Ju(this.b)), uu.a = this.a, this
       }
       toGammaSpace() {
-        let UU = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const RU = new jU;
-        return this.toGammaSpaceToRef(RU, UU), RU
+        let uu = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        const Ru = new Bu;
+        return this.toGammaSpaceToRef(Ru, uu), Ru
       }
-      toGammaSpaceToRef(UU) {
-        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (UU.r = cU(this.r), UU.g = cU(this.g), UU.b = cU(this.b)) : (UU.r = KU(this.r), UU.g = KU(this.g), UU.b = KU(this.b)), UU.a = this.a, this
+      toGammaSpaceToRef(uu) {
+        return arguments.length > 1 && void 0 !== arguments[1] && arguments[1] ? (uu.r = Vu(this.r), uu.g = Vu(this.g), uu.b = Vu(this.b)) : (uu.r = Xu(this.r), uu.g = Xu(this.g), uu.b = Xu(this.b)), uu.a = this.a, this
       }
-      static FromHexString(UU) {
-        return "#" !== UU.substring(0, 1) || 9 !== UU.length && 7 !== UU.length ? new jU(0, 0, 0, 0) : new jU(0, 0, 0, 1).fromHexString(UU)
+      static FromHexString(uu) {
+        return "#" !== uu.substring(0, 1) || 9 !== uu.length && 7 !== uu.length ? new Bu(0, 0, 0, 0) : new Bu(0, 0, 0, 1).fromHexString(uu)
       }
-      static Lerp(UU, RU, gU) {
-        return jU.LerpToRef(UU, RU, gU, new jU)
+      static Lerp(uu, Ru, yu) {
+        return Bu.LerpToRef(uu, Ru, yu, new Bu)
       }
-      static LerpToRef(UU, RU, gU, tU) {
-        return tU.r = UU.r + (RU.r - UU.r) * gU, tU.g = UU.g + (RU.g - UU.g) * gU, tU.b = UU.b + (RU.b - UU.b) * gU, tU.a = UU.a + (RU.a - UU.a) * gU, tU
+      static LerpToRef(uu, Ru, yu, Eu) {
+        return Eu.r = uu.r + (Ru.r - uu.r) * yu, Eu.g = uu.g + (Ru.g - uu.g) * yu, Eu.b = uu.b + (Ru.b - uu.b) * yu, Eu.a = uu.a + (Ru.a - uu.a) * yu, Eu
       }
-      static Hermite(UU, RU, gU, tU, pU) {
-        const EU = pU * pU,
-          PU = pU * EU,
-          TU = 2 * PU - 3 * EU + 1,
-          qU = -2 * PU + 3 * EU,
-          KU = PU - 2 * EU + pU,
-          cU = PU - EU,
-          GU = UU.r * TU + gU.r * qU + RU.r * KU + tU.r * cU,
-          uU = UU.g * TU + gU.g * qU + RU.g * KU + tU.g * cU,
-          CU = UU.b * TU + gU.b * qU + RU.b * KU + tU.b * cU,
-          hU = UU.a * TU + gU.a * qU + RU.a * KU + tU.a * cU;
-        return new jU(GU, uU, CU, hU)
+      static Hermite(uu, Ru, yu, Eu, Ku) {
+        const Qu = Ku * Ku,
+          mu = Ku * Qu,
+          Ju = 2 * mu - 3 * Qu + 1,
+          Nu = -2 * mu + 3 * Qu,
+          Xu = mu - 2 * Qu + Ku,
+          Vu = mu - Qu,
+          ru = uu.r * Ju + yu.r * Nu + Ru.r * Xu + Eu.r * Vu,
+          xu = uu.g * Ju + yu.g * Nu + Ru.g * Xu + Eu.g * Vu,
+          Su = uu.b * Ju + yu.b * Nu + Ru.b * Xu + Eu.b * Vu,
+          pu = uu.a * Ju + yu.a * Nu + Ru.a * Xu + Eu.a * Vu;
+        return new Bu(ru, xu, Su, pu)
       }
-      static Hermite1stDerivative(UU, RU, gU, tU, pU) {
-        const EU = new jU;
-        return this.Hermite1stDerivativeToRef(UU, RU, gU, tU, pU, EU), EU
+      static Hermite1stDerivative(uu, Ru, yu, Eu, Ku) {
+        const Qu = new Bu;
+        return this.Hermite1stDerivativeToRef(uu, Ru, yu, Eu, Ku, Qu), Qu
       }
-      static Hermite1stDerivativeToRef(UU, RU, gU, tU, pU, EU) {
-        const PU = pU * pU;
-        EU.r = 6 * (PU - pU) * UU.r + (3 * PU - 4 * pU + 1) * RU.r + 6 * (-PU + pU) * gU.r + (3 * PU - 2 * pU) * tU.r, EU.g = 6 * (PU - pU) * UU.g + (3 * PU - 4 * pU + 1) * RU.g + 6 * (-PU + pU) * gU.g + (3 * PU - 2 * pU) * tU.g, EU.b = 6 * (PU - pU) * UU.b + (3 * PU - 4 * pU + 1) * RU.b + 6 * (-PU + pU) * gU.b + (3 * PU - 2 * pU) * tU.b, EU.a = 6 * (PU - pU) * UU.a + (3 * PU - 4 * pU + 1) * RU.a + 6 * (-PU + pU) * gU.a + (3 * PU - 2 * pU) * tU.a
+      static Hermite1stDerivativeToRef(uu, Ru, yu, Eu, Ku, Qu) {
+        const mu = Ku * Ku;
+        Qu.r = 6 * (mu - Ku) * uu.r + (3 * mu - 4 * Ku + 1) * Ru.r + 6 * (-mu + Ku) * yu.r + (3 * mu - 2 * Ku) * Eu.r, Qu.g = 6 * (mu - Ku) * uu.g + (3 * mu - 4 * Ku + 1) * Ru.g + 6 * (-mu + Ku) * yu.g + (3 * mu - 2 * Ku) * Eu.g, Qu.b = 6 * (mu - Ku) * uu.b + (3 * mu - 4 * Ku + 1) * Ru.b + 6 * (-mu + Ku) * yu.b + (3 * mu - 2 * Ku) * Eu.b, Qu.a = 6 * (mu - Ku) * uu.a + (3 * mu - 4 * Ku + 1) * Ru.a + 6 * (-mu + Ku) * yu.a + (3 * mu - 2 * Ku) * Eu.a
       }
-      static FromColor3(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new jU(UU.r, UU.g, UU.b, RU)
+      static FromColor3(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new Bu(uu.r, uu.g, uu.b, Ru)
       }
-      static FromArray(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new jU(UU[RU], UU[RU + 1], UU[RU + 2], UU[RU + 3])
+      static FromArray(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new Bu(uu[Ru], uu[Ru + 1], uu[Ru + 2], uu[Ru + 3])
       }
-      static FromArrayToRef(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          gU = arguments.length > 2 ? arguments[2] : void 0;
-        gU.r = UU[RU], gU.g = UU[RU + 1], gU.b = UU[RU + 2], gU.a = UU[RU + 3]
+      static FromArrayToRef(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          yu = arguments.length > 2 ? arguments[2] : void 0;
+        yu.r = uu[Ru], yu.g = uu[Ru + 1], yu.b = uu[Ru + 2], yu.a = uu[Ru + 3]
       }
-      static FromInts(UU, RU, gU, tU) {
-        return new jU(UU / 255, RU / 255, gU / 255, tU / 255)
+      static FromInts(uu, Ru, yu, Eu) {
+        return new Bu(uu / 255, Ru / 255, yu / 255, Eu / 255)
       }
-      static CheckColors4(UU, RU) {
-        if (UU.length === 3 * RU) {
-          const RU = [];
-          for (let gU = 0; gU < UU.length; gU += 3) {
-            const tU = gU / 3 * 4;
-            RU[tU] = UU[gU], RU[tU + 1] = UU[gU + 1], RU[tU + 2] = UU[gU + 2], RU[tU + 3] = 1
+      static CheckColors4(uu, Ru) {
+        if (uu.length === 3 * Ru) {
+          const Ru = [];
+          for (let yu = 0; yu < uu.length; yu += 3) {
+            const Eu = yu / 3 * 4;
+            Ru[Eu] = uu[yu], Ru[Eu + 1] = uu[yu + 1], Ru[Eu + 2] = uu[yu + 2], Ru[Eu + 3] = 1
           }
-          return RU
+          return Ru
         }
-        return UU
+        return uu
       }
     }
-    jU._V8PerformanceHack = new jU(.5, .5, .5, .5);
-    class uU {}
-    uU.Color3 = (0, tU.e)(3, GU.Black), uU.Color4 = (0, tU.e)(3, (() => new jU(0, 0, 0, 0)));
-    let CU = !1;
+    Bu._V8PerformanceHack = new Bu(.5, .5, .5, .5);
+    class xu {}
+    xu.Color3 = (0, Eu.b)(3, ru.Black), xu.Color4 = (0, Eu.b)(3, (() => new Bu(0, 0, 0, 0)));
+    let Su = !1;
 
-    function hU() {
-      CU || (CU = !0, Object.defineProperties(GU.prototype, {
+    function pu() {
+      Su || (Su = !0, Object.defineProperties(ru.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(jU.prototype, {
+      }), Object.defineProperties(Bu.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), (0, PU.g)("BABYLON.Color3", GU), (0, PU.g)("BABYLON.Color4", jU))
+      }), (0, mu.c)("BABYLON.Color3", ru), (0, mu.c)("BABYLON.Color4", Bu))
     }
   },
-  36602: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => EU,
-      h: () => tU,
-      k: () => pU
+  36833: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Qu,
+      f: () => Eu,
+      g: () => Ku
     });
-    const tU = 1 / 2.2,
-      pU = 2.2;
+    const Eu = 1 / 2.2,
+      Ku = 2.2;
     Math.sqrt(5);
-    let EU = .001
+    let Qu = .001
   },
-  36626: (UU, RU, gU) => {
-    function tU(UU) {
-      return parseInt(UU.toString().replace(/\W/g, ""))
+  36865: (uu, Ru, yu) => {
+    function Eu(uu) {
+      return parseInt(uu.toString().replace(/\W/g, ""))
     }
 
-    function pU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
-      return Math.abs(UU - RU) <= gU
+    function Ku(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1401298e-51;
+      return Math.abs(uu - Ru) <= yu
     }
 
-    function EU(UU, RU, gU) {
-      let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
-      return UU < RU - tU || UU > gU + tU
+    function Qu(uu, Ru, yu) {
+      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1401298e-51;
+      return uu < Ru - Eu || uu > yu + Eu
     }
 
-    function PU(UU, RU) {
-      return UU === RU ? UU : Math.random() * (RU - UU) + UU
+    function mu(uu, Ru) {
+      return uu === Ru ? uu : Math.random() * (Ru - uu) + uu
     }
 
-    function TU(UU, RU, gU) {
-      return UU + (RU - UU) * gU
+    function Ju(uu, Ru, yu) {
+      return uu + (Ru - uu) * yu
     }
 
-    function qU(UU, RU, gU) {
-      let tU = QU(RU - UU, 360);
-      return tU > 180 && (tU -= 360), UU + tU * jU(gU)
+    function Nu(uu, Ru, yu) {
+      let Eu = Tu(Ru - uu, 360);
+      return Eu > 180 && (Eu -= 360), uu + Eu * Bu(yu)
     }
 
-    function KU(UU, RU, gU) {
-      let tU;
-      return tU = UU != RU ? jU((gU - UU) / (RU - UU)) : 0, tU
+    function Xu(uu, Ru, yu) {
+      let Eu;
+      return Eu = uu != Ru ? Bu((yu - uu) / (Ru - uu)) : 0, Eu
     }
 
-    function cU(UU, RU, gU, tU, pU) {
-      const EU = pU * pU,
-        PU = pU * EU;
-      return UU * (2 * PU - 3 * EU + 1) + gU * (-2 * PU + 3 * EU) + RU * (PU - 2 * EU + pU) + tU * (PU - EU)
+    function Vu(uu, Ru, yu, Eu, Ku) {
+      const Qu = Ku * Ku,
+        mu = Ku * Qu;
+      return uu * (2 * mu - 3 * Qu + 1) + yu * (-2 * mu + 3 * Qu) + Ru * (mu - 2 * Qu + Ku) + Eu * (mu - Qu)
     }
 
-    function GU(UU, RU, gU, tU, pU) {
-      const EU = pU * pU;
-      return 6 * (EU - pU) * UU + (3 * EU - 4 * pU + 1) * RU + 6 * (-EU + pU) * gU + (3 * EU - 2 * pU) * tU
+    function ru(uu, Ru, yu, Eu, Ku) {
+      const Qu = Ku * Ku;
+      return 6 * (Qu - Ku) * uu + (3 * Qu - 4 * Ku + 1) * Ru + 6 * (-Qu + Ku) * yu + (3 * Qu - 2 * Ku) * Eu
     }
 
-    function jU(UU) {
-      let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return Math.min(gU, Math.max(RU, UU))
+    function Bu(uu) {
+      let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Math.min(yu, Math.max(Ru, uu))
     }
 
-    function uU(UU) {
-      return UU -= 2 * Math.PI * Math.floor((UU + Math.PI) / (2 * Math.PI))
+    function xu(uu) {
+      return uu -= 2 * Math.PI * Math.floor((uu + Math.PI) / (2 * Math.PI))
     }
 
-    function CU(UU) {
-      const RU = UU.toString(16);
-      return UU <= 15 ? ("0" + RU).toUpperCase() : RU.toUpperCase()
+    function Su(uu) {
+      const Ru = uu.toString(16);
+      return uu <= 15 ? ("0" + Ru).toUpperCase() : Ru.toUpperCase()
     }
 
-    function hU(UU) {
-      if (Math.log2) return Math.floor(Math.log2(UU));
-      if (UU < 0) return NaN;
-      if (0 === UU) return -1 / 0;
-      let RU = 0;
-      if (UU < 1) {
-        for (; UU < 1;) RU++, UU *= 2;
-        RU = -RU
-      } else if (UU > 1)
-        for (; UU > 1;) RU++, UU = Math.floor(UU / 2);
-      return RU
+    function pu(uu) {
+      if (Math.log2) return Math.floor(Math.log2(uu));
+      if (uu < 0) return NaN;
+      if (0 === uu) return -1 / 0;
+      let Ru = 0;
+      if (uu < 1) {
+        for (; uu < 1;) Ru++, uu *= 2;
+        Ru = -Ru
+      } else if (uu > 1)
+        for (; uu > 1;) Ru++, uu = Math.floor(uu / 2);
+      return Ru
     }
 
-    function QU(UU, RU) {
-      return UU - Math.floor(UU / RU) * RU
+    function Tu(uu, Ru) {
+      return uu - Math.floor(uu / Ru) * Ru
     }
 
-    function eU(UU, RU, gU) {
-      return (UU - RU) / (gU - RU)
+    function Wu(uu, Ru, yu) {
+      return (uu - Ru) / (yu - Ru)
     }
 
-    function WU(UU, RU, gU) {
-      return UU * (gU - RU) + RU
+    function ju(uu, Ru, yu) {
+      return uu * (yu - Ru) + Ru
     }
 
-    function fU(UU, RU) {
-      let gU = QU(RU - UU, 360);
-      return gU > 180 && (gU -= 360), gU
+    function Hu(uu, Ru) {
+      let yu = Tu(Ru - uu, 360);
+      return yu > 180 && (yu -= 360), yu
     }
 
-    function xU(UU, RU) {
-      const gU = QU(UU, 2 * RU);
-      return RU - Math.abs(gU - RU)
+    function du(uu, Ru) {
+      const yu = Tu(uu, 2 * Ru);
+      return Ru - Math.abs(yu - Ru)
     }
 
-    function mU(UU, RU, gU) {
-      let tU = jU(gU);
-      return tU = -2 * tU * tU * tU + 3 * tU * tU, RU * tU + UU * (1 - tU)
+    function bu(uu, Ru, yu) {
+      let Eu = Bu(yu);
+      return Eu = -2 * Eu * Eu * Eu + 3 * Eu * Eu, Ru * Eu + uu * (1 - Eu)
     }
 
-    function IU(UU, RU, gU) {
-      let tU;
-      return tU = Math.abs(RU - UU) <= gU ? RU : UU + Math.sign(RU - UU) * gU, tU
+    function Cu(uu, Ru, yu) {
+      let Eu;
+      return Eu = Math.abs(Ru - uu) <= yu ? Ru : uu + Math.sign(Ru - uu) * yu, Eu
     }
 
-    function JU(UU, RU, gU) {
-      const tU = fU(UU, RU);
-      let pU;
-      return pU = -gU < tU && tU < gU ? RU : IU(UU, RU = UU + tU, gU), pU
+    function ku(uu, Ru, yu) {
+      const Eu = Hu(uu, Ru);
+      let Ku;
+      return Ku = -yu < Eu && Eu < yu ? Ru : Cu(uu, Ru = uu + Eu, yu), Ku
     }
 
-    function wU(UU, RU, gU) {
-      return (UU - RU) / (gU - RU)
+    function eu(uu, Ru, yu) {
+      return (uu - Ru) / (yu - Ru)
     }
 
-    function nU(UU, RU, gU) {
-      return (gU - RU) * UU + RU
+    function Au(uu, Ru, yu) {
+      return (yu - Ru) * uu + Ru
     }
 
-    function bU(UU, RU) {
-      const gU = UU % RU;
-      return 0 === gU ? RU : bU(RU, gU)
+    function Du(uu, Ru) {
+      const yu = uu % Ru;
+      return 0 === yu ? Ru : Du(Ru, yu)
     }
-    gU.r(RU), gU.d(RU, {
-      Clamp: () => jU,
-      DeltaAngle: () => fU,
-      Denormalize: () => WU,
-      ExtractAsInt: () => tU,
-      Hermite: () => cU,
-      Hermite1stDerivative: () => GU,
-      HighestCommonFactor: () => bU,
-      ILog2: () => hU,
-      InverseLerp: () => KU,
-      Lerp: () => TU,
-      LerpAngle: () => qU,
-      MoveTowards: () => IU,
-      MoveTowardsAngle: () => JU,
-      Normalize: () => eU,
-      NormalizeRadians: () => uU,
-      OutsideRange: () => EU,
-      PercentToRange: () => nU,
-      PingPong: () => xU,
-      RandomRange: () => PU,
-      RangeToPercent: () => wU,
-      Repeat: () => QU,
-      SmoothStep: () => mU,
-      ToHex: () => CU,
-      WithinEpsilon: () => pU
+    yu.r(Ru), yu.d(Ru, {
+      Clamp: () => Bu,
+      DeltaAngle: () => Hu,
+      Denormalize: () => ju,
+      ExtractAsInt: () => Eu,
+      Hermite: () => Vu,
+      Hermite1stDerivative: () => ru,
+      HighestCommonFactor: () => Du,
+      ILog2: () => pu,
+      InverseLerp: () => Xu,
+      Lerp: () => Ju,
+      LerpAngle: () => Nu,
+      MoveTowards: () => Cu,
+      MoveTowardsAngle: () => ku,
+      Normalize: () => Wu,
+      NormalizeRadians: () => xu,
+      OutsideRange: () => Qu,
+      PercentToRange: () => Au,
+      PingPong: () => du,
+      RandomRange: () => mu,
+      RangeToPercent: () => eu,
+      Repeat: () => Tu,
+      SmoothStep: () => bu,
+      ToHex: () => Su,
+      WithinEpsilon: () => Ku
     })
   },
-  36610: (UU, RU, gU) => {
-    function tU(UU, RU) {
-      const gU = [];
-      for (let tU = 0; tU < UU; ++tU) gU.push(RU());
-      return gU
+  36842: (uu, Ru, yu) => {
+    function Eu(uu, Ru) {
+      const yu = [];
+      for (let Eu = 0; Eu < uu; ++Eu) yu.push(Ru());
+      return yu
     }
 
-    function pU(UU, RU) {
-      return tU(UU, RU)
+    function Ku(uu, Ru) {
+      return Eu(uu, Ru)
     }
-    gU.d(RU, {
-      e: () => tU,
-      f: () => pU,
-      h: () => PU
+    yu.d(Ru, {
+      b: () => Eu,
+      c: () => Ku,
+      e: () => mu
     });
-    const EU = ["push", "splice", "pop", "shift", "unshift"];
+    const Qu = ["push", "splice", "pop", "shift", "unshift"];
 
-    function PU(UU, RU) {
-      const gU = EU.map((gU => function(UU, RU, gU) {
-        const tU = UU[RU];
-        if ("function" !== typeof tU) return null;
-        const pU = function() {
-          const tU = UU.length,
-            EU = pU.previous.apply(UU, arguments);
-          return gU(RU, tU), EU
+    function mu(uu, Ru) {
+      const yu = Qu.map((yu => function(uu, Ru, yu) {
+        const Eu = uu[Ru];
+        if ("function" !== typeof Eu) return null;
+        const Ku = function() {
+          const Eu = uu.length,
+            Qu = Ku.previous.apply(uu, arguments);
+          return yu(Ru, Eu), Qu
         };
-        return tU.next = pU, pU.previous = tU, UU[RU] = pU, () => {
-          const gU = pU.previous;
-          if (!gU) return;
-          const tU = pU.next;
-          tU ? (gU.next = tU, tU.previous = gU) : (gU.next = void 0, UU[RU] = gU), pU.next = void 0, pU.previous = void 0
+        return Eu.next = Ku, Ku.previous = Eu, uu[Ru] = Ku, () => {
+          const yu = Ku.previous;
+          if (!yu) return;
+          const Eu = Ku.next;
+          Eu ? (yu.next = Eu, Eu.previous = yu) : (yu.next = void 0, uu[Ru] = yu), Ku.next = void 0, Ku.previous = void 0
         }
-      }(UU, gU, RU)));
+      }(uu, yu, Ru)));
       return () => {
-        for (const UU of gU) UU?.()
+        for (const uu of yu) uu?.()
       }
     }
   },
-  36639: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => EU,
-      g: () => pU
+  36871: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Qu,
+      c: () => Ku
     });
-    const tU = {};
+    const Eu = {};
 
-    function pU(UU, RU) {
-      tU[UU] = RU
+    function Ku(uu, Ru) {
+      Eu[uu] = Ru
     }
 
-    function EU(UU) {
-      return tU[UU]
+    function Qu(uu) {
+      return Eu[uu]
     }
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

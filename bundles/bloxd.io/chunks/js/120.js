@@ -1,427 +1,427 @@
 export const id = 120;
 export const ids = [120];
 export const modules = {
-  6215: (UU, RU, gU) => {
-    gU.r(RU), gU.d(RU, {
-      default: () => vU
+  6311: (uu, Ru, yu) => {
+    yu.r(Ru), yu.d(Ru, {
+      default: () => gu
     });
-    var tU = gU(56),
-      pU = gU(1481),
-      EU = gU(1037),
-      PU = gU.n(EU),
-      TU = gU(299),
-      qU = gU(6222),
-      KU = gU(1049),
-      cU = gU(1475),
-      GU = gU(4222),
-      jU = gU(1412),
-      uU = gU(2825),
-      CU = gU(4228),
-      hU = gU(1602),
-      QU = gU(4214),
-      eU = gU(1112),
-      WU = gU(21),
-      fU = gU(1461),
-      xU = gU(1196),
-      mU = gU(96),
-      IU = gU(1181),
-      JU = gU(1326),
-      wU = gU(1217),
-      nU = gU(6220),
-      bU = gU(6226),
-      oU = gU(1090);
+    var Eu = yu(64),
+      Ku = yu(1483),
+      Qu = yu(1035),
+      mu = yu.n(Qu),
+      Ju = yu(330),
+      Nu = yu(6322),
+      Xu = yu(1043),
+      Vu = yu(1467),
+      ru = yu(4331),
+      Bu = yu(1408),
+      xu = yu(2916),
+      Su = yu(4338),
+      pu = yu(1617),
+      Tu = yu(4322),
+      Wu = yu(1107),
+      ju = yu(27),
+      Hu = yu(1447),
+      du = yu(1176),
+      bu = yu(106),
+      Cu = yu(1170),
+      ku = yu(1300),
+      eu = yu(1199),
+      Au = yu(6314),
+      Du = yu(6325),
+      Mu = yu(1079);
 
-    function ZU(UU) {
+    function Iu(uu) {
       let {
-        pack: RU,
-        view: gU,
-        favourite: tU,
-        notice: pU
-      } = UU;
+        pack: Ru,
+        view: yu,
+        favourite: Eu,
+        notice: Ku
+      } = uu;
       const {
-        width: EU,
-        height: TU
-      } = qU.s.thumb, {
-        live: GU
-      } = RU;
-      return (0, oU.jsx)("div", {
+        width: Qu,
+        height: Ju
+      } = Nu.o.thumb, {
+        live: ru
+      } = Ru;
+      return (0, Mu.jsx)("div", {
         className: "ShaderPackCard",
-        children: (0, oU.jsxs)("div", {
+        children: (0, Mu.jsxs)("div", {
           className: "ShaderPackCardTile",
-          children: [(0, oU.jsxs)(cU.LinkPreserveSearch, {
-            to: (0, nU.T)(RU.packId),
+          children: [(0, Mu.jsxs)(Vu.LinkPreserveSearch, {
+            to: (0, Au.X)(Ru.packId),
             className: "ShaderPackCardLink",
-            children: [GU && (0, oU.jsx)("img", {
+            children: [ru && (0, Mu.jsx)("img", {
               className: "ShaderPackCardImage",
-              src: (0, qU.v)(xU.clientSideServerUrls.s3Url, GU, gU, "thumb"),
-              width: EU,
-              height: TU,
+              src: (0, Nu.q)(du.clientSideServerUrls.s3Url, ru, yu, "thumb"),
+              width: Qu,
+              height: Ju,
               loading: "lazy",
               alt: "",
               draggable: !1
-            }), GU && (0, oU.jsx)(bU.d, {
-              item: GU
-            }), !GU && (0, oU.jsx)("div", {
+            }), ru && (0, Mu.jsx)(Du.d, {
+              item: ru
+            }), !ru && (0, Mu.jsx)("div", {
               className: "ShaderPackCardImage ShaderPackCardImagePending",
-              children: (0, oU.jsx)(KU.c, {
+              children: (0, Mu.jsx)(Xu.c, {
                 name: "hourglass"
               })
-            }), (0, oU.jsxs)("div", {
+            }), (0, Mu.jsxs)("div", {
               className: "ShaderPackCardText",
-              children: [pU && (0, oU.jsx)("div", {
-                className: PU()("ShaderPackCardNotice", {
-                  Warning: "warning" === pU.tone
+              children: [Ku && (0, Mu.jsx)("div", {
+                className: mu()("ShaderPackCardNotice", {
+                  Warning: "warning" === Ku.tone
                 }),
-                children: pU.text
-              }), (0, oU.jsx)("div", {
+                children: Ku.text
+              }), (0, Mu.jsx)("div", {
                 className: "ShaderPackCardName SmallTextBold",
-                children: RU.name
+                children: Ru.name
               })]
             })]
-          }), GU && (0, oU.jsxs)("div", {
+          }), ru && (0, Mu.jsxs)("div", {
             className: "ShaderPackCardStats",
-            children: [(0, oU.jsxs)("div", {
+            children: [(0, Mu.jsxs)("div", {
               className: "ShaderPackCardUses SmallTextBold",
-              children: [(0, oU.jsx)(KU.c, {
+              children: [(0, Mu.jsx)(Xu.c, {
                 name: "download"
-              }), (0, wU.R)(GU.downloads)]
-            }), tU && (0, oU.jsx)(jU.s, {
-              onClick: tU.onToggle,
-              isLiked: !0 === tU.isFavourite,
-              isLoading: null === tU.isFavourite
+              }), (0, eu.Q)(ru.downloads)]
+            }), Eu && (0, Mu.jsx)(Bu.q, {
+              onClick: Eu.onToggle,
+              isLiked: !0 === Eu.isFavourite,
+              isLoading: null === Eu.isFavourite
             })]
           })]
         })
       })
     }
-    var aU = gU(6235);
+    var Gu = yu(6333);
 
-    function YU(UU) {
+    function Uu(uu) {
       let {
-        results: RU,
-        loading: gU,
-        failed: tU,
-        onRetry: pU,
-        view: EU,
-        previewView: TU
-      } = UU;
+        results: Ru,
+        loading: yu,
+        failed: Eu,
+        onRetry: Ku,
+        view: Qu,
+        previewView: Ju
+      } = uu;
       const {
-        t: qU
-      } = (0, IU.B)(), KU = (0, aU.j)(), cU = Date.now(), GU = null === RU ? 0 : "owned" === RU.kind ? RU.packs.length : RU.page.results.length;
-      return (0, oU.jsxs)("div", {
-        className: PU()("ShaderPackBrowseResults", {
-          Loading: gU && null !== RU
+        t: Nu
+      } = (0, Cu.E)(), Xu = (0, Gu.m)(), Vu = Date.now(), ru = null === Ru ? 0 : "owned" === Ru.kind ? Ru.packs.length : Ru.page.results.length;
+      return (0, Mu.jsxs)("div", {
+        className: mu()("ShaderPackBrowseResults", {
+          Loading: yu && null !== Ru
         }),
-        children: [gU && null === RU && (0, oU.jsx)("div", {
+        children: [yu && null === Ru && (0, Mu.jsx)("div", {
           className: "ShaderPackBrowseMessage",
-          children: (0, oU.jsx)(JU.d, {})
-        }), tU && (0, oU.jsxs)("div", {
+          children: (0, Mu.jsx)(ku.b, {})
+        }), Eu && (0, Mu.jsxs)("div", {
           className: "ShaderPackBrowseMessage",
-          children: [qU("shaderPackListing:loadFailed"), (0, oU.jsx)(jU.e, {
-            onClick: pU,
-            children: qU("general:tryAgain")
+          children: [Nu("shaderPackListing:loadFailed"), (0, Mu.jsx)(Bu.e, {
+            onClick: Ku,
+            children: Nu("general:tryAgain")
           })]
-        }), "listing" === (null === RU || void 0 === RU ? void 0 : RU.kind) && GU > 0 && (0, oU.jsx)("div", {
+        }), "listing" === (null === Ru || void 0 === Ru ? void 0 : Ru.kind) && ru > 0 && (0, Mu.jsx)("div", {
           className: "ShaderPackBrowseGrid",
-          children: RU.page.results.map((UU => (0, oU.jsx)(ZU, {
+          children: Ru.page.results.map((uu => (0, Mu.jsx)(Iu, {
             pack: {
-              packId: UU.packId,
-              name: UU.name,
-              live: UU
+              packId: uu.packId,
+              name: uu.name,
+              live: uu
             },
-            view: TU,
+            view: Ju,
             favourite: {
-              isFavourite: KU.isFavourite(UU.packId),
+              isFavourite: Xu.isFavourite(uu.packId),
               onToggle: () => {
-                KU.toggle(UU.packId)
+                Xu.toggle(uu.packId)
               }
             }
-          }, UU.packId)))
-        }), "owned" === (null === RU || void 0 === RU ? void 0 : RU.kind) && GU > 0 && (0, oU.jsx)("div", {
+          }, uu.packId)))
+        }), "owned" === (null === Ru || void 0 === Ru ? void 0 : Ru.kind) && ru > 0 && (0, Mu.jsx)("div", {
           className: "ShaderPackBrowseGrid",
-          children: RU.packs.map((UU => {
-            var RU;
-            return (0, oU.jsx)(ZU, {
-              pack: UU,
-              view: TU,
-              notice: UU.owner ? (0, nU.S)(UU.owner, !(null === (RU = UU.live) || void 0 === RU || !RU.renderId), cU, qU)[0] : void 0
-            }, UU.packId)
+          children: Ru.packs.map((uu => {
+            var Ru;
+            return (0, Mu.jsx)(Iu, {
+              pack: uu,
+              view: Ju,
+              notice: uu.owner ? (0, Au.W)(uu.owner, !(null === (Ru = uu.live) || void 0 === Ru || !Ru.renderId), Vu, Nu)[0] : void 0
+            }, uu.packId)
           }))
-        }), null !== RU && 0 === GU && (0, oU.jsx)("div", {
+        }), null !== Ru && 0 === ru && (0, Mu.jsx)("div", {
           className: "ShaderPackBrowseMessage",
-          children: qU(BU(EU))
+          children: Nu(nu(Qu))
         })]
       })
     }
 
-    function BU(UU) {
-      return "mine" === UU.section ? "shaderPackListing:noOwnPacks" : (0, nU.p)(UU) ? "general:noResults" : "favourites" === UU.section ? "shaderPackListing:noFavourites" : "general:noResults"
+    function nu(uu) {
+      return "mine" === uu.section ? "shaderPackListing:noOwnPacks" : (0, Au.t)(uu) ? "general:noResults" : "favourites" === uu.section ? "shaderPackListing:noFavourites" : "general:noResults"
     }
-    var VU = gU(6247);
-    const rU = 24,
-      XU = {
+    var su = yu(6344);
+    const tu = 24,
+      lu = {
         favourites: "general:favourites",
         mine: "shaderPackListing:mine"
       };
 
-    function vU() {
-      var UU, RU, gU, EU;
+    function gu() {
+      var uu, Ru, yu, Qu;
       const {
-        t: JU
-      } = (0, IU.B)(), wU = (0, cU.useNavigatePreserveSearch)(), bU = (0, pU.s)(), {
-        userContext: ZU,
-        isUserContextUpdating: BU
-      } = (0, eU.e)(), [vU, dU] = (0, aU.i)(), [HU, SU] = (0, aU.e)(), sU = (0, tU.useRef)(!1), [yU, kU] = (0, GU.o)(), FU = (0, nU.y)(yU), [iU, AU] = (0, tU.useState)(null !== (UU = FU.searchQuery) && void 0 !== UU ? UU : ""), zU = (0, tU.useRef)(null), {
-        searchQuery: MU
-      } = FU;
-      (0, tU.useEffect)((() => {
-        AU(null !== MU && void 0 !== MU ? MU : ""), zU.current && (zU.current.value = null !== MU && void 0 !== MU ? MU : "")
-      }), [MU]);
-      const [DU, LU] = (0, tU.useState)(null), [NU, lU] = (0, tU.useState)(!1), [OU, UR] = (0, tU.useState)(!1), [RR, gR] = (0, tU.useState)(0), tR = (0, tU.useRef)(0), pR = JSON.stringify(FU), ER = (0, nU.h)();
+        t: ku
+      } = (0, Cu.E)(), eu = (0, Vu.useNavigatePreserveSearch)(), Du = (0, Ku.s)(), {
+        userContext: Iu,
+        isUserContextUpdating: nu
+      } = (0, Wu.d)(), [gu, cu] = (0, Gu.i)(), [Lu, zu] = (0, Gu.e)(), Fu = (0, Eu.useRef)(!1), [wu, Zu] = (0, ru.m)(), hu = (0, Au.z)(wu), [Pu, iu] = (0, Eu.useState)(null !== (uu = hu.searchQuery) && void 0 !== uu ? uu : ""), Yu = (0, Eu.useRef)(null), {
+        searchQuery: ou
+      } = hu;
+      (0, Eu.useEffect)((() => {
+        iu(null !== ou && void 0 !== ou ? ou : ""), Yu.current && (Yu.current.value = null !== ou && void 0 !== ou ? ou : "")
+      }), [ou]);
+      const [qu, Ou] = (0, Eu.useState)(null), [vu, au] = (0, Eu.useState)(!1), [fu, uR] = (0, Eu.useState)(!1), [RR, yR] = (0, Eu.useState)(0), ER = (0, Eu.useRef)(0), KR = JSON.stringify(hu), QR = (0, Au.k)();
 
-      function PR() {
-        null !== ER ? (wU(ER), WU.b.set({
-          openEverythingMenuName: TU.n.SETTINGS,
-          openSettingsCategory: "Fu"
-        })) : wU("/")
+      function mR() {
+        null !== QR ? (eu(QR), ju.d.set({
+          openEverythingMenuName: Ju.s.SETTINGS,
+          openSettingsCategory: "ix"
+        })) : eu("/")
       }
 
-      function TR(UU) {
-        kU((RU => {
-          (0, nU.cb)(RU, {
-            ...FU,
+      function JR(uu) {
+        Zu((Ru => {
+          (0, Au.ib)(Ru, {
+            ...hu,
             pageNumber: 1,
-            ...UU
+            ...uu
           })
         }))
       }
 
-      function qR() {
-        const UU = iU.trim() || null;
-        TR({
-          searchQuery: UU,
-          ...null !== UU && !sU.current && (0, nU.k)(FU) && {
+      function NR() {
+        const uu = Pu.trim() || null;
+        JR({
+          searchQuery: uu,
+          ...null !== uu && !Fu.current && (0, Au.m)(hu) && {
             withFeatures: [],
             withoutFeatures: []
           }
         })
-      }(0, QU.c)(PR), (0, aU.d)(), (0, tU.useEffect)((() => {
-        if (BU) return;
-        const UU = ++tR.current,
-          RU = JSON.parse(pR);
-        lU(!0), UR(!1), async function(UU) {
-          if ("mine" === UU.section) return {
+      }(0, Tu.c)(mR), (0, Gu.b)(), (0, Eu.useEffect)((() => {
+        if (nu) return;
+        const uu = ++ER.current,
+          Ru = JSON.parse(KR);
+        au(!0), uR(!1), async function(uu) {
+          if ("mine" === uu.section) return {
             kind: "owned",
-            packs: await fU.c.getOwnedShaderPacks(ZU)
+            packs: await Hu.e.getOwnedShaderPacks(Iu)
           };
-          const RU = "favourites" === UU.section,
-            gU = RU && (0, nU.k)(UU),
-            tU = await fU.c.getShaderPacks(ZU, {
-              sort: RU ? nU.d : UU.sort,
-              features: gU ? [] : UU.withFeatures,
-              withoutFeatures: gU ? [] : UU.withoutFeatures,
-              searchQuery: UU.searchQuery,
-              pageNumber: UU.pageNumber,
-              pageSize: rU,
-              onlyFavourites: RU,
-              banned: (0, nU.o)(ZU) ? (0, nU.c)(UU.banned) : void 0
+          const Ru = "favourites" === uu.section,
+            yu = Ru && (0, Au.m)(uu),
+            Eu = await Hu.e.getShaderPacks(Iu, {
+              sort: Ru ? Au.g : uu.sort,
+              features: yu ? [] : uu.withFeatures,
+              withoutFeatures: yu ? [] : uu.withoutFeatures,
+              searchQuery: uu.searchQuery,
+              pageNumber: uu.pageNumber,
+              pageSize: tu,
+              onlyFavourites: Ru,
+              banned: (0, Au.p)(Iu) ? (0, Au.d)(uu.banned) : void 0
             });
           return {
             kind: "listing",
-            page: tU
+            page: Eu
           }
-        }(RU).then((RU => {
-          tR.current === UU && LU(RU)
-        })).catch((RU => {
-          tR.current === UU && (console.error("Failed to get shader packs", RU), LU(null), UR(!0))
+        }(Ru).then((Ru => {
+          ER.current === uu && Ou(Ru)
+        })).catch((Ru => {
+          ER.current === uu && (console.error("Failed to get shader packs", Ru), Ou(null), uR(!0))
         })).finally((() => {
-          tR.current === UU && lU(!1)
+          ER.current === uu && au(!1)
         }))
-      }), [pR, ZU, BU, RR]);
-      const [KR, cR] = (0, tU.useState)(null), GR = null !== (gU = null === (EU = ("listing" === (null === DU || void 0 === DU ? void 0 : DU.kind) ? DU.page.results : (null !== (RU = null === DU || void 0 === DU ? void 0 : DU.packs) && void 0 !== RU ? RU : []).flatMap((UU => UU.live ? [UU.live] : [])))[0]) || void 0 === EU ? void 0 : EU.baselineVersion) && void 0 !== gU ? gU : null;
-      (0, tU.useEffect)((() => {
-        null !== GR && cR(GR)
-      }), [GR]);
-      const jR = "mine" === FU.section,
-        uR = (0, nU.o)(ZU),
-        CR = UU => {
-          "explore" !== FU.section && (UU.stopPropagation(), UU.preventDefault(), TR({
+      }), [KR, Iu, nu, RR]);
+      const [XR, VR] = (0, Eu.useState)(null), rR = null !== (yu = null === (Qu = ("listing" === (null === qu || void 0 === qu ? void 0 : qu.kind) ? qu.page.results : (null !== (Ru = null === qu || void 0 === qu ? void 0 : qu.packs) && void 0 !== Ru ? Ru : []).flatMap((uu => uu.live ? [uu.live] : [])))[0]) || void 0 === Qu ? void 0 : Qu.baselineVersion) && void 0 !== yu ? yu : null;
+      (0, Eu.useEffect)((() => {
+        null !== rR && VR(rR)
+      }), [rR]);
+      const BR = "mine" === hu.section,
+        xR = (0, Au.p)(Iu),
+        SR = uu => {
+          "explore" !== hu.section && (uu.stopPropagation(), uu.preventDefault(), JR({
             section: "explore"
           }))
         };
-      return (0, oU.jsxs)("div", {
+      return (0, Mu.jsxs)("div", {
         className: "ShaderPackBrowse AnimFadeIn",
-        children: [(0, oU.jsx)(jU.d, {
-          onClick: PR,
-          children: JU(null === ER ? "homePage:backToGames" : "shaderPackListing:backToSettings")
-        }), (0, oU.jsxs)("div", {
+        children: [(0, Mu.jsx)(Bu.b, {
+          onClick: mR,
+          children: ku(null === QR ? "homePage:backToGames" : "shaderPackListing:backToSettings")
+        }), (0, Mu.jsxs)("div", {
           className: "ShaderPackBrowseHeader",
-          children: [(0, oU.jsxs)("div", {
+          children: [(0, Mu.jsxs)("div", {
             className: "ShaderPackBrowseHeaderRow",
-            children: [(0, oU.jsx)("h1", {
+            children: [(0, Mu.jsx)("h1", {
               className: "VisuallyHidden",
-              children: JU("shaderPackListing:title")
-            }), (0, oU.jsxs)("div", {
+              children: ku("shaderPackListing:title")
+            }), (0, Mu.jsxs)("div", {
               className: "ShaderPackBrowseTabs",
-              children: [(0, oU.jsx)("div", {
-                className: PU()("ShaderPackBrowseSort", {
-                  Active: "explore" === FU.section
+              children: [(0, Mu.jsx)("div", {
+                className: mu()("ShaderPackBrowseSort", {
+                  Active: "explore" === hu.section
                 }),
-                onMouseDownCapture: CR,
-                onTouchEndCapture: CR,
-                children: (0, oU.jsx)(uU.c, {
-                  options: qU.x.map((UU => ({
-                    value: UU,
-                    label: JU(nU.X[UU])
+                onMouseDownCapture: SR,
+                onTouchEndCapture: SR,
+                children: (0, Mu.jsx)(xu.d, {
+                  options: Nu.u.map((uu => ({
+                    value: uu,
+                    label: ku(Au.cb[uu])
                   }))),
-                  value: FU.sort,
-                  onChange: UU => {
-                    TR({
+                  value: hu.sort,
+                  onChange: uu => {
+                    JR({
                       section: "explore",
-                      sort: UU.value
+                      sort: uu.value
                     })
                   }
                 })
-              }), Object.keys(XU).map((UU => (0, oU.jsx)(jU.M, {
-                active: FU.section === UU,
+              }), Object.keys(lu).map((uu => (0, Mu.jsx)(Bu.P, {
+                active: hu.section === uu,
                 onClick: () => {
-                  TR({
-                    section: UU
+                  JR({
+                    section: uu
                   })
                 },
-                children: JU(XU[UU])
-              }, UU)))]
-            }), !jR && (0, oU.jsx)("div", {
+                children: ku(lu[uu])
+              }, uu)))]
+            }), !BR && (0, Mu.jsx)("div", {
               className: "ShaderPackBrowseDivider"
-            }), !jR && (0, oU.jsxs)("div", {
+            }), !BR && (0, Mu.jsxs)("div", {
               className: "ShaderPackBrowseSearch",
-              children: [(0, oU.jsx)("div", {
+              children: [(0, Mu.jsx)("div", {
                 className: "ShaderPackBrowseSearchIcon",
-                children: (0, oU.jsx)(KU.c, {
+                children: (0, Mu.jsx)(Xu.c, {
                   name: "magnifying-glass"
                 })
-              }), (0, oU.jsx)(hU.d, {
+              }), (0, Mu.jsx)(pu.b, {
                 className: "ShaderPackBrowseSearchInput",
-                placeholderText: JU("shaderPackListing:searchPlaceholder"),
-                maxLength: qU.L,
-                defaultValue: iU,
-                domRef: zU,
-                onValueChange: AU,
-                onEnter: qR
-              }), (0, oU.jsx)(jU.e, {
-                onClick: qR,
-                children: JU("general:search")
+                placeholderText: ku("shaderPackListing:searchPlaceholder"),
+                maxLength: Nu.H,
+                defaultValue: Pu,
+                domRef: Yu,
+                onValueChange: iu,
+                onEnter: NR
+              }), (0, Mu.jsx)(Bu.e, {
+                onClick: NR,
+                children: ku("general:search")
               })]
-            }), !jR && (0, oU.jsxs)(jU.M, {
-              className: PU()("ShaderPackBrowseFilterToggle", {
-                Open: HU
+            }), !BR && (0, Mu.jsxs)(Bu.P, {
+              className: mu()("ShaderPackBrowseFilterToggle", {
+                Open: Lu
               }),
-              pressed: HU,
+              pressed: Lu,
               onClick: () => {
-                SU(!HU)
+                zu(!Lu)
               },
-              children: [JU("shaderPackListing:filter"), " ", (0, oU.jsx)(KU.c, {
-                name: HU ? "angle-up" : "angle-down"
+              children: [ku("shaderPackListing:filter"), " ", (0, Mu.jsx)(Xu.c, {
+                name: Lu ? "angle-up" : "angle-down"
               })]
-            }), (0, oU.jsx)("div", {
+            }), (0, Mu.jsx)("div", {
               className: "ShaderPackBrowseSpace"
-            }), mU.featureFlags.settings.canUseShaderPacks && (0, oU.jsxs)(jU.j, {
+            }), bu.featureFlags.settings.canUseShaderPacks && (0, Mu.jsxs)(Bu.l, {
               onClick: () => {
-                wU(nU.U)
+                eu(Au._)
               },
-              children: [(0, oU.jsx)(KU.c, {
+              children: [(0, Mu.jsx)(Xu.c, {
                 name: "upload"
-              }), " ", JU("shaderPackListing:publish")]
+              }), " ", ku("shaderPackListing:publish")]
             })]
-          }), !jR && HU && (0, oU.jsxs)("div", {
+          }), !BR && Lu && (0, Mu.jsxs)("div", {
             className: "ShaderPackBrowseFeatures",
-            children: [nU.t.map((UU => {
-              const RU = (0, nU.e)(FU, UU),
-                gU = JU(nU.H[UU]);
-              return (0, oU.jsx)(jU.M, {
-                className: PU()("ShaderPackBrowseFeature", {
-                  Without: "without" === RU
+            children: [Au.v.map((uu => {
+              const Ru = (0, Au.h)(hu, uu),
+                yu = ku(Au.I[uu]);
+              return (0, Mu.jsx)(Bu.P, {
+                className: mu()("ShaderPackBrowseFeature", {
+                  Without: "without" === Ru
                 }),
-                active: "with" === RU,
-                pressed: null !== RU,
+                active: "with" === Ru,
+                pressed: null !== Ru,
                 onClick: () => {
-                  sU.current = !0, TR((0, nU.$)(FU, UU))
+                  Fu.current = !0, JR((0, Au.hb)(hu, uu))
                 },
-                children: (0, oU.jsxs)("span", {
+                children: (0, Mu.jsxs)("span", {
                   className: "ShaderPackBrowseFeatureLabel",
-                  children: [(0, oU.jsxs)("span", {
+                  children: [(0, Mu.jsxs)("span", {
                     className: "ShaderPackBrowseFeatureReserve",
-                    children: [(0, oU.jsx)(KU.c, {
+                    children: [(0, Mu.jsx)(Xu.c, {
                       name: "check"
-                    }), " ", gU]
-                  }), (0, oU.jsxs)("span", {
-                    children: [null !== RU && (0, oU.jsx)(KU.c, {
-                      name: "with" === RU ? "check" : "xmark"
-                    }), " ", gU]
+                    }), " ", yu]
+                  }), (0, Mu.jsxs)("span", {
+                    children: [null !== Ru && (0, Mu.jsx)(Xu.c, {
+                      name: "with" === Ru ? "check" : "xmark"
+                    }), " ", yu]
                   })]
                 })
-              }, UU)
-            })), uR && (0, oU.jsx)(jU.M, {
-              className: PU()("ShaderPackBrowseFeature", {
-                Without: "without" === FU.banned
+              }, uu)
+            })), xR && (0, Mu.jsx)(Bu.P, {
+              className: mu()("ShaderPackBrowseFeature", {
+                Without: "without" === hu.banned
               }),
-              active: "with" === FU.banned,
-              pressed: null !== FU.banned,
+              active: "with" === hu.banned,
+              pressed: null !== hu.banned,
               onClick: () => {
-                const UU = "without" === FU.banned && !sU.current && (0, nU.k)(FU);
-                TR({
-                  banned: (0, nU.x)(FU.banned),
-                  ...UU && {
+                const uu = "without" === hu.banned && !Fu.current && (0, Au.m)(hu);
+                JR({
+                  banned: (0, Au.x)(hu.banned),
+                  ...uu && {
                     withFeatures: [],
                     withoutFeatures: []
                   }
                 })
               },
-              children: (0, oU.jsxs)("span", {
+              children: (0, Mu.jsxs)("span", {
                 className: "ShaderPackBrowseFeatureLabel",
-                children: [(0, oU.jsxs)("span", {
+                children: [(0, Mu.jsxs)("span", {
                   className: "ShaderPackBrowseFeatureReserve",
-                  children: [(0, oU.jsx)(KU.c, {
+                  children: [(0, Mu.jsx)(Xu.c, {
                     name: "check"
                   }), " BANNED"]
-                }), (0, oU.jsxs)("span", {
-                  children: [null !== FU.banned && (0, oU.jsx)(KU.c, {
-                    name: "with" === FU.banned ? "check" : "xmark"
+                }), (0, Mu.jsxs)("span", {
+                  children: [null !== hu.banned && (0, Mu.jsx)(Xu.c, {
+                    name: "with" === hu.banned ? "check" : "xmark"
                   }), " BANNED"]
                 })]
               })
             })]
           })]
-        }), (!jR || null !== KR) && (0, oU.jsx)("div", {
+        }), (!BR || null !== XR) && (0, Mu.jsx)("div", {
           className: "ShaderPackBrowseScenes",
-          children: (0, oU.jsx)(VU.b, {
-            selected: vU,
-            onSelect: dU,
-            imageUrl: UU => null === KR ? null : (0, qU.q)(xU.clientSideServerUrls.s3Url, KR, UU, "thumb")
+          children: (0, Mu.jsx)(su.c, {
+            selected: gu,
+            onSelect: cu,
+            imageUrl: uu => null === XR ? null : (0, Nu.h)(du.clientSideServerUrls.s3Url, XR, uu, "thumb")
           })
-        }), (0, oU.jsx)(YU, {
-          results: DU,
-          loading: NU,
-          failed: OU,
+        }), (0, Mu.jsx)(Uu, {
+          results: qu,
+          loading: vu,
+          failed: fu,
           onRetry: () => {
-            gR((UU => UU + 1))
+            yR((uu => uu + 1))
           },
-          view: FU,
-          previewView: vU
-        }), "listing" === (null === DU || void 0 === DU ? void 0 : DU.kind) && (0, oU.jsx)(CU.b, {
+          view: hu,
+          previewView: gu
+        }), "listing" === (null === qu || void 0 === qu ? void 0 : qu.kind) && (0, Mu.jsx)(Su.d, {
           className: "ShaderPackBrowsePagination",
-          page: DU.page.pageNumber,
-          totalPages: DU.page.totalPages,
-          onSetPage: UU => {
-            kU((RU => {
-              (0, GU.l)(RU, UU)
+          page: qu.page.pageNumber,
+          totalPages: qu.page.totalPages,
+          onSetPage: uu => {
+            Zu((Ru => {
+              (0, ru.j)(Ru, uu)
             }))
           },
-          getPageHref: function(UU) {
-            const RU = new URLSearchParams(yU);
-            (0, GU.l)(RU, UU);
-            const gU = RU.toString();
-            return gU ? `${bU.pathname}?${gU}` : bU.pathname
+          getPageHref: function(uu) {
+            const Ru = new URLSearchParams(wu);
+            (0, ru.j)(Ru, uu);
+            const yu = Ru.toString();
+            return yu ? `${Du.pathname}?${yu}` : Du.pathname
           }
         })]
       })
@@ -429,4 +429,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);

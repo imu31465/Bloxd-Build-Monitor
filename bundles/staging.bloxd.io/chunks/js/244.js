@@ -1,83 +1,83 @@
 export const id = 244;
 export const ids = [244];
 export const modules = {
-  39437: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => jU,
-      g: () => GU,
-      i: () => qU,
-      k: () => uU,
-      n: () => KU,
-      o: () => TU,
-      r: () => cU
+  39625: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => Bu,
+      e: () => ru,
+      h: () => Nu,
+      l: () => xu,
+      m: () => Xu,
+      q: () => Ju,
+      u: () => Vu
     });
-    var tU = gU(38236),
-      pU = gU(39442);
+    var Eu = yu(38448),
+      Ku = yu(39633);
 
-    function EU(UU, RU, gU, tU) {
-      switch (RU) {
+    function Qu(uu, Ru, yu, Eu) {
+      switch (Ru) {
         case 5120: {
-          let RU = UU.getInt8(gU);
-          return tU && (RU = Math.max(RU / 127, -1)), RU
+          let Ru = uu.getInt8(yu);
+          return Eu && (Ru = Math.max(Ru / 127, -1)), Ru
         }
         case 5121: {
-          let RU = UU.getUint8(gU);
-          return tU && (RU /= 255), RU
+          let Ru = uu.getUint8(yu);
+          return Eu && (Ru /= 255), Ru
         }
         case 5122: {
-          let RU = UU.getInt16(gU, !0);
-          return tU && (RU = Math.max(RU / 32767, -1)), RU
+          let Ru = uu.getInt16(yu, !0);
+          return Eu && (Ru = Math.max(Ru / 32767, -1)), Ru
         }
         case 5123: {
-          let RU = UU.getUint16(gU, !0);
-          return tU && (RU /= 65535), RU
+          let Ru = uu.getUint16(yu, !0);
+          return Eu && (Ru /= 65535), Ru
         }
         case 5131:
-          return (0, pU.c)(UU.getUint16(gU, !0));
+          return (0, Ku.c)(uu.getUint16(yu, !0));
         case 5124:
-          return UU.getInt32(gU, !0);
+          return uu.getInt32(yu, !0);
         case 5125:
-          return UU.getUint32(gU, !0);
+          return uu.getUint32(yu, !0);
         case 5126:
-          return UU.getFloat32(gU, !0);
+          return uu.getFloat32(yu, !0);
         default:
-          throw new Error(`Invalid component type ${RU}`)
+          throw new Error(`Invalid component type ${Ru}`)
       }
     }
 
-    function PU(UU, RU, gU, tU, EU) {
-      switch (RU) {
+    function mu(uu, Ru, yu, Eu, Qu) {
+      switch (Ru) {
         case 5120:
-          tU && (EU = Math.round(127 * EU)), UU.setInt8(gU, EU);
+          Eu && (Qu = Math.round(127 * Qu)), uu.setInt8(yu, Qu);
           break;
         case 5121:
-          tU && (EU = Math.round(255 * EU)), UU.setUint8(gU, EU);
+          Eu && (Qu = Math.round(255 * Qu)), uu.setUint8(yu, Qu);
           break;
         case 5122:
-          tU && (EU = Math.round(32767 * EU)), UU.setInt16(gU, EU, !0);
+          Eu && (Qu = Math.round(32767 * Qu)), uu.setInt16(yu, Qu, !0);
           break;
         case 5123:
-          tU && (EU = Math.round(65535 * EU)), UU.setUint16(gU, EU, !0);
+          Eu && (Qu = Math.round(65535 * Qu)), uu.setUint16(yu, Qu, !0);
           break;
         case 5131:
-          UU.setUint16(gU, (0, pU.f)(EU), !0);
+          uu.setUint16(yu, (0, Ku.i)(Qu), !0);
           break;
         case 5124:
-          UU.setInt32(gU, EU, !0);
+          uu.setInt32(yu, Qu, !0);
           break;
         case 5125:
-          UU.setUint32(gU, EU, !0);
+          uu.setUint32(yu, Qu, !0);
           break;
         case 5126:
-          UU.setFloat32(gU, EU, !0);
+          uu.setFloat32(yu, Qu, !0);
           break;
         default:
-          throw new Error(`Invalid component type ${RU}`)
+          throw new Error(`Invalid component type ${Ru}`)
       }
     }
 
-    function TU(UU) {
-      switch (UU) {
+    function Ju(uu) {
+      switch (uu) {
         case 5120:
         case 5121:
           return 1;
@@ -90,61 +90,61 @@ export const modules = {
         case 5126:
           return 4;
         default:
-          throw new Error(`Invalid type '${UU}'`)
+          throw new Error(`Invalid type '${uu}'`)
       }
     }
 
-    function qU(UU, RU, gU, tU, pU, qU, KU, cU) {
-      const GU = new Array(tU),
-        jU = new Array(tU);
-      if (UU instanceof Array) {
-        let pU = RU / 4;
-        const EU = gU / 4;
-        for (let RU = 0; RU < qU; RU += tU) {
-          for (let RU = 0; RU < tU; RU++) GU[RU] = jU[RU] = UU[pU + RU];
-          cU(jU, RU);
-          for (let RU = 0; RU < tU; RU++) GU[RU] !== jU[RU] && (UU[pU + RU] = jU[RU]);
-          pU += EU
+    function Nu(uu, Ru, yu, Eu, Ku, Nu, Xu, Vu) {
+      const ru = new Array(Eu),
+        Bu = new Array(Eu);
+      if (uu instanceof Array) {
+        let Ku = Ru / 4;
+        const Qu = yu / 4;
+        for (let Ru = 0; Ru < Nu; Ru += Eu) {
+          for (let Ru = 0; Ru < Eu; Ru++) ru[Ru] = Bu[Ru] = uu[Ku + Ru];
+          Vu(Bu, Ru);
+          for (let Ru = 0; Ru < Eu; Ru++) ru[Ru] !== Bu[Ru] && (uu[Ku + Ru] = Bu[Ru]);
+          Ku += Qu
         }
       } else {
-        const uU = ArrayBuffer.isView(UU) ? new DataView(UU.buffer, UU.byteOffset, UU.byteLength) : new DataView(UU),
-          CU = TU(pU);
-        for (let UU = 0; UU < qU; UU += tU) {
-          for (let UU = 0, gU = RU; UU < tU; UU++, gU += CU) GU[UU] = jU[UU] = EU(uU, pU, gU, KU);
-          cU(jU, UU);
-          for (let UU = 0, gU = RU; UU < tU; UU++, gU += CU) GU[UU] !== jU[UU] && PU(uU, pU, gU, KU, jU[UU]);
-          RU += gU
+        const xu = ArrayBuffer.isView(uu) ? new DataView(uu.buffer, uu.byteOffset, uu.byteLength) : new DataView(uu),
+          Su = Ju(Ku);
+        for (let uu = 0; uu < Nu; uu += Eu) {
+          for (let uu = 0, yu = Ru; uu < Eu; uu++, yu += Su) ru[uu] = Bu[uu] = Qu(xu, Ku, yu, Xu);
+          Vu(Bu, uu);
+          for (let uu = 0, yu = Ru; uu < Eu; uu++, yu += Su) ru[uu] !== Bu[uu] && mu(xu, Ku, yu, Xu, Bu[uu]);
+          Ru += yu
         }
       }
     }
 
-    function KU(UU, RU, gU, pU, EU, PU, KU, cU) {
-      const GU = RU * TU(gU),
-        jU = KU * RU;
-      if (5126 !== gU || EU !== GU) {
-        const tU = new Float32Array(jU);
-        return qU(UU, pU, EU, RU, gU, jU, PU, ((UU, gU) => {
-          for (let pU = 0; pU < RU; pU++) tU[gU + pU] = UU[pU]
-        })), tU
+    function Xu(uu, Ru, yu, Ku, Qu, mu, Xu, Vu) {
+      const ru = Ru * Ju(yu),
+        Bu = Xu * Ru;
+      if (5126 !== yu || Qu !== ru) {
+        const Eu = new Float32Array(Bu);
+        return Nu(uu, Ku, Qu, Ru, yu, Bu, mu, ((uu, yu) => {
+          for (let Ku = 0; Ku < Ru; Ku++) Eu[yu + Ku] = uu[Ku]
+        })), Eu
       }
-      if (!(UU instanceof Array || UU instanceof Float32Array) || 0 !== pU || UU.length !== jU) {
-        if (UU instanceof Array) {
-          const RU = pU / 4;
-          return UU.slice(RU, RU + jU)
+      if (!(uu instanceof Array || uu instanceof Float32Array) || 0 !== Ku || uu.length !== Bu) {
+        if (uu instanceof Array) {
+          const Ru = Ku / 4;
+          return uu.slice(Ru, Ru + Bu)
         }
-        if (ArrayBuffer.isView(UU)) {
-          const RU = UU.byteOffset + pU;
-          return 0 !== (3 & RU) && (tU.e.Warn("Float array must be aligned to 4-bytes border"), cU = !0), cU ? new Float32Array(UU.buffer.slice(RU, RU + jU * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(UU.buffer, RU, jU)
+        if (ArrayBuffer.isView(uu)) {
+          const Ru = uu.byteOffset + Ku;
+          return 0 !== (3 & Ru) && (Eu.e.Warn("Float array must be aligned to 4-bytes border"), Vu = !0), Vu ? new Float32Array(uu.buffer.slice(Ru, Ru + Bu * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(uu.buffer, Ru, Bu)
         }
-        return new Float32Array(UU, pU, jU)
+        return new Float32Array(uu, Ku, Bu)
       }
-      return cU ? UU.slice() : UU
+      return Vu ? uu.slice() : uu
     }
 
-    function cU(UU, RU, gU, pU, EU, PU, KU) {
-      const cU = TU(gU),
-        GU = function(UU) {
-          switch (UU) {
+    function Vu(uu, Ru, yu, Ku, Qu, mu, Xu) {
+      const Vu = Ju(yu),
+        ru = function(uu) {
+          switch (uu) {
             case 5120:
               return Int8Array;
             case 5121:
@@ -161,120 +161,120 @@ export const modules = {
             case 5126:
               return Float32Array;
             default:
-              throw new Error(`Invalid component type '${UU}'`)
+              throw new Error(`Invalid component type '${uu}'`)
           }
-        }(gU),
-        jU = PU * RU;
-      if (Array.isArray(UU)) {
-        if (0 !== (3 & pU) || 0 !== (3 & EU)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const tU = pU / 4,
-          TU = EU / 4;
-        if (tU + (PU - 1) * TU + RU > UU.length) throw new Error("Last accessed index is out of bounds.");
-        if (TU < RU) throw new Error("Data stride cannot be smaller than the component size.");
-        if (TU !== RU) {
-          const tU = new GU(jU);
-          return qU(UU, pU, EU, RU, gU, jU, !1, ((UU, gU) => {
-            for (let pU = 0; pU < RU; pU++) tU[gU + pU] = UU[pU]
-          })), tU
+        }(yu),
+        Bu = mu * Ru;
+      if (Array.isArray(uu)) {
+        if (0 !== (3 & Ku) || 0 !== (3 & Qu)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const Eu = Ku / 4,
+          Ju = Qu / 4;
+        if (Eu + (mu - 1) * Ju + Ru > uu.length) throw new Error("Last accessed index is out of bounds.");
+        if (Ju < Ru) throw new Error("Data stride cannot be smaller than the component size.");
+        if (Ju !== Ru) {
+          const Eu = new ru(Bu);
+          return Nu(uu, Ku, Qu, Ru, yu, Bu, !1, ((uu, yu) => {
+            for (let Ku = 0; Ku < Ru; Ku++) Eu[yu + Ku] = uu[Ku]
+          })), Eu
         }
-        return new GU(UU.slice(tU, tU + jU))
+        return new ru(uu.slice(Eu, Eu + Bu))
       }
-      let uU, CU = pU;
-      ArrayBuffer.isView(UU) ? (uU = UU.buffer, CU += UU.byteOffset) : uU = UU;
-      if (CU + (PU - 1) * EU + RU * cU > uU.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const hU = RU * cU;
-      if (EU < hU) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (EU !== hU) {
-        const UU = new GU(jU),
-          gU = new Uint8Array(uU, CU),
-          tU = new Uint8Array(UU.buffer),
-          pU = RU * cU;
-        for (let RU = 0, TU = 0, qU = 0; RU < PU; RU++, TU += EU, qU += pU) tU.set(gU.subarray(TU, TU + pU), qU);
-        return UU
+      let xu, Su = Ku;
+      ArrayBuffer.isView(uu) ? (xu = uu.buffer, Su += uu.byteOffset) : xu = uu;
+      if (Su + (mu - 1) * Qu + Ru * Vu > xu.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const pu = Ru * Vu;
+      if (Qu < pu) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (Qu !== pu) {
+        const uu = new ru(Bu),
+          yu = new Uint8Array(xu, Su),
+          Eu = new Uint8Array(uu.buffer),
+          Ku = Ru * Vu;
+        for (let Ru = 0, Ju = 0, Nu = 0; Ru < mu; Ru++, Ju += Qu, Nu += Ku) Eu.set(yu.subarray(Ju, Ju + Ku), Nu);
+        return uu
       }
-      return 1 !== cU && 0 !== (CU & cU - 1) && (tU.e.Warn("Array must be aligned to border of element size. Data will be copied."), KU = !0), KU ? new GU(uU.slice(CU, CU + jU * cU)) : new GU(uU, CU, jU)
+      return 1 !== Vu && 0 !== (Su & Vu - 1) && (Eu.e.Warn("Array must be aligned to border of element size. Data will be copied."), Xu = !0), Xu ? new ru(xu.slice(Su, Su + Bu * Vu)) : new ru(xu, Su, Bu)
     }
 
-    function GU(UU, RU, gU, pU, EU, PU, KU, cU) {
-      const GU = RU * TU(gU),
-        jU = KU * RU;
-      if (cU.length !== jU) throw new Error("Output length is not valid");
-      if (5126 === gU && EU === GU)
-        if (UU instanceof Array) {
-          const RU = pU / 4;
-          cU.set(UU, RU)
-        } else if (ArrayBuffer.isView(UU)) {
-        const RU = UU.byteOffset + pU;
-        if (0 !== (3 & RU)) return tU.e.Warn("Float array must be aligned to 4-bytes border"), void cU.set(new Float32Array(UU.buffer.slice(RU, RU + jU * Float32Array.BYTES_PER_ELEMENT)));
-        const gU = new Float32Array(UU.buffer, RU, jU);
-        cU.set(gU)
+    function ru(uu, Ru, yu, Ku, Qu, mu, Xu, Vu) {
+      const ru = Ru * Ju(yu),
+        Bu = Xu * Ru;
+      if (Vu.length !== Bu) throw new Error("Output length is not valid");
+      if (5126 === yu && Qu === ru)
+        if (uu instanceof Array) {
+          const Ru = Ku / 4;
+          Vu.set(uu, Ru)
+        } else if (ArrayBuffer.isView(uu)) {
+        const Ru = uu.byteOffset + Ku;
+        if (0 !== (3 & Ru)) return Eu.e.Warn("Float array must be aligned to 4-bytes border"), void Vu.set(new Float32Array(uu.buffer.slice(Ru, Ru + Bu * Float32Array.BYTES_PER_ELEMENT)));
+        const yu = new Float32Array(uu.buffer, Ru, Bu);
+        Vu.set(yu)
       } else {
-        const RU = new Float32Array(UU, pU, jU);
-        cU.set(RU)
-      } else qU(UU, pU, EU, RU, gU, jU, PU, ((UU, gU) => {
-        for (let tU = 0; tU < RU; tU++) cU[gU + tU] = UU[tU]
+        const Ru = new Float32Array(uu, Ku, Bu);
+        Vu.set(Ru)
+      } else Nu(uu, Ku, Qu, Ru, yu, Bu, mu, ((uu, yu) => {
+        for (let Eu = 0; Eu < Ru; Eu++) Vu[yu + Eu] = uu[Eu]
       }))
     }
 
-    function jU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(UU)) {
-        for (let pU = 0; pU < RU; pU++)
-          if (UU[gU + pU] - tU > 65535) return !0;
+    function Bu(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(uu)) {
+        for (let Ku = 0; Ku < Ru; Ku++)
+          if (uu[yu + Ku] - Eu > 65535) return !0;
         return !1
       }
-      return 4 === UU.BYTES_PER_ELEMENT
+      return 4 === uu.BYTES_PER_ELEMENT
     }
 
-    function uU(UU) {
-      const RU = UU.buffer;
-      if (RU instanceof ArrayBuffer) return UU;
-      const gU = new ArrayBuffer(UU.byteLength);
-      return new Uint8Array(gU).set(new Uint8Array(RU, UU.byteOffset, UU.byteLength)), gU
+    function xu(uu) {
+      const Ru = uu.buffer;
+      if (Ru instanceof ArrayBuffer) return uu;
+      const yu = new ArrayBuffer(uu.byteLength);
+      return new Uint8Array(yu).set(new Uint8Array(Ru, uu.byteOffset, uu.byteLength)), yu
     }
   },
-  39265: (UU, RU, gU) => {
-    gU.d(RU, {
-      d: () => wU,
-      g: () => IU,
-      l: () => JU,
-      i: () => BU,
-      m: () => VU
+  39439: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      d: () => eu,
+      h: () => Cu,
+      n: () => ku,
+      l: () => nu,
+      q: () => su
     });
-    class tU {
+    class Eu {
       constructor() {
         this.children = []
       }
-      isValid(UU) {
+      isValid(uu) {
         return !0
       }
-      process(UU, RU, gU) {
-        let tU = "";
+      process(uu, Ru, yu) {
+        let Eu = "";
         if (this.line) {
-          let gU = this.line;
-          const pU = RU.processor;
-          if (pU) {
-            pU.lineProcessor && (gU = pU.lineProcessor(gU, RU.isFragment, RU.processingContext));
-            const tU = RU.processor?.attributeKeywordName ?? "attribute",
-              EU = RU.isFragment && RU.processor?.varyingFragmentKeywordName ? RU.processor?.varyingFragmentKeywordName : !RU.isFragment && RU.processor?.varyingVertexKeywordName ? RU.processor?.varyingVertexKeywordName : "varying";
-            if (!RU.isFragment && pU.attributeProcessor && this.line.startsWith(tU)) gU = pU.attributeProcessor(this.line, UU, RU.processingContext);
-            else if (pU.varyingProcessor && (pU.varyingCheck?.(this.line, RU.isFragment) || !pU.varyingCheck && this.line.startsWith(EU))) gU = pU.varyingProcessor(this.line, RU.isFragment, UU, RU.processingContext);
-            else if (pU.uniformProcessor && pU.uniformRegexp && pU.uniformRegexp.test(this.line)) RU.lookForClosingBracketForUniformBuffer || (gU = pU.uniformProcessor(this.line, RU.isFragment, UU, RU.processingContext));
-            else if (pU.uniformBufferProcessor && pU.uniformBufferRegexp && pU.uniformBufferRegexp.test(this.line)) RU.lookForClosingBracketForUniformBuffer || (gU = pU.uniformBufferProcessor(this.line, RU.isFragment, RU.processingContext), RU.lookForClosingBracketForUniformBuffer = !0);
-            else if (pU.textureProcessor && pU.textureRegexp && pU.textureRegexp.test(this.line)) gU = pU.textureProcessor(this.line, RU.isFragment, UU, RU.processingContext);
-            else if ((pU.uniformProcessor || pU.uniformBufferProcessor) && this.line.startsWith("uniform") && !RU.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? pU.uniformProcessor && (gU = pU.uniformProcessor(this.line, RU.isFragment, UU, RU.processingContext)) : pU.uniformBufferProcessor && (gU = pU.uniformBufferProcessor(this.line, RU.isFragment, RU.processingContext), RU.lookForClosingBracketForUniformBuffer = !0)
+          let yu = this.line;
+          const Ku = Ru.processor;
+          if (Ku) {
+            Ku.lineProcessor && (yu = Ku.lineProcessor(yu, Ru.isFragment, Ru.processingContext));
+            const Eu = Ru.processor?.attributeKeywordName ?? "attribute",
+              Qu = Ru.isFragment && Ru.processor?.varyingFragmentKeywordName ? Ru.processor?.varyingFragmentKeywordName : !Ru.isFragment && Ru.processor?.varyingVertexKeywordName ? Ru.processor?.varyingVertexKeywordName : "varying";
+            if (!Ru.isFragment && Ku.attributeProcessor && this.line.startsWith(Eu)) yu = Ku.attributeProcessor(this.line, uu, Ru.processingContext);
+            else if (Ku.varyingProcessor && (Ku.varyingCheck?.(this.line, Ru.isFragment) || !Ku.varyingCheck && this.line.startsWith(Qu))) yu = Ku.varyingProcessor(this.line, Ru.isFragment, uu, Ru.processingContext);
+            else if (Ku.uniformProcessor && Ku.uniformRegexp && Ku.uniformRegexp.test(this.line)) Ru.lookForClosingBracketForUniformBuffer || (yu = Ku.uniformProcessor(this.line, Ru.isFragment, uu, Ru.processingContext));
+            else if (Ku.uniformBufferProcessor && Ku.uniformBufferRegexp && Ku.uniformBufferRegexp.test(this.line)) Ru.lookForClosingBracketForUniformBuffer || (yu = Ku.uniformBufferProcessor(this.line, Ru.isFragment, Ru.processingContext), Ru.lookForClosingBracketForUniformBuffer = !0);
+            else if (Ku.textureProcessor && Ku.textureRegexp && Ku.textureRegexp.test(this.line)) yu = Ku.textureProcessor(this.line, Ru.isFragment, uu, Ru.processingContext);
+            else if ((Ku.uniformProcessor || Ku.uniformBufferProcessor) && this.line.startsWith("uniform") && !Ru.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? Ku.uniformProcessor && (yu = Ku.uniformProcessor(this.line, Ru.isFragment, uu, Ru.processingContext)) : Ku.uniformBufferProcessor && (yu = Ku.uniformBufferProcessor(this.line, Ru.isFragment, Ru.processingContext), Ru.lookForClosingBracketForUniformBuffer = !0)
             }
-            RU.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (RU.lookForClosingBracketForUniformBuffer = !1, pU.endOfUniformBufferProcessor && (gU = pU.endOfUniformBufferProcessor(this.line, RU.isFragment, RU.processingContext)))
+            Ru.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (Ru.lookForClosingBracketForUniformBuffer = !1, Ku.endOfUniformBufferProcessor && (yu = Ku.endOfUniformBufferProcessor(this.line, Ru.isFragment, Ru.processingContext)))
           }
-          tU += gU + "\n"
+          Eu += yu + "\n"
         }
-        for (const pU of this.children) tU += pU.process(UU, RU, gU);
-        return this.additionalDefineKey && (UU[this.additionalDefineKey] = this.additionalDefineValue || "true", gU[this.additionalDefineKey] = UU[this.additionalDefineKey]), tU
+        for (const Ku of this.children) Eu += Ku.process(uu, Ru, yu);
+        return this.additionalDefineKey && (uu[this.additionalDefineKey] = this.additionalDefineValue || "true", yu[this.additionalDefineKey] = uu[this.additionalDefineKey]), Eu
       }
     }
-    class pU {
+    class Ku {
       constructor() {
         this._lines = []
       }
@@ -284,273 +284,273 @@ export const modules = {
       get canRead() {
         return this.lineIndex < this._lines.length - 1
       }
-      set lines(UU) {
+      set lines(uu) {
         this._lines.length = 0;
-        for (const RU of UU) {
-          if (!RU || "\r" === RU) continue;
-          if ("#" === RU[0]) {
-            this._lines.push(RU);
+        for (const Ru of uu) {
+          if (!Ru || "\r" === Ru) continue;
+          if ("#" === Ru[0]) {
+            this._lines.push(Ru);
             continue
           }
-          const UU = RU.trim();
-          if (!UU) continue;
-          if (UU.startsWith("//")) {
-            this._lines.push(RU);
+          const uu = Ru.trim();
+          if (!uu) continue;
+          if (uu.startsWith("//")) {
+            this._lines.push(Ru);
             continue
           }
-          const gU = UU.indexOf(";");
-          if (-1 === gU) this._lines.push(UU);
-          else if (gU === UU.length - 1) UU.length > 1 && this._lines.push(UU);
+          const yu = uu.indexOf(";");
+          if (-1 === yu) this._lines.push(uu);
+          else if (yu === uu.length - 1) uu.length > 1 && this._lines.push(uu);
           else {
-            const UU = RU.split(";");
-            for (let RU = 0; RU < UU.length; RU++) {
-              let gU = UU[RU];
-              gU && (gU = gU.trim(), gU && this._lines.push(gU + (RU !== UU.length - 1 ? ";" : "")))
+            const uu = Ru.split(";");
+            for (let Ru = 0; Ru < uu.length; Ru++) {
+              let yu = uu[Ru];
+              yu && (yu = yu.trim(), yu && this._lines.push(yu + (Ru !== uu.length - 1 ? ";" : "")))
             }
           }
         }
       }
     }
-    class EU extends tU {
-      process(UU, RU, gU) {
-        for (let tU = 0; tU < this.children.length; tU++) {
-          const pU = this.children[tU];
-          if (pU.isValid(UU)) return pU.process(UU, RU, gU)
+    class Qu extends Eu {
+      process(uu, Ru, yu) {
+        for (let Eu = 0; Eu < this.children.length; Eu++) {
+          const Ku = this.children[Eu];
+          if (Ku.isValid(uu)) return Ku.process(uu, Ru, yu)
         }
         return ""
       }
     }
-    class PU extends tU {
-      isValid(UU) {
-        return this.testExpression.isTrue(UU)
+    class mu extends Eu {
+      isValid(uu) {
+        return this.testExpression.isTrue(uu)
       }
     }
-    class TU {
-      isTrue(UU) {
+    class Ju {
+      isTrue(uu) {
         return !0
       }
-      static postfixToInfix(UU) {
-        const RU = [];
-        for (const gU of UU)
-          if (void 0 === TU._OperatorPriority[gU]) RU.push(gU);
+      static postfixToInfix(uu) {
+        const Ru = [];
+        for (const yu of uu)
+          if (void 0 === Ju._OperatorPriority[yu]) Ru.push(yu);
           else {
-            const UU = RU[RU.length - 1],
-              tU = RU[RU.length - 2];
-            RU.length -= 2, RU.push(`(${tU}${gU}${UU})`)
-          } return RU[RU.length - 1]
+            const uu = Ru[Ru.length - 1],
+              Eu = Ru[Ru.length - 2];
+            Ru.length -= 2, Ru.push(`(${Eu}${yu}${uu})`)
+          } return Ru[Ru.length - 1]
       }
-      static infixToPostfix(UU) {
-        const RU = TU._InfixToPostfixCache.get(UU);
-        if (RU) return RU.accessTime = Date.now(), RU.result;
-        if (!UU.includes("&&") && !UU.includes("||") && !UU.includes(")") && !UU.includes("(")) return [UU];
-        const gU = [];
-        let tU = -1;
-        const pU = () => {
-            cU = cU.trim(), "" !== cU && (gU.push(cU), cU = "")
+      static infixToPostfix(uu) {
+        const Ru = Ju._InfixToPostfixCache.get(uu);
+        if (Ru) return Ru.accessTime = Date.now(), Ru.result;
+        if (!uu.includes("&&") && !uu.includes("||") && !uu.includes(")") && !uu.includes("(")) return [uu];
+        const yu = [];
+        let Eu = -1;
+        const Ku = () => {
+            Vu = Vu.trim(), "" !== Vu && (yu.push(Vu), Vu = "")
           },
-          EU = UU => {
-            tU < TU._Stack.length - 1 && (TU._Stack[++tU] = UU)
+          Qu = uu => {
+            Eu < Ju._Stack.length - 1 && (Ju._Stack[++Eu] = uu)
           },
-          PU = () => TU._Stack[tU],
-          qU = () => -1 === tU ? "!!INVALID EXPRESSION!!" : TU._Stack[tU--];
-        let KU = 0,
-          cU = "";
-        for (; KU < UU.length;) {
-          const RU = UU.charAt(KU),
-            GU = KU < UU.length - 1 ? UU.substring(KU, 2 + KU) : "";
-          if ("(" === RU) cU = "", EU(RU);
-          else if (")" === RU) {
-            for (pU(); - 1 !== tU && "(" !== PU();) gU.push(qU());
-            qU()
-          } else if (TU._OperatorPriority[GU] > 1) {
-            for (pU(); - 1 !== tU && TU._OperatorPriority[PU()] >= TU._OperatorPriority[GU];) gU.push(qU());
-            EU(GU), KU++
-          } else cU += RU;
-          KU++
+          mu = () => Ju._Stack[Eu],
+          Nu = () => -1 === Eu ? "!!INVALID EXPRESSION!!" : Ju._Stack[Eu--];
+        let Xu = 0,
+          Vu = "";
+        for (; Xu < uu.length;) {
+          const Ru = uu.charAt(Xu),
+            ru = Xu < uu.length - 1 ? uu.substring(Xu, 2 + Xu) : "";
+          if ("(" === Ru) Vu = "", Qu(Ru);
+          else if (")" === Ru) {
+            for (Ku(); - 1 !== Eu && "(" !== mu();) yu.push(Nu());
+            Nu()
+          } else if (Ju._OperatorPriority[ru] > 1) {
+            for (Ku(); - 1 !== Eu && Ju._OperatorPriority[mu()] >= Ju._OperatorPriority[ru];) yu.push(Nu());
+            Qu(ru), Xu++
+          } else Vu += Ru;
+          Xu++
         }
-        for (pU(); - 1 !== tU;) "(" === PU() ? qU() : gU.push(qU());
-        return TU._InfixToPostfixCache.size >= TU.InfixToPostfixCacheLimitSize && TU.ClearCache(), TU._InfixToPostfixCache.set(UU, {
-          result: gU,
+        for (Ku(); - 1 !== Eu;) "(" === mu() ? Nu() : yu.push(Nu());
+        return Ju._InfixToPostfixCache.size >= Ju.InfixToPostfixCacheLimitSize && Ju.ClearCache(), Ju._InfixToPostfixCache.set(uu, {
+          result: yu,
           accessTime: Date.now()
-        }), gU
+        }), yu
       }
       static ClearCache() {
-        const UU = Array.from(TU._InfixToPostfixCache.entries()).sort(((UU, RU) => UU[1].accessTime - RU[1].accessTime));
-        for (let RU = 0; RU < TU.InfixToPostfixCacheCleanupSize; RU++) TU._InfixToPostfixCache.delete(UU[RU][0])
+        const uu = Array.from(Ju._InfixToPostfixCache.entries()).sort(((uu, Ru) => uu[1].accessTime - Ru[1].accessTime));
+        for (let Ru = 0; Ru < Ju.InfixToPostfixCacheCleanupSize; Ru++) Ju._InfixToPostfixCache.delete(uu[Ru][0])
       }
     }
-    TU.InfixToPostfixCacheLimitSize = 5e4, TU.InfixToPostfixCacheCleanupSize = 25e3, TU._InfixToPostfixCache = new Map, TU._OperatorPriority = {
+    Ju.InfixToPostfixCacheLimitSize = 5e4, Ju.InfixToPostfixCacheCleanupSize = 25e3, Ju._InfixToPostfixCache = new Map, Ju._OperatorPriority = {
       ")": 0,
       "(": 1,
       "||": 2,
       "&&": 3
-    }, TU._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class qU extends TU {
-      constructor(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = UU, this.not = RU
+    }, Ju._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class Nu extends Ju {
+      constructor(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = uu, this.not = Ru
       }
-      isTrue(UU) {
-        let RU = void 0 !== UU[this.define];
-        return this.not && (RU = !RU), RU
-      }
-    }
-    class KU extends TU {
-      isTrue(UU) {
-        return this.leftOperand.isTrue(UU) || this.rightOperand.isTrue(UU)
+      isTrue(uu) {
+        let Ru = void 0 !== uu[this.define];
+        return this.not && (Ru = !Ru), Ru
       }
     }
-    class cU extends TU {
-      isTrue(UU) {
-        return this.leftOperand.isTrue(UU) && this.rightOperand.isTrue(UU)
+    class Xu extends Ju {
+      isTrue(uu) {
+        return this.leftOperand.isTrue(uu) || this.rightOperand.isTrue(uu)
       }
     }
-    class GU extends TU {
-      constructor(UU, RU, gU) {
-        super(), this.define = UU, this.operand = RU, this.testValue = gU
+    class Vu extends Ju {
+      isTrue(uu) {
+        return this.leftOperand.isTrue(uu) && this.rightOperand.isTrue(uu)
+      }
+    }
+    class ru extends Ju {
+      constructor(uu, Ru, yu) {
+        super(), this.define = uu, this.operand = Ru, this.testValue = yu
       }
       toString() {
         return `${this.define} ${this.operand} ${this.testValue}`
       }
-      isTrue(UU) {
-        let RU = !1;
-        const gU = parseInt(void 0 != UU[this.define] ? UU[this.define] : this.define),
-          tU = parseInt(void 0 != UU[this.testValue] ? UU[this.testValue] : this.testValue);
-        if (isNaN(gU) || isNaN(tU)) return !1;
+      isTrue(uu) {
+        let Ru = !1;
+        const yu = parseInt(void 0 != uu[this.define] ? uu[this.define] : this.define),
+          Eu = parseInt(void 0 != uu[this.testValue] ? uu[this.testValue] : this.testValue);
+        if (isNaN(yu) || isNaN(Eu)) return !1;
         switch (this.operand) {
           case ">":
-            RU = gU > tU;
+            Ru = yu > Eu;
             break;
           case "<":
-            RU = gU < tU;
+            Ru = yu < Eu;
             break;
           case "<=":
-            RU = gU <= tU;
+            Ru = yu <= Eu;
             break;
           case ">=":
-            RU = gU >= tU;
+            Ru = yu >= Eu;
             break;
           case "==":
-            RU = gU === tU;
+            Ru = yu === Eu;
             break;
           case "!=":
-            RU = gU !== tU
+            Ru = yu !== Eu
         }
-        return RU
+        return Ru
       }
     }
-    var jU = gU(39256),
-      uU = gU(39248);
-    const CU = /defined\s*?\((.+?)\)/g,
-      hU = /defined\s*?\[(.+?)\]/g,
-      QU = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      eU = /__decl__/,
-      WU = /light\{X\}.(\w*)/g,
-      fU = /\{X\}/g,
-      xU = [],
-      mU = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+    var Bu = yu(39430),
+      xu = yu(39425);
+    const Su = /defined\s*?\((.+?)\)/g,
+      pu = /defined\s*?\[(.+?)\]/g,
+      Tu = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      Wu = /__decl__/,
+      ju = /light\{X\}.(\w*)/g,
+      Hu = /\{X\}/g,
+      du = [],
+      bu = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
 
-    function IU(UU) {
-      UU.processor && UU.processor.initializeShaders && UU.processor.initializeShaders(UU.processingContext)
+    function Cu(uu) {
+      uu.processor && uu.processor.initializeShaders && uu.processor.initializeShaders(uu.processingContext)
     }
 
-    function JU(UU, RU, gU, tU) {
-      RU.processor?.preProcessShaderCode && (UU = RU.processor.preProcessShaderCode(UU, RU.isFragment)), BU(UU, RU, (UU => {
-        RU.processCodeAfterIncludes && (UU = RU.processCodeAfterIncludes(RU.isFragment ? "fragment" : "vertex", UU, RU.defines));
-        const pU = function(UU, RU, gU) {
-          let tU = function(UU, RU) {
-            if (RU.processor?.noPrecision) return UU;
-            const gU = RU.shouldUseHighPrecisionShader; - 1 === UU.indexOf("precision highp float") ? UU = gU ? "precision highp float;\n" + UU : "precision mediump float;\n" + UU : gU || (UU = UU.replace("precision highp float", "precision mediump float"));
-            return UU
-          }(UU, RU);
-          if (!RU.processor) return tU;
-          if (0 === RU.processor.shaderLanguage && -1 !== tU.indexOf("#version 3") && (tU = tU.replace("#version 300 es", ""), !RU.processor.parseGLES3)) return tU;
-          const pU = RU.defines,
-            EU = YU(RU, gU);
-          RU.processor.preProcessor && (tU = RU.processor.preProcessor(tU, pU, EU, RU.isFragment, RU.processingContext));
-          const PU = {};
-          tU = aU(tU, EU, RU, PU), RU.processor.postProcessor && (tU = RU.processor.postProcessor(tU, pU, RU.isFragment, RU.processingContext, gU ? {
-            drawBuffersExtensionDisabled: !gU.getCaps().drawBuffersExtension
-          } : {}, EU, PU));
-          gU?._features.needShaderCodeInlining && (tU = gU.inlineShaderCode(tU));
-          return tU
-        }(UU, RU, tU);
-        gU(pU, UU)
+    function ku(uu, Ru, yu, Eu) {
+      Ru.processor?.preProcessShaderCode && (uu = Ru.processor.preProcessShaderCode(uu, Ru.isFragment)), nu(uu, Ru, (uu => {
+        Ru.processCodeAfterIncludes && (uu = Ru.processCodeAfterIncludes(Ru.isFragment ? "fragment" : "vertex", uu, Ru.defines));
+        const Ku = function(uu, Ru, yu) {
+          let Eu = function(uu, Ru) {
+            if (Ru.processor?.noPrecision) return uu;
+            const yu = Ru.shouldUseHighPrecisionShader; - 1 === uu.indexOf("precision highp float") ? uu = yu ? "precision highp float;\n" + uu : "precision mediump float;\n" + uu : yu || (uu = uu.replace("precision highp float", "precision mediump float"));
+            return uu
+          }(uu, Ru);
+          if (!Ru.processor) return Eu;
+          if (0 === Ru.processor.shaderLanguage && -1 !== Eu.indexOf("#version 3") && (Eu = Eu.replace("#version 300 es", ""), !Ru.processor.parseGLES3)) return Eu;
+          const Ku = Ru.defines,
+            Qu = Uu(Ru, yu);
+          Ru.processor.preProcessor && (Eu = Ru.processor.preProcessor(Eu, Ku, Qu, Ru.isFragment, Ru.processingContext));
+          const mu = {};
+          Eu = Gu(Eu, Qu, Ru, mu), Ru.processor.postProcessor && (Eu = Ru.processor.postProcessor(Eu, Ku, Ru.isFragment, Ru.processingContext, yu ? {
+            drawBuffersExtensionDisabled: !yu.getCaps().drawBuffersExtension
+          } : {}, Qu, mu));
+          yu?._features.needShaderCodeInlining && (Eu = yu.inlineShaderCode(Eu));
+          return Eu
+        }(uu, Ru, Eu);
+        yu(Ku, uu)
       }))
     }
 
-    function wU(UU, RU, gU) {
-      return gU.processor && gU.processor.finalizeShaders ? gU.processor.finalizeShaders(UU, RU, gU.processingContext) : {
-        vertexCode: UU,
-        fragmentCode: RU
+    function eu(uu, Ru, yu) {
+      return yu.processor && yu.processor.finalizeShaders ? yu.processor.finalizeShaders(uu, Ru, yu.processingContext) : {
+        vertexCode: uu,
+        fragmentCode: Ru
       }
     }
 
-    function nU(UU) {
-      const RU = /defined\((.+)\)/.exec(UU);
-      if (RU && RU.length) return new qU(RU[1].trim(), "!" === UU[0]);
-      const gU = ["==", "!=", ">=", "<=", "<", ">"];
-      let tU = "",
-        pU = 0;
-      for (tU of gU)
-        if (pU = UU.indexOf(tU), pU > -1) break;
-      if (-1 === pU) return new qU(UU);
-      const EU = UU.substring(0, pU).trim(),
-        PU = UU.substring(pU + tU.length).trim();
-      return new GU(EU, tU, PU)
+    function Au(uu) {
+      const Ru = /defined\((.+)\)/.exec(uu);
+      if (Ru && Ru.length) return new Nu(Ru[1].trim(), "!" === uu[0]);
+      const yu = ["==", "!=", ">=", "<=", "<", ">"];
+      let Eu = "",
+        Ku = 0;
+      for (Eu of yu)
+        if (Ku = uu.indexOf(Eu), Ku > -1) break;
+      if (-1 === Ku) return new Nu(uu);
+      const Qu = uu.substring(0, Ku).trim(),
+        mu = uu.substring(Ku + Eu.length).trim();
+      return new ru(Qu, Eu, mu)
     }
 
-    function bU(UU, RU) {
-      const gU = new PU,
-        tU = UU.substring(0, RU);
-      let pU = UU.substring(RU);
-      return pU = pU.substring(0, (pU.indexOf("//") + 1 || pU.length + 1) - 1).trim(), gU.testExpression = "#ifdef" === tU ? new qU(pU) : "#ifndef" === tU ? new qU(pU, !0) : function(UU) {
-        UU = UU.replace(CU, "defined[$1]");
-        const RU = TU.infixToPostfix(UU),
-          gU = [];
-        for (const pU of RU)
-          if ("||" !== pU && "&&" !== pU) gU.push(pU);
-          else if (gU.length >= 2) {
-          let UU = gU[gU.length - 1],
-            RU = gU[gU.length - 2];
-          gU.length -= 2;
-          const tU = "&&" == pU ? new cU : new KU;
-          "string" === typeof UU && (UU = UU.replace(hU, "defined($1)")), "string" === typeof RU && (RU = RU.replace(hU, "defined($1)")), tU.leftOperand = "string" === typeof RU ? nU(RU) : RU, tU.rightOperand = "string" === typeof UU ? nU(UU) : UU, gU.push(tU)
+    function Du(uu, Ru) {
+      const yu = new mu,
+        Eu = uu.substring(0, Ru);
+      let Ku = uu.substring(Ru);
+      return Ku = Ku.substring(0, (Ku.indexOf("//") + 1 || Ku.length + 1) - 1).trim(), yu.testExpression = "#ifdef" === Eu ? new Nu(Ku) : "#ifndef" === Eu ? new Nu(Ku, !0) : function(uu) {
+        uu = uu.replace(Su, "defined[$1]");
+        const Ru = Ju.infixToPostfix(uu),
+          yu = [];
+        for (const Ku of Ru)
+          if ("||" !== Ku && "&&" !== Ku) yu.push(Ku);
+          else if (yu.length >= 2) {
+          let uu = yu[yu.length - 1],
+            Ru = yu[yu.length - 2];
+          yu.length -= 2;
+          const Eu = "&&" == Ku ? new Vu : new Xu;
+          "string" === typeof uu && (uu = uu.replace(pu, "defined($1)")), "string" === typeof Ru && (Ru = Ru.replace(pu, "defined($1)")), Eu.leftOperand = "string" === typeof Ru ? Au(Ru) : Ru, Eu.rightOperand = "string" === typeof uu ? Au(uu) : uu, yu.push(Eu)
         }
-        let tU = gU[gU.length - 1];
-        return "string" === typeof tU && (tU = tU.replace(hU, "defined($1)")), "string" === typeof tU ? nU(tU) : tU
-      }(pU), gU
+        let Eu = yu[yu.length - 1];
+        return "string" === typeof Eu && (Eu = Eu.replace(pu, "defined($1)")), "string" === typeof Eu ? Au(Eu) : Eu
+      }(Ku), yu
     }
 
-    function oU(UU, RU, gU, pU) {
-      let EU;
-      for (; ZU(UU, gU, pU);) {
-        EU = UU.currentLine;
-        const PU = EU.substring(0, 5).toLowerCase();
-        if ("#else" === PU) {
-          const gU = new tU;
-          return RU.children.push(gU), void ZU(UU, gU, pU)
+    function Mu(uu, Ru, yu, Ku) {
+      let Qu;
+      for (; Iu(uu, yu, Ku);) {
+        Qu = uu.currentLine;
+        const mu = Qu.substring(0, 5).toLowerCase();
+        if ("#else" === mu) {
+          const yu = new Eu;
+          return Ru.children.push(yu), void Iu(uu, yu, Ku)
         }
-        if ("#elif" === PU) {
-          const UU = bU(EU, 5);
-          RU.children.push(UU), gU = UU
+        if ("#elif" === mu) {
+          const uu = Du(Qu, 5);
+          Ru.children.push(uu), yu = uu
         }
       }
     }
 
-    function ZU(UU, RU, gU) {
-      for (; UU.canRead;) {
-        UU.lineIndex++;
-        const pU = UU.currentLine;
-        if (pU.indexOf("#") >= 0) {
-          const tU = mU.exec(pU);
-          if (tU && tU.length) {
-            switch (tU[0]) {
+    function Iu(uu, Ru, yu) {
+      for (; uu.canRead;) {
+        uu.lineIndex++;
+        const Ku = uu.currentLine;
+        if (Ku.indexOf("#") >= 0) {
+          const Eu = bu.exec(Ku);
+          if (Eu && Eu.length) {
+            switch (Eu[0]) {
               case "#ifdef": {
-                const tU = new EU;
-                RU.children.push(tU);
-                const PU = bU(pU, 6);
-                tU.children.push(PU), oU(UU, tU, PU, gU);
+                const Eu = new Qu;
+                Ru.children.push(Eu);
+                const mu = Du(Ku, 6);
+                Eu.children.push(mu), Mu(uu, Eu, mu, yu);
                 break
               }
               case "#else":
@@ -559,155 +559,155 @@ export const modules = {
               case "#endif":
                 return !1;
               case "#ifndef": {
-                const tU = new EU;
-                RU.children.push(tU);
-                const PU = bU(pU, 7);
-                tU.children.push(PU), oU(UU, tU, PU, gU);
+                const Eu = new Qu;
+                Ru.children.push(Eu);
+                const mu = Du(Ku, 7);
+                Eu.children.push(mu), Mu(uu, Eu, mu, yu);
                 break
               }
               case "#if": {
-                const tU = new EU,
-                  PU = bU(pU, 3);
-                RU.children.push(tU), tU.children.push(PU), oU(UU, tU, PU, gU);
+                const Eu = new Qu,
+                  mu = Du(Ku, 3);
+                Ru.children.push(Eu), Eu.children.push(mu), Mu(uu, Eu, mu, yu);
                 break
               }
             }
             continue
           }
         }
-        const PU = new tU;
-        if (PU.line = pU, RU.children.push(PU), "#" === pU[0] && "d" === pU[1]) {
-          const UU = pU.replace(";", "").split(" ");
-          PU.additionalDefineKey = UU[1], 3 === UU.length && (PU.additionalDefineValue = UU[2])
+        const mu = new Eu;
+        if (mu.line = Ku, Ru.children.push(mu), "#" === Ku[0] && "d" === Ku[1]) {
+          const uu = Ku.replace(";", "").split(" ");
+          mu.additionalDefineKey = uu[1], 3 === uu.length && (mu.additionalDefineValue = uu[2])
         }
       }
       return !1
     }
 
-    function aU(UU, RU, gU, EU) {
-      const PU = new tU,
-        TU = new pU;
-      return TU.lineIndex = -1, TU.lines = UU.split("\n"), ZU(TU, PU, EU), PU.process(RU, gU, EU)
+    function Gu(uu, Ru, yu, Qu) {
+      const mu = new Eu,
+        Ju = new Ku;
+      return Ju.lineIndex = -1, Ju.lines = uu.split("\n"), Iu(Ju, mu, Qu), mu.process(Ru, yu, Qu)
     }
 
-    function YU(UU, RU) {
-      const gU = UU.defines,
-        tU = {};
-      for (const pU of gU) {
-        const UU = pU.replace("#define", "").replace(";", "").trim().split(" ");
-        tU[UU[0]] = UU.length > 1 ? UU[1] : ""
+    function Uu(uu, Ru) {
+      const yu = uu.defines,
+        Eu = {};
+      for (const Ku of yu) {
+        const uu = Ku.replace("#define", "").replace(";", "").trim().split(" ");
+        Eu[uu[0]] = uu.length > 1 ? uu[1] : ""
       }
-      return 0 === UU.processor?.shaderLanguage && (tU.GL_ES = "true"), tU.__VERSION__ = UU.version, tU[UU.platformName] = "true", (0, uU.j)(tU, RU?.isNDCHalfZRange, RU?.VgU, RU?.useExactSrgbConversions), tU
+      return 0 === uu.processor?.shaderLanguage && (Eu.GL_ES = "true"), Eu.__VERSION__ = uu.version, Eu[uu.platformName] = "true", (0, xu.e)(Eu, Ru?.isNDCHalfZRange, Ru?.CEu, Ru?.useExactSrgbConversions), Eu
     }
 
-    function BU(UU, RU, gU) {
-      let tU;
-      for (xU.length = 0; null !== (tU = QU.exec(UU));) xU.push(tU);
-      let pU = [UU],
-        EU = !1;
-      for (const TU of xU) {
-        let UU = TU[1];
-        if (-1 !== UU.indexOf("__decl__") && (UU = UU.replace(eU, ""), RU.supportsUniformBuffers && (UU = UU.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), UU += "Declaration"), !RU.includesShadersStore[UU]) {
-          const tU = RU.shadersRepository + "ShadersInclude/" + UU + ".fx";
-          return void VU.loadFile(tU, (tU => {
-            RU.includesShadersStore[UU] = tU, BU(pU.join(""), RU, gU)
+    function nu(uu, Ru, yu) {
+      let Eu;
+      for (du.length = 0; null !== (Eu = Tu.exec(uu));) du.push(Eu);
+      let Ku = [uu],
+        Qu = !1;
+      for (const Ju of du) {
+        let uu = Ju[1];
+        if (-1 !== uu.indexOf("__decl__") && (uu = uu.replace(Wu, ""), Ru.supportsUniformBuffers && (uu = uu.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), uu += "Declaration"), !Ru.includesShadersStore[uu]) {
+          const Eu = Ru.shadersRepository + "ShadersInclude/" + uu + ".fx";
+          return void su.loadFile(Eu, (Eu => {
+            Ru.includesShadersStore[uu] = Eu, nu(Ku.join(""), Ru, yu)
           }))
         } {
-          let gU = RU.includesShadersStore[UU];
-          if (TU[2]) {
-            const UU = TU[3].split(",");
-            for (let RU = 0; RU < UU.length; RU += 2) {
-              const tU = new RegExp(UU[RU], "g"),
-                pU = UU[RU + 1];
-              gU = gU.replace(tU, pU)
+          let yu = Ru.includesShadersStore[uu];
+          if (Ju[2]) {
+            const uu = Ju[3].split(",");
+            for (let Ru = 0; Ru < uu.length; Ru += 2) {
+              const Eu = new RegExp(uu[Ru], "g"),
+                Ku = uu[Ru + 1];
+              yu = yu.replace(Eu, Ku)
             }
           }
-          if (TU[4]) {
-            const UU = TU[5];
-            if (-1 !== UU.indexOf("..")) {
-              const tU = UU.split(".."),
-                pU = parseInt(tU[0]);
-              let EU = parseInt(tU[1]),
-                PU = gU.slice(0);
-              gU = "", isNaN(EU) && (EU = RU.indexParameters[tU[1]]);
-              for (let UU = pU; UU < EU; UU++) RU.supportsUniformBuffers || (PU = PU.replace(WU, ((UU, RU) => RU + "{X}"))), gU += PU.replace(fU, UU.toString()) + "\n"
-            } else RU.supportsUniformBuffers || (gU = gU.replace(WU, ((UU, RU) => RU + "{X}"))), gU = gU.replace(fU, UU)
+          if (Ju[4]) {
+            const uu = Ju[5];
+            if (-1 !== uu.indexOf("..")) {
+              const Eu = uu.split(".."),
+                Ku = parseInt(Eu[0]);
+              let Qu = parseInt(Eu[1]),
+                mu = yu.slice(0);
+              yu = "", isNaN(Qu) && (Qu = Ru.indexParameters[Eu[1]]);
+              for (let uu = Ku; uu < Qu; uu++) Ru.supportsUniformBuffers || (mu = mu.replace(ju, ((uu, Ru) => Ru + "{X}"))), yu += mu.replace(Hu, uu.toString()) + "\n"
+            } else Ru.supportsUniformBuffers || (yu = yu.replace(ju, ((uu, Ru) => Ru + "{X}"))), yu = yu.replace(Hu, uu)
           }
-          const tU = [];
-          for (const UU of pU) {
-            const RU = UU.split(TU[0]);
-            for (let UU = 0; UU < RU.length - 1; UU++) tU.push(RU[UU]), tU.push(gU);
-            tU.push(RU[RU.length - 1])
+          const Eu = [];
+          for (const uu of Ku) {
+            const Ru = uu.split(Ju[0]);
+            for (let uu = 0; uu < Ru.length - 1; uu++) Eu.push(Ru[uu]), Eu.push(yu);
+            Eu.push(Ru[Ru.length - 1])
           }
-          pU = tU, EU = EU || gU.indexOf("#include<") >= 0 || gU.indexOf("#include <") >= 0
+          Ku = Eu, Qu = Qu || yu.indexOf("#include<") >= 0 || yu.indexOf("#include <") >= 0
         }
       }
-      xU.length = 0;
-      const PU = pU.join("");
-      EU ? BU(PU.toString(), RU, gU) : gU(PU)
+      du.length = 0;
+      const mu = Ku.join("");
+      Qu ? nu(mu.toString(), Ru, yu) : yu(mu)
     }
-    const VU = {
-      loadFile: (UU, RU, gU, tU, pU, EU) => {
-        throw (0, jU.n)("FileTools")
+    const su = {
+      loadFile: (uu, Ru, yu, Eu, Ku, Qu) => {
+        throw (0, Bu.k)("FileTools")
       }
     }
   },
-  39248: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => pU,
-      f: () => EU,
-      j: () => TU,
-      m: () => PU,
-      o: () => qU
+  39425: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ku,
+      d: () => Qu,
+      e: () => Ju,
+      i: () => mu,
+      j: () => Nu
     });
-    var tU = gU(39256);
-    const pU = {};
+    var Eu = yu(39430);
+    const Ku = {};
 
-    function EU(UU, RU) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (RU ? RU + "\n" : "") + UU
+    function Qu(uu, Ru) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (Ru ? Ru + "\n" : "") + uu
     }
 
-    function PU(UU, RU, gU, EU, PU, TU, qU) {
-      const KU = qU || pU.loadFile;
-      if (!KU) throw (0, tU.n)("FileTools");
-      return KU(UU, RU, gU, EU, PU, TU)
+    function mu(uu, Ru, yu, Qu, mu, Ju, Nu) {
+      const Xu = Nu || Ku.loadFile;
+      if (!Xu) throw (0, Eu.k)("FileTools");
+      return Xu(uu, Ru, yu, Qu, mu, Ju)
     }
 
-    function TU(UU, RU, gU, tU) {
-      if (UU) return RU ? UU.IS_NDC_HALF_ZRANGE = "" : delete UU.IS_NDC_HALF_ZRANGE, gU ? UU.USE_REVERSE_DEPTHBUFFER = "" : delete UU.USE_REVERSE_DEPTHBUFFER, void(tU ? UU.USE_EXACT_SRGB_CONVERSIONS = "" : delete UU.USE_EXACT_SRGB_CONVERSIONS);
+    function Ju(uu, Ru, yu, Eu) {
+      if (uu) return Ru ? uu.IS_NDC_HALF_ZRANGE = "" : delete uu.IS_NDC_HALF_ZRANGE, yu ? uu.USE_REVERSE_DEPTHBUFFER = "" : delete uu.USE_REVERSE_DEPTHBUFFER, void(Eu ? uu.USE_EXACT_SRGB_CONVERSIONS = "" : delete uu.USE_EXACT_SRGB_CONVERSIONS);
       {
-        let UU = "";
-        return RU && (UU += "#define IS_NDC_HALF_ZRANGE"), gU && (UU && (UU += "\n"), UU += "#define USE_REVERSE_DEPTHBUFFER"), tU && (UU && (UU += "\n"), UU += "#define USE_EXACT_SRGB_CONVERSIONS"), UU
+        let uu = "";
+        return Ru && (uu += "#define IS_NDC_HALF_ZRANGE"), yu && (uu && (uu += "\n"), uu += "#define USE_REVERSE_DEPTHBUFFER"), Eu && (uu && (uu += "\n"), uu += "#define USE_EXACT_SRGB_CONVERSIONS"), uu
       }
     }
 
-    function qU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        tU = arguments.length > 3 ? arguments[3] : void 0;
-      switch (UU) {
+    function Nu(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Eu = arguments.length > 3 ? arguments[3] : void 0;
+      switch (uu) {
         case 3: {
-          const UU = new Int8Array(RU);
-          return tU && UU.set(new Int8Array(tU)), UU
+          const uu = new Int8Array(Ru);
+          return Eu && uu.set(new Int8Array(Eu)), uu
         }
         case 0: {
-          const UU = new Uint8Array(RU);
-          return tU && UU.set(new Uint8Array(tU)), UU
+          const uu = new Uint8Array(Ru);
+          return Eu && uu.set(new Uint8Array(Eu)), uu
         }
         case 4: {
-          const UU = "number" !== typeof RU ? new Int16Array(RU) : new Int16Array(gU ? RU / 2 : RU);
-          return tU && UU.set(new Int16Array(tU)), UU
+          const uu = "number" !== typeof Ru ? new Int16Array(Ru) : new Int16Array(yu ? Ru / 2 : Ru);
+          return Eu && uu.set(new Int16Array(Eu)), uu
         }
         case 5:
         case 8:
         case 9:
         case 10:
         case 2: {
-          const UU = "number" !== typeof RU ? new Uint16Array(RU) : new Uint16Array(gU ? RU / 2 : RU);
-          return tU && UU.set(new Uint16Array(tU)), UU
+          const uu = "number" !== typeof Ru ? new Uint16Array(Ru) : new Uint16Array(yu ? Ru / 2 : Ru);
+          return Eu && uu.set(new Uint16Array(Eu)), uu
         }
         case 6: {
-          const UU = "number" !== typeof RU ? new Int32Array(RU) : new Int32Array(gU ? RU / 4 : RU);
-          return tU && UU.set(new Int32Array(tU)), UU
+          const uu = "number" !== typeof Ru ? new Int32Array(Ru) : new Int32Array(yu ? Ru / 4 : Ru);
+          return Eu && uu.set(new Int32Array(Eu)), uu
         }
         case 7:
         case 11:
@@ -715,55 +715,55 @@ export const modules = {
         case 13:
         case 14:
         case 15: {
-          const UU = "number" !== typeof RU ? new Uint32Array(RU) : new Uint32Array(gU ? RU / 4 : RU);
-          return tU && UU.set(new Uint32Array(tU)), UU
+          const uu = "number" !== typeof Ru ? new Uint32Array(Ru) : new Uint32Array(yu ? Ru / 4 : Ru);
+          return Eu && uu.set(new Uint32Array(Eu)), uu
         }
         case 1: {
-          const UU = "number" !== typeof RU ? new Float32Array(RU) : new Float32Array(gU ? RU / 4 : RU);
-          return tU && UU.set(new Float32Array(tU)), UU
+          const uu = "number" !== typeof Ru ? new Float32Array(Ru) : new Float32Array(yu ? Ru / 4 : Ru);
+          return Eu && uu.set(new Float32Array(Eu)), uu
         }
       }
-      const pU = new Uint8Array(RU);
-      return tU && pU.set(new Uint8Array(tU)), pU
+      const Ku = new Uint8Array(Ru);
+      return Eu && Ku.set(new Uint8Array(Eu)), Ku
     }
   },
-  39256: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => KU,
-      i: () => cU,
-      m: () => qU,
-      n: () => pU
+  39430: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Xu,
+      e: () => Vu,
+      i: () => Nu,
+      k: () => Ku
     });
-    const tU = {};
+    const Eu = {};
 
-    function pU(UU) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !tU[UU]) return tU[UU] = !0, `${UU} needs to be imported before as it contains a side-effect required by your code.`
+    function Ku(uu) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Eu[uu]) return Eu[uu] = !0, `${uu} needs to be imported before as it contains a side-effect required by your code.`
     }
-    const EU = {};
-    let PU = !1,
-      TU = 0;
+    const Qu = {};
+    let mu = !1,
+      Ju = 0;
 
-    function qU(UU, RU) {
-      let gU = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const tU = function() {
-        if ((gU || PU) && 0 === TU) {
-          const gU = `${UU}.${RU}`;
-          EU[gU] || (EU[gU] = !0, console.warn(`[Babylon.js] ${gU}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+    function Nu(uu, Ru) {
+      let yu = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Eu = function() {
+        if ((yu || mu) && 0 === Ju) {
+          const yu = `${uu}.${Ru}`;
+          Qu[yu] || (Qu[yu] = !0, console.warn(`[Babylon.js] ${yu}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
         }
       };
-      return tU.__isSideEffectStub = !0, tU
+      return Eu.__isSideEffectStub = !0, Eu
     }
 
-    function KU(UU) {
-      return !!UU && !UU.__isSideEffectStub
+    function Xu(uu) {
+      return !!uu && !uu.__isSideEffectStub
     }
 
-    function cU(UU, RU) {
+    function Vu(uu, Ru) {
       return {
         get() {},
-        set(UU) {
-          Object.defineProperty(this, RU, {
-            value: UU,
+        set(uu) {
+          Object.defineProperty(this, Ru, {
+            value: uu,
             writable: !0,
             configurable: !0,
             enumerable: !0
@@ -774,41 +774,41 @@ export const modules = {
       }
     }
   },
-  39231: (UU, RU, gU) => {
-    function tU() {
+  39411: (uu, Ru, yu) => {
+    function Eu() {
       return "undefined" !== typeof window
     }
 
-    function pU() {
+    function Ku() {
       return "undefined" !== typeof navigator
     }
 
-    function EU() {
+    function Qu() {
       return "undefined" !== typeof document
     }
 
-    function PU(UU) {
-      let RU = "",
-        gU = UU.firstChild;
-      for (; gU;) 3 === gU.nodeType && (RU += gU.textContent), gU = gU.nextSibling;
-      return RU
+    function mu(uu) {
+      let Ru = "",
+        yu = uu.firstChild;
+      for (; yu;) 3 === yu.nodeType && (Ru += yu.textContent), yu = yu.nextSibling;
+      return Ru
     }
-    gU.d(RU, {
-      c: () => PU,
-      g: () => EU,
-      h: () => pU,
-      k: () => tU
+    yu.d(Ru, {
+      b: () => mu,
+      d: () => Qu,
+      e: () => Ku,
+      f: () => Eu
     })
   },
-  39429: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => tU,
-      c: () => pU,
-      d: () => EU
+  39613: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Eu,
+      e: () => Ku,
+      f: () => Qu
     });
-    class tU extends Error {}
-    tU._setPrototypeOf = Object.setPrototypeOf || ((UU, RU) => (UU.__proto__ = RU, UU));
-    const pU = {
+    class Eu extends Error {}
+    Eu._setPrototypeOf = Object.setPrototypeOf || ((uu, Ru) => (uu.__proto__ = Ru, uu));
+    const Ku = {
       MeshInvalidPositionsError: 0,
       UnsupportedTextureError: 1e3,
       GLTFLoaderUnexpectedMagicError: 2e3,
@@ -817,339 +817,339 @@ export const modules = {
       RequestFileError: 4001,
       ReadFileError: 4002
     };
-    class EU extends tU {
-      constructor(UU, RU, gU) {
-        super(UU), this.errorCode = RU, this.innerError = gU, this.name = "RuntimeError", tU._setPrototypeOf(this, EU.prototype)
+    class Qu extends Eu {
+      constructor(uu, Ru, yu) {
+        super(uu), this.errorCode = Ru, this.innerError = yu, this.name = "RuntimeError", Eu._setPrototypeOf(this, Qu.prototype)
       }
     }
   },
-  39424: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => YU,
-      g: () => fU,
-      h: () => bU,
-      l: () => ZU,
-      m: () => wU,
-      p: () => IU,
-      r: () => JU,
-      t: () => vU,
-      w: () => nU,
-      A: () => xU
+  39606: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Uu,
+      h: () => Hu,
+      j: () => Du,
+      n: () => Iu,
+      p: () => eu,
+      r: () => Cu,
+      u: () => ku,
+      v: () => gu,
+      x: () => Au,
+      A: () => du
     });
-    var tU = gU(39427),
-      pU = gU(39231),
-      EU = gU(36624);
-    class PU {}
-    PU.FilesToLoad = {};
-    var TU = gU(39429),
-      qU = gU(39434),
-      KU = gU(36622),
-      cU = gU(39248),
-      GU = gU(39265),
-      jU = gU(38236),
-      uU = gU(39268),
-      CU = gU(39437);
-    const hU = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class QU extends TU.d {
-      constructor(UU, RU) {
-        super(UU, TU.c.LoadFileError), this.name = "LoadFileError", TU.b._setPrototypeOf(this, QU.prototype), RU instanceof tU.e ? this.request = RU : this.file = RU
+    var Eu = yu(39611),
+      Ku = yu(39411),
+      Qu = yu(36858);
+    class mu {}
+    mu.FilesToLoad = {};
+    var Ju = yu(39613),
+      Nu = yu(39621),
+      Xu = yu(36851),
+      Vu = yu(39425),
+      ru = yu(39439),
+      Bu = yu(38448),
+      xu = yu(39447),
+      Su = yu(39625);
+    const pu = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class Tu extends Ju.f {
+      constructor(uu, Ru) {
+        super(uu, Ju.e.LoadFileError), this.name = "LoadFileError", Ju.b._setPrototypeOf(this, Tu.prototype), Ru instanceof Eu.e ? this.request = Ru : this.file = Ru
       }
     }
-    class eU extends TU.d {
-      constructor(UU, RU) {
-        super(UU, TU.c.RequestFileError), this.request = RU, this.name = "RequestFileError", TU.b._setPrototypeOf(this, eU.prototype)
+    class Wu extends Ju.f {
+      constructor(uu, Ru) {
+        super(uu, Ju.e.RequestFileError), this.request = Ru, this.name = "RequestFileError", Ju.b._setPrototypeOf(this, Wu.prototype)
       }
     }
-    class WU extends TU.d {
-      constructor(UU, RU) {
-        super(UU, TU.c.ReadFileError), this.file = RU, this.name = "ReadFileError", TU.b._setPrototypeOf(this, WU.prototype)
+    class ju extends Ju.f {
+      constructor(uu, Ru) {
+        super(uu, Ju.e.ReadFileError), this.file = Ru, this.name = "ReadFileError", Ju.b._setPrototypeOf(this, ju.prototype)
       }
     }
-    const fU = {
+    const Hu = {
         DefaultRetryStrategy: class {
           static ExponentialBackoff() {
-            let UU = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (gU, tU, pU) => 0 !== tU.status || pU >= UU || -1 !== gU.indexOf("file:") ? -1 : Math.pow(2, pU) * RU
+            let uu = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (yu, Eu, Ku) => 0 !== Eu.status || Ku >= uu || -1 !== yu.indexOf("file:") ? -1 : Math.pow(2, Ku) * Ru
           }
         }.ExponentialBackoff(),
         BaseUrl: "",
         CorsBehavior: "anonymous",
-        PreprocessUrl: UU => UU,
+        PreprocessUrl: uu => uu,
         ScriptBaseUrl: "",
-        ScriptPreprocessUrl: UU => UU,
-        CleanUrl: UU => UU = UU.replace(/#/gm, "%23")
+        ScriptPreprocessUrl: uu => uu,
+        CleanUrl: uu => uu = uu.replace(/#/gm, "%23")
       },
-      xU = (UU, RU) => {
-        if ((!UU || 0 !== UU.indexOf("data:")) && fU.CorsBehavior)
-          if ("string" === typeof fU.CorsBehavior || fU.CorsBehavior instanceof String) RU.crossOrigin = fU.CorsBehavior;
+      du = (uu, Ru) => {
+        if ((!uu || 0 !== uu.indexOf("data:")) && Hu.CorsBehavior)
+          if ("string" === typeof Hu.CorsBehavior || Hu.CorsBehavior instanceof String) Ru.crossOrigin = Hu.CorsBehavior;
           else {
-            const gU = fU.CorsBehavior(UU);
-            gU && (RU.crossOrigin = gU)
+            const yu = Hu.CorsBehavior(uu);
+            yu && (Ru.crossOrigin = yu)
           }
       },
-      mU = {
+      bu = {
         getRequiredSize: null
       },
-      IU = function(UU, RU, gU, pU) {
-        let EU, TU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          cU = arguments.length > 5 ? arguments[5] : void 0,
-          GU = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : KU.c.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !GU?._features.forceBitmapOverHTMLImageElement) return gU("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (GU?._features.forceBitmapOverHTMLImageElement && "string" !== typeof UU && "undefined" !== typeof Blob) {
-          let tU;
-          if (UU instanceof Blob) tU = UU;
+      Cu = function(uu, Ru, yu, Ku) {
+        let Qu, Ju = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          Vu = arguments.length > 5 ? arguments[5] : void 0,
+          ru = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Xu.b.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !ru?._features.forceBitmapOverHTMLImageElement) return yu("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (ru?._features.forceBitmapOverHTMLImageElement && "string" !== typeof uu && "undefined" !== typeof Blob) {
+          let Eu;
+          if (uu instanceof Blob) Eu = uu;
           else {
-            const RU = UU instanceof ArrayBuffer ? UU : (0, CU.k)(UU);
-            tU = new Blob([RU], {
-              type: TU
+            const Ru = uu instanceof ArrayBuffer ? uu : (0, Su.l)(uu);
+            Eu = new Blob([Ru], {
+              type: Ju
             })
           }
-          return GU.createImageBitmap(tU, {
+          return ru.createImageBitmap(Eu, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...cU
-          }).then(RU).catch((RU => {
-            gU && gU("Error while trying to load image: " + UU, RU)
+            ...Vu
+          }).then(Ru).catch((Ru => {
+            yu && yu("Error while trying to load image: " + uu, Ru)
           })), null
         }
-        let jU = !1;
-        if (UU instanceof ArrayBuffer || ArrayBuffer.isView(UU))
+        let Bu = !1;
+        if (uu instanceof ArrayBuffer || ArrayBuffer.isView(uu))
           if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let RU;
-            RU = UU instanceof ArrayBuffer ? UU : (0, CU.k)(UU), EU = URL.createObjectURL(new Blob([RU], {
-              type: TU
-            })), jU = !0
-          } else EU = `data:${TU};base64,` + (0, qU.d)(UU);
-        else UU instanceof Blob ? (EU = URL.createObjectURL(UU), jU = !0) : (EU = fU.CleanUrl(UU), EU = fU.PreprocessUrl(EU));
-        const uU = RU => {
-          if (gU) {
-            const tU = EU || UU.toString();
-            gU(`Error while trying to load image: ${0===tU.indexOf("http")||tU.length<=128?tU:tU.slice(0,128)+"..."}`, RU)
+            let Ru;
+            Ru = uu instanceof ArrayBuffer ? uu : (0, Su.l)(uu), Qu = URL.createObjectURL(new Blob([Ru], {
+              type: Ju
+            })), Bu = !0
+          } else Qu = `data:${Ju};base64,` + (0, Nu.g)(uu);
+        else uu instanceof Blob ? (Qu = URL.createObjectURL(uu), Bu = !0) : (Qu = Hu.CleanUrl(uu), Qu = Hu.PreprocessUrl(Qu));
+        const xu = Ru => {
+          if (yu) {
+            const Eu = Qu || uu.toString();
+            yu(`Error while trying to load image: ${0===Eu.indexOf("http")||Eu.length<=128?Eu:Eu.slice(0,128)+"..."}`, Ru)
           }
         };
-        if (GU?._features.forceBitmapOverHTMLImageElement) return wU(EU, (tU => {
-          GU.createImageBitmap(new Blob([tU], {
-            type: TU
+        if (ru?._features.forceBitmapOverHTMLImageElement) return eu(Qu, (Eu => {
+          ru.createImageBitmap(new Blob([Eu], {
+            type: Ju
           }), {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none",
-            ...cU
-          }).then((UU => {
-            RU(UU), jU && URL.revokeObjectURL(EU)
-          })).catch((RU => {
-            gU && gU("Error while trying to load image: " + UU, RU)
+            ...Vu
+          }).then((uu => {
+            Ru(uu), Bu && URL.revokeObjectURL(Qu)
+          })).catch((Ru => {
+            yu && yu("Error while trying to load image: " + uu, Ru)
           }))
-        }), void 0, pU || void 0, !0, ((UU, RU) => {
-          uU(RU)
+        }), void 0, Ku || void 0, !0, ((uu, Ru) => {
+          xu(Ru)
         })), null;
-        const hU = new Image;
-        if (mU.getRequiredSize) {
-          const RU = mU.getRequiredSize(UU);
-          RU.width && (hU.width = RU.width), RU.height && (hU.height = RU.height)
+        const pu = new Image;
+        if (bu.getRequiredSize) {
+          const Ru = bu.getRequiredSize(uu);
+          Ru.width && (pu.width = Ru.width), Ru.height && (pu.height = Ru.height)
         }
-        xU(EU, hU);
-        const QU = [],
-          eU = () => {
-            for (const UU of QU) UU.target.removeEventListener(UU.name, UU.handler);
-            QU.length = 0
+        du(Qu, pu);
+        const Tu = [],
+          Wu = () => {
+            for (const uu of Tu) uu.target.removeEventListener(uu.name, uu.handler);
+            Tu.length = 0
           };
-        QU.push({
-          target: hU,
+        Tu.push({
+          target: pu,
           name: "load",
           handler: () => {
-            eU(), RU(hU), jU && hU.src && URL.revokeObjectURL(hU.src)
+            Wu(), Ru(pu), Bu && pu.src && URL.revokeObjectURL(pu.src)
           }
-        }), QU.push({
-          target: hU,
+        }), Tu.push({
+          target: pu,
           name: "error",
-          handler: UU => {
-            eU(), uU(UU), jU && hU.src && URL.revokeObjectURL(hU.src)
+          handler: uu => {
+            Wu(), xu(uu), Bu && pu.src && URL.revokeObjectURL(pu.src)
           }
-        }), QU.push({
+        }), Tu.push({
           target: document,
           name: "securitypolicyviolation",
-          handler: UU => {
-            if (UU.blockedURI !== hU.src || "ku" === UU.disposition) return;
-            eU();
-            const RU = new Error(`CSP violation of policy ${UU.effectiveDirective} ${UU.blockedURI}. Current policy is ${UU.originalPolicy}`);
-            KU.c.UseFallbackTexture = !1, uU(RU), jU && hU.src && URL.revokeObjectURL(hU.src), hU.src = ""
+          handler: uu => {
+            if (uu.blockedURI !== pu.src || "Px" === uu.disposition) return;
+            Wu();
+            const Ru = new Error(`CSP violation of policy ${uu.effectiveDirective} ${uu.blockedURI}. Current policy is ${uu.originalPolicy}`);
+            Xu.b.UseFallbackTexture = !1, xu(Ru), Bu && pu.src && URL.revokeObjectURL(pu.src), pu.src = ""
           }
         }), (() => {
-          for (const UU of QU) UU.target.addEventListener(UU.name, UU.handler)
+          for (const uu of Tu) uu.target.addEventListener(uu.name, uu.handler)
         })();
-        const WU = "blob:" === EU.substring(0, 5),
-          IU = "data:" === EU.substring(0, 5),
-          JU = () => {
-            WU || IU || !tU.e.IsCustomRequestAvailable ? hU.src = EU : wU(EU, ((UU, RU, gU) => {
-              const tU = new Blob([UU], {
-                  type: !TU && gU ? gU : TU
+        const ju = "blob:" === Qu.substring(0, 5),
+          Cu = "data:" === Qu.substring(0, 5),
+          ku = () => {
+            ju || Cu || !Eu.e.IsCustomRequestAvailable ? pu.src = Qu : eu(Qu, ((uu, Ru, yu) => {
+              const Eu = new Blob([uu], {
+                  type: !Ju && yu ? yu : Ju
                 }),
-                pU = URL.createObjectURL(tU);
-              jU = !0, hU.src = pU
-            }), void 0, pU || void 0, !0, ((UU, RU) => {
-              uU(RU)
+                Ku = URL.createObjectURL(Eu);
+              Bu = !0, pu.src = Ku
+            }), void 0, Ku || void 0, !0, ((uu, Ru) => {
+              xu(Ru)
             }))
           },
-          nU = () => {
-            pU && pU.loadImage(EU, hU)
+          Au = () => {
+            Ku && Ku.loadImage(Qu, pu)
           };
-        if (!WU && !IU && pU && pU.enableTexturesOffline) pU.open(nU, JU);
+        if (!ju && !Cu && Ku && Ku.enableTexturesOffline) Ku.open(Au, ku);
         else {
-          if (-1 !== EU.indexOf("file:")) {
-            const UU = decodeURIComponent(EU.substring(5).toLowerCase());
-            if (PU.FilesToLoad[UU] && "undefined" !== typeof URL) {
+          if (-1 !== Qu.indexOf("file:")) {
+            const uu = decodeURIComponent(Qu.substring(5).toLowerCase());
+            if (mu.FilesToLoad[uu] && "undefined" !== typeof URL) {
               try {
-                let RU;
+                let Ru;
                 try {
-                  RU = URL.createObjectURL(PU.FilesToLoad[UU])
-                } catch (bU) {
-                  RU = URL.createObjectURL(PU.FilesToLoad[UU])
+                  Ru = URL.createObjectURL(mu.FilesToLoad[uu])
+                } catch (Du) {
+                  Ru = URL.createObjectURL(mu.FilesToLoad[uu])
                 }
-                hU.src = RU, jU = !0
-              } catch (oU) {
-                hU.src = ""
+                pu.src = Ru, Bu = !0
+              } catch (Mu) {
+                pu.src = ""
               }
-              return hU
+              return pu
             }
           }
-          JU()
+          ku()
         }
-        return hU
+        return pu
       },
-      JU = (UU, RU, gU, tU, pU) => {
-        const PU = new FileReader,
-          TU = {
-            onCompleteObservable: new EU.b,
-            abort: () => PU.abort()
+      ku = (uu, Ru, yu, Eu, Ku) => {
+        const mu = new FileReader,
+          Ju = {
+            onCompleteObservable: new Qu.b,
+            abort: () => mu.abort()
           };
-        return PU.onloadend = () => TU.onCompleteObservable.notifyObservers(TU), pU && (PU.onerror = () => {
-          pU(new WU(`Unable to read ${UU.name}`, UU))
-        }), PU.onload = UU => {
-          RU(UU.target.result)
-        }, gU && (PU.onprogress = gU), tU ? PU.readAsArrayBuffer(UU) : PU.readAsText(UU), TU
+        return mu.onloadend = () => Ju.onCompleteObservable.notifyObservers(Ju), Ku && (mu.onerror = () => {
+          Ku(new ju(`Unable to read ${uu.name}`, uu))
+        }), mu.onload = uu => {
+          Ru(uu.target.result)
+        }, yu && (mu.onprogress = yu), Eu ? mu.readAsArrayBuffer(uu) : mu.readAsText(uu), Ju
       },
-      wU = (UU, RU, gU, tU, pU, qU, KU) => {
-        if (UU.name) return JU(UU, RU, gU, pU, qU ? UU => {
-          qU(void 0, UU)
+      eu = (uu, Ru, yu, Eu, Ku, Nu, Xu) => {
+        if (uu.name) return ku(uu, Ru, yu, Ku, Nu ? uu => {
+          Nu(void 0, uu)
         } : void 0);
-        const cU = UU;
-        if (-1 !== cU.indexOf("file:")) {
-          let UU = decodeURIComponent(cU.substring(5).toLowerCase());
-          0 === UU.indexOf("./") && (UU = UU.substring(2));
-          const tU = PU.FilesToLoad[UU];
-          if (tU) return JU(tU, RU, gU, pU, qU ? UU => qU(void 0, new QU(UU.message, UU.file)) : void 0)
+        const Vu = uu;
+        if (-1 !== Vu.indexOf("file:")) {
+          let uu = decodeURIComponent(Vu.substring(5).toLowerCase());
+          0 === uu.indexOf("./") && (uu = uu.substring(2));
+          const Eu = mu.FilesToLoad[uu];
+          if (Eu) return ku(Eu, Ru, yu, Ku, Nu ? uu => Nu(void 0, new Tu(uu.message, uu.file)) : void 0)
         }
         const {
-          match: GU,
-          type: CU
-        } = aU(cU);
-        if (GU) {
-          const UU = {
-            onCompleteObservable: new EU.b,
+          match: ru,
+          type: Su
+        } = Gu(Vu);
+        if (ru) {
+          const uu = {
+            onCompleteObservable: new Qu.b,
             abort: () => () => {}
           };
           try {
-            const UU = pU ? YU(cU) : BU(cU);
-            RU(UU, void 0, CU)
-          } catch (TU) {
-            qU ? qU(void 0, TU) : jU.e.Error(TU.message || "Failed to parse the Data URL")
+            const uu = Ku ? Uu(Vu) : nu(Vu);
+            Ru(uu, void 0, Su)
+          } catch (Ju) {
+            Nu ? Nu(void 0, Ju) : Bu.e.Error(Ju.message || "Failed to parse the Data URL")
           }
-          return uU.b.SetImmediate((() => {
-            UU.onCompleteObservable.notifyObservers(UU)
-          })), UU
+          return xu.e.SetImmediate((() => {
+            uu.onCompleteObservable.notifyObservers(uu)
+          })), uu
         }
-        return nU(cU, ((UU, gU) => {
-          RU(UU, gU?.responseURL, gU?.getResponseHeader("content-type"))
-        }), gU, tU, pU, qU ? UU => {
-          qU(UU.request, new QU(UU.message, UU.request))
-        } : void 0, KU)
+        return Au(Vu, ((uu, yu) => {
+          Ru(uu, yu?.responseURL, yu?.getResponseHeader("content-type"))
+        }), yu, Eu, Ku, Nu ? uu => {
+          Nu(uu.request, new Tu(uu.message, uu.request))
+        } : void 0, Xu)
       },
-      nU = (UU, RU, gU, PU, TU, qU, cU) => {
-        null !== PU && (PU ?? (PU = KU.c.LastCreatedScene?.offlineProvider)), UU = fU.CleanUrl(UU), UU = fU.PreprocessUrl(UU);
-        const GU = fU.BaseUrl + UU;
-        let uU = !1;
-        const CU = {
-            onCompleteObservable: new EU.b,
-            abort: () => uU = !0
+      Au = (uu, Ru, yu, mu, Ju, Nu, Vu) => {
+        null !== mu && (mu ?? (mu = Xu.b.LastCreatedScene?.offlineProvider)), uu = Hu.CleanUrl(uu), uu = Hu.PreprocessUrl(uu);
+        const ru = Hu.BaseUrl + uu;
+        let xu = !1;
+        const Su = {
+            onCompleteObservable: new Qu.b,
+            abort: () => xu = !0
           },
-          hU = () => {
-            let UU, EU = new tU.e,
-              PU = null;
-            const KU = () => {
-              EU && (gU && EU.removeEventListener("progress", gU), UU && EU.removeEventListener("readystatechange", UU), EU.removeEventListener("loadend", hU))
+          pu = () => {
+            let uu, Qu = new Eu.e,
+              mu = null;
+            const Xu = () => {
+              Qu && (yu && Qu.removeEventListener("progress", yu), uu && Qu.removeEventListener("readystatechange", uu), Qu.removeEventListener("loadend", pu))
             };
-            let hU = () => {
-              KU(), CU.onCompleteObservable.notifyObservers(CU), CU.onCompleteObservable.clear(), gU = void 0, UU = null, hU = null, qU = void 0, cU = void 0, RU = void 0
+            let pu = () => {
+              Xu(), Su.onCompleteObservable.notifyObservers(Su), Su.onCompleteObservable.clear(), yu = void 0, uu = null, pu = null, Nu = void 0, Vu = void 0, Ru = void 0
             };
-            CU.abort = () => {
-              uU = !0, hU && hU(), EU && EU.readyState !== (XMLHttpRequest.DONE || 4) && EU.abort(), null !== PU && (clearTimeout(PU), PU = null), EU = null
+            Su.abort = () => {
+              xu = !0, pu && pu(), Qu && Qu.readyState !== (XMLHttpRequest.DONE || 4) && Qu.abort(), null !== mu && (clearTimeout(mu), mu = null), Qu = null
             };
-            const QU = UU => {
-                const RU = UU.message || "Unknown error";
-                qU && EU ? qU(new eU(RU, EU)) : jU.e.Error(RU)
+            const Tu = uu => {
+                const Ru = uu.message || "Unknown error";
+                Nu && Qu ? Nu(new Wu(Ru, Qu)) : Bu.e.Error(Ru)
               },
-              WU = jU => {
-                if (EU) {
-                  if (EU.open("GET", GU), cU) try {
-                    cU(EU)
-                  } catch (CU) {
-                    return void QU(CU)
+              ju = Bu => {
+                if (Qu) {
+                  if (Qu.open("GET", ru), Vu) try {
+                    Vu(Qu)
+                  } catch (Su) {
+                    return void Tu(Su)
                   }
-                  TU && (EU.responseType = "arraybuffer"), gU && EU.addEventListener("progress", gU), hU && EU.addEventListener("loadend", hU), UU = () => {
-                    if (!uU && EU && EU.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (UU && EU.removeEventListener("readystatechange", UU), EU.status >= 200 && EU.status < 300 || 0 === EU.status && (!(0, pU.k)() || oU())) {
-                        const UU = TU ? EU.response : EU.responseText;
-                        if (null !== UU) {
+                  Ju && (Qu.responseType = "arraybuffer"), yu && Qu.addEventListener("progress", yu), pu && Qu.addEventListener("loadend", pu), uu = () => {
+                    if (!xu && Qu && Qu.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (uu && Qu.removeEventListener("readystatechange", uu), Qu.status >= 200 && Qu.status < 300 || 0 === Qu.status && (!(0, Ku.f)() || Mu())) {
+                        const uu = Ju ? Qu.response : Qu.responseText;
+                        if (null !== uu) {
                           try {
-                            RU && RU(UU, EU)
-                          } catch (CU) {
-                            QU(CU)
+                            Ru && Ru(uu, Qu)
+                          } catch (Su) {
+                            Tu(Su)
                           }
                           return
                         }
                       }
-                      const gU = fU.DefaultRetryStrategy;
-                      if (gU) {
-                        const UU = gU(GU, EU, jU);
-                        if (-1 !== UU) return KU(), EU = new tU.e, void(PU = setTimeout((() => WU(jU + 1)), UU))
+                      const yu = Hu.DefaultRetryStrategy;
+                      if (yu) {
+                        const uu = yu(ru, Qu, Bu);
+                        if (-1 !== uu) return Xu(), Qu = new Eu.e, void(mu = setTimeout((() => ju(Bu + 1)), uu))
                       }
-                      const cU = new eU("Error status: " + EU.status + " " + EU.statusText + " - Unable to load " + GU, EU);
-                      qU && qU(cU)
+                      const Vu = new Wu("Error status: " + Qu.status + " " + Qu.statusText + " - Unable to load " + ru, Qu);
+                      Nu && Nu(Vu)
                     }
-                  }, EU.addEventListener("readystatechange", UU), EU.send()
+                  }, Qu.addEventListener("readystatechange", uu), Qu.send()
                 }
               };
-            WU(0)
+            ju(0)
           };
-        if (PU && PU.enableSceneOffline && !UU.startsWith("blob:")) {
-          const tU = UU => {
-              UU && UU.status > 400 ? qU && qU(UU) : hU()
+        if (mu && mu.enableSceneOffline && !uu.startsWith("blob:")) {
+          const Eu = uu => {
+              uu && uu.status > 400 ? Nu && Nu(uu) : pu()
             },
-            pU = () => {
-              PU && PU.loadFile(fU.BaseUrl + UU, (UU => {
-                !uU && RU && RU(UU), CU.onCompleteObservable.notifyObservers(CU)
-              }), gU ? UU => {
-                !uU && gU && gU(UU)
-              } : void 0, tU, TU)
+            Ku = () => {
+              mu && mu.loadFile(Hu.BaseUrl + uu, (uu => {
+                !xu && Ru && Ru(uu), Su.onCompleteObservable.notifyObservers(Su)
+              }), yu ? uu => {
+                !xu && yu && yu(uu)
+              } : void 0, Eu, Ju)
             };
-          PU.open(pU, tU)
-        } else hU();
-        return CU
+          mu.open(Ku, Eu)
+        } else pu();
+        return Su
       },
-      bU = UU => {
+      Du = uu => {
         const {
-          match: RU,
-          type: gU
-        } = aU(UU);
-        if (RU) return gU || void 0;
-        const tU = UU.lastIndexOf(".");
-        switch (UU.substring(tU + 1).toLowerCase()) {
+          match: Ru,
+          type: yu
+        } = Gu(uu);
+        if (Ru) return yu || void 0;
+        const Eu = uu.lastIndexOf(".");
+        switch (uu.substring(Eu + 1).toLowerCase()) {
           case "glb":
             return "model/gltf-binary";
           case "bin":
             return "application/octet-stream";
-          case "eZ":
+          case "jD":
             return "model/gltf+json";
           case "jpg":
           case "jpeg":
@@ -1168,275 +1168,275 @@ export const modules = {
             return
         }
       },
-      oU = () => "undefined" !== typeof location && "file:" === location.protocol,
-      ZU = UU => hU.test(UU),
-      aU = UU => {
-        const RU = hU.exec(UU);
-        if (null === RU || 0 === RU.length) return {
+      Mu = () => "undefined" !== typeof location && "file:" === location.protocol,
+      Iu = uu => pu.test(uu),
+      Gu = uu => {
+        const Ru = pu.exec(uu);
+        if (null === Ru || 0 === Ru.length) return {
           match: !1,
           type: ""
         };
         return {
           match: !0,
-          type: RU[0].replace("data:", "").replace(";base64,", "")
+          type: Ru[0].replace("data:", "").replace(";base64,", "")
         }
       };
 
-    function YU(UU) {
-      return (0, qU.b)(UU.split(",")[1])
+    function Uu(uu) {
+      return (0, Nu.b)(uu.split(",")[1])
     }
-    const BU = UU => (0, qU.c)(UU.split(",")[1]);
-    let VU;
-    const rU = (UU, RU, gU, tU, pU, EU, PU, TU, qU, KU) => {
-      VU = {
-        DecodeBase64UrlToBinary: UU,
-        DecodeBase64UrlToString: RU,
-        DefaultRetryStrategy: gU.DefaultRetryStrategy,
-        BaseUrl: gU.BaseUrl,
-        CorsBehavior: gU.CorsBehavior,
-        PreprocessUrl: gU.PreprocessUrl,
-        IsBase64DataUrl: tU,
-        IsFileURL: pU,
-        LoadFile: EU,
-        LoadImage: PU,
-        ReadFile: TU,
-        RequestFile: qU,
-        SetCorsBehavior: KU
-      }, Object.defineProperty(VU, "DefaultRetryStrategy", {
+    const nu = uu => (0, Nu.e)(uu.split(",")[1]);
+    let su;
+    const tu = (uu, Ru, yu, Eu, Ku, Qu, mu, Ju, Nu, Xu) => {
+      su = {
+        DecodeBase64UrlToBinary: uu,
+        DecodeBase64UrlToString: Ru,
+        DefaultRetryStrategy: yu.DefaultRetryStrategy,
+        BaseUrl: yu.BaseUrl,
+        CorsBehavior: yu.CorsBehavior,
+        PreprocessUrl: yu.PreprocessUrl,
+        IsBase64DataUrl: Eu,
+        IsFileURL: Ku,
+        LoadFile: Qu,
+        LoadImage: mu,
+        ReadFile: Ju,
+        RequestFile: Nu,
+        SetCorsBehavior: Xu
+      }, Object.defineProperty(su, "DefaultRetryStrategy", {
         get: function() {
-          return gU.DefaultRetryStrategy
+          return yu.DefaultRetryStrategy
         },
-        set: function(UU) {
-          gU.DefaultRetryStrategy = UU
+        set: function(uu) {
+          yu.DefaultRetryStrategy = uu
         }
-      }), Object.defineProperty(VU, "BaseUrl", {
+      }), Object.defineProperty(su, "BaseUrl", {
         get: function() {
-          return gU.BaseUrl
+          return yu.BaseUrl
         },
-        set: function(UU) {
-          gU.BaseUrl = UU
+        set: function(uu) {
+          yu.BaseUrl = uu
         }
-      }), Object.defineProperty(VU, "PreprocessUrl", {
+      }), Object.defineProperty(su, "PreprocessUrl", {
         get: function() {
-          return gU.PreprocessUrl
+          return yu.PreprocessUrl
         },
-        set: function(UU) {
-          gU.PreprocessUrl = UU
+        set: function(uu) {
+          yu.PreprocessUrl = uu
         }
-      }), Object.defineProperty(VU, "CorsBehavior", {
+      }), Object.defineProperty(su, "CorsBehavior", {
         get: function() {
-          return gU.CorsBehavior
+          return yu.CorsBehavior
         },
-        set: function(UU) {
-          gU.CorsBehavior = UU
+        set: function(uu) {
+          yu.CorsBehavior = uu
         }
       })
     };
-    let XU = !1;
+    let lu = !1;
 
-    function vU() {
-      XU || (XU = !0, rU(YU, BU, fU, ZU, oU, wU, IU, JU, nU, xU), cU.e.loadFile = wU, cU.e.loadImage = IU, GU.m.loadFile = wU)
+    function gu() {
+      lu || (lu = !0, tu(Uu, nu, Hu, Iu, Mu, eu, Cu, ku, Au, du), Vu.c.loadFile = eu, Vu.c.loadImage = Cu, ru.q.loadFile = eu)
     }
   },
-  39442: (UU, RU, gU) => {
-    gU.d(RU, {
-      c: () => TU,
-      d: () => EU,
-      f: () => PU
+  39633: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      c: () => Ju,
+      e: () => Qu,
+      i: () => mu
     });
-    let tU = null;
+    let Eu = null;
 
-    function pU() {
-      if (tU) return tU;
-      const UU = new ArrayBuffer(4),
-        RU = new Float32Array(UU),
-        gU = new Uint32Array(UU),
-        pU = new Uint32Array(512),
-        EU = new Uint32Array(512);
-      for (let tU = 0; tU < 256; ++tU) {
-        const UU = tU - 127;
-        UU < -24 ? (pU[tU] = 0, pU[256 | tU] = 32768, EU[tU] = 24, EU[256 | tU] = 24) : UU < -14 ? (pU[tU] = 1024 >> -UU - 14, pU[256 | tU] = 1024 >> -UU - 14 | 32768, EU[tU] = -UU - 1, EU[256 | tU] = -UU - 1) : UU <= 15 ? (pU[tU] = UU + 15 << 10, pU[256 | tU] = UU + 15 << 10 | 32768, EU[tU] = 13, EU[256 | tU] = 13) : UU < 128 ? (pU[tU] = 31744, pU[256 | tU] = 64512, EU[tU] = 24, EU[256 | tU] = 24) : (pU[tU] = 31744, pU[256 | tU] = 64512, EU[tU] = 13, EU[256 | tU] = 13)
+    function Ku() {
+      if (Eu) return Eu;
+      const uu = new ArrayBuffer(4),
+        Ru = new Float32Array(uu),
+        yu = new Uint32Array(uu),
+        Ku = new Uint32Array(512),
+        Qu = new Uint32Array(512);
+      for (let Eu = 0; Eu < 256; ++Eu) {
+        const uu = Eu - 127;
+        uu < -24 ? (Ku[Eu] = 0, Ku[256 | Eu] = 32768, Qu[Eu] = 24, Qu[256 | Eu] = 24) : uu < -14 ? (Ku[Eu] = 1024 >> -uu - 14, Ku[256 | Eu] = 1024 >> -uu - 14 | 32768, Qu[Eu] = -uu - 1, Qu[256 | Eu] = -uu - 1) : uu <= 15 ? (Ku[Eu] = uu + 15 << 10, Ku[256 | Eu] = uu + 15 << 10 | 32768, Qu[Eu] = 13, Qu[256 | Eu] = 13) : uu < 128 ? (Ku[Eu] = 31744, Ku[256 | Eu] = 64512, Qu[Eu] = 24, Qu[256 | Eu] = 24) : (Ku[Eu] = 31744, Ku[256 | Eu] = 64512, Qu[Eu] = 13, Qu[256 | Eu] = 13)
       }
-      const PU = new Uint32Array(2048),
-        TU = new Uint32Array(64),
-        qU = new Uint32Array(64);
-      for (let tU = 1; tU < 1024; ++tU) {
-        let UU = tU << 13,
-          RU = 0;
-        for (; 0 === (8388608 & UU);) UU <<= 1, RU -= 8388608;
-        UU &= -8388609, RU += 947912704, PU[tU] = UU | RU
+      const mu = new Uint32Array(2048),
+        Ju = new Uint32Array(64),
+        Nu = new Uint32Array(64);
+      for (let Eu = 1; Eu < 1024; ++Eu) {
+        let uu = Eu << 13,
+          Ru = 0;
+        for (; 0 === (8388608 & uu);) uu <<= 1, Ru -= 8388608;
+        uu &= -8388609, Ru += 947912704, mu[Eu] = uu | Ru
       }
-      for (let tU = 1024; tU < 2048; ++tU) PU[tU] = 939524096 + (tU - 1024 << 13);
-      for (let tU = 1; tU < 31; ++tU) TU[tU] = tU << 23;
-      TU[31] = 1199570944, TU[32] = 2147483648;
-      for (let tU = 33; tU < 63; ++tU) TU[tU] = 2147483648 + (tU - 32 << 23);
-      TU[63] = 3347054592;
-      for (let tU = 1; tU < 64; ++tU) 32 !== tU && (qU[tU] = 1024);
-      return tU = {
-        floatView: RU,
-        uint32View: gU,
-        baseTable: pU,
-        shiftTable: EU,
-        mantissaTable: PU,
-        exponentTable: TU,
-        offsetTable: qU
-      }, tU
+      for (let Eu = 1024; Eu < 2048; ++Eu) mu[Eu] = 939524096 + (Eu - 1024 << 13);
+      for (let Eu = 1; Eu < 31; ++Eu) Ju[Eu] = Eu << 23;
+      Ju[31] = 1199570944, Ju[32] = 2147483648;
+      for (let Eu = 33; Eu < 63; ++Eu) Ju[Eu] = 2147483648 + (Eu - 32 << 23);
+      Ju[63] = 3347054592;
+      for (let Eu = 1; Eu < 64; ++Eu) 32 !== Eu && (Nu[Eu] = 1024);
+      return Eu = {
+        floatView: Ru,
+        uint32View: yu,
+        baseTable: Ku,
+        shiftTable: Qu,
+        mantissaTable: mu,
+        exponentTable: Ju,
+        offsetTable: Nu
+      }, Eu
     }
-    const EU = 65504;
+    const Qu = 65504;
 
-    function PU(UU) {
-      const RU = pU();
-      RU.floatView[0] = UU;
-      const gU = RU.uint32View[0],
-        tU = gU >> 23 & 511;
-      return RU.baseTable[tU] + ((8388607 & gU) >> RU.shiftTable[tU])
+    function mu(uu) {
+      const Ru = Ku();
+      Ru.floatView[0] = uu;
+      const yu = Ru.uint32View[0],
+        Eu = yu >> 23 & 511;
+      return Ru.baseTable[Eu] + ((8388607 & yu) >> Ru.shiftTable[Eu])
     }
 
-    function TU(UU) {
-      const RU = pU();
-      return RU.uint32View[0] = RU.mantissaTable[RU.offsetTable[UU >> 10] + (1023 & UU)] + RU.exponentTable[UU >> 10], RU.floatView[0]
+    function Ju(uu) {
+      const Ru = Ku();
+      return Ru.uint32View[0] = Ru.mantissaTable[Ru.offsetTable[uu >> 10] + (1023 & uu)] + Ru.exponentTable[uu >> 10], Ru.floatView[0]
     }
   },
-  39434: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => EU,
-      c: () => pU,
-      d: () => tU
+  39621: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      b: () => Qu,
+      e: () => Ku,
+      g: () => Eu
     });
-    const tU = UU => {
-        const RU = ArrayBuffer.isView(UU) ? new Uint8Array(UU.buffer, UU.byteOffset, UU.byteLength) : new Uint8Array(UU);
-        return "function" === typeof RU.toBase64 ? RU.toBase64() : function(UU) {
-          const RU = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let gU, tU, pU, EU, PU, TU, qU, KU = "",
-            cU = 0;
-          for (; cU < UU.length;) gU = UU[cU++], tU = cU < UU.length ? UU[cU++] : Number.NaN, pU = cU < UU.length ? UU[cU++] : Number.NaN, EU = gU >> 2, PU = (3 & gU) << 4 | tU >> 4, TU = (15 & tU) << 2 | pU >> 6, qU = 63 & pU, isNaN(tU) ? TU = qU = 64 : isNaN(pU) && (qU = 64), KU += RU.charAt(EU) + RU.charAt(PU) + RU.charAt(TU) + RU.charAt(qU);
-          return KU
-        }(RU)
+    const Eu = uu => {
+        const Ru = ArrayBuffer.isView(uu) ? new Uint8Array(uu.buffer, uu.byteOffset, uu.byteLength) : new Uint8Array(uu);
+        return "function" === typeof Ru.toBase64 ? Ru.toBase64() : function(uu) {
+          const Ru = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let yu, Eu, Ku, Qu, mu, Ju, Nu, Xu = "",
+            Vu = 0;
+          for (; Vu < uu.length;) yu = uu[Vu++], Eu = Vu < uu.length ? uu[Vu++] : Number.NaN, Ku = Vu < uu.length ? uu[Vu++] : Number.NaN, Qu = yu >> 2, mu = (3 & yu) << 4 | Eu >> 4, Ju = (15 & Eu) << 2 | Ku >> 6, Nu = 63 & Ku, isNaN(Eu) ? Ju = Nu = 64 : isNaN(Ku) && (Nu = 64), Xu += Ru.charAt(Qu) + Ru.charAt(mu) + Ru.charAt(Ju) + Ru.charAt(Nu);
+          return Xu
+        }(Ru)
       },
-      pU = UU => atob(UU),
-      EU = UU => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(UU).buffer : function(UU) {
-        const RU = pU(UU),
-          gU = RU.length,
-          tU = new Uint8Array(new ArrayBuffer(gU));
-        for (let pU = 0; pU < gU; pU++) tU[pU] = RU.charCodeAt(pU);
-        return tU.buffer
-      }(UU)
+      Ku = uu => atob(uu),
+      Qu = uu => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(uu).buffer : function(uu) {
+        const Ru = Ku(uu),
+          yu = Ru.length,
+          Eu = new Uint8Array(new ArrayBuffer(yu));
+        for (let Ku = 0; Ku < yu; Ku++) Eu[Ku] = Ru.charCodeAt(Ku);
+        return Eu.buffer
+      }(uu)
   },
-  39268: (UU, RU, gU) => {
-    gU.d(RU, {
-      b: () => pU,
-      c: () => PU
+  39447: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Ku,
+      f: () => mu
     });
-    let tU = [];
-    class pU {
-      static SetImmediate(UU) {
-        0 === tU.length && setTimeout((() => {
-          const UU = tU;
-          tU = [];
-          for (const RU of UU) RU()
-        }), 1), tU.push(UU)
+    let Eu = [];
+    class Ku {
+      static SetImmediate(uu) {
+        0 === Eu.length && setTimeout((() => {
+          const uu = Eu;
+          Eu = [];
+          for (const Ru of uu) Ru()
+        }), 1), Eu.push(uu)
       }
     }
 
-    function EU(UU, RU, gU) {
+    function Qu(uu, Ru, yu) {
       try {
-        if (UU()) return RU(), !0
-      } catch (tU) {
-        return gU?.(tU), !0
+        if (uu()) return Ru(), !0
+      } catch (Eu) {
+        return yu?.(Eu), !0
       }
       return !1
     }
-    const PU = function(UU, RU, gU) {
-      let tU = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        pU = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        PU = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && EU(UU, RU, gU)) return null;
-      const TU = setInterval((() => {
-        EU(UU, RU, gU) ? clearInterval(TU) : (pU -= tU, pU < 0 && (clearInterval(TU), gU?.(new Error("Operation timed out after maximum retries. " + (PU || "")), !0)))
-      }), tU);
-      return () => clearInterval(TU)
+    const mu = function(uu, Ru, yu) {
+      let Eu = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        Ku = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        mu = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Qu(uu, Ru, yu)) return null;
+      const Ju = setInterval((() => {
+        Qu(uu, Ru, yu) ? clearInterval(Ju) : (Ku -= Eu, Ku < 0 && (clearInterval(Ju), yu?.(new Error("Operation timed out after maximum retries. " + (mu || "")), !0)))
+      }), Eu);
+      return () => clearInterval(Ju)
     }
   },
-  39427: (UU, RU, gU) => {
-    gU.d(RU, {
-      e: () => tU
+  39611: (uu, Ru, yu) => {
+    yu.d(Ru, {
+      e: () => Eu
     });
-    class tU {
+    class Eu {
       constructor() {
         this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
       }
       static get IsCustomRequestAvailable() {
-        return Object.keys(tU.CustomRequestHeaders).length > 0 || tU.CustomRequestModifiers.length > 0
+        return Object.keys(Eu.CustomRequestHeaders).length > 0 || Eu.CustomRequestModifiers.length > 0
       }
-      static _CleanUrl(UU) {
-        return UU = (UU = UU.replace("file:http:", "http:")).replace("file:https:", "https:")
+      static _CleanUrl(uu) {
+        return uu = (uu = uu.replace("file:http:", "http:")).replace("file:https:", "https:")
       }
-      static _ShouldSkipRequestModifications(UU) {
-        return tU.SkipRequestModificationForBabylonCDN && (UU.includes("preview.babylonjs.com") || UU.includes("cdn.babylonjs.com"))
+      static _ShouldSkipRequestModifications(uu) {
+        return Eu.SkipRequestModificationForBabylonCDN && (uu.includes("preview.babylonjs.com") || uu.includes("cdn.babylonjs.com"))
       }
-      static _CollectCustomizations(UU) {
-        const RU = {
+      static _CollectCustomizations(uu) {
+        const Ru = {
           ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
         };
-        if (tU._ShouldSkipRequestModifications(UU)) return {
-          url: UU,
-          headers: RU
+        if (Eu._ShouldSkipRequestModifications(uu)) return {
+          url: uu,
+          headers: Ru
         };
-        for (const pU in tU.CustomRequestHeaders) {
-          const UU = tU.CustomRequestHeaders[pU];
-          UU && (RU[pU] = UU)
+        for (const Ku in Eu.CustomRequestHeaders) {
+          const uu = Eu.CustomRequestHeaders[Ku];
+          uu && (Ru[Ku] = uu)
         }
-        const gU = {
-          setRequestHeader: (UU, gU) => {
-            RU[UU] = gU
+        const yu = {
+          setRequestHeader: (uu, yu) => {
+            Ru[uu] = yu
           }
         };
-        for (const pU of tU.CustomRequestModifiers) {
-          if (tU._ShouldSkipRequestModifications(UU)) break;
-          const RU = pU(gU, UU);
-          "string" === typeof RU && (UU = RU)
+        for (const Ku of Eu.CustomRequestModifiers) {
+          if (Eu._ShouldSkipRequestModifications(uu)) break;
+          const Ru = Ku(yu, uu);
+          "string" === typeof Ru && (uu = Ru)
         }
         return {
-          url: UU,
-          headers: RU
+          url: uu,
+          headers: Ru
         }
       }
-      static async FetchAsync(UU) {
-        let RU = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const gU = RU.method ?? "GET";
+      static async FetchAsync(uu) {
+        let Ru = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const yu = Ru.method ?? "GET";
         if ("undefined" !== typeof fetch) {
           const {
-            url: pU,
-            headers: EU
-          } = tU._CollectCustomizations(tU._CleanUrl(UU), RU.headers ?? {});
-          return await fetch(pU, {
-            method: gU,
-            headers: EU,
-            body: RU.body ?? void 0
+            url: Ku,
+            headers: Qu
+          } = Eu._CollectCustomizations(Eu._CleanUrl(uu), Ru.headers ?? {});
+          return await fetch(Ku, {
+            method: yu,
+            headers: Qu,
+            body: Ru.body ?? void 0
           })
         }
-        return await new Promise(((pU, EU) => {
-          const PU = new tU;
-          PU.responseType = "arraybuffer", PU.addEventListener("readystatechange", (() => {
-            if (4 === PU.readyState)
-              if (PU.status >= 200 && PU.status < 300) {
-                const UU = "undefined" !== typeof Headers ? new Headers : void 0,
-                  RU = PU.getResponseHeader("Content-Type");
-                RU && UU && UU.set("Content-Type", RU), "undefined" !== typeof Response ? pU(new Response(PU.response, {
-                  status: PU.status,
-                  statusText: PU.statusText,
-                  headers: UU
-                })) : pU({
+        return await new Promise(((Ku, Qu) => {
+          const mu = new Eu;
+          mu.responseType = "arraybuffer", mu.addEventListener("readystatechange", (() => {
+            if (4 === mu.readyState)
+              if (mu.status >= 200 && mu.status < 300) {
+                const uu = "undefined" !== typeof Headers ? new Headers : void 0,
+                  Ru = mu.getResponseHeader("Content-Type");
+                Ru && uu && uu.set("Content-Type", Ru), "undefined" !== typeof Response ? Ku(new Response(mu.response, {
+                  status: mu.status,
+                  statusText: mu.statusText,
+                  headers: uu
+                })) : Ku({
                   ok: !0,
-                  status: PU.status,
-                  statusText: PU.statusText,
+                  status: mu.status,
+                  statusText: mu.statusText,
                   headers: {
-                    get: UU => PU.getResponseHeader(UU)
+                    get: uu => mu.getResponseHeader(uu)
                   },
-                  arrayBuffer: async () => await Promise.resolve(PU.response)
+                  arrayBuffer: async () => await Promise.resolve(mu.response)
                 })
-              } else EU(new Error(`HTTP ${PU.status} loading '${PU.requestURL}': ${PU.statusText}`))
-          })), PU.open(gU, UU, RU.headers), PU.send(RU.body ?? null)
+              } else Qu(new Error(`HTTP ${mu.status} loading '${mu.requestURL}': ${mu.statusText}`))
+          })), mu.open(yu, uu, Ru.headers), mu.send(Ru.body ?? null)
         }))
       }
       get requestURL() {
@@ -1445,8 +1445,8 @@ export const modules = {
       get onprogress() {
         return this._xhr.onprogress
       }
-      set onprogress(UU) {
-        this._xhr.onprogress = UU
+      set onprogress(uu) {
+        this._xhr.onprogress = uu
       }
       get readyState() {
         return this._xhr.readyState
@@ -1469,44 +1469,44 @@ export const modules = {
       get responseType() {
         return this._xhr.responseType
       }
-      set responseType(UU) {
-        this._xhr.responseType = UU
+      set responseType(uu) {
+        this._xhr.responseType = uu
       }
       get timeout() {
         return this._xhr.timeout
       }
-      set timeout(UU) {
-        this._xhr.timeout = UU
+      set timeout(uu) {
+        this._xhr.timeout = uu
       }
-      addEventListener(UU, RU, gU) {
-        this._xhr.addEventListener(UU, RU, gU)
+      addEventListener(uu, Ru, yu) {
+        this._xhr.addEventListener(uu, Ru, yu)
       }
-      removeEventListener(UU, RU, gU) {
-        this._xhr.removeEventListener(UU, RU, gU)
+      removeEventListener(uu, Ru, yu) {
+        this._xhr.removeEventListener(uu, Ru, yu)
       }
       abort() {
         this._xhr.abort()
       }
-      send(UU) {
-        this._xhr.send(UU)
+      send(uu) {
+        this._xhr.send(uu)
       }
-      open(UU, RU, gU) {
+      open(uu, Ru, yu) {
         const {
-          url: pU,
-          headers: EU
-        } = tU._CollectCustomizations(RU, gU);
-        this._requestURL = tU._CleanUrl(pU), this._xhr.open(UU, this._requestURL, !0);
-        for (const tU in EU) this._xhr.setRequestHeader(tU, EU[tU])
+          url: Ku,
+          headers: Qu
+        } = Eu._CollectCustomizations(Ru, yu);
+        this._requestURL = Eu._CleanUrl(Ku), this._xhr.open(uu, this._requestURL, !0);
+        for (const Eu in Qu) this._xhr.setRequestHeader(Eu, Qu[Eu])
       }
-      setRequestHeader(UU, RU) {
-        this._xhr.setRequestHeader(UU, RU)
+      setRequestHeader(uu, Ru) {
+        this._xhr.setRequestHeader(uu, Ru)
       }
-      getResponseHeader(UU) {
-        return this._xhr.getResponseHeader(UU)
+      getResponseHeader(uu) {
+        return this._xhr.getResponseHeader(uu)
       }
     }
-    tU.CustomRequestHeaders = {}, tU.CustomRequestModifiers = new Array, tU.SkipRequestModificationForBabylonCDN = !0
+    Eu.CustomRequestHeaders = {}, Eu.CustomRequestModifiers = new Array, Eu.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const UU in modules) Object.freeze(modules[UU]);
+for (const uu in modules) Object.freeze(modules[uu]);
