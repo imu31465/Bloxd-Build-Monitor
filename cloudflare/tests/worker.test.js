@@ -9,6 +9,7 @@ import {
   getText,
   describeFailure,
   entriesDiffNotification,
+  productionNoUpdateLogNotification,
   buildDiscordPayload,
   workflowFailureStateChanged,
 } from "../src/index.js";
@@ -19,6 +20,35 @@ test("mainJsName extracts the exact hashed main bundle", () => {
     "tykq5g.main.937fd517.js",
   );
   assert.equal(mainJsName("<html>no bundle</html>"), null);
+});
+
+test("production build changes without new Update Log entries use a neutral notice", () => {
+  const notice = productionNoUpdateLogNotification("old-main.js", "new-main.js", []);
+  assert.deepEqual(notice, {
+    key: "production-hotfix",
+    signature: "old-main.js=>new-main.js",
+    title: "No Update Log",
+    description:
+      "old-main.js → new-main.js\n" +
+      "No new Update Log entries were found among the latest 10 entries.",
+  });
+  assert.doesNotMatch(notice.title, /hotfix/i);
+  assert.equal(
+    productionNoUpdateLogNotification("old-main.js", "new-main.js", [{ title: "New entry" }]),
+    null,
+  );
+  assert.equal(
+    productionNoUpdateLogNotification("same-main.js", "same-main.js", []),
+    null,
+  );
+  assert.equal(
+    productionNoUpdateLogNotification(null, "new-main.js", []),
+    null,
+  );
+  assert.equal(
+    productionNoUpdateLogNotification("old-main.js", "new-main.js", null),
+    null,
+  );
 });
 
 test("resolveUpdateLogChunkId follows the updateLogsData lazy import", () => {

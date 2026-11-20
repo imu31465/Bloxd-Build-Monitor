@@ -110,6 +110,21 @@ export function entriesDiffNotification(updateState) {
   return { signature: String(updateState.lastRunAt), title, description: lines.filter(Boolean).join("\n") };
 }
 
+export function productionNoUpdateLogNotification(previousMain, currentMain, newEntries) {
+  if (!previousMain || !currentMain || previousMain === currentMain ||
+      !Array.isArray(newEntries) || newEntries.length !== 0) {
+    return null;
+  }
+  return {
+    // Preserve the existing KV fingerprint namespace for already-sent notices.
+    key: "production-hotfix",
+    signature: previousMain + "=>" + currentMain,
+    title: "No Update Log",
+    description: previousMain + " → " + currentMain +
+      "\nNo new Update Log entries were found among the latest 10 entries.",
+  };
+}
+
 export function buildDiscordPayload(embed) {
   return {
     username: BOT_NAME,
@@ -1048,18 +1063,19 @@ async function checkProductionUpdates(env, home) {
 
     const scan = entries.slice(0, 10);
     const newEntries = scan.filter(entry => !state.seen[entryKey(entry)]);
-    if (buildChanged && newEntries.length === 0) {
+    const noUpdateLogNotice = productionNoUpdateLogNotification(
+      state.lastMain,
+      home.mainName,
+      newEntries,
+    );
+    if (noUpdateLogNotice) {
       await notifyOnce(
         env,
-        "production-hotfix:" + home.mainName,
-        (state.lastMain || "") + "=>" + home.mainName,
+        noUpdateLogNotice.key + ":" + home.mainName,
+        noUpdateLogNotice.signature,
         env.DISCORD_BUNDLE_WEBHOOK,
-        makeEmbed(
-          "Hotfix",
-          (state.lastMain || "unknown") + " → " + home.mainName +
-            "\nUpdate Log: no new entries",
-          COLORS.gray,
-        ));
+        makeEmbed(noUpdateLogNotice.title, noUpdateLogNotice.description, COLORS.gray),
+      );
     }
 
     for (const entry of newEntries.slice().reverse()) {
