@@ -1,15 +1,15 @@
 export const id = 163;
 export const ids = [163];
 export const modules = {
-  8463: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      pageBody: () => Fz
+  8630: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      pageBody: () => hv
     });
-    const Fz = {
+    const hv = {
       whatIs: ["When the sun goes down, the monsters come out. Bloxd Day & Night Survival is a survival mode built around the clock. You mine, craft and build while it's light, then protect your base once it gets dark. Light up your world with torches and see if you can make it through the night. Choose this over regular Survival if you want torches, night-time danger and a Days Survived leaderboard to be the main event. So, how many days can you last?"],
       howToPlay: ["Use the daylight to gather resources, craft tools and build somewhere safe. Time goes from dawn to day, then dusk to night. The game announces the time, and there's a progress bar showing how far through the cycle you are. Once dusk hits, get ready. At night it gets properly dark and only hostile mobs spawn, right on the surface. That includes the Draugr Huntress and the rare Draugr Warper.", "Torches are your best defence, because hostile mobs won't spawn near light. You get a few free torches when you first join, so stick them around your base. When morning comes, any hostile mobs still out in the sunlight start to burn. Mobs in caves or under cover are fine, though, so watch yourself underground. Sleep in a bed to skip the night, and keep surviving to climb the Days Survived leaderboard."],
       features: ["Dawn, Day, Dusk and Night Cycle with Time Announcements", "Hostile Mobs That Spawn on the Surface at Night", "Torches to Keep Monsters Away from Your Base", "Free Torches When You First Join", "Sleep in a Bed to Skip the Night", "Days Survived and Days Played Leaderboard", "Mining, Crafting, Base Building and PvP", "Free Private Servers with Day & Night Settings"],
-      tips: ["Get torches up around your base before dusk", "Use the free torches you start with straight away", "Keep an eye on the progress bar so the night doesn't sneak up on you", "Not ready to fight? Stay inside at night", "Wait for sunrise, because monsters left out in the open start to burn", "Careful in caves. Mobs underground don't burn", "Guard your base with Protectors, which you make from diamonds", "In public lobbies, build more than 200 blocks from spawn, since the area near spawn resets every few hours"],
+      tips: ["Get torches up around your base before dusk", "Use the free torches you start with straight away", "Keep an eye on the progress bar so the night doesn't sneak up on you", "Not ready to fight? Stay inside at night", "Wait for sunrise, because monsters left out in the open start to burn", "Careful in caves. Mobs underground don't burn", "Guard your base with Protectors, which you make from diamonds", "In public lobbies, build away from spawn, since the area near spawn resets every few hours"],
       similarGames: ["classic_survival", "classic", "classic_survivalGuns", "skyblock"],
       faq: [{
         question: "What is Bloxd Day and Night Survival?",
@@ -34,4 +34,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

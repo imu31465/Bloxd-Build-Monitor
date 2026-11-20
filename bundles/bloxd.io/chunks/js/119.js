@@ -1,40 +1,40 @@
 export const id = 119;
 export const ids = [119];
 export const modules = {
-  6116: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      default: () => Nz
+  6251: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      default: () => Wv
     });
-    var Fz = sz(1306),
-      Wz = sz(65),
-      Xz = sz(116),
-      Oz = sz(1493),
-      oz = sz(1215),
-      vz = sz(308),
-      Uz = sz(601);
-    const Kz = new URL(oz.p[vz.b.PRODUCTION]).origin;
-    var uz = sz(1087);
+    var hv = Pv(1327),
+      Sv = Pv(52),
+      ev = Pv(81),
+      gv = Pv(1505),
+      pv = Pv(1212),
+      dv = Pv(302),
+      Nv = Pv(635);
+    const lv = new URL(pv.n[dv.c.PRODUCTION]).origin;
+    var Tv = Pv(1082);
 
-    function Nz() {
-      const zz = (0, Oz.C)();
-      return (0, Wz.useEffect)((() => {
-        const tz = Xz.currentUrl.getSearchParam("code");
-        Xz.currentUrl.removeSearchParam("code"), null === tz && (console.error("No authorization code found in the URL"), window.close());
-        const sz = {
-          type: `oauth_authentication_${zz.providerName}`,
-          code: tz
+    function Wv() {
+      const vv = (0, gv.B)();
+      return (0, Sv.useEffect)((() => {
+        const zv = ev.currentUrl.getSearchParam("code");
+        ev.currentUrl.removeSearchParam("code"), null === zv && (console.error("No authorization code found in the URL"), window.close());
+        const Pv = {
+          type: `oauth_authentication_${vv.providerName}`,
+          code: zv
         };
-        for (const zz of (Wz = window.location.origin) === Kz ? [Wz, `https://${Uz.c}`] : [Wz]) {
-          var Fz;
-          null === (Fz = window.opener) || void 0 === Fz || Fz.postMessage(sz, zz)
+        for (const vv of (Sv = window.location.origin) === lv ? [Sv, `https://${Nv.e}`] : [Sv]) {
+          var hv;
+          null === (hv = window.opener) || void 0 === hv || hv.postMessage(Pv, vv)
         }
-        var Wz;
+        var Sv;
         setTimeout((() => {
           window.close()
         }), 1e3)
-      })), (0, uz.jsx)("div", {
+      })), (0, Tv.jsx)("div", {
         className: "AuthCallback",
-        children: (0, uz.jsx)(Fz.d, {
+        children: (0, Tv.jsx)(hv.c, {
           showFace: !0,
           loading: !0
         })
@@ -43,4 +43,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

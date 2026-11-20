@@ -57,7 +57,7 @@
   flex-direction: column;
   flex-grow: 1;
   gap: 1rem;
-  overflow-x: visible;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: max(var(--notchTop), 1rem) var(--home-inner-padding-right) max(var(--notchBottom), 1rem) var(--home-inner-padding-left);
   scrollbar-width: none;
@@ -832,28 +832,15 @@
   font-size: min(3.4rem, 10vw)
 }
 
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .DiscordMobileHeaderRightContainer {
-  padding-bottom: 1rem;
-  padding-right: 3rem;
-  padding-top: 3rem
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait.HomeHeaderTopWithStore .TitleContainer {
+  font-size: min(3.4rem, (100vw - 17.75rem)/5.3)
 }
 
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount {
-  align-items: stretch;
-  display: flex;
-  gap: .5rem;
-  height: 3.5rem;
-  justify-content: flex-start;
-  width: calc(50% - var(--logo-size)/2)
+.HomeHeader .HomeHeaderInner .HomeHeaderTop.HomeHeaderTopPortrait.HomeHeaderTopWithStore .HomeHeaderRightContainer .HomeHeaderRight {
+  padding: 0 .25rem
 }
 
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount.HomeHeaderAccountLandscape {
-  box-sizing: border-box;
-  min-width: 0;
-  padding-right: 1.5rem
-}
-
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountButton {
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton {
   align-items: center;
   background: none;
   background-color: rgba(57, 73, 128, .45);
@@ -881,7 +868,7 @@
 }
 
 @media(pointer:coarse) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountButton:before {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton:before {
     content: "";
     inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
     position: absolute
@@ -889,31 +876,62 @@
 }
 
 @media(hover:hover) {
-  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountButton:hover {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton:hover {
     transform: scale(1.05)
   }
 }
 
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountButton.pad-focused {
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton.pad-focused {
   transform: scale(1.05)
 }
 
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountButton[data-pressing] {
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton[data-pressing] {
   box-shadow: inset 0 0 0 2px #ffb914;
   color: #ffb914;
   transform: none;
   transition: none
 }
 
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountButton .SocialCountBadge {
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .SocialCountBadge {
   position: absolute;
   right: -.4rem;
   top: -.4rem
 }
 
-.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .HomeHeaderAccountButton .SocialCountBadge.SocialCountBadgeRequests {
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .SocialCountBadge.SocialCountBadgeRequests {
   bottom: -.4rem;
   top: auto
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccountButton .HomeHeaderStoreDot {
+  background-color: #e34f4f;
+  height: .6rem;
+  pointer-events: none;
+  position: absolute;
+  right: .3rem;
+  top: .3rem;
+  width: .6rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .DiscordMobileHeaderRightContainer {
+  padding-bottom: 1rem;
+  padding-right: 3rem;
+  padding-top: 3rem
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount {
+  align-items: stretch;
+  display: flex;
+  gap: .5rem;
+  height: 3.5rem;
+  justify-content: flex-start;
+  width: calc(50% - var(--logo-size)/2)
+}
+
+.HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount.HomeHeaderAccountLandscape {
+  box-sizing: border-box;
+  min-width: 0;
+  padding-right: 1.5rem
 }
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderAccount .MinimalAccountButton {
@@ -1104,12 +1122,29 @@
   width: calc(50% - var(--logo-size)/2)
 }
 
+@media(pointer:coarse)and (orientation:landscape)and (min-width:800px) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer {
+    --home-link-gap: max(0.5rem, 44px - 3rem);
+    gap: var(--home-link-gap)
+  }
+}
+
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons {
-  flex-shrink: 0
+  flex-shrink: 0;
+  gap: var(--home-link-gap, .5rem)
 }
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons .HomeLinkButton {
-  flex: 0 0 3rem
+  flex: 0 0 3rem;
+  position: relative
+}
+
+@media(pointer:coarse) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeLinkButtons .HomeLinkButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) max(var(--home-link-gap, .5rem)/-2, min(0px, (100% - 44px)/2));
+    position: absolute
+  }
 }
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight {
@@ -1119,6 +1154,12 @@
   padding-left: .5rem;
   padding-right: .75rem;
   position: relative
+}
+
+@media(pointer:coarse)and (orientation:landscape)and (min-width:800px) {
+  .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight {
+    padding-right: max(.75rem, (44px - 2.6rem)/2 - var(--home-inner-padding-right, 0px))
+  }
 }
 
 .HomeHeader .HomeHeaderInner .HomeHeaderTop .HomeHeaderRightContainer .HomeHeaderRight.LinkIconList {
@@ -1383,16 +1424,19 @@
   align-items: center;
   background-color: rgba(0, 0, 0, .6);
   box-sizing: border-box;
-  color: var(--border-color-2);
   display: flex;
-  font-size: .25em;
-  font-weight: 800;
-  height: calc(70% - var(--border-size)*2*.7);
+  height: calc(70% - var(--border-size)*3*.7);
   inset: 0;
   justify-content: center;
   margin: auto;
   position: absolute;
-  width: calc(70% - var(--border-size)*2*.7)
+  width: calc(70% - var(--border-size)*3*.7)
+}
+
+.LogoLoader .LogoLoaderProgressBar .LogoLoaderProgressBarText .LogoLoaderProgressBarPercent {
+  color: var(--border-color-2);
+  font-size: .25em;
+  font-weight: 800
 }
 
 .LogoLoader .LogoLoaderProgressBar svg {
@@ -1405,10 +1449,10 @@
 
 .LogoLoader.LogoLoaderIsLoading .LogoLoaderInner,
 .LogoLoader.LogoLoaderIsProgressBar .LogoLoaderInner {
-  height: calc(70% - var(--border-size)*2*.7);
+  height: calc(70% - var(--border-size)*3*.7);
   inset: 0;
   margin: auto;
-  width: calc(70% - var(--border-size)*2*.7)
+  width: calc(70% - var(--border-size)*3*.7)
 }
 
 .LogoLoader.LogoLoaderIsProgressBar .LogoLoaderLoadingBar {
@@ -2137,13 +2181,17 @@ a {
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.SmallTextBold .svg-inline--fa,
+.SmallTextBold.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SmallTextBold .svg-inline--fa path:only-of-type,
 .SmallTextBold.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SmallTextLight {
@@ -2151,13 +2199,17 @@ a {
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.SmallTextLight .svg-inline--fa,
+.SmallTextLight.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SmallTextLight .svg-inline--fa path:only-of-type,
 .SmallTextLight.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .ScaleOnHover {
@@ -2262,6 +2314,16 @@ a {
   opacity: .5
 }
 
+.Menu .MenuSideBar .MenuSideBarBody .MenuSideBarBodyTab.MenuSideBarLink {
+  align-items: center
+}
+
+.Menu .MenuSideBar .MenuSideBarBody .MenuSideBarBodyTab.MenuSideBarLink .MenuSideBarLinkArrow {
+  color: #cfcfcf;
+  font-size: .8em;
+  margin-left: auto
+}
+
 .Menu .MenuBody {
   flex-grow: 1;
   min-width: 0;
@@ -2305,13 +2367,17 @@ a {
   text-shadow: -2px -2px 0 #303a59, -2px -1px 0 #303a59, -2px 0 0 #303a59, -2px 1px 0 #303a59, -2px 2px 0 #303a59, -1px -2px 0 #303a59, -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, -1px 2px 0 #303a59, 0 -2px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 0 2px 0 #303a59, 1px -2px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59, 1px 2px 0 #303a59, 2px -2px 0 #303a59, 2px -1px 0 #303a59, 2px 0 0 #303a59, 2px 1px 0 #303a59, 2px 2px 0 #303a59
 }
 
+.ExitButton .NewButton .ButtonBody .ExitButtonInner .svg-inline--fa,
+.ExitButton .NewButton .ButtonBody .ExitButtonInner.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .ExitButton .NewButton .ButtonBody .ExitButtonInner .svg-inline--fa path:only-of-type,
 .ExitButton .NewButton .ButtonBody .ExitButtonInner.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 4px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .GoldButton {
@@ -2418,13 +2484,17 @@ a {
   z-index: 1
 }
 
+.NewButton .svg-inline--fa,
+.NewButton.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .NewButton .svg-inline--fa path:only-of-type,
 .NewButton.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .NewButton {
@@ -3399,8 +3469,22 @@ a {
   .HomeHeader .TopRightIconsContainer .TopRightIcons .NotificationBell:before,
   .HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightIcon>.UiItemIcon:before {
     content: "";
-    inset: min(0px, (100% - 44px)/2) max(1.25rem/-2, min(0px, (100% - 44px)/2));
+    inset: min(0px, (100% - 44px)/2) max(var(--header-icon-gap, 1.25rem)/-2, min(0px, (100% - 44px)/2));
     position: absolute
+  }
+}
+
+@media(pointer:coarse)and (orientation:landscape)and (min-width:800px) {
+  .HomeHeader .TopRightIconsContainer .TopRightIcons {
+    --header-icon-gap: max(1.25rem, 44px - 1em);
+    gap: var(--header-icon-gap)
+  }
+
+  .HomeHeader .TopRightIconsContainer .TopRightIcons .NotificationBell,
+  .HomeHeader .TopRightIconsContainer .TopRightIcons .TopRightIcon>.UiItemIcon {
+    display: flex;
+    justify-content: center;
+    min-width: 1em
   }
 }
 
@@ -3520,13 +3604,17 @@ a {
   text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
 }
 
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon .svg-inline--fa,
+.HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
 .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
   stroke: #000;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .HudMove-emotes .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightEmotesIcon>.UiItemIcon {
@@ -3627,13 +3715,17 @@ a {
   text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
 }
 
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon .svg-inline--fa,
+.HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
   stroke: #000;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .HudMove-perspective .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCameraIcon>.UiItemIcon {
@@ -3723,13 +3815,17 @@ a {
   text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
 }
 
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon .svg-inline--fa,
+.HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
 .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
   stroke: #000;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .HudMove-scoreboard .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightScoreboardIcon>.UiItemIcon {
@@ -3819,13 +3915,17 @@ a {
   text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
 }
 
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon .svg-inline--fa,
+.HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
 .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
   stroke: #000;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .HudMove-tasks .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightTasksIcon>.UiItemIcon {
@@ -3915,13 +4015,17 @@ a {
   text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
 }
 
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon .svg-inline--fa,
+.HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
 .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
   stroke: #000;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .HudMove-cosmetics .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightCosmeticsIcon>.UiItemIcon {
@@ -4011,13 +4115,17 @@ a {
   text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
 }
 
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon .svg-inline--fa,
+.HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
 .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
   stroke: #000;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .HudMove-invite .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightInviteIcon>.UiItemIcon {
@@ -4107,13 +4215,17 @@ a {
   text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
 }
 
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon .svg-inline--fa,
+.HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon .svg-inline--fa path:only-of-type,
 .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon.svg-inline--fa path:only-of-type {
   stroke: #000;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .HudMove-settings .TopRightIconsContainer .TopRightIcons.TouchInGame .TopRightSettingsIcon>.UiItemIcon {
@@ -5879,13 +5991,17 @@ a {
   text-shadow: -1px -1px 0 rgba(48, 58, 89, .6), -1px 0 0 rgba(48, 58, 89, .6), -1px 1px 0 rgba(48, 58, 89, .6), 0 -1px 0 rgba(48, 58, 89, .6), 0 0 0 rgba(48, 58, 89, .6), 0 1px 0 rgba(48, 58, 89, .6), 1px -1px 0 rgba(48, 58, 89, .6), 1px 0 0 rgba(48, 58, 89, .6), 1px 1px 0 rgba(48, 58, 89, .6)
 }
 
+.PremiumCurrencyAmount.PremiumCurrencyAmountBalance .svg-inline--fa,
+.PremiumCurrencyAmount.PremiumCurrencyAmountBalance.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .PremiumCurrencyAmount.PremiumCurrencyAmountBalance .svg-inline--fa path:only-of-type,
 .PremiumCurrencyAmount.PremiumCurrencyAmountBalance.svg-inline--fa path:only-of-type {
   stroke: rgba(48, 58, 89, .6);
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .UpdateLogPopupOuter {
@@ -6121,18 +6237,6 @@ a {
   color: inherit
 }
 
-.HomeHeader .HomeLinkButtons .HomeLinkButton {
-  position: relative
-}
-
-@media(pointer:coarse) {
-  .HomeHeader .HomeLinkButtons .HomeLinkButton:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) max(.5rem/-2, min(0px, (100% - 44px)/2));
-    position: absolute
-  }
-}
-
 .LinksPopup {
   max-width: 90vw;
   position: relative;
@@ -6154,13 +6258,17 @@ a {
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.LinksPopup .LinksPopupHeader .LinksPopupTitle .svg-inline--fa,
+.LinksPopup .LinksPopupHeader .LinksPopupTitle.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .LinksPopup .LinksPopupHeader .LinksPopupTitle .svg-inline--fa path:only-of-type,
 .LinksPopup .LinksPopupHeader .LinksPopupTitle.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .LinksPopup .LinksPopupLinks {
@@ -6466,13 +6574,17 @@ a {
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.SocialCountBadge.SocialCountBadgeRequests .svg-inline--fa,
+.SocialCountBadge.SocialCountBadgeRequests.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SocialCountBadge.SocialCountBadgeRequests .svg-inline--fa path:only-of-type,
 .SocialCountBadge.SocialCountBadgeRequests.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SocialBarContainer {
@@ -8014,13 +8126,17 @@ a {
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.BlueButton.JoinDiscordWorldButton .svg-inline--fa,
+.BlueButton.JoinDiscordWorldButton.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .BlueButton.JoinDiscordWorldButton .svg-inline--fa path:only-of-type,
 .BlueButton.JoinDiscordWorldButton.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .BlueButton.JoinDiscordWorldButton {
@@ -8393,6 +8509,97 @@ a {
   }
 }
 
+@keyframes premiumBorderCycle {
+
+  0%,
+  to {
+    border-color: #5f4178
+  }
+
+  33% {
+    border-color: #325a5f
+  }
+
+  66% {
+    border-color: #ffb914
+  }
+}
+
+@keyframes premiumBorderSecond {
+  0% {
+    opacity: 0
+  }
+
+  33%,
+  66% {
+    opacity: 1
+  }
+
+  66.01%,
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes premiumBorderThird {
+
+  0%,
+  33% {
+    opacity: 0
+  }
+
+  66% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes cosmeticPackAdBorderFirst {
+
+  0%,
+  66% {
+    opacity: 1
+  }
+
+  66.01%,
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes cosmeticPackAdStarTwinkle {
+  0% {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes cosmeticPackAdNameShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(85.71429%)
+  }
+}
+
+@keyframes cosmeticPackAdNameShimmerPosition {
+  0% {
+    background-position: 100% 0
+  }
+
+  to {
+    background-position: -200% 0
+  }
+}
+
 .AdBannerContainer .AdBanner.SuperRankAd {
   background-color: #303a59;
   border-color: #ffb914
@@ -8703,13 +8910,17 @@ a {
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.AdBannerContainer .AdBanner.CosmeticPackAd .CosmeticPackAdOverlay .CosmeticShopBanner .CosmeticShopBannerHeader .svg-inline--fa,
+.AdBannerContainer .AdBanner.CosmeticPackAd .CosmeticPackAdOverlay .CosmeticShopBanner .CosmeticShopBannerHeader.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .AdBannerContainer .AdBanner.CosmeticPackAd .CosmeticPackAdOverlay .CosmeticShopBanner .CosmeticShopBannerHeader .svg-inline--fa path:only-of-type,
 .AdBannerContainer .AdBanner.CosmeticPackAd .CosmeticPackAdOverlay .CosmeticShopBanner .CosmeticShopBannerHeader.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .AdBannerContainer .AdBanner.CosmeticPackAd .CosmeticPackAdOverlay .CosmeticShopBanner .CosmeticShopBannerHeader .CosmeticShopBannerIcon,
@@ -8770,8 +8981,8 @@ a {
   color: #ffb914;
   display: flex;
   font-weight: 800;
-  height: .6em;
   justify-content: center;
+  min-height: .6em;
   padding: 0 4px
 }
 
@@ -8821,7 +9032,6 @@ a {
 }
 
 .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary {
-  animation: cosmeticPackAdPremiumBorderCycle 4s linear infinite;
   border-style: solid;
   border-width: 4px;
   box-shadow: 0 0 16px rgba(95, 65, 120, .5), 0 0 40px rgba(50, 90, 95, .3), inset 0 0 13px rgba(95, 65, 120, .15);
@@ -8839,6 +9049,30 @@ a {
   box-shadow: 0 0 24px rgba(95, 65, 120, .7), 0 0 56px rgba(50, 90, 95, .5), inset 0 0 16px rgba(95, 65, 120, .2)
 }
 
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdBorderCycle {
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 3
+}
+
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdBorderCycle>div {
+  animation: cosmeticPackAdBorderFirst 4s linear infinite;
+  inset: 0;
+  outline: 4px solid #5f4178;
+  position: absolute
+}
+
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdBorderCycle>div:nth-child(2) {
+  animation-name: premiumBorderSecond;
+  outline-color: #325a5f
+}
+
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdBorderCycle>div:nth-child(3) {
+  animation-name: premiumBorderThird;
+  outline-color: #ffb914
+}
+
 .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary:after {
   animation: cosmeticPackAdStarTwinkle 3s ease-in-out infinite alternate;
   background-image: radial-gradient(1px 1px at 20% 30%, hsla(0, 0%, 100%, .8) 0, transparent 100%), radial-gradient(1px 1px at 40% 70%, hsla(0, 0%, 100%, .6) 0, transparent 100%), radial-gradient(1px 1px at 60% 15%, hsla(0, 0%, 100%, .7) 0, transparent 100%), radial-gradient(1px 1px at 80% 50%, hsla(0, 0%, 100%, .5) 0, transparent 100%), radial-gradient(1px 1px at 10% 85%, hsla(0, 0%, 100%, .6) 0, transparent 100%), radial-gradient(1px 1px at 90% 80%, hsla(0, 0%, 100%, .7) 0, transparent 100%);
@@ -8854,12 +9088,55 @@ a {
 }
 
 .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle {
-  -webkit-text-fill-color: transparent;
-  animation: cosmeticPackAdPremiumNameShimmer 3s linear infinite;
-  background: linear-gradient(90deg, #b388ff, #64ffda, #ffb914, #b388ff);
-  -webkit-background-clip: text;
-  background-clip: text;
-  background-size: 300% 100%
+  -webkit-text-fill-color: transparent
+}
+
+@supports(-webkit-mask-clip:text) and (overflow-x:clip) {
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle {
+    margin-inline-end: auto;
+    min-width: min-content;
+    overflow-x: clip;
+    position: relative
+  }
+
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle .CosmeticPackAdItemCountInner,
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle .CosmeticPackAdName {
+    -webkit-mask-clip: text;
+    -webkit-mask-image: linear-gradient(#000, #000)
+  }
+
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle .CosmeticPackAdItemCountInner:before,
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle .CosmeticPackAdName:before {
+    animation: cosmeticPackAdNameShimmer 3s linear infinite;
+    background: linear-gradient(90deg, #b388ff, #64ffda, #ffb914, #b388ff) 25% 0/42.85714% 100%;
+    bottom: 0;
+    content: "";
+    left: -600%;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 700%
+  }
+}
+
+@supports not ((-webkit-mask-clip:text) and (overflow-x:clip)) {
+  .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary .CosmeticPackAdOverlay .CosmeticPackAdTitle {
+    animation: cosmeticPackAdNameShimmerPosition 3s linear infinite;
+    background: linear-gradient(90deg, #b388ff, #64ffda, #ffb914, #b388ff) 0 0/300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text
+  }
+}
+
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary[data-off-screen] *,
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary[data-off-screen] :after,
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary[data-off-screen] :before,
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary[data-off-screen]:after,
+html[data-app-covered] .WholeAppWrapper .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary *,
+html[data-app-covered] .WholeAppWrapper .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary :after,
+html[data-app-covered] .WholeAppWrapper .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary :before,
+html[data-app-covered] .WholeAppWrapper .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAdLegendary:after {
+  animation-play-state: paused !important
 }
 
 .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAd300x250 .CosmeticShopBannerSubtitle,
@@ -8902,17 +9179,26 @@ a {
 }
 
 .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAd300x600 .CosmeticPackAdOverlay .CosmeticPackAdCharacters {
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  min-height: 0
 }
 
 .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAd300x600 .CosmeticPackAdOverlay .CosmeticPackAdCharacters .CosmeticPackAdCharacterPreview {
-  height: 200px;
+  height: min(200px, 50% - 5px);
   width: 130px
 }
 
 .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAd300x600 .CosmeticPackAdOverlay .CosmeticPackAdFooter {
   font-size: 42px;
   padding: 22px 19px
+}
+
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAd300x600 .CosmeticPackAdOverlay .CosmeticPackAdFooter .CosmeticPackAdTitle {
+  flex-wrap: wrap
+}
+
+.AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAd300x600 .CosmeticPackAdOverlay .CosmeticPackAdFooter .CosmeticPackAdTitle .CosmeticPackAdItemCount {
+  white-space: nowrap
 }
 
 .AdBannerContainer .AdBanner.CosmeticPackAd.CosmeticPackAd970x250 {
@@ -8963,40 +9249,6 @@ a {
   justify-content: space-between;
   padding: 0 13px;
   width: 100%
-}
-
-@keyframes cosmeticPackAdPremiumBorderCycle {
-  0% {
-    border-color: #5f4178
-  }
-
-  33% {
-    border-color: #325a5f
-  }
-
-  66% {
-    border-color: #ffb914
-  }
-}
-
-@keyframes cosmeticPackAdStarTwinkle {
-  0% {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes cosmeticPackAdPremiumNameShimmer {
-  0% {
-    background-position: 100% 0
-  }
-
-  to {
-    background-position: -200% 0
-  }
 }
 
 @keyframes buyButtonPulse {
@@ -9130,13 +9382,17 @@ a {
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.CosmeticPackOwned .svg-inline--fa,
+.CosmeticPackOwned.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .CosmeticPackOwned .svg-inline--fa path:only-of-type,
 .CosmeticPackOwned.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .CosmeticPackItemCount {
@@ -9228,13 +9484,17 @@ a {
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.CosmeticShopDetail .CosmeticShopBanner .CosmeticShopBannerHeader .svg-inline--fa,
+.CosmeticShopDetail .CosmeticShopBanner .CosmeticShopBannerHeader.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .CosmeticShopDetail .CosmeticShopBanner .CosmeticShopBannerHeader .svg-inline--fa path:only-of-type,
 .CosmeticShopDetail .CosmeticShopBanner .CosmeticShopBannerHeader.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .CosmeticShopDetail .CosmeticShopBanner .CosmeticShopBannerHeader .CosmeticShopBannerIcon,
@@ -10067,13 +10327,17 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   text-shadow: -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e
 }
 
+.PremiumCurrencyBundles .PremiumCurrencyBundle .PremiumCurrencyBundleAmount .svg-inline--fa,
+.PremiumCurrencyBundles .PremiumCurrencyBundle .PremiumCurrencyBundleAmount.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .PremiumCurrencyBundles .PremiumCurrencyBundle .PremiumCurrencyBundleAmount .svg-inline--fa path:only-of-type,
 .PremiumCurrencyBundles .PremiumCurrencyBundle .PremiumCurrencyBundleAmount.svg-inline--fa path:only-of-type {
   stroke: #1a1f2e;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .PremiumCurrencyBundles .PremiumCurrencyBundle .PremiumCurrencyBundlePile {
@@ -10241,13 +10505,17 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   white-space: nowrap
 }
 
+.StoreTierLabel .svg-inline--fa,
+.StoreTierLabel.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .StoreTierLabel .svg-inline--fa path:only-of-type,
 .StoreTierLabel.svg-inline--fa path:only-of-type {
   stroke: #22283b;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .StoreTierLabel.StoreTierLabelRare {
@@ -10366,13 +10634,17 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   text-shadow: -2px -2px 0 #303a59, -2px -1px 0 #303a59, -2px 0 0 #303a59, -2px 1px 0 #303a59, -2px 2px 0 #303a59, -1px -2px 0 #303a59, -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, -1px 2px 0 #303a59, 0 -2px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 0 2px 0 #303a59, 1px -2px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59, 1px 2px 0 #303a59, 2px -2px 0 #303a59, 2px -1px 0 #303a59, 2px 0 0 #303a59, 2px 1px 0 #303a59, 2px 2px 0 #303a59
 }
 
+.SuperRankPerksTable tr td .PerkContainer .Perk .PerkInner .PerkRainbowText .svg-inline--fa,
+.SuperRankPerksTable tr td .PerkContainer .Perk .PerkInner .PerkRainbowText.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SuperRankPerksTable tr td .PerkContainer .Perk .PerkInner .PerkRainbowText .svg-inline--fa path:only-of-type,
 .SuperRankPerksTable tr td .PerkContainer .Perk .PerkInner .PerkRainbowText.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 4px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SuperRankPerksTable tr:last-of-type .PerkContainer {
@@ -10953,6 +11225,15 @@ html[data-app-covered] .WholeAppWrapper .PremiumCurrencyBundles .PremiumCurrency
   top: -20dvh;
   width: 140vw;
   z-index: 17
+}
+
+.RotateScreenPrompt {
+  font-size: min(10rem, 13vw)
+}
+
+.RotateScreenPrompt .ForceRotateIcon {
+  font-size: min(15rem, 20vw);
+  padding-bottom: min(5rem, 6.5vw)
 }
 
 .ForceRotateIcon {
@@ -11951,7 +12232,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   width: 3rem
 }
 
-.ProfileCardHost .ProfileCard .ProfileCardConfirmRemoveOverlay {
+.ProfileCardHost .ProfileCard .ProfileCardConfirmOverlay {
   align-items: center;
   background-color: rgba(26, 31, 46, .6);
   display: flex;
@@ -11962,7 +12243,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   z-index: 2
 }
 
-.ProfileCardHost .ProfileCard .ProfileCardConfirmRemoveOverlay .ProfileCardConfirmRemove {
+.ProfileCardHost .ProfileCard .ProfileCardConfirmOverlay .ProfileCardConfirm {
   background-color: #394980;
   border: 1px solid #0f0f0f;
   border-radius: 0;
@@ -11973,17 +12254,17 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   padding: 1rem
 }
 
-.ProfileCardHost .ProfileCard .ProfileCardConfirmRemoveOverlay .ProfileCardConfirmRemove .ProfileCardConfirmRemoveText {
+.ProfileCardHost .ProfileCard .ProfileCardConfirmOverlay .ProfileCardConfirm .ProfileCardConfirmText {
   font-size: .95rem;
   text-align: center
 }
 
-.ProfileCardHost .ProfileCard .ProfileCardConfirmRemoveOverlay .ProfileCardConfirmRemove .ProfileCardConfirmRemoveButtons {
+.ProfileCardHost .ProfileCard .ProfileCardConfirmOverlay .ProfileCardConfirm .ProfileCardConfirmButtons {
   display: flex;
   gap: .5rem
 }
 
-.ProfileCardHost .ProfileCard .ProfileCardConfirmRemoveOverlay .ProfileCardConfirmRemove .ProfileCardConfirmRemoveButtons>* {
+.ProfileCardHost .ProfileCard .ProfileCardConfirmOverlay .ProfileCardConfirm .ProfileCardConfirmButtons>* {
   flex: 1 1
 }
 
@@ -12216,6 +12497,19 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 }
 
 .ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardActions .ProfileCardSecondaryRow>* {
+  flex: 1 1;
+  white-space: nowrap
+}
+
+.ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardActions .ProfileCardModeration {
+  border-top: 1px solid hsla(0, 0%, 95%, .1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  padding-top: .5rem
+}
+
+.ProfileCardHost .ProfileCard .ProfileCardInfo .ProfileCardActions .ProfileCardModeration>* {
   flex: 1 1;
   white-space: nowrap
 }
@@ -13848,6 +14142,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   background-color: rgba(57, 73, 128, .4);
   border-radius: 0;
   display: flex;
+  flex-wrap: wrap;
   font-size: 1.2rem;
   gap: .5rem;
   padding: .5rem .75rem
@@ -13916,6 +14211,12 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   height: 2rem;
   margin: 0 .5rem;
   width: .2rem
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .CategoryGameListContainer .CategoryGameListHeaderContainer .CategoryGameListHeader .CategoryGameListHeaderDivider {
+    display: none
+  }
 }
 
 .CategoryGameListContainer .CategoryGameListHeaderContainer .CategoryGameListHeader .CategoryGameListSpace {
@@ -13997,6 +14298,7 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   background-color: rgba(57, 73, 128, .4);
   border-radius: 0;
   display: flex;
+  flex-wrap: wrap;
   font-size: 1.2rem;
   gap: .5rem;
   justify-content: center;
@@ -14257,13 +14559,17 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
 }
 
+.MyWorldsSection .MyWorldsSeeMore .svg-inline--fa,
+.MyWorldsSection .MyWorldsSeeMore.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .MyWorldsSection .MyWorldsSeeMore .svg-inline--fa path:only-of-type,
 .MyWorldsSection .MyWorldsSeeMore.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .MyWorldsSection .MyWorldsSeeMore {
@@ -14837,13 +15143,17 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
   z-index: 2
 }
 
+.Carousel .CarouselArrow .svg-inline--fa,
+.Carousel .CarouselArrow.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .Carousel .CarouselArrow .svg-inline--fa path:only-of-type,
 .Carousel .CarouselArrow.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 @media(hover:hover) {
@@ -15459,6 +15769,7 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   display: grid;
   flex: 1 1;
   gap: .5rem;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-rows: 1fr 1fr 1fr;
   min-height: 0;
   width: 100%
@@ -15483,7 +15794,7 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   display: grid;
   flex: 1 1;
   gap: .5rem;
-  grid-template-columns: repeat(var(--youtube-video-slot-count), 1fr);
+  grid-template-columns: repeat(var(--youtube-video-slot-count), minmax(0, 1fr));
   grid-template-rows: 1fr 1fr 1fr;
   min-height: 0;
   width: 100%
@@ -15503,14 +15814,10 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
   display: grid;
   flex: 1 1;
   gap: .5rem;
-  grid-template-columns: repeat(var(--youtube-shorts-slot-count), 1fr);
+  grid-template-columns: repeat(var(--youtube-shorts-slot-count), minmax(0, 1fr));
   grid-template-rows: 1fr 1fr;
   min-height: 0;
   width: 100%
-}
-
-.YoutubeHomepageSection .YoutubeShortsColumn .YoutubeShortsColumnTiles .YoutubeTile {
-  min-width: 0
 }
 
 .YoutubeHomepageSection.Portrait .YoutubeHomepageSectionBody {
@@ -15520,17 +15827,7 @@ html[data-app-covered] .WholeAppWrapper .YoutubeHomepageSection .YoutubeTile.You
 .YoutubeHomepageSection.Portrait .YoutubeLiveColumn,
 .YoutubeHomepageSection.Portrait .YoutubeShortsColumn,
 .YoutubeHomepageSection.Portrait .YoutubeVideosColumn {
-  flex: none;
-  width: 100%
-}
-
-.YoutubeHomepageSection.Portrait .YoutubeLiveColumnTiles {
-  flex-direction: row
-}
-
-.YoutubeHomepageSection.Portrait .YoutubeLiveColumnTiles .YoutubeTile {
-  flex: 1 1;
-  min-width: 0
+  flex: none
 }
 
 .LegalPage {

@@ -1,156 +1,156 @@
 export const id = 199;
 export const ids = [199];
 export const modules = {
-  39748: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => vz,
-      d: () => oz,
-      f: () => Oz
+  39933: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => dv,
+      f: () => pv,
+      j: () => gv
     });
-    var Fz = sz(39754),
-      Wz = sz(4432),
-      Xz = sz(39760);
+    var hv = Pv(39940),
+      Sv = Pv(4535),
+      ev = Pv(39947);
 
-    function Oz(zz) {
-      return zz.payloadKind === Wz.Wb.Msgpack ? (0, Fz.c)(zz.payload) : void 0
+    function gv(vv) {
+      return vv.payloadKind === Sv.pc.Msgpack ? (0, hv.d)(vv.payload) : void 0
     }
 
-    function oz(zz, tz) {
-      if (tz.payloadKind === Wz.Wb.Bytes || tz.payloadKind === Wz.Wb.MsgpackBin) return (0, Xz.c)(zz, tz.payload)
+    function pv(vv, zv) {
+      if (zv.payloadKind === Sv.pc.Bytes || zv.payloadKind === Sv.pc.MsgpackBin) return (0, ev.b)(vv, zv.payload)
     }
 
-    function vz(zz) {
-      return null !== zz && "object" === typeof zz
+    function dv(vv) {
+      return null !== vv && "object" === typeof vv
     }
   },
-  39765: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => uz,
-      g: () => Nz,
-      k: () => bz,
-      l: () => Kz,
-      p: () => gz
+  39949: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => Tv,
+      i: () => Wv,
+      l: () => wv,
+      m: () => lv,
+      o: () => Cv
     });
-    var Fz = sz(4432),
-      Wz = sz(39773);
-    const Xz = new Map,
-      Oz = new Set,
-      oz = new Set;
-    let vz = 0,
-      Uz = 0;
+    var hv = Pv(4535),
+      Sv = Pv(39956);
+    const ev = new Map,
+      gv = new Set,
+      pv = new Set;
+    let dv = 0,
+      Nv = 0;
 
-    function Kz(zz, tz) {
-      let sz = Xz.get(zz);
-      return sz || (sz = new Set, Xz.set(zz, sz)), sz.add(tz), () => {
-        sz.delete(tz)
+    function lv(vv, zv) {
+      let Pv = ev.get(vv);
+      return Pv || (Pv = new Set, ev.set(vv, Pv)), Pv.add(zv), () => {
+        Pv.delete(zv)
       }
     }
 
-    function uz() {
-      return 0 !== vz
+    function Tv() {
+      return 0 !== dv
     }
 
-    function Nz(zz) {
-      return Oz.add(zz), () => {
-        Oz.delete(zz)
+    function Wv(vv) {
+      return gv.add(vv), () => {
+        gv.delete(vv)
       }
     }
 
-    function bz(zz) {
-      return oz.add(zz), () => {
-        oz.delete(zz)
+    function wv(vv) {
+      return pv.add(vv), () => {
+        pv.delete(vv)
       }
     }
-    const wz = "A raw message listener threw";
+    const av = "A raw message listener threw";
 
-    function Dz(zz) {
-      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Oz;
-      for (const Fz of tz) try {
-        Fz()
-      } catch (sz) {
-        zz ? (0, Wz.q)(sz, wz) : console.error(wz, sz)
+    function sv(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : gv;
+      for (const hv of zv) try {
+        hv()
+      } catch (Pv) {
+        vv ? (0, Sv.q)(Pv, av) : console.error(av, Pv)
       }
     }
-    const gz = {
-      fire: function(zz) {
-        if ("connection" === zz.type) {
-          const tz = zz.phase === Fz.F.Activated && zz.conn !== vz && zz.conn > Uz,
-            sz = (zz.phase === Fz.F.Left || zz.phase === Fz.F.Closed) && zz.conn === vz;
-          return void(tz || sz ? (vz = tz ? zz.conn : 0, Dz(!0)) : zz.phase === Fz.F.Resumed && 0 !== vz && zz.conn > Uz && (vz = zz.conn, Dz(!0, oz)))
+    const Cv = {
+      fire: function(vv) {
+        if ("connection" === vv.type) {
+          const zv = vv.phase === hv.F.Activated && vv.conn !== dv && vv.conn > Nv,
+            Pv = (vv.phase === hv.F.Left || vv.phase === hv.F.Closed) && vv.conn === dv;
+          return void(zv || Pv ? (dv = zv ? vv.conn : 0, sv(!0)) : vv.phase === hv.F.Resumed && 0 !== dv && vv.conn > Nv && (dv = vv.conn, sv(!0, pv)))
         }
-        const tz = Xz.get(zz.RO);
-        if (tz && zz.conn === vz && 0 !== vz)
-          for (const Fz of tz) try {
-            Fz(zz)
-          } catch (sz) {
-            (0, Wz.q)(sz, wz)
+        const zv = ev.get(vv.al);
+        if (zv && vv.conn === dv && 0 !== dv)
+          for (const hv of zv) try {
+            hv(vv)
+          } catch (Pv) {
+            (0, Sv.q)(Pv, av)
           }
       },
-      close: function(zz) {
-        Uz = Math.max(Uz, zz, vz), 0 !== vz && (vz = 0, Dz(!1))
+      close: function(vv) {
+        Nv = Math.max(Nv, vv, dv), 0 !== dv && (dv = 0, sv(!1))
       }
     }
   },
-  39733: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Uz,
-      g: () => vz,
-      i: () => oz
+  39918: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => Nv,
+      f: () => dv,
+      h: () => pv
     });
-    var Fz = sz(1253),
-      Wz = sz(39714);
-    const Xz = new TextDecoder,
-      Oz = new TextEncoder;
+    var hv = Pv(1250),
+      Sv = Pv(39889);
+    const ev = new TextDecoder,
+      gv = new TextEncoder;
 
-    function oz(zz, tz) {
-      const sz = zz.queries.entityName(tz);
-      if (sz === Wz.Ic) return;
-      const Oz = zz.memoryData(zz.scratch(), 4 + sz, 4, "entity_name's answer");
-      if (!Oz) return;
-      const oz = Oz.getUint32(0, !0),
-        vz = Xz.decode(new Uint8Array(Oz.buffer, Oz.byteOffset + 4, sz));
-      return (0, Fz.c)(vz, !1, oz === Wz.Zd ? null : oz)
+    function pv(vv, zv) {
+      const Pv = vv.queries.entityName(zv);
+      if (Pv === Sv.Nc) return;
+      const gv = vv.memoryData(vv.scratch(), 4 + Pv, 4, "entity_name's answer");
+      if (!gv) return;
+      const pv = gv.getUint32(0, !0),
+        dv = ev.decode(new Uint8Array(gv.buffer, gv.byteOffset + 4, Pv));
+      return (0, hv.c)(dv, !1, pv === Sv.Od ? null : pv)
     }
 
-    function vz(zz, tz, sz) {
-      const Fz = Oz.encode(sz);
-      if (Fz.length > Wz.Ab) return !1;
-      const Xz = zz.memoryView(Uint8Array, zz.scratch(), Fz.length, "has_effect's name");
-      return !!Xz && (Xz.set(Fz), 1 === zz.queries.hasEffect(tz, Fz.length))
+    function dv(vv, zv, Pv) {
+      const hv = gv.encode(Pv);
+      if (hv.length > Sv.Db) return !1;
+      const ev = vv.memoryView(Uint8Array, vv.scratch(), hv.length, "has_effect's name");
+      return !!ev && (ev.set(hv), 1 === vv.queries.hasEffect(zv, hv.length))
     }
 
-    function Uz(zz, tz, sz, Fz) {
-      const Oz = zz.queries.blockData(tz, sz, Fz);
-      if (Oz === Wz.Ic) return;
-      const oz = zz.memoryView(Uint8Array, zz.scratch(), Oz, "block_data's answer");
-      return oz ? JSON.parse(Xz.decode(oz)) : void 0
+    function Nv(vv, zv, Pv, hv) {
+      const gv = vv.queries.blockData(zv, Pv, hv);
+      if (gv === Sv.Nc) return;
+      const pv = vv.memoryView(Uint8Array, vv.scratch(), gv, "block_data's answer");
+      return pv ? JSON.parse(ev.decode(pv)) : void 0
     }
   },
-  39754: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Wz,
-      f: () => Kz
+  39940: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => Sv,
+      f: () => lv
     });
-    const Fz = new TextDecoder;
+    const hv = new TextDecoder;
 
-    function Wz(zz) {
-      const tz = new Xz(zz),
-        sz = tz.value();
-      if (tz.at !== zz.length) throw new Error(`msgpack: ${zz.length-tz.at} bytes after the value`);
-      return sz
+    function Sv(vv) {
+      const zv = new ev(vv),
+        Pv = zv.value();
+      if (zv.at !== vv.length) throw new Error(`msgpack: ${vv.length-zv.at} bytes after the value`);
+      return Pv
     }
-    class Xz {
-      constructor(zz) {
-        this.bytes = zz, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(zz.buffer, zz.byteOffset, zz.byteLength)
+    class ev {
+      constructor(vv) {
+        this.bytes = vv, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(vv.buffer, vv.byteOffset, vv.byteLength)
       }
       value() {
-        const zz = this.u8();
-        if (zz <= 127) return zz;
-        if (zz >= 224) return zz - 256;
-        if (zz >= 128 && zz <= 143) return this.map(15 & zz);
-        if (zz >= 144 && zz <= 159) return this.array(15 & zz);
-        if (zz >= 160 && zz <= 191) return this.str(31 & zz);
-        switch (zz) {
+        const vv = this.u8();
+        if (vv <= 127) return vv;
+        if (vv >= 224) return vv - 256;
+        if (vv >= 128 && vv <= 143) return this.map(15 & vv);
+        if (vv >= 144 && vv <= 159) return this.array(15 & vv);
+        if (vv >= 160 && vv <= 191) return this.str(31 & vv);
+        switch (vv) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${zz.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${vv.toString(16)} at ${this.at-1}`)
         }
       }
-      take(zz) {
-        const tz = this.at;
-        if (tz + zz > this.bytes.length) throw new Error(`msgpack: ${zz} bytes past the end at ${tz}`);
-        return this.at = tz + zz, tz
+      take(vv) {
+        const zv = this.at;
+        if (zv + vv > this.bytes.length) throw new Error(`msgpack: ${vv} bytes past the end at ${zv}`);
+        return this.at = zv + vv, zv
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,945 +231,945 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(zz) {
-        const tz = this.take(8);
-        return zz ? this.view.getBigInt64(tz, !1) : this.view.getBigUint64(tz, !1)
+      int64(vv) {
+        const zv = this.take(8);
+        return vv ? this.view.getBigInt64(zv, !1) : this.view.getBigUint64(zv, !1)
       }
-      str(zz) {
-        const tz = this.take(zz),
-          sz = this.bytes;
-        if (zz < 16) {
-          let Wz = "";
-          for (let Xz = tz; Xz < tz + zz; Xz++) {
-            const Oz = sz[Xz];
-            if (Oz >= 128) return Fz.decode(sz.subarray(tz, tz + zz));
-            Wz += String.fromCharCode(Oz)
+      str(vv) {
+        const zv = this.take(vv),
+          Pv = this.bytes;
+        if (vv < 16) {
+          let Sv = "";
+          for (let ev = zv; ev < zv + vv; ev++) {
+            const gv = Pv[ev];
+            if (gv >= 128) return hv.decode(Pv.subarray(zv, zv + vv));
+            Sv += String.fromCharCode(gv)
           }
-          return Wz
+          return Sv
         }
-        return Fz.decode(sz.subarray(tz, tz + zz))
+        return hv.decode(Pv.subarray(zv, zv + vv))
       }
-      bin(zz) {
-        const tz = this.take(zz);
-        return this.bytes.subarray(tz, tz + zz)
+      bin(vv) {
+        const zv = this.take(vv);
+        return this.bytes.subarray(zv, zv + vv)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(zz) {
+      array(vv) {
         this.enter();
-        const tz = [];
-        for (let sz = 0; sz < zz; sz++) tz.push(this.value());
-        return this.depth--, tz
+        const zv = [];
+        for (let Pv = 0; Pv < vv; Pv++) zv.push(this.value());
+        return this.depth--, zv
       }
-      map(zz) {
+      map(vv) {
         this.enter();
-        const tz = {};
-        for (let sz = 0; sz < zz; sz++) {
-          const zz = this.value(),
-            sz = this.value();
-          tz["__proto__" === zz ? "__proto_" : String(zz)] = sz
+        const zv = {};
+        for (let Pv = 0; Pv < vv; Pv++) {
+          const vv = this.value(),
+            Pv = this.value();
+          zv["__proto__" === vv ? "__proto_" : String(vv)] = Pv
         }
-        return this.depth--, tz
+        return this.depth--, zv
       }
-      ext(zz) {
-        const tz = this.view.getInt8(this.take(1)),
-          sz = this.take(zz);
-        if (0 !== tz) {
-          if (-1 === tz) {
-            if (1 === zz) return new Date(NaN);
-            if (4 === zz) return new Date(1e3 * this.view.getUint32(sz, !1));
-            if (8 === zz) {
-              const zz = this.view.getUint32(sz, !1),
-                tz = zz >>> 2,
-                Fz = 4294967296 * (3 & zz) + this.view.getUint32(sz + 4, !1);
-              return new Date(1e3 * Fz + tz / 1e6)
+      ext(vv) {
+        const zv = this.view.getInt8(this.take(1)),
+          Pv = this.take(vv);
+        if (0 !== zv) {
+          if (-1 === zv) {
+            if (1 === vv) return new Date(NaN);
+            if (4 === vv) return new Date(1e3 * this.view.getUint32(Pv, !1));
+            if (8 === vv) {
+              const vv = this.view.getUint32(Pv, !1),
+                zv = vv >>> 2,
+                hv = 4294967296 * (3 & vv) + this.view.getUint32(Pv + 4, !1);
+              return new Date(1e3 * hv + zv / 1e6)
             }
-            if (12 === zz) {
-              const zz = this.view.getUint32(sz, !1),
-                tz = 4294967296 * this.view.getInt32(sz + 4, !1) + this.view.getUint32(sz + 8, !1);
-              return new Date(1e3 * tz + zz / 1e6)
+            if (12 === vv) {
+              const vv = this.view.getUint32(Pv, !1),
+                zv = 4294967296 * this.view.getInt32(Pv + 4, !1) + this.view.getUint32(Pv + 8, !1);
+              return new Date(1e3 * zv + vv / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${tz} of ${zz} bytes`)
+          throw new Error(`msgpack: ext type ${zv} of ${vv} bytes`)
         }
       }
     }
-    const Oz = new TextEncoder,
-      oz = -(2n ** 63n),
-      vz = 2n ** 63n - 1n,
-      Uz = 2n ** 64n - 1n;
+    const gv = new TextEncoder,
+      pv = -(2n ** 63n),
+      dv = 2n ** 63n - 1n,
+      Nv = 2n ** 64n - 1n;
 
-    function Kz(zz) {
-      const tz = new uz;
-      return tz.value(zz, 0), tz.bytes()
+    function lv(vv) {
+      const zv = new Tv;
+      return zv.value(vv, 0), zv.bytes()
     }
-    class uz {
+    class Tv {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(zz, tz) {
-        if (tz > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof zz) {
+      value(vv, zv) {
+        if (zv > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof vv) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(zz ? 195 : 194);
+            return void this.u8(vv ? 195 : 194);
           case "number":
-            return void this.number(zz);
+            return void this.number(vv);
           case "bigint":
-            return void this.bigint(zz);
+            return void this.bigint(vv);
           case "string":
-            return void this.string(zz);
+            return void this.string(vv);
           case "object":
-            if (null === zz) this.u8(192);
-            else if (zz instanceof Uint8Array) this.head(zz.length, 196, -1, 197, 198), this.room(zz.length), this.buf.set(zz, this.at), this.at += zz.length;
-            else if (Array.isArray(zz)) {
-              this.head(zz.length, 220, 144, 220, 221);
-              for (const sz of zz) this.value(sz, tz + 1)
+            if (null === vv) this.u8(192);
+            else if (vv instanceof Uint8Array) this.head(vv.length, 196, -1, 197, 198), this.room(vv.length), this.buf.set(vv, this.at), this.at += vv.length;
+            else if (Array.isArray(vv)) {
+              this.head(vv.length, 220, 144, 220, 221);
+              for (const Pv of vv) this.value(Pv, zv + 1)
             } else {
-              var sz, Fz;
-              if (Object.getPrototypeOf(zz) !== Object.prototype && null !== Object.getPrototypeOf(zz)) throw new Error(`msgpack: can't encode a ${null!==(sz=null===(Fz=zz.constructor)||void 0===Fz?void 0:Fz.name)&&void 0!==sz?sz:"object"}`);
+              var Pv, hv;
+              if (Object.getPrototypeOf(vv) !== Object.prototype && null !== Object.getPrototypeOf(vv)) throw new Error(`msgpack: can't encode a ${null!==(Pv=null===(hv=vv.constructor)||void 0===hv?void 0:hv.name)&&void 0!==Pv?Pv:"object"}`);
               {
-                const sz = Object.keys(zz);
-                this.head(sz.length, 222, 128, 222, 223);
-                for (const Fz of sz) this.string(Fz), this.value(zz[Fz], tz + 1)
+                const Pv = Object.keys(vv);
+                this.head(Pv.length, 222, 128, 222, 223);
+                for (const hv of Pv) this.string(hv), this.value(vv[hv], zv + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof zz)
+            throw new Error("msgpack: can't encode a " + typeof vv)
         }
       }
-      number(zz) {
-        Number.isInteger(zz) && zz >= -2147483648 && zz <= 4294967295 ? zz >= 0 ? zz < 128 ? this.u8(zz) : zz < 256 ? (this.u8(204), this.u8(zz)) : zz < 65536 ? (this.u8(205), this.u16(zz)) : (this.u8(206), this.u32(zz)) : zz >= -32 ? this.u8(zz + 256) : zz >= -128 ? (this.u8(208), this.u8(zz + 256)) : zz >= -32768 ? (this.u8(209), this.u16(zz + 65536)) : (this.u8(210), this.u32(zz >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, zz, !1), this.at += 8)
+      number(vv) {
+        Number.isInteger(vv) && vv >= -2147483648 && vv <= 4294967295 ? vv >= 0 ? vv < 128 ? this.u8(vv) : vv < 256 ? (this.u8(204), this.u8(vv)) : vv < 65536 ? (this.u8(205), this.u16(vv)) : (this.u8(206), this.u32(vv)) : vv >= -32 ? this.u8(vv + 256) : vv >= -128 ? (this.u8(208), this.u8(vv + 256)) : vv >= -32768 ? (this.u8(209), this.u16(vv + 65536)) : (this.u8(210), this.u32(vv >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, vv, !1), this.at += 8)
       }
-      bigint(zz) {
-        const tz = zz >= oz && zz <= vz;
-        if (!tz && (zz < 0n || zz > Uz)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(tz ? 211 : 207), this.room(8), tz ? this.view.setBigInt64(this.at, zz, !1) : this.view.setBigUint64(this.at, zz, !1), this.at += 8
+      bigint(vv) {
+        const zv = vv >= pv && vv <= dv;
+        if (!zv && (vv < 0n || vv > Nv)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(zv ? 211 : 207), this.room(8), zv ? this.view.setBigInt64(this.at, vv, !1) : this.view.setBigUint64(this.at, vv, !1), this.at += 8
       }
-      string(zz) {
-        const tz = Oz.encode(zz);
-        this.head(tz.length, 217, 160, 218, 219), this.room(tz.length), this.buf.set(tz, this.at), this.at += tz.length
+      string(vv) {
+        const zv = gv.encode(vv);
+        this.head(zv.length, 217, 160, 218, 219), this.room(zv.length), this.buf.set(zv, this.at), this.at += zv.length
       }
-      head(zz, tz, sz, Fz, Wz) {
-        sz >= 0 && zz < (160 === sz ? 32 : 16) ? this.u8(sz | zz) : tz !== Fz && zz < 256 ? (this.u8(tz), this.u8(zz)) : zz < 65536 ? (this.u8(Fz), this.u16(zz)) : (this.u8(Wz), this.u32(zz))
+      head(vv, zv, Pv, hv, Sv) {
+        Pv >= 0 && vv < (160 === Pv ? 32 : 16) ? this.u8(Pv | vv) : zv !== hv && vv < 256 ? (this.u8(zv), this.u8(vv)) : vv < 65536 ? (this.u8(hv), this.u16(vv)) : (this.u8(Sv), this.u32(vv))
       }
-      room(zz) {
-        if (this.at + zz <= this.buf.length) return;
-        let tz = 2 * this.buf.length;
-        for (; tz < this.at + zz;) tz *= 2;
-        const sz = new Uint8Array(tz);
-        sz.set(this.buf.subarray(0, this.at)), this.buf = sz, this.view = new DataView(sz.buffer)
+      room(vv) {
+        if (this.at + vv <= this.buf.length) return;
+        let zv = 2 * this.buf.length;
+        for (; zv < this.at + vv;) zv *= 2;
+        const Pv = new Uint8Array(zv);
+        Pv.set(this.buf.subarray(0, this.at)), this.buf = Pv, this.view = new DataView(Pv.buffer)
       }
-      u8(zz) {
-        this.room(1), this.buf[this.at++] = zz
+      u8(vv) {
+        this.room(1), this.buf[this.at++] = vv
       }
-      u16(zz) {
-        this.room(2), this.view.setUint16(this.at, zz, !1), this.at += 2
+      u16(vv) {
+        this.room(2), this.view.setUint16(this.at, vv, !1), this.at += 2
       }
-      u32(zz) {
-        this.room(4), this.view.setUint32(this.at, zz, !1), this.at += 4
+      u32(vv) {
+        this.room(4), this.view.setUint32(this.at, vv, !1), this.at += 4
       }
     }
   },
-  39760: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Oz
+  39947: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => gv
     });
-    var Fz = sz(39740);
-    const Wz = new TextDecoder("utf-8", {
+    var hv = Pv(39927);
+    const Sv = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class Xz {
-      constructor(zz) {
-        this.buf = zz, this.at = 0, this.view = null
+    class ev {
+      constructor(vv) {
+        this.buf = vv, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let zz = this.u8(),
-          tz = 127 & zz,
-          sz = 128;
-        for (; 128 & zz;) {
-          if (sz > 2 ** 63) throw new RangeError("avro: varint too long");
-          zz = this.u8(), tz += (127 & zz) * sz, sz *= 128
+        let vv = this.u8(),
+          zv = 127 & vv,
+          Pv = 128;
+        for (; 128 & vv;) {
+          if (Pv > 2 ** 63) throw new RangeError("avro: varint too long");
+          vv = this.u8(), zv += (127 & vv) * Pv, Pv *= 128
         }
-        return tz % 2 === 1 ? -(tz + 1) / 2 : tz / 2
+        return zv % 2 === 1 ? -(zv + 1) / 2 : zv / 2
       }
       float() {
-        const zz = this.take(4);
-        return this.floats().getFloat32(zz, !0)
+        const vv = this.take(4);
+        return this.floats().getFloat32(vv, !0)
       }
       double() {
-        const zz = this.take(8);
-        return this.floats().getFloat64(zz, !0)
+        const vv = this.take(8);
+        return this.floats().getFloat64(vv, !0)
       }
       str() {
-        const zz = this.size(),
-          tz = this.take(zz),
-          sz = tz + zz;
-        if (zz <= 32) {
-          let zz = "";
-          for (let Fz = tz; Fz < sz; Fz++) {
-            const Xz = this.buf[Fz];
-            if (Xz >= 128) return Wz.decode(this.buf.subarray(tz, sz));
-            zz += String.fromCharCode(Xz)
+        const vv = this.size(),
+          zv = this.take(vv),
+          Pv = zv + vv;
+        if (vv <= 32) {
+          let vv = "";
+          for (let hv = zv; hv < Pv; hv++) {
+            const ev = this.buf[hv];
+            if (ev >= 128) return Sv.decode(this.buf.subarray(zv, Pv));
+            vv += String.fromCharCode(ev)
           }
-          return zz
+          return vv
         }
-        return Wz.decode(this.buf.subarray(tz, sz))
+        return Sv.decode(this.buf.subarray(zv, Pv))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(zz) {
-        const tz = this.take(zz);
-        return this.buf.slice(tz, tz + zz)
+      fixed(vv) {
+        const zv = this.take(vv);
+        return this.buf.slice(zv, zv + vv)
       }
-      index(zz) {
-        const tz = this.long();
-        if (!(tz >= 0 && tz < zz)) throw new RangeError(`avro: index ${tz} of ${zz}`);
-        return tz
+      index(vv) {
+        const zv = this.long();
+        if (!(zv >= 0 && zv < vv)) throw new RangeError(`avro: index ${zv} of ${vv}`);
+        return zv
       }
-      nw(zz) {
-        const tz = [];
-        for (let sz = this.long(); 0 !== sz; sz = this.long()) {
-          sz = this.block(sz);
-          for (let Fz = 0; Fz < sz; Fz++) tz.push(zz(this))
+      ga(vv) {
+        const zv = [];
+        for (let Pv = this.long(); 0 !== Pv; Pv = this.long()) {
+          Pv = this.block(Pv);
+          for (let hv = 0; hv < Pv; hv++) zv.push(vv(this))
         }
-        return tz
+        return zv
       }
-      map(zz) {
-        const tz = {};
-        for (let sz = this.long(); 0 !== sz; sz = this.long()) {
-          sz = this.block(sz);
-          for (let Fz = 0; Fz < sz; Fz++) {
-            tz[this.str()] = zz(this)
+      map(vv) {
+        const zv = {};
+        for (let Pv = this.long(); 0 !== Pv; Pv = this.long()) {
+          Pv = this.block(Pv);
+          for (let hv = 0; hv < Pv; hv++) {
+            zv[this.str()] = vv(this)
           }
         }
-        return tz
+        return zv
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(zz) {
-        let tz = zz;
-        if (tz < 0 && (tz = -tz, this.long()), tz > this.buf.length - this.at) throw new RangeError(`avro: block of ${tz} items in ${this.buf.length-this.at} bytes`);
-        return tz
+      block(vv) {
+        let zv = vv;
+        if (zv < 0 && (zv = -zv, this.long()), zv > this.buf.length - this.at) throw new RangeError(`avro: block of ${zv} items in ${this.buf.length-this.at} bytes`);
+        return zv
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const zz = this.long();
-        if (zz < 0) throw new RangeError(`avro: length ${zz}`);
-        return zz
+        const vv = this.long();
+        if (vv < 0) throw new RangeError(`avro: length ${vv}`);
+        return vv
       }
       u8() {
-        const zz = this.buf[this.at];
-        if (void 0 === zz) throw new RangeError("avro: truncated");
-        return this.at++, zz
+        const vv = this.buf[this.at];
+        if (void 0 === vv) throw new RangeError("avro: truncated");
+        return this.at++, vv
       }
-      take(zz) {
-        const tz = this.at;
-        if (zz > this.buf.length - tz) throw new RangeError("avro: truncated");
-        return this.at = tz + zz, tz
+      take(vv) {
+        const zv = this.at;
+        if (vv > this.buf.length - zv) throw new RangeError("avro: truncated");
+        return this.at = zv + vv, zv
       }
     }
 
-    function Oz(zz, tz) {
-      const sz = new Xz(tz),
-        Wz = (0, Fz.kb)(zz, sz);
-      return sz.end(), Wz
+    function gv(vv, zv) {
+      const Pv = new ev(zv),
+        Sv = (0, hv.wb)(vv, Pv);
+      return Pv.end(), Sv
     }
   },
-  39740: (zz, tz, sz) => {
-    sz.d(tz, {
-      D: () => Wz,
-      G: () => oz,
-      I: () => bz,
-      M: () => Iz,
-      P: () => Jz,
-      S: () => xz,
-      W: () => Kz,
-      _: () => uz,
-      ab: () => Cz,
-      b: () => Yz,
-      bb: () => wz,
-      eb: () => Pz,
-      f: () => gz,
-      gb: () => Dz,
-      h: () => Hz,
-      hb: () => vz,
-      j: () => Bz,
-      kb: () => Zz,
-      l: () => mz,
-      m: () => Fz,
-      q: () => Xz,
-      r: () => rz,
-      t: () => Nz,
-      v: () => Uz,
-      y: () => Oz,
-      z: () => ez
+  39927: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      A: () => mv,
+      D: () => Wv,
+      G: () => Nv,
+      I: () => gv,
+      M: () => Dv,
+      Q: () => Sv,
+      U: () => pv,
+      W: () => wv,
+      Y: () => nv,
+      _: () => Yv,
+      cb: () => fv,
+      e: () => jv,
+      g: () => Cv,
+      gb: () => lv,
+      h: () => iv,
+      hb: () => Tv,
+      ib: () => Ov,
+      l: () => cv,
+      mb: () => av,
+      p: () => Fv,
+      pb: () => Gv,
+      t: () => hv,
+      tb: () => sv,
+      vb: () => dv,
+      w: () => ev,
+      wb: () => Kv
     });
-    const Fz = 2,
-      Wz = 12,
-      Xz = 27,
-      Oz = 40,
-      oz = 52,
-      vz = 59,
-      Uz = 63,
-      Kz = 83,
-      uz = 84,
-      Nz = 89,
-      bz = 91,
-      wz = 93,
-      Dz = 94,
-      gz = 95,
-      Hz = 97,
-      Bz = 101,
-      Pz = 102,
-      rz = 73,
-      Yz = 16,
-      xz = 86,
-      mz = 60,
-      Jz = 17,
-      Iz = 56,
-      Cz = 100,
-      ez = 81;
+    const hv = 2,
+      Sv = 12,
+      ev = 27,
+      gv = 40,
+      pv = 52,
+      dv = 59,
+      Nv = 63,
+      lv = 83,
+      Tv = 84,
+      Wv = 89,
+      wv = 91,
+      av = 93,
+      sv = 94,
+      Cv = 95,
+      iv = 97,
+      cv = 101,
+      Gv = 102,
+      mv = 73,
+      jv = 16,
+      fv = 86,
+      Fv = 60,
+      Yv = 17,
+      nv = 56,
+      Ov = 100,
+      Dv = 81;
 
-    function Zz(zz, tz) {
-      switch (zz) {
-        case Fz:
-          return function(zz) {
+    function Kv(vv, zv) {
+      switch (vv) {
+        case hv:
+          return function(vv) {
             return {
-              RX: Vz(zz),
-              pX: zz.float(),
-              fX: zz.long()
+              wP: bv(vv),
+              aP: vv.float(),
+              sP: vv.long()
             }
-          }(tz);
-        case Wz:
-          return function(zz) {
+          }(zv);
+        case Sv:
+          return function(vv) {
             return {
-              zz: Az(zz),
-              tz: Az(zz)
+              CP: tv(vv),
+              iP: tv(vv)
             }
-          }(tz);
-        case Xz:
-          return function(zz) {
+          }(zv);
+        case ev:
+          return function(vv) {
             return {
-              gt: zz.bool(),
-              Ht: Az(zz)
+              gz: vv.bool(),
+              pz: tv(vv)
             }
-          }(tz);
-        case Oz:
-          return tz.str();
-        case oz:
-          return function(zz) {
+          }(zv);
+        case gv:
+          return zv.str();
+        case pv:
+          return function(vv) {
             return {
-              id: zz.long(),
-              Gz: Ot(zz)
+              id: vv.long(),
+              qz: gz(vv)
             }
-          }(tz);
-        case vz:
-        case Uz:
-          return tz.str();
-        case Kz:
-        case uz:
-          return tz.long();
-        case Nz:
-          return function(zz) {
+          }(zv);
+        case dv:
+        case Nv:
+          return zv.str();
+        case lv:
+        case Tv:
+          return zv.long();
+        case Wv:
+          return function(vv) {
             return {
-              cF: zz.long(),
-              jF: zz.bool(),
-              AF: zz.float()
+              Rv: vv.long(),
+              xv: vv.bool(),
+              tv: vv.float()
             }
-          }(tz);
-        case bz:
-          return tz.long();
-        case wz:
-          return function(zz) {
+          }(zv);
+        case wv:
+          return zv.long();
+        case av:
+          return function(vv) {
             return {
-              Hs: zz.bool(),
-              Bs: Ut(zz)
+              WP: vv.bool(),
+              nv: Nz(vv)
             }
-          }(tz);
-        case Dz:
-          return function(zz) {
+          }(zv);
+        case sv:
+          return function(vv) {
             return {
-              id: zz.str(),
-              position: vt(zz),
-              BX: Kt(zz),
-              style: kz(zz),
-              rX: zz.bool()
+              id: vv.str(),
+              position: dz(vv),
+              Tv: lz(vv),
+              style: Lv(vv),
+              sv: vv.bool()
             }
-          }(tz);
-        case gz:
-          return function(zz) {
+          }(zv);
+        case Cv:
+          return function(vv) {
             return {
-              id: Az(zz)
+              id: tv(vv)
             }
-          }(tz);
-        case Hz:
-          return function(zz) {
+          }(zv);
+        case iv:
+          return function(vv) {
             return {
-              Yt: zz.long(),
-              xt: zz.str(),
-              Jt: Wt(zz),
-              Ct: Wt(zz),
-              et: Az(zz),
-              Zt: Az(zz),
-              Gt: Az(zz),
-              Tt: Az(zz),
-              ct: Az(zz),
-              jt: Wt(zz),
-              yt: Wt(zz),
-              Mt: Az(zz),
-              dt: Az(zz),
-              Qt: Az(zz)
+              ah: vv.long(),
+              sh: vv.str(),
+              Ch: Sz(vv),
+              ih: Sz(vv),
+              Gh: tv(vv),
+              mh: tv(vv),
+              jh: tv(vv),
+              fh: tv(vv),
+              Fh: tv(vv),
+              Yh: Sz(vv),
+              nh: Sz(vv),
+              Oh: tv(vv),
+              Dh: tv(vv),
+              Kh: tv(vv)
             }
-          }(tz);
-        case Bz:
-          return tz.str();
-        case Pz:
-          return tz.long();
-        case rz:
-          return function(zz) {
+          }(zv);
+        case cv:
+          return zv.str();
+        case Gv:
+          return zv.long();
+        case mv:
+          return function(vv) {
             return {
-              BF: zz.long(),
-              PF: zz.str(),
-              rF: zz.float()
+              Be: vv.long(),
+              Je: vv.str(),
+              Ee: vv.float()
             }
-          }(tz);
-        case Yz:
-          return function(zz) {
+          }(zv);
+        case jv:
+          return function(vv) {
             return {
-              WO: zz.bool(),
-              XO: Az(zz),
-              OO: zz.str(),
-              oO: Nt(zz),
-              vO: Nt(zz),
-              UO: zz.bool(),
-              KO: zz.long(),
-              uO: bt(zz)
+              uh: vv.bool(),
+              vS: tv(vv),
+              zS: vv.str(),
+              PS: Wz(vv),
+              hS: Wz(vv),
+              SS: vv.bool(),
+              eS: vv.long(),
+              gS: wz(vv)
             }
-          }(tz);
-        case xz:
-          return function(zz) {
+          }(zv);
+        case fv:
+          return function(vv) {
             return {
-              qW: Az(zz)
+              DP: tv(vv)
             }
-          }(tz);
-        case mz:
-          return function(zz) {
+          }(zv);
+        case Fv:
+          return function(vv) {
             return {
-              vt: zz.str(),
-              Ut: zz.str(),
-              Kt: wt(zz),
-              ut: zz.str(),
-              Nt: fz(zz),
-              Dt: zz.float()
+              Cv: vv.str(),
+              iv: vv.str(),
+              cv: az(vv),
+              Gv: vv.str(),
+              mv: Xv(vv),
+              jv: vv.float()
             }
-          }(tz);
-        case Jz:
-          return function(zz) {
+          }(zv);
+        case Yv:
+          return function(vv) {
             return {
-              vt: zz.str(),
-              Ut: zz.str(),
-              Kt: wt(zz)
+              Cv: vv.str(),
+              iv: vv.str(),
+              cv: az(vv)
             }
-          }(tz);
-        case Iz:
-          return function(zz) {
-            return zz.nw(Dt)
-          }(tz);
-        case Cz:
-          return function(zz) {
+          }(zv);
+        case nv:
+          return function(vv) {
+            return vv.ga(sz)
+          }(zv);
+        case Ov:
+          return function(vv) {
             return {
-              yF: Ht(zz),
-              kF: lz(zz)
+              dz: iz(vv),
+              wz: yv(vv)
             }
-          }(tz);
-        case ez:
-          return function(zz) {
+          }(zv);
+        case Dv:
+          return function(vv) {
             return {
-              iF: zz.bool(),
-              LF: Az(zz),
-              lF: Pt(zz),
-              aF: yt(zz)
+              ES: vv.bool(),
+              oS: tv(vv),
+              bS: Gz(vv),
+              kS: qz(vv)
             }
-          }(tz);
+          }(zv);
         default:
-          throw new Error(`no reader for to-client message ${zz}`)
+          throw new Error(`no reader for to-client message ${vv}`)
       }
     }
 
-    function Gz(zz) {
+    function Vv(vv) {
       return {
-        entityName: zz.str()
+        entityName: vv.str()
       }
     }
 
-    function Tz(zz) {
-      const tz = zz.index(4);
-      return 0 === tz ? zz.str() : 1 === tz ? zz.long() : 2 === tz ? zz.bool() : Gz(zz)
+    function Uv(vv) {
+      const zv = vv.index(4);
+      return 0 === zv ? vv.str() : 1 === zv ? vv.long() : 2 === zv ? vv.bool() : Vv(vv)
     }
 
-    function cz(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
-        return zz.map(Tz)
-      }(zz)
+    function Rv(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
+        return vv.map(Uv)
+      }(vv)
     }
 
-    function jz(zz) {
+    function xv(vv) {
       return {
-        translationKey: zz.str(),
-        params: cz(zz)
+        translationKey: vv.str(),
+        params: Rv(vv)
       }
     }
 
-    function Az(zz) {
-      return 0 === zz.index(2) ? null : zz.str()
+    function tv(vv) {
+      return 0 === vv.index(2) ? null : vv.str()
     }
 
-    function yz(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function qv(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          color: Az(zz),
-          colour: Az(zz),
-          fontSize: Az(zz)
+          color: tv(vv),
+          colour: tv(vv),
+          fontSize: tv(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function Mz(zz) {
+    function Iv(vv) {
       return {
-        icon: zz.str(),
-        style: yz(zz)
+        icon: vv.str(),
+        style: qv(vv)
       }
     }
 
-    function dz(zz) {
-      const tz = zz.index(3);
-      return 0 === tz ? {
-        string: zz.str()
-      } : 1 === tz ? {
-        styledEntityName: Gz(zz)
+    function Qv(vv) {
+      const zv = vv.index(3);
+      return 0 === zv ? {
+        string: vv.str()
+      } : 1 === zv ? {
+        styledEntityName: Vv(vv)
       } : {
-        styledTranslatedText: jz(zz)
+        styledTranslatedText: xv(vv)
       }
     }
 
-    function hz(zz) {
-      const tz = zz.index(3);
-      return 0 === tz ? null : 1 === tz ? zz.str() : zz.long()
+    function Zv(vv) {
+      const zv = vv.index(3);
+      return 0 === zv ? null : 1 === zv ? vv.str() : vv.long()
     }
 
-    function Qz(zz) {
-      return 0 === zz.index(2) ? null : zz.float()
+    function Av(vv) {
+      return 0 === vv.index(2) ? null : vv.float()
     }
 
-    function kz(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function Lv(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          color: Az(zz),
-          colour: Az(zz),
-          fontWeight: hz(zz),
-          fontStyle: Az(zz),
-          fontSize: Az(zz),
-          opacity: Qz(zz)
+          color: tv(vv),
+          colour: tv(vv),
+          fontWeight: Zv(vv),
+          fontStyle: tv(vv),
+          fontSize: tv(vv),
+          opacity: Av(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function iz(zz) {
+    function Hv(vv) {
       return {
-        str: dz(zz),
-        style: kz(zz),
-        clickableUrl: Az(zz)
+        str: Qv(vv),
+        style: Lv(vv),
+        clickableUrl: tv(vv)
       }
     }
 
-    function Lz(zz) {
-      return zz.str()
+    function Mv(vv) {
+      return vv.str()
     }
 
-    function lz(zz) {
-      return zz.nw(Lz)
+    function yv(vv) {
+      return vv.ga(Mv)
     }
 
-    function nz(zz) {
-      return 0 === zz.index(2) ? null : lz(zz)
+    function Bv(vv) {
+      return 0 === vv.index(2) ? null : yv(vv)
     }
 
-    function az(zz) {
+    function Jv(vv) {
       return {
-        type: zz.str(),
-        progress: zz.float(),
-        width: Az(zz),
-        height: Az(zz),
-        colours: nz(zz),
-        backgroundColour: Az(zz)
+        type: vv.str(),
+        progress: vv.float(),
+        width: tv(vv),
+        height: tv(vv),
+        colours: Bv(vv),
+        backgroundColour: tv(vv)
       }
     }
 
-    function qz(zz) {
+    function Ev(vv) {
       return {
-        type: zz.str(),
-        action: zz.str(),
-        style: kz(zz)
+        type: vv.str(),
+        action: vv.str(),
+        style: Lv(vv)
       }
     }
 
-    function Sz(zz) {
-      const tz = zz.index(7);
-      return 0 === tz ? {
-        string: zz.str()
-      } : 1 === tz ? {
-        entityName: Gz(zz)
-      } : 2 === tz ? {
-        translatedText: jz(zz)
-      } : 3 === tz ? {
-        styledIcon: Mz(zz)
-      } : 4 === tz ? {
-        Qz: iz(zz)
-      } : 5 === tz ? {
-        styledProgressBar: az(zz)
+    function ov(vv) {
+      const zv = vv.index(7);
+      return 0 === zv ? {
+        string: vv.str()
+      } : 1 === zv ? {
+        entityName: Vv(vv)
+      } : 2 === zv ? {
+        translatedText: xv(vv)
+      } : 3 === zv ? {
+        styledIcon: Iv(vv)
+      } : 4 === zv ? {
+        Wv: Hv(vv)
+      } : 5 === zv ? {
+        styledProgressBar: Jv(vv)
       } : {
-        styledKeyBinding: qz(zz)
+        styledKeyBinding: Ev(vv)
       }
     }
 
-    function Vz(zz) {
-      return zz.nw(Sz)
+    function bv(vv) {
+      return vv.ga(ov)
     }
-    const Rz = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const rv = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function pz(zz) {
-      return Rz[zz.index(5)]
-    }
-
-    function fz(zz) {
-      return 0 === zz.index(2) ? null : zz.double()
+    function kv(vv) {
+      return rv[vv.index(5)]
     }
 
-    function Ez(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function Xv(vv) {
+      return 0 === vv.index(2) ? null : vv.double()
+    }
+
+    function uv(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          yz: fz(zz),
-          Mz: zz.double(),
-          dz: zz.double(),
-          hz: zz.bool(),
-          description: Vz(zz),
-          iz: zz.str(),
-          scale: fz(zz),
-          rotation: fz(zz)
+          Az: Xv(vv),
+          Lz: vv.double(),
+          Mz: vv.double(),
+          yz: vv.bool(),
+          description: bv(vv),
+          Bz: vv.str(),
+          scale: Xv(vv),
+          rotation: Xv(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function zt(zz) {
-      return 0 === zz.index(2) ? null : zz.bool()
+    function vz(vv) {
+      return 0 === vv.index(2) ? null : vv.bool()
     }
 
-    function tt(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function zz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          lz: zz.double(),
-          icon: zz.str(),
-          label: Vz(zz),
-          nz: zz.bool(),
-          scale: fz(zz),
-          rotation: fz(zz),
-          az: zt(zz)
+          Ez: vv.double(),
+          icon: vv.str(),
+          label: bv(vv),
+          bz: vv.bool(),
+          scale: Xv(vv),
+          rotation: Xv(vv),
+          rz: vz(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function st(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function Pz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          yz: fz(zz),
-          Sz: zz.double(),
-          Vz: zz.double(),
-          Rz: zz.double(),
-          gravity: zz.double(),
-          pz: zz.double(),
-          fz: zz.double(),
-          Ez: zz.double(),
-          hz: zz.bool(),
-          description: Vz(zz),
-          icon: Az(zz)
+          Az: Xv(vv),
+          Xz: vv.double(),
+          vP: vv.double(),
+          zP: vv.double(),
+          gravity: vv.double(),
+          PP: vv.double(),
+          hP: vv.double(),
+          SP: vv.double(),
+          yz: vv.bool(),
+          description: bv(vv),
+          icon: tv(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function Ft(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function hz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          speed: zz.double(),
-          tt: zz.double(),
-          label: Vz(zz),
-          icon: Az(zz),
-          scale: fz(zz),
-          rotation: fz(zz)
+          speed: vv.double(),
+          gP: vv.double(),
+          label: bv(vv),
+          icon: tv(vv),
+          scale: Xv(vv),
+          rotation: Xv(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function Wt(zz) {
-      return 0 === zz.index(2) ? null : zz.long()
+    function Sz(vv) {
+      return 0 === vv.index(2) ? null : vv.long()
     }
 
-    function Xt(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function ez(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          Wt: zz.long(),
-          Xt: zz.double(),
-          Ot: zz.double(),
-          ot: Wt(zz),
-          label: Vz(zz),
-          icon: Az(zz)
+          dP: vv.long(),
+          NP: vv.double(),
+          lP: vv.double(),
+          TP: Sz(vv),
+          label: bv(vv),
+          icon: tv(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function Ot(zz) {
+    function gz(vv) {
       return {
-        type: pz(zz),
-        progressBar: Ez(zz),
-        timedClick: tt(zz),
-        gravityBar: st(zz),
-        precisionBar: Ft(zz),
-        rhythmClick: Xt(zz)
+        type: kv(vv),
+        progressBar: uv(vv),
+        timedClick: zz(vv),
+        gravityBar: Pz(vv),
+        precisionBar: hz(vv),
+        rhythmClick: ez(vv)
       }
     }
 
-    function ot(zz) {
-      return zz.float()
+    function pz(vv) {
+      return vv.float()
     }
 
-    function vt(zz) {
-      return zz.nw(ot)
+    function dz(vv) {
+      return vv.ga(pz)
     }
 
-    function Ut(zz) {
-      return 0 === zz.index(2) ? null : vt(zz)
+    function Nz(vv) {
+      return 0 === vv.index(2) ? null : dz(vv)
     }
 
-    function Kt(zz) {
-      return 0 === zz.index(2) ? null : Vz(zz)
+    function lz(vv) {
+      return 0 === vv.index(2) ? null : bv(vv)
     }
 
-    function ut(zz) {
-      return zz.long()
+    function Tz(vv) {
+      return vv.long()
     }
 
-    function Nt(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
-        return zz.nw(ut)
-      }(zz)
+    function Wz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
+        return vv.ga(Tz)
+      }(vv)
     }
 
-    function bt(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function wz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          Es: zz.str(),
-          XF: zz.long()
+          xh: vv.str(),
+          Lh: vv.long()
         }
-      }(zz)
+      }(vv)
     }
 
-    function wt(zz) {
-      const tz = zz.index(3);
-      return 0 === tz ? null : 1 === tz ? zz.str() : jz(zz)
+    function az(vv) {
+      const zv = vv.index(3);
+      return 0 === zv ? null : 1 === zv ? vv.str() : xv(vv)
     }
 
-    function Dt(zz) {
+    function sz(vv) {
       return {
-        bF: zz.str(),
-        wF: zz.str(),
-        DF: zz.str()
+        cP: vv.str(),
+        GP: vv.str(),
+        mP: vv.str()
       }
     }
 
-    function gt(zz) {
+    function Cz(vv) {
       return {
-        MF: zz.str(),
-        dF: Az(zz),
-        hF: Az(zz),
-        QF: lz(zz)
+        Nz: vv.str(),
+        lz: tv(vv),
+        Tz: tv(vv),
+        Wz: yv(vv)
       }
     }
 
-    function Ht(zz) {
-      return zz.nw(gt)
+    function iz(vv) {
+      return vv.ga(Cz)
     }
 
-    function Bt(zz) {
+    function cz(vv) {
       return {
-        nF: zz.str(),
-        x: zz.long(),
-        y: zz.long(),
-        z: zz.long()
+        rS: vv.str(),
+        x: vv.long(),
+        y: vv.long(),
+        z: vv.long()
       }
     }
 
-    function Pt(zz) {
-      return zz.nw(Bt)
+    function Gz(vv) {
+      return vv.ga(cz)
     }
 
-    function rt(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function mz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          NW: zz.float(),
-          bW: zz.long(),
-          wW: zz.long()
+          je: vv.float(),
+          fe: vv.long(),
+          Fe: vv.long()
         }
-      }(zz)
+      }(vv)
     }
 
-    function Yt(zz) {
+    function jz(vv) {
       return {
-        blockName: zz.str(),
-        WW: zz.bool(),
-        XW: zz.bool(),
-        OW: zz.bool(),
-        oW: zz.float(),
-        vW: zz.float(),
-        UW: zz.long(),
-        KW: rt(zz)
+        blockName: vv.str(),
+        le: vv.bool(),
+        Te: vv.bool(),
+        ae: vv.bool(),
+        se: vv.float(),
+        Ce: vv.float(),
+        ie: vv.long(),
+        ce: mz(vv)
       }
     }
 
-    function xt(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
-        return zz.nw(Yt)
-      }(zz)
+    function fz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
+        return vv.ga(jz)
+      }(vv)
     }
 
-    function mt(zz) {
+    function Fz(vv) {
       return {
-        tW: zz.str(),
-        sW: xt(zz)
+        pe: vv.str(),
+        de: fz(vv)
       }
     }
 
-    function Jt(zz) {
+    function Yz(vv) {
       return {
-        blockName: zz.str(),
-        frequency: zz.float()
+        blockName: vv.str(),
+        frequency: vv.float()
       }
     }
 
-    function It(zz) {
-      return zz.nw(Jt)
+    function nz(vv) {
+      return vv.ga(Yz)
     }
 
-    function Ct(zz) {
+    function Oz(vv) {
       return {
-        HW: zz.str(),
-        BW: zz.str(),
-        frequency: zz.float(),
-        PW: It(zz)
+        Oe: vv.str(),
+        De: vv.str(),
+        frequency: vv.float(),
+        Ke: nz(vv)
       }
     }
 
-    function et(zz) {
-      return zz.nw(Ct)
+    function Dz(vv) {
+      return vv.ga(Oz)
     }
 
-    function Zt(zz) {
+    function Kz(vv) {
       return {
-        blockName: zz.str(),
-        radius: zz.long(),
-        mW: zz.long(),
-        VF: zz.long(),
-        RF: zz.long(),
-        JW: zz.float()
+        blockName: vv.str(),
+        radius: vv.long(),
+        te: vv.long(),
+        ve: vv.long(),
+        ze: vv.long(),
+        qe: vv.float()
       }
     }
 
-    function Gt(zz) {
-      return zz.nw(Zt)
+    function Vz(vv) {
+      return vv.ga(Kz)
     }
 
-    function Tt(zz) {
+    function Uz(vv) {
       return {
-        VF: zz.long(),
-        RF: zz.long(),
-        pF: zz.long(),
-        fF: zz.bool(),
-        EF: mt(zz),
-        DW: et(zz),
-        YW: Gt(zz)
+        ve: vv.long(),
+        ze: vv.long(),
+        Pe: vv.long(),
+        he: vv.bool(),
+        Se: Fz(vv),
+        Ye: Dz(vv),
+        Ue: Vz(vv)
       }
     }
 
-    function ct(zz) {
-      return zz.nw(Tt)
+    function Rz(vv) {
+      return vv.ga(Uz)
     }
 
-    function jt(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function xz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          name: zz.str(),
-          GW: Az(zz)
+          name: vv.str(),
+          Ae: tv(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function At(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function tz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          terrain: jt(zz),
-          TW: Gt(zz)
+          terrain: xz(vv),
+          Le: Vz(vv)
         }
-      }(zz)
+      }(vv)
     }
 
-    function yt(zz) {
-      return 0 === zz.index(2) ? null : function(zz) {
+    function qz(vv) {
+      return 0 === vv.index(2) ? null : function(vv) {
         return {
-          layers: ct(zz),
-          IW: At(zz)
+          layers: Rz(vv),
+          Ie: tz(vv)
         }
-      }(zz)
+      }(vv)
     }
   },
-  39727: (zz, tz, sz) => {
-    sz.d(tz, {
-      B: () => mz,
-      F: () => Gz,
-      J: () => rz,
-      K: () => Yz,
-      L: () => gz,
-      N: () => Cz,
-      R: () => cz,
-      U: () => wz,
-      V: () => Az,
-      Z: () => Bz,
-      bb: () => Hz,
-      d: () => Wz,
-      e: () => jz,
-      fb: () => Pz,
-      g: () => Tz,
-      gb: () => xz,
-      j: () => bz,
-      n: () => Dz,
-      r: () => Zz,
-      u: () => Jz,
-      x: () => ez,
-      y: () => Iz
+  39907: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      B: () => mv,
+      E: () => jv,
+      G: () => Cv,
+      H: () => Ov,
+      I: () => Rv,
+      J: () => av,
+      K: () => tv,
+      L: () => cv,
+      P: () => iv,
+      T: () => Gv,
+      V: () => fv,
+      d: () => Sv,
+      e: () => xv,
+      g: () => Uv,
+      i: () => wv,
+      k: () => sv,
+      m: () => Kv,
+      o: () => Yv,
+      q: () => Dv,
+      r: () => nv,
+      u: () => Fv,
+      x: () => Vv
     });
-    var Fz = sz(2724);
-    const Wz = {
+    var hv = Pv(2762);
+    const Sv = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1194,163 +1194,164 @@ export const modules = {
       QteResponse: 16,
       ItemBought: 25,
       LeaderboardRequest: 40,
-      UpdateNameTag: 53
+      UpdateNameTag: 53,
+      LobbyManage: 96
     };
 
-    function Xz(zz, tz) {
-      return !ArrayBuffer.isView(zz) || zz instanceof DataView ? Array.isArray(zz) ? zz.map((zz => tz(zz))) : zz : Array.from(zz, (zz => tz(zz)))
+    function ev(vv, zv) {
+      return !ArrayBuffer.isView(vv) || vv instanceof DataView ? Array.isArray(vv) ? vv.map((vv => zv(vv))) : vv : Array.from(vv, (vv => zv(vv)))
     }
 
-    function Oz(zz) {
-      if ("string" !== typeof zz) return zz;
-      for (let tz = 0; tz < zz.length; tz++) {
-        const sz = zz.charCodeAt(tz);
-        if (sz >= 55296 && sz <= 57343) return vz.decode(oz.encode(zz))
+    function gv(vv) {
+      if ("string" !== typeof vv) return vv;
+      for (let zv = 0; zv < vv.length; zv++) {
+        const Pv = vv.charCodeAt(zv);
+        if (Pv >= 55296 && Pv <= 57343) return dv.decode(pv.encode(vv))
       }
-      return zz
+      return vv
     }
-    const oz = new TextEncoder,
-      vz = new TextDecoder;
+    const pv = new TextEncoder,
+      dv = new TextDecoder;
 
-    function Uz(zz) {
-      return zz
+    function Nv(vv) {
+      return vv
     }
-    let Kz;
+    let lv;
 
-    function uz(zz) {
-      return null === zz || "object" !== typeof zz ? zz : [Oz(zz.PO), Oz(zz.rO)]
-    }
-
-    function Nz(zz) {
-      return null === zz || "object" !== typeof zz ? zz : [Xz(zz.oO, Uz), Xz(zz.SU, Uz)]
+    function Tv(vv) {
+      return null === vv || "object" !== typeof vv ? vv : [gv(vv.ug), gv(vv.vp)]
     }
 
-    function bz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Oz(tz.RO), Oz(tz.pO)];
-      var tz
+    function Wv(vv) {
+      return null === vv || "object" !== typeof vv ? vv : [ev(vv.PS, Nv), ev(vv.Yg, Nv)]
     }
 
-    function wz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [tz.id, tz.ZO];
-      var tz
+    function wv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [gv(zv.al), gv(zv.sl)];
+      var zv
     }
 
-    function Dz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [tz.Yt, Oz(tz.xt), tz.Jt, Oz(tz.Zt), tz.jt, tz.yt, tz.qO, Oz(tz.SO), Oz(tz.VO)];
-      var tz
+    function av(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [zv.id, zv.Nl];
+      var zv
     }
 
-    function gz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Xz(tz.AK, Uz), tz.yK];
-      var tz
+    function sv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [zv.ah, gv(zv.sh), zv.Ch, gv(zv.mh), zv.Yh, zv.nh, zv.Bg, gv(zv.Jg), gv(zv.Eg)];
+      var zv
     }
 
-    function Hz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Xz(tz.ao, (zz => Oz(zz))), Oz(tz.qo), tz.Vo];
-      var tz
+    function Cv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [ev(zv.MN, Nv), zv.yN];
+      var zv
     }
 
-    function Bz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Xz(tz.GO, Uz), Oz(tz.cO), tz.jO];
-      var tz
+    function iv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [ev(zv.Sl, (vv => gv(vv))), gv(zv.el), zv.gl];
+      var zv
     }
 
-    function Pz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Oz(tz.wF), Oz(tz.DF)];
-      var tz
+    function cv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [ev(zv.BN, Nv), gv(zv.JN), zv.EN];
+      var zv
     }
 
-    function rz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Oz(tz.yo)];
-      var tz
+    function Gv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [gv(zv.GP), gv(zv.mP)];
+      var zv
     }
 
-    function Yz(zz) {
-      return Oz(zz)
+    function mv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [gv(zv.Fp)];
+      var zv
     }
 
-    function xz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Oz(tz.Uu), Oz(tz.Ku), Oz(tz.PO), Oz(tz.rO)];
-      var tz
+    function jv(vv) {
+      return gv(vv)
     }
 
-    function mz(zz) {
-      return uz(zz)
+    function fv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [gv(zv.kg), gv(zv.Xg), gv(zv.ug), gv(zv.vp)];
+      var zv
     }
 
-    function Jz(zz) {
-      return uz(zz)
+    function Fv(vv) {
+      return Tv(vv)
     }
 
-    function Iz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Oz(tz.fO)];
-      var tz
+    function Yv(vv) {
+      return Tv(vv)
     }
 
-    function Cz(zz) {
-      return zz
+    function nv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [gv(zv.Zl)];
+      var zv
     }
 
-    function ez(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Oz(tz.mO), Oz(tz.JO)];
-      var tz
+    function Ov(vv) {
+      return vv
     }
 
-    function Zz(zz) {
-      return Oz(zz)
+    function Dv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [gv(zv.Pl), gv(zv.hl)];
+      var zv
     }
 
-    function Gz(zz) {
-      return Nz(zz)
+    function Kv(vv) {
+      return gv(vv)
     }
 
-    function Tz(zz) {
-      return Nz(zz)
+    function Vv(vv) {
+      return Wv(vv)
     }
 
-    function cz(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [Oz(tz.ko)];
-      var tz
+    function Uv(vv) {
+      return Wv(vv)
     }
 
-    function jz(zz) {
-      return (Kz ??= (0, Fz.c)().map((zz => zz.name)), Kz).map((tz => {
-        return "string" === typeof(sz = zz[tz]) ? Oz(sz) : Xz(sz, Uz);
-        var sz
+    function Rv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [gv(zv.pl)];
+      var zv
+    }
+
+    function xv(vv) {
+      return (lv ??= (0, hv.d)().map((vv => vv.name)), lv).map((zv => {
+        return "string" === typeof(Pv = vv[zv]) ? gv(Pv) : ev(Pv, Nv);
+        var Pv
       }))
     }
 
-    function Az(zz) {
-      return null === (tz = zz) || "object" !== typeof tz ? tz : [tz.Eo, tz.zv, tz.tv];
-      var tz
+    function tv(vv) {
+      return null === (zv = vv) || "object" !== typeof zv ? zv : [zv.Al, zv.Ll, zv.Hl];
+      var zv
     }
   },
-  9023: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Wz,
-      g: () => Xz
+  9185: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => Sv,
+      f: () => ev
     });
-    var Fz = sz(8976);
-    const Wz = "Air",
-      Xz = Object.freeze(new Fz.f(Wz, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var hv = Pv(9144);
+    const Sv = "Air",
+      ev = Object.freeze(new hv.f(Sv, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38620: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Xz,
-      e: () => oz
+  38726: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => ev,
+      g: () => pv
     });
-    var Fz = sz(321),
-      Wz = sz(4101);
-    const Xz = new Set(Wz.p),
-      Oz = new Map;
+    var hv = Pv(312),
+      Sv = Pv(4209);
+    const ev = new Set(Sv.k),
+      gv = new Map;
 
-    function oz(zz, tz) {
-      let sz = Oz.get(tz);
-      void 0 === sz && (sz = new Map, Oz.set(tz, sz));
-      let Wz = sz.get(zz);
-      return void 0 === Wz && (Wz = `${zz}${(0,Fz.B)(tz)}`, sz.set(zz, Wz)), Wz
+    function pv(vv, zv) {
+      let Pv = gv.get(zv);
+      void 0 === Pv && (Pv = new Map, gv.set(zv, Pv));
+      let Sv = Pv.get(vv);
+      return void 0 === Sv && (Sv = `${vv}${(0,hv.B)(zv)}`, Pv.set(vv, Sv)), Sv
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

@@ -1,4272 +1,2150 @@
 export const id = 286;
 export const ids = [286];
 export const modules = {
-  40525: zz => {
-    function tz(zz) {
-      var tz = new Error("Cannot find module '" + zz + "'");
-      throw tz.code = "MODULE_NOT_FOUND", tz
-    }
-    tz.keys = () => [], tz.resolve = tz, tz.id = 40525, zz.exports = tz
-  },
-  40568: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Fz,
-      f: () => Wz
+  40599: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => cz,
+      e: () => Rv,
+      ChangeSet: () => xv,
+      f: () => Vz,
+      j: () => Hv,
+      n: () => tz,
+      q: () => Bv,
+      r: () => Uv,
+      u: () => Sz,
+      y: () => Hz,
+      x: () => Mz,
+      A: () => Iz,
+      B: () => jz,
+      E: () => Xv,
+      H: () => sv,
+      J: () => fz,
+      K: () => Ov,
+      L: () => Kv,
+      O: () => qz,
+      S: () => vP,
+      W: () => nv,
+      Z: () => zP,
+      _: () => Dv
     });
-    const Fz = "Sends one question to the AI",
-      Wz = {
-        title: Fz,
-        "data-asks-ai": !0
+    let hv = [],
+      Sv = [];
+
+    function ev(vv) {
+      if (vv < 768) return !1;
+      for (let zv = 0, Pv = hv.length;;) {
+        let ev = zv + Pv >> 1;
+        if (vv < hv[ev]) Pv = ev;
+        else {
+          if (!(vv >= Sv[ev])) return !0;
+          zv = ev + 1
+        }
+        if (zv == Pv) return !1
       }
-  },
-  40495: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Fz
-    });
-    const Fz = String.raw`
-	/** The ID of the player running the code.
-	 *
-	 * Lobby code usually has nobody running it, so this is null.
-	 */
-	declare const myId: string | null
-	/** The position of the code block or press to code board */
-	declare const thisPos: [number, number, number]
-	/** The owner of the current custom lobby */
-	declare const lobbyOwnerId: string | null
-
-	interface Console {
-		/** Log a message to chat. */
-		log(message: any): void
-	}
-	declare const console: Console
-
-	interface GameApi {
-		/** The ID of the player running the code.
-		 *
-		 * Lobby code usually has nobody running it, so this is null.
-		 */
-		myId: string | null
-		/** The position of the code block or press to code board */
-		thisPos: [number, number, number]
-		/** The owner of the current custom lobby */
-		lobbyOwnerId: string | null
-		/**
- * Get position of a player / entity.
- * @param entityId
- */
-getPosition(entityId: EntityId): Pos
-/**
- * Set position of a player / entity.
- * @param entityId
- * @param x Can also be an array, in which case y and z shouldn't be passed
- * @param y
- * @param z
- */
-setPosition(entityId: EntityId, x: number | number[], y?: number, z?: number): void
-/**
- * Get the scale of a lifeform.
- * @param lifeformId
- */
-getLifeformScale(lifeformId: LifeformId): number
-/**
- * Set the visual + physical scale of a lifeform. A scale of 1 is the default size.
- * Bodies stop growing at 25 blocks wide and 90 tall (a player's at scale 50); past that only the model grows.
- * getLifeformScale returns the scale rounded to 32-bit precision (0.7 reads back as 0.699999988079071).
- *
- * @param lifeformId
- * @param scale Must be a positive number, from about 1.4e-45 to 3.4e38.
- */
-setLifeformScale(lifeformId: LifeformId, scale: number): void
-/**
- * Get all the player ids.
- */
-getPlayerIds(): PlayerId[]
-/**
- * Whether a player is currently in the game
- *
- * @param playerId
- */
-playerIsInGame(playerId: PlayerId): boolean
-/**
- * Whether a player is signed in to a Bloxd account: false for guests, who are still in the game.
- * To check that a player is still in the game, use playerIsInGame.
- * @param playerId
- * @returns
- */
-playerIsLoggedIn(playerId: PlayerId): boolean
-/**
- * Returns the party that the player was in when they joined the game. The returned object contains the playerDbIds, as well
- * as the playerIds if available, of the party leader and members.
- *
- * @param playerId
- * @returns
- */
-getPlayerPartyWhenJoined(playerId: PlayerId): { partyCode: string; playerDbIds: PlayerDbId[] } | null
-/**
- * Get the number of players in the room
- */
-getNumPlayers(): number
-/**
- * Get the co-ordinates of the blocks the entity is standing on as a list. For example, if the centre of the entity is at 0,0,0
- * this function will return [[0, -1, 0], [-1, -1, 0], [0, -1, -1], [-1, -1, -1]]
- * If the entity is just standing on one block, the function would return e.g. [[0, 0, 0]]
- * If the entity is midair or has no physics body, returns an empty list [].
- *
- * @param playerId
- */
-getBlockCoordinatesPlayerStandingOn(playerId: EntityId): number[][]
-/**
- * Get the types of block the entity is standing on
- * For example, if an entity is standing on 4 dirt blocks, this will return ["Dirt", "Dirt", "Dirt", "Dirt"]
- * Returns an empty list if the entity is midair or has no physics body.
- * @param playerId
- */
-getBlockTypesPlayerStandingOn(playerId: EntityId): any[]
-/**
- * Get the up to 12 unit co-ordinates the entity is located within
- * (Samples the four horizontal corners at up to three vertical levels)
- *
- * @param lifeformId
- * @returns List of x, y, z positions e.g. [[-1, 0, 0], [-1, 1, 0], [-1, 2, 0]]
- */
-getUnitCoordinatesLifeformWithin(lifeformId: EntityId): number[][]
-/**
- * Show the shop tutorial for a player. Will not be shown if they have ever seen the shop tutorial in your game before.
- * @param playerId
- */
-showShopTutorial(playerId: PlayerId): void
-/**
- * Get the current shield of an entity.
- * @param entityId
- */
-getShieldAmount(entityId: EntityId): number
-/**
- * Set the current shield of a lifeform.
- *
- * @param lifeformId
- * @param newShieldAmount
- */
-setShieldAmount(lifeformId: LifeformId, newShieldAmount: number): void
-/**
- * Get the current health of an entity.
- * @param entityId
- */
-getHealth(entityId: PlayerId): number
-/**
- * @param lifeformId
- * @param changeAmount Must be an integer. A positive amount will increase the entity's health. A negative amount will decrease the entity's shield first, then their health.
- * @param whoDidDamage Optional - If damage done by another player
- * @param broadcastLifeformHurt
- *
- * @return Whether the entity was killed
- */
-applyHealthChange(lifeformId: LifeformId, changeAmount: number, whoDidDamage?: LifeformId | { lifeformId: LifeformId; withItem: string }, broadcastLifeformHurt?: boolean): boolean
-/**
- * Set the current health of an entity.
- * If you want to set their health to more than their current max health, the optional increaseMaxHealthIfNeeded must be true.
- *
- * @param entityId
- * @param newHealth Can be null to make the player not have health
- * @param whoDidDamage Optional
- * @param increaseMaxHealthIfNeeded Optional
- *
- * @return Whether this change in health killed the player
- */
-setHealth(entityId: EntityId, newHealth: number | null, whoDidDamage?: LifeformId | { lifeformId: LifeformId; withItem: string }, increaseMaxHealthIfNeeded?: boolean): boolean
-/**
- * Make it as if hittingEId hit hitEId
- *
- * @param hittingEId
- * @param hitEId
- * @param dirFacing
- * @param bodyPartHit
- * @param overrides
- * @returns whether the attack damaged the lifeform
- */
-applyMeleeHit(hittingEId: LifeformId, hitEId: LifeformId, dirFacing: number[], bodyPartHit?: LifeformBodyPart | null, overrides?: { damage?: number | null; heldItemName?: string | null; horizontalKbMultiplier?: number; verticalKbMultiplier?: number; }): boolean
-/**
- * Apply damage to a lifeform.
- * eId is the player initiating the damage, hitEId is the lifeform being hit.
- *
- * It is recommended to self-inflict damage when the game code wants to apply damage to a lifeform.
- *
- * @param eId
- * @param hitEId
- * @param attemptedDmgAmt
- * @param withItem
- * @param bodyPartHit
- * @param attackDir
- * @param showCritParticles
- * @param reduceVerticalKbVelocity
- * @param horizontalKbMultiplier
- * @param verticalKbMultiplier
- * @param broadcastEntityHurt
- * @param attackCooldownSettings
- * @param hittingSoundOverride
- * @param ignoreOtherEntitySettingCanAttack
- * @param isTrueDamage
- * @param damagerDbId
- * @param damageCause What dealt the hit, passed to the damage callbacks. Defaults to null
- *
- * @returns whether the attack damaged the lifeform
- */
-attemptApplyDamage({
-		eId,
-		hitEId,
-		attemptedDmgAmt,
-		withItem,
-		bodyPartHit,
-		attackDir,
-		showCritParticles,
-		reduceVerticalKbVelocity,
-		horizontalKbMultiplier,
-		verticalKbMultiplier,
-		broadcastEntityHurt,
-		attackCooldownSettings,
-		hittingSoundOverride,
-		ignoreOtherEntitySettingCanAttack,
-		isTrueDamage,
-		damagerDbId,
-		damageCause,
-	}: PlayerAttemptDamageOtherPlayerOpts): boolean
-/**
- * Create enchantment attributes for an item at a given enchantment level. Same behaviour as if that level of enchant was selected for the item in an enchanting table.
- * @param itemName
- * @param enchantmentLevel
- */
-createEnchantmentAttributesForItem(itemName: ItemName, enchantmentLevel: number): EnchantmentAttributes
-/**
- * Force respawn a player, stopping their motion
- * @param playerId
- * @param respawnPos
- */
-forceRespawn(playerId: PlayerId, respawnPos?: number[]): void
-/**
- * Kill a lifeform, e.g. api.killLifeform(playerId).
- * @param lifeformId
- * @param whoKilled - Optional: who killed them, as a lifeform id or { lifeformId, withItem }. Leave it out (not null) when nothing killed them
- */
-killLifeform(lifeformId: LifeformId, whoKilled?: LifeformId | { lifeformId: LifeformId; withItem: string }): void
-/**
- * Gets the player's current killstreak
- *
- * @param playerId
- * @returns
- */
-getCurrentKillstreak(playerId: PlayerId): number
-/**
- * Clears the player's current killstreak
- *
- * @param playerId
- */
-clearKillstreak(playerId: PlayerId): void
-/**
- * Whether a lifeform is alive or dead (or on the respawn screen, in a player's case).
- *
- * @param lifeformId
- * @returns
- */
-isAlive(lifeformId: LifeformId): boolean
-/**
- * Send a message to everyone
- *
- * @param message The text contained within the message. Can use \`Custom Text Styling\`.
- * @param style An optional style argument. Can contain values for fontWeight and color of the message.
- *          style is ignored if message uses custom text styling (i.e. is not a string).
- */
-broadcastMessage(message: string | CustomTextStyling, style?: { fontWeight?: number | string; color?: string; colour?: string }): void
-/**
- * Send a message to a specific player
- *
- * @param playerId Id of the player
- * @param message The text contained within the message. Can use \`Custom Text Styling\`.
- * @param style An optional style argument. Can contain values for fontWeight and color of the message.
- *              style is ignored if message uses custom text styling (i.e. is not a string).
- */
-sendMessage(playerId: PlayerId, message: string | CustomTextStyling, style?: { fontWeight?: number | string; color?: string }): void
-/**
- * Send a flying middle message to a specific player
- *
- * @param playerId Id of the player
- * @param message The text contained within the message. Can be either a string or use \`Custom Text Styling\`.
- * @param distanceFromAction The distance from the action that has caused this message to be displayed,
- *                           this value will be used to determine how the message flies across the screen.
- * @param lifetimeMs How long the message will be visible in milliseconds. Defaults to 1000ms.
- */
-sendFlyingMiddleMessage(playerId: PlayerId, message: string | CustomTextStyling, distanceFromAction: number, lifetimeMs?: number): void
-/**
- * Modify a client option at runtime and send to the client if it changed
- *
- * @param playerId
- * @param option The name of the option
- * @param value The new value of the option
- */
-setClientOption<PassedOption extends ClientOption>(playerId: PlayerId, option: PassedOption, value: ClientOptions[PassedOption]): void
-/**
- * Returns the current value of a client option
- *
- * @param playerId
- * @param option
- */
-getClientOption<PassedOption extends ClientOption>(playerId: PlayerId, option: PassedOption): ClientOptions[PassedOption]
-/**
- * Create a new shop item under the given category.
- * Will create a new category if it does not exist.
- * If the shop item already exists then it will be replaced.
- * If any per-player overrides exist under the same categoryKey and itemKey then they will be deleted.
- *
- * @param categoryKey - The key of the category to create the item in
- * @param itemKey - The unique key for the item
- * @param item - The shop item to create (will be mutated)
- */
-createShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey, item: ShopItem): void
-/**
- * Update selected properties of an existing shop item.
- * For example, { canBuy: true } to allow players to purchase the item.
- * Throws an error if the item does not exist.
- *
- * @param categoryKey - The key of the category containing the item
- * @param itemKey - The unique key for the item
- * @param changes - Partial shop item properties to update
- */
-updateShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey, changes: Partial<ShopItem>): void
-/**
- * Delete an existing shop item.
- * Throws an error if the item does not exist.
- * Will also delete all per-player overrides for the shop item.
- *
- * @param categoryKey - The key of the category containing the item
- * @param itemKey - The unique key for the item
- */
-deleteShopItem(categoryKey: ShopCategoryKey, itemKey: ShopItemKey): void
-/**
- * Set properties of a shop category.
- *
- * @param categoryKey - The key of the category to configure
- * @param config - Category configuration properties
- */
-configureShopCategory(categoryKey: ShopCategoryKey, config: ShopCategoryConfig): void
-/**
- * Create a new shop item for a specific player.
- * Will create a new category if it does not exist.
- * Will replace any overrides this player already has for the same item.
- *
- * @param playerId - The player to create the item for
- * @param categoryKey - The key of the category to create the item in
- * @param itemKey - The unique key for the item
- * @param item - The shop item to create (will be mutated)
- */
-createShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey, item: ShopItem): void
-/**
- * Update selected properties of an existing shop item for a specific player.
- * For example, { canBuy: true } to allow this player to purchase the item.
- * Throws an error if the item does not exist.
- *
- * @param playerId - The player to update the item for
- * @param categoryKey - The key of the category containing the item
- * @param itemKey - The unique key for the item
- * @param changes - Partial shop item properties to update
- */
-updateShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey, changes: Partial<ShopItem>): void
-/**
- * Delete a specific player's overrides for a shop item.
- * Like other methods, it doesn't matter whether the overrides were created
- * using createShopItemForPlayer or by using updateShopItemForPlayer instead.
- * This method does nothing if the overrides don't exist or are defined internally by the engine.
- *
- * @param playerId - The player to reset the item for
- * @param categoryKey - The key of the category containing the item
- * @param itemKey - The unique key for the item
- */
-resetShopItemForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, itemKey: ShopItemKey): void
-/**
- * Configure a shop category for a specific player.
- *
- * @param playerId - The player to configure the category for
- * @param categoryKey - The key of the category to configure
- * @param config - Category configuration properties
- */
-configureShopCategoryForPlayer(playerId: PlayerId, categoryKey: ShopCategoryKey, config: ShopCategoryConfig): void
-/**
- * Modify client options at runtime
- *
- * @param playerId
- * @param optionsObj An object which contains key value pairs of new settings. E.g {canChange: true, speedMultiplier: false}
- */
-setClientOptions(playerId: PlayerId, optionsObj: Partial<ClientOptions>): void
-/**
- * Sets a client option to its default value. This will be the value stored in your game's defaultClientOptions, otherwise Bloxd's default.
- *
- * @param playerId
- * @param option
- */
-setClientOptionToDefault(playerId: PlayerId, option: ClientOption): void
-/**
- * Set every player's other-entity setting to a specific value for a particular entity.
- * includeNewJoiners=true means that new players joining the game will also have this other player setting applied.
- *
- * @param targetedPlayerId
- * @param settingName
- * @param settingValue
- * @param includeNewJoiners
- */
-setTargetedPlayerSettingForEveryone<Setting extends OtherEntitySetting>(targetedPlayerId: EntityId, settingName: Setting, settingValue: OtherEntitySettings[Setting], includeNewJoiners?: boolean): void
-/**
- * Set a player's other-entity setting for every player, mob and Person mesh in the game.
- * includeNewJoiners=true means that the player will have the setting applied to new joiners.
- *
- * @param playerId
- * @param settingName
- * @param settingValue
- * @param includeNewJoiners
- */
-setEveryoneSettingForPlayer<Setting extends OtherEntitySetting>(playerId: PlayerId, settingName: Setting, settingValue: OtherEntitySettings[Setting], includeNewJoiners?: boolean): void
-/**
- * Set a player's other-entity setting for a specific entity.
- *
- * @param relevantPlayerId
- * @param targetedEntityId
- * @param settingName
- * @param settingValue
- */
-setOtherEntitySetting<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting, settingValue: OtherEntitySettings[Setting]): void
-/**
- * Set many of a player's other-entity settings for a specific entity.
- *
- * @param relevantPlayerId
- * @param targetedEntityId
- * @param settingsObject
- */
-setOtherEntitySettings(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingsObject: Partial<OtherEntitySettings>): void
-/**
- * Get the value of a player's other-entity setting for a specific entity.
- *
- * @param relevantPlayerId
- * @param targetedEntityId
- * @param settingName
- */
-getOtherEntitySetting<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting): OtherEntitySettings[Setting]
-/**
- * Reset a player's other-entity setting for a specific entity to the game's default value.
- *
- * @param relevantPlayerId
- * @param targetedEntityId
- * @param settingName
- */
-setOtherEntitySettingToDefault<Setting extends OtherEntitySetting>(relevantPlayerId: PlayerId, targetedEntityId: EntityId, settingName: Setting): void
-/**
- * Play particle effect on all clients, or only on some clients if clientPredictedBy is specified
- * @param opts
- * @param clientPredictedBy Play only on clients where the entity clientPredictedBy
- *                          is visible and not the viewing player
- */
-playParticleEffect(opts: TempParticleSystemOpts | ParticlePresetOpts, clientPredictedBy?: EntityId | null): void
-/**
- * Animates the given entity. Pass \`null\` for \`animation\` to stop the entity's current animation (the
- * \`initialTimeFraction\` and \`animationSpeed\` arguments are ignored in that case).
- *
- * Pass a clip name instead (such as \`"animation.quadruped.head_wave"\`, or just \`"head_wave"\`) to play a clip of the texture pack's or
- * Bloxd's built-in animation on a mob or vehicle that has animation. It adds onto the entity's automatic animation,
- * as a head nod plays over a walk, or replaces the parts it moves if the clip sets \`override_previous_animation\`. It
- * blends back out when a one-shot clip ends or the animation is stopped; a looping or held clip plays until
- * stopped or replaced. An entity without animation, or a name no clip has (or several share: give the full name),
- * plays nothing. A name must be 1 to 128 characters long, or the call throws.
- * @param entityId
- * @param animation
- * @param initialTimeFraction
- * @param animationSpeed
- */
-animateEntity(entityId: EntityId, animation: AnimationSchema | BlockbenchAnimationSchema | string | null, initialTimeFraction?: number, animationSpeed?: number): void
-/**
- * Get the in game name of an entity: a player's name, or "" for a mob nobody named. Use getEntityType for what kind of mob it is.
- * @param entityId
- */
-getEntityName(entityId: EntityId): string
-/**
- * Given the name of a player, get their id
- * @param playerName
- */
-getPlayerId(playerName: string): PlayerId | null
-/**
- * Given a player, get their permanent identifier that doesn't change when leaving and re-entering
- *
- * @param playerId
- */
-getPlayerDbId(playerId: PlayerId): PlayerDbId
-/**
- * Returns null if player not in lobby
- *
- * @param dbId
- */
-getPlayerIdFromDbId(dbId: PlayerDbId): PlayerId | null
-/**
- * Gets the persistent database ID for the given mob.
- * This can be useful for reasoning about mobs that have been loaded from the database, such as owned mobs.
- *
- * @param mobId - The ID of the mob from spawnMob
- * @returns The persistent database ID for the mob, or null if the mob is not persistent
- */
-getMobDbId(mobId: MobId): MobDbId | null
-/**
- * Kick a player from the lobby, showing them the reason.
- *
- * NOTE: In a world's own lobby, World Code can't kick the world's owner or co-owners: they stay and see why.
- *
- * @param playerId
- * @param reason Shown to the kicked player
- */
-kickPlayer(playerId: PlayerId, reason: string): void
-/**
- * Check if the block at a specific position is in a loaded chunk.
- * @param x
- * @param y
- * @param z
- * @return boolean
- */
-isBlockInLoadedChunk(x: number, y: number, z: number): boolean
-/**
- * Get the name of a block.
- * @param x could be an array [x, y, z]. If so, the other params shouldn't be passed.
- * @param y
- * @param z
- * @return blockName - any block name, including 'Air'
- */
-getBlock(x: number | number[], y?: number, z?: number): BlockName
-/**
- * Used to get the block id at a specific position.
- * Intended only for use in hot code paths - default to getBlock for most use cases
- *
- * @param x
- * @param y
- * @param z
- */
-getBlockId(x: number, y: number, z: number): BlockId
-/**
- * Set a block. Valid names are any block name, including 'Air'
- *
- * This function is optimised for setting broad swathes of blocks. For example, if you have a 50x50x50 area you need to turn to air, it will run performantly if you call this in double nested loops.
- *
- * IF you're only changing a few blocks, you want this to be super snappy for players, AND you're calling this outside of your _tick function, you can use api.setOptimisations(false).
- *
- * If you want the optimisations for large quantities of blocks later on, then call api.setOptimisations(true) when you're done.
- *
- *
- *
- * @param x Can be an array
- * @param y Should be blockname if first param is array
- * @param z
- * @param blockName
- */
-setBlock(x: number | number[], y: number | BlockName, z?: number, blockName?: BlockName): void
-/**
- * Initiate a block change "by the world".
- * Calls onWorldAttemptChangeBlock, then onWorldChangeBlock if allowed.
- * initiatorDbId is null if the change was initiated by the game code.
- *
- * @param initiatorDbId
- * @param x
- * @param y
- * @param z
- * @param blockName
- * @param extraInfo
- *
- * @returns "preventChange" if the change was prevented, "preventDrop" if the change was allowed but without dropping any items, and undefined if the change was allowed with an item drop
- */
-attemptWorldChangeBlock(initiatorDbId: PlayerDbId | null, x: number, y: number, z: number, blockName: BlockName, extraInfo?: WorldBlockChangedInfo | null): "preventChange" | "preventDrop" | void
-/**
- * Returns whether a block is solid or not.
- * E.g. Grass block is solid, while water, ladder and water are not.
- * Will be true if the block is unloaded.
- *
- * @param x
- * @param y
- * @param z
- */
-getBlockSolidity(x: number | number[], y?: number, z?: number): boolean
-/**
- * Helper function that sets all blocks in a rectangle to a specific block.
- *
- * @param pos1 array [x, y, z]
- * @param pos2 array [x, y, z]
- * @param blockName
- */
-setBlockRect(pos1: number[], pos2: number[], blockName: BlockName): void
-/**
- * Create walls by providing two opposite corners of the cuboid
- *
- *
- * @param pos1 array [x, y, z]
- * @param pos2 array [x, y, z]
- * @param blockName
- * @param hasFloor
- * @param hasCeiling
- */
-setBlockWalls(pos1: number[], pos2: number[], blockName: BlockName, hasFloor?: boolean, hasCeiling?: boolean): void
-/**
- * Copies chunk from one position to another.
- * A good use case for this is storing 'template' chunks that can be continuously copied to a new position.
- * In order to reset an area to the template, e.g. resetting a session-based game.
- *
- * NOTE: Does nothing if the source chunk is not loaded.
- *
- * @param fromPos - A block coordinate within the chunk to copy from.
- * @param toPos - A block coordinate within the chunk to copy to.
- */
-copyChunk(fromPos: number[], toPos: number[]): void
-/**
- * Use this to get a chunk ndarray you can edit and set in resetChunk.
- *
- * Only use chunk helpers if you REALLY need the performance (i.e. you are iterating over tens of thousands of blocks)
- * ReturnedObject.blockData is a 32x32x32 ndarray of air.
- * (see https://www.npmjs.com/package/ndarray)
- * Each block id is a 16-bit number
- */
-getEmptyChunk(): GameChunk
-/**
- * Splits the block name by '|'. If no meta info, metaInfo is ''
- *
- * @param blockName
- */
-getMetaInfo(blockName: BlockName | null | undefined): ItemMetaInfo
-/**
- * Get the numeric id of a block used in the ndarrays returned from getChunk
- * I.e. chunk.blockData.set(x, y, z, api.blockNameToBlockId("Dirt"))
- * or chunk.blockData.get(x, y, z) === api.blockNameToBlockId("Dirt")
- *
- * @param blockName
- * @param allowInvalidBlock Don't throw an error if the block name is invalid.
- * Defaults false. If true and name is invalid, returns null.
- * @returns
- */
-blockNameToBlockId(blockName: BlockName, allowInvalidBlock?: boolean): number | null
-/**
- * Goes from block id to block name. The reverse of blockNameToBlockId
- *
- * @param blockId
- */
-blockIdToBlockName(blockId: BlockId): BlockName
-/**
- * Get the unique id of the chunk containing pos in the current map
- *
- * @param pos
- */
-blockCoordToChunkId(pos: number[]): string
-/**
- * Get the co-ordinates of the block in the chunk with the lowest x, y, and z co-ordinates
- *
- * @param chunkId
- */
-chunkIdToBotLeftCoord(chunkId: string): [number, number, number]
-/**
- * @deprecated - prefer using other UI elements
- * (this UI element hasn't been properly thought through in combination with other elements like killfeed, uirequests, etc)
- *
- * Send a player an icon in the top right corner
- *
- * @param playerId
- * @param icon Can be any icon from font-awesome.
- * @param text The text to send.
- * @param opts Can include keys duration, width, height, color, iconSizeMult.
- *
- * Default opts: {
- *  duration: 8, // seconds
- *  width: 400px,
- *  height: 100px,
- *  color: 'rgb(102, 102, 102)', // must be rgb in this format (hex not supported),
- *  iconSizeMult: 5,
- *  textAndIconColor: "white", // can be any colour supported by css (e.g. hex, rgb),
- *  fontSize: '17px',
- * }
- */
-sendTopRightHelper(playerId: PlayerId, icon: string, text: string, opts: { duration?: number; width?: number; height?: number; color?: string; iconSizeMult?: number; textAndIconColor?: string; fontSize?: string; }): void
-/**
- * Whether the player is on a mobile device or a computer.
- * @param playerId
- */
-isMobile(playerId: PlayerId): boolean
-/**
- * Get the amount of a given currency a player has.
- * @param playerId
- * @param currencyId
- * @returns The amount of the currency, or null if the currency is not defined.
- */
-getCurrencyAmount(playerId: PlayerId, currencyId: string): number | null
-/**
- * Create a dropped item.
- * @param x
- * @param y
- * @param z
- * @param itemName Name of the item. Any item name, including blocks and 'Air'
- * @param amount The amount of the item in the drop. Defaults to 1 when omitted. Use 0 for a collect-only trigger that does not add to inventory (fires onPlayerPickedUpItem with itemAmount 0).
- * @param mergeItems Whether to merge the item into a nearby item of same type, if one exists. Defaults to false.
- * @param attributes Attributes of the item being dropped
- * @param timeTillDespawn Time till the item automatically despawns in milliseconds. Defaults to 5 mins, max of 1 hour.
- * @param dropperId Who dropped the item.
- * @param options Additional options, such as doPhysics and size. With doPhysics, the physics body is at most 25 blocks across.
- * @returns the id you can pass to setCantPickUpItem, or null if the item drop limit was reached
- */
-createItemDrop(x: number, y: number, z: number, itemName: ItemName, amount?: number | null, mergeItems?: boolean, attributes?: ItemAttributes, timeTillDespawn?: number, dropperId?: LifeformId | null, options?: ItemDropOptions): EntityId | null
-/**
- * Prevent a player from picking up an item. itemId returned by createItemDrop
- *
- * @param playerId
- * @param itemId
- */
-setCantPickUpItem(playerId: PlayerId, itemId: EntityId): void
-/**
- * Reset a player's ability to pick up an item. itemId returned by createItemDrop
- *
- * @param playerId
- * @param itemId
- */
-resetCanPickUpItem(playerId: PlayerId, itemId: EntityId): void
-/**
- * Delete an item drop by item drop entity ID
- *
- * @param itemId
- */
-deleteItemDrop(itemId: EntityId): void
-/**
- * Create an invisible audio entity at a world position that loops a sound to
- * nearby players (e.g. a waterfall or fireplace).
- *
- * Audio entities count against the same budget as physics-less mesh entities; returns null
- * if that budget is exhausted.
- *
- * @param x
- * @param y
- * @param z
- * @param soundName The sound to loop.
- * @param volume
- * @param options {refDistance: number, maxHearDist: number, rate: number}
- * refDistance: higher means the sound decreases less in volume with distance. Defaults to 3. Hitting is 4. Guns are 10
- * maxHearDist: sound is not played if player is further than this. Defaults to 30
- * rate: The speed of playback. Also affects pitch. 0.5-4. Lower playback = lower pitch. Good for varying the sound.
- * E.g. item pickup sound has a random rate between 1 and 1.5.
- * @returns the audio entity ID, or null if the entity budget is exhausted
- */
-attemptCreateAudioEntity(x: number, y: number, z: number, soundName: string, volume?: number, options?: { refDistance?: number; maxHearDist?: number; rate?: number; }): EntityId | null
-/**
- * Update an audio entity's config (sound, volume, falloff, rate). Only the provided fields
- * change.
- *
- * @param eId
- * @param opts Any subset of soundName, volume, refDistance, maxHearDist, rate.
- */
-updateAudioEntity(eId: EntityId, opts: Partial<AudioEntityOpts>): void
-/**
- * Delete an audio entity by its entity ID (returned by attemptCreateAudioEntity).
- *
- * @param eId
- */
-deleteAudioEntity(eId: EntityId): void
-/**
- * Returns all items overlapping with the given player
- *
- * @param playerId
- * @returns the overlapping item entity IDs
- */
-getItemIDsOverlappingWithPlayer(playerId: PlayerId): EntityId[]
-/**
- * Get the metadata about a block or item before stats have been modified by any client options
- * (i.e. its entry in the initial metadata object)
- *
- * @param itemName
- */
-getInitialItemMetadata(itemName: string): Partial<BlockMetadataItem & NonBlockMetadataItem>
-/**
- * Get stat info about a block or item
- * Either based on a client option for a player: (e.g. \`DirtTtb\`)
- * or its entry in the initial metadata object if no client option is set.
- *
- * If null is passed for lifeformId, this is simply its entry in blockMetadata etc.
- *
- *
- * @param lifeformId
- * @param itemName
- * @param stat
- */
-getItemStat<K extends keyof AnyMetadataItem>(lifeformId: LifeformId | null, itemName: ItemName, stat: K): AnyMetadataItem[K]
-/**
- * Set a stat attribute for a block or item
- *
- * NOTE: Only a subset of stats are customisable this way.
- * afterEatenItem requires an unstackable food.
- * minChargeStateToUse must be within the item's chargeStages and set on the base item, applying to all its charging variants.
- * fishingRodInfo adjusts existing rods; drops names the replacement mining drop.
- * Example: setItemStat(playerId, "Iron Dagger", "comboInfo", { comboWindowMs: 1000, comboMultipliers: [1, 1.5, 2] })
- *
- * @param playerId
- * @param itemName
- * @param stat
- * @param value
- */
-setItemStat<K extends CustomItemStat>(playerId: PlayerId, itemName: ItemName, stat: K, value: AnyMetadataItem[K]): void
-/**
- * Set the direction the player is looking.
- *
- * @param playerId
- * @param direction a vector of the direction to look, format [x, y, z]
- */
-setCameraDirection(playerId: PlayerId, direction: number[]): void
-/**
- * Shake a player's camera.
- *
- * @param playerId
- * @param intensity Shake "power" (0..1); the client clamps the accumulated power to 1.
- * @param durationMs How long the shake lasts, in milliseconds.
- */
-shakePlayerCamera(playerId: PlayerId, intensity: number, durationMs?: number): void
-/**
- * Set an entity's opacity
- * A simple helper that calls setTargetedPlayerSettingForEveryone
- *
- * @param playerId
- * @param opacity
- */
-setPlayerOpacity(playerId: EntityId, opacity: number): void
-/**
- * Set the opacity of an entity for one player
- * A simple helper that calls setOtherEntitySetting
- *
- * @param playerIdWhoViewsOpacityPlayer The player who sees that with opacity
- * @param playerIdOfOpacityPlayer The entity whose opacity is changed
- * @param opacity
- */
-setPlayerOpacityForOnePlayer(playerIdWhoViewsOpacityPlayer: PlayerId, playerIdOfOpacityPlayer: EntityId, opacity: number): void
-/**
- * Obtain Date.now() value saved at start of current game tick
- */
-now(): number
-/**
- * Check your game (and, optionally, a entity) is still valid and executing.
- * Useful if you're using async functions and await within your game.
- * If you use await/async or promises and do not check this, your game could have closed and then the rest of your
- * async code executes.
- *
- * @param entityId
- */
-checkValid(entityId?: EntityId | null): boolean
-/**
- * Let a player change a block at a specific co-ordinate. Useful when client option canChange is false.
- * Overrides blockRect and blockType settings, so also useful when you have disallowed changing of a block type with setCantChangeBlockType.
- * Using this on 1000s of blocks will cause lag - if that is needed, find a way to use setCanChangeBlockType.
- *
- * @param playerId
- * @param x
- * @param y
- * @param z
- */
-setCanChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
-/**
- * Prevents a player from changing a block at a specific co-ordinate. Useful when client option canChange is true.
- * Overrides blockRect and blockType settings, so also useful when you have allowed changing of a block type with setCantChangeBlockType.
- * Using this on 1000s of blocks will cause lag - if that is needed, find a way to use setCantChangeBlockType.
- *
- * @param playerId
- * @param x
- * @param y
- * @param z
- */
-setCantChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
-/**
- * Remove any previous can/cant change block settings for a player at a specific co-ordinate
- *
- * @param playerId
- * @param x
- * @param y
- * @param z
- */
-resetCanChangeBlock(playerId: PlayerId, x: number, y: number, z: number): void
-/**
- * Lets a player Change a block type. Valid names are any block name, including 'Air'
- * Less priority than cant change block pos/can change block rect
- *
- * @param playerId
- * @param blockName
- */
-setCanChangeBlockType(playerId: PlayerId, blockName: BlockName): void
-/**
- * Stops a player from changing a block type. Valid names are any block name, including 'Air'
- * Less priority than can change block pos/can change block rect
- *
- * @param playerId
- * @param blockName
- */
-setCantChangeBlockType(playerId: PlayerId, blockName: BlockName): void
-/**
- * Remove any previous can/cant change block type settings for a player
- *
- * @param playerId
- * @param blockName
- */
-resetCanChangeBlockType(playerId: PlayerId, blockName: BlockName): void
-/**
- * Make it so a player can Change blocks within two points. Coordinates are inclusive. E.g. if [0, 0, 0] is pos1
- * and [1, 1, 1] is pos2 then the 8 blocks contained within low and high will be able to be broken.
- * Overrides setCantChangeBlockType
- *
- *
- * @param playerId
- * @param pos1 Arg as [x, y, z]
- * @param pos2 Arg as [x, y, z]
- */
-setCanChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
-/**
- * Make it so a player cant Change blocks within two points. Coordinates are inclusive. E.g. if [0, 0, 0] is pos1
- * and [1, 1, 1] is pos2 then the 8 blocks contained within pos1 and pos2 won't be able to be broken.
- * Overrides setCanChangeBlockType
- *
- *
- * @param playerId
- * @param pos1 Arg as [x, y, z]
- * @param pos2 Arg as [x, y, z]
- */
-setCantChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
-/**
- * Remove any previous can/cant change block rect settings for a player
- *
- * @param playerId
- * @param pos1
- * @param pos2
- */
-resetCanChangeBlockRect(playerId: PlayerId, pos1: number[], pos2: number[]): void
-/**
- * Allow a player to walk through a type of block. For blocks that are normally solid and not seethrough, the player will experience slight visual glitches while inside the block.
- *
- * A player standing inside a block that turns solid for them is lifted onto it if there is room above. To let them stay where they are, remove the block before making its type solid again.
- *
- * @param playerId
- * @param blockName
- * @param disable If you've enabled a player to walk through a block and want to make the block solid for them again, pass this with true. Otherwise you only need to pass playerId and blockName
- */
-setWalkThroughType(playerId: PlayerId, blockName: BlockName, disable?: boolean): void
-/**
- * Allow a player to walk through (or not walk through) voxels that are located within a given rectangle.
- * For blocks that are normally solid and not seethrough, the player will experience slight visual glitches while inside the block.
- *
- * You could set both pos1 and pos2 to [0, 0, 0] to make only 0, 0, 0 walkthrough, for example.
- *
- * A player standing inside a voxel that turns solid for them is lifted onto it if there is room above, including onto a CANT_WALK_THROUGH rect.
- * To let them stay where they are, remove the block before removing its exemption.
- *
- * @param playerId
- * @param pos1 The one corner of the cuboid. Format [x, y, z]
- * @param pos2 The top right corner of the cuboid. Format [x, y, z]
- * @param updateType The type of update. Whether to make a rect solid, or able to be walked through.
- * Pass DEFAULT_WALK_THROUGH with a previously passed rect to disable any walkthrough setting for that rect.
- */
-setWalkThroughRect(playerId: PlayerId, pos1: number[], pos2: number[], updateType: WalkThroughType): void
-/**
- * Give a player an item and a certain amount of that item.
- * Returns the amount of item added to the users inventory.
- *
- * @param playerId
- * @param itemName
- * @param itemAmount
- * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- */
-giveItem(playerId: PlayerId, itemName: ItemName, itemAmount?: number | null, attributes?: ItemAttributes): number
-/**
- * Whether the player has space in their inventory to get new blocks
- * @param playerId
- */
-inventoryIsFull(playerId: PlayerId): boolean
-/**
- * Put an item in a specific index. Default hotbar is indexes 0-9
- *
- * @param playerId
- * @param itemSlotIndex 0-indexed
- * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
- * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
- * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- * \`customAttributes.bar = { fraction, colour? }\` (0 to 1, hex colour) draws a charge bar on the item's slot. A stack shares one bar, so make barred items unstackable.
- * @param tellClient whether to tell client about it - results in desync between client and server if client doesnt locally perform the same action
- */
-setItemSlot(playerId: PlayerId, itemSlotIndex: number, itemName: ItemName, itemAmount?: number | null, attributes?: ItemAttributes, tellClient?: boolean): void
-/**
- * Remove an amount of item from a player's inventory
- *
- * @param playerId
- * @param itemName
- * @param amount
- */
-removeItemName(playerId: PlayerId, itemName: ItemName, amount: number): void
-/**
- * Get the item at a specific index
- * Returns null if there is no item at that index
- * If there is an item, return an object of the format { name: string; amount: number | null; attributes: ItemAttributes; }
- *
- * @param playerId
- * @param itemSlotIndex
- */
-getItemSlot(playerId: PlayerId, itemSlotIndex: number): InvenItem | null
-/**
- * Finds the index of a particular item in a player's inventory.
- *
- * @param playerId
- * @param itemName
- * @return The index of the item in the player's inventory, or null if the item is not found.
- */
-findItem(playerId: PlayerId, itemName: ItemName): number | null
-/**
- * Whether a player has an item
- *
- * @param playerId
- * @param itemName
- * @returns bool
- */
-hasItem(playerId: PlayerId, itemName: ItemName): boolean
-/**
- * The amount of an itemName a player has.
- * Returns 0 if the player has none, and a negative number if infinite.
- *
- * @param playerId
- * @param itemName
- * @returns number
- */
-getInventoryItemAmount(playerId: PlayerId, itemName: ItemName): number
-/**
- * Clear the players inventory
- *
- * @param playerId
- */
-clearInventory(playerId: PlayerId): void
-/**
- * Force the player to have the ith inventory slot selected. E.g. newI 0 makes the player have the 0th inventory slot selected
- *
- * @param playerId
- * @param newI integer from 0-9
- */
-setSelectedInventorySlotI(playerId: PlayerId, newI: number): void
-/**
- * Get a player's currently selected inventory slot
- * @param playerId
- * @returns
- */
-getSelectedInventorySlotI(playerId: PlayerId): number
-/**
- * Get the currently held item of a player
- * Returns null if no item is being held
- * If an item is held, return an object of the format {name: itemName, amount: amountOfItem}
- *
- * @param playerId
- */
-getHeldItem(playerId: PlayerId): InvenItem | null
-/**
- * Get the amount of free slots in a player's inventory.
- *
- * @param playerId
- * @returns number
- */
-getInventoryFreeSlotCount(playerId: PlayerId): number
-/**
- * Checks if a player is able to open a chest at a given location,
- * as per the rules laid out by the "onPlayerAttemptOpenChest" game callback.
- * Returns true if the player can open the chest, false if they cannot, and void if the chest does not exist.
- *
- * @param playerId
- * @param chestX
- * @param chestY
- * @param chestZ
- */
-canOpenStandardChest(playerId: PlayerId, chestX: number, chestY: number, chestZ: number): boolean | null
-/**
- * Open a chest for a player.
- * If there is no chest, or the player cannot open it, do nothing.
- * WARNING: This may call "onPlayerAttemptOpenChest" to determine if the player has permission to open it. Using this function inside that callback risks infinite recursion.
- *
- * @param playerId
- * @param x
- * @param y
- * @param z
- */
-openChestForPlayer(playerId: PlayerId, x: number, y: number, z: number): void
-/**
- * Close a chest for a player.
- * If the player does not have a chest open, do nothing.
- *
- * @param playerId
- */
-closeChestForPlayer(playerId: PlayerId): void
-/**
- * Read a player's current crafting recipe set, keyed by output item name. Includes any
- * per-player overrides set via \`editItemCraftingRecipes\` / \`removeItemCraftingRecipes\`.
- *
- * @param playerId
- */
-getCraftingRecipesForPlayer(playerId: PlayerId): Record<string, RecipesForItem>
-/**
- * Give a standard chest an item and a certain amount of that item.
- * Returns the amount of item added to the chest.
- *
- * @param chestPos
- * @param itemName
- * @param itemAmount
- * @param playerId The player who is interacting with the chest.
- * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- */
-giveStandardChestItem(chestPos: number[], itemName: ItemName, itemAmount?: number, playerId?: PlayerId, attributes?: ItemAttributes): number
-/**
- * Remove an amount of item from a standardChest inventory
- *
- * @param chestPos
- * @param itemName
- * @param amount
- * @param playerId The player who is interacting with the chest.
- */
-removeItemNameFromStandardChest(chestPos: number[], itemName: ItemName, amount: number, playerId?: PlayerId): void
-/**
- * Get the amount of free slots in a standard chest
- * Returns null for non-chests
- *
- * @param chestPos
- * @returns number
- */
-getStandardChestFreeSlotCount(chestPos: number[]): number | null
-/**
- * The amount of an itemName a standard chest has.
- * Returns 0 if the standard chest has none, and a negative number if infinite.
- *
- * @param chestPos
- * @param itemName
- * @returns number
- */
-getStandardChestItemAmount(chestPos: number[], itemName: ItemName): number
-/**
- * Get the item at a chest slot. Null if empty otherwise format {name: itemName, amount: amountOfItem}
- *
- * @param chestPos
- * @param idx
- */
-getStandardChestItemSlot(chestPos: number[], idx: number): InvenItem | null
-/**
- * Get all the items from a standard chest in order. Use this instead of repetitive calls to getStandardChestItemSlot
- *
- * @param chestPos
- */
-getStandardChestItems(chestPos: number[]): (InvenItem | null)[]
-/**
- * @param chestPos
- * @param idx 0-indexed
- * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
- * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
- * @param playerId The player who is interacting with the chest.
- * @param attributes An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- */
-setStandardChestItemSlot(chestPos: number[], idx: number, itemName: ItemName, itemAmount?: number | null, playerId?: PlayerId, attributes?: ItemAttributes): void
-/**
- * Find the index of a particular item in a standard chest
- * @param chestPos
- * @param itemName
- */
-findStandardChestItem(chestPos: number[], itemName: ItemName): number | null
-/**
- * Get the item in a player's moonstone chest slot. Null if empty
- *
- * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
- *
- * @param playerId
- * @param idx
- */
-getMoonstoneChestItemSlot(playerId: PlayerId, idx: number): InvenItem | null
-/**
- * Get all the items from a moonstone chest in order. Use this instead of repetitive calls to getMoonstoneChestItemSlot
- *
- * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
- *
- * @param playerId
- */
-getMoonstoneChestItems(playerId: PlayerId): (InvenItem | null)[]
-/**
- * Moonstone chests are a type of chest where a player accesses the same contents no matter the location of the moonstone chest
- *
- * @param playerId
- * @param idx 0-indexed
- * @param itemName Can be 'Air', in which case itemAmount will be ignored and the slot will be cleared.
- * @param itemAmount -1 for infinity. Should not be set, or null, for items that are not stackable.
- * @param metadata An optional object for certain types of item. For guns this can contain the shotsLeft field which is the amount of ammo the gun currently has.
- */
-setMoonstoneChestItemSlot(playerId: PlayerId, idx: number, itemName: ItemName, itemAmount?: number | null, metadata?: ItemAttributes): void
-/**
- * Store data about a block in a performant manner. Data is cleared when block changes.
- * E.g. chest: \`persisted.chestStr\` is a JSON array of nulls and items, each with a string \`name\`; anything else in it is stored as a load reads it
- * Works well with blocks marked tickable (e.g. wheat)
- *
- * @param x
- * @param y
- * @param z
- * @param data
- */
-setBlockData(x: number, y: number, z: number, data: object): void
-/**
- * Get stored data about a block in a performant manner. Data is cleared when block changes.
- * E.g. chest
- * Works well with blocks marked tickable (e.g. wheat)
- *
- * @param x
- * @param y
- * @param z
- */
-getBlockData(x: number, y: number, z: number): any
-/**
- * Get the name of the lobby this game is running in.
- */
-getLobbyName(): string
-/**
- * Integer lobby names are public
- * @returns boolean
- */
-isPublicLobby(): boolean
-/**
- * Returns if the current lobby the game is running in is special - e.g. a discord guild or dm, or simply a standard lobby
- */
-getLobbyType(): LobbyType
-/**
- * Update the progress bar in the bottom right corner.
- * Can be queued.
- *
- * @param playerId
- * @param toFraction The fraction of the progress bar you want to be filled up.
- * @param toDuration The time it takes for the bar to reach the given toFraction in ms.
- * If this is too low and you queue multiple updates, this toFraction could be skipped. Treat 200ms as a minimum.
- */
-progressBarUpdate(playerId: PlayerId, toFraction: number, toDuration?: number): void
-/**
- * This will initiate the MiddleScreenBar, starting at empty and filling up to full over the given duration.
- * Good to represent cooldowns (eg gun reload) or charged items (eg crossbow)
- *
- * @param playerId
- * @param duration ms over which the MiddleScreenBar fills up
- * @param chargeExpiresAutomatically Defaults to true. If true, the bar will disappear upon reaching full. If false, the bar will remain at full until hidden with removeMiddleScreenBar
- * @param horizontalBarRemOffset Offset the bar left or right (in css unit - rem)
- */
-initiateMiddleScreenBar(playerId: PlayerId, duration: number, chargeExpiresAutomatically?: boolean, horizontalBarRemOffset?: number): void
-/**
- * If there is any current middle screen bar running, this will hide it
- *
- * @param playerId
- */
-removeMiddleScreenBar(playerId: PlayerId): void
-/**
- * Show a hitmarker on the player's screen (the X-shaped crosshair flash indicating a successful hit).
- * Useful for custom weapons or things that need visual hit feedback.
- *
- * @param playerId The player to show the hitmarker to
- * @param isCrit If true, shows an enhanced critical-hit hitmarker with a longer, more dramatic animation
- * @param directionVector Optional [x, y, z] direction vector. When provided, the hitmarker appears
- *   at the projected screen position of that direction rather than at the centre of the screen.
- *   Same flow as mobile melee attacks where the tap point differs from screen centre.
- */
-sendHitmarker(playerId: PlayerId, isCrit?: boolean, directionVector?: number[] | null): void
-/**
- * Show a directional arrow indicator on the player's screen pointing toward a world position.
- * When the position is off-screen the indicator is a rotating chevron at the screen edge.
- * When the position is on-screen it becomes a small marker dot.
- *
- * The arrow persists until explicitly cleared via \`clearDirectionArrow\`.
- * Calling again with the same \`id\` updates the existing arrow in-place.
- *
- * @param playerId The player to show the arrow to
- * @param id Unique identifier for this arrow (allows multiple concurrent arrows)
- * @param position [x, y, z] world position the arrow should point toward
- * @param text Optional label rendered below the indicator. Supports CustomTextStyling for rich text with icons/colours.
- * @param showDistance If true, displays the distance (in blocks) from the player to the arrow position.
- * @param style Optional style object (same format as CustomTextStyling's StyledText \`style\`). Controls chevron/marker colour, label typography, and opacity.
- */
-setDirectionArrow(playerId: PlayerId, id: string, position: number[], text?: string | CustomTextStyling | null, showDistance?: boolean, style?: TextStyle | null): void
-/**
- * Clear a directional arrow from the player's screen.
- *
- * @param playerId The player to clear the arrow for
- * @param id The arrow identifier to clear. If null, clears all arrows for this player.
- */
-clearDirectionArrow(playerId: PlayerId, id?: string | null): void
-/**
- * Edit the crafting recipes for a player.
- *
- * @param playerId
- * @param itemName
- * @param recipesForItem
- */
-editItemCraftingRecipes(playerId: PlayerId, itemName: ItemName, recipesForItem: RecipesForItem): void
-/**
- * Reset the crafting recipes for a given back to its original bloxd state
- *
- * @param playerId
- * @param itemName Resets all crafting recipes for the given player if null, otherwise resets the crafting recipes for the given item.
- */
-resetItemCraftingRecipes(playerId: PlayerId, itemName: string | null): void
-/**
- * Removes crafting recipes
- *
- * @param playerId
- * @param itemName Removes all crafting recipes for the given player if null, otherwise removes the crafting recipes for the given item.
- */
-removeItemCraftingRecipes(playerId: PlayerId, itemName: string | null): void
-/**
- * Check if a position is within a cubic rectangle
- *
- * @param coordsToCheck
- * @param pos1 position of one corner
- * @param pos2 position of opposite corner
- * @param addOneToMax
- */
-isInsideRect(coordsToCheck: number[], pos1: number[], pos2: number[], addOneToMax?: boolean): boolean
-/**
- * Get the entities in the rect between [minX, minY, minZ] and [maxX, maxY, maxZ]
- *
- * @param minCoords
- * @param maxCoords
- * @returns
- */
-getEntitiesInRect(minCoords: number[], maxCoords: number[]): EntityId[]
-/**
- * What kind of entity it is: "Player", or a mob's type like "Draugr Zombie" or "Pig"
- * @param entityId
- */
-getEntityType(entityId: EntityId): EntityType
-/**
- * Gets the item name of a dropped item
- *
- * @param itemEId - The ID of the dropped item from createItemDrop
- * @returns
- */
-getItemDropName(itemEId: EntityId): ItemName | null
-/**
- * Deletes all items dropped in the world
- */
-deleteAllItems(): void
-/**
- * Create a mob herd. A mob herd represents a collection of mobs that move together.
- */
-createMobHerd(): MobHerdId
-/**
- * Try to spawn a mob into the world at a given position. Returns null on failure.
- * WARNING: Either the "onPlayerAttemptSpawnMob" or the "onWorldAttemptSpawnMob" game callback will be called
- * depending on whether "spawnerId" is provided. Calling this function inside those callbacks risks infinite recursion.
- * @param mobType
- * @param x
- * @param y
- * @param z
- * @param opts Includes:
- *  - mobHerdId The ID of this mob's herd. (A mob herd represents a collection of mobs that move together.)
- *  - spawnerId The ID of the player who tried to spawn this mob.
- *  - mobDbId A persistent ID for the mob. This can be useful when loading mob data from the database. If the DB ID is already taken, null will be returned.
- *  - name If set, gives the mob a name that will be displayed as a nametag above their head.
- *  - playSoundOnSpawn
- *  - variation
- *  - physicsOpts { width: number; height: number; collidesEntities: boolean }. The body is at most 25 blocks wide and 90 tall.
- * @returns null if the mob could not be spawned.
- * This can happen when there are too many mobs in the world for the current number
- * of players in the lobby, or if the area is protected e.g. by spawn area protection.
- */
-attemptSpawnMob<TMobType extends MobType>(mobType: TMobType, x: number, y: number, z: number, opts?: MobSpawnOpts<TMobType>): MobId | null
-/**
- * Dispose of a mob's state and remove them from the world without triggering "on death" flows.
- * Always succeeds.
- * @param mobId
- */
-despawnMob(mobId: MobId): void
-/**
- * Returns the current default value for a mob setting.
- *
- * @param mobType
- * @param setting
- */
-getDefaultMobSetting<TMobType extends MobType, TMobSetting extends MobSetting>(mobType: TMobType, setting: TMobSetting): MobSettings<TMobType>[TMobSetting]
-/**
- * Set the default value for a mob setting.
- * @param mobType
- * @param setting
- * @param value
- */
-setDefaultMobSetting<TMobType extends MobType, TMobSetting extends MobSetting>(mobType: TMobType, setting: TMobSetting, value: MobSettings<TMobType>[TMobSetting]): void
-/**
- * Get the current value of a mob setting for a specific mob.
- * @param mobId
- * @param setting
- * @param returnDefaultIfNotOverridden - If true, return the default setting if not overridden.
- */
-getMobSetting<TMobSetting extends MobSetting>(mobId: MobId, setting: TMobSetting, returnDefaultIfNotOverridden?: boolean): MobSettings<MobType>[TMobSetting]
-/**
- * Set the current value of a mob setting for a specific mob.
- * @param mobId
- * @param setting
- * @param value
- */
-setMobSetting<TMobSetting extends MobSetting>(mobId: MobId, setting: TMobSetting, value: MobSettings<MobType>[TMobSetting]): void
-/**
- * Get the number of mobs in the world.
- */
-getNumMobs(): number
-/**
- * Get the mob IDs of all mobs in the world.
- */
-getMobIds(): MobId[]
-/**
- * Gets the current AI state for the given mob.
- * @param mobId
- */
-getMobAiState(mobId: MobId): { state: MobAiState; params: MobAiStateParams<MobAiState> }
-/**
- * Sets the current AI state for the given mob.
- * Some AI states will require context such as the ID of the lifeform being chased.
- * The mob's AI normally moves on by itself after a few seconds, or when a player comes near.
- * Pass \`{ hold: true }\` to keep it in this state until you set another one.
- * @param mobId
- * @param state
- * @param params
- * @param opts hold: never time out, ignore nearby players and don't fight back when hit. The mob still leaves the state if its target leaves the game or turns invisible, or if it is tamed.
- */
-setMobAiState<TState extends MobAiState>(mobId: MobId, state: TState, params: MobAiStateParams<TState>, opts?: MobAiStateOptions): void
-/**
- * Clears any aggro the mob has towards the given lifeform.
- * If the mob is currently chasing or running away from it, this also transitions the mob back to idle.
- * @param mobId
- * @param targetLifeformId
- */
-passifyHostility(mobId: MobId, targetLifeformId: LifeformId): void
-/**
- * Try to create a throwable entity.
- * Similar to creating a mesh entity and uses the same rate limiting.
- * However, this uses the predefined throwables system and physics used by throwable items with the game
- * Each throwable item has its own behaviour already, including default velocity, damage and gravity multipliers.
- *
- * @param throwerEId
- * @param itemName Must be an Item that is usually throwable in-engine
- * @param position Starting position
- * @param direction
- * @param velocityMult Multiplier for the default velocity of the throwable item
- * @param damageMult Multiplier for the default damage of the throwable item
- * @param gravityMult Multiplier for the default gravity of the throwable item
- * @param attributes item attributes (currently used only for the "Boomerag" item)
- * @returns null if throwable creation failed, otherwise the entity ID.
- */
-attemptCreateThrowable(throwerEId: EntityId, itemName: ThrowableItem, position: [number, number, number], direction: [number, number, number], velocityMult?: number, damageMult?: number, gravityMult?: number, attributes?: ItemAttributes): string
-/**
- * Delete a throwable entity before it automatically removes itself.
- * @param eId
- * @returns true if the entity was deleted, false if it was not a throwable entity
- */
-deleteThrowable(eId: EntityId): boolean
-/**
- * Try to create a mesh entity. This creates an entity whose mesh position is synced with clients.
- * Set entity position using setPosition
- * There is a limit to the number of mesh entities that can be created: 400 without physics (audio entities count too), 100 with physics (throwables count too).
- * Separately, each player sees only the nearest 100 mesh entities of one kind (the mesh type, or the block name for a BloxdBlock); farther ones are hidden.
- * @param type
- * @param opts
- * @param name The default name for the nametag
- * @param physicsOptions Physics Options. With doPhysics, the physics body is at most 25 blocks across, however big the mesh; the entity collision box is the body grown by widthExpandAmt and heightExpandAmt.
- * @param initiatorId The entity that initiated the creation of the mesh entity.
- * @returns null if the entity creation failed, otherwise the entity ID.
- */
-attemptCreateMeshEntity<MeshType extends MeshEntityType>(type: MeshType, opts: MeshEntityOpts[MeshType], name?: string, physicsOptions?: MeshEntityPhysicsOpts, initiatorId?: EntityId): EntityId | null
-/**
- * Update a mesh entity. If used on a non-mesh entity, will do nothing.
- *
- * @param eId
- * @param type
- * @param opts
- */
-updateMeshEntity<MeshType extends MeshEntityType>(eId: EntityId, type: MeshType, opts: MeshEntityOpts[MeshType]): void
-/**
- * Delete any non-player entity (mesh entity, mob, audio entity, item drop, throwable, etc.) and dispose of their state.
- * @param eId
- * @returns whether the entity's replicated state existed and was deleted
- */
-deleteEntity(eId: EntityId): boolean
-/**
- * Delete a mesh entity
- *
- * @param eId
- * @returns whether the api successfully deleted the meshEntity
- */
-deleteMeshEntity(eId: EntityId): boolean
-/**
- * Apply an impulse to an entity
- *
- * @param eId
- * @param xImpulse
- * @param yImpulse
- * @param zImpulse
- */
-applyImpulse(eId: EntityId, xImpulse: number, yImpulse: number, zImpulse: number): void
-/**
- * Get the velocity of an entity
- * Will return [0, 0, 0] if the entity doesn't have a physics body
- *
- * @param eId
- */
-getVelocity(eId: EntityId): Pos
-/**
- * Set the velocity of an entity
- *
- * @param eId
- * @param x
- * @param y
- * @param z
- */
-setVelocity(eId: EntityId, x: number, y: number, z: number): void
-/**
- * @deprecated use setEntityRotation
- * Set the heading for a server-auth entity.
- *
- * @param entityId
- * @param newHeading
- */
-setEntityHeading(entityId: EntityId, newHeading: number): void
-/**
- * @deprecated use getEntityRotation
- * Get the heading for a server-auth entity.
- *
- * @param entityId
- */
-getEntityHeading(entityId: EntityId): number
-/**
- * Get the rotation for a server-auth entity.
- *
- * @param entityId
- */
-getEntityRotation(entityId: EntityId): Pos
-/**
- * Set the rotation for a server-auth entity.
- * A mob or player-shaped entity turns its head first; set the lockHeadToBody entity setting to turn its whole body.
- *
- * @param entityId
- * @param xRotation
- * @param yRotation
- * @param zRotation
- */
-setEntityRotation(entityId: EntityId, xRotation: number, yRotation: number, zRotation: number): void
-/**
- * Get the amount of an item in an item entity
- *
- * @param itemId
- * @returns number
- */
-getItemAmount(itemId: EntityId): number
-/**
- * Set the amount of an item in an item entity
- *
- * @param itemId
- * @param newAmount
- */
-setItemAmount(itemId: EntityId, newAmount: number): void
-/**
- * Update the max players and soft max players matchmaking will use
- *
- * softMaxPlayers is the number of players that matchmaking will route to using "Quick Play".
- * Once the softMaxPlayers limit is reached, this lobby can only be joined by requesting the lobby name or joining a friend.
- *
- * maxPlayers is the absolute maximum: a lobby will not have more players than this.
- * Tip: softMaxPlayers should be around 90% of maxPlayers
- *
- * WARNING: This change is not immediate, as it takes a while for matchmaking to find out.
- * Also, this will not kick players out of the lobby if set to a lower value than the current player count.
- *
- * @param softMaxPlayers
- * @param maxPlayers
- */
-setMaxPlayers(softMaxPlayers: number, maxPlayers: number): void
-/**
- * Set whether a player who joins while an ad plays enters the world only once the ad ends, so nothing can hurt them
- * while they can't play. On by default. Turn it off in a round-based game, so a party's players are all in the lobby
- * when a round starts. Games using the \`@plugins/sessionBasedGame\` plugin have it off already.
- *
- * @param joinsWait
- */
-setJoinsWaitForAds(joinsWait: boolean): void
-/**
- * Tell a player to disconnect from the current lobby and join a new one.
- *
- * To connect to a specific variation, format is \`gamename_variation\`.
- * For Custom Games, this will be \`classic_playerSchematic|XXXXXXXXXX\` or
- * \`classic_playerSchematic|XXXXXXXXXX|<varname>\` for a named sub-variation.
- *
- * NOTE: Players won't disconnect immediately (they may play an ad before being redirected).
- * In a world's own lobby, the world's owner and co-owners are asked first and can choose to stay.
- *
- * @param playerId
- * @param game Defaults to the current game.
- * @param lobbyName Defaults to "Quick Play"
- */
-matchmakePlayer(playerId: PlayerId, game?: string, lobbyName?: string): void
-/**
- * Create and register the UI for the requested quicktime event (QTE) to the screen.
- * Handle the result via the onPlayerFinishQTE engine callback.
- *
- * @param playerId
- * @param qteParameters - includes type and parameters
- * @returns an id that can be passed to deleteQTE
- */
-addQTE<T extends QTEType>(playerId: PlayerId, qteParameters: QTEClientParameters<T>): QTERequestId
-/**
- * Delete a quicktime event from the screen
- *
- * @param playerId
- * @param id Returned from the addQTE request you want to cancel
- */
-deleteQTE(playerId: PlayerId, id: QTERequestId): void
-/**
- * Check whether the player has any qteRequests
- */
-hasActiveQTE(playerId: PlayerId): boolean
-/**
- * Delete a request for a player.
- *
- * @param playerId
- * @param id Returned from the addUiRequest call you want to cancel
- */
-deleteUiRequest(playerId: PlayerId, id: UiRequestId): void
-/**
- * Show a message over the shop in the same place that a shop item's onBoughtMessage is shown.
- * Displays for a couple seconds before disappearing
- * Use case is to show a dynamic message when player buys an item
- *
- * @param playerId
- * @param info
- */
-sendOverShopInfo(playerId: PlayerId, info: string | CustomTextStyling): void
-/**
- * Open the shop UI for a player
- *
- * @param playerId
- * @param toggle Whether to close the shop if it's already open. Leave this off when opening from an
- * interaction: holding the interact button re-fires the alt action every ~50-150ms, so a toggle would
- * flicker the shop open and closed until release.
- * @param forceCategoryKey If set, will change the shop to this category
- * @param onlyIfNonEmpty If true, will only open the shop if the category (or shop, if no category is provided) is non-empty
- */
-openShop(playerId: PlayerId, toggle?: boolean, forceCategoryKey?: ShopCategoryKey | null, onlyIfNonEmpty?: boolean): void
-/**
- * Apply an effect to a lifeform.
- * Can be an inbuilt effect E.g. "Speed" (speed boost), "Damage" (damage boost).
- * For inbuilt just pass the name of the effect and the functionality is handled in-engine.
- * For custom effect, you pass customEffectInfo. The icon can be an InGameIconName or a bloxd item name.
- * The custom effect onEndCb is an optional helper within which you can undo the effect you applied.
- * Note that onEndCb will not work for press to code boards, code blocks or world code.
- *
- * @param lifeformId
- * @param effectName
- * @param duration
- * @param customEffectInfo
- */
-applyEffect(lifeformId: LifeformId, effectName: string, duration: number | null, customEffectInfo: { icon?: IngameIconName | ItemName; onEndCb?: () => void; displayName?: string | TranslatedText } & Partial<InbuiltEffectInfo>): void
-/**
- * Check if a lifeform has an effect.
- *
- * @param lifeformId
- * @param name
- * @param atOrAboveLevel Checks whether the effect is at or above the given level
- */
-hasEffect(lifeformId: LifeformId, name: string, atOrAboveLevel?: number): boolean
-/**
- * Get the level of an effect on a lifeform, or 0 if they don't have it.
- *
- * @param lifeformId
- * @param name
- */
-getEffectLevel(lifeformId: LifeformId, name: string): number
-/**
- * Get all the effects currently applied to a lifeform.
- *
- * @param lifeformId
- */
-getEffects(lifeformId: LifeformId): string[]
-/**
- * Remove an effect from a lifeform.
- *
- * @param lifeformId
- * @param name
- */
-removeEffect(lifeformId: LifeformId, name: string): void
-/**
- * Change a part of a player's skin.
- * UGC code is restricted to cosmetics from packs with ugcSelectable; internal code can use any cosmetics.
- * @param playerId Player to change
- * @param cosmeticType Type of cosmetic
- * @param cosmeticName Chosen cosmetic, will be made lowercase automatically
- */
-changePlayerIntoSkin(playerId: PlayerId, cosmeticType: CosmeticType, cosmeticName: CosmeticName): void
-/**
- * Remove gamemode-applied skin from a player
- * @param playerId
- */
-removeAppliedSkin(playerId: PlayerId): void
-/**
- * Get a single equipped cosmetic for a player.
- * @param playerId
- * @param cosmeticType Type of cosmetic
- */
-getPlayerCosmetic(playerId: PlayerId, cosmeticType: CosmeticType): CosmeticName
-/**
- * Set an entity's meshScaling setting by 3d vector. Model node scaling is applied to lifeforms;
- * for mesh entities, this setting affects nametag placement and interaction reach, not the model's nodes.
- * State from prior calls to this api is lost so if you want to have multiple nodes scaled, pass in all the scales at once.
- *
- * @param playerId
- * @param nodeScales
- */
-scalePlayerMeshNodes(playerId: EntityId, nodeScales: EntityMeshScalingMap): void
-/**
- *  Attach/detach mesh instances to/from an entity
- *  @param eId
- *  @param node node to attach to
- *  @param type if null, detaches mesh from this node
- *  @param opts
- *  @param offset
- *  @param rotation
- */
-updateEntityNodeMeshAttachment<MeshType extends MeshEntityType>(eId: EntityId, node: EntityNamedNode, type: MeshType | null, opts?: MeshEntityOpts[MeshType], offset?: Pos, rotation?: Pos): void
-/**
- * Set the pose of the player
- * @param playerId
- * @param pose
- * @param poseOffset
- */
-setPlayerPose(playerId: PlayerId, pose: PlayerPose, poseOffset?: Pos): void
-/**
- * Set physics state of player (vehicle type and tier).
- *
- * For types that have tiers (e.g. BOAT, GLIDER, CAR), a \`tier\` of \`null\` defaults to the first
- * tier (0). Types without tiers (e.g. DEFAULT) must be given a \`null\` tier.
- * @param playerId
- * @param physicsState
- * @param positionOffset - Optional offset to adjust the player's collision box, which is at most 25 blocks wide and 90 tall
- */
-setPlayerPhysicsState(playerId: PlayerId, physicsState: PlayerPhysicsState<PhysicsType>, positionOffset?: Pos): void
-/**
- * Get physics state for player
- * @param playerId
- */
-getPlayerPhysicsState(playerId: PlayerId): PlayerPhysicsState<PhysicsType>
-/**
- * Seat a player in a vehicle. Seat 0 drives; other seats follow the vehicle without movement control.
- * The player leaves their current vehicle and replaces anyone occupying the requested seat.
- * @param playerId
- * @param vehicleEId A spawned vehicle or a rideable mob.
- * @param seatIndex Seat index (default 0).
- */
-setPlayerVehicle(playerId: PlayerId, vehicleEId: EntityId, seatIndex?: number): void
-/**
- * Take a player off whatever they are riding, dropping them where it is. Does nothing if they are
- * not riding anything.
- * @param playerId
- */
-exitPlayerVehicle(playerId: PlayerId): void
-/**
- * The seat layout for a vehicle entity - at minimum one driver seat (index 0), optionally more
- * passenger seats after it. Resolved from the spawned vehicle's def (\`VehicleMeshEntityDef.seats\`,
- * falling back to a single driver seat at the physics type/tier's own \`riderOffset\` default) or a
- * rideable mob's override (\`getMobVehicleSeats\`, falling back to its \`rideHeight\`). Throws if
- * \`vehicleEId\` is not a vehicle.
- */
-getVehicleSeats(vehicleEId: EntityId): VehicleSeat[]
-/**
- * The current value of a physics setting for a specific vehicle entity: the value set via
- * \`setVehicleSetting\` if overridden, otherwise (when \`returnDefaultIfNotOverridden\`) the type/tier
- * default from the vehicle's physics state. Mirrors \`getMobSetting\`.
- *
- * The one default not read from the type/tier is a mob's \`riderOffset\`, which comes from its ride height.
- *
- * A per-block setting (e.g. \`"IceCanAutoStep"\`) is \`undefined\` when that block is unlisted, which means
- * the block does not change the setting rather than that the setting is off.
- */
-getVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId, setting: TSetting, returnDefaultIfNotOverridden?: boolean): SettableVehicleSettingValue<TSetting>
-/**
- * Override a physics setting for a specific vehicle entity, replacing the type/tier default for that
- * vehicle's rider. The override is stored on the shared Bloxd and, when the vehicle currently has a
- * rider, replicated to that rider's client. Mirrors \`setMobSetting\`.
- *
- * A setting can also be overridden for one block by naming the block first, e.g.
- * \`setVehicleSetting(boatId, "IceCanAutoStep", true)\`. That is stored as an entry of the matching
- * \`<setting>ByBlock\` record, which the physics tick reads as a precomputed block lookup.
- *
- * The rider's body is at most 25 blocks wide and 90 tall: a larger \`width\` or \`height\` acts as that.
- */
-setVehicleSetting<TSetting extends SettableVehicleSetting>(vehicleEId: EntityId, setting: TSetting, value: SettableVehicleSettingValue<TSetting>): void
-/**
- * Try to spawn a rideable vehicle, which players can mount with an alt action.
- * There is a limit to the number of mesh entities with physics that can be created.
- * WARNING: Either the "onPlayerAttemptSpawnVehicle" or the "onWorldAttemptSpawnVehicle" game callback will be called
- * depending on whether "spawnerId" is provided. Calling this function inside those callbacks risks infinite recursion.
- * @param vehicleType
- * @param x
- * @param y
- * @param z
- * @param opts Includes:
- *  - spawnerId The ID of the player who spawned the vehicle. The vehicle faces away from them.
- * @returns null if the vehicle could not be spawned, otherwise the entity ID of the vehicle.
- */
-attemptSpawnVehicle(vehicleType: MeshEntityVehicleType, x: number, y: number, z: number, opts?: VehicleSpawnOpts): EntityId | null
-/**
- * Dispose of a vehicle's state and remove them from the world.
- * Always succeeds.
- * @param vehicleId
- */
-despawnVehicle(vehicleId: EntityId): void
-/**
- * Add following entity to an entity
- * @param playerId
- * @param eId
- * @param offset
- * @param followsPlayerRotation
- */
-addFollowingEntityToPlayer(playerId: EntityId, eId: EntityId, offset?: number[], followsPlayerRotation?: boolean): void
-/**
- * Remove following entity from an entity
- * @param playerId
- * @param entityEId
- */
-removeFollowingEntityFromPlayer(playerId: EntityId, entityEId: EntityId): void
-/**
- * Set camera zoom for a player
- * @param playerId
- * @param zoom
- */
-setCameraZoom(playerId: PlayerId, zoom: number): void
-/**
- * @param playerId hears the sound
- * @param soundName Can also be a prefix. If so, a random sound with that prefix will be played
- * @param volume 0-1. If it's too quiet and volume is 1, normalise your sound in audacity
- * @param rate The speed of playback. Also affects pitch. 0.5-4. Lower playback = lower pitch
- *        Good for varying the sound. E.g. item pickup sound has a random rate between 1 and 1.5.
- * @param posSettings
- * {playerIdOrPos: EntityId | number[], maxHearDist: number, refDistance: number}
- * playerIdOrPos: The entity the sound originates from, or the position of the sound
- * maxHearDist: sound is not played if player is further than this. Default 15
- * refDistance: higher means the sound decreases less in volume with distance. Default 3. Hitting is 4. Guns are 10
- *
- */
-playSound(playerId: PlayerId, soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }): void
-/**
- * See documentation for api.playSound
- */
-broadcastSound(soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }, exceptPlayerId?: PlayerId | null): void
-/**
- * See documentation for api.playSound
- */
-playClientPredictedSound(soundName: string, volume: number, rate: number, posSettings?: { playerIdOrPos: EntityId | number[]; maxHearDist?: number; refDistance?: number; }, predictedBy?: EntityId): void
-
-calcExplosionForce(eId: EntityId, explosionType: ExplosionType, knockbackFactor: number, explosionRadius: number, explosionPos: number[], ignoreProjectiles: boolean): { force: Pos; forceFrac: number; }
-/**
- * Add a custom killfeed message to the killfeed
- * @param killer - The entity ID or a custom name and colour for the killer
- * @param victim - The entity ID or a custom name and colour for the victim
- * @param withItem - The item used
- */
-addCustomKillfeedMessage(killer: { eId: EntityId } | { name: string; colour: string }, victim: { eId: EntityId } | { name: string; colour: string }, withItem: string): void
-/**
- * Get the position of a player's target block and the block adjacent to it (e.g. where a block would be placed)
- *
- *
- * Note: This position is a tick ahead of the client's block target info (noa.targetedBlock),
- * since the client updates the blocktarget before the entities tick (and since it uses the renderposition of the camera)
- *
- * This normally doesn't matter but if you are client predicting something based on noa.targetedBlock
- * (currently only applicable to in-engine code), you should not verify using this
- *
- * @param playerId
- */
-getPlayerTargetInfo(playerId: PlayerId): { position: Pos; normal: Pos; adjacent: Pos }
-/**
- * Get the position of a player's camera and the direction (both in Euclidean and spherical coordinates) they are attempting to use an item.
- * The camPos has the same limitations described in getPlayerTargetInfo
- *
- * @param playerId
- */
-getPlayerFacingInfo(playerId: PlayerId): { camPos: Pos; dir: Pos; angleDir: AngleDir; moveHeading: number }
-/**
- * Raycast for a block in the world.
- * Given a position and a direction, find the first block that the "ray" hits.
- *
- * @param fromPos
- * @param dirVec
- */
-raycastForBlock(fromPos: number[], dirVec: number[]): BlockRaycastResult
-/**
- * Prevents the player from taking fall damage next time they land on the ground
- * @param playerId
- */
-preventFallDamageNextGrounding(playerId: PlayerId): void
-/**
- * Check whether a player is crouching
- *
- * @param playerId
- */
-isPlayerCrouching(playerId: PlayerId): boolean
-/**
- * Get the aura info for a player
- * @param playerId
- */
-getAuraInfo(playerId: PlayerId): { level: number; totalAura: number; auraPerLevel: number }
-/**
- * Sets the total aura for a player. Will not go over max level or under 0
- * @param playerId
- * @param totalAura
- */
-setTotalAura(playerId: PlayerId, totalAura: number): void
-/**
- * Set the aura level for a player - shortcut for setTotalAura(level * auraPerLevel)
- * @param playerId
- * @param level
- */
-setAuraLevel(playerId: PlayerId, level: number): void
-/**
- * Add (or remove if negative) aura to a player. Will not go over max level or under 0
- * @param playerId
- * @param auraDiff
- * @returns The actual change in aura
- */
-applyAuraChange(playerId: PlayerId, auraDiff: number): number
-/**
- * Updates the particle systems of multiple mesh entities at specified nodes
- * @param updates
- */
-updateMeshParticleSystems(updates: MeshParticleSystemUpdates): void
-/**
- * Register an event for analytics. Custom games only: anywhere else, World Code gets an error.
- * Special value is eventType "match" and eventValue "match_started" to mark the start of a match when calculating average quantities
- * Each player can send 20 events a minute. Each day a game can have 20 game categories, 20 event types in each and
- * 50 event values for each type; once it goes past one, events at that level are dropped until midnight UTC
- *
- * @param playerId - The player associated with the event
- * @param eventType - The type of event e.g. "shop" or "death", at most 64 characters
- * @param eventValue - The detail of the event e.g. the item bought or cause of death, at most 128 characters
- * @param gameCategoryId - The game category id e.g. the map you're playing on or the variant of the game to filter by or compare, at most 128 characters
- * @param gameStartTimeMs - The time the game or match started in milliseconds since 1970, within the last 30 days - use to get event times relative to the start of the game.
- * Each event also records the player's lifetime playtime
- * @param position - Where the event happened, e.g. where the player died or the block they broke, shown on Studio's heatmap. In the same frame of reference as the game's registerAnalyticsPlayerPosition positions for this category. Without one, no position is recorded
- * @param numericValue - A number the event measures, e.g. the coins earned, the round's score or the seconds it took.
- */
-registerAnalyticsEvent(playerId: string, eventType: string, eventValue: string | null, gameCategoryId: string | null, gameStartTimeMs: number, position?: Pos | null, numericValue?: number | null): void
-/**
- * Record where a player is for the analytics heatmap. Call it at a regular interval (e.g. once a second).
- * Custom games only: anywhere else, World Code gets an error.
- * Each player can send 120 positions a minute. Each day a game can send 100,000 different blocks (event positions
- * included); once it goes past that, positions are dropped until midnight UTC
- *
- * @param playerId - The player whose position to record
- * @param gameCategoryId - The game category id e.g. the map you're playing on or the variant of the game to filter by, at most 128 characters
- * @param gameStartTimeMs - The time the game or match started in milliseconds since 1970, within the last 30 days - used to get a playback of positions
- * @param position - The position of the player to record. Defaults to the player's global position.
- */
-registerAnalyticsPlayerPosition(playerId: string, gameCategoryId: string | null, gameStartTimeMs: number, position?: Pos | null): void
-/**
- * Gets a database value that is saved per lobby.
- * @param key
- */
-getLobbyDbValue(key: string): string | number | null
-/**
- * Sets a database value that is saved per lobby. This persists between sessions.
- * @param key
- * @param value
- */
-setLobbyDbValue(key: string, value: string | number): void
-/**
- * Deletes a database value that is saved per lobby.
- * @param key
- */
-deleteLobbyDbValue(key: string): void
-/**
- * Deletes all database values that are saved per lobby.
- */
-deleteAllLobbyDbValues(): void
-/**
- * Gets a database value that is saved per player.
- * @param playerId
- * @param key
- */
-getPlayerDbValue(playerId: PlayerId, key: string): string | number | null
-/**
- * Sets a database value that is saved per player. For custom games this persists between sessions and
- * between lobbies, and is shared across all of the game's variations (e.g. a hub and its sub-modes).
- * @param playerId
- * @param key
- * @param value
- */
-setPlayerDbValue(playerId: PlayerId, key: string, value: string | number): void
-/**
- * Deletes a database value that is saved per player.
- * @param playerId
- * @param key
- */
-deletePlayerDbValue(playerId: PlayerId, key: string): void
-/**
- * Deletes all database values that are saved per player, including persisted currencies.
- * @param playerId
- */
-deleteAllPlayerDbValues(playerId: PlayerId): void
-/**
- * Dynamically define a currency for a player and show it on the HUD.
- * Amounts will persist between sessions if \`persistent\` is set to true.
- * Persistent currencies count towards db length limits.
- *
- * Example usage:
- * \`\`\`js
- * api.setCurrency(myId, "myCurrency", { amount: 100, icon: "coins", iconColour: "blue", persistent: true })
- * \`\`\`
- *
- * @param playerId
- * @param currencyId
- * @param info - { amount, icon } are required (icon is an icon name such as "coins"); iconColour, persistent, hidden and subtext are optional
- */
-setCurrency(playerId: PlayerId, currencyId: string, info: UgcCurrencyInfo): void
-/**
- * Delete a currency from a player. This will make the currency unknown to the player.
- * @param playerId
- * @param currencyId
- */
-deleteCurrency(playerId: PlayerId, currencyId: string): void
-/**
- * Set the amount of a currency a player has. For persistent currencies, amount/subtext count towards db length limits.
- * @param playerId
- * @param currencyId
- * @param amount
- * @param subtext
- */
-setCurrencyAmount(playerId: PlayerId, currencyId: string, amount: number, subtext?: string | CustomTextStyling): void
-/**
- * Give a player an amount of currency. Can be negative to remove money.
- * The currency must exist for the player first, or this throws: make it with setCurrency (with an icon), e.g. in onPlayerJoin.
- * @param playerId
- * @param currencyId
- * @param amount
- */
-giveCurrencyAmount(playerId: PlayerId, currencyId: string, amount: number): void
-/**
- * Replace a world chunk with a chunk from a project schematic, including air and block data.
- * Both positions are block coordinates selecting their containing 32-block chunk.
- * Add schematics in the Code Editor. Missing paths or source chunks throw an error.
- * @param schematicPath Project-relative path, including .bloxdschem.
- * @param srcCoords Block coordinates in the schematic's chunk grid (including selection padding).
- * @param destCoords Block coordinates in the world. Existing blocks are replaced without break drops.
- */
-setChunkAsSchematic(schematicPath: string, srcCoords: Pos, destCoords: Pos): void
-/**
- * Get a project schematic's stored dimensions as [x, y, z], including selection padding.
- * Uses the active project snapshot. Missing schematic paths throw an error.
- * @param schematicPath Project-relative path, including .bloxdschem.
- */
-getSchematicDimensions(schematicPath: string): Pos
-/**
- * Set a default value to be returned by your callback code if it throws an error.
- *
- * @param cbName The name of the callback to set the default value for.
- * @param value The default value to return.
- */
-setCallbackValueFallback(cbName: UserCallbacks, value: any): void
-/**
- * Set the gamemode of a player. This is persistent across lobbies for custom games.
- *
- * @param playerId The ID of the player to set the gamemode of.
- * @param gamemode The gamemode to set the player to.
- */
-setPlayerGamemode(playerId: PlayerId, gamemode: WorldGamemode): void
-/**
- * Get the gamemode of a player.
- *
- * @param playerId The ID of the player to get the gamemode of.
- * @returns The gamemode of the player.
- */
-getPlayerGamemode(playerId: PlayerId): WorldGamemode
-/**
- * Returns true if your code is about to be interrupted for exceeding its time budget.
- * Use this to break up long-running code into smaller chunks.
- *
- *
- * ### Example:
- * \`\`\`js
- * // Resume from where we stopped last time (or 0 on the first run)
- * let savedLoopCounter = 0
- *
- * // ...
- *
- * for (let i = savedLoopCounter; i < 1000; i++) {
- * 	if (api.isNearInterrupt()) {
- * 		// Out of time - remember our progress and stop before getting killed
- * 		savedLoopCounter = i
- * 		break
- * 	}
- *
- * 	someExpensiveFunction()
- * }
- * \`\`\`
- */
-isNearInterrupt(): boolean
-/**
- * Schedule small text to be displayed in the middle of the screen (middleTextLower).
- * This text will be removed after the duration.
- * Stacking queued texts will schedule them to be displayed one after the other.
- * NOTE: Overriding the middleTextLower client option may cause queued texts to be displayed incorrectly.
- *
- * @param playerId The ID of the player to display the text to.
- * @param text The text to display.
- * @param duration The duration of the text in milliseconds.
- * @returns The ID of the queued command.
- */
-queueMiddleTextLower(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
-/**
- * Schedule large text to be displayed in the middle of the screen (middleTextUpper).
- * This text will be removed after the duration.
- * Stacking queued texts will schedule them to be displayed one after the other.
- * NOTE: Overriding the middleTextUpper client option may cause queued texts to be displayed incorrectly.
- *
- * @param playerId The ID of the player to display the text to.
- * @param text The text to display.
- * @param duration The duration of the text in milliseconds.
- * @returns The ID of the queued command.
- */
-queueMiddleTextUpper(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
-/**
- * Schedule text to be displayed in the crosshair.
- * This text will be removed after the duration.
- * Stacking queued texts will schedule them to be displayed one after the other.
- * NOTE: Overriding the crosshairText client option may cause queued texts to be displayed incorrectly.
- *
- * @param playerId The ID of the player to display the text to.
- * @param text The text to display.
- * @param duration The duration of the text in milliseconds.
- * @returns The ID of the queued command.
- */
-queueCrosshairText(playerId: PlayerId, text: string | CustomTextStyling, duration: number): QueuedCommandId
-/**
- * Get the status of a queued command.
- *
- * @param id The ID of the queued command to get the status of.
- * @returns NOT_IN_QUEUE, WAITING_TO_RUN, or CURRENTLY_RUNNING.
- */
-getQueuedStatus(id: QueuedCommandId): QueuedStatusString
-/**
- * Remove a queued command from the queue.
- *
- * @param id The ID of the queued command to remove.
- */
-removeFromQueue(id: QueuedCommandId): void
-/**
- * Add a request for the player to answer in the top right corner. E.g. accepting or denying a tprequest.
- *
- * Use onUiRequestResponded to handle the response.
- *
- * Example Usage:
- * \`\`\`js
- * const myRequestId = api.addUiRequest(playerId, {
- *   type: "standard",
- *   title: "Do you want to join the game?",
- * }, 5000)
- *
- * onUiRequestResponded = (playerId, uiRequestId, response) => {
- *   if (uiRequestId === myRequestId) {
- *     api.log(response)
- *   }
- * }
- * \`\`\`
- *
- *
- * @param playerId The ID of the player to add the request to.
- * @param parameters The parameters of the request.
- * @param timeoutAfterMs The timeout after which the request will be automatically deleted. A response will not be given and onUiRequestResponded will not be called.
- * @returns The ID of the request. Pass into deleteUiRequest or cross-reference with onUiRequestResponded.
- */
-addUiRequest(playerId: PlayerId, parameters: UiRequestClientParameters, timeoutAfterMs?: number): UiRequestId
-/**
- * Add a request for the player to answer in the form of a popup. This blocks the player from doing anything else until they respond.
- *
- * Use onUiRequestResponded to handle the response.
- *
- * Example Usage:
- * \`\`\`js
- * const myRequestId = api.addUiRequestPopup(playerId, "Do you want to join the game?")
- *
- * onUiRequestResponded = (playerId, uiRequestId, response) => {
- *   if (uiRequestId === myRequestId) {
- *     api.log(response)
- *   }
- * }
- * \`\`\`
- *
- * @param playerId The ID of the player to add the request to.
- * @param requestText The text of the request.
- * @returns The ID of the request, or null if the request was rate limited. Pass into deleteUiRequest or cross-reference with onUiRequestResponded.
- */
-addUiRequestPopup(playerId: PlayerId, requestText: string): UiRequestId | null
-/**
- * Matchmake a player into a sub-variation of the current custom game.
- * Pass \`"default"\` for the default variation.
- *
- * @param playerId The player to matchmake
- * @param varname Sub-variation name (\`[A-Za-z0-9_-]\`, 1-32 chars), or \`"default"\`
- */
-matchmakeToVariation(playerId: PlayerId, varname: string): void
-/**
- * Get the current sub-variation name.
- * Returns \`"default"\` when there is no named sub-variation.
- */
-getVariation(): string
-/**
- * Whether the player joined with this custom game's texture pack applied. False if they skipped applying it
- * (kicking them shows the prompt again when they rejoin).
- * Only published custom games prompt for their pack, so anywhere else this says so and returns true.
- * @param playerId
- */
-isUsingCustomGameTexturePack(playerId: PlayerId): boolean
-/**
- * Log a message to chat.
-*/
-log(message: any): void
-
-	}
-	/** Game API */
-	declare const api: GameApi;
-type EntityId = string
-type Pos = [number, number, number]
-type LifeformId = EntityId
-type PlayerId = LifeformId
-type PlayerDbId = string
-type LifeformBodyPart = (_TypeOf["lifeformBodyParts"])[number]
-interface PlayerAttemptDamageOtherPlayerOpts {
-	eId: PlayerId
-	hitEId: PlayerId
-	attemptedDmgAmt: number
-	withItem: string
-	bodyPartHit?: LifeformBodyPart
-	attackDir?: number[]
-	showCritParticles?: boolean
-	reduceVerticalKbVelocity?: boolean
-	horizontalKbMultiplier?: number
-	verticalKbMultiplier?: number
-	broadcastEntityHurt?: boolean
-	attackCooldownSettings?: { type: string; cooldownMs: number } | null
-	hittingSoundOverride?: HittingSoundOverride
-	ignoreOtherEntitySettingCanAttack?: boolean
-	isTrueDamage?: boolean
-	// The damaging playerDbId. If null, will default to the dbId of \`eId\`
-	damagerDbId?: PlayerId | null
-	// What dealt the hit, passed to the damage callbacks as \`damageInfo.cause\`. Null when not given.
-	damageCause?: DamageCause | null
-}
-type HittingSoundOverride = { sound: string; volume: number; pitch: number }
-type DamageCause = (_TypeOf["damageCauses"])[number]
-type ItemName = string
-type EnchantmentAttributes = {
-	enchantments: Partial<Record<EnchantmentPerk, number>>
-	enchantmentTier: EnchantmentTier
-	id: string
-}
-type EnchantmentPerk =
-	// Swords
-	| "Damage"
-	| "Attack Speed"
-	| "Critical Damage"
-
-	// Armour
-	| "Protection"
-	| "Health"
-	| "Health Regen"
-
-	// Special Armour
-	| "Stomp Damage"
-	| "Knockback Resist"
-
-	// Bows & Crossbows
-	| "Arrow Speed"
-	| "Arrow Damage"
-	| "Quick Charge"
-
-	// Tools
-	| "Break Speed"
-	| "Momentum"
-	| "Mining Yield"
-	| "Farming Yield"
-	| "Mining Aura"
-	| "Digging Aura"
-	| "Lumber Aura"
-	| "Farming Aura"
-
-	// Sticks
-	| "Horizontal Knockback"
-	| "Vertical Knockback"
-
-	// Hang Gliders
-	| "Firecracker Cooldown"
-	| "Firecracker Boost"
-	| "Gliding Speed"
-type EnchantmentTier = (_TypeOf["enchantmentTiers"])[number]
-type CustomTextStyling = (string | EntityName | TranslatedText | StyledIcon | StyledText | ProgressBar | StyledKeyBinding)[]
-type TranslatedText = {
-	translationKey: string
-	params?: Record<string, string | number | boolean | EntityName>
-}
-type EntityName = {
-	entityName: string
-	ranks?: Readonly<Rank[]>
-	style?: {
-		color?: string
-		colour?: string
-	}
-}
-type Rank = (_TypeOf["ranks"])[number]
-type StyledIcon = {
-	icon: string
-	style?: {
-		color?: string
-		colour?: string
-		fontSize?: FontSize
-		opacity?: number
-	}
-}
-type FontSize = string
-type StyledText = {
-	str: string | EntityName | TranslatedText
-	style?: TextStyle
-}
-type TextStyle = {
-	// A CSS colour name, hex or rgb()/hsl()-style colour, e.g. "red", "#ff0000", "rgba(255, 0, 0, 0.5)"
-	color?: string
-	colour?: string
-	fontWeight?: string
-	fontSize?: FontSize
-	fontStyle?: string
-	opacity?: number
-}
-type ProgressBar = {
-	// Mandatory discriminator: marks this CustomTextStyling item as a progress bar.
-	type: "ProgressBar"
-	progress: number
-	width?: FontSize
-	height?: FontSize
-	colours?: string[]
-	backgroundColour?: string
-}
-type StyledKeyBinding = {
-	type: "StyledKeyBinding"
-	action: NoaAction
-	style?: TextStyle
-}
-type NoaAction = (_TypeOf["noaActions"])[number]
-type ClientOption = keyof ClientOptions
-type EarthSkyBox = {
-	type: "earth"
-	inclination?: number
-	turbidity?: number
-	infiniteDistance?: boolean
-	luminance?: number
-	// Sky appearance (light intensity); higher = more saturated sky.
-	rayleigh?: number
-	// Mie scattering coefficient in [0, 0.1]; affects mieDirectionalG impact.
-	mieCoefficient?: number
-	// Amount of haze particles per Mie scattering theory.
-	mieDirectionalG?: number
-	// Distance of the sun from the active scene camera.
-	distance?: number
-	// When \`useSunPosition\` is true, this overrides \`inclination\` + \`azimuth\`.
-	sunPosition?: Vec3
-	useSunPosition?: boolean
-	xCameraOffset?: number
-	yCameraOffset?: number
-	zCameraOffset?: number
-	// Direction the sky considers "up"; defaults to [0, 1, 0].
-	up?: Vec3
-	// Dither the sky to reduce visible banding.
-	dithering?: boolean
-	azimuth?: number
-	// Not part of sky model by default; heavily tint to a vertex color
-	vertexTint?: Vec3
-}
-type Vec3 = [number, number, number]
-type LobbyLeaderboardInfo = Record<
-	string,
-	{
-		displayName?: string | CustomTextStyling
-		hidden?: boolean
-		sortOrder?: "ascending" | "descending" // No value means descending
-		sortPriority?: number
-	}
->
-type TextWithDisplayOptions = {
-	showBackground?: boolean // Defaults to true. When false, the option's background panel is hidden.
-	content: string | CustomTextStyling
-}
-type CustomButtonsType = CustomButtonType[]
-type CustomButtonType = {
-	id: string // Identifier for the button. Used in the callbacks onPlayerPressedButton and onPlayerReleasedButton.
-	icon: string // Icon to display for the button. Can be a font awesome icon such as "house" or a bloxd icon such as "Dirt".
-	keycode: string // Key to trigger the button. Use a keycode like "KeyR" for the letter R. Allowed keys are letters ("KeyA" to "KeyZ"), the number row ("Digit0" to "Digit9"), arrow keys ("ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight") and "Space", shown as "_" next to the button. A key keeps its usual action too, so Space also jumps for players who have not changed their jump key.
-	description?: string // Optional description for the button explaining what it does.
-}
-type HeaderChip = string | CustomTextStyling | TextWithDisplayOptions
-type DialogueText = string | TranslatedText
-type SpeechVoice = SpeechVoicePreset | SpeechSynth
-type SpeechVoicePreset = keyof _TypeOf["SPEECH_VOICE_PRESETS"]
-type SpeechSynth = Readonly<{
-	/** The tone of each blip, from the purest (sine) to the buzziest (sawtooth). */
-	waveform: SpeechSynthWaveform
-	/** The voice's pitch, which intonation moves each word away from. */
-	pitchHz: number
-	/** How far the pitch slides over each blip; negative falls. */
-	glideSemitones: number
-	/** How long each blip sounds. */
-	durationMs: number
-	/** The fade in at the start of the blip. */
-	attackMs: number
-	/** The fade at the end of the blip, within \`durationMs\`. */
-	releaseMs: number
-	/** Darkens a bright waveform; null leaves it unfiltered. */
-	lowpassHz: number | null
-	/** 1 is the engine's speech level. */
-	volume: number
-	intonation: SpeechIntonation
-	/** The speaking rate: each syllable takes this long, and sets when the next word appears. */
-	syllableMs: number
-}>
-type SpeechSynthWaveform = (_TypeOf["SPEECH_SYNTH_WAVEFORMS"])[number]
-type SpeechIntonation = Readonly<{
-	/** How far each word sits from the voice's pitch, either way. */
-	variationSemitones: number
-	/** How far the pitch falls from the first word of a sentence to its last. */
-	declineSemitones: number
-	/** How far the last word of a question rises. */
-	questionRiseSemitones: number
-	/** How far a whole exclamation is lifted. */
-	exclaimLiftSemitones: number
-}>
-type GunshotOrigin = "default" | "head"
-type CameraSettings = DefaultCameraSettings | FixedCameraSettings | FollowCameraSettings | PathCameraSettings | FrameCameraSettings
-type DefaultCameraSettings = Pick<CameraSettingsBase, "blendInMs" | "blendEasing" | "transition" | "letterbox" | "hideHud"> & { mode: "default" }
-type FixedCameraSettings = CameraSettingsBase & {
-	mode: "fixed"
-	position: Pos
-	/** What to look at. Defaults to the player. */
-	lookAt?: CameraTarget
-	/** Look this way instead of at something. */
-	lookDirection?: Pos
-}
-type FollowCameraSettings = CameraSettingsBase & {
-	mode: "follow"
-	/** The entity to follow. Defaults to the player. */
-	target?: EntityId
-	/** Where the camera sits relative to the target, in blocks. */
-	offset: Pos
-	/** "world" (default) keeps the offset on world axes; "target" turns it with the target's heading, +z ahead of the target. */
-	offsetSpace?: CameraOffsetSpace
-	/** What to look at. Defaults to the target. */
-	lookAt?: CameraTarget
-	lookDirection?: Pos
-	/** Trail behind the target by about this many ms. 0 sticks to it. */
-	smoothMs?: number
-	/** Move in towards the target rather than go through terrain between them, for side-on and chase cameras. Default false: a top-down camera would dive through treetops. */
-	avoidTerrain?: boolean
-}
-type PathCameraSettings = CameraSettingsBase & {
-	mode: "path"
-	keyframes: CameraPathKeyframe[]
-	/** true (default): a smooth curve through the keyframes. false: straight lines between them. */
-	smooth?: boolean
-	/** Start again from the first keyframe after the last. */
-	loop?: boolean
-}
-type FrameCameraSettings = CameraSettingsBase & {
-	mode: "frame"
-	/**
-	 * The entities and positions to keep in view. Entities the player is too far from to see, or that have left, are
-	 * left out. With none to frame, an empty list too, the camera holds where and how far it last framed, at this
-	 * camera's own angle, or frames the player if it has framed nothing yet.
-	 */
-	targets: CameraTarget[]
-	/** Compass direction the camera looks in, in degrees: 0 looks along +z, 90 along +x. Default 0. */
-	viewHeading?: number
-	/** Degrees the camera looks down, from 0 (level) to 90 (straight down). Default 45. */
-	viewElevation?: number
-	/** Blocks of space to keep around the targets. Default 2. */
-	padding?: number
-	/** Closest the camera comes to the middle of the targets, in blocks. Default 6, or furthestDistance if that is closer. */
-	closestDistance?: number
-	/** Furthest the camera goes from the middle of the targets, in blocks, even if some targets leave the view. Default 64, or closestDistance if that is further. */
-	furthestDistance?: number
-	/**
-	 * Ease towards a new framing over about this many ms as the targets move, and round to a new angle from the frame
-	 * camera this one replaces. 0 sticks to them. Default 400.
-	 */
-	smoothMs?: number
-}
-type CameraSettingsBase = {
-	/** Blend from the current view into this camera over this many ms. 0 cuts straight to it. */
-	blendInMs?: number
-	/** How the blend eases. Default "easeInOut". */
-	blendEasing?: CameraEasing
-	/** Fade into this camera through a colour instead, cutting to it under the colour: blendInMs is ignored. */
-	transition?: CameraTransition
-	/** Cinematic bars across the top and bottom of the screen while this camera is on. Presses on the bars do nothing in the world, and dragging on them doesn't turn the camera. */
-	letterbox?: boolean
-	/**
-	 * Hide the HUD while this camera is on. Nametags, dialogue, the chat being typed in, the respawn and sleeping screens,
-	 * QTEs, UI requests, touch controls and the settings button on touch screens stay.
-	 */
-	hideHud?: boolean
-	/** Field of view in degrees. Omit to keep the player's own. */
-	fov?: number
-	/**
-	 * Which way the player's body faces while this camera is on. Movement is always relative to the camera.
-	 * "movement" (default): turns to face where they walk. "camera": faces where the camera looks.
-	 * "cursor": shows the mouse cursor and faces what is under it, or what was last tapped on touch screens, aiming
-	 * blocks, hits and shots there; the mouse no longer turns the camera. For top-down and isometric games.
-	 */
-	playerFacing?: CameraPlayerFacing
-	playerLook?: CameraPlayerLook
-}
-type CameraEasing = (_TypeOf["CAMERA_EASING_NAMES"])[number] | [number, number, number, number]
-type CameraTransition = {
-	/** "#rrggbb". Default "#000000". A fade already showing keeps its colour until the screen clears. */
-	colour?: string
-	/** At least 200. */
-	outMs: number
-	/** Default 0. */
-	holdMs?: number
-	/** At least 200. */
-	inMs: number
-}
-type CameraPlayerFacing = (_TypeOf["CAMERA_PLAYER_FACINGS"])[number]
-type CameraPlayerLook = {
-	/** Degrees left and right of the aim; 180 lets the player turn all the way round. Default 0, locked. */
-	maxYaw?: number
-	/** Degrees up and down from the aim. Default 0, locked. */
-	maxPitch?: number
-	/** Once the player stops moving the mouse, ease back to the aim over this many ms. Omit to stay where they looked. */
-	returnMs?: number
-}
-type CameraTarget = Pos | EntityId
-type CameraOffsetSpace = (_TypeOf["CAMERA_OFFSET_SPACES"])[number]
-type CameraPathKeyframe = {
-	/** When the camera reaches this keyframe, in ms from the start of the path. */
-	timeMs: number
-	position: Pos
-	/** What the camera looks at here. Without it or \`lookDirection\`, the camera looks along the path. */
-	lookAt?: CameraTarget
-	lookDirection?: Pos
-	/** Field of view here, in degrees. */
-	fov?: number
-	/** How the camera eases from this keyframe to the next. Default "linear", so smooth paths keep a steady speed. */
-	easing?: CameraEasing
-}
-type ShopCategoryKey = string
-type ShopItemKey = string
-type ShopItem = {
-	image: string
-	schematicId?: SchematicId
-	cost?: number
-	currency?: string
-	amount?: number // Display amount shown on the shop tile image (0 and 1 are not displayed)
-	imageColour?: string
-	canBuy?: boolean
-	isSelected?: boolean
-	buyButtonText?: string | CustomTextStyling
-	customTitle?: string | CustomTextStyling
-	description?: string | CustomTextStyling
-	onBoughtMessage?: string | CustomTextStyling
-	redDot?: boolean
-	forceRemoveRedDot?: boolean
-	isRewardedAd?: boolean
-	badge?: { text: string | CustomTextStyling; type: ShopItemBadgeType }
-	userInput?: ShopItemUserInput
-	enchant?: {
-		tier: EnchantmentTier
-		enchantments: Partial<Record<EnchantmentPerk, number>>
-		enchantmentData?: Record<string, { icon?: string; description?: string }>
-	}
-
-	// Not defined on client, must be defined on server
-	boughtCallback?: (
-		playerId: PlayerId,
-		cost: number,
-		currency: string,
-		categoryKey: ShopCategoryKey,
-		itemKey: ShopItemKey,
-		userInput: string,
-		amount: number | undefined,
-	) => void
-	sell?: boolean // Optional, defaults to false. If true, the sign of "cost" is flipped. So a "cost" of -25 would give the player 25 currency AND be displayed as "25" (instead of -25)
-	sortPriority?: number // Descending, bigger number means closer to the top
-	hidden?: boolean
-	smp?: SmpShopItemMeta // Set by the SMP marketplace plugin only, for its own shop screens
-}
-type ShopItemUserInput =
-	| { type: "text"; placeholderText?: string; wordCharsOnly?: boolean; initialValue?: string } // wordCharsOnly defaults to false. If true, only allows \w character (alphanumeric and _). initialValue always takes precedence as the text input value when set.
-	| { type: "number"; placeholderText?: string; initialValue?: string }
-	| {
-			type: "dropdown"
-			dropdownOptions: readonly (string | { option: string; cost: number })[]
-			shouldResetSelectionOnOptionsChange?: boolean // Defaults to false. If true, the selection will reset to the first option when dropdownOptions changes.
-			initialValue?: string
-			autoSubmit?: boolean // Defaults to false. If true, the dropdown will automatically submit when the user selects an option.
-	  }
-	| { type: "player"; excludedPlayers?: PlayerId[] } // Defaults to excluding the current player
-	| { type: "color"; initialValue?: string }
-type SmpShopItemMeta =
-	/**
-	 * The search box. \`item\` is the player's searched item; \`extra\` and \`excluded\` adjust the creative items it finds;
-	 * \`names\` holds the names this player sees for items a game renamed
-	 */
-	| { kind: "search"; item: string | null; extra?: readonly string[]; excluded?: readonly string[]; names?: Readonly<Record<string, string>> }
-	/** A plain listing or order box for the searched item. \`held\` is how many the player has */
-	| { kind: "creator"; item: string | null; step: "quantity" | "price"; held: number; quantity?: number; fee?: SmpListingFeeRule }
-	/** A listing box for one enchanted copy, listed whole */
-	| { kind: "enchantedCreator"; item: string; quantity: number }
-	/** A market listing. \`seller\` is null for the player's own */
-	| { kind: "listing"; item: string; quantity: number; pricePerItem: number; seller: string | null; expiresAt: number }
-	/** An Instant Sell stack */
-	| { kind: "sell"; item: string; quantity: number; pricePerItem: number }
-	/** Gold from a sale, or items back from an expired listing */
-	| { kind: "collect"; type: "sold" | "expired"; item: string; quantity: number; pricePerItem: number }
-	/** One of the player's active listings */
-	| { kind: "myListing"; item: string; quantity: number; pricePerItem: number; expiresAt: number }
-	/** A buy order. \`creator\` is null for the player's own; \`held\` is how many the player could deliver; \`processing\` while a delivery to it is on its way */
-	| { kind: "order"; item: string; wanted: number; delivered: number; pricePerItem: number; creator: string | null; held: number; processing?: boolean }
-	/** One of the player's orders, or delivered items left over from one */
-	| { kind: "myOrder"; item: string; wanted: number; delivered: number; collectable: number; pricePerItem: number }
-	/** A placeholder shown when a list is empty */
-	| { kind: "empty" }
-type SmpListingFeeRule = { readonly rate: number; readonly taxFreeAllowance: number }
-type SchematicId = string
-type ShopItemBadgeType = (_TypeOf["shopItemBadgeTypes"])[number]
-type ShopCategoryConfig = Partial<{
-	autoSelectCategory: boolean
-	customTitle: string // Supports translation keys and ordinary text
-	redDot: boolean
-	forceRemoveRedDot: boolean
-	sortPriority: number
-	description: string | CustomTextStyling
-	smp: SmpShopCategoryKind // Set by the SMP marketplace plugin with its dedicatedUi option only: clients draw this category's body with the marketplace's own screens
-}>
-type SmpShopCategoryKind = "sell" | "market" | "collect" | "orders" | "myOrders"
-type OtherEntitySetting = keyof OtherEntitySettings
-type EntityMeshScalingMap = {
-	[key in EntityNamedNode]?: number[]
-}
-type EntityNamedNode = PlayerMeshNamedNode
-type PlayerMeshNamedNode = (_TypeOf["playerMeshNamedNodes"])[number]
-type LobbyLeaderboardValues = Record<string, string | number | CustomTextStyling>
-type ChatTags = CustomTextStyling[]
-type NameTagInfo = {
-	backgroundColor?: string
-	content?: (CustomTextStyling[number] | RankInfo)[]
-	subtitle?: (CustomTextStyling[number] | RankInfo)[]
-	subtitleBackgroundColor?: string
-	minLighting?: number
-	healthbar?: HealthbarInfo
-	border?: NameTagBorder
-}
-type RankInfo = {
-	// Font Awesome icon name
-	icon: string
-	mainRGB: string
-	// Defaults to mainRGB
-	bracketRGB?: string
-	chatTag: {
-		str: string
-		// Defaults to mainRGB
-		strRGB?: string
-	}[]
-	// Defaults to none
-	nameTag: {
-		// Defaults to normal name colour (white)
-		iconRGB?: string
-		// Defaults to none
-		iconShadowRGB?: string
-	}
-	visible: boolean // If false, this rank will not be shown in the player list or in the chat
-}
-type HealthbarInfo = Readonly<{
-	// Controls when the healthbar is shown.
-	// "onDamage" (default) shows it for a few seconds after the entity takes damage.
-	display?: HealthbarDisplay
-	height?: FontSize
-	// Track colour behind the depleting bar. Undefined leaves the background transparent.
-	backgroundColour?: string
-	// Fill colour of the bar. Either a flat colour, or a gradient keyed on health fraction.
-	// Undefined uses the default green -> orange -> red depleting gradient.
-	foregroundColour?: string | readonly HealthbarColourGradient[]
-}>
-type NameTagBorder = Readonly<{
-	colour: string
-	// Visual preset:
-	// - "solid": a flat outline.
-	// - "glow": an outline with an outer glow - reads as powerful/elite, ideal for bosses.
-	// - "double": two concentric outlines for an ornate, high-stakes look.
-	style?: NameTagBorderStyle
-	width?: FontSize
-	applyTo?: NameTagBorderTarget
-}>
-type HealthbarDisplay = (_TypeOf["healthbarDisplays"])[number]
-type HealthbarColourGradient = Readonly<{ healthFraction: number; colour: string }>
-type NameTagBorderStyle = (_TypeOf["nameTagBorderStyles"])[number]
-type NameTagBorderTarget = (_TypeOf["nameTagBorderTargets"])[number]
-type MultilineTextBox = {
-	content: (CustomTextStyling[number] | RankInfo)[]
-	backgroundColor?: string
-	animateIn?: boolean
-	/** Overrides canSeeNametagsThroughWalls for this text: true draws it over blocks and entities, false lets them hide it. */
-	visibleThroughWalls?: boolean
-}
-type TempParticleSystemOpts = ParticleSystemOpts & {
-	dir1: number[]
-	dir2: number[]
-	pos1: number[]
-	pos2: number[]
-	manualEmitCount: number
-	hideDist: number
-}
-type ParticlePresetOpts = {
-	presetId: ParticlePresetId
-	pos1: number[]
-	pos2: number[]
-}
-type ParticleSystemOpts = {
-	texture: string
-	minLifeTime: number
-	maxLifeTime: number
-	minEmitPower: number
-	maxEmitPower: number
-	minSize: number
-	maxSize: number
-	gravity: number[]
-	velocityGradients: VelocityGradient[]
-	colorGradients: TimeColorGradient[] | RandomColorGradient[]
-	blendMode: ParticleSystemBlendMode
-}
-type VelocityGradient = {
-	timeFraction: number
-	factor: number
-	factor2: number
-}
-type TimeColorGradient = {
-	timeFraction: number
-	minColor: [number, number, number, number]
-	maxColor?: [number, number, number, number]
-}
-type RandomColorGradient = {
-	color: [number, number, number]
-}
-type ParticlePresetId = keyof _TypeOf["particlePresets"]
-type AnimationSchema = Readonly<{
-	animationDurationMs: number
-	loop?: LoopModeSchema
-	nodeAnimations?: NodeSkeletonAnimationSchema
-}>
-type BlockbenchAnimationSchema = Readonly<{
-	animation_length: number // The duration of the animation in seconds.
-	loop?: BlockbenchLoopModeSchema
-	bones?: BlockbenchBonesAnimationSchema
-}>
-type LoopModeSchema = boolean | "hold-on-last-frame"
-type AnimationTimelineSchema = readonly KeyframeSchema[]
-type KeyframeSchema = Readonly<{
-	timeFraction: number
-	rotation?: LerpPointSchema // Rotations are assumed to be in radians.
-	position?: LerpPointSchema // Position offsets in mesh-local units; (0, 0, 0) means the node's rest pose.
-}>
-type LerpPointSchema =
-	| Point
-	| Readonly<{
-			lerpMode?: LerpModeSchema
-			point: Point
-	  }>
-	| Readonly<{
-			lerpMode?: LerpModeSchema
-			pre: Point // When lerping towards a point, we lerp towards its pre.
-			post: Point // When lerping away from a point, we lerp away from its post.
-	  }>
-type Point = Readonly<Vec3>
-type LerpModeSchema = "linear" | "catmull-rom-spline"
-type BlockbenchLoopModeSchema = boolean | "hold_on_last_frame"
-type BlockbenchAnimationTimelineSchema = Point | Readonly<Record<TimestampString, BlockbenchAnimationFrameSchema>>
-type TimestampString = string
-type BlockbenchAnimationFrameSchema =
-	| Point
-	| Readonly<{
-			lerp_mode?: BlockbenchLerpModeSchema
-			pre?: Point // When lerping towards a point, we lerp towards its pre.
-			post: Point // When lerping away from a point, we lerp away from its post.
-	  }>
-type BlockbenchLerpModeSchema = "linear" | "catmullrom"
-type NodeSkeletonAnimationSchema = Readonly<Record<NodeName, NodeAnimationSchema>>
-type NodeName = string
-type NodeAnimationSchema = Readonly<{
-	timeline: AnimationTimelineSchema
-}>
-type BlockbenchBonesAnimationSchema = Readonly<Record<NodeName, BlockbenchBoneAnimationSchema>>
-type BlockbenchBoneAnimationSchema = Readonly<{
-	rotation?: BlockbenchAnimationTimelineSchema // Blockbench rotations are in degrees.
-	position?: BlockbenchAnimationTimelineSchema // Blockbench position offsets in mesh-local units; rest pose is (0, 0, 0).
-}>
-type MobId = LifeformId
-type MobDbId = string
-type BlockName = string
-type BlockId = number
-type WorldBlockChangedInfo = {
-	cause: WorldBlockChangedCause | null
-}
-type WorldBlockChangedCause = "Paintball" | "FloorCreator" | "Sapling" | "StemFruit" | "MeltingIce" | "Explosion" | "AutoShape"
-type GameChunk = {
-	blockData: any
-	extraInfo: PersistedExtraInfo
-}
-type PersistedExtraInfo = {
-	specialBlocks: any[]
-	entities: any[]
-	// We allow games and plugins to store custom metadata in the chunk,
-	// but that metadata should be:
-	// - minimal, to avoid issues where the chunk is too large to store;
-	// - updated infrequently, to avoid excessive writes to the DB.
-	customMetadata: any
-}
-type StairsCorner = (_TypeOf["stairsCorners"])[number]
-type MobType = (_TypeOf["mobTypes"])[number]
-type ItemAttributes = {
-	customDisplayName?: string
-	customDescription?: string
-	/** Free-form data kept with the item. \`bar: { fraction, colour? }\` (0 to 1, hex colour) draws a bar under the item's slot. */
-	customAttributes?: Record<string, any>
-}
-type ItemDropOptions = Readonly<
-	Partial<{
-		doPhysics: boolean
-		size: number
-	}>
->
-type AudioEntityOpts = {
-	soundName: string
-	// Base relative volume in [0, 1], before distance attenuation.
-	volume: number
-	// Inverse-distance reference distance in blocks; larger = gentler falloff.
-	refDistance: number
-	// Hard cutoff distance in blocks; beyond this the entity is silent.
-	maxHearDist: number
-	// Playback rate multiplier (1 = normal pitch/speed).
-	rate: number
-}
-type AnimParams = {
-	animTextures: string[]
-	animationInterval: number
-	/**
-	 * Whether each frame fades into the next (Minecraft's \`interpolate\`), rather than cutting to it: one in-between frame
-	 * per pair, at half the interval, for intervals of 200 ms or more. Default true.
-	 */
-	interpolateFrames?: boolean
-}
-type HarvestType = "granule" | "wood" | "rock" | "cuttable"
-type BlockMetadataModelType =
-	| "CentreCross"
-	| "SquareSided"
-	| "CustomPlanes"
-	| "CustomModel"
-	| "Slab"
-	| "Stairs"
-	| "door"
-	| "trapdoor"
-	| "rotatableOffset"
-	| "rotatable"
-	| "fence"
-	| "fenceGate"
-type SpecialToolDrop = { tool: ItemName | ItemName[]; drops: ItemName | BlockName }
-type RecursiveReadonly<T> = T extends Primitive
-	? T
-	: T extends (...args: never[]) => unknown
-		? T
-		: T extends readonly unknown[]
-			? number extends T["length"]
-				? ReadonlyArray<RecursiveReadonly<T[number]>> // T[]
-				: { readonly [K in keyof T]: RecursiveReadonly<T[K]> } // Tuple
-			: Readonly<{ [K in keyof T]: RecursiveReadonly<T[K]> }>
-type Primitive = string | number | boolean | bigint | symbol | undefined | null
-type SoundType = "stone" | "wood" | "gravel" | "grass" | "glass" | "sand" | "snow" | "cloth"
-type GunStatsOverride = Partial<Omit<GunMetadata, NonOverridableStats>>
-type GunMetadata = {
-	gunType: GunCategory // Used for sounds
-	scopeType: "none" | "sniper"
-	muzzleFlashOffsetFromGun: Vec3
-	muzzleFlashScale?: number
-	autoFireWithMouse: boolean
-	fireRate: number
-	fireRateWithHeldTouch?: number
-	/** How fast spread recovers and shot sounds are paced, in ms; unset, the fire interval */
-	cadenceMs?: number
-	/**
-	 * ms from equipping to the first shot. A game overriding fireRate, fireRateWithHeldTouch or cadenceMs without its own
-	 * equipDelay waits the fire interval less 0.9 of cadenceMs instead
-	 */
-	equipDelay?: number
-	burstCount?: number
-	burstDelay?: number
-	damage: number
-	shotPelletCount?: number
-	reloadTime?: number
-	clipSize: number
-	reloadBulletsIndividually?: boolean
-	bulletReloadTime?: number
-	cockTime?: number
-	tagSpeedMult: number
-	subsequentTagSpeedReductionScalar: number
-	inaccuracyStanding: number
-	inaccuracyFromShot: number
-	inaccuracyMovement: number
-	yVelocityInaccuracy: number
-	inaccuracyFromJump: number
-	altInaccuracyStanding: number
-	altInaccuracyFromShot: number
-	altInaccuracyMovement: number
-	recoveryRate: number
-
-	msPerRound?: number // computed from fireRate
-	msPerRoundTouchScreen?: number // computed from fireRateWithHeldTouch
-
-	altYVelocityInaccuracy?: number
-	altInaccuracyFromJump?: number
-
-	hasVerticalInaccuracy?: boolean
-
-	keepScopeOnShot?: boolean
-
-	aimZoomFactor?: number
-
-	// Kickback
-	kickbackDecreaseRate: number
-	minKickback?: number
-	maxKickback?: number
-	kickbackRate?: number
-}
-type NonOverridableStats =
-	// Precomputed values
-	| "msPerRound"
-	| "msPerRoundTouchScreen"
-
-	// These two don't even work lol
-	// TODO: Fix them
-	| "tagSpeedMult"
-	| "subsequentTagSpeedReductionScalar"
-type GunCategory = (_TypeOf["gunCategories"])[number]
-type WeaponComboInfo = Readonly<{
-	comboWindowMs: number
-	comboMultipliers: readonly number[]
-	backstabAngle?: number // If present, hitting an enemy from behind within this angle (radians) skip to end of combo
-}>
-type AnyMetadataItem = Partial<BlockMetadataItem & NonBlockMetadataItem>
-type CustomItemStat = (_TypeOf["customItemStats"])[number]
-type InvenItem = { name: string; amount: number | null; attributes: ItemAttributes; typeObj: any }
-type RecipesForItem = RecursiveReadonly<
-	{
-		requires: { items: ItemName[]; amt: number }[]
-		produces: number
-		station?: string | string[]
-		onCraftedAura?: number
-		isStarterRecipe?: boolean
-		attributes?: ItemAttributes
-	}[]
->
-type EntityType = NetworkedEntityType | "Item" | null
-type NetworkedEntityType =
-	| LifeformType
-	| ThrowableItem
-	// A mesh entity's kind and options are in MeshEntitySchema's fields
-	| "Mesh"
-	| string
-	| "AudioEntity"
-type LifeformType = (_TypeOf["lifeformTypes"])[number]
-type ThrowableItem = string
-type MobHerdId = number
-type MobSpawnOpts<TMobType extends MobType> = Partial<{
-	mobHerdId: MobHerdId
-	spawnerId: PlayerId
-	mobDbId: MobDbId
-	name: string
-	playSoundOnSpawn: boolean
-	variation: MobVariation<TMobType>
-	physicsOpts: Partial<{
-		width: number
-		height: number
-		collidesEntities: boolean
-	}>
-}>
-type MobVariation<TMobType extends MobType> = (_TypeOf["mobVariations"])[TMobType][number]
-type MobSetting = (_TypeOf["mobSettings"])[number]
-type MobSettings<TMobType extends MobType> = {
-	variation: MobVariation<TMobType>
-	name: string
-	maxHealth: number
-	initialHealth: number
-	idleSound: string | null
-	attackSound: string | null
-	secondaryAttackSound: string | null
-	hurtSound: string | null
-	onDeathItemDrops: readonly MobItemDrop[]
-	onDeathParticleTexture: string
-	onDeathAura: number
-	baseWalkingSpeed: number
-	baseRunningSpeed: number
-	walkingSpeedMultiplier: number
-	runningSpeedMultiplier: number
-	jumpCount: number
-	baseJumpImpulseXZ: number
-	baseJumpImpulseY: number
-	jumpMultiplier: number
-	runAwayRadius: number
-	chaseRadius: number
-	territoryRadius: number
-	hostilityRadius: number
-	stoppingRadius: number
-	attackInterval: number
-	attackRadius: number
-	secondaryAttackRadius: number
-	attackDamage: number
-	secondaryAttackDamage: number
-	isReceivingDamageCooldownGlobal: boolean // When the mob is attacked, a short cooldown prevents further damage from the same attack type. If true, all attackers share that cooldown. If false, each attacker has their own.
-	knockbackReceivedMultiplier: number // Scales incoming knockback when the mob is hit: 0 = immune (no knockback), 1 = normal, 2 = double. Applied on top of any worn-armour/effect knockback resistance.
-	attackImpulse: number
-	secondaryAttackImpulse: number
-	rangedAttackInaccuracy: number // Total angular width of the random cone (in radians), 0 = perfectly accurate (laser-aim). Only affects throwable/projectile attacks
-	burstAttackInfo: MobBurstAttackInfo | null
-	secondaryBurstAttackInfo: MobBurstAttackInfo | null
-	heldItemName: ItemName | null
-	heldItemEnchantmentTier: EnchantmentTier | null
-	armour: MobArmour
-	attackItemName: ItemName | null
-	secondaryAttackItemName: ItemName | null
-	swingArmOnAttack: boolean
-	swingArmOnSecondaryAttack: boolean
-	attackEffectName: string | null
-	attackEffectDuration: number
-	warpTargetSpecialAttackInfo: MobWarpTargetSpecialAttackInfo | null
-	combatTetherInfo: MobCombatTetherCombatInfo | null
-	evadeInfo: MobEvadeInfo | null
-	chargeSpecialAttackInfo: MobChargeSpecialAttackInfo | null
-	tameInfo: Readonly<MobTameInfo> | null
-	onTamedHealthMultiplier: number
-	petInfo: Readonly<MobPetInfo> // Instance-specific information related to mob feeding
-	ownerDbId: PlayerDbId | null
-	minFollowingRadius: number
-	maxFollowingRadius: number
-	isRideable: boolean
-	healthRegen: MobHealthRegenSettings | null
-	ridingSpeedMult: number
-	bridgeInfo: MobBridgeInfo | null
-	// Impulse-driven movement (independent slide / jump / random-facing capabilities). \`walking*\` apply while
-	// moving at walking speed (idle wander + walkToPosition), \`running*\` at running speed (chase/flee/follow/
-	// runToPosition). Null = ordinary speed-driven movement.
-	walkingSlideInfo: MobSlideInfo | null
-	runningSlideInfo: MobSlideInfo | null
-	walkingJumpInfo: MobJumpInfo | null
-	runningJumpInfo: MobJumpInfo | null
-	walkingRandomFacingInfo: MobRandomFacingInfo | null
-	runningRandomFacingInfo: MobRandomFacingInfo | null
-	metaInfo: string
-}
-type MobItemDrop = Readonly<{
-	itemName: ItemName
-	probabilityOfDrop?: number
-
-	// If a mob drops an item, then we choose a random amount within these bounds.
-	dropMinAmount?: number
-	dropMaxAmount?: number
-
-	// If true, the item will "burst" out of the mob rather than just dropping.
-	applyBurstImpulseToDrop?: boolean
-}>
-type MobBurstAttackInfo = Readonly<{
-	burstAttackIntervals: readonly number[]
-}>
-type MobArmour = Partial<Readonly<Record<ArmourPart, MobArmourPiece>>>
-type MobWarpTargetSpecialAttackInfo = Readonly<{
-	cooldown: number
-	range: number
-	sound: string | null
-	delay: number
-	minDestinationRadius: number
-	maxDestinationRadius: number
-	swingArm: boolean
-	particleOpts: TempMobParticleOpts | null
-}>
-type MobCombatTetherCombatInfo = Readonly<{
-	range: number
-	particleOpts: MobParticleOpts
-}>
-type MobEvadeInfo = Readonly<{
-	probability: number
-	impulse: number
-	minAngle: number
-	maxAngle: number
-}>
-type MobChargeSpecialAttackInfo = Readonly<{
-	// Multiplier applied to the running speed during the straight dash. Defaults to 1.
-	chargeSpeedMult?: number
-	// Max heading error (radians) at which the mob is considered "facing" its target and may dash. Defaults to a small tolerance.
-	faceTolerance?: number
-	// Pose shown while dashing, reverted to the resting pose when the charge ends. Defaults to "zombie".
-	chargePose?: PlayerPose
-}>
-type MobTameInfo = {
-	tameItemName: ItemName | readonly ItemName[]
-	probabilityOfTame: number
-	isSaddleable?: boolean
-	saddleItemName?: ItemName
-	foodItemNames?: readonly ItemName[]
-	foodItemsWithEffects?: readonly Readonly<ItemNameWithEffects>[]
-	supportsFriendship?: boolean
-	likedFoods?: readonly ItemName[]
-	neutralFoods?: readonly ItemName[]
-	dislikedFoods?: readonly ItemName[]
-	guaranteedDrop?: ItemName
-	commonDrops?: ItemName[]
-	levelUpBonuses?: LevelUpBonuses
-}
-type MobPetInfo = {
-	friendshipPoints: number
-	lastFedAt: number
-	highestFriendshipLevelReached: MobFeedLevel
-	superlikedFood: ItemName | null
-	superlikedFoodKnown: boolean
-	bonusesGained: readonly MobLevelUpBonus[]
-}
-type MobHealthRegenSettings = Readonly<{
-	amount: number
-	interval: number
-	startAfter: number
-}>
-type MobBridgeInfo = Readonly<{
-	// The block to place.
-	blockToPlace: BlockName
-	// If true, only place while stood on solid ground (decorates the surface walked over); if false, place
-	// even while airborne (lets the mob bridge a gap beneath itself).
-	mustBeGrounded: boolean
-	// Only overwrite a cell currently holding one of these blocks, so real terrain is never destroyed.
-	// Omitted means \`["Air"]\` (fill empty space only); an empty array replaces nothing at all, not even
-	// air. A cell already holding \`blockToPlace\` is skipped (would be a no-op).
-	blocksToReplace?: readonly BlockName[]
-	// Vertical offset from the cell the mob occupies. Defaults to 0 (a surface trail); -1 places beneath the
-	// mob's feet (bridging). Non-negative offsets intersect the mob, so \`blockToPlace\` must be non-solid there.
-	yOffset?: number
-	// If a |Decaying variant exists for \`blockToPlace\`, use it to turn blocks into air after \`msToDecay\` ms.
-	msToDecay?: number
-}>
-type MobSlideInfo = Readonly<{
-	// Horizontal impulse at the start of a slide (initial speed = impulse / mass).
-	impulse: number
-	// Lowered friction the burst coasts on (below the mob's normal friction so it carries far), restored on end.
-	friction: number
-	// How long (ms) the low-friction coast lasts.
-	durationBounds: Bounds
-	// Rest (ms) after the coast ends before the next slide. Larger = fewer slides.
-	intervalBounds: Bounds
-}>
-type MobJumpInfo = Readonly<{
-	// Rest (ms) between hops (a hop only fires once grounded). Larger = fewer hops.
-	intervalBounds: Bounds
-}>
-type MobRandomFacingInfo = Readonly<{
-	// Weighted offsets to pick from (via getWeightedRandom); \`weight\`s are non-negative,
-	// and at least one must be greater than 0. E.g. \`[{ offset: Math.PI, weight: 2 },
-	// { offset: 0, weight: 1 }]\` faces backwards twice as often as forwards.
-	offsets: readonly Readonly<{ offset: number; weight: number }>[]
-	// Bounds (ms) between re-rolls.
-	intervalBounds: Bounds
-}>
-type ArmourPart = (_TypeOf["armourPieces"])[number]
-type MobArmourPiece = Readonly<{
-	itemName: ItemName
-	enchantmentTier?: EnchantmentTier
-}>
-type TempMobParticleOpts = Readonly<{
-	duration: number
-}> &
-	MobParticleOpts
-type MobParticleOpts = Readonly<Pick<MeshParticleSystemOpts, "texture" | "colorGradients">>
-type MeshParticleSystemOpts = ParticleSystemOpts &
-	CommonMeshEntityOpts & {
-		height: number
-		width: number
-		depth: number
-		emitRate: number
-		/** Include the followed lifeform's visual offset, including its vehicle seat. */
-		followTargetMeshOffset?: boolean
-		/** Ring emits radially from the perimeter; width/depth set its diameters, height its thickness. */
-		emitterShape?: "box" | "ring"
-		dir1?: number[]
-		dir2?: number[]
-	}
-type CommonMeshEntityOpts = {
-	hideDist?: number
-	meshOffset?: number[]
-	autoRotate?: boolean
-	lineToEId?: EntityId // EntityId to connect to using a line
-}
-type PlayerPose = (_TypeOf["playerPoses"])[number]
-type ItemNameWithEffects = { itemName: ItemName; effects: readonly Readonly<EffectOpts>[]; healAmt?: number }
-type LevelUpBonuses = RecursiveReadonly<Record<MobFeedLevelUpLevels, MobLevelUpBonus>>
-type EffectOpts = { name: PotionEffect; duration: number; level: number }
-type PotionEffect = (_TypeOf["potionEffects"])[number]
-type MobFeedLevelUpLevels = Exclude<MobFeedLevel, 0>
-type MobLevelUpBonus = (_TypeOf["mobLevelUpBonuses"])[number]
-type MobFeedLevel = InclusiveRange<_TypeOf["MAX_MOB_FEED_LEVEL"]>
-type InclusiveRange<N extends number, Arr extends number[] = []> = Arr["length"] extends N
-	? Arr[number] | Arr["length"]
-	: InclusiveRange<N, [...Arr, Arr["length"]]>
-type Bounds = Readonly<MutableBounds>
-type MutableBounds = {
-		min: number
-		max: number
-	}
-type MobAiState = (_TypeOf["mobAiStates"])[number]
-type MobAiStateParams<TState extends MobAiState> = MobWorldView[TState]
-type MobWorldView = {
-	// The mob is stood still, but it still has awareness of its environment.
-	// For example: if the mob is hostile, it will still chase and attack nearby players.
-	idle: null
-	// The mob is stood still, and it has no awareness of its environment.
-	// It will not even react if provoked.
-	disabled: null
-	// The mob is stood still (idle) and is about to turn.
-	idleBeforeTurning: null
-	// The mob has chosen a new direction at random and is turning to face it.
-	turning: null
-	// The mob is stood still (idle) and is about to walk.
-	idleBeforeWalking: null
-	// The mob is walking in the direction it is facing.
-	walking: null
-	// The mob is running away from the target lifeform.
-	runningAway: { targetId: LifeformId }
-	// The mob is chasing the target lifeform.
-	chasing: { targetId: LifeformId }
-	// A charge-attack mob is stood still, rotating at its \`turnRate\` until it faces the target,
-	// at which point it captures the target's current position and transitions to \`charging\`.
-	turningBeforeCharging: { targetId: LifeformId }
-	// A charge-attack mob is dashing straight at the position of the target captured when it
-	// entered the state, ignoring the target's live position mid-dash (so the charge is dodgeable).
-	charging: { targetId: LifeformId }
-	// The mob is following the target lifeform.
-	// It will stop if it is within the \`minFollowingDistance\` (mob setting) of the target,
-	// and teleport to the target if it is outside the \`maxFollowingDistance\` (mob setting) of the target.
-	following: { targetId: LifeformId }
-	// The mob is stood still looking at the target.
-	watching: { targetId: LifeformId }
-	// The mob is walking towards the position.
-	// It will stop if it is within the \`stoppingRadius\` (mob setting) of the position.
-	walkingToPosition: { pos: Pos }
-	// The mob is running towards the position.
-	// It will stop if it is within the \`stoppingRadius\` (mob setting) of the position.
-	runningToPosition: { pos: Pos }
-}
-type MobAiStateOptions = {
-	/**
-	 * Keep the mob in this state until you set another one: it never times out, ignores nearby players and doesn't
-	 * fight back when hit. It still leaves the state when the state ends itself, such as when its target leaves the
-	 * game or turns invisible, or when it is tamed. A charge can't be held: it lasts one leg as usual.
-	 */
-	hold?: boolean
-}
-type MeshEntityType = keyof MeshEntityOpts
-type MeshEntityOpts = {
-	Box: CommonMeshEntityOpts & {
-		width: number
-		height: number
-		depth: number
-		diffuseColor?: number[]
-		emissiveColor?: number[]
-		backFaceCulling?: boolean // Default true
-		texture?: string // Can be a blockname. Wraps every one block
-		faceUV?: number[][]
-		animateTexture?: boolean // If true, \`texture\` must be an animated block name (e.g. "Lava", "Red Portal") and the Box cycles through its frames.
-	}
-	BloxdBlock: CommonMeshEntityOpts & {
-		blockName: BlockNameOrId
-		size: number | [number, number, number]
-		/** Enchantment sheen, drawn only when attached to an entity node, as a worn glider is. */
-		enchantmentTier?: EnchantmentTier
-	}
-	Person: CommonMeshEntityOpts & {
-		size?: number
-		textures?: Partial<Cosmetics>
-		pose?: PlayerPose
-	}
-	Leaderboard: LeaderboardMeshOpts
-	ParticleEmitter: MeshParticleSystemOpts
-}
-type MeshEntityPhysicsOpts = {
-	doPhysics: boolean
-	onCollideTerrain?: () => void // Unsupported for custom code
-	collidesEntities?: boolean
-	collideBits?: number // bitmask category of this entity
-	collideMask?: number // bitmask category of entities this entity collides with
-	heightExpandAmt?: number // expand hitbox height by this amount
-	widthExpandAmt?: number // expand hitbox width by this amount
-}
-type BlockNameOrId = BlockName | BlockId
-type Cosmetics = Record<CosmeticType, CosmeticName>
-type LeaderboardMeshOpts = CommonMeshEntityOpts & {
-	leaderboard: string
-	title?: string
-	scoreLabel?: string
-	/** Uniform scale of the 2.5 by 3.75 block board. Defaults to 1. */
-	size?: number
-	/** Absolute width in blocks, overriding the width derived from size. */
-	width?: number
-	/** Absolute height in blocks, overriding the height derived from size. */
-	height?: number
-}
-type CosmeticType = (_TypeOf["cosmeticTypes"])[number]
-type CosmeticName = string
-type QTEType = keyof QTEDefinitions
-type QTEClientParameters<T extends QTEType = QTEType> = {
-	type: T
-	parameters: QTEParametersForType<T>
-}
-type QTEParametersForType<T extends QTEType> = QTEDefinitions[T]["params"]
-interface QTEDefinitions {
-	progressBar: { params: ProgressBarQteParams; state: ProgressBarQteState }
-	timedClick: { params: TimedClickQteParams; state: TimedClickQteState }
-	gravityBar: { params: GravityBarQteParams; state: GravityBarQteState }
-	precisionBar: { params: PrecisionBarQteParams; state: PrecisionBarQteState }
-	rhythmClick: { params: RhythmClickQteParams; state: RhythmClickQteState }
-}
-type ProgressBarQteParams = Readonly<{
-	/** Starting progress value (0-100) @default 30 */
-	progressStartValue?: number
-	/** How much progress drains each tick while the player isn't clicking @default 0.075 */
-	progressDecreasePerTick: number
-	/** How much progress is gained per click @default 5 */
-	progressPerClick: number
-	/** If true, the QTE fails when progress reaches 0; otherwise progress clamps at 0 @default false */
-	canFail: boolean
-	/** Rich text shown as the QTE prompt @default [{ str: "Click repeatedly to complete!" }] */
-	description: CustomTextStyling
-	/** Icon displayed on the click target @default "fa-solid fa-computer-mouse" */
-	clickIcon: string
-	/** Scale multiplier for the click icon (must be > 0) @default 1 @sensibleDefault 3 */
-	scale?: number
-	/** Rotation in degrees for the click icon (must be ≥ 0) @default 15 */
-	rotation?: number
-}>
-type ProgressBarQteState = {
-	progress: number
-	clickCount: number
-}
-type TimedClickQteParams = Readonly<{
-	/** Duration in milliseconds the player has to click @default 3000 */
-	timeWindow: number
-	/** Icon displayed on the click target @default "fa-solid fa-computer-mouse" */
-	icon: string
-	/** Rich text shown as the QTE prompt @default [{ str: "Click to complete the QTE!" }] */
-	label: CustomTextStyling
-	/** Whether to display a countdown timer @default true */
-	showTimer: boolean
-	/** Scale multiplier for the icon (must be > 0) @default 1 @sensibleDefault 3 */
-	scale?: number
-	/** Rotation in degrees for the icon (must be ≥ 0) @default 15 */
-	rotation?: number
-	/** If true, the icon pulses with a breathing animation anchored to the centre @default false */
-	breatheCenter?: boolean
-}>
-type TimedClickQteState = {
-	timeRemaining: number
-	timeWindow: number
-}
-type GravityBarQteParams = Readonly<{
-	/** Starting progress value (0-100) @default 30 */
-	progressStartValue?: number
-	/** Size of the player's catch zone as a fraction of the bar (must be > 0, 0-1) @default 0.25 */
-	catchZoneSize: number
-	/** Speed at which the mover travels along the bar (must be > 0) @default 3 */
-	moverSpeed: number
-	/** How erratically the mover changes direction (higher = more unpredictable) @default 0.8 */
-	moverErraticness: number
-	/** Downward pull on the catch zone when the player isn't holding click @default 1 */
-	gravity: number
-	/** Upward force on the catch zone while the player holds click @default 1.5 */
-	riseSpeed: number
-	/** Progress gained per second while the mover is inside the catch zone @default 8 */
-	progressGainPerSecond: number
-	/** Progress lost per second while the mover is outside the catch zone @default 4 */
-	progressDrainPerSecond: number
-	/** If true, the QTE fails when progress reaches 0; otherwise progress clamps at 0 @default false */
-	canFail: boolean
-	/** Rich text shown as the QTE prompt @default [{ str: "Hold to catch!" }] */
-	description: CustomTextStyling
-	/** Icon displayed on the mover @default "Moonfish" */
-	icon?: string
-}>
-type GravityBarQteState = {
-	catchZonePosition: number
-	catchZoneSize: number
-	moverPosition: number
-	progress: number
-	isCatching: boolean
-}
-type PrecisionBarQteParams = Readonly<{
-	/** Speed of the marker in full bar-widths per second (must be > 0, e.g. 1.0 = one full sweep per second) @default 0.5 */
-	speed: number
-	/** Fraction of the bar that counts as the success zone, centred in the middle (must be > 0, 0-1, e.g. 0.15 = 15%) @default 0.15 */
-	successZoneSize: number
-	/** Rich text shown as the QTE prompt @default [{ str: "Click when the marker is within the green zone." }] */
-	label: CustomTextStyling
-	/** Icon displayed on the marker @default "" */
-	icon?: string
-	/** Scale multiplier for the icon (must be > 0) @default 1 */
-	scale?: number
-	/** Rotation in degrees for the icon (must be ≥ 0) @default 0 */
-	rotation?: number
-}>
-type PrecisionBarQteState = {
-	/** Marker position as 0–1 where 0.5 is the centre */
-	markerPosition: number
-}
-type RhythmClickQteParams = Readonly<{
-	/** Number of successful clicks needed to complete the QTE (must be a positive integer) @default 5 */
-	requiredSuccesses: number
-	/** Duration in milliseconds for the outer circle to shrink from max size to centre (must be > 0) @default 1200 */
-	shrinkDurationMs: number
-	/** Fraction of the inner circle radius that counts as a successful overlap (must be > 0, 0-1, e.g. 0.15 = ±15%) @default 0.15 */
-	toleranceFraction: number
-	/** Max misses allowed before failing. If omitted, unlimited misses are permitted (must be a non-negative integer) @default 3 */
-	maxMisses?: number
-	/** Rich text shown as the QTE prompt @default [{ str: "Click when the circles align!" }] */
-	label: CustomTextStyling
-	/** Icon displayed in the centre of the circles @default "" */
-	icon?: string
-}>
-type RhythmClickQteState = {
-	/** Current outer circle radius as a fraction of the max radius (1 = fully expanded, 0 = at centre) */
-	outerCircleProgress: number
-	/** Number of successful clicks so far */
-	successes: number
-	/** Number of required successes to complete */
-	requiredSuccesses: number
-	/** Number of misses so far */
-	misses: number
-	/** Result of the most recent click: null if no click yet, true if hit, false if miss */
-	lastClickResult: boolean | null
-}
-type QTERequestId = number
-type UiRequestId = number
-type IngameIconName = (_TypeOf["ingameIconNames"])[number]
-type InbuiltEffectInfo = { inbuiltLevel: number; initiatorId?: PlayerId }
-type PlayerPhysicsState<TPhysicsType extends PhysicsType> = Readonly<{ type: TPhysicsType; tier: PhysicsTier<TPhysicsType> }>
-type PhysicsTier<TPhysicsType extends PhysicsType> = PhysicsTiers[TPhysicsType] | null
-type PhysicsTiers = {
-	[0]: null
-	[1]: BoatTier
-	[2]: GliderTier
-	[3]: BalloonTier
-	[4]: SleepingTier
-	[5]: null
-	[6]: CarTier
-	[7]: null
-}
-type VehicleSeat = Readonly<{
-	role: "driver" | "passenger"
-	localOffset: Pos
-}>
-type SettableVehicleSetting = VehicleSetting | BlockVehicleSetting
-type SettableVehicleSettingValue<TSetting extends SettableVehicleSetting> = TSetting extends VehicleSetting
-	? VehicleSettingValue<TSetting>
-	: BlockVehicleSettingValue<TSetting>
-type VehicleSetting = Exclude<keyof ResolvedPhysicsSettings<PhysicsType>, ByBlockRecordKey | "upwardImpulseOnUse">
-type BlockVehicleSetting = string
-type ResolvedPhysicsSettings<TPhysicsType extends PhysicsType> = DefaultPhysicsTypeSettings & AllPhysicsSettings[TPhysicsType]
-type ByBlockRecordKey = string
-type DefaultPhysicsTypeSettings = Readonly<{
-	/** How heavy it is. Heavier things resist being pushed around, and sink rather than float. */
-	mass: number
-	/** How much water and lava slow it down. \`-1\` uses the world's normal drag. */
-	fluidDrag: number
-	/** \`fluidDrag\` for sideways movement only. \`-1\` falls back to \`fluidDrag\`. */
-	fluidDragHorizontal: number
-	/** \`fluidDrag\` for up-and-down movement only. \`-1\` falls back to \`fluidDrag\`. */
-	fluidDragVertical: number
-	/** How hard gravity pulls it down, compared to a normal player. \`0\` = it never falls. */
-	gravityMultiplier: number
-	/** How wide it is, in blocks. */
-	width: number
-	/** How tall it is, in blocks. */
-	height: number
-	/** Whether the rider is allowed to sprint. */
-	canRun: boolean
-	/**
-	 * How hard the rider pushes off the ground when jumping, compared to a normal jump. \`0\` = cannot jump.
-	 * Multiplies the \`jumpAmount\` client option rather than replacing it, and heavier types need a bigger
-	 * value to reach the same height.
-	 */
-	jumpMultiplier: number
-	/** An upward shove the moment the rider uses the vehicle, like a balloon lifting off. \`0\` = none. */
-	upwardImpulseOnUse: number
-	/** Whether it climbs one-block steps by itself, rather than the rider jumping them. */
-	canAutoStep: boolean
-	/** Overrides \`canAutoStep\` for particular blocks, by block name. Unlisted blocks use \`canAutoStep\`. */
-	canAutoStepByBlock: Readonly<Record<BlockName, boolean>>
-	/**
-	 * Where the rider sits, as \`[x, y, z]\` blocks from the middle of the vehicle. A rideable mob defaults
-	 * to its own ride height rather than to this type's value.
-	 */
-	riderOffset: Pos
-	/** How the rider's body is posed while riding. */
-	pose: PlayerPose
-	/**
-	 * A badge shown to the rider for as long as they ride. \`null\` = none. \`icon\` is an ingame icon or an
-	 * item name. \`name\` must be one that a physics type already uses, such as \`"Driving"\` or \`"Boating"\`,
-	 * because only those are cleared again when the rider gets off.
-	 */
-	effect: { name: string; icon: string; duration?: number } | null
-	/** How quickly it slows to a stop once the rider stops steering. Bigger = stops sooner. */
-	standingFriction: number
-	/** Its top speed, as a multiplier on normal walking speed. \`0\` = it cannot move. */
-	speedMultiplier: number
-	/** An extra speed multiplier used while on solid ground. */
-	landSpeedMultiplier: number
-	/** An extra speed multiplier used while in water or lava. */
-	fluidSpeedMultiplier: number
-	/** An extra speed multiplier used while in the air. */
-	airSpeedMultiplier: number
-	/**
-	 * Extra speed multipliers for the block underfoot, by block name. Solid ground only, and stacks with
-	 * \`speedMultiplier\` and the land/fluid/air multiplier. When several listed blocks are underfoot, the
-	 * value furthest from \`1\` wins.
-	 */
-	speedMultiplierByBlock: Readonly<Record<BlockName, number>>
-	/** Caps how hard it is pushed while far below the speed it is aiming for, so it takes longer to get going. \`0\` = no cap. */
-	maxPushDistance: number
-	/** How hard steering pushes it. Bigger = it speeds up and changes direction more sharply. */
-	movementForceMultiplier: number
-	/** Turns off the usual steering-driven movement, as for a sleeping player. */
-	disableBaseMovement: boolean
-	/** Whether footstep sounds are silenced. */
-	disableFootstepSounds: boolean
-	/**
-	 * How bouncy walls are: \`0\` stops dead, \`1\` keeps all its speed. Stacks with the \`bounciness\` client
-	 * option. Rebounds have a floor speed, so slow bumps come back faster than they arrived.
-	 */
-	horizontalBounciness: number
-	/**
-	 * How bouncy the floor is: \`0\` lands flat, \`1\` bounces back as fast as it fell. Stacks with the
-	 * \`bounciness\` client option, and has the same rebound floor as \`horizontalBounciness\`.
-	 */
-	verticalBounciness: number
-	/** How fast it must hit a wall, in blocks per second, before \`horizontalBounciness\` applies. \`0\` = any contact. */
-	minHorizontalSpeedToBounce: number
-	/**
-	 * How fast it must be falling, in blocks per second, before \`verticalBounciness\` applies. \`0\` bounces
-	 * off any contact, leaving a bouncy vehicle jiggling in place.
-	 */
-	minVerticalSpeedToBounce: number
-	/** Shakes the camera when it hits a wall hard enough; it need not bounce. \`null\` = no shake. See \`ImpactCameraShakeOpts\`. */
-	horizontalImpactCameraShake: ImpactCameraShakeOpts | null
-	/** Shakes the camera when it hits a floor or ceiling hard enough; it need not bounce. \`null\` = no shake. See \`ImpactCameraShakeOpts\`. */
-	verticalImpactCameraShake: ImpactCameraShakeOpts | null
-	/**
-	 * Makes it steer like a car: left and right turn it rather than sliding it sideways. \`null\` moves
-	 * freely in any direction, like a walking player. See \`SteeringOpts\`.
-	 */
-	steering: SteeringOpts | null
-	/** Locks the direction it faces, in radians, ignoring the camera. \`null\` = it faces wherever the camera or steering points. */
-	fixedHeading: number | null
-	/** Makes it skip across water like a stone once it is fast enough. \`null\` = it floats normally. See \`FluidSkipOpts\`. */
-	fluidSkip: FluidSkipOpts | null
-	/**
-	 * Lets it fly once mid-air and descending. Supported movement types: \`GLIDING\` and \`FLOATING\`.
-	 * \`null\` = it cannot fly. See \`AirborneModeOpts\`.
-	 */
-	airborneMode: AirborneModeOpts | null
-	/** How it moves while flying. \`null\` = it steers the same way it does on the ground. See \`AirborneMovementOpts\`. */
-	airborneMovement: AirborneMovementOpts | null
-	/**
-	 * Caps how fast it falls while flying. Only used when \`airborneMovement\` is \`"heading"\`.
-	 * \`null\` = it falls at full speed. See \`FallSpeedLimitOpts\`.
-	 */
-	airborneFallSpeedLimit: FallSpeedLimitOpts | null
-}>
-type AllPhysicsSettings = {
-	[0]: {}
-	[1]: {}
-	[2]: {}
-	[3]: {}
-	[4]: {}
-	[5]: {}
-	[6]: {}
-	[7]: {}
-}
-type ImpactCameraShakeOpts = Readonly<{
-	/** The crash speed, in blocks per second, needed to shake at all, so small bumps are ignored. */
-	minSpeed: number
-	/** How much shake each extra block per second adds. Shake runs from \`0\` (still) to \`1\` (violent). */
-	intensityPerSpeed: number
-	/** The most shake one crash can cause. */
-	maxIntensity: number
-	/** How long the shake lasts, in milliseconds. */
-	durationMs: number
-}>
-type SteeringOpts = Readonly<{
-	/** How fast it turns, in radians per second. Bigger = snappier steering and tighter corners. */
-	turnRate: number
-	/** How much speed a hard corner costs, from \`0\` (none) to \`1\` (all of it). */
-	corneringSpeedDamping: number
-	/**
-	 * How much it grips the ground. \`0\` slides sideways like a hovercraft on ice; bigger values make it
-	 * follow its nose round corners. Solid ground only, unless \`gripInFluid\` is on.
-	 */
-	gripStrength: number
-	/** Whether it also grips while floating in water, so a boat can corner like a kart. */
-	gripInFluid: boolean
-}>
-type FluidSkipOpts = Readonly<{
-	/** How fast it must be going, in blocks per second, to start skipping. */
-	minSpeed: number
-	/** How much of its speed above \`minSpeed\` becomes upward launch speed. Bigger = higher skips. */
-	launchSpeedFraction: number
-	/** How snappily it leaves the water. Bigger = a sharp pop; smaller = a slow heave. */
-	launchApproachRate: number
-}>
-type AirborneModeOpts = Readonly<{
-	/** Which movement type to switch to: \`GLIDING\` for gliders, \`FLOATING\` for balloons. */
-	activeMovementType: MovementType
-	/** How long the flying lasts, in milliseconds, before it drops the rider. \`null\` = no limit. */
-	durationMs: number | null
-	/** Whether the flying ending also throws the rider off, as a popping balloon does. */
-	exitsVehicleOnEnd: boolean
-}>
-type AirborneMovementOpts = HeadingAirborneMovement | CameraDirectionAirborneMovement
-type FallSpeedLimitOpts = Readonly<{
-	/** The fastest it may fall, in blocks per second. */
-	maxFallSpeed: number
-	/** Roughly how long, in seconds, it takes to slow back to the limit. Smaller = a firmer catch. */
-	slowDownSeconds: number
-	/** Whether to also cancel gravity while holding it back, so the limit is not slowly overpowered. */
-	compensateGravity: boolean
-}>
-type HeadingAirborneMovement = Readonly<{ model: "heading" }>
-type CameraDirectionAirborneMovement = Readonly<{
-	model: "cameraDirection"
-	/** The fastest it can fly. Better gliders get a bigger value, and dive and climb more sharply. */
-	maxSpeed: number
-	/** The slowest it can fly. It never stalls below this, however steeply it climbs. */
-	minSpeed: number
-	/** How much looking up or down changes its speed. Bigger = dives gain speed quickly. */
-	pitchAcceleration: number
-	/** How much drag slows it each tick. \`0\` = none. */
-	friction: number
-	/** How many ticks an outside shove - a fuel boost, or knockback - keeps its momentum before flight takes over again. */
-	impulseDecayTicks: number
-	/** How strongly it is nudged forwards, then gently downwards, so a level glider sinks slowly. */
-	biasMagnitude: number
-	/** How much leftover speed from a shove is shed each tick. */
-	excessVelocityBleedPerTick: number
-}>
-type PerBlockVehicleSetting = (_TypeOf["perBlockVehicleSettings"])[number]
-type VehicleSettingValue<TVehicleSetting extends StoredVehicleSetting> = ResolvedPhysicsSettings<PhysicsType>[TVehicleSetting]
-type BlockVehicleSettingValue<TSetting extends string> = {
-	[TPerBlockSetting in PerBlockVehicleSetting]: TSetting extends string
-		? PerBlockVehicleSettingValue<TPerBlockSetting>
-		: never
-}[PerBlockVehicleSetting]
-type PerBlockVehicleSettingValue<TSetting extends PerBlockVehicleSetting> = VehicleSettingValue<string>[BlockName]
-type MeshEntityVehicleType = (_TypeOf["meshEntityVehiclesTypes"])[number]
-type VehicleSpawnOpts = Partial<{
-	spawnerId: PlayerId
-}>
-type AngleDir = {
-	theta: number
-	phi: number
-}
-type BlockRaycastResult = {
-	blockID: BlockId // The block ID of the block that was hit
-	position: Pos // The position of the block that was hit
-	normal: Pos // The normal of the face that was hit
-	adjacent: Pos // The position of the block adjacent to the hit face
-} | null
-type MeshParticleSystemUpdates = Record<EntityId, Record<NodeName, MeshParticleSystemUpdate>>
-type MeshParticleSystemUpdate = {
-	particleSystemDir1?: number[]
-	particleSystemDir2?: number[]
-	particleSystemMinSize?: number
-	particleSystemMaxSize?: number
-	particleSystemPlayingState?: boolean
-	particleSystemColorGradients?: TimeColorGradient[]
-}
-type UgcCurrencyInfo = {
-	amount: number
-	icon: string
-	iconColour?: string
-	persistent?: boolean
-	hidden?: boolean
-	subtext?: string | CustomTextStyling
-}
-type UserCallbacks = "tick" | "onClose" | "onPlayerJoin" | "onPlayerLeave" | "onPlayerJump" | "onRespawnRequest" | "playerCommand" | "onPlayerChat" | "onPlayerAttemptChangeBlock" | "onPlayerChangeBlock" | "onBlockStand" | "onBlockStandStart" | "onBlockStandStop" | "onPlayerAttemptCraft" | "onPlayerCraft" | "onPlayerAttemptOpenChest" | "onPlayerOpenedChest" | "onPlayerMoveItemOutOfInventory" | "onPlayerDropItem" | "onPlayerPickedUpItem" | "onPlayerSelectInventorySlot" | "onPlayerAttack" | "onPlayerDamagingOtherPlayer" | "onPlayerDamagingMob" | "onMobDamagingPlayer" | "onMobDamagingOtherMob" | "onAttemptKillPlayer" | "onPlayerKilledOtherPlayer" | "onMobKilledPlayer" | "onPlayerKilledMob" | "onMobKilledOtherMob" | "onPlayerPotionEffect" | "onPlayerDamagingMeshEntity" | "onPlayerBreakMeshEntity" | "onPlayerUsedThrowable" | "onPlayerThrowableHitTerrain" | "onTouchscreenActionButton" | "onPlayerMoveInvenItem" | "onPlayerMoveItemIntoIdxs" | "onPlayerSwapInvenSlots" | "onPlayerMoveInvenItemWithAmt" | "onPlayerAttemptAltAction" | "onPlayerAltAction" | "onPlayerClick" | "onPlayerClickUp" | "onClientOptionUpdated" | "onMobSettingUpdated" | "onInventoryUpdated" | "onChestUpdated" | "onWorldAttemptChangeBlock" | "onWorldChangeBlock" | "onCreateBloxdMeshEntity" | "onEntityCollision" | "onPlayerAttemptSpawnMob" | "onWorldAttemptSpawnMob" | "onPlayerSpawnMob" | "onWorldSpawnMob" | "onWorldAttemptDespawnMob" | "onMobDespawned" | "onPlayerAttemptSpawnVehicle" | "onWorldAttemptSpawnVehicle" | "onPlayerSpawnVehicle" | "onWorldSpawnVehicle" | "onVehicleDespawned" | "onEntityDeleted" | "onChunkLoaded" | "onPlayerRequestChunk" | "onItemDropCreated" | "onPlayerStartChargingItem" | "onPlayerFinishChargingItem" | "onPlayerAttemptFish" | "onPlayerSucceededFishCatch" | "onPlayerFailedFishCatch" | "onPlayerFinishQTE" | "onPlayerToggledShopMenu" | "onPlayerBoughtShopItem" | "onPlayerPlayedEmote" | "onPlayerEnteredVehicle" | "onPlayerExitedVehicle" | "onPlayerPressedButton" | "onPlayerReleasedButton" | "onUiRequestResponded" | "doPeriodicSave"
-type WorldGamemode = (_TypeOf["worldGamemodes"])[number]
-type QueuedCommandId = string
-type QueuedStatusString = (_TypeOf["QUEUED_COMMAND_STATUS_STRINGS"])[keyof _TypeOf["QUEUED_COMMAND_STATUS_STRINGS"]]
-type UiRequestClientParameters = {
-	type: "standard" | "rewardedAd"
-	title: string | CustomTextStyling
-	icons?: string[]
-	acceptText?: string | CustomTextStyling
-	denyText?: string | CustomTextStyling
-	successText?: string | CustomTextStyling
-	autoDismissAfterMs?: number
-}
-type MultiBlockInfo = {
-	positions: { block: string; id: number; x: number; y: number; z: number }[]
-}
-type DamageInfo = Readonly<{
-	cause: DamageCause | null
-}>
-type BoughtShopItem = Omit<ShopItem, "boughtCallback" | "schematicId" | "isRewardedAd">
-type OnPlayerChatObjectResponse = Record<PlayerId, false | ChatMessageObject>
-type ChatMessageObject = {
-	prefixContent?: ChatTags
-	chatContent?: CustomTextStyling
-}
-type FishingAttemptOptions = {
-	/** Item selected for this attempt's reward. Defaults to an engine-selected fish. */
-	caughtItemName?: ItemName
-	/** Delay after entering water, in milliseconds. Defaults to the rod's metadata config. */
-	biteDelayMs?: number
-	/** Defaults to a timed-click QTE with a nine-second window. */
-	qte?: { [T in QTEType]: QTEClientParameters<T> }[QTEType]
-}
-interface _TypeOf {
-	lifeformBodyParts: readonly ["Torso", "Head", "ArmRight", "ArmLeft", "LegLeft", "LegRight"]
-	damageCauses: readonly ["Melee", "Projectile", "Gun", "Explosion", "Spikes", "Fall", "Stomp", "Thorns", "Effect"]
-	enchantmentTiers: readonly ["Tier 1", "Tier 2", "Tier 3", "Tier 4", "Tier 5"]
-	ranks: readonly ["developer", "admin", "super", "youtuber", "creatorLevel1", "creatorLevel2", "creatorLevel3"]
-	noaActions: readonly ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo"]
-	SPEECH_VOICE_PRESETS: { readonly soft: { readonly waveform: "sine"; readonly pitchHz: 300; readonly glideSemitones: -0.5; readonly durationMs: 80; readonly attackMs: 6; readonly releaseMs: 18; readonly lowpassHz: any; readonly volume: 0.6; readonly intonation: { readonly variationSemitones: 1.2; readonly declineSemitones: 1.5; readonly questionRiseSemitones: 3.5; readonly exclaimLiftSemitones: 1.5; }; readonly syllableMs: 60; }; readonly regular: { readonly waveform: "triangle"; readonly pitchHz: 195; readonly glideSemitones: -0.6; readonly durationMs: 70; readonly attackMs: 2; readonly releaseMs: 12; readonly lowpassHz: any; readonly volume: 1; readonly intonation: { readonly variationSemitones: 1.5; readonly declineSemitones: 2; readonly questionRiseSemitones: 4; readonly exclaimLiftSemitones: 2; }; readonly syllableMs: 52; }; readonly dark: { readonly waveform: "sawtooth"; readonly pitchHz: 80; readonly glideSemitones: -0.6; readonly durationMs: 85; readonly attackMs: 6; readonly releaseMs: 16; readonly lowpassHz: 420; readonly volume: 1.05; readonly intonation: { readonly variationSemitones: 1; readonly declineSemitones: 3.5; readonly questionRiseSemitones: 2.5; readonly exclaimLiftSemitones: 1; }; readonly syllableMs: 64; }; readonly "high-pitched": { readonly waveform: "triangle"; readonly pitchHz: 300; readonly glideSemitones: -0.8; readonly durationMs: 55; readonly attackMs: 2; readonly releaseMs: 10; readonly lowpassHz: any; readonly volume: 0.8; readonly intonation: { readonly variationSemitones: 2.2; readonly declineSemitones: 2; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 3; }; readonly syllableMs: 44; }; readonly gruff: { readonly waveform: "sawtooth"; readonly pitchHz: 105; readonly glideSemitones: -0.8; readonly durationMs: 75; readonly attackMs: 4; readonly releaseMs: 14; readonly lowpassHz: 900; readonly volume: 0.85; readonly intonation: { readonly variationSemitones: 1.2; readonly declineSemitones: 3; readonly questionRiseSemitones: 3; readonly exclaimLiftSemitones: 2; }; readonly syllableMs: 58; }; readonly lively: { readonly waveform: "square"; readonly pitchHz: 230; readonly glideSemitones: 0.6; readonly durationMs: 55; readonly attackMs: 2; readonly releaseMs: 10; readonly lowpassHz: 2400; readonly volume: 0.5; readonly intonation: { readonly variationSemitones: 2.6; readonly declineSemitones: 1.5; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 3.5; }; readonly syllableMs: 44; }; readonly posh: { readonly waveform: "triangle"; readonly pitchHz: 175; readonly glideSemitones: 1.2; readonly durationMs: 90; readonly attackMs: 6; readonly releaseMs: 20; readonly lowpassHz: 2000; readonly volume: 1; readonly intonation: { readonly variationSemitones: 2; readonly declineSemitones: 4; readonly questionRiseSemitones: 5; readonly exclaimLiftSemitones: 2.5; }; readonly syllableMs: 60; }; readonly mechanical: { readonly waveform: "square"; readonly pitchHz: 140; readonly glideSemitones: 0; readonly durationMs: 60; readonly attackMs: 0; readonly releaseMs: 4; readonly lowpassHz: 1400; readonly volume: 0.55; readonly intonation: { readonly variationSemitones: 0; readonly declineSemitones: 0; readonly questionRiseSemitones: 0; readonly exclaimLiftSemitones: 0; }; readonly syllableMs: 62; }; }
-	SPEECH_SYNTH_WAVEFORMS: readonly ["sine", "triangle", "square", "sawtooth"]
-	CAMERA_EASING_NAMES: readonly ["linear", "easeIn", "easeOut", "easeInOut"]
-	CAMERA_PLAYER_FACINGS: readonly ["movement", "camera", "cursor"]
-	CAMERA_OFFSET_SPACES: readonly ["world", "target"]
-	shopItemBadgeTypes: readonly ["new", "lucky"]
-	playerMeshNamedNodes: readonly ["TorsoNode", "HeadMesh", "ArmRightMesh", "ArmLeftMesh", "LegLeftMesh", "LegRightMesh"]
-	healthbarDisplays: readonly ["always", "never", "onDamage"]
-	nameTagBorderStyles: readonly ["solid", "glow", "double"]
-	nameTagBorderTargets: readonly ["both", "nametag", "healthbar"]
-	particlePresets: { readonly damageInner: unknown; readonly damageOuter: unknown; readonly bouncinessInner: unknown; readonly bouncinessOuter: unknown; readonly healthRegenInner: unknown; readonly healthRegenOuter: unknown; readonly speedInner: unknown; readonly speedOuter: unknown; readonly damageReductionInner: unknown; readonly damageReductionOuter: unknown; readonly invisibleInner: unknown; readonly invisibleOuter: unknown; readonly jumpBoostInner: unknown; readonly jumpBoostOuter: unknown; readonly knockbackInner: unknown; readonly knockbackOuter: unknown; readonly poisonedInner: unknown; readonly poisonedOuter: unknown; readonly slownessInner: unknown; readonly slownessOuter: unknown; readonly weaknessInner: unknown; readonly weaknessOuter: unknown; readonly cleansedInner: unknown; readonly cleansedOuter: unknown; readonly instantDamageInner: unknown; readonly instantDamageOuter: unknown; readonly healingPulseInner: unknown; readonly healingPulseOuter: unknown; readonly instantHealthInner: unknown; readonly instantHealthOuter: unknown; readonly hasteInner: unknown; readonly hasteOuter: unknown; readonly shieldInner: unknown; readonly shieldOuter: unknown; readonly doubleJumpInner: unknown; readonly doubleJumpOuter: unknown; readonly heatResistanceInner: unknown; readonly heatResistanceOuter: unknown; readonly thiefInner: unknown; readonly thiefOuter: unknown; readonly miningYieldInner: unknown; readonly miningYieldOuter: unknown; readonly brainRotInner: unknown; readonly brainRotOuter: unknown; readonly auraInner: unknown; readonly auraOuter: unknown; readonly wallClimbingInner: unknown; readonly wallClimbingOuter: unknown; readonly airWalkInner: unknown; readonly airWalkOuter: unknown; readonly pickpocketerInner: unknown; readonly pickpocketerOuter: unknown; readonly lifestealInner: unknown; readonly lifestealOuter: unknown; readonly blindnessInner: unknown; readonly blindnessOuter: unknown; readonly poopyInner: unknown; readonly poopyOuter: unknown; readonly glowingInner: unknown; readonly glowingOuter: unknown; readonly nightVisionInner: unknown; readonly nightVisionOuter: unknown; readonly xRayVisionInner: unknown; readonly xRayVisionOuter: unknown; readonly defaultFirecrackerSmall: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly defaultFirecrackerLarge: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mango: unknown; readonly yellowFirecrackerSmall: unknown; readonly yellowFirecrackerLarge: unknown; readonly limeFirecrackerSmall: unknown; readonly limeFirecrackerLarge: unknown; readonly greenFirecrackerSmall: unknown; readonly greenFirecrackerLarge: unknown; readonly cyanFirecrackerSmall: unknown; readonly cyanFirecrackerLarge: unknown; readonly blueFirecrackerSmall: unknown; readonly blueFirecrackerLarge: unknown; readonly purpleFirecrackerSmall: unknown; readonly purpleFirecrackerLarge: unknown; readonly pinkFirecrackerSmall: unknown; readonly pinkFirecrackerLarge: unknown; readonly redFirecrackerSmall: unknown; readonly redFirecrackerLarge: unknown; readonly orangeFirecrackerSmall: unknown; readonly orangeFirecrackerLarge: unknown; readonly blackFirecrackerSmall: unknown; readonly blackFirecrackerLarge: unknown; readonly brownFirecrackerSmall: unknown; readonly brownFirecrackerLarge: unknown; readonly grayFirecrackerSmall: unknown; readonly grayFirecrackerLarge: unknown; readonly lightBlueFirecrackerSmall: unknown; readonly lightBlueFirecrackerLarge: unknown; readonly lightGrayFirecrackerSmall: unknown; readonly lightGrayFirecrackerLarge: unknown; readonly magentaFirecrackerSmall: unknown; readonly magentaFirecrackerLarge: unknown; readonly whiteFirecrackerSmall: unknown; readonly whiteFirecrackerLarge: unknown; readonly brainRot: unknown; readonly stomp: unknown; readonly fertiliser: unknown; readonly bonemeal: unknown; readonly mobTameSuccess: unknown; readonly mobTameFailure: unknown; readonly mobCatch: unknown; readonly spawnCaughtMob: unknown; readonly mobFeedDefault: unknown; readonly mobFeedSuperliked: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedLike: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedNeutral: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobFeedDisliked: { readonly colorGradients: TimeColorGradient[]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobDeath: unknown; readonly mobDeathSoul: unknown; readonly boardShopSuccess: unknown; readonly mobSpawnerBlockFail: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [80, 80, 80, 1]; readonly maxColor: [160, 160, 160, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockPassive: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [0, 200, 50, 1]; readonly maxColor: [0, 255, 100, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockNeutral: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [200, 200, 0, 1]; readonly maxColor: [255, 255, 0, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnerBlockHostile: { readonly colorGradients: [{ readonly timeFraction: 0; readonly minColor: [200, 10, 0, 1]; readonly maxColor: [255, 20, 0, 1]; }]; readonly texture: string; readonly minLifeTime: number; readonly maxLifeTime: number; readonly minEmitPower: number; readonly maxEmitPower: number; readonly minSize: number; readonly maxSize: number; readonly gravity: number[]; readonly velocityGradients: VelocityGradient[]; readonly blendMode: ParticleSystemBlendMode; readonly dir1: number[]; readonly dir2: number[]; readonly manualEmitCount: number; readonly hideDist: number; }; readonly mobSpawnOrb: unknown; readonly aura: unknown; }
-	stairsCorners: readonly ["innerLeft", "innerRight", "outerLeft", "outerRight"]
-	mobTypes: readonly ["Pig", "Cow", "Sheep", "Horse", "Camel", "Iron Goofy Golem", "Gold Goofy Golem", "Diamond Goofy Golem", "Moonstone Goofy Golem", "Deer", "Slime", "Wolf", "Wildcat", "Spirit Golem", "Spirit Wolf", "Spirit Bear", "Spirit Stag", "Spirit Gorilla", "Bear", "Stag", "Gold Watermelon Stag", "Gorilla", "Cave Golem", "Draugr Zombie", "Draugr Skeleton", "Frost Golem", "Frost Zombie", "Frost Skeleton", "Draugr Knight", "Draugr Huntress", "Magma Golem", "Draugr Warper", "Frost Wraith", "Draugr Reaver", "Stalker", "Crone", "Iron Guardian", "Gold Guardian", "Diamond Guardian", "Moonstone Guardian", "Tiki Terror", "NPC", "67", "Bobino Musculino", "Capitano Explovissimo", "Desert Fennec", "Armour Collector", "Furnace Knight", "Lil Knight", "Glass Gremlin", "Glass Bro", "Lord Vulcan", "Zombie", "Skeleton", "Mummy", "Scorpion", "Vulcanite", "Evil Tome", "Magma Toad"]
-	gunCategories: readonly ["semi_automatic", "submachine", "rifle", "pistol", "shotgun"]
-	customItemStats: readonly ["ttb", "displayName", "harvestLevel", "stoodOnSpeedMultiplier", "specialToolDrop", "specialToolBonusDrops", "drops", "onMinedAura", "description", "altActionable", "eatHealAmt", "eatShieldAmt", "afterEatenItem", "minChargeStateToUse", "damage", "attackRange", "attackCooldownMs", "abilityCooldownMs", "dashImpulse", "knockbackHorizontalScalar", "knockbackVerticalScalar", "comboInfo", "velocityMultiplier", "fishingRodInfo", "secondaryDamage", "absorbThrowable", "armourReduction", "knockbackReduction", "CrosshairText", "gunStats", "showInCreativeInven", "bridgeLength"]
-	lifeformTypes: readonly ["Player", "Pig", "Cow", "Sheep", "Horse", "Camel", "Iron Goofy Golem", "Gold Goofy Golem", "Diamond Goofy Golem", "Moonstone Goofy Golem", "Deer", "Slime", "Wolf", "Wildcat", "Spirit Golem", "Spirit Wolf", "Spirit Bear", "Spirit Stag", "Spirit Gorilla", "Bear", "Stag", "Gold Watermelon Stag", "Gorilla", "Cave Golem", "Draugr Zombie", "Draugr Skeleton", "Frost Golem", "Frost Zombie", "Frost Skeleton", "Draugr Knight", "Draugr Huntress", "Magma Golem", "Draugr Warper", "Frost Wraith", "Draugr Reaver", "Stalker", "Crone", "Iron Guardian", "Gold Guardian", "Diamond Guardian", "Moonstone Guardian", "Tiki Terror", "NPC", "67", "Bobino Musculino", "Capitano Explovissimo", "Desert Fennec", "Armour Collector", "Furnace Knight", "Lil Knight", "Glass Gremlin", "Glass Bro", "Lord Vulcan", "Zombie", "Skeleton", "Mummy", "Scorpion", "Vulcanite", "Evil Tome", "Magma Toad"]
-	mobVariations: { readonly Pig: readonly ["default"]; readonly Cow: readonly ["default", "cream"]; readonly Sheep: readonly ["default", "black", "red", "orange", "pink", "purple", "yellow", "blue", "brown", "cyan", "gray", "green", "lightBlue", "lightGray", "lime", "magenta"]; readonly Horse: readonly ["default", "black", "brown", "cream"]; readonly Camel: readonly ["default", "brown"]; readonly Slime: readonly ["default"]; readonly "Cave Golem": readonly ["default", "iron", "corrupted"]; readonly "Draugr Zombie": readonly ["default", "longHairChestplate", "longHairClothed", "shortHairClothed", "flower", "flower2", "mushroom", "vine", "vine2", "corrupted", "corrupted2"]; readonly "Draugr Skeleton": readonly ["default"]; readonly "Frost Golem": readonly ["default"]; readonly "Frost Zombie": readonly ["default", "longHairChestplate", "shortHairClothed"]; readonly "Frost Skeleton": readonly ["default"]; readonly "Draugr Knight": readonly ["default"]; readonly Wolf: readonly ["default", "white", "brown", "grey", "spectral"]; readonly Bear: readonly ["default"]; readonly Deer: readonly ["default"]; readonly Stag: readonly ["default"]; readonly "Gold Watermelon Stag": readonly ["default"]; readonly Gorilla: readonly ["default"]; readonly Wildcat: readonly ["default", "tabby", "grey", "black", "calico", "siamese", "leopard"]; readonly "Magma Golem": readonly ["default"]; readonly "Draugr Huntress": readonly ["default", "chainmail"]; readonly "Spirit Golem": readonly ["default"]; readonly "Spirit Wolf": readonly ["default"]; readonly "Spirit Bear": readonly ["default"]; readonly "Spirit Stag": readonly ["default"]; readonly "Spirit Gorilla": readonly ["default"]; readonly "Draugr Warper": readonly ["default"]; readonly "Frost Wraith": readonly ["default", "tattered", "frostKing", "accursed"]; readonly "Draugr Reaver": readonly ["default"]; readonly Stalker: readonly ["default", "crimson", "frost", "void"]; readonly Crone: readonly ["default"]; readonly "Iron Guardian": readonly ["default"]; readonly "Gold Guardian": readonly ["default"]; readonly "Diamond Guardian": readonly ["default"]; readonly "Moonstone Guardian": readonly ["default"]; readonly "Iron Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Gold Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Diamond Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Moonstone Goofy Golem": readonly ["default", "flaking", "patchy", "shedding", "bare", "stone"]; readonly "Tiki Terror": readonly ["default", "titan", "tormentor", "tyrant"]; readonly NPC: readonly ["default", "emma", "leo", "isabel", "sanjay", "imara", "enoch", "sara", "carmen", "chef"]; readonly "67": readonly ["default"]; readonly "Bobino Musculino": readonly ["default"]; readonly "Capitano Explovissimo": readonly ["default"]; readonly "Desert Fennec": readonly ["default"]; readonly "Armour Collector": readonly ["default"]; readonly "Furnace Knight": readonly ["default"]; readonly "Lil Knight": readonly ["default"]; readonly "Glass Gremlin": readonly ["default"]; readonly "Glass Bro": readonly ["default"]; readonly "Lord Vulcan": readonly ["default"]; readonly Zombie: readonly ["default"]; readonly Skeleton: readonly ["default"]; readonly Mummy: readonly ["default"]; readonly Scorpion: readonly ["default"]; readonly Vulcanite: readonly ["default"]; readonly "Evil Tome": readonly ["default"]; readonly "Magma Toad": readonly ["default"]; }
-	mobSettings: readonly ["variation", "name", "maxHealth", "initialHealth", "idleSound", "attackSound", "secondaryAttackSound", "hurtSound", "onDeathItemDrops", "onDeathParticleTexture", "onDeathAura", "baseWalkingSpeed", "baseRunningSpeed", "walkingSpeedMultiplier", "runningSpeedMultiplier", "jumpCount", "baseJumpImpulseXZ", "baseJumpImpulseY", "jumpMultiplier", "runAwayRadius", "chaseRadius", "territoryRadius", "hostilityRadius", "stoppingRadius", "attackInterval", "attackRadius", "secondaryAttackRadius", "attackDamage", "secondaryAttackDamage", "isReceivingDamageCooldownGlobal", "knockbackReceivedMultiplier", "attackImpulse", "secondaryAttackImpulse", "rangedAttackInaccuracy", "burstAttackInfo", "secondaryBurstAttackInfo", "heldItemName", "heldItemEnchantmentTier", "armour", "attackItemName", "secondaryAttackItemName", "swingArmOnAttack", "swingArmOnSecondaryAttack", "attackEffectName", "attackEffectDuration", "warpTargetSpecialAttackInfo", "combatTetherInfo", "evadeInfo", "chargeSpecialAttackInfo", "tameInfo", "onTamedHealthMultiplier", "petInfo", "ownerDbId", "minFollowingRadius", "maxFollowingRadius", "isRideable", "healthRegen", "ridingSpeedMult", "bridgeInfo", "walkingSlideInfo", "runningSlideInfo", "walkingJumpInfo", "runningJumpInfo", "walkingRandomFacingInfo", "runningRandomFacingInfo", "metaInfo"]
-	armourPieces: readonly ["Helmet", "Chestplate", "Gauntlets", "Leggings", "Boots"]
-	playerPoses: readonly ["standing", "sitting", "zombie", "gliding", "driving", "sleeping", "riding"]
-	potionEffects: readonly ["Speed", "Damage Reduction", "Damage", "Invisible", "Jump Boost", "Knockback", "Poisoned", "Slowness", "Weakness", "Cleansed", "Instant Damage", "Health Regen", "Healing Pulse", "Instant Health", "Haste", "Shield", "Double Jump", "Heat Resistance", "Thief", "X-Ray Vision", "Mining Yield", "Brain Rot", "Aura", "Wall Climbing", "Air Walk", "Pickpocketer", "Lifesteal", "Bounciness", "Blindness", "Poopy", "Glowing", "Night Vision"]
-	MAX_MOB_FEED_LEVEL: 5
-	mobLevelUpBonuses: readonly ["Renaming", "Special Drops", "Thorns", "Rainbow Wool", "Max Health +", "Damage +", "Riding Speed +", "Passenger Speed +", "Double Poop", "Self Yield", "Painting", "Friends", "Pack Leader", "Poison Claws", "Mob Power", "Mob Yield", "Feed Aura", "Antlers"]
-	mobAiStates: readonly ["idle", "disabled", "idleBeforeTurning", "turning", "idleBeforeWalking", "walking", "runningAway", "chasing", "turningBeforeCharging", "charging", "following", "watching", "walkingToPosition", "runningToPosition"]
-	cosmeticTypes: readonly ["skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "cape", "nameColour", "profileEffect", "emote"]
-	ingameIconNames: readonly ["Damage", "Damage Reduction", "Speed", "VoidJump", "Fist", "Frozen", "Hydrated", "Invisible", "Jump Boost", "Poisoned", "Slowness", "Weakness", "Health Regen", "Healing Pulse", "Haste", "Double Jump", "Heat Resistance", "Gliding", "Boating", "Obsidian Boating", "Riding", "Bunny Hop", "FallDamage", "Feather Falling", "Thief", "X-Ray Vision", "Mining Yield", "Brain Rot", "Rested Damage", "Rested Haste", "Rested Speed", "Rested Farming Yield", "Rested Aura", "Blindness", "Pickpocketer", "Lifesteal", "Bounciness", "Air Walk", "Wall Climbing", "Thorns", "Poopy", "Glowing", "Night Vision", "Irradiated", "Draugr Knight Head", "Draugr Warper Head", "Magma Golem Head", "Mystery Fish", "Damage Enchantment", "Critical Damage Enchantment", "Attack Speed Enchantment", "Protection Enchantment", "Health Enchantment", "Health Regen Enchantment", "Stomp Damage Enchantment", "Knockback Resist Enchantment", "Arrow Speed Enchantment", "Arrow Damage Enchantment", "Quick Charge Enchantment", "Break Speed Enchantment", "Momentum Enchantment", "Mining Yield Enchantment", "Farming Yield Enchantment", "Mining Aura Enchantment", "Digging Aura Enchantment", "Lumber Aura Enchantment", "Farming Aura Enchantment", "Vertical Knockback Enchantment", "Horizontal Knockback Enchantment", "Firecracker Cooldown Enchantment", "Firecracker Boost Enchantment", "Gliding Speed Enchantment", "Self Yield", "Friends", "Riding Speed", "Feed Aura", "Double Poop", "Mob Slayer", "Rainbow Wool", "Pack Leader", "Max Health", "Poison Claws", "Mob Yield", "Antlers Bonus", "Health", "HealthShield", "Cross", "Friendship", "Dotted Friendship", "Hunger", "Empty Hunger", "Pixelated Heart", "Question Mark", "Trader Black", "Trader Blue", "Trader Piggy"]
-	perBlockVehicleSettings: readonly ["canAutoStep", "speedMultiplier"]
-	meshEntityVehiclesTypes: readonly ["Boat", "Obsidian Boat", "Hovercraft", "Yellow Kart", "White Kart", "Red Kart", "Purple Kart", "Pink Kart", "Orange Kart", "Magenta Kart", "Lime Kart", "Light Gray Kart", "Light Blue Kart", "Green Kart", "Gray Kart", "Cyan Kart", "Brown Kart", "Blue Kart", "Black Kart", "Off Roader", "Gold Mining Drill", "Iron Mining Drill", "Diamond Mining Drill", "Moonstone Mining Drill", "Armored Car", "Light Blue Car", "Speedboat"]
-	worldGamemodes: readonly ["survival", "peaceful", "creative", "survivaladventure", "peacefuladventure", "spectator"]
-	QUEUED_COMMAND_STATUS_STRINGS: { readonly 0: "NOT_IN_QUEUE"; readonly 1: "WAITING_TO_RUN"; readonly 2: "CURRENTLY_RUNNING"; }
-	ItemMetaInfo: {
-		readonly rootName: string
-		readonly rootId: number
-		readonly metaStr: string
-		readonly rot: number | null
-		readonly open: boolean | null
-		readonly halfblockPlacement: HalfblockPlacement | null
-		readonly growing: true | null
-		readonly treeBase: true | null
-		readonly treeCanopy: true | null
-		readonly books: number | null
-		readonly freshlyGrown: true | null
-		readonly roots: true | null
-		readonly lava: true | null
-		readonly top: true | null
-		readonly grassRoots: true | null
-		readonly breaking: true | null
-		readonly flashing: true | null
-		readonly stairsCorner: StairsCorner | null
-		readonly charging: number | null
-		readonly direction: number | null
-		readonly requiresAmmo: true | null
-		readonly woodType: string | null
-		readonly caughtMobType: MobType | null
-	}
-	BlockMetadataItem: {
-		displayName: string | TranslatedText | CustomTextStyling
-		ttb?: number
-		textureInfo: | string
-			| (string | AnimParams)[]
-			| [number, number, number, number?]
-			| ({
-					colour?: [number, number, number, number?]
-			  } & AnimParams)
-		texturePerSide: number[]
-		harvestType: HarvestType
-		transTex: boolean
-		model: BlockMetadataModelType | string
-		itemTexture: string
-		drops: string
-		/** How many of \`drops\` a normal break gives, multiplying any mining yield. Default 1. */
-		dropAmount?: number
-		solid: boolean
-		/** Compiled voxel-aabb-sweep shape; omitted for a full cube. On nonsolid blocks, used only for targeting and highlights. */
-		subvoxelShape?: number[]
-		heldItemScale: number
-		modelScale: number
-		meta: ItemMetaInfo
-		rootMetaDesc: string
-		particlesIgnoreBlack: boolean
-		harvestLevel: number
-		fluid: boolean
-		specialToolDrop: SpecialToolDrop
-		specialToolBonusDrops: RecursiveReadonly<Record<string, { bonusDrop: string; probabilityOfDrop: number }[]>>
-		damage: number
-		stoodOnSpeedMultiplier: number
-		/** Carries a player standing on this block's top at [x, y, z] blocks/s (y ignored): a moving surface they can walk on, e.g. a conveyor. Omit for a still block. */
-		surfaceVelocity?: Vec3
-		description: string | TranslatedText | CustomTextStyling
-		altActionable: boolean
-		soundType: { break: SoundType; place: SoundType }
-		unlitStandaloneMesh: boolean
-		customPlanesInfo: { textureIdx: number; yRot: number }[]
-		customModelInfo: {
-			yOffset?: number
-			/** Only honoured by onRotatableCreate. */
-			yRotOffset?: number
-			/** Only honoured by onRotatableCreate. */
-			xRotOffset?: number
-			unlit?: boolean
-			emissiveColor?: Vec3
-			backFaceCulling?: boolean
-			/** The model's texture is \`frames\` frames stacked top to bottom, each shown for \`animationInterval\` ms, 100 at least. Its UVs cover the first. */
-			textureAnimation?: { frames: number; animationInterval: number }
-		}
-		absorbThrowable?: boolean
-		CrosshairText?: string | CustomTextStyling
-		/** Light emission as [R, G, B], each 0-15. Omit for no emission. */
-		lightEmission?: Vec3
-		/** Sky light emission level: null or 0-15. 0 is equivalent to null (no emission). */
-		skyLightEmission?: number
-		/** Light attenuation when light passes through this block. Default: 1 for air/transparent, 3 for fluid, 15 for opaque. */
-		lightFilter?: number
-		name: string
-		id: number
-		atlasIdx: number | number[]
-		stackable: boolean
-		heldItemGlb?: string
-		blockModel: string
-		blockModelItem: boolean
-		twoDBlockItem: boolean
-		rotatableOffsetAmt: number
-		canBePlacedOver: boolean
-		/** The half-high top placed above this block with it, and removed or reshaped with it (a fence's). */
-		attachedTop?: BlockName
-		/** For a slab, the block it becomes when a matching slab is placed into its open half. */
-		slabFullBlock?: BlockName
-		onMinedAura: number
-		showInCreativeInven?: boolean
-		gunStats?: GunStatsOverride
-	}
-	NonBlockMetadataItem: {
-		displayName?: string | TranslatedText | CustomTextStyling
-		type: "Item" | "Tool" | "Gun" | "FullAuto" | "Armour" | "GrayscaleArmour" | "Chargeable"
-		textureInfo: string | string[] | [number, number, number, number?]
-		weight: number
-		heldItemScale: number
-		heldItemGlb?: string
-		/** Extra Euler rotation (radians) applied only to the first-person held mesh, on top of the default hand pose. */
-		firstPersonHeldRotationOffset?: Vec3
-		/** Extra Euler rotation (radians) applied only to the third-person held mesh, on top of the default pose. */
-		thirdPersonHeldRotationOffset?: Vec3
-		description?: string | TranslatedText | CustomTextStyling
-		stackable: boolean
-		eatable?: boolean
-		chargeSound?: string
-		afterEatenItem?: ItemName
-		eatShieldAmt?: number
-		eatHealAmt?: number
-		chargeStages?: number
-		chargeTime?: number
-		minChargeStateToUse?: number
-		damage?: number
-		attackRange?: number
-		secondaryDamage?: number
-		holdAsAiming?: boolean
-		hideAimingUI?: boolean
-		requiresArrow?: boolean
-		knockbackHorizontalScalar?: number
-		knockbackVerticalScalar?: number
-		attackCooldownMs?: number
-		abilityCooldownMs?: number
-		dashImpulse?: number
-		comboInfo?: WeaponComboInfo
-		velocityMultiplier?: number
-		fishingRodInfo?: {
-			/** Minimum and maximum engine fishing bite delay, in milliseconds. */
-			biteDelayMs: readonly [number, number]
-		}
-		harvests?: HarvestType
-		multiplier?: number
-		level?: number
-		lumberjackHeight?: number
-		armourReduction?: number
-		knockbackReduction?: number
-		id?: number
-		name?: string
-		isCustom?: boolean
-		/** Light emission as [R, G, B], each 0-15. Omit for no emission. */
-		lightEmission?: Vec3
-		/** Spotlight reach in blocks. When set, the local player emits a directional beam (instead of the default omnidirectional held light) while holding this item, or wearing it if a helmet. */
-		spotlightRange?: number
-		/** Full cone apex angle in degrees (smaller = tighter beam). Only used with \`spotlightRange\`; omit for the default width. */
-		spotlightConeAngle?: number
-		meta?: ItemMetaInfo
-		rootMetaDesc?: string
-		keepMetaInChest?: boolean
-		gunType?: GunCategory
-		scopeType?: "none" | "sniper"
-		muzzleFlashOffsetFromGun?: Vec3
-		muzzleFlashScale?: number
-		autoFireWithMouse?: boolean
-		fireRate?: number
-		fireRateWithHeldTouch?: number
-		/** How fast spread recovers and shot sounds are paced, in ms; unset, the fire interval */
-		cadenceMs?: number
-		/**
-		 * ms from equipping to the first shot. A game overriding fireRate, fireRateWithHeldTouch or cadenceMs without its own
-		 * equipDelay waits the fire interval less 0.9 of cadenceMs instead
-		 */
-		equipDelay?: number
-		burstCount?: number
-		burstDelay?: number
-		shotPelletCount?: number
-		reloadTime?: number
-		clipSize?: number
-		reloadBulletsIndividually?: boolean
-		bulletReloadTime?: number
-		cockTime?: number
-		tagSpeedMult?: number
-		subsequentTagSpeedReductionScalar?: number
-		inaccuracyStanding?: number
-		inaccuracyFromShot?: number
-		inaccuracyMovement?: number
-		yVelocityInaccuracy?: number
-		inaccuracyFromJump?: number
-		altInaccuracyStanding?: number
-		altInaccuracyFromShot?: number
-		altInaccuracyMovement?: number
-		recoveryRate?: number
-		aimZoomFactor?: number
-		kickbackDecreaseRate?: number
-		minKickback?: number
-		maxKickback?: number
-		kickbackRate?: number
-		hasVerticalInaccuracy?: boolean
-		keepScopeOnShot?: boolean
-		msPerRound?: number
-		msPerRoundTouchScreen?: number
-		altYVelocityInaccuracy?: number
-		altInaccuracyFromJump?: number
-		fireInterval?: number
-		bridgeLength?: number
-		gunStats?: GunStatsOverride
-		showInCreativeInven?: boolean
-	}
-	LoadedChunk: {
-		anySetsRan: boolean
-		readonly lastUpdated: number
-		set(x: number, y: number, z: number, id: BlockId): void
-		get(x: number, y: number, z: number): number
-		/**
-		 * Returns the underlying array of the chunk
-		 * This exists for performance reasons only
-		 * Be careful using this - updating the data directly without calling set or setUnderlying will result in inconsistent state
-		 */
-		getUnderlyingData(): Uint16Array<ArrayBufferLike>
-		setUnderlying(idx: number, id: BlockId): void
-	}
-}
-type ItemMetaInfo = _TypeOf["ItemMetaInfo"]
-type BlockMetadataItem = _TypeOf["BlockMetadataItem"]
-type NonBlockMetadataItem = _TypeOf["NonBlockMetadataItem"]
-type LoadedChunk = _TypeOf["LoadedChunk"]
-type Song = "Adigold - A Place To Be Free" | "Adigold - Butterfly Effect" | "Adigold - Dreamless Sleep" | "Adigold - Frozen Pulse" | "Adigold - Frozen Skies" | "Adigold - Healing Thoughts" | "Adigold - Here Forever" | "Adigold - Just a Little Hope" | "Adigold - Just Like Heaven" | "Adigold - Memories Remain" | "Adigold - Place To Be" | "Adigold - The Riverside" | "Adigold - The Wonder" | "Adigold - Vetrar (Cut B)" | "Awkward Comedy Quirky" | "battle-ship-111902" | "cdk-Silence-Await" | "corsairs-studiokolomna-main-version-23542-02-33" | "ghost-Reverie-small-theme" | "happy" | "Heroic-Demise-New" | "I-am-the-Sea-The-Room-4" | "Juhani Junkala [Retro Game Music Pack] Ending" | "Juhani Junkala [Retro Game Music Pack] Level 1" | "Juhani Junkala [Retro Game Music Pack] Level 2" | "Juhani Junkala [Retro Game Music Pack] Level 3" | "Juhani Junkala [Retro Game Music Pack] Title Screen" | "LonePeakMusic-Highway-1" | "Mojo Productions - Pirates" | "Mojo Productions - Sneaky Jazz" | "Mojo Productions - The Sneaky" | "Mojo Productions - The Sneaky Jazz" | "progress" | "raise-the-sails-152124" | "ramblinglibrarian-I-Have-Often-T" | "Slow-Motion-Bensound" | "snowflake-Ethereal-Space" | "the-epic-adventure-131399" | "TownTheme" | "The Suspense Ambient" | "Epic1" | "Epic2" | "Emotional Epic" | "Enemy Marked" | "spooky" | "Shuffling Crypt" | "Tower of Doom" | "Wild Infernos" | "Molten Rift"
-type ParticleSystemBlendMode = 0 | 1 | 2 | 3 | 4
-type HalfblockPlacement = 0 | 1 | 2
-type WalkThroughType = 0 | 1 | 2
-type LobbyType = 0 | 1 | 2
-type PhysicsType = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
-type BoatTier = 0 | 1 | 2
-type GliderTier = 0 | 1 | 2 | 3
-type BalloonTier = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15
-type SleepingTier = 0 | 1 | 2 | 3
-type CarTier = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7
-type MovementType = 0 | 1 | 2
-type ExplosionType = 0 | 1 | 2
-
-type ClientOptions = {
-		canChange: boolean
-		/** How far, in blocks from the eye, the player can break, place and use blocks. 0 to 20. */
-		blockReach: number
-		ezBridging: boolean
-		/** How long an ez bridging block grows before it is solid. 0 places it instantly. Null uses 900ms, or instant in creative. */
-		ezBridgingGrowMs: number
-		ezTowering: boolean
-		/** How long an ez towering block grows before it is solid. 0 places it instantly. Null uses 900ms, or instant in creative. */
-		ezToweringGrowMs: number
-		speedMultiplier: number
-		crouchingSpeed: number
-		/** you should probably use speed multiplier - this doesn't make much sense on phone */
-		walkingSpeed: number
-		/** you should probably use speed multiplier - this doesn't make much sense on phone */
-		runningSpeed: number
-		jumpAmount: number
-		airJumpCount: number
-		/** While airborne with jump held: upward force (blocks/s per second, 0 to 45; gravity is 20) until vertical speed nears maxUpSpeed (blocks/s; negative slows a fall). Null = off. */
-		jumpHoldThrust: { maxUpSpeed: number; force: number; }
-		bunnyhopMaxMultiplier: number
-		music: Song
-		musicVolumeLevel: number
-		/** Not recommended to use as it lags when being loaded. */
-		skyBox: string | EarthSkyBox
-		minChunkAddDist: [number, number]
-		showPlayersInUnloadedChunks: boolean
-		useInventory: boolean
-		/** For now just enables the full inventory UI */
-		useFullInventory: boolean
-		/** Hotbar/inventory panel colour as a hex string e.g. #682323; slot shades derive from it */
-		inventoryColourOverride: string
-		/** Hotbar slots (0-based) that pulse to draw the player's eye, e.g. to the item a tutorial wants them to use. [] for none. */
-		highlightedHotbarSlots: number[]
-		canCraft: boolean
-		canFish: boolean
-		canPickUpItems: boolean
-		/** Whether an item the player drops or a block they break drops shows at once on their screen, before the server drops it */
-		predictDroppedItems: boolean
-		playerZoom: number
-		zoomOutDistance: number
-		maxPlayerZoom: number
-		lobbyLeaderboardInfo: LobbyLeaderboardInfo
-		canCustomiseChar: boolean
-		/** used if canChange is true but useInventory is false */
-		defaultBlock: string
-		cantChangeError: string | CustomTextStyling
-		cantBreakError: string | CustomTextStyling
-		cantBuildError: string | CustomTextStyling
-		/** The contents of the action button. Supports custom text styling. onTouchscreenActionButton will be called when button pressed. */
-		touchscreenActionButton: string | CustomTextStyling
-		strictFluidBuckets: boolean
-		preserveProtectedFluidSources: boolean
-		fillBrokenBlocksWithWater: boolean
-		canUseZoomKey: boolean
-		canAltAction: boolean
-		canSeeNametagsThroughWalls: boolean
-		showBasicMovementControls: boolean
-		/** Centred text at the very top of the screen, level with the FPS counter / coordinates / room name. Drops below that strip when a centred placement would overlap it. */
-		middleTextTop: string | CustomTextStyling | TextWithDisplayOptions
-		middleTextUpper: string | CustomTextStyling | TextWithDisplayOptions
-		middleTextLower: string | CustomTextStyling | TextWithDisplayOptions
-		/** A row of compact chips rendered in the top-left HUD strip, concatenated immediately after the FPS counter / coordinates / room name. */
-		headerChips: HeaderChip[]
-		/** Lobby-only subtitle shown after the custom game name in the top-left header */
-		customVariationTitle: string
-		RightInfoText: string | CustomTextStyling | TextWithDisplayOptions
-		crosshairText: string | CustomTextStyling
-		/** If set, clients will only be able to see the closest x players (good for client perf in games with many players) */
-		numClosestPlayersVisible: number
-		showProgressBar: boolean
-		showKillfeed: boolean
-		/** Whether the viewer renders speech bubbles above other players when they send chat messages. Off by default. */
-		showChatBubbles: boolean
-		/** A line of dialogue in the panel below the crosshair, revealed word by word in its voice. Each new value is a new line. */
-		dialogue: Readonly<{ line: DialogueText; speakerName?: string | CustomTextStyling; voice?: SpeechVoice; animateIn?: boolean; }>
-		/** Allows player to select a channel that is passed as argument to onPlayerChat. See engineGameplayTypes.ts for expected format */
-		chatChannels: { channelName: string; elementContent: string | CustomTextStyling; elementBgColor: string; }[]
-		creative: boolean
-		/** while in creative */
-		flySpeedMultiplier: number
-		/** Ignored if creative is false */
-		canPickBlocks: boolean
-		/** Position of the compass target. If string, will be parsed as a player id */
-		compassTarget: string | number | number[]
-		ttbMultiplier: number
-		/** only applicable if useInventory is true */
-		inventoryItemsMoveable: boolean
-		invincible: boolean
-		maxShield: number
-		/** Shield upon joining and respawn. */
-		initialShield: number
-		maxHealth: number
-		/** Health upon joining and respawn. Can be null for the player to not have health. */
-		initialHealth: number
-		/** Fraction of max health that regens each regen tick */
-		healthRegenAmount: number
-		/** How often health regen is ticked */
-		healthRegenInterval: number
-		/** How long after a player receives damage to start regen again */
-		healthRegenStartAfter: number
-		/** Duration of the +damage effect from plum */
-		effectDamageDuration: number
-		/** Duration of +speed effect from cracked coconut */
-		effectSpeedDuration: number
-		/** Duration of +damage reduction effect from pear */
-		effectDamageReductionDuration: number
-		/** Duration of +health regen effect from cherry */
-		effectHealthRegenDuration: number
-		/** Duration of potion effects */
-		potionEffectDuration: number
-		/** Duration of splash potion effects */
-		splashPotionEffectDuration: number
-		/** Duration of arrow potion effects */
-		arrowPotionEffectDuration: number
-		/** RGBA array [r, g, b, a] for camera screen tint effect. Values fall between 0 and 1. */
-		cameraTint: [number, number, number, number]
-		/** Fog distance which overrides graphic settings. Uses graphic settings if null. */
-		fogChunkDistanceOverride: number
-		/** Blocks from the eye at which fog turns solid, thickening all the way out. Overrides fogChunkDistanceOverride and graphic settings when set. */
-		fogBlockDistanceOverride: number
-		/** Fog colour override - as a hex string e.g. #ffffff */
-		fogColourOverride: string
-		/** Applies fog to the skybox, which is otherwise unaffected by fog */
-		fogOnSkybox: boolean
-		/** After dying, the player can respawn after this many seconds */
-		secsToRespawn: number
-		/** When player is dead, also shows a play again button matchmakes player into a new lobby. Mostly useful for sessionBased games */
-		usePlayAgainButton: boolean
-		/** If true, player will respawn automatically after secsToRespawn seconds. Won't show an ad so autoRespawn needs to be false some of the time */
-		autoRespawn: boolean
-		/** Text to show on respawn button. (E.g. "Spectate") */
-		respawnButtonText: string
-		/** Whether the player can use the respawn button. Otherwise forces either play again or exit */
-		useRespawnButton: boolean
-		/** MS before a killstreak expires. (defaults to never expiring) */
-		killstreakDuration: number
-		/** Damage multiplier for all types of damage */
-		dealingDamageMultiplier: number
-		/** Mult for when the player hits a head. Only applies to guns */
-		dealingDamageHeadMultiplier: number
-		/** Mult for when the player hits a leg. Only applies to guns */
-		dealingDamageLegMultiplier: number
-		/** Mult for when the player hits neither a leg or a head. Only applies to guns */
-		dealingDamageDefaultMultiplier: number
-		/** Where gunshots originate from. "default" preserves camera-assisted behavior. */
-		gunshotOrigin: GunshotOrigin
-		/** Mult for all types of incoming damage */
-		receivingDamageMultiplier: number
-		/** When the player is attacked, a short cooldown prevents further damage from the same attack type. If true, all attackers share that cooldown. If false, each attacker has their own. */
-		isReceivingDamageCooldownGlobal: boolean
-		/** Mult for horizontal knockback when dealing damage */
-		horizontalKnockbackMultiplier: number
-		/** Mult for vertical knockback when dealing damage */
-		verticalKnockbackMultiplier: number
-		/** Mult for the damage done by "stomping" on a lifeform, i.e.: falling on them wearing Spiked Boots. */
-		stompDamageMultiplier: number
-		/** Radius around the player that will be affected by the stomp damage. */
-		stompDamageRadius: number
-		/** Mult for the radius within which mobs can detect the player when crouching. If a player's mult is 2, then mobs will think they are twice as far away. */
-		crouchMobDetectionRadiusMultiplier: number
-		/** Scale factor to use for dropped item meshes */
-		droppedItemScale: number
-		/** Amount that player camera is affected by movement based fov */
-		movementBasedFovScale: number
-		/** Amount of friction to apply to airborne players - only change if absolutely necessary */
-		airFrictionScale: number
-		/** Amount of friction to apply to grounded players - only change if absolutely necessary */
-		groundFrictionScale: number
-		/** Amount of acceleration to apply to airborne players - only change if absolutely necessary */
-		airAccScale: number
-		/** Whether to allow players to strafe and conserve momentum while airborne */
-		airMomentumConservation: boolean
-		/** Multiplier applied to gravity during normal movement */
-		gravityMultiplier: number
-		/** How much the player bounces off of solid blocks */
-		bounciness: number
-		/** Whether the player can climb walls */
-		canClimbWalls: boolean
-		/** Whether the player can crouch */
-		canCrouch: boolean
-		/** Whether players take fall damage */
-		fallDamage: boolean
-		/** How much aura levels up the player */
-		auraPerLevel: number
-		/** Max aura the player can have */
-		maxAuraLevel: number
-		/** Distance in blocks over which we reduce the opacity of entities as they approach the camera */
-		proximityFadeDistance: number
-		/** Minimum opacity multiplier reachable when fading entities based on camera proximity */
-		proximityFadeMinOpacity: number
-		/** Force the camera to look in a specific direction [x, y, z]. Set to null to allow free camera movement. */
-		forcedCameraDirection: [number, number, number]
-		/** Duration in ms to animate/transition to the forced camera direction. 0 = instant. */
-		forcedCameraDirectionTransitionMs: number
-		/** Roll angle of the camera in radians */
-		cameraRoll: number
-		/** Duration in ms to animate/transition to the camera roll angle. 0 = instant. */
-		cameraRollTransitionMs: number
-		/** Third-person camera origin rotation offset [x, y, z] in radians. */
-		cameraRotationOffset: [number, number, number]
-		/** Third-person camera origin translation offset [x, y, z] in blocks. */
-		cameraPositionOffset: [number, number, number]
-		/** Where the camera is and what it looks at: the player's own ("default"), or a fixed, follow, path or frame camera. */
-		gameCamera: CameraSettings
-		/** When null, just use the player's graphics setting. When set, forces lighting on (true) or off (false). */
-		lightingOverride: boolean
-		/** Sky light colour override - hex string e.g. #ffffff. */
-		skyLightColourOverride: string
-		/** Ambient (absence of sky light) colour override - hex string e.g. #ffffff. */
-		ambientLightColourOverride: string
-		/** The dimmest light the player can see by - hex string e.g. #ffffff. Anywhere darker is lifted to it, e.g. caves and night. */
-		visionMinLightColour: string
-		/** Held item light colour override - hex colour string e.g. #ffffff. Applied regardless of any held item. */
-		heldLightColourOverride: string
-		/** Held item light range override. Distance is measured in blocks. */
-		heldLightRangeOverride: number
-		/** Held item light cone angle override. Angle is measured in degrees. Larger number = wider beam. */
-		heldLightConeAngleOverride: number
-		/** When true, hides world and chunk coordinates regardless of the player's setting. */
-		hideCoordinates: boolean
-		/** When false, players can't record replays or save clips. Turning it off mid-game discards any recording in progress. Set it for the whole game, not per area: chunks load before players reach them, and turning it back on lets new clips include every loaded chunk. */
-		canRecordReplays: boolean
-		/** Renders a terrain-following strip of animated chevron arrows on the ground from this player to the target position. Optional \`colour\` is any CSS colour string (e.g. "red", "#ffaa00", "rgb(255,0,0)"), or null for default white. */
-		groundArrowPath: { target: [number, number, number]; colour?: string; }
-		customButtons: CustomButtonsType
-	}
-type OtherEntitySettings = {
-		opacity: number
-		zIndex: 0 | 1
-		overlayColour: string
-		canAttack: boolean
-		canSee: boolean
-		interactable: boolean
-		interactionPrompt: string | CustomTextStyling
-		showDamageAmounts: boolean
-		lockHeadToBody: boolean
-		killfeedColour: string
-		meshScaling: EntityMeshScalingMap
-		colorInLobbyLeaderboard: string
-		lobbyLeaderboardValues: LobbyLeaderboardValues
-		lobbyLeaderboardTags: ChatTags
-		nameTagInfo: NameTagInfo
-		hasPriorityNametag: boolean
-		alwaysInInterest: boolean
-		multilineTextBox: MultilineTextBox
-		nameColour: "default" | "yellow" | "lime" | "green" | "aqua" | "cyan" | "blue" | "purple" | "pink" | "red" | "orange"
-	}`
-  },
-  40556: zz => {
-    function tz(zz) {
-      var tz = new Error("Cannot find module '" + zz + "'");
-      throw tz.code = "MODULE_NOT_FOUND", tz
     }
-    tz.keys = () => [], tz.resolve = tz, tz.id = 40556, zz.exports = tz
-  },
-  40523: () => {},
-  40551: () => {},
-  40534: () => {},
-  40564: () => {},
-  40547: () => {},
-  40540: () => {},
-  40530: () => {},
-  40553: () => {}
+
+    function gv(vv) {
+      return vv >= 127462 && vv <= 127487
+    }(() => {
+      let vv = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((vv => vv ? parseInt(vv, 36) : 1));
+      for (let zv = 0, Pv = 0; zv < vv.length; zv++)(zv % 2 ? Sv : hv).push(Pv += vv[zv])
+    })();
+    const pv = 8205;
+
+    function dv(vv, zv) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? Nv : lv)(vv, zv, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    }
+
+    function Nv(vv, zv, Pv) {
+      if (zv == vv.length) return zv;
+      zv && Wv(vv.charCodeAt(zv)) && wv(vv.charCodeAt(zv - 1)) && zv--;
+      let hv = Tv(vv, zv);
+      for (zv += av(hv); zv < vv.length;) {
+        let Sv = Tv(vv, zv);
+        if (hv == pv || Sv == pv || Pv && ev(Sv)) zv += av(Sv), hv = Sv;
+        else {
+          if (!gv(Sv)) break;
+          {
+            let Pv = 0,
+              hv = zv - 2;
+            for (; hv >= 0 && gv(Tv(vv, hv));) Pv++, hv -= 2;
+            if (Pv % 2 == 0) break;
+            zv += 2
+          }
+        }
+      }
+      return zv
+    }
+
+    function lv(vv, zv, Pv) {
+      for (; zv > 0;) {
+        let hv = Nv(vv, zv - 2, Pv);
+        if (hv < zv) return hv;
+        zv--
+      }
+      return 0
+    }
+
+    function Tv(vv, zv) {
+      let Pv = vv.charCodeAt(zv);
+      if (!wv(Pv) || zv + 1 == vv.length) return Pv;
+      let hv = vv.charCodeAt(zv + 1);
+      return Wv(hv) ? hv - 56320 + (Pv - 55296 << 10) + 65536 : Pv
+    }
+
+    function Wv(vv) {
+      return vv >= 56320 && vv < 57344
+    }
+
+    function wv(vv) {
+      return vv >= 55296 && vv < 56320
+    }
+
+    function av(vv) {
+      return vv < 65536 ? 1 : 2
+    }
+    class sv {
+      lineAt(vv) {
+        if (vv < 0 || vv > this.length) throw new RangeError(`Invalid position ${vv} in document of length ${this.length}`);
+        return this.lineInner(vv, !1, 1, 0)
+      }
+      line(vv) {
+        if (vv < 1 || vv > this.lines) throw new RangeError(`Invalid line number ${vv} in ${this.lines}-line document`);
+        return this.lineInner(vv, !0, 1, 0)
+      }
+      replace(vv, zv, Pv) {
+        [vv, zv] = Yv(this, vv, zv);
+        let hv = [];
+        return this.decompose(0, vv, hv, 2), Pv.length && Pv.decompose(0, Pv.length, hv, 3), this.decompose(zv, this.length, hv, 1), iv.from(hv, this.length - (zv - vv) + Pv.length)
+      }
+      append(vv) {
+        return this.replace(this.length, this.length, vv)
+      }
+      slice(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [vv, zv] = Yv(this, vv, zv);
+        let Pv = [];
+        return this.decompose(vv, zv, Pv, 0), iv.from(Pv, zv - vv)
+      }
+      eq(vv) {
+        if (vv == this) return !0;
+        if (vv.length != this.length || vv.lines != this.lines) return !1;
+        let zv = this.scanIdentical(vv, 1),
+          Pv = this.length - this.scanIdentical(vv, -1),
+          hv = new mv(this),
+          Sv = new mv(vv);
+        for (let ev = zv, gv = zv;;) {
+          if (hv.next(ev), Sv.next(ev), ev = 0, hv.lineBreak != Sv.lineBreak || hv.done != Sv.done || hv.value != Sv.value) return !1;
+          if (gv += hv.value.length, hv.done || gv >= Pv) return !0
+        }
+      }
+      iter() {
+        return new mv(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+      }
+      iterRange(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new jv(this, vv, zv)
+      }
+      iterLines(vv, zv) {
+        let Pv;
+        if (null == vv) Pv = this.iter();
+        else {
+          null == zv && (zv = this.lines + 1);
+          let hv = this.line(vv).from;
+          Pv = this.iterRange(hv, Math.max(hv, zv == this.lines + 1 ? this.length : zv <= 1 ? 0 : this.line(zv - 1).to))
+        }
+        return new fv(Pv)
+      }
+      toString() {
+        return this.sliceString(0)
+      }
+      toJSON() {
+        let vv = [];
+        return this.flatten(vv), vv
+      }
+      constructor() {}
+      static of (vv) {
+        if (0 == vv.length) throw new RangeError("A document must have at least one line");
+        return 1 != vv.length || vv[0] ? vv.length <= 32 ? new Cv(vv) : iv.from(Cv.split(vv, [])) : sv.empty
+      }
+    }
+    class Cv extends sv {
+      constructor(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(vv) {
+          let zv = -1;
+          for (let Pv of vv) zv += Pv.length + 1;
+          return zv
+        }(vv);
+        super(), this.text = vv, this.length = zv
+      }
+      get lines() {
+        return this.text.length
+      }
+      get children() {
+        return null
+      }
+      lineInner(vv, zv, Pv, hv) {
+        for (let Sv = 0;; Sv++) {
+          let ev = this.text[Sv],
+            gv = hv + ev.length;
+          if ((zv ? Pv : gv) >= vv) return new Fv(hv, gv, Pv, ev);
+          hv = gv + 1, Pv++
+        }
+      }
+      decompose(vv, zv, Pv, hv) {
+        let Sv = vv <= 0 && zv >= this.length ? this : new Cv(Gv(this.text, vv, zv), Math.min(zv, this.length) - Math.max(0, vv));
+        if (1 & hv) {
+          let vv = Pv.pop(),
+            zv = cv(Sv.text, vv.text.slice(), 0, Sv.length);
+          if (zv.length <= 32) Pv.push(new Cv(zv, vv.length + Sv.length));
+          else {
+            let vv = zv.length >> 1;
+            Pv.push(new Cv(zv.slice(0, vv)), new Cv(zv.slice(vv)))
+          }
+        } else Pv.push(Sv)
+      }
+      replace(vv, zv, Pv) {
+        if (!(Pv instanceof Cv)) return super.replace(vv, zv, Pv);
+        [vv, zv] = Yv(this, vv, zv);
+        let hv = cv(this.text, cv(Pv.text, Gv(this.text, 0, vv)), zv),
+          Sv = this.length + Pv.length - (zv - vv);
+        return hv.length <= 32 ? new Cv(hv, Sv) : iv.from(Cv.split(hv, []), Sv)
+      }
+      sliceString(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [vv, zv] = Yv(this, vv, zv);
+        let hv = "";
+        for (let Sv = 0, ev = 0; Sv <= zv && ev < this.text.length; ev++) {
+          let gv = this.text[ev],
+            pv = Sv + gv.length;
+          Sv > vv && ev && (hv += Pv), vv < pv && zv > Sv && (hv += gv.slice(Math.max(0, vv - Sv), zv - Sv)), Sv = pv + 1
+        }
+        return hv
+      }
+      flatten(vv) {
+        for (let zv of this.text) vv.push(zv)
+      }
+      scanIdentical() {
+        return 0
+      }
+      static split(vv, zv) {
+        let Pv = [],
+          hv = -1;
+        for (let Sv of vv) Pv.push(Sv), hv += Sv.length + 1, 32 == Pv.length && (zv.push(new Cv(Pv, hv)), Pv = [], hv = -1);
+        return hv > -1 && zv.push(new Cv(Pv, hv)), zv
+      }
+    }
+    class iv extends sv {
+      constructor(vv, zv) {
+        super(), this.children = vv, this.length = zv, this.lines = 0;
+        for (let Pv of vv) this.lines += Pv.lines
+      }
+      lineInner(vv, zv, Pv, hv) {
+        for (let Sv = 0;; Sv++) {
+          let ev = this.children[Sv],
+            gv = hv + ev.length,
+            pv = Pv + ev.lines - 1;
+          if ((zv ? pv : gv) >= vv) return ev.lineInner(vv, zv, Pv, hv);
+          hv = gv + 1, Pv = pv + 1
+        }
+      }
+      decompose(vv, zv, Pv, hv) {
+        for (let Sv = 0, ev = 0; ev <= zv && Sv < this.children.length; Sv++) {
+          let gv = this.children[Sv],
+            pv = ev + gv.length;
+          if (vv <= pv && zv >= ev) {
+            let Sv = hv & ((ev <= vv ? 1 : 0) | (pv >= zv ? 2 : 0));
+            ev >= vv && pv <= zv && !Sv ? Pv.push(gv) : gv.decompose(vv - ev, zv - ev, Pv, Sv)
+          }
+          ev = pv + 1
+        }
+      }
+      replace(vv, zv, Pv) {
+        if ([vv, zv] = Yv(this, vv, zv), Pv.lines < this.lines)
+          for (let hv = 0, Sv = 0; hv < this.children.length; hv++) {
+            let ev = this.children[hv],
+              gv = Sv + ev.length;
+            if (vv >= Sv && zv <= gv) {
+              let pv = ev.replace(vv - Sv, zv - Sv, Pv),
+                dv = this.lines - ev.lines + pv.lines;
+              if (pv.lines < dv >> 4 && pv.lines > dv >> 6) {
+                let Sv = this.children.slice();
+                return Sv[hv] = pv, new iv(Sv, this.length - (zv - vv) + Pv.length)
+              }
+              return super.replace(Sv, gv, pv)
+            }
+            Sv = gv + 1
+          }
+        return super.replace(vv, zv, Pv)
+      }
+      sliceString(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [vv, zv] = Yv(this, vv, zv);
+        let hv = "";
+        for (let Sv = 0, ev = 0; Sv < this.children.length && ev <= zv; Sv++) {
+          let gv = this.children[Sv],
+            pv = ev + gv.length;
+          ev > vv && Sv && (hv += Pv), vv < pv && zv > ev && (hv += gv.sliceString(vv - ev, zv - ev, Pv)), ev = pv + 1
+        }
+        return hv
+      }
+      flatten(vv) {
+        for (let zv of this.children) zv.flatten(vv)
+      }
+      scanIdentical(vv, zv) {
+        if (!(vv instanceof iv)) return 0;
+        let Pv = 0,
+          [hv, Sv, ev, gv] = zv > 0 ? [0, 0, this.children.length, vv.children.length] : [this.children.length - 1, vv.children.length - 1, -1, -1];
+        for (;; hv += zv, Sv += zv) {
+          if (hv == ev || Sv == gv) return Pv;
+          let pv = this.children[hv],
+            dv = vv.children[Sv];
+          if (pv != dv) return Pv + pv.scanIdentical(dv, zv);
+          Pv += pv.length + 1
+        }
+      }
+      static from(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv.reduce(((vv, zv) => vv + zv.length + 1), -1),
+          Pv = 0;
+        for (let Wv of vv) Pv += Wv.lines;
+        if (Pv < 32) {
+          let Pv = [];
+          for (let zv of vv) zv.flatten(Pv);
+          return new Cv(Pv, zv)
+        }
+        let hv = Math.max(32, Pv >> 5),
+          Sv = hv << 1,
+          ev = hv >> 1,
+          gv = [],
+          pv = 0,
+          dv = -1,
+          Nv = [];
+
+        function lv(vv) {
+          let zv;
+          if (vv.lines > Sv && vv instanceof iv)
+            for (let Pv of vv.children) lv(Pv);
+          else vv.lines > ev && (pv > ev || !pv) ? (Tv(), gv.push(vv)) : vv instanceof Cv && pv && (zv = Nv[Nv.length - 1]) instanceof Cv && vv.lines + zv.lines <= 32 ? (pv += vv.lines, dv += vv.length + 1, Nv[Nv.length - 1] = new Cv(zv.text.concat(vv.text), zv.length + 1 + vv.length)) : (pv + vv.lines > hv && Tv(), pv += vv.lines, dv += vv.length + 1, Nv.push(vv))
+        }
+
+        function Tv() {
+          0 != pv && (gv.push(1 == Nv.length ? Nv[0] : iv.from(Nv, dv)), dv = -1, pv = Nv.length = 0)
+        }
+        for (let Wv of vv) lv(Wv);
+        return Tv(), 1 == gv.length ? gv[0] : new iv(gv, zv)
+      }
+    }
+
+    function cv(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let Sv = 0, ev = 0, gv = !0; ev < vv.length && Sv <= hv; ev++) {
+        let pv = vv[ev],
+          dv = Sv + pv.length;
+        dv >= Pv && (dv > hv && (pv = pv.slice(0, hv - Sv)), Sv < Pv && (pv = pv.slice(Pv - Sv)), gv ? (zv[zv.length - 1] += pv, gv = !1) : zv.push(pv)), Sv = dv + 1
+      }
+      return zv
+    }
+
+    function Gv(vv, zv, Pv) {
+      return cv(vv, [""], zv, Pv)
+    }
+    sv.empty = new Cv([""], 0);
+    class mv {
+      constructor(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = zv, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [vv], this.offsets = [zv > 0 ? 1 : (vv instanceof Cv ? vv.text.length : vv.children.length) << 1]
+      }
+      nextInner(vv, zv) {
+        for (this.done = this.lineBreak = !1;;) {
+          let Pv = this.nodes.length - 1,
+            hv = this.nodes[Pv],
+            Sv = this.offsets[Pv],
+            ev = Sv >> 1,
+            gv = hv instanceof Cv ? hv.text.length : hv.children.length;
+          if (ev == (zv > 0 ? gv : 0)) {
+            if (0 == Pv) return this.done = !0, this.value = "", this;
+            zv > 0 && this.offsets[Pv - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & Sv) == (zv > 0 ? 0 : 1)) {
+            if (this.offsets[Pv] += zv, 0 == vv) return this.lineBreak = !0, this.value = "\n", this;
+            vv--
+          } else if (hv instanceof Cv) {
+            let Sv = hv.text[ev + (zv < 0 ? -1 : 0)];
+            if (this.offsets[Pv] += zv, Sv.length > Math.max(0, vv)) return this.value = 0 == vv ? Sv : zv > 0 ? Sv.slice(vv) : Sv.slice(0, Sv.length - vv), this;
+            vv -= Sv.length
+          } else {
+            let Sv = hv.children[ev + (zv < 0 ? -1 : 0)];
+            vv > Sv.length ? (vv -= Sv.length, this.offsets[Pv] += zv) : (zv < 0 && this.offsets[Pv]--, this.nodes.push(Sv), this.offsets.push(zv > 0 ? 1 : (Sv instanceof Cv ? Sv.text.length : Sv.children.length) << 1))
+          }
+        }
+      }
+      next() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return vv < 0 && (this.nextInner(-vv, -this.dir), vv = this.value.length), this.nextInner(vv, this.dir)
+      }
+    }
+    class jv {
+      constructor(vv, zv, Pv) {
+        this.value = "", this.done = !1, this.cursor = new mv(vv, zv > Pv ? -1 : 1), this.pos = zv > Pv ? vv.length : 0, this.from = Math.min(zv, Pv), this.to = Math.max(zv, Pv)
+      }
+      nextInner(vv, zv) {
+        if (zv < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        vv += Math.max(0, zv < 0 ? this.pos - this.to : this.from - this.pos);
+        let Pv = zv < 0 ? this.pos - this.from : this.to - this.pos;
+        vv > Pv && (vv = Pv), Pv -= vv;
+        let {
+          value: hv
+        } = this.cursor.next(vv);
+        return this.pos += (hv.length + vv) * zv, this.value = hv.length <= Pv ? hv : zv < 0 ? hv.slice(hv.length - Pv) : hv.slice(0, Pv), this.done = !this.value, this
+      }
+      next() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return vv < 0 ? vv = Math.max(vv, this.from - this.pos) : vv > 0 && (vv = Math.min(vv, this.to - this.pos)), this.nextInner(vv, this.cursor.dir)
+      }
+      get lineBreak() {
+        return this.cursor.lineBreak && "" != this.value
+      }
+    }
+    class fv {
+      constructor(vv) {
+        this.inner = vv, this.afterBreak = !0, this.value = "", this.done = !1
+      }
+      next() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          {
+            done: zv,
+            lineBreak: Pv,
+            value: hv
+          } = this.inner.next(vv);
+        return zv && this.afterBreak ? (this.value = "", this.afterBreak = !1) : zv ? (this.done = !0, this.value = "") : Pv ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = hv, this.afterBreak = !1), this
+      }
+      get lineBreak() {
+        return !1
+      }
+    }
+    "undefined" != typeof Symbol && (sv.prototype[Symbol.iterator] = function() {
+      return this.iter()
+    }, mv.prototype[Symbol.iterator] = jv.prototype[Symbol.iterator] = fv.prototype[Symbol.iterator] = function() {
+      return this
+    });
+    class Fv {
+      constructor(vv, zv, Pv, hv) {
+        this.from = vv, this.to = zv, this.number = Pv, this.text = hv
+      }
+      get length() {
+        return this.to - this.from
+      }
+    }
+
+    function Yv(vv, zv, Pv) {
+      return [zv = Math.max(0, Math.min(vv.length, zv)), Math.max(zv, Math.min(vv.length, Pv))]
+    }
+
+    function nv(vv, zv) {
+      return dv(vv, zv, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    }
+
+    function Ov(vv, zv) {
+      let Pv = vv.charCodeAt(zv);
+      if (!((hv = Pv) >= 55296 && hv < 56320) || zv + 1 == vv.length) return Pv;
+      var hv;
+      let Sv = vv.charCodeAt(zv + 1);
+      return function(vv) {
+        return vv >= 56320 && vv < 57344
+      }(Sv) ? Sv - 56320 + (Pv - 55296 << 10) + 65536 : Pv
+    }
+
+    function Dv(vv) {
+      return vv <= 65535 ? String.fromCharCode(vv) : (vv -= 65536, String.fromCharCode(55296 + (vv >> 10), 56320 + (1023 & vv)))
+    }
+
+    function Kv(vv) {
+      return vv < 65536 ? 1 : 2
+    }
+    const Vv = /\r\n?|\n/;
+    var Uv = function(vv) {
+      return vv[vv.Simple = 0] = "Simple", vv[vv.TrackDel = 1] = "TrackDel", vv[vv.TrackBefore = 2] = "TrackBefore", vv[vv.TrackAfter = 3] = "TrackAfter", vv
+    }(Uv || (Uv = {}));
+    class Rv {
+      constructor(vv) {
+        this.sections = vv
+      }
+      get length() {
+        let vv = 0;
+        for (let zv = 0; zv < this.sections.length; zv += 2) vv += this.sections[zv];
+        return vv
+      }
+      get newLength() {
+        let vv = 0;
+        for (let zv = 0; zv < this.sections.length; zv += 2) {
+          let Pv = this.sections[zv + 1];
+          vv += Pv < 0 ? this.sections[zv] : Pv
+        }
+        return vv
+      }
+      get empty() {
+        return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
+      }
+      iterGaps(vv) {
+        for (let zv = 0, Pv = 0, hv = 0; zv < this.sections.length;) {
+          let Sv = this.sections[zv++],
+            ev = this.sections[zv++];
+          ev < 0 ? (vv(Pv, hv, Sv), hv += Sv) : hv += ev, Pv += Sv
+        }
+      }
+      iterChangedRanges(vv) {
+        Iv(this, vv, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      }
+      get invertedDesc() {
+        let vv = [];
+        for (let zv = 0; zv < this.sections.length;) {
+          let Pv = this.sections[zv++],
+            hv = this.sections[zv++];
+          hv < 0 ? vv.push(Pv, hv) : vv.push(hv, Pv)
+        }
+        return new Rv(vv)
+      }
+      composeDesc(vv) {
+        return this.empty ? vv : vv.empty ? this : Zv(this, vv)
+      }
+      mapDesc(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return vv.empty ? this : Qv(this, vv, zv)
+      }
+      mapPos(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Uv.Simple,
+          hv = 0,
+          Sv = 0;
+        for (let ev = 0; ev < this.sections.length;) {
+          let gv = this.sections[ev++],
+            pv = this.sections[ev++],
+            dv = hv + gv;
+          if (pv < 0) {
+            if (dv > vv) return Sv + (vv - hv);
+            Sv += gv
+          } else {
+            if (Pv != Uv.Simple && dv >= vv && (Pv == Uv.TrackDel && hv < vv && dv > vv || Pv == Uv.TrackBefore && hv < vv || Pv == Uv.TrackAfter && dv > vv)) return null;
+            if (dv > vv || dv == vv && zv < 0 && !gv) return vv == hv || zv < 0 ? Sv : Sv + pv;
+            Sv += pv
+          }
+          hv = dv
+        }
+        if (vv > hv) throw new RangeError(`Position ${vv} is out of range for changeset of length ${hv}`);
+        return Sv
+      }
+      touchesRange(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv;
+        for (let Pv = 0, hv = 0; Pv < this.sections.length && hv <= zv;) {
+          let Sv = hv + this.sections[Pv++];
+          if (this.sections[Pv++] >= 0 && hv <= zv && Sv >= vv) return !(hv < vv && Sv > zv) || "cover";
+          hv = Sv
+        }
+        return !1
+      }
+      toString() {
+        let vv = "";
+        for (let zv = 0; zv < this.sections.length;) {
+          let Pv = this.sections[zv++],
+            hv = this.sections[zv++];
+          vv += (vv ? " " : "") + Pv + (hv >= 0 ? ":" + hv : "")
+        }
+        return vv
+      }
+      toJSON() {
+        return this.sections
+      }
+      static fromJSON(vv) {
+        if (!Array.isArray(vv) || vv.length % 2 || vv.some((vv => "number" != typeof vv))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new Rv(vv)
+      }
+      static create(vv) {
+        return new Rv(vv)
+      }
+    }
+    class xv extends Rv {
+      constructor(vv, zv) {
+        super(vv), this.inserted = zv
+      }
+      apply(vv) {
+        if (this.length != vv.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return Iv(this, ((zv, Pv, hv, Sv, ev) => vv = vv.replace(hv, hv + (Pv - zv), ev)), !1), vv
+      }
+      mapDesc(vv) {
+        return Qv(this, vv, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      }
+      invert(vv) {
+        let zv = this.sections.slice(),
+          Pv = [];
+        for (let hv = 0, Sv = 0; hv < zv.length; hv += 2) {
+          let ev = zv[hv],
+            gv = zv[hv + 1];
+          if (gv >= 0) {
+            zv[hv] = gv, zv[hv + 1] = ev;
+            let pv = hv >> 1;
+            for (; Pv.length < pv;) Pv.push(sv.empty);
+            Pv.push(ev ? vv.slice(Sv, Sv + ev) : sv.empty)
+          }
+          Sv += ev
+        }
+        return new xv(zv, Pv)
+      }
+      compose(vv) {
+        return this.empty ? vv : vv.empty ? this : Zv(this, vv, !0)
+      }
+      map(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return vv.empty ? this : Qv(this, vv, zv, !0)
+      }
+      iterChanges(vv) {
+        Iv(this, vv, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      }
+      get desc() {
+        return Rv.create(this.sections)
+      }
+      filter(vv) {
+        let zv = [],
+          Pv = [],
+          hv = [],
+          Sv = new Av(this);
+        vv: for (let ev = 0, gv = 0;;) {
+          let pv = ev == vv.length ? 1e9 : vv[ev++];
+          for (; gv < pv || gv == pv && 0 == Sv.len;) {
+            if (Sv.done) break vv;
+            let vv = Math.min(Sv.len, pv - gv);
+            tv(hv, vv, -1);
+            let ev = -1 == Sv.ins ? -1 : 0 == Sv.off ? Sv.ins : 0;
+            tv(zv, vv, ev), ev > 0 && qv(Pv, zv, Sv.text), Sv.forward(vv), gv += vv
+          }
+          let dv = vv[ev++];
+          for (; gv < dv;) {
+            if (Sv.done) break vv;
+            let vv = Math.min(Sv.len, dv - gv);
+            tv(zv, vv, -1), tv(hv, vv, -1 == Sv.ins ? -1 : 0 == Sv.off ? Sv.ins : 0), Sv.forward(vv), gv += vv
+          }
+        }
+        return {
+          changes: new xv(zv, Pv),
+          filtered: Rv.create(hv)
+        }
+      }
+      toJSON() {
+        let vv = [];
+        for (let zv = 0; zv < this.sections.length; zv += 2) {
+          let Pv = this.sections[zv],
+            hv = this.sections[zv + 1];
+          hv < 0 ? vv.push(Pv) : 0 == hv ? vv.push([Pv]) : vv.push([Pv].concat(this.inserted[zv >> 1].toJSON()))
+        }
+        return vv
+      }
+      static of (vv, zv, Pv) {
+        let hv = [],
+          Sv = [],
+          ev = 0,
+          gv = null;
+
+        function pv() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !hv.length) return;
+          ev < zv && tv(hv, zv - ev, -1);
+          let vv = new xv(hv, Sv);
+          gv = gv ? gv.compose(vv.map(gv)) : vv, hv = [], Sv = [], ev = 0
+        }
+        return function vv(dv) {
+          if (Array.isArray(dv))
+            for (let zv of dv) vv(zv);
+          else if (dv instanceof xv) {
+            if (dv.length != zv) throw new RangeError(`Mismatched change set length (got ${dv.length}, expected ${zv})`);
+            pv(), gv = gv ? gv.compose(dv.map(gv)) : dv
+          } else {
+            let {
+              from: vv,
+              to: gv = vv,
+              insert: Nv
+            } = dv;
+            if (vv > gv || vv < 0 || gv > zv) throw new RangeError(`Invalid change range ${vv} to ${gv} (in doc of length ${zv})`);
+            let lv = Nv ? "string" == typeof Nv ? sv.of(Nv.split(Pv || Vv)) : Nv : sv.empty,
+              Tv = lv.length;
+            if (vv == gv && 0 == Tv) return;
+            vv < ev && pv(), vv > ev && tv(hv, vv - ev, -1), tv(hv, gv - vv, Tv), qv(Sv, hv, lv), ev = gv
+          }
+        }(vv), pv(!gv), gv
+      }
+      static empty(vv) {
+        return new xv(vv ? [vv, -1] : [], [])
+      }
+      static fromJSON(vv) {
+        if (!Array.isArray(vv)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let zv = [],
+          Pv = [];
+        for (let hv = 0; hv < vv.length; hv++) {
+          let Sv = vv[hv];
+          if ("number" == typeof Sv) zv.push(Sv, -1);
+          else {
+            if (!Array.isArray(Sv) || "number" != typeof Sv[0] || Sv.some(((vv, zv) => zv && "string" != typeof vv))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == Sv.length) zv.push(Sv[0], 0);
+            else {
+              for (; Pv.length < hv;) Pv.push(sv.empty);
+              Pv[hv] = sv.of(Sv.slice(1)), zv.push(Sv[0], Pv[hv].length)
+            }
+          }
+        }
+        return new xv(zv, Pv)
+      }
+      static createSet(vv, zv) {
+        return new xv(vv, zv)
+      }
+    }
+
+    function tv(vv, zv, Pv) {
+      let hv = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == zv && Pv <= 0) return;
+      let Sv = vv.length - 2;
+      Sv >= 0 && Pv <= 0 && Pv == vv[Sv + 1] ? vv[Sv] += zv : Sv >= 0 && 0 == zv && 0 == vv[Sv] ? vv[Sv + 1] += Pv : hv ? (vv[Sv] += zv, vv[Sv + 1] += Pv) : vv.push(zv, Pv)
+    }
+
+    function qv(vv, zv, Pv) {
+      if (0 == Pv.length) return;
+      let hv = zv.length - 2 >> 1;
+      if (hv < vv.length) vv[vv.length - 1] = vv[vv.length - 1].append(Pv);
+      else {
+        for (; vv.length < hv;) vv.push(sv.empty);
+        vv.push(Pv)
+      }
+    }
+
+    function Iv(vv, zv, Pv) {
+      let hv = vv.inserted;
+      for (let Sv = 0, ev = 0, gv = 0; gv < vv.sections.length;) {
+        let pv = vv.sections[gv++],
+          dv = vv.sections[gv++];
+        if (dv < 0) Sv += pv, ev += pv;
+        else {
+          let Nv = Sv,
+            lv = ev,
+            Tv = sv.empty;
+          for (; Nv += pv, lv += dv, dv && hv && (Tv = Tv.append(hv[gv - 2 >> 1])), !(Pv || gv == vv.sections.length || vv.sections[gv + 1] < 0);) pv = vv.sections[gv++], dv = vv.sections[gv++];
+          zv(Sv, Nv, ev, lv, Tv), Sv = Nv, ev = lv
+        }
+      }
+    }
+
+    function Qv(vv, zv, Pv) {
+      let hv = [],
+        Sv = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        ev = new Av(vv),
+        gv = new Av(zv),
+        pv = 0;
+      for (let dv = -1;;) {
+        if (++pv > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (ev.done && gv.len || gv.done && ev.len) throw new Error("Mismatched change set lengths");
+        if (-1 == ev.ins && -1 == gv.ins) {
+          let vv = Math.min(ev.len, gv.len);
+          tv(hv, vv, -1), ev.forward(vv), gv.forward(vv)
+        } else if (gv.ins >= 0 && (ev.ins < 0 || dv == ev.i || 0 == ev.off && (gv.len < ev.len || gv.len == ev.len && !Pv))) {
+          let vv = gv.len;
+          for (tv(hv, gv.ins, -1); vv;) {
+            if (++pv > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let zv = Math.min(ev.len, vv);
+            ev.ins >= 0 && dv < ev.i && ev.len <= zv && (tv(hv, 0, ev.ins), Sv && qv(Sv, hv, ev.text), dv = ev.i), ev.forward(zv), vv -= zv
+          }
+          gv.next()
+        } else {
+          if (!(ev.ins >= 0)) {
+            if (ev.done && gv.done) return Sv ? xv.createSet(hv, Sv) : Rv.create(hv);
+            throw new Error("Mismatched change set lengths")
+          } {
+            let vv = 0,
+              zv = ev.len;
+            for (; zv;) {
+              if (++pv > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == gv.ins) {
+                let Pv = Math.min(zv, gv.len);
+                vv += Pv, zv -= Pv, gv.forward(Pv)
+              } else {
+                if (!(0 == gv.ins && gv.len < zv)) break;
+                zv -= gv.len, gv.next()
+              }
+            }
+            tv(hv, vv, dv < ev.i ? ev.ins : 0), Sv && dv < ev.i && qv(Sv, hv, ev.text), dv = ev.i, ev.forward(ev.len - zv)
+          }
+        }
+      }
+    }
+
+    function Zv(vv, zv) {
+      let Pv = [],
+        hv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        Sv = new Av(vv),
+        ev = new Av(zv),
+        gv = 0;
+      for (let pv = !1;;) {
+        if (++gv > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (Sv.done && ev.done) return hv ? xv.createSet(Pv, hv) : Rv.create(Pv);
+        if (0 == Sv.ins) tv(Pv, Sv.len, 0, pv), Sv.next();
+        else if (0 != ev.len || ev.done) {
+          if (Sv.done || ev.done) throw new Error("Mismatched change set lengths");
+          {
+            let vv = Math.min(Sv.len2, ev.len),
+              zv = Pv.length;
+            if (-1 == Sv.ins) {
+              let zv = -1 == ev.ins ? -1 : ev.off ? 0 : ev.ins;
+              tv(Pv, vv, zv, pv), hv && zv && qv(hv, Pv, ev.text)
+            } else - 1 == ev.ins ? (tv(Pv, Sv.off ? 0 : Sv.len, vv, pv), hv && qv(hv, Pv, Sv.textBit(vv))) : (tv(Pv, Sv.off ? 0 : Sv.len, ev.off ? 0 : ev.ins, pv), hv && !ev.off && qv(hv, Pv, ev.text));
+            pv = (Sv.ins > vv || ev.ins >= 0 && ev.len > vv) && (pv || Pv.length > zv), Sv.forward2(vv), ev.forward(vv)
+          }
+        } else tv(Pv, 0, ev.ins, pv), hv && qv(hv, Pv, ev.text), ev.next()
+      }
+    }
+    class Av {
+      constructor(vv) {
+        this.set = vv, this.i = 0, this.next()
+      }
+      next() {
+        let {
+          sections: vv
+        } = this.set;
+        this.i < vv.length ? (this.len = vv[this.i++], this.ins = vv[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+      }
+      get done() {
+        return -2 == this.ins
+      }
+      get len2() {
+        return this.ins < 0 ? this.len : this.ins
+      }
+      get text() {
+        let {
+          inserted: vv
+        } = this.set, zv = this.i - 2 >> 1;
+        return zv >= vv.length ? sv.empty : vv[zv]
+      }
+      textBit(vv) {
+        let {
+          inserted: zv
+        } = this.set, Pv = this.i - 2 >> 1;
+        return Pv >= zv.length && !vv ? sv.empty : zv[Pv].slice(this.off, null == vv ? void 0 : this.off + vv)
+      }
+      forward(vv) {
+        vv == this.len ? this.next() : (this.len -= vv, this.off += vv)
+      }
+      forward2(vv) {
+        -1 == this.ins ? this.forward(vv) : vv == this.ins ? this.next() : (this.ins -= vv, this.off += vv)
+      }
+    }
+    class Lv {
+      constructor(vv, zv, Pv) {
+        this.from = vv, this.to = zv, this.flags = Pv
+      }
+      get anchor() {
+        return 32 & this.flags ? this.to : this.from
+      }
+      get head() {
+        return 32 & this.flags ? this.from : this.to
+      }
+      get empty() {
+        return this.from == this.to
+      }
+      get assoc() {
+        return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
+      }
+      get bidiLevel() {
+        let vv = 7 & this.flags;
+        return 7 == vv ? null : vv
+      }
+      get goalColumn() {
+        let vv = this.flags >> 6;
+        return 16777215 == vv ? void 0 : vv
+      }
+      map(vv) {
+        let zv, Pv, hv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? zv = Pv = vv.mapPos(this.from, hv) : (zv = vv.mapPos(this.from, 1), Pv = vv.mapPos(this.to, -1)), zv == this.from && Pv == this.to ? this : new Lv(zv, Pv, this.flags)
+      }
+      extend(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (vv <= this.anchor && zv >= this.anchor) return Hv.range(vv, zv, void 0, void 0, Pv);
+        let hv = Math.abs(vv - this.anchor) > Math.abs(zv - this.anchor) ? vv : zv;
+        return Hv.range(this.anchor, hv, void 0, void 0, Pv)
+      }
+      eq(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == vv.anchor && this.head == vv.head && this.goalColumn == vv.goalColumn && (!zv || !this.empty || this.assoc == vv.assoc)
+      }
+      toJSON() {
+        return {
+          anchor: this.anchor,
+          head: this.head
+        }
+      }
+      static fromJSON(vv) {
+        if (!vv || "number" != typeof vv.anchor || "number" != typeof vv.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return Hv.range(vv.anchor, vv.head)
+      }
+      static create(vv, zv, Pv) {
+        return new Lv(vv, zv, Pv)
+      }
+    }
+    class Hv {
+      constructor(vv, zv) {
+        this.PC = vv, this.mainIndex = zv
+      }
+      map(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return vv.empty ? this : Hv.create(this.PC.map((Pv => Pv.map(vv, zv))), this.mainIndex)
+      }
+      eq(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.PC.length != vv.PC.length || this.mainIndex != vv.mainIndex) return !1;
+        for (let Pv = 0; Pv < this.PC.length; Pv++)
+          if (!this.PC[Pv].eq(vv.PC[Pv], zv)) return !1;
+        return !0
+      }
+      get main() {
+        return this.PC[this.mainIndex]
+      }
+      asSingle() {
+        return 1 == this.PC.length ? this : new Hv([this.main], 0)
+      }
+      addRange(vv) {
+        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return Hv.create([vv].concat(this.PC), zv ? 0 : this.mainIndex + 1)
+      }
+      replaceRange(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          Pv = this.PC.slice();
+        return Pv[zv] = vv, Hv.create(Pv, this.mainIndex)
+      }
+      toJSON() {
+        return {
+          PC: this.PC.map((vv => vv.toJSON())),
+          main: this.mainIndex
+        }
+      }
+      static fromJSON(vv) {
+        if (!vv || !Array.isArray(vv.PC) || "number" != typeof vv.main || vv.main >= vv.PC.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new Hv(vv.PC.map((vv => Lv.fromJSON(vv))), vv.main)
+      }
+      static single(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv;
+        return new Hv([Hv.range(vv, zv)], 0)
+      }
+      static create(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == vv.length) throw new RangeError("A selection needs at least one range");
+        for (let Pv = 0, hv = 0; hv < vv.length; hv++) {
+          let Sv = vv[hv];
+          if (Sv.empty ? Sv.from <= Pv : Sv.from < Pv) return Hv.normalized(vv.slice(), zv);
+          Pv = Sv.to
+        }
+        return new Hv(vv, zv)
+      }
+      static cursor(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Pv = arguments.length > 2 ? arguments[2] : void 0,
+          hv = arguments.length > 3 ? arguments[3] : void 0;
+        return Lv.create(vv, vv, (0 == zv ? 0 : zv < 0 ? 8 : 16) | (null == Pv ? 7 : Math.min(6, Pv)) | (null !== hv && void 0 !== hv ? hv : 16777215) << 6)
+      }
+      static range(vv, zv, Pv, hv, Sv) {
+        let ev = (null !== Pv && void 0 !== Pv ? Pv : 16777215) << 6 | (null == hv ? 7 : Math.min(6, hv));
+        return Sv || vv == zv || (Sv = zv < vv ? 1 : -1), zv < vv ? Lv.create(zv, vv, 48 | ev) : Lv.create(vv, zv, (Sv ? Sv < 0 ? 8 : 16 : 0) | ev)
+      }
+      static normalized(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          Pv = vv[zv];
+        vv.sort(((vv, zv) => vv.from - zv.from)), zv = vv.indexOf(Pv);
+        for (let hv = 1; hv < vv.length; hv++) {
+          let Pv = vv[hv],
+            Sv = vv[hv - 1];
+          if (Pv.empty ? Pv.from <= Sv.to : Pv.from < Sv.to) {
+            let ev = Sv.from,
+              gv = Math.max(Pv.to, Sv.to);
+            hv <= zv && zv--, vv.splice(--hv, 2, Pv.anchor > Pv.head ? Hv.range(gv, ev) : Hv.range(ev, gv))
+          }
+        }
+        return new Hv(vv, zv)
+      }
+    }
+
+    function Mv(vv, zv) {
+      for (let Pv of vv.PC)
+        if (Pv.to > zv) throw new RangeError("Selection points outside of document")
+    }
+    let yv = 0;
+    class Bv {
+      constructor(vv, zv, Pv, hv, Sv) {
+        this.combine = vv, this.compareInput = zv, this.compare = Pv, this.isStatic = hv, this.id = yv++, this.default = vv([]), this.extensions = "function" == typeof Sv ? Sv(this) : Sv
+      }
+      get reader() {
+        return this
+      }
+      static define() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new Bv(vv.combine || (vv => vv), vv.compareInput || ((vv, zv) => vv === zv), vv.compare || (vv.combine ? (vv, zv) => vv === zv : Jv), !!vv.static, vv.enables)
+      }
+      of(vv) {
+        return new Ev([], this, 0, vv)
+      }
+      compute(vv, zv) {
+        if (this.isStatic) throw new Error("Can't compute a static facet");
+        return new Ev(vv, this, 1, zv)
+      }
+      computeN(vv, zv) {
+        if (this.isStatic) throw new Error("Can't compute a static facet");
+        return new Ev(vv, this, 2, zv)
+      }
+      from(vv, zv) {
+        return zv || (zv = vv => vv), this.compute([vv], (Pv => zv(Pv.field(vv))))
+      }
+    }
+
+    function Jv(vv, zv) {
+      return vv == zv || vv.length == zv.length && vv.every(((vv, Pv) => vv === zv[Pv]))
+    }
+    class Ev {
+      constructor(vv, zv, Pv, hv) {
+        this.dependencies = vv, this.facet = zv, this.type = Pv, this.value = hv, this.id = yv++
+      }
+      dynamicSlot(vv) {
+        var zv;
+        let Pv = this.value,
+          hv = this.facet.compareInput,
+          Sv = this.id,
+          ev = vv[Sv] >> 1,
+          gv = 2 == this.type,
+          pv = !1,
+          dv = !1,
+          Nv = [];
+        for (let lv of this.dependencies) "doc" == lv ? pv = !0 : "selection" == lv ? dv = !0 : 0 == (1 & (null !== (zv = vv[lv.id]) && void 0 !== zv ? zv : 1)) && Nv.push(vv[lv.id]);
+        return {
+          create: vv => (vv.values[ev] = Pv(vv), 1),
+          update(vv, zv) {
+            if (pv && zv.docChanged || dv && (zv.docChanged || zv.selection) || bv(vv, Nv)) {
+              let zv = Pv(vv);
+              if (gv ? !ov(zv, vv.values[ev], hv) : !hv(zv, vv.values[ev])) return vv.values[ev] = zv, 1
+            }
+            return 0
+          },
+          reconfigure: (vv, zv) => {
+            let pv, dv = zv.config.address[Sv];
+            if (null != dv) {
+              let Sv = lz(zv, dv);
+              if (this.dependencies.every((Pv => Pv instanceof Bv ? zv.facet(Pv) === vv.facet(Pv) : !(Pv instanceof Xv) || zv.field(Pv, !1) == vv.field(Pv, !1))) || (gv ? ov(pv = Pv(vv), Sv, hv) : hv(pv = Pv(vv), Sv))) return vv.values[ev] = Sv, 0
+            } else pv = Pv(vv);
+            return vv.values[ev] = pv, 1
+          }
+        }
+      }
+    }
+
+    function ov(vv, zv, Pv) {
+      if (vv.length != zv.length) return !1;
+      for (let hv = 0; hv < vv.length; hv++)
+        if (!Pv(vv[hv], zv[hv])) return !1;
+      return !0
+    }
+
+    function bv(vv, zv) {
+      let Pv = !1;
+      for (let hv of zv) 1 & Nz(vv, hv) && (Pv = !0);
+      return Pv
+    }
+
+    function rv(vv, zv, Pv) {
+      let hv = Pv.map((zv => vv[zv.id])),
+        Sv = Pv.map((vv => vv.type)),
+        ev = hv.filter((vv => !(1 & vv))),
+        gv = vv[zv.id] >> 1;
+
+      function pv(vv) {
+        let Pv = [];
+        for (let zv = 0; zv < hv.length; zv++) {
+          let ev = lz(vv, hv[zv]);
+          if (2 == Sv[zv])
+            for (let vv of ev) Pv.push(vv);
+          else Pv.push(ev)
+        }
+        return zv.combine(Pv)
+      }
+      return {
+        create(vv) {
+          for (let zv of hv) Nz(vv, zv);
+          return vv.values[gv] = pv(vv), 1
+        },
+        update(vv, Pv) {
+          if (!bv(vv, ev)) return 0;
+          let hv = pv(vv);
+          return zv.compare(hv, vv.values[gv]) ? 0 : (vv.values[gv] = hv, 1)
+        },
+        reconfigure(vv, Sv) {
+          let ev = bv(vv, hv),
+            dv = Sv.config.facets[zv.id],
+            Nv = Sv.facet(zv);
+          if (dv && !ev && Jv(Pv, dv)) return vv.values[gv] = Nv, 0;
+          let lv = pv(vv);
+          return zv.compare(lv, Nv) ? (vv.values[gv] = Nv, 0) : (vv.values[gv] = lv, 1)
+        }
+      }
+    }
+    const kv = Bv.define({
+      static: !0
+    });
+    class Xv {
+      constructor(vv, zv, Pv, hv, Sv) {
+        this.id = vv, this.createF = zv, this.updateF = Pv, this.compareF = hv, this.spec = Sv, this.provides = void 0
+      }
+      static define(vv) {
+        let zv = new Xv(yv++, vv.create, vv.update, vv.compare || ((vv, zv) => vv === zv), vv);
+        return vv.provide && (zv.provides = vv.provide(zv)), zv
+      }
+      create(vv) {
+        let zv = vv.facet(kv).find((vv => vv.field == this));
+        return ((null === zv || void 0 === zv ? void 0 : zv.create) || this.createF)(vv)
+      }
+      slot(vv) {
+        let zv = vv[this.id] >> 1;
+        return {
+          create: vv => (vv.values[zv] = this.create(vv), 1),
+          update: (vv, Pv) => {
+            let hv = vv.values[zv],
+              Sv = this.updateF(hv, Pv);
+            return this.compareF(hv, Sv) ? 0 : (vv.values[zv] = Sv, 1)
+          },
+          reconfigure: (vv, Pv) => {
+            let hv, Sv = vv.facet(kv),
+              ev = Pv.facet(kv);
+            return (hv = Sv.find((vv => vv.field == this))) && hv != ev.find((vv => vv.field == this)) ? (vv.values[zv] = hv.create(vv), 1) : null != Pv.config.address[this.id] ? (vv.values[zv] = Pv.field(this), 0) : (vv.values[zv] = this.create(vv), 1)
+          }
+        }
+      }
+      init(vv) {
+        return [this, kv.of({
+          field: this,
+          create: vv
+        })]
+      }
+      get extension() {
+        return this
+      }
+    }
+    const uv = 4,
+      vz = 3,
+      zz = 2,
+      Pz = 1;
+
+    function hz(vv) {
+      return zv => new ez(zv, vv)
+    }
+    const Sz = {
+      highest: hz(0),
+      high: hz(Pz),
+      default: hz(zz),
+      low: hz(vz),
+      lowest: hz(uv)
+    };
+    class ez {
+      constructor(vv, zv) {
+        this.inner = vv, this.prec = zv
+      }
+    }
+    class gz {
+      of(vv) {
+        return new pz(this, vv)
+      }
+      reconfigure(vv) {
+        return gz.reconfigure.of({
+          compartment: this,
+          extension: vv
+        })
+      }
+      get(vv) {
+        return vv.config.compartments.get(this)
+      }
+    }
+    class pz {
+      constructor(vv, zv) {
+        this.compartment = vv, this.inner = zv
+      }
+    }
+    class dz {
+      constructor(vv, zv, Pv, hv, Sv, ev) {
+        for (this.base = vv, this.compartments = zv, this.dynamicSlots = Pv, this.address = hv, this.staticValues = Sv, this.facets = ev, this.statusTemplate = []; this.statusTemplate.length < Pv.length;) this.statusTemplate.push(0)
+      }
+      staticFacet(vv) {
+        let zv = this.address[vv.id];
+        return null == zv ? vv.default : this.staticValues[zv >> 1]
+      }
+      static resolve(vv, zv, Pv) {
+        let hv = [],
+          Sv = Object.create(null),
+          ev = new Map;
+        for (let Tv of function(vv, zv, Pv) {
+            let hv = [
+                [],
+                [],
+                [],
+                [],
+                []
+              ],
+              Sv = new Map;
+
+            function ev(vv, gv) {
+              let pv = Sv.get(vv);
+              if (null != pv) {
+                if (pv <= gv) return;
+                let zv = hv[pv].indexOf(vv);
+                zv > -1 && hv[pv].splice(zv, 1), vv instanceof pz && Pv.delete(vv.compartment)
+              }
+              if (Sv.set(vv, gv), Array.isArray(vv))
+                for (let zv of vv) ev(zv, gv);
+              else if (vv instanceof pz) {
+                if (Pv.has(vv.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let hv = zv.get(vv.compartment) || vv.inner;
+                Pv.set(vv.compartment, hv), ev(hv, gv)
+              } else if (vv instanceof ez) ev(vv.inner, vv.prec);
+              else if (vv instanceof Xv) hv[gv].push(vv), vv.provides && ev(vv.provides, gv);
+              else if (vv instanceof Ev) hv[gv].push(vv), vv.facet.extensions && ev(vv.facet.extensions, zz);
+              else {
+                let zv = vv.extension;
+                if (!zv) throw new Error(`Unrecognized extension value in extension set (${vv}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                ev(zv, gv)
+              }
+            }
+            return ev(vv, zz), hv.reduce(((vv, zv) => vv.concat(zv)))
+          }(vv, zv, ev)) Tv instanceof Xv ? hv.push(Tv) : (Sv[Tv.facet.id] || (Sv[Tv.facet.id] = [])).push(Tv);
+        let gv = Object.create(null),
+          pv = [],
+          dv = [];
+        for (let Tv of hv) gv[Tv.id] = dv.length << 1, dv.push((vv => Tv.slot(vv)));
+        let Nv = null === Pv || void 0 === Pv ? void 0 : Pv.config.facets;
+        for (let Tv in Sv) {
+          let vv = Sv[Tv],
+            zv = vv[0].facet,
+            hv = Nv && Nv[Tv] || [];
+          if (vv.every((vv => 0 == vv.type)))
+            if (gv[zv.id] = pv.length << 1 | 1, Jv(hv, vv)) pv.push(Pv.facet(zv));
+            else {
+              let hv = zv.combine(vv.map((vv => vv.value)));
+              pv.push(Pv && zv.compare(hv, Pv.facet(zv)) ? Pv.facet(zv) : hv)
+            }
+          else {
+            for (let zv of vv) 0 == zv.type ? (gv[zv.id] = pv.length << 1 | 1, pv.push(zv.value)) : (gv[zv.id] = dv.length << 1, dv.push((vv => zv.dynamicSlot(vv))));
+            gv[zv.id] = dv.length << 1, dv.push((Pv => rv(Pv, zv, vv)))
+          }
+        }
+        let lv = dv.map((vv => vv(gv)));
+        return new dz(vv, ev, lv, gv, pv, Sv)
+      }
+    }
+
+    function Nz(vv, zv) {
+      if (1 & zv) return 2;
+      let Pv = zv >> 1,
+        hv = vv.status[Pv];
+      if (4 == hv) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & hv) return hv;
+      vv.status[Pv] = 4;
+      let Sv = vv.computeSlot(vv, vv.config.dynamicSlots[Pv]);
+      return vv.status[Pv] = 2 | Sv
+    }
+
+    function lz(vv, zv) {
+      return 1 & zv ? vv.config.staticValues[zv >> 1] : vv.values[zv >> 1]
+    }
+    const Tz = Bv.define(),
+      Wz = Bv.define({
+        combine: vv => vv.some((vv => vv)),
+        static: !0
+      }),
+      wz = Bv.define({
+        combine: vv => vv.length ? vv[0] : void 0,
+        static: !0
+      }),
+      az = Bv.define(),
+      sz = Bv.define(),
+      Cz = Bv.define(),
+      iz = Bv.define({
+        combine: vv => !!vv.length && vv[0]
+      });
+    class cz {
+      constructor(vv, zv) {
+        this.type = vv, this.value = zv
+      }
+      static define() {
+        return new Gz
+      }
+    }
+    class Gz {
+      of(vv) {
+        return new cz(this, vv)
+      }
+    }
+    class mz {
+      constructor(vv) {
+        this.map = vv
+      }
+      of(vv) {
+        return new jz(this, vv)
+      }
+    }
+    class jz {
+      constructor(vv, zv) {
+        this.type = vv, this.value = zv
+      }
+      map(vv) {
+        let zv = this.type.map(this.value, vv);
+        return void 0 === zv ? void 0 : zv == this.value ? this : new jz(this.type, zv)
+      }
+      is(vv) {
+        return this.type == vv
+      }
+      static define() {
+        return new mz((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (vv => vv))
+      }
+      static mapEffects(vv, zv) {
+        if (!vv.length) return vv;
+        let Pv = [];
+        for (let hv of vv) {
+          let vv = hv.map(zv);
+          vv && Pv.push(vv)
+        }
+        return Pv
+      }
+    }
+    jz.reconfigure = jz.define(), jz.appendConfig = jz.define();
+    class fz {
+      constructor(vv, zv, Pv, hv, Sv, ev) {
+        this.startState = vv, this.changes = zv, this.selection = Pv, this.effects = hv, this.annotations = Sv, this.scrollIntoView = ev, this._doc = null, this._state = null, Pv && Mv(Pv, zv.newLength), Sv.some((vv => vv.type == fz.time)) || (this.annotations = Sv.concat(fz.time.of(Date.now())))
+      }
+      static create(vv, zv, Pv, hv, Sv, ev) {
+        return new fz(vv, zv, Pv, hv, Sv, ev)
+      }
+      get newDoc() {
+        return this._doc || (this._doc = this.changes.apply(this.startState.doc))
+      }
+      get newSelection() {
+        return this.selection || this.startState.selection.map(this.changes)
+      }
+      get state() {
+        return this._state || this.startState.applyTransaction(this), this._state
+      }
+      annotation(vv) {
+        for (let zv of this.annotations)
+          if (zv.type == vv) return zv.value
+      }
+      get docChanged() {
+        return !this.changes.empty
+      }
+      get reconfigured() {
+        return this.startState.config != this.state.config
+      }
+      isUserEvent(vv) {
+        let zv = this.annotation(fz.userEvent);
+        return !(!zv || !(zv == vv || zv.length > vv.length && zv.slice(0, vv.length) == vv && "." == zv[vv.length]))
+      }
+    }
+
+    function Fz(vv, zv) {
+      let Pv = [];
+      for (let hv = 0, Sv = 0;;) {
+        let ev, gv;
+        if (hv < vv.length && (Sv == zv.length || zv[Sv] >= vv[hv])) ev = vv[hv++], gv = vv[hv++];
+        else {
+          if (!(Sv < zv.length)) return Pv;
+          ev = zv[Sv++], gv = zv[Sv++]
+        }!Pv.length || Pv[Pv.length - 1] < ev ? Pv.push(ev, gv) : Pv[Pv.length - 1] < gv && (Pv[Pv.length - 1] = gv)
+      }
+    }
+
+    function Yz(vv, zv, Pv) {
+      var hv;
+      let Sv, ev, gv;
+      return Pv ? (Sv = zv.changes, ev = xv.empty(zv.changes.length), gv = vv.changes.compose(zv.changes)) : (Sv = zv.changes.map(vv.changes), ev = vv.changes.mapDesc(zv.changes, !0), gv = vv.changes.compose(Sv)), {
+        changes: gv,
+        selection: zv.selection ? zv.selection.map(ev) : null === (hv = vv.selection) || void 0 === hv ? void 0 : hv.map(Sv),
+        effects: jz.mapEffects(vv.effects, Sv).concat(jz.mapEffects(zv.effects, ev)),
+        annotations: vv.annotations.length ? vv.annotations.concat(zv.annotations) : zv.annotations,
+        scrollIntoView: vv.scrollIntoView || zv.scrollIntoView
+      }
+    }
+
+    function nz(vv, zv, Pv) {
+      let hv = zv.selection,
+        Sv = Kz(zv.annotations);
+      return zv.userEvent && (Sv = Sv.concat(fz.userEvent.of(zv.userEvent))), {
+        changes: zv.changes instanceof xv ? zv.changes : xv.of(zv.changes || [], Pv, vv.facet(wz)),
+        selection: hv && (hv instanceof Hv ? hv : Hv.single(hv.anchor, hv.head)),
+        effects: Kz(zv.effects),
+        annotations: Sv,
+        scrollIntoView: !!zv.scrollIntoView
+      }
+    }
+
+    function Oz(vv, zv, Pv) {
+      let hv = nz(vv, zv.length ? zv[0] : {}, vv.doc.length);
+      zv.length && !1 === zv[0].filter && (Pv = !1);
+      for (let ev = 1; ev < zv.length; ev++) {
+        !1 === zv[ev].filter && (Pv = !1);
+        let Sv = !!zv[ev].sequential;
+        hv = Yz(hv, nz(vv, zv[ev], Sv ? hv.changes.newLength : vv.doc.length), Sv)
+      }
+      let Sv = fz.create(vv, hv.changes, hv.selection, hv.effects, hv.annotations, hv.scrollIntoView);
+      return function(vv) {
+        let zv = vv.startState,
+          Pv = zv.facet(Cz),
+          hv = vv;
+        for (let Sv = Pv.length - 1; Sv >= 0; Sv--) {
+          let ev = Pv[Sv](vv);
+          ev && Object.keys(ev).length && (hv = Yz(hv, nz(zv, ev, vv.changes.newLength), !0))
+        }
+        return hv == vv ? vv : fz.create(zv, vv.changes, vv.selection, hv.effects, hv.annotations, hv.scrollIntoView)
+      }(Pv ? function(vv) {
+        let zv = vv.startState,
+          Pv = !0;
+        for (let Sv of zv.facet(az)) {
+          let zv = Sv(vv);
+          if (!1 === zv) {
+            Pv = !1;
+            break
+          }
+          Array.isArray(zv) && (Pv = !0 === Pv ? zv : Fz(Pv, zv))
+        }
+        if (!0 !== Pv) {
+          let hv, Sv;
+          if (!1 === Pv) Sv = vv.changes.invertedDesc, hv = xv.empty(zv.doc.length);
+          else {
+            let zv = vv.changes.filter(Pv);
+            hv = zv.changes, Sv = zv.filtered.mapDesc(zv.changes).invertedDesc
+          }
+          vv = fz.create(zv, hv, vv.selection && vv.selection.map(Sv), jz.mapEffects(vv.effects, Sv), vv.annotations, vv.scrollIntoView)
+        }
+        let hv = zv.facet(sz);
+        for (let Sv = hv.length - 1; Sv >= 0; Sv--) {
+          let Pv = hv[Sv](vv);
+          vv = Pv instanceof fz ? Pv : Array.isArray(Pv) && 1 == Pv.length && Pv[0] instanceof fz ? Pv[0] : Oz(zv, Kz(Pv), !1)
+        }
+        return vv
+      }(Sv) : Sv)
+    }
+    fz.time = cz.define(), fz.userEvent = cz.define(), fz.addToHistory = cz.define(), fz.remote = cz.define();
+    const Dz = [];
+
+    function Kz(vv) {
+      return null == vv ? Dz : Array.isArray(vv) ? vv : [vv]
+    }
+    var Vz = function(vv) {
+      return vv[vv.Word = 0] = "Word", vv[vv.Space = 1] = "Space", vv[vv.Other = 2] = "Other", vv
+    }(Vz || (Vz = {}));
+    const Uz = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let Rz;
+    try {
+      Rz = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (PP) {}
+
+    function xz(vv) {
+      return zv => {
+        if (!/\S/.test(zv)) return Vz.Space;
+        if (function(vv) {
+            if (Rz) return Rz.test(vv);
+            for (let zv = 0; zv < vv.length; zv++) {
+              let Pv = vv[zv];
+              if (/\w/.test(Pv) || Pv > "\x80" && (Pv.toUpperCase() != Pv.toLowerCase() || Uz.test(Pv))) return !0
+            }
+            return !1
+          }(zv)) return Vz.Word;
+        for (let Pv = 0; Pv < vv.length; Pv++)
+          if (zv.indexOf(vv[Pv]) > -1) return Vz.Word;
+        return Vz.Other
+      }
+    }
+    class tz {
+      constructor(vv, zv, Pv, hv, Sv, ev) {
+        this.config = vv, this.doc = zv, this.selection = Pv, this.values = hv, this.status = vv.statusTemplate.slice(), this.computeSlot = Sv, ev && (ev._state = this);
+        for (let gv = 0; gv < this.config.dynamicSlots.length; gv++) Nz(this, gv << 1);
+        this.computeSlot = null
+      }
+      field(vv) {
+        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          Pv = this.config.address[vv.id];
+        if (null != Pv) return Nz(this, Pv), lz(this, Pv);
+        if (zv) throw new RangeError("Field is not present in this state")
+      }
+      update() {
+        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
+        return Oz(this, zv, !0)
+      }
+      applyTransaction(vv) {
+        let zv, Pv = this.config,
+          {
+            base: hv,
+            compartments: Sv
+          } = Pv;
+        for (let gv of vv.effects) gv.is(gz.reconfigure) ? (Pv && (Sv = new Map, Pv.compartments.forEach(((vv, zv) => Sv.set(zv, vv))), Pv = null), Sv.set(gv.value.compartment, gv.value.extension)) : gv.is(jz.reconfigure) ? (Pv = null, hv = gv.value) : gv.is(jz.appendConfig) && (Pv = null, hv = Kz(hv).concat(gv.value));
+        if (Pv) zv = vv.startState.values.slice();
+        else {
+          Pv = dz.resolve(hv, Sv, this), zv = new tz(Pv, this.doc, this.selection, Pv.dynamicSlots.map((() => null)), ((vv, zv) => zv.reconfigure(vv, this)), null).values
+        }
+        let ev = vv.startState.facet(Wz) ? vv.newSelection : vv.newSelection.asSingle();
+        new tz(Pv, vv.newDoc, ev, zv, ((zv, Pv) => Pv.update(zv, vv)), vv)
+      }
+      replaceSelection(vv) {
+        return "string" == typeof vv && (vv = this.toText(vv)), this.changeByRange((zv => ({
+          changes: {
+            from: zv.from,
+            to: zv.to,
+            insert: vv
+          },
+          range: Hv.cursor(zv.from + vv.length)
+        })))
+      }
+      changeByRange(vv) {
+        let zv = this.selection,
+          Pv = vv(zv.PC[0]),
+          hv = this.changes(Pv.changes),
+          Sv = [Pv.range],
+          ev = Kz(Pv.effects);
+        for (let gv = 1; gv < zv.PC.length; gv++) {
+          let Pv = vv(zv.PC[gv]),
+            pv = this.changes(Pv.changes),
+            dv = pv.map(hv);
+          for (let vv = 0; vv < gv; vv++) Sv[vv] = Sv[vv].map(dv);
+          let Nv = hv.mapDesc(pv, !0);
+          Sv.push(Pv.range.map(Nv)), hv = hv.compose(dv), ev = jz.mapEffects(ev, dv).concat(jz.mapEffects(Kz(Pv.effects), Nv))
+        }
+        return {
+          changes: hv,
+          selection: Hv.create(Sv, zv.mainIndex),
+          effects: ev
+        }
+      }
+      changes() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return vv instanceof xv ? vv : xv.of(vv, this.doc.length, this.facet(tz.lineSeparator))
+      }
+      toText(vv) {
+        return sv.of(vv.split(this.facet(tz.lineSeparator) || Vv))
+      }
+      sliceDoc() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(vv, zv, this.lineBreak)
+      }
+      facet(vv) {
+        let zv = this.config.address[vv.id];
+        return null == zv ? vv.default : (Nz(this, zv), lz(this, zv))
+      }
+      toJSON(vv) {
+        let zv = {
+          doc: this.sliceDoc(),
+          selection: this.selection.toJSON()
+        };
+        if (vv)
+          for (let Pv in vv) {
+            let hv = vv[Pv];
+            hv instanceof Xv && null != this.config.address[hv.id] && (zv[Pv] = hv.spec.toJSON(this.field(vv[Pv]), this))
+          }
+        return zv
+      }
+      static fromJSON(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Pv = arguments.length > 2 ? arguments[2] : void 0;
+        if (!vv || "string" != typeof vv.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let hv = [];
+        if (Pv)
+          for (let Sv in Pv)
+            if (Object.prototype.hasOwnProperty.call(vv, Sv)) {
+              let zv = Pv[Sv],
+                ev = vv[Sv];
+              hv.push(zv.init((vv => zv.spec.fromJSON(ev, vv))))
+            } return tz.create({
+          doc: vv.doc,
+          selection: Hv.fromJSON(vv.selection),
+          extensions: zv.extensions ? hv.concat([zv.extensions]) : hv
+        })
+      }
+      static create() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          zv = dz.resolve(vv.extensions || [], new Map),
+          Pv = vv.doc instanceof sv ? vv.doc : sv.of((vv.doc || "").split(zv.staticFacet(tz.lineSeparator) || Vv)),
+          hv = vv.selection ? vv.selection instanceof Hv ? vv.selection : Hv.single(vv.selection.anchor, vv.selection.head) : Hv.single(0);
+        return Mv(hv, Pv.length), zv.staticFacet(Wz) || (hv = hv.asSingle()), new tz(zv, Pv, hv, zv.dynamicSlots.map((() => null)), ((vv, zv) => zv.create(vv)), null)
+      }
+      get tabSize() {
+        return this.facet(tz.tabSize)
+      }
+      get lineBreak() {
+        return this.facet(tz.lineSeparator) || "\n"
+      }
+      get readOnly() {
+        return this.facet(iz)
+      }
+      phrase(vv) {
+        for (var zv = arguments.length, Pv = new Array(zv > 1 ? zv - 1 : 0), hv = 1; hv < zv; hv++) Pv[hv - 1] = arguments[hv];
+        for (let Sv of this.facet(tz.phrases))
+          if (Object.prototype.hasOwnProperty.call(Sv, vv)) {
+            vv = Sv[vv];
+            break
+          } return Pv.length && (vv = vv.replace(/\$(\$|\d*)/g, ((vv, zv) => {
+          if ("$" == zv) return "$";
+          let hv = +(zv || 1);
+          return !hv || hv > Pv.length ? vv : Pv[hv - 1]
+        }))), vv
+      }
+      languageDataAt(vv, zv) {
+        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          hv = [];
+        for (let Sv of this.facet(Tz))
+          for (let ev of Sv(this, zv, Pv)) Object.prototype.hasOwnProperty.call(ev, vv) && hv.push(ev[vv]);
+        return hv
+      }
+      charCategorizer(vv) {
+        let zv = this.languageDataAt("wordChars", vv);
+        return xz(zv.length ? zv[0] : "")
+      }
+      wordAt(vv) {
+        let {
+          text: zv,
+          from: Pv,
+          length: hv
+        } = this.doc.lineAt(vv), Sv = this.charCategorizer(vv), ev = vv - Pv, gv = vv - Pv;
+        for (; ev > 0;) {
+          let vv = nv(zv, ev, !1);
+          if (Sv(zv.slice(vv, ev)) != Vz.Word) break;
+          ev = vv
+        }
+        for (; gv < hv;) {
+          let vv = nv(zv, gv);
+          if (Sv(zv.slice(gv, vv)) != Vz.Word) break;
+          gv = vv
+        }
+        return ev == gv ? null : Hv.range(ev + Pv, gv + Pv)
+      }
+    }
+
+    function qz(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        hv = {};
+      for (let Sv of vv)
+        for (let vv of Object.keys(Sv)) {
+          let zv = Sv[vv],
+            ev = hv[vv];
+          if (void 0 === ev) hv[vv] = zv;
+          else if (ev === zv || void 0 === zv);
+          else {
+            if (!Object.hasOwnProperty.call(Pv, vv)) throw new Error("Config merge conflict for field " + vv);
+            hv[vv] = Pv[vv](ev, zv)
+          }
+        }
+      for (let Sv in zv) void 0 === hv[Sv] && (hv[Sv] = zv[Sv]);
+      return hv
+    }
+    tz.allowMultipleSelections = Wz, tz.tabSize = Bv.define({
+      combine: vv => vv.length ? vv[0] : 4
+    }), tz.lineSeparator = wz, tz.readOnly = iz, tz.phrases = Bv.define({
+      compare(vv, zv) {
+        let Pv = Object.keys(vv),
+          hv = Object.keys(zv);
+        return Pv.length == hv.length && Pv.every((Pv => vv[Pv] == zv[Pv]))
+      }
+    }), tz.languageData = Tz, tz.changeFilter = az, tz.transactionFilter = sz, tz.transactionExtender = Cz, gz.reconfigure = jz.define();
+    class Iz {
+      eq(vv) {
+        return this == vv
+      }
+      range(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv;
+        return Zz.create(vv, zv, this)
+      }
+    }
+
+    function Qz(vv, zv) {
+      return vv == zv || vv.constructor == zv.constructor && vv.eq(zv)
+    }
+    Iz.prototype.startSide = Iz.prototype.endSide = 0, Iz.prototype.point = !1, Iz.prototype.mapMode = Uv.TrackDel;
+    class Zz {
+      constructor(vv, zv, Pv) {
+        this.from = vv, this.to = zv, this.value = Pv
+      }
+      static create(vv, zv, Pv) {
+        return new Zz(vv, zv, Pv)
+      }
+    }
+
+    function Az(vv, zv) {
+      return vv.from - zv.from || vv.value.startSide - zv.value.startSide
+    }
+    class Lz {
+      constructor(vv, zv, Pv, hv) {
+        this.from = vv, this.to = zv, this.value = Pv, this.wPv = hv
+      }
+      get length() {
+        return this.to[this.to.length - 1]
+      }
+      findIndex(vv, zv, Pv) {
+        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          Sv = Pv ? this.to : this.from;
+        for (let ev = hv, gv = Sv.length;;) {
+          if (ev == gv) return ev;
+          let hv = ev + gv >> 1,
+            pv = Sv[hv] - vv || (Pv ? this.value[hv].endSide : this.value[hv].startSide) - zv;
+          if (hv == ev) return pv >= 0 ? ev : gv;
+          pv >= 0 ? gv = hv : ev = hv + 1
+        }
+      }
+      between(vv, zv, Pv, hv) {
+        for (let Sv = this.findIndex(zv, -1e9, !0), ev = this.findIndex(Pv, 1e9, !1, Sv); Sv < ev; Sv++)
+          if (!1 === hv(this.from[Sv] + vv, this.to[Sv] + vv, this.value[Sv])) return !1
+      }
+      map(vv, zv) {
+        let Pv = [],
+          hv = [],
+          Sv = [],
+          ev = -1,
+          gv = -1;
+        for (let pv = 0; pv < this.value.length; pv++) {
+          let dv, Nv, lv = this.value[pv],
+            Tv = this.from[pv] + vv,
+            Wv = this.to[pv] + vv;
+          if (Tv == Wv) {
+            let vv = zv.mapPos(Tv, lv.startSide, lv.mapMode);
+            if (null == vv) continue;
+            if (dv = Nv = vv, lv.startSide != lv.endSide && (Nv = zv.mapPos(Tv, lv.endSide), Nv < dv)) continue
+          } else if (dv = zv.mapPos(Tv, lv.startSide), Nv = zv.mapPos(Wv, lv.endSide), dv > Nv || dv == Nv && lv.startSide > 0 && lv.endSide <= 0) continue;
+          (Nv - dv || lv.endSide - lv.startSide) < 0 || (ev < 0 && (ev = dv), lv.point && (gv = Math.max(gv, Nv - dv)), Pv.push(lv), hv.push(dv - ev), Sv.push(Nv - ev))
+        }
+        return {
+          mapped: Pv.length ? new Lz(hv, Sv, Pv, gv) : null,
+          pos: ev
+        }
+      }
+    }
+    class Hz {
+      constructor(vv, zv, Pv, hv) {
+        this.chunkPos = vv, this.chunk = zv, this.nextLayer = Pv, this.wPv = hv
+      }
+      static create(vv, zv, Pv, hv) {
+        return new Hz(vv, zv, Pv, hv)
+      }
+      get length() {
+        let vv = this.chunk.length - 1;
+        return vv < 0 ? 0 : Math.max(this.chunkEnd(vv), this.nextLayer.length)
+      }
+      get size() {
+        if (this.kw) return 0;
+        let vv = this.nextLayer.size;
+        for (let zv of this.chunk) vv += zv.value.length;
+        return vv
+      }
+      chunkEnd(vv) {
+        return this.chunkPos[vv] + this.chunk[vv].length
+      }
+      update(vv) {
+        let {
+          add: zv = [],
+          sort: Pv = !1,
+          filterFrom: hv = 0,
+          filterTo: Sv = this.length
+        } = vv, ev = vv.filter;
+        if (0 == zv.length && !ev) return this;
+        if (Pv && (zv = zv.slice().sort(Az)), this.kw) return zv.length ? Hz.of(zv) : this;
+        let gv = new Bz(this, null, -1).goto(0),
+          pv = 0,
+          dv = [],
+          Nv = new Mz;
+        for (; gv.value || pv < zv.length;)
+          if (pv < zv.length && (gv.from - zv[pv].from || gv.startSide - zv[pv].value.startSide) >= 0) {
+            let vv = zv[pv++];
+            Nv.addInner(vv.from, vv.to, vv.value) || dv.push(vv)
+          } else 1 == gv.rangeIndex && gv.chunkIndex < this.chunk.length && (pv == zv.length || this.chunkEnd(gv.chunkIndex) < zv[pv].from) && (!ev || hv > this.chunkEnd(gv.chunkIndex) || Sv < this.chunkPos[gv.chunkIndex]) && Nv.addChunk(this.chunkPos[gv.chunkIndex], this.chunk[gv.chunkIndex]) ? gv.nextChunk() : ((!ev || hv > gv.to || Sv < gv.from || ev(gv.from, gv.to, gv.value)) && (Nv.addInner(gv.from, gv.to, gv.value) || dv.push(Zz.create(gv.from, gv.to, gv.value))), gv.next());
+        return Nv.finishInner(this.nextLayer.kw && !dv.length ? Hz.empty : this.nextLayer.update({
+          add: dv,
+          filter: ev,
+          filterFrom: hv,
+          filterTo: Sv
+        }))
+      }
+      map(vv) {
+        if (vv.empty || this.kw) return this;
+        let zv = [],
+          Pv = [],
+          hv = -1;
+        for (let ev = 0; ev < this.chunk.length; ev++) {
+          let Sv = this.chunkPos[ev],
+            gv = this.chunk[ev],
+            pv = vv.touchesRange(Sv, Sv + gv.length);
+          if (!1 === pv) hv = Math.max(hv, gv.wPv), zv.push(gv), Pv.push(vv.mapPos(Sv));
+          else if (!0 === pv) {
+            let {
+              mapped: ev,
+              pos: pv
+            } = gv.map(Sv, vv);
+            ev && (hv = Math.max(hv, ev.wPv), zv.push(ev), Pv.push(pv))
+          }
+        }
+        let Sv = this.nextLayer.map(vv);
+        return 0 == zv.length ? Sv : new Hz(Pv, zv, Sv || Hz.empty, hv)
+      }
+      between(vv, zv, Pv) {
+        if (!this.kw) {
+          for (let hv = 0; hv < this.chunk.length; hv++) {
+            let Sv = this.chunkPos[hv],
+              ev = this.chunk[hv];
+            if (zv >= Sv && vv <= Sv + ev.length && !1 === ev.between(Sv, vv - Sv, zv - Sv, Pv)) return
+          }
+          this.nextLayer.between(vv, zv, Pv)
+        }
+      }
+      iter() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return Jz.from([this]).goto(vv)
+      }
+      get kw() {
+        return this.nextLayer == this
+      }
+      static iter(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Jz.from(vv).goto(zv)
+      }
+      static compare(vv, zv, Pv, hv) {
+        let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          ev = vv.filter((vv => vv.wPv > 0 || !vv.kw && vv.wPv >= Sv)),
+          gv = zv.filter((vv => vv.wPv > 0 || !vv.kw && vv.wPv >= Sv)),
+          pv = yz(ev, gv, Pv),
+          dv = new oz(ev, pv, Sv),
+          Nv = new oz(gv, pv, Sv);
+        Pv.iterGaps(((vv, zv, Pv) => bz(dv, vv, Nv, zv, Pv, hv))), Pv.empty && 0 == Pv.length && bz(dv, 0, Nv, 0, 0, hv)
+      }
+      static eq(vv, zv) {
+        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          hv = arguments.length > 3 ? arguments[3] : void 0;
+        null == hv && (hv = 999999999);
+        let Sv = vv.filter((vv => !vv.kw && zv.indexOf(vv) < 0)),
+          ev = zv.filter((zv => !zv.kw && vv.indexOf(zv) < 0));
+        if (Sv.length != ev.length) return !1;
+        if (!Sv.length) return !0;
+        let gv = yz(Sv, ev),
+          pv = new oz(Sv, gv, 0).goto(Pv),
+          dv = new oz(ev, gv, 0).goto(Pv);
+        for (;;) {
+          if (pv.to != dv.to || !rz(pv.active, dv.active) || pv.point && (!dv.point || !Qz(pv.point, dv.point))) return !1;
+          if (pv.to > hv) return !0;
+          pv.next(), dv.next()
+        }
+      }
+      static spans(vv, zv, Pv, hv) {
+        let Sv = new oz(vv, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(zv),
+          ev = zv,
+          gv = Sv.openStart;
+        for (;;) {
+          let vv = Math.min(Sv.to, Pv);
+          if (Sv.point) {
+            let Pv = Sv.activeForPoint(Sv.to),
+              pv = Sv.pointFrom < zv ? Pv.length + 1 : Sv.point.startSide < 0 ? Pv.length : Math.min(Pv.length, gv);
+            hv.point(ev, vv, Sv.point, Pv, pv, Sv.pointRank), gv = Math.min(Sv.openEnd(vv), Pv.length)
+          } else vv > ev && (hv.span(ev, vv, Sv.active, gv), gv = Sv.openEnd(vv));
+          if (Sv.to > Pv) return gv + (Sv.point && Sv.to > Pv ? 1 : 0);
+          ev = Sv.to, Sv.next()
+        }
+      }
+      static of (vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Pv = new Mz;
+        for (let hv of vv instanceof Zz ? [vv] : zv ? function(vv) {
+            if (vv.length > 1)
+              for (let zv = vv[0], Pv = 1; Pv < vv.length; Pv++) {
+                let hv = vv[Pv];
+                if (Az(zv, hv) > 0) return vv.slice().sort(Az);
+                zv = hv
+              }
+            return vv
+          }(vv) : vv) Pv.add(hv.from, hv.to, hv.value);
+        return Pv.finish()
+      }
+      static join(vv) {
+        if (!vv.length) return Hz.empty;
+        let zv = vv[vv.length - 1];
+        for (let Pv = vv.length - 2; Pv >= 0; Pv--)
+          for (let hv = vv[Pv]; hv != Hz.empty; hv = hv.nextLayer) zv = new Hz(hv.chunkPos, hv.chunk, zv, Math.max(hv.wPv, zv.wPv));
+        return zv
+      }
+    }
+    Hz.empty = new Hz([], [], null, -1), Hz.empty.nextLayer = Hz.empty;
+    class Mz {
+      finishChunk(vv) {
+        this.chunks.push(new Lz(this.from, this.to, this.value, this.wPv)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.wPv), this.wPv = -1, vv && (this.from = [], this.to = [], this.value = [])
+      }
+      constructor() {
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.wPv = -1, this.setMaxPoint = -1, this.nextLayer = null
+      }
+      add(vv, zv, Pv) {
+        this.addInner(vv, zv, Pv) || (this.nextLayer || (this.nextLayer = new Mz)).add(vv, zv, Pv)
+      }
+      addInner(vv, zv, Pv) {
+        let hv = vv - this.lastTo || Pv.startSide - this.last.endSide;
+        if (hv <= 0 && (vv - this.lastFrom || Pv.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(hv < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = vv), this.from.push(vv - this.chunkStart), this.to.push(zv - this.chunkStart), this.last = Pv, this.lastFrom = vv, this.lastTo = zv, this.value.push(Pv), Pv.point && (this.wPv = Math.max(this.wPv, zv - vv)), !0)
+      }
+      addChunk(vv, zv) {
+        if ((vv - this.lastTo || zv.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, zv.wPv), this.chunks.push(zv), this.chunkPos.push(vv);
+        let Pv = zv.value.length - 1;
+        return this.last = zv.value[Pv], this.lastFrom = zv.from[Pv] + vv, this.lastTo = zv.to[Pv] + vv, !0
+      }
+      finish() {
+        return this.finishInner(Hz.empty)
+      }
+      finishInner(vv) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return vv;
+        let zv = Hz.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(vv) : vv, this.setMaxPoint);
+        return this.from = null, zv
+      }
+    }
+
+    function yz(vv, zv, Pv) {
+      let hv = new Map;
+      for (let ev of vv)
+        for (let vv = 0; vv < ev.chunk.length; vv++) ev.chunk[vv].wPv <= 0 && hv.set(ev.chunk[vv], ev.chunkPos[vv]);
+      let Sv = new Set;
+      for (let ev of zv)
+        for (let vv = 0; vv < ev.chunk.length; vv++) {
+          let zv = hv.get(ev.chunk[vv]);
+          null == zv || (Pv ? Pv.mapPos(zv) : zv) != ev.chunkPos[vv] || (null === Pv || void 0 === Pv ? void 0 : Pv.touchesRange(zv, zv + ev.chunk[vv].length)) || Sv.add(ev.chunk[vv])
+        }
+      return Sv
+    }
+    class Bz {
+      constructor(vv, zv, Pv) {
+        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = vv, this.skip = zv, this.aPv = Pv, this.rank = hv
+      }
+      get startSide() {
+        return this.value ? this.value.startSide : 0
+      }
+      get endSide() {
+        return this.value ? this.value.endSide : 0
+      }
+      goto(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(vv, zv, !1), this
+      }
+      gotoInner(vv, zv, Pv) {
+        for (; this.chunkIndex < this.layer.chunk.length;) {
+          let zv = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(zv) || this.layer.chunkEnd(this.chunkIndex) < vv || zv.wPv < this.aPv)) break;
+          this.chunkIndex++, Pv = !1
+        }
+        if (this.chunkIndex < this.layer.chunk.length) {
+          let hv = this.layer.chunk[this.chunkIndex].findIndex(vv - this.layer.chunkPos[this.chunkIndex], zv, !0);
+          (!Pv || this.rangeIndex < hv) && this.setRangeIndex(hv)
+        }
+        this.next()
+      }
+      forward(vv, zv) {
+        (this.to - vv || this.endSide - zv) < 0 && this.gotoInner(vv, zv, !0)
+      }
+      next() {
+        for (;;) {
+          if (this.chunkIndex == this.layer.chunk.length) {
+            this.from = this.to = 1e9, this.value = null;
+            break
+          } {
+            let vv = this.layer.chunkPos[this.chunkIndex],
+              zv = this.layer.chunk[this.chunkIndex],
+              Pv = vv + zv.from[this.rangeIndex];
+            if (this.from = Pv, this.to = vv + zv.to[this.rangeIndex], this.value = zv.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.aPv < 0 || this.value.point && this.to - this.from >= this.aPv) break
+          }
+        }
+      }
+      setRangeIndex(vv) {
+        if (vv == this.layer.chunk[this.chunkIndex].value.length) {
+          if (this.chunkIndex++, this.skip)
+            for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
+          this.rangeIndex = 0
+        } else this.rangeIndex = vv
+      }
+      nextChunk() {
+        this.chunkIndex++, this.rangeIndex = 0, this.next()
+      }
+      compare(vv) {
+        return this.from - vv.from || this.startSide - vv.startSide || this.rank - vv.rank || this.to - vv.to || this.endSide - vv.endSide
+      }
+    }
+    class Jz {
+      constructor(vv) {
+        this.heap = vv
+      }
+      static from(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          hv = [];
+        for (let Sv = 0; Sv < vv.length; Sv++)
+          for (let ev = vv[Sv]; !ev.kw; ev = ev.nextLayer) ev.wPv >= Pv && hv.push(new Bz(ev, zv, Pv, Sv));
+        return 1 == hv.length ? hv[0] : new Jz(hv)
+      }
+      get startSide() {
+        return this.value ? this.value.startSide : 0
+      }
+      goto(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let Pv of this.heap) Pv.goto(vv, zv);
+        for (let Pv = this.heap.length >> 1; Pv >= 0; Pv--) Ez(this.heap, Pv);
+        return this.next(), this
+      }
+      forward(vv, zv) {
+        for (let Pv of this.heap) Pv.forward(vv, zv);
+        for (let Pv = this.heap.length >> 1; Pv >= 0; Pv--) Ez(this.heap, Pv);
+        (this.to - vv || this.value.endSide - zv) < 0 && this.next()
+      }
+      next() {
+        if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
+        else {
+          let vv = this.heap[0];
+          this.from = vv.from, this.to = vv.to, this.value = vv.value, this.rank = vv.rank, vv.value && vv.next(), Ez(this.heap, 0)
+        }
+      }
+    }
+
+    function Ez(vv, zv) {
+      for (let Pv = vv[zv];;) {
+        let hv = 1 + (zv << 1);
+        if (hv >= vv.length) break;
+        let Sv = vv[hv];
+        if (hv + 1 < vv.length && Sv.compare(vv[hv + 1]) >= 0 && (Sv = vv[hv + 1], hv++), Pv.compare(Sv) < 0) break;
+        vv[hv] = Pv, vv[zv] = Sv, zv = hv
+      }
+    }
+    class oz {
+      constructor(vv, zv, Pv) {
+        this.aPv = Pv, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = Jz.from(vv, zv, Pv)
+      }
+      goto(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(vv, zv), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = vv, this.endSide = zv, this.openStart = -1, this.next(), this
+      }
+      forward(vv, zv) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - vv || this.active[this.minActive].endSide - zv) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(vv, zv)
+      }
+      removeActive(vv) {
+        kz(this.active, vv), kz(this.activeTo, vv), kz(this.activeRank, vv), this.minActive = uz(this.active, this.activeTo)
+      }
+      addActive(vv) {
+        let zv = 0,
+          {
+            value: Pv,
+            to: hv,
+            rank: Sv
+          } = this.cursor;
+        for (; zv < this.activeRank.length && (Sv - this.activeRank[zv] || hv - this.activeTo[zv]) > 0;) zv++;
+        Xz(this.active, zv, Pv), Xz(this.activeTo, zv, hv), Xz(this.activeRank, zv, Sv), vv && Xz(vv, zv, this.cursor.from), this.minActive = uz(this.active, this.activeTo)
+      }
+      next() {
+        let vv = this.to,
+          zv = this.point;
+        this.point = null;
+        let Pv = this.openStart < 0 ? [] : null;
+        for (;;) {
+          let hv = this.minActive;
+          if (hv > -1 && (this.activeTo[hv] - this.cursor.from || this.active[hv].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[hv] > vv) {
+              this.to = this.activeTo[hv], this.endSide = this.active[hv].endSide;
+              break
+            }
+            this.removeActive(hv), Pv && kz(Pv, hv)
+          } else {
+            if (!this.cursor.value) {
+              this.to = this.endSide = 1e9;
+              break
+            }
+            if (this.cursor.from > vv) {
+              this.to = this.cursor.from, this.endSide = this.cursor.startSide;
+              break
+            } {
+              let vv = this.cursor.value;
+              if (vv.point) {
+                if (!(zv && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = vv, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = vv.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+                  break
+                }
+                this.cursor.next()
+              } else this.addActive(Pv), this.cursor.next()
+            }
+          }
+        }
+        if (Pv) {
+          this.openStart = 0;
+          for (let zv = Pv.length - 1; zv >= 0 && Pv[zv] < vv; zv--) this.openStart++
+        }
+      }
+      activeForPoint(vv) {
+        if (!this.active.length) return this.active;
+        let zv = [];
+        for (let Pv = this.active.length - 1; Pv >= 0 && !(this.activeRank[Pv] < this.pointRank); Pv--)(this.activeTo[Pv] > vv || this.activeTo[Pv] == vv && this.active[Pv].endSide >= this.point.endSide) && zv.push(this.active[Pv]);
+        return zv.reverse()
+      }
+      openEnd(vv) {
+        let zv = 0;
+        for (let Pv = this.activeTo.length - 1; Pv >= 0 && this.activeTo[Pv] > vv; Pv--) zv++;
+        return zv
+      }
+    }
+
+    function bz(vv, zv, Pv, hv, Sv, ev) {
+      vv.goto(zv), Pv.goto(hv);
+      let gv = hv + Sv,
+        pv = hv,
+        dv = hv - zv,
+        Nv = !!ev.boundChange;
+      for (let lv = !1;;) {
+        let zv = vv.to + dv - Pv.to,
+          hv = zv || vv.endSide - Pv.endSide,
+          Sv = hv < 0 ? vv.to + dv : Pv.to,
+          Tv = Math.min(Sv, gv);
+        if (vv.point || Pv.point ? (vv.point && Pv.point && Qz(vv.point, Pv.point) && rz(vv.activeForPoint(vv.to), Pv.activeForPoint(Pv.to)) || ev.comparePoint(pv, Tv, vv.point, Pv.point), lv = !1) : (lv && ev.boundChange(pv), Tv > pv && !rz(vv.active, Pv.active) && ev.compareRange(pv, Tv, vv.active, Pv.active), Nv && Tv < gv && (zv || vv.openEnd(Sv) != Pv.openEnd(Sv)) && (lv = !0)), Sv > gv) break;
+        pv = Sv, hv <= 0 && vv.next(), hv >= 0 && Pv.next()
+      }
+    }
+
+    function rz(vv, zv) {
+      if (vv.length != zv.length) return !1;
+      for (let Pv = 0; Pv < vv.length; Pv++)
+        if (vv[Pv] != zv[Pv] && !Qz(vv[Pv], zv[Pv])) return !1;
+      return !0
+    }
+
+    function kz(vv, zv) {
+      for (let Pv = zv, hv = vv.length - 1; Pv < hv; Pv++) vv[Pv] = vv[Pv + 1];
+      vv.pop()
+    }
+
+    function Xz(vv, zv, Pv) {
+      for (let hv = vv.length - 1; hv >= zv; hv--) vv[hv + 1] = vv[hv];
+      vv[zv] = Pv
+    }
+
+    function uz(vv, zv) {
+      let Pv = -1,
+        hv = 1e9;
+      for (let Sv = 0; Sv < zv.length; Sv++)(zv[Sv] - hv || vv[Sv].endSide - vv[Pv].endSide) < 0 && (Pv = Sv, hv = zv[Sv]);
+      return Pv
+    }
+
+    function vP(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : vv.length,
+        hv = 0;
+      for (let Sv = 0; Sv < Pv && Sv < vv.length;) 9 == vv.charCodeAt(Sv) ? (hv += zv - hv % zv, Sv++) : (hv++, Sv = nv(vv, Sv));
+      return hv
+    }
+
+    function zP(vv, zv, Pv, hv) {
+      for (let Sv = 0, ev = 0;;) {
+        if (ev >= zv) return Sv;
+        if (Sv == vv.length) break;
+        ev += 9 == vv.charCodeAt(Sv) ? Pv - ev % Pv : 1, Sv = nv(vv, Sv)
+      }
+      return !0 === hv ? -1 : vv.length
+    }
+  }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

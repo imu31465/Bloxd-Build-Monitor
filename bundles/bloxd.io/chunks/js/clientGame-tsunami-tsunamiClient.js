@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  38882: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      default: () => oz
+  39005: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      default: () => pv
     });
-    var Fz = sz(8874);
-    const Wz = 1e3 / 3;
+    var hv = Pv(9027);
+    const Sv = 1e3 / 3;
 
-    function Xz(zz, tz, sz) {
-      if ("parenthetical-seconds" === tz) return ` (${zz}s)`;
-      const Fz = `${Math.floor(zz/60)}:${(zz%60).toString().padStart(2,"0")}`;
-      return sz ? `${sz}${Fz}` : Fz
+    function ev(vv, zv, Pv) {
+      if ("parenthetical-seconds" === zv) return ` (${vv}s)`;
+      const hv = `${Math.floor(vv/60)}:${(vv%60).toString().padStart(2,"0")}`;
+      return Pv ? `${Pv}${hv}` : hv
     }
 
-    function Oz(zz, tz, sz, Wz, Xz) {
-      var Oz;
-      const oz = {
-        ...Wz.baseNametag
+    function gv(vv, zv, Pv, Sv, ev) {
+      var gv;
+      const pv = {
+        ...Sv.baseNametag
       };
-      oz.content = [...null !== (Oz = Wz.baseNametag.content) && void 0 !== Oz ? Oz : [], {
+      pv.content = [...null !== (gv = Sv.baseNametag.content) && void 0 !== gv ? gv : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,Fz.e)(Xz)}`
-      }], zz.setOtherEntitySetting(tz, sz, "nameTagInfo", oz)
+        str: `: ${(0,hv.d)(ev)}`
+      }], vv.setOtherEntitySetting(zv, Pv, "nameTagInfo", pv)
     }
-    const oz = function(zz, tz, sz, Fz) {
-      let oz, {
-        localPlayerId: vz
-      } = Fz;
-      const Uz = new Map,
-        Kz = new Map;
-      let uz = 0,
-        Nz = 0;
+    const pv = function(vv, zv, Pv, hv) {
+      let pv, {
+        localPlayerId: dv
+      } = hv;
+      const Nv = new Map,
+        lv = new Map;
+      let Tv = 0,
+        Wv = 0;
       return {
-        onCreate: zz => {
-          oz = zz
+        onCreate: vv => {
+          pv = vv
         },
-        wN: zz => {
-          const tz = Date.now();
-          for (const [Fz, Wz] of Uz) {
-            const zz = Math.floor((tz - Wz.startTime) / 1e3),
-              Oz = Math.max(0, Wz.remainingSeconds - zz);
-            if (Oz === Wz.lastRenderedSecond) continue;
-            Wz.lastRenderedSecond = Oz;
-            const Kz = {
-                str: Xz(Oz, Wz.format, Wz.prefix),
-                style: Wz.style
+        MT: vv => {
+          const zv = Date.now();
+          for (const [hv, Sv] of Nv) {
+            const vv = Math.floor((zv - Sv.startTime) / 1e3),
+              gv = Math.max(0, Sv.remainingSeconds - vv);
+            if (gv === Sv.lastRenderedSecond) continue;
+            Sv.lastRenderedSecond = gv;
+            const lv = {
+                str: ev(gv, Sv.format, Sv.prefix),
+                style: Sv.style
               },
-              uz = {
-                ...Wz.baseNametag
+              Tv = {
+                ...Sv.baseNametag
               };
-            var sz;
-            if ("content" === Wz.location) uz.content = [...null !== (sz = Wz.baseNametag.content) && void 0 !== sz ? sz : [], Kz];
-            else uz.subtitle = [Kz];
-            oz.setOtherEntitySetting(vz, Fz, "nameTagInfo", uz), Oz <= 0 && Uz.delete(Fz)
+            var Pv;
+            if ("content" === Sv.location) Tv.content = [...null !== (Pv = Sv.baseNametag.content) && void 0 !== Pv ? Pv : [], lv];
+            else Tv.subtitle = [lv];
+            pv.setOtherEntitySetting(dv, hv, "nameTagInfo", Tv), gv <= 0 && Nv.delete(hv)
           }
-          if (Kz.size > 0 && tz - uz >= Wz) {
-            uz = tz, Nz = (Nz + 1) % 3;
-            let zz = 0;
-            for (const [sz, Fz] of Kz) {
-              if (zz++ % 3 !== Nz) continue;
-              const Wz = Math.floor((tz - Fz.startTime) / 1e3);
-              if (Wz === Fz.lastRenderedSecond) continue;
-              Fz.lastRenderedSecond = Wz;
-              const Xz = Fz.accumulatedIncome + Fz.incomePerSecond * BigInt(Wz);
-              Oz(oz, vz, sz, Fz, Xz)
+          if (lv.size > 0 && zv - Tv >= Sv) {
+            Tv = zv, Wv = (Wv + 1) % 3;
+            let vv = 0;
+            for (const [Pv, hv] of lv) {
+              if (vv++ % 3 !== Wv) continue;
+              const Sv = Math.floor((zv - hv.startTime) / 1e3);
+              if (Sv === hv.lastRenderedSecond) continue;
+              hv.lastRenderedSecond = Sv;
+              const ev = hv.accumulatedIncome + hv.incomePerSecond * BigInt(Sv);
+              gv(pv, dv, Pv, hv, ev)
             }
           }
         },
-        onReceivedMessageFromServer: (zz, tz) => {
-          if ("startCountdown" === zz) Uz.set(tz.eId, {
-            baseNametag: tz.baseNametag,
-            remainingSeconds: tz.remainingSeconds,
+        onReceivedMessageFromServer: (vv, zv) => {
+          if ("startCountdown" === vv) Nv.set(zv.eId, {
+            baseNametag: zv.baseNametag,
+            remainingSeconds: zv.remainingSeconds,
             startTime: Date.now(),
-            format: tz.format,
-            location: tz.location,
-            prefix: tz.prefix,
-            style: tz.style,
+            format: zv.format,
+            location: zv.location,
+            prefix: zv.prefix,
+            style: zv.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === zz) Uz.delete(tz.eId);
-          else if ("startIncomeTicking" === zz) {
-            const zz = {
-              baseNametag: tz.baseNametag,
-              accumulatedIncome: BigInt(tz.accumulatedIncome),
-              incomePerSecond: BigInt(tz.incomePerSecond),
+          else if ("stopCountdown" === vv) Nv.delete(zv.eId);
+          else if ("startIncomeTicking" === vv) {
+            const vv = {
+              baseNametag: zv.baseNametag,
+              accumulatedIncome: BigInt(zv.accumulatedIncome),
+              incomePerSecond: BigInt(zv.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            Kz.set(tz.eId, zz), Oz(oz, vz, tz.eId, zz, zz.accumulatedIncome)
-          } else "stopIncomeTicking" === zz && Kz.delete(tz.eId) && oz.setOtherEntitySetting(vz, tz.eId, "nameTagInfo", {
+            lv.set(zv.eId, vv), gv(pv, dv, zv.eId, vv, vv.accumulatedIncome)
+          } else "stopIncomeTicking" === vv && lv.delete(zv.eId) && pv.setOtherEntitySetting(dv, zv.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (zz, tz, sz, Fz, Wz, Xz) => {
-          if (Xz && "Mesh" === oz.getEntityType(Xz)) {
-            const tz = oz.getEntityName(Xz);
-            "Upgrades" === tz ? oz.openShop(zz, !1, "Upgrades") : "Items" === tz ? oz.openShop(zz, !1, "Items") : "Prestige" === tz ? oz.openShop(zz, !1, "Prestige") : "Collections" === tz ? oz.openShop(zz, !1, "Collections") : "Base Skins" === tz ? oz.openShop(zz, !1, "Base Skins") : "Gauntlet" === tz ? oz.openShop(zz, !1, "Gauntlet") : "Diamond Shop" === tz && oz.openShop(zz, !1, "Diamond Shop")
+        onPlayerAltAction: (vv, zv, Pv, hv, Sv, ev) => {
+          if (ev && "Mesh" === pv.getEntityType(ev)) {
+            const zv = pv.getEntityName(ev);
+            "Upgrades" === zv ? pv.openShop(vv, !1, "Upgrades") : "Items" === zv ? pv.openShop(vv, !1, "Items") : "Prestige" === zv ? pv.openShop(vv, !1, "Prestige") : "Collections" === zv ? pv.openShop(vv, !1, "Collections") : "Base Skins" === zv ? pv.openShop(vv, !1, "Base Skins") : "Gauntlet" === zv ? pv.openShop(vv, !1, "Gauntlet") : "Diamond Shop" === zv && pv.openShop(vv, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  8874: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Wz,
-      f: () => Oz
+  9027: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => Sv,
+      f: () => gv
     });
-    const Fz = [{
+    const hv = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function Wz(zz) {
-      let tz, sz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof zz) {
-        if (!Number.isFinite(zz)) return "0";
-        if (Math.abs(zz) < 100) {
-          const tz = zz < 0 ? "-" : "",
-            sz = Math.abs(zz);
-          return sz >= 10 ? `${tz}${sz.toFixed(1).replace(/\.0$/,"")}` : `${tz}${sz.toFixed(2).replace(/\.?0+$/,"")}`
+    function Sv(vv) {
+      let zv, Pv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof vv) {
+        if (!Number.isFinite(vv)) return "0";
+        if (Math.abs(vv) < 100) {
+          const zv = vv < 0 ? "-" : "",
+            Pv = Math.abs(vv);
+          return Pv >= 10 ? `${zv}${Pv.toFixed(1).replace(/\.0$/,"")}` : `${zv}${Pv.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        tz = BigInt(Math.floor(zz))
-      } else tz = zz;
-      const Wz = tz < 0n ? -tz : tz,
-        Xz = tz < 0n ? "-" : "",
-        Oz = Wz.toString();
-      if (Oz.length <= sz) return `${Xz}${Oz}`;
-      const oz = 3 * Math.floor((Oz.length - 1) / 3);
-      if (oz < 3) return `${Xz}${Oz}`;
-      if (oz > 3 * Fz.length) {
-        const zz = Oz[0],
-          tz = Oz.slice(1, 3).replace(/0+$/, "");
-        return `${Xz}${tz?`${zz}.${tz}`:zz}e${Oz.length-1}`
+        zv = BigInt(Math.floor(vv))
+      } else zv = vv;
+      const Sv = zv < 0n ? -zv : zv,
+        ev = zv < 0n ? "-" : "",
+        gv = Sv.toString();
+      if (gv.length <= Pv) return `${ev}${gv}`;
+      const pv = 3 * Math.floor((gv.length - 1) / 3);
+      if (pv < 3) return `${ev}${gv}`;
+      if (pv > 3 * hv.length) {
+        const vv = gv[0],
+          zv = gv.slice(1, 3).replace(/0+$/, "");
+        return `${ev}${zv?`${vv}.${zv}`:vv}e${gv.length-1}`
       }
       const {
-        threshold: vz,
-        suffix: Uz
-      } = Fz[Fz.length - oz / 3], Kz = Wz / vz, uz = Number(1000n * (Wz % vz) / vz), Nz = Number(Kz) + uz / 1e3;
-      let bz;
-      return bz = Nz >= 100 ? Math.floor(Nz).toString() : Nz >= 10 ? Nz.toFixed(1).replace(/\.0$/, "") : Nz.toFixed(2).replace(/\.?0+$/, ""), `${Xz}${bz}${Uz}`
+        threshold: dv,
+        suffix: Nv
+      } = hv[hv.length - pv / 3], lv = Sv / dv, Tv = Number(1000n * (Sv % dv) / dv), Wv = Number(lv) + Tv / 1e3;
+      let wv;
+      return wv = Wv >= 100 ? Math.floor(Wv).toString() : Wv >= 10 ? Wv.toFixed(1).replace(/\.0$/, "") : Wv.toFixed(2).replace(/\.?0+$/, ""), `${ev}${wv}${Nv}`
     }
-    const Xz = Fz.map((zz => {
+    const ev = hv.map((vv => {
       let {
-        threshold: tz,
-        suffix: sz
-      } = zz;
+        threshold: zv,
+        suffix: Pv
+      } = vv;
       return {
-        threshold: Number(tz),
-        suffix: sz
+        threshold: Number(zv),
+        suffix: Pv
       }
-    })).filter((zz => {
+    })).filter((vv => {
       let {
-        threshold: tz
-      } = zz;
-      return Number.isFinite(tz)
+        threshold: zv
+      } = vv;
+      return Number.isFinite(zv)
     }));
 
-    function Oz(zz) {
-      const tz = Math.abs(zz),
-        sz = zz < 0 ? "-" : "";
+    function gv(vv) {
+      const zv = Math.abs(vv),
+        Pv = vv < 0 ? "-" : "";
       for (const {
-          threshold: Fz,
-          suffix: Wz
+          threshold: hv,
+          suffix: Sv
         }
-        of Xz)
-        if (tz >= Fz) {
-          const zz = tz / Fz;
-          if (zz >= 1e3) return `${sz}${tz.toExponential(2).replace("e+","e")}`;
-          let Xz;
-          return Xz = zz >= 100 ? Math.floor(zz).toString() : zz >= 10 ? zz.toFixed(1).replace(/\.0$/, "") : zz.toFixed(2).replace(/\.?0+$/, ""), `${sz}${Xz}${Wz}`
-        } return `${sz}${tz}`
+        of ev)
+        if (zv >= hv) {
+          const vv = zv / hv;
+          if (vv >= 1e3) return `${Pv}${zv.toExponential(2).replace("e+","e")}`;
+          let ev;
+          return ev = vv >= 100 ? Math.floor(vv).toString() : vv >= 10 ? vv.toFixed(1).replace(/\.0$/, "") : vv.toFixed(2).replace(/\.?0+$/, ""), `${Pv}${ev}${Sv}`
+        } return `${Pv}${zv}`
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

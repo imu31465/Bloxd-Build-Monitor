@@ -1,113 +1,1164 @@
 export const id = 215;
 export const ids = [215];
 export const modules = {
-  36199: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => Tz,
-      e: () => Az,
-      h: () => cz,
-      k: () => jz
-    });
-    const Fz = JSON.parse('{"src":["/sounds/generatedSprites/gunSemiAutomatic.aef27960ef.ogg","/sounds/generatedSprites/gunSemiAutomatic.e56594fab5.m4a","/sounds/generatedSprites/gunSemiAutomatic.d3e434f4d0.mp3","/sounds/generatedSprites/gunSemiAutomatic.97d6a47358.ac3"],"sprite":{"semiAuto_cock_01":[0,500],"semiAuto_cock_02":[600,548.5714285714286],"semiAuto_cock_03":[1250,500],"semiAuto_cock_04":[1850,522.4489795918367],"semiAuto_cock_05":[2473.333333333333,500],"semiAuto_first_shot_01":[3073.333333333333,500],"semiAuto_magazine_load_01":[3673.3333333333335,548.5714285714286],"semiAuto_magazine_load_02":[4323.333333333333,500],"semiAuto_magazine_load_03":[4923.333333333333,548.5714285714286],"semiAuto_magazine_load_04":[5573.333333333333,500],"semiAuto_magazine_load_05":[6173.333333333333,500],"semiAuto_magazine_unload_01":[6773.333333333333,500],"semiAuto_magazine_unload_02":[7373.333333333333,500],"semiAuto_magazine_unload_03":[7973.333333333334,500],"semiAuto_magazine_unload_04":[8573.333333333334,500],"semiAuto_shot_01":[9173.333333333334,500],"semiAuto_shot_02":[9773.333333333334,500],"semiAuto_shot_03":[10373.333333333334,500],"semiAuto_shot_04":[10973.333333333332,500],"semiAuto_shot_05":[11573.333333333334,500],"semiAuto_shot_06":[12173.333333333334,500],"semiAuto_shot_07":[12773.333333333334,500],"semiAuto_shot_08":[13373.333333333334,500],"semiAuto_tail_only_shot_01":[13973.333333333332,2455.5102040816328]}}'),
-      Wz = JSON.parse('{"src":["/sounds/generatedSprites/gunSubmachineGun.9d869e4ca3.ogg","/sounds/generatedSprites/gunSubmachineGun.8736ce9068.m4a","/sounds/generatedSprites/gunSubmachineGun.0a429c7e98.mp3","/sounds/generatedSprites/gunSubmachineGun.1db2897c09.ac3"],"sprite":{"submachine_cock_01":[0,500],"submachine_cock_02":[600,500],"submachine_cock_03":[1200,500],"submachine_cock_04":[1800,500],"submachine_first_shot_01":[2400,500],"submachine_magazine_load_01":[3000,500],"submachine_magazine_load_02":[3600,500],"submachine_magazine_load_03":[4200,500],"submachine_magazine_load_04":[4800,500],"submachine_magazine_unload_01":[5400,500],"submachine_magazine_unload_02":[6000,500],"submachine_magazine_unload_03":[6600,500],"submachine_shot_01":[7200,500],"submachine_shot_02":[7800,500],"submachine_shot_03":[8400,500],"submachine_shot_04":[9000,500],"submachine_shot_05":[9600,500],"submachine_shot_06":[10200,500],"submachine_shot_07":[10800,500],"submachine_shot_08":[11400,500],"submachine_shot_09":[12000,500],"submachine_tail_only_shot_01":[12600,1858.8208616780046]}}'),
-      Xz = JSON.parse('{"src":["/sounds/generatedSprites/gunPistol.7432a47272.ogg","/sounds/generatedSprites/gunPistol.adec2d9f75.m4a","/sounds/generatedSprites/gunPistol.a9f647182b.mp3","/sounds/generatedSprites/gunPistol.f363b9fa6d.ac3"],"sprite":{"pistol_cock_01":[0,510],"pistol_cock_02":[610,500],"pistol_cock_03":[1210,500],"pistol_cock_06":[1810,500],"pistol_magazine_load_01":[2410,500],"pistol_magazine_load_02":[3010,500],"pistol_magazine_load_03":[3610,500],"pistol_magazine_unload_01":[4210,500],"pistol_magazine_unload_02":[4810,500],"pistol_magazine_unload_03":[5410,500],"pistol_shot_01":[6010,1500],"pistol_shot_02":[7610,1569.591836734694],"pistol_shot_03":[9280,1735.8956916099773],"pistol_shot_04":[11116.666666666668,1526.7120181405896],"pistol_shot_05":[12746.666666666666,1442.2222222222224]}}'),
-      Oz = JSON.parse('{"src":["/sounds/generatedSprites/gunRifle.ca54b877ed.ogg","/sounds/generatedSprites/gunRifle.94dfb28886.m4a","/sounds/generatedSprites/gunRifle.f2eb64407a.mp3","/sounds/generatedSprites/gunRifle.d268c1da8d.ac3"],"sprite":{"rifle_cock_01":[0,705.3061224489796],"rifle_cock_02":[806.6666666666666,1149.3877551020407],"rifle_magazine_load_01":[2056.6666666666665,500],"rifle_magazine_load_02":[2656.6666666666665,500],"rifle_magazine_load_03":[3256.666666666667,500],"rifle_magazine_unload_01":[3856.6666666666665,500],"rifle_magazine_unload_02":[4456.666666666667,500],"rifle_magazine_unload_04":[5056.666666666667,500],"rifle_shot_01":[5656.666666666666,2115.918367346939],"rifle_shot_02":[7873.333333333333,2429.3877551020405],"rifle_shot_03":[10403.333333333334,2298.7755102040815],"rifle_shot_04":[12803.333333333332,2481.6326530612246]}}'),
-      oz = JSON.parse('{"src":["/sounds/generatedSprites/gunMisc.35b4609d1c.ogg","/sounds/generatedSprites/gunMisc.acc63e7fe9.m4a","/sounds/generatedSprites/gunMisc.4403caaad2.mp3","/sounds/generatedSprites/gunMisc.97552f11dc.ac3"],"sprite":{"bullet_shell_bounce_general_07":[0,823.0612244897959],"bullet_shell_bounce_general_08":[923.3333333333334,907.0294784580499],"headshot_04":[1933.3333333333333,500],"headshot_06":[2533.333333333333,500],"headshot_08":[3133.3333333333335,500],"headshot_11":[3733.3333333333335,500]}}'),
-      vz = JSON.parse('{"src":["/sounds/generatedSprites/gunShotgun.4e0220339e.ogg","/sounds/generatedSprites/gunShotgun.137d0e6b6f.m4a","/sounds/generatedSprites/gunShotgun.8b1144b235.mp3","/sounds/generatedSprites/gunShotgun.0b25a6370a.ac3"],"sprite":{"shotgun_cock_01":[0,914.2857142857142],"shotgun_cock_02":[1016.6666666666666,500],"shotgun_cock_03":[1616.6666666666667,679.1836734693878],"shotgun_cock_04":[2396.6666666666665,548.5714285714286],"shotgun_cock_05":[3046.666666666667,548.5714285714286],"shotgun_load_bullet_01":[3696.666666666667,548.5714285714286],"shotgun_load_bullet_02":[4346.666666666667,522.4489795918367],"shotgun_load_bullet_03":[4970,500],"shotgun_load_bullet_04":[5570,500],"shotgun_load_bullet_05":[6170,500],"shotgun_load_bullet_06":[6770,679.1836734693878],"shotgun_load_bullet_07":[7550,548.5714285714286],"shotgun_load_bullet_08":[8200,500],"shotgun_shot_01":[8800,2612.2448979591836],"shotgun_shot_02":[11513.333333333334,2507.7551020408164],"shotgun_shot_03":[14123.333333333334,2638.3673469387754],"shotgun_shot_04":[16863.333333333332,2037.5510204081634]}}'),
-      Uz = JSON.parse('{"src":["/sounds/generatedSprites/dig.affb4a6f05.ogg","/sounds/generatedSprites/dig.082c5b232c.m4a","/sounds/generatedSprites/dig.71feb10d5c.mp3","/sounds/generatedSprites/dig.4913c53dc2.ac3"],"sprite":{"cloth1":[0,1671.8367346938776],"cloth2":[1773.3333333333335,1671.8367346938776],"cloth3":[3546.666666666667,1671.8367346938776],"cloth4":[5320,1668.9342403628118],"glass1":[7090,1671.8367346938776],"glass2":[8863.333333333334,1671.8367346938776],"glass3":[10636.666666666666,1671.8367346938776],"grass1":[12410,500],"grass2":[13010,500],"grass3":[13610,835.9183673469388],"grass4":[14546.666666666666,835.9183673469388],"gravel1":[15483.333333333332,500],"gravel2":[16083.333333333332,500],"gravel3":[16683.333333333332,500],"gravel4":[17283.333333333336,500],"pickUp":[17883.333333333332,500],"sand1":[18483.333333333336,500],"sand2":[19083.333333333332,500],"sand3":[19683.333333333332,500],"sand4":[20283.333333333336,500],"snow1":[20883.333333333332,500],"snow2":[21483.333333333336,500],"snow3":[22083.333333333332,650.1587301587301],"snow4":[22836.666666666664,650.1587301587301],"stone1":[23590,500],"stone2":[24190,500],"stone3":[24790,500],"stone4":[25390,500],"wood1":[25990,928.7981859410431],"wood2":[27020,928.7981859410431],"wood3":[28050,928.7981859410431],"wood4":[29080,928.7981859410431]}}'),
-      Kz = JSON.parse('{"src":["/sounds/generatedSprites/step.52076ddc3a.ogg","/sounds/generatedSprites/step.d6260ef2cc.m4a","/sounds/generatedSprites/step.6e5286b3a8.mp3","/sounds/generatedSprites/step.cfb5f3dd8f.ac3"],"sprite":{"hit1":[0,557.2789115646258],"hit2":[660,650.1587301587301],"hit3":[1413.3333333333333,650.1587301587301],"step_cloth1":[2166.6666666666665,1671.8367346938776],"step_cloth2":[3940,1671.8367346938776],"step_cloth3":[5713.333333333333,1671.8367346938776],"step_cloth4":[7486.666666666666,1671.8367346938776],"step_grass1":[9260,500],"step_grass2":[9860,500],"step_grass3":[10460,500],"step_grass4":[11060,500],"step_grass5":[11660,1483.1746031746031],"step_gravel1":[13243.333333333334,1486.077097505669],"step_gravel2":[14830,1483.1746031746031],"step_gravel3":[16413.333333333336,1486.077097505669],"step_gravel4":[18000,1486.077097505669],"step_sand2":[19586.666666666664,1486.077097505669],"step_sand3":[21173.333333333332,1486.077097505669],"step_sand4":[22760,1486.077097505669],"step_sand5":[24346.666666666668,1486.077097505669],"step_snow1":[25933.333333333332,500],"step_snow2":[26533.333333333336,500],"step_snow3":[27133.333333333332,500],"step_snow4":[27733.333333333336,500],"step_stone1":[28333.333333333332,1486.077097505669],"step_stone2":[29920,1486.077097505669],"step_stone3":[31506.666666666668,1486.077097505669],"step_stone4":[33093.333333333336,1486.077097505669],"step_stone5":[34680,1486.077097505669],"step_stone6":[36266.666666666664,1486.077097505669],"step_wood1":[37853.33333333333,743.0385487528345],"step_wood2":[38696.666666666664,743.0385487528345],"step_wood3":[39540,743.0385487528345],"step_wood4":[40383.333333333336,743.0385487528345],"step_wood5":[41226.666666666664,743.0385487528345],"step_wood6":[42070,743.0385487528345],"sweep6":[42913.333333333336,1114.5578231292516]}}'),
-      uz = JSON.parse('{"src":["/sounds/generatedSprites/random.865e6504e8.ogg","/sounds/generatedSprites/random.30bfb92551.m4a","/sounds/generatedSprites/random.baec75fd79.mp3","/sounds/generatedSprites/random.80db3a1c09.ac3"],"sprite":{"beep":[0,2455.5102040816328],"bow":[2556.6666666666665,500],"bucketEmpty1":[3156.6666666666665,1114.5578231292516],"bucketEmpty2":[4373.333333333333,1114.5578231292516],"bucketEmpty3":[5590,1114.5578231292516],"bucketFill1":[6806.666666666667,1021.6780045351475],"bucketFill2":[7930,1021.6780045351475],"bucketFill3":[9053.333333333332,1021.6780045351475],"burp":[10176.666666666666,500],"cannonFire1":[10776.666666666668,4880.748299319728],"cannonFire2":[15760,4880.748299319728],"cannonFire3":[20743.333333333332,4880.748299319728],"cashRegister":[25726.666666666668,3819.6825396825398],"chestClose":[29646.666666666668,557.2789115646258],"chestOpen":[30306.666666666668,743.0385487528345],"doorClose":[31150,835.9183673469388],"doorClose2":[32086.666666666664,835.9183673469388],"doorOpen-bloxd1":[33023.333333333336,743.0385487528345],"doorOpen-bloxd2":[33866.666666666664,835.9183673469388],"drink":[34803.333333333336,500],"eat1":[35403.333333333336,500],"equip_leather1":[36003.33333333333,928.7981859410431],"exp_collect":[37033.33333333333,1009.2063492063493],"exp_levelup":[38143.33333333333,1469.863945578231],"fallsmall":[39713.33333333333,1764.716553287982],"fireBurn":[41580,2827.3922902494332],"firecracker1":[44510,5302.857142857142],"firecracker2":[49913.333333333336,5250.6122448979595],"firecracker3":[55266.666666666664,5198.367346938776],"firecracker4":[60566.66666666667,5877.551020408164],"hoeTill1":[66546.66666666667,1114.5578231292516],"hoeTill2":[67763.33333333333,557.2789115646258],"hoeTill3":[68423.33333333333,928.7981859410431],"hoeTill4":[69453.33333333333,928.7981859410431],"laugh1":[70483.33333333333,898.3219954648525],"laugh2":[71483.33333333333,1919.092970521542],"laugh3":[73503.33333333333,1668.2766439909299],"magicAccent1":[75273.33333333333,5250.6122448979595],"magicAccent2":[80626.66666666667,5041.632653061224],"magicAccent3":[85770,4963.265306122449],"magicAccent4":[90833.33333333333,4728.163265306122],"splash1":[95663.33333333333,1114.5578231292516],"successfulBowHit":[96880,500],"trapdoorOpen":[97480,835.9183673469388]}}'),
-      Nz = JSON.parse('{"src":["/sounds/generatedSprites/mob.c1d17fb6a5.ogg","/sounds/generatedSprites/mob.91d06491e6.m4a","/sounds/generatedSprites/mob.9077a319db.mp3","/sounds/generatedSprites/mob.c45a2fe399.ac3"],"sprite":{"bearRoar1":[0,1011.1791383219954],"bearRoar2":[1113.3333333333333,793.6507936507936],"bearRoar3":[2009.9999999999998,764.2630385487529],"bearRoar4":[2876.6666666666665,781.9047619047619],"bearRoar5":[3760,646.6666666666666],"catHiss1":[4506.666666666667,1252.0861678004535],"catHiss2":[5860,1064.2403628117913],"catHiss3":[7026.666666666666,1082.6530612244899],"catHiss4":[8210,978.8662131519275],"catHurt1":[9290,809.795918367347],"catHurt2":[10200,779.4104308390023],"catHurt3":[11080,626.9387755102041],"catMeow1":[11810,1306.1224489795918],"catMeow2":[13216.666666666666,1384.4897959183672],"catMeow3":[14703.333333333334,1280],"catMeow4":[16083.333333333332,1567.3469387755101],"catMeow5":[17753.333333333332,1802.4489795918369],"cowHurt1":[19656.666666666668,522.6530612244899],"cowMoo1":[20280,1574.331065759637],"cowMoo2":[21956.666666666668,1947.4149659863947],"cowMoo3":[24006.666666666668,2099.342403628118],"croneAttack1":[26206.666666666668,500],"croneHurt1":[26806.666666666668,751.6780045351475],"croneIdle1":[27660,6756.8707482993195],"deerGrunt1":[34520,976.7346938775511],"deerHurt1":[35600,500],"dogBark1":[36200,500],"dogBark2":[36800,500],"dogBark3":[37400,500],"dogGrowl1":[38000,634.8979591836734],"dogGrowl2":[38736.666666666664,543.3560090702948],"dogGrowl3":[39383.333333333336,1361.360544217687],"dogHurt1":[40846.666666666664,500],"dogHurt2":[41446.666666666664,500],"fennecYip1":[42046.666666666664,500],"fennecYip2":[42646.66666666667,500],"fennecYip3":[43246.66666666667,500],"golemGrunt1":[43846.666666666664,6687.34693877551],"golemGrunt2":[50636.666666666664,4911.0204081632655],"gorillaIdle1":[55650,898.140589569161],"gorillaIdle2":[56650,825.3061224489796],"gorillaIdle3":[57576.66666666667,1357.233560090703],"gorillaIdle4":[59036.66666666667,1061.2698412698414],"gorillaRoar1":[60200,1002.6757369614512],"horseHurt1":[61303.333333333336,1044.8979591836735],"horseHurt2":[62450,1332.2448979591836],"horseIdle1":[63883.333333333336,1410.6122448979593],"horseIdle2":[65396.666666666664,634.3310657596371],"horseIdle3":[66133.33333333334,853.469387755102],"knightGrunt1":[67090,2026.6666666666667],"knightGrunt2":[69216.66666666667,2154.671201814059],"knightGrunt3":[71473.33333333333,1674.671201814059],"pigHurt1":[73250,705.6009070294784],"pigHurt2":[74056.66666666667,667.4603174603175],"pigHurt3":[74826.66666666667,500],"pigOink1":[75426.66666666666,976.7573696145124],"pigOink2":[76506.66666666666,1015.578231292517],"pigOink3":[77623.33333333333,500],"pigOink4":[78223.33333333333,500],"pigOink5":[78823.33333333334,519.4557823129252],"reaverAttack1":[79443.33333333333,4031.1111111111113],"reaverAttack2":[83576.66666666667,1552.0181405895692],"reaverAttack3":[85230,1857.5510204081634],"reaverGrunt1":[87190,5073.5600907029475],"reaverGrunt2":[92366.66666666666,2950.090702947846],"reaverGrunt3":[95420,6640.907029478458],"sheepBaa1":[102163.33333333333,1039.3877551020407],"sheepBaa2":[103303.33333333333,1243.968253968254],"sheepBaa3":[104650,827.7551020408164],"sheepBaa4":[105580,1048.1179138321997],"sheepHurt1":[106730,700.2721088435375],"skeletonRattle1":[107533.33333333333,1088.0045351473923],"skeletonRattle2":[108723.33333333333,1499.9773242630386],"skeletonRattle3":[110323.33333333334,750],"skeletonRattle4":[111173.33333333333,650.6575963718822],"stagGrunt1":[111926.66666666666,976.7346938775511],"stagHurt1":[113006.66666666666,500],"stalkerAttack1":[113606.66666666667,963.6281179138322],"stalkerIdle1":[114673.33333333333,2051.065759637188],"warperGrunt1":[116826.66666666667,2883.605442176871],"warperGrunt2":[119813.33333333333,6405.351473922902],"warperGrunt3":[126320,4806.530612244898],"warperGrunt4":[131226.66666666666,5781.768707482994],"warperGrunt5":[137110,4284.081632653061],"warperPhase1":[141496.66666666666,5867.256235827665],"warperPhase2":[147466.66666666666,5866.916099773242],"wraithGrunt1":[153436.66666666666,4111.995464852607],"wraithGrunt2":[157650,5173.333333333333],"wraithHurt":[162923.33333333334,4277.324263038548],"ZombieGrunt1":[167303.33333333334,2089.795918367347],"ZombieGrunt2":[169493.33333333334,2351.0204081632655],"ZombieGrunt3":[171946.66666666666,1750.204081632653],"ZombieHurt1":[173800,1593.4693877551022],"ZombieHurt2":[175496.66666666666,1906.938775510204],"ZombieHurt3":[177506.66666666666,1018.7755102040817],"ZombieHurt4":[178626.66666666666,1358.3673469387757]}}'),
-      bz = JSON.parse('{"src":["/sounds/generatedSprites/note.55b41d5148.ogg","/sounds/generatedSprites/note.9d434eddc4.m4a","/sounds/generatedSprites/note.96cf50a66e.mp3","/sounds/generatedSprites/note.85cfed63f9.ac3"],"sprite":{"bass":[0,500],"bassattack":[600,500],"bd":[1200,500],"bigDrumSwish1":[1800,3892.2448979591836],"bigDrumSwish2":[5793.333333333333,3056.326530612245],"bigDrumSwish3":[8950,3578.7755102040815],"drumSwish1":[12630,4127.34693877551],"drumSwish2":[16860,4127.34693877551],"harp_pling":[21090,835.9183673469388],"hat":[22026.666666666668,500],"levelup":[22626.666666666664,4458.231292517006],"lowDrum1":[27186.666666666668,3683.265306122449],"lowDrum2":[30970,3840],"lowDrum3":[34910,4205.714285714285],"snare":[39216.66666666667,500],"sonarBeep":[39816.66666666667,4127.34693877551],"trumpetFlare":[44046.666666666664,1683.4467120181407],"trumpetNote1":[45833.333333333336,779.8412698412699],"trumpetNote2":[46713.33333333333,845.6916099773243],"trumpetNote3":[47660,1090.7256235827665]}}'),
-      wz = JSON.parse('{"src":["/sounds/generatedSprites/fishing.ff9694e93b.ogg","/sounds/generatedSprites/fishing.20b18e3c80.m4a","/sounds/generatedSprites/fishing.4388bd71de.mp3","/sounds/generatedSprites/fishing.09b8e92f3c.ac3"],"sprite":{"caughtFish":[0,1976.7573696145125],"reel":[2080,531.9501133786848]}}'),
-      Dz = JSON.parse('{"src":["/sounds/generatedSprites/gameStart.dcb4ad7e5f.ogg","/sounds/generatedSprites/gameStart.04192cc8d1.m4a","/sounds/generatedSprites/gameStart.203520cd23.mp3","/sounds/generatedSprites/gameStart.95d1462a45.ac3"],"sprite":{"game_start_countdown_01":[0,1000.7709750566893],"game_start_countdown_02":[1103.3333333333333,994.9206349206348],"game_start_countdown_03":[2200,1000.7709750566893],"game_start_countdown_final":[3303.333333333333,1583.1065759637188]}}'),
-      gz = JSON.parse('{"src":["/sounds/generatedSprites/customGame_horror.89bd01b3f6.ogg","/sounds/generatedSprites/customGame_horror.58571ce79e.m4a","/sounds/generatedSprites/customGame_horror.809f261ceb.mp3","/sounds/generatedSprites/customGame_horror.0a4350133e.ac3"],"sprite":{"cryptWhoosh":[0,1700],"doorKnock":[1800,1173.3333333333333],"futureStrangePulse":[3073.333333333333,2874.6938775510203],"hauntedHorrorImpact":[6050,1072.857142857143],"horrorAccent1":[7223.333333333334,1919.5238095238096],"horrorFright":[9243.333333333334,1630.952380952381],"horrorMaleDrone":[10976.666666666666,7933.492063492064],"intensiveRainLoop":[19013.333333333332,13037.687074829933],"metalDoorKnock":[32153.333333333336,4219.410430839002],"ominousBellHit":[36473.333333333336,8756.621315192744],"pulseFromTheDark":[45330,7653.582766439909],"suspenseRiser":[53086.666666666664,6825.396825396825],"thunderRain":[60013.333333333336,12085.986394557824],"zapAccent1":[72200,500],"zapAccent2":[72800,500]}}'),
-      Hz = JSON.parse('{"src":["/sounds/generatedSprites/crowd.842a12bd70.ogg","/sounds/generatedSprites/crowd.eb817b0986.m4a","/sounds/generatedSprites/crowd.718908450e.mp3","/sounds/generatedSprites/crowd.b61523a08f.ac3"],"sprite":{"crowdAmbience":[0,54935.51020408163],"crowdCheer":[55036.66666666667,6269.3877551020405],"refereeWhistle":[61406.666666666664,2089.795918367347]}}'),
-      Bz = JSON.parse('{"src":["/sounds/generatedSprites/survivalFactory.83edaf137d.ogg","/sounds/generatedSprites/survivalFactory.39e38bf296.m4a","/sounds/generatedSprites/survivalFactory.e3538de2e7.mp3","/sounds/generatedSprites/survivalFactory.a8fc293f73.ac3"],"sprite":{"rocketEngineLoop":[0,13167.369614512472]}}'),
-      Pz = JSON.parse('{"src":["/sounds/generatedSprites/rpg.a91934b789.ogg","/sounds/generatedSprites/rpg.48d078dd6a.m4a","/sounds/generatedSprites/rpg.0279bc17b2.mp3","/sounds/generatedSprites/rpg.833aede675.ac3"],"sprite":{"rpgBeltCloth1":[0,722.5396825396826],"rpgBeltCloth2":[823.3333333333334,753.3106575963718],"rpgBeltHandle1":[1676.6666666666667,500],"rpgBeltHandle2":[2276.666666666667,500],"rpgBookClose":[2876.6666666666665,500],"rpgBookFlip1":[3476.6666666666665,768.6621315192745],"rpgBookFlip2":[4346.666666666667,500],"rpgBookFlip3":[4946.666666666666,500],"rpgBookOpen":[5546.666666666667,500],"rpgBookPlace1":[6146.666666666666,500],"rpgBookPlace2":[6746.666666666667,500],"rpgBookPlace3":[7346.666666666667,500],"rpgChop":[7946.666666666666,500],"rpgCloth1":[8546.666666666666,661.0430839002267],"rpgCloth2":[9310,500],"rpgCloth3":[9910,500],"rpgCloth4":[10510,500],"rpgCreak1":[11110,661.0430839002267],"rpgCreak2":[11873.333333333334,830.1587301587302],"rpgCreak3":[12806.666666666666,500],"rpgDoorClose1":[13406.666666666666,675.0566893424036],"rpgDoorClose2":[14183.333333333334,612.4943310657596],"rpgDoorClose3":[14896.666666666666,713.9455782312925],"rpgDoorClose4":[15713.333333333332,603.3786848072561],"rpgDoorOpen1":[16420,918.9795918367347],"rpgDoorOpen2":[17440,1413.3333333333333],"rpgDrawKnife1":[18953.333333333332,500],"rpgDrawKnife2":[19553.333333333336,500],"rpgDrawKnife3":[20153.333333333332,500],"rpgDropLeather":[20753.333333333332,500],"rpgFootstep00":[21353.333333333332,500],"rpgFootstep01":[21953.333333333332,500],"rpgFootstep02":[22553.333333333336,500],"rpgFootstep03":[23153.333333333332,500],"rpgFootstep04":[23753.333333333332,500],"rpgFootstep05":[24353.333333333332,500],"rpgFootstep06":[24953.333333333332,500],"rpgFootstep07":[25553.333333333336,500],"rpgFootstep08":[26153.333333333332,500],"rpgFootstep09":[26753.333333333332,500],"rpgHandleCoins1":[27353.333333333332,845.5328798185941],"rpgHandleCoins2":[28300,500],"rpgHandleSmallLeather1":[28900,500],"rpgHandleSmallLeather2":[29500,500],"rpgKnifeSlice1":[30100,599.546485260771],"rpgKnifeSlice2":[30800,568.798185941043],"rpgMetalClick":[31470,500],"rpgMetalLatch":[32070,500],"rpgMetalPot1":[32670,1460.4761904761906],"rpgMetalPot2":[34233.333333333336,937.7777777777778],"rpgMetalPot3":[35273.333333333336,907.0068027210884]}}'),
-      rz = JSON.parse('{"src":["/sounds/generatedSprites/ambient.3b059790c7.ogg","/sounds/generatedSprites/ambient.6309e24e3b.m4a","/sounds/generatedSprites/ambient.9483cf5093.mp3","/sounds/generatedSprites/ambient.c053085ec4.ac3"],"sprite":{"lavaFlow":[0,34000]}}'),
-      Yz = JSON.parse('{"src":["/sounds/generatedSprites/police.d9c6fc70bc.ogg","/sounds/generatedSprites/police.4fb44943a7.m4a","/sounds/generatedSprites/police.2a300c9c5e.mp3","/sounds/generatedSprites/police.4140927019.ac3"],"sprite":{"handcuffsLock":[0,626.9387755102041],"radioBeep":[730,650],"radioChatter":[1480,3372.9931972789113],"runningSteps":[4953.333333333333,3305.555555555555],"sirenChirp":[8360,924.1723356009071],"sirenWail":[9386.666666666666,5195.056689342404],"sirenYelp":[14683.333333333334,5239.3650793650795],"stunZap":[20023.333333333332,750],"whistle":[20873.333333333336,535.9183673469388]}}'),
-      xz = JSON.parse('{"src":["/sounds/generatedSprites/cars.0704d524d1.ogg","/sounds/generatedSprites/cars.ff965de8bb.m4a","/sounds/generatedSprites/cars.ce24c14295.mp3","/sounds/generatedSprites/cars.844fc9209b.ac3"],"sprite":{"carCrash":[0,539.7732426303855],"carDoorClose":[640,570.7029478458049],"carDoorOpen":[1313.3333333333333,720.5895691609977],"carDriveLoop":[2136.6666666666665,29642.721088435374],"carEngineStart":[31880,2800],"carHorn":[34780,500],"carIdleLoop":[35380,27663.94557823129],"carLockChirp":[63146.66666666667,600],"indicatorTick":[63846.666666666664,5266.303854875283],"reverseBeep":[69213.33333333334,5254.512471655329],"seatbeltClick":[74570,500],"tyreScreech":[75170,2000],"vanIdleLoop":[77270,17625.011337868484]}}'),
-      mz = JSON.parse('{"src":["/sounds/generatedSprites/fire.e86d968fb5.ogg","/sounds/generatedSprites/fire.79adfd2c5a.m4a","/sounds/generatedSprites/fire.c1e463a3cd.mp3","/sounds/generatedSprites/fire.6d0bbbc2ca.ac3"],"sprite":{"extinguisherSpray":[0,2598.7301587301586],"fireAlarmBell":[2700,7848.730158730158],"fireCrackle":[10650,17343.94557823129],"fireTruckHorn":[28096.666666666668,3546.485260770975]}}'),
-      Jz = JSON.parse('{"src":["/sounds/generatedSprites/phoneAndMoney.4739a7944b.ogg","/sounds/generatedSprites/phoneAndMoney.73a9e2118e.m4a","/sounds/generatedSprites/phoneAndMoney.a2500ea194.mp3","/sounds/generatedSprites/phoneAndMoney.841f719ee3.ac3"],"sprite":{"cameraShutter":[0,553.764172335601],"coinsDrop":[656.6666666666666,2106.190476190476],"jobComplete":[2863.3333333333335,2330.090702947846],"messageReceive":[5296.666666666667,600.204081632653],"phoneNotify":[6000,500],"phoneTap":[6600,500],"phoneVibrate":[7200,1062.7437641723357],"tillPurchase":[8363.333333333334,2754.4897959183672]}}'),
-      Iz = JSON.parse('{"src":["/sounds/generatedSprites/town.422dd11fe2.ogg","/sounds/generatedSprites/town.7ae83b6b59.m4a","/sounds/generatedSprites/town.b6767431c7.mp3","/sounds/generatedSprites/town.a55c8585bb.ac3"],"sprite":{"crowdMurmur":[0,15708.140589569162],"doorbell":[15810,3017.4603174603176],"gateCreak":[18930,3720.9977324263036],"keysJingle":[22753.333333333332,2400],"kidsPlaying":[25253.333333333332,16534.67120181406],"parkBirds":[41890,13663.106575963719],"shopDoorbell":[55653.333333333336,925.0566893424036]}}');
-    var Cz = sz(1191);
-    const ez = {
-        gunSemiAutomatic: Fz,
-        gunSubmachineGun: Wz,
-        gunShotgun: vz,
-        gunRifle: Oz,
-        gunPistol: Xz,
-        gunMisc: oz,
-        dig: Uz,
-        step: Kz,
-        random: uz,
-        mob: Nz,
-        note: bz,
-        fishing: wz,
-        gameStart: Dz,
-        customGame_horror: gz,
-        crowd: Hz,
-        survivalFactory: Bz,
-        rpg: Pz,
-        ambient: rz,
-        police: Yz,
-        cars: xz,
-        fire: mz,
-        phoneAndMoney: Jz,
-        town: Iz
-      },
-      Zz = {};
-    for (const Mz in ez) {
-      const zz = ez[Mz];
-      for (const tz in zz.sprite) {
-        if (Zz[tz]) throw new Error(`duplicate sound name ${tz} in ${Zz[tz]} and ${Mz}`);
-        Zz[tz] = Mz
-      }
+  36163: vv => {
+    vv.exports = {
+      aliceblue: [240, 248, 255],
+      antiquewhite: [250, 235, 215],
+      aqua: [0, 255, 255],
+      aquamarine: [127, 255, 212],
+      azure: [240, 255, 255],
+      beige: [245, 245, 220],
+      bisque: [255, 228, 196],
+      black: [0, 0, 0],
+      blanchedalmond: [255, 235, 205],
+      blue: [0, 0, 255],
+      blueviolet: [138, 43, 226],
+      brown: [165, 42, 42],
+      burlywood: [222, 184, 135],
+      cadetblue: [95, 158, 160],
+      chartreuse: [127, 255, 0],
+      chocolate: [210, 105, 30],
+      coral: [255, 127, 80],
+      cornflowerblue: [100, 149, 237],
+      cornsilk: [255, 248, 220],
+      crimson: [220, 20, 60],
+      cyan: [0, 255, 255],
+      darkblue: [0, 0, 139],
+      darkcyan: [0, 139, 139],
+      darkgoldenrod: [184, 134, 11],
+      darkgray: [169, 169, 169],
+      darkgreen: [0, 100, 0],
+      darkgrey: [169, 169, 169],
+      darkkhaki: [189, 183, 107],
+      darkmagenta: [139, 0, 139],
+      darkolivegreen: [85, 107, 47],
+      darkorange: [255, 140, 0],
+      darkorchid: [153, 50, 204],
+      darkred: [139, 0, 0],
+      darksalmon: [233, 150, 122],
+      darkseagreen: [143, 188, 143],
+      darkslateblue: [72, 61, 139],
+      darkslategray: [47, 79, 79],
+      darkslategrey: [47, 79, 79],
+      darkturquoise: [0, 206, 209],
+      darkviolet: [148, 0, 211],
+      deeppink: [255, 20, 147],
+      deepskyblue: [0, 191, 255],
+      dimgray: [105, 105, 105],
+      dimgrey: [105, 105, 105],
+      dodgerblue: [30, 144, 255],
+      firebrick: [178, 34, 34],
+      floralwhite: [255, 250, 240],
+      forestgreen: [34, 139, 34],
+      fuchsia: [255, 0, 255],
+      gainsboro: [220, 220, 220],
+      ghostwhite: [248, 248, 255],
+      gold: [255, 215, 0],
+      goldenrod: [218, 165, 32],
+      gray: [128, 128, 128],
+      green: [0, 128, 0],
+      greenyellow: [173, 255, 47],
+      grey: [128, 128, 128],
+      honeydew: [240, 255, 240],
+      hotpink: [255, 105, 180],
+      indianred: [205, 92, 92],
+      indigo: [75, 0, 130],
+      ivory: [255, 255, 240],
+      khaki: [240, 230, 140],
+      lavender: [230, 230, 250],
+      lavenderblush: [255, 240, 245],
+      lawngreen: [124, 252, 0],
+      lemonchiffon: [255, 250, 205],
+      lightblue: [173, 216, 230],
+      lightcoral: [240, 128, 128],
+      lightcyan: [224, 255, 255],
+      lightgoldenrodyellow: [250, 250, 210],
+      lightgray: [211, 211, 211],
+      lightgreen: [144, 238, 144],
+      lightgrey: [211, 211, 211],
+      lightpink: [255, 182, 193],
+      lightsalmon: [255, 160, 122],
+      lightseagreen: [32, 178, 170],
+      lightskyblue: [135, 206, 250],
+      lightslategray: [119, 136, 153],
+      lightslategrey: [119, 136, 153],
+      lightsteelblue: [176, 196, 222],
+      lightyellow: [255, 255, 224],
+      lime: [0, 255, 0],
+      limegreen: [50, 205, 50],
+      linen: [250, 240, 230],
+      magenta: [255, 0, 255],
+      maroon: [128, 0, 0],
+      mediumaquamarine: [102, 205, 170],
+      mediumblue: [0, 0, 205],
+      mediumorchid: [186, 85, 211],
+      mediumpurple: [147, 112, 219],
+      mediumseagreen: [60, 179, 113],
+      mediumslateblue: [123, 104, 238],
+      mediumspringgreen: [0, 250, 154],
+      mediumturquoise: [72, 209, 204],
+      mediumvioletred: [199, 21, 133],
+      midnightblue: [25, 25, 112],
+      mintcream: [245, 255, 250],
+      mistyrose: [255, 228, 225],
+      moccasin: [255, 228, 181],
+      navajowhite: [255, 222, 173],
+      navy: [0, 0, 128],
+      oldlace: [253, 245, 230],
+      olive: [128, 128, 0],
+      olivedrab: [107, 142, 35],
+      orange: [255, 165, 0],
+      orangered: [255, 69, 0],
+      orchid: [218, 112, 214],
+      palegoldenrod: [238, 232, 170],
+      palegreen: [152, 251, 152],
+      paleturquoise: [175, 238, 238],
+      palevioletred: [219, 112, 147],
+      papayawhip: [255, 239, 213],
+      peachpuff: [255, 218, 185],
+      peru: [205, 133, 63],
+      pink: [255, 192, 203],
+      plum: [221, 160, 221],
+      powderblue: [176, 224, 230],
+      purple: [128, 0, 128],
+      rebeccapurple: [102, 51, 153],
+      red: [255, 0, 0],
+      rosybrown: [188, 143, 143],
+      royalblue: [65, 105, 225],
+      saddlebrown: [139, 69, 19],
+      salmon: [250, 128, 114],
+      sandybrown: [244, 164, 96],
+      seagreen: [46, 139, 87],
+      seashell: [255, 245, 238],
+      sienna: [160, 82, 45],
+      silver: [192, 192, 192],
+      skyblue: [135, 206, 235],
+      slateblue: [106, 90, 205],
+      slategray: [112, 128, 144],
+      slategrey: [112, 128, 144],
+      snow: [255, 250, 250],
+      springgreen: [0, 255, 127],
+      steelblue: [70, 130, 180],
+      tan: [210, 180, 140],
+      teal: [0, 128, 128],
+      thistle: [216, 191, 216],
+      tomato: [255, 99, 71],
+      turquoise: [64, 224, 208],
+      violet: [238, 130, 238],
+      wheat: [245, 222, 179],
+      white: [255, 255, 255],
+      whitesmoke: [245, 245, 245],
+      yellow: [255, 255, 0],
+      yellowgreen: [154, 205, 50]
     }
-    for (const Mz in ez) {
-      const zz = ez[Mz];
-      for (let tz = 0; tz < zz.src.length; tz++) zz.src[tz] = Cz.clientSideServerUrls.staticUrl + zz.src[tz]
-    }
-    const Gz = {};
+  },
+  36160: (vv, zv, Pv) => {
+    var hv = Pv(36163),
+      Sv = Pv(36169),
+      ev = Object.hasOwnProperty,
+      gv = Object.create(null);
+    for (var pv in hv) ev.call(hv, pv) && (gv[hv[pv]] = pv);
+    var dv = vv.exports = {
+      to: {},
+      get: {}
+    };
 
-    function Tz(zz) {
-      if (Gz[zz]) return yz(Gz[zz]);
-      {
-        const tz = [];
-        let sz = null;
-        for (const Fz in ez) {
-          const Wz = ez[Fz];
-          for (const Xz in Wz.sprite)
-            if (Xz.startsWith(zz)) {
-              if (tz.push(Xz), sz && sz !== Fz) throw new Error(`Sound prefix ${zz} is in multiple sprite sheets: ${sz} and ${Fz}`);
-              sz = Fz
-            }
+    function Nv(vv, zv, Pv) {
+      return Math.min(Math.max(zv, vv), Pv)
+    }
+
+    function lv(vv) {
+      var zv = Math.round(vv).toString(16).toUpperCase();
+      return zv.length < 2 ? "0" + zv : zv
+    }
+    dv.get = function(vv) {
+      var zv, Pv;
+      switch (vv.substring(0, 3).toLowerCase()) {
+        case "hsl":
+          zv = dv.get.hsl(vv), Pv = "hsl";
+          break;
+        case "hwb":
+          zv = dv.get.hwb(vv), Pv = "hwb";
+          break;
+        default:
+          zv = dv.get.rgb(vv), Pv = "rgb"
+      }
+      return zv ? {
+        model: Pv,
+        value: zv
+      } : null
+    }, dv.get.rgb = function(vv) {
+      if (!vv) return null;
+      var zv, Pv, Sv, gv = [0, 0, 0, 1];
+      if (zv = vv.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (Sv = zv[2], zv = zv[1], Pv = 0; Pv < 3; Pv++) {
+          var pv = 2 * Pv;
+          gv[Pv] = parseInt(zv.slice(pv, pv + 2), 16)
         }
-        return Gz[zz] = tz, yz(tz)
+        Sv && (gv[3] = parseInt(Sv, 16) / 255)
+      } else if (zv = vv.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (Sv = (zv = zv[1])[3], Pv = 0; Pv < 3; Pv++) gv[Pv] = parseInt(zv[Pv] + zv[Pv], 16);
+        Sv && (gv[3] = parseInt(Sv + Sv, 16) / 255)
+      } else if (zv = vv.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (Pv = 0; Pv < 3; Pv++) gv[Pv] = parseInt(zv[Pv + 1], 0);
+        zv[4] && (zv[5] ? gv[3] = .01 * parseFloat(zv[4]) : gv[3] = parseFloat(zv[4]))
+      } else {
+        if (!(zv = vv.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (zv = vv.match(/^(\w+)$/)) ? "transparent" === zv[1] ? [0, 0, 0, 0] : ev.call(hv, zv[1]) ? ((gv = hv[zv[1]])[3] = 1, gv) : null : null;
+        for (Pv = 0; Pv < 3; Pv++) gv[Pv] = Math.round(2.55 * parseFloat(zv[Pv + 1]));
+        zv[4] && (zv[5] ? gv[3] = .01 * parseFloat(zv[4]) : gv[3] = parseFloat(zv[4]))
+      }
+      for (Pv = 0; Pv < 3; Pv++) gv[Pv] = Nv(gv[Pv], 0, 255);
+      return gv[3] = Nv(gv[3], 0, 1), gv
+    }, dv.get.hsl = function(vv) {
+      if (!vv) return null;
+      var zv = vv.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (zv) {
+        var Pv = parseFloat(zv[4]);
+        return [(parseFloat(zv[1]) % 360 + 360) % 360, Nv(parseFloat(zv[2]), 0, 100), Nv(parseFloat(zv[3]), 0, 100), Nv(isNaN(Pv) ? 1 : Pv, 0, 1)]
+      }
+      return null
+    }, dv.get.hwb = function(vv) {
+      if (!vv) return null;
+      var zv = vv.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (zv) {
+        var Pv = parseFloat(zv[4]);
+        return [(parseFloat(zv[1]) % 360 + 360) % 360, Nv(parseFloat(zv[2]), 0, 100), Nv(parseFloat(zv[3]), 0, 100), Nv(isNaN(Pv) ? 1 : Pv, 0, 1)]
+      }
+      return null
+    }, dv.to.hex = function() {
+      var vv = Sv(arguments);
+      return "#" + lv(vv[0]) + lv(vv[1]) + lv(vv[2]) + (vv[3] < 1 ? lv(Math.round(255 * vv[3])) : "")
+    }, dv.to.rgb = function() {
+      var vv = Sv(arguments);
+      return vv.length < 4 || 1 === vv[3] ? "rgb(" + Math.round(vv[0]) + ", " + Math.round(vv[1]) + ", " + Math.round(vv[2]) + ")" : "rgba(" + Math.round(vv[0]) + ", " + Math.round(vv[1]) + ", " + Math.round(vv[2]) + ", " + vv[3] + ")"
+    }, dv.to.rgb.percent = function() {
+      var vv = Sv(arguments),
+        zv = Math.round(vv[0] / 255 * 100),
+        Pv = Math.round(vv[1] / 255 * 100),
+        hv = Math.round(vv[2] / 255 * 100);
+      return vv.length < 4 || 1 === vv[3] ? "rgb(" + zv + "%, " + Pv + "%, " + hv + "%)" : "rgba(" + zv + "%, " + Pv + "%, " + hv + "%, " + vv[3] + ")"
+    }, dv.to.hsl = function() {
+      var vv = Sv(arguments);
+      return vv.length < 4 || 1 === vv[3] ? "hsl(" + vv[0] + ", " + vv[1] + "%, " + vv[2] + "%)" : "hsla(" + vv[0] + ", " + vv[1] + "%, " + vv[2] + "%, " + vv[3] + ")"
+    }, dv.to.hwb = function() {
+      var vv = Sv(arguments),
+        zv = "";
+      return vv.length >= 4 && 1 !== vv[3] && (zv = ", " + vv[3]), "hwb(" + vv[0] + ", " + vv[1] + "%, " + vv[2] + "%" + zv + ")"
+    }, dv.to.keyword = function(vv) {
+      return gv[vv.slice(0, 3)]
+    }
+  },
+  36155: (vv, zv, Pv) => {
+    const hv = Pv(36160),
+      Sv = Pv(36173),
+      ev = ["keyword", "gray", "hex"],
+      gv = {};
+    for (const wv of Object.keys(Sv)) gv[[...Sv[wv].labels].sort().join("")] = wv;
+    const pv = {};
+
+    function dv(vv, zv) {
+      if (!(this instanceof dv)) return new dv(vv, zv);
+      if (zv && zv in ev && (zv = null), zv && !(zv in Sv)) throw new Error("Unknown model: " + zv);
+      let Pv, Nv;
+      if (null == vv) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (vv instanceof dv) this.model = vv.model, this.color = [...vv.color], this.valpha = vv.valpha;
+      else if ("string" === typeof vv) {
+        const zv = hv.get(vv);
+        if (null === zv) throw new Error("Unable to parse color from string: " + vv);
+        this.model = zv.model, Nv = Sv[this.model].channels, this.color = zv.value.slice(0, Nv), this.valpha = "number" === typeof zv.value[Nv] ? zv.value[Nv] : 1
+      } else if (vv.length > 0) {
+        this.model = zv || "rgb", Nv = Sv[this.model].channels;
+        const Pv = Array.prototype.slice.call(vv, 0, Nv);
+        this.color = Wv(Pv, Nv), this.valpha = "number" === typeof vv[Nv] ? vv[Nv] : 1
+      } else if ("number" === typeof vv) this.model = "rgb", this.color = [vv >> 16 & 255, vv >> 8 & 255, 255 & vv], this.valpha = 1;
+      else {
+        this.valpha = 1;
+        const zv = Object.keys(vv);
+        "alpha" in vv && (zv.splice(zv.indexOf("alpha"), 1), this.valpha = "number" === typeof vv.alpha ? vv.alpha : 0);
+        const hv = zv.sort().join("");
+        if (!(hv in gv)) throw new Error("Unable to parse color from object: " + JSON.stringify(vv));
+        this.model = gv[hv];
+        const {
+          labels: ev
+        } = Sv[this.model], pv = [];
+        for (Pv = 0; Pv < ev.length; Pv++) pv.push(vv[ev[Pv]]);
+        this.color = Wv(pv)
+      }
+      if (pv[this.model])
+        for (Nv = Sv[this.model].channels, Pv = 0; Pv < Nv; Pv++) {
+          const vv = pv[this.model][Pv];
+          vv && (this.color[Pv] = vv(this.color[Pv]))
+        }
+      this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
+    }
+    dv.prototype = {
+      toString() {
+        return this.string()
+      },
+      toJSON() {
+        return this[this.model]()
+      },
+      string(vv) {
+        let zv = this.model in hv.to ? this : this.rgb();
+        zv = zv.round("number" === typeof vv ? vv : 1);
+        const Pv = 1 === zv.valpha ? zv.color : [...zv.color, this.valpha];
+        return hv.to[zv.model](Pv)
+      },
+      percentString(vv) {
+        const zv = this.rgb().round("number" === typeof vv ? vv : 1),
+          Pv = 1 === zv.valpha ? zv.color : [...zv.color, this.valpha];
+        return hv.to.rgb.percent(Pv)
+      },
+      array() {
+        return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
+      },
+      object() {
+        const vv = {},
+          {
+            channels: zv
+          } = Sv[this.model],
+          {
+            labels: Pv
+          } = Sv[this.model];
+        for (let hv = 0; hv < zv; hv++) vv[Pv[hv]] = this.color[hv];
+        return 1 !== this.valpha && (vv.alpha = this.valpha), vv
+      },
+      unitArray() {
+        const vv = this.rgb().color;
+        return vv[0] /= 255, vv[1] /= 255, vv[2] /= 255, 1 !== this.valpha && vv.push(this.valpha), vv
+      },
+      unitObject() {
+        const vv = this.rgb().object();
+        return vv.r /= 255, vv.g /= 255, vv.b /= 255, 1 !== this.valpha && (vv.alpha = this.valpha), vv
+      },
+      round(vv) {
+        return vv = Math.max(vv || 0, 0), new dv([...this.color.map(Nv(vv)), this.valpha], this.model)
+      },
+      alpha(vv) {
+        return void 0 !== vv ? new dv([...this.color, Math.max(0, Math.min(1, vv))], this.model) : this.valpha
+      },
+      red: lv("rgb", 0, Tv(255)),
+      green: lv("rgb", 1, Tv(255)),
+      blue: lv("rgb", 2, Tv(255)),
+      hue: lv(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (vv => (vv % 360 + 360) % 360)),
+      saturationl: lv("hsl", 1, Tv(100)),
+      lightness: lv("hsl", 2, Tv(100)),
+      saturationv: lv("hsv", 1, Tv(100)),
+      value: lv("hsv", 2, Tv(100)),
+      chroma: lv("hcg", 1, Tv(100)),
+      gray: lv("hcg", 2, Tv(100)),
+      white: lv("hwb", 1, Tv(100)),
+      wblack: lv("hwb", 2, Tv(100)),
+      cyan: lv("cmyk", 0, Tv(100)),
+      magenta: lv("cmyk", 1, Tv(100)),
+      yellow: lv("cmyk", 2, Tv(100)),
+      black: lv("cmyk", 3, Tv(100)),
+      x: lv("xyz", 0, Tv(95.047)),
+      y: lv("xyz", 1, Tv(100)),
+      z: lv("xyz", 2, Tv(108.833)),
+      l: lv("lab", 0, Tv(100)),
+      a: lv("lab", 1),
+      b: lv("lab", 2),
+      keyword(vv) {
+        return void 0 !== vv ? new dv(vv) : Sv[this.model].keyword(this.color)
+      },
+      hex(vv) {
+        return void 0 !== vv ? new dv(vv) : hv.to.hex(this.rgb().round().color)
+      },
+      hexa(vv) {
+        if (void 0 !== vv) return new dv(vv);
+        const zv = this.rgb().round().color;
+        let Pv = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === Pv.length && (Pv = "0" + Pv), hv.to.hex(zv) + Pv
+      },
+      rgbNumber() {
+        const vv = this.rgb().color;
+        return (255 & vv[0]) << 16 | (255 & vv[1]) << 8 | 255 & vv[2]
+      },
+      luminosity() {
+        const vv = this.rgb().color,
+          zv = [];
+        for (const [Pv, hv] of vv.entries()) {
+          const vv = hv / 255;
+          zv[Pv] = vv <= .04045 ? vv / 12.92 : ((vv + .055) / 1.055) ** 2.4
+        }
+        return .2126 * zv[0] + .7152 * zv[1] + .0722 * zv[2]
+      },
+      contrast(vv) {
+        const zv = this.luminosity(),
+          Pv = vv.luminosity();
+        return zv > Pv ? (zv + .05) / (Pv + .05) : (Pv + .05) / (zv + .05)
+      },
+      level(vv) {
+        const zv = this.contrast(vv);
+        return zv >= 7 ? "AAA" : zv >= 4.5 ? "AA" : ""
+      },
+      isDark() {
+        const vv = this.rgb().color;
+        return (2126 * vv[0] + 7152 * vv[1] + 722 * vv[2]) / 1e4 < 128
+      },
+      isLight() {
+        return !this.isDark()
+      },
+      Re() {
+        const vv = this.rgb();
+        for (let zv = 0; zv < 3; zv++) vv.color[zv] = 255 - vv.color[zv];
+        return vv
+      },
+      lighten(vv) {
+        const zv = this.hsl();
+        return zv.color[2] += zv.color[2] * vv, zv
+      },
+      darken(vv) {
+        const zv = this.hsl();
+        return zv.color[2] -= zv.color[2] * vv, zv
+      },
+      saturate(vv) {
+        const zv = this.hsl();
+        return zv.color[1] += zv.color[1] * vv, zv
+      },
+      desaturate(vv) {
+        const zv = this.hsl();
+        return zv.color[1] -= zv.color[1] * vv, zv
+      },
+      whiten(vv) {
+        const zv = this.hwb();
+        return zv.color[1] += zv.color[1] * vv, zv
+      },
+      blacken(vv) {
+        const zv = this.hwb();
+        return zv.color[2] += zv.color[2] * vv, zv
+      },
+      grayscale() {
+        const vv = this.rgb().color,
+          zv = .3 * vv[0] + .59 * vv[1] + .11 * vv[2];
+        return dv.rgb(zv, zv, zv)
+      },
+      fade(vv) {
+        return this.alpha(this.valpha - this.valpha * vv)
+      },
+      opaquer(vv) {
+        return this.alpha(this.valpha + this.valpha * vv)
+      },
+      rotate(vv) {
+        const zv = this.hsl();
+        let Pv = zv.color[0];
+        return Pv = (Pv + vv) % 360, Pv = Pv < 0 ? 360 + Pv : Pv, zv.color[0] = Pv, zv
+      },
+      mix(vv, zv) {
+        if (!vv || !vv.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof vv);
+        const Pv = vv.rgb(),
+          hv = this.rgb(),
+          Sv = void 0 === zv ? .5 : zv,
+          ev = 2 * Sv - 1,
+          gv = Pv.alpha() - hv.alpha(),
+          pv = ((ev * gv === -1 ? ev : (ev + gv) / (1 + ev * gv)) + 1) / 2,
+          Nv = 1 - pv;
+        return dv.rgb(pv * Pv.red() + Nv * hv.red(), pv * Pv.green() + Nv * hv.green(), pv * Pv.blue() + Nv * hv.blue(), Pv.alpha() * Sv + hv.alpha() * (1 - Sv))
+      }
+    };
+    for (const wv of Object.keys(Sv)) {
+      if (ev.includes(wv)) continue;
+      const {
+        channels: vv
+      } = Sv[wv];
+      dv.prototype[wv] = function() {
+        if (this.model === wv) return new dv(this);
+        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
+        return zv.length > 0 ? new dv(zv, wv) : new dv([...(hv = Sv[this.model][wv].raw(this.color), Array.isArray(hv) ? hv : [hv]), this.valpha], wv);
+        var hv
+      }, dv[wv] = function() {
+        for (var zv = arguments.length, Pv = new Array(zv), hv = 0; hv < zv; hv++) Pv[hv] = arguments[hv];
+        let Sv = Pv[0];
+        return "number" === typeof Sv && (Sv = Wv(Pv, vv)), new dv(Sv, wv)
       }
     }
 
-    function cz(zz) {
-      const tz = Zz[zz];
-      if (void 0 === tz) throw new Error(`Invalid sound name ${zz} (not in any sprite sheet)`);
-      return tz
+    function Nv(vv) {
+      return function(zv) {
+        return function(vv, zv) {
+          return Number(vv.toFixed(zv))
+        }(zv, vv)
+      }
     }
 
-    function jz(zz, tz) {
-      if (!(zz in ez)) throw new Error("Invalid spriteTrack name");
-      return tz in ez[zz].sprite
+    function lv(vv, zv, Pv) {
+      vv = Array.isArray(vv) ? vv : [vv];
+      for (const hv of vv)(pv[hv] || (pv[hv] = []))[zv] = Pv;
+      return vv = vv[0],
+        function(hv) {
+          let Sv;
+          return void 0 !== hv ? (Pv && (hv = Pv(hv)), Sv = this[vv](), Sv.color[zv] = hv, Sv) : (Sv = this[vv]().color[zv], Pv && (Sv = Pv(Sv)), Sv)
+        }
     }
 
-    function Az(zz) {
-      if (!(zz in ez)) throw new Error("Invalid spritesheet name");
-      return ez[zz]
+    function Tv(vv) {
+      return function(zv) {
+        return Math.max(0, Math.min(vv, zv))
+      }
     }
 
-    function yz(zz) {
-      return zz[Math.floor(Math.random() * zz.length)]
+    function Wv(vv, zv) {
+      for (let Pv = 0; Pv < zv; Pv++) "number" !== typeof vv[Pv] && (vv[Pv] = 0);
+      return vv
+    }
+    vv.exports = dv
+  },
+  36181: (vv, zv, Pv) => {
+    const hv = Pv(36185),
+      Sv = {};
+    for (const gv of Object.keys(hv)) Sv[hv[gv]] = gv;
+    const ev = {
+      rgb: {
+        channels: 3,
+        labels: "rgb"
+      },
+      hsl: {
+        channels: 3,
+        labels: "hsl"
+      },
+      hsv: {
+        channels: 3,
+        labels: "hsv"
+      },
+      hwb: {
+        channels: 3,
+        labels: "hwb"
+      },
+      cmyk: {
+        channels: 4,
+        labels: "cmyk"
+      },
+      xyz: {
+        channels: 3,
+        labels: "xyz"
+      },
+      lab: {
+        channels: 3,
+        labels: "lab"
+      },
+      lch: {
+        channels: 3,
+        labels: "lch"
+      },
+      hex: {
+        channels: 1,
+        labels: ["hex"]
+      },
+      keyword: {
+        channels: 1,
+        labels: ["keyword"]
+      },
+      ansi16: {
+        channels: 1,
+        labels: ["ansi16"]
+      },
+      ansi256: {
+        channels: 1,
+        labels: ["ansi256"]
+      },
+      hcg: {
+        channels: 3,
+        labels: ["h", "c", "g"]
+      },
+      apple: {
+        channels: 3,
+        labels: ["r16", "g16", "b16"]
+      },
+      gray: {
+        channels: 1,
+        labels: ["gray"]
+      }
+    };
+    vv.exports = ev;
+    for (const gv of Object.keys(ev)) {
+      if (!("channels" in ev[gv])) throw new Error("missing channels property: " + gv);
+      if (!("labels" in ev[gv])) throw new Error("missing channel labels property: " + gv);
+      if (ev[gv].labels.length !== ev[gv].channels) throw new Error("channel and label counts mismatch: " + gv);
+      const {
+        channels: vv,
+        labels: zv
+      } = ev[gv];
+      delete ev[gv].channels, delete ev[gv].labels, Object.defineProperty(ev[gv], "channels", {
+        value: vv
+      }), Object.defineProperty(ev[gv], "labels", {
+        value: zv
+      })
+    }
+    ev.rgb.hsl = function(vv) {
+      const zv = vv[0] / 255,
+        Pv = vv[1] / 255,
+        hv = vv[2] / 255,
+        Sv = Math.min(zv, Pv, hv),
+        ev = Math.max(zv, Pv, hv),
+        gv = ev - Sv;
+      let pv, dv;
+      ev === Sv ? pv = 0 : zv === ev ? pv = (Pv - hv) / gv : Pv === ev ? pv = 2 + (hv - zv) / gv : hv === ev && (pv = 4 + (zv - Pv) / gv), pv = Math.min(60 * pv, 360), pv < 0 && (pv += 360);
+      const Nv = (Sv + ev) / 2;
+      return dv = ev === Sv ? 0 : Nv <= .5 ? gv / (ev + Sv) : gv / (2 - ev - Sv), [pv, 100 * dv, 100 * Nv]
+    }, ev.rgb.hsv = function(vv) {
+      let zv, Pv, hv, Sv, ev;
+      const gv = vv[0] / 255,
+        pv = vv[1] / 255,
+        dv = vv[2] / 255,
+        Nv = Math.max(gv, pv, dv),
+        lv = Nv - Math.min(gv, pv, dv),
+        Tv = function(vv) {
+          return (Nv - vv) / 6 / lv + .5
+        };
+      return 0 === lv ? (Sv = 0, ev = 0) : (ev = lv / Nv, zv = Tv(gv), Pv = Tv(pv), hv = Tv(dv), gv === Nv ? Sv = hv - Pv : pv === Nv ? Sv = 1 / 3 + zv - hv : dv === Nv && (Sv = 2 / 3 + Pv - zv), Sv < 0 ? Sv += 1 : Sv > 1 && (Sv -= 1)), [360 * Sv, 100 * ev, 100 * Nv]
+    }, ev.rgb.hwb = function(vv) {
+      const zv = vv[0],
+        Pv = vv[1];
+      let hv = vv[2];
+      const Sv = ev.rgb.hsl(vv)[0],
+        gv = 1 / 255 * Math.min(zv, Math.min(Pv, hv));
+      return hv = 1 - 1 / 255 * Math.max(zv, Math.max(Pv, hv)), [Sv, 100 * gv, 100 * hv]
+    }, ev.rgb.cmyk = function(vv) {
+      const zv = vv[0] / 255,
+        Pv = vv[1] / 255,
+        hv = vv[2] / 255,
+        Sv = Math.min(1 - zv, 1 - Pv, 1 - hv);
+      return [100 * ((1 - zv - Sv) / (1 - Sv) || 0), 100 * ((1 - Pv - Sv) / (1 - Sv) || 0), 100 * ((1 - hv - Sv) / (1 - Sv) || 0), 100 * Sv]
+    }, ev.rgb.keyword = function(vv) {
+      const zv = Sv[vv];
+      if (zv) return zv;
+      let Pv, ev = 1 / 0;
+      for (const Sv of Object.keys(hv)) {
+        const zv = hv[Sv],
+          dv = (pv = zv, ((gv = vv)[0] - pv[0]) ** 2 + (gv[1] - pv[1]) ** 2 + (gv[2] - pv[2]) ** 2);
+        dv < ev && (ev = dv, Pv = Sv)
+      }
+      var gv, pv;
+      return Pv
+    }, ev.keyword.rgb = function(vv) {
+      return hv[vv]
+    }, ev.rgb.xyz = function(vv) {
+      let zv = vv[0] / 255,
+        Pv = vv[1] / 255,
+        hv = vv[2] / 255;
+      zv = zv > .04045 ? ((zv + .055) / 1.055) ** 2.4 : zv / 12.92, Pv = Pv > .04045 ? ((Pv + .055) / 1.055) ** 2.4 : Pv / 12.92, hv = hv > .04045 ? ((hv + .055) / 1.055) ** 2.4 : hv / 12.92;
+      return [100 * (.4124 * zv + .3576 * Pv + .1805 * hv), 100 * (.2126 * zv + .7152 * Pv + .0722 * hv), 100 * (.0193 * zv + .1192 * Pv + .9505 * hv)]
+    }, ev.rgb.lab = function(vv) {
+      const zv = ev.rgb.xyz(vv);
+      let Pv = zv[0],
+        hv = zv[1],
+        Sv = zv[2];
+      Pv /= 95.047, hv /= 100, Sv /= 108.883, Pv = Pv > .008856 ? Pv ** (1 / 3) : 7.787 * Pv + 16 / 116, hv = hv > .008856 ? hv ** (1 / 3) : 7.787 * hv + 16 / 116, Sv = Sv > .008856 ? Sv ** (1 / 3) : 7.787 * Sv + 16 / 116;
+      return [116 * hv - 16, 500 * (Pv - hv), 200 * (hv - Sv)]
+    }, ev.hsl.rgb = function(vv) {
+      const zv = vv[0] / 360,
+        Pv = vv[1] / 100,
+        hv = vv[2] / 100;
+      let Sv, ev, gv;
+      if (0 === Pv) return gv = 255 * hv, [gv, gv, gv];
+      Sv = hv < .5 ? hv * (1 + Pv) : hv + Pv - hv * Pv;
+      const pv = 2 * hv - Sv,
+        dv = [0, 0, 0];
+      for (let Nv = 0; Nv < 3; Nv++) ev = zv + 1 / 3 * -(Nv - 1), ev < 0 && ev++, ev > 1 && ev--, gv = 6 * ev < 1 ? pv + 6 * (Sv - pv) * ev : 2 * ev < 1 ? Sv : 3 * ev < 2 ? pv + (Sv - pv) * (2 / 3 - ev) * 6 : pv, dv[Nv] = 255 * gv;
+      return dv
+    }, ev.hsl.hsv = function(vv) {
+      const zv = vv[0];
+      let Pv = vv[1] / 100,
+        hv = vv[2] / 100,
+        Sv = Pv;
+      const ev = Math.max(hv, .01);
+      hv *= 2, Pv *= hv <= 1 ? hv : 2 - hv, Sv *= ev <= 1 ? ev : 2 - ev;
+      return [zv, 100 * (0 === hv ? 2 * Sv / (ev + Sv) : 2 * Pv / (hv + Pv)), 100 * ((hv + Pv) / 2)]
+    }, ev.hsv.rgb = function(vv) {
+      const zv = vv[0] / 60,
+        Pv = vv[1] / 100;
+      let hv = vv[2] / 100;
+      const Sv = Math.floor(zv) % 6,
+        ev = zv - Math.floor(zv),
+        gv = 255 * hv * (1 - Pv),
+        pv = 255 * hv * (1 - Pv * ev),
+        dv = 255 * hv * (1 - Pv * (1 - ev));
+      switch (hv *= 255, Sv) {
+        case 0:
+          return [hv, dv, gv];
+        case 1:
+          return [pv, hv, gv];
+        case 2:
+          return [gv, hv, dv];
+        case 3:
+          return [gv, pv, hv];
+        case 4:
+          return [dv, gv, hv];
+        case 5:
+          return [hv, gv, pv]
+      }
+    }, ev.hsv.hsl = function(vv) {
+      const zv = vv[0],
+        Pv = vv[1] / 100,
+        hv = vv[2] / 100,
+        Sv = Math.max(hv, .01);
+      let ev, gv;
+      gv = (2 - Pv) * hv;
+      const pv = (2 - Pv) * Sv;
+      return ev = Pv * Sv, ev /= pv <= 1 ? pv : 2 - pv, ev = ev || 0, gv /= 2, [zv, 100 * ev, 100 * gv]
+    }, ev.hwb.rgb = function(vv) {
+      const zv = vv[0] / 360;
+      let Pv = vv[1] / 100,
+        hv = vv[2] / 100;
+      const Sv = Pv + hv;
+      let ev;
+      Sv > 1 && (Pv /= Sv, hv /= Sv);
+      const gv = Math.floor(6 * zv),
+        pv = 1 - hv;
+      ev = 6 * zv - gv, 0 !== (1 & gv) && (ev = 1 - ev);
+      const dv = Pv + ev * (pv - Pv);
+      let Nv, lv, Tv;
+      switch (gv) {
+        default:
+        case 6:
+        case 0:
+          Nv = pv, lv = dv, Tv = Pv;
+          break;
+        case 1:
+          Nv = dv, lv = pv, Tv = Pv;
+          break;
+        case 2:
+          Nv = Pv, lv = pv, Tv = dv;
+          break;
+        case 3:
+          Nv = Pv, lv = dv, Tv = pv;
+          break;
+        case 4:
+          Nv = dv, lv = Pv, Tv = pv;
+          break;
+        case 5:
+          Nv = pv, lv = Pv, Tv = dv
+      }
+      return [255 * Nv, 255 * lv, 255 * Tv]
+    }, ev.cmyk.rgb = function(vv) {
+      const zv = vv[0] / 100,
+        Pv = vv[1] / 100,
+        hv = vv[2] / 100,
+        Sv = vv[3] / 100;
+      return [255 * (1 - Math.min(1, zv * (1 - Sv) + Sv)), 255 * (1 - Math.min(1, Pv * (1 - Sv) + Sv)), 255 * (1 - Math.min(1, hv * (1 - Sv) + Sv))]
+    }, ev.xyz.rgb = function(vv) {
+      const zv = vv[0] / 100,
+        Pv = vv[1] / 100,
+        hv = vv[2] / 100;
+      let Sv, ev, gv;
+      return Sv = 3.2406 * zv + -1.5372 * Pv + -.4986 * hv, ev = -.9689 * zv + 1.8758 * Pv + .0415 * hv, gv = .0557 * zv + -.204 * Pv + 1.057 * hv, Sv = Sv > .0031308 ? 1.055 * Sv ** (1 / 2.4) - .055 : 12.92 * Sv, ev = ev > .0031308 ? 1.055 * ev ** (1 / 2.4) - .055 : 12.92 * ev, gv = gv > .0031308 ? 1.055 * gv ** (1 / 2.4) - .055 : 12.92 * gv, Sv = Math.min(Math.max(0, Sv), 1), ev = Math.min(Math.max(0, ev), 1), gv = Math.min(Math.max(0, gv), 1), [255 * Sv, 255 * ev, 255 * gv]
+    }, ev.xyz.lab = function(vv) {
+      let zv = vv[0],
+        Pv = vv[1],
+        hv = vv[2];
+      zv /= 95.047, Pv /= 100, hv /= 108.883, zv = zv > .008856 ? zv ** (1 / 3) : 7.787 * zv + 16 / 116, Pv = Pv > .008856 ? Pv ** (1 / 3) : 7.787 * Pv + 16 / 116, hv = hv > .008856 ? hv ** (1 / 3) : 7.787 * hv + 16 / 116;
+      return [116 * Pv - 16, 500 * (zv - Pv), 200 * (Pv - hv)]
+    }, ev.lab.xyz = function(vv) {
+      let zv, Pv, hv;
+      Pv = (vv[0] + 16) / 116, zv = vv[1] / 500 + Pv, hv = Pv - vv[2] / 200;
+      const Sv = Pv ** 3,
+        ev = zv ** 3,
+        gv = hv ** 3;
+      return Pv = Sv > .008856 ? Sv : (Pv - 16 / 116) / 7.787, zv = ev > .008856 ? ev : (zv - 16 / 116) / 7.787, hv = gv > .008856 ? gv : (hv - 16 / 116) / 7.787, zv *= 95.047, Pv *= 100, hv *= 108.883, [zv, Pv, hv]
+    }, ev.lab.lch = function(vv) {
+      const zv = vv[0],
+        Pv = vv[1],
+        hv = vv[2];
+      let Sv;
+      Sv = 360 * Math.atan2(hv, Pv) / 2 / Math.PI, Sv < 0 && (Sv += 360);
+      return [zv, Math.sqrt(Pv * Pv + hv * hv), Sv]
+    }, ev.lch.lab = function(vv) {
+      const zv = vv[0],
+        Pv = vv[1],
+        hv = vv[2] / 360 * 2 * Math.PI;
+      return [zv, Pv * Math.cos(hv), Pv * Math.sin(hv)]
+    }, ev.rgb.ansi16 = function(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [Pv, hv, Sv] = vv;
+      let gv = null === zv ? ev.rgb.hsv(vv)[2] : zv;
+      if (gv = Math.round(gv / 50), 0 === gv) return 30;
+      let pv = 30 + (Math.round(Sv / 255) << 2 | Math.round(hv / 255) << 1 | Math.round(Pv / 255));
+      return 2 === gv && (pv += 60), pv
+    }, ev.hsv.ansi16 = function(vv) {
+      return ev.rgb.ansi16(ev.hsv.rgb(vv), vv[2])
+    }, ev.rgb.ansi256 = function(vv) {
+      const zv = vv[0],
+        Pv = vv[1],
+        hv = vv[2];
+      if (zv === Pv && Pv === hv) return zv < 8 ? 16 : zv > 248 ? 231 : Math.round((zv - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(zv / 255 * 5) + 6 * Math.round(Pv / 255 * 5) + Math.round(hv / 255 * 5)
+    }, ev.ansi16.rgb = function(vv) {
+      let zv = vv % 10;
+      if (0 === zv || 7 === zv) return vv > 50 && (zv += 3.5), zv = zv / 10.5 * 255, [zv, zv, zv];
+      const Pv = .5 * (1 + ~~(vv > 50));
+      return [(1 & zv) * Pv * 255, (zv >> 1 & 1) * Pv * 255, (zv >> 2 & 1) * Pv * 255]
+    }, ev.ansi256.rgb = function(vv) {
+      if (vv >= 232) {
+        const zv = 10 * (vv - 232) + 8;
+        return [zv, zv, zv]
+      }
+      let zv;
+      vv -= 16;
+      return [Math.floor(vv / 36) / 5 * 255, Math.floor((zv = vv % 36) / 6) / 5 * 255, zv % 6 / 5 * 255]
+    }, ev.rgb.hex = function(vv) {
+      const zv = (((255 & Math.round(vv[0])) << 16) + ((255 & Math.round(vv[1])) << 8) + (255 & Math.round(vv[2]))).toString(16).toUpperCase();
+      return "000000".substring(zv.length) + zv
+    }, ev.hex.rgb = function(vv) {
+      const zv = vv.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!zv) return [0, 0, 0];
+      let Pv = zv[0];
+      3 === zv[0].length && (Pv = Pv.split("").map((vv => vv + vv)).join(""));
+      const hv = parseInt(Pv, 16);
+      return [hv >> 16 & 255, hv >> 8 & 255, 255 & hv]
+    }, ev.rgb.hcg = function(vv) {
+      const zv = vv[0] / 255,
+        Pv = vv[1] / 255,
+        hv = vv[2] / 255,
+        Sv = Math.max(Math.max(zv, Pv), hv),
+        ev = Math.min(Math.min(zv, Pv), hv),
+        gv = Sv - ev;
+      let pv, dv;
+      return pv = gv < 1 ? ev / (1 - gv) : 0, dv = gv <= 0 ? 0 : Sv === zv ? (Pv - hv) / gv % 6 : Sv === Pv ? 2 + (hv - zv) / gv : 4 + (zv - Pv) / gv, dv /= 6, dv %= 1, [360 * dv, 100 * gv, 100 * pv]
+    }, ev.hsl.hcg = function(vv) {
+      const zv = vv[1] / 100,
+        Pv = vv[2] / 100,
+        hv = Pv < .5 ? 2 * zv * Pv : 2 * zv * (1 - Pv);
+      let Sv = 0;
+      return hv < 1 && (Sv = (Pv - .5 * hv) / (1 - hv)), [vv[0], 100 * hv, 100 * Sv]
+    }, ev.hsv.hcg = function(vv) {
+      const zv = vv[1] / 100,
+        Pv = vv[2] / 100,
+        hv = zv * Pv;
+      let Sv = 0;
+      return hv < 1 && (Sv = (Pv - hv) / (1 - hv)), [vv[0], 100 * hv, 100 * Sv]
+    }, ev.hcg.rgb = function(vv) {
+      const zv = vv[0] / 360,
+        Pv = vv[1] / 100,
+        hv = vv[2] / 100;
+      if (0 === Pv) return [255 * hv, 255 * hv, 255 * hv];
+      const Sv = [0, 0, 0],
+        ev = zv % 1 * 6,
+        gv = ev % 1,
+        pv = 1 - gv;
+      let dv = 0;
+      switch (Math.floor(ev)) {
+        case 0:
+          Sv[0] = 1, Sv[1] = gv, Sv[2] = 0;
+          break;
+        case 1:
+          Sv[0] = pv, Sv[1] = 1, Sv[2] = 0;
+          break;
+        case 2:
+          Sv[0] = 0, Sv[1] = 1, Sv[2] = gv;
+          break;
+        case 3:
+          Sv[0] = 0, Sv[1] = pv, Sv[2] = 1;
+          break;
+        case 4:
+          Sv[0] = gv, Sv[1] = 0, Sv[2] = 1;
+          break;
+        default:
+          Sv[0] = 1, Sv[1] = 0, Sv[2] = pv
+      }
+      return dv = (1 - Pv) * hv, [255 * (Pv * Sv[0] + dv), 255 * (Pv * Sv[1] + dv), 255 * (Pv * Sv[2] + dv)]
+    }, ev.hcg.hsv = function(vv) {
+      const zv = vv[1] / 100,
+        Pv = zv + vv[2] / 100 * (1 - zv);
+      let hv = 0;
+      return Pv > 0 && (hv = zv / Pv), [vv[0], 100 * hv, 100 * Pv]
+    }, ev.hcg.hsl = function(vv) {
+      const zv = vv[1] / 100,
+        Pv = vv[2] / 100 * (1 - zv) + .5 * zv;
+      let hv = 0;
+      return Pv > 0 && Pv < .5 ? hv = zv / (2 * Pv) : Pv >= .5 && Pv < 1 && (hv = zv / (2 * (1 - Pv))), [vv[0], 100 * hv, 100 * Pv]
+    }, ev.hcg.hwb = function(vv) {
+      const zv = vv[1] / 100,
+        Pv = zv + vv[2] / 100 * (1 - zv);
+      return [vv[0], 100 * (Pv - zv), 100 * (1 - Pv)]
+    }, ev.hwb.hcg = function(vv) {
+      const zv = vv[1] / 100,
+        Pv = 1 - vv[2] / 100,
+        hv = Pv - zv;
+      let Sv = 0;
+      return hv < 1 && (Sv = (Pv - hv) / (1 - hv)), [vv[0], 100 * hv, 100 * Sv]
+    }, ev.apple.rgb = function(vv) {
+      return [vv[0] / 65535 * 255, vv[1] / 65535 * 255, vv[2] / 65535 * 255]
+    }, ev.rgb.apple = function(vv) {
+      return [vv[0] / 255 * 65535, vv[1] / 255 * 65535, vv[2] / 255 * 65535]
+    }, ev.gray.rgb = function(vv) {
+      return [vv[0] / 100 * 255, vv[0] / 100 * 255, vv[0] / 100 * 255]
+    }, ev.gray.hsl = function(vv) {
+      return [0, 0, vv[0]]
+    }, ev.gray.hsv = ev.gray.hsl, ev.gray.hwb = function(vv) {
+      return [0, 100, vv[0]]
+    }, ev.gray.cmyk = function(vv) {
+      return [0, 0, 0, vv[0]]
+    }, ev.gray.lab = function(vv) {
+      return [vv[0], 0, 0]
+    }, ev.gray.hex = function(vv) {
+      const zv = 255 & Math.round(vv[0] / 100 * 255),
+        Pv = ((zv << 16) + (zv << 8) + zv).toString(16).toUpperCase();
+      return "000000".substring(Pv.length) + Pv
+    }, ev.rgb.gray = function(vv) {
+      return [(vv[0] + vv[1] + vv[2]) / 3 / 255 * 100]
+    }
+  },
+  36173: (vv, zv, Pv) => {
+    const hv = Pv(36181),
+      Sv = Pv(36188),
+      ev = {};
+    Object.keys(hv).forEach((vv => {
+      ev[vv] = {}, Object.defineProperty(ev[vv], "channels", {
+        value: hv[vv].channels
+      }), Object.defineProperty(ev[vv], "labels", {
+        value: hv[vv].labels
+      });
+      const zv = Sv(vv);
+      Object.keys(zv).forEach((Pv => {
+        const hv = zv[Pv];
+        ev[vv][Pv] = function(vv) {
+          const zv = function() {
+            for (var zv = arguments.length, Pv = new Array(zv), hv = 0; hv < zv; hv++) Pv[hv] = arguments[hv];
+            const Sv = Pv[0];
+            if (void 0 === Sv || null === Sv) return Sv;
+            Sv.length > 1 && (Pv = Sv);
+            const ev = vv(Pv);
+            if ("object" === typeof ev)
+              for (let vv = ev.length, gv = 0; gv < vv; gv++) ev[gv] = Math.round(ev[gv]);
+            return ev
+          };
+          return "conversion" in vv && (zv.conversion = vv.conversion), zv
+        }(hv), ev[vv][Pv].raw = function(vv) {
+          const zv = function() {
+            for (var zv = arguments.length, Pv = new Array(zv), hv = 0; hv < zv; hv++) Pv[hv] = arguments[hv];
+            const Sv = Pv[0];
+            return void 0 === Sv || null === Sv ? Sv : (Sv.length > 1 && (Pv = Sv), vv(Pv))
+          };
+          return "conversion" in vv && (zv.conversion = vv.conversion), zv
+        }(hv)
+      }))
+    })), vv.exports = ev
+  },
+  36188: (vv, zv, Pv) => {
+    const hv = Pv(36181);
+
+    function Sv(vv) {
+      const zv = function() {
+          const vv = {},
+            zv = Object.keys(hv);
+          for (let Pv = zv.length, hv = 0; hv < Pv; hv++) vv[zv[hv]] = {
+            distance: -1,
+            parent: null
+          };
+          return vv
+        }(),
+        Pv = [vv];
+      for (zv[vv].distance = 0; Pv.length;) {
+        const vv = Pv.pop(),
+          Sv = Object.keys(hv[vv]);
+        for (let hv = Sv.length, ev = 0; ev < hv; ev++) {
+          const hv = Sv[ev],
+            gv = zv[hv]; - 1 === gv.distance && (gv.distance = zv[vv].distance + 1, gv.parent = vv, Pv.unshift(hv))
+        }
+      }
+      return zv
+    }
+
+    function ev(vv, zv) {
+      return function(Pv) {
+        return zv(vv(Pv))
+      }
+    }
+
+    function gv(vv, zv) {
+      const Pv = [zv[vv].parent, vv];
+      let Sv = hv[zv[vv].parent][vv],
+        gv = zv[vv].parent;
+      for (; zv[gv].parent;) Pv.unshift(zv[gv].parent), Sv = ev(hv[zv[gv].parent][gv], Sv), gv = zv[gv].parent;
+      return Sv.conversion = Pv, Sv
+    }
+    vv.exports = function(vv) {
+      const zv = Sv(vv),
+        Pv = {},
+        hv = Object.keys(zv);
+      for (let Sv = hv.length, ev = 0; ev < Sv; ev++) {
+        const vv = hv[ev];
+        null !== zv[vv].parent && (Pv[vv] = gv(vv, zv))
+      }
+      return Pv
+    }
+  },
+  36185: vv => {
+    vv.exports = {
+      aliceblue: [240, 248, 255],
+      antiquewhite: [250, 235, 215],
+      aqua: [0, 255, 255],
+      aquamarine: [127, 255, 212],
+      azure: [240, 255, 255],
+      beige: [245, 245, 220],
+      bisque: [255, 228, 196],
+      black: [0, 0, 0],
+      blanchedalmond: [255, 235, 205],
+      blue: [0, 0, 255],
+      blueviolet: [138, 43, 226],
+      brown: [165, 42, 42],
+      burlywood: [222, 184, 135],
+      cadetblue: [95, 158, 160],
+      chartreuse: [127, 255, 0],
+      chocolate: [210, 105, 30],
+      coral: [255, 127, 80],
+      cornflowerblue: [100, 149, 237],
+      cornsilk: [255, 248, 220],
+      crimson: [220, 20, 60],
+      cyan: [0, 255, 255],
+      darkblue: [0, 0, 139],
+      darkcyan: [0, 139, 139],
+      darkgoldenrod: [184, 134, 11],
+      darkgray: [169, 169, 169],
+      darkgreen: [0, 100, 0],
+      darkgrey: [169, 169, 169],
+      darkkhaki: [189, 183, 107],
+      darkmagenta: [139, 0, 139],
+      darkolivegreen: [85, 107, 47],
+      darkorange: [255, 140, 0],
+      darkorchid: [153, 50, 204],
+      darkred: [139, 0, 0],
+      darksalmon: [233, 150, 122],
+      darkseagreen: [143, 188, 143],
+      darkslateblue: [72, 61, 139],
+      darkslategray: [47, 79, 79],
+      darkslategrey: [47, 79, 79],
+      darkturquoise: [0, 206, 209],
+      darkviolet: [148, 0, 211],
+      deeppink: [255, 20, 147],
+      deepskyblue: [0, 191, 255],
+      dimgray: [105, 105, 105],
+      dimgrey: [105, 105, 105],
+      dodgerblue: [30, 144, 255],
+      firebrick: [178, 34, 34],
+      floralwhite: [255, 250, 240],
+      forestgreen: [34, 139, 34],
+      fuchsia: [255, 0, 255],
+      gainsboro: [220, 220, 220],
+      ghostwhite: [248, 248, 255],
+      gold: [255, 215, 0],
+      goldenrod: [218, 165, 32],
+      gray: [128, 128, 128],
+      green: [0, 128, 0],
+      greenyellow: [173, 255, 47],
+      grey: [128, 128, 128],
+      honeydew: [240, 255, 240],
+      hotpink: [255, 105, 180],
+      indianred: [205, 92, 92],
+      indigo: [75, 0, 130],
+      ivory: [255, 255, 240],
+      khaki: [240, 230, 140],
+      lavender: [230, 230, 250],
+      lavenderblush: [255, 240, 245],
+      lawngreen: [124, 252, 0],
+      lemonchiffon: [255, 250, 205],
+      lightblue: [173, 216, 230],
+      lightcoral: [240, 128, 128],
+      lightcyan: [224, 255, 255],
+      lightgoldenrodyellow: [250, 250, 210],
+      lightgray: [211, 211, 211],
+      lightgreen: [144, 238, 144],
+      lightgrey: [211, 211, 211],
+      lightpink: [255, 182, 193],
+      lightsalmon: [255, 160, 122],
+      lightseagreen: [32, 178, 170],
+      lightskyblue: [135, 206, 250],
+      lightslategray: [119, 136, 153],
+      lightslategrey: [119, 136, 153],
+      lightsteelblue: [176, 196, 222],
+      lightyellow: [255, 255, 224],
+      lime: [0, 255, 0],
+      limegreen: [50, 205, 50],
+      linen: [250, 240, 230],
+      magenta: [255, 0, 255],
+      maroon: [128, 0, 0],
+      mediumaquamarine: [102, 205, 170],
+      mediumblue: [0, 0, 205],
+      mediumorchid: [186, 85, 211],
+      mediumpurple: [147, 112, 219],
+      mediumseagreen: [60, 179, 113],
+      mediumslateblue: [123, 104, 238],
+      mediumspringgreen: [0, 250, 154],
+      mediumturquoise: [72, 209, 204],
+      mediumvioletred: [199, 21, 133],
+      midnightblue: [25, 25, 112],
+      mintcream: [245, 255, 250],
+      mistyrose: [255, 228, 225],
+      moccasin: [255, 228, 181],
+      navajowhite: [255, 222, 173],
+      navy: [0, 0, 128],
+      oldlace: [253, 245, 230],
+      olive: [128, 128, 0],
+      olivedrab: [107, 142, 35],
+      orange: [255, 165, 0],
+      orangered: [255, 69, 0],
+      orchid: [218, 112, 214],
+      palegoldenrod: [238, 232, 170],
+      palegreen: [152, 251, 152],
+      paleturquoise: [175, 238, 238],
+      palevioletred: [219, 112, 147],
+      papayawhip: [255, 239, 213],
+      peachpuff: [255, 218, 185],
+      peru: [205, 133, 63],
+      pink: [255, 192, 203],
+      plum: [221, 160, 221],
+      powderblue: [176, 224, 230],
+      purple: [128, 0, 128],
+      rebeccapurple: [102, 51, 153],
+      red: [255, 0, 0],
+      rosybrown: [188, 143, 143],
+      royalblue: [65, 105, 225],
+      saddlebrown: [139, 69, 19],
+      salmon: [250, 128, 114],
+      sandybrown: [244, 164, 96],
+      seagreen: [46, 139, 87],
+      seashell: [255, 245, 238],
+      sienna: [160, 82, 45],
+      silver: [192, 192, 192],
+      skyblue: [135, 206, 235],
+      slateblue: [106, 90, 205],
+      slategray: [112, 128, 144],
+      slategrey: [112, 128, 144],
+      snow: [255, 250, 250],
+      springgreen: [0, 255, 127],
+      steelblue: [70, 130, 180],
+      tan: [210, 180, 140],
+      teal: [0, 128, 128],
+      thistle: [216, 191, 216],
+      tomato: [255, 99, 71],
+      turquoise: [64, 224, 208],
+      violet: [238, 130, 238],
+      wheat: [245, 222, 179],
+      white: [255, 255, 255],
+      whitesmoke: [245, 245, 245],
+      yellow: [255, 255, 0],
+      yellowgreen: [154, 205, 50]
+    }
+  },
+  36169: (vv, zv, Pv) => {
+    var hv = Pv(36171),
+      Sv = Array.prototype.concat,
+      ev = Array.prototype.slice,
+      gv = vv.exports = function(vv) {
+        for (var zv = [], Pv = 0, gv = vv.length; Pv < gv; Pv++) {
+          var pv = vv[Pv];
+          hv(pv) ? zv = Sv.call(zv, ev.call(pv)) : zv.push(pv)
+        }
+        return zv
+      };
+    gv.wrap = function(vv) {
+      return function() {
+        return vv(gv(arguments))
+      }
+    }
+  },
+  36171: vv => {
+    vv.exports = function(vv) {
+      return !(!vv || "string" === typeof vv) && (vv instanceof Array || Array.isArray(vv) || vv.length >= 0 && (vv.splice instanceof Function || Object.getOwnPropertyDescriptor(vv, vv.length - 1) && "String" !== vv.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

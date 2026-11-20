@@ -1,285 +1,285 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var zz = __webpack_require__.u,
-        tz = __webpack_require__.e,
-        sz = {},
-        Fz = {};
-      __webpack_require__.u = function(tz) {
-        return zz(tz) + (sz.hasOwnProperty(tz) ? "?" + sz[tz] : "")
-      }, __webpack_require__.e = function(Wz) {
-        return tz(Wz).catch((function(tz) {
-          var Xz = Fz.hasOwnProperty(Wz) ? Fz[Wz] : 4;
-          if (Xz < 1) {
-            var Oz = zz(Wz);
-            throw tz.message = "Loading chunk " + Wz + " failed after 4 retries.\n(" + Oz + ")", tz.request = Oz, sz[Wz] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete Fz[Wz]
-            }), 0), tz
+      var vv = __webpack_require__.u,
+        zv = __webpack_require__.e,
+        Pv = {},
+        hv = {};
+      __webpack_require__.u = function(zv) {
+        return vv(zv) + (Pv.hasOwnProperty(zv) ? "?" + Pv[zv] : "")
+      }, __webpack_require__.e = function(Sv) {
+        return zv(Sv).catch((function(zv) {
+          var ev = hv.hasOwnProperty(Sv) ? hv[Sv] : 4;
+          if (ev < 1) {
+            var gv = vv(Sv);
+            throw zv.message = "Loading chunk " + Sv + " failed after 4 retries.\n(" + gv + ")", zv.request = gv, Pv[Sv] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete hv[Sv]
+            }), 0), zv
           }
-          return new Promise((function(zz) {
-            var tz = 4 - Xz + 1;
+          return new Promise((function(vv) {
+            var zv = 4 - ev + 1;
             setTimeout((function() {
-              var tz = "cache-bust=" + Date.now();
-              sz[Wz] = tz, Fz[Wz] = Xz - 1, zz(__webpack_require__.e(Wz))
-            }), function(zz) {
-              return 500 * Math.pow(2, zz)
-            }(tz))
+              var zv = "cache-bust=" + Date.now();
+              Pv[Sv] = zv, hv[Sv] = ev - 1, vv(__webpack_require__.e(Sv))
+            }), function(vv) {
+              return 500 * Math.pow(2, vv)
+            }(zv))
           }))
         }))
       }
     }
   })();
-  const zz = [15, 15, 15],
-    tz = {
+  const vv = [15, 15, 15],
+    zv = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function sz(tz, sz, Fz) {
-    let Wz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz => 0 !== tz[4 * zz + 3];
-    const Xz = (zz, tz) => zz < 0 || tz < 0 || zz >= sz || tz >= sz || !Wz(tz * sz + zz),
-      Oz = [];
-    for (let zz = 0; zz < sz; zz++)
-      for (let tz = 0; tz < sz; tz++)
-        if (!Xz(tz, zz)) zz: for (let Wz = -Fz; Wz <= Fz; Wz++) {
-          const oz = Fz - Math.abs(Wz);
-          for (let Fz = -oz; Fz <= oz; Fz++)
-            if (Xz(tz + Fz, zz + Wz)) {
-              Oz.push(zz * sz + tz);
-              break zz
+  function Pv(zv, Pv, hv) {
+    let Sv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vv => 0 !== zv[4 * vv + 3];
+    const ev = (vv, zv) => vv < 0 || zv < 0 || vv >= Pv || zv >= Pv || !Sv(zv * Pv + vv),
+      gv = [];
+    for (let vv = 0; vv < Pv; vv++)
+      for (let zv = 0; zv < Pv; zv++)
+        if (!ev(zv, vv)) vv: for (let Sv = -hv; Sv <= hv; Sv++) {
+          const pv = hv - Math.abs(Sv);
+          for (let hv = -pv; hv <= pv; hv++)
+            if (ev(zv + hv, vv + Sv)) {
+              gv.push(vv * Pv + zv);
+              break vv
             }
         }
-    for (const oz of Oz) tz.set(zz, 4 * oz), tz[4 * oz + 3] = 255
+    for (const pv of gv) zv.set(vv, 4 * pv), zv[4 * pv + 3] = 255
   }
-  const Fz = Math.SQRT1_2,
-    Wz = Math.sqrt(3) / 2,
-    Xz = {
+  const hv = Math.SQRT1_2,
+    Sv = Math.sqrt(3) / 2,
+    ev = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    Oz = {
+    gv = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    oz = {
+    pv = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const vz = 1e-6;
+  const dv = 1e-6;
 
-  function Uz(zz, tz, sz, Fz) {
+  function Nv(vv, zv, Pv, hv) {
     let {
-      origin: Wz,
-      across: Xz,
-      down: Oz,
-      texture: oz,
-      rect: [Uz, Kz, uz, Nz],
-      shade: bz
-    } = Fz;
-    const wz = Xz.x * Oz.y - Xz.y * Oz.x;
-    if (Math.abs(wz) < 1e-9) return;
-    const Dz = [Wz.x, Wz.x + Xz.x, Wz.x + Oz.x, Wz.x + Xz.x + Oz.x],
-      gz = [Wz.y, Wz.y + Xz.y, Wz.y + Oz.y, Wz.y + Xz.y + Oz.y],
-      Hz = Math.max(0, Math.floor(Math.min(...Dz))),
-      Bz = Math.min(sz - 1, Math.ceil(Math.max(...Dz))),
-      Pz = Math.max(0, Math.floor(Math.min(...gz))),
-      rz = Math.min(sz - 1, Math.ceil(Math.max(...gz)));
-    for (let Yz = Pz; Yz <= rz; Yz++)
-      for (let Fz = Hz; Fz <= Bz; Fz++) {
-        const Dz = Fz + .5 - Wz.x,
-          gz = Yz + .5 - Wz.y,
-          Hz = (Dz * Oz.y - gz * Oz.x) / wz,
-          Bz = (Xz.x * gz - Xz.y * Dz) / wz;
-        if (Hz < -vz || Hz > 1 + vz || Bz < -vz || Bz > 1 + vz) continue;
-        const Pz = Yz * sz + Fz;
-        tz[Pz] = 1;
-        const rz = Uz + Math.min(Math.max(Hz, 0), 1) * (uz - Uz),
-          xz = Kz + Math.min(Math.max(Bz, 0), 1) * (Nz - Kz),
-          mz = Math.min(oz.width - 1, Math.floor(rz * oz.width)),
-          Jz = 4 * (Math.min(oz.height - 1, Math.floor(xz * oz.height)) * oz.width + mz),
-          Iz = oz.pixels[Jz + 3] / 255;
-        if (0 === Iz) continue;
-        const Cz = 4 * Pz,
-          ez = zz[Cz + 3] / 255 * (1 - Iz),
-          Zz = Iz + ez;
-        for (let tz = 0; tz < 3; tz++) zz[Cz + tz] = (oz.pixels[Jz + tz] * bz * Iz + zz[Cz + tz] * ez) / Zz;
-        zz[Cz + 3] = 255 * Zz
+      origin: Sv,
+      across: ev,
+      down: gv,
+      texture: pv,
+      rect: [Nv, lv, Tv, Wv],
+      shade: wv
+    } = hv;
+    const av = ev.x * gv.y - ev.y * gv.x;
+    if (Math.abs(av) < 1e-9) return;
+    const sv = [Sv.x, Sv.x + ev.x, Sv.x + gv.x, Sv.x + ev.x + gv.x],
+      Cv = [Sv.y, Sv.y + ev.y, Sv.y + gv.y, Sv.y + ev.y + gv.y],
+      iv = Math.max(0, Math.floor(Math.min(...sv))),
+      cv = Math.min(Pv - 1, Math.ceil(Math.max(...sv))),
+      Gv = Math.max(0, Math.floor(Math.min(...Cv))),
+      mv = Math.min(Pv - 1, Math.ceil(Math.max(...Cv)));
+    for (let jv = Gv; jv <= mv; jv++)
+      for (let hv = iv; hv <= cv; hv++) {
+        const sv = hv + .5 - Sv.x,
+          Cv = jv + .5 - Sv.y,
+          iv = (sv * gv.y - Cv * gv.x) / av,
+          cv = (ev.x * Cv - ev.y * sv) / av;
+        if (iv < -dv || iv > 1 + dv || cv < -dv || cv > 1 + dv) continue;
+        const Gv = jv * Pv + hv;
+        zv[Gv] = 1;
+        const mv = Nv + Math.min(Math.max(iv, 0), 1) * (Tv - Nv),
+          fv = lv + Math.min(Math.max(cv, 0), 1) * (Wv - lv),
+          Fv = Math.min(pv.width - 1, Math.floor(mv * pv.width)),
+          Yv = 4 * (Math.min(pv.height - 1, Math.floor(fv * pv.height)) * pv.width + Fv),
+          nv = pv.pixels[Yv + 3] / 255;
+        if (0 === nv) continue;
+        const Ov = 4 * Gv,
+          Dv = vv[Ov + 3] / 255 * (1 - nv),
+          Kv = nv + Dv;
+        for (let zv = 0; zv < 3; zv++) vv[Ov + zv] = (pv.pixels[Yv + zv] * wv * nv + vv[Ov + zv] * Dv) / Kv;
+        vv[Ov + 3] = 255 * Kv
       }
   }
 
-  function Kz(zz, tz, sz) {
-    const Fz = zz.get(tz);
-    if (void 0 === Fz) throw new Error(`no ${sz} was sent for ${tz.slice(0,100)}`);
-    return Fz
+  function lv(vv, zv, Pv) {
+    const hv = vv.get(zv);
+    if (void 0 === hv) throw new Error(`no ${Pv} was sent for ${zv.slice(0,100)}`);
+    return hv
   }
-  const uz = {
-      pixelsOf(zz) {
-        const tz = new OffscreenCanvas(zz.width, zz.height),
-          sz = tz.getContext("2d");
-        if (!sz) throw new Error("no 2D context");
-        return sz.drawImage(zz, 0, 0), zz.close(), {
-          width: tz.width,
-          height: tz.height,
-          pixels: sz.getImageData(0, 0, tz.width, tz.height).data
+  const Tv = {
+      pixelsOf(vv) {
+        const zv = new OffscreenCanvas(vv.width, vv.height),
+          Pv = zv.getContext("2d");
+        if (!Pv) throw new Error("no 2D context");
+        return Pv.drawImage(vv, 0, 0), vv.close(), {
+          width: zv.width,
+          height: zv.height,
+          pixels: Pv.getImageData(0, 0, zv.width, zv.height).data
         }
       },
-      async encode(zz, tz) {
-        const sz = new OffscreenCanvas(tz, tz),
-          Fz = sz.getContext("2d");
-        if (!Fz) throw new Error("no 2D context");
-        Fz.putImageData(new ImageData(zz, tz, tz), 0, 0);
-        const Wz = await sz.convertToBlob();
-        return new Promise(((zz, tz) => {
-          const sz = new FileReader;
-          sz.onload = () => {
-            zz(sz.result)
-          }, sz.onerror = () => {
-            var zz;
-            tz(null !== (zz = sz.error) && void 0 !== zz ? zz : new Error("the icon did not encode"))
-          }, sz.readAsDataURL(Wz)
+      async encode(vv, zv) {
+        const Pv = new OffscreenCanvas(zv, zv),
+          hv = Pv.getContext("2d");
+        if (!hv) throw new Error("no 2D context");
+        hv.putImageData(new ImageData(vv, zv, zv), 0, 0);
+        const Sv = await Pv.convertToBlob();
+        return new Promise(((vv, zv) => {
+          const Pv = new FileReader;
+          Pv.onload = () => {
+            vv(Pv.result)
+          }, Pv.onerror = () => {
+            var vv;
+            zv(null !== (vv = Pv.error) && void 0 !== vv ? vv : new Error("the icon did not encode"))
+          }, Pv.readAsDataURL(Sv)
         }))
       }
     },
-    Nz = globalThis.WorkerGlobalScope;
-  void 0 !== Nz && globalThis instanceof Nz && function(zz, vz) {
-    const uz = new Map,
-      Nz = new Map,
-      bz = (tz, sz, Fz) => {
+    Wv = globalThis.WorkerGlobalScope;
+  void 0 !== Wv && globalThis instanceof Wv && function(vv, dv) {
+    const Tv = new Map,
+      Wv = new Map,
+      wv = (zv, Pv, hv) => {
         (async () => {
           try {
-            zz.postMessage({
+            vv.postMessage({
               type: "drawn",
-              id: tz,
-              url: await vz.encode(Fz(), sz)
+              id: zv,
+              url: await dv.encode(hv(), Pv)
             })
-          } catch (Wz) {
-            zz.postMessage({
+          } catch (Sv) {
+            vv.postMessage({
               type: "failed",
-              message: String(Wz)
+              message: String(Sv)
             })
           }
         })()
       };
-    zz.onmessage = zz => {
+    vv.onmessage = vv => {
       let {
-        data: wz
-      } = zz;
-      if ("texture" === wz.type) uz.set(wz.url, vz.pixelsOf(wz.bitmap));
-      else if ("model" === wz.type) Nz.set(wz.name, {
-        geometry: wz.geometry,
-        texture: vz.pixelsOf(wz.bitmap)
+        data: av
+      } = vv;
+      if ("texture" === av.type) Tv.set(av.url, dv.pixelsOf(av.bitmap));
+      else if ("model" === av.type) Wv.set(av.name, {
+        geometry: av.geometry,
+        texture: dv.pixelsOf(av.bitmap)
       });
-      else if ("draw" === wz.type) {
+      else if ("draw" === av.type) {
         const {
-          id: zz,
-          top: vz,
-          left: Nz,
-          right: Dz,
-          itemType: gz,
-          size: Hz,
-          outlineWidth: Bz
-        } = wz;
-        bz(zz, Hz, (() => function(zz, Xz, Oz, oz) {
-          const vz = .6 * Oz,
-            Kz = vz * Fz,
-            uz = vz * Fz * .5,
-            Nz = vz * Wz,
-            bz = Math.max(...Xz.boxes.map((zz => zz[4]))),
-            wz = Kz / 2 + (Oz - Kz) / 2,
-            Dz = uz + (Oz - uz - uz - bz * Nz) / 2,
-            gz = (zz, tz, sz) => ({
-              x: wz + (zz - sz) * Kz,
-              y: Dz - uz + (zz + sz) * uz + (bz - tz) * Nz
+          id: vv,
+          top: dv,
+          left: Wv,
+          right: sv,
+          itemType: Cv,
+          size: iv,
+          outlineWidth: cv
+        } = av;
+        wv(vv, iv, (() => function(vv, ev, gv, pv) {
+          const dv = .6 * gv,
+            lv = dv * hv,
+            Tv = dv * hv * .5,
+            Wv = dv * Sv,
+            wv = Math.max(...ev.boxes.map((vv => vv[4]))),
+            av = lv / 2 + (gv - lv) / 2,
+            sv = Tv + (gv - Tv - Tv - wv * Wv) / 2,
+            Cv = (vv, zv, Pv) => ({
+              x: av + (vv - Pv) * lv,
+              y: sv - Tv + (vv + Pv) * Tv + (wv - zv) * Wv
             }),
-            Hz = (zz, tz, sz, Fz, Wz, Oz) => ({
-              origin: zz,
+            iv = (vv, zv, Pv, hv, Sv, gv) => ({
+              origin: vv,
               across: {
-                x: tz.x - zz.x,
-                y: tz.y - zz.y
+                x: zv.x - vv.x,
+                y: zv.y - vv.y
               },
               down: {
-                x: sz.x - zz.x,
-                y: sz.y - zz.y
+                x: Pv.x - vv.x,
+                y: Pv.y - vv.y
               },
-              texture: Fz,
-              rect: Xz.cropFaces ? Wz : [0, 0, 1, 1],
-              shade: Oz
+              texture: hv,
+              rect: ev.cropFaces ? Sv : [0, 0, 1, 1],
+              shade: gv
             }),
-            Bz = new Uint8ClampedArray(Oz * Oz * 4),
-            Pz = new Uint8Array(Oz * Oz),
-            rz = tz;
-          for (const [tz, sz, Fz, Wz, Yz, xz] of Xz.boxes) {
-            const Xz = Hz(gz(Wz, Yz, xz), gz(Wz, Yz, Fz), gz(Wz, sz, xz), zz.right, [1 - xz, 1 - Yz, 1 - Fz, 1 - sz], rz.right),
-              oz = Hz(gz(tz, Yz, xz), gz(Wz, Yz, xz), gz(tz, sz, xz), zz.left, [tz, 1 - Yz, Wz, 1 - sz], rz.left),
-              vz = Hz(gz(tz, Yz, Fz), gz(Wz, Yz, Fz), gz(tz, Yz, xz), zz.top, [tz, Fz, Wz, xz], rz.top);
-            for (const zz of [Xz, oz, vz]) Uz(Bz, Pz, Oz, zz)
+            cv = new Uint8ClampedArray(gv * gv * 4),
+            Gv = new Uint8Array(gv * gv),
+            mv = zv;
+          for (const [zv, Pv, hv, Sv, jv, fv] of ev.boxes) {
+            const ev = iv(Cv(Sv, jv, fv), Cv(Sv, jv, hv), Cv(Sv, Pv, fv), vv.right, [1 - fv, 1 - jv, 1 - hv, 1 - Pv], mv.right),
+              pv = iv(Cv(zv, jv, fv), Cv(Sv, jv, fv), Cv(zv, Pv, fv), vv.left, [zv, 1 - jv, Sv, 1 - Pv], mv.left),
+              dv = iv(Cv(zv, jv, hv), Cv(Sv, jv, hv), Cv(zv, jv, fv), vv.top, [zv, hv, Sv, fv], mv.top);
+            for (const vv of [ev, pv, dv]) Nv(cv, Gv, gv, vv)
           }
-          return sz(Bz, Oz, oz, (zz => 1 === Pz[zz])), Bz
+          return Pv(cv, gv, pv, (vv => 1 === Gv[vv])), cv
         }({
-          top: Kz(uz, vz, "texture"),
-          left: Kz(uz, Nz, "texture"),
-          right: Kz(uz, Dz, "texture")
-        }, function(zz) {
-          return "SlabBlock" === zz ? Oz : "StairsBlock" === zz ? oz : Xz
-        }(gz), Hz, Bz)))
+          top: lv(Tv, dv, "texture"),
+          left: lv(Tv, Wv, "texture"),
+          right: lv(Tv, sv, "texture")
+        }, function(vv) {
+          return "SlabBlock" === vv ? gv : "StairsBlock" === vv ? pv : ev
+        }(Cv), iv, cv)))
       } else {
         const {
-          id: zz,
-          name: tz,
-          size: Fz,
-          outlineWidth: Wz
-        } = wz;
-        bz(zz, Fz, (() => {
+          id: vv,
+          name: zv,
+          size: hv,
+          outlineWidth: Sv
+        } = av;
+        wv(vv, hv, (() => {
           const {
-            geometry: zz,
-            texture: Xz
-          } = Kz(Nz, tz, "model");
-          return function(zz, tz, Fz, Wz) {
+            geometry: vv,
+            texture: ev
+          } = lv(Wv, zv, "model");
+          return function(vv, zv, hv, Sv) {
             const {
-              vertices: Xz,
-              uvs: Oz,
-              indices: oz,
-              shades: vz
-            } = zz, Uz = .03125 * Fz, Kz = Fz - 2 * Uz, uz = new Float32Array(Xz.length);
-            for (let sz = 0; sz < Xz.length; sz += 3) uz[sz] = Uz + Xz[sz] * Kz, uz[sz + 1] = Uz + Xz[sz + 1] * Kz, uz[sz + 2] = Xz[sz + 2];
-            const Nz = new Float32Array(Fz * Fz).fill(-1 / 0),
-              bz = new Uint8ClampedArray(Fz * Fz * 4),
-              wz = 255 * zz.alphaCutoff;
-            for (let sz = 0; sz < oz.length; sz += 3) {
-              const [zz, Wz, Xz] = [oz[sz], oz[sz + 1], oz[sz + 2]], [Uz, Kz, Dz] = [3 * zz, 3 * Wz, 3 * Xz], [gz, Hz, Bz, Pz, rz, Yz] = [uz[Uz], uz[Uz + 1], uz[Kz], uz[Kz + 1], uz[Dz], uz[Dz + 1]], xz = (Bz - gz) * (Yz - Hz) - (rz - gz) * (Pz - Hz);
-              if (Math.abs(xz) < 1e-9) continue;
-              const mz = vz[sz / 3],
-                [Jz, Iz, Cz, ez, Zz, Gz] = [Oz[2 * zz], Oz[2 * zz + 1], Oz[2 * Wz], Oz[2 * Wz + 1], Oz[2 * Xz], Oz[2 * Xz + 1]],
-                Tz = Math.max(0, Math.floor(Math.min(gz, Bz, rz))),
-                cz = Math.min(Fz - 1, Math.ceil(Math.max(gz, Bz, rz))),
-                jz = Math.max(0, Math.floor(Math.min(Hz, Pz, Yz))),
-                Az = Math.min(Fz - 1, Math.ceil(Math.max(Hz, Pz, Yz)));
-              for (let sz = jz; sz <= Az; sz++)
-                for (let zz = Tz; zz <= cz; zz++) {
-                  const [Wz, Xz] = [zz + .5, sz + .5], Oz = ((Wz - gz) * (Yz - Hz) - (rz - gz) * (Xz - Hz)) / xz, oz = ((Bz - gz) * (Xz - Hz) - (Wz - gz) * (Pz - Hz)) / xz, vz = 1 - Oz - oz;
-                  if (vz < 0 || Oz < 0 || oz < 0) continue;
-                  const Tz = vz * uz[Uz + 2] + Oz * uz[Kz + 2] + oz * uz[Dz + 2],
-                    cz = sz * Fz + zz;
-                  if (Tz <= Nz[cz]) continue;
-                  const jz = Math.max(0, Math.min(tz.width - 1, Math.floor((vz * Jz + Oz * Cz + oz * Zz) * tz.width))),
-                    Az = 4 * (Math.max(0, Math.min(tz.height - 1, Math.floor((vz * Iz + Oz * ez + oz * Gz) * tz.height))) * tz.width + jz);
-                  tz.pixels[Az + 3] < wz || (Nz[cz] = Tz, bz[4 * cz] = tz.pixels[Az] * mz, bz[4 * cz + 1] = tz.pixels[Az + 1] * mz, bz[4 * cz + 2] = tz.pixels[Az + 2] * mz, bz[4 * cz + 3] = 255)
+              vertices: ev,
+              uvs: gv,
+              indices: pv,
+              shades: dv
+            } = vv, Nv = .03125 * hv, lv = hv - 2 * Nv, Tv = new Float32Array(ev.length);
+            for (let Pv = 0; Pv < ev.length; Pv += 3) Tv[Pv] = Nv + ev[Pv] * lv, Tv[Pv + 1] = Nv + ev[Pv + 1] * lv, Tv[Pv + 2] = ev[Pv + 2];
+            const Wv = new Float32Array(hv * hv).fill(-1 / 0),
+              wv = new Uint8ClampedArray(hv * hv * 4),
+              av = 255 * vv.alphaCutoff;
+            for (let Pv = 0; Pv < pv.length; Pv += 3) {
+              const [vv, Sv, ev] = [pv[Pv], pv[Pv + 1], pv[Pv + 2]], [Nv, lv, sv] = [3 * vv, 3 * Sv, 3 * ev], [Cv, iv, cv, Gv, mv, jv] = [Tv[Nv], Tv[Nv + 1], Tv[lv], Tv[lv + 1], Tv[sv], Tv[sv + 1]], fv = (cv - Cv) * (jv - iv) - (mv - Cv) * (Gv - iv);
+              if (Math.abs(fv) < 1e-9) continue;
+              const Fv = dv[Pv / 3],
+                [Yv, nv, Ov, Dv, Kv, Vv] = [gv[2 * vv], gv[2 * vv + 1], gv[2 * Sv], gv[2 * Sv + 1], gv[2 * ev], gv[2 * ev + 1]],
+                Uv = Math.max(0, Math.floor(Math.min(Cv, cv, mv))),
+                Rv = Math.min(hv - 1, Math.ceil(Math.max(Cv, cv, mv))),
+                xv = Math.max(0, Math.floor(Math.min(iv, Gv, jv))),
+                tv = Math.min(hv - 1, Math.ceil(Math.max(iv, Gv, jv)));
+              for (let Pv = xv; Pv <= tv; Pv++)
+                for (let vv = Uv; vv <= Rv; vv++) {
+                  const [Sv, ev] = [vv + .5, Pv + .5], gv = ((Sv - Cv) * (jv - iv) - (mv - Cv) * (ev - iv)) / fv, pv = ((cv - Cv) * (ev - iv) - (Sv - Cv) * (Gv - iv)) / fv, dv = 1 - gv - pv;
+                  if (dv < 0 || gv < 0 || pv < 0) continue;
+                  const Uv = dv * Tv[Nv + 2] + gv * Tv[lv + 2] + pv * Tv[sv + 2],
+                    Rv = Pv * hv + vv;
+                  if (Uv <= Wv[Rv]) continue;
+                  const xv = Math.max(0, Math.min(zv.width - 1, Math.floor((dv * Yv + gv * Ov + pv * Kv) * zv.width))),
+                    tv = 4 * (Math.max(0, Math.min(zv.height - 1, Math.floor((dv * nv + gv * Dv + pv * Vv) * zv.height))) * zv.width + xv);
+                  zv.pixels[tv + 3] < av || (Wv[Rv] = Uv, wv[4 * Rv] = zv.pixels[tv] * Fv, wv[4 * Rv + 1] = zv.pixels[tv + 1] * Fv, wv[4 * Rv + 2] = zv.pixels[tv + 2] * Fv, wv[4 * Rv + 3] = 255)
                 }
             }
-            return sz(bz, Fz, Wz), bz
-          }(zz, Xz, Fz, Wz)
+            return Pv(wv, hv, Sv), wv
+          }(vv, ev, hv, Sv)
         }))
       }
-    }, zz.postMessage({
+    }, vv.postMessage({
       type: "started"
     })
-  }(globalThis, uz)
+  }(globalThis, Tv)
 })();

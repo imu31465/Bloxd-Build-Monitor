@@ -1,779 +1,865 @@
 export const id = 217;
 export const ids = [217];
 export const modules = {
-  36329: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Yz,
-      g: () => rz
+  39088: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => hv,
+      g: () => Sv
     });
-    var Fz = sz(3948),
-      Wz = sz(1416),
-      Xz = sz(65),
-      Oz = sz(6057),
-      oz = sz(3930),
-      vz = sz(1269),
-      Uz = sz(1857),
-      Kz = sz(1831),
-      uz = sz(1419),
-      Nz = sz(1173),
-      bz = sz(36336),
-      wz = sz(1020),
-      Dz = sz.n(wz),
-      gz = sz(1287),
-      Hz = sz(1036),
-      Bz = sz(1264),
-      Pz = sz(1087);
-    const rz = "SleepingOverlay";
-
-    function Yz() {
-      const {
-        t: zz
-      } = (0, Nz.B)(), [tz, sz] = (0, Xz.useState)(!1), [wz, Yz] = (0, Xz.useState)(null), [mz, Jz] = (0, Xz.useState)(1), [Iz, Cz] = (0, Xz.useState)(!1), [ez, Zz] = (0, Xz.useState)(!1), Gz = (0, Xz.useRef)(0), Tz = (0, Xz.useRef)(!1), cz = (0, Xz.useRef)(!1), jz = (0, Xz.useRef)(), Az = (0, Xz.useRef)(null);
-
-      function yz() {
-        const zz = null !== wz && void 0 !== wz ? wz : "Rested Speed";
-        Uz.gameBridge.send("wakeUp", ez ? zz : null), Az.current = null, sz(!1), Yz(null), Jz(1), Cz(!1), Zz(!1)
-      }
-
-      function Mz() {
-        return !Iz && (yz(), !0)
-      }
-      return (0, Wz.g)("PlayerPhysicsTypeUpdate", (zz => {
-        zz !== Az.current && (Az.current = zz, zz === Oz.r.SLEEPING ? (cz.current || (Gz.current = Uz.gameBridge.lookup("cameraZoom", null), cz.current = !0), Tz.current = !0, Uz.gameBridge.send("setCameraZoom", 3), sz(!0), Jz(function() {
-          for (const zz of Uz.gameBridge.lookup("blocksStandingOn", null)) {
-            if (bz.c.leafBeds.includes(zz)) return console.log(`Found leaf bed: ${zz}`), 1;
-            if (bz.c.woolBeds.includes(zz)) return console.log(`Found woold bed: ${zz}`), 2;
-            if (bz.c.strongBeds.includes(zz)) return console.log(`Found strong bed ${zz}`), 3
-          }
-          return 1
-        }())) : (cz.current = !1, sz(!1), Yz(null), Jz(1)))
-      })), (0, Xz.useEffect)((() => () => {
-        (0, vz.m)(rz)
-      }), []), (0, Xz.useEffect)((() => {
-        tz ? (0, vz.n)(rz) : ((0, vz.m)(rz), Tz.current && (Uz.gameBridge.send("setCameraZoom", Gz.current), Tz.current = !1))
-      }), [tz]), (0, Bz.s)("overlay", jz, Mz, tz), (0, Pz.jsx)(Fz.d, {
-        className: "SleepingOverlay",
-        "data-camera-keeper": "",
-        in: tz,
-        timeout: 300,
-        nodeRef: jz,
-        unmountOnExit: !0,
-        children: (0, Pz.jsx)("div", {
-          ref: jz,
-          onClick: zz => {
-            Mz() && zz.stopPropagation()
-          },
-          children: (0, Pz.jsxs)("div", {
-            className: "SleepingOverlayBody",
-            children: [(0, Pz.jsx)("div", {
-              className: "SleepingOverlayPerkList",
-              children: oz.i.map((tz => (0, Pz.jsxs)(xz, {
-                restedEffect: tz,
-                ko: wz,
-                setChosenRestedEffect: Yz,
-                children: [(0, Pz.jsxs)("div", {
-                  className: "SleepingOverlayPerkTitle",
-                  children: [(0, Pz.jsx)(Kz.c, {
-                    text: [{
-                      icon: tz
-                    }]
-                  }), oz.f[tz].shortName]
-                }), (0, Pz.jsx)("div", {
-                  className: "SleepingOverlayPerkDescription",
-                  children: zz(oz.f[tz].description, {
-                    time: oz.f[tz].effectLevelDurations[mz] / 6e4
-                  })
-                })]
-              }, tz)))
-            }), (0, Pz.jsxs)("div", {
-              className: "SleepingOverlayPerkBottom",
-              children: [(0, Pz.jsx)("div", {
-                className: "SleepingOverlayPerkBottomSide"
-              }), (0, Pz.jsxs)(uz.h, {
-                className: "SleepingOverlayWakeUpButton",
-                onClick: zz => {
-                  ez ? yz() : (Cz(!0), (0, gz.gb)((() => {
-                    Cz(!1), Zz(!0)
-                  }), !0)), zz.stopPropagation()
-                },
-                loading: Iz,
-                children: [!ez && (0, Pz.jsxs)(Pz.Fragment, {
-                  children: [(0, Pz.jsx)(Hz.c, {
-                    name: "film"
-                  }), " ", zz("classicGame:watchAdToGetRestedPerk")]
-                }), ez && zz("classicGame:wakeUp")]
-              }), (0, Pz.jsxs)("div", {
-                className: "SleepingOverlayPerkBottomSide",
-                children: [(0, Pz.jsx)("div", {
-                  className: Dz()("SleepingOverlayBedIcon", {
-                    SleepingOverlayBedIconActive: 1 === mz
-                  }),
-                  children: (0, Pz.jsx)(Kz.c, {
-                    text: [{
-                      icon: "Leaf Bed"
-                    }]
-                  })
-                }), (0, Pz.jsx)("div", {
-                  className: Dz()("SleepingOverlayBedIcon", {
-                    SleepingOverlayBedIconActive: 2 === mz
-                  }),
-                  children: (0, Pz.jsx)(Kz.c, {
-                    text: [{
-                      icon: "Red Bed"
-                    }]
-                  })
-                }), (0, Pz.jsx)("div", {
-                  className: Dz()("SleepingOverlayBedIcon", {
-                    SleepingOverlayBedIconActive: 3 === mz
-                  }),
-                  children: (0, Pz.jsx)(Kz.c, {
-                    text: [{
-                      icon: "Red Strongbed"
-                    }]
-                  })
-                })]
-              })]
-            })]
-          })
-        })
-      })
-    }
-    const xz = (0, Xz.memo)((function(zz) {
-      let {
-        children: tz,
-        restedEffect: sz,
-        ko: Fz,
-        setChosenRestedEffect: Wz
-      } = zz;
-      return sz === Fz ? (0, Pz.jsx)(uz.p, {
-        onClick: zz => {
-          zz.stopPropagation()
-        },
-        children: tz
-      }) : (0, Pz.jsx)(uz.l, {
-        onClick: zz => {
-          Wz(sz), zz.stopPropagation()
-        },
-        children: tz
-      })
-    }))
+    const hv = "The world isn't loaded, so no blocks can be seen.",
+      Sv = "The world isn't loaded, so nothing in it can be seen."
   },
-  39702: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Sz
+  38629: (vv, zv, Pv) => {
+    function hv(vv) {
+      return !(!vv.lobbyLeaderboardInfo && !vv.lobbyManage)
+    }
+    Pv.d(zv, {
+      d: () => hv
+    })
+  },
+  36323: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => ev,
+      f: () => Sv
     });
-    var Fz = sz(30),
-      Wz = sz(34),
-      Xz = sz(3967),
-      Oz = sz(308),
-      oz = sz(1571),
-      vz = sz(7682),
-      Uz = sz(3976),
-      Kz = sz(8218),
-      uz = sz(7717),
-      Nz = sz(7691),
-      bz = sz(7724),
-      wz = sz(1628),
-      Dz = sz(7731),
-      gz = sz(8186),
-      Hz = sz(8302),
-      Bz = sz(8230),
-      Pz = sz(8310),
-      rz = sz(1857),
-      Yz = sz(7674),
-      xz = sz(8255),
-      mz = sz(8253),
-      Jz = sz(8227);
-    class Iz {
-      constructor() {
-        this.lostAtMs = null
+    let hv = () => null;
+
+    function Sv(vv) {
+      hv = vv
+    }
+
+    function ev(vv, zv) {
+      return hv(vv, zv)
+    }
+  },
+  39911: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => sv,
+      f: () => Gv,
+      h: () => cv,
+      i: () => Cv
+    });
+    var hv = Pv(26),
+      Sv = Pv(39918),
+      ev = Pv(39898),
+      gv = Pv(39927),
+      pv = Pv(39907),
+      dv = Pv(39933),
+      Nv = Pv(39949);
+
+    function lv(vv) {
+      var zv, Pv;
+      const hv = (0, ev.h)();
+      return hv ? null === (zv = (0, Sv.d)(hv.api, vv[0], vv[1], vv[2])) || void 0 === zv || null === (Pv = zv.persisted) || void 0 === Pv ? void 0 : Pv.shared : void 0
+    }
+
+    function Tv(vv) {
+      return `${vv[0]},${vv[1]},${vv[2]}`
+    }
+    const Wv = new Map;
+    let wv = null,
+      av = 0;
+
+    function sv() {
+      return av
+    }
+
+    function Cv(vv) {
+      const zv = null !== wv && wv.key === Tv(vv.pos) ? wv.type : null;
+      if (null === zv) return vv;
+      let Pv = null;
+      if ("Iron" === zv) {
+        const {
+          cachedPasskey: zv,
+          ...hv
+        } = iv(vv.pos);
+        Pv = {
+          Yg: null !== zv && void 0 !== zv ? zv : [0, 0, 0, 0],
+          ...hv
+        }
       }
-      update(zz, tz) {
-        return zz ? (this.lostAtMs = null, !1) : (this.lostAtMs ??= tz, tz - this.lostAtMs >= 250)
-      }
-      reset() {
-        this.lostAtMs = null
+      return {
+        ...vv,
+        type: zv,
+        ironChest: Pv
       }
     }
-    class Cz {
-      constructor(zz, tz) {
-        this.press = zz, this.release = tz, this.downAtMs = null, this.token = null, this.latched = !1
+
+    function iv(vv) {
+      const zv = lv(vv),
+        Pv = null === zv || void 0 === zv ? void 0 : zv.ownerDbId,
+        hv = function(vv) {
+          var zv;
+          let Pv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : lv(vv);
+          const hv = Tv(vv),
+            Sv = Wv.get(hv);
+          return Sv ? Sv.lastOpened < (null !== (zv = null === Pv || void 0 === Pv ? void 0 : Pv.passkeyLastUpdated) && void 0 !== zv ? zv : 0) ? (Wv.delete(hv), null) : [...Sv.Yg] : null
+        }(vv, zv);
+      return void 0 === Pv ? {
+        cachedPasskey: hv
+      } : {
+        ownerDbId: Pv,
+        cachedPasskey: hv
       }
-      update(zz, tz, sz, Fz) {
-        if (zz && null === this.downAtMs) return this.downAtMs = sz, this.latched = Fz, void(this.token = this.press());
-        null !== this.downAtMs && (this.latched ? zz && this.end() : !tz && sz - this.downAtMs >= 40 && this.end())
+    }(0, Nv.m)(gv.e, (vv => {
+      const zv = (0, dv.f)(gv.e, vv);
+      if (!(0, dv.d)(zv) || zv.SS) return;
+      if (av++, !zv.uh || null === zv.PS) return void(wv = null);
+      const Pv = Tv(zv.PS);
+      wv = {
+        key: Pv,
+        type: zv.zS
+      }, null !== zv.hS && Wv.set(Pv, {
+        Yg: [...zv.hS],
+        lastOpened: Date.now()
+      })
+    })), (0, Nv.i)((() => {
+      Wv.clear(), wv = null, av++
+    })), (0, Nv.l)((() => {
+      null !== wv && (wv = null, av++, hv.j.zC("chestToggleFromServer", !1, !0))
+    }));
+    const cv = {
+        boardEditRequested: {
+          watch: vv => (0, hv.l)("EditBoard", (zv => {
+            let {
+              pos: Pv
+            } = zv;
+            if (null === Pv) return void vv(null);
+            const hv = (0, ev.h)(),
+              Sv = (0, ev.s)();
+            hv && Sv && vv(Sv.readBoardToEdit(hv.api, hv.chunks, Pv))
+          }))
+        },
+        ironChestOpenRequested: {
+          watch: vv => (0, hv.l)("OpenIronChest", (zv => {
+            let {
+              pos: Pv
+            } = zv;
+            vv(function(vv) {
+              return {
+                pos: vv,
+                ...iv(vv)
+              }
+            }(Pv))
+          }))
+        }
+      },
+      Gv = {
+        writeOnBoard(vv) {
+          var zv;
+          let {
+            pos: Pv,
+            text: hv,
+            textSize: Sv
+          } = vv;
+          null === (zv = (0, ev.h)()) || void 0 === zv || zv.send(pv.d.UpdateBoard, (0, pv.L)({
+            BN: Pv,
+            JN: hv,
+            EN: Sv
+          }))
+        },
+        writeBook(vv) {
+          var zv;
+          let {
+            pages: Pv,
+            title: hv,
+            published: Sv
+          } = vv;
+          null === (zv = (0, ev.h)()) || void 0 === zv || zv.send(pv.d.UpdateBook, (0, pv.P)({
+            Sl: Pv,
+            el: hv,
+            gl: Sv
+          }))
+        },
+        writeNameTag(vv) {
+          var zv;
+          null === (zv = (0, ev.h)()) || void 0 === zv || zv.send(pv.d.UpdateNameTag, vv)
+        },
+        setCustomLobbyBlock(vv) {
+          let {
+            pos: zv,
+            blockName: Pv
+          } = vv;
+          const hv = (0, ev.s)(),
+            Sv = (0, ev.h)();
+          hv && Sv && Sv.send(pv.d.SetCustomLobbyBlock, (0, pv.G)({
+            yN: hv.blockIdOf(Pv),
+            MN: zv
+          }))
+        }
       }
-      isLatched() {
-        return null !== this.downAtMs && this.latched
-      }
-      unlatch() {
-        this.latched = !1
-      }
-      cancel() {
-        null !== this.downAtMs && this.end()
-      }
-      end() {
-        const zz = this.token;
-        this.downAtMs = null, this.token = null, this.latched = !1, this.release(zz)
+  },
+  39970: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => dv,
+      c: () => gv,
+      f: () => pv
+    });
+    var hv = Pv(39889),
+      Sv = Pv(4529),
+      ev = Pv(39898);
+
+    function gv() {
+      var vv;
+      const zv = null === (vv = (0, ev.h)()) || void 0 === vv ? void 0 : vv.api.localId;
+      return void 0 === zv || zv === hv.ad ? null : String(zv)
+    }
+
+    function pv(vv) {
+      const zv = (0, ev.h)();
+      if (null !== zv) return vv(zv);
+      let Pv = null;
+      const hv = (0, Sv.o)((() => {
+        const zv = (0, ev.h)();
+        null !== zv && null === Pv && (hv(), Pv = vv(zv))
+      }));
+      return () => {
+        var vv;
+        hv(), null === (vv = Pv) || void 0 === vv || vv()
       }
     }
-    const ez = {
-        kind: "specialAction",
-        action: "SpecialAction2"
+
+    function dv(vv, zv, Pv) {
+      return {
+        current: () => {
+          const Pv = (0, ev.h)();
+          return null === Pv ? zv : vv(Pv)()
+        },
+        watch: zv => pv((hv => {
+          const Sv = vv(hv);
+          let ev = Sv();
+          return zv(ev), Pv((() => {
+            const vv = Sv();
+            vv !== ev && (ev = vv, zv(vv))
+          }))
+        }))
+      }
+    }
+  },
+  39961: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => Nv
+    });
+    var hv = Pv(39898),
+      Sv = Pv(39970),
+      ev = Pv(39973);
+
+    function gv() {
+      var vv, zv;
+      return null !== (vv = null === (zv = (0, hv.h)()) || void 0 === zv ? void 0 : zv.itemBridgeSources) && void 0 !== vv ? vv : ev.c
+    }
+
+    function pv(vv) {
+      return {
+        current: () => gv().states[vv].current(),
+        watch: zv => (0, Sv.f)((Pv => {
+          const hv = Pv.itemBridgeSources.states[vv];
+          return zv(hv.current()), hv.watch(zv)
+        }))
+      }
+    }
+
+    function dv(vv) {
+      return {
+        watch: zv => (0, Sv.f)((Pv => Pv.itemBridgeSources.events[vv].watch(zv)))
+      }
+    }
+    const Nv = {
+      states: {
+        inventory: pv("inventory"),
+        hotbar: pv("hotbar"),
+        crafting: pv("crafting"),
+        heldItemAim: pv("heldItemAim")
       },
-      Zz = zz => {
-        let tz = null;
-        const sz = new Jz.e,
-          Fz = () => {
-            tz && (((zz, tz, sz) => {
-              switch (sz.kind) {
-                case "reload":
-                  return void tz.specialActionUp("SpecialAction1");
-                case "specialAction":
-                  return void tz.specialActionUp(sz.action);
-                case "customButton":
-                  return void rz.gameBridge.send("pressCustomButton", {
-                    id: sz.id,
-                    down: !1
-                  });
-                case "touchButton":
-                  zz.pressTouchButton(!1)
-              }
-            })(zz, tz.bodies, tz.action), tz = null)
-          },
-          Xz = (sz, Wz, Xz, Oz) => {
-            Fz(), tz = {
-              action: Wz,
-              bodies: sz,
-              heldBy: Xz,
-              atMs: Oz
-            }, ((zz, tz, sz) => {
-              switch (sz.kind) {
-                case "reload":
-                  return tz.reloadGun(), void tz.specialActionDown("SpecialAction1");
-                case "specialAction":
-                  return void tz.specialActionDown(sz.action);
-                case "customButton":
-                  return void rz.gameBridge.send("pressCustomButton", {
-                    id: sz.id,
-                    down: !0
-                  });
-                case "touchButton":
-                  zz.pressTouchButton(!0)
-              }
-            })(zz, sz, Wz)
-          };
-        return {
-          update: (Oz, oz, Uz, Kz) => {
-            var Nz;
-            const bz = (0, xz.j)(zz.contextActionInputs()),
-              wz = null !== (Nz = bz[0]) && void 0 !== Nz ? Nz : ez;
-            (0, mz.e)((0, xz.f)(wz) ? wz : null);
-            const Dz = (0, xz.d)(bz);
-            (0, mz.f)(Dz);
-            const gz = (0, vz.f)("actionButton");
-            if (Dz) {
-              const zz = sz.update(oz.wasPressed(gz), oz.isHeld(gz), Uz, Kz);
-              "tap" === zz ? Xz(Oz, wz, [gz], Uz) : "hold" === zz && (uz.c.consumeButton(gz), Wz.o.Yg(Pz.k, bz))
-            } else sz.release(), oz.wasPressed(gz) && Xz(Oz, wz, [gz], Uz);
-            tz && Uz - tz.atMs >= 40 && !tz.heldBy.some((zz => (0, Yz.I)(oz.frame.values, zz))) && Fz()
-          },
-          pressPicked: (zz, tz) => {
-            Xz(zz, tz, [(0, vz.f)("menuConfirm"), (0, vz.f)("actionButton")], performance.now())
-          },
-          release: () => {
-            sz.release(), Fz(), (0, mz.e)(null), (0, mz.f)(!1)
-          }
-        }
-      };
-    var Gz = sz(7665);
-    var Tz = sz(39694),
-      cz = sz(8261),
-      jz = sz(7713),
-      Az = sz(8345);
-    var yz = sz(39688),
-      Mz = sz(8351),
-      dz = sz(39707),
-      hz = sz(8325),
-      Qz = sz(8263),
-      kz = sz(8266),
-      iz = sz(8271),
-      Lz = sz(8195);
-    const lz = () => Lz.c[(0, Nz.k)().tapHoldTime].wheelMs,
-      nz = () => ((0, Kz.c)(), new Event("controllerMenuKey")),
-      az = (zz, tz, sz) => new Cz((() => {
-        const sz = zz.bodies();
-        return {
-          bodies: sz,
-          press: tz(sz)
-        }
-      }), (zz => {
-        let {
-          bodies: tz,
-          press: Fz
-        } = zz;
-        sz(tz, Fz)
-      })),
-      qz = {
-        running: !1,
-        latchedAtMs: -1 / 0
+      events: {
+        hotbarSlotRequested: dv("hotbarSlotRequested"),
+        hotbarScrolled: dv("hotbarScrolled"),
+        numberKeyPressed: dv("numberKeyPressed"),
+        inventoryDropRequested: dv("inventoryDropRequested"),
+        chestToggled: dv("chestToggled"),
+        chestRefreshed: dv("chestRefreshed"),
+        inventorySynced: dv("inventorySynced"),
+        enchantingTableOpened: dv("enchantingTableOpened")
       },
-      Sz = zz => {
-        const tz = {
-          x: 0,
-          y: 0,
-          magnitude: 0,
-          headingOffset: 0,
-          jumpHeld: !1,
-          jumpPressed: !1,
-          running: !1,
-          sprintHeld: !1
-        };
-        let sz = qz;
-        const Kz = new dz.e,
-          rz = Wz.o.subscribe("appManagerUpdated|activeInputDevice", (tz => {
-            zz.deviceChanged(tz)
-          }));
-        let xz = null,
-          mz = 0;
-        const Cz = () => {
-          xz = null, (0, Qz.g)(null)
-        };
-        let ez = !1;
-        const Sz = new Iz,
-          Vz = zz.look,
-          Rz = new Jz.e,
-          pz = new Jz.e,
-          fz = Zz(zz),
-          Ez = Wz.o.subscribe(Pz.l, (tz => {
-            fz.pressPicked(zz.bodies(), tz)
-          })),
-          zt = az(zz, (zz => zz.primaryFireDown()), ((zz, tz) => {
-            zz.primaryFireUp(tz)
-          })),
-          tt = az(zz, (zz => zz.altFireDown()), ((zz, tz) => {
-            zz.altFireUp(tz)
-          }));
-        let st = !1,
-          Ft = !1,
-          Wt = !1;
-        const Xt = (0, gz.e)(Yz.W),
-          Ot = (0, gz.e)(Yz.W),
-          ot = new Jz.e;
-        let vt = !1;
-        const Ut = () => {
-            Xt.reset(), Ot.reset(), ot.release(), (0, iz.g)(!1), Vz.release(), zt.cancel(), (0, kz.f)(!1), tt.cancel(), fz.release(), Rz.release(), pz.release(), Cz()
-          },
-          Kt = function() {
-            let Fz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-            Ut(), Ft = !1, Fz || (st = !1, sz = qz, Object.assign(tz, {
-              x: 0,
-              y: 0,
-              magnitude: 0,
-              headingOffset: 0,
-              jumpHeld: !1,
-              jumpPressed: !1,
-              running: !1,
-              sprintHeld: !1
-            }), zz.stopMoving())
-          },
-          ut = function(Fz, Wz, Xz) {
-            let Oz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const oz = (0, Nz.k)(),
-              Uz = (0, yz.e)(Wz, oz.moveDeadzone),
-              uz = (0, vz.f)("sprint");
-            sz = (0, yz.s)(sz, {
-              sprintPressed: Fz.wasPressed(uz),
-              magnitude: Uz.magnitude,
-              autoSprint: oz.autoSprint,
-              nowMs: Xz
-            }), tz.running = sz.running, tz.sprintHeld = Fz.isHeld(uz), tz.x = Uz.x, tz.y = Uz.y, tz.magnitude = Uz.speed, tz.headingOffset = Uz.headingOffset, st = Uz.magnitude > 0;
-            const bz = (0, vz.f)("jump");
-            if (tz.jumpHeld = Fz.isHeld(bz), tz.jumpPressed = Fz.wasPressed(bz), tz.jumpPressed && zz.bodies().jumpDown(), Oz) return void zz.move(tz, null);
-            const wz = (0, vz.f)("sneak"),
-              Dz = Kz.filter({
-                sneakHeld: Fz.isHeld(wz),
-                sneakPressed: Fz.wasPressed(wz),
-                sneakTogglePressed: Fz.wasPressed((0, vz.f)("sneakToggle"))
-              }, Xz);
-            zz.move(tz, {
-              ...Dz,
-              mode: oz.sneakMode
-            })
-          },
-          Nt = (zz, tz) => {
-            const sz = (0, vz.f)("chat");
-            if ("off" === (0, Nz.k)().quickChat) return void(zz.wasPressed(sz) && (uz.c.consumeButton(sz), Wz.o.Yg(cz.d)));
-            const Fz = Rz.update(zz.wasPressed(sz), zz.isHeld(sz), tz, lz());
-            "tap" === Fz || "hold" === Fz && null === (0, wz.c)() ? Wz.o.Yg(cz.d) : "hold" === Fz && (uz.c.consumeButton(sz), Wz.o.Yg(Bz.o))
-          },
-          bt = (tz, sz) => {
-            ((zz, tz) => {
-              const sz = (0, Hz.e)(),
-                Fz = (0, vz.f)("emoteWheel");
-              if ("wheel" === (0, Nz.k)().emoteButton) return zz.wasPressed(Fz) && (uz.c.consumeButton(Fz), Wz.o.Yg("requestEmoteWheelPadOpen", !0)), (0, Hz.e)() !== sz;
-              const Xz = pz.update(zz.wasPressed(Fz), zz.isHeld(Fz), tz, lz());
-              return "tap" === Xz ? Wz.o.Yg("requestEmoteRepeatLast") : "hold" === Xz && (uz.c.consumeButton(Fz), Wz.o.Yg("requestEmoteWheelPadOpen", !1)), (0, Hz.e)() !== sz
-            })(tz, sz) || Nt(tz, sz), tz.wasPressed((0, vz.f)("inventory")) && (uz.c.consumeButton((0, vz.f)("inventory")), (0, oz.y)(nz(), "inventory", zz.hasFullInventory())), tz.wasPressed((0, vz.f)("pause")) && (uz.c.consumeButton((0, vz.f)("pause")), (0, Uz.e)() === Oz.r.SOCIAL ? (0, oz.w)(nz(), Oz.r.SOCIAL) : (0, oz.j)(nz())), tz.wasPressed((0, vz.f)("leaderboard")) && !(0, Xz.g)() && (uz.c.consumeButton((0, vz.f)("leaderboard")), ((zz, tz) => {
-              if ("shop" === (0, jz.c)()) return Wz.o.Yg(Az.i), void(0, oz.w)(zz, Oz.r.SHOP, !0);
-              (0, oz.w)(zz, Oz.r.LOBBY_LEADERBOARD, tz)
-            })(nz(), zz.hasLobbyLeaderboard()))
-          },
-          wt = (tz, sz) => {
-            const Fz = zz.bodies();
-            ((tz, sz) => {
-              const Fz = (0, vz.f)("attack"),
-                Wz = tz.wasPressed(Fz);
-              Wz && !zt.isLatched() && (ez = zz.targetsBlock()), zt.update(Wz, tz.isHeld(Fz), sz, "toggle" === (0, Nz.k)().attackMode), zt.isLatched() && ez ? Sz.update(zz.targetsBlock(), sz) && zt.unlatch() : Sz.reset(), (0, kz.f)(zt.isLatched())
-            })(tz, sz), tt.update(tz.wasPressed((0, vz.f)("use")), tz.isHeld((0, vz.f)("use")), sz, !1), Xt.update(tz.isHeld((0, vz.f)("hotbarPrevious")), sz) && zz.scrollHotbar(-1), Ot.update(tz.isHeld((0, vz.f)("hotbarNext")), sz) && zz.scrollHotbar(1), ((tz, sz, Fz) => {
-              const Wz = (0, vz.f)("perspective"),
-                Xz = (0, vz.f)("pickBlock"),
-                Oz = zz.pickBlockAllowed();
-              (0, iz.g)(Oz && !vt && zz.targetsBlock());
-              const oz = () => {
-                sz.pickBlock() && (vt = !0, (0, iz.g)(!1))
-              };
-              if (!Oz || Xz !== Wz) return ot.release(), tz.wasPressed(Wz) && sz.swapCameraZoom(), void(Oz && tz.wasPressed(Xz) && oz());
-              const Uz = ot.update(tz.wasPressed(Xz), tz.isHeld(Xz), Fz, lz());
-              "tap" === Uz ? oz() : "hold" === Uz && sz.swapCameraZoom()
-            })(tz, Fz, sz), ((tz, sz, Fz) => {
-              const Wz = (0, vz.f)("drop");
-              if (tz.wasPressed(Wz)) {
-                sz.dropItem(!1);
-                const zz = (0, Nz.k)();
-                "off" !== zz.buttonRepeat && (xz = Fz, mz = Lz.c[zz.tapHoldTime].dropStackMs, (0, Qz.g)(mz))
-              }
-              null !== xz && (!tz.isHeld(Wz) || zz.selectedSlotEmpty() ? Cz() : Fz - xz >= mz && (Cz(), sz.dropItem(!0)))
-            })(tz, Fz, sz), fz.update(Fz, tz, sz, lz()), bt(tz, sz)
-          },
-          Dt = uz.c.register({
-            name: "gameplay",
-            isActive: () => {
-              const tz = st && "keyboardMouse" === Fz.b.get("activeInputDevice") && !(0, bz.H)(),
-                sz = (0, bz.k)() ? [Tz.e] : [];
-              return ((0, bz.k)() || tz) && (0, Dz.d)(sz) && zz.hasPlayer()
-            },
-            onFrame: zz => {
-              const tz = performance.now(),
-                sz = (0, Nz.k)(),
-                Fz = (0, yz.v)(zz, (0, yz.j)(sz, (0, vz.f)("pause"), (0, Mz.b)().isSupported())),
-                Wz = (0, yz.g)(Fz, sz.swapSticks);
-              return (0, bz.k)() ? (Ft = !1, (0, Dz.d)() ? (Wt = !1, Vz.update(Wz.look, sz, Fz.isHeld((0, vz.f)("use"))), ut(Fz, Wz.move, tz), void wt(Fz, tz)) : (Wt || (Wt = !0, Kz.lostToPadScreen(), Kt()), void Nt(Fz, tz))) : (Ft || (Ut(), Ft = !0), void ut(Fz, Wz.move, tz))
-            },
-            onDeactivate: zz => {
-              (0, bz.k)() && Kz.lostToPadScreen(), Kt(zz)
-            },
-            onPeekFrame: tz => {
-              (0, bz.k)() && (0, Dz.d)(Tz.i) && zz.hasPlayer() ? ut(tz, (0, yz.g)(tz, (0, Nz.k)().swapSticks).move, performance.now(), !0) : Kt()
-            }
+      commands: {
+        selectHotbarSlot: vv => gv().commands.selectHotbarSlot(vv),
+        removeInventoryItem: vv => gv().commands.removeInventoryItem(vv),
+        swapInventorySlots: vv => gv().commands.swapInventorySlots(vv),
+        moveInventoryItem: vv => gv().commands.moveInventoryItem(vv),
+        quickMoveInventoryItem: vv => gv().commands.quickMoveInventoryItem(vv),
+        closeChest: vv => gv().commands.closeChest(vv),
+        focusCrafting: vv => gv().commands.focusCrafting(vv),
+        craftRecipe: vv => gv().commands.craftRecipe(vv),
+        salvageItem: vv => gv().commands.salvageItem(vv),
+        enchantItem: vv => gv().commands.enchantItem(vv)
+      },
+      queries: {
+        enchantingOffer: vv => gv().queries.enchantingOffer(vv)
+      }
+    }
+  },
+  39973: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => pv
+    });
+    var hv = Pv(39088);
+
+    function Sv(vv) {
+      return {
+        current: () => vv,
+        watch: () => () => {}
+      }
+    }
+
+    function ev() {}
+    const gv = Object.freeze([0, 0, 0]),
+      pv = {
+        states: {
+          health: Sv({
+            health: null,
+            maxHealth: null,
+            shield: null,
+            maxShield: null
           }),
-          gt = (0, Tz.g)(zz),
-          Ht = (() => {
-            const zz = Wz.o.subscribe(Gz.c, (zz => {
-              !zz && (0, bz.k)() && "inGame" === Fz.b.get("gameState") && Wz.o.Yg("showBottomMessage", {
-                message: [{
-                  translationKey: "controller:disconnected"
-                }],
-                timeoutLength: 3e3,
-                type: "Warning"
-              })
-            }));
-            return () => {
-              Wz.o.unsubscribe(zz)
-            }
-          })();
-        return () => {
-          Kt(), zz.uninstall(), (0, hz.g)(!1), (0, iz.g)(!1), Wz.o.unsubscribe(rz), Wz.o.unsubscribe(Ez), Dt(), gt(), Ht(), Vz.uninstall()
-        }
-      }
-  },
-  39694: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => wz,
-      g: () => gz,
-      i: () => bz
-    });
-    var Fz = sz(1269),
-      Wz = sz(3967),
-      Xz = sz(8291),
-      Oz = sz(36329),
-      oz = sz(1658),
-      vz = sz(1170),
-      Uz = sz(7731),
-      Kz = sz(8230),
-      uz = sz(8310);
-    const Nz = {
-        emoteWheel: Xz.g,
-        quickChatWheel: Kz.c,
-        actionWheel: uz.n
-      },
-      bz = Object.keys(Nz),
-      wz = "dead",
-      Dz = zz => (0, Fz.j)().includes(zz),
-      gz = zz => {
-        const tz = [(0, Uz.i)(wz, (() => zz.hasPlayer() && zz.isPlayerDead())), (0, Uz.i)("sleeping", (() => Dz(Oz.g))), (0, Uz.i)("turnstile", (() => Dz(vz.e))), (0, Uz.i)("videoAd", oz.d), (0, Uz.i)("replay", (() => (0, Wz.g)() || zz.isReplayMode())), (0, Uz.i)("freeCamera", (() => zz.isFreeCameraOn())), ...Object.entries(Nz).map((zz => {
-          let [tz, sz] = zz;
-          return (0, Uz.i)(tz, sz)
-        }))];
-        return () => {
-          for (const zz of tz) zz()
-        }
-      }
-  },
-  39688: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Wz,
-      e: () => vz,
-      g: () => oz,
-      j: () => Kz,
-      k: () => Oz,
-      o: () => Xz,
-      s: () => Uz,
-      v: () => uz
-    });
-    var Fz = sz(7674);
-    class Wz {
-      constructor() {
-        this.fullTiltSinceMs = null
-      }
-      update(zz, tz, sz) {
-        const Wz = (0, Fz.k)(zz, tz.lookDeadzone);
-        if (Math.hypot(Wz.x, Wz.y) < .9 || Math.abs(Wz.x) < Math.abs(Wz.y)) return this.fullTiltSinceMs = null, 1;
-        null === this.fullTiltSinceMs && (this.fullTiltSinceMs = sz);
-        const Xz = (Oz = tz.lookSensitivityX, Math.min(1, 100 / Oz));
-        var Oz;
-        return 1 + (1.6 - 1) * Math.max(0, Math.min(1, (sz - this.fullTiltSinceMs - 250 * Xz) / (200 * Xz)))
-      }
-      reset() {
-        this.fullTiltSinceMs = null
-      }
-    }
-    const Xz = (zz, tz, sz, Wz, Xz) => {
-        let Oz = 1;
-        return "boost" === sz.lookCurve ? Oz = zz.update(tz, sz, Xz) : zz.reset(),
-          function(zz, tz) {
-            let {
-              yawBoost: sz = 1,
-              aiming: Wz = !1
-            } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            const Xz = (0, Fz.h)((0, Fz.k)(zz, tz.lookDeadzone), tz.lookCurve),
-              Oz = 220 * Math.PI / 180,
-              oz = Wz ? tz.aimLookSensitivity / 100 : 1,
-              vz = tz.lookSensitivityX / 100 * oz,
-              Uz = tz.lookSensitivityY / 100 * oz;
-            return {
-              yawRadPerSec: Xz.x * Oz * vz * sz * (tz.invertLookX ? -1 : 1),
-              pitchRadPerSec: Xz.y * Oz * .7 * Uz * (tz.invertLookY ? -1 : 1)
-            }
-          }(tz, sz, {
-            yawBoost: Oz,
-            aiming: Wz
-          })
-      },
-      Oz = (zz, tz) => {
-        const sz = Math.max(0, Math.min(250, tz)) / 1e3;
-        return {
-          mJ: zz.yawRadPerSec * sz,
-          eJ: zz.pitchRadPerSec * sz
-        }
-      },
-      oz = (zz, tz) => tz ? {
-        move: zz.rightStick,
-        look: zz.leftStick
-      } : {
-        move: zz.leftStick,
-        look: zz.rightStick
-      },
-      vz = (zz, tz) => {
-        const sz = (0, Fz.k)(zz, tz),
-          Wz = Math.min(1, Math.hypot(sz.x, sz.y));
-        return {
-          magnitude: Wz,
-          speed: Math.min(1, Wz / .8),
-          headingOffset: 0 === Wz ? 0 : Math.atan2(sz.x, -sz.y),
-          x: sz.x,
-          y: sz.y
-        }
-      },
-      Uz = (zz, tz) => {
-        let {
-          sprintPressed: sz,
-          magnitude: Fz,
-          autoSprint: Wz,
-          nowMs: Xz
-        } = tz;
-        const Oz = sz ? Xz : zz.latchedAtMs,
-          oz = (zz => {
-            let {
-              running: tz,
-              magnitude: sz,
-              sprintPressed: Fz,
-              autoSprint: Wz
-            } = zz;
-            return !(sz < .5) && (!!Fz || !!(Wz && sz >= .9) || tz)
-          })({
-            running: zz.running,
-            magnitude: Fz,
-            sprintPressed: Xz - Oz <= 1e3,
-            autoSprint: Wz
-          });
-        return {
-          running: oz,
-          latchedAtMs: oz ? -1 / 0 : Oz
-        }
-      },
-      Kz = (zz, tz, sz) => sz && zz.gyroAiming && "button" === zz.gyroActivation && zz.gyroButton !== tz ? zz.gyroButton : null,
-      uz = (zz, tz) => tz ? {
-        ...zz,
-        isHeld: sz => sz !== tz && zz.isHeld(sz),
-        wasPressed: sz => sz !== tz && zz.wasPressed(sz),
-        wasReleased: sz => sz !== tz && zz.wasReleased(sz),
-        value: sz => sz === tz ? 0 : zz.value(sz)
-      } : zz
-  },
-  39707: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Wz,
-      f: () => Fz
-    });
-    const Fz = zz => {
-      let {
-        mode: tz,
-        sneakHeld: sz,
-        sneakPressed: Fz,
-        sneakTogglePressed: Wz,
-        descending: Xz,
-        canCrouch: Oz,
-        toggled: oz
-      } = zz;
-      return Oz ? Xz ? {
-        crouchHeld: sz,
-        toggled: !1
-      } : "hold" === tz ? {
-        crouchHeld: sz,
-        toggled: Wz ? !oz : oz
-      } : {
-        crouchHeld: !1,
-        toggled: Fz || Wz ? !oz : oz
-      } : {
-        crouchHeld: !1,
-        toggled: !1
-      }
-    };
-    class Wz {
-      constructor() {
-        this.regainPending = !1, this.regainedAtMs = -1 / 0, this.graceEndsMs = -1 / 0, this.ignoringHeld = !1
-      }
-      lostToPadScreen() {
-        this.regainPending = !0
-      }
-      filter(zz, tz) {
-        this.regainPending && (this.regainPending = !1, this.regainedAtMs = tz, this.graceEndsMs = tz + 500);
-        const sz = tz < this.graceEndsMs;
-        return sz && (zz.sneakPressed || zz.sneakTogglePressed) && (this.graceEndsMs = Math.min(this.regainedAtMs + 1e3, Math.max(this.graceEndsMs, tz + 300))), zz.sneakHeld ? sz && zz.sneakPressed && (this.ignoringHeld = !0) : this.ignoringHeld = !1, {
-          sneakHeld: zz.sneakHeld && !this.ignoringHeld,
-          sneakPressed: zz.sneakPressed && !this.ignoringHeld,
-          sneakTogglePressed: zz.sneakTogglePressed && !sz
-        }
-      }
-    }
-  },
-  39683: (zz, tz, sz) => {
-    sz(8351)
-  },
-  39686: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Pz
-    });
-    var Fz = sz(34),
-      Wz = sz(8291),
-      Xz = sz(8298),
-      Oz = sz(7682),
-      oz = sz(7717),
-      vz = sz(7691),
-      Uz = sz(39688),
-      Kz = sz(39694),
-      uz = sz(7731),
-      Nz = sz(7674),
-      bz = sz(8230),
-      wz = sz(8310);
-    const Dz = [{
-        isOpen: Wz.i,
-        openButton: () => (0, Oz.f)("emoteWheel"),
-        aim: zz => {
-          Fz.o.Yg("emoteWheelPadAim", zz)
+          inventory: Sv({
+            player: [],
+            chestOrCreative: [],
+            chest: null,
+            creative: !1,
+            selectedSlot: 0,
+            freeSlots: 0
+          }),
+          hotbar: Sv({
+            items: [],
+            ammo: 0,
+            selectedSlot: null
+          }),
+          stationItems: Sv({
+            enchantable: {},
+            salvageable: {}
+          }),
+          itemInfo: Sv({}),
+          creativeVisibility: Sv({
+            publicLobby: !1,
+            shownInGame: {}
+          }),
+          aura: Sv(null),
+          heldItemAim: Sv({
+            gun: !1,
+            aimable: !1,
+            chargeName: null
+          }),
+          crouching: Sv(!1),
+          gliderBoostFuel: Sv(0),
+          flight: Sv({
+            canFly: !1,
+            flying: !1
+          }),
+          crafting: Sv({
+            focus: null,
+            recipes: [],
+            detail: null
+          }),
+          players: Sv({
+            ids: [],
+            byId: {},
+            localId: null
+          }),
+          lobbyLeaderboardRows: Sv({}),
+          fullInventory: Sv(!1),
+          crosshairTarget: Sv({
+            interactPrompt: null,
+            blockText: null,
+            neededTool: null
+          }),
+          localPlayerAlive: Sv(!0),
+          freeCamera: Sv({
+            allowed: !1,
+            movesFly: !1
+          }),
+          replay: Sv(null),
+          replayEdits: Sv(null),
+          replayRecorder: Sv({
+            recording: !1,
+            clipping: !1,
+            hasClipBuffer: !1,
+            seconds: 0
+          }),
+          replayVideoExporting: Sv(!1)
         },
-        commit: zz => {
-          Fz.o.Yg("requestEmoteWheelPadCommit", zz)
-        },
-        close: () => {
-          Fz.o.Yg("requestEmoteWheelClose")
-        }
-      }, {
-        isOpen: bz.c,
-        openButton: () => (0, Oz.f)("chat"),
-        aim: zz => {
-          Fz.o.Yg(bz.d, zz)
-        },
-        commit: zz => {
-          Fz.o.Yg(bz.k, zz)
-        },
-        close: () => {
-          Fz.o.Yg(bz.h)
-        },
-        keptOpenBy: [Kz.e]
-      }, {
-        isOpen: wz.n,
-        openButton: () => (0, Oz.f)("actionButton"),
-        aim: zz => {
-          Fz.o.Yg(wz.d, zz)
-        },
-        commit: zz => {
-          Fz.o.Yg(wz.j, zz)
-        },
-        close: () => {
-          Fz.o.Yg(wz.f)
-        }
-      }],
-      gz = () => {
-        var zz;
-        return null !== (zz = Dz.find((zz => zz.isOpen()))) && void 0 !== zz ? zz : null
-      },
-      Hz = zz => (0, Oz.I)(zz.openButton()),
-      Bz = (zz, tz) => !(0, Nz.I)(zz.frame.values, tz),
-      Pz = () => {
-        let zz = null,
-          tz = !1,
-          sz = !1;
-        return oz.c.register({
-          name: "wheel",
-          isActive: () => null !== gz(),
-          peek: () => {
-            const zz = gz();
-            return zz && Hz(zz) ? null : {
-              over: "gameplay",
-              stick: (0, vz.k)().swapSticks ? "right" : "left"
-            }
+        events: {
+          hotbarSlotRequested: {
+            watch: () => () => {}
           },
-          onFrame: Fz => {
-            var Wz;
-            const Nz = gz();
-            if (!Nz) return;
-            if (null !== (0, uz.c)([...Kz.i, ...null !== (Wz = Nz.keptOpenBy) && void 0 !== Wz ? Wz : []])) return void Nz.close();
-            const bz = Nz.openButton(),
-              wz = (0, Uz.g)(Fz.frame, (0, vz.k)().swapSticks),
-              Dz = Hz(Nz) ? wz.move : wz.look;
-            zz !== Nz ? (zz = Nz, tz = !Bz(Fz, bz) || Math.hypot(Dz.x, Dz.y) >= Xz.w, sz = !1) : sz && (sz = !1, Bz(Fz, bz) && (tz = !1)), Nz.aim(Dz);
-            const Pz = (0, Oz.f)("menuConfirm"),
-              rz = (0, Oz.f)("menuBack");
-            return Fz.wasPressed(rz) ? (oz.c.consumeButton(rz), void Nz.close()) : Fz.wasPressed(Pz) || Fz.wasPressed(bz) ? (oz.c.consumeButton(Pz), oz.c.consumeButton(bz), void Nz.commit(!1)) : void(tz && Bz(Fz, bz) && (tz = !1, Nz.commit(!0)))
+          hotbarScrolled: {
+            watch: () => () => {}
           },
-          onDeactivate: () => {
-            sz = null !== zz && gz() === zz, sz || (zz = null, tz = !1)
+          hotbarDropRequested: {
+            watch: () => () => {}
+          },
+          inventoryDropRequested: {
+            watch: () => () => {}
+          },
+          numberKeyPressed: {
+            watch: () => () => {}
+          },
+          chestToggled: {
+            watch: () => () => {}
+          },
+          chestRefreshed: {
+            watch: () => () => {}
+          },
+          inventorySynced: {
+            watch: () => () => {}
+          },
+          enchantingTableOpened: {
+            watch: () => () => {}
+          },
+          cosmeticsUpdated: {
+            watch: () => () => {}
+          },
+          shotDamageToShow: {
+            watch: () => () => {}
+          },
+          boardEditRequested: {
+            watch: () => () => {}
+          },
+          kill: {
+            watch: () => () => {}
+          },
+          chatReceived: {
+            watch: () => () => {}
+          },
+          ironChestOpenRequested: {
+            watch: () => () => {}
+          },
+          localEffectUpdated: {
+            watch: () => () => {}
+          },
+          localPlayerAliveSet: {
+            watch: () => () => {}
+          },
+          replayUiActionRequested: {
+            watch: () => () => {}
+          },
+          replayViewerRequested: {
+            watch: () => () => {}
           }
-        })
+        },
+        commands: {
+          selectHotbarSlot: ev,
+          removeInventoryItem: () => !1,
+          swapInventorySlots: () => !1,
+          moveInventoryItem: () => !1,
+          quickMoveInventoryItem: () => null,
+          closeChest: ev,
+          setInventoryOpen: ev,
+          changeIronChestPasskey: ev,
+          dragReplayCamera: ev,
+          applyTemporaryThirdPerson: ev,
+          holdEmoteWheel: ev,
+          recordFlyingMiddleText: ev,
+          focusCrafting: ev,
+          craftRecipe: () => ({
+            Cp: 0,
+            Vl: null,
+            amountAddedToSlot: 0
+          }),
+          salvageItem: () => !1,
+          enchantItem: ev,
+          setShopOpen: ev,
+          buyShopItem: ev,
+          lobbyManage: ev,
+          sendChatMessage: ev,
+          ignorePlayer: ev,
+          reportPlayer: ev,
+          reportWorldCodeChat: ev,
+          requestDiscordReportKey: ev,
+          reportLobbyOrGame: ev,
+          playEmote: ev,
+          updateMyCosmetic: ev,
+          writeOnBoard: ev,
+          writeBook: ev,
+          writeNameTag: ev,
+          setCustomLobbyBlock: ev,
+          openIronChest: ev,
+          sendCodeCollab: ev,
+          clickCodeBlock: ev,
+          bindCustomButtonKeys: ev,
+          pressCustomButton: ev,
+          moveReplayFreecam: ev,
+          holdReplayFreecamVertical: ev,
+          respawn: ev,
+          wakeUp: ev,
+          requestLeaderboard: ev,
+          completeTask: ev,
+          setServerCookie: ev,
+          answerUiRequest: ev,
+          chooseRewardedAd: ev,
+          setCameraZoom: ev,
+          setFreeCameraMovesFly: ev,
+          setBlockHighlight: ev,
+          setCrosshairInteractPrompt: ev,
+          setLookSensitivity: ev,
+          replayAction: ev,
+          setReplayPlaying: ev,
+          seekReplay: ev,
+          setReplayCameraMode: ev,
+          syncReplayCameraMode: ev,
+          setReplayCameraKeyframe: ev,
+          moveReplayCameraKeyframe: ev,
+          deleteReplayCameraKeyframes: ev,
+          setReplayPlaybackMark: ev,
+          cropReplay: () => !1,
+          holdReplayForShaderPackFailure: ev,
+          exportReplayVideo: ev,
+          toggleRecording: ev,
+          saveClip: ev,
+          setRecorderPrefs: ev,
+          setReplayViewerOpen: ev
+        },
+        queries: {
+          enchantingOffer: () => ({
+            perks: [],
+            options: []
+          }),
+          worldCodeAiChunk: () => hv.e,
+          worldCodeAiGameState: () => hv.g
+        },
+        lookups: {
+          localPos: () => gv,
+          targetedBlockPos: () => null,
+          blockAtViewPoint: () => null,
+          momentumFrac: () => 0,
+          screenPos: () => ({
+            x: 0,
+            y: 0
+          }),
+          cameraZoom: () => 0,
+          freeCameraPos: () => null,
+          blocksStandingOn: () => [],
+          dropAhead: () => !1,
+          replayCamera: () => null,
+          leaveGameReloadsPage: () => !1,
+          codeBlockClickable: () => !1
+        }
       }
+  },
+  39894: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => nv,
+      h: () => Yv,
+      j: () => Ov,
+      l: () => Fv,
+      n: () => jv
+    });
+    var hv = Pv(38726),
+      Sv = Pv(1209),
+      ev = Pv(1903),
+      gv = Pv(1915),
+      pv = Pv(3037),
+      dv = Pv(36323),
+      Nv = Pv(1306),
+      lv = Pv(39898),
+      Tv = Pv(4561),
+      Wv = Pv(2304),
+      wv = Pv(39907),
+      av = Pv(39911),
+      sv = Pv(39961);
+    let Cv = null;
+
+    function iv(vv) {
+      const zv = new Map,
+        Pv = Pv => {
+          if ("string" !== typeof Pv) return;
+          let hv = zv.get(Pv);
+          return void 0 === hv && (hv = vv(Pv), void 0 !== hv && zv.set(Pv, hv)), hv
+        };
+      return new Proxy({}, {
+        get: (vv, zv) => Pv(zv),
+        has: (vv, zv) => void 0 !== Pv(zv)
+      })
+    }
+
+    function cv(vv) {
+      const zv = (0, pv.c)(vv);
+      return void 0 !== zv && (0, pv.e)(zv) === vv
+    }
+
+    function Gv(vv) {
+      var zv;
+      const Pv = null === (zv = (0, lv.h)()) || void 0 === zv ? void 0 : zv.tables;
+      if (void 0 === Pv || !cv(vv)) return;
+      const hv = {
+          displayName: Pv.getDisplayName(vv)
+        },
+        Sv = Pv.getItemStat(vv, "description");
+      void 0 !== Sv && null !== Sv && (hv.description = Sv);
+      const {
+        rootName: ev
+      } = Pv.getMetaInfo(vv);
+      ev !== vv && (hv.rootName = ev);
+      const gv = Pv.getItemStat(vv, "armourReduction");
+      return void 0 !== gv && null !== gv && (hv.armourReduction = gv), hv
+    }(0, lv.w)((vv => {
+      Cv = vv
+    }));
+    const mv = (0, gv.k)("DisplayName", "Description");
+
+    function jv() {
+      return Boolean(ev.c.get("useInventory") && ev.c.get("useFullInventory"))
+    }
+    let fv = null;
+    const Fv = {
+        inventory: function() {
+          const vv = sv.e.states.inventory;
+          let zv = null;
+          const Pv = vv => {
+            var Pv;
+            return null === vv.chest ? vv : ((null === (Pv = zv) || void 0 === Pv ? void 0 : Pv.from) === vv && zv.chestVersion === (0, av.d)() || (zv = {
+              from: vv,
+              chestVersion: (0, av.d)(),
+              view: {
+                ...vv,
+                chest: (0, av.i)(vv.chest)
+              }
+            }), zv.view)
+          };
+          return {
+            current: () => Pv(vv.current()),
+            watch: zv => vv.watch((vv => {
+              zv(Pv(vv))
+            }))
+          }
+        }(),
+        crafting: sv.e.states.crafting,
+        stationItems: {
+          current() {
+            var vv;
+            return (null === (vv = fv) || void 0 === vv ? void 0 : vv.namesVersion) !== (0, pv.f)() && (fv = {
+              namesVersion: (0, pv.f)(),
+              items: {
+                enchantable: iv((vv => {
+                  const zv = (0, pv.c)(vv);
+                  return void 0 !== zv && null !== Cv && Cv.enchantmentPerksOf(zv).length > 0 || void 0
+                })),
+                salvageable: iv((vv => !(!cv(vv) || null === (0, dv.d)(vv)) || void 0))
+              }
+            }), fv.items
+          },
+          watch: () => () => {}
+        },
+        itemInfo: function() {
+          let vv = null;
+          const zv = () => {
+            var zv;
+            return (null === (zv = vv) || void 0 === zv ? void 0 : zv.namesVersion) !== (0, pv.f)() && (vv = {
+              namesVersion: (0, pv.f)(),
+              infos: iv(Gv)
+            }), vv.infos
+          };
+          return {
+            current: zv,
+            watch: Pv => (0, gv.q)((hv => {
+              hv.some(mv) && (vv = null, Pv(zv()))
+            }))
+          }
+        }(),
+        creativeVisibility: (0, gv.o)((function() {
+          const vv = {};
+          for (const Sv of null !== (zv = null === (Pv = Cv) || void 0 === Pv ? void 0 : Pv.creativeItemIds()) && void 0 !== zv ? zv : []) {
+            var zv, Pv, gv, dv;
+            const Nv = (0, pv.e)(Sv);
+            if (void 0 === Nv) continue;
+            const lv = null !== (gv = ev.c.get((0, hv.g)(Nv, "showInCreativeInven"))) && void 0 !== gv ? gv : null === (dv = Cv) || void 0 === dv ? void 0 : dv.showInCreativeInvenOf(Sv);
+            "boolean" === typeof lv && (vv[Nv] = lv)
+          }
+          return {
+            publicLobby: (0, Sv.S)((0, Nv.c)().lobbyName),
+            shownInGame: vv
+          }
+        }), ["connectedGameChanged"], (0, gv.k)("ShowInCreativeInven")),
+        fullInventory: (0, gv.o)(jv, [], (0, gv.m)("useInventory", "useFullInventory"))
+      },
+      Yv = {
+        inventoryDropRequested: sv.e.events.inventoryDropRequested,
+        chestToggled: sv.e.events.chestToggled,
+        chestRefreshed: sv.e.events.chestRefreshed,
+        inventorySynced: sv.e.events.inventorySynced,
+        enchantingTableOpened: sv.e.events.enchantingTableOpened
+      },
+      nv = {
+        removeInventoryItem: sv.e.commands.removeInventoryItem,
+        swapInventorySlots: sv.e.commands.swapInventorySlots,
+        moveInventoryItem: sv.e.commands.moveInventoryItem,
+        quickMoveInventoryItem: sv.e.commands.quickMoveInventoryItem,
+        closeChest: sv.e.commands.closeChest,
+        setInventoryOpen(vv) {
+          (0, Tv.g)(Wv.u.InventoryOpen, vv ? Wv.u.InventoryOpen : 0)
+        },
+        focusCrafting: sv.e.commands.focusCrafting,
+        craftRecipe: sv.e.commands.craftRecipe,
+        salvageItem: sv.e.commands.salvageItem,
+        enchantItem: sv.e.commands.enchantItem,
+        changeIronChestPasskey(vv) {
+          var zv;
+          let {
+            pos: Pv,
+            Yg: hv
+          } = vv;
+          null === (zv = (0, lv.h)()) || void 0 === zv || zv.send(wv.d.ChangeIronChestPasskey, (0, wv.g)({
+            PS: Pv,
+            Yg: hv
+          }))
+        },
+        openIronChest(vv) {
+          var zv;
+          let {
+            pos: Pv,
+            Yg: hv
+          } = vv;
+          null === (zv = (0, lv.h)()) || void 0 === zv || zv.send(wv.d.OpenIronChest, (0, wv.x)({
+            PS: Pv,
+            Yg: hv
+          }))
+        }
+      },
+      Ov = {
+        enchantingOffer: sv.e.queries.enchantingOffer
+      }
+  },
+  39956: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => hv,
+      e: () => Tv,
+      h: () => pv,
+      l: () => ev,
+      o: () => Sv,
+      q: () => dv,
+      u: () => lv
+    });
+    class hv extends Error {
+      constructor() {
+        super(...arguments), this.name = "CoreCorruption"
+      }
+    }
+
+    function Sv(vv) {
+      return vv instanceof RangeError && /call stack/i.test(vv.message) || vv instanceof Error && "InternalError" === vv.name && /recursion/i.test(vv.message)
+    }
+
+    function ev(vv) {
+      return /out of (executable )?memory|could not allocate memory|array buffer allocation failed/i.test(String(vv))
+    }
+    const gv = /wasm:\/\/|wasm-function\[|\[wasm code\]/;
+
+    function pv(vv) {
+      var zv;
+      return vv instanceof WebAssembly.RuntimeError || vv instanceof hv || Sv(vv) && gv.test(null !== (zv = vv.stack) && void 0 !== zv ? zv : "")
+    }
+
+    function dv(vv, zv) {
+      if (pv(vv)) throw vv;
+      console.error(zv, vv)
+    }
+
+    function Nv(vv, zv, Pv, Sv, ev) {
+      if (zv % Sv !== 0 || zv + Pv > vv.byteLength) throw new hv(`${ev}: ${Pv} bytes at ${zv}, ${Sv}-aligned, outside ${vv.byteLength} bytes of memory`)
+    }
+
+    function lv(vv, zv, Pv, hv, Sv) {
+      return 0 === Pv ? null : (Nv(zv, Pv, hv * vv.BYTES_PER_ELEMENT, vv.BYTES_PER_ELEMENT, Sv), new vv(zv, Pv, hv))
+    }
+
+    function Tv(vv, zv, Pv, hv, Sv) {
+      return 0 === zv ? null : (Nv(vv, zv, Pv, hv, Sv), new DataView(vv, zv, Pv))
+    }
+  },
+  39898: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => hv,
+      f: () => iv,
+      h: () => sv,
+      j: () => Cv,
+      n: () => Wv,
+      q: () => wv,
+      s: () => lv,
+      w: () => Tv,
+      y: () => av
+    });
+    class hv extends Error {
+      constructor(vv) {
+        super(`the join's code did not load: ${vv instanceof Error?vv.message:String(vv)}`, {
+          cause: vv
+        }), this.request = void 0, this.name = "GameCodeLoadError", this.request = null === vv || void 0 === vv ? void 0 : vv.request
+      }
+    }
+    let Sv = null,
+      ev = null,
+      gv = null;
+    const pv = [];
+    let dv = null;
+
+    function Nv(vv, zv) {
+      try {
+        vv(zv)
+      } catch (Pv) {
+        console.error("[bloxd-wasm-client] the game chunk's listener failed", Pv)
+      }
+    }
+
+    function lv() {
+      return dv
+    }
+
+    function Tv(vv) {
+      pv.push(vv), null !== dv && Nv(vv, dv)
+    }
+
+    function Wv(vv) {
+      return Sv ??= Promise.all([Pv.e(70), Pv.e(95), Pv.e(215), Pv.e(75), Pv.e(216), Pv.e(189), Pv.e(94), Pv.e(235), Pv.e(261), Pv.e(187), Pv.e(263), Pv.e(199), Pv.e(186), Pv.e(200), Pv.e(136), Pv.e(86), Pv.e(114), Pv.e(239), Pv.e(54)]).then((() => Pv(41893))).then((zv => {
+        zv.loadAudio(vv), dv = zv;
+        for (const vv of pv) Nv(vv, zv);
+        return zv
+      })).catch((vv => {
+        throw Sv = null, vv
+      })), Sv
+    }
+    async function wv(vv, zv) {
+      try {
+        const Pv = await Wv(vv);
+        await Pv.loadClientGame(zv)
+      } catch (Pv) {
+        throw new hv(Pv)
+      }
+    }
+
+    function av(vv, zv) {
+      ev = {
+        running: vv,
+        shell: zv
+      }
+    }
+
+    function sv() {
+      return gv
+    }
+    async function Cv(vv) {
+      const zv = ev;
+      if ((null === zv || void 0 === zv ? void 0 : zv.running) !== vv) throw new Error("the core's session has ended");
+      const Pv = await Wv(zv.shell.audio).catch((vv => {
+        throw new hv(vv)
+      }));
+      if (null !== gv) return gv;
+      if (ev !== zv || vv.isStopped) throw new Error("the core stopped while the game code loaded");
+      if (gv = Pv.startGameHost(vv, zv.shell), null === gv) throw new Error("the core's shared tables didn't read, so the game can't start");
+      return gv
+    }
+
+    function iv() {
+      null !== gv && (null !== dv ? dv.endGameHost(gv) : gv.closeGame()), gv = null, ev = null
+    }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

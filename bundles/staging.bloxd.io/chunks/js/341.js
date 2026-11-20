@@ -1,68 +1,77 @@
 export const id = 341;
 export const ids = [341];
 export const modules = {
-  41616: (zz, tz, sz) => {
-    function Fz(zz) {
-      return Math.floor(zz / 8)
-    }
-
-    function Wz(zz) {
-      return 1 << zz % 8
-    }
-    sz.d(tz, {
-      OptimizeIndices: () => Oz
+  41819: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => gv
     });
-    class Xz {
-      constructor(zz) {
-        this.size = zz, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
-      }
-      get(zz) {
-        if (zz >= this.size) throw new RangeError("Bit index out of range");
-        const tz = Fz(zz),
-          sz = Wz(zz);
-        return 0 !== (this._byteArray[tz] & sz)
-      }
-      set(zz, tz) {
-        if (zz >= this.size) throw new RangeError("Bit index out of range");
-        const sz = Fz(zz),
-          Xz = Wz(zz);
-        tz ? this._byteArray[sz] |= Xz : this._byteArray[sz] &= ~Xz
-      }
+    var hv = Pv(39162);
+    const Sv = "clipPlaneFragment",
+      ev = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fragmentInputs.fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fragmentInputs.fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fragmentInputs.fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fragmentInputs.fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fragmentInputs.fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fragmentInputs.fClipDistance6>0.0)\n{discard;}\n#endif\n";
+    hv.d.IncludesShadersStoreWGSL[Sv] || (hv.d.IncludesShadersStoreWGSL[Sv] = ev);
+    const gv = {
+      name: Sv,
+      shader: ev
     }
-
-    function Oz(zz) {
-      const tz = [],
-        sz = zz.length / 3;
-      for (let Xz = 0; Xz < sz; Xz++) tz.push([zz[3 * Xz], zz[3 * Xz + 1], zz[3 * Xz + 2]]);
-      const Fz = new Map;
-      for (let Xz = 0; Xz < tz.length; Xz++) {
-        const zz = tz[Xz];
-        for (const tz of zz) {
-          let zz = Fz.get(tz);
-          zz || Fz.set(tz, zz = []), zz.push(Xz)
-        }
-      }
-      const Wz = new Xz(sz),
-        Oz = [],
-        oz = zz => {
-          const sz = [zz];
-          for (; sz.length > 0;) {
-            const zz = sz.pop();
-            if (!Wz.get(zz)) {
-              Wz.set(zz, !0), Oz.push(tz[zz]);
-              for (const Xz of tz[zz]) {
-                const zz = Fz.get(Xz);
-                if (!zz) return;
-                for (const tz of zz) Wz.get(tz) || sz.push(tz)
-              }
-            }
-          }
-        };
-      for (let Xz = 0; Xz < sz; Xz++) Wz.get(Xz) || oz(Xz);
-      let vz = 0;
-      for (const Xz of Oz) zz[vz++] = Xz[0], zz[vz++] = Xz[1], zz[vz++] = Xz[2]
+  },
+  41812: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => gv
+    });
+    var hv = Pv(39162);
+    const Sv = "clipPlaneFragmentDeclaration",
+      ev = "#ifdef CLIPPLANE\nvarying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nvarying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nvarying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nvarying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nvarying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nvarying fClipDistance6: f32;\n#endif\n";
+    hv.d.IncludesShadersStoreWGSL[Sv] || (hv.d.IncludesShadersStoreWGSL[Sv] = ev);
+    const gv = {
+      name: Sv,
+      shader: ev
+    }
+  },
+  41847: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => gv
+    });
+    var hv = Pv(39162);
+    const Sv = "fogFragment",
+      ev = "#ifdef FOG\nvar fog: f32=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor= vec4f(mix(uniforms.vFogColor,color.rgb,fog),color.a);\n#endif\n";
+    hv.d.IncludesShadersStoreWGSL[Sv] || (hv.d.IncludesShadersStoreWGSL[Sv] = ev);
+    const gv = {
+      name: Sv,
+      shader: ev
+    }
+  },
+  41815: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => gv
+    });
+    var hv = Pv(39162);
+    const Sv = "fogFragmentDeclaration",
+      ev = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\nconst E=2.71828;uniform vFogInfos: vec4f;uniform vFogColor: vec3f;varying vFogDistance: vec3f;fn CalcFogFactor()->f32\n{var fogCoeff: f32=1.0;var fogStart: f32=uniforms.vFogInfos.y;var fogEnd: f32=uniforms.vFogInfos.z;var fogDensity: f32=uniforms.vFogInfos.w;var fogDistance: f32=length(fragmentInputs.vFogDistance);if (FOGMODE_LINEAR==uniforms.vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==uniforms.vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
+    hv.d.IncludesShadersStoreWGSL[Sv] || (hv.d.IncludesShadersStoreWGSL[Sv] = ev);
+    const gv = {
+      name: Sv,
+      shader: ev
+    }
+  },
+  41872: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      colorPixelShaderWGSL: () => Tv
+    });
+    var hv = Pv(39162),
+      Sv = Pv(41812),
+      ev = Pv(41815),
+      gv = Pv(41819),
+      pv = Pv(41847);
+    const dv = "colorPixelShader",
+      Nv = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vColor: vec4f;\n#else\nuniform color: vec4f;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nfragmentOutputs.color=input.vColor;\n#else\nfragmentOutputs.color=uniforms.color;\n#endif\n#include<fogFragment>(color,fragmentOutputs.color)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
+    hv.d.ShadersStoreWGSL[dv] || (hv.d.ShadersStoreWGSL[dv] = Nv);
+    const lv = [Sv.c, ev.c, gv.e, pv.c];
+    for (const Wv of lv) hv.d.IncludesShadersStoreWGSL[Wv.name] || (hv.d.IncludesShadersStoreWGSL[Wv.name] = Wv.shader);
+    const Tv = {
+      name: dv,
+      shader: Nv
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

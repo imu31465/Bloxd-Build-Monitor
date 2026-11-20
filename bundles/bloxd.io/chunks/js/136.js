@@ -1,388 +1,401 @@
 export const id = 136;
 export const ids = [136];
 export const modules = {
-  7590: (zz, tz) => {
-    var sz = "youtube",
-      Fz = [61802],
-      Wz = "f167",
-      Xz = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
-    tz.d = {
+  7761: (vv, zv) => {
+    var Pv = "youtube",
+      hv = [61802],
+      Sv = "f167",
+      ev = "M549.7 124.1C543.5 100.4 524.9 81.8 501.4 75.5 458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5C51.2 81.8 32.7 100.4 26.4 124.1 15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8 42.6 11.5 213.4 11.5 213.4 11.5s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6l0-162.4 142.7 81.2-142.7 81.2z";
+    zv.d = {
       prefix: "fab",
-      iconName: sz,
-      icon: [576, 512, Fz, Wz, Xz]
-    }, tz.e = tz.d
+      iconName: Pv,
+      icon: [576, 512, hv, Sv, ev]
+    }, zv.g = zv.d
   },
-  6417: (zz, tz) => {
-    Object.defineProperty(tz, "__esModule", {
+  6558: (vv, zv) => {
+    Object.defineProperty(zv, "__esModule", {
       value: !0
     });
-    var sz = "bolt",
-      Fz = [9889, "zap"],
-      Wz = "f0e7",
-      Xz = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
-    tz.definition = {
+    var Pv = "bolt",
+      hv = [9889, "zap"],
+      Sv = "f0e7",
+      ev = "M338.8-9.9c11.9 8.6 16.3 24.2 10.9 37.8L271.3 224 416 224c13.5 0 25.5 8.4 30.1 21.1s.7 26.9-9.6 35.5l-288 240c-11.3 9.4-27.4 9.9-39.3 1.3s-16.3-24.2-10.9-37.8L176.7 288 32 288c-13.5 0-25.5-8.4-30.1-21.1s-.7-26.9 9.6-35.5l288-240c11.3-9.4 27.4-9.9 39.3-1.3z";
+    zv.definition = {
       prefix: "fas",
-      iconName: sz,
-      icon: [448, 512, Fz, Wz, Xz]
-    }, tz.faBolt = tz.definition, tz.prefix = "fas", tz.iconName = sz, tz.width = 448, tz.height = 512, tz.ligatures = Fz, tz.unicode = Wz, tz.svgPathData = Xz, tz.aliases = Fz
+      iconName: Pv,
+      icon: [448, 512, hv, Sv, ev]
+    }, zv.faBolt = zv.definition, zv.prefix = "fas", zv.iconName = Pv, zv.width = 448, zv.height = 512, zv.ligatures = hv, zv.unicode = Sv, zv.svgPathData = ev, zv.aliases = hv
   },
-  7099: (zz, tz) => {
-    var sz = "person-military-pointing",
-      Fz = [],
-      Wz = "e54a",
-      Xz = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
-    tz.d = {
+  7246: (vv, zv) => {
+    var Pv = "person-military-pointing",
+      hv = [],
+      Sv = "e54a",
+      ev = "M214.9 14.1C202 15.2 192 26 192 39 192 52.8 203.2 64 217 64l151 0c8.8 0 16-7.2 16-16l0-30.6C384 8 376 .7 366.7 1.4L214.9 14.1zM208 112c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16L209.6 96c-1 5.2-1.6 10.5-1.6 16zM40 224c-22.1 0-40 17.9-40 40s17.9 40 40 40l152 0 0 89.4 162.8-162.8c-13.3-4.3-27.3-6.5-41.6-6.5L40 224zm345.7 20.9l-171.1 171.1 169.4 0 0-46.3 53.6 90.6c11.2 19 35.8 25.3 54.8 14.1s25.3-35.8 14.1-54.8L430.3 290.8c-11.2-19-26.6-34.5-44.6-45.9zM192 448l0 32c0 17.7 14.3 32 32 32l128 0c17.7 0 32-14.3 32-32l0-32-192 0z";
+    zv.b = {
       prefix: "fas",
-      iconName: sz,
-      icon: [512, 512, Fz, Wz, Xz]
-    }, tz.e = tz.d
+      iconName: Pv,
+      icon: [512, 512, hv, Sv, ev]
+    }, zv.e = zv.b
   },
-  7244: (zz, tz) => {
-    var sz = "sparkle",
-      Fz = [],
-      Wz = "e5d6",
-      Xz = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
-    tz.e = {
+  7385: (vv, zv) => {
+    var Pv = "sparkle",
+      hv = [],
+      Sv = "e5d6",
+      ev = "M278.5 15.6C275 6.2 266 0 256 0s-19 6.2-22.5 15.6L174.2 174.2 15.6 233.5C6.2 237 0 246 0 256s6.2 19 15.6 22.5l158.6 59.4 59.4 158.6C237 505.8 246 512 256 512s19-6.2 22.5-15.6l59.4-158.6 158.6-59.4C505.8 275 512 266 512 256s-6.2-19-15.6-22.5L337.8 174.2 278.5 15.6z";
+    zv.c = {
       prefix: "fas",
-      iconName: sz,
-      icon: [512, 512, Fz, Wz, Xz]
-    }, tz.i = tz.e
+      iconName: Pv,
+      icon: [512, 512, hv, Sv, ev]
+    }, zv.g = zv.c
   },
-  7335: (zz, tz) => {
-    var sz = "user",
-      Fz = [128100, 62144, 62470, "user-alt", "user-large"],
-      Wz = "f007",
-      Xz = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
-    tz.b = {
+  7479: (vv, zv) => {
+    var Pv = "user",
+      hv = [128100, 62144, 62470, "user-alt", "user-large"],
+      Sv = "f007",
+      ev = "M224 248a120 120 0 1 0 0-240 120 120 0 1 0 0 240zm-29.7 56C95.8 304 16 383.8 16 482.3 16 498.7 29.3 512 45.7 512l356.6 0c16.4 0 29.7-13.3 29.7-29.7 0-98.5-79.8-178.3-178.3-178.3l-59.4 0z";
+    zv.c = {
       prefix: "fas",
-      iconName: sz,
-      icon: [448, 512, Fz, Wz, Xz]
-    }, tz.f = tz.b
+      iconName: Pv,
+      icon: [448, 512, hv, Sv, ev]
+    }, zv.f = zv.c
   },
-  7467: (zz, tz) => {
-    var sz = "wrench",
-      Fz = [128295],
-      Wz = "f0ad",
-      Xz = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
-    tz.d = {
+  7612: (vv, zv) => {
+    var Pv = "wrench",
+      hv = [128295],
+      Sv = "f0ad",
+      ev = "M509.4 98.6c7.6-7.6 20.3-5.7 24.1 4.3 6.8 17.7 10.5 37 10.5 57.1 0 88.4-71.6 160-160 160-17.5 0-34.4-2.8-50.2-8L146.9 498.9c-28.1 28.1-73.7 28.1-101.8 0s-28.1-73.7 0-101.8L232 210.2c-5.2-15.8-8-32.6-8-50.2 0-88.4 71.6-160 160-160 20.1 0 39.4 3.7 57.1 10.5 10 3.8 11.8 16.5 4.3 24.1l-88.7 88.7c-3 3-4.7 7.1-4.7 11.3l0 41.4c0 8.8 7.2 16 16 16l41.4 0c4.2 0 8.3-1.7 11.3-4.7l88.7-88.7z";
+    zv.d = {
       prefix: "fas",
-      iconName: sz,
-      icon: [576, 512, Fz, Wz, Xz]
-    }, tz.f = tz.d
+      iconName: Pv,
+      icon: [576, 512, hv, Sv, ev]
+    }, zv.f = zv.d
   },
-  7483: (zz, tz, sz) => {
-    var Fz = sz(6417);
-    tz.c = {
-      prefix: Fz.prefix,
-      iconName: Fz.iconName,
-      icon: [Fz.width, Fz.height, Fz.aliases, Fz.unicode, Fz.svgPathData]
-    }, tz.g = tz.c, Fz.prefix, Fz.iconName, Fz.width, Fz.height, Fz.aliases, Fz.unicode, Fz.svgPathData, Fz.aliases
+  7633: (vv, zv, Pv) => {
+    var hv = Pv(6558);
+    zv.d = {
+      prefix: hv.prefix,
+      iconName: hv.iconName,
+      icon: [hv.width, hv.height, hv.aliases, hv.unicode, hv.svgPathData]
+    }, zv.f = zv.d, hv.prefix, hv.iconName, hv.width, hv.height, hv.aliases, hv.unicode, hv.svgPathData, hv.aliases
   },
-  39867: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => oz,
-      e: () => Oz
+  40054: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => pv,
+      h: () => gv
     });
-    var Fz = sz(2970);
-    let Wz = null,
-      Xz = null;
+    var hv = Pv(3039);
+    let Sv = null,
+      ev = null;
 
-    function Oz() {
-      return Xz ??= sz.e(208).then((() => sz(35839))).then((zz => {
+    function gv() {
+      return ev ??= Pv.e(208).then((() => Pv(35890))).then((vv => {
         let {
-          ITEM_SPRITES: tz,
-          ITEM_SPRITES_WITHOUT_FILE: sz,
-          ITEM_FILES_WITHOUT_SPRITE: Xz
-        } = zz;
-        Wz = function(zz, tz, sz) {
-          const Wz = new Set,
-            Xz = (0, Fz.t)(tz);
-          let Oz = 0;
-          for (const [Fz, oz] of zz.entries()) Fz === Xz[Oz] ? Oz++ : Wz.add(oz);
-          if ("" !== sz)
-            for (const oz of sz.split(Fz.o)) Wz.add(oz);
-          return Wz
-        }(tz.split(Fz.o), sz, Xz)
-      }), (zz => {
-        throw Xz = null, zz
-      })), Xz
+          ITEM_SPRITES: zv,
+          ITEM_SPRITES_WITHOUT_FILE: Pv,
+          ITEM_FILES_WITHOUT_SPRITE: ev
+        } = vv;
+        Sv = function(vv, zv, Pv) {
+          const Sv = new Set,
+            ev = (0, hv.q)(zv);
+          let gv = 0;
+          for (const [hv, pv] of vv.entries()) hv === ev[gv] ? gv++ : Sv.add(pv);
+          if ("" !== Pv)
+            for (const pv of Pv.split(hv.n)) Sv.add(pv);
+          return Sv
+        }(zv.split(hv.n), Pv, ev)
+      }), (vv => {
+        throw ev = null, vv
+      })), ev
     }
 
-    function oz(zz) {
-      var tz, sz;
-      return null !== (tz = null === (sz = Wz) || void 0 === sz ? void 0 : sz.has(zz)) && void 0 !== tz && tz
+    function pv(vv) {
+      var zv, Pv;
+      return null !== (zv = null === (Pv = Sv) || void 0 === Pv ? void 0 : Pv.has(vv)) && void 0 !== zv && zv
     }
   },
-  39864: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Oz,
-      f: () => oz
+  40047: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => gv,
+      e: () => pv
     });
-    var Fz = sz(39867);
-    let Wz = null,
-      Xz = null;
+    var hv = Pv(40054);
+    let Sv = null,
+      ev = null;
 
-    function Oz() {
-      return Wz ??= sz.e(58).then((() => sz(41697))).catch((zz => {
-        throw Wz = null, zz
-      })), Wz
+    function gv() {
+      return Sv ??= Pv.e(59).then((() => Pv(41959))).catch((vv => {
+        throw Sv = null, vv
+      })), Sv
     }
 
-    function oz() {
-      return Xz ??= Promise.all([Oz(), (0, Fz.e)()]).then((zz => {
-        let [tz] = zz;
-        return tz
-      }), (zz => {
-        throw Xz = null, zz
-      })), Xz
+    function pv() {
+      return ev ??= Promise.all([gv(), (0, hv.h)()]).then((vv => {
+        let [zv] = vv;
+        return zv
+      }), (vv => {
+        throw ev = null, vv
+      })), ev
     }
   },
-  41659: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => nz,
-      g: () => Rz,
-      h: () => iz,
-      l: () => Lz,
-      p: () => lz,
-      q: () => Ez,
-      u: () => kz,
-      x: () => Qz
+  41913: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => Jv,
+      f: () => Xv,
+      h: () => Mv,
+      k: () => yv,
+      l: () => Bv,
+      m: () => zz,
+      q: () => Hv,
+      r: () => Lv
     });
-    var Fz = sz(4107),
-      Wz = sz(4133),
-      Xz = sz(8866),
-      Oz = sz(2965),
-      oz = sz(2962),
-      vz = sz(1081),
-      Uz = sz(40068),
-      Kz = sz(106),
-      uz = sz(1244),
-      Nz = sz(39864),
-      bz = sz(7590),
-      wz = sz(7099),
-      Dz = sz(7244),
-      gz = sz(7335),
-      Hz = sz(7467),
-      Bz = sz(7483);
-    const Pz = {
-      youtube: bz.e,
-      "person-military-pointing": wz.e,
-      sparkle: Dz.i,
-      user: gz.f,
-      wrench: Hz.f,
-      zap: Bz.g
+    var hv = Pv(4220),
+      Sv = Pv(4247),
+      ev = Pv(9019),
+      gv = Pv(3037),
+      pv = Pv(3033),
+      dv = Pv(1074),
+      Nv = Pv(40284),
+      lv = Pv(73),
+      Tv = Pv(1243),
+      Wv = Pv(40042),
+      wv = Pv(40047),
+      av = Pv(7761),
+      sv = Pv(7246),
+      Cv = Pv(7385),
+      iv = Pv(7479),
+      cv = Pv(7612),
+      Gv = Pv(7633);
+    const mv = {
+      youtube: av.g,
+      "person-military-pointing": sv.e,
+      sparkle: Cv.g,
+      user: iv.f,
+      wrench: cv.f,
+      zap: Gv.f
     };
 
-    function rz(zz) {
-      const [tz, sz, , , Fz] = zz.icon;
+    function jv(vv) {
+      const [zv, Pv, , , hv] = vv.icon;
       return {
-        width: tz,
-        height: sz,
-        path: "string" === typeof Fz ? Fz : Fz.join(" ")
+        width: zv,
+        height: Pv,
+        path: "string" === typeof hv ? hv : hv.join(" ")
       }
     }
-    const Yz = new Map(Object.entries(Pz).map((zz => {
-      let [tz, sz] = zz;
-      return [tz, rz(sz)]
+    const fv = new Map(Object.entries(mv).map((vv => {
+      let [zv, Pv] = vv;
+      return [zv, jv(Pv)]
     })));
-    let xz = !1;
-    const mz = new Set;
-    var Jz = sz(39938);
-    const Iz = "Jetbrains Mono",
-      Cz = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
-      ez = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
+    let Fv = !1;
+    const Yv = new Set;
+    var nv = Pv(40134);
+    const Ov = "Jetbrains Mono",
+      Dv = "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+2248,U+26A1,U+2713,U+FEFF,U+FFFD",
+      Kv = "U+0100-0130,U+0132-0151,U+0154-017F,U+018F-0190,U+0192,U+019B,U+01A0-01A1,U+01AF-01B0,U+01CD-01CE,U+01D0,U+01D2,U+01D4,U+01D6,U+01D8,U+01DA,U+01DC,U+01E6-01E7,U+01EA-01EB,U+01F4-01F5,U+01FC-01FF,U+0218-021B,U+0232-0233,U+0237,U+0259,U+02B9-02BA,U+02C7,U+02C9,U+02D8-02D9,U+02DB,U+02DD,U+02F3,U+02F7,U+0300-0303,U+0306-0307,U+0309-030C,U+030F,U+0312,U+031B,U+0323,U+0325-0328,U+0336-0338,U+0374-0375,U+037E,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03CF,U+03D5-03D7,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0493,U+049A-049B,U+04A2-04A3,U+04AE-04B1,U+04B6-04B7,U+04BA-04BB,U+04D8-04D9,U+04DC-04DF,U+04E4-04E9,U+04F4-04F5,U+0AEA,U+1E80-1E85,U+1E9E,U+1EA0-1EF9,U+2070,U+2074-207A,U+207C,U+2080-2089,U+20AB,U+20AE,U+20B4,U+20BD,U+20BF,U+2102,U+210D,U+2113,U+2115-2116,U+2119-211A,U+211D,U+2124,U+212E,U+2140,U+218A-218B,U+2194-2199,U+219D-219E,U+21A0,U+21A2-21A3,U+21A5-21A7,U+21A9-21AA,U+21AD,U+21BE,U+21C9,U+21D0-21D4,U+21DB,U+21DE-21DF,U+21E5,U+21E7-21E8,U+21EA,U+2200-220C,U+220E-2211,U+2213,U+2218-221A,U+221E,U+2223-2225,U+2227-222B,U+2234-2239,U+223C,U+223E,U+2243,U+2245,U+2247,U+2249,U+224B,U+224D,U+2254,U+2257,U+225F-2265,U+226A-2273,U+227A-227C,U+2282-2289,U+228E-2299,U+229B-22A5,U+22B4,U+22B8,U+22BB-22BD,U+22C2-22C4,U+22C6,U+22C8-22CA,U+22CE,U+22D0,U+22E2,U+22EE-22F1,U+2302-2305,U+2308-230B,U+2318,U+231C-231F,U+2324-2326,U+2328,U+232B,U+2336-237A,U+2389-238B,U+2395,U+239B-23AD,U+23CE,U+23FB-23FE,U+2400-2421,U+2423-2424,U+2500-25A1,U+25AA-25AB,U+25B2-25CC,U+25CE-25CF,U+25D4-25D5,U+25E6-25EB,U+25EF,U+25F6,U+266D,U+266F,U+2687,U+26A0,U+2715,U+2717,U+2736,U+276E-2771,U+2794,U+279C-279E,U+27C5-27C6,U+27DC,U+27E6-27EB,U+27F5-27F7,U+2916,U+294A,U+2987-2988,U+2A00,U+2A05-2A06,U+2B58,U+E0A0-E0A2,U+E0B0-E0B3,U+FE62,U+FF5B,U+FF5D,U+16910,U+1D538-1D539,U+1D53B-1D53E,U+1D540-1D544,U+1D546,U+1D54A-1D550,U+1D552-1D56B";
 
-    function Zz(zz) {
-      return zz.split(",").map((zz => {
-        const [tz, sz = tz] = zz.slice(2).split("-");
-        return [parseInt(tz, 16), parseInt(sz, 16)]
+    function Vv(vv) {
+      return vv.split(",").map((vv => {
+        const [zv, Pv = zv] = vv.slice(2).split("-");
+        return [parseInt(zv, 16), parseInt(Pv, 16)]
       }))
     }
-    const Gz = {
-        latin: Zz(Cz),
-        rest: Zz(ez)
+    const Uv = {
+        latin: Vv(Dv),
+        rest: Vv(Kv)
       },
-      Tz = new RegExp(`[${Gz.rest.map((zz=>{let[tz,sz]=zz;return`\\u{${tz.toString(16)}}-\\u{${sz.toString(16)}}`})).join("")}]`, "u");
+      Rv = new RegExp(`[${Uv.rest.map((vv=>{let[zv,Pv]=vv;return`\\u{${zv.toString(16)}}-\\u{${Pv.toString(16)}}`})).join("")}]`, "u");
 
-    function cz(zz) {
-      return tz => {
-        console.warn(`[bloxd-wasm-client] the text font's ${zz} file did not load`, tz)
+    function xv(vv) {
+      return zv => {
+        console.warn(`[bloxd-wasm-client] the text font's ${vv} file did not load`, zv)
       }
     }
-    const jz = 397,
-      Az = 1,
-      yz = {
-        translate: zz => [zz],
-        keyBindingText: zz => zz,
+    const tv = 397,
+      qv = 1,
+      Iv = {
+        translate: vv => [vv],
+        keyBindingText: vv => vv,
         isFriend: () => !1,
         hiddenNames: {},
         loadsFontRest: !1
       };
-    let Mz = null,
-      dz = 0,
-      hz = "none";
+    let Qv = null,
+      Zv = 0,
+      Av = "none";
 
-    function Qz() {
-      return dz
+    function Lv() {
+      return Zv
     }
 
-    function kz() {
-      dz++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? hz = "all" : "none" === hz && (hz = "notBoards")
-    }(0, vz.t)((() => {
+    function Hv() {
+      Zv++, !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0] ? Av = "all" : "none" === Av && (Av = "notBoards")
+    }(0, dv.t)((() => {
       (function() {
-        const zz = xz;
-        return xz = !1, zz
-      })() && kz(!1)
+        const vv = Fv;
+        return Fv = !1, vv
+      })() && Hv(!1)
     }));
-    const iz = new class {
-      constructor(zz) {
-        this.loaded = zz, this.latin = null, this.rest = null, this.restWanted = !1
+    const Mv = new class {
+      constructor(vv) {
+        this.loaded = vv, this.latin = null, this.rest = null, this.restWanted = !1
       }
       load() {
         if (null === this.latin) {
-          this.latin = new FontFace(Iz, `url(${(0,Jz.g)()}) format("woff2")`, {
-            unicodeRange: Cz
-          }).load().then((zz => {
-            document.fonts.add(zz), this.loaded()
-          }), cz("Latin"));
-          const zz = new FontFace(Iz, `url(${(0,Jz.j)()}) format("woff2")`, {
-            unicodeRange: ez,
+          this.latin = new FontFace(Ov, `url(${(0,nv.e)()}) format("woff2")`, {
+            unicodeRange: Dv
+          }).load().then((vv => {
+            document.fonts.add(vv), this.loaded()
+          }), xv("Latin"));
+          const vv = new FontFace(Ov, `url(${(0,nv.g)()}) format("woff2")`, {
+            unicodeRange: Kv,
             display: "swap"
           });
-          document.fonts.add(zz), zz.loaded.then((() => {
+          document.fonts.add(vv), vv.loaded.then((() => {
             this.loaded()
-          }), cz("rest")), this.rest = zz, this.restWanted && zz.load()
+          }), xv("rest")), this.rest = vv, this.restWanted && vv.load()
         }
         return this.latin
       }
       loadRest() {
-        var zz;
-        this.restWanted || (this.restWanted = !0, null === (zz = this.rest) || void 0 === zz || zz.load())
+        var vv;
+        this.restWanted || (this.restWanted = !0, null === (vv = this.rest) || void 0 === vv || vv.load())
       }
-      loadFor(zz) {
-        !this.restWanted && Tz.test(zz) && this.loadRest()
+      loadFor(vv) {
+        !this.restWanted && Rv.test(vv) && this.loadRest()
       }
-    }(kz);
+    }(Hv);
 
-    function Lz(zz) {
-      Object.assign(yz, zz), yz.loadsFontRest && iz.loadRest(), kz(!1)
+    function yv(vv) {
+      Object.assign(Iv, vv), Iv.loadsFontRest && Mv.loadRest(), Hv(!1)
     }
 
-    function lz(zz) {
-      zz !== Mz && (Mz = zz, kz())
+    function Bv(vv) {
+      vv !== Qv && (Qv = vv, Hv())
     }
 
-    function nz(zz) {
-      if ("none" === hz || null === zz) return;
-      zz(jz, "all" === hz ? 0 : Az, new Uint8Array(0)) && (hz = "none")
+    function Jv(vv) {
+      if ("none" === Av || null === vv) return;
+      vv(tv, "all" === Av ? 0 : qv, new Uint8Array(0)) && (Av = "none")
     }
-    const az = new Map;
+    const Ev = new Map,
+      ov = new Map;
 
-    function qz(zz, tz, sz) {
-      const Fz = sz ? `${zz}#${sz.join(",")}` : zz,
-        Wz = az.get(Fz);
-      if (Wz) return Wz.image;
-      const Xz = {
-        image: null
+    function bv(vv, zv, Pv) {
+      var hv;
+      const Sv = Pv ? `${vv}#${Pv.join(",")}` : vv,
+        ev = Ev.get(Sv);
+      if (ev) return ev.image;
+      const gv = {
+        image: null !== (hv = ov.get(Sv)) && void 0 !== hv ? hv : null
       };
-      return az.set(Fz, Xz), tz().then((async zz => {
-        if (null === zz) return null;
-        const tz = new Image;
-        tz.crossOrigin = "anonymous", tz.src = zz, await tz.decode();
-        const Fz = await createImageBitmap(tz);
-        if (!sz) return Fz;
+      return Ev.set(Sv, gv), zv().then((async vv => {
+        if (null === vv) return null;
+        const zv = new Image;
+        zv.crossOrigin = "anonymous", zv.src = vv, await zv.decode();
+        const hv = await createImageBitmap(zv);
+        if (!Pv) return hv;
         try {
-          return function(zz, tz) {
-            let [sz, Fz, Wz] = tz;
-            const Xz = (0, Uz.d)(zz.width, zz.height),
+          return function(vv, zv) {
+            let [Pv, hv, Sv] = zv;
+            const ev = (0, Nv.d)(vv.width, vv.height),
               {
-                canvas: Oz
-              } = Xz;
-            return Xz.drawImage(zz, 0, 0), Xz.globalCompositeOperation = "multiply", Xz.fillStyle = `rgb(${sz}, ${Fz}, ${Wz})`, Xz.fillRect(0, 0, Oz.width, Oz.height), Xz.globalCompositeOperation = "destination-in", Xz.drawImage(zz, 0, 0), Oz
-          }(Fz, sz)
+                canvas: gv
+              } = ev;
+            return ev.drawImage(vv, 0, 0), ev.globalCompositeOperation = "multiply", ev.fillStyle = `rgb(${Pv}, ${hv}, ${Sv})`, ev.fillRect(0, 0, gv.width, gv.height), ev.globalCompositeOperation = "destination-in", ev.drawImage(vv, 0, 0), gv
+          }(hv, Pv)
         } finally {
-          Fz.close()
+          hv.close()
         }
-      })).then((zz => {
-        null !== zz && (Xz.image = zz, kz(!1))
-      }), (tz => {
-        console.warn(`[bloxd-wasm-client] text icon ${zz} did not load`, tz), az.get(Fz) === Xz && az.delete(Fz)
-      })), null
-    }
-    const Sz = new Set(Fz.e),
-      Vz = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
+      })).then((vv => {
+        Ev.get(Sv) === gv && ov.delete(Sv), vv !== gv.image && (gv.image = vv, Hv(!1))
+      }), (zv => {
+        console.warn(`[bloxd-wasm-client] text icon ${vv} did not load`, zv), Ev.get(Sv) === gv && (Ev.delete(Sv), ov.delete(Sv), null !== gv.image && Hv(!1))
+      })), gv.image
+    }(0, Wv.b)((() => {
+      ov.clear();
+      for (const [vv, {
+          image: zv
+        }] of Ev) null !== zv && ov.set(vv, zv);
+      Ev.clear(), Hv(!1)
+    }));
+    const rv = new Set(hv.d),
+      kv = new Set(["CubeBlock", "SlabBlock", "StairsBlock"]);
 
-    function Rz() {
-      (0, Nz.f)().catch((() => {}))
+    function Xv() {
+      (0, wv.e)().catch((() => {}))
     }
 
-    function pz(zz) {
-      return Sz.has(zz) ? qz(`icon:${zz}`, (async () => (await (0, Nz.c)()).ingameIconUrl(zz))) : null
+    function uv(vv) {
+      return rv.has(vv) ? bv(`icon:${vv}`, (async () => {
+        var zv, Pv;
+        return null !== (zv = null === (Pv = (0, Wv.d)()) || void 0 === Pv ? void 0 : Pv.textureUrl(vv)) && void 0 !== zv ? zv : (await (0, wv.d)()).ingameIconUrl(vv)
+      })) : null
     }
-    let fz = "unasked";
-    const Ez = {
+    let vz = "unasked";
+    const zz = {
       get canSeeRealPlayerNames() {
-        return Kz.featureFlags.canSeeRealPlayerNames
+        return lv.featureFlags.canSeeRealPlayerNames
       },
       get canSeePlayerWrittenText() {
-        return Kz.featureFlags.canSeePlayerWrittenText
+        return lv.featureFlags.canSeePlayerWrittenText
       },
       get localPlayerDbId() {
-        return Mz
+        return Qv
       },
-      shownPlayerName: zz => (0, uz.g)(zz, yz.hiddenNames),
-      translate: (zz, tz) => {
-        const sz = "object" === typeof tz && null !== tz ? tz : void 0;
-        return yz.translate(zz, (0, uz.j)(sz, yz.hiddenNames))
+      shownPlayerName: vv => (0, Tv.f)(vv, Iv.hiddenNames),
+      translate: (vv, zv) => {
+        const Pv = "object" === typeof zv && null !== zv ? zv : void 0;
+        return Iv.translate(vv, (0, Tv.g)(Pv, Iv.hiddenNames))
       },
-      keyBindingText: zz => yz.keyBindingText(zz),
-      isFriend: zz => yz.isFriend(zz, yz.hiddenNames),
-      iconImage: function(zz) {
-        if (Sz.has(zz)) return pz(zz);
-        if ("unasked" === fz && (fz = "loading", (0, oz.g)().then((() => {
-            fz = "in", kz(!1)
-          }), (zz => {
-            fz = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", zz)
-          }))), "in" !== fz) return null;
-        const tz = (0, Oz.b)(zz),
-          sz = void 0 === tz ? void 0 : (0, Xz.itemTypeNameOf)(tz);
-        if ("Gun" === sz) return null;
-        const Fz = (0, oz.e)(zz),
-          vz = void 0 !== sz && Vz.has(sz);
-        if (vz && void 0 === Fz) return null;
-        const Uz = void 0 !== tz && "GrayscaleArmour" === (0, Xz.itemTypeOf)(tz) || Object.hasOwn(Wz.c, zz),
-          Kz = null !== Fz && void 0 !== Fz ? Fz : zz;
-        return qz(vz ? `block:${Kz}` : `item:${Kz}`, (async () => {
-          var zz;
-          const tz = await (0, Nz.f)();
-          return null !== (zz = tz.itemSpriteUrl(Kz)) && void 0 !== zz ? zz : vz ? null : tz.notFoundUrl()
-        }), Uz ? (0, Wz.e)(zz) : void 0)
+      keyBindingText: vv => Iv.keyBindingText(vv),
+      isFriend: vv => Iv.isFriend(vv, Iv.hiddenNames),
+      iconImage: function(vv) {
+        if (rv.has(vv)) return uv(vv);
+        if ("unasked" === vz && (vz = "loading", (0, pv.i)().then((() => {
+            vz = "in", Hv(!1)
+          }), (vv => {
+            vz = "failed", console.warn("[bloxd-wasm-client] the item sprite table did not load, so text item icons stay blank", vv)
+          }))), "in" !== vz) return null;
+        const zv = (0, gv.c)(vv),
+          Pv = void 0 === zv ? void 0 : (0, ev.itemTypeNameOf)(zv);
+        if ("Gun" === Pv) return null;
+        const hv = (0, pv.e)(vv),
+          dv = void 0 !== Pv && kv.has(Pv);
+        if (dv && void 0 === hv) return null;
+        const Nv = void 0 !== zv && "GrayscaleArmour" === (0, ev.itemTypeOf)(zv) || Object.hasOwn(Sv.c, vv),
+          lv = null !== hv && void 0 !== hv ? hv : vv;
+        return bv(dv ? `block:${lv}` : `item:${lv}`, (async () => {
+          var vv, zv;
+          const Pv = (0, Wv.d)(),
+            hv = await (0, wv.e)();
+          return null !== (vv = null !== (zv = null === Pv || void 0 === Pv ? void 0 : Pv.textureUrl(lv)) && void 0 !== zv ? zv : hv.itemSpriteUrl(lv)) && void 0 !== vv ? vv : dv ? null : hv.notFoundUrl()
+        }), Nv ? (0, Sv.g)(vv) : void 0)
       },
-      effectImage: pz,
-      rankIcon: function(zz) {
-        const tz = Yz.get(zz);
-        if (tz) return tz;
-        const sz = (0, vz.g)(zz, (0, vz.o)(zz));
-        if (!sz) return (0, vz.k)("brands") && (0, vz.k)("solid") ? mz.has(zz) || (mz.add(zz), console.warn(`[bloxd-wasm-client] unknown rank icon "${zz}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : xz = !0, null;
-        const Fz = rz(sz);
-        return Yz.set(zz, Fz), Fz
+      effectImage: uv,
+      rankIcon: function(vv) {
+        const zv = fv.get(vv);
+        if (zv) return zv;
+        const Pv = (0, dv.g)(vv, (0, dv.l)(vv));
+        if (!Pv) return (0, dv.h)("brands") && (0, dv.h)("solid") ? Yv.has(vv) || (Yv.add(vv), console.warn(`[bloxd-wasm-client] unknown rank icon "${vv}": not in the bundled Font Awesome subset, so its tag draws no icon`)) : Fv = !0, null;
+        const hv = jv(Pv);
+        return fv.set(vv, hv), hv
       },
-      glyphsShown: zz => {
-        iz.loadFor(zz)
+      glyphsShown: vv => {
+        Mv.loadFor(vv)
       }
     }
   },
-  41656: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => xt,
-      f: () => Dt
+  41905: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => fz,
+      f: () => sz
     });
-    var Fz = sz(36189),
-      Wz = sz(40068),
-      Xz = sz(38279),
-      Oz = sz(571),
-      oz = sz(308);
-    const vz = {
+    var hv = Pv(36266),
+      Sv = Pv(40284),
+      ev = Pv(38398),
+      gv = Pv(602),
+      pv = Pv(302);
+    const dv = {
         DEFAULT_FONT_SIZE: 47,
         DEFAULT_SUBTITLE_FONT_SIZE: 30,
         HORIZONTAL_PADDING: 30,
@@ -391,220 +404,220 @@ export const modules = {
         LINE_SPACING: 8,
         EFFECT_ICON_SIZE: 70
       },
-      Uz = 41;
+      Nv = 41;
 
-    function Kz(zz) {
-      return `bolder ${zz}px 'Jetbrains Mono'`
+    function lv(vv) {
+      return `bolder ${vv}px 'Jetbrains Mono'`
     }
 
-    function uz(zz) {
-      return "object" === typeof zz && null !== zz
+    function Tv(vv) {
+      return "object" === typeof vv && null !== vv
     }
 
-    function Nz(zz, tz) {
-      const sz = "number" === typeof zz ? zz : "string" === typeof zz ? Number(zz.replace("px", "")) : NaN;
-      return Number.isFinite(sz) && sz > 0 ? sz : tz
+    function Wv(vv, zv) {
+      const Pv = "number" === typeof vv ? vv : "string" === typeof vv ? Number(vv.replace("px", "")) : NaN;
+      return Number.isFinite(Pv) && Pv > 0 ? Pv : zv
     }
 
-    function bz(zz) {
-      return uz(zz) ? zz : void 0
+    function wv(vv) {
+      return Tv(vv) ? vv : void 0
     }
 
-    function wz(zz) {
-      const tz = "number" === typeof zz ? Oz.w[zz] : zz;
-      return "string" === typeof tz && Object.hasOwn(Oz.m, tz) ? Oz.m[tz] : void 0
+    function av(vv) {
+      const zv = "number" === typeof vv ? gv.w[vv] : vv;
+      return "string" === typeof zv && Object.hasOwn(gv.j, zv) ? gv.j[zv] : void 0
     }
 
-    function Dz(zz, tz) {
-      return "string" === typeof zz ? zz : uz(zz) ? "string" === typeof zz.translationKey ? tz.translate(zz.translationKey, zz.params).map((zz => "string" === typeof zz ? zz : zz.icon)).join("") : "string" === typeof zz.entityName ? tz.shownPlayerName(zz.entityName) : "" : void 0 === zz || null === zz ? "" : String(zz)
+    function sv(vv, zv) {
+      return "string" === typeof vv ? vv : Tv(vv) ? "string" === typeof vv.translationKey ? zv.translate(vv.translationKey, vv.params).map((vv => "string" === typeof vv ? vv : vv.icon)).join("") : "string" === typeof vv.entityName ? zv.shownPlayerName(vv.entityName) : "" : void 0 === vv || null === vv ? "" : String(vv)
     }
 
-    function gz(zz, tz, sz, Fz) {
-      if (!Array.isArray(zz)) return [];
-      const Wz = [];
-      for (const Kz of zz) {
-        var Xz, Oz;
-        if (uz(Kz) && "chatTag" in Kz) {
-          Wz.push({
+    function Cv(vv, zv, Pv, hv) {
+      if (!Array.isArray(vv)) return [];
+      const Sv = [];
+      for (const lv of vv) {
+        var ev, gv;
+        if (Tv(lv) && "chatTag" in lv) {
+          Sv.push({
             kind: "rank",
-            rank: Kz
+            rank: lv
           });
           continue
         }
-        if (uz(Kz) && "icon" in Kz && !("mainRGB" in Kz)) {
-          var Uz;
-          Wz.push({
+        if (Tv(lv) && "icon" in lv && !("mainRGB" in lv)) {
+          var Nv;
+          Sv.push({
             kind: "icon",
-            icon: String(Kz.icon),
-            size: Nz(null === (Uz = bz(Kz.style)) || void 0 === Uz ? void 0 : Uz.fontSize, vz.DEFAULT_FONT_SIZE)
+            icon: String(lv.icon),
+            size: Wv(null === (Nv = wv(lv.style)) || void 0 === Nv ? void 0 : Nv.fontSize, dv.DEFAULT_FONT_SIZE)
           });
           continue
         }
-        if (uz(Kz) && (0, oz.yb)(Kz)) {
-          Wz.push({
+        if (Tv(lv) && (0, pv.qb)(lv)) {
+          Sv.push({
             kind: "text",
             text: "",
-            size: tz,
-            colour: Fz
+            size: zv,
+            colour: hv
           });
           continue
         }
-        let zz, wz;
-        uz(Kz) && (0, oz.vb)(Kz) ? (zz = sz.keyBindingText(String(Kz.action)), wz = bz(Kz.style)) : uz(Kz) && "str" in Kz ? (zz = Kz.str, wz = bz(Kz.style)) : zz = Kz;
-        const gz = Nz(null === (Xz = wz) || void 0 === Xz ? void 0 : Xz.fontSize, tz),
-          Hz = null !== (Oz = (0, oz.Xb)(wz)) && void 0 !== Oz ? Oz : Fz;
-        if (uz(zz) && "string" === typeof zz.translationKey) {
-          const tz = sz.translate(zz.translationKey, zz.params);
-          if (tz.some((zz => "string" !== typeof zz))) {
-            for (const zz of tz) Wz.push("string" === typeof zz ? {
+        let vv, av;
+        Tv(lv) && (0, pv.mb)(lv) ? (vv = Pv.keyBindingText(String(lv.action)), av = wv(lv.style)) : Tv(lv) && "str" in lv ? (vv = lv.str, av = wv(lv.style)) : vv = lv;
+        const Cv = Wv(null === (ev = av) || void 0 === ev ? void 0 : ev.fontSize, zv),
+          iv = null !== (gv = (0, pv.Ob)(av)) && void 0 !== gv ? gv : hv;
+        if (Tv(vv) && "string" === typeof vv.translationKey) {
+          const zv = Pv.translate(vv.translationKey, vv.params);
+          if (zv.some((vv => "string" !== typeof vv))) {
+            for (const vv of zv) Sv.push("string" === typeof vv ? {
               kind: "text",
-              text: zz,
-              size: gz,
-              colour: Hz
+              text: vv,
+              size: Cv,
+              colour: iv
             } : {
               kind: "icon",
-              icon: zz.icon,
-              size: gz
+              icon: vv.icon,
+              size: Cv
             });
             continue
           }
         }
-        Wz.push({
+        Sv.push({
           kind: "text",
-          text: Dz(zz, sz),
-          size: gz,
-          colour: Hz
+          text: sv(vv, Pv),
+          size: Cv,
+          colour: iv
         })
       }
-      return Wz
+      return Sv
     }
 
-    function Hz(zz) {
-      return void 0 !== zz && "rank" !== zz.kind
+    function iv(vv) {
+      return void 0 !== vv && "rank" !== vv.kind
     }
 
-    function Bz(zz, tz) {
-      const sz = Hz(zz),
-        Fz = Hz(tz);
-      return void 0 === zz && !Fz || !sz && void 0 === tz ? 0 : sz !== Fz ? .5 * vz.HORIZONTAL_PADDING : 0
+    function cv(vv, zv) {
+      const Pv = iv(vv),
+        hv = iv(zv);
+      return void 0 === vv && !hv || !Pv && void 0 === zv ? 0 : Pv !== hv ? .5 * dv.HORIZONTAL_PADDING : 0
     }
 
-    function Pz(zz) {
-      return "rank" === zz.kind ? vz.DEFAULT_FONT_SIZE : zz.size
+    function Gv(vv) {
+      return "rank" === vv.kind ? dv.DEFAULT_FONT_SIZE : vv.size
     }
 
-    function rz(zz, tz, sz) {
-      return "icon" === zz.kind ? zz.size : "rank" === zz.kind ? function(zz, tz) {
-        const sz = tz.rankIcon(zz.rank.icon);
-        return sz ? Uz * (sz.width / sz.height) : Uz
-      }(zz, sz) + vz.HORIZONTAL_PADDING : (sz.glyphsShown(zz.text), tz.font = Kz(zz.size), tz.measureText(zz.text).width)
+    function mv(vv, zv, Pv) {
+      return "icon" === vv.kind ? vv.size : "rank" === vv.kind ? function(vv, zv) {
+        const Pv = zv.rankIcon(vv.rank.icon);
+        return Pv ? Nv * (Pv.width / Pv.height) : Nv
+      }(vv, Pv) + dv.HORIZONTAL_PADDING : (Pv.glyphsShown(vv.text), zv.font = lv(vv.size), zv.measureText(vv.text).width)
     }
 
-    function Yz(zz, tz, sz) {
-      if (0 === zz.length) return {
+    function jv(vv, zv, Pv) {
+      if (0 === vv.length) return {
         width: 0,
         height: 0,
         sizes: []
       };
-      let Fz = 0;
-      for (const Oz of zz) Fz = Math.max(Fz, Pz(Oz));
-      const Wz = [];
-      let Xz = Bz(void 0, zz[0]);
-      for (let Oz = 0; Oz < zz.length; Oz++) {
-        const Fz = Xz;
-        Xz += rz(zz[Oz], tz, sz), Xz += Bz(zz[Oz], zz[Oz + 1]), Wz.push({
-          x: Fz,
-          width: Xz - Fz
+      let hv = 0;
+      for (const gv of vv) hv = Math.max(hv, Gv(gv));
+      const Sv = [];
+      let ev = cv(void 0, vv[0]);
+      for (let gv = 0; gv < vv.length; gv++) {
+        const hv = ev;
+        ev += mv(vv[gv], zv, Pv), ev += cv(vv[gv], vv[gv + 1]), Sv.push({
+          x: hv,
+          width: ev - hv
         })
       }
       return {
-        width: Xz,
-        height: Fz + vz.VERTICAL_PADDING,
-        sizes: Wz
+        width: ev,
+        height: hv + dv.VERTICAL_PADDING,
+        sizes: Sv
       }
     }
 
-    function xz(zz, tz, sz, Fz, Wz, Xz, Oz) {
-      tz += Bz(void 0, zz[0]);
-      for (let oz = 0; oz < zz.length; oz++) {
-        const vz = mz(zz[oz], tz, sz, Fz, Wz, Xz, Oz);
-        tz += 0 === vz ? 0 : vz + Bz(zz[oz], zz[oz + 1])
+    function fv(vv, zv, Pv, hv, Sv, ev, gv) {
+      zv += cv(void 0, vv[0]);
+      for (let pv = 0; pv < vv.length; pv++) {
+        const dv = Fv(vv[pv], zv, Pv, hv, Sv, ev, gv);
+        zv += 0 === dv ? 0 : dv + cv(vv[pv], vv[pv + 1])
       }
     }
 
-    function mz(zz, tz, sz, Fz, Wz, Xz, Oz, oz) {
-      var uz;
-      if ("icon" === zz.kind) {
-        const Fz = Xz.iconImage(zz.icon);
-        return Fz && Oz.push({
-          image: Fz,
-          x: tz,
-          y: sz + vz.VERTICAL_PADDING / 2,
-          size: zz.size
-        }), zz.size
+    function Fv(vv, zv, Pv, hv, Sv, ev, gv, pv) {
+      var Tv;
+      if ("icon" === vv.kind) {
+        const hv = ev.iconImage(vv.icon);
+        return hv && gv.push({
+          image: hv,
+          x: zv,
+          y: Pv + dv.VERTICAL_PADDING / 2,
+          size: vv.size
+        }), vv.size
       }
-      if ("rank" === zz.kind) {
-        const Oz = null !== oz && void 0 !== oz ? oz : rz(zz, Wz, Xz);
-        return function(zz, tz, sz, Fz, Wz, Xz, Oz) {
-          var oz, Kz;
+      if ("rank" === vv.kind) {
+        const gv = null !== pv && void 0 !== pv ? pv : mv(vv, Sv, ev);
+        return function(vv, zv, Pv, hv, Sv, ev, gv) {
+          var pv, lv;
           const {
-            rank: uz
-          } = zz;
-          Xz.fillStyle = uz.mainRGB, Xz.fillRect(tz, sz, Fz, Wz);
-          const Nz = Oz.rankIcon(uz.icon);
-          if (!Nz) return;
-          const bz = Uz / Nz.height,
-            wz = tz + (Fz - Nz.width * bz) / 2,
-            Dz = sz + (Wz - Uz) / 2,
-            gz = new Path2D(Nz.path),
-            Hz = vz.TEXT_SHADOW_WIDTH,
-            Bz = (null === (oz = uz.nameTag) || void 0 === oz ? void 0 : oz.iconShadowRGB) || "black";
-          for (const vz of [-1, 1])
-            for (const zz of [-1, 1]) Iz(Xz, gz, wz + Hz * vz, Dz + Hz * zz, bz, Bz);
-          Iz(Xz, gz, wz, Dz, bz, (null === (Kz = uz.nameTag) || void 0 === Kz ? void 0 : Kz.iconRGB) || "white")
-        }(zz, tz, sz, Oz, Fz, Wz, Xz), Oz
+            rank: Tv
+          } = vv;
+          ev.fillStyle = Tv.mainRGB, ev.fillRect(zv, Pv, hv, Sv);
+          const Wv = gv.rankIcon(Tv.icon);
+          if (!Wv) return;
+          const wv = Nv / Wv.height,
+            av = zv + (hv - Wv.width * wv) / 2,
+            sv = Pv + (Sv - Nv) / 2,
+            Cv = new Path2D(Wv.path),
+            iv = dv.TEXT_SHADOW_WIDTH,
+            cv = (null === (pv = Tv.nameTag) || void 0 === pv ? void 0 : pv.iconShadowRGB) || "black";
+          for (const dv of [-1, 1])
+            for (const vv of [-1, 1]) nv(ev, Cv, av + iv * dv, sv + iv * vv, wv, cv);
+          nv(ev, Cv, av, sv, wv, (null === (lv = Tv.nameTag) || void 0 === lv ? void 0 : lv.iconRGB) || "white")
+        }(vv, zv, Pv, gv, hv, Sv, ev), gv
       }
-      if (0 === zz.text.length) return 0;
-      const Nz = Kz(zz.size);
-      Wz.font = Nz;
-      const bz = null !== oz && void 0 !== oz ? oz : Wz.measureText(zz.text).width;
-      return function(zz, tz, sz, Fz, Wz, Xz) {
-        const Oz = vz.TEXT_SHADOW_WIDTH;
-        Xz.font = Fz, Xz.fillStyle = "black";
-        for (const oz of [-1, 1])
-          for (const Fz of [-1, 1]) Xz.fillText(zz, tz + Oz * oz, sz + Oz * Fz);
-        Xz.fillStyle = Wz, Xz.fillText(zz, tz, sz)
-      }(zz.text, tz, sz + Fz - vz.VERTICAL_PADDING + 5, Nz, null !== (uz = zz.colour) && void 0 !== uz ? uz : "white", Wz), bz
+      if (0 === vv.text.length) return 0;
+      const Wv = lv(vv.size);
+      Sv.font = Wv;
+      const wv = null !== pv && void 0 !== pv ? pv : Sv.measureText(vv.text).width;
+      return function(vv, zv, Pv, hv, Sv, ev) {
+        const gv = dv.TEXT_SHADOW_WIDTH;
+        ev.font = hv, ev.fillStyle = "black";
+        for (const pv of [-1, 1])
+          for (const hv of [-1, 1]) ev.fillText(vv, zv + gv * pv, Pv + gv * hv);
+        ev.fillStyle = Sv, ev.fillText(vv, zv, Pv)
+      }(vv.text, zv, Pv + hv - dv.VERTICAL_PADDING + 5, Wv, null !== (Tv = vv.colour) && void 0 !== Tv ? Tv : "white", Sv), wv
     }
 
-    function Jz(zz, tz) {
+    function Yv(vv, zv) {
       for (const {
-          image: sz,
-          x: Fz,
-          y: Wz,
-          size: Xz
+          image: Pv,
+          x: hv,
+          y: Sv,
+          size: ev
         }
-        of zz) tz.imageSmoothingEnabled = !1, tz.drawImage(sz, Fz, Wz, Xz, Xz)
+        of vv) zv.imageSmoothingEnabled = !1, zv.drawImage(Pv, hv, Sv, ev, ev)
     }
 
-    function Iz(zz, tz, sz, Fz, Wz, Xz) {
-      zz.save(), zz.translate(sz, Fz), zz.scale(Wz, Wz), zz.fillStyle = Xz, zz.fill(tz), zz.restore()
+    function nv(vv, zv, Pv, hv, Sv, ev) {
+      vv.save(), vv.translate(Pv, hv), vv.scale(Sv, Sv), vv.fillStyle = ev, vv.fill(zv), vv.restore()
     }
 
-    function Cz(zz, tz, sz) {
-      const Fz = "object" === typeof zz && null !== zz ? zz : {},
-        Wz = function(zz, tz, sz) {
-          if (!Array.isArray(zz) || 0 === zz.length) return [];
-          const Fz = [{
+    function Ov(vv, zv, Pv) {
+      const hv = "object" === typeof vv && null !== vv ? vv : {},
+        Sv = function(vv, zv, Pv) {
+          if (!Array.isArray(vv) || 0 === vv.length) return [];
+          const hv = [{
             width: 0,
             height: 0,
             y: 0,
             items: []
           }];
-          for (const Oz of gz(zz, vz.DEFAULT_FONT_SIZE, sz)) {
-            if ("text" !== Oz.kind) {
-              Fz[Fz.length - 1].items.push({
-                content: Oz,
+          for (const gv of Cv(vv, dv.DEFAULT_FONT_SIZE, Pv)) {
+            if ("text" !== gv.kind) {
+              hv[hv.length - 1].items.push({
+                content: gv,
                 chars: 1,
                 size: {
                   x: 0,
@@ -613,20 +626,20 @@ export const modules = {
               });
               continue
             }
-            if (0 === Oz.text.length) continue;
-            const zz = Fz[Fz.length - 1].items.reduce(((zz, tz) => zz + ("text" === tz.content.kind ? (0, Xz.b)(tz.content.text) : tz.chars)), 0);
-            (0, Xz.d)(Oz.text, zz).forEach(((zz, tz) => {
-              tz > 0 && Fz.push({
+            if (0 === gv.text.length) continue;
+            const vv = hv[hv.length - 1].items.reduce(((vv, zv) => vv + ("text" === zv.content.kind ? (0, ev.c)(zv.content.text) : zv.chars)), 0);
+            (0, ev.g)(gv.text, vv).forEach(((vv, zv) => {
+              zv > 0 && hv.push({
                 width: 0,
                 height: 0,
                 y: 0,
                 items: []
-              }), zz.length > 0 && Fz[Fz.length - 1].items.push({
+              }), vv.length > 0 && hv[hv.length - 1].items.push({
                 content: {
-                  ...Oz,
-                  text: zz
+                  ...gv,
+                  text: vv
                 },
-                chars: zz.length,
+                chars: vv.length,
                 size: {
                   x: 0,
                   width: 0
@@ -634,58 +647,58 @@ export const modules = {
               })
             }))
           }
-          let Wz = vz.VERTICAL_PADDING / 2;
-          for (const Xz of Fz) {
-            if (0 === Xz.items.length) continue;
+          let Sv = dv.VERTICAL_PADDING / 2;
+          for (const ev of hv) {
+            if (0 === ev.items.length) continue;
             const {
-              width: zz,
-              height: Fz,
-              sizes: Oz
-            } = Yz(Xz.items.map((zz => zz.content)), tz, sz);
-            Xz.items.forEach(((zz, tz) => {
-              zz.size = Oz[tz]
-            })), Xz.width = zz, Xz.height = Fz, Xz.y = Wz, Wz += Fz + vz.LINE_SPACING
+              width: vv,
+              height: hv,
+              sizes: gv
+            } = jv(ev.items.map((vv => vv.content)), zv, Pv);
+            ev.items.forEach(((vv, zv) => {
+              vv.size = gv[zv]
+            })), ev.width = vv, ev.height = hv, ev.y = Sv, Sv += hv + dv.LINE_SPACING
           }
-          return Fz
-        }(Fz.content, tz, sz);
-      let Oz = 0,
-        oz = vz.VERTICAL_PADDING,
-        Uz = 0;
-      for (const Xz of Wz) {
-        Oz = Math.max(Oz, Xz.width + 2 * vz.HORIZONTAL_PADDING), oz += Xz.height + vz.LINE_SPACING;
-        for (const zz of Xz.items) Uz += zz.chars
+          return hv
+        }(hv.content, zv, Pv);
+      let gv = 0,
+        pv = dv.VERTICAL_PADDING,
+        Nv = 0;
+      for (const ev of Sv) {
+        gv = Math.max(gv, ev.width + 2 * dv.HORIZONTAL_PADDING), pv += ev.height + dv.LINE_SPACING;
+        for (const vv of ev.items) Nv += vv.chars
       }
-      const Kz = "string" === typeof Fz.backgroundColor ? Fz.backgroundColor : "#22283b";
+      const lv = "string" === typeof hv.backgroundColor ? hv.backgroundColor : "#22283b";
       return {
-        width: Oz,
-        height: oz,
-        chars: Uz,
-        draw: (zz, tz) => {
-          const Fz = [];
-          if (zz.fillStyle = Kz, zz.fillRect(0, 0, Oz, oz), null === tz)
-            for (const Xz of Wz) Xz.items.length > 0 && xz(Xz.items.map((zz => zz.content)), 0, Xz.y, Xz.height, zz, sz, Fz);
+        width: gv,
+        height: pv,
+        chars: Nv,
+        draw: (vv, zv) => {
+          const hv = [];
+          if (vv.fillStyle = lv, vv.fillRect(0, 0, gv, pv), null === zv)
+            for (const ev of Sv) ev.items.length > 0 && fv(ev.items.map((vv => vv.content)), 0, ev.y, ev.height, vv, Pv, hv);
           else {
-            let Xz = 0;
-            for (const Oz of Wz)
-              for (const Wz of Oz.items) {
-                if (Xz >= tz) break;
-                mz("text" === Wz.content.kind ? {
-                  ...Wz.content,
-                  text: Wz.content.text.substring(0, tz - Xz)
-                } : Wz.content, Wz.size.x, Oz.y, Oz.height, zz, sz, Fz, Wz.size.width), Xz += Wz.chars
+            let ev = 0;
+            for (const gv of Sv)
+              for (const Sv of gv.items) {
+                if (ev >= zv) break;
+                Fv("text" === Sv.content.kind ? {
+                  ...Sv.content,
+                  text: Sv.content.text.substring(0, zv - ev)
+                } : Sv.content, Sv.size.x, gv.y, gv.height, vv, Pv, hv, Sv.size.width), ev += Sv.chars
               }
           }
-          Jz(Fz, zz)
+          Yv(hv, vv)
         }
       }
     }
-    var ez = sz(4107),
-      Zz = sz(1253),
-      Gz = sz(1966);
-    const Tz = 10,
-      cz = 3,
-      jz = 3,
-      Az = [{
+    var Dv = Pv(4220),
+      Kv = Pv(1250),
+      Vv = Pv(1980);
+    const Uv = 10,
+      Rv = 3,
+      xv = 3,
+      tv = [{
         healthFraction: .25,
         colour: "#ff0000"
       }, {
@@ -695,10 +708,10 @@ export const modules = {
         healthFraction: 1,
         colour: "#00ff00"
       }],
-      yz = 64,
-      Mz = 69,
-      dz = {
-        icon: Gz.e,
+      qv = 64,
+      Iv = 69,
+      Qv = {
+        icon: Vv.e,
         mainRGB: "transparent",
         chatTag: [],
         nameTag: {
@@ -708,386 +721,386 @@ export const modules = {
         visible: !0
       };
 
-    function hz(zz) {
-      return "object" !== typeof zz || null === zz || Array.isArray(zz) ? void 0 : zz
+    function Zv(vv) {
+      return "object" !== typeof vv || null === vv || Array.isArray(vv) ? void 0 : vv
     }
-    const Qz = new Set(ez.e);
+    const Av = new Set(Dv.d);
 
-    function kz(zz, tz) {
-      return "string" === typeof zz ? Nz(zz, tz) : tz
-    }
-
-    function iz(zz) {
-      return kz(zz.width, cz)
+    function Lv(vv, zv) {
+      return "string" === typeof vv ? Wv(vv, zv) : zv
     }
 
-    function Lz(zz, tz) {
-      var sz;
-      const Fz = null !== (sz = zz.applyTo) && void 0 !== sz ? sz : "both";
-      return "both" === Fz || Fz === tz
+    function Hv(vv) {
+      return Lv(vv.width, Rv)
     }
 
-    function lz(zz) {
-      const tz = iz(zz);
-      return "glow" === zz.style ? tz * jz : Math.ceil(tz / 2) + 1
+    function Mv(vv, zv) {
+      var Pv;
+      const hv = null !== (Pv = vv.applyTo) && void 0 !== Pv ? Pv : "both";
+      return "both" === hv || hv === zv
     }
 
-    function nz(zz, tz, sz) {
-      var Fz, Wz;
-      const Xz = null !== (Fz = hz(zz.info)) && void 0 !== Fz ? Fz : {},
-        oz = "string" === typeof zz.name ? zz.name : "",
-        Uz = Xz.subtitle;
-      if (Array.isArray(Xz.content) && 0 === Xz.content.length && !(Array.isArray(Uz) && Uz.length > 0)) return null;
-      const Kz = "number" === typeof zz.hideNameSeed ? zz.hideNameSeed : null,
-        uz = "" === oz || !0 === zz.mesh ? oz : (0, Zz.c)(oz, !sz.canSeeRealPlayerNames, Kz);
-      if (!uz && !Xz.content) return null;
-      const Nz = "string" === typeof zz.colour ? zz.colour : "default",
-        bz = Object.hasOwn(Oz.v, Nz) ? Oz.v[Nz] : void 0,
-        Dz = Xz.content ? gz(Xz.content, vz.DEFAULT_FONT_SIZE, sz, bz) : [{
+    function yv(vv) {
+      const zv = Hv(vv);
+      return "glow" === vv.style ? zv * xv : Math.ceil(zv / 2) + 1
+    }
+
+    function Bv(vv, zv, Pv) {
+      var hv, Sv;
+      const ev = null !== (hv = Zv(vv.info)) && void 0 !== hv ? hv : {},
+        pv = "string" === typeof vv.name ? vv.name : "",
+        Nv = ev.subtitle;
+      if (Array.isArray(ev.content) && 0 === ev.content.length && !(Array.isArray(Nv) && Nv.length > 0)) return null;
+      const lv = "number" === typeof vv.hideNameSeed ? vv.hideNameSeed : null,
+        Tv = "" === pv || !0 === vv.mesh ? pv : (0, Kv.c)(pv, !Pv.canSeeRealPlayerNames, lv);
+      if (!Tv && !ev.content) return null;
+      const Wv = "string" === typeof vv.colour ? vv.colour : "default",
+        wv = Object.hasOwn(gv.s, Wv) ? gv.s[Wv] : void 0,
+        sv = ev.content ? Cv(ev.content, dv.DEFAULT_FONT_SIZE, Pv, wv) : [{
           kind: "text",
-          text: uz,
-          size: vz.DEFAULT_FONT_SIZE,
-          colour: bz
+          text: Tv,
+          size: dv.DEFAULT_FONT_SIZE,
+          colour: wv
         }],
-        Hz = [];
-      for (const Oz of Array.isArray(zz.ranks) ? zz.ranks : []) {
-        const zz = wz(Oz);
-        null !== zz && void 0 !== zz && zz.nameTag && zz.visible && Hz.push({
+        iv = [];
+      for (const gv of Array.isArray(vv.ranks) ? vv.ranks : []) {
+        const vv = av(gv);
+        null !== vv && void 0 !== vv && vv.nameTag && vv.visible && iv.push({
           kind: "rank",
-          rank: zz
+          rank: vv
         })
       }
-      Hz.push(...Dz);
-      ("boolean" === typeof zz.player ? zz.player : Array.isArray(zz.ranks)) && "" !== oz && sz.isFriend(oz) && Hz.push({
+      iv.push(...sv);
+      ("boolean" === typeof vv.player ? vv.player : Array.isArray(vv.ranks)) && "" !== pv && Pv.isFriend(pv) && iv.push({
         kind: "rank",
-        rank: dz
-      }), "number" === typeof zz.xo && Hz.push({
+        rank: Qv
+      }), "number" === typeof vv.Mg && iv.push({
         kind: "text",
-        text: ` ${zz.xo}m`,
-        size: vz.DEFAULT_FONT_SIZE,
+        text: ` ${vv.Mg}m`,
+        size: dv.DEFAULT_FONT_SIZE,
         colour: "#cef3ff"
       });
-      const Bz = Uz ? gz(Uz, vz.DEFAULT_SUBTITLE_FONT_SIZE, sz) : null,
-        Pz = "string" === typeof Xz.backgroundColor ? Xz.backgroundColor : "#22283b",
-        rz = "string" === typeof Xz.subtitleBackgroundColor ? Xz.subtitleBackgroundColor : "#1a1e2d",
-        mz = hz(Xz.healthbar),
-        Iz = hz(Xz.border),
-        Cz = Array.isArray(zz.effects) ? zz.effects.filter((zz => "string" === typeof zz && Qz.has(zz))) : [],
-        ez = "number" === typeof zz.health ? Math.max(0, Math.min(1, zz.health)) : null,
-        Gz = Yz(Hz, tz, sz),
-        cz = Yz(null !== Bz && void 0 !== Bz ? Bz : [], tz, sz),
-        nz = {
-          width: vz.EFFECT_ICON_SIZE * Cz.length,
-          height: Cz.length > 0 ? vz.EFFECT_ICON_SIZE : 0
+      const cv = Nv ? Cv(Nv, dv.DEFAULT_SUBTITLE_FONT_SIZE, Pv) : null,
+        Gv = "string" === typeof ev.backgroundColor ? ev.backgroundColor : "#22283b",
+        mv = "string" === typeof ev.subtitleBackgroundColor ? ev.subtitleBackgroundColor : "#1a1e2d",
+        Fv = Zv(ev.healthbar),
+        nv = Zv(ev.border),
+        Ov = Array.isArray(vv.effects) ? vv.effects.filter((vv => "string" === typeof vv && Av.has(vv))) : [],
+        Dv = "number" === typeof vv.health ? Math.max(0, Math.min(1, vv.health)) : null,
+        Vv = jv(iv, zv, Pv),
+        Rv = jv(null !== cv && void 0 !== cv ? cv : [], zv, Pv),
+        Bv = {
+          width: dv.EFFECT_ICON_SIZE * Ov.length,
+          height: Ov.length > 0 ? dv.EFFECT_ICON_SIZE : 0
         },
-        az = Iz && Lz(Iz, "nametag") ? lz(Iz) : 0,
-        qz = kz(null === mz || void 0 === mz ? void 0 : mz.height, Tz),
-        Sz = Iz && Lz(Iz, "healthbar") ? lz(Iz) : 0,
-        Vz = "never" === (null !== (Wz = null === mz || void 0 === mz ? void 0 : mz.display) && void 0 !== Wz ? Wz : "onDamage") ? 0 : qz + Sz,
-        Rz = Math.max(nz.height, az),
-        pz = Math.max(vz.VERTICAL_PADDING, Vz, az);
-      let fz = Math.max(Gz.width, cz.width, nz.width);
-      if (Iz) {
-        const zz = lz(Iz) + vz.HORIZONTAL_PADDING / 2;
-        fz = Math.max(fz, Math.max(Gz.width, cz.width) + vz.HORIZONTAL_PADDING + 2 * zz)
+        Jv = nv && Mv(nv, "nametag") ? yv(nv) : 0,
+        Ev = Lv(null === Fv || void 0 === Fv ? void 0 : Fv.height, Uv),
+        ov = nv && Mv(nv, "healthbar") ? yv(nv) : 0,
+        bv = "never" === (null !== (Sv = null === Fv || void 0 === Fv ? void 0 : Fv.display) && void 0 !== Sv ? Sv : "onDamage") ? 0 : Ev + ov,
+        rv = Math.max(Bv.height, Jv),
+        kv = Math.max(dv.VERTICAL_PADDING, bv, Jv);
+      let Xv = Math.max(Vv.width, Rv.width, Bv.width);
+      if (nv) {
+        const vv = yv(nv) + dv.HORIZONTAL_PADDING / 2;
+        Xv = Math.max(Xv, Math.max(Vv.width, Rv.width) + dv.HORIZONTAL_PADDING + 2 * vv)
       }
-      const Ez = Gz.height + cz.height + Rz + pz,
-        zt = Gz.width + vz.HORIZONTAL_PADDING,
-        tt = cz.width + vz.HORIZONTAL_PADDING,
-        st = Math.max(zt, tt),
-        Ft = (fz - st) / 2,
-        Wt = Math.max(nz.height, az);
+      const uv = Vv.height + Rv.height + rv + kv,
+        vz = Vv.width + dv.HORIZONTAL_PADDING,
+        zz = Rv.width + dv.HORIZONTAL_PADDING,
+        Pz = Math.max(vz, zz),
+        hz = (Xv - Pz) / 2,
+        Sz = Math.max(Bv.height, Jv);
       return {
-        width: fz,
-        height: Ez,
-        draw: zz => {
-          const tz = [];
-          if (zz.fillStyle = Pz, zz.fillRect(Ft, Wt, st, Gz.height), xz(Hz, (fz - zt) / 2 + vz.HORIZONTAL_PADDING / 2, Wt, Gz.height, zz, sz, tz), Bz) {
-            const Fz = Wt + Gz.height;
-            zz.fillStyle = rz, zz.fillRect(Ft, Fz, st, cz.height), xz(Bz, (fz - tt) / 2 + vz.HORIZONTAL_PADDING / 2, Fz, cz.height, zz, sz, tz)
+        width: Xv,
+        height: uv,
+        draw: vv => {
+          const zv = [];
+          if (vv.fillStyle = Gv, vv.fillRect(hz, Sz, Pz, Vv.height), fv(iv, (Xv - vz) / 2 + dv.HORIZONTAL_PADDING / 2, Sz, Vv.height, vv, Pv, zv), cv) {
+            const hv = Sz + Vv.height;
+            vv.fillStyle = mv, vv.fillRect(hz, hv, Pz, Rv.height), fv(cv, (Xv - zz) / 2 + dv.HORIZONTAL_PADDING / 2, hv, Rv.height, vv, Pv, zv)
           }
-          let Fz = null;
-          if (null !== ez) {
-            const tz = Ez - qz - Sz;
-            null !== mz && void 0 !== mz && mz.backgroundColour && (zz.fillStyle = mz.backgroundColour, zz.fillRect(Ft, tz, st, qz)), zz.fillStyle = function(zz, tz) {
-              const sz = null === zz || void 0 === zz ? void 0 : zz.foregroundColour;
-              if ("string" === typeof sz) return sz;
-              const Fz = [...Array.isArray(sz) && sz.length > 0 ? sz : Az].sort(((zz, tz) => zz.healthFraction - tz.healthFraction)),
-                Wz = Fz.find((zz => tz <= zz.healthFraction));
-              return (null !== Wz && void 0 !== Wz ? Wz : Fz[Fz.length - 1]).colour
-            }(mz, ez), zz.fillRect(Ft, tz, Math.round(st * ez), qz), Fz = {
-              x: Ft,
-              y: tz,
-              width: st,
-              height: qz
+          let hv = null;
+          if (null !== Dv) {
+            const zv = uv - Ev - ov;
+            null !== Fv && void 0 !== Fv && Fv.backgroundColour && (vv.fillStyle = Fv.backgroundColour, vv.fillRect(hz, zv, Pz, Ev)), vv.fillStyle = function(vv, zv) {
+              const Pv = null === vv || void 0 === vv ? void 0 : vv.foregroundColour;
+              if ("string" === typeof Pv) return Pv;
+              const hv = [...Array.isArray(Pv) && Pv.length > 0 ? Pv : tv].sort(((vv, zv) => vv.healthFraction - zv.healthFraction)),
+                Sv = hv.find((vv => zv <= vv.healthFraction));
+              return (null !== Sv && void 0 !== Sv ? Sv : hv[hv.length - 1]).colour
+            }(Fv, Dv), vv.fillRect(hz, zv, Math.round(Pz * Dv), Ev), hv = {
+              x: hz,
+              y: zv,
+              width: Pz,
+              height: Ev
             }
           }
-          if (Iz) {
-            const tz = [];
-            Lz(Iz, "nametag") && tz.push({
-              x: Ft,
-              y: Wt,
-              width: st,
-              height: Gz.height + (Bz ? cz.height : 0)
-            }), Fz && Lz(Iz, "healthbar") && tz.push(Fz), tz.length > 0 && function(zz, tz, sz) {
-              const Fz = iz(tz),
-                Wz = Fz / 2,
-                Xz = zz => zz.width > 0 && zz.height > 0,
-                Oz = sz.map((zz => ({
-                  x: zz.x + Wz,
-                  y: zz.y + Wz,
-                  width: zz.width - Fz,
-                  height: zz.height - Fz
-                }))).filter(Xz);
-              if (0 === Oz.length) return;
-              const oz = tz => {
-                const sz = tz.filter(Xz);
-                if (0 !== sz.length) {
-                  zz.beginPath();
-                  for (const tz of sz) zz.rect(tz.x, tz.y, tz.width, tz.height);
-                  zz.stroke()
+          if (nv) {
+            const zv = [];
+            Mv(nv, "nametag") && zv.push({
+              x: hz,
+              y: Sz,
+              width: Pz,
+              height: Vv.height + (cv ? Rv.height : 0)
+            }), hv && Mv(nv, "healthbar") && zv.push(hv), zv.length > 0 && function(vv, zv, Pv) {
+              const hv = Hv(zv),
+                Sv = hv / 2,
+                ev = vv => vv.width > 0 && vv.height > 0,
+                gv = Pv.map((vv => ({
+                  x: vv.x + Sv,
+                  y: vv.y + Sv,
+                  width: vv.width - hv,
+                  height: vv.height - hv
+                }))).filter(ev);
+              if (0 === gv.length) return;
+              const pv = zv => {
+                const Pv = zv.filter(ev);
+                if (0 !== Pv.length) {
+                  vv.beginPath();
+                  for (const zv of Pv) vv.rect(zv.x, zv.y, zv.width, zv.height);
+                  vv.stroke()
                 }
               };
-              if (zz.save(), zz.strokeStyle = tz.colour, zz.lineWidth = Fz, zz.lineJoin = "round", "glow" === tz.style) zz.shadowColor = tz.colour, zz.shadowBlur = Fz * jz, oz(Oz), oz(Oz);
-              else if ("double" === tz.style) {
-                oz(Oz);
-                const zz = Fz + 2;
-                oz(Oz.map((tz => ({
-                  x: tz.x + zz,
-                  y: tz.y + zz,
-                  width: tz.width - 2 * zz,
-                  height: tz.height - 2 * zz
+              if (vv.save(), vv.strokeStyle = zv.colour, vv.lineWidth = hv, vv.lineJoin = "round", "glow" === zv.style) vv.shadowColor = zv.colour, vv.shadowBlur = hv * xv, pv(gv), pv(gv);
+              else if ("double" === zv.style) {
+                pv(gv);
+                const vv = hv + 2;
+                pv(gv.map((zv => ({
+                  x: zv.x + vv,
+                  y: zv.y + vv,
+                  width: zv.width - 2 * vv,
+                  height: zv.height - 2 * vv
                 }))))
-              } else oz(Oz);
-              zz.restore()
-            }(zz, Iz, tz)
+              } else pv(gv);
+              vv.restore()
+            }(vv, nv, zv)
           }
-          Jz(tz, zz);
-          for (let Wz = 0; Wz < Cz.length; Wz++) {
-            const tz = sz.effectImage(Cz[Wz]);
-            tz && (zz.imageSmoothingEnabled = !1, zz.drawImage(tz, 5 + Mz * Wz, 5, yz, yz))
+          Yv(zv, vv);
+          for (let Sv = 0; Sv < Ov.length; Sv++) {
+            const zv = Pv.effectImage(Ov[Sv]);
+            zv && (vv.imageSmoothingEnabled = !1, vv.drawImage(zv, 5 + Iv * Sv, 5, qv, qv))
           }
         }
       }
     }
-    var az = sz(38073);
-    const qz = 256,
-      Sz = 1024,
-      Vz = {
+    var Jv = Pv(38189);
+    const Ev = 256,
+      ov = 1024,
+      bv = {
         width: 1,
         height: 7 / 8
       };
-    var Rz = sz(38076);
-    const pz = {
+    var rv = Pv(38194);
+    const kv = {
       leaderboard: ""
     };
-    var fz = sz(41659);
-    const Ez = {
+    var Xv = Pv(41913);
+    const uv = {
         Nametag: 1,
         MultilineText: 2,
         Board: 3,
         Leaderboard: 4
       },
-      zt = 2048,
-      tt = 256,
-      st = 10,
-      Ft = 4,
-      Wt = 65536,
-      Xt = new TextDecoder;
-    let Ot = fz.q,
-      ot = -1;
-    const vt = new Map,
-      Ut = new Map;
-    let Kt = 0;
-    const ut = new TextEncoder;
+      vz = 2048,
+      zz = 256,
+      Pz = 10,
+      hz = 4,
+      Sz = 65536,
+      ez = new TextDecoder;
+    let gz = Xv.m,
+      pz = -1;
+    const dz = new Map,
+      Nz = new Map;
+    let lz = 0;
+    const Tz = new TextEncoder;
 
-    function Nt(zz, tz) {
-      const sz = ut.encode(JSON.stringify(tz)),
-        Fz = new Uint8Array(sz.length + 1);
-      return Fz[0] = zz, Fz.set(sz, 1), Fz
+    function Wz(vv, zv) {
+      const Pv = Tz.encode(JSON.stringify(zv)),
+        hv = new Uint8Array(Pv.length + 1);
+      return hv[0] = vv, hv.set(Pv, 1), hv
     }
-    const bt = {
+    const wz = {
         name: "Ag",
         info: null,
         colour: "default",
         ranks: [],
         effects: [],
         health: .5,
-        xo: null,
+        Mg: null,
         hideNameSeed: null
       },
-      wt = [Nt(Ez.Nametag, bt), Nt(Ez.Nametag, {
-        ...bt,
+      az = [Wz(uv.Nametag, wz), Wz(uv.Nametag, {
+        ...wz,
         info: {
           content: [{
             str: "Ag"
           }],
           subtitle: ["Ag"]
         }
-      }), Nt(Ez.MultilineText, {
+      }), Wz(uv.MultilineText, {
         box: {
           content: ["Ag"]
         },
         shown: null
-      }), ...Fz.c.map(((zz, tz) => Nt(Ez.Board, {
+      }), ...hv.c.map(((vv, zv) => Wz(uv.Board, {
         shared: {
           text: "Ag",
-          textSize: tz
+          textSize: zv
         },
         w: 0,
         h: 0
       })))];
 
-    function Dt(zz) {
-      fz.h.load().then((() => {
-        if (zz()) return;
-        const tz = (0, Wz.d)(1, 1, {
+    function sz(vv) {
+      Xv.h.load().then((() => {
+        if (vv()) return;
+        const zv = (0, Sv.d)(1, 1, {
           willReadFrequently: !0
         });
-        var sz;
-        tz && (sz = tz.canvas, wt.map((zz => xt(zz, sz))))
+        var Pv;
+        zv && (Pv = zv.canvas, az.map((vv => fz(vv, Pv))))
       }))
     }
-    let gt = fz.x;
+    let Cz = Xv.r;
 
-    function Ht() {
-      vt.clear(), Ut.clear()
+    function iz() {
+      dz.clear(), Nz.clear()
     }
 
-    function Bt(zz, tz) {
-      const sz = zz.get(tz);
-      return void 0 !== sz && (zz.delete(tz), zz.set(tz, sz)), sz
+    function cz(vv, zv) {
+      const Pv = vv.get(zv);
+      return void 0 !== Pv && (vv.delete(zv), vv.set(zv, Pv)), Pv
     }
 
-    function Pt(zz, tz, sz) {
-      zz.set(tz, sz), zz.size > tt && zz.delete(zz.keys().next().value)
+    function Gz(vv, zv, Pv) {
+      vv.set(zv, Pv), vv.size > zz && vv.delete(vv.keys().next().value)
     }
 
-    function rt(zz, tz, sz) {
-      if (zz === Ez.Nametag) {
-        let zz = Bt(vt, tz);
-        return void 0 === zz && (zz = nz(JSON.parse(tz), sz, Ot), Pt(vt, tz, zz)), zz
+    function mz(vv, zv, Pv) {
+      if (vv === uv.Nametag) {
+        let vv = cz(dz, zv);
+        return void 0 === vv && (vv = Bv(JSON.parse(zv), Pv, gz), Gz(dz, zv, vv)), vv
       }
-      if (zz === Ez.MultilineText) {
-        var Wz;
-        const zz = JSON.parse(tz),
-          Fz = JSON.stringify(null !== (Wz = zz.box) && void 0 !== Wz ? Wz : null),
-          Xz = "number" === typeof zz.shown ? zz.shown : null;
-        let Oz = Bt(Ut, Fz);
-        void 0 === Oz && (Oz = Cz(zz.box, sz, Ot), Pt(Ut, Fz, Oz));
-        const oz = null === Xz ? null : Math.min(Math.max(0, Math.floor(Xz)), Oz.chars),
-          vz = Oz;
+      if (vv === uv.MultilineText) {
+        var Sv;
+        const vv = JSON.parse(zv),
+          hv = JSON.stringify(null !== (Sv = vv.box) && void 0 !== Sv ? Sv : null),
+          ev = "number" === typeof vv.shown ? vv.shown : null;
+        let gv = cz(Nz, hv);
+        void 0 === gv && (gv = Ov(vv.box, Pv, gz), Gz(Nz, hv, gv));
+        const pv = null === ev ? null : Math.min(Math.max(0, Math.floor(ev)), gv.chars),
+          dv = gv;
         return {
-          width: vz.width,
-          height: vz.height,
-          draw: zz => {
-            vz.draw(zz, oz)
+          width: dv.width,
+          height: dv.height,
+          draw: vv => {
+            dv.draw(vv, pv)
           }
         }
       }
-      if (zz === Ez.Board) return function(zz, tz) {
-        var sz;
-        if (!tz.canSeePlayerWrittenText) return null;
+      if (vv === uv.Board) return function(vv, zv) {
+        var Pv;
+        if (!zv.canSeePlayerWrittenText) return null;
         const {
-          shared: Wz,
-          w: Xz = 0,
-          h: Oz = 0
-        } = zz, oz = !Xz;
-        let vz;
-        if (oz) {
-          var Uz, Kz;
-          vz = null !== (Uz = null === Wz || void 0 === Wz || null === (Kz = Wz.text) || void 0 === Kz ? void 0 : Kz.toString()) && void 0 !== Uz ? Uz : ""
+          shared: Sv,
+          w: ev = 0,
+          h: gv = 0
+        } = vv, pv = !ev;
+        let dv;
+        if (pv) {
+          var Nv, lv;
+          dv = null !== (Nv = null === Sv || void 0 === Sv || null === (lv = Sv.text) || void 0 === lv ? void 0 : lv.toString()) && void 0 !== Nv ? Nv : ""
         } else {
-          if ("string" !== typeof(null === Wz || void 0 === Wz ? void 0 : Wz.text)) return null;
-          vz = Wz.text
+          if ("string" !== typeof(null === Sv || void 0 === Sv ? void 0 : Sv.text)) return null;
+          dv = Sv.text
         }
-        if ("" === vz.trim()) return null;
-        const uz = null !== (sz = null === Wz || void 0 === Wz ? void 0 : Wz.textSize) && void 0 !== sz ? sz : 0,
-          Nz = Fz.c[uz].ingameFontSize;
-        let bz = Vz,
-          wz = qz;
-        oz || (vz = (0, Fz.o)(vz, uz, Xz, Oz), bz = (0, Fz.r)(Xz, Oz), wz = Math.min(qz, Sz / Math.max(bz.width, bz.height)));
-        const Dz = Math.round(wz * bz.width),
-          gz = Math.round(wz * bz.height),
-          Hz = wz / qz;
+        if ("" === dv.trim()) return null;
+        const Tv = null !== (Pv = null === Sv || void 0 === Sv ? void 0 : Sv.textSize) && void 0 !== Pv ? Pv : 0,
+          Wv = hv.c[Tv].ingameFontSize;
+        let wv = bv,
+          av = Ev;
+        pv || (dv = (0, hv.m)(dv, Tv, ev, gv), wv = (0, hv.r)(ev, gv), av = Math.min(Ev, ov / Math.max(wv.width, wv.height)));
+        const sv = Math.round(av * wv.width),
+          Cv = Math.round(av * wv.height),
+          iv = av / Ev;
         return {
-          width: Dz,
-          height: gz,
-          draw: zz => {
-            az.d.fontSize = Nz * Hz, az.d.fontWeight = "bold", az.d.font = "'Jetbrains Mono', monospace", az.d.drawText(zz, vz, 0, (-10 - 7 * uz) * Hz, Dz, gz)
+          width: sv,
+          height: Cv,
+          draw: vv => {
+            Jv.b.fontSize = Wv * iv, Jv.b.fontWeight = "bold", Jv.b.font = "'Jetbrains Mono', monospace", Jv.b.drawText(vv, dv, 0, (-10 - 7 * Tv) * iv, sv, Cv)
           }
         }
-      }(JSON.parse(tz), Ot);
-      if (zz === Ez.Leaderboard) return function(zz, tz, sz) {
-        var Fz;
-        const Wz = (0, Rz.i)(zz.opts, pz),
-          Xz = (0, Rz.d)(Wz, sz),
-          Oz = {
-            top: (0, Rz.e)(Wz, (0, Rz.m)(zz.top)),
-            around: null !== (Fz = zz.around) && void 0 !== Fz ? Fz : null,
-            showPlayerText: tz.canSeePlayerWrittenText,
-            localPlayerDbId: tz.localPlayerDbId
+      }(JSON.parse(zv), gz);
+      if (vv === uv.Leaderboard) return function(vv, zv, Pv) {
+        var hv;
+        const Sv = (0, rv.i)(vv.opts, kv),
+          ev = (0, rv.f)(Sv, Pv),
+          gv = {
+            top: (0, rv.g)(Sv, (0, rv.m)(vv.top)),
+            around: null !== (hv = vv.around) && void 0 !== hv ? hv : null,
+            showPlayerText: zv.canSeePlayerWrittenText,
+            localPlayerDbId: zv.localPlayerDbId
           };
         return {
-          width: Xz.pixelWidth,
-          height: Xz.pixelHeight,
-          draw: zz => {
+          width: ev.pixelWidth,
+          height: ev.pixelHeight,
+          draw: vv => {
             const {
-              a: tz,
-              d: sz
-            } = zz.getTransform();
-            (0, Rz.b)(zz, Math.round(Xz.pixelWidth * tz), Math.round(Xz.pixelHeight * sz), Xz, Wz, Oz)
+              a: zv,
+              d: Pv
+            } = vv.getTransform();
+            (0, rv.b)(vv, Math.round(ev.pixelWidth * zv), Math.round(ev.pixelHeight * Pv), ev, Sv, gv)
           }
         }
-      }(JSON.parse(tz), Ot, zt);
-      throw new Error(`unknown text plane kind ${zz}`)
+      }(JSON.parse(zv), gz, vz);
+      throw new Error(`unknown text plane kind ${vv}`)
     }
-    const Yt = 2 ** Math.floor(Math.log2(zt));
+    const jz = 2 ** Math.floor(Math.log2(vz));
 
-    function xt(zz, tz) {
-      let sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Fz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    function fz(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        hv = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
       try {
-        if (zz.length < 2) return [0, 0];
-        const Xz = (0, Wz.c)(tz);
-        if (!Xz) return [0, 0];
-        const Oz = gt();
-        Oz !== ot && (ot = Oz, Ht());
-        const [oz] = zz, vz = Xt.decode(zz.subarray(1));
-        let Uz;
-        oz !== Ez.Board && oz !== Ez.Leaderboard || !Ot.canSeePlayerWrittenText || Ot.glyphsShown(vz), Xz.save();
+        if (vv.length < 2) return [0, 0];
+        const ev = (0, Sv.c)(zv);
+        if (!ev) return [0, 0];
+        const gv = Cz();
+        gv !== pz && (pz = gv, iz());
+        const [pv] = vv, dv = ez.decode(vv.subarray(1));
+        let Nv;
+        pv !== uv.Board && pv !== uv.Leaderboard || !gz.canSeePlayerWrittenText || gz.glyphsShown(dv), ev.save();
         try {
-          Uz = rt(oz, vz, Xz)
+          Nv = mz(pv, dv, ev)
         } finally {
-          Xz.restore()
+          ev.restore()
         }
-        if (null === Uz || !(Uz.width > 0 && Uz.height > 0)) return [0, 0];
-        const Kz = Math.min(1, zt / Uz.width, zt / Uz.height),
-          uz = zz => Fz ? function(zz) {
-            const tz = 2 ** Math.ceil(Math.log2(zz));
-            return Math.min(Yt, tz - zz > zz - tz / 2 ? tz / 2 : tz)
-          }(zz) : Math.min(zt, Math.ceil(zz * Kz)),
-          [Nz, bz] = [uz(Uz.width), uz(Uz.height)];
-        ! function(zz, tz, sz, Fz, Wz) {
-          const Xz = Math.max(zz.width, sz),
-            Oz = Math.max(zz.height, Fz),
-            oz = Wz || Xz * Oz > Math.max(Ft * sz * Fz, Wt),
-            [vz, Uz] = oz ? [sz, Fz] : [Xz, Oz];
-          vz === zz.width && Uz === zz.height ? tz.clearRect(0, 0, vz, Uz) : (zz.width = vz, zz.height = Uz)
-        }(tz, Xz, Nz, bz, sz), Xz.save();
+        if (null === Nv || !(Nv.width > 0 && Nv.height > 0)) return [0, 0];
+        const lv = Math.min(1, vz / Nv.width, vz / Nv.height),
+          Tv = vv => hv ? function(vv) {
+            const zv = 2 ** Math.ceil(Math.log2(vv));
+            return Math.min(jz, zv - vv > vv - zv / 2 ? zv / 2 : zv)
+          }(vv) : Math.min(vz, Math.ceil(vv * lv)),
+          [Wv, wv] = [Tv(Nv.width), Tv(Nv.height)];
+        ! function(vv, zv, Pv, hv, Sv) {
+          const ev = Math.max(vv.width, Pv),
+            gv = Math.max(vv.height, hv),
+            pv = Sv || ev * gv > Math.max(hz * Pv * hv, Sz),
+            [dv, Nv] = pv ? [Pv, hv] : [ev, gv];
+          dv === vv.width && Nv === vv.height ? zv.clearRect(0, 0, dv, Nv) : (vv.width = dv, vv.height = Nv)
+        }(zv, ev, Wv, wv, Pv), ev.save();
         try {
-          const [zz, tz] = Fz ? [Nz / Uz.width, bz / Uz.height] : [Kz, Kz];
-          1 === zz && 1 === tz || Xz.scale(zz, tz), Uz.draw(Xz)
+          const [vv, zv] = hv ? [Wv / Nv.width, wv / Nv.height] : [lv, lv];
+          1 === vv && 1 === zv || ev.scale(vv, zv), Nv.draw(ev)
         } finally {
-          Xz.restore()
+          ev.restore()
         }
-        return [Nz, bz]
-      } catch (Xz) {
-        ! function(zz, tz) {
-          Kt < st && (Kt++, console.warn(`[bloxd-wasm-client] ${zz}`, tz))
-        }("could not raster a text plane", Xz);
+        return [Wv, wv]
+      } catch (ev) {
+        ! function(vv, zv) {
+          lz < Pz && (lz++, console.warn(`[bloxd-wasm-client] ${vv}`, zv))
+        }("could not raster a text plane", ev);
         try {
-          tz.width = 1
+          zv.width = 1
         } catch {}
         return [0, 0]
       }
@@ -1095,4 +1108,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

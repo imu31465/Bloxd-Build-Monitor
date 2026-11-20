@@ -1,40 +1,40 @@
 export const id = 122;
 export const ids = [122];
 export const modules = {
-  40169: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      ShaderPackCategory: () => cz
+  40369: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      ShaderPackCategory: () => Rv
     });
-    var Fz = sz(65),
-      Wz = sz(1493),
-      Xz = sz(1419),
-      Oz = sz(1483),
-      oz = sz(1173),
-      vz = sz(106),
-      Uz = sz(30),
-      Kz = sz(1571),
-      uz = sz(6193),
-      Nz = sz(290),
-      bz = sz(6234),
-      wz = sz(6225),
-      Dz = sz(6237),
-      gz = sz(6122),
-      Hz = sz(4609),
-      Bz = sz(6174),
-      Pz = sz(6188),
-      rz = sz(3135);
+    var hv = Pv(52),
+      Sv = Pv(1505),
+      ev = Pv(1442),
+      gv = Pv(1492),
+      pv = Pv(1175),
+      dv = Pv(73),
+      Nv = Pv(22),
+      lv = Pv(1610),
+      Tv = Pv(6339),
+      Wv = Pv(278),
+      wv = Pv(6369),
+      av = Pv(6367),
+      sv = Pv(6377),
+      Cv = Pv(6263),
+      iv = Pv(4732),
+      cv = Pv(6319),
+      Gv = Pv(6335),
+      mv = Pv(3205);
 
-    function Yz(zz, tz) {
-      const sz = (0, bz.storedPackOutcome)(zz, tz);
-      return "none" !== sz.kind || "noCompiler" === sz.reason
+    function jv(vv, zv) {
+      const Pv = (0, wv.storedPackOutcome)(vv, zv);
+      return "none" !== Pv.kind || "noCompiler" === Pv.reason
     }
-    var xz = sz(1020),
-      mz = sz.n(xz),
-      Jz = sz(6180),
-      Iz = sz(1036),
-      Cz = sz(6169),
-      ez = sz(1087);
-    const Zz = {
+    var fv = Pv(1035),
+      Fv = Pv.n(fv),
+      Yv = Pv(6328),
+      nv = Pv(1042),
+      Ov = Pv(6315),
+      Dv = Pv(1082);
+    const Kv = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function Gz(zz, tz) {
-      return "failedRecheck" === zz && tz.listing ? "shaderPack:statusFailedRecheckListed" : Zz[zz]
+    function Vv(vv, zv) {
+      return "failedRecheck" === vv && zv.listing ? "shaderPack:statusFailedRecheckListed" : Kv[vv]
     }
 
-    function Tz(zz) {
+    function Uv(vv) {
       let {
-        stored: tz,
-        checking: sz,
-        webGpuUsable: Fz,
-        changePending: Wz,
-        compiler: Xz,
-        t: Oz
-      } = zz;
-      const oz = function(zz, tz, sz, Fz, Wz) {
-          const Xz = (0, bz.storedPackOutcome)(zz, Wz);
-          return "none" === Xz.kind ? "noCompiler" === Xz.reason ? tz ? "checking" : "noCompiler" : "otherApiVersion" === Xz.reason ? "wrongApiVersion" : "failed" : (0, rz.i)() ? "harnessBuild" : "blocked" === Xz.kind ? (0, bz.shaderPackNeedsCheck)(zz, Wz) ? tz ? "checking" : !1 === sz ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === sz ? "offNoWebGpu" : Fz ? "readyAfterReload" : "ready"
-        }(tz, sz, Fz, Wz, Xz),
-        vz = "failed" === oz || "failedRecheck" === oz,
-        Uz = vz || "wrongApiVersion" === oz || "noCompiler" === oz,
-        Kz = "ready" === oz || "readyAfterReload" === oz ? tz.validation.offInStrict : [];
-      return (0, ez.jsxs)(ez.Fragment, {
-        children: [(0, ez.jsxs)("div", {
-          className: mz()("ShaderPackStatus", {
-            Ready: "ready" === oz,
-            Failed: Uz
+        stored: zv,
+        checking: Pv,
+        webGpuUsable: hv,
+        changePending: Sv,
+        compiler: ev,
+        t: gv
+      } = vv;
+      const pv = function(vv, zv, Pv, hv, Sv) {
+          const ev = (0, wv.storedPackOutcome)(vv, Sv);
+          return "none" === ev.kind ? "noCompiler" === ev.reason ? zv ? "checking" : "noCompiler" : "otherApiVersion" === ev.reason ? "wrongApiVersion" : "failed" : (0, mv.e)() ? "harnessBuild" : "blocked" === ev.kind ? (0, wv.shaderPackNeedsCheck)(vv, Sv) ? zv ? "checking" : !1 === Pv ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === Pv ? "offNoWebGpu" : hv ? "readyAfterReload" : "ready"
+        }(zv, Pv, hv, Sv, ev),
+        dv = "failed" === pv || "failedRecheck" === pv,
+        Nv = dv || "wrongApiVersion" === pv || "noCompiler" === pv,
+        lv = "ready" === pv || "readyAfterReload" === pv ? zv.validation.offInStrict : [];
+      return (0, Dv.jsxs)(Dv.Fragment, {
+        children: [(0, Dv.jsxs)("div", {
+          className: Fv()("ShaderPackStatus", {
+            Ready: "ready" === pv,
+            Failed: Nv
           }),
-          children: ["ready" === oz && (0, ez.jsx)(Iz.c, {
+          children: ["ready" === pv && (0, Dv.jsx)(nv.b, {
             name: "circle-check"
-          }), Uz && (0, ez.jsx)(Iz.c, {
+          }), Nv && (0, Dv.jsx)(nv.b, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === oz ? (0, rz.e)() : Oz(Gz(oz, tz), {
-            packVersion: String(tz.manifest.apiVersion),
-            version: String(Jz.e)
+          }), "harnessBuild" === pv ? (0, mv.b)() : gv(Vv(pv, zv), {
+            packVersion: String(zv.manifest.apiVersion),
+            version: String(Yv.d)
           })]
-        }), vz && (0, ez.jsx)(Cz.c, {
-          diagnostics: tz.validation.errors,
-          more: tz.validation.moreErrors,
-          t: Oz
-        }), Kz.length > 0 && (0, ez.jsxs)(ez.Fragment, {
-          children: [(0, ez.jsxs)("div", {
+        }), dv && (0, Dv.jsx)(Ov.e, {
+          diagnostics: zv.validation.errors,
+          more: zv.validation.moreErrors,
+          t: gv
+        }), lv.length > 0 && (0, Dv.jsxs)(Dv.Fragment, {
+          children: [(0, Dv.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, ez.jsx)(Iz.c, {
+            children: [(0, Dv.jsx)(nv.b, {
               name: "triangle-exclamation"
-            }), Oz("shaderPack:offInStrict")]
-          }), (0, ez.jsx)(Cz.c, {
-            diagnostics: Kz,
-            t: Oz
+            }), gv("shaderPack:offInStrict")]
+          }), (0, Dv.jsx)(Ov.e, {
+            diagnostics: lv,
+            t: gv
           })]
         })]
       })
     }
 
-    function cz(zz) {
+    function Rv(vv) {
       let {
-        setApplySettingsCallback: tz
-      } = zz;
+        setApplySettingsCallback: zv
+      } = vv;
       const {
-        t: sz
-      } = (0, oz.B)(), [Wz, Oz] = (0, Fz.useState)(null), [Uz, Kz] = (0, Fz.useState)(null), [rz, xz] = (0, Fz.useState)(null), [mz] = (0, Fz.useState)(Nz.g), [Jz, Iz] = (0, Fz.useState)(!0), [Cz, Zz] = (0, Fz.useState)(!1), {
-        loading: Gz,
-        error: cz,
-        setError: Az,
-        onFiles: yz
-      } = (0, Pz.d)((async zz => {
-        const tz = await (0, uz.loadPageShaderPackCompiler)();
-        if (!tz) return void Az(sz("shaderPack:compilerUnavailable"));
-        Kz(tz);
-        const Fz = (0, bz.toStoredShaderPack)(zz, await (0, wz.f)(tz, zz.files));
-        await (0, bz.saveShaderPack)(Fz, tz) ? (Oz(Fz), Mz(Wz, Fz, tz)) : Az(sz("shaderPack:saveFailed"))
+        t: Pv
+      } = (0, pv.x)(), [Sv, gv] = (0, hv.useState)(null), [Nv, lv] = (0, hv.useState)(null), [mv, fv] = (0, hv.useState)(null), [Fv] = (0, hv.useState)(Wv.g), [Yv, nv] = (0, hv.useState)(!0), [Ov, Kv] = (0, hv.useState)(!1), {
+        loading: Vv,
+        error: Rv,
+        setError: tv,
+        onFiles: qv
+      } = (0, Gv.f)((async vv => {
+        const zv = await (0, Tv.loadPageShaderPackCompiler)();
+        if (!zv) return void tv(Pv("shaderPack:compilerUnavailable"));
+        lv(zv);
+        const hv = (0, wv.toStoredShaderPack)(vv, await (0, av.e)(zv, vv.files));
+        await (0, wv.saveShaderPack)(hv, zv) ? (gv(hv), Iv(Sv, hv, zv)) : tv(Pv("shaderPack:saveFailed"))
       }));
 
-      function Mz(zz, sz, Fz) {
-        (function(zz, tz, sz, Fz) {
-          return sz || Yz(zz, Fz) || Yz(tz, Fz)
-        })(zz, sz, (0, bz.isShaderPackChangePending)(), Fz) && ((0, bz.markShaderPackChangePending)(), tz((() => Hz.h)))
+      function Iv(vv, Pv, hv) {
+        (function(vv, zv, Pv, hv) {
+          return Pv || jv(vv, hv) || jv(zv, hv)
+        })(vv, Pv, (0, wv.isShaderPackChangePending)(), hv) && ((0, wv.markShaderPackChangePending)(), zv((() => iv.l)))
       }
-      return (0, Fz.useEffect)((() => {
-        let zz = !1;
+      return (0, hv.useEffect)((() => {
+        let vv = !1;
         return async function() {
-          const tz = (0, vz.hasUsableWebGpuAdapter)(),
-            sz = await (0, Dz.g)();
-          if (zz) return;
-          Oz(sz), Zz(!0), Iz(!1);
-          const Fz = null !== sz ? (0, uz.loadPageShaderPackCompiler)() : null,
-            Wz = await tz;
-          if (zz) return;
-          xz(Wz);
-          const Xz = await Fz;
-          if (!zz && (Kz(Xz), null !== sz && Wz && null !== Xz && (0, bz.shaderPackNeedsCheck)(sz, Xz))) {
-            const tz = await (0, wz.d)(sz, Xz);
-            zz || Oz((zz => zz === sz ? tz : zz))
+          const zv = (0, dv.hasUsableWebGpuAdapter)(),
+            Pv = await (0, sv.g)();
+          if (vv) return;
+          gv(Pv), Kv(!0), nv(!1);
+          const hv = null !== Pv ? (0, Tv.loadPageShaderPackCompiler)() : null,
+            Sv = await zv;
+          if (vv) return;
+          fv(Sv);
+          const ev = await hv;
+          if (!vv && (lv(ev), null !== Pv && Sv && null !== ev && (0, wv.shaderPackNeedsCheck)(Pv, ev))) {
+            const zv = await (0, av.c)(Pv, ev);
+            vv || gv((vv => vv === Pv ? zv : vv))
           }
-        }().catch((tz => {
-          console.error("Failed to load the stored shader pack", tz), zz || Az(sz("shaderPack:unexpectedError"))
+        }().catch((zv => {
+          console.error("Failed to load the stored shader pack", zv), vv || tv(Pv("shaderPack:unexpectedError"))
         })).finally((() => {
-          zz || (Iz(!1), Zz(!1))
+          vv || (nv(!1), Kv(!1))
         })), () => {
-          zz = !0
+          vv = !0
         }
-      }), []), (0, ez.jsxs)("div", {
+      }), []), (0, Dv.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, ez.jsx)("div", {
+        children: [(0, Dv.jsx)("div", {
           className: "ShaderPackIntro",
-          children: sz("shaderPack:intro")
-        }), (0, ez.jsx)(jz, {
-          to: gz.db,
+          children: Pv("shaderPack:intro")
+        }), (0, Dv.jsx)(xv, {
+          to: Cv.O,
           className: "ShaderPackBrowseLink",
-          children: (0, ez.jsx)(Xz.p, {
+          children: (0, Dv.jsx)(ev.j, {
             className: "ShaderPackBrowseButton",
-            children: sz("shaderPackListing:browse")
+            children: Pv("shaderPackListing:browse")
           })
-        }), !1 === rz && (0, ez.jsx)("div", {
+        }), !1 === mv && (0, Dv.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: sz(mz ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== cz && (0, ez.jsxs)("div", {
+          children: Pv(Fv ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== Rv && (0, Dv.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [sz("general:error"), ": ", cz]
-        }), Wz && (0, ez.jsxs)("div", {
+          children: [Pv("general:error"), ": ", Rv]
+        }), Sv && (0, Dv.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, ez.jsxs)("div", {
+          children: [(0, Dv.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, ez.jsxs)("div", {
-              children: [(0, ez.jsx)("div", {
+            children: [(0, Dv.jsxs)("div", {
+              children: [(0, Dv.jsx)("div", {
                 className: "ShaderPackName",
-                children: Wz.manifest.name
-              }), Wz.manifest.author && (0, ez.jsx)("div", {
+                children: Sv.manifest.name
+              }), Sv.manifest.author && (0, Dv.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, Bz.h)(sz, "shaderPack:byAuthor", {
-                  author: Wz.manifest.author
+                children: (0, cv.i)(Pv, "shaderPack:byAuthor", {
+                  author: Sv.manifest.author
                 })
-              }), Wz.manifest.description && (0, ez.jsx)("div", {
+              }), Sv.manifest.description && (0, Dv.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: Wz.manifest.description
-              }), Wz.listing && (0, ez.jsx)("div", {
+                children: Sv.manifest.description
+              }), Sv.listing && (0, Dv.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, ez.jsx)(jz, {
-                  to: (0, gz.jb)(Wz.listing.packId),
+                children: (0, Dv.jsx)(xv, {
+                  to: (0, Cv.U)(Sv.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: sz("shaderPackListing:openPackPage")
+                  children: Pv("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, ez.jsx)(Xz.K, {
-              disabled: Jz || Gz,
+            }), (0, Dv.jsx)(ev.E, {
+              disabled: Yv || Vv,
               onClick: async function() {
-                Iz(!0), Az(null), await (0, bz.removeShaderPack)(), Oz(null), Iz(!1), Mz(Wz, null, Uz)
+                nv(!0), tv(null), await (0, wv.removeShaderPack)(), gv(null), nv(!1), Iv(Sv, null, Nv)
               },
-              children: sz("shaderPack:removePack")
+              children: Pv("shaderPack:removePack")
             })]
-          }), (0, ez.jsx)(Tz, {
-            stored: Wz,
-            checking: Cz,
-            webGpuUsable: rz,
-            changePending: (0, bz.isShaderPackChangePending)(),
-            compiler: Uz,
-            t: sz
+          }), (0, Dv.jsx)(Uv, {
+            stored: Sv,
+            checking: Ov,
+            webGpuUsable: mv,
+            changePending: (0, wv.isShaderPackChangePending)(),
+            compiler: Nv,
+            t: Pv
           })]
-        }), (0, ez.jsx)(Pz.b, {
-          busy: Jz || Gz || Cz,
-          disabled: Jz || Gz || Cz || !0 !== rz,
-          onFiles: yz
+        }), (0, Dv.jsx)(Gv.d, {
+          busy: Yv || Vv || Ov,
+          disabled: Yv || Vv || Ov || !0 !== mv,
+          onFiles: qv
         })]
       })
     }
 
-    function jz(zz) {
+    function xv(vv) {
       let {
-        to: tz,
-        className: sz,
-        children: Fz
-      } = zz;
+        to: zv,
+        className: Pv,
+        children: hv
+      } = vv;
       const {
-        gameState: Xz
-      } = (0, Uz.h)(["gameState"]), {
-        pathname: oz,
-        search: vz
-      } = (0, Wz.s)(), uz = "landingPage" !== Xz && "studio" !== Xz;
-      return (0, ez.jsx)(Oz.LinkPreserveSearch, {
-        to: tz,
-        className: sz,
-        target: uz ? "_blank" : void 0,
+        gameState: ev
+      } = (0, Nv.i)(["gameState"]), {
+        pathname: pv,
+        search: dv
+      } = (0, Sv.p)(), Tv = "landingPage" !== ev && "studio" !== ev;
+      return (0, Dv.jsx)(gv.LinkPreserveSearch, {
+        to: zv,
+        className: Pv,
+        target: Tv ? "_blank" : void 0,
         onClick: () => {
-          uz || ((0, gz.N)(`${oz}${vz}`), (0, Kz.h)())
+          Tv || ((0, Cv.H)(`${pv}${dv}`), (0, lv.f)())
         },
-        children: Fz
+        children: hv
       })
     }
   },
-  6122: (zz, tz, sz) => {
-    sz.d(tz, {
-      B: () => Qz,
-      E: () => wz,
-      H: () => Hz,
-      K: () => ez,
-      N: () => Kz,
-      Q: () => Gz,
-      U: () => Dz,
-      Y: () => hz,
-      ab: () => Mz,
-      d: () => Bz,
-      db: () => Oz,
-      h: () => Iz,
-      hb: () => dz,
-      jb: () => vz,
-      kb: () => oz,
-      l: () => gz,
-      mb: () => Az,
-      p: () => Nz,
-      qb: () => yz,
-      s: () => uz,
-      t: () => Tz,
-      u: () => bz,
-      ub: () => Pz,
-      wb: () => Zz,
-      x: () => cz
+  6263: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      B: () => iv,
+      E: () => Dv,
+      H: () => lv,
+      I: () => Vv,
+      J: () => sv,
+      K: () => Zv,
+      L: () => Iv,
+      O: () => gv,
+      R: () => Qv,
+      U: () => dv,
+      W: () => pv,
+      _: () => tv,
+      cb: () => qv,
+      e: () => cv,
+      fb: () => Gv,
+      gb: () => Kv,
+      h: () => nv,
+      k: () => Cv,
+      l: () => Wv,
+      m: () => Tv,
+      n: () => Uv,
+      q: () => wv,
+      u: () => Rv,
+      w: () => Av,
+      y: () => av
     });
-    var Fz = sz(6129),
-      Wz = sz(161),
-      Xz = sz(4194);
-    const Oz = "/shader-packs",
-      oz = `${Oz}/publish`;
+    var hv = Pv(6268),
+      Sv = Pv(144),
+      ev = Pv(4319);
+    const gv = "/shader-packs",
+      pv = `${gv}/publish`;
 
-    function vz(zz) {
-      return `${Oz}/${encodeURIComponent(zz)}`
+    function dv(vv) {
+      return `${gv}/${encodeURIComponent(vv)}`
     }
-    let Uz = null;
+    let Nv = null;
 
-    function Kz(zz) {
-      Uz = zz
-    }
-
-    function uz() {
-      return Uz
+    function lv(vv) {
+      Nv = vv
     }
 
-    function Nz() {
-      Uz = null
+    function Tv() {
+      return Nv
     }
 
-    function bz(zz) {
-      return zz.playerHasRank("developer") || zz.playerHasRank("admin")
+    function Wv() {
+      Nv = null
     }
-    const wz = ["terrain", "water", "models", "sunShadows", "strict"],
-      Dz = {
+
+    function wv(vv) {
+      return vv.playerHasRank("developer") || vv.playerHasRank("admin")
+    }
+    const av = ["terrain", "water", "models", "sunShadows", "strict"],
+      sv = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function gz(zz, tz) {
-      return zz.withFeatures.includes(tz) ? "with" : zz.withoutFeatures.includes(tz) ? "without" : null
+    function Cv(vv, zv) {
+      return vv.withFeatures.includes(zv) ? "with" : vv.withoutFeatures.includes(zv) ? "without" : null
     }
 
-    function Hz(zz) {
-      return null === zz ? "with" : "with" === zz ? "without" : null
+    function iv(vv) {
+      return null === vv ? "with" : "with" === vv ? "without" : null
     }
 
-    function Bz(zz) {
-      return "with" === zz ? "only" : null === zz ? "include" : void 0
+    function cv(vv) {
+      return "with" === vv ? "only" : null === vv ? "include" : void 0
     }
 
-    function Pz(zz, tz) {
-      const sz = gz(zz, tz),
-        Fz = zz => zz.filter((zz => zz !== tz));
+    function Gv(vv, zv) {
+      const Pv = Cv(vv, zv),
+        hv = vv => vv.filter((vv => vv !== zv));
       return {
-        withFeatures: null === sz ? [...zz.withFeatures, tz] : Fz(zz.withFeatures),
-        withoutFeatures: "with" === sz ? [...zz.withoutFeatures, tz] : Fz(zz.withoutFeatures)
+        withFeatures: null === Pv ? [...vv.withFeatures, zv] : hv(vv.withFeatures),
+        withoutFeatures: "with" === Pv ? [...vv.withoutFeatures, zv] : hv(vv.withoutFeatures)
       }
     }
-    const rz = "section",
-      Yz = "sort",
-      xz = "filters",
-      mz = "q",
-      Jz = "banned",
-      Iz = "popular",
-      Cz = "strict";
+    const mv = "section",
+      jv = "sort",
+      fv = "filters",
+      Fv = "q",
+      Yv = "banned",
+      nv = "popular",
+      Ov = "strict";
 
-    function ez(zz) {
-      var tz, sz, Wz;
-      const Oz = zz.get(rz),
-        oz = (null !== (tz = zz.get(xz)) && void 0 !== tz ? tz : Cz).split(","),
-        vz = zz.get(Jz);
+    function Dv(vv) {
+      var zv, Pv, Sv;
+      const gv = vv.get(mv),
+        pv = (null !== (zv = vv.get(fv)) && void 0 !== zv ? zv : Ov).split(","),
+        dv = vv.get(Yv);
       return {
-        section: "favourites" === Oz || "mine" === Oz ? Oz : "explore",
-        sort: null !== (sz = Fz.u.find((tz => tz === zz.get(Yz)))) && void 0 !== sz ? sz : Iz,
-        withFeatures: wz.filter((zz => oz.includes(zz) && !oz.includes(`-${zz}`))),
-        withoutFeatures: wz.filter((zz => oz.includes(`-${zz}`))),
-        searchQuery: (null === (Wz = zz.get(mz)) || void 0 === Wz ? void 0 : Wz.slice(0, Fz.G)) || null,
-        pageNumber: (0, Xz.e)(zz.get(Xz.b)),
-        banned: "only" === vz ? "with" : "include" === vz ? null : "without"
+        section: "favourites" === gv || "mine" === gv ? gv : "explore",
+        sort: null !== (Pv = hv.z.find((zv => zv === vv.get(jv)))) && void 0 !== Pv ? Pv : nv,
+        withFeatures: av.filter((vv => pv.includes(vv) && !pv.includes(`-${vv}`))),
+        withoutFeatures: av.filter((vv => pv.includes(`-${vv}`))),
+        searchQuery: (null === (Sv = vv.get(Fv)) || void 0 === Sv ? void 0 : Sv.slice(0, hv.I)) || null,
+        pageNumber: (0, ev.f)(vv.get(ev.d)),
+        banned: "only" === dv ? "with" : "include" === dv ? null : "without"
       }
     }
 
-    function Zz(zz, tz) {
-      var sz;
-      const Fz = jz(tz);
-      (0, Xz.f)(zz, rz, "explore" === tz.section ? null : tz.section), (0, Xz.f)(zz, Yz, tz.sort === Iz ? null : tz.sort), (0, Xz.f)(zz, xz, Fz === Cz ? null : Fz), (0, Xz.f)(zz, mz, tz.searchQuery), (0, Xz.f)(zz, Jz, null !== (sz = Bz(tz.banned)) && void 0 !== sz ? sz : null), (0, Xz.g)(zz, tz.pageNumber)
+    function Kv(vv, zv) {
+      var Pv;
+      const hv = xv(zv);
+      (0, ev.j)(vv, mv, "explore" === zv.section ? null : zv.section), (0, ev.j)(vv, jv, zv.sort === nv ? null : zv.sort), (0, ev.j)(vv, fv, hv === Ov ? null : hv), (0, ev.j)(vv, Fv, zv.searchQuery), (0, ev.j)(vv, Yv, null !== (Pv = cv(zv.banned)) && void 0 !== Pv ? Pv : null), (0, ev.n)(vv, zv.pageNumber)
     }
 
-    function Gz(zz) {
-      const tz = new URLSearchParams;
-      return Zz(tz, {
+    function Vv(vv) {
+      const zv = new URLSearchParams;
+      return Kv(zv, {
         section: "explore",
-        sort: Iz,
-        withFeatures: "strict" === zz ? [zz] : [zz, "strict"],
+        sort: nv,
+        withFeatures: "strict" === vv ? [vv] : [vv, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${Oz}?${tz.toString()}`
+      }), `${gv}?${zv.toString()}`
     }
 
-    function Tz(zz) {
-      return jz(zz) === Cz
+    function Uv(vv) {
+      return xv(vv) === Ov
     }
 
-    function cz(zz) {
-      return null !== zz.searchQuery || "with" === zz.banned || jz(zz) !== Cz
+    function Rv(vv) {
+      return null !== vv.searchQuery || "with" === vv.banned || xv(vv) !== Ov
     }
 
-    function jz(zz) {
-      return wz.flatMap((tz => {
-        const sz = gz(zz, tz);
-        return "with" === sz ? [tz] : "without" === sz ? [`-${tz}`] : []
+    function xv(vv) {
+      return av.flatMap((zv => {
+        const Pv = Cv(vv, zv);
+        return "with" === Pv ? [zv] : "without" === Pv ? [`-${zv}`] : []
       })).join(",")
     }
-    const Az = {
+    const tv = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      yz = {
+      qv = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,78 +387,78 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function Mz(zz) {
-      return Math.round(100 * Math.max(0, 1 - 1 / zz))
+    function Iv(vv) {
+      return Math.round(100 * Math.max(0, 1 - 1 / vv))
     }
 
-    function dz(zz, tz, sz, Wz) {
-      const Xz = [];
-      zz.isBanned && Xz.push({
+    function Qv(vv, zv, Pv, Sv) {
+      const ev = [];
+      vv.isBanned && ev.push({
         tone: "warning",
-        text: Wz("shaderPackListing:ownerBanned"),
+        text: Sv("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: Oz
-      } = zz;
-      if (null === zz.brokenError || Oz && !Oz.error || Xz.push({
+        pending: gv
+      } = vv;
+      if (null === vv.brokenError || gv && !gv.error || ev.push({
           tone: "warning",
-          text: Wz("shaderPackListing:ownerBroken"),
-          detail: zz.brokenError
-        }), null !== Oz && void 0 !== Oz && Oz.error) Xz.push({
+          text: Sv("shaderPackListing:ownerBroken"),
+          detail: vv.brokenError
+        }), null !== gv && void 0 !== gv && gv.error) ev.push({
         tone: "warning",
-        text: Wz(tz ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, Fz.j)(Oz.error) ? null : Oz.error
+        text: Sv(zv ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, hv.k)(gv.error) ? null : gv.error
       });
-      else if (Oz) {
-        const zz = null === Oz.renderNotBefore ? 0 : Oz.renderNotBefore - sz,
-          Fz = String(Math.ceil(zz / 6e4)),
-          oz = Wz(tz ? zz > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : zz > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: Fz
+      else if (gv) {
+        const vv = null === gv.renderNotBefore ? 0 : gv.renderNotBefore - Pv,
+          hv = String(Math.ceil(vv / 6e4)),
+          pv = Sv(zv ? vv > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : vv > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: hv
           });
-        Xz.push({
+        ev.push({
           tone: "info",
-          text: oz,
+          text: pv,
           detail: null
         })
       }
-      return zz.listed || Xz.push({
+      return vv.listed || ev.push({
         tone: "info",
-        text: Wz("shaderPackListing:ownerUnlisted"),
+        text: Sv("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), Xz
+      }), ev
     }
 
-    function hz(zz) {
-      return Math.max(1, Math.round(zz / 1024))
+    function Zv(vv) {
+      return Math.max(1, Math.round(vv / 1024))
     }
 
-    function Qz(zz, tz, sz) {
-      return zz instanceof Wz.e && zz.errorMessageForUser ? zz.errorMessageForUser : tz(sz)
+    function Av(vv, zv, Pv) {
+      return vv instanceof Sv.c && vv.errorMessageForUser ? vv.errorMessageForUser : zv(Pv)
     }
   },
-  6129: (zz, tz, sz) => {
-    sz.d(tz, {
-      A: () => Oz,
-      B: () => Fz,
-      F: () => Nz,
-      G: () => Kz,
-      I: () => Pz,
-      J: () => uz,
-      N: () => Uz,
-      b: () => bz,
-      f: () => Dz,
-      i: () => wz,
-      j: () => Bz,
-      m: () => Yz,
-      p: () => vz,
-      q: () => Wz,
-      r: () => rz,
-      u: () => Xz,
-      w: () => oz
+  6268: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      A: () => pv,
+      B: () => gv,
+      D: () => hv,
+      G: () => Wv,
+      I: () => lv,
+      L: () => Gv,
+      N: () => Tv,
+      R: () => Nv,
+      c: () => wv,
+      f: () => sv,
+      h: () => av,
+      k: () => cv,
+      o: () => jv,
+      q: () => dv,
+      t: () => Sv,
+      v: () => mv,
+      z: () => ev
     });
-    const Fz = ["forest", "desert", "water", "night", "cave"];
-    const Wz = {
+    const hv = ["forest", "desert", "water", "night", "cave"];
+    const Sv = {
         full: {
           width: 3840,
           height: 2160
@@ -472,43 +472,43 @@ export const modules = {
           height: 360
         }
       },
-      Xz = ["popular", "updated", "newest"],
-      Oz = 3,
-      oz = 32,
-      vz = 300;
+      ev = ["popular", "updated", "newest"],
+      gv = 3,
+      pv = 32,
+      dv = 300;
 
-    function Uz(zz, tz) {
-      return zz.slice(0, tz).replace(/[\uD800-\uDBFF]$/, "")
+    function Nv(vv, zv) {
+      return vv.slice(0, zv).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Kz = 64,
-      uz = 512,
-      Nz = 18e5;
-    const bz = "Bloxdhub",
-      wz = "https://bloxdhub.com/shaders";
+    const lv = 64,
+      Tv = 512,
+      Wv = 18e5;
+    const wv = "Bloxdhub",
+      av = "https://bloxdhub.com/shaders";
 
-    function Dz(zz) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(zz)}`
+    function sv(vv) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(vv)}`
     }
-    const gz = "Screenshot generation failed.",
-      Hz = "Its screenshots couldn't be generated:";
+    const Cv = "Screenshot generation failed.",
+      iv = "Its screenshots couldn't be generated:";
 
-    function Bz(zz) {
-      var tz;
-      return zz === gz || null !== (tz = null === zz || void 0 === zz ? void 0 : zz.startsWith(Hz)) && void 0 !== tz && tz
-    }
-
-    function Pz(zz, tz) {
-      return `shaderPacks/${zz}/${tz}.json`
+    function cv(vv) {
+      var zv;
+      return vv === Cv || null !== (zv = null === vv || void 0 === vv ? void 0 : vv.startsWith(iv)) && void 0 !== zv && zv
     }
 
-    function rz(zz, tz, sz, Fz) {
-      return null === tz.renderId ? Yz(zz, tz.baselineVersion, sz, Fz) : `${zz}/${function(zz,tz,sz,Fz){return`shaderPacks/${zz}/${tz}/${sz}-${Fz}.webp`}(tz.packId,tz.renderId,sz,Fz)}`
+    function Gv(vv, zv) {
+      return `shaderPacks/${vv}/${zv}.json`
     }
 
-    function Yz(zz, tz, sz, Fz) {
-      return `${zz}/${function(zz,tz,sz){return`shaderPacks/baseline/${zz}/${tz}-${sz}.webp`}(tz,sz,Fz)}`
+    function mv(vv, zv, Pv, hv) {
+      return null === zv.renderId ? jv(vv, zv.baselineVersion, Pv, hv) : `${vv}/${function(vv,zv,Pv,hv){return`shaderPacks/${vv}/${zv}/${Pv}-${hv}.webp`}(zv.packId,zv.renderId,Pv,hv)}`
+    }
+
+    function jv(vv, zv, Pv, hv) {
+      return `${vv}/${function(vv,zv,Pv){return`shaderPacks/baseline/${vv}/${zv}-${Pv}.webp`}(zv,Pv,hv)}`
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

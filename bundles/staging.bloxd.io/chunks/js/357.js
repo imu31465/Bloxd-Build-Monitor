@@ -1,19 +1,19 @@
 export const id = 357;
 export const ids = [357];
 export const modules = {
-  60575: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      lod3DPixelShader: () => Oz
+  60814: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      postprocessVertexShaderWGSL: () => gv
     });
-    var Fz = sz(39041);
-    const Wz = "lod3DPixelShader",
-      Xz = "precision highp float;precision highp sampler3D;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler3D textureSampler;uniform float lod;uniform float slice;uniform int gamma;void main(void)\n{ivec3 textureCoordinates=ivec3(vUV*vec2(textureSize(textureSampler,0).xy),int(slice));gl_FragColor=texelFetch(textureSampler,textureCoordinates,int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    Fz.e.ShadersStore[Wz] || (Fz.e.ShadersStore[Wz] = Xz);
-    const Oz = {
-      name: Wz,
-      shader: Xz
+    var hv = Pv(39162);
+    const Sv = "postprocessVertexShader",
+      ev = "attribute position: vec2<f32>;uniform scale: vec2<f32>;varying vUV: vec2<f32>;const madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvertexOutputs.vUV=(vertexInputs.position*madd+madd)*uniforms.scale;vertexOutputs.position=vec4(vertexInputs.position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}\n";
+    hv.d.ShadersStoreWGSL[Sv] || (hv.d.ShadersStoreWGSL[Sv] = ev);
+    const gv = {
+      name: Sv,
+      shader: ev
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

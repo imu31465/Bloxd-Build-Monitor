@@ -1,884 +1,624 @@
 export const id = 249;
 export const ids = [249];
 export const modules = {
-  39421: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Nz
+  39535: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => gv,
+      e: () => pv
     });
-    var Fz = sz(39167),
-      Wz = sz(39170),
-      Xz = sz(36475),
-      Oz = sz(36654),
-      oz = sz(39374),
-      vz = sz(39280),
-      Uz = sz(36518),
-      Kz = sz(39350),
-      uz = sz(39181);
-    let Nz = (() => {
-      var zz, tz;
-      let sz, Nz, bz, wz, Dz, gz, Hz, Bz, Pz, rz, Yz, xz, mz, Jz = oz.e,
-        Iz = [],
-        Cz = [],
-        ez = [],
-        Zz = [],
-        Gz = [],
-        Tz = [],
-        cz = [],
-        jz = [],
-        Az = [],
-        yz = [],
-        Mz = [],
-        dz = [],
-        hz = [],
-        Qz = [],
-        kz = [],
-        iz = [],
-        Lz = [],
-        lz = [],
-        nz = [],
-        az = [],
-        qz = [];
-      return zz = class extends Jz {
-        get range() {
-          return this._range
+    var hv = Pv(38209),
+      Sv = Pv(39312),
+      ev = Pv(39515),
+      gv = {};
+    class pv {
+      constructor(vv) {
+        this.attachedToElement = !1, this.attached = {}, this.camera = vv, this.checkInputs = () => {}
+      }
+      add(vv) {
+        const zv = vv.getSimpleName();
+        this.attached[zv] ? hv.d.Warn("camera input of type " + zv + " already exists on camera") : (this.attached[zv] = vv, vv.camera = this.camera, vv.checkInputs && (this.checkInputs = this._addCheckInputs(vv.checkInputs.bind(vv))), this.attachedToElement && vv.attachControl(this.noPreventDefault))
+      }
+      remove(vv) {
+        for (const zv in this.attached) {
+          const Pv = this.attached[zv];
+          if (Pv === vv) return Pv.detachControl(), Pv.camera = null, delete this.attached[zv], void this.rebuildInputCheck()
         }
-        set range(zz) {
-          this._range = zz, this._inverseSquaredRange = 1 / (this.range * this.range)
+      }
+      removeByType(vv) {
+        for (const zv in this.attached) {
+          const Pv = this.attached[zv];
+          Pv.getClassName() === vv && (Pv.detachControl(), Pv.camera = null, delete this.attached[zv], this.rebuildInputCheck())
         }
-        get intensityMode() {
-          return this._intensityMode
+      }
+      _addCheckInputs(vv) {
+        const zv = this.checkInputs;
+        return () => {
+          zv(), vv()
         }
-        set intensityMode(zz) {
-          this._intensityMode = zz, this._computePhotometricScale()
+      }
+      attachInput(vv) {
+        this.attachedToElement && vv.attachControl(this.noPreventDefault)
+      }
+      attachElement() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (!this.attachedToElement) {
+          vv = !ev.c.ForceAttachControlToAlwaysPreventDefault && vv, this.attachedToElement = !0, this.noPreventDefault = vv;
+          for (const zv in this.attached) this.attached[zv].attachControl(vv)
         }
-        get radius() {
-          return this._radius
+      }
+      detachElement() {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        for (const zv in this.attached) this.attached[zv].detachControl(), vv && (this.attached[zv].camera = null);
+        this.attachedToElement = !1
+      }
+      rebuildInputCheck() {
+        this.checkInputs = () => {};
+        for (const vv in this.attached) {
+          const zv = this.attached[vv];
+          zv.checkInputs && (this.checkInputs = this._addCheckInputs(zv.checkInputs.bind(zv)))
         }
-        set radius(zz) {
-          this._radius = zz, this._computePhotometricScale()
+      }
+      clear() {
+        this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
+      }
+      serialize(vv) {
+        const zv = {};
+        for (const Pv in this.attached) {
+          const vv = this.attached[Pv],
+            hv = Sv.c.Serialize(vv);
+          zv[vv.getClassName()] = hv
         }
-        get renderPriority() {
-          return (0, Fz.c)(this, tz, "f")
-        }
-        set renderPriority(zz) {
-          (0, Fz.g)(this, tz, zz, "f")
-        }
-        get shadowEnabled() {
-          return this._shadowEnabled
-        }
-        set shadowEnabled(zz) {
-          this._shadowEnabled !== zz && (this._shadowEnabled = zz, this._markMeshesAsLightDirty())
-        }
-        get includedOnlyMeshes() {
-          return this._includedOnlyMeshes
-        }
-        set includedOnlyMeshes(zz) {
-          this._includedOnlyMeshes = zz, this._hookArrayForIncludedOnly(zz)
-        }
-        get excludedMeshes() {
-          return this._excludedMeshes
-        }
-        set excludedMeshes(zz) {
-          this._excludedMeshes = zz, this._hookArrayForExcluded(zz)
-        }
-        get excludeWithLayerMask() {
-          return this._excludeWithLayerMask
-        }
-        set excludeWithLayerMask(zz) {
-          this._excludeWithLayerMask = zz, this._resyncMeshes()
-        }
-        get includeOnlyWithLayerMask() {
-          return this._includeOnlyWithLayerMask
-        }
-        set includeOnlyWithLayerMask(zz) {
-          this._includeOnlyWithLayerMask = zz, this._resyncMeshes()
-        }
-        get lightmapMode() {
-          return this._lightmapMode
-        }
-        set lightmapMode(zz) {
-          this._lightmapMode !== zz && (this._lightmapMode = zz, this._markMeshesAsLightDirty())
-        }
-        getViewMatrix(zz) {
-          return null
-        }
-        getProjectionMatrix(zz, tz) {
-          return null
-        }
-        constructor(sz, Wz, Xz) {
-          super(sz, Wz, !1), this.diffuse = ((0, Fz.k)(this, Iz), (0, Fz.k)(this, Cz, new Oz.c(1, 1, 1))), this.specular = ((0, Fz.k)(this, ez), (0, Fz.k)(this, Zz, new Oz.c(1, 1, 1))), this.falloffType = ((0, Fz.k)(this, Gz), (0, Fz.k)(this, Tz, zz.FALLOFF_DEFAULT)), this.intensity = ((0, Fz.k)(this, cz), (0, Fz.k)(this, jz, 1)), this._range = ((0, Fz.k)(this, Az), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = zz.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, Fz.k)(this, yz, void 0), tz.set(this, ((0, Fz.k)(this, Mz), (0, Fz.k)(this, dz, 0))), this._shadowEnabled = ((0, Fz.k)(this, hz), (0, Fz.k)(this, Qz, !0)), this._includedOnlyMeshes = (0, Fz.k)(this, kz), this._excludeWithLayerMask = (0, Fz.k)(this, iz, 0), this._includeOnlyWithLayerMask = ((0, Fz.k)(this, Lz), (0, Fz.k)(this, lz, 0)), this._lightmapMode = ((0, Fz.k)(this, nz), (0, Fz.k)(this, az, 0)), this._shadowGenerators = ((0, Fz.k)(this, qz), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, Xz || this.aJ().addLight(this), this._uniformBuffer = new vz.c(this.aJ().FD(), void 0, void 0, sz), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], Xz || this._resyncMeshes()
-        }
-        transferTexturesToEffect(zz, tz) {
-          return this
-        }
-        _bindLight(zz, tz, sz, Fz) {
-          let Wz = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-          const Xz = zz.toString();
-          let oz = !1;
-          if (this._uniformBuffer.bindToEffect(sz, "Light" + Xz), this._renderId !== tz.getRenderId() || this._lastUseSpecular !== Fz || !this._uniformBuffer.useUbo) {
-            this._renderId = tz.getRenderId(), this._lastUseSpecular = Fz;
-            const zz = this.getScaledIntensity();
-            this.transferToEffect(sz, Xz), this.diffuse.scaleToRef(zz, Oz.f.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", Oz.f.Color3[0], this.range, Xz), Fz && (this.specular.scaleToRef(zz, Oz.f.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", Oz.f.Color3[1], this.radius, Xz)), oz = !0
+        vv.inputsmgr = zv
+      }
+      parse(vv) {
+        const zv = vv.inputsmgr;
+        if (zv) {
+          this.clear();
+          for (const vv in zv) {
+            const Pv = gv[vv];
+            if (Pv) {
+              const hv = zv[vv],
+                ev = Sv.c.Parse((() => new Pv), hv, null);
+              this.add(ev)
+            }
           }
-          if (this.transferTexturesToEffect(sz, Xz), tz.shadowsEnabled && this.shadowEnabled && Wz) {
-            const zz = this.getShadowGenerator(tz.activeCamera) ?? this.getShadowGenerator();
-            zz && (zz.bindShadowLight(Xz, sz), oz = !0)
+        } else
+          for (const Pv in this.attached) {
+            const zv = gv[this.attached[Pv].getClassName()];
+            if (zv) {
+              const hv = Sv.c.Parse((() => new zv), vv, null);
+              this.remove(this.attached[Pv]), this.add(hv)
+            }
           }
-          oz ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
-        }
-        getClassName() {
-          return "Light"
-        }
-        toString(zz) {
-          let tz = "Name: " + this.name;
-          if (tz += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
-            for (let sz = 0; sz < this.animations.length; sz++) tz += ", animation[0]: " + this.animations[sz].toString(zz);
-          return tz
-        }
-        _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.zsz() || this._resyncMeshes()
-        }
-        Xx(zz) {
-          super.Xx(zz), this._resyncMeshes()
-        }
-        getShadowGenerator() {
-          let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-          return null === this._shadowGenerators ? null : this._shadowGenerators.get(zz) ?? null
-        }
-        getShadowGenerators() {
-          return this._shadowGenerators
-        }
-        getAbsolutePosition() {
-          return Xz.p.Zero()
-        }
-        canAffectMesh(zz) {
-          return !zz || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(zz)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(zz)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & zz.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & zz.layerMask)))
-        }
-        dispose(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._shadowGenerators) {
-            const zz = this._shadowGenerators.values();
-            for (let tz = zz.next(); !0 !== tz.done; tz = zz.next()) {
-              tz.value.dispose()
-            }
-            this._shadowGenerators = null
-          }
-          if (this.aJ().stopAnimation(this), this._parentContainer) {
-            const zz = this._parentContainer.lights.indexOf(this);
-            zz > -1 && this._parentContainer.lights.splice(zz, 1), this._parentContainer = null
-          }
-          for (const sz of this.aJ().meshes) sz._removeLightSource(this, !0);
-          this._uniformBuffer.dispose(), this.aJ().removeLight(this), super.dispose(zz, tz)
-        }
-        getTypeID() {
-          return 0
-        }
-        getScaledIntensity() {
-          return this._photometricScale * this.intensity
-        }
-        clone(tz) {
-          let sz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          const Fz = zz.GetConstructorFromName(this.getTypeID(), tz, this.aJ());
-          if (!Fz) return null;
-          const Wz = uz.e.Clone(Fz, this);
-          return tz && (Wz.name = tz), sz && (Wz.parent = sz), Wz.Xx(this.isEnabled()), this.onClonedObservable.notifyObservers(Wz), Wz
-        }
-        serialize() {
-          const zz = uz.e.Serialize(this);
-          if (zz.uniqueId = this.uniqueId, zz.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(zz), this.excludedMeshes.length > 0) {
-            zz.excludedMeshesIds = [];
-            for (const tz of this.excludedMeshes) zz.excludedMeshesIds.push(tz.id)
-          }
-          if (this.includedOnlyMeshes.length > 0) {
-            zz.includedOnlyMeshesIds = [];
-            for (const tz of this.includedOnlyMeshes) zz.includedOnlyMeshesIds.push(tz.id)
-          }
-          return uz.e.AppendSerializedAnimations(this, zz), zz.du = this.serializeAnimationRanges(), zz.isEnabled = this.isEnabled(), zz
-        }
-        static GetConstructorFromName(zz, tz, sz) {
-          const Fz = oz.e.Construct("Light_Type_" + zz, tz, sz);
-          return Fz || null
-        }
-        static Parse(tz, sz) {
-          let Fz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-          const Wz = zz.GetConstructorFromName(tz.type, tz.name, sz);
-          if (!Wz) return null;
-          const Xz = uz.e.Parse(Wz, tz, sz, Fz);
-          if (tz.excludedMeshesIds && (Xz._excludedMeshesIds = tz.excludedMeshesIds), tz.includedOnlyMeshesIds && (Xz._includedOnlyMeshesIds = tz.includedOnlyMeshesIds), void 0 !== tz.parentId && (Xz._waitingParentId = tz.parentId), void 0 !== tz.parentInstanceIndex && (Xz._waitingParentInstanceIndex = tz.parentInstanceIndex), void 0 !== tz.falloffType && (Xz.falloffType = tz.falloffType), void 0 !== tz.lightmapMode && (Xz.lightmapMode = tz.lightmapMode), tz.animations) {
-            for (let zz = 0; zz < tz.animations.length; zz++) {
-              const sz = tz.animations[zz],
-                Fz = (0, Uz.e)("BABYLON.Animation");
-              Fz && Xz.animations.push(Fz.Parse(sz))
-            }
-            oz.e.ParseAnimationRanges(Xz, tz, sz)
-          }
-          return tz.autoAnimate && sz.beginAnimation(Xz, tz.autoAnimateFrom, tz.autoAnimateTo, tz.autoAnimateLoop, tz.autoAnimateSpeed || 1), void 0 !== tz.isEnabled && Xz.Xx(tz.isEnabled), Xz._onParsed(tz, sz, Fz), Xz
-        }
-        _onParsed(zz, tz) {}
-        _hookArrayForExcluded(zz) {
-          var tz = this;
-          const sz = zz.push;
-          zz.push = function() {
-            for (var Fz = arguments.length, Wz = new Array(Fz), Xz = 0; Xz < Fz; Xz++) Wz[Xz] = arguments[Xz];
-            const Oz = sz.apply(zz, Wz);
-            if (tz._clusteredContainer) return Oz;
-            for (const zz of Wz) zz._resyncLightSource(tz);
-            return Oz
-          };
-          const Fz = zz.splice;
-          zz.splice = (tz, sz) => {
-            const Wz = Fz.call(zz, tz, sz ?? zz.length);
-            if (this._clusteredContainer) return Wz;
-            for (const zz of Wz) zz._resyncLightSource(this);
-            return Wz
-          }, this._resyncMeshes()
-        }
-        _hookArrayForIncludedOnly(zz) {
-          var tz = this;
-          const sz = zz.push;
-          zz.push = function() {
-            for (var Fz = arguments.length, Wz = new Array(Fz), Xz = 0; Xz < Fz; Xz++) Wz[Xz] = arguments[Xz];
-            const Oz = sz.apply(zz, Wz);
-            return tz._resyncMeshes(), Oz
-          };
-          const Fz = zz.splice;
-          zz.splice = (tz, sz) => {
-            const Wz = Fz.call(zz, tz, sz ?? zz.length);
-            return this._resyncMeshes(), Wz
-          }, this._resyncMeshes()
-        }
-        _resyncMeshes() {
-          if (!this._clusteredContainer)
-            for (const zz of this.aJ().meshes) zz._resyncLightSource(this)
-        }
-        _markMeshesAsLightDirty() {
-          for (const zz of this.aJ().meshes) - 1 !== zz.lightSources.indexOf(this) && zz._markSubMeshesAsLightDirty()
-        }
-        _computePhotometricScale() {
-          this._photometricScale = this._getPhotometricScale(), this.aJ().resetCachedMaterial()
-        }
-        _getPhotometricScale() {
-          let tz = 0;
-          const sz = this.getTypeID();
-          let Fz = this.intensityMode;
-          switch (Fz === zz.INTENSITYMODE_AUTOMATIC && (Fz = sz === zz.LIGHTTYPEID_DIRECTIONALLIGHT ? zz.INTENSITYMODE_ILLUMINANCE : zz.INTENSITYMODE_LUMINOUSINTENSITY), sz) {
-            case zz.LIGHTTYPEID_POINTLIGHT:
-            case zz.LIGHTTYPEID_SPOTLIGHT:
-              switch (Fz) {
-                case zz.INTENSITYMODE_LUMINOUSPOWER:
-                  tz = 1 / (4 * Math.PI);
-                  break;
-                case zz.INTENSITYMODE_LUMINOUSINTENSITY:
-                  tz = 1;
-                  break;
-                case zz.INTENSITYMODE_LUMINANCE:
-                  tz = this.radius * this.radius
-              }
-              break;
-            case zz.LIGHTTYPEID_DIRECTIONALLIGHT:
-              switch (Fz) {
-                case zz.INTENSITYMODE_ILLUMINANCE:
-                  tz = 1;
-                  break;
-                case zz.INTENSITYMODE_LUMINANCE: {
-                  let zz = this.radius;
-                  zz = Math.max(zz, .001);
-                  tz = 2 * Math.PI * (1 - Math.cos(zz));
-                  break
-                }
-              }
-              break;
-            case zz.LIGHTTYPEID_HEMISPHERICLIGHT:
-            case zz.LIGHTTYPEID_RECT_AREALIGHT:
-              tz = 1
-          }
-          return tz
-        }
-        _reorderLightsInScene() {
-          const zz = this.aJ();
-          0 != this._renderPriority && (zz.requireLightSorting = !0), this.aJ().sortLightsByPriority()
-        }
-        areLightTexturesReady() {
-          return !0
-        }
-        _isReady() {
-          return !0
-        }
-      }, tz = new WeakMap, (() => {
-        const tz = "function" === typeof Symbol && Symbol.metadata ? Object.create(Jz[Symbol.metadata] ?? null) : void 0;
-        sz = [(0, Wz.p)()], Nz = [(0, Wz.p)()], bz = [(0, Wz.J)()], wz = [(0, Wz.J)()], Dz = [(0, Wz.J)()], gz = [(0, Wz.J)()], Hz = [(0, Wz.J)()], Bz = [(0, Wz.J)()], Pz = [(0, Wz.i)("_reorderLightsInScene")], rz = [(0, Wz.J)("shadowEnabled")], Yz = [(0, Wz.J)("excludeWithLayerMask")], xz = [(0, Wz.J)("includeOnlyWithLayerMask")], mz = [(0, Wz.J)("lightmapMode")], (0, Fz.h)(zz, null, Dz, {
-          kind: "getter",
-          name: "range",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "range" in zz,
-            get: zz => zz.range
-          },
-          metadata: tz
-        }, null, Iz), (0, Fz.h)(zz, null, gz, {
-          kind: "getter",
-          name: "intensityMode",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "intensityMode" in zz,
-            get: zz => zz.intensityMode
-          },
-          metadata: tz
-        }, null, Iz), (0, Fz.h)(zz, null, Hz, {
-          kind: "getter",
-          name: "radius",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "radius" in zz,
-            get: zz => zz.radius
-          },
-          metadata: tz
-        }, null, Iz), (0, Fz.h)(zz, null, Pz, {
-          kind: "accessor",
-          name: "renderPriority",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "renderPriority" in zz,
-            get: zz => zz.renderPriority,
-            set: (zz, tz) => {
-              zz.renderPriority = tz
-            }
-          },
-          metadata: tz
-        }, dz, hz), (0, Fz.h)(null, null, sz, {
-          kind: "field",
-          name: "diffuse",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "diffuse" in zz,
-            get: zz => zz.diffuse,
-            set: (zz, tz) => {
-              zz.diffuse = tz
-            }
-          },
-          metadata: tz
-        }, Cz, ez), (0, Fz.h)(null, null, Nz, {
-          kind: "field",
-          name: "specular",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "specular" in zz,
-            get: zz => zz.specular,
-            set: (zz, tz) => {
-              zz.specular = tz
-            }
-          },
-          metadata: tz
-        }, Zz, Gz), (0, Fz.h)(null, null, bz, {
-          kind: "field",
-          name: "falloffType",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "falloffType" in zz,
-            get: zz => zz.falloffType,
-            set: (zz, tz) => {
-              zz.falloffType = tz
-            }
-          },
-          metadata: tz
-        }, Tz, cz), (0, Fz.h)(null, null, wz, {
-          kind: "field",
-          name: "intensity",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "intensity" in zz,
-            get: zz => zz.intensity,
-            set: (zz, tz) => {
-              zz.intensity = tz
-            }
-          },
-          metadata: tz
-        }, jz, Az), (0, Fz.h)(null, null, Bz, {
-          kind: "field",
-          name: "_renderPriority",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "_renderPriority" in zz,
-            get: zz => zz._renderPriority,
-            set: (zz, tz) => {
-              zz._renderPriority = tz
-            }
-          },
-          metadata: tz
-        }, yz, Mz), (0, Fz.h)(null, null, rz, {
-          kind: "field",
-          name: "_shadowEnabled",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "_shadowEnabled" in zz,
-            get: zz => zz._shadowEnabled,
-            set: (zz, tz) => {
-              zz._shadowEnabled = tz
-            }
-          },
-          metadata: tz
-        }, Qz, kz), (0, Fz.h)(null, null, Yz, {
-          kind: "field",
-          name: "_excludeWithLayerMask",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "_excludeWithLayerMask" in zz,
-            get: zz => zz._excludeWithLayerMask,
-            set: (zz, tz) => {
-              zz._excludeWithLayerMask = tz
-            }
-          },
-          metadata: tz
-        }, iz, Lz), (0, Fz.h)(null, null, xz, {
-          kind: "field",
-          name: "_includeOnlyWithLayerMask",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "_includeOnlyWithLayerMask" in zz,
-            get: zz => zz._includeOnlyWithLayerMask,
-            set: (zz, tz) => {
-              zz._includeOnlyWithLayerMask = tz
-            }
-          },
-          metadata: tz
-        }, lz, nz), (0, Fz.h)(null, null, mz, {
-          kind: "field",
-          name: "_lightmapMode",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "_lightmapMode" in zz,
-            get: zz => zz._lightmapMode,
-            set: (zz, tz) => {
-              zz._lightmapMode = tz
-            }
-          },
-          metadata: tz
-        }, az, qz), tz && Object.defineProperty(zz, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: tz
-        })
-      })(), zz.FALLOFF_DEFAULT = Kz.c.FALLOFF_DEFAULT, zz.FALLOFF_PHYSICAL = Kz.c.FALLOFF_PHYSICAL, zz.FALLOFF_GLTF = Kz.c.FALLOFF_GLTF, zz.FALLOFF_STANDARD = Kz.c.FALLOFF_STANDARD, zz.LIGHTMAP_DEFAULT = Kz.c.LIGHTMAP_DEFAULT, zz.LIGHTMAP_SPECULAR = Kz.c.LIGHTMAP_SPECULAR, zz.LIGHTMAP_SHADOWSONLY = Kz.c.LIGHTMAP_SHADOWSONLY, zz.INTENSITYMODE_AUTOMATIC = Kz.c.INTENSITYMODE_AUTOMATIC, zz.INTENSITYMODE_LUMINOUSPOWER = Kz.c.INTENSITYMODE_LUMINOUSPOWER, zz.INTENSITYMODE_LUMINOUSINTENSITY = Kz.c.INTENSITYMODE_LUMINOUSINTENSITY, zz.INTENSITYMODE_ILLUMINANCE = Kz.c.INTENSITYMODE_ILLUMINANCE, zz.INTENSITYMODE_LUMINANCE = Kz.c.INTENSITYMODE_LUMINANCE, zz.LIGHTTYPEID_POINTLIGHT = Kz.c.LIGHTTYPEID_POINTLIGHT, zz.LIGHTTYPEID_DIRECTIONALLIGHT = Kz.c.LIGHTTYPEID_DIRECTIONALLIGHT, zz.LIGHTTYPEID_SPOTLIGHT = Kz.c.LIGHTTYPEID_SPOTLIGHT, zz.LIGHTTYPEID_HEMISPHERICLIGHT = Kz.c.LIGHTTYPEID_HEMISPHERICLIGHT, zz.LIGHTTYPEID_RECT_AREALIGHT = Kz.c.LIGHTTYPEID_RECT_AREALIGHT, zz
-    })()
-  },
-  39374: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => uz
-    });
-    var Fz = sz(39167),
-      Wz = sz(36475),
-      Xz = sz(39170),
-      Oz = sz(36505),
-      oz = sz(36502),
-      vz = sz(39065),
-      Uz = sz(39181);
-    class Kz {
-      constructor() {
-        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new Oz.c, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new Oz.c, this._inheritVisibility = !1, this._isVisible = !0
       }
     }
-    let uz = (() => {
-      var zz;
-      let tz, sz, uz, Nz, bz, wz = [],
-        Dz = [],
-        gz = [],
-        Hz = [],
-        Bz = [],
-        Pz = [],
-        rz = [],
-        Yz = [],
-        xz = [],
-        mz = [];
-      return zz = class {
-        static AddNodeConstructor(zz, tz) {
-          this._NodeConstructors[zz] = tz
-        }
-        static Construct(zz, tz, sz, Fz) {
-          const Wz = this._NodeConstructors[zz];
-          return Wz ? Wz(tz, sz, Fz) : null
-        }
-        set accessibilityTag(zz) {
-          this._accessibilityTag = zz, this.onAccessibilityTagChangedObservable.notifyObservers(zz)
-        }
-        get accessibilityTag() {
-          return this._accessibilityTag
-        }
-        get doNotSerialize() {
-          return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
-        }
-        set doNotSerialize(zz) {
-          this._nodeDataStorage._doNotSerialize = zz
-        }
-        zsz() {
-          return this._nodeDataStorage._isDisposed
-        }
-        set parent(zz) {
-          if (this._parentNode === zz) return;
-          const tz = this._parentNode;
-          if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
-            const tz = this._parentNode._children.indexOf(this); - 1 !== tz && this._parentNode._children.splice(tz, 1), zz || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+  },
+  40430: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => Gv
+    });
+    var hv = Pv(39295),
+      Sv = Pv(39300),
+      ev = Pv(39204),
+      gv = Pv(36594),
+      pv = Pv(39287),
+      dv = Pv(39798),
+      Nv = Pv(36631),
+      lv = Pv(36618),
+      Tv = Pv(39312),
+      Wv = Pv(39134),
+      wv = Pv(38209),
+      av = Pv(39338),
+      sv = Pv(37431),
+      Cv = Pv(39379);
+    var iv = Pv(39212);
+    let cv = !1;
+    let Gv = (() => {
+        var vv;
+        let zv, Pv, Nv, Gv, mv, jv, fv, Fv, Yv, nv = pv.e,
+          Ov = [],
+          Dv = [],
+          Kv = [],
+          Vv = [],
+          Uv = [],
+          Rv = [],
+          xv = [],
+          tv = [],
+          qv = [],
+          Iv = [],
+          Qv = [],
+          Zv = [],
+          Av = [],
+          Lv = [],
+          Hv = [];
+        return vv = class extends nv {
+          set boundingBoxSize(vv) {
+            if (this._boundingBoxSize && this._boundingBoxSize.equals(vv)) return;
+            this._boundingBoxSize = vv;
+            const zv = this.rD();
+            zv && zv.markAllMaterialsAsDirty(1)
           }
-          this._parentNode = zz, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), tz || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
-        }
-        get parent() {
-          return this._parentNode
-        }
-        get inheritVisibility() {
-          return this._nodeDataStorage._inheritVisibility
-        }
-        set inheritVisibility(zz) {
-          this._nodeDataStorage._inheritVisibility = zz
-        }
-        get isVisible() {
-          return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
-        }
-        set isVisible(zz) {
-          this._nodeDataStorage._isVisible = zz
-        }
-        _serializeAsParent(zz) {
-          zz.parentId = this.uniqueId
-        }
-        _addToSceneRootNodes() {
-          -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
-        }
-        _removeFromSceneRootNodes() {
-          if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
-            const zz = this._scene.rootNodes,
-              tz = zz.length - 1;
-            zz[this._nodeDataStorage._sceneRootNodesIndex] = zz[tz], zz[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
+          get boundingBoxSize() {
+            return this._boundingBoxSize
           }
-        }
-        get animationPropertiesOverride() {
-          return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
-        }
-        set animationPropertiesOverride(zz) {
-          this._animationPropertiesOverride = zz
-        }
-        getClassName() {
-          return "Node"
-        }
-        set onDispose(zz) {
-          this._onDisposeObserver && this.qJ.remove(this._onDisposeObserver), this._onDisposeObserver = this.qJ.add(zz)
-        }
-        get onEnabledStateChangedObservable() {
-          return this._nodeDataStorage._onEnabledStateChangedObservable
-        }
-        get onEffectiveEnabledStateChangedObservable() {
-          var zz;
-          return (zz = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (zz._onEffectiveEnabledStateChangedObservable = new Oz.c)
-        }
-        get onClonedObservable() {
-          return this._nodeDataStorage._onClonedObservable
-        }
-        constructor(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            sz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-          this._isDirty = !1, this._nodeDataStorage = new Kz, this.name = (0, Fz.k)(this, wz, void 0), this.id = ((0, Fz.k)(this, Dz), (0, Fz.k)(this, gz, void 0)), this.uniqueId = ((0, Fz.k)(this, Hz), (0, Fz.k)(this, Bz, void 0)), this.state = ((0, Fz.k)(this, Pz), (0, Fz.k)(this, rz, "")), this.metadata = ((0, Fz.k)(this, Yz), (0, Fz.k)(this, xz, null)), this._internalMetadata = (0, Fz.k)(this, mz), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new Oz.c, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = Wz.e.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.qJ = new Oz.c, this._onDisposeObserver = null, this._behaviors = new Array, this.name = zz, this.id = zz, this._scene = tz || oz.c.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), sz && this._addToSceneRootNodes()
-        }
-        aJ() {
-          return this._scene
-        }
-        FD() {
-          return this._scene.FD()
-        }
-        addBehavior(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return -1 !== this._behaviors.indexOf(zz) || (zz.init(), this._scene.isLoading && !tz ? this._scene.onDataLoadedObservable.addOnce((() => {
-            this._behaviors.includes(zz) && zz.attach(this)
-          })) : zz.attach(this), this._behaviors.push(zz)), this
-        }
-        removeBehavior(zz) {
-          const tz = this._behaviors.indexOf(zz);
-          return -1 === tz || (this._behaviors.splice(tz, 1), zz.detach()), this
-        }
-        get behaviors() {
-          return this._behaviors
-        }
-        getBehaviorByName(zz) {
-          for (const tz of this._behaviors)
-            if (tz.name === zz) return tz;
-          return null
-        }
-        getWorldMatrix() {
-          return this._currentRenderId !== this._scene.getRenderId() && this.computeWorldMatrix(), this._worldMatrix
-        }
-        _getWorldMatrixDeterminant() {
-          return this._worldMatrixDeterminantIsDirty && (this._worldMatrixDeterminantIsDirty = !1, this._worldMatrixDeterminant = this._worldMatrix.determinant()), this._worldMatrixDeterminant
-        }
-        get worldMatrixFromCache() {
-          return this._worldMatrix
-        }
-        _initCache() {
-          this._cache = {}
-        }
-        updateCache(zz) {
-          !zz && this.isSynchronized() || this._updateCache()
-        }
-        _getActionManagerForTrigger(zz) {
-          return this.parent ? this.parent._getActionManagerForTrigger(zz, !1) : null
-        }
-        _updateCache(zz) {}
-        _isSynchronized() {
-          return !0
-        }
-        _markSyncedWithParent() {
-          this._parentNode && (this._parentUpdateId = this._parentNode._childUpdateId)
-        }
-        isSynchronizedWithParent() {
-          return !this._parentNode || !this._parentNode._isDirty && this._parentUpdateId === this._parentNode._childUpdateId && this._parentNode.isSynchronized()
-        }
-        isSynchronized() {
-          return !(this._parentNode && !this.isSynchronizedWithParent()) && this._isSynchronized()
-        }
-        isReady() {
-          return this._nodeDataStorage._isReady
-        }
-        wtz(zz) {
-          return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
-        }
-        isEnabled() {
-          return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
-        }
-        _hasEffectiveEnabledStateObservers() {
-          const zz = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
-          return !!zz && zz.hasObservers()
-        }
-        _syncParentEnabledState() {
-          const zz = this._hasEffectiveEnabledStateObservers(),
-            tz = zz ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
-            for (const sz of this._children) sz._syncParentEnabledState();
-          if (zz) {
-            const zz = this.isEnabled();
-            zz !== tz && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(zz)
+          set rotationY(vv) {
+            this._rotationY = vv, this.setReflectionTextureMatrix(gv.c.RotationY(this._rotationY))
           }
-        }
-        Xx(zz) {
-          if (this._nodeDataStorage._isEnabled === zz) return;
-          const tz = this._hasEffectiveEnabledStateObservers(),
-            sz = tz ? this.isEnabled() : null;
-          if (this._nodeDataStorage._isEnabled = zz, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(zz), tz) {
-            const zz = this.isEnabled();
-            zz !== sz && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(zz)
+          get rotationY() {
+            return this._rotationY
           }
-        }
-        isDescendantOf(zz) {
-          return !!this.parent && (this.parent === zz || this.parent.isDescendantOf(zz))
-        }
-        _getDescendants(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            sz = arguments.length > 2 ? arguments[2] : void 0;
-          if (this._children)
-            for (let Fz = 0; Fz < this._children.length; Fz++) {
-              const Wz = this._children[Fz];
-              sz && !sz(Wz) || zz.push(Wz), tz || Wz._getDescendants(zz, !1, sz)
+          get noMipmap() {
+            return this._noMipmap
+          }
+          get forcedExtension() {
+            return this._forcedExtension
+          }
+          constructor(vv, zv) {
+            let Pv, Sv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              ev = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              pv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              Nv = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              Tv = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              Gv = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
+              mv = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              jv = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
+              fv = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
+              Fv = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
+              Yv = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
+              nv = arguments.length > 13 ? arguments[13] : void 0,
+              Mv = arguments.length > 14 ? arguments[14] : void 0;
+            super(zv), this._delayedOnLoad = (0, hv.f)(this, Ov), this.onLoadObservable = new lv.c, this.url = (0, hv.f)(this, Dv, void 0), this.boundingBoxPosition = ((0, hv.f)(this, Kv), (0, hv.f)(this, Vv, gv.l.Zero())), this._boundingBoxSize = (0, hv.f)(this, Uv), this._rotationY = 0, this._files = (0, hv.f)(this, Rv, null), this._forcedExtension = ((0, hv.f)(this, xv), (0, hv.f)(this, tv, null)), this._extensions = ((0, hv.f)(this, qv), (0, hv.f)(this, Iv, null)), this._textureMatrix = ((0, hv.f)(this, Qv), (0, hv.f)(this, Zv, void 0)), this._textureMatrixRefraction = ((0, hv.f)(this, Av), (0, hv.f)(this, Lv, new gv.c)), this._format = (0, hv.f)(this, Hv), this._buffer = null, cv || (cv = !0, iv.b.prototype._partialLoadFile = function(vv, zv, Pv, hv) {
+              let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+              this._loadFile(vv, (vv => {
+                Pv[zv] = vv, Pv._internalCount++, 6 === Pv._internalCount && hv(Pv)
+              }), void 0, void 0, !0, ((vv, zv) => {
+                Sv && vv && Sv(vv.status + " " + vv.statusText, zv)
+              }))
+            }, iv.b.prototype._cascadeLoadFiles = function(vv, zv, Pv) {
+              let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+              const Sv = [];
+              Sv._internalCount = 0;
+              for (let ev = 0; ev < 6; ev++) this._partialLoadFile(Pv[ev], ev, Sv, zv, hv)
+            }, iv.b.prototype._cascadeLoadImgs = function(vv, zv, Pv, hv) {
+              let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                ev = arguments.length > 5 ? arguments[5] : void 0;
+              const gv = [];
+              gv._internalCount = 0;
+              for (let pv = 0; pv < 6; pv++) this._partialLoadImg(hv[pv], pv, gv, vv, zv, Pv, Sv, ev)
+            }, iv.b.prototype._partialLoadImg = function(vv, zv, Pv, hv, Sv, ev) {
+              let gv = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+                pv = arguments.length > 7 ? arguments[7] : void 0;
+              const dv = (0, sv.b)();
+              (0, av.n)(vv, (vv => {
+                Pv[zv] = vv, Pv._internalCount++, hv && hv.removePendingData(dv), 6 === Pv._internalCount && ev && ev(Sv, Pv)
+              }), ((vv, zv) => {
+                hv && hv.removePendingData(dv), gv && gv(vv, zv)
+              }), hv ? hv.offlineProvider : null, pv), hv && hv.addPendingData(dv)
+            }, iv.b.prototype.createCubeTextureBase = function(vv, zv, Pv, hv) {
+              let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+                ev = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+                gv = arguments.length > 6 ? arguments[6] : void 0,
+                pv = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+                dv = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+                Nv = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+                lv = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
+                Tv = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
+                av = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
+                sv = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
+                iv = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
+                cv = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
+              const Gv = Tv || new Wv.e(this, 7);
+              Gv.isCube = !0, Gv.url = vv, Gv.generateMipMaps = !hv, Gv._lodGenerationScale = Nv, Gv._lodGenerationOffset = lv, Gv._useSRGBBuffer = !!iv && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!hv), Gv !== Tv && (Gv.label = vv.substring(0, 60)), this._doNotHandleContextLost || (Gv._extension = pv, Gv._files = Pv, Gv._buffer = cv);
+              const mv = vv;
+              this._transformTextureUrl && !Tv && (vv = this._transformTextureUrl(vv));
+              const jv = pv ?? function(vv) {
+                  const zv = vv.split("?")[0],
+                    Pv = zv.lastIndexOf(".");
+                  return Pv > -1 ? zv.substring(Pv).toLowerCase() : ""
+                }(vv),
+                fv = (0, Cv.c)(jv),
+                Fv = (vv, zv) => {
+                  Gv.dispose(), ev ? ev(vv, zv) : vv && wv.d.Warn(vv)
+                },
+                Yv = (ev, Tv) => {
+                  vv === mv ? ev && Fv(ev.status + " " + ev.statusText, Tv) : (wv.d.Warn(`Failed to load ${vv}, falling back to the ${mv}`), this.createCubeTextureBase(mv, zv, Pv, !!hv, Sv, Fv, gv, pv, dv, Nv, lv, Gv, av, sv, iv, cv))
+                };
+              if (fv) fv.then((hv => {
+                const ev = vv => {
+                  av && av(Gv, vv), hv.loadCubeData(vv, Gv, dv, Sv, ((vv, zv) => {
+                    Fv(vv, zv)
+                  }))
+                };
+                cv ? ev(cv) : Pv && 6 === Pv.length ? hv.supportCascades ? this._cascadeLoadFiles(zv, (vv => ev(vv.map((vv => new Uint8Array(vv))))), Pv, Fv) : Fv("Textures type does not support cascades.") : this._loadFile(vv, (vv => ev(new Uint8Array(vv))), void 0, zv ? zv.offlineProvider || null : void 0, !0, Yv)
+              }));
+              else {
+                if (!Pv || 0 === Pv.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
+                this._cascadeLoadImgs(zv, Gv, ((vv, zv) => {
+                  sv && sv(vv, zv)
+                }), Pv, Fv)
+              }
+              return this._internalTexturesCache.push(Gv), Gv
+            }), this.name = vv, this.url = vv, this._noMipmap = ev, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = gv.c.Identity(), this.coordinatesMode = dv.e.CUBIC_MODE;
+            let yv = null;
+            null === Sv || Array.isArray(Sv) ? (this._noMipmap = ev, this._format = Gv, this._createPolynomials = fv, Pv = Sv, this._loaderOptions = nv, this._useSRGBBuffer = Mv, this._lodScale = Fv, this._lodOffset = Yv) : (Pv = Sv.extensions ?? null, this._noMipmap = Sv.noMipmap ?? !1, pv = Sv.files ?? null, yv = Sv.buffer ?? null, this._format = Sv.format ?? 5, mv = Sv.prefiltered ?? !1, jv = Sv.forcedExtension ?? null, this._createPolynomials = Sv.createPolynomials ?? !1, this._lodScale = Sv.lodScale ?? .8, this._lodOffset = Sv.lodOffset ?? 0, this._loaderOptions = Sv.loaderOptions, this._useSRGBBuffer = Sv.useSRGBBuffer, this._sphericalPolynomialTargetSize = Sv.sphericalPolynomialTargetSize ?? 0, Nv = Sv.onLoad ?? null, Tv = Sv.onError ?? null), (vv || pv) && this.updateURL(vv, jv, Nv, mv, Tv, Pv, this.rD()?.useDelayedTextureLoading, pv, yv)
+          }
+          getClassName() {
+            return "CubeTexture"
+          }
+          updateURL(vv) {
+            let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+              hv = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
+              ev = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              gv = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+              pv = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              dv = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
+            this.name && !this.name.startsWith("data:") || (this.name = vv), this.url = vv, zv && (this._forcedExtension = zv);
+            const Nv = vv.lastIndexOf("."),
+              lv = zv || (Nv > -1 ? vv.substring(Nv).toLowerCase() : ""),
+              Tv = 0 === lv.indexOf(".dds"),
+              Wv = 0 === lv.indexOf(".env"),
+              wv = 0 === lv.indexOf(".basis");
+            if (Wv ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = hv, hv && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), pv) this._files = pv;
+            else if (wv || Wv || Tv || ev || (ev = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, ev) {
+              for (let zv = 0; zv < ev.length; zv++) this._files.push(vv + ev[zv]);
+              this._extensions = ev
             }
-        }
-        getDescendants(zz, tz) {
-          const sz = [];
-          return this._getDescendants(sz, zz, tz), sz
-        }
-        getChildMeshes(zz, tz) {
-          const sz = [];
-          return this._getDescendants(sz, zz, (zz => (!tz || tz(zz)) && void 0 !== zz.cullingStrategy)), sz
-        }
-        getChildren(zz) {
-          let tz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          return this.getDescendants(tz, zz)
-        }
-        _setReady(zz) {
-          zz !== this._nodeDataStorage._isReady && (zz ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
-        }
-        getAnimationByName(zz) {
-          for (let tz = 0; tz < this.animations.length; tz++) {
-            const sz = this.animations[tz];
-            if (sz.name === zz) return sz
+            this._buffer = dv, gv ? (this.delayLoadState = 4, this._delayedOnLoad = Pv, this._delayedOnError = Sv) : this._loadTexture(Pv, Sv)
           }
-          return null
-        }
-        createAnimationRange(tz, sz, Fz) {
-          if (!this._ranges[tz]) {
-            this._ranges[tz] = zz._AnimationRangeFactory(tz, sz, Fz);
-            for (let zz = 0, Wz = this.animations.length; zz < Wz; zz++) this.animations[zz] && this.animations[zz].createRange(tz, sz, Fz)
+          delayLoad(vv) {
+            4 === this.delayLoadState && (vv && (this._forcedExtension = vv), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
           }
-        }
-        deleteAnimationRange(zz) {
-          let tz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          for (let sz = 0, Fz = this.animations.length; sz < Fz; sz++) this.animations[sz] && this.animations[sz].deleteRange(zz, tz);
-          this._ranges[zz] = null
-        }
-        getAnimationRange(zz) {
-          return this._ranges[zz] || null
-        }
-        clone(tz, sz, Fz) {
-          const Wz = Uz.e.Clone((() => new zz(tz, this.aJ())), this);
-          if (sz && (Wz.parent = sz), !Fz) {
-            const zz = this.getDescendants(!0);
-            for (let sz = 0; sz < zz.length; sz++) {
-              const Fz = zz[sz];
-              Fz.clone(tz + "." + Fz.name, Wz)
-            }
+          getReflectionTextureMatrix() {
+            return this._textureMatrix
           }
-          return Wz
-        }
-        getAnimationRanges() {
-          const zz = [];
-          let tz;
-          for (tz in this._ranges) zz.push(this._ranges[tz]);
-          return zz
-        }
-        beginAnimation(zz, tz, sz, Fz) {
-          const Wz = this.getAnimationRange(zz);
-          return Wz ? this._scene.beginAnimation(this, Wz.from, Wz.to, tz, sz, Fz) : null
-        }
-        serializeAnimationRanges() {
-          const zz = [];
-          for (const tz in this._ranges) {
-            const sz = this._ranges[tz];
-            if (!sz) continue;
-            const Fz = {};
-            Fz.name = tz, Fz.from = sz.from, Fz.to = sz.to, zz.push(Fz)
+          setReflectionTextureMatrix(vv) {
+            if (vv.updateFlag === this._textureMatrix.updateFlag) return;
+            if (vv.isIdentity() !== this._textureMatrix.isIdentity() && this.rD()?.markAllMaterialsAsDirty(1, (vv => -1 !== vv.getActiveTextures().indexOf(this))), this._textureMatrix = vv, !this.rD()?.useRightHandedSystem) return;
+            const zv = gv.i.fa[0],
+              Pv = gv.i.Quaternion[0],
+              hv = gv.i.fa[1];
+            this._textureMatrix.decompose(zv, Pv, hv), Pv.z *= -1, Pv.w *= -1, gv.c.ComposeToRef(zv, Pv, hv, this._textureMatrixRefraction)
           }
-          return zz
-        }
-        computeWorldMatrix(zz) {
-          return this._worldMatrix || (this._worldMatrix = Wz.e.Identity()), this._worldMatrix
-        }
-        dispose(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          if (this._nodeDataStorage._isDisposed = !0, !zz) {
-            const sz = this.getDescendants(!0);
-            for (const Fz of sz) Fz.dispose(zz, tz)
+          getRefractionTextureMatrix() {
+            return this.rD()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
           }
-          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.qJ.notifyObservers(this), this.qJ.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
-          for (const sz of this._behaviors) sz.detach();
-          this._behaviors.length = 0, this.metadata = null
-        }
-        static ParseAnimationRanges(zz, tz, sz) {
-          if (tz.du)
-            for (let Fz = 0; Fz < tz.du.length; Fz++) {
-              const sz = tz.du[Fz];
-              zz.createAnimationRange(sz.name, sz.from, sz.to)
-            }
-        }
-        getHierarchyBoundingVectors() {
-          let zz, tz, sz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
-            Fz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-          this.aJ().incrementRenderId(), this.computeWorldMatrix(!0);
-          const Xz = this;
-          if (Xz.rC && Xz.kY) {
-            const sz = Xz.rC();
-            zz = sz.boundingBox.minimumWorld.clone(), tz = sz.boundingBox.maximumWorld.clone()
-          } else zz = new Wz.p(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), tz = new Wz.p(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-          if (sz) {
-            const sz = this.getDescendants(!1);
-            for (const Xz of sz) {
-              const sz = Xz;
-              if (sz.computeWorldMatrix(!0), Fz && !Fz(sz)) continue;
-              if (!sz.rC || 0 === sz.getTotalVertices()) continue;
-              const Oz = sz.rC().boundingBox,
-                oz = Oz.minimumWorld,
-                vz = Oz.maximumWorld;
-              Wz.p.CheckExtends(oz, zz, tz), Wz.p.CheckExtends(vz, zz, tz)
-            }
+          _loadTexture() {
+            let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+              zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+            const Pv = this.rD(),
+              hv = this._texture;
+            this._texture = this._getFromCache(this.url, this._noMipmap, void 0, void 0, this._useSRGBBuffer, this.isCube);
+            const Sv = () => {
+                this.onLoadObservable.notifyObservers(this), hv && (hv.dispose(), this.rD()?.markAllMaterialsAsDirty(1)), vv && vv()
+              },
+              gv = (vv, Pv) => {
+                this._loadingError = !0, this._errorObject = {
+                  message: vv,
+                  exception: Pv
+                }, zv && zv(vv, Pv), dv.e.OnTextureLoadErrorObservable.notifyObservers(this)
+              };
+            this._texture ? this._texture.isReady ? ev.e.SetImmediate((() => Sv())) : this._texture.onLoadedObservable.add((() => Sv())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, Pv, this._lodScale, this._lodOffset, vv, gv, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, Pv, this._files, this._noMipmap, vv, gv, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
           }
-          return {
-            min: zz,
-            max: tz
+          clone() {
+            let zv = 0;
+            const Pv = this.irradianceTexture,
+              hv = Tv.c.Clone((() => {
+                const Pv = new vv(this.url, this.rD() || this._getEngine(), this._extensions, this._noMipmap, this._files);
+                return zv = Pv.uniqueId, Pv
+              }), this);
+            return hv.uniqueId = zv, Pv && !this.irradianceTexture && (this.irradianceTexture = Pv), hv
           }
+        }, (() => {
+          const ev = "function" === typeof Symbol && Symbol.metadata ? Object.create(nv[Symbol.metadata] ?? null) : void 0;
+          zv = [(0, Sv.L)()], Pv = [(0, Sv.I)()], Nv = [(0, Sv.I)()], Gv = [(0, Sv.L)("rotationY")], mv = [(0, Sv.L)("files")], jv = [(0, Sv.L)("forcedExtension")], fv = [(0, Sv.L)("extensions")], Fv = [(0, Sv.w)("textureMatrix")], Yv = [(0, Sv.w)("textureMatrixRefraction")], (0, hv.e)(vv, null, Nv, {
+            kind: "getter",
+            name: "boundingBoxSize",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "boundingBoxSize" in vv,
+              get: vv => vv.boundingBoxSize
+            },
+            metadata: ev
+          }, null, Ov), (0, hv.e)(vv, null, Gv, {
+            kind: "setter",
+            name: "rotationY",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "rotationY" in vv,
+              set: (vv, zv) => {
+                vv.rotationY = zv
+              }
+            },
+            metadata: ev
+          }, null, Ov), (0, hv.e)(null, null, zv, {
+            kind: "field",
+            name: "url",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "url" in vv,
+              get: vv => vv.url,
+              set: (vv, zv) => {
+                vv.url = zv
+              }
+            },
+            metadata: ev
+          }, Dv, Kv), (0, hv.e)(null, null, Pv, {
+            kind: "field",
+            name: "boundingBoxPosition",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "boundingBoxPosition" in vv,
+              get: vv => vv.boundingBoxPosition,
+              set: (vv, zv) => {
+                vv.boundingBoxPosition = zv
+              }
+            },
+            metadata: ev
+          }, Vv, Uv), (0, hv.e)(null, null, mv, {
+            kind: "field",
+            name: "_files",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "_files" in vv,
+              get: vv => vv._files,
+              set: (vv, zv) => {
+                vv._files = zv
+              }
+            },
+            metadata: ev
+          }, Rv, xv), (0, hv.e)(null, null, jv, {
+            kind: "field",
+            name: "_forcedExtension",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "_forcedExtension" in vv,
+              get: vv => vv._forcedExtension,
+              set: (vv, zv) => {
+                vv._forcedExtension = zv
+              }
+            },
+            metadata: ev
+          }, tv, qv), (0, hv.e)(null, null, fv, {
+            kind: "field",
+            name: "_extensions",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "_extensions" in vv,
+              get: vv => vv._extensions,
+              set: (vv, zv) => {
+                vv._extensions = zv
+              }
+            },
+            metadata: ev
+          }, Iv, Qv), (0, hv.e)(null, null, Fv, {
+            kind: "field",
+            name: "_textureMatrix",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "_textureMatrix" in vv,
+              get: vv => vv._textureMatrix,
+              set: (vv, zv) => {
+                vv._textureMatrix = zv
+              }
+            },
+            metadata: ev
+          }, Zv, Av), (0, hv.e)(null, null, Yv, {
+            kind: "field",
+            name: "_textureMatrixRefraction",
+            static: !1,
+            private: !1,
+            access: {
+              has: vv => "_textureMatrixRefraction" in vv,
+              get: vv => vv._textureMatrixRefraction,
+              set: (vv, zv) => {
+                vv._textureMatrixRefraction = zv
+              }
+            },
+            metadata: ev
+          }, Lv, Hv), ev && Object.defineProperty(vv, Symbol.metadata, {
+            enumerable: !0,
+            configurable: !0,
+            writable: !0,
+            value: ev
+          })
+        })(), vv
+      })(),
+      mv = !1;
+
+    function jv(vv, zv, Pv) {
+      let hv = "";
+      for (const Sv of vv) hv += Sv;
+      return new Gv(hv, zv, null, Pv, vv)
+    }
+
+    function fv(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+        hv = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const Sv = zv.useDelayedTextureLoading;
+      zv.useDelayedTextureLoading = !1;
+      const ev = new Gv(vv, zv, null, !1, null, null, null, void 0, !0, Pv, hv);
+      return zv.useDelayedTextureLoading = Sv, ev
+    }
+
+    function Fv(vv, zv, Pv) {
+      const hv = Tv.c.Parse((() => {
+        let hv = !1;
+        return vv.prefiltered && (hv = vv.prefiltered), new Gv(Pv + (vv.url ?? vv.name), zv, vv.extensions, !1, vv.files || null, null, null, void 0, hv, vv.forcedExtension)
+      }), vv, zv);
+      if (vv.boundingBoxPosition && (hv.boundingBoxPosition = gv.l.FromArray(vv.boundingBoxPosition)), vv.boundingBoxSize && (hv.boundingBoxSize = gv.l.FromArray(vv.boundingBoxSize)), vv.animations)
+        for (let Sv = 0; Sv < vv.animations.length; Sv++) {
+          const zv = vv.animations[Sv],
+            Pv = (0, Nv.b)("BABYLON.Animation");
+          Pv && hv.animations.push(Pv.Parse(zv))
         }
-      }, (() => {
-        const Wz = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        tz = [(0, Xz.J)()], sz = [(0, Xz.J)()], uz = [(0, Xz.J)()], Nz = [(0, Xz.J)()], bz = [(0, Xz.J)()], (0, Fz.h)(null, null, tz, {
-          kind: "field",
-          name: "name",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "name" in zz,
-            get: zz => zz.name,
-            set: (zz, tz) => {
-              zz.name = tz
-            }
-          },
-          metadata: Wz
-        }, wz, Dz), (0, Fz.h)(null, null, sz, {
-          kind: "field",
-          name: "id",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "id" in zz,
-            get: zz => zz.id,
-            set: (zz, tz) => {
-              zz.id = tz
-            }
-          },
-          metadata: Wz
-        }, gz, Hz), (0, Fz.h)(null, null, uz, {
-          kind: "field",
-          name: "uniqueId",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "uniqueId" in zz,
-            get: zz => zz.uniqueId,
-            set: (zz, tz) => {
-              zz.uniqueId = tz
-            }
-          },
-          metadata: Wz
-        }, Bz, Pz), (0, Fz.h)(null, null, Nz, {
-          kind: "field",
-          name: "state",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "state" in zz,
-            get: zz => zz.state,
-            set: (zz, tz) => {
-              zz.state = tz
-            }
-          },
-          metadata: Wz
-        }, rz, Yz), (0, Fz.h)(null, null, bz, {
-          kind: "field",
-          name: "metadata",
-          static: !1,
-          private: !1,
-          access: {
-            has: zz => "metadata" in zz,
-            get: zz => zz.metadata,
-            set: (zz, tz) => {
-              zz.metadata = tz
-            }
-          },
-          metadata: Wz
-        }, xz, mz), Wz && Object.defineProperty(zz, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: Wz
-        })
-      })(), zz._AnimationRangeFactory = (zz, tz, sz) => {
-        throw (0, vz.i)("AnimationRange")
-      }, zz._NodeConstructors = {}, zz
-    })()
+      return hv
+    }
+    mv || (mv = !0, Gv.CreateFromImages = jv, Gv.CreateFromPrefilteredData = fv, Gv.Parse = Fv, dv.e._CubeTextureParser = Fv, (0, Nv.c)("BABYLON.CubeTexture", Gv))
+  },
+  40471: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => Nv
+    });
+    var hv = Pv(38209),
+      Sv = Pv(39798),
+      ev = Pv(39247),
+      gv = Pv(39152),
+      pv = Pv(39134);
+    let dv = !1;
+    class Nv extends Sv.e {
+      constructor(vv, zv, Pv) {
+        let hv = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+          Nv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
+          lv = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
+          Tv = arguments.length > 6 ? arguments[6] : void 0;
+        const Wv = !Pv || Pv._isScene;
+        super(null, Wv ? Pv : Pv?.Is, Wv ? !hv : Pv, Tv, Nv, void 0, void 0, void 0, void 0, lv), dv || (dv = !0, gv.ThinEngine.prototype.createDynamicTexture = function(vv, zv, Pv, hv) {
+          const Sv = new pv.e(this, 4);
+          return Sv.baseWidth = vv, Sv.baseHeight = zv, Pv && (vv = this.needPOTTextures ? (0, ev.c)(vv, this._caps.maxTextureSize) : vv, zv = this.needPOTTextures ? (0, ev.c)(zv, this._caps.maxTextureSize) : zv), Sv.width = vv, Sv.height = zv, Sv.isReady = !1, Sv.generateMipMaps = Pv, Sv.samplingMode = hv, this.updateTextureSamplingMode(hv, Sv), this._internalTexturesCache.push(Sv), Sv
+        }, gv.ThinEngine.prototype.updateDynamicTexture = function(vv, zv, Pv) {
+          let hv = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            Sv = arguments.length > 4 ? arguments[4] : void 0,
+            ev = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+          if (!vv) return;
+          const gv = this._gl,
+            pv = gv.TEXTURE_2D,
+            dv = this._bindTextureDirectly(pv, vv, !0, ev);
+          this._unpackFlipY(void 0 === Pv ? vv.invertY : Pv), hv && gv.pixelStorei(gv.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
+          const Nv = this._getWebGLTextureType(vv.type),
+            lv = this._getInternalFormat(Sv || vv.format),
+            Tv = this._getRGBABufferInternalSizedFormat(vv.type, lv);
+          gv.texImage2D(pv, 0, Tv, lv, Nv, zv), vv.generateMipMaps && gv.generateMipmap(pv), dv || this._bindTextureDirectly(pv, null), hv && gv.pixelStorei(gv.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), Sv && (vv.format = Sv), vv._dynamicTextureSource = zv, vv._premulAlpha = hv, vv.invertY = Pv || !1, vv.isReady = !0
+        }), this.name = vv, this.wrapU = Sv.e.CLAMP_ADDRESSMODE, this.wrapV = Sv.e.CLAMP_ADDRESSMODE, this._generateMipMaps = hv;
+        const wv = this._getEngine();
+        if (!wv) return;
+        if (zv.getContext) this._canvas = zv, this._ownCanvas = !1, this._texture = wv.createDynamicTexture(this._canvas.width, this._canvas.height, hv, Nv);
+        else {
+          this._canvas = wv.createCanvas(1, 1), this._ownCanvas = !0;
+          const vv = zv;
+          vv.width || 0 === vv.width ? this._texture = wv.createDynamicTexture(vv.width, vv.height, hv, Nv) : this._texture = wv.createDynamicTexture(zv, zv, hv, Nv)
+        }
+        const av = this.getSize();
+        this._canvas.width !== av.width && (this._canvas.width = av.width), this._canvas.height !== av.height && (this._canvas.height = av.height), this._context = this._canvas.getContext("2d")
+      }
+      getClassName() {
+        return "DynamicTexture"
+      }
+      get canRescale() {
+        return !0
+      }
+      _recreate(vv) {
+        this._canvas.width = vv.width, this._canvas.height = vv.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(vv.width, vv.height, this._generateMipMaps, this.samplingMode)
+      }
+      scale(vv) {
+        const zv = this.getSize();
+        zv.width *= vv, zv.height *= vv, this._recreate(zv)
+      }
+      scaleTo(vv, zv) {
+        const Pv = this.getSize();
+        Pv.width = vv, Pv.height = zv, this._recreate(Pv)
+      }
+      getContext() {
+        return this._context
+      }
+      clear(vv) {
+        const zv = this.getSize();
+        vv && (this._context.fillStyle = vv), this._context.clearRect(0, 0, zv.width, zv.height)
+      }
+      update(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Pv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === vv || vv, zv, this._format || void 0, void 0, Pv)
+      }
+      drawText(vv, zv, Pv, hv, Sv, ev, gv) {
+        let pv = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
+        const dv = this.getSize();
+        if (ev && (this._context.fillStyle = ev, this._context.fillRect(0, 0, dv.width, dv.height)), this._context.font = hv, null === zv || void 0 === zv) {
+          const Pv = this._context.measureText(vv);
+          zv = (dv.width - Pv.width) / 2
+        }
+        if (null === Pv || void 0 === Pv) {
+          const vv = parseInt(hv.replace(/\D/g, ""));
+          Pv = dv.height / 2 + vv / 3.65
+        }
+        this._context.fillStyle = Sv || "", this._context.fillText(vv, zv, Pv), pv && this.update(gv)
+      }
+      dispose() {
+        super.dispose(), this._ownCanvas && this._canvas?.remove?.(), this._canvas = null, this._context = null
+      }
+      clone() {
+        const vv = this.rD();
+        if (!vv) return this;
+        const zv = this.getSize(),
+          Pv = new Nv(this.name, zv, vv, this._generateMipMaps);
+        return Pv.hasAlpha = this.hasAlpha, Pv.level = this.level, Pv.wrapU = this.wrapU, Pv.wrapV = this.wrapV, Pv
+      }
+      serialize() {
+        const vv = this.rD();
+        vv && !vv.isReady() && hv.d.Warn("The scene must be ready before serializing the dynamic texture");
+        const zv = super.serialize();
+        return Nv._IsCanvasElement(this._canvas) && (zv.base64String = this._canvas.toDataURL()), zv.invertY = this._invertY, zv.samplingMode = this.samplingMode, zv
+      }
+      static _IsCanvasElement(vv) {
+        return void 0 !== vv.toDataURL
+      }
+      _rebuild() {
+        this.update()
+      }
+    }
+  },
+  40452: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => Sv
+    });
+    var hv = Pv(39798);
+    class Sv extends hv.e {
+      get depth() {
+        return this._depth
+      }
+      constructor(vv, zv, Pv, Sv, ev, gv) {
+        let pv = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
+          dv = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
+          Nv = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : hv.e.TRILINEAR_SAMPLINGMODE,
+          lv = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
+          Tv = arguments.length > 10 ? arguments[10] : void 0,
+          Wv = arguments.length > 11 ? arguments[11] : void 0;
+        super(null, gv, !pv, dv), this.format = ev, this._texture = gv.ma().createRawTexture2DArray(vv, zv, Pv, Sv, ev, pv, dv, Nv, null, lv, Tv ?? 0, Wv), this._depth = Sv, this.is2DArray = !0
+      }
+      update(vv) {
+        this.updateMipLevel(vv, 0)
+      }
+      updateMipLevel(vv, zv) {
+        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, vv, this._texture.format, this._texture.invertY, null, this._texture.type, zv)
+      }
+      static CreateRGBATexture(vv, zv, Pv, hv, ev) {
+        return new Sv(vv, zv, Pv, hv, 5, ev, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
+      }
+    }
+  },
+  40444: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => hv.d
+    });
+    var hv = Pv(39670);
+    (0, hv.g)()
+  },
+  39387: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => hv.g
+    });
+    var hv = Pv(39395);
+    (0, hv.d)()
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

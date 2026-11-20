@@ -1,11 +1,11 @@
 export const id = 162;
 export const ids = [162];
 export const modules = {
-  8459: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      pageBody: () => Fz
+  8626: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      pageBody: () => hv
     });
-    const Fz = {
+    const hv = {
       whatIs: ["All the fun of survival with none of the stress. Bloxd Peaceful Survival is a calm sandbox where you explore a shared block world with other players. You mine, gather, craft and build, and there are no hostile mobs, no PvP and no health bar. Basically it's Survival with the danger turned off."],
       howToPlay: ["Spawn into the shared world and start collecting resources. Chop some trees, mine for ores, craft better tools and get building on your dream base. Only passive animals spawn, and they've got so little health you can beat them with your fist. Health is switched off for everyone, so nothing can hurt you. Not even other players.", "Build well away from spawn, because the blocks near it reset every few hours. Craft Protectors from diamonds so other players can't break your builds or open your chests. New to Bloxd? Peaceful's a great place to learn mining, crafting and building before you try Survival."],
       features: ["No Hostile Mobs, No PvP and No Health Bar", "Shared Multiplayer World to Explore with Friends", "Mining, Crafting and Base Building", "Protect Your Land and Chests with Protectors", "Relaxing and Great for New Players and Builders"],
@@ -34,7 +34,7 @@ export const modules = {
         answer: "Yes. Everyone's in the same shared world, so you can meet up and build together."
       }, {
         question: "How do I keep my builds safe in Peaceful?",
-        answer: "Blocks near spawn reset every few hours, so build at least 200 blocks away. Then put down a Protector and other players won't be able to break your builds or open your chests."
+        answer: "Blocks near spawn reset every few hours, so build outside that area (a message shows when you cross its edge). Then put down a Protector and other players won't be able to break your builds or open your chests."
       }, {
         question: "How do I save my progress in Bloxd Peaceful?",
         answer: "Sign in to an account. If you don't, your progress can be lost when your browser's cookies get cleared."
@@ -43,4 +43,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

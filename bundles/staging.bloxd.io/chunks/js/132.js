@@ -1,437 +1,637 @@
 export const id = 132;
 export const ids = [132];
 export const modules = {
-  35805: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Oz,
-      f: () => Xz,
-      i: () => vz
+  35852: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => pv,
+      g: () => Nv,
+      h: () => gv,
+      j: () => Tv
     });
-    var Fz = sz(35796);
-    const Wz = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
+    var hv = Pv(35847),
+      Sv = Pv(11);
+    const ev = /wasm-function\[\d+\]|wasm:\/\/|\[wasm code\]/;
 
-    function Xz(zz) {
-      if (zz instanceof WebAssembly.RuntimeError) return !0;
-      const tz = zz instanceof Error ? zz.stack : void 0;
-      return "string" === typeof tz && Wz.test(tz)
+    function gv(vv) {
+      if (vv instanceof WebAssembly.RuntimeError) return !0;
+      const zv = vv instanceof Error ? vv.stack : void 0;
+      return "string" === typeof zv && ev.test(zv)
     }
 
-    function Oz(zz, tz, sz) {
-      var Xz;
-      const Oz = zz instanceof Error ? zz.name : "thrown",
-        oz = (zz instanceof Error && null !== (Xz = zz.stack) && void 0 !== Xz ? Xz : "").split("\n").filter((zz => Wz.test(zz))).slice(0, 8).map((zz => zz.trim())),
-        vz = null === tz ? "wasm memory unknown" : `wasm memory ${Math.round(tz/2**20)} MB`,
-        Uz = null === sz.panic ? "" : `, panic: ${(0,Fz.j)(sz.panic)}`,
-        Kz = `${Oz}: ${zz instanceof Error?zz.message:String(zz)}`;
-      return `${(0,Fz.m)(sz.kind,sz.refusedBytes)} ${Kz} (${vz})${Uz}${oz.length>0?` | ${oz.join(" < ")}`:""}`
+    function pv(vv, zv, Pv) {
+      var Sv;
+      const gv = vv instanceof Error ? vv.name : "thrown",
+        pv = (vv instanceof Error && null !== (Sv = vv.stack) && void 0 !== Sv ? Sv : "").split("\n").filter((vv => ev.test(vv))).slice(0, 8).map((vv => vv.trim())),
+        dv = null === zv ? "wasm memory unknown" : `wasm memory ${Math.round(zv/2**20)} MB`,
+        Nv = null === Pv.panic ? "" : `, panic: ${(0,hv.f)(Pv.panic)}`,
+        lv = `${gv}: ${vv instanceof Error?vv.message:String(vv)}`;
+      return `${(0,hv.i)(Pv.kind,Pv.refusedBytes)} ${lv} (${dv})${Nv}${pv.length>0?` | ${pv.join(" < ")}`:""}`
     }
-    const oz = 500;
+    const dv = /on a detached ArrayBuffer|access detached ArrayBuffer|has been detached from the view/;
 
-    function vz(zz) {
-      let tz = "[object Object]";
+    function Nv(vv) {
+      var zv;
+      let Pv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ArrayBuffer.prototype;
+      if (!(vv instanceof Error) || !dv.test(vv.message)) return {};
+      if (!("detached" in Pv)) return {
+        arrayBufferDetached: "absent"
+      };
+      return {
+        arrayBufferDetached: (0, Sv.U)(null === (zv = (0, Sv.Q)(Pv, "detached")) || void 0 === zv ? void 0 : zv.get, /^function (get )?detached\(\) \{\s*\[native code\]\s*\}$/) ? "native" : "script"
+      }
+    }
+    const lv = 500;
+
+    function Tv(vv) {
+      let zv = "[object Object]";
       try {
-        tz = String(zz)
+        zv = String(vv)
       } catch {}
-      if ("[object Object]" !== tz) return tz;
+      if ("[object Object]" !== zv) return zv;
       try {
-        var sz, Fz;
-        return null !== (sz = null === (Fz = JSON.stringify(zz)) || void 0 === Fz ? void 0 : Fz.slice(0, oz)) && void 0 !== sz ? sz : tz
+        var Pv, hv;
+        return null !== (Pv = null === (hv = JSON.stringify(vv)) || void 0 === hv ? void 0 : hv.slice(0, lv)) && void 0 !== Pv ? Pv : zv
       } catch {
-        return tz
+        return zv
       }
     }
   },
-  35828: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Cz,
-      e: () => Gz,
-      h: () => Iz
+  35885: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => bv,
+      f: () => uv,
+      g: () => kv,
+      j: () => ov
     });
-    var Fz = sz(3376),
-      Wz = sz(3386),
-      Xz = sz(6196),
-      Oz = sz(4344),
-      oz = sz(3378);
-    const vz = ".zst.bin",
-      Uz = Reflect.apply,
-      Kz = ArrayBuffer,
-      uz = "undefined" === typeof Response ? void 0 : Response,
-      Nz = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      bz = function() {
-        let zz;
-        void 0 !== Nz && new Nz({
+    var hv = Pv(3466),
+      Sv = Pv(3488),
+      ev = Pv(6343),
+      gv = Pv(4451),
+      pv = Pv(3479),
+      dv = Pv(3473);
+    const Nv = "bloxd-wasmDownloaded",
+      lv = 12;
+
+    function Tv(vv) {
+      return vv.pathname.slice(vv.pathname.lastIndexOf("/") + 1)
+    }
+
+    function Wv() {
+      try {
+        if ("undefined" === typeof localStorage) return null;
+        const vv = JSON.parse(localStorage.getItem(Nv) ?? "[]");
+        return Array.isArray(vv) ? vv.filter((vv => "string" === typeof vv)) : []
+      } catch (vv) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", vv), null
+      }
+    }
+    const wv = Reflect.apply,
+      av = "undefined" === typeof Worker ? void 0 : Worker,
+      sv = av?.prototype.postMessage,
+      Cv = av?.prototype.terminate,
+      iv = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      cv = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      Gv = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      mv = function() {
+        try {
+          return (0, gv.m)(av, "Worker", !0) && (0, gv.m)(sv, "postMessage") && (0, gv.m)(Cv, "terminate") && (0, gv.m)(Gv, "buffer") && void 0 !== iv && void 0 !== cv
+        } catch {
+          return !1
+        }
+      }();
+    let jv = !1;
+
+    function fv() {
+      return mv && !jv
+    }
+    class Fv {
+      worker = null;
+      failed = !1;
+      constructor() {
+        if (fv()) try {
+          this.worker = nv(), wv(iv, this.worker, ["error", () => {
+            this.failed = !0
+          }])
+        } catch {
+          this.stop()
+        }
+      }
+      take() {
+        const vv = this.worker;
+        if (this.worker = null, null !== vv && this.failed) throw wv(Cv, vv, []), new Error("it did not run");
+        return vv
+      }
+      stop() {
+        const vv = this.worker;
+        this.worker = null, null !== vv && wv(Cv, vv, [])
+      }
+    }
+    class Yv {
+      decoded;
+      worker;
+      reject;
+      constructor(vv, zv, Pv, hv, ev) {
+        try {
+          this.worker = ev?.take() ?? nv()
+        } catch (Nv) {
+          throw jv = !0, new Error(`The zstd decoder's worker did not start: ${(0,pv.h)(Nv)}`)
+        }
+        const gv = this.worker;
+        this.decoded = (0, Sv.g)(((zv, Sv) => {
+          this.reject = Sv;
+          const ev = (vv, zv) => {
+            wv(iv, gv, [vv, zv])
+          };
+          ev("message", (vv => {
+            hv();
+            try {
+              const hv = wv(cv, vv, []);
+              if (!0 === hv) zv();
+              else {
+                if ("string" === typeof hv) throw hv.startsWith(pv.d) && (jv = !0), new Error(hv);
+                Pv(hv, wv(dv.w, hv, []))
+              }
+            } catch (Nv) {
+              Sv(Nv)
+            }
+          })), ev("error", (() => {
+            jv = !0, Sv(new Error("The zstd decoder's worker did not run"))
+          })), ev("messageerror", (() => {
+            Sv(new Error(`${vv}'s decoder sent a piece that could not be read`))
+          }))
+        })), (0, dv.W)(this.decoded), wv(sv, gv, [
+          [vv, zv]
+        ])
+      }
+      push(vv) {
+        wv(sv, this.worker, [vv, [wv(Gv, vv, [])]])
+      }
+      end() {
+        wv(sv, this.worker, [null])
+      }
+      markWorkerFailed() {
+        jv = !0
+      }
+      fail(vv) {
+        this.reject(vv), this.terminate()
+      }
+      terminate() {
+        wv(Cv, this.worker, [])
+      }
+    }
+
+    function nv() {
+      if (globalThis.Worker !== av) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(Pv.p + Pv.u(65), Pv.b), {
+        name: "wasmZstdDecoder",
+        type: "module"
+      })
+    }
+    const Ov = Reflect.apply,
+      Dv = ArrayBuffer,
+      Kv = "undefined" === typeof Response ? void 0 : Response,
+      Vv = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      Uv = function() {
+        let vv;
+        void 0 !== Vv && new Vv({
           __proto__: null,
-          start(tz) {
+          start(zv) {
             const {
-              enqueue: sz,
-              close: Fz,
-              error: Wz
-            } = Object.getPrototypeOf(tz);
-            zz = {
-              enqueue: sz,
-              close: Fz,
-              error: Wz
+              enqueue: Pv,
+              close: hv,
+              error: Sv
+            } = Object.getPrototypeOf(zv);
+            vv = {
+              enqueue: Pv,
+              close: hv,
+              error: Sv
             }
           }
         }, {
           __proto__: null
         });
-        return zz
+        return vv
       }(),
-      wz = function() {
+      Rv = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== bz && (0, Oz.j)(uz, "Response", !0) && (0, Oz.j)(Nz, "ReadableStream", !0) && (0, Oz.j)(bz.enqueue, "enqueue") && (0, Oz.j)(bz.close, "close") && (0, Oz.j)(bz.error, "error") && (0, Oz.j)(oz._, "body") && (0, Oz.j)(oz.L, "getReader") && (0, Oz.j)(oz.X, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Uv && (0, gv.m)(Kv, "Response", !0) && (0, gv.m)(Vv, "ReadableStream", !0) && (0, gv.m)(Uv.enqueue, "enqueue") && (0, gv.m)(Uv.close, "close") && (0, gv.m)(Uv.error, "error") && (0, gv.m)(dv.Z, "body") && (0, gv.m)(dv.N, "getReader") && (0, gv.m)(dv.Y, "read")
         } catch {
           return !1
         }
       }();
-    let Dz = !1;
-
-    function gz(zz) {
-      for (const tz of "bloxd_wasm_webgpu:4997811,bloxd_wasm_webgl:5288982,bloxd_wasm_webgl1:4758542,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3667474"?.split(",") ?? []) {
-        const [sz, Fz] = tz.split(":");
-        if (sz === zz) {
-          const zz = Number(Fz);
-          return Number.isInteger(zz) && zz > 0 ? zz : void 0
+    async function xv(vv, zv, Pv, hv, ev, gv, Nv) {
+      const lv = new Dv(zv),
+        {
+          controller: Tv,
+          compiled: Wv
+        } = function(vv) {
+          try {
+            let vv;
+            const zv = new Vv({
+                __proto__: null,
+                start(zv) {
+                  vv = zv
+                }
+              }, {
+                __proto__: null
+              }),
+              Pv = new Kv(zv, {
+                __proto__: null,
+                headers: {
+                  __proto__: null,
+                  "Content-Type": "application/wasm"
+                }
+              });
+            return {
+              controller: vv,
+              compiled: (0, dv.W)((0, dv.A)((0, dv.fb)(Pv)))
+            }
+          } catch (zv) {
+            throw new Error(`${vv} could not be streamed into a compile: ${(0,pv.h)(zv)}`)
+          }
+        }(vv),
+        {
+          enqueue: wv,
+          close: av,
+          error: sv
+        } = Uv,
+        Cv = vv => {
+          try {
+            Ov(sv, Tv, [vv])
+          } catch {}
+        };
+      let iv = 0;
+      const cv = (Pv, hv) => {
+        if (iv + hv > zv) throw new Error(`${vv} decoded past its module's ${zv} bytes`);
+        Ov(dv.ab, new dv.k(lv), [new dv.k(Pv), iv]);
+        try {
+          Ov(wv, Tv, [new dv.k(lv, iv, hv)])
+        } catch {}
+        iv += hv
+      };
+      let Gv, mv;
+      try {
+        Gv = new Yv(vv, zv, cv, hv, Nv)
+      } catch (nv) {
+        throw Cv(nv), nv
+      }
+      const jv = vv => {
+        Gv.fail(vv), void 0 !== mv && tv(mv)
+      };
+      let fv = !1;
+      Pv.addEventListener("abort", (() => {
+        fv && Gv.markWorkerFailed(), jv(new Error(`${vv} stalled`))
+      }), {
+        once: !0
+      }), (0, Sv.s)(Wv, (() => {}), jv);
+      try {
+        let gv;
+        try {
+          gv = await fetch(vv, {
+            signal: Pv
+          })
+        } catch (nv) {
+          throw new Error(`Fetching ${vv} failed: ${(0,pv.h)(nv)}`)
         }
+        const {
+          ok: Nv,
+          status: lv,
+          body: Tv
+        } = function(vv, zv) {
+          try {
+            const {
+              ok: vv,
+              status: Pv
+            } = zv;
+            return {
+              ok: vv,
+              status: Pv,
+              body: Ov(dv.Z, zv, [])
+            }
+          } catch {
+            throw new Error(`${vv} came in a response a page script made`)
+          }
+        }(vv, gv);
+        if (!Nv) throw new Error(`Fetching ${vv} failed: HTTP ${lv}`);
+        hv();
+        const Wv = Ov(dv.N, Tv, []);
+        mv = Wv;
+        const wv = () => {
+          tv(Wv)
+        };
+        for ((0, Sv.s)(Gv.decoded, wv, wv);;) {
+          let zv;
+          try {
+            zv = await Ov(dv.Y, Wv, [])
+          } catch (nv) {
+            throw new Error(`Downloading ${vv} failed: ${(0,pv.h)(nv)}`)
+          }
+          if (zv.done) break;
+          hv(), Gv.push(zv.value)
+        }
+        if (fv = !0, Gv.end(), await Gv.decoded, ev(), iv !== zv) throw new Error(`${vv} ended before its module did`)
+      } catch (nv) {
+        throw Cv(nv), jv(nv), nv
+      }
+      Gv.terminate();
+      try {
+        Ov(av, Tv, [])
+      } catch {}
+      const Fv = await Wv;
+      return void 0 !== gv && await (0, dv.x)(vv, new dv.k(lv), {
+        sha256: gv.sha256,
+        onMismatch: () => {}
+      }), Fv
+    }
+
+    function tv(vv) {
+      try {
+        (0, dv.W)(vv.cancel())
+      } catch {}
+    }
+    const qv = ".zst.bin",
+      Iv = 1e3;
+    let Qv = null;
+
+    function Zv(vv) {
+      return Qv ??= function() {
+        const vv = new Map,
+          zv = "bloxd_wasm_webgpu:5000423,bloxd_wasm_webgl:5362647,bloxd_wasm_webgl1:4761354,bloxd_wasm_workers:196044,bloxd_wasm_models:311680,bloxd_wasm_client:3667451";
+        for (const Pv of zv?.split(",") ?? []) {
+          const [zv = "", hv] = Pv.split(":"), Sv = Number(hv);
+          Number.isInteger(Sv) && Sv > 0 && vv.set(zv, Sv)
+        }
+        return vv
+      }(), Qv.get(vv)
+    }
+    async function Av(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const hv = Zv(vv.name);
+      if (void 0 === hv) return Lv(await Hv(vv, zv, Pv), "cold-wasm");
+      const ev = Rv ? new Fv : null;
+      let gv;
+      try {
+        if (Nv = vv.url(), Wv()?.includes(Tv(Nv)) && await async function(vv) {
+            const zv = new AbortController;
+            let Pv;
+            const hv = (0, Sv.g)((vv => {
+              Pv = setTimeout((() => {
+                zv.abort(), vv(null)
+              }), Iv)
+            }));
+            try {
+              const Pv = fetch(vv.href, {
+                  cache: "only-if-cached",
+                  mode: "same-origin",
+                  signal: zv.signal
+                }),
+                ev = await (0, Sv.o)([Pv, hv]);
+              return !!ev?.ok && ((0, dv.W)(ev.body.cancel()), !0)
+            } catch {
+              return !1
+            } finally {
+              clearTimeout(Pv)
+            }
+          }(vv.url())) return ev?.stop(), await async function(vv, zv, Pv, hv) {
+          let Sv = !1;
+          const ev = Pv && {
+            sha256: Pv.sha256,
+            onMismatch: () => {
+              Sv = !0
+            }
+          };
+          try {
+            return Lv(await Hv(vv, ev, hv), "warm")
+          } catch (gv) {
+            const hv = await Mv(vv, zv, Pv, null);
+            if (null === hv) throw Sv && Pv.onMismatch(), gv;
+            return console.warn(`${vv.url().href} from the HTTP cache failed: ${(0,pv.h)(gv)}: loaded its copy instead`), Lv(hv, Sv ? "warm-refused" : "warm-broken")
+          }
+        }(vv, hv, zv, Pv);
+        gv = await Mv(vv, hv, zv, ev)
+      } finally {
+        ev?.stop()
+      }
+      var Nv;
+      return null !== gv ? Lv(gv, "cold-worker") : Lv(await Hv(vv, zv, Pv), "cold-wasm")
+    }
+
+    function Lv(vv, zv) {
+      return {
+        __proto__: null,
+        module: vv,
+        path: zv
       }
     }
 
-    function Hz(zz, tz) {
-      let Fz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const Xz = function(zz) {
-        const tz = gz(zz.name);
-        if (void 0 !== tz && wz && !Dz) return {
-          href: `${zz.url().href}${vz}`,
-          length: tz
-        }
-      }(zz);
-      return void 0 !== Xz ? async function(zz, tz, Fz, Xz) {
-        let {
-          href: Oz,
-          length: vz
-        } = tz;
-        try {
-          return await (0, oz.fb)(Oz, ((zz, tz, Xz) => async function(zz, tz, Fz, Xz, Oz, vz) {
-            const wz = new Kz(tz);
-            let gz;
-            Pz ??= (0, oz.T)(sz.e(64).then((() => sz(40260))));
+    function Hv(vv, zv, Pv) {
+      return void 0 === Zv(vv.name) ? (0, dv.F)(vv.url(), zv, Pv) : (0, dv.F)(vv.url(), zv, {
+        ...Pv,
+        hideThen: !0,
+        onDownloaded: () => {
+          ! function(vv) {
+            const zv = Wv();
+            if (null === zv) return;
+            const Pv = Tv(vv),
+              hv = zv.filter((vv => vv !== Pv));
+            hv.push(Pv);
             try {
-              gz = await fetch(zz, {
-                signal: Fz
-              })
-            } catch (Az) {
-              throw new Error(`Fetching ${zz} failed: ${Yz(Az)}`)
+              localStorage.setItem(Nv, JSON.stringify(hv.slice(-lv)))
+            } catch (Sv) {
+              console.warn(`Bloxd wasm: ${Pv} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Sv)
             }
-            const {
-              ok: Hz,
-              status: Bz,
-              body: xz
-            } = function(zz, tz) {
-              try {
-                const {
-                  ok: zz,
-                  status: sz
-                } = tz;
-                return {
-                  ok: zz,
-                  status: sz,
-                  body: Uz(oz._, tz, [])
-                }
-              } catch {
-                throw new Error(`${zz} came in a response a page script made`)
-              }
-            }(zz, gz);
-            if (!Hz) throw new Error(`Fetching ${zz} failed: HTTP ${Bz}`);
-            Xz();
-            const {
-              reader: mz,
-              controller: Jz,
-              compiled: Iz
-            } = function(zz, tz) {
-              let sz;
-              try {
-                let zz;
-                sz = Uz(oz.L, tz, []);
-                const Fz = new Nz({
-                    __proto__: null,
-                    start(tz) {
-                      zz = tz
-                    }
-                  }, {
-                    __proto__: null
-                  }),
-                  Wz = new uz(Fz, {
-                    __proto__: null,
-                    headers: {
-                      __proto__: null,
-                      "Content-Type": "application/wasm"
-                    }
-                  });
-                return {
-                  reader: sz,
-                  controller: zz,
-                  compiled: (0, oz.T)((0, oz.B)((0, oz.jb)(Wz)))
-                }
-              } catch (Az) {
-                throw void 0 !== sz && rz(sz), new Error(`${zz} could not be streamed into a compile: ${Yz(Az)}`)
-              }
-            }(zz, xz), {
-              enqueue: Cz,
-              close: ez,
-              error: Zz
-            } = bz, Gz = zz => {
-              try {
-                Uz(Zz, Jz, [zz])
-              } catch {} finally {
-                rz(mz)
-              }
-            };
-            Fz.addEventListener("abort", (() => {
-              Gz(new Error(`${zz} stalled`))
-            }), {
-              once: !0
-            });
-            let Tz = !1;
-            (0, Wz.s)(Iz, (() => {}), (() => {
-              Tz = !0, rz(mz)
-            }));
-            let cz = 0;
-            try {
-              let sz;
-              try {
-                sz = await Pz
-              } catch (Az) {
-                throw Dz = !0, new Error(`The zstd decoder did not load: ${Yz(Az)}`)
-              }
-              const {
-                ZstdFrameDecoder: Fz
-              } = sz, Wz = new Fz(tz);
-              for (; !Wz.done && !Tz;) {
-                let tz;
-                try {
-                  tz = await Uz(oz.X, mz, [])
-                } catch (Az) {
-                  throw new Error(`Downloading ${zz} failed: ${Yz(Az)}`)
-                }
-                if (tz.done || Tz) break;
-                Xz();
-                try {
-                  Wz.push(tz.value)
-                } catch (Az) {
-                  throw new Error(`${zz} did not decode: ${Yz(Az)}`)
-                }
-                const {
-                  output: sz,
-                  decoded: Fz
-                } = Wz;
-                if (null !== sz && Fz !== cz) {
-                  Uz(oz.bb, new oz.o(wz), [sz.subarray(cz, Fz), cz]);
-                  try {
-                    Uz(Cz, Jz, [new oz.o(wz, cz, Fz - cz)])
-                  } catch {
-                    Tz = !0
-                  }
-                  cz = Fz
-                }
-              }
-              if (Oz(), Tz) throw await Iz, new Error(`${zz}'s compile stopped reading before its end`);
-              if (!Wz.done) throw new Error(`${zz} ended before its module did`);
-              rz(mz);
-              try {
-                Uz(ez, Jz, [])
-              } catch {}
-            } catch (Az) {
-              throw Gz(Az), Az
-            }
-            const jz = await Iz;
-            void 0 !== vz && await (0, oz.z)(zz, new oz.o(wz), {
-              sha256: vz.sha256,
-              onMismatch: () => {}
-            });
-            return jz
-          }(Oz, vz, zz, tz, Xz, Fz)))
-        } catch (gz) {
-          console.warn(`${Yz(gz)}: loading ${zz.href} instead`)
+          }(vv.url()), Pv.onDownloaded?.()
         }
-        const wz = await (0, oz.E)(zz, Fz, {
-          ...Xz,
-          hideThen: !0
-        });
-        return wz
-      }(zz.url(), Xz, tz, Fz): Bz(zz, tz, Fz)
-    }
-
-    function Bz(zz, tz, sz) {
-      return (0, oz.E)(zz.url(), tz, {
-        ...sz,
-        hideThen: void 0 !== gz(zz.name)
       })
     }
-    let Pz = null;
-
-    function rz(zz) {
+    async function Mv(vv, zv, Pv, hv) {
+      if (!Rv || !fv()) return null;
+      const Sv = vv.url(),
+        ev = `${Sv.href}${qv}`;
       try {
-        (0, oz.T)(zz.cancel())
-      } catch {}
+        return await (0, dv.bb)(ev, ((vv, Sv, gv) => xv(ev, zv, vv, Sv, gv, Pv, hv)))
+      } catch (gv) {
+        return console.warn(`${(0,pv.h)(gv)}: loading ${Sv.href} instead`), null
+      }
+    }
+    let yv = null,
+      Bv = !1;
+    const Jv = new Map,
+      Ev = new Map;
+
+    function ov(vv, zv, Pv) {
+      return null === yv ? yv = rv(vv, zv) : vv !== yv.build ? console.warn(`Bloxd wasm: ${vv.name} was asked for after ${yv.build.name} started loading, which this thread keeps`) : zv.name !== yv.workers.name && console.warn(`Bloxd wasm: ${zv.name} was asked for workers after ${yv.workers.name}, which this thread keeps`), Pv?.reloadFailedDownload && !Bv && (0, hv.U)() && (Bv = !0, yv = rv(yv.build, yv.workers)), yv.loaded
     }
 
-    function Yz(zz) {
-      return zz instanceof Error ? zz.message : String(zz)
-    }
-    let xz = null,
-      mz = !1;
-    const Jz = new Map;
-
-    function Iz(zz, tz, sz) {
-      return null === xz ? xz = ez(zz, tz) : zz !== xz.build ? console.warn(`Bloxd wasm: ${zz.name} was asked for after ${xz.build.name} started loading, which this thread keeps`) : tz.name !== xz.workers.name && console.warn(`Bloxd wasm: ${tz.name} was asked for workers after ${xz.workers.name}, which this thread keeps`), sz?.reloadFailedDownload && !mz && (0, Fz.ib)() && (mz = !0, xz = ez(xz.build, xz.workers)), xz.loaded
-    }
-
-    function Cz(zz, tz) {
-      if (null !== xz) return (0, Wz.f)([]);
-      const sz = zz.filter((zz => !Jz.has(zz.name))).map((zz => {
-        const sz = new AbortController,
-          Fz = {
-            compiled: Bz(zz, (0, Xz.d)(zz.name), {
-              priority: tz,
-              ds: sz.signal,
+    function bv(vv, zv) {
+      if (null !== yv) return (0, Sv.f)([]);
+      const Pv = vv.filter((vv => !Jv.has(vv.name))).map((vv => {
+        const Pv = new AbortController,
+          hv = {
+            compiled: Hv(vv, (0, ev.c)(vv.name), {
+              priority: zv,
+              ev: Pv.signal,
               onDownloaded: () => {
-                Fz.downloaded = !0
+                hv.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  Fz.downloaded = !1, null !== xz && sz.abort()
+                  hv.downloaded = !1, null !== yv && Pv.abort()
                 }
               }
             }),
-            cancel: sz,
+            cancel: Pv,
             downloaded: !1
           };
-        return Jz.set(zz.name, Fz), (0, Wz.j)((tz => {
-          (0, Wz.s)(Fz.compiled, (() => {
-            Fz.downloaded = !0, tz()
-          }), (Fz => {
-            sz.signal.aborted || console.warn(`Bloxd wasm: ${zz.name}'s compile ahead of the load failed: the load compiles it afresh`, Fz), tz()
+        return Jv.set(vv.name, hv), (0, Sv.g)((zv => {
+          (0, Sv.s)(hv.compiled, (() => {
+            hv.downloaded = !0, zv()
+          }), (hv => {
+            Pv.signal.aborted || console.warn(`Bloxd wasm: ${vv.name}'s compile ahead of the load failed: the load compiles it afresh`, hv), zv()
           }))
         }))
       }));
-      return (0, Wz.f)(sz)
+      return (0, Sv.f)(Pv)
     }
 
-    function ez(zz, tz) {
-      const sz = (0, Fz.P)((async () => {
-        (0, Oz.B)();
-        const sz = Zz(zz),
-          Fz = tz.name === zz.name ? sz : Zz(tz);
+    function rv(vv, zv) {
+      const Pv = (0, hv.F)((async () => {
+        (0, gv.A)(), Ev.clear();
+        const Pv = Xv(vv),
+          hv = zv.name === vv.name ? Pv : Xv(zv);
         for (const {
-            cancel: zz
+            cancel: vv
           }
-          of Jz.values()) zz.abort();
-        Jz.clear(), await (0, Wz.f)([sz, Fz]);
-        const Xz = await sz,
-          oz = await Fz;
-        return (0, Oz.B)(), {
-          module: Xz,
-          workerModule: oz
+          of Jv.values()) vv.abort();
+        Jv.clear(), await (0, Sv.f)([Pv, hv]);
+        const ev = await Pv,
+          pv = await hv;
+        return (0, gv.A)(), {
+          module: ev,
+          workerModule: pv
         }
-      }), zz);
+      }), vv);
       return {
-        build: zz,
-        workers: tz,
-        loaded: sz
+        build: vv,
+        workers: zv,
+        loaded: Pv
       }
     }
 
-    function Zz(zz) {
-      const tz = Jz.get(zz.name);
-      return tz?.downloaded ? (Jz.delete(zz.name), (0, Wz.j)(((sz, Fz) => {
-        (0, Wz.s)(tz.compiled, sz, (() => {
-          (0, Wz.s)(Tz(zz), sz, Fz)
-        }))
-      }))) : Tz(zz)
-    }
-    async function Gz(zz, tz) {
-      return Tz(zz, {
-        retries: tz
-      })
+    function kv(vv) {
+      return Ev.get(vv)
     }
 
-    function Tz(zz) {
-      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return Hz(zz, (0, Xz.d)(zz.name), tz)
+    function Xv(vv) {
+      const zv = performance.now(),
+        Pv = Jv.get(vv.name);
+      Jv.delete(vv.name);
+      const hv = !0 === Pv?.downloaded ? Pv : void 0;
+      return void 0 !== Pv && void 0 === hv && Pv.cancel.abort(), (0, Sv.g)(((Pv, ev) => {
+        const gv = (hv, Sv) => {
+            Ev.set(vv.name, {
+              path: Sv,
+              ms: performance.now() - zv
+            }), Pv(hv)
+          },
+          pv = () => {
+            (0, Sv.s)(vz(vv), (vv => {
+              let {
+                module: zv,
+                path: Pv
+              } = vv;
+              gv(zv, Pv)
+            }), ev)
+          };
+        void 0 === hv ? pv() : (0, Sv.s)(hv.compiled, (vv => {
+          gv(vv, "ahead")
+        }), pv)
+      }))
+    }
+    async function uv(vv, zv) {
+      const {
+        module: Pv
+      } = await vz(vv, {
+        retries: zv
+      });
+      return Pv
+    }
+    async function vz(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await Av(vv, (0, ev.c)(vv.name), zv)
     }
   },
-  6196: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Oz
+  6343: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => gv
     });
-    var Fz = sz(3378);
-    const Wz = {
-      bloxd_wasm: () => "e62ddfb4cd16c5e98d743fe1b1d78ddc524c3b7f73ea079648059406c6a079f8",
-      bloxd_wasm_client: () => "9f4914a436cca82a1eae002e54d8bb6c08b1156da1c5b264541fa536cd0c880a",
-      bloxd_wasm_workers: () => "ffa9980d4d50f712fd8b8bbae384abef1fcaa66cf3c2d33f8bc46095ed65db6f",
-      bloxd_wasm_models: () => "4a2c9c776ad7f28643796aedbd3f53434dc042fd0bc593cded926a716b7974a2",
-      bloxd_wasm_webgpu: () => "359ea7274ebcd16e380b66838dece8057006c05fd3122c955a61edd0108cd0d1",
-      bloxd_wasm_webgl: () => "45bb3a29449cc62a20f1562e66c202c2979bd7b034ac67c7307ef944e740bd93",
-      bloxd_wasm_webgl1: () => "4815c64b2c94bcdaa525813cc69ca1bf47eb503f8fe99915a28c31c4b00a5a97",
-      bloxd_wasm_replay: () => "307729272c0e0fab73f4f0d3f6f290b703ad9b5f3ff232245b507750f7bb578e",
-      bloxd_wasm_recorder: () => "4525cd7c7e006e75135df97182a3f2b1e9e60d7cc77abd136ca6622de5ccb2f8",
-      bloxd_wasm_anim: () => "ff30567e3c57a8d7e44f1da9c42b1f3abb15c5c207804d77d9b3cb90f8da7854",
-      bloxd_wasm_textures: () => "4755e3a2c62b61989e5ea68fbe42e17fc495c8dd76ad016087a5eb194cb919c6",
-      bloxd_wasm_shader_pack: () => "49ced5e21424d1953fffd95fdcd1731671e6e07c358282d2abea6210c642a1fd"
+    var hv = Pv(3473);
+    const Sv = {
+      bloxd_wasm: () => "242cfb746367816b85c0d450194bdff4c53a9ad8bf401630f6949cb63852d1be",
+      bloxd_wasm_client: () => "d02ab3ff378e3cabdd07cd9c554ec471bb49ecb41d1bcfc8f9f48d000f552813",
+      bloxd_wasm_workers: () => "8664088122d5b673ff7a8e8f0b71864091addbd11a22fd8877301ef2e1d7d7c6",
+      bloxd_wasm_models: () => "0ce508e0c3797e4d2237f5b419263b9df4627372af441dcaec1b4b4938917dcb",
+      bloxd_wasm_webgpu: () => "d02362ea4b01ac0b3094c90bd530e9d9541fd4d02dbb0cf37e62ce03b504586a",
+      bloxd_wasm_webgl: () => "5587f4c12aefda662a798fa76f5ef5f0d26531308da330b663163a4a6a353686",
+      bloxd_wasm_webgl1: () => "330ca93132b966b9f2d177baefcf1ec86106db4d42b6875043c867a4fbf8f714",
+      bloxd_wasm_replay: () => "970290489bfdef049310fc4e3d6c024c9afee7381deeccf9925d9d2bf1ad0949",
+      bloxd_wasm_recorder: () => "2118a197767ebdac164a9fab410a0150f76cd900eb0e711f4a60fc6e38ae5205",
+      bloxd_wasm_anim: () => "fb2fc3b43abfd08ad961098c6784b1c03d7af35338bbd752b5df3af261972615",
+      bloxd_wasm_textures: () => "ac6c8ff1da71e10b1ed9866e9a4eb70d166a36bb2f0e1c05cef1de7d9d6b6043",
+      bloxd_wasm_shader_pack: () => "d571fee4d34b97756c8d2b36706fa9baf34990285d56aea5ea806d4682070476"
     };
-    var Xz = sz(4344);
+    var ev = Pv(4451);
 
-    function Oz(zz) {
-      const tz = Object.prototype.hasOwnProperty.call(Wz, zz) ? Wz[zz]() : void 0;
-      if (void 0 !== tz) return {
-        sha256: tz,
-        onMismatch: Xz.z
+    function gv(vv) {
+      const zv = Object.prototype.hasOwnProperty.call(Sv, vv) ? Sv[vv]() : void 0;
+      if (void 0 !== zv) return {
+        sha256: zv,
+        onMismatch: ev.y
       };
-      throw new Fz.j(`${zz} has no release digest, so this build refuses it`)
+      throw new hv.h(`${vv} has no release digest, so this build refuses it`)
     }
   },
-  35796: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Fz,
-      f: () => Xz,
-      j: () => vz,
-      k: () => Oz,
-      m: () => Wz
+  35847: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => hv,
+      d: () => ev,
+      f: () => dv,
+      h: () => gv,
+      i: () => Sv
     });
-    const Fz = /^alloc_failed (\d+) bytes$/;
+    const hv = /^alloc_failed (\d+) bytes$/;
 
-    function Wz(zz, tz) {
-      return Xz(zz, tz) ? `trap=alloc_failed ${tz} bytes` : `trap=${zz}`
+    function Sv(vv, zv) {
+      return ev(vv, zv) ? `trap=alloc_failed ${zv} bytes` : `trap=${vv}`
     }
 
-    function Xz(zz, tz) {
-      return "unreachable" === zz && tz > 0
+    function ev(vv, zv) {
+      return "unreachable" === vv && zv > 0
     }
 
-    function Oz(zz, tz, sz) {
-      const Fz = function(zz) {
-        return zz instanceof WebAssembly.RuntimeError ? /unreachable/i.test(zz.message) ? "unreachable" : /out of bounds/i.test(zz.message) ? "out_of_bounds" : "runtime_error" : (zz instanceof RangeError || zz instanceof Error && "InternalError" === zz.name) && /call stack|recursion/i.test(zz.message) ? "stack_overflow" : "js_error"
-      }(zz);
-      if ("unreachable" !== Fz) return {
-        kind: Fz,
+    function gv(vv, zv, Pv) {
+      const hv = function(vv) {
+        return vv instanceof WebAssembly.RuntimeError ? /unreachable/i.test(vv.message) ? "unreachable" : /out of bounds/i.test(vv.message) ? "out_of_bounds" : "runtime_error" : (vv instanceof RangeError || vv instanceof Error && "InternalError" === vv.name) && /call stack|recursion/i.test(vv.message) ? "stack_overflow" : "js_error"
+      }(vv);
+      if ("unreachable" !== hv) return {
+        kind: hv,
         panic: null,
         refusedBytes: 0
       };
-      const Wz = tz(),
-        Xz = sz();
+      const Sv = zv(),
+        ev = Pv();
       return {
-        kind: Fz,
-        panic: Xz > 0 ? null : Wz,
-        refusedBytes: Xz
+        kind: hv,
+        panic: ev > 0 ? null : Sv,
+        refusedBytes: ev
       }
     }
-    const oz = 300;
+    const pv = 300;
 
-    function vz(zz) {
-      return zz.replace(/\s*\n\s*/g, " / ").slice(0, oz)
+    function dv(vv) {
+      return vv.replace(/\s*\n\s*/g, " / ").slice(0, pv)
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

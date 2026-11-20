@@ -1,260 +1,248 @@
 export const id = 233;
-export const ids = [232, 233];
+export const ids = [233];
 export const modules = {
-  60305: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      RegisterShaderMaterial: () => Fz.e,
-      ShaderMaterial: () => Fz.s,
-      ShaderMaterialCreateFromSnippetAsync: () => Fz.h,
-      ShaderMaterialParse: () => Fz.q,
-      ShaderMaterialParseFromFileAsync: () => Fz.k,
-      ShaderMaterialParseFromSnippetAsync: () => Fz.m
+  37290: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => Sv
     });
-    var Fz = sz(39614);
-    (0, Fz.e)()
-  },
-  37191: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Wz
-    });
-    var Fz = sz(37199);
-    class Wz {
-      static GetPlanes(zz) {
-        const tz = [];
-        for (let sz = 0; sz < 6; sz++) tz.push(new Fz.c(0, 0, 0, 0));
-        return Wz.GetPlanesToRef(zz, tz), tz
+    var hv = Pv(37293);
+    class Sv {
+      static GetPlanes(vv) {
+        const zv = [];
+        for (let Pv = 0; Pv < 6; Pv++) zv.push(new hv.b(0, 0, 0, 0));
+        return Sv.GetPlanesToRef(vv, zv), zv
       }
-      static GetNearPlaneToRef(zz, tz) {
-        const sz = zz.m;
-        tz.normal.x = sz[3] + sz[2], tz.normal.y = sz[7] + sz[6], tz.normal.z = sz[11] + sz[10], tz.d = sz[15] + sz[14], tz.normalize()
+      static GetNearPlaneToRef(vv, zv) {
+        const Pv = vv.m;
+        zv.normal.x = Pv[3] + Pv[2], zv.normal.y = Pv[7] + Pv[6], zv.normal.z = Pv[11] + Pv[10], zv.d = Pv[15] + Pv[14], zv.normalize()
       }
-      static GetFarPlaneToRef(zz, tz) {
-        const sz = zz.m;
-        tz.normal.x = sz[3] - sz[2], tz.normal.y = sz[7] - sz[6], tz.normal.z = sz[11] - sz[10], tz.d = sz[15] - sz[14], tz.normalize()
+      static GetFarPlaneToRef(vv, zv) {
+        const Pv = vv.m;
+        zv.normal.x = Pv[3] - Pv[2], zv.normal.y = Pv[7] - Pv[6], zv.normal.z = Pv[11] - Pv[10], zv.d = Pv[15] - Pv[14], zv.normalize()
       }
-      static GetLeftPlaneToRef(zz, tz) {
-        const sz = zz.m;
-        tz.normal.x = sz[3] + sz[0], tz.normal.y = sz[7] + sz[4], tz.normal.z = sz[11] + sz[8], tz.d = sz[15] + sz[12], tz.normalize()
+      static GetLeftPlaneToRef(vv, zv) {
+        const Pv = vv.m;
+        zv.normal.x = Pv[3] + Pv[0], zv.normal.y = Pv[7] + Pv[4], zv.normal.z = Pv[11] + Pv[8], zv.d = Pv[15] + Pv[12], zv.normalize()
       }
-      static GetRightPlaneToRef(zz, tz) {
-        const sz = zz.m;
-        tz.normal.x = sz[3] - sz[0], tz.normal.y = sz[7] - sz[4], tz.normal.z = sz[11] - sz[8], tz.d = sz[15] - sz[12], tz.normalize()
+      static GetRightPlaneToRef(vv, zv) {
+        const Pv = vv.m;
+        zv.normal.x = Pv[3] - Pv[0], zv.normal.y = Pv[7] - Pv[4], zv.normal.z = Pv[11] - Pv[8], zv.d = Pv[15] - Pv[12], zv.normalize()
       }
-      static GetTopPlaneToRef(zz, tz) {
-        const sz = zz.m;
-        tz.normal.x = sz[3] - sz[1], tz.normal.y = sz[7] - sz[5], tz.normal.z = sz[11] - sz[9], tz.d = sz[15] - sz[13], tz.normalize()
+      static GetTopPlaneToRef(vv, zv) {
+        const Pv = vv.m;
+        zv.normal.x = Pv[3] - Pv[1], zv.normal.y = Pv[7] - Pv[5], zv.normal.z = Pv[11] - Pv[9], zv.d = Pv[15] - Pv[13], zv.normalize()
       }
-      static GetBottomPlaneToRef(zz, tz) {
-        const sz = zz.m;
-        tz.normal.x = sz[3] + sz[1], tz.normal.y = sz[7] + sz[5], tz.normal.z = sz[11] + sz[9], tz.d = sz[15] + sz[13], tz.normalize()
+      static GetBottomPlaneToRef(vv, zv) {
+        const Pv = vv.m;
+        zv.normal.x = Pv[3] + Pv[1], zv.normal.y = Pv[7] + Pv[5], zv.normal.z = Pv[11] + Pv[9], zv.d = Pv[15] + Pv[13], zv.normalize()
       }
-      static GetPlanesToRef(zz, tz) {
-        Wz.GetNearPlaneToRef(zz, tz[0]), Wz.GetFarPlaneToRef(zz, tz[1]), Wz.GetLeftPlaneToRef(zz, tz[2]), Wz.GetRightPlaneToRef(zz, tz[3]), Wz.GetTopPlaneToRef(zz, tz[4]), Wz.GetBottomPlaneToRef(zz, tz[5])
+      static GetPlanesToRef(vv, zv) {
+        Sv.GetNearPlaneToRef(vv, zv[0]), Sv.GetFarPlaneToRef(vv, zv[1]), Sv.GetLeftPlaneToRef(vv, zv[2]), Sv.GetRightPlaneToRef(vv, zv[3]), Sv.GetTopPlaneToRef(vv, zv[4]), Sv.GetBottomPlaneToRef(vv, zv[5])
       }
-      static IsPointInFrustum(zz, tz) {
-        for (let sz = 0; sz < 6; sz++)
-          if (tz[sz].dotCoordinate(zz) < 0) return !1;
+      static IsPointInFrustum(vv, zv) {
+        for (let Pv = 0; Pv < 6; Pv++)
+          if (zv[Pv].dotCoordinate(vv) < 0) return !1;
         return !0
       }
     }
   },
-  37199: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Wz
+  37293: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => Sv
     });
-    var Fz = sz(36475);
-    class Wz {
-      constructor(zz, tz, sz, Wz) {
-        this.normal = new Fz.p(zz, tz, sz), this.d = Wz
+    var hv = Pv(36594);
+    class Sv {
+      constructor(vv, zv, Pv, Sv) {
+        this.normal = new hv.l(vv, zv, Pv), this.d = Sv
       }
-      hsz() {
+      pPv() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new Wz(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new Sv(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let zz = this.normal.getHashCode();
-        return zz = 397 * zz ^ this.d, zz
+        let vv = this.normal.getHashCode();
+        return vv = 397 * vv ^ this.d, vv
       }
       normalize() {
-        const zz = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let tz = 0;
-        return 0 !== zz && (tz = 1 / zz), this.normal.x *= tz, this.normal.y *= tz, this.normal.z *= tz, this.d *= tz, this
+        const vv = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let zv = 0;
+        return 0 !== vv && (zv = 1 / vv), this.normal.x *= zv, this.normal.y *= zv, this.normal.z *= zv, this.d *= zv, this
       }
-      transform(zz) {
-        const tz = Wz._TmpMatrix;
-        zz.invertToRef(tz);
-        const sz = tz.m,
-          Fz = this.normal.x,
-          Xz = this.normal.y,
-          Oz = this.normal.z,
-          oz = this.d,
-          vz = Fz * sz[0] + Xz * sz[1] + Oz * sz[2] + oz * sz[3],
-          Uz = Fz * sz[4] + Xz * sz[5] + Oz * sz[6] + oz * sz[7],
-          Kz = Fz * sz[8] + Xz * sz[9] + Oz * sz[10] + oz * sz[11],
-          uz = Fz * sz[12] + Xz * sz[13] + Oz * sz[14] + oz * sz[15];
-        return new Wz(vz, Uz, Kz, uz)
+      transform(vv) {
+        const zv = Sv._TmpMatrix;
+        vv.invertToRef(zv);
+        const Pv = zv.m,
+          hv = this.normal.x,
+          ev = this.normal.y,
+          gv = this.normal.z,
+          pv = this.d,
+          dv = hv * Pv[0] + ev * Pv[1] + gv * Pv[2] + pv * Pv[3],
+          Nv = hv * Pv[4] + ev * Pv[5] + gv * Pv[6] + pv * Pv[7],
+          lv = hv * Pv[8] + ev * Pv[9] + gv * Pv[10] + pv * Pv[11],
+          Tv = hv * Pv[12] + ev * Pv[13] + gv * Pv[14] + pv * Pv[15];
+        return new Sv(dv, Nv, lv, Tv)
       }
-      dotCoordinate(zz) {
-        return this.normal.x * zz.x + this.normal.y * zz.y + this.normal.z * zz.z + this.d
+      dotCoordinate(vv) {
+        return this.normal.x * vv.x + this.normal.y * vv.y + this.normal.z * vv.z + this.d
       }
-      copyFromPoints(zz, tz, sz) {
-        const Fz = tz.x - zz.x,
-          Wz = tz.y - zz.y,
-          Xz = tz.z - zz.z,
-          Oz = sz.x - zz.x,
-          oz = sz.y - zz.y,
-          vz = sz.z - zz.z,
-          Uz = Wz * vz - Xz * oz,
-          Kz = Xz * Oz - Fz * vz,
-          uz = Fz * oz - Wz * Oz,
-          Nz = Math.sqrt(Uz * Uz + Kz * Kz + uz * uz);
-        let bz;
-        return bz = 0 !== Nz ? 1 / Nz : 0, this.normal.x = Uz * bz, this.normal.y = Kz * bz, this.normal.z = uz * bz, this.d = -(this.normal.x * zz.x + this.normal.y * zz.y + this.normal.z * zz.z), this
+      copyFromPoints(vv, zv, Pv) {
+        const hv = zv.x - vv.x,
+          Sv = zv.y - vv.y,
+          ev = zv.z - vv.z,
+          gv = Pv.x - vv.x,
+          pv = Pv.y - vv.y,
+          dv = Pv.z - vv.z,
+          Nv = Sv * dv - ev * pv,
+          lv = ev * gv - hv * dv,
+          Tv = hv * pv - Sv * gv,
+          Wv = Math.sqrt(Nv * Nv + lv * lv + Tv * Tv);
+        let wv;
+        return wv = 0 !== Wv ? 1 / Wv : 0, this.normal.x = Nv * wv, this.normal.y = lv * wv, this.normal.z = Tv * wv, this.d = -(this.normal.x * vv.x + this.normal.y * vv.y + this.normal.z * vv.z), this
       }
-      isFrontFacingTo(zz, tz) {
-        return Fz.p.Dot(this.normal, zz) <= tz
+      isFrontFacingTo(vv, zv) {
+        return hv.l.Dot(this.normal, vv) <= zv
       }
-      signedDistanceTo(zz) {
-        return Fz.p.Dot(zz, this.normal) + this.d
+      signedDistanceTo(vv) {
+        return hv.l.Dot(vv, this.normal) + this.d
       }
-      static FromArray(zz) {
-        return new Wz(zz[0], zz[1], zz[2], zz[3])
+      static FromArray(vv) {
+        return new Sv(vv[0], vv[1], vv[2], vv[3])
       }
-      static FromPoints(zz, tz, sz) {
-        const Fz = new Wz(0, 0, 0, 0);
-        return Fz.copyFromPoints(zz, tz, sz), Fz
+      static FromPoints(vv, zv, Pv) {
+        const hv = new Sv(0, 0, 0, 0);
+        return hv.copyFromPoints(vv, zv, Pv), hv
       }
-      static FromPositionAndNormal(zz, tz) {
-        const sz = new Wz(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(zz, tz, sz)
+      static FromPositionAndNormal(vv, zv) {
+        const Pv = new Sv(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(vv, zv, Pv)
       }
-      static FromPositionAndNormalToRef(zz, tz, sz) {
-        return sz.normal.vsz(tz), sz.normal.normalize(), sz.d = -zz.dot(sz.normal), sz
+      static FromPositionAndNormalToRef(vv, zv, Pv) {
+        return Pv.normal.Vzv(zv), Pv.normal.normalize(), Pv.d = -vv.dot(Pv.normal), Pv
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(zz, tz, sz) {
-        const Wz = -(tz.x * zz.x + tz.y * zz.y + tz.z * zz.z);
-        return Fz.p.Dot(sz, tz) + Wz
+      static SignedDistanceToPlaneFromPositionAndNormal(vv, zv, Pv) {
+        const Sv = -(zv.x * vv.x + zv.y * vv.y + zv.z * vv.z);
+        return hv.l.Dot(Pv, zv) + Sv
       }
     }
-    Wz._TmpMatrix = Fz.e.Identity()
+    Sv._TmpMatrix = hv.c.Identity()
   },
-  38091: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Xz
+  38207: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => ev
     });
-    var Fz = sz(38097);
-    const Wz = (zz, tz, sz) => zz ? zz.getClassName && "Mesh" === zz.getClassName() ? null : !zz.getClassName || "SubMesh" !== zz.getClassName() && "PhysicsBody" !== zz.getClassName() ? zz.clone ? zz.clone() : Array.isArray(zz) ? zz.slice() : sz && "object" === typeof zz ? {
-      ...zz
-    } : null : zz.clone(tz) : null;
-    class Xz {
-      static DeepCopy(zz, tz, sz, Xz) {
-        let Oz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const oz = function(zz) {
-          const tz = [];
+    var hv = Pv(38209);
+    const Sv = (vv, zv, Pv) => vv ? vv.getClassName && "Mesh" === vv.getClassName() ? null : !vv.getClassName || "SubMesh" !== vv.getClassName() && "PhysicsBody" !== vv.getClassName() ? vv.clone ? vv.clone() : Array.isArray(vv) ? vv.slice() : Pv && "object" === typeof vv ? {
+      ...vv
+    } : null : vv.clone(zv) : null;
+    class ev {
+      static DeepCopy(vv, zv, Pv, ev) {
+        let gv = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const pv = function(vv) {
+          const zv = [];
           do {
-            const sz = Object.getOwnPropertyNames(zz);
-            for (const zz of sz) - 1 === tz.indexOf(zz) && tz.push(zz)
-          } while (zz = Object.getPrototypeOf(zz));
-          return tz
-        }(zz);
-        for (const Uz of oz) {
-          if ("_" === Uz[0] && (!Xz || -1 === Xz.indexOf(Uz))) continue;
-          if (Uz.endsWith("Observable")) continue;
-          if (sz && -1 !== sz.indexOf(Uz)) continue;
-          const oz = zz[Uz],
-            Kz = typeof oz;
-          if ("function" !== Kz) try {
-            if ("object" === Kz)
-              if (oz instanceof Uint8Array) tz[Uz] = Uint8Array.from(oz);
-              else if (oz instanceof Array) {
-              if (tz[Uz] = [], oz.length > 0)
-                if ("object" == typeof oz[0])
-                  for (let zz = 0; zz < oz.length; zz++) {
-                    const sz = Wz(oz[zz], tz, Oz); - 1 === tz[Uz].indexOf(sz) && tz[Uz].push(sz)
-                  } else tz[Uz] = oz.slice(0)
-            } else tz[Uz] = Wz(oz, tz, Oz);
-            else tz[Uz] = oz
-          } catch (vz) {
-            Fz.e.Warn(vz.message)
+            const Pv = Object.getOwnPropertyNames(vv);
+            for (const vv of Pv) - 1 === zv.indexOf(vv) && zv.push(vv)
+          } while (vv = Object.getPrototypeOf(vv));
+          return zv
+        }(vv);
+        for (const Nv of pv) {
+          if ("_" === Nv[0] && (!ev || -1 === ev.indexOf(Nv))) continue;
+          if (Nv.endsWith("Observable")) continue;
+          if (Pv && -1 !== Pv.indexOf(Nv)) continue;
+          const pv = vv[Nv],
+            lv = typeof pv;
+          if ("function" !== lv) try {
+            if ("object" === lv)
+              if (pv instanceof Uint8Array) zv[Nv] = Uint8Array.from(pv);
+              else if (pv instanceof Array) {
+              if (zv[Nv] = [], pv.length > 0)
+                if ("object" == typeof pv[0])
+                  for (let vv = 0; vv < pv.length; vv++) {
+                    const Pv = Sv(pv[vv], zv, gv); - 1 === zv[Nv].indexOf(Pv) && zv[Nv].push(Pv)
+                  } else zv[Nv] = pv.slice(0)
+            } else zv[Nv] = Sv(pv, zv, gv);
+            else zv[Nv] = pv
+          } catch (dv) {
+            hv.d.Warn(dv.message)
           }
         }
       }
     }
   },
-  37333: (zz, tz, sz) => {
-    function Fz() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (zz => {
-        const tz = 16 * Math.random() | 0;
-        return ("x" === zz ? tz : 3 & tz | 8).toString(16)
+  37431: (vv, zv, Pv) => {
+    function hv() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (vv => {
+        const zv = 16 * Math.random() | 0;
+        return ("x" === vv ? zv : 3 & zv | 8).toString(16)
       }))
     }
-    sz.d(tz, {
-      d: () => Fz
+    Pv.d(zv, {
+      b: () => hv
     })
   },
-  38097: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Fz
+  38209: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => hv
     });
-    class Fz {
-      static _CheckLimit(zz, tz) {
-        let sz = Fz._LogLimitOutputs[zz];
-        return sz ? sz.current++ : (sz = {
-          limit: tz,
+    class hv {
+      static _CheckLimit(vv, zv) {
+        let Pv = hv._LogLimitOutputs[vv];
+        return Pv ? Pv.current++ : (Pv = {
+          limit: zv,
           current: 1
-        }, Fz._LogLimitOutputs[zz] = sz), sz.current <= sz.limit
+        }, hv._LogLimitOutputs[vv] = Pv), Pv.current <= Pv.limit
       }
-      static _GenerateLimitMessage(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const sz = Fz._LogLimitOutputs[zz];
-        if (!sz || !Fz.MessageLimitReached) return;
-        const Wz = this._Levels[tz];
-        sz.current === sz.limit && Fz[Wz.name](Fz.MessageLimitReached.replace(/%LIMIT%/g, "" + sz.limit).replace(/%TYPE%/g, Wz.name ?? ""))
+      static _GenerateLimitMessage(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Pv = hv._LogLimitOutputs[vv];
+        if (!Pv || !hv.MessageLimitReached) return;
+        const Sv = this._Levels[zv];
+        Pv.current === Pv.limit && hv[Sv.name](hv.MessageLimitReached.replace(/%LIMIT%/g, "" + Pv.limit).replace(/%TYPE%/g, Sv.name ?? ""))
       }
-      static _AddLogEntry(zz) {
-        Fz._LogCache = zz + Fz._LogCache, Fz.OnNewCacheEntry && Fz.OnNewCacheEntry(zz)
+      static _AddLogEntry(vv) {
+        hv._LogCache = vv + hv._LogCache, hv.OnNewCacheEntry && hv.OnNewCacheEntry(vv)
       }
-      static _FormatMessage(zz) {
-        const tz = zz => zz < 10 ? "0" + zz : "" + zz,
-          sz = new Date;
-        return "[" + tz(sz.getHours()) + ":" + tz(sz.getMinutes()) + ":" + tz(sz.getSeconds()) + "]: " + zz
+      static _FormatMessage(vv) {
+        const zv = vv => vv < 10 ? "0" + vv : "" + vv,
+          Pv = new Date;
+        return "[" + zv(Pv.getHours()) + ":" + zv(Pv.getMinutes()) + ":" + zv(Pv.getSeconds()) + "]: " + vv
       }
-      static _LogDisabled(zz, tz) {}
+      static _LogDisabled(vv, zv) {}
       static _LogEnabled() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          tz = arguments.length > 1 ? arguments[1] : void 0,
-          sz = arguments.length > 2 ? arguments[2] : void 0;
-        const Wz = Array.isArray(tz) ? tz[0] : tz;
-        if (void 0 !== sz && !Fz._CheckLimit(Wz, sz)) return;
-        const Xz = Fz._FormatMessage(Wz),
-          Oz = this._Levels[zz],
-          oz = Array.isArray(tz) ? tz.slice(1) : [];
-        Oz.logFunc && Oz.logFunc("BJS - " + Xz, ...oz);
-        const vz = `<div style='color:${Oz.color}'>${Xz}</div><br>`;
-        Fz._AddLogEntry(vz), Fz._GenerateLimitMessage(Wz, zz)
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zv = arguments.length > 1 ? arguments[1] : void 0,
+          Pv = arguments.length > 2 ? arguments[2] : void 0;
+        const Sv = Array.isArray(zv) ? zv[0] : zv;
+        if (void 0 !== Pv && !hv._CheckLimit(Sv, Pv)) return;
+        const ev = hv._FormatMessage(Sv),
+          gv = this._Levels[vv],
+          pv = Array.isArray(zv) ? zv.slice(1) : [];
+        gv.logFunc && gv.logFunc("BJS - " + ev, ...pv);
+        const dv = `<div style='color:${gv.color}'>${ev}</div><br>`;
+        hv._AddLogEntry(dv), hv._GenerateLimitMessage(Sv, vv)
       }
       static get LogCache() {
-        return Fz._LogCache
+        return hv._LogCache
       }
       static ClearLogCache() {
-        Fz._LogCache = "", Fz._LogLimitOutputs = {}, Fz.errorsCount = 0
+        hv._LogCache = "", hv._LogLimitOutputs = {}, hv.errorsCount = 0
       }
-      static set LogLevels(zz) {
-        Fz.Log = Fz._LogDisabled, Fz.Warn = Fz._LogDisabled, Fz.Error = Fz._LogDisabled;
-        const tz = [Fz.MessageLogLevel, Fz.WarningLogLevel, Fz.ErrorLogLevel];
-        for (const sz of tz)
-          if ((zz & sz) === sz) {
-            const zz = this._Levels[sz];
-            Fz[zz.name] = Fz._LogEnabled.bind(Fz, sz)
+      static set LogLevels(vv) {
+        hv.Log = hv._LogDisabled, hv.Warn = hv._LogDisabled, hv.Error = hv._LogDisabled;
+        const zv = [hv.MessageLogLevel, hv.WarningLogLevel, hv.ErrorLogLevel];
+        for (const Pv of zv)
+          if ((vv & Pv) === Pv) {
+            const vv = this._Levels[Pv];
+            hv[vv.name] = hv._LogEnabled.bind(hv, Pv)
           }
       }
     }
-    Fz.NoneLogLevel = 0, Fz.MessageLogLevel = 1, Fz.WarningLogLevel = 2, Fz.ErrorLogLevel = 4, Fz.AllLogLevel = 7, Fz.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Fz._LogCache = "", Fz._LogLimitOutputs = {}, Fz._Levels = [{}, {
+    hv.NoneLogLevel = 0, hv.MessageLogLevel = 1, hv.WarningLogLevel = 2, hv.ErrorLogLevel = 4, hv.AllLogLevel = 7, hv.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", hv._LogCache = "", hv._LogLimitOutputs = {}, hv._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -266,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], Fz.errorsCount = 0, Fz.Log = Fz._LogEnabled.bind(Fz, Fz.MessageLogLevel), Fz.Warn = Fz._LogEnabled.bind(Fz, Fz.WarningLogLevel), Fz.Error = Fz._LogEnabled.bind(Fz, Fz.ErrorLogLevel)
+    }], hv.errorsCount = 0, hv.Log = hv._LogEnabled.bind(hv, hv.MessageLogLevel), hv.Warn = hv._LogEnabled.bind(hv, hv.WarningLogLevel), hv.Error = hv._LogEnabled.bind(hv, hv.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

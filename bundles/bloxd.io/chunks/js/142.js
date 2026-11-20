@@ -1,54 +1,54 @@
 export const id = 142;
 export const ids = [142];
 export const modules = {
-  7621: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      BloxdMsnAccountSdk: () => uz,
-      MsnSdkAdaptor: () => Dz,
-      msnMockIdentityStorageKey: () => vz
+  7801: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      BloxdMsnAccountSdk: () => Tv,
+      MsnSdkAdaptor: () => sv,
+      msnMockIdentityStorageKey: () => dv
     });
-    var Fz = sz(1291),
-      Wz = sz(1167),
-      Xz = sz(3137),
-      Oz = sz(580);
-    sz(44);
-    const oz = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js",
-      vz = "msnMockIdentity";
-    let Uz = null;
+    var hv = Pv(1299),
+      Sv = Pv(1164),
+      ev = Pv(3209),
+      gv = Pv(626);
+    Pv(39);
+    const pv = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js",
+      dv = "msnMockIdentity";
+    let Nv = null;
 
-    function Kz() {
-      return Uz ??= async function() {
-        await (0, Wz.c)(oz, {}, !1);
-        for (let zz = 0; zz < 50 && !window.$msstart; zz++) await (0, Oz.K)(100)
-      }(), Uz
+    function lv() {
+      return Nv ??= async function() {
+        await (0, Sv.d)(pv, {}, !1);
+        for (let vv = 0; vv < 50 && !window.$msstart; vv++) await (0, gv.V)(100)
+      }(), Nv
     }
-    class uz {
+    class Tv {
       constructor() {}
       static async setup() {
         try {
-          await Promise.race([Kz(), (0, Oz.K)(1e4).then((() => {
+          await Promise.race([lv(), (0, gv.V)(1e4).then((() => {
             throw new Error("Not loaded after 10000ms")
           }))])
-        } catch (zz) {
-          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", zz), null
+        } catch (vv) {
+          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", vv), null
         }
-        return window.$msstart ? new uz : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
+        return window.$msstart ? new Tv : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
       }
       async getSignedInUser() {
         try {
-          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, Oz.K)(1e4).then((() => {
+          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, gv.V)(1e4).then((() => {
             throw new Error("No answer after 10000ms")
           }))])
-        } catch (zz) {
-          return "USER_NOT_CONSENTED" !== (null === zz || void 0 === zz ? void 0 : zz.code) && console.error("Failed to get the signed-in MSN Play player:", zz), null
+        } catch (vv) {
+          return "USER_NOT_CONSENTED" !== (null === vv || void 0 === vv ? void 0 : vv.code) && console.error("Failed to get the signed-in MSN Play player:", vv), null
         }
       }
       async signIn() {
         return null !== null ? null : await window.$msstart.signInAsync()
       }
     }
-    const Nz = 20,
-      bz = {
+    const Wv = 20,
+      wv = {
         top: [{
           width: 970,
           height: 250
@@ -86,7 +86,7 @@ export const modules = {
           height: 50
         }]
       },
-      wz = {
+      av = {
         leaderboard: {
           1: ["right", "left"],
           5: ["top", "left"]
@@ -98,115 +98,115 @@ export const modules = {
           2: []
         }
       };
-    class Dz extends Fz.d {
+    class sv extends hv.c {
       constructor() {
         super(), this.name = "msn", this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
       }
       static async setup() {
-        return await Kz(), new Dz
+        return await lv(), new sv
       }
-      playVideoAd(zz, tz) {
-        this.playVideoOrRewarded("video", zz, zz)
+      playVideoAd(vv, zv) {
+        this.playVideoOrRewarded("video", vv, vv)
       }
-      playRewarded(zz, tz) {
-        this.playVideoOrRewarded("rewarded", zz, tz)
+      playRewarded(vv, zv) {
+        this.playVideoOrRewarded("rewarded", vv, zv)
       }
-      canShowBloxdAd(zz) {
-        for (const tz in wz)
-          if (zz.adId in wz[tz]) return !1;
+      canShowBloxdAd(vv) {
+        for (const zv in av)
+          if (vv.adId in av[zv]) return !1;
         return !0
       }
-      async renderBanner(zz) {
-        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,Xz.c)(zz)}: msn placement is already showing so not requesting`);
-        const tz = wz[zz.adType][zz.adId];
-        if ((0, Oz.G)(tz)) return void console.warn(`AD ${(0,Xz.c)(zz)}: no msn placement is configured for this bloxd placement so not showing any ad`);
-        const sz = [];
-        for (const Fz of tz)
-          for (const zz of bz[Fz])
-            if (zz.width <= window.innerWidth - 40 && zz.height <= window.innerHeight - 40) {
-              const tz = {
-                placement: Fz,
-                width: zz.width,
-                height: zz.height
+      async renderBanner(vv) {
+        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,ev.e)(vv)}: msn placement is already showing so not requesting`);
+        const zv = av[vv.adType][vv.adId];
+        if ((0, gv.N)(zv)) return void console.warn(`AD ${(0,ev.e)(vv)}: no msn placement is configured for this bloxd placement so not showing any ad`);
+        const Pv = [];
+        for (const hv of zv)
+          for (const vv of wv[hv])
+            if (vv.width <= window.innerWidth - 40 && vv.height <= window.innerHeight - 40) {
+              const zv = {
+                placement: hv,
+                width: vv.width,
+                height: vv.height
               };
-              if (!sz.some((zz => Hz(tz, zz)))) {
-                sz.push(tz);
+              if (!Pv.some((vv => iv(zv, vv)))) {
+                Pv.push(zv);
                 break
               }
-            } if (sz.length > 0) {
-          console.log(`AD ${(0,Xz.c)(zz)}: Attempting to show msn units: `, sz);
-          const tz = sz.map((zz => `${zz.placement}:${zz.width}x${zz.height}`));
+            } if (Pv.length > 0) {
+          console.log(`AD ${(0,ev.e)(vv)}: Attempting to show msn units: `, Pv);
+          const zv = Pv.map((vv => `${vv.placement}:${vv.width}x${vv.height}`));
           this.currentlyShowingBannerPlacement = {
-            placementId: (0, Xz.c)(zz),
-            renderPromise: window.$msstart.showDisplayAdsAsync(tz).then((() => {
-              console.log(`AD ${(0,Xz.c)(zz)}: Successfully request msn banner ad`)
-            })).catch((tz => {
-              console.log(`AD ${(0,Xz.c)(zz)}: Error while requesting msn banner ad`, tz)
+            placementId: (0, ev.e)(vv),
+            renderPromise: window.$msstart.showDisplayAdsAsync(zv).then((() => {
+              console.log(`AD ${(0,ev.e)(vv)}: Successfully request msn banner ad`)
+            })).catch((zv => {
+              console.log(`AD ${(0,ev.e)(vv)}: Error while requesting msn banner ad`, zv)
             }))
           }
-        } else console.warn(`AD ${(0,Xz.c)(zz)}: couldn't find an msn unit that fit screen size`)
+        } else console.warn(`AD ${(0,ev.e)(vv)}: couldn't find an msn unit that fit screen size`)
       }
-      async clearBanner(zz) {
-        null !== this.currentlyShowingBannerPlacement && (0, Xz.c)(zz) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,Xz.c)(zz)}: Attempting to clear msn banner ads for banner`, zz), await this.clearAllBannerAds())
+      async clearBanner(vv) {
+        null !== this.currentlyShowingBannerPlacement && (0, ev.e)(vv) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,ev.e)(vv)}: Attempting to clear msn banner ads for banner`, vv), await this.clearAllBannerAds())
       }
       async clearAllBannerAds() {
         try {
           if (this.isCurrentlyClearingAllBanners) return;
           this.isCurrentlyClearingAllBanners = !0, null !== this.currentlyShowingBannerPlacement && await this.currentlyShowingBannerPlacement.renderPromise, await window.$msstart.hideDisplayAdsAsync(), console.log("AD: Successfully cleared all msn banner ads")
-        } catch (zz) {
-          console.log("AD: Error while clearing all msn banner ads", zz)
+        } catch (vv) {
+          console.log("AD: Error while clearing all msn banner ads", vv)
         } finally {
           this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
         }
       }
-      playVideoOrRewarded(zz, tz, sz) {
-        const Fz = tz => {
-          console.error(`AD: Error while playing MSN ${zz} ad: `, tz), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), sz()
+      playVideoOrRewarded(vv, zv, Pv) {
+        const hv = zv => {
+          console.error(`AD: Error while playing MSN ${vv} ad: `, zv), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), Pv()
         };
         if (window.$msstart) {
-          console.log(`AD: Attempting to play MSN ${zz} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
-          const sz = async () => {
+          console.log(`AD: Attempting to play MSN ${vv} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
+          const Pv = async () => {
             try {
-              const sz = await window.$msstart.loadAdsAsync("rewarded" === zz),
-                Fz = await window.$msstart.showAdsAsync(sz.instanceId);
-              this.clearAllBannerAds(), await Fz.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${zz} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), tz()
-            } catch (sz) {
-              Fz(sz)
+              const Pv = await window.$msstart.loadAdsAsync("rewarded" === vv),
+                hv = await window.$msstart.showAdsAsync(Pv.instanceId);
+              this.clearAllBannerAds(), await hv.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${vv} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), zv()
+            } catch (Pv) {
+              hv(Pv)
             }
           };
           window.adStartSoPause(null, {
             preventMovement: !0
-          }), sz()
-        } else Fz(`AD: Can't play MSN ${zz} ad because sdk is not loaded`)
+          }), Pv()
+        } else hv(`AD: Can't play MSN ${vv} ad because sdk is not loaded`)
       }
     }
 
-    function gz(zz) {
-      let tz, sz;
-      switch (zz.placement) {
+    function Cv(vv) {
+      let zv, Pv;
+      switch (vv.placement) {
         case "top":
-          tz = (window.innerWidth - zz.width) / 2, sz = Nz;
+          zv = (window.innerWidth - vv.width) / 2, Pv = Wv;
           break;
         case "right":
-          tz = window.innerWidth - zz.width - Nz, sz = window.innerHeight / 2 - zz.height / 2 - 10;
+          zv = window.innerWidth - vv.width - Wv, Pv = window.innerHeight / 2 - vv.height / 2 - 10;
           break;
         case "left":
-          tz = Nz, sz = window.innerHeight / 2 - zz.height / 2 - 10
+          zv = Wv, Pv = window.innerHeight / 2 - vv.height / 2 - 10
       }
       return {
-        x1: tz,
-        y1: sz,
-        x2: tz + zz.width,
-        y2: sz + zz.height
+        x1: zv,
+        y1: Pv,
+        x2: zv + vv.width,
+        y2: Pv + vv.height
       }
     }
 
-    function Hz(zz, tz) {
-      const sz = gz(zz),
-        Fz = gz(tz);
-      return !(sz.x2 <= Fz.x1 || Fz.x2 <= sz.x1 || sz.y2 <= Fz.y1 || Fz.y2 <= sz.y1)
+    function iv(vv, zv) {
+      const Pv = Cv(vv),
+        hv = Cv(zv);
+      return !(Pv.x2 <= hv.x1 || hv.x2 <= Pv.x1 || Pv.y2 <= hv.y1 || hv.y2 <= Pv.y1)
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

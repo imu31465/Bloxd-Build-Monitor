@@ -1,106 +1,106 @@
 export const id = 128;
 export const ids = [127, 128, 130];
 export const modules = {
-  6180: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Fz.h,
-      h: () => Wz,
-      k: () => Fz.p
+  6328: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => hv.j,
+      g: () => Sv,
+      i: () => hv.r
     });
-    var Fz = sz(6161);
-    const Wz = [!1, !0].flatMap((zz => ["terrain", "liquid", "model"].map((tz => ({
-      strict: zz,
-      program: tz
+    var hv = Pv(6306);
+    const Sv = [!1, !0].flatMap((vv => ["terrain", "liquid", "model"].map((zv => ({
+      strict: vv,
+      program: zv
     })))))
   },
-  6234: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      forgetShaderPackActiveHint: () => Zz,
-      isOtherApiVersion: () => Jz,
-      isShaderPackActive: () => rz,
-      isShaderPackChangePending: () => mz,
-      markShaderPackChangePending: () => xz,
-      pageShaderPackValidationVersion: () => Iz,
-      reconcileStoredShaderPackHint: () => ez,
-      removeShaderPack: () => Pz,
-      replaceShaderPack: () => gz,
-      saveShaderPack: () => Dz,
-      shaderPackNeedsCheck: () => Cz,
-      storedPackOutcome: () => Yz,
-      storedShaderPackFiles: () => Nz,
-      toStoredShaderPack: () => uz
+  6369: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      forgetShaderPackActiveHint: () => Kv,
+      isOtherApiVersion: () => Yv,
+      isShaderPackActive: () => mv,
+      isShaderPackChangePending: () => Fv,
+      markShaderPackChangePending: () => fv,
+      pageShaderPackValidationVersion: () => nv,
+      reconcileStoredShaderPackHint: () => Dv,
+      removeShaderPack: () => Gv,
+      replaceShaderPack: () => Cv,
+      saveShaderPack: () => sv,
+      shaderPackNeedsCheck: () => Ov,
+      storedPackOutcome: () => jv,
+      storedShaderPackFiles: () => Wv,
+      toStoredShaderPack: () => Tv
     });
-    var Fz = sz(6161),
-      Wz = sz(6180),
-      Xz = sz(44),
-      Oz = sz(3133),
-      oz = sz(6237),
-      vz = sz(6211);
-    const Uz = "shaderPackChangePending";
-    let Kz = null;
+    var hv = Pv(6306),
+      Sv = Pv(6328),
+      ev = Pv(39),
+      gv = Pv(3201),
+      pv = Pv(6377),
+      dv = Pv(6351);
+    const Nv = "shaderPackChangePending";
+    let lv = null;
 
-    function uz(zz, tz, sz) {
+    function Tv(vv, zv, Pv) {
       return {
-        manifest: zz.manifest,
-        files: (0, Fz.u)(zz.files),
-        validation: tz,
-        ...sz && {
-          listing: sz
+        manifest: vv.manifest,
+        files: (0, hv.u)(vv.files),
+        validation: zv,
+        ...Pv && {
+          listing: Pv
         }
       }
     }
 
-    function Nz(zz) {
-      return Object.keys(zz.files).map((tz => ({
-        path: tz,
-        source: zz.files[tz]
+    function Wv(vv) {
+      return Object.keys(vv.files).map((zv => ({
+        path: zv,
+        source: vv.files[zv]
       })))
     }
-    let bz = Promise.resolve();
+    let wv = Promise.resolve();
 
-    function wz(zz) {
-      const tz = bz.then(zz);
-      return bz = tz.catch((() => {})), tz
-    }
-
-    function Dz(zz, tz) {
-      return wz((() => Hz(zz, tz)))
+    function av(vv) {
+      const zv = wv.then(vv);
+      return wv = zv.catch((() => {})), zv
     }
 
-    function gz(zz, tz, sz) {
-      return wz((async () => JSON.stringify(await (0, oz.g)()) === JSON.stringify(zz) && (null === tz ? (await Bz(), !0) : Hz(tz, sz))))
-    }
-    async function Hz(zz, tz) {
-      const sz = await Xz.e.setItem(oz.e, zz);
-      return sz && Gz(zz, tz), sz
-    }
-    async function Bz() {
-      await Xz.e.removeItem(oz.e), Xz.f.removeItem(Oz.e)
+    function sv(vv, zv) {
+      return av((() => iv(vv, zv)))
     }
 
-    function Pz() {
-      return wz(Bz)
+    function Cv(vv, zv, Pv) {
+      return av((async () => JSON.stringify(await (0, pv.g)()) === JSON.stringify(vv) && (null === zv ? (await cv(), !0) : iv(zv, Pv))))
+    }
+    async function iv(vv, zv) {
+      const Pv = await ev.f.setItem(pv.c, vv);
+      return Pv && Vv(vv, zv), Pv
+    }
+    async function cv() {
+      await ev.f.removeItem(pv.c), ev.h.removeItem(gv.b)
     }
 
-    function rz(zz, tz) {
-      return "active" === Yz(zz, tz).kind
+    function Gv() {
+      return av(cv)
     }
 
-    function Yz(zz, tz) {
-      var sz;
-      return null === zz ? {
+    function mv(vv, zv) {
+      return "active" === jv(vv, zv).kind
+    }
+
+    function jv(vv, zv) {
+      var Pv;
+      return null === vv ? {
         kind: "none",
         reason: "nothingStored"
-      } : Jz(zz) ? {
+      } : Yv(vv) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (sz = zz.validation) || void 0 === sz ? void 0 : sz.ok) || zz.validation.fromRecheck ? null === tz ? {
+      } : !1 !== (null === (Pv = vv.validation) || void 0 === Pv ? void 0 : Pv.ok) || vv.validation.fromRecheck ? null === zv ? {
         kind: "none",
         reason: "noCompiler"
-      } : Cz(zz, tz) ? {
+      } : Ov(vv, zv) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : zz.validation.ok ? {
+      } : vv.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -111,258 +111,258 @@ export const modules = {
       }
     }
 
-    function xz() {
-      Xz.j.setItem(Uz, performance.timeOrigin)
+    function fv() {
+      ev.l.setItem(Nv, performance.timeOrigin)
     }
 
-    function mz() {
-      return Xz.j.getItem(Uz) === performance.timeOrigin
+    function Fv() {
+      return ev.l.getItem(Nv) === performance.timeOrigin
     }
 
-    function Jz(zz) {
-      return !(0, Wz.k)(zz.manifest.apiVersion)
+    function Yv(vv) {
+      return !(0, Sv.i)(vv.manifest.apiVersion)
     }
 
-    function Iz(zz) {
-      return Kz ??= zz.dJ((0, vz.shaderPackTextures)()), Kz
+    function nv(vv) {
+      return lv ??= vv.RD((0, dv.shaderPackTextures)()), lv
     }
 
-    function Cz(zz, tz) {
-      var sz;
-      return (null === (sz = zz.validation) || void 0 === sz ? void 0 : sz.headerVersion) !== Iz(tz)
+    function Ov(vv, zv) {
+      var Pv;
+      return (null === (Pv = vv.validation) || void 0 === Pv ? void 0 : Pv.headerVersion) !== nv(zv)
     }
 
-    function ez(zz) {
-      return wz((async () => {
-        Gz(await (0, oz.g)(!0), zz)
+    function Dv(vv) {
+      return av((async () => {
+        Vv(await (0, pv.g)(!0), vv)
       }))
     }
 
-    function Zz() {
-      return wz((async () => {
-        Xz.f.removeItem(Oz.e)
+    function Kv() {
+      return av((async () => {
+        ev.h.removeItem(gv.b)
       }))
     }
 
-    function Gz(zz, tz) {
-      rz(zz, tz) ? Xz.f.setItem(Oz.e, !0) : Xz.f.removeItem(Oz.e)
+    function Vv(vv, zv) {
+      mv(vv, zv) ? ev.h.setItem(gv.b, !0) : ev.h.removeItem(gv.b)
     }
   },
-  6237: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Wz,
-      g: () => Xz
+  6377: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => Sv,
+      g: () => ev
     });
-    var Fz = sz(44);
-    const Wz = "shaderPack";
-    async function Xz() {
-      var zz;
-      let tz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (zz = await Fz.e.getItem(Wz, tz)) && void 0 !== zz ? zz : null
+    var hv = Pv(39);
+    const Sv = "shaderPack";
+    async function ev() {
+      var vv;
+      let zv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (vv = await hv.f.getItem(Sv, zv)) && void 0 !== vv ? vv : null
     }
   },
-  6211: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      loadShaderPackTextures: () => Oz,
-      shaderPackTextures: () => oz
+  6351: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      loadShaderPackTextures: () => gv,
+      shaderPackTextures: () => pv
     });
-    var Fz = sz(6161);
-    let Wz = null,
-      Xz = null;
+    var hv = Pv(6306);
+    let Sv = null,
+      ev = null;
 
-    function Oz() {
-      return Xz ??= Promise.all([sz.e(69), sz.e(198)]).then((() => sz(39630))).then((zz => {
+    function gv() {
+      return ev ??= Promise.all([Pv.e(70), Pv.e(198)]).then((() => Pv(39807))).then((vv => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: tz,
-          textureNameToIndex: sz,
-          textureAnimationData: Xz
-        } = zz;
-        return Wz ??= (0, Fz.i)(sz, Xz, tz), Wz
-      })), Xz
+          FORMER_BLOCK_IMAGE_NAMES: zv,
+          textureNameToIndex: Pv,
+          textureAnimationData: ev
+        } = vv;
+        return Sv ??= (0, hv.n)(Pv, ev, zv), Sv
+      })), ev
     }
 
-    function oz() {
-      if (null === Wz) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Wz
+    function pv() {
+      if (null === Sv) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Sv
     }
   },
-  6161: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Oz,
-      d: () => Xz,
-      h: () => Fz,
-      i: () => wz,
-      l: () => Kz,
-      p: () => Wz,
-      s: () => vz,
-      u: () => Uz,
-      y: () => uz
+  6306: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => gv,
+      f: () => ev,
+      j: () => hv,
+      n: () => av,
+      q: () => lv,
+      r: () => Sv,
+      t: () => dv,
+      u: () => Nv,
+      x: () => Tv
     });
-    const Fz = 5;
+    const hv = 5;
 
-    function Wz(zz) {
-      return zz === Fz
+    function Sv(vv) {
+      return vv === hv
     }
-    const Xz = 262144,
-      Oz = 256,
-      oz = 256;
+    const ev = 262144,
+      gv = 256,
+      pv = 256;
 
-    function vz(zz) {
-      if ("object" !== typeof zz || null === zz || Array.isArray(zz)) return "The pack has no files.";
-      const tz = [];
-      for (const [sz, Fz] of Object.entries(zz)) {
-        if ("string" !== typeof Fz) return `${sz} isn't text.`;
-        tz.push({
-          path: sz,
-          source: Fz
+    function dv(vv) {
+      if ("object" !== typeof vv || null === vv || Array.isArray(vv)) return "The pack has no files.";
+      const zv = [];
+      for (const [Pv, hv] of Object.entries(vv)) {
+        if ("string" !== typeof hv) return `${Pv} isn't text.`;
+        zv.push({
+          path: Pv,
+          source: hv
         })
       }
-      return tz.sort(((zz, tz) => Kz(zz.path, tz.path))),
-        function(zz) {
-          if (0 === zz.length) return "The pack has no .wgsl files.";
-          if (zz.length > Oz) return `The pack has more than ${Oz} .wgsl files.`;
-          const tz = new Set;
+      return zv.sort(((vv, zv) => lv(vv.path, zv.path))),
+        function(vv) {
+          if (0 === vv.length) return "The pack has no .wgsl files.";
+          if (vv.length > gv) return `The pack has more than ${gv} .wgsl files.`;
+          const zv = new Set;
           for (const {
-              path: sz
+              path: Pv
             }
-            of zz) {
-            const zz = Nz(sz);
-            if (null !== zz) return zz;
-            if (tz.has(sz)) return `The pack has two files at ${sz}.`;
-            tz.add(sz)
+            of vv) {
+            const vv = Wv(Pv);
+            if (null !== vv) return vv;
+            if (zv.has(Pv)) return `The pack has two files at ${Pv}.`;
+            zv.add(Pv)
           }
-          return uz(zz) > Xz ? `The pack's .wgsl files are over ${Xz/1024} KB in total.` : null
-        }(tz) ?? tz
+          return Tv(vv) > ev ? `The pack's .wgsl files are over ${ev/1024} KB in total.` : null
+        }(zv) ?? zv
     }
 
-    function Uz(zz) {
-      const tz = {};
-      for (const sz of zz) tz[sz.path] = sz.source;
-      return tz
+    function Nv(vv) {
+      const zv = {};
+      for (const Pv of vv) zv[Pv.path] = Pv.source;
+      return zv
     }
 
-    function Kz(zz, tz) {
-      return zz < tz ? -1 : zz > tz ? 1 : 0
+    function lv(vv, zv) {
+      return vv < zv ? -1 : vv > zv ? 1 : 0
     }
 
-    function uz(zz) {
-      const tz = new TextEncoder;
-      let sz = 0;
+    function Tv(vv) {
+      const zv = new TextEncoder;
+      let Pv = 0;
       for (const {
-          source: Fz
+          source: hv
         }
-        of zz) sz += tz.encode(Fz).byteLength;
-      return sz
+        of vv) Pv += zv.encode(hv).byteLength;
+      return Pv
     }
 
-    function Nz(zz) {
-      if (!zz.toLowerCase().endsWith(".wgsl")) return `${zz} isn't a .wgsl file.`;
-      if (zz.length > oz) return `A file path is over ${oz} characters.`;
-      if (zz.includes("\\") || /[\u0000-\u001f]/.test(zz)) return `${zz} isn't a valid file path.`;
-      return zz.split("/").some((zz => "" === zz || "." === zz || ".." === zz)) ? `${zz} isn't a valid file path.` : null
+    function Wv(vv) {
+      if (!vv.toLowerCase().endsWith(".wgsl")) return `${vv} isn't a .wgsl file.`;
+      if (vv.length > pv) return `A file path is over ${pv} characters.`;
+      if (vv.includes("\\") || /[\u0000-\u001f]/.test(vv)) return `${vv} isn't a valid file path.`;
+      return vv.split("/").some((vv => "" === vv || "." === vv || ".." === vv)) ? `${vv} isn't a valid file path.` : null
     }
-    const bz = /^(.*)\[rot\[([1-4])$/;
+    const wv = /^(.*)\[rot\[([1-4])$/;
 
-    function wz(zz, tz) {
-      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const Fz = new Map;
-      tz.forEach(((zz, tz) => {
+    function av(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const hv = new Map;
+      zv.forEach(((vv, zv) => {
         let {
-          numAnimStates: sz,
-          animStartIdx: Wz
-        } = zz;
-        for (let Xz = 1; Xz < sz; Xz++) Fz.set(Wz + Xz - 1, tz)
+          numAnimStates: Pv,
+          animStartIdx: Sv
+        } = vv;
+        for (let ev = 1; ev < Pv; ev++) hv.set(Sv + ev - 1, zv)
       }));
-      const Wz = Object.entries(zz),
-        Xz = new Map;
-      for (const [Dz, gz] of Wz) {
-        const zz = bz.exec(Dz);
-        "1" === zz?.[2] && Xz.set(zz[1], gz + 1)
+      const Sv = Object.entries(vv),
+        ev = new Map;
+      for (const [sv, Cv] of Sv) {
+        const vv = wv.exec(sv);
+        "1" === vv?.[2] && ev.set(vv[1], Cv + 1)
       }
-      const Oz = zz => {
-          const tz = bz.exec(zz);
-          return tz && Xz.has(tz[1]) ? {
-            root: tz[1],
-            rotation: Number(tz[2]) - 1
+      const gv = vv => {
+          const zv = wv.exec(vv);
+          return zv && ev.has(zv[1]) ? {
+            root: zv[1],
+            rotation: Number(zv[2]) - 1
           } : null
         },
-        oz = new Set(Wz.map((zz => {
-          let [tz] = zz;
-          return Oz(tz)?.root ?? tz
+        pv = new Set(Sv.map((vv => {
+          let [zv] = vv;
+          return gv(zv)?.root ?? zv
         }))),
-        vz = (zz, sz) => {
-          const Fz = zz.replace(/_?0$/, "");
-          return (tz[sz]?.numAnimStates ?? 0) > 1 && !oz.has(Fz) ? Fz : zz
+        dv = (vv, Pv) => {
+          const hv = vv.replace(/_?0$/, "");
+          return (zv[Pv]?.numAnimStates ?? 0) > 1 && !pv.has(hv) ? hv : vv
         },
-        Uz = new Map;
-      for (const [bz, Dz] of Wz) Uz.set(Dz, vz(Oz(bz)?.root ?? bz, Dz));
-      const Kz = Wz.reduce(((zz, tz) => {
-          let [, sz] = tz;
-          return Math.max(zz, sz + 1)
+        Nv = new Map;
+      for (const [wv, sv] of Sv) Nv.set(sv, dv(gv(wv)?.root ?? wv, sv));
+      const lv = Sv.reduce(((vv, zv) => {
+          let [, Pv] = zv;
+          return Math.max(vv, Pv + 1)
         }), 0),
-        uz = Array.from({
-          length: Kz
-        }, ((zz, tz) => ({
-          id: tz + 1,
+        Tv = Array.from({
+          length: lv
+        }, ((vv, zv) => ({
+          id: zv + 1,
           rotation: 0
         }))),
-        Nz = new Map,
-        wz = new Map;
-      for (const [bz, Dz] of Wz) {
-        const zz = Oz(bz),
-          tz = Fz.get(Dz);
-        if (void 0 !== tz) {
-          const sz = Uz.get(tz);
-          wz.set(bz, {
-            name: bz,
-            texture: sz,
+        Wv = new Map,
+        av = new Map;
+      for (const [wv, sv] of Sv) {
+        const vv = gv(wv),
+          zv = hv.get(sv);
+        if (void 0 !== zv) {
+          const Pv = Nv.get(zv);
+          av.set(wv, {
+            name: wv,
+            texture: Pv,
             kind: "frame"
-          }), zz && !wz.has(zz.root) && wz.set(zz.root, {
-            name: zz.root,
-            texture: sz,
+          }), vv && !av.has(vv.root) && av.set(vv.root, {
+            name: vv.root,
+            texture: Pv,
             kind: "frame"
           });
           continue
         }
-        const sz = Uz.get(Dz),
-          Wz = zz?.root ?? bz;
-        if (sz !== Wz && wz.set(Wz, {
-            name: Wz,
-            texture: sz,
+        const Pv = Nv.get(sv),
+          Sv = vv?.root ?? wv;
+        if (Pv !== Sv && av.set(Sv, {
+            name: Sv,
+            texture: Pv,
             kind: "frame"
-          }), zz) {
-          const tz = Xz.get(zz.root);
-          uz[Dz] = {
-            id: tz,
-            rotation: zz.rotation
-          }, Nz.set(sz, tz), wz.set(bz, {
-            name: bz,
-            texture: sz,
+          }), vv) {
+          const zv = ev.get(vv.root);
+          Tv[sv] = {
+            id: zv,
+            rotation: vv.rotation
+          }, Wv.set(Pv, zv), av.set(wv, {
+            name: wv,
+            texture: Pv,
             kind: "rotation"
           })
-        } else Nz.set(sz, Dz + 1)
+        } else Wv.set(Pv, sv + 1)
       }
-      for (const bz of Nz.keys()) wz.delete(bz);
-      for (const [bz, Dz] of sz) {
-        const zz = Nz.get(Dz);
-        void 0 === zz || Nz.has(bz) || (Nz.set(bz, zz), wz.delete(bz))
+      for (const wv of Wv.keys()) av.delete(wv);
+      for (const [wv, sv] of Pv) {
+        const vv = Wv.get(sv);
+        void 0 === vv || Wv.has(wv) || (Wv.set(wv, vv), av.delete(wv))
       }
       return {
-        named: [...Nz].sort(((zz, tz) => {
-          let [sz] = zz, [Fz] = tz;
-          return sz < Fz ? -1 : sz > Fz ? 1 : 0
-        })).map((zz => {
-          let [tz, sz] = zz;
+        named: [...Wv].sort(((vv, zv) => {
+          let [Pv] = vv, [hv] = zv;
+          return Pv < hv ? -1 : Pv > hv ? 1 : 0
+        })).map((vv => {
+          let [zv, Pv] = vv;
           return {
-            name: tz,
-            id: sz
+            name: zv,
+            id: Pv
           }
         })),
-        aliases: [...wz.values()],
-        layers: uz
+        aliases: [...av.values()],
+        layers: Tv
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

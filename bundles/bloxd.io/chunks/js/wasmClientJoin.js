@@ -1,31 +1,31 @@
-export const id = 54;
-export const ids = [54];
+export const id = 55;
+export const ids = [55];
 export const modules = {
-  39754: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Wz,
-      f: () => Kz
+  39940: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => Sv,
+      f: () => lv
     });
-    const Fz = new TextDecoder;
+    const hv = new TextDecoder;
 
-    function Wz(zz) {
-      const tz = new Xz(zz),
-        sz = tz.value();
-      if (tz.at !== zz.length) throw new Error(`msgpack: ${zz.length-tz.at} bytes after the value`);
-      return sz
+    function Sv(vv) {
+      const zv = new ev(vv),
+        Pv = zv.value();
+      if (zv.at !== vv.length) throw new Error(`msgpack: ${vv.length-zv.at} bytes after the value`);
+      return Pv
     }
-    class Xz {
-      constructor(zz) {
-        this.bytes = zz, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(zz.buffer, zz.byteOffset, zz.byteLength)
+    class ev {
+      constructor(vv) {
+        this.bytes = vv, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(vv.buffer, vv.byteOffset, vv.byteLength)
       }
       value() {
-        const zz = this.u8();
-        if (zz <= 127) return zz;
-        if (zz >= 224) return zz - 256;
-        if (zz >= 128 && zz <= 143) return this.map(15 & zz);
-        if (zz >= 144 && zz <= 159) return this.array(15 & zz);
-        if (zz >= 160 && zz <= 191) return this.str(31 & zz);
-        switch (zz) {
+        const vv = this.u8();
+        if (vv <= 127) return vv;
+        if (vv >= 224) return vv - 256;
+        if (vv >= 128 && vv <= 143) return this.map(15 & vv);
+        if (vv >= 144 && vv <= 159) return this.array(15 & vv);
+        if (vv >= 160 && vv <= 191) return this.str(31 & vv);
+        switch (vv) {
           case 192:
             return null;
           case 194:
@@ -89,13 +89,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${zz.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${vv.toString(16)} at ${this.at-1}`)
         }
       }
-      take(zz) {
-        const tz = this.at;
-        if (tz + zz > this.bytes.length) throw new Error(`msgpack: ${zz} bytes past the end at ${tz}`);
-        return this.at = tz + zz, tz
+      take(vv) {
+        const zv = this.at;
+        if (zv + vv > this.bytes.length) throw new Error(`msgpack: ${vv} bytes past the end at ${zv}`);
+        return this.at = zv + vv, zv
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -106,320 +106,318 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(zz) {
-        const tz = this.take(8);
-        return zz ? this.view.getBigInt64(tz, !1) : this.view.getBigUint64(tz, !1)
+      int64(vv) {
+        const zv = this.take(8);
+        return vv ? this.view.getBigInt64(zv, !1) : this.view.getBigUint64(zv, !1)
       }
-      str(zz) {
-        const tz = this.take(zz),
-          sz = this.bytes;
-        if (zz < 16) {
-          let Wz = "";
-          for (let Xz = tz; Xz < tz + zz; Xz++) {
-            const Oz = sz[Xz];
-            if (Oz >= 128) return Fz.decode(sz.subarray(tz, tz + zz));
-            Wz += String.fromCharCode(Oz)
+      str(vv) {
+        const zv = this.take(vv),
+          Pv = this.bytes;
+        if (vv < 16) {
+          let Sv = "";
+          for (let ev = zv; ev < zv + vv; ev++) {
+            const gv = Pv[ev];
+            if (gv >= 128) return hv.decode(Pv.subarray(zv, zv + vv));
+            Sv += String.fromCharCode(gv)
           }
-          return Wz
+          return Sv
         }
-        return Fz.decode(sz.subarray(tz, tz + zz))
+        return hv.decode(Pv.subarray(zv, zv + vv))
       }
-      bin(zz) {
-        const tz = this.take(zz);
-        return this.bytes.subarray(tz, tz + zz)
+      bin(vv) {
+        const zv = this.take(vv);
+        return this.bytes.subarray(zv, zv + vv)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(zz) {
+      array(vv) {
         this.enter();
-        const tz = [];
-        for (let sz = 0; sz < zz; sz++) tz.push(this.value());
-        return this.depth--, tz
+        const zv = [];
+        for (let Pv = 0; Pv < vv; Pv++) zv.push(this.value());
+        return this.depth--, zv
       }
-      map(zz) {
+      map(vv) {
         this.enter();
-        const tz = {};
-        for (let sz = 0; sz < zz; sz++) {
-          const zz = this.value(),
-            sz = this.value();
-          tz["__proto__" === zz ? "__proto_" : String(zz)] = sz
+        const zv = {};
+        for (let Pv = 0; Pv < vv; Pv++) {
+          const vv = this.value(),
+            Pv = this.value();
+          zv["__proto__" === vv ? "__proto_" : String(vv)] = Pv
         }
-        return this.depth--, tz
+        return this.depth--, zv
       }
-      ext(zz) {
-        const tz = this.view.getInt8(this.take(1)),
-          sz = this.take(zz);
-        if (0 !== tz) {
-          if (-1 === tz) {
-            if (1 === zz) return new Date(NaN);
-            if (4 === zz) return new Date(1e3 * this.view.getUint32(sz, !1));
-            if (8 === zz) {
-              const zz = this.view.getUint32(sz, !1),
-                tz = zz >>> 2,
-                Fz = 4294967296 * (3 & zz) + this.view.getUint32(sz + 4, !1);
-              return new Date(1e3 * Fz + tz / 1e6)
+      ext(vv) {
+        const zv = this.view.getInt8(this.take(1)),
+          Pv = this.take(vv);
+        if (0 !== zv) {
+          if (-1 === zv) {
+            if (1 === vv) return new Date(NaN);
+            if (4 === vv) return new Date(1e3 * this.view.getUint32(Pv, !1));
+            if (8 === vv) {
+              const vv = this.view.getUint32(Pv, !1),
+                zv = vv >>> 2,
+                hv = 4294967296 * (3 & vv) + this.view.getUint32(Pv + 4, !1);
+              return new Date(1e3 * hv + zv / 1e6)
             }
-            if (12 === zz) {
-              const zz = this.view.getUint32(sz, !1),
-                tz = 4294967296 * this.view.getInt32(sz + 4, !1) + this.view.getUint32(sz + 8, !1);
-              return new Date(1e3 * tz + zz / 1e6)
+            if (12 === vv) {
+              const vv = this.view.getUint32(Pv, !1),
+                zv = 4294967296 * this.view.getInt32(Pv + 4, !1) + this.view.getUint32(Pv + 8, !1);
+              return new Date(1e3 * zv + vv / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${tz} of ${zz} bytes`)
+          throw new Error(`msgpack: ext type ${zv} of ${vv} bytes`)
         }
       }
     }
-    const Oz = new TextEncoder,
-      oz = -(2n ** 63n),
-      vz = 2n ** 63n - 1n,
-      Uz = 2n ** 64n - 1n;
+    const gv = new TextEncoder,
+      pv = -(2n ** 63n),
+      dv = 2n ** 63n - 1n,
+      Nv = 2n ** 64n - 1n;
 
-    function Kz(zz) {
-      const tz = new uz;
-      return tz.value(zz, 0), tz.bytes()
+    function lv(vv) {
+      const zv = new Tv;
+      return zv.value(vv, 0), zv.bytes()
     }
-    class uz {
+    class Tv {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(zz, tz) {
-        if (tz > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof zz) {
+      value(vv, zv) {
+        if (zv > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof vv) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(zz ? 195 : 194);
+            return void this.u8(vv ? 195 : 194);
           case "number":
-            return void this.number(zz);
+            return void this.number(vv);
           case "bigint":
-            return void this.bigint(zz);
+            return void this.bigint(vv);
           case "string":
-            return void this.string(zz);
+            return void this.string(vv);
           case "object":
-            if (null === zz) this.u8(192);
-            else if (zz instanceof Uint8Array) this.head(zz.length, 196, -1, 197, 198), this.room(zz.length), this.buf.set(zz, this.at), this.at += zz.length;
-            else if (Array.isArray(zz)) {
-              this.head(zz.length, 220, 144, 220, 221);
-              for (const sz of zz) this.value(sz, tz + 1)
+            if (null === vv) this.u8(192);
+            else if (vv instanceof Uint8Array) this.head(vv.length, 196, -1, 197, 198), this.room(vv.length), this.buf.set(vv, this.at), this.at += vv.length;
+            else if (Array.isArray(vv)) {
+              this.head(vv.length, 220, 144, 220, 221);
+              for (const Pv of vv) this.value(Pv, zv + 1)
             } else {
-              var sz, Fz;
-              if (Object.getPrototypeOf(zz) !== Object.prototype && null !== Object.getPrototypeOf(zz)) throw new Error(`msgpack: can't encode a ${null!==(sz=null===(Fz=zz.constructor)||void 0===Fz?void 0:Fz.name)&&void 0!==sz?sz:"object"}`);
+              var Pv, hv;
+              if (Object.getPrototypeOf(vv) !== Object.prototype && null !== Object.getPrototypeOf(vv)) throw new Error(`msgpack: can't encode a ${null!==(Pv=null===(hv=vv.constructor)||void 0===hv?void 0:hv.name)&&void 0!==Pv?Pv:"object"}`);
               {
-                const sz = Object.keys(zz);
-                this.head(sz.length, 222, 128, 222, 223);
-                for (const Fz of sz) this.string(Fz), this.value(zz[Fz], tz + 1)
+                const Pv = Object.keys(vv);
+                this.head(Pv.length, 222, 128, 222, 223);
+                for (const hv of Pv) this.string(hv), this.value(vv[hv], zv + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof zz)
+            throw new Error("msgpack: can't encode a " + typeof vv)
         }
       }
-      number(zz) {
-        Number.isInteger(zz) && zz >= -2147483648 && zz <= 4294967295 ? zz >= 0 ? zz < 128 ? this.u8(zz) : zz < 256 ? (this.u8(204), this.u8(zz)) : zz < 65536 ? (this.u8(205), this.u16(zz)) : (this.u8(206), this.u32(zz)) : zz >= -32 ? this.u8(zz + 256) : zz >= -128 ? (this.u8(208), this.u8(zz + 256)) : zz >= -32768 ? (this.u8(209), this.u16(zz + 65536)) : (this.u8(210), this.u32(zz >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, zz, !1), this.at += 8)
+      number(vv) {
+        Number.isInteger(vv) && vv >= -2147483648 && vv <= 4294967295 ? vv >= 0 ? vv < 128 ? this.u8(vv) : vv < 256 ? (this.u8(204), this.u8(vv)) : vv < 65536 ? (this.u8(205), this.u16(vv)) : (this.u8(206), this.u32(vv)) : vv >= -32 ? this.u8(vv + 256) : vv >= -128 ? (this.u8(208), this.u8(vv + 256)) : vv >= -32768 ? (this.u8(209), this.u16(vv + 65536)) : (this.u8(210), this.u32(vv >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, vv, !1), this.at += 8)
       }
-      bigint(zz) {
-        const tz = zz >= oz && zz <= vz;
-        if (!tz && (zz < 0n || zz > Uz)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(tz ? 211 : 207), this.room(8), tz ? this.view.setBigInt64(this.at, zz, !1) : this.view.setBigUint64(this.at, zz, !1), this.at += 8
+      bigint(vv) {
+        const zv = vv >= pv && vv <= dv;
+        if (!zv && (vv < 0n || vv > Nv)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(zv ? 211 : 207), this.room(8), zv ? this.view.setBigInt64(this.at, vv, !1) : this.view.setBigUint64(this.at, vv, !1), this.at += 8
       }
-      string(zz) {
-        const tz = Oz.encode(zz);
-        this.head(tz.length, 217, 160, 218, 219), this.room(tz.length), this.buf.set(tz, this.at), this.at += tz.length
+      string(vv) {
+        const zv = gv.encode(vv);
+        this.head(zv.length, 217, 160, 218, 219), this.room(zv.length), this.buf.set(zv, this.at), this.at += zv.length
       }
-      head(zz, tz, sz, Fz, Wz) {
-        sz >= 0 && zz < (160 === sz ? 32 : 16) ? this.u8(sz | zz) : tz !== Fz && zz < 256 ? (this.u8(tz), this.u8(zz)) : zz < 65536 ? (this.u8(Fz), this.u16(zz)) : (this.u8(Wz), this.u32(zz))
+      head(vv, zv, Pv, hv, Sv) {
+        Pv >= 0 && vv < (160 === Pv ? 32 : 16) ? this.u8(Pv | vv) : zv !== hv && vv < 256 ? (this.u8(zv), this.u8(vv)) : vv < 65536 ? (this.u8(hv), this.u16(vv)) : (this.u8(Sv), this.u32(vv))
       }
-      room(zz) {
-        if (this.at + zz <= this.buf.length) return;
-        let tz = 2 * this.buf.length;
-        for (; tz < this.at + zz;) tz *= 2;
-        const sz = new Uint8Array(tz);
-        sz.set(this.buf.subarray(0, this.at)), this.buf = sz, this.view = new DataView(sz.buffer)
+      room(vv) {
+        if (this.at + vv <= this.buf.length) return;
+        let zv = 2 * this.buf.length;
+        for (; zv < this.at + vv;) zv *= 2;
+        const Pv = new Uint8Array(zv);
+        Pv.set(this.buf.subarray(0, this.at)), this.buf = Pv, this.view = new DataView(Pv.buffer)
       }
-      u8(zz) {
-        this.room(1), this.buf[this.at++] = zz
+      u8(vv) {
+        this.room(1), this.buf[this.at++] = vv
       }
-      u16(zz) {
-        this.room(2), this.view.setUint16(this.at, zz, !1), this.at += 2
+      u16(vv) {
+        this.room(2), this.view.setUint16(this.at, vv, !1), this.at += 2
       }
-      u32(zz) {
-        this.room(4), this.view.setUint32(this.at, zz, !1), this.at += 4
+      u32(vv) {
+        this.room(4), this.view.setUint32(this.at, vv, !1), this.at += 4
       }
     }
   },
-  42354: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      joinRoom: () => Nz,
-      leaveHeldSeat: () => Bz,
-      resumeRoom: () => wz
+  42690: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      joinRoom: () => Wv,
+      leaveHeldSeat: () => cv,
+      resumeRoom: () => av
     });
-    var Fz = sz(161),
-      Wz = sz(1750),
-      Xz = sz(38480),
-      Oz = sz(1715),
-      oz = sz(39754),
-      vz = sz(4432),
-      Uz = sz(39959),
-      Kz = sz(40029);
-    const uz = Uint8Array.of(13, ...(0, oz.f)(Fz.i));
-    async function Nz(zz, tz) {
-      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    var hv = Pv(144),
+      Sv = Pv(1779),
+      ev = Pv(38604),
+      gv = Pv(1748),
+      pv = Pv(39940),
+      dv = Pv(4535),
+      Nv = Pv(40161),
+      lv = Pv(40226);
+    const Tv = Uint8Array.of(13, ...(0, pv.f)(hv.g));
+    async function Wv(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       try {
-        return await bz(zz, tz, sz)
-      } catch (Wz) {
-        var Fz;
-        const Xz = await (null === (Fz = tz.optionsAfterRefusal) || void 0 === Fz ? void 0 : Fz.call(tz, Wz));
-        if (!Xz) throw Wz;
-        return bz(zz, {
-          ...tz,
-          joinOptions: Xz
+        return await wv(vv, zv, Pv)
+      } catch (Sv) {
+        var hv;
+        const ev = await (null === (hv = zv.optionsAfterRefusal) || void 0 === hv ? void 0 : hv.call(zv, Sv));
+        if (!ev) throw Sv;
+        return wv(vv, {
+          ...zv,
+          joinOptions: ev
         }, {
-          ...sz,
+          ...Pv,
           early: void 0
         })
       }
     }
-    async function bz(zz, tz, sz) {
-      var Fz;
+    async function wv(vv, zv, Pv) {
+      var hv;
       const {
-        signal: Xz
-      } = sz, Oz = () => (0, Kz.j)(tz.endpoint, tz.roomName, tz.joinOptions, sz), {
-        early: oz
-      } = sz, vz = oz ? null !== (Fz = await oz.take(Xz)) && void 0 !== Fz ? Fz : await oz.reserveInstead(Oz, Xz) : await Oz();
-      return (0, Wz.n)(Xz), Hz(zz, tz.endpoint, vz, sz, !1)
+        signal: ev
+      } = Pv, gv = () => (0, lv.h)(zv.endpoint, zv.roomName, zv.joinOptions, Pv), {
+        early: pv
+      } = Pv, dv = pv ? null !== (hv = await pv.take(ev)) && void 0 !== hv ? hv : await pv.reserveInstead(gv, ev) : await gv();
+      return (0, Sv.p)(ev), iv(vv, zv.endpoint, dv, Pv, !1)
     }
-    async function wz(zz, tz, sz, Fz) {
-      let Xz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      const Oz = await (0, Kz.g)(tz, sz, Fz, Xz);
-      return (0, Wz.n)(Xz.signal), Hz(zz, tz, Oz, Xz, !0)
-    }
-
-    function Dz(zz, tz, sz) {
-      const Fz = (0, Kz.n)(zz, tz);
-      return sz.createSocket ? sz.createSocket(Fz) : new WebSocket(Fz)
+    async function av(vv, zv, Pv, hv) {
+      let ev = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      const gv = await (0, lv.d)(zv, Pv, hv, ev);
+      return (0, Sv.p)(ev.signal), iv(vv, zv, gv, ev, !0)
     }
 
-    function gz(zz, tz, sz) {
-      var Fz;
-      let Wz = !1;
-      return (null !== (Fz = zz.setTimer) && void 0 !== Fz ? Fz : (zz, tz) => {
-        setTimeout(zz, tz)
+    function sv(vv, zv, Pv) {
+      const hv = (0, lv.i)(vv, zv);
+      return Pv.createSocket ? Pv.createSocket(hv) : new WebSocket(hv)
+    }
+
+    function Cv(vv, zv, Pv) {
+      var hv;
+      let Sv = !1;
+      return (null !== (hv = vv.setTimer) && void 0 !== hv ? hv : (vv, zv) => {
+        setTimeout(vv, zv)
       })((() => {
-        Wz || tz()
-      }), sz), () => {
-        Wz = !0
+        Sv || zv()
+      }), Pv), () => {
+        Sv = !0
       }
     }
-    async function Hz(zz, tz, sz, Fz, oz) {
+    async function iv(vv, zv, Pv, hv, pv) {
       const {
-        signal: Kz
-      } = Fz, Nz = Dz(tz, sz, Fz);
-      let bz = null,
-        wz = null;
-      const Hz = [];
-      let Bz = !1,
-        Pz = !1;
-      const rz = zz => {
-        var tz;
-        Pz = !0, null === (tz = wz) || void 0 === tz || tz.reject(new Uz.d("the room socket closed before the resume", "closed", zz.code))
+        signal: lv
+      } = hv, Wv = sv(zv, Pv, hv);
+      let wv = null,
+        av = null;
+      const iv = [];
+      let cv = !1,
+        Gv = !1;
+      const mv = vv => {
+        var zv;
+        Gv = !0, null === (zv = av) || void 0 === zv || zv.reject(new Nv.e("the room socket closed before the resume", "closed", vv.code))
       };
-      oz && Nz.addEventListener("close", rz);
-      const Yz = (zz, tz) => {
-          var sz;
-          if (zz === (oz ? vz.F.Resumed : vz.F.Activated)) Bz = !0, null === (sz = wz) || void 0 === sz || sz.resolve();
-          else if (!oz || zz !== vz.F.ResumeRefused && zz !== vz.F.Activated)
-            if (zz === vz.F.Error) {
-              var Fz;
-              null === (Fz = wz) || void 0 === Fz || Fz.reject(new Uz.d(`the room refused the join (code ${tz})`, "roomError", tz))
+      pv && Wv.addEventListener("close", mv);
+      const jv = (vv, zv) => {
+          var Pv;
+          if (vv === (pv ? dv.F.Resumed : dv.F.Activated)) cv = !0, null === (Pv = av) || void 0 === Pv || Pv.resolve();
+          else if (!pv || vv !== dv.F.ResumeRefused && vv !== dv.F.Activated)
+            if (vv === dv.F.Error) {
+              var hv;
+              null === (hv = av) || void 0 === hv || hv.reject(new Nv.e(`the room refused the join (code ${zv})`, "roomError", zv))
             } else {
-              var Wz;
-              null === (Wz = wz) || void 0 === Wz || Wz.reject(new Uz.d("the room socket closed before the join", "closed", tz))
+              var Sv;
+              null === (Sv = av) || void 0 === Sv || Sv.reject(new Nv.e("the room socket closed before the join", "closed", zv))
             }
           else {
-            var Xz;
-            null === (Xz = wz) || void 0 === Xz || Xz.reject(new Uz.p("the core refused the resume: it held no game"))
+            var ev;
+            null === (ev = av) || void 0 === ev || ev.reject(new Nv.n("the core refused the resume: it held no game"))
           }
         },
-        xz = zz.onConnection(((zz, tz, sz) => {
-          null === bz ? Hz.push([zz, tz, sz]) : zz === bz && Yz(tz, sz)
+        fv = vv.onConnection(((vv, zv, Pv) => {
+          null === wv ? iv.push([vv, zv, Pv]) : vv === wv && jv(zv, Pv)
         })),
-        mz = zz.attachSocket(Nz);
-      if (null === mz) throw xz(), new Uz.d("the core could not take the room socket", "attach");
-      var Jz;
-      (bz = mz, oz) && (null === (Jz = Fz.onAttached) || void 0 === Jz || Jz.call(Fz));
-      const Iz = oz ? null : new Oz.b(Xz.c, (() => {
-        var tz, sz;
-        null === (tz = zz.flushNet) || void 0 === tz || tz.call(zz), null === (sz = wz) || void 0 === sz || sz.reject(new Xz.e)
+        Fv = vv.attachSocket(Wv);
+      if (null === Fv) throw fv(), new Nv.e("the core could not take the room socket", "attach");
+      var Yv;
+      (wv = Fv, pv) && (null === (Yv = hv.onAttached) || void 0 === Yv || Yv.call(hv));
+      const nv = pv ? null : new gv.e(ev.d, (() => {
+        var zv, Pv;
+        null === (zv = vv.flushNet) || void 0 === zv || zv.call(vv), null === (Pv = av) || void 0 === Pv || Pv.reject(new ev.g)
       }));
-      let Cz = !1;
-      const ez = () => {
-        if (Cz) return;
-        if (Cz = !0, xz(), oz && (Nz.removeEventListener("close", rz), !Bz && !(null !== Kz && void 0 !== Kz && Kz.aborted && (0, Wz.f)(Kz) instanceof Uz.t))) return void(Pz || zz.closeSocket(mz));
-        Bz && zz.leaveRoom(mz) || zz.sendRaw(mz, Uz.i) ? gz(Fz, (() => {
-          zz.closeSocket(mz)
-        }), Uz.g) : zz.closeSocket(mz)
+      let Ov = !1;
+      const Dv = () => {
+        if (Ov) return;
+        if (Ov = !0, fv(), pv && (Wv.removeEventListener("close", mv), !cv && !(null !== lv && void 0 !== lv && lv.aborted && (0, Sv.g)(lv) instanceof Nv.p))) return void(Gv || vv.closeSocket(Fv));
+        cv && vv.leaveRoom(Fv) || vv.sendRaw(Fv, Nv.h) ? Cv(hv, (() => {
+          vv.closeSocket(Fv)
+        }), Nv.f) : vv.closeSocket(Fv)
       };
       try {
-        await new Promise(((tz, sz) => {
-          const Fz = () => {
-            var tz;
-            oz && (null === (tz = zz.flushNet) || void 0 === tz || tz.call(zz));
-            sz((0, Wz.f)(Kz))
+        await new Promise(((zv, Pv) => {
+          const hv = () => {
+            var zv;
+            pv && (null === (zv = vv.flushNet) || void 0 === zv || zv.call(vv));
+            Pv((0, Sv.g)(lv))
           };
-          null === Kz || void 0 === Kz || Kz.addEventListener("abort", Fz, {
+          null === lv || void 0 === lv || lv.addEventListener("abort", hv, {
             once: !0
-          }), wz = {
+          }), av = {
             resolve: () => {
-              null === Kz || void 0 === Kz || Kz.removeEventListener("abort", Fz), tz()
+              null === lv || void 0 === lv || lv.removeEventListener("abort", hv), zv()
             },
-            reject: zz => {
-              null === Kz || void 0 === Kz || Kz.removeEventListener("abort", Fz), sz(zz)
+            reject: vv => {
+              null === lv || void 0 === lv || lv.removeEventListener("abort", hv), Pv(vv)
             }
           };
-          for (const [zz, Wz, Xz] of Hz.splice(0)) zz === bz && Yz(Wz, Xz)
+          for (const [vv, Sv, ev] of iv.splice(0)) vv === wv && jv(Sv, ev)
         }))
-      } catch (Zz) {
-        throw ez(), Zz
+      } catch (Kv) {
+        throw Dv(), Kv
       } finally {
-        null === Iz || void 0 === Iz || Iz.stop()
+        null === nv || void 0 === nv || nv.stop()
       }
-      oz && Nz.removeEventListener("close", rz);
+      pv && Wv.removeEventListener("close", mv);
       return {
-        conn: mz,
-        seat: sz,
-        leave: ez,
+        conn: Fv,
+        seat: Pv,
+        leave: Dv,
         detach: () => {
-          Cz = !0, xz()
+          Ov = !0, fv()
         },
-        endJoinAd: () => {
-          Cz || zz.sendRaw(mz, uz)
-        }
+        endJoinAd: () => !Ov && vv.sendRaw(Fv, Tv)
       }
     }
-    async function Bz(zz, tz, sz) {
-      let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function cv(vv, zv, Pv) {
+      let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       try {
-        const Wz = Dz(zz, await (0, Kz.g)(zz, tz, sz, Fz), Fz);
-        Wz.binaryType = "arraybuffer", await new Promise((zz => {
-          const tz = gz(Fz, (() => {
-            Wz.close(), zz()
-          }), Uz.g);
-          Wz.addEventListener("open", (() => {
-            Wz.send(Uz.i)
-          })), Wz.addEventListener("close", (() => {
-            tz(), zz()
+        const Sv = sv(vv, await (0, lv.d)(vv, zv, Pv, hv), hv);
+        Sv.binaryType = "arraybuffer", await new Promise((vv => {
+          const zv = Cv(hv, (() => {
+            Sv.close(), vv()
+          }), Nv.f);
+          Sv.addEventListener("open", (() => {
+            Sv.send(Nv.h)
+          })), Sv.addEventListener("close", (() => {
+            zv(), vv()
           }))
         }))
-      } catch (Wz) {
-        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", Wz)
+      } catch (Sv) {
+        console.warn("[bloxd-wasm-client] the held seat of a game left while it reconnected couldn't be released", Sv)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

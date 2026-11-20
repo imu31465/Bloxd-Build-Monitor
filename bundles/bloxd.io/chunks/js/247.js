@@ -1,624 +1,617 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  39402: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Oz,
-      g: () => oz
+  39407: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => ev
     });
-    var Fz = sz(38097),
-      Wz = sz(39181),
-      Xz = sz(39370),
-      Oz = {};
-    class oz {
-      constructor(zz) {
-        this.attachedToElement = !1, this.attached = {}, this.camera = zz, this.checkInputs = () => {}
+    var hv = Pv(38209),
+      Sv = Pv(36631);
+    class ev {
+      static Instantiate(vv) {
+        if (this.RegisteredExternalClasses && this.RegisteredExternalClasses[vv]) return this.RegisteredExternalClasses[vv];
+        const zv = (0, Sv.b)(vv);
+        if (zv) return zv;
+        hv.d.Warn(vv + " not found, you may have missed an import.");
+        const Pv = vv.split(".");
+        let ev = "undefined" !== typeof window ? window : "undefined" !== typeof globalThis ? globalThis : this;
+        for (let hv = 0, Sv = Pv.length; hv < Sv; hv++) ev = ev[Pv[hv]];
+        return "function" !== typeof ev ? null : ev
       }
-      add(zz) {
-        const tz = zz.getSimpleName();
-        this.attached[tz] ? Fz.e.Warn("camera input of type " + tz + " already exists on camera") : (this.attached[tz] = zz, zz.camera = this.camera, zz.checkInputs && (this.checkInputs = this._addCheckInputs(zz.checkInputs.bind(zz))), this.attachedToElement && zz.attachControl(this.noPreventDefault))
-      }
-      remove(zz) {
-        for (const tz in this.attached) {
-          const sz = this.attached[tz];
-          if (sz === zz) return sz.detachControl(), sz.camera = null, delete this.attached[tz], void this.rebuildInputCheck()
-        }
-      }
-      removeByType(zz) {
-        for (const tz in this.attached) {
-          const sz = this.attached[tz];
-          sz.getClassName() === zz && (sz.detachControl(), sz.camera = null, delete this.attached[tz], this.rebuildInputCheck())
-        }
-      }
-      _addCheckInputs(zz) {
-        const tz = this.checkInputs;
-        return () => {
-          tz(), zz()
-        }
-      }
-      attachInput(zz) {
-        this.attachedToElement && zz.attachControl(this.noPreventDefault)
-      }
-      attachElement() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!this.attachedToElement) {
-          zz = !Xz.b.ForceAttachControlToAlwaysPreventDefault && zz, this.attachedToElement = !0, this.noPreventDefault = zz;
-          for (const tz in this.attached) this.attached[tz].attachControl(zz)
-        }
-      }
-      detachElement() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        for (const tz in this.attached) this.attached[tz].detachControl(), zz && (this.attached[tz].camera = null);
-        this.attachedToElement = !1
-      }
-      rebuildInputCheck() {
-        this.checkInputs = () => {};
-        for (const zz in this.attached) {
-          const tz = this.attached[zz];
-          tz.checkInputs && (this.checkInputs = this._addCheckInputs(tz.checkInputs.bind(tz)))
-        }
-      }
-      clear() {
-        this.attachedToElement && this.detachElement(!0), this.attached = {}, this.attachedToElement = !1, this.checkInputs = () => {}
-      }
-      serialize(zz) {
-        const tz = {};
-        for (const sz in this.attached) {
-          const zz = this.attached[sz],
-            Fz = Wz.e.Serialize(zz);
-          tz[zz.getClassName()] = Fz
-        }
-        zz.inputsmgr = tz
-      }
-      parse(zz) {
-        const tz = zz.inputsmgr;
-        if (tz) {
-          this.clear();
-          for (const zz in tz) {
-            const sz = Oz[zz];
-            if (sz) {
-              const Fz = tz[zz],
-                Xz = Wz.e.Parse((() => new sz), Fz, null);
-              this.add(Xz)
-            }
-          }
-        } else
-          for (const sz in this.attached) {
-            const tz = Oz[this.attached[sz].getClassName()];
-            if (tz) {
-              const Fz = Wz.e.Parse((() => new tz), zz, null);
-              this.remove(this.attached[sz]), this.add(Fz)
-            }
-          }
+    }
+    ev.RegisteredExternalClasses = {}
+  },
+  39220: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => Sv
+    });
+    var hv = Pv(39167);
+    class Sv {
+      static get Now() {
+        return (0, hv.l)() && window.performance && window.performance.now ? window.performance.now() : Date.now()
       }
     }
   },
-  40216: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => Pz
-    });
-    var Fz = sz(39167),
-      Wz = sz(39170),
-      Xz = sz(39074),
-      Oz = sz(36475),
-      oz = sz(39163),
-      vz = sz(39617),
-      Uz = sz(36518),
-      Kz = sz(36505),
-      uz = sz(39181),
-      Nz = sz(39021),
-      bz = sz(38097),
-      wz = sz(39205),
-      Dz = sz(37333),
-      gz = sz(39245);
-    var Hz = sz(39077);
-    let Bz = !1;
-    let Pz = (() => {
-        var zz;
-        let tz, sz, Uz, Pz, rz, Yz, xz, mz, Jz, Iz = oz.b,
-          Cz = [],
-          ez = [],
-          Zz = [],
-          Gz = [],
-          Tz = [],
-          cz = [],
-          jz = [],
-          Az = [],
-          yz = [],
-          Mz = [],
-          dz = [],
-          hz = [],
-          Qz = [],
-          kz = [],
-          iz = [];
-        return zz = class extends Iz {
-          set boundingBoxSize(zz) {
-            if (this._boundingBoxSize && this._boundingBoxSize.equals(zz)) return;
-            this._boundingBoxSize = zz;
-            const tz = this.aJ();
-            tz && tz.markAllMaterialsAsDirty(1)
-          }
-          get boundingBoxSize() {
-            return this._boundingBoxSize
-          }
-          set rotationY(zz) {
-            this._rotationY = zz, this.setReflectionTextureMatrix(Oz.e.RotationY(this._rotationY))
-          }
-          get rotationY() {
-            return this._rotationY
-          }
-          get noMipmap() {
-            return this._noMipmap
-          }
-          get forcedExtension() {
-            return this._forcedExtension
-          }
-          constructor(zz, tz) {
-            let sz, Wz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              Xz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              oz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              Uz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              uz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-              Pz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 5,
-              rz = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-              Yz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : null,
-              xz = arguments.length > 10 && void 0 !== arguments[10] && arguments[10],
-              mz = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : .8,
-              Jz = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : 0,
-              Iz = arguments.length > 13 ? arguments[13] : void 0,
-              Lz = arguments.length > 14 ? arguments[14] : void 0;
-            super(tz), this._delayedOnLoad = (0, Fz.k)(this, Cz), this.onLoadObservable = new Kz.c, this.url = (0, Fz.k)(this, ez, void 0), this.boundingBoxPosition = ((0, Fz.k)(this, Zz), (0, Fz.k)(this, Gz, Oz.p.Zero())), this._boundingBoxSize = (0, Fz.k)(this, Tz), this._rotationY = 0, this._files = (0, Fz.k)(this, cz, null), this._forcedExtension = ((0, Fz.k)(this, jz), (0, Fz.k)(this, Az, null)), this._extensions = ((0, Fz.k)(this, yz), (0, Fz.k)(this, Mz, null)), this._textureMatrix = ((0, Fz.k)(this, dz), (0, Fz.k)(this, hz, void 0)), this._textureMatrixRefraction = ((0, Fz.k)(this, Qz), (0, Fz.k)(this, kz, new Oz.e)), this._format = (0, Fz.k)(this, iz), this._buffer = null, Bz || (Bz = !0, Hz.b.prototype._partialLoadFile = function(zz, tz, sz, Fz) {
-              let Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-              this._loadFile(zz, (zz => {
-                sz[tz] = zz, sz._internalCount++, 6 === sz._internalCount && Fz(sz)
-              }), void 0, void 0, !0, ((zz, tz) => {
-                Wz && zz && Wz(zz.status + " " + zz.statusText, tz)
-              }))
-            }, Hz.b.prototype._cascadeLoadFiles = function(zz, tz, sz) {
-              let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-              const Wz = [];
-              Wz._internalCount = 0;
-              for (let Xz = 0; Xz < 6; Xz++) this._partialLoadFile(sz[Xz], Xz, Wz, tz, Fz)
-            }, Hz.b.prototype._cascadeLoadImgs = function(zz, tz, sz, Fz) {
-              let Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                Xz = arguments.length > 5 ? arguments[5] : void 0;
-              const Oz = [];
-              Oz._internalCount = 0;
-              for (let oz = 0; oz < 6; oz++) this._partialLoadImg(Fz[oz], oz, Oz, zz, tz, sz, Wz, Xz)
-            }, Hz.b.prototype._partialLoadImg = function(zz, tz, sz, Fz, Wz, Xz) {
-              let Oz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
-                oz = arguments.length > 7 ? arguments[7] : void 0;
-              const vz = (0, Dz.d)();
-              (0, wz.p)(zz, (zz => {
-                sz[tz] = zz, sz._internalCount++, Fz && Fz.removePendingData(vz), 6 === sz._internalCount && Xz && Xz(Wz, sz)
-              }), ((zz, tz) => {
-                Fz && Fz.removePendingData(vz), Oz && Oz(zz, tz)
-              }), Fz ? Fz.offlineProvider : null, oz), Fz && Fz.addPendingData(vz)
-            }, Hz.b.prototype.createCubeTextureBase = function(zz, tz, sz, Fz) {
-              let Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-                Xz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-                Oz = arguments.length > 6 ? arguments[6] : void 0,
-                oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-                vz = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
-                Uz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-                Kz = arguments.length > 10 && void 0 !== arguments[10] ? arguments[10] : 0,
-                uz = arguments.length > 11 && void 0 !== arguments[11] ? arguments[11] : null,
-                wz = arguments.length > 12 && void 0 !== arguments[12] ? arguments[12] : null,
-                Dz = arguments.length > 13 && void 0 !== arguments[13] ? arguments[13] : null,
-                Hz = arguments.length > 14 && void 0 !== arguments[14] && arguments[14],
-                Bz = arguments.length > 15 && void 0 !== arguments[15] ? arguments[15] : null;
-              const Pz = uz || new Nz.d(this, 7);
-              Pz.isCube = !0, Pz.url = zz, Pz.generateMipMaps = !Fz, Pz._lodGenerationScale = Uz, Pz._lodGenerationOffset = Kz, Pz._useSRGBBuffer = !!Hz && this._caps.supportSRGBBuffers && (this.version > 1 || this.isWebGPU || !!Fz), Pz !== uz && (Pz.label = zz.substring(0, 60)), this._doNotHandleContextLost || (Pz._extension = oz, Pz._files = sz, Pz._buffer = Bz);
-              const rz = zz;
-              this._transformTextureUrl && !uz && (zz = this._transformTextureUrl(zz));
-              const Yz = oz ?? function(zz) {
-                  const tz = zz.split("?")[0],
-                    sz = tz.lastIndexOf(".");
-                  return sz > -1 ? tz.substring(sz).toLowerCase() : ""
-                }(zz),
-                xz = (0, gz.e)(Yz),
-                mz = (zz, tz) => {
-                  Pz.dispose(), Xz ? Xz(zz, tz) : zz && bz.e.Warn(zz)
-                },
-                Jz = (Xz, uz) => {
-                  zz === rz ? Xz && mz(Xz.status + " " + Xz.statusText, uz) : (bz.e.Warn(`Failed to load ${zz}, falling back to the ${rz}`), this.createCubeTextureBase(rz, tz, sz, !!Fz, Wz, mz, Oz, oz, vz, Uz, Kz, Pz, wz, Dz, Hz, Bz))
-                };
-              if (xz) xz.then((Fz => {
-                const Xz = zz => {
-                  wz && wz(Pz, zz), Fz.loadCubeData(zz, Pz, vz, Wz, ((zz, tz) => {
-                    mz(zz, tz)
-                  }))
-                };
-                Bz ? Xz(Bz) : sz && 6 === sz.length ? Fz.supportCascades ? this._cascadeLoadFiles(tz, (zz => Xz(zz.map((zz => new Uint8Array(zz))))), sz, mz) : mz("Textures type does not support cascades.") : this._loadFile(zz, (zz => Xz(new Uint8Array(zz))), void 0, tz ? tz.offlineProvider || null : void 0, !0, Jz)
-              }));
-              else {
-                if (!sz || 0 === sz.length) throw new Error("Cannot load cubemap because files were not defined, or the correct loader was not found.");
-                this._cascadeLoadImgs(tz, Pz, ((zz, tz) => {
-                  Dz && Dz(zz, tz)
-                }), sz, mz)
-              }
-              return this._internalTexturesCache.push(Pz), Pz
-            }), this.name = zz, this.url = zz, this._noMipmap = Xz, this.hasAlpha = !1, this.isCube = !0, this._textureMatrix = Oz.e.Identity(), this.coordinatesMode = vz.g.CUBIC_MODE;
-            let lz = null;
-            null === Wz || Array.isArray(Wz) ? (this._noMipmap = Xz, this._format = Pz, this._createPolynomials = xz, sz = Wz, this._loaderOptions = Iz, this._useSRGBBuffer = Lz, this._lodScale = mz, this._lodOffset = Jz) : (sz = Wz.extensions ?? null, this._noMipmap = Wz.noMipmap ?? !1, oz = Wz.files ?? null, lz = Wz.buffer ?? null, this._format = Wz.format ?? 5, rz = Wz.prefiltered ?? !1, Yz = Wz.forcedExtension ?? null, this._createPolynomials = Wz.createPolynomials ?? !1, this._lodScale = Wz.lodScale ?? .8, this._lodOffset = Wz.lodOffset ?? 0, this._loaderOptions = Wz.loaderOptions, this._useSRGBBuffer = Wz.useSRGBBuffer, this._sphericalPolynomialTargetSize = Wz.sphericalPolynomialTargetSize ?? 0, Uz = Wz.onLoad ?? null, uz = Wz.onError ?? null), (zz || oz) && this.updateURL(zz, Yz, Uz, rz, uz, sz, this.aJ()?.useDelayedTextureLoading, oz, lz)
-          }
-          getClassName() {
-            return "CubeTexture"
-          }
-          updateURL(zz) {
-            let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-              sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-              Fz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-              Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null,
-              Xz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
-              Oz = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-              oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-              vz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null;
-            this.name && !this.name.startsWith("data:") || (this.name = zz), this.url = zz, tz && (this._forcedExtension = tz);
-            const Uz = zz.lastIndexOf("."),
-              Kz = tz || (Uz > -1 ? zz.substring(Uz).toLowerCase() : ""),
-              uz = 0 === Kz.indexOf(".dds"),
-              Nz = 0 === Kz.indexOf(".env"),
-              bz = 0 === Kz.indexOf(".basis");
-            if (Nz ? (this.gammaSpace = !1, this._prefiltered = !1, this.anisotropicFilteringLevel = 1) : (this._prefiltered = Fz, Fz && (this.gammaSpace = !1, this.anisotropicFilteringLevel = 1)), oz) this._files = oz;
-            else if (bz || Nz || uz || Xz || (Xz = ["_px.jpg", "_py.jpg", "_pz.jpg", "_nx.jpg", "_ny.jpg", "_nz.jpg"]), this._files = this._files || [], this._files.length = 0, Xz) {
-              for (let tz = 0; tz < Xz.length; tz++) this._files.push(zz + Xz[tz]);
-              this._extensions = Xz
-            }
-            this._buffer = vz, Oz ? (this.delayLoadState = 4, this._delayedOnLoad = sz, this._delayedOnError = Wz) : this._loadTexture(sz, Wz)
-          }
-          delayLoad(zz) {
-            4 === this.delayLoadState && (zz && (this._forcedExtension = zz), this.delayLoadState = 1, this._loadTexture(this._delayedOnLoad, this._delayedOnError))
-          }
-          getReflectionTextureMatrix() {
-            return this._textureMatrix
-          }
-          setReflectionTextureMatrix(zz) {
-            if (zz.updateFlag === this._textureMatrix.updateFlag) return;
-            if (zz.isIdentity() !== this._textureMatrix.isIdentity() && this.aJ()?.markAllMaterialsAsDirty(1, (zz => -1 !== zz.getActiveTextures().indexOf(this))), this._textureMatrix = zz, !this.aJ()?.useRightHandedSystem) return;
-            const tz = Oz.m.XD[0],
-              sz = Oz.m.Quaternion[0],
-              Fz = Oz.m.XD[1];
-            this._textureMatrix.decompose(tz, sz, Fz), sz.z *= -1, sz.w *= -1, Oz.e.ComposeToRef(tz, sz, Fz, this._textureMatrixRefraction)
-          }
-          getRefractionTextureMatrix() {
-            return this.aJ()?.useRightHandedSystem ? this._textureMatrixRefraction : this._textureMatrix
-          }
-          _loadTexture() {
-            let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-              tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-            const sz = this.aJ(),
-              Fz = this._texture;
-            this._texture = this._getFromCache(this.url, this._noMipmap, void 0, void 0, this._useSRGBBuffer, this.isCube);
-            const Wz = () => {
-                this.onLoadObservable.notifyObservers(this), Fz && (Fz.dispose(), this.aJ()?.markAllMaterialsAsDirty(1)), zz && zz()
-              },
-              Oz = (zz, sz) => {
-                this._loadingError = !0, this._errorObject = {
-                  message: zz,
-                  exception: sz
-                }, tz && tz(zz, sz), vz.g.OnTextureLoadErrorObservable.notifyObservers(this)
-              };
-            this._texture ? this._texture.isReady ? Xz.b.SetImmediate((() => Wz())) : this._texture.onLoadedObservable.add((() => Wz())) : (this._prefiltered ? this._texture = this._getEngine().createPrefilteredCubeTexture(this.url, sz, this._lodScale, this._lodOffset, zz, Oz, this._format, this._forcedExtension, this._createPolynomials, this._buffer) : this._texture = this._getEngine().createCubeTexture(this.url, sz, this._files, this._noMipmap, zz, Oz, this._format, this._forcedExtension, !1, this._lodScale, this._lodOffset, null, this._loaderOptions, !!this._useSRGBBuffer, this._buffer), this._texture?.onLoadedObservable.add((() => this.onLoadObservable.notifyObservers(this))))
-          }
-          clone() {
-            let tz = 0;
-            const sz = this.irradianceTexture,
-              Fz = uz.e.Clone((() => {
-                const sz = new zz(this.url, this.aJ() || this._getEngine(), this._extensions, this._noMipmap, this._files);
-                return tz = sz.uniqueId, sz
-              }), this);
-            return Fz.uniqueId = tz, sz && !this.irradianceTexture && (this.irradianceTexture = sz), Fz
-          }
-        }, (() => {
-          const Xz = "function" === typeof Symbol && Symbol.metadata ? Object.create(Iz[Symbol.metadata] ?? null) : void 0;
-          tz = [(0, Wz.J)()], sz = [(0, Wz.H)()], Uz = [(0, Wz.H)()], Pz = [(0, Wz.J)("rotationY")], rz = [(0, Wz.J)("files")], Yz = [(0, Wz.J)("forcedExtension")], xz = [(0, Wz.J)("extensions")], mz = [(0, Wz.w)("textureMatrix")], Jz = [(0, Wz.w)("textureMatrixRefraction")], (0, Fz.h)(zz, null, Uz, {
-            kind: "getter",
-            name: "boundingBoxSize",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "boundingBoxSize" in zz,
-              get: zz => zz.boundingBoxSize
-            },
-            metadata: Xz
-          }, null, Cz), (0, Fz.h)(zz, null, Pz, {
-            kind: "setter",
-            name: "rotationY",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "rotationY" in zz,
-              set: (zz, tz) => {
-                zz.rotationY = tz
-              }
-            },
-            metadata: Xz
-          }, null, Cz), (0, Fz.h)(null, null, tz, {
-            kind: "field",
-            name: "url",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "url" in zz,
-              get: zz => zz.url,
-              set: (zz, tz) => {
-                zz.url = tz
-              }
-            },
-            metadata: Xz
-          }, ez, Zz), (0, Fz.h)(null, null, sz, {
-            kind: "field",
-            name: "boundingBoxPosition",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "boundingBoxPosition" in zz,
-              get: zz => zz.boundingBoxPosition,
-              set: (zz, tz) => {
-                zz.boundingBoxPosition = tz
-              }
-            },
-            metadata: Xz
-          }, Gz, Tz), (0, Fz.h)(null, null, rz, {
-            kind: "field",
-            name: "_files",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "_files" in zz,
-              get: zz => zz._files,
-              set: (zz, tz) => {
-                zz._files = tz
-              }
-            },
-            metadata: Xz
-          }, cz, jz), (0, Fz.h)(null, null, Yz, {
-            kind: "field",
-            name: "_forcedExtension",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "_forcedExtension" in zz,
-              get: zz => zz._forcedExtension,
-              set: (zz, tz) => {
-                zz._forcedExtension = tz
-              }
-            },
-            metadata: Xz
-          }, Az, yz), (0, Fz.h)(null, null, xz, {
-            kind: "field",
-            name: "_extensions",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "_extensions" in zz,
-              get: zz => zz._extensions,
-              set: (zz, tz) => {
-                zz._extensions = tz
-              }
-            },
-            metadata: Xz
-          }, Mz, dz), (0, Fz.h)(null, null, mz, {
-            kind: "field",
-            name: "_textureMatrix",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "_textureMatrix" in zz,
-              get: zz => zz._textureMatrix,
-              set: (zz, tz) => {
-                zz._textureMatrix = tz
-              }
-            },
-            metadata: Xz
-          }, hz, Qz), (0, Fz.h)(null, null, Jz, {
-            kind: "field",
-            name: "_textureMatrixRefraction",
-            static: !1,
-            private: !1,
-            access: {
-              has: zz => "_textureMatrixRefraction" in zz,
-              get: zz => zz._textureMatrixRefraction,
-              set: (zz, tz) => {
-                zz._textureMatrixRefraction = tz
-              }
-            },
-            metadata: Xz
-          }, kz, iz), Xz && Object.defineProperty(zz, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: Xz
-          })
-        })(), zz
-      })(),
-      rz = !1;
-
-    function Yz(zz, tz, sz) {
-      let Fz = "";
-      for (const Wz of zz) Fz += Wz;
-      return new Pz(Fz, tz, null, sz, zz)
+  39247: (vv, zv, Pv) => {
+    function hv(vv) {
+      let zv = 1;
+      do {
+        zv *= 2
+      } while (zv < vv);
+      return zv === vv
     }
 
-    function xz(zz, tz) {
-      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-        Fz = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const Wz = tz.useDelayedTextureLoading;
-      tz.useDelayedTextureLoading = !1;
-      const Xz = new Pz(zz, tz, null, !1, null, null, null, void 0, !0, sz, Fz);
-      return tz.useDelayedTextureLoading = Wz, Xz
+    function Sv(vv, zv, Pv) {
+      return vv * (1 - Pv) + zv * Pv
     }
 
-    function mz(zz, tz, sz) {
-      const Fz = uz.e.Parse((() => {
-        let Fz = !1;
-        return zz.prefiltered && (Fz = zz.prefiltered), new Pz(sz + (zz.url ?? zz.name), tz, zz.extensions, !1, zz.files || null, null, null, void 0, Fz, zz.forcedExtension)
-      }), zz, tz);
-      if (zz.boundingBoxPosition && (Fz.boundingBoxPosition = Oz.p.FromArray(zz.boundingBoxPosition)), zz.boundingBoxSize && (Fz.boundingBoxSize = Oz.p.FromArray(zz.boundingBoxSize)), zz.animations)
-        for (let Wz = 0; Wz < zz.animations.length; Wz++) {
-          const tz = zz.animations[Wz],
-            sz = (0, Uz.e)("BABYLON.Animation");
-          sz && Fz.animations.push(sz.Parse(tz))
-        }
-      return Fz
+    function ev(vv) {
+      const zv = gv(vv),
+        Pv = pv(vv);
+      return zv - vv > vv - Pv ? Pv : zv
     }
-    rz || (rz = !0, Pz.CreateFromImages = Yz, Pz.CreateFromPrefilteredData = xz, Pz.Parse = mz, vz.g._CubeTextureParser = mz, (0, Uz.g)("BABYLON.CubeTexture", Pz))
+
+    function gv(vv) {
+      return vv--, vv |= vv >> 1, vv |= vv >> 2, vv |= vv >> 4, vv |= vv >> 8, vv |= vv >> 16, ++vv
+    }
+
+    function pv(vv) {
+      return vv |= vv >> 1, vv |= vv >> 2, vv |= vv >> 4, vv |= vv >> 8, (vv |= vv >> 16) - (vv >> 1)
+    }
+
+    function dv(vv, zv) {
+      let Pv;
+      switch (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 2) {
+        case 1:
+          Pv = pv(vv);
+          break;
+        case 2:
+          Pv = ev(vv);
+          break;
+        default:
+          Pv = gv(vv)
+      }
+      return Math.min(Pv, zv)
+    }
+    Pv.d(zv, {
+      b: () => pv,
+      c: () => dv,
+      e: () => hv,
+      f: () => Sv,
+      i: () => ev
+    })
   },
-  40253: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Uz
+  39399: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => Gv,
+      e: () => jv,
+      h: () => iv,
+      i: () => cv
     });
-    var Fz = sz(38097),
-      Wz = sz(39617),
-      Xz = sz(39111),
-      Oz = sz(39031),
-      oz = sz(39021);
-    let vz = !1;
-    class Uz extends Wz.g {
-      constructor(zz, tz, sz) {
-        let Fz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-          Uz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3,
-          Kz = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 5,
-          uz = arguments.length > 6 ? arguments[6] : void 0;
-        const Nz = !sz || sz._isScene;
-        super(null, Nz ? sz : sz?.Kg, Nz ? !Fz : sz, uz, Uz, void 0, void 0, void 0, void 0, Kz), vz || (vz = !0, Oz.ThinEngine.prototype.createDynamicTexture = function(zz, tz, sz, Fz) {
-          const Wz = new oz.d(this, 4);
-          return Wz.baseWidth = zz, Wz.baseHeight = tz, sz && (zz = this.needPOTTextures ? (0, Xz.e)(zz, this._caps.maxTextureSize) : zz, tz = this.needPOTTextures ? (0, Xz.e)(tz, this._caps.maxTextureSize) : tz), Wz.width = zz, Wz.height = tz, Wz.isReady = !1, Wz.generateMipMaps = sz, Wz.samplingMode = Fz, this.updateTextureSamplingMode(Fz, Wz), this._internalTexturesCache.push(Wz), Wz
-        }, Oz.ThinEngine.prototype.updateDynamicTexture = function(zz, tz, sz) {
-          let Fz = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            Wz = arguments.length > 4 ? arguments[4] : void 0,
-            Xz = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-          if (!zz) return;
-          const Oz = this._gl,
-            oz = Oz.TEXTURE_2D,
-            vz = this._bindTextureDirectly(oz, zz, !0, Xz);
-          this._unpackFlipY(void 0 === sz ? zz.invertY : sz), Fz && Oz.pixelStorei(Oz.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 1);
-          const Uz = this._getWebGLTextureType(zz.type),
-            Kz = this._getInternalFormat(Wz || zz.format),
-            uz = this._getRGBABufferInternalSizedFormat(zz.type, Kz);
-          Oz.texImage2D(oz, 0, uz, Kz, Uz, tz), zz.generateMipMaps && Oz.generateMipmap(oz), vz || this._bindTextureDirectly(oz, null), Fz && Oz.pixelStorei(Oz.UNPACK_PREMULTIPLY_ALPHA_WEBGL, 0), Wz && (zz.format = Wz), zz._dynamicTextureSource = tz, zz._premulAlpha = Fz, zz.invertY = sz || !1, zz.isReady = !0
-        }), this.name = zz, this.wrapU = Wz.g.CLAMP_ADDRESSMODE, this.wrapV = Wz.g.CLAMP_ADDRESSMODE, this._generateMipMaps = Fz;
-        const bz = this._getEngine();
-        if (!bz) return;
-        if (tz.getContext) this._canvas = tz, this._ownCanvas = !1, this._texture = bz.createDynamicTexture(this._canvas.width, this._canvas.height, Fz, Uz);
-        else {
-          this._canvas = bz.createCanvas(1, 1), this._ownCanvas = !0;
-          const zz = tz;
-          zz.width || 0 === zz.width ? this._texture = bz.createDynamicTexture(zz.width, zz.height, Fz, Uz) : this._texture = bz.createDynamicTexture(tz, tz, Fz, Uz)
-        }
-        const wz = this.getSize();
-        this._canvas.width !== wz.width && (this._canvas.width = wz.width), this._canvas.height !== wz.height && (this._canvas.height = wz.height), this._context = this._canvas.getContext("2d")
+    var hv, Sv = Pv(36618),
+      ev = Pv(39167),
+      gv = Pv(38209),
+      pv = Pv(38207),
+      dv = Pv(39220),
+      Nv = Pv(39190),
+      lv = Pv(39346),
+      Tv = Pv(36615),
+      Wv = Pv(39338),
+      wv = Pv(39204),
+      av = Pv(39407),
+      sv = Pv(37431),
+      Cv = Pv(39247);
+    class iv {
+      static get BaseUrl() {
+        return Wv.f.BaseUrl
       }
-      getClassName() {
-        return "DynamicTexture"
+      static set BaseUrl(vv) {
+        Wv.f.BaseUrl = vv
       }
-      get canRescale() {
+      static get CleanUrl() {
+        return Wv.f.CleanUrl
+      }
+      static set CleanUrl(vv) {
+        Wv.f.CleanUrl = vv
+      }
+      static IsAbsoluteUrl(vv) {
+        return 0 === vv.indexOf("//") || -1 !== vv.indexOf("://") && (-1 !== vv.indexOf(".") && (-1 !== vv.indexOf("/") && (!(vv.indexOf(":") > vv.indexOf("/")) && (vv.indexOf("://") < vv.indexOf(".") || (0 === vv.indexOf("data:") || 0 === vv.indexOf("blob:"))))))
+      }
+      static set ScriptBaseUrl(vv) {
+        Wv.f.ScriptBaseUrl = vv
+      }
+      static get ScriptBaseUrl() {
+        return Wv.f.ScriptBaseUrl
+      }
+      static set CDNBaseUrl(vv) {
+        hv.ScriptBaseUrl = vv, hv.AssetBaseUrl = vv
+      }
+      static set ScriptPreprocessUrl(vv) {
+        Wv.f.ScriptPreprocessUrl = vv
+      }
+      static get ScriptPreprocessUrl() {
+        return Wv.f.ScriptPreprocessUrl
+      }
+      static get DefaultRetryStrategy() {
+        return Wv.f.DefaultRetryStrategy
+      }
+      static set DefaultRetryStrategy(vv) {
+        Wv.f.DefaultRetryStrategy = vv
+      }
+      static get CorsBehavior() {
+        return Wv.f.CorsBehavior
+      }
+      static set CorsBehavior(vv) {
+        Wv.f.CorsBehavior = vv
+      }
+      static get UseFallbackTexture() {
+        return Tv.e.UseFallbackTexture
+      }
+      static set UseFallbackTexture(vv) {
+        Tv.e.UseFallbackTexture = vv
+      }
+      static get RegisteredExternalClasses() {
+        return av.b.RegisteredExternalClasses
+      }
+      static set RegisteredExternalClasses(vv) {
+        av.b.RegisteredExternalClasses = vv
+      }
+      static get fallbackTexture() {
+        return Tv.e.FallbackTexture
+      }
+      static set fallbackTexture(vv) {
+        Tv.e.FallbackTexture = vv
+      }
+      static FetchToRef(vv, zv, Pv, hv, Sv, ev) {
+        const gv = 4 * ((Math.abs(vv) * Pv % Pv | 0) + (Math.abs(zv) * hv % hv | 0) * Pv);
+        ev.r = Sv[gv] / 255, ev.g = Sv[gv + 1] / 255, ev.b = Sv[gv + 2] / 255, ev.a = Sv[gv + 3] / 255
+      }
+      static Mix(vv, zv, Pv) {
+        return 0
+      }
+      static Instantiate(vv) {
+        return av.b.Instantiate(vv)
+      }
+      static SetImmediate(vv) {
+        wv.e.SetImmediate(vv)
+      }
+      static IsExponentOfTwo(vv) {
         return !0
       }
-      _recreate(zz) {
-        this._canvas.width = zz.width, this._canvas.height = zz.height, this.releaseInternalTexture(), this._texture = this._getEngine().createDynamicTexture(zz.width, zz.height, this._generateMipMaps, this.samplingMode)
+      static FloatRound(vv) {
+        return Math.fround(vv)
       }
-      scale(zz) {
-        const tz = this.getSize();
-        tz.width *= zz, tz.height *= zz, this._recreate(tz)
+      static GetFilename(vv) {
+        const zv = vv.lastIndexOf("/");
+        return zv < 0 ? vv : vv.substring(zv + 1)
       }
-      scaleTo(zz, tz) {
-        const sz = this.getSize();
-        sz.width = zz, sz.height = tz, this._recreate(sz)
+      static GetFolderPath(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Pv = vv.lastIndexOf("/");
+        return Pv < 0 ? zv ? vv : "" : vv.substring(0, Pv + 1)
       }
-      getContext() {
-        return this._context
+      static ToDegrees(vv) {
+        return 180 * vv / Math.PI
       }
-      clear(zz) {
-        const tz = this.getSize();
-        zz && (this._context.fillStyle = zz), this._context.clearRect(0, 0, tz.width, tz.height)
+      static ToRadians(vv) {
+        return vv * Math.PI / 180
       }
-      update(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this._texture && this._getEngine().updateDynamicTexture(this._texture, this._canvas, void 0 === zz || zz, tz, this._format || void 0, void 0, sz)
+      static SmoothAngleChange(vv, zv) {
+        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .9;
+        const hv = this.ToRadians(vv),
+          Sv = this.ToRadians(zv);
+        return this.ToDegrees(Math.atan2((1 - Pv) * Math.sin(Sv) + Pv * Math.sin(hv), (1 - Pv) * Math.cos(Sv) + Pv * Math.cos(hv)))
       }
-      drawText(zz, tz, sz, Fz, Wz, Xz, Oz) {
-        let oz = !(arguments.length > 7 && void 0 !== arguments[7]) || arguments[7];
-        const vz = this.getSize();
-        if (Xz && (this._context.fillStyle = Xz, this._context.fillRect(0, 0, vz.width, vz.height)), this._context.font = Fz, null === tz || void 0 === tz) {
-          const sz = this._context.measureText(zz);
-          tz = (vz.width - sz.width) / 2
+      static MakeArray(vv, zv) {
+        return !0 === zv || void 0 !== vv && null != vv ? Array.isArray(vv) ? vv : [vv] : null
+      }
+      static GetPointerPrefix(vv) {
+        return (0, ev.l)() && !window.PointerEvent ? "mouse" : "pointer"
+      }
+      static SetCorsBehavior(vv, zv) {
+        (0, Wv.C)(vv, zv)
+      }
+      static SetReferrerPolicyBehavior(vv, zv) {
+        zv.referrerPolicy = vv
+      }
+      static get PreprocessUrl() {
+        return Wv.f.PreprocessUrl
+      }
+      static set PreprocessUrl(vv) {
+        Wv.f.PreprocessUrl = vv
+      }
+      static LoadImage(vv, zv, Pv, hv, Sv, ev) {
+        return (0, Wv.n)(vv, zv, Pv, hv, Sv, ev)
+      }
+      static LoadFile(vv, zv, Pv, hv, Sv, ev) {
+        return (0, Wv.l)(vv, zv, Pv, hv, Sv, ev)
+      }
+      static async LoadFileAsync(vv) {
+        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return await new Promise(((Pv, hv) => {
+          (0, Wv.l)(vv, (vv => {
+            Pv(vv)
+          }), void 0, void 0, zv, ((vv, zv) => {
+            hv(zv)
+          }))
+        }))
+      }
+      static GetAssetUrl(vv) {
+        if (!vv) return "";
+        if (hv.AssetBaseUrl && vv.startsWith(hv._DefaultAssetsUrl)) {
+          const zv = hv.AssetBaseUrl.endsWith("/") ? hv.AssetBaseUrl.slice(0, -1) : hv.AssetBaseUrl;
+          return vv.replace(hv._DefaultAssetsUrl, zv)
         }
-        if (null === sz || void 0 === sz) {
-          const zz = parseInt(Fz.replace(/\D/g, ""));
-          sz = vz.height / 2 + zz / 3.65
+        return vv
+      }
+      static GetBabylonScriptURL(vv, zv) {
+        if (!vv) return "";
+        if (vv.startsWith(hv._DefaultCdnUrl))
+          if (hv.ScriptBaseUrl) {
+            const zv = hv.ScriptBaseUrl.endsWith("/") ? hv.ScriptBaseUrl.slice(0, -1) : hv.ScriptBaseUrl;
+            vv = vv.replace(hv._DefaultCdnUrl, zv)
+          } else if (hv._CdnVersion) {
+          const zv = `${hv._DefaultCdnUrl}/v${hv._CdnVersion}`;
+          vv.startsWith(zv) || (vv = vv.replace(hv._DefaultCdnUrl, zv))
         }
-        this._context.fillStyle = Wz || "", this._context.fillText(zz, tz, sz), oz && this.update(Oz)
+        return vv = hv.ScriptPreprocessUrl(vv), zv && !hv.IsAbsoluteUrl(vv) && (vv = hv.GetAbsoluteUrl(vv)), vv
       }
-      dispose() {
-        super.dispose(), this._ownCanvas && this._canvas?.remove?.(), this._canvas = null, this._context = null
+      static LoadBabylonScript(vv, zv, Pv, Sv) {
+        vv = hv.GetBabylonScriptURL(vv), hv.LoadScript(vv, zv, Pv)
       }
-      clone() {
-        const zz = this.aJ();
-        if (!zz) return this;
-        const tz = this.getSize(),
-          sz = new Uz(this.name, tz, zz, this._generateMipMaps);
-        return sz.hasAlpha = this.hasAlpha, sz.level = this.level, sz.wrapU = this.wrapU, sz.wrapV = this.wrapV, sz
+      static async LoadBabylonScriptAsync(vv) {
+        return vv = hv.GetBabylonScriptURL(vv), await hv.LoadScriptAsync(vv)
       }
-      serialize() {
-        const zz = this.aJ();
-        zz && !zz.isReady() && Fz.e.Warn("The scene must be ready before serializing the dynamic texture");
-        const tz = super.serialize();
-        return Uz._IsCanvasElement(this._canvas) && (tz.base64String = this._canvas.toDataURL()), tz.invertY = this._invertY, tz.samplingMode = this.samplingMode, tz
+      static _LoadScriptNative(vv, zv, Pv, Sv) {
+        if (_native) {
+          if (arguments.length > 4 && void 0 !== arguments[4] && arguments[4]) {
+            const vv = "Loading a script as an ES module is not supported in Babylon Native";
+            return void Pv?.(vv, new Error(vv))
+          }
+          hv.LoadFile(vv, (vv => {
+            try {
+              Function(vv).apply(null), zv && zv()
+            } catch (hv) {
+              Pv && Pv("LoadScript Error", hv)
+            }
+          }), void 0, void 0, !1, ((vv, zv) => {
+            Pv && Pv("LoadScript Error", zv)
+          }))
+        }
       }
-      static _IsCanvasElement(zz) {
-        return void 0 !== zz.toDataURL
+      static _LoadScriptWeb(vv, zv, Pv, hv) {
+        let Sv = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if ("function" === typeof importScripts) {
+          try {
+            importScripts(vv), zv && zv()
+          } catch (dv) {
+            Pv?.(`Unable to load script '${vv}' in worker`, dv)
+          }
+          return
+        }
+        if (!(0, ev.l)()) return void Pv?.(`Cannot load script '${vv}' outside of a window or a worker`);
+        const gv = document.getElementsByTagName("head")[0],
+          pv = document.createElement("script");
+        Sv ? (pv.setAttribute("type", "module"), pv.innerText = vv) : (pv.setAttribute("type", "text/javascript"), pv.setAttribute("src", vv)), hv && (pv.id = hv), pv.onload = () => {
+          zv && zv()
+        }, pv.onerror = zv => {
+          Pv && Pv(`Unable to load script '${vv}'`, zv)
+        }, gv.appendChild(pv)
       }
-      _rebuild() {
-        this.update()
+      static async LoadScriptAsync(vv, zv) {
+        return await new Promise(((Pv, hv) => {
+          this.LoadScript(vv, (() => {
+            Pv()
+          }), ((vv, zv) => {
+            hv(zv || new Error(vv))
+          }), zv)
+        }))
+      }
+      static ReadFileAsDataURL(vv, zv, Pv) {
+        const hv = new FileReader,
+          ev = {
+            onCompleteObservable: new Sv.c,
+            abort: () => hv.abort()
+          };
+        return hv.onloadend = () => {
+          ev.onCompleteObservable.notifyObservers(ev)
+        }, hv.onload = vv => {
+          zv(vv.target.result)
+        }, hv.onprogress = Pv, hv.readAsDataURL(vv), ev
+      }
+      static ReadFile(vv, zv, Pv, hv, Sv) {
+        return (0, Wv.r)(vv, zv, Pv, hv, Sv)
+      }
+      static FileAsURL(vv) {
+        const zv = new Blob([vv]);
+        return window.URL.createObjectURL(zv)
+      }
+      static Format(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+        return vv.toFixed(zv)
+      }
+      static DeepCopy(vv, zv, Pv, hv) {
+        pv.b.DeepCopy(vv, zv, Pv, hv)
+      }
+      static IsEmpty(vv) {
+        for (const zv in vv)
+          if (Object.prototype.hasOwnProperty.call(vv, zv)) return !1;
+        return !0
+      }
+      static RegisterTopRootEvents(vv, zv) {
+        for (let hv = 0; hv < zv.length; hv++) {
+          const Sv = zv[hv];
+          vv.addEventListener(Sv.name, Sv.handler, !1);
+          try {
+            window.parent && window.parent.addEventListener(Sv.name, Sv.handler, !1)
+          } catch (Pv) {}
+        }
+      }
+      static UnregisterTopRootEvents(vv, zv) {
+        for (let hv = 0; hv < zv.length; hv++) {
+          const Sv = zv[hv];
+          vv.removeEventListener(Sv.name, Sv.handler);
+          try {
+            vv.parent && vv.parent.removeEventListener(Sv.name, Sv.handler)
+          } catch (Pv) {}
+        }
+      }
+      static async DumpFramebuffer(vv, zv, Pv, hv) {
+        throw (0, Nv.m)("DumpTools")
+      }
+      static DumpData(vv, zv, Pv, hv) {
+        throw (0, Nv.m)("DumpTools")
+      }
+      static async DumpDataAsync(vv, zv, Pv) {
+        throw (0, Nv.m)("DumpTools")
+      }
+      static _IsOffScreenCanvas(vv) {
+        return void 0 !== vv.convertToBlob
+      }
+      static ToBlob(vv, zv) {
+        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          Sv = arguments.length > 3 ? arguments[3] : void 0;
+        hv._IsOffScreenCanvas(vv) || vv.toBlob || (vv.toBlob = function(vv, zv, Pv) {
+          setTimeout((() => {
+            const hv = atob(this.toDataURL(zv, Pv).split(",")[1]),
+              Sv = hv.length,
+              ev = new Uint8Array(Sv);
+            for (let vv = 0; vv < Sv; vv++) ev[vv] = hv.charCodeAt(vv);
+            vv(new Blob([ev]))
+          }))
+        }), hv._IsOffScreenCanvas(vv) ? vv.convertToBlob({
+          type: Pv,
+          quality: Sv
+        }).then((vv => zv(vv))) : vv.toBlob((function(vv) {
+          zv(vv)
+        }), Pv, Sv)
+      }
+      static DownloadBlob(vv, zv) {
+        if ("download" in document.createElement("a")) {
+          if (!zv) {
+            const vv = new Date;
+            zv = "screenshot_" + ((vv.getFullYear() + "-" + (vv.getMonth() + 1)).slice(2) + "-" + vv.getDate() + "_" + vv.getHours() + "-" + ("0" + vv.getMinutes()).slice(-2)) + ".png"
+          }
+          hv.Download(vv, zv)
+        } else if (vv && "undefined" !== typeof URL) {
+          const zv = URL.createObjectURL(vv),
+            Pv = window.open("");
+          if (!Pv) return;
+          const hv = Pv.document.createElement("img");
+          hv.onload = function() {
+            URL.revokeObjectURL(zv)
+          }, hv.src = zv, Pv.document.body.appendChild(hv)
+        }
+      }
+      static EncodeScreenshotCanvasData(vv, zv) {
+        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "image/png",
+          Sv = arguments.length > 3 ? arguments[3] : void 0,
+          ev = arguments.length > 4 ? arguments[4] : void 0;
+        if ("string" !== typeof Sv && zv) {
+          if (zv) {
+            if (hv._IsOffScreenCanvas(vv)) return void vv.convertToBlob({
+              type: Pv,
+              quality: ev
+            }).then((vv => {
+              const Pv = new FileReader;
+              Pv.readAsDataURL(vv), Pv.onloadend = () => {
+                const vv = Pv.result;
+                zv(vv)
+              }
+            }));
+            const Sv = vv.toDataURL(Pv, ev);
+            zv(Sv)
+          }
+        } else this.ToBlob(vv, (function(vv) {
+          vv && hv.DownloadBlob(vv, Sv), zv && zv("")
+        }), Pv, ev)
+      }
+      static Download(vv, zv) {
+        if ("undefined" === typeof URL) return;
+        const Pv = window.URL.createObjectURL(vv),
+          hv = document.createElement("a");
+        document.body.appendChild(hv), hv.style.display = "none", hv.href = Pv, hv.download = zv, hv.addEventListener("click", (() => {
+          hv.parentElement && hv.parentElement.removeChild(hv)
+        })), hv.click(), window.URL.revokeObjectURL(Pv)
+      }
+      static BackCompatCameraNoPreventDefault(vv) {
+        return "boolean" === typeof vv[0] ? vv[0] : "boolean" === typeof vv[1] && vv[1]
+      }
+      static CreateScreenshot(vv, zv, Pv, hv) {
+        throw (0, Nv.m)("ScreenshotTools")
+      }
+      static async CreateScreenshotAsync(vv, zv, Pv) {
+        throw (0, Nv.m)("ScreenshotTools")
+      }
+      static CreateScreenshotUsingRenderTarget(vv, zv, Pv, hv) {
+        throw (0, Nv.m)("ScreenshotTools")
+      }
+      static async CreateScreenshotUsingRenderTargetAsync(vv, zv, Pv) {
+        throw (0, Nv.m)("ScreenshotTools")
+      }
+      static RandomId() {
+        return (0, sv.b)()
+      }
+      static IsBase64(vv) {
+        return (0, Wv.k)(vv)
+      }
+      static DecodeBase64(vv) {
+        return (0, Wv.e)(vv)
+      }
+      static get errorsCount() {
+        return gv.d.errorsCount
+      }
+      static Log(vv) {
+        gv.d.Log(vv)
+      }
+      static Warn(vv) {
+        gv.d.Warn(vv)
+      }
+      static Error(vv) {
+        gv.d.Error(vv)
+      }
+      static get LogCache() {
+        return gv.d.LogCache
+      }
+      static ClearLogCache() {
+        gv.d.ClearLogCache()
+      }
+      static set LogLevels(vv) {
+        gv.d.LogLevels = vv
+      }
+      static set PerformanceLogLevel(vv) {
+        (vv & hv.PerformanceUserMarkLogLevel) !== hv.PerformanceUserMarkLogLevel ? (vv & hv.PerformanceConsoleLogLevel) !== hv.PerformanceConsoleLogLevel ? (hv.StartPerformanceCounter = hv._StartPerformanceCounterDisabled, hv.EndPerformanceCounter = hv._EndPerformanceCounterDisabled, _native?.disablePerformanceLogging?.()) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(2), hv.StartPerformanceCounter = hv._StartMarkNative, hv.EndPerformanceCounter = hv._EndMarkNative) : (hv.StartPerformanceCounter = hv._StartPerformanceConsole, hv.EndPerformanceCounter = hv._EndPerformanceConsole) : _native?.enablePerformanceLogging ? (_native.enablePerformanceLogging(1), hv.StartPerformanceCounter = hv._StartMarkNative, hv.EndPerformanceCounter = hv._EndMarkNative) : (hv.StartPerformanceCounter = hv._StartUserMark, hv.EndPerformanceCounter = hv._EndUserMark)
+      }
+      static _StartPerformanceCounterDisabled(vv, zv) {}
+      static _EndPerformanceCounterDisabled(vv, zv) {}
+      static _StartUserMark(vv) {
+        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!hv._Performance) {
+          if (!(0, ev.l)()) return;
+          hv._Performance = window.performance
+        }
+        zv && hv._Performance.mark && hv._Performance.mark(vv + "-Begin")
+      }
+      static _EndUserMark(vv) {
+        (!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && hv._Performance.mark && (hv._Performance.mark(vv + "-End"), hv._Performance.measure(vv, vv + "-Begin", vv + "-End"))
+      }
+      static _StartPerformanceConsole(vv) {
+        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        zv && (hv._StartUserMark(vv, zv), console.time && console.time(vv))
+      }
+      static _EndPerformanceConsole(vv) {
+        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        zv && (hv._EndUserMark(vv, zv), console.timeEnd(vv))
+      }
+      static _StartMarkNative(vv) {
+        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.startPerformanceCounter)
+          if (hv._NativePerformanceCounterHandles.has(vv)) hv.Warn(`Performance counter with name ${vv} is already started.`);
+          else {
+            const zv = _native.startPerformanceCounter(vv);
+            hv._NativePerformanceCounterHandles.set(vv, zv)
+          }
+      }
+      static _EndMarkNative(vv) {
+        if ((!(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1]) && _native?.endPerformanceCounter) {
+          const zv = hv._NativePerformanceCounterHandles.get(vv);
+          zv ? (_native.endPerformanceCounter(zv), hv._NativePerformanceCounterHandles.delete(vv)) : hv.Warn(`Performance counter with name ${vv} was not started.`)
+        }
+      }
+      static get Now() {
+        return dv.c.Now
+      }
+      static GetClassName(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Pv = null;
+        if (!zv && vv.getClassName) Pv = vv.getClassName();
+        else {
+          if (vv instanceof Object) {
+            Pv = (zv ? vv : Object.getPrototypeOf(vv)).constructor.__bjsclassName__
+          }
+          Pv || (Pv = typeof vv)
+        }
+        return Pv
+      }
+      static First(vv, zv) {
+        for (const Pv of vv)
+          if (zv(Pv)) return Pv;
+        return null
+      }
+      static getFullClassName(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Pv = null,
+          hv = null;
+        if (!zv && vv.getClassName) Pv = vv.getClassName();
+        else {
+          if (vv instanceof Object) {
+            const Sv = zv ? vv : Object.getPrototypeOf(vv);
+            Pv = Sv.constructor.__bjsclassName__, hv = Sv.constructor.__bjsmoduleName__
+          }
+          Pv || (Pv = typeof vv)
+        }
+        return Pv ? (null != hv ? hv + "." : "") + Pv : null
+      }
+      static async DelayAsync(vv) {
+        await new Promise((zv => {
+          setTimeout((() => {
+            zv()
+          }), vv)
+        }))
+      }
+      static IsSafari() {
+        return !!(0, ev.k)() && /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
       }
     }
-  },
-  40234: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Wz
-    });
-    var Fz = sz(39617);
-    class Wz extends Fz.g {
-      get depth() {
-        return this._depth
-      }
-      constructor(zz, tz, sz, Wz, Xz, Oz) {
-        let oz = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6],
-          vz = arguments.length > 7 && void 0 !== arguments[7] && arguments[7],
-          Uz = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Fz.g.TRILINEAR_SAMPLINGMODE,
-          Kz = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 0,
-          uz = arguments.length > 10 ? arguments[10] : void 0,
-          Nz = arguments.length > 11 ? arguments[11] : void 0;
-        super(null, Oz, !oz, vz), this.format = Xz, this._texture = Oz.FD().createRawTexture2DArray(zz, tz, sz, Wz, Xz, oz, vz, Uz, null, Kz, uz ?? 0, Nz), this._depth = Wz, this.is2DArray = !0
-      }
-      update(zz) {
-        this.updateMipLevel(zz, 0)
-      }
-      updateMipLevel(zz, tz) {
-        this._texture && this._getEngine().updateRawTexture2DArray(this._texture, zz, this._texture.format, this._texture.invertY, null, this._texture.type, tz)
-      }
-      static CreateRGBATexture(zz, tz, sz, Fz, Xz) {
-        return new Wz(zz, tz, sz, Fz, 5, Xz, !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5], arguments.length > 6 && void 0 !== arguments[6] && arguments[6], arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0)
+
+    function cv(vv, zv) {
+      return Pv => {
+        Pv.__bjsclassName__ = vv, Pv.__bjsmoduleName__ = null != zv ? zv : null
       }
     }
-  },
-  40225: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Fz.d
-    });
-    var Fz = sz(39515);
-    (0, Fz.g)()
-  },
-  39252: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => Fz.i
-    });
-    var Fz = sz(39256);
-    (0, Fz.e)()
+    hv = iv, iv.AssetBaseUrl = "", iv.UseCustomRequestHeaders = !1, iv.CustomRequestHeaders = lv.b.CustomRequestHeaders, iv.GetDOMTextContent = ev.e, iv._DefaultCdnUrl = "https://cdn.babylonjs.com", iv._CdnVersion = "9.28.0", iv._DefaultAssetsUrl = "https://assets.babylonjs.com/core", iv.LoadScript = "undefined" === typeof _native ? hv._LoadScriptWeb : hv._LoadScriptNative, iv.GetAbsoluteUrl = "object" === typeof document ? vv => {
+      const zv = document.createElement("a");
+      return zv.href = vv, zv.href
+    } : "function" === typeof URL && "object" === typeof location ? vv => new URL(vv, location.origin).href : () => {
+      throw new Error("Unable to get absolute URL. Override BABYLON.Tools.GetAbsoluteUrl to a custom implementation for the current context.")
+    }, iv.NoneLogLevel = gv.d.NoneLogLevel, iv.MessageLogLevel = gv.d.MessageLogLevel, iv.WarningLogLevel = gv.d.WarningLogLevel, iv.ErrorLogLevel = gv.d.ErrorLogLevel, iv.AllLogLevel = gv.d.AllLogLevel, iv.IsWindowObjectExist = ev.l, iv.PerformanceNoneLogLevel = 0, iv.PerformanceUserMarkLogLevel = 1, iv.PerformanceConsoleLogLevel = 2, iv._NativePerformanceCounterHandles = new Map, iv.StartPerformanceCounter = hv._StartPerformanceCounterDisabled, iv.EndPerformanceCounter = hv._EndPerformanceCounterDisabled;
+    class Gv {
+      constructor(vv, zv, Pv) {
+        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.iterations = vv, this.index = hv - 1, this._done = !1, this._fn = zv, this._successCallback = Pv
+      }
+      executeNext() {
+        this._done || (this.index + 1 < this.iterations ? (++this.index, this._fn(this)) : this.breakLoop())
+      }
+      breakLoop() {
+        this._done = !0, this._successCallback()
+      }
+      static Run(vv, zv, Pv) {
+        const hv = new Gv(vv, zv, Pv, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0);
+        return hv.executeNext(), hv
+      }
+      static SyncAsyncForLoop(vv, zv, Pv, hv, Sv) {
+        let ev = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        return Gv.Run(Math.ceil(vv / zv), (hv => {
+          Sv && Sv() ? hv.breakLoop() : setTimeout((() => {
+            for (let ev = 0; ev < zv; ++ev) {
+              const gv = hv.index * zv + ev;
+              if (gv >= vv) break;
+              if (Pv(gv), Sv && Sv()) {
+                hv.breakLoop();
+                break
+              }
+            }
+            hv.executeNext()
+          }), ev)
+        }), hv)
+      }
+    }
+    let mv = !1;
+
+    function jv() {
+      mv || (mv = !0, iv.Mix = Cv.f, iv.IsExponentOfTwo = Cv.e, Tv.e.FallbackTexture = "data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBmRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAAQAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC41AP/bAEMABAIDAwMCBAMDAwQEBAQFCQYFBQUFCwgIBgkNCw0NDQsMDA4QFBEODxMPDAwSGBITFRYXFxcOERkbGRYaFBYXFv/bAEMBBAQEBQUFCgYGChYPDA8WFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFv/AABEIAQABAAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/APH6KKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76CiiigD5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BQooooA+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/voKKKKAPl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FCiiigD6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++gooooA+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gUKKKKAPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76Pl+iiivuj+BT6gooor4U/vo+X6KKK+6P4FPqCiiivhT++j5fooor7o/gU+oKKKK+FP76P//Z")
+    }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

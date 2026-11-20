@@ -1,145 +1,145 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  40859: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      compilePagePack: () => Uz,
-      prefetchCompiler: () => oz,
-      reconcileHint: () => vz
+  41051: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      compilePagePack: () => Nv,
+      prefetchCompiler: () => pv,
+      reconcileHint: () => dv
     });
-    var Fz = sz(6193),
-      Wz = sz(6234),
-      Xz = sz(6211),
-      Oz = sz(6225);
+    var hv = Pv(6339),
+      Sv = Pv(6369),
+      ev = Pv(6351),
+      gv = Pv(6367);
 
-    function oz() {
-      (0, Fz.loadPageShaderPackCompiler)()
+    function pv() {
+      (0, hv.loadPageShaderPackCompiler)()
     }
-    async function vz() {
-      const zz = await (0, Fz.loadPageShaderPackCompiler)();
-      await (zz ? (0, Wz.reconcileStoredShaderPackHint)(zz) : (0, Wz.forgetShaderPackActiveHint)())
+    async function dv() {
+      const vv = await (0, hv.loadPageShaderPackCompiler)();
+      await (vv ? (0, Sv.reconcileStoredShaderPackHint)(vv) : (0, Sv.forgetShaderPackActiveHint)())
     }
-    async function Uz(zz) {
-      const tz = await (0, Fz.loadPageShaderPackCompiler)();
-      if (!tz) return {
+    async function Nv(vv) {
+      const zv = await (0, hv.loadPageShaderPackCompiler)();
+      if (!zv) return {
         status: "none"
       };
-      const sz = await (0, Oz.d)(zz, tz),
-        oz = (0, Wz.storedPackOutcome)(sz, tz);
-      if ("none" === oz.kind) return {
+      const Pv = await (0, gv.c)(vv, zv),
+        pv = (0, Sv.storedPackOutcome)(Pv, zv);
+      if ("none" === pv.kind) return {
         status: "none"
       };
-      const vz = tz.k_((0, Wz.storedShaderPackFiles)(sz), (0, Xz.shaderPackTextures)());
-      if ("blocked" === oz.kind) return {
+      const dv = zv.L_((0, Sv.storedShaderPackFiles)(Pv), (0, ev.shaderPackTextures)());
+      if ("blocked" === pv.kind) return {
         status: "blocked",
-        messageKey: oz.messageKey,
-        variants: 0 === vz.errors.length ? vz.variants : null
+        messageKey: pv.messageKey,
+        variants: 0 === dv.errors.length ? dv.variants : null
       };
-      if (vz.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", vz.errors), {
+      if (dv.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", dv.errors), {
         status: "none"
       };
       const {
-        name: Uz,
-        keepCircleShadows: Kz
-      } = sz.manifest;
+        name: Nv,
+        keepCircleShadows: lv
+      } = Pv.manifest;
       return {
         status: "active",
         pack: {
-          name: Uz,
-          variants: vz.variants,
-          keepCircleShadows: !0 === Kz
+          name: Nv,
+          variants: dv.variants,
+          keepCircleShadows: !0 === lv
         }
       }
     }
   },
-  6234: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      forgetShaderPackActiveHint: () => Zz,
-      isOtherApiVersion: () => Jz,
-      isShaderPackActive: () => rz,
-      isShaderPackChangePending: () => mz,
-      markShaderPackChangePending: () => xz,
-      pageShaderPackValidationVersion: () => Iz,
-      reconcileStoredShaderPackHint: () => ez,
-      removeShaderPack: () => Pz,
-      replaceShaderPack: () => gz,
-      saveShaderPack: () => Dz,
-      shaderPackNeedsCheck: () => Cz,
-      storedPackOutcome: () => Yz,
-      storedShaderPackFiles: () => Nz,
-      toStoredShaderPack: () => uz
+  6369: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      forgetShaderPackActiveHint: () => Kv,
+      isOtherApiVersion: () => Yv,
+      isShaderPackActive: () => mv,
+      isShaderPackChangePending: () => Fv,
+      markShaderPackChangePending: () => fv,
+      pageShaderPackValidationVersion: () => nv,
+      reconcileStoredShaderPackHint: () => Dv,
+      removeShaderPack: () => Gv,
+      replaceShaderPack: () => Cv,
+      saveShaderPack: () => sv,
+      shaderPackNeedsCheck: () => Ov,
+      storedPackOutcome: () => jv,
+      storedShaderPackFiles: () => Wv,
+      toStoredShaderPack: () => Tv
     });
-    var Fz = sz(6161),
-      Wz = sz(6180),
-      Xz = sz(44),
-      Oz = sz(3133),
-      oz = sz(6237),
-      vz = sz(6211);
-    const Uz = "shaderPackChangePending";
-    let Kz = null;
+    var hv = Pv(6306),
+      Sv = Pv(6328),
+      ev = Pv(39),
+      gv = Pv(3201),
+      pv = Pv(6377),
+      dv = Pv(6351);
+    const Nv = "shaderPackChangePending";
+    let lv = null;
 
-    function uz(zz, tz, sz) {
+    function Tv(vv, zv, Pv) {
       return {
-        manifest: zz.manifest,
-        files: (0, Fz.u)(zz.files),
-        validation: tz,
-        ...sz && {
-          listing: sz
+        manifest: vv.manifest,
+        files: (0, hv.u)(vv.files),
+        validation: zv,
+        ...Pv && {
+          listing: Pv
         }
       }
     }
 
-    function Nz(zz) {
-      return Object.keys(zz.files).map((tz => ({
-        path: tz,
-        source: zz.files[tz]
+    function Wv(vv) {
+      return Object.keys(vv.files).map((zv => ({
+        path: zv,
+        source: vv.files[zv]
       })))
     }
-    let bz = Promise.resolve();
+    let wv = Promise.resolve();
 
-    function wz(zz) {
-      const tz = bz.then(zz);
-      return bz = tz.catch((() => {})), tz
-    }
-
-    function Dz(zz, tz) {
-      return wz((() => Hz(zz, tz)))
+    function av(vv) {
+      const zv = wv.then(vv);
+      return wv = zv.catch((() => {})), zv
     }
 
-    function gz(zz, tz, sz) {
-      return wz((async () => JSON.stringify(await (0, oz.g)()) === JSON.stringify(zz) && (null === tz ? (await Bz(), !0) : Hz(tz, sz))))
-    }
-    async function Hz(zz, tz) {
-      const sz = await Xz.e.setItem(oz.e, zz);
-      return sz && Gz(zz, tz), sz
-    }
-    async function Bz() {
-      await Xz.e.removeItem(oz.e), Xz.f.removeItem(Oz.e)
+    function sv(vv, zv) {
+      return av((() => iv(vv, zv)))
     }
 
-    function Pz() {
-      return wz(Bz)
+    function Cv(vv, zv, Pv) {
+      return av((async () => JSON.stringify(await (0, pv.g)()) === JSON.stringify(vv) && (null === zv ? (await cv(), !0) : iv(zv, Pv))))
+    }
+    async function iv(vv, zv) {
+      const Pv = await ev.f.setItem(pv.c, vv);
+      return Pv && Vv(vv, zv), Pv
+    }
+    async function cv() {
+      await ev.f.removeItem(pv.c), ev.h.removeItem(gv.b)
     }
 
-    function rz(zz, tz) {
-      return "active" === Yz(zz, tz).kind
+    function Gv() {
+      return av(cv)
     }
 
-    function Yz(zz, tz) {
-      var sz;
-      return null === zz ? {
+    function mv(vv, zv) {
+      return "active" === jv(vv, zv).kind
+    }
+
+    function jv(vv, zv) {
+      var Pv;
+      return null === vv ? {
         kind: "none",
         reason: "nothingStored"
-      } : Jz(zz) ? {
+      } : Yv(vv) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (sz = zz.validation) || void 0 === sz ? void 0 : sz.ok) || zz.validation.fromRecheck ? null === tz ? {
+      } : !1 !== (null === (Pv = vv.validation) || void 0 === Pv ? void 0 : Pv.ok) || vv.validation.fromRecheck ? null === zv ? {
         kind: "none",
         reason: "noCompiler"
-      } : Cz(zz, tz) ? {
+      } : Ov(vv, zv) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : zz.validation.ok ? {
+      } : vv.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -150,124 +150,124 @@ export const modules = {
       }
     }
 
-    function xz() {
-      Xz.j.setItem(Uz, performance.timeOrigin)
+    function fv() {
+      ev.l.setItem(Nv, performance.timeOrigin)
     }
 
-    function mz() {
-      return Xz.j.getItem(Uz) === performance.timeOrigin
+    function Fv() {
+      return ev.l.getItem(Nv) === performance.timeOrigin
     }
 
-    function Jz(zz) {
-      return !(0, Wz.k)(zz.manifest.apiVersion)
+    function Yv(vv) {
+      return !(0, Sv.i)(vv.manifest.apiVersion)
     }
 
-    function Iz(zz) {
-      return Kz ??= zz.dJ((0, vz.shaderPackTextures)()), Kz
+    function nv(vv) {
+      return lv ??= vv.RD((0, dv.shaderPackTextures)()), lv
     }
 
-    function Cz(zz, tz) {
-      var sz;
-      return (null === (sz = zz.validation) || void 0 === sz ? void 0 : sz.headerVersion) !== Iz(tz)
+    function Ov(vv, zv) {
+      var Pv;
+      return (null === (Pv = vv.validation) || void 0 === Pv ? void 0 : Pv.headerVersion) !== nv(zv)
     }
 
-    function ez(zz) {
-      return wz((async () => {
-        Gz(await (0, oz.g)(!0), zz)
+    function Dv(vv) {
+      return av((async () => {
+        Vv(await (0, pv.g)(!0), vv)
       }))
     }
 
-    function Zz() {
-      return wz((async () => {
-        Xz.f.removeItem(Oz.e)
+    function Kv() {
+      return av((async () => {
+        ev.h.removeItem(gv.b)
       }))
     }
 
-    function Gz(zz, tz) {
-      rz(zz, tz) ? Xz.f.setItem(Oz.e, !0) : Xz.f.removeItem(Oz.e)
+    function Vv(vv, zv) {
+      mv(vv, zv) ? ev.h.setItem(gv.b, !0) : ev.h.removeItem(gv.b)
     }
   },
-  6225: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => vz,
-      f: () => oz
+  6367: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => dv,
+      e: () => pv
     });
-    var Fz = sz(6234),
-      Wz = sz(6211),
-      Xz = sz(123);
-    const Oz = 100;
-    async function oz(zz, tz) {
-      var sz;
-      let Fz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (sz = navigator.gpu) && void 0 !== sz ? sz : null;
-      const Oz = zz.k_(tz, (0, Wz.shaderPackTextures)());
-      if (Oz.errors.length > 0) return Uz(zz, Oz.errors, Oz.offInStrict);
-      const oz = await async function(zz) {
-        if (!zz) return null;
+    var hv = Pv(6369),
+      Sv = Pv(6351),
+      ev = Pv(90);
+    const gv = 100;
+    async function pv(vv, zv) {
+      var Pv;
+      let hv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Pv = navigator.gpu) && void 0 !== Pv ? Pv : null;
+      const gv = vv.L_(zv, (0, Sv.shaderPackTextures)());
+      if (gv.errors.length > 0) return Nv(vv, gv.errors, gv.offInStrict);
+      const pv = await async function(vv) {
+        if (!vv) return null;
         try {
-          const tz = await (0, Xz.p)(zz);
-          return tz ? await tz.requestDevice() : null
-        } catch (tz) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", tz), null
+          const zv = await (0, ev.m)(vv);
+          return zv ? await zv.requestDevice() : null
+        } catch (zv) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", zv), null
         }
-      }(Fz);
-      if (!oz) return null;
-      let vz = !1;
-      oz.lost.then((() => {
-        vz = !0
+      }(hv);
+      if (!pv) return null;
+      let dv = !1;
+      pv.lost.then((() => {
+        dv = !0
       }));
       try {
-        const tz = await Promise.all(Oz.validationModules.map((tz => async function(zz, tz, sz) {
-          tz.pushErrorScope("validation");
-          const Fz = tz.createShaderModule({
-              code: sz.code
+        const zv = await Promise.all(gv.validationModules.map((zv => async function(vv, zv, Pv) {
+          zv.pushErrorScope("validation");
+          const hv = zv.createShaderModule({
+              code: Pv.code
             }),
-            Wz = tz.popErrorScope(),
+            Sv = zv.popErrorScope(),
             {
-              messages: Xz
-            } = await Fz.getCompilationInfo(),
-            Oz = Xz.filter((zz => "error" === zz.type)).map((tz => zz.mapValidationMessage(sz, tz))),
-            oz = await Wz;
-          oz && 0 === Oz.length && Oz.push({
+              messages: ev
+            } = await hv.getCompilationInfo(),
+            gv = ev.filter((vv => "error" === vv.type)).map((zv => vv.mapValidationMessage(Pv, zv))),
+            pv = await Sv;
+          pv && 0 === gv.length && gv.push({
             file: null,
             line: 0,
-            message: oz.message,
-            variants: [sz.key]
+            message: pv.message,
+            variants: [Pv.key]
           });
-          return Oz
-        }(zz, oz, tz))));
-        return vz ? null : Uz(zz, zz.msz(tz.flat()), Oz.offInStrict)
-      } catch (Kz) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", Kz), null
+          return gv
+        }(vv, pv, zv))));
+        return dv ? null : Nv(vv, vv.Jzv(zv.flat()), gv.offInStrict)
+      } catch (lv) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", lv), null
       } finally {
-        oz.destroy()
+        pv.destroy()
       }
     }
-    async function vz(zz, tz) {
-      var sz;
-      if (!(0, Fz.shaderPackNeedsCheck)(zz, tz) || (0, Fz.isOtherApiVersion)(zz)) return zz;
-      const Wz = await oz(tz, (0, Fz.storedShaderPackFiles)(zz));
-      if (!Wz) return zz;
-      const Xz = !1 === (null === (sz = zz.validation) || void 0 === sz ? void 0 : sz.ok) && !zz.validation.fromRecheck,
-        Oz = {
-          ...zz,
-          validation: Xz ? Wz : {
-            ...Wz,
+    async function dv(vv, zv) {
+      var Pv;
+      if (!(0, hv.shaderPackNeedsCheck)(vv, zv) || (0, hv.isOtherApiVersion)(vv)) return vv;
+      const Sv = await pv(zv, (0, hv.storedShaderPackFiles)(vv));
+      if (!Sv) return vv;
+      const ev = !1 === (null === (Pv = vv.validation) || void 0 === Pv ? void 0 : Pv.ok) && !vv.validation.fromRecheck,
+        gv = {
+          ...vv,
+          validation: ev ? Sv : {
+            ...Sv,
             fromRecheck: !0
           }
         };
-      return await (0, Fz.replaceShaderPack)(zz, Oz, tz) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), Oz
+      return await (0, hv.replaceShaderPack)(vv, gv, zv) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), gv
     }
 
-    function Uz(zz, tz, sz) {
+    function Nv(vv, zv, Pv) {
       return {
-        headerVersion: (0, Fz.pageShaderPackValidationVersion)(zz),
-        ok: 0 === tz.length,
-        errors: tz.slice(0, Oz),
-        moreErrors: Math.max(0, tz.length - Oz),
-        offInStrict: sz
+        headerVersion: (0, hv.pageShaderPackValidationVersion)(vv),
+        ok: 0 === zv.length,
+        errors: zv.slice(0, gv),
+        moreErrors: Math.max(0, zv.length - gv),
+        offInStrict: Pv
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

@@ -2012,13 +2012,17 @@ select.WorldCodeAiAddKeyInput {
   transition: transform .2s
 }
 
+.WorldCodeAiStop .svg-inline--fa,
+.WorldCodeAiStop.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .WorldCodeAiStop .svg-inline--fa path:only-of-type,
 .WorldCodeAiStop.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .WorldCodeAiStop {
@@ -2425,6 +2429,15 @@ select.WorldCodeAiAddKeyInput {
   transition: transform .2s
 }
 
+.WorldCodeAiChip .svg-inline--fa,
+.WorldCodeAiChip.svg-inline--fa,
+.WorldCodeAiLinkButton .svg-inline--fa,
+.WorldCodeAiLinkButton.svg-inline--fa,
+.WorldCodeAiSecondaryButton .svg-inline--fa,
+.WorldCodeAiSecondaryButton.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .WorldCodeAiChip .svg-inline--fa path:only-of-type,
 .WorldCodeAiChip.svg-inline--fa path:only-of-type,
 .WorldCodeAiLinkButton .svg-inline--fa path:only-of-type,
@@ -2434,8 +2447,7 @@ select.WorldCodeAiAddKeyInput {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .WorldCodeAiChip,
@@ -2527,13 +2539,17 @@ select.WorldCodeAiAddKeyInput {
   transition: transform .2s
 }
 
+.WorldCodeAiPrimaryButton .svg-inline--fa,
+.WorldCodeAiPrimaryButton.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .WorldCodeAiPrimaryButton .svg-inline--fa path:only-of-type,
 .WorldCodeAiPrimaryButton.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .WorldCodeAiPrimaryButton {
@@ -2840,13 +2856,17 @@ select.WorldCodeAiAddKeyInput {
   transition: transform .2s
 }
 
+.WorldCodeAiLimit .WorldCodeAiModelChip .svg-inline--fa,
+.WorldCodeAiLimit .WorldCodeAiModelChip.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .WorldCodeAiLimit .WorldCodeAiModelChip .svg-inline--fa path:only-of-type,
 .WorldCodeAiLimit .WorldCodeAiModelChip.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .WorldCodeAiLimit .WorldCodeAiModelChip {

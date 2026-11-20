@@ -2533,7 +2533,7 @@
   }
 }
 
-body:has(.Baf2IslandsOverlay):has(.UiRequestContainer) .RightElements {
+html.Baf2IslandsOverlayShown .RightElements:has(.UiRequestContainer) {
   z-index: 10
 }
 
@@ -6336,13 +6336,17 @@ body:has(.Baf2IslandsOverlay):has(.UiRequestContainer) .RightElements {
   text-transform: uppercase
 }
 
+.Baf2AreaBanner .Baf2AreaBannerHeading .svg-inline--fa,
+.Baf2AreaBanner .Baf2AreaBannerHeading.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .Baf2AreaBanner .Baf2AreaBannerHeading .svg-inline--fa path:only-of-type,
 .Baf2AreaBanner .Baf2AreaBannerHeading.svg-inline--fa path:only-of-type {
   stroke: #1a1f2e;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .Baf2AreaBanner .Baf2AreaBannerName {
@@ -6352,13 +6356,17 @@ body:has(.Baf2IslandsOverlay):has(.UiRequestContainer) .RightElements {
   text-shadow: -2px -2px 0 #1a1f2e, -2px -1px 0 #1a1f2e, -2px 0 0 #1a1f2e, -2px 1px 0 #1a1f2e, -2px 2px 0 #1a1f2e, -1px -2px 0 #1a1f2e, -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, -1px 2px 0 #1a1f2e, 0 -2px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 0 2px 0 #1a1f2e, 1px -2px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e, 1px 2px 0 #1a1f2e, 2px -2px 0 #1a1f2e, 2px -1px 0 #1a1f2e, 2px 0 0 #1a1f2e, 2px 1px 0 #1a1f2e, 2px 2px 0 #1a1f2e
 }
 
+.Baf2AreaBanner .Baf2AreaBannerName .svg-inline--fa,
+.Baf2AreaBanner .Baf2AreaBannerName.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .Baf2AreaBanner .Baf2AreaBannerName .svg-inline--fa path:only-of-type,
 .Baf2AreaBanner .Baf2AreaBannerName.svg-inline--fa path:only-of-type {
   stroke: #1a1f2e;
   vector-effect: non-scaling-stroke;
   stroke-width: 4px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .Baf2AreaBanner .Baf2AreaBannerName {
@@ -6372,13 +6380,17 @@ body:has(.Baf2IslandsOverlay):has(.UiRequestContainer) .RightElements {
   white-space: normal
 }
 
+.Baf2AreaBanner .Baf2AreaBannerNote .svg-inline--fa,
+.Baf2AreaBanner .Baf2AreaBannerNote.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .Baf2AreaBanner .Baf2AreaBannerNote .svg-inline--fa path:only-of-type,
 .Baf2AreaBanner .Baf2AreaBannerNote.svg-inline--fa path:only-of-type {
   stroke: #1a1f2e;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .Baf2AreaBanner .Baf2AreaBannerReset {
@@ -6390,13 +6402,17 @@ body:has(.Baf2IslandsOverlay):has(.UiRequestContainer) .RightElements {
   text-shadow: -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e
 }
 
+.Baf2AreaBanner .Baf2AreaBannerReset .svg-inline--fa,
+.Baf2AreaBanner .Baf2AreaBannerReset.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .Baf2AreaBanner .Baf2AreaBannerReset .svg-inline--fa path:only-of-type,
 .Baf2AreaBanner .Baf2AreaBannerReset.svg-inline--fa path:only-of-type {
   stroke: #1a1f2e;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 @keyframes Baf2AreaBanner {

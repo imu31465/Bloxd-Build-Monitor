@@ -1,72 +1,72 @@
-export const id = 52;
-export const ids = [52];
+export const id = 53;
+export const ids = [53];
 export const modules = {
-  8905: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      announceStoredTexturePack: () => Wz.c,
-      takeOneShotTexturePack: () => Fz.i
+  9059: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      announceStoredTexturePack: () => Sv.d,
+      takeOneShotTexturePack: () => hv.f
     });
-    var Fz = sz(8907),
-      Wz = sz(8913)
+    var hv = Pv(9063),
+      Sv = Pv(9066)
   },
-  8913: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Wz,
-      f: () => Xz
+  9066: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => Sv,
+      f: () => ev
     });
-    var Fz = sz(2955);
+    var hv = Pv(3026);
 
-    function Wz() {
+    function Sv() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const zz = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const vv = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const tz = new BroadcastChannel(Fz.l);
-        tz.postMessage({
-          stored: zz
-        }), tz.close()
+        const zv = new BroadcastChannel(hv.j);
+        zv.postMessage({
+          stored: vv
+        }), zv.close()
       } catch {
         return null
       }
-      return zz
+      return vv
     }
 
-    function Xz(zz) {
-      const tz = "object" === typeof zz && null !== zz ? zz.stored : null;
-      return "string" === typeof tz ? tz : null
+    function ev(vv) {
+      const zv = "object" === typeof vv && null !== vv ? vv.stored : null;
+      return "string" === typeof zv ? zv : null
     }
   },
-  8907: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Oz,
-      g: () => Wz,
-      i: () => Xz
+  9063: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => gv,
+      d: () => Sv,
+      f: () => ev
     });
-    var Fz = sz(2955);
-    async function Wz(zz, tz, sz) {
-      let Wz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const Xz = Oz(await zz.getItem(Fz.i, tz));
-      if (null === Xz || Wz()) return null;
-      const oz = await zz.getItem(Fz.k, tz);
-      return Wz() ? null : (await async function(zz) {
-        await Promise.all([zz.removeItem(Fz.i), zz.removeItem(Fz.k)])
-      }(zz).catch(sz), {
-        pack: Xz,
-        source: "string" === typeof oz ? oz : null
+    var hv = Pv(3026);
+    async function Sv(vv, zv, Pv) {
+      let Sv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const ev = gv(await vv.getItem(hv.d, zv));
+      if (null === ev || Sv()) return null;
+      const pv = await vv.getItem(hv.h, zv);
+      return Sv() ? null : (await async function(vv) {
+        await Promise.all([vv.removeItem(hv.d), vv.removeItem(hv.h)])
+      }(vv).catch(Pv), {
+        pack: ev,
+        source: "string" === typeof pv ? pv : null
       })
     }
 
-    function Xz(zz) {
-      return (0, Fz.r)() ? Promise.resolve(null) : Wz(zz, !1, (zz => {
-        console.error("Error removing temporary texture pack: ", zz)
-      }), Fz.r)
+    function ev(vv) {
+      return (0, hv.o)() ? Promise.resolve(null) : Sv(vv, !1, (vv => {
+        console.error("Error removing temporary texture pack: ", vv)
+      }), hv.o)
     }
 
-    function Oz(zz) {
-      if ("object" !== typeof zz || null === zz) return null;
-      const tz = zz.metaData;
-      return "object" !== typeof tz || null === tz || "string" !== typeof tz.id ? null : zz
+    function gv(vv) {
+      if ("object" !== typeof vv || null === vv) return null;
+      const zv = vv.metaData;
+      return "object" !== typeof zv || null === zv || "string" !== typeof zv.id ? null : vv
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

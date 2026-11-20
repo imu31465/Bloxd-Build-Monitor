@@ -1,76 +1,112 @@
 export const id = 293;
 export const ids = [293];
 export const modules = {
-  40653: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      installImageBitmapTextureLoader: () => Uz
+  40778: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      ensureLocalBloxdTypes: () => iv
     });
-    var Fz = sz(39063),
-      Wz = sz(40661),
-      Xz = sz(2920);
+    var hv = Pv(4503),
+      Sv = Pv(40677),
+      ev = Pv(40672),
+      gv = Pv(36362),
+      pv = Pv(36369),
+      dv = Pv(36376);
+    const Nv = JSON.stringify({
+      name: "@bloxd",
+      types: "index.d.ts"
+    }, null, "\t") + "\n";
 
-    function Oz(zz, tz) {
-      if ("string" === typeof zz) {
-        const sz = (0, Xz.f)(zz);
-        return sz ? new Blob([(0, Xz.b)(sz.base64)], {
-          type: sz.mimeType || tz
-        }) : null
-      }
-      return zz instanceof Blob ? zz : new Blob([zz], {
-        type: tz
-      })
+    function lv(vv) {
+      return vv.replace(/^\//, "")
     }
-    const oz = function(zz, tz, sz, Fz) {
-      let Xz, oz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-        vz = arguments.length > 5 ? arguments[5] : void 0,
-        Uz = arguments.length > 6 ? arguments[6] : void 0;
-      try {
-        Xz = Oz(zz, oz)
-      } catch {
-        Xz = null
-      }
-      return Xz ? (createImageBitmap(Xz, {
-        premultiplyAlpha: "none",
-        colorSpaceConversion: "none",
-        ...vz
-      }).then((zz => {
-        tz(zz)
-      }), (() => {
-        (0, Wz.e)(zz, tz, sz, Fz, oz, vz, Uz)
-      })), null) : (0, Wz.e)(zz, tz, sz, Fz, oz, vz, Uz)
-    };
-    let vz = "idle";
 
-    function Uz() {
-      "idle" === vz && "function" === typeof createImageBitmap && (vz = "pending", async function() {
-        const zz = document.createElement("canvas");
-        zz.width = 1, zz.height = 2;
-        const tz = zz.getContext("2d");
-        if (!tz) throw new Error("2d context unavailable");
-        tz.fillStyle = "#f00", tz.fillRect(0, 0, 1, 1), tz.fillStyle = "#0f0", tz.fillRect(0, 1, 1, 1);
-        const sz = Oz(zz.toDataURL(), "");
-        if (!sz) throw new Error("toDataURL did not produce a base64 data URL");
-        const Fz = await createImageBitmap(sz, {
-          premultiplyAlpha: "none",
-          colorSpaceConversion: "none",
-          imageOrientation: "flipY"
-        });
-        tz.drawImage(Fz, 0, 0);
-        const Wz = tz.getImageData(0, 0, 1, 1).data;
-        return Wz[1] > Wz[0]
-      }().catch((() => (vz = "idle", !1))).then((zz => {
-        "pending" === vz && (vz = "concluded"), zz && (Fz.b.loadImage = oz)
-      })))
+    function Tv(vv) {
+      return lv((0, pv.q)(vv.name, "")).replace(/\/$/, "")
     }
-  },
-  40661: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Fz.g,
-      e: () => Fz.p
-    });
-    var Fz = sz(39205);
-    (0, Fz.t)()
+
+    function Wv(vv) {
+      return vv.typesVfsPath.slice(vv.typesVfsPath.lastIndexOf("/") + 1)
+    }
+
+    function wv(vv) {
+      return JSON.stringify({
+        name: vv.specifier,
+        types: Wv(vv)
+      }, null, "\t") + "\n"
+    }
+    async function av(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+      const Pv = [];
+      for await (const [hv, Sv] of vv.entries()) {
+        const vv = zv ? `${zv}/${hv}` : hv;
+        "directory" !== Sv.kind ? Pv.push(vv) : Pv.push(...await av(Sv, vv))
+      }
+      return Pv
+    }
+    async function sv(vv, zv, Pv) {
+      const hv = Tv(zv),
+        Sv = await (0, dv.i)(vv, hv);
+      if (!Sv) return;
+      const ev = new Set([Wv(zv), "package.json"]);
+      if (Pv)
+        for (const dv of Object.keys(zv.files)) ev.add(dv);
+      const gv = await av(Sv),
+        pv = new Set;
+      for (const Tv of gv) {
+        if (ev.has(Tv)) continue;
+        await (0, dv.I)(vv, `${hv}/${Tv}`);
+        const zv = Tv.split("/");
+        for (let vv = 1; vv < zv.length; vv++) pv.add(zv.slice(0, vv).join("/"))
+      }
+      const Nv = [...pv].sort(((vv, zv) => zv.split("/").length - vv.split("/").length));
+      for (const Tv of Nv) try {
+        await (0, dv.I)(vv, `${hv}/${Tv}`)
+      } catch (lv) {
+        if (lv instanceof DOMException && "InvalidModificationError" === lv.name) continue;
+        throw lv
+      }
+    }
+
+    function Cv(vv) {
+      const zv = {
+        "@bloxd": ["./node_modules/@bloxd/index.d.ts"]
+      };
+      for (const hv of Object.values(gv.e)) zv[hv.specifier] = [`.${hv.typesVfsPath}`];
+      const Pv = [];
+      for (const hv of vv)
+        for (const vv of Object.keys(hv.files)) Pv.push(lv((0, pv.q)(hv.name, vv)));
+      return JSON.stringify({
+        compilerOptions: {
+          allowJs: !0,
+          checkJs: !1,
+          strict: !1,
+          module: "ESNext",
+          moduleResolution: "bundler",
+          target: "ES2015",
+          noEmit: !0,
+          noLib: !0,
+          skipLibCheck: !0,
+          baseUrl: ".",
+          paths: zv
+        },
+        include: ["./**/*.ts", "./**/*.js", "./**/*.d.ts"],
+        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...Pv]
+      }, null, "\t") + "\n"
+    }
+    async function iv(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+      const Pv = new Set(zv.map((vv => vv.name))),
+        Wv = Object.values(gv.e).flatMap((zv => {
+          const hv = lv(zv.typesVfsPath),
+            Sv = `${Tv(zv)}/package.json`;
+          return [...Pv.has(zv.name) ? Object.entries(zv.files).map((Pv => {
+            let [hv, Sv] = Pv;
+            return (0, dv.O)(vv, lv((0, pv.q)(zv.name, hv)), Sv)
+          })) : [], (0, dv.O)(vv, hv, zv.types), (0, dv.O)(vv, Sv, wv(zv))]
+        }));
+      await Promise.all([(0, dv.O)(vv, "node_modules/@bloxd/index.d.ts", hv.default), (0, dv.O)(vv, "node_modules/@bloxd/globals.d.ts", ev.d), (0, dv.O)(vv, "node_modules/@bloxd/lib.d.ts", Sv.e), (0, dv.O)(vv, "node_modules/@bloxd/package.json", Nv), (0, dv.O)(vv, "tsconfig.json", Cv(zv)), ...Wv]), await Promise.all(Object.values(gv.e).map((zv => sv(vv, zv, Pv.has(zv.name)))))
+    }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

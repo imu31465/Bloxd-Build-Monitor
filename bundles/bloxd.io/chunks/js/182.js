@@ -1,2445 +1,2445 @@
 export const id = 182;
 export const ids = [182];
 export const modules = {
-  8680: (zz, tz) => {
-    tz.discordURLBuilder = function(zz) {
-      var tz;
-      const sz = (null === (tz = null === window || void 0 === window ? void 0 : window.location) || void 0 === tz ? void 0 : tz.hostname) || "localhost",
-        Fz = zz.hostname.split("."),
-        Wz = !zz.hostname.includes("trycloudflare.com") && !zz.hostname.includes("discordsays.com") && Fz.length > 2 ? `/${Fz[0]}` : "";
-      return zz.pathname.startsWith("/.proxy") ? `${zz.protocol}//${sz}${Wz}${zz.pathname}${zz.search}` : `${zz.protocol}//${sz}/.proxy/colyseus${Wz}${zz.pathname}${zz.search}`
+  8835: (vv, zv) => {
+    zv.discordURLBuilder = function(vv) {
+      var zv;
+      const Pv = (null === (zv = null === window || void 0 === window ? void 0 : window.location) || void 0 === zv ? void 0 : zv.hostname) || "localhost",
+        hv = vv.hostname.split("."),
+        Sv = !vv.hostname.includes("trycloudflare.com") && !vv.hostname.includes("discordsays.com") && hv.length > 2 ? `/${hv[0]}` : "";
+      return vv.pathname.startsWith("/.proxy") ? `${vv.protocol}//${Pv}${Sv}${vv.pathname}${vv.search}` : `${vv.protocol}//${Pv}/.proxy/colyseus${Sv}${vv.pathname}${vv.search}`
     }
   },
-  8666: (zz, tz, sz) => {
-    var Fz, Wz, Xz, Oz, oz = sz(8589),
-      vz = sz(8671),
-      Uz = sz(8634);
-    Fz = new WeakMap, Wz = new WeakMap, Xz = new WeakMap, Oz = new WeakMap, tz.Auth = class {
-      constructor(zz) {
-        this.http = zz, this.settings = {
+  8823: (vv, zv, Pv) => {
+    var hv, Sv, ev, gv, pv = Pv(8746),
+      dv = Pv(8831),
+      Nv = Pv(8800);
+    hv = new WeakMap, Sv = new WeakMap, ev = new WeakMap, gv = new WeakMap, zv.Auth = class {
+      constructor(vv) {
+        this.http = vv, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, Fz.set(this, !1), Wz.set(this, void 0), Xz.set(this, void 0), Oz.set(this, Uz.createNanoEvents()), vz.getItem(this.settings.key, (zz => this.token = zz))
+        }, hv.set(this, !1), Sv.set(this, void 0), ev.set(this, void 0), gv.set(this, Nv.createNanoEvents()), dv.getItem(this.settings.key, (vv => this.token = vv))
       }
-      set token(zz) {
-        this.http.authToken = zz
+      set token(vv) {
+        this.http.authToken = vv
       }
       get token() {
         return this.http.authToken
       }
-      onChange(zz) {
-        const tz = oz.__classPrivateFieldGet(this, Oz, "f").on("change", zz);
-        return oz.__classPrivateFieldGet(this, Fz, "f") || oz.__classPrivateFieldSet(this, Wz, new Promise(((zz, tz) => {
-          this.getUserData().then((zz => {
-            this.emitChange(Object.assign(Object.assign({}, zz), {
+      onChange(vv) {
+        const zv = pv.__classPrivateFieldGet(this, gv, "f").on("change", vv);
+        return pv.__classPrivateFieldGet(this, hv, "f") || pv.__classPrivateFieldSet(this, Sv, new Promise(((vv, zv) => {
+          this.getUserData().then((vv => {
+            this.emitChange(Object.assign(Object.assign({}, vv), {
               token: this.token
             }))
-          })).catch((zz => {
+          })).catch((vv => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            zz()
+            vv()
           }))
-        })), "f"), oz.__classPrivateFieldSet(this, Fz, !0, "f"), tz
+        })), "f"), pv.__classPrivateFieldSet(this, hv, !0, "f"), zv
       }
       getUserData() {
-        return oz.__awaiter(this, void 0, void 0, (function*() {
+        return pv.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(zz, tz, sz) {
-        return oz.__awaiter(this, void 0, void 0, (function*() {
-          const Fz = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(vv, zv, Pv) {
+        return pv.__awaiter(this, void 0, void 0, (function*() {
+          const hv = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: zz,
-              password: tz,
-              options: sz
+              email: vv,
+              password: zv,
+              options: Pv
             }
           })).data;
-          return this.emitChange(Fz), Fz
+          return this.emitChange(hv), hv
         }))
       }
-      signInWithEmailAndPassword(zz, tz) {
-        return oz.__awaiter(this, void 0, void 0, (function*() {
-          const sz = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(vv, zv) {
+        return pv.__awaiter(this, void 0, void 0, (function*() {
+          const Pv = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: zz,
-              password: tz
+              email: vv,
+              password: zv
             }
           })).data;
-          return this.emitChange(sz), sz
+          return this.emitChange(Pv), Pv
         }))
       }
-      signInAnonymously(zz) {
-        return oz.__awaiter(this, void 0, void 0, (function*() {
-          const tz = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(vv) {
+        return pv.__awaiter(this, void 0, void 0, (function*() {
+          const zv = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: zz
+              options: vv
             }
           })).data;
-          return this.emitChange(tz), tz
+          return this.emitChange(zv), zv
         }))
       }
-      sendPasswordResetEmail(zz) {
-        return oz.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(vv) {
+        return pv.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: zz
+              email: vv
             }
           })).data
         }))
       }
-      signInWithProvider(zz) {
-        return oz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((sz, Fz) => {
-            const Wz = tz.width || 480,
-              Oz = tz.height || 768,
-              vz = this.token ? `?token=${this.token}` : "",
-              Uz = `Login with ${zz[0].toUpperCase()+zz.substring(1)}`,
-              Kz = this.http.client.getHttpEndpoint(`${tz.prefix||`${this.settings.path}/provider`}/${zz}${vz}`),
-              uz = screen.width / 2 - Wz / 2,
-              Nz = screen.height / 2 - Oz / 2;
-            oz.__classPrivateFieldSet(this, Xz, window.open(Kz, Uz, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Wz + ", height=" + Oz + ", top=" + Nz + ", left=" + uz), "f");
-            const bz = zz => {
-                void 0 === zz.data.user && void 0 === zz.data.token || (clearInterval(wz), oz.__classPrivateFieldGet(this, Xz, "f").close(), oz.__classPrivateFieldSet(this, Xz, void 0, "f"), window.removeEventListener("message", bz), void 0 !== zz.data.error ? Fz(zz.data.error) : (sz(zz.data), this.emitChange(zz.data)))
+      signInWithProvider(vv) {
+        return pv.__awaiter(this, arguments, void 0, (function*(vv) {
+          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((Pv, hv) => {
+            const Sv = zv.width || 480,
+              gv = zv.height || 768,
+              dv = this.token ? `?token=${this.token}` : "",
+              Nv = `Login with ${vv[0].toUpperCase()+vv.substring(1)}`,
+              lv = this.http.client.getHttpEndpoint(`${zv.prefix||`${this.settings.path}/provider`}/${vv}${dv}`),
+              Tv = screen.width / 2 - Sv / 2,
+              Wv = screen.height / 2 - gv / 2;
+            pv.__classPrivateFieldSet(this, ev, window.open(lv, Nv, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Sv + ", height=" + gv + ", top=" + Wv + ", left=" + Tv), "f");
+            const wv = vv => {
+                void 0 === vv.data.user && void 0 === vv.data.token || (clearInterval(av), pv.__classPrivateFieldGet(this, ev, "f").close(), pv.__classPrivateFieldSet(this, ev, void 0, "f"), window.removeEventListener("message", wv), void 0 !== vv.data.error ? hv(vv.data.error) : (Pv(vv.data), this.emitChange(vv.data)))
               },
-              wz = setInterval((() => {
-                oz.__classPrivateFieldGet(this, Xz, "f") && !oz.__classPrivateFieldGet(this, Xz, "f").closed || (oz.__classPrivateFieldSet(this, Xz, void 0, "f"), Fz("ds"), window.removeEventListener("message", bz))
+              av = setInterval((() => {
+                pv.__classPrivateFieldGet(this, ev, "f") && !pv.__classPrivateFieldGet(this, ev, "f").closed || (pv.__classPrivateFieldSet(this, ev, void 0, "f"), hv("ev"), window.removeEventListener("message", wv))
               }), 200);
-            window.addEventListener("message", bz)
+            window.addEventListener("message", wv)
           }))
         }))
       }
       signOut() {
-        return oz.__awaiter(this, void 0, void 0, (function*() {
+        return pv.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(zz) {
-        void 0 !== zz.token && (this.token = zz.token, null === zz.token ? vz.removeItem(this.settings.key) : vz.setItem(this.settings.key, zz.token)), oz.__classPrivateFieldGet(this, Oz, "f").emit("change", zz)
+      emitChange(vv) {
+        void 0 !== vv.token && (this.token = vv.token, null === vv.token ? dv.removeItem(this.settings.key) : dv.setItem(this.settings.key, vv.token)), pv.__classPrivateFieldGet(this, gv, "f").emit("change", vv)
       }
     }
   },
-  8586: (zz, tz, sz) => {
-    var Fz, Wz = sz(8589),
-      Xz = sz(8595),
-      Oz = sz(8599),
-      oz = sz(8657),
-      vz = sz(8666),
-      Uz = sz(8680);
-    class Kz extends Error {
-      constructor(zz, tz) {
-        super(zz), this.code = tz, this.name = "MatchMakeError", Object.setPrototypeOf(this, Kz.prototype)
+  8743: (vv, zv, Pv) => {
+    var hv, Sv = Pv(8746),
+      ev = Pv(8753),
+      gv = Pv(8758),
+      pv = Pv(8815),
+      dv = Pv(8823),
+      Nv = Pv(8835);
+    class lv extends Error {
+      constructor(vv, zv) {
+        super(vv), this.code = zv, this.name = "MatchMakeError", Object.setPrototypeOf(this, lv.prototype)
       }
     }
-    const uz = "undefined" !== typeof window && "undefined" !== typeof(null === (Fz = null === window || void 0 === window ? void 0 : window.location) || void 0 === Fz ? void 0 : Fz.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class Nz {
+    const Tv = "undefined" !== typeof window && "undefined" !== typeof(null === (hv = null === window || void 0 === window ? void 0 : window.location) || void 0 === hv ? void 0 : hv.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class Wv {
       constructor() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : uz,
-          tz = arguments.length > 1 ? arguments[1] : void 0;
-        var sz, Fz;
-        if ("string" === typeof zz) {
-          const tz = zz.startsWith("/") ? new URL(zz, uz) : new URL(zz),
-            sz = "https:" === tz.protocol || "wss:" === tz.protocol,
-            Fz = Number(tz.port || (sz ? 443 : 80));
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Tv,
+          zv = arguments.length > 1 ? arguments[1] : void 0;
+        var Pv, hv;
+        if ("string" === typeof vv) {
+          const zv = vv.startsWith("/") ? new URL(vv, Tv) : new URL(vv),
+            Pv = "https:" === zv.protocol || "wss:" === zv.protocol,
+            hv = Number(zv.port || (Pv ? 443 : 80));
           this.settings = {
-            hostname: tz.hostname,
-            pathname: tz.pathname,
-            port: Fz,
-            secure: sz,
-            searchParams: tz.searchParams.toString() || void 0
+            hostname: zv.hostname,
+            pathname: zv.pathname,
+            port: hv,
+            secure: Pv,
+            searchParams: zv.searchParams.toString() || void 0
           }
-        } else void 0 === zz.port && (zz.port = zz.secure ? 443 : 80), void 0 === zz.pathname && (zz.pathname = ""), this.settings = zz;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new oz.HTTP(this, (null === tz || void 0 === tz ? void 0 : tz.headers) || {}), this.auth = new vz.Auth(this.http), this.urlBuilder = null === tz || void 0 === tz ? void 0 : tz.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Fz = null === (sz = null === window || void 0 === window ? void 0 : window.location) || void 0 === sz ? void 0 : sz.hostname) || void 0 === Fz ? void 0 : Fz.includes("discordsays.com")) && (this.urlBuilder = Uz.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === vv.port && (vv.port = vv.secure ? 443 : 80), void 0 === vv.pathname && (vv.pathname = ""), this.settings = vv;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new pv.HTTP(this, (null === zv || void 0 === zv ? void 0 : zv.headers) || {}), this.auth = new dv.Auth(this.http), this.urlBuilder = null === zv || void 0 === zv ? void 0 : zv.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (hv = null === (Pv = null === window || void 0 === window ? void 0 : window.location) || void 0 === Pv ? void 0 : Pv.hostname) || void 0 === hv ? void 0 : hv.includes("discordsays.com")) && (this.urlBuilder = Nv.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(zz) {
-        return Wz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            sz = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", zz, tz, sz)
+      joinOrCreate(vv) {
+        return Sv.__awaiter(this, arguments, void 0, (function*(vv) {
+          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Pv = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", vv, zv, Pv)
         }))
       }
-      create(zz) {
-        return Wz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            sz = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", zz, tz, sz)
+      create(vv) {
+        return Sv.__awaiter(this, arguments, void 0, (function*(vv) {
+          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Pv = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", vv, zv, Pv)
         }))
       }
-      join(zz) {
-        return Wz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            sz = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", zz, tz, sz)
+      join(vv) {
+        return Sv.__awaiter(this, arguments, void 0, (function*(vv) {
+          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Pv = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", vv, zv, Pv)
         }))
       }
-      joinById(zz) {
-        return Wz.__awaiter(this, arguments, void 0, (function*(zz) {
-          let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            sz = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", zz, tz, sz)
+      joinById(vv) {
+        return Sv.__awaiter(this, arguments, void 0, (function*(vv) {
+          let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Pv = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", vv, zv, Pv)
         }))
       }
-      reconnect(zz, tz) {
-        return Wz.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof zz && "string" === typeof tz) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [sz, Fz] = zz.split(":");
-          if (!sz || !Fz) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", sz, {
-            reconnectionToken: Fz
-          }, tz)
+      reconnect(vv, zv) {
+        return Sv.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof vv && "string" === typeof zv) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [Pv, hv] = vv.split(":");
+          if (!Pv || !hv) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", Pv, {
+            reconnectionToken: hv
+          }, zv)
         }))
       }
-      consumeSeatReservation(zz, tz, sz) {
-        return Wz.__awaiter(this, void 0, void 0, (function*() {
-          const Fz = this.createRoom(zz.room.name, tz);
-          Fz.roomId = zz.room.roomId, Fz.sessionId = zz.sessionId;
-          const Oz = {
-            sessionId: Fz.sessionId
+      consumeSeatReservation(vv, zv, Pv) {
+        return Sv.__awaiter(this, void 0, void 0, (function*() {
+          const hv = this.createRoom(vv.room.name, zv);
+          hv.roomId = vv.room.roomId, hv.sessionId = vv.sessionId;
+          const gv = {
+            sessionId: hv.sessionId
           };
-          zz.reconnectionToken && (Oz.reconnectionToken = zz.reconnectionToken);
-          const oz = sz || Fz;
-          return Fz.connect(this.buildEndpoint(zz.room, Oz, zz.protocol), zz.devMode && (() => Wz.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Fz.roomId}'...`);
-            let sz = 0;
-            const Xz = () => Wz.__awaiter(this, void 0, void 0, (function*() {
-              sz++;
+          vv.reconnectionToken && (gv.reconnectionToken = vv.reconnectionToken);
+          const pv = Pv || hv;
+          return hv.connect(this.buildEndpoint(vv.room, gv, vv.protocol), vv.devMode && (() => Sv.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${hv.roomId}'...`);
+            let Pv = 0;
+            const ev = () => Sv.__awaiter(this, void 0, void 0, (function*() {
+              Pv++;
               try {
-                yield this.consumeSeatReservation(zz, tz, oz), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Fz.roomId}'`)
-              } catch (Wz) {
-                sz < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${sz} out of 8)`), setTimeout(Xz, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(vv, zv, pv), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${hv.roomId}'`)
+              } catch (Sv) {
+                Pv < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Pv} out of 8)`), setTimeout(ev, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(Xz, 2e3)
-          }))), oz, zz, this.http.headers), new Promise(((zz, tz) => {
-            const sz = (zz, sz) => tz(new Xz.ServerError(zz, sz));
-            oz.onError.once(sz), oz.onJoin.once((() => {
-              oz.onError.remove(sz), setTimeout((() => {
+            setTimeout(ev, 2e3)
+          }))), pv, vv, this.http.headers), new Promise(((vv, zv) => {
+            const Pv = (vv, Pv) => zv(new ev.ServerError(vv, Pv));
+            pv.onError.once(Pv), pv.onJoin.once((() => {
+              pv.onError.remove(Pv), setTimeout((() => {
                 try {
-                  const zz = [141, 56, 86, 101, 253, 220, 201, 166, 141, 79, 179, 74, 197, 208, 102, 129, 163, 98, 16, 23];
-                  zz && oz.Om(128, new Uint8Array(zz))
+                  const vv = [80, 23, 123, 35, 3, 17, 97, 255, 243, 69, 38, 136, 139, 138, 178, 103, 24, 5, 220, 99];
+                  vv && pv.FY(128, new Uint8Array(vv))
                 } catch {}
-              }), 3e3), zz(oz)
+              }), 3e3), vv(pv)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(zz, tz) {
-        return Wz.__awaiter(this, arguments, void 0, (function*(zz, tz) {
-          let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            Fz = arguments.length > 3 ? arguments[3] : void 0,
-            Wz = arguments.length > 4 ? arguments[4] : void 0;
-          const Xz = (yield this.http.post(`matchmake/${zz}/${tz}`, {
+      createMatchMakeRequest(vv, zv) {
+        return Sv.__awaiter(this, arguments, void 0, (function*(vv, zv) {
+          let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            hv = arguments.length > 3 ? arguments[3] : void 0,
+            Sv = arguments.length > 4 ? arguments[4] : void 0;
+          const ev = (yield this.http.post(`matchmake/${vv}/${zv}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(sz)
+            body: JSON.stringify(Pv)
           })).data;
-          if (Xz.error) throw new Kz(Xz.error, Xz.code);
-          return "reconnect" === zz && (Xz.reconnectionToken = sz.reconnectionToken), yield this.consumeSeatReservation(Xz, Fz, Wz)
+          if (ev.error) throw new lv(ev.error, ev.code);
+          return "reconnect" === vv && (ev.reconnectionToken = Pv.reconnectionToken), yield this.consumeSeatReservation(ev, hv, Sv)
         }))
       }
-      createRoom(zz, tz) {
-        return new Oz.UN(zz, tz)
+      createRoom(vv, zv) {
+        return new gv.QT(vv, zv)
       }
-      buildEndpoint(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          Fz = this.settings.searchParams || "";
-        this.http.authToken && (tz._authToken = this.http.authToken);
-        for (const Oz in tz) tz.hasOwnProperty(Oz) && (Fz += (Fz ? "&" : "") + `${Oz}=${tz[Oz]}`);
-        "h3" === sz && (sz = "http");
-        let Wz = this.settings.secure ? `${sz}s://` : `${sz}://`;
-        zz.publicAddress ? Wz += `${zz.publicAddress}` : Wz += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const Xz = `${Wz}/${zz.processId}/${zz.roomId}?${Fz}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(Xz)) : Xz
+      buildEndpoint(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          hv = this.settings.searchParams || "";
+        this.http.authToken && (zv._authToken = this.http.authToken);
+        for (const gv in zv) zv.hasOwnProperty(gv) && (hv += (hv ? "&" : "") + `${gv}=${zv[gv]}`);
+        "h3" === Pv && (Pv = "http");
+        let Sv = this.settings.secure ? `${Pv}s://` : `${Pv}://`;
+        vv.publicAddress ? Sv += `${vv.publicAddress}` : Sv += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const ev = `${Sv}/${vv.processId}/${vv.roomId}?${hv}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(ev)) : ev
       }
       getHttpEndpoint() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const tz = zz.startsWith("/") ? zz : `/${zz}`;
-        let sz = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${tz}`;
-        return this.settings.searchParams && (sz += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(sz)) : sz
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const zv = vv.startsWith("/") ? vv : `/${vv}`;
+        let Pv = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${zv}`;
+        return this.settings.searchParams && (Pv += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Pv)) : Pv
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    Nz.VERSION = "0.16.22", tz.Client = Nz, tz.MatchMakeError = Kz
+    Wv.VERSION = "0.16.22", zv.Client = Wv, zv.MatchMakeError = lv
   },
-  8605: (zz, tz, sz) => {
-    var Fz = sz(8607),
-      Wz = sz(8618);
-    tz.Connection = class {
-      constructor(zz) {
-        if (this.events = {}, "h3" === zz) this.transport = new Fz.H3TransportTransport(this.events);
-        else this.transport = new Wz.WebSocketTransport(this.events)
+  8760: (vv, zv, Pv) => {
+    var hv = Pv(8769),
+      Sv = Pv(8775);
+    zv.Connection = class {
+      constructor(vv) {
+        if (this.events = {}, "h3" === vv) this.transport = new hv.H3TransportTransport(this.events);
+        else this.transport = new Sv.WebSocketTransport(this.events)
       }
-      connect(zz, tz) {
-        this.transport.connect.call(this.transport, zz, tz)
+      connect(vv, zv) {
+        this.transport.connect.call(this.transport, vv, zv)
       }
-      send(zz) {
-        this.transport.send(zz)
+      send(vv) {
+        this.transport.send(vv)
       }
-      sendUnreliable(zz) {
-        this.transport.sendUnreliable(zz)
+      sendUnreliable(vv) {
+        this.transport.sendUnreliable(vv)
       }
-      close(zz, tz) {
-        this.transport.close(zz, tz)
+      close(vv, zv) {
+        this.transport.close(vv, zv)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  8657: (zz, tz, sz) => {
-    var Fz = sz(8595);
+  8815: (vv, zv, Pv) => {
+    var hv = Pv(8753);
 
-    function Wz(zz) {
-      var tz = Object.create(null);
-      return zz && Object.keys(zz).forEach((function(sz) {
-        if ("default" !== sz) {
-          var Fz = Object.getOwnPropertyDescriptor(zz, sz);
-          Object.defineProperty(tz, sz, Fz.get ? Fz : {
+    function Sv(vv) {
+      var zv = Object.create(null);
+      return vv && Object.keys(vv).forEach((function(Pv) {
+        if ("default" !== Pv) {
+          var hv = Object.getOwnPropertyDescriptor(vv, Pv);
+          Object.defineProperty(zv, Pv, hv.get ? hv : {
             enumerable: !0,
             get: function() {
-              return zz[sz]
+              return vv[Pv]
             }
           })
         }
-      })), tz.default = zz, Object.freeze(tz)
+      })), zv.default = vv, Object.freeze(zv)
     }
-    var Xz = Wz(sz(8659));
-    tz.HTTP = class {
-      constructor(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = zz, this.headers = tz
+    var ev = Sv(Pv(8819));
+    zv.HTTP = class {
+      constructor(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = vv, this.headers = zv
       }
-      get(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", zz, tz)
+      get(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", vv, zv)
       }
-      post(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", zz, tz)
+      post(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", vv, zv)
       }
-      del(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", zz, tz)
+      del(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", vv, zv)
       }
-      put(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", zz, tz)
+      put(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", vv, zv)
       }
-      request(zz, tz) {
-        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return Xz[zz](this.client.getHttpEndpoint(tz), this.getOptions(sz)).catch((zz => {
-          var tz;
-          if (zz.aborted) throw new Fz.AbortError("Request aborted");
-          const sz = zz.statusCode,
-            Wz = (null === (tz = zz.data) || void 0 === tz ? void 0 : tz.error) || zz.statusMessage || zz.message;
-          if (!sz && !Wz) throw zz;
-          throw new Fz.ServerError(sz, Wz)
+      request(vv, zv) {
+        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return ev[vv](this.client.getHttpEndpoint(zv), this.getOptions(Pv)).catch((vv => {
+          var zv;
+          if (vv.aborted) throw new hv.AbortError("Request aborted");
+          const Pv = vv.statusCode,
+            Sv = (null === (zv = vv.data) || void 0 === zv ? void 0 : zv.error) || vv.statusMessage || vv.message;
+          if (!Pv && !Sv) throw vv;
+          throw new hv.ServerError(Pv, Sv)
         }))
       }
-      getOptions(zz) {
-        return zz.headers = Object.assign({}, this.headers, zz.headers), this.authToken && (zz.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (zz.withCredentials = !0), zz
+      getOptions(vv) {
+        return vv.headers = Object.assign({}, this.headers, vv.headers), this.authToken && (vv.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (vv.withCredentials = !0), vv
       }
     }
   },
-  8626: (zz, tz) => {
-    var sz, Fz;
-    tz.Protocol = void 0, (sz = tz.Protocol || (tz.Protocol = {}))[sz.HANDSHAKE = 9] = "HANDSHAKE", sz[sz.JOIN_ROOM = 10] = "JOIN_ROOM", sz[sz.ERROR = 11] = "ERROR", sz[sz.LEAVE_ROOM = 12] = "LEAVE_ROOM", sz[sz.ROOM_DATA = 13] = "ROOM_DATA", sz[sz.ROOM_STATE = 14] = "ROOM_STATE", sz[sz.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", sz[sz.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", sz[sz.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", tz.ErrorCode = void 0, (Fz = tz.ErrorCode || (tz.ErrorCode = {}))[Fz.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Fz[Fz.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Fz[Fz.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Fz[Fz.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Fz[Fz.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Fz[Fz.AUTH_FAILED = 4215] = "AUTH_FAILED", Fz[Fz.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  8784: (vv, zv) => {
+    var Pv, hv;
+    zv.Protocol = void 0, (Pv = zv.Protocol || (zv.Protocol = {}))[Pv.HANDSHAKE = 9] = "HANDSHAKE", Pv[Pv.JOIN_ROOM = 10] = "JOIN_ROOM", Pv[Pv.ERROR = 11] = "ERROR", Pv[Pv.LEAVE_ROOM = 12] = "LEAVE_ROOM", Pv[Pv.ROOM_DATA = 13] = "ROOM_DATA", Pv[Pv.ROOM_STATE = 14] = "ROOM_STATE", Pv[Pv.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Pv[Pv.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Pv[Pv.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", zv.ErrorCode = void 0, (hv = zv.ErrorCode || (zv.ErrorCode = {}))[hv.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", hv[hv.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", hv[hv.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", hv[hv.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", hv[hv.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", hv[hv.AUTH_FAILED = 4215] = "AUTH_FAILED", hv[hv.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  8599: (zz, tz, sz) => {
-    var Fz = sz(8605),
-      Wz = sz(8626),
-      Xz = sz(8628),
-      Oz = sz(8634),
-      oz = sz(8638),
-      vz = sz(8611),
-      Uz = sz(8642),
-      Kz = sz(8595),
-      uz = sz(8650);
-    class Nz {
-      constructor(zz, tz) {
-        this.onStateChange = oz.createSignal(), this.onError = oz.createSignal(), this.qB = oz.createSignal(), this.onJoin = oz.createSignal(), this.hasJoined = !1, this.onMessageHandlers = Oz.createNanoEvents(), this.roomId = null, this.name = zz, this.packr = new uz.Packr, this.packr.encode(void 0), tz && (this.xH = new(Xz.getSerializer("schema")), this.rootSchema = tz, this.xH.state = new tz), this.onError(((zz, tz) => {
-          var sz;
-          return null === (sz = console.warn) || void 0 === sz ? void 0 : sz.call(console, `colyseus.js - onError => (${zz}) ${tz}`)
-        })), this.qB((() => this.YH()))
+  8758: (vv, zv, Pv) => {
+    var hv = Pv(8760),
+      Sv = Pv(8784),
+      ev = Pv(8793),
+      gv = Pv(8800),
+      pv = Pv(8805),
+      dv = Pv(8772),
+      Nv = Pv(8808),
+      lv = Pv(8753),
+      Tv = Pv(8812);
+    class Wv {
+      constructor(vv, zv) {
+        this.onStateChange = pv.createSignal(), this.onError = pv.createSignal(), this.Tm = pv.createSignal(), this.onJoin = pv.createSignal(), this.hasJoined = !1, this.onMessageHandlers = gv.createNanoEvents(), this.roomId = null, this.name = vv, this.packr = new Tv.Packr, this.packr.encode(void 0), zv && (this.uC = new(ev.getSerializer("schema")), this.rootSchema = zv, this.uC.state = new zv), this.onError(((vv, zv) => {
+          var Pv;
+          return null === (Pv = console.warn) || void 0 === Pv ? void 0 : Pv.call(console, `colyseus.js - onError => (${vv}) ${zv}`)
+        })), this.Tm((() => this.rC()))
       }
-      connect(zz, tz) {
-        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          Wz = arguments.length > 3 ? arguments[3] : void 0,
-          Xz = arguments.length > 4 ? arguments[4] : void 0;
-        const Oz = new Fz.Connection(Wz.protocol);
-        if (sz.connection = Oz, Oz.events.onmessage = Nz.prototype.onMessageCallback.bind(sz), Oz.events.onclose = function(zz) {
-            var Fz;
-            if (!sz.hasJoined) return null === (Fz = console.warn) || void 0 === Fz || Fz.call(console, `Room connection was closed unexpectedly (${zz.code}): ${zz.reason}`), void sz.onError.invoke(zz.code, zz.reason);
-            zz.code === Kz.CloseCode.DEVMODE_RESTART && tz ? tz() : (sz.qB.invoke(zz.code, zz.reason), sz.destroy())
-          }, Oz.events.onerror = function(zz) {
-            var tz;
-            null === (tz = console.warn) || void 0 === tz || tz.call(console, `Room, onError (${zz.code}): ${zz.reason}`), sz.onError.invoke(zz.code, zz.reason)
-          }, "h3" === Wz.protocol) {
-          const tz = new URL(zz);
-          Oz.connect(tz.origin, Wz)
-        } else Oz.connect(zz, Xz)
+      connect(vv, zv) {
+        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Sv = arguments.length > 3 ? arguments[3] : void 0,
+          ev = arguments.length > 4 ? arguments[4] : void 0;
+        const gv = new hv.Connection(Sv.protocol);
+        if (Pv.connection = gv, gv.events.onmessage = Wv.prototype.onMessageCallback.bind(Pv), gv.events.onclose = function(vv) {
+            var hv;
+            if (!Pv.hasJoined) return null === (hv = console.warn) || void 0 === hv || hv.call(console, `Room connection was closed unexpectedly (${vv.code}): ${vv.reason}`), void Pv.onError.invoke(vv.code, vv.reason);
+            vv.code === lv.CloseCode.DEVMODE_RESTART && zv ? zv() : (Pv.Tm.invoke(vv.code, vv.reason), Pv.destroy())
+          }, gv.events.onerror = function(vv) {
+            var zv;
+            null === (zv = console.warn) || void 0 === zv || zv.call(console, `Room, onError (${vv.code}): ${vv.reason}`), Pv.onError.invoke(vv.code, vv.reason)
+          }, "h3" === Sv.protocol) {
+          const zv = new URL(vv);
+          gv.connect(zv.origin, Sv)
+        } else gv.connect(vv, ev)
       }
       leave() {
-        let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((tz => {
-          this.qB((zz => tz(zz))), this.connection ? zz ? (this.packr.buffer[0] = Wz.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.qB.invoke(Kz.CloseCode.CONSENTED)
+        let vv = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((zv => {
+          this.Tm((vv => zv(vv))), this.connection ? vv ? (this.packr.buffer[0] = Sv.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.Tm.invoke(lv.CloseCode.CONSENTED)
         }))
       }
-      nB(zz, tz) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(zz), tz)
+      rG(vv, zv) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(vv), zv)
       }
-      send(zz, tz) {
-        const sz = {
+      send(vv, zv) {
+        const Pv = {
           offset: 1
         };
-        this.packr.buffer[0] = Wz.Protocol.ROOM_DATA, "string" === typeof zz ? vz.encode.string(this.packr.buffer, zz, sz) : vz.encode.number(this.packr.buffer, zz, sz), this.packr.position = 0;
-        const Fz = void 0 !== tz ? this.packr.pack(tz, 2048 + sz.offset) : this.packr.buffer.subarray(0, sz.offset);
-        this.connection.send(Fz)
+        this.packr.buffer[0] = Sv.Protocol.ROOM_DATA, "string" === typeof vv ? dv.encode.string(this.packr.buffer, vv, Pv) : dv.encode.number(this.packr.buffer, vv, Pv), this.packr.position = 0;
+        const hv = void 0 !== zv ? this.packr.pack(zv, 2048 + Pv.offset) : this.packr.buffer.subarray(0, Pv.offset);
+        this.connection.send(hv)
       }
-      sendUnreliable(zz, tz) {
-        const sz = {
+      sendUnreliable(vv, zv) {
+        const Pv = {
           offset: 1
         };
-        this.packr.buffer[0] = Wz.Protocol.ROOM_DATA, "string" === typeof zz ? vz.encode.string(this.packr.buffer, zz, sz) : vz.encode.number(this.packr.buffer, zz, sz), this.packr.position = 0;
-        const Fz = void 0 !== tz ? this.packr.pack(tz, 2048 + sz.offset) : this.packr.buffer.subarray(0, sz.offset);
-        this.connection.sendUnreliable(Fz)
+        this.packr.buffer[0] = Sv.Protocol.ROOM_DATA, "string" === typeof vv ? dv.encode.string(this.packr.buffer, vv, Pv) : dv.encode.number(this.packr.buffer, vv, Pv), this.packr.position = 0;
+        const hv = void 0 !== zv ? this.packr.pack(zv, 2048 + Pv.offset) : this.packr.buffer.subarray(0, Pv.offset);
+        this.connection.sendUnreliable(hv)
       }
-      Om(zz, tz) {
-        const sz = {
+      FY(vv, zv) {
+        const Pv = {
           offset: 1
         };
-        if (this.packr.buffer[0] = Wz.Protocol.ROOM_DATA_BYTES, "string" === typeof zz ? vz.encode.string(this.packr.buffer, zz, sz) : vz.encode.number(this.packr.buffer, zz, sz), tz.byteLength + sz.offset > this.packr.buffer.byteLength) {
-          const zz = new Uint8Array(sz.offset + tz.byteLength);
-          zz.set(this.packr.buffer), this.packr.useBuffer(zz)
+        if (this.packr.buffer[0] = Sv.Protocol.ROOM_DATA_BYTES, "string" === typeof vv ? dv.encode.string(this.packr.buffer, vv, Pv) : dv.encode.number(this.packr.buffer, vv, Pv), zv.byteLength + Pv.offset > this.packr.buffer.byteLength) {
+          const vv = new Uint8Array(Pv.offset + zv.byteLength);
+          vv.set(this.packr.buffer), this.packr.useBuffer(vv)
         }
-        this.packr.buffer.set(tz, sz.offset), this.connection.send(this.packr.buffer.subarray(0, sz.offset + tz.byteLength))
+        this.packr.buffer.set(zv, Pv.offset), this.connection.send(this.packr.buffer.subarray(0, Pv.offset + zv.byteLength))
       }
       get state() {
-        return this.xH.getState()
+        return this.uC.getState()
       }
-      YH() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.qB.clear(), this.onMessageHandlers.events = {}, this.xH instanceof Uz.GJ && (this.xH.Gw.root.callbacks = {})
+      rC() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.Tm.clear(), this.onMessageHandlers.events = {}, this.uC instanceof Nv.jD && (this.uC.ow.root.callbacks = {})
       }
-      onMessageCallback(zz) {
-        const tz = new Uint8Array(zz.data),
-          sz = {
+      onMessageCallback(vv) {
+        const zv = new Uint8Array(vv.data),
+          Pv = {
             offset: 1
           },
-          Fz = tz[0];
-        if (Fz === Wz.Protocol.JOIN_ROOM) {
-          const zz = vz.decode.utf8Read(tz, sz, tz[sz.offset++]);
-          if (this.serializerId = vz.decode.utf8Read(tz, sz, tz[sz.offset++]), !this.xH) {
-            const zz = Xz.getSerializer(this.serializerId);
-            this.xH = new zz
+          hv = zv[0];
+        if (hv === Sv.Protocol.JOIN_ROOM) {
+          const vv = dv.decode.utf8Read(zv, Pv, zv[Pv.offset++]);
+          if (this.serializerId = dv.decode.utf8Read(zv, Pv, zv[Pv.offset++]), !this.uC) {
+            const vv = ev.getSerializer(this.serializerId);
+            this.uC = new vv
           }
-          tz.byteLength > sz.offset && this.xH.handshake && this.xH.handshake(tz, sz), this.reconnectionToken = `${this.roomId}:${zz}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Wz.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (Fz === Wz.Protocol.ERROR) {
-          const zz = vz.decode.number(tz, sz),
-            Fz = vz.decode.string(tz, sz);
-          this.onError.invoke(zz, Fz)
-        } else if (Fz === Wz.Protocol.LEAVE_ROOM) this.leave();
-        else if (Fz === Wz.Protocol.ROOM_STATE) this.xH.setState(tz, sz), this.onStateChange.invoke(this.xH.getState());
-        else if (Fz === Wz.Protocol.ROOM_STATE_PATCH) this.xH.patch(tz, sz), this.onStateChange.invoke(this.xH.getState());
-        else if (Fz === Wz.Protocol.ROOM_DATA) {
-          const zz = vz.decode.stringCheck(tz, sz) ? vz.decode.string(tz, sz) : vz.decode.number(tz, sz),
-            Fz = tz.byteLength > sz.offset ? uz.unpack(tz, {
-              start: sz.offset
+          zv.byteLength > Pv.offset && this.uC.handshake && this.uC.handshake(zv, Pv), this.reconnectionToken = `${this.roomId}:${vv}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Sv.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (hv === Sv.Protocol.ERROR) {
+          const vv = dv.decode.number(zv, Pv),
+            hv = dv.decode.string(zv, Pv);
+          this.onError.invoke(vv, hv)
+        } else if (hv === Sv.Protocol.LEAVE_ROOM) this.leave();
+        else if (hv === Sv.Protocol.ROOM_STATE) this.uC.setState(zv, Pv), this.onStateChange.invoke(this.uC.getState());
+        else if (hv === Sv.Protocol.ROOM_STATE_PATCH) this.uC.patch(zv, Pv), this.onStateChange.invoke(this.uC.getState());
+        else if (hv === Sv.Protocol.ROOM_DATA) {
+          const vv = dv.decode.stringCheck(zv, Pv) ? dv.decode.string(zv, Pv) : dv.decode.number(zv, Pv),
+            hv = zv.byteLength > Pv.offset ? Tv.unpack(zv, {
+              start: Pv.offset
             }) : void 0;
-          this.dispatchMessage(zz, Fz)
-        } else if (Fz === Wz.Protocol.ROOM_DATA_BYTES) {
-          const zz = vz.decode.stringCheck(tz, sz) ? vz.decode.string(tz, sz) : vz.decode.number(tz, sz);
-          this.dispatchMessage(zz, tz.subarray(sz.offset))
+          this.dispatchMessage(vv, hv)
+        } else if (hv === Sv.Protocol.ROOM_DATA_BYTES) {
+          const vv = dv.decode.stringCheck(zv, Pv) ? dv.decode.string(zv, Pv) : dv.decode.number(zv, Pv);
+          this.dispatchMessage(vv, zv.subarray(Pv.offset))
         }
       }
-      dispatchMessage(zz, tz) {
-        var sz;
-        const Fz = this.getMessageHandlerKey(zz);
-        this.onMessageHandlers.events[Fz] ? this.onMessageHandlers.emit(Fz, tz) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", zz, tz) : null === (sz = console.warn) || void 0 === sz || sz.call(console, `colyseus.js: onMessage() not registered for type '${zz}'.`)
+      dispatchMessage(vv, zv) {
+        var Pv;
+        const hv = this.getMessageHandlerKey(vv);
+        this.onMessageHandlers.events[hv] ? this.onMessageHandlers.emit(hv, zv) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", vv, zv) : null === (Pv = console.warn) || void 0 === Pv || Pv.call(console, `colyseus.js: onMessage() not registered for type '${vv}'.`)
       }
       destroy() {
-        this.xH && this.xH.teardown()
+        this.uC && this.uC.teardown()
       }
-      getMessageHandlerKey(zz) {
-        switch (typeof zz) {
+      getMessageHandlerKey(vv) {
+        switch (typeof vv) {
           case "string":
-            return zz;
+            return vv;
           case "number":
-            return `i${zz}`;
+            return `i${vv}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    tz.UN = Nz
+    zv.QT = Wv
   },
-  8671: (zz, tz, sz) => {
-    var Fz = sz(8589);
-    let Wz;
+  8831: (vv, zv, Pv) => {
+    var hv = Pv(8746);
+    let Sv;
 
-    function Xz() {
-      if (!Wz) try {
-        Wz = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (zz) {}
-      return Wz || "undefined" === typeof globalThis.indexedDB || (Wz = new Oz), Wz || (Wz = {
+    function ev() {
+      if (!Sv) try {
+        Sv = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (vv) {}
+      return Sv || "undefined" === typeof globalThis.indexedDB || (Sv = new gv), Sv || (Sv = {
         cache: {},
-        setItem: function(zz, tz) {
-          this.cache[zz] = tz
+        setItem: function(vv, zv) {
+          this.cache[vv] = zv
         },
-        getItem: function(zz) {
-          this.cache[zz]
+        getItem: function(vv) {
+          this.cache[vv]
         },
-        removeItem: function(zz) {
-          delete this.cache[zz]
+        removeItem: function(vv) {
+          delete this.cache[vv]
         }
-      }), Wz
+      }), Sv
     }
-    class Oz {
+    class gv {
       constructor() {
-        this.dbPromise = new Promise((zz => {
-          const tz = indexedDB.open("_colyseus_storage", 1);
-          tz.onupgradeneeded = () => tz.result.createObjectStore("store"), tz.onsuccess = () => zz(tz.result)
+        this.dbPromise = new Promise((vv => {
+          const zv = indexedDB.open("_colyseus_storage", 1);
+          zv.onupgradeneeded = () => zv.result.createObjectStore("store"), zv.onsuccess = () => vv(zv.result)
         }))
       }
-      tx(zz, tz) {
-        return Fz.__awaiter(this, void 0, void 0, (function*() {
-          const sz = (yield this.dbPromise).transaction("store", zz).objectStore("store");
-          return tz(sz)
+      tx(vv, zv) {
+        return hv.__awaiter(this, void 0, void 0, (function*() {
+          const Pv = (yield this.dbPromise).transaction("store", vv).objectStore("store");
+          return zv(Pv)
         }))
       }
-      setItem(zz, tz) {
-        return this.tx("readwrite", (sz => sz.put(tz, zz))).then()
+      setItem(vv, zv) {
+        return this.tx("readwrite", (Pv => Pv.put(zv, vv))).then()
       }
-      getItem(zz) {
-        return Fz.__awaiter(this, void 0, void 0, (function*() {
-          const tz = yield this.tx("readonly", (tz => tz.get(zz)));
-          return new Promise((zz => {
-            tz.onsuccess = () => zz(tz.result)
+      getItem(vv) {
+        return hv.__awaiter(this, void 0, void 0, (function*() {
+          const zv = yield this.tx("readonly", (zv => zv.get(vv)));
+          return new Promise((vv => {
+            zv.onsuccess = () => vv(zv.result)
           }))
         }))
       }
-      removeItem(zz) {
-        return this.tx("readwrite", (tz => tz.delete(zz))).then()
+      removeItem(vv) {
+        return this.tx("readwrite", (zv => zv.delete(vv))).then()
       }
     }
-    tz.getItem = function(zz, tz) {
-      const sz = Xz().getItem(zz);
-      "undefined" !== typeof Promise && sz instanceof Promise ? sz.then((zz => tz(zz))) : tz(sz)
-    }, tz.removeItem = function(zz) {
-      Xz().removeItem(zz)
-    }, tz.setItem = function(zz, tz) {
-      Xz().setItem(zz, tz)
+    zv.getItem = function(vv, zv) {
+      const Pv = ev().getItem(vv);
+      "undefined" !== typeof Promise && Pv instanceof Promise ? Pv.then((vv => zv(vv))) : zv(Pv)
+    }, zv.removeItem = function(vv) {
+      ev().removeItem(vv)
+    }, zv.setItem = function(vv, zv) {
+      ev().setItem(vv, zv)
     }
   },
-  8634: (zz, tz) => {
-    tz.createNanoEvents = () => ({
-      emit(zz) {
-        let tz = this.events[zz] || [];
-        for (var sz = arguments.length, Fz = new Array(sz > 1 ? sz - 1 : 0), Wz = 1; Wz < sz; Wz++) Fz[Wz - 1] = arguments[Wz];
-        for (let Xz = 0, Oz = tz.length; Xz < Oz; Xz++) tz[Xz](...Fz)
+  8800: (vv, zv) => {
+    zv.createNanoEvents = () => ({
+      emit(vv) {
+        let zv = this.events[vv] || [];
+        for (var Pv = arguments.length, hv = new Array(Pv > 1 ? Pv - 1 : 0), Sv = 1; Sv < Pv; Sv++) hv[Sv - 1] = arguments[Sv];
+        for (let ev = 0, gv = zv.length; ev < gv; ev++) zv[ev](...hv)
       },
       events: {},
-      on(zz, tz) {
-        var sz;
-        return (null === (sz = this.events[zz]) || void 0 === sz ? void 0 : sz.push(tz)) || (this.events[zz] = [tz]), () => {
-          var sz;
-          this.events[zz] = null === (sz = this.events[zz]) || void 0 === sz ? void 0 : sz.filter((zz => tz !== zz))
+      on(vv, zv) {
+        var Pv;
+        return (null === (Pv = this.events[vv]) || void 0 === Pv ? void 0 : Pv.push(zv)) || (this.events[vv] = [zv]), () => {
+          var Pv;
+          this.events[vv] = null === (Pv = this.events[vv]) || void 0 === Pv ? void 0 : Pv.filter((vv => zv !== vv))
         }
       }
     })
   },
-  8638: (zz, tz) => {
-    class sz {
+  8805: (vv, zv) => {
+    class Pv {
       constructor() {
         this.handlers = []
       }
-      register(zz) {
-        return this.handlers.push(zz), this
+      register(vv) {
+        return this.handlers.push(vv), this
       }
       invoke() {
-        for (var zz = arguments.length, tz = new Array(zz), sz = 0; sz < zz; sz++) tz[sz] = arguments[sz];
-        this.handlers.forEach((zz => zz.apply(this, tz)))
+        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
+        this.handlers.forEach((vv => vv.apply(this, zv)))
       }
       invokeAsync() {
-        for (var zz = arguments.length, tz = new Array(zz), sz = 0; sz < zz; sz++) tz[sz] = arguments[sz];
-        return Promise.all(this.handlers.map((zz => zz.apply(this, tz))))
+        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
+        return Promise.all(this.handlers.map((vv => vv.apply(this, zv))))
       }
-      remove(zz) {
-        const tz = this.handlers.indexOf(zz);
-        this.handlers[tz] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(vv) {
+        const zv = this.handlers.indexOf(vv);
+        this.handlers[zv] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    tz.EventEmitter = sz, tz.createSignal = function() {
-      const zz = new sz;
+    zv.EventEmitter = Pv, zv.createSignal = function() {
+      const vv = new Pv;
 
-      function tz(tz) {
-        return zz.register(tz, null === this)
+      function zv(zv) {
+        return vv.register(zv, null === this)
       }
-      return tz.once = tz => {
-        const sz = function() {
-          for (var Fz = arguments.length, Wz = new Array(Fz), Xz = 0; Xz < Fz; Xz++) Wz[Xz] = arguments[Xz];
-          tz.apply(this, Wz), zz.remove(sz)
+      return zv.once = zv => {
+        const Pv = function() {
+          for (var hv = arguments.length, Sv = new Array(hv), ev = 0; ev < hv; ev++) Sv[ev] = arguments[ev];
+          zv.apply(this, Sv), vv.remove(Pv)
         };
-        zz.register(sz)
-      }, tz.remove = tz => zz.remove(tz), tz.invoke = function() {
-        return zz.invoke(...arguments)
-      }, tz.invokeAsync = function() {
-        return zz.invokeAsync(...arguments)
-      }, tz.clear = () => zz.clear(), tz
+        vv.register(Pv)
+      }, zv.remove = zv => vv.remove(zv), zv.invoke = function() {
+        return vv.invoke(...arguments)
+      }, zv.invokeAsync = function() {
+        return vv.invokeAsync(...arguments)
+      }, zv.clear = () => vv.clear(), zv
     }
   },
-  8595: (zz, tz) => {
-    var sz;
-    tz.CloseCode = void 0, (sz = tz.CloseCode || (tz.CloseCode = {}))[sz.CONSENTED = 4e3] = "CONSENTED", sz[sz.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class Fz extends Error {
-      constructor(zz, tz) {
-        super(tz), this.name = "ServerError", this.code = zz
+  8753: (vv, zv) => {
+    var Pv;
+    zv.CloseCode = void 0, (Pv = zv.CloseCode || (zv.CloseCode = {}))[Pv.CONSENTED = 4e3] = "CONSENTED", Pv[Pv.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class hv extends Error {
+      constructor(vv, zv) {
+        super(zv), this.name = "ServerError", this.code = vv
       }
     }
-    class Wz extends Error {
-      constructor(zz) {
-        super(zz), this.name = "AbortError"
+    class Sv extends Error {
+      constructor(vv) {
+        super(vv), this.name = "AbortError"
       }
     }
-    tz.AbortError = Wz, tz.ServerError = Fz
+    zv.AbortError = Sv, zv.ServerError = hv
   },
-  8570: (zz, tz, sz) => {
-    sz(8577);
-    var Fz = sz(8586),
-      Wz = sz(8626),
-      Xz = sz(8599),
-      Oz = sz(8666),
-      oz = sz(8595),
-      vz = sz(8642),
-      Uz = sz(8684),
-      Kz = sz(8628);
-    Kz.registerSerializer("schema", vz.GJ), Kz.registerSerializer("none", Uz.NoneSerializer), tz.Client = Fz.Client, tz.MatchMakeError = Fz.MatchMakeError, Object.defineProperty(tz, "ErrorCode", {
+  8736: (vv, zv, Pv) => {
+    Pv(8738);
+    var hv = Pv(8743),
+      Sv = Pv(8784),
+      ev = Pv(8758),
+      gv = Pv(8823),
+      pv = Pv(8753),
+      dv = Pv(8808),
+      Nv = Pv(8843),
+      lv = Pv(8793);
+    lv.registerSerializer("schema", dv.jD), lv.registerSerializer("none", Nv.NoneSerializer), zv.Client = hv.Client, zv.MatchMakeError = hv.MatchMakeError, Object.defineProperty(zv, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return Wz.ErrorCode
+        return Sv.ErrorCode
       }
-    }), Object.defineProperty(tz, "Protocol", {
+    }), Object.defineProperty(zv, "Protocol", {
       enumerable: !0,
       get: function() {
-        return Wz.Protocol
+        return Sv.Protocol
       }
-    }), tz.UN = Xz.UN, tz.Auth = Oz.Auth, tz.ServerError = oz.ServerError, tz.GJ = vz.GJ, tz.getStateCallbacks = vz.getStateCallbacks, tz.registerSerializer = Kz.registerSerializer
+    }), zv.QT = ev.QT, zv.Auth = gv.Auth, zv.ServerError = pv.ServerError, zv.jD = dv.jD, zv.getStateCallbacks = dv.getStateCallbacks, zv.registerSerializer = lv.registerSerializer
   },
-  8577: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = zz => null !== zz && "object" === typeof zz && zz.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  8738: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = vv => null !== vv && "object" === typeof vv && vv.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  8684: (zz, tz) => {
-    tz.NoneSerializer = class {
-      setState(zz) {}
+  8843: (vv, zv) => {
+    zv.NoneSerializer = class {
+      setState(vv) {}
       getState() {
         return null
       }
-      patch(zz) {}
+      patch(vv) {}
       teardown() {}
-      handshake(zz) {}
+      handshake(vv) {}
     }
   },
-  8642: (zz, tz, sz) => {
-    var Fz = sz(8611);
-    tz.GJ = class {
-      setState(zz, tz) {
-        this.Gw.decode(zz, tz)
+  8808: (vv, zv, Pv) => {
+    var hv = Pv(8772);
+    zv.jD = class {
+      setState(vv, zv) {
+        this.ow.decode(vv, zv)
       }
       getState() {
         return this.state
       }
-      patch(zz, tz) {
-        return this.Gw.decode(zz, tz)
+      patch(vv, zv) {
+        return this.ow.decode(vv, zv)
       }
       teardown() {
-        this.Gw.root.clearRefs()
+        this.ow.root.clearRefs()
       }
-      handshake(zz, tz) {
-        this.state ? (Fz.Reflection.decode(zz, tz), this.Gw = new Fz.Decoder(this.state)) : (this.Gw = Fz.Reflection.decode(zz, tz), this.state = this.Gw.state)
+      handshake(vv, zv) {
+        this.state ? (hv.Reflection.decode(vv, zv), this.ow = new hv.Decoder(this.state)) : (this.ow = hv.Reflection.decode(vv, zv), this.state = this.ow.state)
       }
-    }, tz.getStateCallbacks = function(zz) {
+    }, zv.getStateCallbacks = function(vv) {
       try {
-        return Fz.getDecoderStateCallbacks(zz.xH.Gw)
-      } catch (tz) {
+        return hv.getDecoderStateCallbacks(vv.uC.ow)
+      } catch (zv) {
         return
       }
     }
   },
-  8628: (zz, tz) => {
-    const sz = {};
-    tz.getSerializer = function(zz) {
-      const tz = sz[zz];
-      if (!tz) throw new Error("missing serializer: " + zz);
-      return tz
-    }, tz.registerSerializer = function(zz, tz) {
-      sz[zz] = tz
+  8793: (vv, zv) => {
+    const Pv = {};
+    zv.getSerializer = function(vv) {
+      const zv = Pv[vv];
+      if (!zv) throw new Error("missing serializer: " + vv);
+      return zv
+    }, zv.registerSerializer = function(vv, zv) {
+      Pv[vv] = zv
     }
   },
-  8607: (zz, tz, sz) => {
-    var Fz = sz(8589),
-      Wz = sz(8611);
-    tz.H3TransportTransport = class {
-      constructor(zz) {
-        this.events = zz, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  8769: (vv, zv, Pv) => {
+    var hv = Pv(8746),
+      Sv = Pv(8772);
+    zv.H3TransportTransport = class {
+      constructor(vv) {
+        this.events = vv, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const sz = tz.fingerprint && {
+      connect(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Pv = zv.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(tz.fingerprint).buffer
+            value: new Uint8Array(zv.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(zz, sz), this.wt.ready.then((zz => {
-          console.log("WebTransport ready!", zz), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((zz => {
-            this.reader = zz.value.readable.getReader(), this.writer = zz.value.writable.getWriter(), this.sendSeatReservation(tz.room.roomId, tz.sessionId, tz.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((zz => {
-            console.error("failed to read incoming stream", zz), console.error("TODO: close the connection")
+        this.wt = new WebTransport(vv, Pv), this.wt.ready.then((vv => {
+          console.log("WebTransport ready!", vv), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((vv => {
+            this.reader = vv.value.readable.getReader(), this.writer = vv.value.writable.getWriter(), this.sendSeatReservation(zv.room.roomId, zv.sessionId, zv.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((vv => {
+            console.error("failed to read incoming stream", vv), console.error("TODO: close the connection")
           }))
-        })).catch((zz => {
-          console.log("WebTransport not ready!", zz), this._close()
-        })), this.wt.closed.then((zz => {
-          console.log("WebTransport closed w/ success", zz), this.events.onclose({
-            code: zz.closeCode,
-            reason: zz.reason
+        })).catch((vv => {
+          console.log("WebTransport not ready!", vv), this._close()
+        })), this.wt.closed.then((vv => {
+          console.log("WebTransport closed w/ success", vv), this.events.onclose({
+            code: vv.closeCode,
+            reason: vv.reason
           })
-        })).catch((zz => {
-          console.log("WebTransport closed w/ error", zz), this.events.onerror(zz), this.events.onclose({
-            code: zz.closeCode,
-            reason: zz.reason
+        })).catch((vv => {
+          console.log("WebTransport closed w/ error", vv), this.events.onerror(vv), this.events.onclose({
+            code: vv.closeCode,
+            reason: vv.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(zz) {
-        const tz = Wz.encode.number(this.lengthPrefixBuffer, zz.length, {
+      send(vv) {
+        const zv = Sv.encode.number(this.lengthPrefixBuffer, vv.length, {
             offset: 0
           }),
-          sz = new Uint8Array(tz + zz.length);
-        sz.set(this.lengthPrefixBuffer.subarray(0, tz), 0), sz.set(zz, tz), this.writer.write(sz)
+          Pv = new Uint8Array(zv + vv.length);
+        Pv.set(this.lengthPrefixBuffer.subarray(0, zv), 0), Pv.set(vv, zv), this.writer.write(Pv)
       }
-      sendUnreliable(zz) {
-        const tz = Wz.encode.number(this.lengthPrefixBuffer, zz.length, {
+      sendUnreliable(vv) {
+        const zv = Sv.encode.number(this.lengthPrefixBuffer, vv.length, {
             offset: 0
           }),
-          sz = new Uint8Array(tz + zz.length);
-        sz.set(this.lengthPrefixBuffer.subarray(0, tz), 0), sz.set(zz, tz), this.unreliableWriter.write(sz)
+          Pv = new Uint8Array(zv + vv.length);
+        Pv.set(this.lengthPrefixBuffer.subarray(0, zv), 0), Pv.set(vv, zv), this.unreliableWriter.write(Pv)
       }
-      close(zz, tz) {
+      close(vv, zv) {
         try {
           this.wt.close({
-            closeCode: zz,
-            reason: tz
+            closeCode: vv,
+            reason: zv
           })
-        } catch (sz) {
-          console.error(sz)
+        } catch (Pv) {
+          console.error(Pv)
         }
       }
       readIncomingData() {
-        return Fz.__awaiter(this, void 0, void 0, (function*() {
-          let zz;
+        return hv.__awaiter(this, void 0, void 0, (function*() {
+          let vv;
           for (; this.isOpen;) {
             try {
-              zz = yield this.reader.read();
-              const tz = zz.value,
-                sz = {
+              vv = yield this.reader.read();
+              const zv = vv.value,
+                Pv = {
                   offset: 0
                 };
               do {
-                const zz = Wz.decode.number(tz, sz);
+                const vv = Sv.decode.number(zv, Pv);
                 this.events.onmessage({
-                  data: tz.subarray(sz.offset, sz.offset + zz)
-                }), sz.offset += zz
-              } while (sz.offset < tz.length)
-            } catch (tz) {
-              -1 === tz.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", tz);
+                  data: zv.subarray(Pv.offset, Pv.offset + vv)
+                }), Pv.offset += vv
+              } while (Pv.offset < zv.length)
+            } catch (zv) {
+              -1 === zv.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", zv);
               break
             }
-            if (zz.done) break
+            if (vv.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return Fz.__awaiter(this, void 0, void 0, (function*() {
-          let zz;
+        return hv.__awaiter(this, void 0, void 0, (function*() {
+          let vv;
           for (; this.isOpen;) {
             try {
-              zz = yield this.unreliableReader.read();
-              const tz = zz.value,
-                sz = {
+              vv = yield this.unreliableReader.read();
+              const zv = vv.value,
+                Pv = {
                   offset: 0
                 };
               do {
-                const zz = Wz.decode.number(tz, sz);
+                const vv = Sv.decode.number(zv, Pv);
                 this.events.onmessage({
-                  data: tz.subarray(sz.offset, sz.offset + zz)
-                }), sz.offset += zz
-              } while (sz.offset < tz.length)
-            } catch (tz) {
-              -1 === tz.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", tz);
+                  data: zv.subarray(Pv.offset, Pv.offset + vv)
+                }), Pv.offset += vv
+              } while (Pv.offset < zv.length)
+            } catch (zv) {
+              -1 === zv.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", zv);
               break
             }
-            if (zz.done) break
+            if (vv.done) break
           }
         }))
       }
-      sendSeatReservation(zz, tz, sz) {
-        const Fz = {
+      sendSeatReservation(vv, zv, Pv) {
+        const hv = {
             offset: 0
           },
-          Xz = [];
-        Wz.encode.string(Xz, zz, Fz), Wz.encode.string(Xz, tz, Fz), sz && Wz.encode.string(Xz, sz, Fz), this.writer.write(new Uint8Array(Xz).buffer)
+          ev = [];
+        Sv.encode.string(ev, vv, hv), Sv.encode.string(ev, zv, hv), Pv && Sv.encode.string(ev, Pv, hv), this.writer.write(new Uint8Array(ev).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  8618: (zz, tz, sz) => {
-    var Fz = sz(8622);
-    const Wz = globalThis.WebSocket || Fz;
-    tz.WebSocketTransport = class {
-      constructor(zz) {
-        this.events = zz
+  8775: (vv, zv, Pv) => {
+    var hv = Pv(8781);
+    const Sv = globalThis.WebSocket || hv;
+    zv.WebSocketTransport = class {
+      constructor(vv) {
+        this.events = vv
       }
-      send(zz) {
-        this.ws.send(zz)
+      send(vv) {
+        this.ws.send(vv)
       }
-      sendUnreliable(zz) {
+      sendUnreliable(vv) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(zz, tz) {
+      connect(vv, zv) {
         try {
-          this.ws = new Wz(zz, {
-            headers: tz,
+          this.ws = new Sv(vv, {
+            headers: zv,
             protocols: this.protocols
           })
-        } catch (sz) {
-          this.ws = new Wz(zz, this.protocols)
+        } catch (Pv) {
+          this.ws = new Sv(vv, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(zz, tz) {
-        this.ws.close(zz, tz)
+      close(vv, zv) {
+        this.ws.close(vv, zv)
       }
       get isOpen() {
-        return this.ws.readyState === Wz.OPEN
+        return this.ws.readyState === Sv.OPEN
       }
     }
   },
-  8622: zz => {
-    zz.exports = function() {
+  8781: vv => {
+    vv.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  8659: (zz, tz, sz) => {
-    function Fz(zz, tz) {
-      tz.headers = zz.headers || {}, tz.statusMessage = zz.statusText, tz.statusCode = zz.status, tz.data = zz.response
+  8819: (vv, zv, Pv) => {
+    function hv(vv, zv) {
+      zv.headers = vv.headers || {}, zv.statusMessage = vv.statusText, zv.statusCode = vv.status, zv.data = vv.response
     }
 
-    function Wz(zz, tz, sz) {
-      return new Promise((function(Wz, Xz) {
-        sz = sz || {};
-        var Oz, oz, vz, Uz = new XMLHttpRequest,
-          Kz = sz.body,
-          uz = sz.headers || {};
-        for (Oz in sz.timeout && (Uz.timeout = sz.timeout), Uz.ontimeout = Uz.onerror = function(zz) {
-            zz.timeout = "timeout" == zz.type, Xz(zz)
-          }, Uz.onabort = function(zz) {
-            zz.aborted = !0, Xz(zz)
-          }, Uz.open(zz, tz.href || tz), Uz.onload = function() {
-            for (vz = Uz.getAllResponseHeaders().trim().split(/[\r\n]+/), Fz(Uz, Uz); oz = vz.shift();) oz = oz.split(": "), Uz.headers[oz.shift().toLowerCase()] = oz.join(": ");
-            if ((oz = Uz.headers["content-type"]) && ~oz.indexOf("application/json")) try {
-              Uz.data = JSON.parse(Uz.data, sz.reviver)
-            } catch (zz) {
-              return Fz(Uz, zz), Xz(zz)
-            }(Uz.status >= 400 ? Xz : Wz)(Uz)
-          }, typeof FormData < "u" && Kz instanceof FormData || Kz && "object" == typeof Kz && (uz["content-type"] = "application/json", Kz = JSON.stringify(Kz)), Uz.withCredentials = !!sz.withCredentials, uz) Uz.setRequestHeader(Oz, uz[Oz]);
-        Uz.send(Kz), sz.signal && sz.signal.addEventListener("abort", (function() {
-          Uz.abort()
+    function Sv(vv, zv, Pv) {
+      return new Promise((function(Sv, ev) {
+        Pv = Pv || {};
+        var gv, pv, dv, Nv = new XMLHttpRequest,
+          lv = Pv.body,
+          Tv = Pv.headers || {};
+        for (gv in Pv.timeout && (Nv.timeout = Pv.timeout), Nv.ontimeout = Nv.onerror = function(vv) {
+            vv.timeout = "timeout" == vv.type, ev(vv)
+          }, Nv.onabort = function(vv) {
+            vv.aborted = !0, ev(vv)
+          }, Nv.open(vv, zv.href || zv), Nv.onload = function() {
+            for (dv = Nv.getAllResponseHeaders().trim().split(/[\r\n]+/), hv(Nv, Nv); pv = dv.shift();) pv = pv.split(": "), Nv.headers[pv.shift().toLowerCase()] = pv.join(": ");
+            if ((pv = Nv.headers["content-type"]) && ~pv.indexOf("application/json")) try {
+              Nv.data = JSON.parse(Nv.data, Pv.reviver)
+            } catch (vv) {
+              return hv(Nv, vv), ev(vv)
+            }(Nv.status >= 400 ? ev : Sv)(Nv)
+          }, typeof FormData < "u" && lv instanceof FormData || lv && "object" == typeof lv && (Tv["content-type"] = "application/json", lv = JSON.stringify(lv)), Nv.withCredentials = !!Pv.withCredentials, Tv) Nv.setRequestHeader(gv, Tv[gv]);
+        Nv.send(lv), Pv.signal && Pv.signal.addEventListener("abort", (function() {
+          Nv.abort()
         }))
       }))
     }
-    sz.r(tz), sz.d(tz, {
-      del: () => vz,
-      get: () => Xz,
-      patch: () => oz,
-      post: () => Oz,
-      put: () => Uz,
-      send: () => Wz
+    Pv.r(zv), Pv.d(zv, {
+      del: () => dv,
+      get: () => ev,
+      patch: () => pv,
+      post: () => gv,
+      put: () => Nv,
+      send: () => Sv
     });
-    var Xz = Wz.bind(Wz, "GET"),
-      Oz = Wz.bind(Wz, "POST"),
-      oz = Wz.bind(Wz, "PATCH"),
-      vz = Wz.bind(Wz, "DELETE"),
-      Uz = Wz.bind(Wz, "PUT")
+    var ev = Sv.bind(Sv, "GET"),
+      gv = Sv.bind(Sv, "POST"),
+      pv = Sv.bind(Sv, "PATCH"),
+      dv = Sv.bind(Sv, "DELETE"),
+      Nv = Sv.bind(Sv, "PUT")
   },
-  8650: (zz, tz, sz) => {
-    var Fz, Wz, Xz;
-    sz.r(tz), sz.d(tz, {
-      ALWAYS: () => St,
-      C1: () => Yz,
-      DECIMAL_FIT: () => Rt,
-      DECIMAL_ROUND: () => Vt,
-      Decoder: () => vt,
-      Encoder: () => nt,
-      FLOAT32_OPTIONS: () => bt,
-      NEVER: () => qt,
-      Packr: () => At,
-      RESERVE_START_SPACE: () => Et,
-      RESET_BUFFER_MODE: () => ft,
-      REUSE_BUFFER_MODE: () => pt,
-      Unpackr: () => ez,
-      addExtension: () => Qt,
-      clearSource: () => Ot,
-      decode: () => Nt,
-      decodeIter: () => zs,
-      encode: () => lt,
-      encodeIter: () => ts,
-      isNativeAccelerationEnabled: () => kz,
-      mapsAsObjects: () => Fs,
-      pack: () => Lt,
-      roundFloat32: () => Pt,
-      unpack: () => Kt,
-      unpackMultiple: () => ut,
-      useRecords: () => ss
+  8812: (vv, zv, Pv) => {
+    var hv, Sv, ev;
+    Pv.r(zv), Pv.d(zv, {
+      ALWAYS: () => Ez,
+      C1: () => jv,
+      DECIMAL_FIT: () => bz,
+      DECIMAL_ROUND: () => oz,
+      Decoder: () => dz,
+      Encoder: () => Bz,
+      FLOAT32_OPTIONS: () => wz,
+      NEVER: () => Jz,
+      Packr: () => tz,
+      RESERVE_START_SPACE: () => Xz,
+      RESET_BUFFER_MODE: () => kz,
+      REUSE_BUFFER_MODE: () => rz,
+      Unpackr: () => Dv,
+      addExtension: () => Az,
+      clearSource: () => gz,
+      decode: () => Wz,
+      decodeIter: () => uz,
+      encode: () => yz,
+      encodeIter: () => vP,
+      isNativeAccelerationEnabled: () => Lv,
+      mapsAsObjects: () => PP,
+      pack: () => Mz,
+      roundFloat32: () => Gz,
+      unpack: () => lz,
+      unpackMultiple: () => Tz,
+      useRecords: () => zP
     });
     try {
-      Fz = new TextDecoder
-    } catch (Ws) {}
-    var Oz = 0;
-    const oz = [];
-    var vz, Uz, Kz, uz, Nz, bz = oz,
-      wz = 0,
-      Dz = {},
-      gz = 0,
-      Hz = 0,
-      Bz = [],
-      Pz = {
+      hv = new TextDecoder
+    } catch (hP) {}
+    var gv = 0;
+    const pv = [];
+    var dv, Nv, lv, Tv, Wv, wv = pv,
+      av = 0,
+      sv = {},
+      Cv = 0,
+      iv = 0,
+      cv = [],
+      Gv = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class rz {}
-    const Yz = new rz;
-    Yz.name = "MessagePack 0xC1";
-    var xz, mz, Jz, Iz = !1,
-      Cz = 2;
+    class mv {}
+    const jv = new mv;
+    jv.name = "MessagePack 0xC1";
+    var fv, Fv, Yv, nv = !1,
+      Ov = 2;
     try {
       new Function("")
-    } catch (Ws) {
-      Cz = 1 / 0
+    } catch (hP) {
+      Ov = 1 / 0
     }
-    class ez {
-      constructor(zz) {
-        zz && (!1 === zz.useRecords && void 0 === zz.mapsAsObjects && (zz.mapsAsObjects = !0), zz.sequential && !1 !== zz.trusted && (zz.trusted = !0, zz.structures || 0 == zz.useRecords || (zz.structures = [], zz.maxSharedStructures || (zz.maxSharedStructures = 0))), zz.structures ? zz.structures.sharedLength = zz.structures.length : zz.getStructures && ((zz.structures = []).uninitialized = !0, zz.structures.sharedLength = 0), zz.int64AsNumber && (zz.int64AsType = "number")), Object.assign(this, zz)
+    class Dv {
+      constructor(vv) {
+        vv && (!1 === vv.useRecords && void 0 === vv.mapsAsObjects && (vv.mapsAsObjects = !0), vv.sequential && !1 !== vv.trusted && (vv.trusted = !0, vv.structures || 0 == vv.useRecords || (vv.structures = [], vv.maxSharedStructures || (vv.maxSharedStructures = 0))), vv.structures ? vv.structures.sharedLength = vv.structures.length : vv.getStructures && ((vv.structures = []).uninitialized = !0, vv.structures.sharedLength = 0), vv.int64AsNumber && (vv.int64AsType = "number")), Object.assign(this, vv)
       }
-      unpack(zz, tz) {
-        if (Wz) return Xt((() => (Ot(), this ? this.unpack(zz, tz) : ez.prototype.unpack.call(Pz, zz, tz))));
-        zz.buffer || zz.constructor !== ArrayBuffer || (zz = "undefined" !== typeof Buffer ? Buffer.from(zz) : new Uint8Array(zz)), "object" === typeof tz ? (Xz = tz.end || zz.length, Oz = tz.start || 0) : (Oz = 0, Xz = tz > -1 ? tz : zz.length), wz = 0, Hz = 0, Uz = null, bz = oz, Kz = null, Wz = zz;
+      unpack(vv, zv) {
+        if (Sv) return ez((() => (gz(), this ? this.unpack(vv, zv) : Dv.prototype.unpack.call(Gv, vv, zv))));
+        vv.buffer || vv.constructor !== ArrayBuffer || (vv = "undefined" !== typeof Buffer ? Buffer.from(vv) : new Uint8Array(vv)), "object" === typeof zv ? (ev = zv.end || vv.length, gv = zv.start || 0) : (gv = 0, ev = zv > -1 ? zv : vv.length), av = 0, iv = 0, Nv = null, wv = pv, lv = null, Sv = vv;
         try {
-          Nz = zz.dataView || (zz.dataView = new DataView(zz.buffer, zz.byteOffset, zz.byteLength))
-        } catch (Ws) {
-          if (Wz = null, zz instanceof Uint8Array) throw Ws;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (zz && "object" == typeof zz ? zz.constructor.name : typeof zz))
+          Wv = vv.dataView || (vv.dataView = new DataView(vv.buffer, vv.byteOffset, vv.byteLength))
+        } catch (hP) {
+          if (Sv = null, vv instanceof Uint8Array) throw hP;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (vv && "object" == typeof vv ? vv.constructor.name : typeof vv))
         }
-        if (this instanceof ez) {
-          if (Dz = this, this.structures) return vz = this.structures, Zz(tz);
-          (!vz || vz.length > 0) && (vz = [])
-        } else Dz = Pz, (!vz || vz.length > 0) && (vz = []);
-        return Zz(tz)
+        if (this instanceof Dv) {
+          if (sv = this, this.structures) return dv = this.structures, Kv(zv);
+          (!dv || dv.length > 0) && (dv = [])
+        } else sv = Gv, (!dv || dv.length > 0) && (dv = []);
+        return Kv(zv)
       }
-      unpackMultiple(zz, tz) {
-        let sz, Fz = 0;
+      unpackMultiple(vv, zv) {
+        let Pv, hv = 0;
         try {
-          Iz = !0;
-          let Wz = zz.length,
-            Xz = this ? this.unpack(zz, Wz) : Ut.unpack(zz, Wz);
-          if (!tz) {
-            for (sz = [Xz]; Oz < Wz;) Fz = Oz, sz.push(Zz());
-            return sz
+          nv = !0;
+          let Sv = vv.length,
+            ev = this ? this.unpack(vv, Sv) : Nz.unpack(vv, Sv);
+          if (!zv) {
+            for (Pv = [ev]; gv < Sv;) hv = gv, Pv.push(Kv());
+            return Pv
           }
-          if (!1 === tz(Xz, Fz, Oz)) return;
-          for (; Oz < Wz;)
-            if (Fz = Oz, !1 === tz(Zz(), Fz, Oz)) return
-        } catch (Ws) {
-          throw Ws.lastPosition = Fz, Ws.values = sz, Ws
+          if (!1 === zv(ev, hv, gv)) return;
+          for (; gv < Sv;)
+            if (hv = gv, !1 === zv(Kv(), hv, gv)) return
+        } catch (hP) {
+          throw hP.lastPosition = hv, hP.values = Pv, hP
         } finally {
-          Iz = !1, Ot()
+          nv = !1, gz()
         }
       }
-      _mergeStructures(zz, tz) {
-        mz && (zz = mz.call(this, zz)), zz = zz || [], Object.isFrozen(zz) && (zz = zz.map((zz => zz.slice(0))));
-        for (let sz = 0, Fz = zz.length; sz < Fz; sz++) {
-          let tz = zz[sz];
-          tz && (tz.isShared = !0, sz >= 32 && (tz.highByte = sz - 32 >> 5))
+      _mergeStructures(vv, zv) {
+        Fv && (vv = Fv.call(this, vv)), vv = vv || [], Object.isFrozen(vv) && (vv = vv.map((vv => vv.slice(0))));
+        for (let Pv = 0, hv = vv.length; Pv < hv; Pv++) {
+          let zv = vv[Pv];
+          zv && (zv.isShared = !0, Pv >= 32 && (zv.highByte = Pv - 32 >> 5))
         }
-        zz.sharedLength = zz.length;
-        for (let sz in tz || [])
-          if (sz >= 0) {
-            let Fz = zz[sz],
-              Wz = tz[sz];
-            Wz && (Fz && ((zz.restoreStructures || (zz.restoreStructures = []))[sz] = Fz), zz[sz] = Wz)
-          } return this.structures = zz
+        vv.sharedLength = vv.length;
+        for (let Pv in zv || [])
+          if (Pv >= 0) {
+            let hv = vv[Pv],
+              Sv = zv[Pv];
+            Sv && (hv && ((vv.restoreStructures || (vv.restoreStructures = []))[Pv] = hv), vv[Pv] = Sv)
+          } return this.structures = vv
       }
-      decode(zz, tz) {
-        return this.unpack(zz, tz)
+      decode(vv, zv) {
+        return this.unpack(vv, zv)
       }
     }
 
-    function Zz(zz) {
+    function Kv(vv) {
       try {
-        if (!Dz.trusted && !Iz) {
-          let zz = vz.sharedLength || 0;
-          zz < vz.length && (vz.length = zz)
+        if (!sv.trusted && !nv) {
+          let vv = dv.sharedLength || 0;
+          vv < dv.length && (dv.length = vv)
         }
-        let tz;
-        if (Dz.randomAccessStructure && Wz[Oz] < 64 && Wz[Oz] >= 32 && xz ? (tz = xz(Wz, Oz, Xz, Dz), Wz = null, zz && zz.lazy || !tz || (tz = tz.toJSON()), Oz = Xz) : tz = Tz(), Kz && (Oz = Kz.postBundlePosition, Kz = null), Iz && (vz.restoreStructures = null), Oz == Xz) vz && vz.restoreStructures && Gz(), vz = null, Wz = null, uz && (uz = null);
+        let zv;
+        if (sv.randomAccessStructure && Sv[gv] < 64 && Sv[gv] >= 32 && fv ? (zv = fv(Sv, gv, ev, sv), Sv = null, vv && vv.lazy || !zv || (zv = zv.toJSON()), gv = ev) : zv = Uv(), lv && (gv = lv.postBundlePosition, lv = null), nv && (dv.restoreStructures = null), gv == ev) dv && dv.restoreStructures && Vv(), dv = null, Sv = null, Tv && (Tv = null);
         else {
-          if (Oz > Xz) throw new Error("Unexpected end of MessagePack data");
-          if (!Iz) {
-            let zz;
+          if (gv > ev) throw new Error("Unexpected end of MessagePack data");
+          if (!nv) {
+            let vv;
             try {
-              zz = JSON.stringify(tz, ((zz, tz) => "bigint" === typeof tz ? `${tz}n` : tz)).slice(0, 100)
-            } catch (Ws) {
-              zz = "(JSON view not available " + Ws + ")"
+              vv = JSON.stringify(zv, ((vv, zv) => "bigint" === typeof zv ? `${zv}n` : zv)).slice(0, 100)
+            } catch (hP) {
+              vv = "(JSON view not available " + hP + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + zz)
+            throw new Error("Data read, but end of buffer not reached " + vv)
           }
         }
-        return tz
-      } catch (Ws) {
-        throw vz && vz.restoreStructures && Gz(), Ot(), (Ws instanceof RangeError || Ws.message.startsWith("Unexpected end of buffer") || Oz > Xz) && (Ws.incomplete = !0), Ws
+        return zv
+      } catch (hP) {
+        throw dv && dv.restoreStructures && Vv(), gz(), (hP instanceof RangeError || hP.message.startsWith("Unexpected end of buffer") || gv > ev) && (hP.incomplete = !0), hP
       }
     }
 
-    function Gz() {
-      for (let zz in vz.restoreStructures) vz[zz] = vz.restoreStructures[zz];
-      vz.restoreStructures = null
+    function Vv() {
+      for (let vv in dv.restoreStructures) dv[vv] = dv.restoreStructures[vv];
+      dv.restoreStructures = null
     }
 
-    function Tz() {
-      let zz = Wz[Oz++];
-      if (zz < 160) {
-        if (zz < 128) {
-          if (zz < 64) return zz;
+    function Uv() {
+      let vv = Sv[gv++];
+      if (vv < 160) {
+        if (vv < 128) {
+          if (vv < 64) return vv;
           {
-            let tz = vz[63 & zz] || Dz.getStructures && yz()[63 & zz];
-            return tz ? (tz.read || (tz.read = jz(tz, 63 & zz)), tz.read()) : zz
+            let zv = dv[63 & vv] || sv.getStructures && qv()[63 & vv];
+            return zv ? (zv.read || (zv.read = xv(zv, 63 & vv)), zv.read()) : vv
           }
         }
-        if (zz < 144) {
-          if (zz -= 128, Dz.mapsAsObjects) {
-            let tz = {};
-            for (let sz = 0; sz < zz; sz++) {
-              let zz = fz();
-              "__proto__" === zz && (zz = "__proto_"), tz[zz] = Tz()
+        if (vv < 144) {
+          if (vv -= 128, sv.mapsAsObjects) {
+            let zv = {};
+            for (let Pv = 0; Pv < vv; Pv++) {
+              let vv = Xv();
+              "__proto__" === vv && (vv = "__proto_"), zv[vv] = Uv()
             }
-            return tz
+            return zv
           } {
-            let tz = new Map;
-            for (let sz = 0; sz < zz; sz++) tz.set(Tz(), Tz());
-            return tz
+            let zv = new Map;
+            for (let Pv = 0; Pv < vv; Pv++) zv.set(Uv(), Uv());
+            return zv
           }
         } {
-          zz -= 144;
-          let tz = new Array(zz);
-          for (let sz = 0; sz < zz; sz++) tz[sz] = Tz();
-          return Dz.freezeData ? Object.freeze(tz) : tz
+          vv -= 144;
+          let zv = new Array(vv);
+          for (let Pv = 0; Pv < vv; Pv++) zv[Pv] = Uv();
+          return sv.freezeData ? Object.freeze(zv) : zv
         }
       }
-      if (zz < 192) {
-        let tz = zz - 160;
-        if (Hz >= Oz) return Uz.slice(Oz - gz, (Oz += tz) - gz);
-        if (0 == Hz && Xz < 140) {
-          let zz = tz < 16 ? qz(tz) : az(tz);
-          if (null != zz) return zz
+      if (vv < 192) {
+        let zv = vv - 160;
+        if (iv >= gv) return Nv.slice(gv - Cv, (gv += zv) - Cv);
+        if (0 == iv && ev < 140) {
+          let vv = zv < 16 ? Ev(zv) : Jv(zv);
+          if (null != vv) return vv
         }
-        return Mz(tz)
+        return Iv(zv)
       } {
-        let tz;
-        switch (zz) {
+        let zv;
+        switch (vv) {
           case 192:
             return null;
           case 193:
-            return Kz ? (tz = Tz(), tz > 0 ? Kz[1].slice(Kz.position1, Kz.position1 += tz) : Kz[0].slice(Kz.position0, Kz.position0 -= tz)) : Yz;
+            return lv ? (zv = Uv(), zv > 0 ? lv[1].slice(lv.position1, lv.position1 += zv) : lv[0].slice(lv.position0, lv.position0 -= zv)) : jv;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (tz = Wz[Oz++], void 0 === tz) throw new Error("Unexpected end of buffer");
-            return Vz(tz);
+            if (zv = Sv[gv++], void 0 === zv) throw new Error("Unexpected end of buffer");
+            return bv(zv);
           case 197:
-            return tz = Nz.getUint16(Oz), Oz += 2, Vz(tz);
+            return zv = Wv.getUint16(gv), gv += 2, bv(zv);
           case 198:
-            return tz = Nz.getUint32(Oz), Oz += 4, Vz(tz);
+            return zv = Wv.getUint32(gv), gv += 4, bv(zv);
           case 199:
-            return Rz(Wz[Oz++]);
+            return rv(Sv[gv++]);
           case 200:
-            return tz = Nz.getUint16(Oz), Oz += 2, Rz(tz);
+            return zv = Wv.getUint16(gv), gv += 2, rv(zv);
           case 201:
-            return tz = Nz.getUint32(Oz), Oz += 4, Rz(tz);
+            return zv = Wv.getUint32(gv), gv += 4, rv(zv);
           case 202:
-            if (tz = Nz.getFloat32(Oz), Dz.useFloat32 > 2) {
-              let zz = ot[(127 & Wz[Oz]) << 1 | Wz[Oz + 1] >> 7];
-              return Oz += 4, (zz * tz + (tz > 0 ? .5 : -.5) | 0) / zz
+            if (zv = Wv.getFloat32(gv), sv.useFloat32 > 2) {
+              let vv = pz[(127 & Sv[gv]) << 1 | Sv[gv + 1] >> 7];
+              return gv += 4, (vv * zv + (zv > 0 ? .5 : -.5) | 0) / vv
             }
-            return Oz += 4, tz;
+            return gv += 4, zv;
           case 203:
-            return tz = Nz.getFloat64(Oz), Oz += 8, tz;
+            return zv = Wv.getFloat64(gv), gv += 8, zv;
           case 204:
-            return Wz[Oz++];
+            return Sv[gv++];
           case 205:
-            return tz = Nz.getUint16(Oz), Oz += 2, tz;
+            return zv = Wv.getUint16(gv), gv += 2, zv;
           case 206:
-            return tz = Nz.getUint32(Oz), Oz += 4, tz;
+            return zv = Wv.getUint32(gv), gv += 4, zv;
           case 207:
-            return "number" === Dz.int64AsType ? (tz = 4294967296 * Nz.getUint32(Oz), tz += Nz.getUint32(Oz + 4)) : "string" === Dz.int64AsType ? tz = Nz.getBigUint64(Oz).toString() : "auto" === Dz.int64AsType ? (tz = Nz.getBigUint64(Oz), tz <= BigInt(2) << BigInt(52) && (tz = Number(tz))) : tz = Nz.getBigUint64(Oz), Oz += 8, tz;
+            return "number" === sv.int64AsType ? (zv = 4294967296 * Wv.getUint32(gv), zv += Wv.getUint32(gv + 4)) : "string" === sv.int64AsType ? zv = Wv.getBigUint64(gv).toString() : "auto" === sv.int64AsType ? (zv = Wv.getBigUint64(gv), zv <= BigInt(2) << BigInt(52) && (zv = Number(zv))) : zv = Wv.getBigUint64(gv), gv += 8, zv;
           case 208:
-            return Nz.getInt8(Oz++);
+            return Wv.getInt8(gv++);
           case 209:
-            return tz = Nz.getInt16(Oz), Oz += 2, tz;
+            return zv = Wv.getInt16(gv), gv += 2, zv;
           case 210:
-            return tz = Nz.getInt32(Oz), Oz += 4, tz;
+            return zv = Wv.getInt32(gv), gv += 4, zv;
           case 211:
-            return "number" === Dz.int64AsType ? (tz = 4294967296 * Nz.getInt32(Oz), tz += Nz.getUint32(Oz + 4)) : "string" === Dz.int64AsType ? tz = Nz.getBigInt64(Oz).toString() : "auto" === Dz.int64AsType ? (tz = Nz.getBigInt64(Oz), tz >= BigInt(-2) << BigInt(52) && tz <= BigInt(2) << BigInt(52) && (tz = Number(tz))) : tz = Nz.getBigInt64(Oz), Oz += 8, tz;
+            return "number" === sv.int64AsType ? (zv = 4294967296 * Wv.getInt32(gv), zv += Wv.getUint32(gv + 4)) : "string" === sv.int64AsType ? zv = Wv.getBigInt64(gv).toString() : "auto" === sv.int64AsType ? (zv = Wv.getBigInt64(gv), zv >= BigInt(-2) << BigInt(52) && zv <= BigInt(2) << BigInt(52) && (zv = Number(zv))) : zv = Wv.getBigInt64(gv), gv += 8, zv;
           case 212:
-            if (tz = Wz[Oz++], 114 == tz) return zt(63 & Wz[Oz++]);
+            if (zv = Sv[gv++], 114 == zv) return vz(63 & Sv[gv++]);
             {
-              let zz = Bz[tz];
-              if (zz) return zz.read ? (Oz++, zz.read(Tz())) : zz.noBuffer ? (Oz++, zz()) : zz(Wz.subarray(Oz, ++Oz));
-              throw new Error("Unknown extension " + tz)
+              let vv = cv[zv];
+              if (vv) return vv.read ? (gv++, vv.read(Uv())) : vv.noBuffer ? (gv++, vv()) : vv(Sv.subarray(gv, ++gv));
+              throw new Error("Unknown extension " + zv)
             }
           case 213:
-            return tz = Wz[Oz], 114 == tz ? (Oz++, zt(63 & Wz[Oz++], Wz[Oz++])) : Rz(2);
+            return zv = Sv[gv], 114 == zv ? (gv++, vz(63 & Sv[gv++], Sv[gv++])) : rv(2);
           case 214:
-            return Rz(4);
+            return rv(4);
           case 215:
-            return Rz(8);
+            return rv(8);
           case 216:
-            return Rz(16);
+            return rv(16);
           case 217:
-            return tz = Wz[Oz++], Hz >= Oz ? Uz.slice(Oz - gz, (Oz += tz) - gz) : dz(tz);
+            return zv = Sv[gv++], iv >= gv ? Nv.slice(gv - Cv, (gv += zv) - Cv) : Qv(zv);
           case 218:
-            return tz = Nz.getUint16(Oz), Hz >= (Oz += 2) ? Uz.slice(Oz - gz, (Oz += tz) - gz) : hz(tz);
+            return zv = Wv.getUint16(gv), iv >= (gv += 2) ? Nv.slice(gv - Cv, (gv += zv) - Cv) : Zv(zv);
           case 219:
-            return tz = Nz.getUint32(Oz), Hz >= (Oz += 4) ? Uz.slice(Oz - gz, (Oz += tz) - gz) : Qz(tz);
+            return zv = Wv.getUint32(gv), iv >= (gv += 4) ? Nv.slice(gv - Cv, (gv += zv) - Cv) : Av(zv);
           case 220:
-            return tz = Nz.getUint16(Oz), Oz += 2, Lz(tz);
+            return zv = Wv.getUint16(gv), gv += 2, Mv(zv);
           case 221:
-            return tz = Nz.getUint32(Oz), Oz += 4, Lz(tz);
+            return zv = Wv.getUint32(gv), gv += 4, Mv(zv);
           case 222:
-            return tz = Nz.getUint16(Oz), Oz += 2, lz(tz);
+            return zv = Wv.getUint16(gv), gv += 2, yv(zv);
           case 223:
-            return tz = Nz.getUint32(Oz), Oz += 4, lz(tz);
+            return zv = Wv.getUint32(gv), gv += 4, yv(zv);
           default:
-            if (zz >= 224) return zz - 256;
-            if (void 0 === zz) {
-              let zz = new Error("Unexpected end of MessagePack data");
-              throw zz.incomplete = !0, zz
+            if (vv >= 224) return vv - 256;
+            if (void 0 === vv) {
+              let vv = new Error("Unexpected end of MessagePack data");
+              throw vv.incomplete = !0, vv
             }
-            throw new Error("Unknown MessagePack token " + zz)
+            throw new Error("Unknown MessagePack token " + vv)
         }
       }
     }
-    const cz = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const Rv = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function jz(zz, tz) {
-      function sz() {
-        if (sz.count++ > Cz) {
-          let sz = zz.read = new Function("r", "return function(){return " + (Dz.freezeData ? "Object.freeze" : "") + "({" + zz.map((zz => "__proto__" === zz ? "__proto_:r()" : cz.test(zz) ? zz + ":r()" : "[" + JSON.stringify(zz) + "]:r()")).join(",") + "})}")(Tz);
-          return 0 === zz.highByte && (zz.read = Az(tz, zz.read)), sz()
+    function xv(vv, zv) {
+      function Pv() {
+        if (Pv.count++ > Ov) {
+          let Pv = vv.read = new Function("r", "return function(){return " + (sv.freezeData ? "Object.freeze" : "") + "({" + vv.map((vv => "__proto__" === vv ? "__proto_:r()" : Rv.test(vv) ? vv + ":r()" : "[" + JSON.stringify(vv) + "]:r()")).join(",") + "})}")(Uv);
+          return 0 === vv.highByte && (vv.read = tv(zv, vv.read)), Pv()
         }
-        let Fz = {};
-        for (let tz = 0, sz = zz.length; tz < sz; tz++) {
-          let sz = zz[tz];
-          "__proto__" === sz && (sz = "__proto_"), Fz[sz] = Tz()
+        let hv = {};
+        for (let zv = 0, Pv = vv.length; zv < Pv; zv++) {
+          let Pv = vv[zv];
+          "__proto__" === Pv && (Pv = "__proto_"), hv[Pv] = Uv()
         }
-        return Dz.freezeData ? Object.freeze(Fz) : Fz
+        return sv.freezeData ? Object.freeze(hv) : hv
       }
-      return sz.count = 0, 0 === zz.highByte ? Az(tz, sz) : sz
+      return Pv.count = 0, 0 === vv.highByte ? tv(zv, Pv) : Pv
     }
-    const Az = (zz, tz) => function() {
-      let sz = Wz[Oz++];
-      if (0 === sz) return tz();
-      let Fz = zz < 32 ? -(zz + (sz << 5)) : zz + (sz << 5),
-        Xz = vz[Fz] || yz()[Fz];
-      if (!Xz) throw new Error("Record id is not defined for " + Fz);
-      return Xz.read || (Xz.read = jz(Xz, zz)), Xz.read()
+    const tv = (vv, zv) => function() {
+      let Pv = Sv[gv++];
+      if (0 === Pv) return zv();
+      let hv = vv < 32 ? -(vv + (Pv << 5)) : vv + (Pv << 5),
+        ev = dv[hv] || qv()[hv];
+      if (!ev) throw new Error("Record id is not defined for " + hv);
+      return ev.read || (ev.read = xv(ev, vv)), ev.read()
     };
 
-    function yz() {
-      let zz = Xt((() => (Wz = null, Dz.getStructures())));
-      return vz = Dz._mergeStructures(zz, vz)
+    function qv() {
+      let vv = ez((() => (Sv = null, sv.getStructures())));
+      return dv = sv._mergeStructures(vv, dv)
     }
-    var Mz = iz,
-      dz = iz,
-      hz = iz,
-      Qz = iz;
-    let kz = !1;
+    var Iv = Hv,
+      Qv = Hv,
+      Zv = Hv,
+      Av = Hv;
+    let Lv = !1;
 
-    function iz(zz) {
-      let tz;
-      if (zz < 16 && (tz = qz(zz))) return tz;
-      if (zz > 64 && Fz) return Fz.decode(Wz.subarray(Oz, Oz += zz));
-      const sz = Oz + zz,
-        Xz = [];
-      for (tz = ""; Oz < sz;) {
-        const zz = Wz[Oz++];
-        if (0 === (128 & zz)) Xz.push(zz);
-        else if (192 === (224 & zz)) {
-          const tz = 63 & Wz[Oz++];
-          Xz.push((31 & zz) << 6 | tz)
-        } else if (224 === (240 & zz)) {
-          const tz = 63 & Wz[Oz++],
-            sz = 63 & Wz[Oz++];
-          Xz.push((31 & zz) << 12 | tz << 6 | sz)
-        } else if (240 === (248 & zz)) {
-          let tz = (7 & zz) << 18 | (63 & Wz[Oz++]) << 12 | (63 & Wz[Oz++]) << 6 | 63 & Wz[Oz++];
-          tz > 65535 && (tz -= 65536, Xz.push(tz >>> 10 & 1023 | 55296), tz = 56320 | 1023 & tz), Xz.push(tz)
-        } else Xz.push(zz);
-        Xz.length >= 4096 && (tz += nz.apply(String, Xz), Xz.length = 0)
+    function Hv(vv) {
+      let zv;
+      if (vv < 16 && (zv = Ev(vv))) return zv;
+      if (vv > 64 && hv) return hv.decode(Sv.subarray(gv, gv += vv));
+      const Pv = gv + vv,
+        ev = [];
+      for (zv = ""; gv < Pv;) {
+        const vv = Sv[gv++];
+        if (0 === (128 & vv)) ev.push(vv);
+        else if (192 === (224 & vv)) {
+          const zv = 63 & Sv[gv++];
+          ev.push((31 & vv) << 6 | zv)
+        } else if (224 === (240 & vv)) {
+          const zv = 63 & Sv[gv++],
+            Pv = 63 & Sv[gv++];
+          ev.push((31 & vv) << 12 | zv << 6 | Pv)
+        } else if (240 === (248 & vv)) {
+          let zv = (7 & vv) << 18 | (63 & Sv[gv++]) << 12 | (63 & Sv[gv++]) << 6 | 63 & Sv[gv++];
+          zv > 65535 && (zv -= 65536, ev.push(zv >>> 10 & 1023 | 55296), zv = 56320 | 1023 & zv), ev.push(zv)
+        } else ev.push(vv);
+        ev.length >= 4096 && (zv += Bv.apply(String, ev), ev.length = 0)
       }
-      return Xz.length > 0 && (tz += nz.apply(String, Xz)), tz
+      return ev.length > 0 && (zv += Bv.apply(String, ev)), zv
     }
 
-    function Lz(zz) {
-      let tz = new Array(zz);
-      for (let sz = 0; sz < zz; sz++) tz[sz] = Tz();
-      return Dz.freezeData ? Object.freeze(tz) : tz
+    function Mv(vv) {
+      let zv = new Array(vv);
+      for (let Pv = 0; Pv < vv; Pv++) zv[Pv] = Uv();
+      return sv.freezeData ? Object.freeze(zv) : zv
     }
 
-    function lz(zz) {
-      if (Dz.mapsAsObjects) {
-        let tz = {};
-        for (let sz = 0; sz < zz; sz++) {
-          let zz = fz();
-          "__proto__" === zz && (zz = "__proto_"), tz[zz] = Tz()
+    function yv(vv) {
+      if (sv.mapsAsObjects) {
+        let zv = {};
+        for (let Pv = 0; Pv < vv; Pv++) {
+          let vv = Xv();
+          "__proto__" === vv && (vv = "__proto_"), zv[vv] = Uv()
         }
-        return tz
+        return zv
       } {
-        let tz = new Map;
-        for (let sz = 0; sz < zz; sz++) tz.set(Tz(), Tz());
-        return tz
+        let zv = new Map;
+        for (let Pv = 0; Pv < vv; Pv++) zv.set(Uv(), Uv());
+        return zv
       }
     }
-    var nz = String.fromCharCode;
+    var Bv = String.fromCharCode;
 
-    function az(zz) {
-      let tz = Oz,
-        sz = new Array(zz);
-      for (let Fz = 0; Fz < zz; Fz++) {
-        const zz = Wz[Oz++];
-        if ((128 & zz) > 0) return void(Oz = tz);
-        sz[Fz] = zz
+    function Jv(vv) {
+      let zv = gv,
+        Pv = new Array(vv);
+      for (let hv = 0; hv < vv; hv++) {
+        const vv = Sv[gv++];
+        if ((128 & vv) > 0) return void(gv = zv);
+        Pv[hv] = vv
       }
-      return nz.apply(String, sz)
+      return Bv.apply(String, Pv)
     }
 
-    function qz(zz) {
-      if (zz < 4) {
-        if (zz < 2) {
-          if (0 === zz) return "";
+    function Ev(vv) {
+      if (vv < 4) {
+        if (vv < 2) {
+          if (0 === vv) return "";
           {
-            let zz = Wz[Oz++];
-            return (128 & zz) > 1 ? void(Oz -= 1) : nz(zz)
+            let vv = Sv[gv++];
+            return (128 & vv) > 1 ? void(gv -= 1) : Bv(vv)
           }
         } {
-          let tz = Wz[Oz++],
-            sz = Wz[Oz++];
-          if ((128 & tz) > 0 || (128 & sz) > 0) return void(Oz -= 2);
-          if (zz < 3) return nz(tz, sz);
-          let Fz = Wz[Oz++];
-          return (128 & Fz) > 0 ? void(Oz -= 3) : nz(tz, sz, Fz)
+          let zv = Sv[gv++],
+            Pv = Sv[gv++];
+          if ((128 & zv) > 0 || (128 & Pv) > 0) return void(gv -= 2);
+          if (vv < 3) return Bv(zv, Pv);
+          let hv = Sv[gv++];
+          return (128 & hv) > 0 ? void(gv -= 3) : Bv(zv, Pv, hv)
         }
       } {
-        let tz = Wz[Oz++],
-          sz = Wz[Oz++],
-          Fz = Wz[Oz++],
-          Xz = Wz[Oz++];
-        if ((128 & tz) > 0 || (128 & sz) > 0 || (128 & Fz) > 0 || (128 & Xz) > 0) return void(Oz -= 4);
-        if (zz < 6) {
-          if (4 === zz) return nz(tz, sz, Fz, Xz);
+        let zv = Sv[gv++],
+          Pv = Sv[gv++],
+          hv = Sv[gv++],
+          ev = Sv[gv++];
+        if ((128 & zv) > 0 || (128 & Pv) > 0 || (128 & hv) > 0 || (128 & ev) > 0) return void(gv -= 4);
+        if (vv < 6) {
+          if (4 === vv) return Bv(zv, Pv, hv, ev);
           {
-            let zz = Wz[Oz++];
-            return (128 & zz) > 0 ? void(Oz -= 5) : nz(tz, sz, Fz, Xz, zz)
+            let vv = Sv[gv++];
+            return (128 & vv) > 0 ? void(gv -= 5) : Bv(zv, Pv, hv, ev, vv)
           }
         }
-        if (zz < 8) {
-          let oz = Wz[Oz++],
-            vz = Wz[Oz++];
-          if ((128 & oz) > 0 || (128 & vz) > 0) return void(Oz -= 6);
-          if (zz < 7) return nz(tz, sz, Fz, Xz, oz, vz);
-          let Uz = Wz[Oz++];
-          return (128 & Uz) > 0 ? void(Oz -= 7) : nz(tz, sz, Fz, Xz, oz, vz, Uz)
+        if (vv < 8) {
+          let pv = Sv[gv++],
+            dv = Sv[gv++];
+          if ((128 & pv) > 0 || (128 & dv) > 0) return void(gv -= 6);
+          if (vv < 7) return Bv(zv, Pv, hv, ev, pv, dv);
+          let Nv = Sv[gv++];
+          return (128 & Nv) > 0 ? void(gv -= 7) : Bv(zv, Pv, hv, ev, pv, dv, Nv)
         } {
-          let oz = Wz[Oz++],
-            vz = Wz[Oz++],
-            Uz = Wz[Oz++],
-            Kz = Wz[Oz++];
-          if ((128 & oz) > 0 || (128 & vz) > 0 || (128 & Uz) > 0 || (128 & Kz) > 0) return void(Oz -= 8);
-          if (zz < 10) {
-            if (8 === zz) return nz(tz, sz, Fz, Xz, oz, vz, Uz, Kz);
+          let pv = Sv[gv++],
+            dv = Sv[gv++],
+            Nv = Sv[gv++],
+            lv = Sv[gv++];
+          if ((128 & pv) > 0 || (128 & dv) > 0 || (128 & Nv) > 0 || (128 & lv) > 0) return void(gv -= 8);
+          if (vv < 10) {
+            if (8 === vv) return Bv(zv, Pv, hv, ev, pv, dv, Nv, lv);
             {
-              let zz = Wz[Oz++];
-              return (128 & zz) > 0 ? void(Oz -= 9) : nz(tz, sz, Fz, Xz, oz, vz, Uz, Kz, zz)
+              let vv = Sv[gv++];
+              return (128 & vv) > 0 ? void(gv -= 9) : Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, vv)
             }
           }
-          if (zz < 12) {
-            let uz = Wz[Oz++],
-              Nz = Wz[Oz++];
-            if ((128 & uz) > 0 || (128 & Nz) > 0) return void(Oz -= 10);
-            if (zz < 11) return nz(tz, sz, Fz, Xz, oz, vz, Uz, Kz, uz, Nz);
-            let bz = Wz[Oz++];
-            return (128 & bz) > 0 ? void(Oz -= 11) : nz(tz, sz, Fz, Xz, oz, vz, Uz, Kz, uz, Nz, bz)
+          if (vv < 12) {
+            let Tv = Sv[gv++],
+              Wv = Sv[gv++];
+            if ((128 & Tv) > 0 || (128 & Wv) > 0) return void(gv -= 10);
+            if (vv < 11) return Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv);
+            let wv = Sv[gv++];
+            return (128 & wv) > 0 ? void(gv -= 11) : Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv)
           } {
-            let uz = Wz[Oz++],
-              Nz = Wz[Oz++],
-              bz = Wz[Oz++],
-              wz = Wz[Oz++];
-            if ((128 & uz) > 0 || (128 & Nz) > 0 || (128 & bz) > 0 || (128 & wz) > 0) return void(Oz -= 12);
-            if (zz < 14) {
-              if (12 === zz) return nz(tz, sz, Fz, Xz, oz, vz, Uz, Kz, uz, Nz, bz, wz);
+            let Tv = Sv[gv++],
+              Wv = Sv[gv++],
+              wv = Sv[gv++],
+              av = Sv[gv++];
+            if ((128 & Tv) > 0 || (128 & Wv) > 0 || (128 & wv) > 0 || (128 & av) > 0) return void(gv -= 12);
+            if (vv < 14) {
+              if (12 === vv) return Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv, av);
               {
-                let zz = Wz[Oz++];
-                return (128 & zz) > 0 ? void(Oz -= 13) : nz(tz, sz, Fz, Xz, oz, vz, Uz, Kz, uz, Nz, bz, wz, zz)
+                let vv = Sv[gv++];
+                return (128 & vv) > 0 ? void(gv -= 13) : Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv, av, vv)
               }
             } {
-              let Dz = Wz[Oz++],
-                gz = Wz[Oz++];
-              if ((128 & Dz) > 0 || (128 & gz) > 0) return void(Oz -= 14);
-              if (zz < 15) return nz(tz, sz, Fz, Xz, oz, vz, Uz, Kz, uz, Nz, bz, wz, Dz, gz);
-              let Hz = Wz[Oz++];
-              return (128 & Hz) > 0 ? void(Oz -= 15) : nz(tz, sz, Fz, Xz, oz, vz, Uz, Kz, uz, Nz, bz, wz, Dz, gz, Hz)
+              let sv = Sv[gv++],
+                Cv = Sv[gv++];
+              if ((128 & sv) > 0 || (128 & Cv) > 0) return void(gv -= 14);
+              if (vv < 15) return Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv, av, sv, Cv);
+              let iv = Sv[gv++];
+              return (128 & iv) > 0 ? void(gv -= 15) : Bv(zv, Pv, hv, ev, pv, dv, Nv, lv, Tv, Wv, wv, av, sv, Cv, iv)
             }
           }
         }
       }
     }
 
-    function Sz() {
-      let zz, tz = Wz[Oz++];
-      if (tz < 192) zz = tz - 160;
-      else switch (tz) {
+    function ov() {
+      let vv, zv = Sv[gv++];
+      if (zv < 192) vv = zv - 160;
+      else switch (zv) {
         case 217:
-          zz = Wz[Oz++];
+          vv = Sv[gv++];
           break;
         case 218:
-          zz = Nz.getUint16(Oz), Oz += 2;
+          vv = Wv.getUint16(gv), gv += 2;
           break;
         case 219:
-          zz = Nz.getUint32(Oz), Oz += 4;
+          vv = Wv.getUint32(gv), gv += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return iz(zz)
+      return Hv(vv)
     }
 
-    function Vz(zz) {
-      return Dz.copyBuffers ? Uint8Array.prototype.slice.call(Wz, Oz, Oz += zz) : Wz.subarray(Oz, Oz += zz)
+    function bv(vv) {
+      return sv.copyBuffers ? Uint8Array.prototype.slice.call(Sv, gv, gv += vv) : Sv.subarray(gv, gv += vv)
     }
 
-    function Rz(zz) {
-      let tz = Wz[Oz++];
-      if (Bz[tz]) {
-        let sz;
-        return Bz[tz](Wz.subarray(Oz, sz = Oz += zz), (zz => {
-          Oz = zz;
+    function rv(vv) {
+      let zv = Sv[gv++];
+      if (cv[zv]) {
+        let Pv;
+        return cv[zv](Sv.subarray(gv, Pv = gv += vv), (vv => {
+          gv = vv;
           try {
-            return Tz()
+            return Uv()
           } finally {
-            Oz = sz
+            gv = Pv
           }
         }))
       }
-      throw new Error("Unknown extension type " + tz)
+      throw new Error("Unknown extension type " + zv)
     }
-    var pz = new Array(4096);
+    var kv = new Array(4096);
 
-    function fz() {
-      let zz = Wz[Oz++];
-      if (!(zz >= 160 && zz < 192)) return Oz--, Ez(Tz());
-      if (zz -= 160, Hz >= Oz) return Uz.slice(Oz - gz, (Oz += zz) - gz);
-      if (!(0 == Hz && Xz < 180)) return Mz(zz);
-      let tz, sz = 4095 & (zz << 5 ^ (zz > 1 ? Nz.getUint16(Oz) : zz > 0 ? Wz[Oz] : 0)),
-        Fz = pz[sz],
-        oz = Oz,
-        vz = Oz + zz - 3,
-        Kz = 0;
-      if (Fz && Fz.bytes == zz) {
-        for (; oz < vz;) {
-          if (tz = Nz.getUint32(oz), tz != Fz[Kz++]) {
-            oz = 1879048192;
+    function Xv() {
+      let vv = Sv[gv++];
+      if (!(vv >= 160 && vv < 192)) return gv--, uv(Uv());
+      if (vv -= 160, iv >= gv) return Nv.slice(gv - Cv, (gv += vv) - Cv);
+      if (!(0 == iv && ev < 180)) return Iv(vv);
+      let zv, Pv = 4095 & (vv << 5 ^ (vv > 1 ? Wv.getUint16(gv) : vv > 0 ? Sv[gv] : 0)),
+        hv = kv[Pv],
+        pv = gv,
+        dv = gv + vv - 3,
+        lv = 0;
+      if (hv && hv.bytes == vv) {
+        for (; pv < dv;) {
+          if (zv = Wv.getUint32(pv), zv != hv[lv++]) {
+            pv = 1879048192;
             break
           }
-          oz += 4
+          pv += 4
         }
-        for (vz += 3; oz < vz;)
-          if (tz = Wz[oz++], tz != Fz[Kz++]) {
-            oz = 1879048192;
+        for (dv += 3; pv < dv;)
+          if (zv = Sv[pv++], zv != hv[lv++]) {
+            pv = 1879048192;
             break
-          } if (oz === vz) return Oz = oz, Fz.string;
-        vz -= 3, oz = Oz
+          } if (pv === dv) return gv = pv, hv.string;
+        dv -= 3, pv = gv
       }
-      for (Fz = [], pz[sz] = Fz, Fz.bytes = zz; oz < vz;) tz = Nz.getUint32(oz), Fz.push(tz), oz += 4;
-      for (vz += 3; oz < vz;) tz = Wz[oz++], Fz.push(tz);
-      let uz = zz < 16 ? qz(zz) : az(zz);
-      return Fz.string = null != uz ? uz : Mz(zz)
+      for (hv = [], kv[Pv] = hv, hv.bytes = vv; pv < dv;) zv = Wv.getUint32(pv), hv.push(zv), pv += 4;
+      for (dv += 3; pv < dv;) zv = Sv[pv++], hv.push(zv);
+      let Tv = vv < 16 ? Ev(vv) : Jv(vv);
+      return hv.string = null != Tv ? Tv : Iv(vv)
     }
 
-    function Ez(zz) {
-      if ("string" === typeof zz) return zz;
-      if ("number" === typeof zz || "boolean" === typeof zz || "bigint" === typeof zz) return zz.toString();
-      if (null == zz) return zz + "";
-      if (Dz.allowArraysInMapKeys && Array.isArray(zz) && zz.flat().every((zz => ["string", "number", "boolean", "bigint"].includes(typeof zz)))) return zz.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof zz)
+    function uv(vv) {
+      if ("string" === typeof vv) return vv;
+      if ("number" === typeof vv || "boolean" === typeof vv || "bigint" === typeof vv) return vv.toString();
+      if (null == vv) return vv + "";
+      if (sv.allowArraysInMapKeys && Array.isArray(vv) && vv.flat().every((vv => ["string", "number", "boolean", "bigint"].includes(typeof vv)))) return vv.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof vv)
     }
-    const zt = (zz, tz) => {
-      let sz = Tz().map(Ez),
-        Fz = zz;
-      void 0 !== tz && (zz = zz < 32 ? -((tz << 5) + zz) : (tz << 5) + zz, sz.highByte = tz);
-      let Wz = vz[zz];
-      return Wz && (Wz.isShared || Iz) && ((vz.restoreStructures || (vz.restoreStructures = []))[zz] = Wz), vz[zz] = sz, sz.read = jz(sz, Fz), sz.read()
+    const vz = (vv, zv) => {
+      let Pv = Uv().map(uv),
+        hv = vv;
+      void 0 !== zv && (vv = vv < 32 ? -((zv << 5) + vv) : (zv << 5) + vv, Pv.highByte = zv);
+      let Sv = dv[vv];
+      return Sv && (Sv.isShared || nv) && ((dv.restoreStructures || (dv.restoreStructures = []))[vv] = Sv), dv[vv] = Pv, Pv.read = xv(Pv, hv), Pv.read()
     };
-    Bz[0] = () => {}, Bz[0].noBuffer = !0, Bz[66] = zz => {
-      let tz = zz.length,
-        sz = BigInt(128 & zz[0] ? zz[0] - 256 : zz[0]);
-      for (let Fz = 1; Fz < tz; Fz++) sz <<= BigInt(8), sz += BigInt(zz[Fz]);
-      return sz
+    cv[0] = () => {}, cv[0].noBuffer = !0, cv[66] = vv => {
+      let zv = vv.length,
+        Pv = BigInt(128 & vv[0] ? vv[0] - 256 : vv[0]);
+      for (let hv = 1; hv < zv; hv++) Pv <<= BigInt(8), Pv += BigInt(vv[hv]);
+      return Pv
     };
-    let tt = {
+    let zz = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    Bz[101] = () => {
-      let zz = Tz();
-      return (tt[zz[0]] || Error)(zz[1], {
-        cause: zz[2]
+    cv[101] = () => {
+      let vv = Uv();
+      return (zz[vv[0]] || Error)(vv[1], {
+        cause: vv[2]
       })
-    }, Bz[105] = zz => {
-      if (!1 === Dz.structuredClone) throw new Error("Structured clone extension is disabled");
-      let tz = Nz.getUint32(Oz - 4);
-      uz || (uz = new Map);
-      let sz, Fz = Wz[Oz];
-      sz = Fz >= 144 && Fz < 160 || 220 == Fz || 221 == Fz ? [] : {};
-      let Xz = {
-        target: sz
+    }, cv[105] = vv => {
+      if (!1 === sv.structuredClone) throw new Error("Structured clone extension is disabled");
+      let zv = Wv.getUint32(gv - 4);
+      Tv || (Tv = new Map);
+      let Pv, hv = Sv[gv];
+      Pv = hv >= 144 && hv < 160 || 220 == hv || 221 == hv ? [] : {};
+      let ev = {
+        target: Pv
       };
-      uz.set(tz, Xz);
-      let oz = Tz();
-      return Xz.used ? Object.assign(sz, oz) : (Xz.target = oz, oz)
-    }, Bz[112] = zz => {
-      if (!1 === Dz.structuredClone) throw new Error("Structured clone extension is disabled");
-      let tz = Nz.getUint32(Oz - 4),
-        sz = uz.get(tz);
-      return sz.used = !0, sz.target
-    }, Bz[115] = () => new Set(Tz());
-    const st = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((zz => zz + "Array"));
-    let Ft = "object" === typeof globalThis ? globalThis : window;
-    Bz[116] = zz => {
-      let tz = zz[0],
-        sz = st[tz];
-      if (!sz) {
-        if (16 === tz) {
-          let tz = new ArrayBuffer(zz.length - 1);
-          return new Uint8Array(tz).set(zz.subarray(1)), tz
+      Tv.set(zv, ev);
+      let pv = Uv();
+      return ev.used ? Object.assign(Pv, pv) : (ev.target = pv, pv)
+    }, cv[112] = vv => {
+      if (!1 === sv.structuredClone) throw new Error("Structured clone extension is disabled");
+      let zv = Wv.getUint32(gv - 4),
+        Pv = Tv.get(zv);
+      return Pv.used = !0, Pv.target
+    }, cv[115] = () => new Set(Uv());
+    const Pz = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((vv => vv + "Array"));
+    let hz = "object" === typeof globalThis ? globalThis : window;
+    cv[116] = vv => {
+      let zv = vv[0],
+        Pv = Pz[zv];
+      if (!Pv) {
+        if (16 === zv) {
+          let zv = new ArrayBuffer(vv.length - 1);
+          return new Uint8Array(zv).set(vv.subarray(1)), zv
         }
-        throw new Error("Could not find typed array for code " + tz)
+        throw new Error("Could not find typed array for code " + zv)
       }
-      return new Ft[sz](Uint8Array.prototype.slice.call(zz, 1).buffer)
-    }, Bz[120] = () => {
-      let zz = Tz();
-      return new RegExp(zz[0], zz[1])
+      return new hz[Pv](Uint8Array.prototype.slice.call(vv, 1).buffer)
+    }, cv[120] = () => {
+      let vv = Uv();
+      return new RegExp(vv[0], vv[1])
     };
-    const Wt = [];
+    const Sz = [];
 
-    function Xt(zz) {
-      Jz && Jz();
-      let tz = Xz,
-        sz = Oz,
-        Fz = wz,
-        oz = gz,
-        Bz = Hz,
-        Pz = Uz,
-        rz = bz,
-        Yz = uz,
-        xz = Kz,
-        mz = new Uint8Array(Wz.slice(0, Xz)),
-        Cz = vz,
-        ez = vz.slice(0, vz.length),
-        Zz = Dz,
-        Gz = Iz,
-        Tz = zz();
-      return Xz = tz, Oz = sz, wz = Fz, gz = oz, Hz = Bz, Uz = Pz, bz = rz, uz = Yz, Kz = xz, Wz = mz, Iz = Gz, (vz = Cz).splice(0, vz.length, ...ez), Dz = Zz, Nz = new DataView(Wz.buffer, Wz.byteOffset, Wz.byteLength), Tz
+    function ez(vv) {
+      Yv && Yv();
+      let zv = ev,
+        Pv = gv,
+        hv = av,
+        pv = Cv,
+        cv = iv,
+        Gv = Nv,
+        mv = wv,
+        jv = Tv,
+        fv = lv,
+        Fv = new Uint8Array(Sv.slice(0, ev)),
+        Ov = dv,
+        Dv = dv.slice(0, dv.length),
+        Kv = sv,
+        Vv = nv,
+        Uv = vv();
+      return ev = zv, gv = Pv, av = hv, Cv = pv, iv = cv, Nv = Gv, wv = mv, Tv = jv, lv = fv, Sv = Fv, nv = Vv, (dv = Ov).splice(0, dv.length, ...Dv), sv = Kv, Wv = new DataView(Sv.buffer, Sv.byteOffset, Sv.byteLength), Uv
     }
 
-    function Ot() {
-      Wz = null, uz = null, vz = null
+    function gz() {
+      Sv = null, Tv = null, dv = null
     }
-    Bz[98] = zz => {
-      let tz = (zz[0] << 24) + (zz[1] << 16) + (zz[2] << 8) + zz[3],
-        sz = Oz;
-      return Oz += tz - zz.length, Kz = Wt, (Kz = [Sz(), Sz()]).position0 = 0, Kz.position1 = 0, Kz.postBundlePosition = Oz, Oz = sz, Tz()
-    }, Bz[255] = zz => 4 == zz.length ? new Date(1e3 * (16777216 * zz[0] + (zz[1] << 16) + (zz[2] << 8) + zz[3])) : 8 == zz.length ? new Date(((zz[0] << 22) + (zz[1] << 14) + (zz[2] << 6) + (zz[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & zz[3]) + 16777216 * zz[4] + (zz[5] << 16) + (zz[6] << 8) + zz[7])) : 12 == zz.length ? new Date(((zz[0] << 24) + (zz[1] << 16) + (zz[2] << 8) + zz[3]) / 1e6 + 1e3 * ((128 & zz[4] ? -281474976710656 : 0) + 1099511627776 * zz[6] + 4294967296 * zz[7] + 16777216 * zz[8] + (zz[9] << 16) + (zz[10] << 8) + zz[11])) : new Date("invalid");
-    const ot = new Array(147);
-    for (let Xs = 0; Xs < 256; Xs++) ot[Xs] = +("1e" + Math.floor(45.15 - .30103 * Xs));
-    const vt = ez;
-    var Ut = new ez({
+    cv[98] = vv => {
+      let zv = (vv[0] << 24) + (vv[1] << 16) + (vv[2] << 8) + vv[3],
+        Pv = gv;
+      return gv += zv - vv.length, lv = Sz, (lv = [ov(), ov()]).position0 = 0, lv.position1 = 0, lv.postBundlePosition = gv, gv = Pv, Uv()
+    }, cv[255] = vv => 4 == vv.length ? new Date(1e3 * (16777216 * vv[0] + (vv[1] << 16) + (vv[2] << 8) + vv[3])) : 8 == vv.length ? new Date(((vv[0] << 22) + (vv[1] << 14) + (vv[2] << 6) + (vv[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & vv[3]) + 16777216 * vv[4] + (vv[5] << 16) + (vv[6] << 8) + vv[7])) : 12 == vv.length ? new Date(((vv[0] << 24) + (vv[1] << 16) + (vv[2] << 8) + vv[3]) / 1e6 + 1e3 * ((128 & vv[4] ? -281474976710656 : 0) + 1099511627776 * vv[6] + 4294967296 * vv[7] + 16777216 * vv[8] + (vv[9] << 16) + (vv[10] << 8) + vv[11])) : new Date("invalid");
+    const pz = new Array(147);
+    for (let SP = 0; SP < 256; SP++) pz[SP] = +("1e" + Math.floor(45.15 - .30103 * SP));
+    const dz = Dv;
+    var Nz = new Dv({
       useRecords: !1
     });
-    const Kt = Ut.unpack,
-      ut = Ut.unpackMultiple,
-      Nt = Ut.unpack,
-      bt = {
+    const lz = Nz.unpack,
+      Tz = Nz.unpackMultiple,
+      Wz = Nz.unpack,
+      wz = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let wt, Dt, gt, Ht = new Float32Array(1),
-      Bt = new Uint8Array(Ht.buffer, 0, 4);
+    let az, sz, Cz, iz = new Float32Array(1),
+      cz = new Uint8Array(iz.buffer, 0, 4);
 
-    function Pt(zz) {
-      Ht[0] = zz;
-      let tz = ot[(127 & Bt[3]) << 1 | Bt[2] >> 7];
-      return (tz * zz + (zz > 0 ? .5 : -.5) | 0) / tz
+    function Gz(vv) {
+      iz[0] = vv;
+      let zv = pz[(127 & cz[3]) << 1 | cz[2] >> 7];
+      return (zv * vv + (vv > 0 ? .5 : -.5) | 0) / zv
     }
     try {
-      wt = new TextEncoder
-    } catch (Ws) {}
-    const rt = "undefined" !== typeof Buffer,
-      Yt = rt ? function(zz) {
-        return Buffer.allocUnsafeSlow(zz)
+      az = new TextEncoder
+    } catch (hP) {}
+    const mz = "undefined" !== typeof Buffer,
+      jz = mz ? function(vv) {
+        return Buffer.allocUnsafeSlow(vv)
       } : Uint8Array,
-      xt = rt ? Buffer : Uint8Array,
-      mt = rt ? 4294967296 : 2144337920;
-    let Jt, It, Ct, et, Zt, Gt = 0,
-      Tt = null;
-    const ct = /[\u0080-\uFFFF]/,
-      jt = Symbol("record-id");
-    class At extends ez {
-      constructor(zz) {
-        let tz, sz, Fz, Wz;
-        super(zz), this.offset = 0;
-        let Xz = xt.prototype.utf8Write ? function(zz, tz) {
-            return Jt.utf8Write(zz, tz, Jt.byteLength - tz)
-          } : !(!wt || !wt.encodeInto) && function(zz, tz) {
-            return wt.encodeInto(zz, Jt.subarray(tz)).written
+      fz = mz ? Buffer : Uint8Array,
+      Fz = mz ? 4294967296 : 2144337920;
+    let Yz, nz, Oz, Dz, Kz, Vz = 0,
+      Uz = null;
+    const Rz = /[\u0080-\uFFFF]/,
+      xz = Symbol("record-id");
+    class tz extends Dv {
+      constructor(vv) {
+        let zv, Pv, hv, Sv;
+        super(vv), this.offset = 0;
+        let ev = fz.prototype.utf8Write ? function(vv, zv) {
+            return Yz.utf8Write(vv, zv, Yz.byteLength - zv)
+          } : !(!az || !az.encodeInto) && function(vv, zv) {
+            return az.encodeInto(vv, Yz.subarray(zv)).written
           },
-          Oz = this;
-        zz || (zz = {});
-        let oz = zz && zz.sequential,
-          vz = zz.structures || zz.saveStructures,
-          Uz = zz.maxSharedStructures;
-        if (null == Uz && (Uz = vz ? 32 : 0), Uz > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        zz.structuredClone && void 0 == zz.moreTypes && (this.moreTypes = !0);
-        let Kz = zz.maxOwnStructures;
-        null == Kz && (Kz = vz ? 32 : 64), this.structures || 0 == zz.useRecords || (this.structures = []);
-        let uz = Uz > 32 || Kz + Uz > 64,
-          Nz = Uz + 64,
-          bz = Uz + Kz + 64;
-        if (bz > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let wz = [],
-          Dz = 0,
-          gz = 0;
-        this.pack = this.encode = function(zz, Xz) {
-          if (Jt || (Jt = new Yt(8192), Ct = Jt.dataView || (Jt.dataView = new DataView(Jt.buffer, 0, 8192)), Gt = 0), et = Jt.length - 10, et - Gt < 2048 ? (Jt = new Yt(Jt.length), Ct = Jt.dataView || (Jt.dataView = new DataView(Jt.buffer, 0, Jt.length)), et = Jt.length - 10, Gt = 0) : Gt = Gt + 7 & 2147483640, tz = Gt, Xz & Et && (Gt += 255 & Xz), Wz = Oz.structuredClone ? new Map : null, Oz.bundleStrings && "string" !== typeof zz ? (Tt = [], Tt.size = 1 / 0) : Tt = null, Fz = Oz.structures, Fz) {
-            Fz.uninitialized && (Fz = Oz._mergeStructures(Oz.getStructures()));
-            let zz = Fz.sharedLength || 0;
-            if (zz > Uz) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Fz.sharedLength);
-            if (!Fz.transitions) {
-              Fz.transitions = Object.create(null);
-              for (let tz = 0; tz < zz; tz++) {
-                let zz = Fz[tz];
-                if (!zz) continue;
-                let sz, Wz = Fz.transitions;
-                for (let tz = 0, Fz = zz.length; tz < Fz; tz++) {
-                  let Fz = zz[tz];
-                  sz = Wz[Fz], sz || (sz = Wz[Fz] = Object.create(null)), Wz = sz
+          gv = this;
+        vv || (vv = {});
+        let pv = vv && vv.sequential,
+          dv = vv.structures || vv.saveStructures,
+          Nv = vv.maxSharedStructures;
+        if (null == Nv && (Nv = dv ? 32 : 0), Nv > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        vv.structuredClone && void 0 == vv.moreTypes && (this.moreTypes = !0);
+        let lv = vv.maxOwnStructures;
+        null == lv && (lv = dv ? 32 : 64), this.structures || 0 == vv.useRecords || (this.structures = []);
+        let Tv = Nv > 32 || lv + Nv > 64,
+          Wv = Nv + 64,
+          wv = Nv + lv + 64;
+        if (wv > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let av = [],
+          sv = 0,
+          Cv = 0;
+        this.pack = this.encode = function(vv, ev) {
+          if (Yz || (Yz = new jz(8192), Oz = Yz.dataView || (Yz.dataView = new DataView(Yz.buffer, 0, 8192)), Vz = 0), Dz = Yz.length - 10, Dz - Vz < 2048 ? (Yz = new jz(Yz.length), Oz = Yz.dataView || (Yz.dataView = new DataView(Yz.buffer, 0, Yz.length)), Dz = Yz.length - 10, Vz = 0) : Vz = Vz + 7 & 2147483640, zv = Vz, ev & Xz && (Vz += 255 & ev), Sv = gv.structuredClone ? new Map : null, gv.bundleStrings && "string" !== typeof vv ? (Uz = [], Uz.size = 1 / 0) : Uz = null, hv = gv.structures, hv) {
+            hv.uninitialized && (hv = gv._mergeStructures(gv.getStructures()));
+            let vv = hv.sharedLength || 0;
+            if (vv > Nv) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + hv.sharedLength);
+            if (!hv.transitions) {
+              hv.transitions = Object.create(null);
+              for (let zv = 0; zv < vv; zv++) {
+                let vv = hv[zv];
+                if (!vv) continue;
+                let Pv, Sv = hv.transitions;
+                for (let zv = 0, hv = vv.length; zv < hv; zv++) {
+                  let hv = vv[zv];
+                  Pv = Sv[hv], Pv || (Pv = Sv[hv] = Object.create(null)), Sv = Pv
                 }
-                Wz[jt] = tz + 64
+                Sv[xz] = zv + 64
               }
-              this.lastNamedStructuresLength = zz
+              this.lastNamedStructuresLength = vv
             }
-            oz || (Fz.nextId = zz + 64)
+            pv || (hv.nextId = vv + 64)
           }
-          let vz;
-          sz && (sz = !1);
+          let dv;
+          Pv && (Pv = !1);
           try {
-            Oz.randomAccessStructure && zz && zz.constructor && zz.constructor === Object ? ez(zz) : Pz(zz);
-            let sz = Tt;
-            if (Tt && ht(tz, Pz, 0), Wz && Wz.idsToInsert) {
-              let zz = Wz.idsToInsert.sort(((zz, tz) => zz.offset > tz.offset ? 1 : -1)),
-                Fz = zz.length,
-                Xz = -1;
-              for (; sz && Fz > 0;) {
-                let Wz = zz[--Fz].offset + tz;
-                Wz < sz.stringsPosition + tz && -1 === Xz && (Xz = 0), Wz > sz.position + tz ? Xz >= 0 && (Xz += 6) : (Xz >= 0 && (Ct.setUint32(sz.position + tz, Ct.getUint32(sz.position + tz) + Xz), Xz = -1), sz = sz.previous, Fz++)
+            gv.randomAccessStructure && vv && vv.constructor && vv.constructor === Object ? Dv(vv) : Gv(vv);
+            let Pv = Uz;
+            if (Uz && Zz(zv, Gv, 0), Sv && Sv.idsToInsert) {
+              let vv = Sv.idsToInsert.sort(((vv, zv) => vv.offset > zv.offset ? 1 : -1)),
+                hv = vv.length,
+                ev = -1;
+              for (; Pv && hv > 0;) {
+                let Sv = vv[--hv].offset + zv;
+                Sv < Pv.stringsPosition + zv && -1 === ev && (ev = 0), Sv > Pv.position + zv ? ev >= 0 && (ev += 6) : (ev >= 0 && (Oz.setUint32(Pv.position + zv, Oz.getUint32(Pv.position + zv) + ev), ev = -1), Pv = Pv.previous, hv++)
               }
-              Xz >= 0 && sz && Ct.setUint32(sz.position + tz, Ct.getUint32(sz.position + tz) + Xz), Gt += 6 * zz.length, Gt > et && Jz(Gt), Oz.offset = Gt;
-              let oz = function(zz, tz) {
-                let sz, Fz = 6 * tz.length,
-                  Wz = zz.length - Fz;
-                for (; sz = tz.pop();) {
-                  let tz = sz.offset,
-                    Xz = sz.id;
-                  zz.copyWithin(tz + Fz, tz, Wz), Fz -= 6;
-                  let Oz = tz + Fz;
-                  zz[Oz++] = 214, zz[Oz++] = 105, zz[Oz++] = Xz >> 24, zz[Oz++] = Xz >> 16 & 255, zz[Oz++] = Xz >> 8 & 255, zz[Oz++] = 255 & Xz, Wz = tz
+              ev >= 0 && Pv && Oz.setUint32(Pv.position + zv, Oz.getUint32(Pv.position + zv) + ev), Vz += 6 * vv.length, Vz > Dz && Yv(Vz), gv.offset = Vz;
+              let pv = function(vv, zv) {
+                let Pv, hv = 6 * zv.length,
+                  Sv = vv.length - hv;
+                for (; Pv = zv.pop();) {
+                  let zv = Pv.offset,
+                    ev = Pv.id;
+                  vv.copyWithin(zv + hv, zv, Sv), hv -= 6;
+                  let gv = zv + hv;
+                  vv[gv++] = 214, vv[gv++] = 105, vv[gv++] = ev >> 24, vv[gv++] = ev >> 16 & 255, vv[gv++] = ev >> 8 & 255, vv[gv++] = 255 & ev, Sv = zv
                 }
-                return zz
-              }(Jt.subarray(tz, Gt), zz);
-              return Wz = null, oz
+                return vv
+              }(Yz.subarray(zv, Vz), vv);
+              return Sv = null, pv
             }
-            return Oz.offset = Gt, Xz & pt ? (Jt.start = tz, Jt.end = Gt, Jt) : Jt.subarray(tz, Gt)
-          } catch (Ws) {
-            throw vz = Ws, Ws
+            return gv.offset = Vz, ev & rz ? (Yz.start = zv, Yz.end = Vz, Yz) : Yz.subarray(zv, Vz)
+          } catch (hP) {
+            throw dv = hP, hP
           } finally {
-            if (Fz && (Hz(), sz && Oz.saveStructures)) {
-              let sz = Fz.sharedLength || 0,
-                Wz = Jt.subarray(tz, Gt),
-                oz = kt(Fz, Oz);
-              if (!vz) return !1 === Oz.saveStructures(oz, oz.isCompatible) ? Oz.pack(zz, Xz) : (Oz.lastNamedStructuresLength = sz, Jt.length > 1073741824 && (Jt = null), Wz)
+            if (hv && (iv(), Pv && gv.saveStructures)) {
+              let Pv = hv.sharedLength || 0,
+                Sv = Yz.subarray(zv, Vz),
+                pv = Lz(hv, gv);
+              if (!dv) return !1 === gv.saveStructures(pv, pv.isCompatible) ? gv.pack(vv, ev) : (gv.lastNamedStructuresLength = Pv, Yz.length > 1073741824 && (Yz = null), Sv)
             }
-            Jt.length > 1073741824 && (Jt = null), Xz & ft && (Gt = tz)
+            Yz.length > 1073741824 && (Yz = null), ev & kz && (Vz = zv)
           }
         };
-        const Hz = () => {
-            gz < 10 && gz++;
-            let zz = Fz.sharedLength || 0;
-            if (Fz.length > zz && !oz && (Fz.length = zz), Dz > 1e4) Fz.transitions = null, gz = 0, Dz = 0, wz.length > 0 && (wz = []);
-            else if (wz.length > 0 && !oz) {
-              for (let zz = 0, tz = wz.length; zz < tz; zz++) wz[zz][jt] = 0;
-              wz = []
+        const iv = () => {
+            Cv < 10 && Cv++;
+            let vv = hv.sharedLength || 0;
+            if (hv.length > vv && !pv && (hv.length = vv), sv > 1e4) hv.transitions = null, Cv = 0, sv = 0, av.length > 0 && (av = []);
+            else if (av.length > 0 && !pv) {
+              for (let vv = 0, zv = av.length; vv < zv; vv++) av[vv][xz] = 0;
+              av = []
             }
           },
-          Bz = zz => {
-            var tz = zz.length;
-            tz < 16 ? Jt[Gt++] = 144 | tz : tz < 65536 ? (Jt[Gt++] = 220, Jt[Gt++] = tz >> 8, Jt[Gt++] = 255 & tz) : (Jt[Gt++] = 221, Ct.setUint32(Gt, tz), Gt += 4);
-            for (let sz = 0; sz < tz; sz++) Pz(zz[sz])
+          cv = vv => {
+            var zv = vv.length;
+            zv < 16 ? Yz[Vz++] = 144 | zv : zv < 65536 ? (Yz[Vz++] = 220, Yz[Vz++] = zv >> 8, Yz[Vz++] = 255 & zv) : (Yz[Vz++] = 221, Oz.setUint32(Vz, zv), Vz += 4);
+            for (let Pv = 0; Pv < zv; Pv++) Gv(vv[Pv])
           },
-          Pz = zz => {
-            Gt > et && (Jt = Jz(Gt));
-            var sz, Fz = typeof zz;
-            if ("string" === Fz) {
-              let Fz, Wz = zz.length;
-              if (Tt && Wz >= 4 && Wz < 4096) {
-                if ((Tt.size += Wz) > 21760) {
-                  let zz, sz, Fz = (Tt[0] ? 3 * Tt[0].length + Tt[1].length : 0) + 10;
-                  Gt + Fz > et && (Jt = Jz(Gt + Fz)), Tt.position ? (sz = Tt, Jt[Gt] = 200, Gt += 3, Jt[Gt++] = 98, zz = Gt - tz, Gt += 4, ht(tz, Pz, 0), Ct.setUint16(zz + tz - 3, Gt - tz - zz)) : (Jt[Gt++] = 214, Jt[Gt++] = 98, zz = Gt - tz, Gt += 4), Tt = ["", ""], Tt.previous = sz, Tt.size = 0, Tt.position = zz
+          Gv = vv => {
+            Vz > Dz && (Yz = Yv(Vz));
+            var Pv, hv = typeof vv;
+            if ("string" === hv) {
+              let hv, Sv = vv.length;
+              if (Uz && Sv >= 4 && Sv < 4096) {
+                if ((Uz.size += Sv) > 21760) {
+                  let vv, Pv, hv = (Uz[0] ? 3 * Uz[0].length + Uz[1].length : 0) + 10;
+                  Vz + hv > Dz && (Yz = Yv(Vz + hv)), Uz.position ? (Pv = Uz, Yz[Vz] = 200, Vz += 3, Yz[Vz++] = 98, vv = Vz - zv, Vz += 4, Zz(zv, Gv, 0), Oz.setUint16(vv + zv - 3, Vz - zv - vv)) : (Yz[Vz++] = 214, Yz[Vz++] = 98, vv = Vz - zv, Vz += 4), Uz = ["", ""], Uz.previous = Pv, Uz.size = 0, Uz.position = vv
                 }
-                let sz = ct.test(zz);
-                return Tt[sz ? 0 : 1] += zz, Jt[Gt++] = 193, void Pz(sz ? -Wz : Wz)
+                let Pv = Rz.test(vv);
+                return Uz[Pv ? 0 : 1] += vv, Yz[Vz++] = 193, void Gv(Pv ? -Sv : Sv)
               }
-              Fz = Wz < 32 ? 1 : Wz < 256 ? 2 : Wz < 65536 ? 3 : 5;
-              let Oz = 3 * Wz;
-              if (Gt + Oz > et && (Jt = Jz(Gt + Oz)), Wz < 64 || !Xz) {
-                let tz, Xz, Oz, oz = Gt + Fz;
-                for (tz = 0; tz < Wz; tz++) Xz = zz.charCodeAt(tz), Xz < 128 ? Jt[oz++] = Xz : Xz < 2048 ? (Jt[oz++] = Xz >> 6 | 192, Jt[oz++] = 63 & Xz | 128) : 55296 === (64512 & Xz) && 56320 === (64512 & (Oz = zz.charCodeAt(tz + 1))) ? (Xz = 65536 + ((1023 & Xz) << 10) + (1023 & Oz), tz++, Jt[oz++] = Xz >> 18 | 240, Jt[oz++] = Xz >> 12 & 63 | 128, Jt[oz++] = Xz >> 6 & 63 | 128, Jt[oz++] = 63 & Xz | 128) : (Jt[oz++] = Xz >> 12 | 224, Jt[oz++] = Xz >> 6 & 63 | 128, Jt[oz++] = 63 & Xz | 128);
-                sz = oz - Gt - Fz
-              } else sz = Xz(zz, Gt + Fz);
-              sz < 32 ? Jt[Gt++] = 160 | sz : sz < 256 ? (Fz < 2 && Jt.copyWithin(Gt + 2, Gt + 1, Gt + 1 + sz), Jt[Gt++] = 217, Jt[Gt++] = sz) : sz < 65536 ? (Fz < 3 && Jt.copyWithin(Gt + 3, Gt + 2, Gt + 2 + sz), Jt[Gt++] = 218, Jt[Gt++] = sz >> 8, Jt[Gt++] = 255 & sz) : (Fz < 5 && Jt.copyWithin(Gt + 5, Gt + 3, Gt + 3 + sz), Jt[Gt++] = 219, Ct.setUint32(Gt, sz), Gt += 4), Gt += sz
-            } else if ("number" === Fz)
-              if (zz >>> 0 === zz) zz < 32 || zz < 128 && !1 === this.useRecords || zz < 64 && !this.randomAccessStructure ? Jt[Gt++] = zz : zz < 256 ? (Jt[Gt++] = 204, Jt[Gt++] = zz) : zz < 65536 ? (Jt[Gt++] = 205, Jt[Gt++] = zz >> 8, Jt[Gt++] = 255 & zz) : (Jt[Gt++] = 206, Ct.setUint32(Gt, zz), Gt += 4);
-              else if ((zz | 0) === zz) zz >= -32 ? Jt[Gt++] = 256 + zz : zz >= -128 ? (Jt[Gt++] = 208, Jt[Gt++] = zz + 256) : zz >= -32768 ? (Jt[Gt++] = 209, Ct.setInt16(Gt, zz), Gt += 2) : (Jt[Gt++] = 210, Ct.setInt32(Gt, zz), Gt += 4);
+              hv = Sv < 32 ? 1 : Sv < 256 ? 2 : Sv < 65536 ? 3 : 5;
+              let gv = 3 * Sv;
+              if (Vz + gv > Dz && (Yz = Yv(Vz + gv)), Sv < 64 || !ev) {
+                let zv, ev, gv, pv = Vz + hv;
+                for (zv = 0; zv < Sv; zv++) ev = vv.charCodeAt(zv), ev < 128 ? Yz[pv++] = ev : ev < 2048 ? (Yz[pv++] = ev >> 6 | 192, Yz[pv++] = 63 & ev | 128) : 55296 === (64512 & ev) && 56320 === (64512 & (gv = vv.charCodeAt(zv + 1))) ? (ev = 65536 + ((1023 & ev) << 10) + (1023 & gv), zv++, Yz[pv++] = ev >> 18 | 240, Yz[pv++] = ev >> 12 & 63 | 128, Yz[pv++] = ev >> 6 & 63 | 128, Yz[pv++] = 63 & ev | 128) : (Yz[pv++] = ev >> 12 | 224, Yz[pv++] = ev >> 6 & 63 | 128, Yz[pv++] = 63 & ev | 128);
+                Pv = pv - Vz - hv
+              } else Pv = ev(vv, Vz + hv);
+              Pv < 32 ? Yz[Vz++] = 160 | Pv : Pv < 256 ? (hv < 2 && Yz.copyWithin(Vz + 2, Vz + 1, Vz + 1 + Pv), Yz[Vz++] = 217, Yz[Vz++] = Pv) : Pv < 65536 ? (hv < 3 && Yz.copyWithin(Vz + 3, Vz + 2, Vz + 2 + Pv), Yz[Vz++] = 218, Yz[Vz++] = Pv >> 8, Yz[Vz++] = 255 & Pv) : (hv < 5 && Yz.copyWithin(Vz + 5, Vz + 3, Vz + 3 + Pv), Yz[Vz++] = 219, Oz.setUint32(Vz, Pv), Vz += 4), Vz += Pv
+            } else if ("number" === hv)
+              if (vv >>> 0 === vv) vv < 32 || vv < 128 && !1 === this.useRecords || vv < 64 && !this.randomAccessStructure ? Yz[Vz++] = vv : vv < 256 ? (Yz[Vz++] = 204, Yz[Vz++] = vv) : vv < 65536 ? (Yz[Vz++] = 205, Yz[Vz++] = vv >> 8, Yz[Vz++] = 255 & vv) : (Yz[Vz++] = 206, Oz.setUint32(Vz, vv), Vz += 4);
+              else if ((vv | 0) === vv) vv >= -32 ? Yz[Vz++] = 256 + vv : vv >= -128 ? (Yz[Vz++] = 208, Yz[Vz++] = vv + 256) : vv >= -32768 ? (Yz[Vz++] = 209, Oz.setInt16(Vz, vv), Vz += 2) : (Yz[Vz++] = 210, Oz.setInt32(Vz, vv), Vz += 4);
             else {
-              let tz;
-              if ((tz = this.useFloat32) > 0 && zz < 4294967296 && zz >= -2147483648) {
-                let sz;
-                if (Jt[Gt++] = 202, Ct.setFloat32(Gt, zz), tz < 4 || ((sz = zz * ot[(127 & Jt[Gt]) << 1 | Jt[Gt + 1] >> 7]) | 0) === sz) return void(Gt += 4);
-                Gt--
+              let zv;
+              if ((zv = this.useFloat32) > 0 && vv < 4294967296 && vv >= -2147483648) {
+                let Pv;
+                if (Yz[Vz++] = 202, Oz.setFloat32(Vz, vv), zv < 4 || ((Pv = vv * pz[(127 & Yz[Vz]) << 1 | Yz[Vz + 1] >> 7]) | 0) === Pv) return void(Vz += 4);
+                Vz--
               }
-              Jt[Gt++] = 203, Ct.setFloat64(Gt, zz), Gt += 8
-            } else if ("object" === Fz || "function" === Fz)
-              if (zz) {
-                if (Wz) {
-                  let sz = Wz.get(zz);
-                  if (sz) {
-                    if (!sz.id) {
-                      let zz = Wz.idsToInsert || (Wz.idsToInsert = []);
-                      sz.id = zz.push(sz)
+              Yz[Vz++] = 203, Oz.setFloat64(Vz, vv), Vz += 8
+            } else if ("object" === hv || "function" === hv)
+              if (vv) {
+                if (Sv) {
+                  let Pv = Sv.get(vv);
+                  if (Pv) {
+                    if (!Pv.id) {
+                      let vv = Sv.idsToInsert || (Sv.idsToInsert = []);
+                      Pv.id = vv.push(Pv)
                     }
-                    return Jt[Gt++] = 214, Jt[Gt++] = 112, Ct.setUint32(Gt, sz.id), void(Gt += 4)
+                    return Yz[Vz++] = 214, Yz[Vz++] = 112, Oz.setUint32(Vz, Pv.id), void(Vz += 4)
                   }
-                  Wz.set(zz, {
-                    offset: Gt - tz
+                  Sv.set(vv, {
+                    offset: Vz - zv
                   })
                 }
-                let Xz = zz.constructor;
-                if (Xz === Object) mz(zz);
-                else if (Xz === Array) Bz(zz);
-                else if (Xz === Map)
-                  if (this.mapAsEmptyObject) Jt[Gt++] = 128;
+                let ev = vv.constructor;
+                if (ev === Object) Fv(vv);
+                else if (ev === Array) cv(vv);
+                else if (ev === Map)
+                  if (this.mapAsEmptyObject) Yz[Vz++] = 128;
                   else {
-                    (sz = zz.size) < 16 ? Jt[Gt++] = 128 | sz : sz < 65536 ? (Jt[Gt++] = 222, Jt[Gt++] = sz >> 8, Jt[Gt++] = 255 & sz) : (Jt[Gt++] = 223, Ct.setUint32(Gt, sz), Gt += 4);
-                    for (let [tz, sz] of zz) Pz(tz), Pz(sz)
+                    (Pv = vv.size) < 16 ? Yz[Vz++] = 128 | Pv : Pv < 65536 ? (Yz[Vz++] = 222, Yz[Vz++] = Pv >> 8, Yz[Vz++] = 255 & Pv) : (Yz[Vz++] = 223, Oz.setUint32(Vz, Pv), Vz += 4);
+                    for (let [zv, Pv] of vv) Gv(zv), Gv(Pv)
                   }
                 else {
-                  for (let tz = 0, sz = Dt.length; tz < sz; tz++) {
-                    if (zz instanceof gt[tz]) {
-                      let sz = Dt[tz];
-                      if (sz.write) {
-                        sz.type && (Jt[Gt++] = 212, Jt[Gt++] = sz.type, Jt[Gt++] = 0);
-                        let tz = sz.write.call(this, zz);
-                        return void(tz === zz ? Array.isArray(zz) ? Bz(zz) : mz(zz) : Pz(tz))
+                  for (let zv = 0, Pv = sz.length; zv < Pv; zv++) {
+                    if (vv instanceof Cz[zv]) {
+                      let Pv = sz[zv];
+                      if (Pv.write) {
+                        Pv.type && (Yz[Vz++] = 212, Yz[Vz++] = Pv.type, Yz[Vz++] = 0);
+                        let zv = Pv.write.call(this, vv);
+                        return void(zv === vv ? Array.isArray(vv) ? cv(vv) : Fv(vv) : Gv(zv))
                       }
-                      let Fz, Wz = Jt,
-                        Xz = Ct,
-                        Oz = Gt;
-                      Jt = null;
+                      let hv, Sv = Yz,
+                        ev = Oz,
+                        gv = Vz;
+                      Yz = null;
                       try {
-                        Fz = sz.pack.call(this, zz, (zz => (Jt = Wz, Wz = null, Gt += zz, Gt > et && Jz(Gt), {
-                          target: Jt,
-                          targetView: Ct,
-                          position: Gt - zz
-                        })), Pz)
+                        hv = Pv.pack.call(this, vv, (vv => (Yz = Sv, Sv = null, Vz += vv, Vz > Dz && Yv(Vz), {
+                          target: Yz,
+                          targetView: Oz,
+                          position: Vz - vv
+                        })), Gv)
                       } finally {
-                        Wz && (Jt = Wz, Ct = Xz, Gt = Oz, et = Jt.length - 10)
+                        Sv && (Yz = Sv, Oz = ev, Vz = gv, Dz = Yz.length - 10)
                       }
-                      return void(Fz && (Fz.length + Gt > et && Jz(Fz.length + Gt), Gt = dt(Fz, Jt, Gt, sz.type)))
+                      return void(hv && (hv.length + Vz > Dz && Yv(hv.length + Vz), Vz = Qz(hv, Yz, Vz, Pv.type)))
                     }
                   }
-                  if (Array.isArray(zz)) Bz(zz);
+                  if (Array.isArray(vv)) cv(vv);
                   else {
-                    if (zz.toJSON) {
-                      const tz = zz.toJSON();
-                      if (tz !== zz) return Pz(tz)
+                    if (vv.toJSON) {
+                      const zv = vv.toJSON();
+                      if (zv !== vv) return Gv(zv)
                     }
-                    if ("function" === Fz) return Pz(this.writeFunction && this.writeFunction(zz));
-                    mz(zz)
+                    if ("function" === hv) return Gv(this.writeFunction && this.writeFunction(vv));
+                    Fv(vv)
                   }
                 }
-              } else Jt[Gt++] = 192;
-            else if ("boolean" === Fz) Jt[Gt++] = zz ? 195 : 194;
-            else if ("bigint" === Fz) {
-              if (zz < BigInt(1) << BigInt(63) && zz >= -(BigInt(1) << BigInt(63))) Jt[Gt++] = 211, Ct.setBigInt64(Gt, zz);
-              else if (zz < BigInt(1) << BigInt(64) && zz > 0) Jt[Gt++] = 207, Ct.setBigUint64(Gt, zz);
+              } else Yz[Vz++] = 192;
+            else if ("boolean" === hv) Yz[Vz++] = vv ? 195 : 194;
+            else if ("bigint" === hv) {
+              if (vv < BigInt(1) << BigInt(63) && vv >= -(BigInt(1) << BigInt(63))) Yz[Vz++] = 211, Oz.setBigInt64(Vz, vv);
+              else if (vv < BigInt(1) << BigInt(64) && vv > 0) Yz[Vz++] = 207, Oz.setBigUint64(Vz, vv);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return Pz(zz.toString());
-                  if (this.useBigIntExtension && zz < BigInt(2) ** BigInt(1023) && zz > -(BigInt(2) ** BigInt(1023))) {
-                    Jt[Gt++] = 199, Gt++, Jt[Gt++] = 66;
-                    let tz, sz = [];
+                  if (this.largeBigIntToString) return Gv(vv.toString());
+                  if (this.useBigIntExtension && vv < BigInt(2) ** BigInt(1023) && vv > -(BigInt(2) ** BigInt(1023))) {
+                    Yz[Vz++] = 199, Vz++, Yz[Vz++] = 66;
+                    let zv, Pv = [];
                     do {
-                      let Fz = zz & BigInt(255);
-                      tz = (Fz & BigInt(128)) === (zz < BigInt(0) ? BigInt(128) : BigInt(0)), sz.push(Fz), zz >>= BigInt(8)
-                    } while (zz !== BigInt(0) && zz !== BigInt(-1) || !tz);
-                    Jt[Gt - 2] = sz.length;
-                    for (let zz = sz.length; zz > 0;) Jt[Gt++] = Number(sz[--zz]);
+                      let hv = vv & BigInt(255);
+                      zv = (hv & BigInt(128)) === (vv < BigInt(0) ? BigInt(128) : BigInt(0)), Pv.push(hv), vv >>= BigInt(8)
+                    } while (vv !== BigInt(0) && vv !== BigInt(-1) || !zv);
+                    Yz[Vz - 2] = Pv.length;
+                    for (let vv = Pv.length; vv > 0;) Yz[Vz++] = Number(Pv[--vv]);
                     return
                   }
-                  throw new RangeError(zz + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(vv + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                Jt[Gt++] = 203, Ct.setFloat64(Gt, Number(zz))
+                Yz[Vz++] = 203, Oz.setFloat64(Vz, Number(vv))
               }
-              Gt += 8
+              Vz += 8
             } else {
-              if ("undefined" !== Fz) throw new Error("Unknown type: " + Fz);
-              this.encodeUndefinedAsNil ? Jt[Gt++] = 192 : (Jt[Gt++] = 212, Jt[Gt++] = 0, Jt[Gt++] = 0)
+              if ("undefined" !== hv) throw new Error("Unknown type: " + hv);
+              this.encodeUndefinedAsNil ? Yz[Vz++] = 192 : (Yz[Vz++] = 212, Yz[Vz++] = 0, Yz[Vz++] = 0)
             }
           },
-          rz = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? zz => {
-            let tz;
+          mv = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? vv => {
+            let zv;
             if (this.skipValues) {
-              tz = [];
-              for (let sz in zz) "function" === typeof zz.hasOwnProperty && !zz.hasOwnProperty(sz) || this.skipValues.includes(zz[sz]) || tz.push(sz)
-            } else tz = Object.keys(zz);
-            let sz, Fz = tz.length;
-            if (Fz < 16 ? Jt[Gt++] = 128 | Fz : Fz < 65536 ? (Jt[Gt++] = 222, Jt[Gt++] = Fz >> 8, Jt[Gt++] = 255 & Fz) : (Jt[Gt++] = 223, Ct.setUint32(Gt, Fz), Gt += 4), this.coercibleKeyAsNumber)
-              for (let Wz = 0; Wz < Fz; Wz++) {
-                sz = tz[Wz];
-                let Fz = Number(sz);
-                Pz(isNaN(Fz) ? sz : Fz), Pz(zz[sz])
+              zv = [];
+              for (let Pv in vv) "function" === typeof vv.hasOwnProperty && !vv.hasOwnProperty(Pv) || this.skipValues.includes(vv[Pv]) || zv.push(Pv)
+            } else zv = Object.keys(vv);
+            let Pv, hv = zv.length;
+            if (hv < 16 ? Yz[Vz++] = 128 | hv : hv < 65536 ? (Yz[Vz++] = 222, Yz[Vz++] = hv >> 8, Yz[Vz++] = 255 & hv) : (Yz[Vz++] = 223, Oz.setUint32(Vz, hv), Vz += 4), this.coercibleKeyAsNumber)
+              for (let Sv = 0; Sv < hv; Sv++) {
+                Pv = zv[Sv];
+                let hv = Number(Pv);
+                Gv(isNaN(hv) ? Pv : hv), Gv(vv[Pv])
               } else
-                for (let Wz = 0; Wz < Fz; Wz++) Pz(sz = tz[Wz]), Pz(zz[sz])
-          } : zz => {
-            Jt[Gt++] = 222;
-            let sz = Gt - tz;
-            Gt += 2;
-            let Fz = 0;
-            for (let tz in zz)("function" !== typeof zz.hasOwnProperty || zz.hasOwnProperty(tz)) && (Pz(tz), Pz(zz[tz]), Fz++);
-            if (Fz > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            Jt[sz++ + tz] = Fz >> 8, Jt[sz + tz] = 255 & Fz
+                for (let Sv = 0; Sv < hv; Sv++) Gv(Pv = zv[Sv]), Gv(vv[Pv])
+          } : vv => {
+            Yz[Vz++] = 222;
+            let Pv = Vz - zv;
+            Vz += 2;
+            let hv = 0;
+            for (let zv in vv)("function" !== typeof vv.hasOwnProperty || vv.hasOwnProperty(zv)) && (Gv(zv), Gv(vv[zv]), hv++);
+            if (hv > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            Yz[Pv++ + zv] = hv >> 8, Yz[Pv + zv] = 255 & hv
           },
-          Yz = !1 === this.useRecords ? rz : zz.progressiveRecords && !uz ? zz => {
-            let sz, Wz, Xz = Fz.transitions || (Fz.transitions = Object.create(null)),
-              Oz = Gt++ - tz;
-            for (let oz in zz)
-              if ("function" !== typeof zz.hasOwnProperty || zz.hasOwnProperty(oz)) {
-                if (sz = Xz[oz], sz) Xz = sz;
+          jv = !1 === this.useRecords ? mv : vv.progressiveRecords && !Tv ? vv => {
+            let Pv, Sv, ev = hv.transitions || (hv.transitions = Object.create(null)),
+              gv = Vz++ - zv;
+            for (let pv in vv)
+              if ("function" !== typeof vv.hasOwnProperty || vv.hasOwnProperty(pv)) {
+                if (Pv = ev[pv], Pv) ev = Pv;
                 else {
-                  let vz = Object.keys(zz),
-                    Uz = Xz;
-                  Xz = Fz.transitions;
-                  let Kz = 0;
-                  for (let zz = 0, tz = vz.length; zz < tz; zz++) {
-                    let tz = vz[zz];
-                    sz = Xz[tz], sz || (sz = Xz[tz] = Object.create(null), Kz++), Xz = sz
+                  let dv = Object.keys(vv),
+                    Nv = ev;
+                  ev = hv.transitions;
+                  let lv = 0;
+                  for (let vv = 0, zv = dv.length; vv < zv; vv++) {
+                    let zv = dv[vv];
+                    Pv = ev[zv], Pv || (Pv = ev[zv] = Object.create(null), lv++), ev = Pv
                   }
-                  Oz + tz + 1 == Gt ? (Gt--, Iz(Xz, vz, Kz)) : Cz(Xz, vz, Oz, Kz), Wz = !0, Xz = Uz[oz]
+                  gv + zv + 1 == Vz ? (Vz--, nv(ev, dv, lv)) : Ov(ev, dv, gv, lv), Sv = !0, ev = Nv[pv]
                 }
-                Pz(zz[oz])
-              } if (!Wz) {
-              let sz = Xz[jt];
-              sz ? Jt[Oz + tz] = sz : Cz(Xz, Object.keys(zz), Oz, 0)
+                Gv(vv[pv])
+              } if (!Sv) {
+              let Pv = ev[xz];
+              Pv ? Yz[gv + zv] = Pv : Ov(ev, Object.keys(vv), gv, 0)
             }
-          } : zz => {
-            let tz, sz = Fz.transitions || (Fz.transitions = Object.create(null)),
-              Wz = 0;
-            for (let Fz in zz)("function" !== typeof zz.hasOwnProperty || zz.hasOwnProperty(Fz)) && (tz = sz[Fz], tz || (tz = sz[Fz] = Object.create(null), Wz++), sz = tz);
-            let Xz = sz[jt];
-            Xz ? Xz >= 96 && uz ? (Jt[Gt++] = 96 + (31 & (Xz -= 96)), Jt[Gt++] = Xz >> 5) : Jt[Gt++] = Xz : Iz(sz, sz.__keys__ || Object.keys(zz), Wz);
-            for (let Fz in zz)("function" !== typeof zz.hasOwnProperty || zz.hasOwnProperty(Fz)) && Pz(zz[Fz])
+          } : vv => {
+            let zv, Pv = hv.transitions || (hv.transitions = Object.create(null)),
+              Sv = 0;
+            for (let hv in vv)("function" !== typeof vv.hasOwnProperty || vv.hasOwnProperty(hv)) && (zv = Pv[hv], zv || (zv = Pv[hv] = Object.create(null), Sv++), Pv = zv);
+            let ev = Pv[xz];
+            ev ? ev >= 96 && Tv ? (Yz[Vz++] = 96 + (31 & (ev -= 96)), Yz[Vz++] = ev >> 5) : Yz[Vz++] = ev : nv(Pv, Pv.__keys__ || Object.keys(vv), Sv);
+            for (let hv in vv)("function" !== typeof vv.hasOwnProperty || vv.hasOwnProperty(hv)) && Gv(vv[hv])
           },
-          xz = "function" == typeof this.useRecords && this.useRecords,
-          mz = xz ? zz => {
-            xz(zz) ? Yz(zz) : rz(zz)
-          } : Yz,
-          Jz = zz => {
-            let sz;
-            if (zz > 16777216) {
-              if (zz - tz > mt) throw new Error("Packed buffer would be larger than maximum buffer size");
-              sz = Math.min(mt, 4096 * Math.round(Math.max((zz - tz) * (zz > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else sz = 1 + (Math.max(zz - tz << 2, Jt.length - 1) >> 12) << 12;
-            let Fz = new Yt(sz);
-            return Ct = Fz.dataView || (Fz.dataView = new DataView(Fz.buffer, 0, sz)), zz = Math.min(zz, Jt.length), Jt.copy ? Jt.copy(Fz, 0, tz, zz) : Fz.set(Jt.slice(tz, zz)), Gt -= tz, tz = 0, et = Fz.length - 10, Jt = Fz
+          fv = "function" == typeof this.useRecords && this.useRecords,
+          Fv = fv ? vv => {
+            fv(vv) ? jv(vv) : mv(vv)
+          } : jv,
+          Yv = vv => {
+            let Pv;
+            if (vv > 16777216) {
+              if (vv - zv > Fz) throw new Error("Packed buffer would be larger than maximum buffer size");
+              Pv = Math.min(Fz, 4096 * Math.round(Math.max((vv - zv) * (vv > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else Pv = 1 + (Math.max(vv - zv << 2, Yz.length - 1) >> 12) << 12;
+            let hv = new jz(Pv);
+            return Oz = hv.dataView || (hv.dataView = new DataView(hv.buffer, 0, Pv)), vv = Math.min(vv, Yz.length), Yz.copy ? Yz.copy(hv, 0, zv, vv) : hv.set(Yz.slice(zv, vv)), Vz -= zv, zv = 0, Dz = hv.length - 10, Yz = hv
           },
-          Iz = (zz, tz, Wz) => {
-            let Xz = Fz.nextId;
-            Xz || (Xz = 64), Xz < Nz && this.shouldShareStructure && !this.shouldShareStructure(tz) ? (Xz = Fz.nextOwnId, Xz < bz || (Xz = Nz), Fz.nextOwnId = Xz + 1) : (Xz >= bz && (Xz = Nz), Fz.nextId = Xz + 1);
-            let Oz = tz.highByte = Xz >= 96 && uz ? Xz - 96 >> 5 : -1;
-            zz[jt] = Xz, zz.__keys__ = tz, Fz[Xz - 64] = tz, Xz < Nz ? (tz.isShared = !0, Fz.sharedLength = Xz - 63, sz = !0, Oz >= 0 ? (Jt[Gt++] = 96 + (31 & Xz), Jt[Gt++] = Oz) : Jt[Gt++] = Xz) : (Oz >= 0 ? (Jt[Gt++] = 213, Jt[Gt++] = 114, Jt[Gt++] = 96 + (31 & Xz), Jt[Gt++] = Oz) : (Jt[Gt++] = 212, Jt[Gt++] = 114, Jt[Gt++] = Xz), Wz && (Dz += gz * Wz), wz.length >= Kz && (wz.shift()[jt] = 0), wz.push(zz), Pz(tz))
+          nv = (vv, zv, Sv) => {
+            let ev = hv.nextId;
+            ev || (ev = 64), ev < Wv && this.shouldShareStructure && !this.shouldShareStructure(zv) ? (ev = hv.nextOwnId, ev < wv || (ev = Wv), hv.nextOwnId = ev + 1) : (ev >= wv && (ev = Wv), hv.nextId = ev + 1);
+            let gv = zv.highByte = ev >= 96 && Tv ? ev - 96 >> 5 : -1;
+            vv[xz] = ev, vv.__keys__ = zv, hv[ev - 64] = zv, ev < Wv ? (zv.isShared = !0, hv.sharedLength = ev - 63, Pv = !0, gv >= 0 ? (Yz[Vz++] = 96 + (31 & ev), Yz[Vz++] = gv) : Yz[Vz++] = ev) : (gv >= 0 ? (Yz[Vz++] = 213, Yz[Vz++] = 114, Yz[Vz++] = 96 + (31 & ev), Yz[Vz++] = gv) : (Yz[Vz++] = 212, Yz[Vz++] = 114, Yz[Vz++] = ev), Sv && (sv += Cv * Sv), av.length >= lv && (av.shift()[xz] = 0), av.push(vv), Gv(zv))
           },
-          Cz = (zz, sz, Fz, Wz) => {
-            let Xz = Jt,
-              Oz = Gt,
-              oz = et,
-              vz = tz;
-            Jt = It, Gt = 0, tz = 0, Jt || (It = Jt = new Yt(8192)), et = Jt.length - 10, Iz(zz, sz, Wz), It = Jt;
-            let Uz = Gt;
-            if (Jt = Xz, Gt = Oz, et = oz, tz = vz, Uz > 1) {
-              let zz = Gt + Uz - 1;
-              zz > et && Jz(zz);
-              let sz = Fz + tz;
-              Jt.copyWithin(sz + Uz, sz + 1, Gt), Jt.set(It.slice(0, Uz), sz), Gt = zz
-            } else Jt[Fz + tz] = It[0]
+          Ov = (vv, Pv, hv, Sv) => {
+            let ev = Yz,
+              gv = Vz,
+              pv = Dz,
+              dv = zv;
+            Yz = nz, Vz = 0, zv = 0, Yz || (nz = Yz = new jz(8192)), Dz = Yz.length - 10, nv(vv, Pv, Sv), nz = Yz;
+            let Nv = Vz;
+            if (Yz = ev, Vz = gv, Dz = pv, zv = dv, Nv > 1) {
+              let vv = Vz + Nv - 1;
+              vv > Dz && Yv(vv);
+              let Pv = hv + zv;
+              Yz.copyWithin(Pv + Nv, Pv + 1, Vz), Yz.set(nz.slice(0, Nv), Pv), Vz = vv
+            } else Yz[hv + zv] = nz[0]
           },
-          ez = zz => {
-            let Wz = Zt(zz, Jt, tz, Gt, Fz, Jz, ((zz, tz, Fz) => {
-              if (Fz) return sz = !0;
-              Gt = tz;
-              let Wz = Jt;
-              return Pz(zz), Hz(), Wz !== Jt ? {
-                position: Gt,
-                targetView: Ct,
-                target: Jt
-              } : Gt
+          Dv = vv => {
+            let Sv = Kz(vv, Yz, zv, Vz, hv, Yv, ((vv, zv, hv) => {
+              if (hv) return Pv = !0;
+              Vz = zv;
+              let Sv = Yz;
+              return Gv(vv), iv(), Sv !== Yz ? {
+                position: Vz,
+                targetView: Oz,
+                target: Yz
+              } : Vz
             }), this);
-            if (0 === Wz) return mz(zz);
-            Gt = Wz
+            if (0 === Sv) return Fv(vv);
+            Vz = Sv
           }
       }
-      useBuffer(zz) {
-        Jt = zz, Ct = Jt.dataView || (Jt.dataView = new DataView(Jt.buffer, Jt.byteOffset, Jt.byteLength)), Gt = 0
+      useBuffer(vv) {
+        Yz = vv, Oz = Yz.dataView || (Yz.dataView = new DataView(Yz.buffer, Yz.byteOffset, Yz.byteLength)), Vz = 0
       }
-      set position(zz) {
-        Gt = zz
+      set position(vv) {
+        Vz = vv
       }
       get position() {
-        return Gt
+        return Vz
       }
-      set buffer(zz) {
-        Jt = zz
+      set buffer(vv) {
+        Yz = vv
       }
       get buffer() {
-        return Jt
+        return Yz
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function yt(zz, tz, sz, Fz) {
-      let Wz = zz.byteLength;
-      if (Wz + 1 < 256) {
+    function qz(vv, zv, Pv, hv) {
+      let Sv = vv.byteLength;
+      if (Sv + 1 < 256) {
         var {
-          target: Xz,
-          position: Oz
-        } = sz(4 + Wz);
-        Xz[Oz++] = 199, Xz[Oz++] = Wz + 1
-      } else if (Wz + 1 < 65536) {
+          target: ev,
+          position: gv
+        } = Pv(4 + Sv);
+        ev[gv++] = 199, ev[gv++] = Sv + 1
+      } else if (Sv + 1 < 65536) {
         var {
-          target: Xz,
-          position: Oz
-        } = sz(5 + Wz);
-        Xz[Oz++] = 200, Xz[Oz++] = Wz + 1 >> 8, Xz[Oz++] = Wz + 1 & 255
+          target: ev,
+          position: gv
+        } = Pv(5 + Sv);
+        ev[gv++] = 200, ev[gv++] = Sv + 1 >> 8, ev[gv++] = Sv + 1 & 255
       } else {
         var {
-          target: Xz,
-          position: Oz,
-          targetView: oz
-        } = sz(7 + Wz);
-        Xz[Oz++] = 201, oz.setUint32(Oz, Wz + 1), Oz += 4
+          target: ev,
+          position: gv,
+          targetView: pv
+        } = Pv(7 + Sv);
+        ev[gv++] = 201, pv.setUint32(gv, Sv + 1), gv += 4
       }
-      Xz[Oz++] = 116, Xz[Oz++] = tz, zz.buffer || (zz = new Uint8Array(zz)), Xz.set(new Uint8Array(zz.buffer, zz.byteOffset, zz.byteLength), Oz)
+      ev[gv++] = 116, ev[gv++] = zv, vv.buffer || (vv = new Uint8Array(vv)), ev.set(new Uint8Array(vv.buffer, vv.byteOffset, vv.byteLength), gv)
     }
 
-    function Mt(zz, tz) {
-      let sz = zz.byteLength;
-      var Fz, Wz;
-      if (sz < 256) {
+    function Iz(vv, zv) {
+      let Pv = vv.byteLength;
+      var hv, Sv;
+      if (Pv < 256) {
         var {
-          target: Fz,
-          position: Wz
-        } = tz(sz + 2);
-        Fz[Wz++] = 196, Fz[Wz++] = sz
-      } else if (sz < 65536) {
+          target: hv,
+          position: Sv
+        } = zv(Pv + 2);
+        hv[Sv++] = 196, hv[Sv++] = Pv
+      } else if (Pv < 65536) {
         var {
-          target: Fz,
-          position: Wz
-        } = tz(sz + 3);
-        Fz[Wz++] = 197, Fz[Wz++] = sz >> 8, Fz[Wz++] = 255 & sz
+          target: hv,
+          position: Sv
+        } = zv(Pv + 3);
+        hv[Sv++] = 197, hv[Sv++] = Pv >> 8, hv[Sv++] = 255 & Pv
       } else {
         var {
-          target: Fz,
-          position: Wz,
-          targetView: Xz
-        } = tz(sz + 5);
-        Fz[Wz++] = 198, Xz.setUint32(Wz, sz), Wz += 4
+          target: hv,
+          position: Sv,
+          targetView: ev
+        } = zv(Pv + 5);
+        hv[Sv++] = 198, ev.setUint32(Sv, Pv), Sv += 4
       }
-      Fz.set(zz, Wz)
+      hv.set(vv, Sv)
     }
 
-    function dt(zz, tz, sz, Fz) {
-      let Wz = zz.length;
-      switch (Wz) {
+    function Qz(vv, zv, Pv, hv) {
+      let Sv = vv.length;
+      switch (Sv) {
         case 1:
-          tz[sz++] = 212;
+          zv[Pv++] = 212;
           break;
         case 2:
-          tz[sz++] = 213;
+          zv[Pv++] = 213;
           break;
         case 4:
-          tz[sz++] = 214;
+          zv[Pv++] = 214;
           break;
         case 8:
-          tz[sz++] = 215;
+          zv[Pv++] = 215;
           break;
         case 16:
-          tz[sz++] = 216;
+          zv[Pv++] = 216;
           break;
         default:
-          Wz < 256 ? (tz[sz++] = 199, tz[sz++] = Wz) : Wz < 65536 ? (tz[sz++] = 200, tz[sz++] = Wz >> 8, tz[sz++] = 255 & Wz) : (tz[sz++] = 201, tz[sz++] = Wz >> 24, tz[sz++] = Wz >> 16 & 255, tz[sz++] = Wz >> 8 & 255, tz[sz++] = 255 & Wz)
+          Sv < 256 ? (zv[Pv++] = 199, zv[Pv++] = Sv) : Sv < 65536 ? (zv[Pv++] = 200, zv[Pv++] = Sv >> 8, zv[Pv++] = 255 & Sv) : (zv[Pv++] = 201, zv[Pv++] = Sv >> 24, zv[Pv++] = Sv >> 16 & 255, zv[Pv++] = Sv >> 8 & 255, zv[Pv++] = 255 & Sv)
       }
-      return tz[sz++] = Fz, tz.set(zz, sz), sz += Wz
+      return zv[Pv++] = hv, zv.set(vv, Pv), Pv += Sv
     }
 
-    function ht(zz, tz, sz) {
-      if (Tt.length > 0) {
-        Ct.setUint32(Tt.position + zz, Gt + sz - Tt.position - zz), Tt.stringsPosition = Gt - zz;
-        let Fz = Tt;
-        Tt = null, tz(Fz[0]), tz(Fz[1])
+    function Zz(vv, zv, Pv) {
+      if (Uz.length > 0) {
+        Oz.setUint32(Uz.position + vv, Vz + Pv - Uz.position - vv), Uz.stringsPosition = Vz - vv;
+        let hv = Uz;
+        Uz = null, zv(hv[0]), zv(hv[1])
       }
     }
 
-    function Qt(zz) {
-      if (zz.Class) {
-        if (!zz.pack && !zz.write) throw new Error("Extension has no pack or write function");
-        if (zz.pack && !zz.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        gt.unshift(zz.Class), Dt.unshift(zz)
-      }! function(zz) {
-        zz.unpack ? Bz[zz.type] = zz.unpack : Bz[zz.type] = zz
-      }(zz)
+    function Az(vv) {
+      if (vv.Class) {
+        if (!vv.pack && !vv.write) throw new Error("Extension has no pack or write function");
+        if (vv.pack && !vv.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        Cz.unshift(vv.Class), sz.unshift(vv)
+      }! function(vv) {
+        vv.unpack ? cv[vv.type] = vv.unpack : cv[vv.type] = vv
+      }(vv)
     }
 
-    function kt(zz, tz) {
-      return zz.isCompatible = zz => {
-        let sz = !zz || (tz.lastNamedStructuresLength || 0) === zz.length;
-        return sz || tz._mergeStructures(zz), sz
-      }, zz
+    function Lz(vv, zv) {
+      return vv.isCompatible = vv => {
+        let Pv = !vv || (zv.lastNamedStructuresLength || 0) === vv.length;
+        return Pv || zv._mergeStructures(vv), Pv
+      }, vv
     }
-    gt = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, rz], Dt = [{
-      pack(zz, tz, sz) {
-        let Fz = zz.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === zz.getMilliseconds()) && Fz >= 0 && Fz < 4294967296) {
+    Cz = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, mv], sz = [{
+      pack(vv, zv, Pv) {
+        let hv = vv.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === vv.getMilliseconds()) && hv >= 0 && hv < 4294967296) {
           let {
-            target: zz,
-            targetView: sz,
-            position: Wz
-          } = tz(6);
-          zz[Wz++] = 214, zz[Wz++] = 255, sz.setUint32(Wz, Fz)
-        } else if (Fz > 0 && Fz < 4294967296) {
+            target: vv,
+            targetView: Pv,
+            position: Sv
+          } = zv(6);
+          vv[Sv++] = 214, vv[Sv++] = 255, Pv.setUint32(Sv, hv)
+        } else if (hv > 0 && hv < 4294967296) {
           let {
-            target: sz,
-            targetView: Wz,
-            position: Xz
-          } = tz(10);
-          sz[Xz++] = 215, sz[Xz++] = 255, Wz.setUint32(Xz, 4e6 * zz.getMilliseconds() + (Fz / 1e3 / 4294967296 | 0)), Wz.setUint32(Xz + 4, Fz)
-        } else if (isNaN(Fz)) {
-          if (this.onInvalidDate) return tz(0), sz(this.onInvalidDate());
+            target: Pv,
+            targetView: Sv,
+            position: ev
+          } = zv(10);
+          Pv[ev++] = 215, Pv[ev++] = 255, Sv.setUint32(ev, 4e6 * vv.getMilliseconds() + (hv / 1e3 / 4294967296 | 0)), Sv.setUint32(ev + 4, hv)
+        } else if (isNaN(hv)) {
+          if (this.onInvalidDate) return zv(0), Pv(this.onInvalidDate());
           let {
-            target: zz,
-            targetView: Fz,
-            position: Wz
-          } = tz(3);
-          zz[Wz++] = 212, zz[Wz++] = 255, zz[Wz++] = 255
+            target: vv,
+            targetView: hv,
+            position: Sv
+          } = zv(3);
+          vv[Sv++] = 212, vv[Sv++] = 255, vv[Sv++] = 255
         } else {
           let {
-            target: sz,
-            targetView: Wz,
-            position: Xz
-          } = tz(15);
-          sz[Xz++] = 199, sz[Xz++] = 12, sz[Xz++] = 255, Wz.setUint32(Xz, 1e6 * zz.getMilliseconds()), Wz.setBigInt64(Xz + 4, BigInt(Math.floor(Fz)))
+            target: Pv,
+            targetView: Sv,
+            position: ev
+          } = zv(15);
+          Pv[ev++] = 199, Pv[ev++] = 12, Pv[ev++] = 255, Sv.setUint32(ev, 1e6 * vv.getMilliseconds()), Sv.setBigInt64(ev + 4, BigInt(Math.floor(hv)))
         }
       }
     }, {
-      pack(zz, tz, sz) {
-        if (this.setAsEmptyObject) return tz(0), sz({});
-        let Fz = Array.from(zz),
+      pack(vv, zv, Pv) {
+        if (this.setAsEmptyObject) return zv(0), Pv({});
+        let hv = Array.from(vv),
           {
-            target: Wz,
-            position: Xz
-          } = tz(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Wz[Xz++] = 212, Wz[Xz++] = 115, Wz[Xz++] = 0), sz(Fz)
+            target: Sv,
+            position: ev
+          } = zv(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Sv[ev++] = 212, Sv[ev++] = 115, Sv[ev++] = 0), Pv(hv)
       }
     }, {
-      pack(zz, tz, sz) {
+      pack(vv, zv, Pv) {
         let {
-          target: Fz,
-          position: Wz
-        } = tz(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Fz[Wz++] = 212, Fz[Wz++] = 101, Fz[Wz++] = 0), sz([zz.name, zz.message, zz.cause])
+          target: hv,
+          position: Sv
+        } = zv(this.moreTypes ? 3 : 0);
+        this.moreTypes && (hv[Sv++] = 212, hv[Sv++] = 101, hv[Sv++] = 0), Pv([vv.name, vv.message, vv.cause])
       }
     }, {
-      pack(zz, tz, sz) {
+      pack(vv, zv, Pv) {
         let {
-          target: Fz,
-          position: Wz
-        } = tz(this.moreTypes ? 3 : 0);
-        this.moreTypes && (Fz[Wz++] = 212, Fz[Wz++] = 120, Fz[Wz++] = 0), sz([zz.source, zz.flags])
+          target: hv,
+          position: Sv
+        } = zv(this.moreTypes ? 3 : 0);
+        this.moreTypes && (hv[Sv++] = 212, hv[Sv++] = 120, hv[Sv++] = 0), Pv([vv.source, vv.flags])
       }
     }, {
-      pack(zz, tz) {
-        this.moreTypes ? yt(zz, 16, tz) : Mt(rt ? Buffer.from(zz) : new Uint8Array(zz), tz)
+      pack(vv, zv) {
+        this.moreTypes ? qz(vv, 16, zv) : Iz(mz ? Buffer.from(vv) : new Uint8Array(vv), zv)
       }
     }, {
-      pack(zz, tz) {
-        let sz = zz.constructor;
-        sz !== xt && this.moreTypes ? yt(zz, st.indexOf(sz.name), tz) : Mt(zz, tz)
+      pack(vv, zv) {
+        let Pv = vv.constructor;
+        Pv !== fz && this.moreTypes ? qz(vv, Pz.indexOf(Pv.name), zv) : Iz(vv, zv)
       }
     }, {
-      pack(zz, tz) {
+      pack(vv, zv) {
         let {
-          target: sz,
-          position: Fz
-        } = tz(1);
-        sz[Fz] = 193
+          target: Pv,
+          position: hv
+        } = zv(1);
+        Pv[hv] = 193
       }
     }];
-    let it = new At({
+    let Hz = new tz({
       useRecords: !1
     });
-    const Lt = it.pack,
-      lt = it.pack,
-      nt = At,
+    const Mz = Hz.pack,
+      yz = Hz.pack,
+      Bz = tz,
       {
-        NEVER: qt,
-        ALWAYS: St,
-        DECIMAL_ROUND: Vt,
-        DECIMAL_FIT: Rt
-      } = bt,
-      pt = 512,
-      ft = 1024,
-      Et = 2048;
-    const zs = function(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!zz || "object" !== typeof zz) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const sz = new ez(tz);
-        let Fz;
-        const Wz = zz => {
-          let tz;
-          Fz && (zz = Buffer.concat([Fz, zz]), Fz = void 0);
+        NEVER: Jz,
+        ALWAYS: Ez,
+        DECIMAL_ROUND: oz,
+        DECIMAL_FIT: bz
+      } = wz,
+      rz = 512,
+      kz = 1024,
+      Xz = 2048;
+    const uz = function(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!vv || "object" !== typeof vv) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const Pv = new Dv(zv);
+        let hv;
+        const Sv = vv => {
+          let zv;
+          hv && (vv = Buffer.concat([hv, vv]), hv = void 0);
           try {
-            tz = sz.unpackMultiple(zz)
-          } catch (Wz) {
-            if (!Wz.incomplete) throw Wz;
-            Fz = zz.slice(Wz.lastPosition), tz = Wz.values
+            zv = Pv.unpackMultiple(vv)
+          } catch (Sv) {
+            if (!Sv.incomplete) throw Sv;
+            hv = vv.slice(Sv.lastPosition), zv = Sv.values
           }
-          return tz
+          return zv
         };
-        return "function" === typeof zz[Symbol.iterator] ? function*() {
-          for (const tz of zz) yield* Wz(tz)
-        }() : "function" === typeof zz[Symbol.asyncIterator] ? async function*() {
-          for await (const tz of zz) yield* Wz(tz)
+        return "function" === typeof vv[Symbol.iterator] ? function*() {
+          for (const zv of vv) yield* Sv(zv)
+        }() : "function" === typeof vv[Symbol.asyncIterator] ? async function*() {
+          for await (const zv of vv) yield* Sv(zv)
         }(): void 0
       },
-      ts = function(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (zz && "object" === typeof zz) {
-          if ("function" === typeof zz[Symbol.iterator]) return function*(zz, tz) {
-            const sz = new At(tz);
-            for (const Fz of zz) yield sz.pack(Fz)
-          }(zz, tz);
-          if ("function" === typeof zz.then || "function" === typeof zz[Symbol.asyncIterator]) return async function*(zz, tz) {
-            const sz = new At(tz);
-            for await (const Fz of zz) yield sz.pack(Fz)
-          }(zz, tz);
+      vP = function(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (vv && "object" === typeof vv) {
+          if ("function" === typeof vv[Symbol.iterator]) return function*(vv, zv) {
+            const Pv = new tz(zv);
+            for (const hv of vv) yield Pv.pack(hv)
+          }(vv, zv);
+          if ("function" === typeof vv.then || "function" === typeof vv[Symbol.asyncIterator]) return async function*(vv, zv) {
+            const Pv = new tz(zv);
+            for await (const hv of vv) yield Pv.pack(hv)
+          }(vv, zv);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      ss = !1,
-      Fs = !0
+      zP = !1,
+      PP = !0
   },
-  8611: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      $changes: () => Dz,
-      $childType: () => gz,
-      $decoder: () => Kz,
-      $deleteByIndex: () => bz,
-      $encoder: () => Uz,
-      $filter: () => uz,
-      $getByIndex: () => Nz,
-      $numFields: () => Cz,
-      $refId: () => oz,
-      $track: () => vz,
-      $values: () => Yz,
-      ArraySchema: () => XF,
-      Callbacks: () => XW,
-      ChangeTree: () => cs,
-      CollectionSchema: () => vF,
-      Decoder: () => pF,
-      Encoder: () => qF,
-      FieldBuilder: () => uF,
-      MapSchema: () => oF,
-      Metadata: () => Vt,
-      OPERATION: () => Wz,
-      Reflection: () => tW,
-      ReflectionField: () => EF,
-      ReflectionType: () => zW,
-      Root: () => AF,
-      Schema: () => cF,
-      SetSchema: () => UF,
-      StateCallbackStrategy: () => WW,
-      StateView: () => QF,
-      StreamSchema: () => KF,
-      TypeContext: () => kt,
-      createPool: () => oW,
-      decode: () => Pt,
-      decodeKeyValueOperation: () => Es,
-      decodeSchemaOperation: () => fs,
-      defineCustomTypes: () => mt,
-      defineTypes: () => ZF,
-      deprecated: () => CF,
-      dumpChanges: () => TF,
-      encode: () => tt,
-      encodeArray: () => is,
-      encodeIndexedEntry: () => Qs,
-      encodeKeyValueOperation: () => ks,
-      encodeMapEntry: () => hs,
-      encodeSchemaOperation: () => ds,
-      yw: () => BF,
-      fullStateOnly: () => xF,
-      getDecoderStateCallbacks: () => sW,
-      getEncodeDescriptor: () => ts,
-      getRawChangesCallback: () => FW,
-      isBuilder: () => NF,
-      patchOnly: () => YF,
-      registerType: () => xt,
-      schema: () => GF,
-      t: () => gF,
-      type: () => mF,
-      unreliable: () => rF,
-      view: () => PF
+  8772: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      $changes: () => sv,
+      $childType: () => Cv,
+      $decoder: () => lv,
+      $deleteByIndex: () => wv,
+      $encoder: () => Nv,
+      $filter: () => Tv,
+      $getByIndex: () => Wv,
+      $numFields: () => Ov,
+      $refId: () => pv,
+      $track: () => dv,
+      $values: () => jv,
+      ArraySchema: () => Ph,
+      Callbacks: () => PS,
+      ChangeTree: () => VP,
+      CollectionSchema: () => eh,
+      Decoder: () => oh,
+      Encoder: () => yh,
+      FieldBuilder: () => dh,
+      MapSchema: () => Sh,
+      Metadata: () => oz,
+      OPERATION: () => Sv,
+      Reflection: () => Xh,
+      ReflectionField: () => rh,
+      ReflectionType: () => kh,
+      Root: () => Uh,
+      Schema: () => Kh,
+      SetSchema: () => gh,
+      StateCallbackStrategy: () => zS,
+      StateView: () => Ih,
+      StreamSchema: () => ph,
+      TypeContext: () => Lz,
+      createPool: () => SS,
+      decode: () => Gz,
+      decodeKeyValueOperation: () => rP,
+      decodeSchemaOperation: () => bP,
+      defineCustomTypes: () => Fz,
+      defineTypes: () => nh,
+      deprecated: () => Fh,
+      dumpChanges: () => Dh,
+      encode: () => zz,
+      encodeArray: () => ZP,
+      encodeIndexedEntry: () => IP,
+      encodeKeyValueOperation: () => QP,
+      encodeMapEntry: () => qP,
+      encodeSchemaOperation: () => tP,
+      Xw: () => sh,
+      fullStateOnly: () => Gh,
+      getDecoderStateCallbacks: () => uh,
+      getEncodeDescriptor: () => vP,
+      getRawChangesCallback: () => vS,
+      isBuilder: () => Nh,
+      patchOnly: () => ch,
+      registerType: () => fz,
+      schema: () => Oh,
+      t: () => wh,
+      type: () => mh,
+      unreliable: () => ih,
+      view: () => Ch
     });
-    const Fz = 255;
-    var Wz;
+    const hv = 255;
+    var Sv;
 
-    function Xz(zz) {
-      Object.defineProperty(zz, Symbol.metadata, {
+    function ev(vv) {
+      Object.defineProperty(vv, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(zz) {
-      zz[zz.ADD = 128] = "ADD", zz[zz.REPLACE = 0] = "REPLACE", zz[zz.DELETE = 64] = "DELETE", zz[zz.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", zz[zz.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", zz[zz.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", zz[zz.CLEAR = 10] = "CLEAR", zz[zz.REVERSE = 15] = "REVERSE", zz[zz.MOVE = 32] = "MOVE", zz[zz.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", zz[zz.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(Wz || (Wz = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const Oz = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(vv) {
+      vv[vv.ADD = 128] = "ADD", vv[vv.REPLACE = 0] = "REPLACE", vv[vv.DELETE = 64] = "DELETE", vv[vv.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", vv[vv.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", vv[vv.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", vv[vv.CLEAR = 10] = "CLEAR", vv[vv.REVERSE = 15] = "REVERSE", vv[vv.MOVE = 32] = "MOVE", vv[vv.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", vv[vv.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(Sv || (Sv = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const gv = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const zz = "colyseus.symbolRegistry",
-        tz = Oz[zz] || (Oz[zz] = Object.create(null));
-      Symbol.for = function(zz) {
-        return tz[zz] || (tz[zz] = Symbol(zz))
-      }, Symbol.keyFor = function(zz) {
-        for (const sz in tz)
-          if (tz[sz] === zz) return sz
+      const vv = "colyseus.symbolRegistry",
+        zv = gv[vv] || (gv[vv] = Object.create(null));
+      Symbol.for = function(vv) {
+        return zv[vv] || (zv[vv] = Symbol(vv))
+      }, Symbol.keyFor = function(vv) {
+        for (const Pv in zv)
+          if (zv[Pv] === vv) return Pv
       }
     }
-    const oz = Symbol.for("$refId"),
-      vz = "~track",
-      Uz = "~encoder",
-      Kz = "~decoder",
-      uz = "~filter",
-      Nz = "~getByIndex",
-      bz = "~deleteByIndex",
-      wz = "~resyncPrune",
-      Dz = Symbol.for("$changes"),
-      gz = Symbol.for("$childType"),
-      Hz = Symbol.for("$proxyTarget"),
-      Bz = "~onEncodeEnd",
-      Pz = "~reset",
-      rz = "~onDecodeEnd",
-      Yz = Symbol.for("$values"),
-      xz = "~builder",
-      mz = "~descriptors",
-      Jz = "~__encodeDescriptor",
-      Iz = "~encoders",
-      Cz = "~__numFields",
-      ez = "~__refTypeFieldIndexes",
-      Zz = "~__viewFieldIndexes",
-      Gz = "$__fieldIndexesByViewTag",
-      Tz = "~__unreliableFieldIndexes",
-      cz = "~__patchOnlyFieldIndexes",
-      jz = "~__fullSyncSkipIndexes",
-      Az = "~__fullStateOnlyFieldIndexes",
-      yz = "~__streamFieldIndexes",
-      Mz = "~__streamPriorities";
-    let dz;
+    const pv = Symbol.for("$refId"),
+      dv = "~track",
+      Nv = "~encoder",
+      lv = "~decoder",
+      Tv = "~filter",
+      Wv = "~getByIndex",
+      wv = "~deleteByIndex",
+      av = "~resyncPrune",
+      sv = Symbol.for("$changes"),
+      Cv = Symbol.for("$childType"),
+      iv = Symbol.for("$proxyTarget"),
+      cv = "~onEncodeEnd",
+      Gv = "~reset",
+      mv = "~onDecodeEnd",
+      jv = Symbol.for("$values"),
+      fv = "~builder",
+      Fv = "~descriptors",
+      Yv = "~__encodeDescriptor",
+      nv = "~encoders",
+      Ov = "~__numFields",
+      Dv = "~__refTypeFieldIndexes",
+      Kv = "~__viewFieldIndexes",
+      Vv = "$__fieldIndexesByViewTag",
+      Uv = "~__unreliableFieldIndexes",
+      Rv = "~__patchOnlyFieldIndexes",
+      xv = "~__fullSyncSkipIndexes",
+      tv = "~__fullStateOnlyFieldIndexes",
+      qv = "~__streamFieldIndexes",
+      Iv = "~__streamPriorities";
+    let Qv;
     try {
-      dz = new TextEncoder
-    } catch (vW) {}
-    const hz = new ArrayBuffer(8),
-      Qz = new Int32Array(hz),
-      kz = new Float32Array(hz),
-      iz = new Float64Array(hz),
-      Lz = new BigInt64Array(hz),
-      lz = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(zz, tz) {
-        for (var sz = 0, Fz = 0, Wz = 0, Xz = zz.length; Wz < Xz; Wz++)(sz = zz.charCodeAt(Wz)) < 128 ? Fz += 1 : sz < 2048 ? Fz += 2 : sz < 55296 || sz >= 57344 ? Fz += 3 : (Wz++, Fz += 4);
-        return Fz
+      Qv = new TextEncoder
+    } catch (eS) {}
+    const Zv = new ArrayBuffer(8),
+      Av = new Int32Array(Zv),
+      Lv = new Float32Array(Zv),
+      Hv = new Float64Array(Zv),
+      Mv = new BigInt64Array(Zv),
+      yv = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(vv, zv) {
+        for (var Pv = 0, hv = 0, Sv = 0, ev = vv.length; Sv < ev; Sv++)(Pv = vv.charCodeAt(Sv)) < 128 ? hv += 1 : Pv < 2048 ? hv += 2 : Pv < 55296 || Pv >= 57344 ? hv += 3 : (Sv++, hv += 4);
+        return hv
       };
 
-    function nz(zz, tz, sz) {
-      for (var Fz = 0, Wz = 0, Xz = tz.length; Wz < Xz; Wz++)(Fz = tz.charCodeAt(Wz)) < 128 ? zz[sz.offset++] = Fz : Fz < 2048 ? (zz[sz.offset] = 192 | Fz >> 6, zz[sz.offset + 1] = 128 | 63 & Fz, sz.offset += 2) : Fz < 55296 || Fz >= 57344 ? (zz[sz.offset] = 224 | Fz >> 12, zz[sz.offset + 1] = 128 | Fz >> 6 & 63, zz[sz.offset + 2] = 128 | 63 & Fz, sz.offset += 3) : (Wz++, Fz = 65536 + ((1023 & Fz) << 10 | 1023 & tz.charCodeAt(Wz)), zz[sz.offset] = 240 | Fz >> 18, zz[sz.offset + 1] = 128 | Fz >> 12 & 63, zz[sz.offset + 2] = 128 | Fz >> 6 & 63, zz[sz.offset + 3] = 128 | 63 & Fz, sz.offset += 4)
+    function Bv(vv, zv, Pv) {
+      for (var hv = 0, Sv = 0, ev = zv.length; Sv < ev; Sv++)(hv = zv.charCodeAt(Sv)) < 128 ? vv[Pv.offset++] = hv : hv < 2048 ? (vv[Pv.offset] = 192 | hv >> 6, vv[Pv.offset + 1] = 128 | 63 & hv, Pv.offset += 2) : hv < 55296 || hv >= 57344 ? (vv[Pv.offset] = 224 | hv >> 12, vv[Pv.offset + 1] = 128 | hv >> 6 & 63, vv[Pv.offset + 2] = 128 | 63 & hv, Pv.offset += 3) : (Sv++, hv = 65536 + ((1023 & hv) << 10 | 1023 & zv.charCodeAt(Sv)), vv[Pv.offset] = 240 | hv >> 18, vv[Pv.offset + 1] = 128 | hv >> 12 & 63, vv[Pv.offset + 2] = 128 | hv >> 6 & 63, vv[Pv.offset + 3] = 128 | 63 & hv, Pv.offset += 4)
     }
 
-    function az(zz, tz, sz) {
-      zz[sz.offset++] = 255 & tz
+    function Jv(vv, zv, Pv) {
+      vv[Pv.offset++] = 255 & zv
     }
 
-    function qz(zz, tz, sz) {
-      zz[sz.offset++] = 255 & tz, zz[sz.offset++] = tz >> 8 & 255
+    function Ev(vv, zv, Pv) {
+      vv[Pv.offset++] = 255 & zv, vv[Pv.offset++] = zv >> 8 & 255
     }
 
-    function Sz(zz, tz, sz) {
-      zz[sz.offset++] = 255 & tz, zz[sz.offset++] = tz >> 8 & 255
+    function ov(vv, zv, Pv) {
+      vv[Pv.offset++] = 255 & zv, vv[Pv.offset++] = zv >> 8 & 255
     }
 
-    function Vz(zz, tz, sz) {
-      zz[sz.offset++] = 255 & tz, zz[sz.offset++] = tz >> 8 & 255, zz[sz.offset++] = tz >> 16 & 255, zz[sz.offset++] = tz >> 24 & 255
+    function bv(vv, zv, Pv) {
+      vv[Pv.offset++] = 255 & zv, vv[Pv.offset++] = zv >> 8 & 255, vv[Pv.offset++] = zv >> 16 & 255, vv[Pv.offset++] = zv >> 24 & 255
     }
 
-    function Rz(zz, tz, sz) {
-      const Fz = tz >> 24,
-        Wz = tz >> 16,
-        Xz = tz >> 8,
-        Oz = tz;
-      zz[sz.offset++] = 255 & Oz, zz[sz.offset++] = 255 & Xz, zz[sz.offset++] = 255 & Wz, zz[sz.offset++] = 255 & Fz
+    function rv(vv, zv, Pv) {
+      const hv = zv >> 24,
+        Sv = zv >> 16,
+        ev = zv >> 8,
+        gv = zv;
+      vv[Pv.offset++] = 255 & gv, vv[Pv.offset++] = 255 & ev, vv[Pv.offset++] = 255 & Sv, vv[Pv.offset++] = 255 & hv
     }
 
-    function pz(zz, tz, sz) {
-      const Fz = Math.floor(tz / Math.pow(2, 32));
-      Rz(zz, tz >>> 0, sz), Rz(zz, Fz, sz)
+    function kv(vv, zv, Pv) {
+      const hv = Math.floor(zv / Math.pow(2, 32));
+      rv(vv, zv >>> 0, Pv), rv(vv, hv, Pv)
     }
 
-    function fz(zz, tz, sz) {
-      const Fz = tz / Math.pow(2, 32) | 0;
-      Rz(zz, tz >>> 0, sz), Rz(zz, Fz, sz)
+    function Xv(vv, zv, Pv) {
+      const hv = zv / Math.pow(2, 32) | 0;
+      rv(vv, zv >>> 0, Pv), rv(vv, hv, Pv)
     }
 
-    function Ez(zz, tz, sz) {
-      kz[0] = tz, Vz(zz, Qz[0], sz)
+    function uv(vv, zv, Pv) {
+      Lv[0] = zv, bv(vv, Av[0], Pv)
     }
 
-    function zt(zz, tz, sz) {
-      iz[0] = tz, Vz(zz, Qz[0], sz), Vz(zz, Qz[1], sz)
+    function vz(vv, zv, Pv) {
+      Hv[0] = zv, bv(vv, Av[0], Pv), bv(vv, Av[1], Pv)
     }
-    const tt = {
-        int8: az,
-        uint8: function(zz, tz, sz) {
-          zz[sz.offset++] = 255 & tz
+    const zz = {
+        int8: Jv,
+        uint8: function(vv, zv, Pv) {
+          vv[Pv.offset++] = 255 & zv
         },
-        int16: qz,
-        uint16: Sz,
-        int32: Vz,
-        uint32: Rz,
-        int64: pz,
-        uint64: fz,
-        bigint64: function(zz, tz, sz) {
-          Lz[0] = BigInt.asIntN(64, tz), Vz(zz, Qz[0], sz), Vz(zz, Qz[1], sz)
+        int16: Ev,
+        uint16: ov,
+        int32: bv,
+        uint32: rv,
+        int64: kv,
+        uint64: Xv,
+        bigint64: function(vv, zv, Pv) {
+          Mv[0] = BigInt.asIntN(64, zv), bv(vv, Av[0], Pv), bv(vv, Av[1], Pv)
         },
-        biguint64: function(zz, tz, sz) {
-          Lz[0] = BigInt.asIntN(64, tz), Vz(zz, Qz[0], sz), Vz(zz, Qz[1], sz)
+        biguint64: function(vv, zv, Pv) {
+          Mv[0] = BigInt.asIntN(64, zv), bv(vv, Av[0], Pv), bv(vv, Av[1], Pv)
         },
-        float32: Ez,
-        float64: zt,
-        boolean: function(zz, tz, sz) {
-          zz[sz.offset++] = tz ? 1 : 0
+        float32: uv,
+        float64: vz,
+        boolean: function(vv, zv, Pv) {
+          vv[Pv.offset++] = zv ? 1 : 0
         },
-        string: function(zz, tz, sz) {
-          tz || (tz = "");
-          let Fz = lz(tz, "utf8"),
-            Wz = 0;
-          if (Fz < 32) zz[sz.offset++] = 160 | Fz, Wz = 1;
-          else if (Fz < 256) zz[sz.offset++] = 217, zz[sz.offset++] = Fz, Wz = 2;
-          else if (Fz < 65536) zz[sz.offset++] = 218, Sz(zz, Fz, sz), Wz = 3;
+        string: function(vv, zv, Pv) {
+          zv || (zv = "");
+          let hv = yv(zv, "utf8"),
+            Sv = 0;
+          if (hv < 32) vv[Pv.offset++] = 160 | hv, Sv = 1;
+          else if (hv < 256) vv[Pv.offset++] = 217, vv[Pv.offset++] = hv, Sv = 2;
+          else if (hv < 65536) vv[Pv.offset++] = 218, ov(vv, hv, Pv), Sv = 3;
           else {
-            if (!(Fz < 4294967296)) throw new Error("String too long");
-            zz[sz.offset++] = 219, Rz(zz, Fz, sz), Wz = 5
+            if (!(hv < 4294967296)) throw new Error("String too long");
+            vv[Pv.offset++] = 219, rv(vv, hv, Pv), Sv = 5
           }
-          return nz(zz, tz, sz), Wz + Fz
+          return Bv(vv, zv, Pv), Sv + hv
         },
-        number: function zz(tz, sz, Fz) {
-          return isNaN(sz) ? zz(tz, 0, Fz) : isFinite(sz) ? sz !== (0 | sz) ? Math.abs(sz) <= 34028235e31 && (kz[0] = sz, Math.abs(Math.abs(kz[0]) - Math.abs(sz)) < 1e-4) ? (tz[Fz.offset++] = 202, Ez(tz, sz, Fz), 5) : (tz[Fz.offset++] = 203, zt(tz, sz, Fz), 9) : sz >= 0 ? sz < 128 ? (tz[Fz.offset++] = 255 & sz, 1) : sz < 256 ? (tz[Fz.offset++] = 204, tz[Fz.offset++] = 255 & sz, 2) : sz < 65536 ? (tz[Fz.offset++] = 205, Sz(tz, sz, Fz), 3) : sz < 4294967296 ? (tz[Fz.offset++] = 206, Rz(tz, sz, Fz), 5) : (tz[Fz.offset++] = 207, fz(tz, sz, Fz), 9) : sz >= -32 ? (tz[Fz.offset++] = 224 | sz + 32, 1) : sz >= -128 ? (tz[Fz.offset++] = 208, az(tz, sz, Fz), 2) : sz >= -32768 ? (tz[Fz.offset++] = 209, qz(tz, sz, Fz), 3) : sz >= -2147483648 ? (tz[Fz.offset++] = 210, Vz(tz, sz, Fz), 5) : (tz[Fz.offset++] = 211, pz(tz, sz, Fz), 9) : zz(tz, sz > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Fz)
+        number: function vv(zv, Pv, hv) {
+          return isNaN(Pv) ? vv(zv, 0, hv) : isFinite(Pv) ? Pv !== (0 | Pv) ? Math.abs(Pv) <= 34028235e31 && (Lv[0] = Pv, Math.abs(Math.abs(Lv[0]) - Math.abs(Pv)) < 1e-4) ? (zv[hv.offset++] = 202, uv(zv, Pv, hv), 5) : (zv[hv.offset++] = 203, vz(zv, Pv, hv), 9) : Pv >= 0 ? Pv < 128 ? (zv[hv.offset++] = 255 & Pv, 1) : Pv < 256 ? (zv[hv.offset++] = 204, zv[hv.offset++] = 255 & Pv, 2) : Pv < 65536 ? (zv[hv.offset++] = 205, ov(zv, Pv, hv), 3) : Pv < 4294967296 ? (zv[hv.offset++] = 206, rv(zv, Pv, hv), 5) : (zv[hv.offset++] = 207, Xv(zv, Pv, hv), 9) : Pv >= -32 ? (zv[hv.offset++] = 224 | Pv + 32, 1) : Pv >= -128 ? (zv[hv.offset++] = 208, Jv(zv, Pv, hv), 2) : Pv >= -32768 ? (zv[hv.offset++] = 209, Ev(zv, Pv, hv), 3) : Pv >= -2147483648 ? (zv[hv.offset++] = 210, bv(zv, Pv, hv), 5) : (zv[hv.offset++] = 211, kv(zv, Pv, hv), 9) : vv(zv, Pv > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, hv)
         },
-        utf8Write: nz,
-        utf8Length: lz
+        utf8Write: Bv,
+        utf8Length: yv
       },
-      st = new ArrayBuffer(8),
-      Ft = new Int32Array(st),
-      Wt = new Float32Array(st),
-      Xt = new Float64Array(st),
-      Ot = new BigUint64Array(st),
-      ot = new BigInt64Array(st);
+      Pz = new ArrayBuffer(8),
+      hz = new Int32Array(Pz),
+      Sz = new Float32Array(Pz),
+      ez = new Float64Array(Pz),
+      gz = new BigUint64Array(Pz),
+      pz = new BigInt64Array(Pz);
 
-    function vt(zz, tz, sz) {
-      sz > zz.length - tz.offset && (sz = zz.length - tz.offset);
-      for (var Fz = "", Wz = 0, Xz = tz.offset, Oz = tz.offset + sz; Xz < Oz; Xz++) {
-        var oz = zz[Xz];
-        if (0 !== (128 & oz))
-          if (192 !== (224 & oz))
-            if (224 !== (240 & oz)) {
-              if (240 !== (248 & oz)) {
-                console.error("decode.utf8Read(): Invalid byte " + oz + " at offset " + Xz + ". Skip to end of string: " + (tz.offset + sz));
+    function dz(vv, zv, Pv) {
+      Pv > vv.length - zv.offset && (Pv = vv.length - zv.offset);
+      for (var hv = "", Sv = 0, ev = zv.offset, gv = zv.offset + Pv; ev < gv; ev++) {
+        var pv = vv[ev];
+        if (0 !== (128 & pv))
+          if (192 !== (224 & pv))
+            if (224 !== (240 & pv)) {
+              if (240 !== (248 & pv)) {
+                console.error("decode.utf8Read(): Invalid byte " + pv + " at offset " + ev + ". Skip to end of string: " + (zv.offset + Pv));
                 break
-              }(Wz = (7 & oz) << 18 | (63 & zz[++Xz]) << 12 | (63 & zz[++Xz]) << 6 | 63 & zz[++Xz]) >= 65536 ? (Wz -= 65536, Fz += String.fromCharCode(55296 + (Wz >>> 10), 56320 + (1023 & Wz))) : Fz += String.fromCharCode(Wz)
-            } else Fz += String.fromCharCode((15 & oz) << 12 | (63 & zz[++Xz]) << 6 | 63 & zz[++Xz]);
-        else Fz += String.fromCharCode((31 & oz) << 6 | 63 & zz[++Xz]);
-        else Fz += String.fromCharCode(oz)
+              }(Sv = (7 & pv) << 18 | (63 & vv[++ev]) << 12 | (63 & vv[++ev]) << 6 | 63 & vv[++ev]) >= 65536 ? (Sv -= 65536, hv += String.fromCharCode(55296 + (Sv >>> 10), 56320 + (1023 & Sv))) : hv += String.fromCharCode(Sv)
+            } else hv += String.fromCharCode((15 & pv) << 12 | (63 & vv[++ev]) << 6 | 63 & vv[++ev]);
+        else hv += String.fromCharCode((31 & pv) << 6 | 63 & vv[++ev]);
+        else hv += String.fromCharCode(pv)
       }
-      return tz.offset += sz, Fz
+      return zv.offset += Pv, hv
     }
 
-    function Ut(zz, tz) {
-      return Kt(zz, tz) << 24 >> 24
+    function Nz(vv, zv) {
+      return lz(vv, zv) << 24 >> 24
     }
 
-    function Kt(zz, tz) {
-      return zz[tz.offset++]
+    function lz(vv, zv) {
+      return vv[zv.offset++]
     }
 
-    function ut(zz, tz) {
-      return Nt(zz, tz) << 16 >> 16
+    function Tz(vv, zv) {
+      return Wz(vv, zv) << 16 >> 16
     }
 
-    function Nt(zz, tz) {
-      return zz[tz.offset++] | zz[tz.offset++] << 8
+    function Wz(vv, zv) {
+      return vv[zv.offset++] | vv[zv.offset++] << 8
     }
 
-    function bt(zz, tz) {
-      return zz[tz.offset++] | zz[tz.offset++] << 8 | zz[tz.offset++] << 16 | zz[tz.offset++] << 24
+    function wz(vv, zv) {
+      return vv[zv.offset++] | vv[zv.offset++] << 8 | vv[zv.offset++] << 16 | vv[zv.offset++] << 24
     }
 
-    function wt(zz, tz) {
-      return bt(zz, tz) >>> 0
+    function az(vv, zv) {
+      return wz(vv, zv) >>> 0
     }
 
-    function Dt(zz, tz) {
-      return Ft[0] = bt(zz, tz), Wt[0]
+    function sz(vv, zv) {
+      return hz[0] = wz(vv, zv), Sz[0]
     }
 
-    function gt(zz, tz) {
-      return Ft[0] = bt(zz, tz), Ft[1] = bt(zz, tz), Xt[0]
+    function Cz(vv, zv) {
+      return hz[0] = wz(vv, zv), hz[1] = wz(vv, zv), ez[0]
     }
 
-    function Ht(zz, tz) {
-      const sz = wt(zz, tz);
-      return bt(zz, tz) * Math.pow(2, 32) + sz
+    function iz(vv, zv) {
+      const Pv = az(vv, zv);
+      return wz(vv, zv) * Math.pow(2, 32) + Pv
     }
 
-    function Bt(zz, tz) {
-      const sz = wt(zz, tz);
-      return wt(zz, tz) * Math.pow(2, 32) + sz
+    function cz(vv, zv) {
+      const Pv = az(vv, zv);
+      return az(vv, zv) * Math.pow(2, 32) + Pv
     }
-    const Pt = {
-        utf8Read: vt,
-        int8: Ut,
-        uint8: Kt,
-        int16: ut,
-        uint16: Nt,
-        int32: bt,
-        uint32: wt,
-        float32: Dt,
-        float64: gt,
-        int64: Ht,
-        uint64: Bt,
-        bigint64: function(zz, tz) {
-          return Ft[0] = bt(zz, tz), Ft[1] = bt(zz, tz), ot[0]
+    const Gz = {
+        utf8Read: dz,
+        int8: Nz,
+        uint8: lz,
+        int16: Tz,
+        uint16: Wz,
+        int32: wz,
+        uint32: az,
+        float32: sz,
+        float64: Cz,
+        int64: iz,
+        uint64: cz,
+        bigint64: function(vv, zv) {
+          return hz[0] = wz(vv, zv), hz[1] = wz(vv, zv), pz[0]
         },
-        biguint64: function(zz, tz) {
-          return Ft[0] = bt(zz, tz), Ft[1] = bt(zz, tz), Ot[0]
+        biguint64: function(vv, zv) {
+          return hz[0] = wz(vv, zv), hz[1] = wz(vv, zv), gz[0]
         },
-        boolean: function(zz, tz) {
-          return Kt(zz, tz) > 0
+        boolean: function(vv, zv) {
+          return lz(vv, zv) > 0
         },
-        string: function(zz, tz) {
-          const sz = zz[tz.offset++];
-          let Fz;
-          return sz < 192 ? Fz = 31 & sz : 217 === sz ? Fz = Kt(zz, tz) : 218 === sz ? Fz = Nt(zz, tz) : 219 === sz && (Fz = wt(zz, tz)), vt(zz, tz, Fz)
+        string: function(vv, zv) {
+          const Pv = vv[zv.offset++];
+          let hv;
+          return Pv < 192 ? hv = 31 & Pv : 217 === Pv ? hv = lz(vv, zv) : 218 === Pv ? hv = Wz(vv, zv) : 219 === Pv && (hv = az(vv, zv)), dz(vv, zv, hv)
         },
-        number: function(zz, tz) {
-          const sz = zz[tz.offset++];
-          return sz < 128 ? sz : 202 === sz ? Dt(zz, tz) : 203 === sz ? gt(zz, tz) : 204 === sz ? Kt(zz, tz) : 205 === sz ? Nt(zz, tz) : 206 === sz ? wt(zz, tz) : 207 === sz ? Bt(zz, tz) : 208 === sz ? Ut(zz, tz) : 209 === sz ? ut(zz, tz) : 210 === sz ? bt(zz, tz) : 211 === sz ? Ht(zz, tz) : sz > 223 ? -1 * (255 - sz + 1) : void 0
+        number: function(vv, zv) {
+          const Pv = vv[zv.offset++];
+          return Pv < 128 ? Pv : 202 === Pv ? sz(vv, zv) : 203 === Pv ? Cz(vv, zv) : 204 === Pv ? lz(vv, zv) : 205 === Pv ? Wz(vv, zv) : 206 === Pv ? az(vv, zv) : 207 === Pv ? cz(vv, zv) : 208 === Pv ? Nz(vv, zv) : 209 === Pv ? Tz(vv, zv) : 210 === Pv ? wz(vv, zv) : 211 === Pv ? iz(vv, zv) : Pv > 223 ? -1 * (255 - Pv + 1) : void 0
         },
-        stringCheck: function(zz, tz) {
-          const sz = zz[tz.offset];
-          return sz < 192 && sz > 160 || 217 === sz || 218 === sz || 219 === sz
+        stringCheck: function(vv, zv) {
+          const Pv = vv[zv.offset];
+          return Pv < 192 && Pv > 160 || 217 === Pv || 218 === Pv || 219 === Pv
         }
       },
-      rt = {},
-      Yt = new Map;
+      mz = {},
+      jz = new Map;
 
-    function xt(zz, tz) {
-      tz.constructor && (Object.prototype.hasOwnProperty.call(tz, "constructor") && null == tz.constructor[Symbol.metadata] && Xz(tz.constructor), Yt.set(tz.constructor, zz), rt[zz] = tz), tz.encode && (tt[zz] = tz.encode), tz.decode && (Pt[zz] = tz.decode)
+    function fz(vv, zv) {
+      zv.constructor && (Object.prototype.hasOwnProperty.call(zv, "constructor") && null == zv.constructor[Symbol.metadata] && ev(zv.constructor), jz.set(zv.constructor, vv), mz[vv] = zv), zv.encode && (zz[vv] = zv.encode), zv.decode && (Gz[vv] = zv.decode)
     }
 
-    function mt(zz) {
-      for (const tz in zz) xt(tz, zz[tz]);
-      return zz => mF(zz)
+    function Fz(vv) {
+      for (const zv in vv) fz(zv, vv[zv]);
+      return vv => mh(vv)
     }
-    const Jt = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const Yz = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function It() {
+    function nz() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function Ct(zz) {
-      return zz._stream ??= It()
+    function Oz(vv) {
+      return vv._stream ??= nz()
     }
 
-    function et(zz, tz, sz) {
-      0 === tz.activeViews.size && Ct(zz).broadcastPending.add(sz)
+    function Dz(vv, zv, Pv) {
+      0 === zv.activeViews.size && Oz(vv).broadcastPending.add(Pv)
     }
 
-    function Zt(zz, tz, sz, Fz) {
-      const Xz = zz._stream;
-      if (void 0 === Xz) return !0;
-      let Oz = !1;
-      return Xz.broadcastPending.delete(Fz) ? Oz = !0 : Xz.sentBroadcast.delete(Fz) && Xz.broadcastDeletes.add(Fz), tz.forEachActiveView((zz => {
-        const tz = Xz.pendingByView.get(zz.id);
-        if (tz?.has(Fz)) return tz.delete(Fz), void(Oz = !0);
-        const oz = Xz.sentByView.get(zz.id);
-        if (oz?.has(Fz)) {
-          oz.delete(Fz);
-          let tz = zz.changes.get(sz);
-          void 0 === tz && (tz = new Map, zz.changes.set(sz, tz)), tz.set(Fz, Wz.DELETE)
+    function Kz(vv, zv, Pv, hv) {
+      const ev = vv._stream;
+      if (void 0 === ev) return !0;
+      let gv = !1;
+      return ev.broadcastPending.delete(hv) ? gv = !0 : ev.sentBroadcast.delete(hv) && ev.broadcastDeletes.add(hv), zv.forEachActiveView((vv => {
+        const zv = ev.pendingByView.get(vv.id);
+        if (zv?.has(hv)) return zv.delete(hv), void(gv = !0);
+        const pv = ev.sentByView.get(vv.id);
+        if (pv?.has(hv)) {
+          pv.delete(hv);
+          let zv = vv.changes.get(Pv);
+          void 0 === zv && (zv = new Map, vv.changes.set(Pv, zv)), zv.set(hv, Sv.DELETE)
         }
-      })), Oz
+      })), gv
     }
 
-    function Gt(zz, tz) {
-      const sz = zz._stream?.pendingByView;
-      if (void 0 === sz) return !1;
-      for (const [Fz, Wz] of sz)
-        if (Wz.size > 0 && void 0 !== tz.activeViews.get(Fz)?.deref()) return !0;
+    function Vz(vv, zv) {
+      const Pv = vv._stream?.pendingByView;
+      if (void 0 === Pv) return !1;
+      for (const [hv, Sv] of Pv)
+        if (Sv.size > 0 && void 0 !== zv.activeViews.get(hv)?.deref()) return !0;
       return !1
     }
 
-    function Tt(zz) {
-      const tz = zz._stream;
-      return void 0 !== tz && (tz.broadcastPending.size > 0 || tz.broadcastDeletes.size > 0)
+    function Uz(vv) {
+      const zv = vv._stream;
+      return void 0 !== zv && (zv.broadcastPending.size > 0 || zv.broadcastDeletes.size > 0)
     }
 
-    function ct(zz, tz, sz) {
-      const Fz = Ct(zz);
-      let Wz = Fz.pendingByView.get(tz);
-      void 0 === Wz && (Wz = new Set, Fz.pendingByView.set(tz, Wz)), Wz.add(sz)
+    function Rz(vv, zv, Pv) {
+      const hv = Oz(vv);
+      let Sv = hv.pendingByView.get(zv);
+      void 0 === Sv && (Sv = new Set, hv.pendingByView.set(zv, Sv)), Sv.add(Pv)
     }
 
-    function jt(zz, tz) {
-      const sz = zz._stream;
-      void 0 !== sz && (sz.pendingByView.delete(tz), sz.sentByView.delete(tz), sz.priorityByView?.delete(tz))
+    function xz(vv, zv) {
+      const Pv = vv._stream;
+      void 0 !== Pv && (Pv.pendingByView.delete(zv), Pv.sentByView.delete(zv), Pv.priorityByView?.delete(zv))
     }
-    const At = {
+    const tz = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function yt(zz) {
-      if (null == zz || "object" !== typeof zz) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function qz(vv) {
+      if (null == vv || "object" !== typeof vv) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: tz,
-        max: sz
-      } = zz;
-      if ("number" !== typeof tz || "number" !== typeof sz || !(sz > tz) || !Number.isFinite(tz) || !Number.isFinite(sz)) throw new Error(`t.quantized(): require finite min < max (got min=${tz}, max=${sz}).`);
-      const Fz = zz.bits ?? 16;
-      if (8 !== Fz && 16 !== Fz && 32 !== Fz) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Fz}).`);
-      const Wz = zz.mode ?? "clamp";
-      if ("clamp" !== Wz && "wrap" !== Wz) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Wz)}).`);
-      const Xz = "wrap" === Wz,
-        Oz = Math.pow(2, Fz);
+        min: zv,
+        max: Pv
+      } = vv;
+      if ("number" !== typeof zv || "number" !== typeof Pv || !(Pv > zv) || !Number.isFinite(zv) || !Number.isFinite(Pv)) throw new Error(`t.quantized(): require finite min < max (got min=${zv}, max=${Pv}).`);
+      const hv = vv.bits ?? 16;
+      if (8 !== hv && 16 !== hv && 32 !== hv) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${hv}).`);
+      const Sv = vv.mode ?? "clamp";
+      if ("clamp" !== Sv && "wrap" !== Sv) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Sv)}).`);
+      const ev = "wrap" === Sv,
+        gv = Math.pow(2, hv);
       return {
-        min: tz,
-        max: sz,
-        bits: Fz,
-        wrap: Xz,
-        wire: At[Fz],
-        range: sz - tz,
-        span: Xz ? Oz : tz === -sz ? Oz - 2 : Oz - 1
+        min: zv,
+        max: Pv,
+        bits: hv,
+        wrap: ev,
+        wire: tz[hv],
+        range: Pv - zv,
+        span: ev ? gv : zv === -Pv ? gv - 2 : gv - 1
       }
     }
 
-    function Mt(zz) {
-      return null !== zz && "object" === typeof zz && void 0 !== zz.quantized
+    function Iz(vv) {
+      return null !== vv && "object" === typeof vv && void 0 !== vv.quantized
     }
 
-    function dt(zz, tz) {
-      if (zz.wrap) {
-        if (!Number.isFinite(tz)) return 0;
-        const sz = zz.range;
-        let Fz = (tz - zz.min) % sz;
-        Fz < 0 && (Fz += sz);
-        const Wz = zz.span;
-        return Math.floor(Fz / sz * Wz + .5) % Wz
+    function Qz(vv, zv) {
+      if (vv.wrap) {
+        if (!Number.isFinite(zv)) return 0;
+        const Pv = vv.range;
+        let hv = (zv - vv.min) % Pv;
+        hv < 0 && (hv += Pv);
+        const Sv = vv.span;
+        return Math.floor(hv / Pv * Sv + .5) % Sv
       }
-      if (tz !== tz) return 0;
-      const sz = tz < zz.min ? zz.min : tz > zz.max ? zz.max : tz;
-      return Math.floor((sz - zz.min) / zz.range * zz.span + .5)
+      if (zv !== zv) return 0;
+      const Pv = zv < vv.min ? vv.min : zv > vv.max ? vv.max : zv;
+      return Math.floor((Pv - vv.min) / vv.range * vv.span + .5)
     }
 
-    function ht(zz, tz) {
-      return zz.min + tz / zz.span * zz.range
+    function Zz(vv, zv) {
+      return vv.min + zv / vv.span * vv.range
     }
 
-    function Qt(zz) {
-      const tz = tt[zz.wire];
-      return (sz, Fz, Wz) => tz(sz, dt(zz, Fz), Wz)
+    function Az(vv) {
+      const zv = zz[vv.wire];
+      return (Pv, hv, Sv) => zv(Pv, Qz(vv, hv), Sv)
     }
-    class kt {
+    class Lz {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(zz) {
-        const tz = Object.getPrototypeOf(zz);
-        if (tz !== cF) {
-          let sz = kt.inheritedTypes.get(tz);
-          sz || (sz = new Set, kt.inheritedTypes.set(tz, sz)), sz.add(zz)
+      static register(vv) {
+        const zv = Object.getPrototypeOf(vv);
+        if (zv !== Kh) {
+          let Pv = Lz.inheritedTypes.get(zv);
+          Pv || (Pv = new Set, Lz.inheritedTypes.set(zv, Pv)), Pv.add(vv)
         }
       }
-      static cache(zz) {
-        let tz = kt.cachedContexts.get(zz);
-        return tz || (tz = new kt(zz), kt.cachedContexts.set(zz, tz)), tz
+      static cache(vv) {
+        let zv = Lz.cachedContexts.get(vv);
+        return zv || (zv = new Lz(vv), Lz.cachedContexts.set(vv, zv)), zv
       }
-      constructor(zz) {
-        zz && this.discoverTypes(zz)
+      constructor(vv) {
+        vv && this.discoverTypes(vv)
       }
-      has(zz) {
-        return this.schemas.has(zz)
+      has(vv) {
+        return this.schemas.has(vv)
       }
-      get(zz) {
-        return this.types[zz]
+      get(vv) {
+        return this.types[vv]
       }
-      add(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(zz) && (this.types[tz] = zz, null == zz[Symbol.metadata] && Vt.initialize(zz), this.schemas.set(zz, tz), !0)
+      add(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(vv) && (this.types[zv] = vv, null == vv[Symbol.metadata] && oz.initialize(vv), this.schemas.set(vv, zv), !0)
       }
-      getTypeId(zz) {
-        return this.schemas.get(zz)
+      getTypeId(vv) {
+        return this.schemas.get(vv)
       }
-      discoverTypes(zz) {
-        if (!this.add(zz)) return;
-        kt.inheritedTypes.get(zz)?.forEach((zz => {
-          this.discoverTypes(zz)
+      discoverTypes(vv) {
+        if (!this.add(vv)) return;
+        Lz.inheritedTypes.get(vv)?.forEach((vv => {
+          this.discoverTypes(vv)
         }));
-        let tz = zz;
+        let zv = vv;
         for (;
-          (tz = Object.getPrototypeOf(tz)) && tz !== cF && tz !== Function.prototype;) this.discoverTypes(tz);
-        const sz = zz[Symbol.metadata];
-        (sz[Zz] || sz[yz]) && (this.hasFilters = !0);
-        for (const Fz in sz) {
-          const zz = sz[Fz].type;
-          if ("string" !== typeof zz && !Mt(zz))
-            if ("function" === typeof zz) this.discoverTypes(zz);
+          (zv = Object.getPrototypeOf(zv)) && zv !== Kh && zv !== Function.prototype;) this.discoverTypes(zv);
+        const Pv = vv[Symbol.metadata];
+        (Pv[Kv] || Pv[qv]) && (this.hasFilters = !0);
+        for (const hv in Pv) {
+          const vv = Pv[hv].type;
+          if ("string" !== typeof vv && !Iz(vv))
+            if ("function" === typeof vv) this.discoverTypes(vv);
             else {
-              const tz = Object.values(zz)[0];
-              if ("string" === typeof tz) continue;
-              this.discoverTypes(tz)
+              const zv = Object.values(vv)[0];
+              if ("string" === typeof zv) continue;
+              this.discoverTypes(zv)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function it(zz) {
-      const tz = lt(zz);
-      return tz ? {
-        complexTypeKlass: rt[tz],
-        childType: zz[tz]
+    function Hz(vv) {
+      const zv = yz(vv);
+      return zv ? {
+        complexTypeKlass: mz[zv],
+        childType: vv[zv]
       } : {
         complexTypeKlass: !1,
-        childType: zz
+        childType: vv
       }
     }
 
-    function Lt(zz, tz) {
-      const sz = nt(zz),
-        Fz = lt(sz),
-        Wz = Fz && lt(sz[Fz]);
-      if (Wz) throw new Error(`${tz?`${tz}: `:""}@colyseus/schema: nested collections are not supported ("${Fz}" of "${Wz}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Wz} in a Schema class.`);
-      return sz
+    function Mz(vv, zv) {
+      const Pv = Bz(vv),
+        hv = yz(Pv),
+        Sv = hv && yz(Pv[hv]);
+      if (Sv) throw new Error(`${zv?`${zv}: `:""}@colyseus/schema: nested collections are not supported ("${hv}" of "${Sv}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Sv} in a Schema class.`);
+      return Pv
     }
 
-    function lt(zz) {
-      return "object" === typeof zz && null !== zz ? Object.keys(zz).find((zz => void 0 !== rt[zz])) : void 0
+    function yz(vv) {
+      return "object" === typeof vv && null !== vv ? Object.keys(vv).find((vv => void 0 !== mz[vv])) : void 0
     }
 
-    function nt(zz) {
-      if ("object" !== typeof zz || null === zz) return zz;
-      if (Array.isArray(zz)) return {
-        array: nt(zz[0])
+    function Bz(vv) {
+      if ("object" !== typeof vv || null === vv) return vv;
+      if (Array.isArray(vv)) return {
+        array: Bz(vv[0])
       };
-      const tz = function(zz) {
-        const tz = Object.keys(zz),
-          sz = tz.filter((zz => /\d+/.test(zz)));
-        if (sz.length > 0 && sz.length === tz.length / 2 && zz[zz[sz[0]]] == sz[0]) return "number";
-        if (tz.length > 0 && tz.every((tz => zz[tz] === tz))) return "string"
-      }(zz);
-      if (tz) return tz;
-      if (Mt(zz)) return "string" === typeof zz.quantized.wire ? zz : {
-        quantized: yt(zz.quantized)
+      const zv = function(vv) {
+        const zv = Object.keys(vv),
+          Pv = zv.filter((vv => /\d+/.test(vv)));
+        if (Pv.length > 0 && Pv.length === zv.length / 2 && vv[vv[Pv[0]]] == Pv[0]) return "number";
+        if (zv.length > 0 && zv.every((zv => vv[zv] === zv))) return "string"
+      }(vv);
+      if (zv) return zv;
+      if (Iz(vv)) return "string" === typeof vv.quantized.wire ? vv : {
+        quantized: qz(vv.quantized)
       };
-      if (void 0 !== zz.type) return nt(zz.type);
-      const sz = lt(zz);
-      return sz && (zz[sz] = nt(zz[sz])), zz
+      if (void 0 !== vv.type) return Bz(vv.type);
+      const Pv = yz(vv);
+      return Pv && (vv[Pv] = Bz(vv[Pv])), vv
     }
-    const qt = [ez, Tz, cz, jz, Az, yz, Iz];
+    const Jz = [Dv, Uv, Rv, xv, tv, qv, nv];
 
-    function St(zz, tz, sz) {
-      zz[tz] || Object.defineProperty(zz, tz, {
+    function Ez(vv, zv, Pv) {
+      vv[zv] || Object.defineProperty(vv, zv, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), zz[tz].push(sz)
+      }), vv[zv].push(Pv)
     }
-    const Vt = {
-        addField(zz, tz, sz, Fz, Wz) {
-          if (tz >= 63) throw new Error(`Can't define field '${sz}'.\nSchema instances may only have up to 63 fields.`);
-          zz[tz] = Object.assign(zz[tz] || {}, {
-            type: Fz,
-            index: tz,
-            name: sz
-          }), Object.defineProperty(zz, mz, {
-            value: zz[mz] || {},
+    const oz = {
+        addField(vv, zv, Pv, hv, Sv) {
+          if (zv >= 63) throw new Error(`Can't define field '${Pv}'.\nSchema instances may only have up to 63 fields.`);
+          vv[zv] = Object.assign(vv[zv] || {}, {
+            type: hv,
+            index: zv,
+            name: Pv
+          }), Object.defineProperty(vv, Fv, {
+            value: vv[Fv] || {},
             enumerable: !1,
             configurable: !0
-          }), zz[mz][sz] = Wz || {
+          }), vv[Fv][Pv] = Sv || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(zz, Cz, {
-            value: tz,
+          }, Object.defineProperty(vv, Ov, {
+            value: zv,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(zz, sz, {
-            value: tz,
+          }), Object.defineProperty(vv, Pv, {
+            value: zv,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof zz[tz].type || Mt(zz[tz].type) || (void 0 === zz[ez] && Object.defineProperty(zz, ez, {
+          }), "string" === typeof vv[zv].type || Iz(vv[zv].type) || (void 0 === vv[Dv] && Object.defineProperty(vv, Dv, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), zz[ez].push(tz));
-          const Xz = zz[tz].type;
-          if (Xz && "object" === typeof Xz && void 0 !== Xz.stream) {
-            if (void 0 !== Xz.array) throw new Error(Jt);
-            zz[tz].stream = !0, zz[yz] || Object.defineProperty(zz, yz, {
+          }), vv[Dv].push(zv));
+          const ev = vv[zv].type;
+          if (ev && "object" === typeof ev && void 0 !== ev.stream) {
+            if (void 0 !== ev.array) throw new Error(Yz);
+            vv[zv].stream = !0, vv[qv] || Object.defineProperty(vv, qv, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), zz[yz].includes(tz) || zz[yz].push(tz);
-            const Wz = Fz?.priority;
-            "function" === typeof Wz && Vt.setStreamPriority(zz, sz, Wz)
+            }), vv[qv].includes(zv) || vv[qv].push(zv);
+            const Sv = hv?.priority;
+            "function" === typeof Sv && oz.setStreamPriority(vv, Pv, Sv)
           }
         },
-        setTag(zz, tz, sz) {
-          const Fz = zz[tz];
-          if (zz[Fz].tag = sz, zz[Zz] || (Object.defineProperty(zz, Zz, {
+        setTag(vv, zv, Pv) {
+          const hv = vv[zv];
+          if (vv[hv].tag = Pv, vv[Kv] || (Object.defineProperty(vv, Kv, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(zz, Gz, {
+            }), Object.defineProperty(vv, Vv, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), zz[Zz].push(Fz), sz < 0) zz[Gz][sz] || (zz[Gz][sz] = []), zz[Gz][sz].push(Fz);
+            })), vv[Kv].push(hv), Pv < 0) vv[Vv][Pv] || (vv[Vv][Pv] = []), vv[Vv][Pv].push(hv);
           else
-            for (let Wz = sz; Wz > 0; Wz &= Wz - 1) {
-              const tz = Wz & -Wz;
-              zz[Gz][tz] || (zz[Gz][tz] = []), zz[Gz][tz].push(Fz)
+            for (let Sv = Pv; Sv > 0; Sv &= Sv - 1) {
+              const zv = Sv & -Sv;
+              vv[Vv][zv] || (vv[Vv][zv] = []), vv[Vv][zv].push(hv)
             }
         },
-        setUnreliable(zz, tz) {
-          const sz = zz[tz];
-          if ("string" !== typeof zz[sz].type) throw new Error(`@unreliable cannot be applied to ref-type field "${tz}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          zz[sz].unreliable = !0, zz[Tz] || Object.defineProperty(zz, Tz, {
+        setUnreliable(vv, zv) {
+          const Pv = vv[zv];
+          if ("string" !== typeof vv[Pv].type) throw new Error(`@unreliable cannot be applied to ref-type field "${zv}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          vv[Pv].unreliable = !0, vv[Uv] || Object.defineProperty(vv, Uv, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), zz[Tz].push(sz)
+          }), vv[Uv].push(Pv)
         },
-        setPatchOnly(zz, tz) {
-          const sz = zz[tz];
-          if (zz[sz].fullStateOnly) throw new Error(`field "${tz}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          zz[sz].patchOnly = !0, St(zz, cz, sz), St(zz, jz, sz)
+        setPatchOnly(vv, zv) {
+          const Pv = vv[zv];
+          if (vv[Pv].fullStateOnly) throw new Error(`field "${zv}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          vv[Pv].patchOnly = !0, Ez(vv, Rv, Pv), Ez(vv, xv, Pv)
         },
-        setDeprecated(zz, tz) {
-          const sz = zz[tz];
-          zz[sz].deprecated = !0, St(zz, jz, sz), Object.defineProperty(zz, sz, {
-            value: zz[sz],
+        setDeprecated(vv, zv) {
+          const Pv = vv[zv];
+          vv[Pv].deprecated = !0, Ez(vv, xv, Pv), Object.defineProperty(vv, Pv, {
+            value: vv[Pv],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(zz, tz) {
-          const sz = zz[tz];
-          if (zz[sz].patchOnly) throw new Error(`field "${tz}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          zz[sz].fullStateOnly = !0, St(zz, Az, sz)
+        setFullStateOnly(vv, zv) {
+          const Pv = vv[zv];
+          if (vv[Pv].patchOnly) throw new Error(`field "${zv}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          vv[Pv].fullStateOnly = !0, Ez(vv, tv, Pv)
         },
-        setStream(zz, tz) {
-          const sz = zz[tz];
-          zz[sz].stream = !0, zz[yz] || Object.defineProperty(zz, yz, {
+        setStream(vv, zv) {
+          const Pv = vv[zv];
+          vv[Pv].stream = !0, vv[qv] || Object.defineProperty(vv, qv, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), zz[yz].push(sz)
+          }), vv[qv].push(Pv)
         },
-        setStreamPriority(zz, tz, sz) {
-          const Fz = zz[tz];
-          zz[Mz] || Object.defineProperty(zz, Mz, {
+        setStreamPriority(vv, zv, Pv) {
+          const hv = vv[zv];
+          vv[Iv] || Object.defineProperty(vv, Iv, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), zz[Mz][Fz] = sz
+          }), vv[Iv][hv] = Pv
         },
-        getStreamPriority: (zz, tz) => zz?.[Mz]?.[tz],
-        defineField(zz, tz, sz, Fz, Wz) {
-          const Xz = Lt(Wz, `${zz.name}.${Fz}`),
+        getStreamPriority: (vv, zv) => vv?.[Iv]?.[zv],
+        defineField(vv, zv, Pv, hv, Sv) {
+          const ev = Mz(Sv, `${vv.name}.${hv}`),
             {
-              complexTypeKlass: Oz,
-              childType: oz
-            } = it(Xz);
-          Vt.addField(tz, sz, Fz, Xz, IF(Fz, sz, oz, Oz)), tz[mz][Fz] && Object.defineProperty(zz.prototype, Fz, tz[mz][Fz]), ("string" === typeof Xz || Mt(Xz)) && (tz[Iz] || Object.defineProperty(tz, Iz, {
+              complexTypeKlass: gv,
+              childType: pv
+            } = Hz(ev);
+          oz.addField(zv, Pv, hv, ev, fh(hv, Pv, pv, gv)), zv[Fv][hv] && Object.defineProperty(vv.prototype, hv, zv[Fv][hv]), ("string" === typeof ev || Iz(ev)) && (zv[nv] || Object.defineProperty(zv, nv, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), tz[Iz][sz] = "string" === typeof Xz ? tt[Xz] : Qt(Xz.quantized))
+          }), zv[nv][Pv] = "string" === typeof ev ? zz[ev] : Az(ev.quantized))
         },
-        setFields(zz, tz) {
-          const sz = zz.prototype.constructor;
-          kt.register(sz);
-          const Fz = Object.getPrototypeOf(sz),
-            Wz = Fz && Fz[Symbol.metadata],
-            Xz = Vt.initialize(sz);
-          sz[vz] || (sz[vz] = cF[vz]), sz[Uz] || (sz[Uz] = cF[Uz]), sz[Kz] || (sz[Kz] = cF[Kz]), sz.prototype.toJSON || (sz.prototype.toJSON = cF.prototype.toJSON);
-          let Oz = Xz[Cz] ?? (Wz && Wz[Cz]) ?? -1;
-          Oz++, Xz[Iz] || Object.defineProperty(Xz, Iz, {
-            value: Wz?.[Iz] ? [...Wz[Iz]] : [],
+        setFields(vv, zv) {
+          const Pv = vv.prototype.constructor;
+          Lz.register(Pv);
+          const hv = Object.getPrototypeOf(Pv),
+            Sv = hv && hv[Symbol.metadata],
+            ev = oz.initialize(Pv);
+          Pv[dv] || (Pv[dv] = Kh[dv]), Pv[Nv] || (Pv[Nv] = Kh[Nv]), Pv[lv] || (Pv[lv] = Kh[lv]), Pv.prototype.toJSON || (Pv.prototype.toJSON = Kh.prototype.toJSON);
+          let gv = ev[Ov] ?? (Sv && Sv[Ov]) ?? -1;
+          gv++, ev[nv] || Object.defineProperty(ev, nv, {
+            value: Sv?.[nv] ? [...Sv[nv]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const oz in tz) {
-            if (void 0 !== Xz[oz]) throw new Error(`@colyseus/schema: Duplicate '${oz}' definition on '${sz.name||"(anonymous)"}'.`);
-            Vt.defineField(sz, Xz, Oz, oz, tz[oz]), Oz++
+          for (const pv in zv) {
+            if (void 0 !== ev[pv]) throw new Error(`@colyseus/schema: Duplicate '${pv}' definition on '${Pv.name||"(anonymous)"}'.`);
+            oz.defineField(Pv, ev, gv, pv, zv[pv]), gv++
           }
-          return zz
+          return vv
         },
-        isDeprecated: (zz, tz) => !0 === zz[tz].deprecated,
-        initialize(zz) {
-          const tz = Object.getPrototypeOf(zz),
-            sz = tz[Symbol.metadata];
-          let Fz = zz[Symbol.metadata] ?? Object.create(null);
-          if (tz !== cF && Fz === sz && (Fz = Object.create(null), sz)) {
-            Object.setPrototypeOf(Fz, sz), Object.defineProperty(Fz, Cz, {
-              value: sz[Cz],
+        isDeprecated: (vv, zv) => !0 === vv[zv].deprecated,
+        initialize(vv) {
+          const zv = Object.getPrototypeOf(vv),
+            Pv = zv[Symbol.metadata];
+          let hv = vv[Symbol.metadata] ?? Object.create(null);
+          if (zv !== Kh && hv === Pv && (hv = Object.create(null), Pv)) {
+            Object.setPrototypeOf(hv, Pv), Object.defineProperty(hv, Ov, {
+              value: Pv[Ov],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== sz[Zz] && (Object.defineProperty(Fz, Zz, {
-              value: [...sz[Zz]],
+            }), void 0 !== Pv[Kv] && (Object.defineProperty(hv, Kv, {
+              value: [...Pv[Kv]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(Fz, Gz, {
+            }), Object.defineProperty(hv, Vv, {
               value: {
-                ...sz[Gz]
+                ...Pv[Vv]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const zz of qt) {
-              const tz = sz[zz];
-              void 0 !== tz && Object.defineProperty(Fz, zz, {
-                value: [...tz],
+            for (const vv of Jz) {
+              const zv = Pv[vv];
+              void 0 !== zv && Object.defineProperty(hv, vv, {
+                value: [...zv],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(Fz, mz, {
+            Object.defineProperty(hv, Fv, {
               value: {
-                ...sz[mz]
+                ...Pv[Fv]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(zz, Symbol.metadata, {
-            value: Fz,
+          return Object.defineProperty(vv, Symbol.metadata, {
+            value: hv,
             writable: !1,
             configurable: !0
-          }), Fz
+          }), hv
         },
-        isValidInstance: zz => zz.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(zz.constructor[Symbol.metadata], Cz),
-        getFields(zz) {
-          const tz = zz[Symbol.metadata],
-            sz = {};
-          for (let Fz = 0; Fz <= tz[Cz]; Fz++) sz[tz[Fz].name] = tz[Fz].type;
-          return sz
+        isValidInstance: vv => vv.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(vv.constructor[Symbol.metadata], Ov),
+        getFields(vv) {
+          const zv = vv[Symbol.metadata],
+            Pv = {};
+          for (let hv = 0; hv <= zv[Ov]; hv++) Pv[zv[hv].name] = zv[hv].type;
+          return Pv
         },
-        hasViewTagAtIndex: (zz, tz) => zz?.[Zz]?.includes(tz),
-        hasUnreliableAtIndex: (zz, tz) => zz?.[Tz]?.includes(tz),
-        hasPatchOnlyAtIndex: (zz, tz) => zz?.[cz]?.includes(tz),
-        hasFullStateOnlyAtIndex: (zz, tz) => zz?.[Az]?.includes(tz),
-        hasStreamAtIndex: (zz, tz) => zz?.[yz]?.includes(tz)
+        hasViewTagAtIndex: (vv, zv) => vv?.[Kv]?.includes(zv),
+        hasUnreliableAtIndex: (vv, zv) => vv?.[Uv]?.includes(zv),
+        hasPatchOnlyAtIndex: (vv, zv) => vv?.[Rv]?.includes(zv),
+        hasFullStateOnlyAtIndex: (vv, zv) => vv?.[tv]?.includes(zv),
+        hasStreamAtIndex: (vv, zv) => vv?.[qv]?.includes(zv)
       },
-      Rt = (zz, tz, sz) => zz(tz, sz);
-    class pt {
+      bz = (vv, zv, Pv) => vv(zv, Pv);
+    class rz {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(zz) {
-        this.ops = new Uint8Array(Math.max(zz + 1, 1))
+      constructor(vv) {
+        this.ops = new Uint8Array(Math.max(vv + 1, 1))
       }
-      record(zz, tz) {
-        const sz = this.ops[zz];
-        0 === sz ? this.ops[zz] = tz : (sz === Wz.DELETE || sz === Wz.ADD && tz === Wz.DELETE_AND_ADD) && (this.ops[zz] = Wz.DELETE_AND_ADD), zz < 32 ? this.dirtyLow |= 1 << zz : this.dirtyHigh |= 1 << zz - 32
+      record(vv, zv) {
+        const Pv = this.ops[vv];
+        0 === Pv ? this.ops[vv] = zv : (Pv === Sv.DELETE || Pv === Sv.ADD && zv === Sv.DELETE_AND_ADD) && (this.ops[vv] = Sv.DELETE_AND_ADD), vv < 32 ? this.dirtyLow |= 1 << vv : this.dirtyHigh |= 1 << vv - 32
       }
-      recordDelete(zz, tz) {
-        this.ops[zz] = tz, zz < 32 ? this.dirtyLow |= 1 << zz : this.dirtyHigh |= 1 << zz - 32
+      recordDelete(vv, zv) {
+        this.ops[vv] = zv, vv < 32 ? this.dirtyLow |= 1 << vv : this.dirtyHigh |= 1 << vv - 32
       }
-      recordRaw(zz, tz) {
-        this.record(zz, tz)
+      recordRaw(vv, zv) {
+        this.record(vv, zv)
       }
-      operationAt(zz) {
-        const tz = this.ops[zz];
-        return 0 === tz ? void 0 : tz
+      operationAt(vv) {
+        const zv = this.ops[vv];
+        return 0 === zv ? void 0 : zv
       }
-      setOperationAt(zz, tz) {
-        this.ops[zz] = tz
+      setOperationAt(vv, zv) {
+        this.ops[vv] = zv
       }
-      forEach(zz) {
-        this.forEachWithCtx(zz, Rt)
+      forEach(vv) {
+        this.forEachWithCtx(vv, bz)
       }
-      forEachWithCtx(zz, tz) {
-        let sz = this.dirtyLow,
-          Fz = this.dirtyHigh;
-        const Wz = this.ops;
-        for (; 0 !== sz;) {
-          const Fz = sz & -sz,
-            Xz = 31 - Math.clz32(Fz);
-          sz ^= Fz, tz(zz, Xz, Wz[Xz])
+      forEachWithCtx(vv, zv) {
+        let Pv = this.dirtyLow,
+          hv = this.dirtyHigh;
+        const Sv = this.ops;
+        for (; 0 !== Pv;) {
+          const hv = Pv & -Pv,
+            ev = 31 - Math.clz32(hv);
+          Pv ^= hv, zv(vv, ev, Sv[ev])
         }
-        for (; 0 !== Fz;) {
-          const sz = Fz & -Fz,
-            Xz = 31 - Math.clz32(sz) + 32;
-          Fz ^= sz, tz(zz, Xz, Wz[Xz])
+        for (; 0 !== hv;) {
+          const Pv = hv & -hv,
+            ev = 31 - Math.clz32(Pv) + 32;
+          hv ^= Pv, zv(vv, ev, Sv[ev])
         }
       }
       size() {
-        return Et(this.dirtyLow) + Et(this.dirtyHigh)
+        return Xz(this.dirtyLow) + Xz(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class ft {
-      KD = new Map;
+    class kz {
+      Da = new Map;
       pureOps = [];
-      record(zz, tz) {
-        const sz = this.KD.get(zz);
-        void 0 === sz ? this.KD.set(zz, tz) : (sz === Wz.DELETE || sz === Wz.ADD && tz === Wz.DELETE_AND_ADD) && this.KD.set(zz, Wz.DELETE_AND_ADD)
+      record(vv, zv) {
+        const Pv = this.Da.get(vv);
+        void 0 === Pv ? this.Da.set(vv, zv) : (Pv === Sv.DELETE || Pv === Sv.ADD && zv === Sv.DELETE_AND_ADD) && this.Da.set(vv, Sv.DELETE_AND_ADD)
       }
-      recordDelete(zz, tz) {
-        this.KD.set(zz, tz)
+      recordDelete(vv, zv) {
+        this.Da.set(vv, zv)
       }
-      recordRaw(zz, tz) {
-        this.KD.set(zz, tz)
+      recordRaw(vv, zv) {
+        this.Da.set(vv, zv)
       }
-      recordPure(zz) {
-        this.pureOps.push([this.KD.size, zz])
+      recordPure(vv) {
+        this.pureOps.push([this.Da.size, vv])
       }
-      operationAt(zz) {
-        return this.KD.get(zz)
+      operationAt(vv) {
+        return this.Da.get(vv)
       }
-      setOperationAt(zz, tz) {
-        this.KD.has(zz) && this.KD.set(zz, tz)
+      setOperationAt(vv, zv) {
+        this.Da.has(vv) && this.Da.set(vv, zv)
       }
-      forEach(zz) {
-        this.forEachWithCtx(zz, Rt)
+      forEach(vv) {
+        this.forEachWithCtx(vv, bz)
       }
-      forEachWithCtx(zz, tz) {
-        const sz = this.pureOps;
-        if (sz.length > 0) {
-          let Fz = 0,
-            Wz = 0;
-          for (const [Xz, Oz] of this.KD) {
-            for (; Fz < sz.length && sz[Fz][0] <= Wz;) {
-              const Wz = sz[Fz++][1];
-              tz(zz, -Wz, Wz)
+      forEachWithCtx(vv, zv) {
+        const Pv = this.pureOps;
+        if (Pv.length > 0) {
+          let hv = 0,
+            Sv = 0;
+          for (const [ev, gv] of this.Da) {
+            for (; hv < Pv.length && Pv[hv][0] <= Sv;) {
+              const Sv = Pv[hv++][1];
+              zv(vv, -Sv, Sv)
             }
-            tz(zz, Xz, Oz), Wz++
+            zv(vv, ev, gv), Sv++
           }
-          for (; Fz < sz.length;) {
-            const Wz = sz[Fz++][1];
-            tz(zz, -Wz, Wz)
+          for (; hv < Pv.length;) {
+            const Sv = Pv[hv++][1];
+            zv(vv, -Sv, Sv)
           }
         } else
-          for (const [Fz, Wz] of this.KD) tz(zz, Fz, Wz)
+          for (const [hv, Sv] of this.Da) zv(vv, hv, Sv)
       }
       size() {
-        return this.KD.size + this.pureOps.length
+        return this.Da.size + this.pureOps.length
       }
       has() {
-        return this.KD.size > 0 || this.pureOps.length > 0
+        return this.Da.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.KD.clear(), this.pureOps.length = 0
+        this.Da.clear(), this.pureOps.length = 0
       }
-      shift(zz) {
-        const tz = new Map;
-        for (const [sz, Fz] of this.KD) tz.set(sz + zz, Fz);
-        this.KD = tz
+      shift(vv) {
+        const zv = new Map;
+        for (const [Pv, hv] of this.Da) zv.set(Pv + vv, hv);
+        this.Da = zv
       }
     }
 
-    function Et(zz) {
-      return 16843009 * ((zz = (858993459 & (zz -= zz >>> 1 & 1431655765)) + (zz >>> 2 & 858993459)) + (zz >>> 4) & 252645135) >>> 24
+    function Xz(vv) {
+      return 16843009 * ((vv = (858993459 & (vv -= vv >>> 1 & 1431655765)) + (vv >>> 2 & 858993459)) + (vv >>> 4) & 252645135) >>> 24
     }
 
-    function zs(zz) {
-      if (void 0 === zz) return 0;
-      let tz = 0;
-      for (let sz = 0, Fz = zz.length; sz < Fz; sz++) {
-        const Fz = zz[sz];
-        Fz < 32 && (tz |= 1 << Fz)
+    function uz(vv) {
+      if (void 0 === vv) return 0;
+      let zv = 0;
+      for (let Pv = 0, hv = vv.length; Pv < hv; Pv++) {
+        const hv = vv[Pv];
+        hv < 32 && (zv |= 1 << hv)
       }
-      return tz
+      return zv
     }
 
-    function ts(zz) {
-      const tz = zz.constructor;
-      if (Object.prototype.hasOwnProperty.call(tz, Jz)) return tz[Jz];
-      const sz = tz[Symbol.metadata],
-        Fz = Vt.isValidInstance(zz),
-        Wz = (sz?.[Zz]?.length ?? 0) > 0,
-        Xz = function(zz) {
-          const tz = [],
-            sz = [],
-            Fz = [],
-            Wz = [],
-            Xz = zz?.[Cz];
-          if (void 0 === Xz) return {
-            names: tz,
-            types: sz,
-            tags: Fz,
-            encoders: Wz
+    function vP(vv) {
+      const zv = vv.constructor;
+      if (Object.prototype.hasOwnProperty.call(zv, Yv)) return zv[Yv];
+      const Pv = zv[Symbol.metadata],
+        hv = oz.isValidInstance(vv),
+        Sv = (Pv?.[Kv]?.length ?? 0) > 0,
+        ev = function(vv) {
+          const zv = [],
+            Pv = [],
+            hv = [],
+            Sv = [],
+            ev = vv?.[Ov];
+          if (void 0 === ev) return {
+            names: zv,
+            types: Pv,
+            tags: hv,
+            encoders: Sv
           };
-          const Oz = zz[Iz];
-          for (let oz = 0; oz <= Xz; oz++) {
-            const Xz = zz[oz];
-            void 0 !== Xz ? (tz[oz] = Xz.name, sz[oz] = Xz.type, Fz[oz] = Xz.tag, Wz[oz] = Oz?.[oz]) : (tz[oz] = void 0, sz[oz] = void 0, Fz[oz] = void 0, Wz[oz] = void 0)
+          const gv = vv[nv];
+          for (let pv = 0; pv <= ev; pv++) {
+            const ev = vv[pv];
+            void 0 !== ev ? (zv[pv] = ev.name, Pv[pv] = ev.type, hv[pv] = ev.tag, Sv[pv] = gv?.[pv]) : (zv[pv] = void 0, Pv[pv] = void 0, hv[pv] = void 0, Sv[pv] = void 0)
           }
           return {
-            names: tz,
-            types: sz,
-            tags: Fz,
-            encoders: Wz
+            names: zv,
+            types: Pv,
+            tags: hv,
+            encoders: Sv
           }
-        }(sz),
-        Oz = Fz && !Wz ? void 0 : tz[uz],
-        oz = {
-          encoder: tz[Uz],
-          filter: Oz,
-          metadata: sz,
-          isSchema: Fz,
-          filterBitmask: Fz ? zs(sz?.[Zz]) : 0,
-          hasAnyFullStateOnly: (sz?.[Az]?.length ?? 0) > 0,
-          hasAnyUnreliable: (sz?.[Tz]?.length ?? 0) > 0,
-          hasAnyStream: (sz?.[yz]?.length ?? 0) > 0,
-          hasAnyView: Wz,
-          fullStateOnlyBitmask: zs(sz?.[Az]),
-          unreliableBitmask: zs(sz?.[Tz]),
-          streamBitmask: zs(sz?.[yz]),
-          names: Xz.names,
-          types: Xz.types,
-          tags: Xz.tags,
-          encoders: Xz.encoders
+        }(Pv),
+        gv = hv && !Sv ? void 0 : zv[Tv],
+        pv = {
+          encoder: zv[Nv],
+          filter: gv,
+          metadata: Pv,
+          isSchema: hv,
+          filterBitmask: hv ? uz(Pv?.[Kv]) : 0,
+          hasAnyFullStateOnly: (Pv?.[tv]?.length ?? 0) > 0,
+          hasAnyUnreliable: (Pv?.[Uv]?.length ?? 0) > 0,
+          hasAnyStream: (Pv?.[qv]?.length ?? 0) > 0,
+          hasAnyView: Sv,
+          fullStateOnlyBitmask: uz(Pv?.[tv]),
+          unreliableBitmask: uz(Pv?.[Uv]),
+          streamBitmask: uz(Pv?.[qv]),
+          names: ev.names,
+          types: ev.types,
+          tags: ev.tags,
+          encoders: ev.encoders
         };
-      return Object.defineProperty(tz, Jz, {
-        value: oz,
+      return Object.defineProperty(zv, Yv, {
+        value: pv,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), oz
+      }), pv
     }
 
-    function ss(zz, tz) {
-      if (void 0 !== zz.parentRef && tz(zz.parentRef, zz._parentIndex)) return !0;
-      for (let sz = zz.extraParents; void 0 !== sz; sz = sz.next)
-        if (tz(sz.ref, sz.index)) return !0;
+    function zP(vv, zv) {
+      if (void 0 !== vv.parentRef && zv(vv.parentRef, vv._parentIndex)) return !0;
+      for (let Pv = vv.extraParents; void 0 !== Pv; Pv = Pv.next)
+        if (zv(Pv.ref, Pv.index)) return !0;
       return !1
     }
-    const Fs = (zz, tz) => {
-        zz.isFieldUnreliable(tz) ? zz.ensureUnreliableRecorder().record(tz, Wz.ADD) : zz.record(tz, Wz.ADD)
+    const PP = (vv, zv) => {
+        vv.isFieldUnreliable(zv) ? vv.ensureUnreliableRecorder().record(zv, Sv.ADD) : vv.record(zv, Sv.ADD)
       },
-      Ws = (zz, tz) => zz(tz);
+      hP = (vv, zv) => vv(zv);
 
-    function Xs(zz, tz, sz) {
-      const Fz = zz.refTarget;
-      if (void 0 !== Fz[gz]) {
-        if (zz.isPatchOnly) return;
-        if (Array.isArray(Fz.items)) {
-          const zz = Fz.items;
-          for (let Fz = 0, Wz = zz.length; Fz < Wz; Fz++) void 0 !== zz[Fz] && sz(tz, Fz)
-        } else if (void 0 !== Fz.journal)
-          for (const [zz, Wz] of Fz.journal.keyByIndex) Fz.$items.has(Wz) && sz(tz, zz);
-        else if (void 0 !== Fz.$items)
-          for (const zz of Fz.$items.keys()) sz(tz, zz)
+    function SP(vv, zv, Pv) {
+      const hv = vv.refTarget;
+      if (void 0 !== hv[Cv]) {
+        if (vv.isPatchOnly) return;
+        if (Array.isArray(hv.items)) {
+          const vv = hv.items;
+          for (let hv = 0, Sv = vv.length; hv < Sv; hv++) void 0 !== vv[hv] && Pv(zv, hv)
+        } else if (void 0 !== hv.journal)
+          for (const [vv, Sv] of hv.journal.keyByIndex) hv.$items.has(Sv) && Pv(zv, vv);
+        else if (void 0 !== hv.$items)
+          for (const vv of hv.$items.keys()) Pv(zv, vv)
       } else {
-        const Wz = zz.metadata;
-        if (!Wz) return;
-        const Xz = Wz[Cz] ?? -1,
-          Oz = Wz[jz],
-          oz = zz.encDescriptor.names;
-        for (let zz = 0; zz <= Xz; zz++) {
-          const Wz = oz[zz];
-          if (void 0 === Wz) continue;
-          if (Oz && Oz.includes(zz)) continue;
-          const Xz = Fz[Wz];
-          void 0 !== Xz && null !== Xz && sz(tz, zz)
+        const Sv = vv.metadata;
+        if (!Sv) return;
+        const ev = Sv[Ov] ?? -1,
+          gv = Sv[xv],
+          pv = vv.encDescriptor.names;
+        for (let vv = 0; vv <= ev; vv++) {
+          const Sv = pv[vv];
+          if (void 0 === Sv) continue;
+          if (gv && gv.includes(vv)) continue;
+          const ev = hv[Sv];
+          void 0 !== ev && null !== ev && Pv(zv, vv)
         }
       }
     }
 
-    function Os(zz, tz, sz, Fz) {
-      ! function(zz, tz, sz) {
-        if (!tz) return;
-        const Fz = tz[Dz],
-          Wz = !Fz._isSchema;
-        let Xz;
-        Wz ? (tz = Fz.parent, sz = Fz.parentIndex, Xz = tz?.[Dz].metadata) : Xz = Fz.metadata;
-        const Oz = (Xz?.[cz]?.includes(sz) ? Cs : 0) | (Xz?.[Az]?.includes(sz) ? es : 0),
-          oz = Fz.flags & Ts | Oz,
-          vz = zz.flags;
-        zz.flags = vz | oz;
-        oz & ~vz & es && (zz.reset(), zz.unreliableRecorder?.reset());
-        const Uz = zz.root?.types;
-        if (!Uz?.hasFilters) return;
-        const Kz = Xz?.[Zz]?.includes(sz) ?? !1,
-          uz = Xz?.[yz]?.includes(sz) ?? !1,
-          Nz = Fz.isFiltered || Kz || uz;
-        if (zz.isFiltered = Nz, uz && !Wz) {
-          zz.isStreamCollection = !0;
-          const tz = Ct(zz.ref);
-          if (void 0 === tz.priority) {
-            const zz = Vt.getStreamPriority(Xz, sz);
-            void 0 !== zz && (tz.priority = zz)
+    function eP(vv, zv, Pv, hv) {
+      ! function(vv, zv, Pv) {
+        if (!zv) return;
+        const hv = zv[sv],
+          Sv = !hv._isSchema;
+        let ev;
+        Sv ? (zv = hv.parent, Pv = hv.parentIndex, ev = zv?.[sv].metadata) : ev = hv.metadata;
+        const gv = (ev?.[Rv]?.includes(Pv) ? YP : 0) | (ev?.[tv]?.includes(Pv) ? nP : 0),
+          pv = hv.flags & KP | gv,
+          dv = vv.flags;
+        vv.flags = dv | pv;
+        pv & ~dv & nP && (vv.reset(), vv.unreliableRecorder?.reset());
+        const Nv = vv.root?.types;
+        if (!Nv?.hasFilters) return;
+        const lv = ev?.[Kv]?.includes(Pv) ?? !1,
+          Tv = ev?.[qv]?.includes(Pv) ?? !1,
+          Wv = hv.isFiltered || lv || Tv;
+        if (vv.isFiltered = Wv, Tv && !Sv) {
+          vv.isStreamCollection = !0;
+          const zv = Oz(vv.ref);
+          if (void 0 === zv.priority) {
+            const vv = oz.getStreamPriority(ev, Pv);
+            void 0 !== vv && (zv.priority = vv)
           }
-          zz.root?.registerStream(zz.ref)
+          vv.root?.registerStream(vv.ref)
         }
-        if (Nz) {
-          const tz = vs(zz);
-          zz.isVisibilitySharedWithParent = Fz.isFiltered && tz && !uz && (!Kz || Wz && Xz[sz].tag !== HF)
+        if (Wv) {
+          const zv = pP(vv);
+          vv.isVisibilitySharedWithParent = hv.isFiltered && zv && !Tv && (!lv || Sv && ev[Pv].tag !== ah)
         }
-      }(zz, tz, sz), zz.isFullStateOnly || (zz.has() && zz.root?.enqueueChangeTree(zz), zz.unreliableRecorder?.has() && zz.root?.enqueueUnreliable(zz), zz.has() || zz.unreliableRecorder?.has() || zz.root?.enqueueChangeTree(zz))
+      }(vv, zv, Pv), vv.isFullStateOnly || (vv.has() && vv.root?.enqueueChangeTree(vv), vv.unreliableRecorder?.has() && vv.root?.enqueueUnreliable(vv), vv.has() || vv.unreliableRecorder?.has() || vv.root?.enqueueChangeTree(vv))
     }
 
-    function os(zz) {
-      const tz = zz.pendingFilterRefresh;
-      for (let sz = 0; sz < tz.length; sz++) {
-        const zz = tz[sz];
-        0 !== (zz.flags & Gs) && Us(zz)
+    function gP(vv) {
+      const zv = vv.pendingFilterRefresh;
+      for (let Pv = 0; Pv < zv.length; Pv++) {
+        const vv = zv[Pv];
+        0 !== (vv.flags & DP) && dP(vv)
       }
-      tz.length = 0
+      zv.length = 0
     }
 
-    function vs(zz) {
-      return zz._isSchema || "string" !== typeof zz.refTarget[gz]
+    function pP(vv) {
+      return vv._isSchema || "string" !== typeof vv.refTarget[Cv]
     }
 
-    function Us(zz) {
-      zz.flags &= ~Gs;
-      const tz = zz.root;
-      if (void 0 === tz || void 0 === zz.parentRef) return;
-      const sz = vs(zz);
-      let Fz = ws(zz, zz.parentRef, zz._parentIndex, sz);
-      for (let Xz = zz.extraParents; void 0 !== Xz && Fz !== bs; Xz = Xz.next) Fz |= ws(zz, Xz.ref, Xz.index, sz);
-      if (0 === Fz) return;
-      zz.isVisibilitySharedWithParent = 0 !== (Fz & Ns);
-      const Wz = 0 === (Fz & us);
-      Wz !== zz.isFiltered && (zz.isFiltered = Wz, Wz || zz.isFullStateOnly || (zz.forEachLiveWithCtx(zz, Fs), zz.has() && tz.enqueueChangeTree(zz), zz.unreliableRecorder?.has() && tz.enqueueUnreliable(zz)), zz.forEachChildWithCtx(zz, Ds))
+    function dP(vv) {
+      vv.flags &= ~DP;
+      const zv = vv.root;
+      if (void 0 === zv || void 0 === vv.parentRef) return;
+      const Pv = pP(vv);
+      let hv = wP(vv, vv.parentRef, vv._parentIndex, Pv);
+      for (let ev = vv.extraParents; void 0 !== ev && hv !== WP; ev = ev.next) hv |= wP(vv, ev.ref, ev.index, Pv);
+      if (0 === hv) return;
+      vv.isVisibilitySharedWithParent = 0 !== (hv & TP);
+      const Sv = 0 === (hv & lP);
+      Sv !== vv.isFiltered && (vv.isFiltered = Sv, Sv || vv.isFullStateOnly || (vv.forEachLiveWithCtx(vv, PP), vv.has() && zv.enqueueChangeTree(vv), vv.unreliableRecorder?.has() && zv.enqueueUnreliable(vv)), vv.forEachChildWithCtx(vv, aP))
     }
-    const Ks = 1,
-      us = 2,
-      Ns = 4,
-      bs = Ks | us | Ns;
+    const NP = 1,
+      lP = 2,
+      TP = 4,
+      WP = NP | lP | TP;
 
-    function ws(zz, tz, sz, Fz) {
-      const Wz = tz[Dz];
-      if (Wz.root !== zz.root || ! function(zz, tz, sz) {
-          const Fz = tz.refTarget;
-          if (tz.isArray) {
-            const tz = Fz.items,
-              Wz = tz[sz];
-            if (void 0 !== Wz && Wz[Dz] === zz) return !0;
-            for (let sz = 0, Fz = tz.length; sz < Fz; sz++) {
-              const Fz = tz[sz];
-              if (void 0 !== Fz && Fz[Dz] === zz) return !0
+    function wP(vv, zv, Pv, hv) {
+      const Sv = zv[sv];
+      if (Sv.root !== vv.root || ! function(vv, zv, Pv) {
+          const hv = zv.refTarget;
+          if (zv.isArray) {
+            const zv = hv.items,
+              Sv = zv[Pv];
+            if (void 0 !== Sv && Sv[sv] === vv) return !0;
+            for (let Pv = 0, hv = zv.length; Pv < hv; Pv++) {
+              const hv = zv[Pv];
+              if (void 0 !== hv && hv[sv] === vv) return !0
             }
             return !1
           }
-          const Wz = tz.getValue(sz);
-          return void 0 !== Wz && Wz[Dz] === zz
-        }(zz, Wz, sz)) return 0;
-      Wz.flags & Gs && Us(Wz);
-      let Xz = Ks;
-      if (Wz._isSchema) {
-        void 0 !== Wz.encDescriptor.tags[sz] || Wz.isFieldStream(sz) || (Wz.isFiltered ? Fz && (Xz |= Ns) : Xz |= us)
-      } else if (Wz.isFiltered) {
-        if (Fz && !Wz.isStreamCollection) {
-          const zz = Wz.parent?.[Dz];
-          (zz?._isSchema ? zz.encDescriptor.tags[Wz.parentIndex] : void 0) !== HF && (Xz |= Ns)
+          const Sv = zv.getValue(Pv);
+          return void 0 !== Sv && Sv[sv] === vv
+        }(vv, Sv, Pv)) return 0;
+      Sv.flags & DP && dP(Sv);
+      let ev = NP;
+      if (Sv._isSchema) {
+        void 0 !== Sv.encDescriptor.tags[Pv] || Sv.isFieldStream(Pv) || (Sv.isFiltered ? hv && (ev |= TP) : ev |= lP)
+      } else if (Sv.isFiltered) {
+        if (hv && !Sv.isStreamCollection) {
+          const vv = Sv.parent?.[sv];
+          (vv?._isSchema ? vv.encDescriptor.tags[Sv.parentIndex] : void 0) !== ah && (ev |= TP)
         }
-      } else Xz |= us;
-      return Xz
+      } else ev |= lP;
+      return ev
     }
-    const Ds = (zz, tz, sz) => {
-      Us(tz)
+    const aP = (vv, zv, Pv) => {
+      dP(zv)
     };
 
-    function gs(zz, tz, sz, Fz) {
-      if (zz.addParent(tz, Fz), !sz) return;
-      const Wz = sz.add(zz);
-      sz !== zz.root && (zz.root = sz, Os(zz, tz, Fz));
-      const Xz = tz?.[Dz];
-      if (void 0 !== Xz && void 0 !== Xz.subscribedViews && void 0 !== tz[gz] && function(zz, tz, sz, Fz) {
-          const Wz = zz.subscribedViews;
-          if (void 0 === Wz) return;
-          const Xz = zz.isStreamCollection,
-            Oz = Xz ? zz.ref : void 0,
-            oz = Xz ? void 0 : sz[Dz];
-          for (let vz = 0, Uz = Wz.length; vz < Uz; vz++) {
-            let zz = Wz[vz];
-            for (; 0 !== zz;) {
-              const sz = zz & -zz;
-              zz ^= sz;
-              const Uz = 32 * vz + (31 - Math.clz32(sz)),
-                Kz = Fz.activeViews.get(Uz),
-                uz = Kz?.deref();
-              void 0 !== uz ? Xz ? ct(Oz, Uz, tz) : void 0 !== oz && uz.markVisible(oz) : Wz[vz] &= ~sz
+    function sP(vv, zv, Pv, hv) {
+      if (vv.addParent(zv, hv), !Pv) return;
+      const Sv = Pv.add(vv);
+      Pv !== vv.root && (vv.root = Pv, eP(vv, zv, hv));
+      const ev = zv?.[sv];
+      if (void 0 !== ev && void 0 !== ev.subscribedViews && void 0 !== zv[Cv] && function(vv, zv, Pv, hv) {
+          const Sv = vv.subscribedViews;
+          if (void 0 === Sv) return;
+          const ev = vv.isStreamCollection,
+            gv = ev ? vv.ref : void 0,
+            pv = ev ? void 0 : Pv[sv];
+          for (let dv = 0, Nv = Sv.length; dv < Nv; dv++) {
+            let vv = Sv[dv];
+            for (; 0 !== vv;) {
+              const Pv = vv & -vv;
+              vv ^= Pv;
+              const Nv = 32 * dv + (31 - Math.clz32(Pv)),
+                lv = hv.activeViews.get(Nv),
+                Tv = lv?.deref();
+              void 0 !== Tv ? ev ? Rz(gv, Nv, zv) : void 0 !== pv && Tv.markVisible(pv) : Sv[dv] &= ~Pv
             }
           }
-        }(Xz, Fz, zz.ref, sz), Wz) {
-        let tz = rs[Ys];
-        void 0 === tz && (tz = {
+        }(ev, hv, vv.ref, Pv), Sv) {
+        let zv = GP[mP];
+        void 0 === zv && (zv = {
           parentRef: void 0,
           root: void 0
-        }, rs[Ys] = tz), tz.parentRef = zz.ref, tz.root = sz, Ys++, Bs(zz, tz, xs), Ys--
+        }, GP[mP] = zv), zv.parentRef = vv.ref, zv.root = Pv, mP++, iP(vv, zv, jP), mP--
       }
     }
 
-    function Hs(zz, tz, sz) {
-      zz(tz, sz)
+    function CP(vv, zv, Pv) {
+      vv(zv, Pv)
     }
 
-    function Bs(zz, tz, sz) {
-      const Fz = zz.refTarget;
-      if (Fz[gz]) {
-        if ("string" !== typeof Fz[gz]) {
-          const zz = Fz.items;
-          if (void 0 !== zz)
-            for (let Fz = 0, Wz = zz.length; Fz < Wz; Fz++) {
-              const Wz = zz[Fz];
-              Wz && sz(tz, Wz[Dz], Fz)
+    function iP(vv, zv, Pv) {
+      const hv = vv.refTarget;
+      if (hv[Cv]) {
+        if ("string" !== typeof hv[Cv]) {
+          const vv = hv.items;
+          if (void 0 !== vv)
+            for (let hv = 0, Sv = vv.length; hv < Sv; hv++) {
+              const Sv = vv[hv];
+              Sv && Pv(zv, Sv[sv], hv)
             } else {
-              const zz = Fz.$items,
-                Wz = Fz._collectionIndexes;
-              for (const Fz of zz.keys()) {
-                const Xz = zz.get(Fz);
-                Xz && sz(tz, Xz[Dz], Wz?.[Fz] ?? Fz)
+              const vv = hv.$items,
+                Sv = hv._collectionIndexes;
+              for (const hv of vv.keys()) {
+                const ev = vv.get(hv);
+                ev && Pv(zv, ev[sv], Sv?.[hv] ?? hv)
               }
             }
         }
       } else {
-        const Wz = zz.metadata,
-          Xz = Wz?.[ez];
-        if (!Xz) return;
-        const Oz = zz.encDescriptor.names;
-        for (let zz = 0, oz = Xz.length; zz < oz; zz++) {
-          const Wz = Xz[zz],
-            oz = Fz[Oz[Wz]];
-          oz && sz(tz, oz[Dz], Wz)
+        const Sv = vv.metadata,
+          ev = Sv?.[Dv];
+        if (!ev) return;
+        const gv = vv.encDescriptor.names;
+        for (let vv = 0, pv = ev.length; vv < pv; vv++) {
+          const Sv = ev[vv],
+            pv = hv[gv[Sv]];
+          pv && Pv(zv, pv[sv], Sv)
         }
       }
     }
 
-    function Ps(zz, tz, sz) {
-      tz.root !== zz ? tz.setRoot(zz) : zz.add(tz)
+    function cP(vv, zv, Pv) {
+      zv.root !== vv ? zv.setRoot(vv) : vv.add(zv)
     }
-    const rs = [];
-    let Ys = 0;
+    const GP = [];
+    let mP = 0;
 
-    function xs(zz, tz, sz) {
-      if (tz.root === zz.root) return zz.root.add(tz), void zz.root.moveNextToParent(tz);
-      tz.setParent(zz.parentRef, zz.root, sz)
+    function jP(vv, zv, Pv) {
+      if (zv.root === vv.root) return vv.root.add(zv), void vv.root.moveNextToParent(zv);
+      zv.setParent(vv.parentRef, vv.root, Pv)
     }
 
-    function ms(zz, tz, sz) {
-      const Fz = (3 & sz) << 3;
-      return sz < 4 ? zz >>> Fz & 255 : tz >>> Fz & 255
+    function fP(vv, zv, Pv) {
+      const hv = (3 & Pv) << 3;
+      return Pv < 4 ? vv >>> hv & 255 : zv >>> hv & 255
     }
-    const Is = (zz, tz, sz) => zz(tz, sz);
-    const Cs = 16,
-      es = 32,
-      Zs = 128,
-      Gs = 256,
-      Ts = Cs | es;
-    class cs {
+    const FP = (vv, zv, Pv) => vv(zv, Pv);
+    const YP = 16,
+      nP = 32,
+      OP = 128,
+      DP = 256,
+      KP = YP | nP;
+    class VP {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(zz) {
-        this.flags = zz ? 1 | this.flags : -2 & this.flags
+      set isFiltered(vv) {
+        this.flags = vv ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(zz) {
-        this.flags = zz ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(vv) {
+        this.flags = vv ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(zz) {
-        this.flags = zz ? 4 | this.flags : -5 & this.flags
+      set isNew(vv) {
+        this.flags = vv ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(zz) {
-        this.flags = zz ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(vv) {
+        this.flags = vv ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & Cs)
+        return 0 !== (this.flags & YP)
       }
-      set isPatchOnly(zz) {
-        this.flags = zz ? this.flags | Cs : this.flags & ~Cs
+      set isPatchOnly(vv) {
+        this.flags = vv ? this.flags | YP : this.flags & ~YP
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & es)
+        return 0 !== (this.flags & nP)
       }
-      set isFullStateOnly(zz) {
-        this.flags = zz ? this.flags | es : this.flags & ~es
+      set isFullStateOnly(vv) {
+        this.flags = vv ? this.flags | nP : this.flags & ~nP
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(zz) {
-        this.flags = zz ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(vv) {
+        this.flags = vv ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & Zs)
+        return 0 !== (this.flags & OP)
       }
-      set needsRestage(zz) {
-        this.flags = zz ? this.flags | Zs : -129 & this.flags
+      set needsRestage(vv) {
+        this.flags = vv ? this.flags | OP : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new pt(this.metadata?.[Cz] ?? 0) : new ft), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new rz(this.metadata?.[Ov] ?? 0) : new kz), this.unreliableRecorder
       }
-      isFieldUnreliable(zz) {
-        const tz = this.encDescriptor;
-        return !!tz.hasAnyUnreliable && (zz < 32 ? 0 !== (tz.unreliableBitmask & 1 << zz) : Vt.hasUnreliableAtIndex(this.metadata, zz))
+      isFieldUnreliable(vv) {
+        const zv = this.encDescriptor;
+        return !!zv.hasAnyUnreliable && (vv < 32 ? 0 !== (zv.unreliableBitmask & 1 << vv) : oz.hasUnreliableAtIndex(this.metadata, vv))
       }
-      isFieldFullStateOnly(zz) {
+      isFieldFullStateOnly(vv) {
         if (this.isFullStateOnly) return !0;
-        const tz = this.encDescriptor;
-        return !!tz.hasAnyFullStateOnly && (zz < 32 ? 0 !== (tz.fullStateOnlyBitmask & 1 << zz) : Vt.hasFullStateOnlyAtIndex(this.metadata, zz))
+        const zv = this.encDescriptor;
+        return !!zv.hasAnyFullStateOnly && (vv < 32 ? 0 !== (zv.fullStateOnlyBitmask & 1 << vv) : oz.hasFullStateOnlyAtIndex(this.metadata, vv))
       }
-      isFieldStream(zz) {
-        const tz = this.encDescriptor;
-        return !!tz.hasAnyStream && (zz < 32 ? 0 !== (tz.streamBitmask & 1 << zz) : Vt.hasStreamAtIndex(this.metadata, zz))
+      isFieldStream(vv) {
+        const zv = this.encDescriptor;
+        return !!zv.hasAnyStream && (vv < 32 ? 0 !== (zv.streamBitmask & 1 << vv) : oz.hasStreamAtIndex(this.metadata, vv))
       }
-      constructor(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz;
-        this.ref = zz, this.refTarget = tz;
-        const sz = ts(zz);
-        this.encDescriptor = sz, this.metadata = sz.metadata;
-        const Fz = sz.isSchema;
-        if (this._isSchema = Fz, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Fz) {
-          const zz = this.metadata?.[Cz] ?? 0;
-          zz > 7 && (this.ops = new Uint8Array(zz + 1))
+      constructor(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv;
+        this.ref = vv, this.refTarget = zv;
+        const Pv = vP(vv);
+        this.encDescriptor = Pv, this.metadata = Pv.metadata;
+        const hv = Pv.isSchema;
+        if (this._isSchema = hv, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, hv) {
+          const vv = this.metadata?.[Ov] ?? 0;
+          vv > 7 && (this.ops = new Uint8Array(vv + 1))
         } else this.collDirty = new Map
       }
-      _opAt(zz) {
-        const tz = this.ops;
-        if (void 0 !== tz) return tz[zz];
-        const sz = (3 & zz) << 3;
-        return zz < 4 ? this.opsLow >>> sz & 255 : this.opsHigh >>> sz & 255
+      _opAt(vv) {
+        const zv = this.ops;
+        if (void 0 !== zv) return zv[vv];
+        const Pv = (3 & vv) << 3;
+        return vv < 4 ? this.opsLow >>> Pv & 255 : this.opsHigh >>> Pv & 255
       }
-      _opPut(zz, tz) {
-        const sz = this.ops;
-        if (void 0 !== sz) return void(sz[zz] = tz);
-        const Fz = (3 & zz) << 3,
-          Wz = ~(255 << Fz);
-        zz < 4 ? this.opsLow = this.opsLow & Wz | tz << Fz : this.opsHigh = this.opsHigh & Wz | tz << Fz
+      _opPut(vv, zv) {
+        const Pv = this.ops;
+        if (void 0 !== Pv) return void(Pv[vv] = zv);
+        const hv = (3 & vv) << 3,
+          Sv = ~(255 << hv);
+        vv < 4 ? this.opsLow = this.opsLow & Sv | zv << hv : this.opsHigh = this.opsHigh & Sv | zv << hv
       }
-      _markDirty(zz) {
-        zz < 32 ? this.dirtyLow |= 1 << zz : this.dirtyHigh |= 1 << zz - 32
+      _markDirty(vv) {
+        vv < 32 ? this.dirtyLow |= 1 << vv : this.dirtyHigh |= 1 << vv - 32
       }
-      record(zz, tz) {
+      record(vv, zv) {
         if (this._isSchema) {
-          const sz = this._opAt(zz);
-          0 === sz ? this._opPut(zz, tz) : (sz === Wz.DELETE || sz === Wz.ADD && tz === Wz.DELETE_AND_ADD) && this._opPut(zz, Wz.DELETE_AND_ADD), this._markDirty(zz)
+          const Pv = this._opAt(vv);
+          0 === Pv ? this._opPut(vv, zv) : (Pv === Sv.DELETE || Pv === Sv.ADD && zv === Sv.DELETE_AND_ADD) && this._opPut(vv, Sv.DELETE_AND_ADD), this._markDirty(vv)
         } else {
-          const sz = this.collDirty,
-            Fz = sz.get(zz);
-          let Xz;
-          Xz = void 0 === Fz ? tz : Fz === Wz.DELETE || Fz === Wz.ADD && tz === Wz.DELETE_AND_ADD ? Wz.DELETE_AND_ADD : Fz, sz.set(zz, Xz)
+          const Pv = this.collDirty,
+            hv = Pv.get(vv);
+          let ev;
+          ev = void 0 === hv ? zv : hv === Sv.DELETE || hv === Sv.ADD && zv === Sv.DELETE_AND_ADD ? Sv.DELETE_AND_ADD : hv, Pv.set(vv, ev)
         }
       }
-      recordDelete(zz, tz) {
-        this._isSchema ? (this._opPut(zz, tz), this._markDirty(zz)) : this.collDirty.set(zz, tz)
+      recordDelete(vv, zv) {
+        this._isSchema ? (this._opPut(vv, zv), this._markDirty(vv)) : this.collDirty.set(vv, zv)
       }
-      recordRaw(zz, tz) {
-        this._isSchema ? (this._opPut(zz, tz), this._markDirty(zz)) : this.collDirty.set(zz, tz)
+      recordRaw(vv, zv) {
+        this._isSchema ? (this._opPut(vv, zv), this._markDirty(vv)) : this.collDirty.set(vv, zv)
       }
-      recordPure(zz) {
+      recordPure(vv) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, zz])
+        (this.collPureOps ??= []).push([this.collDirty.size, vv])
       }
-      operationAt(zz) {
+      operationAt(vv) {
         if (this._isSchema) {
-          const tz = this._opAt(zz);
-          return 0 === tz ? void 0 : tz
+          const zv = this._opAt(vv);
+          return 0 === zv ? void 0 : zv
         }
-        return this.collDirty.get(zz)
+        return this.collDirty.get(vv)
       }
-      setOperationAt(zz, tz) {
-        if (this._isSchema) this._opPut(zz, tz);
+      setOperationAt(vv, zv) {
+        if (this._isSchema) this._opPut(vv, zv);
         else {
-          const sz = this.collDirty;
-          sz.has(zz) && sz.set(zz, tz)
+          const Pv = this.collDirty;
+          Pv.has(vv) && Pv.set(vv, zv)
         }
       }
-      forEach(zz) {
-        this.forEachWithCtx(zz, Is)
+      forEach(vv) {
+        this.forEachWithCtx(vv, FP)
       }
-      forEachWithCtx(zz, tz) {
+      forEachWithCtx(vv, zv) {
         if (this._isSchema) {
-          let sz = this.dirtyLow,
-            Fz = this.dirtyHigh;
-          const Wz = this.ops;
-          if (void 0 !== Wz) {
-            for (; 0 !== sz;) {
-              const Fz = sz & -sz,
-                Xz = 31 - Math.clz32(Fz);
-              sz ^= Fz, tz(zz, Xz, Wz[Xz])
+          let Pv = this.dirtyLow,
+            hv = this.dirtyHigh;
+          const Sv = this.ops;
+          if (void 0 !== Sv) {
+            for (; 0 !== Pv;) {
+              const hv = Pv & -Pv,
+                ev = 31 - Math.clz32(hv);
+              Pv ^= hv, zv(vv, ev, Sv[ev])
             }
-            for (; 0 !== Fz;) {
-              const sz = Fz & -Fz,
-                Xz = 31 - Math.clz32(sz) + 32;
-              Fz ^= sz, tz(zz, Xz, Wz[Xz])
+            for (; 0 !== hv;) {
+              const Pv = hv & -hv,
+                ev = 31 - Math.clz32(Pv) + 32;
+              hv ^= Pv, zv(vv, ev, Sv[ev])
             }
           } else {
-            const Fz = this.opsLow,
-              Wz = this.opsHigh;
-            for (; 0 !== sz;) {
-              const Xz = sz & -sz,
-                Oz = 31 - Math.clz32(Xz);
-              sz ^= Xz, tz(zz, Oz, ms(Fz, Wz, Oz))
+            const hv = this.opsLow,
+              Sv = this.opsHigh;
+            for (; 0 !== Pv;) {
+              const ev = Pv & -Pv,
+                gv = 31 - Math.clz32(ev);
+              Pv ^= ev, zv(vv, gv, fP(hv, Sv, gv))
             }
           }
           return
         }
-        const sz = this.collDirty,
-          Fz = this.collPureOps;
-        if (void 0 !== Fz && Fz.length > 0) {
-          let Wz = 0,
-            Xz = 0;
-          for (const [Oz, oz] of sz) {
-            for (; Wz < Fz.length && Fz[Wz][0] <= Xz;) {
-              const sz = Fz[Wz++][1];
-              tz(zz, -sz, sz)
+        const Pv = this.collDirty,
+          hv = this.collPureOps;
+        if (void 0 !== hv && hv.length > 0) {
+          let Sv = 0,
+            ev = 0;
+          for (const [gv, pv] of Pv) {
+            for (; Sv < hv.length && hv[Sv][0] <= ev;) {
+              const Pv = hv[Sv++][1];
+              zv(vv, -Pv, Pv)
             }
-            tz(zz, Oz, oz), Xz++
+            zv(vv, gv, pv), ev++
           }
-          for (; Wz < Fz.length;) {
-            const sz = Fz[Wz++][1];
-            tz(zz, -sz, sz)
+          for (; Sv < hv.length;) {
+            const Pv = hv[Sv++][1];
+            zv(vv, -Pv, Pv)
           }
         } else
-          for (const [Wz, Xz] of sz) tz(zz, Wz, Xz)
+          for (const [Sv, ev] of Pv) zv(vv, Sv, ev)
       }
       size() {
-        return this._isSchema ? Et(this.dirtyLow) + Et(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? Xz(this.dirtyLow) + Xz(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(zz, tz) {
+      insertAt(vv, zv) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const sz = this.collDirty,
-          Fz = new Map,
-          Xz = !this.paused && !this.isFullStateOnly;
-        if (zz > 0)
-          for (const [Wz, Oz] of sz) Wz < zz && Fz.set(Wz, Oz);
-        if (Xz)
-          for (let Oz = 0; Oz < tz; Oz++) Fz.set(zz + Oz, Wz.ADD);
-        for (const [Wz, Oz] of sz) Wz >= zz && Fz.set(Wz + tz, Oz);
-        this.collDirty = Fz, Xz && this.root?.enqueueChangeTree(this)
+        const Pv = this.collDirty,
+          hv = new Map,
+          ev = !this.paused && !this.isFullStateOnly;
+        if (vv > 0)
+          for (const [Sv, gv] of Pv) Sv < vv && hv.set(Sv, gv);
+        if (ev)
+          for (let gv = 0; gv < zv; gv++) hv.set(vv + gv, Sv.ADD);
+        for (const [Sv, gv] of Pv) Sv >= vv && hv.set(Sv + zv, gv);
+        this.collDirty = hv, ev && this.root?.enqueueChangeTree(this)
       }
-      removeAt(zz, tz) {
+      removeAt(vv, zv) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const sz = this.collDirty,
-          Fz = zz + tz;
-        let Wz = !1;
-        for (const Oz of sz.keys())
-          if (Oz >= Fz) {
-            Wz = !0;
+        const Pv = this.collDirty,
+          hv = vv + zv;
+        let Sv = !1;
+        for (const gv of Pv.keys())
+          if (gv >= hv) {
+            Sv = !0;
             break
-          } if (!Wz) {
-          for (let tz = zz; tz < Fz; tz++) sz.delete(tz);
+          } if (!Sv) {
+          for (let zv = vv; zv < hv; zv++) Pv.delete(zv);
           return
         }
-        const Xz = new Map;
-        for (const [Oz, oz] of sz) Oz < zz ? Xz.set(Oz, oz) : Oz >= Fz && Xz.set(Oz - tz, oz);
-        this.collDirty = Xz
+        const ev = new Map;
+        for (const [gv, pv] of Pv) gv < vv ? ev.set(gv, pv) : gv >= hv && ev.set(gv - zv, pv);
+        this.collDirty = ev
       }
-      unshift(zz) {
-        this.insertAt(0, zz)
+      unshift(vv) {
+        this.insertAt(0, vv)
       }
-      setRoot(zz) {
-        ! function(zz, tz) {
-          zz.root = tz;
-          const sz = tz.add(zz);
-          Os(zz, zz.parent, zz.parentIndex), sz && Bs(zz, tz, Ps)
-        }(this, zz)
+      setRoot(vv) {
+        ! function(vv, zv) {
+          vv.root = zv;
+          const Pv = zv.add(vv);
+          eP(vv, vv.parent, vv.parentIndex), Pv && iP(vv, zv, cP)
+        }(this, vv)
       }
-      setParent(zz, tz, sz) {
-        gs(this, zz, tz, sz)
+      setParent(vv, zv, Pv) {
+        sP(this, vv, zv, Pv)
       }
-      forEachChild(zz) {
-        Bs(this, zz, Hs)
+      forEachChild(vv) {
+        iP(this, vv, CP)
       }
-      forEachChildWithCtx(zz, tz) {
-        Bs(this, zz, tz)
+      forEachChildWithCtx(vv, zv) {
+        iP(this, vv, zv)
       }
-      forEachLive(zz) {
-        Xs(this, zz, Ws)
+      forEachLive(vv) {
+        SP(this, vv, hP)
       }
-      forEachLiveWithCtx(zz, tz) {
-        Xs(this, zz, tz)
+      forEachLiveWithCtx(vv, zv) {
+        SP(this, vv, zv)
       }
-      operation(zz) {
-        this.paused || this.isFullStateOnly || (this.recordPure(zz), this.root?.enqueueChangeTree(this))
+      operation(vv) {
+        this.paused || this.isFullStateOnly || (this.recordPure(vv), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(zz, tz, sz) {
-        if (!this.paused && !this.isFieldFullStateOnly(zz)) {
-          if (this.isFieldUnreliable(zz) && !this.isNew) {
-            const Fz = this.ensureUnreliableRecorder();
-            return sz ? Fz.recordRaw(zz, tz) : Fz.record(zz, tz), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(vv, zv, Pv) {
+        if (!this.paused && !this.isFieldFullStateOnly(vv)) {
+          if (this.isFieldUnreliable(vv) && !this.isNew) {
+            const hv = this.ensureUnreliableRecorder();
+            return Pv ? hv.recordRaw(vv, zv) : hv.record(vv, zv), void this.root?.enqueueUnreliable(this)
           }
-          sz ? this.recordRaw(zz, tz) : this.record(zz, tz), this.root?.enqueueChangeTree(this)
+          Pv ? this.recordRaw(vv, zv) : this.record(vv, zv), this.root?.enqueueChangeTree(this)
         }
       }
-      change(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wz.ADD;
-        this._routeAndRecord(zz, tz, !1)
+      change(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sv.ADD;
+        this._routeAndRecord(vv, zv, !1)
       }
-      indexedOperation(zz, tz) {
-        this._routeAndRecord(zz, tz, !0)
+      indexedOperation(vv, zv) {
+        this._routeAndRecord(vv, zv, !0)
       }
-      getChange(zz) {
-        return this.operationAt(zz)
+      getChange(vv) {
+        return this.operationAt(vv)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(zz) {
-        const tz = this.paused;
+      untracked(vv) {
+        const zv = this.paused;
         this.paused = !0;
         try {
-          return zz()
+          return vv()
         } finally {
-          this.paused = tz
+          this.paused = zv
         }
       }
-      markDirty(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Wz.ADD;
-        const sz = this.paused;
+      markDirty(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sv.ADD;
+        const Pv = this.paused;
         this.paused = !1;
         try {
-          this.change(zz, tz)
+          this.change(vv, zv)
         } finally {
-          this.paused = sz
+          this.paused = Pv
         }
       }
-      getValue(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[Nz](zz, tz)
+      getValue(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[Wv](vv, zv)
       }
-      delete(zz, tz) {
-        if (void 0 === zz) {
+      delete(vv, zv) {
+        if (void 0 === vv) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${zz}'`)
-          } catch (vW) {
-            console.warn(vW)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${vv}'`)
+          } catch (eS) {
+            console.warn(eS)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(zz)) return this.getValue(zz);
-        const sz = this.isFieldUnreliable(zz) && !this.isNew;
-        sz ? this.ensureUnreliableRecorder().recordDelete(zz, tz ?? Wz.DELETE) : this.recordDelete(zz, tz ?? Wz.DELETE);
-        const Fz = this.getValue(zz);
-        return Fz && Fz[Dz] && this.root?.remove(Fz[Dz]), sz ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Fz
+        if (this.paused || this.isFieldFullStateOnly(vv)) return this.getValue(vv);
+        const Pv = this.isFieldUnreliable(vv) && !this.isNew;
+        Pv ? this.ensureUnreliableRecorder().recordDelete(vv, zv ?? Sv.DELETE) : this.recordDelete(vv, zv ?? Sv.DELETE);
+        const hv = this.getValue(vv);
+        return hv && hv[sv] && this.root?.remove(hv[sv]), Pv ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), hv
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[Bz]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[cv]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[Bz]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[cv]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[Bz]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[cv]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const zz = zz => {
-          if (zz < 0) return;
-          const tz = this.getValue(zz);
-          tz && tz[Dz] && tz[Dz].discardAll()
+        const vv = vv => {
+          if (vv < 0) return;
+          const zv = this.getValue(vv);
+          zv && zv[sv] && zv[sv].discardAll()
         };
-        this.forEach(zz), this.unreliableRecorder?.forEach(zz), this.discard()
+        this.forEach(vv), this.unreliableRecorder?.forEach(vv), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(zz, tz) {
-        ! function(zz, tz, sz) {
-          if (zz.parentRef) {
-            if (zz.parentRef[Dz] === tz[Dz]) return void(zz._parentIndex = sz);
-            if (ss(zz, ((zz, sz) => zz[Dz] === tz[Dz]))) return void(zz._parentIndex = sz)
+      addParent(vv, zv) {
+        ! function(vv, zv, Pv) {
+          if (vv.parentRef) {
+            if (vv.parentRef[sv] === zv[sv]) return void(vv._parentIndex = Pv);
+            if (zP(vv, ((vv, Pv) => vv[sv] === zv[sv]))) return void(vv._parentIndex = Pv)
           }
-          void 0 === zz.parentRef ? (zz.parentRef = tz, zz._parentIndex = sz) : (zz.extraParents = {
-            ref: zz.parentRef,
-            index: zz._parentIndex,
-            next: zz.extraParents
-          }, zz.parentRef = tz, zz._parentIndex = sz)
-        }(this, zz, tz)
+          void 0 === vv.parentRef ? (vv.parentRef = zv, vv._parentIndex = Pv) : (vv.extraParents = {
+            ref: vv.parentRef,
+            index: vv._parentIndex,
+            next: vv.extraParents
+          }, vv.parentRef = zv, vv._parentIndex = Pv)
+        }(this, vv, zv)
       }
-      setParentIndex(zz, tz) {
-        ! function(zz, tz, sz) {
-          if (void 0 !== zz.extraParents)
-            if (zz.parentRef[Dz] !== tz[Dz]) {
-              for (let Fz = zz.extraParents; void 0 !== Fz; Fz = Fz.next)
-                if (Fz.ref[Dz] === tz[Dz]) return void(Fz.index = sz)
-            } else zz._parentIndex = sz;
-          else zz._parentIndex = sz
-        }(this, zz, tz)
+      setParentIndex(vv, zv) {
+        ! function(vv, zv, Pv) {
+          if (void 0 !== vv.extraParents)
+            if (vv.parentRef[sv] !== zv[sv]) {
+              for (let hv = vv.extraParents; void 0 !== hv; hv = hv.next)
+                if (hv.ref[sv] === zv[sv]) return void(hv.index = Pv)
+            } else vv._parentIndex = Pv;
+          else vv._parentIndex = Pv
+        }(this, vv, zv)
       }
       removeParent() {
-        return function(zz, tz) {
-          if (zz.parentRef && zz.parentRef[Dz] === tz[Dz]) return zz.extraParents ? (zz.parentRef = zz.extraParents.ref, zz._parentIndex = zz.extraParents.index, zz.extraParents = zz.extraParents.next) : (zz.parentRef = void 0, zz._parentIndex = void 0), !0;
-          let sz = zz.extraParents,
-            Fz = null;
-          for (; sz;) {
-            if (sz.ref[Dz] === tz[Dz]) return Fz ? Fz.next = sz.next : zz.extraParents = sz.next, !0;
-            Fz = sz, sz = sz.next
+        return function(vv, zv) {
+          if (vv.parentRef && vv.parentRef[sv] === zv[sv]) return vv.extraParents ? (vv.parentRef = vv.extraParents.ref, vv._parentIndex = vv.extraParents.index, vv.extraParents = vv.extraParents.next) : (vv.parentRef = void 0, vv._parentIndex = void 0), !0;
+          let Pv = vv.extraParents,
+            hv = null;
+          for (; Pv;) {
+            if (Pv.ref[sv] === zv[sv]) return hv ? hv.next = Pv.next : vv.extraParents = Pv.next, !0;
+            hv = Pv, Pv = Pv.next
           }
-          return void 0 === zz.parentRef
+          return void 0 === vv.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(zz) {
-        return function(zz, tz) {
-          if (void 0 !== zz.parentRef && tz(zz.parentRef, zz._parentIndex)) return {
-            ref: zz.parentRef,
-            index: zz._parentIndex
+      findParent(vv) {
+        return function(vv, zv) {
+          if (void 0 !== vv.parentRef && zv(vv.parentRef, vv._parentIndex)) return {
+            ref: vv.parentRef,
+            index: vv._parentIndex
           };
-          for (let sz = zz.extraParents; void 0 !== sz; sz = sz.next)
-            if (tz(sz.ref, sz.index)) return {
-              ref: sz.ref,
-              index: sz.index
+          for (let Pv = vv.extraParents; void 0 !== Pv; Pv = Pv.next)
+            if (zv(Pv.ref, Pv.index)) return {
+              ref: Pv.ref,
+              index: Pv.index
             }
-        }(this, zz)
+        }(this, vv)
       }
-      hasParent(zz) {
-        return ss(this, zz)
+      hasParent(vv) {
+        return zP(this, vv)
       }
-      indexInParent(zz) {
-        return function(zz, tz) {
-          if (zz.parentRef && zz.parentRef[Dz] === tz[Dz]) return zz._parentIndex;
-          for (let sz = zz.extraParents; void 0 !== sz; sz = sz.next)
-            if (sz.ref[Dz] === tz[Dz]) return sz.index
-        }(this, zz)
+      indexInParent(vv) {
+        return function(vv, zv) {
+          if (vv.parentRef && vv.parentRef[sv] === zv[sv]) return vv._parentIndex;
+          for (let Pv = vv.extraParents; void 0 !== Pv; Pv = Pv.next)
+            if (Pv.ref[sv] === zv[sv]) return Pv.index
+        }(this, vv)
       }
       getAllParents() {
-        return function(zz) {
-          const tz = [];
-          zz.parentRef && tz.push({
-            ref: zz.parentRef,
-            index: zz._parentIndex
+        return function(vv) {
+          const zv = [];
+          vv.parentRef && zv.push({
+            ref: vv.parentRef,
+            index: vv._parentIndex
           });
-          let sz = zz.extraParents;
-          for (; sz;) tz.push({
-            ref: sz.ref,
-            index: sz.index
-          }), sz = sz.next;
-          return tz
+          let Pv = vv.extraParents;
+          for (; Pv;) zv.push({
+            ref: Pv.ref,
+            index: Pv.index
+          }), Pv = Pv.next;
+          return zv
         }(this)
       }
     }
-    class As {
+    class UP {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(zz) {
-        this.ref = zz
+      constructor(vv) {
+        this.ref = vv
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(zz) {
-        return zz()
+      untracked(vv) {
+        return vv()
       }
       markDirty() {}
-      forEachChild(zz) {
-        const tz = this.ref;
-        if (tz[gz]) {
-          if ("string" !== typeof tz[gz])
-            for (const [sz, Fz] of tz.entries()) Fz && zz(Fz[Dz], tz._collectionIndexes?.[sz] ?? sz);
+      forEachChild(vv) {
+        const zv = this.ref;
+        if (zv[Cv]) {
+          if ("string" !== typeof zv[Cv])
+            for (const [Pv, hv] of zv.entries()) hv && vv(hv[sv], zv._collectionIndexes?.[Pv] ?? Pv);
           return
         }
-        const sz = tz.constructor,
-          Fz = sz?.[Symbol.metadata];
-        if (!Fz) return;
-        const Wz = Fz[ez] ?? [];
-        for (let Xz = 0; Xz < Wz.length; Xz++) {
-          const sz = Wz[Xz],
-            Oz = tz[Fz[sz].name];
-          Oz && zz(Oz[Dz], sz)
+        const Pv = zv.constructor,
+          hv = Pv?.[Symbol.metadata];
+        if (!hv) return;
+        const Sv = hv[Dv] ?? [];
+        for (let ev = 0; ev < Sv.length; ev++) {
+          const Pv = Sv[ev],
+            gv = zv[hv[Pv].name];
+          gv && vv(gv[sv], Pv)
         }
       }
-      forEachChildWithCtx(zz, tz) {
-        this.forEachChild(((sz, Fz) => tz(zz, sz, Fz)))
+      forEachChildWithCtx(vv, zv) {
+        this.forEachChild(((Pv, hv) => zv(vv, Pv, hv)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function ys(zz) {
-      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz;
-      var sz;
-      Object.defineProperty(zz, Dz, {
-        value: (sz = tz, new As(sz)),
+    function RP(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv;
+      var Pv;
+      Object.defineProperty(vv, sv, {
+        value: (Pv = zv, new UP(Pv)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function Ms(zz, tz, sz, Fz, Xz, Oz, vz) {
-      void 0 !== vz ? vz(tz, Fz, Oz) : "string" === typeof sz ? tt[sz]?.(tz, Fz, Oz) : null != sz[Symbol.metadata] ? (tt.number(tz, Fz[oz], Oz), (Xz & Wz.ADD) === Wz.ADD && zz.tryEncodeTypeId(tz, sz, Fz.constructor, Oz)) : tt.number(tz, Fz[oz], Oz)
+    function xP(vv, zv, Pv, hv, ev, gv, dv) {
+      void 0 !== dv ? dv(zv, hv, gv) : "string" === typeof Pv ? zz[Pv]?.(zv, hv, gv) : null != Pv[Symbol.metadata] ? (zz.number(zv, hv[pv], gv), (ev & Sv.ADD) === Sv.ADD && vv.tryEncodeTypeId(zv, Pv, hv.constructor, gv)) : zz.number(zv, hv[pv], gv)
     }
-    const ds = function(zz, tz, sz, Fz, Xz, Oz, oz, vz) {
-        if (tz[Oz.offset++] = 255 & (Fz | Xz), Xz === Wz.DELETE) return;
-        const Uz = sz.encDescriptor,
-          Kz = sz.ref,
-          uz = Kz[Yz][Fz] ?? Kz[Uz.names[Fz]];
-        Ms(zz, tz, Uz.types[Fz], uz, Xz, Oz, Uz.encoders[Fz])
+    const tP = function(vv, zv, Pv, hv, ev, gv, pv, dv) {
+        if (zv[gv.offset++] = 255 & (hv | ev), ev === Sv.DELETE) return;
+        const Nv = Pv.encDescriptor,
+          lv = Pv.ref,
+          Tv = lv[jv][hv] ?? lv[Nv.names[hv]];
+        xP(vv, zv, Nv.types[hv], Tv, ev, gv, Nv.encoders[hv])
       },
-      hs = function(zz, tz, sz, Fz, Xz, Oz) {
-        if (tz[Oz.offset++] = 255 & Xz, tt.number(tz, Fz, Oz), Xz === Wz.DELETE) return;
-        const oz = sz.ref;
-        if ((Xz & Wz.ADD) === Wz.ADD) {
-          const zz = oz.$indexes.get(Fz);
-          tt.string(tz, zz, Oz)
+      qP = function(vv, zv, Pv, hv, ev, gv) {
+        if (zv[gv.offset++] = 255 & ev, zz.number(zv, hv, gv), ev === Sv.DELETE) return;
+        const pv = Pv.ref;
+        if ((ev & Sv.ADD) === Sv.ADD) {
+          const vv = pv.$indexes.get(hv);
+          zz.string(zv, vv, gv)
         }
-        Ms(zz, tz, oz[gz], oz[Nz](Fz), Xz, Oz)
+        xP(vv, zv, pv[Cv], pv[Wv](hv), ev, gv)
       },
-      Qs = function(zz, tz, sz, Fz, Xz, Oz) {
-        if (tz[Oz.offset++] = 255 & Xz, tt.number(tz, Fz, Oz), Xz === Wz.DELETE) return;
-        const oz = sz.ref;
-        Ms(zz, tz, oz[gz], oz[Nz](Fz), Xz, Oz)
+      IP = function(vv, zv, Pv, hv, ev, gv) {
+        if (zv[gv.offset++] = 255 & ev, zz.number(zv, hv, gv), ev === Sv.DELETE) return;
+        const pv = Pv.ref;
+        xP(vv, zv, pv[Cv], pv[Wv](hv), ev, gv)
       },
-      ks = function(zz, tz, sz, Fz, Xz, Oz) {
-        const oz = sz.ref;
-        (Xz & Wz.ADD) === Wz.ADD && "function" === typeof oz.set ? hs(zz, tz, sz, Fz, Xz, Oz) : Qs(zz, tz, sz, Fz, Xz, Oz)
+      QP = function(vv, zv, Pv, hv, ev, gv) {
+        const pv = Pv.ref;
+        (ev & Sv.ADD) === Sv.ADD && "function" === typeof pv.set ? qP(vv, zv, Pv, hv, ev, gv) : IP(vv, zv, Pv, hv, ev, gv)
       },
-      is = function(zz, tz, sz, Fz, Xz, Oz, vz, Uz) {
-        const Kz = sz.refTarget,
-          uz = Kz[gz],
-          bz = "string" !== typeof uz;
-        let wz;
-        if (Uz && sz.isFiltered && bz) {
-          const zz = Kz.tmpItems[Fz];
-          if (!zz) return;
-          if (wz = zz[oz], Xz === Wz.DELETE) Xz = Wz.DELETE_BY_REFID;
-          else if ((Xz & Wz.ADD) === Wz.ADD) Xz = Wz.ADD_BY_REFID;
-          else if ((Xz & Wz.MOVE) === Wz.MOVE) return
-        } else if (Xz === Wz.DELETE && bz) {
-          const zz = Kz.tmpItems[Fz];
-          if (!zz) return;
-          wz = zz[oz], Xz = Wz.DELETE_BY_REFID
-        } else wz = Fz;
-        if (tz[Oz.offset++] = 255 & Xz, tt.number(tz, wz, Oz), Xz === Wz.DELETE || Xz === Wz.DELETE_BY_REFID) return;
-        Ms(zz, tz, uz, Kz[Nz](Fz, vz), Xz, Oz)
+      ZP = function(vv, zv, Pv, hv, ev, gv, dv, Nv) {
+        const lv = Pv.refTarget,
+          Tv = lv[Cv],
+          wv = "string" !== typeof Tv;
+        let av;
+        if (Nv && Pv.isFiltered && wv) {
+          const vv = lv.tmpItems[hv];
+          if (!vv) return;
+          if (av = vv[pv], ev === Sv.DELETE) ev = Sv.DELETE_BY_REFID;
+          else if ((ev & Sv.ADD) === Sv.ADD) ev = Sv.ADD_BY_REFID;
+          else if ((ev & Sv.MOVE) === Sv.MOVE) return
+        } else if (ev === Sv.DELETE && wv) {
+          const vv = lv.tmpItems[hv];
+          if (!vv) return;
+          av = vv[pv], ev = Sv.DELETE_BY_REFID
+        } else av = hv;
+        if (zv[gv.offset++] = 255 & ev, zz.number(zv, av, gv), ev === Sv.DELETE || ev === Sv.DELETE_BY_REFID) return;
+        xP(vv, zv, Tv, lv[Wv](hv, dv), ev, gv)
       };
 
-    function Ls(zz, tz, sz, Fz, Xz, Oz, vz) {
-      const Uz = zz.resyncVisited;
-      let Kz = Uz.get(zz.currentRefId);
-      if (void 0 === Kz && Uz.set(zz.currentRefId, Kz = new Set), Kz.add(Fz), void 0 !== Xz && sz === Wz.ADD && Xz !== Oz) {
-        const sz = Xz[oz];
-        void 0 !== sz && (zz.root.removeRef(sz), vz?.push({
-          ref: tz,
-          refId: zz.currentRefId,
-          op: Wz.DELETE,
-          dynamicIndex: Fz,
+    function AP(vv, zv, Pv, hv, ev, gv, dv) {
+      const Nv = vv.resyncVisited;
+      let lv = Nv.get(vv.currentRefId);
+      if (void 0 === lv && Nv.set(vv.currentRefId, lv = new Set), lv.add(hv), void 0 !== ev && Pv === Sv.ADD && ev !== gv) {
+        const Pv = ev[pv];
+        void 0 !== Pv && (vv.root.removeRef(Pv), dv?.push({
+          ref: zv,
+          refId: vv.currentRefId,
+          op: Sv.DELETE,
+          dynamicIndex: hv,
           value: void 0,
-          previousValue: Xz
+          previousValue: ev
         }))
       }
     }
 
-    function ls(zz, tz, sz, Fz) {
-      const Wz = tz[oz];
-      if (void 0 === Wz || sz.has(Wz)) return;
-      sz.add(Wz);
-      const Xz = tz.constructor[Symbol.metadata],
-        Oz = Xz?.[ez];
-      if (void 0 === Oz) return;
-      const vz = Xz[cz];
-      for (let oz = 0; oz < Oz.length; oz++) {
-        const Wz = Oz[oz];
-        if (void 0 !== vz && vz.includes(Wz)) continue;
-        const Uz = Xz[Wz],
-          Kz = tz[Uz.name];
-        Kz && (cF.is(Uz.type) ? ls(zz, Kz, sz, Fz) : ns(zz, Kz, sz, Fz))
+    function LP(vv, zv, Pv, hv) {
+      const Sv = zv[pv];
+      if (void 0 === Sv || Pv.has(Sv)) return;
+      Pv.add(Sv);
+      const ev = zv.constructor[Symbol.metadata],
+        gv = ev?.[Dv];
+      if (void 0 === gv) return;
+      const dv = ev[Rv];
+      for (let pv = 0; pv < gv.length; pv++) {
+        const Sv = gv[pv];
+        if (void 0 !== dv && dv.includes(Sv)) continue;
+        const Nv = ev[Sv],
+          lv = zv[Nv.name];
+        lv && (Kh.is(Nv.type) ? LP(vv, lv, Pv, hv) : HP(vv, lv, Pv, hv))
       }
     }
 
-    function ns(zz, tz, sz, Fz) {
-      const Xz = tz[Hz] ?? tz,
-        Oz = Xz[oz];
-      if (void 0 === Oz || sz.has(Oz)) return;
-      sz.add(Oz);
-      const vz = zz.resyncVisited.get(Oz);
-      if (void 0 === vz) return;
-      const Uz = zz.root;
-      Xz[wz](vz, ((zz, sz) => {
-        Fz?.push({
-          ref: tz,
-          refId: Oz,
-          op: Wz.DELETE,
-          dynamicIndex: sz,
+    function HP(vv, zv, Pv, hv) {
+      const ev = zv[iv] ?? zv,
+        gv = ev[pv];
+      if (void 0 === gv || Pv.has(gv)) return;
+      Pv.add(gv);
+      const dv = vv.resyncVisited.get(gv);
+      if (void 0 === dv) return;
+      const Nv = vv.root;
+      ev[av](dv, ((vv, Pv) => {
+        hv?.push({
+          ref: zv,
+          refId: gv,
+          op: Sv.DELETE,
+          dynamicIndex: Pv,
           value: void 0,
-          previousValue: zz
+          previousValue: vv
         });
-        const Xz = zz?.[oz];
-        void 0 !== Xz && Uz.removeRef(Xz)
-      }), (tz => {
-        cF.isSchema(tz) && ls(zz, tz, sz, Fz)
+        const ev = vv?.[pv];
+        void 0 !== ev && Nv.removeRef(ev)
+      }), (zv => {
+        Kh.isSchema(zv) && LP(vv, zv, Pv, hv)
       }))
     }
-    const as = 1,
-      qs = 2,
-      Ss = 3,
-      Vs = 4,
-      Rs = 5;
+    const MP = 1,
+      yP = 2,
+      BP = 3,
+      JP = 4,
+      EP = 5;
 
-    function ps(zz, tz, sz, Fz, Xz, Oz, vz, Uz, Kz) {
-      const uz = zz.root;
-      let Nz;
-      if ((tz & Wz.DELETE) === Wz.DELETE) {
-        const zz = Xz?.[oz];
-        void 0 !== zz && uz.removeRef(zz), tz !== Wz.DELETE_AND_ADD && sz[bz](Fz), Nz = void 0
+    function oP(vv, zv, Pv, hv, ev, gv, dv, Nv, lv) {
+      const Tv = vv.root;
+      let Wv;
+      if ((zv & Sv.DELETE) === Sv.DELETE) {
+        const vv = ev?.[pv];
+        void 0 !== vv && Tv.removeRef(vv), zv !== Sv.DELETE_AND_ADD && Pv[wv](hv), Wv = void 0
       }
-      if (tz === Wz.DELETE);
-      else if ("string" === typeof Oz) Nz = Pt[Oz](vz, Uz);
-      else if (Mt(Oz)) Nz = function(zz, tz, sz) {
-        return ht(zz, (0, Pt[zz.wire])(tz, sz))
-      }(Oz.quantized, vz, Uz);
-      else if (cF.is(Oz)) {
-        const sz = Pt.number(vz, Uz);
-        if (Nz = uz.refs.get(sz), (tz & Wz.ADD) === Wz.ADD) {
-          const Fz = zz.getInstanceType(vz, Uz, Oz);
-          Nz || (Nz = zz.createInstanceOfType(Fz)), uz.addRef(sz, Nz, Nz !== Xz || tz === Wz.DELETE_AND_ADD && Nz === Xz)
+      if (zv === Sv.DELETE);
+      else if ("string" === typeof gv) Wv = Gz[gv](dv, Nv);
+      else if (Iz(gv)) Wv = function(vv, zv, Pv) {
+        return Zz(vv, (0, Gz[vv.wire])(zv, Pv))
+      }(gv.quantized, dv, Nv);
+      else if (Kh.is(gv)) {
+        const Pv = Gz.number(dv, Nv);
+        if (Wv = Tv.refs.get(Pv), (zv & Sv.ADD) === Sv.ADD) {
+          const hv = vv.getInstanceType(dv, Nv, gv);
+          Wv || (Wv = vv.createInstanceOfType(hv)), Tv.addRef(Pv, Wv, Wv !== ev || zv === Sv.DELETE_AND_ADD && Wv === ev)
         }
       } else {
-        const sz = (wz = Object.keys(Oz)[0], rt[wz]),
-          Fz = Pt.number(vz, Uz);
-        null !== zz.resyncVisited && function(zz, tz) {
-          const sz = zz.resyncVisited;
-          sz.has(tz) || sz.set(tz, new Set)
-        }(zz, Fz);
-        const bz = uz.refs.has(Fz) ? Xz || uz.refs.get(Fz) : sz.constructor.initializeForDecoder();
-        if (Nz = bz.clone(!0), Nz[gz] = Object.values(Oz)[0], Xz) {
-          let zz = Xz[oz];
-          if (void 0 !== zz && Fz !== zz) {
-            (tz & Wz.DELETE) !== Wz.DELETE && uz.removeRef(zz);
-            const sz = Xz.entries();
-            let Fz;
+        const Pv = (av = Object.keys(gv)[0], mz[av]),
+          hv = Gz.number(dv, Nv);
+        null !== vv.resyncVisited && function(vv, zv) {
+          const Pv = vv.resyncVisited;
+          Pv.has(zv) || Pv.set(zv, new Set)
+        }(vv, hv);
+        const wv = Tv.refs.has(hv) ? ev || Tv.refs.get(hv) : Pv.constructor.initializeForDecoder();
+        if (Wv = wv.clone(!0), Wv[Cv] = Object.values(gv)[0], ev) {
+          let vv = ev[pv];
+          if (void 0 !== vv && hv !== vv) {
+            (zv & Sv.DELETE) !== Sv.DELETE && Tv.removeRef(vv);
+            const Pv = ev.entries();
+            let hv;
             for (;
-              (Fz = sz.next()) && !Fz.done;) {
-              const [tz, sz] = Fz.value;
-              "object" === typeof sz && (zz = sz[oz]), Kz?.push({
-                ref: Xz,
-                refId: zz,
-                op: Wz.DELETE,
-                field: tz,
+              (hv = Pv.next()) && !hv.done;) {
+              const [zv, Pv] = hv.value;
+              "object" === typeof Pv && (vv = Pv[pv]), lv?.push({
+                ref: ev,
+                refId: vv,
+                op: Sv.DELETE,
+                field: zv,
                 value: void 0,
-                previousValue: sz
+                previousValue: Pv
               })
             }
           }
         }
-        uz.addRef(Fz, Nz, bz !== Xz || tz === Wz.DELETE_AND_ADD && bz === Xz)
+        Tv.addRef(hv, Wv, wv !== ev || zv === Sv.DELETE_AND_ADD && wv === ev)
       }
-      var wz;
-      return Nz
+      var av;
+      return Wv
     }
-    const fs = function(zz, tz, sz, Fz, Wz) {
-        const Xz = tz[sz.offset++],
-          Oz = Fz.constructor[Symbol.metadata],
-          oz = Xz >> 6 << 6,
-          vz = Xz % (oz || 255),
-          Uz = Oz[vz];
-        if (void 0 === Uz) return console.warn("@colyseus/schema: field not defined at", {
-          index: vz,
-          ref: Fz.constructor.name,
-          metadata: Oz
+    const bP = function(vv, zv, Pv, hv, Sv) {
+        const ev = zv[Pv.offset++],
+          gv = hv.constructor[Symbol.metadata],
+          pv = ev >> 6 << 6,
+          dv = ev % (pv || 255),
+          Nv = gv[dv];
+        if (void 0 === Nv) return console.warn("@colyseus/schema: field not defined at", {
+          index: dv,
+          ref: hv.constructor.name,
+          metadata: gv
         }), -1;
-        const Kz = !0 === Uz.deprecated,
-          uz = Kz ? void 0 : Fz[Nz](vz),
-          bz = ps(zz, oz, Fz, vz, uz, Uz.type, tz, sz, Wz);
-        Kz || (null !== bz && void 0 !== bz && (Fz[Uz.name] = bz), uz !== bz && Wz?.push({
-          ref: Fz,
-          refId: zz.currentRefId,
-          op: oz,
-          field: Uz.name,
-          value: bz,
-          previousValue: uz
+        const lv = !0 === Nv.deprecated,
+          Tv = lv ? void 0 : hv[Wv](dv),
+          wv = oP(vv, pv, hv, dv, Tv, Nv.type, zv, Pv, Sv);
+        lv || (null !== wv && void 0 !== wv && (hv[Nv.name] = wv), Tv !== wv && Sv?.push({
+          ref: hv,
+          refId: vv.currentRefId,
+          op: pv,
+          field: Nv.name,
+          value: wv,
+          previousValue: Tv
         }))
       },
-      Es = function(zz, tz, sz, Fz, Xz) {
-        const Oz = Fz[Hz] ?? Fz,
-          oz = tz[sz.offset++];
-        if (oz === Wz.CLEAR) return zz.removeChildRefs(Oz, Xz), void Oz.clear();
-        const vz = Pt.number(tz, sz),
-          Uz = Oz[gz],
-          Kz = Oz.constructor.COLLECTION_KIND;
-        let uz;
-        (oz & Wz.ADD) === Wz.ADD ? Kz === as ? (uz = Pt.string(tz, sz), Oz.setIndex(vz, uz)) : uz = vz : uz = Oz.getIndex(vz);
-        const bz = Oz[Nz](vz),
-          wz = ps(zz, oz, Fz, vz, bz, Uz, tz, sz, Xz);
-        if (null !== zz.resyncVisited && Ls(zz, Fz, oz, uz, bz, wz, Xz), null !== wz && void 0 !== wz) switch (Kz) {
-          case as:
-            Oz.$items.set(uz, wz);
+      rP = function(vv, zv, Pv, hv, ev) {
+        const gv = hv[iv] ?? hv,
+          pv = zv[Pv.offset++];
+        if (pv === Sv.CLEAR) return vv.removeChildRefs(gv, ev), void gv.clear();
+        const dv = Gz.number(zv, Pv),
+          Nv = gv[Cv],
+          lv = gv.constructor.COLLECTION_KIND;
+        let Tv;
+        (pv & Sv.ADD) === Sv.ADD ? lv === MP ? (Tv = Gz.string(zv, Pv), gv.setIndex(dv, Tv)) : Tv = dv : Tv = gv.getIndex(dv);
+        const wv = gv[Wv](dv),
+          av = oP(vv, pv, hv, dv, wv, Nv, zv, Pv, ev);
+        if (null !== vv.resyncVisited && AP(vv, hv, pv, Tv, wv, av, ev), null !== av && void 0 !== av) switch (lv) {
+          case MP:
+            gv.$items.set(Tv, av);
             break;
-          case qs:
-            Oz.$setAt(vz, wz, null !== zz.resyncVisited && oz === Wz.ADD ? Wz.REPLACE : oz);
+          case yP:
+            gv.$setAt(dv, av, null !== vv.resyncVisited && pv === Sv.ADD ? Sv.REPLACE : pv);
             break;
-          case Ss:
-          case Vs:
-          case Rs:
-            Oz.$items.has(vz) || (Oz.$items.set(vz, wz), "number" === typeof Oz.$refId && vz >= Oz.$refId && (Oz.$refId = vz + 1));
+          case BP:
+          case JP:
+          case EP:
+            gv.$items.has(dv) || (gv.$items.set(dv, av), "number" === typeof gv.$refId && dv >= gv.$refId && (gv.$refId = dv + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${Oz.constructor?.name} \u2014 item at index ${vz} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${gv.constructor?.name} \u2014 item at index ${dv} was not stored.`)
         }
-        bz !== wz && Xz?.push({
-          ref: Fz,
-          refId: zz.currentRefId,
-          op: oz,
-          dynamicIndex: uz,
-          value: wz,
-          previousValue: bz
+        wv !== av && ev?.push({
+          ref: hv,
+          refId: vv.currentRefId,
+          op: pv,
+          dynamicIndex: Tv,
+          value: av,
+          previousValue: wv
         })
       },
-      zF = function(zz, tz, sz, Fz, Xz) {
-        const Oz = Fz[Hz] ?? Fz;
-        let oz, vz = tz[sz.offset++];
-        if (vz === Wz.CLEAR) return zz.removeChildRefs(Oz, Xz), void Oz.clear();
-        if (vz === Wz.REVERSE) return void Oz.items.reverse();
-        if (vz === Wz.DELETE_BY_REFID) {
-          const vz = Pt.number(tz, sz),
-            Uz = zz.root.refs.get(vz);
-          if (void 0 === Uz) return;
-          if (zz.root.removeRef(vz), oz = Oz.findIndex((zz => zz === Uz)), -1 === oz) return;
-          return Oz[bz](oz), void Xz?.push({
-            ref: Fz,
-            refId: zz.currentRefId,
-            op: Wz.DELETE,
-            dynamicIndex: oz,
+      kP = function(vv, zv, Pv, hv, ev) {
+        const gv = hv[iv] ?? hv;
+        let pv, dv = zv[Pv.offset++];
+        if (dv === Sv.CLEAR) return vv.removeChildRefs(gv, ev), void gv.clear();
+        if (dv === Sv.REVERSE) return void gv.items.reverse();
+        if (dv === Sv.DELETE_BY_REFID) {
+          const dv = Gz.number(zv, Pv),
+            Nv = vv.root.refs.get(dv);
+          if (void 0 === Nv) return;
+          if (vv.root.removeRef(dv), pv = gv.findIndex((vv => vv === Nv)), -1 === pv) return;
+          return gv[wv](pv), void ev?.push({
+            ref: hv,
+            refId: vv.currentRefId,
+            op: Sv.DELETE,
+            dynamicIndex: pv,
             value: void 0,
-            previousValue: Uz
+            previousValue: Nv
           })
         }
-        if (vz === Wz.ADD_BY_REFID) {
-          const Fz = Pt.number(tz, sz),
-            Wz = zz.root.refs.get(Fz);
-          Wz && (oz = Oz.findIndex((zz => zz === Wz))), -1 !== oz && void 0 !== oz || (oz = Oz.length)
-        } else oz = Pt.number(tz, sz);
-        const Uz = Oz[gz];
-        let Kz = oz;
-        const uz = Oz.items[oz],
-          Nz = ps(zz, vz, Fz, oz, uz, Uz, tz, sz, Xz);
-        null !== zz.resyncVisited && Ls(zz, Fz, vz, oz, uz, Nz, Xz), null !== Nz && void 0 !== Nz && Nz !== uz && Oz.$setAt(oz, Nz, null !== zz.resyncVisited && vz === Wz.ADD ? Wz.REPLACE : vz), uz !== Nz && Xz?.push({
-          ref: Fz,
-          refId: zz.currentRefId,
-          op: vz,
-          dynamicIndex: Kz,
-          value: Nz,
-          previousValue: uz
+        if (dv === Sv.ADD_BY_REFID) {
+          const hv = Gz.number(zv, Pv),
+            Sv = vv.root.refs.get(hv);
+          Sv && (pv = gv.findIndex((vv => vv === Sv))), -1 !== pv && void 0 !== pv || (pv = gv.length)
+        } else pv = Gz.number(zv, Pv);
+        const Nv = gv[Cv];
+        let lv = pv;
+        const Tv = gv.items[pv],
+          Wv = oP(vv, dv, hv, pv, Tv, Nv, zv, Pv, ev);
+        null !== vv.resyncVisited && AP(vv, hv, dv, pv, Tv, Wv, ev), null !== Wv && void 0 !== Wv && Wv !== Tv && gv.$setAt(pv, Wv, null !== vv.resyncVisited && dv === Sv.ADD ? Sv.REPLACE : dv), Tv !== Wv && ev?.push({
+          ref: hv,
+          refId: vv.currentRefId,
+          op: dv,
+          dynamicIndex: lv,
+          value: Wv,
+          previousValue: Tv
         })
       };
-    class tF extends Error {}
+    class XP extends Error {}
 
-    function sF(zz, tz, sz, Fz) {
-      if (!(zz instanceof tz)) throw new tF(`a '${tz.name}' was expected, but '${zz&&zz.constructor.name}' was provided in ${sz.constructor.name}#${Fz}`)
+    function uP(vv, zv, Pv, hv) {
+      if (!(vv instanceof zv)) throw new XP(`a '${zv.name}' was expected, but '${vv&&vv.constructor.name}' was provided in ${Pv.constructor.name}#${hv}`)
     }
-    const FF = (zz, tz) => {
-        const sz = zz.toString(),
-          Fz = tz.toString();
-        return sz < Fz ? -1 : sz > Fz ? 1 : 0
+    const vh = (vv, zv) => {
+        const Pv = vv.toString(),
+          hv = zv.toString();
+        return Pv < hv ? -1 : Pv > hv ? 1 : 0
       },
-      WF = {
-        get: (zz, tz) => "symbol" === typeof tz || isNaN(tz) ? Reflect.get(zz, tz) : zz.items[tz],
-        set: (zz, tz, sz) => {
-          if ("symbol" !== typeof tz && !isNaN(tz)) {
-            if (void 0 === sz || null === sz) zz.$deleteAt(tz);
+      zh = {
+        get: (vv, zv) => "symbol" === typeof zv || isNaN(zv) ? Reflect.get(vv, zv) : vv.items[zv],
+        set: (vv, zv, Pv) => {
+          if ("symbol" !== typeof zv && !isNaN(zv)) {
+            if (void 0 === Pv || null === Pv) vv.$deleteAt(zv);
             else {
-              let Fz;
-              if (sz[Dz]) {
-                sF(sz, zz[gz], zz, tz);
-                const Xz = zz.items[tz];
-                zz.isMovingItems ? (Fz = zz.$wireIndex(Number(tz)), void 0 !== Xz ? sz[Dz].isNew ? zz[Dz].indexedOperation(Fz, Wz.MOVE_AND_ADD) : (zz[Dz].getChange(Fz) & Wz.DELETE) === Wz.DELETE ? zz[Dz].indexedOperation(Fz, Wz.DELETE_AND_MOVE) : zz[Dz].indexedOperation(Fz, Wz.MOVE) : sz[Dz].isNew && zz[Dz].indexedOperation(Fz, Wz.ADD), sz[Dz].setParent(zz, zz[Dz].root, Fz)) : Fz = zz.$changeAt(Number(tz), sz), void 0 !== Xz && Xz[Dz].root?.remove(Xz[Dz])
-              } else Fz = zz.$changeAt(Number(tz), sz);
-              zz.items[tz] = sz, void 0 !== Fz && (zz.tmpItems[Fz] = sz)
+              let hv;
+              if (Pv[sv]) {
+                uP(Pv, vv[Cv], vv, zv);
+                const ev = vv.items[zv];
+                vv.isMovingItems ? (hv = vv.$wireIndex(Number(zv)), void 0 !== ev ? Pv[sv].isNew ? vv[sv].indexedOperation(hv, Sv.MOVE_AND_ADD) : (vv[sv].getChange(hv) & Sv.DELETE) === Sv.DELETE ? vv[sv].indexedOperation(hv, Sv.DELETE_AND_MOVE) : vv[sv].indexedOperation(hv, Sv.MOVE) : Pv[sv].isNew && vv[sv].indexedOperation(hv, Sv.ADD), Pv[sv].setParent(vv, vv[sv].root, hv)) : hv = vv.$changeAt(Number(zv), Pv), void 0 !== ev && ev[sv].root?.remove(ev[sv])
+              } else hv = vv.$changeAt(Number(zv), Pv);
+              vv.items[zv] = Pv, void 0 !== hv && (vv.tmpItems[hv] = Pv)
             }
             return !0
           }
-          return Reflect.set(zz, tz, sz)
+          return Reflect.set(vv, zv, Pv)
         },
-        deleteProperty: (zz, tz) => ("number" === typeof tz ? zz.$deleteAt(tz) : delete zz[tz], !0),
-        has: (zz, tz) => "symbol" === typeof tz || isNaN(Number(tz)) ? Reflect.has(zz, tz) : Reflect.has(zz.items, tz)
+        deleteProperty: (vv, zv) => ("number" === typeof zv ? vv.$deleteAt(zv) : delete vv[zv], !0),
+        has: (vv, zv) => "symbol" === typeof zv || isNaN(Number(zv)) ? Reflect.has(vv, zv) : Reflect.has(vv.items, zv)
       };
-    class XF {
-      [Dz];
-      [oz];
-      [Hz];
-      [gz];
+    class Ph {
+      [sv];
+      [pv];
+      [iv];
+      [Cv];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[Uz] = is;
-      static[Kz] = zF;
-      static COLLECTION_KIND = qs;
-      static[uz](zz, tz, sz) {
-        if (!sz) return !0;
-        const Fz = zz[Hz] ?? zz;
-        return "string" === typeof Fz[gz] || sz.isChangeTreeVisible(Fz.tmpItems[tz]?.[Dz])
+      static[Nv] = ZP;
+      static[lv] = kP;
+      static COLLECTION_KIND = yP;
+      static[Tv](vv, zv, Pv) {
+        if (!Pv) return !0;
+        const hv = vv[iv] ?? vv;
+        return "string" === typeof hv[Cv] || Pv.isChangeTreeVisible(hv.tmpItems[zv]?.[sv])
       }
-      static is(zz) {
-        return Array.isArray(zz) || void 0 !== zz.array
+      static is(vv) {
+        return Array.isArray(vv) || void 0 !== vv.array
       }
-      static from(zz) {
-        return new XF(...Array.from(zz))
+      static from(vv) {
+        return new Ph(...Array.from(vv))
       }
       constructor() {
-        this[gz] = void 0, this[Hz] = this;
-        const zz = new Proxy(this, WF);
-        return Object.defineProperty(this, Dz, {
-          value: new cs(zz, this),
+        this[Cv] = void 0, this[iv] = this;
+        const vv = new Proxy(this, zh);
+        return Object.defineProperty(this, sv, {
+          value: new VP(vv, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), zz
+        }), arguments.length > 0 && this.push(...arguments), vv
       }
       static initializeForDecoder() {
-        const zz = Object.create(XF.prototype);
-        zz.items = [], zz.isMovingItems = !1, zz._needsCompaction = !1, zz[gz] = void 0, zz[Hz] = zz;
-        const tz = new Proxy(zz, WF);
-        return ys(zz, tz), tz
+        const vv = Object.create(Ph.prototype);
+        vv.items = [], vv.isMovingItems = !1, vv._needsCompaction = !1, vv[Cv] = void 0, vv[iv] = vv;
+        const zv = new Proxy(vv, zh);
+        return RP(vv, zv), zv
       }
-      set length(zz) {
-        0 === zz ? this.clear() : zz < this.items.length ? this.splice(zz, this.length - zz) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(vv) {
+        0 === vv ? this.clear() : vv < this.items.length ? this.splice(vv, this.length - vv) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[Dz].pause()
+        this[sv].pause()
       }
       resumeTracking() {
-        this[Dz].resume()
+        this[sv].resume()
       }
-      untracked(zz) {
-        return this[Dz].untracked(zz)
+      untracked(vv) {
+        return this[sv].untracked(vv)
       }
       get isTrackingPaused() {
-        return this[Dz].paused
+        return this[sv].paused
       }
       push() {
-        const zz = this[Hz],
-          tz = zz.items,
-          sz = zz.tmpItems,
-          Fz = zz[Dz],
-          Xz = zz[gz];
-        let Oz = sz.length;
-        for (let oz = 0, vz = arguments.length; oz < vz; oz++, Oz++) {
-          const vz = oz < 0 || arguments.length <= oz ? void 0 : arguments[oz];
-          if (void 0 === vz || null === vz) return;
-          "object" === typeof vz && Xz && sF(vz, Xz, zz, oz), Fz.indexedOperation(Oz, Wz.ADD), tz.push(vz), sz.push(vz), vz[Dz]?.setParent(this, Fz.root, Oz)
+        const vv = this[iv],
+          zv = vv.items,
+          Pv = vv.tmpItems,
+          hv = vv[sv],
+          ev = vv[Cv];
+        let gv = Pv.length;
+        for (let pv = 0, dv = arguments.length; pv < dv; pv++, gv++) {
+          const dv = pv < 0 || arguments.length <= pv ? void 0 : arguments[pv];
+          if (void 0 === dv || null === dv) return;
+          "object" === typeof dv && ev && uP(dv, ev, vv, pv), hv.indexedOperation(gv, Sv.ADD), zv.push(dv), Pv.push(dv), dv[sv]?.setParent(this, hv.root, gv)
         }
-        return Oz
+        return gv
       }
       pop() {
-        const zz = this[Hz],
-          tz = zz.tmpItems,
-          sz = zz.deletedIndexes;
-        let Fz = -1;
-        for (let Xz = tz.length - 1; Xz >= 0; Xz--)
-          if (!0 !== sz[Xz]) {
-            Fz = Xz;
+        const vv = this[iv],
+          zv = vv.tmpItems,
+          Pv = vv.deletedIndexes;
+        let hv = -1;
+        for (let ev = zv.length - 1; ev >= 0; ev--)
+          if (!0 !== Pv[ev]) {
+            hv = ev;
             break
-          } if (Fz < 0) return;
-        const Wz = zz.$isUnsentAdd(Fz);
-        return zz[Dz].delete(Fz), Wz ? zz.$cancelAdd(Fz) : sz[Fz] = !0, zz.items.pop()
+          } if (hv < 0) return;
+        const Sv = vv.$isUnsentAdd(hv);
+        return vv[sv].delete(hv), Sv ? vv.$cancelAdd(hv) : Pv[hv] = !0, vv.items.pop()
       }
-      at(zz) {
-        return zz < 0 && (zz += this.length), this.items[zz]
+      at(vv) {
+        return vv < 0 && (vv += this.length), this.items[vv]
       }
-      $wireIndex(zz) {
-        const tz = this.deletedIndexes;
-        if (0 === tz.length) return zz;
-        const sz = this.tmpItems;
-        let Fz = 0;
-        for (let Wz = 0; Wz < sz.length; Wz++)
-          if (!0 !== tz[Wz]) {
-            if (Fz === zz) return Wz;
-            Fz++
-          } return sz.length + (zz - Fz)
+      $wireIndex(vv) {
+        const zv = this.deletedIndexes;
+        if (0 === zv.length) return vv;
+        const Pv = this.tmpItems;
+        let hv = 0;
+        for (let Sv = 0; Sv < Pv.length; Sv++)
+          if (!0 !== zv[Sv]) {
+            if (hv === vv) return Sv;
+            hv++
+          } return Pv.length + (vv - hv)
       }
-      $isUnsentAdd(zz) {
-        const tz = this[Dz];
-        return 0 === (576 & tz.flags) && !tz.paused && "string" !== typeof this[gz] && tz.operationAt(zz) === Wz.ADD
+      $isUnsentAdd(vv) {
+        const zv = this[sv];
+        return 0 === (576 & zv.flags) && !zv.paused && "string" !== typeof this[Cv] && zv.operationAt(vv) === Sv.ADD
       }
-      $cancelAdd(zz) {
-        let tz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const sz = this[Dz],
-          Fz = this.tmpItems[zz];
-        this.tmpItems.splice(zz, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(zz, 1), sz.removeAt(zz, 1);
-        const Wz = Fz?.[Dz];
-        void 0 !== Wz && void 0 === Wz.root && Wz.removeParent(this), tz && this.$reindexChildren(zz)
+      $cancelAdd(vv) {
+        let zv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Pv = this[sv],
+          hv = this.tmpItems[vv];
+        this.tmpItems.splice(vv, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(vv, 1), Pv.removeAt(vv, 1);
+        const Sv = hv?.[sv];
+        void 0 !== Sv && void 0 === Sv.root && Sv.removeParent(this), zv && this.$reindexChildren(vv)
       }
-      $reindexChildren(zz, tz) {
-        if (!this[Dz].hasFilteredFields) return;
-        if ("string" === typeof this[gz]) return;
-        const sz = this.tmpItems,
-          Fz = sz.length;
-        if (void 0 !== tz)
-          for (; zz < Fz && sz[zz] === tz[zz];) zz++;
-        for (let Wz = zz; Wz < Fz; Wz++) sz[Wz]?.[Dz]?.setParentIndex(this, Wz)
+      $reindexChildren(vv, zv) {
+        if (!this[sv].hasFilteredFields) return;
+        if ("string" === typeof this[Cv]) return;
+        const Pv = this.tmpItems,
+          hv = Pv.length;
+        if (void 0 !== zv)
+          for (; vv < hv && Pv[vv] === zv[vv];) vv++;
+        for (let Sv = vv; Sv < hv; Sv++) Pv[Sv]?.[sv]?.setParentIndex(this, Sv)
       }
-      $changeAt(zz, tz) {
-        if (void 0 === tz || null === tz) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[zz] === tz) return;
-        const sz = void 0 !== this.items[zz] ? "object" === typeof tz ? Wz.DELETE_AND_ADD : Wz.REPLACE : Wz.ADD,
-          Fz = this.$wireIndex(zz),
-          Xz = this[Dz];
-        return Xz.change(Fz, sz), tz[Dz]?.setParent(this, Xz.root, Fz), Fz
+      $changeAt(vv, zv) {
+        if (void 0 === zv || null === zv) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[vv] === zv) return;
+        const Pv = void 0 !== this.items[vv] ? "object" === typeof zv ? Sv.DELETE_AND_ADD : Sv.REPLACE : Sv.ADD,
+          hv = this.$wireIndex(vv),
+          ev = this[sv];
+        return ev.change(hv, Pv), zv[sv]?.setParent(this, ev.root, hv), hv
       }
-      $deleteAt(zz, tz) {
-        this[Dz].delete(this.$wireIndex(zz), tz)
+      $deleteAt(vv, zv) {
+        this[sv].delete(this.$wireIndex(vv), zv)
       }
-      $setAt(zz, tz, sz) {
-        sz === Wz.ADD && void 0 !== this.items[zz] ? this.items.splice(zz, 0, tz) : sz === Wz.DELETE_AND_MOVE ? (this.items.splice(zz, 1), this.items[zz] = tz) : (zz > this.items.length && (this._needsCompaction = !0), this.items[zz] = tz)
+      $setAt(vv, zv, Pv) {
+        Pv === Sv.ADD && void 0 !== this.items[vv] ? this.items.splice(vv, 0, zv) : Pv === Sv.DELETE_AND_MOVE ? (this.items.splice(vv, 1), this.items[vv] = zv) : (vv > this.items.length && (this._needsCompaction = !0), this.items[vv] = zv)
       }
       clear() {
-        const zz = this[Hz];
-        if (0 === zz.items.length) return;
-        const tz = zz[Dz];
-        tz.forEachChild(((zz, sz) => {
-          tz.root?.remove(zz)
-        })), tz.discard(), tz.operation(Wz.CLEAR), zz.items.length = 0, zz.tmpItems.length = 0
-      } [Pz]() {
-        const zz = this[Hz] ?? this,
-          tz = zz[Dz];
-        if (tz.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const sz = zz.items;
-        for (let Fz = 0; Fz < sz.length; Fz++) sz[Fz]?.[Pz]?.();
-        zz.items.length = 0, zz.tmpItems.length = 0, zz.deletedIndexes.length = 0, tz.recycle(), zz[oz] = void 0
+        const vv = this[iv];
+        if (0 === vv.items.length) return;
+        const zv = vv[sv];
+        zv.forEachChild(((vv, Pv) => {
+          zv.root?.remove(vv)
+        })), zv.discard(), zv.operation(Sv.CLEAR), vv.items.length = 0, vv.tmpItems.length = 0
+      } [Gv]() {
+        const vv = this[iv] ?? this,
+          zv = vv[sv];
+        if (zv.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const Pv = vv.items;
+        for (let hv = 0; hv < Pv.length; hv++) Pv[hv]?.[Gv]?.();
+        vv.items.length = 0, vv.tmpItems.length = 0, vv.deletedIndexes.length = 0, zv.recycle(), vv[pv] = void 0
       }
       concat() {
-        return new XF(...this.items.concat(...arguments))
+        return new Ph(...this.items.concat(...arguments))
       }
-      join(zz) {
-        return this.items.join(zz)
+      join(vv) {
+        return this.items.join(vv)
       }
       reverse() {
-        const zz = this[Hz],
-          tz = zz[Dz];
-        if (tz.has() || zz.deletedIndexes.length > 0) {
-          const tz = zz.items.slice().reverse();
-          return this.clear(), this.push(...tz), this
+        const vv = this[iv],
+          zv = vv[sv];
+        if (zv.has() || vv.deletedIndexes.length > 0) {
+          const zv = vv.items.slice().reverse();
+          return this.clear(), this.push(...zv), this
         }
-        return tz.operation(Wz.REVERSE), zz.items.reverse(), zz.tmpItems.reverse(), zz.$reindexChildren(0), this
+        return zv.operation(Sv.REVERSE), vv.items.reverse(), vv.tmpItems.reverse(), vv.$reindexChildren(0), this
       }
       shift() {
-        const zz = this[Hz],
-          tz = zz.items;
-        if (0 === tz.length) return;
-        const sz = zz[Dz],
-          Fz = zz.deletedIndexes;
-        let Xz = 0;
-        for (; !0 === Fz[Xz];) Xz++;
-        const Oz = zz.$isUnsentAdd(Xz);
-        return sz.delete(Xz, Wz.DELETE), Oz ? zz.$cancelAdd(Xz) : Fz[Xz] = !0, tz.shift()
+        const vv = this[iv],
+          zv = vv.items;
+        if (0 === zv.length) return;
+        const Pv = vv[sv],
+          hv = vv.deletedIndexes;
+        let ev = 0;
+        for (; !0 === hv[ev];) ev++;
+        const gv = vv.$isUnsentAdd(ev);
+        return Pv.delete(ev, Sv.DELETE), gv ? vv.$cancelAdd(ev) : hv[ev] = !0, zv.shift()
       }
-      slice(zz, tz) {
-        const sz = new XF;
-        return sz.push(...this.items.slice(zz, tz)), sz
+      slice(vv, zv) {
+        const Pv = new Ph;
+        return Pv.push(...this.items.slice(vv, zv)), Pv
       }
       sort() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : FF;
-        const tz = this[Hz];
-        tz.isMovingItems = !0;
-        const sz = tz[Dz];
-        return tz.items.sort(zz).forEach(((zz, tz) => sz.change(tz, Wz.REPLACE))), tz.tmpItems.sort(zz), tz.$reindexChildren(0), tz.isMovingItems = !1, this
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : vh;
+        const zv = this[iv];
+        zv.isMovingItems = !0;
+        const Pv = zv[sv];
+        return zv.items.sort(vv).forEach(((vv, zv) => Pv.change(zv, Sv.REPLACE))), zv.tmpItems.sort(vv), zv.$reindexChildren(0), zv.isMovingItems = !1, this
       }
-      splice(zz, tz) {
-        const sz = this[Hz],
-          Fz = sz[Dz],
-          Xz = sz.items,
-          Oz = sz.tmpItems,
-          oz = sz.deletedIndexes,
-          vz = Xz.length,
-          Uz = Oz.length;
-        for (var Kz = arguments.length, uz = new Array(Kz > 2 ? Kz - 2 : 0), Nz = 2; Nz < Kz; Nz++) uz[Nz - 2] = arguments[Nz];
-        const bz = uz.length,
-          wz = [];
-        for (let Wz = 0; Wz < Uz; Wz++) !0 !== oz[Wz] && wz.push(Wz);
-        let gz;
-        if (vz > zz) {
-          void 0 === tz && (tz = vz - zz);
-          for (let Xz = zz; Xz < zz + tz; Xz++) {
-            const zz = wz[Xz],
-              tz = sz.$isUnsentAdd(zz);
-            Fz.delete(zz, Wz.DELETE), tz ? (gz ??= []).push(zz) : oz[zz] = !0
+      splice(vv, zv) {
+        const Pv = this[iv],
+          hv = Pv[sv],
+          ev = Pv.items,
+          gv = Pv.tmpItems,
+          pv = Pv.deletedIndexes,
+          dv = ev.length,
+          Nv = gv.length;
+        for (var lv = arguments.length, Tv = new Array(lv > 2 ? lv - 2 : 0), Wv = 2; Wv < lv; Wv++) Tv[Wv - 2] = arguments[Wv];
+        const wv = Tv.length,
+          av = [];
+        for (let Sv = 0; Sv < Nv; Sv++) !0 !== pv[Sv] && av.push(Sv);
+        let Cv;
+        if (dv > vv) {
+          void 0 === zv && (zv = dv - vv);
+          for (let ev = vv; ev < vv + zv; ev++) {
+            const vv = av[ev],
+              zv = Pv.$isUnsentAdd(vv);
+            hv.delete(vv, Sv.DELETE), zv ? (Cv ??= []).push(vv) : pv[vv] = !0
           }
-        } else tz = 0;
-        if (bz > 0) {
-          const Xz = wz[zz] ?? vz,
-            Uz = Math.min(bz, tz);
-          for (let zz = 0; zz < Uz; zz++) {
-            const tz = Xz + zz;
-            let sz;
-            const vz = void 0 !== gz ? gz.indexOf(tz) : -1; - 1 !== vz ? (gz.splice(vz, 1), sz = Wz.ADD) : sz = oz[tz] ? Wz.DELETE_AND_ADD : Wz.ADD, Fz.indexedOperation(tz, sz), Oz[tz] = uz[zz], oz[tz] = !1, uz[zz][Dz]?.setParent(this, Fz.root, tz)
+        } else zv = 0;
+        if (wv > 0) {
+          const ev = av[vv] ?? dv,
+            Nv = Math.min(wv, zv);
+          for (let vv = 0; vv < Nv; vv++) {
+            const zv = ev + vv;
+            let Pv;
+            const dv = void 0 !== Cv ? Cv.indexOf(zv) : -1; - 1 !== dv ? (Cv.splice(dv, 1), Pv = Sv.ADD) : Pv = pv[zv] ? Sv.DELETE_AND_ADD : Sv.ADD, hv.indexedOperation(zv, Pv), gv[zv] = Tv[vv], pv[zv] = !1, Tv[vv][sv]?.setParent(this, hv.root, zv)
           }
-          const Kz = bz - Uz;
-          if (Kz > 0) {
-            const zz = Xz + Uz;
-            Fz.insertAt(zz, Kz);
-            for (let tz = 0; tz < Kz; tz++) uz[Uz + tz][Dz]?.setParent(this, Fz.root, zz + tz);
-            oz.length > 0 && oz.splice(zz, 0, ...new Array(Kz).fill(!1)), Oz.splice(zz, 0, ...uz.slice(Uz)), sz.$reindexChildren(zz + Kz)
+          const lv = wv - Nv;
+          if (lv > 0) {
+            const vv = ev + Nv;
+            hv.insertAt(vv, lv);
+            for (let zv = 0; zv < lv; zv++) Tv[Nv + zv][sv]?.setParent(this, hv.root, vv + zv);
+            pv.length > 0 && pv.splice(vv, 0, ...new Array(lv).fill(!1)), gv.splice(vv, 0, ...Tv.slice(Nv)), Pv.$reindexChildren(vv + lv)
           }
         }
-        if (void 0 !== gz && gz.length > 0) {
-          for (let zz = gz.length - 1; zz >= 0; zz--) sz.$cancelAdd(gz[zz], !1);
-          sz.$reindexChildren(gz[0])
+        if (void 0 !== Cv && Cv.length > 0) {
+          for (let vv = Cv.length - 1; vv >= 0; vv--) Pv.$cancelAdd(Cv[vv], !1);
+          Pv.$reindexChildren(Cv[0])
         }
-        return Fz.root?.enqueueChangeTree(Fz), Xz.splice(zz, tz, ...uz)
+        return hv.root?.enqueueChangeTree(hv), ev.splice(vv, zv, ...Tv)
       }
       unshift() {
-        const zz = this[Hz],
-          tz = zz[Dz];
-        tz.unshift(arguments.length);
-        for (let Fz = 0; Fz < arguments.length; Fz++)(Fz < 0 || arguments.length <= Fz ? void 0 : arguments[Fz])?.[Dz]?.setParent(this, tz.root, Fz);
-        const sz = zz.deletedIndexes;
-        return sz.length > 0 && sz.unshift(...new Array(arguments.length).fill(!1)), zz.tmpItems.unshift(...arguments), zz.$reindexChildren(arguments.length), zz.items.unshift(...arguments)
+        const vv = this[iv],
+          zv = vv[sv];
+        zv.unshift(arguments.length);
+        for (let hv = 0; hv < arguments.length; hv++)(hv < 0 || arguments.length <= hv ? void 0 : arguments[hv])?.[sv]?.setParent(this, zv.root, hv);
+        const Pv = vv.deletedIndexes;
+        return Pv.length > 0 && Pv.unshift(...new Array(arguments.length).fill(!1)), vv.tmpItems.unshift(...arguments), vv.$reindexChildren(arguments.length), vv.items.unshift(...arguments)
       }
-      indexOf(zz, tz) {
-        return this.items.indexOf(zz, tz)
+      indexOf(vv, zv) {
+        return this.items.indexOf(vv, zv)
       }
-      lastIndexOf(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(zz, tz)
+      lastIndexOf(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(vv, zv)
       }
-      every(zz, tz) {
-        return this.items.every(zz, tz)
+      every(vv, zv) {
+        return this.items.every(vv, zv)
       }
-      some(zz, tz) {
-        return this.items.some(zz, tz)
+      some(vv, zv) {
+        return this.items.some(vv, zv)
       }
-      forEach(zz, tz) {
-        return this.items.forEach(zz, tz)
+      forEach(vv, zv) {
+        return this.items.forEach(vv, zv)
       }
-      map(zz, tz) {
-        return this.items.map(zz, tz)
+      map(vv, zv) {
+        return this.items.map(vv, zv)
       }
-      filter(zz, tz) {
-        return this.items.filter(zz, tz)
+      filter(vv, zv) {
+        return this.items.filter(vv, zv)
       }
-      reduce(zz, tz) {
+      reduce(vv, zv) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(zz, tz) {
+      reduceRight(vv, zv) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(zz, tz) {
-        return this.items.find(zz, tz)
+      find(vv, zv) {
+        return this.items.find(vv, zv)
       }
-      findIndex(zz, tz) {
-        return this.items.findIndex(zz, tz)
+      findIndex(vv, zv) {
+        return this.items.findIndex(vv, zv)
       }
-      fill(zz, tz, sz) {
+      fill(vv, zv, Pv) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(zz, tz, sz) {
+      copyWithin(vv, zv, Pv) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return XF
+        return Ph
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(zz, tz) {
-        return this.items.includes(zz, tz)
+      includes(vv, zv) {
+        return this.items.includes(vv, zv)
       }
-      flatMap(zz, tz) {
+      flatMap(vv, zv) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(zz) {
+      flat(vv) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var zz = arguments.length, tz = new Array(zz), sz = 0; sz < zz; sz++) tz[sz] = arguments[sz];
+        for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(zz, tz) {
-        const sz = this.items.slice();
-        return zz < 0 && (zz += this.length), sz[zz] = tz, new XF(...sz)
+      with(vv, zv) {
+        const Pv = this.items.slice();
+        return vv < 0 && (vv += this.length), Pv[vv] = zv, new Ph(...Pv)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(zz) {
-        return this.items.slice().sort(zz)
+      toSorted(vv) {
+        return this.items.slice().sort(vv)
       }
-      toSpliced(zz, tz) {
-        for (var sz = arguments.length, Fz = new Array(sz > 2 ? sz - 2 : 0), Wz = 2; Wz < sz; Wz++) Fz[Wz - 2] = arguments[Wz];
-        const Xz = this.items.slice();
-        return Xz.splice.apply(Xz, arguments), Xz
+      toSpliced(vv, zv) {
+        for (var Pv = arguments.length, hv = new Array(Pv > 2 ? Pv - 2 : 0), Sv = 2; Sv < Pv; Sv++) hv[Sv - 2] = arguments[Sv];
+        const ev = this.items.slice();
+        return ev.splice.apply(ev, arguments), ev
       }
       shuffle() {
-        return this.move((zz => {
-          let tz = this.items.length;
-          for (; 0 != tz;) {
-            let zz = Math.floor(Math.random() * tz);
-            tz--, [this[tz], this[zz]] = [this[zz], this[tz]]
+        return this.move((vv => {
+          let zv = this.items.length;
+          for (; 0 != zv;) {
+            let vv = Math.floor(Math.random() * zv);
+            zv--, [this[zv], this[vv]] = [this[vv], this[zv]]
           }
         }))
       }
-      move(zz) {
-        return this.isMovingItems = !0, zz(this), this.isMovingItems = !1, this
-      } [Nz](zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const sz = this[Hz] ?? this;
-        return tz || sz.deletedIndexes[zz] ? sz.items[zz] : sz.tmpItems[zz] || sz.items[zz]
-      } [bz](zz) {
-        const tz = this[Hz] ?? this;
-        tz.items[zz] = void 0, tz._needsCompaction = !0
-      } [Bz]() {
-        const zz = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, zz), this.deletedIndexes.length = 0)
-      } [rz]() {
-        const zz = this[Hz] ?? this;
-        zz._needsCompaction && (zz._needsCompaction = !1, zz.items = zz.items.filter((zz => void 0 !== zz)))
-      } [wz](zz, tz, sz) {
-        const Fz = this[Hz] ?? this,
-          Wz = Fz.items;
-        let Xz = !1;
-        for (let Oz = 0; Oz < Wz.length; Oz++) {
-          const oz = Wz[Oz];
-          zz.has(Oz) ? sz(oz) : (Xz = !0, tz(oz, Oz), Fz[bz](Oz))
+      move(vv) {
+        return this.isMovingItems = !0, vv(this), this.isMovingItems = !1, this
+      } [Wv](vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Pv = this[iv] ?? this;
+        return zv || Pv.deletedIndexes[vv] ? Pv.items[vv] : Pv.tmpItems[vv] || Pv.items[vv]
+      } [wv](vv) {
+        const zv = this[iv] ?? this;
+        zv.items[vv] = void 0, zv._needsCompaction = !0
+      } [cv]() {
+        const vv = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, vv), this.deletedIndexes.length = 0)
+      } [mv]() {
+        const vv = this[iv] ?? this;
+        vv._needsCompaction && (vv._needsCompaction = !1, vv.items = vv.items.filter((vv => void 0 !== vv)))
+      } [av](vv, zv, Pv) {
+        const hv = this[iv] ?? this,
+          Sv = hv.items;
+        let ev = !1;
+        for (let gv = 0; gv < Sv.length; gv++) {
+          const pv = Sv[gv];
+          vv.has(gv) ? Pv(pv) : (ev = !0, zv(pv, gv), hv[wv](gv))
         }
-        Xz && Fz[rz]()
+        ev && hv[mv]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((zz => "function" === typeof zz.toJSON ? zz.toJSON() : zz))
+        return this.toArray().map((vv => "function" === typeof vv.toJSON ? vv.toJSON() : vv))
       }
-      clone(zz) {
-        let tz;
-        return zz ? (tz = new XF, tz.push(...this.items)) : tz = new XF(...this.map((zz => zz[Dz] ? zz.clone() : zz))), tz
+      clone(vv) {
+        let zv;
+        return vv ? (zv = new Ph, zv.push(...this.items)) : zv = new Ph(...this.map((vv => vv[sv] ? vv.clone() : vv))), zv
       }
     }
-    xt("array", {
-      constructor: XF
+    fz("array", {
+      constructor: Ph
     });
-    class OF {
+    class hh {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(zz) {
-        const tz = this.indexByKey[zz];
-        return void 0 === tz ? void 0 : tz
+      indexOf(vv) {
+        const zv = this.indexByKey[vv];
+        return void 0 === zv ? void 0 : zv
       }
-      assign(zz) {
-        const tz = this.nextIndex++;
-        return this.indexByKey[zz] = tz, this.keyByIndex.set(tz, zz), tz
+      assign(vv) {
+        const zv = this.nextIndex++;
+        return this.indexByKey[vv] = zv, this.keyByIndex.set(zv, vv), zv
       }
-      snapshot(zz, tz) {
-        (this.snapshots ??= new Map).set(zz, tz)
+      snapshot(vv, zv) {
+        (this.snapshots ??= new Map).set(vv, zv)
       }
-      forgetSnapshot(zz) {
-        this.snapshots?.delete(zz)
+      forgetSnapshot(vv) {
+        this.snapshots?.delete(vv)
       }
-      snapshotAt(zz) {
-        return this.snapshots?.get(zz)
+      snapshotAt(vv) {
+        return this.snapshots?.get(vv)
       }
-      setIndex(zz, tz) {
-        this.keyByIndex.set(zz, tz), this.indexByKey[tz] = zz
+      setIndex(vv, zv) {
+        this.keyByIndex.set(vv, zv), this.indexByKey[zv] = vv
       }
-      keyOf(zz) {
-        return this.keyByIndex.get(zz)
+      keyOf(vv) {
+        return this.keyByIndex.get(vv)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [zz] of this.snapshots) {
-            const tz = this.keyByIndex.get(zz);
-            void 0 !== tz && (delete this.indexByKey[tz], this.keyByIndex.delete(zz))
+          for (const [vv] of this.snapshots) {
+            const zv = this.keyByIndex.get(vv);
+            void 0 !== zv && (delete this.indexByKey[zv], this.keyByIndex.delete(vv))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class oF {
-      [Dz];
-      [oz];
+    class Sh {
+      [sv];
+      [pv];
       childType;
-      [gz];
+      [Cv];
       $items = new Map;
-      journal = new OF;
+      journal = new hh;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(zz) {
-        (this._stream ??= It()).maxPerTick = zz
+      set maxPerTick(vv) {
+        (this._stream ??= nz()).maxPerTick = vv
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(zz) {
-        (this._stream ??= It()).priority = zz
+      set priority(vv) {
+        (this._stream ??= nz()).priority = vv
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[Uz] = hs;
-      static[Kz] = Es;
-      static COLLECTION_KIND = as;
-      static[uz](zz, tz, sz) {
-        if (!sz || "string" === typeof zz[gz]) return !0;
-        const Fz = zz[Nz](tz) ?? zz.journal.snapshotAt(tz);
-        return sz.isChangeTreeVisible(Fz[Dz])
+      static[Nv] = qP;
+      static[lv] = rP;
+      static COLLECTION_KIND = MP;
+      static[Tv](vv, zv, Pv) {
+        if (!Pv || "string" === typeof vv[Cv]) return !0;
+        const hv = vv[Wv](zv) ?? vv.journal.snapshotAt(zv);
+        return Pv.isChangeTreeVisible(hv[sv])
       }
-      static is(zz) {
-        return void 0 !== zz.map
+      static is(vv) {
+        return void 0 !== vv.map
       }
-      constructor(zz) {
-        if (Object.defineProperty(this, Dz, {
-            value: new cs(this),
+      constructor(vv) {
+        if (Object.defineProperty(this, sv, {
+            value: new VP(this),
             enumerable: !1,
             writable: !0
-          }), this[gz] = void 0, zz)
-          if (zz instanceof Map || zz instanceof oF) zz.forEach(((zz, tz) => this.set(tz, zz)));
+          }), this[Cv] = void 0, vv)
+          if (vv instanceof Map || vv instanceof Sh) vv.forEach(((vv, zv) => this.set(zv, vv)));
           else
-            for (const tz in zz) this.set(tz, zz[tz])
+            for (const zv in vv) this.set(zv, vv[zv])
       }
       static initializeForDecoder() {
-        const zz = Object.create(oF.prototype);
-        return zz.$items = new Map, zz.journal = new OF, zz[gz] = void 0, ys(zz), zz
+        const vv = Object.create(Sh.prototype);
+        return vv.$items = new Map, vv.journal = new hh, vv[Cv] = void 0, RP(vv), vv
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return oF
+        return Sh
       }
-      set(zz, tz) {
-        if (void 0 === tz || null === tz) throw new Error(`MapSchema#set('${zz}', ${tz}): trying to set ${tz} value on '${zz}'.`);
-        "object" === typeof tz && this[gz] && sF(tz, this[gz], this, zz), zz = zz.toString();
-        const sz = this[Dz],
-          Fz = void 0 !== tz[Dz],
-          Xz = this.journal;
-        let Oz, oz = Xz.indexOf(zz);
-        if (void 0 !== oz) {
-          Oz = Wz.REPLACE;
-          const sz = this.$items.get(zz);
-          if (sz === tz) return;
-          Fz && (Oz = Wz.DELETE_AND_ADD, void 0 !== sz && sz[Dz].root?.remove(sz[Dz])), void 0 !== Xz.snapshotAt(oz) && Xz.forgetSnapshot(oz)
-        } else oz = Xz.assign(zz), Oz = Wz.ADD;
-        return this.$items.set(zz, tz), Oz === Wz.ADD && sz.isStreamCollection ? void 0 !== sz.root && et(this, sz.root, oz) : sz.change(oz, Oz), Fz && tz[Dz].setParent(this, sz.root, oz), this
+      set(vv, zv) {
+        if (void 0 === zv || null === zv) throw new Error(`MapSchema#set('${vv}', ${zv}): trying to set ${zv} value on '${vv}'.`);
+        "object" === typeof zv && this[Cv] && uP(zv, this[Cv], this, vv), vv = vv.toString();
+        const Pv = this[sv],
+          hv = void 0 !== zv[sv],
+          ev = this.journal;
+        let gv, pv = ev.indexOf(vv);
+        if (void 0 !== pv) {
+          gv = Sv.REPLACE;
+          const Pv = this.$items.get(vv);
+          if (Pv === zv) return;
+          hv && (gv = Sv.DELETE_AND_ADD, void 0 !== Pv && Pv[sv].root?.remove(Pv[sv])), void 0 !== ev.snapshotAt(pv) && ev.forgetSnapshot(pv)
+        } else pv = ev.assign(vv), gv = Sv.ADD;
+        return this.$items.set(vv, zv), gv === Sv.ADD && Pv.isStreamCollection ? void 0 !== Pv.root && Dz(this, Pv.root, pv) : Pv.change(pv, gv), hv && zv[sv].setParent(this, Pv.root, pv), this
       }
-      get(zz) {
-        return this.$items.get(zz)
+      get(vv) {
+        return this.$items.get(vv)
       }
-      getOrInsert(zz, tz) {
-        return this.$items.has(zz) ? this.$items.get(zz) : (this.set(zz, tz), tz)
+      getOrInsert(vv, zv) {
+        return this.$items.has(vv) ? this.$items.get(vv) : (this.set(vv, zv), zv)
       }
-      getOrInsertComputed(zz, tz) {
-        if (this.$items.has(zz)) return this.$items.get(zz);
-        const sz = tz(zz);
-        return this.set(zz, sz), sz
+      getOrInsertComputed(vv, zv) {
+        if (this.$items.has(vv)) return this.$items.get(vv);
+        const Pv = zv(vv);
+        return this.set(vv, Pv), Pv
       }
-      delete(zz) {
-        if (!this.$items.has(zz)) return !1;
-        const tz = this.journal.indexOf(zz),
-          sz = this.$items.get(zz),
-          Fz = this[Dz];
-        if (Fz.isStreamCollection) {
-          const Wz = Fz.root;
-          let Xz = !1;
-          return void 0 !== Wz && (Xz = Zt(this, Wz, this[oz], tz)), void 0 !== sz?.[Dz] && Wz?.remove(sz[Dz]), this.$items.delete(zz), Xz || this.journal.snapshot(tz, sz), !0
+      delete(vv) {
+        if (!this.$items.has(vv)) return !1;
+        const zv = this.journal.indexOf(vv),
+          Pv = this.$items.get(vv),
+          hv = this[sv];
+        if (hv.isStreamCollection) {
+          const Sv = hv.root;
+          let ev = !1;
+          return void 0 !== Sv && (ev = Kz(this, Sv, this[pv], zv)), void 0 !== Pv?.[sv] && Sv?.remove(Pv[sv]), this.$items.delete(vv), ev || this.journal.snapshot(zv, Pv), !0
         }
-        return this.journal.snapshot(tz, sz), Fz.delete(tz), this.$items.delete(zz)
+        return this.journal.snapshot(zv, Pv), hv.delete(zv), this.$items.delete(vv)
       }
       clear() {
-        const zz = this[Dz];
-        zz.discard(), zz.forEachChild(((tz, sz) => {
-          zz.root?.remove(tz)
-        })), this.journal.reset(), this.$items.clear(), zz.operation(Wz.CLEAR)
-      } [Pz]() {
-        const zz = this[Dz];
-        if (zz.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((zz => zz?.[Pz]?.())), this.$items.clear(), this.journal.reset(), zz.recycle(), this[oz] = void 0
+        const vv = this[sv];
+        vv.discard(), vv.forEachChild(((zv, Pv) => {
+          vv.root?.remove(zv)
+        })), this.journal.reset(), this.$items.clear(), vv.operation(Sv.CLEAR)
+      } [Gv]() {
+        const vv = this[sv];
+        if (vv.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((vv => vv?.[Gv]?.())), this.$items.clear(), this.journal.reset(), vv.recycle(), this[pv] = void 0
       }
-      has(zz) {
-        return this.$items.has(zz)
+      has(vv) {
+        return this.$items.has(vv)
       }
-      forEach(zz) {
-        this.$items.forEach(zz)
+      forEach(vv) {
+        this.$items.forEach(vv)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Dz].pause()
+        this[sv].pause()
       }
       resumeTracking() {
-        this[Dz].resume()
+        this[sv].resume()
       }
-      untracked(zz) {
-        return this[Dz].untracked(zz)
+      untracked(vv) {
+        return this[sv].untracked(vv)
       }
       get isTrackingPaused() {
-        return this[Dz].paused
+        return this[sv].paused
       }
-      setIndex(zz, tz) {
-        this.journal.setIndex(zz, tz)
+      setIndex(vv, zv) {
+        this.journal.setIndex(vv, zv)
       }
-      getIndex(zz) {
-        return this.journal.keyOf(zz)
-      } [Nz](zz) {
-        const tz = this.journal.keyOf(zz);
-        return void 0 !== tz ? this.$items.get(tz) : void 0
-      } [bz](zz) {
-        const tz = this.journal.keyOf(zz);
-        void 0 !== tz && (this.$items.delete(tz), this.journal.keyByIndex.delete(zz))
-      } [wz](zz, tz, sz) {
-        let Fz = null;
-        if (this.$items.forEach(((Wz, Xz) => {
-            zz.has(Xz) ? sz(Wz) : ((Fz ??= new Set).add(Xz), tz(Wz, Xz))
-          })), null !== Fz) {
-          Fz.forEach((zz => {
-            this.$items.delete(zz), delete this.journal.indexByKey[zz]
+      getIndex(vv) {
+        return this.journal.keyOf(vv)
+      } [Wv](vv) {
+        const zv = this.journal.keyOf(vv);
+        return void 0 !== zv ? this.$items.get(zv) : void 0
+      } [wv](vv) {
+        const zv = this.journal.keyOf(vv);
+        void 0 !== zv && (this.$items.delete(zv), this.journal.keyByIndex.delete(vv))
+      } [av](vv, zv, Pv) {
+        let hv = null;
+        if (this.$items.forEach(((Sv, ev) => {
+            vv.has(ev) ? Pv(Sv) : ((hv ??= new Set).add(ev), zv(Sv, ev))
+          })), null !== hv) {
+          hv.forEach((vv => {
+            this.$items.delete(vv), delete this.journal.indexByKey[vv]
           }));
-          const zz = [];
-          this.journal.keyByIndex.forEach(((tz, sz) => {
-            Fz.has(tz) && zz.push(sz)
+          const vv = [];
+          this.journal.keyByIndex.forEach(((zv, Pv) => {
+            hv.has(zv) && vv.push(Pv)
           }));
-          for (let tz = 0; tz < zz.length; tz++) this.journal.keyByIndex.delete(zz[tz])
+          for (let zv = 0; zv < vv.length; zv++) this.journal.keyByIndex.delete(vv[zv])
         }
-      } [Bz]() {
+      } [cv]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(zz) {
-        jt(this, zz)
+      _dropView(vv) {
+        xz(this, vv)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (zz => {
-          let [tz, sz] = zz;
-          return [tz, "function" === typeof sz.toJSON ? sz.toJSON() : sz]
+        return Object.fromEntries(Array.from(this, (vv => {
+          let [zv, Pv] = vv;
+          return [zv, "function" === typeof Pv.toJSON ? Pv.toJSON() : Pv]
         })))
       }
-      clone(zz) {
-        let tz;
-        return zz ? tz = Object.assign(new oF, this) : (tz = new oF, this.forEach(((zz, sz) => {
-          zz[Dz] ? tz.set(sz, zz.clone()) : tz.set(sz, zz)
-        }))), tz
+      clone(vv) {
+        let zv;
+        return vv ? zv = Object.assign(new Sh, this) : (zv = new Sh, this.forEach(((vv, Pv) => {
+          vv[sv] ? zv.set(Pv, vv.clone()) : zv.set(Pv, vv)
+        }))), zv
       }
     }
-    xt("map", {
-      constructor: oF
+    fz("map", {
+      constructor: Sh
     });
-    class vF {
-      [Dz];
-      [oz];
-      [gz];
+    class eh {
+      [sv];
+      [pv];
+      [Cv];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(zz) {
-        (this._stream ??= It()).maxPerTick = zz
+      set maxPerTick(vv) {
+        (this._stream ??= nz()).maxPerTick = vv
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(zz) {
-        (this._stream ??= It()).priority = zz
+      set priority(vv) {
+        (this._stream ??= nz()).priority = vv
       }
-      static[Uz] = Qs;
-      static[Kz] = Es;
-      static COLLECTION_KIND = Vs;
-      static[uz](zz, tz, sz) {
-        return !sz || "string" === typeof zz[gz] || sz.isChangeTreeVisible((zz[Nz](tz) ?? zz.deletedItems[tz])[Dz])
+      static[Nv] = IP;
+      static[lv] = rP;
+      static COLLECTION_KIND = JP;
+      static[Tv](vv, zv, Pv) {
+        return !Pv || "string" === typeof vv[Cv] || Pv.isChangeTreeVisible((vv[Wv](zv) ?? vv.deletedItems[zv])[sv])
       }
-      static is(zz) {
-        return void 0 !== zz.collection
+      static is(vv) {
+        return void 0 !== vv.collection
       }
-      constructor(zz) {
-        Object.defineProperty(this, Dz, {
-          value: new cs(this),
+      constructor(vv) {
+        Object.defineProperty(this, sv, {
+          value: new VP(this),
           enumerable: !1,
           writable: !0
-        }), this[gz] = void 0, zz && zz.forEach((zz => this.add(zz)))
+        }), this[Cv] = void 0, vv && vv.forEach((vv => this.add(vv)))
       }
       static initializeForDecoder() {
-        const zz = Object.create(vF.prototype);
-        return zz.$items = new Map, zz.deletedItems = {}, zz.$refId = 0, zz[gz] = void 0, ys(zz), zz
+        const vv = Object.create(eh.prototype);
+        return vv.$items = new Map, vv.deletedItems = {}, vv.$refId = 0, vv[Cv] = void 0, RP(vv), vv
       }
-      add(zz) {
-        const tz = this.$refId++,
-          sz = this[Dz];
-        return this.$items.set(tz, zz), sz.isStreamCollection ? void 0 !== sz.root && et(this, sz.root, tz) : sz.change(tz), void 0 !== zz[Dz] && zz[Dz].setParent(this, sz.root, tz), tz
+      add(vv) {
+        const zv = this.$refId++,
+          Pv = this[sv];
+        return this.$items.set(zv, vv), Pv.isStreamCollection ? void 0 !== Pv.root && Dz(this, Pv.root, zv) : Pv.change(zv), void 0 !== vv[sv] && vv[sv].setParent(this, Pv.root, zv), zv
       }
-      at(zz) {
-        const tz = Array.from(this.$items.keys())[zz];
-        return this.$items.get(tz)
+      at(vv) {
+        const zv = Array.from(this.$items.keys())[vv];
+        return this.$items.get(zv)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(zz) {
-        const tz = this.$items.entries();
-        let sz, Fz;
+      delete(vv) {
+        const zv = this.$items.entries();
+        let Pv, hv;
         for (;
-          (Fz = tz.next()) && !Fz.done;)
-          if (zz === Fz.value[1]) {
-            sz = Fz.value[0];
+          (hv = zv.next()) && !hv.done;)
+          if (vv === hv.value[1]) {
+            Pv = hv.value[0];
             break
-          } if (void 0 === sz) return !1;
-        const Wz = this[Dz];
-        if (Wz.isStreamCollection) {
-          const zz = Wz.root,
-            tz = this.$items.get(sz);
-          return void 0 !== zz && Zt(this, zz, this[oz], sz), void 0 !== tz?.[Dz] && zz?.remove(tz[Dz]), this.deletedItems[sz] = tz, this.$items.delete(sz)
+          } if (void 0 === Pv) return !1;
+        const Sv = this[sv];
+        if (Sv.isStreamCollection) {
+          const vv = Sv.root,
+            zv = this.$items.get(Pv);
+          return void 0 !== vv && Kz(this, vv, this[pv], Pv), void 0 !== zv?.[sv] && vv?.remove(zv[sv]), this.deletedItems[Pv] = zv, this.$items.delete(Pv)
         }
-        return this.deletedItems[sz] = Wz.delete(sz), this.$items.delete(sz)
+        return this.deletedItems[Pv] = Sv.delete(Pv), this.$items.delete(Pv)
       }
       clear() {
-        const zz = this[Dz];
-        zz.discard(), zz.forEachChild(((tz, sz) => {
-          zz.root?.remove(tz)
-        })), this.$items.clear(), zz.operation(Wz.CLEAR)
-      } [Pz]() {
-        const zz = this[Dz];
-        if (zz.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((zz => zz?.[Pz]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, zz.recycle(), this[oz] = void 0
+        const vv = this[sv];
+        vv.discard(), vv.forEachChild(((zv, Pv) => {
+          vv.root?.remove(zv)
+        })), this.$items.clear(), vv.operation(Sv.CLEAR)
+      } [Gv]() {
+        const vv = this[sv];
+        if (vv.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((vv => vv?.[Gv]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, vv.recycle(), this[pv] = void 0
       }
-      has(zz) {
-        return Array.from(this.$items.values()).some((tz => tz === zz))
+      has(vv) {
+        return Array.from(this.$items.values()).some((zv => zv === vv))
       }
-      forEach(zz) {
-        this.$items.forEach(((tz, sz, Fz) => zz(tz, sz, this)))
+      forEach(vv) {
+        this.$items.forEach(((zv, Pv, hv) => vv(zv, Pv, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Dz].pause()
+        this[sv].pause()
       }
       resumeTracking() {
-        this[Dz].resume()
+        this[sv].resume()
       }
-      untracked(zz) {
-        return this[Dz].untracked(zz)
+      untracked(vv) {
+        return this[sv].untracked(vv)
       }
       get isTrackingPaused() {
-        return this[Dz].paused
+        return this[sv].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(zz, tz) {}
-      getIndex(zz) {
-        return zz
-      } [Nz](zz) {
-        return this.$items.get(zz)
-      } [bz](zz) {
-        this.$items.delete(zz)
-      } [wz](zz, tz, sz) {
-        let Fz = null;
-        if (this.$items.forEach(((Wz, Xz) => {
-            zz.has(Xz) ? sz(Wz) : ((Fz ??= []).push(Xz), tz(Wz, Xz))
-          })), null !== Fz)
-          for (let Wz = 0; Wz < Fz.length; Wz++) this[bz](Fz[Wz])
-      } [Bz]() {
-        for (const zz in this.deletedItems) delete this.deletedItems[zz]
+      setIndex(vv, zv) {}
+      getIndex(vv) {
+        return vv
+      } [Wv](vv) {
+        return this.$items.get(vv)
+      } [wv](vv) {
+        this.$items.delete(vv)
+      } [av](vv, zv, Pv) {
+        let hv = null;
+        if (this.$items.forEach(((Sv, ev) => {
+            vv.has(ev) ? Pv(Sv) : ((hv ??= []).push(ev), zv(Sv, ev))
+          })), null !== hv)
+          for (let Sv = 0; Sv < hv.length; Sv++) this[wv](hv[Sv])
+      } [cv]() {
+        for (const vv in this.deletedItems) delete this.deletedItems[vv]
       }
-      _dropView(zz) {
-        jt(this, zz)
+      _dropView(vv) {
+        xz(this, vv)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const zz = [];
-        return this.forEach(((tz, sz) => {
-          zz.push("function" === typeof tz.toJSON ? tz.toJSON() : tz)
-        })), zz
+        const vv = [];
+        return this.forEach(((zv, Pv) => {
+          vv.push("function" === typeof zv.toJSON ? zv.toJSON() : zv)
+        })), vv
       }
-      clone(zz) {
-        let tz;
-        return zz ? tz = Object.assign(new vF, this) : (tz = new vF, this.forEach((zz => {
-          zz[Dz] ? tz.add(zz.clone()) : tz.add(zz)
-        }))), tz
+      clone(vv) {
+        let zv;
+        return vv ? zv = Object.assign(new eh, this) : (zv = new eh, this.forEach((vv => {
+          vv[sv] ? zv.add(vv.clone()) : zv.add(vv)
+        }))), zv
       }
     }
-    xt("collection", {
-      constructor: vF
+    fz("collection", {
+      constructor: eh
     });
-    class UF {
-      [Dz];
-      [oz];
-      [gz];
+    class gh {
+      [sv];
+      [pv];
+      [Cv];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(zz) {
-        (this._stream ??= It()).maxPerTick = zz
+      set maxPerTick(vv) {
+        (this._stream ??= nz()).maxPerTick = vv
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(zz) {
-        (this._stream ??= It()).priority = zz
+      set priority(vv) {
+        (this._stream ??= nz()).priority = vv
       }
-      static[Uz] = Qs;
-      static[Kz] = Es;
-      static COLLECTION_KIND = Ss;
-      static[uz](zz, tz, sz) {
-        return !sz || "string" === typeof zz[gz] || sz.isVisible((zz[Nz](tz) ?? zz.deletedItems[tz])[Dz])
+      static[Nv] = IP;
+      static[lv] = rP;
+      static COLLECTION_KIND = BP;
+      static[Tv](vv, zv, Pv) {
+        return !Pv || "string" === typeof vv[Cv] || Pv.isVisible((vv[Wv](zv) ?? vv.deletedItems[zv])[sv])
       }
-      static is(zz) {
-        return void 0 !== zz.set
+      static is(vv) {
+        return void 0 !== vv.set
       }
-      constructor(zz) {
-        Object.defineProperty(this, Dz, {
-          value: new cs(this),
+      constructor(vv) {
+        Object.defineProperty(this, sv, {
+          value: new VP(this),
           enumerable: !1,
           writable: !0
-        }), this[gz] = void 0, zz && zz.forEach((zz => this.add(zz)))
+        }), this[Cv] = void 0, vv && vv.forEach((vv => this.add(vv)))
       }
       static initializeForDecoder() {
-        const zz = Object.create(UF.prototype);
-        return zz.$items = new Map, zz.deletedItems = {}, zz.$refId = 0, zz[gz] = void 0, ys(zz), zz
+        const vv = Object.create(gh.prototype);
+        return vv.$items = new Map, vv.deletedItems = {}, vv.$refId = 0, vv[Cv] = void 0, RP(vv), vv
       }
-      add(zz) {
-        if (this.has(zz)) return !1;
-        const tz = this.$refId++,
-          sz = this[Dz];
-        return this.$items.set(tz, zz), sz.isStreamCollection ? void 0 !== sz.root && et(this, sz.root, tz) : sz.change(tz, Wz.ADD), void 0 !== zz[Dz] && zz[Dz].setParent(this, sz.root, tz), tz
+      add(vv) {
+        if (this.has(vv)) return !1;
+        const zv = this.$refId++,
+          Pv = this[sv];
+        return this.$items.set(zv, vv), Pv.isStreamCollection ? void 0 !== Pv.root && Dz(this, Pv.root, zv) : Pv.change(zv, Sv.ADD), void 0 !== vv[sv] && vv[sv].setParent(this, Pv.root, zv), zv
       }
       entries() {
         return this.$items.entries()
       }
-      delete(zz) {
-        const tz = this.$items.entries();
-        let sz, Fz;
+      delete(vv) {
+        const zv = this.$items.entries();
+        let Pv, hv;
         for (;
-          (Fz = tz.next()) && !Fz.done;)
-          if (zz === Fz.value[1]) {
-            sz = Fz.value[0];
+          (hv = zv.next()) && !hv.done;)
+          if (vv === hv.value[1]) {
+            Pv = hv.value[0];
             break
-          } if (void 0 === sz) return !1;
-        const Wz = this[Dz];
-        if (Wz.isStreamCollection) {
-          const zz = Wz.root,
-            tz = this.$items.get(sz);
-          return void 0 !== zz && Zt(this, zz, this[oz], sz), void 0 !== tz?.[Dz] && zz?.remove(tz[Dz]), this.deletedItems[sz] = tz, this.$items.delete(sz)
+          } if (void 0 === Pv) return !1;
+        const Sv = this[sv];
+        if (Sv.isStreamCollection) {
+          const vv = Sv.root,
+            zv = this.$items.get(Pv);
+          return void 0 !== vv && Kz(this, vv, this[pv], Pv), void 0 !== zv?.[sv] && vv?.remove(zv[sv]), this.deletedItems[Pv] = zv, this.$items.delete(Pv)
         }
-        return this.deletedItems[sz] = Wz.delete(sz), this.$items.delete(sz)
+        return this.deletedItems[Pv] = Sv.delete(Pv), this.$items.delete(Pv)
       }
       clear() {
-        const zz = this[Dz];
-        zz.discard(), this.$items.clear(), zz.operation(Wz.CLEAR)
-      } [Pz]() {
-        const zz = this[Dz];
-        if (zz.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((zz => zz?.[Pz]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, zz.recycle(), this[oz] = void 0
+        const vv = this[sv];
+        vv.discard(), this.$items.clear(), vv.operation(Sv.CLEAR)
+      } [Gv]() {
+        const vv = this[sv];
+        if (vv.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((vv => vv?.[Gv]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, vv.recycle(), this[pv] = void 0
       }
-      has(zz) {
-        const tz = this.$items.values();
-        let sz, Fz = !1;
+      has(vv) {
+        const zv = this.$items.values();
+        let Pv, hv = !1;
         for (;
-          (sz = tz.next()) && !sz.done;)
-          if (zz === sz.value) {
-            Fz = !0;
+          (Pv = zv.next()) && !Pv.done;)
+          if (vv === Pv.value) {
+            hv = !0;
             break
-          } return Fz
+          } return hv
       }
-      forEach(zz) {
-        this.$items.forEach(((tz, sz, Fz) => zz(tz, sz, this)))
+      forEach(vv) {
+        this.$items.forEach(((zv, Pv, hv) => vv(zv, Pv, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[Dz].pause()
+        this[sv].pause()
       }
       resumeTracking() {
-        this[Dz].resume()
+        this[sv].resume()
       }
-      untracked(zz) {
-        return this[Dz].untracked(zz)
+      untracked(vv) {
+        return this[sv].untracked(vv)
       }
       get isTrackingPaused() {
-        return this[Dz].paused
+        return this[sv].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(zz, tz) {}
-      getIndex(zz) {
-        return zz
-      } [Nz](zz) {
-        return this.$items.get(zz)
-      } [bz](zz) {
-        this.$items.delete(zz)
-      } [wz](zz, tz, sz) {
-        let Fz = null;
-        if (this.$items.forEach(((Wz, Xz) => {
-            zz.has(Xz) ? sz(Wz) : ((Fz ??= []).push(Xz), tz(Wz, Xz))
-          })), null !== Fz)
-          for (let Wz = 0; Wz < Fz.length; Wz++) this[bz](Fz[Wz])
-      } [Bz]() {
-        for (const zz in this.deletedItems) delete this.deletedItems[zz]
+      setIndex(vv, zv) {}
+      getIndex(vv) {
+        return vv
+      } [Wv](vv) {
+        return this.$items.get(vv)
+      } [wv](vv) {
+        this.$items.delete(vv)
+      } [av](vv, zv, Pv) {
+        let hv = null;
+        if (this.$items.forEach(((Sv, ev) => {
+            vv.has(ev) ? Pv(Sv) : ((hv ??= []).push(ev), zv(Sv, ev))
+          })), null !== hv)
+          for (let Sv = 0; Sv < hv.length; Sv++) this[wv](hv[Sv])
+      } [cv]() {
+        for (const vv in this.deletedItems) delete this.deletedItems[vv]
       }
-      _dropView(zz) {
-        jt(this, zz)
+      _dropView(vv) {
+        xz(this, vv)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const zz = [];
-        return this.forEach(((tz, sz) => {
-          zz.push("function" === typeof tz.toJSON ? tz.toJSON() : tz)
-        })), zz
+        const vv = [];
+        return this.forEach(((zv, Pv) => {
+          vv.push("function" === typeof zv.toJSON ? zv.toJSON() : zv)
+        })), vv
       }
-      clone(zz) {
-        let tz;
-        return zz ? tz = Object.assign(new UF, this) : (tz = new UF, this.forEach((zz => {
-          zz[Dz] ? tz.add(zz.clone()) : tz.add(zz)
-        }))), tz
+      clone(vv) {
+        let zv;
+        return vv ? zv = Object.assign(new gh, this) : (zv = new gh, this.forEach((vv => {
+          vv[sv] ? zv.add(vv.clone()) : zv.add(vv)
+        }))), zv
       }
     }
-    xt("set", {
-      constructor: UF
+    fz("set", {
+      constructor: gh
     });
-    class KF {
-      [Dz];
-      [oz];
-      [gz];
+    class ph {
+      [sv];
+      [pv];
+      [Cv];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(zz) {
-        (this._stream ??= It()).maxPerTick = zz
+      set maxPerTick(vv) {
+        (this._stream ??= nz()).maxPerTick = vv
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(zz) {
-        (this._stream ??= It()).priority = zz
+      set priority(vv) {
+        (this._stream ??= nz()).priority = vv
       }
       static $isStream = !0;
-      static[Uz] = Qs;
-      static[Kz] = Es;
-      static COLLECTION_KIND = Rs;
-      static[uz](zz, tz, sz) {
-        if (!sz) return !0;
-        const Fz = zz[Nz](tz);
-        return void 0 !== Fz && sz.isVisible(Fz[Dz])
+      static[Nv] = IP;
+      static[lv] = rP;
+      static COLLECTION_KIND = EP;
+      static[Tv](vv, zv, Pv) {
+        if (!Pv) return !0;
+        const hv = vv[Wv](zv);
+        return void 0 !== hv && Pv.isVisible(hv[sv])
       }
-      static is(zz) {
-        return zz && void 0 !== zz.stream
+      static is(vv) {
+        return vv && void 0 !== vv.stream
       }
       constructor() {
-        Object.defineProperty(this, Dz, {
-          value: new cs(this),
+        Object.defineProperty(this, sv, {
+          value: new VP(this),
           enumerable: !1,
           writable: !0
-        }), this[gz] = void 0
+        }), this[Cv] = void 0
       }
       static initializeForDecoder() {
-        const zz = Object.create(KF.prototype);
-        return zz.$items = new Map, zz.$nextPosition = 0, zz._itemIndex = new Map, zz[gz] = void 0, ys(zz), zz
+        const vv = Object.create(ph.prototype);
+        return vv.$items = new Map, vv.$nextPosition = 0, vv._itemIndex = new Map, vv[Cv] = void 0, RP(vv), vv
       }
-      add(zz) {
-        if (this._itemIndex.has(zz)) return -1;
-        const tz = this.$nextPosition++;
-        this.$items.set(tz, zz), this._itemIndex.set(zz, tz);
-        const sz = this[Dz].root;
-        return void 0 !== zz[Dz] && zz[Dz].setParent(this, sz, tz), void 0 !== sz && et(this, sz, tz), tz
+      add(vv) {
+        if (this._itemIndex.has(vv)) return -1;
+        const zv = this.$nextPosition++;
+        this.$items.set(zv, vv), this._itemIndex.set(vv, zv);
+        const Pv = this[sv].root;
+        return void 0 !== vv[sv] && vv[sv].setParent(this, Pv, zv), void 0 !== Pv && Dz(this, Pv, zv), zv
       }
-      remove(zz) {
-        const tz = this._itemIndex.get(zz);
-        if (void 0 === tz) return !1;
-        this._itemIndex.delete(zz), this.$items.delete(tz);
-        const sz = this[Dz].root;
-        return void 0 !== sz && (Zt(this, sz, this[oz], tz), void 0 !== zz[Dz] && sz.remove(zz[Dz])), !0
+      remove(vv) {
+        const zv = this._itemIndex.get(vv);
+        if (void 0 === zv) return !1;
+        this._itemIndex.delete(vv), this.$items.delete(zv);
+        const Pv = this[sv].root;
+        return void 0 !== Pv && (Kz(this, Pv, this[pv], zv), void 0 !== vv[sv] && Pv.remove(vv[sv])), !0
       }
-      has(zz) {
-        return this._itemIndex.has(zz)
+      has(vv) {
+        return this._itemIndex.has(vv)
       }
       clear() {
-        const zz = this[Dz].root;
-        if (void 0 !== zz) {
-          ! function(zz, tz, sz) {
-            const Fz = zz._stream;
-            if (void 0 !== Fz) {
-              Fz.broadcastPending.clear();
-              for (const zz of Fz.sentBroadcast) Fz.broadcastDeletes.add(zz);
-              Fz.sentBroadcast.clear(), tz.forEachActiveView((zz => {
-                Fz.pendingByView.get(zz.id)?.clear();
-                const tz = Fz.sentByView.get(zz.id);
-                if (void 0 !== tz && tz.size > 0) {
-                  let Fz = zz.changes.get(sz);
-                  void 0 === Fz && (Fz = new Map, zz.changes.set(sz, Fz));
-                  for (const zz of tz) Fz.set(zz, Wz.DELETE);
-                  tz.clear()
+        const vv = this[sv].root;
+        if (void 0 !== vv) {
+          ! function(vv, zv, Pv) {
+            const hv = vv._stream;
+            if (void 0 !== hv) {
+              hv.broadcastPending.clear();
+              for (const vv of hv.sentBroadcast) hv.broadcastDeletes.add(vv);
+              hv.sentBroadcast.clear(), zv.forEachActiveView((vv => {
+                hv.pendingByView.get(vv.id)?.clear();
+                const zv = hv.sentByView.get(vv.id);
+                if (void 0 !== zv && zv.size > 0) {
+                  let hv = vv.changes.get(Pv);
+                  void 0 === hv && (hv = new Map, vv.changes.set(Pv, hv));
+                  for (const vv of zv) hv.set(vv, Sv.DELETE);
+                  zv.clear()
                 }
               }))
             }
-          }(this, zz, this[oz]);
-          for (const tz of this.$items.values()) void 0 !== tz[Dz] && zz.remove(tz[Dz])
+          }(this, vv, this[pv]);
+          for (const zv of this.$items.values()) void 0 !== zv[sv] && vv.remove(zv[sv])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(zz) {
-        for (const [tz, sz] of this.$items) zz(sz, tz, this)
+      forEach(vv) {
+        for (const [zv, Pv] of this.$items) vv(Pv, zv, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(zz, tz) {}
-      getIndex(zz) {
-        return zz
-      } [Nz](zz) {
-        return this.$items.get(zz)
-      } [bz](zz) {
-        const tz = this.$items.get(zz);
-        void 0 !== tz && (this._itemIndex.delete(tz), this.$items.delete(zz))
-      } [wz]() {} [Bz]() {}
+      setIndex(vv, zv) {}
+      getIndex(vv) {
+        return vv
+      } [Wv](vv) {
+        return this.$items.get(vv)
+      } [wv](vv) {
+        const zv = this.$items.get(vv);
+        void 0 !== zv && (this._itemIndex.delete(zv), this.$items.delete(vv))
+      } [av]() {} [cv]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const zz = [];
-        return this.forEach((tz => {
-          zz.push("function" === typeof tz?.toJSON ? tz.toJSON() : tz)
-        })), zz
+        const vv = [];
+        return this.forEach((zv => {
+          vv.push("function" === typeof zv?.toJSON ? zv.toJSON() : zv)
+        })), vv
       }
-      clone(zz) {
-        if (zz) {
-          return Object.assign(new KF, this)
+      clone(vv) {
+        if (vv) {
+          return Object.assign(new ph, this)
         }
-        const tz = new KF;
-        return tz.maxPerTick = this.maxPerTick, this.forEach((zz => {
-          tz.add("function" === typeof zz?.clone ? zz.clone() : zz)
-        })), tz
+        const zv = new ph;
+        return zv.maxPerTick = this.maxPerTick, this.forEach((vv => {
+          zv.add("function" === typeof vv?.clone ? vv.clone() : vv)
+        })), zv
       }
-      _dropView(zz) {
-        jt(this, zz)
+      _dropView(vv) {
+        xz(this, vv)
       }
       _unregister() {}
     }
-    xt("stream", {
-      constructor: KF
+    fz("stream", {
+      constructor: ph
     });
-    class uF {
-      [xz] = !0;
+    class dh {
+      [fv] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(zz) {
-        this._type = zz
+      constructor(vv) {
+        this._type = vv
       }
-      default (zz) {
-        return this._default = zz, this._hasDefault = !0, this
+      default (vv) {
+        return this._default = vv, this._hasDefault = !0, this
       }
-      view(zz) {
-        return this._view = zz ?? -1, this
+      view(vv) {
+        return this._view = vv ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const zz = this._type;
-        if (zz && "object" === typeof zz && void 0 !== zz.array) throw new Error(Jt);
+        const vv = this._type;
+        if (vv && "object" === typeof vv && void 0 !== vv.array) throw new Error(Yz);
         return this._stream = !0, this
       }
-      priority(zz) {
-        return this._streamPriority = zz, this
+      priority(vv) {
+        return this._streamPriority = vv, this
       }
       deprecated() {
-        let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = zz, this
+        let vv = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = vv, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function NF(zz) {
-      return null != zz && !0 === zz[xz]
+    function Nh(vv) {
+      return null != vv && !0 === vv[fv]
     }
 
-    function bF(zz) {
-      return () => new uF(zz)
+    function lh(vv) {
+      return () => new dh(vv)
     }
 
-    function wF(zz) {
-      if (NF(zz)) {
-        const tz = zz._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof tz?`use the type name instead: t.array("${tz}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function Th(vv) {
+      if (Nh(vv)) {
+        const zv = vv._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof zv?`use the type name instead: t.array("${zv}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return zz
+      return vv
     }
 
-    function DF(zz) {
-      return new uF({
-        quantized: yt(zz)
+    function Wh(vv) {
+      return new dh({
+        quantized: qz(vv)
       })
     }
-    const gF = Object.freeze({
-        string: bF("string"),
-        number: bF("number"),
-        boolean: bF("boolean"),
-        int8: bF("int8"),
-        uint8: bF("uint8"),
-        int16: bF("int16"),
-        uint16: bF("uint16"),
-        int32: bF("int32"),
-        uint32: bF("uint32"),
-        int64: bF("int64"),
-        uint64: bF("uint64"),
-        float32: bF("float32"),
-        float64: bF("float64"),
-        bigint64: bF("bigint64"),
-        biguint64: bF("biguint64"),
-        ref: zz => new uF(zz),
-        array: zz => new uF({
-          array: wF(zz)
+    const wh = Object.freeze({
+        string: lh("string"),
+        number: lh("number"),
+        boolean: lh("boolean"),
+        int8: lh("int8"),
+        uint8: lh("uint8"),
+        int16: lh("int16"),
+        uint16: lh("uint16"),
+        int32: lh("int32"),
+        uint32: lh("uint32"),
+        int64: lh("int64"),
+        uint64: lh("uint64"),
+        float32: lh("float32"),
+        float64: lh("float64"),
+        bigint64: lh("bigint64"),
+        biguint64: lh("biguint64"),
+        ref: vv => new dh(vv),
+        array: vv => new dh({
+          array: Th(vv)
         }),
-        map: zz => new uF({
-          map: wF(zz)
+        map: vv => new dh({
+          map: Th(vv)
         }),
-        set: zz => new uF({
-          set: wF(zz)
+        set: vv => new dh({
+          set: Th(vv)
         }),
-        collection: zz => new uF({
-          collection: wF(zz)
+        collection: vv => new dh({
+          collection: Th(vv)
         }),
-        stream: zz => {
-          const tz = new uF({
-            stream: wF(zz)
+        stream: vv => {
+          const zv = new dh({
+            stream: Th(vv)
           });
-          return tz._stream = !0, tz
+          return zv._stream = !0, zv
         },
-        quantized: DF,
-        angle: zz => DF({
+        quantized: Wh,
+        angle: vv => Wh({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: zz?.bits ?? 16
+          bits: vv?.bits ?? 16
         })
       }),
-      HF = -1;
+      ah = -1;
 
-    function BF(zz) {
-      return kt.register(zz), zz
+    function sh(vv) {
+      return Lz.register(vv), vv
     }
 
-    function PF() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : HF;
-      return function(tz, sz) {
-        const Fz = Vt.initialize(tz.constructor);
-        Vt.setTag(Fz, sz, zz)
+    function Ch() {
+      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ah;
+      return function(zv, Pv) {
+        const hv = oz.initialize(zv.constructor);
+        oz.setTag(hv, Pv, vv)
       }
     }
 
-    function rF(zz, tz) {
-      const sz = Vt.initialize(zz.constructor);
-      Vt.setUnreliable(sz, tz)
+    function ih(vv, zv) {
+      const Pv = oz.initialize(vv.constructor);
+      oz.setUnreliable(Pv, zv)
     }
 
-    function YF(zz, tz) {
-      const sz = Vt.initialize(zz.constructor);
-      Vt.setPatchOnly(sz, tz)
+    function ch(vv, zv) {
+      const Pv = oz.initialize(vv.constructor);
+      oz.setPatchOnly(Pv, zv)
     }
 
-    function xF(zz, tz) {
-      const sz = Vt.initialize(zz.constructor);
-      Vt.setFullStateOnly(sz, tz)
+    function Gh(vv, zv) {
+      const Pv = oz.initialize(vv.constructor);
+      oz.setFullStateOnly(Pv, zv)
     }
 
-    function mF(zz, tz) {
-      return function(sz, Fz) {
-        const Wz = sz.constructor;
-        if (!zz) throw new Error(`${Wz.name}: @type() reference provided for "${Fz}" is undefined. Make sure you don't have any circular dependencies.`);
-        zz = Lt(zz, `${Wz.name}.${Fz}`), kt.register(Wz);
-        const Xz = Object.getPrototypeOf(Wz)[Symbol.metadata],
-          Oz = Vt.initialize(Wz);
-        let oz = Oz[Fz];
-        if (void 0 !== Oz[oz]) {
-          if (Oz[oz].deprecated) return;
-          if (void 0 !== Oz[oz].type) {
-            const zz = new Error(`@colyseus/schema: Duplicate '${Fz}' definition on '${Wz.name}'.\nCheck @type() annotation`);
-            throw new Error(`${zz.message} ${zz.stack.split("\n")[4].trim()}`)
+    function mh(vv, zv) {
+      return function(Pv, hv) {
+        const Sv = Pv.constructor;
+        if (!vv) throw new Error(`${Sv.name}: @type() reference provided for "${hv}" is undefined. Make sure you don't have any circular dependencies.`);
+        vv = Mz(vv, `${Sv.name}.${hv}`), Lz.register(Sv);
+        const ev = Object.getPrototypeOf(Sv)[Symbol.metadata],
+          gv = oz.initialize(Sv);
+        let pv = gv[hv];
+        if (void 0 !== gv[pv]) {
+          if (gv[pv].deprecated) return;
+          if (void 0 !== gv[pv].type) {
+            const vv = new Error(`@colyseus/schema: Duplicate '${hv}' definition on '${Sv.name}'.\nCheck @type() annotation`);
+            throw new Error(`${vv.message} ${vv.stack.split("\n")[4].trim()}`)
           }
-        } else oz = Oz[Cz] ?? (Xz && Xz[Cz]) ?? -1, oz++;
-        if (tz && tz.manual) Vt.addField(Oz, oz, Fz, zz, {
+        } else pv = gv[Ov] ?? (ev && ev[Ov]) ?? -1, pv++;
+        if (zv && zv.manual) oz.addField(gv, pv, hv, vv, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: tz,
-            childType: sz
-          } = it(zz);
-          Vt.addField(Oz, oz, Fz, zz, IF(Fz, oz, sz, tz))
+            complexTypeKlass: zv,
+            childType: Pv
+          } = Hz(vv);
+          oz.addField(gv, pv, hv, vv, fh(hv, pv, Pv, zv))
         }
-        Oz[mz][Fz] && Object.defineProperty(sz, Fz, Oz[mz][Fz]), ("string" === typeof zz || Mt(zz)) && (Oz[Iz] || Object.defineProperty(Oz, Iz, {
+        gv[Fv][hv] && Object.defineProperty(Pv, hv, gv[Fv][hv]), ("string" === typeof vv || Iz(vv)) && (gv[nv] || Object.defineProperty(gv, nv, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), Oz[Iz][oz] = "string" === typeof zz ? tt[zz] : Qt(zz.quantized))
+        }), gv[nv][pv] = "string" === typeof vv ? zz[vv] : Az(vv.quantized))
       }
     }
-    const JF = {
+    const jh = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function IF(zz, tz, sz, Fz) {
-      let Xz;
-      return Xz = Fz ? function(zz, tz, sz, Fz) {
-        const Xz = Fz.constructor === XF,
-          Oz = Fz.constructor === oF;
-        return function(zz) {
-          const Fz = this[Yz],
-            oz = Fz[tz];
-          if (zz !== oz) {
-            if (void 0 !== zz && null !== zz) {
-              if (!Xz || zz instanceof XF)
-                if (!Oz || zz instanceof oF) zz[gz] = sz;
+    function fh(vv, zv, Pv, hv) {
+      let ev;
+      return ev = hv ? function(vv, zv, Pv, hv) {
+        const ev = hv.constructor === Ph,
+          gv = hv.constructor === Sh;
+        return function(vv) {
+          const hv = this[jv],
+            pv = hv[zv];
+          if (vv !== pv) {
+            if (void 0 !== vv && null !== vv) {
+              if (!ev || vv instanceof Ph)
+                if (!gv || vv instanceof Sh) vv[Cv] = Pv;
                 else {
-                  const tz = new oF;
-                  if (tz[gz] = sz, zz instanceof Map) zz.forEach(((zz, sz) => tz.set(sz, zz)));
+                  const zv = new Sh;
+                  if (zv[Cv] = Pv, vv instanceof Map) vv.forEach(((vv, Pv) => zv.set(Pv, vv)));
                   else
-                    for (const sz in zz) tz.set(sz, zz[sz]);
-                  zz = tz
+                    for (const Pv in vv) zv.set(Pv, vv[Pv]);
+                  vv = zv
                 }
               else {
-                const tz = new XF;
-                tz[gz] = sz, tz.push(...zz), zz = tz
+                const zv = new Ph;
+                zv[Cv] = Pv, zv.push(...vv), vv = zv
               }
-              const Fz = this[Dz],
-                Uz = this.constructor;
-              void 0 !== oz && null !== oz && oz[Dz] ? (Fz.root?.remove(oz[Dz]), Uz[vz](Fz, tz, Wz.DELETE_AND_ADD)) : Uz[vz](Fz, tz, Wz.ADD), zz[Dz]?.setParent(this, Fz.root, tz)
-            } else void 0 !== oz && null !== oz && this[Dz].delete(tz);
-            Fz[tz] = zz
+              const hv = this[sv],
+                Nv = this.constructor;
+              void 0 !== pv && null !== pv && pv[sv] ? (hv.root?.remove(pv[sv]), Nv[dv](hv, zv, Sv.DELETE_AND_ADD)) : Nv[dv](hv, zv, Sv.ADD), vv[sv]?.setParent(this, hv.root, zv)
+            } else void 0 !== pv && null !== pv && this[sv].delete(zv);
+            hv[zv] = vv
           }
         }
-      }(0, tz, sz, Fz) : "string" === typeof sz ? function(zz, tz, sz) {
-        const Fz = JF[sz],
-          Xz = "string" === sz,
-          Oz = "boolean" === sz;
-        return function(sz) {
-          const oz = this[Yz],
-            Uz = oz[tz];
-          if (sz !== Uz) {
-            if (void 0 !== sz && null !== sz) {
-              if (!Oz && void 0 !== Fz && typeof sz !== Fz && (!Xz || null !== sz)) {
-                const tz = sz && sz.constructor ? ` (${sz.constructor.name})` : "";
-                throw new tF(`a '${Fz}' was expected, but '${JSON.stringify(sz)}'${tz} was provided in ${this.constructor.name}#${zz}`)
+      }(0, zv, Pv, hv) : "string" === typeof Pv ? function(vv, zv, Pv) {
+        const hv = jh[Pv],
+          ev = "string" === Pv,
+          gv = "boolean" === Pv;
+        return function(Pv) {
+          const pv = this[jv],
+            Nv = pv[zv];
+          if (Pv !== Nv) {
+            if (void 0 !== Pv && null !== Pv) {
+              if (!gv && void 0 !== hv && typeof Pv !== hv && (!ev || null !== Pv)) {
+                const zv = Pv && Pv.constructor ? ` (${Pv.constructor.name})` : "";
+                throw new XP(`a '${hv}' was expected, but '${JSON.stringify(Pv)}'${zv} was provided in ${this.constructor.name}#${vv}`)
               }
-              this.constructor[vz](this[Dz], tz, Wz.ADD)
-            } else void 0 !== Uz && null !== Uz && this[Dz].delete(tz);
-            oz[tz] = sz
+              this.constructor[dv](this[sv], zv, Sv.ADD)
+            } else void 0 !== Nv && null !== Nv && this[sv].delete(zv);
+            pv[zv] = Pv
           }
         }
-      }(zz, tz, sz) : Mt(sz) ? function(zz, tz, sz) {
-        return function(Fz) {
-          const Xz = this[Yz],
-            Oz = Xz[tz];
-          if (void 0 !== Fz && null !== Fz) {
-            if ("number" !== typeof Fz) throw new tF(`a 'number' was expected, but '${JSON.stringify(Fz)}' was provided in ${this.constructor.name}#${zz}`);
-            if ((Fz = ht(sz, dt(sz, Fz))) === Oz) return;
-            this.constructor[vz](this[Dz], tz, Wz.ADD)
+      }(vv, zv, Pv) : Iz(Pv) ? function(vv, zv, Pv) {
+        return function(hv) {
+          const ev = this[jv],
+            gv = ev[zv];
+          if (void 0 !== hv && null !== hv) {
+            if ("number" !== typeof hv) throw new XP(`a 'number' was expected, but '${JSON.stringify(hv)}' was provided in ${this.constructor.name}#${vv}`);
+            if ((hv = Zz(Pv, Qz(Pv, hv))) === gv) return;
+            this.constructor[dv](this[sv], zv, Sv.ADD)
           } else {
-            if (Fz === Oz) return;
-            void 0 !== Oz && null !== Oz && this[Dz].delete(tz)
+            if (hv === gv) return;
+            void 0 !== gv && null !== gv && this[sv].delete(zv)
           }
-          Xz[tz] = Fz
+          ev[zv] = hv
         }
-      }(zz, tz, sz.quantized) : function(zz, tz, sz) {
-        return function(Fz) {
-          const Xz = this[Yz],
-            Oz = Xz[tz];
-          if (Fz !== Oz) {
-            if (void 0 !== Fz && null !== Fz) {
-              sF(Fz, sz, this, zz);
-              const Xz = this[Dz],
-                oz = this.constructor;
-              void 0 !== Oz && null !== Oz && Oz[Dz] ? (Xz.root?.remove(Oz[Dz]), oz[vz](Xz, tz, Wz.DELETE_AND_ADD)) : oz[vz](Xz, tz, Wz.ADD), Fz[Dz]?.setParent(this, Xz.root, tz)
-            } else void 0 !== Oz && null !== Oz && this[Dz].delete(tz);
-            Xz[tz] = Fz
+      }(vv, zv, Pv.quantized) : function(vv, zv, Pv) {
+        return function(hv) {
+          const ev = this[jv],
+            gv = ev[zv];
+          if (hv !== gv) {
+            if (void 0 !== hv && null !== hv) {
+              uP(hv, Pv, this, vv);
+              const ev = this[sv],
+                pv = this.constructor;
+              void 0 !== gv && null !== gv && gv[sv] ? (ev.root?.remove(gv[sv]), pv[dv](ev, zv, Sv.DELETE_AND_ADD)) : pv[dv](ev, zv, Sv.ADD), hv[sv]?.setParent(this, ev.root, zv)
+            } else void 0 !== gv && null !== gv && this[sv].delete(zv);
+            ev[zv] = hv
           }
         }
-      }(zz, tz, sz), {
+      }(vv, zv, Pv), {
         get: function() {
-          return this[Yz][tz]
+          return this[jv][zv]
         },
-        set: Xz,
+        set: ev,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function CF() {
-      let zz = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(tz, sz) {
-        const Fz = Vt.initialize(tz.constructor);
-        Vt.setDeprecated(Fz, sz), zz && (Fz[mz] ??= {}, Fz[mz][sz] = {
+    function Fh() {
+      let vv = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(zv, Pv) {
+        const hv = oz.initialize(zv.constructor);
+        oz.setDeprecated(hv, Pv), vv && (hv[Fv] ??= {}, hv[Fv][Pv] = {
           get: function() {
-            throw new Error(`${sz} is deprecated.`)
+            throw new Error(`${Pv} is deprecated.`)
           },
-          set: function(zz) {},
+          set: function(vv) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(tz, sz, Fz[mz][sz]))
+        }, Object.defineProperty(zv, Pv, hv[Fv][Pv]))
       }
     }
-    let eF = !1;
+    let Yh = !1;
 
-    function ZF(zz, tz, sz) {
-      eF || (eF = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let Fz in tz) mF(tz[Fz], sz)(zz.prototype, Fz);
-      return zz
+    function nh(vv, zv, Pv) {
+      Yh || (Yh = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let hv in zv) mh(zv[hv], Pv)(vv.prototype, hv);
+      return vv
     }
 
-    function GF(zz, tz) {
-      let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : cF;
-      if (null == zz || "object" !== typeof zz) throw new Error(`schema(): first argument must be a fields object (got ${typeof zz}).`);
-      const Fz = {},
-        Wz = {},
-        Xz = {},
-        Oz = {},
-        oz = (zz, tz) => {
-          if (tz.hasDefault)((zz, tz) => {
-            "function" === typeof tz ? Oz[zz] = tz : tz && "function" === typeof tz.clone ? Oz[zz] = () => tz.clone() : Xz[zz] = tz
-          })(zz, tz.default);
-          else if (!tz.optional) {
-            const sz = function(zz) {
-              if (zz && "object" === typeof zz) {
-                if (void 0 !== zz.array) return () => new XF;
-                if (void 0 !== zz.map) return () => new oF;
-                if (void 0 !== zz.set) return () => new UF;
-                if (void 0 !== zz.collection) return () => new vF;
-                if (void 0 !== zz.stream) return () => new KF
-              } else if ("function" === typeof zz && cF.is(zz) && (!zz.prototype.initialize || 0 === zz.prototype.initialize.length)) return () => new zz
-            }(tz.type);
-            sz && (Oz[zz] = sz)
+    function Oh(vv, zv) {
+      let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Kh;
+      if (null == vv || "object" !== typeof vv) throw new Error(`schema(): first argument must be a fields object (got ${typeof vv}).`);
+      const hv = {},
+        Sv = {},
+        ev = {},
+        gv = {},
+        pv = (vv, zv) => {
+          if (zv.hasDefault)((vv, zv) => {
+            "function" === typeof zv ? gv[vv] = zv : zv && "function" === typeof zv.clone ? gv[vv] = () => zv.clone() : ev[vv] = zv
+          })(vv, zv.default);
+          else if (!zv.optional) {
+            const Pv = function(vv) {
+              if (vv && "object" === typeof vv) {
+                if (void 0 !== vv.array) return () => new Ph;
+                if (void 0 !== vv.map) return () => new Sh;
+                if (void 0 !== vv.set) return () => new gh;
+                if (void 0 !== vv.collection) return () => new eh;
+                if (void 0 !== vv.stream) return () => new ph
+              } else if ("function" === typeof vv && Kh.is(vv) && (!vv.prototype.initialize || 0 === vv.prototype.initialize.length)) return () => new vv
+            }(zv.type);
+            Pv && (gv[vv] = Pv)
           }
         },
-        vz = {},
-        Uz = [],
-        Kz = [],
-        uz = {},
-        Nz = [],
-        bz = [],
-        wz = {},
-        Dz = [];
-      for (const Yz in zz) {
-        const sz = zz[Yz],
-          Xz = `schema(${tz?`'${tz}'`:""}): field '${Yz}'`;
-        if (NF(sz)) {
-          const zz = sz.toDefinition();
-          if (zz.noSync) {
-            if (void 0 !== zz.view || zz.unreliable || zz.patchOnly || zz.fullStateOnly || zz.stream) throw new Error(`${Xz} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            oz(Yz, zz);
+        dv = {},
+        Nv = [],
+        lv = [],
+        Tv = {},
+        Wv = [],
+        wv = [],
+        av = {},
+        sv = [];
+      for (const jv in vv) {
+        const Pv = vv[jv],
+          ev = `schema(${zv?`'${zv}'`:""}): field '${jv}'`;
+        if (Nh(Pv)) {
+          const vv = Pv.toDefinition();
+          if (vv.noSync) {
+            if (void 0 !== vv.view || vv.unreliable || vv.patchOnly || vv.fullStateOnly || vv.stream) throw new Error(`${ev} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            pv(jv, vv);
             continue
           }
-          if (zz.patchOnly && zz.fullStateOnly) throw new Error(`${Xz} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const tz = Lt(zz.type, Xz);
-          if ("function" === typeof tz && !cF.is(tz)) throw new Error(`${Xz} is a synced ref to non-Schema class '${tz.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          Fz[Yz] = tz, void 0 !== zz.view && (vz[Yz] = zz.view), zz.unreliable && Uz.push(Yz), zz.patchOnly && Kz.push(Yz), zz.deprecated && (uz[Yz] = zz.deprecatedThrows), zz.fullStateOnly && Nz.push(Yz), zz.stream && bz.push(Yz), void 0 !== zz.streamPriority && (wz[Yz] = zz.streamPriority), zz.optional && Dz.push(Yz), oz(Yz, zz)
+          if (vv.patchOnly && vv.fullStateOnly) throw new Error(`${ev} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const zv = Mz(vv.type, ev);
+          if ("function" === typeof zv && !Kh.is(zv)) throw new Error(`${ev} is a synced ref to non-Schema class '${zv.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          hv[jv] = zv, void 0 !== vv.view && (dv[jv] = vv.view), vv.unreliable && Nv.push(jv), vv.patchOnly && lv.push(jv), vv.deprecated && (Tv[jv] = vv.deprecatedThrows), vv.fullStateOnly && Wv.push(jv), vv.stream && wv.push(jv), void 0 !== vv.streamPriority && (av[jv] = vv.streamPriority), vv.optional && sv.push(jv), pv(jv, vv)
         } else {
-          if ("function" !== typeof sz) throw new Error(`${Xz} must be a t.* builder, Schema subclass, or method (got ${typeof sz}).`);
-          cF.is(sz) ? (Fz[Yz] = sz, sz.prototype.initialize && 0 !== sz.prototype.initialize.length || (Oz[Yz] = () => new sz)) : Wz[Yz] = sz
+          if ("function" !== typeof Pv) throw new Error(`${ev} must be a t.* builder, Schema subclass, or method (got ${typeof Pv}).`);
+          Kh.is(Pv) ? (hv[jv] = Pv, Pv.prototype.initialize && 0 !== Pv.prototype.initialize.length || (gv[jv] = () => new Pv)) : Sv[jv] = Pv
         }
       }
-      const gz = zz => {
-          for (const tz in Xz) zz[tz] = Xz[tz];
-          for (const tz in Oz) zz[tz] = Oz[tz]()
+      const Cv = vv => {
+          for (const zv in ev) vv[zv] = ev[zv];
+          for (const zv in gv) vv[zv] = gv[zv]()
         },
-        Hz = () => {
-          const zz = {};
-          return gz(zz), zz
+        iv = () => {
+          const vv = {};
+          return Cv(vv), vv
         },
-        Bz = "function" === typeof Wz.initialize,
-        Pz = Wz.initialize ?? sz._initialize,
-        rz = class extends sz {
+        cv = "function" === typeof Sv.initialize,
+        Gv = Sv.initialize ?? Pv._initialize,
+        mv = class extends Pv {
           constructor() {
-            for (var zz = arguments.length, tz = new Array(zz), sz = 0; sz < zz; sz++) tz[sz] = arguments[sz];
-            const Wz = tz[0];
-            void 0 === Wz ? (super(), gz(this)) : super(Object.assign(Hz(), Bz ? (zz => {
-              const tz = Object.keys(Fz),
-                sz = {};
-              for (const Fz in zz) tz.includes(Fz) || (sz[Fz] = zz[Fz]);
-              return sz
-            })(Wz) : Wz)), Pz && new.target === rz && Pz.apply(this, tz)
+            for (var vv = arguments.length, zv = new Array(vv), Pv = 0; Pv < vv; Pv++) zv[Pv] = arguments[Pv];
+            const Sv = zv[0];
+            void 0 === Sv ? (super(), Cv(this)) : super(Object.assign(iv(), cv ? (vv => {
+              const zv = Object.keys(hv),
+                Pv = {};
+              for (const hv in vv) zv.includes(hv) || (Pv[hv] = vv[hv]);
+              return Pv
+            })(Sv) : Sv)), Gv && new.target === mv && Gv.apply(this, zv)
           }
         };
-      tz && Object.defineProperty(rz, "name", {
-        value: tz
-      }), Vt.setFields(rz, Fz), rz._getDefaultValues = Hz, rz._initialize = Pz, Object.assign(rz.prototype, Wz);
-      for (const Yz in vz) PF(vz[Yz])(rz.prototype, Yz);
-      for (const Yz of Uz) rF(rz.prototype, Yz);
-      for (const Yz of Kz) YF(rz.prototype, Yz);
-      for (const Yz in uz) CF(uz[Yz])(rz.prototype, Yz);
-      if (Nz.length > 0 || bz.length > 0) {
-        const zz = rz[Symbol.metadata];
-        for (const tz of Nz) Vt.setFullStateOnly(zz, tz);
-        for (const tz of bz) Vt.setStream(zz, tz);
-        for (const tz in wz) Vt.setStreamPriority(zz, tz, wz[tz])
+      zv && Object.defineProperty(mv, "name", {
+        value: zv
+      }), oz.setFields(mv, hv), mv._getDefaultValues = iv, mv._initialize = Gv, Object.assign(mv.prototype, Sv);
+      for (const jv in dv) Ch(dv[jv])(mv.prototype, jv);
+      for (const jv of Nv) ih(mv.prototype, jv);
+      for (const jv of lv) ch(mv.prototype, jv);
+      for (const jv in Tv) Fh(Tv[jv])(mv.prototype, jv);
+      if (Wv.length > 0 || wv.length > 0) {
+        const vv = mv[Symbol.metadata];
+        for (const zv of Wv) oz.setFullStateOnly(vv, zv);
+        for (const zv of wv) oz.setStream(vv, zv);
+        for (const zv in av) oz.setStreamPriority(vv, zv, av[zv])
       }
-      if (Dz.length > 0) {
-        const zz = rz[Symbol.metadata];
-        for (const tz of Dz) zz[zz[tz]].optional = !0
+      if (sv.length > 0) {
+        const vv = mv[Symbol.metadata];
+        for (const zv of sv) vv[vv[zv]].optional = !0
       }
-      return rz.extend = (zz, tz) => GF(zz, tz, rz), rz
+      return mv.extend = (vv, zv) => Oh(vv, zv, mv), mv
     }
 
-    function TF(zz) {
-      const tz = zz[Dz].root,
-        sz = {
+    function Dh(vv) {
+      const zv = vv[sv].root,
+        Pv = {
           ops: {},
           refs: []
         };
-      let Fz = tz.changes.next;
-      for (; Fz;) {
-        const zz = Fz.changeTree;
-        void 0 !== zz ? (sz.refs.push(`refId#${zz.ref[oz]}`), zz.forEach(((zz, tz) => {
-          if (zz < 0 || !tz) return;
-          const Fz = Wz[tz];
-          sz.ops[Fz] || (sz.ops[Fz] = 0), sz.ops[Fz]++
-        })), Fz = Fz.next) : Fz = Fz.next
+      let hv = zv.changes.next;
+      for (; hv;) {
+        const vv = hv.changeTree;
+        void 0 !== vv ? (Pv.refs.push(`refId#${vv.ref[pv]}`), vv.forEach(((vv, zv) => {
+          if (vv < 0 || !zv) return;
+          const hv = Sv[zv];
+          Pv.ops[hv] || (Pv.ops[hv] = 0), Pv.ops[hv]++
+        })), hv = hv.next) : hv = hv.next
       }
-      return sz
+      return Pv
     }
-    class cF {
-      static[Uz] = ds;
-      static[Kz] = fs;
-      [oz];
-      [Yz];
-      static initialize(zz) {
-        Object.defineProperty(zz, Dz, {
-          value: new cs(zz),
+    class Kh {
+      static[Nv] = tP;
+      static[lv] = bP;
+      [pv];
+      [jv];
+      static initialize(vv) {
+        Object.defineProperty(vv, sv, {
+          value: new VP(vv),
           enumerable: !1,
           writable: !0
-        }), zz[Yz] = []
+        }), vv[jv] = []
       }
       static initializeForDecoder() {
-        const zz = Object.create(this.prototype);
-        return ys(zz), zz[Yz] = [], zz
+        const vv = Object.create(this.prototype);
+        return RP(vv), vv[jv] = [], vv
       }
-      static reset(zz) {
-        const tz = zz?.[Dz];
-        if (void 0 === tz || "function" !== typeof tz.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== tz.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${zz.constructor.name}) with multiple parents.`);
-        zz[Pz]()
-      } [Pz]() {
-        const zz = this.constructor[Symbol.metadata],
-          tz = zz?.[ez] ?? [],
-          sz = this[Yz];
-        for (let Fz = 0; Fz < tz.length; Fz++) {
-          const zz = sz[tz[Fz]];
-          zz?.[Pz]?.()
+      static reset(vv) {
+        const zv = vv?.[sv];
+        if (void 0 === zv || "function" !== typeof zv.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== zv.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${vv.constructor.name}) with multiple parents.`);
+        vv[Gv]()
+      } [Gv]() {
+        const vv = this.constructor[Symbol.metadata],
+          zv = vv?.[Dv] ?? [],
+          Pv = this[jv];
+        for (let hv = 0; hv < zv.length; hv++) {
+          const vv = Pv[zv[hv]];
+          vv?.[Gv]?.()
         }
-        this[Dz].recycle(), this[oz] = void 0
+        this[sv].recycle(), this[pv] = void 0
       }
-      static is(zz) {
-        const tz = zz[Symbol.metadata];
-        return "object" === typeof tz && null !== tz
+      static is(vv) {
+        const zv = vv[Symbol.metadata];
+        return "object" === typeof zv && null !== zv
       }
-      static isSchema(zz) {
-        return "function" === typeof zz?.assign
+      static isSchema(vv) {
+        return "function" === typeof vv?.assign
       }
-      static[vz](zz, tz) {
-        let sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Wz.ADD;
-        zz.change(tz, sz)
+      static[dv](vv, zv) {
+        let Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Sv.ADD;
+        vv.change(zv, Pv)
       }
-      static[uz](zz, tz, sz) {
-        const Fz = zz.constructor[Symbol.metadata],
-          Wz = Fz[tz]?.tag;
-        return void 0 === sz ? void 0 === Wz : void 0 === Wz || (Wz === HF ? sz.isChangeTreeVisible(zz[Dz]) : sz.hasTagOnTree(zz[Dz], Wz))
+      static[Tv](vv, zv, Pv) {
+        const hv = vv.constructor[Symbol.metadata],
+          Sv = hv[zv]?.tag;
+        return void 0 === Pv ? void 0 === Sv : void 0 === Sv || (Sv === ah ? Pv.isChangeTreeVisible(vv[sv]) : Pv.hasTagOnTree(vv[sv], Sv))
       }
-      constructor(zz) {
-        cF.initialize(this), zz && cF.assignProps(this, zz)
+      constructor(vv) {
+        Kh.initialize(this), vv && Kh.assignProps(this, vv)
       }
-      assign(zz) {
-        return cF.assignProps(this, zz), this
+      assign(vv) {
+        return Kh.assignProps(this, vv), this
       }
-      static assignProps(zz, tz) {
-        const sz = zz.constructor[Symbol.metadata];
-        if (sz && void 0 !== sz[Cz])
-          for (let Wz = 0; Wz <= sz[Cz]; Wz++) {
-            const Fz = sz[Wz];
-            if (!Fz) continue;
-            const Xz = tz[Fz.name];
-            void 0 !== Xz && (zz[Fz.name] = Xz)
+      static assignProps(vv, zv) {
+        const Pv = vv.constructor[Symbol.metadata];
+        if (Pv && void 0 !== Pv[Ov])
+          for (let Sv = 0; Sv <= Pv[Ov]; Sv++) {
+            const hv = Pv[Sv];
+            if (!hv) continue;
+            const ev = zv[hv.name];
+            void 0 !== ev && (vv[hv.name] = ev)
           }
-        const Fz = Object.keys(tz);
-        for (let Wz = 0; Wz < Fz.length; Wz++) {
-          const Xz = Fz[Wz];
-          sz && void 0 !== sz[Xz] || (zz[Xz] = tz[Xz])
+        const hv = Object.keys(zv);
+        for (let Sv = 0; Sv < hv.length; Sv++) {
+          const ev = hv[Sv];
+          Pv && void 0 !== Pv[ev] || (vv[ev] = zv[ev])
         }
       }
-      restore(zz) {
-        const tz = this.constructor[Symbol.metadata];
-        for (const sz in tz) {
-          const Fz = tz[sz],
-            Wz = Fz.name,
-            Xz = Fz.type,
-            Oz = zz[Wz];
-          if (void 0 !== Oz && null !== Oz)
-            if ("string" === typeof Xz) this[Wz] = Oz;
-            else if (cF.is(Xz)) {
-            const zz = new Xz;
-            zz.restore(Oz), this[Wz] = zz
-          } else if ("object" === typeof Xz) {
-            const zz = Object.keys(Xz)[0],
-              tz = Xz[zz];
-            if ("map" === zz) {
-              const zz = this[Wz];
-              for (const sz in Oz)
-                if (cF.is(tz)) {
-                  const Fz = new tz;
-                  Fz.restore(Oz[sz]), zz.set(sz, Fz)
-                } else zz.set(sz, Oz[sz])
-            } else if ("array" === zz) {
-              const zz = this[Wz];
-              for (let sz = 0; sz < Oz.length; sz++)
-                if (cF.is(tz)) {
-                  const Fz = new tz;
-                  Fz.restore(Oz[sz]), zz.push(Fz)
-                } else zz.push(Oz[sz])
+      restore(vv) {
+        const zv = this.constructor[Symbol.metadata];
+        for (const Pv in zv) {
+          const hv = zv[Pv],
+            Sv = hv.name,
+            ev = hv.type,
+            gv = vv[Sv];
+          if (void 0 !== gv && null !== gv)
+            if ("string" === typeof ev) this[Sv] = gv;
+            else if (Kh.is(ev)) {
+            const vv = new ev;
+            vv.restore(gv), this[Sv] = vv
+          } else if ("object" === typeof ev) {
+            const vv = Object.keys(ev)[0],
+              zv = ev[vv];
+            if ("map" === vv) {
+              const vv = this[Sv];
+              for (const Pv in gv)
+                if (Kh.is(zv)) {
+                  const hv = new zv;
+                  hv.restore(gv[Pv]), vv.set(Pv, hv)
+                } else vv.set(Pv, gv[Pv])
+            } else if ("array" === vv) {
+              const vv = this[Sv];
+              for (let Pv = 0; Pv < gv.length; Pv++)
+                if (Kh.is(zv)) {
+                  const hv = new zv;
+                  hv.restore(gv[Pv]), vv.push(hv)
+                } else vv.push(gv[Pv])
             }
           }
         }
         return this
       }
-      setDirty(zz, tz) {
-        const sz = this.constructor[Symbol.metadata];
-        this[Dz].change(sz[sz[zz]].index, tz)
+      setDirty(vv, zv) {
+        const Pv = this.constructor[Symbol.metadata];
+        this[sv].change(Pv[Pv[vv]].index, zv)
       }
       pauseTracking() {
-        this[Dz].pause()
+        this[sv].pause()
       }
       resumeTracking() {
-        this[Dz].resume()
+        this[sv].resume()
       }
-      untracked(zz) {
-        return this[Dz].untracked(zz)
+      untracked(vv) {
+        return this[sv].untracked(vv)
       }
       get isTrackingPaused() {
-        return this[Dz].paused
+        return this[sv].paused
       }
       clone() {
-        const zz = Object.create(this.constructor.prototype);
-        cF.initialize(zz);
-        const tz = this.constructor[Symbol.metadata];
-        for (const sz in tz) {
-          const Fz = tz[sz].name;
-          "object" === typeof this[Fz] && "function" === typeof this[Fz]?.clone ? zz[Fz] = this[Fz].clone() : zz[Fz] = this[Fz]
+        const vv = Object.create(this.constructor.prototype);
+        Kh.initialize(vv);
+        const zv = this.constructor[Symbol.metadata];
+        for (const Pv in zv) {
+          const hv = zv[Pv].name;
+          "object" === typeof this[hv] && "function" === typeof this[hv]?.clone ? vv[hv] = this[hv].clone() : vv[hv] = this[hv]
         }
-        return zz
+        return vv
       }
       toJSON() {
-        const zz = {},
-          tz = this.constructor[Symbol.metadata];
-        for (const sz in tz) {
-          const Fz = tz[sz],
-            Wz = Fz.name;
-          Fz.deprecated || null === this[Wz] || "undefined" === typeof this[Wz] || (zz[Wz] = "function" === typeof this[Wz].toJSON ? this[Wz].toJSON() : this[Wz])
+        const vv = {},
+          zv = this.constructor[Symbol.metadata];
+        for (const Pv in zv) {
+          const hv = zv[Pv],
+            Sv = hv.name;
+          hv.deprecated || null === this[Sv] || "undefined" === typeof this[Sv] || (vv[Sv] = "function" === typeof this[Sv].toJSON ? this[Sv].toJSON() : this[Sv])
         }
-        return zz
+        return vv
       }
       discardAllChanges() {
-        this[Dz].discardAll()
-      } [Nz](zz) {
-        return this[this.constructor[Symbol.metadata][zz].name]
-      } [bz](zz) {
-        this[this.constructor[Symbol.metadata][zz].name] = void 0
+        this[sv].discardAll()
+      } [Wv](vv) {
+        return this[this.constructor[Symbol.metadata][vv].name]
+      } [wv](vv) {
+        this[this.constructor[Symbol.metadata][vv].name] = void 0
       }
-      static debugRefIds(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Fz = arguments.length > 3 ? arguments[3] : void 0,
-          Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const Xz = tz ? ` - ${JSON.stringify(zz.toJSON())}` : "",
-          Oz = zz[Dz],
-          vz = zz[oz],
-          Uz = Fz ? Fz.root.refCount[vz] : Oz.refCount,
-          Kz = Uz > 1 ? ` [\xd7${Uz}]` : "";
-        let uz = `${function(zz){return new Array(zz).fill(0).map(((tz,sz)=>sz===zz-1?"\u2514\u2500 ":"   ")).join("")}(sz)}${Wz}${zz.constructor.name} (refId: ${vz})${Kz}${Xz}\n`;
-        return Oz.forEachChild(((Wz, Xz) => {
-          let Oz = Xz;
-          "number" === typeof Xz && zz.$indexes && (Oz = zz.$indexes.get(Xz) ?? Xz);
-          const oz = void 0 !== zz.forEach && void 0 !== Oz ? `["${Oz}"]: ` : "";
-          uz += this.debugRefIds(Wz.ref, tz, sz + 1, Fz, oz)
-        })), uz
+      static debugRefIds(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          hv = arguments.length > 3 ? arguments[3] : void 0,
+          Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const ev = zv ? ` - ${JSON.stringify(vv.toJSON())}` : "",
+          gv = vv[sv],
+          dv = vv[pv],
+          Nv = hv ? hv.root.refCount[dv] : gv.refCount,
+          lv = Nv > 1 ? ` [\xd7${Nv}]` : "";
+        let Tv = `${function(vv){return new Array(vv).fill(0).map(((zv,Pv)=>Pv===vv-1?"\u2514\u2500 ":"   ")).join("")}(Pv)}${Sv}${vv.constructor.name} (refId: ${dv})${lv}${ev}\n`;
+        return gv.forEachChild(((Sv, ev) => {
+          let gv = ev;
+          "number" === typeof ev && vv.$indexes && (gv = vv.$indexes.get(ev) ?? ev);
+          const pv = void 0 !== vv.forEach && void 0 !== gv ? `["${gv}"]: ` : "";
+          Tv += this.debugRefIds(Sv.ref, zv, Pv + 1, hv, pv)
+        })), Tv
       }
-      static debugRefIdEncodingOrder(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const sz = [],
-          Fz = zz[Dz];
-        if ("changes" === tz) {
-          let zz = Fz.root.changes?.next;
-          for (; zz;) zz.changeTree && sz.push(zz.changeTree.ref[oz]), zz = zz.next;
-          return sz
+      static debugRefIdEncodingOrder(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const Pv = [],
+          hv = vv[sv];
+        if ("changes" === zv) {
+          let vv = hv.root.changes?.next;
+          for (; vv;) vv.changeTree && Pv.push(vv.changeTree.ref[pv]), vv = vv.next;
+          return Pv
         }
-        const Wz = "allFilteredChanges" === tz,
-          Xz = new Set,
-          Oz = zz => {
-            Xz.has(zz) || (Xz.add(zz), zz.isFiltered === Wz && sz.push(zz.ref[oz]), zz.forEachChild(((zz, tz) => Oz(zz))))
+        const Sv = "allFilteredChanges" === zv,
+          ev = new Set,
+          gv = vv => {
+            ev.has(vv) || (ev.add(vv), vv.isFiltered === Sv && Pv.push(vv.ref[pv]), vv.forEachChild(((vv, zv) => gv(vv))))
           };
-        return Oz(Fz), sz
+        return gv(hv), Pv
       }
-      static debugRefIdsFromDecoder(zz) {
-        return this.debugRefIds(zz.state, !1, 0, zz)
+      static debugRefIdsFromDecoder(vv) {
+        return this.debugRefIds(vv.state, !1, 0, vv)
       }
-      static debugChanges(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const sz = zz[Dz],
-          Fz = tz ? "allChanges" : "changes";
-        let Xz = `${zz.constructor.name} (${zz[oz]}) -> .${Fz}:\n`;
-        return tz ? sz.forEachLive((zz => {
-          Xz += `- [${zz}]: ADD (${JSON.stringify(sz.getValue(Number(zz),!0))})\n`
-        })) : sz.forEach(((zz, tz) => {
-          zz < 0 || !tz || (Xz += `- [${zz}]: ${Wz[tz]} (${JSON.stringify(sz.getValue(Number(zz),!1))})\n`)
-        })), Xz
+      static debugChanges(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Pv = vv[sv],
+          hv = zv ? "allChanges" : "changes";
+        let ev = `${vv.constructor.name} (${vv[pv]}) -> .${hv}:\n`;
+        return zv ? Pv.forEachLive((vv => {
+          ev += `- [${vv}]: ADD (${JSON.stringify(Pv.getValue(Number(vv),!0))})\n`
+        })) : Pv.forEach(((vv, zv) => {
+          vv < 0 || !zv || (ev += `- [${vv}]: ${Sv[zv]} (${JSON.stringify(Pv.getValue(Number(vv),!1))})\n`)
+        })), ev
       }
     }
-    Xz(cF);
-    const jF = {
+    ev(Kh);
+    const Vh = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class AF {
+    class Uh {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const zz = {};
-        for (const tz in this.changeTrees) zz[tz] = this.changeTrees[tz].refCount;
-        return zz
+        const vv = {};
+        for (const zv in this.changeTrees) vv[zv] = this.changeTrees[zv].refCount;
+        return vv
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(zz) {
-        this.types.hasFilters && (zz.flags & Gs || (zz.flags |= Gs, this.pendingFilterRefresh.push(zz)))
+      enqueueFilterRefresh(vv) {
+        this.types.hasFilters && (vv.flags & DP || (vv.flags |= DP, this.pendingFilterRefresh.push(vv)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(zz) {
-        this._freeViewIds.push(zz)
+      releaseViewId(vv) {
+        this._freeViewIds.push(vv)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(zz) {
-        this.activeViews.set(zz.id, new WeakRef(zz))
+      registerView(vv) {
+        this.activeViews.set(vv.id, new WeakRef(vv))
       }
-      unregisterView(zz) {
-        this.activeViews.delete(zz.id);
-        const tz = zz.id;
-        for (const sz of this.streamTrees) sz._dropView(tz)
+      unregisterView(vv) {
+        this.activeViews.delete(vv.id);
+        const zv = vv.id;
+        for (const Pv of this.streamTrees) Pv._dropView(zv)
       }
-      forEachActiveView(zz) {
-        for (const [tz, sz] of this.activeViews) {
-          const Fz = sz.deref();
-          if (void 0 !== Fz) zz(Fz);
+      forEachActiveView(vv) {
+        for (const [zv, Pv] of this.activeViews) {
+          const hv = Pv.deref();
+          if (void 0 !== hv) vv(hv);
           else {
-            this.activeViews.delete(tz);
-            for (const zz of this.streamTrees) zz._dropView(tz)
+            this.activeViews.delete(zv);
+            for (const vv of this.streamTrees) vv._dropView(zv)
           }
         }
       }
-      registerStream(zz) {
-        this.streamTrees.add(zz)
+      registerStream(vv) {
+        this.streamTrees.add(vv)
       }
-      unregisterStream(zz) {
-        this.streamTrees.delete(zz)
+      unregisterStream(vv) {
+        this.streamTrees.delete(vv)
       }
-      constructor(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = zz, this.nextUniqueId = tz
+      constructor(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = vv, this.nextUniqueId = zv
       }
-      add(zz) {
-        const tz = zz.ref;
-        void 0 === tz[oz] && (jF.value = this.nextUniqueId++, Object.defineProperty(tz, oz, jF));
-        const sz = tz[oz],
-          Fz = void 0 === this.changeTrees[sz];
-        Fz && (this.changeTrees[sz] = zz), zz.needsRestage && (zz.needsRestage = !1, zz.forEachLiveWithCtx(zz, Fs));
-        const Wz = Fz ? 0 : zz.refCount;
-        return zz.refCount = Wz + 1, Wz > 0 && this.enqueueFilterRefresh(zz), Fz
+      add(vv) {
+        const zv = vv.ref;
+        void 0 === zv[pv] && (Vh.value = this.nextUniqueId++, Object.defineProperty(zv, pv, Vh));
+        const Pv = zv[pv],
+          hv = void 0 === this.changeTrees[Pv];
+        hv && (this.changeTrees[Pv] = vv), vv.needsRestage && (vv.needsRestage = !1, vv.forEachLiveWithCtx(vv, PP));
+        const Sv = hv ? 0 : vv.refCount;
+        return vv.refCount = Sv + 1, Sv > 0 && this.enqueueFilterRefresh(vv), hv
       }
-      remove(zz) {
-        const tz = zz.refCount - 1;
-        if (tz <= 0) {
-          if (zz.root = void 0, delete this.changeTrees[zz.ref[oz]], zz.isStreamCollection) {
-            const tz = zz.ref;
-            tz._unregister?.(), this.unregisterStream(tz)
+      remove(vv) {
+        const zv = vv.refCount - 1;
+        if (zv <= 0) {
+          if (vv.root = void 0, delete this.changeTrees[vv.ref[pv]], vv.isStreamCollection) {
+            const zv = vv.ref;
+            zv._unregister?.(), this.unregisterStream(zv)
           }
-          this.removeFromQueue(zz), this.removeFromUnreliableQueue(zz), zz.refCount = 0, zz.needsRestage = !0, zz.forEachChild(((tz, sz) => {
-            tz.removeParent(zz.ref) && (void 0 === tz.parentRef || tz.refCount > 0 ? this.remove(tz) : this.moveNextToParent(tz))
+          this.removeFromQueue(vv), this.removeFromUnreliableQueue(vv), vv.refCount = 0, vv.needsRestage = !0, vv.forEachChild(((zv, Pv) => {
+            zv.removeParent(vv.ref) && (void 0 === zv.parentRef || zv.refCount > 0 ? this.remove(zv) : this.moveNextToParent(zv))
           }))
-        } else zz.refCount = tz, this.enqueueFilterRefresh(zz), this.recursivelyMoveNextToParent(zz);
-        return tz
+        } else vv.refCount = zv, this.enqueueFilterRefresh(vv), this.recursivelyMoveNextToParent(vv);
+        return zv
       }
-      recursivelyMoveNextToParent(zz) {
-        this.moveNextToParent(zz), zz.forEachChild(((zz, tz) => this.recursivelyMoveNextToParent(zz)))
+      recursivelyMoveNextToParent(vv) {
+        this.moveNextToParent(vv), vv.forEachChild(((vv, zv) => this.recursivelyMoveNextToParent(vv)))
       }
-      moveNextToParent(zz) {
-        zz.changesNode && this._moveNextToParentInList(this.changes, zz, zz.changesNode, "changesNode"), zz.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, zz, zz.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(vv) {
+        vv.changesNode && this._moveNextToParentInList(this.changes, vv, vv.changesNode, "changesNode"), vv.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, vv, vv.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(zz, tz, sz, Fz) {
-        const Wz = tz.parent;
-        if (!Wz || !Wz[Dz]) return;
-        const Xz = Wz[Dz][Fz];
-        Xz && Xz !== sz && (sz.position > Xz.position || (sz.prev ? sz.prev.next = sz.next : zz.next = sz.next, sz.next ? sz.next.prev = sz.prev : zz.tail = sz.prev, sz.prev = zz.tail, sz.next = void 0, zz.tail.next = sz, zz.tail = sz, sz.position = zz.nextPosition++))
+      _moveNextToParentInList(vv, zv, Pv, hv) {
+        const Sv = zv.parent;
+        if (!Sv || !Sv[sv]) return;
+        const ev = Sv[sv][hv];
+        ev && ev !== Pv && (Pv.position > ev.position || (Pv.prev ? Pv.prev.next = Pv.next : vv.next = Pv.next, Pv.next ? Pv.next.prev = Pv.prev : vv.tail = Pv.prev, Pv.prev = vv.tail, Pv.next = void 0, vv.tail.next = Pv, vv.tail = Pv, Pv.position = vv.nextPosition++))
       }
-      enqueueChangeTree(zz) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz.changesNode) || (zz.changesNode = this._appendToList(this.changes, zz))
+      enqueueChangeTree(vv) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv.changesNode) || (vv.changesNode = this._appendToList(this.changes, vv))
       }
-      enqueueUnreliable(zz) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : zz.unreliableChangesNode) || (zz.unreliableChangesNode = this._appendToList(this.unreliableChanges, zz))
+      enqueueUnreliable(vv) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : vv.unreliableChangesNode) || (vv.unreliableChangesNode = this._appendToList(this.unreliableChanges, vv))
       }
-      _appendToList(zz, tz) {
-        const sz = this._nodePool;
-        let Fz;
-        return sz.length > 0 ? (Fz = sz.pop(), Fz.changeTree = tz, Fz.next = void 0, Fz.prev = void 0) : Fz = {
-          changeTree: tz,
+      _appendToList(vv, zv) {
+        const Pv = this._nodePool;
+        let hv;
+        return Pv.length > 0 ? (hv = Pv.pop(), hv.changeTree = zv, hv.next = void 0, hv.prev = void 0) : hv = {
+          changeTree: zv,
           next: void 0,
           prev: void 0,
           position: 0
-        }, zz.next ? (Fz.prev = zz.tail, zz.tail.next = Fz, zz.tail = Fz) : (zz.nextPosition = 0, zz.next = Fz, zz.tail = Fz), Fz.position = zz.nextPosition++, Fz
+        }, vv.next ? (hv.prev = vv.tail, vv.tail.next = hv, vv.tail = hv) : (vv.nextPosition = 0, vv.next = hv, vv.tail = hv), hv.position = vv.nextPosition++, hv
       }
-      releaseNode(zz) {
-        zz.changeTree = void 0, zz.prev = void 0, zz.next = void 0, this._nodePool.push(zz)
+      releaseNode(vv) {
+        vv.changeTree = void 0, vv.prev = void 0, vv.next = void 0, this._nodePool.push(vv)
       }
-      removeFromQueue(zz) {
-        return this._removeNode(this.changes, zz, zz.changesNode, "changesNode")
+      removeFromQueue(vv) {
+        return this._removeNode(this.changes, vv, vv.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(zz) {
-        return this._removeNode(this.unreliableChanges, zz, zz.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(vv) {
+        return this._removeNode(this.unreliableChanges, vv, vv.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(zz, tz, sz, Fz) {
-        return !(!sz || sz.changeTree !== tz) && (sz.prev ? sz.prev.next = sz.next : zz.next = sz.next, sz.next ? sz.next.prev = sz.prev : zz.tail = sz.prev, tz[Fz] = void 0, this.releaseNode(sz), !0)
+      _removeNode(vv, zv, Pv, hv) {
+        return !(!Pv || Pv.changeTree !== zv) && (Pv.prev ? Pv.prev.next = Pv.next : vv.next = Pv.next, Pv.next ? Pv.next.prev = Pv.prev : vv.tail = Pv.prev, zv[hv] = void 0, this.releaseNode(Pv), !0)
       }
     }
 
-    function yF(zz, tz) {
-      if (-1 === tz || tz >= zz.length) return !1;
-      const sz = zz.length - 1;
-      for (let Fz = tz; Fz < sz; Fz++) zz[Fz] = zz[Fz + 1];
-      return zz.length = sz, !0
+    function Rh(vv, zv) {
+      if (-1 === zv || zv >= vv.length) return !1;
+      const Pv = vv.length - 1;
+      for (let hv = zv; hv < Pv; hv++) vv[hv] = vv[hv + 1];
+      return vv.length = Pv, !0
     }
 
-    function MF(zz, tz, sz) {
-      const Fz = ~sz,
-        Wz = zz.changeTrees;
-      for (const Xz in Wz) {
-        const zz = Wz[Xz],
-          sz = zz.visibleViews;
-        void 0 !== sz && tz < sz.length && (sz[tz] &= Fz);
-        const Oz = zz.subscribedViews;
-        void 0 !== Oz && tz < Oz.length && (Oz[tz] &= Fz);
-        const oz = zz.tagViews;
-        void 0 !== oz && oz.forEach((zz => {
-          tz < zz.length && (zz[tz] &= Fz)
+    function xh(vv, zv, Pv) {
+      const hv = ~Pv,
+        Sv = vv.changeTrees;
+      for (const ev in Sv) {
+        const vv = Sv[ev],
+          Pv = vv.visibleViews;
+        void 0 !== Pv && zv < Pv.length && (Pv[zv] &= hv);
+        const gv = vv.subscribedViews;
+        void 0 !== gv && zv < gv.length && (gv[zv] &= hv);
+        const pv = vv.tagViews;
+        void 0 !== pv && pv.forEach((vv => {
+          zv < vv.length && (vv[zv] &= hv)
         }))
       }
     }
-    const dF = new FinalizationRegistry((zz => {
+    const th = new FinalizationRegistry((vv => {
       let {
-        root: tz,
-        id: sz,
-        slot: Fz,
-        bit: Wz
-      } = zz;
-      MF(tz, Fz, Wz), tz.activeViews.delete(sz);
-      for (const Xz of tz.streamTrees) Xz._dropView(sz);
-      tz.releaseViewId(sz)
+        root: zv,
+        id: Pv,
+        slot: hv,
+        bit: Sv
+      } = vv;
+      xh(zv, hv, Sv), zv.activeViews.delete(Pv);
+      for (const ev of zv.streamTrees) ev._dropView(Pv);
+      zv.releaseViewId(Pv)
     }));
 
-    function hF(zz) {
-      if (void 0 === zz) return "undefined";
-      if (null === zz) return "null";
-      const tz = typeof zz;
-      return "string" === tz ? JSON.stringify(zz.length > 30 ? `${zz.slice(0,30)}\u2026` : zz) : "object" !== tz && "function" !== tz ? `${tz} ${String(zz)}` : Array.isArray(zz) ? `Array(${zz.length})` : zz.constructor?.name ?? "Object"
+    function qh(vv) {
+      if (void 0 === vv) return "undefined";
+      if (null === vv) return "null";
+      const zv = typeof vv;
+      return "string" === zv ? JSON.stringify(vv.length > 30 ? `${vv.slice(0,30)}\u2026` : vv) : "object" !== zv && "function" !== zv ? `${zv} ${String(vv)}` : Array.isArray(vv) ? `Array(${vv.length})` : vv.constructor?.name ?? "Object"
     }
-    class QF {
+    class Ih {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = zz, zz && (this.items = [])
+        let vv = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = vv, vv && (this.items = [])
       }
-      _bindRoot(zz) {
-        void 0 === this._root && (this._root = zz, this.id = zz.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), zz.registerView(this), dF.register(this, {
-          root: zz,
+      _bindRoot(vv) {
+        void 0 === this._root && (this._root = vv, this.id = vv.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), vv.registerView(this), th.register(this, {
+          root: vv,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), MF(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), dF.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), xh(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), th.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(zz) {
-        const tz = zz.visibleViews,
-          sz = this._slot;
-        return void 0 !== tz && sz < tz.length && 0 !== (tz[sz] & this._bit)
+      isVisible(vv) {
+        const zv = vv.visibleViews,
+          Pv = this._slot;
+        return void 0 !== zv && Pv < zv.length && 0 !== (zv[Pv] & this._bit)
       }
-      markVisible(zz) {
-        const tz = this._slot;
-        let sz = zz.visibleViews;
-        for (void 0 === sz && (sz = zz.visibleViews = []); sz.length <= tz;) sz.push(0);
-        sz[tz] |= this._bit
+      markVisible(vv) {
+        const zv = this._slot;
+        let Pv = vv.visibleViews;
+        for (void 0 === Pv && (Pv = vv.visibleViews = []); Pv.length <= zv;) Pv.push(0);
+        Pv[zv] |= this._bit
       }
-      unmarkVisible(zz) {
-        const tz = zz.visibleViews;
-        if (void 0 === tz) return;
-        const sz = this._slot;
-        sz < tz.length && (tz[sz] &= ~this._bit)
+      unmarkVisible(vv) {
+        const zv = vv.visibleViews;
+        if (void 0 === zv) return;
+        const Pv = this._slot;
+        Pv < zv.length && (zv[Pv] &= ~this._bit)
       }
-      isSubscribed(zz) {
-        const tz = zz.subscribedViews,
-          sz = this._slot;
-        return void 0 !== tz && sz < tz.length && 0 !== (tz[sz] & this._bit)
+      isSubscribed(vv) {
+        const zv = vv.subscribedViews,
+          Pv = this._slot;
+        return void 0 !== zv && Pv < zv.length && 0 !== (zv[Pv] & this._bit)
       }
-      _setSubscribed(zz) {
-        const tz = this._slot;
-        let sz = zz.subscribedViews;
-        for (void 0 === sz && (sz = zz.subscribedViews = []); sz.length <= tz;) sz.push(0);
-        sz[tz] |= this._bit
+      _setSubscribed(vv) {
+        const zv = this._slot;
+        let Pv = vv.subscribedViews;
+        for (void 0 === Pv && (Pv = vv.subscribedViews = []); Pv.length <= zv;) Pv.push(0);
+        Pv[zv] |= this._bit
       }
-      _clearSubscribed(zz) {
-        const tz = zz.subscribedViews;
-        if (void 0 === tz) return;
-        const sz = this._slot;
-        sz < tz.length && (tz[sz] &= ~this._bit)
+      _clearSubscribed(vv) {
+        const zv = vv.subscribedViews;
+        if (void 0 === zv) return;
+        const Pv = this._slot;
+        Pv < zv.length && (zv[Pv] &= ~this._bit)
       }
-      hasTagOnTree(zz, tz) {
-        const sz = zz.tagViews;
-        if (void 0 === sz) return !1;
-        const Fz = this._slot,
-          Wz = this._bit;
-        for (let Xz = tz; 0 !== Xz; Xz &= Xz - 1) {
-          const zz = sz.get(Xz & -Xz);
-          if (void 0 !== zz && Fz < zz.length && 0 !== (zz[Fz] & Wz)) return !0
+      hasTagOnTree(vv, zv) {
+        const Pv = vv.tagViews;
+        if (void 0 === Pv) return !1;
+        const hv = this._slot,
+          Sv = this._bit;
+        for (let ev = zv; 0 !== ev; ev &= ev - 1) {
+          const vv = Pv.get(ev & -ev);
+          if (void 0 !== vv && hv < vv.length && 0 !== (vv[hv] & Sv)) return !0
         }
         return !1
       }
-      addTag(zz, tz) {
-        if (tz === HF) return;
-        let sz = zz.tagViews;
-        void 0 === sz && (sz = zz.tagViews = new Map);
-        const Fz = this._slot,
-          Wz = this._bit;
-        for (let Xz = tz; Xz > 0; Xz &= Xz - 1) {
-          const zz = Xz & -Xz;
-          let tz = sz.get(zz);
-          for (void 0 === tz && (tz = [], sz.set(zz, tz)); tz.length <= Fz;) tz.push(0);
-          tz[Fz] |= Wz
+      addTag(vv, zv) {
+        if (zv === ah) return;
+        let Pv = vv.tagViews;
+        void 0 === Pv && (Pv = vv.tagViews = new Map);
+        const hv = this._slot,
+          Sv = this._bit;
+        for (let ev = zv; ev > 0; ev &= ev - 1) {
+          const vv = ev & -ev;
+          let zv = Pv.get(vv);
+          for (void 0 === zv && (zv = [], Pv.set(vv, zv)); zv.length <= hv;) zv.push(0);
+          zv[hv] |= Sv
         }
       }
-      removeTag(zz, tz) {
-        if (tz === HF) return;
-        const sz = zz.tagViews;
-        if (void 0 === sz) return;
-        const Fz = this._slot,
-          Wz = ~this._bit;
-        for (let Xz = tz; Xz > 0; Xz &= Xz - 1) {
-          const zz = sz.get(Xz & -Xz);
-          void 0 !== zz && Fz < zz.length && (zz[Fz] &= Wz)
+      removeTag(vv, zv) {
+        if (zv === ah) return;
+        const Pv = vv.tagViews;
+        if (void 0 === Pv) return;
+        const hv = this._slot,
+          Sv = ~this._bit;
+        for (let ev = zv; ev > 0; ev &= ev - 1) {
+          const vv = Pv.get(ev & -ev);
+          void 0 !== vv && hv < vv.length && (vv[hv] &= Sv)
         }
       }
-      removeAllTagsOnTree(zz) {
-        const tz = zz.tagViews;
-        if (void 0 === tz) return;
-        const sz = this._slot,
-          Fz = ~this._bit;
-        tz.forEach((zz => {
-          sz < zz.length && (zz[sz] &= Fz)
+      removeAllTagsOnTree(vv) {
+        const zv = vv.tagViews;
+        if (void 0 === zv) return;
+        const Pv = this._slot,
+          hv = ~this._bit;
+        zv.forEach((vv => {
+          Pv < vv.length && (vv[Pv] &= hv)
         }))
       }
-      add(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HF,
-          sz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(zz, tz, sz, !1)
+      add(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ah,
+          Pv = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(vv, zv, Pv, !1)
       }
-      _addImmediate(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HF;
-        this._add(zz, tz, !0, !0)
+      _addImmediate(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ah;
+        this._add(vv, zv, !0, !0)
       }
-      _add(zz, tz, sz, Fz) {
-        const Xz = zz?.[Dz];
-        if (!Xz) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${hF(zz)}`), !1;
-        const Oz = Xz.parent;
-        if (!Oz && 0 !== zz[oz]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${Xz.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== Xz.root && this._bindRoot(Xz.root);
-        const vz = Oz?.[Dz];
-        if (!Fz && vz?.isStreamCollection) return ct(Oz, this.id, Xz.parentIndex), !0;
-        const Uz = zz.constructor[Symbol.metadata],
-          Kz = this.isVisible(Xz);
-        if (!this.iterable || !sz || Kz && -1 !== this.items.indexOf(zz) || this.items.push(zz), this.markVisible(Xz), sz && Oz && this.addParentOf(Xz, tz), !Fz && Xz.isStreamCollection) return !0;
-        if (tz === HF && Xz.isNew) return this._markSubtreeVisible(Xz, tz), !1;
-        let uz = this.changes.get(zz[oz]);
-        void 0 === uz && (uz = new Map, this.changes.set(zz[oz], uz));
-        let Nz = !1;
-        const bz = Xz.encDescriptor.tags;
-        if (Xz.forEachChild(((zz, sz) => {
-            const Fz = bz[sz];
-            if (void 0 !== Fz) {
-              if (!(Fz === HF || tz !== HF && 0 !== (Fz & tz))) return
+      _add(vv, zv, Pv, hv) {
+        const ev = vv?.[sv];
+        if (!ev) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${qh(vv)}`), !1;
+        const gv = ev.parent;
+        if (!gv && 0 !== vv[pv]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${ev.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== ev.root && this._bindRoot(ev.root);
+        const dv = gv?.[sv];
+        if (!hv && dv?.isStreamCollection) return Rz(gv, this.id, ev.parentIndex), !0;
+        const Nv = vv.constructor[Symbol.metadata],
+          lv = this.isVisible(ev);
+        if (!this.iterable || !Pv || lv && -1 !== this.items.indexOf(vv) || this.items.push(vv), this.markVisible(ev), Pv && gv && this.addParentOf(ev, zv), !hv && ev.isStreamCollection) return !0;
+        if (zv === ah && ev.isNew) return this._markSubtreeVisible(ev, zv), !1;
+        let Tv = this.changes.get(vv[pv]);
+        void 0 === Tv && (Tv = new Map, this.changes.set(vv[pv], Tv));
+        let Wv = !1;
+        const wv = ev.encDescriptor.tags;
+        if (ev.forEachChild(((vv, Pv) => {
+            const hv = wv[Pv];
+            if (void 0 !== hv) {
+              if (!(hv === ah || zv !== ah && 0 !== (hv & zv))) return
             }
-            this.add(zz.ref, tz, !1) && (Nz = !0)
-          })), tz !== HF) {
-          this.addTag(Xz, tz);
-          const zz = Uz?.[Gz];
-          if (void 0 !== zz)
-            for (let sz = tz; sz > 0; sz &= sz - 1) zz[sz & -sz]?.forEach((zz => {
-              Xz.getChange(zz) !== Wz.DELETE && uz.set(zz, Wz.ADD)
+            this.add(vv.ref, zv, !1) && (Wv = !0)
+          })), zv !== ah) {
+          this.addTag(ev, zv);
+          const vv = Nv?.[Vv];
+          if (void 0 !== vv)
+            for (let Pv = zv; Pv > 0; Pv &= Pv - 1) vv[Pv & -Pv]?.forEach((vv => {
+              ev.getChange(vv) !== Sv.DELETE && Tv.set(vv, Sv.ADD)
             }))
         }
-        if ((tz === HF || !Kz) && (!Xz.isNew || Nz))
-          if (Xz.isArray && "string" !== typeof Xz.refTarget[gz]) Xz.refTarget.items.length > 0 && (uz.set(-1, Wz.ADD), Nz = !0);
+        if ((zv === ah || !lv) && (!ev.isNew || Wv))
+          if (ev.isArray && "string" !== typeof ev.refTarget[Cv]) ev.refTarget.items.length > 0 && (Tv.set(-1, Sv.ADD), Wv = !0);
           else {
-            const zz = Xz.encDescriptor.tags;
-            Xz.forEachLive((sz => {
-              const Fz = zz[sz];
-              (void 0 === Fz || Fz === HF || tz !== HF && 0 !== (Fz & tz)) && (uz.set(sz, Wz.ADD), Nz = !0)
+            const vv = ev.encDescriptor.tags;
+            ev.forEachLive((Pv => {
+              const hv = vv[Pv];
+              (void 0 === hv || hv === ah || zv !== ah && 0 !== (hv & zv)) && (Tv.set(Pv, Sv.ADD), Wv = !0)
             }))
-          } return Nz
+          } return Wv
       }
-      _markSubtreeVisible(zz, tz) {
-        const sz = zz.encDescriptor.tags;
-        zz.forEachChild(((zz, Fz) => {
-          const Wz = sz[Fz];
-          if (void 0 !== Wz) {
-            if (!(Wz === HF || tz !== HF && 0 !== (Wz & tz))) return
+      _markSubtreeVisible(vv, zv) {
+        const Pv = vv.encDescriptor.tags;
+        vv.forEachChild(((vv, hv) => {
+          const Sv = Pv[hv];
+          if (void 0 !== Sv) {
+            if (!(Sv === ah || zv !== ah && 0 !== (Sv & zv))) return
           }
-          zz.isNew ? (this.markVisible(zz), this._markSubtreeVisible(zz, tz)) : this._add(zz.ref, tz, !1, !1)
+          vv.isNew ? (this.markVisible(vv), this._markSubtreeVisible(vv, zv)) : this._add(vv.ref, zv, !1, !1)
         }))
       }
-      addParentOf(zz, tz) {
-        const sz = zz.parent[Dz],
-          Fz = zz.parentIndex;
-        this.isVisible(sz) || this.markVisible(sz);
-        const Xz = sz.parent?.[Dz];
-        if (Xz && this.addParentOf(sz, tz), sz.hasFilteredFields && sz.getChange(Fz) !== Wz.DELETE) {
-          let Xz = this.changes.get(sz.ref[oz]);
-          void 0 === Xz && (Xz = new Map, this.changes.set(sz.ref[oz], Xz));
-          const Oz = sz.encDescriptor.tags[Fz];
-          void 0 !== Oz && Oz !== HF && 0 !== (Oz & tz) && this.addTag(sz, tz), Xz.set(sz.isArray ? zz : Fz, Wz.ADD)
+      addParentOf(vv, zv) {
+        const Pv = vv.parent[sv],
+          hv = vv.parentIndex;
+        this.isVisible(Pv) || this.markVisible(Pv);
+        const ev = Pv.parent?.[sv];
+        if (ev && this.addParentOf(Pv, zv), Pv.hasFilteredFields && Pv.getChange(hv) !== Sv.DELETE) {
+          let ev = this.changes.get(Pv.ref[pv]);
+          void 0 === ev && (ev = new Map, this.changes.set(Pv.ref[pv], ev));
+          const gv = Pv.encDescriptor.tags[hv];
+          void 0 !== gv && gv !== ah && 0 !== (gv & zv) && this.addTag(Pv, zv), ev.set(Pv.isArray ? vv : hv, Sv.ADD)
         }
       }
-      _touchAncestorsOf(zz) {
-        let tz = zz.parent?.[Dz];
-        if (void 0 === tz) return;
-        const sz = [];
-        for (; void 0 !== tz;) {
-          if (tz.hasFilteredFields) {
-            const zz = tz.ref[oz];
-            if (this.changes.has(zz)) break;
-            sz.push(tz)
+      _touchAncestorsOf(vv) {
+        let zv = vv.parent?.[sv];
+        if (void 0 === zv) return;
+        const Pv = [];
+        for (; void 0 !== zv;) {
+          if (zv.hasFilteredFields) {
+            const vv = zv.ref[pv];
+            if (this.changes.has(vv)) break;
+            Pv.push(zv)
           }
-          tz = tz.parent?.[Dz]
+          zv = zv.parent?.[sv]
         }
-        for (let Fz = sz.length - 1; Fz >= 0; Fz--) this.changes.set(sz[Fz].ref[oz], new Map)
+        for (let hv = Pv.length - 1; hv >= 0; hv--) this.changes.set(Pv[hv].ref[pv], new Map)
       }
-      remove(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HF,
-          sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const Fz = zz?.[Dz];
-        if (!Fz) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${hF(zz)}`), this;
-        const Xz = Fz.parent?.[Dz];
-        if (Xz?.isStreamCollection) return this.unmarkVisible(Fz), this.iterable && !sz && yF(this.items, this.items.indexOf(zz)),
-          function(zz, tz, sz, Fz, Xz) {
-            const Oz = zz._stream;
-            if (void 0 === Oz) return !1;
-            const oz = Oz.pendingByView.get(tz);
-            if (oz?.has(Fz)) return oz.delete(Fz), !1;
-            const vz = Oz.sentByView.get(tz);
-            if (vz?.has(Fz)) {
-              vz.delete(Fz);
-              let zz = Xz.get(sz);
-              return void 0 === zz && (zz = new Map, Xz.set(sz, zz)), zz.set(Fz, Wz.DELETE), !0
+      remove(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ah,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const hv = vv?.[sv];
+        if (!hv) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${qh(vv)}`), this;
+        const ev = hv.parent?.[sv];
+        if (ev?.isStreamCollection) return this.unmarkVisible(hv), this.iterable && !Pv && Rh(this.items, this.items.indexOf(vv)),
+          function(vv, zv, Pv, hv, ev) {
+            const gv = vv._stream;
+            if (void 0 === gv) return !1;
+            const pv = gv.pendingByView.get(zv);
+            if (pv?.has(hv)) return pv.delete(hv), !1;
+            const dv = gv.sentByView.get(zv);
+            if (dv?.has(hv)) {
+              dv.delete(hv);
+              let vv = ev.get(Pv);
+              return void 0 === vv && (vv = new Map, ev.set(Pv, vv)), vv.set(hv, Sv.DELETE), !0
             }
-          }(Fz.parent, this.id, Fz.parent[oz], Fz.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Fz), this;
-        if (Fz.isStreamCollection) {
-          this.unmarkVisible(Fz), this.iterable && !sz && yF(this.items, this.items.indexOf(zz));
-          const tz = Fz.ref,
-            Xz = tz._stream;
-          if (void 0 !== Xz) {
-            Xz.pendingByView.get(this.id)?.clear();
-            const zz = Xz.sentByView.get(this.id);
-            if (void 0 !== zz && zz.size > 0) {
-              const sz = tz[oz];
-              let Fz = this.changes.get(sz);
-              void 0 === Fz && (Fz = new Map, this.changes.set(sz, Fz));
-              for (const tz of zz) Fz.set(tz, Wz.DELETE);
-              zz.clear()
+          }(hv.parent, this.id, hv.parent[pv], hv.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(hv), this;
+        if (hv.isStreamCollection) {
+          this.unmarkVisible(hv), this.iterable && !Pv && Rh(this.items, this.items.indexOf(vv));
+          const zv = hv.ref,
+            ev = zv._stream;
+          if (void 0 !== ev) {
+            ev.pendingByView.get(this.id)?.clear();
+            const vv = ev.sentByView.get(this.id);
+            if (void 0 !== vv && vv.size > 0) {
+              const Pv = zv[pv];
+              let hv = this.changes.get(Pv);
+              void 0 === hv && (hv = new Map, this.changes.set(Pv, hv));
+              for (const zv of vv) hv.set(zv, Sv.DELETE);
+              vv.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(Fz), this.iterable && !sz && yF(this.items, this.items.indexOf(zz));
-        const Oz = Fz.ref,
-          vz = Oz.constructor[Symbol.metadata],
-          Uz = Oz[oz];
-        this._touchAncestorsOf(Fz);
-        let Kz = this.changes.get(Uz);
-        if (void 0 === Kz && (Kz = new Map, this.changes.set(Uz, Kz)), tz === HF) {
-          const zz = Fz.parent;
-          if (zz && !Vt.isValidInstance(zz) && Fz.isFiltered) {
-            const tz = Xz.isArray ? Fz : Fz.parentIndex,
-              sz = zz[oz];
-            let Oz = this.changes.get(sz);
-            void 0 === Oz ? (Oz = new Map, this.changes.set(sz, Oz)) : Oz.get(tz) === Wz.ADD && this._dropPendingEntries(Fz), Oz.set(tz, Wz.DELETE), this._recursiveDeleteVisibleChangeTree(Fz)
-          } else vz?.[Zz]?.forEach((zz => this._removeViewField(Fz, Kz, zz)))
+        this.unmarkVisible(hv), this.iterable && !Pv && Rh(this.items, this.items.indexOf(vv));
+        const gv = hv.ref,
+          dv = gv.constructor[Symbol.metadata],
+          Nv = gv[pv];
+        this._touchAncestorsOf(hv);
+        let lv = this.changes.get(Nv);
+        if (void 0 === lv && (lv = new Map, this.changes.set(Nv, lv)), zv === ah) {
+          const vv = hv.parent;
+          if (vv && !oz.isValidInstance(vv) && hv.isFiltered) {
+            const zv = ev.isArray ? hv : hv.parentIndex,
+              Pv = vv[pv];
+            let gv = this.changes.get(Pv);
+            void 0 === gv ? (gv = new Map, this.changes.set(Pv, gv)) : gv.get(zv) === Sv.ADD && this._dropPendingEntries(hv), gv.set(zv, Sv.DELETE), this._recursiveDeleteVisibleChangeTree(hv)
+          } else dv?.[Kv]?.forEach((vv => this._removeViewField(hv, lv, vv)))
         } else {
-          const zz = vz?.[Gz];
-          if (void 0 !== zz)
-            for (let sz = tz; sz > 0; sz &= sz - 1) zz[sz & -sz]?.forEach((zz => this._removeViewField(Fz, Kz, zz)))
+          const vv = dv?.[Vv];
+          if (void 0 !== vv)
+            for (let Pv = zv; Pv > 0; Pv &= Pv - 1) vv[Pv & -Pv]?.forEach((vv => this._removeViewField(hv, lv, vv)))
         }
-        return void 0 === tz ? this.removeAllTagsOnTree(Fz) : this.removeTag(Fz, tz), this
+        return void 0 === zv ? this.removeAllTagsOnTree(hv) : this.removeTag(hv, zv), this
       }
-      has(zz) {
-        return this.isVisible(zz[Dz])
+      has(vv) {
+        return this.isVisible(vv[sv])
       }
-      hasTag(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : HF;
-        return this.hasTagOnTree(zz[Dz], tz)
+      hasTag(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ah;
+        return this.hasTagOnTree(vv[sv], zv)
       }
-      subscribe(zz, tz) {
-        const sz = zz?.[Dz];
-        if (!sz) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${hF(zz)}`), this;
-        if (void 0 === this._root && void 0 !== sz.root && this._bindRoot(sz.root), void 0 !== tz)
-          if (sz.isStreamCollection) {
-            const sz = Ct(zz);
-            null === tz ? sz.priorityByView?.delete(this.id) : (sz.priorityByView ??= new Map).set(this.id, tz)
+      subscribe(vv, zv) {
+        const Pv = vv?.[sv];
+        if (!Pv) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${qh(vv)}`), this;
+        if (void 0 === this._root && void 0 !== Pv.root && this._bindRoot(Pv.root), void 0 !== zv)
+          if (Pv.isStreamCollection) {
+            const Pv = Oz(vv);
+            null === zv ? Pv.priorityByView?.delete(this.id) : (Pv.priorityByView ??= new Map).set(this.id, zv)
           } else {
-            const tz = zz?.constructor?.name ?? "collection",
-              Fz = sz.parent;
-            if (void 0 === Fz) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${tz} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const zv = vv?.constructor?.name ?? "collection",
+              hv = Pv.parent;
+            if (void 0 === hv) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${zv} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const zz = Fz?.constructor?.[Symbol.metadata]?.[sz.parentIndex]?.name,
-                Wz = zz ? `${Fz.constructor.name}#${zz}` : tz;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Wz} is a ${tz}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const vv = hv?.constructor?.[Symbol.metadata]?.[Pv.parentIndex]?.name,
+                Sv = vv ? `${hv.constructor.name}#${vv}` : zv;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Sv} is a ${zv}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(sz)) return this;
-        const Fz = void 0 !== sz.parent && !this.isVisible(sz);
-        if (Fz ? (this.addParentOf(sz, HF), this._add(zz, HF, !1, !1)) : this.markVisible(sz), this._setSubscribed(sz), sz.isStreamCollection) {
-          const tz = zz;
-          sz.forEachChild(((zz, sz) => {
-            ct(tz, this.id, sz)
+          } if (this.isSubscribed(Pv)) return this;
+        const hv = void 0 !== Pv.parent && !this.isVisible(Pv);
+        if (hv ? (this.addParentOf(Pv, ah), this._add(vv, ah, !1, !1)) : this.markVisible(Pv), this._setSubscribed(Pv), Pv.isStreamCollection) {
+          const zv = vv;
+          Pv.forEachChild(((vv, Pv) => {
+            Rz(zv, this.id, Pv)
           }))
-        } else Fz || sz.forEachChild((zz => {
-          this.markVisible(zz)
+        } else hv || Pv.forEachChild((vv => {
+          this.markVisible(vv)
         }));
         return this
       }
-      unsubscribe(zz) {
-        const tz = zz?.[Dz];
-        if (!tz) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${hF(zz)}`), this;
-        if (!this.isSubscribed(tz)) return this;
-        this._clearSubscribed(tz);
-        const sz = tz.ref[oz];
-        if (tz.isStreamCollection) {
-          const tz = zz._stream;
-          if (void 0 !== tz) {
-            tz.pendingByView.get(this.id)?.clear();
-            const zz = tz.sentByView.get(this.id);
-            if (void 0 !== zz && zz.size > 0) {
-              let tz = this.changes.get(sz);
-              void 0 === tz && (tz = new Map, this.changes.set(sz, tz));
-              for (const sz of zz) tz.set(sz, Wz.DELETE);
-              zz.clear()
+      unsubscribe(vv) {
+        const zv = vv?.[sv];
+        if (!zv) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${qh(vv)}`), this;
+        if (!this.isSubscribed(zv)) return this;
+        this._clearSubscribed(zv);
+        const Pv = zv.ref[pv];
+        if (zv.isStreamCollection) {
+          const zv = vv._stream;
+          if (void 0 !== zv) {
+            zv.pendingByView.get(this.id)?.clear();
+            const vv = zv.sentByView.get(this.id);
+            if (void 0 !== vv && vv.size > 0) {
+              let zv = this.changes.get(Pv);
+              void 0 === zv && (zv = new Map, this.changes.set(Pv, zv));
+              for (const Pv of vv) zv.set(Pv, Sv.DELETE);
+              vv.clear()
             }
           }
         } else {
-          const zz = tz.isArray;
-          let Fz = this.changes.get(sz);
-          tz.forEachChild(((tz, Xz) => {
-            void 0 === Fz && (Fz = new Map, this.changes.set(sz, Fz)), Fz.set(zz ? tz : Xz, Wz.DELETE), this.unmarkVisible(tz)
+          const vv = zv.isArray;
+          let hv = this.changes.get(Pv);
+          zv.forEachChild(((zv, ev) => {
+            void 0 === hv && (hv = new Map, this.changes.set(Pv, hv)), hv.set(vv ? zv : ev, Sv.DELETE), this.unmarkVisible(zv)
           }))
         }
-        return this.unmarkVisible(tz), this
+        return this.unmarkVisible(zv), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let zz = 0, tz = this.items.length; zz < tz; zz++) this.remove(this.items[zz], HF, !0);
+        for (let vv = 0, zv = this.items.length; vv < zv; vv++) this.remove(this.items[vv], ah, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(zz) {
-        let tz = this.isVisible(zz);
-        if (!tz && zz.isVisibilitySharedWithParent)
-          if (this.isVisible(zz.parent[Dz])) this.markVisible(zz), tz = !0;
+      isChangeTreeVisible(vv) {
+        let zv = this.isVisible(vv);
+        if (!zv && vv.isVisibilitySharedWithParent)
+          if (this.isVisible(vv.parent[sv])) this.markVisible(vv), zv = !0;
           else
-            for (let sz = zz.extraParents; void 0 !== sz; sz = sz.next) {
-              const Fz = sz.ref[Dz];
-              if (Fz.isFiltered && this.isVisible(Fz)) {
-                this.markVisible(zz), tz = !0;
+            for (let Pv = vv.extraParents; void 0 !== Pv; Pv = Pv.next) {
+              const hv = Pv.ref[sv];
+              if (hv.isFiltered && this.isVisible(hv)) {
+                this.markVisible(vv), zv = !0;
                 break
               }
             }
-        return tz
+        return zv
       }
-      _recursiveDeleteVisibleChangeTree(zz) {
-        zz.forEachChild((zz => {
-          this.unmarkVisible(zz), this._recursiveDeleteVisibleChangeTree(zz)
+      _recursiveDeleteVisibleChangeTree(vv) {
+        vv.forEachChild((vv => {
+          this.unmarkVisible(vv), this._recursiveDeleteVisibleChangeTree(vv)
         }))
       }
-      _dropPendingEntries(zz) {
-        this.changes.delete(zz.ref[oz]), zz.forEachChild((zz => this._dropPendingEntries(zz)))
+      _dropPendingEntries(vv) {
+        this.changes.delete(vv.ref[pv]), vv.forEachChild((vv => this._dropPendingEntries(vv)))
       }
-      _removeViewField(zz, tz, sz) {
-        const Fz = tz.get(sz) === Wz.ADD;
-        tz.set(sz, Wz.DELETE);
-        const Xz = zz.ref[zz.encDescriptor.names[sz]],
-          Oz = Xz?.[Dz];
-        Oz && (this.unmarkVisible(Oz), this._recursiveDeleteVisibleChangeTree(Oz), Fz && this._dropPendingEntries(Oz))
+      _removeViewField(vv, zv, Pv) {
+        const hv = zv.get(Pv) === Sv.ADD;
+        zv.set(Pv, Sv.DELETE);
+        const ev = vv.ref[vv.encDescriptor.names[Pv]],
+          gv = ev?.[sv];
+        gv && (this.unmarkVisible(gv), this._recursiveDeleteVisibleChangeTree(gv), hv && this._dropPendingEntries(gv))
       }
     }
 
-    function kF(zz) {
-      zz.structSwitchEmitted || (zz.shouldEmitSwitch && (zz.buffer[zz.it.offset++] = 255, tt.number(zz.buffer, zz.ref[oz], zz.it)), zz.structSwitchEmitted = !0)
+    function Qh(vv) {
+      vv.structSwitchEmitted || (vv.shouldEmitSwitch && (vv.buffer[vv.it.offset++] = 255, zz.number(vv.buffer, vv.ref[pv], vv.it)), vv.structSwitchEmitted = !0)
     }
 
-    function iF(zz, tz) {
-      nF(zz, tz, Wz.ADD)
+    function Zh(vv, zv) {
+      Hh(vv, zv, Sv.ADD)
     }
 
-    function LF(zz, tz) {
-      if (tz._fullSyncGen === zz.gen) return;
-      tz._fullSyncGen = zz.gen;
-      if (!zz.hasView || zz.view.isChangeTreeVisible(tz)) {
-        const sz = tz.encDescriptor;
-        zz.changeTree = tz, zz.ref = tz.ref, zz.encoder = sz.encoder, zz.filter = sz.filter, zz.metadata = sz.metadata, zz.treeIsFiltered = tz.isFiltered, zz.isSchema = sz.isSchema, zz.filterBitmask = sz.filterBitmask, zz.tags = sz.tags, zz.structSwitchEmitted = !1, zz.shouldEmitSwitch = zz.hasView || zz.it.offset > zz.initialOffset || tz !== zz.rootChangeTree, tz.isArray && tz.collDirty.size > 0 && (tz.flags |= 512), Xs(tz, zz, iF)
+    function Ah(vv, zv) {
+      if (zv._fullSyncGen === vv.gen) return;
+      zv._fullSyncGen = vv.gen;
+      if (!vv.hasView || vv.view.isChangeTreeVisible(zv)) {
+        const Pv = zv.encDescriptor;
+        vv.changeTree = zv, vv.ref = zv.ref, vv.encoder = Pv.encoder, vv.filter = Pv.filter, vv.metadata = Pv.metadata, vv.treeIsFiltered = zv.isFiltered, vv.isSchema = Pv.isSchema, vv.filterBitmask = Pv.filterBitmask, vv.tags = Pv.tags, vv.structSwitchEmitted = !1, vv.shouldEmitSwitch = vv.hasView || vv.it.offset > vv.initialOffset || zv !== vv.rootChangeTree, zv.isArray && zv.collDirty.size > 0 && (zv.flags |= 512), SP(zv, vv, Zh)
       }
-      Bs(tz, zz, lF)
+      iP(zv, vv, Lh)
     }
 
-    function lF(zz, tz, sz) {
-      LF(zz, tz)
+    function Lh(vv, zv, Pv) {
+      Ah(vv, zv)
     }
 
-    function nF(zz, tz, sz) {
-      if (tz < 0) {
-        if (zz.treeIsFiltered !== zz.emitFiltered) return;
-        return kF(zz), void(zz.buffer[zz.it.offset++] = 255 & Math.abs(tz))
+    function Hh(vv, zv, Pv) {
+      if (zv < 0) {
+        if (vv.treeIsFiltered !== vv.emitFiltered) return;
+        return Qh(vv), void(vv.buffer[vv.it.offset++] = 255 & Math.abs(zv))
       }
-      if ((zz.isSchema ? zz.treeIsFiltered || (tz < 32 ? 0 !== (zz.filterBitmask & 1 << tz) : void 0 !== zz.tags[tz]) : zz.treeIsFiltered) !== zz.emitFiltered) return;
-      const Fz = zz.isEncodeAll ? Wz.ADD : sz;
-      void 0 !== Fz && (void 0 === zz.filter || zz.filter(zz.ref, tz, zz.view)) && (kF(zz), zz.encoder(zz.self, zz.buffer, zz.changeTree, tz, Fz, zz.it, zz.isEncodeAll, zz.hasView, zz.metadata))
+      if ((vv.isSchema ? vv.treeIsFiltered || (zv < 32 ? 0 !== (vv.filterBitmask & 1 << zv) : void 0 !== vv.tags[zv]) : vv.treeIsFiltered) !== vv.emitFiltered) return;
+      const hv = vv.isEncodeAll ? Sv.ADD : Pv;
+      void 0 !== hv && (void 0 === vv.filter || vv.filter(vv.ref, zv, vv.view)) && (Qh(vv), vv.encoder(vv.self, vv.buffer, vv.changeTree, zv, hv, vv.it, vv.isEncodeAll, vv.hasView, vv.metadata))
     }
 
-    function aF(zz, tz) {
-      const sz = new Uint8Array(zz.length + tz.length);
-      return sz.set(zz, 0), sz.set(tz, zz.length), sz
+    function Mh(vv, zv) {
+      const Pv = new Uint8Array(vv.length + zv.length);
+      return Pv.set(vv, 0), Pv.set(zv, vv.length), Pv
     }
-    class qF {
+    class yh {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(qF.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(yh.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(zz, tz) {
-        this.context = kt.cache(zz.constructor), this.root = tz ?? new AF(this.context), this.setState(zz)
+      constructor(vv, zv) {
+        this.context = Lz.cache(vv.constructor), this.root = zv ?? new Uh(this.context), this.setState(vv)
       }
-      setState(zz) {
-        this.state = zz, this.state[Dz].setRoot(this.root)
+      setState(vv) {
+        this.state = vv, this.state[sv].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          tz = arguments.length > 1 ? arguments[1] : void 0,
-          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz.offset;
-        return this._encodeChannel(zz, tz, sz, Fz, !1)
+          zv = arguments.length > 1 ? arguments[1] : void 0,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vv.offset;
+        return this._encodeChannel(vv, zv, Pv, hv, !1)
       }
       encodeUnreliable() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          tz = arguments.length > 1 ? arguments[1] : void 0,
-          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zz.offset;
-        return this._encodeChannel(zz, tz, sz, Fz, !0)
+          zv = arguments.length > 1 ? arguments[1] : void 0,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : vv.offset;
+        return this._encodeChannel(vv, zv, Pv, hv, !0)
       }
-      _encodeChannel(zz, tz, sz, Fz, Wz) {
-        this.root.pendingFilterRefresh.length > 0 && os(this.root);
-        const Xz = void 0 !== tz,
-          Oz = this.state[Dz],
-          oz = this._encodeCtx;
-        oz.self = this, oz.buffer = sz, oz.it = zz, oz.view = tz, oz.isEncodeAll = !1, oz.hasView = Xz, oz.emitFiltered = Xz;
-        let vz = Wz ? this.root.unreliableChanges : this.root.changes;
-        for (; vz = vz.next;) {
-          const sz = vz.changeTree;
-          if (Xz && !tz.isChangeTreeVisible(sz)) continue;
-          const Uz = Wz ? sz.unreliableRecorder : sz;
-          if (!Uz || !Uz.has()) continue;
-          const Kz = sz.encDescriptor;
-          oz.changeTree = sz, oz.ref = sz.ref, oz.encoder = Kz.encoder, oz.filter = Kz.filter, oz.metadata = Kz.metadata, oz.treeIsFiltered = sz.isFiltered, oz.isSchema = Kz.isSchema, oz.filterBitmask = Kz.filterBitmask, oz.tags = Kz.tags, oz.structSwitchEmitted = !1, oz.isRootTree = sz === Oz, oz.shouldEmitSwitch = Xz || zz.offset > Fz || !oz.isRootTree, Uz.forEachWithCtx(oz, nF)
+      _encodeChannel(vv, zv, Pv, hv, Sv) {
+        this.root.pendingFilterRefresh.length > 0 && gP(this.root);
+        const ev = void 0 !== zv,
+          gv = this.state[sv],
+          pv = this._encodeCtx;
+        pv.self = this, pv.buffer = Pv, pv.it = vv, pv.view = zv, pv.isEncodeAll = !1, pv.hasView = ev, pv.emitFiltered = ev;
+        let dv = Sv ? this.root.unreliableChanges : this.root.changes;
+        for (; dv = dv.next;) {
+          const Pv = dv.changeTree;
+          if (ev && !zv.isChangeTreeVisible(Pv)) continue;
+          const Nv = Sv ? Pv.unreliableRecorder : Pv;
+          if (!Nv || !Nv.has()) continue;
+          const lv = Pv.encDescriptor;
+          pv.changeTree = Pv, pv.ref = Pv.ref, pv.encoder = lv.encoder, pv.filter = lv.filter, pv.metadata = lv.metadata, pv.treeIsFiltered = Pv.isFiltered, pv.isSchema = lv.isSchema, pv.filterBitmask = lv.filterBitmask, pv.tags = lv.tags, pv.structSwitchEmitted = !1, pv.isRootTree = Pv === gv, pv.shouldEmitSwitch = ev || vv.offset > hv || !pv.isRootTree, Nv.forEachWithCtx(pv, Hh)
         }
-        return Wz || Xz || !this._isStreamBroadcastMode || this._emitStreamBroadcast(sz, zz), zz.offset > sz.byteLength ? (sz = this._resizeBuffer(sz, zz.offset), zz.offset = Fz, this._encodeChannel(zz, tz, sz, Fz, Wz)) : sz.subarray(0, zz.offset)
+        return Sv || ev || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Pv, vv), vv.offset > Pv.byteLength ? (Pv = this._resizeBuffer(Pv, vv.offset), vv.offset = hv, this._encodeChannel(vv, zv, Pv, hv, Sv)) : Pv.subarray(0, vv.offset)
       }
-      encodeFullSync(zz, tz, sz, Fz) {
-        let Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : zz.offset;
-        this.root.pendingFilterRefresh.length > 0 && os(this.root);
-        const Xz = void 0 !== Fz,
-          Oz = this.state[Dz],
-          oz = this._encodeCtx;
-        return oz.self = this, oz.buffer = tz, oz.it = zz, oz.view = Fz, oz.isEncodeAll = !0, oz.hasView = Xz, oz.emitFiltered = sz, oz.gen = ++this._fullSyncGen, oz.initialOffset = Wz, oz.rootChangeTree = Oz, LF(oz, Oz), zz.offset > tz.byteLength ? (tz = this._resizeBuffer(tz, zz.offset), zz.offset = Wz, this.encodeFullSync(zz, tz, sz, Fz, Wz)) : tz.subarray(0, zz.offset)
+      encodeFullSync(vv, zv, Pv, hv) {
+        let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : vv.offset;
+        this.root.pendingFilterRefresh.length > 0 && gP(this.root);
+        const ev = void 0 !== hv,
+          gv = this.state[sv],
+          pv = this._encodeCtx;
+        return pv.self = this, pv.buffer = zv, pv.it = vv, pv.view = hv, pv.isEncodeAll = !0, pv.hasView = ev, pv.emitFiltered = Pv, pv.gen = ++this._fullSyncGen, pv.initialOffset = Sv, pv.rootChangeTree = gv, Ah(pv, gv), vv.offset > zv.byteLength ? (zv = this._resizeBuffer(zv, vv.offset), vv.offset = Sv, this.encodeFullSync(vv, zv, Pv, hv, Sv)) : zv.subarray(0, vv.offset)
       }
-      _resizeBuffer(zz, tz) {
-        const sz = Math.ceil(tz / qF.BUFFER_SIZE) * qF.BUFFER_SIZE,
-          Fz = new Uint8Array(sz);
-        return Fz.set(zz), zz === this.sharedBuffer && (this.sharedBuffer = Fz), Fz
+      _resizeBuffer(vv, zv) {
+        const Pv = Math.ceil(zv / yh.BUFFER_SIZE) * yh.BUFFER_SIZE,
+          hv = new Uint8Array(Pv);
+        return hv.set(vv), vv === this.sharedBuffer && (this.sharedBuffer = hv), hv
       }
       encodeAll() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(zz, tz, !1)
+          zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(vv, zv, !1)
       }
-      encodeAllView(zz, tz, sz) {
-        let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Wz = sz.offset;
-        return Fz = this.encodeFullSync(sz, Fz, !0, zz, Wz), aF(Fz.subarray(0, tz), Fz.subarray(Wz, sz.offset))
+      encodeAllView(vv, zv, Pv) {
+        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Sv = Pv.offset;
+        return hv = this.encodeFullSync(Pv, hv, !0, vv, Sv), Mh(hv.subarray(0, zv), hv.subarray(Sv, Pv.offset))
       }
-      ensureCapacity(zz, tz) {
-        if (tz + qF.BUFFER_SIZE <= zz.byteLength) return zz;
-        const sz = Math.ceil((tz + qF.BUFFER_SIZE) / qF.BUFFER_SIZE) * qF.BUFFER_SIZE,
-          Fz = new Uint8Array(sz);
-        return Fz.set(zz.subarray(0, tz)), zz === this.sharedBuffer && (this.sharedBuffer = Fz), Fz
+      ensureCapacity(vv, zv) {
+        if (zv + yh.BUFFER_SIZE <= vv.byteLength) return vv;
+        const Pv = Math.ceil((zv + yh.BUFFER_SIZE) / yh.BUFFER_SIZE) * yh.BUFFER_SIZE,
+          hv = new Uint8Array(Pv);
+        return hv.set(vv.subarray(0, zv)), vv === this.sharedBuffer && (this.sharedBuffer = hv), hv
       }
-      encodeView(zz, tz, sz) {
-        let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          Xz = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const Oz = sz.offset;
-        this._emitStreamPriority(zz);
-        for (const vz of zz.changes.keys()) {
-          const tz = zz.changes.get(vz),
-            Xz = this.root.changeTrees[vz];
-          if (void 0 === Xz) {
-            zz.changes.delete(vz);
+      encodeView(vv, zv, Pv) {
+        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          ev = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const gv = Pv.offset;
+        this._emitStreamPriority(vv);
+        for (const dv of vv.changes.keys()) {
+          const zv = vv.changes.get(dv),
+            ev = this.root.changeTrees[dv];
+          if (void 0 === ev) {
+            vv.changes.delete(dv);
             continue
           }
-          if (0 === tz.size) continue;
-          const Oz = Xz.encDescriptor,
-            Uz = Oz.encoder,
-            Kz = Oz.metadata,
-            uz = Xz.ref,
-            bz = Xz.refTarget;
-          Fz = this.ensureCapacity(Fz, sz.offset), Fz[sz.offset++] = 255, tt.number(Fz, uz[oz], sz);
-          for (const [vz, wz] of tz) {
-            let tz;
-            if (-1 === vz) {
-              const zz = bz.tmpItems,
-                tz = bz.deletedIndexes;
-              for (let Oz = 0; Oz < zz.length; Oz++) void 0 !== zz[Oz] && !0 !== tz[Oz] && Uz(this, Fz, Xz, Oz, Wz.ADD, sz, !1, !0, Kz);
+          if (0 === zv.size) continue;
+          const gv = ev.encDescriptor,
+            Nv = gv.encoder,
+            lv = gv.metadata,
+            Tv = ev.ref,
+            wv = ev.refTarget;
+          hv = this.ensureCapacity(hv, Pv.offset), hv[Pv.offset++] = 255, zz.number(hv, Tv[pv], Pv);
+          for (const [dv, av] of zv) {
+            let zv;
+            if (-1 === dv) {
+              const vv = wv.tmpItems,
+                zv = wv.deletedIndexes;
+              for (let gv = 0; gv < vv.length; gv++) void 0 !== vv[gv] && !0 !== zv[gv] && Nv(this, hv, ev, gv, Sv.ADD, Pv, !1, !0, lv);
               continue
             }
-            if ("number" === typeof vz) tz = vz;
+            if ("number" === typeof dv) zv = dv;
             else {
-              const sz = vz.indexInParent(uz);
-              if (void 0 === sz) continue;
-              if (tz = sz, wz === Wz.ADD && Xz.getChange(tz) === Wz.DELETE) {
-                zz.changes.delete(vz.ref[oz]);
+              const Pv = dv.indexInParent(Tv);
+              if (void 0 === Pv) continue;
+              if (zv = Pv, av === Sv.ADD && ev.getChange(zv) === Sv.DELETE) {
+                vv.changes.delete(dv.ref[pv]);
                 continue
               }
             }
-            Uz(this, Fz, Xz, tz, void 0 !== bz[Nz](tz) && wz || Wz.DELETE, sz, !1, !0, Kz)
+            Nv(this, hv, ev, zv, void 0 !== wv[Wv](zv) && av || Sv.DELETE, Pv, !1, !0, lv)
           }
         }
-        return zz.changes.clear(), Fz = this.encode(sz, zz, Fz), Xz ? aF(Fz.subarray(0, tz), Fz.subarray(Oz, sz.offset)) : Fz.subarray(Oz, sz.offset)
+        return vv.changes.clear(), hv = this.encode(Pv, vv, hv), ev ? Mh(hv.subarray(0, zv), hv.subarray(gv, Pv.offset)) : hv.subarray(gv, Pv.offset)
       }
-      encodeUnreliableView(zz, tz, sz) {
-        let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const Wz = sz.offset;
-        return Fz = this.encodeUnreliable(sz, zz, Fz, Wz), aF(Fz.subarray(0, tz), Fz.subarray(Wz, sz.offset))
+      encodeUnreliableView(vv, zv, Pv) {
+        let hv = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Sv = Pv.offset;
+        return hv = this.encodeUnreliable(Pv, vv, hv, Sv), Mh(hv.subarray(0, zv), hv.subarray(Sv, Pv.offset))
       }
-      _emitStreamBroadcast(zz, tz) {
-        const sz = this.root.streamTrees;
-        for (const Fz of sz) {
-          const sz = Fz,
-            Xz = sz[Dz],
-            Oz = sz[oz];
-          if (void 0 === Oz) continue;
-          const vz = sz._stream,
-            Uz = vz.broadcastDeletes,
-            Kz = vz.broadcastPending,
-            uz = vz.sentBroadcast,
-            bz = Uz.size > 0,
-            wz = Kz.size > 0,
-            gz = Xz.encDescriptor,
-            Hz = gz.encoder,
-            Bz = gz.metadata;
-          if (bz || wz) {
-            if (zz[tz.offset++] = 255, tt.number(zz, Oz, tz), bz) {
-              for (const sz of Uz) Hz(this, zz, Xz, sz, Wz.DELETE, tz, !1, !1, Bz);
-              Uz.clear()
+      _emitStreamBroadcast(vv, zv) {
+        const Pv = this.root.streamTrees;
+        for (const hv of Pv) {
+          const Pv = hv,
+            ev = Pv[sv],
+            gv = Pv[pv];
+          if (void 0 === gv) continue;
+          const dv = Pv._stream,
+            Nv = dv.broadcastDeletes,
+            lv = dv.broadcastPending,
+            Tv = dv.sentBroadcast,
+            wv = Nv.size > 0,
+            av = lv.size > 0,
+            Cv = ev.encDescriptor,
+            iv = Cv.encoder,
+            cv = Cv.metadata;
+          if (wv || av) {
+            if (vv[zv.offset++] = 255, zz.number(vv, gv, zv), wv) {
+              for (const Pv of Nv) iv(this, vv, ev, Pv, Sv.DELETE, zv, !1, !1, cv);
+              Nv.clear()
             }
-            const Fz = vz.maxPerTick,
-              wz = [];
-            let gz = 0;
-            const Pz = [];
-            for (const Oz of Kz) {
-              if (gz >= Fz) break;
-              const oz = sz[Nz](Oz);
-              void 0 !== oz ? (Hz(this, zz, Xz, Oz, Wz.ADD, tz, !1, !1, Bz), uz.add(Oz), wz.push(oz), Pz.push(Oz), gz++) : Pz.push(Oz)
+            const hv = dv.maxPerTick,
+              av = [];
+            let Cv = 0;
+            const Gv = [];
+            for (const gv of lv) {
+              if (Cv >= hv) break;
+              const pv = Pv[Wv](gv);
+              void 0 !== pv ? (iv(this, vv, ev, gv, Sv.ADD, zv, !1, !1, cv), Tv.add(gv), av.push(pv), Gv.push(gv), Cv++) : Gv.push(gv)
             }
-            for (const zz of Pz) Kz.delete(zz);
-            for (const sz of wz) {
-              const Fz = sz[Dz];
-              if (void 0 === Fz) continue;
-              const Xz = sz[oz];
-              if (void 0 === Xz) continue;
-              zz[tz.offset++] = 255, tt.number(zz, Xz, tz);
-              const Oz = Fz.encDescriptor,
-                vz = Oz.encoder,
-                Uz = Oz.metadata;
-              Fz.forEachLive((sz => {
-                Vt.hasUnreliableAtIndex(Uz, sz) || vz(this, zz, Fz, sz, Wz.ADD, tz, !1, !1, Uz)
+            for (const vv of Gv) lv.delete(vv);
+            for (const Pv of av) {
+              const hv = Pv[sv];
+              if (void 0 === hv) continue;
+              const ev = Pv[pv];
+              if (void 0 === ev) continue;
+              vv[zv.offset++] = 255, zz.number(vv, ev, zv);
+              const gv = hv.encDescriptor,
+                dv = gv.encoder,
+                Nv = gv.metadata;
+              hv.forEachLive((Pv => {
+                oz.hasUnreliableAtIndex(Nv, Pv) || dv(this, vv, hv, Pv, Sv.ADD, zv, !1, !1, Nv)
               }))
             }
           }
-          for (const Fz of uz) {
-            const Wz = sz[Nz](Fz);
-            if (void 0 === Wz) continue;
-            const Xz = Wz[Dz];
-            if (void 0 === Xz || !Xz.has()) continue;
-            const Oz = Wz[oz];
-            if (void 0 === Oz) continue;
-            zz[tz.offset++] = 255, tt.number(zz, Oz, tz);
-            const vz = Xz.encDescriptor,
-              Uz = vz.encoder,
-              Kz = vz.metadata;
-            Xz.forEach(((sz, Fz) => {
-              sz < 0 || Vt.hasUnreliableAtIndex(Kz, sz) || Uz(this, zz, Xz, sz, Fz, tz, !1, !1, Kz)
+          for (const hv of Tv) {
+            const Sv = Pv[Wv](hv);
+            if (void 0 === Sv) continue;
+            const ev = Sv[sv];
+            if (void 0 === ev || !ev.has()) continue;
+            const gv = Sv[pv];
+            if (void 0 === gv) continue;
+            vv[zv.offset++] = 255, zz.number(vv, gv, zv);
+            const dv = ev.encDescriptor,
+              Nv = dv.encoder,
+              lv = dv.metadata;
+            ev.forEach(((Pv, hv) => {
+              Pv < 0 || oz.hasUnreliableAtIndex(lv, Pv) || Nv(this, vv, ev, Pv, hv, zv, !1, !1, lv)
             }))
           }
         }
       }
-      _emitStreamPriority(zz) {
-        const tz = this.root.streamTrees;
-        if (0 === tz.size) return;
-        const sz = zz.id;
-        for (const Fz of tz) {
-          const tz = Fz,
-            Xz = tz._stream,
-            Oz = Xz.pendingByView.get(sz);
-          if (void 0 === Oz || 0 === Oz.size) continue;
-          const vz = Xz.priorityByView?.get(sz),
-            Uz = void 0 !== vz,
-            Kz = Xz.priority,
-            uz = Xz.maxPerTick,
-            bz = [],
-            wz = [];
-          if (Uz || void 0 !== Kz) {
-            const sz = [],
-              Fz = [];
-            let Wz = 0;
-            for (const Xz of Oz) {
-              const Oz = tz[Nz](Xz);
-              if (void 0 === Oz) {
-                wz.push(Xz);
+      _emitStreamPriority(vv) {
+        const zv = this.root.streamTrees;
+        if (0 === zv.size) return;
+        const Pv = vv.id;
+        for (const hv of zv) {
+          const zv = hv,
+            ev = zv._stream,
+            gv = ev.pendingByView.get(Pv);
+          if (void 0 === gv || 0 === gv.size) continue;
+          const dv = ev.priorityByView?.get(Pv),
+            Nv = void 0 !== dv,
+            lv = ev.priority,
+            Tv = ev.maxPerTick,
+            wv = [],
+            av = [];
+          if (Nv || void 0 !== lv) {
+            const Pv = [],
+              hv = [];
+            let Sv = 0;
+            for (const ev of gv) {
+              const gv = zv[Wv](ev);
+              if (void 0 === gv) {
+                av.push(ev);
                 continue
               }
-              const oz = Uz ? vz(Oz) : Kz(zz, Oz);
-              if (Wz < uz) {
-                let zz = Wz++;
-                for (; zz > 0 && Fz[zz - 1] < oz;) Fz[zz] = Fz[zz - 1], sz[zz] = sz[zz - 1], zz--;
-                Fz[zz] = oz, sz[zz] = Xz
-              } else if (oz > Fz[uz - 1]) {
-                let zz = uz - 1;
-                for (; zz > 0 && Fz[zz - 1] < oz;) Fz[zz] = Fz[zz - 1], sz[zz] = sz[zz - 1], zz--;
-                Fz[zz] = oz, sz[zz] = Xz
+              const pv = Nv ? dv(gv) : lv(vv, gv);
+              if (Sv < Tv) {
+                let vv = Sv++;
+                for (; vv > 0 && hv[vv - 1] < pv;) hv[vv] = hv[vv - 1], Pv[vv] = Pv[vv - 1], vv--;
+                hv[vv] = pv, Pv[vv] = ev
+              } else if (pv > hv[Tv - 1]) {
+                let vv = Tv - 1;
+                for (; vv > 0 && hv[vv - 1] < pv;) hv[vv] = hv[vv - 1], Pv[vv] = Pv[vv - 1], vv--;
+                hv[vv] = pv, Pv[vv] = ev
               }
             }
-            for (let zz = 0; zz < Wz; zz++) bz.push(sz[zz])
+            for (let vv = 0; vv < Sv; vv++) wv.push(Pv[vv])
           } else
-            for (const zz of Oz) {
-              if (bz.length >= uz) break;
-              bz.push(zz)
+            for (const vv of gv) {
+              if (wv.length >= Tv) break;
+              wv.push(vv)
             }
-          for (const zz of wz) Oz.delete(zz);
-          const gz = bz.length;
-          let Hz = Xz.sentByView.get(sz);
-          void 0 === Hz && (Hz = new Set, Xz.sentByView.set(sz, Hz));
-          for (let sz = 0; sz < gz; sz++) {
-            const Fz = bz[sz],
-              Xz = tz[Nz](Fz);
-            if (void 0 === Xz) {
-              Oz.delete(Fz);
+          for (const vv of av) gv.delete(vv);
+          const Cv = wv.length;
+          let iv = ev.sentByView.get(Pv);
+          void 0 === iv && (iv = new Set, ev.sentByView.set(Pv, iv));
+          for (let Pv = 0; Pv < Cv; Pv++) {
+            const hv = wv[Pv],
+              ev = zv[Wv](hv);
+            if (void 0 === ev) {
+              gv.delete(hv);
               continue
             }
-            zz._addImmediate(Xz);
-            const vz = Xz[Dz];
-            if (void 0 !== vz) {
-              const tz = Xz[oz];
-              let sz = zz.changes.get(tz);
-              void 0 === sz && (sz = new Map, zz.changes.set(tz, sz));
-              const Fz = vz.metadata;
-              vz.forEachLive((zz => {
-                Vt.hasUnreliableAtIndex(Fz, zz) || sz.set(zz, Wz.ADD)
+            vv._addImmediate(ev);
+            const dv = ev[sv];
+            if (void 0 !== dv) {
+              const zv = ev[pv];
+              let Pv = vv.changes.get(zv);
+              void 0 === Pv && (Pv = new Map, vv.changes.set(zv, Pv));
+              const hv = dv.metadata;
+              dv.forEachLive((vv => {
+                oz.hasUnreliableAtIndex(hv, vv) || Pv.set(vv, Sv.ADD)
               }))
             }
-            Oz.delete(Fz), Hz.add(Fz)
+            gv.delete(hv), iv.add(hv)
           }
         }
       }
       discardChanges() {
-        const zz = this.root.changes;
-        let tz = zz.next;
-        const sz = this.root;
-        for (; tz;) {
-          const zz = tz.next;
-          tz.changeTree.endEncode(), sz.releaseNode(tz), tz = zz
+        const vv = this.root.changes;
+        let zv = vv.next;
+        const Pv = this.root;
+        for (; zv;) {
+          const vv = zv.next;
+          zv.changeTree.endEncode(), Pv.releaseNode(zv), zv = vv
         }
-        zz.next = void 0, zz.tail = void 0
+        vv.next = void 0, vv.tail = void 0
       }
       discardUnreliableChanges() {
-        const zz = this.root.unreliableChanges;
-        let tz = zz.next;
-        const sz = this.root;
-        for (; tz;) {
-          const zz = tz.next;
-          tz.changeTree.endEncodeUnreliable(), sz.releaseNode(tz), tz = zz
+        const vv = this.root.unreliableChanges;
+        let zv = vv.next;
+        const Pv = this.root;
+        for (; zv;) {
+          const vv = zv.next;
+          zv.changeTree.endEncodeUnreliable(), Pv.releaseNode(zv), zv = vv
         }
-        zz.next = void 0, zz.tail = void 0
+        vv.next = void 0, vv.tail = void 0
       }
-      tryEncodeTypeId(zz, tz, sz, Fz) {
-        const Wz = this.context.getTypeId(tz),
-          Xz = this.context.getTypeId(sz);
-        void 0 !== Xz ? Wz !== Xz && (zz[Fz.offset++] = 213, tt.number(zz, Xz, Fz)) : console.warn(`@colyseus/schema WARNING: Class "${sz.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(vv, zv, Pv, hv) {
+        const Sv = this.context.getTypeId(zv),
+          ev = this.context.getTypeId(Pv);
+        void 0 !== ev ? Sv !== ev && (vv[hv.offset++] = 213, zz.number(vv, ev, hv)) : console.warn(`@colyseus/schema WARNING: Class "${Pv.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const zz = this.root;
-        if (0 === zz.streamTrees.size) return !1;
-        const tz = 0 === zz.activeViews.size;
-        for (const sz of zz.streamTrees)
-          if (tz ? Tt(sz) : Gt(sz, zz)) return !0;
+        const vv = this.root;
+        if (0 === vv.streamTrees.size) return !1;
+        const zv = 0 === vv.activeViews.size;
+        for (const Pv of vv.streamTrees)
+          if (zv ? Uz(Pv) : Vz(Pv, vv)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class SF extends Error {
-      constructor(zz) {
-        super(zz), this.name = "DecodingWarning"
+    class Bh extends Error {
+      constructor(vv) {
+        super(vv), this.name = "DecodingWarning"
       }
     }
-    const VF = {
+    const Jh = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class RF {
+    class Eh {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(zz, tz) {
-        let sz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(zz, tz), void 0 === tz[oz] ? (VF.value = zz, Object.defineProperty(tz, oz, VF)) : tz[oz] !== zz && (tz[oz] = zz), sz && (this.refCount[zz] = (this.refCount[zz] || 0) + 1), this.deletedRefs.has(zz) && this.deletedRefs.delete(zz)
+      addRef(vv, zv) {
+        let Pv = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(vv, zv), void 0 === zv[pv] ? (Jh.value = vv, Object.defineProperty(zv, pv, Jh)) : zv[pv] !== vv && (zv[pv] = vv), Pv && (this.refCount[vv] = (this.refCount[vv] || 0) + 1), this.deletedRefs.has(vv) && this.deletedRefs.delete(vv)
       }
-      removeRef(zz) {
-        const tz = this.refCount[zz];
-        if (void 0 !== tz)
-          if (0 !== tz)(this.refCount[zz] = tz - 1) <= 0 && this.deletedRefs.add(zz);
+      removeRef(vv) {
+        const zv = this.refCount[vv];
+        if (void 0 !== zv)
+          if (0 !== zv)(this.refCount[vv] = zv - 1) <= 0 && this.deletedRefs.add(vv);
           else try {
-            const tz = this.refs.get(zz);
-            throw new SF(`trying to remove refId '${zz}' with 0 refCount (${tz.constructor.name}: ${JSON.stringify(tz)})`)
-          } catch (vW) {
-            console.warn(vW)
+            const zv = this.refs.get(vv);
+            throw new Bh(`trying to remove refId '${vv}' with 0 refCount (${zv.constructor.name}: ${JSON.stringify(zv)})`)
+          } catch (eS) {
+            console.warn(eS)
           } else try {
-            throw new SF("trying to remove refId that doesn't exist: " + zz)
-          } catch (vW) {
-            console.warn(vW)
+            throw new Bh("trying to remove refId that doesn't exist: " + vv)
+          } catch (eS) {
+            console.warn(eS)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((zz => {
-          if (this.refCount[zz] > 0) return;
-          const tz = this.refs.get(zz),
-            sz = tz.constructor[Symbol.metadata];
-          if (null != sz)
-            for (const Fz in sz) {
-              const zz = tz[sz[Fz].name];
-              if ("object" === typeof zz && zz) {
-                const tz = zz[oz];
-                void 0 === tz || this.deletedRefs.has(tz) || this.removeRef(tz)
+        this.deletedRefs.forEach((vv => {
+          if (this.refCount[vv] > 0) return;
+          const zv = this.refs.get(vv),
+            Pv = zv.constructor[Symbol.metadata];
+          if (null != Pv)
+            for (const hv in Pv) {
+              const vv = zv[Pv[hv].name];
+              if ("object" === typeof vv && vv) {
+                const zv = vv[pv];
+                void 0 === zv || this.deletedRefs.has(zv) || this.removeRef(zv)
               }
-            } else "function" === typeof tz[gz] && Array.from(tz.values()).forEach((zz => {
-              const tz = zz[oz];
-              void 0 === tz || this.deletedRefs.has(tz) || this.removeRef(tz)
+            } else "function" === typeof zv[Cv] && Array.from(zv.values()).forEach((vv => {
+              const zv = vv[pv];
+              void 0 === zv || this.deletedRefs.has(zv) || this.removeRef(zv)
             }));
-          this.refs.delete(zz), delete this.refCount[zz], delete this.callbacks[zz]
+          this.refs.delete(vv), delete this.refCount[vv], delete this.callbacks[vv]
         })), this.deletedRefs.clear()
       }
-      addCallback(zz, tz, sz) {
-        if (void 0 === zz) {
-          const zz = "number" === typeof tz ? Wz[tz] : tz;
-          throw new Error(`Can't addCallback on '${zz}' (refId is undefined)`)
+      addCallback(vv, zv, Pv) {
+        if (void 0 === vv) {
+          const vv = "number" === typeof zv ? Sv[zv] : zv;
+          throw new Error(`Can't addCallback on '${vv}' (refId is undefined)`)
         }
-        return this.callbacks[zz] || (this.callbacks[zz] = {}), this.callbacks[zz][tz] || (this.callbacks[zz][tz] = []), this.callbacks[zz][tz].push(sz), () => this.removeCallback(zz, tz, sz)
+        return this.callbacks[vv] || (this.callbacks[vv] = {}), this.callbacks[vv][zv] || (this.callbacks[vv][zv] = []), this.callbacks[vv][zv].push(Pv), () => this.removeCallback(vv, zv, Pv)
       }
-      removeCallback(zz, tz, sz) {
-        const Fz = this.callbacks?.[zz]?.[tz]?.indexOf(sz);
-        void 0 !== Fz && -1 !== Fz && yF(this.callbacks[zz][tz], Fz)
+      removeCallback(vv, zv, Pv) {
+        const hv = this.callbacks?.[vv]?.[zv]?.indexOf(Pv);
+        void 0 !== hv && -1 !== hv && Rh(this.callbacks[vv][zv], hv)
       }
     }
-    class pF {
+    class oh {
       context;
       state;
       root;
       currentRefId = 0;
-      yJ;
+      fD;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(zz, tz) {
-        this.setState(zz), this.context = tz || new kt(zz.constructor)
+      constructor(vv, zv) {
+        this.setState(vv), this.context = zv || new Lz(vv.constructor)
       }
-      setState(zz) {
-        this.state = zz, this.root = new RF, this.root.addRef(0, zz)
+      setState(vv) {
+        this.state = vv, this.root = new Eh, this.root.addRef(0, vv)
       }
-      decode(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          sz = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const Wz = void 0 !== this.yJ ? [] : null,
-          Xz = this.root,
-          Oz = zz.byteLength;
-        let oz = sz.constructor[Kz];
-        for (this.currentRefId = 0; tz.offset < Oz;) {
-          if (zz[tz.offset] == Fz) {
-            tz.offset++, sz[rz]?.();
-            const Fz = Pt.number(zz, tz),
-              Wz = Xz.refs.get(Fz);
-            Wz ? (sz = Wz, oz = sz.constructor[Kz], this.currentRefId = Fz) : (console.error(`"refId" not found: ${Fz}`, {
-              previousRef: sz,
+          Pv = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Sv = void 0 !== this.fD ? [] : null,
+          ev = this.root,
+          gv = vv.byteLength;
+        let pv = Pv.constructor[lv];
+        for (this.currentRefId = 0; zv.offset < gv;) {
+          if (vv[zv.offset] == hv) {
+            zv.offset++, Pv[mv]?.();
+            const hv = Gz.number(vv, zv),
+              Sv = ev.refs.get(hv);
+            Sv ? (Pv = Sv, pv = Pv.constructor[lv], this.currentRefId = hv) : (console.error(`"refId" not found: ${hv}`, {
+              previousRef: Pv,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(zz, tz, Oz));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(vv, zv, gv));
             continue
-          } - 1 !== oz(this, zz, tz, sz, Wz) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(zz, tz, Oz))
+          } - 1 !== pv(this, vv, zv, Pv, Sv) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(vv, zv, gv))
         }
-        return sz[rz]?.(), null !== this.resyncVisited && function(zz, tz) {
-          zz.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : ls(zz, zz.state, new Set, tz)
-        }(this, Wz), null !== Wz && this.yJ?.(Wz), Xz.garbageCollectDeletedRefs(), Wz
+        return Pv[mv]?.(), null !== this.resyncVisited && function(vv, zv) {
+          vv.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : LP(vv, vv.state, new Set, zv)
+        }(this, Sv), null !== Sv && this.fD?.(Sv), ev.garbageCollectDeletedRefs(), Sv
       }
-      decodeResync(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(zz, tz)
+          return this.decode(vv, zv)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(zz, tz, sz) {
+      skipCurrentStructure(vv, zv, Pv) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const Wz = {
-          offset: tz.offset
+        const Sv = {
+          offset: zv.offset
         };
-        for (; tz.offset < sz && (zz[tz.offset] !== Fz || (Wz.offset = tz.offset + 1, !this.root.refs.has(Pt.number(zz, Wz))));) tz.offset++
+        for (; zv.offset < Pv && (vv[zv.offset] !== hv || (Sv.offset = zv.offset + 1, !this.root.refs.has(Gz.number(vv, Sv))));) zv.offset++
       }
-      getInstanceType(zz, tz, sz) {
-        let Fz;
-        if (213 === zz[tz.offset]) {
-          tz.offset++;
-          const sz = Pt.number(zz, tz);
-          Fz = this.context.get(sz)
+      getInstanceType(vv, zv, Pv) {
+        let hv;
+        if (213 === vv[zv.offset]) {
+          zv.offset++;
+          const Pv = Gz.number(vv, zv);
+          hv = this.context.get(Pv)
         }
-        return Fz || sz
+        return hv || Pv
       }
-      createInstanceOfType(zz) {
-        return zz.initializeForDecoder()
+      createInstanceOfType(vv) {
+        return vv.initializeForDecoder()
       }
-      removeChildRefs(zz, tz) {
-        const sz = "string" !== typeof zz[gz],
-          Fz = zz[oz];
-        zz.forEach(((Xz, Oz) => {
-          tz?.push({
-            ref: zz,
-            refId: Fz,
-            op: Wz.DELETE,
-            field: Oz,
+      removeChildRefs(vv, zv) {
+        const Pv = "string" !== typeof vv[Cv],
+          hv = vv[pv];
+        vv.forEach(((ev, gv) => {
+          zv?.push({
+            ref: vv,
+            refId: hv,
+            op: Sv.DELETE,
+            field: gv,
             value: void 0,
-            previousValue: Xz
-          }), sz && this.root.removeRef(Xz[oz])
+            previousValue: ev
+          }), Pv && this.root.removeRef(ev[pv])
         }))
       }
     }
-    const fF = GF({
-        min: gF.float64(),
-        max: gF.float64(),
-        bits: gF.uint8(),
-        mode: gF.uint8()
+    const bh = Oh({
+        min: wh.float64(),
+        max: wh.float64(),
+        bits: wh.uint8(),
+        mode: wh.uint8()
       }, "QuantizedDescriptor"),
-      EF = GF({
-        name: gF.string(),
-        type: gF.string(),
-        referencedType: gF.number(),
-        childPrimitive: gF.string(),
-        quantized: gF.ref(fF).optional()
+      rh = Oh({
+        name: wh.string(),
+        type: wh.string(),
+        referencedType: wh.number(),
+        childPrimitive: wh.string(),
+        quantized: wh.ref(bh).optional()
       }, "ReflectionField"),
-      zW = GF({
-        id: gF.number(),
-        extendsId: gF.number(),
-        fields: gF.array(EF)
+      kh = Oh({
+        id: wh.number(),
+        extendsId: wh.number(),
+        fields: wh.array(rh)
       }, "ReflectionType"),
-      tW = GF({
-        types: gF.array(zW),
-        rootType: gF.number()
+      Xh = Oh({
+        types: wh.array(kh),
+        rootType: wh.number()
       }, "Reflection");
 
-    function sW(zz) {
-      const tz = zz.root,
-        sz = tz.callbacks,
-        Fz = new WeakMap;
-      let Xz;
+    function uh(vv) {
+      const zv = vv.root,
+        Pv = zv.callbacks,
+        hv = new WeakMap;
+      let ev;
 
-      function Oz(zz, sz) {
-        let Uz = sz.instance?.constructor[Symbol.metadata] || zz,
-          Kz = sz.instance && "function" === typeof sz.instance.forEach || zz && !cF.is(zz);
-        if (Uz && !Kz) {
-          const zz = function(zz, Wz, Oz, vz) {
-            return vz && void 0 !== sz.instance[Wz] && !Fz.has(Xz) && Oz(sz.instance[Wz], void 0), tz.addCallback(zz[oz], Wz, Oz)
+      function gv(vv, Pv) {
+        let Nv = Pv.instance?.constructor[Symbol.metadata] || vv,
+          lv = Pv.instance && "function" === typeof Pv.instance.forEach || vv && !Kh.is(vv);
+        if (Nv && !lv) {
+          const vv = function(vv, Sv, gv, dv) {
+            return dv && void 0 !== Pv.instance[Sv] && !hv.has(ev) && gv(Pv.instance[Sv], void 0), zv.addCallback(vv[pv], Sv, gv)
           };
           return new Proxy({
-            listen: function(tz, Wz) {
-              let Oz = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (sz.instance) return zz(sz.instance, tz, Wz, Oz);
+            listen: function(zv, Sv) {
+              let gv = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (Pv.instance) return vv(Pv.instance, zv, Sv, gv);
               {
-                let oz = () => {};
-                return sz.onInstanceAvailable(((sz, vz) => {
-                  oz = zz(sz, tz, Wz, Oz && vz && !Fz.has(Xz))
-                })), () => oz()
+                let pv = () => {};
+                return Pv.onInstanceAvailable(((Pv, dv) => {
+                  pv = vv(Pv, zv, Sv, gv && dv && !hv.has(ev))
+                })), () => pv()
               }
             },
-            onChange: function(zz) {
-              return tz.addCallback(sz.instance[oz], Wz.REPLACE, zz)
+            onChange: function(vv) {
+              return zv.addCallback(Pv.instance[pv], Sv.REPLACE, vv)
             },
-            bindTo: function(zz, Fz) {
-              return Fz || (Fz = Object.keys(Uz).map((zz => Uz[zz].name))), tz.addCallback(sz.instance[oz], Wz.REPLACE, (() => {
-                Fz.forEach((tz => zz[tz] = sz.instance[tz]))
+            bindTo: function(vv, hv) {
+              return hv || (hv = Object.keys(Nv).map((vv => Nv[vv].name))), zv.addCallback(Pv.instance[pv], Sv.REPLACE, (() => {
+                hv.forEach((zv => vv[zv] = Pv.instance[zv]))
               }))
             }
           }, {
-            get(zz, tz) {
-              const Fz = Uz[Uz[tz]];
-              if (Fz) {
-                const zz = sz.instance?.[tz],
-                  Wz = Fz => {
-                    const Wz = vz(sz.instance).listen(tz, ((zz, tz) => {
-                      Fz(zz, !1), Wz?.()
+            get(vv, zv) {
+              const hv = Nv[Nv[zv]];
+              if (hv) {
+                const vv = Pv.instance?.[zv],
+                  Sv = hv => {
+                    const Sv = dv(Pv.instance).listen(zv, ((vv, zv) => {
+                      hv(vv, !1), Sv?.()
                     }), !1);
-                    void 0 !== zz?.[oz] && Fz(zz, !0)
+                    void 0 !== vv?.[pv] && hv(vv, !0)
                   };
-                return Oz(Fz.type, {
-                  instance: void 0 !== zz?.[oz] && zz,
-                  parentInstance: sz.instance,
-                  onInstanceAvailable: Wz
+                return gv(hv.type, {
+                  instance: void 0 !== vv?.[pv] && vv,
+                  parentInstance: Pv.instance,
+                  onInstanceAvailable: Sv
                 })
               }
-              return zz[tz]
+              return vv[zv]
             },
-            has: (zz, tz) => void 0 !== Uz[tz],
-            set(zz, tz, sz) {
+            has: (vv, zv) => void 0 !== Nv[zv],
+            set(vv, zv, Pv) {
               throw new Error("not allowed")
             },
-            deleteProperty(zz, tz) {
+            deleteProperty(vv, zv) {
               throw new Error("not allowed")
             }
           })
         } {
-          const zz = function(zz, sz, Oz) {
-              return Oz && zz.forEach(((zz, tz) => sz(zz, tz))), tz.addCallback(zz[oz], Wz.ADD, ((zz, tz) => {
-                Fz.set(sz, !0), Xz = sz, sz(zz, tz), Fz.delete(sz), Xz = void 0
+          const vv = function(vv, Pv, gv) {
+              return gv && vv.forEach(((vv, zv) => Pv(vv, zv))), zv.addCallback(vv[pv], Sv.ADD, ((vv, zv) => {
+                hv.set(Pv, !0), ev = Pv, Pv(vv, zv), hv.delete(Pv), ev = void 0
               }))
             },
-            Oz = function(zz, sz) {
-              return tz.addCallback(zz[oz], Wz.DELETE, sz)
+            gv = function(vv, Pv) {
+              return zv.addCallback(vv[pv], Sv.DELETE, Pv)
             },
-            vz = function(zz, sz) {
-              return tz.addCallback(zz[oz], Wz.REPLACE, sz)
+            dv = function(vv, Pv) {
+              return zv.addCallback(vv[pv], Sv.REPLACE, Pv)
             };
           return new Proxy({
-            Hr: function(tz) {
-              let Wz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (sz.instance) return zz(sz.instance, tz, Wz && !Fz.has(Xz));
-              if (sz.onInstanceAvailable) {
-                let Oz = () => {};
-                return sz.onInstanceAvailable(((sz, oz) => {
-                  Oz = zz(sz, tz, Wz && oz && !Fz.has(Xz))
-                })), () => Oz()
+            Km: function(zv) {
+              let Sv = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (Pv.instance) return vv(Pv.instance, zv, Sv && !hv.has(ev));
+              if (Pv.onInstanceAvailable) {
+                let gv = () => {};
+                return Pv.onInstanceAvailable(((Pv, pv) => {
+                  gv = vv(Pv, zv, Sv && pv && !hv.has(ev))
+                })), () => gv()
               }
             },
-            NJ: function(zz) {
-              if (sz.instance) return Oz(sz.instance, zz);
-              if (sz.onInstanceAvailable) {
-                let tz = () => {};
-                return sz.onInstanceAvailable((sz => {
-                  tz = Oz(sz, zz)
-                })), () => tz()
+            HO: function(vv) {
+              if (Pv.instance) return gv(Pv.instance, vv);
+              if (Pv.onInstanceAvailable) {
+                let zv = () => {};
+                return Pv.onInstanceAvailable((Pv => {
+                  zv = gv(Pv, vv)
+                })), () => zv()
               }
             },
-            onChange: function(zz) {
-              if (sz.instance) return vz(sz.instance, zz);
-              if (sz.onInstanceAvailable) {
-                let tz = () => {};
-                return sz.onInstanceAvailable((sz => {
-                  tz = vz(sz, zz)
-                })), () => tz()
+            onChange: function(vv) {
+              if (Pv.instance) return dv(Pv.instance, vv);
+              if (Pv.onInstanceAvailable) {
+                let zv = () => {};
+                return Pv.onInstanceAvailable((Pv => {
+                  zv = dv(Pv, vv)
+                })), () => zv()
               }
             }
           }, {
-            get(zz, tz) {
-              if (!zz[tz]) throw new Error(`Can't access '${tz}' through callback proxy. access the instance directly.`);
-              return zz[tz]
+            get(vv, zv) {
+              if (!vv[zv]) throw new Error(`Can't access '${zv}' through callback proxy. access the instance directly.`);
+              return vv[zv]
             },
-            has: (zz, tz) => void 0 !== zz[tz],
-            set(zz, tz, sz) {
+            has: (vv, zv) => void 0 !== vv[zv],
+            set(vv, zv, Pv) {
               throw new Error("not allowed")
             },
-            deleteProperty(zz, tz) {
+            deleteProperty(vv, zv) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function vz(zz) {
-        return Oz(void 0, {
-          instance: zz
+      function dv(vv) {
+        return gv(void 0, {
+          instance: vv
         })
       }
-      return zz.yJ = function(zz) {
-        const tz = new Set;
-        for (let Fz = 0, Xz = zz.length; Fz < Xz; Fz++) {
-          const Xz = zz[Fz],
-            Oz = Xz.refId,
-            vz = Xz.ref,
-            Uz = sz[Oz];
-          if (Uz) {
-            if ((Xz.op & Wz.DELETE) === Wz.DELETE && cF.isSchema(Xz.previousValue)) {
-              const zz = sz[Xz.previousValue[oz]]?.[Wz.DELETE];
-              for (let tz = zz?.length - 1; tz >= 0; tz--) zz[tz]()
+      return vv.fD = function(vv) {
+        const zv = new Set;
+        for (let hv = 0, ev = vv.length; hv < ev; hv++) {
+          const ev = vv[hv],
+            gv = ev.refId,
+            dv = ev.ref,
+            Nv = Pv[gv];
+          if (Nv) {
+            if ((ev.op & Sv.DELETE) === Sv.DELETE && Kh.isSchema(ev.previousValue)) {
+              const vv = Pv[ev.previousValue[pv]]?.[Sv.DELETE];
+              for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv]()
             }
-            if (cF.isSchema(vz)) {
-              if (!tz.has(Oz)) {
-                const zz = Uz?.[Wz.REPLACE];
-                for (let tz = zz?.length - 1; tz >= 0; tz--) zz[tz]()
+            if (Kh.isSchema(dv)) {
+              if (!zv.has(gv)) {
+                const vv = Nv?.[Sv.REPLACE];
+                for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv]()
               }
-              if (Uz.hasOwnProperty(Xz.field)) {
-                const zz = Uz[Xz.field];
-                for (let tz = zz?.length - 1; tz >= 0; tz--) zz[tz](Xz.value, Xz.previousValue)
+              if (Nv.hasOwnProperty(ev.field)) {
+                const vv = Nv[ev.field];
+                for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.value, ev.previousValue)
               }
             } else {
-              if ((Xz.op & Wz.DELETE) === Wz.DELETE) {
-                if (void 0 !== Xz.previousValue) {
-                  const zz = Uz[Wz.DELETE];
-                  for (let tz = zz?.length - 1; tz >= 0; tz--) zz[tz](Xz.previousValue, Xz.dynamicIndex ?? Xz.field)
+              if ((ev.op & Sv.DELETE) === Sv.DELETE) {
+                if (void 0 !== ev.previousValue) {
+                  const vv = Nv[Sv.DELETE];
+                  for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.previousValue, ev.dynamicIndex ?? ev.field)
                 }
-                if ((Xz.op & Wz.ADD) === Wz.ADD) {
-                  const zz = Uz[Wz.ADD];
-                  for (let tz = zz?.length - 1; tz >= 0; tz--) zz[tz](Xz.value, Xz.dynamicIndex ?? Xz.field)
+                if ((ev.op & Sv.ADD) === Sv.ADD) {
+                  const vv = Nv[Sv.ADD];
+                  for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.value, ev.dynamicIndex ?? ev.field)
                 }
-              } else if ((Xz.op & Wz.ADD) === Wz.ADD && Xz.previousValue !== Xz.value) {
-                const zz = Uz[Wz.ADD];
-                for (let tz = zz?.length - 1; tz >= 0; tz--) zz[tz](Xz.value, Xz.dynamicIndex ?? Xz.field)
+              } else if ((ev.op & Sv.ADD) === Sv.ADD && ev.previousValue !== ev.value) {
+                const vv = Nv[Sv.ADD];
+                for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.value, ev.dynamicIndex ?? ev.field)
               }
-              if (Xz.value !== Xz.previousValue && (void 0 !== Xz.value || void 0 !== Xz.previousValue)) {
-                const zz = Uz[Wz.REPLACE];
-                for (let tz = zz?.length - 1; tz >= 0; tz--) zz[tz](Xz.value, Xz.dynamicIndex ?? Xz.field)
+              if (ev.value !== ev.previousValue && (void 0 !== ev.value || void 0 !== ev.previousValue)) {
+                const vv = Nv[Sv.REPLACE];
+                for (let zv = vv?.length - 1; zv >= 0; zv--) vv[zv](ev.value, ev.dynamicIndex ?? ev.field)
               }
             }
-            tz.add(Oz)
+            zv.add(gv)
           }
         }
-      }, vz
+      }, dv
     }
 
-    function FW(zz, tz) {
-      zz.yJ = tz
+    function vS(vv, zv) {
+      vv.fD = zv
     }
-    tW.encode = function(zz) {
-      let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    Xh.encode = function(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const sz = zz.context,
-        Fz = new tW,
-        Wz = new qF(Fz),
-        Xz = sz.schemas.get(zz.state.constructor);
-      Xz > 0 && (Fz.rootType = Xz);
-      const Oz = new Set,
-        oz = {},
-        vz = zz => {
-          if (void 0 === zz.extendsId || Oz.has(zz.extendsId)) {
-            Oz.add(zz.id), Fz.types.push(zz);
-            const tz = oz[zz.id];
-            void 0 !== tz && (delete oz[zz.id], tz.forEach((zz => vz(zz))))
-          } else void 0 === oz[zz.extendsId] && (oz[zz.extendsId] = []), oz[zz.extendsId].push(zz)
+      const Pv = vv.context,
+        hv = new Xh,
+        Sv = new yh(hv),
+        ev = Pv.schemas.get(vv.state.constructor);
+      ev > 0 && (hv.rootType = ev);
+      const gv = new Set,
+        pv = {},
+        dv = vv => {
+          if (void 0 === vv.extendsId || gv.has(vv.extendsId)) {
+            gv.add(vv.id), hv.types.push(vv);
+            const zv = pv[vv.id];
+            void 0 !== zv && (delete pv[vv.id], zv.forEach((vv => dv(vv))))
+          } else void 0 === pv[vv.extendsId] && (pv[vv.extendsId] = []), pv[vv.extendsId].push(vv)
         };
-      sz.schemas.forEach(((zz, tz) => {
-        const Fz = new zW;
-        Fz.id = Number(zz);
-        const Wz = Object.getPrototypeOf(tz);
-        Wz !== cF && (Fz.extendsId = sz.schemas.get(Wz));
-        const Xz = tz[Symbol.metadata];
-        if (Xz !== Wz[Symbol.metadata]) {
-          const zz = Xz[Cz] ?? -1;
-          for (let tz = 0; tz <= zz; tz++) {
-            const zz = Xz[tz];
-            if (void 0 === zz) continue;
-            const Wz = zz.name;
-            if (!Object.prototype.hasOwnProperty.call(Xz, Wz)) continue;
-            const Oz = new EF;
-            let oz;
-            if (Oz.name = Wz, "string" === typeof zz.type) oz = zz.type;
-            else if (Mt(zz.type)) {
-              const tz = zz.type.quantized;
-              oz = "quantized";
-              const sz = new fF;
-              sz.min = tz.min, sz.max = tz.max, sz.bits = tz.bits, sz.mode = tz.wrap ? 1 : 0, Oz.quantized = sz
+      Pv.schemas.forEach(((vv, zv) => {
+        const hv = new kh;
+        hv.id = Number(vv);
+        const Sv = Object.getPrototypeOf(zv);
+        Sv !== Kh && (hv.extendsId = Pv.schemas.get(Sv));
+        const ev = zv[Symbol.metadata];
+        if (ev !== Sv[Symbol.metadata]) {
+          const vv = ev[Ov] ?? -1;
+          for (let zv = 0; zv <= vv; zv++) {
+            const vv = ev[zv];
+            if (void 0 === vv) continue;
+            const Sv = vv.name;
+            if (!Object.prototype.hasOwnProperty.call(ev, Sv)) continue;
+            const gv = new rh;
+            let pv;
+            if (gv.name = Sv, "string" === typeof vv.type) pv = vv.type;
+            else if (Iz(vv.type)) {
+              const zv = vv.type.quantized;
+              pv = "quantized";
+              const Pv = new bh;
+              Pv.min = zv.min, Pv.max = zv.max, Pv.bits = zv.bits, Pv.mode = zv.wrap ? 1 : 0, gv.quantized = Pv
             } else {
-              let tz;
-              cF.is(zz.type) ? (oz = "ref", tz = zz.type) : (oz = Object.keys(zz.type)[0], "string" === typeof zz.type[oz] ? Oz.childPrimitive = zz.type[oz] : tz = zz.type[oz]), Oz.referencedType = tz ? sz.getTypeId(tz) : -1
+              let zv;
+              Kh.is(vv.type) ? (pv = "ref", zv = vv.type) : (pv = Object.keys(vv.type)[0], "string" === typeof vv.type[pv] ? gv.childPrimitive = vv.type[pv] : zv = vv.type[pv]), gv.referencedType = zv ? Pv.getTypeId(zv) : -1
             }
-            Oz.type = oz, Fz.fields.push(Oz)
+            gv.type = pv, hv.fields.push(gv)
           }
         }
-        vz(Fz)
+        dv(hv)
       }));
-      for (const Uz in oz) oz[Uz].forEach((zz => Fz.types.push(zz)));
-      return Wz.encodeAll(tz).slice(0, tz.offset)
-    }, tW.decode = function(zz, tz) {
-      const sz = new tW;
-      new pF(sz).decode(zz, tz);
-      const Fz = new kt;
-      sz.types.forEach((zz => {
-        const tz = Fz.get(zz.extendsId) ?? cF,
-          sz = class extends tz {};
-        kt.register(sz), Fz.add(sz, zz.id)
+      for (const Nv in pv) pv[Nv].forEach((vv => hv.types.push(vv)));
+      return Sv.encodeAll(zv).slice(0, zv.offset)
+    }, Xh.decode = function(vv, zv) {
+      const Pv = new Xh;
+      new oh(Pv).decode(vv, zv);
+      const hv = new Lz;
+      Pv.types.forEach((vv => {
+        const zv = hv.get(vv.extendsId) ?? Kh,
+          Pv = class extends zv {};
+        Lz.register(Pv), hv.add(Pv, vv.id)
       }), {});
-      sz.types.forEach((zz => {
-        const tz = Fz.get(zz.id),
-          Wz = Vt.initialize(tz),
-          Xz = [];
-        let Oz = zz;
+      Pv.types.forEach((vv => {
+        const zv = hv.get(vv.id),
+          Sv = oz.initialize(zv),
+          ev = [];
+        let gv = vv;
         do {
-          Xz.push(Oz), Oz = sz.types.find((zz => zz.id === Oz.extendsId))
-        } while (Oz);
-        let oz = 0;
-        Xz.reverse().forEach((zz => {
-          ((zz, tz, sz) => {
-            tz.fields.forEach(((tz, Wz) => {
-              const Xz = sz + Wz;
-              if (void 0 !== tz.quantized) {
-                const sz = tz.quantized;
-                Vt.addField(zz, Xz, tz.name, {
-                  quantized: yt({
-                    min: sz.min,
-                    max: sz.max,
-                    bits: sz.bits,
-                    mode: 1 === sz.mode ? "wrap" : "clamp"
+          ev.push(gv), gv = Pv.types.find((vv => vv.id === gv.extendsId))
+        } while (gv);
+        let pv = 0;
+        ev.reverse().forEach((vv => {
+          ((vv, zv, Pv) => {
+            zv.fields.forEach(((zv, Sv) => {
+              const ev = Pv + Sv;
+              if (void 0 !== zv.quantized) {
+                const Pv = zv.quantized;
+                oz.addField(vv, ev, zv.name, {
+                  quantized: qz({
+                    min: Pv.min,
+                    max: Pv.max,
+                    bits: Pv.bits,
+                    mode: 1 === Pv.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== tz.referencedType) {
-                const sz = tz.type,
-                  Wz = Fz.get(tz.referencedType) ?? tz.childPrimitive;
-                "ref" === sz ? Vt.addField(zz, Xz, tz.name, Wz) : Vt.addField(zz, Xz, tz.name, {
-                  [sz]: Wz
+              } else if (void 0 !== zv.referencedType) {
+                const Pv = zv.type,
+                  Sv = hv.get(zv.referencedType) ?? zv.childPrimitive;
+                "ref" === Pv ? oz.addField(vv, ev, zv.name, Sv) : oz.addField(vv, ev, zv.name, {
+                  [Pv]: Sv
                 })
-              } else Vt.addField(zz, Xz, tz.name, tz.type)
+              } else oz.addField(vv, ev, zv.name, zv.type)
             }))
-          })(Wz, zz, oz), oz += zz.fields.length
+          })(Sv, vv, pv), pv += vv.fields.length
         }))
       }));
-      const Wz = new(Fz.get(sz.rootType || 0));
-      return new pF(Wz, Fz)
-    }, tW.makeEncodable = function(zz) {
-      const tz = zz[Symbol.metadata];
-      if (!tz) return zz;
-      const sz = tz[Cz];
-      if (void 0 === sz) return zz;
-      for (let Fz = 0; Fz <= sz; Fz++) {
-        const sz = tz[Fz];
-        sz && Vt.defineField(zz, tz, Fz, sz.name, sz.type)
+      const Sv = new(hv.get(Pv.rootType || 0));
+      return new oh(Sv, hv)
+    }, Xh.makeEncodable = function(vv) {
+      const zv = vv[Symbol.metadata];
+      if (!zv) return vv;
+      const Pv = zv[Ov];
+      if (void 0 === Pv) return vv;
+      for (let hv = 0; hv <= Pv; hv++) {
+        const Pv = zv[hv];
+        Pv && oz.defineField(vv, zv, hv, Pv.name, Pv.type)
       }
-      return Object.prototype.hasOwnProperty.call(zz, Jz) && delete zz[Jz], zz
+      return Object.prototype.hasOwnProperty.call(vv, Yv) && delete vv[Yv], vv
     };
-    class WW {
-      Gw;
+    class zS {
+      ow;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(zz) {
-        this.Gw = zz, this.Gw.yJ = this.yJ.bind(this)
+      constructor(vv) {
+        this.ow = vv, this.ow.fD = this.fD.bind(this)
       }
       get callbacks() {
-        return this.Gw.root.callbacks
+        return this.ow.root.callbacks
       }
       get state() {
-        return this.Gw.state
+        return this.ow.state
       }
-      addCallback(zz, tz, sz) {
-        return this.Gw.root.addCallback(zz, tz, sz)
+      addCallback(vv, zv, Pv) {
+        return this.ow.root.addCallback(vv, zv, Pv)
       }
-      addCallbackOrWaitCollectionAvailable(zz, tz, sz, Fz) {
-        let Xz = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          Oz = () => {};
-        const vz = () => Oz(),
-          Uz = zz[tz];
-        if (Uz && void 0 !== Uz[oz]) return Xz = Xz && !1 === this.isTriggering, sz === Wz.ADD && Xz && Uz.forEach(((zz, tz) => {
-          Fz(zz, tz)
-        })), this.addCallback(Uz[oz], sz, Fz);
+      addCallbackOrWaitCollectionAvailable(vv, zv, Pv, hv) {
+        let ev = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          gv = () => {};
+        const dv = () => gv(),
+          Nv = vv[zv];
+        if (Nv && void 0 !== Nv[pv]) return ev = ev && !1 === this.isTriggering, Pv === Sv.ADD && ev && Nv.forEach(((vv, zv) => {
+          hv(vv, zv)
+        })), this.addCallback(Nv[pv], Pv, hv);
         {
-          let Wz;
-          return Wz = this.addCallback(zz[oz], tz, ((zz, tz) => {
-            null !== zz && void 0 !== zz && (Wz(), Oz = this.addCallback(zz[oz], sz, Fz))
-          })), Oz = Wz, vz
+          let Sv;
+          return Sv = this.addCallback(vv[pv], zv, ((vv, zv) => {
+            null !== vv && void 0 !== vv && (Sv(), gv = this.addCallback(vv[pv], Pv, hv))
+          })), gv = Sv, dv
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(zz, tz, sz) {
-        let Fz = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        Fz = Fz && !1 === this.isTriggering;
-        const Wz = zz[tz];
-        return Fz && null !== Wz && void 0 !== Wz && sz(Wz, void 0), this.addCallback(zz[oz], tz, sz)
+      listenInstance(vv, zv, Pv) {
+        let hv = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        hv = hv && !1 === this.isTriggering;
+        const Sv = vv[zv];
+        return hv && null !== Sv && void 0 !== Sv && Pv(Sv, void 0), this.addCallback(vv[pv], zv, Pv)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const zz = arguments.length <= 0 ? void 0 : arguments[0],
-            tz = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(zz[oz], Wz.REPLACE, tz)
+          const vv = arguments.length <= 0 ? void 0 : arguments[0],
+            zv = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(vv[pv], Sv.REPLACE, zv)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wz.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wz.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Sv.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Sv.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      Hr() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wz.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wz.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      Km() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Sv.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Sv.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      NJ() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Wz.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Wz.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      HO() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Sv.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Sv.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(zz, tz, sz) {
-        let Fz = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const Xz = zz.constructor[Symbol.metadata];
-        sz || (sz = Object.keys(Xz).filter((zz => !isNaN(Number(zz)))).map((zz => Xz[zz].name)));
-        const Oz = () => {
-          for (const Fz of sz) {
-            const sz = zz[Fz];
-            void 0 !== sz && (tz[Fz] = sz)
+      bindTo(vv, zv, Pv) {
+        let hv = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const ev = vv.constructor[Symbol.metadata];
+        Pv || (Pv = Object.keys(ev).filter((vv => !isNaN(Number(vv)))).map((vv => ev[vv].name)));
+        const gv = () => {
+          for (const hv of Pv) {
+            const Pv = vv[hv];
+            void 0 !== Pv && (zv[hv] = Pv)
           }
         };
-        return Fz && Oz(), this.addCallback(zz[oz], Wz.REPLACE, Oz)
+        return hv && gv(), this.addCallback(vv[pv], Sv.REPLACE, gv)
       }
-      yJ(zz) {
+      fD(vv) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let tz = 0, sz = zz.length; tz < sz; tz++) {
-          const sz = zz[tz],
-            Fz = sz.refId,
-            Xz = sz.ref,
-            Oz = this.callbacks[Fz];
-          if (Oz) {
-            if ((sz.op & Wz.DELETE) === Wz.DELETE && cF.isSchema(sz.previousValue)) {
-              const zz = sz.previousValue[oz],
-                tz = this.callbacks[zz]?.[Wz.DELETE];
-              if (tz)
-                for (let sz = tz.length - 1; sz >= 0; sz--) try {
-                  tz[sz]()
-                } catch (vW) {
-                  console.error(vW)
+        for (let zv = 0, Pv = vv.length; zv < Pv; zv++) {
+          const Pv = vv[zv],
+            hv = Pv.refId,
+            ev = Pv.ref,
+            gv = this.callbacks[hv];
+          if (gv) {
+            if ((Pv.op & Sv.DELETE) === Sv.DELETE && Kh.isSchema(Pv.previousValue)) {
+              const vv = Pv.previousValue[pv],
+                zv = this.callbacks[vv]?.[Sv.DELETE];
+              if (zv)
+                for (let Pv = zv.length - 1; Pv >= 0; Pv--) try {
+                  zv[Pv]()
+                } catch (eS) {
+                  console.error(eS)
                 }
             }
-            if (cF.isSchema(Xz)) {
-              if (!this.uniqueRefIds.has(Fz)) {
-                const zz = Oz[Wz.REPLACE];
-                if (zz)
-                  for (let tz = zz.length - 1; tz >= 0; tz--) try {
-                    zz[tz]()
-                  } catch (vW) {
-                    console.error(vW)
+            if (Kh.isSchema(ev)) {
+              if (!this.uniqueRefIds.has(hv)) {
+                const vv = gv[Sv.REPLACE];
+                if (vv)
+                  for (let zv = vv.length - 1; zv >= 0; zv--) try {
+                    vv[zv]()
+                  } catch (eS) {
+                    console.error(eS)
                   }
               }
-              const zz = Oz[sz.field];
-              if (zz)
-                for (let tz = zz.length - 1; tz >= 0; tz--) try {
-                  zz[tz](sz.value, sz.previousValue)
-                } catch (vW) {
-                  console.error(vW)
+              const vv = gv[Pv.field];
+              if (vv)
+                for (let zv = vv.length - 1; zv >= 0; zv--) try {
+                  vv[zv](Pv.value, Pv.previousValue)
+                } catch (eS) {
+                  console.error(eS)
                 }
             } else {
-              const zz = sz.dynamicIndex ?? sz.field;
-              if ((sz.op & Wz.DELETE) === Wz.DELETE) {
-                if (void 0 !== sz.previousValue) {
-                  const tz = Oz[Wz.DELETE];
-                  if (tz)
-                    for (let Fz = tz.length - 1; Fz >= 0; Fz--) try {
-                      tz[Fz](sz.previousValue, zz)
-                    } catch (vW) {
-                      console.error(vW)
+              const vv = Pv.dynamicIndex ?? Pv.field;
+              if ((Pv.op & Sv.DELETE) === Sv.DELETE) {
+                if (void 0 !== Pv.previousValue) {
+                  const zv = gv[Sv.DELETE];
+                  if (zv)
+                    for (let hv = zv.length - 1; hv >= 0; hv--) try {
+                      zv[hv](Pv.previousValue, vv)
+                    } catch (eS) {
+                      console.error(eS)
                     }
                 }
-                if ((sz.op & Wz.ADD) === Wz.ADD) {
-                  const tz = Oz[Wz.ADD];
-                  if (tz)
-                    for (let Fz = tz.length - 1; Fz >= 0; Fz--) try {
-                      tz[Fz](sz.value, zz)
-                    } catch (vW) {
-                      console.error(vW)
+                if ((Pv.op & Sv.ADD) === Sv.ADD) {
+                  const zv = gv[Sv.ADD];
+                  if (zv)
+                    for (let hv = zv.length - 1; hv >= 0; hv--) try {
+                      zv[hv](Pv.value, vv)
+                    } catch (eS) {
+                      console.error(eS)
                     }
                 }
-              } else if ((sz.op & Wz.ADD) === Wz.ADD && sz.previousValue !== sz.value) {
-                const tz = Oz[Wz.ADD];
-                if (tz)
-                  for (let Fz = tz.length - 1; Fz >= 0; Fz--) try {
-                    tz[Fz](sz.value, zz)
-                  } catch (vW) {
-                    console.error(vW)
+              } else if ((Pv.op & Sv.ADD) === Sv.ADD && Pv.previousValue !== Pv.value) {
+                const zv = gv[Sv.ADD];
+                if (zv)
+                  for (let hv = zv.length - 1; hv >= 0; hv--) try {
+                    zv[hv](Pv.value, vv)
+                  } catch (eS) {
+                    console.error(eS)
                   }
               }
-              if (sz.value !== sz.previousValue) {
-                const tz = Oz[Wz.REPLACE];
-                if (tz)
-                  for (let Fz = tz.length - 1; Fz >= 0; Fz--) try {
-                    tz[Fz](zz, sz.value)
-                  } catch (vW) {
-                    console.error(vW)
+              if (Pv.value !== Pv.previousValue) {
+                const zv = gv[Sv.REPLACE];
+                if (zv)
+                  for (let hv = zv.length - 1; hv >= 0; hv--) try {
+                    zv[hv](vv, Pv.value)
+                  } catch (eS) {
+                    console.error(eS)
                   }
               }
             }
-            this.uniqueRefIds.add(Fz)
+            this.uniqueRefIds.add(hv)
           }
         }
         this.isTriggering = !1
       }
     }
-    const XW = {
-      get(zz) {
-        if (zz instanceof pF) return new WW(zz);
-        if ("Gw" in zz.xH) return new WW(zz.xH.Gw);
+    const PS = {
+      get(vv) {
+        if (vv instanceof oh) return new zS(vv);
+        if ("ow" in vv.uC) return new zS(vv.uC.ow);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(zz) {
-        if (zz instanceof pF) return sW(zz);
-        if ("Gw" in zz.xH) return sW(zz.xH.Gw);
+      getLegacy(vv) {
+        if (vv instanceof oh) return uh(vv);
+        if ("ow" in vv.uC) return uh(vv.uC.ow);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (zz, tz) => FW(zz, tz)
+      getRawChanges: (vv, zv) => vS(vv, zv)
     };
-    class OW {
+    class hS {
       _free = [];
       _factory;
       _maxSize;
-      constructor(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = zz, this._maxSize = tz.maxSize ?? 1 / 0;
-        const sz = tz.preallocate ?? 0;
-        for (let Fz = 0; Fz < sz; Fz++) this._free.push(zz())
+      constructor(vv) {
+        let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = vv, this._maxSize = zv.maxSize ?? 1 / 0;
+        const Pv = zv.preallocate ?? 0;
+        for (let hv = 0; hv < Pv; hv++) this._free.push(vv())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(zz) {
-        cF.reset(zz), this._free.length < this._maxSize && this._free.push(zz)
+      release(vv) {
+        Kh.reset(vv), this._free.length < this._maxSize && this._free.push(vv)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function oW(zz) {
-      return new OW((() => new zz), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function SS(vv) {
+      return new hS((() => new vv), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    xt("map", {
-      constructor: oF
-    }), xt("array", {
-      constructor: XF
-    }), xt("set", {
-      constructor: UF
-    }), xt("collection", {
-      constructor: vF
+    fz("map", {
+      constructor: Sh
+    }), fz("array", {
+      constructor: Ph
+    }), fz("set", {
+      constructor: gh
+    }), fz("collection", {
+      constructor: eh
     })
   },
-  8589: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      __addDisposableResource: () => Mz,
-      __assign: () => Xz,
-      __asyncDelegator: () => Iz,
-      __asyncGenerator: () => Jz,
-      __asyncValues: () => Cz,
-      __await: () => mz,
-      __awaiter: () => wz,
-      __classPrivateFieldGet: () => jz,
-      __classPrivateFieldIn: () => yz,
-      __classPrivateFieldSet: () => Az,
-      __createBinding: () => gz,
-      __decorate: () => oz,
-      __disposeResources: () => hz,
-      __esDecorate: () => Uz,
-      __exportStar: () => Hz,
-      __extends: () => Wz,
-      __generator: () => Dz,
-      __importDefault: () => cz,
-      __importStar: () => Tz,
-      __makeTemplateObject: () => ez,
-      __metadata: () => bz,
-      __param: () => vz,
-      __propKey: () => uz,
-      __read: () => Pz,
-      __rest: () => Oz,
-      __rewriteRelativeImportExtension: () => Qz,
-      __runInitializers: () => Kz,
-      __setFunctionName: () => Nz,
-      __spread: () => rz,
-      __spreadArray: () => xz,
-      __spreadArrays: () => Yz,
-      __values: () => Bz,
-      default: () => kz
+  8746: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      __addDisposableResource: () => Iv,
+      __assign: () => ev,
+      __asyncDelegator: () => nv,
+      __asyncGenerator: () => Yv,
+      __asyncValues: () => Ov,
+      __await: () => Fv,
+      __awaiter: () => av,
+      __classPrivateFieldGet: () => xv,
+      __classPrivateFieldIn: () => qv,
+      __classPrivateFieldSet: () => tv,
+      __createBinding: () => Cv,
+      __decorate: () => pv,
+      __disposeResources: () => Zv,
+      __esDecorate: () => Nv,
+      __exportStar: () => iv,
+      __extends: () => Sv,
+      __generator: () => sv,
+      __importDefault: () => Rv,
+      __importStar: () => Uv,
+      __makeTemplateObject: () => Dv,
+      __metadata: () => wv,
+      __param: () => dv,
+      __propKey: () => Tv,
+      __read: () => Gv,
+      __rest: () => gv,
+      __rewriteRelativeImportExtension: () => Av,
+      __runInitializers: () => lv,
+      __setFunctionName: () => Wv,
+      __spread: () => mv,
+      __spreadArray: () => fv,
+      __spreadArrays: () => jv,
+      __values: () => cv,
+      default: () => Lv
     });
-    var Fz = function(zz, tz) {
-      return Fz = Object.setPrototypeOf || {
+    var hv = function(vv, zv) {
+      return hv = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(zz, tz) {
-        zz.__proto__ = tz
-      } || function(zz, tz) {
-        for (var sz in tz) Object.prototype.hasOwnProperty.call(tz, sz) && (zz[sz] = tz[sz])
-      }, Fz(zz, tz)
+      instanceof Array && function(vv, zv) {
+        vv.__proto__ = zv
+      } || function(vv, zv) {
+        for (var Pv in zv) Object.prototype.hasOwnProperty.call(zv, Pv) && (vv[Pv] = zv[Pv])
+      }, hv(vv, zv)
     };
 
-    function Wz(zz, tz) {
-      if ("function" !== typeof tz && null !== tz) throw new TypeError("Class extends value " + String(tz) + " is not a constructor or null");
+    function Sv(vv, zv) {
+      if ("function" !== typeof zv && null !== zv) throw new TypeError("Class extends value " + String(zv) + " is not a constructor or null");
 
-      function sz() {
-        this.constructor = zz
+      function Pv() {
+        this.constructor = vv
       }
-      Fz(zz, tz), zz.prototype = null === tz ? Object.create(tz) : (sz.prototype = tz.prototype, new sz)
+      hv(vv, zv), vv.prototype = null === zv ? Object.create(zv) : (Pv.prototype = zv.prototype, new Pv)
     }
-    var Xz = function() {
-      return Xz = Object.assign || function(zz) {
-        for (var tz, sz = 1, Fz = arguments.length; sz < Fz; sz++)
-          for (var Wz in tz = arguments[sz]) Object.prototype.hasOwnProperty.call(tz, Wz) && (zz[Wz] = tz[Wz]);
-        return zz
-      }, Xz.apply(this, arguments)
+    var ev = function() {
+      return ev = Object.assign || function(vv) {
+        for (var zv, Pv = 1, hv = arguments.length; Pv < hv; Pv++)
+          for (var Sv in zv = arguments[Pv]) Object.prototype.hasOwnProperty.call(zv, Sv) && (vv[Sv] = zv[Sv]);
+        return vv
+      }, ev.apply(this, arguments)
     };
 
-    function Oz(zz, tz) {
-      var sz = {};
-      for (var Fz in zz) Object.prototype.hasOwnProperty.call(zz, Fz) && tz.indexOf(Fz) < 0 && (sz[Fz] = zz[Fz]);
-      if (null != zz && "function" === typeof Object.getOwnPropertySymbols) {
-        var Wz = 0;
-        for (Fz = Object.getOwnPropertySymbols(zz); Wz < Fz.length; Wz++) tz.indexOf(Fz[Wz]) < 0 && Object.prototype.propertyIsEnumerable.call(zz, Fz[Wz]) && (sz[Fz[Wz]] = zz[Fz[Wz]])
+    function gv(vv, zv) {
+      var Pv = {};
+      for (var hv in vv) Object.prototype.hasOwnProperty.call(vv, hv) && zv.indexOf(hv) < 0 && (Pv[hv] = vv[hv]);
+      if (null != vv && "function" === typeof Object.getOwnPropertySymbols) {
+        var Sv = 0;
+        for (hv = Object.getOwnPropertySymbols(vv); Sv < hv.length; Sv++) zv.indexOf(hv[Sv]) < 0 && Object.prototype.propertyIsEnumerable.call(vv, hv[Sv]) && (Pv[hv[Sv]] = vv[hv[Sv]])
       }
-      return sz
+      return Pv
     }
 
-    function oz(zz, tz, sz, Fz) {
-      var Wz, Xz = arguments.length,
-        Oz = Xz < 3 ? tz : null === Fz ? Fz = Object.getOwnPropertyDescriptor(tz, sz) : Fz;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) Oz = Reflect.decorate(zz, tz, sz, Fz);
+    function pv(vv, zv, Pv, hv) {
+      var Sv, ev = arguments.length,
+        gv = ev < 3 ? zv : null === hv ? hv = Object.getOwnPropertyDescriptor(zv, Pv) : hv;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) gv = Reflect.decorate(vv, zv, Pv, hv);
       else
-        for (var oz = zz.length - 1; oz >= 0; oz--)(Wz = zz[oz]) && (Oz = (Xz < 3 ? Wz(Oz) : Xz > 3 ? Wz(tz, sz, Oz) : Wz(tz, sz)) || Oz);
-      return Xz > 3 && Oz && Object.defineProperty(tz, sz, Oz), Oz
+        for (var pv = vv.length - 1; pv >= 0; pv--)(Sv = vv[pv]) && (gv = (ev < 3 ? Sv(gv) : ev > 3 ? Sv(zv, Pv, gv) : Sv(zv, Pv)) || gv);
+      return ev > 3 && gv && Object.defineProperty(zv, Pv, gv), gv
     }
 
-    function vz(zz, tz) {
-      return function(sz, Fz) {
-        tz(sz, Fz, zz)
+    function dv(vv, zv) {
+      return function(Pv, hv) {
+        zv(Pv, hv, vv)
       }
     }
 
-    function Uz(zz, tz, sz, Fz, Wz, Xz) {
-      function Oz(zz) {
-        if (void 0 !== zz && "function" !== typeof zz) throw new TypeError("Function expected");
-        return zz
+    function Nv(vv, zv, Pv, hv, Sv, ev) {
+      function gv(vv) {
+        if (void 0 !== vv && "function" !== typeof vv) throw new TypeError("Function expected");
+        return vv
       }
-      for (var oz, vz = Fz.kind, Uz = "getter" === vz ? "get" : "setter" === vz ? "set" : "value", Kz = !tz && zz ? Fz.static ? zz : zz.prototype : null, uz = tz || (Kz ? Object.getOwnPropertyDescriptor(Kz, Fz.name) : {}), Nz = !1, bz = sz.length - 1; bz >= 0; bz--) {
-        var wz = {};
-        for (var Dz in Fz) wz[Dz] = "access" === Dz ? {} : Fz[Dz];
-        for (var Dz in Fz.access) wz.access[Dz] = Fz.access[Dz];
-        wz.addInitializer = function(zz) {
-          if (Nz) throw new TypeError("Cannot add initializers after decoration has completed");
-          Xz.push(Oz(zz || null))
+      for (var pv, dv = hv.kind, Nv = "getter" === dv ? "get" : "setter" === dv ? "set" : "value", lv = !zv && vv ? hv.static ? vv : vv.prototype : null, Tv = zv || (lv ? Object.getOwnPropertyDescriptor(lv, hv.name) : {}), Wv = !1, wv = Pv.length - 1; wv >= 0; wv--) {
+        var av = {};
+        for (var sv in hv) av[sv] = "access" === sv ? {} : hv[sv];
+        for (var sv in hv.access) av.access[sv] = hv.access[sv];
+        av.addInitializer = function(vv) {
+          if (Wv) throw new TypeError("Cannot add initializers after decoration has completed");
+          ev.push(gv(vv || null))
         };
-        var gz = (0, sz[bz])("accessor" === vz ? {
-          get: uz.get,
-          set: uz.set
-        } : uz[Uz], wz);
-        if ("accessor" === vz) {
-          if (void 0 === gz) continue;
-          if (null === gz || "object" !== typeof gz) throw new TypeError("Object expected");
-          (oz = Oz(gz.get)) && (uz.get = oz), (oz = Oz(gz.set)) && (uz.set = oz), (oz = Oz(gz.init)) && Wz.unshift(oz)
-        } else(oz = Oz(gz)) && ("field" === vz ? Wz.unshift(oz) : uz[Uz] = oz)
+        var Cv = (0, Pv[wv])("accessor" === dv ? {
+          get: Tv.get,
+          set: Tv.set
+        } : Tv[Nv], av);
+        if ("accessor" === dv) {
+          if (void 0 === Cv) continue;
+          if (null === Cv || "object" !== typeof Cv) throw new TypeError("Object expected");
+          (pv = gv(Cv.get)) && (Tv.get = pv), (pv = gv(Cv.set)) && (Tv.set = pv), (pv = gv(Cv.init)) && Sv.unshift(pv)
+        } else(pv = gv(Cv)) && ("field" === dv ? Sv.unshift(pv) : Tv[Nv] = pv)
       }
-      Kz && Object.defineProperty(Kz, Fz.name, uz), Nz = !0
+      lv && Object.defineProperty(lv, hv.name, Tv), Wv = !0
     }
 
-    function Kz(zz, tz, sz) {
-      for (var Fz = arguments.length > 2, Wz = 0; Wz < tz.length; Wz++) sz = Fz ? tz[Wz].call(zz, sz) : tz[Wz].call(zz);
-      return Fz ? sz : void 0
+    function lv(vv, zv, Pv) {
+      for (var hv = arguments.length > 2, Sv = 0; Sv < zv.length; Sv++) Pv = hv ? zv[Sv].call(vv, Pv) : zv[Sv].call(vv);
+      return hv ? Pv : void 0
     }
 
-    function uz(zz) {
-      return "symbol" === typeof zz ? zz : "".concat(zz)
+    function Tv(vv) {
+      return "symbol" === typeof vv ? vv : "".concat(vv)
     }
 
-    function Nz(zz, tz, sz) {
-      return "symbol" === typeof tz && (tz = tz.description ? "[".concat(tz.description, "]") : ""), Object.defineProperty(zz, "name", {
+    function Wv(vv, zv, Pv) {
+      return "symbol" === typeof zv && (zv = zv.description ? "[".concat(zv.description, "]") : ""), Object.defineProperty(vv, "name", {
         configurable: !0,
-        value: sz ? "".concat(sz, " ", tz) : tz
+        value: Pv ? "".concat(Pv, " ", zv) : zv
       })
     }
 
-    function bz(zz, tz) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(zz, tz)
+    function wv(vv, zv) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(vv, zv)
     }
 
-    function wz(zz, tz, sz, Fz) {
-      return new(sz || (sz = Promise))((function(Wz, Xz) {
-        function Oz(zz) {
+    function av(vv, zv, Pv, hv) {
+      return new(Pv || (Pv = Promise))((function(Sv, ev) {
+        function gv(vv) {
           try {
-            vz(Fz.next(zz))
-          } catch (tz) {
-            Xz(tz)
+            dv(hv.next(vv))
+          } catch (zv) {
+            ev(zv)
           }
         }
 
-        function oz(zz) {
+        function pv(vv) {
           try {
-            vz(Fz.throw(zz))
-          } catch (tz) {
-            Xz(tz)
+            dv(hv.throw(vv))
+          } catch (zv) {
+            ev(zv)
           }
         }
 
-        function vz(zz) {
-          var tz;
-          zz.done ? Wz(zz.value) : (tz = zz.value, tz instanceof sz ? tz : new sz((function(zz) {
-            zz(tz)
-          }))).then(Oz, oz)
+        function dv(vv) {
+          var zv;
+          vv.done ? Sv(vv.value) : (zv = vv.value, zv instanceof Pv ? zv : new Pv((function(vv) {
+            vv(zv)
+          }))).then(gv, pv)
         }
-        vz((Fz = Fz.apply(zz, tz || [])).next())
+        dv((hv = hv.apply(vv, zv || [])).next())
       }))
     }
 
-    function Dz(zz, tz) {
-      var sz, Fz, Wz, Xz = {
+    function sv(vv, zv) {
+      var Pv, hv, Sv, ev = {
           label: 0,
           sent: function() {
-            if (1 & Wz[0]) throw Wz[1];
-            return Wz[1]
+            if (1 & Sv[0]) throw Sv[1];
+            return Sv[1]
           },
           trys: [],
           ops: []
         },
-        Oz = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return Oz.next = oz(0), Oz.throw = oz(1), Oz.return = oz(2), "function" === typeof Symbol && (Oz[Symbol.iterator] = function() {
+        gv = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return gv.next = pv(0), gv.throw = pv(1), gv.return = pv(2), "function" === typeof Symbol && (gv[Symbol.iterator] = function() {
         return this
-      }), Oz;
+      }), gv;
 
-      function oz(oz) {
-        return function(vz) {
-          return function(oz) {
-            if (sz) throw new TypeError("Generator is already executing.");
-            for (; Oz && (Oz = 0, oz[0] && (Xz = 0)), Xz;) try {
-              if (sz = 1, Fz && (Wz = 2 & oz[0] ? Fz.return : oz[0] ? Fz.throw || ((Wz = Fz.return) && Wz.call(Fz), 0) : Fz.next) && !(Wz = Wz.call(Fz, oz[1])).done) return Wz;
-              switch (Fz = 0, Wz && (oz = [2 & oz[0], Wz.value]), oz[0]) {
+      function pv(pv) {
+        return function(dv) {
+          return function(pv) {
+            if (Pv) throw new TypeError("Generator is already executing.");
+            for (; gv && (gv = 0, pv[0] && (ev = 0)), ev;) try {
+              if (Pv = 1, hv && (Sv = 2 & pv[0] ? hv.return : pv[0] ? hv.throw || ((Sv = hv.return) && Sv.call(hv), 0) : hv.next) && !(Sv = Sv.call(hv, pv[1])).done) return Sv;
+              switch (hv = 0, Sv && (pv = [2 & pv[0], Sv.value]), pv[0]) {
                 case 0:
                 case 1:
-                  Wz = oz;
+                  Sv = pv;
                   break;
                 case 4:
-                  return Xz.label++, {
-                    value: oz[1],
+                  return ev.label++, {
+                    value: pv[1],
                     done: !1
                   };
                 case 5:
-                  Xz.label++, Fz = oz[1], oz = [0];
+                  ev.label++, hv = pv[1], pv = [0];
                   continue;
                 case 7:
-                  oz = Xz.ops.pop(), Xz.trys.pop();
+                  pv = ev.ops.pop(), ev.trys.pop();
                   continue;
                 default:
-                  if (!(Wz = (Wz = Xz.trys).length > 0 && Wz[Wz.length - 1]) && (6 === oz[0] || 2 === oz[0])) {
-                    Xz = 0;
+                  if (!(Sv = (Sv = ev.trys).length > 0 && Sv[Sv.length - 1]) && (6 === pv[0] || 2 === pv[0])) {
+                    ev = 0;
                     continue
                   }
-                  if (3 === oz[0] && (!Wz || oz[1] > Wz[0] && oz[1] < Wz[3])) {
-                    Xz.label = oz[1];
+                  if (3 === pv[0] && (!Sv || pv[1] > Sv[0] && pv[1] < Sv[3])) {
+                    ev.label = pv[1];
                     break
                   }
-                  if (6 === oz[0] && Xz.label < Wz[1]) {
-                    Xz.label = Wz[1], Wz = oz;
+                  if (6 === pv[0] && ev.label < Sv[1]) {
+                    ev.label = Sv[1], Sv = pv;
                     break
                   }
-                  if (Wz && Xz.label < Wz[2]) {
-                    Xz.label = Wz[2], Xz.ops.push(oz);
+                  if (Sv && ev.label < Sv[2]) {
+                    ev.label = Sv[2], ev.ops.push(pv);
                     break
                   }
-                  Wz[2] && Xz.ops.pop(), Xz.trys.pop();
+                  Sv[2] && ev.ops.pop(), ev.trys.pop();
                   continue
               }
-              oz = tz.call(zz, Xz)
-            } catch (vz) {
-              oz = [6, vz], Fz = 0
+              pv = zv.call(vv, ev)
+            } catch (dv) {
+              pv = [6, dv], hv = 0
             } finally {
-              sz = Wz = 0
+              Pv = Sv = 0
             }
-            if (5 & oz[0]) throw oz[1];
+            if (5 & pv[0]) throw pv[1];
             return {
-              value: oz[0] ? oz[1] : void 0,
+              value: pv[0] ? pv[1] : void 0,
               done: !0
             }
-          }([oz, vz])
+          }([pv, dv])
         }
       }
     }
-    var gz = Object.create ? function(zz, tz, sz, Fz) {
-      void 0 === Fz && (Fz = sz);
-      var Wz = Object.getOwnPropertyDescriptor(tz, sz);
-      Wz && !("get" in Wz ? !tz.__esModule : Wz.writable || Wz.configurable) || (Wz = {
+    var Cv = Object.create ? function(vv, zv, Pv, hv) {
+      void 0 === hv && (hv = Pv);
+      var Sv = Object.getOwnPropertyDescriptor(zv, Pv);
+      Sv && !("get" in Sv ? !zv.__esModule : Sv.writable || Sv.configurable) || (Sv = {
         enumerable: !0,
         get: function() {
-          return tz[sz]
+          return zv[Pv]
         }
-      }), Object.defineProperty(zz, Fz, Wz)
-    } : function(zz, tz, sz, Fz) {
-      void 0 === Fz && (Fz = sz), zz[Fz] = tz[sz]
+      }), Object.defineProperty(vv, hv, Sv)
+    } : function(vv, zv, Pv, hv) {
+      void 0 === hv && (hv = Pv), vv[hv] = zv[Pv]
     };
 
-    function Hz(zz, tz) {
-      for (var sz in zz) "default" === sz || Object.prototype.hasOwnProperty.call(tz, sz) || gz(tz, zz, sz)
+    function iv(vv, zv) {
+      for (var Pv in vv) "default" === Pv || Object.prototype.hasOwnProperty.call(zv, Pv) || Cv(zv, vv, Pv)
     }
 
-    function Bz(zz) {
-      var tz = "function" === typeof Symbol && Symbol.iterator,
-        sz = tz && zz[tz],
-        Fz = 0;
-      if (sz) return sz.call(zz);
-      if (zz && "number" === typeof zz.length) return {
+    function cv(vv) {
+      var zv = "function" === typeof Symbol && Symbol.iterator,
+        Pv = zv && vv[zv],
+        hv = 0;
+      if (Pv) return Pv.call(vv);
+      if (vv && "number" === typeof vv.length) return {
         next: function() {
-          return zz && Fz >= zz.length && (zz = void 0), {
-            value: zz && zz[Fz++],
-            done: !zz
+          return vv && hv >= vv.length && (vv = void 0), {
+            value: vv && vv[hv++],
+            done: !vv
           }
         }
       };
-      throw new TypeError(tz ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(zv ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function Pz(zz, tz) {
-      var sz = "function" === typeof Symbol && zz[Symbol.iterator];
-      if (!sz) return zz;
-      var Fz, Wz, Xz = sz.call(zz),
-        Oz = [];
+    function Gv(vv, zv) {
+      var Pv = "function" === typeof Symbol && vv[Symbol.iterator];
+      if (!Pv) return vv;
+      var hv, Sv, ev = Pv.call(vv),
+        gv = [];
       try {
         for (;
-          (void 0 === tz || tz-- > 0) && !(Fz = Xz.next()).done;) Oz.push(Fz.value)
-      } catch (oz) {
-        Wz = {
-          error: oz
+          (void 0 === zv || zv-- > 0) && !(hv = ev.next()).done;) gv.push(hv.value)
+      } catch (pv) {
+        Sv = {
+          error: pv
         }
       } finally {
         try {
-          Fz && !Fz.done && (sz = Xz.return) && sz.call(Xz)
+          hv && !hv.done && (Pv = ev.return) && Pv.call(ev)
         } finally {
-          if (Wz) throw Wz.error
+          if (Sv) throw Sv.error
         }
       }
-      return Oz
+      return gv
     }
 
-    function rz() {
-      for (var zz = [], tz = 0; tz < arguments.length; tz++) zz = zz.concat(Pz(arguments[tz]));
-      return zz
+    function mv() {
+      for (var vv = [], zv = 0; zv < arguments.length; zv++) vv = vv.concat(Gv(arguments[zv]));
+      return vv
     }
 
-    function Yz() {
-      for (var zz = 0, tz = 0, sz = arguments.length; tz < sz; tz++) zz += arguments[tz].length;
-      var Fz = Array(zz),
-        Wz = 0;
-      for (tz = 0; tz < sz; tz++)
-        for (var Xz = arguments[tz], Oz = 0, oz = Xz.length; Oz < oz; Oz++, Wz++) Fz[Wz] = Xz[Oz];
-      return Fz
+    function jv() {
+      for (var vv = 0, zv = 0, Pv = arguments.length; zv < Pv; zv++) vv += arguments[zv].length;
+      var hv = Array(vv),
+        Sv = 0;
+      for (zv = 0; zv < Pv; zv++)
+        for (var ev = arguments[zv], gv = 0, pv = ev.length; gv < pv; gv++, Sv++) hv[Sv] = ev[gv];
+      return hv
     }
 
-    function xz(zz, tz, sz) {
-      if (sz || 2 === arguments.length)
-        for (var Fz, Wz = 0, Xz = tz.length; Wz < Xz; Wz++) !Fz && Wz in tz || (Fz || (Fz = Array.prototype.slice.call(tz, 0, Wz)), Fz[Wz] = tz[Wz]);
-      return zz.concat(Fz || Array.prototype.slice.call(tz))
+    function fv(vv, zv, Pv) {
+      if (Pv || 2 === arguments.length)
+        for (var hv, Sv = 0, ev = zv.length; Sv < ev; Sv++) !hv && Sv in zv || (hv || (hv = Array.prototype.slice.call(zv, 0, Sv)), hv[Sv] = zv[Sv]);
+      return vv.concat(hv || Array.prototype.slice.call(zv))
     }
 
-    function mz(zz) {
-      return this instanceof mz ? (this.v = zz, this) : new mz(zz)
+    function Fv(vv) {
+      return this instanceof Fv ? (this.v = vv, this) : new Fv(vv)
     }
 
-    function Jz(zz, tz, sz) {
+    function Yv(vv, zv, Pv) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var Fz, Wz = sz.apply(zz, tz || []),
-        Xz = [];
-      return Fz = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), Oz("next"), Oz("throw"), Oz("return", (function(zz) {
-        return function(tz) {
-          return Promise.resolve(tz).then(zz, Uz)
+      var hv, Sv = Pv.apply(vv, zv || []),
+        ev = [];
+      return hv = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), gv("next"), gv("throw"), gv("return", (function(vv) {
+        return function(zv) {
+          return Promise.resolve(zv).then(vv, Nv)
         }
-      })), Fz[Symbol.asyncIterator] = function() {
+      })), hv[Symbol.asyncIterator] = function() {
         return this
-      }, Fz;
+      }, hv;
 
-      function Oz(zz, tz) {
-        Wz[zz] && (Fz[zz] = function(tz) {
-          return new Promise((function(sz, Fz) {
-            Xz.push([zz, tz, sz, Fz]) > 1 || oz(zz, tz)
+      function gv(vv, zv) {
+        Sv[vv] && (hv[vv] = function(zv) {
+          return new Promise((function(Pv, hv) {
+            ev.push([vv, zv, Pv, hv]) > 1 || pv(vv, zv)
           }))
-        }, tz && (Fz[zz] = tz(Fz[zz])))
+        }, zv && (hv[vv] = zv(hv[vv])))
       }
 
-      function oz(zz, tz) {
+      function pv(vv, zv) {
         try {
-          (sz = Wz[zz](tz)).value instanceof mz ? Promise.resolve(sz.value.v).then(vz, Uz) : Kz(Xz[0][2], sz)
-        } catch (Fz) {
-          Kz(Xz[0][3], Fz)
+          (Pv = Sv[vv](zv)).value instanceof Fv ? Promise.resolve(Pv.value.v).then(dv, Nv) : lv(ev[0][2], Pv)
+        } catch (hv) {
+          lv(ev[0][3], hv)
         }
-        var sz
+        var Pv
       }
 
-      function vz(zz) {
-        oz("next", zz)
+      function dv(vv) {
+        pv("next", vv)
       }
 
-      function Uz(zz) {
-        oz("throw", zz)
+      function Nv(vv) {
+        pv("throw", vv)
       }
 
-      function Kz(zz, tz) {
-        zz(tz), Xz.shift(), Xz.length && oz(Xz[0][0], Xz[0][1])
+      function lv(vv, zv) {
+        vv(zv), ev.shift(), ev.length && pv(ev[0][0], ev[0][1])
       }
     }
 
-    function Iz(zz) {
-      var tz, sz;
-      return tz = {}, Fz("next"), Fz("throw", (function(zz) {
-        throw zz
-      })), Fz("return"), tz[Symbol.iterator] = function() {
+    function nv(vv) {
+      var zv, Pv;
+      return zv = {}, hv("next"), hv("throw", (function(vv) {
+        throw vv
+      })), hv("return"), zv[Symbol.iterator] = function() {
         return this
-      }, tz;
+      }, zv;
 
-      function Fz(Fz, Wz) {
-        tz[Fz] = zz[Fz] ? function(tz) {
-          return (sz = !sz) ? {
-            value: mz(zz[Fz](tz)),
+      function hv(hv, Sv) {
+        zv[hv] = vv[hv] ? function(zv) {
+          return (Pv = !Pv) ? {
+            value: Fv(vv[hv](zv)),
             done: !1
-          } : Wz ? Wz(tz) : tz
-        } : Wz
+          } : Sv ? Sv(zv) : zv
+        } : Sv
       }
     }
 
-    function Cz(zz) {
+    function Ov(vv) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var tz, sz = zz[Symbol.asyncIterator];
-      return sz ? sz.call(zz) : (zz = Bz(zz), tz = {}, Fz("next"), Fz("throw"), Fz("return"), tz[Symbol.asyncIterator] = function() {
+      var zv, Pv = vv[Symbol.asyncIterator];
+      return Pv ? Pv.call(vv) : (vv = cv(vv), zv = {}, hv("next"), hv("throw"), hv("return"), zv[Symbol.asyncIterator] = function() {
         return this
-      }, tz);
+      }, zv);
 
-      function Fz(sz) {
-        tz[sz] = zz[sz] && function(tz) {
-          return new Promise((function(Fz, Wz) {
-            (function(zz, tz, sz, Fz) {
-              Promise.resolve(Fz).then((function(tz) {
-                zz({
-                  value: tz,
-                  done: sz
+      function hv(Pv) {
+        zv[Pv] = vv[Pv] && function(zv) {
+          return new Promise((function(hv, Sv) {
+            (function(vv, zv, Pv, hv) {
+              Promise.resolve(hv).then((function(zv) {
+                vv({
+                  value: zv,
+                  done: Pv
                 })
-              }), tz)
-            })(Fz, Wz, (tz = zz[sz](tz)).done, tz.value)
+              }), zv)
+            })(hv, Sv, (zv = vv[Pv](zv)).done, zv.value)
           }))
         }
       }
     }
 
-    function ez(zz, tz) {
-      return Object.defineProperty ? Object.defineProperty(zz, "raw", {
-        value: tz
-      }) : zz.raw = tz, zz
+    function Dv(vv, zv) {
+      return Object.defineProperty ? Object.defineProperty(vv, "raw", {
+        value: zv
+      }) : vv.raw = zv, vv
     }
-    var Zz = Object.create ? function(zz, tz) {
-        Object.defineProperty(zz, "default", {
+    var Kv = Object.create ? function(vv, zv) {
+        Object.defineProperty(vv, "default", {
           enumerable: !0,
-          value: tz
+          value: zv
         })
-      } : function(zz, tz) {
-        zz.default = tz
+      } : function(vv, zv) {
+        vv.default = zv
       },
-      Gz = function(zz) {
-        return Gz = Object.getOwnPropertyNames || function(zz) {
-          var tz = [];
-          for (var sz in zz) Object.prototype.hasOwnProperty.call(zz, sz) && (tz[tz.length] = sz);
-          return tz
-        }, Gz(zz)
+      Vv = function(vv) {
+        return Vv = Object.getOwnPropertyNames || function(vv) {
+          var zv = [];
+          for (var Pv in vv) Object.prototype.hasOwnProperty.call(vv, Pv) && (zv[zv.length] = Pv);
+          return zv
+        }, Vv(vv)
       };
 
-    function Tz(zz) {
-      if (zz && zz.__esModule) return zz;
-      var tz = {};
-      if (null != zz)
-        for (var sz = Gz(zz), Fz = 0; Fz < sz.length; Fz++) "default" !== sz[Fz] && gz(tz, zz, sz[Fz]);
-      return Zz(tz, zz), tz
+    function Uv(vv) {
+      if (vv && vv.__esModule) return vv;
+      var zv = {};
+      if (null != vv)
+        for (var Pv = Vv(vv), hv = 0; hv < Pv.length; hv++) "default" !== Pv[hv] && Cv(zv, vv, Pv[hv]);
+      return Kv(zv, vv), zv
     }
 
-    function cz(zz) {
-      return zz && zz.__esModule ? zz : {
-        default: zz
+    function Rv(vv) {
+      return vv && vv.__esModule ? vv : {
+        default: vv
       }
     }
 
-    function jz(zz, tz, sz, Fz) {
-      if ("a" === sz && !Fz) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof tz ? zz !== tz || !Fz : !tz.has(zz)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === sz ? Fz : "a" === sz ? Fz.call(zz) : Fz ? Fz.value : tz.get(zz)
+    function xv(vv, zv, Pv, hv) {
+      if ("a" === Pv && !hv) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof zv ? vv !== zv || !hv : !zv.has(vv)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === Pv ? hv : "a" === Pv ? hv.call(vv) : hv ? hv.value : zv.get(vv)
     }
 
-    function Az(zz, tz, sz, Fz, Wz) {
-      if ("m" === Fz) throw new TypeError("Private method is not writable");
-      if ("a" === Fz && !Wz) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof tz ? zz !== tz || !Wz : !tz.has(zz)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === Fz ? Wz.call(zz, sz) : Wz ? Wz.value = sz : tz.set(zz, sz), sz
+    function tv(vv, zv, Pv, hv, Sv) {
+      if ("m" === hv) throw new TypeError("Private method is not writable");
+      if ("a" === hv && !Sv) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof zv ? vv !== zv || !Sv : !zv.has(vv)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === hv ? Sv.call(vv, Pv) : Sv ? Sv.value = Pv : zv.set(vv, Pv), Pv
     }
 
-    function yz(zz, tz) {
-      if (null === tz || "object" !== typeof tz && "function" !== typeof tz) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof zz ? tz === zz : zz.has(tz)
+    function qv(vv, zv) {
+      if (null === zv || "object" !== typeof zv && "function" !== typeof zv) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof vv ? zv === vv : vv.has(zv)
     }
 
-    function Mz(zz, tz, sz) {
-      if (null !== tz && void 0 !== tz) {
-        if ("object" !== typeof tz && "function" !== typeof tz) throw new TypeError("Object expected.");
-        var Fz, Wz;
-        if (sz) {
+    function Iv(vv, zv, Pv) {
+      if (null !== zv && void 0 !== zv) {
+        if ("object" !== typeof zv && "function" !== typeof zv) throw new TypeError("Object expected.");
+        var hv, Sv;
+        if (Pv) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          Fz = tz[Symbol.asyncDispose]
+          hv = zv[Symbol.asyncDispose]
         }
-        if (void 0 === Fz) {
+        if (void 0 === hv) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          Fz = tz[Symbol.dispose], sz && (Wz = Fz)
+          hv = zv[Symbol.dispose], Pv && (Sv = hv)
         }
-        if ("function" !== typeof Fz) throw new TypeError("Object not disposable.");
-        Wz && (Fz = function() {
+        if ("function" !== typeof hv) throw new TypeError("Object not disposable.");
+        Sv && (hv = function() {
           try {
-            Wz.call(this)
-          } catch (zz) {
-            return Promise.reject(zz)
+            Sv.call(this)
+          } catch (vv) {
+            return Promise.reject(vv)
           }
-        }), zz.stack.push({
-          value: tz,
-          dispose: Fz,
-          async: sz
+        }), vv.stack.push({
+          value: zv,
+          dispose: hv,
+          async: Pv
         })
-      } else sz && zz.stack.push({
+      } else Pv && vv.stack.push({
         async: !0
       });
-      return tz
+      return zv
     }
-    var dz = "function" === typeof SuppressedError ? SuppressedError : function(zz, tz, sz) {
-      var Fz = new Error(sz);
-      return Fz.name = "SuppressedError", Fz.error = zz, Fz.suppressed = tz, Fz
+    var Qv = "function" === typeof SuppressedError ? SuppressedError : function(vv, zv, Pv) {
+      var hv = new Error(Pv);
+      return hv.name = "SuppressedError", hv.error = vv, hv.suppressed = zv, hv
     };
 
-    function hz(zz) {
-      function tz(tz) {
-        zz.error = zz.hasError ? new dz(tz, zz.error, "An error was suppressed during disposal.") : tz, zz.hasError = !0
+    function Zv(vv) {
+      function zv(zv) {
+        vv.error = vv.hasError ? new Qv(zv, vv.error, "An error was suppressed during disposal.") : zv, vv.hasError = !0
       }
-      var sz, Fz = 0;
-      return function Wz() {
-        for (; sz = zz.stack.pop();) try {
-          if (!sz.async && 1 === Fz) return Fz = 0, zz.stack.push(sz), Promise.resolve().then(Wz);
-          if (sz.dispose) {
-            var Xz = sz.dispose.call(sz.value);
-            if (sz.async) return Fz |= 2, Promise.resolve(Xz).then(Wz, (function(zz) {
-              return tz(zz), Wz()
+      var Pv, hv = 0;
+      return function Sv() {
+        for (; Pv = vv.stack.pop();) try {
+          if (!Pv.async && 1 === hv) return hv = 0, vv.stack.push(Pv), Promise.resolve().then(Sv);
+          if (Pv.dispose) {
+            var ev = Pv.dispose.call(Pv.value);
+            if (Pv.async) return hv |= 2, Promise.resolve(ev).then(Sv, (function(vv) {
+              return zv(vv), Sv()
             }))
-          } else Fz |= 1
-        } catch (Oz) {
-          tz(Oz)
+          } else hv |= 1
+        } catch (gv) {
+          zv(gv)
         }
-        if (1 === Fz) return zz.hasError ? Promise.reject(zz.error) : Promise.resolve();
-        if (zz.hasError) throw zz.error
+        if (1 === hv) return vv.hasError ? Promise.reject(vv.error) : Promise.resolve();
+        if (vv.hasError) throw vv.error
       }()
     }
 
-    function Qz(zz, tz) {
-      return "string" === typeof zz && /^\.\.?\//.test(zz) ? zz.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(zz, sz, Fz, Wz, Xz) {
-        return sz ? tz ? ".jsx" : ".js" : !Fz || Wz && Xz ? Fz + Wz + "." + Xz.toLowerCase() + "js" : zz
-      })) : zz
+    function Av(vv, zv) {
+      return "string" === typeof vv && /^\.\.?\//.test(vv) ? vv.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(vv, Pv, hv, Sv, ev) {
+        return Pv ? zv ? ".jsx" : ".js" : !hv || Sv && ev ? hv + Sv + "." + ev.toLowerCase() + "js" : vv
+      })) : vv
     }
-    const kz = {
-      __extends: Wz,
-      __assign: Xz,
-      __rest: Oz,
-      __decorate: oz,
-      __param: vz,
-      __esDecorate: Uz,
-      __runInitializers: Kz,
-      __propKey: uz,
-      __setFunctionName: Nz,
-      __metadata: bz,
-      __awaiter: wz,
-      __generator: Dz,
-      __createBinding: gz,
-      __exportStar: Hz,
-      __values: Bz,
-      __read: Pz,
-      __spread: rz,
-      __spreadArrays: Yz,
-      __spreadArray: xz,
-      __await: mz,
-      __asyncGenerator: Jz,
-      __asyncDelegator: Iz,
-      __asyncValues: Cz,
-      __makeTemplateObject: ez,
-      __importStar: Tz,
-      __importDefault: cz,
-      __classPrivateFieldGet: jz,
-      __classPrivateFieldSet: Az,
-      __classPrivateFieldIn: yz,
-      __addDisposableResource: Mz,
-      __disposeResources: hz,
-      __rewriteRelativeImportExtension: Qz
+    const Lv = {
+      __extends: Sv,
+      __assign: ev,
+      __rest: gv,
+      __decorate: pv,
+      __param: dv,
+      __esDecorate: Nv,
+      __runInitializers: lv,
+      __propKey: Tv,
+      __setFunctionName: Wv,
+      __metadata: wv,
+      __awaiter: av,
+      __generator: sv,
+      __createBinding: Cv,
+      __exportStar: iv,
+      __values: cv,
+      __read: Gv,
+      __spread: mv,
+      __spreadArrays: jv,
+      __spreadArray: fv,
+      __await: Fv,
+      __asyncGenerator: Yv,
+      __asyncDelegator: nv,
+      __asyncValues: Ov,
+      __makeTemplateObject: Dv,
+      __importStar: Uv,
+      __importDefault: Rv,
+      __classPrivateFieldGet: xv,
+      __classPrivateFieldSet: tv,
+      __classPrivateFieldIn: qv,
+      __addDisposableResource: Iv,
+      __disposeResources: Zv,
+      __rewriteRelativeImportExtension: Av
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

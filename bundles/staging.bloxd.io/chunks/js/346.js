@@ -1,30 +1,19 @@
 export const id = 346;
 export const ids = [346];
 export const modules = {
-  60339: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      WorldCodeAiOutOfUsage: () => Xz
+  60587: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      postprocessVertexShader: () => gv
     });
-    var Fz = sz(1419),
-      Wz = sz(1087);
-
-    function Xz(zz) {
-      let {
-        onGetSuperRank: tz
-      } = zz;
-      return (0, Wz.jsxs)("div", {
-        className: "WorldCodeAiOutOfUsage",
-        children: [(0, Wz.jsx)("p", {
-          className: "WorldCodeAiOutOfUsageText",
-          children: "You don't have any Super Bot.xd usage left - use Bot.xd or get Super Rank for more usage!"
-        }), (0, Wz.jsx)(Fz.p, {
-          className: "WorldCodeAiOutOfUsageButton",
-          onClick: tz,
-          children: "Get Super Rank"
-        })]
-      })
+    var hv = Pv(39162);
+    const Sv = "postprocessVertexShader",
+      ev = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    hv.d.ShadersStore[Sv] || (hv.d.ShadersStore[Sv] = ev);
+    const gv = {
+      name: Sv,
+      shader: ev
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

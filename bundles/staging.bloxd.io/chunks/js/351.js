@@ -1,27 +1,62 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  60407: (zz, tz, sz) => {
-    function Fz(zz, tz, sz, Fz, Wz, Xz, Oz) {
-      const oz = tz,
-        vz = Fz,
-        Uz = sz;
-      zz[Uz + 0] = oz[vz + 0], zz[Uz + 1] = oz[vz + 1], zz[Uz + 2] = oz[vz + 2], zz[Uz + 3] = oz[vz + 3], zz[Uz + 4] = oz[vz + 4], zz[Uz + 5] = oz[vz + 5], zz[Uz + 6] = oz[vz + 6], zz[Uz + 7] = oz[vz + 7], zz[Uz + 8] = oz[vz + 8], zz[Uz + 9] = oz[vz + 9], zz[Uz + 10] = oz[vz + 10], zz[Uz + 11] = oz[vz + 11], zz[Uz + 12] = oz[vz + 12] - Wz, zz[Uz + 13] = oz[vz + 13] - Xz, zz[Uz + 14] = oz[vz + 14] - Oz, zz[Uz + 15] = oz[vz + 15]
-    }
+  60666: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      applyLightFoOffset: () => gv,
+      getFloatingOriginOffset: () => Sv,
+      lightFoVersion: () => ev,
+      wrapRenderableForFO: () => pv
+    });
+    var hv = Pv(41037);
 
-    function Wz(zz) {
-      return (tz, sz, Wz, Xz) => {
-        const Oz = zz.camera;
-        if (!Oz) return void Fz(tz, sz, Wz, Xz, 0, 0, 0);
-        const oz = Oz.worldMatrix;
-        Fz(tz, sz, Wz, Xz, oz[12], oz[13], oz[14])
+    function Sv(vv) {
+      const zv = vv.camera;
+      if (!zv) return {
+        x: 0,
+        y: 0,
+        z: 0
+      };
+      const Pv = zv.worldMatrix;
+      return {
+        x: Pv[12],
+        y: Pv[13],
+        z: Pv[14]
       }
     }
-    sz.r(tz), sz.d(tz, {
-      makePackMeshWorld: () => Wz,
-      packMat4IntoF32WithOffset: () => Fz
-    })
+
+    function ev(vv) {
+      return vv.camera ? vv.camera.worldMatrixVersion : 0
+    }
+
+    function gv(vv, zv) {
+      const Pv = zv.camera?.worldMatrix;
+      if (!Pv) return;
+      const Sv = Pv[12],
+        ev = Pv[13],
+        gv = Pv[14];
+      let pv = 0;
+      for (const dv of zv.lights) {
+        if (pv >= hv.c) break;
+        if (!dv._writeLightUbo) continue;
+        const zv = 4 + 16 * pv,
+          Pv = vv[zv + 3];
+        if (0 === Pv || 2 === Pv) {
+          const Pv = dv.worldMatrix;
+          vv[zv] = Pv[12] - Sv, vv[zv + 1] = Pv[13] - ev, vv[zv + 2] = Pv[14] - gv
+        }
+        pv++
+      }
+    }
+
+    function pv(vv, zv, Pv) {
+      let hv = -1;
+      return () => {
+        const Sv = zv.camera ? zv.camera.worldMatrixVersion : -1;
+        Sv !== hv && (Pv(), hv = Sv), vv()
+      }
+    }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

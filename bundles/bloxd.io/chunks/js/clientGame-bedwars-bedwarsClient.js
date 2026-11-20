@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  38642: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      default: () => Wz
+  38755: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      default: () => Sv
     });
-    var Fz = sz(37461);
-    const Wz = function(zz, tz, sz) {
-      let Wz;
+    var hv = Pv(37560);
+    const Sv = function(vv, zv, Pv) {
+      let Sv;
       return {
         plugins: {
-          placeAgainstBeds: (0, Fz.e)()
+          placeAgainstBeds: (0, hv.c)()
         },
-        onCreate: zz => {
-          Wz = zz
+        onCreate: vv => {
+          Sv = vv
         },
-        onPlayerAltAction: (zz, tz, sz, Fz, Xz, Oz) => {
-          ((zz, tz) => {
-            if (!tz || "Mesh" !== Wz.getEntityType(tz)) return;
-            const sz = Wz.getEntityName(tz);
-            "Upgrades" === sz ? Wz.openShop(zz, !1, "Upgrades") : "Items" === sz && Wz.openShop(zz, !1, "Recommended")
-          })(zz, Oz)
+        onPlayerAltAction: (vv, zv, Pv, hv, ev, gv) => {
+          ((vv, zv) => {
+            if (!zv || "Mesh" !== Sv.getEntityType(zv)) return;
+            const Pv = Sv.getEntityName(zv);
+            "Upgrades" === Pv ? Sv.openShop(vv, !1, "Upgrades") : "Items" === Pv && Sv.openShop(vv, !1, "Recommended")
+          })(vv, gv)
         }
       }
     }
   },
-  37461: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => oz
+  37560: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => pv
     });
-    var Fz = sz(321),
-      Wz = sz(36339),
-      Xz = sz(4115);
-    const Oz = ["Leaf Bed", "_Leaf Bed Head", ...Fz.Cc.flatMap((zz => [`${zz} Bed`, `_${zz} Bed Head`, `${zz} Strongbed`, `_${zz} Strongbed Head`]))];
+    var hv = Pv(312),
+      Sv = Pv(36443),
+      ev = Pv(4226);
+    const gv = ["Leaf Bed", "_Leaf Bed Head", ...hv.yc.flatMap((vv => [`${vv} Bed`, `_${vv} Bed Head`, `${vv} Strongbed`, `_${vv} Strongbed Head`]))];
 
-    function oz() {
-      let zz;
+    function pv() {
+      let vv;
       return {
-        onCreate(tz) {
-          zz = tz
+        onCreate(zv) {
+          vv = zv
         },
-        altVetoBlocks: Oz,
-        onPlayerAttemptAltAction(tz, sz, Fz, Oz, oz, vz) {
-          var Uz;
-          if ((0, Wz.e)(zz.getMetaInfo(oz).rootName) && !zz.isEntityInteractable(vz) && (0, Xz.e)(null === (Uz = zz.rtz(tz)) || void 0 === Uz ? void 0 : Uz.typeObj.type)) return "preventAction"
+        altVetoBlocks: gv,
+        onPlayerAttemptAltAction(zv, Pv, hv, gv, pv, dv) {
+          var Nv;
+          if ((0, Sv.e)(vv.getMetaInfo(pv).rootName) && !vv.isEntityInteractable(dv) && (0, ev.g)(null === (Nv = vv.Avv(zv)) || void 0 === Nv ? void 0 : Nv.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36339: (zz, tz, sz) => {
-    function Fz(zz) {
-      return zz.includes("Leaf Bed")
+  36443: (vv, zv, Pv) => {
+    function hv(vv) {
+      return vv.includes("Leaf Bed")
     }
 
-    function Wz(zz) {
-      return / Bed(?: Head)?(?:\||$)/.test(zz) && !Fz(zz)
+    function Sv(vv) {
+      return / Bed(?: Head)?(?:\||$)/.test(vv) && !hv(vv)
     }
 
-    function Xz(zz) {
-      return zz.includes(" Strongbed")
+    function ev(vv) {
+      return vv.includes(" Strongbed")
     }
 
-    function Oz(zz) {
-      return Fz(zz) || Wz(zz) || Xz(zz)
+    function gv(vv) {
+      return hv(vv) || Sv(vv) || ev(vv)
     }
-    sz.d(tz, {
-      e: () => Oz,
-      i: () => Fz,
-      l: () => Xz,
-      m: () => Wz
+    Pv.d(zv, {
+      e: () => gv,
+      h: () => hv,
+      k: () => ev,
+      n: () => Sv
     })
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

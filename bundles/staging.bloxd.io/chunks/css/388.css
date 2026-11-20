@@ -1,227 +1,3 @@
-.PlayerProfile {
-  animation-duration: .3s;
-  animation-duration: .2s;
-  animation-fill-mode: backwards;
-  animation-iteration-count: 1;
-  animation-name: fadeIn;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  isolation: isolate
-}
-
-.PlayerProfile .PlayerProfileBackgroundContainer {
-  background-color: #22283b;
-  font-size: 2rem;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-  position: absolute;
-  z-index: -1
-}
-
-.PlayerProfile .PlayerProfileBackgroundContainer .PlayerProfileBackground {
-  -ms-interpolation-mode: nearest-neighbor;
-  background-position: 50%;
-  background-size: 8rem;
-  filter: brightness(.6);
-  image-rendering: optimizeSpeed;
-  image-rendering: -o-crisp-edges;
-  image-rendering: pixelated;
-  image-rendering: optimize-contrast;
-  inset: 0;
-  position: absolute
-}
-
-.PlayerProfile .PlayerProfileHeader {
-  align-items: center;
-  display: flex;
-  padding: .6rem .75rem
-}
-
-.PlayerProfile .PlayerProfileHeader .BackButton {
-  font-size: 1.5rem;
-  padding-left: .3rem;
-  position: relative
-}
-
-@media(pointer:coarse) {
-  .PlayerProfile .PlayerProfileHeader .BackButton:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
-    position: absolute
-  }
-}
-
-.PlayerProfile .PlayerProfileHeader .PlayerProfileExclusionActions {
-  color: #a4a4a4;
-  display: flex;
-  font-size: .9rem;
-  gap: 1.2rem;
-  margin-left: auto;
-  padding-right: .5rem
-}
-
-.PlayerProfile .PlayerProfileCentredMessage {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  font-size: 2rem;
-  gap: .75rem;
-  justify-content: center;
-  min-height: 50vh
-}
-
-.PlayerProfile .PlayerProfileCentredMessage.PlayerProfileError .svg-inline--fa {
-  color: #ffb914;
-  font-size: 3rem
-}
-
-.PlayerProfile .PlayerProfileCentredMessage.PlayerProfileError .PlayerProfileErrorText {
-  font-size: 1.25rem
-}
-
-.PlayerProfile .PlayerProfileContent {
-  align-items: center;
-  display: flex;
-  gap: 2rem;
-  justify-content: center
-}
-
-.PlayerProfile .PlayerProfileLeft {
-  align-items: center;
-  display: flex;
-  flex-direction: column
-}
-
-.PlayerProfile .PlayerProfileLeft .PlayerProfileName {
-  font-size: 2rem;
-  text-align: center;
-  word-break: break-word
-}
-
-.PlayerProfile .PlayerProfileLeft .PlayerProfileModel {
-  aspect-ratio: 2/3;
-  border-radius: 0;
-  flex-grow: 1;
-  font-size: 3rem;
-  height: 35rem;
-  overflow: hidden;
-  position: relative
-}
-
-.PlayerProfile .PlayerProfileLeft .PlayerProfileModel .PlayerProfileModelLoading {
-  align-items: center;
-  display: flex;
-  inset: 0;
-  justify-content: center;
-  position: absolute
-}
-
-.PlayerProfile .PlayerProfileLeft .PlayerProfileModel .CharCustomisationPreview {
-  align-items: center;
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 100%
-}
-
-.PlayerProfile .PlayerProfileLeft .PlayerProfileModel .CharCustomisationPreview .CharCustomisationPreviewCanvas {
-  height: 100%;
-  outline: none;
-  width: 100%
-}
-
-.PlayerProfile .PlayerProfileRight {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  min-width: 0
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats {
-  display: flex;
-  gap: 1rem
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat {
-  align-items: center;
-  background-color: #3c4b68;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  display: flex;
-  gap: .75rem;
-  padding: .75rem 1rem;
-  width: -moz-fit-content;
-  width: fit-content
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat:first-of-type {
-  background-color: #463bd9
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat:nth-of-type(2) {
-  background-color: #0ec28c
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat:nth-of-type(3) {
-  background-color: #c16088
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat .PlayerProfileStatIcon {
-  color: #ffb914;
-  flex-shrink: 0;
-  font-size: 1.25rem
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat .PlayerProfileStatText {
-  display: flex;
-  flex-direction: column;
-  min-width: 0
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat .PlayerProfileStatText .PlayerProfileStatLabel {
-  font-size: .8rem;
-  opacity: .8
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileStats .PlayerProfileStat .PlayerProfileStatText .PlayerProfileStatValue {
-  font-size: 1.1rem;
-  font-weight: 700;
-  word-break: break-word
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileGames {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileGames .PlayerProfileGamesTitle {
-  font-size: 1.25rem
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileGames .PlayerProfileNoGames {
-  opacity: .7
-}
-
-.PlayerProfile .PlayerProfileRight .PlayerProfileGames .PlayerProfileGamesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
-  max-height: 20rem;
-  overflow-y: auto
-}
-
-.PlayerProfile.PlayerProfilePortrait .PlayerProfileContent {
-  flex-direction: column
-}
-
-.PlayerProfile.PlayerProfilePortrait .PlayerProfileRight .PlayerProfileGames .PlayerProfileGamesGrid {
-  max-height: -moz-fit-content;
-  max-height: fit-content
-}
-
 @keyframes rainbowShimmer {
   0% {
     transform: translateX(0)
@@ -321,161 +97,556 @@
   }
 }
 
-.PlayerProfile.PlayerProfilePortrait .PlayerProfileSocialLinksList {
-  grid-template-columns: 1fr
-}
-
-.PlayerProfileSocialLinks {
+.CharCustomisationBody {
   display: flex;
   flex-direction: column;
-  gap: .75rem
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLinksList {
-  grid-gap: .6rem;
-  display: grid;
-  gap: .6rem;
-  grid-template-columns: repeat(auto-fill, minmax(max(min(100%, 18rem), (100% - .6rem)/2), 1fr));
-  max-width: 50rem
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink {
-  align-items: center;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  display: flex;
-  gap: .85rem;
-  min-height: 3.9rem;
-  padding: 0 .85rem;
-  text-align: left;
-  transition: transform .2s, background .2s
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkMain {
-  align-items: center;
-  color: inherit;
-  display: flex;
-  flex: 1 1;
-  gap: .85rem;
-  min-width: 0;
-  padding: .7rem 0;
-  text-decoration: none
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkIcon {
-  align-items: center;
-  color: #fff;
-  display: flex;
-  flex-shrink: 0;
-  font-size: 1.2rem;
-  height: 2.5rem;
-  justify-content: center;
-  overflow: hidden;
-  width: 2.5rem
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkIcon svg:not(.YoutubeIcon) {
   height: 100%;
   width: 100%
 }
 
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkIcon.PlayerProfileSocialLinkIconYoutube {
-  min-width: 2.5rem;
-  overflow: visible;
+.CharCustomisationBody .CharCustomisationBodyHeader {
+  align-items: center;
+  background-color: #303a59;
+  color: #ffb914;
+  display: flex;
+  gap: .5rem;
+  padding: .5rem 1rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyHeader .GoldButton {
+  box-shadow: none;
+  color: #fff;
+  margin-left: 1rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyHeader .GoldButton .ButtonBody {
+  padding: .3rem .5rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner {
+  align-items: flex-start;
+  display: flex;
+  flex-grow: 1;
+  min-height: 0;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  scrollbar-gutter: stable;
+  width: 46rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .EmoteLoadoutSummary {
+  background-color: rgba(57, 73, 128, .3);
+  border: .3rem solid #394980;
+  box-sizing: border-box;
+  color: #ffb914;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  margin-bottom: .5rem;
+  padding: .5rem .75rem;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .EmoteLoadoutSummary .EmoteLoadoutSummaryText {
+  font-size: 1.4rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .EmoteLoadoutSummary .EmoteLoadoutSummaryHint {
+  font-size: 1.1rem;
+  opacity: .8
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomisationActions {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-bottom: 1rem;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup {
+  background-color: rgba(57, 73, 128, .3);
+  border: .3rem solid #394980;
+  box-sizing: content-box;
+  font-size: .8rem;
+  margin-bottom: .5rem;
+  overflow: hidden;
+  position: relative;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner {
+  background-color: #ffb914;
+  border-width: 0;
+  box-shadow: none;
+  position: relative
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader {
+  font-size: 1.2rem;
+  padding: .3rem .5rem;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .svg-inline--fa,
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .svg-inline--fa path:only-of-type,
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .CosmeticShopBannerIcon {
+  color: #fff
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .CosmeticShopBannerSubtitle {
+  display: none
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerHeader .CountdownTime {
+  color: #fff
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticShopBanner .CosmeticShopBannerContent {
+  display: none
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel {
+  align-items: center;
+  -webkit-backdrop-filter: blur(.1rem);
+  backdrop-filter: blur(.1rem);
+  background-color: rgba(48, 58, 89, .4);
+  color: #ffb914;
+  display: flex;
+  font-size: 1.8rem;
+  font-weight: 800;
+  justify-content: space-between;
+  padding: .4rem .75rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .CosmeticPackGroupLabelName {
+  align-items: center;
+  display: flex;
+  gap: .5rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton {
+  color: #fff;
+  font-size: 1.4rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton .ButtonBody {
+  padding: .3rem .8rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems {
+  grid-gap: .5rem;
+  align-items: center;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(6, 1fr);
+  padding: .5rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption {
+  aspect-ratio: 1/1;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform .15s;
+  width: 33%
+}
+
+@media(hover:hover) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption:hover {
+    transform: scale(1.1)
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption.pad-focused {
+  transform: scale(1.1)
+}
+
+@media(hover:none) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption:active {
+    transform: scale(1.1)
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption.CosmeticColorOptionSelected {
+  border: .25rem solid #ffb914
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper {
+  margin: 0;
   width: auto
 }
 
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkText {
-  display: flex;
-  flex: 1 1;
-  flex-direction: column;
-  min-width: 0
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.CharCustomPartWrapperProfileEffect {
+  box-sizing: border-box;
+  height: 4rem;
+  padding: .3rem;
+  width: 16rem
 }
 
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkText .PlayerProfileSocialLinkName {
-  font-weight: 800;
-  word-break: break-word
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkText .PlayerProfileSocialLinkCount {
-  font-size: .85rem
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkArrow {
-  flex-shrink: 0;
-  font-size: .9rem;
-  opacity: .7
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkEditButton {
-  align-items: center;
-  background: rgba(0, 0, 0, .2);
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  color: #fff;
-  cursor: pointer;
-  display: flex;
-  flex-shrink: 0;
-  font-size: .95rem;
-  height: 2rem;
-  justify-content: center;
-  padding: 0;
-  transition: background .2s;
-  width: 2rem
-}
-
-@media(hover:hover) {
-  .PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkEditButton:hover {
-    background: rgba(57, 73, 128, .6)
-  }
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkEditButton.pad-focused {
-  background: rgba(57, 73, 128, .6)
-}
-
-@media(hover:none) {
-  .PlayerProfileSocialLinks .PlayerProfileSocialLink .PlayerProfileSocialLinkEditButton:active {
-    background: rgba(57, 73, 128, .6)
-  }
-}
-
-@media(hover:hover) {
-  .PlayerProfileSocialLinks .PlayerProfileSocialLink:hover {
-    transform: scale(1.02)
-  }
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLink.pad-focused {
-  transform: scale(1.02)
-}
-
-@media(hover:none) {
-  .PlayerProfileSocialLinks .PlayerProfileSocialLink:active {
-    transform: scale(1.02)
-  }
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLinkUnlinked {
-  cursor: pointer;
-  opacity: .85
-}
-
-@media(hover:hover) {
-  .PlayerProfileSocialLinks .PlayerProfileSocialLinkUnlinked:hover {
-    opacity: 1
-  }
-}
-
-.PlayerProfileSocialLinks .PlayerProfileSocialLinkUnlinked.pad-focused {
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.CharCustomPartWrapperProfileEffect .ProfilePreviewBackground {
   opacity: 1
 }
 
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper {
+  align-items: center;
+  background-color: rgba(182, 131, 14, .2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPart {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: .3rem;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPart .EmoteCustomPartIcon {
+  aspect-ratio: 1/1;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPart .EmoteCustomPartLabel {
+  color: #fcd373;
+  font-size: 1rem;
+  text-align: center
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer {
+  align-items: stretch;
+  display: flex;
+  height: 2.5rem;
+  justify-content: center;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartSlotBadge {
+  align-items: center;
+  background-color: #ffb914;
+  color: #303a59;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  padding: 0 .3rem;
+  pointer-events: none;
+  width: 1.5rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle {
+  align-items: center;
+  background-color: #ffb914;
+  border: none;
+  color: #303a59;
+  cursor: pointer;
+  display: flex;
+  flex-grow: 1;
+  font-size: 1.2rem;
+  justify-content: center;
+  transition: transform .1s, background-color .1s
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleEquipped {
+  background-color: #e34f4f
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleDisabled {
+  cursor: not-allowed;
+  opacity: .4
+}
+
+@media(hover:hover) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleDisabled:hover {
+    transform: none
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleDisabled.pad-focused {
+  transform: none
+}
+
 @media(hover:none) {
-  .PlayerProfileSocialLinks .PlayerProfileSocialLinkUnlinked:active {
-    opacity: 1
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper .EmoteCustomPartToggleContainer .EmoteCustomPartToggle.EmoteCustomPartToggleDisabled:active {
+    transform: none
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper {
+  align-items: center;
+  -webkit-backdrop-filter: blur(.1rem);
+  backdrop-filter: blur(.1rem);
+  border: .2rem solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  height: 7rem;
+  justify-content: center;
+  margin: .5rem;
+  position: relative;
+  transition: transform .1s, background-color .1s, border-color .1s;
+  width: 7rem
+}
+
+@media(hover:hover) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper:hover {
+    transform: scale(1.05)
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper.pad-focused {
+  transform: scale(1.05)
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper.SelectedCharCustomPartWrapper {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper.TryingOnCharCustomPartWrapper {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914;
+  border-style: dashed
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper.DisabledCharCustomPartWrapper {
+  filter: brightness(.5);
+  pointer-events: none
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon {
+  color: #ffb914;
+  font-size: 2rem;
+  opacity: .7;
+  position: absolute;
+  right: 50%;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  top: 50%;
+  transform: translate(50%, -50%)
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon .svg-inline--fa,
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon .svg-inline--fa path:only-of-type,
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .LockedCosmeticIcon.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .CharCustomPart {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 85%;
+  width: 85%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CharCustomPartWrapper .CharCustomPart.CharCustomProfileEffect .ProfilePreview {
+  height: 100%;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid {
+  grid-gap: .5rem;
+  box-sizing: border-box;
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: .5rem;
+  width: 100%
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard {
+  align-items: center;
+  border: .2rem solid transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  position: relative;
+  transition: transform .15s, border-color .15s, background-color .15s
+}
+
+@media(hover:hover) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard:hover {
+    transform: scale(1.05)
+  }
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard.pad-focused {
+  transform: scale(1.05)
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard.CharacterPresetCardActive {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard.CharacterPresetCardTryingOn {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914;
+  border-style: dashed
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon {
+  color: #ffb914;
+  font-size: 2.4rem;
+  opacity: .7;
+  position: absolute;
+  right: 50%;
+  text-shadow: -1px -1px 0 #303a59, -1px 0 0 #303a59, -1px 1px 0 #303a59, 0 -1px 0 #303a59, 0 0 0 #303a59, 0 1px 0 #303a59, 1px -1px 0 #303a59, 1px 0 0 #303a59, 1px 1px 0 #303a59;
+  top: 50%;
+  transform: translate(50%, -50%)
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon .svg-inline--fa,
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon.svg-inline--fa {
+  paint-order: stroke fill
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon .svg-inline--fa path:only-of-type,
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .LockedCosmeticIcon.svg-inline--fa path:only-of-type {
+  stroke: #303a59;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid .CharacterPresetCard .CharacterPresetCardPreview {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 10rem;
+  width: 8rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisationPreview {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: center;
+  width: 12rem
+}
+
+.CharCustomisationBody .CharCustomisationBodyInner .CharCustomisationPreview .CharCustomisationPreviewCanvas {
+  height: 100%;
+  outline: none;
+  width: 100%
+}
+
+@media(orientation:portrait)and (max-width:1200px) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper {
+    flex-shrink: 0;
+    overflow-x: hidden;
+    padding: 1rem .5rem;
+    width: calc(11rem + 1.5vmin)
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel {
+    flex-wrap: wrap;
+    font-size: 1.5rem;
+    gap: .3rem;
+    padding: .4rem .5rem
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton {
+    flex-basis: 100%
+  }
+}
+
+@media(orientation:portrait)and (max-width:1200px)and (pointer:coarse) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+@media(orientation:portrait)and (max-width:1200px) {
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupLabel .NewButton .ButtonBody {
+    white-space: normal
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems {
+    grid-template-columns: minmax(0, 1fr)
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CosmeticColorSwatchCell .CosmeticColorOption {
+    width: 50%
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper {
+    justify-self: center
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper,
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.EmoteCustomPartWrapper {
+    width: 7rem
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisPartSelectorWrapper .CosmeticPackGroup .CosmeticPackGroupItems .CharCustomPartWrapper.CharCustomPartWrapperProfileEffect {
+    width: 100%
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharacterPresetsGrid {
+    grid-template-columns: minmax(0, 1fr)
+  }
+
+  .CharCustomisationBody .CharCustomisationBodyInner .CharCustomisationPreview {
+    align-self: flex-start;
+    aspect-ratio: 3/4;
+    height: auto;
+    margin: 0 auto;
+    max-height: 100%;
+    min-height: 0
   }
 }

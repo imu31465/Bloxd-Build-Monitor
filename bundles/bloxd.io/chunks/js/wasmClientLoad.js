@@ -1,126 +1,142 @@
-export const id = 55;
-export const ids = [55];
+export const id = 56;
+export const ids = [56];
 export const modules = {
-  39873: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      prefetchWasmClient: () => xz,
-      startJoinLoad: () => Bz,
-      startLoadAheadOfJoin: () => rz
+  36302: (vv, zv, Pv) => {
+    async function hv(vv) {
+      const zv = await fetch(vv, {
+        priority: "low"
+      });
+      if (!zv.ok) throw new Error(`Fetching ${vv} failed: HTTP ${zv.status}`);
+      const Pv = zv.body.getReader();
+      for (; !(await Pv.read()).done;);
+    }
+    Pv.d(zv, {
+      d: () => hv
+    })
+  },
+  40061: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      prefetchWasmClient: () => Fv,
+      startJoinLoad: () => Gv,
+      startLoadAheadOfJoin: () => jv
     });
-    var Fz = sz(3376),
-      Wz = sz(35828),
-      Xz = sz(39875),
-      Oz = sz(1060),
-      oz = sz(601),
-      vz = sz(39887),
-      Uz = (sz(39903), sz(39908)),
-      Kz = sz(39912),
-      uz = sz(39938);
-    const Nz = "[bloxd-wasm-client]";
-    let bz = null,
-      wz = null,
-      Dz = null,
-      gz = null,
-      Hz = null;
+    var hv = Pv(3466),
+      Sv = Pv(35885),
+      ev = Pv(40065),
+      gv = Pv(1056),
+      pv = Pv(635),
+      dv = Pv(40078),
+      Nv = (Pv(40096), Pv(36302)),
+      lv = Pv(40108),
+      Tv = Pv(40112),
+      Wv = Pv(40134);
+    const wv = "[bloxd-wasm-client]";
+    let av = null,
+      sv = null,
+      Cv = null,
+      iv = null,
+      cv = null;
 
-    function Bz() {
-      return gz ??= (async () => {
+    function Gv() {
+      return iv ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const zz = await (0, Kz.I)();
-        if (null === zz) return;
-        if ((0, vz.m)(zz)) return (0, Kz.L)("none"), void Pz("none");
-        if ("wasm" !== (0, oz.d)(window.location.search) && null !== (0, Uz.c)(zz, (0, Uz.d)(zz, !0))) return (0, Kz.L)("none"), void Pz("none");
-        (0, Kz.L)(zz.backend);
-        const tz = await zz.load();
-        Pz(tz.name), "unloaded" === (0, Fz.H)() && (0, Kz.l)(), await (0, Wz.h)(tz, Xz.h) || console.warn(`${Nz} the join's early wasm load failed: the boot loads the client itself`)
-      })().catch((zz => {
-        console.warn(`${Nz} the join's early wasm load did not start: the boot loads the client itself`, zz)
-      })), gz
+        const vv = await (0, Tv.I)();
+        if (null === vv) return;
+        if ((0, dv.o)(vv)) return (0, Tv.M)("none"), void mv("none");
+        if ("wasm" !== (0, pv.f)(window.location.search) && null !== (0, lv.e)(vv, (0, lv.i)(vv, !0))) return (0, Tv.M)("none"), void mv("none");
+        (0, Tv.M)(vv.backend);
+        const zv = await vv.load();
+        mv(zv.name);
+        const Pv = "unloaded" === (0, hv.z)();
+        if (Pv && (0, Tv.i)(), !await (0, Sv.j)(zv, ev.e)) return void console.warn(`${wv} the join's early wasm load failed: the boot loads the client itself`);
+        if (!Pv) return;
+        const Nv = (0, Sv.g)(zv.name);
+        void 0 !== Nv ? (0, gv.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(Nv.ms)
+        }, {
+          path: Nv.path,
+          build: zv.name
+        }) : console.warn(`${wv} the join's wasm load left no record of how it compiled ${zv.name}`)
+      })().catch((vv => {
+        console.warn(`${wv} the join's early wasm load did not start: the boot loads the client itself`, vv)
+      })), iv
     }
 
-    function Pz(zz) {
-      null !== Hz && (0, Oz.logClientMeasurement)("wasm_compile_ahead", {
-        hit: Hz === zz ? 1 : 0
+    function mv(vv) {
+      null !== cv && (0, gv.logClientMeasurement)("wasm_compile_ahead", {
+        hit: cv === vv ? 1 : 0
       }, {
-        guessed: Hz,
-        loaded: zz
+        guessed: cv,
+        loaded: vv
       })
     }
 
-    function rz() {
-      let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === Dz) {
-        var tz;
-        const sz = null !== (tz = zz.joinStarted) && void 0 !== tz ? tz : () => !1;
-        Dz = Promise.all([xz(zz), Yz(sz)]).then((() => {}))
+    function jv() {
+      let vv = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === Cv) {
+        var zv;
+        const Pv = null !== (zv = vv.joinStarted) && void 0 !== zv ? zv : () => !1;
+        Cv = Promise.all([Fv(vv), fv(Pv)]).then((() => {}))
       }
-      return Dz
+      return Cv
     }
 
-    function Yz(zz) {
-      return wz ??= (async () => {
+    function fv(vv) {
+      return sv ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const tz = await (0, Kz.h)();
-        null === tz || zz() || "unloaded" !== (0, Fz.H)() || (Hz = tz.name, await (0, Wz.c)([tz, Xz.h], "low"))
-      })().catch((zz => {
-        console.warn(`${Nz} the compile ahead of the join did not start: the join loads the client itself`, zz)
-      })), wz
+        const zv = await (0, Tv.f)();
+        null === zv || vv() || "unloaded" !== (0, hv.z)() || (cv = zv.name, await (0, Sv.d)([zv, ev.e], "low"))
+      })().catch((vv => {
+        console.warn(`${wv} the compile ahead of the join did not start: the join loads the client itself`, vv)
+      })), sv
     }
 
-    function xz() {
+    function Fv() {
       let {
-        joinStarted: zz = () => !1,
-        language: tz = ""
+        joinStarted: vv = () => !1,
+        language: zv = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return bz ??= async function(zz, tz) {
-        if (!await async function(zz) {
-            if (zz()) return !1;
-            let tz;
+      return av ??= async function(vv, zv) {
+        if (!await async function(vv) {
+            if (vv()) return !1;
+            let zv;
             try {
-              var Fz;
-              const zz = await fetch(`${sz.p}static/js/7rj44.wasmJoinFiles.json`, {
+              var hv;
+              const vv = await fetch(`${Pv.p}static/js/qepqb8.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
-              if (!zz.ok) throw new Error(`HTTP ${zz.status}`);
-              if (/\bno-store\b/.test(null !== (Fz = zz.headers.get("Cache-Control")) && void 0 !== Fz ? Fz : "")) return !1;
-              const Wz = await zz.json();
-              if (!Array.isArray(Wz)) throw new Error("not a list");
-              tz = Wz
-            } catch (Xz) {
-              return console.warn(`${Nz} the join's chunk list did not load: the join downloads its chunks itself`, Xz), !zz()
+              if (!vv.ok) throw new Error(`HTTP ${vv.status}`);
+              if (/\bno-store\b/.test(null !== (hv = vv.headers.get("Cache-Control")) && void 0 !== hv ? hv : "")) return !1;
+              const Sv = await vv.json();
+              if (!Array.isArray(Sv)) throw new Error("not a list");
+              zv = Sv
+            } catch (ev) {
+              return console.warn(`${wv} the join's chunk list did not load: the join downloads its chunks itself`, ev), !vv()
             }
-            if (zz()) return !1;
-            const Wz = document.createElement("link").relList.supports("prefetch");
-            for (const Oz of tz) {
-              const zz = `${sz.p}${Oz}`;
-              Wz ? mz(zz) : Jz(zz).catch((tz => {
-                console.warn(`${Nz} prefetching ${zz} failed`, tz)
+            if (vv()) return !1;
+            const Sv = document.createElement("link").relList.supports("prefetch");
+            for (const gv of zv) {
+              const vv = `${Pv.p}${gv}`;
+              Sv ? Yv(vv) : (0, Nv.d)(vv).catch((zv => {
+                console.warn(`${wv} prefetching ${vv} failed`, zv)
               }))
             }
             return !0
-          }(zz)) return;
-        const Fz = [Jz((0, uz.g)())];
-        (0, uz.c)(tz) && Fz.push(Jz((0, uz.j)()));
-        await Promise.all(Fz)
-      }(zz, tz).catch((zz => {
-        console.warn(`${Nz} the prefetch failed: the join downloads the client itself`, zz)
-      })), bz
+          }(vv)) return;
+        const hv = [(0, Nv.d)((0, Wv.e)())];
+        (0, Wv.d)(zv) && hv.push((0, Nv.d)((0, Wv.g)()));
+        await Promise.all(hv)
+      }(vv, zv).catch((vv => {
+        console.warn(`${wv} the prefetch failed: the join downloads the client itself`, vv)
+      })), av
     }
 
-    function mz(zz) {
-      const tz = document.createElement("link");
-      tz.rel = "prefetch", tz.href = zz, zz.endsWith(".js") && (tz.crossOrigin = "anonymous"), document.head.appendChild(tz)
-    }
-    async function Jz(zz) {
-      const tz = await fetch(zz, {
-        priority: "low"
-      });
-      if (!tz.ok) throw new Error(`Fetching ${zz} failed: HTTP ${tz.status}`);
-      const sz = tz.body.getReader();
-      for (; !(await sz.read()).done;);
+    function Yv(vv) {
+      const zv = document.createElement("link");
+      zv.rel = "prefetch", zv.href = vv, vv.endsWith(".js") && (zv.crossOrigin = "anonymous"), document.head.appendChild(zv)
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

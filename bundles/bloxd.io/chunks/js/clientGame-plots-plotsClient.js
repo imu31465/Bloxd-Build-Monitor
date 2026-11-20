@@ -1,387 +1,387 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  36078: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => bz,
-      e: () => wz,
-      g: () => Nz,
-      h: () => uz
+  36132: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => wv,
+      g: () => av,
+      i: () => Wv,
+      m: () => Tv
     });
-    var Fz = sz(8843),
-      Wz = sz(36086),
-      Xz = sz(36090),
-      Oz = sz(8238),
-      oz = sz(1416),
-      vz = sz(65),
-      Uz = sz(78),
-      Kz = sz(1087);
+    var hv = Pv(8997),
+      Sv = Pv(36137),
+      ev = Pv(36139),
+      gv = Pv(8413),
+      pv = Pv(1439),
+      dv = Pv(52),
+      Nv = Pv(62),
+      lv = Pv(1082);
 
-    function uz() {
-      var zz;
-      return (0, oz.h)(Wz.e, (0, Wz.o)()), (0, Kz.jsx)(Kz.Fragment, {
-        children: null === (zz = (0, Wz.o)()) || void 0 === zz ? void 0 : zz.content
+    function Tv() {
+      var vv;
+      return (0, pv.j)(Sv.d, (0, Sv.q)()), (0, lv.jsx)(lv.Fragment, {
+        children: null === (vv = (0, Sv.q)()) || void 0 === vv ? void 0 : vv.content
       })
     }
 
-    function Nz(zz) {
-      var tz;
+    function Wv(vv) {
+      var zv;
       let {
-        show: sz
-      } = zz;
-      (0, oz.h)(Wz.e, (0, Wz.o)());
-      const Uz = null === (tz = (0, Wz.o)()) || void 0 === tz ? void 0 : tz.menu;
-      return (0, vz.useEffect)((() => {
-        var zz;
-        sz || (null === Uz || void 0 === Uz || null === (zz = Uz.onClose) || void 0 === zz || zz.call(Uz), (0, Xz.p)())
-      }), [sz, Uz]), (0, vz.useEffect)((() => sz ? (0, Oz.f)(Xz.w, Xz.e) : void 0), [sz]), (0, Kz.jsx)(Fz.c, {
-        showing: sz,
+        show: Pv
+      } = vv;
+      (0, pv.j)(Sv.d, (0, Sv.q)());
+      const Nv = null === (zv = (0, Sv.q)()) || void 0 === zv ? void 0 : zv.menu;
+      return (0, dv.useEffect)((() => {
+        var vv;
+        Pv || (null === Nv || void 0 === Nv || null === (vv = Nv.onClose) || void 0 === vv || vv.call(Nv), (0, ev.o)())
+      }), [Pv, Nv]), (0, dv.useEffect)((() => Pv ? (0, gv.f)(ev.y, ev.c) : void 0), [Pv]), (0, lv.jsx)(hv.d, {
+        showing: Pv,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Uz || void 0 === Uz ? void 0 : Uz.content
+        children: null === Nv || void 0 === Nv ? void 0 : Nv.content
       })
     }
 
-    function bz(zz) {
+    function wv(vv) {
       let {
-        placement: tz = "bottom"
-      } = zz;
-      return (0, Kz.jsx)("div", {
-        id: `clientGameHud-${tz}`,
+        placement: zv = "bottom"
+      } = vv;
+      return (0, lv.jsx)("div", {
+        id: `clientGameHud-${zv}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function wz(zz) {
+    function av(vv) {
       let {
-        children: tz,
-        placement: sz = "bottom"
-      } = zz;
-      const [Fz, Wz] = (0, vz.useState)(null);
-      return (0, vz.useEffect)((() => {
-        Wz(document.getElementById(`clientGameHud-${sz}`))
-      }), [sz]), Fz ? (0, Uz.createPortal)(tz, Fz) : null
+        children: zv,
+        placement: Pv = "bottom"
+      } = vv;
+      const [hv, Sv] = (0, dv.useState)(null);
+      return (0, dv.useEffect)((() => {
+        Sv(document.getElementById(`clientGameHud-${Pv}`))
+      }), [Pv]), hv ? (0, Nv.createPortal)(zv, hv) : null
     }
   },
-  8843: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Xz
+  8997: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => ev
     });
-    var Fz = sz(4178),
-      Wz = sz(4180);
+    var hv = Pv(4287),
+      Sv = Pv(4292);
 
-    function Xz(zz) {
+    function ev(vv) {
       let {
-        children: tz,
-        showing: sz,
-        globallyUniqueKey: Xz,
-        alwaysMountChildren: Oz = !1,
-        doGameplayStartStopOnShow: oz = !0,
-        keepsMovement: vz = !1
-      } = zz;
-      return (0, Wz.b)(!0, sz, Xz, vz), (0, Fz.e)(oz, sz), sz || Oz ? tz : null
+        children: zv,
+        showing: Pv,
+        globallyUniqueKey: ev,
+        alwaysMountChildren: gv = !1,
+        doGameplayStartStopOnShow: pv = !0,
+        keepsMovement: dv = !1
+      } = vv;
+      return (0, Sv.e)(!0, Pv, ev, dv), (0, hv.b)(pv, Pv), Pv || gv ? zv : null
     }
   },
-  36169: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Xz,
-      g: () => Oz,
-      j: () => oz,
-      k: () => vz
+  36198: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => ev,
+      i: () => gv,
+      m: () => pv,
+      q: () => dv
     });
-    var Fz = sz(65),
-      Wz = sz(1113);
-    const Xz = 8,
-      Oz = "InGameHeaderContainer",
-      oz = "TopRightElements";
+    var hv = Pv(52),
+      Sv = Pv(2899);
+    const ev = 8,
+      gv = "InGameHeaderContainer",
+      pv = "TopRightElements";
 
-    function vz(zz) {
-      const [tz] = (0, Wz.c)(), [sz, vz] = (0, Fz.useState)(!1);
-      return (0, Fz.useLayoutEffect)((() => {
-        if (!zz) return;
-        const tz = document.querySelector(`.${Oz}`),
-          sz = document.querySelector(`.${oz}`),
-          Fz = () => {
-            const Fz = zz.getBoundingClientRect(),
-              Wz = tz ? tz.getBoundingClientRect().right : 0,
-              Oz = sz ? sz.getBoundingClientRect().left : window.innerWidth,
-              oz = Fz.left < Wz + Xz,
-              Uz = Fz.right > Oz - Xz;
-            vz(oz || Uz)
+    function dv(vv) {
+      const [zv] = (0, Sv.d)(), [Pv, dv] = (0, hv.useState)(!1);
+      return (0, hv.useLayoutEffect)((() => {
+        if (!vv) return;
+        const zv = document.querySelector(`.${gv}`),
+          Pv = document.querySelector(`.${pv}`),
+          hv = () => {
+            const hv = vv.getBoundingClientRect(),
+              Sv = zv ? zv.getBoundingClientRect().right : 0,
+              gv = Pv ? Pv.getBoundingClientRect().left : window.innerWidth,
+              pv = hv.left < Sv + ev,
+              Nv = hv.right > gv - ev;
+            dv(pv || Nv)
           };
-        Fz();
-        const Wz = new ResizeObserver(Fz);
-        return Wz.observe(zz), tz && Wz.observe(tz), sz && Wz.observe(sz), () => {
-          Wz.disconnect()
+        hv();
+        const Sv = new ResizeObserver(hv);
+        return Sv.observe(vv), zv && Sv.observe(zv), Pv && Sv.observe(Pv), () => {
+          Sv.disconnect()
         }
-      }), [zz, tz]), sz
+      }), [vv, zv]), Pv
     }
   },
-  8238: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => Xz,
-      f: () => Wz
+  8413: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => ev,
+      f: () => Sv
     });
-    let Fz = null;
-    const Wz = function(zz) {
-        const tz = {
-          cycle: zz,
+    let hv = null;
+    const Sv = function(vv) {
+        const zv = {
+          cycle: vv,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Fz = tz, () => {
-          Fz === tz && (Fz = null)
+        return hv = zv, () => {
+          hv === zv && (hv = null)
         }
       },
-      Xz = () => {
-        var zz;
-        return null !== (zz = Fz) && void 0 !== zz && zz.canCycle() ? Fz.cycle : null
+      ev = () => {
+        var vv;
+        return null !== (vv = hv) && void 0 !== vv && vv.canCycle() ? hv.cycle : null
       }
   },
-  36090: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Xz,
-      e: () => Dz,
-      i: () => gz,
-      k: () => oz,
-      m: () => Nz,
-      p: () => Hz,
-      r: () => uz,
-      t: () => Pz,
-      w: () => wz,
-      z: () => Bz
+  36139: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => ev,
+      c: () => sv,
+      e: () => Cv,
+      i: () => pv,
+      k: () => Wv,
+      o: () => iv,
+      r: () => Tv,
+      u: () => Gv,
+      y: () => av,
+      z: () => cv
     });
-    var Fz = sz(30),
-      Wz = sz(34);
-    const Xz = "clientGameInventoryButtonsChanged",
-      Oz = new Map;
+    var hv = Pv(22),
+      Sv = Pv(26);
+    const ev = "clientGameInventoryButtonsChanged",
+      gv = new Map;
 
-    function oz() {
-      return [...Oz.values()].sort(((zz, tz) => {
-        var sz, Fz;
-        return (null !== (sz = zz.order) && void 0 !== sz ? sz : 0) - (null !== (Fz = tz.order) && void 0 !== Fz ? Fz : 0)
+    function pv() {
+      return [...gv.values()].sort(((vv, zv) => {
+        var Pv, hv;
+        return (null !== (Pv = vv.order) && void 0 !== Pv ? Pv : 0) - (null !== (hv = zv.order) && void 0 !== hv ? hv : 0)
       }))
     }
-    let vz = null;
+    let dv = null;
 
-    function Uz(zz) {
-      vz = zz
+    function Nv(vv) {
+      dv = vv
     }
-    let Kz = !1;
+    let lv = !1;
 
-    function uz(zz) {
-      Kz = !0;
+    function Tv(vv) {
+      lv = !0;
       try {
-        zz.onClick()
+        vv.onClick()
       } finally {
-        Kz = !1
+        lv = !1
       }
-      zz.panel && "clientGame" === Fz.b.get("openInGameMenuName") && Uz(zz.id)
+      vv.panel && "clientGame" === hv.c.get("openInGameMenuName") && Nv(vv.id)
     }
 
-    function Nz() {
-      return Kz
+    function Wv() {
+      return lv
     }
 
-    function bz() {
-      return oz().filter((zz => zz.panel && !zz.disabled))
+    function wv() {
+      return pv().filter((vv => vv.panel && !vv.disabled))
     }
 
-    function wz(zz) {
-      const tz = bz(),
-        sz = tz.findIndex((zz => zz.id === vz));
-      return !(sz < 0 || tz.length < 2) && (uz(tz[(sz + zz + tz.length) % tz.length]), !0)
+    function av(vv) {
+      const zv = wv(),
+        Pv = zv.findIndex((vv => vv.id === dv));
+      return !(Pv < 0 || zv.length < 2) && (Tv(zv[(Pv + vv + zv.length) % zv.length]), !0)
     }
 
-    function Dz() {
-      return null !== vz && bz().length > 1
+    function sv() {
+      return null !== dv && wv().length > 1
     }
 
-    function gz() {
-      Uz(null)
+    function Cv() {
+      Nv(null)
     }
 
-    function Hz() {
-      "inventory" !== Fz.b.get("openInGameMenuName") && Uz(null)
+    function iv() {
+      "inventory" !== hv.c.get("openInGameMenuName") && Nv(null)
     }
 
-    function Bz() {
-      const zz = vz;
-      return Uz(null), zz
+    function cv() {
+      const vv = dv;
+      return Nv(null), vv
     }
 
-    function Pz(zz) {
-      return Oz.set(zz.id, zz), Wz.o.Yg(Xz, oz(), !0), () => {
-        Oz.get(zz.id) === zz && (Oz.delete(zz.id), Wz.o.Yg(Xz, oz()))
+    function Gv(vv) {
+      return gv.set(vv.id, vv), Sv.j.zC(ev, pv(), !0), () => {
+        gv.get(vv.id) === vv && (gv.delete(vv.id), Sv.j.zC(ev, pv()))
       }
     }
   },
-  36086: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => oz,
-      h: () => gz,
-      j: () => Hz,
-      l: () => Nz,
-      o: () => Uz,
-      s: () => Dz,
-      w: () => bz,
-      x: () => Kz
+  36137: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => pv,
+      g: () => Cv,
+      j: () => iv,
+      m: () => Wv,
+      q: () => Nv,
+      r: () => sv,
+      u: () => wv,
+      w: () => lv
     });
-    var Fz = sz(30),
-      Wz = sz(34),
-      Xz = sz(1269),
-      Oz = sz(36090);
-    const oz = "clientGameUiChanged";
-    let vz = null;
+    var hv = Pv(22),
+      Sv = Pv(26),
+      ev = Pv(1272),
+      gv = Pv(36139);
+    const pv = "clientGameUiChanged";
+    let dv = null;
 
-    function Uz() {
-      return vz
+    function Nv() {
+      return dv
     }
 
-    function Kz(zz, tz) {
-      const sz = {
-        content: zz,
-        menu: tz
+    function lv(vv, zv) {
+      const Pv = {
+        content: vv,
+        menu: zv
       };
-      return vz = sz, Wz.o.Yg(oz, vz, !0), () => {
-        vz === sz && (vz = null, wz = !1, gz(), Wz.o.Yg(oz, null))
+      return dv = Pv, Sv.j.zC(pv, dv, !0), () => {
+        dv === Pv && (dv = null, av = !1, Cv(), Sv.j.zC(pv, null))
       }
     }
-    let uz = null;
+    let Tv = null;
 
-    function Nz() {
-      return uz
+    function Wv() {
+      return Tv
     }
 
-    function bz(zz) {
-      return uz = zz, () => {
-        uz === zz && (uz = null)
+    function wv(vv) {
+      return Tv = vv, () => {
+        Tv === vv && (Tv = null)
       }
     }
-    let wz = !1;
+    let av = !1;
 
-    function Dz() {
-      const zz = Fz.b.get("openInGameMenuName");
-      "clientGame" !== zz && (wz = "inventory" === zz), (0, Oz.m)() || (0, Oz.i)(), (0, Xz.n)(Xz.c), Fz.b.set({
+    function sv() {
+      const vv = hv.c.get("openInGameMenuName");
+      "clientGame" !== vv && (av = "inventory" === vv), (0, gv.k)() || (0, gv.e)(), (0, ev.r)(ev.e), hv.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function gz() {
-      Bz(!1)
+    function Cv() {
+      cv(!1)
     }
 
-    function Hz() {
-      Bz(wz)
+    function iv() {
+      cv(av)
     }
 
-    function Bz(zz) {
-      "clientGame" === Fz.b.get("openInGameMenuName") && Fz.b.set({
-        openInGameMenuName: zz ? "inventory" : null
-      }), zz || (0, Oz.i)(), wz = !1
+    function cv(vv) {
+      "clientGame" === hv.c.get("openInGameMenuName") && hv.c.set({
+        openInGameMenuName: vv ? "inventory" : null
+      }), vv || (0, gv.e)(), av = !1
     }
   },
-  37942: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Oz,
-      h: () => oz,
-      j: () => vz
+  38051: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => gv,
+      g: () => pv,
+      i: () => dv
     });
-    const Fz = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      Wz = [0, 1, 2, 0, 2, 3],
-      Xz = [4, 5];
+    const hv = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      Sv = [0, 1, 2, 0, 2, 3],
+      ev = [4, 5];
 
-    function Oz(zz, tz, sz, Fz, Wz) {
-      for (let Oz = 0; Oz < 6; Oz++) Xz.includes(Oz) === Wz && Uz(zz, tz, sz, Fz, Oz)
+    function gv(vv, zv, Pv, hv, Sv) {
+      for (let gv = 0; gv < 6; gv++) ev.includes(gv) === Sv && Nv(vv, zv, Pv, hv, gv)
     }
 
-    function oz(zz, tz, sz, Fz) {
-      for (let Wz = 0; Wz < 6; Wz++) Uz(zz, tz, sz, Fz, Wz)
+    function pv(vv, zv, Pv, hv) {
+      for (let Sv = 0; Sv < 6; Sv++) Nv(vv, zv, Pv, hv, Sv)
     }
 
-    function vz(zz, tz, sz, Xz, Oz) {
-      for (let oz = 0; oz < 6; oz++)
-        for (const vz of [0, 1]) {
-          const [Uz, Kz, uz] = [vz + 2, vz + 1, (vz + 3) % 4], Nz = zz.length / 3;
-          for (const [tz, Wz] of [
-              [vz, Kz],
-              [Uz, Kz],
-              [Uz, uz],
-              [vz, uz]
+    function dv(vv, zv, Pv, ev, gv) {
+      for (let pv = 0; pv < 6; pv++)
+        for (const dv of [0, 1]) {
+          const [Nv, lv, Tv] = [dv + 2, dv + 1, (dv + 3) % 4], Wv = vv.length / 3;
+          for (const [zv, Sv] of [
+              [dv, lv],
+              [Nv, lv],
+              [Nv, Tv],
+              [dv, Tv]
             ])
-            for (let vz = 0; vz < 3; vz++) {
-              const Uz = Fz[3 * (4 * oz + tz) + vz],
-                Kz = Fz[3 * (4 * oz + Wz) + vz];
-              zz.push((Uz + (Kz - Uz) * Oz) * Xz / 2 + sz[vz])
+            for (let dv = 0; dv < 3; dv++) {
+              const Nv = hv[3 * (4 * pv + zv) + dv],
+                lv = hv[3 * (4 * pv + Sv) + dv];
+              vv.push((Nv + (lv - Nv) * gv) * ev / 2 + Pv[dv])
             }
-          for (const zz of Wz) tz.push(Nz + zz)
+          for (const vv of Sv) zv.push(Wv + vv)
         }
     }
 
-    function Uz(zz, tz, sz, Xz, Oz) {
-      let [oz, vz, Uz] = sz, [Kz, uz, Nz] = Xz;
-      const bz = zz.length / 3;
-      for (let Wz = 4 * Oz; Wz < 4 * Oz + 4; Wz++) zz.push(Fz[3 * Wz] * Kz / 2 + oz, Fz[3 * Wz + 1] * uz / 2 + vz, Fz[3 * Wz + 2] * Nz / 2 + Uz);
-      for (const Fz of Wz) tz.push(bz + Fz)
+    function Nv(vv, zv, Pv, ev, gv) {
+      let [pv, dv, Nv] = Pv, [lv, Tv, Wv] = ev;
+      const wv = vv.length / 3;
+      for (let Sv = 4 * gv; Sv < 4 * gv + 4; Sv++) vv.push(hv[3 * Sv] * lv / 2 + pv, hv[3 * Sv + 1] * Tv / 2 + dv, hv[3 * Sv + 2] * Wv / 2 + Nv);
+      for (const hv of Sv) zv.push(wv + hv)
     }
   },
-  36311: (zz, tz, sz) => {
-    function Fz(zz, tz) {
-      return null === zz || null === tz ? zz === tz : zz[0] === tz[0] && zz[1] === tz[1] && zz[2] === tz[2]
+  36395: (vv, zv, Pv) => {
+    function hv(vv, zv) {
+      return null === vv || null === zv ? vv === zv : vv[0] === zv[0] && vv[1] === zv[1] && vv[2] === zv[2]
     }
 
-    function Wz(zz) {
-      return [zz[0] + .5, zz[1] + .5, zz[2] + .5]
+    function Sv(vv) {
+      return [vv[0] + .5, vv[1] + .5, vv[2] + .5]
     }
-    sz.d(tz, {
-      c: () => Wz,
-      e: () => Fz
+    Pv.d(zv, {
+      b: () => Sv,
+      d: () => hv
     })
   },
-  36339: (zz, tz, sz) => {
-    function Fz(zz) {
-      return zz.includes("Leaf Bed")
+  36443: (vv, zv, Pv) => {
+    function hv(vv) {
+      return vv.includes("Leaf Bed")
     }
 
-    function Wz(zz) {
-      return / Bed(?: Head)?(?:\||$)/.test(zz) && !Fz(zz)
+    function Sv(vv) {
+      return / Bed(?: Head)?(?:\||$)/.test(vv) && !hv(vv)
     }
 
-    function Xz(zz) {
-      return zz.includes(" Strongbed")
+    function ev(vv) {
+      return vv.includes(" Strongbed")
     }
 
-    function Oz(zz) {
-      return Fz(zz) || Wz(zz) || Xz(zz)
+    function gv(vv) {
+      return hv(vv) || Sv(vv) || ev(vv)
     }
-    sz.d(tz, {
-      e: () => Oz,
-      i: () => Fz,
-      l: () => Xz,
-      m: () => Wz
+    Pv.d(zv, {
+      e: () => gv,
+      h: () => hv,
+      k: () => ev,
+      n: () => Sv
     })
   },
-  36336: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Uz
+  36434: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => Nv
     });
-    var Fz = sz(36339),
-      Wz = sz(8940);
-    const Xz = [],
-      Oz = [],
-      oz = [],
-      vz = [];
-    for (const Kz of Object.keys(Wz.l))(0, Fz.i)(Kz) ? Xz.push(Kz) : (0, Fz.m)(Kz) && Oz.push(Kz), (0, Fz.l)(Kz) && oz.push(Kz), (Kz.includes(" Bed Head") || Kz.includes(" Strongbed Head")) && vz.push(Kz);
-    const Uz = {
-      leafBeds: Xz,
-      woolBeds: Oz,
-      strongBeds: oz,
-      beds: [...Xz, ...Oz, ...oz],
-      bedHeads: vz,
+    var hv = Pv(36443),
+      Sv = Pv(9101);
+    const ev = [],
+      gv = [],
+      pv = [],
+      dv = [];
+    for (const lv of Object.keys(Sv.k))(0, hv.h)(lv) ? ev.push(lv) : (0, hv.n)(lv) && gv.push(lv), (0, hv.k)(lv) && pv.push(lv), (lv.includes(" Bed Head") || lv.includes(" Strongbed Head")) && dv.push(lv);
+    const Nv = {
+      leafBeds: ev,
+      woolBeds: gv,
+      strongBeds: pv,
+      beds: [...ev, ...gv, ...pv],
+      bedHeads: dv,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

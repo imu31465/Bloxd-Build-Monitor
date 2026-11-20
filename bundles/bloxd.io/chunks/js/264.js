@@ -1,632 +1,156 @@
 export const id = 264;
 export const ids = [264];
 export const modules = {
-  40185: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Pz,
-      h: () => jz,
-      i: () => gz,
-      j: () => Hz,
-      k: () => Nz,
-      l: () => Dz,
-      m: () => wz,
-      q: () => bz
+  40356: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      BloxdInformation: () => wv
     });
-    var Fz = sz(36475),
-      Wz = sz(36654),
-      Xz = sz(36507),
-      Oz = sz(40190),
-      oz = sz(39374),
-      vz = sz(39179),
-      Uz = sz(39213),
-      Kz = sz(39181),
-      uz = sz(36518);
-    const Nz = Object.freeze(new Fz.h(0, 0, 0, 0)),
-      bz = Object.freeze(Fz.p.Zero()),
-      wz = Object.freeze(Fz.n.Zero()),
-      Dz = Object.freeze(vz.e.Zero()),
-      gz = Object.freeze(Wz.c.Black()),
-      Hz = Object.freeze(new Wz.d(0, 0, 0, 0)),
-      Bz = {
-        key: 0,
-        repeatCount: 0,
-        hX: 2
+    var hv = Pv(1175),
+      Sv = Pv(52),
+      ev = Pv(73),
+      gv = Pv(1442),
+      pv = Pv(108),
+      dv = Pv(1042),
+      Nv = Pv(1082);
+    const lv = (0, Sv.lazy)((() => Pv.e(116).then((() => Pv(6237))))),
+      Tv = (0, Sv.lazy)((() => Pv.e(117).then((() => Pv(6239)))));
+
+    function Wv() {
+      return (0, Nv.jsxs)("div", {
+        className: "LegalText",
+        children: [(0, Nv.jsx)("div", {
+          className: "BloxdInformationHeader FullyFancyText",
+          children: "Security Exploit Bounty Program"
+        }), (0, Nv.jsx)("p", {
+          children: "We have a program for reporting security exploits. Find an important security flaw in Bloxd? Report it through the process below. Please include steps to reproduce the exploit, including any relevant code if the exploit requires it. You will receive the reward if we verify and fix the exploit."
+        }), (0, Nv.jsx)("h3", {
+          children: "1. How to Report"
+        }), (0, Nv.jsxs)("p", {
+          children: ["Please follow the instructions on", " ", (0, Nv.jsx)("a", {
+            href: "https://forms.gle/wUL8WiH3LbGiJBzF7",
+            target: "_blank",
+            rel: "noreferrer",
+            children: "this form"
+          }), " ", "to report the exploit."]
+        }), (0, Nv.jsx)("h3", {
+          children: "2. Frequently Asked Questions"
+        }), (0, Nv.jsx)("p", {
+          children: (0, Nv.jsx)("b", {
+            children: "Q: When can I expect a response?"
+          })
+        }), (0, Nv.jsx)("p", {
+          children: "A: If you've left any contact details, you will typically receive a response within two to four weeks, but we will try to respond as soon as possible."
+        }), (0, Nv.jsx)("p", {
+          children: (0, Nv.jsx)("b", {
+            children: "Q: Can I remain anonymous?"
+          })
+        }), (0, Nv.jsx)("p", {
+          children: "A: Yes, but we will be unable to contact you for rewards if you do not leave any contact details."
+        }), (0, Nv.jsx)("p", {
+          children: (0, Nv.jsx)("b", {
+            children: "Q: What if multiple people report the same exploit, complete with repro steps?"
+          })
+        }), (0, Nv.jsx)("p", {
+          children: "A: Typically, only the first reporter will receive the reward."
+        }), (0, Nv.jsx)("p", {
+          children: (0, Nv.jsx)("b", {
+            children: "Q: What is out of scope?"
+          })
+        }), (0, Nv.jsxs)("p", {
+          children: ["A:", (0, Nv.jsxs)("ul", {
+            children: [(0, Nv.jsx)("li", {
+              children: "Social engineering / phishing"
+            }), (0, Nv.jsx)("li", {
+              children: "DDoS attacks. If an attack requires a large number of computers to hit our servers with packets, it is out of scope. However, if a single computer/script can execute the attack, it is in scope of this programme."
+            }), (0, Nv.jsx)("li", {
+              children: "Use of stolen credentials"
+            }), (0, Nv.jsx)("li", {
+              children: "Data that is already public or user-supplied (e.g. usernames, chat, etc)"
+            }), (0, Nv.jsx)("li", {
+              children: "Non-security related bugs - please report in #report-a-bug in our discord"
+            })]
+          })]
+        }), (0, Nv.jsx)("p", {
+          children: (0, Nv.jsx)("b", {
+            children: "Q: I'm banned in Bloxd, am I still eligible to submit exploits through this program?"
+          })
+        }), (0, Nv.jsx)("p", {
+          children: "A: Yes, as long as you follow the rules laid out with respect to the exploit you are reporting. I.e. don't abuse or share the exploit, etc."
+        })]
+      })
+    }
+
+    function wv() {
+      const {
+        t: vv
+      } = (0, hv.x)(), [zv, Pv] = (0, Sv.useState)("partnersAndCredits"), wv = {
+        partnersAndCredits: {
+          title: ev.featureFlags.usePartnerLinks ? vv("homePage:partnersAndCredits") : vv("homePage:credits"),
+          content: (0, Nv.jsxs)(Nv.Fragment, {
+            children: [(0, Nv.jsx)("div", {
+              className: "BloxdInformationHeader FullyFancyText",
+              children: ev.featureFlags.usePartnerLinks ? vv("homePage:partnersAndCredits") : vv("homePage:credits")
+            }), ev.featureFlags.usePartnerLinks && "\n\t\t\t\t\tPartners:\n\n\t\t\t\t\tcrazygames.com - https://www.crazygames.com/c/io\n\t\t\t\t\tnow.gg - https://now.gg/\n\t\t\t\t\tminijuegos.com - https://www.minijuegos.com/\n\t\t\t\t\tkevin.games - https://kevin.games/\n\t\t\t\t\tsilvergames.com - https://www.silvergames.com/\n\t\t\t\t\tplay123.com - https://play123.com/\n\n\t\t\t\t\t", "\n\t\t\t\t\t\tCool sites:\n\n\t\t\t\t\t\tBloxd Youtube Videos - https://www.youtube.com/ (duh)\n\n\t\t\t\t\t", '\n\t\t\t\t\tCredits:\n\n\t\t\t\t\tMusic:\n\t\t\t\t\tSignificant amount of music by Adigold on envato elements. Titles by Adigold:\n\t\t\t\t\tA Place to be Free\n\t\t\t\t\tButterfly Effect\n\t\t\t\t\tDreamless Sleep\n\t\t\t\t\tFrozen Pulse\n\t\t\t\t\tFrozen Skies\n\t\t\t\t\tHealing Thoughts\n\t\t\t\t\tHere Forever\n\t\t\t\t\tJust a Little Hope\n\t\t\t\t\tJust Like Heaven\n\t\t\t\t\tMemories Remain\n\t\t\t\t\tPlace to be\n\t\t\t\t\tThe Riverside\n\t\t\t\t\tThe Wonder\n\t\t\t\t\tVetrar\n\t\t\t\t\tFurther titles:\n\t\t\t\t\thighway-1-retro-gaming-version: Accessible on lonepeakmusic\'s bandcamp\n\t\t\t\t\theroic-demise-updated-version: Accessible on opengameart\n\t\t\t\t\thappy-arcade-tune: Accessible on opengameart\n\t\t\t\t\ttown-theme-rpg: Accessible on opengameart\n\t\t\t\t\t5-chiptunes-action: Accessible on opengameart\n\t\t\t\t\tslow-motion: Accessible on bensound - royalty free music section\n\t\t\t\t\tI Have Often Told You Stories (guitar instrumental) by Ivan Chew (c) copyright 2013 Licensed under a Creative Commons Attribution (3.0) license. Accessible on ccmixter under "ramblinglibrarian"\n\t\t\t\t\tReverie (small theme) by _ghost (c) copyright 2010 Licensed under a Creative Commons Attribution (3.0) license. Ft: Pitx. Accessible on ccmixter under "_ghost"\n\t\t\t\t\tSilence Await by Analog By Nature (c) copyright 2008 Licensed under a Creative Commons Attribution (3.0) license. Ft: oldDog. Accessible on ccmixter under "cdk"\n\t\t\t\t\tEthereal Space by Snowflake (c) copyright 2011 Licensed under a Creative Commons Attribution (3.0) license. Ft: Zep Hurme. Accessible on ccmixter under "snowflake"\n\t\t\t\t\tbuild-up-scenes-battle-ship: By Hot_Dope. Accessible on pixabay\n\t\t\t\t\tRaise The Sails: By SergePavkinMusic. Accessible on pixabay\n\t\t\t\t\tThe Epic Adventure: By The_Mountain. Accessible on pixabay\n\t\t\t\t\tCorsairs: By StudioKolomna. Accessible on uppbeat\n\t\t\t\t\tI am the Sea - Epic Pirate Battle Music. Supported by #TheROOMnoCopyRMusic\n\t\t\t\t\tPirates by Mojo Productions\n\t\t\t\t\tSneaky Jazz by Mojo Productions\n\t\t\t\t\tThe Sneaky by Mojo Productions\n\t\t\t\t\tThe Sneaky Jazz by Mojo Productions\n\t\t\t\t\tSpooky Scary Skeletons - 3mp1r3 Orchestral Cover (Instrumental): By 3MP-The-Rook (c) copyright 2021 Licensed under a Creative Commons Attribution (3.0) license. Accessible on newgrounds\n\n\n\t\t\t\t\tSkybox:\n\t\t\t\t\tspace-skyboxes-0. By StumpyStrust. Accessible on opengameart\n\t\t\t\t\tinterstellar-skybox. By Jockum Skoglund (hipshot). Accessible on opengameart\n\t\t\t\t\tgloomy-skybox. By Spiney. Accessible on opengameart\n\n\n\t\t\t\t\tMap builds:\n\t\t\t\t\tjar9 - Medieval Castle\n\t\t\t\t\tjar9 - Iron Man\'s Mansion\n\t\t\t\t\tjar9 - Hawaiian pineapple resort\n\t\t\t\t\tNot_Tred - Pyrage and The Century\n\t\t\t\t\tBubblesAndSuch - Hide and Seek Office map\n\t\t\t\t\tWeark - Dinosaur Murder Mystery map\n\t\t\t\t\tMavers - Jungle Theme Skywars map\n\t\t\t\t\tPigiama-Party-Crew - Skywars Castle map\n\t\t\t\t\tPigiama-Party-Crew - Skywars frozen map\n\t\t\t\t\tPartyFinger - Skywars Mushroom map\n\t\t\t\t\tSadClown - Skywars Simple Lego map\n\t\t\t\t\tP2H - Hide and Seek Western map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Double Trouble pirates map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Stowaway Seas pirates map (made for bloxd)\n\t\t\t\t\tjanuaryboy - Woesome Waters pirates map (made for bloxd)\n\t\t\t\t\tLadyHaley - Capture the Flag\n\n\n\t\t\t\t\tHome Screen Builds:\n\t\t\t\t\taxchitectmc (arch): valley town\n\t\t\t\t\tbush_man_ (B0ZO): Reactor Island / Elver\n\t\t\t\t\titz_parkour_queen (!Kat)\n\t\t\t\t\tthe_ccccc_83959 (the_ccccc)\n\t\t\t\t\tsnapshot0378 (AspectOfEntity)\n\t\t\t\t\tbanshee_61108 (Banshee)\n\t\t\t\t\tcreativeartisan856888 (L16_F51620)\n\t\t\t\t\tblazingcharlie (BlazingCharlie)\n\t\t\t\t\tkentaki65501 (\ud835\ude10\ud835\ude15\ud835\ude10\ud835\ude1b\ud835\ude10\ud835\ude08\ud835\ude13"\ud835\ude12")\n\n\n\t\t\t\t\tCharacter model:\n\t\t\t\t\tkenney bundle accessible on itch\n\n\n\t\t\t\t\tTextures:\n\t\t\t\t\tDronyazka\n\t\t\t\t\t1qayesy\n\t\t\t\t\tBlocd\n\t\t\t\t\tJanuaryBoy\n\t\t\t\t\tvinivieira\n\t\t\t\t\thttps://doughnutdev.itch.io/\n\t\t\t\t\tDigs - digs-simple-pack\n\t\t\t\t\thttps://dafluffypotato.itch.io/pixel-country-flags\n\n\n\t\t\t\t\tPet Paintings:\n\t\t\t\t\tJanuaryBoy\n\n\n\t\t\t\t\tSounds:\n\t\t\t\t\tgamemasteraudio\n\t\t\t\t\tSn0wShepherd - snowsong-total-sound-and-music-resource-pack\n\t\t\t\t\tFrawzy - enhanced-audio pack - accessible on curseforge\n\t\t\t\t\tOreCruncher (and sub contributors) - accessible on github via the OreCruncher/DynamicSurroundings repo\n\t\t\t\t\tWistanSound - pig, cow & sheep sounds pack\n\t\t\t\t\tKenney - rpg-audio pack - accessible on kenney.nl\n\n\n\t\t\t\t\tTranslations:\n\t\t\t\t\tArabic: GoldWaterMelon, MemeYou, faresaliahmed1234, Bloxd Builder, Toast123, Exinvity, Bruhbro, Coffee\n\t\t\t\t\tGerman: random, 1qayesy, LordDarknessYT, BRELJIS, Black_White, FJGaming, Tabby bee, Cougaran, SUPERJERRY, DigitalDragon\n\t\t\t\t\tSpanish: locomoco330, perky.11, mash_the_idiot, kilmepls, cisaa, Patata, MrT3, Sameiflovi, Monty Mole, MisterCasino\n\t\t\t\t\tFrench: .frenchgamer., ImBoop, Bloxd Builder, Elforeve, JaClol, lews123, LeVraiZouzou, Kontroleuh, kilmepls, _LightningStrike_, the_ccccc, ga\xeb, M.K, BearsBoi\n\t\t\t\t\tHindi: F22 Raptor, ObiloxYT, MucknDuck, SHUSH XD, __DUCK__\n\t\t\t\t\tIndonesian: zash, bool bola, kevin143, fedortam, Image\'s_MxD, THESECONDONE, Mozzy\n\t\t\t\t\tItalian: Star_mario, NAME VIOLTION4, Trespasser, Gabriel, Cougaran\n\t\t\t\t\tJapanese: tomoru1741, httpsnet, namu_namu, aaa_second, another_sky, pockymouse, Interactive\n\t\t\t\t\tDutch: brickswizard, Ryobagyatt-bloxd, MONKE, Thijssiee, Zethal_\n\t\t\t\t\tPortuguese: Da59Gigas, kilmepls, coding.cannoli\n\t\t\t\t\tPortuguese (Brazil): vinivieira, Muffinscott, pompom, kilmepls, noselastic, icyrlq, tokachiri\n\t\t\t\t\tRussian: Ryno2024, FOG_Batman17_WM, Bush, imlaggingbad, NahBro, Riddle, timofeycacti\n\t\t\t\t\tTamil: heheboi420, Tridentify\n\t\t\t\t\tTurkish: 1qayesy, iharqv, FOG_Batman17_WM, aryosta\n\t\t\t\t\tVietnamese: andye_da_Grass, that_asian_guy, ckn, Bready, Appa\n\t\t\t\t\tChinese (Simplified): AQLI, KHROTU, G2Lighter, Always yxZ, Baklava, Ender_, \u03c4Sean\ud83c\udde8\ud83c\uddf3\u03c4, ACreativeGoddess\n\t\t\t\t\tChinese (Traditional): AQLI, hkxd123, Jas_Mine_, Axolotl_Fox, happygamer, immortal, Idolized, Huh?\n\t\t\t\t\tUkrainian: xnutella, Ryno2024, shadow cat, Riddle\n\t\t\t\t\tPolish: PKcomander, ashxlek, tokachiri, LSVJ, 3ndii1337\n\t\t\t\t\tKorean: bobuk, Interactive\n\n\n\t\t\t\t\tMisc:\n\t\t\t\t\tMonogram font - https://datagoblin.itch.io/monogram\n\t\t\t\t\tTreasure Chests - DanSevenStar.xyz - treasure-chest-pixel-art-animation - accessible on opengameart\n\t\t\t\t\tTouch scroll icon created by Those Icons - accessible on Flaticon in the free-icons category under the "scroll" name\n\t\t\t\t\tThis product makes use of GeoLite2 data created by MaxMind, available from https://www.maxmind.com\n\t\t\t\t\t']
+          })
+        },
+        bloxdIngameRules: {
+          title: vv("homePage:bloxdIngameRules"),
+          content: (0, Nv.jsxs)(Nv.Fragment, {
+            children: [(0, Nv.jsx)("div", {
+              className: "BloxdInformationHeader FullyFancyText",
+              children: vv("homePage:bloxdIngameRules")
+            }), "\n\t\t\t\t\t1. Be respectful of others.\n\n\t\t\t\t\t2. Don't harass or bully other players.\n\n\t\t\t\t\t3. Discriminatory jokes and hate speech (attacks on an individual or group based on their race, ethnicity, national origin, sex, gender, sexual orientation, religious affiliation, or disabilities) is not allowed.\n\n\t\t\t\t\t4. Cursing is not allowed, avoiding the swear filter is not allowed.\n\n\t\t\t\t\t5. Spamming is not allowed in any form.\n\n\t\t\t\t\t6. Don't post links.\n\n\t\t\t\t\t7. Don't do anything NSFW related or sexually suggestive.\n\n\t\t\t\t\t8. Online dating is not allowed.\n\n\t\t\t\t\t9. Don't use any offensive/inappropriate names.\n\n\t\t\t\t\t10. Don't impersonate staff or developers. This can include players if the player is clearly trying to impersonate you.\n\n\t\t\t\t\t11. No Hacking/Cheating/Autoclicking. Some clicking techniques such as drag clicking can be detected as autoclicking. Be careful using these techniques, if you are banned for autoclicking, you will not be unbanned.\n\n\t\t\t\t\t12. Creating, sharing, or using bloxd userscripts, extensions or other modifications is not allowed.\n\n\t\t\t\t\t13. Don't create boards/signs with inappropriate text.\n\n\t\t\t\t\t14. Don't create worlds lobbies for inappropriate purposes.\n\n\t\t\t\t\t15. Don't evade mutes or bans using alt accounts. Doing so will result in more action against your main account.\n\n\t\t\t\t\t16. Don't exploit duplication bugs. If you discover a serverside way to duplicate items, e.g.: the duped items stay when you leave and rejoin, then please carefully follow all the instructions in our Security Exploit Bounty Program.\n\n\t\t\t\t\t17. Don't trade ingame items for gift purchases (e.g. superrank).\n\t\t\t\t\t\n\t\t\t\t\t18. Advocating for or encouraging any of the above rule breaking is not allowed.\n\t\t\t\t"]
+          })
+        },
+        privacyPolicy: {
+          title: vv("homePage:privacyPolicy"),
+          content: (0, Nv.jsx)(Sv.Suspense, {
+            fallback: null,
+            children: (0, Nv.jsx)(lv, {})
+          })
+        },
+        termsOfService: {
+          title: vv("homePage:termsOfService"),
+          content: (0, Nv.jsx)(Sv.Suspense, {
+            fallback: null,
+            children: (0, Nv.jsx)(Tv, {})
+          })
+        },
+        securityExploitBounties: {
+          title: vv("homePage:securityExploitBounties"),
+          content: (0, Nv.jsx)(Wv, {})
+        }
       };
-    class Pz {
-      static _PrepareAnimation(zz, tz, sz, Xz, Oz, oz, Uz, Kz) {
-        let uz;
-        if (!isNaN(parseFloat(Oz)) && isFinite(Oz) ? uz = Pz.ANIMATIONTYPE_FLOAT : Oz instanceof Fz.h ? uz = Pz.ANIMATIONTYPE_QUATERNION : Oz instanceof Fz.p ? uz = Pz.ANIMATIONTYPE_VECTOR3 : Oz instanceof Fz.n ? uz = Pz.ANIMATIONTYPE_VECTOR2 : Oz instanceof Wz.c ? uz = Pz.ANIMATIONTYPE_COLOR3 : Oz instanceof Wz.d ? uz = Pz.ANIMATIONTYPE_COLOR4 : Oz instanceof vz.e && (uz = Pz.ANIMATIONTYPE_SIZE), void 0 == uz) return null;
-        const Nz = new Pz(zz, tz, sz, uz, Uz),
-          bz = [{
-            frame: 0,
-            value: Oz
-          }, {
-            frame: Xz,
-            value: oz
-          }];
-        return Nz.setKeys(bz), void 0 !== Kz && Nz.setEasingFunction(Kz), Nz
-      }
-      get runtimeAnimations() {
-        return this._runtimeAnimations
-      }
-      get hasRunningRuntimeAnimations() {
-        for (const zz of this._runtimeAnimations)
-          if (!zz.isStopped()) return !0;
-        return !1
-      }
-      constructor(zz, tz, sz, Fz, Wz, Xz) {
-        this.name = zz, this.targetProperty = tz, this.framePerSecond = sz, this.dataType = Fz, this.hX = Wz, this.enableBlending = Xz, this._easingFunction = null, this._runtimeAnimations = new Array, this._events = new Array, this.blendingSpeed = .01, this._ranges = {}, this._coreAnimation = null, this.targetPropertyPath = tz.split("."), this.dataType = Fz, this.hX = void 0 === Wz ? Pz.ANIMATIONLOOPMODE_CYCLE : Wz, this.uniqueId = Pz._UniqueIdGenerator++
-      }
-      toString(zz) {
-        let tz = "Name: " + this.name + ", property: " + this.targetProperty;
-        if (tz += ", datatype: " + ["Float", "XD", "Quaternion", "Matrix", "Color3", "Vector2"][this.dataType], tz += ", nKeys: " + (this._keys ? this._keys.length : "none"), tz += ", nRanges: " + (this._ranges ? Object.keys(this._ranges).length : "none"), zz) {
-          tz += ", Ranges: {";
-          let zz = !0;
-          for (const sz in this._ranges) zz || (tz += ", "), zz = !1, tz += sz;
-          tz += "}"
-        }
-        return tz
-      }
-      addEvent(zz) {
-        this._events.push(zz), this._events.sort(((zz, tz) => zz.frame - tz.frame))
-      }
-      removeEvents(zz) {
-        for (let tz = 0; tz < this._events.length; tz++) this._events[tz].frame === zz && (this._events.splice(tz, 1), tz--)
-      }
-      getEvents() {
-        return this._events
-      }
-      createRange(zz, tz, sz) {
-        this._ranges[zz] || (this._ranges[zz] = new Oz.e(zz, tz, sz))
-      }
-      deleteRange(zz) {
-        let tz = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const sz = this._ranges[zz];
-        if (sz) {
-          if (tz) {
-            const zz = sz.from,
-              tz = sz.to;
-            for (let sz = this._keys.length - 1; sz >= 0; sz--) this._keys[sz].frame >= zz && this._keys[sz].frame <= tz && this._keys.splice(sz, 1)
-          }
-          this._ranges[zz] = null
-        }
-      }
-      getRange(zz) {
-        return this._ranges[zz]
-      }
-      getKeys() {
-        return this._keys
-      }
-      getHighestFrame() {
-        let zz = 0;
-        for (let tz = 0, sz = this._keys.length; tz < sz; tz++) zz < this._keys[tz].frame && (zz = this._keys[tz].frame);
-        return zz
-      }
-      getEasingFunction() {
-        return this._easingFunction
-      }
-      setEasingFunction(zz) {
-        this._easingFunction = zz
-      }
-      floatInterpolateFunction(zz, tz, sz) {
-        return (0, Xz.Lerp)(zz, tz, sz)
-      }
-      floatInterpolateFunctionWithTangents(zz, tz, sz, Fz, Wz) {
-        return (0, Xz.Hermite)(zz, tz, sz, Fz, Wz)
-      }
-      quaternionInterpolateFunction(zz, tz, sz) {
-        return Fz.h.Slerp(zz, tz, sz)
-      }
-      quaternionInterpolateFunctionWithTangents(zz, tz, sz, Wz, Xz) {
-        return Fz.h.Hermite(zz, tz, sz, Wz, Xz).normalize()
-      }
-      vector3InterpolateFunction(zz, tz, sz) {
-        return Fz.p.Lerp(zz, tz, sz)
-      }
-      vector3InterpolateFunctionWithTangents(zz, tz, sz, Wz, Xz) {
-        return Fz.p.Hermite(zz, tz, sz, Wz, Xz)
-      }
-      vector2InterpolateFunction(zz, tz, sz) {
-        return Fz.n.Lerp(zz, tz, sz)
-      }
-      vector2InterpolateFunctionWithTangents(zz, tz, sz, Wz, Xz) {
-        return Fz.n.Hermite(zz, tz, sz, Wz, Xz)
-      }
-      sizeInterpolateFunction(zz, tz, sz) {
-        return vz.e.Lerp(zz, tz, sz)
-      }
-      color3InterpolateFunction(zz, tz, sz) {
-        return Wz.c.Lerp(zz, tz, sz)
-      }
-      color3InterpolateFunctionWithTangents(zz, tz, sz, Fz, Xz) {
-        return Wz.c.Hermite(zz, tz, sz, Fz, Xz)
-      }
-      color4InterpolateFunction(zz, tz, sz) {
-        return Wz.d.Lerp(zz, tz, sz)
-      }
-      color4InterpolateFunctionWithTangents(zz, tz, sz, Fz, Xz) {
-        return Wz.d.Hermite(zz, tz, sz, Fz, Xz)
-      }
-      _getKeyValue(zz) {
-        return "function" === typeof zz ? zz() : zz
-      }
-      evaluate(zz) {
-        return Bz.key = 0, this._interpolate(zz, Bz)
-      }
-      _interpolate(zz, tz) {
-        let sz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (tz.hX === Pz.ANIMATIONLOOPMODE_CONSTANT && tz.repeatCount > 0) return tz.highLimitValue.clone ? tz.highLimitValue.clone() : tz.highLimitValue;
-        const Fz = this._keys;
-        let Wz;
-        if (this._coreAnimation) Wz = this._coreAnimation._key;
-        else {
-          const Xz = Fz.length;
-          for (Wz = tz.key; Wz >= 0 && zz < Fz[Wz].frame;) --Wz;
-          for (; Wz + 1 <= Xz - 1 && zz >= Fz[Wz + 1].frame;) ++Wz;
-          if (tz.key = Wz, Wz < 0) return sz ? void 0 : this._getKeyValue(Fz[0].value);
-          if (Wz + 1 > Xz - 1) return sz ? void 0 : this._getKeyValue(Fz[Xz - 1].value);
-          this._key = Wz
-        }
-        const Xz = Fz[Wz],
-          Oz = Fz[Wz + 1];
-        if (sz && (zz === Xz.frame || zz === Oz.frame)) return;
-        const oz = this._getKeyValue(Xz.value),
-          vz = this._getKeyValue(Oz.value);
-        if (1 === Xz.interpolation) return Oz.frame > zz ? oz : vz;
-        const Uz = void 0 !== Xz.outTangent && void 0 !== Oz.inTangent,
-          Kz = Oz.frame - Xz.frame;
-        let uz = (zz - Xz.frame) / Kz;
-        const Bz = Xz.easingFunction || this.getEasingFunction();
-        switch (Bz && (uz = Bz.ease(uz)), this.dataType) {
-          case Pz.ANIMATIONTYPE_FLOAT: {
-            const zz = Uz ? this.floatInterpolateFunctionWithTangents(oz, Xz.outTangent * Kz, vz, Oz.inTangent * Kz, uz) : this.floatInterpolateFunction(oz, vz, uz);
-            switch (tz.hX) {
-              case Pz.ANIMATIONLOOPMODE_CYCLE:
-              case Pz.ANIMATIONLOOPMODE_CONSTANT:
-              case Pz.ANIMATIONLOOPMODE_YOYO:
-                return zz;
-              case Pz.ANIMATIONLOOPMODE_RELATIVE:
-              case Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return (tz.offsetValue ?? 0) * tz.repeatCount + zz
-            }
-            break
-          }
-          case Pz.ANIMATIONTYPE_QUATERNION: {
-            const zz = Uz ? this.quaternionInterpolateFunctionWithTangents(oz, Xz.outTangent.scale(Kz), vz, Oz.inTangent.scale(Kz), uz) : this.quaternionInterpolateFunction(oz, vz, uz);
-            switch (tz.hX) {
-              case Pz.ANIMATIONLOOPMODE_CYCLE:
-              case Pz.ANIMATIONLOOPMODE_CONSTANT:
-              case Pz.ANIMATIONLOOPMODE_YOYO:
-                return zz;
-              case Pz.ANIMATIONLOOPMODE_RELATIVE:
-              case Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return zz.addInPlace((tz.offsetValue || Nz).scale(tz.repeatCount))
-            }
-            return zz
-          }
-          case Pz.ANIMATIONTYPE_VECTOR3: {
-            const zz = Uz ? this.vector3InterpolateFunctionWithTangents(oz, Xz.outTangent.scale(Kz), vz, Oz.inTangent.scale(Kz), uz) : this.vector3InterpolateFunction(oz, vz, uz);
-            switch (tz.hX) {
-              case Pz.ANIMATIONLOOPMODE_CYCLE:
-              case Pz.ANIMATIONLOOPMODE_CONSTANT:
-              case Pz.ANIMATIONLOOPMODE_YOYO:
-                return zz;
-              case Pz.ANIMATIONLOOPMODE_RELATIVE:
-              case Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return zz.add((tz.offsetValue || bz).scale(tz.repeatCount))
-            }
-            break
-          }
-          case Pz.ANIMATIONTYPE_VECTOR2: {
-            const zz = Uz ? this.vector2InterpolateFunctionWithTangents(oz, Xz.outTangent.scale(Kz), vz, Oz.inTangent.scale(Kz), uz) : this.vector2InterpolateFunction(oz, vz, uz);
-            switch (tz.hX) {
-              case Pz.ANIMATIONLOOPMODE_CYCLE:
-              case Pz.ANIMATIONLOOPMODE_CONSTANT:
-              case Pz.ANIMATIONLOOPMODE_YOYO:
-                return zz;
-              case Pz.ANIMATIONLOOPMODE_RELATIVE:
-              case Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return zz.add((tz.offsetValue || wz).scale(tz.repeatCount))
-            }
-            break
-          }
-          case Pz.ANIMATIONTYPE_SIZE:
-            switch (tz.hX) {
-              case Pz.ANIMATIONLOOPMODE_CYCLE:
-              case Pz.ANIMATIONLOOPMODE_CONSTANT:
-              case Pz.ANIMATIONLOOPMODE_YOYO:
-                return this.sizeInterpolateFunction(oz, vz, uz);
-              case Pz.ANIMATIONLOOPMODE_RELATIVE:
-              case Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return this.sizeInterpolateFunction(oz, vz, uz).add((tz.offsetValue || Dz).scale(tz.repeatCount))
-            }
-            break;
-          case Pz.ANIMATIONTYPE_COLOR3: {
-            const zz = Uz ? this.color3InterpolateFunctionWithTangents(oz, Xz.outTangent.scale(Kz), vz, Oz.inTangent.scale(Kz), uz) : this.color3InterpolateFunction(oz, vz, uz);
-            switch (tz.hX) {
-              case Pz.ANIMATIONLOOPMODE_CYCLE:
-              case Pz.ANIMATIONLOOPMODE_CONSTANT:
-              case Pz.ANIMATIONLOOPMODE_YOYO:
-                return zz;
-              case Pz.ANIMATIONLOOPMODE_RELATIVE:
-              case Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return zz.add((tz.offsetValue || gz).scale(tz.repeatCount))
-            }
-            break
-          }
-          case Pz.ANIMATIONTYPE_COLOR4: {
-            const zz = Uz ? this.color4InterpolateFunctionWithTangents(oz, Xz.outTangent.scale(Kz), vz, Oz.inTangent.scale(Kz), uz) : this.color4InterpolateFunction(oz, vz, uz);
-            switch (tz.hX) {
-              case Pz.ANIMATIONLOOPMODE_CYCLE:
-              case Pz.ANIMATIONLOOPMODE_CONSTANT:
-              case Pz.ANIMATIONLOOPMODE_YOYO:
-                return zz;
-              case Pz.ANIMATIONLOOPMODE_RELATIVE:
-              case Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return zz.add((tz.offsetValue || Hz).scale(tz.repeatCount))
-            }
-            break
-          }
-          case Pz.ANIMATIONTYPE_MATRIX:
-            switch (tz.hX) {
-              case Pz.ANIMATIONLOOPMODE_CYCLE:
-              case Pz.ANIMATIONLOOPMODE_CONSTANT:
-              case Pz.ANIMATIONLOOPMODE_YOYO:
-                return Pz.AllowMatricesInterpolation ? this.matrixInterpolateFunction(oz, vz, uz, tz.workValue) : oz;
-              case Pz.ANIMATIONLOOPMODE_RELATIVE:
-              case Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT:
-                return oz
-            }
-        }
-        return 0
-      }
-      matrixInterpolateFunction(zz, tz, sz, Wz) {
-        return Pz.AllowMatrixDecomposeForInterpolation ? Wz ? (Fz.e.DecomposeLerpToRef(zz, tz, sz, Wz), Wz) : Fz.e.DecomposeLerp(zz, tz, sz) : Wz ? (Fz.e.LerpToRef(zz, tz, sz, Wz), Wz) : Fz.e.Lerp(zz, tz, sz)
-      }
-      clone() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        const tz = new Pz(this.name, this.targetPropertyPath.join("."), this.framePerSecond, this.dataType, this.hX);
-        if (tz.enableBlending = this.enableBlending, tz.blendingSpeed = this.blendingSpeed, this._keys && tz.setKeys(this._keys, !1, zz), this._ranges) {
-          tz._ranges = {};
-          for (const zz in this._ranges) {
-            const sz = this._ranges[zz];
-            sz && (tz._ranges[zz] = sz.clone())
-          }
-        }
-        return tz
-      }
-      setKeys(zz) {
-        let tz = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) this._keys = zz;
-        else if (this._keys = zz.slice(0), tz)
-          for (let sz = 0; sz < this._keys.length; sz++) {
-            const zz = this._keys[sz];
-            this._keys[sz] = {
-              frame: zz.frame,
-              value: zz.value.clone ? zz.value.clone() : zz.value,
-              inTangent: zz.inTangent && zz.inTangent.clone ? zz.inTangent.clone() : zz.inTangent,
-              outTangent: zz.outTangent && zz.outTangent.clone ? zz.outTangent.clone() : zz.outTangent,
-              interpolation: zz.interpolation,
-              lockedTangent: zz.lockedTangent,
-              easingFunction: zz.easingFunction
-            }
-          }
-      }
-      createKeyForFrame(zz) {
-        Bz.key = 0;
-        const tz = this._interpolate(zz, Bz, !0);
-        if (!tz) return this._keys[Bz.key].frame === zz ? Bz.key : Bz.key + 1;
-        const sz = {
-          frame: zz,
-          value: tz.clone ? tz.clone() : tz
-        };
-        return this._keys.splice(Bz.key + 1, 0, sz), Bz.key + 1
-      }
-      serialize() {
-        const zz = {};
-        zz.name = this.name, zz.property = this.targetProperty, zz.framePerSecond = this.framePerSecond, zz.dataType = this.dataType, zz.loopBehavior = this.hX, zz.enableBlending = this.enableBlending, zz.blendingSpeed = this.blendingSpeed;
-        const tz = this.dataType;
-        zz.keys = [];
-        const sz = this.getKeys();
-        for (let Fz = 0; Fz < sz.length; Fz++) {
-          const Wz = sz[Fz],
-            Xz = {};
-          switch (Xz.frame = Wz.frame, tz) {
-            case Pz.ANIMATIONTYPE_FLOAT:
-              Xz.values = [Wz.value], void 0 !== Wz.inTangent && Xz.values.push(Wz.inTangent), void 0 !== Wz.outTangent && (void 0 === Wz.inTangent && Xz.values.push(void 0), Xz.values.push(Wz.outTangent)), void 0 !== Wz.interpolation && (void 0 === Wz.inTangent && Xz.values.push(void 0), void 0 === Wz.outTangent && Xz.values.push(void 0), Xz.values.push(Wz.interpolation));
-              break;
-            case Pz.ANIMATIONTYPE_QUATERNION:
-            case Pz.ANIMATIONTYPE_MATRIX:
-            case Pz.ANIMATIONTYPE_VECTOR3:
-            case Pz.ANIMATIONTYPE_COLOR3:
-            case Pz.ANIMATIONTYPE_COLOR4:
-              Xz.values = Wz.value.hsz(), void 0 != Wz.inTangent && Xz.values.push(Wz.inTangent.hsz()), void 0 != Wz.outTangent && (void 0 === Wz.inTangent && Xz.values.push(void 0), Xz.values.push(Wz.outTangent.hsz())), void 0 !== Wz.interpolation && (void 0 === Wz.inTangent && Xz.values.push(void 0), void 0 === Wz.outTangent && Xz.values.push(void 0), Xz.values.push(Wz.interpolation))
-          }
-          zz.keys.push(Xz)
-        }
-        zz.du = [];
-        for (const Fz in this._ranges) {
-          const tz = this._ranges[Fz];
-          if (!tz) continue;
-          const sz = {};
-          sz.name = Fz, sz.from = tz.from, sz.to = tz.to, zz.du.push(sz)
-        }
-        return zz
-      }
-      static _UniversalLerp(zz, tz, sz) {
-        const Fz = zz.constructor;
-        return Fz.Lerp ? Fz.Lerp(zz, tz, sz) : Fz.Slerp ? Fz.Slerp(zz, tz, sz) : zz.toFixed ? zz * (1 - sz) + sz * tz : tz
-      }
+      return (0, Nv.jsxs)("div", {
+        className: "BloxdInformation",
+        children: [(0, Nv.jsxs)("div", {
+          className: "BloxdInformationSectionList",
+          children: [Object.keys(wv).map((hv => (0, Nv.jsx)(gv.K, {
+            active: zv === hv,
+            onClick: () => {
+              Pv(hv)
+            },
+            children: vv(wv[hv].title)
+          }, hv))), ev.featureFlags.usePartnerLinks && (0, Nv.jsx)(Nv.Fragment, {
+            children: (0, Nv.jsxs)(gv.K, {
+              onClick: () => {
+                window.open("https://www.crazygames.com/c/io")
+              },
+              children: [(0, Nv.jsx)(dv.b, {
+                name: "arrow-up-right-from-square"
+              }), " Crazy Games"]
+            })
+          })]
+        }), (0, Nv.jsx)("div", {
+          className: "BloxdInformationContentWrapper",
+          children: wv[zv].content
+        }), (0, Nv.jsxs)("div", {
+          className: "BloxdInformationText",
+          children: ["SiteUsed: ", pv.o, " | SubSiteUsed: ", pv.v]
+        })]
+      })
     }
-
-    function rz(zz, tz, sz) {
-      let Wz;
-      Wz = "object" === typeof tz ? tz : {
-        referenceFrame: tz ?? 0,
-        range: sz,
-        cloneOriginalAnimation: arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        clonedAnimationName: arguments.length > 4 ? arguments[4] : void 0
-      };
-      let Xz = zz;
-      Wz.cloneOriginalAnimation && (Xz = zz.clone(), Xz.name = Wz.clonedAnimationName || Xz.name);
-      const Oz = Xz.getKeys();
-      if (!Oz.length) return Xz;
-      const oz = Wz.referenceFrame && Wz.referenceFrame >= 0 ? Wz.referenceFrame : 0;
-      let vz = 0;
-      const Uz = Oz[0];
-      let Kz = Oz.length - 1;
-      const uz = Oz[Kz],
-        Nz = {
-          referenceValue: Uz.value,
-          referencePosition: Fz.m.XD[0],
-          referenceQuaternion: Fz.m.Quaternion[0],
-          referenceScaling: Fz.m.XD[1],
-          keyPosition: Fz.m.XD[2],
-          keyQuaternion: Fz.m.Quaternion[1],
-          keyScaling: Fz.m.XD[3]
-        };
-      let bz = Uz.frame,
-        wz = uz.frame;
-      if (Wz.range) {
-        const zz = Xz.getRange(Wz.range);
-        zz && (bz = zz.from, wz = zz.to)
-      } else bz = Wz.fromFrame ?? bz, wz = Wz.toFrame ?? wz;
-      bz !== Uz.frame && (vz = Xz.createKeyForFrame(bz)), wz !== uz.frame && (Kz = Xz.createKeyForFrame(wz));
-      const Dz = Xz.getKeys();
-      if (1 === Dz.length) {
-        const zz = Xz._getKeyValue(Dz[0].value);
-        Nz.referenceValue = zz.clone ? zz.clone() : zz
-      } else if (oz <= Uz.frame) {
-        const zz = Xz._getKeyValue(Uz.value);
-        Nz.referenceValue = zz.clone ? zz.clone() : zz
-      } else if (oz >= uz.frame) {
-        const zz = Xz._getKeyValue(uz.value);
-        Nz.referenceValue = zz.clone ? zz.clone() : zz
-      } else {
-        Bz.key = 0;
-        const zz = Xz._interpolate(oz, Bz);
-        Nz.referenceValue = zz.clone ? zz.clone() : zz
-      }
-      Xz.dataType === Pz.ANIMATIONTYPE_QUATERNION ? Nz.referenceValue.normalize().conjugateInPlace() : Xz.dataType === Pz.ANIMATIONTYPE_MATRIX && (Nz.referenceValue.decompose(Nz.referenceScaling, Nz.referenceQuaternion, Nz.referencePosition), Nz.referenceQuaternion.normalize().conjugateInPlace());
-      let gz = Number.MAX_VALUE;
-      const Hz = Wz.clipKeys ? [] : null;
-      for (let Bz = vz; Bz <= Kz; Bz++) {
-        let zz = Dz[Bz];
-        if ((Hz || Wz.cloneOriginalAnimation) && (zz = {
-            frame: zz.frame,
-            value: zz.value.clone ? zz.value.clone() : zz.value,
-            inTangent: zz.inTangent,
-            outTangent: zz.outTangent,
-            interpolation: zz.interpolation,
-            lockedTangent: zz.lockedTangent,
-            easingFunction: zz.easingFunction
-          }, Hz && (gz === Number.MAX_VALUE && (gz = zz.frame), zz.frame -= gz, Hz.push(zz))), !Bz || Xz.dataType === Pz.ANIMATIONTYPE_FLOAT || zz.value !== Uz.value) switch (Xz.dataType) {
-          case Pz.ANIMATIONTYPE_MATRIX:
-            zz.value.decompose(Nz.keyScaling, Nz.keyQuaternion, Nz.keyPosition), Nz.keyPosition.oFz(Nz.referencePosition), Nz.keyScaling.divideInPlace(Nz.referenceScaling), Nz.referenceQuaternion.multiplyToRef(Nz.keyQuaternion, Nz.keyQuaternion), Fz.e.ComposeToRef(Nz.keyScaling, Nz.keyQuaternion, Nz.keyPosition, zz.value);
-            break;
-          case Pz.ANIMATIONTYPE_QUATERNION:
-            Nz.referenceValue.multiplyToRef(zz.value, zz.value);
-            break;
-          case Pz.ANIMATIONTYPE_VECTOR2:
-          case Pz.ANIMATIONTYPE_VECTOR3:
-          case Pz.ANIMATIONTYPE_COLOR3:
-          case Pz.ANIMATIONTYPE_COLOR4:
-            zz.value.subtractToRef(Nz.referenceValue, zz.value);
-            break;
-          case Pz.ANIMATIONTYPE_SIZE:
-            zz.value.width -= Nz.referenceValue.width, zz.value.height -= Nz.referenceValue.height;
-            break;
-          default:
-            zz.value -= Nz.referenceValue
-        }
-      }
-      return Hz && Xz.setKeys(Hz, !0), Xz
-    }
-
-    function Yz(zz, tz, sz, Fz) {
-      const Wz = new Pz(zz + "Animation", zz, sz, tz, Pz.ANIMATIONLOOPMODE_CONSTANT);
-      return Wz.setEasingFunction(Fz), Wz
-    }
-
-    function xz(zz, tz, sz, Fz, Wz, Xz, Oz, oz, vz, Uz, Kz) {
-      const uz = Pz._PrepareAnimation(zz, sz, Fz, Wz, Xz, Oz, oz, vz);
-      return uz ? (tz.aJ && (Kz = tz.aJ()), Kz ? Kz.beginDirectAnimation(tz, [uz], 0, Wz, uz.hX !== Pz.ANIMATIONLOOPMODE_CONSTANT, 1, Uz) : null) : null
-    }
-
-    function mz(zz, tz, sz, Fz, Wz, Xz, Oz, oz, vz, Uz, Kz) {
-      const uz = Pz._PrepareAnimation(zz, Fz, Wz, Xz, Oz, oz, vz, Uz);
-      if (!uz) return null;
-      return tz.aJ().beginDirectHierarchyAnimation(tz, sz, [uz], 0, Xz, 1 === uz.hX, 1, Kz)
-    }
-
-    function Jz(zz, tz, sz, Fz, Wz, Xz, Oz, oz, vz, Uz) {
-      const Kz = Pz._PrepareAnimation(zz, sz, Fz, Wz, Xz, Oz, oz, vz);
-      return Kz ? (tz.animations.push(Kz), tz.aJ().beginAnimation(tz, 0, Wz, 1 === Kz.hX, 1, Uz)) : null
-    }
-
-    function Iz(zz, tz, sz, Fz, Wz, Xz, Oz) {
-      let oz = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
-        vz = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
-        Uz = arguments.length > 9 ? arguments[9] : void 0;
-      if (Oz <= 0) return sz[zz] = tz, oz && oz(), null;
-      const Kz = Wz * (Oz / 1e3);
-      Xz.setKeys(Uz ?? [{
-        frame: 0,
-        value: sz[zz].clone ? sz[zz].clone() : sz[zz]
-      }, {
-        frame: Kz,
-        value: tz
-      }]), sz.animations || (sz.animations = []), sz.animations.push(Xz);
-      return Fz.beginAnimation(sz, 0, Kz, !1, 1, oz ?? void 0, void 0, vz)
-    }
-
-    function Cz(zz, tz) {
-      Kz.e.AppendSerializedAnimations(zz, tz)
-    }
-
-    function ez(zz) {
-      const tz = new Pz(zz.name, zz.property, zz.framePerSecond, zz.dataType, zz.loopBehavior),
-        sz = zz.dataType,
-        Xz = [];
-      let Oz, oz;
-      for (zz.enableBlending && (tz.enableBlending = zz.enableBlending), zz.blendingSpeed && (tz.blendingSpeed = zz.blendingSpeed), oz = 0; oz < zz.keys.length; oz++) {
-        const tz = zz.keys[oz];
-        let vz, Uz, Kz;
-        switch (sz) {
-          case Pz.ANIMATIONTYPE_FLOAT:
-            Oz = tz.values[0], tz.values.length >= 2 && (vz = tz.values[1]), tz.values.length >= 3 && (Uz = tz.values[2]), tz.values.length >= 4 && (Kz = tz.values[3]);
-            break;
-          case Pz.ANIMATIONTYPE_QUATERNION:
-            if (Oz = Fz.h.FromArray(tz.values), tz.values.length >= 8) {
-              const zz = Fz.h.FromArray(tz.values.slice(4, 8));
-              zz.equals(Fz.h.Zero()) || (vz = zz)
-            }
-            if (tz.values.length >= 12) {
-              const zz = Fz.h.FromArray(tz.values.slice(8, 12));
-              zz.equals(Fz.h.Zero()) || (Uz = zz)
-            }
-            tz.values.length >= 13 && (Kz = tz.values[12]);
-            break;
-          case Pz.ANIMATIONTYPE_MATRIX:
-            Oz = Fz.e.FromArray(tz.values), tz.values.length >= 17 && (Kz = tz.values[16]);
-            break;
-          case Pz.ANIMATIONTYPE_COLOR3:
-            Oz = Wz.c.FromArray(tz.values), tz.values[3] && (vz = Wz.c.FromArray(tz.values[3])), tz.values[4] && (Uz = Wz.c.FromArray(tz.values[4])), tz.values[5] && (Kz = tz.values[5]);
-            break;
-          case Pz.ANIMATIONTYPE_COLOR4:
-            Oz = Wz.d.FromArray(tz.values), tz.values[4] && (vz = Wz.d.FromArray(tz.values[4])), tz.values[5] && (Uz = Wz.d.FromArray(tz.values[5])), tz.values[6] && (Kz = tz.values[6]);
-            break;
-          case Pz.ANIMATIONTYPE_VECTOR3:
-          default:
-            Oz = Fz.p.FromArray(tz.values), tz.values[3] && (vz = Fz.p.FromArray(tz.values[3])), tz.values[4] && (Uz = Fz.p.FromArray(tz.values[4])), tz.values[5] && (Kz = tz.values[5])
-        }
-        const uz = {};
-        uz.frame = tz.frame, uz.value = Oz, void 0 != vz && (uz.inTangent = vz), void 0 != Uz && (uz.outTangent = Uz), void 0 != Kz && (uz.interpolation = Kz), Xz.push(uz)
-      }
-      if (tz.setKeys(Xz), zz.du)
-        for (oz = 0; oz < zz.du.length; oz++) Oz = zz.du[oz], tz.createRange(Oz.name, Oz.from, Oz.to);
-      return tz
-    }
-    async function Zz(zz, tz) {
-      return await new Promise(((sz, Fz) => {
-        const Wz = new Uz.d;
-        Wz.addEventListener("readystatechange", (() => {
-          if (4 == Wz.readyState)
-            if (200 == Wz.status) {
-              let tz = JSON.parse(Wz.responseText);
-              if (tz.animations && (tz = tz.animations), tz.length) {
-                const zz = [];
-                for (const sz of tz) zz.push(ez(sz));
-                sz(zz)
-              } else {
-                const Fz = ez(tz);
-                zz && (Fz.name = zz), sz(Fz)
-              }
-            } else Fz("Unable to load the animation")
-        })), Wz.open("GET", tz), Wz.send()
-      }))
-    }
-    async function Gz(zz) {
-      const tz = this?.SnippetUrl ?? Pz.SnippetUrl;
-      return await new Promise(((sz, Fz) => {
-        const Wz = new Uz.d;
-        Wz.addEventListener("readystatechange", (() => {
-          if (4 == Wz.readyState)
-            if (200 == Wz.status) {
-              const tz = JSON.parse(JSON.parse(Wz.responseText).jsonPayload);
-              if (tz.animations) {
-                const Fz = JSON.parse(tz.animations),
-                  Wz = [];
-                for (const tz of Fz.animations) {
-                  const sz = ez(tz);
-                  sz.snippetId = zz, Wz.push(sz)
-                }
-                sz(Wz)
-              } else {
-                const Fz = ez(JSON.parse(tz.animation));
-                Fz.snippetId = zz, sz(Fz)
-              }
-            } else Fz("Unable to load the snippet " + zz)
-        })), Wz.open("GET", tz + "/" + zz.replace(/#/g, "/")), Wz.send()
-      }))
-    }
-    Pz._UniqueIdGenerator = 0, Pz.AllowMatricesInterpolation = !1, Pz.AllowMatrixDecomposeForInterpolation = !0, Pz.InheritOriginalValueFromActiveAnimations = !1, Pz.SnippetUrl = "https://snippet.babylonjs.com", Pz.ANIMATIONTYPE_FLOAT = 0, Pz.ANIMATIONTYPE_VECTOR3 = 1, Pz.ANIMATIONTYPE_QUATERNION = 2, Pz.ANIMATIONTYPE_MATRIX = 3, Pz.ANIMATIONTYPE_COLOR3 = 4, Pz.ANIMATIONTYPE_COLOR4 = 7, Pz.ANIMATIONTYPE_VECTOR2 = 5, Pz.ANIMATIONTYPE_SIZE = 6, Pz.ANIMATIONLOOPMODE_RELATIVE = 0, Pz.ANIMATIONLOOPMODE_CYCLE = 1, Pz.ANIMATIONLOOPMODE_CONSTANT = 2, Pz.ANIMATIONLOOPMODE_YOYO = 4, Pz.ANIMATIONLOOPMODE_RELATIVE_FROM_CURRENT = 5;
-    const Tz = Gz;
-    let cz = !1;
-
-    function jz() {
-      cz || (cz = !0, Pz.Parse = ez, Pz.ParseFromFileAsync = Zz, Pz.ParseFromSnippetAsync = Gz, Pz.CreateFromSnippetAsync = Tz, Pz.CreateAnimation = Yz, Pz.CreateAndStartAnimation = xz, Pz.CreateAndStartHierarchyAnimation = mz, Pz.CreateMergeAndStartAnimation = Jz, Pz.MakeAnimationAdditive = rz, Pz.TransitionTo = Iz, Pz.AppendSerializedAnimations = Cz, (0, uz.g)("BABYLON.Animation", Pz), oz.e._AnimationRangeFactory = (zz, tz, sz) => new Oz.e(zz, tz, sz))
-    }
-  },
-  40190: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Fz
-    });
-    class Fz {
-      constructor(zz, tz, sz) {
-        this.name = zz, this.from = tz, this.to = sz
-      }
-      clone() {
-        return new Fz(this.name, this.from, this.to)
-      }
-    }
-  },
-  40238: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => Fz.e,
-      c: () => Fz.m
-    });
-    var Fz = sz(39293);
-    (0, Fz.h)()
-  },
-  40220: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Fz.g
-    });
-    var Fz = sz(39617);
-    (0, Fz.d)()
-  },
-  40201: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Fz.d
-    });
-    var Fz = sz(39609);
-    (0, Fz.g)()
-  },
-  40240: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => Fz.c
-    });
-    var Fz = sz(39555);
-    (0, Fz.e)()
-  },
-  40192: (zz, tz, sz) => {
-    sz.d(tz, {
-      c: () => Fz.f
-    });
-    var Fz = sz(39585);
-    (0, Fz.c)()
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

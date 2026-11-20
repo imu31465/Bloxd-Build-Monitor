@@ -1,4 +1,4 @@
-Bloxd build update — 2026-11-20T21:27 JST (bloxd.io=7rj44.0704ff61, staging.bloxd.io=7rj44.0704ff61)
+Bloxd build update — 2026-11-20T22:47 JST (bloxd.io=qepqb8.0352199c, staging.bloxd.io=qepqb8.0352199c)
 
 Bundle files use stable Webpack paths; original CDN names and hashes remain in .monitor-state.json.
 Fixed reports: [Added](changes/added.md) · [Removed](changes/removed.md) · [Changed](changes/changed.md) · [Build History](HISTORY.md)
@@ -7,48 +7,52 @@ Readable per-file diff: [changes/changed.md](changes/changed.md)
 
 | Environment | Previous Build | Current Build | Added | Removed | Changed | Size Delta | GitHub Diff |
 |---|---|---|---:|---:|---:|---:|---|
-| bloxd.io | `teusab.46cefca6` | `7rj44.0704ff61` | [242](changes/added.md) | [255](changes/removed.md) | [56839](changes/changed.md) | +31.70 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/fa7e92f7f9f947a63acfec6ab5e7beb7604fb42e...3220023aa696762b979a751ccfe8cd9783511981) · [Tree](https://github.com/imu31465/Bloxd-Build-Monitor/tree/3220023aa696762b979a751ccfe8cd9783511981) |
-| staging.bloxd.io | `teusab.46cefca6` | `7rj44.0704ff61` | [242](changes/added.md) | [255](changes/removed.md) | [56839](changes/changed.md) | +31.70 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/fa7e92f7f9f947a63acfec6ab5e7beb7604fb42e...3220023aa696762b979a751ccfe8cd9783511981) · [Tree](https://github.com/imu31465/Bloxd-Build-Monitor/tree/3220023aa696762b979a751ccfe8cd9783511981) |
+| bloxd.io | `7rj44.0704ff61` | `qepqb8.0352199c` | [606](changes/added.md) | [532](changes/removed.md) | [26011](changes/changed.md) | +91.40 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/86ff6116b389b372cf752211852bc587fb44c855...main) · [Tree](https://github.com/imu31465/Bloxd-Build-Monitor/tree/main) |
+| staging.bloxd.io | `7rj44.0704ff61` | `qepqb8.0352199c` | [606](changes/added.md) | [532](changes/removed.md) | [26011](changes/changed.md) | +91.40 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/86ff6116b389b372cf752211852bc587fb44c855...main) · [Tree](https://github.com/imu31465/Bloxd-Build-Monitor/tree/main) |
 
-## bloxd.io — teusab.46cefca6 → 7rj44.0704ff61
+## bloxd.io — 7rj44.0704ff61 → qepqb8.0352199c
 
 ```diff
 - Files: 433 files
-+ Files: 433 files (changed 385, added 0, removed 0, unchanged 48)
-- Total size: 44.96 MB
-+ Total size: 44.99 MB (+31.70 KB)
-+ Diff items (2-char JS identifiers filtered): Added 242, Removed 255, Changed 56839
++ Files: 435 files (changed 399, added 20, removed 18, unchanged 16)
+- Total size: 44.99 MB
++ Total size: 45.08 MB (+91.40 KB)
++ Diff items (2-char JS identifiers filtered): Added 606, Removed 532, Changed 26011
 + Largest changes:
-- main.js decreased 34.93 KB (46cefca6 → 0704ff61)
-+ chunks/js/90.js increased 27.91 KB (b8f51398 → 888a2f67)
-+ chunks/js/112.js increased 26.37 KB (bf5f1e85 → 7a8c2964)
-+ chunks/js/wasmPlay.js increased 6.28 KB (d3cd53ef → 0fe001ea)
-+ chunks/js/219.js increased 2.18 KB (9648406a → a753c40e)
-+ chunks/js/155.js increased 1.74 KB (5d76aff2 → 47a6b045)
-+ chunks/js/82.js increased 1.36 KB (a0fb79c8 → 524cf7a9)
-+ chunks/js/202.js increased 327 B (722fd816 → 88982dde)
-+ chunks/js/86.js increased 272 B (55a579a6 → 78ccf191)
-+ chunks/js/188.js increased 130 B (a2cd6e07 → b221ecf9)
++ chunks/js/290.js increased 5.42 MB (3cb24719 → eef47b5c)
+- chunks/js/289.js decreased 5.42 MB (74220bcd → fcacce15)
+- chunks/js/96.js decreased 4.49 MB (33f298c4 → d12aafc0)
++ chunks/js/97.js increased 4.19 MB (9e19d7a0 → e70f4aa8)
++ chunks/js/74.js increased 2.03 MB (b0d30ed4 → d074b2f7)
+- chunks/js/112.js decreased 1.98 MB (7a8c2964 → cec3caae)
+- chunks/js/102.js decreased 1.18 MB (92906014 → 79967a33)
++ chunks/js/91.js increased 1.17 MB (4fbfe2b3 → fbb8c0d2)
+- chunks/js/90.js decreased 1.15 MB (888a2f67 → 42b3fbe3)
++ chunks/js/103.js increased 1.14 MB (2706c375 → 198f694c)
++ Added files: chunks/css/101.css, chunks/css/105.css, chunks/css/108.css, chunks/css/110.css, chunks/css/150.css, chunks/css/214.css, chunks/css/237.css, chunks/css/242.css (+12 more)
+- Removed files: chunks/css/102.css, chunks/css/107.css, chunks/css/109.css, chunks/css/152.css, chunks/css/235.css, chunks/css/240.css, chunks/css/263.css, chunks/css/283.css (+10 more)
 ```
 
 
-## staging.bloxd.io — teusab.46cefca6 → 7rj44.0704ff61
+## staging.bloxd.io — 7rj44.0704ff61 → qepqb8.0352199c
 
 ```diff
 - Files: 433 files
-+ Files: 433 files (changed 385, added 0, removed 0, unchanged 48)
-- Total size: 44.96 MB
-+ Total size: 44.99 MB (+31.70 KB)
-+ Diff items (2-char JS identifiers filtered): Added 242, Removed 255, Changed 56839
++ Files: 435 files (changed 399, added 20, removed 18, unchanged 16)
+- Total size: 44.99 MB
++ Total size: 45.08 MB (+91.40 KB)
++ Diff items (2-char JS identifiers filtered): Added 606, Removed 532, Changed 26011
 + Largest changes:
-- main.js decreased 34.93 KB (46cefca6 → 0704ff61)
-+ chunks/js/90.js increased 27.91 KB (b8f51398 → 888a2f67)
-+ chunks/js/112.js increased 26.37 KB (bf5f1e85 → 7a8c2964)
-+ chunks/js/wasmPlay.js increased 6.28 KB (d3cd53ef → 0fe001ea)
-+ chunks/js/219.js increased 2.18 KB (9648406a → a753c40e)
-+ chunks/js/155.js increased 1.74 KB (5d76aff2 → 47a6b045)
-+ chunks/js/82.js increased 1.36 KB (a0fb79c8 → 524cf7a9)
-+ chunks/js/202.js increased 327 B (722fd816 → 88982dde)
-+ chunks/js/86.js increased 272 B (55a579a6 → 78ccf191)
-+ chunks/js/188.js increased 130 B (a2cd6e07 → b221ecf9)
++ chunks/js/290.js increased 5.42 MB (3cb24719 → eef47b5c)
+- chunks/js/289.js decreased 5.42 MB (74220bcd → fcacce15)
+- chunks/js/96.js decreased 4.49 MB (33f298c4 → d12aafc0)
++ chunks/js/97.js increased 4.19 MB (9e19d7a0 → e70f4aa8)
++ chunks/js/74.js increased 2.03 MB (b0d30ed4 → d074b2f7)
+- chunks/js/112.js decreased 1.98 MB (7a8c2964 → cec3caae)
+- chunks/js/102.js decreased 1.18 MB (92906014 → 79967a33)
++ chunks/js/91.js increased 1.17 MB (4fbfe2b3 → fbb8c0d2)
+- chunks/js/90.js decreased 1.15 MB (888a2f67 → 42b3fbe3)
++ chunks/js/103.js increased 1.14 MB (2706c375 → 198f694c)
++ Added files: chunks/css/101.css, chunks/css/105.css, chunks/css/108.css, chunks/css/110.css, chunks/css/150.css, chunks/css/214.css, chunks/css/237.css, chunks/css/242.css (+12 more)
+- Removed files: chunks/css/102.css, chunks/css/107.css, chunks/css/109.css, chunks/css/152.css, chunks/css/235.css, chunks/css/240.css, chunks/css/263.css, chunks/css/283.css (+10 more)
 ```

@@ -1,62 +1,62 @@
 export const id = 48;
 export const ids = [48];
 export const modules = {
-  42369: (zz, tz, sz) => {
-    sz.d(tz, {
-      startRenderLite: () => mz
+  42707: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      startRenderLite: () => Fv
     });
-    var Fz = sz(3376),
-      Wz = sz(601),
-      Xz = sz(129),
-      Oz = sz(4436),
-      oz = sz(39851),
-      vz = sz(4432),
-      Uz = sz(39887),
-      Kz = sz(39720),
-      uz = sz(40046),
-      Nz = sz(2637),
-      bz = sz(4153);
-    const wz = new Map([
+    var hv = Pv(3466),
+      Sv = Pv(635),
+      ev = Pv(101),
+      gv = Pv(4542),
+      pv = Pv(40038),
+      dv = Pv(4535),
+      Nv = Pv(40078),
+      lv = Pv(39898),
+      Tv = Pv(40244),
+      Wv = Pv(2682),
+      wv = Pv(4264);
+    const av = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class Dz {
+    class sv {
       constructor() {
         this.failuresLogged = 0, this.summary = void 0, this.summaries = 0, this.summaryAtMs = -1 / 0
       }
-      failures(zz) {
-        const tz = zz ? zz.split(" ") : [],
-          sz = tz.slice(this.failuresLogged).map((zz => {
-            var tz;
-            const [sz, Fz] = zz.split(":"), Wz = null !== (tz = wz.get(sz.slice(-1))) && void 0 !== tz ? tz : "";
-            return `gl link failed: program row ${parseInt(sz)}${Wz}, read ${Fz} ms after issue`
+      failures(vv) {
+        const zv = vv ? vv.split(" ") : [],
+          Pv = zv.slice(this.failuresLogged).map((vv => {
+            var zv;
+            const [Pv, hv] = vv.split(":"), Sv = null !== (zv = av.get(Pv.slice(-1))) && void 0 !== zv ? zv : "";
+            return `gl link failed: program row ${parseInt(Pv)}${Sv}, read ${hv} ms after issue`
           }));
-        return this.failuresLogged = tz.length, sz
+        return this.failuresLogged = zv.length, Pv
       }
-      summaryLine(zz, tz) {
-        const sz = this.summaries < 10 ? 6e4 : 6e5;
-        return void 0 === zz || zz === this.summary || tz - this.summaryAtMs < sz ? null : (this.summary = zz, this.summaries++, this.summaryAtMs = tz, `gl links: ${zz}`)
+      summaryLine(vv, zv) {
+        const Pv = this.summaries < 10 ? 6e4 : 6e5;
+        return void 0 === vv || vv === this.summary || zv - this.summaryAtMs < Pv ? null : (this.summary = vv, this.summaries++, this.summaryAtMs = zv, `gl links: ${vv}`)
       }
     }
-    var gz = sz(4349);
-    class Hz {
+    var Cv = Pv(4456);
+    class iv {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(zz, tz, sz) {
-        if ("none" !== tz && (this.frames++, "paced" === tz && this.paced++, "drawn" === tz)) {
-          if (this.drawn++, this.renderUs += sz, this.renderUsMax = Math.max(this.renderUsMax, sz), null !== this.lastDrawnMs) {
-            const tz = zz - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, tz), tz >= 50 && this.longGaps++
+      frame(vv, zv, Pv) {
+        if ("none" !== zv && (this.frames++, "paced" === zv && this.paced++, "drawn" === zv)) {
+          if (this.drawn++, this.renderUs += Pv, this.renderUsMax = Math.max(this.renderUsMax, Pv), null !== this.lastDrawnMs) {
+            const zv = vv - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, zv), zv >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = zz
+          this.lastDrawnMs = vv
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const zz = {
+        const vv = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -65,228 +65,219 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, zz
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, vv
       }
     }
 
-    function Bz(zz) {
-      return (zz / 1048576).toFixed(1)
+    function cv(vv) {
+      return (vv / 1048576).toFixed(1)
     }
-    class Pz {
+    class Gv {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(zz) {
-        return this.logged >= 20 || this.seen.has(zz) ? (this.unlogged++, null) : (this.seen.add(zz), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${zz}` : zz)
+      admit(vv) {
+        return this.logged >= 20 || this.seen.has(vv) ? (this.unlogged++, null) : (this.seen.add(vv), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${vv}` : vv)
       }
       takeUnlogged() {
-        const zz = this.unlogged;
-        return this.unlogged = 0, zz
+        const vv = this.unlogged;
+        return this.unlogged = 0, vv
       }
     }
 
-    function rz(zz) {
-      (0, Nz.g)("renderlite", function(zz) {
-        let tz = 0,
-          sz = 0,
-          Fz = 0;
-        for (const Xz of zz) {
-          var Wz;
-          const Oz = null !== (Wz = Xz.codePointAt(0)) && void 0 !== Wz ? Wz : 0;
-          if (tz += Oz < 128 ? 1 : Oz < 2048 ? 2 : Oz < 65536 ? 3 : 4, tz > 375) return `${zz.slice(0,Fz)}...`;
-          sz += Xz.length, tz <= 372 && (Fz = sz)
-        }
-        return zz
-      }(zz))
+    function mv(vv) {
+      (0, Wv.i)("renderlite", vv)
     }
-    class Yz {
-      constructor(zz) {
-        this.frames = new Hz, this.events = new Pz, this.links = new Dz, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.visibilityChanged = () => {
+    class jv {
+      constructor(vv) {
+        this.frames = new iv, this.events = new Gv, this.links = new sv, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.visibilityChanged = () => {
           this.restartWindow(performance.now())
-        }, this.wN = () => {
-          var zz, tz;
-          const sz = this.session,
-            Wz = (0, Kz.f)(),
-            Xz = performance.now();
-          if (this.logLinks(Xz), null === sz || sz.isStopped || !0 !== (null === Wz || void 0 === Wz ? void 0 : Wz.isCoreRunning)) return void this.restartWindow(Xz);
+        }, this.MT = () => {
+          var vv, zv;
+          const Pv = this.session,
+            Sv = (0, lv.h)(),
+            ev = performance.now();
+          if (this.logLinks(ev), null === Pv || Pv.isStopped || !0 !== (null === Sv || void 0 === Sv ? void 0 : Sv.isCoreRunning)) return void this.restartWindow(ev);
           if (document.hidden) return;
-          if (Xz - this.windowStart < 2500) return;
-          if (! function(zz) {
-              return zz < 12 || (zz - 12) % 3 === 2
+          if (ev - this.windowStart < 2500) return;
+          if (! function(vv) {
+              return vv < 12 || (vv - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const vz = sz.headerWord(Oz.D.GpuTimed),
-            uz = sz.headerWord(Oz.D.GpuFrameUs),
-            Nz = this.sampled === sz ? {
-              timed: vz - this.gpuTimed >>> 0,
-              us: uz - this.gpuUs >>> 0
+          const dv = Pv.headerWord(gv.A.GpuTimed),
+            Tv = Pv.headerWord(gv.A.GpuFrameUs),
+            Wv = this.sampled === Pv ? {
+              timed: dv - this.gpuTimed >>> 0,
+              us: Tv - this.gpuUs >>> 0
             } : null;
-          this.sampled = sz, this.gpuTimed = vz, this.gpuUs = uz;
-          const bz = null !== (zz = null === (tz = (0, Uz.D)((0, Fz.J)())) || void 0 === tz ? void 0 : tz.jsz()) && void 0 !== zz ? zz : 0;
-          rz(function(zz, tz) {
-            const sz = tz.windowMs / 1e3,
-              Fz = [`${Math.round(sz)}s: ${zz.drawn} drawn (${(zz.drawn/sz).toFixed(1)}/s), ${zz.paced} paced, ${zz.frames-zz.drawn-zz.paced} skipped`, `gap max ${Math.round(zz.gapMaxMs)} ms, ${zz.longGaps} over 50 ms`, `render cpu ${zz.drawn?(zz.renderUs/zz.drawn/1e3).toFixed(2):"-"} ms mean, ${(zz.renderUsMax/1e3).toFixed(1)} max`];
-            null !== tz.gpu && Fz.push(`gpu ${tz.gpu.timed?(tz.gpu.us/tz.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${tz.gpu.timed} timed`);
-            const Wz = tz.census;
-            Fz.push(null === Wz ? "draws none yet" : `draws ${(0,oz.e)(Wz)} (terrain ${Wz.terrainOpaque}+${Wz.terrainTransparent}, pack ${Wz.terrainPack}, meshes ${Wz.regular+Wz.thin+Wz.line+Wz.text}, sky ${Wz.earthSky+Wz.skyMeshes}, particles ${Wz.particles})`);
-            const Xz = null === tz.gpuBytesBefore ? "" : ` (${tz.gpuBytes>=tz.gpuBytesBefore?"+":"-"}${Bz(Math.abs(tz.gpuBytes-tz.gpuBytesBefore))})`;
-            return Fz.push(`gpu mem ${Bz(tz.gpuBytes)} MiB${Xz}`), Fz.push(`pending ${tz.pending}`, "terrain " + (tz.terrainDrawn ? "drawn" : "not drawn yet")), tz.eventsUnlogged > 0 && Fz.push(`${tz.eventsUnlogged} events unlogged`), Fz.join("; ")
+          this.sampled = Pv, this.gpuTimed = dv, this.gpuUs = Tv;
+          const wv = null !== (vv = null === (zv = (0, Nv.G)((0, hv.C)())) || void 0 === zv ? void 0 : zv.PPv()) && void 0 !== vv ? vv : 0;
+          mv(function(vv, zv) {
+            const Pv = zv.windowMs / 1e3,
+              hv = [`${Math.round(Pv)}s: ${vv.drawn} drawn (${(vv.drawn/Pv).toFixed(1)}/s), ${vv.paced} paced, ${vv.frames-vv.drawn-vv.paced} skipped`, `gap max ${Math.round(vv.gapMaxMs)} ms, ${vv.longGaps} over 50 ms`, `render cpu ${vv.drawn?(vv.renderUs/vv.drawn/1e3).toFixed(2):"-"} ms mean, ${(vv.renderUsMax/1e3).toFixed(1)} max`];
+            null !== zv.gpu && hv.push(`gpu ${zv.gpu.timed?(zv.gpu.us/zv.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${zv.gpu.timed} timed`);
+            const Sv = zv.census;
+            hv.push(null === Sv ? "draws none yet" : `draws ${(0,pv.b)(Sv)} (terrain ${Sv.terrainOpaque}+${Sv.terrainTransparent}, pack ${Sv.terrainPack}, meshes ${Sv.regular+Sv.thin+Sv.line+Sv.text}, sky ${Sv.earthSky+Sv.skyMeshes}, particles ${Sv.particles})`);
+            const ev = null === zv.gpuBytesBefore ? "" : ` (${zv.gpuBytes>=zv.gpuBytesBefore?"+":"-"}${cv(Math.abs(zv.gpuBytes-zv.gpuBytesBefore))})`;
+            return hv.push(`gpu mem ${cv(zv.gpuBytes)} MiB${ev}`), hv.push(`pending ${zv.pending}`, "terrain " + (zv.terrainDrawn ? "drawn" : "not drawn yet")), zv.eventsUnlogged > 0 && hv.push(`${zv.eventsUnlogged} events unlogged`), hv.join("; ")
           }(this.frames.take(), {
-            windowMs: Xz - this.windowStart,
-            gpu: Nz,
-            census: (0, oz.i)(Wz.api),
-            gpuBytes: bz,
+            windowMs: ev - this.windowStart,
+            gpu: Wv,
+            census: (0, pv.c)(Sv.api),
+            gpuBytes: wv,
             gpuBytesBefore: this.gpuBytes,
-            pending: sz.headerWord(Oz.D.RenderPending),
-            terrainDrawn: 0 !== (sz.headerWord(Oz.D.LoadSteps) & Oz.K.TerrainDrawn),
+            pending: Pv.headerWord(gv.A.RenderPending),
+            terrainDrawn: 0 !== (Pv.headerWord(gv.A.LoadSteps) & gv.I.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = bz, this.windowStart = Xz
-        }, rz(`${(0,gz.c)(zz)}; client ${Wz.j.client} (${Wz.j.reason})`), setInterval(this.wN, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = wv, this.windowStart = ev
+        }, mv(`${(0,Cv.b)(vv)}; client ${Sv.m.client} (${Sv.m.reason})`), setInterval(this.MT, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(zz, tz, sz) {
-        this.session = zz, this.frames.frame(tz, sz, "drawn" === sz ? zz.headerWord(Oz.D.RenderUs) : 0)
+      frame(vv, zv, Pv) {
+        this.session = vv, this.frames.frame(zv, Pv, "drawn" === Pv ? vv.headerWord(gv.A.RenderUs) : 0)
       }
-      coreErrors(zz) {
+      coreErrors(vv) {
         for (const {
-            code: Fz,
-            detail: Wz
+            code: hv,
+            detail: Sv
           }
-          of zz) {
-          var tz, sz;
-          if (Fz >= Oz.g.RenderDeviceLost && Fz <= Oz.g.RenderSerialLinks) this.event(`render error ${(0,vz.Wd)(Fz)}${null!==(tz=null===(sz=(0,uz.b)(Fz,Wz))||void 0===sz?void 0:sz.words)&&void 0!==tz?tz:""} (detail ${Wz})`)
+          of vv) {
+          var zv, Pv;
+          if (hv >= gv.f.RenderDeviceLost && hv <= gv.f.RenderSerialLinks) this.event(`render error ${(0,dv.qe)(hv)}${null!==(zv=null===(Pv=(0,Tv.c)(hv,Sv))||void 0===Pv?void 0:Pv.words)&&void 0!==zv?zv:""} (detail ${Sv})`)
         }
       }
-      reload(zz, tz, sz, Fz) {
-        this.event(`render reload: ${zz?"webgpu":"gl"} ${sz}, losses ${tz}${void 0===Fz?"":`: ${Fz}`}`)
+      reload(vv, zv, Pv, hv) {
+        this.event(`render reload: ${vv?"webgpu":"gl"} ${Pv}, losses ${zv}${void 0===hv?"":`: ${hv}`}`)
       }
-      crashed(zz) {
+      crashed(vv) {
         let {
-          site: tz,
-          error: sz,
-          header: Fz
-        } = zz;
-        const Wz = null !== Fz && 0 !== Fz.lastError ? `, last error ${(0,vz.Wd)(Fz.lastError)} (detail ${Fz.lastErrorDetail})` : "",
-          Xz = sz instanceof Error ? `${sz.name}: ${sz.message}` : null === sz || void 0 === sz ? "" : String(sz);
-        this.event(`core stopped at ${tz}${Wz}${Xz&&`: ${Xz}`}`)
+          site: zv,
+          error: Pv,
+          header: hv
+        } = vv;
+        const Sv = null !== hv && 0 !== hv.lastError ? `, last error ${(0,dv.qe)(hv.lastError)} (detail ${hv.lastErrorDetail})` : "",
+          ev = Pv instanceof Error ? `${Pv.name}: ${Pv.message}` : null === Pv || void 0 === Pv ? "" : String(Pv);
+        this.event(`core stopped at ${zv}${Sv}${ev&&`: ${ev}`}`)
       }
-      event(zz) {
-        const tz = this.events.admit(zz);
-        null !== tz && rz(tz)
+      event(vv) {
+        const zv = this.events.admit(vv);
+        null !== zv && mv(zv)
       }
-      restartWindow(zz) {
-        this.frames.restart(), this.windowStart = zz;
-        const tz = this.session;
-        null === tz || tz.isStopped ? this.sampled = null : (this.sampled = tz, this.gpuTimed = tz.headerWord(Oz.D.GpuTimed), this.gpuUs = tz.headerWord(Oz.D.GpuFrameUs))
+      restartWindow(vv) {
+        this.frames.restart(), this.windowStart = vv;
+        const zv = this.session;
+        null === zv || zv.isStopped ? this.sampled = null : (this.sampled = zv, this.gpuTimed = zv.headerWord(gv.A.GpuTimed), this.gpuUs = zv.headerWord(gv.A.GpuFrameUs))
       }
-      logLinks(zz) {
-        const tz = window.bloxdRenderDebug;
-        for (const Fz of this.links.failures(null === tz || void 0 === tz ? void 0 : tz.linkFailures)) this.event(Fz);
-        const sz = this.links.summaryLine(null === tz || void 0 === tz ? void 0 : tz.links, zz);
-        null !== sz && rz(sz)
+      logLinks(vv) {
+        const zv = window.bloxdRenderDebug;
+        for (const hv of this.links.failures(null === zv || void 0 === zv ? void 0 : zv.linkFailures)) this.event(hv);
+        const Pv = this.links.summaryLine(null === zv || void 0 === zv ? void 0 : zv.links, vv);
+        null !== Pv && mv(Pv)
       }
       logRenderer() {
-        var zz, tz;
+        var vv, zv;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const sz = window.bloxdRenderDebug,
-          Fz = (0, Xz.k)(),
-          Wz = void 0 === (null === sz || void 0 === sz ? void 0 : sz.parallelCompile) ? "" : `; parallel compile ${sz.parallelCompile}`;
-        rz(`renderer gl ${Fz?`${Fz.vendor} / ${Fz.renderer}`:"(not read)"}; terrain fetch ${null!==(zz=null===sz||void 0===sz?void 0:sz.fetch)&&void 0!==zz?zz:"(not noted)"}${Wz}`), rz(`renderer caps ${null!==(tz=null===sz||void 0===sz?void 0:sz.caps)&&void 0!==tz?tz:"(not noted)"}`)
+        const Pv = window.bloxdRenderDebug,
+          hv = (0, ev.s)(),
+          Sv = void 0 === (null === Pv || void 0 === Pv ? void 0 : Pv.parallelCompile) ? "" : `; parallel compile ${Pv.parallelCompile}`;
+        mv(`renderer gl ${hv?`${hv.vendor} / ${hv.renderer}`:"(not read)"}; terrain fetch ${null!==(vv=null===Pv||void 0===Pv?void 0:Pv.fetch)&&void 0!==vv?vv:"(not noted)"}${Sv}`), mv(`renderer caps ${null!==(zv=null===Pv||void 0===Pv?void 0:Pv.caps)&&void 0!==zv?zv:"(not noted)"}`)
       }
     }
-    let xz = null;
+    let fv = null;
 
-    function mz(zz) {
-      return (0, bz.g)(), xz ??= new Yz(zz), xz
+    function Fv(vv) {
+      return (0, wv.f)(), fv ??= new jv(vv), fv
     }
   },
-  4349: (zz, tz, sz) => {
-    function Fz(zz) {
-      if (null === zz) return "backend: none picked (no renderer build)";
-      const tz = zz.adapter ? `${zz.adapter.vendor}/${zz.adapter.architecture}` : "none";
-      return `backend ${zz.backend}: reason ${zz.reason}, source ${zz.source}, adapter ${tz}`
+  4456: (vv, zv, Pv) => {
+    function hv(vv) {
+      if (null === vv) return "backend: none picked (no renderer build)";
+      const zv = vv.adapter ? `${vv.adapter.vendor}/${vv.adapter.architecture}` : "none";
+      return `backend ${vv.backend}: reason ${vv.reason}, source ${vv.source}, adapter ${zv}`
     }
-    sz.d(tz, {
-      c: () => Fz
+    Pv.d(zv, {
+      b: () => hv
     })
   },
-  39851: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Oz,
-      i: () => Xz,
-      k: () => oz
+  40038: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      b: () => gv,
+      c: () => ev,
+      g: () => pv
     });
-    var Fz = sz(39714),
-      Wz = sz(39720);
+    var hv = Pv(39889),
+      Sv = Pv(39898);
 
-    function Xz(zz) {
-      if (zz.queries.drawCensus() < Fz.xb.BYTES) return null;
-      const tz = zz.memoryData(zz.scratch(), Fz.xb.BYTES, 4, "the draw census");
-      return null === tz ? null : {
-        terrainOpaque: Fz.xb.terrainOpaque(tz, 0),
-        terrainTransparent: Fz.xb.terrainTransparent(tz, 0),
-        terrainPack: Fz.xb.terrainPack(tz, 0),
-        earthSky: Fz.xb.earthSky(tz, 0),
-        skyMeshes: Fz.xb.skyMeshes(tz, 0),
-        regular: Fz.xb.regular(tz, 0),
-        thin: Fz.xb.thin(tz, 0),
-        line: Fz.xb.line(tz, 0),
-        text: Fz.xb.text(tz, 0),
-        particles: Fz.xb.particles(tz, 0)
+    function ev(vv) {
+      if (vv.queries.drawCensus() < hv.zb.BYTES) return null;
+      const zv = vv.memoryData(vv.scratch(), hv.zb.BYTES, 4, "the draw census");
+      return null === zv ? null : {
+        terrainOpaque: hv.zb.terrainOpaque(zv, 0),
+        terrainTransparent: hv.zb.terrainTransparent(zv, 0),
+        terrainPack: hv.zb.terrainPack(zv, 0),
+        earthSky: hv.zb.earthSky(zv, 0),
+        skyMeshes: hv.zb.skyMeshes(zv, 0),
+        regular: hv.zb.regular(zv, 0),
+        thin: hv.zb.thin(zv, 0),
+        line: hv.zb.line(zv, 0),
+        text: hv.zb.text(zv, 0),
+        particles: hv.zb.particles(zv, 0),
+        terrainParts: hv.zb.terrainParts(zv, 0),
+        terrainCompiling: hv.zb.terrainCompiling(zv, 0)
       }
     }
 
-    function Oz(zz) {
+    function gv(vv) {
       const {
-        terrainOpaque: tz,
-        terrainTransparent: sz,
-        earthSky: Fz,
-        skyMeshes: Wz,
-        regular: Xz,
-        thin: Oz,
-        line: oz,
-        text: vz,
-        particles: Uz
-      } = zz;
-      return tz + sz + Fz + Wz + Xz + Oz + oz + vz + Uz
+        terrainOpaque: zv,
+        terrainTransparent: Pv,
+        earthSky: hv,
+        skyMeshes: Sv,
+        regular: ev,
+        thin: gv,
+        line: pv,
+        text: dv,
+        particles: Nv
+      } = vv;
+      return zv + Pv + hv + Sv + ev + gv + pv + dv + Nv
     }
 
-    function oz() {
-      const zz = (0, Wz.f)();
-      return !0 === (null === zz || void 0 === zz ? void 0 : zz.isCoreRunning) ? function(zz) {
-        const tz = Xz(zz);
-        if (null === tz) return [];
+    function pv() {
+      const vv = (0, Sv.h)();
+      return !0 === (null === vv || void 0 === vv ? void 0 : vv.isCoreRunning) ? function(vv) {
+        const zv = ev(vv);
+        if (null === zv) return [];
         const {
-          terrainOpaque: sz,
-          terrainTransparent: Fz,
-          terrainPack: Wz,
-          earthSky: oz,
-          skyMeshes: vz,
-          regular: Uz,
-          thin: Kz,
-          line: uz,
-          text: Nz,
-          particles: bz
-        } = tz;
+          terrainOpaque: Pv,
+          terrainTransparent: hv,
+          terrainPack: Sv,
+          earthSky: pv,
+          skyMeshes: dv,
+          regular: Nv,
+          thin: lv,
+          line: Tv,
+          text: Wv,
+          particles: wv
+        } = zv;
         return [{
           label: "Drawn",
-          value: `${Oz(tz)}`
+          value: `${gv(zv)}`
         }, {
           label: "Terrain",
-          value: `${sz} opaque / ${Fz} transparent (${Wz} shader pack)`
+          value: `${Pv} opaque / ${hv} transparent (${Sv} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${Uz} / ${Kz}`
+          value: `${Nv} / ${lv}`
         }, {
           label: "Text / Lines",
-          value: `${Nz} / ${uz}`
+          value: `${Wv} / ${Tv}`
         }, {
           label: "Sky / Particles",
-          value: `${oz+vz} / ${bz}`
+          value: `${pv+dv} / ${wv}`
         }]
-      }(zz.api) : []
+      }(vv.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

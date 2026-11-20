@@ -139,6 +139,10 @@
   border-color: #fc6464
 }
 
+.DamageIndicator.DamageIndicatorIdle {
+  display: none
+}
+
 @keyframes rainbowShimmer {
   0% {
     transform: translateX(0)

@@ -1,412 +1,650 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  40180: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Oz,
-      e: () => Kz,
-      g: () => Uz
+  37599: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => Nv,
+      f: () => hv,
+      h: () => pv,
+      k: () => Sv,
+      l: () => gv,
+      n: () => ev
     });
-    var Fz, Wz = sz(36507),
-      Xz = sz(36475);
-    ! function(zz) {
-      zz[zz.CW = 0] = "CW", zz[zz.CCW = 1] = "CCW"
-    }(Fz || (Fz = {}));
-    class Oz {
-      static Interpolate(zz, tz, sz, Fz, Wz) {
-        if (0 === zz) return 0;
-        const Xz = 1 - 3 * Fz + 3 * tz,
-          Oz = 3 * Fz - 6 * tz,
-          oz = 3 * tz;
-        let vz = zz;
-        for (let Uz = 0; Uz < 5; Uz++) {
-          const tz = vz * vz;
-          vz -= (Xz * (tz * vz) + Oz * tz + oz * vz - zz) * (1 / (3 * Xz * tz + 2 * Oz * vz + oz)), vz = Math.min(1, Math.max(0, vz))
-        }
-        return 3 * Math.pow(1 - vz, 2) * vz * sz + 3 * (1 - vz) * Math.pow(vz, 2) * Wz + Math.pow(vz, 3)
+    const hv = 1.001,
+      Sv = .501,
+      ev = .025,
+      gv = .75,
+      pv = .08,
+      dv = 4;
+
+    function Nv() {
+      const vv = Sv,
+        zv = ev,
+        Pv = vv - zv / 2,
+        hv = (2 * vv - 2 * zv) / (2 * dv - 1),
+        gv = [];
+      for (const Sv of [-Pv, Pv])
+        for (const ev of [-Pv, Pv])
+          for (let Pv = 0; Pv < dv; Pv++) {
+            const pv = -vv + zv + hv * (2 * Pv + .5);
+            gv.push([hv, zv, zv, pv, Sv, ev]), gv.push([zv, hv, zv, Sv, pv, ev]), gv.push([zv, zv, hv, Sv, ev, pv])
+          }
+      for (const Sv of [-Pv, Pv])
+        for (const vv of [-Pv, Pv])
+          for (const hv of [-Pv, Pv]) gv.push([zv, zv, zv, Sv, vv, hv]);
+      return gv
+    }
+  },
+  37946: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      C: () => Wv,
+      G: () => sv,
+      J: () => iv,
+      N: () => Sv,
+      c: () => lv,
+      g: () => dv,
+      h: () => Gv,
+      i: () => Nv,
+      l: () => pv,
+      m: () => gv,
+      o: () => ev,
+      p: () => Fv,
+      q: () => wv,
+      r: () => fv,
+      t: () => Yv,
+      x: () => jv,
+      z: () => mv
+    });
+    var hv = Pv(9181);
+
+    function Sv(vv) {
+      return Math.floor(vv).toLocaleString("en-US")
+    }
+    const ev = 2e3,
+      gv = .005,
+      pv = .001,
+      dv = 2,
+      Nv = "Fluid Tank",
+      lv = "Coolant Mixer",
+      Tv = 144;
+
+    function Wv(vv) {
+      const zv = vv.split("|")[0];
+      return (0, hv.m)(zv) ? zv === hv.e ? "cryo" : "water" : null
+    }
+    const wv = [
+        [1, 0, 0],
+        [-1, 0, 0],
+        [0, 1, 0],
+        [0, -1, 0],
+        [0, 0, 1],
+        [0, 0, -1]
+      ],
+      av = 63;
+
+    function sv(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const Pv = zv ? function(vv, zv, Pv) {
+        const hv = wv.findIndex((hv => {
+          let [Sv, ev, gv] = hv;
+          return Sv === vv && ev === zv && gv === Pv
+        }));
+        return hv < 0 ? 0 : 1 << hv
+      }(zv[0], zv[1], zv[2]) : 0;
+      return "maker" === vv ? {
+        kind: vv,
+        faces: Pv
+      } : "user" === vv ? {
+        kind: vv,
+        faces: av & ~Pv
+      } : {
+        kind: vv,
+        faces: av
       }
     }
-    class oz {
-      constructor(zz) {
-        this._radians = zz, this._radians < 0 && (this._radians += 2 * Math.PI)
-      }
-      degrees() {
-        return 180 * this._radians / Math.PI
-      }
-      radians() {
-        return this._radians
-      }
-      static BetweenTwoPoints(zz, tz) {
-        const sz = tz.subtract(zz),
-          Fz = Math.atan2(sz.y, sz.x);
-        return new oz(Fz)
-      }
-      static BetweenTwoVectors(zz, tz) {
-        let sz = zz.lengthSquared() * tz.lengthSquared();
-        if (0 === sz) return new oz(Math.PI / 2);
-        sz = Math.sqrt(sz);
-        let Fz = zz.dot(tz) / sz;
-        Fz = (0, Wz.Clamp)(Fz, -1, 1);
-        const Xz = Math.acos(Fz);
-        return new oz(Xz)
-      }
-      static FromRadians(zz) {
-        return new oz(zz)
-      }
-      static FromDegrees(zz) {
-        return new oz(zz * Math.PI / 180)
+
+    function Cv(vv) {
+      return "pipe" === vv || "tank" === vv || "maker" === vv
+    }
+
+    function iv(vv, zv, Pv) {
+      return 0 !== (vv.faces & 1 << Pv) && 0 !== (zv.faces & 1 << (1 ^ Pv)) && (Cv(vv.kind) || Cv(zv.kind))
+    }
+    const cv = (vv, zv, Pv, hv) => ({
+        input: vv,
+        inputAmount: hv,
+        output: zv,
+        outputAmount: Pv
+      }),
+      Gv = {
+        Condenser: {
+          kind: "Condenser",
+          opMs: 2e3,
+          inputSlot: null,
+          fuelSlot: null,
+          outputSlots: [],
+          recipes: [],
+          powerPerOp: 60,
+          fluidMade: 12,
+          couplable: !0,
+          couplerSlot: 0
+        },
+        Centrifuge: {
+          kind: "Centrifuge",
+          opMs: 12e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [1, 2, 3],
+          recipes: [cv("Uranium Grit", "Uranium Pellet", 1, 12), cv("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          powerPerOp: 600,
+          waterPerOp: 24
+        },
+        Synthesizer: {
+          kind: "Synthesizer",
+          opMs: 6e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [1, 2, 3],
+          recipes: [],
+          powerPerOp: 120,
+          waterPerOp: 12,
+          synth: !0
+        },
+        "Coolant Mixer": {
+          kind: "Coolant Mixer",
+          opMs: 12e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [],
+          recipes: [cv("Biomass", "", 0, 1)],
+          powerPerOp: 720,
+          waterPerOp: 144,
+          cryoMade: Tv,
+          couplable: !0,
+          couplerSlot: 1
+        }
+      };
+
+    function mv(vv, zv) {
+      return 1e3 * (null !== zv && void 0 !== zv ? zv : 0) / vv.opMs
+    }
+
+    function jv(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const Pv = mv(Gv["Coolant Mixer"], Tv) * zv;
+      return vv <= 0 ? 0 : Math.ceil(vv / Pv - 1e-9)
+    }
+    const fv = "baf2Water",
+      Fv = "baf2waterclose",
+      Yv = "baf2wateropen"
+  },
+  37941: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => xv,
+      e: () => tv
+    });
+    var hv = Pv(9101),
+      Sv = Pv(9136);
+    const ev = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+      [0, 1, 0],
+      [0, -1, 0]
+    ];
+    var gv = Pv(9153),
+      pv = Pv(37757),
+      dv = Pv(9144);
+    const Nv = {
+      1: [0, -1],
+      2: [-1, 0],
+      3: [0, 1],
+      4: [1, 0]
+    };
+
+    function lv(vv) {
+      let [zv, Pv] = vv;
+      return [-Pv, zv]
+    }
+
+    function Tv(vv, zv) {
+      return vv[0] === zv[0] && vv[1] === zv[1]
+    }
+
+    function Wv(vv, zv) {
+      return vv[0] * zv[0] + vv[1] * zv[1] === 0
+    }
+    const wv = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1]
+    ];
+    var av = Pv(9176);
+
+    function sv(vv, zv, Pv, hv, Sv) {
+      return zv < av.l || zv >= av.l + av.m || Math.floor(vv / av.s) === Math.floor(hv / av.s) && Math.floor(Pv / av.s) === Math.floor(Sv / av.s)
+    }
+    const Cv = "Splitter",
+      iv = "Sorting Gate",
+      cv = new Set(av.G),
+      Gv = new Set([...av.G, "Belt Loader", "Fast Loader", iv]),
+      mv = new Set(av.p),
+      jv = [
+        [1, 0, 0],
+        [-1, 0, 0],
+        [0, 0, 1],
+        [0, 0, -1],
+        [0, 1, 0],
+        [0, -1, 0]
+      ];
+
+    function fv(vv) {
+      var zv, Pv;
+      return null !== (zv = null === (Pv = hv.g[vv]) || void 0 === Pv ? void 0 : Pv.meta.rootName) && void 0 !== zv ? zv : ""
+    }
+
+    function Fv(vv) {
+      return fv(vv) === av.i && (0, av.T)(hv.g[vv].name)
+    }
+    var Yv = Pv(9141),
+      nv = Pv(9163);
+    const Ov = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1]
+    ];
+
+    function Dv(vv) {
+      var zv, Pv;
+      const Sv = null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.meta;
+      return (null === Sv || void 0 === Sv ? void 0 : Sv.rootName) !== nv.m ? null : {
+        rot: null !== (Pv = Sv.rot) && void 0 !== Pv ? Pv : 1,
+        half: (0, nv.e)(Sv.rootName, Sv.metaStr)
       }
     }
-    class vz {
-      constructor(zz, tz, sz) {
-        this.startPoint = zz, this.midPoint = tz, this.endPoint = sz;
-        const Fz = Math.pow(tz.x, 2) + Math.pow(tz.y, 2),
-          Wz = (Math.pow(zz.x, 2) + Math.pow(zz.y, 2) - Fz) / 2,
-          Oz = (Fz - Math.pow(sz.x, 2) - Math.pow(sz.y, 2)) / 2,
-          vz = (zz.x - tz.x) * (tz.y - sz.y) - (tz.x - sz.x) * (zz.y - tz.y);
-        this.centerPoint = new Xz.n((Wz * (tz.y - sz.y) - Oz * (zz.y - tz.y)) / vz, ((zz.x - tz.x) * Oz - (tz.x - sz.x) * Wz) / vz), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = oz.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const Uz = this.startAngle.degrees();
-        let Kz = oz.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          uz = oz.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        Kz - Uz > 180 && (Kz -= 360), Kz - Uz < -180 && (Kz += 360), uz - Kz > 180 && (uz -= 360), uz - Kz < -180 && (uz += 360), this.orientation = Kz - Uz < 0 ? 0 : 1, this.angle = oz.FromDegrees(0 === this.orientation ? Uz - uz : uz - Uz)
+
+    function Kv(vv, zv, Pv, hv) {
+      return Dv(vv(zv, Pv, hv))
+    }
+
+    function Vv(vv, zv, Pv, hv, Sv) {
+      let {
+        rot: ev,
+        half: gv
+      } = Sv;
+      const [pv, dv] = (0, nv.k)(ev, gv), Nv = Kv(vv, zv + pv, Pv, hv + dv);
+      return null !== Nv && Nv.rot === ev && Nv.half === nv.n[gv]
+    }
+    var Uv = Pv(37943);
+    const Rv = [new class {
+      constructor() {
+        this.reshapeOffsets = wv
+      }
+      handles(vv) {
+        var zv;
+        return "Stairs" === (null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.model)
+      }
+      affects(vv) {
+        return this.handles(vv)
+      }
+      shape(vv, zv, Pv, Sv, ev) {
+        const gv = this.stairsOf(ev),
+          pv = this.cornerAt(vv, zv, Pv, Sv, gv),
+          Nv = gv.half === dv.e.top ? "top" : "bot";
+        return (0, hv.i)(`${hv.g[ev].meta.rootName}|meta|rot${gv.rot}|${Nv}${null===pv?"":`|${pv}`}`)
+      }
+      stairsOf(vv) {
+        const {
+          rot: zv,
+          halfblockPlacement: Pv
+        } = hv.g[vv].meta;
+        return {
+          rot: zv,
+          half: Pv
+        }
+      }
+      stairsAt(vv, zv, Pv, hv) {
+        const Sv = vv(zv, Pv, hv);
+        return this.handles(Sv) ? this.stairsOf(Sv) : null
+      }
+      cornerAt(vv, zv, Pv, hv, Sv) {
+        let {
+          rot: ev,
+          half: gv
+        } = Sv;
+        const pv = Nv[ev],
+          dv = Sv => {
+            let [pv, dv] = Sv;
+            const Nv = this.stairsAt(vv, zv + pv, Pv, hv + dv);
+            return null !== Nv && Nv.rot === ev && Nv.half === gv
+          },
+          wv = this.stairsAt(vv, zv + pv[0], Pv, hv + pv[1]);
+        if (null !== wv && wv.half === gv) {
+          const vv = Nv[wv.rot];
+          if (Wv(pv, vv) && !dv([-vv[0], -vv[1]])) return Tv(vv, lv(pv)) ? "outerLeft" : "outerRight"
+        }
+        const av = this.stairsAt(vv, zv - pv[0], Pv, hv - pv[1]);
+        if (null !== av && av.half === gv) {
+          const vv = Nv[av.rot];
+          if (Wv(pv, vv) && !dv(vv)) return Tv(vv, lv(pv)) ? "innerLeft" : "innerRight"
+        }
+        return null
+      }
+    }, new class {
+      constructor() {
+        this.reshapeOffsets = ev, this.rootIds = new Set(Sv.g.map((vv => (0, hv.i)(vv))))
+      }
+      handles(vv) {
+        var zv;
+        const Pv = null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.meta;
+        return void 0 !== Pv && this.rootIds.has(Pv.rootId)
+      }
+      affects(vv) {
+        return this.handles(vv)
+      }
+      placedBy(vv) {
+        return hv.g[vv].meta.rootName === Sv.k ? null : Sv.k
+      }
+      shape(vv, zv, Pv, ev, gv) {
+        const {
+          rootId: pv,
+          rootName: dv,
+          rot: Nv
+        } = hv.g[gv].meta;
+        let lv = 0;
+        return Sv.u[Nv].forEach(((Sv, gv) => {
+          var dv;
+          let [Tv, Wv, wv] = Sv;
+          const av = null === (dv = hv.g[vv(zv + Tv, Pv + Wv, ev + wv)]) || void 0 === dv ? void 0 : dv.meta;
+          (null === av || void 0 === av ? void 0 : av.rootId) === pv && av.rot === Nv && (lv |= 1 << gv)
+        })), (0, hv.i)((0, Sv.e)(dv, Nv, lv))
+      }
+    }, ...gv.e.map((vv => new pv.b(vv))), new class {
+      constructor() {
+        this.reshapeOffsets = jv
+      }
+      handles(vv) {
+        const zv = fv(vv);
+        return cv.has(zv) || zv === av.i
+      }
+      affects(vv) {
+        const zv = fv(vv);
+        return Gv.has(zv) || mv.has(zv) || zv === Cv || zv === av.i || void 0 !== av.e[zv]
+      }
+      shape(vv, zv, Pv, Sv, ev, gv) {
+        const {
+          rootName: pv,
+          rot: dv
+        } = hv.g[ev].meta;
+        return pv === av.i ? gv ? ev : function(vv, zv, Pv, Sv, ev) {
+          const [gv, pv] = av.h[ev - 1];
+          for (let dv = 1; dv <= av.F; dv++) {
+            const [Nv, lv] = [zv - gv * dv, Sv - pv * dv], Tv = vv(Nv, Pv, lv);
+            if (fv(Tv) === av.i && hv.g[Tv].meta.rot === ev && sv(zv, Pv, Sv, Nv, lv)) return (0, hv.i)((0, av.Z)(ev, !Fv(Tv)))
+          }
+          return (0, hv.i)((0, av.Z)(ev, !1))
+        }(vv, zv, Pv, Sv, dv) : (0, hv.i)((0, av.J)(pv, dv, function(vv, zv, Pv, Sv, ev) {
+          const [gv, pv] = av.h[ev - 1], dv = (ev, dv) => function(vv, zv, Pv, Sv, ev) {
+            var gv;
+            const pv = null === (gv = hv.g[vv]) || void 0 === gv ? void 0 : gv.meta;
+            if (!pv) return !1;
+            const dv = pv.rootName,
+              Nv = Gv.has(dv) || Fv(vv);
+            if (!Nv && !mv.has(dv) && dv !== Cv) return !1;
+            const [lv, Tv] = av.h[pv.rot - 1];
+            return Nv ? lv === -zv && Tv === -Pv : mv.has(dv) ? lv === zv && Tv === Pv : (0, av.Y)(hv.g[vv].name, lv, Tv).some((vv => {
+              let [hv, Sv] = vv;
+              return hv === -zv && Sv === -Pv
+            })) && !(Sv === zv && ev === Pv)
+          }(vv(zv + ev, Pv, Sv + dv), ev, dv, gv, pv), Nv = vv(zv - gv, Pv, Sv - pv), lv = fv(Nv) === Cv && hv.g[Nv].meta.rot === ev, Tv = 1 === av.e[fv(vv(zv, Pv - 1, Sv))] || -1 === av.e[fv(vv(zv, Pv + 1, Sv))];
+          if (Tv || lv || function(vv, zv, Pv) {
+              if (fv(vv) !== iv) return !1;
+              const [Sv, ev] = av.h[hv.g[vv].meta.rot - 1], [gv, pv] = (0, av.M)(hv.g[vv].name, Sv, ev);
+              return zv === gv && Pv === pv
+            }(Nv, gv, pv) || dv(-gv, -pv)) return null;
+          const Wv = dv(-pv, gv),
+            wv = dv(pv, -gv);
+          if (Wv === wv) return null;
+          return Wv ? "turnLeft" : "turnRight"
+        }(vv, zv, Pv, Sv, dv)))
+      }
+    }, new class {
+      constructor() {
+        this.reshapeOffsets = Ov, this.rootId = (0, hv.i)(nv.m)
+      }
+      handles(vv) {
+        var zv;
+        return (null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.meta.rootId) === this.rootId
+      }
+      affects(vv) {
+        return this.handles(vv)
+      }
+      shape(vv, zv, Pv, Sv, ev, gv) {
+        const pv = Dv(ev);
+        return (0, hv.i)((dv = pv.rot, null !== (Nv = gv ? this.reshapedHalf(vv, zv, Pv, Sv, pv) : this.placedHalf(vv, zv, Pv, Sv, pv.rot)) ? (0, nv.c)(nv.m, dv, Nv) : 1 === dv ? nv.m : `${nv.m}|meta|rot${dv}`));
+        var dv, Nv
+      }
+      placedHalf(vv, zv, Pv, hv, Sv) {
+        const [ev, gv] = Yv.d[Sv];
+        for (const [pv, dv] of [
+            ["right", 1],
+            ["left", -1]
+          ]) {
+          const Nv = zv + dv * ev,
+            lv = hv + dv * gv,
+            Tv = Kv(vv, Nv, Pv, lv);
+          if (null !== Tv && Tv.rot === Sv && (null === Tv.half || !Vv(vv, Nv, Pv, lv, Tv))) return pv
+        }
+        return null
+      }
+      reshapedHalf(vv, zv, Pv, hv, Sv) {
+        if (null !== Sv.half && Vv(vv, zv, Pv, hv, Sv)) return Sv.half;
+        for (const ev of ["right", "left"]) {
+          const [gv, pv] = (0, nv.k)(Sv.rot, ev), dv = Kv(vv, zv + gv, Pv, hv + pv);
+          if (null !== dv && dv.rot === Sv.rot && dv.half === nv.n[ev]) return ev
+        }
+        return null
+      }
+    }, new Uv.d];
+
+    function xv(vv, zv, Pv, hv, Sv) {
+      let ev = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const gv of Rv)
+        if (gv.handles(Sv)) return gv.shape(vv, zv, Pv, hv, Sv, ev);
+      return Sv
+    }
+
+    function tv(vv) {
+      for (const hv of Rv) {
+        var zv, Pv;
+        if (hv.handles(vv)) return null !== (zv = null === (Pv = hv.placedBy) || void 0 === Pv ? void 0 : Pv.call(hv, vv)) && void 0 !== zv ? zv : null
+      }
+      return null
+    }
+  },
+  37943: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => nv,
+      h: () => mv,
+      i: () => Gv
+    });
+    var hv = Pv(9101),
+      Sv = Pv(9122),
+      ev = Pv(9181),
+      gv = Pv(37946),
+      pv = Pv(9176);
+    const dv = (0, gv.G)("pipe"),
+      Nv = (0, gv.G)("tank"),
+      lv = (0, gv.G)("port"),
+      Tv = "Reactor Port";
+
+    function Wv(vv, zv, Pv) {
+      const hv = new Set([ev.f, ev.e, Tv, ...zv, ...Pv, ...vv ? [gv.i] : []]);
+      return {
+        makers: new Set(zv),
+        roots: hv
       }
     }
-    class Uz {
-      constructor(zz, tz) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new Xz.n(zz, tz))
-      }
-      addLineTo(zz, tz) {
-        if (this.closed) return this;
-        const sz = new Xz.n(zz, tz),
-          Fz = this._points[this._points.length - 1];
-        return this._points.push(sz), this._length += sz.subtract(Fz).length(), this
-      }
-      addArcTo(zz, tz, sz, Fz) {
-        let Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
-        if (this.closed) return this;
-        const Oz = this._points[this._points.length - 1],
-          oz = new Xz.n(zz, tz),
-          Uz = new Xz.n(sz, Fz),
-          Kz = new vz(Oz, oz, Uz);
-        let uz = Kz.angle.radians() / Wz;
-        0 === Kz.orientation && (uz *= -1);
-        let Nz = Kz.startAngle.radians() + uz;
-        for (let Xz = 0; Xz < Wz; Xz++) {
-          const zz = Math.cos(Nz) * Kz.radius + Kz.centerPoint.x,
-            tz = Math.sin(Nz) * Kz.radius + Kz.centerPoint.y;
-          this.addLineTo(zz, tz), Nz += uz
-        }
-        return this
-      }
-      addQuadraticCurveTo(zz, tz, sz, Fz) {
-        let Wz = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
-        if (this.closed) return this;
-        const Xz = (zz, tz, sz, Fz) => (1 - zz) * (1 - zz) * tz + 2 * zz * (1 - zz) * sz + zz * zz * Fz,
-          Oz = this._points[this._points.length - 1];
-        for (let oz = 0; oz <= Wz; oz++) {
-          const vz = oz / Wz,
-            Uz = Xz(vz, Oz.x, zz, sz),
-            Kz = Xz(vz, Oz.y, tz, Fz);
-          this.addLineTo(Uz, Kz)
-        }
-        return this
-      }
-      addBezierCurveTo(zz, tz, sz, Fz, Wz, Xz) {
-        let Oz = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
-        if (this.closed) return this;
-        const oz = (zz, tz, sz, Fz, Wz) => (1 - zz) * (1 - zz) * (1 - zz) * tz + 3 * zz * (1 - zz) * (1 - zz) * sz + 3 * zz * zz * (1 - zz) * Fz + zz * zz * zz * Wz,
-          vz = this._points[this._points.length - 1];
-        for (let Uz = 0; Uz <= Oz; Uz++) {
-          const Kz = Uz / Oz,
-            uz = oz(Kz, vz.x, zz, sz, Wz),
-            Nz = oz(Kz, vz.y, tz, Fz, Xz);
-          this.addLineTo(uz, Nz)
-        }
-        return this
-      }
-      isPointInside(zz) {
-        let tz = !1;
-        const sz = this._points.length;
-        for (let Fz = sz - 1, Wz = 0; Wz < sz; Fz = Wz++) {
-          let sz = this._points[Fz],
-            Xz = this._points[Wz],
-            Oz = Xz.x - sz.x,
-            oz = Xz.y - sz.y;
-          if (Math.abs(oz) > Number.EPSILON) {
-            if (oz < 0 && (sz = this._points[Wz], Oz = -Oz, Xz = this._points[Fz], oz = -oz), zz.y < sz.y || zz.y > Xz.y) continue;
-            if (zz.y === sz.y && zz.x === sz.x) return !0;
-            {
-              const Fz = oz * (zz.x - sz.x) - Oz * (zz.y - sz.y);
-              if (0 === Fz) return !0;
-              if (Fz < 0) continue;
-              tz = !tz
-            }
-          } else {
-            if (zz.y !== sz.y) continue;
-            if (Xz.x <= zz.x && zz.x <= sz.x || sz.x <= zz.x && zz.x <= Xz.x) return !0
-          }
-        }
-        return tz
-      }
-      close() {
-        return this.closed = !0, this
-      }
-      length() {
-        let zz = this._length;
-        if (this.closed) {
-          const tz = this._points[this._points.length - 1];
-          zz += this._points[0].subtract(tz).length()
-        }
-        return zz
-      }
-      area() {
-        const zz = this._points.length;
-        let tz = 0;
-        for (let sz = zz - 1, Fz = 0; Fz < zz; sz = Fz++) tz += this._points[sz].x * this._points[Fz].y - this._points[Fz].x * this._points[sz].y;
-        return .5 * tz
-      }
-      getPoints() {
-        return this._points
-      }
-      getPointAtLengthPosition(zz) {
-        if (zz < 0 || zz > 1) return Xz.n.Zero();
-        const tz = zz * this.length();
-        let sz = 0;
-        for (let Fz = 0; Fz < this._points.length; Fz++) {
-          const zz = (Fz + 1) % this._points.length,
-            Wz = this._points[Fz],
-            Oz = this._points[zz].subtract(Wz),
-            oz = Oz.length() + sz;
-          if (tz >= sz && tz <= oz) {
-            const zz = Oz.normalize(),
-              Fz = tz - sz;
-            return new Xz.n(Wz.x + zz.x * Fz, Wz.y + zz.y * Fz)
-          }
-          sz = oz
-        }
-        return Xz.n.Zero()
-      }
-      static StartingAt(zz, tz) {
-        return new Uz(zz, tz)
-      }
+    const wv = {
+        water: Wv(!0, ["Condenser"], ["Centrifuge", "Synthesizer", gv.c]),
+        cryo: Wv(!1, [gv.c], [])
+      },
+      av = new Set([...wv.water.roots, ...wv.cryo.roots]),
+      sv = {
+        nx: [-1, 0, 0],
+        ny: [0, -1, 0],
+        nz: [0, 0, -1],
+        px: [1, 0, 0],
+        py: [0, 1, 0],
+        pz: [0, 0, 1]
+      },
+      Cv = Sv.h.map((vv => sv[vv])),
+      iv = Cv.map((vv => {
+        let [zv, Pv, hv] = vv;
+        return gv.q.findIndex((vv => {
+          let [Sv, ev, gv] = vv;
+          return Sv === zv && ev === Pv && gv === hv
+        }))
+      }));
+
+    function cv(vv) {
+      let zv = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const Pv = hv.g[vv],
+        Sv = null === Pv || void 0 === Pv ? void 0 : Pv.meta.rootName,
+        Wv = wv[zv];
+      if (!Sv || !Wv.roots.has(Sv)) return null;
+      if ((0, ev.m)(Sv)) return (0, gv.C)(Pv.name) === zv ? dv : null;
+      if (Sv === gv.i) return Nv;
+      if (Sv === Tv) return Pv.name.endsWith("|Water") ? lv : null;
+      const [av, sv] = pv.h[(Pv.meta.rot || 1) - 1];
+      return (0, gv.G)(Wv.makers.has(Sv) ? "maker" : "user", [-av, 0, -sv])
     }
-    class Kz {
-      static CreateQuadraticBezier(zz, tz, sz, Fz) {
-        Fz = Fz > 2 ? Fz : 3;
-        const Wz = [],
-          Oz = (zz, tz, sz, Fz) => (1 - zz) * (1 - zz) * tz + 2 * zz * (1 - zz) * sz + zz * zz * Fz;
-        for (let oz = 0; oz <= Fz; oz++) Wz.push(new Xz.p(Oz(oz / Fz, zz.x, tz.x, sz.x), Oz(oz / Fz, zz.y, tz.y, sz.y), Oz(oz / Fz, zz.z, tz.z, sz.z)));
-        return new Kz(Wz)
+
+    function Gv(vv, zv, Pv, Sv) {
+      let ev = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+      const {
+        makers: pv
+      } = wv[ev];
+      return Cv.some(((Nv, lv) => {
+        var Tv, Wv;
+        let [wv, av, sv] = Nv;
+        const Cv = vv(zv + wv, Pv + av, Sv + sv),
+          Gv = cv(Cv, ev);
+        return null !== Gv && pv.has(null !== (Tv = null === (Wv = hv.g[Cv]) || void 0 === Wv ? void 0 : Wv.meta.rootName) && void 0 !== Tv ? Tv : "") && !(0, gv.J)(dv, Gv, iv[lv])
+      }))
+    }
+
+    function mv(vv) {
+      const zv = hv.g[vv];
+      return zv ? (0, gv.C)(zv.name) : null
+    }
+    let jv = null;
+
+    function fv(vv) {
+      if (!jv) {
+        jv = new Map;
+        for (const vv of ["water", "cryo"])
+          for (let zv = 0; zv < 64; zv++)
+            for (const Pv of [!1, !0]) jv.set((0, ev.q)(vv, zv, Pv), {
+              zw: vv,
+              mask: zv,
+              full: Pv
+            })
       }
-      static CreateCubicBezier(zz, tz, sz, Fz, Wz) {
-        Wz = Wz > 3 ? Wz : 4;
-        const Oz = [],
-          oz = (zz, tz, sz, Fz, Wz) => (1 - zz) * (1 - zz) * (1 - zz) * tz + 3 * zz * (1 - zz) * (1 - zz) * sz + 3 * zz * zz * (1 - zz) * Fz + zz * zz * zz * Wz;
-        for (let vz = 0; vz <= Wz; vz++) Oz.push(new Xz.p(oz(vz / Wz, zz.x, tz.x, sz.x, Fz.x), oz(vz / Wz, zz.y, tz.y, sz.y, Fz.y), oz(vz / Wz, zz.z, tz.z, sz.z, Fz.z)));
-        return new Kz(Oz)
+      return jv.get(vv)
+    }
+    const Fv = new Map(Array.from({
+      length: ev.j + 1
+    }, ((vv, zv) => [(0, ev.t)(zv), zv])));
+
+    function Yv(vv, zv, Pv, Sv, ev, gv) {
+      return Cv.some(((pv, dv) => {
+        var Nv, lv, Tv;
+        let [Wv, wv, av] = pv;
+        if (0 === (gv >> dv & 1)) return !1;
+        const sv = null !== (Nv = null === (lv = hv.g[vv(zv + Wv, Pv + wv, Sv + av)]) || void 0 === lv ? void 0 : lv.name) && void 0 !== Nv ? Nv : "",
+          Cv = fv(sv);
+        return Cv ? Cv.zw === ev && Cv.full : (null !== (Tv = function(vv) {
+          var zv;
+          return null !== (zv = Fv.get(vv)) && void 0 !== zv ? zv : null
+        }(sv)) && void 0 !== Tv ? Tv : 0) > 0
+      }))
+    }
+    class nv {
+      constructor() {
+        this.reshapeOffsets = Cv
       }
-      static CreateHermiteSpline(zz, tz, sz, Fz, Wz) {
-        const Oz = [],
-          oz = 1 / Wz;
-        for (let vz = 0; vz <= Wz; vz++) Oz.push(Xz.p.Hermite(zz, tz, sz, Fz, vz * oz));
-        return new Kz(Oz)
+      handles(vv) {
+        return null !== mv(vv)
       }
-      static CreateCatmullRomSpline(zz, tz, sz) {
-        const Fz = [],
-          Wz = 1 / tz;
-        let Oz = 0;
-        if (sz) {
-          const sz = zz.length;
-          for (let oz = 0; oz < sz; oz++) {
-            Oz = 0;
-            for (let vz = 0; vz < tz; vz++) Fz.push(Xz.p.CatmullRom(zz[oz % sz], zz[(oz + 1) % sz], zz[(oz + 2) % sz], zz[(oz + 3) % sz], Oz)), Oz += Wz
-          }
-          Fz.push(Fz[0])
-        } else {
-          const sz = [];
-          sz.push(zz[0].clone()), sz.push(...zz), sz.push(zz[zz.length - 1].clone());
-          let oz = 0;
-          for (; oz < sz.length - 3; oz++) {
-            Oz = 0;
-            for (let zz = 0; zz < tz; zz++) Fz.push(Xz.p.CatmullRom(sz[oz], sz[oz + 1], sz[oz + 2], sz[oz + 3], Oz)), Oz += Wz
-          }
-          oz--, Fz.push(Xz.p.CatmullRom(sz[oz], sz[oz + 1], sz[oz + 2], sz[oz + 3], Oz))
-        }
-        return new Kz(Fz)
+      affects(vv) {
+        var zv, Pv;
+        return av.has(null !== (zv = null === (Pv = hv.g[vv]) || void 0 === Pv ? void 0 : Pv.meta.rootName) && void 0 !== zv ? zv : "")
       }
-      static ArcThru3Points(zz, tz, sz) {
-        let Fz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          Wz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          Oz = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const oz = [],
-          vz = tz.subtract(zz),
-          Uz = sz.subtract(tz),
-          uz = zz.subtract(sz),
-          Nz = Xz.p.Cross(vz, Uz),
-          bz = Nz.length();
-        if (bz < Math.pow(10, -8)) return new Kz(oz);
-        const wz = vz.lengthSquared(),
-          Dz = Uz.lengthSquared(),
-          gz = uz.lengthSquared(),
-          Hz = Nz.lengthSquared(),
-          Bz = .5 * vz.length() * Uz.length() * uz.length() / bz,
-          Pz = -.5 * Dz * Xz.p.Dot(vz, uz) / Hz,
-          rz = -.5 * gz * Xz.p.Dot(vz, Uz) / Hz,
-          Yz = -.5 * wz * Xz.p.Dot(Uz, uz) / Hz,
-          xz = zz.scale(Pz).add(tz.scale(rz)).add(sz.scale(Yz)),
-          mz = zz.subtract(xz).normalize(),
-          Jz = Xz.p.Cross(Nz, mz).normalize();
-        if (Oz) {
-          const tz = 2 * Math.PI / Fz;
-          for (let zz = 0; zz <= 2 * Math.PI; zz += tz) oz.push(xz.add(mz.scale(Bz * Math.cos(zz)).add(Jz.scale(Bz * Math.sin(zz)))));
-          oz.push(zz)
-        } else {
-          const tz = 1 / Fz;
-          let Xz, Oz = 0;
-          do {
-            Xz = xz.add(mz.scale(Bz * Math.cos(Oz)).add(Jz.scale(Bz * Math.sin(Oz)))), oz.push(Xz), Oz += tz
-          } while (!Xz.equalsWithEpsilon(sz, Bz * tz * 1.1));
-          oz.push(sz), Wz && oz.push(zz)
-        }
-        return new Kz(oz)
+      placedBy(vv) {
+        var zv;
+        return (null === (zv = hv.g[vv]) || void 0 === zv ? void 0 : zv.meta.rootName) === ev.e ? ev.f : null
       }
-      constructor(zz) {
-        this._length = 0, this._points = zz, this._length = this._computeLength(zz)
-      }
-      getPoints() {
-        return this._points
-      }
-      length() {
-        return this._length
-      }
-      continue (zz) {
-        const tz = this._points[this._points.length - 1],
-          sz = this._points.slice(),
-          Fz = zz.getPoints();
-        for (let Wz = 1; Wz < Fz.length; Wz++) sz.push(Fz[Wz].subtract(Fz[0]).add(tz));
-        return new Kz(sz)
-      }
-      _computeLength(zz) {
-        let tz = 0;
-        for (let sz = 1; sz < zz.length; sz++) tz += zz[sz].subtract(zz[sz - 1]).length();
-        return tz
+      shape(vv, zv, Pv, Sv, pv, Nv) {
+        var lv, Tv, Wv;
+        const wv = null !== (lv = null === (Tv = hv.g[pv]) || void 0 === Tv ? void 0 : Tv.name) && void 0 !== lv ? lv : "",
+          av = Nv || wv !== ev.f ? null !== (Wv = (0, gv.C)(wv)) && void 0 !== Wv ? Wv : "water" : function(vv, zv, Pv, hv) {
+            return Cv.some(((Sv, ev) => {
+              let [pv, Nv, lv] = Sv;
+              const Tv = cv(vv(zv + pv, Pv + Nv, hv + lv), "cryo");
+              return null !== Tv && "port" !== Tv.kind && (0, gv.J)(dv, Tv, iv[ev])
+            })) ? "cryo" : "water"
+          }(vv, zv, Pv, Sv),
+          sv = function(vv, zv, Pv, hv) {
+            let Sv = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              ev = 0;
+            return Cv.forEach(((pv, Nv) => {
+              let [lv, Tv, Wv] = pv;
+              const wv = cv(vv(zv + lv, Pv + Tv, hv + Wv), Sv);
+              wv && (0, gv.J)(dv, wv, iv[Nv]) && (ev |= 1 << Nv)
+            })), ev
+          }(vv, zv, Pv, Sv, av),
+          Gv = Nv ? function(vv) {
+            var zv;
+            return !0 === (null === (zv = fv(vv)) || void 0 === zv ? void 0 : zv.full)
+          }(wv) : Yv(vv, zv, Pv, Sv, av, sv);
+        return (0, hv.i)((0, ev.q)(av, sv, Gv))
       }
     }
   },
-  38091: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Xz
+  37712: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => hv,
+      f: () => ev
     });
-    var Fz = sz(38097);
-    const Wz = (zz, tz, sz) => zz ? zz.getClassName && "Mesh" === zz.getClassName() ? null : !zz.getClassName || "SubMesh" !== zz.getClassName() && "PhysicsBody" !== zz.getClassName() ? zz.clone ? zz.clone() : Array.isArray(zz) ? zz.slice() : sz && "object" === typeof zz ? {
-      ...zz
-    } : null : zz.clone(tz) : null;
-    class Xz {
-      static DeepCopy(zz, tz, sz, Xz) {
-        let Oz = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const oz = function(zz) {
-          const tz = [];
-          do {
-            const sz = Object.getOwnPropertyNames(zz);
-            for (const zz of sz) - 1 === tz.indexOf(zz) && tz.push(zz)
-          } while (zz = Object.getPrototypeOf(zz));
-          return tz
-        }(zz);
-        for (const Uz of oz) {
-          if ("_" === Uz[0] && (!Xz || -1 === Xz.indexOf(Uz))) continue;
-          if (Uz.endsWith("Observable")) continue;
-          if (sz && -1 !== sz.indexOf(Uz)) continue;
-          const oz = zz[Uz],
-            Kz = typeof oz;
-          if ("function" !== Kz) try {
-            if ("object" === Kz)
-              if (oz instanceof Uint8Array) tz[Uz] = Uint8Array.from(oz);
-              else if (oz instanceof Array) {
-              if (tz[Uz] = [], oz.length > 0)
-                if ("object" == typeof oz[0])
-                  for (let zz = 0; zz < oz.length; zz++) {
-                    const sz = Wz(oz[zz], tz, Oz); - 1 === tz[Uz].indexOf(sz) && tz[Uz].push(sz)
-                  } else tz[Uz] = oz.slice(0)
-            } else tz[Uz] = Wz(oz, tz, Oz);
-            else tz[Uz] = oz
-          } catch (vz) {
-            Fz.e.Warn(vz.message)
-          }
-        }
-      }
+    const hv = ["Chest", "Loot Chest", "Moonstone Chest"],
+      Sv = [{
+        name: "Workbench",
+        exactMatch: !0
+      }, {
+        name: "Furnace",
+        exactMatch: !0
+      }, {
+        name: "Artisan Bench",
+        exactMatch: !0
+      }, {
+        name: "Potion Table",
+        exactMatch: !0
+      }, {
+        name: "Salvaging Table",
+        exactMatch: !0
+      }, {
+        name: "Enchanting Table",
+        exactMatch: !1
+      }];
+
+    function ev(vv) {
+      return Sv.find((zv => zv.exactMatch ? vv === zv.name : vv.includes(zv.name)))
     }
-  },
-  38097: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Fz
-    });
-    class Fz {
-      static _CheckLimit(zz, tz) {
-        let sz = Fz._LogLimitOutputs[zz];
-        return sz ? sz.current++ : (sz = {
-          limit: tz,
-          current: 1
-        }, Fz._LogLimitOutputs[zz] = sz), sz.current <= sz.limit
-      }
-      static _GenerateLimitMessage(zz) {
-        let tz = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const sz = Fz._LogLimitOutputs[zz];
-        if (!sz || !Fz.MessageLimitReached) return;
-        const Wz = this._Levels[tz];
-        sz.current === sz.limit && Fz[Wz.name](Fz.MessageLimitReached.replace(/%LIMIT%/g, "" + sz.limit).replace(/%TYPE%/g, Wz.name ?? ""))
-      }
-      static _AddLogEntry(zz) {
-        Fz._LogCache = zz + Fz._LogCache, Fz.OnNewCacheEntry && Fz.OnNewCacheEntry(zz)
-      }
-      static _FormatMessage(zz) {
-        const tz = zz => zz < 10 ? "0" + zz : "" + zz,
-          sz = new Date;
-        return "[" + tz(sz.getHours()) + ":" + tz(sz.getMinutes()) + ":" + tz(sz.getSeconds()) + "]: " + zz
-      }
-      static _LogDisabled(zz, tz) {}
-      static _LogEnabled() {
-        let zz = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          tz = arguments.length > 1 ? arguments[1] : void 0,
-          sz = arguments.length > 2 ? arguments[2] : void 0;
-        const Wz = Array.isArray(tz) ? tz[0] : tz;
-        if (void 0 !== sz && !Fz._CheckLimit(Wz, sz)) return;
-        const Xz = Fz._FormatMessage(Wz),
-          Oz = this._Levels[zz],
-          oz = Array.isArray(tz) ? tz.slice(1) : [];
-        Oz.logFunc && Oz.logFunc("BJS - " + Xz, ...oz);
-        const vz = `<div style='color:${Oz.color}'>${Xz}</div><br>`;
-        Fz._AddLogEntry(vz), Fz._GenerateLimitMessage(Wz, zz)
-      }
-      static get LogCache() {
-        return Fz._LogCache
-      }
-      static ClearLogCache() {
-        Fz._LogCache = "", Fz._LogLimitOutputs = {}, Fz.errorsCount = 0
-      }
-      static set LogLevels(zz) {
-        Fz.Log = Fz._LogDisabled, Fz.Warn = Fz._LogDisabled, Fz.Error = Fz._LogDisabled;
-        const tz = [Fz.MessageLogLevel, Fz.WarningLogLevel, Fz.ErrorLogLevel];
-        for (const sz of tz)
-          if ((zz & sz) === sz) {
-            const zz = this._Levels[sz];
-            Fz[zz.name] = Fz._LogEnabled.bind(Fz, sz)
-          }
-      }
-    }
-    Fz.NoneLogLevel = 0, Fz.MessageLogLevel = 1, Fz.WarningLogLevel = 2, Fz.ErrorLogLevel = 4, Fz.AllLogLevel = 7, Fz.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Fz._LogCache = "", Fz._LogLimitOutputs = {}, Fz._Levels = [{}, {
-      color: "white",
-      logFunc: console.log,
-      name: "Log"
-    }, {
-      color: "orange",
-      logFunc: console.warn,
-      name: "Warn"
-    }, {}, {
-      color: "red",
-      logFunc: console.error,
-      name: "Error"
-    }], Fz.errorsCount = 0, Fz.Log = Fz._LogEnabled.bind(Fz, Fz.MessageLogLevel), Fz.Warn = Fz._LogEnabled.bind(Fz, Fz.WarningLogLevel), Fz.Error = Fz._LogEnabled.bind(Fz, Fz.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

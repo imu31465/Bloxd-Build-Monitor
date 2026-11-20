@@ -2598,13 +2598,17 @@
   width: 100%
 }
 
+.SkyblockForgePanel .SkyblockForgeAnvil .SkyblockForgeName .svg-inline--fa,
+.SkyblockForgePanel .SkyblockForgeAnvil .SkyblockForgeName.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SkyblockForgePanel .SkyblockForgeAnvil .SkyblockForgeName .svg-inline--fa path:only-of-type,
 .SkyblockForgePanel .SkyblockForgeAnvil .SkyblockForgeName.svg-inline--fa path:only-of-type {
   stroke: #303a59;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockForgePanel .SkyblockForgeAnvil .SkyblockForgeName.Waiting {
@@ -3218,13 +3222,17 @@
   text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
 }
 
+.SkyblockSmugglerPanel .SkyblockSmugglerFlap h2 .svg-inline--fa,
+.SkyblockSmugglerPanel .SkyblockSmugglerFlap h2.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SkyblockSmugglerPanel .SkyblockSmugglerFlap h2 .svg-inline--fa path:only-of-type,
 .SkyblockSmugglerPanel .SkyblockSmugglerFlap h2.svg-inline--fa path:only-of-type {
   stroke: #3a2820;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockSmugglerPanel .SkyblockSmugglerFlap p {
@@ -3333,13 +3341,17 @@
   text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
 }
 
+.SkyblockSmugglerPanel .SkyblockSmugglerPocket .SkyblockSmugglerAmount .svg-inline--fa,
+.SkyblockSmugglerPanel .SkyblockSmugglerPocket .SkyblockSmugglerAmount.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SkyblockSmugglerPanel .SkyblockSmugglerPocket .SkyblockSmugglerAmount .svg-inline--fa path:only-of-type,
 .SkyblockSmugglerPanel .SkyblockSmugglerPocket .SkyblockSmugglerAmount.svg-inline--fa path:only-of-type {
   stroke: #3a2820;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockSmugglerPanel .SkyblockSmugglerPocket h3 {
@@ -3354,13 +3366,17 @@
   text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
 }
 
+.SkyblockSmugglerPanel .SkyblockSmugglerPocket h3 .svg-inline--fa,
+.SkyblockSmugglerPanel .SkyblockSmugglerPocket h3.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SkyblockSmugglerPanel .SkyblockSmugglerPocket h3 .svg-inline--fa path:only-of-type,
 .SkyblockSmugglerPanel .SkyblockSmugglerPocket h3.svg-inline--fa path:only-of-type {
   stroke: #3a2820;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockSmugglerPanel .SkyblockSmugglerPocket .SkyblockSmugglerDeal {
@@ -3434,17 +3450,26 @@
   text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
 }
 
+.SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerRotates .svg-inline--fa,
+.SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerRotates.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerRotates .svg-inline--fa path:only-of-type,
 .SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerRotates.svg-inline--fa path:only-of-type {
   stroke: #3a2820;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerStatus {
   text-shadow: -1px -1px 0 #3a2820, -1px 0 0 #3a2820, -1px 1px 0 #3a2820, 0 -1px 0 #3a2820, 0 0 0 #3a2820, 0 1px 0 #3a2820, 1px -1px 0 #3a2820, 1px 0 0 #3a2820, 1px 1px 0 #3a2820
+}
+
+.SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerStatus .svg-inline--fa,
+.SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerStatus.svg-inline--fa {
+  paint-order: stroke fill
 }
 
 .SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerStatus .svg-inline--fa path:only-of-type,
@@ -3452,8 +3477,7 @@
   stroke: #3a2820;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockSmugglerPanel .SkyblockSmugglerBedroll .SkyblockSmugglerStatus.bought {
@@ -4394,13 +4418,17 @@
   text-shadow: -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e
 }
 
+.SkyblockKeepersChairPanel .SkyblockKeepersChairIsland h3 .svg-inline--fa,
+.SkyblockKeepersChairPanel .SkyblockKeepersChairIsland h3.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SkyblockKeepersChairPanel .SkyblockKeepersChairIsland h3 .svg-inline--fa path:only-of-type,
 .SkyblockKeepersChairPanel .SkyblockKeepersChairIsland h3.svg-inline--fa path:only-of-type {
   stroke: #1a1f2e;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockKeepersChairPanel .SkyblockKeepersChairIsland .SkyblockKeepersChairNotice {
@@ -6598,13 +6626,17 @@
   text-transform: uppercase
 }
 
+.SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitEyebrow .svg-inline--fa,
+.SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitEyebrow.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitEyebrow .svg-inline--fa path:only-of-type,
 .SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitEyebrow.svg-inline--fa path:only-of-type {
   stroke: #1a1f2e;
   vector-effect: non-scaling-stroke;
   stroke-width: 2px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitZone {
@@ -6614,13 +6646,17 @@
   text-shadow: -2px -2px 0 #1a1f2e, -2px -1px 0 #1a1f2e, -2px 0 0 #1a1f2e, -2px 1px 0 #1a1f2e, -2px 2px 0 #1a1f2e, -1px -2px 0 #1a1f2e, -1px -1px 0 #1a1f2e, -1px 0 0 #1a1f2e, -1px 1px 0 #1a1f2e, -1px 2px 0 #1a1f2e, 0 -2px 0 #1a1f2e, 0 -1px 0 #1a1f2e, 0 0 0 #1a1f2e, 0 1px 0 #1a1f2e, 0 2px 0 #1a1f2e, 1px -2px 0 #1a1f2e, 1px -1px 0 #1a1f2e, 1px 0 0 #1a1f2e, 1px 1px 0 #1a1f2e, 1px 2px 0 #1a1f2e, 2px -2px 0 #1a1f2e, 2px -1px 0 #1a1f2e, 2px 0 0 #1a1f2e, 2px 1px 0 #1a1f2e, 2px 2px 0 #1a1f2e
 }
 
+.SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitZone .svg-inline--fa,
+.SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitZone.svg-inline--fa {
+  paint-order: stroke fill
+}
+
 .SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitZone .svg-inline--fa path:only-of-type,
 .SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitZone.svg-inline--fa path:only-of-type {
   stroke: #1a1f2e;
   vector-effect: non-scaling-stroke;
   stroke-width: 4px;
-  stroke-linejoin: round;
-  paint-order: stroke fill
+  stroke-linejoin: round
 }
 
 .SkyblockPortalTransit .SkyblockPortalTransitTitle .SkyblockPortalTransitZone {

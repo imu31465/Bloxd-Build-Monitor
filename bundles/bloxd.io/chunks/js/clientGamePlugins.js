@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4472: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Az,
-      f: () => jz
+  4589: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => tv,
+      e: () => xv
     });
-    var Fz = sz(4476),
-      Wz = sz(308);
-    const Xz = 120,
-      Oz = 260,
-      oz = 1.15,
-      vz = 1.2,
-      Uz = 2,
-      Kz = 1.08,
-      uz = .8,
-      Nz = .95,
-      bz = 8,
-      wz = "[\"')\\]\u300d\u300f\uff09]*",
-      Dz = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${wz}$`),
-      gz = new RegExp(`[?\uff1f]${wz}$`),
-      Hz = new RegExp(`[!\uff01]${wz}$`),
-      Bz = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Pz = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      rz = new RegExp(`[${Pz}]`),
-      Yz = new RegExp(`[${Pz}]|[^${Pz}]+`, "g"),
-      xz = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var hv = Pv(4592),
+      Sv = Pv(302);
+    const ev = 120,
+      gv = 260,
+      pv = 1.15,
+      dv = 1.2,
+      Nv = 2,
+      lv = 1.08,
+      Tv = .8,
+      Wv = .95,
+      wv = 8,
+      av = "[\"')\\]\u300d\u300f\uff09]*",
+      sv = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${av}$`),
+      Cv = new RegExp(`[?\uff1f]${av}$`),
+      iv = new RegExp(`[!\uff01]${av}$`),
+      cv = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Gv = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      mv = new RegExp(`[${Gv}]`),
+      jv = new RegExp(`[${Gv}]|[^${Gv}]+`, "g"),
+      fv = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function mz(zz) {
-      let tz = 2166136261;
-      for (let sz = 0; sz < zz.length; sz++) tz ^= zz.charCodeAt(sz), tz = Math.imul(tz, 16777619);
-      return (tz >>> 0) / 4294967295 * 2 - 1
+    function Fv(vv) {
+      let zv = 2166136261;
+      for (let Pv = 0; Pv < vv.length; Pv++) zv ^= vv.charCodeAt(Pv), zv = Math.imul(zv, 16777619);
+      return (zv >>> 0) / 4294967295 * 2 - 1
     }
 
-    function Jz(zz) {
-      var tz;
-      if (rz.test(zz)) return 1;
-      const sz = zz.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        Fz = sz.replace(/[^0-9]/g, "");
-      if (Fz.length > 0 && !/\p{L}/u.test(sz)) return Math.min(Fz.length, 4);
-      const Wz = null !== (tz = sz.match(xz)) && void 0 !== tz ? tz : [];
-      if (0 === Wz.length) {
-        var Xz, Oz;
-        const zz = null !== (Xz = null === (Oz = sz.match(/\p{L}/gu)) || void 0 === Oz ? void 0 : Oz.length) && void 0 !== Xz ? Xz : 0;
-        return 0 === zz ? 0 : Math.min(Math.max(1, Math.round(zz / 2.5)), bz)
+    function Yv(vv) {
+      var zv;
+      if (mv.test(vv)) return 1;
+      const Pv = vv.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        hv = Pv.replace(/[^0-9]/g, "");
+      if (hv.length > 0 && !/\p{L}/u.test(Pv)) return Math.min(hv.length, 4);
+      const Sv = null !== (zv = Pv.match(fv)) && void 0 !== zv ? zv : [];
+      if (0 === Sv.length) {
+        var ev, gv;
+        const vv = null !== (ev = null === (gv = Pv.match(/\p{L}/gu)) || void 0 === gv ? void 0 : gv.length) && void 0 !== ev ? ev : 0;
+        return 0 === vv ? 0 : Math.min(Math.max(1, Math.round(vv / 2.5)), wv)
       }
-      const oz = sz.replace(/[^\p{L}]/gu, ""),
-        vz = Wz.length > 1 && "e" === Wz.at(-1) && oz.endsWith("e") && !oz.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(zz.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Wz.length - (vz ? 1 : 0), bz)
+      const pv = Pv.replace(/[^\p{L}]/gu, ""),
+        dv = Sv.length > 1 && "e" === Sv.at(-1) && pv.endsWith("e") && !pv.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(vv.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Sv.length - (dv ? 1 : 0), wv)
     }
 
-    function Iz(zz) {
-      return zz.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function nv(vv) {
+      return vv.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Cz(zz) {
-      const tz = zz.replace(/[^\p{L}]/gu, "");
-      return tz.length >= 2 && tz === tz.toUpperCase() && tz !== tz.toLowerCase()
+    function Ov(vv) {
+      const zv = vv.replace(/[^\p{L}]/gu, "");
+      return zv.length >= 2 && zv === zv.toUpperCase() && zv !== zv.toLowerCase()
     }
 
-    function ez(zz, tz) {
-      var sz;
-      const bz = tz && (0, Fz.l)(tz),
-        wz = null !== (sz = null === bz || void 0 === bz ? void 0 : bz.syllableMs) && void 0 !== sz ? sz : Fz.e,
-        Pz = function(zz) {
-          const tz = [];
-          for (const Fz of (0, Wz.bc)(zz))
-            if ("string" === typeof Fz)
-              for (const zz of Fz.split(/(\s+)/)) {
-                if ("" === zz) continue;
-                if (/^\s+$/.test(zz)) {
-                  tz.push({
+    function Dv(vv, zv) {
+      var Pv;
+      const wv = zv && (0, hv.h)(zv),
+        av = null !== (Pv = null === wv || void 0 === wv ? void 0 : wv.syllableMs) && void 0 !== Pv ? Pv : hv.c,
+        Gv = function(vv) {
+          const zv = [];
+          for (const hv of (0, Sv.Vb)(vv))
+            if ("string" === typeof hv)
+              for (const vv of hv.split(/(\s+)/)) {
+                if ("" === vv) continue;
+                if (/^\s+$/.test(vv)) {
+                  zv.push({
                     kind: "space",
-                    text: zz
+                    text: vv
                   });
                   continue
                 }
-                if (!rz.test(zz)) {
-                  tz.push({
+                if (!mv.test(vv)) {
+                  zv.push({
                     kind: "word",
-                    text: zz,
+                    text: vv,
                     delayMs: 0
                   });
                   continue
                 }
-                let Fz = !0;
-                for (const Wz of null !== (sz = zz.match(Yz)) && void 0 !== sz ? sz : []) {
-                  var sz;
-                  const zz = tz.at(-1);
-                  Fz || "word" !== (null === zz || void 0 === zz ? void 0 : zz.kind) || rz.test(Wz) || /[\p{L}\p{N}]/u.test(Wz) ? (Fz || tz.push({
+                let hv = !0;
+                for (const Sv of null !== (Pv = vv.match(jv)) && void 0 !== Pv ? Pv : []) {
+                  var Pv;
+                  const vv = zv.at(-1);
+                  hv || "word" !== (null === vv || void 0 === vv ? void 0 : vv.kind) || mv.test(Sv) || /[\p{L}\p{N}]/u.test(Sv) ? (hv || zv.push({
                     kind: "space",
                     text: "\u200b"
-                  }), tz.push({
+                  }), zv.push({
                     kind: "word",
-                    text: Wz,
+                    text: Sv,
                     delayMs: 0
-                  }), Fz = !1) : zz.text += Wz
+                  }), hv = !1) : vv.text += Sv
                 }
-              } else tz.push({
+              } else zv.push({
                 kind: "icon",
-                text: Fz.icon,
+                text: hv.icon,
                 delayMs: 0
               });
-          return tz
-        }(zz),
-        xz = [];
-      let ez = [];
-      for (const Fz of Pz) "space" !== Fz.kind && (ez.push(Fz), Dz.test(Fz.text) && (xz.push(ez), ez = []));
-      xz.push(ez);
-      const Zz = [];
-      let Gz = 0;
-      for (const Fz of xz) {
-        var Tz, cz;
-        const zz = null !== (Tz = null === (cz = Fz.at(-1)) || void 0 === cz ? void 0 : cz.text) && void 0 !== Tz ? Tz : "",
-          tz = gz.test(zz),
-          sz = Hz.test(zz),
-          Wz = Fz.map((zz => "word" === zz.kind ? Jz(zz.text) : 1)),
-          Pz = Wz.findLastIndex((zz => zz > 0));
-        for (const [gz, Hz] of Fz.entries()) {
-          const zz = "word" === Hz.kind,
-            Fz = Wz[gz];
-          Hz.delayMs = Gz;
-          for (let Wz = 0; bz && Wz < Fz; Wz++) {
+          return zv
+        }(vv),
+        fv = [];
+      let Dv = [];
+      for (const hv of Gv) "space" !== hv.kind && (Dv.push(hv), sv.test(hv.text) && (fv.push(Dv), Dv = []));
+      fv.push(Dv);
+      const Kv = [];
+      let Vv = 0;
+      for (const hv of fv) {
+        var Uv, Rv;
+        const vv = null !== (Uv = null === (Rv = hv.at(-1)) || void 0 === Rv ? void 0 : Rv.text) && void 0 !== Uv ? Uv : "",
+          zv = Cv.test(vv),
+          Pv = iv.test(vv),
+          Sv = hv.map((vv => "word" === vv.kind ? Yv(vv.text) : 1)),
+          Gv = Sv.findLastIndex((vv => vv > 0));
+        for (const [Cv, iv] of hv.entries()) {
+          const vv = "word" === iv.kind,
+            hv = Sv[Cv];
+          iv.delayMs = Vv;
+          for (let Sv = 0; wv && Sv < hv; Sv++) {
             const {
-              intonation: Xz
-            } = bz;
-            let Oz = Pz > 0 ? -Xz.declineSemitones * (gz / Pz) : 0;
-            Oz += mz(`${Iz(Hz.text)}|${Wz}`) * Xz.variationSemitones;
-            const Dz = Math.min(1, Xz.variationSemitones);
-            let Bz = bz.glideSemitones,
-              rz = 1;
-            sz && (Oz += Xz.exclaimLiftSemitones, rz *= oz), tz && gz === Pz && (Oz += Xz.questionRiseSemitones * (Fz > 1 ? .5 + .5 * Wz / (Fz - 1) : 1), Wz === Fz - 1 && (Bz = Math.abs(Bz) + Xz.questionRiseSemitones / 2)), zz && Cz(Hz.text) && (Oz += Uz * Dz, rz *= vz), Fz > 1 && 0 === Wz && (Oz += uz * Dz, rz *= Kz), Zz.push({
-              atMs: Gz + Wz * wz,
-              semitones: Oz,
-              glideSemitones: Bz,
-              durationMs: Wz < Fz - 1 ? Math.min(bz.durationMs, wz * Nz) : bz.durationMs,
-              level: rz
+              intonation: ev
+            } = wv;
+            let gv = Gv > 0 ? -ev.declineSemitones * (Cv / Gv) : 0;
+            gv += Fv(`${nv(iv.text)}|${Sv}`) * ev.variationSemitones;
+            const sv = Math.min(1, ev.variationSemitones);
+            let cv = wv.glideSemitones,
+              mv = 1;
+            Pv && (gv += ev.exclaimLiftSemitones, mv *= pv), zv && Cv === Gv && (gv += ev.questionRiseSemitones * (hv > 1 ? .5 + .5 * Sv / (hv - 1) : 1), Sv === hv - 1 && (cv = Math.abs(cv) + ev.questionRiseSemitones / 2)), vv && Ov(iv.text) && (gv += Nv * sv, mv *= dv), hv > 1 && 0 === Sv && (gv += Tv * sv, mv *= lv), Kv.push({
+              atMs: Vv + Sv * av,
+              semitones: gv,
+              glideSemitones: cv,
+              durationMs: Sv < hv - 1 ? Math.min(wv.durationMs, av * Wv) : wv.durationMs,
+              level: mv
             })
           }
-          Gz += Fz * wz + (Dz.test(Hz.text) ? Oz : Bz.test(Hz.text) ? Xz : 0)
+          Vv += hv * av + (sv.test(iv.text) ? gv : cv.test(iv.text) ? ev : 0)
         }
       }
       return {
-        pieces: Pz.map((zz => "space" === zz.kind ? zz : "icon" === zz.kind ? {
+        pieces: Gv.map((vv => "space" === vv.kind ? vv : "icon" === vv.kind ? {
           kind: "icon",
-          icon: zz.text,
-          delayMs: zz.delayMs
+          icon: vv.text,
+          delayMs: vv.delayMs
         } : {
           kind: "word",
-          text: zz.text,
-          delayMs: zz.delayMs
+          text: vv.text,
+          delayMs: vv.delayMs
         })),
-        blips: Zz
+        blips: Kv
       }
     }
-    var Zz = sz(1173),
-      Gz = sz(1237),
-      Tz = sz(1862);
+    var Kv = Pv(1175),
+      Vv = Pv(1234),
+      Uv = Pv(1884);
 
-    function cz(zz) {
-      if ("string" === typeof zz) return zz;
-      const tz = Gz.g.get().getCurrentLanguageCode();
-      return (0, Zz.s)(tz, zz.translationKey, (0, Zz.r)(zz.params, Tz.d.shown))
+    function Rv(vv) {
+      if ("string" === typeof vv) return vv;
+      const zv = Vv.f.get().getCurrentLanguageCode();
+      return (0, Kv.j)(zv, vv.translationKey, (0, Kv.i)(vv.params, Uv.b.shown))
     }
 
-    function jz(zz) {
-      const tz = void 0 === zz.voice ? null : (0, Fz.n)(zz.voice),
-        sz = tz && (0, Fz.l)(tz);
+    function xv(vv) {
+      const zv = void 0 === vv.voice ? null : (0, hv.l)(vv.voice),
+        Pv = zv && (0, hv.h)(zv);
       return {
-        plan: ez(cz(zz.line), sz),
-        synth: sz
+        plan: Dv(Rv(vv.line), Pv),
+        synth: Pv
       }
     }
 
-    function Az(zz) {
-      const tz = [];
-      let sz = [];
-      for (const [Wz, Xz] of zz.entries()) {
-        var Fz;
-        "space" === Xz.kind && (" " !== Xz.text || "icon" !== (null === (Fz = zz[Wz + 1]) || void 0 === Fz ? void 0 : Fz.kind)) ? (sz.length > 0 && tz.push(sz), tz.push([Xz]), sz = []) : sz.push(Xz)
+    function tv(vv) {
+      const zv = [];
+      let Pv = [];
+      for (const [Sv, ev] of vv.entries()) {
+        var hv;
+        "space" === ev.kind && (" " !== ev.text || "icon" !== (null === (hv = vv[Sv + 1]) || void 0 === hv ? void 0 : hv.kind)) ? (Pv.length > 0 && zv.push(Pv), zv.push([ev]), Pv = []) : Pv.push(ev)
       }
-      return sz.length > 0 && tz.push(sz), tz
+      return Pv.length > 0 && zv.push(Pv), zv
     }
   },
-  4479: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => Kz,
-      e: () => uz
+  4595: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => lv,
+      e: () => Tv
     });
-    var Fz = sz(4488),
-      Wz = sz(30);
-    const Xz = .25,
-      Oz = .85,
-      oz = .02,
-      vz = .01;
+    var hv = Pv(4603),
+      Sv = Pv(22);
+    const ev = .25,
+      gv = .85,
+      pv = .02,
+      dv = .01;
 
-    function Uz(zz, tz, sz, Fz, Wz, Xz, oz) {
+    function Nv(vv, zv, Pv, hv, Sv, ev, pv) {
       const {
-        waveform: vz,
-        pitchHz: Uz,
-        attackMs: Kz,
-        releaseMs: uz,
-        lowpassHz: Nz
-      } = sz, bz = Wz + Fz.durationMs / 1e3, wz = Uz * 2 ** (Fz.semitones / 12), Dz = zz.createOscillator();
-      Dz.type = vz, Dz.frequency.setValueAtTime(wz, Wz), Dz.frequency.exponentialRampToValueAtTime(wz * 2 ** (Fz.glideSemitones / 12), bz);
-      const gz = Wz + Math.min(Kz, Fz.durationMs) / 1e3,
-        Hz = zz.createGain();
-      Hz.gain.setValueAtTime(0, Wz), Hz.gain.linearRampToValueAtTime(Xz, gz), Hz.gain.linearRampToValueAtTime(Xz * Oz, Math.max(gz, bz - uz / 1e3)), Hz.gain.linearRampToValueAtTime(0, bz);
-      const Bz = [Dz];
-      if (null !== Nz) {
-        const tz = zz.createBiquadFilter();
-        tz.type = "lowpass", tz.frequency.value = Nz, Bz.push(tz)
+        waveform: dv,
+        pitchHz: Nv,
+        attackMs: lv,
+        releaseMs: Tv,
+        lowpassHz: Wv
+      } = Pv, wv = Sv + hv.durationMs / 1e3, av = Nv * 2 ** (hv.semitones / 12), sv = vv.createOscillator();
+      sv.type = dv, sv.frequency.setValueAtTime(av, Sv), sv.frequency.exponentialRampToValueAtTime(av * 2 ** (hv.glideSemitones / 12), wv);
+      const Cv = Sv + Math.min(lv, hv.durationMs) / 1e3,
+        iv = vv.createGain();
+      iv.gain.setValueAtTime(0, Sv), iv.gain.linearRampToValueAtTime(ev, Cv), iv.gain.linearRampToValueAtTime(ev * gv, Math.max(Cv, wv - Tv / 1e3)), iv.gain.linearRampToValueAtTime(0, wv);
+      const cv = [sv];
+      if (null !== Wv) {
+        const zv = vv.createBiquadFilter();
+        zv.type = "lowpass", zv.frequency.value = Wv, cv.push(zv)
       }
-      Bz.push(Hz, tz);
-      for (let Oz = 1; Oz < Bz.length; Oz++) Bz[Oz - 1].connect(Bz[Oz]);
-      return Dz.onended = () => {
-        for (const zz of Bz.slice(0, -1)) zz.disconnect();
-        oz()
-      }, Dz.start(Wz), Dz.stop(bz), Dz
+      cv.push(iv, zv);
+      for (let gv = 1; gv < cv.length; gv++) cv[gv - 1].connect(cv[gv]);
+      return sv.onended = () => {
+        for (const vv of cv.slice(0, -1)) vv.disconnect();
+        pv()
+      }, sv.start(Sv), sv.stop(wv), sv
     }
 
-    function Kz(zz, tz, sz, Fz, Wz, Oz) {
-      if (0 === Fz.length) return Oz(), () => {};
-      const Kz = Xz * sz.volume * Wz,
-        uz = zz.createGain();
-      uz.connect(tz);
-      const Nz = zz.currentTime + oz,
-        bz = new Set;
-      for (const Xz of Fz) {
-        const tz = Uz(zz, uz, sz, Xz, Nz + Xz.atMs / 1e3, Kz * Xz.level, (() => {
-          bz.delete(tz), 0 === bz.size && (uz.disconnect(), Oz())
+    function lv(vv, zv, Pv, hv, Sv, gv) {
+      if (0 === hv.length) return gv(), () => {};
+      const lv = ev * Pv.volume * Sv,
+        Tv = vv.createGain();
+      Tv.connect(zv);
+      const Wv = vv.currentTime + pv,
+        wv = new Set;
+      for (const ev of hv) {
+        const zv = Nv(vv, Tv, Pv, ev, Wv + ev.atMs / 1e3, lv * ev.level, (() => {
+          wv.delete(zv), 0 === wv.size && (Tv.disconnect(), gv())
         }));
-        bz.add(tz)
+        wv.add(zv)
       }
       return () => {
-        const tz = zz.currentTime;
-        uz.gain.setTargetAtTime(0, tz, vz);
-        for (const zz of bz) try {
-          zz.stop(tz + 5 * vz)
+        const zv = vv.currentTime;
+        Tv.gain.setTargetAtTime(0, zv, dv);
+        for (const vv of wv) try {
+          vv.stop(zv + 5 * dv)
         } catch {}
       }
     }
 
-    function uz(zz, tz) {
-      var sz;
-      const Xz = Fz.Howler.ctx,
-        Oz = Fz.Howler.masterGain;
-      if (!Xz || !Oz || !Wz.b.get("soundOnFromAd")) return () => {};
-      const oz = Fz.Howler;
-      return null === (sz = oz._autoResume) || void 0 === sz || sz.call(oz), Kz(Xz, Oz, zz, tz, Wz.b.get("soundVolume"), (() => {
-        var zz;
-        null === (zz = oz._autoSuspend) || void 0 === zz || zz.call(oz)
+    function Tv(vv, zv) {
+      var Pv;
+      const ev = hv.Howler.ctx,
+        gv = hv.Howler.masterGain;
+      if (!ev || !gv || !Sv.c.get("soundOnFromAd")) return () => {};
+      const pv = hv.Howler;
+      return null === (Pv = pv._autoResume) || void 0 === Pv || Pv.call(pv), lv(ev, gv, vv, zv, Sv.c.get("soundVolume"), (() => {
+        var vv;
+        null === (vv = pv._autoSuspend) || void 0 === vv || vv.call(pv)
       }))
     }
   },
-  38550: (zz, tz, sz) => {
-    sz.r(tz), sz.d(tz, {
-      closeClientGame: () => yz,
-      createDefaultClientPlugins: () => Az
+  38663: (vv, zv, Pv) => {
+    Pv.r(zv), Pv.d(zv, {
+      closeClientGame: () => qv,
+      createDefaultClientPlugins: () => tv
     });
-    var Fz = sz(321);
+    var hv = Pv(312);
 
-    function Wz() {
-      let zz;
+    function Sv() {
+      let vv;
       return {
-        onCreate(tz) {
-          zz = tz
+        onCreate(zv) {
+          vv = zv
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(tz, sz, Wz, Xz, Oz, oz) {
-          var vz, Uz;
-          if ("Iron Chest" !== zz.getMetaInfo(Oz).rootName) return;
-          if (!zz.hasEffect(tz, "Thief")) return;
-          const Kz = zz.getBlockData(sz, Wz, Xz);
-          return zz.getPlayerDbId(tz) !== (null === Kz || void 0 === Kz || null === (vz = Kz.persisted) || void 0 === vz || null === (Uz = vz.shared) || void 0 === Uz ? void 0 : Uz.ownerDbId) ? (zz.sendMessage(tz, [{
+        onPlayerAttemptAltAction(zv, Pv, Sv, ev, gv, pv) {
+          var dv, Nv;
+          if ("Iron Chest" !== vv.getMetaInfo(gv).rootName) return;
+          if (!vv.hasEffect(zv, "Thief")) return;
+          const lv = vv.getBlockData(Pv, Sv, ev);
+          return vv.getPlayerDbId(zv) !== (null === lv || void 0 === lv || null === (dv = lv.persisted) || void 0 === dv || null === (Nv = dv.shared) || void 0 === Nv ? void 0 : Nv.ownerDbId) ? (vv.sendMessage(zv, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: Fz.N.redUiText
+              color: hv.L.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var Xz = sz(3926),
-      Oz = sz(1223);
-    const oz = 8.4,
-      vz = 1e-4,
-      Uz = .15,
-      Kz = .04,
-      uz = [.12, .04, .12],
-      Nz = 26,
-      bz = {
+    var ev = Pv(4019),
+      gv = Pv(1226);
+    const pv = 8.4,
+      dv = 1e-4,
+      Nv = .15,
+      lv = .04,
+      Tv = [.12, .04, .12],
+      Wv = 26,
+      wv = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        au: 1,
-        minLifeTime: vz,
-        maxLifeTime: vz,
+        GT: 1,
+        minLifeTime: dv,
+        maxLifeTime: dv,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: Xz.f.Standard
+        blendMode: ev.f.Standard
       },
-      wz = {
+      av = {
         texture: "bubble",
         mipmaps: !1,
-        au: 96,
+        GT: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: Nz,
+        emitRate: Wv,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: Xz.f.Standard
+        blendMode: ev.f.Standard
       },
-      Dz = [0, 0, 0],
-      gz = [0, 0, 0];
+      sv = [0, 0, 0],
+      Cv = [0, 0, 0];
 
-    function Hz(zz) {
-      const tz = new Map;
-      let sz = null;
+    function iv(vv) {
+      const zv = new Map;
+      let Pv = null;
 
-      function Fz(zz) {
-        var tz, sz;
-        null === (tz = zz.bubbles) || void 0 === tz || tz.stop(), null === (sz = zz.fish) || void 0 === sz || sz.stop()
+      function hv(vv) {
+        var zv, Pv;
+        null === (zv = vv.bubbles) || void 0 === zv || zv.stop(), null === (Pv = vv.fish) || void 0 === Pv || Pv.stop()
       }
 
-      function Wz(sz) {
-        if (!sz.readDrawnPosition(zz, gz)) {
-          for (const zz of tz.values()) {
-            var Fz;
-            null === (Fz = zz.bubbles) || void 0 === Fz || Fz.setEmitRate(0)
+      function Sv(Pv) {
+        if (!Pv.readDrawnPosition(vv, Cv)) {
+          for (const vv of zv.values()) {
+            var hv;
+            null === (hv = vv.bubbles) || void 0 === hv || hv.setEmitRate(0)
           }
           return
         }
-        const Wz = performance.now();
-        for (const [zz, Oz] of tz) {
-          var Xz;
-          if (null === (Xz = Oz.bubbles) || void 0 === Xz || Xz.setEmitRate(0), !sz.readDrawnPosition(zz, Dz)) continue;
-          if (!((Dz[0] - gz[0]) ** 2 + (Dz[1] - gz[1]) ** 2 + (Dz[2] - gz[2]) ** 2 < 900)) continue;
-          const tz = Math.max(0, Oz.biteAt - Wz),
-            Fz = Oz.approachDurationMs > 0 ? Math.min(1, 1 - tz / Oz.approachDurationMs) : 1,
-            vz = (Oz.approachDurationMs - tz) / 1e3,
-            Hz = Oz.phase + .25 * Math.sin(1.7 * vz + Oz.phase),
-            Bz = Math.min(Oz.approachDurationMs / 3e3 * 2.8, oz) * (1 - Fz) * (1 + .15 * Math.sin(2.1 * vz + Oz.phase)),
-            Pz = Math.min(1, 4 * (1 - Fz)),
-            rz = (.45 * Math.sin(4.1 * vz + Oz.phase) + .18 * Math.sin(9.7 * vz + 2 * Oz.phase)) * Pz,
-            Yz = Dz[0] + Math.cos(Hz) * Bz - Math.sin(Hz) * rz,
-            xz = Math.ceil(Oz.surfaceY),
-            mz = Dz[2] + Math.sin(Hz) * Bz + Math.cos(Hz) * rz,
+        const Sv = performance.now();
+        for (const [vv, gv] of zv) {
+          var ev;
+          if (null === (ev = gv.bubbles) || void 0 === ev || ev.setEmitRate(0), !Pv.readDrawnPosition(vv, sv)) continue;
+          if (!((sv[0] - Cv[0]) ** 2 + (sv[1] - Cv[1]) ** 2 + (sv[2] - Cv[2]) ** 2 < 900)) continue;
+          const zv = Math.max(0, gv.biteAt - Sv),
+            hv = gv.approachDurationMs > 0 ? Math.min(1, 1 - zv / gv.approachDurationMs) : 1,
+            dv = (gv.approachDurationMs - zv) / 1e3,
+            iv = gv.phase + .25 * Math.sin(1.7 * dv + gv.phase),
+            cv = Math.min(gv.approachDurationMs / 3e3 * 2.8, pv) * (1 - hv) * (1 + .15 * Math.sin(2.1 * dv + gv.phase)),
+            Gv = Math.min(1, 4 * (1 - hv)),
+            mv = (.45 * Math.sin(4.1 * dv + gv.phase) + .18 * Math.sin(9.7 * dv + 2 * gv.phase)) * Gv,
+            jv = sv[0] + Math.cos(iv) * cv - Math.sin(iv) * mv,
+            fv = Math.ceil(gv.surfaceY),
+            Fv = sv[2] + Math.sin(iv) * cv + Math.cos(iv) * mv,
             {
-              fishAt: Jz,
-              bubblesAt: Iz
-            } = Oz;
-          Jz[0] = Iz[0] = Yz, Jz[1] = xz + Uz, Iz[1] = xz + Kz, Jz[2] = Iz[2] = mz, Oz.fish ??= sz.createParticles(bz, {
-            pos: Jz
-          }), Oz.fish.moveTo(Jz), Oz.fish.emit(1), Oz.bubbles ??= sz.createParticles(wz, {
-            pos: Iz,
-            half: uz
-          }), Oz.bubbles.moveTo(Iz), Oz.bubbles.setEmitRate(Nz + 32 * (.5 + .5 * Math.sin(9 * vz + Oz.phase)) ** 4 + 13 * Fz)
+              fishAt: Yv,
+              bubblesAt: nv
+            } = gv;
+          Yv[0] = nv[0] = jv, Yv[1] = fv + Nv, nv[1] = fv + lv, Yv[2] = nv[2] = Fv, gv.fish ??= Pv.createParticles(wv, {
+            pos: Yv
+          }), gv.fish.moveTo(Yv), gv.fish.emit(1), gv.bubbles ??= Pv.createParticles(av, {
+            pos: nv,
+            half: Tv
+          }), gv.bubbles.moveTo(nv), gv.bubbles.setEmitRate(Wv + 32 * (.5 + .5 * Math.sin(9 * dv + gv.phase)) ** 4 + 13 * hv)
         }
       }
       return {
-        onCreate(zz) {
-          sz = zz
+        onCreate(vv) {
+          Pv = vv
         },
         onAfterRender() {
-          sz && Wz(sz)
+          Pv && Sv(Pv)
         },
         onClose() {
-          for (const zz of tz.values()) Fz(zz);
-          tz.clear(), sz = null
+          for (const vv of zv.values()) hv(vv);
+          zv.clear(), Pv = null
         },
-        onReceivedMessageFromServer(zz, sz) {
-          if (zz !== Oz.z) return;
+        onReceivedMessageFromServer(vv, Pv) {
+          if (vv !== gv.A) return;
           const {
-            hookId: Wz,
-            waiting: Xz
-          } = sz;
-          if (Xz) tz.has(Wz) || tz.set(Wz, {
+            hookId: Sv,
+            waiting: ev
+          } = Pv;
+          if (ev) zv.has(Sv) || zv.set(Sv, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + Xz.remainingMs,
-            approachDurationMs: Xz.durationMs,
-            surfaceY: Xz.surfaceY,
+            biteAt: performance.now() + ev.remainingMs,
+            approachDurationMs: ev.durationMs,
+            surfaceY: ev.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const zz = tz.get(Wz);
-            zz && Fz(zz), tz.delete(Wz)
+            const vv = zv.get(Sv);
+            vv && hv(vv), zv.delete(Sv)
           }
         }
       }
     }
-    var Bz = sz(4479),
-      Pz = sz(4472);
+    var cv = Pv(4595),
+      Gv = Pv(4589);
 
-    function rz(zz) {
-      let tz, sz = null,
-        Fz = null;
-      const Wz = () => {
-        var zz;
-        null === (zz = Fz) || void 0 === zz || zz(), Fz = null
+    function mv(vv) {
+      let zv, Pv = null,
+        hv = null;
+      const Sv = () => {
+        var vv;
+        null === (vv = hv) || void 0 === vv || vv(), hv = null
       };
       return {
-        onCreate(Fz) {
-          tz = Fz, sz = tz.getClientOption(zz, "dialogue")
+        onCreate(hv) {
+          zv = hv, Pv = zv.getClientOption(vv, "dialogue")
         },
         onAfterRender() {
-          if (!tz) return;
-          const Xz = tz.getClientOption(zz, "dialogue");
-          if (Xz === sz) return;
-          if (sz = Xz, Wz(), !Xz || !1 === Xz.animateIn) return;
+          if (!zv) return;
+          const ev = zv.getClientOption(vv, "dialogue");
+          if (ev === Pv) return;
+          if (Pv = ev, Sv(), !ev || !1 === ev.animateIn) return;
           const {
-            plan: Oz,
-            synth: oz
-          } = (0, Pz.f)(Xz);
-          oz && (Fz = (0, Bz.e)(oz, Oz.blips))
+            plan: gv,
+            synth: pv
+          } = (0, Gv.e)(ev);
+          pv && (hv = (0, cv.e)(pv, gv.blips))
         },
-        onClose: Wz
+        onClose: Sv
       }
     }
-    var Yz = sz(38555);
-    const xz = [
+    var jv = Pv(38669);
+    const fv = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      mz = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      Jz = [0, 1, 2, 0, 2, 3];
+      Fv = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      Yv = [0, 1, 2, 0, 2, 3];
 
-    function Iz(zz, tz, sz) {
-      var Fz;
-      let [Wz, Xz, Oz] = tz;
-      if (zz.hasPackModel("Furnace")) return null;
-      const oz = ((null !== (Fz = zz.getMetaInfo(sz).rot) && void 0 !== Fz ? Fz : 1) - 1) * Math.PI / 2,
-        vz = Math.PI + oz,
-        Uz = Math.cos(vz),
-        Kz = Math.sin(vz),
-        uz = [];
-      for (const [wz, Dz] of xz) uz.push(wz * Uz, Dz, -wz * Kz);
-      const Nz = {
-          positions: uz,
-          indices: Jz,
-          uvs: mz
+    function nv(vv, zv, Pv) {
+      var hv;
+      let [Sv, ev, gv] = zv;
+      if (vv.hasPackModel("Furnace")) return null;
+      const pv = ((null !== (hv = vv.getMetaInfo(Pv).rot) && void 0 !== hv ? hv : 1) - 1) * Math.PI / 2,
+        dv = Math.PI + pv,
+        Nv = Math.cos(dv),
+        lv = Math.sin(dv),
+        Tv = [];
+      for (const [av, sv] of fv) Tv.push(av * Nv, sv, -av * lv);
+      const Wv = {
+          positions: Tv,
+          indices: Yv,
+          uvs: Fv
         },
-        bz = [Wz + .5 + .51 * Math.sin(oz), Xz + .375, Oz + .5 + .51 * Math.cos(oz)];
-      return zz.createGameMesh(Nz, {
+        wv = [Sv + .5 + .51 * Math.sin(pv), ev + .375, gv + .5 + .51 * Math.cos(pv)];
+      return vv.createGameMesh(Wv, {
         kind: "furnaceFire"
-      }, bz)
+      }, wv)
     }
 
-    function Cz(zz) {
-      return Math.floor(zz / 200) % 3
+    function Ov(vv) {
+      return Math.floor(vv / 200) % 3
     }
 
-    function ez(zz, tz, sz) {
-      zz.setGameMesh(tz, {
-        uvOffset: [0, sz / 3]
+    function Dv(vv, zv, Pv) {
+      vv.setGameMesh(zv, {
+        uvOffset: [0, Pv / 3]
       })
     }
-    const Zz = [.12, .025, .12],
-      Gz = [{
+    const Kv = [.12, .025, .12],
+      Vv = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: Xz.f.Standard,
+          blendMode: ev.f.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: Xz.f.Add,
+          blendMode: ev.f.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class Tz {
+    class Uv {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(zz, tz) {
-        const sz = zz.getBlockId(tz[0], tz[1], tz[2]);
-        if ("Furnace" !== zz.getMetaInfo(sz).rootName) return;
-        const Fz = performance.now();
-        let Wz = this.smokes.find((zz => zz.pos[0] === tz[0] && zz.pos[1] === tz[1] && zz.pos[2] === tz[2] && zz.yK === sz));
-        if (Wz || (Wz = {
-            pos: [tz[0], tz[1], tz[2]],
-            yK: sz,
-            endMs: Fz,
+      start(vv, zv) {
+        const Pv = vv.getBlockId(zv[0], zv[1], zv[2]);
+        if ("Furnace" !== vv.getMetaInfo(Pv).rootName) return;
+        const hv = performance.now();
+        let Sv = this.smokes.find((vv => vv.pos[0] === zv[0] && vv.pos[1] === zv[1] && vv.pos[2] === zv[2] && vv.yN === Pv));
+        if (Sv || (Sv = {
+            pos: [zv[0], zv[1], zv[2]],
+            yN: Pv,
+            endMs: hv,
             lastBurstMs: -1 / 0,
-            pending: new Array(Gz.length).fill(0),
-            fire: Iz(zz, tz, sz)
-          }, this.smokes.push(Wz), null !== Wz.fire && (ez(zz, Wz.fire, Cz(Fz)), this.shownFireFrame = -1)), Wz.endMs = Fz + 6e3, this.smokes.length > 4) {
-          const tz = this.smokes.reduce(((zz, tz) => tz.endMs < zz.endMs ? tz : zz));
-          cz(zz, tz), this.smokes.splice(this.smokes.indexOf(tz), 1)
+            pending: new Array(Vv.length).fill(0),
+            fire: nv(vv, zv, Pv)
+          }, this.smokes.push(Sv), null !== Sv.fire && (Dv(vv, Sv.fire, Ov(hv)), this.shownFireFrame = -1)), Sv.endMs = hv + 6e3, this.smokes.length > 4) {
+          const zv = this.smokes.reduce(((vv, zv) => zv.endMs < vv.endMs ? zv : vv));
+          Rv(vv, zv), this.smokes.splice(this.smokes.indexOf(zv), 1)
         }
-        Fz - Wz.lastBurstMs >= 300 && (Wz.lastBurstMs = Fz, Gz.forEach(((zz, tz) => {
-          Wz.pending[tz] += zz.style.count
+        hv - Sv.lastBurstMs >= 300 && (Sv.lastBurstMs = hv, Vv.forEach(((vv, zv) => {
+          Sv.pending[zv] += vv.style.count
         })))
       }
-      onAfterRender(zz, tz) {
+      onAfterRender(vv, zv) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const sz = performance.now();
-        this.smokes = this.smokes.filter((tz => {
-          const [Fz, Wz, Xz] = tz.pos, Oz = sz < tz.endMs && zz.getBlockId(Fz, Wz, Xz) === tz.yK;
-          return Oz || cz(zz, tz), Oz
+        const Pv = performance.now();
+        this.smokes = this.smokes.filter((zv => {
+          const [hv, Sv, ev] = zv.pos, gv = Pv < zv.endMs && vv.getBlockId(hv, Sv, ev) === zv.yN;
+          return gv || Rv(vv, zv), gv
         }));
-        const Fz = Cz(sz);
-        if (Fz !== this.shownFireFrame) {
-          this.shownFireFrame = Fz;
-          for (const tz of this.smokes) null !== tz.fire && ez(zz, tz.fire, Fz)
+        const hv = Ov(Pv);
+        if (hv !== this.shownFireFrame) {
+          this.shownFireFrame = hv;
+          for (const zv of this.smokes) null !== zv.fire && Dv(vv, zv.fire, hv)
         }
-        if (!zz.particlesEnabled()) {
-          for (const zz of this.smokes) zz.pending.fill(0);
+        if (!vv.particlesEnabled()) {
+          for (const vv of this.smokes) vv.pending.fill(0);
           return
         }
-        const Wz = Math.min(tz, 250) / 1e3;
-        for (const Xz of this.smokes) {
-          const [tz, Fz, Oz] = Xz.pos;
-          if (0 !== zz.getBlockId(tz, Fz + 1, Oz)) {
-            Xz.pending.fill(0);
+        const Sv = Math.min(zv, 250) / 1e3;
+        for (const ev of this.smokes) {
+          const [zv, hv, gv] = ev.pos;
+          if (0 !== vv.getBlockId(zv, hv + 1, gv)) {
+            ev.pending.fill(0);
             continue
           }
-          const oz = (Xz.endMs - sz) / 6e3,
-            vz = this.centre;
-          vz[0] = tz + .5, vz[1] = Fz + 1.275, vz[2] = Oz + .5, Gz.forEach(((tz, sz) => {
-            Xz.pending[sz] += tz.perSecond * oz * Wz;
-            const Fz = Math.floor(Xz.pending[sz]);
-            Fz > 0 && this.emit(zz, sz, vz, Fz) && (Xz.pending[sz] -= Fz)
+          const pv = (ev.endMs - Pv) / 6e3,
+            dv = this.centre;
+          dv[0] = zv + .5, dv[1] = hv + 1.275, dv[2] = gv + .5, Vv.forEach(((zv, Pv) => {
+            ev.pending[Pv] += zv.perSecond * pv * Sv;
+            const hv = Math.floor(ev.pending[Pv]);
+            hv > 0 && this.emit(vv, Pv, dv, hv) && (ev.pending[Pv] -= hv)
           }))
         }
       }
-      dispose(zz) {
-        for (const sz of this.smokes) cz(zz, sz);
+      dispose(vv) {
+        for (const Pv of this.smokes) Rv(vv, Pv);
         this.smokes = [];
-        for (const sz of null !== (tz = this.puffers) && void 0 !== tz ? tz : []) {
-          var tz;
-          sz.dispose()
+        for (const Pv of null !== (zv = this.puffers) && void 0 !== zv ? zv : []) {
+          var zv;
+          Pv.dispose()
         }
         this.puffers = null
       }
-      emit(zz, tz, sz, Fz) {
-        return this.puffers ??= Gz.map((zz => {
+      emit(vv, zv, Pv, hv) {
+        return this.puffers ??= Vv.map((vv => {
           let {
-            style: tz,
-            perSecond: sz
-          } = zz;
-          const Fz = (tz.count / .3 + sz) * tz.life[1];
-          return new Yz.d(tz, Math.ceil(4 * Fz), Zz)
-        })), this.puffers[tz].emit(zz, sz, this.renderFrame, Fz)
+            style: zv,
+            perSecond: Pv
+          } = vv;
+          const hv = (zv.count / .3 + Pv) * zv.life[1];
+          return new jv.i(zv, Math.ceil(4 * hv), Kv)
+        })), this.puffers[zv].emit(vv, Pv, this.renderFrame, hv)
       }
     }
 
-    function cz(zz, tz) {
-      null !== tz.fire && (zz.disposeGameMesh(tz.fire), tz.fire = null)
+    function Rv(vv, zv) {
+      null !== zv.fire && (vv.disposeGameMesh(zv.fire), zv.fire = null)
     }
 
-    function jz() {
-      let zz;
-      const tz = new Tz;
+    function xv() {
+      let vv;
+      const zv = new Uv;
       return {
-        onCreate(tz) {
-          zz = tz
+        onCreate(zv) {
+          vv = zv
         },
-        onReceivedMessageFromServer(sz, Fz) {
-          sz === Oz.C && tz.start(zz, Fz)
+        onReceivedMessageFromServer(Pv, hv) {
+          Pv === gv.B && zv.start(vv, hv)
         },
-        onAfterRender(sz) {
-          tz.onAfterRender(zz, sz)
+        onAfterRender(Pv) {
+          zv.onAfterRender(vv, Pv)
         },
         onClose() {
-          tz.dispose(zz)
+          zv.dispose(vv)
         }
       }
     }
 
-    function Az(zz, tz, sz, Fz) {
+    function tv(vv, zv, Pv, hv) {
       return {
-        dialogue: rz(Fz.localPlayerId),
-        fishing: Hz(Fz.localPlayerId),
-        furnaceSmoke: jz(),
-        ironChest: Wz()
+        dialogue: mv(hv.localPlayerId),
+        fishing: iv(hv.localPlayerId),
+        furnaceSmoke: xv(),
+        ironChest: Sv()
       }
     }
 
-    function yz(zz, tz) {
-      for (const Wz of [zz, ...null !== tz && void 0 !== tz ? tz : []]) try {
-        var sz;
-        null === Wz || void 0 === Wz || null === (sz = Wz.onClose) || void 0 === sz || sz.call(Wz)
-      } catch (Fz) {
-        console.error("Error in client onClose callback", Fz)
+    function qv(vv, zv) {
+      for (const Sv of [vv, ...null !== zv && void 0 !== zv ? zv : []]) try {
+        var Pv;
+        null === Sv || void 0 === Sv || null === (Pv = Sv.onClose) || void 0 === Pv || Pv.call(Sv)
+      } catch (hv) {
+        console.error("Error in client onClose callback", hv)
       }
     }
   },
-  38555: (zz, tz, sz) => {
-    sz.d(tz, {
-      b: () => Fz,
-      d: () => Xz
+  38669: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      e: () => hv,
+      i: () => ev
     });
-    const Fz = 1 / .6,
-      Wz = {
+    const hv = 1 / .6,
+      Sv = {
         kind: "smokePuff"
       };
-    class Xz {
-      constructor(zz, tz, sz) {
-        this.style = zz, this.au = tz, this.half = sz, this.particles = null, this.lastFrame = -1
+    class ev {
+      constructor(vv, zv, Pv) {
+        this.style = vv, this.GT = zv, this.half = Pv, this.particles = null, this.lastFrame = -1
       }
-      emit(zz, tz, sz) {
-        let Xz = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return sz !== this.lastFrame && (this.lastFrame = sz, this.particles || (this.particles = zz.createParticles(function(zz, tz) {
+      emit(vv, zv, Pv) {
+        let ev = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return Pv !== this.lastFrame && (this.lastFrame = Pv, this.particles || (this.particles = vv.createParticles(function(vv, zv) {
           const [
-            [sz, Xz, Oz],
-            [oz, vz, Uz]
-          ] = zz.colours;
+            [Pv, ev, gv],
+            [pv, dv, Nv]
+          ] = vv.colours;
           return {
-            texture: zz.soft ? Wz : "square_particle",
-            au: tz,
-            minLifeTime: zz.life[0] / Fz,
-            maxLifeTime: zz.life[1] / Fz,
-            minEmitPower: zz.power[0] * Fz,
-            maxEmitPower: zz.power[1] * Fz,
-            minSize: zz.size[0],
-            maxSize: zz.size[1],
+            texture: vv.soft ? Sv : "square_particle",
+            GT: zv,
+            minLifeTime: vv.life[0] / hv,
+            maxLifeTime: vv.life[1] / hv,
+            minEmitPower: vv.power[0] * hv,
+            maxEmitPower: vv.power[1] * hv,
+            minSize: vv.size[0],
+            maxSize: vv.size[1],
             emitRate: 0,
-            gravity: [0, zz.lift * Fz * Fz, 0],
-            dir1: [-zz.spread, 1, -zz.spread],
-            dir2: [zz.spread, 1, zz.spread],
+            gravity: [0, vv.lift * hv * hv, 0],
+            dir1: [-vv.spread, 1, -vv.spread],
+            dir2: [vv.spread, 1, vv.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [sz, Xz, Oz, zz.alpha],
-              maxColor: [oz, vz, Uz, zz.alpha]
+              minColor: [Pv, ev, gv, vv.alpha],
+              maxColor: [pv, dv, Nv, vv.alpha]
             }, {
               timeFraction: 1,
-              minColor: [sz, Xz, Oz, 0],
-              maxColor: [oz, vz, Uz, 0]
+              minColor: [Pv, ev, gv, 0],
+              maxColor: [pv, dv, Nv, 0]
             }],
-            blendMode: zz.blendMode
+            blendMode: vv.blendMode
           }
-        }(this.style, this.au), {
-          pos: tz,
+        }(this.style, this.GT), {
+          pos: zv,
           half: this.half
-        })), this.particles.moveTo(tz, this.half), this.particles.emit(Xz), !0)
+        })), this.particles.moveTo(zv, this.half), this.particles.emit(ev), !0)
       }
       dispose() {
-        var zz;
-        null === (zz = this.particles) || void 0 === zz || zz.stop(), this.particles = null
+        var vv;
+        null === (vv = this.particles) || void 0 === vv || vv.stop(), this.particles = null
       }
     }
   },
-  4476: (zz, tz, sz) => {
-    sz.d(tz, {
-      e: () => Wz,
-      f: () => Fz,
-      h: () => Xz,
-      l: () => vz,
-      n: () => Oz
+  4592: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      c: () => Sv,
+      e: () => hv,
+      f: () => ev,
+      h: () => dv,
+      l: () => gv
     });
-    const Fz = ["sine", "triangle", "square", "sawtooth"],
-      Wz = 55,
-      Xz = {
+    const hv = ["sine", "triangle", "square", "sawtooth"],
+      Sv = 55,
+      ev = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function Oz(zz) {
-      return "string" !== typeof zz ? zz : Object.hasOwn(Xz, zz) ? Xz[zz] : null
+    function gv(vv) {
+      return "string" !== typeof vv ? vv : Object.hasOwn(ev, vv) ? ev[vv] : null
     }
 
-    function oz(zz, tz, sz) {
-      return Math.min(sz, Math.max(tz, zz))
+    function pv(vv, zv, Pv) {
+      return Math.min(Pv, Math.max(zv, vv))
     }
 
-    function vz(zz) {
-      const tz = oz(zz.durationMs, 10, 500),
-        sz = oz(zz.attackMs, 0, tz),
+    function dv(vv) {
+      const zv = pv(vv.durationMs, 10, 500),
+        Pv = pv(vv.attackMs, 0, zv),
         {
-          intonation: Wz
-        } = zz;
+          intonation: Sv
+        } = vv;
       return {
-        waveform: Fz.includes(zz.waveform) ? zz.waveform : "sine",
-        pitchHz: oz(zz.pitchHz, 20, 4e3),
-        glideSemitones: oz(zz.glideSemitones, -24, 24),
-        durationMs: tz,
-        attackMs: sz,
-        releaseMs: oz(zz.releaseMs, 0, tz - sz),
-        lowpassHz: null === zz.lowpassHz ? null : oz(zz.lowpassHz, 20, 2e4),
-        volume: oz(zz.volume, 0, 2),
+        waveform: hv.includes(vv.waveform) ? vv.waveform : "sine",
+        pitchHz: pv(vv.pitchHz, 20, 4e3),
+        glideSemitones: pv(vv.glideSemitones, -24, 24),
+        durationMs: zv,
+        attackMs: Pv,
+        releaseMs: pv(vv.releaseMs, 0, zv - Pv),
+        lowpassHz: null === vv.lowpassHz ? null : pv(vv.lowpassHz, 20, 2e4),
+        volume: pv(vv.volume, 0, 2),
         intonation: {
-          variationSemitones: oz(Wz.variationSemitones, 0, 6),
-          declineSemitones: oz(Wz.declineSemitones, 0, 12),
-          questionRiseSemitones: oz(Wz.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: oz(Wz.exclaimLiftSemitones, 0, 12)
+          variationSemitones: pv(Sv.variationSemitones, 0, 6),
+          declineSemitones: pv(Sv.declineSemitones, 0, 12),
+          questionRiseSemitones: pv(Sv.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: pv(Sv.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: oz(zz.syllableMs, 25, 200)
+        syllableMs: pv(vv.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);

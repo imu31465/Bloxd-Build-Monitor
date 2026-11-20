@@ -1,11 +1,11 @@
 export const id = 114;
 export const ids = [114];
 export const modules = {
-  6065: (zz, tz, sz) => {
-    sz.d(tz, {
-      d: () => Fz
+  6199: (vv, zv, Pv) => {
+    Pv.d(zv, {
+      d: () => hv
     });
-    const Fz = {
+    const hv = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -38,6 +38,7 @@ export const modules = {
       maxPlayerZoom: 15,
       currencyAmounts: null,
       shopInfo: null,
+      lobbyManage: null,
       lobbyLeaderboardInfo: {
         name: {
           displayName: "Name",
@@ -158,7 +159,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: sz(1888).e,
+      _shopVersion: Pv(1908).d,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,
@@ -167,4 +168,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const zz in modules) Object.freeze(modules[zz]);
+for (const vv in modules) Object.freeze(modules[vv]);
