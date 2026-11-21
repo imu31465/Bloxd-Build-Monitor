@@ -5,8 +5,10 @@ on:
   push:
     paths:
       - scripts/monitor.py
+      - scripts/wasm_inspect.py
       - scripts/regenerate_historic_diff.py
       - tests/test_monitor.py
+      - tests/test_wasm_inspect.py
       - .diff-preview-request
       - requirements.txt
       - .github/workflows/monitor.yml

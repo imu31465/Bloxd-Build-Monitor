@@ -54,6 +54,10 @@ REMOVED_REPORT_PATH = CHANGES_DIR / "removed.md"
 CHANGED_REPORT_PATH = CHANGES_DIR / "changed.md"
 CHANGED_PARTS_DIR = CHANGES_DIR / "changed"
 BUNDLES_DIR = ROOT / "bundles"
+WASM_DIR = ROOT / "wasm"
+WASM_CACHE_DIR = ROOT / "wasm-cache"
+# static/media/<module>.<contenthash>.wasm references embedded in webpack chunks
+WASM_ASSET_RE = re.compile(rb"static/media/([\w\-]+)\.([0-9a-fA-F]{8,64})\.wasm")
 REPO_URL = "https://github.com/imu31465/Bloxd-Build-Monitor"
 STORAGE_VERSION = 2
 SITES = {
@@ -492,6 +496,270 @@ def probe(
     record["beautified"] = beautify_active
     record["downloaded"] = True
     return record
+
+
+# --- WebAssembly module analysis ---------------------------------------------
+#
+# Bloxd ships Rust/WASM modules from /static/media/<module>.<hash>.wasm and
+# references them from webpack chunks. Each detected build scans the stored
+# JS for those references, downloads every module, and archives a readable
+# structural analysis (sections, imports/exports, function statistics) under
+# wasm/<environment>/ alongside machine-readable facts for diffing. The
+# parser (scripts/wasm_inspect.py) is a clean-room implementation of the
+# public W3C WebAssembly binary format specification.
+
+
+def scan_wasm_references(environment: str) -> dict[str, dict]:
+    """Find every static/media wasm asset referenced by the stored bundle."""
+    env_dir = BUNDLES_DIR / environment
+    refs: dict[str, dict] = {}
+    if not env_dir.is_dir():
+        return refs
+    for path in sorted(env_dir.rglob("*.js")):
+        try:
+            data = path.read_bytes()
+        except OSError:
+            continue
+        for match in WASM_ASSET_RE.finditer(data):
+            name = match.group(1).decode("ascii")
+            cdn_hash = match.group(2).decode("ascii")
+            if name not in refs:
+                refs[name] = {
+                    "filename": f"{name}.{cdn_hash}.wasm",
+                    "cdn_hash": cdn_hash,
+                    "referenced_by": path.name,
+                }
+    return refs
+
+
+def _load_wasm_inspect():
+    scripts_dir = Path(__file__).resolve().parent
+    if str(scripts_dir) not in sys.path:
+        sys.path.insert(0, str(scripts_dir))
+    import wasm_inspect
+
+    return wasm_inspect
+
+
+def _write_text_if_changed(path: Path, text: str) -> None:
+    """Write only when the content differs, keeping no-op runs git-clean."""
+    try:
+        if path.is_file() and path.read_text(encoding="utf-8") == text:
+            return
+    except OSError:
+        pass
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+
+
+def update_wasm_analysis(environment: str, record: dict, previous: dict) -> dict | None:
+    """Download and analyze every wasm module referenced by this build.
+
+    Returns the per-environment wasm manifest that is persisted in the state
+    file, or None when the bundle references no wasm assets.
+    """
+    refs = scan_wasm_references(environment)
+    previous_wasm = previous.get("wasm") or {}
+    previous_modules = previous_wasm.get("modules") or {}
+    if not refs and not previous_modules:
+        return None
+
+    try:
+        wasm_inspect = _load_wasm_inspect()
+    except Exception as exc:
+        print(f"WARNING: wasm_inspect unavailable: {exc}", file=sys.stderr)
+        return None
+
+    env_dir = WASM_DIR / environment
+    env_dir.mkdir(parents=True, exist_ok=True)
+    cache_dir = WASM_CACHE_DIR / environment
+    now_text = datetime.now(JST).isoformat(timespec="seconds")
+    build = record.get("build") or "-"
+
+    modules: dict[str, dict] = {}
+    changed: list[str] = []
+    errors: list[str] = []
+    for name, ref in sorted(refs.items()):
+        url = f"https://{environment}/static/media/{ref['filename']}"
+        report_path = env_dir / f"{name}.md"
+        facts_path = env_dir / f"{name}.facts.json"
+        try:
+            previous_entry = previous_modules.get(name)
+            if (
+                previous_entry
+                and previous_entry.get("url") == url
+                and report_path.is_file()
+                and facts_path.is_file()
+            ):
+                # The webpack content hash in the URL is derived from the module
+                # bytes, so an unchanged reference means unchanged content.
+                modules[name] = previous_entry
+                continue
+            cache_path = cache_dir / ref["filename"]
+            if not cache_path.is_file():
+                cache_dir.mkdir(parents=True, exist_ok=True)
+                fetch_bundle(url, cache_path)
+            digest, size = file_digest(cache_path)
+            facts = wasm_inspect.parse_module(cache_path.read_bytes())
+            previous_envelope = None
+            if facts_path.is_file():
+                try:
+                    previous_envelope = json.loads(facts_path.read_text(encoding="utf-8"))
+                except (OSError, ValueError):
+                    previous_envelope = None
+            delta = wasm_inspect.compare_facts(previous_envelope, {"facts": facts})
+            context = {
+                "module": name,
+                "environment": environment,
+                "build": build,
+                "url": url,
+                "sha256": digest,
+                "analyzed_at": now_text,
+                "referenced_by": ref.get("referenced_by"),
+            }
+            history = list((previous_envelope or {}).get("history") or [])
+            history.append({
+                "build": build,
+                "at": now_text,
+                "size": size,
+                "sha256": digest[:16],
+                "functions": facts["functions"]["defined"],
+                "exports": len(facts["exports"]),
+                "imports": len(facts["imports"]),
+            })
+            envelope = {"context": context, "facts": facts, "history": history[-12:]}
+            facts_path.write_text(json.dumps(envelope, indent=1) + "\n", encoding="utf-8")
+            report_path.write_text(
+                wasm_inspect.render_module_markdown(facts, context, delta), encoding="utf-8"
+            )
+            modules[name] = {
+                "url": url,
+                "filename": ref["filename"],
+                "cdn_hash": ref["cdn_hash"],
+                "sha256": digest,
+                "size": size,
+                "report_path": f"wasm/{environment}/{name}.md",
+                "facts_path": f"wasm/{environment}/{name}.facts.json",
+                "summary": {
+                    "functions": facts["functions"]["defined"],
+                    "imported_functions": facts["functions"]["imported"],
+                    "exports": len(facts["exports"]),
+                    "imports": len(facts["imports"]),
+                    "code_bytes": facts["functions"]["code_bytes"],
+                    "data_bytes": facts["data"]["bytes"],
+                    "module_id": (facts["custom"].get("module_name") or ""),
+                },
+                "last_changed_build": build,
+                "last_changed_at": now_text,
+                "error": None,
+            }
+            changed.append(name)
+        except Exception as exc:
+            print(f"WARNING: wasm module {name} failed: {exc}", file=sys.stderr)
+            errors.append(f"{name}: {exc}")
+
+    removed = []
+    for name in sorted(previous_modules):
+        if name in refs:
+            continue
+        removed.append(name)
+        for stale in (env_dir / f"{name}.md", env_dir / f"{name}.facts.json"):
+            stale.unlink(missing_ok=True)
+
+    wasm_record = {
+        "checked_at": now_text,
+        "modules": modules,
+        "changed": changed,
+        "removed": removed,
+        "errors": errors,
+    }
+    write_wasm_environment_index(environment, record, wasm_record)
+    return wasm_record
+
+
+def write_wasm_environment_index(environment: str, record: dict, wasm_record: dict) -> None:
+    """Render wasm/<environment>/index.md summarizing every tracked module."""
+    modules = wasm_record.get("modules") or {}
+    if not modules and not (wasm_record.get("removed") or []):
+        return
+    build = record.get("build") or "-"
+    last_change = max(
+        (entry.get("last_changed_at") or "" for entry in modules.values()), default=""
+    )
+    lines = [
+        f"# WASM modules — {environment}",
+        "",
+        f"> build `{build}`" + (f" · last module change {last_change}" if last_change else "")
+        + " · generated by `scripts/monitor.py` + `scripts/wasm_inspect.py` (clean-room W3C WebAssembly parser)",
+        "",
+        f"{len(modules)} WebAssembly modules referenced by this build's webpack assets. Per-module analysis: sections, imports/exports with signatures, function statistics, embedded strings. Layout: [`../README.md`](../README.md)",
+        "",
+        "| Module | Size | sha256 | Functions | Exports | Imports | Module id | Last change |",
+        "|---|---:|---|---:|---:|---:|---|---|",
+    ]
+    for name, entry in sorted(modules.items()):
+        summary = entry.get("summary") or {}
+        lines.append(
+            f"| [`{name}`]({name}.md) | {human_size(entry.get('size') or 0)} | `{(entry.get('sha256') or '')[:10]}…`"
+            f" | {summary.get('functions', 0):,} | {summary.get('exports', 0):,} | {summary.get('imports', 0):,}"
+            f" | `{summary.get('module_id') or '-'}` | `{entry.get('last_changed_build', '-')}` |"
+        )
+    removed = wasm_record.get("removed") or []
+    if removed:
+        lines += ["", "Removed since the previous build: " + ", ".join(f"`{n}`" for n in removed)]
+    errors = wasm_record.get("errors") or []
+    if errors:
+        lines += ["", "Errors: " + "; ".join(errors)]
+    lines += [
+        "",
+        "<details><summary>How this is produced</summary>",
+        "",
+        "`scripts/monitor.py` scans the archived bundle JS for `static/media/*.wasm` references, downloads each module, and parses it with `scripts/wasm_inspect.py`, a from-scratch implementation of the public W3C WebAssembly Core Specification binary format. Export/import identifiers are randomly re-assigned by Bloxd's build obfuscator on every build, so reports compare signatures, counts and sizes; the numeric suffix of the name-section module id stays stable across builds and marks the module version (the hex prefix is re-randomized). Raw binaries are cached under `wasm-cache/` (not committed).",
+        "",
+        "</details>",
+    ]
+    path = WASM_DIR / environment / "index.md"
+    _write_text_if_changed(path, "\n".join(lines) + "\n")
+
+
+def write_wasm_root_index(current: dict) -> None:
+    """Render wasm/README.md linking every environment's module analysis."""
+    lines = [
+        "# WebAssembly module analysis",
+        "",
+        "Every `.wasm` binary referenced by the tracked Bloxd bundles is downloaded and analyzed on each build update.",
+        "- `wasm/<environment>/<module>.md` — readable analysis report (sections, imports/exports, function statistics, strings)",
+        "- `wasm/<environment>/<module>.facts.json` — machine-readable facts and per-build history for diffing",
+        "- `wasm/<environment>/index.md` — module table for the environment",
+        "",
+        "The parser (`scripts/wasm_inspect.py`) is a clean-room implementation of the public W3C WebAssembly binary format specification; it validates against V8's WebAssembly engine on the real modules.",
+        "",
+        "> Bloxd wasm export/import identifiers are randomly re-assigned by their build obfuscator on every build; compare signatures, counts and sizes rather than names. The name-section module id rotates its hex prefix per build, but its numeric suffix (e.g. `.10797`) stays stable across builds and marks the module version.",
+        "",
+        "| Environment | Build | Modules | Total size | Changed this build | Index |",
+        "|---|---|---:|---:|---|---|",
+    ]
+    any_modules = False
+    for environment, record in current.items():
+        wasm = record.get("wasm") or {}
+        modules = wasm.get("modules") or {}
+        if not modules:
+            continue
+        any_modules = True
+        total = sum(entry.get("size") or 0 for entry in modules.values())
+        build = record.get("build")
+        changed = sorted(
+            name for name, entry in modules.items()
+            if entry.get("last_changed_build") == build
+        )
+        changed_text = ", ".join(f"`{n}`" for n in changed) if changed else "none"
+        lines.append(
+            f"| {environment} | `{record.get('build', '-')}` | {len(modules)} | {human_size(total)} | {changed_text}"
+            f" | [{environment}/index.md]({environment}/index.md) |"
+        )
+    if not any_modules:
+        return
+    _write_text_if_changed(WASM_DIR / "README.md", "\n".join(lines) + "\n")
 
 
 def load_state() -> dict:
@@ -2739,6 +3007,7 @@ def render_readme(state: dict) -> str:
         "- [`changes/removed.md`](changes/removed.md) — Removed bundle files and code deletions",
         "- [`changes/changed.md`](changes/changed.md) — Paginated index of all fine-grained code modifications (`changes/changed/part-NNN.md`)",
         "- [`HISTORY.md`](HISTORY.md) — Cumulative history of all detected builds across environments",
+        "- [`wasm/`](wasm/README.md) — Per-build WebAssembly analysis of every `.wasm` module referenced by the bundle (sections, imports/exports, function statistics)",
         "",
         "| Environment | Checked at (JST) | Build | Main bundle |",
         "|---|---|---|---|",
@@ -2768,6 +3037,13 @@ def render_readme(state: dict) -> str:
             lines.append(
                 f"  - archived build files: {len(files)} ({human_size(total)} total,"
                 " full manifest in `.monitor-state.json`)"
+            )
+        wasm_modules = (record.get("wasm") or {}).get("modules") or {}
+        if wasm_modules:
+            wasm_total = sum(entry.get("size") or 0 for entry in wasm_modules.values())
+            lines.append(
+                f"  - wasm modules: {len(wasm_modules)} ({human_size(wasm_total)} total) —"
+                f" [wasm/{environment}/](wasm/{environment}/index.md)"
             )
     return "\n".join(lines) + "\n"
 
@@ -2838,6 +3114,29 @@ def main() -> int:
             previous.get(environment) or {},
             known_records=known_records,
         )
+
+    # WebAssembly analysis: parse every wasm module referenced by each bundle.
+    # Never fatal: a failure here only skips the wasm reports for one env.
+    for environment, _site_url in SITES.items():
+        try:
+            wasm_record = update_wasm_analysis(
+                environment, current[environment], previous.get(environment) or {}
+            )
+            if wasm_record:
+                current[environment]["wasm"] = wasm_record
+        except Exception as exc:
+            print(f"WARNING: WebAssembly analysis failed for {environment}: {exc}", file=sys.stderr)
+    try:
+        write_wasm_root_index(current)
+    except Exception as exc:
+        print(f"WARNING: wasm root index failed: {exc}", file=sys.stderr)
+
+    def _wasm_modules(env_record):
+        return ((env_record or {}).get("wasm") or {}).get("modules") or {}
+
+    wasm_state_changed = any(
+        _wasm_modules(current[env]) != _wasm_modules(previous.get(env)) for env in SITES
+    )
 
     updated = [env for env, record in current.items() if record["downloaded"]]
     persistent = {
@@ -2912,6 +3211,16 @@ def main() -> int:
             collected_diffs=collected,
             base_commit=base_commit,
         )
+    elif wasm_state_changed:
+        # Wasm analysis produced or updated its manifest while every bundle
+        # stayed unchanged (e.g. the initial analysis rollout): persist it
+        # without emitting build-change reports.
+        STATE_PATH.write_text(
+            json.dumps(persistent, ensure_ascii=False, indent=2) + "\n",
+            encoding="utf-8",
+        )
+        README_PATH.write_text(render_readme(persistent), encoding="utf-8")
+        print("wasm analysis state recorded")
 
     for environment, record in persistent.items():
         if environment in updated:
@@ -2926,6 +3235,15 @@ def main() -> int:
             )
         else:
             print(f"unchanged {environment}: {record['build']}")
+    for environment, record in persistent.items():
+        wasm = record.get("wasm") or {}
+        modules = wasm.get("modules") or {}
+        if modules:
+            print(
+                f"wasm {environment}: {len(modules)} modules,"
+                f" {len(wasm.get('changed') or [])} changed,"
+                f" {len(wasm.get('removed') or [])} removed"
+            )
     return 0
 
 
