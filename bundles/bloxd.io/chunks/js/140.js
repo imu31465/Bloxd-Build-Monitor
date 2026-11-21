@@ -1,17 +1,17 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  7767: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      BloxdFirebaseSdk: () => ab
+  7945: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      BloxdFirebaseSdk: () => Kd
     });
-    var Bb = hb(1727),
-      Ob = hb(2712),
-      Gb = hb(94),
-      Ub = hb(86),
-      Lb = hb(1593),
-      Yb = hb(1926);
-    const Sb = {
+    var pd = kd(1849),
+      Nd = kd(2793),
+      Wd = kd(103),
+      Pd = kd(95),
+      Zd = kd(1726),
+      gd = kd(2019);
+    const Cd = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
@@ -19,145 +19,145 @@ export const modules = {
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97"
     };
-    class ab {
+    class Kd {
       constructor() {}
       static async setup() {
         try {
-          return await ab.setupInternal()
-        } catch (bb) {
-          return console.error("Failed to setup Firebase SDK:", bb), null
+          return await Kd.setupInternal()
+        } catch (dd) {
+          return console.error("Failed to setup Firebase SDK:", dd), null
         }
       }
       static async setupInternal() {
-        const bb = await Promise.all([hb.e(258), hb.e(257)]).then((() => hb(39953))),
-          ub = await Promise.all([hb.e(258), hb.e(259)]).then((() => hb(39986))),
-          Hb = await Promise.all([hb.e(258), hb.e(260)]).then((() => hb(39989))),
-          wb = bb.initializeApp({
-            ...Sb,
-            measurementId: Ob.e
+        const dd = await Promise.all([kd.e(258), kd.e(257)]).then((() => kd(40493))),
+          Jd = await Promise.all([kd.e(258), kd.e(259)]).then((() => kd(40521))),
+          od = await Promise.all([kd.e(258), kd.e(260)]).then((() => kd(40527))),
+          ld = dd.initializeApp({
+            ...Cd,
+            measurementId: Nd.c
           });
-        (0, Ob.A)(), window.gtag("config", Ob.e), (0, Ob.w)(), window.gtag("config", "AW-16469618203");
-        const Zb = ub.getAnalytics(wb),
-          Xb = {
-            portal: Gb.currentUrl.getSearchParam("portal") || "root",
+        (0, Nd.E)(), window.gtag("config", Nd.c), (0, Nd.y)(), window.gtag("config", "AW-16469618203");
+        const Qd = Jd.getAnalytics(ld),
+          Ld = {
+            portal: Wd.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        ub.setUserProperties(Zb, Xb);
-        const pb = Hb.initializeAuth(wb, {
-          persistence: [Hb.indexedDBLocalPersistence, Hb.browserLocalPersistence, Hb.browserSessionPersistence],
-          popupRedirectResolver: (0, Ub.isMobileApp)() ? void 0 : Hb.browserPopupRedirectResolver
+        Jd.setUserProperties(Qd, Ld);
+        const Od = od.initializeAuth(ld, {
+          persistence: [od.indexedDBLocalPersistence, od.browserLocalPersistence, od.browserSessionPersistence],
+          popupRedirectResolver: (0, Pd.isMobileApp)() ? void 0 : od.browserPopupRedirectResolver
         });
-        Hb.useDeviceLanguage(pb);
-        const ob = new Hb.GoogleAuthProvider;
-        ob.setCustomParameters({
+        od.useDeviceLanguage(Od);
+        const ed = new od.GoogleAuthProvider;
+        ed.setCustomParameters({
           prompt: "select_account"
         });
-        const Ab = new Hb.OAuthProvider(Bb.g[Bb.b.APPLE]),
-          lb = new Hb.OAuthProvider(Bb.g[Bb.b.MICROSOFT]);
-        lb.setCustomParameters({
+        const Rd = new od.OAuthProvider(pd.g[pd.e.APPLE]),
+          Id = new od.OAuthProvider(pd.g[pd.e.MICROSOFT]);
+        Id.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const Kb = {
-          [Bb.b.GOOGLE]: ob,
-          [Bb.b.APPLE]: Ab,
-          [Bb.b.MICROSOFT]: lb
+        const Gd = {
+          [pd.e.GOOGLE]: ed,
+          [pd.e.APPLE]: Rd,
+          [pd.e.MICROSOFT]: Id
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((bb => {
-          const ub = Hb.onIdTokenChanged(pb, (hb => {
-            ub(), bb()
+        }), await new Promise((dd => {
+          const Jd = od.onIdTokenChanged(Od, (kd => {
+            Jd(), dd()
           }))
         }));
-        class Wb extends ab {
-          setUserProperties(bb) {
-            ub.setUserProperties(Zb, bb)
+        class vd extends Kd {
+          setUserProperties(dd) {
+            Jd.setUserProperties(Qd, dd)
           }
-          onIdTokenChanged(bb) {
-            Hb.onIdTokenChanged(pb, bb)
+          onIdTokenChanged(dd) {
+            od.onIdTokenChanged(Od, dd)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(bb) {
-            var ub;
-            const hb = await Hb.signInWithPopup(pb, Kb[bb]);
-            return null !== (ub = null === hb || void 0 === hb ? void 0 : hb.user) && void 0 !== ub ? ub : null
+          async signInWithPopup(dd) {
+            var Jd;
+            const kd = await od.signInWithPopup(Od, Gd[dd]);
+            return null !== (Jd = null === kd || void 0 === kd ? void 0 : kd.user) && void 0 !== Jd ? Jd : null
           }
-          async getCurrentUser(bb) {
-            const ub = pb.currentUser;
-            if (!ub) return null;
+          async getCurrentUser(dd) {
+            const Jd = Od.currentUser;
+            if (!Jd) return null;
             const {
-              signInProvider: hb
-            } = await ub.getIdTokenResult(!1);
-            return hb === Bb.g[bb] ? ub : null
+              signInProvider: kd
+            } = await Jd.getIdTokenResult(!1);
+            return kd === pd.g[dd] ? Jd : null
           }
-          async signOut(bb) {
-            null !== await this.getCurrentUser(bb) && await Hb.signOut(pb)
+          async signOut(dd) {
+            null !== await this.getCurrentUser(dd) && await od.signOut(Od)
           }
         }
-        async function Cb(bb, ub) {
-          const hb = await Lb.e.request(`${bb}.${ub}`, {});
-          if (null === hb) return null;
-          const Bb = "google" === bb ? Hb.GoogleAuthProvider.credential(hb.idToken) : Ab.credential({
-            idToken: hb.idToken
+        async function xd(dd, Jd) {
+          const kd = await Zd.e.request(`${dd}.${Jd}`, {});
+          if (null === kd) return null;
+          const pd = "google" === dd ? od.GoogleAuthProvider.credential(kd.idToken) : Rd.credential({
+            idToken: kd.idToken
           });
-          return (await Hb.signInWithCredential(pb, Bb)).user
+          return (await od.signInWithCredential(Od, pd)).user
         }
-        class db extends ab {
-          setUserProperties(bb) {
-            ub.setUserProperties(Zb, bb)
+        class qd extends Kd {
+          setUserProperties(dd) {
+            Jd.setUserProperties(Qd, dd)
           }
-          onIdTokenChanged(bb) {
-            Hb.onIdTokenChanged(pb, bb)
+          onIdTokenChanged(dd) {
+            od.onIdTokenChanged(Od, dd)
           }
-          canSignIn(bb) {
-            return null !== (0, Yb.d)(bb)
+          canSignIn(dd) {
+            return null !== (0, gd.e)(dd)
           }
-          async signInWithPopup(bb) {
-            const ub = (0, Yb.d)(bb);
-            if (null === ub) return console.warn(`The app can't sign in with ${bb}; check canSignIn first`), null;
+          async signInWithPopup(dd) {
+            const Jd = (0, gd.e)(dd);
+            if (null === Jd) return console.warn(`The app can't sign in with ${dd}; check canSignIn first`), null;
             try {
-              return await Cb(ub, "signIn")
-            } catch (hb) {
-              return console.error(`Failed to sign in with ${bb} in the app:`, hb), null
+              return await xd(Jd, "signIn")
+            } catch (kd) {
+              return console.error(`Failed to sign in with ${dd} in the app:`, kd), null
             }
           }
-          async getCurrentUser(bb) {
-            const ub = pb.currentUser;
-            if (ub) {
+          async getCurrentUser(dd) {
+            const Jd = Od.currentUser;
+            if (Jd) {
               const {
-                signInProvider: hb
-              } = await ub.getIdTokenResult(!1);
-              if (hb === Bb.g[bb]) return ub
+                signInProvider: kd
+              } = await Jd.getIdTokenResult(!1);
+              if (kd === pd.g[dd]) return Jd
             }
-            const hb = (0, Yb.d)(bb);
-            if (null === hb) return null;
+            const kd = (0, gd.e)(dd);
+            if (null === kd) return null;
             try {
-              return await Cb(hb, "getCurrentUser")
-            } catch (Ob) {
-              return console.error(`Failed to get the current ${bb} user from the app:`, Ob), null
+              return await xd(kd, "getCurrentUser")
+            } catch (Nd) {
+              return console.error(`Failed to get the current ${dd} user from the app:`, Nd), null
             }
           }
-          async signOut(bb) {
-            const ub = (0, Yb.d)(bb);
-            null !== ub && Lb.e.request(`${ub}.signOut`, {}).catch((ub => {
-              console.error(`Failed to sign out of ${bb} in the app:`, ub)
+          async signOut(dd) {
+            const Jd = (0, gd.e)(dd);
+            null !== Jd && Zd.e.request(`${Jd}.signOut`, {}).catch((Jd => {
+              console.error(`Failed to sign out of ${dd} in the app:`, Jd)
             }));
-            const hb = pb.currentUser;
-            if (hb) {
+            const kd = Od.currentUser;
+            if (kd) {
               const {
-                signInProvider: ub
-              } = await hb.getIdTokenResult(!1);
-              ub === Bb.g[bb] && await Hb.signOut(pb)
+                signInProvider: Jd
+              } = await kd.getIdTokenResult(!1);
+              Jd === pd.g[dd] && await od.signOut(Od)
             }
           }
         }
-        return (0, Ub.isMobileApp)() ? (await Lb.e.ready, new db) : new Wb
+        return (0, Pd.isMobileApp)() ? (await Zd.e.ready, new qd) : new vd
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

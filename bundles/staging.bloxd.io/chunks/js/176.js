@@ -1,11 +1,11 @@
 export const id = 176;
 export const ids = [176];
 export const modules = {
-  8755: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      pageBody: () => Bb
+  8932: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      pageBody: () => pd
     });
-    const Bb = {
+    const pd = {
       whatIs: ["Capture the points, hold the line, win the fight. Bloxd Frontline is a 12v12 FPS where Red and Blue go head to head in fast domination rounds. It's free to play online and there's nothing to install. Gear up at the Armorer, pick one of 17 kits, jump in a vehicle and push the line with your team. You can hop in on your own, but it's better with a full squad."],
       howToPlay: ["You'll join Red or Blue and spawn at your base. Head to the Armorer to choose a kit, then get out there and capture the lettered points on the map. Every point you hold earns your team tickets. First team to 100 tickets takes the round. There's a timer as well, so don't let up. If you go down, you're back in the fight after 5 seconds.", "Kills, captures and wins all earn gold. You can spend it on a mystery kit draw, or at the Quartermaster next to your Armorer for Frag Grenades, healing potions and buffs that last the whole round. Vehicles spawn at each base and around the map. They're great for pushing forward fast, but enemy guns and explosives can wreck them. Your base has a shield over it that pushes enemies out, so there's always somewhere safe to regroup."],
       features: ["Domination Rounds: Capture Points and Race to 100 Tickets", "17 Unique Kits, Including Combat Medic, Ninja, Juggernaut, Wrecker and Marksman", "Vehicles to Drive into Battle", "Quartermaster Buffs: Fleet Footed, Rapid Deploy, Fast Hands and Sure Grip", "Shielded Team Bases and Auto-Balanced Teams", "Ranks from Bronze to Moonstone, Plus Tracked Stats", "Party Up and Play with a Full Squad"],
@@ -37,4 +37,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

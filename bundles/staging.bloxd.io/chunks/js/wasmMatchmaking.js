@@ -1,30 +1,30 @@
-/*! For license information please see halsg.wasmMatchmaking.7d7fbcce.chunk.js.LICENSE.txt */
+/*! For license information please see x17cru.wasmMatchmaking.941cd103.chunk.js.LICENSE.txt */
 export const id = 60;
 export const ids = [60];
 export const modules = {
-  36155: (bb, ub) => {
-    function hb(bb) {
-      if (bb && "object" === typeof bb) {
-        var ub = bb.which || bb.keyCode || bb.charCode;
-        ub && (bb = ub)
+  36706: (dd, Jd) => {
+    function kd(dd) {
+      if (dd && "object" === typeof dd) {
+        var Jd = dd.which || dd.keyCode || dd.charCode;
+        Jd && (dd = Jd)
       }
-      if ("number" === typeof bb) return Ub[bb];
-      var hb, Gb = String(bb);
-      return (hb = Bb[Gb.toLowerCase()]) ? hb : (hb = Ob[Gb.toLowerCase()]) || (1 === Gb.length ? Gb.charCodeAt(0) : void 0)
+      if ("number" === typeof dd) return Pd[dd];
+      var kd, Wd = String(dd);
+      return (kd = pd[Wd.toLowerCase()]) ? kd : (kd = Nd[Wd.toLowerCase()]) || (1 === Wd.length ? Wd.charCodeAt(0) : void 0)
     }
-    hb.isEventKey = function(bb, ub) {
-      if (bb && "object" === typeof bb) {
-        var hb = bb.which || bb.keyCode || bb.charCode;
-        if (null === hb || void 0 === hb) return !1;
-        if ("string" === typeof ub) {
-          var Gb;
-          if (Gb = Bb[ub.toLowerCase()]) return Gb === hb;
-          if (Gb = Ob[ub.toLowerCase()]) return Gb === hb
-        } else if ("number" === typeof ub) return ub === hb;
+    kd.isEventKey = function(dd, Jd) {
+      if (dd && "object" === typeof dd) {
+        var kd = dd.which || dd.keyCode || dd.charCode;
+        if (null === kd || void 0 === kd) return !1;
+        if ("string" === typeof Jd) {
+          var Wd;
+          if (Wd = pd[Jd.toLowerCase()]) return Wd === kd;
+          if (Wd = Nd[Jd.toLowerCase()]) return Wd === kd
+        } else if ("number" === typeof Jd) return Jd === kd;
         return !1
       }
     };
-    var Bb = (ub = bb.exports = hb).code = ub.codes = {
+    var pd = (Jd = dd.exports = kd).code = Jd.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      Ob = ub.aliases = {
+      Nd = Jd.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (Gb = 97; Gb < 123; Gb++) Bb[String.fromCharCode(Gb)] = Gb - 32;
-    for (var Gb = 48; Gb < 58; Gb++) Bb[Gb - 48] = Gb;
-    for (Gb = 1; Gb < 13; Gb++) Bb["f" + Gb] = Gb + 111;
-    for (Gb = 0; Gb < 10; Gb++) Bb["numpad " + Gb] = Gb + 96;
-    var Ub = ub.names = ub.title = {};
-    for (Gb in Bb) Ub[Bb[Gb]] = Gb;
-    for (var Lb in Ob) Bb[Lb] = Ob[Lb]
+    for (Wd = 97; Wd < 123; Wd++) pd[String.fromCharCode(Wd)] = Wd - 32;
+    for (var Wd = 48; Wd < 58; Wd++) pd[Wd - 48] = Wd;
+    for (Wd = 1; Wd < 13; Wd++) pd["f" + Wd] = Wd + 111;
+    for (Wd = 0; Wd < 10; Wd++) pd["numpad " + Wd] = Wd + 96;
+    var Pd = Jd.names = Jd.title = {};
+    for (Wd in pd) Pd[pd[Wd]] = Wd;
+    for (var Zd in Nd) pd[Zd] = Nd[Zd]
   },
-  36322: (bb, ub, hb) => {
-    hb.d(ub, {
-      c: () => Ub
+  36870: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      e: () => Pd
     });
-    var Bb = hb(49);
-    const Ob = Bb.useLayoutEffect;
-    const Gb = function(bb) {
-      var ub = (0, Bb.useRef)(bb);
-      return Ob((function() {
-        ub.current = bb
-      })), ub
+    var pd = kd(56);
+    const Nd = pd.useLayoutEffect;
+    const Wd = function(dd) {
+      var Jd = (0, pd.useRef)(dd);
+      return Nd((function() {
+        Jd.current = dd
+      })), Jd
     };
-    var Ub = function(bb) {
-      var ub = Gb(bb);
-      (0, Bb.useEffect)((function() {
-        var bb = function(bb) {
-          var hb;
-          if (null != ub.current && (hb = ub.current(bb)), bb.defaultPrevented && (bb.returnValue = ""), "string" === typeof hb) return bb.returnValue = hb, hb
+    var Pd = function(dd) {
+      var Jd = Wd(dd);
+      (0, pd.useEffect)((function() {
+        var dd = function(dd) {
+          var kd;
+          if (null != Jd.current && (kd = Jd.current(dd)), dd.defaultPrevented && (dd.returnValue = ""), "string" === typeof kd) return dd.returnValue = kd, kd
         };
-        return window.addEventListener("beforeunload", bb),
+        return window.addEventListener("beforeunload", dd),
           function() {
-            window.removeEventListener("beforeunload", bb)
+            window.removeEventListener("beforeunload", dd)
           }
       }), [])
     }
   },
-  36198: bb => {
-    var ub, hb = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      Bb = /OS X/.test(hb),
-      Ob = /Opera/.test(hb),
-      Gb = !/like Gecko/.test(hb) && !Ob,
-      Ub = bb.exports = {
-        0: Bb ? "<menu>" : "<UNK>",
+  36760: dd => {
+    var Jd, kd = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      pd = /OS X/.test(kd),
+      Nd = /Opera/.test(kd),
+      Wd = !/like Gecko/.test(kd) && !Nd,
+      Pd = dd.exports = {
+        0: pd ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: Bb ? "<meta>" : "<menu>",
+        93: pd ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: Bb && Gb ? "-" : "<volume-mute>",
+        173: pd && Wd ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: Ob ? "`" : "<unicode>",
+        231: Nd ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,180 +234,180 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (ub = 58; ub < 65; ++ub) Ub[ub] = String.fromCharCode(ub);
-    for (ub = 48; ub < 58; ++ub) Ub[ub] = ub - 48 + "";
-    for (ub = 65; ub < 91; ++ub) Ub[ub] = String.fromCharCode(ub);
-    for (ub = 96; ub < 106; ++ub) Ub[ub] = "<num-" + (ub - 96) + ">";
-    for (ub = 112; ub < 136; ++ub) Ub[ub] = "F" + (ub - 111)
+    for (Jd = 58; Jd < 65; ++Jd) Pd[Jd] = String.fromCharCode(Jd);
+    for (Jd = 48; Jd < 58; ++Jd) Pd[Jd] = Jd - 48 + "";
+    for (Jd = 65; Jd < 91; ++Jd) Pd[Jd] = String.fromCharCode(Jd);
+    for (Jd = 96; Jd < 106; ++Jd) Pd[Jd] = "<num-" + (Jd - 96) + ">";
+    for (Jd = 112; Jd < 136; ++Jd) Pd[Jd] = "F" + (Jd - 111)
   },
-  6394: (bb, ub, hb) => {
-    hb.d(ub, {
-      d: () => Ob,
-      g: () => Gb
+  6534: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      c: () => Nd,
+      g: () => Wd
     });
-    var Bb = hb(29);
-    const Ob = "shaderPack";
-    async function Gb() {
-      var bb;
-      let ub = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (bb = await Bb.f.getItem(Ob, ub)) && void 0 !== bb ? bb : null
-    }
-  },
-  8633: (bb, ub, hb) => {
-    hb.d(ub, {
-      c: () => Gb,
-      g: () => Ob
-    });
-    let Bb = !1;
-
-    function Ob() {
-      Bb = !0
-    }
-
-    function Gb() {
-      return Bb
+    var pd = kd(33);
+    const Nd = "shaderPack";
+    async function Wd() {
+      var dd;
+      let Jd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (dd = await pd.f.getItem(Nd, Jd)) && void 0 !== dd ? dd : null
     }
   },
-  36057: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      InGameUi: () => Kb.d,
-      LobbyLeaderboard: () => Wb.e,
-      loadCharacterCustomisationUI: () => Cb,
-      loadCharacterPreview: () => db,
-      matchmakeAndPlay: () => Db,
-      setUpGame: () => rb
+  8835: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => Wd,
+      f: () => Nd
     });
-    var Bb = hb(1141),
-      Ob = hb(148),
-      Gb = hb(13),
-      Ub = hb(36063),
-      Lb = hb(36069),
-      Yb = hb(1836),
-      Sb = hb(36104);
+    let pd = !1;
 
-    function ab() {
-      return !1 !== Yb.b.get("canCustomiseChar")
-    }
-    let Hb = !1;
-    var wb = hb(1218),
-      Zb = hb(1144),
-      Xb = hb(651),
-      pb = hb(8633);
-    var ob = hb(8631),
-      Ab = hb(3364),
-      lb = hb(1694);
-    var Kb = hb(36116),
-      Wb = hb(36664);
-
-    function Cb() {
-      return Promise.all([hb.e(282), hb.e(388)]).then((() => hb(40734)))
+    function Nd() {
+      pd = !0
     }
 
-    function db() {
-      return hb.e(283).then((() => hb(40739)))
+    function Wd() {
+      return pd
+    }
+  },
+  36615: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      InGameUi: () => Gd.b,
+      LobbyLeaderboard: () => vd.e,
+      loadCharacterCustomisationUI: () => xd,
+      loadCharacterPreview: () => qd,
+      matchmakeAndPlay: () => Md,
+      setUpGame: () => Bd
+    });
+    var pd = kd(1266),
+      Nd = kd(149),
+      Wd = kd(22),
+      Pd = kd(36618),
+      Zd = kd(36623),
+      gd = kd(1955),
+      Cd = kd(36657);
+
+    function Kd() {
+      return !1 !== gd.b.get("canCustomiseChar")
+    }
+    let od = !1;
+    var ld = kd(1348),
+      Qd = kd(1273),
+      Ld = kd(686),
+      Od = kd(8835);
+    var ed = kd(8832),
+      Rd = kd(3451),
+      Id = kd(1812);
+    var Gd = kd(36667),
+      vd = kd(37167);
+
+    function xd() {
+      return Promise.all([kd.e(282), kd.e(388)]).then((() => kd(41247)))
     }
 
-    function rb() {
-      return (0, ob.g)()
+    function qd() {
+      return kd.e(283).then((() => kd(41253)))
     }
-    Hb || (Hb = !0, document.addEventListener("keydown", (bb => {
-        (0, Sb.c)(bb, ab)
+
+    function Bd() {
+      return (0, ed.f)()
+    }
+    od || (od = !0, document.addEventListener("keydown", (dd => {
+        (0, Cd.d)(dd, Kd)
       }))),
-      function(bb) {
-        var ub;
-        return !0 !== (null === bb || void 0 === bb ? void 0 : bb.saveData) && !/2g$/.test(null !== (ub = null === bb || void 0 === bb ? void 0 : bb.effectiveType) && void 0 !== ub ? ub : "")
-      }(navigator.connection) && (0, Xb.b)((() => {
-        (0, pb.c)() || Promise.all([hb.e(75), hb.e(133), hb.e(88), hb.e(56)]).then((() => hb(40192))).then((bb => {
-          (0, pb.c)() || bb.startLoadAheadOfJoin({
-            joinStarted: pb.c,
-            language: Zb.h.get().getCurrentLanguageCode()
+      function(dd) {
+        var Jd;
+        return !0 !== (null === dd || void 0 === dd ? void 0 : dd.saveData) && !/2g$/.test(null !== (Jd = null === dd || void 0 === dd ? void 0 : dd.effectiveType) && void 0 !== Jd ? Jd : "")
+      }(navigator.connection) && (0, Ld.c)((() => {
+        (0, Od.d)() || Promise.all([kd.e(75), kd.e(133), kd.e(88), kd.e(56)]).then((() => kd(40737))).then((dd => {
+          (0, Od.d)() || dd.startLoadAheadOfJoin({
+            joinStarted: Od.d,
+            language: Qd.c.get().getCurrentLanguageCode()
           })
-        }), (bb => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", bb)
+        }), (dd => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", dd)
         }))
       }));
-    const jb = Gb.d.get("router");
-    null === jb ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function bb(ub) {
-      if ((0, lb.e)(ub.state.location.pathname)) return void(0, ob.c)().catch((() => {}));
-      const hb = ub.subscribe((Bb => {
-        (0, lb.e)(Bb.location.pathname) && (hb(), (0, Ab.e)().then((() => {
-          bb(ub)
+    const sd = Wd.d.get("router");
+    null === sd ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function dd(Jd) {
+      if ((0, Id.b)(Jd.state.location.pathname)) return void(0, ed.b)().catch((() => {}));
+      const kd = Jd.subscribe((pd => {
+        (0, Id.b)(pd.location.pathname) && (kd(), (0, Rd.d)().then((() => {
+          dd(Jd)
         })))
       }))
-    }(jb), (0, Ub.b)();
-    const nb = (0, Lb.e)((async function(bb, ub) {
+    }(sd), (0, Pd.e)();
+    const ad = (0, Zd.e)((async function(dd, Jd) {
       let {
-        place: hb,
-        userContext: Gb,
-        direct: Ub,
-        rematch: Lb
-      } = bb;
-      const Yb = Ub ? 1 / 0 : performance.now();
-      let Sb;
+        place: kd,
+        userContext: Wd,
+        direct: Pd,
+        rematch: Zd
+      } = dd;
+      const gd = Pd ? 1 / 0 : performance.now();
+      let Cd;
       try {
-        Sb = await (0, ob.c)()
-      } catch (ab) {
-        return console.error("The wasm client did not load:", ab), (0, wb.l)({
+        Cd = await (0, ed.b)()
+      } catch (Kd) {
+        return console.error("The wasm client did not load:", Kd), (0, ld.r)({
           websocketUrl: null
-        }), Bb.b.errorWithCode(String(ab), Ob.k.CONNECT_TO_GAME_SERVER, {
-          error: ab,
-          severity: ub.aborted ? "low" : "medium",
-          Lu: ub.aborted
+        }), pd.b.errorWithCode(String(Kd), Nd.n.CONNECT_TO_GAME_SERVER, {
+          error: Kd,
+          severity: Jd.aborted ? "low" : "medium",
+          CJ: Jd.aborted
         })
       }
-      return Sb.playWasmGame({
-        userContext: Gb,
-        place: hb,
-        matchedAt: Yb,
-        rematch: Lb
-      }, ub)
+      return Cd.playWasmGame({
+        userContext: Wd,
+        place: kd,
+        matchedAt: gd,
+        rematch: Zd
+      }, Jd)
     }));
 
-    function Db() {
-      return (0, ob.c)().catch((() => {})), nb(...arguments)
+    function Md() {
+      return (0, ed.b)().catch((() => {})), ad(...arguments)
     }
   },
-  8631: (bb, ub, hb) => {
-    hb.d(ub, {
-      c: () => ab,
-      g: () => Hb
+  8832: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      b: () => Kd,
+      f: () => od
     });
-    var Bb = hb(2941),
-      Ob = hb(2161),
-      Gb = hb(2987),
-      Ub = hb(4413),
-      Lb = hb(3291),
-      Yb = hb(8633);
-    let Sb = null;
+    var pd = kd(3011),
+      Nd = kd(2245),
+      Wd = kd(3051),
+      Pd = kd(4507),
+      Zd = kd(3360),
+      gd = kd(8835);
+    let Cd = null;
 
-    function ab() {
-      return Ub.c.cancelDownloadForJoin(), (0, Lb.e)(), (0, Ob.h)(), (0, Yb.g)(), (0, Gb.i)(), Promise.all([hb.e(70), hb.e(73), hb.e(72), hb.e(71), hb.e(84), hb.e(261), hb.e(200), hb.e(218), hb.e(239), hb.e(213), hb.e(46)]).then((() => hb(40127))).catch((() => {})), Promise.all([hb.e(75), hb.e(133), hb.e(88), hb.e(56)]).then((() => hb(40192))).then((bb => {
+    function Kd() {
+      return Pd.b.cancelDownloadForJoin(), (0, Zd.e)(), (0, Nd.e)(), (0, gd.f)(), (0, Wd.i)(), Promise.all([kd.e(70), kd.e(73), kd.e(72), kd.e(71), kd.e(84), kd.e(261), kd.e(200), kd.e(218), kd.e(239), kd.e(213), kd.e(46)]).then((() => kd(40663))).catch((() => {})), Promise.all([kd.e(75), kd.e(133), kd.e(88), kd.e(56)]).then((() => kd(40737))).then((dd => {
         let {
-          startJoinLoad: ub
-        } = bb;
-        ub()
-      }), (() => {})), Sb ??= Promise.all([hb.e(72), hb.e(75), hb.e(130), hb.e(74), hb.e(133), hb.e(263), hb.e(187), hb.e(88), hb.e(87), hb.e(86), hb.e(213), hb.e(61)]).then((() => hb(40288))).then((bb => (bb.startWasmPlay(), bb.followPageUiPack((bb => {
-        Bb.b.showGamePack(bb)
-      })), bb)), (bb => {
-        throw Sb = null, bb
-      })), Sb
+          startJoinLoad: Jd
+        } = dd;
+        Jd()
+      }), (() => {})), Cd ??= Promise.all([kd.e(72), kd.e(75), kd.e(130), kd.e(74), kd.e(133), kd.e(263), kd.e(187), kd.e(88), kd.e(87), kd.e(86), kd.e(213), kd.e(61)]).then((() => kd(40851))).then((dd => (dd.startWasmPlay(), dd.followPageUiPack((dd => {
+        pd.d.showGamePack(dd)
+      })), dd)), (dd => {
+        throw Cd = null, dd
+      })), Cd
     }
 
-    function Hb() {
-      return Promise.all([hb.e(72), hb.e(75), hb.e(130), hb.e(74), hb.e(133), hb.e(263), hb.e(187), hb.e(88), hb.e(87), hb.e(86), hb.e(213), hb.e(61)]).then((() => hb(40288))).then((bb => {
-        bb.startWasmPreviews(), bb.prefetchWasmPreviews()
+    function od() {
+      return Promise.all([kd.e(72), kd.e(75), kd.e(130), kd.e(74), kd.e(133), kd.e(263), kd.e(187), kd.e(88), kd.e(87), kd.e(86), kd.e(213), kd.e(61)]).then((() => kd(40851))).then((dd => {
+        dd.startWasmPreviews(), dd.prefetchWasmPreviews()
       }))
     }
   },
-  9280: (bb, ub, hb) => {
-    hb.d(ub, {
-      e: () => Ob,
-      g: () => Gb
+  9422: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => Nd,
+      h: () => Wd
     });
-    var Bb = hb(9235);
-    const Ob = "Air",
-      Gb = Object.freeze(new Bb.d(Ob, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var pd = kd(9383);
+    const Nd = "Air",
+      Wd = Object.freeze(new pd.f(Nd, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

@@ -1,162 +1,162 @@
 export const id = 93;
 export const ids = [92, 93];
 export const modules = {
-  36044: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      countDecodesAs: () => Hb,
-      decodedAudio: () => wb
+  36605: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      countDecodesAs: () => od,
+      decodedAudio: () => ld
     });
-    var Bb = hb(36051),
-      Ob = hb(4626);
-    const Gb = Ob.Howler,
-      Ub = new Map;
-    let Lb = 0;
-    const Yb = {
+    var pd = kd(36608),
+      Nd = kd(4743);
+    const Wd = Nd.Howler,
+      Pd = new Map;
+    let Zd = 0;
+    const gd = {
         song: 0,
         sheet: 0
       },
-      Sb = new WeakMap,
-      ab = new WeakSet;
+      Cd = new WeakMap,
+      Kd = new WeakSet;
 
-    function Hb(bb, ub) {
-      return Sb.set(bb, ub), bb
+    function od(dd, Jd) {
+      return Cd.set(dd, Jd), dd
     }
 
-    function wb() {
+    function ld() {
       return {
-        bytes: Lb,
-        songsDecoded: Yb.song,
-        sheetsDecoded: Yb.sheet
+        bytes: Zd,
+        songsDecoded: gd.song,
+        sheetsDecoded: gd.sheet
       }
     }
 
-    function Zb(bb) {
-      if (ab.has(bb)) return;
-      ab.add(bb);
-      const ub = 1 === bb.decodeAudioData.length,
-        hb = bb.decodeAudioData.bind(bb);
-      bb.decodeAudioData = (bb, Bb, Ob) => {
-        const ab = bb => {
-          const ub = Gb._howls.filter((bb => "loaded" !== bb._state));
+    function Qd(dd) {
+      if (Kd.has(dd)) return;
+      Kd.add(dd);
+      const Jd = 1 === dd.decodeAudioData.length,
+        kd = dd.decodeAudioData.bind(dd);
+      dd.decodeAudioData = (dd, pd, Nd) => {
+        const Kd = dd => {
+          const Jd = Wd._howls.filter((dd => "loaded" !== dd._state));
           try {
-            null === Bb || void 0 === Bb || Bb(bb)
+            null === pd || void 0 === pd || pd(dd)
           } finally {
-            const hb = ub.find((bb => "loaded" === bb._state));
-            void 0 !== hb && "string" === typeof hb._src && function(bb, ub, hb) {
-              var Bb;
-              Lb += hb - (null !== (Bb = Ub.get(ub)) && void 0 !== Bb ? Bb : 0), Ub.set(ub, hb);
-              const Ob = Sb.get(bb);
-              void 0 !== Ob && Yb[Ob]++
-            }(hb, hb._src, bb.length * bb.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const kd = Jd.find((dd => "loaded" === dd._state));
+            void 0 !== kd && "string" === typeof kd._src && function(dd, Jd, kd) {
+              var pd;
+              Zd += kd - (null !== (pd = Pd.get(Jd)) && void 0 !== pd ? pd : 0), Pd.set(Jd, kd);
+              const Nd = Cd.get(dd);
+              void 0 !== Nd && gd[Nd]++
+            }(kd, kd._src, dd.length * dd.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return bb
+          return dd
         };
-        if (!ub) return hb(bb, ab, Ob);
-        const Hb = hb(bb).then(ab);
-        return Hb.catch((bb => {
-          null === Ob || void 0 === Ob || Ob(bb)
-        })), Hb
+        if (!Jd) return kd(dd, Kd, Nd);
+        const od = kd(dd).then(Kd);
+        return od.catch((dd => {
+          null === Nd || void 0 === Nd || Nd(dd)
+        })), od
       }
-    }(0, Bb.f)(wb);
-    const Xb = Ob.Howl.prototype,
-      pb = Xb.init;
-    Xb.init = function(bb) {
-      return Ob.Howler.volume(), Gb.ctx && Zb(Gb.ctx), pb.call(this, bb)
+    }(0, pd.e)(ld);
+    const Ld = Nd.Howl.prototype,
+      Od = Ld.init;
+    Ld.init = function(dd) {
+      return Nd.Howler.volume(), Wd.ctx && Qd(Wd.ctx), Od.call(this, dd)
     };
-    const ob = Xb.unload;
-    Xb.unload = function() {
-      const bb = this._src,
-        ub = ob.call(this);
-      if ("string" !== typeof bb) return ub;
-      const hb = Ub.get(bb);
-      return void 0 !== hb && function(bb) {
-        return !Gb._howls.some((ub => ub._src === bb || "string" === typeof ub._src && bb.indexOf(ub._src) >= 0))
-      }(bb) && (Ub.delete(bb), Lb -= hb), ub
+    const ed = Ld.unload;
+    Ld.unload = function() {
+      const dd = this._src,
+        Jd = ed.call(this);
+      if ("string" !== typeof dd) return Jd;
+      const kd = Pd.get(dd);
+      return void 0 !== kd && function(dd) {
+        return !Wd._howls.some((Jd => Jd._src === dd || "string" === typeof Jd._src && dd.indexOf(Jd._src) >= 0))
+      }(dd) && (Pd.delete(dd), Zd -= kd), Jd
     }
   },
-  36051: (bb, ub, hb) => {
-    hb.d(ub, {
-      b: () => Gb,
-      f: () => Ob
+  36608: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      b: () => Wd,
+      e: () => Nd
     });
-    let Bb = null;
+    let pd = null;
 
-    function Ob(bb) {
-      Bb = bb
+    function Nd(dd) {
+      pd = dd
     }
 
-    function Gb() {
-      return null === Bb ? null : Bb()
+    function Wd() {
+      return null === pd ? null : pd()
     }
   },
-  4626: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      Howl: () => Ob.Howl,
-      Howler: () => Ob.Howler,
-      musicOutput: () => Xb,
-      readyAudioContext: () => pb
+  4743: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      Howl: () => Nd.Howl,
+      Howler: () => Nd.Howler,
+      musicOutput: () => Ld,
+      readyAudioContext: () => Od
     });
-    var Bb, Ob = hb(4629),
-      Gb = hb(4415);
-    const Ub = Ob.Howler;
+    var pd, Nd = kd(4745),
+      Wd = kd(4516);
+    const Pd = Nd.Howler;
 
-    function Lb() {
-      var bb, ub;
-      if (Ub.ctx || !Ub.usingWebAudio || "undefined" === typeof AudioContext || !(0, Gb.d)()) return;
-      const hb = navigator.audioSession;
-      let Bb;
-      "auto" === (null === hb || void 0 === hb ? void 0 : hb.type) && (hb.type = "ambient");
+    function Zd() {
+      var dd, Jd;
+      if (Pd.ctx || !Pd.usingWebAudio || "undefined" === typeof AudioContext || !(0, Wd.h)()) return;
+      const kd = navigator.audioSession;
+      let pd;
+      "auto" === (null === kd || void 0 === kd ? void 0 : kd.type) && (kd.type = "ambient");
       try {
-        Bb = new AudioContext({
+        pd = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Ob = Bb.createGain();
-      Ob.gain.setValueAtTime(Ub._muted ? 0 : null !== (bb = Ub._volume) && void 0 !== bb ? bb : 1, Bb.currentTime), Ob.connect(Bb.destination), Ub.ctx = Bb, Ub.masterGain = Ob, null === (ub = Ub._setup) || void 0 === ub || ub.call(Ub)
+      const Nd = pd.createGain();
+      Nd.gain.setValueAtTime(Pd._muted ? 0 : null !== (dd = Pd._volume) && void 0 !== dd ? dd : 1, pd.currentTime), Nd.connect(pd.destination), Pd.ctx = pd, Pd.masterGain = Nd, null === (Jd = Pd._setup) || void 0 === Jd || Jd.call(Pd)
     }
-    Ub._mobileUnloaded = !0;
-    const Yb = Ub.volume.bind(Ob.Howler);
-    Ub.volume = function() {
-      return Lb(), Yb(...arguments)
+    Pd._mobileUnloaded = !0;
+    const gd = Pd.volume.bind(Nd.Howler);
+    Pd.volume = function() {
+      return Zd(), gd(...arguments)
     };
-    const Sb = Ub.mute.bind(Ob.Howler);
-    Ub.mute = bb => (Lb(), Sb(bb));
-    const ab = Ob.Howl.prototype,
-      Hb = ab.init;
-    ab.init = function(bb) {
-      return Lb(), Hb.call(this, bb)
+    const Cd = Pd.mute.bind(Nd.Howler);
+    Pd.mute = dd => (Zd(), Cd(dd));
+    const Kd = Nd.Howl.prototype,
+      od = Kd.init;
+    Kd.init = function(dd) {
+      return Zd(), od.call(this, dd)
     };
-    let wb = 0;
-    const Zb = null === (Bb = Ub._autoSuspend) || void 0 === Bb ? void 0 : Bb.bind(Ob.Howler);
+    let ld = 0;
+    const Qd = null === (pd = Pd._autoSuspend) || void 0 === pd ? void 0 : pd.bind(Nd.Howler);
 
-    function Xb() {
-      pb();
+    function Ld() {
+      Od();
       const {
-        ctx: bb,
-        masterGain: ub
-      } = Ub;
-      return bb && ub ? {
-        ctx: bb,
-        destination: ub,
-        holdAwake: bb => {
-          var ub, hb;
-          (wb += bb ? 1 : -1, bb) ? null === (ub = Ub._autoResume) || void 0 === ub || ub.call(Ub): null === (hb = Ub._autoSuspend) || void 0 === hb || hb.call(Ub)
+        ctx: dd,
+        masterGain: Jd
+      } = Pd;
+      return dd && Jd ? {
+        ctx: dd,
+        destination: Jd,
+        holdAwake: dd => {
+          var Jd, kd;
+          (ld += dd ? 1 : -1, dd) ? null === (Jd = Pd._autoResume) || void 0 === Jd || Jd.call(Pd): null === (kd = Pd._autoSuspend) || void 0 === kd || kd.call(Pd)
         },
         wake: () => {
-          var ub;
-          "running" !== bb.state && (null === (ub = Ub._autoResume) || void 0 === ub || ub.call(Ub), bb.resume().catch((() => {})))
+          var Jd;
+          "running" !== dd.state && (null === (Jd = Pd._autoResume) || void 0 === Jd || Jd.call(Pd), dd.resume().catch((() => {})))
         }
       } : null
     }
 
-    function pb() {
-      var bb;
-      (Ub.volume(), Ub.ctx && Ub.autoUnlock) && (null === (bb = Ub._unlockAudio) || void 0 === bb || bb.call(Ub))
+    function Od() {
+      var dd;
+      (Pd.volume(), Pd.ctx && Pd.autoUnlock) && (null === (dd = Pd._unlockAudio) || void 0 === dd || dd.call(Pd))
     }
-    Zb && (Ub._autoSuspend = () => wb > 0 ? Ob.Howler : Zb())
+    Qd && (Pd._autoSuspend = () => ld > 0 ? Nd.Howler : Qd())
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

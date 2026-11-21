@@ -1,70 +1,70 @@
 export const id = 119;
 export const ids = [119];
 export const modules = {
-  6264: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      default: () => Xb
+  6402: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      default: () => Ld
     });
-    var Bb = hb(1431),
-      Ob = hb(1455),
-      Gb = hb(2780),
-      Ub = hb(2151),
-      Lb = hb(1357),
-      Yb = hb(1415),
-      Sb = hb(1029),
-      ab = hb(964),
-      Hb = hb(1095),
-      wb = hb(966),
-      Zb = hb(1007);
+    var pd = kd(1557),
+      Nd = kd(1594),
+      Wd = kd(2845),
+      Pd = kd(2238),
+      Zd = kd(1461),
+      gd = kd(1543),
+      Cd = kd(1140),
+      Kd = kd(1053),
+      od = kd(1211),
+      ld = kd(1059),
+      Qd = kd(1103);
 
-    function Xb() {
-      var bb;
+    function Ld() {
+      var dd;
       const {
-        t: ub
-      } = (0, Hb.K)(), {
-        pack: hb
-      } = (0, Bb.F)(), {
-        userContext: Xb
-      } = (0, Sb.d)();
-      if (hb) {
-        const bb = Ob.d[hb];
-        if (null === bb || void 0 === bb || !bb.purchasable) return (0, Zb.jsx)(Yb.NavigatePreserveSearch, {
+        t: Jd
+      } = (0, od.B)(), {
+        pack: kd
+      } = (0, pd.y)(), {
+        userContext: Ld
+      } = (0, Cd.c)();
+      if (kd) {
+        const dd = Nd.d[kd];
+        if (null === dd || void 0 === dd || !dd.purchasable) return (0, Qd.jsx)(gd.NavigatePreserveSearch, {
           to: "/"
         })
       }
-      const pb = hb ? Ob.d[hb] : null,
-        ob = hb ? Gb.n[(0, Ub.m)(hb)] : null,
-        Ab = void 0 !== (null === pb || void 0 === pb ? void 0 : pb.characterSet) || null !== pb && void 0 !== pb && pb.singleItem ? pb.displayName : `${null!==(bb=null===pb||void 0===pb?void 0:pb.displayName)&&void 0!==bb?bb:hb} Pack`,
-        lb = pb ? `Your ${Ab} is Ready!` : "Welcome To Super Rank!",
-        Kb = pb ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
-        Wb = pb ? !Xb.getOwnedCosmeticPacks().includes(hb) : !Xb.playerHasRank("super"),
-        Cb = pb ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : "You should get Super Rank instantly, but it could take up to an hour to apply. If you don't have Super Rank after an hour, contact help@bloxd.io.";
-      return (0, Zb.jsxs)("div", {
+      const Od = kd ? Nd.d[kd] : null,
+        ed = kd ? Wd.k[(0, Pd.o)(kd)] : null,
+        Rd = void 0 !== (null === Od || void 0 === Od ? void 0 : Od.characterSet) || null !== Od && void 0 !== Od && Od.singleItem ? Od.displayName : `${null!==(dd=null===Od||void 0===Od?void 0:Od.displayName)&&void 0!==dd?dd:kd} Pack`,
+        Id = Od ? `Your ${Rd} is Ready!` : "Welcome To Super Rank!",
+        Gd = Od ? "Equip your new cosmetics in the character customisation menu!" : "You can change you name color and cape in the customization menu in game!",
+        vd = Od ? !Ld.getOwnedCosmeticPacks().includes(kd) : !Ld.playerHasRank("super"),
+        xd = Od ? "You should get your cosmetics instantly, but it could take up to an hour to apply. If you don't have them after an hour, contact help@bloxd.io." : "You should get Super Rank instantly, but it could take up to an hour to apply. If you don't have Super Rank after an hour, contact help@bloxd.io.";
+      return (0, Qd.jsxs)("div", {
         className: "PurchaseWelcome AnimFadeInScaleUp",
-        children: [ob && (0, Zb.jsx)(ob, {}), !pb && (0, Zb.jsx)(ab.d, {
+        children: [ed && (0, Qd.jsx)(ed, {}), !Od && (0, Qd.jsx)(Kd.e, {
           iconName: "bolt",
           iconCountPerGroup: 10,
           animation: "Fall",
           midShowerStart: !0,
           customClass: "SuperRankWelcomeIconShower"
-        }), (0, Zb.jsx)("div", {
+        }), (0, Qd.jsx)("div", {
           className: "PurchaseWelcomeTitle FullyFancyText",
-          children: lb
-        }), (0, Zb.jsx)("div", {
+          children: Id
+        }), (0, Qd.jsx)("div", {
           className: "PurchaseWelcomeText",
-          children: Kb
-        }), Wb && (0, Zb.jsxs)("div", {
+          children: Gd
+        }), vd && (0, Qd.jsxs)("div", {
           className: "PurchaseWelcomeWarning",
-          children: [(0, Zb.jsx)(wb.e, {
+          children: [(0, Qd.jsx)(ld.e, {
             name: "circle-info"
-          }), (0, Zb.jsx)("div", {
-            children: Cb
+          }), (0, Qd.jsx)("div", {
+            children: xd
           })]
-        }), (0, Zb.jsx)(Yb.LinkPreserveSearch, {
+        }), (0, Qd.jsx)(gd.LinkPreserveSearch, {
           to: "/",
-          children: (0, Zb.jsx)(Lb.m, {
+          children: (0, Qd.jsx)(Zd.j, {
             className: "PurchaseWelcomeContinue",
-            children: ub("general:continue")
+            children: Jd("general:continue")
           })
         })]
       })
@@ -72,4 +72,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

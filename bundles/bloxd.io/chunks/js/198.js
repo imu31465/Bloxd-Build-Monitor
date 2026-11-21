@@ -1,106 +1,106 @@
 export const id = 198;
 export const ids = [198];
 export const modules = {
-  37357: (bb, ub, hb) => {
-    var Bb = hb(37363);
+  37929: (dd, Jd, kd) => {
+    var pd = kd(37932);
 
-    function Ob(bb) {
-      for (var ub, hb, Ob = 0, Gb = bb.length, Ub = 0; Ub < bb.length;) {
-        for (ub = bb[Ub], hb = 0; Ub < Gb && bb[Ub] === ub;) ++Ub, ++hb;
-        Ob += Bb.log2(hb) / 7 | 0, Ob += Bb.log2(ub >>> 0) / 7 | 0, Ob += 2
+    function Nd(dd) {
+      for (var Jd, kd, Nd = 0, Wd = dd.length, Pd = 0; Pd < dd.length;) {
+        for (Jd = dd[Pd], kd = 0; Pd < Wd && dd[Pd] === Jd;) ++Pd, ++kd;
+        Nd += pd.log2(kd) / 7 | 0, Nd += pd.log2(Jd >>> 0) / 7 | 0, Nd += 2
       }
-      return Ob
+      return Nd
     }
-    ub.size = Ob, ub.encode = function(bb, ub) {
-      ub || (ub = new Uint8Array(Ob(bb)));
-      for (var hb, Bb, Gb = 0, Ub = ub.length, Lb = 0; Lb < bb.length;) {
-        for (hb = bb[Lb], Bb = 0; Lb < bb.length && bb[Lb] === hb;) ++Lb, ++Bb;
-        for (; Gb < Ub && Bb >= 128;) ub[Gb++] = 128 + (127 & Bb), Bb >>>= 7;
-        if (Gb >= Ub) throw new Error("RLE buffer overflow");
-        for (ub[Gb++] = Bb, hb >>>= 0; Gb < Ub && hb >= 128;) ub[Gb++] = 128 + (127 & hb), hb >>>= 7;
-        if (Gb >= Ub) throw new Error("RLE buffer overflow");
-        ub[Gb++] = hb
+    Jd.size = Nd, Jd.encode = function(dd, Jd) {
+      Jd || (Jd = new Uint8Array(Nd(dd)));
+      for (var kd, pd, Wd = 0, Pd = Jd.length, Zd = 0; Zd < dd.length;) {
+        for (kd = dd[Zd], pd = 0; Zd < dd.length && dd[Zd] === kd;) ++Zd, ++pd;
+        for (; Wd < Pd && pd >= 128;) Jd[Wd++] = 128 + (127 & pd), pd >>>= 7;
+        if (Wd >= Pd) throw new Error("RLE buffer overflow");
+        for (Jd[Wd++] = pd, kd >>>= 0; Wd < Pd && kd >= 128;) Jd[Wd++] = 128 + (127 & kd), kd >>>= 7;
+        if (Wd >= Pd) throw new Error("RLE buffer overflow");
+        Jd[Wd++] = kd
       }
-      return ub
-    }, ub.decode = function(bb, ub) {
-      for (var hb, Bb, Ob, Gb, Ub = ub.length, Lb = bb.length, Yb = 0, Sb = 0; Sb < Lb;) {
-        for (hb = 0, Bb = 0; Sb < Lb && bb[Sb] >= 128;) hb += (127 & bb[Sb++]) << Bb, Bb += 7;
-        if (hb += bb[Sb++] << Bb, Sb >= Lb) throw new Error("RLE buffer underrun");
-        if (Yb + hb > Ub) throw new Error("Chunk buffer overflow");
-        for (Ob = 0, Bb = 0; Sb < Lb && bb[Sb] >= 128;) Ob += (127 & bb[Sb++]) << Bb, Bb += 7;
-        if (Sb >= Lb) throw new Error("RLE buffer underrun");
-        for (Ob += bb[Sb++] << Bb, Gb = 0; Gb < hb; ++Gb) ub[Yb++] = Ob
+      return Jd
+    }, Jd.decode = function(dd, Jd) {
+      for (var kd, pd, Nd, Wd, Pd = Jd.length, Zd = dd.length, gd = 0, Cd = 0; Cd < Zd;) {
+        for (kd = 0, pd = 0; Cd < Zd && dd[Cd] >= 128;) kd += (127 & dd[Cd++]) << pd, pd += 7;
+        if (kd += dd[Cd++] << pd, Cd >= Zd) throw new Error("RLE buffer underrun");
+        if (gd + kd > Pd) throw new Error("Chunk buffer overflow");
+        for (Nd = 0, pd = 0; Cd < Zd && dd[Cd] >= 128;) Nd += (127 & dd[Cd++]) << pd, pd += 7;
+        if (Cd >= Zd) throw new Error("RLE buffer underrun");
+        for (Nd += dd[Cd++] << pd, Wd = 0; Wd < kd; ++Wd) Jd[gd++] = Nd
       }
-      return ub
+      return Jd
     }
   },
-  37363: (bb, ub) => {
-    function hb(bb) {
-      var ub = 32;
-      return (bb &= -bb) && ub--, 65535 & bb && (ub -= 16), 16711935 & bb && (ub -= 8), 252645135 & bb && (ub -= 4), 858993459 & bb && (ub -= 2), 1431655765 & bb && (ub -= 1), ub
+  37932: (dd, Jd) => {
+    function kd(dd) {
+      var Jd = 32;
+      return (dd &= -dd) && Jd--, 65535 & dd && (Jd -= 16), 16711935 & dd && (Jd -= 8), 252645135 & dd && (Jd -= 4), 858993459 & dd && (Jd -= 2), 1431655765 & dd && (Jd -= 1), Jd
     }
-    ub.INT_BITS = 32, ub.INT_MAX = 2147483647, ub.INT_MIN = -1 << 31, ub.sign = function(bb) {
-      return (bb > 0) - (bb < 0)
-    }, ub.abs = function(bb) {
-      var ub = bb >> 31;
-      return (bb ^ ub) - ub
-    }, ub.min = function(bb, ub) {
-      return ub ^ (bb ^ ub) & -(bb < ub)
-    }, ub.max = function(bb, ub) {
-      return bb ^ (bb ^ ub) & -(bb < ub)
-    }, ub.isPow2 = function(bb) {
-      return !(bb & bb - 1) && !!bb
-    }, ub.log2 = function(bb) {
-      var ub, hb;
-      return ub = (bb > 65535) << 4, ub |= hb = ((bb >>>= ub) > 255) << 3, ub |= hb = ((bb >>>= hb) > 15) << 2, (ub |= hb = ((bb >>>= hb) > 3) << 1) | (bb >>>= hb) >> 1
-    }, ub.log10 = function(bb) {
-      return bb >= 1e9 ? 9 : bb >= 1e8 ? 8 : bb >= 1e7 ? 7 : bb >= 1e6 ? 6 : bb >= 1e5 ? 5 : bb >= 1e4 ? 4 : bb >= 1e3 ? 3 : bb >= 100 ? 2 : bb >= 10 ? 1 : 0
-    }, ub.popCount = function(bb) {
-      return 16843009 * ((bb = (858993459 & (bb -= bb >>> 1 & 1431655765)) + (bb >>> 2 & 858993459)) + (bb >>> 4) & 252645135) >>> 24
-    }, ub.countTrailingZeros = hb, ub.nextPow2 = function(bb) {
-      return bb += 0 === bb, --bb, bb |= bb >>> 1, bb |= bb >>> 2, bb |= bb >>> 4, bb |= bb >>> 8, (bb |= bb >>> 16) + 1
-    }, ub.prevPow2 = function(bb) {
-      return bb |= bb >>> 1, bb |= bb >>> 2, bb |= bb >>> 4, bb |= bb >>> 8, (bb |= bb >>> 16) - (bb >>> 1)
-    }, ub.parity = function(bb) {
-      return bb ^= bb >>> 16, bb ^= bb >>> 8, bb ^= bb >>> 4, 27030 >>> (bb &= 15) & 1
+    Jd.INT_BITS = 32, Jd.INT_MAX = 2147483647, Jd.INT_MIN = -1 << 31, Jd.sign = function(dd) {
+      return (dd > 0) - (dd < 0)
+    }, Jd.abs = function(dd) {
+      var Jd = dd >> 31;
+      return (dd ^ Jd) - Jd
+    }, Jd.min = function(dd, Jd) {
+      return Jd ^ (dd ^ Jd) & -(dd < Jd)
+    }, Jd.max = function(dd, Jd) {
+      return dd ^ (dd ^ Jd) & -(dd < Jd)
+    }, Jd.isPow2 = function(dd) {
+      return !(dd & dd - 1) && !!dd
+    }, Jd.log2 = function(dd) {
+      var Jd, kd;
+      return Jd = (dd > 65535) << 4, Jd |= kd = ((dd >>>= Jd) > 255) << 3, Jd |= kd = ((dd >>>= kd) > 15) << 2, (Jd |= kd = ((dd >>>= kd) > 3) << 1) | (dd >>>= kd) >> 1
+    }, Jd.log10 = function(dd) {
+      return dd >= 1e9 ? 9 : dd >= 1e8 ? 8 : dd >= 1e7 ? 7 : dd >= 1e6 ? 6 : dd >= 1e5 ? 5 : dd >= 1e4 ? 4 : dd >= 1e3 ? 3 : dd >= 100 ? 2 : dd >= 10 ? 1 : 0
+    }, Jd.popCount = function(dd) {
+      return 16843009 * ((dd = (858993459 & (dd -= dd >>> 1 & 1431655765)) + (dd >>> 2 & 858993459)) + (dd >>> 4) & 252645135) >>> 24
+    }, Jd.countTrailingZeros = kd, Jd.nextPow2 = function(dd) {
+      return dd += 0 === dd, --dd, dd |= dd >>> 1, dd |= dd >>> 2, dd |= dd >>> 4, dd |= dd >>> 8, (dd |= dd >>> 16) + 1
+    }, Jd.prevPow2 = function(dd) {
+      return dd |= dd >>> 1, dd |= dd >>> 2, dd |= dd >>> 4, dd |= dd >>> 8, (dd |= dd >>> 16) - (dd >>> 1)
+    }, Jd.parity = function(dd) {
+      return dd ^= dd >>> 16, dd ^= dd >>> 8, dd ^= dd >>> 4, 27030 >>> (dd &= 15) & 1
     };
-    var Bb = new Array(256);
-    ! function(bb) {
-      for (var ub = 0; ub < 256; ++ub) {
-        var hb = ub,
-          Bb = ub,
-          Ob = 7;
-        for (hb >>>= 1; hb; hb >>>= 1) Bb <<= 1, Bb |= 1 & hb, --Ob;
-        bb[ub] = Bb << Ob & 255
+    var pd = new Array(256);
+    ! function(dd) {
+      for (var Jd = 0; Jd < 256; ++Jd) {
+        var kd = Jd,
+          pd = Jd,
+          Nd = 7;
+        for (kd >>>= 1; kd; kd >>>= 1) pd <<= 1, pd |= 1 & kd, --Nd;
+        dd[Jd] = pd << Nd & 255
       }
-    }(Bb), ub.reverse = function(bb) {
-      return Bb[255 & bb] << 24 | Bb[bb >>> 8 & 255] << 16 | Bb[bb >>> 16 & 255] << 8 | Bb[bb >>> 24 & 255]
-    }, ub.interleave2 = function(bb, ub) {
-      return (bb = 1431655765 & ((bb = 858993459 & ((bb = 252645135 & ((bb = 16711935 & ((bb &= 65535) | bb << 8)) | bb << 4)) | bb << 2)) | bb << 1)) | (ub = 1431655765 & ((ub = 858993459 & ((ub = 252645135 & ((ub = 16711935 & ((ub &= 65535) | ub << 8)) | ub << 4)) | ub << 2)) | ub << 1)) << 1
-    }, ub.deinterleave2 = function(bb, ub) {
-      return (bb = 65535 & ((bb = 16711935 & ((bb = 252645135 & ((bb = 858993459 & ((bb = bb >>> ub & 1431655765) | bb >>> 1)) | bb >>> 2)) | bb >>> 4)) | bb >>> 16)) << 16 >> 16
-    }, ub.interleave3 = function(bb, ub, hb) {
-      return bb = 1227133513 & ((bb = 3272356035 & ((bb = 251719695 & ((bb = 4278190335 & ((bb &= 1023) | bb << 16)) | bb << 8)) | bb << 4)) | bb << 2), (bb |= (ub = 1227133513 & ((ub = 3272356035 & ((ub = 251719695 & ((ub = 4278190335 & ((ub &= 1023) | ub << 16)) | ub << 8)) | ub << 4)) | ub << 2)) << 1) | (hb = 1227133513 & ((hb = 3272356035 & ((hb = 251719695 & ((hb = 4278190335 & ((hb &= 1023) | hb << 16)) | hb << 8)) | hb << 4)) | hb << 2)) << 2
-    }, ub.deinterleave3 = function(bb, ub) {
-      return (bb = 1023 & ((bb = 4278190335 & ((bb = 251719695 & ((bb = 3272356035 & ((bb = bb >>> ub & 1227133513) | bb >>> 2)) | bb >>> 4)) | bb >>> 8)) | bb >>> 16)) << 22 >> 22
-    }, ub.nextCombination = function(bb) {
-      var ub = bb | bb - 1;
-      return ub + 1 | (~ub & -~ub) - 1 >>> hb(bb) + 1
+    }(pd), Jd.reverse = function(dd) {
+      return pd[255 & dd] << 24 | pd[dd >>> 8 & 255] << 16 | pd[dd >>> 16 & 255] << 8 | pd[dd >>> 24 & 255]
+    }, Jd.interleave2 = function(dd, Jd) {
+      return (dd = 1431655765 & ((dd = 858993459 & ((dd = 252645135 & ((dd = 16711935 & ((dd &= 65535) | dd << 8)) | dd << 4)) | dd << 2)) | dd << 1)) | (Jd = 1431655765 & ((Jd = 858993459 & ((Jd = 252645135 & ((Jd = 16711935 & ((Jd &= 65535) | Jd << 8)) | Jd << 4)) | Jd << 2)) | Jd << 1)) << 1
+    }, Jd.deinterleave2 = function(dd, Jd) {
+      return (dd = 65535 & ((dd = 16711935 & ((dd = 252645135 & ((dd = 858993459 & ((dd = dd >>> Jd & 1431655765) | dd >>> 1)) | dd >>> 2)) | dd >>> 4)) | dd >>> 16)) << 16 >> 16
+    }, Jd.interleave3 = function(dd, Jd, kd) {
+      return dd = 1227133513 & ((dd = 3272356035 & ((dd = 251719695 & ((dd = 4278190335 & ((dd &= 1023) | dd << 16)) | dd << 8)) | dd << 4)) | dd << 2), (dd |= (Jd = 1227133513 & ((Jd = 3272356035 & ((Jd = 251719695 & ((Jd = 4278190335 & ((Jd &= 1023) | Jd << 16)) | Jd << 8)) | Jd << 4)) | Jd << 2)) << 1) | (kd = 1227133513 & ((kd = 3272356035 & ((kd = 251719695 & ((kd = 4278190335 & ((kd &= 1023) | kd << 16)) | kd << 8)) | kd << 4)) | kd << 2)) << 2
+    }, Jd.deinterleave3 = function(dd, Jd) {
+      return (dd = 1023 & ((dd = 4278190335 & ((dd = 251719695 & ((dd = 3272356035 & ((dd = dd >>> Jd & 1227133513) | dd >>> 2)) | dd >>> 4)) | dd >>> 8)) | dd >>> 16)) << 22 >> 22
+    }, Jd.nextCombination = function(dd) {
+      var Jd = dd | dd - 1;
+      return Jd + 1 | (~Jd & -~Jd) - 1 >>> kd(dd) + 1
     }
   },
-  39263: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      emptyColumnHeight: () => Wb,
-      loadHeatmapSchematic: () => Cb,
-      readSchematicBlocks: () => db
+  39778: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      emptyColumnHeight: () => vd,
+      loadHeatmapSchematic: () => xd,
+      readSchematicBlocks: () => qd
     });
-    var Bb = hb(3520),
-      Ob = hb.n(Bb),
-      Gb = hb(3507),
-      Ub = hb(37357),
-      Lb = hb(191),
-      Yb = hb(9181);
-    const Sb = [{
+    var pd = kd(3633),
+      Nd = kd.n(pd),
+      Wd = kd(3615),
+      Pd = kd(37929),
+      Zd = kd(193),
+      gd = kd(9331);
+    const Cd = [{
         name: "x",
         type: "int"
       }, {
@@ -110,20 +110,20 @@ export const modules = {
         name: "z",
         type: "int"
       }],
-      ab = [{
+      Kd = [{
         name: "name",
         type: "string"
       }, {
         name: "startOffset",
         type: {
           type: "record",
-          fields: Sb
+          fields: Cd
         }
       }, {
         name: "dimensions",
         type: {
           type: "record",
-          fields: Sb
+          fields: Cd
         }
       }, {
         name: "chunkData",
@@ -131,26 +131,26 @@ export const modules = {
           type: "array",
           items: {
             type: "record",
-            fields: [...Sb, {
+            fields: [...Cd, {
               name: "rle",
               type: "bytes"
             }]
           }
         }
       }],
-      Hb = Ob().Type.forSchema({
+      od = Nd().Type.forSchema({
         type: "record",
-        fields: ab
+        fields: Kd
       }),
-      wb = Ob().Type.forSchema({
+      ld = Nd().Type.forSchema({
         type: "record",
-        fields: [...ab, {
+        fields: [...Kd, {
           name: "blockData",
           type: {
             type: "array",
             items: {
               type: "record",
-              fields: [...Sb, {
+              fields: [...Cd, {
                 name: "data",
                 type: "bytes"
               }]
@@ -160,187 +160,187 @@ export const modules = {
           name: "pasteOffset",
           type: {
             type: "record",
-            fields: Sb
+            fields: Cd
           }
         }]
       }),
-      Zb = 2,
-      Xb = 6,
-      pb = {
+      Qd = 2,
+      Ld = 6,
+      Od = {
         Water: [63, 118, 228],
         Lava: [232, 110, 30]
       },
-      ob = [150, 150, 150],
-      Ab = 16,
-      lb = 4096,
-      Kb = Lb.e.bX,
-      Wb = -2147483648;
-    async function Cb(bb) {
-      const ub = await db(new Uint8Array(await bb.arrayBuffer()), await async function() {
+      ed = [150, 150, 150],
+      Rd = 16,
+      Id = 4096,
+      Gd = Zd.g.KL,
+      vd = -2147483648;
+    async function xd(dd) {
+      const Jd = await qd(new Uint8Array(await dd.arrayBuffer()), await async function() {
         const {
-          averageColors: bb
-        } = await hb.e(202).then((() => hb(33950))), ub = new Map;
-        return hb => {
-          var Bb, Ob, Gb, Ub, Lb;
-          const Sb = ub.get(hb);
-          if (void 0 !== Sb) return Sb;
-          const ab = null !== (Bb = null === (Ob = Yb.i[hb]) || void 0 === Ob ? void 0 : Ob.name) && void 0 !== Bb ? Bb : "",
-            Hb = null !== (Gb = bb[ab]) && void 0 !== Gb ? Gb : bb[ab.split("|")[0]],
-            wb = pb[ab.split("|")[0]],
-            Zb = null !== (Ub = null !== (Lb = null === Hb || void 0 === Hb ? void 0 : Hb[0]) && void 0 !== Lb ? Lb : wb) && void 0 !== Ub ? Ub : 0 === (null === Hb || void 0 === Hb ? void 0 : Hb.length) ? null : ob;
-          return ub.set(hb, Zb), Zb
+          averageColors: dd
+        } = await kd.e(202).then((() => kd(34385))), Jd = new Map;
+        return kd => {
+          var pd, Nd, Wd, Pd, Zd;
+          const Cd = Jd.get(kd);
+          if (void 0 !== Cd) return Cd;
+          const Kd = null !== (pd = null === (Nd = gd.g[kd]) || void 0 === Nd ? void 0 : Nd.name) && void 0 !== pd ? pd : "",
+            od = null !== (Wd = dd[Kd]) && void 0 !== Wd ? Wd : dd[Kd.split("|")[0]],
+            ld = Od[Kd.split("|")[0]],
+            Qd = null !== (Pd = null !== (Zd = null === od || void 0 === od ? void 0 : od[0]) && void 0 !== Zd ? Zd : ld) && void 0 !== Pd ? Pd : 0 === (null === od || void 0 === od ? void 0 : od.length) ? null : ed;
+          return Jd.set(kd, Qd), Qd
         }
       }());
       return {
-        surface: ub.surface,
-        topDown: jb(ub.columnTops)
+        surface: Jd.surface,
+        topDown: sd(Jd.columnTops)
       }
     }
-    async function db(bb, ub) {
-      var hb;
-      if (bb.byteLength < 4) throw new Error("The file is too short to be a schematic.");
-      const Bb = new DataView(bb.buffer, bb.byteOffset, bb.byteLength).getUint32(0, !0);
-      if (Bb > Xb) throw new Error("The file isn't a schematic this version of Bloxd can read.");
-      const Ob = (Bb >= Zb ? wb : Hb).decode(Gb.VZ.from(bb.subarray(4)), 0).value;
-      if (!Ob) throw new Error("The file isn't a schematic.");
-      if (0 === Ob.chunkData.length) throw new Error("The schematic has no blocks in it.");
-      const Lb = null !== (hb = Ob.pasteOffset) && void 0 !== hb ? hb : {
+    async function qd(dd, Jd) {
+      var kd;
+      if (dd.byteLength < 4) throw new Error("The file is too short to be a schematic.");
+      const pd = new DataView(dd.buffer, dd.byteOffset, dd.byteLength).getUint32(0, !0);
+      if (pd > Ld) throw new Error("The file isn't a schematic this version of Bloxd can read.");
+      const Nd = (pd >= Qd ? ld : od).decode(Wd.kL.from(dd.subarray(4)), 0).value;
+      if (!Nd) throw new Error("The file isn't a schematic.");
+      if (0 === Nd.chunkData.length) throw new Error("The schematic has no blocks in it.");
+      const Zd = null !== (kd = Nd.pasteOffset) && void 0 !== kd ? kd : {
           x: 0,
           y: 0,
           z: 0
         },
-        Yb = [Lb.x, Lb.y, Lb.z].map((bb => Math.floor(bb / Kb))),
-        Sb = Ob.chunkData.map((bb => ({
-          x: bb.x + Yb[0],
-          y: bb.y + Yb[1],
-          z: bb.z + Yb[2],
-          rle: bb.rle
+        gd = [Zd.x, Zd.y, Zd.z].map((dd => Math.floor(dd / Gd))),
+        Cd = Nd.chunkData.map((dd => ({
+          x: dd.x + gd[0],
+          y: dd.y + gd[1],
+          z: dd.z + gd[2],
+          rle: dd.rle
         }))),
-        ab = new Map;
-      for (const [Gb, Hb] of Sb.entries()) {
-        const bb = new Uint16Array(Kb ** 3);
-        Ub.decode(Hb.rle, bb), ab.set(`${Hb.x},${Hb.y},${Hb.z}`, bb), Gb % Ab === Ab - 1 && await nb()
+        Kd = new Map;
+      for (const [Wd, od] of Cd.entries()) {
+        const dd = new Uint16Array(Gd ** 3);
+        Pd.decode(od.rle, dd), Kd.set(`${od.x},${od.y},${od.z}`, dd), Wd % Rd === Rd - 1 && await ad()
       }
-      const pb = (bb, ub, hb) => bb * Kb * Kb + ub * Kb + hb,
-        ob = (bb, ub, hb) => {
-          var Bb, Ob;
-          const Gb = Math.floor(bb / Kb),
-            Ub = Math.floor(ub / Kb),
-            Lb = Math.floor(hb / Kb);
-          return null !== (Bb = null === (Ob = ab.get(`${Gb},${Ub},${Lb}`)) || void 0 === Ob ? void 0 : Ob[pb(bb - Gb * Kb, ub - Ub * Kb, hb - Lb * Kb)]) && void 0 !== Bb ? Bb : 0
+      const Od = (dd, Jd, kd) => dd * Gd * Gd + Jd * Gd + kd,
+        ed = (dd, Jd, kd) => {
+          var pd, Nd;
+          const Wd = Math.floor(dd / Gd),
+            Pd = Math.floor(Jd / Gd),
+            Zd = Math.floor(kd / Gd);
+          return null !== (pd = null === (Nd = Kd.get(`${Wd},${Pd},${Zd}`)) || void 0 === Nd ? void 0 : Nd[Od(dd - Wd * Gd, Jd - Pd * Gd, kd - Zd * Gd)]) && void 0 !== pd ? pd : 0
         },
-        lb = new Map,
-        Cb = [],
-        db = [];
-      for (const [Gb, Ub] of Sb.entries()) {
-        const bb = ab.get(`${Ub.x},${Ub.y},${Ub.z}`),
-          hb = [Ub.x * Kb, Ub.y * Kb, Ub.z * Kb],
-          Bb = (ub, Bb, Ob) => ub < 0 || Bb < 0 || Ob < 0 || ub >= Kb || Bb >= Kb || Ob >= Kb ? ob(hb[0] + ub, hb[1] + Bb, hb[2] + Ob) : bb[pb(ub, Bb, Ob)],
-          Ob = `${Ub.x},${Ub.z}`;
-        let Lb = lb.get(Ob);
-        void 0 === Lb && (Lb = {
-          chunkX: Ub.x,
-          chunkZ: Ub.z,
-          heights: new Int32Array(Kb * Kb).fill(Wb),
-          colours: new Uint8Array(Kb * Kb * 3)
-        }, lb.set(Ob, Lb));
-        for (let Gb = 0; Gb < Kb; Gb++)
-          for (let Ob = 0; Ob < Kb; Ob++)
-            for (let Ub = 0; Ub < Kb; Ub++) {
-              const Yb = bb[pb(Gb, Ob, Ub)];
-              if (0 === Yb) continue;
-              const Sb = hb[0] + Gb,
-                ab = hb[1] + Ob,
-                Hb = hb[2] + Ub,
-                wb = ub(Yb);
-              if (null === wb) continue;
-              const Zb = Ub * Kb + Gb;
-              ab > Lb.heights[Zb] && (Lb.heights[Zb] = ab, Lb.colours.set(wb, 3 * Zb));
-              !rb(Yb) && (rb(Bb(Gb + 1, Ob, Ub)) || rb(Bb(Gb - 1, Ob, Ub)) || rb(Bb(Gb, Ob + 1, Ub)) || rb(Bb(Gb, Ob - 1, Ub)) || rb(Bb(Gb, Ob, Ub + 1)) || rb(Bb(Gb, Ob, Ub - 1))) && (Cb.push(Sb, ab, Hb), db.push(wb[0], wb[1], wb[2]))
+        Id = new Map,
+        xd = [],
+        qd = [];
+      for (const [Wd, Pd] of Cd.entries()) {
+        const dd = Kd.get(`${Pd.x},${Pd.y},${Pd.z}`),
+          kd = [Pd.x * Gd, Pd.y * Gd, Pd.z * Gd],
+          pd = (Jd, pd, Nd) => Jd < 0 || pd < 0 || Nd < 0 || Jd >= Gd || pd >= Gd || Nd >= Gd ? ed(kd[0] + Jd, kd[1] + pd, kd[2] + Nd) : dd[Od(Jd, pd, Nd)],
+          Nd = `${Pd.x},${Pd.z}`;
+        let Zd = Id.get(Nd);
+        void 0 === Zd && (Zd = {
+          chunkX: Pd.x,
+          chunkZ: Pd.z,
+          heights: new Int32Array(Gd * Gd).fill(vd),
+          colours: new Uint8Array(Gd * Gd * 3)
+        }, Id.set(Nd, Zd));
+        for (let Wd = 0; Wd < Gd; Wd++)
+          for (let Nd = 0; Nd < Gd; Nd++)
+            for (let Pd = 0; Pd < Gd; Pd++) {
+              const gd = dd[Od(Wd, Nd, Pd)];
+              if (0 === gd) continue;
+              const Cd = kd[0] + Wd,
+                Kd = kd[1] + Nd,
+                od = kd[2] + Pd,
+                ld = Jd(gd);
+              if (null === ld) continue;
+              const Qd = Pd * Gd + Wd;
+              Kd > Zd.heights[Qd] && (Zd.heights[Qd] = Kd, Zd.colours.set(ld, 3 * Qd));
+              !Bd(gd) && (Bd(pd(Wd + 1, Nd, Pd)) || Bd(pd(Wd - 1, Nd, Pd)) || Bd(pd(Wd, Nd + 1, Pd)) || Bd(pd(Wd, Nd - 1, Pd)) || Bd(pd(Wd, Nd, Pd + 1)) || Bd(pd(Wd, Nd, Pd - 1))) && (xd.push(Cd, Kd, od), qd.push(ld[0], ld[1], ld[2]))
             }
-        Gb % Ab === Ab - 1 && await nb()
+        Wd % Rd === Rd - 1 && await ad()
       }
-      if (0 === Cb.length) throw new Error("The schematic has no blocks in it.");
+      if (0 === xd.length) throw new Error("The schematic has no blocks in it.");
       return {
-        name: Ob.name,
+        name: Nd.name,
         surface: {
-          positions: Int32Array.from(Cb),
-          colours: Uint8Array.from(db),
-          count: Cb.length / 3
+          positions: Int32Array.from(xd),
+          colours: Uint8Array.from(qd),
+          count: xd.length / 3
         },
-        columnTops: [...lb.values()]
+        columnTops: [...Id.values()]
       }
     }
 
-    function rb(bb) {
-      if (0 === bb) return !0;
-      const ub = Yb.i[bb];
-      return void 0 === ub || ub.Pw || ub.transTex || !1 === ub.solid
+    function Bd(dd) {
+      if (0 === dd) return !0;
+      const Jd = gd.g[dd];
+      return void 0 === Jd || Jd.dQ || Jd.transTex || !1 === Jd.solid
     }
 
-    function jb(bb) {
-      let ub = 1 / 0,
-        hb = -1 / 0,
-        Bb = 1 / 0,
-        Ob = -1 / 0;
+    function sd(dd) {
+      let Jd = 1 / 0,
+        kd = -1 / 0,
+        pd = 1 / 0,
+        Nd = -1 / 0;
       for (const {
-          chunkX: Xb,
-          chunkZ: pb,
-          heights: ob
+          chunkX: Ld,
+          chunkZ: Od,
+          heights: ed
         }
-        of bb) ob.forEach(((bb, Gb) => {
-        if (bb === Wb) return;
-        const Ub = Xb * Kb + Gb % Kb,
-          Lb = pb * Kb + Math.floor(Gb / Kb);
-        ub = Math.min(ub, Ub), hb = Math.max(hb, Ub), Bb = Math.min(Bb, Lb), Ob = Math.max(Ob, Lb)
+        of dd) ed.forEach(((dd, Wd) => {
+        if (dd === vd) return;
+        const Pd = Ld * Gd + Wd % Gd,
+          Zd = Od * Gd + Math.floor(Wd / Gd);
+        Jd = Math.min(Jd, Pd), kd = Math.max(kd, Pd), pd = Math.min(pd, Zd), Nd = Math.max(Nd, Zd)
       }));
-      const Gb = hb - ub + 1,
-        Ub = Ob - Bb + 1,
-        Lb = Math.max(1, Math.ceil(Gb / lb), Math.ceil(Ub / lb)),
-        Yb = Math.ceil(Gb / Lb),
-        Sb = Math.ceil(Ub / Lb),
-        ab = document.createElement("canvas");
-      ab.width = Yb, ab.height = Sb;
-      const Hb = ab.getContext("2d");
-      if (!Hb) throw new Error("Couldn't draw the schematic from above.");
-      const wb = Hb.createImageData(Yb, Sb),
-        Zb = new Int32Array(Yb * Sb).fill(Wb);
+      const Wd = kd - Jd + 1,
+        Pd = Nd - pd + 1,
+        Zd = Math.max(1, Math.ceil(Wd / Id), Math.ceil(Pd / Id)),
+        gd = Math.ceil(Wd / Zd),
+        Cd = Math.ceil(Pd / Zd),
+        Kd = document.createElement("canvas");
+      Kd.width = gd, Kd.height = Cd;
+      const od = Kd.getContext("2d");
+      if (!od) throw new Error("Couldn't draw the schematic from above.");
+      const ld = od.createImageData(gd, Cd),
+        Qd = new Int32Array(gd * Cd).fill(vd);
       for (const {
-          chunkX: Xb,
-          chunkZ: pb,
-          heights: ob,
-          colours: Ab
+          chunkX: Ld,
+          chunkZ: Od,
+          heights: ed,
+          colours: Rd
         }
-        of bb) ob.forEach(((bb, ub) => {
-        const Ob = Xb * Kb + ub % Kb,
-          Gb = pb * Kb + Math.floor(ub / Kb),
-          Ub = Math.floor((Gb - Bb) / Lb) * Yb + Math.floor((hb - Ob) / Lb);
-        bb === Wb || bb <= Zb[Ub] || (Zb[Ub] = bb, wb.data.set(Ab.subarray(3 * ub, 3 * ub + 3), 4 * Ub), wb.data[4 * Ub + 3] = 255)
+        of dd) ed.forEach(((dd, Jd) => {
+        const Nd = Ld * Gd + Jd % Gd,
+          Wd = Od * Gd + Math.floor(Jd / Gd),
+          Pd = Math.floor((Wd - pd) / Zd) * gd + Math.floor((kd - Nd) / Zd);
+        dd === vd || dd <= Qd[Pd] || (Qd[Pd] = dd, ld.data.set(Rd.subarray(3 * Jd, 3 * Jd + 3), 4 * Pd), ld.data[4 * Pd + 3] = 255)
       }));
-      return Hb.putImageData(wb, 0, 0), {
-        maxX: hb,
-        minZ: Bb,
-        width: Yb * Lb,
-        depth: Sb * Lb,
-        canvas: ab
+      return od.putImageData(ld, 0, 0), {
+        maxX: kd,
+        minZ: pd,
+        width: gd * Zd,
+        depth: Cd * Zd,
+        canvas: Kd
       }
     }
 
-    function nb() {
-      return new Promise((bb => {
-        setTimeout(bb, 0)
+    function ad() {
+      return new Promise((dd => {
+        setTimeout(dd, 0)
       }))
     }
   },
-  9280: (bb, ub, hb) => {
-    hb.d(ub, {
-      e: () => Ob,
-      g: () => Gb
+  9422: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => Nd,
+      h: () => Wd
     });
-    var Bb = hb(9235);
-    const Ob = "Air",
-      Gb = Object.freeze(new Bb.d(Ob, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var pd = kd(9383);
+    const Nd = "Air",
+      Wd = Object.freeze(new pd.f(Nd, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

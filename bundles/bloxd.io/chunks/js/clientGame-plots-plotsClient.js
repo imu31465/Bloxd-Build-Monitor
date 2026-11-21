@@ -1,387 +1,387 @@
 export const id = 22;
 export const ids = [22];
 export const modules = {
-  36208: (bb, ub, hb) => {
-    hb.d(ub, {
-      c: () => Zb,
-      e: () => Xb,
-      f: () => wb,
-      h: () => Hb
+  36772: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => Qd,
+      g: () => Ld,
+      h: () => ld,
+      j: () => od
     });
-    var Bb = hb(9085),
-      Ob = hb(36214),
-      Gb = hb(36217),
-      Ub = hb(8444),
-      Lb = hb(1348),
-      Yb = hb(49),
-      Sb = hb(65),
-      ab = hb(1007);
+    var pd = kd(9234),
+      Nd = kd(36779),
+      Wd = kd(36783),
+      Pd = kd(8620),
+      Zd = kd(1459),
+      gd = kd(56),
+      Cd = kd(72),
+      Kd = kd(1103);
 
-    function Hb() {
-      var bb;
-      return (0, Lb.k)(Ob.c, (0, Ob.m)()), (0, ab.jsx)(ab.Fragment, {
-        children: null === (bb = (0, Ob.m)()) || void 0 === bb ? void 0 : bb.content
+    function od() {
+      var dd;
+      return (0, Zd.i)(Nd.e, (0, Nd.o)()), (0, Kd.jsx)(Kd.Fragment, {
+        children: null === (dd = (0, Nd.o)()) || void 0 === dd ? void 0 : dd.content
       })
     }
 
-    function wb(bb) {
-      var ub;
+    function ld(dd) {
+      var Jd;
       let {
-        show: hb
-      } = bb;
-      (0, Lb.k)(Ob.c, (0, Ob.m)());
-      const Sb = null === (ub = (0, Ob.m)()) || void 0 === ub ? void 0 : ub.menu;
-      return (0, Yb.useEffect)((() => {
-        var bb;
-        hb || (null === Sb || void 0 === Sb || null === (bb = Sb.onClose) || void 0 === bb || bb.call(Sb), (0, Gb.o)())
-      }), [hb, Sb]), (0, Yb.useEffect)((() => hb ? (0, Ub.f)(Gb.u, Gb.e) : void 0), [hb]), (0, ab.jsx)(Bb.b, {
-        showing: hb,
+        show: kd
+      } = dd;
+      (0, Zd.i)(Nd.e, (0, Nd.o)());
+      const Cd = null === (Jd = (0, Nd.o)()) || void 0 === Jd ? void 0 : Jd.menu;
+      return (0, gd.useEffect)((() => {
+        var dd;
+        kd || (null === Cd || void 0 === Cd || null === (dd = Cd.onClose) || void 0 === dd || dd.call(Cd), (0, Wd.s)())
+      }), [kd, Cd]), (0, gd.useEffect)((() => kd ? (0, Pd.g)(Wd.B, Wd.h) : void 0), [kd]), (0, Kd.jsx)(pd.b, {
+        showing: kd,
         globallyUniqueKey: "clientGameMenu",
-        children: null === Sb || void 0 === Sb ? void 0 : Sb.content
+        children: null === Cd || void 0 === Cd ? void 0 : Cd.content
       })
     }
 
-    function Zb(bb) {
+    function Qd(dd) {
       let {
-        placement: ub = "bottom"
-      } = bb;
-      return (0, ab.jsx)("div", {
-        id: `clientGameHud-${ub}`,
+        placement: Jd = "bottom"
+      } = dd;
+      return (0, Kd.jsx)("div", {
+        id: `clientGameHud-${Jd}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Xb(bb) {
+    function Ld(dd) {
       let {
-        children: ub,
-        placement: hb = "bottom"
-      } = bb;
-      const [Bb, Ob] = (0, Yb.useState)(null);
-      return (0, Yb.useEffect)((() => {
-        Ob(document.getElementById(`clientGameHud-${hb}`))
-      }), [hb]), Bb ? (0, Sb.createPortal)(ub, Bb) : null
+        children: Jd,
+        placement: kd = "bottom"
+      } = dd;
+      const [pd, Nd] = (0, gd.useState)(null);
+      return (0, gd.useEffect)((() => {
+        Nd(document.getElementById(`clientGameHud-${kd}`))
+      }), [kd]), pd ? (0, Cd.createPortal)(Jd, pd) : null
     }
   },
-  9085: (bb, ub, hb) => {
-    hb.d(ub, {
-      b: () => Gb
+  9234: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      b: () => Wd
     });
-    var Bb = hb(4296),
-      Ob = hb(4302);
+    var pd = kd(4393),
+      Nd = kd(4397);
 
-    function Gb(bb) {
+    function Wd(dd) {
       let {
-        children: ub,
-        showing: hb,
-        globallyUniqueKey: Gb,
-        alwaysMountChildren: Ub = !1,
-        doGameplayStartStopOnShow: Lb = !0,
-        keepsMovement: Yb = !1
-      } = bb;
-      return (0, Ob.c)(!0, hb, Gb, Yb), (0, Bb.c)(Lb, hb), hb || Ub ? ub : null
+        children: Jd,
+        showing: kd,
+        globallyUniqueKey: Wd,
+        alwaysMountChildren: Pd = !1,
+        doGameplayStartStopOnShow: Zd = !0,
+        keepsMovement: gd = !1
+      } = dd;
+      return (0, Nd.d)(!0, kd, Wd, gd), (0, pd.c)(Zd, kd), kd || Pd ? Jd : null
     }
   },
-  36309: (bb, ub, hb) => {
-    hb.d(ub, {
-      c: () => Gb,
-      d: () => Ub,
-      g: () => Lb,
-      h: () => Yb
+  36857: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => Wd,
+      h: () => Pd,
+      k: () => Zd,
+      m: () => gd
     });
-    var Bb = hb(49),
-      Ob = hb(2903);
-    const Gb = 8,
-      Ub = "InGameHeaderContainer",
-      Lb = "TopRightElements";
+    var pd = kd(56),
+      Nd = kd(2974);
+    const Wd = 8,
+      Pd = "InGameHeaderContainer",
+      Zd = "TopRightElements";
 
-    function Yb(bb) {
-      const [ub] = (0, Ob.e)(), [hb, Yb] = (0, Bb.useState)(!1);
-      return (0, Bb.useLayoutEffect)((() => {
-        if (!bb) return;
-        const ub = document.querySelector(`.${Ub}`),
-          hb = document.querySelector(`.${Lb}`),
-          Bb = () => {
-            const Bb = bb.getBoundingClientRect(),
-              Ob = ub ? ub.getBoundingClientRect().right : 0,
-              Ub = hb ? hb.getBoundingClientRect().left : window.innerWidth,
-              Lb = Bb.left < Ob + Gb,
-              Sb = Bb.right > Ub - Gb;
-            Yb(Lb || Sb)
+    function gd(dd) {
+      const [Jd] = (0, Nd.b)(), [kd, gd] = (0, pd.useState)(!1);
+      return (0, pd.useLayoutEffect)((() => {
+        if (!dd) return;
+        const Jd = document.querySelector(`.${Pd}`),
+          kd = document.querySelector(`.${Zd}`),
+          pd = () => {
+            const pd = dd.getBoundingClientRect(),
+              Nd = Jd ? Jd.getBoundingClientRect().right : 0,
+              Pd = kd ? kd.getBoundingClientRect().left : window.innerWidth,
+              Zd = pd.left < Nd + Wd,
+              Cd = pd.right > Pd - Wd;
+            gd(Zd || Cd)
           };
-        Bb();
-        const Ob = new ResizeObserver(Bb);
-        return Ob.observe(bb), ub && Ob.observe(ub), hb && Ob.observe(hb), () => {
-          Ob.disconnect()
+        pd();
+        const Nd = new ResizeObserver(pd);
+        return Nd.observe(dd), Jd && Nd.observe(Jd), kd && Nd.observe(kd), () => {
+          Nd.disconnect()
         }
-      }), [bb, ub]), hb
+      }), [dd, Jd]), kd
     }
   },
-  8444: (bb, ub, hb) => {
-    hb.d(ub, {
-      d: () => Gb,
-      f: () => Ob
+  8620: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      e: () => Wd,
+      g: () => Nd
     });
-    let Bb = null;
-    const Ob = function(bb) {
-        const ub = {
-          cycle: bb,
+    let pd = null;
+    const Nd = function(dd) {
+        const Jd = {
+          cycle: dd,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return Bb = ub, () => {
-          Bb === ub && (Bb = null)
+        return pd = Jd, () => {
+          pd === Jd && (pd = null)
         }
       },
-      Gb = () => {
-        var bb;
-        return null !== (bb = Bb) && void 0 !== bb && bb.canCycle() ? Bb.cycle : null
+      Wd = () => {
+        var dd;
+        return null !== (dd = pd) && void 0 !== dd && dd.canCycle() ? pd.cycle : null
       }
   },
-  36217: (bb, ub, hb) => {
-    hb.d(ub, {
-      b: () => Gb,
-      e: () => pb,
-      i: () => ob,
-      k: () => Lb,
-      m: () => wb,
-      o: () => Ab,
-      q: () => Hb,
-      r: () => Kb,
-      u: () => Xb,
-      v: () => lb
+  36783: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      B: () => Ld,
+      D: () => Id,
+      e: () => Wd,
+      h: () => Od,
+      i: () => ed,
+      m: () => Zd,
+      o: () => ld,
+      s: () => Rd,
+      w: () => od,
+      x: () => Gd
     });
-    var Bb = hb(13),
-      Ob = hb(16);
-    const Gb = "clientGameInventoryButtonsChanged",
-      Ub = new Map;
+    var pd = kd(22),
+      Nd = kd(29);
+    const Wd = "clientGameInventoryButtonsChanged",
+      Pd = new Map;
 
-    function Lb() {
-      return [...Ub.values()].sort(((bb, ub) => {
-        var hb, Bb;
-        return (null !== (hb = bb.order) && void 0 !== hb ? hb : 0) - (null !== (Bb = ub.order) && void 0 !== Bb ? Bb : 0)
+    function Zd() {
+      return [...Pd.values()].sort(((dd, Jd) => {
+        var kd, pd;
+        return (null !== (kd = dd.order) && void 0 !== kd ? kd : 0) - (null !== (pd = Jd.order) && void 0 !== pd ? pd : 0)
       }))
     }
-    let Yb = null;
+    let gd = null;
 
-    function Sb(bb) {
-      Yb = bb
+    function Cd(dd) {
+      gd = dd
     }
-    let ab = !1;
+    let Kd = !1;
 
-    function Hb(bb) {
-      ab = !0;
+    function od(dd) {
+      Kd = !0;
       try {
-        bb.onClick()
+        dd.onClick()
       } finally {
-        ab = !1
+        Kd = !1
       }
-      bb.panel && "clientGame" === Bb.d.get("openInGameMenuName") && Sb(bb.id)
+      dd.panel && "clientGame" === pd.d.get("openInGameMenuName") && Cd(dd.id)
     }
 
-    function wb() {
-      return ab
+    function ld() {
+      return Kd
     }
 
-    function Zb() {
-      return Lb().filter((bb => bb.panel && !bb.disabled))
+    function Qd() {
+      return Zd().filter((dd => dd.panel && !dd.disabled))
     }
 
-    function Xb(bb) {
-      const ub = Zb(),
-        hb = ub.findIndex((bb => bb.id === Yb));
-      return !(hb < 0 || ub.length < 2) && (Hb(ub[(hb + bb + ub.length) % ub.length]), !0)
+    function Ld(dd) {
+      const Jd = Qd(),
+        kd = Jd.findIndex((dd => dd.id === gd));
+      return !(kd < 0 || Jd.length < 2) && (od(Jd[(kd + dd + Jd.length) % Jd.length]), !0)
     }
 
-    function pb() {
-      return null !== Yb && Zb().length > 1
+    function Od() {
+      return null !== gd && Qd().length > 1
     }
 
-    function ob() {
-      Sb(null)
+    function ed() {
+      Cd(null)
     }
 
-    function Ab() {
-      "inventory" !== Bb.d.get("openInGameMenuName") && Sb(null)
+    function Rd() {
+      "inventory" !== pd.d.get("openInGameMenuName") && Cd(null)
     }
 
-    function lb() {
-      const bb = Yb;
-      return Sb(null), bb
+    function Id() {
+      const dd = gd;
+      return Cd(null), dd
     }
 
-    function Kb(bb) {
-      return Ub.set(bb.id, bb), Ob.i.vp(Gb, Lb(), !0), () => {
-        Ub.get(bb.id) === bb && (Ub.delete(bb.id), Ob.i.vp(Gb, Lb()))
+    function Gd(dd) {
+      return Pd.set(dd.id, dd), Nd.j.nO(Wd, Zd(), !0), () => {
+        Pd.get(dd.id) === dd && (Pd.delete(dd.id), Nd.j.nO(Wd, Zd()))
       }
     }
   },
-  36214: (bb, ub, hb) => {
-    hb.d(ub, {
-      c: () => Lb,
-      g: () => ob,
-      j: () => Ab,
-      l: () => wb,
-      m: () => Sb,
-      p: () => pb,
-      q: () => Zb,
-      t: () => ab
+  36779: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      e: () => Zd,
+      g: () => ed,
+      j: () => Rd,
+      m: () => ld,
+      o: () => Cd,
+      p: () => Od,
+      t: () => Qd,
+      w: () => Kd
     });
-    var Bb = hb(13),
-      Ob = hb(16),
-      Gb = hb(1184),
-      Ub = hb(36217);
-    const Lb = "clientGameUiChanged";
-    let Yb = null;
+    var pd = kd(22),
+      Nd = kd(29),
+      Wd = kd(1307),
+      Pd = kd(36783);
+    const Zd = "clientGameUiChanged";
+    let gd = null;
 
-    function Sb() {
-      return Yb
+    function Cd() {
+      return gd
     }
 
-    function ab(bb, ub) {
-      const hb = {
-        content: bb,
-        menu: ub
+    function Kd(dd, Jd) {
+      const kd = {
+        content: dd,
+        menu: Jd
       };
-      return Yb = hb, Ob.i.vp(Lb, Yb, !0), () => {
-        Yb === hb && (Yb = null, Xb = !1, ob(), Ob.i.vp(Lb, null))
+      return gd = kd, Nd.j.nO(Zd, gd, !0), () => {
+        gd === kd && (gd = null, Ld = !1, ed(), Nd.j.nO(Zd, null))
       }
     }
-    let Hb = null;
+    let od = null;
 
-    function wb() {
-      return Hb
+    function ld() {
+      return od
     }
 
-    function Zb(bb) {
-      return Hb = bb, () => {
-        Hb === bb && (Hb = null)
+    function Qd(dd) {
+      return od = dd, () => {
+        od === dd && (od = null)
       }
     }
-    let Xb = !1;
+    let Ld = !1;
 
-    function pb() {
-      const bb = Bb.d.get("openInGameMenuName");
-      "clientGame" !== bb && (Xb = "inventory" === bb), (0, Ub.m)() || (0, Ub.i)(), (0, Gb.l)(Gb.b), Bb.d.set({
+    function Od() {
+      const dd = pd.d.get("openInGameMenuName");
+      "clientGame" !== dd && (Ld = "inventory" === dd), (0, Pd.o)() || (0, Pd.i)(), (0, Wd.p)(Wd.d), pd.d.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function ob() {
-      lb(!1)
+    function ed() {
+      Id(!1)
     }
 
-    function Ab() {
-      lb(Xb)
+    function Rd() {
+      Id(Ld)
     }
 
-    function lb(bb) {
-      "clientGame" === Bb.d.get("openInGameMenuName") && Bb.d.set({
-        openInGameMenuName: bb ? "inventory" : null
-      }), bb || (0, Ub.i)(), Xb = !1
+    function Id(dd) {
+      "clientGame" === pd.d.get("openInGameMenuName") && pd.d.set({
+        openInGameMenuName: dd ? "inventory" : null
+      }), dd || (0, Pd.i)(), Ld = !1
     }
   },
-  38142: (bb, ub, hb) => {
-    hb.d(ub, {
-      b: () => Ub,
-      e: () => Lb,
-      f: () => Yb
+  38660: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      e: () => Pd,
+      f: () => Zd,
+      h: () => gd
     });
-    const Bb = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
-      Ob = [0, 1, 2, 0, 2, 3],
-      Gb = [4, 5];
+    const pd = [1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1],
+      Nd = [0, 1, 2, 0, 2, 3],
+      Wd = [4, 5];
 
-    function Ub(bb, ub, hb, Bb, Ob) {
-      for (let Ub = 0; Ub < 6; Ub++) Gb.includes(Ub) === Ob && Sb(bb, ub, hb, Bb, Ub)
+    function Pd(dd, Jd, kd, pd, Nd) {
+      for (let Pd = 0; Pd < 6; Pd++) Wd.includes(Pd) === Nd && Cd(dd, Jd, kd, pd, Pd)
     }
 
-    function Lb(bb, ub, hb, Bb) {
-      for (let Ob = 0; Ob < 6; Ob++) Sb(bb, ub, hb, Bb, Ob)
+    function Zd(dd, Jd, kd, pd) {
+      for (let Nd = 0; Nd < 6; Nd++) Cd(dd, Jd, kd, pd, Nd)
     }
 
-    function Yb(bb, ub, hb, Gb, Ub) {
-      for (let Lb = 0; Lb < 6; Lb++)
-        for (const Yb of [0, 1]) {
-          const [Sb, ab, Hb] = [Yb + 2, Yb + 1, (Yb + 3) % 4], wb = bb.length / 3;
-          for (const [ub, Ob] of [
-              [Yb, ab],
-              [Sb, ab],
-              [Sb, Hb],
-              [Yb, Hb]
+    function gd(dd, Jd, kd, Wd, Pd) {
+      for (let Zd = 0; Zd < 6; Zd++)
+        for (const gd of [0, 1]) {
+          const [Cd, Kd, od] = [gd + 2, gd + 1, (gd + 3) % 4], ld = dd.length / 3;
+          for (const [Jd, Nd] of [
+              [gd, Kd],
+              [Cd, Kd],
+              [Cd, od],
+              [gd, od]
             ])
-            for (let Yb = 0; Yb < 3; Yb++) {
-              const Sb = Bb[3 * (4 * Lb + ub) + Yb],
-                ab = Bb[3 * (4 * Lb + Ob) + Yb];
-              bb.push((Sb + (ab - Sb) * Ub) * Gb / 2 + hb[Yb])
+            for (let gd = 0; gd < 3; gd++) {
+              const Cd = pd[3 * (4 * Zd + Jd) + gd],
+                Kd = pd[3 * (4 * Zd + Nd) + gd];
+              dd.push((Cd + (Kd - Cd) * Pd) * Wd / 2 + kd[gd])
             }
-          for (const bb of Ob) ub.push(wb + bb)
+          for (const dd of Nd) Jd.push(ld + dd)
         }
     }
 
-    function Sb(bb, ub, hb, Gb, Ub) {
-      let [Lb, Yb, Sb] = hb, [ab, Hb, wb] = Gb;
-      const Zb = bb.length / 3;
-      for (let Ob = 4 * Ub; Ob < 4 * Ub + 4; Ob++) bb.push(Bb[3 * Ob] * ab / 2 + Lb, Bb[3 * Ob + 1] * Hb / 2 + Yb, Bb[3 * Ob + 2] * wb / 2 + Sb);
-      for (const Bb of Ob) ub.push(Zb + Bb)
+    function Cd(dd, Jd, kd, Wd, Pd) {
+      let [Zd, gd, Cd] = kd, [Kd, od, ld] = Wd;
+      const Qd = dd.length / 3;
+      for (let Nd = 4 * Pd; Nd < 4 * Pd + 4; Nd++) dd.push(pd[3 * Nd] * Kd / 2 + Zd, pd[3 * Nd + 1] * od / 2 + gd, pd[3 * Nd + 2] * ld / 2 + Cd);
+      for (const pd of Nd) Jd.push(Qd + pd)
     }
   },
-  36549: (bb, ub, hb) => {
-    function Bb(bb, ub) {
-      return null === bb || null === ub ? bb === ub : bb[0] === ub[0] && bb[1] === ub[1] && bb[2] === ub[2]
+  37072: (dd, Jd, kd) => {
+    function pd(dd, Jd) {
+      return null === dd || null === Jd ? dd === Jd : dd[0] === Jd[0] && dd[1] === Jd[1] && dd[2] === Jd[2]
     }
 
-    function Ob(bb) {
-      return [bb[0] + .5, bb[1] + .5, bb[2] + .5]
+    function Nd(dd) {
+      return [dd[0] + .5, dd[1] + .5, dd[2] + .5]
     }
-    hb.d(ub, {
-      d: () => Ob,
-      h: () => Bb
+    kd.d(Jd, {
+      e: () => Nd,
+      h: () => pd
     })
   },
-  36591: (bb, ub, hb) => {
-    function Bb(bb) {
-      return bb.includes("Leaf Bed")
+  37106: (dd, Jd, kd) => {
+    function pd(dd) {
+      return dd.includes("Leaf Bed")
     }
 
-    function Ob(bb) {
-      return / Bed(?: Head)?(?:\||$)/.test(bb) && !Bb(bb)
+    function Nd(dd) {
+      return / Bed(?: Head)?(?:\||$)/.test(dd) && !pd(dd)
     }
 
-    function Gb(bb) {
-      return bb.includes(" Strongbed")
+    function Wd(dd) {
+      return dd.includes(" Strongbed")
     }
 
-    function Ub(bb) {
-      return Bb(bb) || Ob(bb) || Gb(bb)
+    function Pd(dd) {
+      return pd(dd) || Nd(dd) || Wd(dd)
     }
-    hb.d(ub, {
-      b: () => Ub,
-      f: () => Bb,
-      g: () => Gb,
-      i: () => Ob
+    kd.d(Jd, {
+      c: () => Pd,
+      f: () => pd,
+      j: () => Wd,
+      n: () => Nd
     })
   },
-  36584: (bb, ub, hb) => {
-    hb.d(ub, {
-      e: () => Sb
+  37101: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      e: () => Cd
     });
-    var Bb = hb(36591),
-      Ob = hb(9181);
-    const Gb = [],
-      Ub = [],
-      Lb = [],
-      Yb = [];
-    for (const ab of Object.keys(Ob.l))(0, Bb.f)(ab) ? Gb.push(ab) : (0, Bb.i)(ab) && Ub.push(ab), (0, Bb.g)(ab) && Lb.push(ab), (ab.includes(" Bed Head") || ab.includes(" Strongbed Head")) && Yb.push(ab);
-    const Sb = {
-      leafBeds: Gb,
-      woolBeds: Ub,
-      strongBeds: Lb,
-      beds: [...Gb, ...Ub, ...Lb],
-      bedHeads: Yb,
+    var pd = kd(37106),
+      Nd = kd(9331);
+    const Wd = [],
+      Pd = [],
+      Zd = [],
+      gd = [];
+    for (const Kd of Object.keys(Nd.n))(0, pd.f)(Kd) ? Wd.push(Kd) : (0, pd.n)(Kd) && Pd.push(Kd), (0, pd.j)(Kd) && Zd.push(Kd), (Kd.includes(" Bed Head") || Kd.includes(" Strongbed Head")) && gd.push(Kd);
+    const Cd = {
+      leafBeds: Wd,
+      woolBeds: Pd,
+      strongBeds: Zd,
+      beds: [...Wd, ...Pd, ...Zd],
+      bedHeads: gd,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

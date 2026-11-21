@@ -1,80 +1,80 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  39254: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      playDocsSound: () => Lb
+  39770: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      playDocsSound: () => Zd
     });
-    var Bb = hb(4626),
-      Ob = hb(36393),
-      Gb = hb(1103);
-    const Ub = new Map;
+    var pd = kd(4743),
+      Nd = kd(36933),
+      Wd = kd(1220);
+    const Pd = new Map;
 
-    function Lb(bb, ub, hb, Lb, Yb) {
-      let Sb, ab = null,
-        Hb = 0,
-        wb = 0;
-      if (ub) Sb = new Bb.Howl({
-        src: [`${Gb.clientSideServerUrls.staticUrl}/sounds/music/${bb}.mp3`],
+    function Zd(dd, Jd, kd, Zd, gd) {
+      let Cd, Kd = null,
+        od = 0,
+        ld = 0;
+      if (Jd) Cd = new pd.Howl({
+        src: [`${Wd.clientSideServerUrls.staticUrl}/sounds/music/${dd}.mp3`],
         html5: !0,
-        volume: hb
+        volume: kd
       });
       else {
-        var Zb;
-        ab = (0, Ob.m)(bb);
-        const ub = (0, Ob.k)(ab),
-          hb = null !== (Zb = ub.sprite[bb]) && void 0 !== Zb ? Zb : null;
-        if (!hb) throw new Error(`Docs sound ${bb} is not in sprite sheet ${ab}`);
-        Hb = hb[0] / 1e3, wb = hb[1] / 1e3, Sb = Ub.get(ab), Sb || (Sb = new Bb.Howl({
-          ...ub,
+        var Qd;
+        Kd = (0, Nd.m)(dd);
+        const Jd = (0, Nd.k)(Kd),
+          kd = null !== (Qd = Jd.sprite[dd]) && void 0 !== Qd ? Qd : null;
+        if (!kd) throw new Error(`Docs sound ${dd} is not in sprite sheet ${Kd}`);
+        od = kd[0] / 1e3, ld = kd[1] / 1e3, Cd = Pd.get(Kd), Cd || (Cd = new pd.Howl({
+          ...Jd,
           volume: 1
-        }), Ub.set(ab, Sb))
+        }), Pd.set(Kd, Cd))
       }
-      const Xb = ub ? Sb.play() : Sb.play(bb);
-      Sb.volume(hb, Xb), Lb > 0 && Sb.seek(Hb + Lb, Xb);
-      const pb = () => ub ? Sb.duration() : wb;
-      let ob = !1;
-      const Ab = bb => {
-          ob || (ob = !0, Sb.off("play", lb, Xb), Sb.off("end", Kb, Xb), Sb.off("loaderror", Cb), Sb.off("playerror", Wb, Xb), ub && Sb.unload(), Yb.onEnd(bb))
+      const Ld = Jd ? Cd.play() : Cd.play(dd);
+      Cd.volume(kd, Ld), Zd > 0 && Cd.seek(od + Zd, Ld);
+      const Od = () => Jd ? Cd.duration() : ld;
+      let ed = !1;
+      const Rd = dd => {
+          ed || (ed = !0, Cd.off("play", Id, Ld), Cd.off("end", Gd, Ld), Cd.off("loaderror", xd), Cd.off("playerror", vd, Ld), Jd && Cd.unload(), gd.onEnd(dd))
         },
-        lb = () => {
-          Yb.onPlay(pb())
+        Id = () => {
+          gd.onPlay(Od())
         },
-        Kb = () => {
-          Ab(!1)
+        Gd = () => {
+          Rd(!1)
         },
-        Wb = (ub, hb) => {
-          console.error(`Could not play docs sound ${bb}`, hb), Ab(!0)
+        vd = (Jd, kd) => {
+          console.error(`Could not play docs sound ${dd}`, kd), Rd(!0)
         },
-        Cb = (bb, ub) => {
-          null !== ab && Ub.get(ab) === Sb && (Ub.delete(ab), Sb.unload()), Wb(bb, ub)
+        xd = (dd, Jd) => {
+          null !== Kd && Pd.get(Kd) === Cd && (Pd.delete(Kd), Cd.unload()), vd(dd, Jd)
         };
-      return Sb.on("play", lb, Xb), Sb.once("end", Kb, Xb), Sb.once("loaderror", Cb), Sb.once("playerror", Wb, Xb), {
+      return Cd.on("play", Id, Ld), Cd.once("end", Gd, Ld), Cd.once("loaderror", xd), Cd.once("playerror", vd, Ld), {
         pause: () => {
-          Sb.pause(Xb)
+          Cd.pause(Ld)
         },
         resume: () => {
-          Sb.play(Xb)
+          Cd.play(Ld)
         },
-        seek: bb => {
-          const ub = pb(),
-            hb = Math.max(bb, 0);
-          Sb.seek(Hb + (ub > 0 ? Math.min(hb, ub) : hb), Xb)
+        seek: dd => {
+          const Jd = Od(),
+            kd = Math.max(dd, 0);
+          Cd.seek(od + (Jd > 0 ? Math.min(kd, Jd) : kd), Ld)
         },
-        iK: () => {
-          const bb = Sb.seek(Xb);
-          return "number" === typeof bb ? Math.max(0, bb - Hb) : 0
+        yI: () => {
+          const dd = Cd.seek(Ld);
+          return "number" === typeof dd ? Math.max(0, dd - od) : 0
         },
-        getDuration: pb,
-        setVolume: bb => {
-          Sb.volume(bb, Xb)
+        getDuration: Od,
+        setVolume: dd => {
+          Cd.volume(dd, Ld)
         },
         stop: () => {
-          ob || (Sb.stop(Xb), Ab(!1))
+          ed || (Cd.stop(Ld), Rd(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

@@ -1,23 +1,23 @@
 export const id = 20;
 export const ids = [20];
 export const modules = {
-  39048: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      default: () => Ob
+  39555: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      default: () => Nd
     });
-    var Bb = hb(16);
-    const Ob = function(bb, ub, hb) {
-      let Ob;
+    var pd = kd(29);
+    const Nd = function(dd, Jd, kd) {
+      let Nd;
       return {
-        onCreate: bb => {
-          Ob = bb
+        onCreate: dd => {
+          Nd = dd
         },
-        onPlayerClick: (bb, ub, hb, Gb, Ub, Lb) => {
-          ub || "Workbench" !== Ob.getMetaInfo(Lb).rootName || Bb.i.vp("toggleMenu", "inventory|Workbench")
+        onPlayerClick: (dd, Jd, kd, Wd, Pd, Zd) => {
+          Jd || "Workbench" !== Nd.getMetaInfo(Zd).rootName || pd.j.nO("toggleMenu", "inventory|Workbench")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

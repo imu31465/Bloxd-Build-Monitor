@@ -1,74 +1,74 @@
 export const id = 92;
 export const ids = [92];
 export const modules = {
-  4626: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      Howl: () => Ob.Howl,
-      Howler: () => Ob.Howler,
-      musicOutput: () => Xb,
-      readyAudioContext: () => pb
+  4743: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      Howl: () => Nd.Howl,
+      Howler: () => Nd.Howler,
+      musicOutput: () => Ld,
+      readyAudioContext: () => Od
     });
-    var Bb, Ob = hb(4629),
-      Gb = hb(4415);
-    const Ub = Ob.Howler;
+    var pd, Nd = kd(4745),
+      Wd = kd(4516);
+    const Pd = Nd.Howler;
 
-    function Lb() {
-      var bb, ub;
-      if (Ub.ctx || !Ub.usingWebAudio || "undefined" === typeof AudioContext || !(0, Gb.d)()) return;
-      const hb = navigator.audioSession;
-      let Bb;
-      "auto" === (null === hb || void 0 === hb ? void 0 : hb.type) && (hb.type = "ambient");
+    function Zd() {
+      var dd, Jd;
+      if (Pd.ctx || !Pd.usingWebAudio || "undefined" === typeof AudioContext || !(0, Wd.h)()) return;
+      const kd = navigator.audioSession;
+      let pd;
+      "auto" === (null === kd || void 0 === kd ? void 0 : kd.type) && (kd.type = "ambient");
       try {
-        Bb = new AudioContext({
+        pd = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Ob = Bb.createGain();
-      Ob.gain.setValueAtTime(Ub._muted ? 0 : null !== (bb = Ub._volume) && void 0 !== bb ? bb : 1, Bb.currentTime), Ob.connect(Bb.destination), Ub.ctx = Bb, Ub.masterGain = Ob, null === (ub = Ub._setup) || void 0 === ub || ub.call(Ub)
+      const Nd = pd.createGain();
+      Nd.gain.setValueAtTime(Pd._muted ? 0 : null !== (dd = Pd._volume) && void 0 !== dd ? dd : 1, pd.currentTime), Nd.connect(pd.destination), Pd.ctx = pd, Pd.masterGain = Nd, null === (Jd = Pd._setup) || void 0 === Jd || Jd.call(Pd)
     }
-    Ub._mobileUnloaded = !0;
-    const Yb = Ub.volume.bind(Ob.Howler);
-    Ub.volume = function() {
-      return Lb(), Yb(...arguments)
+    Pd._mobileUnloaded = !0;
+    const gd = Pd.volume.bind(Nd.Howler);
+    Pd.volume = function() {
+      return Zd(), gd(...arguments)
     };
-    const Sb = Ub.mute.bind(Ob.Howler);
-    Ub.mute = bb => (Lb(), Sb(bb));
-    const ab = Ob.Howl.prototype,
-      Hb = ab.init;
-    ab.init = function(bb) {
-      return Lb(), Hb.call(this, bb)
+    const Cd = Pd.mute.bind(Nd.Howler);
+    Pd.mute = dd => (Zd(), Cd(dd));
+    const Kd = Nd.Howl.prototype,
+      od = Kd.init;
+    Kd.init = function(dd) {
+      return Zd(), od.call(this, dd)
     };
-    let wb = 0;
-    const Zb = null === (Bb = Ub._autoSuspend) || void 0 === Bb ? void 0 : Bb.bind(Ob.Howler);
+    let ld = 0;
+    const Qd = null === (pd = Pd._autoSuspend) || void 0 === pd ? void 0 : pd.bind(Nd.Howler);
 
-    function Xb() {
-      pb();
+    function Ld() {
+      Od();
       const {
-        ctx: bb,
-        masterGain: ub
-      } = Ub;
-      return bb && ub ? {
-        ctx: bb,
-        destination: ub,
-        holdAwake: bb => {
-          var ub, hb;
-          (wb += bb ? 1 : -1, bb) ? null === (ub = Ub._autoResume) || void 0 === ub || ub.call(Ub): null === (hb = Ub._autoSuspend) || void 0 === hb || hb.call(Ub)
+        ctx: dd,
+        masterGain: Jd
+      } = Pd;
+      return dd && Jd ? {
+        ctx: dd,
+        destination: Jd,
+        holdAwake: dd => {
+          var Jd, kd;
+          (ld += dd ? 1 : -1, dd) ? null === (Jd = Pd._autoResume) || void 0 === Jd || Jd.call(Pd): null === (kd = Pd._autoSuspend) || void 0 === kd || kd.call(Pd)
         },
         wake: () => {
-          var ub;
-          "running" !== bb.state && (null === (ub = Ub._autoResume) || void 0 === ub || ub.call(Ub), bb.resume().catch((() => {})))
+          var Jd;
+          "running" !== dd.state && (null === (Jd = Pd._autoResume) || void 0 === Jd || Jd.call(Pd), dd.resume().catch((() => {})))
         }
       } : null
     }
 
-    function pb() {
-      var bb;
-      (Ub.volume(), Ub.ctx && Ub.autoUnlock) && (null === (bb = Ub._unlockAudio) || void 0 === bb || bb.call(Ub))
+    function Od() {
+      var dd;
+      (Pd.volume(), Pd.ctx && Pd.autoUnlock) && (null === (dd = Pd._unlockAudio) || void 0 === dd || dd.call(Pd))
     }
-    Zb && (Ub._autoSuspend = () => wb > 0 ? Ob.Howler : Zb())
+    Qd && (Pd._autoSuspend = () => ld > 0 ? Nd.Howler : Qd())
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

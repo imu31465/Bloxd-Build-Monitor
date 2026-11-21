@@ -1,76 +1,76 @@
 export const id = 356;
 export const ids = [356];
 export const modules = {
-  60704: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      A: () => Sb,
-      B: () => Hb,
-      C: () => ab,
-      X: () => wb
+  60981: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      A: () => Cd,
+      B: () => od,
+      C: () => Kd,
+      X: () => ld
     });
-    var Bb = hb(41188),
-      Ob = (bb, ub) => bb.order - ub.order;
+    var pd = kd(41690),
+      Nd = (dd, Jd) => dd.order - Jd.order;
 
-    function Gb(bb, ub, hb) {
-      bb.pendingDisposers.set(ub, hb)
+    function Wd(dd, Jd, kd) {
+      dd.pendingDisposers.set(Jd, kd)
     }
 
-    function Ub(bb, ub, hb) {
-      hb && bb.pendingDisposers.get(ub) === hb && bb.pendingDisposers.delete(ub)
+    function Pd(dd, Jd, kd) {
+      kd && dd.pendingDisposers.get(Jd) === kd && dd.pendingDisposers.delete(Jd)
     }
-    var Lb = null,
-      Yb = null;
+    var Zd = null,
+      gd = null;
 
-    function Sb(bb, ub, hb, Bb) {
-      if (!ub || hb.material !== ub) return Bb ?? Promise.resolve();
-      const Ob = Hb(bb, ub._buildGroup, hb);
-      return Bb ? Promise.all([Bb, Ob]).then((() => {})) : Ob
+    function Cd(dd, Jd, kd, pd) {
+      if (!Jd || kd.material !== Jd) return pd ?? Promise.resolve();
+      const Nd = od(dd, Jd._buildGroup, kd);
+      return pd ? Promise.all([pd, Nd]).then((() => {})) : Nd
     }
 
-    function ab(bb, ub, hb) {
-      let Bb = hb;
-      for (const Ob of ub) {
-        const ub = Array.isArray(Ob),
-          hb = ub ? Ob[0] : Ob;
-        Bb = Sb(bb, ub ? Ob[1] : hb.material, hb, Bb)
+    function Kd(dd, Jd, kd) {
+      let pd = kd;
+      for (const Nd of Jd) {
+        const Jd = Array.isArray(Nd),
+          kd = Jd ? Nd[0] : Nd;
+        pd = Cd(dd, Jd ? Nd[1] : kd.material, kd, pd)
       }
-      return (Bb ?? Promise.resolve()).catch((ub => {
-        bb._runtimeBuilds?._x(ub)
+      return (pd ?? Promise.resolve()).catch((Jd => {
+        dd._runtimeBuilds?._x(Jd)
       }))
     }
 
-    function Hb(bb, ub, Bb) {
-      if (bb._z || !bb.meshes.includes(Bb)) return bb._runtimeBuilds?.all().catch((() => {})) ?? Promise.resolve();
-      if (function(bb, ub, hb) {
-          for (const [Ob, Gb] of bb._groups)
-            if (Ob !== ub) {
-              const bb = Gb.indexOf(hb);
-              bb >= 0 && Gb.splice(bb, 1)
-            } let Bb = bb._groups.get(ub);
-          Bb || (Bb = [], bb._groups.set(ub, Bb));
-          Bb.includes(hb) || Bb.push(hb)
-        }(bb, ub, Bb), "pbr" === ub._materialFamily && (bb._built || bb._groups.get(ub)?.r)) {
-        const ub = bb._runtimeBuilds ?? Zb(bb),
-          Bb = hb.e(386).then((() => hb(61312))).then((ub => {
+    function od(dd, Jd, pd) {
+      if (dd._z || !dd.meshes.includes(pd)) return dd._runtimeBuilds?.all().catch((() => {})) ?? Promise.resolve();
+      if (function(dd, Jd, kd) {
+          for (const [Nd, Wd] of dd._groups)
+            if (Nd !== Jd) {
+              const dd = Wd.indexOf(kd);
+              dd >= 0 && Wd.splice(dd, 1)
+            } let pd = dd._groups.get(Jd);
+          pd || (pd = [], dd._groups.set(Jd, pd));
+          pd.includes(kd) || pd.push(kd)
+        }(dd, Jd, pd), "pbr" === Jd._materialFamily && (dd._built || dd._groups.get(Jd)?.r)) {
+        const Jd = dd._runtimeBuilds ?? Qd(dd),
+          pd = kd.e(386).then((() => kd(61618))).then((Jd => {
             let {
-              rebuildScenePbrPipelines: hb
-            } = ub;
-            return bb._z ? void 0 : hb(bb, !0)
-          })).catch((ub => {
-            bb._runtimeBuilds?._x(ub)
+              rebuildScenePbrPipelines: kd
+            } = Jd;
+            return dd._z ? void 0 : kd(dd, !0)
+          })).catch((Jd => {
+            dd._runtimeBuilds?._x(Jd)
           }));
-        return ub.track(Bb)
+        return Jd.track(pd)
       }
-      return (bb._runtimeBuilds ?? Zb(bb)).queue(ub, Bb).catch((() => {}))
+      return (dd._runtimeBuilds ?? Qd(dd)).queue(Jd, pd).catch((() => {}))
     }
 
-    function wb(bb, ub, hb) {
-      return bb._z ? Promise.resolve(void 0) : (bb._runtimeBuilds ?? Zb(bb)).exclusive(ub, hb)
+    function ld(dd, Jd, kd) {
+      return dd._z ? Promise.resolve(void 0) : (dd._runtimeBuilds ?? Qd(dd)).exclusive(Jd, kd)
     }
 
-    function Zb(bb) {
-      const ub = {
-          FZ: !1,
+    function Qd(dd) {
+      const Jd = {
+          pL: !1,
           error: null,
           active: new Set,
           chains: new WeakMap,
@@ -80,214 +80,214 @@ export const modules = {
           pendingDisposers: new WeakMap,
           tail: null
         },
-        hb = bb,
-        Sb = {
-          queue: (hb, ab) => {
-            const Hb = (ub.generations.get(ab) ?? 0) + 1,
-              wb = ab.material;
-            ub.generations.set(ab, Hb);
-            const Zb = ub.chains.get(ab),
-              Xb = [ub.tail, Lb?.get(hb)].filter((bb => !!bb));
-            let pb = () => {};
-            const Kb = new Promise((bb => {
-              pb = bb
+        kd = dd,
+        Cd = {
+          queue: (kd, Kd) => {
+            const od = (Jd.generations.get(Kd) ?? 0) + 1,
+              ld = Kd.material;
+            Jd.generations.set(Kd, od);
+            const Qd = Jd.chains.get(Kd),
+              Ld = [Jd.tail, Zd?.get(kd)].filter((dd => !!dd));
+            let Od = () => {};
+            const Gd = new Promise((dd => {
+              Od = dd
             }));
-            ub.tail = Kb, (Lb ??= new WeakMap).set(hb, Kb);
-            const Wb = (Zb ? Zb.catch((() => {})) : Promise.resolve()).then((() => Promise.all(Xb))).then((() => async function(bb, ub, hb, Lb, Sb, ab) {
-              if (!ob(bb, ub, hb, Lb, Sb, ab)) return;
-              const Hb = bb._meshDisposables.get(Lb);
-              Hb && (bb._meshDisposables.delete(Lb), Gb(ub, Lb, Hb));
-              const wb = hb._rebuildSingle,
-                Zb = Yb?.get(hb)?.o4.get(bb) ?? bb._groups.get(hb)?.r,
-                Xb = !!bb._groups.get(hb)?.r,
-                pb = bb._disposables.length,
-                Kb = bb,
-                Wb = Kb._pbrGeomContext;
-              let Cb, db;
+            Jd.tail = Gd, (Zd ??= new WeakMap).set(kd, Gd);
+            const vd = (Qd ? Qd.catch((() => {})) : Promise.resolve()).then((() => Promise.all(Ld))).then((() => async function(dd, Jd, kd, Zd, Cd, Kd) {
+              if (!ed(dd, Jd, kd, Zd, Cd, Kd)) return;
+              const od = dd._meshDisposables.get(Zd);
+              od && (dd._meshDisposables.delete(Zd), Wd(Jd, Zd, od));
+              const ld = kd._rebuildSingle,
+                Qd = gd?.get(kd)?.Y5.get(dd) ?? dd._groups.get(kd)?.r,
+                Ld = !!dd._groups.get(kd)?.r,
+                Od = dd._disposables.length,
+                Gd = dd,
+                vd = Gd._pbrGeomContext;
+              let xd, qd;
               try {
-                db = await hb(bb, [Lb]), Cb = Kb._pbrGeomContext
-              } catch (nb) {
-                if (Ab(bb, ub, Lb, Hb), lb(bb, ub), !ob(bb, ub, hb, Lb, Sb, ab)) return;
-                throw nb
+                qd = await kd(dd, [Zd]), xd = Gd._pbrGeomContext
+              } catch (ad) {
+                if (Rd(dd, Jd, Zd, od), Id(dd, Jd), !ed(dd, Jd, kd, Zd, Cd, Kd)) return;
+                throw ad
               } finally {
-                hb._rebuildSingle = wb, "pbr" === hb._materialFamily && Xb && (Kb._pbrGeomContext = Wb)
+                kd._rebuildSingle = ld, "pbr" === kd._materialFamily && Ld && (Gd._pbrGeomContext = vd)
               }
-              if (!ob(bb, ub, hb, Lb, Sb, ab)) return Ab(bb, ub, Lb, Hb), void lb(bb, ub);
-              for (let Bb = bb._renderables.length - 1; Bb >= 0; Bb--) bb._renderables[Bb].mesh === Lb && bb._renderables.splice(Bb, 1);
-              if (Hb) {
-                for (const ub of Hb) {
-                  const hb = bb._disposables.indexOf(ub);
-                  hb >= 0 && bb._disposables.splice(hb, 1);
-                  const Bb = ub.p;
-                  if (Bb) {
-                    Bb._disposed = !0;
-                    const bb = Bb._owner;
-                    if (bb) {
-                      const ub = bb.indexOf(Bb);
-                      ub >= 0 && bb.splice(ub, 1), Bb._owner = void 0, 0 === bb.length && Bb._onOwnerEmpty?.()
-                    } else Bb._onOwnerEmpty?.();
-                    Bb._onOwnerEmpty && (Bb._onOwnerEmpty = void 0)
+              if (!ed(dd, Jd, kd, Zd, Cd, Kd)) return Rd(dd, Jd, Zd, od), void Id(dd, Jd);
+              for (let pd = dd._renderables.length - 1; pd >= 0; pd--) dd._renderables[pd].mesh === Zd && dd._renderables.splice(pd, 1);
+              if (od) {
+                for (const Jd of od) {
+                  const kd = dd._disposables.indexOf(Jd);
+                  kd >= 0 && dd._disposables.splice(kd, 1);
+                  const pd = Jd.p;
+                  if (pd) {
+                    pd._disposed = !0;
+                    const dd = pd._owner;
+                    if (dd) {
+                      const Jd = dd.indexOf(pd);
+                      Jd >= 0 && dd.splice(Jd, 1), pd._owner = void 0, 0 === dd.length && pd._onOwnerEmpty?.()
+                    } else pd._onOwnerEmpty?.();
+                    pd._onOwnerEmpty && (pd._onOwnerEmpty = void 0)
                   }
-                }(0, Bb.d)(bb.surface.engine, (() => {
-                  for (const bb of Hb) bb()
+                }(0, pd.c)(dd.surface.engine, (() => {
+                  for (const dd of od) dd()
                 }))
               }
-              Ub(ub, Lb, Hb), bb._renderables.push(...db.renderables);
-              const rb = bb._groups.get(hb);
-              rb && (rb.o = [...(rb.o ?? []).filter((bb => bb.mesh !== Lb)), ...db.renderables]);
-              db.updater && bb._uniformUpdaters.push(db.updater);
-              Xb && function(bb, ub) {
-                const hb = new Set(bb._disposables.slice(0, ub));
-                for (let Bb = bb._disposables.length - 1; Bb >= ub; Bb--) hb.has(bb._disposables[Bb]) && bb._disposables.splice(Bb, 1)
-              }(bb, pb);
-              "pbr" === hb._materialFamily && Xb && Cb && (Kb._pbrMeshGeomContexts ??= new WeakMap).set(Lb, Cb);
-              (function(bb, ub, hb, Bb, Ob, Gb) {
-                let Ub = Yb?.get(hb);
-                if (!Ub) {
-                  const bb = new WeakMap,
-                    ub = new WeakMap,
-                    Bb = (Bb, Ob, Gb, Ub) => {
-                      const Lb = bb.get(Bb)?.get(Ob);
-                      if (Lb) return Lb(Bb, Ob, Gb, Ub);
-                      const Yb = ub.get(Bb) ?? Bb._groups.get(hb)?.r;
-                      if (Yb) return Yb(Bb, Ob, Gb, Ub);
+              Pd(Jd, Zd, od), dd._renderables.push(...qd.renderables);
+              const Bd = dd._groups.get(kd);
+              Bd && (Bd.o = [...(Bd.o ?? []).filter((dd => dd.mesh !== Zd)), ...qd.renderables]);
+              qd.updater && dd._uniformUpdaters.push(qd.updater);
+              Ld && function(dd, Jd) {
+                const kd = new Set(dd._disposables.slice(0, Jd));
+                for (let pd = dd._disposables.length - 1; pd >= Jd; pd--) kd.has(dd._disposables[pd]) && dd._disposables.splice(pd, 1)
+              }(dd, Od);
+              "pbr" === kd._materialFamily && Ld && xd && (Gd._pbrMeshGeomContexts ??= new WeakMap).set(Zd, xd);
+              (function(dd, Jd, kd, pd, Nd, Wd) {
+                let Pd = gd?.get(kd);
+                if (!Pd) {
+                  const dd = new WeakMap,
+                    Jd = new WeakMap,
+                    pd = (pd, Nd, Wd, Pd) => {
+                      const Zd = dd.get(pd)?.get(Nd);
+                      if (Zd) return Zd(pd, Nd, Wd, Pd);
+                      const gd = Jd.get(pd) ?? pd._groups.get(kd)?.r;
+                      if (gd) return gd(pd, Nd, Wd, Pd);
                       throw new Error("Material group has not completed its initial build")
                     };
-                  Ub = {
-                    o4: ub,
-                    dispatch: Bb,
-                    scenes: bb
-                  }, (Yb ??= new WeakMap).set(hb, Ub)
+                  Pd = {
+                    Y5: Jd,
+                    dispatch: pd,
+                    scenes: dd
+                  }, (gd ??= new WeakMap).set(kd, Pd)
                 }
-                let Lb = Ub.scenes.get(bb);
-                Lb || (Lb = new WeakMap, Ub.scenes.set(bb, Lb));
-                Lb.set(Bb, Ob), Ub.o4.has(bb) || Ub.o4.set(bb, Gb ?? Ob);
-                const Sb = bb._groups.get(hb);
-                Sb && (Sb.r = Ub.dispatch);
-                let ab = ub.installed.get(Bb);
-                ab || (ab = new Set, ub.installed.set(Bb, ab));
-                ab.add(hb), ub.installedMeshes.add(Bb)
-              })(bb, ub, hb, Lb, db.rebuildSingle, Xb ? Zb : db.rebuildSingle), Lb.material._csmGen = (Lb.material._csmGen ?? 0) + 1;
-              const jb = bb._groups.get(hb);
-              jb && !Xb && (jb.r = db.rebuildSingle);
-              bb._renderables.sort(Ob), bb._renderableVersion++, bb._materialEpoch++
-            }(bb, ub, hb, ab, wb, Hb))).catch((Bb => {
-              throw ob(bb, ub, hb, ab, wb, Hb) && (ub.error = Bb instanceof Error ? Bb : new Error("Runtime mesh build failed", {
-                cause: Bb
-              })), Bb
+                let Zd = Pd.scenes.get(dd);
+                Zd || (Zd = new WeakMap, Pd.scenes.set(dd, Zd));
+                Zd.set(pd, Nd), Pd.Y5.has(dd) || Pd.Y5.set(dd, Wd ?? Nd);
+                const Cd = dd._groups.get(kd);
+                Cd && (Cd.r = Pd.dispatch);
+                let Kd = Jd.installed.get(pd);
+                Kd || (Kd = new Set, Jd.installed.set(pd, Kd));
+                Kd.add(kd), Jd.installedMeshes.add(pd)
+              })(dd, Jd, kd, Zd, qd.rebuildSingle, Ld ? Qd : qd.rebuildSingle), Zd.material._csmGen = (Zd.material._csmGen ?? 0) + 1;
+              const sd = dd._groups.get(kd);
+              sd && !Ld && (sd.r = qd.rebuildSingle);
+              dd._renderables.sort(Nd), dd._renderableVersion++, dd._materialEpoch++
+            }(dd, Jd, kd, Kd, ld, od))).catch((pd => {
+              throw ed(dd, Jd, kd, Kd, ld, od) && (Jd.error = pd instanceof Error ? pd : new Error("Runtime mesh build failed", {
+                cause: pd
+              })), pd
             })).finally((() => {
-              pb(), ub.tail === Kb && (ub.tail = null), Lb?.get(hb) === Kb && Lb.delete(hb)
+              Od(), Jd.tail === Gd && (Jd.tail = null), Zd?.get(kd) === Gd && Zd.delete(kd)
             })).finally((() => {
-              ub.chains.get(ab) === Wb && ub.chains.delete(ab)
+              Jd.chains.get(Kd) === vd && Jd.chains.delete(Kd)
             }));
-            return ub.chains.set(ab, Wb), Sb.track(Wb)
+            return Jd.chains.set(Kd, vd), Cd.track(vd)
           },
-          all: () => Promise.all(ub.active).then((() => {})),
-          track: bb => {
-            const hb = bb.finally((() => ub.active.delete(hb)));
-            return ub.active.add(hb), Promise.all(ub.active).then((() => {}))
+          all: () => Promise.all(Jd.active).then((() => {})),
+          track: dd => {
+            const kd = dd.finally((() => Jd.active.delete(kd)));
+            return Jd.active.add(kd), Promise.all(Jd.active).then((() => {}))
           },
-          base: (ub, hb) => {
-            const Bb = Yb?.get(ub);
-            return Bb && Bb.o4.set(bb, hb), Bb?.dispatch ?? hb
+          base: (Jd, kd) => {
+            const pd = gd?.get(Jd);
+            return pd && pd.Y5.set(dd, kd), pd?.dispatch ?? kd
           },
           get w() {
-            return !!ub.tail
+            return !!Jd.tail
           },
-          pendingDisposers: bb => ub.pendingDisposers.get(bb),
-          holdPendingDisposers: (bb, hb) => Gb(ub, bb, hb),
-          releasePendingDisposers: (bb, hb) => Ub(ub, bb, hb),
-          reset: Bb => {
-            pb(bb, ub, Bb), hb._pbrMeshGeomContexts?.delete(Bb)
+          pendingDisposers: dd => Jd.pendingDisposers.get(dd),
+          holdPendingDisposers: (dd, kd) => Wd(Jd, dd, kd),
+          releasePendingDisposers: (dd, kd) => Pd(Jd, dd, kd),
+          reset: pd => {
+            Od(dd, Jd, pd), kd._pbrMeshGeomContexts?.delete(pd)
           },
-          remove: Bb => {
-            ub.generations.set(Bb, (ub.generations.get(Bb) ?? 0) + 1), ub.chains.delete(Bb), Xb(bb, ub, Bb), hb._pbrMeshGeomContexts?.delete(Bb)
+          remove: pd => {
+            Jd.generations.set(pd, (Jd.generations.get(pd) ?? 0) + 1), Jd.chains.delete(pd), Ld(dd, Jd, pd), kd._pbrMeshGeomContexts?.delete(pd)
           },
-          dropBase: ub => {
-            const hb = Yb?.get(ub);
-            hb && (hb.o4.delete(bb), hb.scenes.delete(bb))
+          dropBase: Jd => {
+            const kd = gd?.get(Jd);
+            kd && (kd.Y5.delete(dd), kd.scenes.delete(dd))
           },
-          wait: async bb => {
-            const hb = new Set;
-            for (const Bb of bb) {
-              const bb = ub.chains.get(Bb);
-              bb && hb.add(bb)
+          wait: async dd => {
+            const kd = new Set;
+            for (const pd of dd) {
+              const dd = Jd.chains.get(pd);
+              dd && kd.add(dd)
             }
-            await Promise.all(hb)
+            await Promise.all(kd)
           },
           _e: function() {
-            let bb = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-            if (ub.error) {
-              const hb = ub.error;
-              throw bb && (ub.error = null), hb
+            let dd = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+            if (Jd.error) {
+              const kd = Jd.error;
+              throw dd && (Jd.error = null), kd
             }
           },
-          _x: bb => {
-            ub.error = bb instanceof Error ? bb : new Error("Runtime mesh build failed", {
-              cause: bb
+          _x: dd => {
+            Jd.error = dd instanceof Error ? dd : new Error("Runtime mesh build failed", {
+              cause: dd
             })
           },
-          _d: () => ub.FZ,
-          exclusive: (bb, hb) => {
-            const Bb = [];
-            ub.tail && Bb.push(ub.tail);
-            const Ob = Lb?.get(bb);
-            Ob && Bb.push(Ob);
-            const Gb = Promise.all(Bb).then(hb),
-              Ub = Gb.then((() => {}), (() => {}));
-            return ub.tail = Ub, (Lb ??= new WeakMap).set(bb, Ub), Ub.then((() => {
-              ub.tail === Ub && (ub.tail = null), Lb?.get(bb) === Ub && Lb.delete(bb)
-            })), Gb
+          _d: () => Jd.pL,
+          exclusive: (dd, kd) => {
+            const pd = [];
+            Jd.tail && pd.push(Jd.tail);
+            const Nd = Zd?.get(dd);
+            Nd && pd.push(Nd);
+            const Wd = Promise.all(pd).then(kd),
+              Pd = Wd.then((() => {}), (() => {}));
+            return Jd.tail = Pd, (Zd ??= new WeakMap).set(dd, Pd), Pd.then((() => {
+              Jd.tail === Pd && (Jd.tail = null), Zd?.get(dd) === Pd && Zd.delete(dd)
+            })), Wd
           }
         };
-      return bb._runtimeBuilds = Sb, (bb._beforeRender ??= []).push((() => {
-        Sb._e()
-      })), bb._disposables.push((() => {
-        ub.FZ = !0, ub.active.clear();
-        for (const hb of ub.installedMeshes) pb(bb, ub, hb);
-        for (const ub of bb._groups.keys()) Yb?.get(ub)?.o4.delete(bb);
-        bb._runtimeBuilds = void 0, hb._pbrMeshGeomContexts = void 0
-      })), Sb
+      return dd._runtimeBuilds = Cd, (dd._beforeRender ??= []).push((() => {
+        Cd._e()
+      })), dd._disposables.push((() => {
+        Jd.pL = !0, Jd.active.clear();
+        for (const kd of Jd.installedMeshes) Od(dd, Jd, kd);
+        for (const Jd of dd._groups.keys()) gd?.get(Jd)?.Y5.delete(dd);
+        dd._runtimeBuilds = void 0, kd._pbrMeshGeomContexts = void 0
+      })), Cd
     }
 
-    function Xb(bb, ub, hb) {
-      const Bb = ub.installed.get(hb);
-      if (Bb) {
-        for (const ub of Bb) Yb?.get(ub)?.scenes.get(bb)?.delete(hb);
-        ub.installed.delete(hb), ub.installedMeshes.delete(hb)
+    function Ld(dd, Jd, kd) {
+      const pd = Jd.installed.get(kd);
+      if (pd) {
+        for (const Jd of pd) gd?.get(Jd)?.scenes.get(dd)?.delete(kd);
+        Jd.installed.delete(kd), Jd.installedMeshes.delete(kd)
       }
     }
 
-    function pb(bb, ub, hb) {
-      Xb(bb, ub, hb)
+    function Od(dd, Jd, kd) {
+      Ld(dd, Jd, kd)
     }
 
-    function ob(bb, ub, hb, Bb, Ob, Gb) {
-      return !ub.FZ && ub.generations.get(Bb) === Gb && bb.meshes.includes(Bb) && Bb.material === Ob && Ob._buildGroup === hb
+    function ed(dd, Jd, kd, pd, Nd, Wd) {
+      return !Jd.pL && Jd.generations.get(pd) === Wd && dd.meshes.includes(pd) && pd.material === Nd && Nd._buildGroup === kd
     }
 
-    function Ab(bb, ub, hb, Ob) {
-      const Gb = bb._meshDisposables.get(hb);
-      if (Gb && Gb !== Ob) {
-        bb._meshDisposables.delete(hb);
-        for (const bb of Gb) bb()
+    function Rd(dd, Jd, kd, Nd) {
+      const Wd = dd._meshDisposables.get(kd);
+      if (Wd && Wd !== Nd) {
+        dd._meshDisposables.delete(kd);
+        for (const dd of Wd) dd()
       }
-      if (Ob)
-        if (bb.meshes.includes(hb)) bb._meshDisposables.set(hb, Ob);
-        else if (ub.FZ)
-        for (const Bb of Ob) Bb();
-      else(0, Bb.d)(bb.surface.engine, (() => {
-        for (const bb of Ob) bb()
+      if (Nd)
+        if (dd.meshes.includes(kd)) dd._meshDisposables.set(kd, Nd);
+        else if (Jd.pL)
+        for (const pd of Nd) pd();
+      else(0, pd.c)(dd.surface.engine, (() => {
+        for (const dd of Nd) dd()
       }));
-      Ub(ub, hb, Ob)
+      Pd(Jd, kd, Nd)
     }
 
-    function lb(bb, ub) {
-      if (!ub.FZ) return;
-      const hb = bb._disposables.splice(0);
-      for (const Bb of hb) Bb()
+    function Id(dd, Jd) {
+      if (!Jd.pL) return;
+      const kd = dd._disposables.splice(0);
+      for (const pd of kd) pd()
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

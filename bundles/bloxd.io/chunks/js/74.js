@@ -1,30 +1,30 @@
 export const id = 74;
 export const ids = [74];
 export const modules = {
-  4459: (bb, ub, hb) => {
-    hb.d(ub, {
-      d: () => ab
+  4557: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      b: () => Kd
     });
-    var Bb = hb(13),
-      Ob = hb(16),
-      Gb = hb(1184),
-      Ub = hb(2633);
-    const Lb = 3e4,
-      Yb = 1e3;
+    var pd = kd(22),
+      Nd = kd(29),
+      Wd = kd(1307),
+      Pd = kd(2704);
+    const Zd = 3e4,
+      gd = 1e3;
 
-    function Sb() {
-      return "visible" === document.visibilityState && "inGame" === Bb.d.get("gameState") && (0, Gb.m)()
+    function Cd() {
+      return "visible" === document.visibilityState && "inGame" === pd.d.get("gameState") && (0, Wd.s)()
     }
 
-    function ab(bb, ub) {
-      (0, Ub.s)() || function(bb, ub, hb) {
-        let Bb = 0;
-        const Ob = setInterval((() => {
-          ub() && (Bb += Yb, Bb >= bb && (clearInterval(Ob), hb()))
-        }), Yb)
-      }(Lb, Sb, (() => {
-        ub().then((() => {
-          bb(`saved for the player after ${Lb/1e3} s of play`), (0, Ub.B)(), Ob.i.vp("chat", {
+    function Kd(dd, Jd) {
+      (0, Pd.o)() || function(dd, Jd, kd) {
+        let pd = 0;
+        const Nd = setInterval((() => {
+          Jd() && (pd += gd, pd >= dd && (clearInterval(Nd), kd()))
+        }), gd)
+      }(Zd, Cd, (() => {
+        Jd().then((() => {
+          dd(`saved for the player after ${Zd/1e3} s of play`), (0, Pd.u)(), Nd.j.nO("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,330 +36,330 @@ export const modules = {
       }))
     }
   },
-  8951: (bb, ub, hb) => {
-    function Bb(bb, ub) {
-      return 0 === bb.length ? 0 : bb[Math.min(bb.length - 1, Math.floor(ub * bb.length))]
+  9098: (dd, Jd, kd) => {
+    function pd(dd, Jd) {
+      return 0 === dd.length ? 0 : dd[Math.min(dd.length - 1, Math.floor(Jd * dd.length))]
     }
 
-    function Ob(bb) {
-      return bb.toFixed(1)
+    function Nd(dd) {
+      return dd.toFixed(1)
     }
-    hb.d(ub, {
-      c: () => Ob,
-      g: () => Bb
+    kd.d(Jd, {
+      c: () => Nd,
+      e: () => pd
     })
   },
-  37539: (bb, ub, hb) => {
-    hb.d(ub, {
-      c: () => Sb,
-      d: () => ab,
-      g: () => Wb,
-      j: () => Kb,
-      k: () => lb
+  38138: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      b: () => Cd,
+      d: () => Kd,
+      e: () => vd,
+      f: () => Gd,
+      i: () => Id
     });
-    var Bb = hb(4459),
-      Ob = hb(8951),
-      Gb = hb(2633);
-    const Ub = 20,
-      Lb = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "LH", "jobMs"];
+    var pd = kd(4557),
+      Nd = kd(9098),
+      Wd = kd(2704);
+    const Pd = 20,
+      Zd = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "oo", "jobMs"];
 
-    function Yb(bb) {
-      return [...bb].sort(((bb, ub) => bb - ub))
+    function gd(dd) {
+      return [...dd].sort(((dd, Jd) => dd - Jd))
     }
-    const Sb = [];
+    const Cd = [];
 
-    function ab(bb, ub, hb) {
-      return `${bb},${ub},${hb}`
+    function Kd(dd, Jd, kd) {
+      return `${dd},${Jd},${kd}`
     }
-    class Hb {
+    class od {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(bb, ub) {
-        var hb;
-        const Bb = null !== (hb = this.pending.get(bb)) && void 0 !== hb ? hb : [];
-        Bb.push({
-          editAt: ub,
+      edit(dd, Jd) {
+        var kd;
+        const pd = null !== (kd = this.pending.get(dd)) && void 0 !== kd ? kd : [];
+        pd.push({
+          editAt: Jd,
           meshJobId: 0
-        }), this.pending.set(bb, Bb)
+        }), this.pending.set(dd, pd)
       }
-      frame(bb) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, bb - this.lastFrameAt)), this.lastFrameAt = bb, this.frames++, bb - this.windowStart >= 1e3 && this.summarise(bb)
+      frame(dd) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, dd - this.lastFrameAt)), this.lastFrameAt = dd, this.frames++, dd - this.windowStart >= 1e3 && this.summarise(dd)
       }
-      sent(bb, ub, hb, Bb, Ob, Gb, Ub) {
-        this.jobs.set(ub, {
-          sentAt: Ub,
+      sent(dd, Jd, kd, pd, Nd, Wd, Pd) {
+        this.jobs.set(Jd, {
+          sentAt: Pd,
           receivedAt: 0,
-          ahead: hb,
-          inFlight: Bb,
-          LH: Ob,
+          ahead: kd,
+          inFlight: pd,
+          oo: Nd,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, hb), this.maxCapacity = Math.max(this.maxCapacity, Ob);
-        for (const Yb of null !== (Lb = this.pending.get(bb)) && void 0 !== Lb ? Lb : []) {
-          var Lb;
-          Gb.includes(Yb.meshJobId) || (Yb.meshJobId = ub)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, kd), this.maxCapacity = Math.max(this.maxCapacity, Nd);
+        for (const gd of null !== (Zd = this.pending.get(dd)) && void 0 !== Zd ? Zd : []) {
+          var Zd;
+          Wd.includes(gd.meshJobId) || (gd.meshJobId = Jd)
         }
       }
-      received(bb, ub, hb) {
-        const Bb = this.jobs.get(bb);
-        void 0 !== Bb && (this.roundTrips.push(hb - Bb.sentAt), Bb.receivedAt = hb, Bb.jobMs = ub)
+      received(dd, Jd, kd) {
+        const pd = this.jobs.get(dd);
+        void 0 !== pd && (this.roundTrips.push(kd - pd.sentAt), pd.receivedAt = kd, pd.jobMs = Jd)
       }
-      failed(bb) {
-        this.jobs.delete(bb)
+      failed(dd) {
+        this.jobs.delete(dd)
       }
-      reassign(bb, ub, hb) {
-        this.jobs.delete(ub);
-        for (const Ob of null !== (Bb = this.pending.get(bb)) && void 0 !== Bb ? Bb : []) {
-          var Bb;
-          Ob.meshJobId === ub && (Ob.meshJobId = hb)
+      reassign(dd, Jd, kd) {
+        this.jobs.delete(Jd);
+        for (const Nd of null !== (pd = this.pending.get(dd)) && void 0 !== pd ? pd : []) {
+          var pd;
+          Nd.meshJobId === Jd && (Nd.meshJobId = kd)
         }
       }
-      applied(bb, ub, hb) {
-        const Bb = this.jobs.get(ub);
-        this.jobs.delete(ub), void 0 !== Bb && this.show(bb, Bb, hb, (bb => bb.meshJobId === ub))
+      applied(dd, Jd, kd) {
+        const pd = this.jobs.get(Jd);
+        this.jobs.delete(Jd), void 0 !== pd && this.show(dd, pd, kd, (dd => dd.meshJobId === Jd))
       }
-      emptied(bb, ub) {
-        const hb = {
-          sentAt: ub,
-          receivedAt: ub,
+      emptied(dd, Jd) {
+        const kd = {
+          sentAt: Jd,
+          receivedAt: Jd,
           ahead: 0,
           inFlight: 0,
-          LH: 0,
+          oo: 0,
           jobMs: 0
         };
-        this.show(bb, hb, ub, (() => !0))
+        this.show(dd, kd, Jd, (() => !0))
       }
-      show(bb, ub, hb, Bb) {
-        const Ob = this.pending.get(bb);
-        if (!Ob) return;
-        const Gb = Ob.filter((Ob => !Bb(Ob) || (this.record(bb, Ob.editAt, ub, hb), !1)));
-        Gb.length > 0 ? this.pending.set(bb, Gb) : this.pending.delete(bb)
+      show(dd, Jd, kd, pd) {
+        const Nd = this.pending.get(dd);
+        if (!Nd) return;
+        const Wd = Nd.filter((Nd => !pd(Nd) || (this.record(dd, Nd.editAt, Jd, kd), !1)));
+        Wd.length > 0 ? this.pending.set(dd, Wd) : this.pending.delete(dd)
       }
-      iZ(bb) {
-        this.reported += bb, this === Zb && this.reported >= Ub && null !== Xb && (Xb(), Xb = null)
+      TQ(dd) {
+        this.reported += dd, this === Qd && this.reported >= Pd && null !== Ld && (Ld(), Ld = null)
       }
-      record(bb, ub, hb, Bb) {
-        const Ob = {
-          totalMs: Bb - ub,
-          slotMs: hb.sentAt - ub,
-          workerMs: hb.receivedAt - hb.sentAt,
-          applyMs: Bb - hb.receivedAt,
-          ahead: hb.ahead,
-          inFlight: hb.inFlight,
-          LH: hb.LH,
-          jobMs: hb.jobMs
+      record(dd, Jd, kd, pd) {
+        const Nd = {
+          totalMs: pd - Jd,
+          slotMs: kd.sentAt - Jd,
+          workerMs: kd.receivedAt - kd.sentAt,
+          applyMs: pd - kd.receivedAt,
+          ahead: kd.ahead,
+          inFlight: kd.inFlight,
+          oo: kd.oo,
+          jobMs: kd.jobMs
         };
-        if (this.edits[this.nextEdit] = Ob, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Ob.totalMs), this.iZ(1), Ob.totalMs < 100 || ++this.outliers > 5) return;
-        const Ub = bb => Math.round(bb);
-        (0, Gb.l)("remesh", `slow edit (${bb}) shown in ${Ub(Ob.totalMs)} ms: slot ${Ub(Ob.slotMs)}, worker ${Ub(Ob.workerMs)} (${Ob.ahead} ahead, ${Ob.inFlight}/${Ob.LH} in flight; job ${Ub(Ob.jobMs)}), apply ${Ub(Ob.applyMs)}`)
+        if (this.edits[this.nextEdit] = Nd, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Nd.totalMs), this.TQ(1), Nd.totalMs < 100 || ++this.outliers > 5) return;
+        const Pd = dd => Math.round(dd);
+        (0, Wd.h)("remesh", `slow edit (${dd}) shown in ${Pd(Nd.totalMs)} ms: slot ${Pd(Nd.slotMs)}, worker ${Pd(Nd.workerMs)} (${Nd.ahead} ahead, ${Nd.inFlight}/${Nd.oo} in flight; job ${Pd(Nd.jobMs)}), apply ${Pd(Nd.applyMs)}`)
       }
-      summarise(bb) {
-        const ub = (bb - this.windowStart) / 1e3;
-        for (const [hb, Bb] of this.pending) {
-          const ub = Bb.filter((ub => bb - ub.editAt <= 1e4));
-          this.gaveUp += Bb.length - ub.length, this.iZ(Bb.length - ub.length), ub.length > 0 ? this.pending.set(hb, ub) : this.pending.delete(hb)
+      summarise(dd) {
+        const Jd = (dd - this.windowStart) / 1e3;
+        for (const [kd, pd] of this.pending) {
+          const Jd = pd.filter((Jd => dd - Jd.editAt <= 1e4));
+          this.gaveUp += pd.length - Jd.length, this.TQ(pd.length - Jd.length), Jd.length > 0 ? this.pending.set(kd, Jd) : this.pending.delete(kd)
         }
-        for (const [hb, Bb] of this.jobs) bb - Bb.sentAt > (Bb.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(hb);
+        for (const [kd, pd] of this.jobs) dd - pd.sentAt > (pd.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(kd);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const bb = Yb(this.roundTrips),
-            hb = Yb(this.windowEdits),
-            Bb = Math.max(0, this.outliers - 5);
-          (0, Gb.l)("remesh", `${Math.round(this.frames/ub)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Ob.g)(bb,.5))} max ${Math.round((0,Ob.g)(bb,1))} ms | ${hb.length} edits shown, p50 ${Math.round((0,Ob.g)(hb,.5))} max ${Math.round((0,Ob.g)(hb,1))} ms${Bb>0?`, ${Bb} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const dd = gd(this.roundTrips),
+            kd = gd(this.windowEdits),
+            pd = Math.max(0, this.outliers - 5);
+          (0, Wd.h)("remesh", `${Math.round(this.frames/Jd)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Nd.e)(dd,.5))} max ${Math.round((0,Nd.e)(dd,1))} ms | ${kd.length} edits shown, p50 ${Math.round((0,Nd.e)(kd,.5))} max ${Math.round((0,Nd.e)(kd,1))} ms${pd>0?`, ${pd} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = bb, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = dd, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const bb = Lb.map((bb => {
-          const ub = Yb(this.edits.map((ub => ub[bb])));
-          return `${bb}: p50 ${Math.round((0,Ob.g)(ub,.5))} p90 ${Math.round((0,Ob.g)(ub,.9))} max ${Math.round((0,Ob.g)(ub,1))}`
+        const dd = Zd.map((dd => {
+          const Jd = gd(this.edits.map((Jd => Jd[dd])));
+          return `${dd}: p50 ${Math.round((0,Nd.e)(Jd,.5))} p90 ${Math.round((0,Nd.e)(Jd,.9))} max ${Math.round((0,Nd.e)(Jd,1))}`
         }));
-        return [`${this.edits.length} edits`, ...bb].join("\n")
+        return [`${this.edits.length} edits`, ...dd].join("\n")
       }
       dump() {
-        const bb = this.edits.map((bb => Lb.map((ub => Math.round(10 * bb[ub]) / 10)).join(",")));
-        return [this.stats(), Lb.join(","), ...bb].join("\n")
+        const dd = this.edits.map((dd => Zd.map((Jd => Math.round(10 * dd[Jd]) / 10)).join(",")));
+        return [this.stats(), Zd.join(","), ...dd].join("\n")
       }
     }
-    class wb {
-      constructor(bb, ub) {
-        this.log = bb, this.PH = ub
+    class ld {
+      constructor(dd, Jd) {
+        this.log = dd, this.Jl = Jd
       }
-      edit(bb, ub, hb) {
-        const [Bb, Ob, Gb] = this.PH.eH.SOb(bb, ub, hb), Ub = this.PH.eH.FX.fX(Bb, Ob, Gb);
-        Ub && Ub.yX && this.log.edit(ab(Bb, Ob, Gb), performance.now())
+      edit(dd, Jd, kd) {
+        const [pd, Nd, Wd] = this.Jl.Vo.GNd(dd, Jd, kd), Pd = this.Jl.Vo.pO.NO(pd, Nd, Wd);
+        Pd && Pd.JO && this.log.edit(Kd(pd, Nd, Wd), performance.now())
       }
-      sent(bb, ub, hb, Bb, Ob) {
-        this.log.sent(ab(bb.i, bb.j, bb.k), ub, hb, Bb, Ob, Sb, performance.now())
+      sent(dd, Jd, kd, pd, Nd) {
+        this.log.sent(Kd(dd.i, dd.j, dd.k), Jd, kd, pd, Nd, Cd, performance.now())
       }
-      received(bb) {
-        this.log.received(bb.meshJobId, bb.jobMs, performance.now())
+      received(dd) {
+        this.log.received(dd.meshJobId, dd.jobMs, performance.now())
       }
-      failed(bb) {
-        this.log.failed(bb)
+      failed(dd) {
+        this.log.failed(dd)
       }
-      applied(bb, ub) {
-        this.log.applied(ab(bb.i, bb.j, bb.k), ub, performance.now())
+      applied(dd, Jd) {
+        this.log.applied(Kd(dd.i, dd.j, dd.k), Jd, performance.now())
       }
     }
-    let Zb = null,
-      Xb = null,
-      pb = !1,
-      ob = null;
+    let Qd = null,
+      Ld = null,
+      Od = !1,
+      ed = null;
 
-    function Ab() {
-      return new Promise((bb => {
-        null !== Zb && Zb.reported >= Ub ? bb() : Xb = bb
+    function Rd() {
+      return new Promise((dd => {
+        null !== Qd && Qd.reported >= Pd ? dd() : Ld = dd
       }))
     }
 
-    function lb() {
-      const bb = new Hb;
-      return Zb = bb, (0, Gb.i)("remesh", (() => bb.dump())), (0, Gb.b)("remeshStats", (() => {
-        console.log(bb.stats())
-      })), pb || (pb = !0, (0, Bb.d)((bb => {
-        (0, Gb.l)("remesh", bb)
-      }), Ab)), bb
+    function Id() {
+      const dd = new od;
+      return Qd = dd, (0, Wd.g)("remesh", (() => dd.dump())), (0, Wd.b)("remeshStats", (() => {
+        console.log(dd.stats())
+      })), Od || (Od = !0, (0, pd.b)((dd => {
+        (0, Wd.h)("remesh", dd)
+      }), Rd)), dd
     }
 
-    function Kb(bb) {
-      const ub = lb();
-      ob = new wb(ub, bb), bb.zW.meshProbe = ob, bb.on("beforeRender", (() => {
-        ub.frame(performance.now())
+    function Gd(dd) {
+      const Jd = Id();
+      ed = new ld(Jd, dd), dd.mG.meshProbe = ed, dd.on("beforeRender", (() => {
+        Jd.frame(performance.now())
       }))
     }
 
-    function Wb(bb, ub, hb) {
-      var Bb;
-      null === (Bb = ob) || void 0 === Bb || Bb.edit(bb, ub, hb)
+    function vd(dd, Jd, kd) {
+      var pd;
+      null === (pd = ed) || void 0 === pd || pd.edit(dd, Jd, kd)
     }
   },
-  37371: (bb, ub, hb) => {
-    function Bb(bb) {
-      return "string" !== typeof bb || 2 !== bb.length && ":" !== bb[2] ? null : bb[0] + bb[1]
+  37938: (dd, Jd, kd) => {
+    function pd(dd) {
+      return "string" !== typeof dd || 2 !== dd.length && ":" !== dd[2] ? null : dd[0] + dd[1]
     }
-    hb.d(ub, {
-      b: () => ob,
-      d: () => Wb,
-      h: () => Cb,
-      j: () => Lb,
-      k: () => Ub,
-      l: () => Gb,
-      n: () => Yb,
-      p: () => Ab,
-      t: () => pb
+    kd.d(Jd, {
+      e: () => ed,
+      i: () => vd,
+      j: () => xd,
+      k: () => Zd,
+      n: () => Pd,
+      r: () => Wd,
+      v: () => gd,
+      x: () => Rd,
+      z: () => Od
     });
-    const Ob = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const Nd = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function Gb(bb) {
-      if (function(bb) {
-          for (let ub = 0; ub < Ob.length; ub++)
-            if (bb === Ob[ub]) return !0;
+    function Wd(dd) {
+      if (function(dd) {
+          for (let Jd = 0; Jd < Nd.length; Jd++)
+            if (dd === Nd[Jd]) return !0;
           return !1
-        }(bb)) return !1;
-      const ub = Bb(bb);
-      return "op" === ub || "ep" === ub || "wi" === ub || "pp" === ub || "fp:call" === bb || "fp:t" === bb
+        }(dd)) return !1;
+      const Jd = pd(dd);
+      return "op" === Jd || "ep" === Jd || "wi" === Jd || "pp" === Jd || "fp:call" === dd || "fp:t" === dd
     }
 
-    function Ub(bb) {
-      return "fp" === Bb(bb) && !Gb(bb)
+    function Pd(dd) {
+      return "fp" === pd(dd) && !Wd(dd)
     }
 
-    function Lb(bb) {
-      if ("string" !== typeof bb) return !1;
-      return "o" === bb[0] && "p" === bb[1] && (2 === bb.length || ":" === bb[2]) || "fp:call" === bb || "2" === bb || "t" === bb || "a" === bb
+    function Zd(dd) {
+      if ("string" !== typeof dd) return !1;
+      return "o" === dd[0] && "p" === dd[1] && (2 === dd.length || ":" === dd[2]) || "fp:call" === dd || "2" === dd || "t" === dd || "a" === dd
     }
 
-    function Yb(bb, ub) {
-      return `~${function(bb){return bb.length<2?bb:":"===bb[1]?bb[0]:bb[0]+bb[1]}(ub)}~${bb}`
+    function gd(dd, Jd) {
+      return `~${function(dd){return dd.length<2?dd:":"===dd[1]?dd[0]:dd[0]+dd[1]}(Jd)}~${dd}`
     }
-    const Sb = 200;
+    const Cd = 200;
 
-    function ab(bb) {
-      let ub = bb.length - 1;
-      for (let hb = 0; hb < 2; hb++) {
-        const hb = ub;
-        for (; ub >= 0 && bb[ub] >= "0" && bb[ub] <= "9";) ub--;
-        if (ub < 0 || ub === hb || ":" !== bb[ub]) return -1;
-        ub--
+    function Kd(dd) {
+      let Jd = dd.length - 1;
+      for (let kd = 0; kd < 2; kd++) {
+        const kd = Jd;
+        for (; Jd >= 0 && dd[Jd] >= "0" && dd[Jd] <= "9";) Jd--;
+        if (Jd < 0 || Jd === kd || ":" !== dd[Jd]) return -1;
+        Jd--
       }
-      return ub + 1
+      return Jd + 1
     }
 
-    function Hb(bb) {
-      return "unknown" === bb || ab(bb) >= 0
+    function od(dd) {
+      return "unknown" === dd || Kd(dd) >= 0
     }
 
-    function wb(bb, ub) {
-      return bb[ub] >= "\ud800" && bb[ub] <= "\udbff" && ub + 1 < bb.length && bb[ub + 1] >= "\udc00" && bb[ub + 1] <= "\udfff" ? 2 : 1
+    function ld(dd, Jd) {
+      return dd[Jd] >= "\ud800" && dd[Jd] <= "\udbff" && Jd + 1 < dd.length && dd[Jd + 1] >= "\udc00" && dd[Jd + 1] <= "\udfff" ? 2 : 1
     }
 
-    function Zb(bb, ub, hb) {
-      return 2 === hb ? 4 : bb[ub] <= "\x7f" ? 1 : bb[ub] <= "\u07ff" ? 2 : 3
+    function Qd(dd, Jd, kd) {
+      return 2 === kd ? 4 : dd[Jd] <= "\x7f" ? 1 : dd[Jd] <= "\u07ff" ? 2 : 3
     }
 
-    function Xb(bb, ub, hb) {
-      let Bb = 0;
-      for (; Bb < ub;) {
-        const ub = wb(bb, Bb),
-          Ob = Zb(bb, Bb, ub);
-        if (Ob > hb) break;
-        hb -= Ob, Bb += ub
+    function Ld(dd, Jd, kd) {
+      let pd = 0;
+      for (; pd < Jd;) {
+        const Jd = ld(dd, pd),
+          Nd = Qd(dd, pd, Jd);
+        if (Nd > kd) break;
+        kd -= Nd, pd += Jd
       }
-      return Bb
+      return pd
     }
 
-    function pb(bb) {
-      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof bb || bb.length > Sb || !Hb(bb)) return "t";
-      let hb = 2;
-      for (let Lb = 0; Lb < bb.length;) {
-        const ub = wb(bb, Lb);
-        hb += Zb(bb, Lb, ub), Lb += ub
+    function Od(dd) {
+      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof dd || dd.length > Cd || !od(dd)) return "t";
+      let kd = 2;
+      for (let Zd = 0; Zd < dd.length;) {
+        const Jd = ld(dd, Zd);
+        kd += Qd(dd, Zd, Jd), Zd += Jd
       }
-      if (hb <= ub) return `t ${bb}`;
-      const Bb = ab(bb),
-        Ob = ub - 2 - (bb.length - Bb);
-      if (Ob < 0) return "t";
-      const Gb = Xb(bb, Bb, Ob);
-      let Ub = "t ";
-      for (let Lb = 0; Lb < Gb; Lb++) Ub += bb[Lb];
-      for (let Lb = Bb; Lb < bb.length; Lb++) Ub += bb[Lb];
-      return Ub
+      if (kd <= Jd) return `t ${dd}`;
+      const pd = Kd(dd),
+        Nd = Jd - 2 - (dd.length - pd);
+      if (Nd < 0) return "t";
+      const Wd = Ld(dd, pd, Nd);
+      let Pd = "t ";
+      for (let Zd = 0; Zd < Wd; Zd++) Pd += dd[Zd];
+      for (let Zd = pd; Zd < dd.length; Zd++) Pd += dd[Zd];
+      return Pd
     }
-    const ob = 62;
+    const ed = 62;
 
-    function Ab(bb) {
-      let ub = "so:";
-      const hb = Xb(bb, bb.length, ob - ub.length);
-      for (let Bb = 0; Bb < hb; Bb++) ub += bb[Bb];
-      return ub
+    function Rd(dd) {
+      let Jd = "so:";
+      const kd = Ld(dd, dd.length, ed - Jd.length);
+      for (let pd = 0; pd < kd; pd++) Jd += dd[pd];
+      return Jd
     }
-    const lb = "BABYLON ",
-      Kb = "DECODE ";
+    const Id = "BABYLON ",
+      Gd = "DECODE ";
 
-    function Wb(bb) {
-      return Ab(lb + bb)
+    function vd(dd) {
+      return Rd(Id + dd)
     }
 
-    function Cb(bb) {
-      return Ab(Kb + bb)
+    function xd(dd) {
+      return Rd(Gd + dd)
     }
   },
-  37571: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  38163: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  37557: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  38154: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  37578: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  38167: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  37553: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  38151: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  37563: bb => {
-    bb.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  38160: dd => {
+    dd.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

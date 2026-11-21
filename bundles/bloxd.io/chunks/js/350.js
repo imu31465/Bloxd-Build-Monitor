@@ -1,17 +1,17 @@
 export const id = 350;
 export const ids = [350];
 export const modules = {
-  60665: (bb, ub, hb) => {
-    hb.d(ub, {
-      allocateF64Mat4: () => Ob
+  60954: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      allocateF64Mat4: () => Nd
     });
-    var Bb = hb(41184);
+    var pd = kd(41685);
 
-    function Ob() {
-      return new Bb.f(16)
+    function Nd() {
+      return new pd.g(16)
     }
-    Ob["@@MAT4_STORAGE_F64@@"] = !0
+    Nd["@@MAT4_STORAGE_F64@@"] = !0
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

@@ -1,473 +1,473 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var bb = __webpack_require__.u,
-        ub = __webpack_require__.e,
-        hb = {},
-        Bb = {};
-      __webpack_require__.u = function(ub) {
-        return bb(ub) + (hb.hasOwnProperty(ub) ? "?" + hb[ub] : "")
-      }, __webpack_require__.e = function(Ob) {
-        return ub(Ob).catch((function(ub) {
-          var Gb = Bb.hasOwnProperty(Ob) ? Bb[Ob] : 4;
-          if (Gb < 1) {
-            var Ub = bb(Ob);
-            throw ub.message = "Loading chunk " + Ob + " failed after 4 retries.\n(" + Ub + ")", ub.request = Ub, hb[Ob] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete Bb[Ob]
-            }), 0), ub
+      var dd = __webpack_require__.u,
+        Jd = __webpack_require__.e,
+        kd = {},
+        pd = {};
+      __webpack_require__.u = function(Jd) {
+        return dd(Jd) + (kd.hasOwnProperty(Jd) ? "?" + kd[Jd] : "")
+      }, __webpack_require__.e = function(Nd) {
+        return Jd(Nd).catch((function(Jd) {
+          var Wd = pd.hasOwnProperty(Nd) ? pd[Nd] : 4;
+          if (Wd < 1) {
+            var Pd = dd(Nd);
+            throw Jd.message = "Loading chunk " + Nd + " failed after 4 retries.\n(" + Pd + ")", Jd.request = Pd, kd[Nd] = "cache-bust=" + Date.now(), setTimeout((function() {
+              delete pd[Nd]
+            }), 0), Jd
           }
-          return new Promise((function(bb) {
-            var ub = 4 - Gb + 1;
+          return new Promise((function(dd) {
+            var Jd = 4 - Wd + 1;
             setTimeout((function() {
-              var ub = "cache-bust=" + Date.now();
-              hb[Ob] = ub, Bb[Ob] = Gb - 1, bb(__webpack_require__.e(Ob))
-            }), function(bb) {
-              return 500 * Math.pow(2, bb)
-            }(ub))
+              var Jd = "cache-bust=" + Date.now();
+              kd[Nd] = Jd, pd[Nd] = Wd - 1, dd(__webpack_require__.e(Nd))
+            }), function(dd) {
+              return 500 * Math.pow(2, dd)
+            }(Jd))
           }))
         }))
       }
     }
   })();
 
-  function bb(bb) {
-    return bb instanceof Error ? bb.message : String(bb)
+  function dd(dd) {
+    return dd instanceof Error ? dd.message : String(dd)
   }
-  const ub = ArrayBuffer,
-    hb = Uint8Array,
-    Bb = Uint16Array,
-    Ob = Int16Array,
-    Gb = Int32Array,
-    Ub = (bb, ub, Bb) => {
-      if (hb.prototype.slice) return hb.prototype.slice.call(bb, ub, Bb);
-      (null == ub || ub < 0) && (ub = 0), (null == Bb || Bb > bb.length) && (Bb = bb.length);
-      const Ob = new hb(Bb - ub);
-      return Ob.set(bb.subarray(ub, Bb)), Ob
+  const Jd = ArrayBuffer,
+    kd = Uint8Array,
+    pd = Uint16Array,
+    Nd = Int16Array,
+    Wd = Int32Array,
+    Pd = (dd, Jd, pd) => {
+      if (kd.prototype.slice) return kd.prototype.slice.call(dd, Jd, pd);
+      (null == Jd || Jd < 0) && (Jd = 0), (null == pd || pd > dd.length) && (pd = dd.length);
+      const Nd = new kd(pd - Jd);
+      return Nd.set(dd.subarray(Jd, pd)), Nd
     },
-    Lb = (bb, ub, Bb, Ob) => {
-      if (hb.prototype.fill) return hb.prototype.fill.call(bb, ub, Bb, Ob);
-      for ((null == Bb || Bb < 0) && (Bb = 0), (null == Ob || Ob > bb.length) && (Ob = bb.length); Bb < Ob; ++Bb) bb[Bb] = ub;
-      return bb
+    Zd = (dd, Jd, pd, Nd) => {
+      if (kd.prototype.fill) return kd.prototype.fill.call(dd, Jd, pd, Nd);
+      for ((null == pd || pd < 0) && (pd = 0), (null == Nd || Nd > dd.length) && (Nd = dd.length); pd < Nd; ++pd) dd[pd] = Jd;
+      return dd
     },
-    Yb = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
-    Sb = (bb, ub, hb) => {
-      const Bb = new Error(ub || Yb[bb]);
-      if (Bb.code = bb, Error.captureStackTrace && Error.captureStackTrace(Bb, Sb), !hb) throw Bb;
-      return Bb
+    gd = ["invalid zstd data", "window size too large (>2046MB)", "invalid block type", "FSE accuracy too high", "match distance too far back", "unexpected EOF"],
+    Cd = (dd, Jd, kd) => {
+      const pd = new Error(Jd || gd[dd]);
+      if (pd.code = dd, Error.captureStackTrace && Error.captureStackTrace(pd, Cd), !kd) throw pd;
+      return pd
     },
-    ab = (bb, ub, hb) => {
-      let Bb = 0,
-        Ob = 0;
-      for (; Bb < hb; ++Bb) Ob |= bb[ub++] << (Bb << 3);
-      return Ob
+    Kd = (dd, Jd, kd) => {
+      let pd = 0,
+        Nd = 0;
+      for (; pd < kd; ++pd) Nd |= dd[Jd++] << (pd << 3);
+      return Nd
     },
-    Hb = (bb, ub) => {
-      const Bb = bb[0] | bb[1] << 8 | bb[2] << 16;
-      if (3126568 == Bb && 253 == bb[3]) {
-        const Bb = bb[4],
-          Ob = Bb >> 5 & 1,
-          Ub = Bb >> 2 & 1,
-          Lb = 3 & Bb,
-          Yb = Bb >> 6;
-        8 & Bb && Sb(0);
-        let Hb = 6 - Ob;
-        const wb = 3 == Lb ? 4 : Lb,
-          Zb = ab(bb, Hb, wb);
-        Hb += wb;
-        const Xb = Yb ? 1 << Yb : Ob,
-          pb = ab(bb, Hb, Xb) + (1 == Yb && 256);
-        let ob = pb;
-        if (!Ob) {
-          const ub = 1 << 10 + (bb[5] >> 3);
-          ob = ub + (ub >> 3) * (7 & bb[5])
+    od = (dd, Jd) => {
+      const pd = dd[0] | dd[1] << 8 | dd[2] << 16;
+      if (3126568 == pd && 253 == dd[3]) {
+        const pd = dd[4],
+          Nd = pd >> 5 & 1,
+          Pd = pd >> 2 & 1,
+          Zd = 3 & pd,
+          gd = pd >> 6;
+        8 & pd && Cd(0);
+        let od = 6 - Nd;
+        const ld = 3 == Zd ? 4 : Zd,
+          Qd = Kd(dd, od, ld);
+        od += ld;
+        const Ld = gd ? 1 << gd : Nd,
+          Od = Kd(dd, od, Ld) + (1 == gd && 256);
+        let ed = Od;
+        if (!Nd) {
+          const Jd = 1 << 10 + (dd[5] >> 3);
+          ed = Jd + (Jd >> 3) * (7 & dd[5])
         }
-        ob > 2145386496 && Sb(1);
-        const Ab = new hb((1 == ub ? pb || ob : ub ? 0 : ob) + 12);
-        return Ab[0] = 1, Ab[4] = 4, Ab[8] = 8, {
-          b: Hb + Xb,
+        ed > 2145386496 && Cd(1);
+        const Rd = new kd((1 == Jd ? Od || ed : Jd ? 0 : ed) + 12);
+        return Rd[0] = 1, Rd[4] = 4, Rd[8] = 8, {
+          b: od + Ld,
           y: 0,
           l: 0,
-          d: Zb,
-          w: ub && 1 != ub ? ub : Ab.subarray(12),
-          e: ob,
-          o: new Gb(Ab.buffer, 0, 3),
-          u: pb,
-          c: Ub,
-          m: Math.min(131072, ob)
+          d: Qd,
+          w: Jd && 1 != Jd ? Jd : Rd.subarray(12),
+          e: ed,
+          o: new Wd(Rd.buffer, 0, 3),
+          u: Od,
+          c: Pd,
+          m: Math.min(131072, ed)
         }
       }
-      if (25481893 == (Bb >> 4 | bb[3] << 20)) return 8 + (((Ob = bb)[Ub = 4] | Ob[Ub + 1] << 8 | Ob[Ub + 2] << 16 | Ob[Ub + 3] << 24) >>> 0);
-      var Ob, Ub;
-      Sb(0)
+      if (25481893 == (pd >> 4 | dd[3] << 20)) return 8 + (((Nd = dd)[Pd = 4] | Nd[Pd + 1] << 8 | Nd[Pd + 2] << 16 | Nd[Pd + 3] << 24) >>> 0);
+      var Nd, Pd;
+      Cd(0)
     },
-    wb = bb => {
-      let ub = 0;
-      for (; 1 << ub <= bb; ++ub);
-      return ub - 1
+    ld = dd => {
+      let Jd = 0;
+      for (; 1 << Jd <= dd; ++Jd);
+      return Jd - 1
     },
-    Zb = (bb, Gb, Ub) => {
-      let Lb = 4 + (Gb << 3);
-      const Yb = 5 + (15 & bb[Gb]);
-      Yb > Ub && Sb(3);
-      const ab = 1 << Yb;
-      let Hb = ab,
-        Zb = -1,
-        Xb = -1,
-        pb = -1,
-        ob = ab;
-      const Ab = new ub(512 + (ab << 2)),
-        lb = new Ob(Ab, 0, 256),
-        Kb = new Bb(Ab, 0, 256),
-        Wb = new Bb(Ab, 512, ab),
-        Cb = 512 + (ab << 1),
-        db = new hb(Ab, Cb, ab),
-        rb = new hb(Ab, Cb + ab);
-      for (; Zb < 255 && Hb > 0;) {
-        const ub = wb(Hb + 1),
-          hb = Lb >> 3,
-          Bb = (1 << ub + 1) - 1;
-        let Ob = (bb[hb] | bb[hb + 1] << 8 | bb[hb + 2] << 16) >> (7 & Lb) & Bb;
-        const Gb = (1 << ub) - 1,
-          Ub = Bb - Hb - 1,
-          Yb = Ob & Gb;
-        if (Yb < Ub ? (Lb += ub, Ob = Yb) : (Lb += ub + 1, Ob > Gb && (Ob -= Ub)), lb[++Zb] = --Ob, -1 == Ob ? (Hb += Ob, db[--ob] = Zb) : Hb -= Ob, !Ob)
+    Qd = (dd, Wd, Pd) => {
+      let Zd = 4 + (Wd << 3);
+      const gd = 5 + (15 & dd[Wd]);
+      gd > Pd && Cd(3);
+      const Kd = 1 << gd;
+      let od = Kd,
+        Qd = -1,
+        Ld = -1,
+        Od = -1,
+        ed = Kd;
+      const Rd = new Jd(512 + (Kd << 2)),
+        Id = new Nd(Rd, 0, 256),
+        Gd = new pd(Rd, 0, 256),
+        vd = new pd(Rd, 512, Kd),
+        xd = 512 + (Kd << 1),
+        qd = new kd(Rd, xd, Kd),
+        Bd = new kd(Rd, xd + Kd);
+      for (; Qd < 255 && od > 0;) {
+        const Jd = ld(od + 1),
+          kd = Zd >> 3,
+          pd = (1 << Jd + 1) - 1;
+        let Nd = (dd[kd] | dd[kd + 1] << 8 | dd[kd + 2] << 16) >> (7 & Zd) & pd;
+        const Wd = (1 << Jd) - 1,
+          Pd = pd - od - 1,
+          gd = Nd & Wd;
+        if (gd < Pd ? (Zd += Jd, Nd = gd) : (Zd += Jd + 1, Nd > Wd && (Nd -= Pd)), Id[++Qd] = --Nd, -1 == Nd ? (od += Nd, qd[--ed] = Qd) : od -= Nd, !Nd)
           do {
-            const ub = Lb >> 3;
-            Xb = (bb[ub] | bb[ub + 1] << 8) >> (7 & Lb) & 3, Lb += 2, Zb += Xb
-          } while (3 == Xb)
-      }(Zb > 255 || Hb) && Sb(0);
-      let jb = 0;
-      const nb = (ab >> 1) + (ab >> 3) + 3,
-        Db = ab - 1;
-      for (let ub = 0; ub <= Zb; ++ub) {
-        const bb = lb[ub];
-        if (bb < 1) Kb[ub] = -bb;
+            const Jd = Zd >> 3;
+            Ld = (dd[Jd] | dd[Jd + 1] << 8) >> (7 & Zd) & 3, Zd += 2, Qd += Ld
+          } while (3 == Ld)
+      }(Qd > 255 || od) && Cd(0);
+      let sd = 0;
+      const id = (Kd >> 1) + (Kd >> 3) + 3,
+        ad = Kd - 1;
+      for (let Jd = 0; Jd <= Qd; ++Jd) {
+        const dd = Id[Jd];
+        if (dd < 1) Gd[Jd] = -dd;
         else
-          for (pb = 0; pb < bb; ++pb) {
-            db[jb] = ub;
+          for (Od = 0; Od < dd; ++Od) {
+            qd[sd] = Jd;
             do {
-              jb = jb + nb & Db
-            } while (jb >= ob)
+              sd = sd + id & ad
+            } while (sd >= ed)
           }
       }
-      for (jb && Sb(0), pb = 0; pb < ab; ++pb) {
-        const bb = Kb[db[pb]]++,
-          ub = rb[pb] = Yb - wb(bb);
-        Wb[pb] = (bb << ub) - ab
+      for (sd && Cd(0), Od = 0; Od < Kd; ++Od) {
+        const dd = Gd[qd[Od]]++,
+          Jd = Bd[Od] = gd - ld(dd);
+        vd[Od] = (dd << Jd) - Kd
       }
-      return [Lb + 7 >> 3, {
-        b: Yb,
-        s: db,
-        n: rb,
-        t: Wb
+      return [Zd + 7 >> 3, {
+        b: gd,
+        s: qd,
+        n: Bd,
+        t: vd
       }]
     },
-    Xb = Zb(new hb([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
-    pb = Zb(new hb([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
-    ob = Zb(new hb([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
-    Ab = (bb, ub) => {
-      const hb = bb.length,
-        Bb = new Gb(hb);
-      for (let Ob = 0; Ob < hb; ++Ob) Bb[Ob] = ub, ub += 1 << bb[Ob];
-      return Bb
+    Ld = Qd(new kd([81, 16, 99, 140, 49, 198, 24, 99, 12, 33, 196, 24, 99, 102, 102, 134, 70, 146, 4]), 0, 6)[1],
+    Od = Qd(new kd([33, 20, 196, 24, 99, 140, 33, 132, 16, 66, 8, 33, 132, 16, 66, 8, 33, 68, 68, 68, 68, 68, 68, 68, 68, 36, 9]), 0, 6)[1],
+    ed = Qd(new kd([32, 132, 16, 66, 102, 70, 68, 68, 68, 68, 36, 73, 2]), 0, 5)[1],
+    Rd = (dd, Jd) => {
+      const kd = dd.length,
+        pd = new Wd(kd);
+      for (let Nd = 0; Nd < kd; ++Nd) pd[Nd] = Jd, Jd += 1 << dd[Nd];
+      return pd
     },
-    lb = new hb(new Gb([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
-    Kb = Ab(lb, 0),
-    Wb = new hb(new Gb([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
-    Cb = Ab(Wb, 3),
-    db = (bb, ub, hb) => {
-      const Bb = bb.length,
-        Ob = ub.length,
-        Gb = bb[Bb - 1],
-        Ub = (1 << hb.b) - 1,
-        Lb = -hb.b;
-      Gb || Sb(0);
-      let Yb = 0,
-        ab = hb.b,
-        Hb = (Bb << 3) - 8 + wb(Gb) - ab,
-        Zb = -1;
-      for (; Hb > Lb && Zb < Ob;) {
-        const Bb = Hb >> 3;
-        Yb = (Yb << ab | (bb[Bb] | bb[Bb + 1] << 8 | bb[Bb + 2] << 16) >> (7 & Hb)) & Ub, ub[++Zb] = hb.s[Yb], Hb -= ab = hb.n[Yb]
+    Id = new kd(new Wd([0, 0, 0, 0, 16843009, 50528770, 134678020, 202050057, 269422093]).buffer, 0, 36),
+    Gd = Rd(Id, 0),
+    vd = new kd(new Wd([0, 0, 0, 0, 0, 0, 0, 0, 16843009, 50528770, 117769220, 185207048, 252579084, 16]).buffer, 0, 53),
+    xd = Rd(vd, 3),
+    qd = (dd, Jd, kd) => {
+      const pd = dd.length,
+        Nd = Jd.length,
+        Wd = dd[pd - 1],
+        Pd = (1 << kd.b) - 1,
+        Zd = -kd.b;
+      Wd || Cd(0);
+      let gd = 0,
+        Kd = kd.b,
+        od = (pd << 3) - 8 + ld(Wd) - Kd,
+        Qd = -1;
+      for (; od > Zd && Qd < Nd;) {
+        const pd = od >> 3;
+        gd = (gd << Kd | (dd[pd] | dd[pd + 1] << 8 | dd[pd + 2] << 16) >> (7 & od)) & Pd, Jd[++Qd] = kd.s[gd], od -= Kd = kd.n[gd]
       }
-      Hb == Lb && Zb + 1 == Ob || Sb(0)
+      od == Zd && Qd + 1 == Nd || Cd(0)
     },
-    rb = (bb, ub, hb) => {
-      let Bb = 6;
-      const Ob = ub.length + 3 >> 2,
-        Gb = Ob << 1,
-        Ub = Ob + Gb;
-      db(bb.subarray(Bb, Bb += bb[0] | bb[1] << 8), ub.subarray(0, Ob), hb), db(bb.subarray(Bb, Bb += bb[2] | bb[3] << 8), ub.subarray(Ob, Gb), hb), db(bb.subarray(Bb, Bb += bb[4] | bb[5] << 8), ub.subarray(Gb, Ub), hb), db(bb.subarray(Bb), ub.subarray(Ub), hb)
+    Bd = (dd, Jd, kd) => {
+      let pd = 6;
+      const Nd = Jd.length + 3 >> 2,
+        Wd = Nd << 1,
+        Pd = Nd + Wd;
+      qd(dd.subarray(pd, pd += dd[0] | dd[1] << 8), Jd.subarray(0, Nd), kd), qd(dd.subarray(pd, pd += dd[2] | dd[3] << 8), Jd.subarray(Nd, Wd), kd), qd(dd.subarray(pd, pd += dd[4] | dd[5] << 8), Jd.subarray(Wd, Pd), kd), qd(dd.subarray(pd), Jd.subarray(Pd), kd)
     },
-    jb = (bb, ub, Ob) => {
-      let Gb = ub.b;
-      const Yb = bb[Gb],
-        ab = Yb >> 1 & 3;
-      ub.l = 1 & Yb;
-      const Hb = Yb >> 3 | bb[Gb + 1] << 5 | bb[Gb + 2] << 13,
-        Ab = (Gb += 3) + Hb;
-      if (1 == ab) {
-        if (Gb >= bb.length) return;
-        return ub.b = Gb + 1, Ob ? (Lb(Ob, bb[Gb], ub.y, ub.y += Hb), Ob) : Lb(new hb(Hb), bb[Gb])
+    sd = (dd, Jd, Nd) => {
+      let Wd = Jd.b;
+      const gd = dd[Wd],
+        Kd = gd >> 1 & 3;
+      Jd.l = 1 & gd;
+      const od = gd >> 3 | dd[Wd + 1] << 5 | dd[Wd + 2] << 13,
+        Rd = (Wd += 3) + od;
+      if (1 == Kd) {
+        if (Wd >= dd.length) return;
+        return Jd.b = Wd + 1, Nd ? (Zd(Nd, dd[Wd], Jd.y, Jd.y += od), Nd) : Zd(new kd(od), dd[Wd])
       }
-      if (!(Ab > bb.length)) {
-        if (0 == ab) return ub.b = Ab, Ob ? (Ob.set(bb.subarray(Gb, Ab), ub.y), ub.y += Hb, Ob) : Ub(bb, Gb, Ab);
-        if (2 == ab) {
-          const Yb = bb[Gb],
-            ab = 3 & Yb,
-            Hb = Yb >> 2 & 3;
-          let jb = Yb >> 4,
-            nb = 0,
-            Db = 0;
-          ab < 2 ? 1 & Hb ? jb |= bb[++Gb] << 4 | (2 & Hb && bb[++Gb] << 12) : jb = Yb >> 3 : (Db = Hb, Hb < 2 ? (jb |= (63 & bb[++Gb]) << 4, nb = bb[Gb] >> 6 | bb[++Gb] << 2) : 2 == Hb ? (jb |= bb[++Gb] << 4 | (3 & bb[++Gb]) << 12, nb = bb[Gb] >> 2 | bb[++Gb] << 6) : (jb |= bb[++Gb] << 4 | (63 & bb[++Gb]) << 12, nb = bb[Gb] >> 6 | bb[++Gb] << 2 | bb[++Gb] << 10)), ++Gb;
-          let xb = Ob ? Ob.subarray(ub.y, ub.y + ub.m) : new hb(ub.m),
-            zb = xb.length - jb;
-          if (zb < 0 && Sb(0), 0 == ab) xb.set(bb.subarray(Gb, Gb += jb), zb);
-          else if (1 == ab) Lb(xb, bb[Gb++], zb);
+      if (!(Rd > dd.length)) {
+        if (0 == Kd) return Jd.b = Rd, Nd ? (Nd.set(dd.subarray(Wd, Rd), Jd.y), Jd.y += od, Nd) : Pd(dd, Wd, Rd);
+        if (2 == Kd) {
+          const gd = dd[Wd],
+            Kd = 3 & gd,
+            od = gd >> 2 & 3;
+          let sd = gd >> 4,
+            id = 0,
+            ad = 0;
+          Kd < 2 ? 1 & od ? sd |= dd[++Wd] << 4 | (2 & od && dd[++Wd] << 12) : sd = gd >> 3 : (ad = od, od < 2 ? (sd |= (63 & dd[++Wd]) << 4, id = dd[Wd] >> 6 | dd[++Wd] << 2) : 2 == od ? (sd |= dd[++Wd] << 4 | (3 & dd[++Wd]) << 12, id = dd[Wd] >> 2 | dd[++Wd] << 6) : (sd |= dd[++Wd] << 4 | (63 & dd[++Wd]) << 12, id = dd[Wd] >> 6 | dd[++Wd] << 2 | dd[++Wd] << 10)), ++Wd;
+          let Md = Nd ? Nd.subarray(Jd.y, Jd.y + Jd.m) : new kd(Jd.m),
+            Fd = Md.length - sd;
+          if (Fd < 0 && Cd(0), 0 == Kd) Md.set(dd.subarray(Wd, Wd += sd), Fd);
+          else if (1 == Kd) Zd(Md, dd[Wd++], Fd);
           else {
-            let Ob = ub.h;
-            if (2 == ab) {
-              const Ub = ((bb, ub) => {
-                let Ob = 0,
-                  Gb = -1;
-                const Ub = new hb(292),
-                  Yb = bb[ub],
-                  ab = Ub.subarray(0, 256),
-                  Hb = Ub.subarray(256, 268),
-                  Xb = new Bb(Ub.buffer, 268);
-                if (Yb < 128) {
-                  const [hb, Bb] = Zb(bb, ub + 1, 6), Ob = hb << 3, Ub = bb[ub += Yb];
-                  Ub || Sb(0);
-                  let Lb = 0,
-                    Hb = 0,
-                    Xb = Bb.b,
-                    pb = Xb,
-                    ob = (++ub << 3) - 8 + wb(Ub);
-                  for (; Gb > 254 && Sb(0), ob -= Xb, !(ob < Ob);) {
-                    let ub = ob >> 3;
-                    if (Lb += (bb[ub] | bb[ub + 1] << 8) >> (7 & ob) & (1 << Xb) - 1, ab[++Gb] = Bb.s[Lb], ob -= pb, ob < Ob) break;
-                    ub = ob >> 3, Hb += (bb[ub] | bb[ub + 1] << 8) >> (7 & ob) & (1 << pb) - 1, ab[++Gb] = Bb.s[Hb], Xb = Bb.n[Lb], Lb = Bb.t[Lb], pb = Bb.n[Hb], Hb = Bb.t[Hb]
-                  }++Gb > 255 && Sb(0)
+            let Nd = Jd.h;
+            if (2 == Kd) {
+              const Pd = ((dd, Jd) => {
+                let Nd = 0,
+                  Wd = -1;
+                const Pd = new kd(292),
+                  gd = dd[Jd],
+                  Kd = Pd.subarray(0, 256),
+                  od = Pd.subarray(256, 268),
+                  Ld = new pd(Pd.buffer, 268);
+                if (gd < 128) {
+                  const [kd, pd] = Qd(dd, Jd + 1, 6), Nd = kd << 3, Pd = dd[Jd += gd];
+                  Pd || Cd(0);
+                  let Zd = 0,
+                    od = 0,
+                    Ld = pd.b,
+                    Od = Ld,
+                    ed = (++Jd << 3) - 8 + ld(Pd);
+                  for (; Wd > 254 && Cd(0), ed -= Ld, !(ed < Nd);) {
+                    let Jd = ed >> 3;
+                    if (Zd += (dd[Jd] | dd[Jd + 1] << 8) >> (7 & ed) & (1 << Ld) - 1, Kd[++Wd] = pd.s[Zd], ed -= Od, ed < Nd) break;
+                    Jd = ed >> 3, od += (dd[Jd] | dd[Jd + 1] << 8) >> (7 & ed) & (1 << Od) - 1, Kd[++Wd] = pd.s[od], Ld = pd.n[Zd], Zd = pd.t[Zd], Od = pd.n[od], od = pd.t[od]
+                  }++Wd > 255 && Cd(0)
                 } else {
-                  for (Gb = Yb - 127; Ob < Gb; Ob += 2) {
-                    const hb = bb[++ub];
-                    ab[Ob] = hb >> 4, ab[Ob + 1] = 15 & hb
-                  }++ub
+                  for (Wd = gd - 127; Nd < Wd; Nd += 2) {
+                    const kd = dd[++Jd];
+                    Kd[Nd] = kd >> 4, Kd[Nd + 1] = 15 & kd
+                  }++Jd
                 }
-                let pb = 0;
-                for (Ob = 0; Ob < Gb; ++Ob) {
-                  const bb = ab[Ob];
-                  bb > 11 && Sb(0), pb += bb && 1 << bb - 1
+                let Od = 0;
+                for (Nd = 0; Nd < Wd; ++Nd) {
+                  const dd = Kd[Nd];
+                  dd > 11 && Cd(0), Od += dd && 1 << dd - 1
                 }
-                const ob = wb(pb) + 1,
-                  Ab = 1 << ob,
-                  lb = Ab - pb;
-                for (lb & lb - 1 && Sb(0), ab[Gb++] = wb(lb) + 1, Ob = 0; Ob < Gb; ++Ob) {
-                  const bb = ab[Ob];
-                  ++Hb[ab[Ob] = bb && ob + 1 - bb]
+                const ed = ld(Od) + 1,
+                  Rd = 1 << ed,
+                  Id = Rd - Od;
+                for (Id & Id - 1 && Cd(0), Kd[Wd++] = ld(Id) + 1, Nd = 0; Nd < Wd; ++Nd) {
+                  const dd = Kd[Nd];
+                  ++od[Kd[Nd] = dd && ed + 1 - dd]
                 }
-                const Kb = new hb(Ab << 1),
-                  Wb = Kb.subarray(0, Ab),
-                  Cb = Kb.subarray(Ab);
-                for (Xb[ob] = 0, Ob = ob; Ob > 0; --Ob) {
-                  const bb = Xb[Ob];
-                  Lb(Cb, Ob, bb, Xb[Ob - 1] = bb + Hb[Ob] * (1 << ob - Ob))
+                const Gd = new kd(Rd << 1),
+                  vd = Gd.subarray(0, Rd),
+                  xd = Gd.subarray(Rd);
+                for (Ld[ed] = 0, Nd = ed; Nd > 0; --Nd) {
+                  const dd = Ld[Nd];
+                  Zd(xd, Nd, dd, Ld[Nd - 1] = dd + od[Nd] * (1 << ed - Nd))
                 }
-                for (Xb[0] != Ab && Sb(0), Ob = 0; Ob < Gb; ++Ob) {
-                  const bb = ab[Ob];
-                  if (bb) {
-                    const ub = Xb[bb];
-                    Lb(Wb, Ob, ub, Xb[bb] = ub + (1 << ob - bb))
+                for (Ld[0] != Rd && Cd(0), Nd = 0; Nd < Wd; ++Nd) {
+                  const dd = Kd[Nd];
+                  if (dd) {
+                    const Jd = Ld[dd];
+                    Zd(vd, Nd, Jd, Ld[dd] = Jd + (1 << ed - dd))
                   }
                 }
-                return [ub, {
-                  n: Cb,
-                  b: ob,
-                  s: Wb
+                return [Jd, {
+                  n: xd,
+                  b: ed,
+                  s: vd
                 }]
-              })(bb, Gb);
-              nb += Gb - (Gb = Ub[0]), ub.h = Ob = Ub[1]
-            } else Ob || Sb(0);
-            (Db ? rb : db)(bb.subarray(Gb, Gb += nb), xb.subarray(zb), Ob)
+              })(dd, Wd);
+              id += Wd - (Wd = Pd[0]), Jd.h = Nd = Pd[1]
+            } else Nd || Cd(0);
+            (ad ? Bd : qd)(dd.subarray(Wd, Wd += id), Md.subarray(Fd), Nd)
           }
-          let gb = bb[Gb++];
-          if (gb) {
-            255 == gb ? gb = 32512 + (bb[Gb++] | bb[Gb++] << 8) : gb > 127 && (gb = gb - 128 << 8 | bb[Gb++]);
-            const Lb = bb[Gb++];
-            3 & Lb && Sb(0);
-            const Yb = [pb, ob, Xb];
-            for (let Ob = 2; Ob > -1; --Ob) {
-              const Ub = Lb >> 2 + (Ob << 1) & 3;
-              if (1 == Ub) {
-                const ub = new hb([0, 0, bb[Gb++]]);
-                Yb[Ob] = {
-                  s: ub.subarray(2, 3),
-                  n: ub.subarray(0, 1),
-                  t: new Bb(ub.buffer, 0, 1),
+          let Yd = dd[Wd++];
+          if (Yd) {
+            255 == Yd ? Yd = 32512 + (dd[Wd++] | dd[Wd++] << 8) : Yd > 127 && (Yd = Yd - 128 << 8 | dd[Wd++]);
+            const Zd = dd[Wd++];
+            3 & Zd && Cd(0);
+            const gd = [Od, ed, Ld];
+            for (let Nd = 2; Nd > -1; --Nd) {
+              const Pd = Zd >> 2 + (Nd << 1) & 3;
+              if (1 == Pd) {
+                const Jd = new kd([0, 0, dd[Wd++]]);
+                gd[Nd] = {
+                  s: Jd.subarray(2, 3),
+                  n: Jd.subarray(0, 1),
+                  t: new pd(Jd.buffer, 0, 1),
                   b: 0
                 }
-              } else 2 == Ub ? [Gb, Yb[Ob]] = Zb(bb, Gb, 9 - (1 & Ob)) : 3 == Ub && (ub.t || Sb(0), Yb[Ob] = ub.t[Ob])
+              } else 2 == Pd ? [Wd, gd[Nd]] = Qd(dd, Wd, 9 - (1 & Nd)) : 3 == Pd && (Jd.t || Cd(0), gd[Nd] = Jd.t[Nd])
             }
-            const [ab, Hb, db] = ub.t = Yb, rb = bb[Ab - 1];
-            rb || Sb(0);
-            let jb = (Ab << 3) - 8 + wb(rb) - db.b,
-              nb = jb >> 3,
-              Db = 0,
-              ib = (bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << db.b) - 1;
-            nb = (jb -= Hb.b) >> 3;
-            let vb = (bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << Hb.b) - 1;
-            nb = (jb -= ab.b) >> 3;
-            let tb = (bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << ab.b) - 1;
-            for (++gb; --gb;) {
-              const hb = db.s[ib],
-                Bb = db.n[ib],
-                Ob = ab.s[tb],
-                Gb = ab.n[tb],
-                Ub = Hb.s[vb],
-                Lb = Hb.n[vb];
-              nb = (jb -= Ub) >> 3;
-              const Yb = 1 << Ub;
-              let wb = Yb + ((bb[nb] | bb[nb + 1] << 8 | bb[nb + 2] << 16 | bb[nb + 3] << 24) >>> (7 & jb) & Yb - 1);
-              nb = (jb -= Wb[Ob]) >> 3;
-              let Zb = Cb[Ob] + ((bb[nb] | bb[nb + 1] << 8 | bb[nb + 2] << 16) >> (7 & jb) & (1 << Wb[Ob]) - 1);
-              nb = (jb -= lb[hb]) >> 3;
-              const Xb = Kb[hb] + ((bb[nb] | bb[nb + 1] << 8 | bb[nb + 2] << 16) >> (7 & jb) & (1 << lb[hb]) - 1);
-              if ((jb < 0 || zb + Xb > xb.length || Db + Xb + Zb > xb.length) && Sb(0), nb = (jb -= Bb) >> 3, ib = db.t[ib] + ((bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << Bb) - 1), nb = (jb -= Gb) >> 3, tb = ab.t[tb] + ((bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << Gb) - 1), nb = (jb -= Lb) >> 3, vb = Hb.t[vb] + ((bb[nb] | bb[nb + 1] << 8) >> (7 & jb) & (1 << Lb) - 1), wb > 3) ub.o[2] = ub.o[1], ub.o[1] = ub.o[0], ub.o[0] = wb -= 3;
+            const [Kd, od, qd] = Jd.t = gd, Bd = dd[Rd - 1];
+            Bd || Cd(0);
+            let sd = (Rd << 3) - 8 + ld(Bd) - qd.b,
+              id = sd >> 3,
+              ad = 0,
+              md = (dd[id] | dd[id + 1] << 8) >> (7 & sd) & (1 << qd.b) - 1;
+            id = (sd -= od.b) >> 3;
+            let bd = (dd[id] | dd[id + 1] << 8) >> (7 & sd) & (1 << od.b) - 1;
+            id = (sd -= Kd.b) >> 3;
+            let Sd = (dd[id] | dd[id + 1] << 8) >> (7 & sd) & (1 << Kd.b) - 1;
+            for (++Yd; --Yd;) {
+              const kd = qd.s[md],
+                pd = qd.n[md],
+                Nd = Kd.s[Sd],
+                Wd = Kd.n[Sd],
+                Pd = od.s[bd],
+                Zd = od.n[bd];
+              id = (sd -= Pd) >> 3;
+              const gd = 1 << Pd;
+              let ld = gd + ((dd[id] | dd[id + 1] << 8 | dd[id + 2] << 16 | dd[id + 3] << 24) >>> (7 & sd) & gd - 1);
+              id = (sd -= vd[Nd]) >> 3;
+              let Qd = xd[Nd] + ((dd[id] | dd[id + 1] << 8 | dd[id + 2] << 16) >> (7 & sd) & (1 << vd[Nd]) - 1);
+              id = (sd -= Id[kd]) >> 3;
+              const Ld = Gd[kd] + ((dd[id] | dd[id + 1] << 8 | dd[id + 2] << 16) >> (7 & sd) & (1 << Id[kd]) - 1);
+              if ((sd < 0 || Fd + Ld > Md.length || ad + Ld + Qd > Md.length) && Cd(0), id = (sd -= pd) >> 3, md = qd.t[md] + ((dd[id] | dd[id + 1] << 8) >> (7 & sd) & (1 << pd) - 1), id = (sd -= Wd) >> 3, Sd = Kd.t[Sd] + ((dd[id] | dd[id + 1] << 8) >> (7 & sd) & (1 << Wd) - 1), id = (sd -= Zd) >> 3, bd = od.t[bd] + ((dd[id] | dd[id + 1] << 8) >> (7 & sd) & (1 << Zd) - 1), ld > 3) Jd.o[2] = Jd.o[1], Jd.o[1] = Jd.o[0], Jd.o[0] = ld -= 3;
               else {
-                const bb = wb - (0 != Xb);
-                bb ? (wb = 3 == bb ? ub.o[0] - 1 : ub.o[bb], bb > 1 && (ub.o[2] = ub.o[1]), ub.o[1] = ub.o[0], ub.o[0] = wb) : wb = ub.o[0]
+                const dd = ld - (0 != Ld);
+                dd ? (ld = 3 == dd ? Jd.o[0] - 1 : Jd.o[dd], dd > 1 && (Jd.o[2] = Jd.o[1]), Jd.o[1] = Jd.o[0], Jd.o[0] = ld) : ld = Jd.o[0]
               }
-              for (let bb = 0; bb < Xb; ++bb) xb[Db + bb] = xb[zb + bb];
-              Db += Xb, zb += Xb;
-              let pb = Db - wb;
-              if (pb < 0) {
-                let bb = -pb;
-                const hb = ub.e + pb;
-                hb < 0 && Sb(4), bb > Zb && (bb = Zb);
-                for (let Bb = 0; Bb < bb; ++Bb) xb[Db + Bb] = ub.w[hb + Bb];
-                Db += bb, Zb -= bb, pb = 0
+              for (let dd = 0; dd < Ld; ++dd) Md[ad + dd] = Md[Fd + dd];
+              ad += Ld, Fd += Ld;
+              let Od = ad - ld;
+              if (Od < 0) {
+                let dd = -Od;
+                const kd = Jd.e + Od;
+                kd < 0 && Cd(4), dd > Qd && (dd = Qd);
+                for (let pd = 0; pd < dd; ++pd) Md[ad + pd] = Jd.w[kd + pd];
+                ad += dd, Qd -= dd, Od = 0
               }
-              for (let bb = 0; bb < Zb; ++bb) xb[Db + bb] = xb[pb + bb];
-              Db += Zb
+              for (let dd = 0; dd < Qd; ++dd) Md[ad + dd] = Md[Od + dd];
+              ad += Qd
             }
-            if (Db != zb)
-              for (; zb < xb.length;) xb[Db++] = xb[zb++];
-            else Db = xb.length;
-            Ob ? ub.y += Db : xb = Ub(xb, 0, Db)
-          } else if (Ob) {
-            if (ub.y += jb, zb)
-              for (let bb = 0; bb < jb; ++bb) xb[bb] = xb[zb + bb]
-          } else zb && (xb = Ub(xb, zb));
-          return ub.b = Ab, xb
+            if (ad != Fd)
+              for (; Fd < Md.length;) Md[ad++] = Md[Fd++];
+            else ad = Md.length;
+            Nd ? Jd.y += ad : Md = Pd(Md, 0, ad)
+          } else if (Nd) {
+            if (Jd.y += sd, Fd)
+              for (let dd = 0; dd < sd; ++dd) Md[dd] = Md[Fd + dd]
+          } else Fd && (Md = Pd(Md, Fd));
+          return Jd.b = Rd, Md
         }
-        Sb(2)
+        Cd(2)
       }
     };
-  class nb {
+  class id {
     output = null;
     decoded = 0;
     done = !1;
     st = null;
     parts = [];
-    MS = 0;
+    EC = 0;
     needed = 18;
     size;
-    constructor(bb) {
-      this.size = bb
+    constructor(dd) {
+      this.size = dd
     }
-    push(bb) {
+    push(dd) {
       if (this.done) return;
-      if (this.parts.push(bb), this.MS += bb.length, this.MS < this.needed) return;
-      const ub = ((bb, ub) => {
-        if (1 == bb.length) return bb[0];
-        const Bb = new hb(ub);
-        for (let hb = 0, Ob = 0; hb < bb.length; ++hb) {
-          const ub = bb[hb];
-          Bb.set(ub, Ob), Ob += ub.length
+      if (this.parts.push(dd), this.EC += dd.length, this.EC < this.needed) return;
+      const Jd = ((dd, Jd) => {
+        if (1 == dd.length) return dd[0];
+        const pd = new kd(Jd);
+        for (let kd = 0, Nd = 0; kd < dd.length; ++kd) {
+          const Jd = dd[kd];
+          pd.set(Jd, Nd), Nd += Jd.length
         }
-        return Bb
-      })(this.parts, this.MS);
-      let Bb = this.st;
-      if (!Bb) {
-        const bb = Hb(ub, new hb(0));
-        "number" != typeof bb && bb.u === this.size || Sb(0, `not a zstd frame of ${this.size} bytes`), Bb = this.st = Hb(ub, 1), Bb.e = 0, this.output = Bb.w
+        return pd
+      })(this.parts, this.EC);
+      let pd = this.st;
+      if (!pd) {
+        const dd = od(Jd, new kd(0));
+        "number" != typeof dd && dd.u === this.size || Cd(0, `not a zstd frame of ${this.size} bytes`), pd = this.st = od(Jd, 1), pd.e = 0, this.output = pd.w
       }
       for (;;) {
-        const bb = ub.length - Bb.b;
-        if (bb < 3) {
+        const dd = Jd.length - pd.b;
+        if (dd < 3) {
           this.needed = 3;
           break
         }
-        const hb = ub[Bb.b],
-          Ob = hb >> 1 & 3;
-        3 == Ob && Sb(2);
-        const Gb = hb >> 3 | ub[Bb.b + 1] << 5 | ub[Bb.b + 2] << 13;
-        Gb > Bb.m && Sb(0), 0 == Ob && Bb.y + Gb > Bb.u && Sb(0);
-        const Ub = 1 == Ob ? 4 : 3 + Gb;
-        if (bb < Ub) {
-          this.needed = Ub;
+        const kd = Jd[pd.b],
+          Nd = kd >> 1 & 3;
+        3 == Nd && Cd(2);
+        const Wd = kd >> 3 | Jd[pd.b + 1] << 5 | Jd[pd.b + 2] << 13;
+        Wd > pd.m && Cd(0), 0 == Nd && pd.y + Wd > pd.u && Cd(0);
+        const Pd = 1 == Nd ? 4 : 3 + Wd;
+        if (dd < Pd) {
+          this.needed = Pd;
           break
         }
-        if (jb(ub, Bb, Bb.w) || Sb(5), Bb.e = Bb.y, (Bb.y > Bb.u || Bb.l && Bb.y != Bb.u) && Sb(0), Bb.l) {
+        if (sd(Jd, pd, pd.w) || Cd(5), pd.e = pd.y, (pd.y > pd.u || pd.l && pd.y != pd.u) && Cd(0), pd.l) {
           this.done = !0;
           break
         }
       }
-      this.decoded = Bb.y;
-      const Ob = ub.subarray(Bb.b);
-      this.parts = Ob.length ? [Ob] : [], this.MS = Ob.length, Bb.b = 0
+      this.decoded = pd.y;
+      const Nd = Jd.subarray(pd.b);
+      this.parts = Nd.length ? [Nd] : [], this.EC = Nd.length, pd.b = 0
     }
   }
-  class Db {
+  class ad {
     post;
     href = "";
-    eZ = null;
+    rQ = null;
     given = 0;
     stopped = !1;
-    constructor(bb) {
-      this.post = bb
+    constructor(dd) {
+      this.post = dd
     }
-    take(ub) {
+    take(Jd) {
       if (!this.stopped) try {
-        this.answer(ub)
-      } catch (hb) {
-        this.stop(hb instanceof RangeError ? `out of memory decoding ${this.href}: ${bb(hb)}` : `${this.href} did not decode: ${bb(hb)}`)
+        this.answer(Jd)
+      } catch (kd) {
+        this.stop(kd instanceof RangeError ? `out of memory decoding ${this.href}: ${dd(kd)}` : `${this.href} did not decode: ${dd(kd)}`)
       }
     }
-    answer(bb) {
-      if (null === this.eZ) {
-        const [ub, hb] = bb;
-        return this.href = ub, void(this.eZ = new nb(hb))
+    answer(dd) {
+      if (null === this.rQ) {
+        const [Jd, kd] = dd;
+        return this.href = Jd, void(this.rQ = new id(kd))
       }
-      if (null === bb) return void this.stop(`${this.href} ended before its module did`);
-      const ub = this.eZ;
-      ub.push(bb);
+      if (null === dd) return void this.stop(`${this.href} ended before its module did`);
+      const Jd = this.rQ;
+      Jd.push(dd);
       const {
-        output: hb,
-        decoded: Bb
-      } = ub;
-      if (null !== hb && Bb > this.given) {
-        const bb = hb.slice(this.given, Bb).buffer;
-        this.given = Bb, this.post(bb, [bb])
+        output: kd,
+        decoded: pd
+      } = Jd;
+      if (null !== kd && pd > this.given) {
+        const dd = kd.slice(this.given, pd).buffer;
+        this.given = pd, this.post(dd, [dd])
       }
-      ub.done && this.stop(!0)
+      Jd.done && this.stop(!0)
     }
-    stop(bb) {
-      this.stopped = !0, this.post(bb)
+    stop(dd) {
+      this.stopped = !0, this.post(dd)
     }
   }
-  const xb = globalThis.WorkerGlobalScope;
-  if (void 0 !== xb && globalThis instanceof xb) {
-    const bb = globalThis,
-      ub = new Db((function(ub) {
-        let hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-        bb.postMessage(ub, hb)
+  const Md = globalThis.WorkerGlobalScope;
+  if (void 0 !== Md && globalThis instanceof Md) {
+    const dd = globalThis,
+      Jd = new ad((function(Jd) {
+        let kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+        dd.postMessage(Jd, kd)
       }));
-    bb.addEventListener("message", (bb => {
+    dd.addEventListener("message", (dd => {
       let {
-        data: hb
-      } = bb;
-      ub.take(hb)
+        data: kd
+      } = dd;
+      Jd.take(kd)
     }))
   }
 })();

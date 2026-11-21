@@ -1,8 +1,8 @@
 export const id = 216;
 export const ids = [216];
 export const modules = {
-  36260: bb => {
-    bb.exports = {
+  36810: dd => {
+    dd.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -153,363 +153,363 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36251: (bb, ub, hb) => {
-    var Bb = hb(36260),
-      Ob = hb(36268),
-      Gb = Object.hasOwnProperty,
-      Ub = Object.create(null);
-    for (var Lb in Bb) Gb.call(Bb, Lb) && (Ub[Bb[Lb]] = Lb);
-    var Yb = bb.exports = {
+  36804: (dd, Jd, kd) => {
+    var pd = kd(36810),
+      Nd = kd(36815),
+      Wd = Object.hasOwnProperty,
+      Pd = Object.create(null);
+    for (var Zd in pd) Wd.call(pd, Zd) && (Pd[pd[Zd]] = Zd);
+    var gd = dd.exports = {
       to: {},
       get: {}
     };
 
-    function Sb(bb, ub, hb) {
-      return Math.min(Math.max(ub, bb), hb)
+    function Cd(dd, Jd, kd) {
+      return Math.min(Math.max(Jd, dd), kd)
     }
 
-    function ab(bb) {
-      var ub = Math.round(bb).toString(16).toUpperCase();
-      return ub.length < 2 ? "0" + ub : ub
+    function Kd(dd) {
+      var Jd = Math.round(dd).toString(16).toUpperCase();
+      return Jd.length < 2 ? "0" + Jd : Jd
     }
-    Yb.get = function(bb) {
-      var ub, hb;
-      switch (bb.substring(0, 3).toLowerCase()) {
+    gd.get = function(dd) {
+      var Jd, kd;
+      switch (dd.substring(0, 3).toLowerCase()) {
         case "hsl":
-          ub = Yb.get.hsl(bb), hb = "hsl";
+          Jd = gd.get.hsl(dd), kd = "hsl";
           break;
         case "hwb":
-          ub = Yb.get.hwb(bb), hb = "hwb";
+          Jd = gd.get.hwb(dd), kd = "hwb";
           break;
         default:
-          ub = Yb.get.rgb(bb), hb = "rgb"
+          Jd = gd.get.rgb(dd), kd = "rgb"
       }
-      return ub ? {
-        model: hb,
-        value: ub
+      return Jd ? {
+        model: kd,
+        value: Jd
       } : null
-    }, Yb.get.rgb = function(bb) {
-      if (!bb) return null;
-      var ub, hb, Ob, Ub = [0, 0, 0, 1];
-      if (ub = bb.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
-        for (Ob = ub[2], ub = ub[1], hb = 0; hb < 3; hb++) {
-          var Lb = 2 * hb;
-          Ub[hb] = parseInt(ub.slice(Lb, Lb + 2), 16)
+    }, gd.get.rgb = function(dd) {
+      if (!dd) return null;
+      var Jd, kd, Nd, Pd = [0, 0, 0, 1];
+      if (Jd = dd.match(/^#([a-f0-9]{6})([a-f0-9]{2})?$/i)) {
+        for (Nd = Jd[2], Jd = Jd[1], kd = 0; kd < 3; kd++) {
+          var Zd = 2 * kd;
+          Pd[kd] = parseInt(Jd.slice(Zd, Zd + 2), 16)
         }
-        Ob && (Ub[3] = parseInt(Ob, 16) / 255)
-      } else if (ub = bb.match(/^#([a-f0-9]{3,4})$/i)) {
-        for (Ob = (ub = ub[1])[3], hb = 0; hb < 3; hb++) Ub[hb] = parseInt(ub[hb] + ub[hb], 16);
-        Ob && (Ub[3] = parseInt(Ob + Ob, 16) / 255)
-      } else if (ub = bb.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
-        for (hb = 0; hb < 3; hb++) Ub[hb] = parseInt(ub[hb + 1], 0);
-        ub[4] && (ub[5] ? Ub[3] = .01 * parseFloat(ub[4]) : Ub[3] = parseFloat(ub[4]))
+        Nd && (Pd[3] = parseInt(Nd, 16) / 255)
+      } else if (Jd = dd.match(/^#([a-f0-9]{3,4})$/i)) {
+        for (Nd = (Jd = Jd[1])[3], kd = 0; kd < 3; kd++) Pd[kd] = parseInt(Jd[kd] + Jd[kd], 16);
+        Nd && (Pd[3] = parseInt(Nd + Nd, 16) / 255)
+      } else if (Jd = dd.match(/^rgba?\(\s*([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)(?=[\s,])\s*(?:,\s*)?([+-]?\d+)\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/)) {
+        for (kd = 0; kd < 3; kd++) Pd[kd] = parseInt(Jd[kd + 1], 0);
+        Jd[4] && (Jd[5] ? Pd[3] = .01 * parseFloat(Jd[4]) : Pd[3] = parseFloat(Jd[4]))
       } else {
-        if (!(ub = bb.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (ub = bb.match(/^(\w+)$/)) ? "transparent" === ub[1] ? [0, 0, 0, 0] : Gb.call(Bb, ub[1]) ? ((Ub = Bb[ub[1]])[3] = 1, Ub) : null : null;
-        for (hb = 0; hb < 3; hb++) Ub[hb] = Math.round(2.55 * parseFloat(ub[hb + 1]));
-        ub[4] && (ub[5] ? Ub[3] = .01 * parseFloat(ub[4]) : Ub[3] = parseFloat(ub[4]))
+        if (!(Jd = dd.match(/^rgba?\(\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*,?\s*([+-]?[\d\.]+)\%\s*(?:[,|\/]\s*([+-]?[\d\.]+)(%?)\s*)?\)$/))) return (Jd = dd.match(/^(\w+)$/)) ? "transparent" === Jd[1] ? [0, 0, 0, 0] : Wd.call(pd, Jd[1]) ? ((Pd = pd[Jd[1]])[3] = 1, Pd) : null : null;
+        for (kd = 0; kd < 3; kd++) Pd[kd] = Math.round(2.55 * parseFloat(Jd[kd + 1]));
+        Jd[4] && (Jd[5] ? Pd[3] = .01 * parseFloat(Jd[4]) : Pd[3] = parseFloat(Jd[4]))
       }
-      for (hb = 0; hb < 3; hb++) Ub[hb] = Sb(Ub[hb], 0, 255);
-      return Ub[3] = Sb(Ub[3], 0, 1), Ub
-    }, Yb.get.hsl = function(bb) {
-      if (!bb) return null;
-      var ub = bb.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (ub) {
-        var hb = parseFloat(ub[4]);
-        return [(parseFloat(ub[1]) % 360 + 360) % 360, Sb(parseFloat(ub[2]), 0, 100), Sb(parseFloat(ub[3]), 0, 100), Sb(isNaN(hb) ? 1 : hb, 0, 1)]
-      }
-      return null
-    }, Yb.get.hwb = function(bb) {
-      if (!bb) return null;
-      var ub = bb.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
-      if (ub) {
-        var hb = parseFloat(ub[4]);
-        return [(parseFloat(ub[1]) % 360 + 360) % 360, Sb(parseFloat(ub[2]), 0, 100), Sb(parseFloat(ub[3]), 0, 100), Sb(isNaN(hb) ? 1 : hb, 0, 1)]
+      for (kd = 0; kd < 3; kd++) Pd[kd] = Cd(Pd[kd], 0, 255);
+      return Pd[3] = Cd(Pd[3], 0, 1), Pd
+    }, gd.get.hsl = function(dd) {
+      if (!dd) return null;
+      var Jd = dd.match(/^hsla?\(\s*([+-]?(?:\d{0,3}\.)?\d+)(?:deg)?\s*,?\s*([+-]?[\d\.]+)%\s*,?\s*([+-]?[\d\.]+)%\s*(?:[,|\/]\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (Jd) {
+        var kd = parseFloat(Jd[4]);
+        return [(parseFloat(Jd[1]) % 360 + 360) % 360, Cd(parseFloat(Jd[2]), 0, 100), Cd(parseFloat(Jd[3]), 0, 100), Cd(isNaN(kd) ? 1 : kd, 0, 1)]
       }
       return null
-    }, Yb.to.hex = function() {
-      var bb = Ob(arguments);
-      return "#" + ab(bb[0]) + ab(bb[1]) + ab(bb[2]) + (bb[3] < 1 ? ab(Math.round(255 * bb[3])) : "")
-    }, Yb.to.rgb = function() {
-      var bb = Ob(arguments);
-      return bb.length < 4 || 1 === bb[3] ? "rgb(" + Math.round(bb[0]) + ", " + Math.round(bb[1]) + ", " + Math.round(bb[2]) + ")" : "rgba(" + Math.round(bb[0]) + ", " + Math.round(bb[1]) + ", " + Math.round(bb[2]) + ", " + bb[3] + ")"
-    }, Yb.to.rgb.percent = function() {
-      var bb = Ob(arguments),
-        ub = Math.round(bb[0] / 255 * 100),
-        hb = Math.round(bb[1] / 255 * 100),
-        Bb = Math.round(bb[2] / 255 * 100);
-      return bb.length < 4 || 1 === bb[3] ? "rgb(" + ub + "%, " + hb + "%, " + Bb + "%)" : "rgba(" + ub + "%, " + hb + "%, " + Bb + "%, " + bb[3] + ")"
-    }, Yb.to.hsl = function() {
-      var bb = Ob(arguments);
-      return bb.length < 4 || 1 === bb[3] ? "hsl(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%)" : "hsla(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%, " + bb[3] + ")"
-    }, Yb.to.hwb = function() {
-      var bb = Ob(arguments),
-        ub = "";
-      return bb.length >= 4 && 1 !== bb[3] && (ub = ", " + bb[3]), "hwb(" + bb[0] + ", " + bb[1] + "%, " + bb[2] + "%" + ub + ")"
-    }, Yb.to.keyword = function(bb) {
-      return Ub[bb.slice(0, 3)]
+    }, gd.get.hwb = function(dd) {
+      if (!dd) return null;
+      var Jd = dd.match(/^hwb\(\s*([+-]?\d{0,3}(?:\.\d+)?)(?:deg)?\s*,\s*([+-]?[\d\.]+)%\s*,\s*([+-]?[\d\.]+)%\s*(?:,\s*([+-]?(?=\.\d|\d)(?:0|[1-9]\d*)?(?:\.\d*)?(?:[eE][+-]?\d+)?)\s*)?\)$/);
+      if (Jd) {
+        var kd = parseFloat(Jd[4]);
+        return [(parseFloat(Jd[1]) % 360 + 360) % 360, Cd(parseFloat(Jd[2]), 0, 100), Cd(parseFloat(Jd[3]), 0, 100), Cd(isNaN(kd) ? 1 : kd, 0, 1)]
+      }
+      return null
+    }, gd.to.hex = function() {
+      var dd = Nd(arguments);
+      return "#" + Kd(dd[0]) + Kd(dd[1]) + Kd(dd[2]) + (dd[3] < 1 ? Kd(Math.round(255 * dd[3])) : "")
+    }, gd.to.rgb = function() {
+      var dd = Nd(arguments);
+      return dd.length < 4 || 1 === dd[3] ? "rgb(" + Math.round(dd[0]) + ", " + Math.round(dd[1]) + ", " + Math.round(dd[2]) + ")" : "rgba(" + Math.round(dd[0]) + ", " + Math.round(dd[1]) + ", " + Math.round(dd[2]) + ", " + dd[3] + ")"
+    }, gd.to.rgb.percent = function() {
+      var dd = Nd(arguments),
+        Jd = Math.round(dd[0] / 255 * 100),
+        kd = Math.round(dd[1] / 255 * 100),
+        pd = Math.round(dd[2] / 255 * 100);
+      return dd.length < 4 || 1 === dd[3] ? "rgb(" + Jd + "%, " + kd + "%, " + pd + "%)" : "rgba(" + Jd + "%, " + kd + "%, " + pd + "%, " + dd[3] + ")"
+    }, gd.to.hsl = function() {
+      var dd = Nd(arguments);
+      return dd.length < 4 || 1 === dd[3] ? "hsl(" + dd[0] + ", " + dd[1] + "%, " + dd[2] + "%)" : "hsla(" + dd[0] + ", " + dd[1] + "%, " + dd[2] + "%, " + dd[3] + ")"
+    }, gd.to.hwb = function() {
+      var dd = Nd(arguments),
+        Jd = "";
+      return dd.length >= 4 && 1 !== dd[3] && (Jd = ", " + dd[3]), "hwb(" + dd[0] + ", " + dd[1] + "%, " + dd[2] + "%" + Jd + ")"
+    }, gd.to.keyword = function(dd) {
+      return Pd[dd.slice(0, 3)]
     }
   },
-  36242: (bb, ub, hb) => {
-    const Bb = hb(36251),
-      Ob = hb(36275),
-      Gb = ["keyword", "gray", "hex"],
-      Ub = {};
-    for (const Zb of Object.keys(Ob)) Ub[[...Ob[Zb].labels].sort().join("")] = Zb;
-    const Lb = {};
+  36800: (dd, Jd, kd) => {
+    const pd = kd(36804),
+      Nd = kd(36830),
+      Wd = ["keyword", "gray", "hex"],
+      Pd = {};
+    for (const Qd of Object.keys(Nd)) Pd[[...Nd[Qd].labels].sort().join("")] = Qd;
+    const Zd = {};
 
-    function Yb(bb, ub) {
-      if (!(this instanceof Yb)) return new Yb(bb, ub);
-      if (ub && ub in Gb && (ub = null), ub && !(ub in Ob)) throw new Error("Unknown model: " + ub);
-      let hb, Sb;
-      if (null == bb) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
-      else if (bb instanceof Yb) this.model = bb.model, this.color = [...bb.color], this.valpha = bb.valpha;
-      else if ("string" === typeof bb) {
-        const ub = Bb.get(bb);
-        if (null === ub) throw new Error("Unable to parse color from string: " + bb);
-        this.model = ub.model, Sb = Ob[this.model].channels, this.color = ub.value.slice(0, Sb), this.valpha = "number" === typeof ub.value[Sb] ? ub.value[Sb] : 1
-      } else if (bb.length > 0) {
-        this.model = ub || "rgb", Sb = Ob[this.model].channels;
-        const hb = Array.prototype.slice.call(bb, 0, Sb);
-        this.color = wb(hb, Sb), this.valpha = "number" === typeof bb[Sb] ? bb[Sb] : 1
-      } else if ("number" === typeof bb) this.model = "rgb", this.color = [bb >> 16 & 255, bb >> 8 & 255, 255 & bb], this.valpha = 1;
+    function gd(dd, Jd) {
+      if (!(this instanceof gd)) return new gd(dd, Jd);
+      if (Jd && Jd in Wd && (Jd = null), Jd && !(Jd in Nd)) throw new Error("Unknown model: " + Jd);
+      let kd, Cd;
+      if (null == dd) this.model = "rgb", this.color = [0, 0, 0], this.valpha = 1;
+      else if (dd instanceof gd) this.model = dd.model, this.color = [...dd.color], this.valpha = dd.valpha;
+      else if ("string" === typeof dd) {
+        const Jd = pd.get(dd);
+        if (null === Jd) throw new Error("Unable to parse color from string: " + dd);
+        this.model = Jd.model, Cd = Nd[this.model].channels, this.color = Jd.value.slice(0, Cd), this.valpha = "number" === typeof Jd.value[Cd] ? Jd.value[Cd] : 1
+      } else if (dd.length > 0) {
+        this.model = Jd || "rgb", Cd = Nd[this.model].channels;
+        const kd = Array.prototype.slice.call(dd, 0, Cd);
+        this.color = ld(kd, Cd), this.valpha = "number" === typeof dd[Cd] ? dd[Cd] : 1
+      } else if ("number" === typeof dd) this.model = "rgb", this.color = [dd >> 16 & 255, dd >> 8 & 255, 255 & dd], this.valpha = 1;
       else {
         this.valpha = 1;
-        const ub = Object.keys(bb);
-        "alpha" in bb && (ub.splice(ub.indexOf("alpha"), 1), this.valpha = "number" === typeof bb.alpha ? bb.alpha : 0);
-        const Bb = ub.sort().join("");
-        if (!(Bb in Ub)) throw new Error("Unable to parse color from object: " + JSON.stringify(bb));
-        this.model = Ub[Bb];
+        const Jd = Object.keys(dd);
+        "alpha" in dd && (Jd.splice(Jd.indexOf("alpha"), 1), this.valpha = "number" === typeof dd.alpha ? dd.alpha : 0);
+        const pd = Jd.sort().join("");
+        if (!(pd in Pd)) throw new Error("Unable to parse color from object: " + JSON.stringify(dd));
+        this.model = Pd[pd];
         const {
-          labels: Gb
-        } = Ob[this.model], Lb = [];
-        for (hb = 0; hb < Gb.length; hb++) Lb.push(bb[Gb[hb]]);
-        this.color = wb(Lb)
+          labels: Wd
+        } = Nd[this.model], Zd = [];
+        for (kd = 0; kd < Wd.length; kd++) Zd.push(dd[Wd[kd]]);
+        this.color = ld(Zd)
       }
-      if (Lb[this.model])
-        for (Sb = Ob[this.model].channels, hb = 0; hb < Sb; hb++) {
-          const bb = Lb[this.model][hb];
-          bb && (this.color[hb] = bb(this.color[hb]))
+      if (Zd[this.model])
+        for (Cd = Nd[this.model].channels, kd = 0; kd < Cd; kd++) {
+          const dd = Zd[this.model][kd];
+          dd && (this.color[kd] = dd(this.color[kd]))
         }
       this.valpha = Math.max(0, Math.min(1, this.valpha)), Object.freeze && Object.freeze(this)
     }
-    Yb.prototype = {
+    gd.prototype = {
       toString() {
         return this.string()
       },
       toJSON() {
         return this[this.model]()
       },
-      string(bb) {
-        let ub = this.model in Bb.to ? this : this.rgb();
-        ub = ub.round("number" === typeof bb ? bb : 1);
-        const hb = 1 === ub.valpha ? ub.color : [...ub.color, this.valpha];
-        return Bb.to[ub.model](hb)
+      string(dd) {
+        let Jd = this.model in pd.to ? this : this.rgb();
+        Jd = Jd.round("number" === typeof dd ? dd : 1);
+        const kd = 1 === Jd.valpha ? Jd.color : [...Jd.color, this.valpha];
+        return pd.to[Jd.model](kd)
       },
-      percentString(bb) {
-        const ub = this.rgb().round("number" === typeof bb ? bb : 1),
-          hb = 1 === ub.valpha ? ub.color : [...ub.color, this.valpha];
-        return Bb.to.rgb.percent(hb)
+      percentString(dd) {
+        const Jd = this.rgb().round("number" === typeof dd ? dd : 1),
+          kd = 1 === Jd.valpha ? Jd.color : [...Jd.color, this.valpha];
+        return pd.to.rgb.percent(kd)
       },
       array() {
         return 1 === this.valpha ? [...this.color] : [...this.color, this.valpha]
       },
       object() {
-        const bb = {},
+        const dd = {},
           {
-            channels: ub
-          } = Ob[this.model],
+            channels: Jd
+          } = Nd[this.model],
           {
-            labels: hb
-          } = Ob[this.model];
-        for (let Bb = 0; Bb < ub; Bb++) bb[hb[Bb]] = this.color[Bb];
-        return 1 !== this.valpha && (bb.alpha = this.valpha), bb
+            labels: kd
+          } = Nd[this.model];
+        for (let pd = 0; pd < Jd; pd++) dd[kd[pd]] = this.color[pd];
+        return 1 !== this.valpha && (dd.alpha = this.valpha), dd
       },
       unitArray() {
-        const bb = this.rgb().color;
-        return bb[0] /= 255, bb[1] /= 255, bb[2] /= 255, 1 !== this.valpha && bb.push(this.valpha), bb
+        const dd = this.rgb().color;
+        return dd[0] /= 255, dd[1] /= 255, dd[2] /= 255, 1 !== this.valpha && dd.push(this.valpha), dd
       },
       unitObject() {
-        const bb = this.rgb().object();
-        return bb.r /= 255, bb.g /= 255, bb.b /= 255, 1 !== this.valpha && (bb.alpha = this.valpha), bb
+        const dd = this.rgb().object();
+        return dd.r /= 255, dd.g /= 255, dd.b /= 255, 1 !== this.valpha && (dd.alpha = this.valpha), dd
       },
-      round(bb) {
-        return bb = Math.max(bb || 0, 0), new Yb([...this.color.map(Sb(bb)), this.valpha], this.model)
+      round(dd) {
+        return dd = Math.max(dd || 0, 0), new gd([...this.color.map(Cd(dd)), this.valpha], this.model)
       },
-      alpha(bb) {
-        return void 0 !== bb ? new Yb([...this.color, Math.max(0, Math.min(1, bb))], this.model) : this.valpha
+      alpha(dd) {
+        return void 0 !== dd ? new gd([...this.color, Math.max(0, Math.min(1, dd))], this.model) : this.valpha
       },
-      red: ab("rgb", 0, Hb(255)),
-      green: ab("rgb", 1, Hb(255)),
-      blue: ab("rgb", 2, Hb(255)),
-      hue: ab(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (bb => (bb % 360 + 360) % 360)),
-      saturationl: ab("hsl", 1, Hb(100)),
-      lightness: ab("hsl", 2, Hb(100)),
-      saturationv: ab("hsv", 1, Hb(100)),
-      value: ab("hsv", 2, Hb(100)),
-      chroma: ab("hcg", 1, Hb(100)),
-      gray: ab("hcg", 2, Hb(100)),
-      white: ab("hwb", 1, Hb(100)),
-      wblack: ab("hwb", 2, Hb(100)),
-      cyan: ab("cmyk", 0, Hb(100)),
-      magenta: ab("cmyk", 1, Hb(100)),
-      yellow: ab("cmyk", 2, Hb(100)),
-      black: ab("cmyk", 3, Hb(100)),
-      x: ab("xyz", 0, Hb(95.047)),
-      y: ab("xyz", 1, Hb(100)),
-      z: ab("xyz", 2, Hb(108.833)),
-      l: ab("lab", 0, Hb(100)),
-      a: ab("lab", 1),
-      b: ab("lab", 2),
-      keyword(bb) {
-        return void 0 !== bb ? new Yb(bb) : Ob[this.model].keyword(this.color)
+      red: Kd("rgb", 0, od(255)),
+      green: Kd("rgb", 1, od(255)),
+      blue: Kd("rgb", 2, od(255)),
+      hue: Kd(["hsl", "hsv", "hsl", "hwb", "hcg"], 0, (dd => (dd % 360 + 360) % 360)),
+      saturationl: Kd("hsl", 1, od(100)),
+      lightness: Kd("hsl", 2, od(100)),
+      saturationv: Kd("hsv", 1, od(100)),
+      value: Kd("hsv", 2, od(100)),
+      chroma: Kd("hcg", 1, od(100)),
+      gray: Kd("hcg", 2, od(100)),
+      white: Kd("hwb", 1, od(100)),
+      wblack: Kd("hwb", 2, od(100)),
+      cyan: Kd("cmyk", 0, od(100)),
+      magenta: Kd("cmyk", 1, od(100)),
+      yellow: Kd("cmyk", 2, od(100)),
+      black: Kd("cmyk", 3, od(100)),
+      x: Kd("xyz", 0, od(95.047)),
+      y: Kd("xyz", 1, od(100)),
+      z: Kd("xyz", 2, od(108.833)),
+      l: Kd("lab", 0, od(100)),
+      a: Kd("lab", 1),
+      b: Kd("lab", 2),
+      keyword(dd) {
+        return void 0 !== dd ? new gd(dd) : Nd[this.model].keyword(this.color)
       },
-      hex(bb) {
-        return void 0 !== bb ? new Yb(bb) : Bb.to.hex(this.rgb().round().color)
+      hex(dd) {
+        return void 0 !== dd ? new gd(dd) : pd.to.hex(this.rgb().round().color)
       },
-      hexa(bb) {
-        if (void 0 !== bb) return new Yb(bb);
-        const ub = this.rgb().round().color;
-        let hb = Math.round(255 * this.valpha).toString(16).toUpperCase();
-        return 1 === hb.length && (hb = "0" + hb), Bb.to.hex(ub) + hb
+      hexa(dd) {
+        if (void 0 !== dd) return new gd(dd);
+        const Jd = this.rgb().round().color;
+        let kd = Math.round(255 * this.valpha).toString(16).toUpperCase();
+        return 1 === kd.length && (kd = "0" + kd), pd.to.hex(Jd) + kd
       },
       rgbNumber() {
-        const bb = this.rgb().color;
-        return (255 & bb[0]) << 16 | (255 & bb[1]) << 8 | 255 & bb[2]
+        const dd = this.rgb().color;
+        return (255 & dd[0]) << 16 | (255 & dd[1]) << 8 | 255 & dd[2]
       },
       luminosity() {
-        const bb = this.rgb().color,
-          ub = [];
-        for (const [hb, Bb] of bb.entries()) {
-          const bb = Bb / 255;
-          ub[hb] = bb <= .04045 ? bb / 12.92 : ((bb + .055) / 1.055) ** 2.4
+        const dd = this.rgb().color,
+          Jd = [];
+        for (const [kd, pd] of dd.entries()) {
+          const dd = pd / 255;
+          Jd[kd] = dd <= .04045 ? dd / 12.92 : ((dd + .055) / 1.055) ** 2.4
         }
-        return .2126 * ub[0] + .7152 * ub[1] + .0722 * ub[2]
+        return .2126 * Jd[0] + .7152 * Jd[1] + .0722 * Jd[2]
       },
-      contrast(bb) {
-        const ub = this.luminosity(),
-          hb = bb.luminosity();
-        return ub > hb ? (ub + .05) / (hb + .05) : (hb + .05) / (ub + .05)
+      contrast(dd) {
+        const Jd = this.luminosity(),
+          kd = dd.luminosity();
+        return Jd > kd ? (Jd + .05) / (kd + .05) : (kd + .05) / (Jd + .05)
       },
-      level(bb) {
-        const ub = this.contrast(bb);
-        return ub >= 7 ? "AAA" : ub >= 4.5 ? "AA" : ""
+      level(dd) {
+        const Jd = this.contrast(dd);
+        return Jd >= 7 ? "AAA" : Jd >= 4.5 ? "AA" : ""
       },
       isDark() {
-        const bb = this.rgb().color;
-        return (2126 * bb[0] + 7152 * bb[1] + 722 * bb[2]) / 1e4 < 128
+        const dd = this.rgb().color;
+        return (2126 * dd[0] + 7152 * dd[1] + 722 * dd[2]) / 1e4 < 128
       },
       isLight() {
         return !this.isDark()
       },
-      AO() {
-        const bb = this.rgb();
-        for (let ub = 0; ub < 3; ub++) bb.color[ub] = 255 - bb.color[ub];
-        return bb
+      ck() {
+        const dd = this.rgb();
+        for (let Jd = 0; Jd < 3; Jd++) dd.color[Jd] = 255 - dd.color[Jd];
+        return dd
       },
-      lighten(bb) {
-        const ub = this.hsl();
-        return ub.color[2] += ub.color[2] * bb, ub
+      lighten(dd) {
+        const Jd = this.hsl();
+        return Jd.color[2] += Jd.color[2] * dd, Jd
       },
-      darken(bb) {
-        const ub = this.hsl();
-        return ub.color[2] -= ub.color[2] * bb, ub
+      darken(dd) {
+        const Jd = this.hsl();
+        return Jd.color[2] -= Jd.color[2] * dd, Jd
       },
-      saturate(bb) {
-        const ub = this.hsl();
-        return ub.color[1] += ub.color[1] * bb, ub
+      saturate(dd) {
+        const Jd = this.hsl();
+        return Jd.color[1] += Jd.color[1] * dd, Jd
       },
-      desaturate(bb) {
-        const ub = this.hsl();
-        return ub.color[1] -= ub.color[1] * bb, ub
+      desaturate(dd) {
+        const Jd = this.hsl();
+        return Jd.color[1] -= Jd.color[1] * dd, Jd
       },
-      whiten(bb) {
-        const ub = this.hwb();
-        return ub.color[1] += ub.color[1] * bb, ub
+      whiten(dd) {
+        const Jd = this.hwb();
+        return Jd.color[1] += Jd.color[1] * dd, Jd
       },
-      blacken(bb) {
-        const ub = this.hwb();
-        return ub.color[2] += ub.color[2] * bb, ub
+      blacken(dd) {
+        const Jd = this.hwb();
+        return Jd.color[2] += Jd.color[2] * dd, Jd
       },
       grayscale() {
-        const bb = this.rgb().color,
-          ub = .3 * bb[0] + .59 * bb[1] + .11 * bb[2];
-        return Yb.rgb(ub, ub, ub)
+        const dd = this.rgb().color,
+          Jd = .3 * dd[0] + .59 * dd[1] + .11 * dd[2];
+        return gd.rgb(Jd, Jd, Jd)
       },
-      fade(bb) {
-        return this.alpha(this.valpha - this.valpha * bb)
+      fade(dd) {
+        return this.alpha(this.valpha - this.valpha * dd)
       },
-      opaquer(bb) {
-        return this.alpha(this.valpha + this.valpha * bb)
+      opaquer(dd) {
+        return this.alpha(this.valpha + this.valpha * dd)
       },
-      rotate(bb) {
-        const ub = this.hsl();
-        let hb = ub.color[0];
-        return hb = (hb + bb) % 360, hb = hb < 0 ? 360 + hb : hb, ub.color[0] = hb, ub
+      rotate(dd) {
+        const Jd = this.hsl();
+        let kd = Jd.color[0];
+        return kd = (kd + dd) % 360, kd = kd < 0 ? 360 + kd : kd, Jd.color[0] = kd, Jd
       },
-      mix(bb, ub) {
-        if (!bb || !bb.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof bb);
-        const hb = bb.rgb(),
-          Bb = this.rgb(),
-          Ob = void 0 === ub ? .5 : ub,
-          Gb = 2 * Ob - 1,
-          Ub = hb.alpha() - Bb.alpha(),
-          Lb = ((Gb * Ub === -1 ? Gb : (Gb + Ub) / (1 + Gb * Ub)) + 1) / 2,
-          Sb = 1 - Lb;
-        return Yb.rgb(Lb * hb.red() + Sb * Bb.red(), Lb * hb.green() + Sb * Bb.green(), Lb * hb.blue() + Sb * Bb.blue(), hb.alpha() * Ob + Bb.alpha() * (1 - Ob))
+      mix(dd, Jd) {
+        if (!dd || !dd.rgb) throw new Error('Argument to "mix" was not a Color instance, but rather an instance of ' + typeof dd);
+        const kd = dd.rgb(),
+          pd = this.rgb(),
+          Nd = void 0 === Jd ? .5 : Jd,
+          Wd = 2 * Nd - 1,
+          Pd = kd.alpha() - pd.alpha(),
+          Zd = ((Wd * Pd === -1 ? Wd : (Wd + Pd) / (1 + Wd * Pd)) + 1) / 2,
+          Cd = 1 - Zd;
+        return gd.rgb(Zd * kd.red() + Cd * pd.red(), Zd * kd.green() + Cd * pd.green(), Zd * kd.blue() + Cd * pd.blue(), kd.alpha() * Nd + pd.alpha() * (1 - Nd))
       }
     };
-    for (const Zb of Object.keys(Ob)) {
-      if (Gb.includes(Zb)) continue;
+    for (const Qd of Object.keys(Nd)) {
+      if (Wd.includes(Qd)) continue;
       const {
-        channels: bb
-      } = Ob[Zb];
-      Yb.prototype[Zb] = function() {
-        if (this.model === Zb) return new Yb(this);
-        for (var bb = arguments.length, ub = new Array(bb), hb = 0; hb < bb; hb++) ub[hb] = arguments[hb];
-        return ub.length > 0 ? new Yb(ub, Zb) : new Yb([...(Bb = Ob[this.model][Zb].raw(this.color), Array.isArray(Bb) ? Bb : [Bb]), this.valpha], Zb);
-        var Bb
-      }, Yb[Zb] = function() {
-        for (var ub = arguments.length, hb = new Array(ub), Bb = 0; Bb < ub; Bb++) hb[Bb] = arguments[Bb];
-        let Ob = hb[0];
-        return "number" === typeof Ob && (Ob = wb(hb, bb)), new Yb(Ob, Zb)
+        channels: dd
+      } = Nd[Qd];
+      gd.prototype[Qd] = function() {
+        if (this.model === Qd) return new gd(this);
+        for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
+        return Jd.length > 0 ? new gd(Jd, Qd) : new gd([...(pd = Nd[this.model][Qd].raw(this.color), Array.isArray(pd) ? pd : [pd]), this.valpha], Qd);
+        var pd
+      }, gd[Qd] = function() {
+        for (var Jd = arguments.length, kd = new Array(Jd), pd = 0; pd < Jd; pd++) kd[pd] = arguments[pd];
+        let Nd = kd[0];
+        return "number" === typeof Nd && (Nd = ld(kd, dd)), new gd(Nd, Qd)
       }
     }
 
-    function Sb(bb) {
-      return function(ub) {
-        return function(bb, ub) {
-          return Number(bb.toFixed(ub))
-        }(ub, bb)
+    function Cd(dd) {
+      return function(Jd) {
+        return function(dd, Jd) {
+          return Number(dd.toFixed(Jd))
+        }(Jd, dd)
       }
     }
 
-    function ab(bb, ub, hb) {
-      bb = Array.isArray(bb) ? bb : [bb];
-      for (const Bb of bb)(Lb[Bb] || (Lb[Bb] = []))[ub] = hb;
-      return bb = bb[0],
-        function(Bb) {
-          let Ob;
-          return void 0 !== Bb ? (hb && (Bb = hb(Bb)), Ob = this[bb](), Ob.color[ub] = Bb, Ob) : (Ob = this[bb]().color[ub], hb && (Ob = hb(Ob)), Ob)
+    function Kd(dd, Jd, kd) {
+      dd = Array.isArray(dd) ? dd : [dd];
+      for (const pd of dd)(Zd[pd] || (Zd[pd] = []))[Jd] = kd;
+      return dd = dd[0],
+        function(pd) {
+          let Nd;
+          return void 0 !== pd ? (kd && (pd = kd(pd)), Nd = this[dd](), Nd.color[Jd] = pd, Nd) : (Nd = this[dd]().color[Jd], kd && (Nd = kd(Nd)), Nd)
         }
     }
 
-    function Hb(bb) {
-      return function(ub) {
-        return Math.max(0, Math.min(bb, ub))
+    function od(dd) {
+      return function(Jd) {
+        return Math.max(0, Math.min(dd, Jd))
       }
     }
 
-    function wb(bb, ub) {
-      for (let hb = 0; hb < ub; hb++) "number" !== typeof bb[hb] && (bb[hb] = 0);
-      return bb
+    function ld(dd, Jd) {
+      for (let kd = 0; kd < Jd; kd++) "number" !== typeof dd[kd] && (dd[kd] = 0);
+      return dd
     }
-    bb.exports = Yb
+    dd.exports = gd
   },
-  36277: (bb, ub, hb) => {
-    const Bb = hb(36285),
-      Ob = {};
-    for (const Ub of Object.keys(Bb)) Ob[Bb[Ub]] = Ub;
-    const Gb = {
+  36833: (dd, Jd, kd) => {
+    const pd = kd(36836),
+      Nd = {};
+    for (const Pd of Object.keys(pd)) Nd[pd[Pd]] = Pd;
+    const Wd = {
       rgb: {
         channels: 3,
         labels: "rgb"
@@ -571,422 +571,422 @@ export const modules = {
         labels: ["gray"]
       }
     };
-    bb.exports = Gb;
-    for (const Ub of Object.keys(Gb)) {
-      if (!("channels" in Gb[Ub])) throw new Error("missing channels property: " + Ub);
-      if (!("labels" in Gb[Ub])) throw new Error("missing channel labels property: " + Ub);
-      if (Gb[Ub].labels.length !== Gb[Ub].channels) throw new Error("channel and label counts mismatch: " + Ub);
+    dd.exports = Wd;
+    for (const Pd of Object.keys(Wd)) {
+      if (!("channels" in Wd[Pd])) throw new Error("missing channels property: " + Pd);
+      if (!("labels" in Wd[Pd])) throw new Error("missing channel labels property: " + Pd);
+      if (Wd[Pd].labels.length !== Wd[Pd].channels) throw new Error("channel and label counts mismatch: " + Pd);
       const {
-        channels: bb,
-        labels: ub
-      } = Gb[Ub];
-      delete Gb[Ub].channels, delete Gb[Ub].labels, Object.defineProperty(Gb[Ub], "channels", {
-        value: bb
-      }), Object.defineProperty(Gb[Ub], "labels", {
-        value: ub
+        channels: dd,
+        labels: Jd
+      } = Wd[Pd];
+      delete Wd[Pd].channels, delete Wd[Pd].labels, Object.defineProperty(Wd[Pd], "channels", {
+        value: dd
+      }), Object.defineProperty(Wd[Pd], "labels", {
+        value: Jd
       })
     }
-    Gb.rgb.hsl = function(bb) {
-      const ub = bb[0] / 255,
-        hb = bb[1] / 255,
-        Bb = bb[2] / 255,
-        Ob = Math.min(ub, hb, Bb),
-        Gb = Math.max(ub, hb, Bb),
-        Ub = Gb - Ob;
-      let Lb, Yb;
-      Gb === Ob ? Lb = 0 : ub === Gb ? Lb = (hb - Bb) / Ub : hb === Gb ? Lb = 2 + (Bb - ub) / Ub : Bb === Gb && (Lb = 4 + (ub - hb) / Ub), Lb = Math.min(60 * Lb, 360), Lb < 0 && (Lb += 360);
-      const Sb = (Ob + Gb) / 2;
-      return Yb = Gb === Ob ? 0 : Sb <= .5 ? Ub / (Gb + Ob) : Ub / (2 - Gb - Ob), [Lb, 100 * Yb, 100 * Sb]
-    }, Gb.rgb.hsv = function(bb) {
-      let ub, hb, Bb, Ob, Gb;
-      const Ub = bb[0] / 255,
-        Lb = bb[1] / 255,
-        Yb = bb[2] / 255,
-        Sb = Math.max(Ub, Lb, Yb),
-        ab = Sb - Math.min(Ub, Lb, Yb),
-        Hb = function(bb) {
-          return (Sb - bb) / 6 / ab + .5
+    Wd.rgb.hsl = function(dd) {
+      const Jd = dd[0] / 255,
+        kd = dd[1] / 255,
+        pd = dd[2] / 255,
+        Nd = Math.min(Jd, kd, pd),
+        Wd = Math.max(Jd, kd, pd),
+        Pd = Wd - Nd;
+      let Zd, gd;
+      Wd === Nd ? Zd = 0 : Jd === Wd ? Zd = (kd - pd) / Pd : kd === Wd ? Zd = 2 + (pd - Jd) / Pd : pd === Wd && (Zd = 4 + (Jd - kd) / Pd), Zd = Math.min(60 * Zd, 360), Zd < 0 && (Zd += 360);
+      const Cd = (Nd + Wd) / 2;
+      return gd = Wd === Nd ? 0 : Cd <= .5 ? Pd / (Wd + Nd) : Pd / (2 - Wd - Nd), [Zd, 100 * gd, 100 * Cd]
+    }, Wd.rgb.hsv = function(dd) {
+      let Jd, kd, pd, Nd, Wd;
+      const Pd = dd[0] / 255,
+        Zd = dd[1] / 255,
+        gd = dd[2] / 255,
+        Cd = Math.max(Pd, Zd, gd),
+        Kd = Cd - Math.min(Pd, Zd, gd),
+        od = function(dd) {
+          return (Cd - dd) / 6 / Kd + .5
         };
-      return 0 === ab ? (Ob = 0, Gb = 0) : (Gb = ab / Sb, ub = Hb(Ub), hb = Hb(Lb), Bb = Hb(Yb), Ub === Sb ? Ob = Bb - hb : Lb === Sb ? Ob = 1 / 3 + ub - Bb : Yb === Sb && (Ob = 2 / 3 + hb - ub), Ob < 0 ? Ob += 1 : Ob > 1 && (Ob -= 1)), [360 * Ob, 100 * Gb, 100 * Sb]
-    }, Gb.rgb.hwb = function(bb) {
-      const ub = bb[0],
-        hb = bb[1];
-      let Bb = bb[2];
-      const Ob = Gb.rgb.hsl(bb)[0],
-        Ub = 1 / 255 * Math.min(ub, Math.min(hb, Bb));
-      return Bb = 1 - 1 / 255 * Math.max(ub, Math.max(hb, Bb)), [Ob, 100 * Ub, 100 * Bb]
-    }, Gb.rgb.cmyk = function(bb) {
-      const ub = bb[0] / 255,
-        hb = bb[1] / 255,
-        Bb = bb[2] / 255,
-        Ob = Math.min(1 - ub, 1 - hb, 1 - Bb);
-      return [100 * ((1 - ub - Ob) / (1 - Ob) || 0), 100 * ((1 - hb - Ob) / (1 - Ob) || 0), 100 * ((1 - Bb - Ob) / (1 - Ob) || 0), 100 * Ob]
-    }, Gb.rgb.keyword = function(bb) {
-      const ub = Ob[bb];
-      if (ub) return ub;
-      let hb, Gb = 1 / 0;
-      for (const Ob of Object.keys(Bb)) {
-        const ub = Bb[Ob],
-          Yb = (Lb = ub, ((Ub = bb)[0] - Lb[0]) ** 2 + (Ub[1] - Lb[1]) ** 2 + (Ub[2] - Lb[2]) ** 2);
-        Yb < Gb && (Gb = Yb, hb = Ob)
+      return 0 === Kd ? (Nd = 0, Wd = 0) : (Wd = Kd / Cd, Jd = od(Pd), kd = od(Zd), pd = od(gd), Pd === Cd ? Nd = pd - kd : Zd === Cd ? Nd = 1 / 3 + Jd - pd : gd === Cd && (Nd = 2 / 3 + kd - Jd), Nd < 0 ? Nd += 1 : Nd > 1 && (Nd -= 1)), [360 * Nd, 100 * Wd, 100 * Cd]
+    }, Wd.rgb.hwb = function(dd) {
+      const Jd = dd[0],
+        kd = dd[1];
+      let pd = dd[2];
+      const Nd = Wd.rgb.hsl(dd)[0],
+        Pd = 1 / 255 * Math.min(Jd, Math.min(kd, pd));
+      return pd = 1 - 1 / 255 * Math.max(Jd, Math.max(kd, pd)), [Nd, 100 * Pd, 100 * pd]
+    }, Wd.rgb.cmyk = function(dd) {
+      const Jd = dd[0] / 255,
+        kd = dd[1] / 255,
+        pd = dd[2] / 255,
+        Nd = Math.min(1 - Jd, 1 - kd, 1 - pd);
+      return [100 * ((1 - Jd - Nd) / (1 - Nd) || 0), 100 * ((1 - kd - Nd) / (1 - Nd) || 0), 100 * ((1 - pd - Nd) / (1 - Nd) || 0), 100 * Nd]
+    }, Wd.rgb.keyword = function(dd) {
+      const Jd = Nd[dd];
+      if (Jd) return Jd;
+      let kd, Wd = 1 / 0;
+      for (const Nd of Object.keys(pd)) {
+        const Jd = pd[Nd],
+          gd = (Zd = Jd, ((Pd = dd)[0] - Zd[0]) ** 2 + (Pd[1] - Zd[1]) ** 2 + (Pd[2] - Zd[2]) ** 2);
+        gd < Wd && (Wd = gd, kd = Nd)
       }
-      var Ub, Lb;
-      return hb
-    }, Gb.keyword.rgb = function(bb) {
-      return Bb[bb]
-    }, Gb.rgb.xyz = function(bb) {
-      let ub = bb[0] / 255,
-        hb = bb[1] / 255,
-        Bb = bb[2] / 255;
-      ub = ub > .04045 ? ((ub + .055) / 1.055) ** 2.4 : ub / 12.92, hb = hb > .04045 ? ((hb + .055) / 1.055) ** 2.4 : hb / 12.92, Bb = Bb > .04045 ? ((Bb + .055) / 1.055) ** 2.4 : Bb / 12.92;
-      return [100 * (.4124 * ub + .3576 * hb + .1805 * Bb), 100 * (.2126 * ub + .7152 * hb + .0722 * Bb), 100 * (.0193 * ub + .1192 * hb + .9505 * Bb)]
-    }, Gb.rgb.lab = function(bb) {
-      const ub = Gb.rgb.xyz(bb);
-      let hb = ub[0],
-        Bb = ub[1],
-        Ob = ub[2];
-      hb /= 95.047, Bb /= 100, Ob /= 108.883, hb = hb > .008856 ? hb ** (1 / 3) : 7.787 * hb + 16 / 116, Bb = Bb > .008856 ? Bb ** (1 / 3) : 7.787 * Bb + 16 / 116, Ob = Ob > .008856 ? Ob ** (1 / 3) : 7.787 * Ob + 16 / 116;
-      return [116 * Bb - 16, 500 * (hb - Bb), 200 * (Bb - Ob)]
-    }, Gb.hsl.rgb = function(bb) {
-      const ub = bb[0] / 360,
-        hb = bb[1] / 100,
-        Bb = bb[2] / 100;
-      let Ob, Gb, Ub;
-      if (0 === hb) return Ub = 255 * Bb, [Ub, Ub, Ub];
-      Ob = Bb < .5 ? Bb * (1 + hb) : Bb + hb - Bb * hb;
-      const Lb = 2 * Bb - Ob,
-        Yb = [0, 0, 0];
-      for (let Sb = 0; Sb < 3; Sb++) Gb = ub + 1 / 3 * -(Sb - 1), Gb < 0 && Gb++, Gb > 1 && Gb--, Ub = 6 * Gb < 1 ? Lb + 6 * (Ob - Lb) * Gb : 2 * Gb < 1 ? Ob : 3 * Gb < 2 ? Lb + (Ob - Lb) * (2 / 3 - Gb) * 6 : Lb, Yb[Sb] = 255 * Ub;
-      return Yb
-    }, Gb.hsl.hsv = function(bb) {
-      const ub = bb[0];
-      let hb = bb[1] / 100,
-        Bb = bb[2] / 100,
-        Ob = hb;
-      const Gb = Math.max(Bb, .01);
-      Bb *= 2, hb *= Bb <= 1 ? Bb : 2 - Bb, Ob *= Gb <= 1 ? Gb : 2 - Gb;
-      return [ub, 100 * (0 === Bb ? 2 * Ob / (Gb + Ob) : 2 * hb / (Bb + hb)), 100 * ((Bb + hb) / 2)]
-    }, Gb.hsv.rgb = function(bb) {
-      const ub = bb[0] / 60,
-        hb = bb[1] / 100;
-      let Bb = bb[2] / 100;
-      const Ob = Math.floor(ub) % 6,
-        Gb = ub - Math.floor(ub),
-        Ub = 255 * Bb * (1 - hb),
-        Lb = 255 * Bb * (1 - hb * Gb),
-        Yb = 255 * Bb * (1 - hb * (1 - Gb));
-      switch (Bb *= 255, Ob) {
+      var Pd, Zd;
+      return kd
+    }, Wd.keyword.rgb = function(dd) {
+      return pd[dd]
+    }, Wd.rgb.xyz = function(dd) {
+      let Jd = dd[0] / 255,
+        kd = dd[1] / 255,
+        pd = dd[2] / 255;
+      Jd = Jd > .04045 ? ((Jd + .055) / 1.055) ** 2.4 : Jd / 12.92, kd = kd > .04045 ? ((kd + .055) / 1.055) ** 2.4 : kd / 12.92, pd = pd > .04045 ? ((pd + .055) / 1.055) ** 2.4 : pd / 12.92;
+      return [100 * (.4124 * Jd + .3576 * kd + .1805 * pd), 100 * (.2126 * Jd + .7152 * kd + .0722 * pd), 100 * (.0193 * Jd + .1192 * kd + .9505 * pd)]
+    }, Wd.rgb.lab = function(dd) {
+      const Jd = Wd.rgb.xyz(dd);
+      let kd = Jd[0],
+        pd = Jd[1],
+        Nd = Jd[2];
+      kd /= 95.047, pd /= 100, Nd /= 108.883, kd = kd > .008856 ? kd ** (1 / 3) : 7.787 * kd + 16 / 116, pd = pd > .008856 ? pd ** (1 / 3) : 7.787 * pd + 16 / 116, Nd = Nd > .008856 ? Nd ** (1 / 3) : 7.787 * Nd + 16 / 116;
+      return [116 * pd - 16, 500 * (kd - pd), 200 * (pd - Nd)]
+    }, Wd.hsl.rgb = function(dd) {
+      const Jd = dd[0] / 360,
+        kd = dd[1] / 100,
+        pd = dd[2] / 100;
+      let Nd, Wd, Pd;
+      if (0 === kd) return Pd = 255 * pd, [Pd, Pd, Pd];
+      Nd = pd < .5 ? pd * (1 + kd) : pd + kd - pd * kd;
+      const Zd = 2 * pd - Nd,
+        gd = [0, 0, 0];
+      for (let Cd = 0; Cd < 3; Cd++) Wd = Jd + 1 / 3 * -(Cd - 1), Wd < 0 && Wd++, Wd > 1 && Wd--, Pd = 6 * Wd < 1 ? Zd + 6 * (Nd - Zd) * Wd : 2 * Wd < 1 ? Nd : 3 * Wd < 2 ? Zd + (Nd - Zd) * (2 / 3 - Wd) * 6 : Zd, gd[Cd] = 255 * Pd;
+      return gd
+    }, Wd.hsl.hsv = function(dd) {
+      const Jd = dd[0];
+      let kd = dd[1] / 100,
+        pd = dd[2] / 100,
+        Nd = kd;
+      const Wd = Math.max(pd, .01);
+      pd *= 2, kd *= pd <= 1 ? pd : 2 - pd, Nd *= Wd <= 1 ? Wd : 2 - Wd;
+      return [Jd, 100 * (0 === pd ? 2 * Nd / (Wd + Nd) : 2 * kd / (pd + kd)), 100 * ((pd + kd) / 2)]
+    }, Wd.hsv.rgb = function(dd) {
+      const Jd = dd[0] / 60,
+        kd = dd[1] / 100;
+      let pd = dd[2] / 100;
+      const Nd = Math.floor(Jd) % 6,
+        Wd = Jd - Math.floor(Jd),
+        Pd = 255 * pd * (1 - kd),
+        Zd = 255 * pd * (1 - kd * Wd),
+        gd = 255 * pd * (1 - kd * (1 - Wd));
+      switch (pd *= 255, Nd) {
         case 0:
-          return [Bb, Yb, Ub];
+          return [pd, gd, Pd];
         case 1:
-          return [Lb, Bb, Ub];
+          return [Zd, pd, Pd];
         case 2:
-          return [Ub, Bb, Yb];
+          return [Pd, pd, gd];
         case 3:
-          return [Ub, Lb, Bb];
+          return [Pd, Zd, pd];
         case 4:
-          return [Yb, Ub, Bb];
+          return [gd, Pd, pd];
         case 5:
-          return [Bb, Ub, Lb]
+          return [pd, Pd, Zd]
       }
-    }, Gb.hsv.hsl = function(bb) {
-      const ub = bb[0],
-        hb = bb[1] / 100,
-        Bb = bb[2] / 100,
-        Ob = Math.max(Bb, .01);
-      let Gb, Ub;
-      Ub = (2 - hb) * Bb;
-      const Lb = (2 - hb) * Ob;
-      return Gb = hb * Ob, Gb /= Lb <= 1 ? Lb : 2 - Lb, Gb = Gb || 0, Ub /= 2, [ub, 100 * Gb, 100 * Ub]
-    }, Gb.hwb.rgb = function(bb) {
-      const ub = bb[0] / 360;
-      let hb = bb[1] / 100,
-        Bb = bb[2] / 100;
-      const Ob = hb + Bb;
-      let Gb;
-      Ob > 1 && (hb /= Ob, Bb /= Ob);
-      const Ub = Math.floor(6 * ub),
-        Lb = 1 - Bb;
-      Gb = 6 * ub - Ub, 0 !== (1 & Ub) && (Gb = 1 - Gb);
-      const Yb = hb + Gb * (Lb - hb);
-      let Sb, ab, Hb;
-      switch (Ub) {
+    }, Wd.hsv.hsl = function(dd) {
+      const Jd = dd[0],
+        kd = dd[1] / 100,
+        pd = dd[2] / 100,
+        Nd = Math.max(pd, .01);
+      let Wd, Pd;
+      Pd = (2 - kd) * pd;
+      const Zd = (2 - kd) * Nd;
+      return Wd = kd * Nd, Wd /= Zd <= 1 ? Zd : 2 - Zd, Wd = Wd || 0, Pd /= 2, [Jd, 100 * Wd, 100 * Pd]
+    }, Wd.hwb.rgb = function(dd) {
+      const Jd = dd[0] / 360;
+      let kd = dd[1] / 100,
+        pd = dd[2] / 100;
+      const Nd = kd + pd;
+      let Wd;
+      Nd > 1 && (kd /= Nd, pd /= Nd);
+      const Pd = Math.floor(6 * Jd),
+        Zd = 1 - pd;
+      Wd = 6 * Jd - Pd, 0 !== (1 & Pd) && (Wd = 1 - Wd);
+      const gd = kd + Wd * (Zd - kd);
+      let Cd, Kd, od;
+      switch (Pd) {
         default:
         case 6:
         case 0:
-          Sb = Lb, ab = Yb, Hb = hb;
+          Cd = Zd, Kd = gd, od = kd;
           break;
         case 1:
-          Sb = Yb, ab = Lb, Hb = hb;
+          Cd = gd, Kd = Zd, od = kd;
           break;
         case 2:
-          Sb = hb, ab = Lb, Hb = Yb;
+          Cd = kd, Kd = Zd, od = gd;
           break;
         case 3:
-          Sb = hb, ab = Yb, Hb = Lb;
+          Cd = kd, Kd = gd, od = Zd;
           break;
         case 4:
-          Sb = Yb, ab = hb, Hb = Lb;
+          Cd = gd, Kd = kd, od = Zd;
           break;
         case 5:
-          Sb = Lb, ab = hb, Hb = Yb
+          Cd = Zd, Kd = kd, od = gd
       }
-      return [255 * Sb, 255 * ab, 255 * Hb]
-    }, Gb.cmyk.rgb = function(bb) {
-      const ub = bb[0] / 100,
-        hb = bb[1] / 100,
-        Bb = bb[2] / 100,
-        Ob = bb[3] / 100;
-      return [255 * (1 - Math.min(1, ub * (1 - Ob) + Ob)), 255 * (1 - Math.min(1, hb * (1 - Ob) + Ob)), 255 * (1 - Math.min(1, Bb * (1 - Ob) + Ob))]
-    }, Gb.xyz.rgb = function(bb) {
-      const ub = bb[0] / 100,
-        hb = bb[1] / 100,
-        Bb = bb[2] / 100;
-      let Ob, Gb, Ub;
-      return Ob = 3.2406 * ub + -1.5372 * hb + -.4986 * Bb, Gb = -.9689 * ub + 1.8758 * hb + .0415 * Bb, Ub = .0557 * ub + -.204 * hb + 1.057 * Bb, Ob = Ob > .0031308 ? 1.055 * Ob ** (1 / 2.4) - .055 : 12.92 * Ob, Gb = Gb > .0031308 ? 1.055 * Gb ** (1 / 2.4) - .055 : 12.92 * Gb, Ub = Ub > .0031308 ? 1.055 * Ub ** (1 / 2.4) - .055 : 12.92 * Ub, Ob = Math.min(Math.max(0, Ob), 1), Gb = Math.min(Math.max(0, Gb), 1), Ub = Math.min(Math.max(0, Ub), 1), [255 * Ob, 255 * Gb, 255 * Ub]
-    }, Gb.xyz.lab = function(bb) {
-      let ub = bb[0],
-        hb = bb[1],
-        Bb = bb[2];
-      ub /= 95.047, hb /= 100, Bb /= 108.883, ub = ub > .008856 ? ub ** (1 / 3) : 7.787 * ub + 16 / 116, hb = hb > .008856 ? hb ** (1 / 3) : 7.787 * hb + 16 / 116, Bb = Bb > .008856 ? Bb ** (1 / 3) : 7.787 * Bb + 16 / 116;
-      return [116 * hb - 16, 500 * (ub - hb), 200 * (hb - Bb)]
-    }, Gb.lab.xyz = function(bb) {
-      let ub, hb, Bb;
-      hb = (bb[0] + 16) / 116, ub = bb[1] / 500 + hb, Bb = hb - bb[2] / 200;
-      const Ob = hb ** 3,
-        Gb = ub ** 3,
-        Ub = Bb ** 3;
-      return hb = Ob > .008856 ? Ob : (hb - 16 / 116) / 7.787, ub = Gb > .008856 ? Gb : (ub - 16 / 116) / 7.787, Bb = Ub > .008856 ? Ub : (Bb - 16 / 116) / 7.787, ub *= 95.047, hb *= 100, Bb *= 108.883, [ub, hb, Bb]
-    }, Gb.lab.lch = function(bb) {
-      const ub = bb[0],
-        hb = bb[1],
-        Bb = bb[2];
-      let Ob;
-      Ob = 360 * Math.atan2(Bb, hb) / 2 / Math.PI, Ob < 0 && (Ob += 360);
-      return [ub, Math.sqrt(hb * hb + Bb * Bb), Ob]
-    }, Gb.lch.lab = function(bb) {
-      const ub = bb[0],
-        hb = bb[1],
-        Bb = bb[2] / 360 * 2 * Math.PI;
-      return [ub, hb * Math.cos(Bb), hb * Math.sin(Bb)]
-    }, Gb.rgb.ansi16 = function(bb) {
-      let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const [hb, Bb, Ob] = bb;
-      let Ub = null === ub ? Gb.rgb.hsv(bb)[2] : ub;
-      if (Ub = Math.round(Ub / 50), 0 === Ub) return 30;
-      let Lb = 30 + (Math.round(Ob / 255) << 2 | Math.round(Bb / 255) << 1 | Math.round(hb / 255));
-      return 2 === Ub && (Lb += 60), Lb
-    }, Gb.hsv.ansi16 = function(bb) {
-      return Gb.rgb.ansi16(Gb.hsv.rgb(bb), bb[2])
-    }, Gb.rgb.ansi256 = function(bb) {
-      const ub = bb[0],
-        hb = bb[1],
-        Bb = bb[2];
-      if (ub === hb && hb === Bb) return ub < 8 ? 16 : ub > 248 ? 231 : Math.round((ub - 8) / 247 * 24) + 232;
-      return 16 + 36 * Math.round(ub / 255 * 5) + 6 * Math.round(hb / 255 * 5) + Math.round(Bb / 255 * 5)
-    }, Gb.ansi16.rgb = function(bb) {
-      let ub = bb % 10;
-      if (0 === ub || 7 === ub) return bb > 50 && (ub += 3.5), ub = ub / 10.5 * 255, [ub, ub, ub];
-      const hb = .5 * (1 + ~~(bb > 50));
-      return [(1 & ub) * hb * 255, (ub >> 1 & 1) * hb * 255, (ub >> 2 & 1) * hb * 255]
-    }, Gb.ansi256.rgb = function(bb) {
-      if (bb >= 232) {
-        const ub = 10 * (bb - 232) + 8;
-        return [ub, ub, ub]
+      return [255 * Cd, 255 * Kd, 255 * od]
+    }, Wd.cmyk.rgb = function(dd) {
+      const Jd = dd[0] / 100,
+        kd = dd[1] / 100,
+        pd = dd[2] / 100,
+        Nd = dd[3] / 100;
+      return [255 * (1 - Math.min(1, Jd * (1 - Nd) + Nd)), 255 * (1 - Math.min(1, kd * (1 - Nd) + Nd)), 255 * (1 - Math.min(1, pd * (1 - Nd) + Nd))]
+    }, Wd.xyz.rgb = function(dd) {
+      const Jd = dd[0] / 100,
+        kd = dd[1] / 100,
+        pd = dd[2] / 100;
+      let Nd, Wd, Pd;
+      return Nd = 3.2406 * Jd + -1.5372 * kd + -.4986 * pd, Wd = -.9689 * Jd + 1.8758 * kd + .0415 * pd, Pd = .0557 * Jd + -.204 * kd + 1.057 * pd, Nd = Nd > .0031308 ? 1.055 * Nd ** (1 / 2.4) - .055 : 12.92 * Nd, Wd = Wd > .0031308 ? 1.055 * Wd ** (1 / 2.4) - .055 : 12.92 * Wd, Pd = Pd > .0031308 ? 1.055 * Pd ** (1 / 2.4) - .055 : 12.92 * Pd, Nd = Math.min(Math.max(0, Nd), 1), Wd = Math.min(Math.max(0, Wd), 1), Pd = Math.min(Math.max(0, Pd), 1), [255 * Nd, 255 * Wd, 255 * Pd]
+    }, Wd.xyz.lab = function(dd) {
+      let Jd = dd[0],
+        kd = dd[1],
+        pd = dd[2];
+      Jd /= 95.047, kd /= 100, pd /= 108.883, Jd = Jd > .008856 ? Jd ** (1 / 3) : 7.787 * Jd + 16 / 116, kd = kd > .008856 ? kd ** (1 / 3) : 7.787 * kd + 16 / 116, pd = pd > .008856 ? pd ** (1 / 3) : 7.787 * pd + 16 / 116;
+      return [116 * kd - 16, 500 * (Jd - kd), 200 * (kd - pd)]
+    }, Wd.lab.xyz = function(dd) {
+      let Jd, kd, pd;
+      kd = (dd[0] + 16) / 116, Jd = dd[1] / 500 + kd, pd = kd - dd[2] / 200;
+      const Nd = kd ** 3,
+        Wd = Jd ** 3,
+        Pd = pd ** 3;
+      return kd = Nd > .008856 ? Nd : (kd - 16 / 116) / 7.787, Jd = Wd > .008856 ? Wd : (Jd - 16 / 116) / 7.787, pd = Pd > .008856 ? Pd : (pd - 16 / 116) / 7.787, Jd *= 95.047, kd *= 100, pd *= 108.883, [Jd, kd, pd]
+    }, Wd.lab.lch = function(dd) {
+      const Jd = dd[0],
+        kd = dd[1],
+        pd = dd[2];
+      let Nd;
+      Nd = 360 * Math.atan2(pd, kd) / 2 / Math.PI, Nd < 0 && (Nd += 360);
+      return [Jd, Math.sqrt(kd * kd + pd * pd), Nd]
+    }, Wd.lch.lab = function(dd) {
+      const Jd = dd[0],
+        kd = dd[1],
+        pd = dd[2] / 360 * 2 * Math.PI;
+      return [Jd, kd * Math.cos(pd), kd * Math.sin(pd)]
+    }, Wd.rgb.ansi16 = function(dd) {
+      let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const [kd, pd, Nd] = dd;
+      let Pd = null === Jd ? Wd.rgb.hsv(dd)[2] : Jd;
+      if (Pd = Math.round(Pd / 50), 0 === Pd) return 30;
+      let Zd = 30 + (Math.round(Nd / 255) << 2 | Math.round(pd / 255) << 1 | Math.round(kd / 255));
+      return 2 === Pd && (Zd += 60), Zd
+    }, Wd.hsv.ansi16 = function(dd) {
+      return Wd.rgb.ansi16(Wd.hsv.rgb(dd), dd[2])
+    }, Wd.rgb.ansi256 = function(dd) {
+      const Jd = dd[0],
+        kd = dd[1],
+        pd = dd[2];
+      if (Jd === kd && kd === pd) return Jd < 8 ? 16 : Jd > 248 ? 231 : Math.round((Jd - 8) / 247 * 24) + 232;
+      return 16 + 36 * Math.round(Jd / 255 * 5) + 6 * Math.round(kd / 255 * 5) + Math.round(pd / 255 * 5)
+    }, Wd.ansi16.rgb = function(dd) {
+      let Jd = dd % 10;
+      if (0 === Jd || 7 === Jd) return dd > 50 && (Jd += 3.5), Jd = Jd / 10.5 * 255, [Jd, Jd, Jd];
+      const kd = .5 * (1 + ~~(dd > 50));
+      return [(1 & Jd) * kd * 255, (Jd >> 1 & 1) * kd * 255, (Jd >> 2 & 1) * kd * 255]
+    }, Wd.ansi256.rgb = function(dd) {
+      if (dd >= 232) {
+        const Jd = 10 * (dd - 232) + 8;
+        return [Jd, Jd, Jd]
       }
-      let ub;
-      bb -= 16;
-      return [Math.floor(bb / 36) / 5 * 255, Math.floor((ub = bb % 36) / 6) / 5 * 255, ub % 6 / 5 * 255]
-    }, Gb.rgb.hex = function(bb) {
-      const ub = (((255 & Math.round(bb[0])) << 16) + ((255 & Math.round(bb[1])) << 8) + (255 & Math.round(bb[2]))).toString(16).toUpperCase();
-      return "000000".substring(ub.length) + ub
-    }, Gb.hex.rgb = function(bb) {
-      const ub = bb.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
-      if (!ub) return [0, 0, 0];
-      let hb = ub[0];
-      3 === ub[0].length && (hb = hb.split("").map((bb => bb + bb)).join(""));
-      const Bb = parseInt(hb, 16);
-      return [Bb >> 16 & 255, Bb >> 8 & 255, 255 & Bb]
-    }, Gb.rgb.hcg = function(bb) {
-      const ub = bb[0] / 255,
-        hb = bb[1] / 255,
-        Bb = bb[2] / 255,
-        Ob = Math.max(Math.max(ub, hb), Bb),
-        Gb = Math.min(Math.min(ub, hb), Bb),
-        Ub = Ob - Gb;
-      let Lb, Yb;
-      return Lb = Ub < 1 ? Gb / (1 - Ub) : 0, Yb = Ub <= 0 ? 0 : Ob === ub ? (hb - Bb) / Ub % 6 : Ob === hb ? 2 + (Bb - ub) / Ub : 4 + (ub - hb) / Ub, Yb /= 6, Yb %= 1, [360 * Yb, 100 * Ub, 100 * Lb]
-    }, Gb.hsl.hcg = function(bb) {
-      const ub = bb[1] / 100,
-        hb = bb[2] / 100,
-        Bb = hb < .5 ? 2 * ub * hb : 2 * ub * (1 - hb);
-      let Ob = 0;
-      return Bb < 1 && (Ob = (hb - .5 * Bb) / (1 - Bb)), [bb[0], 100 * Bb, 100 * Ob]
-    }, Gb.hsv.hcg = function(bb) {
-      const ub = bb[1] / 100,
-        hb = bb[2] / 100,
-        Bb = ub * hb;
-      let Ob = 0;
-      return Bb < 1 && (Ob = (hb - Bb) / (1 - Bb)), [bb[0], 100 * Bb, 100 * Ob]
-    }, Gb.hcg.rgb = function(bb) {
-      const ub = bb[0] / 360,
-        hb = bb[1] / 100,
-        Bb = bb[2] / 100;
-      if (0 === hb) return [255 * Bb, 255 * Bb, 255 * Bb];
-      const Ob = [0, 0, 0],
-        Gb = ub % 1 * 6,
-        Ub = Gb % 1,
-        Lb = 1 - Ub;
-      let Yb = 0;
-      switch (Math.floor(Gb)) {
+      let Jd;
+      dd -= 16;
+      return [Math.floor(dd / 36) / 5 * 255, Math.floor((Jd = dd % 36) / 6) / 5 * 255, Jd % 6 / 5 * 255]
+    }, Wd.rgb.hex = function(dd) {
+      const Jd = (((255 & Math.round(dd[0])) << 16) + ((255 & Math.round(dd[1])) << 8) + (255 & Math.round(dd[2]))).toString(16).toUpperCase();
+      return "000000".substring(Jd.length) + Jd
+    }, Wd.hex.rgb = function(dd) {
+      const Jd = dd.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
+      if (!Jd) return [0, 0, 0];
+      let kd = Jd[0];
+      3 === Jd[0].length && (kd = kd.split("").map((dd => dd + dd)).join(""));
+      const pd = parseInt(kd, 16);
+      return [pd >> 16 & 255, pd >> 8 & 255, 255 & pd]
+    }, Wd.rgb.hcg = function(dd) {
+      const Jd = dd[0] / 255,
+        kd = dd[1] / 255,
+        pd = dd[2] / 255,
+        Nd = Math.max(Math.max(Jd, kd), pd),
+        Wd = Math.min(Math.min(Jd, kd), pd),
+        Pd = Nd - Wd;
+      let Zd, gd;
+      return Zd = Pd < 1 ? Wd / (1 - Pd) : 0, gd = Pd <= 0 ? 0 : Nd === Jd ? (kd - pd) / Pd % 6 : Nd === kd ? 2 + (pd - Jd) / Pd : 4 + (Jd - kd) / Pd, gd /= 6, gd %= 1, [360 * gd, 100 * Pd, 100 * Zd]
+    }, Wd.hsl.hcg = function(dd) {
+      const Jd = dd[1] / 100,
+        kd = dd[2] / 100,
+        pd = kd < .5 ? 2 * Jd * kd : 2 * Jd * (1 - kd);
+      let Nd = 0;
+      return pd < 1 && (Nd = (kd - .5 * pd) / (1 - pd)), [dd[0], 100 * pd, 100 * Nd]
+    }, Wd.hsv.hcg = function(dd) {
+      const Jd = dd[1] / 100,
+        kd = dd[2] / 100,
+        pd = Jd * kd;
+      let Nd = 0;
+      return pd < 1 && (Nd = (kd - pd) / (1 - pd)), [dd[0], 100 * pd, 100 * Nd]
+    }, Wd.hcg.rgb = function(dd) {
+      const Jd = dd[0] / 360,
+        kd = dd[1] / 100,
+        pd = dd[2] / 100;
+      if (0 === kd) return [255 * pd, 255 * pd, 255 * pd];
+      const Nd = [0, 0, 0],
+        Wd = Jd % 1 * 6,
+        Pd = Wd % 1,
+        Zd = 1 - Pd;
+      let gd = 0;
+      switch (Math.floor(Wd)) {
         case 0:
-          Ob[0] = 1, Ob[1] = Ub, Ob[2] = 0;
+          Nd[0] = 1, Nd[1] = Pd, Nd[2] = 0;
           break;
         case 1:
-          Ob[0] = Lb, Ob[1] = 1, Ob[2] = 0;
+          Nd[0] = Zd, Nd[1] = 1, Nd[2] = 0;
           break;
         case 2:
-          Ob[0] = 0, Ob[1] = 1, Ob[2] = Ub;
+          Nd[0] = 0, Nd[1] = 1, Nd[2] = Pd;
           break;
         case 3:
-          Ob[0] = 0, Ob[1] = Lb, Ob[2] = 1;
+          Nd[0] = 0, Nd[1] = Zd, Nd[2] = 1;
           break;
         case 4:
-          Ob[0] = Ub, Ob[1] = 0, Ob[2] = 1;
+          Nd[0] = Pd, Nd[1] = 0, Nd[2] = 1;
           break;
         default:
-          Ob[0] = 1, Ob[1] = 0, Ob[2] = Lb
+          Nd[0] = 1, Nd[1] = 0, Nd[2] = Zd
       }
-      return Yb = (1 - hb) * Bb, [255 * (hb * Ob[0] + Yb), 255 * (hb * Ob[1] + Yb), 255 * (hb * Ob[2] + Yb)]
-    }, Gb.hcg.hsv = function(bb) {
-      const ub = bb[1] / 100,
-        hb = ub + bb[2] / 100 * (1 - ub);
-      let Bb = 0;
-      return hb > 0 && (Bb = ub / hb), [bb[0], 100 * Bb, 100 * hb]
-    }, Gb.hcg.hsl = function(bb) {
-      const ub = bb[1] / 100,
-        hb = bb[2] / 100 * (1 - ub) + .5 * ub;
-      let Bb = 0;
-      return hb > 0 && hb < .5 ? Bb = ub / (2 * hb) : hb >= .5 && hb < 1 && (Bb = ub / (2 * (1 - hb))), [bb[0], 100 * Bb, 100 * hb]
-    }, Gb.hcg.hwb = function(bb) {
-      const ub = bb[1] / 100,
-        hb = ub + bb[2] / 100 * (1 - ub);
-      return [bb[0], 100 * (hb - ub), 100 * (1 - hb)]
-    }, Gb.hwb.hcg = function(bb) {
-      const ub = bb[1] / 100,
-        hb = 1 - bb[2] / 100,
-        Bb = hb - ub;
-      let Ob = 0;
-      return Bb < 1 && (Ob = (hb - Bb) / (1 - Bb)), [bb[0], 100 * Bb, 100 * Ob]
-    }, Gb.apple.rgb = function(bb) {
-      return [bb[0] / 65535 * 255, bb[1] / 65535 * 255, bb[2] / 65535 * 255]
-    }, Gb.rgb.apple = function(bb) {
-      return [bb[0] / 255 * 65535, bb[1] / 255 * 65535, bb[2] / 255 * 65535]
-    }, Gb.gray.rgb = function(bb) {
-      return [bb[0] / 100 * 255, bb[0] / 100 * 255, bb[0] / 100 * 255]
-    }, Gb.gray.hsl = function(bb) {
-      return [0, 0, bb[0]]
-    }, Gb.gray.hsv = Gb.gray.hsl, Gb.gray.hwb = function(bb) {
-      return [0, 100, bb[0]]
-    }, Gb.gray.cmyk = function(bb) {
-      return [0, 0, 0, bb[0]]
-    }, Gb.gray.lab = function(bb) {
-      return [bb[0], 0, 0]
-    }, Gb.gray.hex = function(bb) {
-      const ub = 255 & Math.round(bb[0] / 100 * 255),
-        hb = ((ub << 16) + (ub << 8) + ub).toString(16).toUpperCase();
-      return "000000".substring(hb.length) + hb
-    }, Gb.rgb.gray = function(bb) {
-      return [(bb[0] + bb[1] + bb[2]) / 3 / 255 * 100]
+      return gd = (1 - kd) * pd, [255 * (kd * Nd[0] + gd), 255 * (kd * Nd[1] + gd), 255 * (kd * Nd[2] + gd)]
+    }, Wd.hcg.hsv = function(dd) {
+      const Jd = dd[1] / 100,
+        kd = Jd + dd[2] / 100 * (1 - Jd);
+      let pd = 0;
+      return kd > 0 && (pd = Jd / kd), [dd[0], 100 * pd, 100 * kd]
+    }, Wd.hcg.hsl = function(dd) {
+      const Jd = dd[1] / 100,
+        kd = dd[2] / 100 * (1 - Jd) + .5 * Jd;
+      let pd = 0;
+      return kd > 0 && kd < .5 ? pd = Jd / (2 * kd) : kd >= .5 && kd < 1 && (pd = Jd / (2 * (1 - kd))), [dd[0], 100 * pd, 100 * kd]
+    }, Wd.hcg.hwb = function(dd) {
+      const Jd = dd[1] / 100,
+        kd = Jd + dd[2] / 100 * (1 - Jd);
+      return [dd[0], 100 * (kd - Jd), 100 * (1 - kd)]
+    }, Wd.hwb.hcg = function(dd) {
+      const Jd = dd[1] / 100,
+        kd = 1 - dd[2] / 100,
+        pd = kd - Jd;
+      let Nd = 0;
+      return pd < 1 && (Nd = (kd - pd) / (1 - pd)), [dd[0], 100 * pd, 100 * Nd]
+    }, Wd.apple.rgb = function(dd) {
+      return [dd[0] / 65535 * 255, dd[1] / 65535 * 255, dd[2] / 65535 * 255]
+    }, Wd.rgb.apple = function(dd) {
+      return [dd[0] / 255 * 65535, dd[1] / 255 * 65535, dd[2] / 255 * 65535]
+    }, Wd.gray.rgb = function(dd) {
+      return [dd[0] / 100 * 255, dd[0] / 100 * 255, dd[0] / 100 * 255]
+    }, Wd.gray.hsl = function(dd) {
+      return [0, 0, dd[0]]
+    }, Wd.gray.hsv = Wd.gray.hsl, Wd.gray.hwb = function(dd) {
+      return [0, 100, dd[0]]
+    }, Wd.gray.cmyk = function(dd) {
+      return [0, 0, 0, dd[0]]
+    }, Wd.gray.lab = function(dd) {
+      return [dd[0], 0, 0]
+    }, Wd.gray.hex = function(dd) {
+      const Jd = 255 & Math.round(dd[0] / 100 * 255),
+        kd = ((Jd << 16) + (Jd << 8) + Jd).toString(16).toUpperCase();
+      return "000000".substring(kd.length) + kd
+    }, Wd.rgb.gray = function(dd) {
+      return [(dd[0] + dd[1] + dd[2]) / 3 / 255 * 100]
     }
   },
-  36275: (bb, ub, hb) => {
-    const Bb = hb(36277),
-      Ob = hb(36289),
-      Gb = {};
-    Object.keys(Bb).forEach((bb => {
-      Gb[bb] = {}, Object.defineProperty(Gb[bb], "channels", {
-        value: Bb[bb].channels
-      }), Object.defineProperty(Gb[bb], "labels", {
-        value: Bb[bb].labels
+  36830: (dd, Jd, kd) => {
+    const pd = kd(36833),
+      Nd = kd(36840),
+      Wd = {};
+    Object.keys(pd).forEach((dd => {
+      Wd[dd] = {}, Object.defineProperty(Wd[dd], "channels", {
+        value: pd[dd].channels
+      }), Object.defineProperty(Wd[dd], "labels", {
+        value: pd[dd].labels
       });
-      const ub = Ob(bb);
-      Object.keys(ub).forEach((hb => {
-        const Bb = ub[hb];
-        Gb[bb][hb] = function(bb) {
-          const ub = function() {
-            for (var ub = arguments.length, hb = new Array(ub), Bb = 0; Bb < ub; Bb++) hb[Bb] = arguments[Bb];
-            const Ob = hb[0];
-            if (void 0 === Ob || null === Ob) return Ob;
-            Ob.length > 1 && (hb = Ob);
-            const Gb = bb(hb);
-            if ("object" === typeof Gb)
-              for (let bb = Gb.length, Ub = 0; Ub < bb; Ub++) Gb[Ub] = Math.round(Gb[Ub]);
-            return Gb
+      const Jd = Nd(dd);
+      Object.keys(Jd).forEach((kd => {
+        const pd = Jd[kd];
+        Wd[dd][kd] = function(dd) {
+          const Jd = function() {
+            for (var Jd = arguments.length, kd = new Array(Jd), pd = 0; pd < Jd; pd++) kd[pd] = arguments[pd];
+            const Nd = kd[0];
+            if (void 0 === Nd || null === Nd) return Nd;
+            Nd.length > 1 && (kd = Nd);
+            const Wd = dd(kd);
+            if ("object" === typeof Wd)
+              for (let dd = Wd.length, Pd = 0; Pd < dd; Pd++) Wd[Pd] = Math.round(Wd[Pd]);
+            return Wd
           };
-          return "conversion" in bb && (ub.conversion = bb.conversion), ub
-        }(Bb), Gb[bb][hb].raw = function(bb) {
-          const ub = function() {
-            for (var ub = arguments.length, hb = new Array(ub), Bb = 0; Bb < ub; Bb++) hb[Bb] = arguments[Bb];
-            const Ob = hb[0];
-            return void 0 === Ob || null === Ob ? Ob : (Ob.length > 1 && (hb = Ob), bb(hb))
+          return "conversion" in dd && (Jd.conversion = dd.conversion), Jd
+        }(pd), Wd[dd][kd].raw = function(dd) {
+          const Jd = function() {
+            for (var Jd = arguments.length, kd = new Array(Jd), pd = 0; pd < Jd; pd++) kd[pd] = arguments[pd];
+            const Nd = kd[0];
+            return void 0 === Nd || null === Nd ? Nd : (Nd.length > 1 && (kd = Nd), dd(kd))
           };
-          return "conversion" in bb && (ub.conversion = bb.conversion), ub
-        }(Bb)
+          return "conversion" in dd && (Jd.conversion = dd.conversion), Jd
+        }(pd)
       }))
-    })), bb.exports = Gb
+    })), dd.exports = Wd
   },
-  36289: (bb, ub, hb) => {
-    const Bb = hb(36277);
+  36840: (dd, Jd, kd) => {
+    const pd = kd(36833);
 
-    function Ob(bb) {
-      const ub = function() {
-          const bb = {},
-            ub = Object.keys(Bb);
-          for (let hb = ub.length, Bb = 0; Bb < hb; Bb++) bb[ub[Bb]] = {
+    function Nd(dd) {
+      const Jd = function() {
+          const dd = {},
+            Jd = Object.keys(pd);
+          for (let kd = Jd.length, pd = 0; pd < kd; pd++) dd[Jd[pd]] = {
             distance: -1,
             parent: null
           };
-          return bb
+          return dd
         }(),
-        hb = [bb];
-      for (ub[bb].distance = 0; hb.length;) {
-        const bb = hb.pop(),
-          Ob = Object.keys(Bb[bb]);
-        for (let Bb = Ob.length, Gb = 0; Gb < Bb; Gb++) {
-          const Bb = Ob[Gb],
-            Ub = ub[Bb]; - 1 === Ub.distance && (Ub.distance = ub[bb].distance + 1, Ub.parent = bb, hb.unshift(Bb))
+        kd = [dd];
+      for (Jd[dd].distance = 0; kd.length;) {
+        const dd = kd.pop(),
+          Nd = Object.keys(pd[dd]);
+        for (let pd = Nd.length, Wd = 0; Wd < pd; Wd++) {
+          const pd = Nd[Wd],
+            Pd = Jd[pd]; - 1 === Pd.distance && (Pd.distance = Jd[dd].distance + 1, Pd.parent = dd, kd.unshift(pd))
         }
       }
-      return ub
+      return Jd
     }
 
-    function Gb(bb, ub) {
-      return function(hb) {
-        return ub(bb(hb))
+    function Wd(dd, Jd) {
+      return function(kd) {
+        return Jd(dd(kd))
       }
     }
 
-    function Ub(bb, ub) {
-      const hb = [ub[bb].parent, bb];
-      let Ob = Bb[ub[bb].parent][bb],
-        Ub = ub[bb].parent;
-      for (; ub[Ub].parent;) hb.unshift(ub[Ub].parent), Ob = Gb(Bb[ub[Ub].parent][Ub], Ob), Ub = ub[Ub].parent;
-      return Ob.conversion = hb, Ob
+    function Pd(dd, Jd) {
+      const kd = [Jd[dd].parent, dd];
+      let Nd = pd[Jd[dd].parent][dd],
+        Pd = Jd[dd].parent;
+      for (; Jd[Pd].parent;) kd.unshift(Jd[Pd].parent), Nd = Wd(pd[Jd[Pd].parent][Pd], Nd), Pd = Jd[Pd].parent;
+      return Nd.conversion = kd, Nd
     }
-    bb.exports = function(bb) {
-      const ub = Ob(bb),
-        hb = {},
-        Bb = Object.keys(ub);
-      for (let Ob = Bb.length, Gb = 0; Gb < Ob; Gb++) {
-        const bb = Bb[Gb];
-        null !== ub[bb].parent && (hb[bb] = Ub(bb, ub))
+    dd.exports = function(dd) {
+      const Jd = Nd(dd),
+        kd = {},
+        pd = Object.keys(Jd);
+      for (let Nd = pd.length, Wd = 0; Wd < Nd; Wd++) {
+        const dd = pd[Wd];
+        null !== Jd[dd].parent && (kd[dd] = Pd(dd, Jd))
       }
-      return hb
+      return kd
     }
   },
-  36285: bb => {
-    bb.exports = {
+  36836: dd => {
+    dd.exports = {
       aliceblue: [240, 248, 255],
       antiquewhite: [250, 235, 215],
       aqua: [0, 255, 255],
@@ -1137,28 +1137,28 @@ export const modules = {
       yellowgreen: [154, 205, 50]
     }
   },
-  36268: (bb, ub, hb) => {
-    var Bb = hb(36272),
-      Ob = Array.prototype.concat,
-      Gb = Array.prototype.slice,
-      Ub = bb.exports = function(bb) {
-        for (var ub = [], hb = 0, Ub = bb.length; hb < Ub; hb++) {
-          var Lb = bb[hb];
-          Bb(Lb) ? ub = Ob.call(ub, Gb.call(Lb)) : ub.push(Lb)
+  36815: (dd, Jd, kd) => {
+    var pd = kd(36822),
+      Nd = Array.prototype.concat,
+      Wd = Array.prototype.slice,
+      Pd = dd.exports = function(dd) {
+        for (var Jd = [], kd = 0, Pd = dd.length; kd < Pd; kd++) {
+          var Zd = dd[kd];
+          pd(Zd) ? Jd = Nd.call(Jd, Wd.call(Zd)) : Jd.push(Zd)
         }
-        return ub
+        return Jd
       };
-    Ub.wrap = function(bb) {
+    Pd.wrap = function(dd) {
       return function() {
-        return bb(Ub(arguments))
+        return dd(Pd(arguments))
       }
     }
   },
-  36272: bb => {
-    bb.exports = function(bb) {
-      return !(!bb || "string" === typeof bb) && (bb instanceof Array || Array.isArray(bb) || bb.length >= 0 && (bb.splice instanceof Function || Object.getOwnPropertyDescriptor(bb, bb.length - 1) && "String" !== bb.constructor.name))
+  36822: dd => {
+    dd.exports = function(dd) {
+      return !(!dd || "string" === typeof dd) && (dd instanceof Array || Array.isArray(dd) || dd.length >= 0 && (dd.splice instanceof Function || Object.getOwnPropertyDescriptor(dd, dd.length - 1) && "String" !== dd.constructor.name))
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

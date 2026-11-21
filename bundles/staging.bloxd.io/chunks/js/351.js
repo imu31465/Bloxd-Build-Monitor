@@ -1,62 +1,62 @@
 export const id = 351;
 export const ids = [351];
 export const modules = {
-  60674: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      applyLightFoOffset: () => Ub,
-      getFloatingOriginOffset: () => Ob,
-      lightFoVersion: () => Gb,
-      wrapRenderableForFO: () => Lb
+  60957: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      applyLightFoOffset: () => Pd,
+      getFloatingOriginOffset: () => Nd,
+      lightFoVersion: () => Wd,
+      wrapRenderableForFO: () => Zd
     });
-    var Bb = hb(41194);
+    var pd = kd(41692);
 
-    function Ob(bb) {
-      const ub = bb.camera;
-      if (!ub) return {
+    function Nd(dd) {
+      const Jd = dd.camera;
+      if (!Jd) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const hb = ub.worldMatrix;
+      const kd = Jd.worldMatrix;
       return {
-        x: hb[12],
-        y: hb[13],
-        z: hb[14]
+        x: kd[12],
+        y: kd[13],
+        z: kd[14]
       }
     }
 
-    function Gb(bb) {
-      return bb.camera ? bb.camera.worldMatrixVersion : 0
+    function Wd(dd) {
+      return dd.camera ? dd.camera.worldMatrixVersion : 0
     }
 
-    function Ub(bb, ub) {
-      const hb = ub.camera?.worldMatrix;
-      if (!hb) return;
-      const Ob = hb[12],
-        Gb = hb[13],
-        Ub = hb[14];
-      let Lb = 0;
-      for (const Yb of ub.lights) {
-        if (Lb >= Bb.e) break;
-        if (!Yb._writeLightUbo) continue;
-        const ub = 4 + 16 * Lb,
-          hb = bb[ub + 3];
-        if (0 === hb || 2 === hb) {
-          const hb = Yb.worldMatrix;
-          bb[ub] = hb[12] - Ob, bb[ub + 1] = hb[13] - Gb, bb[ub + 2] = hb[14] - Ub
+    function Pd(dd, Jd) {
+      const kd = Jd.camera?.worldMatrix;
+      if (!kd) return;
+      const Nd = kd[12],
+        Wd = kd[13],
+        Pd = kd[14];
+      let Zd = 0;
+      for (const gd of Jd.lights) {
+        if (Zd >= pd.e) break;
+        if (!gd._writeLightUbo) continue;
+        const Jd = 4 + 16 * Zd,
+          kd = dd[Jd + 3];
+        if (0 === kd || 2 === kd) {
+          const kd = gd.worldMatrix;
+          dd[Jd] = kd[12] - Nd, dd[Jd + 1] = kd[13] - Wd, dd[Jd + 2] = kd[14] - Pd
         }
-        Lb++
+        Zd++
       }
     }
 
-    function Lb(bb, ub, hb) {
-      let Bb = -1;
+    function Zd(dd, Jd, kd) {
+      let pd = -1;
       return () => {
-        const Ob = ub.camera ? ub.camera.worldMatrixVersion : -1;
-        Ob !== Bb && (hb(), Bb = Ob), bb()
+        const Nd = Jd.camera ? Jd.camera.worldMatrixVersion : -1;
+        Nd !== pd && (kd(), pd = Nd), dd()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

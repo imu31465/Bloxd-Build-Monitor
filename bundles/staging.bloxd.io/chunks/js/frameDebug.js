@@ -1,68 +1,68 @@
 export const id = 33;
 export const ids = [33];
 export const modules = {
-  8951: (bb, ub, hb) => {
-    function Bb(bb, ub) {
-      return 0 === bb.length ? 0 : bb[Math.min(bb.length - 1, Math.floor(ub * bb.length))]
+  9098: (dd, Jd, kd) => {
+    function pd(dd, Jd) {
+      return 0 === dd.length ? 0 : dd[Math.min(dd.length - 1, Math.floor(Jd * dd.length))]
     }
 
-    function Ob(bb) {
-      return bb.toFixed(1)
+    function Nd(dd) {
+      return dd.toFixed(1)
     }
-    hb.d(ub, {
-      c: () => Ob,
-      g: () => Bb
+    kd.d(Jd, {
+      c: () => Nd,
+      e: () => pd
     })
   },
-  8946: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      FIRST_SUMMARIES_FOR_MS: () => pb,
-      FIRST_SUMMARY_MS: () => Xb,
-      FrameDebugLog: () => rb,
-      OUTLIER_BURST: () => Ab,
-      OUTLIER_MS: () => ob,
-      OUTLIER_REFILL_MS: () => lb,
-      SUMMARY_MS: () => Zb,
-      startFrameDebug: () => nb
+  9094: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      FIRST_SUMMARIES_FOR_MS: () => Od,
+      FIRST_SUMMARY_MS: () => Ld,
+      FrameDebugLog: () => Bd,
+      OUTLIER_BURST: () => Rd,
+      OUTLIER_MS: () => ed,
+      OUTLIER_REFILL_MS: () => Id,
+      SUMMARY_MS: () => Qd,
+      startFrameDebug: () => ad
     });
-    var Bb = hb(4564),
-      Ob = hb(4547),
-      Gb = hb(8951),
-      Ub = hb(2633),
-      Lb = hb(993),
-      Yb = hb(2767);
-    class Sb {
+    var pd = kd(4688),
+      Nd = kd(4673),
+      Wd = kd(9098),
+      Pd = kd(2704),
+      Zd = kd(1093),
+      gd = kd(2834);
+    class Cd {
       constructor() {
-        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = bb => {
-          const ub = bb;
-          this.add(ub.startTime, ub.duration, ub.blockingDuration, (0, Lb.l)(ub))
-        }, this.onLongTask = bb => {
-          this.add(bb.startTime, bb.duration, 0, 0)
-        }, null !== (0, Yb.d)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, Yb.d)("longtask", this.onLongTask) ? "longtask" : null
+        this.kind = void 0, this.entries = new Float64Array(256), this.next = 0, this.size = 0, this.onLongFrame = dd => {
+          const Jd = dd;
+          this.add(Jd.startTime, Jd.duration, Jd.blockingDuration, (0, Zd.p)(Jd))
+        }, this.onLongTask = dd => {
+          this.add(dd.startTime, dd.duration, 0, 0)
+        }, null !== (0, gd.e)("long-animation-frame", this.onLongFrame) ? this.kind = "loaf" : this.kind = null !== (0, gd.e)("longtask", this.onLongTask) ? "longtask" : null
       }
-      add(bb, ub, hb, Bb) {
-        this.entries.set([bb, ub, hb, Bb], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
+      add(dd, Jd, kd, pd) {
+        this.entries.set([dd, Jd, kd, pd], 4 * this.next), this.next = (this.next + 1) % 64, this.size = Math.min(this.size + 1, 64)
       }
-      describe(bb, ub) {
+      describe(dd, Jd) {
         if (null === this.kind) return "long tasks n/a";
-        let hb = 0,
-          Bb = 0,
-          Ob = 0,
-          Gb = 0;
-        for (let Lb = 0; Lb < this.size; Lb++) {
-          const Ub = 4 * Lb,
-            Yb = this.entries[Ub] + this.entries[Ub + 1];
-          Yb > bb && Yb <= ub + 2 && (hb++, Bb += this.entries[Ub + 1], Ob += this.entries[Ub + 2], Gb += this.entries[Ub + 3])
+        let kd = 0,
+          pd = 0,
+          Nd = 0,
+          Wd = 0;
+        for (let Zd = 0; Zd < this.size; Zd++) {
+          const Pd = 4 * Zd,
+            gd = this.entries[Pd] + this.entries[Pd + 1];
+          gd > dd && gd <= Jd + 2 && (kd++, pd += this.entries[Pd + 1], Nd += this.entries[Pd + 2], Wd += this.entries[Pd + 3])
         }
-        const Ub = "loaf" === this.kind && hb > 0 ? ` (blocking ${Ob.toFixed(0)}, script ${Gb.toFixed(0)})` : "";
-        return `${hb} ${this.kind} ${Bb.toFixed(0)} ms${Ub}`
+        const Pd = "loaf" === this.kind && kd > 0 ? ` (blocking ${Nd.toFixed(0)}, script ${Wd.toFixed(0)})` : "";
+        return `${kd} ${this.kind} ${pd.toFixed(0)} ms${Pd}`
       }
     }
 
-    function ab(bb, ub) {
-      return ub < 0 || bb < ub ? bb : bb - ub
+    function Kd(dd, Jd) {
+      return Jd < 0 || dd < Jd ? dd : dd - Jd
     }
-    class Hb {
+    class od {
       constructor() {
         this.source = null, this.now = {
           chunksReceived: -1,
@@ -84,10 +84,10 @@ export const modules = {
           workersRetired: -1
         }, this.lastMs = 0, this.visibilityChanges = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      setSource(bb) {
-        this.source = bb
+      setSource(dd) {
+        this.source = dd
       }
-      start(bb) {
+      start(dd) {
         this.before = {
           chunksReceived: -1,
           chunksCancelled: -1,
@@ -97,120 +97,120 @@ export const modules = {
           jobsInFlight: -1,
           workersLive: -1,
           workersRetired: -1
-        }, this.lastMs = bb
+        }, this.lastMs = dd
       }
-      visibilityChanged(bb) {
-        this.visibilityChanges++, document.hidden ? this.hiddenSinceMs = bb : this.hiddenSinceMs >= 0 && (this.hiddenMs += bb - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      visibilityChanged(dd) {
+        this.visibilityChanges++, document.hidden ? this.hiddenSinceMs = dd : this.hiddenSinceMs >= 0 && (this.hiddenMs += dd - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      take(bb) {
-        var ub;
-        const hb = [];
-        if (!0 === (null === (ub = this.source) || void 0 === ub ? void 0 : ub.call(this, this.now)) && (Bb = this.now, Ob = this.before, Bb.chunksReceived !== Ob.chunksReceived || Bb.chunksCancelled !== Ob.chunksCancelled || Bb.chunksStored !== Ob.chunksStored || Bb.jobsSent !== Ob.jobsSent || Bb.jobsDone !== Ob.jobsDone || Bb.jobsInFlight !== Ob.jobsInFlight || Bb.workersLive !== Ob.workersLive || Bb.workersRetired !== Ob.workersRetired)) {
-          hb.push(function(bb, ub) {
-            const hb = [`chunks +${ab(bb.chunksReceived,ub.chunksReceived)} got`, `+${ab(bb.chunksCancelled,ub.chunksCancelled)} cancelled`];
-            bb.chunksStored >= 0 && hb.push(`${bb.chunksStored} stored`);
-            const Bb = `jobs +${ab(bb.jobsSent,ub.jobsSent)} sent, +${ab(bb.jobsDone,ub.jobsDone)} done, ${bb.jobsInFlight} in flight`;
-            return `${hb.join(", ")}; ${Bb}; workers ${bb.workersLive} live, ${bb.workersRetired} retired`
+      take(dd) {
+        var Jd;
+        const kd = [];
+        if (!0 === (null === (Jd = this.source) || void 0 === Jd ? void 0 : Jd.call(this, this.now)) && (pd = this.now, Nd = this.before, pd.chunksReceived !== Nd.chunksReceived || pd.chunksCancelled !== Nd.chunksCancelled || pd.chunksStored !== Nd.chunksStored || pd.jobsSent !== Nd.jobsSent || pd.jobsDone !== Nd.jobsDone || pd.jobsInFlight !== Nd.jobsInFlight || pd.workersLive !== Nd.workersLive || pd.workersRetired !== Nd.workersRetired)) {
+          kd.push(function(dd, Jd) {
+            const kd = [`chunks +${Kd(dd.chunksReceived,Jd.chunksReceived)} got`, `+${Kd(dd.chunksCancelled,Jd.chunksCancelled)} cancelled`];
+            dd.chunksStored >= 0 && kd.push(`${dd.chunksStored} stored`);
+            const pd = `jobs +${Kd(dd.jobsSent,Jd.jobsSent)} sent, +${Kd(dd.jobsDone,Jd.jobsDone)} done, ${dd.jobsInFlight} in flight`;
+            return `${kd.join(", ")}; ${pd}; workers ${dd.workersLive} live, ${dd.workersRetired} retired`
           }(this.now, this.before));
-          const bb = this.before;
-          this.before = this.now, this.now = bb
+          const dd = this.before;
+          this.before = this.now, this.now = dd
         }
-        var Bb, Ob;
-        if (this.hiddenSinceMs >= 0 && (this.hiddenMs += bb - this.hiddenSinceMs, this.hiddenSinceMs = bb), (this.visibilityChanges > 0 || this.hiddenMs > 0) && (hb.push(`hidden ${this.visibilityChanges} changes, ${Math.round(this.hiddenMs)} ms`), this.visibilityChanges = 0, this.hiddenMs = 0), 0 === hb.length) return null;
-        const Gb = `load ${Math.round((bb-this.lastMs)/1e3)}s: ${hb.join("; ")}`;
-        return this.lastMs = bb, Gb
+        var pd, Nd;
+        if (this.hiddenSinceMs >= 0 && (this.hiddenMs += dd - this.hiddenSinceMs, this.hiddenSinceMs = dd), (this.visibilityChanges > 0 || this.hiddenMs > 0) && (kd.push(`hidden ${this.visibilityChanges} changes, ${Math.round(this.hiddenMs)} ms`), this.visibilityChanges = 0, this.hiddenMs = 0), 0 === kd.length) return null;
+        const Wd = `load ${Math.round((dd-this.lastMs)/1e3)}s: ${kd.join("; ")}`;
+        return this.lastMs = dd, Wd
       }
     }
-    class wb {
+    class ld {
       constructor() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.run = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
       drawn() {
         this.run = 0
       }
-      add(bb, ub, hb) {
-        this.count++, "paced" === bb ? this.paced++ : "skipped" === bb && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = ub, this.longestAhead = hb)
+      add(dd, Jd, kd) {
+        this.count++, "paced" === dd ? this.paced++ : "skipped" === dd && this.skipped++, this.run++, this.run > this.longest && (this.longest = this.run, this.longestMs = Jd, this.longestAhead = kd)
       }
       describe() {
         if (0 === this.count) return "0 undrawn";
-        const bb = this.count - this.paced - this.skipped;
-        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${bb} other, longest ${this.longest} in ${(0,Gb.c)(this.longestMs)} ms at ${this.longestAhead} ahead`
+        const dd = this.count - this.paced - this.skipped;
+        return `${this.count} undrawn: ${this.paced} paced, ${this.skipped} skipped, ${dd} other, longest ${this.longest} in ${(0,Wd.c)(this.longestMs)} ms at ${this.longestAhead} ahead`
       }
       reset() {
         this.count = 0, this.paced = 0, this.skipped = 0, this.longest = 0, this.longestMs = 0, this.longestAhead = -1
       }
     }
-    const Zb = 2e4,
-      Xb = 5e3,
-      pb = 6e4,
-      ob = 250,
-      Ab = 10,
-      lb = 6e4,
-      Kb = 8192;
+    const Qd = 2e4,
+      Ld = 5e3,
+      Od = 6e4,
+      ed = 250,
+      Rd = 10,
+      Id = 6e4,
+      Gd = 8192;
 
-    function Wb(bb) {
-      return bb.mainMs = 0, bb.renderMs = 0, bb.ticks = 0, bb.tickMs = 0, bb.rafs = 0, bb.pendingBefore = -1, bb.pendingMax = -1, bb.pendingAfter = -1, bb
+    function vd(dd) {
+      return dd.mainMs = 0, dd.renderMs = 0, dd.ticks = 0, dd.tickMs = 0, dd.rafs = 0, dd.pendingBefore = -1, dd.pendingMax = -1, dd.pendingAfter = -1, dd
     }
 
-    function Cb() {
-      return Wb({})
+    function xd() {
+      return vd({})
     }
-    class db {
+    class qd {
       constructor() {
-        this.intervals = new Float64Array(Kb), this.totals = Cb(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new wb, this.shown = 0, this.dropped = 0
+        this.intervals = new Float64Array(Gd), this.totals = xd(), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn = new ld, this.shown = 0, this.dropped = 0
       }
       reset() {
-        Wb(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
+        vd(this.totals), this.frames = 0, this.slow = 0, this.maxMs = 0, this.undrawn.reset(), this.shown = 0, this.dropped = 0
       }
     }
-    class rb {
+    class Bd {
       constructor() {
-        this.longTasks = new Sb, this.summary = new db, this.current = Cb(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = Ab, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new Hb, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
+        this.longTasks = new Cd, this.summary = new qd, this.current = xd(), this.lastDrawnStartMs = -1, this.lastPending = -1, this.ahead = -1, this.tokens = Rd, this.lastRefillMs = performance.now(), this.waiting = [], this.outlierTimer = null, this.flushTimer = null, this.startedMs = 0, this.lastFlushMs = 0, this.loadLine = new od, this.inGameSinceFlush = !1, this.visibilityChanged = () => {
           this.restart(), this.loadLine.visibilityChanged(performance.now())
         }, this.restart = () => {
           this.lastDrawnStartMs = -1
         }, this.animationFrame = () => {
           this.current.rafs++
-        }, this.wasmFrame = (bb, ub, hb, Ob, Gb, Ub) => {
-          this.ahead = bb.headerWord(Bb.B.Pacing) & Bb.R.AheadMask, this.frame(ub, hb, Ob, Gb, bb.headerWord(Bb.B.RenderUs) / 1e3, bb.headerWord(Bb.B.TicksRun), Ub, bb.headerWord(Bb.B.RenderPending))
-        }, this.wasmPeekPaced = bb => {
-          const ub = performance.now();
-          this.frame(ub, ub, "paced", bb, 0, 0, 0, this.lastPending)
-        }, this.jsFrame = (bb, ub, hb) => {
-          this.frame(bb, ub, "drawn", hb, ub - bb, 0, 0, -1)
-        }, this.jsTick = bb => {
-          this.current.mainMs += bb, this.current.ticks++, this.current.tickMs += bb
+        }, this.wasmFrame = (dd, Jd, kd, Nd, Wd, Pd) => {
+          this.ahead = dd.headerWord(pd.B.Pacing) & pd.X.AheadMask, this.frame(Jd, kd, Nd, Wd, dd.headerWord(pd.B.RenderUs) / 1e3, dd.headerWord(pd.B.TicksRun), Pd, dd.headerWord(pd.B.RenderPending))
+        }, this.wasmPeekPaced = dd => {
+          const Jd = performance.now();
+          this.frame(Jd, Jd, "paced", dd, 0, 0, 0, this.lastPending)
+        }, this.jsFrame = (dd, Jd, kd) => {
+          this.frame(dd, Jd, "drawn", kd, Jd - dd, 0, 0, -1)
+        }, this.jsTick = dd => {
+          this.current.mainMs += dd, this.current.ticks++, this.current.tickMs += dd
         }, this.logOutliers = () => {
           this.outlierTimer = null;
-          const bb = performance.now();
-          let ub = 0;
-          for (const hb of this.waiting) {
-            if (hb.dueMs > bb) {
-              this.waiting[ub++] = hb;
+          const dd = performance.now();
+          let Jd = 0;
+          for (const kd of this.waiting) {
+            if (kd.dueMs > dd) {
+              this.waiting[Jd++] = kd;
               continue
             }
-            const Bb = [`long frame ${(0,Gb.c)(hb.intervalMs)} ms ending at ${(0,Gb.c)(hb.endMs)} ms: main ${(0,Gb.c)(hb.mainMs)} (render ${(0,Gb.c)(hb.renderMs)}, ${hb.ticks} ticks ${(0,Gb.c)(hb.tickMs)}), outside ${(0,Gb.c)(hb.intervalMs-hb.mainMs)}`, `${hb.rafs} rafs`];
-            hb.pendingBefore >= 0 && Bb.push(`pending ${hb.pendingBefore} -> ${hb.pendingAfter} (max ${hb.pendingMax})`), Bb.push(this.longTasks.describe(hb.endMs - hb.intervalMs, hb.endMs)), (0, Ub.l)("frame", Bb.join("; "))
+            const pd = [`long frame ${(0,Wd.c)(kd.intervalMs)} ms ending at ${(0,Wd.c)(kd.endMs)} ms: main ${(0,Wd.c)(kd.mainMs)} (render ${(0,Wd.c)(kd.renderMs)}, ${kd.ticks} ticks ${(0,Wd.c)(kd.tickMs)}), outside ${(0,Wd.c)(kd.intervalMs-kd.mainMs)}`, `${kd.rafs} rafs`];
+            kd.pendingBefore >= 0 && pd.push(`pending ${kd.pendingBefore} -> ${kd.pendingAfter} (max ${kd.pendingMax})`), pd.push(this.longTasks.describe(kd.endMs - kd.intervalMs, kd.endMs)), (0, Pd.h)("frame", pd.join("; "))
           }
-          this.waiting.length = ub, ub > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - bb))
+          this.waiting.length = Jd, Jd > 0 && (this.outlierTimer = setTimeout(this.logOutliers, this.waiting[0].dueMs - dd))
         }, this.flush = () => {
           this.flushTimer = null;
-          const bb = performance.now(),
-            ub = Math.round((bb - this.lastFlushMs) / 1e3);
-          this.lastFlushMs = bb, this.scheduleFlush();
-          if (this.logSummary(ub) || this.inGameSinceFlush) {
-            const ub = this.loadLine.take(bb);
-            null !== ub && (0, Ub.l)("frame", ub)
+          const dd = performance.now(),
+            Jd = Math.round((dd - this.lastFlushMs) / 1e3);
+          this.lastFlushMs = dd, this.scheduleFlush();
+          if (this.logSummary(Jd) || this.inGameSinceFlush) {
+            const Jd = this.loadLine.take(dd);
+            null !== Jd && (0, Pd.h)("frame", Jd)
           }
           this.inGameSinceFlush = !1, this.summary.reset()
         }, document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      start(bb, ub) {
-        var hb;
-        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, Ub.l)("frame", `start: ${bb} client, ${ub}, dpr ${window.devicePixelRatio}, long tasks ${null!==(hb=this.longTasks.kind)&&void 0!==hb?hb:"n/a"}; a summary each ${Zb/1e3} s in game (${Xb/1e3} s for the first ${pb/1e3} s), outliers over ${ob} ms`)
+      start(dd, Jd) {
+        var kd;
+        this.restart(), this.startedMs = performance.now(), this.lastFlushMs = this.startedMs, this.loadLine.start(this.startedMs), this.scheduleFlush(), (0, Pd.h)("frame", `start: ${dd} client, ${Jd}, dpr ${window.devicePixelRatio}, long tasks ${null!==(kd=this.longTasks.kind)&&void 0!==kd?kd:"n/a"}; a summary each ${Qd/1e3} s in game (${Ld/1e3} s for the first ${Od/1e3} s), outliers over ${ed} ms`)
       }
-      setLoadCounts(bb) {
-        this.loadLine.setSource(bb)
+      setLoadCounts(dd) {
+        this.loadLine.setSource(dd)
       }
       joined() {
         this.startedMs = performance.now(), this.scheduleFlush()
@@ -220,95 +220,95 @@ export const modules = {
       }
       scheduleFlush() {
         null !== this.flushTimer && clearTimeout(this.flushTimer);
-        const bb = performance.now() - this.startedMs < pb;
-        this.flushTimer = setTimeout(this.flush, bb ? Xb : Zb)
+        const dd = performance.now() - this.startedMs < Od;
+        this.flushTimer = setTimeout(this.flush, dd ? Ld : Qd)
       }
-      frame(bb, ub, hb, Bb, Gb, Ub, Lb, Yb) {
-        if (!Bb) return this.restart(), void(this.lastPending = Yb);
-        const Sb = this.current;
-        (0, Ob.d)(hb) ? (this.lastDrawnStartMs >= 0 && (Sb.pendingAfter = this.lastPending, this.closeInterval(bb - this.lastDrawnStartMs, bb)), this.lastDrawnStartMs = bb, Wb(Sb).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(hb, ub - this.lastDrawnStartMs, this.ahead), Sb.mainMs += ub - bb, Sb.renderMs += Gb, Sb.ticks += Ub, Sb.tickMs += Lb, Sb.pendingMax = Math.max(Sb.pendingMax, Yb), this.lastPending = Yb, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, Yb)
+      frame(dd, Jd, kd, pd, Wd, Pd, Zd, gd) {
+        if (!pd) return this.restart(), void(this.lastPending = gd);
+        const Cd = this.current;
+        (0, Nd.b)(kd) ? (this.lastDrawnStartMs >= 0 && (Cd.pendingAfter = this.lastPending, this.closeInterval(dd - this.lastDrawnStartMs, dd)), this.lastDrawnStartMs = dd, vd(Cd).pendingBefore = this.lastPending, this.summary.undrawn.drawn()) : this.lastDrawnStartMs >= 0 && this.summary.undrawn.add(kd, Jd - this.lastDrawnStartMs, this.ahead), Cd.mainMs += Jd - dd, Cd.renderMs += Wd, Cd.ticks += Pd, Cd.tickMs += Zd, Cd.pendingMax = Math.max(Cd.pendingMax, gd), this.lastPending = gd, this.summary.totals.pendingMax = Math.max(this.summary.totals.pendingMax, gd)
       }
-      closeInterval(bb, ub) {
-        const hb = this.summary,
-          Bb = this.current;
-        hb.frames < Kb && (hb.intervals[hb.frames] = bb), hb.frames++, hb.maxMs = Math.max(hb.maxMs, bb);
-        const Ob = hb.totals;
-        Ob.mainMs += Bb.mainMs, Ob.renderMs += Bb.renderMs, Ob.ticks += Bb.ticks, Ob.tickMs += Bb.tickMs, Ob.rafs += Bb.rafs, bb > 50 && hb.slow++, bb > ob && this.outlier(bb, ub)
+      closeInterval(dd, Jd) {
+        const kd = this.summary,
+          pd = this.current;
+        kd.frames < Gd && (kd.intervals[kd.frames] = dd), kd.frames++, kd.maxMs = Math.max(kd.maxMs, dd);
+        const Nd = kd.totals;
+        Nd.mainMs += pd.mainMs, Nd.renderMs += pd.renderMs, Nd.ticks += pd.ticks, Nd.tickMs += pd.tickMs, Nd.rafs += pd.rafs, dd > 50 && kd.slow++, dd > ed && this.outlier(dd, Jd)
       }
-      outlier(bb, ub) {
-        const hb = Math.floor((ub - this.lastRefillMs) / lb);
-        hb > 0 && (this.tokens = Math.min(Ab, this.tokens + hb), this.lastRefillMs += hb * lb), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
+      outlier(dd, Jd) {
+        const kd = Math.floor((Jd - this.lastRefillMs) / Id);
+        kd > 0 && (this.tokens = Math.min(Rd, this.tokens + kd), this.lastRefillMs += kd * Id), 0 !== this.tokens ? (this.tokens--, this.summary.shown++, this.waiting.push({
           ...this.current,
-          endMs: ub,
-          intervalMs: bb,
+          endMs: Jd,
+          intervalMs: dd,
           dueMs: performance.now() + 1e3
         }), this.outlierTimer ??= setTimeout(this.logOutliers, 1e3)) : this.summary.dropped++
       }
-      logSummary(bb) {
-        const ub = this.summary,
-          hb = ub.totals;
-        if (0 === ub.frames) return ub.undrawn.count > 0 && (0, Ub.l)("frame", `${bb}s: no frames drawn, ${ub.undrawn.describe()}; pending max ${hb.pendingMax}`), ub.undrawn.count > 0;
-        const Bb = ub.intervals.subarray(0, Math.min(ub.frames, Kb)).sort(),
-          Ob = [`${ub.frames} frames, median ${(0,Gb.c)((0,Gb.g)(Bb,.5))} p95 ${(0,Gb.c)((0,Gb.g)(Bb,.95))} max ${(0,Gb.c)(ub.maxMs)} ms, ${ub.slow} over 50, ${ub.shown+ub.dropped} over ${ob}`, `${hb.rafs} rafs, ${ub.undrawn.describe()}`, `main ${(0,Gb.c)(hb.mainMs)} ms (render ${(0,Gb.c)(hb.renderMs)}, ${hb.ticks} ticks ${(0,Gb.c)(hb.tickMs)})`];
-        return hb.pendingMax >= 0 && Ob.push(`pending max ${hb.pendingMax}`), this.ahead >= 0 && Ob.push(`${this.ahead} frames ahead`), Ob.push(`outliers ${ub.shown} logged, ${ub.dropped} dropped`), (0, Ub.l)("frame", `${bb}s: ${Ob.join("; ")}`), !0
+      logSummary(dd) {
+        const Jd = this.summary,
+          kd = Jd.totals;
+        if (0 === Jd.frames) return Jd.undrawn.count > 0 && (0, Pd.h)("frame", `${dd}s: no frames drawn, ${Jd.undrawn.describe()}; pending max ${kd.pendingMax}`), Jd.undrawn.count > 0;
+        const pd = Jd.intervals.subarray(0, Math.min(Jd.frames, Gd)).sort(),
+          Nd = [`${Jd.frames} frames, median ${(0,Wd.c)((0,Wd.e)(pd,.5))} p95 ${(0,Wd.c)((0,Wd.e)(pd,.95))} max ${(0,Wd.c)(Jd.maxMs)} ms, ${Jd.slow} over 50, ${Jd.shown+Jd.dropped} over ${ed}`, `${kd.rafs} rafs, ${Jd.undrawn.describe()}`, `main ${(0,Wd.c)(kd.mainMs)} ms (render ${(0,Wd.c)(kd.renderMs)}, ${kd.ticks} ticks ${(0,Wd.c)(kd.tickMs)})`];
+        return kd.pendingMax >= 0 && Nd.push(`pending max ${kd.pendingMax}`), this.ahead >= 0 && Nd.push(`${this.ahead} frames ahead`), Nd.push(`outliers ${Jd.shown} logged, ${Jd.dropped} dropped`), (0, Pd.h)("frame", `${dd}s: ${Nd.join("; ")}`), !0
       }
     }
-    let jb = null;
+    let sd = null;
 
-    function nb(bb, ub) {
-      return jb ??= new rb, jb.start(bb, ub), jb
+    function ad(dd, Jd) {
+      return sd ??= new Bd, sd.start(dd, Jd), sd
     }
   },
-  4564: (bb, ub, hb) => {
-    hb.d(ub, {
-      Ab: () => vb,
-      B: () => Gb,
-      C: () => ob,
-      D: () => fb,
-      Db: () => pb,
-      Eb: () => jb,
-      Gb: () => rb,
-      H: () => ab,
-      Kb: () => tb,
-      L: () => Hb,
-      Lb: () => Ib,
-      Mb: () => eb,
-      N: () => Sb,
-      Q: () => Ab,
-      Qb: () => sb,
-      R: () => Yb,
-      Tb: () => Mb,
-      U: () => Xb,
-      Vb: () => Cb,
-      Wb: () => db,
-      Y: () => Zb,
-      _b: () => qb,
-      ab: () => nb,
-      b: () => Vb,
-      cc: () => Ob,
-      eb: () => xb,
-      f: () => yb,
-      fb: () => zb,
-      fc: () => Fb,
-      hb: () => Db,
-      i: () => wb,
-      ib: () => gb,
-      l: () => Wb,
-      m: () => Eb,
-      mb: () => Pb,
-      ob: () => mb,
-      p: () => Kb,
-      r: () => lb,
-      s: () => Ub,
-      sb: () => Nb,
-      v: () => Lb,
-      vb: () => ib,
-      x: () => Bb,
-      xb: () => Jb
+  4688: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      B: () => Wd,
+      Db: () => sd,
+      Eb: () => Bd,
+      F: () => ed,
+      Gb: () => jd,
+      Hb: () => Td,
+      I: () => Vd,
+      L: () => Kd,
+      Lb: () => fd,
+      M: () => od,
+      Ob: () => Ud,
+      P: () => Cd,
+      Qb: () => yd,
+      Sb: () => xd,
+      T: () => Rd,
+      Tb: () => qd,
+      Vb: () => cd,
+      X: () => gd,
+      Yb: () => Nd,
+      Z: () => Ld,
+      ab: () => Qd,
+      ac: () => td,
+      b: () => ud,
+      bb: () => ad,
+      d: () => rd,
+      eb: () => Fd,
+      gb: () => Yd,
+      h: () => ld,
+      ib: () => Md,
+      jb: () => md,
+      kb: () => Ed,
+      l: () => vd,
+      o: () => hd,
+      ob: () => Dd,
+      p: () => Gd,
+      q: () => Id,
+      sb: () => nd,
+      tb: () => bd,
+      u: () => Pd,
+      vb: () => Xd,
+      w: () => Zd,
+      xb: () => Sd,
+      y: () => pd,
+      zb: () => Od
     });
-    const Bb = 32,
-      Ob = 33.333333333333336,
-      Gb = {
+    const pd = 32,
+      Nd = 33.333333333333336,
+      Wd = {
         AbiVersion: 0,
         Status: 1,
         LastError: 2,
@@ -342,18 +342,18 @@ export const modules = {
         PacingLagUs: 30,
         LoadSteps: 31
       },
-      Ub = {
+      Pd = {
         NotYet: 0,
         Drawn: 1,
         Backstop: 2,
         HeldBackstop: 3
       },
-      Lb = {
+      Zd = {
         NotDrawn: 0,
         Drawn: 1,
         Paced: 2
       },
-      Yb = {
+      gd = {
         AheadMask: 15,
         Joining: 64,
         Tiered: 128,
@@ -361,15 +361,15 @@ export const modules = {
         SwitchesShift: 20,
         CountMask: 4095
       },
-      Sb = {
+      Cd = {
         TerrainDrawn: 1,
         ChunkRequested: 2,
         ChunkStored: 4,
         MeshLanded: 8,
         PlayerChunk: 16
       },
-      ab = 7,
-      Hb = {
+      Kd = 7,
+      od = {
         ChunksReceived: 0,
         ChunksStored: 1,
         JobsSent: 2,
@@ -378,13 +378,13 @@ export const modules = {
         WorkersLive: 5,
         WorkersRetired: 6
       },
-      wb = {
+      ld = {
         Look: 0,
         Remesh: 1
       },
-      Zb = 8,
-      Xb = 1,
-      pb = {
+      Qd = 8,
+      Ld = 1,
+      Od = {
         Edit: 0,
         Sent: 1,
         Done: 2,
@@ -393,7 +393,7 @@ export const modules = {
         Replaced: 5,
         Emptied: 6
       },
-      ob = {
+      ed = {
         KeyDown: 1,
         KeyUp: 2,
         MouseMove: 3,
@@ -421,12 +421,12 @@ export const modules = {
         PadLook: 25,
         EnvPrefs: 32
       },
-      Ab = {
+      Rd = {
         Frame: 1,
         Open: 2,
         Close: 3
       },
-      lb = {
+      Id = {
         RawMessage: 1,
         CoreErrors: 2,
         LocalHurt: 16,
@@ -478,7 +478,7 @@ export const modules = {
         RenderReload: 3,
         TerrainTexturesWanted: 4
       },
-      Kb = {
+      Gd = {
         EntityInfo: 1,
         EntityTable: 2,
         CoreErrors: 4,
@@ -488,10 +488,10 @@ export const modules = {
         PlayerHud: 64,
         GameCalls: 128
       },
-      Wb = 4,
-      Cb = 4,
-      db = 65535,
-      rb = {
+      vd = 4,
+      xd = 4,
+      qd = 65535,
+      Bd = {
         Open: 1,
         TooLarge: 2,
         NothingStaged: 3,
@@ -504,7 +504,7 @@ export const modules = {
         ModuleTrap: 10,
         Port: 11
       },
-      jb = {
+      sd = {
         Busy: 0,
         Range: 1,
         OtherBody: 2,
@@ -512,12 +512,12 @@ export const modules = {
         Corrupt: 4,
         Ended: 5
       },
-      nb = 88,
-      Db = 0,
-      xb = 24,
-      zb = 48,
-      gb = 80,
-      ib = {
+      ad = 88,
+      Md = 0,
+      Fd = 24,
+      Yd = 48,
+      md = 80,
+      bd = {
         FilePartDone: 526,
         FileDone: 527,
         Control: 528,
@@ -528,18 +528,18 @@ export const modules = {
         Killfeed: 533,
         Session: 534
       },
-      vb = {
+      Sd = {
         ToggleRecording: 0,
         SaveClip: 1,
         ViewerOpened: 2,
         ViewerClosed: 3
       },
-      tb = {
+      jd = {
         Clip: 0,
         Recording: 1,
         Edited: 2
       },
-      Jb = {
+      Xd = {
         RecordingStarted: 0,
         RecordingStopped: 1,
         RecordingDiscarded: 2,
@@ -557,34 +557,34 @@ export const modules = {
         SaveFailed: 14,
         RecordingTurnedOff: 15
       },
-      eb = {
+      fd = {
         Cleared: 0,
         Text: 1,
         Int: 2,
         Double: 3
       },
-      Nb = 65535,
-      sb = {
+      nd = 65535,
+      Ud = {
         FlyingText: 1,
         PlayerKilled: 2,
         Killfeed: 3
       },
-      Mb = {
+      yd = {
         None: 0,
         Paused: 1,
         Playing: 2,
         Cropping: 3,
         Loading: 4
       },
-      mb = 2,
-      Ib = {
+      Dd = 2,
+      Td = {
         UiText: 0,
         Environment: 6,
         Hud: 12,
         Count: 19
       },
-      Pb = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
-      qb = {
+      Ed = ["RightInfoText", "middleTextTop", "middleTextUpper", "middleTextLower", "crosshairText", "headerChips", "skyBox", "fogColourOverride", "fogChunkDistanceOverride", "cameraTint", "fogOnSkybox", "fogBlockDistanceOverride", "_health", "_totalMaxHealth", "_shield", "maxShield", "_aura", "auraPerLevel", "maxAuraLevel"],
+      cd = {
         SkyTable: 600,
         SkyImagesReady: 601,
         SkyTableHeaderBytes: 8,
@@ -596,7 +596,7 @@ export const modules = {
         CubeFaces: 6,
         Failed: 0
       },
-      Eb = {
+      hd = {
         Bytes: 88,
         Inclination: 0,
         Turbidity: 1,
@@ -623,7 +623,7 @@ export const modules = {
         PresentAt: 80,
         FlagsAt: 84
       },
-      yb = {
+      rd = {
         None: 0,
         InputOverCapacity: 1,
         InputTruncated: 2,
@@ -781,8 +781,8 @@ export const modules = {
         ReplayDrops: 87,
         ReplayRecorderDrops: 304
       },
-      Vb = 8,
-      Fb = {
+      ud = 8,
+      td = {
         GameCodeMessage: 4,
         NewOtherEntitySettings: 23,
         NewClientOptions: 37,
@@ -807,141 +807,141 @@ export const modules = {
         WorldVariation: 5,
         EditItemCraftingRecipes: 78
       },
-      fb = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
+      Vd = ["interactionPrompt", "showDamageAmounts", "killfeedColour", "colorInLobbyLeaderboard", "lobbyLeaderboardValues", "lobbyLeaderboardTags", "alwaysInInterest"]
   },
-  4555: (bb, ub, hb) => {
-    hb.d(ub, {
-      $c: () => Bb.Vb,
-      A: () => Ub,
-      Ab: () => Bb.L,
-      Bb: () => Ob.e,
-      Cb: () => jb,
-      Cc: () => Bb.vb,
-      Cd: () => qb,
-      D: () => vb,
-      Db: () => sb,
-      E: () => Zu,
-      Fb: () => gb,
-      Fc: () => Bb.xb,
-      Gd: () => Fb,
-      H: () => cb,
-      Hc: () => Bb.Ab,
-      I: () => Bb.f,
-      Ib: () => xb,
-      Jc: () => Qb,
-      Jd: () => Vb,
-      Kc: () => Bb.Eb,
-      Ld: () => Lu,
-      M: () => Sb,
-      Mb: () => Bb.Q,
-      Mc: () => Bb.Gb,
-      Md: () => pu,
-      N: () => Bb.i,
-      Nd: () => Wb,
-      Oc: () => Bb.Kb,
-      Od: () => fb,
-      Pb: () => ib,
-      Pc: () => Bb.Mb,
-      Q: () => Rb,
-      Qb: () => Cb,
-      Rd: () => eb,
-      S: () => Bb.l,
-      Tc: () => Bb.Qb,
-      Td: () => Jb,
-      U: () => kb,
-      Ub: () => Uu,
-      Ud: () => tb,
-      V: () => Bb.r,
-      Vb: () => Kb,
-      Vd: () => Yb,
-      W: () => Bb.s,
-      Xc: () => Bb.Tb,
-      Xd: () => Nb,
-      Y: () => Bb.v,
-      Yc: () => Db,
-      Zb: () => Hu,
-      _: () => Hb,
-      _d: () => ou,
-      ab: () => lb,
-      bb: () => Bb.x,
-      bc: () => Ob.j,
-      c: () => uu,
-      ce: () => Zb,
-      d: () => pb,
-      dd: () => Bb.Wb,
-      eb: () => Bb.B,
-      ec: () => Ab,
-      ed: () => Bb.cc,
-      fb: () => Ib,
-      h: () => Xb,
-      hc: () => Bu,
-      hd: () => Gb,
-      jb: () => Gu,
-      k: () => Su,
-      kb: () => ab,
-      lc: () => Bb.ab,
-      ld: () => ob,
-      mb: () => Bb.C,
-      n: () => nb,
-      nc: () => Bb.eb,
-      o: () => rb,
-      oc: () => Bb.fb,
-      od: () => Yu,
-      q: () => Bb.b,
-      qb: () => Eb,
-      qc: () => Bb.hb,
-      qd: () => mb,
-      s: () => wu,
-      tb: () => Tb,
-      tc: () => Bb.ib,
-      td: () => Pb,
-      uc: () => Bb.sb,
-      vc: () => Xu,
-      vd: () => Mb,
-      w: () => zb,
-      wb: () => Bb.H,
-      wc: () => au,
-      xd: () => yb,
-      yb: () => bu,
-      zb: () => hu,
-      zc: () => Ou
+  4680: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      $b: () => xd,
+      A: () => Pd,
+      Ab: () => JJ,
+      B: () => Sd,
+      Bc: () => pd.ib,
+      Bd: () => pd.Tb,
+      C: () => LJ,
+      Cc: () => pd.jb,
+      Eb: () => pJ,
+      F: () => wd,
+      Fc: () => pd.sb,
+      Fd: () => pd.Yb,
+      G: () => pd.d,
+      Gd: () => Wd,
+      Hc: () => OJ,
+      Ib: () => pd.M,
+      Id: () => ed,
+      J: () => Cd,
+      Kc: () => oJ,
+      L: () => pd.h,
+      Lb: () => Nd.g,
+      Ld: () => CJ,
+      Md: () => Dd,
+      Nb: () => sd,
+      Nc: () => WJ,
+      O: () => dJ,
+      Pd: () => Ed,
+      Qc: () => pd.tb,
+      Rb: () => Ud,
+      S: () => pd.l,
+      Sd: () => yd,
+      U: () => zd,
+      Uc: () => pd.vb,
+      Vb: () => md,
+      Wc: () => pd.xb,
+      Wd: () => rd,
+      X: () => pd.q,
+      Xb: () => Fd,
+      Zb: () => pd.T,
+      _: () => pd.u,
+      _b: () => bd,
+      _c: () => Ad,
+      ab: () => pd.w,
+      b: () => kJ,
+      bd: () => pd.Db,
+      be: () => cd,
+      c: () => Od,
+      cc: () => ZJ,
+      db: () => od,
+      de: () => td,
+      ed: () => pd.Eb,
+      fe: () => ud,
+      g: () => Ld,
+      gb: () => Id,
+      gc: () => Gd,
+      ge: () => gJ,
+      h: () => KJ,
+      ib: () => pd.y,
+      ic: () => lJ,
+      id: () => pd.Gb,
+      ie: () => eJ,
+      j: () => ad,
+      jb: () => pd.B,
+      ke: () => vd,
+      lc: () => Nd.l,
+      ld: () => pd.Lb,
+      m: () => Bd,
+      nb: () => Td,
+      ne: () => Vd,
+      oe: () => fd,
+      pc: () => Rd,
+      pd: () => pd.Ob,
+      q: () => pd.b,
+      qe: () => Xd,
+      rb: () => PJ,
+      rc: () => NJ,
+      sd: () => pd.Qb,
+      tb: () => Kd,
+      td: () => Md,
+      te: () => jd,
+      u: () => QJ,
+      ub: () => pd.F,
+      uc: () => pd.bb,
+      vb: () => hd,
+      ve: () => gd,
+      w: () => Yd,
+      xb: () => Hd,
+      xc: () => pd.eb,
+      xd: () => pd.Sb,
+      xe: () => nd,
+      yb: () => pd.L,
+      ye: () => RJ,
+      zc: () => pd.gb,
+      ze: () => Qd
     });
-    var Bb = hb(4564),
-      Ob = hb(2273);
-    const Gb = Math.round(1e3 / Bb.cc),
-      Ub = 4,
-      Lb = 2;
+    var pd = kd(4688),
+      Nd = kd(2337);
+    const Wd = Math.round(1e3 / pd.Yb),
+      Pd = 4,
+      Zd = 2;
 
-    function Yb() {
-      return crypto.getRandomValues(new Uint32Array(Lb))
+    function gd() {
+      return crypto.getRandomValues(new Uint32Array(Zd))
     }
-    const Sb = {
+    const Cd = {
         Ok: 0,
         Errors: 1,
         Fatal: 2
       },
-      ab = 16,
-      Hb = {
+      Kd = 16,
+      od = {
         Draws: 1,
         NetAll: 2
       },
-      wb = {
+      ld = {
         ShowFog: 1,
         Lighting: 2,
         ChunkFade: 4
       };
 
-    function Zb(bb) {
-      return (bb.nametagsHidden ? db.NametagsHidden : 0) | (bb.crouchToggle ? db.CrouchToggle : 0) | (bb.bhopDisabled ? db.BhopDisabled : 0) | (bb.disableBobbing ? db.DisableBobbing : 0) | (bb.ezTowering ? db.EzTowering : 0) | (bb.ezBridging ? db.EzBridging : 0) | (bb.showChunkBorders ? db.ShowChunkBorders : 0)
+    function Qd(dd) {
+      return (dd.nametagsHidden ? qd.NametagsHidden : 0) | (dd.crouchToggle ? qd.CrouchToggle : 0) | (dd.bhopDisabled ? qd.BhopDisabled : 0) | (dd.disableBobbing ? qd.DisableBobbing : 0) | (dd.ezTowering ? qd.EzTowering : 0) | (dd.ezBridging ? qd.EzBridging : 0) | (dd.showChunkBorders ? qd.ShowChunkBorders : 0)
     }
-    const Xb = {
+    const Ld = {
         Flags: 0,
         PhysicsVersion: 1,
         InbuiltOverwritten: 2,
         AltComplete: 3,
         ProbeUsedProp: 4
       },
-      pb = {
+      Od = {
         Ready: 1,
         SendFnReplaced: 2,
         Butto: 4,
@@ -949,7 +949,7 @@ export const modules = {
         CheckFuncHit: 128,
         OriginStackHit: 256
       },
-      ob = {
+      ed = {
         None: 0,
         Untrusted: 2,
         FewProperties: 3,
@@ -958,7 +958,7 @@ export const modules = {
         En: 6,
         Fr: 7
       },
-      Ab = {
+      Rd = {
         StackCheck: 0,
         ConfirmMesh: 1,
         IndexPassReplaced: 2,
@@ -967,20 +967,20 @@ export const modules = {
         Held: 6,
         PlayerKilledSubs: 7
       },
-      lb = 5,
-      Kb = 4294967295;
+      Id = 5,
+      Gd = 4294967295;
 
-    function Wb(bb) {
-      return (bb.showFog ? wb.ShowFog : 0) | (bb.lighting ? wb.Lighting : 0) | (bb.chunkFade ? wb.ChunkFade : 0)
+    function vd(dd) {
+      return (dd.showFog ? ld.ShowFog : 0) | (dd.lighting ? ld.Lighting : 0) | (dd.chunkFade ? ld.ChunkFade : 0)
     }
-    const Cb = {
+    const xd = {
         ResetFirst: 1,
         AdStart: 2,
         PreventMovement: 4,
         AdEnd: 8,
         PayloadMaxBytes: 1 << 20
       },
-      db = {
+      qd = {
         NametagsHidden: 1,
         CrouchToggle: 2,
         BhopDisabled: 4,
@@ -990,50 +990,50 @@ export const modules = {
         ShowChunkBorders: 64,
         All: 127
       },
-      rb = {
+      Bd = {
         Release: 1,
         KeepTouches: 2
       },
-      jb = {
+      sd = {
         Point: 1,
         Stamped: 2
       },
-      nb = {
+      ad = {
         Add: 1,
         Clear: 2
       },
-      Db = 1,
-      xb = 8,
-      zb = 16777215,
-      gb = 4,
-      ib = {
+      Md = 1,
+      Fd = 8,
+      Yd = 16777215,
+      md = 4,
+      bd = {
         Resume: 1
       },
-      vb = {
+      Sd = {
         Held: 1
       };
 
-    function tb(bb, ub) {
-      return (bb | ub << 8) >>> 0
+    function jd(dd, Jd) {
+      return (dd | Jd << 8) >>> 0
     }
 
-    function Jb(bb) {
-      return 255 & bb
+    function Xd(dd) {
+      return 255 & dd
     }
 
-    function eb(bb) {
-      return bb >>> 8
+    function fd(dd) {
+      return dd >>> 8
     }
 
-    function Nb(bb) {
-      return bb + 3 & -4
+    function nd(dd) {
+      return dd + 3 & -4
     }
-    const sb = 16777216,
-      Mb = 20;
-    const mb = 8,
-      Ib = 8,
-      Pb = 16777216,
-      qb = {
+    const Ud = 16777216,
+      yd = 20;
+    const Dd = 8,
+      Td = 8,
+      Ed = 16777216,
+      cd = {
         JobResult: 1,
         WorkerStarted: 2,
         WorkerLost: 3,
@@ -1041,19 +1041,19 @@ export const modules = {
         WorldgenStarted: 5,
         WorldgenLost: 6
       },
-      Eb = {
+      hd = {
         Ok: 0,
         Refused: 1,
         Trapped: 2,
         NotHeld: 3,
         HeapRefused: 4
       },
-      yb = 16,
-      Vb = {
+      rd = 16,
+      ud = {
         Lost: 0,
         Gone: 1
       },
-      Fb = {
+      td = {
         Init: 1,
         Mesh: 2,
         WorldgenSeed: 3,
@@ -1061,18 +1061,18 @@ export const modules = {
         Retire: 5
       };
 
-    function fb(bb) {
-      return bb === Fb.WorldgenSeed || bb === Fb.Generate
+    function Vd(dd) {
+      return dd === td.WorldgenSeed || dd === td.Generate
     }
-    const kb = 4,
-      Tb = 99,
-      cb = {
+    const zd = 4,
+      Hd = 99,
+      wd = {
         PAIRS_MAX: 16,
         FIXED_WORDS: 2,
         PAIR_WORDS: 2,
         WORDS_MAX: 34
       },
-      Qb = {
+      Ad = {
         BYTES: 12,
         WEBGPU: 1,
         GL: 2,
@@ -1080,45 +1080,45 @@ export const modules = {
         LOST: 0,
         PIPELINE_FAILED: 1
       },
-      Rb = {
+      dJ = {
         FRAMES: 65535,
         RESTORE_UNHELD: 65536,
         LINKS_RUNNING: 1 << 17
       },
-      bu = 12,
-      uu = 16,
-      hu = 4,
-      Bu = 12,
-      Ou = {
+      JJ = 12,
+      kJ = 16,
+      pJ = 4,
+      NJ = 12,
+      WJ = {
         SessionBased: 1,
         ReplayOffer: 2
       },
-      Gu = 4,
-      Uu = 8,
-      Lu = 8,
-      Yu = {
+      PJ = 4,
+      ZJ = 8,
+      gJ = 8,
+      CJ = {
         HEAD_BYTES: 28,
         UPDATE: 1,
         REMOVE: 2
       },
-      Su = {
+      KJ = {
         Crit: 1,
         HitSelf: 2
       },
-      au = {
+      oJ = {
         BYTES: 16,
         STRING_TYPE_BYTES: 24,
         STRING_TYPE: 65535,
         ERROR: 65534
       },
-      Hu = {
+      lJ = {
         None: 0,
         Bytes: 1,
         Msgpack: 2,
         MsgpackBin: 3
       },
-      wu = 12,
-      Zu = {
+      QJ = 12,
+      LJ = {
         Activated: 1,
         Error: 2,
         Left: 3,
@@ -1127,56 +1127,56 @@ export const modules = {
         Resumed: 6,
         ResumeRefused: 7
       },
-      Xu = 67108864;
+      OJ = 67108864;
 
-    function pu(bb) {
-      for (const [ub, hb] of Object.entries(Bb.f))
-        if (hb === bb) return ub;
-      return `Unknown${bb}`
+    function eJ(dd) {
+      for (const [Jd, kd] of Object.entries(pd.d))
+        if (kd === dd) return Jd;
+      return `Unknown${dd}`
     }
 
-    function ou(bb) {
+    function RJ(dd) {
       return {
-        status: bb[Bb.B.Status],
-        lastError: bb[Bb.B.LastError],
-        lastErrorDetail: bb[Bb.B.LastErrorDetail],
-        errorCount: bb[Bb.B.ErrorCount],
-        frameIndex: bb[Bb.B.FrameIndex],
-        tickIndex: bb[Bb.B.TickIndex],
-        renderPending: bb[Bb.B.RenderPending],
-        firstView: bb[Bb.B.FirstView],
-        chunksCancelled: bb[Bb.B.ChunksCancelled]
+        status: dd[pd.B.Status],
+        lastError: dd[pd.B.LastError],
+        lastErrorDetail: dd[pd.B.LastErrorDetail],
+        errorCount: dd[pd.B.ErrorCount],
+        frameIndex: dd[pd.B.FrameIndex],
+        tickIndex: dd[pd.B.TickIndex],
+        renderPending: dd[pd.B.RenderPending],
+        firstView: dd[pd.B.FirstView],
+        chunksCancelled: dd[pd.B.ChunksCancelled]
       }
     }
   },
-  4547: (bb, ub, hb) => {
-    hb.d(ub, {
-      d: () => Ub,
-      h: () => Gb,
-      k: () => Ob
+  4673: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      b: () => Pd,
+      f: () => Wd,
+      h: () => Nd
     });
-    var Bb = hb(4555);
+    var pd = kd(4680);
 
-    function Ob(bb) {
-      return "none" !== bb
+    function Nd(dd) {
+      return "none" !== dd
     }
 
-    function Gb(bb, ub) {
-      if (!bb) return "none";
-      switch (ub) {
-        case Bb.Y.Drawn:
+    function Wd(dd, Jd) {
+      if (!dd) return "none";
+      switch (Jd) {
+        case pd.ab.Drawn:
           return "drawn";
-        case Bb.Y.Paced:
+        case pd.ab.Paced:
           return "paced";
         default:
           return "skipped"
       }
     }
 
-    function Ub(bb) {
-      return "drawn" === bb
+    function Pd(dd) {
+      return "drawn" === dd
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

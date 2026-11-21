@@ -1,757 +1,757 @@
 export const id = 132;
 export const ids = [132];
 export const modules = {
-  6350: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      loadPageShaderPackCompiler: () => wu
+  6478: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      loadPageShaderPackCompiler: () => QJ
     });
-    var Bb = {};
-    hb.r(Bb), hb.d(Bb, {
-      HOb: () => Ob,
-      k_: () => Gb,
-      default: () => yb,
-      wOb: () => Ub,
-      ZOb: () => Lb,
-      initSync: () => Eb,
-      ya: () => Yb,
-      Rhb: () => Sb,
-      XOb: () => ab,
-      pOb: () => Hb,
-      QJ: () => wb,
-      oOb: () => Zb,
-      VJ: () => Xb,
-      AOb: () => pb
+    var pd = {};
+    kd.r(pd), kd.d(pd, {
+      qNd: () => Nd,
+      Kdd: () => Wd,
+      default: () => rd,
+      BNd: () => Pd,
+      sNd: () => Zd,
+      initSync: () => hd,
+      rK: () => gd,
+      gpd: () => Cd,
+      iNd: () => Kd,
+      aNd: () => od,
+      VY: () => ld,
+      MNd: () => Qd,
+      rY: () => Ld,
+      FNd: () => Od
     });
-    class Ob {
-      static __wrap(bb) {
-        const ub = Object.create(Ob.prototype);
-        return ub.__wbg_ptr = bb, Ab.register(ub, ub.__wbg_ptr, ub), ub
+    class Nd {
+      static __wrap(dd) {
+        const Jd = Object.create(Nd.prototype);
+        return Jd.__wbg_ptr = dd, Rd.register(Jd, Jd.__wbg_ptr, Jd), Jd
       }
       __destroy_into_raw() {
-        const bb = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, Ab.unregister(this), bb
+        const dd = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Rd.unregister(this), dd
       }
       free() {
-        const bb = this.__destroy_into_raw();
-        Ib.r8eJ(bb, 0)
+        const dd = this.__destroy_into_raw();
+        Td.snuI(dd, 0)
       }
       get errorsJson() {
-        let bb, ub;
+        let dd, Jd;
         try {
-          const hb = Ib.Moqq(this.__wbg_ptr);
-          return bb = hb[0], ub = hb[1], rb(hb[0], hb[1])
+          const kd = Td.oIXF(this.__wbg_ptr);
+          return dd = kd[0], Jd = kd[1], Bd(kd[0], kd[1])
         } finally {
-          Ib.MFNl(bb, ub, 1)
+          Td.XYEi(dd, Jd, 1)
         }
       }
       get features() {
-        const bb = Ib.Et5J(this.__wbg_ptr);
-        var ub = Kb(bb[0], bb[1]);
-        return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
+        const dd = Td.WzWn(this.__wbg_ptr);
+        var Jd = Gd(dd[0], dd[1]);
+        return Td.XYEi(dd[0], 4 * dd[1], 4), Jd
       }
       get hooks() {
-        const bb = Ib.gxts(this.__wbg_ptr);
-        var ub = Wb(bb[0], bb[1]).slice();
-        return Ib.MFNl(bb[0], 1 * bb[1], 1), ub
+        const dd = Td.bQbC(this.__wbg_ptr);
+        var Jd = vd(dd[0], dd[1]).slice();
+        return Td.XYEi(dd[0], 1 * dd[1], 1), Jd
       }
-      mapValidationMessage(bb, ub, hb, Bb, Ob) {
-        let Gb, Ub;
+      mapValidationMessage(dd, Jd, kd, pd, Nd) {
+        let Wd, Pd;
         try {
-          const Sb = Ib.dP1A(this.__wbg_ptr, bb, ub, hb, lb(Bb), lb(Ob));
-          var Lb = Sb[0],
-            Yb = Sb[1];
-          if (Sb[3]) throw Lb = 0, Yb = 0, tb(Sb[2]);
-          return Gb = Lb, Ub = Yb, rb(Lb, Yb)
+          const Cd = Td.CQWC(this.__wbg_ptr, dd, Jd, kd, Id(pd), Id(Nd));
+          var Zd = Cd[0],
+            gd = Cd[1];
+          if (Cd[3]) throw Zd = 0, gd = 0, jd(Cd[2]);
+          return Wd = Zd, Pd = gd, Bd(Zd, gd)
         } finally {
-          Ib.MFNl(Gb, Ub, 1)
+          Td.XYEi(Wd, Pd, 1)
         }
       }
       get moduleCodes() {
-        const bb = Ib.DnFv(this.__wbg_ptr);
-        var ub = Kb(bb[0], bb[1]);
-        return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
+        const dd = Td.XL1C(this.__wbg_ptr);
+        var Jd = Gd(dd[0], dd[1]);
+        return Td.XYEi(dd[0], 4 * dd[1], 4), Jd
       }
       get offInStrictJson() {
-        let bb, ub;
+        let dd, Jd;
         try {
-          const hb = Ib.Hgwj(this.__wbg_ptr);
-          return bb = hb[0], ub = hb[1], rb(hb[0], hb[1])
+          const kd = Td.csAQ(this.__wbg_ptr);
+          return dd = kd[0], Jd = kd[1], Bd(kd[0], kd[1])
         } finally {
-          Ib.MFNl(bb, ub, 1)
+          Td.XYEi(dd, Jd, 1)
         }
       }
       get reads() {
-        const bb = Ib.i4Ah(this.__wbg_ptr);
-        var ub = Kb(bb[0], bb[1]);
-        return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
+        const dd = Td.ZiFS(this.__wbg_ptr);
+        var Jd = Gd(dd[0], dd[1]);
+        return Td.XYEi(dd[0], 4 * dd[1], 4), Jd
       }
       get validationModuleCodes() {
-        const bb = Ib.tgAn(this.__wbg_ptr);
-        var ub = Kb(bb[0], bb[1]);
-        return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
+        const dd = Td.A7cz(this.__wbg_ptr);
+        var Jd = Gd(dd[0], dd[1]);
+        return Td.XYEi(dd[0], 4 * dd[1], 4), Jd
       }
       get validationModuleKeys() {
-        const bb = Ib.cHQw(this.__wbg_ptr);
-        var ub = Wb(bb[0], bb[1]).slice();
-        return Ib.MFNl(bb[0], 1 * bb[1], 1), ub
+        const dd = Td.c5hW(this.__wbg_ptr);
+        var Jd = vd(dd[0], dd[1]).slice();
+        return Td.XYEi(dd[0], 1 * dd[1], 1), Jd
       }
       get variantFlags() {
-        const bb = Ib.Wlli(this.__wbg_ptr);
-        var ub = Wb(bb[0], bb[1]).slice();
-        return Ib.MFNl(bb[0], 1 * bb[1], 1), ub
+        const dd = Td.WDPR(this.__wbg_ptr);
+        var Jd = vd(dd[0], dd[1]).slice();
+        return Td.XYEi(dd[0], 1 * dd[1], 1), Jd
       }
     }
 
-    function Gb(bb, ub, hb, Bb, Gb, Ub, Lb) {
-      const Yb = vb(bb, Ib.Tzo2),
-        Sb = Pb,
-        ab = vb(ub, Ib.Tzo2),
-        Hb = Pb,
-        wb = vb(hb, Ib.Tzo2),
-        Zb = Pb,
-        Xb = ib(Bb, Ib.Tzo2),
-        pb = Pb,
-        ob = vb(Gb, Ib.Tzo2),
-        Ab = Pb,
-        lb = vb(Ub, Ib.Tzo2),
-        Kb = Pb,
-        Wb = vb(Lb, Ib.Tzo2),
-        Cb = Pb,
-        db = Ib.Jxov(Yb, Sb, ab, Hb, wb, Zb, Xb, pb, ob, Ab, lb, Kb, Wb, Cb);
-      if (db[2]) throw tb(db[1]);
-      return Ob.__wrap(db[0])
+    function Wd(dd, Jd, kd, pd, Wd, Pd, Zd) {
+      const gd = Sd(dd, Td.RfVY),
+        Cd = Ed,
+        Kd = Sd(Jd, Td.RfVY),
+        od = Ed,
+        ld = Sd(kd, Td.RfVY),
+        Qd = Ed,
+        Ld = bd(pd, Td.RfVY),
+        Od = Ed,
+        ed = Sd(Wd, Td.RfVY),
+        Rd = Ed,
+        Id = Sd(Pd, Td.RfVY),
+        Gd = Ed,
+        vd = Sd(Zd, Td.RfVY),
+        xd = Ed,
+        qd = Td.CPVb(gd, Cd, Kd, od, ld, Qd, Ld, Od, ed, Rd, Id, Gd, vd, xd);
+      if (qd[2]) throw jd(qd[1]);
+      return Nd.__wrap(qd[0])
     }
 
-    function Ub() {
-      const bb = Ib.Oj3k();
-      var ub = Kb(bb[0], bb[1]);
-      return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
+    function Pd() {
+      const dd = Td.vgdh();
+      var Jd = Gd(dd[0], dd[1]);
+      return Td.XYEi(dd[0], 4 * dd[1], 4), Jd
     }
 
-    function Lb() {
-      const bb = Ib.ggfP();
-      var ub = Kb(bb[0], bb[1]);
-      return Ib.MFNl(bb[0], 4 * bb[1], 4), ub
+    function Zd() {
+      const dd = Td.i3Y1();
+      var Jd = Gd(dd[0], dd[1]);
+      return Td.XYEi(dd[0], 4 * dd[1], 4), Jd
     }
 
-    function Yb() {
-      Ib.my6Y()
+    function gd() {
+      Td.Cizp()
     }
 
-    function Sb(bb, ub, hb, Bb, Ob) {
-      let Gb, Ub;
+    function Cd(dd, Jd, kd, pd, Nd) {
+      let Wd, Pd;
       try {
-        const Sb = vb(bb, Ib.Tzo2),
-          ab = Pb,
-          Hb = ib(ub, Ib.Tzo2),
-          wb = Pb,
-          Zb = vb(hb, Ib.Tzo2),
-          Xb = Pb,
-          pb = ib(Bb, Ib.Tzo2),
-          ob = Pb,
-          Ab = function(bb, ub) {
-            const hb = ub(1 * bb.length, 1) >>> 0;
-            return Db().set(bb, hb / 1), Pb = bb.length, hb
-          }(Ob, Ib.Tzo2),
-          lb = Pb,
-          Kb = Ib.nCv3(Sb, ab, Hb, wb, Zb, Xb, pb, ob, Ab, lb);
-        var Lb = Kb[0],
-          Yb = Kb[1];
-        if (Kb[3]) throw Lb = 0, Yb = 0, tb(Kb[2]);
-        return Gb = Lb, Ub = Yb, rb(Lb, Yb)
+        const Cd = Sd(dd, Td.RfVY),
+          Kd = Ed,
+          od = bd(Jd, Td.RfVY),
+          ld = Ed,
+          Qd = Sd(kd, Td.RfVY),
+          Ld = Ed,
+          Od = bd(pd, Td.RfVY),
+          ed = Ed,
+          Rd = function(dd, Jd) {
+            const kd = Jd(1 * dd.length, 1) >>> 0;
+            return Md().set(dd, kd / 1), Ed = dd.length, kd
+          }(Nd, Td.RfVY),
+          Id = Ed,
+          Gd = Td.MKpM(Cd, Kd, od, ld, Qd, Ld, Od, ed, Rd, Id);
+        var Zd = Gd[0],
+          gd = Gd[1];
+        if (Gd[3]) throw Zd = 0, gd = 0, jd(Gd[2]);
+        return Wd = Zd, Pd = gd, Bd(Zd, gd)
       } finally {
-        Ib.MFNl(Gb, Ub, 1)
+        Td.XYEi(Wd, Pd, 1)
       }
     }
 
-    function ab() {
-      let bb, ub;
+    function Kd() {
+      let dd, Jd;
       try {
-        const hb = Ib.qF0Z();
-        return bb = hb[0], ub = hb[1], rb(hb[0], hb[1])
+        const kd = Td.MucQ();
+        return dd = kd[0], Jd = kd[1], Bd(kd[0], kd[1])
       } finally {
-        Ib.MFNl(bb, ub, 1)
+        Td.XYEi(dd, Jd, 1)
       }
     }
 
-    function Hb(bb) {
-      let ub, hb;
+    function od(dd) {
+      let Jd, kd;
       try {
-        const Gb = Ib.fxtu(bb);
-        var Bb = Gb[0],
-          Ob = Gb[1];
-        if (Gb[3]) throw Bb = 0, Ob = 0, tb(Gb[2]);
-        return ub = Bb, hb = Ob, rb(Bb, Ob)
+        const Wd = Td.CLti(dd);
+        var pd = Wd[0],
+          Nd = Wd[1];
+        if (Wd[3]) throw pd = 0, Nd = 0, jd(Wd[2]);
+        return Jd = pd, kd = Nd, Bd(pd, Nd)
       } finally {
-        Ib.MFNl(ub, hb, 1)
+        Td.XYEi(Jd, kd, 1)
       }
     }
 
-    function wb() {
-      return Ib.zhoQ() >>> 0
+    function ld() {
+      return Td.HsvM() >>> 0
     }
 
-    function Zb() {
-      let bb, ub;
+    function Qd() {
+      let dd, Jd;
       try {
-        const hb = Ib.P6xR();
-        return bb = hb[0], ub = hb[1], rb(hb[0], hb[1])
+        const kd = Td.fffH();
+        return dd = kd[0], Jd = kd[1], Bd(kd[0], kd[1])
       } finally {
-        Ib.MFNl(bb, ub, 1)
+        Td.XYEi(dd, Jd, 1)
       }
     }
 
-    function Xb(bb, ub) {
-      let hb, Bb;
+    function Ld(dd, Jd) {
+      let kd, pd;
       try {
-        const Ub = vb(bb, Ib.Tzo2),
-          Lb = Pb,
-          Yb = ib(ub, Ib.Tzo2),
-          Sb = Pb,
-          ab = Ib.WFEJ(Ub, Lb, Yb, Sb);
-        var Ob = ab[0],
-          Gb = ab[1];
-        if (ab[3]) throw Ob = 0, Gb = 0, tb(ab[2]);
-        return hb = Ob, Bb = Gb, rb(Ob, Gb)
+        const Pd = Sd(dd, Td.RfVY),
+          Zd = Ed,
+          gd = bd(Jd, Td.RfVY),
+          Cd = Ed,
+          Kd = Td.cw1q(Pd, Zd, gd, Cd);
+        var Nd = Kd[0],
+          Wd = Kd[1];
+        if (Kd[3]) throw Nd = 0, Wd = 0, jd(Kd[2]);
+        return kd = Nd, pd = Wd, Bd(Nd, Wd)
       } finally {
-        Ib.MFNl(hb, Bb, 1)
+        Td.XYEi(kd, pd, 1)
       }
     }
 
-    function pb(bb) {
-      let ub, hb;
+    function Od(dd) {
+      let Jd, kd;
       try {
-        const Gb = Ib.lwOy(lb(bb));
-        var Bb = Gb[0],
-          Ob = Gb[1];
-        if (Gb[3]) throw Bb = 0, Ob = 0, tb(Gb[2]);
-        return ub = Bb, hb = Ob, rb(Bb, Ob)
+        const Wd = Td.ltEp(Id(dd));
+        var pd = Wd[0],
+          Nd = Wd[1];
+        if (Wd[3]) throw pd = 0, Nd = 0, jd(Wd[2]);
+        return Jd = pd, kd = Nd, Bd(pd, Nd)
       } finally {
-        Ib.MFNl(ub, hb, 1)
+        Td.XYEi(Jd, kd, 1)
       }
     }
 
-    function ob() {
+    function ed() {
       return {
         __proto__: null,
-        Dhd5: {
+        jPTc: {
           __proto__: null,
-          Ru0G: function(bb, ub) {
-            return lb(Error(rb(bb, ub)))
+          Yzfk: function(dd, Jd) {
+            return Id(Error(Bd(dd, Jd)))
           },
-          Qjq2: function(bb) {
-            return null === xb(bb)
+          t26Z: function(dd) {
+            return null === Fd(dd)
           },
-          jQQR: function(bb) {
-            return "string" === typeof xb(bb)
+          tbHC: function(dd) {
+            return "string" === typeof Fd(dd)
           },
-          iuoe: function(bb, ub) {
-            const hb = xb(ub),
-              Bb = "string" === typeof hb ? hb : void 0;
-            var Ob, Gb = void 0 === (Ob = Bb) || null === Ob ? 0 : function(bb, ub, hb) {
-                if (void 0 === hb) {
-                  const hb = sb.encode(bb),
-                    Bb = ub(hb.length, 1) >>> 0;
-                  return Db().subarray(Bb, Bb + hb.length).set(hb), Pb = hb.length, Bb
+          Ddc0: function(dd, Jd) {
+            const kd = Fd(Jd),
+              pd = "string" === typeof kd ? kd : void 0;
+            var Nd, Wd = void 0 === (Nd = pd) || null === Nd ? 0 : function(dd, Jd, kd) {
+                if (void 0 === kd) {
+                  const kd = Ud.encode(dd),
+                    pd = Jd(kd.length, 1) >>> 0;
+                  return Md().subarray(pd, pd + kd.length).set(kd), Ed = kd.length, pd
                 }
-                let Bb = bb.length,
-                  Ob = ub(Bb, 1) >>> 0;
-                const Gb = Db();
-                let Ub = 0;
-                for (; Ub < Bb; Ub++) {
-                  const ub = bb.charCodeAt(Ub);
-                  if (ub > 127) break;
-                  Gb[Ob + Ub] = ub
+                let pd = dd.length,
+                  Nd = Jd(pd, 1) >>> 0;
+                const Wd = Md();
+                let Pd = 0;
+                for (; Pd < pd; Pd++) {
+                  const Jd = dd.charCodeAt(Pd);
+                  if (Jd > 127) break;
+                  Wd[Nd + Pd] = Jd
                 }
-                if (Ub !== Bb) {
-                  0 !== Ub && (bb = bb.slice(Ub)), Ob = hb(Ob, Bb, Bb = Ub + 3 * bb.length, 1) >>> 0;
-                  const ub = Db().subarray(Ob + Ub, Ob + Bb);
-                  Ub += sb.encodeInto(bb, ub).written, Ob = hb(Ob, Bb, Ub, 1) >>> 0
+                if (Pd !== pd) {
+                  0 !== Pd && (dd = dd.slice(Pd)), Nd = kd(Nd, pd, pd = Pd + 3 * dd.length, 1) >>> 0;
+                  const Jd = Md().subarray(Nd + Pd, Nd + pd);
+                  Pd += Ud.encodeInto(dd, Jd).written, Nd = kd(Nd, pd, Pd, 1) >>> 0
                 }
-                return Pb = Ub, Ob
-              }(Bb, Ib.Tzo2, Ib.rwCv),
-              Ub = Pb;
-            db().setInt32(bb + 4, Ub, !0), db().setInt32(bb + 0, Gb, !0)
+                return Ed = Pd, Nd
+              }(pd, Td.RfVY, Td.uK0m),
+              Pd = Ed;
+            qd().setInt32(dd + 4, Pd, !0), qd().setInt32(dd + 0, Wd, !0)
           },
-          HETD: function(bb, ub) {
-            throw new Error(rb(bb, ub))
+          Gzpc: function(dd, Jd) {
+            throw new Error(Bd(dd, Jd))
           },
-          IR8G: function(bb, ub) {
-            return xb(bb).charCodeAt(ub >>> 0)
+          rupQ: function(dd, Jd) {
+            return Fd(dd).charCodeAt(Jd >>> 0)
           },
-          zX6N: function(bb, ub) {
-            console.error(rb(bb, ub))
+          dV8w: function(dd, Jd) {
+            console.error(Bd(dd, Jd))
           },
-          mwaK: function(bb) {
-            return xb(bb).length
+          q8Wq: function(dd) {
+            return Fd(dd).length
           },
-          gO8m: function(bb, ub) {
-            return lb(rb(bb, ub))
+          DEj9: function(dd, Jd) {
+            return Id(Bd(dd, Jd))
           },
-          oVe8: function(bb) {
-            tb(bb)
+          wuXq: function(dd) {
+            jd(dd)
           }
         }
       }
     }
-    Symbol.dispose && (Ob.prototype[Symbol.dispose] = Ob.prototype.free);
-    const Ab = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (Nd.prototype[Symbol.dispose] = Nd.prototype.free);
+    const Rd = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((bb => Ib.r8eJ(bb, 1)));
+    } : new FinalizationRegistry((dd => Td.snuI(dd, 1)));
 
-    function lb(bb) {
-      gb === zb.length && zb.push(zb.length + 1);
-      const ub = gb;
-      return gb = zb[ub], zb[ub] = bb, ub
+    function Id(dd) {
+      md === Yd.length && Yd.push(Yd.length + 1);
+      const Jd = md;
+      return md = Yd[Jd], Yd[Jd] = dd, Jd
     }
 
-    function Kb(bb, ub) {
-      bb >>>= 0;
-      const hb = db(),
-        Bb = [];
-      for (let Ob = bb; Ob < bb + 4 * ub; Ob += 4) Bb.push(tb(hb.getUint32(Ob, !0)));
-      return Bb
+    function Gd(dd, Jd) {
+      dd >>>= 0;
+      const kd = qd(),
+        pd = [];
+      for (let Nd = dd; Nd < dd + 4 * Jd; Nd += 4) pd.push(jd(kd.getUint32(Nd, !0)));
+      return pd
     }
 
-    function Wb(bb, ub) {
-      return bb >>>= 0, Db().subarray(bb / 1, bb / 1 + ub)
+    function vd(dd, Jd) {
+      return dd >>>= 0, Md().subarray(dd / 1, dd / 1 + Jd)
     }
-    let Cb = null;
+    let xd = null;
 
-    function db() {
-      return (null === Cb || !0 === Cb.buffer.detached || void 0 === Cb.buffer.detached && Cb.buffer !== Ib.memory.buffer) && (Cb = new DataView(Ib.memory.buffer)), Cb
+    function qd() {
+      return (null === xd || !0 === xd.buffer.detached || void 0 === xd.buffer.detached && xd.buffer !== Td.memory.buffer) && (xd = new DataView(Td.memory.buffer)), xd
     }
 
-    function rb(bb, ub) {
-      return function(bb, ub) {
-        Nb += ub, Nb >= eb && (Jb = new TextDecoder("utf-8", {
+    function Bd(dd, Jd) {
+      return function(dd, Jd) {
+        nd += Jd, nd >= fd && (Xd = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), Jb.decode(), Nb = ub);
-        return Jb.decode(Db().subarray(bb, bb + ub))
-      }(bb >>> 0, ub)
+        }), Xd.decode(), nd = Jd);
+        return Xd.decode(Md().subarray(dd, dd + Jd))
+      }(dd >>> 0, Jd)
     }
-    let jb = null;
-    let nb = null;
+    let sd = null;
+    let ad = null;
 
-    function Db() {
-      return null !== nb && 0 !== nb.byteLength || (nb = new Uint8Array(Ib.memory.buffer)), nb
-    }
-
-    function xb(bb) {
-      return zb[bb]
-    }
-    let zb = new Array(1024).fill(void 0);
-    zb.push(void 0, null, !0, !1);
-    let gb = zb.length;
-
-    function ib(bb, ub) {
-      const hb = ub(4 * bb.length, 4) >>> 0;
-      return (null !== jb && 0 !== jb.byteLength || (jb = new Uint32Array(Ib.memory.buffer)), jb).set(bb, hb / 4), Pb = bb.length, hb
+    function Md() {
+      return null !== ad && 0 !== ad.byteLength || (ad = new Uint8Array(Td.memory.buffer)), ad
     }
 
-    function vb(bb, ub) {
-      const hb = ub(4 * bb.length, 4) >>> 0,
-        Bb = db();
-      for (let Ob = 0; Ob < bb.length; Ob++) Bb.setUint32(hb + 4 * Ob, lb(bb[Ob]), !0);
-      return Pb = bb.length, hb
+    function Fd(dd) {
+      return Yd[dd]
+    }
+    let Yd = new Array(1024).fill(void 0);
+    Yd.push(void 0, null, !0, !1);
+    let md = Yd.length;
+
+    function bd(dd, Jd) {
+      const kd = Jd(4 * dd.length, 4) >>> 0;
+      return (null !== sd && 0 !== sd.byteLength || (sd = new Uint32Array(Td.memory.buffer)), sd).set(dd, kd / 4), Ed = dd.length, kd
     }
 
-    function tb(bb) {
-      const ub = xb(bb);
-      return function(bb) {
-        bb < 1028 || (zb[bb] = gb, gb = bb)
-      }(bb), ub
+    function Sd(dd, Jd) {
+      const kd = Jd(4 * dd.length, 4) >>> 0,
+        pd = qd();
+      for (let Nd = 0; Nd < dd.length; Nd++) pd.setUint32(kd + 4 * Nd, Id(dd[Nd]), !0);
+      return Ed = dd.length, kd
     }
-    let Jb = new TextDecoder("utf-8", {
+
+    function jd(dd) {
+      const Jd = Fd(dd);
+      return function(dd) {
+        dd < 1028 || (Yd[dd] = md, md = dd)
+      }(dd), Jd
+    }
+    let Xd = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    Jb.decode();
-    const eb = 2146435072;
-    let Nb = 0;
-    const sb = new TextEncoder;
-    "encodeInto" in sb || (sb.encodeInto = function(bb, ub) {
-      const hb = sb.encode(bb);
-      return ub.set(hb), {
-        read: bb.length,
-        written: hb.length
+    Xd.decode();
+    const fd = 2146435072;
+    let nd = 0;
+    const Ud = new TextEncoder;
+    "encodeInto" in Ud || (Ud.encodeInto = function(dd, Jd) {
+      const kd = Ud.encode(dd);
+      return Jd.set(kd), {
+        read: dd.length,
+        written: kd.length
       }
     });
-    let Mb, mb, Ib, Pb = 0;
+    let yd, Dd, Td, Ed = 0;
 
-    function qb(bb, ub) {
-      return mb = bb, Ib = bb.exports, Mb = ub, Cb = null, jb = null, nb = null, Ib.ZcZg(), Ib
+    function cd(dd, Jd) {
+      return Dd = dd, Td = dd.exports, yd = Jd, xd = null, sd = null, ad = null, Td.aDdS(), Td
     }
 
-    function Eb(bb) {
-      if (void 0 !== Ib) return Ib;
-      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
-        module: bb
-      } = bb) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const ub = ob();
-      bb instanceof WebAssembly.Module || (bb = new WebAssembly.Module(bb));
-      return qb(new WebAssembly.Instance(bb, ub), bb)
+    function hd(dd) {
+      if (void 0 !== Td) return Td;
+      void 0 !== dd && (Object.getPrototypeOf(dd) === Object.prototype ? ({
+        module: dd
+      } = dd) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Jd = ed();
+      dd instanceof WebAssembly.Module || (dd = new WebAssembly.Module(dd));
+      return cd(new WebAssembly.Instance(dd, Jd), dd)
     }
-    async function yb(bb) {
-      if (void 0 !== Ib) return Ib;
-      void 0 !== bb && (Object.getPrototypeOf(bb) === Object.prototype ? ({
-        module_or_path: bb
-      } = bb) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const ub = ob();
-      ("string" === typeof bb || "function" === typeof Request && bb instanceof Request || "function" === typeof URL && bb instanceof URL) && (bb = fetch(bb));
+    async function rd(dd) {
+      if (void 0 !== Td) return Td;
+      void 0 !== dd && (Object.getPrototypeOf(dd) === Object.prototype ? ({
+        module_or_path: dd
+      } = dd) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Jd = ed();
+      ("string" === typeof dd || "function" === typeof Request && dd instanceof Request || "function" === typeof URL && dd instanceof URL) && (dd = fetch(dd));
       const {
-        instance: hb,
-        module: Bb
-      } = await async function(bb, ub) {
-        if ("function" === typeof Response && bb instanceof Response) {
-          if (!bb.ok) throw new Error(`failed to fetch Wasm: ${bb.status} ${bb.statusText} fetching '${bb.url}'`);
+        instance: kd,
+        module: pd
+      } = await async function(dd, Jd) {
+        if ("function" === typeof Response && dd instanceof Response) {
+          if (!dd.ok) throw new Error(`failed to fetch Wasm: ${dd.status} ${dd.statusText} fetching '${dd.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(bb, ub)
-          } catch (hb) {
-            if (! function(bb) {
-                switch (bb) {
+            return await WebAssembly.instantiateStreaming(dd, Jd)
+          } catch (kd) {
+            if (! function(dd) {
+                switch (dd) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(bb.type) || "application/wasm" === bb.headers.get("Content-Type")) throw hb;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", hb)
+              }(dd.type) || "application/wasm" === dd.headers.get("Content-Type")) throw kd;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", kd)
           }
-          const Bb = await bb.arrayBuffer();
-          return await WebAssembly.instantiate(Bb, ub)
+          const pd = await dd.arrayBuffer();
+          return await WebAssembly.instantiate(pd, Jd)
         } {
-          const hb = await WebAssembly.instantiate(bb, ub);
-          return hb instanceof WebAssembly.Instance ? {
-            instance: hb,
-            module: bb
-          } : hb
+          const kd = await WebAssembly.instantiate(dd, Jd);
+          return kd instanceof WebAssembly.Instance ? {
+            instance: kd,
+            module: dd
+          } : kd
         }
-      }(await bb, ub);
-      return qb(hb, Bb)
+      }(await dd, Jd);
+      return cd(kd, pd)
     }
-    var Vb = hb(2688),
-      Fb = hb(6358);
-    class fb extends Error {
+    var ud = kd(2770),
+      td = kd(6483);
+    class Vd extends Error {
       stage;
-      constructor(bb, ub) {
-        super((0, Vb.A)(bb, ub), {
-          cause: ub
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = bb
+      constructor(dd, Jd) {
+        super((0, ud.A)(dd, Jd), {
+          cause: Jd
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = dd
       }
     }
-    let kb = null,
-      Tb = null;
+    let zd = null,
+      Hd = null;
 
-    function cb() {
-      return kb ? Promise.resolve(kb) : (Tb || (Tb = async function() {
-        let bb;
+    function wd() {
+      return zd ? Promise.resolve(zd) : (Hd || (Hd = async function() {
+        let dd;
         try {
-          bb = await (0, Vb.C)(new hb.U(hb(6363)), (0, Fb.d)("bloxd_wasm_shader_pack"))
-        } catch (ub) {
-          throw new fb((0, Vb.K)(ub), ub)
+          dd = await (0, ud.B)(new kd.U(kd(6487)), (0, td.e)("bloxd_wasm_shader_pack"))
+        } catch (Jd) {
+          throw new Vd((0, ud.G)(Jd), Jd)
         }
         try {
-          await yb({
-            module_or_path: bb
+          await rd({
+            module_or_path: dd
           })
-        } catch (ub) {
-          throw new fb("instantiate", ub)
+        } catch (Jd) {
+          throw new Vd("instantiate", Jd)
         }
-        return kb = Bb, kb
-      }(), Tb.then(void 0, (() => {
-        Tb = null
-      }))), Tb)
+        return zd = pd, zd
+      }(), Hd.then(void 0, (() => {
+        Hd = null
+      }))), Hd)
     }
-    var Qb = hb(6367);
+    var Ad = kd(6505);
 
-    function Rb(bb) {
-      let [ub, hb, Bb, Ob] = bb;
-      const Gb = {
-        file: ub,
-        line: hb,
-        message: Bb
+    function dJ(dd) {
+      let [Jd, kd, pd, Nd] = dd;
+      const Wd = {
+        file: Jd,
+        line: kd,
+        message: pd
       };
-      return Ob && (Gb.variants = Ob.map(Qb.m)), Gb
+      return Nd && (Wd.variants = Nd.map(Ad.l)), Wd
     }
 
-    function bu(bb) {
-      return JSON.parse(bb).map(Rb)
+    function JJ(dd) {
+      return JSON.parse(dd).map(dJ)
     }
 
-    function uu(bb, ub) {
-      if (!Number.isInteger(bb) || bb < 0 || bb > 4294967295) throw new Error(`${ub} ${bb} is not a whole number from 0 to 4294967295`);
-      return bb
+    function kJ(dd, Jd) {
+      if (!Number.isInteger(dd) || dd < 0 || dd > 4294967295) throw new Error(`${Jd} ${dd} is not a whole number from 0 to 4294967295`);
+      return dd
     }
 
-    function hu(bb) {
-      return [bb.named.map((bb => bb.name)), Uint32Array.from(bb.named, (bb => uu(bb.id, "Texture ID")))]
+    function pJ(dd) {
+      return [dd.named.map((dd => dd.name)), Uint32Array.from(dd.named, (dd => kJ(dd.id, "Texture ID")))]
     }
-    const Bu = new WeakMap;
-    const Ou = new WeakMap,
-      Gu = new WeakSet;
+    const NJ = new WeakMap;
+    const WJ = new WeakMap,
+      PJ = new WeakSet;
 
-    function Uu(bb, ub) {
-      if (Gu.has(bb)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function ZJ(dd, Jd) {
+      if (PJ.has(dd)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return ub()
-      } catch (hb) {
-        throw hb instanceof WebAssembly.RuntimeError && Gu.add(bb), hb
+        return Jd()
+      } catch (kd) {
+        throw kd instanceof WebAssembly.RuntimeError && PJ.add(dd), kd
       }
     }
 
-    function Lu(bb) {
-      let ub = Ou.get(bb);
-      if (!ub) {
-        let hb, Bb;
-        ub = {
-          k_: (ub, hb) => Uu(bb, (() => function(bb, ub, hb) {
-            const Bb = bb.k_(ub.map((bb => bb.path)), ub.map((bb => bb.source)), ...hu(hb), hb.aliases.map((bb => bb.name)), hb.aliases.map((bb => bb.texture)), hb.aliases.map((bb => bb.kind)));
-            let Ob = !1;
+    function gJ(dd) {
+      let Jd = WJ.get(dd);
+      if (!Jd) {
+        let kd, pd;
+        Jd = {
+          Kdd: (Jd, kd) => ZJ(dd, (() => function(dd, Jd, kd) {
+            const pd = dd.Kdd(Jd.map((dd => dd.path)), Jd.map((dd => dd.source)), ...pJ(kd), kd.aliases.map((dd => dd.name)), kd.aliases.map((dd => dd.texture)), kd.aliases.map((dd => dd.kind)));
+            let Nd = !1;
             try {
-              const bb = Bb.validationModuleCodes,
-                ub = Array.from(Bb.validationModuleKeys, ((ub, hb) => ({
-                  key: (0, Qb.m)(ub),
-                  code: bb[hb]
+              const dd = pd.validationModuleCodes,
+                Jd = Array.from(pd.validationModuleKeys, ((Jd, kd) => ({
+                  key: (0, Ad.l)(Jd),
+                  code: dd[kd]
                 }))),
-                hb = {
-                  errors: bu(Bb.errorsJson),
-                  offInStrict: bu(Bb.offInStrictJson),
-                  variants: (0, Qb.h)(Bb),
-                  validationModules: ub,
-                  features: Bb.features
+                kd = {
+                  errors: JJ(pd.errorsJson),
+                  offInStrict: JJ(pd.offInStrictJson),
+                  variants: (0, Ad.f)(pd),
+                  validationModules: Jd,
+                  features: pd.features
                 };
-              return ub.forEach(((bb, ub) => {
-                Bu.set(bb, {
-                  pack: Bb,
-                  index: ub
+              return Jd.forEach(((dd, Jd) => {
+                NJ.set(dd, {
+                  pack: pd,
+                  index: Jd
                 })
-              })), Ob = ub.length > 0, hb
+              })), Nd = Jd.length > 0, kd
             } finally {
-              Ob || Bb.free()
+              Nd || pd.free()
             }
-          }(bb, ub, hb))),
-          mapValidationMessage: (ub, hb) => {
-            const Bb = Bu.get(ub);
-            if (!Bb) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return Rb(JSON.parse(Uu(bb, (() => Bb.pack.mapValidationMessage(Bb.index, hb.lineNum, hb.linePos, hb.message, hb.type)))))
+          }(dd, Jd, kd))),
+          mapValidationMessage: (Jd, kd) => {
+            const pd = NJ.get(Jd);
+            if (!pd) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return dJ(JSON.parse(ZJ(dd, (() => pd.pack.mapValidationMessage(pd.index, kd.lineNum, kd.linePos, kd.message, kd.type)))))
           },
-          Rhb: ub => Uu(bb, (() => function(bb, ub) {
-            const hb = new Int32Array(ub.length),
-              Bb = [];
-            return ub.forEach(((bb, ub) => {
-              hb[ub] = bb.variants ? bb.variants.length : -1;
-              for (const hb of bb.variants ?? []) Bb.push((0, Qb.l)(hb))
-            })), bu(bb.Rhb(ub.map((bb => bb.file)), Uint32Array.from(ub, (bb => uu(bb.line, "Diagnostic line"))), ub.map((bb => bb.message)), hb, Uint8Array.from(Bb)))
-          }(bb, ub))),
-          VJ: ub => Uu(bb, (() => bb.VJ(...hu(ub)))),
+          gpd: Jd => ZJ(dd, (() => function(dd, Jd) {
+            const kd = new Int32Array(Jd.length),
+              pd = [];
+            return Jd.forEach(((dd, Jd) => {
+              kd[Jd] = dd.variants ? dd.variants.length : -1;
+              for (const kd of dd.variants ?? []) pd.push((0, Ad.h)(kd))
+            })), JJ(dd.gpd(Jd.map((dd => dd.file)), Uint32Array.from(Jd, (dd => kJ(dd.line, "Diagnostic line"))), Jd.map((dd => dd.message)), kd, Uint8Array.from(pd)))
+          }(dd, Jd))),
+          rY: Jd => ZJ(dd, (() => dd.rY(...pJ(Jd)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return hb ??= Uu(bb, (() => bb.oOb())), hb
+            return kd ??= ZJ(dd, (() => dd.MNd())), kd
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return Bb ??= Uu(bb, (() => {
-              const ub = bb.ZOb();
-              return bb.wOb().map(((bb, hb) => ({
-                path: bb,
-                source: ub[hb]
+            return pd ??= ZJ(dd, (() => {
+              const Jd = dd.sNd();
+              return dd.BNd().map(((dd, kd) => ({
+                path: dd,
+                source: Jd[kd]
               })))
-            })), Bb
+            })), pd
           },
-          AOb: ub => Uu(bb, (() => bb.AOb(ub))),
-          resolveHeader: ub => Uu(bb, (() => bb.pOb((0, Qb.l)(ub)))),
-          XOb: () => Uu(bb, (() => bb.XOb()))
-        }, Ou.set(bb, ub)
+          FNd: Jd => ZJ(dd, (() => dd.FNd(Jd))),
+          resolveHeader: Jd => ZJ(dd, (() => dd.aNd((0, Ad.h)(Jd)))),
+          iNd: () => ZJ(dd, (() => dd.iNd()))
+        }, WJ.set(dd, Jd)
       }
-      return ub
+      return Jd
     }
-    var Yu = hb(3020),
-      Su = hb(6365);
-    const au = "bloxdShaderPackWasmFailureReported";
-    let Hu = null;
+    var CJ = kd(3079),
+      KJ = kd(6496);
+    const oJ = "bloxdShaderPackWasmFailureReported";
+    let lJ = null;
 
-    function wu() {
-      return Hu ??= async function() {
-        if ("undefined" === typeof WebAssembly) return Zu("unsupported", "This browser has no WebAssembly"), null;
-        const bb = (0, Su.loadShaderPackTextures)().then((() => !0), (bb => (console.error("Could not load the shader pack textures, so shader packs can't run", bb), !1)));
+    function QJ() {
+      return lJ ??= async function() {
+        if ("undefined" === typeof WebAssembly) return LJ("unsupported", "This browser has no WebAssembly"), null;
+        const dd = (0, KJ.loadShaderPackTextures)().then((() => !0), (dd => (console.error("Could not load the shader pack textures, so shader packs can't run", dd), !1)));
         try {
-          const ub = await async function() {
-            let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : cb;
-            return Lu(await bb())
+          const Jd = await async function() {
+            let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : wd;
+            return gJ(await dd())
           }();
-          return await bb ? ub : null
-        } catch (ub) {
-          const bb = ub instanceof Error ? ub.message : String(ub);
-          return Zu(Yu.d[ub instanceof fb ? ub.stage : "instantiate"], bb), null
+          return await dd ? Jd : null
+        } catch (Jd) {
+          const dd = Jd instanceof Error ? Jd.message : String(Jd);
+          return LJ(CJ.c[Jd instanceof Vd ? Jd.stage : "instantiate"], dd), null
         }
-      }(), Hu
+      }(), lJ
     }
 
-    function Zu(bb, ub) {
-      (0, Yu.l)(au, `Shader pack wasm ${bb}, so shader packs can't run: ${ub}`, ub, `shader_pack_${bb}`)
+    function LJ(dd, Jd) {
+      (0, CJ.f)(oJ, `Shader pack wasm ${dd}, so shader packs can't run: ${Jd}`, Jd, `shader_pack_${dd}`)
     }
   },
-  6363: (bb, ub, hb) => {
-    bb.exports = hb.p + "static/media/bloxd_wasm_shader_pack_bg.2cc09f413df7fcaba0cc.wasm"
+  6487: (dd, Jd, kd) => {
+    dd.exports = kd.p + "static/media/bloxd_wasm_shader_pack_bg.47822a0b816f0c049306.wasm"
   },
-  6358: (bb, ub, hb) => {
-    hb.d(ub, {
-      d: () => Ub
+  6483: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      e: () => Pd
     });
-    var Bb = hb(2688);
-    const Ob = {
-      bloxd_wasm: () => "3b91fa895928d8c20ebf400bda89ab044ad7bc6b888817ddf1222f7c57feeb9c",
-      bloxd_wasm_client: () => "f8fce5947f2faa12e1ab09590f42ab320ab7503a3faa2b92511d0c8b5961045e",
-      bloxd_wasm_workers: () => "97913e9056cda526c2dc8ccbbbd9e745eb1ac954c2c44cba6c7873fc1747a23c",
-      bloxd_wasm_models: () => "c8d7121eb692beab251440772c33579d323be2e080195d116336055405d68c6b",
-      bloxd_wasm_webgpu: () => "19061547ec948fcba5a47bac197b276e7d2b5e59be20d2aaff03a98029648a35",
-      bloxd_wasm_webgl: () => "368a1de884ceea9044ed27e803110479e191485e8237c1d5316b43218c30116d",
-      bloxd_wasm_webgl1: () => "5a9131e0f012a1be4913bc2fcccdbb8d2fa9e6060e384fce80f6463266a8c00a",
-      bloxd_wasm_replay: () => "2682ec56a7ca06252a5e84c7b45e4853cfe028e5944d11f804b256bb15d9e0af",
-      bloxd_wasm_recorder: () => "4b50bdb382eedb09ed05f5762ed2c0dc0736e9ab3343761cacc34ca07ef84644",
-      bloxd_wasm_anim: () => "e9760697ea51a31a4ccfa90e459f7ee2ef0e9d3e3212f5f9bdc92eccc7a75ce1",
-      bloxd_wasm_textures: () => "435e32982ee604bfb0a866d92a90abb139a38b2cd93d29123f4edbda32e26fc0",
-      bloxd_wasm_shader_pack: () => "752c76e3c73a60bbf217aaaf2e581c1eeace9b5713c141db27df430f66cfe32d"
+    var pd = kd(2770);
+    const Nd = {
+      bloxd_wasm: () => "67c6401d5811eb7b9cff2814a29f966a9dd1ab923e175fa19497af26b4502816",
+      bloxd_wasm_client: () => "6258b24df63176123d93f549bb48f56da442317b3a5ee1b22458e2637caf578d",
+      bloxd_wasm_workers: () => "be7c28fa29cbecc24e19062f2c6bc0a5894a203c3dda65452eccc860e930d821",
+      bloxd_wasm_models: () => "6bdd581d4d0becff3e95b66a27a1a5da4e04f924bcd5bc0dd36e885168896016",
+      bloxd_wasm_webgpu: () => "7696327997962eac9535a5b8094b153b4298d06883723f642562040590146af1",
+      bloxd_wasm_webgl: () => "8873dc66cf374a905034792d179a1bc9e3d8a0d5138b511825a78d7a954240d0",
+      bloxd_wasm_webgl1: () => "8397ed5ce5c8ac7579e7003101c4f8c9a1ce8368296cd2e41ac9a9b90beb7a65",
+      bloxd_wasm_replay: () => "d71b023241834dbfc2db6804be33469db924450506350004c541b0b754121656",
+      bloxd_wasm_recorder: () => "f2e9b9c8ae12c235b86b64a44b272450d96f214d5d6982878bbf330e3339f352",
+      bloxd_wasm_anim: () => "3c8d34a5af00d244cdef6e97addab208455d3fad6df89d6004ea567630021fe8",
+      bloxd_wasm_textures: () => "dfcd6892e79c79af74dba72d92f489620c1624d3bfcd825b670886933b48749c",
+      bloxd_wasm_shader_pack: () => "ca7501d2ff0cccb80272a18641201d2ce4e4b1e9ec5a5ceca284d9a4fa45907f"
     };
-    var Gb = hb(4466);
+    var Wd = kd(4563);
 
-    function Ub(bb) {
-      const ub = Object.prototype.hasOwnProperty.call(Ob, bb) ? Ob[bb]() : void 0;
-      if (void 0 !== ub) return {
-        sha256: ub,
-        onMismatch: Gb.v
+    function Pd(dd) {
+      const Jd = Object.prototype.hasOwnProperty.call(Nd, dd) ? Nd[dd]() : void 0;
+      if (void 0 !== Jd) return {
+        sha256: Jd,
+        onMismatch: Wd.G
       };
-      throw new Bb.i(`${bb} has no release digest, so this build refuses it`)
+      throw new pd.f(`${dd} has no release digest, so this build refuses it`)
     }
   },
-  6367: (bb, ub, hb) => {
-    hb.d(ub, {
-      d: () => Wb,
-      h: () => Cb,
-      l: () => lb,
-      m: () => Ab
+  6505: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => vd,
+      f: () => xd,
+      h: () => Id,
+      l: () => Rd
     });
-    var Bb = hb(6375);
-    const Ob = 6,
-      Gb = 3,
-      Ub = 1,
-      Lb = 2,
-      Yb = 4,
-      Sb = 8,
-      ab = 16,
-      Hb = 32,
-      wb = 64,
-      Zb = 128,
-      Xb = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var pd = kd(6514);
+    const Nd = 6,
+      Wd = 3,
+      Pd = 1,
+      Zd = 2,
+      gd = 4,
+      Cd = 8,
+      Kd = 16,
+      od = 32,
+      ld = 64,
+      Qd = 128,
+      Ld = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function pb(bb) {
-      if (!bb) return 0;
-      const ub = Xb.indexOf(bb);
-      if (ub <= 0) throw new Error(`"${bb}" is not a shader pack hook function`);
-      return ub
+    function Od(dd) {
+      if (!dd) return 0;
+      const Jd = Ld.indexOf(dd);
+      if (Jd <= 0) throw new Error(`"${dd}" is not a shader pack hook function`);
+      return Jd
     }
 
-    function ob(bb) {
-      if (0 === bb) return null;
-      const ub = Xb[bb];
-      if (void 0 === ub) throw new Error(`${bb} is not a shader pack hook function id`);
-      return ub
+    function ed(dd) {
+      if (0 === dd) return null;
+      const Jd = Ld[dd];
+      if (void 0 === Jd) throw new Error(`${dd} is not a shader pack hook function id`);
+      return Jd
     }
 
-    function Ab(bb) {
-      const ub = Bb.b.length;
+    function Rd(dd) {
+      const Jd = pd.c.length;
       return {
-        strict: bb >= ub,
-        program: Bb.b[bb % ub]
+        strict: dd >= Jd,
+        program: pd.c[dd % Jd]
       }
     }
 
-    function lb(bb) {
-      return Number(bb.strict) * Bb.b.length + Bb.b.indexOf(bb.program)
+    function Id(dd) {
+      return Number(dd.strict) * pd.c.length + pd.c.indexOf(dd.program)
     }
 
-    function Kb(bb) {
-      return "" === bb ? [] : bb.split(" ")
+    function Gd(dd) {
+      return "" === dd ? [] : dd.split(" ")
     }
 
-    function Wb(bb) {
-      const ub = {
-        variantFlags: new Uint8Array(Ob),
-        hooks: new Uint8Array(Ob * Gb),
-        moduleCodes: Array(Ob).fill(""),
-        reads: Array(2 * Ob).fill("")
+    function vd(dd) {
+      const Jd = {
+        variantFlags: new Uint8Array(Nd),
+        hooks: new Uint8Array(Nd * Wd),
+        moduleCodes: Array(Nd).fill(""),
+        reads: Array(2 * Nd).fill("")
       };
-      for (const hb of bb) {
-        const bb = lb(hb.key),
-          Bb = (bb, ub) => null === hb.hooks.surface || hb.reads.fragment.includes(bb) ? 0 : ub;
-        ub.variantFlags[bb] = (hb.sceneDepth ? Ub : 0) | (hb.movesVertices ? Lb : 0) | (hb.sunShadow ? Yb : 0) | (hb.airShadow ? Sb : 0) | (hb.discards ? ab : 0) | Bb("localPosition", Hb) | Bb("enchantSpeed", wb) | Bb("enchantTier", Zb), ub.hooks[bb * Gb] = pb(hb.hooks.vertex), ub.hooks[bb * Gb + 1] = pb(hb.hooks.surface), ub.hooks[bb * Gb + 2] = pb(hb.hooks.light), ub.moduleCodes[bb] = hb.moduleCode, ub.reads[2 * bb] = hb.reads.vertex.join(" "), ub.reads[2 * bb + 1] = hb.reads.fragment.join(" ")
+      for (const kd of dd) {
+        const dd = Id(kd.key),
+          pd = (dd, Jd) => null === kd.hooks.surface || kd.reads.fragment.includes(dd) ? 0 : Jd;
+        Jd.variantFlags[dd] = (kd.sceneDepth ? Pd : 0) | (kd.movesVertices ? Zd : 0) | (kd.sunShadow ? gd : 0) | (kd.airShadow ? Cd : 0) | (kd.discards ? Kd : 0) | pd("localPosition", od) | pd("enchantSpeed", ld) | pd("enchantTier", Qd), Jd.hooks[dd * Wd] = Od(kd.hooks.vertex), Jd.hooks[dd * Wd + 1] = Od(kd.hooks.surface), Jd.hooks[dd * Wd + 2] = Od(kd.hooks.light), Jd.moduleCodes[dd] = kd.moduleCode, Jd.reads[2 * dd] = kd.reads.vertex.join(" "), Jd.reads[2 * dd + 1] = kd.reads.fragment.join(" ")
       }
-      return ub
+      return Jd
     }
 
-    function Cb(bb) {
+    function xd(dd) {
       const {
-        hooks: ub,
-        moduleCodes: hb,
-        reads: Bb
-      } = bb;
-      return Array.from(bb.variantFlags, ((bb, Ob) => {
-        const Hb = Ob * Gb;
+        hooks: Jd,
+        moduleCodes: kd,
+        reads: pd
+      } = dd;
+      return Array.from(dd.variantFlags, ((dd, Nd) => {
+        const od = Nd * Wd;
         return {
-          key: Ab(Ob),
+          key: Rd(Nd),
           hooks: {
-            vertex: ob(ub[Hb]),
-            surface: ob(ub[Hb + 1]),
-            light: ob(ub[Hb + 2])
+            vertex: ed(Jd[od]),
+            surface: ed(Jd[od + 1]),
+            light: ed(Jd[od + 2])
           },
-          moduleCode: hb[Ob],
-          sceneDepth: 0 !== (bb & Ub),
-          sunShadow: 0 !== (bb & Yb),
-          airShadow: 0 !== (bb & Sb),
-          movesVertices: 0 !== (bb & Lb),
-          discards: 0 !== (bb & ab),
+          moduleCode: kd[Nd],
+          sceneDepth: 0 !== (dd & Pd),
+          sunShadow: 0 !== (dd & gd),
+          airShadow: 0 !== (dd & Cd),
+          movesVertices: 0 !== (dd & Zd),
+          discards: 0 !== (dd & Kd),
           reads: {
-            vertex: Kb(Bb[2 * Ob]),
-            fragment: Kb(Bb[2 * Ob + 1])
+            vertex: Gd(pd[2 * Nd]),
+            fragment: Gd(pd[2 * Nd + 1])
           }
         }
       }))
     }
   },
-  6375: (bb, ub, hb) => {
-    hb.d(ub, {
-      b: () => Bb,
-      f: () => Ub,
-      i: () => Lb,
-      k: () => Ob,
-      o: () => Gb
+  6514: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      c: () => pd,
+      f: () => Pd,
+      i: () => Zd,
+      j: () => Nd,
+      n: () => Wd
     });
-    const Bb = ["terrain", "liquid", "model"];
+    const pd = ["terrain", "liquid", "model"];
 
-    function Ob() {
-      const bb = [];
-      for (const ub of [!1, !0])
-        for (const hb of Bb) bb.push({
-          strict: ub,
-          program: hb
+    function Nd() {
+      const dd = [];
+      for (const Jd of [!1, !0])
+        for (const kd of pd) dd.push({
+          strict: Jd,
+          program: kd
         });
-      return bb
+      return dd
     }
 
-    function Gb(bb) {
-      return `${bb.strict?"strict":"allow"}.${bb.program}`
+    function Wd(dd) {
+      return `${dd.strict?"strict":"allow"}.${dd.program}`
     }
 
-    function Ub(bb) {
-      return !bb.hooks.vertex && !bb.hooks.surface && !bb.hooks.light
+    function Pd(dd) {
+      return !dd.hooks.vertex && !dd.hooks.surface && !dd.hooks.light
     }
 
-    function Lb(bb, ub) {
-      return "off" !== ub && (null === bb || bb.some((bb => bb.key.strict === ("strict" === ub) && !Ub(bb))))
+    function Zd(dd, Jd) {
+      return "off" !== Jd && (null === dd || dd.some((dd => dd.key.strict === ("strict" === Jd) && !Pd(dd))))
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

@@ -1,12 +1,12 @@
 export const id = 226;
 export const ids = [226];
 export const modules = {
-  36748: (bb, ub, hb) => {
-    hb.d(ub, {
-      b: () => Ob
+  37277: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => Nd
     });
-    var Bb = hb(36753);
-    class Ob {
+    var pd = kd(37280);
+    class Nd {
       static get LastCreatedEngine() {
         return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
@@ -14,178 +14,178 @@ export const modules = {
         return this._LastCreatedScene
       }
     }
-    Ob.Instances = [], Ob.OnEnginesDisposedObservable = new Bb.e, Ob._LastCreatedScene = null, Ob.UseFallbackTexture = !0, Ob.FallbackTexture = ""
+    Nd.Instances = [], Nd.OnEnginesDisposedObservable = new pd.e, Nd._LastCreatedScene = null, Nd.UseFallbackTexture = !0, Nd.FallbackTexture = ""
   },
-  36739: (bb, ub, hb) => {
-    hb.d(ub, {
-      d: () => Bb
+  37271: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => pd
     });
-    class Bb {
-      static SetMatrixPrecision(bb) {
-        if (Bb.MatrixTrackPrecisionChange = !1, bb && !Bb.MatrixUse64Bits && Bb.MatrixTrackedMatrices)
-          for (let ub = 0; ub < Bb.MatrixTrackedMatrices.length; ++ub) {
-            const bb = Bb.MatrixTrackedMatrices[ub],
-              hb = bb._m;
-            bb._m = new Array(16);
-            for (let ub = 0; ub < 16; ++ub) bb._m[ub] = hb[ub]
+    class pd {
+      static SetMatrixPrecision(dd) {
+        if (pd.MatrixTrackPrecisionChange = !1, dd && !pd.MatrixUse64Bits && pd.MatrixTrackedMatrices)
+          for (let Jd = 0; Jd < pd.MatrixTrackedMatrices.length; ++Jd) {
+            const dd = pd.MatrixTrackedMatrices[Jd],
+              kd = dd._m;
+            dd._m = new Array(16);
+            for (let Jd = 0; Jd < 16; ++Jd) dd._m[Jd] = kd[Jd]
           }
-        Bb.MatrixUse64Bits = bb, Bb.MatrixCurrentType = Bb.MatrixUse64Bits ? Array : Float32Array, Bb.MatrixTrackedMatrices = null
+        pd.MatrixUse64Bits = dd, pd.MatrixCurrentType = pd.MatrixUse64Bits ? Array : Float32Array, pd.MatrixTrackedMatrices = null
       }
     }
-    Bb.MatrixUse64Bits = !1, Bb.MatrixTrackPrecisionChange = !0, Bb.MatrixCurrentType = Float32Array, Bb.MatrixTrackedMatrices = []
+    pd.MatrixUse64Bits = !1, pd.MatrixTrackPrecisionChange = !0, pd.MatrixCurrentType = Float32Array, pd.MatrixTrackedMatrices = []
   },
-  36760: (bb, ub, hb) => {
-    hb.d(ub, {
-      b: () => Lb,
-      e: () => Sb,
-      h: () => Yb,
-      k: () => Bb,
-      o: () => Gb,
-      p: () => Ub
+  37296: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      d: () => Zd,
+      g: () => Cd,
+      k: () => gd,
+      o: () => pd,
+      q: () => Wd,
+      r: () => Pd
     });
-    class Bb {}
+    class pd {}
 
-    function Ob(bb) {
-      bb.updateFlag = Bb._UpdateFlagSeed++
+    function Nd(dd) {
+      dd.updateFlag = pd._UpdateFlagSeed++
     }
 
-    function Gb(bb, ub, hb) {
-      let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const Ob = bb.ZBb(),
-        Gb = ub.ZBb(),
-        Ub = Ob[0],
-        Lb = Ob[1],
-        Yb = Ob[2],
-        Sb = Ob[3],
-        ab = Ob[4],
-        Hb = Ob[5],
-        wb = Ob[6],
-        Zb = Ob[7],
-        Xb = Ob[8],
-        pb = Ob[9],
-        ob = Ob[10],
-        Ab = Ob[11],
-        lb = Ob[12],
-        Kb = Ob[13],
-        Wb = Ob[14],
-        Cb = Ob[15],
-        db = Gb[0],
-        rb = Gb[1],
-        jb = Gb[2],
-        nb = Gb[3],
-        Db = Gb[4],
-        xb = Gb[5],
-        zb = Gb[6],
-        gb = Gb[7],
-        ib = Gb[8],
-        vb = Gb[9],
-        tb = Gb[10],
-        Jb = Gb[11],
-        eb = Gb[12],
-        Nb = Gb[13],
-        sb = Gb[14],
-        Mb = Gb[15];
-      hb[Bb] = Ub * db + Lb * Db + Yb * ib + Sb * eb, hb[Bb + 1] = Ub * rb + Lb * xb + Yb * vb + Sb * Nb, hb[Bb + 2] = Ub * jb + Lb * zb + Yb * tb + Sb * sb, hb[Bb + 3] = Ub * nb + Lb * gb + Yb * Jb + Sb * Mb, hb[Bb + 4] = ab * db + Hb * Db + wb * ib + Zb * eb, hb[Bb + 5] = ab * rb + Hb * xb + wb * vb + Zb * Nb, hb[Bb + 6] = ab * jb + Hb * zb + wb * tb + Zb * sb, hb[Bb + 7] = ab * nb + Hb * gb + wb * Jb + Zb * Mb, hb[Bb + 8] = Xb * db + pb * Db + ob * ib + Ab * eb, hb[Bb + 9] = Xb * rb + pb * xb + ob * vb + Ab * Nb, hb[Bb + 10] = Xb * jb + pb * zb + ob * tb + Ab * sb, hb[Bb + 11] = Xb * nb + pb * gb + ob * Jb + Ab * Mb, hb[Bb + 12] = lb * db + Kb * Db + Wb * ib + Cb * eb, hb[Bb + 13] = lb * rb + Kb * xb + Wb * vb + Cb * Nb, hb[Bb + 14] = lb * jb + Kb * zb + Wb * tb + Cb * sb, hb[Bb + 15] = lb * nb + Kb * gb + Wb * Jb + Cb * Mb
+    function Wd(dd, Jd, kd) {
+      let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const Nd = dd.spd(),
+        Wd = Jd.spd(),
+        Pd = Nd[0],
+        Zd = Nd[1],
+        gd = Nd[2],
+        Cd = Nd[3],
+        Kd = Nd[4],
+        od = Nd[5],
+        ld = Nd[6],
+        Qd = Nd[7],
+        Ld = Nd[8],
+        Od = Nd[9],
+        ed = Nd[10],
+        Rd = Nd[11],
+        Id = Nd[12],
+        Gd = Nd[13],
+        vd = Nd[14],
+        xd = Nd[15],
+        qd = Wd[0],
+        Bd = Wd[1],
+        sd = Wd[2],
+        ad = Wd[3],
+        Md = Wd[4],
+        Fd = Wd[5],
+        Yd = Wd[6],
+        md = Wd[7],
+        bd = Wd[8],
+        Sd = Wd[9],
+        jd = Wd[10],
+        Xd = Wd[11],
+        fd = Wd[12],
+        nd = Wd[13],
+        Ud = Wd[14],
+        yd = Wd[15];
+      kd[pd] = Pd * qd + Zd * Md + gd * bd + Cd * fd, kd[pd + 1] = Pd * Bd + Zd * Fd + gd * Sd + Cd * nd, kd[pd + 2] = Pd * sd + Zd * Yd + gd * jd + Cd * Ud, kd[pd + 3] = Pd * ad + Zd * md + gd * Xd + Cd * yd, kd[pd + 4] = Kd * qd + od * Md + ld * bd + Qd * fd, kd[pd + 5] = Kd * Bd + od * Fd + ld * Sd + Qd * nd, kd[pd + 6] = Kd * sd + od * Yd + ld * jd + Qd * Ud, kd[pd + 7] = Kd * ad + od * md + ld * Xd + Qd * yd, kd[pd + 8] = Ld * qd + Od * Md + ed * bd + Rd * fd, kd[pd + 9] = Ld * Bd + Od * Fd + ed * Sd + Rd * nd, kd[pd + 10] = Ld * sd + Od * Yd + ed * jd + Rd * Ud, kd[pd + 11] = Ld * ad + Od * md + ed * Xd + Rd * yd, kd[pd + 12] = Id * qd + Gd * Md + vd * bd + xd * fd, kd[pd + 13] = Id * Bd + Gd * Fd + vd * Sd + xd * nd, kd[pd + 14] = Id * sd + Gd * Yd + vd * jd + xd * Ud, kd[pd + 15] = Id * ad + Gd * md + vd * Xd + xd * yd
     }
 
-    function Ub(bb, ub, hb) {
-      let Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      Gb(bb, ub, hb.ZBb(), Bb), Ob(hb)
+    function Pd(dd, Jd, kd) {
+      let pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      Wd(dd, Jd, kd.spd(), pd), Nd(kd)
     }
 
-    function Lb(bb, ub) {
-      let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-      const Bb = bb.ZBb();
-      ub[hb] = Bb[0], ub[hb + 1] = Bb[1], ub[hb + 2] = Bb[2], ub[hb + 3] = Bb[3], ub[hb + 4] = Bb[4], ub[hb + 5] = Bb[5], ub[hb + 6] = Bb[6], ub[hb + 7] = Bb[7], ub[hb + 8] = Bb[8], ub[hb + 9] = Bb[9], ub[hb + 10] = Bb[10], ub[hb + 11] = Bb[11], ub[hb + 12] = Bb[12], ub[hb + 13] = Bb[13], ub[hb + 14] = Bb[14], ub[hb + 15] = Bb[15]
+    function Zd(dd, Jd) {
+      let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const pd = dd.spd();
+      Jd[kd] = pd[0], Jd[kd + 1] = pd[1], Jd[kd + 2] = pd[2], Jd[kd + 3] = pd[3], Jd[kd + 4] = pd[4], Jd[kd + 5] = pd[5], Jd[kd + 6] = pd[6], Jd[kd + 7] = pd[7], Jd[kd + 8] = pd[8], Jd[kd + 9] = pd[9], Jd[kd + 10] = pd[10], Jd[kd + 11] = pd[11], Jd[kd + 12] = pd[12], Jd[kd + 13] = pd[13], Jd[kd + 14] = pd[14], Jd[kd + 15] = pd[15]
     }
 
-    function Yb(bb, ub) {
-      const hb = Sb(bb, ub.ZBb());
-      return hb && Ob(ub), hb
+    function gd(dd, Jd) {
+      const kd = Cd(dd, Jd.spd());
+      return kd && Nd(Jd), kd
     }
 
-    function Sb(bb, ub) {
-      const hb = bb.ZBb(),
-        Bb = hb[0],
-        Ob = hb[1],
-        Gb = hb[2],
-        Ub = hb[3],
-        Lb = hb[4],
-        Yb = hb[5],
-        Sb = hb[6],
-        ab = hb[7],
-        Hb = hb[8],
-        wb = hb[9],
-        Zb = hb[10],
-        Xb = hb[11],
-        pb = hb[12],
-        ob = hb[13],
-        Ab = hb[14],
-        lb = hb[15],
-        Kb = Zb * lb - Ab * Xb,
-        Wb = wb * lb - ob * Xb,
-        Cb = wb * Ab - ob * Zb,
-        db = Hb * lb - pb * Xb,
-        rb = Hb * Ab - Zb * pb,
-        jb = Hb * ob - pb * wb,
-        nb = +(Yb * Kb - Sb * Wb + ab * Cb),
-        Db = -(Lb * Kb - Sb * db + ab * rb),
-        xb = +(Lb * Wb - Yb * db + ab * jb),
-        zb = -(Lb * Cb - Yb * rb + Sb * jb),
-        gb = Bb * nb + Ob * Db + Gb * xb + Ub * zb;
-      if (0 === gb) return !1;
-      const ib = 1 / gb,
-        vb = Sb * lb - Ab * ab,
-        tb = Yb * lb - ob * ab,
-        Jb = Yb * Ab - ob * Sb,
-        eb = Lb * lb - pb * ab,
-        Nb = Lb * Ab - pb * Sb,
-        sb = Lb * ob - pb * Yb,
-        Mb = Sb * Xb - Zb * ab,
-        mb = Yb * Xb - wb * ab,
-        Ib = Yb * Zb - wb * Sb,
-        Pb = Lb * Xb - Hb * ab,
-        qb = Lb * Zb - Hb * Sb,
-        Eb = Lb * wb - Hb * Yb,
-        yb = -(Ob * Kb - Gb * Wb + Ub * Cb),
-        Vb = +(Bb * Kb - Gb * db + Ub * rb),
-        Fb = -(Bb * Wb - Ob * db + Ub * jb),
-        fb = +(Bb * Cb - Ob * rb + Gb * jb),
-        kb = +(Ob * vb - Gb * tb + Ub * Jb),
-        Tb = -(Bb * vb - Gb * eb + Ub * Nb),
-        cb = +(Bb * tb - Ob * eb + Ub * sb),
-        Qb = -(Bb * Jb - Ob * Nb + Gb * sb),
-        Rb = -(Ob * Mb - Gb * mb + Ub * Ib),
-        bu = +(Bb * Mb - Gb * Pb + Ub * qb),
-        uu = -(Bb * mb - Ob * Pb + Ub * Eb),
-        hu = +(Bb * Ib - Ob * qb + Gb * Eb);
-      return ub[0] = nb * ib, ub[1] = yb * ib, ub[2] = kb * ib, ub[3] = Rb * ib, ub[4] = Db * ib, ub[5] = Vb * ib, ub[6] = Tb * ib, ub[7] = bu * ib, ub[8] = xb * ib, ub[9] = Fb * ib, ub[10] = cb * ib, ub[11] = uu * ib, ub[12] = zb * ib, ub[13] = fb * ib, ub[14] = Qb * ib, ub[15] = hu * ib, !0
+    function Cd(dd, Jd) {
+      const kd = dd.spd(),
+        pd = kd[0],
+        Nd = kd[1],
+        Wd = kd[2],
+        Pd = kd[3],
+        Zd = kd[4],
+        gd = kd[5],
+        Cd = kd[6],
+        Kd = kd[7],
+        od = kd[8],
+        ld = kd[9],
+        Qd = kd[10],
+        Ld = kd[11],
+        Od = kd[12],
+        ed = kd[13],
+        Rd = kd[14],
+        Id = kd[15],
+        Gd = Qd * Id - Rd * Ld,
+        vd = ld * Id - ed * Ld,
+        xd = ld * Rd - ed * Qd,
+        qd = od * Id - Od * Ld,
+        Bd = od * Rd - Qd * Od,
+        sd = od * ed - Od * ld,
+        ad = +(gd * Gd - Cd * vd + Kd * xd),
+        Md = -(Zd * Gd - Cd * qd + Kd * Bd),
+        Fd = +(Zd * vd - gd * qd + Kd * sd),
+        Yd = -(Zd * xd - gd * Bd + Cd * sd),
+        md = pd * ad + Nd * Md + Wd * Fd + Pd * Yd;
+      if (0 === md) return !1;
+      const bd = 1 / md,
+        Sd = Cd * Id - Rd * Kd,
+        jd = gd * Id - ed * Kd,
+        Xd = gd * Rd - ed * Cd,
+        fd = Zd * Id - Od * Kd,
+        nd = Zd * Rd - Od * Cd,
+        Ud = Zd * ed - Od * gd,
+        yd = Cd * Ld - Qd * Kd,
+        Dd = gd * Ld - ld * Kd,
+        Td = gd * Qd - ld * Cd,
+        Ed = Zd * Ld - od * Kd,
+        cd = Zd * Qd - od * Cd,
+        hd = Zd * ld - od * gd,
+        rd = -(Nd * Gd - Wd * vd + Pd * xd),
+        ud = +(pd * Gd - Wd * qd + Pd * Bd),
+        td = -(pd * vd - Nd * qd + Pd * sd),
+        Vd = +(pd * xd - Nd * Bd + Wd * sd),
+        zd = +(Nd * Sd - Wd * jd + Pd * Xd),
+        Hd = -(pd * Sd - Wd * fd + Pd * nd),
+        wd = +(pd * jd - Nd * fd + Pd * Ud),
+        Ad = -(pd * Xd - Nd * nd + Wd * Ud),
+        dJ = -(Nd * yd - Wd * Dd + Pd * Td),
+        JJ = +(pd * yd - Wd * Ed + Pd * cd),
+        kJ = -(pd * Dd - Nd * Ed + Pd * hd),
+        pJ = +(pd * Td - Nd * cd + Wd * hd);
+      return Jd[0] = ad * bd, Jd[1] = rd * bd, Jd[2] = zd * bd, Jd[3] = dJ * bd, Jd[4] = Md * bd, Jd[5] = ud * bd, Jd[6] = Hd * bd, Jd[7] = JJ * bd, Jd[8] = Fd * bd, Jd[9] = td * bd, Jd[10] = wd * bd, Jd[11] = kJ * bd, Jd[12] = Yd * bd, Jd[13] = Vd * bd, Jd[14] = Ad * bd, Jd[15] = pJ * bd, !0
     }
-    Bb._UpdateFlagSeed = 0
+    pd._UpdateFlagSeed = 0
   },
-  36727: (bb, ub, hb) => {
-    hb.d(ub, {
-      d: () => pb,
-      f: () => Xb,
-      h: () => Wb,
-      i: () => Ab,
-      m: () => Hb,
-      q: () => wb,
-      r: () => Zb
+  37251: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      b: () => Od,
+      d: () => Ld,
+      f: () => vd,
+      h: () => Rd,
+      k: () => od,
+      n: () => ld,
+      o: () => Qd
     });
-    var Bb = hb(36734),
-      Ob = hb(36736),
-      Gb = hb(36739),
-      Ub = hb(36748),
-      Lb = hb(36757),
-      Yb = hb(36760),
-      Sb = hb(36762);
-    const ab = bb => parseInt(bb.toString().replace(/\W/g, ""));
-    class Hb {
+    var pd = kd(37259),
+      Nd = kd(37267),
+      Wd = kd(37271),
+      Pd = kd(37277),
+      Zd = kd(37289),
+      gd = kd(37296),
+      Cd = kd(37303);
+    const Kd = dd => parseInt(dd.toString().replace(/\W/g, ""));
+    class od {
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.x = bb, this.y = ub
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.x = dd, this.y = Jd
       }
       toString() {
         return `{X: ${this.x} Y: ${this.y}}`
@@ -194,145 +194,145 @@ export const modules = {
         return "Vector2"
       }
       getHashCode() {
-        let bb = ab(this.x);
-        return bb = 397 * bb ^ ab(this.y), bb
+        let dd = Kd(this.x);
+        return dd = 397 * dd ^ Kd(this.y), dd
       }
-      toArray(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return bb[ub] = this.x, bb[ub + 1] = this.y, this
+      toArray(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return dd[Jd] = this.x, dd[Jd + 1] = this.y, this
       }
-      Ohb(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Hb.FromArrayToRef(bb, ub, this), this
+      lkd(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return od.FromArrayToRef(dd, Jd, this), this
       }
-      ZBb() {
+      spd() {
         return [this.x, this.y]
       }
-      mD(bb) {
-        return this.x = bb.x, this.y = bb.y, this
+      Fs(dd) {
+        return this.x = dd.x, this.y = dd.y, this
       }
-      M_(bb, ub) {
-        return this.x = bb, this.y = ub, this
+      kdd(dd, Jd) {
+        return this.x = dd, this.y = Jd, this
       }
-      set(bb, ub) {
-        return this.M_(bb, ub)
+      set(dd, Jd) {
+        return this.kdd(dd, Jd)
       }
-      N9(bb) {
-        return this.M_(bb, bb)
+      o5(dd) {
+        return this.kdd(dd, dd)
       }
-      add(bb) {
-        return new Hb(this.x + bb.x, this.y + bb.y)
+      add(dd) {
+        return new od(this.x + dd.x, this.y + dd.y)
       }
-      addToRef(bb, ub) {
-        return ub.x = this.x + bb.x, ub.y = this.y + bb.y, ub
+      addToRef(dd, Jd) {
+        return Jd.x = this.x + dd.x, Jd.y = this.y + dd.y, Jd
       }
-      addInPlace(bb) {
-        return this.x += bb.x, this.y += bb.y, this
+      addInPlace(dd) {
+        return this.x += dd.x, this.y += dd.y, this
       }
-      addInPlaceFromFloats(bb, ub) {
-        return this.x += bb, this.y += ub, this
+      addInPlaceFromFloats(dd, Jd) {
+        return this.x += dd, this.y += Jd, this
       }
-      addVector3(bb) {
-        return new Hb(this.x + bb.x, this.y + bb.y)
+      addVector3(dd) {
+        return new od(this.x + dd.x, this.y + dd.y)
       }
-      subtract(bb) {
-        return new Hb(this.x - bb.x, this.y - bb.y)
+      subtract(dd) {
+        return new od(this.x - dd.x, this.y - dd.y)
       }
-      subtractToRef(bb, ub) {
-        return ub.x = this.x - bb.x, ub.y = this.y - bb.y, ub
+      subtractToRef(dd, Jd) {
+        return Jd.x = this.x - dd.x, Jd.y = this.y - dd.y, Jd
       }
-      tBb(bb) {
-        return this.x -= bb.x, this.y -= bb.y, this
+      hpd(dd) {
+        return this.x -= dd.x, this.y -= dd.y, this
       }
-      multiplyInPlace(bb) {
-        return this.x *= bb.x, this.y *= bb.y, this
+      multiplyInPlace(dd) {
+        return this.x *= dd.x, this.y *= dd.y, this
       }
-      multiply(bb) {
-        return new Hb(this.x * bb.x, this.y * bb.y)
+      multiply(dd) {
+        return new od(this.x * dd.x, this.y * dd.y)
       }
-      multiplyToRef(bb, ub) {
-        return ub.x = this.x * bb.x, ub.y = this.y * bb.y, ub
+      multiplyToRef(dd, Jd) {
+        return Jd.x = this.x * dd.x, Jd.y = this.y * dd.y, Jd
       }
-      multiplyByFloats(bb, ub) {
-        return new Hb(this.x * bb, this.y * ub)
+      multiplyByFloats(dd, Jd) {
+        return new od(this.x * dd, this.y * Jd)
       }
-      divide(bb) {
-        return new Hb(this.x / bb.x, this.y / bb.y)
+      divide(dd) {
+        return new od(this.x / dd.x, this.y / dd.y)
       }
-      divideToRef(bb, ub) {
-        return ub.x = this.x / bb.x, ub.y = this.y / bb.y, ub
+      divideToRef(dd, Jd) {
+        return Jd.x = this.x / dd.x, Jd.y = this.y / dd.y, Jd
       }
-      divideInPlace(bb) {
-        return this.x = this.x / bb.x, this.y = this.y / bb.y, this
+      divideInPlace(dd) {
+        return this.x = this.x / dd.x, this.y = this.y / dd.y, this
       }
-      minimizeInPlace(bb) {
-        return this.minimizeInPlaceFromFloats(bb.x, bb.y)
+      minimizeInPlace(dd) {
+        return this.minimizeInPlaceFromFloats(dd.x, dd.y)
       }
-      maximizeInPlace(bb) {
-        return this.maximizeInPlaceFromFloats(bb.x, bb.y)
+      maximizeInPlace(dd) {
+        return this.maximizeInPlaceFromFloats(dd.x, dd.y)
       }
-      minimizeInPlaceFromFloats(bb, ub) {
-        return this.x = Math.min(bb, this.x), this.y = Math.min(ub, this.y), this
+      minimizeInPlaceFromFloats(dd, Jd) {
+        return this.x = Math.min(dd, this.x), this.y = Math.min(Jd, this.y), this
       }
-      maximizeInPlaceFromFloats(bb, ub) {
-        return this.x = Math.max(bb, this.x), this.y = Math.max(ub, this.y), this
+      maximizeInPlaceFromFloats(dd, Jd) {
+        return this.x = Math.max(dd, this.x), this.y = Math.max(Jd, this.y), this
       }
-      subtractFromFloats(bb, ub) {
-        return new Hb(this.x - bb, this.y - ub)
+      subtractFromFloats(dd, Jd) {
+        return new od(this.x - dd, this.y - Jd)
       }
-      subtractFromFloatsToRef(bb, ub, hb) {
-        return hb.x = this.x - bb, hb.y = this.y - ub, hb
+      subtractFromFloatsToRef(dd, Jd, kd) {
+        return kd.x = this.x - dd, kd.y = this.y - Jd, kd
       }
-      AO() {
-        return new Hb(-this.x, -this.y)
+      ck() {
+        return new od(-this.x, -this.y)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this
       }
-      negateToRef(bb) {
-        return bb.x = -this.x, bb.y = -this.y, bb
+      negateToRef(dd) {
+        return dd.x = -this.x, dd.y = -this.y, dd
       }
-      scaleInPlace(bb) {
-        return this.x *= bb, this.y *= bb, this
+      scaleInPlace(dd) {
+        return this.x *= dd, this.y *= dd, this
       }
-      scale(bb) {
-        return new Hb(this.x * bb, this.y * bb)
+      scale(dd) {
+        return new od(this.x * dd, this.y * dd)
       }
-      scaleToRef(bb, ub) {
-        return ub.x = this.x * bb, ub.y = this.y * bb, ub
+      scaleToRef(dd, Jd) {
+        return Jd.x = this.x * dd, Jd.y = this.y * dd, Jd
       }
-      scaleAndAddToRef(bb, ub) {
-        return ub.x += this.x * bb, ub.y += this.y * bb, ub
+      scaleAndAddToRef(dd, Jd) {
+        return Jd.x += this.x * dd, Jd.y += this.y * dd, Jd
       }
-      equals(bb) {
-        return bb && this.x === bb.x && this.y === bb.y
+      equals(dd) {
+        return dd && this.x === dd.x && this.y === dd.y
       }
-      equalsWithEpsilon(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Bb.b;
-        return bb && (0, Lb.WithinEpsilon)(this.x, bb.x, ub) && (0, Lb.WithinEpsilon)(this.y, bb.y, ub)
+      equalsWithEpsilon(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.e;
+        return dd && (0, Zd.WithinEpsilon)(this.x, dd.x, Jd) && (0, Zd.WithinEpsilon)(this.y, dd.y, Jd)
       }
-      sUb(bb, ub) {
-        return this.x === bb && this.y === ub
+      zPd(dd, Jd) {
+        return this.x === dd && this.y === Jd
       }
       floor() {
-        return new Hb(Math.floor(this.x), Math.floor(this.y))
+        return new od(Math.floor(this.x), Math.floor(this.y))
       }
-      floorToRef(bb) {
-        return bb.x = Math.floor(this.x), bb.y = Math.floor(this.y), bb
+      floorToRef(dd) {
+        return dd.x = Math.floor(this.x), dd.y = Math.floor(this.y), dd
       }
       fract() {
-        return new Hb(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
+        return new od(this.x - Math.floor(this.x), this.y - Math.floor(this.y))
       }
-      fractToRef(bb) {
-        return bb.x = this.x - Math.floor(this.x), bb.y = this.y - Math.floor(this.y), bb
+      fractToRef(dd) {
+        return dd.x = this.x - Math.floor(this.x), dd.y = this.y - Math.floor(this.y), dd
       }
-      rotate(bb) {
-        return this.rotateToRef(bb, new Hb)
+      rotate(dd) {
+        return this.rotateToRef(dd, new od)
       }
-      rotateToRef(bb, ub) {
-        const hb = Math.cos(bb),
-          Bb = Math.sin(bb);
-        return ub.x = hb * this.x - Bb * this.y, ub.y = Bb * this.x + hb * this.y, ub
+      rotateToRef(dd, Jd) {
+        const kd = Math.cos(dd),
+          pd = Math.sin(dd);
+        return Jd.x = kd * this.x - pd * this.y, Jd.y = pd * this.x + kd * this.y, Jd
       }
       length() {
         return Math.sqrt(this.x * this.x + this.y * this.y)
@@ -343,359 +343,359 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(bb) {
-        return 0 === bb || 1 === bb ? this : this.scaleInPlace(1 / bb)
+      normalizeFromLength(dd) {
+        return 0 === dd || 1 === dd ? this : this.scaleInPlace(1 / dd)
       }
       normalizeToNew() {
-        const bb = new Hb;
-        return this.normalizeToRef(bb), bb
+        const dd = new od;
+        return this.normalizeToRef(dd), dd
       }
-      normalizeToRef(bb) {
-        const ub = this.length();
-        return 0 === ub || 1 === ub ? (bb.x = this.x, bb.y = this.y, bb) : this.scaleToRef(1 / ub, bb)
+      normalizeToRef(dd) {
+        const Jd = this.length();
+        return 0 === Jd || 1 === Jd ? (dd.x = this.x, dd.y = this.y, dd) : this.scaleToRef(1 / Jd, dd)
       }
       clone() {
-        return new Hb(this.x, this.y)
+        return new od(this.x, this.y)
       }
-      dot(bb) {
-        return this.x * bb.x + this.y * bb.y
+      dot(dd) {
+        return this.x * dd.x + this.y * dd.y
       }
       static Zero() {
-        return new Hb(0, 0)
+        return new od(0, 0)
       }
       static One() {
-        return new Hb(1, 1)
+        return new od(1, 1)
       }
       static Random() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Hb((0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new od((0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd))
       }
       static RandomToRef() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).M_((0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).kdd((0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd))
       }
       static get ZeroReadOnly() {
-        return Hb._ZeroReadOnly
+        return od._ZeroReadOnly
       }
-      static FromArray(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Hb(bb[ub], bb[ub + 1])
+      static FromArray(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new od(dd[Jd], dd[Jd + 1])
       }
-      static FromArrayToRef(bb, ub, hb) {
-        return hb.x = bb[ub], hb.y = bb[ub + 1], hb
+      static FromArrayToRef(dd, Jd, kd) {
+        return kd.x = dd[Jd], kd.y = dd[Jd + 1], kd
       }
-      static FromFloatsToRef(bb, ub, hb) {
-        return hb.M_(bb, ub), hb
+      static FromFloatsToRef(dd, Jd, kd) {
+        return kd.kdd(dd, Jd), kd
       }
-      static CatmullRom(bb, ub, hb, Bb, Ob) {
-        const Gb = Ob * Ob,
-          Ub = Ob * Gb,
-          Lb = .5 * (2 * ub.x + (-bb.x + hb.x) * Ob + (2 * bb.x - 5 * ub.x + 4 * hb.x - Bb.x) * Gb + (-bb.x + 3 * ub.x - 3 * hb.x + Bb.x) * Ub),
-          Yb = .5 * (2 * ub.y + (-bb.y + hb.y) * Ob + (2 * bb.y - 5 * ub.y + 4 * hb.y - Bb.y) * Gb + (-bb.y + 3 * ub.y - 3 * hb.y + Bb.y) * Ub);
-        return new Hb(Lb, Yb)
+      static CatmullRom(dd, Jd, kd, pd, Nd) {
+        const Wd = Nd * Nd,
+          Pd = Nd * Wd,
+          Zd = .5 * (2 * Jd.x + (-dd.x + kd.x) * Nd + (2 * dd.x - 5 * Jd.x + 4 * kd.x - pd.x) * Wd + (-dd.x + 3 * Jd.x - 3 * kd.x + pd.x) * Pd),
+          gd = .5 * (2 * Jd.y + (-dd.y + kd.y) * Nd + (2 * dd.y - 5 * Jd.y + 4 * kd.y - pd.y) * Wd + (-dd.y + 3 * Jd.y - 3 * kd.y + pd.y) * Pd);
+        return new od(Zd, gd)
       }
-      static ClampToRef(bb, ub, hb, Bb) {
-        return Bb.x = (0, Lb.Clamp)(bb.x, ub.x, hb.x), Bb.y = (0, Lb.Clamp)(bb.y, ub.y, hb.y), Bb
+      static ClampToRef(dd, Jd, kd, pd) {
+        return pd.x = (0, Zd.Clamp)(dd.x, Jd.x, kd.x), pd.y = (0, Zd.Clamp)(dd.y, Jd.y, kd.y), pd
       }
-      static Clamp(bb, ub, hb) {
-        const Bb = (0, Lb.Clamp)(bb.x, ub.x, hb.x),
-          Ob = (0, Lb.Clamp)(bb.y, ub.y, hb.y);
-        return new Hb(Bb, Ob)
+      static Clamp(dd, Jd, kd) {
+        const pd = (0, Zd.Clamp)(dd.x, Jd.x, kd.x),
+          Nd = (0, Zd.Clamp)(dd.y, Jd.y, kd.y);
+        return new od(pd, Nd)
       }
-      static Hermite(bb, ub, hb, Bb, Ob) {
-        const Gb = Ob * Ob,
-          Ub = Ob * Gb,
-          Lb = 2 * Ub - 3 * Gb + 1,
-          Yb = -2 * Ub + 3 * Gb,
-          Sb = Ub - 2 * Gb + Ob,
-          ab = Ub - Gb,
-          wb = bb.x * Lb + hb.x * Yb + ub.x * Sb + Bb.x * ab,
-          Zb = bb.y * Lb + hb.y * Yb + ub.y * Sb + Bb.y * ab;
-        return new Hb(wb, Zb)
+      static Hermite(dd, Jd, kd, pd, Nd) {
+        const Wd = Nd * Nd,
+          Pd = Nd * Wd,
+          Zd = 2 * Pd - 3 * Wd + 1,
+          gd = -2 * Pd + 3 * Wd,
+          Cd = Pd - 2 * Wd + Nd,
+          Kd = Pd - Wd,
+          ld = dd.x * Zd + kd.x * gd + Jd.x * Cd + pd.x * Kd,
+          Qd = dd.y * Zd + kd.y * gd + Jd.y * Cd + pd.y * Kd;
+        return new od(ld, Qd)
       }
-      static Hermite1stDerivative(bb, ub, hb, Bb, Ob) {
-        return this.Hermite1stDerivativeToRef(bb, ub, hb, Bb, Ob, new Hb)
+      static Hermite1stDerivative(dd, Jd, kd, pd, Nd) {
+        return this.Hermite1stDerivativeToRef(dd, Jd, kd, pd, Nd, new od)
       }
-      static Hermite1stDerivativeToRef(bb, ub, hb, Bb, Ob, Gb) {
-        const Ub = Ob * Ob;
-        return Gb.x = 6 * (Ub - Ob) * bb.x + (3 * Ub - 4 * Ob + 1) * ub.x + 6 * (-Ub + Ob) * hb.x + (3 * Ub - 2 * Ob) * Bb.x, Gb.y = 6 * (Ub - Ob) * bb.y + (3 * Ub - 4 * Ob + 1) * ub.y + 6 * (-Ub + Ob) * hb.y + (3 * Ub - 2 * Ob) * Bb.y, Gb
+      static Hermite1stDerivativeToRef(dd, Jd, kd, pd, Nd, Wd) {
+        const Pd = Nd * Nd;
+        return Wd.x = 6 * (Pd - Nd) * dd.x + (3 * Pd - 4 * Nd + 1) * Jd.x + 6 * (-Pd + Nd) * kd.x + (3 * Pd - 2 * Nd) * pd.x, Wd.y = 6 * (Pd - Nd) * dd.y + (3 * Pd - 4 * Nd + 1) * Jd.y + 6 * (-Pd + Nd) * kd.y + (3 * Pd - 2 * Nd) * pd.y, Wd
       }
-      static Lerp(bb, ub, hb) {
-        return Hb.LerpToRef(bb, ub, hb, new Hb)
+      static Lerp(dd, Jd, kd) {
+        return od.LerpToRef(dd, Jd, kd, new od)
       }
-      static LerpToRef(bb, ub, hb, Bb) {
-        return Bb.x = bb.x + (ub.x - bb.x) * hb, Bb.y = bb.y + (ub.y - bb.y) * hb, Bb
+      static LerpToRef(dd, Jd, kd, pd) {
+        return pd.x = dd.x + (Jd.x - dd.x) * kd, pd.y = dd.y + (Jd.y - dd.y) * kd, pd
       }
-      static Dot(bb, ub) {
-        return bb.x * ub.x + bb.y * ub.y
+      static Dot(dd, Jd) {
+        return dd.x * Jd.x + dd.y * Jd.y
       }
-      static Normalize(bb) {
-        return Hb.NormalizeToRef(bb, new Hb)
+      static Normalize(dd) {
+        return od.NormalizeToRef(dd, new od)
       }
-      static NormalizeToRef(bb, ub) {
-        return bb.normalizeToRef(ub), ub
+      static NormalizeToRef(dd, Jd) {
+        return dd.normalizeToRef(Jd), Jd
       }
-      static Minimize(bb, ub) {
-        const hb = bb.x < ub.x ? bb.x : ub.x,
-          Bb = bb.y < ub.y ? bb.y : ub.y;
-        return new Hb(hb, Bb)
+      static Minimize(dd, Jd) {
+        const kd = dd.x < Jd.x ? dd.x : Jd.x,
+          pd = dd.y < Jd.y ? dd.y : Jd.y;
+        return new od(kd, pd)
       }
-      static Maximize(bb, ub) {
-        const hb = bb.x > ub.x ? bb.x : ub.x,
-          Bb = bb.y > ub.y ? bb.y : ub.y;
-        return new Hb(hb, Bb)
+      static Maximize(dd, Jd) {
+        const kd = dd.x > Jd.x ? dd.x : Jd.x,
+          pd = dd.y > Jd.y ? dd.y : Jd.y;
+        return new od(kd, pd)
       }
-      static Transform(bb, ub) {
-        return Hb.TransformToRef(bb, ub, new Hb)
+      static Transform(dd, Jd) {
+        return od.TransformToRef(dd, Jd, new od)
       }
-      static TransformToRef(bb, ub, hb) {
-        const Bb = ub.m,
-          Ob = bb.x * Bb[0] + bb.y * Bb[4] + Bb[12],
-          Gb = bb.x * Bb[1] + bb.y * Bb[5] + Bb[13];
-        return hb.x = Ob, hb.y = Gb, hb
+      static TransformToRef(dd, Jd, kd) {
+        const pd = Jd.m,
+          Nd = dd.x * pd[0] + dd.y * pd[4] + pd[12],
+          Wd = dd.x * pd[1] + dd.y * pd[5] + pd[13];
+        return kd.x = Nd, kd.y = Wd, kd
       }
-      static PointInTriangle(bb, ub, hb, Bb) {
-        const Ob = .5 * (-hb.y * Bb.x + ub.y * (-hb.x + Bb.x) + ub.x * (hb.y - Bb.y) + hb.x * Bb.y),
-          Gb = Ob < 0 ? -1 : 1,
-          Ub = (ub.y * Bb.x - ub.x * Bb.y + (Bb.y - ub.y) * bb.x + (ub.x - Bb.x) * bb.y) * Gb,
-          Lb = (ub.x * hb.y - ub.y * hb.x + (ub.y - hb.y) * bb.x + (hb.x - ub.x) * bb.y) * Gb;
-        return Ub > 0 && Lb > 0 && Ub + Lb < 2 * Ob * Gb
+      static PointInTriangle(dd, Jd, kd, pd) {
+        const Nd = .5 * (-kd.y * pd.x + Jd.y * (-kd.x + pd.x) + Jd.x * (kd.y - pd.y) + kd.x * pd.y),
+          Wd = Nd < 0 ? -1 : 1,
+          Pd = (Jd.y * pd.x - Jd.x * pd.y + (pd.y - Jd.y) * dd.x + (Jd.x - pd.x) * dd.y) * Wd,
+          Zd = (Jd.x * kd.y - Jd.y * kd.x + (Jd.y - kd.y) * dd.x + (kd.x - Jd.x) * dd.y) * Wd;
+        return Pd > 0 && Zd > 0 && Pd + Zd < 2 * Nd * Wd
       }
-      static Distance(bb, ub) {
-        return Math.sqrt(Hb.DistanceSquared(bb, ub))
+      static Distance(dd, Jd) {
+        return Math.sqrt(od.DistanceSquared(dd, Jd))
       }
-      static DistanceSquared(bb, ub) {
-        const hb = bb.x - ub.x,
-          Bb = bb.y - ub.y;
-        return hb * hb + Bb * Bb
+      static DistanceSquared(dd, Jd) {
+        const kd = dd.x - Jd.x,
+          pd = dd.y - Jd.y;
+        return kd * kd + pd * pd
       }
-      static Center(bb, ub) {
-        return Hb.CenterToRef(bb, ub, new Hb)
+      static Center(dd, Jd) {
+        return od.CenterToRef(dd, Jd, new od)
       }
-      static CenterToRef(bb, ub, hb) {
-        return hb.M_((bb.x + ub.x) / 2, (bb.y + ub.y) / 2)
+      static CenterToRef(dd, Jd, kd) {
+        return kd.kdd((dd.x + Jd.x) / 2, (dd.y + Jd.y) / 2)
       }
-      static DistanceOfPointFromSegment(bb, ub, hb) {
-        const Bb = Hb.DistanceSquared(ub, hb);
-        if (0 === Bb) return Hb.Distance(bb, ub);
-        const Ob = hb.subtract(ub),
-          Gb = Math.max(0, Math.min(1, Hb.Dot(bb.subtract(ub), Ob) / Bb)),
-          Ub = ub.add(Ob.multiplyByFloats(Gb, Gb));
-        return Hb.Distance(bb, Ub)
+      static DistanceOfPointFromSegment(dd, Jd, kd) {
+        const pd = od.DistanceSquared(Jd, kd);
+        if (0 === pd) return od.Distance(dd, Jd);
+        const Nd = kd.subtract(Jd),
+          Wd = Math.max(0, Math.min(1, od.Dot(dd.subtract(Jd), Nd) / pd)),
+          Pd = Jd.add(Nd.multiplyByFloats(Wd, Wd));
+        return od.Distance(dd, Pd)
       }
     }
-    Hb._V8PerformanceHack = new Hb(.5, .5), Hb._ZeroReadOnly = Hb.Zero();
-    class wb {
+    od._V8PerformanceHack = new od(.5, .5), od._ZeroReadOnly = od.Zero();
+    class ld {
       get x() {
         return this._x
       }
-      set x(bb) {
-        this._x = bb, this._isDirty = !0
+      set x(dd) {
+        this._x = dd, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(bb) {
-        this._y = bb, this._isDirty = !0
+      set y(dd) {
+        this._y = dd, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(bb) {
-        this._z = bb, this._isDirty = !0
+      set z(dd) {
+        this._z = dd, this._isDirty = !0
       }
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        this._isDirty = !0, this._x = bb, this._y = ub, this._z = hb
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        this._isDirty = !0, this._x = dd, this._y = Jd, this._z = kd
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z}}`
       }
       getClassName() {
-        return "YX"
+        return "IL"
       }
       getHashCode() {
-        let bb = ab(this._x);
-        return bb = 397 * bb ^ ab(this._y), bb = 397 * bb ^ ab(this._z), bb
+        let dd = Kd(this._x);
+        return dd = 397 * dd ^ Kd(this._y), dd = 397 * dd ^ Kd(this._z), dd
       }
-      ZBb() {
+      spd() {
         return [this._x, this._y, this._z]
       }
-      toArray(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return bb[ub] = this._x, bb[ub + 1] = this._y, bb[ub + 2] = this._z, this
+      toArray(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return dd[Jd] = this._x, dd[Jd + 1] = this._y, dd[Jd + 2] = this._z, this
       }
-      Ohb(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return wb.FromArrayToRef(bb, ub, this), this
+      lkd(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return ld.FromArrayToRef(dd, Jd, this), this
       }
       toQuaternion() {
-        return Xb.RotationYawPitchRoll(this._y, this._x, this._z)
+        return Ld.RotationYawPitchRoll(this._y, this._x, this._z)
       }
-      addInPlace(bb) {
-        return this._x += bb._x, this._y += bb._y, this._z += bb._z, this._isDirty = !0, this
+      addInPlace(dd) {
+        return this._x += dd._x, this._y += dd._y, this._z += dd._z, this._isDirty = !0, this
       }
-      addInPlaceFromFloats(bb, ub, hb) {
-        return this._x += bb, this._y += ub, this._z += hb, this._isDirty = !0, this
+      addInPlaceFromFloats(dd, Jd, kd) {
+        return this._x += dd, this._y += Jd, this._z += kd, this._isDirty = !0, this
       }
-      add(bb) {
-        return new wb(this._x + bb._x, this._y + bb._y, this._z + bb._z)
+      add(dd) {
+        return new ld(this._x + dd._x, this._y + dd._y, this._z + dd._z)
       }
-      addToRef(bb, ub) {
-        return ub._x = this._x + bb._x, ub._y = this._y + bb._y, ub._z = this._z + bb._z, ub._isDirty = !0, ub
+      addToRef(dd, Jd) {
+        return Jd._x = this._x + dd._x, Jd._y = this._y + dd._y, Jd._z = this._z + dd._z, Jd._isDirty = !0, Jd
       }
-      tBb(bb) {
-        return this._x -= bb._x, this._y -= bb._y, this._z -= bb._z, this._isDirty = !0, this
+      hpd(dd) {
+        return this._x -= dd._x, this._y -= dd._y, this._z -= dd._z, this._isDirty = !0, this
       }
-      subtract(bb) {
-        return new wb(this._x - bb._x, this._y - bb._y, this._z - bb._z)
+      subtract(dd) {
+        return new ld(this._x - dd._x, this._y - dd._y, this._z - dd._z)
       }
-      subtractToRef(bb, ub) {
-        return this.subtractFromFloatsToRef(bb._x, bb._y, bb._z, ub)
+      subtractToRef(dd, Jd) {
+        return this.subtractFromFloatsToRef(dd._x, dd._y, dd._z, Jd)
       }
-      subtractFromFloats(bb, ub, hb) {
-        return new wb(this._x - bb, this._y - ub, this._z - hb)
+      subtractFromFloats(dd, Jd, kd) {
+        return new ld(this._x - dd, this._y - Jd, this._z - kd)
       }
-      subtractFromFloatsToRef(bb, ub, hb, Bb) {
-        return Bb._x = this._x - bb, Bb._y = this._y - ub, Bb._z = this._z - hb, Bb._isDirty = !0, Bb
+      subtractFromFloatsToRef(dd, Jd, kd, pd) {
+        return pd._x = this._x - dd, pd._y = this._y - Jd, pd._z = this._z - kd, pd._isDirty = !0, pd
       }
-      AO() {
-        return new wb(-this._x, -this._y, -this._z)
+      ck() {
+        return new ld(-this._x, -this._y, -this._z)
       }
       negateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
-      negateToRef(bb) {
-        return bb._x = -1 * this._x, bb._y = -1 * this._y, bb._z = -1 * this._z, bb._isDirty = !0, bb
+      negateToRef(dd) {
+        return dd._x = -1 * this._x, dd._y = -1 * this._y, dd._z = -1 * this._z, dd._isDirty = !0, dd
       }
-      scaleInPlace(bb) {
-        return this._x *= bb, this._y *= bb, this._z *= bb, this._isDirty = !0, this
+      scaleInPlace(dd) {
+        return this._x *= dd, this._y *= dd, this._z *= dd, this._isDirty = !0, this
       }
-      scale(bb) {
-        return new wb(this._x * bb, this._y * bb, this._z * bb)
+      scale(dd) {
+        return new ld(this._x * dd, this._y * dd, this._z * dd)
       }
-      scaleToRef(bb, ub) {
-        return ub._x = this._x * bb, ub._y = this._y * bb, ub._z = this._z * bb, ub._isDirty = !0, ub
+      scaleToRef(dd, Jd) {
+        return Jd._x = this._x * dd, Jd._y = this._y * dd, Jd._z = this._z * dd, Jd._isDirty = !0, Jd
       }
-      getNormalToRef(bb) {
-        const ub = this.length();
-        let hb = Math.acos(this._y / ub);
-        const Bb = Math.atan2(this._z, this._x);
-        hb > Math.PI / 2 ? hb -= Math.PI / 2 : hb += Math.PI / 2;
-        const Ob = ub * Math.sin(hb) * Math.cos(Bb),
-          Gb = ub * Math.cos(hb),
-          Ub = ub * Math.sin(hb) * Math.sin(Bb);
-        return bb.set(Ob, Gb, Ub), bb
+      getNormalToRef(dd) {
+        const Jd = this.length();
+        let kd = Math.acos(this._y / Jd);
+        const pd = Math.atan2(this._z, this._x);
+        kd > Math.PI / 2 ? kd -= Math.PI / 2 : kd += Math.PI / 2;
+        const Nd = Jd * Math.sin(kd) * Math.cos(pd),
+          Wd = Jd * Math.cos(kd),
+          Pd = Jd * Math.sin(kd) * Math.sin(pd);
+        return dd.set(Nd, Wd, Pd), dd
       }
-      applyRotationQuaternionToRef(bb, ub) {
-        const hb = this._x,
-          Bb = this._y,
-          Ob = this._z,
-          Gb = bb._x,
-          Ub = bb._y,
-          Lb = bb._z,
-          Yb = bb._w,
-          Sb = 2 * (Ub * Ob - Lb * Bb),
-          ab = 2 * (Lb * hb - Gb * Ob),
-          Hb = 2 * (Gb * Bb - Ub * hb);
-        return ub._x = hb + Yb * Sb + Ub * Hb - Lb * ab, ub._y = Bb + Yb * ab + Lb * Sb - Gb * Hb, ub._z = Ob + Yb * Hb + Gb * ab - Ub * Sb, ub._isDirty = !0, ub
+      applyRotationQuaternionToRef(dd, Jd) {
+        const kd = this._x,
+          pd = this._y,
+          Nd = this._z,
+          Wd = dd._x,
+          Pd = dd._y,
+          Zd = dd._z,
+          gd = dd._w,
+          Cd = 2 * (Pd * Nd - Zd * pd),
+          Kd = 2 * (Zd * kd - Wd * Nd),
+          od = 2 * (Wd * pd - Pd * kd);
+        return Jd._x = kd + gd * Cd + Pd * od - Zd * Kd, Jd._y = pd + gd * Kd + Zd * Cd - Wd * od, Jd._z = Nd + gd * od + Wd * Kd - Pd * Cd, Jd._isDirty = !0, Jd
       }
-      applyRotationQuaternionInPlace(bb) {
-        return this.applyRotationQuaternionToRef(bb, this)
+      applyRotationQuaternionInPlace(dd) {
+        return this.applyRotationQuaternionToRef(dd, this)
       }
-      applyRotationQuaternion(bb) {
-        return this.applyRotationQuaternionToRef(bb, new wb)
+      applyRotationQuaternion(dd) {
+        return this.applyRotationQuaternionToRef(dd, new ld)
       }
-      scaleAndAddToRef(bb, ub) {
-        return ub._x += this._x * bb, ub._y += this._y * bb, ub._z += this._z * bb, ub._isDirty = !0, ub
+      scaleAndAddToRef(dd, Jd) {
+        return Jd._x += this._x * dd, Jd._y += this._y * dd, Jd._z += this._z * dd, Jd._isDirty = !0, Jd
       }
-      projectOnPlane(bb, ub) {
-        return this.projectOnPlaneToRef(bb, ub, new wb)
+      projectOnPlane(dd, Jd) {
+        return this.projectOnPlaneToRef(dd, Jd, new ld)
       }
-      projectOnPlaneToRef(bb, ub, hb) {
-        const Bb = bb.normal,
-          Ob = bb.d,
-          Gb = ob.YX[0];
-        this.subtractToRef(ub, Gb), Gb.normalize();
-        const Ub = wb.Dot(Gb, Bb);
-        if (Math.abs(Ub) < 1e-10) hb.N9(1 / 0);
+      projectOnPlaneToRef(dd, Jd, kd) {
+        const pd = dd.normal,
+          Nd = dd.d,
+          Wd = ed.IL[0];
+        this.subtractToRef(Jd, Wd), Wd.normalize();
+        const Pd = ld.Dot(Wd, pd);
+        if (Math.abs(Pd) < 1e-10) kd.o5(1 / 0);
         else {
-          const bb = -(wb.Dot(ub, Bb) + Ob) / Ub,
-            Lb = Gb.scaleInPlace(bb);
-          ub.addToRef(Lb, hb)
+          const dd = -(ld.Dot(Jd, pd) + Nd) / Pd,
+            Zd = Wd.scaleInPlace(dd);
+          Jd.addToRef(Zd, kd)
         }
-        return hb
+        return kd
       }
-      equals(bb) {
-        return bb && this._x === bb._x && this._y === bb._y && this._z === bb._z
+      equals(dd) {
+        return dd && this._x === dd._x && this._y === dd._y && this._z === dd._z
       }
-      equalsWithEpsilon(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Bb.b;
-        return bb && (0, Lb.WithinEpsilon)(this._x, bb._x, ub) && (0, Lb.WithinEpsilon)(this._y, bb._y, ub) && (0, Lb.WithinEpsilon)(this._z, bb._z, ub)
+      equalsWithEpsilon(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.e;
+        return dd && (0, Zd.WithinEpsilon)(this._x, dd._x, Jd) && (0, Zd.WithinEpsilon)(this._y, dd._y, Jd) && (0, Zd.WithinEpsilon)(this._z, dd._z, Jd)
       }
-      sUb(bb, ub, hb) {
-        return this._x === bb && this._y === ub && this._z === hb
+      zPd(dd, Jd, kd) {
+        return this._x === dd && this._y === Jd && this._z === kd
       }
-      multiplyInPlace(bb) {
-        return this._x *= bb._x, this._y *= bb._y, this._z *= bb._z, this._isDirty = !0, this
+      multiplyInPlace(dd) {
+        return this._x *= dd._x, this._y *= dd._y, this._z *= dd._z, this._isDirty = !0, this
       }
-      multiply(bb) {
-        return this.multiplyByFloats(bb._x, bb._y, bb._z)
+      multiply(dd) {
+        return this.multiplyByFloats(dd._x, dd._y, dd._z)
       }
-      multiplyToRef(bb, ub) {
-        return ub._x = this._x * bb._x, ub._y = this._y * bb._y, ub._z = this._z * bb._z, ub._isDirty = !0, ub
+      multiplyToRef(dd, Jd) {
+        return Jd._x = this._x * dd._x, Jd._y = this._y * dd._y, Jd._z = this._z * dd._z, Jd._isDirty = !0, Jd
       }
-      multiplyByFloats(bb, ub, hb) {
-        return new wb(this._x * bb, this._y * ub, this._z * hb)
+      multiplyByFloats(dd, Jd, kd) {
+        return new ld(this._x * dd, this._y * Jd, this._z * kd)
       }
-      divide(bb) {
-        return new wb(this._x / bb._x, this._y / bb._y, this._z / bb._z)
+      divide(dd) {
+        return new ld(this._x / dd._x, this._y / dd._y, this._z / dd._z)
       }
-      divideToRef(bb, ub) {
-        return ub._x = this._x / bb._x, ub._y = this._y / bb._y, ub._z = this._z / bb._z, ub._isDirty = !0, ub
+      divideToRef(dd, Jd) {
+        return Jd._x = this._x / dd._x, Jd._y = this._y / dd._y, Jd._z = this._z / dd._z, Jd._isDirty = !0, Jd
       }
-      divideInPlace(bb) {
-        return this._x = this._x / bb._x, this._y = this._y / bb._y, this._z = this._z / bb._z, this._isDirty = !0, this
+      divideInPlace(dd) {
+        return this._x = this._x / dd._x, this._y = this._y / dd._y, this._z = this._z / dd._z, this._isDirty = !0, this
       }
-      minimizeInPlace(bb) {
-        return this.minimizeInPlaceFromFloats(bb._x, bb._y, bb._z)
+      minimizeInPlace(dd) {
+        return this.minimizeInPlaceFromFloats(dd._x, dd._y, dd._z)
       }
-      maximizeInPlace(bb) {
-        return this.maximizeInPlaceFromFloats(bb._x, bb._y, bb._z)
+      maximizeInPlace(dd) {
+        return this.maximizeInPlaceFromFloats(dd._x, dd._y, dd._z)
       }
-      minimizeInPlaceFromFloats(bb, ub, hb) {
-        return bb < this._x && (this.x = bb), ub < this._y && (this.y = ub), hb < this._z && (this.z = hb), this
+      minimizeInPlaceFromFloats(dd, Jd, kd) {
+        return dd < this._x && (this.x = dd), Jd < this._y && (this.y = Jd), kd < this._z && (this.z = kd), this
       }
-      maximizeInPlaceFromFloats(bb, ub, hb) {
-        return bb > this._x && (this.x = bb), ub > this._y && (this.y = ub), hb > this._z && (this.z = hb), this
+      maximizeInPlaceFromFloats(dd, Jd, kd) {
+        return dd > this._x && (this.x = dd), Jd > this._y && (this.y = Jd), kd > this._z && (this.z = kd), this
       }
-      isNonUniformWithinEpsilon(bb) {
-        const ub = Math.abs(this._x),
-          hb = Math.abs(this._y);
-        if (!(0, Lb.WithinEpsilon)(ub, hb, bb)) return !0;
-        const Bb = Math.abs(this._z);
-        return !(0, Lb.WithinEpsilon)(ub, Bb, bb) || !(0, Lb.WithinEpsilon)(hb, Bb, bb)
+      isNonUniformWithinEpsilon(dd) {
+        const Jd = Math.abs(this._x),
+          kd = Math.abs(this._y);
+        if (!(0, Zd.WithinEpsilon)(Jd, kd, dd)) return !0;
+        const pd = Math.abs(this._z);
+        return !(0, Zd.WithinEpsilon)(Jd, pd, dd) || !(0, Zd.WithinEpsilon)(kd, pd, dd)
       }
       get isNonUniform() {
-        const bb = Math.abs(this._x);
-        if (bb !== Math.abs(this._y)) return !0;
-        return bb !== Math.abs(this._z)
+        const dd = Math.abs(this._x);
+        if (dd !== Math.abs(this._y)) return !0;
+        return dd !== Math.abs(this._z)
       }
-      floorToRef(bb) {
-        return bb._x = Math.floor(this._x), bb._y = Math.floor(this._y), bb._z = Math.floor(this._z), bb._isDirty = !0, bb
+      floorToRef(dd) {
+        return dd._x = Math.floor(this._x), dd._y = Math.floor(this._y), dd._z = Math.floor(this._z), dd._isDirty = !0, dd
       }
       floor() {
-        return new wb(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
+        return new ld(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z))
       }
-      fractToRef(bb) {
-        return bb._x = this._x - Math.floor(this._x), bb._y = this._y - Math.floor(this._y), bb._z = this._z - Math.floor(this._z), bb._isDirty = !0, bb
+      fractToRef(dd) {
+        return dd._x = this._x - Math.floor(this._x), dd._y = this._y - Math.floor(this._y), dd._z = this._z - Math.floor(this._z), dd._isDirty = !0, dd
       }
       fract() {
-        return new wb(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
+        return new ld(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z))
       }
       length() {
         return Math.sqrt(this.lengthSquared())
@@ -709,438 +709,438 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      reorderInPlace(bb) {
-        if ("xyz" === (bb = bb.toLowerCase())) return this;
-        const ub = ob.YX[0].mD(this);
-        return this.x = ub[bb[0]], this.y = ub[bb[1]], this.z = ub[bb[2]], this
+      reorderInPlace(dd) {
+        if ("xyz" === (dd = dd.toLowerCase())) return this;
+        const Jd = ed.IL[0].Fs(this);
+        return this.x = Jd[dd[0]], this.y = Jd[dd[1]], this.z = Jd[dd[2]], this
       }
-      rotateByQuaternionToRef(bb, ub) {
-        return bb.toRotationMatrix(ob.Matrix[0]), wb.TransformCoordinatesToRef(this, ob.Matrix[0], ub), ub
+      rotateByQuaternionToRef(dd, Jd) {
+        return dd.toRotationMatrix(ed.Matrix[0]), ld.TransformCoordinatesToRef(this, ed.Matrix[0], Jd), Jd
       }
-      rotateByQuaternionAroundPointToRef(bb, ub, hb) {
-        return this.subtractToRef(ub, ob.YX[0]), ob.YX[0].rotateByQuaternionToRef(bb, ob.YX[0]), ub.addToRef(ob.YX[0], hb), hb
+      rotateByQuaternionAroundPointToRef(dd, Jd, kd) {
+        return this.subtractToRef(Jd, ed.IL[0]), ed.IL[0].rotateByQuaternionToRef(dd, ed.IL[0]), Jd.addToRef(ed.IL[0], kd), kd
       }
-      cross(bb) {
-        return wb.CrossToRef(this, bb, new wb)
+      cross(dd) {
+        return ld.CrossToRef(this, dd, new ld)
       }
-      normalizeFromLength(bb) {
-        return 0 === bb || 1 === bb ? this : this.scaleInPlace(1 / bb)
+      normalizeFromLength(dd) {
+        return 0 === dd || 1 === dd ? this : this.scaleInPlace(1 / dd)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new wb)
+        return this.normalizeToRef(new ld)
       }
-      normalizeToRef(bb) {
-        const ub = this.length();
-        return 0 === ub || 1 === ub ? (bb._x = this._x, bb._y = this._y, bb._z = this._z, bb._isDirty = !0, bb) : this.scaleToRef(1 / ub, bb)
+      normalizeToRef(dd) {
+        const Jd = this.length();
+        return 0 === Jd || 1 === Jd ? (dd._x = this._x, dd._y = this._y, dd._z = this._z, dd._isDirty = !0, dd) : this.scaleToRef(1 / Jd, dd)
       }
       clone() {
-        return new wb(this._x, this._y, this._z)
+        return new ld(this._x, this._y, this._z)
       }
-      mD(bb) {
-        return this.M_(bb._x, bb._y, bb._z)
+      Fs(dd) {
+        return this.kdd(dd._x, dd._y, dd._z)
       }
-      M_(bb, ub, hb) {
-        return this._x = bb, this._y = ub, this._z = hb, this._isDirty = !0, this
+      kdd(dd, Jd, kd) {
+        return this._x = dd, this._y = Jd, this._z = kd, this._isDirty = !0, this
       }
-      set(bb, ub, hb) {
-        return this.M_(bb, ub, hb)
+      set(dd, Jd, kd) {
+        return this.kdd(dd, Jd, kd)
       }
-      N9(bb) {
-        return this._x = this._y = this._z = bb, this._isDirty = !0, this
+      o5(dd) {
+        return this._x = this._y = this._z = dd, this._isDirty = !0, this
       }
-      static GetClipFactor(bb, ub, hb, Bb) {
-        const Ob = wb.Dot(bb, hb);
-        return (Ob - Bb) / (Ob - wb.Dot(ub, hb))
+      static GetClipFactor(dd, Jd, kd, pd) {
+        const Nd = ld.Dot(dd, kd);
+        return (Nd - pd) / (Nd - ld.Dot(Jd, kd))
       }
-      static GetAngleBetweenVectors(bb, ub, hb) {
-        const Bb = bb.normalizeToRef(ob.YX[1]),
-          Ob = ub.normalizeToRef(ob.YX[2]);
-        let Gb = wb.Dot(Bb, Ob);
-        Gb = (0, Lb.Clamp)(Gb, -1, 1);
-        const Ub = Math.acos(Gb),
-          Yb = ob.YX[3];
-        return wb.CrossToRef(Bb, Ob, Yb), wb.Dot(Yb, hb) > 0 ? isNaN(Ub) ? 0 : Ub : isNaN(Ub) ? -Math.PI : -Math.acos(Gb)
+      static GetAngleBetweenVectors(dd, Jd, kd) {
+        const pd = dd.normalizeToRef(ed.IL[1]),
+          Nd = Jd.normalizeToRef(ed.IL[2]);
+        let Wd = ld.Dot(pd, Nd);
+        Wd = (0, Zd.Clamp)(Wd, -1, 1);
+        const Pd = Math.acos(Wd),
+          gd = ed.IL[3];
+        return ld.CrossToRef(pd, Nd, gd), ld.Dot(gd, kd) > 0 ? isNaN(Pd) ? 0 : Pd : isNaN(Pd) ? -Math.PI : -Math.acos(Wd)
       }
-      static GetAngleBetweenVectorsOnPlane(bb, ub, hb) {
-        ob.YX[0].mD(bb);
-        const Bb = ob.YX[0];
-        ob.YX[1].mD(ub);
-        const Ob = ob.YX[1];
-        ob.YX[2].mD(hb);
-        const Gb = ob.YX[2],
-          Ub = ob.YX[3],
-          Yb = ob.YX[4];
-        Bb.normalize(), Ob.normalize(), Gb.normalize(), wb.CrossToRef(Gb, Bb, Ub), wb.CrossToRef(Ub, Gb, Yb);
-        const Sb = Math.atan2(wb.Dot(Ob, Ub), wb.Dot(Ob, Yb));
-        return (0, Lb.NormalizeRadians)(Sb)
+      static GetAngleBetweenVectorsOnPlane(dd, Jd, kd) {
+        ed.IL[0].Fs(dd);
+        const pd = ed.IL[0];
+        ed.IL[1].Fs(Jd);
+        const Nd = ed.IL[1];
+        ed.IL[2].Fs(kd);
+        const Wd = ed.IL[2],
+          Pd = ed.IL[3],
+          gd = ed.IL[4];
+        pd.normalize(), Nd.normalize(), Wd.normalize(), ld.CrossToRef(Wd, pd, Pd), ld.CrossToRef(Pd, Wd, gd);
+        const Cd = Math.atan2(ld.Dot(Nd, Pd), ld.Dot(Nd, gd));
+        return (0, Zd.NormalizeRadians)(Cd)
       }
-      static PitchYawRollToMoveBetweenPointsToRef(bb, ub, hb) {
-        const Bb = Ab.YX[0];
-        return ub.subtractToRef(bb, Bb), hb._y = Math.atan2(Bb.x, Bb.z) || 0, hb._x = Math.atan2(Math.sqrt(Bb.x ** 2 + Bb.z ** 2), Bb.y) || 0, hb._z = 0, hb._isDirty = !0, hb
+      static PitchYawRollToMoveBetweenPointsToRef(dd, Jd, kd) {
+        const pd = Rd.IL[0];
+        return Jd.subtractToRef(dd, pd), kd._y = Math.atan2(pd.x, pd.z) || 0, kd._x = Math.atan2(Math.sqrt(pd.x ** 2 + pd.z ** 2), pd.y) || 0, kd._z = 0, kd._isDirty = !0, kd
       }
-      static PitchYawRollToMoveBetweenPoints(bb, ub) {
-        const hb = wb.Zero();
-        return wb.PitchYawRollToMoveBetweenPointsToRef(bb, ub, hb)
+      static PitchYawRollToMoveBetweenPoints(dd, Jd) {
+        const kd = ld.Zero();
+        return ld.PitchYawRollToMoveBetweenPointsToRef(dd, Jd, kd)
       }
-      static SlerpToRef(bb, ub, hb, Ob) {
-        hb = (0, Lb.Clamp)(hb, 0, 1);
-        const Gb = ob.YX[0],
-          Ub = ob.YX[1];
-        Gb.mD(bb);
-        const Yb = Gb.length();
-        Gb.normalizeFromLength(Yb), Ub.mD(ub);
-        const Sb = Ub.length();
-        Ub.normalizeFromLength(Sb);
-        const ab = wb.Dot(Gb, Ub);
-        let Hb, Zb;
-        if (ab < 1 - Bb.b) {
-          const bb = Math.acos(ab),
-            ub = 1 / Math.sin(bb);
-          Hb = Math.sin((1 - hb) * bb) * ub, Zb = Math.sin(hb * bb) * ub
-        } else Hb = 1 - hb, Zb = hb;
-        return Gb.scaleInPlace(Hb), Ub.scaleInPlace(Zb), Ob.mD(Gb).addInPlace(Ub), Ob.scaleInPlace((0, Lb.Lerp)(Yb, Sb, hb)), Ob
+      static SlerpToRef(dd, Jd, kd, Nd) {
+        kd = (0, Zd.Clamp)(kd, 0, 1);
+        const Wd = ed.IL[0],
+          Pd = ed.IL[1];
+        Wd.Fs(dd);
+        const gd = Wd.length();
+        Wd.normalizeFromLength(gd), Pd.Fs(Jd);
+        const Cd = Pd.length();
+        Pd.normalizeFromLength(Cd);
+        const Kd = ld.Dot(Wd, Pd);
+        let od, Qd;
+        if (Kd < 1 - pd.e) {
+          const dd = Math.acos(Kd),
+            Jd = 1 / Math.sin(dd);
+          od = Math.sin((1 - kd) * dd) * Jd, Qd = Math.sin(kd * dd) * Jd
+        } else od = 1 - kd, Qd = kd;
+        return Wd.scaleInPlace(od), Pd.scaleInPlace(Qd), Nd.Fs(Wd).addInPlace(Pd), Nd.scaleInPlace((0, Zd.Lerp)(gd, Cd, kd)), Nd
       }
-      static SmoothToRef(bb, ub, hb, Bb, Ob) {
-        return wb.SlerpToRef(bb, ub, 0 === Bb ? 1 : hb / Bb, Ob), Ob
+      static SmoothToRef(dd, Jd, kd, pd, Nd) {
+        return ld.SlerpToRef(dd, Jd, 0 === pd ? 1 : kd / pd, Nd), Nd
       }
-      static FromArray(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new wb(bb[ub], bb[ub + 1], bb[ub + 2])
+      static FromArray(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new ld(dd[Jd], dd[Jd + 1], dd[Jd + 2])
       }
-      static FromFloatArray(bb, ub) {
-        return wb.FromArray(bb, ub)
+      static FromFloatArray(dd, Jd) {
+        return ld.FromArray(dd, Jd)
       }
-      static FromArrayToRef(bb, ub, hb) {
-        return hb._x = bb[ub], hb._y = bb[ub + 1], hb._z = bb[ub + 2], hb._isDirty = !0, hb
+      static FromArrayToRef(dd, Jd, kd) {
+        return kd._x = dd[Jd], kd._y = dd[Jd + 1], kd._z = dd[Jd + 2], kd._isDirty = !0, kd
       }
-      static FromFloatArrayToRef(bb, ub, hb) {
-        return wb.FromArrayToRef(bb, ub, hb)
+      static FromFloatArrayToRef(dd, Jd, kd) {
+        return ld.FromArrayToRef(dd, Jd, kd)
       }
-      static FromFloatsToRef(bb, ub, hb, Bb) {
-        return Bb.M_(bb, ub, hb), Bb
+      static FromFloatsToRef(dd, Jd, kd, pd) {
+        return pd.kdd(dd, Jd, kd), pd
       }
       static Zero() {
-        return new wb(0, 0, 0)
+        return new ld(0, 0, 0)
       }
       static One() {
-        return new wb(1, 1, 1)
+        return new ld(1, 1, 1)
       }
       static Up() {
-        return new wb(0, 1, 0)
+        return new ld(0, 1, 0)
       }
       static get UpReadOnly() {
-        return wb._UpReadOnly
+        return ld._UpReadOnly
       }
       static get DownReadOnly() {
-        return wb._DownReadOnly
+        return ld._DownReadOnly
       }
       static get RightReadOnly() {
-        return wb._RightReadOnly
+        return ld._RightReadOnly
       }
       static get LeftReadOnly() {
-        return wb._LeftReadOnly
+        return ld._LeftReadOnly
       }
       static get LeftHandedForwardReadOnly() {
-        return wb._LeftHandedForwardReadOnly
+        return ld._LeftHandedForwardReadOnly
       }
       static get RightHandedForwardReadOnly() {
-        return wb._RightHandedForwardReadOnly
+        return ld._RightHandedForwardReadOnly
       }
       static get LeftHandedBackwardReadOnly() {
-        return wb._LeftHandedBackwardReadOnly
+        return ld._LeftHandedBackwardReadOnly
       }
       static get RightHandedBackwardReadOnly() {
-        return wb._RightHandedBackwardReadOnly
+        return ld._RightHandedBackwardReadOnly
       }
       static get ZeroReadOnly() {
-        return wb._ZeroReadOnly
+        return ld._ZeroReadOnly
       }
       static get OneReadOnly() {
-        return wb._OneReadOnly
+        return ld._OneReadOnly
       }
       static Down() {
-        return new wb(0, -1, 0)
+        return new ld(0, -1, 0)
       }
       static Forward() {
-        return new wb(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
+        return new ld(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? -1 : 1)
       }
       static Backward() {
-        return new wb(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
+        return new ld(0, 0, arguments.length > 0 && void 0 !== arguments[0] && arguments[0] ? 1 : -1)
       }
       static Right() {
-        return new wb(1, 0, 0)
+        return new ld(1, 0, 0)
       }
       static Left() {
-        return new wb(-1, 0, 0)
+        return new ld(-1, 0, 0)
       }
       static Random() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new wb((0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new ld((0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd))
       }
       static RandomToRef() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).M_((0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).kdd((0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd))
       }
-      static TransformCoordinates(bb, ub) {
-        const hb = wb.Zero();
-        return wb.TransformCoordinatesToRef(bb, ub, hb), hb
+      static TransformCoordinates(dd, Jd) {
+        const kd = ld.Zero();
+        return ld.TransformCoordinatesToRef(dd, Jd, kd), kd
       }
-      static TransformCoordinatesToRef(bb, ub, hb) {
-        return wb.TransformCoordinatesFromFloatsToRef(bb._x, bb._y, bb._z, ub, hb), hb
+      static TransformCoordinatesToRef(dd, Jd, kd) {
+        return ld.TransformCoordinatesFromFloatsToRef(dd._x, dd._y, dd._z, Jd, kd), kd
       }
-      static TransformCoordinatesFromFloatsToRef(bb, ub, hb, Bb, Ob) {
-        const Gb = Bb.m,
-          Ub = bb * Gb[0] + ub * Gb[4] + hb * Gb[8] + Gb[12],
-          Lb = bb * Gb[1] + ub * Gb[5] + hb * Gb[9] + Gb[13],
-          Yb = bb * Gb[2] + ub * Gb[6] + hb * Gb[10] + Gb[14],
-          Sb = 1 / (bb * Gb[3] + ub * Gb[7] + hb * Gb[11] + Gb[15]);
-        return Ob._x = Ub * Sb, Ob._y = Lb * Sb, Ob._z = Yb * Sb, Ob._isDirty = !0, Ob
+      static TransformCoordinatesFromFloatsToRef(dd, Jd, kd, pd, Nd) {
+        const Wd = pd.m,
+          Pd = dd * Wd[0] + Jd * Wd[4] + kd * Wd[8] + Wd[12],
+          Zd = dd * Wd[1] + Jd * Wd[5] + kd * Wd[9] + Wd[13],
+          gd = dd * Wd[2] + Jd * Wd[6] + kd * Wd[10] + Wd[14],
+          Cd = 1 / (dd * Wd[3] + Jd * Wd[7] + kd * Wd[11] + Wd[15]);
+        return Nd._x = Pd * Cd, Nd._y = Zd * Cd, Nd._z = gd * Cd, Nd._isDirty = !0, Nd
       }
-      static TransformNormal(bb, ub) {
-        const hb = wb.Zero();
-        return wb.TransformNormalToRef(bb, ub, hb), hb
+      static TransformNormal(dd, Jd) {
+        const kd = ld.Zero();
+        return ld.TransformNormalToRef(dd, Jd, kd), kd
       }
-      static TransformNormalToRef(bb, ub, hb) {
-        return this.TransformNormalFromFloatsToRef(bb._x, bb._y, bb._z, ub, hb), hb
+      static TransformNormalToRef(dd, Jd, kd) {
+        return this.TransformNormalFromFloatsToRef(dd._x, dd._y, dd._z, Jd, kd), kd
       }
-      static TransformNormalFromFloatsToRef(bb, ub, hb, Bb, Ob) {
-        const Gb = Bb.m;
-        return Ob._x = bb * Gb[0] + ub * Gb[4] + hb * Gb[8], Ob._y = bb * Gb[1] + ub * Gb[5] + hb * Gb[9], Ob._z = bb * Gb[2] + ub * Gb[6] + hb * Gb[10], Ob._isDirty = !0, Ob
+      static TransformNormalFromFloatsToRef(dd, Jd, kd, pd, Nd) {
+        const Wd = pd.m;
+        return Nd._x = dd * Wd[0] + Jd * Wd[4] + kd * Wd[8], Nd._y = dd * Wd[1] + Jd * Wd[5] + kd * Wd[9], Nd._z = dd * Wd[2] + Jd * Wd[6] + kd * Wd[10], Nd._isDirty = !0, Nd
       }
-      static CatmullRom(bb, ub, hb, Bb, Ob) {
-        const Gb = Ob * Ob,
-          Ub = Ob * Gb,
-          Lb = .5 * (2 * ub._x + (-bb._x + hb._x) * Ob + (2 * bb._x - 5 * ub._x + 4 * hb._x - Bb._x) * Gb + (-bb._x + 3 * ub._x - 3 * hb._x + Bb._x) * Ub),
-          Yb = .5 * (2 * ub._y + (-bb._y + hb._y) * Ob + (2 * bb._y - 5 * ub._y + 4 * hb._y - Bb._y) * Gb + (-bb._y + 3 * ub._y - 3 * hb._y + Bb._y) * Ub),
-          Sb = .5 * (2 * ub._z + (-bb._z + hb._z) * Ob + (2 * bb._z - 5 * ub._z + 4 * hb._z - Bb._z) * Gb + (-bb._z + 3 * ub._z - 3 * hb._z + Bb._z) * Ub);
-        return new wb(Lb, Yb, Sb)
+      static CatmullRom(dd, Jd, kd, pd, Nd) {
+        const Wd = Nd * Nd,
+          Pd = Nd * Wd,
+          Zd = .5 * (2 * Jd._x + (-dd._x + kd._x) * Nd + (2 * dd._x - 5 * Jd._x + 4 * kd._x - pd._x) * Wd + (-dd._x + 3 * Jd._x - 3 * kd._x + pd._x) * Pd),
+          gd = .5 * (2 * Jd._y + (-dd._y + kd._y) * Nd + (2 * dd._y - 5 * Jd._y + 4 * kd._y - pd._y) * Wd + (-dd._y + 3 * Jd._y - 3 * kd._y + pd._y) * Pd),
+          Cd = .5 * (2 * Jd._z + (-dd._z + kd._z) * Nd + (2 * dd._z - 5 * Jd._z + 4 * kd._z - pd._z) * Wd + (-dd._z + 3 * Jd._z - 3 * kd._z + pd._z) * Pd);
+        return new ld(Zd, gd, Cd)
       }
-      static Clamp(bb, ub, hb) {
-        const Bb = new wb;
-        return wb.ClampToRef(bb, ub, hb, Bb), Bb
+      static Clamp(dd, Jd, kd) {
+        const pd = new ld;
+        return ld.ClampToRef(dd, Jd, kd, pd), pd
       }
-      static ClampToRef(bb, ub, hb, Bb) {
-        let Ob = bb._x;
-        Ob = Ob > hb._x ? hb._x : Ob, Ob = Ob < ub._x ? ub._x : Ob;
-        let Gb = bb._y;
-        Gb = Gb > hb._y ? hb._y : Gb, Gb = Gb < ub._y ? ub._y : Gb;
-        let Ub = bb._z;
-        return Ub = Ub > hb._z ? hb._z : Ub, Ub = Ub < ub._z ? ub._z : Ub, Bb.M_(Ob, Gb, Ub), Bb
+      static ClampToRef(dd, Jd, kd, pd) {
+        let Nd = dd._x;
+        Nd = Nd > kd._x ? kd._x : Nd, Nd = Nd < Jd._x ? Jd._x : Nd;
+        let Wd = dd._y;
+        Wd = Wd > kd._y ? kd._y : Wd, Wd = Wd < Jd._y ? Jd._y : Wd;
+        let Pd = dd._z;
+        return Pd = Pd > kd._z ? kd._z : Pd, Pd = Pd < Jd._z ? Jd._z : Pd, pd.kdd(Nd, Wd, Pd), pd
       }
-      static CheckExtends(bb, ub, hb) {
-        ub.minimizeInPlace(bb), hb.maximizeInPlace(bb)
+      static CheckExtends(dd, Jd, kd) {
+        Jd.minimizeInPlace(dd), kd.maximizeInPlace(dd)
       }
-      static Hermite(bb, ub, hb, Bb, Ob) {
-        const Gb = Ob * Ob,
-          Ub = Ob * Gb,
-          Lb = 2 * Ub - 3 * Gb + 1,
-          Yb = -2 * Ub + 3 * Gb,
-          Sb = Ub - 2 * Gb + Ob,
-          ab = Ub - Gb,
-          Hb = bb._x * Lb + hb._x * Yb + ub._x * Sb + Bb._x * ab,
-          Zb = bb._y * Lb + hb._y * Yb + ub._y * Sb + Bb._y * ab,
-          Xb = bb._z * Lb + hb._z * Yb + ub._z * Sb + Bb._z * ab;
-        return new wb(Hb, Zb, Xb)
+      static Hermite(dd, Jd, kd, pd, Nd) {
+        const Wd = Nd * Nd,
+          Pd = Nd * Wd,
+          Zd = 2 * Pd - 3 * Wd + 1,
+          gd = -2 * Pd + 3 * Wd,
+          Cd = Pd - 2 * Wd + Nd,
+          Kd = Pd - Wd,
+          od = dd._x * Zd + kd._x * gd + Jd._x * Cd + pd._x * Kd,
+          Qd = dd._y * Zd + kd._y * gd + Jd._y * Cd + pd._y * Kd,
+          Ld = dd._z * Zd + kd._z * gd + Jd._z * Cd + pd._z * Kd;
+        return new ld(od, Qd, Ld)
       }
-      static Hermite1stDerivative(bb, ub, hb, Bb, Ob) {
-        const Gb = new wb;
-        return this.Hermite1stDerivativeToRef(bb, ub, hb, Bb, Ob, Gb), Gb
+      static Hermite1stDerivative(dd, Jd, kd, pd, Nd) {
+        const Wd = new ld;
+        return this.Hermite1stDerivativeToRef(dd, Jd, kd, pd, Nd, Wd), Wd
       }
-      static Hermite1stDerivativeToRef(bb, ub, hb, Bb, Ob, Gb) {
-        const Ub = Ob * Ob;
-        return Gb._x = 6 * (Ub - Ob) * bb._x + (3 * Ub - 4 * Ob + 1) * ub._x + 6 * (-Ub + Ob) * hb._x + (3 * Ub - 2 * Ob) * Bb._x, Gb._y = 6 * (Ub - Ob) * bb._y + (3 * Ub - 4 * Ob + 1) * ub._y + 6 * (-Ub + Ob) * hb._y + (3 * Ub - 2 * Ob) * Bb._y, Gb._z = 6 * (Ub - Ob) * bb._z + (3 * Ub - 4 * Ob + 1) * ub._z + 6 * (-Ub + Ob) * hb._z + (3 * Ub - 2 * Ob) * Bb._z, Gb._isDirty = !0, Gb
+      static Hermite1stDerivativeToRef(dd, Jd, kd, pd, Nd, Wd) {
+        const Pd = Nd * Nd;
+        return Wd._x = 6 * (Pd - Nd) * dd._x + (3 * Pd - 4 * Nd + 1) * Jd._x + 6 * (-Pd + Nd) * kd._x + (3 * Pd - 2 * Nd) * pd._x, Wd._y = 6 * (Pd - Nd) * dd._y + (3 * Pd - 4 * Nd + 1) * Jd._y + 6 * (-Pd + Nd) * kd._y + (3 * Pd - 2 * Nd) * pd._y, Wd._z = 6 * (Pd - Nd) * dd._z + (3 * Pd - 4 * Nd + 1) * Jd._z + 6 * (-Pd + Nd) * kd._z + (3 * Pd - 2 * Nd) * pd._z, Wd._isDirty = !0, Wd
       }
-      static Lerp(bb, ub, hb) {
-        const Bb = new wb(0, 0, 0);
-        return wb.LerpToRef(bb, ub, hb, Bb), Bb
+      static Lerp(dd, Jd, kd) {
+        const pd = new ld(0, 0, 0);
+        return ld.LerpToRef(dd, Jd, kd, pd), pd
       }
-      static LerpToRef(bb, ub, hb, Bb) {
-        return Bb._x = bb._x + (ub._x - bb._x) * hb, Bb._y = bb._y + (ub._y - bb._y) * hb, Bb._z = bb._z + (ub._z - bb._z) * hb, Bb._isDirty = !0, Bb
+      static LerpToRef(dd, Jd, kd, pd) {
+        return pd._x = dd._x + (Jd._x - dd._x) * kd, pd._y = dd._y + (Jd._y - dd._y) * kd, pd._z = dd._z + (Jd._z - dd._z) * kd, pd._isDirty = !0, pd
       }
-      static Dot(bb, ub) {
-        return bb._x * ub._x + bb._y * ub._y + bb._z * ub._z
+      static Dot(dd, Jd) {
+        return dd._x * Jd._x + dd._y * Jd._y + dd._z * Jd._z
       }
-      dot(bb) {
-        return this._x * bb._x + this._y * bb._y + this._z * bb._z
+      dot(dd) {
+        return this._x * dd._x + this._y * dd._y + this._z * dd._z
       }
-      static Cross(bb, ub) {
-        const hb = new wb;
-        return wb.CrossToRef(bb, ub, hb), hb
+      static Cross(dd, Jd) {
+        const kd = new ld;
+        return ld.CrossToRef(dd, Jd, kd), kd
       }
-      static CrossToRef(bb, ub, hb) {
-        const Bb = bb._y * ub._z - bb._z * ub._y,
-          Ob = bb._z * ub._x - bb._x * ub._z,
-          Gb = bb._x * ub._y - bb._y * ub._x;
-        return hb.M_(Bb, Ob, Gb), hb
+      static CrossToRef(dd, Jd, kd) {
+        const pd = dd._y * Jd._z - dd._z * Jd._y,
+          Nd = dd._z * Jd._x - dd._x * Jd._z,
+          Wd = dd._x * Jd._y - dd._y * Jd._x;
+        return kd.kdd(pd, Nd, Wd), kd
       }
-      static Normalize(bb) {
-        const ub = wb.Zero();
-        return wb.NormalizeToRef(bb, ub), ub
+      static Normalize(dd) {
+        const Jd = ld.Zero();
+        return ld.NormalizeToRef(dd, Jd), Jd
       }
-      static NormalizeToRef(bb, ub) {
-        return bb.normalizeToRef(ub), ub
+      static NormalizeToRef(dd, Jd) {
+        return dd.normalizeToRef(Jd), Jd
       }
-      static Project(bb, ub, hb, Bb) {
-        const Ob = new wb;
-        return wb.ProjectToRef(bb, ub, hb, Bb, Ob), Ob
+      static Project(dd, Jd, kd, pd) {
+        const Nd = new ld;
+        return ld.ProjectToRef(dd, Jd, kd, pd, Nd), Nd
       }
-      static ProjectToRef(bb, ub, hb, Bb, Ob) {
-        const Gb = Bb.width,
-          Lb = Bb.height,
-          Yb = Bb.x,
-          Sb = Bb.y,
-          ab = ob.Matrix[1],
-          Hb = Ub.b.LastCreatedEngine?.isNDCHalfZRange,
-          Zb = Hb ? 1 : .5,
-          Xb = Hb ? 0 : .5;
-        pb.FromValuesToRef(Gb / 2, 0, 0, 0, 0, -Lb / 2, 0, 0, 0, 0, Zb, 0, Yb + Gb / 2, Lb / 2 + Sb, Xb, 1, ab);
-        const Ab = ob.Matrix[0];
-        return ub.multiplyToRef(hb, Ab), Ab.multiplyToRef(ab, Ab), wb.TransformCoordinatesToRef(bb, Ab, Ob), Ob
+      static ProjectToRef(dd, Jd, kd, pd, Nd) {
+        const Wd = pd.width,
+          Zd = pd.height,
+          gd = pd.x,
+          Cd = pd.y,
+          Kd = ed.Matrix[1],
+          od = Pd.d.LastCreatedEngine?.isNDCHalfZRange,
+          Qd = od ? 1 : .5,
+          Ld = od ? 0 : .5;
+        Od.FromValuesToRef(Wd / 2, 0, 0, 0, 0, -Zd / 2, 0, 0, 0, 0, Qd, 0, gd + Wd / 2, Zd / 2 + Cd, Ld, 1, Kd);
+        const Rd = ed.Matrix[0];
+        return Jd.multiplyToRef(kd, Rd), Rd.multiplyToRef(Kd, Rd), ld.TransformCoordinatesToRef(dd, Rd, Nd), Nd
       }
-      static Reflect(bb, ub) {
-        return this.ReflectToRef(bb, ub, new wb)
+      static Reflect(dd, Jd) {
+        return this.ReflectToRef(dd, Jd, new ld)
       }
-      static ReflectToRef(bb, ub, hb) {
-        const Bb = Ab.YX[0];
-        return Bb.mD(ub).scaleInPlace(2 * wb.Dot(bb, ub)), hb.mD(bb).tBb(Bb)
+      static ReflectToRef(dd, Jd, kd) {
+        const pd = Rd.IL[0];
+        return pd.Fs(Jd).scaleInPlace(2 * ld.Dot(dd, Jd)), kd.Fs(dd).hpd(pd)
       }
-      static UnprojectFromTransform(bb, ub, hb, Bb, Ob) {
-        return this.Unproject(bb, ub, hb, Bb, Ob, pb.IdentityReadOnly)
+      static UnprojectFromTransform(dd, Jd, kd, pd, Nd) {
+        return this.Unproject(dd, Jd, kd, pd, Nd, Od.IdentityReadOnly)
       }
-      static Unproject(bb, ub, hb, Bb, Ob, Gb) {
-        const Ub = new wb;
-        return wb.UnprojectToRef(bb, ub, hb, Bb, Ob, Gb, Ub), Ub
+      static Unproject(dd, Jd, kd, pd, Nd, Wd) {
+        const Pd = new ld;
+        return ld.UnprojectToRef(dd, Jd, kd, pd, Nd, Wd, Pd), Pd
       }
-      static UnprojectToRef(bb, ub, hb, Bb, Ob, Gb, Ub) {
-        return wb.UnprojectFloatsToRef(bb._x, bb._y, bb._z, ub, hb, Bb, Ob, Gb, Ub), Ub
+      static UnprojectToRef(dd, Jd, kd, pd, Nd, Wd, Pd) {
+        return ld.UnprojectFloatsToRef(dd._x, dd._y, dd._z, Jd, kd, pd, Nd, Wd, Pd), Pd
       }
-      static UnprojectFloatsToRef(bb, ub, hb, Bb, Ob, Gb, Lb, Yb, Sb) {
-        const ab = ob.Matrix[0];
-        Gb.multiplyToRef(Lb, ab), ab.multiplyToRef(Yb, ab), ab.invert();
-        const Hb = ob.YX[0];
-        return Hb.x = bb / Bb * 2 - 1, Hb.y = -(ub / Ob * 2 - 1), Ub.b.LastCreatedEngine?.isNDCHalfZRange ? Hb.z = hb : Hb.z = 2 * hb - 1, wb.TransformCoordinatesToRef(Hb, ab, Sb), Sb
+      static UnprojectFloatsToRef(dd, Jd, kd, pd, Nd, Wd, Zd, gd, Cd) {
+        const Kd = ed.Matrix[0];
+        Wd.multiplyToRef(Zd, Kd), Kd.multiplyToRef(gd, Kd), Kd.invert();
+        const od = ed.IL[0];
+        return od.x = dd / pd * 2 - 1, od.y = -(Jd / Nd * 2 - 1), Pd.d.LastCreatedEngine?.isNDCHalfZRange ? od.z = kd : od.z = 2 * kd - 1, ld.TransformCoordinatesToRef(od, Kd, Cd), Cd
       }
-      static Minimize(bb, ub) {
-        const hb = new wb;
-        return hb.mD(bb), hb.minimizeInPlace(ub), hb
+      static Minimize(dd, Jd) {
+        const kd = new ld;
+        return kd.Fs(dd), kd.minimizeInPlace(Jd), kd
       }
-      static Maximize(bb, ub) {
-        const hb = new wb;
-        return hb.mD(bb), hb.maximizeInPlace(ub), hb
+      static Maximize(dd, Jd) {
+        const kd = new ld;
+        return kd.Fs(dd), kd.maximizeInPlace(Jd), kd
       }
-      static Distance(bb, ub) {
-        return Math.sqrt(wb.DistanceSquared(bb, ub))
+      static Distance(dd, Jd) {
+        return Math.sqrt(ld.DistanceSquared(dd, Jd))
       }
-      static DistanceSquared(bb, ub) {
-        const hb = bb._x - ub._x,
-          Bb = bb._y - ub._y,
-          Ob = bb._z - ub._z;
-        return hb * hb + Bb * Bb + Ob * Ob
+      static DistanceSquared(dd, Jd) {
+        const kd = dd._x - Jd._x,
+          pd = dd._y - Jd._y,
+          Nd = dd._z - Jd._z;
+        return kd * kd + pd * pd + Nd * Nd
       }
-      static ProjectOnTriangleToRef(bb, ub, hb, Ob, Gb) {
-        const Ub = ob.YX[0],
-          Yb = ob.YX[1],
-          Sb = ob.YX[2],
-          ab = ob.YX[3],
-          Hb = ob.YX[4];
-        hb.subtractToRef(ub, Ub), Ob.subtractToRef(ub, Yb), Ob.subtractToRef(hb, Sb);
-        const Zb = Ub.length(),
-          Xb = Yb.length(),
-          pb = Sb.length();
-        if (Zb < Bb.b || Xb < Bb.b || pb < Bb.b) return Gb.mD(ub), wb.Distance(bb, ub);
-        bb.subtractToRef(ub, Hb), wb.CrossToRef(Ub, Yb, ab);
-        const Ab = ab.length();
-        if (Ab < Bb.b) return Gb.mD(ub), wb.Distance(bb, ub);
-        ab.normalizeFromLength(Ab);
-        let lb = Hb.length();
-        if (lb < Bb.b) return Gb.mD(ub), 0;
-        Hb.normalizeFromLength(lb);
-        const Kb = wb.Dot(ab, Hb),
-          Wb = ob.YX[5],
-          Cb = ob.YX[6];
-        Wb.mD(ab).scaleInPlace(-lb * Kb), Cb.mD(bb).addInPlace(Wb);
-        const db = ob.YX[4],
-          rb = ob.YX[5],
-          jb = ob.YX[7],
-          nb = ob.YX[8];
-        db.mD(Ub).scaleInPlace(1 / Zb), nb.mD(Yb).scaleInPlace(1 / Xb), db.addInPlace(nb).scaleInPlace(-1), rb.mD(Ub).scaleInPlace(-1 / Zb), nb.mD(Sb).scaleInPlace(1 / pb), rb.addInPlace(nb).scaleInPlace(-1), jb.mD(Sb).scaleInPlace(-1 / pb), nb.mD(Yb).scaleInPlace(-1 / Xb), jb.addInPlace(nb).scaleInPlace(-1);
-        const Db = ob.YX[9];
-        let xb;
-        Db.mD(Cb).tBb(ub), wb.CrossToRef(db, Db, nb), xb = wb.Dot(nb, ab);
-        const zb = xb;
-        Db.mD(Cb).tBb(hb), wb.CrossToRef(rb, Db, nb), xb = wb.Dot(nb, ab);
-        const gb = xb;
-        Db.mD(Cb).tBb(Ob), wb.CrossToRef(jb, Db, nb), xb = wb.Dot(nb, ab);
-        const ib = xb,
-          vb = ob.YX[10];
-        let tb, Jb;
-        zb > 0 && gb < 0 ? (vb.mD(Ub), tb = ub, Jb = hb) : gb > 0 && ib < 0 ? (vb.mD(Sb), tb = hb, Jb = Ob) : (vb.mD(Yb).scaleInPlace(-1), tb = Ob, Jb = ub);
-        const eb = ob.YX[9],
-          Nb = ob.YX[4];
-        tb.subtractToRef(Cb, nb), Jb.subtractToRef(Cb, eb), wb.CrossToRef(nb, eb, Nb);
-        if (!(wb.Dot(Nb, ab) < 0)) return Gb.mD(Cb), Math.abs(lb * Kb);
-        const sb = ob.YX[5];
-        wb.CrossToRef(vb, Nb, sb), sb.normalize();
-        const Mb = ob.YX[9];
-        Mb.mD(tb).tBb(Cb);
-        const mb = Mb.length();
-        if (mb < Bb.b) return Gb.mD(tb), wb.Distance(bb, tb);
-        Mb.normalizeFromLength(mb);
-        const Ib = wb.Dot(sb, Mb),
-          Pb = ob.YX[7];
-        Pb.mD(Cb).addInPlace(sb.scaleInPlace(mb * Ib)), nb.mD(Pb).tBb(tb), lb = vb.length(), vb.normalizeFromLength(lb);
-        let qb = wb.Dot(nb, vb) / Math.max(lb, Bb.b);
-        return qb = (0, Lb.Clamp)(qb, 0, 1), Pb.mD(tb).addInPlace(vb.scaleInPlace(qb * lb)), Gb.mD(Pb), wb.Distance(bb, Pb)
+      static ProjectOnTriangleToRef(dd, Jd, kd, Nd, Wd) {
+        const Pd = ed.IL[0],
+          gd = ed.IL[1],
+          Cd = ed.IL[2],
+          Kd = ed.IL[3],
+          od = ed.IL[4];
+        kd.subtractToRef(Jd, Pd), Nd.subtractToRef(Jd, gd), Nd.subtractToRef(kd, Cd);
+        const Qd = Pd.length(),
+          Ld = gd.length(),
+          Od = Cd.length();
+        if (Qd < pd.e || Ld < pd.e || Od < pd.e) return Wd.Fs(Jd), ld.Distance(dd, Jd);
+        dd.subtractToRef(Jd, od), ld.CrossToRef(Pd, gd, Kd);
+        const Rd = Kd.length();
+        if (Rd < pd.e) return Wd.Fs(Jd), ld.Distance(dd, Jd);
+        Kd.normalizeFromLength(Rd);
+        let Id = od.length();
+        if (Id < pd.e) return Wd.Fs(Jd), 0;
+        od.normalizeFromLength(Id);
+        const Gd = ld.Dot(Kd, od),
+          vd = ed.IL[5],
+          xd = ed.IL[6];
+        vd.Fs(Kd).scaleInPlace(-Id * Gd), xd.Fs(dd).addInPlace(vd);
+        const qd = ed.IL[4],
+          Bd = ed.IL[5],
+          sd = ed.IL[7],
+          ad = ed.IL[8];
+        qd.Fs(Pd).scaleInPlace(1 / Qd), ad.Fs(gd).scaleInPlace(1 / Ld), qd.addInPlace(ad).scaleInPlace(-1), Bd.Fs(Pd).scaleInPlace(-1 / Qd), ad.Fs(Cd).scaleInPlace(1 / Od), Bd.addInPlace(ad).scaleInPlace(-1), sd.Fs(Cd).scaleInPlace(-1 / Od), ad.Fs(gd).scaleInPlace(-1 / Ld), sd.addInPlace(ad).scaleInPlace(-1);
+        const Md = ed.IL[9];
+        let Fd;
+        Md.Fs(xd).hpd(Jd), ld.CrossToRef(qd, Md, ad), Fd = ld.Dot(ad, Kd);
+        const Yd = Fd;
+        Md.Fs(xd).hpd(kd), ld.CrossToRef(Bd, Md, ad), Fd = ld.Dot(ad, Kd);
+        const md = Fd;
+        Md.Fs(xd).hpd(Nd), ld.CrossToRef(sd, Md, ad), Fd = ld.Dot(ad, Kd);
+        const bd = Fd,
+          Sd = ed.IL[10];
+        let jd, Xd;
+        Yd > 0 && md < 0 ? (Sd.Fs(Pd), jd = Jd, Xd = kd) : md > 0 && bd < 0 ? (Sd.Fs(Cd), jd = kd, Xd = Nd) : (Sd.Fs(gd).scaleInPlace(-1), jd = Nd, Xd = Jd);
+        const fd = ed.IL[9],
+          nd = ed.IL[4];
+        jd.subtractToRef(xd, ad), Xd.subtractToRef(xd, fd), ld.CrossToRef(ad, fd, nd);
+        if (!(ld.Dot(nd, Kd) < 0)) return Wd.Fs(xd), Math.abs(Id * Gd);
+        const Ud = ed.IL[5];
+        ld.CrossToRef(Sd, nd, Ud), Ud.normalize();
+        const yd = ed.IL[9];
+        yd.Fs(jd).hpd(xd);
+        const Dd = yd.length();
+        if (Dd < pd.e) return Wd.Fs(jd), ld.Distance(dd, jd);
+        yd.normalizeFromLength(Dd);
+        const Td = ld.Dot(Ud, yd),
+          Ed = ed.IL[7];
+        Ed.Fs(xd).addInPlace(Ud.scaleInPlace(Dd * Td)), ad.Fs(Ed).hpd(jd), Id = Sd.length(), Sd.normalizeFromLength(Id);
+        let cd = ld.Dot(ad, Sd) / Math.max(Id, pd.e);
+        return cd = (0, Zd.Clamp)(cd, 0, 1), Ed.Fs(jd).addInPlace(Sd.scaleInPlace(cd * Id)), Wd.Fs(Ed), ld.Distance(dd, Ed)
       }
-      static Center(bb, ub) {
-        return wb.CenterToRef(bb, ub, wb.Zero())
+      static Center(dd, Jd) {
+        return ld.CenterToRef(dd, Jd, ld.Zero())
       }
-      static CenterToRef(bb, ub, hb) {
-        return hb.M_((bb._x + ub._x) / 2, (bb._y + ub._y) / 2, (bb._z + ub._z) / 2)
+      static CenterToRef(dd, Jd, kd) {
+        return kd.kdd((dd._x + Jd._x) / 2, (dd._y + Jd._y) / 2, (dd._z + Jd._z) / 2)
       }
-      static RotationFromAxis(bb, ub, hb) {
-        const Bb = new wb;
-        return wb.RotationFromAxisToRef(bb, ub, hb, Bb), Bb
+      static RotationFromAxis(dd, Jd, kd) {
+        const pd = new ld;
+        return ld.RotationFromAxisToRef(dd, Jd, kd, pd), pd
       }
-      static RotationFromAxisToRef(bb, ub, hb, Bb) {
-        const Ob = ob.Quaternion[0];
-        return Xb.RotationQuaternionFromAxisToRef(bb, ub, hb, Ob), Ob.toEulerAnglesToRef(Bb), Bb
+      static RotationFromAxisToRef(dd, Jd, kd, pd) {
+        const Nd = ed.Quaternion[0];
+        return Ld.RotationQuaternionFromAxisToRef(dd, Jd, kd, Nd), Nd.toEulerAnglesToRef(pd), pd
       }
     }
-    wb._V8PerformanceHack = new wb(.5, .5, .5), wb._UpReadOnly = wb.Up(), wb._DownReadOnly = wb.Down(), wb._LeftHandedForwardReadOnly = wb.Forward(!1), wb._RightHandedForwardReadOnly = wb.Forward(!0), wb._LeftHandedBackwardReadOnly = wb.Backward(!1), wb._RightHandedBackwardReadOnly = wb.Backward(!0), wb._RightReadOnly = wb.Right(), wb._LeftReadOnly = wb.Left(), wb._ZeroReadOnly = wb.Zero(), wb._OneReadOnly = wb.One();
-    class Zb {
+    ld._V8PerformanceHack = new ld(.5, .5, .5), ld._UpReadOnly = ld.Up(), ld._DownReadOnly = ld.Down(), ld._LeftHandedForwardReadOnly = ld.Forward(!1), ld._RightHandedForwardReadOnly = ld.Forward(!0), ld._LeftHandedBackwardReadOnly = ld.Backward(!1), ld._RightHandedBackwardReadOnly = ld.Backward(!0), ld._RightReadOnly = ld.Right(), ld._LeftReadOnly = ld.Left(), ld._ZeroReadOnly = ld.Zero(), ld._OneReadOnly = ld.One();
+    class Qd {
       get x() {
         return this._x
       }
-      set x(bb) {
-        this._x = bb, this._isDirty = !0
+      set x(dd) {
+        this._x = dd, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(bb) {
-        this._y = bb, this._isDirty = !0
+      set y(dd) {
+        this._y = dd, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(bb) {
-        this._z = bb, this._isDirty = !0
+      set z(dd) {
+        this._z = dd, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(bb) {
-        this._w = bb, this._isDirty = !0
+      set w(dd) {
+        this._w = dd, this._isDirty = !0
       }
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this._isDirty = !0, this._x = bb, this._y = ub, this._z = hb, this._w = Bb
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this._isDirty = !0, this._x = dd, this._y = Jd, this._z = kd, this._w = pd
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1149,121 +1149,121 @@ export const modules = {
         return "Vector4"
       }
       getHashCode() {
-        let bb = ab(this._x);
-        return bb = 397 * bb ^ ab(this._y), bb = 397 * bb ^ ab(this._z), bb = 397 * bb ^ ab(this._w), bb
+        let dd = Kd(this._x);
+        return dd = 397 * dd ^ Kd(this._y), dd = 397 * dd ^ Kd(this._z), dd = 397 * dd ^ Kd(this._w), dd
       }
-      ZBb() {
+      spd() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(bb, ub) {
-        return void 0 === ub && (ub = 0), bb[ub] = this._x, bb[ub + 1] = this._y, bb[ub + 2] = this._z, bb[ub + 3] = this._w, this
+      toArray(dd, Jd) {
+        return void 0 === Jd && (Jd = 0), dd[Jd] = this._x, dd[Jd + 1] = this._y, dd[Jd + 2] = this._z, dd[Jd + 3] = this._w, this
       }
-      Ohb(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Zb.FromArrayToRef(bb, ub, this), this
+      lkd(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Qd.FromArrayToRef(dd, Jd, this), this
       }
-      addInPlace(bb) {
-        return this.x += bb._x, this.y += bb._y, this.z += bb._z, this.w += bb._w, this
+      addInPlace(dd) {
+        return this.x += dd._x, this.y += dd._y, this.z += dd._z, this.w += dd._w, this
       }
-      addInPlaceFromFloats(bb, ub, hb, Bb) {
-        return this.x += bb, this.y += ub, this.z += hb, this.w += Bb, this
+      addInPlaceFromFloats(dd, Jd, kd, pd) {
+        return this.x += dd, this.y += Jd, this.z += kd, this.w += pd, this
       }
-      add(bb) {
-        return new Zb(this._x + bb.x, this._y + bb.y, this._z + bb.z, this._w + bb.w)
+      add(dd) {
+        return new Qd(this._x + dd.x, this._y + dd.y, this._z + dd.z, this._w + dd.w)
       }
-      addToRef(bb, ub) {
-        return ub.x = this._x + bb.x, ub.y = this._y + bb.y, ub.z = this._z + bb.z, ub.w = this._w + bb.w, ub
+      addToRef(dd, Jd) {
+        return Jd.x = this._x + dd.x, Jd.y = this._y + dd.y, Jd.z = this._z + dd.z, Jd.w = this._w + dd.w, Jd
       }
-      tBb(bb) {
-        return this.x -= bb.x, this.y -= bb.y, this.z -= bb.z, this.w -= bb.w, this
+      hpd(dd) {
+        return this.x -= dd.x, this.y -= dd.y, this.z -= dd.z, this.w -= dd.w, this
       }
-      subtract(bb) {
-        return new Zb(this._x - bb.x, this._y - bb.y, this._z - bb.z, this._w - bb.w)
+      subtract(dd) {
+        return new Qd(this._x - dd.x, this._y - dd.y, this._z - dd.z, this._w - dd.w)
       }
-      subtractToRef(bb, ub) {
-        return ub.x = this._x - bb.x, ub.y = this._y - bb.y, ub.z = this._z - bb.z, ub.w = this._w - bb.w, ub
+      subtractToRef(dd, Jd) {
+        return Jd.x = this._x - dd.x, Jd.y = this._y - dd.y, Jd.z = this._z - dd.z, Jd.w = this._w - dd.w, Jd
       }
-      subtractFromFloats(bb, ub, hb, Bb) {
-        return new Zb(this._x - bb, this._y - ub, this._z - hb, this._w - Bb)
+      subtractFromFloats(dd, Jd, kd, pd) {
+        return new Qd(this._x - dd, this._y - Jd, this._z - kd, this._w - pd)
       }
-      subtractFromFloatsToRef(bb, ub, hb, Bb, Ob) {
-        return Ob.x = this._x - bb, Ob.y = this._y - ub, Ob.z = this._z - hb, Ob.w = this._w - Bb, Ob
+      subtractFromFloatsToRef(dd, Jd, kd, pd, Nd) {
+        return Nd.x = this._x - dd, Nd.y = this._y - Jd, Nd.z = this._z - kd, Nd.w = this._w - pd, Nd
       }
-      AO() {
-        return new Zb(-this._x, -this._y, -this._z, -this._w)
+      ck() {
+        return new Qd(-this._x, -this._y, -this._z, -this._w)
       }
       negateInPlace() {
         return this.x *= -1, this.y *= -1, this.z *= -1, this.w *= -1, this
       }
-      negateToRef(bb) {
-        return bb.x = -this._x, bb.y = -this._y, bb.z = -this._z, bb.w = -this._w, bb
+      negateToRef(dd) {
+        return dd.x = -this._x, dd.y = -this._y, dd.z = -this._z, dd.w = -this._w, dd
       }
-      scaleInPlace(bb) {
-        return this.x *= bb, this.y *= bb, this.z *= bb, this.w *= bb, this
+      scaleInPlace(dd) {
+        return this.x *= dd, this.y *= dd, this.z *= dd, this.w *= dd, this
       }
-      scale(bb) {
-        return new Zb(this._x * bb, this._y * bb, this._z * bb, this._w * bb)
+      scale(dd) {
+        return new Qd(this._x * dd, this._y * dd, this._z * dd, this._w * dd)
       }
-      scaleToRef(bb, ub) {
-        return ub.x = this._x * bb, ub.y = this._y * bb, ub.z = this._z * bb, ub.w = this._w * bb, ub
+      scaleToRef(dd, Jd) {
+        return Jd.x = this._x * dd, Jd.y = this._y * dd, Jd.z = this._z * dd, Jd.w = this._w * dd, Jd
       }
-      scaleAndAddToRef(bb, ub) {
-        return ub.x += this._x * bb, ub.y += this._y * bb, ub.z += this._z * bb, ub.w += this._w * bb, ub
+      scaleAndAddToRef(dd, Jd) {
+        return Jd.x += this._x * dd, Jd.y += this._y * dd, Jd.z += this._z * dd, Jd.w += this._w * dd, Jd
       }
-      equals(bb) {
-        return bb && this._x === bb.x && this._y === bb.y && this._z === bb.z && this._w === bb.w
+      equals(dd) {
+        return dd && this._x === dd.x && this._y === dd.y && this._z === dd.z && this._w === dd.w
       }
-      equalsWithEpsilon(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Bb.b;
-        return bb && (0, Lb.WithinEpsilon)(this._x, bb.x, ub) && (0, Lb.WithinEpsilon)(this._y, bb.y, ub) && (0, Lb.WithinEpsilon)(this._z, bb.z, ub) && (0, Lb.WithinEpsilon)(this._w, bb.w, ub)
+      equalsWithEpsilon(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.e;
+        return dd && (0, Zd.WithinEpsilon)(this._x, dd.x, Jd) && (0, Zd.WithinEpsilon)(this._y, dd.y, Jd) && (0, Zd.WithinEpsilon)(this._z, dd.z, Jd) && (0, Zd.WithinEpsilon)(this._w, dd.w, Jd)
       }
-      sUb(bb, ub, hb, Bb) {
-        return this._x === bb && this._y === ub && this._z === hb && this._w === Bb
+      zPd(dd, Jd, kd, pd) {
+        return this._x === dd && this._y === Jd && this._z === kd && this._w === pd
       }
-      multiplyInPlace(bb) {
-        return this.x *= bb.x, this.y *= bb.y, this.z *= bb.z, this.w *= bb.w, this
+      multiplyInPlace(dd) {
+        return this.x *= dd.x, this.y *= dd.y, this.z *= dd.z, this.w *= dd.w, this
       }
-      multiply(bb) {
-        return new Zb(this._x * bb.x, this._y * bb.y, this._z * bb.z, this._w * bb.w)
+      multiply(dd) {
+        return new Qd(this._x * dd.x, this._y * dd.y, this._z * dd.z, this._w * dd.w)
       }
-      multiplyToRef(bb, ub) {
-        return ub.x = this._x * bb.x, ub.y = this._y * bb.y, ub.z = this._z * bb.z, ub.w = this._w * bb.w, ub
+      multiplyToRef(dd, Jd) {
+        return Jd.x = this._x * dd.x, Jd.y = this._y * dd.y, Jd.z = this._z * dd.z, Jd.w = this._w * dd.w, Jd
       }
-      multiplyByFloats(bb, ub, hb, Bb) {
-        return new Zb(this._x * bb, this._y * ub, this._z * hb, this._w * Bb)
+      multiplyByFloats(dd, Jd, kd, pd) {
+        return new Qd(this._x * dd, this._y * Jd, this._z * kd, this._w * pd)
       }
-      divide(bb) {
-        return new Zb(this._x / bb.x, this._y / bb.y, this._z / bb.z, this._w / bb.w)
+      divide(dd) {
+        return new Qd(this._x / dd.x, this._y / dd.y, this._z / dd.z, this._w / dd.w)
       }
-      divideToRef(bb, ub) {
-        return ub.x = this._x / bb.x, ub.y = this._y / bb.y, ub.z = this._z / bb.z, ub.w = this._w / bb.w, ub
+      divideToRef(dd, Jd) {
+        return Jd.x = this._x / dd.x, Jd.y = this._y / dd.y, Jd.z = this._z / dd.z, Jd.w = this._w / dd.w, Jd
       }
-      divideInPlace(bb) {
-        return this.divideToRef(bb, this)
+      divideInPlace(dd) {
+        return this.divideToRef(dd, this)
       }
-      minimizeInPlace(bb) {
-        return bb.x < this._x && (this.x = bb.x), bb.y < this._y && (this.y = bb.y), bb.z < this._z && (this.z = bb.z), bb.w < this._w && (this.w = bb.w), this
+      minimizeInPlace(dd) {
+        return dd.x < this._x && (this.x = dd.x), dd.y < this._y && (this.y = dd.y), dd.z < this._z && (this.z = dd.z), dd.w < this._w && (this.w = dd.w), this
       }
-      maximizeInPlace(bb) {
-        return bb.x > this._x && (this.x = bb.x), bb.y > this._y && (this.y = bb.y), bb.z > this._z && (this.z = bb.z), bb.w > this._w && (this.w = bb.w), this
+      maximizeInPlace(dd) {
+        return dd.x > this._x && (this.x = dd.x), dd.y > this._y && (this.y = dd.y), dd.z > this._z && (this.z = dd.z), dd.w > this._w && (this.w = dd.w), this
       }
-      minimizeInPlaceFromFloats(bb, ub, hb, Bb) {
-        return this.x = Math.min(bb, this._x), this.y = Math.min(ub, this._y), this.z = Math.min(hb, this._z), this.w = Math.min(Bb, this._w), this
+      minimizeInPlaceFromFloats(dd, Jd, kd, pd) {
+        return this.x = Math.min(dd, this._x), this.y = Math.min(Jd, this._y), this.z = Math.min(kd, this._z), this.w = Math.min(pd, this._w), this
       }
-      maximizeInPlaceFromFloats(bb, ub, hb, Bb) {
-        return this.x = Math.max(bb, this._x), this.y = Math.max(ub, this._y), this.z = Math.max(hb, this._z), this.w = Math.max(Bb, this._w), this
+      maximizeInPlaceFromFloats(dd, Jd, kd, pd) {
+        return this.x = Math.max(dd, this._x), this.y = Math.max(Jd, this._y), this.z = Math.max(kd, this._z), this.w = Math.max(pd, this._w), this
       }
-      floorToRef(bb) {
-        return bb.x = Math.floor(this._x), bb.y = Math.floor(this._y), bb.z = Math.floor(this._z), bb.w = Math.floor(this._w), bb
+      floorToRef(dd) {
+        return dd.x = Math.floor(this._x), dd.y = Math.floor(this._y), dd.z = Math.floor(this._z), dd.w = Math.floor(this._w), dd
       }
       floor() {
-        return new Zb(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
+        return new Qd(Math.floor(this._x), Math.floor(this._y), Math.floor(this._z), Math.floor(this._w))
       }
-      fractToRef(bb) {
-        return bb.x = this._x - Math.floor(this._x), bb.y = this._y - Math.floor(this._y), bb.z = this._z - Math.floor(this._z), bb.w = this._w - Math.floor(this._w), bb
+      fractToRef(dd) {
+        return dd.x = this._x - Math.floor(this._x), dd.y = this._y - Math.floor(this._y), dd.z = this._z - Math.floor(this._z), dd.w = this._w - Math.floor(this._w), dd
       }
       fract() {
-        return new Zb(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
+        return new Qd(this._x - Math.floor(this._x), this._y - Math.floor(this._y), this._z - Math.floor(this._z), this._w - Math.floor(this._w))
       }
       length() {
         return Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w)
@@ -1274,176 +1274,176 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(bb) {
-        return 0 === bb || 1 === bb ? this : this.scaleInPlace(1 / bb)
+      normalizeFromLength(dd) {
+        return 0 === dd || 1 === dd ? this : this.scaleInPlace(1 / dd)
       }
       normalizeToNew() {
-        return this.normalizeToRef(new Zb)
+        return this.normalizeToRef(new Qd)
       }
-      normalizeToRef(bb) {
-        const ub = this.length();
-        return 0 === ub || 1 === ub ? (bb.x = this._x, bb.y = this._y, bb.z = this._z, bb.w = this._w, bb) : this.scaleToRef(1 / ub, bb)
+      normalizeToRef(dd) {
+        const Jd = this.length();
+        return 0 === Jd || 1 === Jd ? (dd.x = this._x, dd.y = this._y, dd.z = this._z, dd.w = this._w, dd) : this.scaleToRef(1 / Jd, dd)
       }
       toVector3() {
-        return new wb(this._x, this._y, this._z)
+        return new ld(this._x, this._y, this._z)
       }
       clone() {
-        return new Zb(this._x, this._y, this._z, this._w)
+        return new Qd(this._x, this._y, this._z, this._w)
       }
-      mD(bb) {
-        return this.x = bb.x, this.y = bb.y, this.z = bb.z, this.w = bb.w, this
+      Fs(dd) {
+        return this.x = dd.x, this.y = dd.y, this.z = dd.z, this.w = dd.w, this
       }
-      M_(bb, ub, hb, Bb) {
-        return this.x = bb, this.y = ub, this.z = hb, this.w = Bb, this
+      kdd(dd, Jd, kd, pd) {
+        return this.x = dd, this.y = Jd, this.z = kd, this.w = pd, this
       }
-      set(bb, ub, hb, Bb) {
-        return this.M_(bb, ub, hb, Bb)
+      set(dd, Jd, kd, pd) {
+        return this.kdd(dd, Jd, kd, pd)
       }
-      N9(bb) {
-        return this.x = this.y = this.z = this.w = bb, this
+      o5(dd) {
+        return this.x = this.y = this.z = this.w = dd, this
       }
-      dot(bb) {
-        return this._x * bb.x + this._y * bb.y + this._z * bb.z + this._w * bb.w
+      dot(dd) {
+        return this._x * dd.x + this._y * dd.y + this._z * dd.z + this._w * dd.w
       }
-      static FromArray(bb, ub) {
-        return ub || (ub = 0), new Zb(bb[ub], bb[ub + 1], bb[ub + 2], bb[ub + 3])
+      static FromArray(dd, Jd) {
+        return Jd || (Jd = 0), new Qd(dd[Jd], dd[Jd + 1], dd[Jd + 2], dd[Jd + 3])
       }
-      static FromArrayToRef(bb, ub, hb) {
-        return hb.x = bb[ub], hb.y = bb[ub + 1], hb.z = bb[ub + 2], hb.w = bb[ub + 3], hb
+      static FromArrayToRef(dd, Jd, kd) {
+        return kd.x = dd[Jd], kd.y = dd[Jd + 1], kd.z = dd[Jd + 2], kd.w = dd[Jd + 3], kd
       }
-      static FromFloatArrayToRef(bb, ub, hb) {
-        return Zb.FromArrayToRef(bb, ub, hb), hb
+      static FromFloatArrayToRef(dd, Jd, kd) {
+        return Qd.FromArrayToRef(dd, Jd, kd), kd
       }
-      static FromFloatsToRef(bb, ub, hb, Bb, Ob) {
-        return Ob.x = bb, Ob.y = ub, Ob.z = hb, Ob.w = Bb, Ob
+      static FromFloatsToRef(dd, Jd, kd, pd, Nd) {
+        return Nd.x = dd, Nd.y = Jd, Nd.z = kd, Nd.w = pd, Nd
       }
       static Zero() {
-        return new Zb(0, 0, 0, 0)
+        return new Qd(0, 0, 0, 0)
       }
       static One() {
-        return new Zb(1, 1, 1, 1)
+        return new Qd(1, 1, 1, 1)
       }
       static Random() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Zb((0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new Qd((0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd))
       }
       static RandomToRef() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          hb = arguments.length > 2 ? arguments[2] : void 0;
-        return hb.x = (0, Lb.RandomRange)(bb, ub), hb.y = (0, Lb.RandomRange)(bb, ub), hb.z = (0, Lb.RandomRange)(bb, ub), hb.w = (0, Lb.RandomRange)(bb, ub), hb
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          kd = arguments.length > 2 ? arguments[2] : void 0;
+        return kd.x = (0, Zd.RandomRange)(dd, Jd), kd.y = (0, Zd.RandomRange)(dd, Jd), kd.z = (0, Zd.RandomRange)(dd, Jd), kd.w = (0, Zd.RandomRange)(dd, Jd), kd
       }
-      static Clamp(bb, ub, hb) {
-        return Zb.ClampToRef(bb, ub, hb, new Zb)
+      static Clamp(dd, Jd, kd) {
+        return Qd.ClampToRef(dd, Jd, kd, new Qd)
       }
-      static ClampToRef(bb, ub, hb, Bb) {
-        return Bb.x = (0, Lb.Clamp)(bb.x, ub.x, hb.x), Bb.y = (0, Lb.Clamp)(bb.y, ub.y, hb.y), Bb.z = (0, Lb.Clamp)(bb.z, ub.z, hb.z), Bb.w = (0, Lb.Clamp)(bb.w, ub.w, hb.w), Bb
+      static ClampToRef(dd, Jd, kd, pd) {
+        return pd.x = (0, Zd.Clamp)(dd.x, Jd.x, kd.x), pd.y = (0, Zd.Clamp)(dd.y, Jd.y, kd.y), pd.z = (0, Zd.Clamp)(dd.z, Jd.z, kd.z), pd.w = (0, Zd.Clamp)(dd.w, Jd.w, kd.w), pd
       }
-      static CheckExtends(bb, ub, hb) {
-        ub.minimizeInPlace(bb), hb.maximizeInPlace(bb)
+      static CheckExtends(dd, Jd, kd) {
+        Jd.minimizeInPlace(dd), kd.maximizeInPlace(dd)
       }
       static get ZeroReadOnly() {
-        return Zb._ZeroReadOnly
+        return Qd._ZeroReadOnly
       }
-      static Normalize(bb) {
-        return Zb.NormalizeToRef(bb, new Zb)
+      static Normalize(dd) {
+        return Qd.NormalizeToRef(dd, new Qd)
       }
-      static NormalizeToRef(bb, ub) {
-        return bb.normalizeToRef(ub), ub
+      static NormalizeToRef(dd, Jd) {
+        return dd.normalizeToRef(Jd), Jd
       }
-      static Minimize(bb, ub) {
-        const hb = new Zb;
-        return hb.mD(bb), hb.minimizeInPlace(ub), hb
+      static Minimize(dd, Jd) {
+        const kd = new Qd;
+        return kd.Fs(dd), kd.minimizeInPlace(Jd), kd
       }
-      static Maximize(bb, ub) {
-        const hb = new Zb;
-        return hb.mD(bb), hb.maximizeInPlace(ub), hb
+      static Maximize(dd, Jd) {
+        const kd = new Qd;
+        return kd.Fs(dd), kd.maximizeInPlace(Jd), kd
       }
-      static Distance(bb, ub) {
-        return Math.sqrt(Zb.DistanceSquared(bb, ub))
+      static Distance(dd, Jd) {
+        return Math.sqrt(Qd.DistanceSquared(dd, Jd))
       }
-      static DistanceSquared(bb, ub) {
-        const hb = bb.x - ub.x,
-          Bb = bb.y - ub.y,
-          Ob = bb.z - ub.z,
-          Gb = bb.w - ub.w;
-        return hb * hb + Bb * Bb + Ob * Ob + Gb * Gb
+      static DistanceSquared(dd, Jd) {
+        const kd = dd.x - Jd.x,
+          pd = dd.y - Jd.y,
+          Nd = dd.z - Jd.z,
+          Wd = dd.w - Jd.w;
+        return kd * kd + pd * pd + Nd * Nd + Wd * Wd
       }
-      static Center(bb, ub) {
-        return Zb.CenterToRef(bb, ub, new Zb)
+      static Center(dd, Jd) {
+        return Qd.CenterToRef(dd, Jd, new Qd)
       }
-      static CenterToRef(bb, ub, hb) {
-        return hb.x = (bb.x + ub.x) / 2, hb.y = (bb.y + ub.y) / 2, hb.z = (bb.z + ub.z) / 2, hb.w = (bb.w + ub.w) / 2, hb
+      static CenterToRef(dd, Jd, kd) {
+        return kd.x = (dd.x + Jd.x) / 2, kd.y = (dd.y + Jd.y) / 2, kd.z = (dd.z + Jd.z) / 2, kd.w = (dd.w + Jd.w) / 2, kd
       }
-      static TransformCoordinates(bb, ub) {
-        return Zb.TransformCoordinatesToRef(bb, ub, new Zb)
+      static TransformCoordinates(dd, Jd) {
+        return Qd.TransformCoordinatesToRef(dd, Jd, new Qd)
       }
-      static TransformCoordinatesToRef(bb, ub, hb) {
-        return Zb.TransformCoordinatesFromFloatsToRef(bb._x, bb._y, bb._z, ub, hb), hb
+      static TransformCoordinatesToRef(dd, Jd, kd) {
+        return Qd.TransformCoordinatesFromFloatsToRef(dd._x, dd._y, dd._z, Jd, kd), kd
       }
-      static TransformCoordinatesFromFloatsToRef(bb, ub, hb, Bb, Ob) {
-        const Gb = Bb.m,
-          Ub = bb * Gb[0] + ub * Gb[4] + hb * Gb[8] + Gb[12],
-          Lb = bb * Gb[1] + ub * Gb[5] + hb * Gb[9] + Gb[13],
-          Yb = bb * Gb[2] + ub * Gb[6] + hb * Gb[10] + Gb[14],
-          Sb = bb * Gb[3] + ub * Gb[7] + hb * Gb[11] + Gb[15];
-        return Ob.x = Ub, Ob.y = Lb, Ob.z = Yb, Ob.w = Sb, Ob
+      static TransformCoordinatesFromFloatsToRef(dd, Jd, kd, pd, Nd) {
+        const Wd = pd.m,
+          Pd = dd * Wd[0] + Jd * Wd[4] + kd * Wd[8] + Wd[12],
+          Zd = dd * Wd[1] + Jd * Wd[5] + kd * Wd[9] + Wd[13],
+          gd = dd * Wd[2] + Jd * Wd[6] + kd * Wd[10] + Wd[14],
+          Cd = dd * Wd[3] + Jd * Wd[7] + kd * Wd[11] + Wd[15];
+        return Nd.x = Pd, Nd.y = Zd, Nd.z = gd, Nd.w = Cd, Nd
       }
-      static TransformNormal(bb, ub) {
-        return Zb.TransformNormalToRef(bb, ub, new Zb)
+      static TransformNormal(dd, Jd) {
+        return Qd.TransformNormalToRef(dd, Jd, new Qd)
       }
-      static TransformNormalToRef(bb, ub, hb) {
-        const Bb = ub.m,
-          Ob = bb.x * Bb[0] + bb.y * Bb[4] + bb.z * Bb[8],
-          Gb = bb.x * Bb[1] + bb.y * Bb[5] + bb.z * Bb[9],
-          Ub = bb.x * Bb[2] + bb.y * Bb[6] + bb.z * Bb[10];
-        return hb.x = Ob, hb.y = Gb, hb.z = Ub, hb.w = bb.w, hb
+      static TransformNormalToRef(dd, Jd, kd) {
+        const pd = Jd.m,
+          Nd = dd.x * pd[0] + dd.y * pd[4] + dd.z * pd[8],
+          Wd = dd.x * pd[1] + dd.y * pd[5] + dd.z * pd[9],
+          Pd = dd.x * pd[2] + dd.y * pd[6] + dd.z * pd[10];
+        return kd.x = Nd, kd.y = Wd, kd.z = Pd, kd.w = dd.w, kd
       }
-      static TransformNormalFromFloatsToRef(bb, ub, hb, Bb, Ob, Gb) {
-        const Ub = Ob.m;
-        return Gb.x = bb * Ub[0] + ub * Ub[4] + hb * Ub[8], Gb.y = bb * Ub[1] + ub * Ub[5] + hb * Ub[9], Gb.z = bb * Ub[2] + ub * Ub[6] + hb * Ub[10], Gb.w = Bb, Gb
+      static TransformNormalFromFloatsToRef(dd, Jd, kd, pd, Nd, Wd) {
+        const Pd = Nd.m;
+        return Wd.x = dd * Pd[0] + Jd * Pd[4] + kd * Pd[8], Wd.y = dd * Pd[1] + Jd * Pd[5] + kd * Pd[9], Wd.z = dd * Pd[2] + Jd * Pd[6] + kd * Pd[10], Wd.w = pd, Wd
       }
-      static FromVector3(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return new Zb(bb._x, bb._y, bb._z, ub)
+      static FromVector3(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return new Qd(dd._x, dd._y, dd._z, Jd)
       }
-      static Dot(bb, ub) {
-        return bb.x * ub.x + bb.y * ub.y + bb.z * ub.z + bb.w * ub.w
+      static Dot(dd, Jd) {
+        return dd.x * Jd.x + dd.y * Jd.y + dd.z * Jd.z + dd.w * Jd.w
       }
     }
-    Zb._V8PerformanceHack = new Zb(.5, .5, .5, .5), Zb._ZeroReadOnly = Zb.Zero();
-    class Xb {
+    Qd._V8PerformanceHack = new Qd(.5, .5, .5, .5), Qd._ZeroReadOnly = Qd.Zero();
+    class Ld {
       get x() {
         return this._x
       }
-      set x(bb) {
-        this._x = bb, this._isDirty = !0
+      set x(dd) {
+        this._x = dd, this._isDirty = !0
       }
       get y() {
         return this._y
       }
-      set y(bb) {
-        this._y = bb, this._isDirty = !0
+      set y(dd) {
+        this._y = dd, this._isDirty = !0
       }
       get z() {
         return this._z
       }
-      set z(bb) {
-        this._z = bb, this._isDirty = !0
+      set z(dd) {
+        this._z = dd, this._isDirty = !0
       }
       get w() {
         return this._w
       }
-      set w(bb) {
-        this._w = bb, this._isDirty = !0
+      set w(dd) {
+        this._w = dd, this._isDirty = !0
       }
       constructor() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          Bb = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
-        this._isDirty = !0, this._x = bb, this._y = ub, this._z = hb, this._w = Bb
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          pd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1;
+        this._isDirty = !0, this._x = dd, this._y = Jd, this._z = kd, this._w = pd
       }
       toString() {
         return `{X: ${this._x} Y: ${this._y} Z: ${this._z} W: ${this._w}}`
@@ -1452,109 +1452,109 @@ export const modules = {
         return "Quaternion"
       }
       getHashCode() {
-        let bb = ab(this._x);
-        return bb = 397 * bb ^ ab(this._y), bb = 397 * bb ^ ab(this._z), bb = 397 * bb ^ ab(this._w), bb
+        let dd = Kd(this._x);
+        return dd = 397 * dd ^ Kd(this._y), dd = 397 * dd ^ Kd(this._z), dd = 397 * dd ^ Kd(this._w), dd
       }
-      ZBb() {
+      spd() {
         return [this._x, this._y, this._z, this._w]
       }
-      toArray(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return bb[ub] = this._x, bb[ub + 1] = this._y, bb[ub + 2] = this._z, bb[ub + 3] = this._w, this
+      toArray(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return dd[Jd] = this._x, dd[Jd + 1] = this._y, dd[Jd + 2] = this._z, dd[Jd + 3] = this._w, this
       }
-      Ohb(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return Xb.FromArrayToRef(bb, ub, this)
+      lkd(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Ld.FromArrayToRef(dd, Jd, this)
       }
-      equals(bb) {
-        return bb && this._x === bb._x && this._y === bb._y && this._z === bb._z && this._w === bb._w
+      equals(dd) {
+        return dd && this._x === dd._x && this._y === dd._y && this._z === dd._z && this._w === dd._w
       }
-      equalsWithEpsilon(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Bb.b;
-        return bb && (0, Lb.WithinEpsilon)(this._x, bb._x, ub) && (0, Lb.WithinEpsilon)(this._y, bb._y, ub) && (0, Lb.WithinEpsilon)(this._z, bb._z, ub) && (0, Lb.WithinEpsilon)(this._w, bb._w, ub)
+      equalsWithEpsilon(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.e;
+        return dd && (0, Zd.WithinEpsilon)(this._x, dd._x, Jd) && (0, Zd.WithinEpsilon)(this._y, dd._y, Jd) && (0, Zd.WithinEpsilon)(this._z, dd._z, Jd) && (0, Zd.WithinEpsilon)(this._w, dd._w, Jd)
       }
-      isApprox(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Bb.b;
-        return bb && ((0, Lb.WithinEpsilon)(this._x, bb._x, ub) && (0, Lb.WithinEpsilon)(this._y, bb._y, ub) && (0, Lb.WithinEpsilon)(this._z, bb._z, ub) && (0, Lb.WithinEpsilon)(this._w, bb._w, ub) || (0, Lb.WithinEpsilon)(this._x, -bb._x, ub) && (0, Lb.WithinEpsilon)(this._y, -bb._y, ub) && (0, Lb.WithinEpsilon)(this._z, -bb._z, ub) && (0, Lb.WithinEpsilon)(this._w, -bb._w, ub))
+      isApprox(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : pd.e;
+        return dd && ((0, Zd.WithinEpsilon)(this._x, dd._x, Jd) && (0, Zd.WithinEpsilon)(this._y, dd._y, Jd) && (0, Zd.WithinEpsilon)(this._z, dd._z, Jd) && (0, Zd.WithinEpsilon)(this._w, dd._w, Jd) || (0, Zd.WithinEpsilon)(this._x, -dd._x, Jd) && (0, Zd.WithinEpsilon)(this._y, -dd._y, Jd) && (0, Zd.WithinEpsilon)(this._z, -dd._z, Jd) && (0, Zd.WithinEpsilon)(this._w, -dd._w, Jd))
       }
       clone() {
-        return new Xb(this._x, this._y, this._z, this._w)
+        return new Ld(this._x, this._y, this._z, this._w)
       }
-      mD(bb) {
-        return this._x = bb._x, this._y = bb._y, this._z = bb._z, this._w = bb._w, this._isDirty = !0, this
+      Fs(dd) {
+        return this._x = dd._x, this._y = dd._y, this._z = dd._z, this._w = dd._w, this._isDirty = !0, this
       }
-      M_(bb, ub, hb, Bb) {
-        return this._x = bb, this._y = ub, this._z = hb, this._w = Bb, this._isDirty = !0, this
+      kdd(dd, Jd, kd, pd) {
+        return this._x = dd, this._y = Jd, this._z = kd, this._w = pd, this._isDirty = !0, this
       }
-      set(bb, ub, hb, Bb) {
-        return this.M_(bb, ub, hb, Bb)
+      set(dd, Jd, kd, pd) {
+        return this.kdd(dd, Jd, kd, pd)
       }
-      N9(bb) {
-        return this.M_(bb, bb, bb, bb)
+      o5(dd) {
+        return this.kdd(dd, dd, dd, dd)
       }
-      add(bb) {
-        return new Xb(this._x + bb._x, this._y + bb._y, this._z + bb._z, this._w + bb._w)
+      add(dd) {
+        return new Ld(this._x + dd._x, this._y + dd._y, this._z + dd._z, this._w + dd._w)
       }
-      addInPlace(bb) {
-        return this._x += bb._x, this._y += bb._y, this._z += bb._z, this._w += bb._w, this._isDirty = !0, this
+      addInPlace(dd) {
+        return this._x += dd._x, this._y += dd._y, this._z += dd._z, this._w += dd._w, this._isDirty = !0, this
       }
-      addToRef(bb, ub) {
-        return ub._x = this._x + bb._x, ub._y = this._y + bb._y, ub._z = this._z + bb._z, ub._w = this._w + bb._w, ub._isDirty = !0, ub
+      addToRef(dd, Jd) {
+        return Jd._x = this._x + dd._x, Jd._y = this._y + dd._y, Jd._z = this._z + dd._z, Jd._w = this._w + dd._w, Jd._isDirty = !0, Jd
       }
-      addInPlaceFromFloats(bb, ub, hb, Bb) {
-        return this._x += bb, this._y += ub, this._z += hb, this._w += Bb, this._isDirty = !0, this
+      addInPlaceFromFloats(dd, Jd, kd, pd) {
+        return this._x += dd, this._y += Jd, this._z += kd, this._w += pd, this._isDirty = !0, this
       }
-      subtractToRef(bb, ub) {
-        return ub._x = this._x - bb._x, ub._y = this._y - bb._y, ub._z = this._z - bb._z, ub._w = this._w - bb._w, ub._isDirty = !0, ub
+      subtractToRef(dd, Jd) {
+        return Jd._x = this._x - dd._x, Jd._y = this._y - dd._y, Jd._z = this._z - dd._z, Jd._w = this._w - dd._w, Jd._isDirty = !0, Jd
       }
-      subtractFromFloats(bb, ub, hb, Bb) {
-        return this.subtractFromFloatsToRef(bb, ub, hb, Bb, new Xb)
+      subtractFromFloats(dd, Jd, kd, pd) {
+        return this.subtractFromFloatsToRef(dd, Jd, kd, pd, new Ld)
       }
-      subtractFromFloatsToRef(bb, ub, hb, Bb, Ob) {
-        return Ob._x = this._x - bb, Ob._y = this._y - ub, Ob._z = this._z - hb, Ob._w = this._w - Bb, Ob._isDirty = !0, Ob
+      subtractFromFloatsToRef(dd, Jd, kd, pd, Nd) {
+        return Nd._x = this._x - dd, Nd._y = this._y - Jd, Nd._z = this._z - kd, Nd._w = this._w - pd, Nd._isDirty = !0, Nd
       }
-      subtract(bb) {
-        return new Xb(this._x - bb._x, this._y - bb._y, this._z - bb._z, this._w - bb._w)
+      subtract(dd) {
+        return new Ld(this._x - dd._x, this._y - dd._y, this._z - dd._z, this._w - dd._w)
       }
-      tBb(bb) {
-        return this._x -= bb._x, this._y -= bb._y, this._z -= bb._z, this._w -= bb._w, this._isDirty = !0, this
+      hpd(dd) {
+        return this._x -= dd._x, this._y -= dd._y, this._z -= dd._z, this._w -= dd._w, this._isDirty = !0, this
       }
-      scale(bb) {
-        return new Xb(this._x * bb, this._y * bb, this._z * bb, this._w * bb)
+      scale(dd) {
+        return new Ld(this._x * dd, this._y * dd, this._z * dd, this._w * dd)
       }
-      scaleToRef(bb, ub) {
-        return ub._x = this._x * bb, ub._y = this._y * bb, ub._z = this._z * bb, ub._w = this._w * bb, ub._isDirty = !0, ub
+      scaleToRef(dd, Jd) {
+        return Jd._x = this._x * dd, Jd._y = this._y * dd, Jd._z = this._z * dd, Jd._w = this._w * dd, Jd._isDirty = !0, Jd
       }
-      scaleInPlace(bb) {
-        return this._x *= bb, this._y *= bb, this._z *= bb, this._w *= bb, this._isDirty = !0, this
+      scaleInPlace(dd) {
+        return this._x *= dd, this._y *= dd, this._z *= dd, this._w *= dd, this._isDirty = !0, this
       }
-      scaleAndAddToRef(bb, ub) {
-        return ub._x += this._x * bb, ub._y += this._y * bb, ub._z += this._z * bb, ub._w += this._w * bb, ub._isDirty = !0, ub
+      scaleAndAddToRef(dd, Jd) {
+        return Jd._x += this._x * dd, Jd._y += this._y * dd, Jd._z += this._z * dd, Jd._w += this._w * dd, Jd._isDirty = !0, Jd
       }
-      multiply(bb) {
-        const ub = new Xb(0, 0, 0, 1);
-        return this.multiplyToRef(bb, ub), ub
+      multiply(dd) {
+        const Jd = new Ld(0, 0, 0, 1);
+        return this.multiplyToRef(dd, Jd), Jd
       }
-      multiplyToRef(bb, ub) {
-        const hb = this._x * bb._w + this._y * bb._z - this._z * bb._y + this._w * bb._x,
-          Bb = -this._x * bb._z + this._y * bb._w + this._z * bb._x + this._w * bb._y,
-          Ob = this._x * bb._y - this._y * bb._x + this._z * bb._w + this._w * bb._z,
-          Gb = -this._x * bb._x - this._y * bb._y - this._z * bb._z + this._w * bb._w;
-        return ub.M_(hb, Bb, Ob, Gb), ub
+      multiplyToRef(dd, Jd) {
+        const kd = this._x * dd._w + this._y * dd._z - this._z * dd._y + this._w * dd._x,
+          pd = -this._x * dd._z + this._y * dd._w + this._z * dd._x + this._w * dd._y,
+          Nd = this._x * dd._y - this._y * dd._x + this._z * dd._w + this._w * dd._z,
+          Wd = -this._x * dd._x - this._y * dd._y - this._z * dd._z + this._w * dd._w;
+        return Jd.kdd(kd, pd, Nd, Wd), Jd
       }
-      multiplyInPlace(bb) {
-        return this.multiplyToRef(bb, this)
+      multiplyInPlace(dd) {
+        return this.multiplyToRef(dd, this)
       }
-      multiplyByFloats(bb, ub, hb, Bb) {
-        return this._x *= bb, this._y *= ub, this._z *= hb, this._w *= Bb, this._isDirty = !0, this
+      multiplyByFloats(dd, Jd, kd, pd) {
+        return this._x *= dd, this._y *= Jd, this._z *= kd, this._w *= pd, this._isDirty = !0, this
       }
-      divide(bb) {
+      divide(dd) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideToRef(bb, ub) {
+      divideToRef(dd, Jd) {
         throw new ReferenceError("Can not divide a quaternion")
       }
-      divideInPlace(bb) {
+      divideInPlace(dd) {
         throw new ReferenceError("Can not divide a quaternion")
       }
       minimizeInPlace() {
@@ -1569,48 +1569,48 @@ export const modules = {
       maximizeInPlaceFromFloats() {
         throw new ReferenceError("Can not maximize a quaternion")
       }
-      AO() {
-        return this.negateToRef(new Xb)
+      ck() {
+        return this.negateToRef(new Ld)
       }
       negateInPlace() {
         return this._x = -this._x, this._y = -this._y, this._z = -this._z, this._w = -this._w, this._isDirty = !0, this
       }
-      negateToRef(bb) {
-        return bb._x = -this._x, bb._y = -this._y, bb._z = -this._z, bb._w = -this._w, bb._isDirty = !0, bb
+      negateToRef(dd) {
+        return dd._x = -this._x, dd._y = -this._y, dd._z = -this._z, dd._w = -this._w, dd._isDirty = !0, dd
       }
-      sUb(bb, ub, hb, Bb) {
-        return this._x === bb && this._y === ub && this._z === hb && this._w === Bb
+      zPd(dd, Jd, kd, pd) {
+        return this._x === dd && this._y === Jd && this._z === kd && this._w === pd
       }
-      floorToRef(bb) {
+      floorToRef(dd) {
         throw new ReferenceError("Can not floor a quaternion")
       }
       floor() {
         throw new ReferenceError("Can not floor a quaternion")
       }
-      fractToRef(bb) {
+      fractToRef(dd) {
         throw new ReferenceError("Can not fract a quaternion")
       }
       fract() {
         throw new ReferenceError("Can not fract a quaternion")
       }
-      conjugateToRef(bb) {
-        return bb.M_(-this._x, -this._y, -this._z, this._w), bb
+      conjugateToRef(dd) {
+        return dd.kdd(-this._x, -this._y, -this._z, this._w), dd
       }
       conjugateInPlace() {
         return this._x *= -1, this._y *= -1, this._z *= -1, this._isDirty = !0, this
       }
       conjugate() {
-        return new Xb(-this._x, -this._y, -this._z, this._w)
+        return new Ld(-this._x, -this._y, -this._z, this._w)
       }
       invert() {
-        const bb = this.conjugate(),
-          ub = this.lengthSquared();
-        return 0 == ub || 1 == ub || bb.scaleInPlace(1 / ub), bb
+        const dd = this.conjugate(),
+          Jd = this.lengthSquared();
+        return 0 == Jd || 1 == Jd || dd.scaleInPlace(1 / Jd), dd
       }
       invertInPlace() {
         this.conjugateInPlace();
-        const bb = this.lengthSquared();
-        return 0 == bb || 1 == bb || this.scaleInPlace(1 / bb), this
+        const dd = this.lengthSquared();
+        return 0 == dd || 1 == dd || this.scaleInPlace(1 / dd), this
       }
       lengthSquared() {
         return this._x * this._x + this._y * this._y + this._z * this._z + this._w * this._w
@@ -1621,266 +1621,266 @@ export const modules = {
       normalize() {
         return this.normalizeFromLength(this.length())
       }
-      normalizeFromLength(bb) {
-        return 0 === bb || 1 === bb ? this : this.scaleInPlace(1 / bb)
+      normalizeFromLength(dd) {
+        return 0 === dd || 1 === dd ? this : this.scaleInPlace(1 / dd)
       }
       normalizeToNew() {
-        const bb = new Xb(0, 0, 0, 1);
-        return this.normalizeToRef(bb), bb
+        const dd = new Ld(0, 0, 0, 1);
+        return this.normalizeToRef(dd), dd
       }
-      normalizeToRef(bb) {
-        const ub = this.length();
-        return 0 === ub || 1 === ub ? bb.M_(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / ub, bb)
+      normalizeToRef(dd) {
+        const Jd = this.length();
+        return 0 === Jd || 1 === Jd ? dd.kdd(this._x, this._y, this._z, this._w) : this.scaleToRef(1 / Jd, dd)
       }
       toEulerAngles() {
-        const bb = wb.Zero();
-        return this.toEulerAnglesToRef(bb), bb
+        const dd = ld.Zero();
+        return this.toEulerAnglesToRef(dd), dd
       }
-      toEulerAnglesToRef(bb) {
-        const ub = this._z,
-          hb = this._x,
-          Bb = this._y,
-          Ob = this._w,
-          Gb = Bb * ub - hb * Ob,
-          Ub = .4999999;
-        if (Gb < -Ub) bb._y = 2 * Math.atan2(Bb, Ob), bb._x = Math.PI / 2, bb._z = 0, bb._isDirty = !0;
-        else if (Gb > Ub) bb._y = 2 * Math.atan2(Bb, Ob), bb._x = -Math.PI / 2, bb._z = 0, bb._isDirty = !0;
+      toEulerAnglesToRef(dd) {
+        const Jd = this._z,
+          kd = this._x,
+          pd = this._y,
+          Nd = this._w,
+          Wd = pd * Jd - kd * Nd,
+          Pd = .4999999;
+        if (Wd < -Pd) dd._y = 2 * Math.atan2(pd, Nd), dd._x = Math.PI / 2, dd._z = 0, dd._isDirty = !0;
+        else if (Wd > Pd) dd._y = 2 * Math.atan2(pd, Nd), dd._x = -Math.PI / 2, dd._z = 0, dd._isDirty = !0;
         else {
-          const Ub = Ob * Ob,
-            Lb = ub * ub,
-            Yb = hb * hb,
-            Sb = Bb * Bb;
-          bb._z = Math.atan2(2 * (hb * Bb + ub * Ob), -Lb - Yb + Sb + Ub), bb._x = Math.asin(-2 * Gb), bb._y = Math.atan2(2 * (ub * hb + Bb * Ob), Lb - Yb - Sb + Ub), bb._isDirty = !0
+          const Pd = Nd * Nd,
+            Zd = Jd * Jd,
+            gd = kd * kd,
+            Cd = pd * pd;
+          dd._z = Math.atan2(2 * (kd * pd + Jd * Nd), -Zd - gd + Cd + Pd), dd._x = Math.asin(-2 * Wd), dd._y = Math.atan2(2 * (Jd * kd + pd * Nd), Zd - gd - Cd + Pd), dd._isDirty = !0
         }
-        return bb
+        return dd
       }
-      toAlphaBetaGammaToRef(bb) {
-        const ub = this._z,
-          hb = this._x,
-          Bb = this._y,
-          Ob = this._w,
-          Gb = Math.sqrt(hb * hb + Bb * Bb),
-          Ub = Math.sqrt(ub * ub + Ob * Ob),
-          Lb = 2 * Math.atan2(Gb, Ub),
-          Yb = 2 * Math.atan2(ub, Ob),
-          Sb = 2 * Math.atan2(Bb, hb),
-          ab = (Yb + Sb) / 2,
-          Hb = (Yb - Sb) / 2;
-        return bb.set(Hb, Lb, ab), bb
+      toAlphaBetaGammaToRef(dd) {
+        const Jd = this._z,
+          kd = this._x,
+          pd = this._y,
+          Nd = this._w,
+          Wd = Math.sqrt(kd * kd + pd * pd),
+          Pd = Math.sqrt(Jd * Jd + Nd * Nd),
+          Zd = 2 * Math.atan2(Wd, Pd),
+          gd = 2 * Math.atan2(Jd, Nd),
+          Cd = 2 * Math.atan2(pd, kd),
+          Kd = (gd + Cd) / 2,
+          od = (gd - Cd) / 2;
+        return dd.set(od, Zd, Kd), dd
       }
-      toRotationMatrix(bb) {
-        return pb.FromQuaternionToRef(this, bb), bb
+      toRotationMatrix(dd) {
+        return Od.FromQuaternionToRef(this, dd), dd
       }
-      fromRotationMatrix(bb) {
-        return Xb.FromRotationMatrixToRef(bb, this), this
+      fromRotationMatrix(dd) {
+        return Ld.FromRotationMatrixToRef(dd, this), this
       }
-      dot(bb) {
-        return this._x * bb._x + this._y * bb._y + this._z * bb._z + this._w * bb._w
+      dot(dd) {
+        return this._x * dd._x + this._y * dd._y + this._z * dd._z + this._w * dd._w
       }
       toAxisAngle() {
-        const bb = wb.Zero();
+        const dd = ld.Zero();
         return {
-          axis: bb,
-          angle: this.toAxisAngleToRef(bb)
+          axis: dd,
+          angle: this.toAxisAngleToRef(dd)
         }
       }
-      toAxisAngleToRef(bb) {
-        let ub;
-        const hb = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
-          Bb = this._w;
-        return hb > 0 ? (ub = 2 * Math.atan2(hb, Bb), bb.set(this._x / hb, this._y / hb, this._z / hb)) : (ub = 0, bb.set(1, 0, 0)), ub
+      toAxisAngleToRef(dd) {
+        let Jd;
+        const kd = Math.sqrt(this._x * this._x + this._y * this._y + this._z * this._z),
+          pd = this._w;
+        return kd > 0 ? (Jd = 2 * Math.atan2(kd, pd), dd.set(this._x / kd, this._y / kd, this._z / kd)) : (Jd = 0, dd.set(1, 0, 0)), Jd
       }
-      static FromRotationMatrix(bb) {
-        const ub = new Xb;
-        return Xb.FromRotationMatrixToRef(bb, ub), ub
+      static FromRotationMatrix(dd) {
+        const Jd = new Ld;
+        return Ld.FromRotationMatrixToRef(dd, Jd), Jd
       }
-      static FromRotationMatrixToRef(bb, ub) {
-        const hb = bb.m,
-          Bb = hb[0],
-          Ob = hb[4],
-          Gb = hb[8],
-          Ub = hb[1],
-          Lb = hb[5],
-          Yb = hb[9],
-          Sb = hb[2],
-          ab = hb[6],
-          Hb = hb[10],
-          wb = Bb + Lb + Hb;
-        let Zb;
-        return wb > 0 ? (Zb = .5 / Math.sqrt(wb + 1), ub._w = .25 / Zb, ub._x = (ab - Yb) * Zb, ub._y = (Gb - Sb) * Zb, ub._z = (Ub - Ob) * Zb, ub._isDirty = !0) : Bb > Lb && Bb > Hb ? (Zb = 2 * Math.sqrt(1 + Bb - Lb - Hb), ub._w = (ab - Yb) / Zb, ub._x = .25 * Zb, ub._y = (Ob + Ub) / Zb, ub._z = (Gb + Sb) / Zb, ub._isDirty = !0) : Lb > Hb ? (Zb = 2 * Math.sqrt(1 + Lb - Bb - Hb), ub._w = (Gb - Sb) / Zb, ub._x = (Ob + Ub) / Zb, ub._y = .25 * Zb, ub._z = (Yb + ab) / Zb, ub._isDirty = !0) : (Zb = 2 * Math.sqrt(1 + Hb - Bb - Lb), ub._w = (Ub - Ob) / Zb, ub._x = (Gb + Sb) / Zb, ub._y = (Yb + ab) / Zb, ub._z = .25 * Zb, ub._isDirty = !0), ub
+      static FromRotationMatrixToRef(dd, Jd) {
+        const kd = dd.m,
+          pd = kd[0],
+          Nd = kd[4],
+          Wd = kd[8],
+          Pd = kd[1],
+          Zd = kd[5],
+          gd = kd[9],
+          Cd = kd[2],
+          Kd = kd[6],
+          od = kd[10],
+          ld = pd + Zd + od;
+        let Qd;
+        return ld > 0 ? (Qd = .5 / Math.sqrt(ld + 1), Jd._w = .25 / Qd, Jd._x = (Kd - gd) * Qd, Jd._y = (Wd - Cd) * Qd, Jd._z = (Pd - Nd) * Qd, Jd._isDirty = !0) : pd > Zd && pd > od ? (Qd = 2 * Math.sqrt(1 + pd - Zd - od), Jd._w = (Kd - gd) / Qd, Jd._x = .25 * Qd, Jd._y = (Nd + Pd) / Qd, Jd._z = (Wd + Cd) / Qd, Jd._isDirty = !0) : Zd > od ? (Qd = 2 * Math.sqrt(1 + Zd - pd - od), Jd._w = (Wd - Cd) / Qd, Jd._x = (Nd + Pd) / Qd, Jd._y = .25 * Qd, Jd._z = (gd + Kd) / Qd, Jd._isDirty = !0) : (Qd = 2 * Math.sqrt(1 + od - pd - Zd), Jd._w = (Pd - Nd) / Qd, Jd._x = (Wd + Cd) / Qd, Jd._y = (gd + Kd) / Qd, Jd._z = .25 * Qd, Jd._isDirty = !0), Jd
       }
-      static Dot(bb, ub) {
-        return bb._x * ub._x + bb._y * ub._y + bb._z * ub._z + bb._w * ub._w
+      static Dot(dd, Jd) {
+        return dd._x * Jd._x + dd._y * Jd._y + dd._z * Jd._z + dd._w * Jd._w
       }
-      static AreClose(bb, ub) {
-        let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
-        const Bb = Xb.Dot(bb, ub);
-        return 1 - Bb * Bb <= hb
+      static AreClose(dd, Jd) {
+        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .1;
+        const pd = Ld.Dot(dd, Jd);
+        return 1 - pd * pd <= kd
       }
-      static SmoothToRef(bb, ub, hb, Bb, Ob) {
-        let Gb = 0 === Bb ? 1 : hb / Bb;
-        return Gb = (0, Lb.Clamp)(Gb, 0, 1), Xb.SlerpToRef(bb, ub, Gb, Ob), Ob
+      static SmoothToRef(dd, Jd, kd, pd, Nd) {
+        let Wd = 0 === pd ? 1 : kd / pd;
+        return Wd = (0, Zd.Clamp)(Wd, 0, 1), Ld.SlerpToRef(dd, Jd, Wd, Nd), Nd
       }
       static Zero() {
-        return new Xb(0, 0, 0, 0)
+        return new Ld(0, 0, 0, 0)
       }
-      static Inverse(bb) {
-        return new Xb(-bb._x, -bb._y, -bb._z, bb._w)
+      static Inverse(dd) {
+        return new Ld(-dd._x, -dd._y, -dd._z, dd._w)
       }
-      static InverseToRef(bb, ub) {
-        return ub.set(-bb._x, -bb._y, -bb._z, bb._w), ub
+      static InverseToRef(dd, Jd) {
+        return Jd.set(-dd._x, -dd._y, -dd._z, dd._w), Jd
       }
       static Identity() {
-        return new Xb(0, 0, 0, 1)
+        return new Ld(0, 0, 0, 1)
       }
-      static IsIdentity(bb) {
-        return bb && 0 === bb._x && 0 === bb._y && 0 === bb._z && 1 === bb._w
+      static IsIdentity(dd) {
+        return dd && 0 === dd._x && 0 === dd._y && 0 === dd._z && 1 === dd._w
       }
-      static RotationAxis(bb, ub) {
-        return Xb.RotationAxisToRef(bb, ub, new Xb)
+      static RotationAxis(dd, Jd) {
+        return Ld.RotationAxisToRef(dd, Jd, new Ld)
       }
-      static RotationAxisToRef(bb, ub, hb) {
-        hb._w = Math.cos(ub / 2);
-        const Bb = Math.sin(ub / 2) / bb.length();
-        return hb._x = bb._x * Bb, hb._y = bb._y * Bb, hb._z = bb._z * Bb, hb._isDirty = !0, hb
+      static RotationAxisToRef(dd, Jd, kd) {
+        kd._w = Math.cos(Jd / 2);
+        const pd = Math.sin(Jd / 2) / dd.length();
+        return kd._x = dd._x * pd, kd._y = dd._y * pd, kd._z = dd._z * pd, kd._isDirty = !0, kd
       }
-      static FromArray(bb, ub) {
-        return ub || (ub = 0), new Xb(bb[ub], bb[ub + 1], bb[ub + 2], bb[ub + 3])
+      static FromArray(dd, Jd) {
+        return Jd || (Jd = 0), new Ld(dd[Jd], dd[Jd + 1], dd[Jd + 2], dd[Jd + 3])
       }
-      static FromArrayToRef(bb, ub, hb) {
-        return hb._x = bb[ub], hb._y = bb[ub + 1], hb._z = bb[ub + 2], hb._w = bb[ub + 3], hb._isDirty = !0, hb
+      static FromArrayToRef(dd, Jd, kd) {
+        return kd._x = dd[Jd], kd._y = dd[Jd + 1], kd._z = dd[Jd + 2], kd._w = dd[Jd + 3], kd._isDirty = !0, kd
       }
-      static FromFloatsToRef(bb, ub, hb, Bb, Ob) {
-        return Ob.M_(bb, ub, hb, Bb), Ob
+      static FromFloatsToRef(dd, Jd, kd, pd, Nd) {
+        return Nd.kdd(dd, Jd, kd, pd), Nd
       }
-      static FromEulerAngles(bb, ub, hb) {
-        const Bb = new Xb;
-        return Xb.RotationYawPitchRollToRef(ub, bb, hb, Bb), Bb
+      static FromEulerAngles(dd, Jd, kd) {
+        const pd = new Ld;
+        return Ld.RotationYawPitchRollToRef(Jd, dd, kd, pd), pd
       }
-      static FromEulerAnglesToRef(bb, ub, hb, Bb) {
-        return Xb.RotationYawPitchRollToRef(ub, bb, hb, Bb), Bb
+      static FromEulerAnglesToRef(dd, Jd, kd, pd) {
+        return Ld.RotationYawPitchRollToRef(Jd, dd, kd, pd), pd
       }
-      static FromEulerVector(bb) {
-        const ub = new Xb;
-        return Xb.RotationYawPitchRollToRef(bb._y, bb._x, bb._z, ub), ub
+      static FromEulerVector(dd) {
+        const Jd = new Ld;
+        return Ld.RotationYawPitchRollToRef(dd._y, dd._x, dd._z, Jd), Jd
       }
-      static FromEulerVectorToRef(bb, ub) {
-        return Xb.RotationYawPitchRollToRef(bb._y, bb._x, bb._z, ub), ub
+      static FromEulerVectorToRef(dd, Jd) {
+        return Ld.RotationYawPitchRollToRef(dd._y, dd._x, dd._z, Jd), Jd
       }
-      static FromUnitVectorsToRef(bb, ub, hb) {
-        let Ob = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Bb.b;
-        const Gb = wb.Dot(bb, ub) + 1;
-        return Gb < Ob ? Math.abs(bb.x) > Math.abs(bb.z) ? hb.set(-bb.y, bb.x, 0, 0) : hb.set(0, -bb.z, bb.y, 0) : (wb.CrossToRef(bb, ub, Ab.YX[0]), hb.set(Ab.YX[0].x, Ab.YX[0].y, Ab.YX[0].z, Gb)), hb.normalize()
+      static FromUnitVectorsToRef(dd, Jd, kd) {
+        let Nd = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : pd.e;
+        const Wd = ld.Dot(dd, Jd) + 1;
+        return Wd < Nd ? Math.abs(dd.x) > Math.abs(dd.z) ? kd.set(-dd.y, dd.x, 0, 0) : kd.set(0, -dd.z, dd.y, 0) : (ld.CrossToRef(dd, Jd, Rd.IL[0]), kd.set(Rd.IL[0].x, Rd.IL[0].y, Rd.IL[0].z, Wd)), kd.normalize()
       }
-      static RotationYawPitchRoll(bb, ub, hb) {
-        const Bb = new Xb;
-        return Xb.RotationYawPitchRollToRef(bb, ub, hb, Bb), Bb
+      static RotationYawPitchRoll(dd, Jd, kd) {
+        const pd = new Ld;
+        return Ld.RotationYawPitchRollToRef(dd, Jd, kd, pd), pd
       }
-      static RotationYawPitchRollToRef(bb, ub, hb, Bb) {
-        const Ob = .5 * hb,
-          Gb = .5 * ub,
-          Ub = .5 * bb,
-          Lb = Math.sin(Ob),
-          Yb = Math.cos(Ob),
-          Sb = Math.sin(Gb),
-          ab = Math.cos(Gb),
-          Hb = Math.sin(Ub),
-          wb = Math.cos(Ub);
-        return Bb._x = wb * Sb * Yb + Hb * ab * Lb, Bb._y = Hb * ab * Yb - wb * Sb * Lb, Bb._z = wb * ab * Lb - Hb * Sb * Yb, Bb._w = wb * ab * Yb + Hb * Sb * Lb, Bb._isDirty = !0, Bb
+      static RotationYawPitchRollToRef(dd, Jd, kd, pd) {
+        const Nd = .5 * kd,
+          Wd = .5 * Jd,
+          Pd = .5 * dd,
+          Zd = Math.sin(Nd),
+          gd = Math.cos(Nd),
+          Cd = Math.sin(Wd),
+          Kd = Math.cos(Wd),
+          od = Math.sin(Pd),
+          ld = Math.cos(Pd);
+        return pd._x = ld * Cd * gd + od * Kd * Zd, pd._y = od * Kd * gd - ld * Cd * Zd, pd._z = ld * Kd * Zd - od * Cd * gd, pd._w = ld * Kd * gd + od * Cd * Zd, pd._isDirty = !0, pd
       }
-      static RotationAlphaBetaGamma(bb, ub, hb) {
-        const Bb = new Xb;
-        return Xb.RotationAlphaBetaGammaToRef(bb, ub, hb, Bb), Bb
+      static RotationAlphaBetaGamma(dd, Jd, kd) {
+        const pd = new Ld;
+        return Ld.RotationAlphaBetaGammaToRef(dd, Jd, kd, pd), pd
       }
-      static RotationAlphaBetaGammaToRef(bb, ub, hb, Bb) {
-        const Ob = .5 * (hb + bb),
-          Gb = .5 * (hb - bb),
-          Ub = .5 * ub;
-        return Bb._x = Math.cos(Gb) * Math.sin(Ub), Bb._y = Math.sin(Gb) * Math.sin(Ub), Bb._z = Math.sin(Ob) * Math.cos(Ub), Bb._w = Math.cos(Ob) * Math.cos(Ub), Bb._isDirty = !0, Bb
+      static RotationAlphaBetaGammaToRef(dd, Jd, kd, pd) {
+        const Nd = .5 * (kd + dd),
+          Wd = .5 * (kd - dd),
+          Pd = .5 * Jd;
+        return pd._x = Math.cos(Wd) * Math.sin(Pd), pd._y = Math.sin(Wd) * Math.sin(Pd), pd._z = Math.sin(Nd) * Math.cos(Pd), pd._w = Math.cos(Nd) * Math.cos(Pd), pd._isDirty = !0, pd
       }
-      static RotationQuaternionFromAxis(bb, ub, hb) {
-        const Bb = new Xb(0, 0, 0, 0);
-        return Xb.RotationQuaternionFromAxisToRef(bb, ub, hb, Bb), Bb
+      static RotationQuaternionFromAxis(dd, Jd, kd) {
+        const pd = new Ld(0, 0, 0, 0);
+        return Ld.RotationQuaternionFromAxisToRef(dd, Jd, kd, pd), pd
       }
-      static RotationQuaternionFromAxisToRef(bb, ub, hb, Bb) {
-        const Ob = ob.Matrix[0];
-        return bb = bb.normalizeToRef(ob.YX[0]), ub = ub.normalizeToRef(ob.YX[1]), hb = hb.normalizeToRef(ob.YX[2]), pb.FromXYZAxesToRef(bb, ub, hb, Ob), Xb.FromRotationMatrixToRef(Ob, Bb), Bb
+      static RotationQuaternionFromAxisToRef(dd, Jd, kd, pd) {
+        const Nd = ed.Matrix[0];
+        return dd = dd.normalizeToRef(ed.IL[0]), Jd = Jd.normalizeToRef(ed.IL[1]), kd = kd.normalizeToRef(ed.IL[2]), Od.FromXYZAxesToRef(dd, Jd, kd, Nd), Ld.FromRotationMatrixToRef(Nd, pd), pd
       }
-      static FromLookDirectionLH(bb, ub) {
-        const hb = new Xb;
-        return Xb.FromLookDirectionLHToRef(bb, ub, hb), hb
+      static FromLookDirectionLH(dd, Jd) {
+        const kd = new Ld;
+        return Ld.FromLookDirectionLHToRef(dd, Jd, kd), kd
       }
-      static FromLookDirectionLHToRef(bb, ub, hb) {
-        const Bb = ob.Matrix[0];
-        return pb.LookDirectionLHToRef(bb, ub, Bb), Xb.FromRotationMatrixToRef(Bb, hb), hb
+      static FromLookDirectionLHToRef(dd, Jd, kd) {
+        const pd = ed.Matrix[0];
+        return Od.LookDirectionLHToRef(dd, Jd, pd), Ld.FromRotationMatrixToRef(pd, kd), kd
       }
-      static FromLookDirectionRH(bb, ub) {
-        const hb = new Xb;
-        return Xb.FromLookDirectionRHToRef(bb, ub, hb), hb
+      static FromLookDirectionRH(dd, Jd) {
+        const kd = new Ld;
+        return Ld.FromLookDirectionRHToRef(dd, Jd, kd), kd
       }
-      static FromLookDirectionRHToRef(bb, ub, hb) {
-        const Bb = ob.Matrix[0];
-        return pb.LookDirectionRHToRef(bb, ub, Bb), Xb.FromRotationMatrixToRef(Bb, hb)
+      static FromLookDirectionRHToRef(dd, Jd, kd) {
+        const pd = ed.Matrix[0];
+        return Od.LookDirectionRHToRef(dd, Jd, pd), Ld.FromRotationMatrixToRef(pd, kd)
       }
-      static Slerp(bb, ub, hb) {
-        const Bb = Xb.Identity();
-        return Xb.SlerpToRef(bb, ub, hb, Bb), Bb
+      static Slerp(dd, Jd, kd) {
+        const pd = Ld.Identity();
+        return Ld.SlerpToRef(dd, Jd, kd, pd), pd
       }
-      static SlerpToRef(bb, ub, hb, Bb) {
-        let Ob, Gb, Ub = bb._x * ub._x + bb._y * ub._y + bb._z * ub._z + bb._w * ub._w,
-          Lb = !1;
-        if (Ub < 0 && (Lb = !0, Ub = -Ub), Ub > .999999) Gb = 1 - hb, Ob = Lb ? -hb : hb;
+      static SlerpToRef(dd, Jd, kd, pd) {
+        let Nd, Wd, Pd = dd._x * Jd._x + dd._y * Jd._y + dd._z * Jd._z + dd._w * Jd._w,
+          Zd = !1;
+        if (Pd < 0 && (Zd = !0, Pd = -Pd), Pd > .999999) Wd = 1 - kd, Nd = Zd ? -kd : kd;
         else {
-          const bb = Math.acos(Ub),
-            ub = 1 / Math.sin(bb);
-          Gb = Math.sin((1 - hb) * bb) * ub, Ob = Lb ? -Math.sin(hb * bb) * ub : Math.sin(hb * bb) * ub
+          const dd = Math.acos(Pd),
+            Jd = 1 / Math.sin(dd);
+          Wd = Math.sin((1 - kd) * dd) * Jd, Nd = Zd ? -Math.sin(kd * dd) * Jd : Math.sin(kd * dd) * Jd
         }
-        return Bb._x = Gb * bb._x + Ob * ub._x, Bb._y = Gb * bb._y + Ob * ub._y, Bb._z = Gb * bb._z + Ob * ub._z, Bb._w = Gb * bb._w + Ob * ub._w, Bb._isDirty = !0, Bb
+        return pd._x = Wd * dd._x + Nd * Jd._x, pd._y = Wd * dd._y + Nd * Jd._y, pd._z = Wd * dd._z + Nd * Jd._z, pd._w = Wd * dd._w + Nd * Jd._w, pd._isDirty = !0, pd
       }
-      static Hermite(bb, ub, hb, Bb, Ob) {
-        const Gb = Ob * Ob,
-          Ub = Ob * Gb,
-          Lb = 2 * Ub - 3 * Gb + 1,
-          Yb = -2 * Ub + 3 * Gb,
-          Sb = Ub - 2 * Gb + Ob,
-          ab = Ub - Gb,
-          Hb = bb._x * Lb + hb._x * Yb + ub._x * Sb + Bb._x * ab,
-          wb = bb._y * Lb + hb._y * Yb + ub._y * Sb + Bb._y * ab,
-          Zb = bb._z * Lb + hb._z * Yb + ub._z * Sb + Bb._z * ab,
-          pb = bb._w * Lb + hb._w * Yb + ub._w * Sb + Bb._w * ab;
-        return new Xb(Hb, wb, Zb, pb)
+      static Hermite(dd, Jd, kd, pd, Nd) {
+        const Wd = Nd * Nd,
+          Pd = Nd * Wd,
+          Zd = 2 * Pd - 3 * Wd + 1,
+          gd = -2 * Pd + 3 * Wd,
+          Cd = Pd - 2 * Wd + Nd,
+          Kd = Pd - Wd,
+          od = dd._x * Zd + kd._x * gd + Jd._x * Cd + pd._x * Kd,
+          ld = dd._y * Zd + kd._y * gd + Jd._y * Cd + pd._y * Kd,
+          Qd = dd._z * Zd + kd._z * gd + Jd._z * Cd + pd._z * Kd,
+          Od = dd._w * Zd + kd._w * gd + Jd._w * Cd + pd._w * Kd;
+        return new Ld(od, ld, Qd, Od)
       }
-      static Hermite1stDerivative(bb, ub, hb, Bb, Ob) {
-        const Gb = new Xb;
-        return this.Hermite1stDerivativeToRef(bb, ub, hb, Bb, Ob, Gb), Gb
+      static Hermite1stDerivative(dd, Jd, kd, pd, Nd) {
+        const Wd = new Ld;
+        return this.Hermite1stDerivativeToRef(dd, Jd, kd, pd, Nd, Wd), Wd
       }
-      static Hermite1stDerivativeToRef(bb, ub, hb, Bb, Ob, Gb) {
-        const Ub = Ob * Ob;
-        return Gb._x = 6 * (Ub - Ob) * bb._x + (3 * Ub - 4 * Ob + 1) * ub._x + 6 * (-Ub + Ob) * hb._x + (3 * Ub - 2 * Ob) * Bb._x, Gb._y = 6 * (Ub - Ob) * bb._y + (3 * Ub - 4 * Ob + 1) * ub._y + 6 * (-Ub + Ob) * hb._y + (3 * Ub - 2 * Ob) * Bb._y, Gb._z = 6 * (Ub - Ob) * bb._z + (3 * Ub - 4 * Ob + 1) * ub._z + 6 * (-Ub + Ob) * hb._z + (3 * Ub - 2 * Ob) * Bb._z, Gb._w = 6 * (Ub - Ob) * bb._w + (3 * Ub - 4 * Ob + 1) * ub._w + 6 * (-Ub + Ob) * hb._w + (3 * Ub - 2 * Ob) * Bb._w, Gb._isDirty = !0, Gb
+      static Hermite1stDerivativeToRef(dd, Jd, kd, pd, Nd, Wd) {
+        const Pd = Nd * Nd;
+        return Wd._x = 6 * (Pd - Nd) * dd._x + (3 * Pd - 4 * Nd + 1) * Jd._x + 6 * (-Pd + Nd) * kd._x + (3 * Pd - 2 * Nd) * pd._x, Wd._y = 6 * (Pd - Nd) * dd._y + (3 * Pd - 4 * Nd + 1) * Jd._y + 6 * (-Pd + Nd) * kd._y + (3 * Pd - 2 * Nd) * pd._y, Wd._z = 6 * (Pd - Nd) * dd._z + (3 * Pd - 4 * Nd + 1) * Jd._z + 6 * (-Pd + Nd) * kd._z + (3 * Pd - 2 * Nd) * pd._z, Wd._w = 6 * (Pd - Nd) * dd._w + (3 * Pd - 4 * Nd + 1) * Jd._w + 6 * (-Pd + Nd) * kd._w + (3 * Pd - 2 * Nd) * pd._w, Wd._isDirty = !0, Wd
       }
-      static Normalize(bb) {
-        const ub = Xb.Zero();
-        return Xb.NormalizeToRef(bb, ub), ub
+      static Normalize(dd) {
+        const Jd = Ld.Zero();
+        return Ld.NormalizeToRef(dd, Jd), Jd
       }
-      static NormalizeToRef(bb, ub) {
-        return bb.normalizeToRef(ub), ub
+      static NormalizeToRef(dd, Jd) {
+        return dd.normalizeToRef(Jd), Jd
       }
-      static Clamp(bb, ub, hb) {
-        const Bb = new Xb;
-        return Xb.ClampToRef(bb, ub, hb, Bb), Bb
+      static Clamp(dd, Jd, kd) {
+        const pd = new Ld;
+        return Ld.ClampToRef(dd, Jd, kd, pd), pd
       }
-      static ClampToRef(bb, ub, hb, Bb) {
-        return Bb.M_((0, Lb.Clamp)(bb.x, ub.x, hb.x), (0, Lb.Clamp)(bb.y, ub.y, hb.y), (0, Lb.Clamp)(bb.z, ub.z, hb.z), (0, Lb.Clamp)(bb.w, ub.w, hb.w))
+      static ClampToRef(dd, Jd, kd, pd) {
+        return pd.kdd((0, Zd.Clamp)(dd.x, Jd.x, kd.x), (0, Zd.Clamp)(dd.y, Jd.y, kd.y), (0, Zd.Clamp)(dd.z, Jd.z, kd.z), (0, Zd.Clamp)(dd.w, Jd.w, kd.w))
       }
       static Random() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return new Xb((0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return new Ld((0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd))
       }
       static RandomToRef() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        return (arguments.length > 2 ? arguments[2] : void 0).M_((0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub), (0, Lb.RandomRange)(bb, ub))
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        return (arguments.length > 2 ? arguments[2] : void 0).kdd((0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd), (0, Zd.RandomRange)(dd, Jd))
       }
       static Minimize() {
         throw new ReferenceError("Quaternion.Minimize does not make sense")
@@ -1888,48 +1888,48 @@ export const modules = {
       static Maximize() {
         throw new ReferenceError("Quaternion.Maximize does not make sense")
       }
-      static Distance(bb, ub) {
-        return Math.sqrt(Xb.DistanceSquared(bb, ub))
+      static Distance(dd, Jd) {
+        return Math.sqrt(Ld.DistanceSquared(dd, Jd))
       }
-      static DistanceSquared(bb, ub) {
-        const hb = bb.x - ub.x,
-          Bb = bb.y - ub.y,
-          Ob = bb.z - ub.z,
-          Gb = bb.w - ub.w;
-        return hb * hb + Bb * Bb + Ob * Ob + Gb * Gb
+      static DistanceSquared(dd, Jd) {
+        const kd = dd.x - Jd.x,
+          pd = dd.y - Jd.y,
+          Nd = dd.z - Jd.z,
+          Wd = dd.w - Jd.w;
+        return kd * kd + pd * pd + Nd * Nd + Wd * Wd
       }
-      static Center(bb, ub) {
-        return Xb.CenterToRef(bb, ub, Xb.Zero())
+      static Center(dd, Jd) {
+        return Ld.CenterToRef(dd, Jd, Ld.Zero())
       }
-      static CenterToRef(bb, ub, hb) {
-        return hb.M_((bb.x + ub.x) / 2, (bb.y + ub.y) / 2, (bb.z + ub.z) / 2, (bb.w + ub.w) / 2)
+      static CenterToRef(dd, Jd, kd) {
+        return kd.kdd((dd.x + Jd.x) / 2, (dd.y + Jd.y) / 2, (dd.z + Jd.z) / 2, (dd.w + Jd.w) / 2)
       }
     }
-    Xb._V8PerformanceHack = new Xb(.5, .5, .5, .5);
-    class pb {
+    Ld._V8PerformanceHack = new Ld(.5, .5, .5, .5);
+    class Od {
       static get Use64Bits() {
-        return Gb.d.MatrixUse64Bits
+        return Wd.d.MatrixUse64Bits
       }
       get m() {
         return this._m
       }
       markAsUpdated() {
-        this.updateFlag = Yb.k._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
+        this.updateFlag = gd.o._UpdateFlagSeed++, this._isIdentity = !1, this._isIdentity3x2 = !1, this._isIdentityDirty = !0, this._isIdentity3x2Dirty = !0
       }
-      _updateIdentityStatus(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          hb = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          Bb = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        this._isIdentity = bb, this._isIdentity3x2 = bb || hb, this._isIdentityDirty = !this._isIdentity && ub, this._isIdentity3x2Dirty = !this._isIdentity3x2 && Bb
+      _updateIdentityStatus(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          kd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          pd = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        this._isIdentity = dd, this._isIdentity3x2 = dd || kd, this._isIdentityDirty = !this._isIdentity && Jd, this._isIdentity3x2Dirty = !this._isIdentity3x2 && pd
       }
       constructor() {
-        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, Gb.d.MatrixTrackPrecisionChange && Gb.d.MatrixTrackedMatrices.push(this), this._m = new Gb.d.MatrixCurrentType(16), this.markAsUpdated()
+        this._isIdentity = !1, this._isIdentityDirty = !0, this._isIdentity3x2 = !0, this._isIdentity3x2Dirty = !0, this.updateFlag = -1, Wd.d.MatrixTrackPrecisionChange && Wd.d.MatrixTrackedMatrices.push(this), this._m = new Wd.d.MatrixCurrentType(16), this.markAsUpdated()
       }
       isIdentity() {
         if (this._isIdentityDirty) {
           this._isIdentityDirty = !1;
-          const bb = this._m;
-          this._isIdentity = 1 === bb[0] && 0 === bb[1] && 0 === bb[2] && 0 === bb[3] && 0 === bb[4] && 1 === bb[5] && 0 === bb[6] && 0 === bb[7] && 0 === bb[8] && 0 === bb[9] && 1 === bb[10] && 0 === bb[11] && 0 === bb[12] && 0 === bb[13] && 0 === bb[14] && 1 === bb[15]
+          const dd = this._m;
+          this._isIdentity = 1 === dd[0] && 0 === dd[1] && 0 === dd[2] && 0 === dd[3] && 0 === dd[4] && 1 === dd[5] && 0 === dd[6] && 0 === dd[7] && 0 === dd[8] && 0 === dd[9] && 1 === dd[10] && 0 === dd[11] && 0 === dd[12] && 0 === dd[13] && 0 === dd[14] && 1 === dd[15]
         }
         return this._isIdentity
       }
@@ -1938,966 +1938,966 @@ export const modules = {
       }
       determinant() {
         if (!0 === this._isIdentity) return 1;
-        const bb = this._m,
-          ub = bb[0],
-          hb = bb[1],
-          Bb = bb[2],
-          Ob = bb[3],
-          Gb = bb[4],
-          Ub = bb[5],
-          Lb = bb[6],
-          Yb = bb[7],
-          Sb = bb[8],
-          ab = bb[9],
-          Hb = bb[10],
-          wb = bb[11],
-          Zb = bb[12],
-          Xb = bb[13],
-          pb = bb[14],
-          ob = bb[15],
-          Ab = Hb * ob - pb * wb,
-          lb = ab * ob - Xb * wb,
-          Kb = ab * pb - Xb * Hb,
-          Wb = Sb * ob - Zb * wb,
-          Cb = Sb * pb - Hb * Zb,
-          db = Sb * Xb - Zb * ab;
-        return ub * +(Ub * Ab - Lb * lb + Yb * Kb) + hb * -(Gb * Ab - Lb * Wb + Yb * Cb) + Bb * +(Gb * lb - Ub * Wb + Yb * db) + Ob * -(Gb * Kb - Ub * Cb + Lb * db)
+        const dd = this._m,
+          Jd = dd[0],
+          kd = dd[1],
+          pd = dd[2],
+          Nd = dd[3],
+          Wd = dd[4],
+          Pd = dd[5],
+          Zd = dd[6],
+          gd = dd[7],
+          Cd = dd[8],
+          Kd = dd[9],
+          od = dd[10],
+          ld = dd[11],
+          Qd = dd[12],
+          Ld = dd[13],
+          Od = dd[14],
+          ed = dd[15],
+          Rd = od * ed - Od * ld,
+          Id = Kd * ed - Ld * ld,
+          Gd = Kd * Od - Ld * od,
+          vd = Cd * ed - Qd * ld,
+          xd = Cd * Od - od * Qd,
+          qd = Cd * Ld - Qd * Kd;
+        return Jd * +(Pd * Rd - Zd * Id + gd * Gd) + kd * -(Wd * Rd - Zd * vd + gd * xd) + pd * +(Wd * Id - Pd * vd + gd * qd) + Nd * -(Wd * Gd - Pd * xd + Zd * qd)
       }
       toString() {
         return `{${this.m[0]}, ${this.m[1]}, ${this.m[2]}, ${this.m[3]}\n${this.m[4]}, ${this.m[5]}, ${this.m[6]}, ${this.m[7]}\n${this.m[8]}, ${this.m[9]}, ${this.m[10]}, ${this.m[11]}\n${this.m[12]}, ${this.m[13]}, ${this.m[14]}, ${this.m[15]}}`
       }
       toArray() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (!bb) return this._m;
-        const hb = this._m;
-        for (let Bb = 0; Bb < 16; Bb++) bb[ub + Bb] = hb[Bb];
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (!dd) return this._m;
+        const kd = this._m;
+        for (let pd = 0; pd < 16; pd++) dd[Jd + pd] = kd[pd];
         return this
       }
-      ZBb() {
+      spd() {
         return this._m
       }
-      Ohb(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return pb.FromArrayToRef(bb, ub, this)
+      lkd(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return Od.FromArrayToRef(dd, Jd, this)
       }
-      M_() {
-        for (var bb = arguments.length, ub = new Array(bb), hb = 0; hb < bb; hb++) ub[hb] = arguments[hb];
-        return pb.FromArrayToRef(ub, 0, this)
+      kdd() {
+        for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
+        return Od.FromArrayToRef(Jd, 0, this)
       }
       set() {
-        const bb = this._m;
-        for (let ub = 0; ub < 16; ub++) bb[ub] = ub < 0 || arguments.length <= ub ? void 0 : arguments[ub];
+        const dd = this._m;
+        for (let Jd = 0; Jd < 16; Jd++) dd[Jd] = Jd < 0 || arguments.length <= Jd ? void 0 : arguments[Jd];
         return this.markAsUpdated(), this
       }
-      N9(bb) {
-        const ub = this._m;
-        for (let hb = 0; hb < 16; hb++) ub[hb] = bb;
+      o5(dd) {
+        const Jd = this._m;
+        for (let kd = 0; kd < 16; kd++) Jd[kd] = dd;
         return this.markAsUpdated(), this
       }
       invert() {
         return this.invertToRef(this), this
       }
       reset() {
-        return pb.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
+        return Od.FromValuesToRef(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, this), this._updateIdentityStatus(!1), this
       }
-      add(bb) {
-        const ub = new pb;
-        return this.addToRef(bb, ub), ub
+      add(dd) {
+        const Jd = new Od;
+        return this.addToRef(dd, Jd), Jd
       }
-      addToRef(bb, ub) {
-        const hb = this._m,
-          Bb = ub._m,
-          Ob = bb.m;
-        for (let Gb = 0; Gb < 16; Gb++) Bb[Gb] = hb[Gb] + Ob[Gb];
-        return ub.markAsUpdated(), ub
+      addToRef(dd, Jd) {
+        const kd = this._m,
+          pd = Jd._m,
+          Nd = dd.m;
+        for (let Wd = 0; Wd < 16; Wd++) pd[Wd] = kd[Wd] + Nd[Wd];
+        return Jd.markAsUpdated(), Jd
       }
-      addToSelf(bb) {
-        const ub = this._m,
-          hb = bb.m;
-        return ub[0] += hb[0], ub[1] += hb[1], ub[2] += hb[2], ub[3] += hb[3], ub[4] += hb[4], ub[5] += hb[5], ub[6] += hb[6], ub[7] += hb[7], ub[8] += hb[8], ub[9] += hb[9], ub[10] += hb[10], ub[11] += hb[11], ub[12] += hb[12], ub[13] += hb[13], ub[14] += hb[14], ub[15] += hb[15], this.markAsUpdated(), this
+      addToSelf(dd) {
+        const Jd = this._m,
+          kd = dd.m;
+        return Jd[0] += kd[0], Jd[1] += kd[1], Jd[2] += kd[2], Jd[3] += kd[3], Jd[4] += kd[4], Jd[5] += kd[5], Jd[6] += kd[6], Jd[7] += kd[7], Jd[8] += kd[8], Jd[9] += kd[9], Jd[10] += kd[10], Jd[11] += kd[11], Jd[12] += kd[12], Jd[13] += kd[13], Jd[14] += kd[14], Jd[15] += kd[15], this.markAsUpdated(), this
       }
-      addInPlace(bb) {
-        const ub = this._m,
-          hb = bb.m;
-        for (let Bb = 0; Bb < 16; Bb++) ub[Bb] += hb[Bb];
+      addInPlace(dd) {
+        const Jd = this._m,
+          kd = dd.m;
+        for (let pd = 0; pd < 16; pd++) Jd[pd] += kd[pd];
         return this.markAsUpdated(), this
       }
       addInPlaceFromFloats() {
-        const bb = this._m;
-        for (let ub = 0; ub < 16; ub++) bb[ub] += ub < 0 || arguments.length <= ub ? void 0 : arguments[ub];
+        const dd = this._m;
+        for (let Jd = 0; Jd < 16; Jd++) dd[Jd] += Jd < 0 || arguments.length <= Jd ? void 0 : arguments[Jd];
         return this.markAsUpdated(), this
       }
-      subtract(bb) {
-        const ub = this._m,
-          hb = bb.m;
-        for (let Bb = 0; Bb < 16; Bb++) ub[Bb] -= hb[Bb];
+      subtract(dd) {
+        const Jd = this._m,
+          kd = dd.m;
+        for (let pd = 0; pd < 16; pd++) Jd[pd] -= kd[pd];
         return this.markAsUpdated(), this
       }
-      subtractToRef(bb, ub) {
-        const hb = this._m,
-          Bb = bb.m,
-          Ob = ub._m;
-        for (let Gb = 0; Gb < 16; Gb++) Ob[Gb] = hb[Gb] - Bb[Gb];
-        return ub.markAsUpdated(), ub
+      subtractToRef(dd, Jd) {
+        const kd = this._m,
+          pd = dd.m,
+          Nd = Jd._m;
+        for (let Wd = 0; Wd < 16; Wd++) Nd[Wd] = kd[Wd] - pd[Wd];
+        return Jd.markAsUpdated(), Jd
       }
-      tBb(bb) {
-        const ub = this._m,
-          hb = bb.m;
-        for (let Bb = 0; Bb < 16; Bb++) ub[Bb] -= hb[Bb];
+      hpd(dd) {
+        const Jd = this._m,
+          kd = dd.m;
+        for (let pd = 0; pd < 16; pd++) Jd[pd] -= kd[pd];
         return this.markAsUpdated(), this
       }
       subtractFromFloats() {
-        for (var bb = arguments.length, ub = new Array(bb), hb = 0; hb < bb; hb++) ub[hb] = arguments[hb];
-        return this.subtractFromFloatsToRef(...ub, new pb)
+        for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
+        return this.subtractFromFloatsToRef(...Jd, new Od)
       }
       subtractFromFloatsToRef() {
-        for (var bb = arguments.length, ub = new Array(bb), hb = 0; hb < bb; hb++) ub[hb] = arguments[hb];
-        const Bb = ub.pop(),
-          Ob = this._m,
-          Gb = Bb._m,
-          Ub = ub;
-        for (let Lb = 0; Lb < 16; Lb++) Gb[Lb] = Ob[Lb] - Ub[Lb];
-        return Bb.markAsUpdated(), Bb
+        for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
+        const pd = Jd.pop(),
+          Nd = this._m,
+          Wd = pd._m,
+          Pd = Jd;
+        for (let Zd = 0; Zd < 16; Zd++) Wd[Zd] = Nd[Zd] - Pd[Zd];
+        return pd.markAsUpdated(), pd
       }
-      invertToRef(bb) {
-        return !0 === this._isIdentity ? (pb.IdentityToRef(bb), bb) : ((0, Yb.e)(this, bb.ZBb()) ? bb.markAsUpdated() : bb.mD(this), bb)
+      invertToRef(dd) {
+        return !0 === this._isIdentity ? (Od.IdentityToRef(dd), dd) : ((0, gd.g)(this, dd.spd()) ? dd.markAsUpdated() : dd.Fs(this), dd)
       }
-      addAtIndex(bb, ub) {
-        return this._m[bb] += ub, this.markAsUpdated(), this
+      addAtIndex(dd, Jd) {
+        return this._m[dd] += Jd, this.markAsUpdated(), this
       }
-      multiplyAtIndex(bb, ub) {
-        return this._m[bb] *= ub, this.markAsUpdated(), this
+      multiplyAtIndex(dd, Jd) {
+        return this._m[dd] *= Jd, this.markAsUpdated(), this
       }
-      setTranslationFromFloats(bb, ub, hb) {
-        return this._m[12] = bb, this._m[13] = ub, this._m[14] = hb, this.markAsUpdated(), this
+      setTranslationFromFloats(dd, Jd, kd) {
+        return this._m[12] = dd, this._m[13] = Jd, this._m[14] = kd, this.markAsUpdated(), this
       }
-      addTranslationFromFloats(bb, ub, hb) {
-        return this._m[12] += bb, this._m[13] += ub, this._m[14] += hb, this.markAsUpdated(), this
+      addTranslationFromFloats(dd, Jd, kd) {
+        return this._m[12] += dd, this._m[13] += Jd, this._m[14] += kd, this.markAsUpdated(), this
       }
-      setTranslation(bb) {
-        return this.setTranslationFromFloats(bb._x, bb._y, bb._z)
+      setTranslation(dd) {
+        return this.setTranslationFromFloats(dd._x, dd._y, dd._z)
       }
       getTranslation() {
-        return new wb(this._m[12], this._m[13], this._m[14])
+        return new ld(this._m[12], this._m[13], this._m[14])
       }
-      getTranslationToRef(bb) {
-        return bb.x = this._m[12], bb.y = this._m[13], bb.z = this._m[14], bb
+      getTranslationToRef(dd) {
+        return dd.x = this._m[12], dd.y = this._m[13], dd.z = this._m[14], dd
       }
       removeRotationAndScaling() {
-        const bb = this.m;
-        return pb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, bb[12], bb[13], bb[14], bb[15], this), this._updateIdentityStatus(0 === bb[12] && 0 === bb[13] && 0 === bb[14] && 1 === bb[15]), this
+        const dd = this.m;
+        return Od.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, dd[12], dd[13], dd[14], dd[15], this), this._updateIdentityStatus(0 === dd[12] && 0 === dd[13] && 0 === dd[14] && 1 === dd[15]), this
       }
-      mD(bb) {
-        bb.copyToArray(this._m);
-        const ub = bb;
-        return this.updateFlag = ub.updateFlag, this._updateIdentityStatus(ub._isIdentity, ub._isIdentityDirty, ub._isIdentity3x2, ub._isIdentity3x2Dirty), this
+      Fs(dd) {
+        dd.copyToArray(this._m);
+        const Jd = dd;
+        return this.updateFlag = Jd.updateFlag, this._updateIdentityStatus(Jd._isIdentity, Jd._isIdentityDirty, Jd._isIdentity3x2, Jd._isIdentity3x2Dirty), this
       }
-      copyToArray(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return (0, Yb.b)(this, bb, ub), this
+      copyToArray(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return (0, gd.d)(this, dd, Jd), this
       }
-      multiply(bb) {
-        const ub = new pb;
-        return this.multiplyToRef(bb, ub), ub
+      multiply(dd) {
+        const Jd = new Od;
+        return this.multiplyToRef(dd, Jd), Jd
       }
-      multiplyInPlace(bb) {
-        const ub = this._m,
-          hb = bb.m;
-        for (let Bb = 0; Bb < 16; Bb++) ub[Bb] *= hb[Bb];
+      multiplyInPlace(dd) {
+        const Jd = this._m,
+          kd = dd.m;
+        for (let pd = 0; pd < 16; pd++) Jd[pd] *= kd[pd];
         return this.markAsUpdated(), this
       }
       multiplyByFloats() {
-        const bb = this._m;
-        for (let ub = 0; ub < 16; ub++) bb[ub] *= ub < 0 || arguments.length <= ub ? void 0 : arguments[ub];
+        const dd = this._m;
+        for (let Jd = 0; Jd < 16; Jd++) dd[Jd] *= Jd < 0 || arguments.length <= Jd ? void 0 : arguments[Jd];
         return this.markAsUpdated(), this
       }
       multiplyByFloatsToRef() {
-        for (var bb = arguments.length, ub = new Array(bb), hb = 0; hb < bb; hb++) ub[hb] = arguments[hb];
-        const Bb = ub.pop(),
-          Ob = this._m,
-          Gb = Bb._m,
-          Ub = ub;
-        for (let Lb = 0; Lb < 16; Lb++) Gb[Lb] = Ob[Lb] * Ub[Lb];
-        return Bb.markAsUpdated(), Bb
+        for (var dd = arguments.length, Jd = new Array(dd), kd = 0; kd < dd; kd++) Jd[kd] = arguments[kd];
+        const pd = Jd.pop(),
+          Nd = this._m,
+          Wd = pd._m,
+          Pd = Jd;
+        for (let Zd = 0; Zd < 16; Zd++) Wd[Zd] = Nd[Zd] * Pd[Zd];
+        return pd.markAsUpdated(), pd
       }
-      multiplyToRef(bb, ub) {
-        return this._isIdentity ? (ub.mD(bb), ub) : bb._isIdentity ? (ub.mD(this), ub) : (this.multiplyToArray(bb, ub._m, 0), ub.markAsUpdated(), ub)
+      multiplyToRef(dd, Jd) {
+        return this._isIdentity ? (Jd.Fs(dd), Jd) : dd._isIdentity ? (Jd.Fs(this), Jd) : (this.multiplyToArray(dd, Jd._m, 0), Jd.markAsUpdated(), Jd)
       }
-      multiplyToArray(bb, ub, hb) {
-        return (0, Yb.o)(this, bb, ub, hb), this
+      multiplyToArray(dd, Jd, kd) {
+        return (0, gd.q)(this, dd, Jd, kd), this
       }
-      divide(bb) {
-        return this.divideToRef(bb, new pb)
+      divide(dd) {
+        return this.divideToRef(dd, new Od)
       }
-      divideToRef(bb, ub) {
-        const hb = this._m,
-          Bb = bb.m,
-          Ob = ub._m;
-        for (let Gb = 0; Gb < 16; Gb++) Ob[Gb] = hb[Gb] / Bb[Gb];
-        return ub.markAsUpdated(), ub
+      divideToRef(dd, Jd) {
+        const kd = this._m,
+          pd = dd.m,
+          Nd = Jd._m;
+        for (let Wd = 0; Wd < 16; Wd++) Nd[Wd] = kd[Wd] / pd[Wd];
+        return Jd.markAsUpdated(), Jd
       }
-      divideInPlace(bb) {
-        const ub = this._m,
-          hb = bb.m;
-        for (let Bb = 0; Bb < 16; Bb++) ub[Bb] /= hb[Bb];
+      divideInPlace(dd) {
+        const Jd = this._m,
+          kd = dd.m;
+        for (let pd = 0; pd < 16; pd++) Jd[pd] /= kd[pd];
         return this.markAsUpdated(), this
       }
-      minimizeInPlace(bb) {
-        const ub = this._m,
-          hb = bb.m;
-        for (let Bb = 0; Bb < 16; Bb++) ub[Bb] = Math.min(ub[Bb], hb[Bb]);
+      minimizeInPlace(dd) {
+        const Jd = this._m,
+          kd = dd.m;
+        for (let pd = 0; pd < 16; pd++) Jd[pd] = Math.min(Jd[pd], kd[pd]);
         return this.markAsUpdated(), this
       }
       minimizeInPlaceFromFloats() {
-        const bb = this._m;
-        for (let ub = 0; ub < 16; ub++) bb[ub] = Math.min(bb[ub], ub < 0 || arguments.length <= ub ? void 0 : arguments[ub]);
+        const dd = this._m;
+        for (let Jd = 0; Jd < 16; Jd++) dd[Jd] = Math.min(dd[Jd], Jd < 0 || arguments.length <= Jd ? void 0 : arguments[Jd]);
         return this.markAsUpdated(), this
       }
-      maximizeInPlace(bb) {
-        const ub = this._m,
-          hb = bb.m;
-        for (let Bb = 0; Bb < 16; Bb++) ub[Bb] = Math.max(ub[Bb], hb[Bb]);
+      maximizeInPlace(dd) {
+        const Jd = this._m,
+          kd = dd.m;
+        for (let pd = 0; pd < 16; pd++) Jd[pd] = Math.max(Jd[pd], kd[pd]);
         return this.markAsUpdated(), this
       }
       maximizeInPlaceFromFloats() {
-        const bb = this._m;
-        for (let ub = 0; ub < 16; ub++) bb[ub] = Math.max(bb[ub], ub < 0 || arguments.length <= ub ? void 0 : arguments[ub]);
+        const dd = this._m;
+        for (let Jd = 0; Jd < 16; Jd++) dd[Jd] = Math.max(dd[Jd], Jd < 0 || arguments.length <= Jd ? void 0 : arguments[Jd]);
         return this.markAsUpdated(), this
       }
-      AO() {
-        return this.negateToRef(new pb)
+      ck() {
+        return this.negateToRef(new Od)
       }
       negateInPlace() {
-        const bb = this._m;
-        for (let ub = 0; ub < 16; ub++) bb[ub] = -bb[ub];
+        const dd = this._m;
+        for (let Jd = 0; Jd < 16; Jd++) dd[Jd] = -dd[Jd];
         return this.markAsUpdated(), this
       }
-      negateToRef(bb) {
-        const ub = this._m,
-          hb = bb._m;
-        for (let Bb = 0; Bb < 16; Bb++) hb[Bb] = -ub[Bb];
-        return bb.markAsUpdated(), bb
+      negateToRef(dd) {
+        const Jd = this._m,
+          kd = dd._m;
+        for (let pd = 0; pd < 16; pd++) kd[pd] = -Jd[pd];
+        return dd.markAsUpdated(), dd
       }
-      equals(bb) {
-        const ub = bb;
-        if (!ub) return !1;
-        if ((this._isIdentity || ub._isIdentity) && !this._isIdentityDirty && !ub._isIdentityDirty) return this._isIdentity && ub._isIdentity;
-        const hb = this.m,
-          Bb = ub.m;
-        return hb[0] === Bb[0] && hb[1] === Bb[1] && hb[2] === Bb[2] && hb[3] === Bb[3] && hb[4] === Bb[4] && hb[5] === Bb[5] && hb[6] === Bb[6] && hb[7] === Bb[7] && hb[8] === Bb[8] && hb[9] === Bb[9] && hb[10] === Bb[10] && hb[11] === Bb[11] && hb[12] === Bb[12] && hb[13] === Bb[13] && hb[14] === Bb[14] && hb[15] === Bb[15]
+      equals(dd) {
+        const Jd = dd;
+        if (!Jd) return !1;
+        if ((this._isIdentity || Jd._isIdentity) && !this._isIdentityDirty && !Jd._isIdentityDirty) return this._isIdentity && Jd._isIdentity;
+        const kd = this.m,
+          pd = Jd.m;
+        return kd[0] === pd[0] && kd[1] === pd[1] && kd[2] === pd[2] && kd[3] === pd[3] && kd[4] === pd[4] && kd[5] === pd[5] && kd[6] === pd[6] && kd[7] === pd[7] && kd[8] === pd[8] && kd[9] === pd[9] && kd[10] === pd[10] && kd[11] === pd[11] && kd[12] === pd[12] && kd[13] === pd[13] && kd[14] === pd[14] && kd[15] === pd[15]
       }
-      equalsWithEpsilon(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const hb = this._m,
-          Bb = bb.m;
-        for (let Ob = 0; Ob < 16; Ob++)
-          if (!(0, Lb.WithinEpsilon)(hb[Ob], Bb[Ob], ub)) return !1;
+      equalsWithEpsilon(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const kd = this._m,
+          pd = dd.m;
+        for (let Nd = 0; Nd < 16; Nd++)
+          if (!(0, Zd.WithinEpsilon)(kd[Nd], pd[Nd], Jd)) return !1;
         return !0
       }
-      sUb() {
-        const bb = this._m;
-        for (let ub = 0; ub < 16; ub++)
-          if (bb[ub] != (ub < 0 || arguments.length <= ub ? void 0 : arguments[ub])) return !1;
+      zPd() {
+        const dd = this._m;
+        for (let Jd = 0; Jd < 16; Jd++)
+          if (dd[Jd] != (Jd < 0 || arguments.length <= Jd ? void 0 : arguments[Jd])) return !1;
         return !0
       }
       floor() {
-        return this.floorToRef(new pb)
+        return this.floorToRef(new Od)
       }
-      floorToRef(bb) {
-        const ub = this._m,
-          hb = bb._m;
-        for (let Bb = 0; Bb < 16; Bb++) hb[Bb] = Math.floor(ub[Bb]);
-        return bb.markAsUpdated(), bb
+      floorToRef(dd) {
+        const Jd = this._m,
+          kd = dd._m;
+        for (let pd = 0; pd < 16; pd++) kd[pd] = Math.floor(Jd[pd]);
+        return dd.markAsUpdated(), dd
       }
       fract() {
-        return this.fractToRef(new pb)
+        return this.fractToRef(new Od)
       }
-      fractToRef(bb) {
-        const ub = this._m,
-          hb = bb._m;
-        for (let Bb = 0; Bb < 16; Bb++) hb[Bb] = ub[Bb] - Math.floor(ub[Bb]);
-        return bb.markAsUpdated(), bb
+      fractToRef(dd) {
+        const Jd = this._m,
+          kd = dd._m;
+        for (let pd = 0; pd < 16; pd++) kd[pd] = Jd[pd] - Math.floor(Jd[pd]);
+        return dd.markAsUpdated(), dd
       }
       clone() {
-        const bb = new pb;
-        return bb.mD(this), bb
+        const dd = new Od;
+        return dd.Fs(this), dd
       }
       getClassName() {
         return "Matrix"
       }
       getHashCode() {
-        let bb = ab(this._m[0]);
-        for (let ub = 1; ub < 16; ub++) bb = 397 * bb ^ ab(this._m[ub]);
-        return bb
+        let dd = Kd(this._m[0]);
+        for (let Jd = 1; Jd < 16; Jd++) dd = 397 * dd ^ Kd(this._m[Jd]);
+        return dd
       }
-      decomposeToTransformNode(bb) {
-        return bb.rotationQuaternion = bb.rotationQuaternion || new Xb, this.decompose(bb.pa, bb.rotationQuaternion, bb.position)
+      decomposeToTransformNode(dd) {
+        return dd.rotationQuaternion = dd.rotationQuaternion || new Ld, this.decompose(dd.fp, dd.rotationQuaternion, dd.position)
       }
-      decompose(bb, ub, hb, Bb) {
-        let Ob = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        if (this._isIdentity) return hb && hb.N9(0), bb && bb.N9(1), ub && ub.M_(0, 0, 0, 1), !0;
-        const Gb = this._m;
-        if (hb && hb.M_(Gb[12], Gb[13], Gb[14]), (bb = bb || ob.YX[0]).x = Math.sqrt(Gb[0] * Gb[0] + Gb[1] * Gb[1] + Gb[2] * Gb[2]), bb.y = Math.sqrt(Gb[4] * Gb[4] + Gb[5] * Gb[5] + Gb[6] * Gb[6]), bb.z = Math.sqrt(Gb[8] * Gb[8] + Gb[9] * Gb[9] + Gb[10] * Gb[10]), Bb) {
-          const ub = (Ob ? Bb.absoluteScaling.x : Bb.pa.x) < 0 ? -1 : 1,
-            hb = (Ob ? Bb.absoluteScaling.y : Bb.pa.y) < 0 ? -1 : 1,
-            Gb = (Ob ? Bb.absoluteScaling.z : Bb.pa.z) < 0 ? -1 : 1;
-          bb.x *= ub, bb.y *= hb, bb.z *= Gb
-        } else this.determinant() <= 0 && (bb.y *= -1);
-        if (0 === bb._x || 0 === bb._y || 0 === bb._z) return ub && ub.M_(0, 0, 0, 1), !1;
-        if (ub) {
-          const hb = 1 / bb._x,
-            Bb = 1 / bb._y,
-            Ob = 1 / bb._z;
-          pb.FromValuesToRef(Gb[0] * hb, Gb[1] * hb, Gb[2] * hb, 0, Gb[4] * Bb, Gb[5] * Bb, Gb[6] * Bb, 0, Gb[8] * Ob, Gb[9] * Ob, Gb[10] * Ob, 0, 0, 0, 0, 1, ob.Matrix[0]), Xb.FromRotationMatrixToRef(ob.Matrix[0], ub)
+      decompose(dd, Jd, kd, pd) {
+        let Nd = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        if (this._isIdentity) return kd && kd.o5(0), dd && dd.o5(1), Jd && Jd.kdd(0, 0, 0, 1), !0;
+        const Wd = this._m;
+        if (kd && kd.kdd(Wd[12], Wd[13], Wd[14]), (dd = dd || ed.IL[0]).x = Math.sqrt(Wd[0] * Wd[0] + Wd[1] * Wd[1] + Wd[2] * Wd[2]), dd.y = Math.sqrt(Wd[4] * Wd[4] + Wd[5] * Wd[5] + Wd[6] * Wd[6]), dd.z = Math.sqrt(Wd[8] * Wd[8] + Wd[9] * Wd[9] + Wd[10] * Wd[10]), pd) {
+          const Jd = (Nd ? pd.absoluteScaling.x : pd.fp.x) < 0 ? -1 : 1,
+            kd = (Nd ? pd.absoluteScaling.y : pd.fp.y) < 0 ? -1 : 1,
+            Wd = (Nd ? pd.absoluteScaling.z : pd.fp.z) < 0 ? -1 : 1;
+          dd.x *= Jd, dd.y *= kd, dd.z *= Wd
+        } else this.determinant() <= 0 && (dd.y *= -1);
+        if (0 === dd._x || 0 === dd._y || 0 === dd._z) return Jd && Jd.kdd(0, 0, 0, 1), !1;
+        if (Jd) {
+          const kd = 1 / dd._x,
+            pd = 1 / dd._y,
+            Nd = 1 / dd._z;
+          Od.FromValuesToRef(Wd[0] * kd, Wd[1] * kd, Wd[2] * kd, 0, Wd[4] * pd, Wd[5] * pd, Wd[6] * pd, 0, Wd[8] * Nd, Wd[9] * Nd, Wd[10] * Nd, 0, 0, 0, 0, 1, ed.Matrix[0]), Ld.FromRotationMatrixToRef(ed.Matrix[0], Jd)
         }
         return !0
       }
-      getRow(bb) {
-        if (bb < 0 || bb > 3) return null;
-        const ub = 4 * bb;
-        return new Zb(this._m[ub + 0], this._m[ub + 1], this._m[ub + 2], this._m[ub + 3])
+      getRow(dd) {
+        if (dd < 0 || dd > 3) return null;
+        const Jd = 4 * dd;
+        return new Qd(this._m[Jd + 0], this._m[Jd + 1], this._m[Jd + 2], this._m[Jd + 3])
       }
-      getRowToRef(bb, ub) {
-        if (bb >= 0 && bb <= 3) {
-          const hb = 4 * bb;
-          ub.x = this._m[hb + 0], ub.y = this._m[hb + 1], ub.z = this._m[hb + 2], ub.w = this._m[hb + 3]
+      getRowToRef(dd, Jd) {
+        if (dd >= 0 && dd <= 3) {
+          const kd = 4 * dd;
+          Jd.x = this._m[kd + 0], Jd.y = this._m[kd + 1], Jd.z = this._m[kd + 2], Jd.w = this._m[kd + 3]
         }
-        return ub
+        return Jd
       }
-      setRow(bb, ub) {
-        return this.setRowFromFloats(bb, ub.x, ub.y, ub.z, ub.w)
+      setRow(dd, Jd) {
+        return this.setRowFromFloats(dd, Jd.x, Jd.y, Jd.z, Jd.w)
       }
       transpose() {
-        const bb = new pb;
-        return pb.TransposeToRef(this, bb), bb
+        const dd = new Od;
+        return Od.TransposeToRef(this, dd), dd
       }
-      transposeToRef(bb) {
-        return pb.TransposeToRef(this, bb), bb
+      transposeToRef(dd) {
+        return Od.TransposeToRef(this, dd), dd
       }
-      setRowFromFloats(bb, ub, hb, Bb, Ob) {
-        if (bb < 0 || bb > 3) return this;
-        const Gb = 4 * bb;
-        return this._m[Gb + 0] = ub, this._m[Gb + 1] = hb, this._m[Gb + 2] = Bb, this._m[Gb + 3] = Ob, this.markAsUpdated(), this
+      setRowFromFloats(dd, Jd, kd, pd, Nd) {
+        if (dd < 0 || dd > 3) return this;
+        const Wd = 4 * dd;
+        return this._m[Wd + 0] = Jd, this._m[Wd + 1] = kd, this._m[Wd + 2] = pd, this._m[Wd + 3] = Nd, this.markAsUpdated(), this
       }
-      scale(bb) {
-        const ub = new pb;
-        return this.scaleToRef(bb, ub), ub
+      scale(dd) {
+        const Jd = new Od;
+        return this.scaleToRef(dd, Jd), Jd
       }
-      scaleToRef(bb, ub) {
-        for (let hb = 0; hb < 16; hb++) ub._m[hb] = this._m[hb] * bb;
-        return ub.markAsUpdated(), ub
+      scaleToRef(dd, Jd) {
+        for (let kd = 0; kd < 16; kd++) Jd._m[kd] = this._m[kd] * dd;
+        return Jd.markAsUpdated(), Jd
       }
-      scaleAndAddToRef(bb, ub) {
-        for (let hb = 0; hb < 16; hb++) ub._m[hb] += this._m[hb] * bb;
-        return ub.markAsUpdated(), ub
+      scaleAndAddToRef(dd, Jd) {
+        for (let kd = 0; kd < 16; kd++) Jd._m[kd] += this._m[kd] * dd;
+        return Jd.markAsUpdated(), Jd
       }
-      scaleInPlace(bb) {
-        const ub = this._m;
-        for (let hb = 0; hb < 16; hb++) ub[hb] *= bb;
+      scaleInPlace(dd) {
+        const Jd = this._m;
+        for (let kd = 0; kd < 16; kd++) Jd[kd] *= dd;
         return this.markAsUpdated(), this
       }
-      toNormalMatrix(bb) {
-        const ub = ob.Matrix[0];
-        this.invertToRef(ub), ub.transposeToRef(bb);
-        const hb = bb._m;
-        return pb.FromValuesToRef(hb[0], hb[1], hb[2], 0, hb[4], hb[5], hb[6], 0, hb[8], hb[9], hb[10], 0, 0, 0, 0, 1, bb), bb
+      toNormalMatrix(dd) {
+        const Jd = ed.Matrix[0];
+        this.invertToRef(Jd), Jd.transposeToRef(dd);
+        const kd = dd._m;
+        return Od.FromValuesToRef(kd[0], kd[1], kd[2], 0, kd[4], kd[5], kd[6], 0, kd[8], kd[9], kd[10], 0, 0, 0, 0, 1, dd), dd
       }
       getRotationMatrix() {
-        const bb = new pb;
-        return this.getRotationMatrixToRef(bb), bb
+        const dd = new Od;
+        return this.getRotationMatrixToRef(dd), dd
       }
-      getRotationMatrixToRef(bb) {
-        const ub = ob.YX[0];
-        if (!this.decompose(ub)) return pb.IdentityToRef(bb), bb;
-        const hb = this._m,
-          Bb = 1 / ub._x,
-          Ob = 1 / ub._y,
-          Gb = 1 / ub._z;
-        return pb.FromValuesToRef(hb[0] * Bb, hb[1] * Bb, hb[2] * Bb, 0, hb[4] * Ob, hb[5] * Ob, hb[6] * Ob, 0, hb[8] * Gb, hb[9] * Gb, hb[10] * Gb, 0, 0, 0, 0, 1, bb), bb
+      getRotationMatrixToRef(dd) {
+        const Jd = ed.IL[0];
+        if (!this.decompose(Jd)) return Od.IdentityToRef(dd), dd;
+        const kd = this._m,
+          pd = 1 / Jd._x,
+          Nd = 1 / Jd._y,
+          Wd = 1 / Jd._z;
+        return Od.FromValuesToRef(kd[0] * pd, kd[1] * pd, kd[2] * pd, 0, kd[4] * Nd, kd[5] * Nd, kd[6] * Nd, 0, kd[8] * Wd, kd[9] * Wd, kd[10] * Wd, 0, 0, 0, 0, 1, dd), dd
       }
       toggleModelMatrixHandInPlace() {
-        const bb = this._m;
-        return bb[2] *= -1, bb[6] *= -1, bb[8] *= -1, bb[9] *= -1, bb[14] *= -1, this.markAsUpdated(), this
+        const dd = this._m;
+        return dd[2] *= -1, dd[6] *= -1, dd[8] *= -1, dd[9] *= -1, dd[14] *= -1, this.markAsUpdated(), this
       }
       toggleProjectionMatrixHandInPlace() {
-        const bb = this._m;
-        return bb[8] *= -1, bb[9] *= -1, bb[10] *= -1, bb[11] *= -1, this.markAsUpdated(), this
+        const dd = this._m;
+        return dd[8] *= -1, dd[9] *= -1, dd[10] *= -1, dd[11] *= -1, this.markAsUpdated(), this
       }
       _convertProjectionToHalfZRangeInPlace() {
-        return this.multiplyToRef(lb, this), this
+        return this.multiplyToRef(Id, this), this
       }
-      static FromArray(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const hb = new pb;
-        return pb.FromArrayToRef(bb, ub, hb), hb
+      static FromArray(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const kd = new Od;
+        return Od.FromArrayToRef(dd, Jd, kd), kd
       }
-      static FromArrayToRef(bb, ub, hb) {
-        for (let Bb = 0; Bb < 16; Bb++) hb._m[Bb] = bb[Bb + ub];
-        return hb.markAsUpdated(), hb
+      static FromArrayToRef(dd, Jd, kd) {
+        for (let pd = 0; pd < 16; pd++) kd._m[pd] = dd[pd + Jd];
+        return kd.markAsUpdated(), kd
       }
-      static FromFloat32ArrayToRefScaled(bb, ub, hb, Bb) {
-        return Bb._m[0] = bb[0 + ub] * hb, Bb._m[1] = bb[1 + ub] * hb, Bb._m[2] = bb[2 + ub] * hb, Bb._m[3] = bb[3 + ub] * hb, Bb._m[4] = bb[4 + ub] * hb, Bb._m[5] = bb[5 + ub] * hb, Bb._m[6] = bb[6 + ub] * hb, Bb._m[7] = bb[7 + ub] * hb, Bb._m[8] = bb[8 + ub] * hb, Bb._m[9] = bb[9 + ub] * hb, Bb._m[10] = bb[10 + ub] * hb, Bb._m[11] = bb[11 + ub] * hb, Bb._m[12] = bb[12 + ub] * hb, Bb._m[13] = bb[13 + ub] * hb, Bb._m[14] = bb[14 + ub] * hb, Bb._m[15] = bb[15 + ub] * hb, Bb.markAsUpdated(), Bb
+      static FromFloat32ArrayToRefScaled(dd, Jd, kd, pd) {
+        return pd._m[0] = dd[0 + Jd] * kd, pd._m[1] = dd[1 + Jd] * kd, pd._m[2] = dd[2 + Jd] * kd, pd._m[3] = dd[3 + Jd] * kd, pd._m[4] = dd[4 + Jd] * kd, pd._m[5] = dd[5 + Jd] * kd, pd._m[6] = dd[6 + Jd] * kd, pd._m[7] = dd[7 + Jd] * kd, pd._m[8] = dd[8 + Jd] * kd, pd._m[9] = dd[9 + Jd] * kd, pd._m[10] = dd[10 + Jd] * kd, pd._m[11] = dd[11 + Jd] * kd, pd._m[12] = dd[12 + Jd] * kd, pd._m[13] = dd[13 + Jd] * kd, pd._m[14] = dd[14 + Jd] * kd, pd._m[15] = dd[15 + Jd] * kd, pd.markAsUpdated(), pd
       }
       static get IdentityReadOnly() {
-        return pb._IdentityReadOnly
+        return Od._IdentityReadOnly
       }
-      static FromValuesToRef(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb, Sb, ab, Hb, wb, Zb, Xb, pb, ob) {
-        const Ab = ob._m;
-        Ab[0] = bb, Ab[1] = ub, Ab[2] = hb, Ab[3] = Bb, Ab[4] = Ob, Ab[5] = Gb, Ab[6] = Ub, Ab[7] = Lb, Ab[8] = Yb, Ab[9] = Sb, Ab[10] = ab, Ab[11] = Hb, Ab[12] = wb, Ab[13] = Zb, Ab[14] = Xb, Ab[15] = pb, ob.markAsUpdated()
+      static FromValuesToRef(dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd, Kd, od, ld, Qd, Ld, Od, ed) {
+        const Rd = ed._m;
+        Rd[0] = dd, Rd[1] = Jd, Rd[2] = kd, Rd[3] = pd, Rd[4] = Nd, Rd[5] = Wd, Rd[6] = Pd, Rd[7] = Zd, Rd[8] = gd, Rd[9] = Cd, Rd[10] = Kd, Rd[11] = od, Rd[12] = ld, Rd[13] = Qd, Rd[14] = Ld, Rd[15] = Od, ed.markAsUpdated()
       }
-      static FromValues(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb, Sb, ab, Hb, wb, Zb, Xb, ob) {
-        const Ab = new pb,
-          lb = Ab._m;
-        return lb[0] = bb, lb[1] = ub, lb[2] = hb, lb[3] = Bb, lb[4] = Ob, lb[5] = Gb, lb[6] = Ub, lb[7] = Lb, lb[8] = Yb, lb[9] = Sb, lb[10] = ab, lb[11] = Hb, lb[12] = wb, lb[13] = Zb, lb[14] = Xb, lb[15] = ob, Ab.markAsUpdated(), Ab
+      static FromValues(dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd, Kd, od, ld, Qd, Ld, ed) {
+        const Rd = new Od,
+          Id = Rd._m;
+        return Id[0] = dd, Id[1] = Jd, Id[2] = kd, Id[3] = pd, Id[4] = Nd, Id[5] = Wd, Id[6] = Pd, Id[7] = Zd, Id[8] = gd, Id[9] = Cd, Id[10] = Kd, Id[11] = od, Id[12] = ld, Id[13] = Qd, Id[14] = Ld, Id[15] = ed, Rd.markAsUpdated(), Rd
       }
-      static Compose(bb, ub, hb) {
-        const Bb = new pb;
-        return pb.ComposeToRef(bb, ub, hb, Bb), Bb
+      static Compose(dd, Jd, kd) {
+        const pd = new Od;
+        return Od.ComposeToRef(dd, Jd, kd, pd), pd
       }
-      static ComposeToRef(bb, ub, hb, Bb) {
-        const Ob = Bb._m,
-          Gb = ub._x,
-          Ub = ub._y,
-          Lb = ub._z,
-          Yb = ub._w,
-          Sb = Gb + Gb,
-          ab = Ub + Ub,
-          Hb = Lb + Lb,
-          wb = Gb * Sb,
-          Zb = Gb * ab,
-          Xb = Gb * Hb,
-          pb = Ub * ab,
-          ob = Ub * Hb,
-          Ab = Lb * Hb,
-          lb = Yb * Sb,
-          Kb = Yb * ab,
-          Wb = Yb * Hb,
-          Cb = bb._x,
-          db = bb._y,
-          rb = bb._z;
-        return Ob[0] = (1 - (pb + Ab)) * Cb, Ob[1] = (Zb + Wb) * Cb, Ob[2] = (Xb - Kb) * Cb, Ob[3] = 0, Ob[4] = (Zb - Wb) * db, Ob[5] = (1 - (wb + Ab)) * db, Ob[6] = (ob + lb) * db, Ob[7] = 0, Ob[8] = (Xb + Kb) * rb, Ob[9] = (ob - lb) * rb, Ob[10] = (1 - (wb + pb)) * rb, Ob[11] = 0, Ob[12] = hb._x, Ob[13] = hb._y, Ob[14] = hb._z, Ob[15] = 1, Bb.markAsUpdated(), Bb
+      static ComposeToRef(dd, Jd, kd, pd) {
+        const Nd = pd._m,
+          Wd = Jd._x,
+          Pd = Jd._y,
+          Zd = Jd._z,
+          gd = Jd._w,
+          Cd = Wd + Wd,
+          Kd = Pd + Pd,
+          od = Zd + Zd,
+          ld = Wd * Cd,
+          Qd = Wd * Kd,
+          Ld = Wd * od,
+          Od = Pd * Kd,
+          ed = Pd * od,
+          Rd = Zd * od,
+          Id = gd * Cd,
+          Gd = gd * Kd,
+          vd = gd * od,
+          xd = dd._x,
+          qd = dd._y,
+          Bd = dd._z;
+        return Nd[0] = (1 - (Od + Rd)) * xd, Nd[1] = (Qd + vd) * xd, Nd[2] = (Ld - Gd) * xd, Nd[3] = 0, Nd[4] = (Qd - vd) * qd, Nd[5] = (1 - (ld + Rd)) * qd, Nd[6] = (ed + Id) * qd, Nd[7] = 0, Nd[8] = (Ld + Gd) * Bd, Nd[9] = (ed - Id) * Bd, Nd[10] = (1 - (ld + Od)) * Bd, Nd[11] = 0, Nd[12] = kd._x, Nd[13] = kd._y, Nd[14] = kd._z, Nd[15] = 1, pd.markAsUpdated(), pd
       }
       static Identity() {
-        const bb = pb.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-        return bb._updateIdentityStatus(!0), bb
+        const dd = Od.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        return dd._updateIdentityStatus(!0), dd
       }
-      static IdentityToRef(bb) {
-        return pb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, bb), bb._updateIdentityStatus(!0), bb
+      static IdentityToRef(dd) {
+        return Od.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, dd), dd._updateIdentityStatus(!0), dd
       }
       static Zero() {
-        const bb = pb.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-        return bb._updateIdentityStatus(!1), bb
+        const dd = Od.FromValues(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+        return dd._updateIdentityStatus(!1), dd
       }
-      static RotationX(bb) {
-        const ub = new pb;
-        return pb.RotationXToRef(bb, ub), ub
+      static RotationX(dd) {
+        const Jd = new Od;
+        return Od.RotationXToRef(dd, Jd), Jd
       }
-      static Invert(bb) {
-        const ub = new pb;
-        return bb.invertToRef(ub), ub
+      static Invert(dd) {
+        const Jd = new Od;
+        return dd.invertToRef(Jd), Jd
       }
-      static RotationXToRef(bb, ub) {
-        const hb = Math.sin(bb),
-          Bb = Math.cos(bb);
-        return pb.FromValuesToRef(1, 0, 0, 0, 0, Bb, hb, 0, 0, -hb, Bb, 0, 0, 0, 0, 1, ub), ub._updateIdentityStatus(1 === Bb && 0 === hb), ub
+      static RotationXToRef(dd, Jd) {
+        const kd = Math.sin(dd),
+          pd = Math.cos(dd);
+        return Od.FromValuesToRef(1, 0, 0, 0, 0, pd, kd, 0, 0, -kd, pd, 0, 0, 0, 0, 1, Jd), Jd._updateIdentityStatus(1 === pd && 0 === kd), Jd
       }
-      static RotationY(bb) {
-        const ub = new pb;
-        return pb.RotationYToRef(bb, ub), ub
+      static RotationY(dd) {
+        const Jd = new Od;
+        return Od.RotationYToRef(dd, Jd), Jd
       }
-      static RotationYToRef(bb, ub) {
-        const hb = Math.sin(bb),
-          Bb = Math.cos(bb);
-        return pb.FromValuesToRef(Bb, 0, -hb, 0, 0, 1, 0, 0, hb, 0, Bb, 0, 0, 0, 0, 1, ub), ub._updateIdentityStatus(1 === Bb && 0 === hb), ub
+      static RotationYToRef(dd, Jd) {
+        const kd = Math.sin(dd),
+          pd = Math.cos(dd);
+        return Od.FromValuesToRef(pd, 0, -kd, 0, 0, 1, 0, 0, kd, 0, pd, 0, 0, 0, 0, 1, Jd), Jd._updateIdentityStatus(1 === pd && 0 === kd), Jd
       }
-      static RotationZ(bb) {
-        const ub = new pb;
-        return pb.RotationZToRef(bb, ub), ub
+      static RotationZ(dd) {
+        const Jd = new Od;
+        return Od.RotationZToRef(dd, Jd), Jd
       }
-      static RotationZToRef(bb, ub) {
-        const hb = Math.sin(bb),
-          Bb = Math.cos(bb);
-        return pb.FromValuesToRef(Bb, hb, 0, 0, -hb, Bb, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, ub), ub._updateIdentityStatus(1 === Bb && 0 === hb), ub
+      static RotationZToRef(dd, Jd) {
+        const kd = Math.sin(dd),
+          pd = Math.cos(dd);
+        return Od.FromValuesToRef(pd, kd, 0, 0, -kd, pd, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, Jd), Jd._updateIdentityStatus(1 === pd && 0 === kd), Jd
       }
-      static RotationAxis(bb, ub) {
-        const hb = new pb;
-        return pb.RotationAxisToRef(bb, ub, hb), hb
+      static RotationAxis(dd, Jd) {
+        const kd = new Od;
+        return Od.RotationAxisToRef(dd, Jd, kd), kd
       }
-      static RotationAxisToRef(bb, ub, hb) {
-        const Bb = Math.sin(-ub),
-          Ob = Math.cos(-ub),
-          Gb = 1 - Ob;
-        bb = bb.normalizeToRef(ob.YX[0]);
-        const Ub = hb._m;
-        return Ub[0] = bb._x * bb._x * Gb + Ob, Ub[1] = bb._x * bb._y * Gb - bb._z * Bb, Ub[2] = bb._x * bb._z * Gb + bb._y * Bb, Ub[3] = 0, Ub[4] = bb._y * bb._x * Gb + bb._z * Bb, Ub[5] = bb._y * bb._y * Gb + Ob, Ub[6] = bb._y * bb._z * Gb - bb._x * Bb, Ub[7] = 0, Ub[8] = bb._z * bb._x * Gb - bb._y * Bb, Ub[9] = bb._z * bb._y * Gb + bb._x * Bb, Ub[10] = bb._z * bb._z * Gb + Ob, Ub[11] = 0, Ub[12] = 0, Ub[13] = 0, Ub[14] = 0, Ub[15] = 1, hb.markAsUpdated(), hb
+      static RotationAxisToRef(dd, Jd, kd) {
+        const pd = Math.sin(-Jd),
+          Nd = Math.cos(-Jd),
+          Wd = 1 - Nd;
+        dd = dd.normalizeToRef(ed.IL[0]);
+        const Pd = kd._m;
+        return Pd[0] = dd._x * dd._x * Wd + Nd, Pd[1] = dd._x * dd._y * Wd - dd._z * pd, Pd[2] = dd._x * dd._z * Wd + dd._y * pd, Pd[3] = 0, Pd[4] = dd._y * dd._x * Wd + dd._z * pd, Pd[5] = dd._y * dd._y * Wd + Nd, Pd[6] = dd._y * dd._z * Wd - dd._x * pd, Pd[7] = 0, Pd[8] = dd._z * dd._x * Wd - dd._y * pd, Pd[9] = dd._z * dd._y * Wd + dd._x * pd, Pd[10] = dd._z * dd._z * Wd + Nd, Pd[11] = 0, Pd[12] = 0, Pd[13] = 0, Pd[14] = 0, Pd[15] = 1, kd.markAsUpdated(), kd
       }
-      static RotationAlignToRef(bb, ub, hb) {
-        let Ob = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const Gb = wb.Dot(ub, bb),
-          Ub = hb._m;
-        if (Gb < -1 + Bb.b) Ub[0] = -1, Ub[1] = 0, Ub[2] = 0, Ub[3] = 0, Ub[4] = 0, Ub[5] = Ob ? 1 : -1, Ub[6] = 0, Ub[7] = 0, Ub[8] = 0, Ub[9] = 0, Ub[10] = Ob ? -1 : 1, Ub[11] = 0;
+      static RotationAlignToRef(dd, Jd, kd) {
+        let Nd = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const Wd = ld.Dot(Jd, dd),
+          Pd = kd._m;
+        if (Wd < -1 + pd.e) Pd[0] = -1, Pd[1] = 0, Pd[2] = 0, Pd[3] = 0, Pd[4] = 0, Pd[5] = Nd ? 1 : -1, Pd[6] = 0, Pd[7] = 0, Pd[8] = 0, Pd[9] = 0, Pd[10] = Nd ? -1 : 1, Pd[11] = 0;
         else {
-          const hb = wb.Cross(ub, bb),
-            Bb = 1 / (1 + Gb);
-          Ub[0] = hb._x * hb._x * Bb + Gb, Ub[1] = hb._y * hb._x * Bb - hb._z, Ub[2] = hb._z * hb._x * Bb + hb._y, Ub[3] = 0, Ub[4] = hb._x * hb._y * Bb + hb._z, Ub[5] = hb._y * hb._y * Bb + Gb, Ub[6] = hb._z * hb._y * Bb - hb._x, Ub[7] = 0, Ub[8] = hb._x * hb._z * Bb - hb._y, Ub[9] = hb._y * hb._z * Bb + hb._x, Ub[10] = hb._z * hb._z * Bb + Gb, Ub[11] = 0
+          const kd = ld.Cross(Jd, dd),
+            pd = 1 / (1 + Wd);
+          Pd[0] = kd._x * kd._x * pd + Wd, Pd[1] = kd._y * kd._x * pd - kd._z, Pd[2] = kd._z * kd._x * pd + kd._y, Pd[3] = 0, Pd[4] = kd._x * kd._y * pd + kd._z, Pd[5] = kd._y * kd._y * pd + Wd, Pd[6] = kd._z * kd._y * pd - kd._x, Pd[7] = 0, Pd[8] = kd._x * kd._z * pd - kd._y, Pd[9] = kd._y * kd._z * pd + kd._x, Pd[10] = kd._z * kd._z * pd + Wd, Pd[11] = 0
         }
-        return Ub[12] = 0, Ub[13] = 0, Ub[14] = 0, Ub[15] = 1, hb.markAsUpdated(), hb
+        return Pd[12] = 0, Pd[13] = 0, Pd[14] = 0, Pd[15] = 1, kd.markAsUpdated(), kd
       }
-      static RotationYawPitchRoll(bb, ub, hb) {
-        const Bb = new pb;
-        return pb.RotationYawPitchRollToRef(bb, ub, hb, Bb), Bb
+      static RotationYawPitchRoll(dd, Jd, kd) {
+        const pd = new Od;
+        return Od.RotationYawPitchRollToRef(dd, Jd, kd, pd), pd
       }
-      static RotationYawPitchRollToRef(bb, ub, hb, Bb) {
-        return Xb.RotationYawPitchRollToRef(bb, ub, hb, ob.Quaternion[0]), ob.Quaternion[0].toRotationMatrix(Bb), Bb
+      static RotationYawPitchRollToRef(dd, Jd, kd, pd) {
+        return Ld.RotationYawPitchRollToRef(dd, Jd, kd, ed.Quaternion[0]), ed.Quaternion[0].toRotationMatrix(pd), pd
       }
-      static Scaling(bb, ub, hb) {
-        const Bb = new pb;
-        return pb.ScalingToRef(bb, ub, hb, Bb), Bb
+      static Scaling(dd, Jd, kd) {
+        const pd = new Od;
+        return Od.ScalingToRef(dd, Jd, kd, pd), pd
       }
-      static ScalingToRef(bb, ub, hb, Bb) {
-        return pb.FromValuesToRef(bb, 0, 0, 0, 0, ub, 0, 0, 0, 0, hb, 0, 0, 0, 0, 1, Bb), Bb._updateIdentityStatus(1 === bb && 1 === ub && 1 === hb), Bb
+      static ScalingToRef(dd, Jd, kd, pd) {
+        return Od.FromValuesToRef(dd, 0, 0, 0, 0, Jd, 0, 0, 0, 0, kd, 0, 0, 0, 0, 1, pd), pd._updateIdentityStatus(1 === dd && 1 === Jd && 1 === kd), pd
       }
-      static Translation(bb, ub, hb) {
-        const Bb = new pb;
-        return pb.TranslationToRef(bb, ub, hb, Bb), Bb
+      static Translation(dd, Jd, kd) {
+        const pd = new Od;
+        return Od.TranslationToRef(dd, Jd, kd, pd), pd
       }
-      static TranslationToRef(bb, ub, hb, Bb) {
-        return pb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, bb, ub, hb, 1, Bb), Bb._updateIdentityStatus(0 === bb && 0 === ub && 0 === hb), Bb
+      static TranslationToRef(dd, Jd, kd, pd) {
+        return Od.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, dd, Jd, kd, 1, pd), pd._updateIdentityStatus(0 === dd && 0 === Jd && 0 === kd), pd
       }
-      static Lerp(bb, ub, hb) {
-        const Bb = new pb;
-        return pb.LerpToRef(bb, ub, hb, Bb), Bb
+      static Lerp(dd, Jd, kd) {
+        const pd = new Od;
+        return Od.LerpToRef(dd, Jd, kd, pd), pd
       }
-      static LerpToRef(bb, ub, hb, Bb) {
-        const Ob = Bb._m,
-          Gb = bb.m,
-          Ub = ub.m;
-        for (let Lb = 0; Lb < 16; Lb++) Ob[Lb] = Gb[Lb] * (1 - hb) + Ub[Lb] * hb;
-        return Bb.markAsUpdated(), Bb
+      static LerpToRef(dd, Jd, kd, pd) {
+        const Nd = pd._m,
+          Wd = dd.m,
+          Pd = Jd.m;
+        for (let Zd = 0; Zd < 16; Zd++) Nd[Zd] = Wd[Zd] * (1 - kd) + Pd[Zd] * kd;
+        return pd.markAsUpdated(), pd
       }
-      static DecomposeLerp(bb, ub, hb) {
-        const Bb = new pb;
-        return pb.DecomposeLerpToRef(bb, ub, hb, Bb), Bb
+      static DecomposeLerp(dd, Jd, kd) {
+        const pd = new Od;
+        return Od.DecomposeLerpToRef(dd, Jd, kd, pd), pd
       }
-      static DecomposeLerpToRef(bb, ub, hb, Bb) {
-        const Ob = ob.YX[0],
-          Gb = ob.Quaternion[0],
-          Ub = ob.YX[1];
-        bb.decompose(Ob, Gb, Ub);
-        const Lb = ob.YX[2],
-          Yb = ob.Quaternion[1],
-          Sb = ob.YX[3];
-        ub.decompose(Lb, Yb, Sb);
-        const ab = ob.YX[4];
-        wb.LerpToRef(Ob, Lb, hb, ab);
-        const Hb = ob.Quaternion[2];
-        Xb.SlerpToRef(Gb, Yb, hb, Hb);
-        const Zb = ob.YX[5];
-        return wb.LerpToRef(Ub, Sb, hb, Zb), pb.ComposeToRef(ab, Hb, Zb, Bb), Bb
+      static DecomposeLerpToRef(dd, Jd, kd, pd) {
+        const Nd = ed.IL[0],
+          Wd = ed.Quaternion[0],
+          Pd = ed.IL[1];
+        dd.decompose(Nd, Wd, Pd);
+        const Zd = ed.IL[2],
+          gd = ed.Quaternion[1],
+          Cd = ed.IL[3];
+        Jd.decompose(Zd, gd, Cd);
+        const Kd = ed.IL[4];
+        ld.LerpToRef(Nd, Zd, kd, Kd);
+        const od = ed.Quaternion[2];
+        Ld.SlerpToRef(Wd, gd, kd, od);
+        const Qd = ed.IL[5];
+        return ld.LerpToRef(Pd, Cd, kd, Qd), Od.ComposeToRef(Kd, od, Qd, pd), pd
       }
-      static LookAtLH(bb, ub, hb) {
-        const Bb = new pb;
-        return pb.LookAtLHToRef(bb, ub, hb, Bb), Bb
+      static LookAtLH(dd, Jd, kd) {
+        const pd = new Od;
+        return Od.LookAtLHToRef(dd, Jd, kd, pd), pd
       }
-      static LookAtLHToRef(bb, ub, hb, Bb) {
-        const Ob = ob.YX[0],
-          Gb = ob.YX[1],
-          Ub = ob.YX[2];
-        ub.subtractToRef(bb, Ub), Ub.normalize(), wb.CrossToRef(hb, Ub, Ob);
-        const Lb = Ob.lengthSquared();
-        0 === Lb ? Ob.x = 1 : Ob.normalizeFromLength(Math.sqrt(Lb)), wb.CrossToRef(Ub, Ob, Gb), Gb.normalize();
-        const Yb = -wb.Dot(Ob, bb),
-          Sb = -wb.Dot(Gb, bb),
-          ab = -wb.Dot(Ub, bb);
-        return pb.FromValuesToRef(Ob._x, Gb._x, Ub._x, 0, Ob._y, Gb._y, Ub._y, 0, Ob._z, Gb._z, Ub._z, 0, Yb, Sb, ab, 1, Bb), Bb
+      static LookAtLHToRef(dd, Jd, kd, pd) {
+        const Nd = ed.IL[0],
+          Wd = ed.IL[1],
+          Pd = ed.IL[2];
+        Jd.subtractToRef(dd, Pd), Pd.normalize(), ld.CrossToRef(kd, Pd, Nd);
+        const Zd = Nd.lengthSquared();
+        0 === Zd ? Nd.x = 1 : Nd.normalizeFromLength(Math.sqrt(Zd)), ld.CrossToRef(Pd, Nd, Wd), Wd.normalize();
+        const gd = -ld.Dot(Nd, dd),
+          Cd = -ld.Dot(Wd, dd),
+          Kd = -ld.Dot(Pd, dd);
+        return Od.FromValuesToRef(Nd._x, Wd._x, Pd._x, 0, Nd._y, Wd._y, Pd._y, 0, Nd._z, Wd._z, Pd._z, 0, gd, Cd, Kd, 1, pd), pd
       }
-      static LookAtRH(bb, ub, hb) {
-        const Bb = new pb;
-        return pb.LookAtRHToRef(bb, ub, hb, Bb), Bb
+      static LookAtRH(dd, Jd, kd) {
+        const pd = new Od;
+        return Od.LookAtRHToRef(dd, Jd, kd, pd), pd
       }
-      static LookAtRHToRef(bb, ub, hb, Bb) {
-        const Ob = ob.YX[0],
-          Gb = ob.YX[1],
-          Ub = ob.YX[2];
-        bb.subtractToRef(ub, Ub), Ub.normalize(), wb.CrossToRef(hb, Ub, Ob);
-        const Lb = Ob.lengthSquared();
-        0 === Lb ? Ob.x = 1 : Ob.normalizeFromLength(Math.sqrt(Lb)), wb.CrossToRef(Ub, Ob, Gb), Gb.normalize();
-        const Yb = -wb.Dot(Ob, bb),
-          Sb = -wb.Dot(Gb, bb),
-          ab = -wb.Dot(Ub, bb);
-        return pb.FromValuesToRef(Ob._x, Gb._x, Ub._x, 0, Ob._y, Gb._y, Ub._y, 0, Ob._z, Gb._z, Ub._z, 0, Yb, Sb, ab, 1, Bb), Bb
+      static LookAtRHToRef(dd, Jd, kd, pd) {
+        const Nd = ed.IL[0],
+          Wd = ed.IL[1],
+          Pd = ed.IL[2];
+        dd.subtractToRef(Jd, Pd), Pd.normalize(), ld.CrossToRef(kd, Pd, Nd);
+        const Zd = Nd.lengthSquared();
+        0 === Zd ? Nd.x = 1 : Nd.normalizeFromLength(Math.sqrt(Zd)), ld.CrossToRef(Pd, Nd, Wd), Wd.normalize();
+        const gd = -ld.Dot(Nd, dd),
+          Cd = -ld.Dot(Wd, dd),
+          Kd = -ld.Dot(Pd, dd);
+        return Od.FromValuesToRef(Nd._x, Wd._x, Pd._x, 0, Nd._y, Wd._y, Pd._y, 0, Nd._z, Wd._z, Pd._z, 0, gd, Cd, Kd, 1, pd), pd
       }
-      static LookDirectionLH(bb, ub) {
-        const hb = new pb;
-        return pb.LookDirectionLHToRef(bb, ub, hb), hb
+      static LookDirectionLH(dd, Jd) {
+        const kd = new Od;
+        return Od.LookDirectionLHToRef(dd, Jd, kd), kd
       }
-      static LookDirectionLHToRef(bb, ub, hb) {
-        const Bb = ob.YX[0];
-        Bb.mD(bb), Bb.scaleInPlace(-1);
-        const Ob = ob.YX[1];
-        return wb.CrossToRef(ub, Bb, Ob), pb.FromValuesToRef(Ob._x, Ob._y, Ob._z, 0, ub._x, ub._y, ub._z, 0, Bb._x, Bb._y, Bb._z, 0, 0, 0, 0, 1, hb), hb
+      static LookDirectionLHToRef(dd, Jd, kd) {
+        const pd = ed.IL[0];
+        pd.Fs(dd), pd.scaleInPlace(-1);
+        const Nd = ed.IL[1];
+        return ld.CrossToRef(Jd, pd, Nd), Od.FromValuesToRef(Nd._x, Nd._y, Nd._z, 0, Jd._x, Jd._y, Jd._z, 0, pd._x, pd._y, pd._z, 0, 0, 0, 0, 1, kd), kd
       }
-      static LookDirectionRH(bb, ub) {
-        const hb = new pb;
-        return pb.LookDirectionRHToRef(bb, ub, hb), hb
+      static LookDirectionRH(dd, Jd) {
+        const kd = new Od;
+        return Od.LookDirectionRHToRef(dd, Jd, kd), kd
       }
-      static LookDirectionRHToRef(bb, ub, hb) {
-        const Bb = ob.YX[2];
-        return wb.CrossToRef(ub, bb, Bb), pb.FromValuesToRef(Bb._x, Bb._y, Bb._z, 0, ub._x, ub._y, ub._z, 0, bb._x, bb._y, bb._z, 0, 0, 0, 0, 1, hb), hb
+      static LookDirectionRHToRef(dd, Jd, kd) {
+        const pd = ed.IL[2];
+        return ld.CrossToRef(Jd, dd, pd), Od.FromValuesToRef(pd._x, pd._y, pd._z, 0, Jd._x, Jd._y, Jd._z, 0, dd._x, dd._y, dd._z, 0, 0, 0, 0, 1, kd), kd
       }
-      static OrthoLH(bb, ub, hb, Bb, Ob) {
-        const Gb = new pb;
-        return pb.OrthoLHToRef(bb, ub, hb, Bb, Gb, Ob), Gb
+      static OrthoLH(dd, Jd, kd, pd, Nd) {
+        const Wd = new Od;
+        return Od.OrthoLHToRef(dd, Jd, kd, pd, Wd, Nd), Wd
       }
-      static OrthoLHToRef(bb, ub, hb, Bb, Ob, Gb) {
-        const Ub = 2 / bb,
-          Lb = 2 / ub,
-          Yb = 2 / (Bb - hb),
-          Sb = -(Bb + hb) / (Bb - hb);
-        return pb.FromValuesToRef(Ub, 0, 0, 0, 0, Lb, 0, 0, 0, 0, Yb, 0, 0, 0, Sb, 1, Ob), Gb && Ob.multiplyToRef(lb, Ob), Ob._updateIdentityStatus(1 === Ub && 1 === Lb && 1 === Yb && 0 === Sb), Ob
+      static OrthoLHToRef(dd, Jd, kd, pd, Nd, Wd) {
+        const Pd = 2 / dd,
+          Zd = 2 / Jd,
+          gd = 2 / (pd - kd),
+          Cd = -(pd + kd) / (pd - kd);
+        return Od.FromValuesToRef(Pd, 0, 0, 0, 0, Zd, 0, 0, 0, 0, gd, 0, 0, 0, Cd, 1, Nd), Wd && Nd.multiplyToRef(Id, Nd), Nd._updateIdentityStatus(1 === Pd && 1 === Zd && 1 === gd && 0 === Cd), Nd
       }
-      static OrthoOffCenterLH(bb, ub, hb, Bb, Ob, Gb, Ub) {
-        const Lb = new pb;
-        return pb.OrthoOffCenterLHToRef(bb, ub, hb, Bb, Ob, Gb, Lb, Ub), Lb
+      static OrthoOffCenterLH(dd, Jd, kd, pd, Nd, Wd, Pd) {
+        const Zd = new Od;
+        return Od.OrthoOffCenterLHToRef(dd, Jd, kd, pd, Nd, Wd, Zd, Pd), Zd
       }
-      static OrthoOffCenterLHToRef(bb, ub, hb, Bb, Ob, Gb, Ub, Lb) {
-        const Yb = 2 / (ub - bb),
-          Sb = 2 / (Bb - hb),
-          ab = 2 / (Gb - Ob),
-          Hb = -(Gb + Ob) / (Gb - Ob),
-          wb = (bb + ub) / (bb - ub),
-          Zb = (Bb + hb) / (hb - Bb);
-        return pb.FromValuesToRef(Yb, 0, 0, 0, 0, Sb, 0, 0, 0, 0, ab, 0, wb, Zb, Hb, 1, Ub), Lb && Ub.multiplyToRef(lb, Ub), Ub.markAsUpdated(), Ub
+      static OrthoOffCenterLHToRef(dd, Jd, kd, pd, Nd, Wd, Pd, Zd) {
+        const gd = 2 / (Jd - dd),
+          Cd = 2 / (pd - kd),
+          Kd = 2 / (Wd - Nd),
+          od = -(Wd + Nd) / (Wd - Nd),
+          ld = (dd + Jd) / (dd - Jd),
+          Qd = (pd + kd) / (kd - pd);
+        return Od.FromValuesToRef(gd, 0, 0, 0, 0, Cd, 0, 0, 0, 0, Kd, 0, ld, Qd, od, 1, Pd), Zd && Pd.multiplyToRef(Id, Pd), Pd.markAsUpdated(), Pd
       }
-      static ObliqueOffCenterLHToRef(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb, Sb, ab) {
-        const Hb = -Ub * Math.cos(Lb),
-          wb = -Ub * Math.sin(Lb);
-        return pb.TranslationToRef(0, 0, -Yb, ob.Matrix[1]), pb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, Hb, wb, 1, 0, 0, 0, 0, 1, ob.Matrix[0]), ob.Matrix[1].multiplyToRef(ob.Matrix[0], ob.Matrix[0]), pb.TranslationToRef(0, 0, Yb, ob.Matrix[1]), ob.Matrix[0].multiplyToRef(ob.Matrix[1], ob.Matrix[0]), pb.OrthoOffCenterLHToRef(bb, ub, hb, Bb, Ob, Gb, Sb, ab), ob.Matrix[0].multiplyToRef(Sb, Sb), Sb
+      static ObliqueOffCenterLHToRef(dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd, Kd) {
+        const od = -Pd * Math.cos(Zd),
+          ld = -Pd * Math.sin(Zd);
+        return Od.TranslationToRef(0, 0, -gd, ed.Matrix[1]), Od.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, od, ld, 1, 0, 0, 0, 0, 1, ed.Matrix[0]), ed.Matrix[1].multiplyToRef(ed.Matrix[0], ed.Matrix[0]), Od.TranslationToRef(0, 0, gd, ed.Matrix[1]), ed.Matrix[0].multiplyToRef(ed.Matrix[1], ed.Matrix[0]), Od.OrthoOffCenterLHToRef(dd, Jd, kd, pd, Nd, Wd, Cd, Kd), ed.Matrix[0].multiplyToRef(Cd, Cd), Cd
       }
-      static OrthoOffCenterRH(bb, ub, hb, Bb, Ob, Gb, Ub) {
-        const Lb = new pb;
-        return pb.OrthoOffCenterRHToRef(bb, ub, hb, Bb, Ob, Gb, Lb, Ub), Lb
+      static OrthoOffCenterRH(dd, Jd, kd, pd, Nd, Wd, Pd) {
+        const Zd = new Od;
+        return Od.OrthoOffCenterRHToRef(dd, Jd, kd, pd, Nd, Wd, Zd, Pd), Zd
       }
-      static OrthoOffCenterRHToRef(bb, ub, hb, Bb, Ob, Gb, Ub, Lb) {
-        return pb.OrthoOffCenterLHToRef(bb, ub, hb, Bb, Ob, Gb, Ub, Lb), Ub._m[10] *= -1, Ub
+      static OrthoOffCenterRHToRef(dd, Jd, kd, pd, Nd, Wd, Pd, Zd) {
+        return Od.OrthoOffCenterLHToRef(dd, Jd, kd, pd, Nd, Wd, Pd, Zd), Pd._m[10] *= -1, Pd
       }
-      static ObliqueOffCenterRHToRef(bb, ub, hb, Bb, Ob, Gb, Ub, Lb, Yb, Sb, ab) {
-        const Hb = Ub * Math.cos(Lb),
-          wb = Ub * Math.sin(Lb);
-        return pb.TranslationToRef(0, 0, Yb, ob.Matrix[1]), pb.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, Hb, wb, 1, 0, 0, 0, 0, 1, ob.Matrix[0]), ob.Matrix[1].multiplyToRef(ob.Matrix[0], ob.Matrix[0]), pb.TranslationToRef(0, 0, -Yb, ob.Matrix[1]), ob.Matrix[0].multiplyToRef(ob.Matrix[1], ob.Matrix[0]), pb.OrthoOffCenterRHToRef(bb, ub, hb, Bb, Ob, Gb, Sb, ab), ob.Matrix[0].multiplyToRef(Sb, Sb), Sb
+      static ObliqueOffCenterRHToRef(dd, Jd, kd, pd, Nd, Wd, Pd, Zd, gd, Cd, Kd) {
+        const od = Pd * Math.cos(Zd),
+          ld = Pd * Math.sin(Zd);
+        return Od.TranslationToRef(0, 0, gd, ed.Matrix[1]), Od.FromValuesToRef(1, 0, 0, 0, 0, 1, 0, 0, od, ld, 1, 0, 0, 0, 0, 1, ed.Matrix[0]), ed.Matrix[1].multiplyToRef(ed.Matrix[0], ed.Matrix[0]), Od.TranslationToRef(0, 0, -gd, ed.Matrix[1]), ed.Matrix[0].multiplyToRef(ed.Matrix[1], ed.Matrix[0]), Od.OrthoOffCenterRHToRef(dd, Jd, kd, pd, Nd, Wd, Cd, Kd), ed.Matrix[0].multiplyToRef(Cd, Cd), Cd
       }
-      static PerspectiveLH(bb, ub, hb, Bb, Ob) {
-        let Gb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const Ub = new pb,
-          Lb = 2 * hb / bb,
-          Yb = 2 * hb / ub,
-          Sb = (Bb + hb) / (Bb - hb),
-          ab = -2 * Bb * hb / (Bb - hb),
-          Hb = Math.tan(Gb);
-        return pb.FromValuesToRef(Lb, 0, 0, 0, 0, Yb, 0, Hb, 0, 0, Sb, 1, 0, 0, ab, 0, Ub), Ob && Ub.multiplyToRef(lb, Ub), Ub._updateIdentityStatus(!1), Ub
+      static PerspectiveLH(dd, Jd, kd, pd, Nd) {
+        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const Pd = new Od,
+          Zd = 2 * kd / dd,
+          gd = 2 * kd / Jd,
+          Cd = (pd + kd) / (pd - kd),
+          Kd = -2 * pd * kd / (pd - kd),
+          od = Math.tan(Wd);
+        return Od.FromValuesToRef(Zd, 0, 0, 0, 0, gd, 0, od, 0, 0, Cd, 1, 0, 0, Kd, 0, Pd), Nd && Pd.multiplyToRef(Id, Pd), Pd._updateIdentityStatus(!1), Pd
       }
-      static PerspectiveFovLH(bb, ub, hb, Bb, Ob) {
-        let Gb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          Ub = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const Lb = new pb;
-        return pb.PerspectiveFovLHToRef(bb, ub, hb, Bb, Lb, !0, Ob, Gb, Ub), Lb
+      static PerspectiveFovLH(dd, Jd, kd, pd, Nd) {
+        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          Pd = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const Zd = new Od;
+        return Od.PerspectiveFovLHToRef(dd, Jd, kd, pd, Zd, !0, Nd, Wd, Pd), Zd
       }
-      static PerspectiveFovLHToRef(bb, ub, hb, Bb, Ob) {
-        let Gb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Ub = arguments.length > 6 ? arguments[6] : void 0,
-          Lb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          Yb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const Sb = hb,
-          ab = Bb,
-          Hb = 1 / Math.tan(.5 * bb),
-          wb = Gb ? Hb / ub : Hb,
-          Zb = Gb ? Hb : Hb * ub,
-          Xb = Yb && 0 === Sb ? -1 : 0 !== ab ? (ab + Sb) / (ab - Sb) : 1,
-          ob = Yb && 0 === Sb ? 2 * ab : 0 !== ab ? -2 * ab * Sb / (ab - Sb) : -2 * Sb,
-          Ab = Math.tan(Lb);
-        return pb.FromValuesToRef(wb, 0, 0, 0, 0, Zb, 0, Ab, 0, 0, Xb, 1, 0, 0, ob, 0, Ob), Ub && Ob.multiplyToRef(lb, Ob), Ob._updateIdentityStatus(!1), Ob
+      static PerspectiveFovLHToRef(dd, Jd, kd, pd, Nd) {
+        let Wd = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Pd = arguments.length > 6 ? arguments[6] : void 0,
+          Zd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          gd = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const Cd = kd,
+          Kd = pd,
+          od = 1 / Math.tan(.5 * dd),
+          ld = Wd ? od / Jd : od,
+          Qd = Wd ? od : od * Jd,
+          Ld = gd && 0 === Cd ? -1 : 0 !== Kd ? (Kd + Cd) / (Kd - Cd) : 1,
+          ed = gd && 0 === Cd ? 2 * Kd : 0 !== Kd ? -2 * Kd * Cd / (Kd - Cd) : -2 * Cd,
+          Rd = Math.tan(Zd);
+        return Od.FromValuesToRef(ld, 0, 0, 0, 0, Qd, 0, Rd, 0, 0, Ld, 1, 0, 0, ed, 0, Nd), Pd && Nd.multiplyToRef(Id, Nd), Nd._updateIdentityStatus(!1), Nd
       }
-      static PerspectiveFovReverseLHToRef(bb, ub, hb, Bb, Ob) {
-        let Gb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Ub = arguments.length > 6 ? arguments[6] : void 0,
-          Lb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const Yb = 1 / Math.tan(.5 * bb),
-          Sb = Gb ? Yb / ub : Yb,
-          ab = Gb ? Yb : Yb * ub,
-          Hb = Math.tan(Lb);
-        return pb.FromValuesToRef(Sb, 0, 0, 0, 0, ab, 0, Hb, 0, 0, -hb, 1, 0, 0, 1, 0, Ob), Ub && Ob.multiplyToRef(lb, Ob), Ob._updateIdentityStatus(!1), Ob
+      static PerspectiveFovReverseLHToRef(dd, Jd, kd, pd, Nd) {
+        let Wd = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Pd = arguments.length > 6 ? arguments[6] : void 0,
+          Zd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const gd = 1 / Math.tan(.5 * dd),
+          Cd = Wd ? gd / Jd : gd,
+          Kd = Wd ? gd : gd * Jd,
+          od = Math.tan(Zd);
+        return Od.FromValuesToRef(Cd, 0, 0, 0, 0, Kd, 0, od, 0, 0, -kd, 1, 0, 0, 1, 0, Nd), Pd && Nd.multiplyToRef(Id, Nd), Nd._updateIdentityStatus(!1), Nd
       }
-      static PerspectiveFovRH(bb, ub, hb, Bb, Ob) {
-        let Gb = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
-          Ub = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
-        const Lb = new pb;
-        return pb.PerspectiveFovRHToRef(bb, ub, hb, Bb, Lb, !0, Ob, Gb, Ub), Lb
+      static PerspectiveFovRH(dd, Jd, kd, pd, Nd) {
+        let Wd = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+          Pd = arguments.length > 6 && void 0 !== arguments[6] && arguments[6];
+        const Zd = new Od;
+        return Od.PerspectiveFovRHToRef(dd, Jd, kd, pd, Zd, !0, Nd, Wd, Pd), Zd
       }
-      static PerspectiveFovRHToRef(bb, ub, hb, Bb, Ob) {
-        let Gb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Ub = arguments.length > 6 ? arguments[6] : void 0,
-          Lb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
-          Yb = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
-        const Sb = hb,
-          ab = Bb,
-          Hb = 1 / Math.tan(.5 * bb),
-          wb = Gb ? Hb / ub : Hb,
-          Zb = Gb ? Hb : Hb * ub,
-          Xb = Yb && 0 === Sb ? 1 : 0 !== ab ? -(ab + Sb) / (ab - Sb) : -1,
-          ob = Yb && 0 === Sb ? 2 * ab : 0 !== ab ? -2 * ab * Sb / (ab - Sb) : -2 * Sb,
-          Ab = Math.tan(Lb);
-        return pb.FromValuesToRef(wb, 0, 0, 0, 0, Zb, 0, Ab, 0, 0, Xb, -1, 0, 0, ob, 0, Ob), Ub && Ob.multiplyToRef(lb, Ob), Ob._updateIdentityStatus(!1), Ob
+      static PerspectiveFovRHToRef(dd, Jd, kd, pd, Nd) {
+        let Wd = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Pd = arguments.length > 6 ? arguments[6] : void 0,
+          Zd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0,
+          gd = arguments.length > 8 && void 0 !== arguments[8] && arguments[8];
+        const Cd = kd,
+          Kd = pd,
+          od = 1 / Math.tan(.5 * dd),
+          ld = Wd ? od / Jd : od,
+          Qd = Wd ? od : od * Jd,
+          Ld = gd && 0 === Cd ? 1 : 0 !== Kd ? -(Kd + Cd) / (Kd - Cd) : -1,
+          ed = gd && 0 === Cd ? 2 * Kd : 0 !== Kd ? -2 * Kd * Cd / (Kd - Cd) : -2 * Cd,
+          Rd = Math.tan(Zd);
+        return Od.FromValuesToRef(ld, 0, 0, 0, 0, Qd, 0, Rd, 0, 0, Ld, -1, 0, 0, ed, 0, Nd), Pd && Nd.multiplyToRef(Id, Nd), Nd._updateIdentityStatus(!1), Nd
       }
-      static PerspectiveFovReverseRHToRef(bb, ub, hb, Bb, Ob) {
-        let Gb = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          Ub = arguments.length > 6 ? arguments[6] : void 0,
-          Lb = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
-        const Yb = 1 / Math.tan(.5 * bb),
-          Sb = Gb ? Yb / ub : Yb,
-          ab = Gb ? Yb : Yb * ub,
-          Hb = Math.tan(Lb);
-        return pb.FromValuesToRef(Sb, 0, 0, 0, 0, ab, 0, Hb, 0, 0, -hb, -1, 0, 0, -1, 0, Ob), Ub && Ob.multiplyToRef(lb, Ob), Ob._updateIdentityStatus(!1), Ob
+      static PerspectiveFovReverseRHToRef(dd, Jd, kd, pd, Nd) {
+        let Wd = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          Pd = arguments.length > 6 ? arguments[6] : void 0,
+          Zd = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0;
+        const gd = 1 / Math.tan(.5 * dd),
+          Cd = Wd ? gd / Jd : gd,
+          Kd = Wd ? gd : gd * Jd,
+          od = Math.tan(Zd);
+        return Od.FromValuesToRef(Cd, 0, 0, 0, 0, Kd, 0, od, 0, 0, -kd, -1, 0, 0, -1, 0, Nd), Pd && Nd.multiplyToRef(Id, Nd), Nd._updateIdentityStatus(!1), Nd
       }
-      static GetFinalMatrix(bb, ub, hb, Bb, Ob, Gb) {
-        const Ub = bb.width,
-          Lb = bb.height,
-          Yb = bb.x,
-          Sb = bb.y,
-          ab = pb.FromValues(Ub / 2, 0, 0, 0, 0, -Lb / 2, 0, 0, 0, 0, Gb - Ob, 0, Yb + Ub / 2, Lb / 2 + Sb, Ob, 1),
-          Hb = new pb;
-        return ub.multiplyToRef(hb, Hb), Hb.multiplyToRef(Bb, Hb), Hb.multiplyToRef(ab, Hb)
+      static GetFinalMatrix(dd, Jd, kd, pd, Nd, Wd) {
+        const Pd = dd.width,
+          Zd = dd.height,
+          gd = dd.x,
+          Cd = dd.y,
+          Kd = Od.FromValues(Pd / 2, 0, 0, 0, 0, -Zd / 2, 0, 0, 0, 0, Wd - Nd, 0, gd + Pd / 2, Zd / 2 + Cd, Nd, 1),
+          od = new Od;
+        return Jd.multiplyToRef(kd, od), od.multiplyToRef(pd, od), od.multiplyToRef(Kd, od)
       }
-      static GetAsMatrix2x2(bb) {
-        const ub = bb.m,
-          hb = [ub[0], ub[1], ub[4], ub[5]];
-        return Gb.d.MatrixUse64Bits ? hb : new Float32Array(hb)
+      static GetAsMatrix2x2(dd) {
+        const Jd = dd.m,
+          kd = [Jd[0], Jd[1], Jd[4], Jd[5]];
+        return Wd.d.MatrixUse64Bits ? kd : new Float32Array(kd)
       }
-      static GetAsMatrix3x3(bb) {
-        const ub = bb.m,
-          hb = [ub[0], ub[1], ub[2], ub[4], ub[5], ub[6], ub[8], ub[9], ub[10]];
-        return Gb.d.MatrixUse64Bits ? hb : new Float32Array(hb)
+      static GetAsMatrix3x3(dd) {
+        const Jd = dd.m,
+          kd = [Jd[0], Jd[1], Jd[2], Jd[4], Jd[5], Jd[6], Jd[8], Jd[9], Jd[10]];
+        return Wd.d.MatrixUse64Bits ? kd : new Float32Array(kd)
       }
-      static Transpose(bb) {
-        const ub = new pb;
-        return pb.TransposeToRef(bb, ub), ub
+      static Transpose(dd) {
+        const Jd = new Od;
+        return Od.TransposeToRef(dd, Jd), Jd
       }
-      static TransposeToRef(bb, ub) {
-        const hb = bb.m,
-          Bb = hb[0],
-          Ob = hb[4],
-          Gb = hb[8],
-          Ub = hb[12],
-          Lb = hb[1],
-          Yb = hb[5],
-          Sb = hb[9],
-          ab = hb[13],
-          Hb = hb[2],
-          wb = hb[6],
-          Zb = hb[10],
-          Xb = hb[14],
-          pb = hb[3],
-          ob = hb[7],
-          Ab = hb[11],
-          lb = hb[15],
-          Kb = ub._m;
-        return Kb[0] = Bb, Kb[1] = Ob, Kb[2] = Gb, Kb[3] = Ub, Kb[4] = Lb, Kb[5] = Yb, Kb[6] = Sb, Kb[7] = ab, Kb[8] = Hb, Kb[9] = wb, Kb[10] = Zb, Kb[11] = Xb, Kb[12] = pb, Kb[13] = ob, Kb[14] = Ab, Kb[15] = lb, ub.markAsUpdated(), ub._updateIdentityStatus(bb._isIdentity, bb._isIdentityDirty), ub
+      static TransposeToRef(dd, Jd) {
+        const kd = dd.m,
+          pd = kd[0],
+          Nd = kd[4],
+          Wd = kd[8],
+          Pd = kd[12],
+          Zd = kd[1],
+          gd = kd[5],
+          Cd = kd[9],
+          Kd = kd[13],
+          od = kd[2],
+          ld = kd[6],
+          Qd = kd[10],
+          Ld = kd[14],
+          Od = kd[3],
+          ed = kd[7],
+          Rd = kd[11],
+          Id = kd[15],
+          Gd = Jd._m;
+        return Gd[0] = pd, Gd[1] = Nd, Gd[2] = Wd, Gd[3] = Pd, Gd[4] = Zd, Gd[5] = gd, Gd[6] = Cd, Gd[7] = Kd, Gd[8] = od, Gd[9] = ld, Gd[10] = Qd, Gd[11] = Ld, Gd[12] = Od, Gd[13] = ed, Gd[14] = Rd, Gd[15] = Id, Jd.markAsUpdated(), Jd._updateIdentityStatus(dd._isIdentity, dd._isIdentityDirty), Jd
       }
-      static Reflection(bb) {
-        const ub = new pb;
-        return pb.ReflectionToRef(bb, ub), ub
+      static Reflection(dd) {
+        const Jd = new Od;
+        return Od.ReflectionToRef(dd, Jd), Jd
       }
-      static ReflectionToRef(bb, ub) {
-        bb.normalize();
-        const hb = bb.normal.x,
-          Bb = bb.normal.y,
-          Ob = bb.normal.z,
-          Gb = -2 * hb,
-          Ub = -2 * Bb,
-          Lb = -2 * Ob;
-        return pb.FromValuesToRef(Gb * hb + 1, Ub * hb, Lb * hb, 0, Gb * Bb, Ub * Bb + 1, Lb * Bb, 0, Gb * Ob, Ub * Ob, Lb * Ob + 1, 0, Gb * bb.d, Ub * bb.d, Lb * bb.d, 1, ub), ub
+      static ReflectionToRef(dd, Jd) {
+        dd.normalize();
+        const kd = dd.normal.x,
+          pd = dd.normal.y,
+          Nd = dd.normal.z,
+          Wd = -2 * kd,
+          Pd = -2 * pd,
+          Zd = -2 * Nd;
+        return Od.FromValuesToRef(Wd * kd + 1, Pd * kd, Zd * kd, 0, Wd * pd, Pd * pd + 1, Zd * pd, 0, Wd * Nd, Pd * Nd, Zd * Nd + 1, 0, Wd * dd.d, Pd * dd.d, Zd * dd.d, 1, Jd), Jd
       }
-      static FromXYZAxesToRef(bb, ub, hb, Bb) {
-        return pb.FromValuesToRef(bb._x, bb._y, bb._z, 0, ub._x, ub._y, ub._z, 0, hb._x, hb._y, hb._z, 0, 0, 0, 0, 1, Bb), Bb
+      static FromXYZAxesToRef(dd, Jd, kd, pd) {
+        return Od.FromValuesToRef(dd._x, dd._y, dd._z, 0, Jd._x, Jd._y, Jd._z, 0, kd._x, kd._y, kd._z, 0, 0, 0, 0, 1, pd), pd
       }
-      static FromQuaternionToRef(bb, ub) {
-        const hb = bb._x * bb._x,
-          Bb = bb._y * bb._y,
-          Ob = bb._z * bb._z,
-          Gb = bb._x * bb._y,
-          Ub = bb._z * bb._w,
-          Lb = bb._z * bb._x,
-          Yb = bb._y * bb._w,
-          Sb = bb._y * bb._z,
-          ab = bb._x * bb._w;
-        return ub._m[0] = 1 - 2 * (Bb + Ob), ub._m[1] = 2 * (Gb + Ub), ub._m[2] = 2 * (Lb - Yb), ub._m[3] = 0, ub._m[4] = 2 * (Gb - Ub), ub._m[5] = 1 - 2 * (Ob + hb), ub._m[6] = 2 * (Sb + ab), ub._m[7] = 0, ub._m[8] = 2 * (Lb + Yb), ub._m[9] = 2 * (Sb - ab), ub._m[10] = 1 - 2 * (Bb + hb), ub._m[11] = 0, ub._m[12] = 0, ub._m[13] = 0, ub._m[14] = 0, ub._m[15] = 1, ub.markAsUpdated(), ub
+      static FromQuaternionToRef(dd, Jd) {
+        const kd = dd._x * dd._x,
+          pd = dd._y * dd._y,
+          Nd = dd._z * dd._z,
+          Wd = dd._x * dd._y,
+          Pd = dd._z * dd._w,
+          Zd = dd._z * dd._x,
+          gd = dd._y * dd._w,
+          Cd = dd._y * dd._z,
+          Kd = dd._x * dd._w;
+        return Jd._m[0] = 1 - 2 * (pd + Nd), Jd._m[1] = 2 * (Wd + Pd), Jd._m[2] = 2 * (Zd - gd), Jd._m[3] = 0, Jd._m[4] = 2 * (Wd - Pd), Jd._m[5] = 1 - 2 * (Nd + kd), Jd._m[6] = 2 * (Cd + Kd), Jd._m[7] = 0, Jd._m[8] = 2 * (Zd + gd), Jd._m[9] = 2 * (Cd - Kd), Jd._m[10] = 1 - 2 * (pd + kd), Jd._m[11] = 0, Jd._m[12] = 0, Jd._m[13] = 0, Jd._m[14] = 0, Jd._m[15] = 1, Jd.markAsUpdated(), Jd
       }
     }
-    pb._IdentityReadOnly = pb.Identity();
-    class ob {}
-    ob.YX = (0, Ob.i)(11, wb.Zero), ob.Matrix = (0, Ob.i)(2, pb.Identity), ob.Quaternion = (0, Ob.i)(3, Xb.Zero);
-    class Ab {}
-    Ab.Vector2 = (0, Ob.i)(3, Hb.Zero), Ab.YX = (0, Ob.i)(13, wb.Zero), Ab.Vector4 = (0, Ob.i)(3, Zb.Zero), Ab.Quaternion = (0, Ob.i)(3, Xb.Zero), Ab.Matrix = (0, Ob.i)(8, pb.Identity);
-    const lb = pb.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
-    let Kb = !1;
+    Od._IdentityReadOnly = Od.Identity();
+    class ed {}
+    ed.IL = (0, Nd.f)(11, ld.Zero), ed.Matrix = (0, Nd.f)(2, Od.Identity), ed.Quaternion = (0, Nd.f)(3, Ld.Zero);
+    class Rd {}
+    Rd.Vector2 = (0, Nd.f)(3, od.Zero), Rd.IL = (0, Nd.f)(13, ld.Zero), Rd.Vector4 = (0, Nd.f)(3, Qd.Zero), Rd.Quaternion = (0, Nd.f)(3, Ld.Zero), Rd.Matrix = (0, Nd.f)(8, Od.Identity);
+    const Id = Od.FromValues(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, .5, 0, 0, 0, .5, 1);
+    let Gd = !1;
 
-    function Wb() {
-      Kb || (Kb = !0, Object.defineProperties(Hb.prototype, {
+    function vd() {
+      Gd || (Gd = !0, Object.defineProperties(od.prototype, {
         dimension: {
           value: [2]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(wb.prototype, {
+      }), Object.defineProperties(ld.prototype, {
         dimension: {
           value: [3]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Zb.prototype, {
+      }), Object.defineProperties(Qd.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(Xb.prototype, {
+      }), Object.defineProperties(Ld.prototype, {
         dimension: {
           value: [4]
         },
         rank: {
           value: 1
         }
-      }), Object.defineProperties(pb.prototype, {
+      }), Object.defineProperties(Od.prototype, {
         dimension: {
           value: [4, 4]
         },
         rank: {
           value: 2
         }
-      }), (0, Sb.f)("BABYLON.Vector2", Hb), (0, Sb.f)("BABYLON.Vector3", wb), (0, Sb.f)("BABYLON.Vector4", Zb), (0, Sb.f)("BABYLON.Matrix", pb))
+      }), (0, Cd.h)("BABYLON.Vector2", od), (0, Cd.h)("BABYLON.Vector3", ld), (0, Cd.h)("BABYLON.Vector4", Qd), (0, Cd.h)("BABYLON.Matrix", Od))
     }
   },
-  36753: (bb, ub, hb) => {
-    hb.d(ub, {
-      e: () => Ub
+  37280: (dd, Jd, kd) => {
+    kd.d(Jd, {
+      e: () => Pd
     });
-    const Bb = "undefined" !== typeof WeakRef;
-    class Ob {
-      constructor(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          hb = arguments.length > 2 ? arguments[2] : void 0,
-          Bb = arguments.length > 3 ? arguments[3] : void 0;
-        this.initialize(bb, ub, hb, Bb)
+    const pd = "undefined" !== typeof WeakRef;
+    class Nd {
+      constructor(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          kd = arguments.length > 2 ? arguments[2] : void 0,
+          pd = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(dd, Jd, kd, pd)
       }
-      initialize(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          hb = arguments.length > 2 ? arguments[2] : void 0,
-          Bb = arguments.length > 3 ? arguments[3] : void 0;
-        return this.mask = bb, this.skipNextObservers = ub, this.target = hb, this.currentTarget = Bb, this
+      initialize(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          kd = arguments.length > 2 ? arguments[2] : void 0,
+          pd = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = dd, this.skipNextObservers = Jd, this.target = kd, this.currentTarget = pd, this
       }
     }
-    class Gb {
-      constructor(bb, ub) {
-        let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        this.callback = bb, this.mask = ub, this.scope = hb, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+    class Wd {
+      constructor(dd, Jd) {
+        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = dd, this.mask = Jd, this.scope = kd, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
       }
       remove() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this._remove && this._remove(bb)
+        let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(dd)
       }
     }
-    class Ub {
-      static FromPromise(bb, ub) {
-        const hb = new Ub;
-        return bb.then((bb => {
-          hb.notifyObservers(bb)
-        })).catch((bb => {
-          if (!ub) throw bb;
-          ub.notifyObservers(bb)
-        })), hb
+    class Pd {
+      static FromPromise(dd, Jd) {
+        const kd = new Pd;
+        return dd.then((dd => {
+          kd.notifyObservers(dd)
+        })).catch((dd => {
+          if (!Jd) throw dd;
+          Jd.notifyObservers(dd)
+        })), kd
       }
       get observers() {
         return this._observers
       }
-      constructor(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        this.notifyIfTriggered = ub, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Ob(0), bb && (this._onObserverAdded = bb)
+      constructor(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = Jd, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new Nd(0), dd && (this._onObserverAdded = dd)
       }
-      add(bb) {
-        let ub = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          hb = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (!bb) return null;
-        const Ob = new Gb(bb, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
-        Ob.unregisterOnNextCall = hb, ub ? this._observers.unshift(Ob) : this._observers.push(Ob), this._onObserverAdded && this._onObserverAdded(Ob), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Ob, this._lastNotifiedValue);
-        const Ub = Bb ? new WeakRef(this) : {
+      add(dd) {
+        let Jd = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          kd = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!dd) return null;
+        const Nd = new Wd(dd, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        Nd.unregisterOnNextCall = kd, Jd ? this._observers.unshift(Nd) : this._observers.push(Nd), this._onObserverAdded && this._onObserverAdded(Nd), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(Nd, this._lastNotifiedValue);
+        const Pd = pd ? new WeakRef(this) : {
           deref: () => this
         };
-        return Ob._remove = function() {
-          let bb = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          const ub = Ub.deref();
-          ub && (bb ? ub.remove(Ob) : ub._remove(Ob))
-        }, Ob
+        return Nd._remove = function() {
+          let dd = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const Jd = Pd.deref();
+          Jd && (dd ? Jd.remove(Nd) : Jd._remove(Nd))
+        }, Nd
       }
-      addOnce(bb) {
-        return this.add(bb, void 0, void 0, void 0, !0)
+      addOnce(dd) {
+        return this.add(dd, void 0, void 0, void 0, !0)
       }
-      remove(bb) {
-        if (!bb) return !1;
-        bb._remove = null;
-        return -1 !== this._observers.indexOf(bb) && (this._deferUnregister(bb), !0)
+      remove(dd) {
+        if (!dd) return !1;
+        dd._remove = null;
+        return -1 !== this._observers.indexOf(dd) && (this._deferUnregister(dd), !0)
       }
-      removeCallback(bb, ub) {
-        for (let hb = 0; hb < this._observers.length; hb++) {
-          const Bb = this._observers[hb];
-          if (!Bb._willBeUnregistered && (Bb.callback === bb && (!ub || ub === Bb.scope))) return this._deferUnregister(Bb), !0
+      removeCallback(dd, Jd) {
+        for (let kd = 0; kd < this._observers.length; kd++) {
+          const pd = this._observers[kd];
+          if (!pd._willBeUnregistered && (pd.callback === dd && (!Jd || Jd === pd.scope))) return this._deferUnregister(pd), !0
         }
         return !1
       }
-      _deferUnregister(bb) {
-        bb._willBeUnregistered || (this._numObserversMarkedAsDeleted++, bb.unregisterOnNextCall = !1, bb._willBeUnregistered = !0, setTimeout((() => {
-          this._remove(bb)
+      _deferUnregister(dd) {
+        dd._willBeUnregistered || (this._numObserversMarkedAsDeleted++, dd.unregisterOnNextCall = !1, dd._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(dd)
         }), 0))
       }
-      _remove(bb) {
-        let ub = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        if (!bb) return !1;
-        const hb = this._observers.indexOf(bb);
-        return -1 !== hb && (ub && this._numObserversMarkedAsDeleted--, this._observers.splice(hb, 1), !0)
+      _remove(dd) {
+        let Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!dd) return !1;
+        const kd = this._observers.indexOf(dd);
+        return -1 !== kd && (Jd && this._numObserversMarkedAsDeleted--, this._observers.splice(kd, 1), !0)
       }
-      makeObserverTopPriority(bb) {
-        this._remove(bb, !1), this._observers.unshift(bb)
+      makeObserverTopPriority(dd) {
+        this._remove(dd, !1), this._observers.unshift(dd)
       }
-      makeObserverBottomPriority(bb) {
-        this._remove(bb, !1), this._observers.push(bb)
+      makeObserverBottomPriority(dd) {
+        this._remove(dd, !1), this._observers.push(dd)
       }
-      notifyObservers(bb) {
-        let ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          hb = arguments.length > 2 ? arguments[2] : void 0,
-          Bb = arguments.length > 3 ? arguments[3] : void 0,
-          Ob = arguments.length > 4 ? arguments[4] : void 0;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = bb), !this._observers.length) return !0;
-        const Gb = this._eventState;
-        Gb.mask = ub, Gb.target = hb, Gb.currentTarget = Bb, Gb.skipNextObservers = !1, Gb.lastReturnValue = bb, Gb.userInfo = Ob;
-        for (const Ub of this._observers)
-          if (!Ub._willBeUnregistered && (Ub.mask & ub && (Ub.unregisterOnNextCall && this._deferUnregister(Ub), Ub.scope ? Gb.lastReturnValue = Ub.callback.apply(Ub.scope, [bb, Gb]) : Gb.lastReturnValue = Ub.callback(bb, Gb)), Gb.skipNextObservers)) return !1;
+      notifyObservers(dd) {
+        let Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          kd = arguments.length > 2 ? arguments[2] : void 0,
+          pd = arguments.length > 3 ? arguments[3] : void 0,
+          Nd = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = dd), !this._observers.length) return !0;
+        const Wd = this._eventState;
+        Wd.mask = Jd, Wd.target = kd, Wd.currentTarget = pd, Wd.skipNextObservers = !1, Wd.lastReturnValue = dd, Wd.userInfo = Nd;
+        for (const Pd of this._observers)
+          if (!Pd._willBeUnregistered && (Pd.mask & Jd && (Pd.unregisterOnNextCall && this._deferUnregister(Pd), Pd.scope ? Wd.lastReturnValue = Pd.callback.apply(Pd.scope, [dd, Wd]) : Wd.lastReturnValue = Pd.callback(dd, Wd)), Wd.skipNextObservers)) return !1;
         return !0
       }
-      notifyObserver(bb, ub) {
-        let hb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
-        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = ub), bb._willBeUnregistered) return;
-        const Bb = this._eventState;
-        Bb.mask = hb, Bb.skipNextObservers = !1, bb.unregisterOnNextCall && this._deferUnregister(bb), bb.callback(ub, Bb)
+      notifyObserver(dd, Jd) {
+        let kd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = Jd), dd._willBeUnregistered) return;
+        const pd = this._eventState;
+        pd.mask = kd, pd.skipNextObservers = !1, dd.unregisterOnNextCall && this._deferUnregister(dd), dd.callback(Jd, pd)
       }
       hasObservers() {
         return this._observers.length - this._numObserversMarkedAsDeleted > 0
       }
       clear() {
         for (; this._observers.length;) {
-          const bb = this._observers.pop();
-          bb && (bb._remove = null)
+          const dd = this._observers.pop();
+          dd && (dd._remove = null)
         }
         this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
       }
@@ -2905,17 +2905,17 @@ export const modules = {
         this._hasNotified = !1, this._lastNotifiedValue = void 0
       }
       clone() {
-        const bb = new Ub;
-        return bb._observers = this._observers.slice(0), bb
+        const dd = new Pd;
+        return dd._observers = this._observers.slice(0), dd
       }
       hasSpecificMask() {
-        let bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
-        for (const ub of this._observers)
-          if (ub.mask & bb || ub.mask === bb) return !0;
+        let dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const Jd of this._observers)
+          if (Jd.mask & dd || Jd.mask === dd) return !0;
         return !1
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

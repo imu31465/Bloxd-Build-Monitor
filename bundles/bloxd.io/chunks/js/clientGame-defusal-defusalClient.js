@@ -1,22 +1,22 @@
 export const id = 16;
 export const ids = [16];
 export const modules = {
-  39025: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      default: () => Bb
+  39531: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      default: () => pd
     });
-    const Bb = function(bb, ub, hb) {
-      let Bb;
+    const pd = function(dd, Jd, kd) {
+      let pd;
       return {
-        onCreate: bb => {
-          Bb = bb
+        onCreate: dd => {
+          pd = dd
         },
-        onPlayerAltAction: (bb, ub, hb, Ob, Gb, Ub) => {
-          Ub && "Mesh" === Bb.getEntityType(Ub) && Bb.openShop(bb, !0)
+        onPlayerAltAction: (dd, Jd, kd, Nd, Wd, Pd) => {
+          Pd && "Mesh" === pd.getEntityType(Pd) && pd.openShop(dd, !0)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);

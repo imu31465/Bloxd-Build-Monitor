@@ -1,128 +1,128 @@
-/*! For license information please see halsg.fa-renderer.3e9f7f31.chunk.js.LICENSE.txt */
+/*! For license information please see x17cru.fa-renderer.fcfbf671.chunk.js.LICENSE.txt */
 export const id = 32;
 export const ids = [32];
 export const modules = {
-  6419: (bb, ub, hb) => {
-    hb.r(ub), hb.d(ub, {
-      FontAwesomeIcon: () => jb
+  6560: (dd, Jd, kd) => {
+    kd.r(Jd), kd.d(Jd, {
+      FontAwesomeIcon: () => sd
     });
-    var Bb = hb(6412),
-      Ob = hb(4729),
-      Gb = hb.n(Ob),
-      Ub = hb(49);
+    var pd = kd(6551),
+      Nd = kd(4845),
+      Wd = kd.n(Nd),
+      Pd = kd(56);
 
-    function Lb(bb, ub) {
-      (null == ub || ub > bb.length) && (ub = bb.length);
-      for (var hb = 0, Bb = Array(ub); hb < ub; hb++) Bb[hb] = bb[hb];
-      return Bb
+    function Zd(dd, Jd) {
+      (null == Jd || Jd > dd.length) && (Jd = dd.length);
+      for (var kd = 0, pd = Array(Jd); kd < Jd; kd++) pd[kd] = dd[kd];
+      return pd
     }
 
-    function Yb(bb, ub, hb) {
-      return (ub = function(bb) {
-        var ub = function(bb, ub) {
-          if ("object" != typeof bb || !bb) return bb;
-          var hb = bb[Symbol.toPrimitive];
-          if (void 0 !== hb) {
-            var Bb = hb.call(bb, ub || "default");
-            if ("object" != typeof Bb) return Bb;
+    function gd(dd, Jd, kd) {
+      return (Jd = function(dd) {
+        var Jd = function(dd, Jd) {
+          if ("object" != typeof dd || !dd) return dd;
+          var kd = dd[Symbol.toPrimitive];
+          if (void 0 !== kd) {
+            var pd = kd.call(dd, Jd || "default");
+            if ("object" != typeof pd) return pd;
             throw new TypeError("@@toPrimitive must return a primitive value.")
           }
-          return ("string" === ub ? String : Number)(bb)
-        }(bb, "string");
-        return "symbol" == typeof ub ? ub : ub + ""
-      }(ub)) in bb ? Object.defineProperty(bb, ub, {
-        value: hb,
+          return ("string" === Jd ? String : Number)(dd)
+        }(dd, "string");
+        return "symbol" == typeof Jd ? Jd : Jd + ""
+      }(Jd)) in dd ? Object.defineProperty(dd, Jd, {
+        value: kd,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : bb[ub] = hb, bb
+      }) : dd[Jd] = kd, dd
     }
 
-    function Sb(bb, ub) {
-      var hb = Object.keys(bb);
+    function Cd(dd, Jd) {
+      var kd = Object.keys(dd);
       if (Object.getOwnPropertySymbols) {
-        var Bb = Object.getOwnPropertySymbols(bb);
-        ub && (Bb = Bb.filter((function(ub) {
-          return Object.getOwnPropertyDescriptor(bb, ub).enumerable
-        }))), hb.push.apply(hb, Bb)
+        var pd = Object.getOwnPropertySymbols(dd);
+        Jd && (pd = pd.filter((function(Jd) {
+          return Object.getOwnPropertyDescriptor(dd, Jd).enumerable
+        }))), kd.push.apply(kd, pd)
       }
-      return hb
+      return kd
     }
 
-    function ab(bb) {
-      for (var ub = 1; ub < arguments.length; ub++) {
-        var hb = null != arguments[ub] ? arguments[ub] : {};
-        ub % 2 ? Sb(Object(hb), !0).forEach((function(ub) {
-          Yb(bb, ub, hb[ub])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(bb, Object.getOwnPropertyDescriptors(hb)) : Sb(Object(hb)).forEach((function(ub) {
-          Object.defineProperty(bb, ub, Object.getOwnPropertyDescriptor(hb, ub))
+    function Kd(dd) {
+      for (var Jd = 1; Jd < arguments.length; Jd++) {
+        var kd = null != arguments[Jd] ? arguments[Jd] : {};
+        Jd % 2 ? Cd(Object(kd), !0).forEach((function(Jd) {
+          gd(dd, Jd, kd[Jd])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(dd, Object.getOwnPropertyDescriptors(kd)) : Cd(Object(kd)).forEach((function(Jd) {
+          Object.defineProperty(dd, Jd, Object.getOwnPropertyDescriptor(kd, Jd))
         }))
       }
-      return bb
+      return dd
     }
 
-    function Hb(bb, ub) {
-      return function(bb) {
-        if (Array.isArray(bb)) return bb
-      }(bb) || function(bb, ub) {
-        var hb = null == bb ? null : "undefined" != typeof Symbol && bb[Symbol.iterator] || bb["@@iterator"];
-        if (null != hb) {
-          var Bb, Ob, Gb, Ub, Lb = [],
-            Yb = !0,
-            Sb = !1;
+    function od(dd, Jd) {
+      return function(dd) {
+        if (Array.isArray(dd)) return dd
+      }(dd) || function(dd, Jd) {
+        var kd = null == dd ? null : "undefined" != typeof Symbol && dd[Symbol.iterator] || dd["@@iterator"];
+        if (null != kd) {
+          var pd, Nd, Wd, Pd, Zd = [],
+            gd = !0,
+            Cd = !1;
           try {
-            if (Gb = (hb = hb.call(bb)).next, 0 === ub) {
-              if (Object(hb) !== hb) return;
-              Yb = !1
+            if (Wd = (kd = kd.call(dd)).next, 0 === Jd) {
+              if (Object(kd) !== kd) return;
+              gd = !1
             } else
-              for (; !(Yb = (Bb = Gb.call(hb)).done) && (Lb.push(Bb.value), Lb.length !== ub); Yb = !0);
-          } catch (bb) {
-            Sb = !0, Ob = bb
+              for (; !(gd = (pd = Wd.call(kd)).done) && (Zd.push(pd.value), Zd.length !== Jd); gd = !0);
+          } catch (dd) {
+            Cd = !0, Nd = dd
           } finally {
             try {
-              if (!Yb && null != hb.return && (Ub = hb.return(), Object(Ub) !== Ub)) return
+              if (!gd && null != kd.return && (Pd = kd.return(), Object(Pd) !== Pd)) return
             } finally {
-              if (Sb) throw Ob
+              if (Cd) throw Nd
             }
           }
-          return Lb
+          return Zd
         }
-      }(bb, ub) || Xb(bb, ub) || function() {
+      }(dd, Jd) || Ld(dd, Jd) || function() {
         throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function wb(bb) {
-      return function(bb) {
-        if (Array.isArray(bb)) return Lb(bb)
-      }(bb) || function(bb) {
-        if ("undefined" != typeof Symbol && null != bb[Symbol.iterator] || null != bb["@@iterator"]) return Array.from(bb)
-      }(bb) || Xb(bb) || function() {
+    function ld(dd) {
+      return function(dd) {
+        if (Array.isArray(dd)) return Zd(dd)
+      }(dd) || function(dd) {
+        if ("undefined" != typeof Symbol && null != dd[Symbol.iterator] || null != dd["@@iterator"]) return Array.from(dd)
+      }(dd) || Ld(dd) || function() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function Zb(bb) {
-      return Zb = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
-        return typeof bb
-      } : function(bb) {
-        return bb && "function" == typeof Symbol && bb.constructor === Symbol && bb !== Symbol.prototype ? "symbol" : typeof bb
-      }, Zb(bb)
+    function Qd(dd) {
+      return Qd = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
+        return typeof dd
+      } : function(dd) {
+        return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
+      }, Qd(dd)
     }
 
-    function Xb(bb, ub) {
-      if (bb) {
-        if ("string" == typeof bb) return Lb(bb, ub);
-        var hb = {}.toString.call(bb).slice(8, -1);
-        return "Object" === hb && bb.constructor && (hb = bb.constructor.name), "Map" === hb || "Set" === hb ? Array.from(bb) : "Arguments" === hb || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(hb) ? Lb(bb, ub) : void 0
+    function Ld(dd, Jd) {
+      if (dd) {
+        if ("string" == typeof dd) return Zd(dd, Jd);
+        var kd = {}.toString.call(dd).slice(8, -1);
+        return "Object" === kd && dd.constructor && (kd = dd.constructor.name), "Map" === kd || "Set" === kd ? Array.from(dd) : "Arguments" === kd || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(kd) ? Zd(dd, Jd) : void 0
       }
     }
-    var pb;
+    var Od;
     try {
-      var ob = hb(6426);
-      pb = ob.version
-    } catch (Db) {
-      pb = "undefined" !== typeof process && {
+      var ed = kd(6567);
+      Od = ed.version
+    } catch (Md) {
+      Od = "undefined" !== typeof process && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -133,95 +133,95 @@ export const modules = {
       }.FA_VERSION || "7.0.0"
     }
 
-    function Ab(bb) {
-      var ub = bb.beat,
-        hb = bb.fade,
-        Bb = bb.beatFade,
-        Ob = bb.bounce,
-        Gb = bb.shake,
-        Ub = bb.flash,
-        Lb = bb.spin,
-        Sb = bb.spinPulse,
-        ab = bb.spinReverse,
-        wb = bb.pulse,
-        Zb = bb.fixedWidth,
-        Xb = bb.inverse,
-        ob = bb.border,
-        Ab = bb.listItem,
-        lb = bb.flip,
-        Kb = bb.size,
-        Wb = bb.rotation,
-        Cb = bb.pull,
-        db = bb.swapOpacity,
-        rb = bb.rotateBy,
-        jb = bb.widthAuto,
-        nb = function(bb, ub) {
-          for (var hb = Hb(bb.split("-"), 2), Bb = hb[0], Ob = hb[1], Gb = Hb(ub.split("-"), 2), Ub = Gb[0], Lb = Gb[1], Yb = Bb.split("."), Sb = Ub.split("."), ab = 0; ab < Math.max(Yb.length, Sb.length); ab++) {
-            var wb = Yb[ab] || "0",
-              Zb = Sb[ab] || "0",
-              Xb = parseInt(wb, 10),
-              pb = parseInt(Zb, 10);
-            if (Xb !== pb) return Xb > pb
+    function Rd(dd) {
+      var Jd = dd.beat,
+        kd = dd.fade,
+        pd = dd.beatFade,
+        Nd = dd.bounce,
+        Wd = dd.shake,
+        Pd = dd.flash,
+        Zd = dd.spin,
+        Cd = dd.spinPulse,
+        Kd = dd.spinReverse,
+        ld = dd.pulse,
+        Qd = dd.fixedWidth,
+        Ld = dd.inverse,
+        ed = dd.border,
+        Rd = dd.listItem,
+        Id = dd.flip,
+        Gd = dd.size,
+        vd = dd.rotation,
+        xd = dd.pull,
+        qd = dd.swapOpacity,
+        Bd = dd.rotateBy,
+        sd = dd.widthAuto,
+        ad = function(dd, Jd) {
+          for (var kd = od(dd.split("-"), 2), pd = kd[0], Nd = kd[1], Wd = od(Jd.split("-"), 2), Pd = Wd[0], Zd = Wd[1], gd = pd.split("."), Cd = Pd.split("."), Kd = 0; Kd < Math.max(gd.length, Cd.length); Kd++) {
+            var ld = gd[Kd] || "0",
+              Qd = Cd[Kd] || "0",
+              Ld = parseInt(ld, 10),
+              Od = parseInt(Qd, 10);
+            if (Ld !== Od) return Ld > Od
           }
-          for (var ob = 0; ob < Math.max(Yb.length, Sb.length); ob++) {
-            var Ab = Yb[ob] || "0",
-              lb = Sb[ob] || "0";
-            if (Ab !== lb && Ab.length !== lb.length) return Ab.length < lb.length
+          for (var ed = 0; ed < Math.max(gd.length, Cd.length); ed++) {
+            var Rd = gd[ed] || "0",
+              Id = Cd[ed] || "0";
+            if (Rd !== Id && Rd.length !== Id.length) return Rd.length < Id.length
           }
-          return !(Ob && !Lb)
-        }(pb, "7.0.0"),
-        Db = Yb(Yb(Yb(Yb(Yb(Yb({
-          "fa-beat": ub,
-          "fa-fade": hb,
-          "fa-beat-fade": Bb,
-          "fa-bounce": Ob,
-          "fa-shake": Gb,
-          "fa-flash": Ub,
-          "fa-spin": Lb,
-          "fa-spin-reverse": ab,
-          "fa-spin-pulse": Sb,
-          "fa-pulse": wb,
-          "fa-fw": Zb,
-          "fa-inverse": Xb,
-          "fa-border": ob,
-          "fa-li": Ab,
-          "fa-flip": !0 === lb,
-          "fa-flip-horizontal": "horizontal" === lb || "both" === lb,
-          "fa-flip-vertical": "vertical" === lb || "both" === lb
-        }, "fa-".concat(Kb), "undefined" !== typeof Kb && null !== Kb), "fa-rotate-".concat(Wb), "undefined" !== typeof Wb && null !== Wb && 0 !== Wb), "fa-pull-".concat(Cb), "undefined" !== typeof Cb && null !== Cb), "fa-swap-opacity", db), "fa-rotate-by", nb && rb), "fa-width-auto", nb && jb);
-      return Object.keys(Db).map((function(bb) {
-        return Db[bb] ? bb : null
-      })).filter((function(bb) {
-        return bb
+          return !(Nd && !Zd)
+        }(Od, "7.0.0"),
+        Md = gd(gd(gd(gd(gd(gd({
+          "fa-beat": Jd,
+          "fa-fade": kd,
+          "fa-beat-fade": pd,
+          "fa-bounce": Nd,
+          "fa-shake": Wd,
+          "fa-flash": Pd,
+          "fa-spin": Zd,
+          "fa-spin-reverse": Kd,
+          "fa-spin-pulse": Cd,
+          "fa-pulse": ld,
+          "fa-fw": Qd,
+          "fa-inverse": Ld,
+          "fa-border": ed,
+          "fa-li": Rd,
+          "fa-flip": !0 === Id,
+          "fa-flip-horizontal": "horizontal" === Id || "both" === Id,
+          "fa-flip-vertical": "vertical" === Id || "both" === Id
+        }, "fa-".concat(Gd), "undefined" !== typeof Gd && null !== Gd), "fa-rotate-".concat(vd), "undefined" !== typeof vd && null !== vd && 0 !== vd), "fa-pull-".concat(xd), "undefined" !== typeof xd && null !== xd), "fa-swap-opacity", qd), "fa-rotate-by", ad && Bd), "fa-width-auto", ad && sd);
+      return Object.keys(Md).map((function(dd) {
+        return Md[dd] ? dd : null
+      })).filter((function(dd) {
+        return dd
       }))
     }
 
-    function lb(bb) {
-      return ub = bb, (ub -= 0) === ub ? bb : (bb = bb.replace(/[\-_\s]+(.)?/g, (function(bb, ub) {
-        return ub ? ub.toUpperCase() : ""
-      }))).substr(0, 1).toLowerCase() + bb.substr(1);
-      var ub
+    function Id(dd) {
+      return Jd = dd, (Jd -= 0) === Jd ? dd : (dd = dd.replace(/[\-_\s]+(.)?/g, (function(dd, Jd) {
+        return Jd ? Jd.toUpperCase() : ""
+      }))).substr(0, 1).toLowerCase() + dd.substr(1);
+      var Jd
     }
-    var Kb = ["style"];
-    var Wb = !1;
+    var Gd = ["style"];
+    var vd = !1;
     try {
-      Wb = !0
-    } catch (Db) {}
+      vd = !0
+    } catch (Md) {}
 
-    function Cb(bb) {
-      return bb && "object" === Zb(bb) && bb.prefix && bb.iconName && bb.icon ? bb : Bb.parse.icon ? Bb.parse.icon(bb) : null === bb ? null : bb && "object" === Zb(bb) && bb.prefix && bb.iconName ? bb : Array.isArray(bb) && 2 === bb.length ? {
-        prefix: bb[0],
-        iconName: bb[1]
-      } : "string" === typeof bb ? {
+    function xd(dd) {
+      return dd && "object" === Qd(dd) && dd.prefix && dd.iconName && dd.icon ? dd : pd.parse.icon ? pd.parse.icon(dd) : null === dd ? null : dd && "object" === Qd(dd) && dd.prefix && dd.iconName ? dd : Array.isArray(dd) && 2 === dd.length ? {
+        prefix: dd[0],
+        iconName: dd[1]
+      } : "string" === typeof dd ? {
         prefix: "fas",
-        iconName: bb
+        iconName: dd
       } : void 0
     }
 
-    function db(bb, ub) {
-      return Array.isArray(ub) && ub.length > 0 || !Array.isArray(ub) && ub ? Yb({}, bb, ub) : {}
+    function qd(dd, Jd) {
+      return Array.isArray(Jd) && Jd.length > 0 || !Array.isArray(Jd) && Jd ? gd({}, dd, Jd) : {}
     }
-    var rb = {
+    var Bd = {
         border: !1,
         className: "",
         mask: null,
@@ -251,369 +251,369 @@ export const modules = {
         swapOpacity: !1,
         widthAuto: !1
       },
-      jb = Ub.forwardRef((function(bb, ub) {
-        var hb = ab(ab({}, rb), bb),
-          Ob = hb.icon,
-          Gb = hb.mask,
-          Ub = hb.symbol,
-          Lb = hb.className,
-          Yb = hb.title,
-          Sb = hb.titleId,
-          Hb = hb.maskId,
-          Zb = Cb(Ob),
-          Xb = db("classes", [].concat(wb(Ab(hb)), wb((Lb || "").split(" ")))),
-          pb = db("transform", "string" === typeof hb.transform ? Bb.parse.transform(hb.transform) : hb.transform),
-          ob = db("mask", Cb(Gb)),
-          lb = (0, Bb.icon)(Zb, ab(ab(ab(ab({}, Xb), pb), ob), {}, {
-            symbol: Ub,
-            title: Yb,
-            titleId: Sb,
-            maskId: Hb
+      sd = Pd.forwardRef((function(dd, Jd) {
+        var kd = Kd(Kd({}, Bd), dd),
+          Nd = kd.icon,
+          Wd = kd.mask,
+          Pd = kd.symbol,
+          Zd = kd.className,
+          gd = kd.title,
+          Cd = kd.titleId,
+          od = kd.maskId,
+          Qd = xd(Nd),
+          Ld = qd("classes", [].concat(ld(Rd(kd)), ld((Zd || "").split(" ")))),
+          Od = qd("transform", "string" === typeof kd.transform ? pd.parse.transform(kd.transform) : kd.transform),
+          ed = qd("mask", xd(Wd)),
+          Id = (0, pd.icon)(Qd, Kd(Kd(Kd(Kd({}, Ld), Od), ed), {}, {
+            symbol: Pd,
+            title: gd,
+            titleId: Cd,
+            maskId: od
           }));
-        if (!lb) return function() {
-          var bb;
-          !Wb && console && "function" === typeof console.error && (bb = console).error.apply(bb, arguments)
-        }("Could not find icon", Zb), null;
-        var Kb = lb.abstract,
-          jb = {
-            ref: ub
+        if (!Id) return function() {
+          var dd;
+          !vd && console && "function" === typeof console.error && (dd = console).error.apply(dd, arguments)
+        }("Could not find icon", Qd), null;
+        var Gd = Id.abstract,
+          sd = {
+            ref: Jd
           };
-        return Object.keys(hb).forEach((function(bb) {
-          rb.hasOwnProperty(bb) || (jb[bb] = hb[bb])
-        })), nb(Kb[0], jb)
+        return Object.keys(kd).forEach((function(dd) {
+          Bd.hasOwnProperty(dd) || (sd[dd] = kd[dd])
+        })), ad(Gd[0], sd)
       }));
-    jb.displayName = "FontAwesomeIcon", jb.propTypes = {
-      beat: Gb().bool,
-      border: Gb().bool,
-      beatFade: Gb().bool,
-      bounce: Gb().bool,
-      className: Gb().string,
-      fade: Gb().bool,
-      flash: Gb().bool,
-      mask: Gb().oneOfType([Gb().object, Gb().array, Gb().string]),
-      maskId: Gb().string,
-      fixedWidth: Gb().bool,
-      inverse: Gb().bool,
-      flip: Gb().oneOf([!0, !1, "horizontal", "vertical", "both"]),
-      icon: Gb().oneOfType([Gb().object, Gb().array, Gb().string]),
-      listItem: Gb().bool,
-      pull: Gb().oneOf(["right", "left"]),
-      pulse: Gb().bool,
-      rotation: Gb().oneOf([0, 90, 180, 270]),
-      rotateBy: Gb().bool,
-      shake: Gb().bool,
-      size: Gb().oneOf(["2xs", "xs", "sm", "lg", "xl", "2xl", "1x", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"]),
-      spin: Gb().bool,
-      spinPulse: Gb().bool,
-      spinReverse: Gb().bool,
-      symbol: Gb().oneOfType([Gb().bool, Gb().string]),
-      title: Gb().string,
-      titleId: Gb().string,
-      transform: Gb().oneOfType([Gb().string, Gb().object]),
-      swapOpacity: Gb().bool,
-      widthAuto: Gb().bool
+    sd.displayName = "FontAwesomeIcon", sd.propTypes = {
+      beat: Wd().bool,
+      border: Wd().bool,
+      beatFade: Wd().bool,
+      bounce: Wd().bool,
+      className: Wd().string,
+      fade: Wd().bool,
+      flash: Wd().bool,
+      mask: Wd().oneOfType([Wd().object, Wd().array, Wd().string]),
+      maskId: Wd().string,
+      fixedWidth: Wd().bool,
+      inverse: Wd().bool,
+      flip: Wd().oneOf([!0, !1, "horizontal", "vertical", "both"]),
+      icon: Wd().oneOfType([Wd().object, Wd().array, Wd().string]),
+      listItem: Wd().bool,
+      pull: Wd().oneOf(["right", "left"]),
+      pulse: Wd().bool,
+      rotation: Wd().oneOf([0, 90, 180, 270]),
+      rotateBy: Wd().bool,
+      shake: Wd().bool,
+      size: Wd().oneOf(["2xs", "xs", "sm", "lg", "xl", "2xl", "1x", "2x", "3x", "4x", "5x", "6x", "7x", "8x", "9x", "10x"]),
+      spin: Wd().bool,
+      spinPulse: Wd().bool,
+      spinReverse: Wd().bool,
+      symbol: Wd().oneOfType([Wd().bool, Wd().string]),
+      title: Wd().string,
+      titleId: Wd().string,
+      transform: Wd().oneOfType([Wd().string, Wd().object]),
+      swapOpacity: Wd().bool,
+      widthAuto: Wd().bool
     };
-    var nb = function bb(ub, hb) {
-      var Bb = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      if ("string" === typeof hb) return hb;
-      var Ob = (hb.children || []).map((function(hb) {
-          return bb(ub, hb)
+    var ad = function dd(Jd, kd) {
+      var pd = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      if ("string" === typeof kd) return kd;
+      var Nd = (kd.children || []).map((function(kd) {
+          return dd(Jd, kd)
         })),
-        Gb = Object.keys(hb.attributes || {}).reduce((function(bb, ub) {
-          var Bb = hb.attributes[ub];
-          switch (ub) {
+        Wd = Object.keys(kd.attributes || {}).reduce((function(dd, Jd) {
+          var pd = kd.attributes[Jd];
+          switch (Jd) {
             case "class":
-              bb.attrs.className = Bb, delete hb.attributes.class;
+              dd.attrs.className = pd, delete kd.attributes.class;
               break;
             case "style":
-              bb.attrs.style = Bb.split(";").map((function(bb) {
-                return bb.trim()
-              })).filter((function(bb) {
-                return bb
-              })).reduce((function(bb, ub) {
-                var hb, Bb = ub.indexOf(":"),
-                  Ob = lb(ub.slice(0, Bb)),
-                  Gb = ub.slice(Bb + 1).trim();
-                return Ob.startsWith("webkit") ? bb[(hb = Ob, hb.charAt(0).toUpperCase() + hb.slice(1))] = Gb : bb[Ob] = Gb, bb
+              dd.attrs.style = pd.split(";").map((function(dd) {
+                return dd.trim()
+              })).filter((function(dd) {
+                return dd
+              })).reduce((function(dd, Jd) {
+                var kd, pd = Jd.indexOf(":"),
+                  Nd = Id(Jd.slice(0, pd)),
+                  Wd = Jd.slice(pd + 1).trim();
+                return Nd.startsWith("webkit") ? dd[(kd = Nd, kd.charAt(0).toUpperCase() + kd.slice(1))] = Wd : dd[Nd] = Wd, dd
               }), {});
               break;
             default:
-              0 === ub.indexOf("aria-") || 0 === ub.indexOf("data-") ? bb.attrs[ub.toLowerCase()] = Bb : bb.attrs[lb(ub)] = Bb
+              0 === Jd.indexOf("aria-") || 0 === Jd.indexOf("data-") ? dd.attrs[Jd.toLowerCase()] = pd : dd.attrs[Id(Jd)] = pd
           }
-          return bb
+          return dd
         }), {
           attrs: {}
         }),
-        Ub = Bb.style,
-        Lb = void 0 === Ub ? {} : Ub,
-        Yb = function(bb, ub) {
-          if (null == bb) return {};
-          var hb, Bb, Ob = function(bb, ub) {
-            if (null == bb) return {};
-            var hb = {};
-            for (var Bb in bb)
-              if ({}.hasOwnProperty.call(bb, Bb)) {
-                if (-1 !== ub.indexOf(Bb)) continue;
-                hb[Bb] = bb[Bb]
-              } return hb
-          }(bb, ub);
+        Pd = pd.style,
+        Zd = void 0 === Pd ? {} : Pd,
+        gd = function(dd, Jd) {
+          if (null == dd) return {};
+          var kd, pd, Nd = function(dd, Jd) {
+            if (null == dd) return {};
+            var kd = {};
+            for (var pd in dd)
+              if ({}.hasOwnProperty.call(dd, pd)) {
+                if (-1 !== Jd.indexOf(pd)) continue;
+                kd[pd] = dd[pd]
+              } return kd
+          }(dd, Jd);
           if (Object.getOwnPropertySymbols) {
-            var Gb = Object.getOwnPropertySymbols(bb);
-            for (Bb = 0; Bb < Gb.length; Bb++) hb = Gb[Bb], -1 === ub.indexOf(hb) && {}.propertyIsEnumerable.call(bb, hb) && (Ob[hb] = bb[hb])
+            var Wd = Object.getOwnPropertySymbols(dd);
+            for (pd = 0; pd < Wd.length; pd++) kd = Wd[pd], -1 === Jd.indexOf(kd) && {}.propertyIsEnumerable.call(dd, kd) && (Nd[kd] = dd[kd])
           }
-          return Ob
-        }(Bb, Kb);
-      return Gb.attrs.style = ab(ab({}, Gb.attrs.style), Lb), ub.apply(void 0, [hb.tag, ab(ab({}, Gb.attrs), Yb)].concat(wb(Ob)))
-    }.bind(null, Ub.createElement)
+          return Nd
+        }(pd, Gd);
+      return Wd.attrs.style = Kd(Kd({}, Wd.attrs.style), Zd), Jd.apply(void 0, [kd.tag, Kd(Kd({}, Wd.attrs), gd)].concat(ld(Nd)))
+    }.bind(null, Pd.createElement)
   },
-  4733: (bb, ub, hb) => {
-    var Bb = hb(4740);
+  4854: (dd, Jd, kd) => {
+    var pd = kd(4856);
 
-    function Ob() {}
+    function Nd() {}
 
-    function Gb() {}
-    Gb.resetWarningCache = Ob, bb.exports = function() {
-      function bb(bb, ub, hb, Ob, Gb, Ub) {
-        if (Ub !== Bb) {
-          var Lb = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
-          throw Lb.name = "Invariant Violation", Lb
+    function Wd() {}
+    Wd.resetWarningCache = Nd, dd.exports = function() {
+      function dd(dd, Jd, kd, Nd, Wd, Pd) {
+        if (Pd !== pd) {
+          var Zd = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw Zd.name = "Invariant Violation", Zd
         }
       }
 
-      function ub() {
-        return bb
+      function Jd() {
+        return dd
       }
-      bb.isRequired = bb;
-      var hb = {
-        array: bb,
-        bigint: bb,
-        bool: bb,
-        func: bb,
-        number: bb,
-        object: bb,
-        string: bb,
-        symbol: bb,
-        any: bb,
-        arrayOf: ub,
-        element: bb,
-        elementType: bb,
-        instanceOf: ub,
-        node: bb,
-        objectOf: ub,
-        oneOf: ub,
-        oneOfType: ub,
-        shape: ub,
-        exact: ub,
-        checkPropTypes: Gb,
-        resetWarningCache: Ob
+      dd.isRequired = dd;
+      var kd = {
+        array: dd,
+        bigint: dd,
+        bool: dd,
+        func: dd,
+        number: dd,
+        object: dd,
+        string: dd,
+        symbol: dd,
+        any: dd,
+        arrayOf: Jd,
+        element: dd,
+        elementType: dd,
+        instanceOf: Jd,
+        node: dd,
+        objectOf: Jd,
+        oneOf: Jd,
+        oneOfType: Jd,
+        shape: Jd,
+        exact: Jd,
+        checkPropTypes: Wd,
+        resetWarningCache: Nd
       };
-      return hb.PropTypes = hb, hb
+      return kd.PropTypes = kd, kd
     }
   },
-  4729: (bb, ub, hb) => {
-    bb.exports = hb(4733)()
+  4845: (dd, Jd, kd) => {
+    dd.exports = kd(4854)()
   },
-  4740: bb => {
-    bb.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  4856: dd => {
+    dd.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
   },
-  6412: (bb, ub, hb) => {
-    function Bb(bb, ub) {
-      (null == ub || ub > bb.length) && (ub = bb.length);
-      for (var hb = 0, Bb = Array(ub); hb < ub; hb++) Bb[hb] = bb[hb];
-      return Bb
+  6551: (dd, Jd, kd) => {
+    function pd(dd, Jd) {
+      (null == Jd || Jd > dd.length) && (Jd = dd.length);
+      for (var kd = 0, pd = Array(Jd); kd < Jd; kd++) pd[kd] = dd[kd];
+      return pd
     }
 
-    function Ob(bb, ub) {
-      for (var hb = 0; hb < ub.length; hb++) {
-        var Bb = ub[hb];
-        Bb.enumerable = Bb.enumerable || !1, Bb.configurable = !0, "value" in Bb && (Bb.writable = !0), Object.defineProperty(bb, Hb(Bb.key), Bb)
+    function Nd(dd, Jd) {
+      for (var kd = 0; kd < Jd.length; kd++) {
+        var pd = Jd[kd];
+        pd.enumerable = pd.enumerable || !1, pd.configurable = !0, "value" in pd && (pd.writable = !0), Object.defineProperty(dd, od(pd.key), pd)
       }
     }
 
-    function Gb(bb, ub) {
-      var hb = "undefined" != typeof Symbol && bb[Symbol.iterator] || bb["@@iterator"];
-      if (!hb) {
-        if (Array.isArray(bb) || (hb = Zb(bb)) || ub && bb && "number" == typeof bb.length) {
-          hb && (bb = hb);
-          var Bb = 0,
-            Ob = function() {};
+    function Wd(dd, Jd) {
+      var kd = "undefined" != typeof Symbol && dd[Symbol.iterator] || dd["@@iterator"];
+      if (!kd) {
+        if (Array.isArray(dd) || (kd = Qd(dd)) || Jd && dd && "number" == typeof dd.length) {
+          kd && (dd = kd);
+          var pd = 0,
+            Nd = function() {};
           return {
-            s: Ob,
+            s: Nd,
             n: function() {
-              return Bb >= bb.length ? {
+              return pd >= dd.length ? {
                 done: !0
               } : {
                 done: !1,
-                value: bb[Bb++]
+                value: dd[pd++]
               }
             },
-            e: function(bb) {
-              throw bb
+            e: function(dd) {
+              throw dd
             },
-            f: Ob
+            f: Nd
           }
         }
         throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }
-      var Gb, Ub = !0,
-        Lb = !1;
+      var Wd, Pd = !0,
+        Zd = !1;
       return {
         s: function() {
-          hb = hb.call(bb)
+          kd = kd.call(dd)
         },
         n: function() {
-          var bb = hb.next();
-          return Ub = bb.done, bb
+          var dd = kd.next();
+          return Pd = dd.done, dd
         },
-        e: function(bb) {
-          Lb = !0, Gb = bb
+        e: function(dd) {
+          Zd = !0, Wd = dd
         },
         f: function() {
           try {
-            Ub || null == hb.return || hb.return()
+            Pd || null == kd.return || kd.return()
           } finally {
-            if (Lb) throw Gb
+            if (Zd) throw Wd
           }
         }
       }
     }
 
-    function Ub(bb, ub, hb) {
-      return (ub = Hb(ub)) in bb ? Object.defineProperty(bb, ub, {
-        value: hb,
+    function Pd(dd, Jd, kd) {
+      return (Jd = od(Jd)) in dd ? Object.defineProperty(dd, Jd, {
+        value: kd,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : bb[ub] = hb, bb
+      }) : dd[Jd] = kd, dd
     }
 
-    function Lb(bb, ub) {
-      var hb = Object.keys(bb);
+    function Zd(dd, Jd) {
+      var kd = Object.keys(dd);
       if (Object.getOwnPropertySymbols) {
-        var Bb = Object.getOwnPropertySymbols(bb);
-        ub && (Bb = Bb.filter((function(ub) {
-          return Object.getOwnPropertyDescriptor(bb, ub).enumerable
-        }))), hb.push.apply(hb, Bb)
+        var pd = Object.getOwnPropertySymbols(dd);
+        Jd && (pd = pd.filter((function(Jd) {
+          return Object.getOwnPropertyDescriptor(dd, Jd).enumerable
+        }))), kd.push.apply(kd, pd)
       }
-      return hb
+      return kd
     }
 
-    function Yb(bb) {
-      for (var ub = 1; ub < arguments.length; ub++) {
-        var hb = null != arguments[ub] ? arguments[ub] : {};
-        ub % 2 ? Lb(Object(hb), !0).forEach((function(ub) {
-          Ub(bb, ub, hb[ub])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(bb, Object.getOwnPropertyDescriptors(hb)) : Lb(Object(hb)).forEach((function(ub) {
-          Object.defineProperty(bb, ub, Object.getOwnPropertyDescriptor(hb, ub))
+    function gd(dd) {
+      for (var Jd = 1; Jd < arguments.length; Jd++) {
+        var kd = null != arguments[Jd] ? arguments[Jd] : {};
+        Jd % 2 ? Zd(Object(kd), !0).forEach((function(Jd) {
+          Pd(dd, Jd, kd[Jd])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(dd, Object.getOwnPropertyDescriptors(kd)) : Zd(Object(kd)).forEach((function(Jd) {
+          Object.defineProperty(dd, Jd, Object.getOwnPropertyDescriptor(kd, Jd))
         }))
       }
-      return bb
+      return dd
     }
 
-    function Sb(bb, ub) {
-      return function(bb) {
-        if (Array.isArray(bb)) return bb
-      }(bb) || function(bb, ub) {
-        var hb = null == bb ? null : "undefined" != typeof Symbol && bb[Symbol.iterator] || bb["@@iterator"];
-        if (null != hb) {
-          var Bb, Ob, Gb, Ub, Lb = [],
-            Yb = !0,
-            Sb = !1;
+    function Cd(dd, Jd) {
+      return function(dd) {
+        if (Array.isArray(dd)) return dd
+      }(dd) || function(dd, Jd) {
+        var kd = null == dd ? null : "undefined" != typeof Symbol && dd[Symbol.iterator] || dd["@@iterator"];
+        if (null != kd) {
+          var pd, Nd, Wd, Pd, Zd = [],
+            gd = !0,
+            Cd = !1;
           try {
-            if (Gb = (hb = hb.call(bb)).next, 0 === ub) {
-              if (Object(hb) !== hb) return;
-              Yb = !1
+            if (Wd = (kd = kd.call(dd)).next, 0 === Jd) {
+              if (Object(kd) !== kd) return;
+              gd = !1
             } else
-              for (; !(Yb = (Bb = Gb.call(hb)).done) && (Lb.push(Bb.value), Lb.length !== ub); Yb = !0);
-          } catch (bb) {
-            Sb = !0, Ob = bb
+              for (; !(gd = (pd = Wd.call(kd)).done) && (Zd.push(pd.value), Zd.length !== Jd); gd = !0);
+          } catch (dd) {
+            Cd = !0, Nd = dd
           } finally {
             try {
-              if (!Yb && null != hb.return && (Ub = hb.return(), Object(Ub) !== Ub)) return
+              if (!gd && null != kd.return && (Pd = kd.return(), Object(Pd) !== Pd)) return
             } finally {
-              if (Sb) throw Ob
+              if (Cd) throw Nd
             }
           }
-          return Lb
+          return Zd
         }
-      }(bb, ub) || Zb(bb, ub) || function() {
+      }(dd, Jd) || Qd(dd, Jd) || function() {
         throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function ab(bb) {
-      return function(bb) {
-        if (Array.isArray(bb)) return Bb(bb)
-      }(bb) || function(bb) {
-        if ("undefined" != typeof Symbol && null != bb[Symbol.iterator] || null != bb["@@iterator"]) return Array.from(bb)
-      }(bb) || Zb(bb) || function() {
+    function Kd(dd) {
+      return function(dd) {
+        if (Array.isArray(dd)) return pd(dd)
+      }(dd) || function(dd) {
+        if ("undefined" != typeof Symbol && null != dd[Symbol.iterator] || null != dd["@@iterator"]) return Array.from(dd)
+      }(dd) || Qd(dd) || function() {
         throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()
     }
 
-    function Hb(bb) {
-      var ub = function(bb, ub) {
-        if ("object" != typeof bb || !bb) return bb;
-        var hb = bb[Symbol.toPrimitive];
-        if (void 0 !== hb) {
-          var Bb = hb.call(bb, ub || "default");
-          if ("object" != typeof Bb) return Bb;
+    function od(dd) {
+      var Jd = function(dd, Jd) {
+        if ("object" != typeof dd || !dd) return dd;
+        var kd = dd[Symbol.toPrimitive];
+        if (void 0 !== kd) {
+          var pd = kd.call(dd, Jd || "default");
+          if ("object" != typeof pd) return pd;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === ub ? String : Number)(bb)
-      }(bb, "string");
-      return "symbol" == typeof ub ? ub : ub + ""
+        return ("string" === Jd ? String : Number)(dd)
+      }(dd, "string");
+      return "symbol" == typeof Jd ? Jd : Jd + ""
     }
 
-    function wb(bb) {
-      return wb = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(bb) {
-        return typeof bb
-      } : function(bb) {
-        return bb && "function" == typeof Symbol && bb.constructor === Symbol && bb !== Symbol.prototype ? "symbol" : typeof bb
-      }, wb(bb)
+    function ld(dd) {
+      return ld = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(dd) {
+        return typeof dd
+      } : function(dd) {
+        return dd && "function" == typeof Symbol && dd.constructor === Symbol && dd !== Symbol.prototype ? "symbol" : typeof dd
+      }, ld(dd)
     }
 
-    function Zb(bb, ub) {
-      if (bb) {
-        if ("string" == typeof bb) return Bb(bb, ub);
-        var hb = {}.toString.call(bb).slice(8, -1);
-        return "Object" === hb && bb.constructor && (hb = bb.constructor.name), "Map" === hb || "Set" === hb ? Array.from(bb) : "Arguments" === hb || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(hb) ? Bb(bb, ub) : void 0
+    function Qd(dd, Jd) {
+      if (dd) {
+        if ("string" == typeof dd) return pd(dd, Jd);
+        var kd = {}.toString.call(dd).slice(8, -1);
+        return "Object" === kd && dd.constructor && (kd = dd.constructor.name), "Map" === kd || "Set" === kd ? Array.from(dd) : "Arguments" === kd || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(kd) ? pd(dd, Jd) : void 0
       }
     }
-    hb.r(ub), hb.d(ub, {
-      api: () => Th,
-      config: () => hO,
-      counter: () => HO,
-      dom: () => OO,
-      findIconDefinition: () => UO,
-      icon: () => YO,
-      layer: () => SO,
-      library: () => BO,
-      noAuto: () => uO,
-      parse: () => GO,
-      text: () => aO,
-      toHtml: () => LO
+    kd.r(Jd), kd.d(Jd, {
+      api: () => wk,
+      config: () => WN,
+      counter: () => LN,
+      dom: () => ZN,
+      findIconDefinition: () => CN,
+      icon: () => oN,
+      layer: () => lN,
+      library: () => PN,
+      noAuto: () => NN,
+      parse: () => gN,
+      text: () => QN,
+      toHtml: () => KN
     });
-    var Xb = function() {},
-      pb = {},
-      ob = {},
-      Ab = null,
-      lb = {
-        mark: Xb,
-        measure: Xb
+    var Ld = function() {},
+      Od = {},
+      ed = {},
+      Rd = null,
+      Id = {
+        mark: Ld,
+        measure: Ld
       };
     try {
-      "undefined" !== typeof window && (pb = window), "undefined" !== typeof document && (ob = document), "undefined" !== typeof MutationObserver && (Ab = MutationObserver), "undefined" !== typeof performance && (lb = performance)
-    } catch (Eb) {}
-    var Kb, Wb, Cb = (pb.navigator || {}).userAgent,
-      db = void 0 === Cb ? "" : Cb,
-      rb = pb,
-      jb = ob,
-      nb = Ab,
-      Db = lb,
-      xb = (rb.document, !!jb.documentElement && !!jb.head && "function" === typeof jb.addEventListener && "function" === typeof jb.createElement),
-      zb = ~db.indexOf("MSIE") || ~db.indexOf("Trident/"),
-      gb = {
+      "undefined" !== typeof window && (Od = window), "undefined" !== typeof document && (ed = document), "undefined" !== typeof MutationObserver && (Rd = MutationObserver), "undefined" !== typeof performance && (Id = performance)
+    } catch (hd) {}
+    var Gd, vd, xd = (Od.navigator || {}).userAgent,
+      qd = void 0 === xd ? "" : xd,
+      Bd = Od,
+      sd = ed,
+      ad = Rd,
+      Md = Id,
+      Fd = (Bd.document, !!sd.documentElement && !!sd.head && "function" === typeof sd.addEventListener && "function" === typeof sd.createElement),
+      Yd = ~qd.indexOf("MSIE") || ~qd.indexOf("Trident/"),
+      md = {
         classic: {
           fa: "solid",
           fas: "solid",
@@ -722,28 +722,28 @@ export const modules = {
           faufsb: "semibold"
         }
       },
-      ib = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"],
-      vb = "classic",
-      tb = "duotone",
-      Jb = "sharp",
-      eb = "sharp-duotone",
-      Nb = "chisel",
-      sb = "etch",
-      Mb = "graphite",
-      mb = "jelly",
-      Ib = "jelly-duo",
-      Pb = "jelly-fill",
-      qb = "notdog",
-      Eb = "notdog-duo",
-      yb = "slab",
-      Vb = "slab-press",
-      Fb = "thumbprint",
-      fb = "utility",
-      kb = "utility-duo",
-      Tb = "utility-fill",
-      cb = "whiteboard",
-      Qb = [vb, tb, Jb, eb, Nb, sb, Mb, mb, Ib, Pb, qb, Eb, yb, Vb, Fb, fb, kb, Tb, cb],
-      Rb = (Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Kb = {}, vb, "Classic"), tb, "Duotone"), Jb, "Sharp"), eb, "Sharp Duotone"), Nb, "Chisel"), sb, "Etch"), Mb, "Graphite"), mb, "Jelly"), Ib, "Jelly Duo"), Pb, "Jelly Fill"), Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Kb, qb, "Notdog"), Eb, "Notdog Duo"), yb, "Slab"), Vb, "Slab Press"), Fb, "Thumbprint"), fb, "Utility"), kb, "Utility Duo"), Tb, "Utility Fill"), cb, "Whiteboard"), new Map([
+      bd = ["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"],
+      Sd = "classic",
+      jd = "duotone",
+      Xd = "sharp",
+      fd = "sharp-duotone",
+      nd = "chisel",
+      Ud = "etch",
+      yd = "graphite",
+      Dd = "jelly",
+      Td = "jelly-duo",
+      Ed = "jelly-fill",
+      cd = "notdog",
+      hd = "notdog-duo",
+      rd = "slab",
+      ud = "slab-press",
+      td = "thumbprint",
+      Vd = "utility",
+      zd = "utility-duo",
+      Hd = "utility-fill",
+      wd = "whiteboard",
+      Ad = [Sd, jd, Xd, fd, nd, Ud, yd, Dd, Td, Ed, cd, hd, rd, ud, td, Vd, zd, Hd, wd],
+      dJ = (Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(Gd = {}, Sd, "Classic"), jd, "Duotone"), Xd, "Sharp"), fd, "Sharp Duotone"), nd, "Chisel"), Ud, "Etch"), yd, "Graphite"), Dd, "Jelly"), Td, "Jelly Duo"), Ed, "Jelly Fill"), Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(Gd, cd, "Notdog"), hd, "Notdog Duo"), rd, "Slab"), ud, "Slab Press"), td, "Thumbprint"), Vd, "Utility"), zd, "Utility Duo"), Hd, "Utility Fill"), wd, "Whiteboard"), new Map([
         ["classic", {
           defaultShortPrefixId: "fas",
           defaultStyleId: "solid",
@@ -878,26 +878,26 @@ export const modules = {
           defaultFontWeight: 600
         }]
       ])),
-      bu = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
-      uu = {
+      JJ = ["fak", "fa-kit", "fakd", "fa-kit-duotone"],
+      kJ = {
         fak: "kit",
         "fa-kit": "kit"
       },
-      hu = {
+      pJ = {
         fakd: "kit-duotone",
         "fa-kit-duotone": "kit-duotone"
       },
-      Bu = (Ub(Ub({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
+      NJ = (Pd(Pd({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
         kit: "fak"
       }),
-      Ou = {
+      WJ = {
         "kit-duotone": "fakd"
       },
-      Gu = "duotone-group",
-      Uu = "swap-opacity",
-      Lu = "primary",
-      Yu = "secondary",
-      Su = (Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Wb = {}, "classic", "Classic"), "duotone", "Duotone"), "sharp", "Sharp"), "sharp-duotone", "Sharp Duotone"), "chisel", "Chisel"), "etch", "Etch"), "graphite", "Graphite"), "jelly", "Jelly"), "jelly-duo", "Jelly Duo"), "jelly-fill", "Jelly Fill"), Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Ub(Wb, "notdog", "Notdog"), "notdog-duo", "Notdog Duo"), "slab", "Slab"), "slab-press", "Slab Press"), "thumbprint", "Thumbprint"), "utility", "Utility"), "utility-duo", "Utility Duo"), "utility-fill", "Utility Fill"), "whiteboard", "Whiteboard"), Ub(Ub({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
+      PJ = "duotone-group",
+      ZJ = "swap-opacity",
+      gJ = "primary",
+      CJ = "secondary",
+      KJ = (Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(vd = {}, "classic", "Classic"), "duotone", "Duotone"), "sharp", "Sharp"), "sharp-duotone", "Sharp Duotone"), "chisel", "Chisel"), "etch", "Etch"), "graphite", "Graphite"), "jelly", "Jelly"), "jelly-duo", "Jelly Duo"), "jelly-fill", "Jelly Fill"), Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(Pd(vd, "notdog", "Notdog"), "notdog-duo", "Notdog Duo"), "slab", "Slab"), "slab-press", "Slab Press"), "thumbprint", "Thumbprint"), "utility", "Utility"), "utility-duo", "Utility Duo"), "utility-fill", "Utility Fill"), "whiteboard", "Whiteboard"), Pd(Pd({}, "kit", "Kit"), "kit-duotone", "Kit Duotone"), {
         classic: {
           fab: "fa-brands",
           fad: "fa-duotone",
@@ -969,10 +969,10 @@ export const modules = {
           faufsb: "fa-semibold"
         }
       }),
-      au = ["fa", "fas", "far", "fal", "fat", "fad", "fadr", "fadl", "fadt", "fab", "fass", "fasr", "fasl", "fast", "fasds", "fasdr", "fasdl", "fasdt", "faslr", "faslpr", "fawsb", "fatl", "fans", "fands", "faes", "fagt", "fajr", "fajfr", "fajdr", "facr", "fausb", "faudsb", "faufsb"].concat(["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"], ["fa-solid", "fa-regular", "fa-light", "fa-thin", "fa-duotone", "fa-brands", "fa-semibold"]),
-      Hu = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      wu = Hu.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
-      Zu = [].concat(ab(Object.keys({
+      oJ = ["fa", "fas", "far", "fal", "fat", "fad", "fadr", "fadl", "fadt", "fab", "fass", "fasr", "fasl", "fast", "fasds", "fasdr", "fasdl", "fasdt", "faslr", "faslpr", "fawsb", "fatl", "fans", "fands", "faes", "fagt", "fajr", "fajfr", "fajdr", "facr", "fausb", "faudsb", "faufsb"].concat(["fa-classic", "fa-duotone", "fa-sharp", "fa-sharp-duotone", "fa-thumbprint", "fa-whiteboard", "fa-notdog", "fa-notdog-duo", "fa-chisel", "fa-etch", "fa-graphite", "fa-jelly", "fa-jelly-fill", "fa-jelly-duo", "fa-slab", "fa-slab-press", "fa-utility", "fa-utility-duo", "fa-utility-fill"], ["fa-solid", "fa-regular", "fa-light", "fa-thin", "fa-duotone", "fa-brands", "fa-semibold"]),
+      lJ = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      QJ = lJ.concat([11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
+      LJ = [].concat(Kd(Object.keys({
         classic: ["fas", "far", "fal", "fat", "fad"],
         duotone: ["fadr", "fadl", "fadt"],
         sharp: ["fass", "fasr", "fasl", "fast"],
@@ -992,41 +992,41 @@ export const modules = {
         utility: ["fausb"],
         "utility-duo": ["faudsb"],
         "utility-fill": ["faufsb"]
-      })), ["solid", "regular", "light", "thin", "duotone", "brands", "semibold"], ["aw", "fw", "pull-left", "pull-right"], ["2xs", "xs", "sm", "lg", "xl", "2xl", "beat", "border", "fade", "beat-fade", "bounce", "flip-both", "flip-horizontal", "flip-vertical", "flip", "inverse", "layers", "layers-bottom-left", "layers-bottom-right", "layers-counter", "layers-text", "layers-top-left", "layers-top-right", "li", "pull-end", "pull-start", "pulse", "rotate-180", "rotate-270", "rotate-90", "rotate-by", "shake", "spin-pulse", "spin-reverse", "spin", "stack-1x", "stack-2x", "stack", "ul", "width-auto", "width-fixed", Gu, Uu, Lu, Yu]).concat(Hu.map((function(bb) {
-        return "".concat(bb, "x")
-      }))).concat(wu.map((function(bb) {
-        return "w-".concat(bb)
+      })), ["solid", "regular", "light", "thin", "duotone", "brands", "semibold"], ["aw", "fw", "pull-left", "pull-right"], ["2xs", "xs", "sm", "lg", "xl", "2xl", "beat", "border", "fade", "beat-fade", "bounce", "flip-both", "flip-horizontal", "flip-vertical", "flip", "inverse", "layers", "layers-bottom-left", "layers-bottom-right", "layers-counter", "layers-text", "layers-top-left", "layers-top-right", "li", "pull-end", "pull-start", "pulse", "rotate-180", "rotate-270", "rotate-90", "rotate-by", "shake", "spin-pulse", "spin-reverse", "spin", "stack-1x", "stack-2x", "stack", "ul", "width-auto", "width-fixed", PJ, ZJ, gJ, CJ]).concat(lJ.map((function(dd) {
+        return "".concat(dd, "x")
+      }))).concat(QJ.map((function(dd) {
+        return "w-".concat(dd)
       }))),
-      Xu = "___FONT_AWESOME___",
-      pu = "svg-inline--fa",
-      ou = "data-fa-i2svg",
-      Au = "data-fa-pseudo-element",
-      lu = "data-prefix",
-      Ku = "data-icon",
-      Wu = "fontawesome-i2svg",
-      Cu = ["HTML", "HEAD", "STYLE", "SCRIPT"],
-      du = ["::before", "::after", ":before", ":after"],
-      ru = function() {
+      OJ = "___FONT_AWESOME___",
+      eJ = "svg-inline--fa",
+      RJ = "data-fa-i2svg",
+      IJ = "data-fa-pseudo-element",
+      GJ = "data-prefix",
+      vJ = "data-icon",
+      xJ = "fontawesome-i2svg",
+      qJ = ["HTML", "HEAD", "STYLE", "SCRIPT"],
+      BJ = ["::before", "::after", ":before", ":after"],
+      sJ = function() {
         try {
           return !0
-        } catch (bb) {
+        } catch (dd) {
           return !1
         }
       }();
 
-    function ju(bb) {
-      return new Proxy(bb, {
-        get: function(bb, ub) {
-          return ub in bb ? bb[ub] : bb[vb]
+    function iJ(dd) {
+      return new Proxy(dd, {
+        get: function(dd, Jd) {
+          return Jd in dd ? dd[Jd] : dd[Sd]
         }
       })
     }
-    var nu = Yb({}, gb);
-    nu[vb] = Yb(Yb(Yb(Yb({}, {
+    var aJ = gd({}, md);
+    aJ[Sd] = gd(gd(gd(gd({}, {
       "fa-duotone": "duotone"
-    }), gb[vb]), uu), hu);
-    var Du = ju(nu),
-      xu = Yb({}, {
+    }), md[Sd]), kJ), pJ);
+    var MJ = iJ(aJ),
+      FJ = gd({}, {
         chisel: {
           regular: "facr"
         },
@@ -1098,16 +1098,16 @@ export const modules = {
           semibold: "fawsb"
         }
       });
-    xu[vb] = Yb(Yb(Yb(Yb({}, {
+    FJ[Sd] = gd(gd(gd(gd({}, {
       duotone: "fad"
-    }), xu[vb]), Bu), Ou);
-    var zu = ju(xu),
-      gu = Yb({}, Su);
-    gu[vb] = Yb(Yb({}, gu[vb]), {
+    }), FJ[Sd]), NJ), WJ);
+    var YJ = iJ(FJ),
+      mJ = gd({}, KJ);
+    mJ[Sd] = gd(gd({}, mJ[Sd]), {
       fak: "fa-kit"
     });
-    var iu = ju(gu),
-      vu = Yb({}, {
+    var bJ = iJ(mJ),
+      SJ = gd({}, {
         classic: {
           "fa-brands": "fab",
           "fa-duotone": "fad",
@@ -1179,14 +1179,14 @@ export const modules = {
           "fa-semibold": "faufsb"
         }
       });
-    vu[vb] = Yb(Yb({}, vu[vb]), {
+    SJ[Sd] = gd(gd({}, SJ[Sd]), {
       "fa-kit": "fak"
     });
-    ju(vu);
-    var tu = /fa(k|kd|s|r|l|t|d|dr|dl|dt|b|slr|slpr|wsb|tl|ns|nds|es|gt|jr|jfr|jdr|usb|ufsb|udsb|cr|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,
-      Ju = "fa-layers-text",
-      eu = /Font ?Awesome ?([567 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit|Notdog Duo|Notdog|Chisel|Etch|Graphite|Thumbprint|Jelly Fill|Jelly Duo|Jelly|Utility|Utility Fill|Utility Duo|Slab Press|Slab|Whiteboard)?.*/i,
-      Nu = (ju(Yb({}, {
+    iJ(SJ);
+    var jJ = /fa(k|kd|s|r|l|t|d|dr|dl|dt|b|slr|slpr|wsb|tl|ns|nds|es|gt|jr|jfr|jdr|usb|ufsb|udsb|cr|ss|sr|sl|st|sds|sdr|sdl|sdt)?[\-\ ]/,
+      XJ = "fa-layers-text",
+      fJ = /Font ?Awesome ?([567 ]*)(Solid|Regular|Light|Thin|Duotone|Brands|Free|Pro|Sharp Duotone|Sharp|Kit|Notdog Duo|Notdog|Chisel|Etch|Graphite|Thumbprint|Jelly Fill|Jelly Duo|Jelly|Utility|Utility Fill|Utility Duo|Slab Press|Slab|Whiteboard)?.*/i,
+      nJ = (iJ(gd({}, {
         classic: {
           900: "fas",
           400: "far",
@@ -1258,15 +1258,15 @@ export const modules = {
           600: "faufsb"
         }
       })), ["class", "data-prefix", "data-icon", "data-fa-transform", "data-fa-mask"]),
-      su = {
+      UJ = {
         GROUP: "duotone-group",
         SWAP_OPACITY: "swap-opacity",
         PRIMARY: "primary",
         SECONDARY: "secondary"
       },
-      Mu = [].concat(ab(["kit"]), ab(Zu)),
-      mu = rb.FontAwesomeConfig || {};
-    if (jb && "function" === typeof jb.querySelector) {
+      yJ = [].concat(Kd(["kit"]), Kd(LJ)),
+      DJ = Bd.FontAwesomeConfig || {};
+    if (sd && "function" === typeof sd.querySelector) {
       [
         ["data-family-prefix", "familyPrefix"],
         ["data-css-prefix", "cssPrefix"],
@@ -1283,24 +1283,24 @@ export const modules = {
         ["data-keep-original-source", "keepOriginalSource"],
         ["data-measure-performance", "measurePerformance"],
         ["data-show-missing-icons", "showMissingIcons"]
-      ].forEach((function(bb) {
-        var ub = Sb(bb, 2),
-          hb = ub[0],
-          Bb = ub[1],
-          Ob = function(bb) {
-            return "" === bb || "false" !== bb && ("true" === bb || bb)
-          }(function(bb) {
-            var ub = jb.querySelector("script[" + bb + "]");
-            if (ub) return ub.getAttribute(bb)
-          }(hb));
-        void 0 !== Ob && null !== Ob && (mu[Bb] = Ob)
+      ].forEach((function(dd) {
+        var Jd = Cd(dd, 2),
+          kd = Jd[0],
+          pd = Jd[1],
+          Nd = function(dd) {
+            return "" === dd || "false" !== dd && ("true" === dd || dd)
+          }(function(dd) {
+            var Jd = sd.querySelector("script[" + dd + "]");
+            if (Jd) return Jd.getAttribute(dd)
+          }(kd));
+        void 0 !== Nd && null !== Nd && (DJ[pd] = Nd)
       }))
     }
-    var Iu = {
+    var TJ = {
       styleDefault: "solid",
-      familyDefault: vb,
+      familyDefault: Sd,
       cssPrefix: "fa",
-      replacementClass: pu,
+      replacementClass: eJ,
       autoReplaceSvg: !0,
       autoAddCss: !0,
       searchPseudoElements: !1,
@@ -1312,36 +1312,36 @@ export const modules = {
       measurePerformance: !1,
       showMissingIcons: !0
     };
-    mu.familyPrefix && (mu.cssPrefix = mu.familyPrefix);
-    var Pu = Yb(Yb({}, Iu), mu);
-    Pu.autoReplaceSvg || (Pu.observeMutations = !1);
-    var qu = {};
-    Object.keys(Iu).forEach((function(bb) {
-      Object.defineProperty(qu, bb, {
+    DJ.familyPrefix && (DJ.cssPrefix = DJ.familyPrefix);
+    var EJ = gd(gd({}, TJ), DJ);
+    EJ.autoReplaceSvg || (EJ.observeMutations = !1);
+    var cJ = {};
+    Object.keys(TJ).forEach((function(dd) {
+      Object.defineProperty(cJ, dd, {
         enumerable: !0,
-        set: function(ub) {
-          Pu[bb] = ub, Eu.forEach((function(bb) {
-            return bb(qu)
+        set: function(Jd) {
+          EJ[dd] = Jd, hJ.forEach((function(dd) {
+            return dd(cJ)
           }))
         },
         get: function() {
-          return Pu[bb]
+          return EJ[dd]
         }
       })
-    })), Object.defineProperty(qu, "familyPrefix", {
+    })), Object.defineProperty(cJ, "familyPrefix", {
       enumerable: !0,
-      set: function(bb) {
-        Pu.cssPrefix = bb, Eu.forEach((function(bb) {
-          return bb(qu)
+      set: function(dd) {
+        EJ.cssPrefix = dd, hJ.forEach((function(dd) {
+          return dd(cJ)
         }))
       },
       get: function() {
-        return Pu.cssPrefix
+        return EJ.cssPrefix
       }
-    }), rb.FontAwesomeConfig = qu;
-    var Eu = [];
-    var yu = 16,
-      Vu = {
+    }), Bd.FontAwesomeConfig = cJ;
+    var hJ = [];
+    var rJ = 16,
+      uJ = {
         size: 16,
         x: 0,
         y: 0,
@@ -1350,369 +1350,369 @@ export const modules = {
         flipY: !1
       };
 
-    function Fu() {
-      for (var bb = 12, ub = ""; bb-- > 0;) ub += "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" [62 * Math.random() | 0];
-      return ub
+    function tJ() {
+      for (var dd = 12, Jd = ""; dd-- > 0;) Jd += "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" [62 * Math.random() | 0];
+      return Jd
     }
 
-    function fu(bb) {
-      for (var ub = [], hb = (bb || []).length >>> 0; hb--;) ub[hb] = bb[hb];
-      return ub
+    function VJ(dd) {
+      for (var Jd = [], kd = (dd || []).length >>> 0; kd--;) Jd[kd] = dd[kd];
+      return Jd
     }
 
-    function ku(bb) {
-      return bb.classList ? fu(bb.classList) : (bb.getAttribute("class") || "").split(" ").filter((function(bb) {
-        return bb
+    function zJ(dd) {
+      return dd.classList ? VJ(dd.classList) : (dd.getAttribute("class") || "").split(" ").filter((function(dd) {
+        return dd
       }))
     }
 
-    function Tu(bb) {
-      return "".concat(bb).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    function HJ(dd) {
+      return "".concat(dd).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/'/g, "&#39;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
     }
 
-    function cu(bb) {
-      return Object.keys(bb || {}).reduce((function(ub, hb) {
-        return ub + "".concat(hb, ": ").concat(bb[hb].trim(), ";")
+    function wJ(dd) {
+      return Object.keys(dd || {}).reduce((function(Jd, kd) {
+        return Jd + "".concat(kd, ": ").concat(dd[kd].trim(), ";")
       }), "")
     }
 
-    function Qu(bb) {
-      return bb.size !== Vu.size || bb.x !== Vu.x || bb.y !== Vu.y || bb.rotate !== Vu.rotate || bb.flipX || bb.flipY
+    function AJ(dd) {
+      return dd.size !== uJ.size || dd.x !== uJ.x || dd.y !== uJ.y || dd.rotate !== uJ.rotate || dd.flipX || dd.flipY
     }
 
-    function Ru() {
-      var bb = "fa",
-        ub = pu,
-        hb = qu.cssPrefix,
-        Bb = qu.replacementClass,
-        Ob = ":root, :host {\n  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';\n  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';\n  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';\n  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';\n  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';\n  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';\n  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';\n  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';\n  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';\n  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';\n  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';\n  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';\n  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';\n  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';\n  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';\n  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';\n  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';\n  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';\n  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';\n  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';\n}\n\n.svg-inline--fa {\n  box-sizing: content-box;\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285714em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left,\n.svg-inline--fa .fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-pull-right,\n.svg-inline--fa .fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.fa-layers .svg-inline--fa {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xs {\n  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-sm {\n  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-lg {\n  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xl {\n  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-2xl {\n  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-width-auto {\n  --fa-width: auto;\n}\n\n.fa-fw,\n.fa-width-fixed {\n  --fa-width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-inline-start: var(--fa-li-margin, 2.5em);\n  padding-inline-start: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n/* Heads Up: Bordered Icons will not be supported in the future!\n  - This feature will be deprecated in the next major release of Font Awesome (v8)!\n  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.\n*/\n/* Notes:\n* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)\n* --@{v.$css-prefix}-border-padding =\n  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)\n  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)\n*/\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.0625em);\n  box-sizing: var(--fa-border-box-sizing, content-box);\n  padding: var(--fa-border-padding, 0.1875em 0.25em);\n}\n\n.fa-pull-left,\n.fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right,\n.fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n  .fa-bounce,\n  .fa-fade,\n  .fa-beat-fade,\n  .fa-flip,\n  .fa-pulse,\n  .fa-shake,\n  .fa-spin,\n  .fa-spin-pulse {\n    animation: none !important;\n    transition: none !important;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}\n\n.svg-inline--fa.fa-inverse {\n  fill: var(--fa-inverse, #fff);\n}\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  --fa-width: 1.25em;\n  height: 1em;\n  width: var(--fa-width);\n}\n.svg-inline--fa.fa-stack-2x {\n  --fa-width: 2.5em;\n  height: 2em;\n  width: var(--fa-width);\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  z-index: var(--fa-stack-z-index, auto);\n}";
-      if (hb !== bb || Bb !== ub) {
-        var Gb = new RegExp("\\.".concat(bb, "\\-"), "g"),
-          Ub = new RegExp("\\--".concat(bb, "\\-"), "g"),
-          Lb = new RegExp("\\.".concat(ub), "g");
-        Ob = Ob.replace(Gb, ".".concat(hb, "-")).replace(Ub, "--".concat(hb, "-")).replace(Lb, ".".concat(Bb))
+    function dk() {
+      var dd = "fa",
+        Jd = eJ,
+        kd = cJ.cssPrefix,
+        pd = cJ.replacementClass,
+        Nd = ":root, :host {\n  --fa-font-solid: normal 900 1em/1 'Font Awesome 7 Free';\n  --fa-font-regular: normal 400 1em/1 'Font Awesome 7 Free';\n  --fa-font-light: normal 300 1em/1 'Font Awesome 7 Pro';\n  --fa-font-thin: normal 100 1em/1 'Font Awesome 7 Pro';\n  --fa-font-duotone: normal 900 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-regular: normal 400 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-light: normal 300 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-duotone-thin: normal 100 1em/1 'Font Awesome 7 Duotone';\n  --fa-font-brands: normal 400 1em/1 'Font Awesome 7 Brands';\n  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 7 Sharp';\n  --fa-font-sharp-duotone-solid: normal 900 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-regular: normal 400 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-light: normal 300 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-sharp-duotone-thin: normal 100 1em/1 'Font Awesome 7 Sharp Duotone';\n  --fa-font-slab-regular: normal 400 1em/1 'Font Awesome 7 Slab';\n  --fa-font-slab-press-regular: normal 400 1em/1 'Font Awesome 7 Slab Press';\n  --fa-font-whiteboard-semibold: normal 600 1em/1 'Font Awesome 7 Whiteboard';\n  --fa-font-thumbprint-light: normal 300 1em/1 'Font Awesome 7 Thumbprint';\n  --fa-font-notdog-solid: normal 900 1em/1 'Font Awesome 7 Notdog';\n  --fa-font-notdog-duo-solid: normal 900 1em/1 'Font Awesome 7 Notdog Duo';\n  --fa-font-etch-solid: normal 900 1em/1 'Font Awesome 7 Etch';\n  --fa-font-graphite-thin: normal 100 1em/1 'Font Awesome 7 Graphite';\n  --fa-font-jelly-regular: normal 400 1em/1 'Font Awesome 7 Jelly';\n  --fa-font-jelly-fill-regular: normal 400 1em/1 'Font Awesome 7 Jelly Fill';\n  --fa-font-jelly-duo-regular: normal 400 1em/1 'Font Awesome 7 Jelly Duo';\n  --fa-font-chisel-regular: normal 400 1em/1 'Font Awesome 7 Chisel';\n  --fa-font-utility-semibold: normal 600 1em/1 'Font Awesome 7 Utility';\n  --fa-font-utility-duo-semibold: normal 600 1em/1 'Font Awesome 7 Utility Duo';\n  --fa-font-utility-fill-semibold: normal 600 1em/1 'Font Awesome 7 Utility Fill';\n}\n\n.svg-inline--fa {\n  box-sizing: content-box;\n  display: var(--fa-display, inline-block);\n  height: 1em;\n  overflow: visible;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.svg-inline--fa.fa-2xs {\n  vertical-align: 0.1em;\n}\n.svg-inline--fa.fa-xs {\n  vertical-align: 0em;\n}\n.svg-inline--fa.fa-sm {\n  vertical-align: -0.0714285714em;\n}\n.svg-inline--fa.fa-lg {\n  vertical-align: -0.2em;\n}\n.svg-inline--fa.fa-xl {\n  vertical-align: -0.25em;\n}\n.svg-inline--fa.fa-2xl {\n  vertical-align: -0.3125em;\n}\n.svg-inline--fa.fa-pull-left,\n.svg-inline--fa .fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-pull-right,\n.svg-inline--fa .fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n.svg-inline--fa.fa-li {\n  width: var(--fa-li-width, 2em);\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  inset-block-start: 0.25em; /* syncing vertical alignment with Web Font rendering */\n}\n\n.fa-layers-counter, .fa-layers-text {\n  display: inline-block;\n  position: absolute;\n  text-align: center;\n}\n\n.fa-layers {\n  display: inline-block;\n  height: 1em;\n  position: relative;\n  text-align: center;\n  vertical-align: -0.125em;\n  width: var(--fa-width, 1.25em);\n}\n.fa-layers .svg-inline--fa {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  transform-origin: center center;\n}\n\n.fa-layers-text {\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  transform-origin: center center;\n}\n\n.fa-layers-counter {\n  background-color: var(--fa-counter-background-color, #ff253a);\n  border-radius: var(--fa-counter-border-radius, 1em);\n  box-sizing: border-box;\n  color: var(--fa-inverse, #fff);\n  line-height: var(--fa-counter-line-height, 1);\n  max-width: var(--fa-counter-max-width, 5em);\n  min-width: var(--fa-counter-min-width, 1.5em);\n  overflow: hidden;\n  padding: var(--fa-counter-padding, 0.25em 0.5em);\n  right: var(--fa-right, 0);\n  text-overflow: ellipsis;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-counter-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-bottom-right {\n  bottom: var(--fa-bottom, 0);\n  right: var(--fa-right, 0);\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom right;\n}\n\n.fa-layers-bottom-left {\n  bottom: var(--fa-bottom, 0);\n  left: var(--fa-left, 0);\n  right: auto;\n  top: auto;\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: bottom left;\n}\n\n.fa-layers-top-right {\n  top: var(--fa-top, 0);\n  right: var(--fa-right, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top right;\n}\n\n.fa-layers-top-left {\n  left: var(--fa-left, 0);\n  right: auto;\n  top: var(--fa-top, 0);\n  transform: scale(var(--fa-layers-scale, 0.25));\n  transform-origin: top left;\n}\n\n.fa-1x {\n  font-size: 1em;\n}\n\n.fa-2x {\n  font-size: 2em;\n}\n\n.fa-3x {\n  font-size: 3em;\n}\n\n.fa-4x {\n  font-size: 4em;\n}\n\n.fa-5x {\n  font-size: 5em;\n}\n\n.fa-6x {\n  font-size: 6em;\n}\n\n.fa-7x {\n  font-size: 7em;\n}\n\n.fa-8x {\n  font-size: 8em;\n}\n\n.fa-9x {\n  font-size: 9em;\n}\n\n.fa-10x {\n  font-size: 10em;\n}\n\n.fa-2xs {\n  font-size: calc(10 / 16 * 1em); /* converts a 10px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 10 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 10 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xs {\n  font-size: calc(12 / 16 * 1em); /* converts a 12px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 12 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 12 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-sm {\n  font-size: calc(14 / 16 * 1em); /* converts a 14px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 14 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 14 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-lg {\n  font-size: calc(20 / 16 * 1em); /* converts a 20px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 20 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 20 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-xl {\n  font-size: calc(24 / 16 * 1em); /* converts a 24px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 24 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 24 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-2xl {\n  font-size: calc(32 / 16 * 1em); /* converts a 32px size into an em-based value that's relative to the scale's 16px base */\n  line-height: calc(1 / 32 * 1em); /* sets the line-height of the icon back to that of it's parent */\n  vertical-align: calc((6 / 32 - 0.375) * 1em); /* vertically centers the icon taking into account the surrounding text's descender */\n}\n\n.fa-width-auto {\n  --fa-width: auto;\n}\n\n.fa-fw,\n.fa-width-fixed {\n  --fa-width: 1.25em;\n}\n\n.fa-ul {\n  list-style-type: none;\n  margin-inline-start: var(--fa-li-margin, 2.5em);\n  padding-inline-start: 0;\n}\n.fa-ul > li {\n  position: relative;\n}\n\n.fa-li {\n  inset-inline-start: calc(-1 * var(--fa-li-width, 2em));\n  position: absolute;\n  text-align: center;\n  width: var(--fa-li-width, 2em);\n  line-height: inherit;\n}\n\n/* Heads Up: Bordered Icons will not be supported in the future!\n  - This feature will be deprecated in the next major release of Font Awesome (v8)!\n  - You may continue to use it in this version *v7), but it will not be supported in Font Awesome v8.\n*/\n/* Notes:\n* --@{v.$css-prefix}-border-width = 1/16 by default (to render as ~1px based on a 16px default font-size)\n* --@{v.$css-prefix}-border-padding =\n  ** 3/16 for vertical padding (to give ~2px of vertical whitespace around an icon considering it's vertical alignment)\n  ** 4/16 for horizontal padding (to give ~4px of horizontal whitespace around an icon)\n*/\n.fa-border {\n  border-color: var(--fa-border-color, #eee);\n  border-radius: var(--fa-border-radius, 0.1em);\n  border-style: var(--fa-border-style, solid);\n  border-width: var(--fa-border-width, 0.0625em);\n  box-sizing: var(--fa-border-box-sizing, content-box);\n  padding: var(--fa-border-padding, 0.1875em 0.25em);\n}\n\n.fa-pull-left,\n.fa-pull-start {\n  float: inline-start;\n  margin-inline-end: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-pull-right,\n.fa-pull-end {\n  float: inline-end;\n  margin-inline-start: var(--fa-pull-margin, 0.3em);\n}\n\n.fa-beat {\n  animation-name: fa-beat;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-bounce {\n  animation-name: fa-bounce;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.28, 0.84, 0.42, 1));\n}\n\n.fa-fade {\n  animation-name: fa-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-beat-fade {\n  animation-name: fa-beat-fade;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, cubic-bezier(0.4, 0, 0.6, 1));\n}\n\n.fa-flip {\n  animation-name: fa-flip;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, ease-in-out);\n}\n\n.fa-shake {\n  animation-name: fa-shake;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin {\n  animation-name: fa-spin;\n  animation-delay: var(--fa-animation-delay, 0s);\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 2s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, linear);\n}\n\n.fa-spin-reverse {\n  --fa-animation-direction: reverse;\n}\n\n.fa-pulse,\n.fa-spin-pulse {\n  animation-name: fa-spin;\n  animation-direction: var(--fa-animation-direction, normal);\n  animation-duration: var(--fa-animation-duration, 1s);\n  animation-iteration-count: var(--fa-animation-iteration-count, infinite);\n  animation-timing-function: var(--fa-animation-timing, steps(8));\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .fa-beat,\n  .fa-bounce,\n  .fa-fade,\n  .fa-beat-fade,\n  .fa-flip,\n  .fa-pulse,\n  .fa-shake,\n  .fa-spin,\n  .fa-spin-pulse {\n    animation: none !important;\n    transition: none !important;\n  }\n}\n@keyframes fa-beat {\n  0%, 90% {\n    transform: scale(1);\n  }\n  45% {\n    transform: scale(var(--fa-beat-scale, 1.25));\n  }\n}\n@keyframes fa-bounce {\n  0% {\n    transform: scale(1, 1) translateY(0);\n  }\n  10% {\n    transform: scale(var(--fa-bounce-start-scale-x, 1.1), var(--fa-bounce-start-scale-y, 0.9)) translateY(0);\n  }\n  30% {\n    transform: scale(var(--fa-bounce-jump-scale-x, 0.9), var(--fa-bounce-jump-scale-y, 1.1)) translateY(var(--fa-bounce-height, -0.5em));\n  }\n  50% {\n    transform: scale(var(--fa-bounce-land-scale-x, 1.05), var(--fa-bounce-land-scale-y, 0.95)) translateY(0);\n  }\n  57% {\n    transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));\n  }\n  64% {\n    transform: scale(1, 1) translateY(0);\n  }\n  100% {\n    transform: scale(1, 1) translateY(0);\n  }\n}\n@keyframes fa-fade {\n  50% {\n    opacity: var(--fa-fade-opacity, 0.4);\n  }\n}\n@keyframes fa-beat-fade {\n  0%, 100% {\n    opacity: var(--fa-beat-fade-opacity, 0.4);\n    transform: scale(1);\n  }\n  50% {\n    opacity: 1;\n    transform: scale(var(--fa-beat-fade-scale, 1.125));\n  }\n}\n@keyframes fa-flip {\n  50% {\n    transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));\n  }\n}\n@keyframes fa-shake {\n  0% {\n    transform: rotate(-15deg);\n  }\n  4% {\n    transform: rotate(15deg);\n  }\n  8%, 24% {\n    transform: rotate(-18deg);\n  }\n  12%, 28% {\n    transform: rotate(18deg);\n  }\n  16% {\n    transform: rotate(-22deg);\n  }\n  20% {\n    transform: rotate(22deg);\n  }\n  32% {\n    transform: rotate(-12deg);\n  }\n  36% {\n    transform: rotate(12deg);\n  }\n  40%, 100% {\n    transform: rotate(0deg);\n  }\n}\n@keyframes fa-spin {\n  0% {\n    transform: rotate(0deg);\n  }\n  100% {\n    transform: rotate(360deg);\n  }\n}\n.fa-rotate-90 {\n  transform: rotate(90deg);\n}\n\n.fa-rotate-180 {\n  transform: rotate(180deg);\n}\n\n.fa-rotate-270 {\n  transform: rotate(270deg);\n}\n\n.fa-flip-horizontal {\n  transform: scale(-1, 1);\n}\n\n.fa-flip-vertical {\n  transform: scale(1, -1);\n}\n\n.fa-flip-both,\n.fa-flip-horizontal.fa-flip-vertical {\n  transform: scale(-1, -1);\n}\n\n.fa-rotate-by {\n  transform: rotate(var(--fa-rotate-angle, 0));\n}\n\n.svg-inline--fa .fa-primary {\n  fill: var(--fa-primary-color, currentColor);\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa .fa-secondary {\n  fill: var(--fa-secondary-color, currentColor);\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-primary {\n  opacity: var(--fa-secondary-opacity, 0.4);\n}\n\n.svg-inline--fa.fa-swap-opacity .fa-secondary {\n  opacity: var(--fa-primary-opacity, 1);\n}\n\n.svg-inline--fa mask .fa-primary,\n.svg-inline--fa mask .fa-secondary {\n  fill: black;\n}\n\n.svg-inline--fa.fa-inverse {\n  fill: var(--fa-inverse, #fff);\n}\n\n.fa-stack {\n  display: inline-block;\n  height: 2em;\n  line-height: 2em;\n  position: relative;\n  vertical-align: middle;\n  width: 2.5em;\n}\n\n.fa-inverse {\n  color: var(--fa-inverse, #fff);\n}\n\n.svg-inline--fa.fa-stack-1x {\n  --fa-width: 1.25em;\n  height: 1em;\n  width: var(--fa-width);\n}\n.svg-inline--fa.fa-stack-2x {\n  --fa-width: 2.5em;\n  height: 2em;\n  width: var(--fa-width);\n}\n\n.fa-stack-1x,\n.fa-stack-2x {\n  inset: 0;\n  margin: auto;\n  position: absolute;\n  z-index: var(--fa-stack-z-index, auto);\n}";
+      if (kd !== dd || pd !== Jd) {
+        var Wd = new RegExp("\\.".concat(dd, "\\-"), "g"),
+          Pd = new RegExp("\\--".concat(dd, "\\-"), "g"),
+          Zd = new RegExp("\\.".concat(Jd), "g");
+        Nd = Nd.replace(Wd, ".".concat(kd, "-")).replace(Pd, "--".concat(kd, "-")).replace(Zd, ".".concat(pd))
       }
-      return Ob
+      return Nd
     }
-    var bh = !1;
+    var Jk = !1;
 
-    function uh() {
-      qu.autoAddCss && !bh && (! function(bb) {
-        if (bb && xb) {
-          var ub = jb.createElement("style");
-          ub.setAttribute("type", "text/css"), ub.innerHTML = bb;
-          for (var hb = jb.head.childNodes, Bb = null, Ob = hb.length - 1; Ob > -1; Ob--) {
-            var Gb = hb[Ob],
-              Ub = (Gb.tagName || "").toUpperCase();
-            ["STYLE", "LINK"].indexOf(Ub) > -1 && (Bb = Gb)
+    function kk() {
+      cJ.autoAddCss && !Jk && (! function(dd) {
+        if (dd && Fd) {
+          var Jd = sd.createElement("style");
+          Jd.setAttribute("type", "text/css"), Jd.innerHTML = dd;
+          for (var kd = sd.head.childNodes, pd = null, Nd = kd.length - 1; Nd > -1; Nd--) {
+            var Wd = kd[Nd],
+              Pd = (Wd.tagName || "").toUpperCase();
+            ["STYLE", "LINK"].indexOf(Pd) > -1 && (pd = Wd)
           }
-          jb.head.insertBefore(ub, Bb)
+          sd.head.insertBefore(Jd, pd)
         }
-      }(Ru()), bh = !0)
+      }(dk()), Jk = !0)
     }
-    var hh = {
+    var pk = {
         mixout: function() {
           return {
             dom: {
-              css: Ru,
-              insertCss: uh
+              css: dk,
+              insertCss: kk
             }
           }
         },
         hooks: function() {
           return {
             beforeDOMElementCreation: function() {
-              uh()
+              kk()
             },
             beforeI2svg: function() {
-              uh()
+              kk()
             }
           }
         }
       },
-      Bh = rb || {};
-    Bh[Xu] || (Bh[Xu] = {}), Bh[Xu].styles || (Bh[Xu].styles = {}), Bh[Xu].hooks || (Bh[Xu].hooks = {}), Bh[Xu].shims || (Bh[Xu].shims = []);
-    var Oh = Bh[Xu],
-      Gh = [],
-      Uh = function() {
-        jb.removeEventListener("DOMContentLoaded", Uh), Lh = 1, Gh.map((function(bb) {
-          return bb()
+      Nk = Bd || {};
+    Nk[OJ] || (Nk[OJ] = {}), Nk[OJ].styles || (Nk[OJ].styles = {}), Nk[OJ].hooks || (Nk[OJ].hooks = {}), Nk[OJ].shims || (Nk[OJ].shims = []);
+    var Wk = Nk[OJ],
+      Pk = [],
+      Zk = function() {
+        sd.removeEventListener("DOMContentLoaded", Zk), gk = 1, Pk.map((function(dd) {
+          return dd()
         }))
       },
-      Lh = !1;
+      gk = !1;
 
-    function Yh(bb) {
-      var ub = bb.tag,
-        hb = bb.attributes,
-        Bb = void 0 === hb ? {} : hb,
-        Ob = bb.children,
-        Gb = void 0 === Ob ? [] : Ob;
-      return "string" === typeof bb ? Tu(bb) : "<".concat(ub, " ").concat(function(bb) {
-        return Object.keys(bb || {}).reduce((function(ub, hb) {
-          return ub + "".concat(hb, '="').concat(Tu(bb[hb]), '" ')
+    function Ck(dd) {
+      var Jd = dd.tag,
+        kd = dd.attributes,
+        pd = void 0 === kd ? {} : kd,
+        Nd = dd.children,
+        Wd = void 0 === Nd ? [] : Nd;
+      return "string" === typeof dd ? HJ(dd) : "<".concat(Jd, " ").concat(function(dd) {
+        return Object.keys(dd || {}).reduce((function(Jd, kd) {
+          return Jd + "".concat(kd, '="').concat(HJ(dd[kd]), '" ')
         }), "").trim()
-      }(Bb), ">").concat(Gb.map(Yh).join(""), "</").concat(ub, ">")
+      }(pd), ">").concat(Wd.map(Ck).join(""), "</").concat(Jd, ">")
     }
 
-    function Sh(bb, ub, hb) {
-      if (bb && bb[ub] && bb[ub][hb]) return {
-        prefix: ub,
-        iconName: hb,
-        icon: bb[ub][hb]
+    function Kk(dd, Jd, kd) {
+      if (dd && dd[Jd] && dd[Jd][kd]) return {
+        prefix: Jd,
+        iconName: kd,
+        icon: dd[Jd][kd]
       }
     }
-    xb && ((Lh = (jb.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(jb.readyState)) || jb.addEventListener("DOMContentLoaded", Uh));
-    var ah = function(bb, ub, hb, Bb) {
-      var Ob, Gb, Ub, Lb = Object.keys(bb),
-        Yb = Lb.length,
-        Sb = void 0 !== Bb ? function(bb, ub) {
-          return function(hb, Bb, Ob, Gb) {
-            return bb.call(ub, hb, Bb, Ob, Gb)
+    Fd && ((gk = (sd.documentElement.doScroll ? /^loaded|^c/ : /^loaded|^i|^c/).test(sd.readyState)) || sd.addEventListener("DOMContentLoaded", Zk));
+    var lk = function(dd, Jd, kd, pd) {
+      var Nd, Wd, Pd, Zd = Object.keys(dd),
+        gd = Zd.length,
+        Cd = void 0 !== pd ? function(dd, Jd) {
+          return function(kd, pd, Nd, Wd) {
+            return dd.call(Jd, kd, pd, Nd, Wd)
           }
-        }(ub, Bb) : ub;
-      for (void 0 === hb ? (Ob = 1, Ub = bb[Lb[0]]) : (Ob = 0, Ub = hb); Ob < Yb; Ob++) Ub = Sb(Ub, bb[Gb = Lb[Ob]], Gb, bb);
-      return Ub
+        }(Jd, pd) : Jd;
+      for (void 0 === kd ? (Nd = 1, Pd = dd[Zd[0]]) : (Nd = 0, Pd = kd); Nd < gd; Nd++) Pd = Cd(Pd, dd[Wd = Zd[Nd]], Wd, dd);
+      return Pd
     };
 
-    function Hh(bb) {
-      return 1 !== ab(bb).length ? null : bb.codePointAt(0).toString(16)
+    function Qk(dd) {
+      return 1 !== Kd(dd).length ? null : dd.codePointAt(0).toString(16)
     }
 
-    function wh(bb) {
-      return Object.keys(bb).reduce((function(ub, hb) {
-        var Bb = bb[hb];
-        return !!Bb.icon ? ub[Bb.iconName] = Bb.icon : ub[hb] = Bb, ub
+    function Lk(dd) {
+      return Object.keys(dd).reduce((function(Jd, kd) {
+        var pd = dd[kd];
+        return !!pd.icon ? Jd[pd.iconName] = pd.icon : Jd[kd] = pd, Jd
       }), {})
     }
 
-    function Zh(bb, ub) {
-      var hb = (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}).skipHooks,
-        Bb = void 0 !== hb && hb,
-        Ob = wh(ub);
-      "function" !== typeof Oh.hooks.addPack || Bb ? Oh.styles[bb] = Yb(Yb({}, Oh.styles[bb] || {}), Ob) : Oh.hooks.addPack(bb, wh(ub)), "fas" === bb && Zh("fa", ub)
+    function Ok(dd, Jd) {
+      var kd = (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}).skipHooks,
+        pd = void 0 !== kd && kd,
+        Nd = Lk(Jd);
+      "function" !== typeof Wk.hooks.addPack || pd ? Wk.styles[dd] = gd(gd({}, Wk.styles[dd] || {}), Nd) : Wk.hooks.addPack(dd, Lk(Jd)), "fas" === dd && Ok("fa", Jd)
     }
-    var Xh = Oh.styles,
-      ph = Oh.shims,
-      oh = Object.keys(iu),
-      Ah = oh.reduce((function(bb, ub) {
-        return bb[ub] = Object.keys(iu[ub]), bb
+    var ek = Wk.styles,
+      Rk = Wk.shims,
+      Ik = Object.keys(bJ),
+      Gk = Ik.reduce((function(dd, Jd) {
+        return dd[Jd] = Object.keys(bJ[Jd]), dd
       }), {}),
-      lh = null,
-      Kh = {},
-      Wh = {},
-      Ch = {},
-      dh = {},
-      rh = {};
+      vk = null,
+      xk = {},
+      qk = {},
+      Bk = {},
+      sk = {},
+      ik = {};
 
-    function jh(bb, ub) {
-      var hb, Bb = ub.split("-"),
-        Ob = Bb[0],
-        Gb = Bb.slice(1).join("-");
-      return Ob !== bb || "" === Gb || (hb = Gb, ~Mu.indexOf(hb)) ? null : Gb
+    function ak(dd, Jd) {
+      var kd, pd = Jd.split("-"),
+        Nd = pd[0],
+        Wd = pd.slice(1).join("-");
+      return Nd !== dd || "" === Wd || (kd = Wd, ~yJ.indexOf(kd)) ? null : Wd
     }
-    var nh, Dh = function() {
-      var bb = function(bb) {
-        return ah(Xh, (function(ub, hb, Bb) {
-          return ub[Bb] = ah(hb, bb, {}), ub
+    var Mk, Fk = function() {
+      var dd = function(dd) {
+        return lk(ek, (function(Jd, kd, pd) {
+          return Jd[pd] = lk(kd, dd, {}), Jd
         }), {})
       };
-      Kh = bb((function(bb, ub, hb) {
-        (ub[3] && (bb[ub[3]] = hb), ub[2]) && ub[2].filter((function(bb) {
-          return "number" === typeof bb
-        })).forEach((function(ub) {
-          bb[ub.toString(16)] = hb
+      xk = dd((function(dd, Jd, kd) {
+        (Jd[3] && (dd[Jd[3]] = kd), Jd[2]) && Jd[2].filter((function(dd) {
+          return "number" === typeof dd
+        })).forEach((function(Jd) {
+          dd[Jd.toString(16)] = kd
         }));
-        return bb
-      })), Wh = bb((function(bb, ub, hb) {
-        (bb[hb] = hb, ub[2]) && ub[2].filter((function(bb) {
-          return "string" === typeof bb
-        })).forEach((function(ub) {
-          bb[ub] = hb
+        return dd
+      })), qk = dd((function(dd, Jd, kd) {
+        (dd[kd] = kd, Jd[2]) && Jd[2].filter((function(dd) {
+          return "string" === typeof dd
+        })).forEach((function(Jd) {
+          dd[Jd] = kd
         }));
-        return bb
-      })), rh = bb((function(bb, ub, hb) {
-        var Bb = ub[2];
-        return bb[hb] = hb, Bb.forEach((function(ub) {
-          bb[ub] = hb
-        })), bb
+        return dd
+      })), ik = dd((function(dd, Jd, kd) {
+        var pd = Jd[2];
+        return dd[kd] = kd, pd.forEach((function(Jd) {
+          dd[Jd] = kd
+        })), dd
       }));
-      var ub = "far" in Xh || qu.autoFetchSvg,
-        hb = ah(ph, (function(bb, hb) {
-          var Bb = hb[0],
-            Ob = hb[1],
-            Gb = hb[2];
-          return "far" !== Ob || ub || (Ob = "fas"), "string" === typeof Bb && (bb.names[Bb] = {
-            prefix: Ob,
-            iconName: Gb
-          }), "number" === typeof Bb && (bb.unicodes[Bb.toString(16)] = {
-            prefix: Ob,
-            iconName: Gb
-          }), bb
+      var Jd = "far" in ek || cJ.autoFetchSvg,
+        kd = lk(Rk, (function(dd, kd) {
+          var pd = kd[0],
+            Nd = kd[1],
+            Wd = kd[2];
+          return "far" !== Nd || Jd || (Nd = "fas"), "string" === typeof pd && (dd.names[pd] = {
+            prefix: Nd,
+            iconName: Wd
+          }), "number" === typeof pd && (dd.unicodes[pd.toString(16)] = {
+            prefix: Nd,
+            iconName: Wd
+          }), dd
         }), {
           names: {},
           unicodes: {}
         });
-      Ch = hb.names, dh = hb.unicodes, lh = vh(qu.styleDefault, {
-        family: qu.familyDefault
+      Bk = kd.names, sk = kd.unicodes, vk = jk(cJ.styleDefault, {
+        family: cJ.familyDefault
       })
     };
 
-    function xh(bb, ub) {
-      return (Kh[bb] || {})[ub]
+    function Yk(dd, Jd) {
+      return (xk[dd] || {})[Jd]
     }
 
-    function zh(bb, ub) {
-      return (rh[bb] || {})[ub]
+    function mk(dd, Jd) {
+      return (ik[dd] || {})[Jd]
     }
 
-    function gh(bb) {
-      return Ch[bb] || {
+    function bk(dd) {
+      return Bk[dd] || {
         prefix: null,
         iconName: null
       }
     }
 
-    function ih() {
-      return lh
+    function Sk() {
+      return vk
     }
-    nh = function(bb) {
-      lh = vh(bb.styleDefault, {
-        family: qu.familyDefault
+    Mk = function(dd) {
+      vk = jk(dd.styleDefault, {
+        family: cJ.familyDefault
       })
-    }, Eu.push(nh), Dh();
+    }, hJ.push(Mk), Fk();
 
-    function vh(bb) {
-      var ub = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).family,
-        hb = void 0 === ub ? vb : ub,
-        Bb = Du[hb][bb];
-      if (hb === tb && !bb) return "fad";
-      var Ob = zu[hb][bb] || zu[hb][Bb],
-        Gb = bb in Oh.styles ? bb : null;
-      return Ob || Gb || null
+    function jk(dd) {
+      var Jd = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).family,
+        kd = void 0 === Jd ? Sd : Jd,
+        pd = MJ[kd][dd];
+      if (kd === jd && !dd) return "fad";
+      var Nd = YJ[kd][dd] || YJ[kd][pd],
+        Wd = dd in Wk.styles ? dd : null;
+      return Nd || Wd || null
     }
 
-    function th(bb) {
-      return bb.sort().filter((function(bb, ub, hb) {
-        return hb.indexOf(bb) === ub
+    function Xk(dd) {
+      return dd.sort().filter((function(dd, Jd, kd) {
+        return kd.indexOf(dd) === Jd
       }))
     }
-    var Jh = au.concat(bu);
+    var fk = oJ.concat(JJ);
 
-    function eh(bb) {
-      var ub = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).skipLookups,
-        hb = void 0 !== ub && ub,
-        Bb = null,
-        Ob = th(bb.filter((function(bb) {
-          return Jh.includes(bb)
+    function nk(dd) {
+      var Jd = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).skipLookups,
+        kd = void 0 !== Jd && Jd,
+        pd = null,
+        Nd = Xk(dd.filter((function(dd) {
+          return fk.includes(dd)
         }))),
-        Gb = th(bb.filter((function(bb) {
-          return !Jh.includes(bb)
+        Wd = Xk(dd.filter((function(dd) {
+          return !fk.includes(dd)
         }))),
-        Ub = Sb(Ob.filter((function(bb) {
-          return Bb = bb, !ib.includes(bb)
+        Pd = Cd(Nd.filter((function(dd) {
+          return pd = dd, !bd.includes(dd)
         })), 1)[0],
-        Lb = void 0 === Ub ? null : Ub,
-        ab = function(bb) {
-          var ub = vb,
-            hb = oh.reduce((function(bb, ub) {
-              return bb[ub] = "".concat(qu.cssPrefix, "-").concat(ub), bb
+        Zd = void 0 === Pd ? null : Pd,
+        Kd = function(dd) {
+          var Jd = Sd,
+            kd = Ik.reduce((function(dd, Jd) {
+              return dd[Jd] = "".concat(cJ.cssPrefix, "-").concat(Jd), dd
             }), {});
-          return Qb.forEach((function(Bb) {
-            (bb.includes(hb[Bb]) || bb.some((function(bb) {
-              return Ah[Bb].includes(bb)
-            }))) && (ub = Bb)
-          })), ub
-        }(Ob),
-        Hb = Yb(Yb({}, function(bb) {
-          var ub = [],
-            hb = null;
-          return bb.forEach((function(bb) {
-            var Bb = jh(qu.cssPrefix, bb);
-            Bb ? hb = Bb : bb && ub.push(bb)
+          return Ad.forEach((function(pd) {
+            (dd.includes(kd[pd]) || dd.some((function(dd) {
+              return Gk[pd].includes(dd)
+            }))) && (Jd = pd)
+          })), Jd
+        }(Nd),
+        od = gd(gd({}, function(dd) {
+          var Jd = [],
+            kd = null;
+          return dd.forEach((function(dd) {
+            var pd = ak(cJ.cssPrefix, dd);
+            pd ? kd = pd : dd && Jd.push(dd)
           })), {
-            iconName: hb,
-            rest: ub
+            iconName: kd,
+            rest: Jd
           }
-        }(Gb)), {}, {
-          prefix: vh(Lb, {
-            family: ab
+        }(Wd)), {}, {
+          prefix: jk(Zd, {
+            family: Kd
           })
         });
-      return Yb(Yb(Yb({}, Hb), function(bb) {
-        var ub = bb.values,
-          hb = bb.family,
-          Bb = bb.canonical,
-          Ob = bb.givenPrefix,
-          Gb = void 0 === Ob ? "" : Ob,
-          Ub = bb.styles,
-          Lb = void 0 === Ub ? {} : Ub,
-          Yb = bb.config,
-          Sb = void 0 === Yb ? {} : Yb,
-          ab = hb === tb,
-          Hb = ub.includes("fa-duotone") || ub.includes("fad"),
-          wb = "duotone" === Sb.familyDefault,
-          Zb = "fad" === Bb.prefix || "fa-duotone" === Bb.prefix;
-        !ab && (Hb || wb || Zb) && (Bb.prefix = "fad");
-        (ub.includes("fa-brands") || ub.includes("fab")) && (Bb.prefix = "fab");
-        if (!Bb.prefix && Nh.includes(hb)) {
-          if (Object.keys(Lb).find((function(bb) {
-              return sh.includes(bb)
-            })) || Sb.autoFetchSvg) {
-            var Xb = Rb.get(hb).defaultShortPrefixId;
-            Bb.prefix = Xb, Bb.iconName = zh(Bb.prefix, Bb.iconName) || Bb.iconName
+      return gd(gd(gd({}, od), function(dd) {
+        var Jd = dd.values,
+          kd = dd.family,
+          pd = dd.canonical,
+          Nd = dd.givenPrefix,
+          Wd = void 0 === Nd ? "" : Nd,
+          Pd = dd.styles,
+          Zd = void 0 === Pd ? {} : Pd,
+          gd = dd.config,
+          Cd = void 0 === gd ? {} : gd,
+          Kd = kd === jd,
+          od = Jd.includes("fa-duotone") || Jd.includes("fad"),
+          ld = "duotone" === Cd.familyDefault,
+          Qd = "fad" === pd.prefix || "fa-duotone" === pd.prefix;
+        !Kd && (od || ld || Qd) && (pd.prefix = "fad");
+        (Jd.includes("fa-brands") || Jd.includes("fab")) && (pd.prefix = "fab");
+        if (!pd.prefix && Uk.includes(kd)) {
+          if (Object.keys(Zd).find((function(dd) {
+              return yk.includes(dd)
+            })) || Cd.autoFetchSvg) {
+            var Ld = dJ.get(kd).defaultShortPrefixId;
+            pd.prefix = Ld, pd.iconName = mk(pd.prefix, pd.iconName) || pd.iconName
           }
         }
-        "fa" !== Bb.prefix && "fa" !== Gb || (Bb.prefix = ih() || "fas");
-        return Bb
+        "fa" !== pd.prefix && "fa" !== Wd || (pd.prefix = Sk() || "fas");
+        return pd
       }({
-        values: bb,
-        family: ab,
-        styles: Xh,
-        config: qu,
-        canonical: Hb,
-        givenPrefix: Bb
-      })), function(bb, ub, hb) {
-        var Bb = hb.prefix,
-          Ob = hb.iconName;
-        if (bb || !Bb || !Ob) return {
-          prefix: Bb,
-          iconName: Ob
+        values: dd,
+        family: Kd,
+        styles: ek,
+        config: cJ,
+        canonical: od,
+        givenPrefix: pd
+      })), function(dd, Jd, kd) {
+        var pd = kd.prefix,
+          Nd = kd.iconName;
+        if (dd || !pd || !Nd) return {
+          prefix: pd,
+          iconName: Nd
         };
-        var Gb = "fa" === ub ? gh(Ob) : {},
-          Ub = zh(Bb, Ob);
-        Ob = Gb.iconName || Ub || Ob, "far" !== (Bb = Gb.prefix || Bb) || Xh.far || !Xh.fas || qu.autoFetchSvg || (Bb = "fas");
+        var Wd = "fa" === Jd ? bk(Nd) : {},
+          Pd = mk(pd, Nd);
+        Nd = Wd.iconName || Pd || Nd, "far" !== (pd = Wd.prefix || pd) || ek.far || !ek.fas || cJ.autoFetchSvg || (pd = "fas");
         return {
-          prefix: Bb,
-          iconName: Ob
+          prefix: pd,
+          iconName: Nd
         }
-      }(hb, Bb, Hb))
+      }(kd, pd, od))
     }
-    var Nh = Qb.filter((function(bb) {
-        return bb !== vb || bb !== tb
+    var Uk = Ad.filter((function(dd) {
+        return dd !== Sd || dd !== jd
       })),
-      sh = Object.keys(Su).filter((function(bb) {
-        return bb !== vb
-      })).map((function(bb) {
-        return Object.keys(Su[bb])
+      yk = Object.keys(KJ).filter((function(dd) {
+        return dd !== Sd
+      })).map((function(dd) {
+        return Object.keys(KJ[dd])
       })).flat();
-    var Mh = function() {
-        return function(bb, ub, hb) {
-          return ub && Ob(bb.prototype, ub), hb && Ob(bb, hb), Object.defineProperty(bb, "prototype", {
+    var Dk = function() {
+        return function(dd, Jd, kd) {
+          return Jd && Nd(dd.prototype, Jd), kd && Nd(dd, kd), Object.defineProperty(dd, "prototype", {
             writable: !1
-          }), bb
-        }((function bb() {
-          ! function(bb, ub) {
-            if (!(bb instanceof ub)) throw new TypeError("Cannot call a class as a function")
-          }(this, bb), this.definitions = {}
+          }), dd
+        }((function dd() {
+          ! function(dd, Jd) {
+            if (!(dd instanceof Jd)) throw new TypeError("Cannot call a class as a function")
+          }(this, dd), this.definitions = {}
         }), [{
           key: "add",
           value: function() {
-            for (var bb = this, ub = arguments.length, hb = new Array(ub), Bb = 0; Bb < ub; Bb++) hb[Bb] = arguments[Bb];
-            var Ob = hb.reduce(this._pullDefinitions, {});
-            Object.keys(Ob).forEach((function(ub) {
-              bb.definitions[ub] = Yb(Yb({}, bb.definitions[ub] || {}), Ob[ub]), Zh(ub, Ob[ub]);
-              var hb = iu[vb][ub];
-              hb && Zh(hb, Ob[ub]), Dh()
+            for (var dd = this, Jd = arguments.length, kd = new Array(Jd), pd = 0; pd < Jd; pd++) kd[pd] = arguments[pd];
+            var Nd = kd.reduce(this._pullDefinitions, {});
+            Object.keys(Nd).forEach((function(Jd) {
+              dd.definitions[Jd] = gd(gd({}, dd.definitions[Jd] || {}), Nd[Jd]), Ok(Jd, Nd[Jd]);
+              var kd = bJ[Sd][Jd];
+              kd && Ok(kd, Nd[Jd]), Fk()
             }))
           }
         }, {
@@ -1722,201 +1722,201 @@ export const modules = {
           }
         }, {
           key: "_pullDefinitions",
-          value: function(bb, ub) {
-            var hb = ub.prefix && ub.iconName && ub.icon ? {
-              0: ub
-            } : ub;
-            return Object.keys(hb).map((function(ub) {
-              var Bb = hb[ub],
-                Ob = Bb.prefix,
-                Gb = Bb.iconName,
-                Ub = Bb.icon,
-                Lb = Ub[2];
-              bb[Ob] || (bb[Ob] = {}), Lb.length > 0 && Lb.forEach((function(ub) {
-                "string" === typeof ub && (bb[Ob][ub] = Ub)
-              })), bb[Ob][Gb] = Ub
-            })), bb
+          value: function(dd, Jd) {
+            var kd = Jd.prefix && Jd.iconName && Jd.icon ? {
+              0: Jd
+            } : Jd;
+            return Object.keys(kd).map((function(Jd) {
+              var pd = kd[Jd],
+                Nd = pd.prefix,
+                Wd = pd.iconName,
+                Pd = pd.icon,
+                Zd = Pd[2];
+              dd[Nd] || (dd[Nd] = {}), Zd.length > 0 && Zd.forEach((function(Jd) {
+                "string" === typeof Jd && (dd[Nd][Jd] = Pd)
+              })), dd[Nd][Wd] = Pd
+            })), dd
           }
         }])
       }(),
-      mh = [],
-      Ih = {},
-      Ph = {},
-      qh = Object.keys(Ph);
+      Tk = [],
+      Ek = {},
+      ck = {},
+      hk = Object.keys(ck);
 
-    function Eh(bb, ub) {
-      for (var hb = arguments.length, Bb = new Array(hb > 2 ? hb - 2 : 0), Ob = 2; Ob < hb; Ob++) Bb[Ob - 2] = arguments[Ob];
-      return (Ih[bb] || []).forEach((function(bb) {
-        ub = bb.apply(null, [ub].concat(Bb))
-      })), ub
+    function rk(dd, Jd) {
+      for (var kd = arguments.length, pd = new Array(kd > 2 ? kd - 2 : 0), Nd = 2; Nd < kd; Nd++) pd[Nd - 2] = arguments[Nd];
+      return (Ek[dd] || []).forEach((function(dd) {
+        Jd = dd.apply(null, [Jd].concat(pd))
+      })), Jd
     }
 
-    function yh(bb) {
-      for (var ub = arguments.length, hb = new Array(ub > 1 ? ub - 1 : 0), Bb = 1; Bb < ub; Bb++) hb[Bb - 1] = arguments[Bb];
-      (Ih[bb] || []).forEach((function(bb) {
-        bb.apply(null, hb)
+    function uk(dd) {
+      for (var Jd = arguments.length, kd = new Array(Jd > 1 ? Jd - 1 : 0), pd = 1; pd < Jd; pd++) kd[pd - 1] = arguments[pd];
+      (Ek[dd] || []).forEach((function(dd) {
+        dd.apply(null, kd)
       }))
     }
 
-    function Vh() {
-      var bb = arguments[0],
-        ub = Array.prototype.slice.call(arguments, 1);
-      return Ph[bb] ? Ph[bb].apply(null, ub) : void 0
+    function tk() {
+      var dd = arguments[0],
+        Jd = Array.prototype.slice.call(arguments, 1);
+      return ck[dd] ? ck[dd].apply(null, Jd) : void 0
     }
 
-    function Fh(bb) {
-      "fa" === bb.prefix && (bb.prefix = "fas");
-      var ub = bb.iconName,
-        hb = bb.prefix || ih();
-      if (ub) return ub = zh(hb, ub) || ub, Sh(fh.definitions, hb, ub) || Sh(Oh.styles, hb, ub)
+    function Vk(dd) {
+      "fa" === dd.prefix && (dd.prefix = "fas");
+      var Jd = dd.iconName,
+        kd = dd.prefix || Sk();
+      if (Jd) return Jd = mk(kd, Jd) || Jd, Kk(zk.definitions, kd, Jd) || Kk(Wk.styles, kd, Jd)
     }
-    var fh = new Mh,
-      kh = {
+    var zk = new Dk,
+      Hk = {
         i2svg: function() {
-          var bb = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return xb ? (yh("beforeI2svg", bb), Vh("pseudoElements2svg", bb), Vh("i2svg", bb)) : Promise.reject(new Error("Operation requires a DOM of some kind."))
+          var dd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+          return Fd ? (uk("beforeI2svg", dd), tk("pseudoElements2svg", dd), tk("i2svg", dd)) : Promise.reject(new Error("Operation requires a DOM of some kind."))
         },
         watch: function() {
-          var bb, ub = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            hb = ub.autoReplaceSvgRoot;
-          !1 === qu.autoReplaceSvg && (qu.autoReplaceSvg = !0), qu.observeMutations = !0, bb = function() {
-            ch({
-              autoReplaceSvgRoot: hb
-            }), yh("watch", ub)
-          }, xb && (Lh ? setTimeout(bb, 0) : Gh.push(bb))
+          var dd, Jd = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            kd = Jd.autoReplaceSvgRoot;
+          !1 === cJ.autoReplaceSvg && (cJ.autoReplaceSvg = !0), cJ.observeMutations = !0, dd = function() {
+            Ak({
+              autoReplaceSvgRoot: kd
+            }), uk("watch", Jd)
+          }, Fd && (gk ? setTimeout(dd, 0) : Pk.push(dd))
         }
       },
-      Th = {
+      wk = {
         noAuto: function() {
-          qu.autoReplaceSvg = !1, qu.observeMutations = !1, yh("noAuto")
+          cJ.autoReplaceSvg = !1, cJ.observeMutations = !1, uk("noAuto")
         },
-        config: qu,
-        dom: kh,
+        config: cJ,
+        dom: Hk,
         parse: {
-          icon: function(bb) {
-            if (null === bb) return null;
-            if ("object" === wb(bb) && bb.prefix && bb.iconName) return {
-              prefix: bb.prefix,
-              iconName: zh(bb.prefix, bb.iconName) || bb.iconName
+          icon: function(dd) {
+            if (null === dd) return null;
+            if ("object" === ld(dd) && dd.prefix && dd.iconName) return {
+              prefix: dd.prefix,
+              iconName: mk(dd.prefix, dd.iconName) || dd.iconName
             };
-            if (Array.isArray(bb) && 2 === bb.length) {
-              var ub = 0 === bb[1].indexOf("fa-") ? bb[1].slice(3) : bb[1],
-                hb = vh(bb[0]);
+            if (Array.isArray(dd) && 2 === dd.length) {
+              var Jd = 0 === dd[1].indexOf("fa-") ? dd[1].slice(3) : dd[1],
+                kd = jk(dd[0]);
               return {
-                prefix: hb,
-                iconName: zh(hb, ub) || ub
+                prefix: kd,
+                iconName: mk(kd, Jd) || Jd
               }
             }
-            if ("string" === typeof bb && (bb.indexOf("".concat(qu.cssPrefix, "-")) > -1 || bb.match(tu))) {
-              var Bb = eh(bb.split(" "), {
+            if ("string" === typeof dd && (dd.indexOf("".concat(cJ.cssPrefix, "-")) > -1 || dd.match(jJ))) {
+              var pd = nk(dd.split(" "), {
                 skipLookups: !0
               });
               return {
-                prefix: Bb.prefix || ih(),
-                iconName: zh(Bb.prefix, Bb.iconName) || Bb.iconName
+                prefix: pd.prefix || Sk(),
+                iconName: mk(pd.prefix, pd.iconName) || pd.iconName
               }
             }
-            if ("string" === typeof bb) {
-              var Ob = ih();
+            if ("string" === typeof dd) {
+              var Nd = Sk();
               return {
-                prefix: Ob,
-                iconName: zh(Ob, bb) || bb
+                prefix: Nd,
+                iconName: mk(Nd, dd) || dd
               }
             }
           }
         },
-        library: fh,
-        findIconDefinition: Fh,
-        toHtml: Yh
+        library: zk,
+        findIconDefinition: Vk,
+        toHtml: Ck
       },
-      ch = function() {
-        var bb = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).autoReplaceSvgRoot,
-          ub = void 0 === bb ? jb : bb;
-        (Object.keys(Oh.styles).length > 0 || qu.autoFetchSvg) && xb && qu.autoReplaceSvg && Th.dom.i2svg({
-          node: ub
+      Ak = function() {
+        var dd = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).autoReplaceSvgRoot,
+          Jd = void 0 === dd ? sd : dd;
+        (Object.keys(Wk.styles).length > 0 || cJ.autoFetchSvg) && Fd && cJ.autoReplaceSvg && wk.dom.i2svg({
+          node: Jd
         })
       };
 
-    function Qh(bb, ub) {
-      return Object.defineProperty(bb, "abstract", {
-        get: ub
-      }), Object.defineProperty(bb, "html", {
+    function dp(dd, Jd) {
+      return Object.defineProperty(dd, "abstract", {
+        get: Jd
+      }), Object.defineProperty(dd, "html", {
         get: function() {
-          return bb.abstract.map((function(bb) {
-            return Yh(bb)
+          return dd.abstract.map((function(dd) {
+            return Ck(dd)
           }))
         }
-      }), Object.defineProperty(bb, "node", {
+      }), Object.defineProperty(dd, "node", {
         get: function() {
-          if (xb) {
-            var ub = jb.createElement("div");
-            return ub.innerHTML = bb.html, ub.children
+          if (Fd) {
+            var Jd = sd.createElement("div");
+            return Jd.innerHTML = dd.html, Jd.children
           }
         }
-      }), bb
+      }), dd
     }
 
-    function Rh(bb) {
-      var ub = bb.icons,
-        hb = ub.main,
-        Bb = ub.mask,
-        Ob = bb.prefix,
-        Gb = bb.iconName,
-        Ub = bb.transform,
-        Lb = bb.symbol,
-        Sb = bb.maskId,
-        ab = bb.extra,
-        Hb = bb.watchable,
-        wb = void 0 !== Hb && Hb,
-        Zb = Bb.found ? Bb : hb,
-        Xb = Zb.width,
-        pb = Zb.height,
-        ob = [qu.replacementClass, Gb ? "".concat(qu.cssPrefix, "-").concat(Gb) : ""].filter((function(bb) {
-          return -1 === ab.classes.indexOf(bb)
-        })).filter((function(bb) {
-          return "" !== bb || !!bb
-        })).concat(ab.classes).join(" "),
-        Ab = {
+    function Jp(dd) {
+      var Jd = dd.icons,
+        kd = Jd.main,
+        pd = Jd.mask,
+        Nd = dd.prefix,
+        Wd = dd.iconName,
+        Pd = dd.transform,
+        Zd = dd.symbol,
+        Cd = dd.maskId,
+        Kd = dd.extra,
+        od = dd.watchable,
+        ld = void 0 !== od && od,
+        Qd = pd.found ? pd : kd,
+        Ld = Qd.width,
+        Od = Qd.height,
+        ed = [cJ.replacementClass, Wd ? "".concat(cJ.cssPrefix, "-").concat(Wd) : ""].filter((function(dd) {
+          return -1 === Kd.classes.indexOf(dd)
+        })).filter((function(dd) {
+          return "" !== dd || !!dd
+        })).concat(Kd.classes).join(" "),
+        Rd = {
           children: [],
-          attributes: Yb(Yb({}, ab.attributes), {}, {
-            "data-prefix": Ob,
-            "data-icon": Gb,
-            class: ob,
-            role: ab.attributes.role || "img",
-            viewBox: "0 0 ".concat(Xb, " ").concat(pb)
+          attributes: gd(gd({}, Kd.attributes), {}, {
+            "data-prefix": Nd,
+            "data-icon": Wd,
+            class: ed,
+            role: Kd.attributes.role || "img",
+            viewBox: "0 0 ".concat(Ld, " ").concat(Od)
           })
         };
-      (function(bb) {
-        return ["aria-label", "aria-labelledby", "title", "role"].some((function(ub) {
-          return ub in bb
+      (function(dd) {
+        return ["aria-label", "aria-labelledby", "title", "role"].some((function(Jd) {
+          return Jd in dd
         }))
-      })(ab.attributes) || ab.attributes["aria-hidden"] || (Ab.attributes["aria-hidden"] = "true"), wb && (Ab.attributes[ou] = "");
-      var lb = Yb(Yb({}, Ab), {}, {
-          prefix: Ob,
-          iconName: Gb,
-          main: hb,
-          mask: Bb,
-          maskId: Sb,
-          transform: Ub,
-          symbol: Lb,
-          styles: Yb({}, ab.styles)
+      })(Kd.attributes) || Kd.attributes["aria-hidden"] || (Rd.attributes["aria-hidden"] = "true"), ld && (Rd.attributes[RJ] = "");
+      var Id = gd(gd({}, Rd), {}, {
+          prefix: Nd,
+          iconName: Wd,
+          main: kd,
+          mask: pd,
+          maskId: Cd,
+          transform: Pd,
+          symbol: Zd,
+          styles: gd({}, Kd.styles)
         }),
-        Kb = Bb.found && hb.found ? Vh("generateAbstractMask", lb) || {
+        Gd = pd.found && kd.found ? tk("generateAbstractMask", Id) || {
           children: [],
           attributes: {}
-        } : Vh("generateAbstractIcon", lb) || {
+        } : tk("generateAbstractIcon", Id) || {
           children: [],
           attributes: {}
         },
-        Wb = Kb.children,
-        Cb = Kb.attributes;
-      return lb.children = Wb, lb.attributes = Cb, Lb ? function(bb) {
-        var ub = bb.prefix,
-          hb = bb.iconName,
-          Bb = bb.children,
-          Ob = bb.attributes,
-          Gb = bb.symbol,
-          Ub = !0 === Gb ? "".concat(ub, "-").concat(qu.cssPrefix, "-").concat(hb) : Gb;
+        vd = Gd.children,
+        xd = Gd.attributes;
+      return Id.children = vd, Id.attributes = xd, Zd ? function(dd) {
+        var Jd = dd.prefix,
+          kd = dd.iconName,
+          pd = dd.children,
+          Nd = dd.attributes,
+          Wd = dd.symbol,
+          Pd = !0 === Wd ? "".concat(Jd, "-").concat(cJ.cssPrefix, "-").concat(kd) : Wd;
         return [{
           tag: "svg",
           attributes: {
@@ -1924,267 +1924,267 @@ export const modules = {
           },
           children: [{
             tag: "symbol",
-            attributes: Yb(Yb({}, Ob), {}, {
-              id: Ub
+            attributes: gd(gd({}, Nd), {}, {
+              id: Pd
             }),
-            children: Bb
+            children: pd
           }]
         }]
-      }(lb) : function(bb) {
-        var ub = bb.children,
-          hb = bb.main,
-          Bb = bb.mask,
-          Ob = bb.attributes,
-          Gb = bb.styles,
-          Ub = bb.transform;
-        if (Qu(Ub) && hb.found && !Bb.found) {
-          var Lb = {
-            x: hb.width / hb.height / 2,
+      }(Id) : function(dd) {
+        var Jd = dd.children,
+          kd = dd.main,
+          pd = dd.mask,
+          Nd = dd.attributes,
+          Wd = dd.styles,
+          Pd = dd.transform;
+        if (AJ(Pd) && kd.found && !pd.found) {
+          var Zd = {
+            x: kd.width / kd.height / 2,
             y: .5
           };
-          Ob.style = cu(Yb(Yb({}, Gb), {}, {
-            "transform-origin": "".concat(Lb.x + Ub.x / 16, "em ").concat(Lb.y + Ub.y / 16, "em")
+          Nd.style = wJ(gd(gd({}, Wd), {}, {
+            "transform-origin": "".concat(Zd.x + Pd.x / 16, "em ").concat(Zd.y + Pd.y / 16, "em")
           }))
         }
         return [{
           tag: "svg",
-          attributes: Ob,
-          children: ub
+          attributes: Nd,
+          children: Jd
         }]
-      }(lb)
+      }(Id)
     }
 
-    function bB(bb) {
-      var ub = bb.content,
-        hb = bb.width,
-        Bb = bb.height,
-        Ob = bb.transform,
-        Gb = bb.extra,
-        Ub = bb.watchable,
-        Lb = void 0 !== Ub && Ub,
-        Sb = Yb(Yb({}, Gb.attributes), {}, {
-          class: Gb.classes.join(" ")
+    function kp(dd) {
+      var Jd = dd.content,
+        kd = dd.width,
+        pd = dd.height,
+        Nd = dd.transform,
+        Wd = dd.extra,
+        Pd = dd.watchable,
+        Zd = void 0 !== Pd && Pd,
+        Cd = gd(gd({}, Wd.attributes), {}, {
+          class: Wd.classes.join(" ")
         });
-      Lb && (Sb[ou] = "");
-      var ab = Yb({}, Gb.styles);
-      Qu(Ob) && (ab.transform = function(bb) {
-        var ub = bb.transform,
-          hb = bb.width,
-          Bb = void 0 === hb ? 16 : hb,
-          Ob = bb.height,
-          Gb = void 0 === Ob ? 16 : Ob,
-          Ub = bb.startCentered,
-          Lb = void 0 !== Ub && Ub,
-          Yb = "";
-        return Yb += Lb && zb ? "translate(".concat(ub.x / yu - Bb / 2, "em, ").concat(ub.y / yu - Gb / 2, "em) ") : Lb ? "translate(calc(-50% + ".concat(ub.x / yu, "em), calc(-50% + ").concat(ub.y / yu, "em)) ") : "translate(".concat(ub.x / yu, "em, ").concat(ub.y / yu, "em) "), Yb += "scale(".concat(ub.size / yu * (ub.flipX ? -1 : 1), ", ").concat(ub.size / yu * (ub.flipY ? -1 : 1), ") "), Yb + "rotate(".concat(ub.rotate, "deg) ")
+      Zd && (Cd[RJ] = "");
+      var Kd = gd({}, Wd.styles);
+      AJ(Nd) && (Kd.transform = function(dd) {
+        var Jd = dd.transform,
+          kd = dd.width,
+          pd = void 0 === kd ? 16 : kd,
+          Nd = dd.height,
+          Wd = void 0 === Nd ? 16 : Nd,
+          Pd = dd.startCentered,
+          Zd = void 0 !== Pd && Pd,
+          gd = "";
+        return gd += Zd && Yd ? "translate(".concat(Jd.x / rJ - pd / 2, "em, ").concat(Jd.y / rJ - Wd / 2, "em) ") : Zd ? "translate(calc(-50% + ".concat(Jd.x / rJ, "em), calc(-50% + ").concat(Jd.y / rJ, "em)) ") : "translate(".concat(Jd.x / rJ, "em, ").concat(Jd.y / rJ, "em) "), gd += "scale(".concat(Jd.size / rJ * (Jd.flipX ? -1 : 1), ", ").concat(Jd.size / rJ * (Jd.flipY ? -1 : 1), ") "), gd + "rotate(".concat(Jd.rotate, "deg) ")
       }({
-        transform: Ob,
+        transform: Nd,
         startCentered: !0,
-        width: hb,
-        height: Bb
-      }), ab["-webkit-transform"] = ab.transform);
-      var Hb = cu(ab);
-      Hb.length > 0 && (Sb.style = Hb);
-      var wb = [];
-      return wb.push({
+        width: kd,
+        height: pd
+      }), Kd["-webkit-transform"] = Kd.transform);
+      var od = wJ(Kd);
+      od.length > 0 && (Cd.style = od);
+      var ld = [];
+      return ld.push({
         tag: "span",
-        attributes: Sb,
-        children: [ub]
-      }), wb
+        attributes: Cd,
+        children: [Jd]
+      }), ld
     }
-    var uB = Oh.styles;
+    var pp = Wk.styles;
 
-    function hB(bb) {
-      var ub = bb[0],
-        hb = bb[1],
-        Bb = Sb(bb.slice(4), 1)[0];
+    function Np(dd) {
+      var Jd = dd[0],
+        kd = dd[1],
+        pd = Cd(dd.slice(4), 1)[0];
       return {
         found: !0,
-        width: ub,
-        height: hb,
-        icon: Array.isArray(Bb) ? {
+        width: Jd,
+        height: kd,
+        icon: Array.isArray(pd) ? {
           tag: "g",
           attributes: {
-            class: "".concat(qu.cssPrefix, "-").concat(su.GROUP)
+            class: "".concat(cJ.cssPrefix, "-").concat(UJ.GROUP)
           },
           children: [{
             tag: "path",
             attributes: {
-              class: "".concat(qu.cssPrefix, "-").concat(su.SECONDARY),
+              class: "".concat(cJ.cssPrefix, "-").concat(UJ.SECONDARY),
               fill: "currentColor",
-              d: Bb[0]
+              d: pd[0]
             }
           }, {
             tag: "path",
             attributes: {
-              class: "".concat(qu.cssPrefix, "-").concat(su.PRIMARY),
+              class: "".concat(cJ.cssPrefix, "-").concat(UJ.PRIMARY),
               fill: "currentColor",
-              d: Bb[1]
+              d: pd[1]
             }
           }]
         } : {
           tag: "path",
           attributes: {
             fill: "currentColor",
-            d: Bb
+            d: pd
           }
         }
       }
     }
-    var BB = {
+    var Wp = {
       found: !1,
       width: 512,
       height: 512
     };
 
-    function OB(bb, ub) {
-      var hb = ub;
-      return "fa" === ub && null !== qu.styleDefault && (ub = ih()), new Promise((function(Bb, Ob) {
-        if ("fa" === hb) {
-          var Gb = gh(bb) || {};
-          bb = Gb.iconName || bb, ub = Gb.prefix || ub
+    function Pp(dd, Jd) {
+      var kd = Jd;
+      return "fa" === Jd && null !== cJ.styleDefault && (Jd = Sk()), new Promise((function(pd, Nd) {
+        if ("fa" === kd) {
+          var Wd = bk(dd) || {};
+          dd = Wd.iconName || dd, Jd = Wd.prefix || Jd
         }
-        if (bb && ub && uB[ub] && uB[ub][bb]) return Bb(hB(uB[ub][bb]));
-        ! function(bb, ub) {
-          ru || qu.showMissingIcons || !bb || console.error('Icon with name "'.concat(bb, '" and prefix "').concat(ub, '" is missing.'))
-        }(bb, ub), Bb(Yb(Yb({}, BB), {}, {
-          icon: qu.showMissingIcons && bb && Vh("missingIconAbstract") || {}
+        if (dd && Jd && pp[Jd] && pp[Jd][dd]) return pd(Np(pp[Jd][dd]));
+        ! function(dd, Jd) {
+          sJ || cJ.showMissingIcons || !dd || console.error('Icon with name "'.concat(dd, '" and prefix "').concat(Jd, '" is missing.'))
+        }(dd, Jd), pd(gd(gd({}, Wp), {}, {
+          icon: cJ.showMissingIcons && dd && tk("missingIconAbstract") || {}
         }))
       }))
     }
-    var GB = function() {},
-      UB = qu.measurePerformance && Db && Db.mark && Db.measure ? Db : {
-        mark: GB,
-        measure: GB
+    var Zp = function() {},
+      gp = cJ.measurePerformance && Md && Md.mark && Md.measure ? Md : {
+        mark: Zp,
+        measure: Zp
       },
-      LB = 'FA "7.2.0"',
-      YB = function(bb) {
-        UB.mark("".concat(LB, " ").concat(bb, " ends")), UB.measure("".concat(LB, " ").concat(bb), "".concat(LB, " ").concat(bb, " begins"), "".concat(LB, " ").concat(bb, " ends"))
+      Cp = 'FA "7.2.0"',
+      Kp = function(dd) {
+        gp.mark("".concat(Cp, " ").concat(dd, " ends")), gp.measure("".concat(Cp, " ").concat(dd), "".concat(Cp, " ").concat(dd, " begins"), "".concat(Cp, " ").concat(dd, " ends"))
       },
-      SB = function(bb) {
-        return UB.mark("".concat(LB, " ").concat(bb, " begins")),
+      op = function(dd) {
+        return gp.mark("".concat(Cp, " ").concat(dd, " begins")),
           function() {
-            return YB(bb)
+            return Kp(dd)
           }
       },
-      aB = function() {};
+      lp = function() {};
 
-    function HB(bb) {
-      return "string" === typeof(bb.getAttribute ? bb.getAttribute(ou) : null)
+    function Qp(dd) {
+      return "string" === typeof(dd.getAttribute ? dd.getAttribute(RJ) : null)
     }
 
-    function wB(bb) {
-      return jb.createElementNS("http://www.w3.org/2000/svg", bb)
+    function Lp(dd) {
+      return sd.createElementNS("http://www.w3.org/2000/svg", dd)
     }
 
-    function ZB(bb) {
-      return jb.createElement(bb)
+    function Op(dd) {
+      return sd.createElement(dd)
     }
 
-    function XB(bb) {
-      var ub = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).ceFn,
-        hb = void 0 === ub ? "svg" === bb.tag ? wB : ZB : ub;
-      if ("string" === typeof bb) return jb.createTextNode(bb);
-      var Bb = hb(bb.tag);
-      return Object.keys(bb.attributes || []).forEach((function(ub) {
-        Bb.setAttribute(ub, bb.attributes[ub])
-      })), (bb.children || []).forEach((function(bb) {
-        Bb.appendChild(XB(bb, {
-          ceFn: hb
+    function ep(dd) {
+      var Jd = (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}).ceFn,
+        kd = void 0 === Jd ? "svg" === dd.tag ? Lp : Op : Jd;
+      if ("string" === typeof dd) return sd.createTextNode(dd);
+      var pd = kd(dd.tag);
+      return Object.keys(dd.attributes || []).forEach((function(Jd) {
+        pd.setAttribute(Jd, dd.attributes[Jd])
+      })), (dd.children || []).forEach((function(dd) {
+        pd.appendChild(ep(dd, {
+          ceFn: kd
         }))
-      })), Bb
+      })), pd
     }
-    var pB = {
-      replace: function(bb) {
-        var ub = bb[0];
-        if (ub.parentNode)
-          if (bb[1].forEach((function(bb) {
-              ub.parentNode.insertBefore(XB(bb), ub)
-            })), null === ub.getAttribute(ou) && qu.keepOriginalSource) {
-            var hb = jb.createComment(function(bb) {
-              var ub = " ".concat(bb.outerHTML, " ");
-              return "".concat(ub, "Font Awesome fontawesome.com ")
-            }(ub));
-            ub.parentNode.replaceChild(hb, ub)
-          } else ub.remove()
+    var Rp = {
+      replace: function(dd) {
+        var Jd = dd[0];
+        if (Jd.parentNode)
+          if (dd[1].forEach((function(dd) {
+              Jd.parentNode.insertBefore(ep(dd), Jd)
+            })), null === Jd.getAttribute(RJ) && cJ.keepOriginalSource) {
+            var kd = sd.createComment(function(dd) {
+              var Jd = " ".concat(dd.outerHTML, " ");
+              return "".concat(Jd, "Font Awesome fontawesome.com ")
+            }(Jd));
+            Jd.parentNode.replaceChild(kd, Jd)
+          } else Jd.remove()
       },
-      nest: function(bb) {
-        var ub = bb[0],
-          hb = bb[1];
-        if (~ku(ub).indexOf(qu.replacementClass)) return pB.replace(bb);
-        var Bb = new RegExp("".concat(qu.cssPrefix, "-.*"));
-        if (delete hb[0].attributes.id, hb[0].attributes.class) {
-          var Ob = hb[0].attributes.class.split(" ").reduce((function(bb, ub) {
-            return ub === qu.replacementClass || ub.match(Bb) ? bb.toSvg.push(ub) : bb.toNode.push(ub), bb
+      nest: function(dd) {
+        var Jd = dd[0],
+          kd = dd[1];
+        if (~zJ(Jd).indexOf(cJ.replacementClass)) return Rp.replace(dd);
+        var pd = new RegExp("".concat(cJ.cssPrefix, "-.*"));
+        if (delete kd[0].attributes.id, kd[0].attributes.class) {
+          var Nd = kd[0].attributes.class.split(" ").reduce((function(dd, Jd) {
+            return Jd === cJ.replacementClass || Jd.match(pd) ? dd.toSvg.push(Jd) : dd.toNode.push(Jd), dd
           }), {
             toNode: [],
             toSvg: []
           });
-          hb[0].attributes.class = Ob.toSvg.join(" "), 0 === Ob.toNode.length ? ub.removeAttribute("class") : ub.setAttribute("class", Ob.toNode.join(" "))
+          kd[0].attributes.class = Nd.toSvg.join(" "), 0 === Nd.toNode.length ? Jd.removeAttribute("class") : Jd.setAttribute("class", Nd.toNode.join(" "))
         }
-        var Gb = hb.map((function(bb) {
-          return Yh(bb)
+        var Wd = kd.map((function(dd) {
+          return Ck(dd)
         })).join("\n");
-        ub.setAttribute(ou, ""), ub.innerHTML = Gb
+        Jd.setAttribute(RJ, ""), Jd.innerHTML = Wd
       }
     };
 
-    function oB(bb) {
-      bb()
+    function Ip(dd) {
+      dd()
     }
 
-    function AB(bb, ub) {
-      var hb = "function" === typeof ub ? ub : aB;
-      if (0 === bb.length) hb();
+    function Gp(dd, Jd) {
+      var kd = "function" === typeof Jd ? Jd : lp;
+      if (0 === dd.length) kd();
       else {
-        var Bb = oB;
-        "async" === qu.mutateApproach && (Bb = rb.requestAnimationFrame || oB), Bb((function() {
-          var ub = !0 === qu.autoReplaceSvg ? pB.replace : pB[qu.autoReplaceSvg] || pB.replace,
-            Bb = SB("mutate");
-          bb.map(ub), Bb(), hb()
+        var pd = Ip;
+        "async" === cJ.mutateApproach && (pd = Bd.requestAnimationFrame || Ip), pd((function() {
+          var Jd = !0 === cJ.autoReplaceSvg ? Rp.replace : Rp[cJ.autoReplaceSvg] || Rp.replace,
+            pd = op("mutate");
+          dd.map(Jd), pd(), kd()
         }))
       }
     }
-    var lB = !1;
+    var vp = !1;
 
-    function KB() {
-      lB = !0
+    function xp() {
+      vp = !0
     }
 
-    function WB() {
-      lB = !1
+    function qp() {
+      vp = !1
     }
-    var CB = null;
+    var Bp = null;
 
-    function dB(bb) {
-      if (nb && qu.observeMutations) {
-        var ub = bb.treeCallback,
-          hb = void 0 === ub ? aB : ub,
-          Bb = bb.nodeCallback,
-          Ob = void 0 === Bb ? aB : Bb,
-          Gb = bb.pseudoElementsCallback,
-          Ub = void 0 === Gb ? aB : Gb,
-          Lb = bb.observeMutationsRoot,
-          Yb = void 0 === Lb ? jb : Lb;
-        CB = new nb((function(bb) {
-          if (!lB) {
-            var ub = ih();
-            fu(bb).forEach((function(bb) {
-              if ("childList" === bb.type && bb.addedNodes.length > 0 && !HB(bb.addedNodes[0]) && (qu.searchPseudoElements && Ub(bb.target), hb(bb.target)), "attributes" === bb.type && bb.target.parentNode && qu.searchPseudoElements && Ub([bb.target], !0), "attributes" === bb.type && HB(bb.target) && ~Nu.indexOf(bb.attributeName))
-                if ("class" === bb.attributeName && function(bb) {
-                    var ub = bb.getAttribute ? bb.getAttribute(lu) : null,
-                      hb = bb.getAttribute ? bb.getAttribute(Ku) : null;
-                    return ub && hb
-                  }(bb.target)) {
-                  var Bb = eh(ku(bb.target)),
-                    Gb = Bb.prefix,
-                    Lb = Bb.iconName;
-                  bb.target.setAttribute(lu, Gb || ub), Lb && bb.target.setAttribute(Ku, Lb)
-                } else(Yb = bb.target) && Yb.classList && Yb.classList.contains && Yb.classList.contains(qu.replacementClass) && Ob(bb.target);
-              var Yb
+    function sp(dd) {
+      if (ad && cJ.observeMutations) {
+        var Jd = dd.treeCallback,
+          kd = void 0 === Jd ? lp : Jd,
+          pd = dd.nodeCallback,
+          Nd = void 0 === pd ? lp : pd,
+          Wd = dd.pseudoElementsCallback,
+          Pd = void 0 === Wd ? lp : Wd,
+          Zd = dd.observeMutationsRoot,
+          gd = void 0 === Zd ? sd : Zd;
+        Bp = new ad((function(dd) {
+          if (!vp) {
+            var Jd = Sk();
+            VJ(dd).forEach((function(dd) {
+              if ("childList" === dd.type && dd.addedNodes.length > 0 && !Qp(dd.addedNodes[0]) && (cJ.searchPseudoElements && Pd(dd.target), kd(dd.target)), "attributes" === dd.type && dd.target.parentNode && cJ.searchPseudoElements && Pd([dd.target], !0), "attributes" === dd.type && Qp(dd.target) && ~nJ.indexOf(dd.attributeName))
+                if ("class" === dd.attributeName && function(dd) {
+                    var Jd = dd.getAttribute ? dd.getAttribute(GJ) : null,
+                      kd = dd.getAttribute ? dd.getAttribute(vJ) : null;
+                    return Jd && kd
+                  }(dd.target)) {
+                  var pd = nk(zJ(dd.target)),
+                    Wd = pd.prefix,
+                    Zd = pd.iconName;
+                  dd.target.setAttribute(GJ, Wd || Jd), Zd && dd.target.setAttribute(vJ, Zd)
+                } else(gd = dd.target) && gd.classList && gd.classList.contains && gd.classList.contains(cJ.replacementClass) && Nd(dd.target);
+              var gd
             }))
           }
-        })), xb && CB.observe(Yb, {
+        })), Fd && Bp.observe(gd, {
           childList: !0,
           attributes: !0,
           characterData: !0,
@@ -2193,42 +2193,42 @@ export const modules = {
       }
     }
 
-    function rB(bb) {
-      var ub, hb, Bb = bb.getAttribute("data-prefix"),
-        Ob = bb.getAttribute("data-icon"),
-        Gb = void 0 !== bb.innerText ? bb.innerText.trim() : "",
-        Ub = eh(ku(bb));
-      return Ub.prefix || (Ub.prefix = ih()), Bb && Ob && (Ub.prefix = Bb, Ub.iconName = Ob), Ub.iconName && Ub.prefix || (Ub.prefix && Gb.length > 0 && (Ub.iconName = (ub = Ub.prefix, hb = bb.innerText, (Wh[ub] || {})[hb] || xh(Ub.prefix, Hh(bb.innerText)))), !Ub.iconName && qu.autoFetchSvg && bb.firstChild && bb.firstChild.nodeType === Node.TEXT_NODE && (Ub.iconName = bb.firstChild.data)), Ub
+    function ip(dd) {
+      var Jd, kd, pd = dd.getAttribute("data-prefix"),
+        Nd = dd.getAttribute("data-icon"),
+        Wd = void 0 !== dd.innerText ? dd.innerText.trim() : "",
+        Pd = nk(zJ(dd));
+      return Pd.prefix || (Pd.prefix = Sk()), pd && Nd && (Pd.prefix = pd, Pd.iconName = Nd), Pd.iconName && Pd.prefix || (Pd.prefix && Wd.length > 0 && (Pd.iconName = (Jd = Pd.prefix, kd = dd.innerText, (qk[Jd] || {})[kd] || Yk(Pd.prefix, Qk(dd.innerText)))), !Pd.iconName && cJ.autoFetchSvg && dd.firstChild && dd.firstChild.nodeType === Node.TEXT_NODE && (Pd.iconName = dd.firstChild.data)), Pd
     }
 
-    function jB(bb) {
-      var ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function ap(dd) {
+      var Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           styleParser: !0
         },
-        hb = rB(bb),
-        Bb = hb.iconName,
-        Ob = hb.prefix,
-        Gb = hb.rest,
-        Ub = function(bb) {
-          return fu(bb.attributes).reduce((function(bb, ub) {
-            return "class" !== bb.name && "style" !== bb.name && (bb[ub.name] = ub.value), bb
+        kd = ip(dd),
+        pd = kd.iconName,
+        Nd = kd.prefix,
+        Wd = kd.rest,
+        Pd = function(dd) {
+          return VJ(dd.attributes).reduce((function(dd, Jd) {
+            return "class" !== dd.name && "style" !== dd.name && (dd[Jd.name] = Jd.value), dd
           }), {})
-        }(bb),
-        Lb = Eh("parseNodeAttributes", {}, bb),
-        Sb = ub.styleParser ? function(bb) {
-          var ub = bb.getAttribute("style"),
-            hb = [];
-          return ub && (hb = ub.split(";").reduce((function(bb, ub) {
-            var hb = ub.split(":"),
-              Bb = hb[0],
-              Ob = hb.slice(1);
-            return Bb && Ob.length > 0 && (bb[Bb] = Ob.join(":").trim()), bb
-          }), {})), hb
-        }(bb) : [];
-      return Yb({
-        iconName: Bb,
-        prefix: Ob,
-        transform: Vu,
+        }(dd),
+        Zd = rk("parseNodeAttributes", {}, dd),
+        Cd = Jd.styleParser ? function(dd) {
+          var Jd = dd.getAttribute("style"),
+            kd = [];
+          return Jd && (kd = Jd.split(";").reduce((function(dd, Jd) {
+            var kd = Jd.split(":"),
+              pd = kd[0],
+              Nd = kd.slice(1);
+            return pd && Nd.length > 0 && (dd[pd] = Nd.join(":").trim()), dd
+          }), {})), kd
+        }(dd) : [];
+      return gd({
+        iconName: pd,
+        prefix: Nd,
+        transform: uJ,
         mask: {
           iconName: null,
           prefix: null,
@@ -2237,271 +2237,271 @@ export const modules = {
         maskId: null,
         symbol: !1,
         extra: {
-          classes: Gb,
-          styles: Sb,
-          attributes: Ub
+          classes: Wd,
+          styles: Cd,
+          attributes: Pd
         }
-      }, Lb)
+      }, Zd)
     }
-    var nB = Oh.styles;
+    var Mp = Wk.styles;
 
-    function DB(bb) {
-      var ub = "nest" === qu.autoReplaceSvg ? jB(bb, {
+    function Fp(dd) {
+      var Jd = "nest" === cJ.autoReplaceSvg ? ap(dd, {
         styleParser: !1
-      }) : jB(bb);
-      return ~ub.extra.classes.indexOf(Ju) ? Vh("generateLayersText", bb, ub) : Vh("generateSvgReplacementMutation", bb, ub)
+      }) : ap(dd);
+      return ~Jd.extra.classes.indexOf(XJ) ? tk("generateLayersText", dd, Jd) : tk("generateSvgReplacementMutation", dd, Jd)
     }
 
-    function xB(bb) {
-      var ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (!xb) return Promise.resolve();
-      var hb = jb.documentElement.classList,
-        Bb = function(bb) {
-          return hb.add("".concat(Wu, "-").concat(bb))
+    function Yp(dd) {
+      var Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (!Fd) return Promise.resolve();
+      var kd = sd.documentElement.classList,
+        pd = function(dd) {
+          return kd.add("".concat(xJ, "-").concat(dd))
         },
-        Ob = function(bb) {
-          return hb.remove("".concat(Wu, "-").concat(bb))
+        Nd = function(dd) {
+          return kd.remove("".concat(xJ, "-").concat(dd))
         },
-        Gb = qu.autoFetchSvg ? [].concat(ab(bu), ab(au)) : ib.concat(Object.keys(nB));
-      Gb.includes("fa") || Gb.push("fa");
-      var Ub = [".".concat(Ju, ":not([").concat(ou, "])")].concat(Gb.map((function(bb) {
-        return ".".concat(bb, ":not([").concat(ou, "])")
+        Wd = cJ.autoFetchSvg ? [].concat(Kd(JJ), Kd(oJ)) : bd.concat(Object.keys(Mp));
+      Wd.includes("fa") || Wd.push("fa");
+      var Pd = [".".concat(XJ, ":not([").concat(RJ, "])")].concat(Wd.map((function(dd) {
+        return ".".concat(dd, ":not([").concat(RJ, "])")
       }))).join(", ");
-      if (0 === Ub.length) return Promise.resolve();
-      var Lb = [];
+      if (0 === Pd.length) return Promise.resolve();
+      var Zd = [];
       try {
-        Lb = fu(bb.querySelectorAll(Ub))
-      } catch (Hb) {}
-      if (!(Lb.length > 0)) return Promise.resolve();
-      Bb("pending"), Ob("complete");
-      var Yb = SB("onTree"),
-        Sb = Lb.reduce((function(bb, ub) {
+        Zd = VJ(dd.querySelectorAll(Pd))
+      } catch (od) {}
+      if (!(Zd.length > 0)) return Promise.resolve();
+      pd("pending"), Nd("complete");
+      var gd = op("onTree"),
+        Cd = Zd.reduce((function(dd, Jd) {
           try {
-            var hb = DB(ub);
-            hb && bb.push(hb)
-          } catch (Hb) {
-            ru || "MissingIcon" === Hb.name && console.error(Hb)
+            var kd = Fp(Jd);
+            kd && dd.push(kd)
+          } catch (od) {
+            sJ || "MissingIcon" === od.name && console.error(od)
           }
-          return bb
+          return dd
         }), []);
-      return new Promise((function(bb, hb) {
-        Promise.all(Sb).then((function(hb) {
-          AB(hb, (function() {
-            Bb("active"), Bb("complete"), Ob("pending"), "function" === typeof ub && ub(), Yb(), bb()
+      return new Promise((function(dd, kd) {
+        Promise.all(Cd).then((function(kd) {
+          Gp(kd, (function() {
+            pd("active"), pd("complete"), Nd("pending"), "function" === typeof Jd && Jd(), gd(), dd()
           }))
-        })).catch((function(bb) {
-          Yb(), hb(bb)
+        })).catch((function(dd) {
+          gd(), kd(dd)
         }))
       }))
     }
 
-    function zB(bb) {
-      var ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      DB(bb).then((function(bb) {
-        bb && AB([bb], ub)
+    function mp(dd) {
+      var Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      Fp(dd).then((function(dd) {
+        dd && Gp([dd], Jd)
       }))
     }
-    var gB = function(bb) {
-        var ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          hb = ub.transform,
-          Bb = void 0 === hb ? Vu : hb,
-          Ob = ub.symbol,
-          Gb = void 0 !== Ob && Ob,
-          Ub = ub.mask,
-          Lb = void 0 === Ub ? null : Ub,
-          Sb = ub.maskId,
-          ab = void 0 === Sb ? null : Sb,
-          Hb = ub.classes,
-          wb = void 0 === Hb ? [] : Hb,
-          Zb = ub.attributes,
-          Xb = void 0 === Zb ? {} : Zb,
-          pb = ub.styles,
-          ob = void 0 === pb ? {} : pb;
-        if (bb) {
-          var Ab = bb.prefix,
-            lb = bb.iconName,
-            Kb = bb.icon;
-          return Qh(Yb({
+    var bp = function(dd) {
+        var Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          kd = Jd.transform,
+          pd = void 0 === kd ? uJ : kd,
+          Nd = Jd.symbol,
+          Wd = void 0 !== Nd && Nd,
+          Pd = Jd.mask,
+          Zd = void 0 === Pd ? null : Pd,
+          Cd = Jd.maskId,
+          Kd = void 0 === Cd ? null : Cd,
+          od = Jd.classes,
+          ld = void 0 === od ? [] : od,
+          Qd = Jd.attributes,
+          Ld = void 0 === Qd ? {} : Qd,
+          Od = Jd.styles,
+          ed = void 0 === Od ? {} : Od;
+        if (dd) {
+          var Rd = dd.prefix,
+            Id = dd.iconName,
+            Gd = dd.icon;
+          return dp(gd({
             type: "icon"
-          }, bb), (function() {
-            return yh("beforeDOMElementCreation", {
-              iconDefinition: bb,
-              params: ub
-            }), Rh({
+          }, dd), (function() {
+            return uk("beforeDOMElementCreation", {
+              iconDefinition: dd,
+              params: Jd
+            }), Jp({
               icons: {
-                main: hB(Kb),
-                mask: Lb ? hB(Lb.icon) : {
+                main: Np(Gd),
+                mask: Zd ? Np(Zd.icon) : {
                   found: !1,
                   width: null,
                   height: null,
                   icon: {}
                 }
               },
-              prefix: Ab,
-              iconName: lb,
-              transform: Yb(Yb({}, Vu), Bb),
-              symbol: Gb,
-              maskId: ab,
+              prefix: Rd,
+              iconName: Id,
+              transform: gd(gd({}, uJ), pd),
+              symbol: Wd,
+              maskId: Kd,
               extra: {
-                attributes: Xb,
-                styles: ob,
-                classes: wb
+                attributes: Ld,
+                styles: ed,
+                classes: ld
               }
             })
           }))
         }
       },
-      iB = {
+      Sp = {
         mixout: function() {
           return {
-            icon: (bb = gB, function(ub) {
-              var hb = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                Bb = (ub || {}).icon ? ub : Fh(ub || {}),
-                Ob = hb.mask;
-              return Ob && (Ob = (Ob || {}).icon ? Ob : Fh(Ob || {})), bb(Bb, Yb(Yb({}, hb), {}, {
-                mask: Ob
+            icon: (dd = bp, function(Jd) {
+              var kd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                pd = (Jd || {}).icon ? Jd : Vk(Jd || {}),
+                Nd = kd.mask;
+              return Nd && (Nd = (Nd || {}).icon ? Nd : Vk(Nd || {})), dd(pd, gd(gd({}, kd), {}, {
+                mask: Nd
               }))
             })
           };
-          var bb
+          var dd
         },
         hooks: function() {
           return {
-            mutationObserverCallbacks: function(bb) {
-              return bb.treeCallback = xB, bb.nodeCallback = zB, bb
+            mutationObserverCallbacks: function(dd) {
+              return dd.treeCallback = Yp, dd.nodeCallback = mp, dd
             }
           }
         },
-        provides: function(bb) {
-          bb.i2svg = function(bb) {
-            var ub = bb.node,
-              hb = void 0 === ub ? jb : ub,
-              Bb = bb.callback;
-            return xB(hb, void 0 === Bb ? function() {} : Bb)
-          }, bb.generateSvgReplacementMutation = function(bb, ub) {
-            var hb = ub.iconName,
-              Bb = ub.prefix,
-              Ob = ub.transform,
-              Gb = ub.symbol,
-              Ub = ub.mask,
-              Lb = ub.maskId,
-              Yb = ub.extra;
-            return new Promise((function(ub, ab) {
-              Promise.all([OB(hb, Bb), Ub.iconName ? OB(Ub.iconName, Ub.prefix) : Promise.resolve({
+        provides: function(dd) {
+          dd.i2svg = function(dd) {
+            var Jd = dd.node,
+              kd = void 0 === Jd ? sd : Jd,
+              pd = dd.callback;
+            return Yp(kd, void 0 === pd ? function() {} : pd)
+          }, dd.generateSvgReplacementMutation = function(dd, Jd) {
+            var kd = Jd.iconName,
+              pd = Jd.prefix,
+              Nd = Jd.transform,
+              Wd = Jd.symbol,
+              Pd = Jd.mask,
+              Zd = Jd.maskId,
+              gd = Jd.extra;
+            return new Promise((function(Jd, Kd) {
+              Promise.all([Pp(kd, pd), Pd.iconName ? Pp(Pd.iconName, Pd.prefix) : Promise.resolve({
                 found: !1,
                 width: 512,
                 height: 512,
                 icon: {}
-              })]).then((function(Ub) {
-                var ab = Sb(Ub, 2),
-                  Hb = ab[0],
-                  wb = ab[1];
-                ub([bb, Rh({
+              })]).then((function(Pd) {
+                var Kd = Cd(Pd, 2),
+                  od = Kd[0],
+                  ld = Kd[1];
+                Jd([dd, Jp({
                   icons: {
-                    main: Hb,
-                    mask: wb
+                    main: od,
+                    mask: ld
                   },
-                  prefix: Bb,
-                  iconName: hb,
-                  transform: Ob,
-                  symbol: Gb,
-                  maskId: Lb,
-                  extra: Yb,
+                  prefix: pd,
+                  iconName: kd,
+                  transform: Nd,
+                  symbol: Wd,
+                  maskId: Zd,
+                  extra: gd,
                   watchable: !0
                 })])
-              })).catch(ab)
+              })).catch(Kd)
             }))
-          }, bb.generateAbstractIcon = function(bb) {
-            var ub, hb = bb.children,
-              Bb = bb.attributes,
-              Ob = bb.main,
-              Gb = bb.transform,
-              Ub = cu(bb.styles);
-            return Ub.length > 0 && (Bb.style = Ub), Qu(Gb) && (ub = Vh("generateAbstractTransformGrouping", {
-              main: Ob,
-              transform: Gb,
-              containerWidth: Ob.width,
-              iconWidth: Ob.width
-            })), hb.push(ub || Ob.icon), {
-              children: hb,
-              attributes: Bb
+          }, dd.generateAbstractIcon = function(dd) {
+            var Jd, kd = dd.children,
+              pd = dd.attributes,
+              Nd = dd.main,
+              Wd = dd.transform,
+              Pd = wJ(dd.styles);
+            return Pd.length > 0 && (pd.style = Pd), AJ(Wd) && (Jd = tk("generateAbstractTransformGrouping", {
+              main: Nd,
+              transform: Wd,
+              containerWidth: Nd.width,
+              iconWidth: Nd.width
+            })), kd.push(Jd || Nd.icon), {
+              children: kd,
+              attributes: pd
             }
           }
         }
       },
-      vB = {
+      jp = {
         mixout: function() {
           return {
-            layer: function(bb) {
-              var ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                hb = ub.classes,
-                Bb = void 0 === hb ? [] : hb;
-              return Qh({
+            layer: function(dd) {
+              var Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                kd = Jd.classes,
+                pd = void 0 === kd ? [] : kd;
+              return dp({
                 type: "layer"
               }, (function() {
-                yh("beforeDOMElementCreation", {
-                  assembler: bb,
-                  params: ub
+                uk("beforeDOMElementCreation", {
+                  assembler: dd,
+                  params: Jd
                 });
-                var hb = [];
-                return bb((function(bb) {
-                  Array.isArray(bb) ? bb.map((function(bb) {
-                    hb = hb.concat(bb.abstract)
-                  })) : hb = hb.concat(bb.abstract)
+                var kd = [];
+                return dd((function(dd) {
+                  Array.isArray(dd) ? dd.map((function(dd) {
+                    kd = kd.concat(dd.abstract)
+                  })) : kd = kd.concat(dd.abstract)
                 })), [{
                   tag: "span",
                   attributes: {
-                    class: ["".concat(qu.cssPrefix, "-layers")].concat(ab(Bb)).join(" ")
+                    class: ["".concat(cJ.cssPrefix, "-layers")].concat(Kd(pd)).join(" ")
                   },
-                  children: hb
+                  children: kd
                 }]
               }))
             }
           }
         }
       },
-      tB = {
+      Xp = {
         mixout: function() {
           return {
-            counter: function(bb) {
-              var ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                hb = ub.title,
-                Bb = void 0 === hb ? null : hb,
-                Ob = ub.classes,
-                Gb = void 0 === Ob ? [] : Ob,
-                Ub = ub.attributes,
-                Lb = void 0 === Ub ? {} : Ub,
-                Sb = ub.styles,
-                Hb = void 0 === Sb ? {} : Sb;
-              return Qh({
+            counter: function(dd) {
+              var Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                kd = Jd.title,
+                pd = void 0 === kd ? null : kd,
+                Nd = Jd.classes,
+                Wd = void 0 === Nd ? [] : Nd,
+                Pd = Jd.attributes,
+                Zd = void 0 === Pd ? {} : Pd,
+                Cd = Jd.styles,
+                od = void 0 === Cd ? {} : Cd;
+              return dp({
                 type: "counter",
-                content: bb
+                content: dd
               }, (function() {
-                return yh("beforeDOMElementCreation", {
-                    content: bb,
-                    params: ub
+                return uk("beforeDOMElementCreation", {
+                    content: dd,
+                    params: Jd
                   }),
-                  function(bb) {
-                    var ub = bb.content,
-                      hb = bb.extra,
-                      Bb = Yb(Yb({}, hb.attributes), {}, {
-                        class: hb.classes.join(" ")
+                  function(dd) {
+                    var Jd = dd.content,
+                      kd = dd.extra,
+                      pd = gd(gd({}, kd.attributes), {}, {
+                        class: kd.classes.join(" ")
                       }),
-                      Ob = cu(hb.styles);
-                    Ob.length > 0 && (Bb.style = Ob);
-                    var Gb = [];
-                    return Gb.push({
+                      Nd = wJ(kd.styles);
+                    Nd.length > 0 && (pd.style = Nd);
+                    var Wd = [];
+                    return Wd.push({
                       tag: "span",
-                      attributes: Bb,
-                      children: [ub]
-                    }), Gb
+                      attributes: pd,
+                      children: [Jd]
+                    }), Wd
                   }({
-                    content: bb.toString(),
-                    title: Bb,
+                    content: dd.toString(),
+                    title: pd,
                     extra: {
-                      attributes: Lb,
-                      styles: Hb,
-                      classes: ["".concat(qu.cssPrefix, "-layers-counter")].concat(ab(Gb))
+                      attributes: Zd,
+                      styles: od,
+                      classes: ["".concat(cJ.cssPrefix, "-layers-counter")].concat(Kd(Wd))
                     }
                   })
               }))
@@ -2509,64 +2509,64 @@ export const modules = {
           }
         }
       },
-      JB = {
+      fp = {
         mixout: function() {
           return {
-            text: function(bb) {
-              var ub = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                hb = ub.transform,
-                Bb = void 0 === hb ? Vu : hb,
-                Ob = ub.classes,
-                Gb = void 0 === Ob ? [] : Ob,
-                Ub = ub.attributes,
-                Lb = void 0 === Ub ? {} : Ub,
-                Sb = ub.styles,
-                Hb = void 0 === Sb ? {} : Sb;
-              return Qh({
+            text: function(dd) {
+              var Jd = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                kd = Jd.transform,
+                pd = void 0 === kd ? uJ : kd,
+                Nd = Jd.classes,
+                Wd = void 0 === Nd ? [] : Nd,
+                Pd = Jd.attributes,
+                Zd = void 0 === Pd ? {} : Pd,
+                Cd = Jd.styles,
+                od = void 0 === Cd ? {} : Cd;
+              return dp({
                 type: "text",
-                content: bb
+                content: dd
               }, (function() {
-                return yh("beforeDOMElementCreation", {
-                  content: bb,
-                  params: ub
-                }), bB({
-                  content: bb,
-                  transform: Yb(Yb({}, Vu), Bb),
+                return uk("beforeDOMElementCreation", {
+                  content: dd,
+                  params: Jd
+                }), kp({
+                  content: dd,
+                  transform: gd(gd({}, uJ), pd),
                   extra: {
-                    attributes: Lb,
-                    styles: Hb,
-                    classes: ["".concat(qu.cssPrefix, "-layers-text")].concat(ab(Gb))
+                    attributes: Zd,
+                    styles: od,
+                    classes: ["".concat(cJ.cssPrefix, "-layers-text")].concat(Kd(Wd))
                   }
                 })
               }))
             }
           }
         },
-        provides: function(bb) {
-          bb.generateLayersText = function(bb, ub) {
-            var hb = ub.transform,
-              Bb = ub.extra,
-              Ob = null,
-              Gb = null;
-            if (zb) {
-              var Ub = parseInt(getComputedStyle(bb).fontSize, 10),
-                Lb = bb.getBoundingClientRect();
-              Ob = Lb.width / Ub, Gb = Lb.height / Ub
+        provides: function(dd) {
+          dd.generateLayersText = function(dd, Jd) {
+            var kd = Jd.transform,
+              pd = Jd.extra,
+              Nd = null,
+              Wd = null;
+            if (Yd) {
+              var Pd = parseInt(getComputedStyle(dd).fontSize, 10),
+                Zd = dd.getBoundingClientRect();
+              Nd = Zd.width / Pd, Wd = Zd.height / Pd
             }
-            return Promise.resolve([bb, bB({
-              content: bb.innerHTML,
-              width: Ob,
-              height: Gb,
-              transform: hb,
-              extra: Bb,
+            return Promise.resolve([dd, kp({
+              content: dd.innerHTML,
+              width: Nd,
+              height: Wd,
+              transform: kd,
+              extra: pd,
               watchable: !0
             })])
           }
         }
       },
-      eB = new RegExp('"', "ug"),
-      NB = [1105920, 1112319],
-      sB = Yb(Yb(Yb(Yb({}, {
+      np = new RegExp('"', "ug"),
+      Up = [1105920, 1112319],
+      yp = gd(gd(gd(gd({}, {
         FontAwesome: {
           normal: "fas",
           400: "fas"
@@ -2696,70 +2696,70 @@ export const modules = {
           normal: "fakd"
         }
       }),
-      MB = Object.keys(sB).reduce((function(bb, ub) {
-        return bb[ub.toLowerCase()] = sB[ub], bb
+      Dp = Object.keys(yp).reduce((function(dd, Jd) {
+        return dd[Jd.toLowerCase()] = yp[Jd], dd
       }), {}),
-      mB = Object.keys(MB).reduce((function(bb, ub) {
-        var hb = MB[ub];
-        return bb[ub] = hb[900] || ab(Object.entries(hb))[0][1], bb
+      Tp = Object.keys(Dp).reduce((function(dd, Jd) {
+        var kd = Dp[Jd];
+        return dd[Jd] = kd[900] || Kd(Object.entries(kd))[0][1], dd
       }), {});
 
-    function IB(bb, ub) {
-      var hb = "".concat("data-fa-pseudo-element-pending").concat(ub.replace(":", "-"));
-      return new Promise((function(Bb, Ob) {
-        if (null !== bb.getAttribute(hb)) return Bb();
-        var Gb = fu(bb.children).filter((function(bb) {
-            return bb.getAttribute(Au) === ub
+    function Ep(dd, Jd) {
+      var kd = "".concat("data-fa-pseudo-element-pending").concat(Jd.replace(":", "-"));
+      return new Promise((function(pd, Nd) {
+        if (null !== dd.getAttribute(kd)) return pd();
+        var Wd = VJ(dd.children).filter((function(dd) {
+            return dd.getAttribute(IJ) === Jd
           }))[0],
-          Ub = rb.getComputedStyle(bb, ub),
-          Lb = Ub.getPropertyValue("font-family"),
-          Sb = Lb.match(eu),
-          Hb = Ub.getPropertyValue("font-weight"),
-          wb = Ub.getPropertyValue("content");
-        if (Gb && !Sb) return bb.removeChild(Gb), Bb();
-        if (Sb && "none" !== wb && "" !== wb) {
-          var Zb = Ub.getPropertyValue("content"),
-            Xb = function(bb, ub) {
-              var hb = bb.replace(/^['"]|['"]$/g, "").toLowerCase(),
-                Bb = parseInt(ub),
-                Ob = isNaN(Bb) ? "normal" : Bb;
-              return (MB[hb] || {})[Ob] || mB[hb]
-            }(Lb, Hb),
-            pb = function(bb) {
-              return Hh(ab(bb.replace(eB, ""))[0] || "")
-            }(Zb),
-            ob = Sb[0].startsWith("FontAwesome"),
-            Ab = function(bb) {
-              var ub = bb.getPropertyValue("font-feature-settings").includes("ss01"),
-                hb = bb.getPropertyValue("content").replace(eB, ""),
-                Bb = hb.codePointAt(0),
-                Ob = Bb >= NB[0] && Bb <= NB[1],
-                Gb = 2 === hb.length && hb[0] === hb[1];
-              return Ob || Gb || ub
-            }(Ub),
-            lb = xh(Xb, pb),
-            Kb = lb;
-          if (ob) {
-            var Wb = function(bb) {
-              var ub = dh[bb],
-                hb = xh("fas", bb);
-              return ub || (hb ? {
+          Pd = Bd.getComputedStyle(dd, Jd),
+          Zd = Pd.getPropertyValue("font-family"),
+          Cd = Zd.match(fJ),
+          od = Pd.getPropertyValue("font-weight"),
+          ld = Pd.getPropertyValue("content");
+        if (Wd && !Cd) return dd.removeChild(Wd), pd();
+        if (Cd && "none" !== ld && "" !== ld) {
+          var Qd = Pd.getPropertyValue("content"),
+            Ld = function(dd, Jd) {
+              var kd = dd.replace(/^['"]|['"]$/g, "").toLowerCase(),
+                pd = parseInt(Jd),
+                Nd = isNaN(pd) ? "normal" : pd;
+              return (Dp[kd] || {})[Nd] || Tp[kd]
+            }(Zd, od),
+            Od = function(dd) {
+              return Qk(Kd(dd.replace(np, ""))[0] || "")
+            }(Qd),
+            ed = Cd[0].startsWith("FontAwesome"),
+            Rd = function(dd) {
+              var Jd = dd.getPropertyValue("font-feature-settings").includes("ss01"),
+                kd = dd.getPropertyValue("content").replace(np, ""),
+                pd = kd.codePointAt(0),
+                Nd = pd >= Up[0] && pd <= Up[1],
+                Wd = 2 === kd.length && kd[0] === kd[1];
+              return Nd || Wd || Jd
+            }(Pd),
+            Id = Yk(Ld, Od),
+            Gd = Id;
+          if (ed) {
+            var vd = function(dd) {
+              var Jd = sk[dd],
+                kd = Yk("fas", dd);
+              return Jd || (kd ? {
                 prefix: "fas",
-                iconName: hb
+                iconName: kd
               } : null) || {
                 prefix: null,
                 iconName: null
               }
-            }(pb);
-            Wb.iconName && Wb.prefix && (lb = Wb.iconName, Xb = Wb.prefix)
+            }(Od);
+            vd.iconName && vd.prefix && (Id = vd.iconName, Ld = vd.prefix)
           }
-          if (!lb || Ab || Gb && Gb.getAttribute(lu) === Xb && Gb.getAttribute(Ku) === Kb) Bb();
+          if (!Id || Rd || Wd && Wd.getAttribute(GJ) === Ld && Wd.getAttribute(vJ) === Gd) pd();
           else {
-            bb.setAttribute(hb, Kb), Gb && bb.removeChild(Gb);
-            var Cb = {
+            dd.setAttribute(kd, Gd), Wd && dd.removeChild(Wd);
+            var xd = {
                 iconName: null,
                 prefix: null,
-                transform: Vu,
+                transform: uJ,
                 symbol: !1,
                 mask: {
                   iconName: null,
@@ -2773,181 +2773,181 @@ export const modules = {
                   attributes: {}
                 }
               },
-              db = Cb.extra;
-            db.attributes[Au] = ub, OB(lb, Xb).then((function(Ob) {
-              var Gb = Rh(Yb(Yb({}, Cb), {}, {
+              qd = xd.extra;
+            qd.attributes[IJ] = Jd, Pp(Id, Ld).then((function(Nd) {
+              var Wd = Jp(gd(gd({}, xd), {}, {
                   icons: {
-                    main: Ob,
+                    main: Nd,
                     mask: {
                       prefix: null,
                       iconName: null,
                       rest: []
                     }
                   },
-                  prefix: Xb,
-                  iconName: Kb,
-                  extra: db,
+                  prefix: Ld,
+                  iconName: Gd,
+                  extra: qd,
                   watchable: !0
                 })),
-                Ub = jb.createElementNS("http://www.w3.org/2000/svg", "svg");
-              "::before" === ub ? bb.insertBefore(Ub, bb.firstChild) : bb.appendChild(Ub), Ub.outerHTML = Gb.map((function(bb) {
-                return Yh(bb)
-              })).join("\n"), bb.removeAttribute(hb), Bb()
-            })).catch(Ob)
+                Pd = sd.createElementNS("http://www.w3.org/2000/svg", "svg");
+              "::before" === Jd ? dd.insertBefore(Pd, dd.firstChild) : dd.appendChild(Pd), Pd.outerHTML = Wd.map((function(dd) {
+                return Ck(dd)
+              })).join("\n"), dd.removeAttribute(kd), pd()
+            })).catch(Nd)
           }
-        } else Bb()
+        } else pd()
       }))
     }
 
-    function PB(bb) {
-      return Promise.all([IB(bb, "::before"), IB(bb, "::after")])
+    function cp(dd) {
+      return Promise.all([Ep(dd, "::before"), Ep(dd, "::after")])
     }
 
-    function qB(bb) {
-      return bb.parentNode !== document.head && !~Cu.indexOf(bb.tagName.toUpperCase()) && !bb.getAttribute(Au) && (!bb.parentNode || "svg" !== bb.parentNode.tagName)
+    function hp(dd) {
+      return dd.parentNode !== document.head && !~qJ.indexOf(dd.tagName.toUpperCase()) && !dd.getAttribute(IJ) && (!dd.parentNode || "svg" !== dd.parentNode.tagName)
     }
-    var EB = function(bb) {
-        return !!bb && du.some((function(ub) {
-          return bb.includes(ub)
+    var rp = function(dd) {
+        return !!dd && BJ.some((function(Jd) {
+          return dd.includes(Jd)
         }))
       },
-      yB = function(bb) {
-        if (!bb) return [];
-        var ub = new Set,
-          hb = bb.split(/,(?![^()]*\))/).map((function(bb) {
-            return bb.trim()
+      tp = function(dd) {
+        if (!dd) return [];
+        var Jd = new Set,
+          kd = dd.split(/,(?![^()]*\))/).map((function(dd) {
+            return dd.trim()
           }));
-        hb = hb.flatMap((function(bb) {
-          return bb.includes("(") ? bb : bb.split(",").map((function(bb) {
-            return bb.trim()
+        kd = kd.flatMap((function(dd) {
+          return dd.includes("(") ? dd : dd.split(",").map((function(dd) {
+            return dd.trim()
           }))
         }));
-        var Bb, Ob = Gb(hb);
+        var pd, Nd = Wd(kd);
         try {
-          for (Ob.s(); !(Bb = Ob.n()).done;) {
-            var Ub = Bb.value;
-            if (EB(Ub)) {
-              var Lb = du.reduce((function(bb, ub) {
-                return bb.replace(ub, "")
-              }), Ub);
-              "" !== Lb && "*" !== Lb && ub.add(Lb)
+          for (Nd.s(); !(pd = Nd.n()).done;) {
+            var Pd = pd.value;
+            if (rp(Pd)) {
+              var Zd = BJ.reduce((function(dd, Jd) {
+                return dd.replace(Jd, "")
+              }), Pd);
+              "" !== Zd && "*" !== Zd && Jd.add(Zd)
             }
           }
-        } catch (Yb) {
-          Ob.e(Yb)
+        } catch (gd) {
+          Nd.e(gd)
         } finally {
-          Ob.f()
+          Nd.f()
         }
-        return ub
+        return Jd
       };
 
-    function VB(bb) {
-      if (xb) {
-        var ub;
-        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) ub = bb;
-        else if (qu.searchPseudoElementsFullScan) ub = bb.querySelectorAll("*");
+    function Vp(dd) {
+      if (Fd) {
+        var Jd;
+        if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) Jd = dd;
+        else if (cJ.searchPseudoElementsFullScan) Jd = dd.querySelectorAll("*");
         else {
-          var hb, Bb = new Set,
-            Ob = Gb(document.styleSheets);
+          var kd, pd = new Set,
+            Nd = Wd(document.styleSheets);
           try {
-            for (Ob.s(); !(hb = Ob.n()).done;) {
-              var Ub = hb.value;
+            for (Nd.s(); !(kd = Nd.n()).done;) {
+              var Pd = kd.value;
               try {
-                var Lb, Yb = Gb(Ub.cssRules);
+                var Zd, gd = Wd(Pd.cssRules);
                 try {
-                  for (Yb.s(); !(Lb = Yb.n()).done;) {
-                    var Sb, ab = Lb.value,
-                      Hb = Gb(yB(ab.selectorText));
+                  for (gd.s(); !(Zd = gd.n()).done;) {
+                    var Cd, Kd = Zd.value,
+                      od = Wd(tp(Kd.selectorText));
                     try {
-                      for (Hb.s(); !(Sb = Hb.n()).done;) {
-                        var wb = Sb.value;
-                        Bb.add(wb)
+                      for (od.s(); !(Cd = od.n()).done;) {
+                        var ld = Cd.value;
+                        pd.add(ld)
                       }
-                    } catch (Xb) {
-                      Hb.e(Xb)
+                    } catch (Ld) {
+                      od.e(Ld)
                     } finally {
-                      Hb.f()
+                      od.f()
                     }
                   }
-                } catch (Xb) {
-                  Yb.e(Xb)
+                } catch (Ld) {
+                  gd.e(Ld)
                 } finally {
-                  Yb.f()
+                  gd.f()
                 }
-              } catch (pb) {
-                qu.searchPseudoElementsWarnings && console.warn("Font Awesome: cannot parse stylesheet: ".concat(Ub.href, " (").concat(pb.message, ')\nIf it declares any Font Awesome CSS pseudo-elements, they will not be rendered as SVG icons. Add crossorigin="anonymous" to the <link>, enable searchPseudoElementsFullScan for slower but more thorough DOM parsing, or suppress this warning by setting searchPseudoElementsWarnings to false.'))
+              } catch (Od) {
+                cJ.searchPseudoElementsWarnings && console.warn("Font Awesome: cannot parse stylesheet: ".concat(Pd.href, " (").concat(Od.message, ')\nIf it declares any Font Awesome CSS pseudo-elements, they will not be rendered as SVG icons. Add crossorigin="anonymous" to the <link>, enable searchPseudoElementsFullScan for slower but more thorough DOM parsing, or suppress this warning by setting searchPseudoElementsWarnings to false.'))
               }
             }
-          } catch (Xb) {
-            Ob.e(Xb)
+          } catch (Ld) {
+            Nd.e(Ld)
           } finally {
-            Ob.f()
+            Nd.f()
           }
-          if (!Bb.size) return;
-          var Zb = Array.from(Bb).join(", ");
+          if (!pd.size) return;
+          var Qd = Array.from(pd).join(", ");
           try {
-            ub = bb.querySelectorAll(Zb)
-          } catch (ob) {}
+            Jd = dd.querySelectorAll(Qd)
+          } catch (ed) {}
         }
-        return new Promise((function(bb, hb) {
-          var Bb = fu(ub).filter(qB).map(PB),
-            Ob = SB("searchPseudoElements");
-          KB(), Promise.all(Bb).then((function() {
-            Ob(), WB(), bb()
+        return new Promise((function(dd, kd) {
+          var pd = VJ(Jd).filter(hp).map(cp),
+            Nd = op("searchPseudoElements");
+          xp(), Promise.all(pd).then((function() {
+            Nd(), qp(), dd()
           })).catch((function() {
-            Ob(), WB(), hb()
+            Nd(), qp(), kd()
           }))
         }))
       }
     }
-    var FB = {
+    var zp = {
         hooks: function() {
           return {
-            mutationObserverCallbacks: function(bb) {
-              return bb.pseudoElementsCallback = VB, bb
+            mutationObserverCallbacks: function(dd) {
+              return dd.pseudoElementsCallback = Vp, dd
             }
           }
         },
-        provides: function(bb) {
-          bb.pseudoElements2svg = function(bb) {
-            var ub = bb.node,
-              hb = void 0 === ub ? jb : ub;
-            qu.searchPseudoElements && VB(hb)
+        provides: function(dd) {
+          dd.pseudoElements2svg = function(dd) {
+            var Jd = dd.node,
+              kd = void 0 === Jd ? sd : Jd;
+            cJ.searchPseudoElements && Vp(kd)
           }
         }
       },
-      fB = !1,
-      kB = function(bb) {
-        return bb.toLowerCase().split(" ").reduce((function(bb, ub) {
-          var hb = ub.toLowerCase().split("-"),
-            Bb = hb[0],
-            Ob = hb.slice(1).join("-");
-          if (Bb && "h" === Ob) return bb.flipX = !0, bb;
-          if (Bb && "v" === Ob) return bb.flipY = !0, bb;
-          if (Ob = parseFloat(Ob), isNaN(Ob)) return bb;
-          switch (Bb) {
+      Hp = !1,
+      wp = function(dd) {
+        return dd.toLowerCase().split(" ").reduce((function(dd, Jd) {
+          var kd = Jd.toLowerCase().split("-"),
+            pd = kd[0],
+            Nd = kd.slice(1).join("-");
+          if (pd && "h" === Nd) return dd.flipX = !0, dd;
+          if (pd && "v" === Nd) return dd.flipY = !0, dd;
+          if (Nd = parseFloat(Nd), isNaN(Nd)) return dd;
+          switch (pd) {
             case "grow":
-              bb.size = bb.size + Ob;
+              dd.size = dd.size + Nd;
               break;
             case "shrink":
-              bb.size = bb.size - Ob;
+              dd.size = dd.size - Nd;
               break;
             case "left":
-              bb.x = bb.x - Ob;
+              dd.x = dd.x - Nd;
               break;
             case "right":
-              bb.x = bb.x + Ob;
+              dd.x = dd.x + Nd;
               break;
             case "up":
-              bb.y = bb.y - Ob;
+              dd.y = dd.y - Nd;
               break;
             case "down":
-              bb.y = bb.y + Ob;
+              dd.y = dd.y + Nd;
               break;
             case "rotate":
-              bb.rotate = bb.rotate + Ob
+              dd.rotate = dd.rotate + Nd
           }
-          return bb
+          return dd
         }), {
           size: 16,
           x: 0,
@@ -2957,244 +2957,244 @@ export const modules = {
           rotate: 0
         })
       },
-      TB = {
+      Ap = {
         mixout: function() {
           return {
             parse: {
-              transform: function(bb) {
-                return kB(bb)
+              transform: function(dd) {
+                return wp(dd)
               }
             }
           }
         },
         hooks: function() {
           return {
-            parseNodeAttributes: function(bb, ub) {
-              var hb = ub.getAttribute("data-fa-transform");
-              return hb && (bb.transform = kB(hb)), bb
+            parseNodeAttributes: function(dd, Jd) {
+              var kd = Jd.getAttribute("data-fa-transform");
+              return kd && (dd.transform = wp(kd)), dd
             }
           }
         },
-        provides: function(bb) {
-          bb.generateAbstractTransformGrouping = function(bb) {
-            var ub = bb.main,
-              hb = bb.transform,
-              Bb = bb.containerWidth,
-              Ob = bb.iconWidth,
-              Gb = {
-                transform: "translate(".concat(Bb / 2, " 256)")
+        provides: function(dd) {
+          dd.generateAbstractTransformGrouping = function(dd) {
+            var Jd = dd.main,
+              kd = dd.transform,
+              pd = dd.containerWidth,
+              Nd = dd.iconWidth,
+              Wd = {
+                transform: "translate(".concat(pd / 2, " 256)")
               },
-              Ub = "translate(".concat(32 * hb.x, ", ").concat(32 * hb.y, ") "),
-              Lb = "scale(".concat(hb.size / 16 * (hb.flipX ? -1 : 1), ", ").concat(hb.size / 16 * (hb.flipY ? -1 : 1), ") "),
-              Sb = "rotate(".concat(hb.rotate, " 0 0)"),
-              ab = {
-                outer: Gb,
+              Pd = "translate(".concat(32 * kd.x, ", ").concat(32 * kd.y, ") "),
+              Zd = "scale(".concat(kd.size / 16 * (kd.flipX ? -1 : 1), ", ").concat(kd.size / 16 * (kd.flipY ? -1 : 1), ") "),
+              Cd = "rotate(".concat(kd.rotate, " 0 0)"),
+              Kd = {
+                outer: Wd,
                 inner: {
-                  transform: "".concat(Ub, " ").concat(Lb, " ").concat(Sb)
+                  transform: "".concat(Pd, " ").concat(Zd, " ").concat(Cd)
                 },
                 path: {
-                  transform: "translate(".concat(Ob / 2 * -1, " -256)")
+                  transform: "translate(".concat(Nd / 2 * -1, " -256)")
                 }
               };
             return {
               tag: "g",
-              attributes: Yb({}, ab.outer),
+              attributes: gd({}, Kd.outer),
               children: [{
                 tag: "g",
-                attributes: Yb({}, ab.inner),
+                attributes: gd({}, Kd.inner),
                 children: [{
-                  tag: ub.icon.tag,
-                  children: ub.icon.children,
-                  attributes: Yb(Yb({}, ub.icon.attributes), ab.path)
+                  tag: Jd.icon.tag,
+                  children: Jd.icon.children,
+                  attributes: gd(gd({}, Jd.icon.attributes), Kd.path)
                 }]
               }]
             }
           }
         }
       },
-      cB = {
+      dN = {
         x: 0,
         y: 0,
         width: "100%",
         height: "100%"
       };
 
-    function QB(bb) {
-      var ub = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      return bb.attributes && (bb.attributes.fill || ub) && (bb.attributes.fill = "black"), bb
+    function JN(dd) {
+      var Jd = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      return dd.attributes && (dd.attributes.fill || Jd) && (dd.attributes.fill = "black"), dd
     }
-    var RB = {
+    var kN = {
         hooks: function() {
           return {
-            parseNodeAttributes: function(bb, ub) {
-              var hb = ub.getAttribute("data-fa-mask"),
-                Bb = hb ? eh(hb.split(" ").map((function(bb) {
-                  return bb.trim()
+            parseNodeAttributes: function(dd, Jd) {
+              var kd = Jd.getAttribute("data-fa-mask"),
+                pd = kd ? nk(kd.split(" ").map((function(dd) {
+                  return dd.trim()
                 }))) : {
                   prefix: null,
                   iconName: null,
                   rest: []
                 };
-              return Bb.prefix || (Bb.prefix = ih()), bb.mask = Bb, bb.maskId = ub.getAttribute("data-fa-mask-id"), bb
+              return pd.prefix || (pd.prefix = Sk()), dd.mask = pd, dd.maskId = Jd.getAttribute("data-fa-mask-id"), dd
             }
           }
         },
-        provides: function(bb) {
-          bb.generateAbstractMask = function(bb) {
-            var ub, hb = bb.children,
-              Bb = bb.attributes,
-              Ob = bb.main,
-              Gb = bb.mask,
-              Ub = bb.maskId,
-              Lb = bb.transform,
-              Sb = Ob.width,
-              ab = Ob.icon,
-              Hb = Gb.width,
-              wb = Gb.icon,
-              Zb = function(bb) {
-                var ub = bb.transform,
-                  hb = bb.containerWidth,
-                  Bb = bb.iconWidth,
-                  Ob = {
-                    transform: "translate(".concat(hb / 2, " 256)")
+        provides: function(dd) {
+          dd.generateAbstractMask = function(dd) {
+            var Jd, kd = dd.children,
+              pd = dd.attributes,
+              Nd = dd.main,
+              Wd = dd.mask,
+              Pd = dd.maskId,
+              Zd = dd.transform,
+              Cd = Nd.width,
+              Kd = Nd.icon,
+              od = Wd.width,
+              ld = Wd.icon,
+              Qd = function(dd) {
+                var Jd = dd.transform,
+                  kd = dd.containerWidth,
+                  pd = dd.iconWidth,
+                  Nd = {
+                    transform: "translate(".concat(kd / 2, " 256)")
                   },
-                  Gb = "translate(".concat(32 * ub.x, ", ").concat(32 * ub.y, ") "),
-                  Ub = "scale(".concat(ub.size / 16 * (ub.flipX ? -1 : 1), ", ").concat(ub.size / 16 * (ub.flipY ? -1 : 1), ") "),
-                  Lb = "rotate(".concat(ub.rotate, " 0 0)");
+                  Wd = "translate(".concat(32 * Jd.x, ", ").concat(32 * Jd.y, ") "),
+                  Pd = "scale(".concat(Jd.size / 16 * (Jd.flipX ? -1 : 1), ", ").concat(Jd.size / 16 * (Jd.flipY ? -1 : 1), ") "),
+                  Zd = "rotate(".concat(Jd.rotate, " 0 0)");
                 return {
-                  outer: Ob,
+                  outer: Nd,
                   inner: {
-                    transform: "".concat(Gb, " ").concat(Ub, " ").concat(Lb)
+                    transform: "".concat(Wd, " ").concat(Pd, " ").concat(Zd)
                   },
                   path: {
-                    transform: "translate(".concat(Bb / 2 * -1, " -256)")
+                    transform: "translate(".concat(pd / 2 * -1, " -256)")
                   }
                 }
               }({
-                transform: Lb,
-                containerWidth: Hb,
-                iconWidth: Sb
+                transform: Zd,
+                containerWidth: od,
+                iconWidth: Cd
               }),
-              Xb = {
+              Ld = {
                 tag: "rect",
-                attributes: Yb(Yb({}, cB), {}, {
+                attributes: gd(gd({}, dN), {}, {
                   fill: "white"
                 })
               },
-              pb = ab.children ? {
-                children: ab.children.map(QB)
+              Od = Kd.children ? {
+                children: Kd.children.map(JN)
               } : {},
-              ob = {
+              ed = {
                 tag: "g",
-                attributes: Yb({}, Zb.inner),
-                children: [QB(Yb({
-                  tag: ab.tag,
-                  attributes: Yb(Yb({}, ab.attributes), Zb.path)
-                }, pb))]
+                attributes: gd({}, Qd.inner),
+                children: [JN(gd({
+                  tag: Kd.tag,
+                  attributes: gd(gd({}, Kd.attributes), Qd.path)
+                }, Od))]
               },
-              Ab = {
+              Rd = {
                 tag: "g",
-                attributes: Yb({}, Zb.outer),
-                children: [ob]
+                attributes: gd({}, Qd.outer),
+                children: [ed]
               },
-              lb = "mask-".concat(Ub || Fu()),
-              Kb = "clip-".concat(Ub || Fu()),
-              Wb = {
+              Id = "mask-".concat(Pd || tJ()),
+              Gd = "clip-".concat(Pd || tJ()),
+              vd = {
                 tag: "mask",
-                attributes: Yb(Yb({}, cB), {}, {
-                  id: lb,
+                attributes: gd(gd({}, dN), {}, {
+                  id: Id,
                   maskUnits: "userSpaceOnUse",
                   maskContentUnits: "userSpaceOnUse"
                 }),
-                children: [Xb, Ab]
+                children: [Ld, Rd]
               },
-              Cb = {
+              xd = {
                 tag: "defs",
                 children: [{
                   tag: "clipPath",
                   attributes: {
-                    id: Kb
+                    id: Gd
                   },
-                  children: (ub = wb, "g" === ub.tag ? ub.children : [ub])
-                }, Wb]
+                  children: (Jd = ld, "g" === Jd.tag ? Jd.children : [Jd])
+                }, vd]
               };
-            return hb.push(Cb, {
+            return kd.push(xd, {
               tag: "rect",
-              attributes: Yb({
+              attributes: gd({
                 fill: "currentColor",
-                "clip-path": "url(#".concat(Kb, ")"),
-                mask: "url(#".concat(lb, ")")
-              }, cB)
+                "clip-path": "url(#".concat(Gd, ")"),
+                mask: "url(#".concat(Id, ")")
+              }, dN)
             }), {
-              children: hb,
-              attributes: Bb
+              children: kd,
+              attributes: pd
             }
           }
         }
       },
-      bO = {
-        provides: function(bb) {
-          var ub = !1;
-          rb.matchMedia && (ub = rb.matchMedia("(prefers-reduced-motion: reduce)").matches), bb.missingIconAbstract = function() {
-            var bb = [],
-              hb = {
+      pN = {
+        provides: function(dd) {
+          var Jd = !1;
+          Bd.matchMedia && (Jd = Bd.matchMedia("(prefers-reduced-motion: reduce)").matches), dd.missingIconAbstract = function() {
+            var dd = [],
+              kd = {
                 fill: "currentColor"
               },
-              Bb = {
+              pd = {
                 attributeType: "XML",
                 repeatCount: "indefinite",
                 dur: "2s"
               };
-            bb.push({
+            dd.push({
               tag: "path",
-              attributes: Yb(Yb({}, hb), {}, {
+              attributes: gd(gd({}, kd), {}, {
                 d: "M156.5,447.7l-12.6,29.5c-18.7-9.5-35.9-21.2-51.5-34.9l22.7-22.7C127.6,430.5,141.5,440,156.5,447.7z M40.6,272H8.5 c1.4,21.2,5.4,41.7,11.7,61.1L50,321.2C45.1,305.5,41.8,289,40.6,272z M40.6,240c1.4-18.8,5.2-37,11.1-54.1l-29.5-12.6 C14.7,194.3,10,216.7,8.5,240H40.6z M64.3,156.5c7.8-14.9,17.2-28.8,28.1-41.5L69.7,92.3c-13.7,15.6-25.5,32.8-34.9,51.5 L64.3,156.5z M397,419.6c-13.9,12-29.4,22.3-46.1,30.4l11.9,29.8c20.7-9.9,39.8-22.6,56.9-37.6L397,419.6z M115,92.4 c13.9-12,29.4-22.3,46.1-30.4l-11.9-29.8c-20.7,9.9-39.8,22.6-56.8,37.6L115,92.4z M447.7,355.5c-7.8,14.9-17.2,28.8-28.1,41.5 l22.7,22.7c13.7-15.6,25.5-32.9,34.9-51.5L447.7,355.5z M471.4,272c-1.4,18.8-5.2,37-11.1,54.1l29.5,12.6 c7.5-21.1,12.2-43.5,13.6-66.8H471.4z M321.2,462c-15.7,5-32.2,8.2-49.2,9.4v32.1c21.2-1.4,41.7-5.4,61.1-11.7L321.2,462z M240,471.4c-18.8-1.4-37-5.2-54.1-11.1l-12.6,29.5c21.1,7.5,43.5,12.2,66.8,13.6V471.4z M462,190.8c5,15.7,8.2,32.2,9.4,49.2h32.1 c-1.4-21.2-5.4-41.7-11.7-61.1L462,190.8z M92.4,397c-12-13.9-22.3-29.4-30.4-46.1l-29.8,11.9c9.9,20.7,22.6,39.8,37.6,56.9 L92.4,397z M272,40.6c18.8,1.4,36.9,5.2,54.1,11.1l12.6-29.5C317.7,14.7,295.3,10,272,8.5V40.6z M190.8,50 c15.7-5,32.2-8.2,49.2-9.4V8.5c-21.2,1.4-41.7,5.4-61.1,11.7L190.8,50z M442.3,92.3L419.6,115c12,13.9,22.3,29.4,30.5,46.1 l29.8-11.9C470,128.5,457.3,109.4,442.3,92.3z M397,92.4l22.7-22.7c-15.6-13.7-32.8-25.5-51.5-34.9l-12.6,29.5 C370.4,72.1,384.4,81.5,397,92.4z"
               })
             });
-            var Ob = Yb(Yb({}, Bb), {}, {
+            var Nd = gd(gd({}, pd), {}, {
                 attributeName: "opacity"
               }),
-              Gb = {
+              Wd = {
                 tag: "circle",
-                attributes: Yb(Yb({}, hb), {}, {
+                attributes: gd(gd({}, kd), {}, {
                   cx: "256",
                   cy: "364",
                   r: "28"
                 }),
                 children: []
               };
-            return ub || Gb.children.push({
+            return Jd || Wd.children.push({
               tag: "animate",
-              attributes: Yb(Yb({}, Bb), {}, {
+              attributes: gd(gd({}, pd), {}, {
                 attributeName: "r",
                 values: "28;14;28;28;14;28;"
               })
             }, {
               tag: "animate",
-              attributes: Yb(Yb({}, Ob), {}, {
+              attributes: gd(gd({}, Nd), {}, {
                 values: "1;0;1;1;0;1;"
               })
-            }), bb.push(Gb), bb.push({
+            }), dd.push(Wd), dd.push({
               tag: "path",
-              attributes: Yb(Yb({}, hb), {}, {
+              attributes: gd(gd({}, kd), {}, {
                 opacity: "1",
                 d: "M263.7,312h-16c-6.6,0-12-5.4-12-12c0-71,77.4-63.9,77.4-107.8c0-20-17.8-40.2-57.4-40.2c-29.1,0-44.3,9.6-59.2,28.7 c-3.9,5-11.1,6-16.2,2.4l-13.1-9.2c-5.6-3.9-6.9-11.8-2.6-17.2c21.2-27.2,46.4-44.7,91.2-44.7c52.3,0,97.4,29.8,97.4,80.2 c0,67.6-77.4,63.5-77.4,107.8C275.7,306.6,270.3,312,263.7,312z"
               }),
-              children: ub ? [] : [{
+              children: Jd ? [] : [{
                 tag: "animate",
-                attributes: Yb(Yb({}, Ob), {}, {
+                attributes: gd(gd({}, Nd), {}, {
                   values: "1;0;0;0;0;1;"
                 })
               }]
-            }), ub || bb.push({
+            }), Jd || dd.push({
               tag: "path",
-              attributes: Yb(Yb({}, hb), {}, {
+              attributes: gd(gd({}, kd), {}, {
                 opacity: "0",
                 d: "M232.5,134.5l7,168c0.3,6.4,5.6,11.5,12,11.5h9c6.4,0,11.7-5.1,12-11.5l7-168c0.3-6.8-5.2-12.5-12-12.5h-23 C237.7,122,232.2,127.7,232.5,134.5z"
               }),
               children: [{
                 tag: "animate",
-                attributes: Yb(Yb({}, Ob), {}, {
+                attributes: gd(gd({}, Nd), {}, {
                   values: "0;0;1;1;0;0;"
                 })
               }]
@@ -3203,35 +3203,35 @@ export const modules = {
               attributes: {
                 class: "missing"
               },
-              children: bb
+              children: dd
             }
           }
         }
       };
-    ! function(bb, ub) {
-      var hb = ub.mixoutsTo;
-      mh = bb, Ih = {}, Object.keys(Ph).forEach((function(bb) {
-        -1 === qh.indexOf(bb) && delete Ph[bb]
-      })), mh.forEach((function(bb) {
-        var ub = bb.mixout ? bb.mixout() : {};
-        if (Object.keys(ub).forEach((function(bb) {
-            "function" === typeof ub[bb] && (hb[bb] = ub[bb]), "object" === wb(ub[bb]) && Object.keys(ub[bb]).forEach((function(Bb) {
-              hb[bb] || (hb[bb] = {}), hb[bb][Bb] = ub[bb][Bb]
+    ! function(dd, Jd) {
+      var kd = Jd.mixoutsTo;
+      Tk = dd, Ek = {}, Object.keys(ck).forEach((function(dd) {
+        -1 === hk.indexOf(dd) && delete ck[dd]
+      })), Tk.forEach((function(dd) {
+        var Jd = dd.mixout ? dd.mixout() : {};
+        if (Object.keys(Jd).forEach((function(dd) {
+            "function" === typeof Jd[dd] && (kd[dd] = Jd[dd]), "object" === ld(Jd[dd]) && Object.keys(Jd[dd]).forEach((function(pd) {
+              kd[dd] || (kd[dd] = {}), kd[dd][pd] = Jd[dd][pd]
             }))
-          })), bb.hooks) {
-          var Bb = bb.hooks();
-          Object.keys(Bb).forEach((function(bb) {
-            Ih[bb] || (Ih[bb] = []), Ih[bb].push(Bb[bb])
+          })), dd.hooks) {
+          var pd = dd.hooks();
+          Object.keys(pd).forEach((function(dd) {
+            Ek[dd] || (Ek[dd] = []), Ek[dd].push(pd[dd])
           }))
         }
-        bb.provides && bb.provides(Ph)
+        dd.provides && dd.provides(ck)
       }))
-    }([hh, iB, vB, tB, JB, FB, {
+    }([pk, Sp, jp, Xp, fp, zp, {
       mixout: function() {
         return {
           dom: {
             unwatch: function() {
-              KB(), fB = !0
+              xp(), Hp = !0
             }
           }
         }
@@ -3239,47 +3239,47 @@ export const modules = {
       hooks: function() {
         return {
           bootstrap: function() {
-            dB(Eh("mutationObserverCallbacks", {}))
+            sp(rk("mutationObserverCallbacks", {}))
           },
           noAuto: function() {
-            CB && CB.disconnect()
+            Bp && Bp.disconnect()
           },
-          watch: function(bb) {
-            var ub = bb.observeMutationsRoot;
-            fB ? WB() : dB(Eh("mutationObserverCallbacks", {
-              observeMutationsRoot: ub
+          watch: function(dd) {
+            var Jd = dd.observeMutationsRoot;
+            Hp ? qp() : sp(rk("mutationObserverCallbacks", {
+              observeMutationsRoot: Jd
             }))
           }
         }
       }
-    }, TB, RB, bO, {
+    }, Ap, kN, pN, {
       hooks: function() {
         return {
-          parseNodeAttributes: function(bb, ub) {
-            var hb = ub.getAttribute("data-fa-symbol"),
-              Bb = null !== hb && ("" === hb || hb);
-            return bb.symbol = Bb, bb
+          parseNodeAttributes: function(dd, Jd) {
+            var kd = Jd.getAttribute("data-fa-symbol"),
+              pd = null !== kd && ("" === kd || kd);
+            return dd.symbol = pd, dd
           }
         }
       }
     }], {
-      mixoutsTo: Th
+      mixoutsTo: wk
     });
-    var uO = Th.noAuto,
-      hO = Th.config,
-      BO = Th.library,
-      OO = Th.dom,
-      GO = Th.parse,
-      UO = Th.findIconDefinition,
-      LO = Th.toHtml,
-      YO = Th.icon,
-      SO = Th.layer,
-      aO = Th.text,
-      HO = Th.counter
+    var NN = wk.noAuto,
+      WN = wk.config,
+      PN = wk.library,
+      ZN = wk.dom,
+      gN = wk.parse,
+      CN = wk.findIconDefinition,
+      KN = wk.toHtml,
+      oN = wk.icon,
+      lN = wk.layer,
+      QN = wk.text,
+      LN = wk.counter
   },
-  6426: bb => {
-    bb.exports = JSON.parse('{"description":"The iconic font, CSS, and SVG framework","keywords":["font","awesome","fontawesome","icon","svg","bootstrap"],"homepage":"https://fontawesome.com","bugs":{"url":"https://github.com/FortAwesome/Font-Awesome/issues"},"author":"The Font Awesome Team (https://github.com/orgs/FortAwesome/people)","repository":{"type":"git","url":"https://github.com/FortAwesome/Font-Awesome"},"engines":{"node":">=6"},"dependencies":{"@fortawesome/fontawesome-common-types":"7.2.0"},"version":"7.2.0","name":"@fortawesome/fontawesome-svg-core","main":"index.js","module":"index.mjs","jsnext:main":"index.mjs","style":"styles.css","license":"MIT","types":"./index.d.ts","exports":{".":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","style":"./styles.css","default":"./index.js"},"./index":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./index.js":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./plugins":{"types":"./index.d.ts","module":"./plugins.mjs","import":"./plugins.mjs","default":"./plugins.mjs"},"./import.macro":"./import.macro.js","./import.macro.js":"./import.macro.js","./styles":"./styles.css","./styles.css":"./styles.css","./package.json":"./package.json"},"sideEffects":["./index.js","./index.mjs","./styles.css"]}')
+  6567: dd => {
+    dd.exports = JSON.parse('{"description":"The iconic font, CSS, and SVG framework","keywords":["font","awesome","fontawesome","icon","svg","bootstrap"],"homepage":"https://fontawesome.com","bugs":{"url":"https://github.com/FortAwesome/Font-Awesome/issues"},"author":"The Font Awesome Team (https://github.com/orgs/FortAwesome/people)","repository":{"type":"git","url":"https://github.com/FortAwesome/Font-Awesome"},"engines":{"node":">=6"},"dependencies":{"@fortawesome/fontawesome-common-types":"7.2.0"},"version":"7.2.0","name":"@fortawesome/fontawesome-svg-core","main":"index.js","module":"index.mjs","jsnext:main":"index.mjs","style":"styles.css","license":"MIT","types":"./index.d.ts","exports":{".":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","style":"./styles.css","default":"./index.js"},"./index":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./index.js":{"types":"./index.d.ts","module":"./index.mjs","import":"./index.mjs","require":"./index.js","default":"./index.js"},"./plugins":{"types":"./index.d.ts","module":"./plugins.mjs","import":"./plugins.mjs","default":"./plugins.mjs"},"./import.macro":"./import.macro.js","./import.macro.js":"./import.macro.js","./styles":"./styles.css","./styles.css":"./styles.css","./package.json":"./package.json"},"sideEffects":["./index.js","./index.mjs","./styles.css"]}')
   }
 };
 Object.freeze(modules);
-for (const bb in modules) Object.freeze(modules[bb]);
+for (const dd in modules) Object.freeze(modules[dd]);
